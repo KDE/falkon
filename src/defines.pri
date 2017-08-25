@@ -49,12 +49,6 @@ win32-msvc* {
 # QtDBus not available on Mac
 mac: DEFINES *= DISABLE_DBUS
 
-haiku-* {
-    DEFINES *= DISABLE_DBUS
-    DEFINES *= NO_SYSTEM_DATAPATH
-    DEFINES *= NO_X11
-}
-
 !mac:unix {
     binary_folder = /usr/bin
     library_folder = /usr/lib

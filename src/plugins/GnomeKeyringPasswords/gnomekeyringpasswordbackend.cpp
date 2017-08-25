@@ -1,5 +1,5 @@
 /* ============================================================
-* GnomeKeyringPasswords - gnome-keyring support plugin for QupZilla
+* GnomeKeyringPasswords - gnome-keyring support plugin for Falkon
 * Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify

@@ -126,7 +126,6 @@ SOURCES += \
     network/networkmanager.cpp \
     network/networkproxyfactory.cpp \
     network/networkurlinterceptor.cpp \
-    #network/schemehandlers/fileschemehandler.cpp \
     network/schemehandlers/falkonschemehandler.cpp \
     network/sslerrordialog.cpp \
     notifications/desktopnotification.cpp \
@@ -308,7 +307,6 @@ HEADERS  += \
     network/networkmanager.h \
     network/networkproxyfactory.h \
     network/networkurlinterceptor.h \
-    #network/schemehandlers/fileschemehandler.h \
     network/schemehandlers/falkonschemehandler.h \
     network/urlinterceptor.h \
     network/sslerrordialog.h \

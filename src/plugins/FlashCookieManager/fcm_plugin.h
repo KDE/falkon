@@ -1,5 +1,5 @@
 /* ============================================================
-* FlashCookieManager plugin for QupZilla
+* FlashCookieManager plugin for Falkon
 * Copyright (C) 2014  S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify

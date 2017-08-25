@@ -1,4 +1,4 @@
-FlashCookieManager extension for QupZilla
+FlashCookieManager extension for Falkon
 -------------------------------------------------
 An extension to manage flash cookies.
 
