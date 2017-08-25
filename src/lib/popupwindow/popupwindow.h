@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -35,7 +35,7 @@ class PopupLocationBar;
 class ProgressBar;
 class SearchToolBar;
 
-class QUPZILLA_EXPORT PopupWindow : public QWidget
+class FALKON_EXPORT PopupWindow : public QWidget
 {
     Q_OBJECT
 public:

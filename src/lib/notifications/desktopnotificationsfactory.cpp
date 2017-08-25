@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -78,13 +78,13 @@ void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QS
         break;
     case DesktopNative:
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
-        QFile tmp(DataPaths::path(DataPaths::Temp) + QLatin1String("/qupzilla_notif.png"));
+        QFile tmp(DataPaths::path(DataPaths::Temp) + QLatin1String("/falkon_notif.png"));
         tmp.open(QFile::WriteOnly);
         icon.save(tmp.fileName());
 
         QDBusInterface dbus("org.freedesktop.Notifications", "/org/freedesktop/Notifications", "org.freedesktop.Notifications", QDBusConnection::sessionBus());
         QVariantList args;
-        args.append(QLatin1String("qupzilla"));
+        args.append(QLatin1String("falkon"));
         args.append(m_uint);
         args.append(tmp.fileName());
         args.append(heading);
@@ -103,7 +103,7 @@ void DesktopNotificationsFactory::nativeNotificationPreview()
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
     QDBusInterface dbus("org.freedesktop.Notifications", "/org/freedesktop/Notifications", "org.freedesktop.Notifications", QDBusConnection::sessionBus());
     QVariantList args;
-    args.append(QLatin1String("qupzilla"));
+    args.append(QLatin1String("falkon"));
     args.append(m_uint);
     args.append(QString());
     args.append(QObject::tr("Native System Notification"));

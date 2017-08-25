@@ -28,7 +28,7 @@ class KWalletPlugin : public QObject, public PluginInterface
     Q_INTERFACES(PluginInterface)
 
 #if QT_VERSION >= 0x050000
-    Q_PLUGIN_METADATA(IID "QupZilla.Browser.plugin.KWalletPasswords")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.KWalletPasswords")
 #endif
 
 public:

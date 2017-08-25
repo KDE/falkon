@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -268,8 +268,8 @@ void WebPage::handleUnknownProtocol(const QUrl &url)
     CheckBoxDialog dialog(QMessageBox::Yes | QMessageBox::No, view());
 
     const QString wrappedUrl = QzTools::alignTextToWidth(url.toString(), "<br/>", dialog.fontMetrics(), 450);
-    const QString text = tr("QupZilla cannot handle <b>%1:</b> links. The requested link "
-                            "is <ul><li>%2</li></ul>Do you want QupZilla to try "
+    const QString text = tr("Falkon cannot handle <b>%1:</b> links. The requested link "
+                            "is <ul><li>%2</li></ul>Do you want Falkon to try "
                             "open this link in system application?").arg(protocol, wrappedUrl);
 
     dialog.setText(text);

@@ -63,19 +63,19 @@ public slots:
 private:
     enum TabDataRole {
         WebTabPointerRole = Qt::UserRole + 10,
-        QupZillaPointerRole = Qt::UserRole + 20,
+        BrowserWindowPointerRole = Qt::UserRole + 20,
         UrlRole = Qt::UserRole + 30
     };
 
     QTreeWidgetItem* createEmptyItem(QTreeWidgetItem* parent = 0, bool addToTree = true);
     void groupByDomainName(bool useHostName = false);
     void groupByWindow();
-    BrowserWindow* getQupZilla();
+    BrowserWindow* getWindow();
 
     void makeWebViewConnections(WebView *view);
 
     Ui::TabManagerWidget* ui;
-    QPointer<BrowserWindow> p_QupZilla;
+    QPointer<BrowserWindow> m_window;
     WebPage* m_webPage;
 
     bool m_isRefreshing;

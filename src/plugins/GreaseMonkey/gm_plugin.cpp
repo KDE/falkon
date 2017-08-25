@@ -38,7 +38,7 @@ PluginSpec GM_Plugin::pluginSpec()
 {
     PluginSpec spec;
     spec.name = "GreaseMonkey";
-    spec.info = "Userscripts for QupZilla";
+    spec.info = "Userscripts for Falkon";
     spec.description = "Provides support for userscripts";
     spec.version = "0.8.0";
     spec.author = "David Rosca <nowrep@gmail.com>";
@@ -72,7 +72,7 @@ void GM_Plugin::unload()
 bool GM_Plugin::testPlugin()
 {
     // Require the version that the plugin was built with
-    return (Qz::VERSION == QLatin1String(QUPZILLA_VERSION));
+    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
 }
 
 QTranslator* GM_Plugin::getTranslator(const QString &locale)

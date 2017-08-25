@@ -1,5 +1,5 @@
 /* ============================================================
-* ImageFinder plugin for QupZilla
+* ImageFinder plugin for Falkon
 * Copyright (C) 2016 Vladislav Tronko <innermous@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify

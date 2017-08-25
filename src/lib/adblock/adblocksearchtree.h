@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ class QWebEngineUrlRequestInfo;
 
 class AdBlockRule;
 
-class QUPZILLA_EXPORT AdBlockSearchTree
+class FALKON_EXPORT AdBlockSearchTree
 {
 public:
     explicit AdBlockSearchTree();

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -35,7 +35,7 @@ class LocationBar;
 class TabIcon;
 class TabBar;
 
-class QUPZILLA_EXPORT WebTab : public QWidget
+class FALKON_EXPORT WebTab : public QWidget
 {
     Q_OBJECT
 public:
@@ -53,8 +53,8 @@ public:
         bool isValid() const;
         void clear();
 
-        friend QUPZILLA_EXPORT QDataStream &operator<<(QDataStream &stream, const SavedTab &tab);
-        friend QUPZILLA_EXPORT QDataStream &operator>>(QDataStream &stream, SavedTab &tab);
+        friend FALKON_EXPORT QDataStream &operator<<(QDataStream &stream, const SavedTab &tab);
+        friend FALKON_EXPORT QDataStream &operator>>(QDataStream &stream, SavedTab &tab);
     };
 
     explicit WebTab(BrowserWindow* window);

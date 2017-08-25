@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -148,7 +148,7 @@ void Updater::downCompleted()
         Version updated(html);
 
         if (current.isValid && updated.isValid && current < updated) {
-            mApp->desktopNotifications()->showNotification(QPixmap(":icons/qupzilla.png"), tr("Update available"), tr("New version of QupZilla is ready to download."));
+            mApp->desktopNotifications()->showNotification(QPixmap(":icons/qupzilla.png"), tr("Update available"), tr("New version of Falkon is ready to download."));
         }
     }
 

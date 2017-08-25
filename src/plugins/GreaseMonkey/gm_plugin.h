@@ -27,7 +27,7 @@ class GM_Plugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "QupZilla.Browser.plugin.GreaseMonkey")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.GreaseMonkey")
 
 public:
     explicit GM_Plugin();

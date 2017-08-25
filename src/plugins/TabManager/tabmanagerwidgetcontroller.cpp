@@ -196,11 +196,11 @@ void TabManagerWidgetController::showSideBySide()
 
     QRect managerRect(availableGeometry.left() + frameWidth, availableGeometry.top() + titleBarHeight,
                       defaultTabManager()->width(), availableGeometry.height() - titleBarHeight - frameWidth);
-    QRect qupzillaRect(managerRect.topRight().x() + 2 * frameWidth, managerRect.top(),
+    QRect windowRect(managerRect.topRight().x() + 2 * frameWidth, managerRect.top(),
                        availableGeometry.width() - managerRect.width() - 4 * frameWidth, managerRect.height());
 
     defaultTabManager()->setGeometry(managerRect);
-    mApp->getWindow()->setGeometry(qupzillaRect);
+    mApp->getWindow()->setGeometry(windowRect);
     mApp->getWindow()->showNormal();
     mApp->getWindow()->raise();
 

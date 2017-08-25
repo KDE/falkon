@@ -106,7 +106,7 @@ void FCM_Plugin::unload()
 
 bool FCM_Plugin::testPlugin()
 {
-    return (Qz::VERSION == QLatin1String(QUPZILLA_VERSION));
+    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
 }
 
 QTranslator* FCM_Plugin::getTranslator(const QString &locale)

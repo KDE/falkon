@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -107,10 +107,10 @@ MainApplication::MainApplication(int &argc, char** argv)
     setAttribute(Qt::AA_UseHighDpiPixmaps);
     setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
 
-    setApplicationName(QLatin1String("QupZilla"));
-    setOrganizationDomain(QLatin1String("qupzilla"));
+    setApplicationName(QLatin1String("Falkon"));
+    setOrganizationDomain(QLatin1String("org.kde"));
     setWindowIcon(QIcon::fromTheme(QSL("qupzilla"), QIcon(QSL(":icons/exeicons/qupzilla-window.png"))));
-    setDesktopFileName(QSL("org.qupzilla.QupZilla"));
+    setDesktopFileName(QSL("org.kde.Falkon"));
 
 #ifdef GIT_REVISION
     setApplicationVersion(QSL("%1 (%2)").arg(Qz::VERSION, GIT_REVISION));
@@ -204,13 +204,13 @@ MainApplication::MainApplication(int &argc, char** argv)
     }
 
     if (isPortable()) {
-        std::cout << "QupZilla: Running in Portable Mode." << std::endl;
+        std::cout << "Falkon: Running in Portable Mode." << std::endl;
         DataPaths::setPortableVersion();
     }
 
     // Don't start single application in private browsing
     if (!isPrivate()) {
-        QString appId = QLatin1String("QupZillaWebBrowser");
+        QString appId = QLatin1String("FalkonWebBrowser");
 
         if (isPortable()) {
             appId.append(QLatin1String("Portable"));
@@ -271,7 +271,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     // Setup QWebChannel userscript
     QWebEngineScript script;
-    script.setName(QSL("_qupzilla_webchannel"));
+    script.setName(QSL("_falkon_webchannel"));
     script.setInjectionPoint(QWebEngineScript::DocumentCreation);
     script.setWorldId(QWebEngineScript::MainWorld);
     script.setRunsOnSubFrames(true);
@@ -1085,8 +1085,8 @@ void MainApplication::checkDefaultWebBrowser()
 
     if (!associationManager()->isDefaultForAllCapabilities()) {
         CheckBoxDialog dialog(QMessageBox::Yes | QMessageBox::No, getWindow());
-        dialog.setText(tr("QupZilla is not currently your default browser. Would you like to make it your default browser?"));
-        dialog.setCheckBoxText(tr("Always perform this check when starting QupZilla."));
+        dialog.setText(tr("Falkon is not currently your default browser. Would you like to make it your default browser?"));
+        dialog.setCheckBoxText(tr("Always perform this check when starting Falkon."));
         dialog.setDefaultCheckState(Qt::Checked);
         dialog.setWindowTitle(tr("Default Browser"));
         dialog.setIcon(QMessageBox::Warning);
@@ -1140,7 +1140,7 @@ void MainApplication::setUserStyleSheet(const QString &filePath)
 
     userCss += QzTools::readAllFileContents(filePath).remove(QLatin1Char('\n'));
 
-    const QString name = QStringLiteral("_qupzilla_userstylesheet");
+    const QString name = QStringLiteral("_falkon_userstylesheet");
 
     QWebEngineScript oldScript = m_webProfile->scripts()->findScript(name);
     if (!oldScript.isNull()) {
@@ -1184,7 +1184,7 @@ void MainApplication::createJumpList()
 
 void MainApplication::initPulseSupport()
 {
-    qputenv("PULSE_PROP_OVERRIDE_application.name", "QupZilla");
+    qputenv("PULSE_PROP_OVERRIDE_application.name", "Falkon");
     qputenv("PULSE_PROP_OVERRIDE_application.icon_name", "qupzilla");
     qputenv("PULSE_PROP_OVERRIDE_media.icon_name", "qupzilla");
 }
@@ -1193,14 +1193,14 @@ void MainApplication::initPulseSupport()
 RegisterQAppAssociation* MainApplication::associationManager()
 {
     if (!m_registerQAppAssociation) {
-        QString desc = tr("QupZilla is a new, fast and secure open-source WWW browser. QupZilla is licensed under GPL version 3 or (at your option) any later version. It is based on WebKit core and Qt Framework.");
+        QString desc = tr("Falkon is a new, fast and secure open-source WWW browser. Falkon is licensed under GPL version 3 or (at your option) any later version. It is based on WebKit core and Qt Framework.");
         QString fileIconPath = QApplication::applicationFilePath() + ",1";
         QString appIconPath = QApplication::applicationFilePath() + ",0";
-        m_registerQAppAssociation = new RegisterQAppAssociation("QupZilla", QApplication::applicationFilePath(), appIconPath, desc, this);
-        m_registerQAppAssociation->addCapability(".html", "QupZilla.HTML", "HTML File", fileIconPath, RegisterQAppAssociation::FileAssociation);
-        m_registerQAppAssociation->addCapability(".htm", "QupZilla.HTM", "HTM File", fileIconPath, RegisterQAppAssociation::FileAssociation);
-        m_registerQAppAssociation->addCapability("http", "QupZilla.HTTP", "URL:HyperText Transfer Protocol", appIconPath, RegisterQAppAssociation::UrlAssociation);
-        m_registerQAppAssociation->addCapability("https", "QupZilla.HTTPS", "URL:HyperText Transfer Protocol with Privacy", appIconPath, RegisterQAppAssociation::UrlAssociation);
+        m_registerQAppAssociation = new RegisterQAppAssociation("Falkon", QApplication::applicationFilePath(), appIconPath, desc, this);
+        m_registerQAppAssociation->addCapability(".html", "Falkon.HTML", "HTML File", fileIconPath, RegisterQAppAssociation::FileAssociation);
+        m_registerQAppAssociation->addCapability(".htm", "Falkon.HTM", "HTM File", fileIconPath, RegisterQAppAssociation::FileAssociation);
+        m_registerQAppAssociation->addCapability("http", "Falkon.HTTP", "URL:HyperText Transfer Protocol", appIconPath, RegisterQAppAssociation::UrlAssociation);
+        m_registerQAppAssociation->addCapability("https", "Falkon.HTTPS", "URL:HyperText Transfer Protocol with Privacy", appIconPath, RegisterQAppAssociation::UrlAssociation);
     }
     return m_registerQAppAssociation;
 }

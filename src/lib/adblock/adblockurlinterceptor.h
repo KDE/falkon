@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - QtWebEngine based browser
+* Falkon - Qt web browser
 * Copyright (C) 2015 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@
 
 class AdBlockManager;
 
-class QUPZILLA_EXPORT AdBlockUrlInterceptor : public UrlInterceptor
+class FALKON_EXPORT AdBlockUrlInterceptor : public UrlInterceptor
 {
 public:
     explicit AdBlockUrlInterceptor(AdBlockManager* manager);

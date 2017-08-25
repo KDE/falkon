@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2014 S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
 * Copyright (C) 2014-2017 David Rosca <nowrep@gmail.com>
 *
@@ -36,7 +36,7 @@ class TabBarScrollWidget;
 class TabBarHelper;
 class ToolButton;
 
-class QUPZILLA_EXPORT ComboTabBar : public QWidget
+class FALKON_EXPORT ComboTabBar : public QWidget
 {
     Q_OBJECT
     Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentChanged)
@@ -214,7 +214,7 @@ private:
     friend class TabStackedWidget;
 };
 
-class QUPZILLA_EXPORT TabBarHelper : public QTabBar
+class FALKON_EXPORT TabBarHelper : public QTabBar
 {
     Q_OBJECT
 
@@ -268,7 +268,7 @@ private:
     bool m_useFastTabSizeHint;
 };
 
-class QUPZILLA_EXPORT TabScrollBar : public QScrollBar
+class FALKON_EXPORT TabScrollBar : public QScrollBar
 {
     Q_OBJECT
 public:
@@ -284,7 +284,7 @@ private:
 };
 
 
-class QUPZILLA_EXPORT TabBarScrollWidget : public QWidget
+class FALKON_EXPORT TabBarScrollWidget : public QWidget
 {
     Q_OBJECT
 public:

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2017 David Rosca <nowrep@gmail.com>
 * Copyright (C) 2013-2014 S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
 *
@@ -24,7 +24,7 @@
 #ifdef Q_OS_MACOS
 #include <QPushButton>
 
-class QUPZILLA_EXPORT MacToolButton : public QPushButton
+class FALKON_EXPORT MacToolButton : public QPushButton
 {
     Q_OBJECT
     Q_PROPERTY(bool autoRaise READ autoRaise WRITE setAutoRaise)
@@ -44,7 +44,7 @@ private:
 #else
 #include <QToolButton>
 
-class QUPZILLA_EXPORT MacToolButton : public QToolButton
+class FALKON_EXPORT MacToolButton : public QToolButton
 {
     Q_OBJECT
 

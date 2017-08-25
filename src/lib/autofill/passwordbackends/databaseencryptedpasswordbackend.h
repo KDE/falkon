@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2014  S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
 * Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
 *
@@ -27,7 +27,7 @@
 class AesInterface;
 class MasterPasswordDialog;
 
-class QUPZILLA_EXPORT DatabaseEncryptedPasswordBackend : public PasswordBackend
+class FALKON_EXPORT DatabaseEncryptedPasswordBackend : public PasswordBackend
 {
 public:
     enum MasterPasswordState {

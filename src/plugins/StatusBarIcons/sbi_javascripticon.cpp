@@ -57,8 +57,8 @@ void SBI_JavaScriptIcon::showMenu(const QPoint &point)
         menu.addAction(tr("Enable JavaScript (temporarily)"), this, SLOT(toggleJavaScript()));
     }
 
-    // JavaScript needs to be always enabled for qupzilla: sites
-    if (currentPage() && currentPage()->url().scheme() == QLatin1String("qupzilla")) {
+    // JavaScript needs to be always enabled for falkon: sites
+    if (currentPage() && currentPage()->url().scheme() == QLatin1String("falkon")) {
         menu.actions().at(1)->setEnabled(false);
     }
 

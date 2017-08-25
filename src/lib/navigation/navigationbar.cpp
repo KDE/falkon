@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2016 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -382,7 +382,7 @@ QString NavigationBar::titleForUrl(QString title, const QUrl &url)
 QIcon NavigationBar::iconForPage(const QUrl &url, const QIcon &sIcon)
 {
     QIcon icon;
-    icon.addPixmap(url.scheme() == QL1S("qupzilla") ? QIcon(QSL(":icons/qupzilla.png")).pixmap(16) : IconProvider::iconForUrl(url).pixmap(16));
+    icon.addPixmap(url.scheme() == QL1S("falkon") ? QIcon(QSL(":icons/qupzilla.png")).pixmap(16) : IconProvider::iconForUrl(url).pixmap(16));
     icon.addPixmap(sIcon.pixmap(16), QIcon::Active);
     return icon;
 }

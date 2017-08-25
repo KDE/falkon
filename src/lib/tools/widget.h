@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@
 
 #include "qzcommon.h"
 
-class QUPZILLA_EXPORT Widget : public QWidget
+class FALKON_EXPORT Widget : public QWidget
 {
     Q_OBJECT
 public:
@@ -36,7 +36,7 @@ public slots:
 
 };
 
-class QUPZILLA_EXPORT ResizableFrame : public QFrame
+class FALKON_EXPORT ResizableFrame : public QFrame
 {
     Q_OBJECT
 public:

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -70,7 +70,7 @@ void History::addHistoryEntry(const QUrl &url, QString title)
     }
 
     const QStringList ignoredSchemes = {
-        QStringLiteral("qupzilla"),
+        QStringLiteral("falkon"),
         QStringLiteral("view-source"),
         QStringLiteral("data"),
         QStringLiteral("about")

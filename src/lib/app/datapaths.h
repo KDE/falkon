@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -22,19 +22,19 @@
 
 #include "qzcommon.h"
 
-class QUPZILLA_EXPORT DataPaths
+class FALKON_EXPORT DataPaths
 {
 public:
     enum Path {
-        AppData = 0,             // /usr/share/qupzilla or . or ../Resources
+        AppData = 0,             // /usr/share/falkon or . or ../Resources
         Translations = 1,        // $AppData/locale
         Themes = 2,              // $AppData/themes
         Plugins = 3,             // $AppData/plugins
-        Config = 4,              // $XDG_CONFIG_HOME/qupzilla or %LOCALAPPDATA%/qupzilla or $AppData/data (portable)
+        Config = 4,              // $XDG_CONFIG_HOME/falkon or %LOCALAPPDATA%/falkon or $AppData/data (portable)
         Profiles = 5,            // $Config/profiles
         CurrentProfile = 6,      // $Profiles/current_profile
         Temp = 7,                // $Config/tmp
-        Cache = 8,               // $XDG_CACHE_HOME/qupzilla or $CurrentProfile/cache
+        Cache = 8,               // $XDG_CACHE_HOME/falkon or $CurrentProfile/cache
         Sessions = 9,            // $CurrentProfile/sessions
         LastPath = 10
     };
@@ -48,7 +48,7 @@ public:
 
     // Returns main path (Themes -> /usr/share/themes)
     static QString path(Path type);
-    // Returns all paths (Themes -> /usr/share/themes, ~/.config/qupzilla/themes)
+    // Returns all paths (Themes -> /usr/share/themes, ~/.config/falkon/themes)
     static QStringList allPaths(Path type);
     // Convenience function for getting CurrentProfile
     static QString currentProfilePath();

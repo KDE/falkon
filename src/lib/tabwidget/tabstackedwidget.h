@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2014  S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ class QStackedWidget;
 class QVBoxLayout;
 
 
-class QUPZILLA_EXPORT TabStackedWidget : public QWidget
+class FALKON_EXPORT TabStackedWidget : public QWidget
 {
     Q_OBJECT
 public:

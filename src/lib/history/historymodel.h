@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -29,7 +29,7 @@ class QTimer;
 class History;
 class HistoryItem;
 
-class QUPZILLA_EXPORT HistoryModel : public QAbstractItemModel
+class FALKON_EXPORT HistoryModel : public QAbstractItemModel
 {
     Q_OBJECT
 public:
@@ -86,7 +86,7 @@ private:
     History* m_history;
 };
 
-class QUPZILLA_EXPORT HistoryFilterModel : public QSortFilterProxyModel
+class FALKON_EXPORT HistoryFilterModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:

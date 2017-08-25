@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  Franz Fellner <alpine.art.de@googlemail.com>
 *                          David Rosca <nowrep@gmail.com>
 *
@@ -23,7 +23,7 @@
 
 #include "qzcommon.h"
 
-class QUPZILLA_EXPORT LocationBarPopup : public QFrame
+class FALKON_EXPORT LocationBarPopup : public QFrame
 {
 public:
     explicit LocationBarPopup(QWidget* parent);

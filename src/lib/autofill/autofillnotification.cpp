@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -46,13 +46,13 @@ AutoFillNotification::AutoFillNotification(const QUrl &url, const PageFormData &
     }
 
     if (m_updateData.isValid()) {
-        ui->label->setText(tr("Do you want QupZilla to update saved password %1?").arg(userPart));
+        ui->label->setText(tr("Do you want Falkon to update saved password %1?").arg(userPart));
 
         ui->remember->setVisible(false);
         ui->never->setVisible(false);
     }
     else {
-        ui->label->setText(tr("Do you want QupZilla to remember the password %1 %2?").arg(userPart, hostPart));
+        ui->label->setText(tr("Do you want Falkon to remember the password %1 %2?").arg(userPart, hostPart));
 
         ui->update->setVisible(false);
     }

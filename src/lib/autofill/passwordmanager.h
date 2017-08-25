@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ class PasswordBackend;
 class DatabasePasswordBackend;
 class DatabaseEncryptedPasswordBackend;
 
-struct QUPZILLA_EXPORT PasswordEntry {
+struct FALKON_EXPORT PasswordEntry {
     QVariant id;
     QString host;
     QString username;
@@ -50,11 +50,11 @@ struct QUPZILLA_EXPORT PasswordEntry {
         return updated > other.updated;
     }
 
-    friend QUPZILLA_EXPORT QDataStream &operator<<(QDataStream &stream, const PasswordEntry &entry);
-    friend QUPZILLA_EXPORT QDataStream &operator>>(QDataStream &stream, PasswordEntry &entry);
+    friend FALKON_EXPORT QDataStream &operator<<(QDataStream &stream, const PasswordEntry &entry);
+    friend FALKON_EXPORT QDataStream &operator>>(QDataStream &stream, PasswordEntry &entry);
 };
 
-class QUPZILLA_EXPORT PasswordManager : public QObject
+class FALKON_EXPORT PasswordManager : public QObject
 {
     Q_OBJECT
 public:

@@ -165,7 +165,7 @@ void PageScreen::saveAsDocument(const QString &format)
     }
 
     QPrinter printer;
-    printer.setCreator(BrowserWindow::tr("QupZilla %1 (%2)").arg(Qz::VERSION, Qz::WWWADDRESS));
+    printer.setCreator(BrowserWindow::tr("Falkon %1 (%2)").arg(Qz::VERSION, Qz::WWWADDRESS));
     printer.setOutputFileName(pathWithoutSuffix + suffix);
     printer.setOutputFormat(QPrinter::PdfFormat);
     printer.setPaperSize(m_pageImages.first().size(), QPrinter::DevicePixel);

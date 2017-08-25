@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2012-2014 Franz Fellner <alpine.art.de@googlemail.com>
 * Copyright (C) 2012-2017 David Rosca <nowrep@gmail.com>
 *

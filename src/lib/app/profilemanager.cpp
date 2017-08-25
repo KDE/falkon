@@ -40,7 +40,7 @@ void ProfileManager::initConfigDir()
         return;
     }
 
-    std::cout << "QupZilla: Creating new profile directory" << std::endl;
+    std::cout << "Falkon: Creating new profile directory" << std::endl;
 
     if (!dir.exists()) {
         dir.mkpath(dir.absolutePath());
@@ -188,7 +188,7 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
     Updater::Version prof(profile);
 
     if (prof < Updater::Version("1.9.0")) {
-        std::cout << "QupZilla: Using profile from QupZilla " << qPrintable(profile) << " is not supported!" << std::endl;
+        std::cout << "Falkon: Using profile from QupZilla " << qPrintable(profile) << " is not supported!" << std::endl;
         return;
     }
 
@@ -225,7 +225,7 @@ void ProfileManager::copyDataToProfile()
 
         const QString text = "Incompatible profile version has been detected. To avoid losing your profile data, they were "
                              "backed up in following file:<br/><br/><b>" + browseDataBackup + "<br/></b>";
-        QMessageBox::warning(0, "QupZilla: Incompatible profile version", text);
+        QMessageBox::warning(0, "Falkon: Incompatible profile version", text);
     }
 
     QFile(QLatin1String(":data/browsedata.db")).copy(profileDir.filePath(QLatin1String("browsedata.db")));

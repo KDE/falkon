@@ -1,11 +1,11 @@
-#compdef qupzilla
+#compdef falkon
 #
-# Zsh completion for QupZilla
+# Zsh completion for Falkon
 #
 opts=(
     '(-)'{-h,--help}'[print usage help]'
-    '(-)'{-a,--authors}'[print QupZilla authors]'
-    '(-)'{-v,--version}'[print QupZilla version]'
+    '(-)'{-a,--authors}'[print Falkon authors]'
+    '(-)'{-v,--version}'[print Falkon version]'
 
     '(-)'{-p,--profile=}'[start with specified profile]'
     '(-)'{-e,--no-extensions}'[start without extensions]'

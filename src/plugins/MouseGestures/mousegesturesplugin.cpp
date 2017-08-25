@@ -1,5 +1,5 @@
 /* ============================================================
-* Mouse Gestures plugin for QupZilla
+* Mouse Gestures plugin for Falkon
 * Copyright (C) 2012-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -33,7 +33,7 @@ PluginSpec MouseGesturesPlugin::pluginSpec()
 {
     PluginSpec spec;
     spec.name = "Mouse Gestures";
-    spec.info = "Mouse gestures for QupZilla";
+    spec.info = "Mouse gestures for Falkon";
     spec.description = "Provides support for navigating in webpages by mouse gestures";
     spec.version = "0.5.0";
     spec.author = "David Rosca <nowrep@gmail.com>";
@@ -63,7 +63,7 @@ void MouseGesturesPlugin::unload()
 bool MouseGesturesPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
-    return (Qz::VERSION == QLatin1String(QUPZILLA_VERSION));
+    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
 }
 
 QTranslator* MouseGesturesPlugin::getTranslator(const QString &locale)

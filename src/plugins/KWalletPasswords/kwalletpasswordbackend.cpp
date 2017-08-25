@@ -144,8 +144,8 @@ void KWalletPasswordBackend::removeAll()
 
     m_allEntries.clear();
 
-    m_wallet->removeFolder("QupZilla");
-    m_wallet->createFolder("QupZilla");
+    m_wallet->removeFolder("Falkon");
+    m_wallet->createFolder("Falkon");
 }
 
 void KWalletPasswordBackend::initialize()
@@ -161,13 +161,13 @@ void KWalletPasswordBackend::initialize()
         return;
     }
 
-    if (!m_wallet->hasFolder("QupZilla") && !m_wallet->createFolder("QupZilla")) {
-        qWarning() << "KWalletPasswordBackend::initialize Cannot create folder \"QupZilla\"!";
+    if (!m_wallet->hasFolder("Falkon") && !m_wallet->createFolder("Falkon")) {
+        qWarning() << "KWalletPasswordBackend::initialize Cannot create folder \"Falkon\"!";
         return;
     }
 
-    if (!m_wallet->setFolder("QupZilla")) {
-        qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"QupZilla\"!";
+    if (!m_wallet->setFolder("Falkon")) {
+        qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"Falkon\"!";
         return;
     }
 

@@ -60,7 +60,7 @@ void GnomeKeyringPlugin::unload()
 bool GnomeKeyringPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
-    return (Qz::VERSION == QLatin1String(QUPZILLA_VERSION));
+    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
 }
 
 QTranslator* GnomeKeyringPlugin::getTranslator(const QString &locale)

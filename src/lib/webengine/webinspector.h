@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@
 
 class ToolButton;
 
-class QUPZILLA_EXPORT WebInspector : public QWebEngineView
+class FALKON_EXPORT WebInspector : public QWebEngineView
 {
     Q_OBJECT
 

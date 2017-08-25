@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@
 
 class QListWidget;
 
-class QUPZILLA_EXPORT PluginListDelegate : public QStyledItemDelegate
+class FALKON_EXPORT PluginListDelegate : public QStyledItemDelegate
 {
 public:
     explicit PluginListDelegate(QListWidget* parent);

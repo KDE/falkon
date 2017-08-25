@@ -6,8 +6,8 @@ TARGET = autotests
 
 CONFIG -= app_bundle
 
-!unix|mac: LIBS += -L$$PWD/../../bin -lQupZilla
-!mac:unix: LIBS += $$PWD/../../bin/libQupZilla.so
+!unix|mac: LIBS += -L$$PWD/../../bin -lFalkon
+!mac:unix: LIBS += $$PWD/../../bin/libFalkon.so
 
 QMAKE_LFLAGS+=$${QMAKE_LFLAGS_RPATH}$$PWD/../../bin
 

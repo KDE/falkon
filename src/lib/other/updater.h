@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -27,13 +27,13 @@ class QUrl;
 
 class BrowserWindow;
 
-class QUPZILLA_EXPORT Updater : public QObject
+class FALKON_EXPORT Updater : public QObject
 {
     Q_OBJECT
 public:
     explicit Updater(BrowserWindow* window, QObject* parent = 0);
 
-    struct QUPZILLA_EXPORT Version {
+    struct FALKON_EXPORT Version {
         bool isValid;
         int majorVersion;
         int minorVersion;

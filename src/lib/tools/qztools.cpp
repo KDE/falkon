@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -829,7 +829,7 @@ void QzTools::setWmClass(const QString &name, const QWidget* widget)
         return;
 
     const QByteArray &nameData = name.toUtf8();
-    const QByteArray &classData = QByteArrayLiteral("QupZilla");
+    const QByteArray &classData = QByteArrayLiteral("Falkon");
 
     uint32_t class_len = nameData.length() + 1 + classData.length() + 1;
     char *class_hint = (char*) malloc(class_len);

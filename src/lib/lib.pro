@@ -1,9 +1,9 @@
 QT += webenginecore webenginewidgets webchannel network widgets sql quickwidgets printsupport
 
-TARGET = QupZilla
+TARGET = Falkon
 TEMPLATE = lib
 
-DEFINES *= QUPZILLA_SHAREDLIBRARY
+DEFINES *= FALKON_SHAREDLIBRARY
 
 CONFIG += c++14
 
@@ -127,7 +127,7 @@ SOURCES += \
     network/networkproxyfactory.cpp \
     network/networkurlinterceptor.cpp \
     #network/schemehandlers/fileschemehandler.cpp \
-    network/schemehandlers/qupzillaschemehandler.cpp \
+    network/schemehandlers/falkonschemehandler.cpp \
     network/sslerrordialog.cpp \
     notifications/desktopnotification.cpp \
     notifications/desktopnotificationsfactory.cpp \
@@ -309,7 +309,7 @@ HEADERS  += \
     network/networkproxyfactory.h \
     network/networkurlinterceptor.h \
     #network/schemehandlers/fileschemehandler.h \
-    network/schemehandlers/qupzillaschemehandler.h \
+    network/schemehandlers/falkonschemehandler.h \
     network/urlinterceptor.h \
     network/sslerrordialog.h \
     notifications/desktopnotification.h \

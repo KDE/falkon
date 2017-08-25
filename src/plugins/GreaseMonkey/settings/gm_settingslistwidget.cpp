@@ -1,5 +1,5 @@
 /* ============================================================
-* GreaseMonkey plugin for QupZilla
+* GreaseMonkey plugin for Falkon
 * Copyright (C) 2012-2016  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -37,7 +37,7 @@ class QWinTaskbarButton;
 class DownloadItem;
 class WebPage;
 
-class QUPZILLA_EXPORT DownloadManager : public QWidget
+class FALKON_EXPORT DownloadManager : public QWidget
 {
     Q_OBJECT
 public:

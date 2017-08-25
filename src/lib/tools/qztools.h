@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2016 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -29,7 +29,7 @@ class QIcon;
 class QWidget;
 class QUrl;
 
-class QUPZILLA_EXPORT QzTools
+class FALKON_EXPORT QzTools
 {
 public:
     static QByteArray pixmapToByteArray(const QPixmap &pix);

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -49,7 +49,7 @@ int ExternalJsObject::IsSearchProviderInstalled(const QString &engineURL)
 
 QObject *ExternalJsObject::speedDial() const
 {
-    if (m_page->url().toString() != QL1S("qupzilla:speeddial"))
+    if (m_page->url().toString() != QL1S("falkon:speeddial"))
         return Q_NULLPTR;
 
     return mApp->plugins()->speedDial();
@@ -62,7 +62,7 @@ QObject *ExternalJsObject::autoFill() const
 
 QObject *ExternalJsObject::recovery() const
 {
-    if (!mApp->restoreManager() || m_page->url().toString() != QL1S("qupzilla:restore"))
+    if (!mApp->restoreManager() || m_page->url().toString() != QL1S("falkon:restore"))
         return Q_NULLPTR;
 
     return mApp->restoreManager()->recoveryObject(m_page);

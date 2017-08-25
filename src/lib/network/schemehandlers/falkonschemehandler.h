@@ -15,8 +15,8 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QUPZILLASCHEMEHANDLER_H
-#define QUPZILLASCHEMEHANDLER_H
+#ifndef FALKONSCHEMEHANDLER_H
+#define FALKONSCHEMEHANDLER_H
 
 #include <QBuffer>
 #include <QIODevice>
@@ -24,20 +24,20 @@
 
 #include "qzcommon.h"
 
-class QUPZILLA_EXPORT QupZillaSchemeHandler : public QWebEngineUrlSchemeHandler
+class FALKON_EXPORT FalkonSchemeHandler : public QWebEngineUrlSchemeHandler
 {
 public:
-    explicit QupZillaSchemeHandler(QObject *parent = Q_NULLPTR);
+    explicit FalkonSchemeHandler(QObject *parent = Q_NULLPTR);
 
     void requestStarted(QWebEngineUrlRequestJob *job) Q_DECL_OVERRIDE;
 };
 
-class QUPZILLA_EXPORT QupZillaSchemeReply : public QIODevice
+class FALKON_EXPORT FalkonSchemeReply : public QIODevice
 {
     Q_OBJECT
 
 public:
-    explicit QupZillaSchemeReply(QWebEngineUrlRequestJob *job, QObject *parent = Q_NULLPTR);
+    explicit FalkonSchemeReply(QWebEngineUrlRequestJob *job, QObject *parent = Q_NULLPTR);
 
     qint64 bytesAvailable() const Q_DECL_OVERRIDE;
     qint64 readData(char *data, qint64 maxSize) Q_DECL_OVERRIDE;
@@ -61,4 +61,4 @@ private:
     QWebEngineUrlRequestJob *m_job;
 };
 
-#endif // QUPZILLASCHEMEHANDLER_H
+#endif // FALKONSCHEMEHANDLER_H

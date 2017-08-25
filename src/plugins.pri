@@ -42,11 +42,11 @@ MOC_DIR = build
 RCC_DIR = build
 UI_DIR = build
 
-!unix|mac: LIBS += -L$$QZ_DESTDIR -lQupZilla
-!mac:unix: LIBS += $$QZ_DESTDIR/libQupZilla.so
+!unix|mac: LIBS += -L$$QZ_DESTDIR -lFalkon
+!mac:unix: LIBS += $$QZ_DESTDIR/libFalkon.so
 
 !mac:unix {
-    target.path = $$library_folder/qupzilla
+    target.path = $$library_folder/falkon
 
     INSTALLS += target
 }

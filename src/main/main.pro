@@ -2,17 +2,17 @@ include(../defines.pri)
 
 QT += webenginecore webenginewidgets network widgets sql
 
-TARGET = qupzilla
-mac: TARGET = QupZilla
+TARGET = falkon
+mac: TARGET = Falkon
 
 TEMPLATE = app
 
 compile_libtool {
-LIBS += $$QZ_DESTDIR/libQupZilla.la
+LIBS += $$QZ_DESTDIR/libFalkon.la
 }
 else {
-!unix|mac: LIBS += -L$$QZ_DESTDIR -lQupZilla
-!mac:unix: LIBS += $$QZ_DESTDIR/libQupZilla.so
+!unix|mac: LIBS += -L$$QZ_DESTDIR -lFalkon
+!mac:unix: LIBS += $$QZ_DESTDIR/libFalkon.so
 }
 
 unix:!contains(DEFINES, "DISABLE_DBUS") QT += dbus

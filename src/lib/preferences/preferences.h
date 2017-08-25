@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -38,7 +38,7 @@ class PluginsManager;
 class DesktopNotification;
 class ThemeManager;
 
-class QUPZILLA_EXPORT Preferences : public QWidget
+class FALKON_EXPORT Preferences : public QWidget
 {
     Q_OBJECT
 
@@ -87,7 +87,7 @@ private slots:
 
     void showNotificationPreview();
 
-    void makeQupZillaDefault();
+    void makeFalkonDefault();
 
 private:
     void closeEvent(QCloseEvent* event);

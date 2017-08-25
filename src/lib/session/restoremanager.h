@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014 Franz Fellner <alpine.art.de@googlemail.com>
 *                         David Rosca <nowrep@gmail.com>
 *
@@ -25,7 +25,7 @@
 class WebPage;
 class RecoveryJsObject;
 
-class QUPZILLA_EXPORT RestoreManager
+class FALKON_EXPORT RestoreManager
 {
 public:
     struct WindowData {

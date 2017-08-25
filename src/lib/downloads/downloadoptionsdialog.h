@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -31,7 +31,7 @@ class DownloadOptionsDialog;
 
 class QWebEngineDownloadItem;
 
-class QUPZILLA_EXPORT DownloadOptionsDialog : public QDialog
+class FALKON_EXPORT DownloadOptionsDialog : public QDialog
 {
     Q_OBJECT
 

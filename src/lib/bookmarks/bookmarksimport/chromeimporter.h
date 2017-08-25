@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@
 
 #include "bookmarksimporter.h"
 
-class QUPZILLA_EXPORT ChromeImporter : public BookmarksImporter
+class FALKON_EXPORT ChromeImporter : public BookmarksImporter
 {
 public:
     explicit ChromeImporter(QObject* parent = 0);

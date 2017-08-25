@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -44,7 +44,7 @@ AutoFill::AutoFill(QObject* parent)
 
     // Setup AutoFill userscript
     QWebEngineScript script;
-    script.setName(QSL("_qupzilla_autofill"));
+    script.setName(QSL("_falkon_autofill"));
     script.setInjectionPoint(QWebEngineScript::DocumentReady);
     script.setWorldId(QWebEngineScript::MainWorld);
     script.setRunsOnSubFrames(true);

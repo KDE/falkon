@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -101,7 +101,7 @@ void SiteIcon::mouseReleaseEvent(QMouseEvent* e)
     bool activated = false;
 
     if (e->button() == Qt::LeftButton && rect().contains(e->pos())) {
-        // Popup may not be always shown, eg. on qupzilla: pages
+        // Popup may not be always shown, eg. on falkon: pages
         activated = showPopup();
     }
 

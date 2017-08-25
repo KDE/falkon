@@ -1,4 +1,4 @@
-﻿; QupZilla Windows Installer NSIS Script
+; Falkon Windows Installer NSIS Script
 ; Copyright (C) 2010-2017  David Rosca <nowrep@gmail.com>
 ;               2012-2017  S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
 ;
@@ -44,9 +44,9 @@
 !include "wininstall\AllAssociation.nsh"
 SetCompressor /SOLID /FINAL lzma
 
-!define PRODUCT_NAME "QupZilla"
+!define PRODUCT_NAME "Falkon"
 !define /date PRODUCT_VERSION "${VERSION}"
-!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\qupzilla.exe"
+!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\falkon.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 !define PRODUCT_CAPABILITIES_KEY "Software\${PRODUCT_NAME}\Capabilities"
@@ -65,7 +65,7 @@ SetCompressor /SOLID /FINAL lzma
 !insertmacro MUI_PAGE_INSTFILES
 
 !define MUI_FINISHPAGE_RUN
-!define MUI_FINISHPAGE_RUN_FUNCTION "RunQupZillaAsUser"
+!define MUI_FINISHPAGE_RUN_FUNCTION "RunFalkonAsUser"
 !insertmacro MUI_PAGE_FINISH
 
 !insertmacro MUI_UNPAGE_WELCOME
@@ -114,12 +114,12 @@ ShowUnInstDetails show
 
 Section !$(TITLE_SecMain) SecMain
   SectionIn RO
-  FindProcDLL::FindProc "qupzilla.exe"
+  FindProcDLL::FindProc "falkon.exe"
   IntCmp $R0 1 0 notRunning
   MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "$(MSG_RunningInstance)" /SD IDOK IDCANCEL AbortInstallation
-    KillProcDLL::KillProc "qupzilla.exe"
-	Sleep 100
-	Goto notRunning
+    KillProcDLL::KillProc "falkon.exe"
+    Sleep 100
+    Goto notRunning
 AbortInstallation:
   Abort "$(MSG_InstallationCanceled)"
 
@@ -128,8 +128,8 @@ notRunning:
 
   SetOutPath "$INSTDIR"
   File "${QZ_BIN_DIR}\COPYRIGHT.txt"
-  File "${QZ_BIN_DIR}\qupzilla.exe"
-  File "${QZ_BIN_DIR}\qupzilla.dll"
+  File "${QZ_BIN_DIR}\falkon.exe"
+  File "${QZ_BIN_DIR}\falkon.dll"
   File "${QZ_BIN_DIR}\qt.conf"
   File "${OPENSSL_BIN_DIR}\libeay32.dll"
   File "${OPENSSL_BIN_DIR}\ssleay32.dll"
@@ -267,14 +267,14 @@ SectionEnd
     SectionGroup $(TITLE_SecSetASDefault) SecSetASDefault
         Section $(TITLE_SecExtensions) SecExtensions
           SetOutPath "$INSTDIR"
-          ${RegisterAssociation} ".htm" "$INSTDIR\qupzilla.exe" "QupZilla.HTM" $(FILE_Htm) "$INSTDIR\qupzilla.exe,1" "file"
-          ${RegisterAssociation} ".html" "$INSTDIR\qupzilla.exe" "QupZilla.HTML" $(FILE_Html) "$INSTDIR\qupzilla.exe,1" "file"
+          ${RegisterAssociation} ".htm" "$INSTDIR\falkon.exe" "Falkon.HTM" $(FILE_Htm) "$INSTDIR\falkon.exe,1" "file"
+          ${RegisterAssociation} ".html" "$INSTDIR\falkon.exe" "Falkon.HTML" $(FILE_Html) "$INSTDIR\falkon.exe,1" "file"
           ${UpdateSystemIcons}
         SectionEnd
 
         Section $(TITLE_SecProtocols) SecProtocols
-          ${RegisterAssociation} "http" "$INSTDIR\qupzilla.exe" "QupZilla.HTTP" "URL:HyperText Transfer Protocol" "$INSTDIR\qupzilla.exe,0" "protocol"
-          ${RegisterAssociation} "https" "$INSTDIR\qupzilla.exe" "QupZilla.HTTPS" "URL:HyperText Transfer Protocol with Privacy" "$INSTDIR\qupzilla.exe,0" "protocol"
+          ${RegisterAssociation} "http" "$INSTDIR\falkon.exe" "Falkon.HTTP" "URL:HyperText Transfer Protocol" "$INSTDIR\falkon.exe,0" "protocol"
+          ${RegisterAssociation} "https" "$INSTDIR\falkon.exe" "Falkon.HTTPS" "URL:HyperText Transfer Protocol with Privacy" "$INSTDIR\falkon.exe,0" "protocol"
           ${UpdateSystemIcons}
         SectionEnd
     SectionGroupEnd
@@ -282,25 +282,25 @@ SectionEnd
     Section -StartMenu
       SetOutPath "$INSTDIR"
       SetShellVarContext all
-      CreateDirectory "$SMPROGRAMS\QupZilla"
-      CreateShortCut "$SMPROGRAMS\QupZilla\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
-      CreateShortCut "$SMPROGRAMS\QupZilla\QupZilla.lnk" "$INSTDIR\qupzilla.exe"
-      CreateShortCut "$SMPROGRAMS\QupZilla\License.lnk" "$INSTDIR\COPYRIGHT.txt"
+      CreateDirectory "$SMPROGRAMS\Falkon"
+      CreateShortCut "$SMPROGRAMS\Falkon\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
+      CreateShortCut "$SMPROGRAMS\Falkon\Falkon.lnk" "$INSTDIR\falkon.exe"
+      CreateShortCut "$SMPROGRAMS\Falkon\License.lnk" "$INSTDIR\COPYRIGHT.txt"
     SectionEnd
 
     Section $(TITLE_SecDesktop) SecDesktop
       SetOutPath "$INSTDIR"
-      CreateShortCut "$DESKTOP\QupZilla.lnk" "$INSTDIR\qupzilla.exe" ""
+      CreateShortCut "$DESKTOP\Falkon.lnk" "$INSTDIR\falkon.exe" ""
     SectionEnd
 
     Section -Uninstaller
       WriteUninstaller "$INSTDIR\uninstall.exe"
-      WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\qupzilla.exe"
+      WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\falkon.exe"
       WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayName" "$(^Name)"
       WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "UninstallString" "$INSTDIR\Uninstall.exe"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\qupzilla.exe"
+      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\falkon.exe"
       WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "QupZilla Team"
+      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "Falkon Team"
       WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "HelpLink" "https://github.com/QupZilla/qupzilla/wiki"
       WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "InstallLocation" "$INSTDIR"
       WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "InstallSource" "$EXEDIR"
@@ -311,10 +311,10 @@ SectionEnd
     SectionEnd
 
     Section Uninstall
-      FindProcDLL::FindProc "qupzilla.exe"
+      FindProcDLL::FindProc "falkon.exe"
       IntCmp $R0 1 0 notRunning
       MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "$(MSG_RunningInstance)" /SD IDOK IDCANCEL AbortInstallation
-        KillProcDLL::KillProc "qupzilla.exe"
+        KillProcDLL::KillProc "falkon.exe"
         Sleep 100
         Goto notRunning
     AbortInstallation:
@@ -322,19 +322,19 @@ SectionEnd
 
     notRunning:
       SetShellVarContext all
-      Delete "$DESKTOP\QupZilla.lnk"
+      Delete "$DESKTOP\Falkon.lnk"
       RMDir /r "$INSTDIR"
-      RMDir /r "$SMPROGRAMS\QupZilla"
+      RMDir /r "$SMPROGRAMS\Falkon"
       DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
       DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
 
       DeleteRegKey HKLM "Software\${PRODUCT_NAME}"
       DeleteRegValue HKLM "SOFTWARE\RegisteredApplications" "${PRODUCT_NAME}"
 
-      ${UnRegisterAssociation} ".htm" "QupZilla.HTM" "$INSTDIR\qupzilla.exe" "file"
-      ${UnRegisterAssociation} ".html" "QupZilla.HTML" "$INSTDIR\qupzilla.exe" "file"
-      ${UnRegisterAssociation} "http" "QupZilla.HTTP" "$INSTDIR\qupzilla.exe" "protocol"
-      ${UnRegisterAssociation} "https" "QupZilla.HTTPS" "$INSTDIR\qupzilla.exe" "protocol"
+      ${UnRegisterAssociation} ".htm" "Falkon.HTM" "$INSTDIR\falkon.exe" "file"
+      ${UnRegisterAssociation} ".html" "Falkon.HTML" "$INSTDIR\falkon.exe" "file"
+      ${UnRegisterAssociation} "http" "Falkon.HTTP" "$INSTDIR\falkon.exe" "protocol"
+      ${UnRegisterAssociation} "https" "Falkon.HTTPS" "$INSTDIR\falkon.exe" "protocol"
       ${UpdateSystemIcons}
     SectionEnd
 !endif
@@ -342,7 +342,7 @@ SectionEnd
 BrandingText "${PRODUCT_NAME} ${PRODUCT_VERSION} Installer"
 
 Function .onInit
-        ;Prevent running installer of 64-bit QupZilla on 32-bit Windows
+        ;Prevent running installer of 64-bit Falkon on 32-bit Windows
         ${If} ${RunningX64}
           ${If} ${ARCH} == "x64"
             StrCpy $InstDir "$PROGRAMFILES64\${PRODUCT_NAME}\"
@@ -363,10 +363,10 @@ Function .onInit
         !endif
 
         ;Prevent Multiple Instances
-        System::Call 'kernel32::CreateMutexA(i 0, i 0, t "QupZillaInstaller-4ECB4694-2C39-4f93-9122-A986344C4E7B") i .r1 ?e'
+        System::Call 'kernel32::CreateMutexA(i 0, i 0, t "FalkonInstaller-4ECB4694-2C39-4f93-9122-A986344C4E7B") i .r1 ?e'
         Pop $R0
         StrCmp $R0 0 +3
-          MessageBox MB_OK|MB_ICONEXCLAMATION "QupZilla installer is already running!" /SD IDOK
+          MessageBox MB_OK|MB_ICONEXCLAMATION "Falkon installer is already running!" /SD IDOK
         Abort
 
         ;Language selection dialog¨
@@ -436,30 +436,30 @@ Function .onInit
 FunctionEnd
 
 Function RegisterCapabilities
-	!ifdef ___WINVER__NSH___
-		${If} ${AtLeastWinVista}
-			; even if we don't associate QupZilla as default for ".htm" and ".html"
-			; we need to write these ProgIds for future use!
-			;(e.g.: user uses "Default Programs" on Win7 or Vista to set QupZilla as default.)
-			${CreateProgId} "QupZilla.HTM" "$INSTDIR\qupzilla.exe" $(FILE_Htm) "$INSTDIR\qupzilla.exe,1"
-			${CreateProgId} "QupZilla.HTML" "$INSTDIR\qupzilla.exe" $(FILE_Html) "$INSTDIR\qupzilla.exe,1"
-			${CreateProgId} "QupZilla.HTTP" "$INSTDIR\qupzilla.exe" "URL:HyperText Transfer Protocol" "$INSTDIR\qupzilla.exe,0"
-			${CreateProgId} "QupZilla.HTTPS" "$INSTDIR\qupzilla.exe" "URL:HyperText Transfer Protocol with Privacy" "$INSTDIR\qupzilla.exe,0"
+    !ifdef ___WINVER__NSH___
+        ${If} ${AtLeastWinVista}
+            ; even if we don't associate Falkon as default for ".htm" and ".html"
+            ; we need to write these ProgIds for future use!
+            ;(e.g.: user uses "Default Programs" on Win7 or Vista to set Falkon as default.)
+            ${CreateProgId} "Falkon.HTM" "$INSTDIR\falkon.exe" $(FILE_Htm) "$INSTDIR\falkon.exe,1"
+            ${CreateProgId} "Falkon.HTML" "$INSTDIR\falkon.exe" $(FILE_Html) "$INSTDIR\falkon.exe,1"
+            ${CreateProgId} "Falkon.HTTP" "$INSTDIR\falkon.exe" "URL:HyperText Transfer Protocol" "$INSTDIR\falkon.exe,0"
+            ${CreateProgId} "Falkon.HTTPS" "$INSTDIR\falkon.exe" "URL:HyperText Transfer Protocol with Privacy" "$INSTDIR\falkon.exe,0"
 
-			; note: these lines just introduce capabilities of QupZilla to OS and don't change defaults!
-			WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationDescription" "$(PRODUCT_DESC)"
-			WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationIcon" "$INSTDIR\qupzilla.exe,0"
-			WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationName" "${PRODUCT_NAME}"
-			WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".htm" "QupZilla.HTM"
-			WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".html" "QupZilla.HTML"
-			WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "http" "QupZilla.HTTP"
-			WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "https" "QupZilla.HTTPS"
-			WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\Startmenu" "StartMenuInternet" "$INSTDIR\qupzilla.exe"
-			WriteRegStr HKLM "SOFTWARE\RegisteredApplications" "${PRODUCT_NAME}" "${PRODUCT_CAPABILITIES_KEY}"
-		${EndIf}
-	!endif
+            ; note: these lines just introduce capabilities of Falkon to OS and don't change defaults!
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationDescription" "$(PRODUCT_DESC)"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationIcon" "$INSTDIR\falkon.exe,0"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationName" "${PRODUCT_NAME}"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".htm" "Falkon.HTM"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".html" "Falkon.HTML"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "http" "Falkon.HTTP"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "https" "Falkon.HTTPS"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\Startmenu" "StartMenuInternet" "$INSTDIR\falkon.exe"
+            WriteRegStr HKLM "SOFTWARE\RegisteredApplications" "${PRODUCT_NAME}" "${PRODUCT_CAPABILITIES_KEY}"
+        ${EndIf}
+    !endif
 FunctionEnd
 
-Function RunQupZillaAsUser
-    ${StdUtils.ExecShellAsUser} $0 "$INSTDIR\qupzilla.exe" "open" ""
+Function RunFalkonAsUser
+    ${StdUtils.ExecShellAsUser} $0 "$INSTDIR\falkon.exe" "open" ""
 FunctionEnd

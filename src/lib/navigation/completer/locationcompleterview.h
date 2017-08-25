@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@
 
 class LocationCompleterDelegate;
 
-class QUPZILLA_EXPORT LocationCompleterView : public QListView
+class FALKON_EXPORT LocationCompleterView : public QListView
 {
     Q_OBJECT
 public:

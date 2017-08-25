@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@
 #include "qzcommon.h"
 #include "ui_docktitlebarwidget.h"
 
-class QUPZILLA_EXPORT DockTitleBarWidget : public QWidget, public Ui_DockTitleBarWidget
+class FALKON_EXPORT DockTitleBarWidget : public QWidget, public Ui_DockTitleBarWidget
 {
 public:
     explicit DockTitleBarWidget(const QString &title, QWidget* parent = 0);

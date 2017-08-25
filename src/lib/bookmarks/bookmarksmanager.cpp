@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -144,13 +144,13 @@ void BookmarksManager::createContextMenu(const QPoint &pos)
 void BookmarksManager::openBookmark(BookmarkItem* item)
 {
     item = item ? item : m_selectedBookmark;
-    BookmarksTools::openBookmark(getQupZilla(), item);
+    BookmarksTools::openBookmark(getWindow(), item);
 }
 
 void BookmarksManager::openBookmarkInNewTab(BookmarkItem* item)
 {
     item = item ? item : m_selectedBookmark;
-    BookmarksTools::openBookmarkInNewTab(getQupZilla(), item);
+    BookmarksTools::openBookmarkInNewTab(getWindow(), item);
 }
 
 void BookmarksManager::openBookmarkInNewWindow(BookmarkItem* item)
@@ -329,7 +329,7 @@ void BookmarksManager::keyPressEvent(QKeyEvent* event)
     QWidget::keyPressEvent(event);
 }
 
-BrowserWindow* BookmarksManager::getQupZilla()
+BrowserWindow* BookmarksManager::getWindow()
 {
     if (!m_window) {
         m_window = mApp->getWindow();

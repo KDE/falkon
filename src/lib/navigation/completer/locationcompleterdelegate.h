@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@
 
 #include "qzcommon.h"
 
-class QUPZILLA_EXPORT LocationCompleterDelegate : public QStyledItemDelegate
+class FALKON_EXPORT LocationCompleterDelegate : public QStyledItemDelegate
 {
 public:
     explicit LocationCompleterDelegate(QObject *parent = 0);

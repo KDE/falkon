@@ -1,7 +1,7 @@
 #
-# Bash completion for QupZilla
+# Bash completion for Falkon
 #
-_qupzilla()
+_falkon()
 {
     local cur prev opts
     COMPREPLY=()
@@ -19,4 +19,4 @@ _qupzilla()
         _filedir
     fi
 }
-complete -F _qupzilla qupzilla
+complete -F _falkon falkon

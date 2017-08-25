@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@
 
 class QWheelEvent;
 
-class QUPZILLA_EXPORT WheelHelper
+class FALKON_EXPORT WheelHelper
 {
 public:
     enum Direction {

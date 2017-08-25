@@ -45,7 +45,7 @@ TLDExtractor* TabManagerWidget::s_tldExtractor = 0;
 TabManagerWidget::TabManagerWidget(BrowserWindow* mainClass, QWidget* parent, bool defaultWidget)
     : QWidget(parent)
     , ui(new Ui::TabManagerWidget)
-    , p_QupZilla(mainClass)
+    , m_window(mainClass)
     , m_webPage(0)
     , m_isRefreshing(false)
     , m_refreshBlocked(false)
@@ -105,8 +105,8 @@ QString TabManagerWidget::domainFromUrl(const QUrl &url, bool useHostName)
     if (url.scheme() == "file") {
         return tr("Local File System:");
     }
-    else if (url.scheme() == "qupzilla" || urlString.isEmpty()) {
-        return tr("QupZilla:");
+    else if (url.scheme() == "falkon" || urlString.isEmpty()) {
+        return tr("Falkon:");
     }
     else if (url.scheme() == "ftp") {
         appendString.prepend(tr(" [FTP]"));
@@ -215,7 +215,7 @@ void TabManagerWidget::onItemActivated(QTreeWidgetItem* item, int column)
         return;
     }
 
-    BrowserWindow* mainWindow = qobject_cast<BrowserWindow*>(qvariant_cast<QWidget*>(item->data(0, QupZillaPointerRole)));
+    BrowserWindow* mainWindow = qobject_cast<BrowserWindow*>(qvariant_cast<QWidget*>(item->data(0, BrowserWindowPointerRole)));
     QWidget* tabWidget = qvariant_cast<QWidget*>(item->data(0, WebTabPointerRole));
 
     if (column == 1) {
@@ -423,7 +423,7 @@ void TabManagerWidget::processActions()
                 continue;
             }
 
-            BrowserWindow* mainWindow = qobject_cast<BrowserWindow*>(qvariant_cast<QWidget*>(tabItem->data(0, QupZillaPointerRole)));
+            BrowserWindow* mainWindow = qobject_cast<BrowserWindow*>(qvariant_cast<QWidget*>(tabItem->data(0, BrowserWindowPointerRole)));
             WebTab* webTab = qobject_cast<WebTab*>(qvariant_cast<QWidget*>(tabItem->data(0, WebTabPointerRole)));
 
             // current supported actions are not applied to pinned tabs
@@ -433,7 +433,7 @@ void TabManagerWidget::processActions()
             }
 
             if (command == "closeSelection") {
-                if (webTab->url().toString() == "qupzilla:restore") {
+                if (webTab->url().toString() == "falkon:restore") {
                     continue;
                 }
                 selectedTabs.insertMulti(mainWindow, webTab);
@@ -529,7 +529,7 @@ void TabManagerWidget::detachSelectedTabs(const QHash<BrowserWindow*, WebTab*> &
 
 bool TabManagerWidget::bookmarkSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash)
 {
-    QDialog* dialog = new QDialog(getQupZilla(), Qt::WindowStaysOnTopHint | Qt::MSWindowsFixedSizeDialogHint);
+    QDialog* dialog = new QDialog(getWindow(), Qt::WindowStaysOnTopHint | Qt::MSWindowsFixedSizeDialogHint);
     QBoxLayout* layout = new QBoxLayout(QBoxLayout::TopToBottom, dialog);
     QLabel* label = new QLabel(dialog);
     BookmarksFoldersButton* folderButton = new BookmarksFoldersButton(dialog);
@@ -581,9 +581,9 @@ QTreeWidgetItem* TabManagerWidget::createEmptyItem(QTreeWidgetItem* parent, bool
 void TabManagerWidget::groupByDomainName(bool useHostName)
 {
     QList<BrowserWindow*> windows = mApp->windows();
-    int currentWindowIdx = windows.indexOf(getQupZilla());
+    int currentWindowIdx = windows.indexOf(getWindow());
     if (currentWindowIdx == -1) {
-        // getQupZilla() instance is closing
+        // getWindow() instance is closing
         return;
     }
     windows.move(currentWindowIdx, 0);
@@ -636,7 +636,7 @@ void TabManagerWidget::groupByDomainName(bool useHostName)
 
             tabItem->setData(0, UrlRole, webTab->url().toString());
             tabItem->setData(0, WebTabPointerRole, QVariant::fromValue(qobject_cast<QWidget*>(webTab)));
-            tabItem->setData(0, QupZillaPointerRole, QVariant::fromValue(qobject_cast<QWidget*>(mainWin)));
+            tabItem->setData(0, BrowserWindowPointerRole, QVariant::fromValue(qobject_cast<QWidget*>(mainWin)));
 
             makeWebViewConnections(webTab->webView());
         }
@@ -648,7 +648,7 @@ void TabManagerWidget::groupByDomainName(bool useHostName)
 void TabManagerWidget::groupByWindow()
 {
     QList<BrowserWindow*> windows = mApp->windows();
-    int currentWindowIdx = windows.indexOf(getQupZilla());
+    int currentWindowIdx = windows.indexOf(getWindow());
     if (currentWindowIdx == -1) {
         return;
     }
@@ -670,7 +670,7 @@ void TabManagerWidget::groupByWindow()
             winItem->setFont(0, font);
         }
 
-        winItem->setData(0, QupZillaPointerRole, QVariant::fromValue(qobject_cast<QWidget*>(mainWin)));
+        winItem->setData(0, BrowserWindowPointerRole, QVariant::fromValue(qobject_cast<QWidget*>(mainWin)));
         QList<WebTab*> tabs = mainWin->tabWidget()->allTabs();
 
         for (int tab = 0; tab < tabs.count(); ++tab) {
@@ -701,20 +701,20 @@ void TabManagerWidget::groupByWindow()
 
             tabItem->setData(0, UrlRole, webTab->url().toString());
             tabItem->setData(0, WebTabPointerRole, QVariant::fromValue(qobject_cast<QWidget*>(webTab)));
-            tabItem->setData(0, QupZillaPointerRole, QVariant::fromValue(qobject_cast<QWidget*>(mainWin)));
+            tabItem->setData(0, BrowserWindowPointerRole, QVariant::fromValue(qobject_cast<QWidget*>(mainWin)));
 
             makeWebViewConnections(webTab->webView());
         }
     }
 }
 
-BrowserWindow* TabManagerWidget::getQupZilla()
+BrowserWindow* TabManagerWidget::getWindow()
 {
-    if (m_isDefaultWidget || !p_QupZilla) {
+    if (m_isDefaultWidget || !m_window) {
         return mApp->getWindow();
     }
     else {
-        return p_QupZilla.data();
+        return m_window.data();
     }
 }
 

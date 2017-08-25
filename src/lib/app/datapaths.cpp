@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2014-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -99,12 +99,12 @@ void DataPaths::init()
 
     // Config
 #if defined(Q_OS_WIN) || defined(Q_OS_OS2)
-    // Use %LOCALAPPDATA%/qupzilla as Config path on Windows
+    // Use %LOCALAPPDATA%/falkon as Config path on Windows
     m_paths[Config].append(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation));
 #elif defined(Q_OS_MACOS)
-    m_paths[Config].append(QDir::homePath() + QLatin1String("/Library/Application Support/QupZilla"));
+    m_paths[Config].append(QDir::homePath() + QLatin1String("/Library/Application Support/Falkon"));
 #else // Unix
-    m_paths[Config].append(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QL1S("/qupzilla"));
+    m_paths[Config].append(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QL1S("/falkon"));
 #endif
 
     // Profiles
@@ -113,7 +113,7 @@ void DataPaths::init()
     // Temp
 #ifdef Q_OS_UNIX
     const QByteArray &user = qgetenv("USER");
-    const QString &tempPath = QString(QSL("%1/qupzilla-%2")).arg(QDir::tempPath(), user.constData());
+    const QString &tempPath = QString(QSL("%1/falkon-%2")).arg(QDir::tempPath(), user.constData());
     m_paths[Temp].append(tempPath);
 #else
     m_paths[Temp].append(m_paths[Config].at(0) + QLatin1String("/tmp"));
@@ -123,7 +123,7 @@ void DataPaths::init()
 #ifdef Q_OS_UNIX
     const QString &cachePath = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation);
     if (!cachePath.isEmpty())
-        m_paths[Cache].append(cachePath + QLatin1String("/qupzilla"));
+        m_paths[Cache].append(cachePath + QLatin1String("/falkon"));
 #endif
 
     // Make sure the Config and Temp paths exists
@@ -137,7 +137,7 @@ void DataPaths::init()
     m_paths[Plugins].append(m_paths[Config].at(0) + QLatin1String("/plugins"));
 
 #ifdef USE_LIBPATH
-    m_paths[Plugins].append(QLatin1String(USE_LIBPATH "/qupzilla"));
+    m_paths[Plugins].append(QLatin1String(USE_LIBPATH "/falkon"));
 #endif
 }
 

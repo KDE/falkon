@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2014  S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
 * Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
 *
@@ -29,7 +29,7 @@
 #include <QHash>
 #include <QList>
 
-class QUPZILLA_EXPORT AesInterface : public QObject
+class FALKON_EXPORT AesInterface : public QObject
 {
     Q_OBJECT
 

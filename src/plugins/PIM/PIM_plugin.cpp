@@ -1,5 +1,5 @@
 /* ============================================================
-* Personal Information Manager plugin for QupZilla
+* Personal Information Manager plugin for Falkon
 * Copyright (C) 2012-2014  David Rosca <nowrep@gmail.com>
 * Copyright (C) 2012-2014  Mladen Pejaković <pejakm@autistici.org>
 *
@@ -37,7 +37,7 @@ PluginSpec PIM_Plugin::pluginSpec()
     PluginSpec spec;
     spec.name = "PIM";
     spec.info = "Personal Information Manager";
-    spec.description = "Adds ability for QupZilla to store some personal data";
+    spec.description = "Adds ability for Falkon to store some personal data";
     spec.version = "0.2.0";
     spec.author = QString::fromUtf8("Mladen Pejaković <pejakm@autistici.org>");
     spec.icon = QPixmap(":/PIM/data/PIM.png");
@@ -66,7 +66,7 @@ void PIM_Plugin::unload()
 bool PIM_Plugin::testPlugin()
 {
     // Require the version that the plugin was built with
-    return (Qz::VERSION == QLatin1String(QUPZILLA_VERSION));
+    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
 }
 
 QTranslator* PIM_Plugin::getTranslator(const QString &locale)

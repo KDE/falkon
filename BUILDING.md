@@ -8,21 +8,21 @@ General
   from git to specific directory by your system you compiled for.
   On Linux, you can easily do it by running make install.
   If you are unsure where is the right place, you can check it directly from
-  QupZilla by clicking from Help Menu on Configuration Information, then in
+  Falkon by clicking from Help Menu on Configuration Information, then in
   Path section.
 
-  You may want to build QupZilla with debugging symbols (for generating
+  You may want to build Falkon with debugging symbols (for generating
   backtrace of crash) as easily as adding one line to src/defines.pri:
 
                CONFIG += debug
 
-  QupZilla requires Qt (>= 5.8) and QtWebEngine (at least version included in Qt 5.8)
+  Falkon requires Qt (>= 5.8) and QtWebEngine (at least version included in Qt 5.8)
 
 Microsoft Windows
 ----------------------------------------------------------------------------------
 
   You need Microsoft Visual C++ Compiler, Qt Libraries 5.8 or higher and openssl
-  libraries. in order to build QupZilla.
+  libraries. in order to build Falkon.
 
 Linux / Unix
 ----------------------------------------------------------------------------------
@@ -54,7 +54,7 @@ MAC OS X
 FreeBSD
 ----------------------------------------------------------------------------------
 
-  You may need to set few sysctls to get QupZilla running with raster graphics system.
+  You may need to set few sysctls to get Falkon running with raster graphics system.
 
   For more informations, please see FAQ.
 
@@ -68,7 +68,7 @@ Available Defines
     $ export NAME="value"
 
  General:
-   PORTABLE_BUILD         QupZilla won't write any data outside of path of execution.
+   PORTABLE_BUILD         Falkon won't write any data outside of path of execution.
                           It will also disable plugins by default.
                           (disabled by default)
 
@@ -121,32 +121,32 @@ Available Defines
                           example:
                           $ export GNOME_INTEGRATION="true"
 
-     USE_LIBPATH          By default, /usr/lib/ is used for libQupZilla and /usr/lib/qupzilla
+     USE_LIBPATH          By default, /usr/lib/ is used for libFalkon and /usr/lib/falkon
                           for plugins.
                           You can change it by setting this define.
 
                           example:
                           $ export USE_LIBPATH="/usr/lib64"
 
-     NO_SYSTEM_DATAPATH   By default, QupZilla is using /usr/share/qupzilla/ path
+     NO_SYSTEM_DATAPATH   By default, Falkon is using /usr/share/falkon/ path
                           for storing themes and translations.
-                          By setting this define, QupZilla will use path of execution.
+                          By setting this define, Falkon will use path of execution.
                           (disabled by default)
 
                           example:
                           $ export NO_SYSTEM_DATAPATH="true"
 
-     QUPZILLA_PREFIX      You can define different prefix.
-                          QupZilla binary will then be moved to PREFIX/bin/, use
-                          PREFIX/share/qupzilla/ as datadir, PREFIX/share/applications for
+     FALKON_PREFIX        You can define different prefix.
+                          Falkon binary will then be moved to PREFIX/bin/, use
+                          PREFIX/share/falkon/ as datadir, PREFIX/share/applications for
                           desktop launcher and PREFIX/share/pixmaps for icon.
                           (default prefix is "/usr")
 
                           example:
-                          $ export QUPZILLA_PREFIX="/usr"
+                          $ export FALKON_PREFIX="/usr"
 
      SHARE_FOLDER         You can define the path of the share folder, i.e. /usr/share
-                          QupZilla will then use SHARE_FOLDER/qupzilla as datadir,
+                          Falkon will then use SHARE_FOLDER/falkon as datadir,
                           SHARE_FOLDER/applications for desktop launcher and
                           SHARE_FOLDER/pixmaps for the icon. By default it is not defined
                           and files will be installed as described above.

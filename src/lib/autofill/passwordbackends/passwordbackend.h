@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@
 
 class QWidget;
 
-class QUPZILLA_EXPORT PasswordBackend
+class FALKON_EXPORT PasswordBackend
 {
 public:
     explicit PasswordBackend();

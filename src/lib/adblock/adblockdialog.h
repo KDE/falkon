@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ class AdBlockTreeWidget;
 class AdBlockManager;
 class AdBlockRule;
 
-class QUPZILLA_EXPORT AdBlockDialog : public QWidget, public Ui_AdBlockDialog
+class FALKON_EXPORT AdBlockDialog : public QWidget, public Ui_AdBlockDialog
 {
     Q_OBJECT
 

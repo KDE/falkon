@@ -1,5 +1,5 @@
 /* ============================================================
-* Mouse Gestures plugin for QupZilla
+* Mouse Gestures plugin for Falkon
 * Copyright (C) 2013-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify

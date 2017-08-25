@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -33,7 +33,7 @@ class WebView;
 class AutoSaver;
 
 // Needs to be QWidget subclass, otherwise qproperty- setting won't work
-class QUPZILLA_EXPORT IconProvider : public QWidget
+class FALKON_EXPORT IconProvider : public QWidget
 {
     Q_OBJECT
     Q_PROPERTY(QIcon bookmarkIcon READ bookmarkIcon WRITE setBookmarkIcon)

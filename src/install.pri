@@ -19,7 +19,7 @@ mac {
     target1.files += $$QZ_DESTDIR/themes
     target1.path = $$data_folder
 
-    target2.files = $$PWD/../linux/applications/org.qupzilla.QupZilla.desktop
+    target2.files = $$PWD/../linux/applications/org.kde.Falkon.desktop
     target2.path = $$launcher_folder
 
     target3.files = $$PWD/../linux/pixmaps/qupzilla.png
@@ -43,10 +43,10 @@ mac {
     ico256.files = $$PWD/../linux/hicolor/256x256/apps/qupzilla.png
     ico256.path = $$hicolor_folder/256x256/apps
 
-    bashcompletion.files = $$PWD/../linux/completion/qupzilla
+    bashcompletion.files = $$PWD/../linux/completion/falkon
     bashcompletion.path = $$share_folder/bash-completion/completions
 
-    appdata.files = $$PWD/../linux/appdata/org.qupzilla.QupZilla.appdata.xml
+    appdata.files = $$PWD/../linux/appdata/org.kde.Falkon.appdata.xml
     appdata.path = $$share_folder/appdata
 
 

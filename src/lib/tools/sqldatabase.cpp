@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -46,7 +46,7 @@ QSqlDatabase SqlDatabase::databaseForThread(QThread* thread)
 
     if (!m_databases.contains(thread)) {
         const QString threadStr = QString::number((quintptr) thread);
-        m_databases[thread] = QSqlDatabase::cloneDatabase(QSqlDatabase::database(), QL1S("QupZilla/") + threadStr);
+        m_databases[thread] = QSqlDatabase::cloneDatabase(QSqlDatabase::database(), QL1S("Falkon/") + threadStr);
         m_databases[thread].open();
     }
 

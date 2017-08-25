@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -21,10 +21,10 @@
 #include <QDebug>
 #include <QFlags>
 
-#ifdef QUPZILLA_SHAREDLIBRARY
-#define QUPZILLA_EXPORT Q_DECL_EXPORT
+#ifdef FALKON_SHAREDLIBRARY
+#define FALKON_EXPORT Q_DECL_EXPORT
 #else
-#define QUPZILLA_EXPORT Q_DECL_IMPORT
+#define FALKON_EXPORT Q_DECL_IMPORT
 #endif
 
 #ifndef Q_UNLIKELY
@@ -57,12 +57,12 @@ extern const int sessionVersionQt5;
 // Version of bookmarks.json file
 extern const int bookmarksVersion;
 
-QUPZILLA_EXPORT extern const char* APPNAME;
-QUPZILLA_EXPORT extern const char* VERSION;
-QUPZILLA_EXPORT extern const char* AUTHOR;
-QUPZILLA_EXPORT extern const char* COPYRIGHT;
-QUPZILLA_EXPORT extern const char* WWWADDRESS;
-QUPZILLA_EXPORT extern const char* WIKIADDRESS;
+FALKON_EXPORT extern const char* APPNAME;
+FALKON_EXPORT extern const char* VERSION;
+FALKON_EXPORT extern const char* AUTHOR;
+FALKON_EXPORT extern const char* COPYRIGHT;
+FALKON_EXPORT extern const char* WWWADDRESS;
+FALKON_EXPORT extern const char* WIKIADDRESS;
 
 enum BrowserWindowType {
     BW_FirstAppWindow,

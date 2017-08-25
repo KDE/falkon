@@ -15,7 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "qupzillaschemehandler.h"
+#include "falkonschemehandler.h"
 #include "qztools.h"
 #include "browserwindow.h"
 #include "mainapplication.h"
@@ -39,23 +39,23 @@ static QString authorString(const char* name, const QString &mail)
     return QSL("%1 &lt;<a href=\"mailto:%2\">%2</a>&gt;").arg(QString::fromUtf8(name), mail);
 }
 
-QupZillaSchemeHandler::QupZillaSchemeHandler(QObject *parent)
+FalkonSchemeHandler::FalkonSchemeHandler(QObject *parent)
     : QWebEngineUrlSchemeHandler(parent)
 {
 }
 
-void QupZillaSchemeHandler::requestStarted(QWebEngineUrlRequestJob *job)
+void FalkonSchemeHandler::requestStarted(QWebEngineUrlRequestJob *job)
 {
     QStringList knownPages;
     knownPages << "about" << "reportbug" << "start" << "speeddial" << "config" << "restore" << "adblock";
 
     if (knownPages.contains(job->requestUrl().path()))
-        job->reply(QByteArrayLiteral("text/html"), new QupZillaSchemeReply(job));
+        job->reply(QByteArrayLiteral("text/html"), new FalkonSchemeReply(job));
     else
         job->fail(QWebEngineUrlRequestJob::UrlInvalid);
 }
 
-QupZillaSchemeReply::QupZillaSchemeReply(QWebEngineUrlRequestJob *job, QObject *parent)
+FalkonSchemeReply::FalkonSchemeReply(QWebEngineUrlRequestJob *job, QObject *parent)
     : QIODevice(parent)
     , m_loaded(false)
     , m_job(job)
@@ -66,7 +66,7 @@ QupZillaSchemeReply::QupZillaSchemeReply(QWebEngineUrlRequestJob *job, QObject *
     m_buffer.open(QIODevice::ReadWrite);
 }
 
-void QupZillaSchemeReply::loadPage()
+void FalkonSchemeReply::loadPage()
 {
     if (m_loaded)
         return;
@@ -101,18 +101,18 @@ void QupZillaSchemeReply::loadPage()
     m_loaded = true;
 }
 
-qint64 QupZillaSchemeReply::bytesAvailable() const
+qint64 FalkonSchemeReply::bytesAvailable() const
 {
     return m_buffer.bytesAvailable();
 }
 
-qint64 QupZillaSchemeReply::readData(char *data, qint64 maxSize)
+qint64 FalkonSchemeReply::readData(char *data, qint64 maxSize)
 {
     loadPage();
     return m_buffer.read(data, maxSize);
 }
 
-qint64 QupZillaSchemeReply::writeData(const char *data, qint64 len)
+qint64 FalkonSchemeReply::writeData(const char *data, qint64 len)
 {
     Q_UNUSED(data);
     Q_UNUSED(len);
@@ -120,7 +120,7 @@ qint64 QupZillaSchemeReply::writeData(const char *data, qint64 len)
     return 0;
 }
 
-QString QupZillaSchemeReply::reportbugPage()
+QString FalkonSchemeReply::reportbugPage()
 {
     static QString bPage;
 
@@ -131,7 +131,7 @@ QString QupZillaSchemeReply::reportbugPage()
     bPage.append(QzTools::readAllFileContents(":html/reportbug.html"));
     bPage.replace(QLatin1String("%TITLE%"), tr("Report Issue"));
     bPage.replace(QLatin1String("%REPORT-ISSUE%"), tr("Report Issue"));
-    bPage.replace(QLatin1String("%PLUGINS-TEXT%"), tr("If you are experiencing problems with QupZilla, please try to disable"
+    bPage.replace(QLatin1String("%PLUGINS-TEXT%"), tr("If you are experiencing problems with Falkon, please try to disable"
                   " all extensions first. <br/>If this does not fix it, then please fill out this form: "));
     bPage.replace(QLatin1String("%EMAIL%"), tr("Your E-mail"));
     bPage.replace(QLatin1String("%TYPE%"), tr("Issue type"));
@@ -156,7 +156,7 @@ QString QupZillaSchemeReply::reportbugPage()
     return bPage;
 }
 
-QString QupZillaSchemeReply::startPage()
+QString FalkonSchemeReply::startPage()
 {
     static QString sPage;
 
@@ -171,14 +171,14 @@ QString QupZillaSchemeReply::startPage()
     sPage.replace(QLatin1String("%BUTTON-LABEL%"), tr("Search on Web"));
     sPage.replace(QLatin1String("%SEARCH-BY%"), tr("Search results provided by DuckDuckGo"));
     sPage.replace(QLatin1String("%WWW%"), Qz::WIKIADDRESS);
-    sPage.replace(QLatin1String("%ABOUT-QUPZILLA%"), tr("About QupZilla"));
+    sPage.replace(QLatin1String("%ABOUT-FALKON%"), tr("About Falkon"));
     sPage.replace(QLatin1String("%PRIVATE-BROWSING%"), mApp->isPrivate() ? tr("<h1>Private Browsing</h1>") : QString());
     sPage = QzTools::applyDirectionToPage(sPage);
 
     return sPage;
 }
 
-QString QupZillaSchemeReply::aboutPage()
+QString FalkonSchemeReply::aboutPage()
 {
     static QString aPage;
 
@@ -187,8 +187,8 @@ QString QupZillaSchemeReply::aboutPage()
         aPage.replace(QLatin1String("%ABOUT-IMG%"), QzTools::pixmapToDataUrl(QzTools::dpiAwarePixmap(QSL(":icons/other/about.png"))).toString());
         aPage.replace(QLatin1String("%COPYRIGHT-INCLUDE%"), QzTools::readAllFileContents(":html/copyright").toHtmlEscaped());
 
-        aPage.replace(QLatin1String("%TITLE%"), tr("About QupZilla"));
-        aPage.replace(QLatin1String("%ABOUT-QUPZILLA%"), tr("About QupZilla"));
+        aPage.replace(QLatin1String("%TITLE%"), tr("About Falkon"));
+        aPage.replace(QLatin1String("%ABOUT-FALKON%"), tr("About Falkon"));
         aPage.replace(QLatin1String("%INFORMATIONS-ABOUT-VERSION%"), tr("Information about version"));
         aPage.replace(QLatin1String("%COPYRIGHT%"), tr("Copyright"));
 
@@ -259,7 +259,7 @@ QString QupZillaSchemeReply::aboutPage()
     return aPage;
 }
 
-QString QupZillaSchemeReply::speeddialPage()
+QString FalkonSchemeReply::speeddialPage()
 {
     static QString dPage;
 
@@ -316,7 +316,7 @@ QString QupZillaSchemeReply::speeddialPage()
     return page;
 }
 
-QString QupZillaSchemeReply::restorePage()
+QString FalkonSchemeReply::restorePage()
 {
     static QString rPage;
 
@@ -324,7 +324,7 @@ QString QupZillaSchemeReply::restorePage()
         rPage.append(QzTools::readAllFileContents(":html/restore.html"));
         rPage.replace(QLatin1String("%IMAGE%"), QzTools::pixmapToDataUrl(IconProvider::standardIcon(QStyle::SP_MessageBoxWarning).pixmap(45)).toString());
         rPage.replace(QLatin1String("%TITLE%"), tr("Restore Session"));
-        rPage.replace(QLatin1String("%OOPS%"), tr("Oops, QupZilla crashed."));
+        rPage.replace(QLatin1String("%OOPS%"), tr("Oops, Falkon crashed."));
         rPage.replace(QLatin1String("%APOLOGIZE%"), tr("We apologize for this. Would you like to restore the last saved state?"));
         rPage.replace(QLatin1String("%TRY-REMOVING%"), tr("Try removing one or more tabs that you think cause troubles"));
         rPage.replace(QLatin1String("%START-NEW%"), tr("Or you can start completely new session"));
@@ -338,7 +338,7 @@ QString QupZillaSchemeReply::restorePage()
     return rPage;
 }
 
-QString QupZillaSchemeReply::configPage()
+QString FalkonSchemeReply::configPage()
 {
     static QString cPage;
 
@@ -349,7 +349,7 @@ QString QupZillaSchemeReply::configPage()
         cPage.replace(QLatin1String("%TITLE%"), tr("Configuration Information"));
         cPage.replace(QLatin1String("%CONFIG%"), tr("Configuration Information"));
         cPage.replace(QLatin1String("%INFORMATIONS-ABOUT-VERSION%"), tr("Information about version"));
-        cPage.replace(QLatin1String("%CONFIG-ABOUT%"), tr("This page contains information about QupZilla's current configuration - relevant for troubleshooting. Please include this information when submitting bug reports."));
+        cPage.replace(QLatin1String("%CONFIG-ABOUT%"), tr("This page contains information about Falkon's current configuration - relevant for troubleshooting. Please include this information when submitting bug reports."));
         cPage.replace(QLatin1String("%BROWSER-IDENTIFICATION%"), tr("Browser Identification"));
         cPage.replace(QLatin1String("%PATHS%"), tr("Paths"));
         cPage.replace(QLatin1String("%BUILD-CONFIG%"), tr("Build Configuration"));
@@ -382,7 +382,7 @@ QString QupZillaSchemeReply::configPage()
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Themes"), DataPaths::path(DataPaths::Themes)) +
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Translations"), DataPaths::path(DataPaths::Translations)));
 
-#ifdef QUPZILLA_DEBUG_BUILD
+#ifdef FALKON_DEBUG_BUILD
         QString debugBuild = tr("<b>Enabled</b>");
 #else
         QString debugBuild = tr("Disabled");
@@ -471,7 +471,7 @@ QString QupZillaSchemeReply::configPage()
     return page;
 }
 
-QString QupZillaSchemeReply::adblockPage()
+QString FalkonSchemeReply::adblockPage()
 {
     static QString aPage;
 

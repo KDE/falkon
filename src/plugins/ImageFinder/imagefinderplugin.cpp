@@ -62,7 +62,7 @@ void ImageFinderPlugin::unload()
 bool ImageFinderPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
-    return (Qz::VERSION == QLatin1String(QUPZILLA_VERSION));
+    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
 }
 
 QTranslator *ImageFinderPlugin::getTranslator(const QString &locale)

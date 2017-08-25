@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@ EmptyNetworkReply::EmptyNetworkReply(QObject* parent)
     : QNetworkReply(parent)
 {
     setOperation(QNetworkAccessManager::GetOperation);
-    setError(QNetworkReply::OperationCanceledError, QSL("QupZilla:No Error"));
+    setError(QNetworkReply::OperationCanceledError, QSL("Falkon:No Error"));
 
     open(QIODevice::ReadOnly);
 

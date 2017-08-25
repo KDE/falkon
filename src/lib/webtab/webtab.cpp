@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -47,7 +47,7 @@ WebTab::SavedTab::SavedTab()
 
 WebTab::SavedTab::SavedTab(WebTab* webTab)
 {
-    if (webTab->url().toString() == QL1S("qupzilla:restore")) {
+    if (webTab->url().toString() == QL1S("falkon:restore")) {
         return;
     }
 
@@ -458,7 +458,7 @@ void WebTab::titleChanged(const QString &title)
     }
 
     if (isCurrentTab()) {
-        m_window->setWindowTitle(tr("%1 - QupZilla").arg(title));
+        m_window->setWindowTitle(tr("%1 - Falkon").arg(title));
     }
 
     m_tabBar->setTabText(tabIndex(), title);

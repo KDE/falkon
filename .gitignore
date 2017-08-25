@@ -11,12 +11,12 @@ DEBIAN
 headers*.tar.gz
 license_template
 Makefile*
-bin/qupzilla
-bin/QupZilla.dmg
-mac/images/qupzilla-dmg-icon.iconset
+bin/falkon
+bin/Falkon.dmg
+mac/images/falkon-dmg-icon.iconset
 lib*.so*
 bin/core
-qupzilla.sh
+falkon.sh
 git_revision
 *.exe
 *.dll
@@ -32,7 +32,7 @@ Thumbs.db
 *.embed.manifest
 bin/autotests
 .clang_complete
-bin/qupzilla.app
+bin/falkon.app
 .DS_Store
 *.dylib
 hunspell

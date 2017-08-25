@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - QtWebEngine based browser
+* Falkon - Qt web browser
 * Copyright (C) 2015 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -25,7 +25,7 @@
 
 class UrlInterceptor;
 
-class QUPZILLA_EXPORT NetworkUrlInterceptor : public QWebEngineUrlRequestInterceptor
+class FALKON_EXPORT NetworkUrlInterceptor : public QWebEngineUrlRequestInterceptor
 {
 public:
     explicit NetworkUrlInterceptor(QObject* parent = Q_NULLPTR);

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -29,7 +29,7 @@ class QPluginLoader;
 
 class SpeedDial;
 
-class QUPZILLA_EXPORT Plugins : public QObject
+class FALKON_EXPORT Plugins : public QObject
 {
     Q_OBJECT
 public:

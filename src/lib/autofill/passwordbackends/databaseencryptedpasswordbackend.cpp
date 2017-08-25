@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2014  S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
 * Copyright (C) 2013-2016  David Rosca <nowrep@gmail.com>
 *
@@ -27,7 +27,7 @@
 #include <QSqlQuery>
 #include <QMessageBox>
 
-#define INTERNAL_SERVER_ID QLatin1String("qupzilla.internal")
+#define INTERNAL_SERVER_ID QLatin1String("falkon.internal")
 
 DatabaseEncryptedPasswordBackend::DatabaseEncryptedPasswordBackend()
     : PasswordBackend()
@@ -567,7 +567,7 @@ void MasterPasswordDialog::reject()
         // master password not setted
         QMessageBox::information(this, AutoFill::tr("Warning!"),
                                  AutoFill::tr("This backend needs a master password to be set! "
-                                              "QupZilla just switches to its default backend"));
+                                              "Falkon just switches to its default backend"));
         // active default backend
         mApp->autoFill()->passwordManager()->switchBackend("database");
         return;

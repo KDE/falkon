@@ -1,12 +1,12 @@
 {
-    "id": "org.qupzilla.QupZilla",
+    "id": "org.kde.Falkon",
     "runtime": "org.kde.Platform",
     "runtime-version": "master",
     "sdk": "org.kde.Sdk",
-    "rename-icon": "qupzilla",
+    "rename-icon": "falkon",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
-    "command": "qupzilla",
+    "command": "falkon",
     "finish-args": [
         "--share=ipc",
         "--share=network",
@@ -20,16 +20,16 @@
 
     "modules": [
         {
-            "name": "qupzilla",
+            "name": "falkon",
             "build-options": {
                 "env": {
-                    "QUPZILLA_PREFIX": "/app"
+                    "FALKON_PREFIX": "/app"
                 }
             },
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/QupZilla/qupzilla.git"
+                    "url": "git://anongit.kde.org/falkon.git"
                 },
                 {
                     "type": "script",

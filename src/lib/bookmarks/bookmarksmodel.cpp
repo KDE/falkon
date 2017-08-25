@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2014-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -184,7 +184,7 @@ Qt::DropActions BookmarksModel::supportedDropActions() const
     return Qt::CopyAction | Qt::MoveAction;
 }
 
-#define MIMETYPE QLatin1String("application/qupzilla.bookmarks")
+#define MIMETYPE QLatin1String("application/falkon.bookmarks")
 
 QStringList BookmarksModel::mimeTypes() const
 {

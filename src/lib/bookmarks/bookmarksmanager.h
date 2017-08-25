@@ -34,7 +34,7 @@ class BrowserWindow;
 class Bookmarks;
 class BookmarkItem;
 
-class QUPZILLA_EXPORT BookmarksManager : public QWidget
+class FALKON_EXPORT BookmarksManager : public QWidget
 {
     Q_OBJECT
 
@@ -73,7 +73,7 @@ private:
     bool bookmarkEditable(BookmarkItem* item) const;
     void addBookmark(BookmarkItem* item);
     BookmarkItem* parentForNewBookmark() const;
-    BrowserWindow* getQupZilla();
+    BrowserWindow* getWindow();
 
     void showEvent(QShowEvent* event);
     void keyPressEvent(QKeyEvent* event);

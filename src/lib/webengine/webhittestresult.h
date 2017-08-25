@@ -29,7 +29,7 @@ class QWebEngineContextMenuData;
 
 class WebPage;
 
-class QUPZILLA_EXPORT WebHitTestResult
+class FALKON_EXPORT WebHitTestResult
 {
 public:
     explicit WebHitTestResult(const WebPage *page, const QPoint &pos);

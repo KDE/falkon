@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2014-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -338,21 +338,21 @@ void MainMenu::aboutQt()
 void MainMenu::showInfoAboutApp()
 {
     if (m_window) {
-        m_window->tabWidget()->addView(QUrl(QSL("qupzilla:about")), Qz::NT_CleanSelectedTab);
+        m_window->tabWidget()->addView(QUrl(QSL("falkon:about")), Qz::NT_CleanSelectedTab);
     }
 }
 
 void MainMenu::showConfigInfo()
 {
     if (m_window) {
-        m_window->tabWidget()->addView(QUrl(QSL("qupzilla:config")), Qz::NT_CleanSelectedTab);
+        m_window->tabWidget()->addView(QUrl(QSL("falkon:config")), Qz::NT_CleanSelectedTab);
     }
 }
 
 void MainMenu::reportIssue()
 {
     if (m_window) {
-        m_window->tabWidget()->addView(QUrl(QSL("qupzilla:reportbug")), Qz::NT_CleanSelectedTab);
+        m_window->tabWidget()->addView(QUrl(QSL("falkon:reportbug")), Qz::NT_CleanSelectedTab);
     }
 }
 
@@ -503,7 +503,7 @@ void MainMenu::init()
     m_actions[QSL(name)] = action
 
     // Standard actions - needed on Mac to be placed correctly in "application" menu
-    QAction* action = new QAction(QIcon::fromTheme(QSL("help-about")), tr("&About QupZilla"), this);
+    QAction* action = new QAction(QIcon::fromTheme(QSL("help-about")), tr("&About Falkon"), this);
     action->setMenuRole(QAction::AboutRole);
     connect(action, SIGNAL(triggered()), this, SLOT(showAboutDialog()));
     m_actions[QSL("Standard/About")] = action;

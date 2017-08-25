@@ -49,7 +49,7 @@ PluginSpec TabManagerPlugin::pluginSpec()
 {
     PluginSpec spec;
     spec.name = "Tab Manager";
-    spec.info = "Simple yet powerful tab manager for QupZilla";
+    spec.info = "Simple yet powerful tab manager for Falkon";
     spec.description = "Adds ability to managing tabs and windows";
     spec.version = "0.7.0";
     spec.author = "Razi Alavizadeh <s.r.alavizadeh@gmail.com>";
@@ -96,7 +96,7 @@ void TabManagerPlugin::unload()
 
 bool TabManagerPlugin::testPlugin()
 {
-    return (Qz::VERSION == QLatin1String(QUPZILLA_VERSION));
+    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
 }
 
 QTranslator* TabManagerPlugin::getTranslator(const QString &locale)

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2016 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -86,6 +86,6 @@ public:
     virtual bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) { Q_UNUSED(page); Q_UNUSED(url); Q_UNUSED(type); Q_UNUSED(isMainFrame); return true; }
 };
 
-Q_DECLARE_INTERFACE(PluginInterface, "QupZilla.Browser.PluginInterface/2.0")
+Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.0")
 
 #endif // PLUGININTERFACE_H

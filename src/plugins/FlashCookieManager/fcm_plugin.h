@@ -44,7 +44,7 @@ class FCM_Plugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "QupZilla.Browser.plugin.FlashCookieManager")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.FlashCookieManager")
 
 public:
     explicit FCM_Plugin();

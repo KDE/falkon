@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2015  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ class Menu;
 class LoadRequest;
 class WebInspector;
 
-class QUPZILLA_EXPORT PopupWebView : public WebView
+class FALKON_EXPORT PopupWebView : public WebView
 {
     Q_OBJECT
 public:

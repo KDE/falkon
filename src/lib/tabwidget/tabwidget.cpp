@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -195,7 +195,7 @@ void TabWidget::loadSettings()
     settings.endGroup();
 
     settings.beginGroup("Web-URL-Settings");
-    m_urlOnNewTab = settings.value("newTabUrl", "qupzilla:speeddial").toUrl();
+    m_urlOnNewTab = settings.value("newTabUrl", "falkon:speeddial").toUrl();
     settings.endGroup();
 
     m_tabBar->loadSettings();
@@ -445,7 +445,7 @@ void TabWidget::closeTab(int index)
     TabbedWebView *webView = webTab->webView();
 
     // Save tab url and history
-    if (webView->url().toString() != QL1S("qupzilla:restore"))
+    if (webView->url().toString() != QL1S("falkon:restore"))
         m_closedTabsManager->saveTab(webTab, index);
 
     m_locationBars->removeWidget(webView->webTab()->locationBar());
@@ -480,7 +480,7 @@ void TabWidget::requestCloseTab(int index)
     TabbedWebView *webView = webTab->webView();
 
     // Don't close restore page!
-    if (webView->url().toString() == QL1S("qupzilla:restore") && mApp->restoreManager())
+    if (webView->url().toString() == QL1S("falkon:restore") && mApp->restoreManager())
         return;
 
     // This would close last tab, so we close the window instead
@@ -837,7 +837,7 @@ bool TabWidget::restoreState(const QVector<WebTab::SavedTab> &tabs, int currentT
 void TabWidget::closeRecoveryTab()
 {
     foreach (WebTab* tab, allTabs(false)) {
-        if (tab->url().toString() == QLatin1String("qupzilla:restore")) {
+        if (tab->url().toString() == QLatin1String("falkon:restore")) {
             closeTab(tab->tabIndex());
         }
     }

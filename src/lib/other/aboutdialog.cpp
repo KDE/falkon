@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -90,7 +90,7 @@ void AboutDialog::showAbout()
 void AboutDialog::showAuthors()
 {
     m_showingAuthors = true;
-    ui->authorsButton->setText(tr("< About QupZilla"));
+    ui->authorsButton->setText(tr("< About Falkon"));
     if (m_authorsHtml.isEmpty()) {
         m_authorsHtml += "<center><div style='margin:10px;'>";
         m_authorsHtml += tr("<p><b>Main developer:</b><br/>%1 &lt;%2&gt;</p>").arg(Qz::AUTHOR, "<a href=mailto:nowrep@gmail.com>nowrep@gmail.com</a>");

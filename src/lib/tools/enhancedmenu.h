@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -25,7 +25,7 @@
 
 class Action;
 
-class QUPZILLA_EXPORT Menu : public QMenu
+class FALKON_EXPORT Menu : public QMenu
 {
     Q_OBJECT
 public:
@@ -50,7 +50,7 @@ private:
     bool m_closeOnMiddleClick;
 };
 
-class QUPZILLA_EXPORT Action : public QAction
+class FALKON_EXPORT Action : public QAction
 {
     Q_OBJECT
 public:

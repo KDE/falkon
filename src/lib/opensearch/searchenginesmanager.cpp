@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -161,7 +161,7 @@ void SearchEnginesManager::restoreDefaults()
     Engine duck;
     duck.name = "DuckDuckGo";
     duck.icon = QIcon(":/icons/sites/duck.png");
-    duck.url = "https://duckduckgo.com/?q=%s&t=qupzilla";
+    duck.url = "https://duckduckgo.com/?q=%s&t=falkon";
     duck.shortcut = "d";
     duck.suggestionsUrl = "https://ac.duckduckgo.com/ac/?q=%s&type=list";
 
@@ -183,7 +183,7 @@ void SearchEnginesManager::restoreDefaults()
     Engine google;
     google.name = "Google";
     google.icon = QIcon(":icons/sites/google.png");
-    google.url = "https://www.google.com/search?client=qupzilla&q=%s";
+    google.url = "https://www.google.com/search?client=falkon&q=%s";
     google.shortcut = "g";
     google.suggestionsUrl = "https://suggestqueries.google.com/complete/search?output=firefox&q=%s";
 

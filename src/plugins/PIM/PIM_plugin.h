@@ -1,5 +1,5 @@
 /* ============================================================
-* Personal Information Manager plugin for QupZilla
+* Personal Information Manager plugin for Falkon
 * Copyright (C) 2012-2014  David Rosca <nowrep@gmail.com>
 * Copyright (C) 2012-2014  Mladen Pejaković <pejakm@autistici.org>
 *
@@ -29,7 +29,7 @@ class PIM_Plugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "QupZilla.Browser.plugin.PIM")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.PIM")
 
 public:
     PIM_Plugin();

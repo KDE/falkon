@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2016  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@
 #include "autofillicon.h"
 #include "webpage.h"
 
-class QUPZILLA_EXPORT PopupSiteIcon : public QWidget
+class FALKON_EXPORT PopupSiteIcon : public QWidget
 {
 public:
     explicit PopupSiteIcon(QWidget* parent = 0) : QWidget(parent) { }

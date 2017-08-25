@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 #include "qzcommon.h"
 #include "clickablelabel.h"
 
-class QUPZILLA_EXPORT DownIcon : public ClickableLabel
+class FALKON_EXPORT DownIcon : public ClickableLabel
 {
 public:
     explicit DownIcon(QWidget* parent = 0);

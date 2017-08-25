@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - QtWebEngine based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2016 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -116,7 +116,7 @@ void CommandLineOptions::parseActions()
 
     if (parser.isSet(profileOption)) {
         const QString profileName = parser.value(profileOption);
-        std::cout << "QupZilla: Starting with profile '" << profileName.toUtf8().data() << "'" << std::endl;
+        std::cout << "Falkon: Starting with profile '" << profileName.toUtf8().data() << "'" << std::endl;
 
         ActionPair pair;
         pair.action = Qz::CL_StartWithProfile;

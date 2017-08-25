@@ -32,7 +32,7 @@ class PageScreen;
 
 class WebView;
 
-class QUPZILLA_EXPORT PageScreen : public QDialog
+class FALKON_EXPORT PageScreen : public QDialog
 {
     Q_OBJECT
 

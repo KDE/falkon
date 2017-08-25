@@ -1,17 +1,17 @@
 #-------------------------------------------------
 #
-#           QupZilla - QtWebKit browser
+#           Falkon - Qt web browser
 #
 # Project created by QtCreator 2010-12-18T14:53:41
 #
 #-------------------------------------------------
 
 lessThan(QT_VERSION, 5.8) {
-    error("QupZilla requires at least Qt 5.8!")
+    error("Falkon requires at least Qt 5.8!")
 }
 
 lessThan(QT.webengine.VERSION, 5.8) {
-    error("QupZilla requires at least QtWebEngine 5.8!")
+    error("Falkon requires at least QtWebEngine 5.8!")
 }
 
 # Create plugins directory first on Mac / Linux

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017  David Rosca <nowrep@gmail.com>
 * Copyright (C) 2017  Razi Alavizadeh <s.r.alavizadeh@gmail.com>
 *

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -102,7 +102,7 @@ BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QUrl &startUrl)
     setAttribute(Qt::WA_DontCreateNativeAncestors);
 
     setObjectName("mainwindow");
-    setWindowTitle(tr("QupZilla"));
+    setWindowTitle(tr("Falkon"));
     setProperty("private", mApp->isPrivate());
 
     setupUi();
@@ -118,10 +118,10 @@ BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QUrl &startUrl)
     QTimer::singleShot(0, this, SLOT(postLaunch()));
 
     if (mApp->isPrivate()) {
-        QzTools::setWmClass("QupZilla Browser (Private Window)", this);
+        QzTools::setWmClass("Falkon Browser (Private Window)", this);
     }
     else {
-        QzTools::setWmClass("QupZilla Browser", this);
+        QzTools::setWmClass("Falkon Browser", this);
     }
 }
 
@@ -159,7 +159,7 @@ void BrowserWindow::postLaunch()
         break;
 
     case MainApplication::OpenSpeedDial:
-        startUrl = QUrl("qupzilla:speeddial");
+        startUrl = QUrl("falkon:speeddial");
         break;
 
     case MainApplication::OpenHomePage:
@@ -177,7 +177,7 @@ void BrowserWindow::postLaunch()
         if (mApp->isStartingAfterCrash()) {
             addTab = false;
             startUrl.clear();
-            m_tabWidget->addView(QUrl("qupzilla:restore"), Qz::NT_CleanSelectedTabAtTheEnd);
+            m_tabWidget->addView(QUrl("falkon:restore"), Qz::NT_CleanSelectedTabAtTheEnd);
         }
         else if ((mApp->afterLaunch() == MainApplication::SelectSession || mApp->afterLaunch() == MainApplication::RestoreSession) && mApp->restoreManager()) {
             addTab = !mApp->restoreSession(this, mApp->restoreManager()->restoreData());
@@ -215,7 +215,7 @@ void BrowserWindow::postLaunch()
     if (addTab) {
         m_tabWidget->addView(startUrl, Qz::NT_CleanSelectedTabAtTheEnd);
 
-        if (startUrl.isEmpty() || startUrl.toString() == QLatin1String("qupzilla:speeddial")) {
+        if (startUrl.isEmpty() || startUrl.toString() == QLatin1String("falkon:speeddial")) {
             locationBar()->setFocus();
         }
     }
@@ -424,7 +424,7 @@ void BrowserWindow::loadSettings()
 
     //Url settings
     settings.beginGroup("Web-URL-Settings");
-    m_homepage = settings.value("homepage", "qupzilla:start").toUrl();
+    m_homepage = settings.value("homepage", "falkon:start").toUrl();
     settings.endGroup();
 
     //Browser Window settings
@@ -839,7 +839,7 @@ void BrowserWindow::currentTabChanged()
         return;
     }
 
-    setWindowTitle(tr("%1 - QupZilla").arg(view->webTab()->title()));
+    setWindowTitle(tr("%1 - Falkon").arg(view->webTab()->title()));
     m_ipLabel->setText(view->getIp());
     view->setFocus();
 

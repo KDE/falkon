@@ -1,23 +1,23 @@
 [Desktop Entry]
-Name=QupZilla
+Name=Falkon
 Type=Application
 Icon=qupzilla
 Categories=Network;WebBrowser;
 Comment=A fast and secure web browser
 GenericName=Web Browser
-Exec=qupzilla %u
+Exec=falkon %u
 MimeType=text/html;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;application/x-mimearchive;
 Terminal=false
 Actions=NewTab;NewWindow;PrivateBrowsing;
 
 [Desktop Action NewTab]
 Name=Open new tab
-Exec=qupzilla --new-tab
+Exec=falkon --new-tab
 
 [Desktop Action NewWindow]
 Name=Open new window
-Exec=qupzilla --new-window
+Exec=falkon --new-window
 
 [Desktop Action PrivateBrowsing]
 Name=Start private browsing
-Exec=qupzilla --private-browsing
+Exec=falkon --private-browsing

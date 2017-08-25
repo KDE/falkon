@@ -25,7 +25,7 @@
 #include "passwordmanager.h"
 #include "sslerrordialog.h"
 #include "networkurlinterceptor.h"
-#include "schemehandlers/qupzillaschemehandler.h"
+#include "schemehandlers/falkonschemehandler.h"
 
 #include <QLabel>
 #include <QDialog>
@@ -43,7 +43,7 @@ NetworkManager::NetworkManager(QObject *parent)
     : QNetworkAccessManager(parent)
 {
     // Create scheme handlers
-    mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("qupzilla"), new QupZillaSchemeHandler());
+    mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("falkon"), new FalkonSchemeHandler());
 
     // Create url interceptor
     m_urlInterceptor = new NetworkUrlInterceptor(this);

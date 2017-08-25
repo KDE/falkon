@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -15,8 +15,8 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QUPZILLA_H
-#define QUPZILLA_H
+#ifndef BROWSERWINDOW_H
+#define BROWSERWINDOW_H
 
 #include <QMainWindow>
 #include <QPointer>
@@ -53,7 +53,7 @@ class NavigationContainer;
 class ClickableLabel;
 class LocationBar;
 
-class QUPZILLA_EXPORT BrowserWindow : public QMainWindow
+class FALKON_EXPORT BrowserWindow : public QMainWindow
 {
     Q_OBJECT
 
@@ -226,4 +226,4 @@ private:
 #endif
 };
 
-#endif // QUPZILLA_H
+#endif // BROWSERWINDOW_H

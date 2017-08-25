@@ -10,7 +10,7 @@ mocinclude.CONFIG *= fix_target
 
 QZ_VERSION = 2.1.99
 unix: VERSION = $$QZ_VERSION
-DEFINES *= QUPZILLA_VERSION=\\\"""$$QZ_VERSION"\\\""
+DEFINES *= FALKON_VERSION=\\\"""$$QZ_VERSION"\\\""
 
 d_no_system_datapath = $$(NO_SYSTEM_DATAPATH)
 d_kde_integration = $$(KDE_INTEGRATION)
@@ -22,7 +22,7 @@ d_use_lib_path = $$(USE_LIBPATH)
 d_disable_dbus = $$(DISABLE_DBUS)
 d_disable_updates_check = $$(DISABLE_UPDATES_CHECK)
 d_debug_build = $$(DEBUG_BUILD)
-d_prefix = $$(QUPZILLA_PREFIX)
+d_prefix = $$(FALKON_PREFIX)
 d_share = $$(SHARE_FOLDER)
 
 equals(d_no_system_datapath, "true") { DEFINES *= NO_SYSTEM_DATAPATH }
@@ -38,7 +38,7 @@ equals(d_debug_build, "true") { CONFIG += debug }
 DEFINES *= QT_NO_URL_CAST_FROM_STRING
 DEFINES *= QT_USE_QSTRINGBUILDER
 
-CONFIG(debug, debug|release): DEFINES *= QUPZILLA_DEBUG_BUILD
+CONFIG(debug, debug|release): DEFINES *= FALKON_DEBUG_BUILD
 
 
 win32-msvc* {
@@ -73,7 +73,7 @@ haiku-* {
         share_folder = "$$d_share"
     }
 
-    data_folder = $$share_folder/qupzilla
+    data_folder = $$share_folder/falkon
     launcher_folder = $$share_folder/applications
     icon_folder = $$share_folder/pixmaps
     hicolor_folder = $$share_folder/icons/hicolor

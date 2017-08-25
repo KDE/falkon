@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -56,7 +56,7 @@ void TestPlugin::init(InitState state, const QString &settingsPath)
 
     // This function is called right after plugin is loaded
     // it will be called even if we return false from testPlugin()
-    // so it is recommended not to call any QupZilla function here
+    // so it is recommended not to call any Falkon function here
 
     // Settings path is PROFILE/extensions (without trailign slash),
     // in this directory you can use global .ini file for QSettings
@@ -98,7 +98,7 @@ bool TestPlugin::testPlugin()
     // There should be some testing if plugin is loaded correctly
     // If this function returns false, plugin is automatically unloaded
 
-    return (Qz::VERSION == QLatin1String(QUPZILLA_VERSION));
+    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
 }
 
 QTranslator* TestPlugin::getTranslator(const QString &locale)
@@ -168,7 +168,7 @@ bool TestPlugin::mousePress(const Qz::ObjectName &type, QObject* obj, QMouseEven
     qDebug() << "mousePress" << type << obj << event;
 
     // Returning false means, that we don't want to block propagating this event
-    // Returning true may affect behaviour of QupZilla, so make sure you know what
+    // Returning true may affect behaviour of Falkon, so make sure you know what
     // you are doing!
     return false;
 }

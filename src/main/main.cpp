@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -31,7 +31,7 @@
 #include <QTextStream>
 #include <QWebEnginePage>
 
-void qupzilla_signal_handler(int s)
+void falkon_signal_handler(int s)
 {
     if (s != SIGSEGV) {
         return;
@@ -43,7 +43,7 @@ void qupzilla_signal_handler(int s)
     }
     sigSegvServed = true;
 
-    std::cout << "QupZilla: Crashed :( Saving backtrace in " << qPrintable(DataPaths::path(DataPaths::Config)) << "/crashlog ..." << std::endl;
+    std::cout << "Falkon: Crashed :( Saving backtrace in " << qPrintable(DataPaths::path(DataPaths::Config)) << "/crashlog ..." << std::endl;
 
     void* array[100];
     int size = backtrace(array, 100);
@@ -80,7 +80,7 @@ void qupzilla_signal_handler(int s)
     QTextStream stream(&file);
     stream << "Time: " << currentDateTime.toString() << endl;
     stream << "Qt version: " << qVersion() << " (compiled with " << QT_VERSION_STR << ")" << endl;
-    stream << "QupZilla version: " << Qz::VERSION << endl;
+    stream << "Falkon version: " << Qz::VERSION << endl;
     stream << "Rendering engine: QtWebEngine" << endl;
     stream << endl;
     stream << "============== BACKTRACE ==============" << endl;
@@ -130,7 +130,7 @@ int main(int argc, char* argv[])
 #endif
 
 #if defined(Q_OS_LINUX) || defined(__GLIBC__) || defined(__FreeBSD__)
-    signal(SIGSEGV, qupzilla_signal_handler);
+    signal(SIGSEGV, falkon_signal_handler);
 #endif
 
     // Hack to fix QT_STYLE_OVERRIDE with QProxyStyle

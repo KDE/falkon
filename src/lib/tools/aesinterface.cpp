@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2014 S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
 * Copyright (C) 2013-2017 David Rosca <nowrep@gmail.com>
 *
@@ -144,8 +144,8 @@ QByteArray AesInterface::decrypt(const QByteArray &cipherData, const QByteArray 
     }
 
     if (cipherSections.at(0).toInt() > AesInterface::VERSION) {
-        QMessageBox::information(0, tr("Warning!"), tr("Data has been encrypted with a newer version of QupZilla."
-                                 "\nPlease install latest version of QupZilla."));
+        QMessageBox::information(0, tr("Warning!"), tr("Data has been encrypted with a newer version of Falkon."
+                                 "\nPlease install latest version of Falkon."));
         return QByteArray();
     }
 

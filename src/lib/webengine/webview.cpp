@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -401,7 +401,7 @@ void WebView::printPage()
     QPrintPreviewDialog* dialog = new QPrintPreviewDialog(this);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->resize(800, 750);
-    dialog->printer()->setCreator(tr("QupZilla %1 (%2)").arg(Qz::VERSION, Qz::WWWADDRESS));
+    dialog->printer()->setCreator(tr("Falkon %1 (%2)").arg(Qz::VERSION, Qz::WWWADDRESS));
     dialog->printer()->setDocName(QzTools::getFileNameFromUrl(m_page->url()));
 
     connect(dialog, &QPrintPreviewDialog::paintRequested, this, [=](QPrinter *printer) {
@@ -533,7 +533,7 @@ void WebView::openActionUrl()
 void WebView::showSource()
 {
     // view-source: doesn't work on itself and custom schemes
-    if (url().scheme() == QL1S("view-source") || url().scheme() == QL1S("qupzilla") || url().scheme() == QL1S("qrc")) {
+    if (url().scheme() == QL1S("view-source") || url().scheme() == QL1S("falkon") || url().scheme() == QL1S("qrc")) {
         page()->toHtml([](const QString &html) {
             std::cout << html.toLocal8Bit().constData() << std::endl;
         });
@@ -736,7 +736,7 @@ void WebView::createPageContextMenu(QMenu* menu)
     action->setEnabled(history()->canGoForward());
 
     // Special menu for Speed Dial page
-    if (url().toString() == QL1S("qupzilla:speeddial")) {
+    if (url().toString() == QL1S("falkon:speeddial")) {
         menu->addSeparator();
         menu->addAction(QIcon::fromTheme("list-add"), tr("&Add New Page"), this, SLOT(addSpeedDial()));
         menu->addAction(IconProvider::settingsIcon(), tr("&Configure Speed Dial"), this, SLOT(configureSpeedDial()));

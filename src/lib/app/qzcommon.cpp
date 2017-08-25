@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2014-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -23,10 +23,10 @@ const int sessionVersion = 0x0003;
 const int sessionVersionQt5 = 0x0003 | 0x050000;
 const int bookmarksVersion = 1;
 
-QUPZILLA_EXPORT const char* APPNAME = "QupZilla";
-QUPZILLA_EXPORT const char* VERSION = QUPZILLA_VERSION;
-QUPZILLA_EXPORT const char* AUTHOR = "David Rosca";
-QUPZILLA_EXPORT const char* COPYRIGHT = "2010-2017";
-QUPZILLA_EXPORT const char* WWWADDRESS = "https://www.qupzilla.com";
-QUPZILLA_EXPORT const char* WIKIADDRESS = "https://github.com/QupZilla/qupzilla/wiki";
+FALKON_EXPORT const char* APPNAME = "Falkon";
+FALKON_EXPORT const char* VERSION = FALKON_VERSION;
+FALKON_EXPORT const char* AUTHOR = "David Rosca";
+FALKON_EXPORT const char* COPYRIGHT = "2010-2017";
+FALKON_EXPORT const char* WWWADDRESS = "https://www.qupzilla.com";
+FALKON_EXPORT const char* WIKIADDRESS = "https://github.com/QupZilla/qupzilla/wiki";
 }

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -134,8 +134,8 @@ Preferences::Preferences(BrowserWindow* window)
     Settings settings;
     //GENERAL URLs
     settings.beginGroup("Web-URL-Settings");
-    m_homepage = settings.value("homepage", QUrl(QSL("qupzilla:start"))).toUrl();
-    m_newTabUrl = settings.value("newTabUrl", QUrl(QSL("qupzilla:speeddial"))).toUrl();
+    m_homepage = settings.value("homepage", QUrl(QSL("falkon:start"))).toUrl();
+    m_newTabUrl = settings.value("newTabUrl", QUrl(QSL("falkon:speeddial"))).toUrl();
     ui->homepage->setText(m_homepage.toEncoded());
     ui->newTabUrl->setText(m_newTabUrl.toEncoded());
     settings.endGroup();
@@ -152,7 +152,7 @@ Preferences::Preferences(BrowserWindow* window)
     else {
         ui->checkNowDefaultBrowser->setText(tr("Set as default"));
         ui->checkNowDefaultBrowser->setEnabled(true);
-        connect(ui->checkNowDefaultBrowser, SIGNAL(clicked()), this, SLOT(makeQupZillaDefault()));
+        connect(ui->checkNowDefaultBrowser, SIGNAL(clicked()), this, SLOT(makeFalkonDefault()));
     }
 #else // No Default Browser settings on non-Windows platform
     ui->hSpacerDefaultBrowser->changeSize(0, 0, QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -169,7 +169,7 @@ Preferences::Preferences(BrowserWindow* window)
     else if (m_newTabUrl == m_homepage) {
         ui->newTab->setCurrentIndex(1);
     }
-    else if (m_newTabUrl.toString() == QL1S("qupzilla:speeddial")) {
+    else if (m_newTabUrl.toString() == QL1S("falkon:speeddial")) {
         ui->newTab->setCurrentIndex(2);
     }
     else {
@@ -607,10 +607,10 @@ void Preferences::showNotificationPreview()
     }
 }
 
-void Preferences::makeQupZillaDefault()
+void Preferences::makeFalkonDefault()
 {
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
-    disconnect(ui->checkNowDefaultBrowser, SIGNAL(clicked()), this, SLOT(makeQupZillaDefault()));
+    disconnect(ui->checkNowDefaultBrowser, SIGNAL(clicked()), this, SLOT(makeFalkonDefault()));
     ui->checkNowDefaultBrowser->setText(tr("Default"));
     ui->checkNowDefaultBrowser->setEnabled(false);
 
@@ -877,7 +877,7 @@ void Preferences::saveSettings()
         break;
 
     case 2:
-        settings.setValue("newTabUrl", QUrl(QSL("qupzilla:speeddial")));
+        settings.setValue("newTabUrl", QUrl(QSL("falkon:speeddial")));
         break;
 
     case 3:

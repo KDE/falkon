@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 #ifndef TESTPLUGIN_H
 #define TESTPLUGIN_H
 
-// Include plugininterface.h for your version of QupZilla
+// Include plugininterface.h for your version of Falkon
 #include "plugininterface.h"
 
 #include <QLabel>
@@ -30,7 +30,7 @@ class TestPlugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "QupZilla.Browser.plugin.TestPlugin")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.TestPlugin")
 
 public:
     explicit TestPlugin();

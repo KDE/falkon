@@ -26,7 +26,7 @@ class GnomeKeyringPlugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "QupZilla.Browser.plugin.GnomeKeyringPasswords")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.GnomeKeyringPasswords")
 
 public:
     explicit GnomeKeyringPlugin();

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -30,7 +30,7 @@ namespace Ui
 class IconChooser;
 }
 
-class QUPZILLA_EXPORT IconChooser : public QDialog
+class FALKON_EXPORT IconChooser : public QDialog
 {
     Q_OBJECT
 
@@ -48,7 +48,7 @@ private:
     Ui::IconChooser* ui;
 };
 
-class QUPZILLA_EXPORT IconChooserDelegate : public QStyledItemDelegate
+class FALKON_EXPORT IconChooserDelegate : public QStyledItemDelegate
 {
 public:
     explicit IconChooserDelegate(QWidget* parent = 0);

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2015  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -25,7 +25,7 @@
 
 class QUrl;
 
-class QUPZILLA_EXPORT UserAgentManager : QObject
+class FALKON_EXPORT UserAgentManager : QObject
 {
     Q_OBJECT
 

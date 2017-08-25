@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -26,7 +26,7 @@
 class Bookmarks;
 class BookmarkItem;
 
-class QUPZILLA_EXPORT BookmarksFoldersMenu : public QMenu
+class FALKON_EXPORT BookmarksFoldersMenu : public QMenu
 {
     Q_OBJECT
 
@@ -48,7 +48,7 @@ private:
     BookmarkItem* m_selectedFolder;
 };
 
-class QUPZILLA_EXPORT BookmarksFoldersButton : public QPushButton
+class FALKON_EXPORT BookmarksFoldersButton : public QPushButton
 {
     Q_OBJECT
 
@@ -75,7 +75,7 @@ class TabWidget;
 class Action;
 class Menu;
 
-class QUPZILLA_EXPORT BookmarksTools
+class FALKON_EXPORT BookmarksTools
 {
 public:
     // Add Bookmark Dialogs

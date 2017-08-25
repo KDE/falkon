@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2014-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ class QTimer;
 
 class WebTab;
 
-class QUPZILLA_EXPORT TabIcon : public QWidget
+class FALKON_EXPORT TabIcon : public QWidget
 {
     Q_OBJECT
 

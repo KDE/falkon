@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -36,7 +36,7 @@ class BrowserWindow;
 class TabbedWebView;
 class ClosedTabsManager;
 
-class QUPZILLA_EXPORT AddTabButton : public ToolButton
+class FALKON_EXPORT AddTabButton : public ToolButton
 {
 public:
     explicit AddTabButton(TabWidget* tabWidget, TabBar* tabBar);
@@ -51,7 +51,7 @@ private:
     TabWidget* m_tabWidget;
 };
 
-class QUPZILLA_EXPORT MenuTabs : public QMenu
+class FALKON_EXPORT MenuTabs : public QMenu
 {
     Q_OBJECT
 public:
@@ -64,7 +64,7 @@ private:
     void mouseReleaseEvent(QMouseEvent* event);
 };
 
-class QUPZILLA_EXPORT TabWidget : public TabStackedWidget
+class FALKON_EXPORT TabWidget : public TabStackedWidget
 {
     Q_OBJECT
 public:

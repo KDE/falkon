@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ UserAgentManager::UserAgentManager(QObject* parent)
     , m_usePerDomainUserAgent(false)
 {
     m_defaultUserAgent = QWebEngineProfile::defaultProfile()->httpUserAgent();
-    m_defaultUserAgent.replace(QRegularExpression(QSL("QtWebEngine/[^\\s]+")), QSL("QupZilla/%1").arg(Qz::VERSION));
+    m_defaultUserAgent.replace(QRegularExpression(QSL("QtWebEngine/[^\\s]+")), QSL("Falkon/%1").arg(Qz::VERSION));
 }
 
 void UserAgentManager::loadSettings()

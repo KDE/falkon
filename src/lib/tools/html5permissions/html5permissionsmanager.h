@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2015  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@
 class QUrl;
 class WebPage;
 
-class QUPZILLA_EXPORT HTML5PermissionsManager : public QObject
+class FALKON_EXPORT HTML5PermissionsManager : public QObject
 {
 public:
     explicit HTML5PermissionsManager(QObject* parent);

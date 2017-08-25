@@ -26,8 +26,8 @@ defineTest(disablePlugin) {
 
 addSubdir($$PWD)
 
-outOfDirPlugins = $$(QUPZILLA_PLUGINS_SRCDIR)
-!equals(outOfDirPlugins, ""): addSubdir($$(QUPZILLA_PLUGINS_SRCDIR))
+outOfDirPlugins = $$(FALKON_PLUGINS_SRCDIR)
+!equals(outOfDirPlugins, ""): addSubdir($$(FALKON_PLUGINS_SRCDIR))
 
 # TestPlugin only in debug build
 !CONFIG(debug, debug|release): disablePlugin(TestPlugin)

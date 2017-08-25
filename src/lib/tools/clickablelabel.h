@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -25,7 +25,7 @@
 
 class QMouseEvent;
 
-class QUPZILLA_EXPORT ClickableLabel : public QLabel
+class FALKON_EXPORT ClickableLabel : public QLabel
 {
     Q_OBJECT
     Q_PROPERTY(QSize fixedsize READ size WRITE setFixedSize)

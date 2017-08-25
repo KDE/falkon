@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -33,7 +33,7 @@ class SpeedDial;
 class Bookmarks;
 class BookmarkItem;
 
-class QUPZILLA_EXPORT BookmarksWidget : public LocationBarPopup
+class FALKON_EXPORT BookmarksWidget : public LocationBarPopup
 {
     Q_OBJECT
 public:

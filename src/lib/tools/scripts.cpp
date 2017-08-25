@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2015-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -30,7 +30,7 @@ QString Scripts::setupWebChannel()
                            "    window.external = e;"
                            "    if (window.external) {"
                            "        var event = document.createEvent('Event');"
-                           "        event.initEvent('_qupzilla_external_created', true, true);"
+                           "        event.initEvent('_falkon_external_created', true, true);"
                            "        document.dispatchEvent(event);"
                            "    }"
                            "}"
@@ -39,7 +39,7 @@ QString Scripts::setupWebChannel()
                            "    if (top.external)"
                            "        registerExternal(top.external);"
                            "    else"
-                           "        top.document.addEventListener('_qupzilla_external_created', function() {"
+                           "        top.document.addEventListener('_falkon_external_created', function() {"
                            "            registerExternal(top.external);"
                            "        });"
                            "    return;"

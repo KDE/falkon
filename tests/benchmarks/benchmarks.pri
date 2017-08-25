@@ -7,8 +7,8 @@ isEqual(QT_MAJOR_VERSION, 5) {
     CONFIG += qtestlib
 }
 
-!unix|mac: LIBS += -L$$PWD/../../bin -lQupZilla
-!mac:unix: LIBS += $$PWD/../../bin/libQupZilla.so
+!unix|mac: LIBS += -L$$PWD/../../bin -lFalkon
+!mac:unix: LIBS += $$PWD/../../bin/libFalkon.so
 
 QMAKE_LFLAGS+=$${QMAKE_LFLAGS_RPATH}$$PWD/../../bin
 

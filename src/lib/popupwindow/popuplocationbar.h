@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2016  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ class PopupWebView;
 class AutoFillIcon;
 class BookmarksIcon;
 
-class QUPZILLA_EXPORT PopupLocationBar : public LineEdit
+class FALKON_EXPORT PopupLocationBar : public LineEdit
 {
     Q_OBJECT
     Q_PROPERTY(QSize fixedsize READ size WRITE setFixedSize)

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2016-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -203,7 +203,7 @@ WebScrollBarManager *WebScrollBarManager::instance()
 void WebScrollBarManager::createUserScript(int thickness)
 {
     QWebEngineScript script;
-    script.setName(QSL("_qupzilla_scrollbar"));
+    script.setName(QSL("_falkon_scrollbar"));
     script.setInjectionPoint(QWebEngineScript::DocumentReady);
     script.setWorldId(WebPage::SafeJsWorld);
     script.setSourceCode(m_scrollbarJs.arg(thickness));
@@ -212,7 +212,7 @@ void WebScrollBarManager::createUserScript(int thickness)
 
 void WebScrollBarManager::removeUserScript()
 {
-    QWebEngineScript script = mApp->webProfile()->scripts()->findScript(QSL("_qupzilla_scrollbar"));
+    QWebEngineScript script = mApp->webProfile()->scripts()->findScript(QSL("_falkon_scrollbar"));
     mApp->webProfile()->scripts()->remove(script);
 }
 

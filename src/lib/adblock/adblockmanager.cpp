@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -123,7 +123,7 @@ bool AdBlockManager::block(QWebEngineUrlRequestInfo &request)
         res = true;
 
         if (request.resourceType() == QWebEngineUrlRequestInfo::ResourceTypeMainFrame) {
-            QUrl url(QSL("qupzilla:adblock"));
+            QUrl url(QSL("falkon:adblock"));
             QUrlQuery query;
             query.addQueryItem(QSL("rule"), blockedRule->filter());
             query.addQueryItem(QSL("subscription"), blockedRule->subscription()->title());
@@ -388,7 +388,7 @@ bool AdBlockManager::isEnabled() const
 bool AdBlockManager::canRunOnScheme(const QString &scheme) const
 {
     return !(scheme == QLatin1String("file") || scheme == QLatin1String("qrc")
-             || scheme == QLatin1String("qupzilla") || scheme == QLatin1String("data")
+             || scheme == QLatin1String("falkon") || scheme == QLatin1String("data")
              || scheme == QLatin1String("abp"));
 }
 

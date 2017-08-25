@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -26,7 +26,7 @@ class QAction;
 
 class BrowserWindow;
 
-class QUPZILLA_EXPORT SideBarInterface : public QObject
+class FALKON_EXPORT SideBarInterface : public QObject
 {
 public:
     explicit SideBarInterface(QObject* parent = 0) : QObject(parent) { }

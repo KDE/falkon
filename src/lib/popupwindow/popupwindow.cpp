@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -249,7 +249,7 @@ void PopupWindow::searchOnPage()
 
 void PopupWindow::titleChanged()
 {
-    setWindowTitle(tr("%1 - QupZilla").arg(m_view->title()));
+    setWindowTitle(tr("%1 - Falkon").arg(m_view->title()));
 }
 
 void PopupWindow::setWindowGeometry(QRect newRect)

@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2016  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@
 
 #include <QStringList>
 
-class QUPZILLA_EXPORT QzSettings
+class FALKON_EXPORT QzSettings
 {
 public:
     QzSettings();

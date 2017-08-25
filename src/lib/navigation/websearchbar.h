@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -35,7 +35,7 @@ class SearchEnginesManager;
 class SearchEnginesDialog;
 class OpenSearchEngine;
 
-class QUPZILLA_EXPORT WebSearchBar_Button : public ClickableLabel
+class FALKON_EXPORT WebSearchBar_Button : public ClickableLabel
 {
 public:
     explicit WebSearchBar_Button(QWidget* parent = 0);
@@ -44,7 +44,7 @@ private:
     void contextMenuEvent(QContextMenuEvent* event);
 };
 
-class QUPZILLA_EXPORT WebSearchBar : public LineEdit
+class FALKON_EXPORT WebSearchBar : public LineEdit
 {
     Q_OBJECT
 
