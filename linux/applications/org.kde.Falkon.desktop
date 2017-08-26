@@ -4,7 +4,19 @@ Type=Application
 Icon=qupzilla
 Categories=Network;WebBrowser;
 Comment=A fast and secure web browser
+Comment[ca]=Un navegador web ràpid i segur
+Comment[nl]=Een snelle en veilige webbrowser
+Comment[pt]=Um navegador Web rápido e seguro
+Comment[sv]=En snabb och säker webbläsare
+Comment[uk]=Проста і безпечна програма для перегляду інтернету
+Comment[x-test]=xxA fast and secure web browserxx
 GenericName=Web Browser
+GenericName[ca]=Navegador web
+GenericName[nl]=Webbrowser
+GenericName[pt]=Navegador Web
+GenericName[sv]=Webbläsare
+GenericName[uk]=Переглядач інтернету
+GenericName[x-test]=xxWeb Browserxx
 Exec=falkon %u
 MimeType=text/html;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;application/x-mimearchive;
 Terminal=false
@@ -12,12 +24,30 @@ Actions=NewTab;NewWindow;PrivateBrowsing;
 
 [Desktop Action NewTab]
 Name=Open new tab
+Name[ca]=Obre una pestanya nova
+Name[nl]=Nieuw tabblad openen
+Name[pt]=Abrir uma nova página
+Name[sv]=Öppna ny flik
+Name[uk]=Відкрити нову вкладку
+Name[x-test]=xxOpen new tabxx
 Exec=falkon --new-tab
 
 [Desktop Action NewWindow]
 Name=Open new window
+Name[ca]=Obre una finestra nova
+Name[nl]=Nieuw venster openen
+Name[pt]=Abrir uma nova janela
+Name[sv]=Öppna nytt fönster
+Name[uk]=Відкрити нове вікно
+Name[x-test]=xxOpen new windowxx
 Exec=falkon --new-window
 
 [Desktop Action PrivateBrowsing]
 Name=Start private browsing
+Name[ca]=Inicia la navegació privada
+Name[nl]=Privébrowsing starten
+Name[pt]=Iniciar a navegação privada
+Name[sv]=Starta privat webbläsning
+Name[uk]=Конфіденційний перегляд
+Name[x-test]=xxStart private browsingxx
 Exec=falkon --private-browsing
