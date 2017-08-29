@@ -97,6 +97,14 @@ void DataPaths::init()
     m_paths[Themes].append(m_paths[AppData].at(0) + QLatin1String("/themes"));
     m_paths[Plugins].append(m_paths[AppData].at(0) + QLatin1String("/plugins"));
 
+    // Add standard data lookup paths (our appname has a capital F so we manually construct
+    // the final paths for now)
+    for (auto location : QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation)) {
+        m_paths[Translations].append(location + QLatin1String("/falkon/locale"));
+        m_paths[Themes].append(location + QLatin1String("/falkon/themes"));
+        m_paths[Plugins].append(location + QLatin1String("/falkon/plugins"));
+    }
+
     // Config
 #if defined(Q_OS_WIN) || defined(Q_OS_OS2)
     // Use %LOCALAPPDATA%/falkon as Config path on Windows
