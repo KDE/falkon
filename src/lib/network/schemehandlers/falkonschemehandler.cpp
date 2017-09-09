@@ -382,7 +382,7 @@ QString FalkonSchemeReply::configPage()
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Themes"), DataPaths::path(DataPaths::Themes)) +
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Translations"), DataPaths::path(DataPaths::Translations)));
 
-#ifdef FALKON_DEBUG_BUILD
+#ifdef QT_DEBUG
         QString debugBuild = tr("<b>Enabled</b>");
 #else
         QString debugBuild = tr("Disabled");

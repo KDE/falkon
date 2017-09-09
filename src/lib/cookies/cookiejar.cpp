@@ -149,7 +149,7 @@ bool CookieJar::rejectCookie(const QString &domain, const QNetworkCookie &cookie
         }
     }
 
-#if QTWEBENGINE_DISABLED
+#ifdef QTWEBENGINE_DISABLED
     if (m_filterThirdParty) {
         bool result = matchDomain(cookieDomain, domain);
         if (!result) {
