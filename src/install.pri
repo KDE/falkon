@@ -25,23 +25,29 @@ mac {
     target3.files = $$PWD/../linux/pixmaps/qupzilla.png
     target3.path = $$icon_folder
 
-    ico16.files = $$PWD/../linux/hicolor/16x16/apps/qupzilla.png
+    ico16.files = $$PWD/../linux/hicolor/16-apps-qupzilla.png
     ico16.path = $$hicolor_folder/16x16/apps
+    ico16.extra = cp $$PWD/../linux/hicolor/16-apps-qupzilla.png $$hicolor_folder/16x16/apps/qupzilla.png
 
-    ico32.files = $$PWD/../linux/hicolor/32x32/apps/qupzilla.png
+    ico32.files = $$PWD/../linux/hicolor/32-apps-qupzilla.png
     ico32.path = $$hicolor_folder/32x32/apps
+    ico32.extra = cp $$PWD/../linux/hicolor/32-apps-qupzilla.png $$hicolor_folder/32x32/apps/qupzilla.png
 
-    ico48.files = $$PWD/../linux/hicolor/48x48/apps/qupzilla.png
+    ico48.files = $$PWD/../linux/hicolor/48-apps-qupzilla.png
     ico48.path = $$hicolor_folder/48x48/apps
+    ico48.extra = cp $$PWD/../linux/hicolor/48-apps-qupzilla.png $$hicolor_folder/48x48/apps/qupzilla.png
 
-    ico64.files = $$PWD/../linux/hicolor/64x64/apps/qupzilla.png
+    ico64.files = $$PWD/../linux/hicolor/64-apps-qupzilla.png
     ico64.path = $$hicolor_folder/64x64/apps
+    ico64.extra = cp $$PWD/../linux/hicolor/64-apps-qupzilla.png $$hicolor_folder/64x64/apps/qupzilla.png
 
-    ico128.files = $$PWD/../linux/hicolor/128x128/apps/qupzilla.png
+    ico128.files = $$PWD/../linux/hicolor/128-apps-qupzilla.png
     ico128.path = $$hicolor_folder/128x128/apps
+    ico128.extra = cp $$PWD/../linux/hicolor/128-apps-qupzilla.png $$hicolor_folder/128x128/apps/qupzilla.png
 
-    ico256.files = $$PWD/../linux/hicolor/256x256/apps/qupzilla.png
+    ico256.files = $$PWD/../linux/hicolor/256-apps-qupzilla.png
     ico256.path = $$hicolor_folder/256x256/apps
+    ico256.extra = cp $$PWD/../linux/hicolor/256-apps-qupzilla.png $$hicolor_folder/256x256/apps/qupzilla.png
 
     bashcompletion.files = $$PWD/../linux/completion/falkon
     bashcompletion.path = $$share_folder/bash-completion/completions
