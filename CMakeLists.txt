@@ -79,7 +79,7 @@ endif()
 
 # Mandatory: Qt5
 set(QT_MIN_VERSION "5.8.0")
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets Network Sql QuickWidgets PrintSupport WebEngineWidgets WebChannel)
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets Network Sql QuickWidgets PrintSupport WebEngineWidgets WebChannel Test)
 if (NOT DISABLE_DBUS)
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS DBus)
 endif()
@@ -114,6 +114,34 @@ if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
   endif()
 endif()
 
-# Finally, go into the src subdir
+# Include dirs used everywhere
+include_directories(
+     ${CMAKE_SOURCE_DIR}/src/lib/3rdparty
+     ${CMAKE_SOURCE_DIR}/src/lib/adblock
+     ${CMAKE_SOURCE_DIR}/src/lib/app
+     ${CMAKE_SOURCE_DIR}/src/lib/autofill
+     ${CMAKE_SOURCE_DIR}/src/lib/bookmarks
+     ${CMAKE_SOURCE_DIR}/src/lib/cookies
+     ${CMAKE_SOURCE_DIR}/src/lib/downloads
+     ${CMAKE_SOURCE_DIR}/src/lib/history
+     ${CMAKE_SOURCE_DIR}/src/lib/navigation
+     ${CMAKE_SOURCE_DIR}/src/lib/network
+     ${CMAKE_SOURCE_DIR}/src/lib/notifications
+     ${CMAKE_SOURCE_DIR}/src/lib/opensearch
+     ${CMAKE_SOURCE_DIR}/src/lib/other
+     ${CMAKE_SOURCE_DIR}/src/lib/plugins
+     ${CMAKE_SOURCE_DIR}/src/lib/popupwindow
+     ${CMAKE_SOURCE_DIR}/src/lib/preferences
+     ${CMAKE_SOURCE_DIR}/src/lib/rss
+     ${CMAKE_SOURCE_DIR}/src/lib/session
+     ${CMAKE_SOURCE_DIR}/src/lib/sidebar
+     ${CMAKE_SOURCE_DIR}/src/lib/tabwidget
+     ${CMAKE_SOURCE_DIR}/src/lib/tools
+     ${CMAKE_SOURCE_DIR}/src/lib/webengine
+     ${CMAKE_SOURCE_DIR}/src/lib/webtab
+)
+
+# Finally, go into the subdirs
 add_subdirectory(src)
+add_subdirectory(tests/autotests)
 

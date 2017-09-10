@@ -1,29 +1,3 @@
-include_directories(
-     ${CMAKE_SOURCE_DIR}/src/lib/3rdparty
-     ${CMAKE_SOURCE_DIR}/src/lib/adblock
-     ${CMAKE_SOURCE_DIR}/src/lib/app
-     ${CMAKE_SOURCE_DIR}/src/lib/autofill
-     ${CMAKE_SOURCE_DIR}/src/lib/bookmarks
-     ${CMAKE_SOURCE_DIR}/src/lib/cookies
-     ${CMAKE_SOURCE_DIR}/src/lib/downloads
-     ${CMAKE_SOURCE_DIR}/src/lib/history
-     ${CMAKE_SOURCE_DIR}/src/lib/navigation
-     ${CMAKE_SOURCE_DIR}/src/lib/network
-     ${CMAKE_SOURCE_DIR}/src/lib/notifications
-     ${CMAKE_SOURCE_DIR}/src/lib/opensearch
-     ${CMAKE_SOURCE_DIR}/src/lib/other
-     ${CMAKE_SOURCE_DIR}/src/lib/plugins
-     ${CMAKE_SOURCE_DIR}/src/lib/popupwindow
-     ${CMAKE_SOURCE_DIR}/src/lib/preferences
-     ${CMAKE_SOURCE_DIR}/src/lib/rss
-     ${CMAKE_SOURCE_DIR}/src/lib/session
-     ${CMAKE_SOURCE_DIR}/src/lib/sidebar
-     ${CMAKE_SOURCE_DIR}/src/lib/tabwidget
-     ${CMAKE_SOURCE_DIR}/src/lib/tools
-     ${CMAKE_SOURCE_DIR}/src/lib/webengine
-     ${CMAKE_SOURCE_DIR}/src/lib/webtab
-)
-
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/plugins")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/plugins")
 
