@@ -88,13 +88,12 @@ void DataPaths::init()
 #if defined(Q_OS_MACOS)
     m_paths[AppData].append(QApplication::applicationDirPath() + QLatin1String("/../Resources"));
 #elif defined(Q_OS_UNIX) && !defined(NO_SYSTEM_DATAPATH)
-    // Add standard data lookup paths (our appname has a capital F so we manually construct
-    // the final paths for now)
-    for (const auto& location : QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation)) {
-        m_paths[AppData].append(location + QLatin1String("/falkon"));
-        m_paths[Translations].append(location + QLatin1String("/falkon/locale"));
-        m_paths[Themes].append(location + QLatin1String("/falkon/themes"));
-        m_paths[Plugins].append(location + QLatin1String("/falkon/plugins"));
+    // Add standard data lookup paths
+    for (const auto &location : QStandardPaths::standardLocations(QStandardPaths::AppDataLocation)) {
+        m_paths[AppData].append(location);
+        m_paths[Translations].append(location + QLatin1String("/locale"));
+        m_paths[Themes].append(location + QLatin1String("/themes"));
+        m_paths[Plugins].append(location + QLatin1String("/plugins"));
     }
 #else
     m_paths[AppData].append(QApplication::applicationDirPath());
@@ -113,7 +112,7 @@ void DataPaths::init()
 #elif defined(Q_OS_MACOS)
     m_paths[Config].append(QDir::homePath() + QLatin1String("/Library/Application Support/Falkon"));
 #else // Unix
-    m_paths[Config].append(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QL1S("/falkon"));
+    m_paths[Config].append(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation));
 #endif
 
     // Profiles
@@ -130,9 +129,7 @@ void DataPaths::init()
 
     // Cache
 #ifdef Q_OS_UNIX
-    const QString &cachePath = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation);
-    if (!cachePath.isEmpty())
-        m_paths[Cache].append(cachePath + QLatin1String("/falkon"));
+    m_paths[Cache].append(QStandardPaths::writableLocation(QStandardPaths::CacheLocation));
 #endif
 
     // Make sure the Config and Temp paths exists

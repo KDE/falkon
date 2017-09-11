@@ -107,7 +107,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     setAttribute(Qt::AA_UseHighDpiPixmaps);
     setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
 
-    setApplicationName(QLatin1String("Falkon"));
+    setApplicationName(QLatin1String("falkon"));
     setOrganizationDomain(QLatin1String("org.kde"));
     setWindowIcon(QIcon::fromTheme(QSL("qupzilla"), QIcon(QSL(":icons/exeicons/qupzilla-window.png"))));
     setDesktopFileName(QSL("org.kde.Falkon"));
