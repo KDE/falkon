@@ -29,7 +29,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 add_definitions(-DFALKON_VERSION=\"${PROJECT_VERSION}\")
 
 # Defines that are always set
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER)
+add_definitions(-DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_NO_CAST_TO_ASCII)
 
 # Configurable options (TODO: move all defines to a generated header)
 option(NO_SYSTEM_DATAPATH "TODO" OFF)
@@ -132,7 +132,6 @@ include_directories(
      ${CMAKE_SOURCE_DIR}/src/lib/plugins
      ${CMAKE_SOURCE_DIR}/src/lib/popupwindow
      ${CMAKE_SOURCE_DIR}/src/lib/preferences
-     ${CMAKE_SOURCE_DIR}/src/lib/rss
      ${CMAKE_SOURCE_DIR}/src/lib/session
      ${CMAKE_SOURCE_DIR}/src/lib/sidebar
      ${CMAKE_SOURCE_DIR}/src/lib/tabwidget

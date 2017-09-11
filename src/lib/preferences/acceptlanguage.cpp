@@ -60,7 +60,7 @@ QByteArray AcceptLanguage::generateHeader(const QStringList &langs)
     }
 
     QByteArray header;
-    header.append(langs.at(0));
+    header.append(langs.at(0).toLatin1());
 
     int counter = 8;
     for (int i = 1; i < langs.count(); i++) {
@@ -70,7 +70,7 @@ QByteArray AcceptLanguage::generateHeader(const QStringList &langs)
             counter -= 2;
         }
 
-        header.append(s);
+        header.append(s.toLatin1());
     }
 
     return header;

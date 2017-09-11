@@ -136,7 +136,7 @@ LoadRequest SearchEnginesManager::searchResult(const Engine &engine, const QStri
     // GET search engine
     if (engine.postData.isEmpty()) {
         QByteArray url = engine.url.toUtf8();
-        url.replace(QLatin1String("%s"), QUrl::toPercentEncoding(string));
+        url.replace("%s", QUrl::toPercentEncoding(string));
 
         return LoadRequest(QUrl::fromEncoded(url));
     }
