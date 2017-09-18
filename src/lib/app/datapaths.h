@@ -22,6 +22,8 @@
 
 #include "qzcommon.h"
 
+class QTemporaryDir;
+
 class FALKON_EXPORT DataPaths
 {
 public:
@@ -59,8 +61,10 @@ public:
 private:
     void init();
     void initCurrentProfile(const QString &profilePath);
+    void initAssetsIn(const QString &path);
 
     QStringList m_paths[LastPath];
+    QScopedPointer<QTemporaryDir> m_tmpdir;
 };
 
 #endif // DATAPATHS_H

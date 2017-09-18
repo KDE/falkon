@@ -22,6 +22,7 @@
 #include <QDir>
 
 #include <QStandardPaths>
+#include <QTemporaryDir>
 
 Q_GLOBAL_STATIC(DataPaths, qz_data_paths)
 
@@ -84,63 +85,32 @@ void DataPaths::clearTempData()
 
 void DataPaths::init()
 {
-    // AppData
-#if defined(Q_OS_MACOS)
-    m_paths[AppData].append(QApplication::applicationDirPath() + QLatin1String("/../Resources"));
-#elif defined(Q_OS_UNIX) && !defined(NO_SYSTEM_DATAPATH)
-    // Add standard data lookup paths
-    for (const auto &location : QStandardPaths::standardLocations(QStandardPaths::AppDataLocation)) {
-        m_paths[AppData].append(location);
-        m_paths[Translations].append(location + QLatin1String("/locale"));
-        m_paths[Themes].append(location + QLatin1String("/themes"));
-        m_paths[Plugins].append(location + QLatin1String("/plugins"));
-    }
-#else
+#if defined(NO_SYSTEM_DATAPATH)
     m_paths[AppData].append(QApplication::applicationDirPath());
 #endif
+    m_paths[AppData].append(QStandardPaths::standardLocations(QStandardPaths::AppDataLocation));
 
-    if (m_paths[Translations].isEmpty()) {
-        m_paths[Translations].append(m_paths[AppData].at(0) + QLatin1String("/locale"));
-        m_paths[Themes].append(m_paths[AppData].at(0) + QLatin1String("/themes"));
-        m_paths[Plugins].append(m_paths[AppData].at(0) + QLatin1String("/plugins"));
+    for (const QString &location : qAsConst(m_paths[AppData])) {
+        initAssetsIn(location);
     }
 
-    // Config
-#if defined(Q_OS_WIN) || defined(Q_OS_OS2)
-    // Use %LOCALAPPDATA%/falkon as Config path on Windows
-    m_paths[Config].append(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation));
-#elif defined(Q_OS_MACOS)
-    m_paths[Config].append(QDir::homePath() + QLatin1String("/Library/Application Support/Falkon"));
-#else // Unix
     m_paths[Config].append(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation));
-#endif
-
-    // Profiles
     m_paths[Profiles].append(m_paths[Config].at(0) + QLatin1String("/profiles"));
+    // We also allow to load data from Config path
+    initAssetsIn(m_paths[Config].at(0));
 
-    // Temp
-#ifdef Q_OS_UNIX
-    const QByteArray &user = qgetenv("USER");
-    const QString &tempPath = QString(QSL("%1/falkon-%2")).arg(QDir::tempPath(), user.constData());
-    m_paths[Temp].append(tempPath);
-#else
-    m_paths[Temp].append(m_paths[Config].at(0) + QLatin1String("/tmp"));
-#endif
+    m_tmpdir.reset(new QTemporaryDir(QCoreApplication::applicationName()));
+    m_paths[Temp].append(m_tmpdir->path());
+    if (!m_tmpdir->isValid()) {
+        qWarning() << "Failed to create temporary directory" << m_tmpdir->path();
+    }
 
-    // Cache
-#ifdef Q_OS_UNIX
     m_paths[Cache].append(QStandardPaths::writableLocation(QStandardPaths::CacheLocation));
-#endif
 
     // Make sure the Config and Temp paths exists
     QDir dir;
     dir.mkpath(m_paths[Config].at(0));
     dir.mkpath(m_paths[Temp].at(0));
-
-    // We also allow to load data from Config path
-    m_paths[Translations].append(m_paths[Config].at(0) + QLatin1String("/locale"));
-    m_paths[Themes].append(m_paths[Config].at(0) + QLatin1String("/themes"));
-    m_paths[Plugins].append(m_paths[Config].at(0) + QLatin1String("/plugins"));
 
 #ifdef USE_LIBPATH
     m_paths[Plugins].append(QLatin1String(USE_LIBPATH "/falkon"));
@@ -160,4 +130,11 @@ void DataPaths::initCurrentProfile(const QString &profilePath)
     QDir dir;
     dir.mkpath(m_paths[Cache].at(0));
     dir.mkpath(m_paths[Sessions].at(0));
+}
+
+void DataPaths::initAssetsIn(const QString &path)
+{
+    m_paths[Translations].append(path + QLatin1String("/locale"));
+    m_paths[Themes].append(path + QLatin1String("/themes"));
+    m_paths[Plugins].append(path + QLatin1String("/plugins"));
 }
