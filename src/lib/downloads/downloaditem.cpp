@@ -185,12 +185,18 @@ QString DownloadItem::remaingTimeToString(QTime time)
         return tr("few seconds");
     }
     else if (time < QTime(0, 1)) {
+        //~ singular %n second
+        //~ plural %n seconds
         return tr("%n seconds", "", time.second());
     }
     else if (time < QTime(1, 0)) {
+        //~ singular %n minute
+        //~ plural %n minutes
         return tr("%n minutes", "", time.minute());
     }
     else {
+        //~ singular %n hour
+        //~ plural %n hours
         return tr("%n hours", "", time.hour());
     }
 }

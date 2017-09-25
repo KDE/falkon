@@ -457,6 +457,8 @@ void TabWidget::closeTab(int index)
 
     if (m_menuTabs->isVisible()) {
         QAction* labelAction = m_menuTabs->actions().last();
+        //~ singular Currently you have %n opened tab
+        //~ plural Currently you have %n opened tabs
         labelAction->setText(tr("Currently you have %n opened tab(s)", "", count() - 1));
     }
 
