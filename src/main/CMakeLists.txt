@@ -32,8 +32,8 @@ endif()
 
 if (UNIX AND NOT APPLE)
     install(TARGETS falkon ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-    install(DIRECTORY ${CMAKE_SOURCE_DIR}/bin/locale DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/locale) # TODO correct?
-    install(DIRECTORY ${CMAKE_SOURCE_DIR}/bin/themes DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/themes)
+    install(DIRECTORY ${CMAKE_SOURCE_DIR}/bin/locale DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}) # TODO correct?
+    install(DIRECTORY ${CMAKE_SOURCE_DIR}/bin/themes DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
 
     install(PROGRAMS ../../linux/applications/org.kde.Falkon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
