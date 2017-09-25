@@ -296,7 +296,7 @@ if (UNIX AND NOT APPLE)
     endif()
     target_link_libraries(FalkonPrivate crypto)
 
-    set_target_properties(FalkonPrivate PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION "5")
+    set_target_properties(FalkonPrivate PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION "2")
     install(TARGETS FalkonPrivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 endif()
 
