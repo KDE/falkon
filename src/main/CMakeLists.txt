@@ -21,19 +21,19 @@ if (APPLE)
     set_target_properties(falkon PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.falkon")
     set_target_properties(falkon PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "Falkon")
     install(FILES lib/data/icons/exeicons/qupzilla.icns DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
-    install(DIRECTORY ${CMAKE_SOURCE_DIR}/bin/locale DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
-    install(DIRECTORY ${CMAKE_SOURCE_DIR}/bin/themes DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
-    install(DIRECTORY ${CMAKE_SOURCE_DIR}/bin/plugins DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
+    #install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/locale DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
+    install(DIRECTORY ${CMAKE_SOURCE_DIR}/themes DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
+    install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/plugins DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
 endif ()
 
-if (CMAKE_SYSTEM_NAME MATCHES FreeBSD OR CMAKE_SYSTEM_NAME MATCHES OpenBSD OR HAIKU)
+if (CMAKE_SYSTEM_NAME MATCHES FreeBSD OR CMAKE_SYSTEM_NAME MATCHES OpenBSD)
     target_link_libraries(falkon execinfo)
 endif()
 
 if (UNIX AND NOT APPLE)
     install(TARGETS falkon ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-    install(DIRECTORY ${CMAKE_SOURCE_DIR}/bin/locale DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}) # TODO correct?
-    install(DIRECTORY ${CMAKE_SOURCE_DIR}/bin/themes DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
+    #install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/locale DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
+    install(DIRECTORY ${CMAKE_SOURCE_DIR}/themes DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
 
     install(PROGRAMS ../../linux/applications/org.kde.Falkon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
