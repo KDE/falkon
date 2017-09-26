@@ -92,7 +92,8 @@ endif()
 
 # Optional: KWallet
 set(KF5_MIN_VERSION "5.27.0")
-find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Wallet)
+find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG)
+set_package_properties(KF5Wallet PROPERTIES DESCRIPTION "KWallet password backend plugin" TYPE OPTIONAL)
 
 # Git revision
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
@@ -140,3 +141,4 @@ include_directories(
 add_subdirectory(src)
 add_subdirectory(tests/autotests)
 
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
