@@ -36,20 +36,6 @@ option(NO_SYSTEM_DATAPATH "TODO" OFF)
 if (NO_SYSTEM_DATAPATH)
     add_definitions(-DNO_SYSTEM_DATAPATH)
 endif()
-option(KDE_INTEGRATION "TODO" OFF)
-if (KDE_INTEGRATION)
-    set(KF5_MIN_VERSION "5.27.0")
-    find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Wallet)
-    add_definitions(-DKDE_INTEGRATION)
-endif()
-option(GNOME_INTEGRATION "TODO" OFF)
-if (GNOME_INTEGRATION)
-    find_package(PkgConfig)
-    if (PKG_CONFIG_FOUND)
-        pkg_check_modules(GNOME_KEYRING gnome-keyring-1)
-    endif()
-    add_definitions(-DGNOME_INTEGRATION)
-endif()
 option(NO_X11 "TODO" OFF)
 if (NO_X11)
     add_definitions(-DNO_X11)
@@ -97,6 +83,16 @@ if (WIN32)
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS WinExtras)
     # TODO set var for LIBS += User32.lib Ole32.lib Shell32.lib ShlWapi.lib Gdi32.lib ComCtl32.lib ?
 endif()
+
+# Optional: GnomeKeyring
+find_package(PkgConfig)
+if (PKG_CONFIG_FOUND)
+    pkg_check_modules(GNOME_KEYRING gnome-keyring-1)
+endif()
+
+# Optional: KWallet
+set(KF5_MIN_VERSION "5.27.0")
+find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Wallet)
 
 # Git revision
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")

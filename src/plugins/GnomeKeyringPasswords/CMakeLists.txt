@@ -1,4 +1,4 @@
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GNOME_KEYRING_CFLAGS}")
+add_definitions(${GNOME_KEYRING_CFLAGS} ${GNOME_KEYRING_CFLAGS_OTHER})
 
 set( GnomeKeyringPasswords_SRCS
 	gnomekeyringplugin.cpp

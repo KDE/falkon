@@ -23,7 +23,7 @@
 #include "passwordbackends/passwordbackend.h"
 #include "passwordmanager.h"
 
-class GnomeKeyringPasswordBackend : public PasswordBackend
+class FALKON_EXPORT GnomeKeyringPasswordBackend : public PasswordBackend
 {
 public:
     explicit GnomeKeyringPasswordBackend();

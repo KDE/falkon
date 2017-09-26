@@ -33,11 +33,9 @@ Linux / Unix
 
   To build KWallet plugin, you need:
      - KF5 KWallet
-     - set KDE_INTEGRATION build flag
 
   To build Gnome-Keyring plugin, you need
      - libgnome-keyring-dev installed
-     - set GNOME_INTEGRATION build flag
 
   For debug build, gdb is required by qmake.
 
@@ -106,20 +104,6 @@ Available Defines
 
                           example:
                           $ export NO_X11="true"
-
-     KDE_INTEGRATION      Enable KDE integration.
-                          Currently it enables building of KWallet Password plugin,
-                          which provides support for storing passwords in KWallet.
-
-                          example:
-                          $ export KDE_INTEGRATION="true"
-
-     GNOME_INTEGRATION    Enable Gnome integration.
-                          Currently it enables building of Gnome-Keyring Password plugin,
-                          which provides support for storing passwords in Gnome-Keyring.
-
-                          example:
-                          $ export GNOME_INTEGRATION="true"
 
      USE_LIBPATH          By default, /usr/lib/ is used for libFalkon and /usr/lib/falkon
                           for plugins.

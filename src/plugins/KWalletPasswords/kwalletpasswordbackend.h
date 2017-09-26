@@ -27,7 +27,7 @@ namespace KWallet {
 class Wallet;
 }
 
-class KWalletPasswordBackend : public PasswordBackend
+class FALKON_EXPORT KWalletPasswordBackend : public PasswordBackend
 {
 public:
     explicit KWalletPasswordBackend();
