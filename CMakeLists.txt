@@ -87,7 +87,10 @@ endif()
 # Optional: GnomeKeyring
 find_package(PkgConfig)
 if (PKG_CONFIG_FOUND)
-    pkg_check_modules(GNOME_KEYRING gnome-keyring-1)
+    option(BUILD_KEYRING "Gnome keyring password plugin" ON)
+    if (BUILD_KEYRING)
+        pkg_check_modules(GNOME_KEYRING gnome-keyring-1)
+    endif()
 endif()
 
 # Optional: KWallet
