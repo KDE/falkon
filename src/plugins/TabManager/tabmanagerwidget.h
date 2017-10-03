@@ -21,6 +21,7 @@
 #include <QWidget>
 #include <QPointer>
 #include <QHash>
+#include <QTreeWidgetItem>
 
 namespace Ui
 {
@@ -61,18 +62,9 @@ public slots:
     void changeGroupType();
 
 private:
-    enum TabDataRole {
-        WebTabPointerRole = Qt::UserRole + 10,
-        BrowserWindowPointerRole = Qt::UserRole + 20,
-        UrlRole = Qt::UserRole + 30
-    };
-
-    QTreeWidgetItem* createEmptyItem(QTreeWidgetItem* parent = 0, bool addToTree = true);
     QTreeWidgetItem* groupByDomainName(bool useHostName = false);
     QTreeWidgetItem* groupByWindow();
     BrowserWindow* getWindow();
-
-    void makeWebViewConnections(WebView *view);
 
     Ui::TabManagerWidget* ui;
     QPointer<BrowserWindow> m_window;
@@ -103,6 +95,34 @@ protected:
 signals:
     void showSideBySide();
     void groupTypeChanged(TabManagerWidget::GroupType);
+};
+
+class TabItem : public QObject, public QTreeWidgetItem
+{
+    Q_OBJECT
+
+public:
+    enum StateRole {
+        ActiveOrCaptionRole = Qt::UserRole + 1
+    };
+
+    TabItem(QTreeWidget* treeWidget, QTreeWidgetItem* parent = 0, bool addToTree = true);
+
+    BrowserWindow* window() const;
+    void setBrowserWindow(BrowserWindow* window);
+
+    WebTab* webTab() const;
+    void setWebTab(WebTab* webTab);
+
+public slots:
+    void updateIcon();
+    void setTitle(const QString& title);
+    void setIsActiveOrCaption(bool yes);
+
+private:
+    QTreeWidget* m_treeWidget;
+    BrowserWindow* m_window;
+    WebTab* m_webTab;
 };
 
 #endif // TABMANAGERWIDGET_H

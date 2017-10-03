@@ -17,6 +17,7 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "tabmanagerdelegate.h"
+#include "tabmanagerwidget.h"
 
 #include <QPainter>
 #include <QApplication>
@@ -36,6 +37,7 @@ void TabManagerDelegate::paint(QPainter* painter, const QStyleOptionViewItem &op
     const QWidget* w = opt.widget;
     const QStyle* style = w ? w->style() : QApplication::style();
     const Qt::LayoutDirection direction = w ? w->layoutDirection() : QApplication::layoutDirection();
+    const bool isActiveOrCaption = index.data(TabItem::ActiveOrCaptionRole).toBool();
 
     const QPalette::ColorRole colorRole = opt.state & QStyle::State_Selected ? QPalette::HighlightedText : QPalette::Text;
 
@@ -124,6 +126,9 @@ void TabManagerDelegate::paint(QPainter* painter, const QStyleOptionViewItem &op
             painter->setPen(opt.palette.color(cg, QPalette::Text));
             painter->drawRect(textRect.adjusted(0, 0, -1, -1));
         }
+
+        if (isActiveOrCaption)
+            opt.font.setBold(true);
 
         painter->setFont(opt.font);
         viewItemDrawText(painter, &opt, textRect, opt.text, textPalette.color(colorRole), filterText);
