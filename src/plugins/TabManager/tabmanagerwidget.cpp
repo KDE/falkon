@@ -612,7 +612,6 @@ QTreeWidgetItem* TabManagerWidget::groupByDomainName(bool useHostName)
         // getWindow() instance is closing
         return nullptr;
     }
-    windows.move(currentWindowIdx, 0);
 
     QMap<QString, QTreeWidgetItem*> tabsGroupedByDomain;
 
