@@ -31,6 +31,10 @@ DataPaths::DataPaths()
     init();
 }
 
+DataPaths::~DataPaths()
+{
+}
+
 // static
 void DataPaths::setCurrentProfilePath(const QString &profilePath)
 {

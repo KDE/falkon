@@ -42,6 +42,7 @@ public:
     };
 
     explicit DataPaths();
+    ~DataPaths();
 
     // Set absolute path of current profile
     static void setCurrentProfilePath(const QString &profilePath);

@@ -39,6 +39,7 @@
 
 #ifdef Q_OS_WIN
 #include "Shlwapi.h"
+#include "shellapi.h"
 #endif
 
 //#define DOWNMANAGER_DEBUG
