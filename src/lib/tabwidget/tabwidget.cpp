@@ -653,6 +653,18 @@ void TabWidget::closeToLeft(int index)
     }
 }
 
+void TabWidget::detachTab(WebTab* tab)
+{
+    Q_ASSERT(tab);
+
+    m_locationBars->removeWidget(tab->locationBar());
+    disconnect(tab->webView(), SIGNAL(wantsCloseTab(int)), this, SLOT(closeTab(int)));
+    disconnect(tab->webView(), SIGNAL(urlChanged(QUrl)), this, SIGNAL(changed()));
+    disconnect(tab->webView(), SIGNAL(ipChanged(QString)), m_window->ipLabel(), SLOT(setText(QString)));
+
+    tab->detach();
+}
+
 void TabWidget::detachTab(int index)
 {
     WebTab* tab = weTab(index);
@@ -661,12 +673,7 @@ void TabWidget::detachTab(int index)
         return;
     }
 
-    m_locationBars->removeWidget(tab->locationBar());
-    disconnect(tab->webView(), SIGNAL(wantsCloseTab(int)), this, SLOT(closeTab(int)));
-    disconnect(tab->webView(), SIGNAL(urlChanged(QUrl)), this, SIGNAL(changed()));
-    disconnect(tab->webView(), SIGNAL(ipChanged(QString)), m_window->ipLabel(), SLOT(setText(QString)));
-
-    tab->detach();
+    detachTab(tab);
 
     BrowserWindow* window = mApp->createWindow(Qz::BW_NewWindow);
     window->setStartTab(tab);

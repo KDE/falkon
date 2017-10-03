@@ -543,13 +543,8 @@ void TabManagerWidget::detachSelectedTabs(const QHash<BrowserWindow*, WebTab*> &
     foreach (BrowserWindow* mainWindow, windows) {
         const QList<WebTab*> &tabs = tabsHash.values(mainWindow);
         foreach (WebTab* webTab, tabs) {
-            mainWindow->tabWidget()->locationBars()->removeWidget(webTab->locationBar());
+            mainWindow->tabWidget()->detachTab(webTab);
 
-            disconnect(webTab->webView(), SIGNAL(wantsCloseTab(int)), mainWindow->tabWidget(), SLOT(closeTab(int)));
-            disconnect(webTab->webView(), SIGNAL(changed()), mainWindow->tabWidget(), SIGNAL(changed()));
-            disconnect(webTab->webView(), SIGNAL(ipChanged(QString)), mainWindow->ipLabel(), SLOT(setText(QString)));
-
-            webTab->detach();
             if (mainWindow && mainWindow->tabWidget()->count() == 0) {
                 mainWindow->close();
                 mainWindow = 0;
