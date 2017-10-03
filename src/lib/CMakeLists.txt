@@ -177,6 +177,7 @@ set(SRCS ${SRCS}
     tabwidget/tabicon.cpp
     tabwidget/tabstackedwidget.cpp
     tabwidget/tabwidget.cpp
+    tabwidget/tabcontextmenu.cpp
     tools/aesinterface.cpp
     tools/animatedwidget.cpp
     tools/buttonbox.cpp
