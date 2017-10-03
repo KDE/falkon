@@ -751,6 +751,11 @@ void TabItem::setWebTab(WebTab* webTab)
 {
     m_webTab = webTab;
 
+    if (m_webTab->isRestored())
+        setIsActiveOrCaption(m_webTab->isCurrentTab());
+    else
+        setIsSavedTab(true);
+
     connect(m_webTab->webView()->page(), SIGNAL(audioMutedChanged(bool)), this, SLOT(updateIcon()));
     connect(m_webTab->webView()->page(), SIGNAL(loadFinished(bool)), this, SLOT(updateIcon()));
     connect(m_webTab->webView()->page(), SIGNAL(loadStarted()), this, SLOT(updateIcon()));
@@ -778,9 +783,15 @@ void TabItem::updateIcon()
         else {
             setIcon(0, QIcon(":tabmanager/data/tab-pinned.png"));
         }
+
+        if (m_webTab->isRestored())
+            setIsActiveOrCaption(m_webTab->isCurrentTab());
+        else
+            setIsSavedTab(true);
     }
     else {
         setIcon(0, QIcon(":tabmanager/data/tab-loading.png"));
+        setIsActiveOrCaption(m_webTab->isCurrentTab());
     }
 }
 
@@ -793,4 +804,11 @@ void TabItem::setTitle(const QString &title)
 void TabItem::setIsActiveOrCaption(bool yes)
 {
     setData(0, ActiveOrCaptionRole, yes ? QVariant(true) : QVariant());
+
+    setIsSavedTab(false);
+}
+
+void TabItem::setIsSavedTab(bool yes)
+{
+    setData(0, SavedRole, yes ? QVariant(true) : QVariant());
 }

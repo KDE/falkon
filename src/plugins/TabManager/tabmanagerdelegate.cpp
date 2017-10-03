@@ -38,10 +38,11 @@ void TabManagerDelegate::paint(QPainter* painter, const QStyleOptionViewItem &op
     const QStyle* style = w ? w->style() : QApplication::style();
     const Qt::LayoutDirection direction = w ? w->layoutDirection() : QApplication::layoutDirection();
     const bool isActiveOrCaption = index.data(TabItem::ActiveOrCaptionRole).toBool();
+    const bool isSavedTab = index.data(TabItem::SavedRole).toBool();
 
     const QPalette::ColorRole colorRole = opt.state & QStyle::State_Selected ? QPalette::HighlightedText : QPalette::Text;
 
-    QPalette::ColorGroup cg = opt.state & QStyle::State_Enabled ? QPalette::Normal : QPalette::Disabled;
+    QPalette::ColorGroup cg = (opt.state & QStyle::State_Enabled) && !isSavedTab ? QPalette::Normal : QPalette::Disabled;
     if (cg == QPalette::Normal && !(opt.state & QStyle::State_Active)) {
         cg = QPalette::Inactive;
     }
@@ -122,7 +123,9 @@ void TabManagerDelegate::paint(QPainter* painter, const QStyleOptionViewItem &op
             painter->drawRect(textRect.adjusted(0, 0, -1, -1));
         }
 
-        if (isActiveOrCaption)
+        if (isSavedTab)
+            opt.font.setItalic(true);
+        else if (isActiveOrCaption)
             opt.font.setBold(true);
 
         painter->setFont(opt.font);
