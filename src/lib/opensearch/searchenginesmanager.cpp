@@ -161,7 +161,7 @@ void SearchEnginesManager::restoreDefaults()
     Engine duck;
     duck.name = "DuckDuckGo";
     duck.icon = QIcon(":/icons/sites/duck.png");
-    duck.url = "https://duckduckgo.com/?q=%s&t=falkon";
+    duck.url = "https://duckduckgo.com/?q=%s&t=qupzilla";
     duck.shortcut = "d";
     duck.suggestionsUrl = "https://ac.duckduckgo.com/ac/?q=%s&type=list";
 
