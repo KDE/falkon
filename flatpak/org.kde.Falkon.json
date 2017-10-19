@@ -1,9 +1,8 @@
 {
     "id": "org.kde.Falkon",
     "runtime": "org.kde.Platform",
-    "runtime-version": "master",
+    "runtime-version": "5.9",
     "sdk": "org.kde.Sdk",
-    "rename-icon": "falkon",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
     "command": "falkon",
@@ -20,21 +19,12 @@
 
     "modules": [
         {
+            "buildsystem": "cmake",
             "name": "falkon",
-            "build-options": {
-                "env": {
-                    "FALKON_PREFIX": "/app"
-                }
-            },
             "sources": [
                 {
                     "type": "git",
                     "url": "git://anongit.kde.org/falkon.git"
-                },
-                {
-                    "type": "script",
-                    "commands": [ "qmake" ],
-                    "dest-filename": "configure"
                 }
             ]
         }
