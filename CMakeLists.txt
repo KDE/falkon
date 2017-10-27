@@ -48,10 +48,6 @@ option(NONBLOCK_JS_DIALOGS "TODO" OFF)
 if (NONBLOCK_JS_DIALOGS)
     add_definitions(-DNONBLOCK_JS_DIALOGS)
 endif()
-option(USE_LIBPATH "TODO" "") # REMOVE?
-if (USE_LIBPATH)
-    add_definitions(-DUSE_LIBPATH=\"${USE_LIBPATH}\")
-endif()
 option(DISABLE_DBUS "TODO" OFF)
 if (DISABLE_DBUS)
     add_definitions(-DDISABLE_DBUS)
@@ -61,7 +57,7 @@ if (DISABLE_UPDATES_CHECK)
     add_definitions(-DDISABLE_UPDATES_CHECK)
 endif()
 # Note: the old qmake option DEBUG_BUILD is now -DCMAKE_BUILD_TYPE=Debug, and FALKON_PREFIX is now -DCMAKE_INSTALL_PREFIX
-#       SHARE_FOLDER is now auto-detected, so is USE_LIBPATH.
+#       SHARE_FOLDER is now auto-detected.
 
 # Mandatory: Qt5
 set(QT_MIN_VERSION "5.8.0")

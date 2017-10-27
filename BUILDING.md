@@ -105,13 +105,6 @@ Available Defines
                           example:
                           $ export NO_X11="true"
 
-     USE_LIBPATH          By default, /usr/lib/ is used for libFalkon and /usr/lib/falkon
-                          for plugins.
-                          You can change it by setting this define.
-
-                          example:
-                          $ export USE_LIBPATH="/usr/lib64"
-
      NO_SYSTEM_DATAPATH   By default, Falkon is using /usr/share/falkon/ path
                           for storing themes and translations.
                           By setting this define, Falkon will use path of execution.

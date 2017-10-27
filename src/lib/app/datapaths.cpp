@@ -115,10 +115,6 @@ void DataPaths::init()
     QDir dir;
     dir.mkpath(m_paths[Config].at(0));
     dir.mkpath(m_paths[Temp].at(0));
-
-#ifdef USE_LIBPATH
-    m_paths[Plugins].append(QLatin1String(USE_LIBPATH "/falkon"));
-#endif
 }
 
 void DataPaths::initCurrentProfile(const QString &profilePath)
