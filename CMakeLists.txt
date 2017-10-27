@@ -30,7 +30,11 @@ if (UNIX AND NOT APPLE)
 else()
     set(FALKON_INSTALL_PLUGINDIR "${KDE_INSTALL_PLUGINDIR}")
 endif()
-add_definitions(-DPLUGIN_PATH=\"${CMAKE_INSTALL_PREFIX}/${FALKON_INSTALL_PLUGINDIR}\")
+if (IS_ABSOLUTE ${FALKON_INSTALL_PLUGINDIR})
+    add_definitions(-DPLUGIN_PATH=\"${FALKON_INSTALL_PLUGINDIR}\")
+else()
+    add_definitions(-DPLUGIN_PATH=\"${CMAKE_INSTALL_PREFIX}/${FALKON_INSTALL_PLUGINDIR}\")
+endif()
 
 # Version (TODO: move to a generated header once qmake support is dropped, to avoid full recompilations when changing this
 add_definitions(-DFALKON_VERSION=\"${PROJECT_VERSION}\")
