@@ -27,6 +27,6 @@ qt5_add_resources(RSCS ${MouseGestures_RSCS})
 KDE_ENABLE_EXCEPTIONS()
 
 add_library(MouseGestures MODULE ${MouseGestures_SRCS} ${UIS} ${RSCS})
-install(TARGETS MouseGestures DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(TARGETS MouseGestures DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 target_link_libraries(MouseGestures FalkonPrivate)
 

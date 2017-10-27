@@ -20,6 +20,6 @@ set( TabManager_RSCS
 qt5_add_resources(RSCS ${TabManager_RSCS})
 
 add_library(TabManager MODULE ${TabManager_SRCS} ${UIS} ${RSCS})
-install(TARGETS TabManager DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(TARGETS TabManager DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 target_link_libraries(TabManager FalkonPrivate)
 

@@ -16,6 +16,6 @@ set( AutoScroll_RSCS
 qt5_add_resources(RSCS ${AutoScroll_RSCS})
 
 add_library(AutoScroll MODULE ${AutoScroll_SRCS} ${UIS} ${RSCS})
-install(TARGETS AutoScroll DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(TARGETS AutoScroll DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 target_link_libraries(AutoScroll FalkonPrivate)
 

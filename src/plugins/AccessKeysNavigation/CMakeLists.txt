@@ -15,6 +15,6 @@ set( AccessKeysNavigation_RSCS
 qt5_add_resources(RSCS ${AccessKeysNavigation_RSCS})
 
 add_library(AccessKeysNavigation MODULE ${AccessKeysNavigation_SRCS} ${UIS} ${RSCS})
-install(TARGETS AccessKeysNavigation DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(TARGETS AccessKeysNavigation DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 target_link_libraries(AccessKeysNavigation FalkonPrivate)
 

@@ -4,6 +4,6 @@ set( TestPlugin_SRCS
 	)
 
 add_library(TestPlugin MODULE ${TestPlugin_SRCS} ${RSCS})
-install(TARGETS TestPlugin DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(TARGETS TestPlugin DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 target_link_libraries(TestPlugin FalkonPrivate)
 

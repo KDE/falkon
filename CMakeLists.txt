@@ -25,6 +25,13 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
+if (UNIX AND NOT APPLE)
+    set(FALKON_INSTALL_PLUGINDIR "${KDE_INSTALL_PLUGINDIR}/falkon")
+else()
+    set(FALKON_INSTALL_PLUGINDIR "${KDE_INSTALL_PLUGINDIR}")
+endif()
+add_definitions(-DPLUGIN_PATH=\"${CMAKE_INSTALL_PREFIX}/${FALKON_INSTALL_PLUGINDIR}\")
+
 # Version (TODO: move to a generated header once qmake support is dropped, to avoid full recompilations when changing this
 add_definitions(-DFALKON_VERSION=\"${PROJECT_VERSION}\")
 

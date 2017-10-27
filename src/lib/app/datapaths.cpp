@@ -94,6 +94,10 @@ void DataPaths::init()
 #endif
     m_paths[AppData].append(QStandardPaths::standardLocations(QStandardPaths::AppDataLocation));
 
+#if defined(PLUGIN_PATH)
+    m_paths[Plugins].append(QStringLiteral(PLUGIN_PATH));
+#endif
+
     for (const QString &location : qAsConst(m_paths[AppData])) {
         initAssetsIn(location);
     }

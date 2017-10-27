@@ -26,6 +26,6 @@ set( StatusBarIcons_RSCS
 qt5_add_resources(RSCS ${StatusBarIcons_RSCS})
 
 add_library(StatusBarIcons MODULE ${StatusBarIcons_SRCS} ${UIS} ${RSCS})
-install(TARGETS StatusBarIcons DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(TARGETS StatusBarIcons DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 target_link_libraries(StatusBarIcons FalkonPrivate)
 

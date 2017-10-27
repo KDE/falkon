@@ -15,6 +15,6 @@ set( ImageFinder_RSCS
 qt5_add_resources(RSCS ${ImageFinder_RSCS})
 
 add_library(ImageFinder MODULE ${ImageFinder_SRCS} ${UIS} ${RSCS})
-install(TARGETS ImageFinder DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(TARGETS ImageFinder DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 target_link_libraries(ImageFinder FalkonPrivate)
 

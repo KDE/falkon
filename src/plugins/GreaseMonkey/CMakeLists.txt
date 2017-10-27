@@ -28,6 +28,6 @@ set( GreaseMonkey_RSCS
 qt5_add_resources(RSCS ${GreaseMonkey_RSCS})
 
 add_library(GreaseMonkey MODULE ${GreaseMonkey_SRCS} ${UIS} ${RSCS})
-install(TARGETS GreaseMonkey DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(TARGETS GreaseMonkey DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 target_link_libraries(GreaseMonkey FalkonPrivate)
 
