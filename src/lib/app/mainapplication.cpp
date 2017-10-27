@@ -786,8 +786,6 @@ void MainApplication::saveSettings()
     m_plugins->shutdown();
     m_networkManager->shutdown();
 
-    DataPaths::clearTempData();
-
     qzSettings->saveSettings();
     AdBlockManager::instance()->save();
     QFile::remove(DataPaths::currentProfilePath() + QLatin1String("/WebpageIcons.db"));

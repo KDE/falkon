@@ -81,12 +81,6 @@ QString DataPaths::currentProfilePath()
     return path(CurrentProfile);
 }
 
-// static
-void DataPaths::clearTempData()
-{
-    QzTools::removeDir(path(Temp));
-}
-
 void DataPaths::init()
 {
 #if defined(NO_SYSTEM_DATAPATH)
@@ -107,7 +101,7 @@ void DataPaths::init()
     // We also allow to load data from Config path
     initAssetsIn(m_paths[Config].at(0));
 
-    m_tmpdir.reset(new QTemporaryDir(QCoreApplication::applicationName()));
+    m_tmpdir.reset(new QTemporaryDir());
     m_paths[Temp].append(m_tmpdir->path());
     if (!m_tmpdir->isValid()) {
         qWarning() << "Failed to create temporary directory" << m_tmpdir->path();

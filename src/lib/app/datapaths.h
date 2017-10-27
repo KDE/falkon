@@ -56,9 +56,6 @@ public:
     // Convenience function for getting CurrentProfile
     static QString currentProfilePath();
 
-    // Remove Temp dir
-    static void clearTempData();
-
 private:
     void init();
     void initCurrentProfile(const QString &profilePath);
