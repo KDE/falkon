@@ -53,8 +53,6 @@ private:
     void copyDataToProfile();
 
     void connectDatabase();
-
-    bool m_databaseConnected;
 };
 
 #endif // PROFILEMANAGER_H
