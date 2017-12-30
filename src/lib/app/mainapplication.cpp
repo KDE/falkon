@@ -1079,6 +1079,7 @@ void MainApplication::checkDefaultWebBrowser()
 
     if (!associationManager()->isDefaultForAllCapabilities()) {
         CheckBoxDialog dialog(QMessageBox::Yes | QMessageBox::No, getWindow());
+        dialog.setDefaultButton(QMessageBox::Yes);
         dialog.setText(tr("Falkon is not currently your default browser. Would you like to make it your default browser?"));
         dialog.setCheckBoxText(tr("Always perform this check when starting Falkon."));
         dialog.setDefaultCheckState(Qt::Checked);
