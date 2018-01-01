@@ -471,7 +471,7 @@ void TabWidget::requestCloseTab(int index)
         return;
 
     // This would close last tab, so we close the window instead
-    if (count() == 1) {
+    if (count() <= 1) {
         // If we are not closing window upon closing last tab, let's just load new-tab-url
         if (m_dontCloseWithOneTab) {
             if (webView->url() == m_urlOnNewTab) {
@@ -661,7 +661,7 @@ void TabWidget::detachTab(int index)
 {
     WebTab* tab = weTab(index);
 
-    if (count() < 2) {
+    if (count() <= 1) {
         return;
     }
 
