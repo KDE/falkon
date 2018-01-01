@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2014-2017 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2014-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@ const int bookmarksVersion = 1;
 FALKON_EXPORT const char* APPNAME = "Falkon";
 FALKON_EXPORT const char* VERSION = FALKON_VERSION;
 FALKON_EXPORT const char* AUTHOR = "David Rosca";
-FALKON_EXPORT const char* COPYRIGHT = "2010-2017";
+FALKON_EXPORT const char* COPYRIGHT = "2010-2018";
 FALKON_EXPORT const char* WWWADDRESS = "https://www.qupzilla.com";
 FALKON_EXPORT const char* WIKIADDRESS = "https://github.com/QupZilla/qupzilla/wiki";
 }
