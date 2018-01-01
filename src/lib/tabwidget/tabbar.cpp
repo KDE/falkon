@@ -39,7 +39,7 @@
 #include <QHBoxLayout>
 #include <QDrag>
 
-#define MIMETYPE QSL("application/qupzilla.tabbar.tab")
+#define MIMETYPE QSL("application/falkon.tabbar.tab")
 
 TabBar::TabBar(BrowserWindow* window, TabWidget* tabWidget)
     : ComboTabBar()
