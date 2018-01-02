@@ -23,7 +23,7 @@
 #include "qzcommon.h"
 #include "browserwindow.h"
 
-class QUPZILLA_EXPORT ClosedWindowsManager : public QObject
+class FALKON_EXPORT ClosedWindowsManager : public QObject
 {
     Q_OBJECT
 

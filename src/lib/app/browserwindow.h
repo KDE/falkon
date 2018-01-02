@@ -71,8 +71,8 @@ public:
         bool isValid() const;
         void clear();
 
-        friend QUPZILLA_EXPORT QDataStream &operator<<(QDataStream &stream, const SavedWindow &window);
-        friend QUPZILLA_EXPORT QDataStream &operator>>(QDataStream &stream, SavedWindow &window);
+        friend FALKON_EXPORT QDataStream &operator<<(QDataStream &stream, const SavedWindow &window);
+        friend FALKON_EXPORT QDataStream &operator>>(QDataStream &stream, SavedWindow &window);
     };
 
     explicit BrowserWindow(Qz::BrowserWindowType type, const QUrl &url = QUrl());
