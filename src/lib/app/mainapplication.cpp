@@ -462,7 +462,7 @@ void MainApplication::destroyRestoreManager()
 {
     // Restore JavaScript settings
     const bool jsEnabled = Settings().value(QSL("Web-Browser-Settings/allowJavaScript"), true).toBool();
-    QWebEngineSettings::defaultSettings()->setAttribute(QWebEngineSettings::JavascriptEnabled, jsEnabled);
+    m_webProfile->settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, jsEnabled);
 
     delete m_restoreManager;
     m_restoreManager = 0;
@@ -609,6 +609,11 @@ DesktopNotificationsFactory* MainApplication::desktopNotifications()
 QWebEngineProfile *MainApplication::webProfile() const
 {
     return m_webProfile;
+}
+
+QWebEngineSettings *MainApplication::webSettings() const
+{
+    return m_webProfile->settings();
 }
 
 // static
@@ -878,7 +883,7 @@ void MainApplication::loadSettings()
 
     loadTheme(activeTheme);
 
-    QWebEngineSettings* webSettings = QWebEngineSettings::defaultSettings();
+    QWebEngineSettings* webSettings = m_webProfile->settings();
 
     // Web browsing settings
     settings.beginGroup("Web-Browser-Settings");
