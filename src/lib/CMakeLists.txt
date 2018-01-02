@@ -185,6 +185,7 @@ set(SRCS ${SRCS}
     tools/certificateinfowidget.cpp
     tools/clickablelabel.cpp
     tools/closedtabsmanager.cpp
+    tools/closedwindowsmanager.cpp
     tools/colors.cpp
     tools/delayedfilewatcher.cpp
     tools/docktitlebarwidget.cpp
