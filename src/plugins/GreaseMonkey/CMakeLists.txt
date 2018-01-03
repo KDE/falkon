@@ -7,11 +7,12 @@ set( GreaseMonkey_SRCS
 	gm_downloader.cpp
 	gm_addscriptdialog.cpp
 	gm_notification.cpp
+	gm_icon.cpp
+	gm_jsobject.cpp
 	settings/gm_settings.cpp
 	settings/gm_settingslistdelegate.cpp
 	settings/gm_settingsscriptinfo.cpp
 	settings/gm_settingslistwidget.cpp
-	gm_icon.cpp
 	)
 
 set( GreaseMonkey_UIS
