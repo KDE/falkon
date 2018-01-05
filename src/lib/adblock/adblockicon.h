@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -19,20 +19,30 @@
 #define ADBLOCKICON_H
 
 #include "qzcommon.h"
-#include "clickablelabel.h"
-#include "adblockrule.h"
+#include "abstractbuttoninterface.h"
 
-class QMenu;
 class QUrl;
+class QMenu;
+class QAction;
 
-class BrowserWindow;
+class AdBlockRule;
 
+<<<<<<< HEAD
 class FALKON_EXPORT AdBlockIcon : public ClickableLabel
+||||||| parent of d11997ee... AdBlockIcon: Move from statusbar to navigationbar as tool button
+class QUPZILLA_EXPORT AdBlockIcon : public ClickableLabel
+=======
+class QUPZILLA_EXPORT AdBlockIcon : public AbstractButtonInterface
+>>>>>>> d11997ee... AdBlockIcon: Move from statusbar to navigationbar as tool button
 {
     Q_OBJECT
+
 public:
-    explicit AdBlockIcon(BrowserWindow* window, QWidget* parent = 0);
+    explicit AdBlockIcon(QObject *parent = nullptr);
     ~AdBlockIcon();
+
+    QString id() const override;
+    QString name() const override;
 
     void popupBlocked(const QString &ruleString, const QUrl &url);
     QAction* menuAction();
@@ -42,14 +52,13 @@ public slots:
     void createMenu(QMenu* menu = 0);
 
 private slots:
-    void showMenu(const QPoint &pos);
     void toggleCustomFilter();
-
     void animateIcon();
     void stopAnimation();
 
 private:
-    BrowserWindow* m_window;
+    void clicked(ClickController *controller);
+
     QAction* m_menuAction;
 
     QVector<QPair<AdBlockRule*, QUrl> > m_blockedPopups;
