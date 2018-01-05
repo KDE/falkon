@@ -39,6 +39,7 @@ public:
     static QzSettings* staticSettings();
 
     bool contains(const QString &key) const;
+    void remove(const QString &key);
 
     void setValue(const QString &key, const QVariant &defaultValue = QVariant());
     QVariant value(const QString &key, const QVariant &defaultValue = QVariant());

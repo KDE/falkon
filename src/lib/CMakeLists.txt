@@ -122,6 +122,7 @@ set(SRCS ${SRCS}
     navigation/locationbarpopup.cpp
     navigation/navigationbar.cpp
     navigation/navigationbartoolbutton.cpp
+    navigation/navigationbarconfigdialog.cpp
     navigation/navigationcontainer.cpp
     navigation/reloadstopbutton.cpp
     navigation/siteicon.cpp
@@ -252,6 +253,7 @@ qt5_wrap_ui(SRCS
     downloads/downloadmanager.ui
     downloads/downloadoptionsdialog.ui
     history/historymanager.ui
+    navigation/navigationbarconfigdialog.ui
     network/sslerrordialog.ui
     notifications/desktopnotification.ui
     opensearch/editsearchengine.ui
