@@ -121,6 +121,7 @@ set(SRCS ${SRCS}
     navigation/locationbar.cpp
     navigation/locationbarpopup.cpp
     navigation/navigationbar.cpp
+    navigation/navigationbartoolbutton.cpp
     navigation/navigationcontainer.cpp
     navigation/reloadstopbutton.cpp
     navigation/siteicon.cpp
@@ -178,6 +179,7 @@ set(SRCS ${SRCS}
     tabwidget/tabstackedwidget.cpp
     tabwidget/tabwidget.cpp
     tabwidget/tabcontextmenu.cpp
+    tools/abstractbuttoninterface.cpp
     tools/aesinterface.cpp
     tools/animatedwidget.cpp
     tools/buttonbox.cpp
