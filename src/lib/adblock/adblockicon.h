@@ -23,23 +23,12 @@
 #include "qzcommon.h"
 #include "abstractbuttoninterface.h"
 
-class QUrl;
-
-class AdBlockRule;
-
-<<<<<<< HEAD
-class FALKON_EXPORT AdBlockIcon : public ClickableLabel
-||||||| parent of d11997ee... AdBlockIcon: Move from statusbar to navigationbar as tool button
-class QUPZILLA_EXPORT AdBlockIcon : public ClickableLabel
-=======
-class QUPZILLA_EXPORT AdBlockIcon : public AbstractButtonInterface
->>>>>>> d11997ee... AdBlockIcon: Move from statusbar to navigationbar as tool button
+class FALKON_EXPORT AdBlockIcon : public AbstractButtonInterface
 {
     Q_OBJECT
 
 public:
     explicit AdBlockIcon(QObject *parent = nullptr);
-    ~AdBlockIcon();
 
     QString id() const override;
     QString name() const override;
@@ -49,11 +38,12 @@ private slots:
 
 private:
     void updateState();
+    void updateBadgeText();
     void webPageChanged(WebPage *page);
     void clicked(ClickController *controller);
+    void blockedRequestsChanged(const QUrl &url);
 
     QPointer<WebPage> m_page;
-    QVector<QPair<AdBlockRule*, QUrl> > m_blockedPopups;
 };
 
 #endif // ADBLOCKICON_H
