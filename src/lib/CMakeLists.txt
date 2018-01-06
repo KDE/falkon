@@ -60,6 +60,7 @@ set(SRCS ${SRCS}
     adblock/adblocksearchtree.cpp
     adblock/adblocksubscription.cpp
     adblock/adblocktreewidget.cpp
+    adblock/adblockplugin.cpp
     app/autosaver.cpp
     app/browserwindow.cpp
     app/commandlineoptions.cpp
@@ -290,6 +291,7 @@ qt5_add_resources(SRCS
     data/html.qrc
     data/icons.qrc
     data/breeze-fallback.qrc
+    adblock/adblock.qrc
 )
 
 add_library(FalkonPrivate SHARED ${SRCS})
