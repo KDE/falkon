@@ -44,8 +44,6 @@ public:
     QString id() const override;
     QString name() const override;
 
-    void popupBlocked(const QString &ruleString, const QUrl &url);
-
 private slots:
     void toggleCustomFilter();
 
