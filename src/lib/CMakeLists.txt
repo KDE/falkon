@@ -106,6 +106,7 @@ set(SRCS ${SRCS}
     downloads/downloaditem.cpp
     downloads/downloadmanager.cpp
     downloads/downloadoptionsdialog.cpp
+    downloads/downloadsbutton.cpp
     history/history.cpp
     history/historyitem.cpp
     history/historymanager.cpp
