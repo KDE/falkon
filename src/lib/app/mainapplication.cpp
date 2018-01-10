@@ -269,22 +269,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     m_networkManager = new NetworkManager(this);
 
-    // Setup QWebChannel userscript
-    QWebEngineScript script;
-    script.setName(QSL("_falkon_webchannel"));
-    script.setInjectionPoint(QWebEngineScript::DocumentCreation);
-    script.setWorldId(WebPage::SafeJsWorld);
-    script.setRunsOnSubFrames(true);
-    script.setSourceCode(Scripts::setupWebChannel(script.worldId()));
-    m_webProfile->scripts()->insert(script);
-
-    QWebEngineScript script2;
-    script2.setName(QSL("_qupzilla_webchannel2"));
-    script2.setInjectionPoint(QWebEngineScript::DocumentCreation);
-    script2.setWorldId(WebPage::UnsafeJsWorld);
-    script2.setRunsOnSubFrames(true);
-    script2.setSourceCode(Scripts::setupWebChannel(script2.worldId()));
-    m_webProfile->scripts()->insert(script2);
+    setupUserScripts();
 
     if (!isPrivate()) {
         m_sessionManager = new SessionManager(this);
@@ -1129,6 +1114,36 @@ void MainApplication::checkOptimizeDatabase()
     }
 
     settings.endGroup();
+}
+
+void MainApplication::setupUserScripts()
+{
+    // WebChannel for SafeJsWorld
+    QWebEngineScript script;
+    script.setName(QSL("_falkon_webchannel"));
+    script.setInjectionPoint(QWebEngineScript::DocumentCreation);
+    script.setWorldId(WebPage::SafeJsWorld);
+    script.setRunsOnSubFrames(true);
+    script.setSourceCode(Scripts::setupWebChannel(script.worldId()));
+    m_webProfile->scripts()->insert(script);
+
+    // WebChannel for UnsafeJsWorld
+    QWebEngineScript script2;
+    script2.setName(QSL("_falkon_webchannel2"));
+    script2.setInjectionPoint(QWebEngineScript::DocumentCreation);
+    script2.setWorldId(WebPage::UnsafeJsWorld);
+    script2.setRunsOnSubFrames(true);
+    script2.setSourceCode(Scripts::setupWebChannel(script2.worldId()));
+    m_webProfile->scripts()->insert(script2);
+
+    // window.external support
+    QWebEngineScript script3;
+    script3.setName(QSL("_falkon_window_external"));
+    script3.setInjectionPoint(QWebEngineScript::DocumentCreation);
+    script3.setWorldId(WebPage::UnsafeJsWorld);
+    script3.setRunsOnSubFrames(true);
+    script3.setSourceCode(Scripts::setupWindowExternal());
+    m_webProfile->scripts()->insert(script3);
 }
 
 void MainApplication::setUserStyleSheet(const QString &filePath)
