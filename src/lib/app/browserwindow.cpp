@@ -968,7 +968,12 @@ void BrowserWindow::currentTabChanged()
         return;
     }
 
-    setWindowTitle(tr("%1 - Falkon").arg(view->webTab()->title()));
+    const QString title = view->webTab()->title(/*allowEmpty*/true);
+    if (title.isEmpty()) {
+        setWindowTitle(tr("Falkon"));
+    } else {
+        setWindowTitle(tr("%1 - Falkon").arg(title));
+    }
     m_ipLabel->setText(view->getIp());
     view->setFocus();
 

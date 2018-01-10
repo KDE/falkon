@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -64,7 +64,7 @@ public:
     TabIcon* tabIcon() const;
 
     QUrl url() const;
-    QString title() const;
+    QString title(bool allowEmpty = false) const;
     QIcon icon(bool allowNull = false) const;
     QWebEngineHistory* history() const;
     int zoomLevel() const;
@@ -128,7 +128,6 @@ private:
 
     SavedTab m_savedTab;
     bool m_isPinned;
-
 };
 
 #endif // WEBTAB_H
