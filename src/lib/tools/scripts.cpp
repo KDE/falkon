@@ -72,9 +72,9 @@ QString Scripts::setupWebChannel(quint32 worldId)
 
     QString match;
     if (worldId == WebPage::SafeJsWorld) {
-        match = QSL("@exclude qupzilla:*");
+        match = QSL("@exclude falkon:*");
     } else {
-        match = QSL("@include qupzilla:*");
+        match = QSL("@include falkon:*");
     }
     return source.arg(match, QzTools::readAllFileContents(QSL(":/qtwebchannel/qwebchannel.js")));
 }
@@ -148,7 +148,7 @@ QString Scripts::setupWindowExternal()
     QString source = QL1S("(function() {"
                           "var external = {};"
                           "external.AddSearchProvider = function(url) {"
-                          "    window.location = 'qupzilla:AddSearchProvider?url=' + url;"
+                          "    window.location = 'falkon:AddSearchProvider?url=' + url;"
                           "};"
                           "external.IsSearchProviderInstalled = function(url) {"
                           "    console.warn('NOT IMPLEMENTED: IsSearchProviderInstalled()');"

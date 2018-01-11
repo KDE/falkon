@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@ class QLabel;
 
 class AbstractButtonInterface;
 
-class QUPZILLA_EXPORT NavigationBarToolButton : public ToolButton
+class FALKON_EXPORT NavigationBarToolButton : public ToolButton
 {
     Q_OBJECT
 

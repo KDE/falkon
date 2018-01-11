@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - Qt web browser
+* Falkon - Qt web browser
 * Copyright (C) 2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -26,7 +26,7 @@
 
 class WebView;
 
-class QUPZILLA_EXPORT AbstractButtonInterface : public QObject
+class FALKON_EXPORT AbstractButtonInterface : public QObject
 {
     Q_OBJECT
 

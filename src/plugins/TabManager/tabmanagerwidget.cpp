@@ -847,7 +847,7 @@ Qt::DropActions TabTreeWidget::supportedDropActions() const
     return Qt::MoveAction | Qt::CopyAction;
 }
 
-#define MIMETYPE QLatin1String("application/qupzilla.tabs")
+#define MIMETYPE QLatin1String("application/falkon.tabs")
 
 QStringList TabTreeWidget::mimeTypes() const
 {

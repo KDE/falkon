@@ -12,7 +12,7 @@ var GM = {
             version: ""
         },
         scriptMetaStr: "",
-        scriptHandler: "QupZilla GreaseMonkey",
+        scriptHandler: "Falkon GreaseMonkey",
         version: "4.0"
     }
 };

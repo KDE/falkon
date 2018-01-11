@@ -25,7 +25,7 @@
 class WebPage;
 class RecoveryJsObject;
 
-struct QUPZILLA_EXPORT RestoreData
+struct FALKON_EXPORT RestoreData
 {
     QVector<BrowserWindow::SavedWindow> windows;
     QByteArray crashedSession;
@@ -34,8 +34,8 @@ struct QUPZILLA_EXPORT RestoreData
     bool isValid() const;
     void clear();
 
-    friend QUPZILLA_EXPORT QDataStream &operator<<(QDataStream &stream, const RestoreData &data);
-    friend QUPZILLA_EXPORT QDataStream &operator>>(QDataStream &stream, RestoreData &data);
+    friend FALKON_EXPORT QDataStream &operator<<(QDataStream &stream, const RestoreData &data);
+    friend FALKON_EXPORT QDataStream &operator>>(QDataStream &stream, RestoreData &data);
 };
 
 class FALKON_EXPORT RestoreManager

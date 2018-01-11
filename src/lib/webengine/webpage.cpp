@@ -61,8 +61,8 @@ QString WebPage::s_lastUploadLocation = QDir::homePath();
 QUrl WebPage::s_lastUnsupportedUrl;
 QTime WebPage::s_lastUnsupportedUrlTime;
 
-static const bool kEnableJsOutput = qEnvironmentVariableIsSet("QUPZILLA_ENABLE_JS_OUTPUT");
-static const bool kEnableJsNonBlockDialogs = qEnvironmentVariableIsSet("QUPZILLA_ENABLE_JS_NONBLOCK_DIALOGS");
+static const bool kEnableJsOutput = qEnvironmentVariableIsSet("FALKON_ENABLE_JS_OUTPUT");
+static const bool kEnableJsNonBlockDialogs = qEnvironmentVariableIsSet("FALKON_ENABLE_JS_NONBLOCK_DIALOGS");
 
 WebPage::WebPage(QObject* parent)
     : QWebEnginePage(mApp->webProfile(), parent)
@@ -368,7 +368,7 @@ void WebPage::setupWebChannelForUrl(const QUrl &url)
         channel = new QWebChannel(this);
         ExternalJsObject::setupWebChannel(channel, this);
     }
-    if (url.scheme() == QL1S("qupzilla")) {
+    if (url.scheme() == QL1S("falkon")) {
         setWebChannel(channel, UnsafeJsWorld);
     } else {
         setWebChannel(channel, SafeJsWorld);
@@ -380,7 +380,7 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
     if (!mApp->plugins()->acceptNavigationRequest(this, url, type, isMainFrame))
         return false;
 
-    if (url.scheme() == QL1S("qupzilla") && url.path() == QL1S("AddSearchProvider")) {
+    if (url.scheme() == QL1S("falkon") && url.path() == QL1S("AddSearchProvider")) {
         QUrlQuery query(url);
         mApp->searchEnginesManager()->addEngine(QUrl(query.queryItemValue(QSL("url"))));
         return false;
