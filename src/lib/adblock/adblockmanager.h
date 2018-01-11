@@ -27,6 +27,8 @@
 
 #include "qzcommon.h"
 
+#define ADBLOCK_EASYLIST_URL "https://easylist-downloads.adblockplus.org/easylist.txt"
+
 class AdBlockRule;
 class AdBlockDialog;
 class AdBlockMatcher;

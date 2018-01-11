@@ -17,6 +17,7 @@
 * ============================================================ */
 #include "adblockaddsubscriptiondialog.h"
 #include "ui_adblockaddsubscriptiondialog.h"
+#include "adblockmanager.h"
 
 AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(QWidget* parent)
     : QDialog(parent)
