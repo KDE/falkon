@@ -96,14 +96,14 @@ void PasswordBackendTest::storeTest()
     m_backend->addEntry(entry);
 
     // Check entry that may be stored in cache
-    PasswordEntry stored = m_backend->getEntries(QUrl("org.qupzilla.google.com")).first();
+    PasswordEntry stored = m_backend->getEntries(QUrl("org.qupzilla.google.com")).constFirst();
     QVERIFY(compareEntries(stored, entry) == true);
 
     reloadBackend();
 
     // Check entry retrieved from backend engine
     QVERIFY(!m_backend->getEntries(QUrl("org.qupzilla.google.com")).isEmpty());
-    stored = m_backend->getEntries(QUrl("org.qupzilla.google.com")).first();
+    stored = m_backend->getEntries(QUrl("org.qupzilla.google.com")).constFirst();
     QVERIFY(compareEntries(stored, entry) == true);
 
 
@@ -118,13 +118,13 @@ void PasswordBackendTest::storeTest()
     m_backend->addEntry(entry2);
 
     // Check entry that may be stored in cache
-    PasswordEntry stored2 = m_backend->getEntries(QUrl("org.qupzilla.qupzilla.com")).first();
+    PasswordEntry stored2 = m_backend->getEntries(QUrl("org.qupzilla.qupzilla.com")).constFirst();
     QVERIFY(compareEntries(stored2, entry2) == true);
 
     reloadBackend();
 
     // Check entry retrieved from backend engine
-    stored2 = m_backend->getEntries(QUrl("org.qupzilla.qupzilla.com")).first();
+    stored2 = m_backend->getEntries(QUrl("org.qupzilla.qupzilla.com")).constFirst();
     QVERIFY(compareEntries(stored2, entry2) == true);
 
     /* Cleanup */
@@ -203,13 +203,13 @@ void PasswordBackendTest::updateLastUsedTest()
     m_backend->addEntry(entry);
 
     QVERIFY(!m_backend->getEntries(QUrl("org.qupzilla.google.com")).isEmpty());
-    QVERIFY(compareEntries(entry, m_backend->getEntries(QUrl("org.qupzilla.google.com")).first()));
+    QVERIFY(compareEntries(entry, m_backend->getEntries(QUrl("org.qupzilla.google.com")).constFirst()));
     reloadBackend();
     QVERIFY(!m_backend->getEntries(QUrl("org.qupzilla.google.com")).isEmpty());
-    QVERIFY(compareEntries(entry, m_backend->getEntries(QUrl("org.qupzilla.google.com")).first()));
+    QVERIFY(compareEntries(entry, m_backend->getEntries(QUrl("org.qupzilla.google.com")).constFirst()));
 
-    m_backend->removeEntry(m_backend->getEntries(QUrl("org.qupzilla.google.com")).first());
-    m_backend->removeEntry(m_backend->getEntries(QUrl("org.qupzilla.google.com")).first());
+    m_backend->removeEntry(m_backend->getEntries(QUrl("org.qupzilla.google.com")).constFirst());
+    m_backend->removeEntry(m_backend->getEntries(QUrl("org.qupzilla.google.com")).constFirst());
 
     QCOMPARE(m_backend->getAllEntries().count(), 0);
     reloadBackend();
@@ -284,7 +284,7 @@ void KWalletPasswordBackendTest::init()
     msg << quint32(0);
 
     QDBusMessage reply = QDBusConnection::sessionBus().call(msg);
-    if (reply.arguments().isEmpty() || reply.arguments().first().toInt() != 1)
+    if (reply.arguments().isEmpty() || reply.arguments().constFirst().toInt() != 1)
         QSKIP("This test requires org.kde.kwalletd5 service.");
 }
 
@@ -307,7 +307,7 @@ void GnomeKeyringPasswordBackendTest::init()
     msg << quint32(0);
 
     QDBusMessage reply = QDBusConnection::sessionBus().call(msg);
-    if (reply.arguments().isEmpty() || reply.arguments().first().toInt() != 1)
+    if (reply.arguments().isEmpty() || reply.arguments().constFirst().toInt() != 1)
         QSKIP("This test requires org.freedesktop.secrets service.");
 }
 

@@ -219,7 +219,7 @@ QMenu* LineEdit::createContextMenu()
     QMenu* tmp = createStandardContextMenu();
     tmp->setParent(popup);
     tmp->hide();
-    QAction* lastAction = !tmp->actions().isEmpty() ? tmp->actions().last() : 0;
+    QAction* lastAction = !tmp->actions().isEmpty() ? tmp->actions().constLast() : 0;
 
     if (lastAction && lastAction->menu() && lastAction->menu()->inherits("QUnicodeControlCharacterMenu")) {
         popup->addAction(lastAction);

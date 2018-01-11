@@ -189,7 +189,7 @@ void CommandLineOptions::parseActions()
     if (parser.positionalArguments().isEmpty())
         return;
 
-    QString url = parser.positionalArguments().last();
+    QString url = parser.positionalArguments().constLast();
     QFileInfo fileInfo(url);
 
     if (fileInfo.exists()) {
