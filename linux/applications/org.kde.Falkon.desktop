@@ -16,6 +16,7 @@ Name[sk]=Falkon
 Name[sv]=Falkon
 Name[uk]=Falkon
 Name[x-test]=xxFalkonxx
+Name[zh_CN]=Falkon
 Type=Application
 Icon=qupzilla
 Categories=Network;WebBrowser;
@@ -78,6 +79,7 @@ Name[sk]=Otvoriť novú záložku
 Name[sv]=Öppna ny flik
 Name[uk]=Відкрити нову вкладку
 Name[x-test]=xxOpen new tabxx
+Name[zh_CN]=打开新标签
 Exec=falkon --new-tab
 
 [Desktop Action NewWindow]
@@ -97,6 +99,7 @@ Name[pt]=Abrir uma nova janela
 Name[sv]=Öppna nytt fönster
 Name[uk]=Відкрити нове вікно
 Name[x-test]=xxOpen new windowxx
+Name[zh_CN]=打开新窗口
 Exec=falkon --new-window
 
 [Desktop Action PrivateBrowsing]
@@ -116,4 +119,5 @@ Name[pt]=Iniciar a navegação privada
 Name[sv]=Starta privat webbläsning
 Name[uk]=Конфіденційний перегляд
 Name[x-test]=xxStart private browsingxx
+Name[zh_CN]=启动隐身浏览
 Exec=falkon --private-browsing
