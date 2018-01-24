@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -51,7 +51,7 @@ void AdBlockMatchRule::cleanupTestCase()
 void AdBlockMatchRule::networkMatch()
 {
     QList<QUrl> urls;
-    urls << QUrl("http://www.qupzilla.com");
+    urls << QUrl("https://www.kde.org");
     urls << QUrl("https://developers.google.com/feed/v1/reference?csw=1");
     urls << QUrl("http://pagead2.googlesyndication.com/pagead/show_ads.js");
     urls << QUrl("https://qt.gitorious.org/qt-labs/qwebchannel/source/d48ca4efa70624c3178c0b97441ff7499aa2be36:src/webchannel/qwebchannel.cpp");

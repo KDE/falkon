@@ -1,5 +1,5 @@
 tell application "Finder"
-  tell disk "QupZilla"
+  tell disk "Falkon"
     open
       # Set some defaults
       set current view of container window to icon view
@@ -18,12 +18,12 @@ tell application "Finder"
       set arrangement of theViewOptions to not arranged
 
       # Set background image in HFS+ format referenced from image bundle
-      set background picture of theViewOptions to file ".background:qupzilla-dmg-background.png"
+      set background picture of theViewOptions to file ".background:dmg-background.png"
 
       # Align the icons to the background mask
       set icon size of theViewOptions to 64
 
-      set position of item "QupZilla" of container window to {55, 390}
+      set position of item "Falkon" of container window to {55, 390}
       set position of item "Applications" of container window to {390, 390}
 
       # Since this is a dynamic template modifier script tell Finder not to do any registration of applications

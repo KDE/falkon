@@ -1,5 +1,5 @@
 /* ============================================================
-* Access Keys Navigation plugin for QupZilla
+* Access Keys Navigation plugin for Falkon
 * Copyright (C) 2012-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -21,6 +21,7 @@
 #include "mainapplication.h"
 #include "pluginproxy.h"
 #include "browserwindow.h"
+#include "../config.h"
 
 #include <QTranslator>
 
@@ -34,7 +35,7 @@ PluginSpec AKN_Plugin::pluginSpec()
 {
     PluginSpec spec;
     spec.name = "Access Keys Navigation";
-    spec.info = "Access keys navigation for QupZilla";
+    spec.info = "Access keys navigation for Falkon";
     spec.description = "Provides support for navigating in webpages by keyboard shortcuts";
     spec.version = "0.4.3";
     spec.author = "David Rosca <nowrep@gmail.com>";
@@ -63,7 +64,7 @@ void AKN_Plugin::unload()
 bool AKN_Plugin::testPlugin()
 {
     // Require the version that the plugin was built with
-    return (Qz::VERSION == QLatin1String(QUPZILLA_VERSION));
+    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
 }
 
 QTranslator* AKN_Plugin::getTranslator(const QString &locale)

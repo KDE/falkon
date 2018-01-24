@@ -11,23 +11,23 @@ fi
 
 MACDEPLOYQT=$1
 QTDIR="`dirname $MACDEPLOYQT`/.."
-LIBRARY_NAME="libQupZilla.2.dylib"
-PLUGINS="QupZilla.app/Contents/Resources/plugins"
-QTPLUGINS="QupZilla.app/Contents/PlugIns"
+LIBRARY_NAME="libFalkonPrivate.2.dylib"
+PLUGINS="Falkon.app/Contents/Resources/plugins"
+QTPLUGINS="Falkon.app/Contents/PlugIns"
 
 # cd to directory with bundle
 test -d bin || cd ..
 cd bin
 
-# copy libQupZilla into bundle
-cp $LIBRARY_NAME QupZilla.app/Contents/MacOS/
+# copy libFalkonPrivate into bundle
+cp $LIBRARY_NAME Falkon.app/Contents/MacOS/
 
-# copy all QupZilla plugins into bundle
+# copy all Falkon plugins into bundle
 test -d $PLUGINS || mkdir $PLUGINS
 cp plugins/*.dylib $PLUGINS/
 
-# fix libQupZilla
-install_name_tool -change $LIBRARY_NAME @executable_path/$LIBRARY_NAME QupZilla.app/Contents/MacOS/QupZilla
+# fix libFalkon
+install_name_tool -change $LIBRARY_NAME @executable_path/$LIBRARY_NAME Falkon.app/Contents/MacOS/Falkon
 
 # fix plugins
 for plugin in $PLUGINS/*.dylib
@@ -51,7 +51,7 @@ else
 fi
 
 # run macdeployqt
-$MACDEPLOYQT QupZilla.app -qmldir=$PWD/../src/lib/data/data
+$MACDEPLOYQT Falkon.app -qmldir=$PWD/../src/lib/data/data
 
 # create final dmg image
 cd ../mac

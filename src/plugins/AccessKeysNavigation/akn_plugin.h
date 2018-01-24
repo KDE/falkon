@@ -1,5 +1,5 @@
 /* ============================================================
-* Access Keys Navigation plugin for QupZilla
+* Access Keys Navigation plugin for Falkon
 * Copyright (C) 2012-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -31,7 +31,7 @@ class AKN_Plugin : public QObject, public PluginInterface
     Q_INTERFACES(PluginInterface)
 
 #if QT_VERSION >= 0x050000
-    Q_PLUGIN_METADATA(IID "QupZilla.Browser.plugin.AKN")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.AKN")
 #endif
 
 public:

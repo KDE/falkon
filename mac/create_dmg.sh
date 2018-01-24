@@ -4,16 +4,16 @@ TMP=/tmp
 BUNDLE_PATH=bin
 test -d bin || BUNDLE_PATH=../bin
 
-WORK_TEMPLATE=tmp-QupZilla-release.dmg.sparseimage
+WORK_TEMPLATE=tmp-Falkon-release.dmg.sparseimage
 
 # NOTE: Value must currently match -volname exactly or an error happens in AppleScript with Finder
-VOLUME_TEMPLATE=QupZilla
+VOLUME_TEMPLATE=Falkon
 
 echo "Ensuring working disk image template is not in use…"
 hdiutil detach "$TMP/$WORK_TEMPLATE"
 
 echo "Creating writable working disk image template…"
-hdiutil create -size 200m "$TMP/$WORK_TEMPLATE" -type SPARSE -fs HFS+ -volname "QupZilla"
+hdiutil create -size 200m "$TMP/$WORK_TEMPLATE" -type SPARSE -fs HFS+ -volname "Falkon"
 
   echo "Attaching working disk image template for modification…"
   hdiutil attach "$TMP/$WORK_TEMPLATE" -mountpoint "$TMP/$VOLUME_TEMPLATE"
@@ -22,17 +22,17 @@ hdiutil create -size 200m "$TMP/$WORK_TEMPLATE" -type SPARSE -fs HFS+ -volname "
     mkdir "$TMP/$VOLUME_TEMPLATE/.background"
 
     echo "Copying background image…"
-    cp images/qupzilla-dmg-background.png "$TMP/$VOLUME_TEMPLATE/.background/"
+    cp dmg-background.png "$TMP/$VOLUME_TEMPLATE/.background/"
 
     echo "Creating volume icon set…"
-    ICON=qupzilla-dmg-icon
+    ICON=dmg-icon
     ICONEXT=png
-    ICONSETDIR=images/$ICON.iconset
+    ICONSETDIR=$ICON.iconset
 
     mkdir -p "$ICONSETDIR"
 
     # Convert last with qlmanage since sips does not do SVG
-    qlmanage -t -s 1024 -o "$ICONSETDIR" "images/$ICON.$ICONEXT"
+    qlmanage -t -s 1024 -o "$ICONSETDIR" "$ICON.$ICONEXT"
     mv "$ICONSETDIR/$ICON.$ICONEXT.png" "$ICONSETDIR/icon_512x512@2x.png"
 
     # Convert remaining with sips since qlmanage does not do 16 pixels
@@ -48,7 +48,7 @@ hdiutil create -size 200m "$TMP/$WORK_TEMPLATE" -type SPARSE -fs HFS+ -volname "
     done
 
     echo "Creating application reference folder…"
-    mkdir "$TMP/$VOLUME_TEMPLATE/QupZilla.app"
+    mkdir "$TMP/$VOLUME_TEMPLATE/Falkon.app"
 
     echo "Creating symbolic link to global Applications folder…"
     ln -s /Applications "$TMP/$VOLUME_TEMPLATE/Applications"
@@ -64,7 +64,7 @@ hdiutil create -size 200m "$TMP/$WORK_TEMPLATE" -type SPARSE -fs HFS+ -volname "
     SetFile -a C "$TMP/$VOLUME_TEMPLATE"
 
     echo "Copying application bundle contents…"
-    cp -fpR "$BUNDLE_PATH/QupZilla.app/Contents" "$TMP/$VOLUME_TEMPLATE/QupZilla.app"
+    cp -fpR "$BUNDLE_PATH/Falkon.app/Contents" "$TMP/$VOLUME_TEMPLATE/Falkon.app"
 
     echo "Blessing folder to automatically open on mount…"
     bless --folder "$TMP/$VOLUME_TEMPLATE" --openfolder "$TMP/$VOLUME_TEMPLATE"
@@ -76,8 +76,8 @@ echo "Compacting working disk image…"
 hdiutil compact "$TMP/$WORK_TEMPLATE"
 
 echo "Converting working disk image to read only…"
-rm "$BUNDLE_PATH/QupZilla.dmg"
-hdiutil convert "$TMP/$WORK_TEMPLATE" -format UDBZ -o "$BUNDLE_PATH/QupZilla.dmg"
+rm "$BUNDLE_PATH/Falkon.dmg"
+hdiutil convert "$TMP/$WORK_TEMPLATE" -format UDBZ -o "$BUNDLE_PATH/Falkon.dmg"
 
 echo  "Cleaning up"
 rm -Rf "$ICONSETDIR"

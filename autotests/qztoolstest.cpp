@@ -1,5 +1,5 @@
 /* ============================================================
-* QupZilla - WebKit based browser
+* Falkon - Qt web browser
 * Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@
 
 void QzToolsTest::initTestCase()
 {
-    m_tmpPath = QDir::tempPath() + QL1S("/qupzilla-test/qztoolstest");
+    m_tmpPath = QDir::tempPath() + QL1S("/falkon-test/qztoolstest");
     QDir().mkpath(m_tmpPath);
 
     QVERIFY(QDir(m_tmpPath).exists());
@@ -171,7 +171,7 @@ public:
     {
         QFile file(name);
         file.open(QFile::WriteOnly);
-        file.write(QByteArrayLiteral("qupzilla-test"));
+        file.write(QByteArrayLiteral("falkon-test"));
         file.close();
     }
 

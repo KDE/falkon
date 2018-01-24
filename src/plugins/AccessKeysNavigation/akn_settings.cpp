@@ -1,5 +1,5 @@
 /* ============================================================
-* Access Keys Navigation plugin for QupZilla
+* Access Keys Navigation plugin for Falkon
 * Copyright (C) 2012-2014  David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
