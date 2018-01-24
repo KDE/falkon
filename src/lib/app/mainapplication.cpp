@@ -47,6 +47,7 @@
 #include "scripts.h"
 #include "sessionmanager.h"
 #include "closedwindowsmanager.h"
+#include "../config.h"
 
 #include <QWebEngineSettings>
 #include <QDesktopServices>

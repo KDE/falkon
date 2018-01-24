@@ -25,6 +25,7 @@
 #include "tabbedwebview.h"
 #include "fcm_notification.h"
 #include "datapaths.h"
+#include "../config.h"
 
 #include <QStatusBar>
 #include <QTimer>

@@ -164,8 +164,8 @@ QString FalkonSchemeReply::reportbugPage()
 
     bPage.replace(QLatin1String("%INFO_OS%"), QzTools::operatingSystemLong());
     bPage.replace(QLatin1String("%INFO_APP%"),
-#ifdef GIT_REVISION
-                  QString("%1 (%2)").arg(Qz::VERSION, GIT_REVISION)
+#ifdef FALKON_GIT_REVISION
+                  QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)
 #else
                   Qz::VERSION
 #endif
@@ -215,8 +215,8 @@ QString FalkonSchemeReply::aboutPage()
 
         aPage.replace(QLatin1String("%VERSION-INFO%"),
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Version"),
-#ifdef GIT_REVISION
-                              QString("%1 (%2)").arg(Qz::VERSION, GIT_REVISION)));
+#ifdef FALKON_GIT_REVISION
+                              QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)));
 #else
                               Qz::VERSION));
 #endif
@@ -387,8 +387,8 @@ QString FalkonSchemeReply::configPage()
 
         cPage.replace(QLatin1String("%VERSION-INFO%"),
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Application version"),
-#ifdef GIT_REVISION
-                              QString("%1 (%2)").arg(Qz::VERSION, GIT_REVISION)
+#ifdef FALKON_GIT_REVISION
+                              QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)
 #else
                               Qz::VERSION
 #endif

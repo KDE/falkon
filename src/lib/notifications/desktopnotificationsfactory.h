@@ -19,6 +19,7 @@
 #define DESKTOPNOTIFICATIONSFACTORY_H
 
 #include "qzcommon.h"
+#include "../config.h"
 
 #include <QObject>
 #include <QPoint>

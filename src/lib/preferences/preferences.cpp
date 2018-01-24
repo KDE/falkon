@@ -47,6 +47,7 @@
 #include "html5permissions/html5permissionsdialog.h"
 #include "searchenginesdialog.h"
 #include "webscrollbarmanager.h"
+#include "../config.h"
 
 #include <QSettings>
 #include <QInputDialog>

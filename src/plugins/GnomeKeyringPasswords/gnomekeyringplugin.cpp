@@ -19,6 +19,7 @@
 #include "gnomekeyringpasswordbackend.h"
 #include "pluginproxy.h"
 #include "browserwindow.h"
+#include "../config.h"
 
 #include <QTranslator>
 

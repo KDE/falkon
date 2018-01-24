@@ -23,6 +23,7 @@
 #include "pluginproxy.h"
 #include "browserwindow.h"
 #include "webview.h"
+#include "../config.h"
 
 #include <QTranslator>
 

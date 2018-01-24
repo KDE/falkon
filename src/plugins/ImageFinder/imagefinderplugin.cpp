@@ -23,6 +23,7 @@
 #include "pluginproxy.h"
 #include "mainapplication.h"
 #include "enhancedmenu.h"
+#include "../config.h"
 
 #include <QMenu>
 #include <QTranslator>

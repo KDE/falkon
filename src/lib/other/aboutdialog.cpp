@@ -57,8 +57,8 @@ void AboutDialog::showAbout()
     if (m_aboutHtml.isEmpty()) {
         m_aboutHtml += "<center><div style='margin:20px;'>";
         m_aboutHtml += tr("<p><b>Application version %1</b><br/>").arg(
-#ifdef GIT_REVISION
-                           QString("%1 (%2)").arg(Qz::VERSION, GIT_REVISION)
+#ifdef FALKON_GIT_REVISION
+                           QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)
 #else
                            Qz::VERSION
 #endif

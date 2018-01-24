@@ -23,6 +23,7 @@
 #include "mainapplication.h"
 #include "sidebar.h"
 #include "webhittestresult.h"
+#include "../config.h"
 
 #include <QMenu>
 #include <QTranslator>

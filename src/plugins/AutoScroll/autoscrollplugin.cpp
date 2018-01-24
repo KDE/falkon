@@ -21,6 +21,7 @@
 #include "browserwindow.h"
 #include "pluginproxy.h"
 #include "mainapplication.h"
+#include "../config.h"
 
 #include <QTranslator>
 

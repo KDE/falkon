@@ -17,6 +17,7 @@
 * ============================================================ */
 #include "datapaths.h"
 #include "qztools.h"
+#include "../config.h"
 
 #include <QApplication>
 #include <QDir>
@@ -83,14 +84,9 @@ QString DataPaths::currentProfilePath()
 
 void DataPaths::init()
 {
-#if defined(NO_SYSTEM_DATAPATH)
-    m_paths[AppData].append(QApplication::applicationDirPath());
-#endif
     m_paths[AppData].append(QStandardPaths::standardLocations(QStandardPaths::AppDataLocation));
 
-#if defined(PLUGIN_PATH)
-    m_paths[Plugins].append(QStringLiteral(PLUGIN_PATH));
-#endif
+    m_paths[Plugins].append(QStringLiteral(FALKON_PLUGIN_PATH));
 
     for (const QString &location : qAsConst(m_paths[AppData])) {
         initAssetsIn(location);

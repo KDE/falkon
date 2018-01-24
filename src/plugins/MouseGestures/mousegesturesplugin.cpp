@@ -20,6 +20,7 @@
 #include "mousegestures.h"
 #include "mainapplication.h"
 #include "browserwindow.h"
+#include "../config.h"
 
 #include <QTranslator>
 

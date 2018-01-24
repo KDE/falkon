@@ -25,6 +25,7 @@
 #include "tabwidget.h"
 #include "webtab.h"
 #include "tabbedwebview.h"
+#include "../config.h"
 
 #include <QTranslator>
 

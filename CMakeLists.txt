@@ -31,40 +31,13 @@ else()
     set(FALKON_INSTALL_PLUGINDIR "${KDE_INSTALL_PLUGINDIR}")
 endif()
 if (IS_ABSOLUTE ${FALKON_INSTALL_PLUGINDIR})
-    add_definitions(-DPLUGIN_PATH=\"${FALKON_INSTALL_PLUGINDIR}\")
+    set(FALKON_PLUGIN_PATH "${FALKON_PLUGIN_PATH}")
 else()
-    add_definitions(-DPLUGIN_PATH=\"${CMAKE_INSTALL_PREFIX}/${FALKON_INSTALL_PLUGINDIR}\")
+    set(FALKON_PLUGIN_PATH "${CMAKE_INSTALL_PREFIX}/${FALKON_PLUGIN_PATH}")
 endif()
-
-# Version (TODO: move to a generated header once qmake support is dropped, to avoid full recompilations when changing this
-add_definitions(-DFALKON_VERSION=\"${PROJECT_VERSION}\")
 
 # Defines that are always set
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_NO_CAST_TO_ASCII)
-
-# Configurable options (TODO: move all defines to a generated header)
-option(NO_SYSTEM_DATAPATH "TODO" OFF)
-if (NO_SYSTEM_DATAPATH)
-    add_definitions(-DNO_SYSTEM_DATAPATH)
-endif()
-option(NO_X11 "TODO" OFF)
-if (NO_X11)
-    add_definitions(-DNO_X11)
-endif()
-option(PORTABLE_BUILD "TODO" OFF)
-if (PORTABLE_BUILD)
-    add_definitions(-DPORTABLE_BUILD)
-endif()
-option(DISABLE_DBUS "TODO" OFF)
-if (DISABLE_DBUS)
-    add_definitions(-DDISABLE_DBUS)
-endif()
-option(DISABLE_UPDATES_CHECK "TODO" OFF)
-if (DISABLE_UPDATES_CHECK)
-    add_definitions(-DDISABLE_UPDATES_CHECK)
-endif()
-# Note: the old qmake option DEBUG_BUILD is now -DCMAKE_BUILD_TYPE=Debug, and FALKON_PREFIX is now -DCMAKE_INSTALL_PREFIX
-#       SHARE_FOLDER is now auto-detected.
 
 # Mandatory: Qt5
 set(QT_MIN_VERSION "5.8.0")
@@ -74,10 +47,7 @@ if (NOT DISABLE_DBUS)
 endif()
 
 if (UNIX AND NOT APPLE AND NOT NO_X11)
-    find_package(X11)
-    if (X11_FOUND)
-        add_definitions(-DQZ_WS_X11)
-    endif()
+    add_definitions(-DQZ_WS_X11)
     find_package(XCB COMPONENTS XCB)
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS X11Extras)
 endif()
@@ -132,11 +102,13 @@ if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
       OUTPUT_VARIABLE GIT_REVISION
     )
     string(REGEX REPLACE "\n" "" GIT_REVISION "${GIT_REVISION}")
-    add_definitions(-DGIT_REVISION=\"${GIT_REVISION}\")
+    set(FALKON_GIT_REVISION "${GIT_REVISION}")
   else()
     message(STATUS "Git revision could not be determined")
   endif()
 endif()
+
+configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config.h)
 
 # Include dirs used everywhere
 include_directories(

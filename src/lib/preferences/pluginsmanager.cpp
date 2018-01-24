@@ -24,6 +24,7 @@
 #include "qztools.h"
 #include "settings.h"
 #include "iconprovider.h"
+#include "../config.h"
 
 #include <QInputDialog>
 #include <QMessageBox>

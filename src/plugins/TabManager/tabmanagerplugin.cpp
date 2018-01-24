@@ -25,6 +25,7 @@
 #include "tabwidget.h"
 #include "tabbar.h"
 #include "tabmanagersettings.h"
+#include "../config.h"
 
 #include <QInputDialog>
 #include <QTranslator>

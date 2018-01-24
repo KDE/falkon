@@ -21,6 +21,7 @@
 #include "settings.h"
 #include "mainapplication.h"
 #include "browserwindow.h"
+#include "../config.h"
 
 #include <QFile>
 #include <QDir>
