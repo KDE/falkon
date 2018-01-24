@@ -144,6 +144,7 @@ add_subdirectory(src)
 
 if (BUILD_TESTING)
     add_subdirectory(autotests)
+    add_subdirectory(tests/benchmarks)
 endif()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

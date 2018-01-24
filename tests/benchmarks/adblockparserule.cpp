@@ -29,11 +29,12 @@ private slots:
 };
 
 
+#include "qztools.h"
 void AdBlockParseRule::parseEasyList()
 {
     QBENCHMARK {
         AdBlockSubscription* subscription = new AdBlockSubscription("EasyList", this);
-        subscription->setFilePath("../files/easylist.txt");
+        subscription->setFilePath(":/files/easylist.txt");
         subscription->loadSubscription(QStringList());
     }
 }
