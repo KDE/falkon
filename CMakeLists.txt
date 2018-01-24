@@ -41,7 +41,10 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_NO_CAS
 
 # Mandatory: Qt5
 set(QT_MIN_VERSION "5.8.0")
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets Network Sql QuickWidgets PrintSupport WebEngineWidgets WebChannel Test)
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets Network Sql QuickWidgets PrintSupport WebEngineWidgets WebChannel)
+if (BUILD_TESTING)
+    find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Test)
+endif()
 if (NOT DISABLE_DBUS)
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS DBus)
 endif()
@@ -138,6 +141,9 @@ include_directories(
 
 # Finally, go into the subdirs
 add_subdirectory(src)
-add_subdirectory(tests/autotests)
+
+if (BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
