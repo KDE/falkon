@@ -98,3 +98,5 @@ void CookiesTest::listMatchesDomainTest()
 
     QCOMPARE(m_cookieJar->listMatchesDomain(list, cookieDomain), result);
 }
+
+QTEST_MAIN(CookiesTest)

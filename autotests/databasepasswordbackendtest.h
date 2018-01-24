@@ -17,32 +17,15 @@
 * ============================================================ */
 #pragma once
 
-#include <QObject>
-#include <QVector>
+#include "passwordbackendtest.h"
+#include "passwordbackends/databasepasswordbackend.h"
 
-#include "passwordbackends/passwordbackend.h"
-#include "passwordmanager.h"
-
-class PasswordBackendTest : public QObject
+class DatabasePasswordBackendTest : public PasswordBackendTest
 {
     Q_OBJECT
 
-public:
-    explicit PasswordBackendTest();
-
-private slots:
-    void initTestCase();
-    void cleanupTestCase();
-
-    void storeTest();
-    void removeAllTest();
-    void updateLastUsedTest();
-
 protected:
-    virtual void reloadBackend() = 0;
-    virtual void init() { }
-    virtual void cleanup() { }
-
-    PasswordBackend* m_backend;
-    QVector<PasswordEntry> m_entries;
+    void reloadBackend();
+    void init();
+    void cleanup();
 };

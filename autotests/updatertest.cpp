@@ -91,3 +91,5 @@ void UpdaterTest::compareVersionsTest()
     QCOMPARE(v1 > v2, more);
     QCOMPARE(v1 == v2, equal);
 }
+
+QTEST_MAIN(UpdaterTest)

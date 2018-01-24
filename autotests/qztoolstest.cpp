@@ -275,3 +275,5 @@ QString QzToolsTest::createPath(const char *file) const
 {
     return m_tmpPath + QL1S("/") + file;
 }
+
+QTEST_MAIN(QzToolsTest)

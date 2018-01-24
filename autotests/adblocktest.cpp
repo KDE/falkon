@@ -107,3 +107,5 @@ void AdBlockTest::parseRegExpFilterTest()
 
     QCOMPARE(rule_test.parseRegExpFilter(parsedFilter), result);
 }
+
+QTEST_MAIN(AdBlockTest)

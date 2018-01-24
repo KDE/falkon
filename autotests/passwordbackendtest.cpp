@@ -1,6 +1,6 @@
 /* ============================================================
-* QupZilla - WebKit based browser
-* Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
+* Falkon - Qt web browser
+* Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -16,14 +16,9 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "passwordbackendtest.h"
-#include "aesinterface.h"
 
 #include <QtTest/QtTest>
-#include <QSqlDatabase>
-#include <QSqlQuery>
 #include <QDebug>
-#include <QDBusMessage>
-#include <QDBusConnection>
 
 #ifdef Q_OS_WIN
 #include "qt_windows.h"
@@ -214,60 +209,4 @@ void PasswordBackendTest::updateLastUsedTest()
     QCOMPARE(m_backend->getAllEntries().count(), 0);
     reloadBackend();
     QCOMPARE(m_backend->getAllEntries().count(), 0);
-}
-
-
-// DatabasePasswordBackendTest
-void DatabasePasswordBackendTest::reloadBackend()
-{
-    delete m_backend;
-    m_backend = new DatabasePasswordBackend;
-}
-
-void DatabasePasswordBackendTest::init()
-{
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(":memory:");
-    db.open();
-
-    db.exec("CREATE TABLE autofill (data TEXT, id INTEGER PRIMARY KEY, password TEXT,"
-            "server TEXT, username TEXT, last_used NUMERIC)");
-}
-
-void DatabasePasswordBackendTest::cleanup()
-{
-    QSqlDatabase::removeDatabase(QSqlDatabase::database().databaseName());
-}
-
-// DatabaseEncryptedPasswordBackendTest
-void DatabaseEncryptedPasswordBackendTest::reloadBackend()
-{
-    delete m_backend;
-    DatabaseEncryptedPasswordBackend* backend = new DatabaseEncryptedPasswordBackend;
-
-    if (m_testMasterPassword.isEmpty()) {
-        m_testMasterPassword = AesInterface::passwordToHash(QString::fromUtf8(AesInterface::createRandomData(8)));
-        backend->updateSampleData(m_testMasterPassword);
-    }
-
-    // a trick for setting masterPassword without gui interactions
-    backend->isPasswordVerified(m_testMasterPassword);
-    backend->setAskMasterPasswordState(false);
-
-    m_backend = backend;
-}
-
-void DatabaseEncryptedPasswordBackendTest::init()
-{
-    QSqlDatabase db = QSqlDatabase::database();
-    if (!db.isValid()) {
-        db = QSqlDatabase::addDatabase("QSQLITE");
-        db.setDatabaseName(":memory:");
-    }
-    db.open();
-}
-
-void DatabaseEncryptedPasswordBackendTest::cleanup()
-{
-    QSqlDatabase::removeDatabase(QSqlDatabase::database().databaseName());
 }

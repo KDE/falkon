@@ -15,34 +15,31 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#pragma once
+#include "databasepasswordbackendtest.h"
 
-#include <QObject>
-#include <QVector>
+#include <QtTest/QTest>
+#include <QSqlDatabase>
+#include <QSqlQuery>
 
-#include "passwordbackends/passwordbackend.h"
-#include "passwordmanager.h"
-
-class PasswordBackendTest : public QObject
+void DatabasePasswordBackendTest::reloadBackend()
 {
-    Q_OBJECT
+    delete m_backend;
+    m_backend = new DatabasePasswordBackend;
+}
 
-public:
-    explicit PasswordBackendTest();
+void DatabasePasswordBackendTest::init()
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName(":memory:");
+    db.open();
 
-private slots:
-    void initTestCase();
-    void cleanupTestCase();
+    db.exec("CREATE TABLE autofill (data TEXT, id INTEGER PRIMARY KEY, password TEXT,"
+            "server TEXT, username TEXT, last_used NUMERIC)");
+}
 
-    void storeTest();
-    void removeAllTest();
-    void updateLastUsedTest();
+void DatabasePasswordBackendTest::cleanup()
+{
+    QSqlDatabase::removeDatabase(QSqlDatabase::database().databaseName());
+}
 
-protected:
-    virtual void reloadBackend() = 0;
-    virtual void init() { }
-    virtual void cleanup() { }
-
-    PasswordBackend* m_backend;
-    QVector<PasswordEntry> m_entries;
-};
+QTEST_MAIN(DatabasePasswordBackendTest)
