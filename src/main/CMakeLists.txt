@@ -35,7 +35,7 @@ if (UNIX AND NOT APPLE)
     #install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/locale DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
     install(DIRECTORY ${CMAKE_SOURCE_DIR}/themes DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/falkon)
 
-    install(PROGRAMS ../../linux/applications/org.kde.Falkon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+    install(PROGRAMS ../../linux/applications/org.kde.falkon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
     install(FILES ../../linux/pixmaps/qupzilla.png DESTINATION ${KDE_INSTALL_DATADIR}/pixmaps)
 
@@ -49,6 +49,6 @@ if (UNIX AND NOT APPLE)
         DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor)
 
     install(FILES ../../linux/completion/falkon DESTINATION ${KDE_INSTALL_DATADIR}/bash-completion/completions)
-    install(FILES ../../linux/appdata/org.kde.Falkon.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+    install(FILES ../../linux/appdata/org.kde.falkon.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 endif()
 

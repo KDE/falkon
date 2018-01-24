@@ -110,7 +110,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     setApplicationName(QLatin1String("falkon"));
     setOrganizationDomain(QLatin1String("org.kde"));
     setWindowIcon(QIcon::fromTheme(QSL("qupzilla"), QIcon(QSL(":icons/exeicons/qupzilla-window.png"))));
-    setDesktopFileName(QSL("org.kde.Falkon"));
+    setDesktopFileName(QSL("org.kde.falkon"));
 
 #ifdef GIT_REVISION
     setApplicationVersion(QSL("%1 (%2)").arg(Qz::VERSION, GIT_REVISION));
