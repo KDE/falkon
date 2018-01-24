@@ -1,7 +1,7 @@
 /* ============================================================
 * FlashCookieManager plugin for Falkon
-* Copyright (C) 2014  S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
-* Copyright (C) 2017 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2014-2018 S. Razi Alavizadeh <s.r.alavizadeh@gmail.com>
+* Copyright (C) 2017-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -26,8 +26,8 @@
 #include "fcm_notification.h"
 #include "datapaths.h"
 #include "../config.h"
+#include "statusbar.h"
 
-#include <QStatusBar>
 #include <QTimer>
 #include <QSettings>
 #include <QTranslator>

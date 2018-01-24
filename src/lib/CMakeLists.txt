@@ -151,7 +151,7 @@ set(SRCS ${SRCS}
     other/qzsettings.cpp
     other/siteinfo.cpp
     other/siteinfowidget.cpp
-    other/statusbarmessage.cpp
+    other/statusbar.cpp
     other/updater.cpp
     other/useragentmanager.cpp
     plugins/pluginproxy.cpp
