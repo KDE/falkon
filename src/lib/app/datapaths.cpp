@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2014-2017 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2014-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 #include "datapaths.h"
 #include "qztools.h"
 #include "../config.h"
+#include "mainapplication.h"
 
 #include <QApplication>
 #include <QDir>
@@ -92,7 +93,12 @@ void DataPaths::init()
         initAssetsIn(location);
     }
 
-    m_paths[Config].append(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation));
+    if (MainApplication::isTestModeEnabled()) {
+        m_paths[Config].append(QDir::tempPath() + QL1S("/QupZilla-test"));
+    } else {
+        m_paths[Config].append(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation));
+    }
+
     m_paths[Profiles].append(m_paths[Config].at(0) + QLatin1String("/profiles"));
     // We also allow to load data from Config path
     initAssetsIn(m_paths[Config].at(0));
