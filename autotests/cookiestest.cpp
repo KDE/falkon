@@ -16,11 +16,10 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "cookiestest.h"
+#include "autotests.h"
 #include "datapaths.h"
 #include "settings.h"
-#include "mainapplication.h"
 
-#include <QtTest/QtTest>
 #include <QDir>
 
 void CookiesTest::initTestCase()
@@ -98,11 +97,4 @@ void CookiesTest::listMatchesDomainTest()
     QCOMPARE(m_cookieJar->listMatchesDomain(list, cookieDomain), result);
 }
 
-int main(int argc, char **argv)
-{
-    MainApplication::setTestModeEnabled(true);
-    MainApplication app(argc, argv);
-
-    CookiesTest test;
-    return QTest::qExec(&test, argc, argv);
-}
+FALKONTEST_MAIN(CookiesTest)

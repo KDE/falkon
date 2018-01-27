@@ -16,13 +16,11 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "locationbartest.h"
+#include "autotests.h"
 #include "locationbar.h"
-#include "mainapplication.h"
 #include "searchenginesmanager.h"
 #include "bookmarks.h"
 #include "bookmarkitem.h"
-
-#include <QtTest/QtTest>
 
 static void removeBookmarks(BookmarkItem *parent)
 {
@@ -150,11 +148,4 @@ void LocationBarTest::loadAction_kdebug389491()
     QCOMPARE(action.loadRequest.url(), QUrl("site:website.com?search=searchterm and another"));
 }
 
-int main(int argc, char **argv)
-{
-    MainApplication::setTestModeEnabled(true);
-    MainApplication app(argc, argv);
-
-    LocationBarTest test;
-    return QTest::qExec(&test, argc, argv);
-}
+FALKONTEST_MAIN(LocationBarTest)
