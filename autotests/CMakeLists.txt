@@ -17,6 +17,7 @@ falkon_tests(
     cookiestest
     adblocktest
     updatertest
+    locationbartest
 )
 
 set(falkon_autotests_SRCS passwordbackendtest.cpp)
