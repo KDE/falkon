@@ -18,14 +18,13 @@
 #include "cookiestest.h"
 #include "datapaths.h"
 #include "settings.h"
+#include "mainapplication.h"
 
 #include <QtTest/QtTest>
 #include <QDir>
 
 void CookiesTest::initTestCase()
 {
-    DataPaths::setCurrentProfilePath(QDir::tempPath() + "qz-test");
-    Settings::createSettings(QDir::tempPath() + "qz-test/settings.ini");
     m_cookieJar = new CookieJar_Tst;
 }
 
@@ -99,4 +98,11 @@ void CookiesTest::listMatchesDomainTest()
     QCOMPARE(m_cookieJar->listMatchesDomain(list, cookieDomain), result);
 }
 
-QTEST_MAIN(CookiesTest)
+int main(int argc, char **argv)
+{
+    MainApplication::setTestModeEnabled(true);
+    MainApplication app(argc, argv);
+
+    CookiesTest test;
+    return QTest::qExec(&test, argc, argv);
+}

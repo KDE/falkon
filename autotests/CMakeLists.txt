@@ -14,7 +14,7 @@ endmacro()
 
 falkon_tests(
     qztoolstest
-    #cookiestest
+    cookiestest
     adblocktest
     updatertest
 )
