@@ -21,6 +21,7 @@
 #include "updater.h"
 #include "qztools.h"
 #include "restoremanager.h"
+#include "sqldatabase.h"
 
 #include <QDir>
 #include <QSqlError>
@@ -273,4 +274,6 @@ void ProfileManager::connectDatabase()
             }
         }
     }
+
+    SqlDatabase::instance()->setDatabase(db);
 }
