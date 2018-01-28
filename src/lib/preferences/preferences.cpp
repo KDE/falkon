@@ -294,6 +294,7 @@ Preferences::Preferences(BrowserWindow* window)
 
     //PASSWORD MANAGER
     ui->allowPassManager->setChecked(settings.value("SavePasswordsOnSites", true).toBool());
+    ui->autoCompletePasswords->setChecked(settings.value("AutoCompletePasswords", true).toBool());
     connect(ui->allowPassManager, SIGNAL(toggled(bool)), this, SLOT(showPassManager(bool)));
 
     showPassManager(ui->allowPassManager->isChecked());
@@ -984,6 +985,7 @@ void Preferences::saveSettings()
 
     //PASSWORD MANAGER
     settings.setValue("SavePasswordsOnSites", ui->allowPassManager->isChecked());
+    settings.setValue("AutoCompletePasswords", ui->autoCompletePasswords->isChecked());
 
     //PRIVACY
     //Web storage
