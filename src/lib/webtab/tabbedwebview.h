@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2010-2015  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -36,7 +37,7 @@ class FALKON_EXPORT TabbedWebView : public WebView
 public:
     explicit TabbedWebView(WebTab* webTab);
 
-    void setWebPage(WebPage* page);
+    void setPage(WebPage* page);
 
     // BrowserWindow can be null!
     BrowserWindow* browserWindow() const;
