@@ -2,6 +2,8 @@ include(ECMMarkAsTest)
 
 set(falkon_autotests_SRCS )
 
+qt5_add_resources(falkon_autotests_SRCS autotests.qrc)
+
 macro(falkon_tests)
     foreach(_testname ${ARGN})
         add_executable(${_testname} ${_testname}.cpp ${falkon_autotests_SRCS})
@@ -18,6 +20,7 @@ falkon_tests(
     adblocktest
     updatertest
     locationbartest
+    webviewtest
 )
 
 set(falkon_autotests_SRCS passwordbackendtest.cpp)
