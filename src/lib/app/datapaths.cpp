@@ -94,7 +94,7 @@ void DataPaths::init()
     }
 
     if (MainApplication::isTestModeEnabled()) {
-        m_paths[Config].append(QDir::tempPath() + QL1S("/QupZilla-test"));
+        m_paths[Config].append(QDir::tempPath() + QSL("/Falkon-test"));
     } else {
         m_paths[Config].append(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation));
     }

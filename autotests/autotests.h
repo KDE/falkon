@@ -16,12 +16,14 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "mainapplication.h"
+#include "qztools.h"
 
 #include <QtTest/QtTest>
 
 #define FALKONTEST_MAIN(Test) \
     int main(int argc, char **argv) \
     { \
+        QzTools::removeDir(QDir::tempPath() + QSL("/Falkon-test")); \
         MainApplication::setTestModeEnabled(true); \
         MainApplication app(argc, argv); \
         QTEST_DISABLE_KEYPAD_NAVIGATION; \
