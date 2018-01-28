@@ -74,9 +74,9 @@ void LocationBarTest::loadActionBasicTest()
     action = LocationBar::loadAction("not url with spaces");
     QCOMPARE(action.type, LocationBar::LoadAction::Search);
 
-    action = LocationBar::loadAction("qupzilla:about");
+    action = LocationBar::loadAction("falkon:about");
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("qupzilla:about"));
+    QCOMPARE(action.loadRequest.url(), QUrl("falkon:about"));
 }
 
 void LocationBarTest::loadActionBookmarksTest()
@@ -150,6 +150,27 @@ void LocationBarTest::loadAction_kdebug389491()
     action = LocationBar::loadAction("http://website.com?search=searchterm and another");
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
     QCOMPARE(action.loadRequest.url(), QUrl("http://website.com?search=searchterm and another"));
+}
+
+void LocationBarTest::loadActionSpecialSchemesTest()
+{
+    LocationBar::LoadAction action;
+
+    action = LocationBar::loadAction("data:image/png;base64,xxxxx");
+    QCOMPARE(action.type, LocationBar::LoadAction::Url);
+    QCOMPARE(action.loadRequest.url(), QUrl("data:image/png;base64,xxxxx"));
+
+    action = LocationBar::loadAction("falkon:about");
+    QCOMPARE(action.type, LocationBar::LoadAction::Url);
+    QCOMPARE(action.loadRequest.url(), QUrl("falkon:about"));
+
+    action = LocationBar::loadAction("file:test.html");
+    QCOMPARE(action.type, LocationBar::LoadAction::Url);
+    QCOMPARE(action.loadRequest.url(), QUrl("file:test.html"));
+
+    action = LocationBar::loadAction("about:blank");
+    QCOMPARE(action.type, LocationBar::LoadAction::Url);
+    QCOMPARE(action.loadRequest.url(), QUrl("about:blank"));
 }
 
 FALKONTEST_MAIN(LocationBarTest)
