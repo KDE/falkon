@@ -23,6 +23,12 @@ falkon_tests(
     webviewtest
 )
 
+set(falkon_autotests_SRCS ${CMAKE_SOURCE_DIR}/tests/modeltest/modeltest.cpp)
+include_directories(${CMAKE_SOURCE_DIR}/tests/modeltest)
+falkon_tests(
+    tabmodeltest
+)
+
 set(falkon_autotests_SRCS passwordbackendtest.cpp)
 falkon_tests(
     databasepasswordbackendtest

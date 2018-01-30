@@ -179,6 +179,7 @@ set(SRCS ${SRCS}
     tabwidget/combotabbar.cpp
     tabwidget/tabbar.cpp
     tabwidget/tabicon.cpp
+    tabwidget/tabmodel.cpp
     tabwidget/tabstackedwidget.cpp
     tabwidget/tabwidget.cpp
     tabwidget/tabcontextmenu.cpp
