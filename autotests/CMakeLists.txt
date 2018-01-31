@@ -21,6 +21,7 @@ falkon_tests(
     updatertest
     locationbartest
     webviewtest
+    webtabtest
 )
 
 set(falkon_autotests_SRCS ${CMAKE_SOURCE_DIR}/tests/modeltest/modeltest.cpp)
