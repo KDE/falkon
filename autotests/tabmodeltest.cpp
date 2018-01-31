@@ -94,6 +94,7 @@ void TabModelTest::basicTest()
     ModelTest modelTest2(&model2);
     QCOMPARE(model2.rowCount(), 1);
 
+    QTest::qWait(10);
     delete w;
 }
 
@@ -117,6 +118,7 @@ void TabModelTest::dataTest()
 
     WebTab *tab1 = w->weView(1)->webTab();
 
+    QTest::qWait(10);
     delete w;
 }
 void TabModelTest::treeModelTest()
@@ -213,7 +215,7 @@ void TabModelTest::treeModelTest()
     QCOMPARE(model.index(2, 0).data(TabModel::WebTabRole).value<WebTab*>(), tab5);
     QCOMPARE(model.index(3, 0).data(TabModel::WebTabRole).value<WebTab*>(), tab6);
 
-    QTest::qWait(1);
+    QTest::qWait(10);
     delete w;
 }
 
