@@ -6,6 +6,9 @@ set( VerticalTabs_SRCS
     tabtreeview.cpp
     tabtreedelegate.cpp
     loadinganimator.cpp
+    tabfiltermodel.cpp
+    tablistview.cpp
+    tablistdelegate.cpp
 )
 
 set( VerticalTabs_UIS
