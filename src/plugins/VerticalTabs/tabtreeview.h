@@ -26,7 +26,7 @@ class TabTreeView : public QTreeView
     Q_OBJECT
 
 public:
-    explicit TabTreeView(QWidget *parent = 0);
+    explicit TabTreeView(QWidget *parent = nullptr);
 
     // In TabBar order
     bool areTabsInOrder() const;
