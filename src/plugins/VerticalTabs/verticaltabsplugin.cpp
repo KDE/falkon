@@ -56,10 +56,13 @@ void VerticalTabsPlugin::init(InitState state, const QString &settingsPath)
     settings.beginGroup(QSL("VerticalTabs"));
     m_viewType = static_cast<ViewType>(settings.value(QSL("ViewType"), TabListView).toInt());
     m_replaceTabBar = settings.value(QSL("ReplaceTabBar"), false).toBool();
+    m_addChildBehavior = static_cast<AddChildBehavior>(settings.value(QSL("AddChildBehavior"), AppendChild).toInt());
     settings.endGroup();
 
     m_controller = new VerticalTabsController(this);
     SideBarManager::addSidebar(QSL("VerticalTabs"), m_controller);
+
+    setWebTabBehavior(m_addChildBehavior);
 
     connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &VerticalTabsPlugin::mainWindowCreated);
 
@@ -135,6 +138,24 @@ void VerticalTabsPlugin::setReplaceTabBar(bool replace)
     settings.setValue(QSL("VerticalTabs/ReplaceTabBar"), m_replaceTabBar);
 }
 
+VerticalTabsPlugin::AddChildBehavior VerticalTabsPlugin::addChildBehavior() const
+{
+    return m_addChildBehavior;
+}
+
+void VerticalTabsPlugin::setAddChildBehavior(AddChildBehavior behavior)
+{
+    if (m_addChildBehavior == behavior) {
+        return;
+    }
+
+    m_addChildBehavior = behavior;
+    setWebTabBehavior(m_addChildBehavior);
+
+    QSettings settings(m_settingsPath, QSettings::IniFormat);
+    settings.setValue(QSL("VerticalTabs/AddChildBehavior"), m_addChildBehavior);
+}
+
 void VerticalTabsPlugin::mainWindowCreated(BrowserWindow *window)
 {
     if (window->sideBarManager()->activeSideBar().isEmpty()) {
@@ -149,4 +170,9 @@ void VerticalTabsPlugin::setTabBarVisible(bool visible)
     for (BrowserWindow *window : windows) {
         window->tabWidget()->tabBar()->setForceHidden(!visible);
     }
+}
+
+void VerticalTabsPlugin::setWebTabBehavior(AddChildBehavior behavior)
+{
+    WebTab::setAddChildBehavior(behavior == AppendChild ? WebTab::AppendChild : WebTab::PrependChild);
 }
