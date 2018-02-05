@@ -377,7 +377,7 @@ void WebPage::setupWebChannelForUrl(const QUrl &url)
         channel = new QWebChannel(this);
         ExternalJsObject::setupWebChannel(channel, this);
     }
-    if (url.scheme() == QL1S("falkon")) {
+    if (url.scheme() == QL1S("falkon") || url.scheme() == QL1S("extension")) {
         setWebChannel(channel, UnsafeJsWorld);
     } else {
         setWebChannel(channel, SafeJsWorld);

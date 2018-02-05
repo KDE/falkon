@@ -132,6 +132,7 @@ set(SRCS ${SRCS}
     network/networkmanager.cpp
     network/networkproxyfactory.cpp
     network/networkurlinterceptor.cpp
+    network/schemehandlers/extensionschemehandler.cpp
     network/schemehandlers/falkonschemehandler.cpp
     network/sslerrordialog.cpp
     notifications/desktopnotification.cpp
