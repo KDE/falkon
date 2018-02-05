@@ -9,6 +9,7 @@ set( VerticalTabs_SRCS
     tabfiltermodel.cpp
     tablistview.cpp
     tablistdelegate.cpp
+    verticaltabsschemehandler.cpp
 )
 
 set( VerticalTabs_UIS

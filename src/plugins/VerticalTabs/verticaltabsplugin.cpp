@@ -18,6 +18,7 @@
 #include "verticaltabsplugin.h"
 #include "verticaltabssettings.h"
 #include "verticaltabscontroller.h"
+#include "verticaltabsschemehandler.h"
 
 #include "browserwindow.h"
 #include "pluginproxy.h"
@@ -25,6 +26,7 @@
 #include "tabwidget.h"
 #include "tabbar.h"
 #include "sidebar.h"
+#include "networkmanager.h"
 #include "../config.h"
 
 #include <QSettings>
@@ -64,6 +66,7 @@ void VerticalTabsPlugin::init(InitState state, const QString &settingsPath)
     SideBarManager::addSidebar(QSL("VerticalTabs"), m_controller);
 
     QZ_REGISTER_EVENT_HANDLER(PluginProxy::KeyPressHandler);
+    mApp->networkManager()->registerExtensionSchemeHandler(QSL("verticaltabs"), new VerticalTabsSchemeHandler);
 
     setWebTabBehavior(m_addChildBehavior);
     loadStyleSheet(m_theme);
@@ -85,6 +88,8 @@ void VerticalTabsPlugin::unload()
     SideBarManager::removeSidebar(QSL("VerticalTabs"));
     delete m_controller;
     m_controller = nullptr;
+
+    mApp->networkManager()->unregisterExtensionSchemeHandler(QSL("verticaltabs"));
 }
 
 bool VerticalTabsPlugin::testPlugin()
