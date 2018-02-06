@@ -20,6 +20,9 @@
 #include "pluginproxy.h"
 #include "browserwindow.h"
 #include "../config.h"
+#include "mainapplication.h"
+#include "autofill.h"
+#include "passwordmanager.h"
 
 #include <QTranslator>
 
@@ -54,7 +57,7 @@ void KWalletPlugin::init(InitState state, const QString &settingsPath)
 
 void KWalletPlugin::unload()
 {
-    QZ_UNREGISTER_PASSWORD_BACKEND(m_backend);
+    mApp->autoFill()->passwordManager()->unregisterBackend(m_backend);
     delete m_backend;
 }
 
