@@ -25,7 +25,7 @@
 QString Scripts::setupWebChannel(quint32 worldId)
 {
     QString source =  QL1S("// ==UserScript==\n"
-                           "// %1\n"
+                           "%1\n"
                            "// ==/UserScript==\n\n"
                            "(function() {"
                            "%2"
@@ -72,9 +72,9 @@ QString Scripts::setupWebChannel(quint32 worldId)
 
     QString match;
     if (worldId == WebPage::SafeJsWorld) {
-        match = QSL("@exclude falkon:*");
+        match = QSL("// @exclude falkon:*\n// @exclude extension:*");
     } else {
-        match = QSL("@include falkon:*");
+        match = QSL("// @include falkon:*\n// @include extension:*");
     }
     return source.arg(match, QzTools::readAllFileContents(QSL(":/qtwebchannel/qwebchannel.js")));
 }
