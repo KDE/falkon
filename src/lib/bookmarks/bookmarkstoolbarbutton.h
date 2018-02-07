@@ -63,11 +63,11 @@ private:
     void init();
     QString createTooltip() const;
 
-    void enterEvent(QEvent* event);
-    void leaveEvent(QEvent* event);
-    void mousePressEvent(QMouseEvent* event);
-    void mouseReleaseEvent(QMouseEvent* event);
-    void paintEvent(QPaintEvent* event);
+    void enterEvent(QEvent* event) override;
+    void leaveEvent(QEvent* event) override;
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseReleaseEvent(QMouseEvent* event) override;
+    void paintEvent(QPaintEvent* event) override;
 
     BookmarkItem* m_bookmark;
     BrowserWindow* m_window;

@@ -106,7 +106,7 @@ public:
     int minHeight() const;
     void setMinHeight(int height);
 
-    QSize sizeHint() const;
+    QSize sizeHint() const override;
     QAction* editAction(EditAction action) const;
 
 public slots:
@@ -114,12 +114,12 @@ public slots:
     void updateTextMargins();
 
 protected:
-    void focusInEvent(QFocusEvent* event);
-    void mousePressEvent(QMouseEvent* event);
-    void mouseReleaseEvent(QMouseEvent* event);
-    void mouseDoubleClickEvent(QMouseEvent* event);
+    void focusInEvent(QFocusEvent* event) override;
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseReleaseEvent(QMouseEvent* event) override;
+    void mouseDoubleClickEvent(QMouseEvent* event) override;
     void resizeEvent(QResizeEvent *event) override;
-    bool event(QEvent* event);
+    bool event(QEvent* event) override;
 
     QMenu* createContextMenu();
 

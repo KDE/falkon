@@ -39,7 +39,7 @@ public:
     ~SearchEnginesDialog();
 
 public slots:
-    void accept();
+    void accept() override;
 
 private slots:
     void addEngine();

@@ -31,14 +31,12 @@ class GM_Plugin : public QObject, public PluginInterface
 
 public:
     explicit GM_Plugin();
-    PluginSpec pluginSpec();
-
-    void init(InitState state, const QString &settingsPath);
-    void unload();
-    bool testPlugin();
-
-    QTranslator* getTranslator(const QString &locale);
-    void showSettings(QWidget* parent = 0);
+    PluginSpec pluginSpec() override;
+    void init(InitState state, const QString &settingsPath) override;
+    void unload() override;
+    bool testPlugin() override;
+    QTranslator* getTranslator(const QString &locale) override;
+    void showSettings(QWidget* parent = 0) override;
 
     bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;
 

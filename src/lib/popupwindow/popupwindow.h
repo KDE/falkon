@@ -59,7 +59,7 @@ private slots:
     void searchOnPage();
 
 private:
-    void closeEvent(QCloseEvent* event);
+    void closeEvent(QCloseEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
 
     PopupWebView* m_view;

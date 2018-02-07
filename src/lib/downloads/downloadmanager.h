@@ -90,10 +90,10 @@ signals:
 
 private:
     void showEvent(QShowEvent *event) override;
-    void timerEvent(QTimerEvent* e);
-    void closeEvent(QCloseEvent* e);
-    void resizeEvent(QResizeEvent* e);
-    void keyPressEvent(QKeyEvent* e);
+    void timerEvent(QTimerEvent* e) override;
+    void closeEvent(QCloseEvent* e) override;
+    void resizeEvent(QResizeEvent* e) override;
+    void keyPressEvent(QKeyEvent* e) override;
 
     void closeDownloadTab(const QUrl &url) const;
 
