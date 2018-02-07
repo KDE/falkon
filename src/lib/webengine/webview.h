@@ -59,7 +59,7 @@ public:
     QRect scrollBarGeometry(Qt::Orientation orientation) const;
 
     void addNotification(QWidget* notif);
-    bool eventFilter(QObject *obj, QEvent *event);
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
     QWidget *inputWidget() const;
     virtual QWidget *overlayWidget() = 0;
@@ -142,8 +142,8 @@ protected slots:
 
 protected:
     void showEvent(QShowEvent *event) override;
-    void resizeEvent(QResizeEvent *event);
-    void contextMenuEvent(QContextMenuEvent *event);
+    void resizeEvent(QResizeEvent *event) override;
+    void contextMenuEvent(QContextMenuEvent *event) override;
 
     virtual void _wheelEvent(QWheelEvent *event);
     virtual void _mousePressEvent(QMouseEvent *event);

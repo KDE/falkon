@@ -27,8 +27,8 @@ class FALKON_EXPORT ProxyStyle : public QProxyStyle
 public:
     explicit ProxyStyle();
 
-    int styleHint(StyleHint hint, const QStyleOption* option = 0, const QWidget* widget = 0, QStyleHintReturn* returnData = 0) const;
-    int pixelMetric(PixelMetric metric, const QStyleOption* option, const QWidget* widget) const;
+    int styleHint(StyleHint hint, const QStyleOption* option = 0, const QWidget* widget = 0, QStyleHintReturn* returnData = 0) const override;
+    int pixelMetric(PixelMetric metric, const QStyleOption* option, const QWidget* widget) const override;
     void drawPrimitive(PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget = nullptr) const override;
 
     QString name() const;
