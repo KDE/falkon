@@ -42,4 +42,4 @@ void DatabasePasswordBackendTest::cleanup()
     QSqlDatabase::removeDatabase(QSqlDatabase::database().databaseName());
 }
 
-QTEST_MAIN(DatabasePasswordBackendTest)
+QTEST_GUILESS_MAIN(DatabasePasswordBackendTest)
