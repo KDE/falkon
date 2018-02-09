@@ -93,7 +93,7 @@ static QString createLanguageItem(const QString &lang)
 }
 
 Preferences::Preferences(BrowserWindow* window)
-    : QWidget()
+    : QDialog(window)
     , ui(new Ui::Preferences)
     , m_window(window)
     , m_autoFillManager(0)

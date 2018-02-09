@@ -1,6 +1,5 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
 * Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -20,7 +19,7 @@
 #define PREFERENCES_H
 
 #include <QUrl>
-#include <QWidget>
+#include <QDialog>
 #include <QPointer>
 
 #include "qzcommon.h"
@@ -39,7 +38,7 @@ class PluginsManager;
 class DesktopNotification;
 class ThemeManager;
 
-class FALKON_EXPORT Preferences : public QWidget
+class FALKON_EXPORT Preferences : public QDialog
 {
     Q_OBJECT
 
