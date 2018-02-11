@@ -23,7 +23,6 @@
 #include "mainapplication.h"
 #include "networkmanager.h"
 #include "qztools.h"
-#include "qzregexp.h"
 
 #include <QFile>
 #include <QSettings>

@@ -21,7 +21,6 @@
 #include "updater.h"
 #include "autofill.h"
 #include "settings.h"
-#include "qzregexp.h"
 #include "autosaver.h"
 #include "datapaths.h"
 #include "tabwidget.h"
@@ -65,6 +64,7 @@
 #include <QWebEngineProfile>
 #include <QWebEngineDownloadItem>
 #include <QWebEngineScriptCollection>
+#include <QRegularExpression>
 
 #ifdef Q_OS_WIN
 #include <QtWin>
@@ -1028,7 +1028,7 @@ void MainApplication::loadTheme(const QString &name)
     qss.append(QzTools::readAllFileContents(DataPaths::currentProfilePath() + QL1S("/userChrome.css")));
 
     QString relativePath = QDir::current().relativeFilePath(activeThemePath);
-    qss.replace(QzRegExp(QSL("url\\s*\\(\\s*([^\\*:\\);]+)\\s*\\)"), Qt::CaseSensitive), QString("url(%1/\\1)").arg(relativePath));
+    qss.replace(QRegularExpression(QSL("url\\s*\\(\\s*([^\\*:\\);]+)\\s*\\)")), QString("url(%1/\\1)").arg(relativePath));
     setStyleSheet(qss);
 }
 

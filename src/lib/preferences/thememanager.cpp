@@ -22,10 +22,10 @@
 #include "datapaths.h"
 #include "licenseviewer.h"
 #include "preferences.h"
-#include "qzregexp.h"
 
-#include <QTextBrowser>
 #include <QDir>
+#include <QTextBrowser>
+#include <QRegularExpression>
 
 ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
     : QWidget()
@@ -123,33 +123,32 @@ ThemeManager::Theme ThemeManager::parseTheme(const QString &path, const QString 
 
     QString theme_info = QzTools::readAllFileContents(path + "theme.info");
 
-    QzRegExp rx("Name:(.*)\\n");
-    rx.setMinimal(true);
-    rx.indexIn(theme_info);
-    if (rx.captureCount() == 1) {
-        info.name = rx.cap(1).trimmed();
+    QRegularExpression rx(QSL("Name:(.*)\\n"));
+    QRegularExpressionMatch match = rx.match(theme_info);
+    if (match.hasMatch()) {
+        info.name = match.captured(1).trimmed();
     }
 
     if (info.name.isEmpty() || m_themeHash.contains(info.name)) {
         return info;
     }
 
-    rx.setPattern("Author:(.*)\\n");
-    rx.indexIn(theme_info);
-    if (rx.captureCount() == 1) {
-        info.author = rx.cap(1).trimmed();
+    rx.setPattern(QSL("Author:(.*)\\n"));
+    match = rx.match(theme_info);
+    if (match.hasMatch()) {
+        info.author = match.captured(1).trimmed();
     }
 
-    rx.setPattern("Short Description:(.*)\\n");
-    rx.indexIn(theme_info);
-    if (rx.captureCount() == 1) {
-        info.shortDescription = rx.cap(1).trimmed();
+    rx.setPattern(QSL("Short Description:(.*)\\n"));
+    match = rx.match(theme_info);
+    if (match.hasMatch()) {
+        info.shortDescription = match.captured(1).trimmed();
     }
 
-    rx.setPattern("Long Description:(.*)\\n");
-    rx.indexIn(theme_info);
-    if (rx.captureCount() == 1) {
-        info.longDescription = rx.cap(1).trimmed();
+    rx.setPattern(QSL("Long Description:(.*)\\n"));
+    match = rx.match(theme_info);
+    if (match.hasMatch()) {
+        info.longDescription = match.captured(1).trimmed();
     }
 
     info.isValid = true;

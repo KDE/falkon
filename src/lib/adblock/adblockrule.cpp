@@ -47,7 +47,6 @@
 #include "adblockrule.h"
 #include "adblocksubscription.h"
 #include "qztools.h"
-#include "qzregexp.h"
 
 #include <QUrl>
 #include <QString>
@@ -561,7 +560,10 @@ void AdBlockRule::parseFilter()
 
         m_type = RegExpMatchRule;
         m_regExp = new RegExp;
-        m_regExp->regExp = QzRegExp(parsedLine, m_caseSensitivity);
+        m_regExp->regExp = QRegularExpression(parsedLine, QRegularExpression::InvertedGreedinessOption);
+        if (m_caseSensitivity == Qt::CaseInsensitive) {
+            m_regExp->regExp.setPatternOptions(m_regExp->regExp.patternOptions() | QRegularExpression::CaseInsensitiveOption);
+        }
         m_regExp->matchers = createStringMatchers(parseRegExpFilter(parsedLine));
         return;
     }
@@ -595,14 +597,17 @@ void AdBlockRule::parseFilter()
     }
 
     // If we still find a wildcard (*) or separator (^) or (|)
-    // we must modify parsedLine to comply with QzRegExp
+    // we must modify parsedLine to comply with QRegularExpression
     if (parsedLine.contains(QL1C('*')) ||
         parsedLine.contains(QL1C('^')) ||
         parsedLine.contains(QL1C('|'))
        ) {
         m_type = RegExpMatchRule;
         m_regExp = new RegExp;
-        m_regExp->regExp = QzRegExp(createRegExpFromFilter(parsedLine), m_caseSensitivity);
+        m_regExp->regExp = QRegularExpression(createRegExpFromFilter(parsedLine), QRegularExpression::InvertedGreedinessOption);
+        if (m_caseSensitivity == Qt::CaseInsensitive) {
+            m_regExp->regExp.setPatternOptions(m_regExp->regExp.patternOptions() | QRegularExpression::CaseInsensitiveOption);
+        }
         m_regExp->matchers = createStringMatchers(parseRegExpFilter(parsedLine));
         return;
     }
@@ -766,7 +771,7 @@ bool AdBlockRule::stringMatch(const QString &domain, const QString &encodedUrl) 
         if (!isMatchingRegExpStrings(encodedUrl)) {
             return false;
         }
-        return (m_regExp->regExp.indexIn(encodedUrl) != -1);
+        return m_regExp->regExp.match(encodedUrl).hasMatch();
 
     case MatchAllUrlsRule:
         return true;

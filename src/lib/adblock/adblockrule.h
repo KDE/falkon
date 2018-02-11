@@ -49,9 +49,9 @@
 #include <QObject>
 #include <QStringList>
 #include <QStringMatcher>
+#include <QRegularExpression>
 
 #include "qzcommon.h"
-#include "qzregexp.h"
 
 class QUrl;
 class QWebEngineUrlRequestInfo;
@@ -181,7 +181,7 @@ private:
     QStringList m_blockedDomains;
 
     struct RegExp {
-        QzRegExp regExp;
+        QRegularExpression regExp;
         QList<QStringMatcher> matchers;
     };
 

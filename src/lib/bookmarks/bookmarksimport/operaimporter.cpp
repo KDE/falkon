@@ -17,7 +17,6 @@
 * ============================================================ */
 #include "operaimporter.h"
 #include "bookmarkitem.h"
-#include "qzregexp.h"
 
 #include <QUrl>
 #include <QDir>

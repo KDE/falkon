@@ -17,10 +17,10 @@
 * ============================================================ */
 #include "htmlimporter.h"
 #include "bookmarkitem.h"
-#include "qzregexp.h"
 
 #include <QUrl>
 #include <QFileDialog>
+#include <QRegularExpression>
 
 HtmlImporter::HtmlImporter(QObject* parent)
     : BookmarksImporter(parent)
@@ -114,18 +114,15 @@ BookmarkItem* HtmlImporter::importBookmarks()
 
         if (nearest == posOfFolder) {
             // Next is folder
-            QzRegExp rx("<dt><h3(.*)>(.*)</h3>");
-            rx.setMinimal(true);
-            rx.indexIn(string);
-
-//            QString arguments = rx.cap(1);
-            QString folderName = rx.cap(2).trimmed();
+            QRegularExpression rx(QSL("<dt><h3(.*)>(.*)</h3>"), QRegularExpression::InvertedGreedinessOption | QRegularExpression::DotMatchesEverythingOption);
+            QRegularExpressionMatch match = rx.match(string);
+            QString folderName = match.captured(2).trimmed();
 
             BookmarkItem* folder = new BookmarkItem(BookmarkItem::Folder, folders.isEmpty() ? root : folders.last());
             folder->setTitle(folderName);
             folders.append(folder);
 
-            start += posOfFolder + rx.cap(0).size();
+            start += posOfFolder + match.captured(0).size();
         }
         else if (nearest == posOfEndFolder) {
             // Next is end of folder
@@ -137,20 +134,18 @@ BookmarkItem* HtmlImporter::importBookmarks()
         }
         else {
             // Next is link
-            QzRegExp rx("<dt><a(.*)>(.*)</a>");
-            rx.setMinimal(true);
-            rx.indexIn(string);
+            QRegularExpression rx(QSL("<dt><a(.*)>(.*)</a>"), QRegularExpression::InvertedGreedinessOption | QRegularExpression::DotMatchesEverythingOption);
+            QRegularExpressionMatch match = rx.match(string);
 
-            QString arguments = rx.cap(1);
-            QString linkName = rx.cap(2).trimmed();
+            QString arguments = match.captured(1);
+            QString linkName = match.captured(2).trimmed();
 
-            QzRegExp rx2("href=\"(.*)\"");
-            rx2.setMinimal(true);
-            rx2.indexIn(arguments);
+            QRegularExpression rx2(QSL("href=\"(.*)\""), QRegularExpression::InvertedGreedinessOption | QRegularExpression::DotMatchesEverythingOption);
+            QRegularExpressionMatch match2 = rx2.match(arguments);
 
-            QUrl url = QUrl::fromEncoded(rx2.cap(1).trimmed().toUtf8());
+            QUrl url = QUrl::fromEncoded(match2.captured(1).trimmed().toUtf8());
 
-            start += posOfLink + rx.cap(0).size();
+            start += posOfLink + match.captured(0).size();
 
             if (url.isEmpty() || url.scheme() == QL1S("place") || url.scheme() == QL1S("about"))
                 continue;

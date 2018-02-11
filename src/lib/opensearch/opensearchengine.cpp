@@ -35,7 +35,6 @@
 * ============================================================ */
 
 #include "opensearchengine.h"
-#include "qzregexp.h"
 #include "opensearchenginedelegate.h"
 
 #include <qbuffer.h>
@@ -43,7 +42,7 @@
 #include <qlocale.h>
 #include <qnetworkrequest.h>
 #include <qnetworkreply.h>
-#include <qregexp.h>
+#include <qregularexpression.h>
 #include <qstringlist.h>
 
 #include <QUrlQuery>
@@ -132,7 +131,7 @@ QString OpenSearchEngine::parseTemplate(const QString &searchTerm, const QString
     result.replace(QLatin1String("{language}"), language);
     result.replace(QLatin1String("{inputEncoding}"), QLatin1String("UTF-8"));
     result.replace(QLatin1String("{outputEncoding}"), QLatin1String("UTF-8"));
-    result.replace(QzRegExp(QLatin1String("\\{([^\\}]*:|)source\\??\\}")), QCoreApplication::applicationName());
+    result.replace(QRegularExpression(QSL("\\{([^\\}]*:|)source\\??\\}")), QCoreApplication::applicationName());
     result.replace(QLatin1String("{searchTerms}"), QLatin1String(QUrl::toPercentEncoding(searchTerm)));
 
     return result;

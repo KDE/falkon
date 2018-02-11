@@ -212,7 +212,6 @@ set(SRCS ${SRCS}
     tools/menubar.cpp
     tools/pagethumbnailer.cpp
     tools/progressbar.cpp
-    tools/qzregexp.cpp
     tools/qztools.cpp
     tools/removeitemfocusdelegate.cpp
     tools/scripts.cpp
