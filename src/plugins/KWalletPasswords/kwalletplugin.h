@@ -32,12 +32,10 @@ public:
     explicit KWalletPlugin();
 
     DesktopFile metaData() const override;
-
-    void init(InitState state, const QString &settingsPath);
-    void unload();
-    bool testPlugin();
-
-    QTranslator* getTranslator(const QString &locale);
+    void init(InitState state, const QString &settingsPath) override;
+    void unload() override;
+    bool testPlugin() override;
+    QTranslator *getTranslator(const QString &locale) override;
 
 private:
     KWalletPasswordBackend* m_backend;

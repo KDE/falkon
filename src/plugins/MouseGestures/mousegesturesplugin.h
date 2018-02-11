@@ -31,17 +31,15 @@ public:
     MouseGesturesPlugin();
 
     DesktopFile metaData() const override;
+    void init(InitState state, const QString &settingsPath) override;
+    void unload() override;
+    bool testPlugin() override;
+    QTranslator *getTranslator(const QString &locale) override;
+    void showSettings(QWidget *parent) override;
 
-    void init(InitState state, const QString &settingsPath);
-    void unload();
-    bool testPlugin();
-
-    QTranslator* getTranslator(const QString &locale);
-    void showSettings(QWidget* parent = 0);
-
-    bool mousePress(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event);
-    bool mouseRelease(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event);
-    bool mouseMove(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event);
+    bool mousePress(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
+    bool mouseRelease(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
+    bool mouseMove(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
 
 private:
     MouseGestures* m_gestures;

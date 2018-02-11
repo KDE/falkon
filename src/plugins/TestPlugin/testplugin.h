@@ -36,17 +36,14 @@ public:
     explicit TestPlugin();
 
     DesktopFile metaData() const override;
+    void init(InitState state, const QString &settingsPath) override;
+    void unload() override;
+    bool testPlugin() override;
+    QTranslator *getTranslator(const QString &locale) override;
+    void showSettings(QWidget *parent) override;
 
-    void init(InitState state, const QString &settingsPath);
-    void unload();
-    bool testPlugin();
-
-    QTranslator* getTranslator(const QString &locale);
-    void showSettings(QWidget* parent = 0);
-
-    void populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTestResult &r);
-
-    bool mousePress(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event);
+    void populateWebViewMenu(QMenu *menu, WebView *view, const WebHitTestResult &r) override;
+    bool mousePress(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
 
 private slots:
     void actionSlot();

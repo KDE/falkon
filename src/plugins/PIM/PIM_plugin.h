@@ -35,16 +35,14 @@ public:
     PIM_Plugin();
 
     DesktopFile metaData() const override;
+    void init(InitState state, const QString &settingsPath) override;
+    void unload() override;
+    bool testPlugin() override;
+    QTranslator *getTranslator(const QString &locale) override;
+    void showSettings(QWidget *parent) override;
 
-    void init(InitState state, const QString &settingsPath);
-    void unload();
-    bool testPlugin();
-
-    QTranslator* getTranslator(const QString &locale);
-    void showSettings(QWidget* parent = 0);
-
-    void populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTestResult &r);
-    bool keyPress(const Qz::ObjectName &type, QObject* obj, QKeyEvent* event);
+    void populateWebViewMenu(QMenu *menu, WebView *view, const WebHitTestResult &r) override;
+    bool keyPress(const Qz::ObjectName &type, QObject *obj, QKeyEvent *event) override;
 
 private:
     PIM_Handler* m_handler;
