@@ -40,7 +40,7 @@ public:
     void requestStarted(QWebEngineUrlRequestJob *job) override;
 
     void registerHandler(const QString &name, ExtensionSchemeHandler *handler);
-    void unregisterHandler(const QString &name);
+    void unregisterHandler(ExtensionSchemeHandler *handler);
 
 private:
     QHash<QString, ExtensionSchemeHandler*> m_handlers;

@@ -42,7 +42,7 @@ public:
     static void setupWebChannel(QWebChannel *webChannel, WebPage *page);
 
     static void registerExtraObject(const QString &id, QObject *object);
-    static void unregisterExtraObject(const QString &id);
+    static void unregisterExtraObject(QObject *object);
 
 private:
     QObject *speedDial() const;

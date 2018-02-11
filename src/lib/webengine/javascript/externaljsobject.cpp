@@ -56,9 +56,9 @@ void ExternalJsObject::registerExtraObject(const QString &id, QObject *object)
 }
 
 // static
-void ExternalJsObject::unregisterExtraObject(const QString &id)
+void ExternalJsObject::unregisterExtraObject(QObject *object)
 {
-    s_extraObjects.remove(id);
+    s_extraObjects.remove(s_extraObjects.key(object));
 }
 
 QObject *ExternalJsObject::speedDial() const

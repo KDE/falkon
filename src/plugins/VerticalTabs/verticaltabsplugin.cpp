@@ -65,8 +65,10 @@ void VerticalTabsPlugin::init(InitState state, const QString &settingsPath)
     m_controller = new VerticalTabsController(this);
     SideBarManager::addSidebar(QSL("VerticalTabs"), m_controller);
 
+    m_schemeHandler = new VerticalTabsSchemeHandler(this);
+    mApp->networkManager()->registerExtensionSchemeHandler(QSL("verticaltabs"), m_schemeHandler);
+
     mApp->plugins()->registerAppEventHandler(PluginProxy::KeyPressHandler, this);
-    mApp->networkManager()->registerExtensionSchemeHandler(QSL("verticaltabs"), new VerticalTabsSchemeHandler);
 
     setWebTabBehavior(m_addChildBehavior);
     loadStyleSheet(m_theme);
@@ -89,7 +91,7 @@ void VerticalTabsPlugin::unload()
     delete m_controller;
     m_controller = nullptr;
 
-    mApp->networkManager()->unregisterExtensionSchemeHandler(QSL("verticaltabs"));
+    mApp->networkManager()->unregisterExtensionSchemeHandler(m_schemeHandler);
 }
 
 bool VerticalTabsPlugin::testPlugin()

@@ -236,9 +236,9 @@ void NetworkManager::registerExtensionSchemeHandler(const QString &name, Extensi
     m_extensionScheme->registerHandler(name, handler);
 }
 
-void NetworkManager::unregisterExtensionSchemeHandler(const QString &name)
+void NetworkManager::unregisterExtensionSchemeHandler(ExtensionSchemeHandler *handler)
 {
-    m_extensionScheme->unregisterHandler(name);
+    m_extensionScheme->unregisterHandler(handler);
 }
 
 void NetworkManager::loadSettings()

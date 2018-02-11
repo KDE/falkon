@@ -22,6 +22,7 @@
 class BrowserWindow;
 
 class VerticalTabsController;
+class VerticalTabsSchemeHandler;
 
 class VerticalTabsPlugin : public QObject, public PluginInterface
 {
@@ -76,6 +77,7 @@ private:
 
     QString m_settingsPath;
     VerticalTabsController *m_controller = nullptr;
+    VerticalTabsSchemeHandler *m_schemeHandler = nullptr;
     ViewType m_viewType = TabListView;
     bool m_replaceTabBar = false;
     AddChildBehavior m_addChildBehavior = AppendChild;

@@ -52,7 +52,7 @@ void ExtensionSchemeManager::registerHandler(const QString &name, ExtensionSchem
     m_handlers[name] = handler;
 }
 
-void ExtensionSchemeManager::unregisterHandler(const QString &name)
+void ExtensionSchemeManager::unregisterHandler(ExtensionSchemeHandler *handler)
 {
-    m_handlers.remove(name);
+    m_handlers.remove(m_handlers.key(handler));
 }

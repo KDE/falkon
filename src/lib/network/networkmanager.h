@@ -43,7 +43,7 @@ public:
     void removeUrlInterceptor(UrlInterceptor *interceptor);
 
     void registerExtensionSchemeHandler(const QString &name, ExtensionSchemeHandler *handler);
-    void unregisterExtensionSchemeHandler(const QString &name);
+    void unregisterExtensionSchemeHandler(ExtensionSchemeHandler *handler);
 
     void loadSettings();
     void shutdown();

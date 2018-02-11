@@ -49,7 +49,7 @@ GM_Manager::GM_Manager(const QString &sPath, QObject* parent)
 
 GM_Manager::~GM_Manager()
 {
-    ExternalJsObject::unregisterExtraObject(QSL("greasemonkey"));
+    ExternalJsObject::unregisterExtraObject(m_jsObject);
 }
 
 void GM_Manager::showSettings(QWidget* parent)
