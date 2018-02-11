@@ -32,7 +32,8 @@ class ImageFinderPlugin : public QObject, public PluginInterface
 
 public:
     explicit ImageFinderPlugin();
-    PluginSpec pluginSpec();
+
+    DesktopFile metaData() const override;
 
     void init(InitState state, const QString &settingsPath);
     void unload();

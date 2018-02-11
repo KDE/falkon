@@ -31,7 +31,7 @@ class GM_Plugin : public QObject, public PluginInterface
 
 public:
     explicit GM_Plugin();
-    PluginSpec pluginSpec() override;
+    DesktopFile metaData() const override;
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;

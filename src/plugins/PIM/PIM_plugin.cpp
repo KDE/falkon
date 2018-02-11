@@ -24,6 +24,7 @@
 #include "browserwindow.h"
 #include "webview.h"
 #include "../config.h"
+#include "desktopfile.h"
 
 #include <QTranslator>
 
@@ -33,18 +34,9 @@ PIM_Plugin::PIM_Plugin()
 {
 }
 
-PluginSpec PIM_Plugin::pluginSpec()
+DesktopFile PIM_Plugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "PIM";
-    spec.info = "Personal Information Manager";
-    spec.description = "Adds ability for Falkon to store some personal data";
-    spec.version = "0.2.0";
-    spec.author = QString::fromUtf8("Mladen Pejaković <pejakm@autistici.org>");
-    spec.icon = QPixmap(":/PIM/data/PIM.png");
-    spec.hasSettings = true;
-
-    return spec;
+    return DesktopFile(QSL(":PIM/metadata.desktop"));
 }
 
 void PIM_Plugin::init(InitState state, const QString &settingsPath)

@@ -28,6 +28,7 @@
 #include "sidebar.h"
 #include "networkmanager.h"
 #include "../config.h"
+#include "desktopfile.h"
 
 #include <QSettings>
 #include <QTranslator>
@@ -37,17 +38,9 @@ VerticalTabsPlugin::VerticalTabsPlugin()
 {
 }
 
-PluginSpec VerticalTabsPlugin::pluginSpec()
+DesktopFile VerticalTabsPlugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = QSL("Vertical Tabs");
-    spec.info = QSL("Vertical tabs for Falkon");
-    spec.description = QSL("Adds ability to show tabs in sidebar");
-    spec.version = QSL("0.1.0");
-    spec.author = QSL("David Rosca <nowrep@gmail.com>");
-    spec.icon = QIcon(QSL(":verticaltabs/data/icon.svg")).pixmap(32);
-    spec.hasSettings = true;
-    return spec;
+    return DesktopFile(QSL(":verticaltabs/metadata.desktop"));
 }
 
 void VerticalTabsPlugin::init(InitState state, const QString &settingsPath)

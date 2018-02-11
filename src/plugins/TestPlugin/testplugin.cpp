@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -24,6 +24,7 @@
 #include "sidebar.h"
 #include "webhittestresult.h"
 #include "../config.h"
+#include "desktopfile.h"
 
 #include <QMenu>
 #include <QTranslator>
@@ -37,18 +38,9 @@ TestPlugin::TestPlugin()
     // It will be called even if user doesn't have the plugin allowed
 }
 
-PluginSpec TestPlugin::pluginSpec()
+DesktopFile TestPlugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "Example Plugin";
-    spec.info = "Example minimal plugin";
-    spec.description = "Very simple minimal plugin example";
-    spec.version = "0.1.7";
-    spec.author = "David Rosca <nowrep@gmail.com>";
-    spec.icon = QPixmap(":qupzilla.png");
-    spec.hasSettings = true;
-
-    return spec;
+    return DesktopFile(QSL(":testplugin/metadata.desktop"));
 }
 
 void TestPlugin::init(InitState state, const QString &settingsPath)

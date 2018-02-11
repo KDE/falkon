@@ -29,7 +29,8 @@ class MouseGesturesPlugin : public QObject, public PluginInterface
 
 public:
     MouseGesturesPlugin();
-    PluginSpec pluginSpec();
+
+    DesktopFile metaData() const override;
 
     void init(InitState state, const QString &settingsPath);
     void unload();

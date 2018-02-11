@@ -23,6 +23,7 @@
 #include "mainapplication.h"
 #include "autofill.h"
 #include "passwordmanager.h"
+#include "desktopfile.h"
 
 #include <QTranslator>
 
@@ -32,18 +33,9 @@ KWalletPlugin::KWalletPlugin()
 {
 }
 
-PluginSpec KWalletPlugin::pluginSpec()
+DesktopFile KWalletPlugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "KWallet Passwords";
-    spec.info = "KWallet password backend";
-    spec.description = "Provides support for storing passwords in KWallet";
-    spec.version = "0.1.2";
-    spec.author = "David Rosca <nowrep@gmail.com>";
-    spec.icon = QPixmap(":kwp/data/icon.png");
-    spec.hasSettings = false;
-
-    return spec;
+    return DesktopFile(QSL(":kwp/metadata.desktop"));
 }
 
 void KWalletPlugin::init(InitState state, const QString &settingsPath)

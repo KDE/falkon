@@ -25,6 +25,7 @@
 #include "tabwidget.h"
 #include "webtab.h"
 #include "../config.h"
+#include "desktopfile.h"
 
 #include <QTranslator>
 
@@ -34,18 +35,9 @@ GM_Plugin::GM_Plugin()
 {
 }
 
-PluginSpec GM_Plugin::pluginSpec()
+DesktopFile GM_Plugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "GreaseMonkey";
-    spec.info = "Userscripts for Falkon";
-    spec.description = "Provides support for userscripts";
-    spec.version = "0.9.4";
-    spec.author = "David Rosca <nowrep@gmail.com>";
-    spec.icon = QIcon(":gm/data/icon.svg").pixmap(32);
-    spec.hasSettings = true;
-
-    return spec;
+    return DesktopFile(QSL(":gm/metadata.desktop"));
 }
 
 void GM_Plugin::init(InitState state, const QString &settingsPath)

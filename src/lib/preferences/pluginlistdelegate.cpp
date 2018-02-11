@@ -102,17 +102,20 @@ void PluginListDelegate::paint(QPainter* painter, const QStyleOptionViewItem &op
     painter->setFont(versionFont);
     style->drawItemText(painter, versionRect, Qt::AlignLeft, textPalette, true, version, colorRole);
 
-    // Draw info
+    // Draw author
     const int infoYPos = nameRect.bottom() + opt.fontMetrics.leading();
     QRect infoRect(nameRect.x(), infoYPos, nameRect.width(), opt.fontMetrics.height());
     const QString info = opt.fontMetrics.elidedText(index.data(Qt::UserRole + 1).toString(), Qt::ElideRight, infoRect.width());
-    painter->setFont(opt.font);
+    QFont font = opt.font;
+    font.setPointSize(font.pointSize() - 1);
+    painter->setFont(font);
     style->drawItemText(painter, infoRect, Qt::TextSingleLine | Qt::AlignLeft, textPalette, true, info, colorRole);
 
     // Draw description
     const int descriptionYPos = infoRect.bottom() + opt.fontMetrics.leading();
     QRect descriptionRect(infoRect.x(), descriptionYPos, infoRect.width(), opt.fontMetrics.height());
     const QString description = opt.fontMetrics.elidedText(index.data(Qt::UserRole + 2).toString(), Qt::ElideRight, descriptionRect.width());
+    painter->setFont(opt.font);
     style->drawItemText(painter, descriptionRect, Qt::TextSingleLine | Qt::AlignLeft, textPalette, true, description, colorRole);
 }
 

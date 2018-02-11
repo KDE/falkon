@@ -25,28 +25,6 @@
 #include "qzcommon.h"
 #include "webhittestresult.h"
 
-struct PluginSpec {
-    QString name;
-    QString info;
-    QString description;
-    QString author;
-    QString version;
-    QPixmap icon;
-    bool hasSettings;
-
-    PluginSpec() {
-        hasSettings = false;
-    }
-
-    bool operator==(const PluginSpec &other) const {
-        return (this->name == other.name &&
-                this->info == other.info &&
-                this->description == other.description &&
-                this->author == other.author &&
-                this->version == other.version);
-    }
-};
-
 class QTranslator;
 class QMenu;
 class QMouseEvent;
@@ -55,13 +33,14 @@ class QWheelEvent;
 
 class WebView;
 class WebPage;
+class DesktopFile;
 
 class PluginInterface
 {
 public:
     enum InitState { StartupInitState, LateInitState };
 
-    virtual PluginSpec pluginSpec() = 0;
+    virtual DesktopFile metaData() const = 0;
     virtual void init(InitState state, const QString &settingsPath) = 0;
     virtual void unload() = 0;
     virtual bool testPlugin() = 0;
@@ -86,6 +65,6 @@ public:
     virtual bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) { Q_UNUSED(page); Q_UNUSED(url); Q_UNUSED(type); Q_UNUSED(isMainFrame); return true; }
 };
 
-Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.0")
+Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.1")
 
 #endif // PLUGININTERFACE_H

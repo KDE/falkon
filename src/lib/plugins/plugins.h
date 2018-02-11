@@ -29,6 +29,22 @@ class QPluginLoader;
 
 class SpeedDial;
 
+struct PluginSpec {
+    QString name;
+    QString description;
+    QString author;
+    QString version;
+    QPixmap icon;
+    bool hasSettings = false;
+
+    bool operator==(const PluginSpec &other) const {
+        return (this->name == other.name &&
+                this->description == other.description &&
+                this->author == other.author &&
+                this->version == other.version);
+    }
+};
+
 class FALKON_EXPORT Plugins : public QObject
 {
     Q_OBJECT
@@ -82,6 +98,7 @@ signals:
 
 private:
     bool alreadySpecInAvailable(const PluginSpec &spec);
+    PluginSpec createSpec(const DesktopFile &metaData) const;
     PluginInterface* initPlugin(PluginInterface::InitState state , PluginInterface* pluginInterface, QPluginLoader* loader);
 
     void refreshLoadedPlugins();

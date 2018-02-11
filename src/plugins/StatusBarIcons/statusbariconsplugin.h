@@ -30,7 +30,8 @@ class StatusBarIconsPlugin : public QObject, public PluginInterface
 
 public:
     explicit StatusBarIconsPlugin();
-    PluginSpec pluginSpec();
+
+    DesktopFile metaData() const override;
 
     void init(InitState state, const QString &settingsPath);
     void unload();

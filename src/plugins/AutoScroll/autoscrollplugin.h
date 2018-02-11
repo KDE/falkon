@@ -31,7 +31,8 @@ class AutoScrollPlugin : public QObject, public PluginInterface
 
 public:
     explicit AutoScrollPlugin();
-    PluginSpec pluginSpec();
+
+    DesktopFile metaData() const override;
 
     void init(InitState state, const QString &settingsPath);
     void unload();

@@ -24,6 +24,7 @@
 #include "mainapplication.h"
 #include "enhancedmenu.h"
 #include "../config.h"
+#include "desktopfile.h"
 
 #include <QMenu>
 #include <QTranslator>
@@ -34,18 +35,9 @@ ImageFinderPlugin::ImageFinderPlugin()
 {
 }
 
-PluginSpec ImageFinderPlugin::pluginSpec()
+DesktopFile ImageFinderPlugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "ImageFinder";
-    spec.info = "Image Finder Plugin";
-    spec.description = "Provides context menu with reverse image search engine support";
-    spec.version = "0.2.0";
-    spec.author = "Vladislav Tronko <innermous@gmail.com>";
-    spec.icon = QPixmap(":/imgfinder/data/icon.png");
-    spec.hasSettings = true;
-
-    return spec;
+    return DesktopFile(QSL(":imgfinder/metadata.desktop"));
 }
 
 void ImageFinderPlugin::init(InitState state, const QString &settingsPath)

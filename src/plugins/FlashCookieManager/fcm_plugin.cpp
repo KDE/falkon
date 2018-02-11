@@ -28,6 +28,7 @@
 #include "../config.h"
 #include "statusbar.h"
 #include "navigationbar.h"
+#include "desktopfile.h"
 
 #include <QTimer>
 #include <QSettings>
@@ -65,18 +66,9 @@ FCM_Plugin::FCM_Plugin()
 {
 }
 
-PluginSpec FCM_Plugin::pluginSpec()
+DesktopFile FCM_Plugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "Flash Cookie Manager";
-    spec.info = "A plugin to manage flash cookies.";
-    spec.description = "You can easily view/delete flash cookies stored on your computer. This is a solution for having more privacy.";
-    spec.version = "0.3.0";
-    spec.author = "Razi Alavizadeh <s.r.alavizadeh@gmail.com>";
-    spec.icon = QPixmap(":/flashcookiemanager/data/flash-cookie-manager.png");
-    spec.hasSettings = true;
-
-    return spec;
+    return DesktopFile(QSL(":flashcookiemanager/metadata.desktop"));
 }
 
 void FCM_Plugin::init(InitState state, const QString &settingsPath)

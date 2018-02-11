@@ -34,7 +34,8 @@ class TestPlugin : public QObject, public PluginInterface
 
 public:
     explicit TestPlugin();
-    PluginSpec pluginSpec();
+
+    DesktopFile metaData() const override;
 
     void init(InitState state, const QString &settingsPath);
     void unload();

@@ -23,6 +23,7 @@
 #include "datapaths.h"
 #include "adblock/adblockplugin.h"
 #include "../config.h"
+#include "desktopfile.h"
 
 #include <iostream>
 #include <QPluginLoader>
@@ -126,8 +127,10 @@ void Plugins::loadPlugins()
         plugin.instance = initPlugin(PluginInterface::StartupInitState, iPlugin, loader);
 
         if (plugin.isLoaded()) {
-            plugin.pluginSpec = iPlugin->pluginSpec();
-            m_availablePlugins.append(plugin);
+            plugin.pluginSpec = createSpec(iPlugin->metaData());
+            if (!plugin.pluginSpec.name.isEmpty()) {
+                m_availablePlugins.append(plugin);
+            }
         }
     }
 
@@ -172,13 +175,13 @@ void Plugins::loadAvailablePlugins()
             Plugin plugin;
             plugin.fileName = fileName;
             plugin.fullPath = absolutePath;
-            plugin.pluginSpec = iPlugin->pluginSpec();
+            plugin.pluginSpec = createSpec(iPlugin->metaData());
             plugin.pluginLoader = loader;
             plugin.instance = 0;
 
             loader->unload();
 
-            if (!alreadySpecInAvailable(plugin.pluginSpec)) {
+            if (!plugin.pluginSpec.name.isEmpty() && !alreadySpecInAvailable(plugin.pluginSpec)) {
                 m_availablePlugins.append(plugin);
             }
         }
@@ -229,4 +232,25 @@ bool Plugins::alreadySpecInAvailable(const PluginSpec &spec)
     }
 
     return false;
+}
+
+PluginSpec Plugins::createSpec(const DesktopFile &metaData) const
+{
+    PluginSpec spec;
+    spec.name = metaData.name(mApp->currentLanguage());
+    spec.description = metaData.comment(mApp->currentLanguage());
+    spec.version = metaData.value(QSL("X-Falkon-Version")).toString();
+    spec.author = QSL("%1 <%2>").arg(metaData.value(QSL("X-Falkon-Author")).toString(), metaData.value(QSL("X-Falkon-Email")).toString());
+    spec.hasSettings = metaData.value(QSL("X-Falkon-Settings")).toBool();
+
+    const QString iconName = metaData.icon();
+    if (!iconName.isEmpty()) {
+        if (QFileInfo::exists(iconName)) {
+            spec.icon = QIcon(iconName).pixmap(32);
+        } else {
+            spec.icon = QIcon::fromTheme(iconName).pixmap(32);
+        }
+    }
+
+    return spec;
 }

@@ -21,6 +21,7 @@
 #include "mainapplication.h"
 #include "browserwindow.h"
 #include "../config.h"
+#include "desktopfile.h"
 
 #include <QTranslator>
 
@@ -30,18 +31,9 @@ MouseGesturesPlugin::MouseGesturesPlugin()
 {
 }
 
-PluginSpec MouseGesturesPlugin::pluginSpec()
+DesktopFile MouseGesturesPlugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "Mouse Gestures";
-    spec.info = "Mouse gestures for Falkon";
-    spec.description = "Provides support for navigating in webpages by mouse gestures";
-    spec.version = "0.5.0";
-    spec.author = "David Rosca <nowrep@gmail.com>";
-    spec.icon = QPixmap(":/mousegestures/data/icon.png");
-    spec.hasSettings = true;
-
-    return spec;
+    return DesktopFile(QSL(":mousegestures/metadata.desktop"));
 }
 
 void MouseGesturesPlugin::init(InitState state, const QString &settingsPath)

@@ -22,6 +22,7 @@
 #include "browserwindow.h"
 #include "../config.h"
 #include "mainapplication.h"
+#include "desktopfile.h"
 
 #include <QTranslator>
 
@@ -31,18 +32,9 @@ StatusBarIconsPlugin::StatusBarIconsPlugin()
 {
 }
 
-PluginSpec StatusBarIconsPlugin::pluginSpec()
+DesktopFile StatusBarIconsPlugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "StatusBar Icons";
-    spec.info = "Icons in statusbar providing various actions";
-    spec.description = "Adds additional icons and zoom widget to statusbar";
-    spec.version = "0.2.0";
-    spec.author = "David Rosca <nowrep@gmail.com>";
-    spec.icon = QPixmap(":sbi/data/icon.png");
-    spec.hasSettings = true;
-
-    return spec;
+    return DesktopFile(QSL(":sbi/metadata.desktop"));
 }
 
 void StatusBarIconsPlugin::init(InitState state, const QString &settingsPath)

@@ -17,10 +17,16 @@
 * ============================================================ */
 #include "desktopfile.h"
 
-DesktopFile::DesktopFile(const QString &filePath)
-    : m_settings(filePath, QSettings::IniFormat)
+#include <QSettings>
+
+DesktopFile::DesktopFile()
 {
-    m_settings.beginGroup(QSL("Desktop Entry"));
+}
+
+DesktopFile::DesktopFile(const QString &filePath)
+{
+    m_settings.reset(new QSettings(filePath, QSettings::IniFormat));
+    m_settings->beginGroup(QSL("Desktop Entry"));
 }
 
 QString DesktopFile::name(const QString &locale) const
@@ -45,11 +51,14 @@ QString DesktopFile::icon() const
 
 QVariant DesktopFile::value(const QString &key, const QString &locale) const
 {
+    if (!m_settings) {
+        return QVariant();
+    }
     if (!locale.isEmpty()) {
         const QString localeKey = QSL("%1[%2]").arg(key, locale);
-        if (m_settings.contains(localeKey)) {
-            return m_settings.value(localeKey);
+        if (m_settings->contains(localeKey)) {
+            return m_settings->value(localeKey);
         }
     }
-    return m_settings.value(key);
+    return m_settings->value(key);
 }

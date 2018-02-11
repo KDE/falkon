@@ -30,7 +30,8 @@ class KWalletPlugin : public QObject, public PluginInterface
 
 public:
     explicit KWalletPlugin();
-    PluginSpec pluginSpec();
+
+    DesktopFile metaData() const override;
 
     void init(InitState state, const QString &settingsPath);
     void unload();

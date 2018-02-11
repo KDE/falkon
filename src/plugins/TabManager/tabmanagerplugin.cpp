@@ -26,6 +26,7 @@
 #include "tabbar.h"
 #include "tabmanagersettings.h"
 #include "../config.h"
+#include "desktopfile.h"
 
 #include <QInputDialog>
 #include <QTranslator>
@@ -46,18 +47,9 @@ TabManagerPlugin::TabManagerPlugin()
 {
 }
 
-PluginSpec TabManagerPlugin::pluginSpec()
+DesktopFile TabManagerPlugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "Tab Manager";
-    spec.info = "Simple yet powerful tab manager for Falkon";
-    spec.description = "Adds ability to managing tabs and windows";
-    spec.version = "0.8.0";
-    spec.author = "Razi Alavizadeh <s.r.alavizadeh@gmail.com>";
-    spec.icon = QPixmap(":tabmanager/data/tabmanager.png");
-    spec.hasSettings = true;
-
-    return spec;
+    return DesktopFile(QSL(":tabmanager/metadata.desktop"));
 }
 
 void TabManagerPlugin::init(InitState state, const QString &settingsPath)

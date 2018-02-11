@@ -33,7 +33,7 @@ class VerticalTabsPlugin : public QObject, public PluginInterface
 public:
     explicit VerticalTabsPlugin();
 
-    PluginSpec pluginSpec() override;
+    DesktopFile metaData() const override;
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;

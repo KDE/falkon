@@ -51,8 +51,7 @@ class FCM_Plugin : public QObject, public PluginInterface
 public:
     explicit FCM_Plugin();
 
-
-    PluginSpec pluginSpec();
+    DesktopFile metaData() const override;
 
     void init(InitState state, const QString &settingsPath);
     void unload();

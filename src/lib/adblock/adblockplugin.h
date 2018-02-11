@@ -30,7 +30,7 @@ class AdBlockPlugin : public QObject, public PluginInterface
 
 public:
     explicit AdBlockPlugin();
-    PluginSpec pluginSpec() override;
+    DesktopFile metaData() const override;
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;

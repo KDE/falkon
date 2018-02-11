@@ -17,13 +17,16 @@
 * ============================================================ */
 #pragma once
 
-#include <QSettings>
+#include <QSharedPointer>
 
 #include "qzcommon.h"
+
+class QSettings;
 
 class FALKON_EXPORT DesktopFile
 {
 public:
+    explicit DesktopFile();
     explicit DesktopFile(const QString &filePath);
 
     QString name(const QString &locale = QString()) const;
@@ -33,5 +36,5 @@ public:
     QVariant value(const QString &key, const QString &locale = QString()) const;
 
 private:
-    QSettings m_settings;
+    QSharedPointer<QSettings> m_settings;
 };

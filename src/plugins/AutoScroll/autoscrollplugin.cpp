@@ -22,6 +22,7 @@
 #include "pluginproxy.h"
 #include "mainapplication.h"
 #include "../config.h"
+#include "desktopfile.h"
 
 #include <QTranslator>
 
@@ -31,18 +32,9 @@ AutoScrollPlugin::AutoScrollPlugin()
 {
 }
 
-PluginSpec AutoScrollPlugin::pluginSpec()
+DesktopFile AutoScrollPlugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "AutoScroll";
-    spec.info = "AutoScroll plugin";
-    spec.description = "Provides support for autoscroll with middle mouse button";
-    spec.version = "1.0.1";
-    spec.author = "David Rosca <nowrep@gmail.com>";
-    spec.icon = QIcon(QSL(":/autoscroll/data/scroll_all.png")).pixmap(32);
-    spec.hasSettings = true;
-
-    return spec;
+    return DesktopFile(QSL(":autoscroll/metadata.desktop"));
 }
 
 void AutoScrollPlugin::init(InitState state, const QString &settingsPath)

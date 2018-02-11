@@ -23,6 +23,7 @@
 #include "mainapplication.h"
 #include "autofill.h"
 #include "passwordmanager.h"
+#include "desktopfile.h"
 
 #include <QTranslator>
 
@@ -32,18 +33,9 @@ GnomeKeyringPlugin::GnomeKeyringPlugin()
 {
 }
 
-PluginSpec GnomeKeyringPlugin::pluginSpec()
+DesktopFile GnomeKeyringPlugin::metaData() const
 {
-    PluginSpec spec;
-    spec.name = "Gnome Keyring Passwords";
-    spec.info = "Gnome Keyring password backend";
-    spec.description = "Provides support for storing passwords in gnome-keyring";
-    spec.version = "0.1.0";
-    spec.author = "David Rosca <nowrep@gmail.com>";
-    spec.icon = QPixmap(":gkp/data/icon.png");
-    spec.hasSettings = false;
-
-    return spec;
+    return DesktopFile(QSL(":gkp/metadata.desktop"));
 }
 
 void GnomeKeyringPlugin::init(InitState state, const QString &settingsPath)

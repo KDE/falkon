@@ -27,15 +27,16 @@
 #include "navigationbar.h"
 #include "mainapplication.h"
 #include "statusbar.h"
+#include "desktopfile.h"
 
 AdBlockPlugin::AdBlockPlugin()
     : QObject()
 {
 }
 
-PluginSpec AdBlockPlugin::pluginSpec()
+DesktopFile AdBlockPlugin::metaData() const
 {
-    return PluginSpec();
+    return DesktopFile();
 }
 
 void AdBlockPlugin::init(InitState state, const QString &settingsPath)

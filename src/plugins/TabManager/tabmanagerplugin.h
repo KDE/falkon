@@ -38,7 +38,8 @@ class TabManagerPlugin : public QObject, public PluginInterface
 
 public:
     explicit TabManagerPlugin();
-    PluginSpec pluginSpec();
+
+    DesktopFile metaData() const override;
 
     void init(InitState state, const QString &settingsPath);
     void unload();

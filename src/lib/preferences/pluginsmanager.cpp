@@ -111,12 +111,12 @@ void PluginsManager::refresh()
         }
         item->setIcon(icon);
 
-        QString pluginInfo = QString("<b>%1</b> %2<br/><i>%3</i><br/>%4").arg(spec.name, spec.version, spec.author.toHtmlEscaped(), spec.info);
+        QString pluginInfo = QString("<b>%1</b> %2<br/><i>%3</i><br/>").arg(spec.name, spec.version, spec.author.toHtmlEscaped());
         item->setToolTip(pluginInfo);
 
         item->setText(spec.name);
         item->setData(Qt::UserRole, spec.version);
-        item->setData(Qt::UserRole + 1, spec.info);
+        item->setData(Qt::UserRole + 1, spec.author);
         item->setData(Qt::UserRole + 2, spec.description);
 
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
