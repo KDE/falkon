@@ -87,7 +87,9 @@ void DataPaths::init()
 {
     m_paths[AppData].append(QStandardPaths::standardLocations(QStandardPaths::AppDataLocation));
 
+#ifdef FALKON_PLUGIN_PATH
     m_paths[Plugins].append(QStringLiteral(FALKON_PLUGIN_PATH));
+#endif
 
     for (const QString &location : qAsConst(m_paths[AppData])) {
         initAssetsIn(location);
