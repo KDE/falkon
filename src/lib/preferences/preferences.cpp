@@ -29,7 +29,6 @@
 #include "pluginproxy.h"
 #include "pluginsmanager.h"
 #include "jsoptions.h"
-#include "networkproxyfactory.h"
 #include "networkmanager.h"
 #include "desktopnotificationsfactory.h"
 #include "desktopnotification.h"

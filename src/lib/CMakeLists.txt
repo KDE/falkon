@@ -130,7 +130,6 @@ set(SRCS ${SRCS}
     navigation/siteicon.cpp
     navigation/websearchbar.cpp
     network/networkmanager.cpp
-    network/networkproxyfactory.cpp
     network/networkurlinterceptor.cpp
     network/schemehandlers/extensionschemehandler.cpp
     network/schemehandlers/falkonschemehandler.cpp

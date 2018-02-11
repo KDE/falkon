@@ -19,8 +19,7 @@
 #define SBI_NETWORKPROXY_H
 
 #include <QUrl>
-
-#include "networkproxyfactory.h"
+#include <QNetworkProxy>
 
 class QSettings;
 
