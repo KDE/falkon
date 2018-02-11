@@ -22,10 +22,10 @@
 #include "datapaths.h"
 #include "licenseviewer.h"
 #include "preferences.h"
+#include "desktopfile.h"
+#include "mainapplication.h"
 
 #include <QDir>
-#include <QTextBrowser>
-#include <QRegularExpression>
 
 ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
     : QWidget()
@@ -53,7 +53,7 @@ ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
             }
 
             QListWidgetItem* item = new QListWidgetItem(ui->listWidget);
-            item->setText(themeInfo.name + "\n" + themeInfo.shortDescription);
+            item->setText(themeInfo.name);
             item->setIcon(themeInfo.icon);
             item->setData(Qt::UserRole, name);
 
@@ -96,7 +96,7 @@ void ThemeManager::currentChanged()
 
     ui->name->setText(currentTheme.name);
     ui->author->setText(currentTheme.author);
-    ui->descirption->setText(currentTheme.longDescription);
+    ui->descirption->setText(currentTheme.description);
     ui->license->setHidden(currentTheme.license.isEmpty());
 }
 
@@ -105,50 +105,32 @@ ThemeManager::Theme ThemeManager::parseTheme(const QString &path, const QString 
     Theme info;
     info.isValid = false;
 
-    if (!QFile(path + "main.css").exists() || !QFile(path + "theme.info").exists()) {
+    if (!QFile(path + "main.css").exists() || !QFile(path + "metadata.desktop").exists()) {
         info.isValid = false;
         return info;
     }
 
-    if (QFile(path + "theme.png").exists()) {
-        info.icon = QIcon(path + "theme.png");
-    }
-    else {
-        info.icon = QIcon(":icons/preferences/style-default.png");
+    DesktopFile metadata(path + QSL("metadata.desktop"));
+    info.name = metadata.name(mApp->currentLanguage());
+    info.description = metadata.comment(mApp->currentLanguage());
+    info.author = metadata.value(QSL("X-Falkon-Author")).toString();
+
+    const QString iconName = metadata.icon();
+    if (!iconName.isEmpty()) {
+        if (QFileInfo::exists(path + iconName)) {
+            info.icon = QIcon(path + iconName);
+        } else {
+            info.icon = QIcon::fromTheme(iconName);
+        }
     }
 
-    if (QFile(path + "theme.license").exists()) {
-        info.license = QzTools::readAllFileContents(path + "theme.license");
-    }
-
-    QString theme_info = QzTools::readAllFileContents(path + "theme.info");
-
-    QRegularExpression rx(QSL("Name:(.*)\\n"));
-    QRegularExpressionMatch match = rx.match(theme_info);
-    if (match.hasMatch()) {
-        info.name = match.captured(1).trimmed();
+    const QString licensePath = metadata.value(QSL("X-Falkon-License")).toString();
+    if (!licensePath.isEmpty() && QFileInfo::exists(path + licensePath)) {
+        info.license = QzTools::readAllFileContents(path + licensePath);
     }
 
     if (info.name.isEmpty() || m_themeHash.contains(info.name)) {
         return info;
-    }
-
-    rx.setPattern(QSL("Author:(.*)\\n"));
-    match = rx.match(theme_info);
-    if (match.hasMatch()) {
-        info.author = match.captured(1).trimmed();
-    }
-
-    rx.setPattern(QSL("Short Description:(.*)\\n"));
-    match = rx.match(theme_info);
-    if (match.hasMatch()) {
-        info.shortDescription = match.captured(1).trimmed();
-    }
-
-    rx.setPattern(QSL("Long Description:(.*)\\n"));
-    match = rx.match(theme_info);
-    if (match.hasMatch()) {
-        info.longDescription = match.captured(1).trimmed();
     }
 
     info.isValid = true;

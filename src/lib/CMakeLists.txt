@@ -196,6 +196,7 @@ set(SRCS ${SRCS}
     tools/closedwindowsmanager.cpp
     tools/colors.cpp
     tools/delayedfilewatcher.cpp
+    tools/desktopfile.cpp
     tools/docktitlebarwidget.cpp
     tools/emptynetworkreply.cpp
     tools/enhancedmenu.cpp
