@@ -25,6 +25,8 @@ class BrowserWindow;
 class AdBlockPlugin : public QObject, public PluginInterface
 {
     Q_OBJECT
+    Q_INTERFACES(PluginInterface)
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.AdBlock")
 
 public:
     explicit AdBlockPlugin();
