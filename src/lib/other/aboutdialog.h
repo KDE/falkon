@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -37,15 +37,11 @@ public:
 
 private slots:
     void showAbout();
-    void showAuthors();
-    void buttonClicked();
 
 private:
     Ui::AboutDialog* ui;
 
     QString m_aboutHtml;
-    QString m_authorsHtml;
-    bool m_showingAuthors;
 };
 
 #endif // ABOUTDIALOG_H

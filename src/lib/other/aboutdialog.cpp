@@ -28,112 +28,35 @@
 AboutDialog::AboutDialog(QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::AboutDialog)
-    , m_showingAuthors(false)
 {
     setAttribute(Qt::WA_DeleteOnClose);
 
     ui->setupUi(this);
     ui->label->setPixmap(QIcon(QSL(":icons/other/about.png")).pixmap(300, 130));
 
-    connect(ui->buttonBox, SIGNAL(clicked(QAbstractButton*)), this, SLOT(close()));
-    connect(ui->authorsButton, SIGNAL(clicked()), this, SLOT(buttonClicked()));
-
     showAbout();
-}
-
-void AboutDialog::buttonClicked()
-{
-    if (m_showingAuthors)
-        showAbout();
-    else
-        showAuthors();
-}
-
-void AboutDialog::showAbout()
-{
-    m_showingAuthors = false;
-    ui->authorsButton->setText(tr("Authors and Contributors"));
-    if (m_aboutHtml.isEmpty()) {
-        m_aboutHtml += "<center><div style='margin:20px;'>";
-        m_aboutHtml += tr("<p><b>Application version %1</b><br/>").arg(
-#ifdef FALKON_GIT_REVISION
-                           QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)
-#else
-                           Qz::VERSION
-#endif
-                       );
-        m_aboutHtml += tr("<b>QtWebEngine version %1</b></p>").arg(qVersion());
-        m_aboutHtml += QString("<p>&copy; %1 %2<br/>").arg(Qz::COPYRIGHT, Qz::AUTHOR);
-        m_aboutHtml += QString("<a href=%1>%1</a></p>").arg(Qz::WWWADDRESS);
-        m_aboutHtml += "<p>" + mApp->userAgentManager()->defaultUserAgent() + "</p>";
-        m_aboutHtml += "</div></center>";
-    }
-    ui->textBrowser->setHtml(m_aboutHtml);
-}
-
-void AboutDialog::showAuthors()
-{
-    m_showingAuthors = true;
-    ui->authorsButton->setText(tr("< About Falkon"));
-    if (m_authorsHtml.isEmpty()) {
-        m_authorsHtml += "<center><div style='margin:10px;'>";
-        m_authorsHtml += tr("<p><b>Main developer:</b><br/>%1 &lt;%2&gt;</p>").arg(Qz::AUTHOR, "<a href=mailto:nowrep@gmail.com>nowrep@gmail.com</a>");
-        m_authorsHtml += tr("<p><b>Contributors:</b><br/>%1</p>").arg(
-                             QString::fromUtf8("Mladen Pejaković<br/>"
-                                               "Seyyed Razi Alavizadeh<br/>"
-                                               "Adrien Vigneron<br/>"
-                                               "Elio Qoshi<br/>"
-                                               "Alexander Samilov<br/>"
-                                               "Franz Fellner<br/>"
-                                               "Bryan M Dunsmore<br/>"
-                                               "Mariusz Fik<br/>"
-                                               "Daniele Cocca")
-                         );
-
-        m_authorsHtml += tr("<p><b>Translators:</b><br/>%1</p>").arg(
-                             QString::fromUtf8("Heimen Stoffels<br/>"
-                                               "Peter Vacula<br/>"
-                                               "Jonathan Hooverman<br/>"
-                                               "Federico Fabiani<br/>"
-                                               "Francesco Marinucci<br/>"
-                                               "Jorge Sevilla<br/>"
-                                               "Ștefan Comănescu<br/>"
-                                               "Michał Szymanowski<br/>"
-                                               "Mariusz Fik<br/>"
-                                               "Jérôme Giry<br/>"
-                                               "Nicolas Ourceau<br/>"
-                                               "Vasilis Tsivikis<br/>"
-                                               "Rustam Salakhutdinov<br/>"
-                                               "Oleg Brezhnev<br/>"
-                                               "Sérgio Marques<br/>"
-                                               "Alexandre Carvalho<br/>"
-                                               "Mladen Pejaković<br/>"
-                                               "Unink-Lio<br/>"
-                                               "Wu Cheng-Hong<br/>"
-                                               "Widya Walesa<br/>"
-                                               "Beqa Arabuli<br/>"
-                                               "Daiki Noda<br/>"
-                                               "Gábor Oberle<br/>"
-                                               "Piccoro McKay Lenz<br/>"
-                                               "Stanislav Kuznietsov<br/>"
-                                               "Seyyed Razi Alavizadeh<br/>"
-                                               "Guillem Prats<br/>"
-                                               "Clara Villalba<br/>"
-                                               "Yu Hai<br/>"
-                                               "Muhammad Fawwaz Orabi<br/>"
-                                               "Lasso Kante<br/>"
-                                               "Kizito Birabwa<br/>"
-                                               "Juan Carlos Sánchez<br/>"
-                                               "Xabier Aramendi<br/>"
-                                               "Ferhat AYDIN")
-                         );
-        m_authorsHtml += "</div></center>";
-    }
-
-    ui->textBrowser->setHtml(m_authorsHtml);
 }
 
 AboutDialog::~AboutDialog()
 {
     delete ui;
+}
+
+void AboutDialog::showAbout()
+{
+    QString aboutHtml;
+    aboutHtml += "<center><div style='margin:20px;'>";
+    aboutHtml += tr("<p><b>Application version %1</b><br/>").arg(
+#ifdef FALKON_GIT_REVISION
+                       QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)
+#else
+                       Qz::VERSION
+#endif
+                   );
+    aboutHtml += tr("<b>QtWebEngine version %1</b></p>").arg(qVersion());
+    aboutHtml += QString("<p>&copy; %1 %2<br/>").arg(Qz::COPYRIGHT, Qz::AUTHOR);
+    aboutHtml += QString("<a href=%1>%1</a></p>").arg(Qz::WWWADDRESS);
+    aboutHtml += "<p>" + mApp->userAgentManager()->defaultUserAgent() + "</p>";
+    aboutHtml += "</div></center>";
+    ui->textBrowser->setHtml(aboutHtml);
 }
