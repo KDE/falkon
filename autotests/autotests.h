@@ -30,3 +30,19 @@
         Test test; \
         return QTest::qExec(&test, argc, argv); \
     }
+
+bool waitForLoadfinished(QObject *object)
+{
+    if (qstrcmp(object->metaObject()->className(), "WebTab") == 0) {
+        QSignalSpy spy(object, SIGNAL(loadingChanged(bool)));
+        while (spy.wait()) {
+            if (spy.count() > 0 && spy.at(0).at(0).toBool()) {
+                return true;
+            }
+            spy.clear();
+        }
+        return false;
+    }
+    qDebug() << "Unsupported object" << object;
+    return false;
+}

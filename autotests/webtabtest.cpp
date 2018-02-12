@@ -19,8 +19,11 @@
 #include "autotests.h"
 #include "webtab.h"
 #include "tabwidget.h"
+#include "tabbedwebview.h"
 #include "mainapplication.h"
 #include "browserwindow.h"
+
+#include <QWebEngineHistory>
 
 void WebTabTest::initTestCase()
 {
@@ -246,6 +249,28 @@ void WebTabTest::moveTabTest()
     tab4->moveTab(5);
     tab4->moveTab(6);
     QCOMPARE(movedSpy.count(), 0);
+
+    delete w;
+}
+
+void WebTabTest::loadNotRestoredTabTest()
+{
+    WebTab tab;
+
+    tab.load(QUrl("qrc:autotests/data/basic_page.html"));
+    QVERIFY(waitForLoadfinished(&tab));
+    QTRY_COMPARE(tab.webView()->history()->count(), 1);
+
+    tab.unload();
+    QVERIFY(!tab.isRestored());
+
+    tab.load(QUrl("qrc:autotests/data/basic_page2.html"));
+    QVERIFY(waitForLoadfinished(&tab));
+    QTRY_COMPARE(tab.webView()->history()->count(), 2);
+
+    QCOMPARE(tab.url(), QUrl("qrc:autotests/data/basic_page2.html"));
+    QCOMPARE(tab.webView()->history()->currentItem().url(), QUrl("qrc:autotests/data/basic_page2.html"));
+    QCOMPARE(tab.webView()->history()->backItem().url(), QUrl("qrc:autotests/data/basic_page.html"));
 }
 
 FALKONTEST_MAIN(WebTabTest)
