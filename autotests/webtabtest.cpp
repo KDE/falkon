@@ -18,7 +18,9 @@
 #include "webtabtest.h"
 #include "autotests.h"
 #include "webtab.h"
+#include "tabwidget.h"
 #include "mainapplication.h"
+#include "browserwindow.h"
 
 void WebTabTest::initTestCase()
 {
@@ -132,6 +134,118 @@ void WebTabTest::prependChildTabsTest()
     tab3.addChildTab(&tab2);
     QCOMPARE(tab3.childTabs(), (QVector<WebTab*>{&tab2, &tab4}));
     QCOMPARE(tab1.childTabs(), (QVector<WebTab*>{&tab3, &tab6, &tab5}));
+}
+
+void WebTabTest::moveTabTest()
+{
+    BrowserWindow *w = mApp->createWindow(Qz::BW_NewWindow);
+
+    QSignalSpy movedSpy(w->tabWidget(), &TabWidget::tabMoved);
+
+    w->tabWidget()->addView(QUrl());
+    w->tabWidget()->addView(QUrl());
+    w->tabWidget()->addView(QUrl());
+    w->tabWidget()->addView(QUrl());
+    QTRY_COMPARE(w->tabWidget()->count(), 5);
+
+    WebTab *tab0 = w->tabWidget()->webTab(0);
+    WebTab *tab1 = w->tabWidget()->webTab(1);
+    WebTab *tab2 = w->tabWidget()->webTab(2);
+    WebTab *tab3 = w->tabWidget()->webTab(3);
+    WebTab *tab4 = w->tabWidget()->webTab(4);
+
+    movedSpy.clear();
+    tab0->moveTab(2); // 1, 2, 0, 3, 4
+    QCOMPARE(movedSpy.count(), 1);
+    QCOMPARE(movedSpy.at(0).at(0).toInt(), 0);
+    QCOMPARE(movedSpy.at(0).at(1).toInt(), 2);
+
+    QCOMPARE(w->tabWidget()->webTab(0), tab1);
+    QCOMPARE(w->tabWidget()->webTab(1), tab2);
+    QCOMPARE(w->tabWidget()->webTab(2), tab0);
+    QCOMPARE(w->tabWidget()->webTab(3), tab3);
+    QCOMPARE(w->tabWidget()->webTab(4), tab4);
+
+    movedSpy.clear();
+    tab4->moveTab(0); // 4, 1, 2, 0, 3
+    QCOMPARE(movedSpy.count(), 1);
+    QCOMPARE(movedSpy.at(0).at(0).toInt(), 4);
+    QCOMPARE(movedSpy.at(0).at(1).toInt(), 0);
+
+    tab4->togglePinned(); // [4], 1, 2, 0, 3
+
+    movedSpy.clear();
+    tab2->moveTab(0); // [2, 4], 1, 0, 3
+    QCOMPARE(tab2->isPinned(), true);
+    QCOMPARE(movedSpy.count(), 1);
+    QCOMPARE(movedSpy.at(0).at(0).toInt(), 2);
+    QCOMPARE(movedSpy.at(0).at(1).toInt(), 0);
+
+    movedSpy.clear();
+    tab0->moveTab(1); // [2, 0, 4], 1, 3
+    QCOMPARE(tab0->isPinned(), true);
+    QCOMPARE(movedSpy.count(), 1);
+    QCOMPARE(movedSpy.at(0).at(0).toInt(), 3);
+    QCOMPARE(movedSpy.at(0).at(1).toInt(), 1);
+
+    QCOMPARE(w->tabWidget()->webTab(0), tab2);
+    QCOMPARE(w->tabWidget()->webTab(1), tab0);
+    QCOMPARE(w->tabWidget()->webTab(2), tab4);
+    QCOMPARE(w->tabWidget()->webTab(3), tab1);
+    QCOMPARE(w->tabWidget()->webTab(4), tab3);
+
+    movedSpy.clear();
+    tab0->moveTab(0); // [0, 2, 4], 1, 3
+    QCOMPARE(movedSpy.count(), 1);
+    QCOMPARE(movedSpy.at(0).at(0).toInt(), 1);
+    QCOMPARE(movedSpy.at(0).at(1).toInt(), 0);
+
+    QCOMPARE(w->tabWidget()->webTab(0), tab0);
+    QCOMPARE(w->tabWidget()->webTab(1), tab2);
+    QCOMPARE(w->tabWidget()->webTab(2), tab4);
+    QCOMPARE(w->tabWidget()->webTab(3), tab1);
+    QCOMPARE(w->tabWidget()->webTab(4), tab3);
+
+    movedSpy.clear();
+    tab0->moveTab(3); // [2, 4], 1, 0, 3
+    QCOMPARE(tab0->isPinned(), false);
+    QCOMPARE(movedSpy.count(), 1);
+    QCOMPARE(movedSpy.at(0).at(0).toInt(), 0);
+    QCOMPARE(movedSpy.at(0).at(1).toInt(), 3);
+
+    QCOMPARE(w->tabWidget()->webTab(0), tab2);
+    QCOMPARE(w->tabWidget()->webTab(1), tab4);
+    QCOMPARE(w->tabWidget()->webTab(2), tab1);
+    QCOMPARE(w->tabWidget()->webTab(3), tab0);
+    QCOMPARE(w->tabWidget()->webTab(4), tab3);
+
+    movedSpy.clear();
+    tab2->moveTab(4); // [4], 1, 0, 3, 2
+    QCOMPARE(tab0->isPinned(), false);
+    QCOMPARE(movedSpy.count(), 1);
+    QCOMPARE(movedSpy.at(0).at(0).toInt(), 0);
+    QCOMPARE(movedSpy.at(0).at(1).toInt(), 4);
+
+    movedSpy.clear();
+    tab4->moveTab(2); // 1, 0, 4, 3, 2
+    QCOMPARE(tab0->isPinned(), false);
+    QCOMPARE(movedSpy.count(), 1);
+    QCOMPARE(movedSpy.at(0).at(0).toInt(), 0);
+    QCOMPARE(movedSpy.at(0).at(1).toInt(), 2);
+
+    QCOMPARE(w->tabWidget()->webTab(0), tab1);
+    QCOMPARE(w->tabWidget()->webTab(1), tab0);
+    QCOMPARE(w->tabWidget()->webTab(2), tab4);
+    QCOMPARE(w->tabWidget()->webTab(3), tab3);
+    QCOMPARE(w->tabWidget()->webTab(4), tab2);
+
+    // Invalid moves
+    movedSpy.clear();
+    tab4->moveTab(tab4->tabIndex());
+    tab4->moveTab(-1);
+    tab4->moveTab(5);
+    tab4->moveTab(6);
+    QCOMPARE(movedSpy.count(), 0);
 }
 
 FALKONTEST_MAIN(WebTabTest)

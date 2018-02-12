@@ -528,7 +528,9 @@ void TabWidget::tabWasMoved(int before, int after)
     m_lastBackgroundTab = nullptr;
 
     emit changed();
-    emit tabMoved(before, after);
+    if (!m_blockTabMovedSignal) {
+        emit tabMoved(before, after);
+    }
 }
 
 void TabWidget::setCurrentIndex(int index)
@@ -651,21 +653,27 @@ void TabWidget::closeToLeft(int index)
 
 void TabWidget::moveTab(int from, int to)
 {
+    if (!validIndex(to) || from == to) {
+        return;
+    }
     WebTab *tab = webTab(from);
     if (!tab) {
         return;
     }
+    m_blockTabMovedSignal = true;
     // (Un)pin tab when needed
     if ((tab->isPinned() && to >= pinnedTabsCount()) || (!tab->isPinned() && to < pinnedTabsCount())) {
         tab->togglePinned();
     }
     TabStackedWidget::moveTab(tab->tabIndex(), to);
+    m_blockTabMovedSignal = false;
+    emit tabMoved(from, to);
 }
 
 int TabWidget::pinUnPinTab(int index, const QString &title)
 {
     const int newIndex = TabStackedWidget::pinUnPinTab(index, title);
-    if (index != newIndex) {
+    if (index != newIndex && !m_blockTabMovedSignal) {
         emit tabMoved(index, newIndex);
     }
     return newIndex;

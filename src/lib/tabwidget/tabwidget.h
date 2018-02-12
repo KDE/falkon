@@ -179,6 +179,7 @@ private:
     QUrl m_urlOnNewTab;
 
     bool m_currentTabFresh;
+    bool m_blockTabMovedSignal = false;
 };
 
 #endif // TABWIDGET_H
