@@ -73,7 +73,7 @@ void WebViewTest::loadSignalsChangePageTest()
     QSignalSpy loadStartedSpy(&view, &WebView::loadStarted);
     QSignalSpy loadFinishedSpy(&view, &WebView::loadFinished);
 
-    view.load(QUrl(":autotests/data/basic_page.html"));
+    view.load(QUrl("qrc:autotests/data/basic_page.html"));
 
     QTRY_COMPARE(loadStartedSpy.count(), 1);
     loadStartedSpy.clear();
@@ -93,7 +93,7 @@ void WebViewTest::loadSignalsChangePageTest()
     view2.setPage(page3);
 
     QSignalSpy page3LoadStart(page3, &WebPage::loadStarted);
-    page3->load(QUrl(":autotests/data/basic_page.html"));
+    page3->load(QUrl("qrc:autotests/data/basic_page.html"));
     QVERIFY(page3LoadStart.wait());
 
     view2.setPage(new QWebEnginePage(&view2));
