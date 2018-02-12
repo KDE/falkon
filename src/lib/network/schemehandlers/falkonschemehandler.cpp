@@ -222,57 +222,6 @@ QString FalkonSchemeReply::aboutPage()
 
         aPage.replace(QLatin1String("%MAIN-DEVELOPER%"), tr("Main developer"));
         aPage.replace(QLatin1String("%MAIN-DEVELOPER-TEXT%"), authorString(Qz::AUTHOR, "nowrep@gmail.com"));
-        aPage.replace(QLatin1String("%CONTRIBUTORS%"), tr("Contributors"));
-        aPage.replace(QLatin1String("%CONTRIBUTORS-TEXT%"),
-                      authorString("Mladen Pejaković", "pejakm@autistici.org") + "<br/>" +
-                      authorString("Adrien Vigneron", "adrienvigneron@ml1.net") + "<br/>" +
-                      authorString("Elio Qoshi", "ping@elioqoshi.me") + "<br/>" +
-                      authorString("Seyyed Razi Alavizadeh", "s.r.alavizadeh@gmail.com") + "<br/>" +
-                      authorString("Alexander Samilov", "alexsamilovskih@gmail.com") + "<br/>" +
-                      authorString("Franz Fellner", "alpine.art.de@googlemail.com") + "<br/>" +
-                      authorString("Bryan M Dunsmore", "dunsmoreb@gmail.com") + "<br/>" +
-                      authorString("Mariusz Fik", "fisiu@opensuse.org") + "<br/>" +
-                      authorString("Daniele Cocca", "jmc@chakra-project.org")
-                     );
-        aPage.replace(QLatin1String("%TRANSLATORS%"), tr("Translators"));
-        aPage.replace(QLatin1String("%TRANSLATORS-TEXT%"),
-                      authorString("Heimen Stoffels", "vistausss@gmail.com") + " (Dutch)<br/>" +
-                      authorString("Peter Vacula", "pvacula1989@gmail.com") + " (Slovak)<br/>" +
-                      authorString("Ján Ďanovský", "dagsoftware@yahoo.com") + " (Slovak)<br/>" +
-                      authorString("Jonathan Hooverman", "jonathan.hooverman@gmail.com") + " (German)<br/>" +
-                      authorString("Federico Fabiani", "federico.fabiani85@gmail.com") + " (Italian)<br/>" +
-                      authorString("Francesco Marinucci", "framarinucci@gmail.com") + " (Italian)<br/>" +
-                      authorString("Jorge Sevilla", "jsevi@ozu.es") + " (Spanish)<br/>" +
-                      authorString("Ștefan Comănescu", "sdfanq@gmail.com") + " (Romanian)<br/>" +
-                      authorString("Michał Szymanowski", "tylkobuba@gmail.com") + " (Polish)<br/>" +
-                      authorString("Mariusz Fik", "fisiu@opensuse.org") + " (Polish)<br/>" +
-                      authorString("Jérôme Giry", "baikalink@hotmail.fr") + " (French)<br/>" +
-                      authorString("Nicolas Ourceau", "lamessen@hotmail.fr") + " (French)<br/>" +
-                      authorString("Vasilis Tsivikis", "vasitsiv.dev@gmail.com") + " (Greek)<br/>" +
-                      authorString("Rustam Salakhutdinov", "salahutd@gmail.com") + " (Russian)<br/>" +
-                      authorString("Oleg Brezhnev", "oleg-423@yandex.ru") + " (Russian)<br/>" +
-                      authorString("Sérgio Marques", "smarquespt@gmail.com") + " (Portuguese)<br/>" +
-                      authorString("Alexandre Carvalho", "alexandre05@live.com") + " (Brazilian Portuguese)<br/>" +
-                      authorString("Mladen Pejaković", "pejakm@autistici.org") + " (Serbian)<br/>" +
-                      authorString("Unink-Lio", "unink4451@163.com") + " (Chinese)<br/>" +
-                      authorString("Yu Hai", "yohanprc@eml.cc") + " (Chinese)<br/>" +
-                      authorString("Wu Cheng-Hong", "stu2731652@gmail.com") + " (Traditional Chinese)<br/>" +
-                      authorString("Widya Walesa", "walecha99@gmail.com") + " (Indonesian)<br/>" +
-                      authorString("Beqa Arabuli", "arabulibeqa@gmail.com") + " (Georgian)<br/>" +
-                      authorString("Daiki Noda", "sys.pdr.pdm9@gmail.com") + " (Japanese)<br/>" +
-                      authorString("Gábor Oberle", "oberleg@myopera.com") + " (Hungarian)<br/>" +
-                      authorString("Piccoro McKay Lenz", "mckaygerhard@gmail.com") + " (Venezuelan Spanish)<br/>" +
-                      authorString("Stanislav Kuznietsov", "stanislav_kuznetsov@ukr.net") + " (Ukrainian)<br/>" +
-                      authorString("Seyyed Razi Alavizadeh", "s.r.alavizadeh@gmail.com") + " (Persian)<br/>" +
-                      authorString("Guillem Prats", "guprej@gmail.com") + " (Catalan)<br/>" +
-                      authorString("Clara Villalba", "cvilmon@gmail.com") + " (Catalan)<br/>" +
-                      authorString("Muhammad Fawwaz Orabi", "mfawwaz93@gmail.com") + " (Arabic)<br/>" +
-                      authorString("Lasso Kante", "kantemou@gmail.com") + " (N'ko)<br/>" +
-                      authorString("Kizito Birabwa", "kbirabwa@yahoo.co.uk") + " (Luganda)<br/>" +
-                      authorString("Juan Carlos Sánchez", "hollow1984angel@gmail.com") + " (Mexican Spanish)<br/>" +
-                      authorString("Xabier Aramendi", "azpidatziak@gmail.com") + " (Basque)<br/>" +
-                      authorString("Ferhat AYDIN", "ferhataydin44@gmail.com") + " (Turkish)"
-                     );
         aPage = QzTools::applyDirectionToPage(aPage);
     }
 
