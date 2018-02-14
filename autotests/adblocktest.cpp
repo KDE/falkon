@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2013  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -17,6 +17,7 @@
 * ============================================================ */
 #include "adblocktest.h"
 #include "adblockrule.h"
+#include "adblocksubscription.h"
 
 #include <QtTest/QtTest>
 
@@ -106,6 +107,18 @@ void AdBlockTest::parseRegExpFilterTest()
     QFETCH(QStringList, result);
 
     QCOMPARE(rule_test.parseRegExpFilter(parsedFilter), result);
+}
+
+void AdBlockTest::ignoreEmptyLinesInSubscriptionTest()
+{
+    AdBlockSubscription subscription("test-subscription");
+    subscription.setFilePath(":autotests/data/adblock_empty_lines.txt");
+    subscription.loadSubscription({});
+
+    QCOMPARE(subscription.allRules().count(), 3);
+    QCOMPARE(subscription.allRules().at(0)->filter(), QString("filter.com"));
+    QCOMPARE(subscription.allRules().at(1)->filter(), QString("test"));
+    QCOMPARE(subscription.allRules().at(2)->isComment(), true);
 }
 
 QTEST_GUILESS_MAIN(AdBlockTest)

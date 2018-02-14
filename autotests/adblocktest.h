@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -27,10 +27,10 @@ class AdBlockTest : public QObject
 private slots:
     void isMatchingCookieTest_data();
     void isMatchingCookieTest();
-
     void parseRegExpFilterTest_data();
     void parseRegExpFilterTest();
 
+    void ignoreEmptyLinesInSubscriptionTest();
 };
 
 #endif // ADBLOCKTEST_H
