@@ -32,4 +32,5 @@ private slots:
     void prependChildTabsTest();
     void moveTabTest();
     void loadNotRestoredTabTest();
+    void saveNotRestoredTabTest();
 };

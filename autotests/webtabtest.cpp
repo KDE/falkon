@@ -273,4 +273,20 @@ void WebTabTest::loadNotRestoredTabTest()
     QCOMPARE(tab.webView()->history()->backItem().url(), QUrl("qrc:autotests/data/basic_page.html"));
 }
 
+void WebTabTest::saveNotRestoredTabTest()
+{
+    WebTab tab;
+
+    tab.load(QUrl("qrc:autotests/data/basic_page.html"));
+    QVERIFY(waitForLoadfinished(&tab));
+    QTRY_COMPARE(tab.webView()->history()->count(), 1);
+
+    tab.unload();
+    QVERIFY(!tab.isRestored());
+
+    WebTab::SavedTab saved(&tab);
+    QVERIFY(saved.isValid());
+    QCOMPARE(saved.url, QUrl("qrc:autotests/data/basic_page.html"));
+}
+
 FALKONTEST_MAIN(WebTabTest)
