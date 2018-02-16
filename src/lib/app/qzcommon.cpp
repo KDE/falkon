@@ -21,7 +21,6 @@
 namespace Qz
 {
 const int sessionVersion = 0x0004;
-const int bookmarksVersion = 1;
 
 FALKON_EXPORT const char *APPNAME = "Falkon";
 FALKON_EXPORT const char *VERSION = FALKON_VERSION;

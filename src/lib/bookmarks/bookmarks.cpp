@@ -27,6 +27,8 @@
 #include <QSaveFile>
 #include <QJsonDocument>
 
+static const int bookmarksVersion = 1;
+
 Bookmarks::Bookmarks(QObject* parent)
     : QObject(parent)
     , m_autoSaver(0)
@@ -282,7 +284,7 @@ void Bookmarks::saveBookmarks()
 #undef WRITE_FOLDER
 
     QVariantMap map;
-    map.insert("version", Qz::bookmarksVersion);
+    map.insert("version", bookmarksVersion);
     map.insert("roots", bookmarksMap);
 
     const QJsonDocument json = QJsonDocument::fromVariant(map);

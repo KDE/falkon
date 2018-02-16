@@ -52,9 +52,6 @@ namespace Qz
 // Version of session.dat file
 extern const int sessionVersion;
 
-// Version of bookmarks.json file
-extern const int bookmarksVersion;
-
 FALKON_EXPORT extern const char *APPNAME;
 FALKON_EXPORT extern const char *VERSION;
 FALKON_EXPORT extern const char *AUTHOR;
