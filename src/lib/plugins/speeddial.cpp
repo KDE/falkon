@@ -63,10 +63,11 @@ void SpeedDial::loadSettings()
     settings.endGroup();
 
     if (allPages.isEmpty()) {
-        allPages = "url:\"https://www.qupzilla.com\"|title:\"QupZilla\";"
-                   "url:\"http://blog.qupzilla.com\"|title:\"QupZilla Blog\";"
-                   "url:\"https://github.com/QupZilla/qupzilla\"|title:\"QupZilla GitHub\";"
+        allPages = "url:\"https:/kde.org\"|title:\"KDE Community Home\";"
+                   "url:\"https://phabricator.kde.org/source/falkon/\"|title:\"Falkon Git\";"
+                   "url:\"https://bugs.kde.org/describecomponents.cgi?product=Falkon\"|title:\"Falkon Bug Tracker\";"
                    "url:\"https://duckduckgo.com\"|title:\"DuckDuckGo\";";
+
     }
     changed(allPages);
 
