@@ -51,7 +51,7 @@ void FalkonSchemeHandler::requestStarted(QWebEngineUrlRequestJob *job)
     }
 
     QStringList knownPages;
-    knownPages << "about" << "reportbug" << "start" << "speeddial" << "config" << "restore";
+    knownPages << "about" << "start" << "speeddial" << "config" << "restore";
 
     if (knownPages.contains(job->requestUrl().path()))
         job->reply(QByteArrayLiteral("text/html"), new FalkonSchemeReply(job));
@@ -72,6 +72,9 @@ bool FalkonSchemeHandler::handleRequest(QWebEngineUrlRequestJob *job)
         }
         mApp->destroyRestoreManager();
         job->redirect(QUrl(QSL("falkon:start")));
+        return true;
+    } else if (job->requestUrl().path() == QL1S("reportbug")) {
+        job->redirect(QUrl(Qz::BUGSADDRESS));
         return true;
     }
 
@@ -99,9 +102,6 @@ void FalkonSchemeReply::loadPage()
 
     if (m_pageName == QLatin1String("about")) {
         stream << aboutPage();
-    }
-    else if (m_pageName == QLatin1String("reportbug")) {
-        stream << reportbugPage();
     }
     else if (m_pageName == QLatin1String("start")) {
         stream << startPage();
@@ -138,42 +138,6 @@ qint64 FalkonSchemeReply::writeData(const char *data, qint64 len)
     Q_UNUSED(len);
 
     return 0;
-}
-
-QString FalkonSchemeReply::reportbugPage()
-{
-    static QString bPage;
-
-    if (!bPage.isEmpty()) {
-        return bPage;
-    }
-
-    bPage.append(QzTools::readAllFileContents(":html/reportbug.html"));
-    bPage.replace(QLatin1String("%TITLE%"), tr("Report Issue"));
-    bPage.replace(QLatin1String("%REPORT-ISSUE%"), tr("Report Issue"));
-    bPage.replace(QLatin1String("%PLUGINS-TEXT%"), tr("If you are experiencing problems with Falkon, please try to disable"
-                  " all extensions first. <br/>If this does not fix it, then please fill out this form: "));
-    bPage.replace(QLatin1String("%EMAIL%"), tr("Your E-mail"));
-    bPage.replace(QLatin1String("%TYPE%"), tr("Issue type"));
-    bPage.replace(QLatin1String("%DESCRIPTION%"), tr("Issue description"));
-    bPage.replace(QLatin1String("%SEND%"), tr("Send"));
-    bPage.replace(QLatin1String("%E-MAIL-OPTIONAL%"), tr("E-mail is optional<br/><b>Note: </b>Please read how to make a "
-                  "bug report <a href=%1>here</a> first.").arg("https://github.com/QupZilla/qupzilla/wiki/Bug-Reports target=_blank"));
-    bPage.replace(QLatin1String("%FIELDS-ARE-REQUIRED%"), tr("Please fill out all required fields!"));
-
-    bPage.replace(QLatin1String("%INFO_OS%"), QzTools::operatingSystemLong());
-    bPage.replace(QLatin1String("%INFO_APP%"),
-#ifdef FALKON_GIT_REVISION
-                  QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)
-#else
-                  Qz::VERSION
-#endif
-                 );
-    bPage.replace(QLatin1String("%INFO_QT%"), QString("%1 (built with %2)").arg(qVersion(), QT_VERSION_STR));
-    bPage.replace(QLatin1String("%INFO_WEBKIT%"), QSL("QtWebEngine")),
-                  bPage = QzTools::applyDirectionToPage(bPage);
-
-    return bPage;
 }
 
 QString FalkonSchemeReply::startPage()

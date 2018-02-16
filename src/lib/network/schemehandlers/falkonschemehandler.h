@@ -51,7 +51,6 @@ private slots:
 
 private:
     QString aboutPage();
-    QString reportbugPage();
     QString startPage();
     QString speeddialPage();
     QString restorePage();
