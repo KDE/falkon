@@ -58,6 +58,7 @@ FALKON_EXPORT extern const char *AUTHOR;
 FALKON_EXPORT extern const char *COPYRIGHT;
 FALKON_EXPORT extern const char *WWWADDRESS;
 FALKON_EXPORT extern const char *BUGSADDRESS;
+FALKON_EXPORT extern const char *WIKIADDRESS;
 
 enum BrowserWindowType {
     BW_FirstAppWindow,

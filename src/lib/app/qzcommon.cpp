@@ -28,4 +28,5 @@ FALKON_EXPORT const char *AUTHOR = "David Rosca";
 FALKON_EXPORT const char *COPYRIGHT = "2010-2018";
 FALKON_EXPORT const char *WWWADDRESS = "https://kde.org";
 FALKON_EXPORT const char *BUGSADDRESS = "https://bugs.kde.org/describecomponents.cgi?product=Falkon";
+FALKON_EXPORT const char *WIKIADDRESS = "https://userbase.kde.org/Falkon";
 }
