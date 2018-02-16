@@ -155,12 +155,12 @@ void WebView::setPage(WebPage *page)
             emit m_page->loadFinished(true);
         }
         m_page->setView(nullptr);
-        m_page->deleteLater();
     }
 
+    page->setParent(this);
+    QWebEngineView::setPage(page);
+    delete m_page;
     m_page = page;
-    m_page->setParent(this);
-    QWebEngineView::setPage(m_page);
 
     if (m_page->isLoading()) {
         emit loadStarted();
