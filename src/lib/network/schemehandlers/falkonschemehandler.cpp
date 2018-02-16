@@ -190,7 +190,7 @@ QString FalkonSchemeReply::startPage()
     sPage.replace(QLatin1String("%TITLE%"), tr("Start Page"));
     sPage.replace(QLatin1String("%BUTTON-LABEL%"), tr("Search on Web"));
     sPage.replace(QLatin1String("%SEARCH-BY%"), tr("Search results provided by DuckDuckGo"));
-    sPage.replace(QLatin1String("%WWW%"), Qz::WIKIADDRESS);
+    sPage.replace(QLatin1String("%WWW%"), Qz::WWWADDRESS);
     sPage.replace(QLatin1String("%ABOUT-FALKON%"), tr("About Falkon"));
     sPage.replace(QLatin1String("%PRIVATE-BROWSING%"), mApp->isPrivate() ? tr("<h1>Private Browsing</h1>") : QString());
     sPage = QzTools::applyDirectionToPage(sPage);

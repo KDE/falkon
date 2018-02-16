@@ -23,10 +23,10 @@ namespace Qz
 const int sessionVersion = 0x0004;
 const int bookmarksVersion = 1;
 
-FALKON_EXPORT const char* APPNAME = "Falkon";
-FALKON_EXPORT const char* VERSION = FALKON_VERSION;
-FALKON_EXPORT const char* AUTHOR = "David Rosca";
-FALKON_EXPORT const char* COPYRIGHT = "2010-2018";
-FALKON_EXPORT const char* WWWADDRESS = "https://www.qupzilla.com";
-FALKON_EXPORT const char* WIKIADDRESS = "https://github.com/QupZilla/qupzilla/wiki";
+FALKON_EXPORT const char *APPNAME = "Falkon";
+FALKON_EXPORT const char *VERSION = FALKON_VERSION;
+FALKON_EXPORT const char *AUTHOR = "David Rosca";
+FALKON_EXPORT const char *COPYRIGHT = "2010-2018";
+FALKON_EXPORT const char *WWWADDRESS = "https://kde.org";
+FALKON_EXPORT const char *BUGSADDRESS = "https://bugs.kde.org/describecomponents.cgi?product=Falkon";
 }

@@ -55,12 +55,12 @@ extern const int sessionVersion;
 // Version of bookmarks.json file
 extern const int bookmarksVersion;
 
-FALKON_EXPORT extern const char* APPNAME;
-FALKON_EXPORT extern const char* VERSION;
-FALKON_EXPORT extern const char* AUTHOR;
-FALKON_EXPORT extern const char* COPYRIGHT;
-FALKON_EXPORT extern const char* WWWADDRESS;
-FALKON_EXPORT extern const char* WIKIADDRESS;
+FALKON_EXPORT extern const char *APPNAME;
+FALKON_EXPORT extern const char *VERSION;
+FALKON_EXPORT extern const char *AUTHOR;
+FALKON_EXPORT extern const char *COPYRIGHT;
+FALKON_EXPORT extern const char *WWWADDRESS;
+FALKON_EXPORT extern const char *BUGSADDRESS;
 
 enum BrowserWindowType {
     BW_FirstAppWindow,
