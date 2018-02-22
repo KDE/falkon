@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2015-2017 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2015-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -33,12 +33,12 @@ WebHitTestResult::WebHitTestResult(const WebPage *page, const QPoint &pos)
                           "if (!e)"
                           "    return;"
                           "function isMediaElement(e) {"
-                          "    return e.tagName == 'AUDIO' || e.tagName == 'VIDEO';"
+                          "    return e.tagName.toLowerCase() == 'audio' || e.tagName.toLowerCase() == 'video';"
                           "}"
                           "function isEditableElement(e) {"
                           "    if (e.isContentEditable)"
                           "        return true;"
-                          "    if (e.tagName == 'INPUT' || e.tagName == 'TEXTAREA')"
+                          "    if (e.tagName.toLowerCase() == 'input' || e.tagName.toLowerCase() == 'textarea')"
                           "        return e.getAttribute('readonly') != 'readonly';"
                           "    return false;"
                           "}"
@@ -62,16 +62,16 @@ WebHitTestResult::WebHitTestResult(const WebPage *page, const QPoint &pos)
                           "};"
                           "var r = e.getBoundingClientRect();"
                           "res.boundingRect = [r.top, r.left, r.width, r.height];"
-                          "if (e.tagName == 'IMG')"
+                          "if (e.tagName.toLowerCase() == 'img')"
                           "    res.imageUrl = e.getAttribute('src');"
-                          "if (e.tagName == 'A') {"
+                          "if (e.tagName.toLowerCase() == 'a') {"
                           "    res.linkTitle = e.text;"
                           "    res.linkUrl = e.getAttribute('href');"
                           "}"
                           "while (e) {"
-                          "    if (res.linkTitle == '' && e.tagName == 'A')"
+                          "    if (res.linkTitle == '' && e.tagName.toLowerCase() == 'a')"
                           "        res.linkTitle = e.text;"
-                          "    if (res.linkUrl == '' && e.tagName == 'A')"
+                          "    if (res.linkUrl == '' && e.tagName.toLowerCase() == 'a')"
                           "        res.linkUrl = e.getAttribute('href');"
                           "    if (res.mediaUrl == '' && isMediaElement(e)) {"
                           "        res.mediaUrl = e.currentSrc;"
