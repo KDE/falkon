@@ -88,13 +88,6 @@ void Plugins::loadSettings()
     settings.beginGroup("Plugin-Settings");
     m_allowedPlugins = settings.value("AllowedPlugins", QStringList()).toStringList();
     settings.endGroup();
-
-    // Plugins are saved with relative path in portable mode
-    if (mApp->isPortable()) {
-        QDir dir(DataPaths::path(DataPaths::Plugins));
-        for (int i = 0; i < m_allowedPlugins.count(); ++i)
-            m_allowedPlugins[i] = dir.absoluteFilePath(QFileInfo(m_allowedPlugins[i]).fileName());
-    }
 }
 
 void Plugins::shutdown()
@@ -111,7 +104,24 @@ void Plugins::loadPlugins()
         settingsDir.mkdir(settingsDir.absolutePath());
     }
 
-    foreach (const QString &fullPath, m_allowedPlugins) {
+    foreach (const QString &pluginFile, m_allowedPlugins) {
+        QString fullPath;
+        if (QFileInfo(pluginFile).isAbsolute()) {
+            fullPath = pluginFile;
+        } else {
+            const QStringList dirs = DataPaths::allPaths(DataPaths::Plugins);
+            for (const QString &dir : dirs) {
+                fullPath = dir + QL1C('/') + pluginFile;
+                if (QFileInfo::exists(fullPath)) {
+                    break;
+                }
+            }
+            if (!QFileInfo::exists(fullPath)) {
+                qWarning() << "Plugin" << pluginFile << "not found";
+                continue;
+            }
+        }
+
         QPluginLoader* loader = new QPluginLoader(fullPath);
         PluginInterface* iPlugin = qobject_cast<PluginInterface*>(loader->instance());
 

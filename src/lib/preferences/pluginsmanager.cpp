@@ -74,16 +74,7 @@ void PluginsManager::save()
 
         if (item->checkState() == Qt::Checked) {
             const Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
-
-            // Save plugins with relative path in portable mode
-#ifdef NO_SYSTEM_DATAPATH
-            if (true)
-#else
-            if (mApp->isPortable())
-#endif
-                allowedPlugins.append(plugin.fileName);
-            else
-                allowedPlugins.append(plugin.fullPath);
+            allowedPlugins.append(plugin.fileName);
         }
     }
 
