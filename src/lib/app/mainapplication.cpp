@@ -112,7 +112,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     setApplicationName(QLatin1String("falkon"));
     setOrganizationDomain(QLatin1String("org.kde"));
-    setWindowIcon(QIcon::fromTheme(QSL("qupzilla"), QIcon(QSL(":icons/exeicons/qupzilla-window.png"))));
+    setWindowIcon(QIcon::fromTheme(QSL("falkon"), QIcon(QSL(":icons/falkon.svg"))));
     setDesktopFileName(QSL("org.kde.falkon"));
 
 #ifdef GIT_REVISION
@@ -1240,8 +1240,8 @@ void MainApplication::createJumpList()
 void MainApplication::initPulseSupport()
 {
     qputenv("PULSE_PROP_OVERRIDE_application.name", "Falkon");
-    qputenv("PULSE_PROP_OVERRIDE_application.icon_name", "qupzilla");
-    qputenv("PULSE_PROP_OVERRIDE_media.icon_name", "qupzilla");
+    qputenv("PULSE_PROP_OVERRIDE_application.icon_name", "falkon");
+    qputenv("PULSE_PROP_OVERRIDE_media.icon_name", "falkon");
 }
 
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)

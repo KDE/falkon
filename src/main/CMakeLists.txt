@@ -20,7 +20,7 @@ if (APPLE)
     set_target_properties(falkon PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/main/Info.plist)
     set_target_properties(falkon PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.falkon")
     set_target_properties(falkon PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "Falkon")
-    install(FILES lib/data/icons/exeicons/qupzilla.icns DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
+    install(FILES lib/data/icons/exeicons/falkon.icns DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
     #install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/locale DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
     install(DIRECTORY ${CMAKE_SOURCE_DIR}/themes DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
     install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/plugins DESTINATION ${BUNDLE_INSTALL_DIR}/falkon.app/Contents/Resources)
@@ -37,15 +37,16 @@ if (UNIX AND NOT APPLE)
 
     install(PROGRAMS ../../linux/applications/org.kde.falkon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
-    install(FILES ../../linux/pixmaps/qupzilla.png DESTINATION ${KDE_INSTALL_DATADIR}/pixmaps)
+    install(FILES ../../linux/pixmaps/falkon.png DESTINATION ${KDE_INSTALL_DATADIR}/pixmaps)
 
     ecm_install_icons(ICONS
-        ../../linux/hicolor/16-apps-qupzilla.png
-        ../../linux/hicolor/32-apps-qupzilla.png
-        ../../linux/hicolor/48-apps-qupzilla.png
-        ../../linux/hicolor/64-apps-qupzilla.png
-        ../../linux/hicolor/128-apps-qupzilla.png
-        ../../linux/hicolor/256-apps-qupzilla.png
+        ../../linux/hicolor/16-apps-falkon.png
+        ../../linux/hicolor/32-apps-falkon.png
+        ../../linux/hicolor/48-apps-falkon.png
+        ../../linux/hicolor/64-apps-falkon.png
+        ../../linux/hicolor/128-apps-falkon.png
+        ../../linux/hicolor/256-apps-falkon.png
+        ../../linux/hicolor/sc-apps-falkon.svg
         DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor)
 
     install(FILES ../../linux/completion/falkon DESTINATION ${KDE_INSTALL_DATADIR}/bash-completion/completions)

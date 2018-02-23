@@ -281,8 +281,8 @@ for LNKS in {libssl.so,libssl.so.10,libssl.so.1.0.0} ; do
 done
 
 cp ../linux/applications/org.kde.falkon.desktop bundle_build_dir
-cp ../linux/pixmaps/qupzilla.png bundle_build_dir
-ln -s qupzilla.png bundle_build_dir/.DirIcon
+cp ../linux/pixmaps/falkon.png bundle_build_dir
+ln -s falkon.png bundle_build_dir/.DirIcon
 
 pushd bundle_build_dir 
 mv bin/falkon ./ && rm -fr bin

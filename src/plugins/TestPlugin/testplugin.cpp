@@ -124,7 +124,7 @@ void TestPlugin::showSettings(QWidget* parent)
 
         m_settings.data()->setAttribute(Qt::WA_DeleteOnClose);
         m_settings.data()->setWindowTitle(tr("Example Plugin Settings"));
-        m_settings.data()->setWindowIcon(QIcon(":qupzilla.png"));
+        m_settings.data()->setWindowIcon(QIcon(":icons/falkon.svg"));
         connect(closeButton, SIGNAL(clicked()), m_settings.data(), SLOT(close()));
     }
 
