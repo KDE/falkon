@@ -53,6 +53,8 @@ public:
     static QString path(Path type);
     // Returns all paths (Themes -> /usr/share/themes, ~/.config/falkon/themes)
     static QStringList allPaths(Path type);
+    // Returns full path of existing file
+    static QString locate(Path type, const QString &file);
     // Convenience function for getting CurrentProfile
     static QString currentProfilePath();
 

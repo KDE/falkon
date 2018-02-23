@@ -991,16 +991,7 @@ void MainApplication::loadSettings()
 
 void MainApplication::loadTheme(const QString &name)
 {
-    QString activeThemePath;
-    const QStringList themePaths = DataPaths::allPaths(DataPaths::Themes);
-
-    foreach (const QString &path, themePaths) {
-        const QString theme = QString("%1/%2").arg(path, name);
-        if (QFile::exists(theme + QLatin1String("/main.css"))) {
-            activeThemePath = theme;
-            break;
-        }
-    }
+    QString activeThemePath = DataPaths::locate(DataPaths::Themes, name);
 
     if (activeThemePath.isEmpty()) {
         qWarning() << "Cannot load theme " << name;

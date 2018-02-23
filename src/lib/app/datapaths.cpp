@@ -78,6 +78,19 @@ QStringList DataPaths::allPaths(DataPaths::Path type)
 }
 
 // static
+QString DataPaths::locate(Path type, const QString &file)
+{
+    const QStringList dirs = allPaths(type);
+    for (const QString &dir : dirs) {
+        const QString fullPath = QDir(dir).absoluteFilePath(file);
+        if (QFileInfo::exists(fullPath)) {
+            return fullPath;
+        }
+    }
+    return QString();
+}
+
+// static
 QString DataPaths::currentProfilePath()
 {
     return path(CurrentProfile);

@@ -109,14 +109,8 @@ void Plugins::loadPlugins()
         if (QFileInfo(pluginFile).isAbsolute()) {
             fullPath = pluginFile;
         } else {
-            const QStringList dirs = DataPaths::allPaths(DataPaths::Plugins);
-            for (const QString &dir : dirs) {
-                fullPath = dir + QL1C('/') + pluginFile;
-                if (QFileInfo::exists(fullPath)) {
-                    break;
-                }
-            }
-            if (!QFileInfo::exists(fullPath)) {
+            fullPath = DataPaths::locate(DataPaths::Plugins, pluginFile);
+            if (fullPath.isEmpty()) {
                 qWarning() << "Plugin" << pluginFile << "not found";
                 continue;
             }
