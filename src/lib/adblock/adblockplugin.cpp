@@ -36,7 +36,7 @@ AdBlockPlugin::AdBlockPlugin()
 
 DesktopFile AdBlockPlugin::metaData() const
 {
-    return DesktopFile();
+    return DesktopFile(QSL(":adblock/metadata.desktop"));
 }
 
 void AdBlockPlugin::init(InitState state, const QString &settingsPath)
