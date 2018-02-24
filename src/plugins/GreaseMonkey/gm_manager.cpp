@@ -298,6 +298,8 @@ void GM_Manager::mainWindowCreated(BrowserWindow* window)
 
 void GM_Manager::mainWindowDeleted(BrowserWindow* window)
 {
-    window->navigationBar()->removeToolButton(m_windows[window]);
-    delete m_windows.take(window);
+    GM_Icon *icon = m_windows.take(window);
+    window->statusBar()->removeButton(icon);
+    window->navigationBar()->removeToolButton(icon);
+    delete icon;
 }
