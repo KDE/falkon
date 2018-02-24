@@ -22,6 +22,8 @@
 class WebPage;
 class BrowserWindow;
 
+class AdBlockIcon;
+
 class AdBlockPlugin : public QObject, public PluginInterface
 {
     Q_OBJECT
@@ -39,6 +41,8 @@ private:
     void webPageCreated(WebPage *page);
     void webPageDeleted(WebPage *page);
     void mainWindowCreated(BrowserWindow *window);
+    void mainWindowDeleted(BrowserWindow *window);
     bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;
 
+    QHash<BrowserWindow*, AdBlockIcon*> m_icons;
 };
