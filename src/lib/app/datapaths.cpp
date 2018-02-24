@@ -118,6 +118,12 @@ void DataPaths::init()
     // We also allow to load data from Config path
     initAssetsIn(m_paths[Config].at(0));
 
+    // If FALKON_PLUGIN_PATH is set, only load plugins from there
+    const QByteArray pluginPath = qgetenv("FALKON_PLUGIN_PATH");
+    if (!pluginPath.isNull()) {
+        m_paths[Plugins] = QStringList{QString::fromLocal8Bit(pluginPath)};
+    }
+
     m_tmpdir.reset(new QTemporaryDir());
     m_paths[Temp].append(m_tmpdir->path());
     if (!m_tmpdir->isValid()) {
