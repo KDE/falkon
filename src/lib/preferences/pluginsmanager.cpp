@@ -74,7 +74,7 @@ void PluginsManager::save()
 
         if (item->checkState() == Qt::Checked) {
             const Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
-            allowedPlugins.append(plugin.fileName);
+            allowedPlugins.append(plugin.pluginId);
         }
     }
 

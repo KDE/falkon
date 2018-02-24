@@ -50,14 +50,11 @@ bool Plugins::loadPlugin(Plugins::Plugin* plugin)
         return true;
     }
 
-    plugin->pluginLoader->setFileName(plugin->fullPath);
-    PluginInterface* iPlugin = qobject_cast<PluginInterface*>(plugin->pluginLoader->instance());
-    if (!iPlugin) {
+    if (!initPlugin(PluginInterface::LateInitState, plugin)) {
         return false;
     }
 
     m_availablePlugins.removeOne(*plugin);
-    plugin->instance = initPlugin(PluginInterface::LateInitState, iPlugin, plugin->pluginLoader);
     m_availablePlugins.prepend(*plugin);
 
     refreshLoadedPlugins();
@@ -72,11 +69,10 @@ void Plugins::unloadPlugin(Plugins::Plugin* plugin)
     }
 
     plugin->instance->unload();
-    plugin->pluginLoader->unload();
     emit pluginUnloaded(plugin->instance);
+    plugin->instance = nullptr;
 
     m_availablePlugins.removeOne(*plugin);
-    plugin->instance = 0;
     m_availablePlugins.append(*plugin);
 
     refreshLoadedPlugins();
@@ -86,7 +82,7 @@ void Plugins::loadSettings()
 {
     Settings settings;
     settings.beginGroup("Plugin-Settings");
-    m_allowedPlugins = settings.value("AllowedPlugins", QStringList()).toStringList();
+    m_allowedPlugins = settings.value("AllowedPlugins", QStringList(QSL("internal:adblock"))).toStringList();
     settings.endGroup();
 }
 
@@ -104,49 +100,22 @@ void Plugins::loadPlugins()
         settingsDir.mkdir(settingsDir.absolutePath());
     }
 
-    foreach (const QString &pluginFile, m_allowedPlugins) {
-        QString fullPath;
-        if (QFileInfo(pluginFile).isAbsolute()) {
-            fullPath = pluginFile;
-        } else {
-            fullPath = DataPaths::locate(DataPaths::Plugins, pluginFile);
-            if (fullPath.isEmpty()) {
-                qWarning() << "Plugin" << pluginFile << "not found";
-                continue;
-            }
-        }
-
-        QPluginLoader* loader = new QPluginLoader(fullPath);
-        PluginInterface* iPlugin = qobject_cast<PluginInterface*>(loader->instance());
-
-        if (!iPlugin) {
-            qWarning() << "Plugins::loadPlugins Loading" << fullPath << "failed:" << loader->errorString();
+    foreach (const QString &pluginId, m_allowedPlugins) {
+        Plugin plugin = loadPlugin(pluginId);
+        if (plugin.pluginSpec.name.isEmpty()) {
+            qWarning() << "Invalid plugin spec of" << pluginId << "plugin";
             continue;
         }
-
-        Plugin plugin;
-        plugin.fileName = QFileInfo(fullPath).fileName();
-        plugin.fullPath = fullPath;
-        plugin.pluginLoader = loader;
-        plugin.instance = initPlugin(PluginInterface::StartupInitState, iPlugin, loader);
-
-        if (plugin.isLoaded()) {
-            plugin.pluginSpec = createSpec(iPlugin->metaData());
-            if (!plugin.pluginSpec.name.isEmpty()) {
-                m_availablePlugins.append(plugin);
-            }
+        if (!initPlugin(PluginInterface::StartupInitState, &plugin)) {
+            qWarning() << "Failed to init" << pluginId << "plugin";
+            continue;
         }
-    }
-
-    // Internal plugins
-    AdBlockPlugin *adBlock = new AdBlockPlugin();
-    if (initPlugin(PluginInterface::StartupInitState, adBlock, nullptr)) {
-        m_internalPlugins.append(adBlock);
+        registerAvailablePlugin(plugin);
     }
 
     refreshLoadedPlugins();
 
-    std::cout << "Falkon: " << (m_loadedPlugins.count() - m_internalPlugins.count()) << " extensions loaded"  << std::endl;
+    std::cout << "Falkon: " << m_loadedPlugins.count() << " extensions loaded"  << std::endl;
 }
 
 void Plugins::loadAvailablePlugins()
@@ -163,62 +132,33 @@ void Plugins::loadAvailablePlugins()
     if (mApp->isPortable())
         dirs = QStringList(DataPaths::path(DataPaths::Plugins));
 
-    foreach (const QString &dir, dirs) {
-        QDir pluginsDir = QDir(dir);
-        foreach (const QString &fileName, pluginsDir.entryList(QDir::Files)) {
-            const QString absolutePath = pluginsDir.absoluteFilePath(fileName);
+    // InternalPlugin
+    registerAvailablePlugin(loadInternalPlugin(QSL("adblock")));
 
-            QPluginLoader* loader = new QPluginLoader(absolutePath);
-            PluginInterface* iPlugin = qobject_cast<PluginInterface*>(loader->instance());
-
-            if (!iPlugin) {
-                qWarning() << "Plugins::loadAvailablePlugins" << loader->errorString();
+    // SharedLibraryPlugin
+    for (const QString &dir : qAsConst(dirs)) {
+        const auto files = QDir(dir).entryInfoList(QDir::Files);
+        for (const QFileInfo &info : files) {
+            Plugin plugin = loadSharedLibraryPlugin(info.absoluteFilePath());
+            if (plugin.pluginSpec.name.isEmpty()) {
+                qWarning() << "Invalid plugin spec of" << info.absoluteFilePath() << "plugin";
                 continue;
             }
-
-            Plugin plugin;
-            plugin.fileName = fileName;
-            plugin.fullPath = absolutePath;
-            plugin.pluginSpec = createSpec(iPlugin->metaData());
-            plugin.pluginLoader = loader;
-            plugin.instance = 0;
-
-            loader->unload();
-
-            if (!plugin.pluginSpec.name.isEmpty() && !alreadySpecInAvailable(plugin.pluginSpec)) {
-                m_availablePlugins.append(plugin);
-            }
+            registerAvailablePlugin(plugin);
         }
     }
 }
 
-PluginInterface* Plugins::initPlugin(PluginInterface::InitState state, PluginInterface* pluginInterface, QPluginLoader* loader)
+void Plugins::registerAvailablePlugin(const Plugin &plugin)
 {
-    if (!pluginInterface) {
-        return 0;
+    if (!m_availablePlugins.contains(plugin)) {
+        m_availablePlugins.append(plugin);
     }
-
-    pluginInterface->init(state, DataPaths::currentProfilePath() + QL1S("/extensions"));
-
-    if (!pluginInterface->testPlugin()) {
-        pluginInterface->unload();
-        if (loader) {
-            loader->unload();
-        }
-
-        emit pluginUnloaded(pluginInterface);
-
-        return 0;
-    }
-
-    qApp->installTranslator(pluginInterface->getTranslator(mApp->currentLanguageFile()));
-
-    return pluginInterface;
 }
 
 void Plugins::refreshLoadedPlugins()
 {
-    m_loadedPlugins = m_internalPlugins;
+    m_loadedPlugins.clear();
 
     foreach (const Plugin &plugin, m_availablePlugins) {
         if (plugin.isLoaded()) {
@@ -227,15 +167,128 @@ void Plugins::refreshLoadedPlugins()
     }
 }
 
-bool Plugins::alreadySpecInAvailable(const PluginSpec &spec)
+Plugins::Plugin Plugins::loadPlugin(const QString &id)
 {
-    foreach (const Plugin &plugin, m_availablePlugins) {
-        if (plugin.pluginSpec == spec) {
-            return true;
+    QString name;
+    Plugin::Type type = Plugin::Invalid;
+
+    const int colon = id.indexOf(QL1C(':'));
+    if (colon > -1) {
+        const auto t = id.leftRef(colon);
+        if (t == QL1S("internal")) {
+            type = Plugin::InternalPlugin;
+        } else if (t == QL1S("lib")) {
+            type = Plugin::SharedLibraryPlugin;
+        }
+        name = id.mid(colon + 1);
+    } else {
+        name = id;
+        type = Plugin::SharedLibraryPlugin;
+    }
+
+    switch (type) {
+    case Plugin::InternalPlugin:
+        return loadInternalPlugin(name);
+
+    case Plugin::SharedLibraryPlugin:
+        return loadSharedLibraryPlugin(name);
+
+    default:
+        return Plugin();
+    }
+}
+
+Plugins::Plugin Plugins::loadInternalPlugin(const QString &name)
+{
+    if (name == QL1S("adblock")) {
+        Plugin plugin;
+        plugin.type = Plugin::InternalPlugin;
+        plugin.pluginId = QSL("internal:adblock");
+        plugin.internalInstance = new AdBlockPlugin();
+        plugin.pluginSpec = createSpec(plugin.internalInstance->metaData());
+        return plugin;
+    } else {
+        return Plugin();
+    }
+}
+
+Plugins::Plugin Plugins::loadSharedLibraryPlugin(const QString &name)
+{
+    QString fullPath;
+    if (QFileInfo(name).isAbsolute()) {
+        fullPath = name;
+    } else {
+        fullPath = DataPaths::locate(DataPaths::Plugins, name);
+        if (fullPath.isEmpty()) {
+            qWarning() << "Plugin" << name << "not found";
+            return Plugin();
         }
     }
 
-    return false;
+    QPluginLoader *loader = new QPluginLoader(fullPath);
+    PluginInterface *iPlugin = qobject_cast<PluginInterface*>(loader->instance());
+
+    if (!iPlugin) {
+        qWarning() << "Loading" << fullPath << "failed:" << loader->errorString();
+        return Plugin();
+    }
+
+    Plugin plugin;
+    plugin.type = Plugin::SharedLibraryPlugin;
+    plugin.pluginId = QSL("lib:%1").arg(QFileInfo(fullPath).fileName());
+    plugin.libraryPath = fullPath;
+    plugin.pluginLoader = loader;
+    plugin.pluginSpec = createSpec(iPlugin->metaData());
+    return plugin;
+}
+
+bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
+{
+    if (!plugin) {
+        return false;
+    }
+
+    switch (plugin->type) {
+    case Plugin::InternalPlugin:
+        initInternalPlugin(plugin);
+        break;
+
+    case Plugin::SharedLibraryPlugin:
+        initSharedLibraryPlugin(plugin);
+        break;
+
+    default:
+        return false;
+    }
+
+    if (!plugin->instance) {
+        return false;
+    }
+
+    plugin->instance->init(state, DataPaths::currentProfilePath() + QL1S("/extensions"));
+
+    if (!plugin->instance->testPlugin()) {
+        emit pluginUnloaded(plugin->instance);
+        plugin->instance = nullptr;
+        return false;
+    }
+
+    qApp->installTranslator(plugin->instance->getTranslator(mApp->currentLanguageFile()));
+    return true;
+}
+
+void Plugins::initInternalPlugin(Plugin *plugin)
+{
+    Q_ASSERT(plugin->type == Plugin::InternalPlugin);
+
+    plugin->instance = plugin->internalInstance;
+}
+
+void Plugins::initSharedLibraryPlugin(Plugin *plugin)
+{
+    Q_ASSERT(plugin->type == Plugin::SharedLibraryPlugin);
+
+    plugin->instance = qobject_cast<PluginInterface*>(plugin->pluginLoader->instance());
 }
 
 PluginSpec Plugins::createSpec(const DesktopFile &metaData) const

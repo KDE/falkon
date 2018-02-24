@@ -50,26 +50,30 @@ class FALKON_EXPORT Plugins : public QObject
     Q_OBJECT
 public:
     struct Plugin {
-        QString fileName;
-        QString fullPath;
+        enum Type {
+            Invalid = 0,
+            InternalPlugin,
+            SharedLibraryPlugin
+        };
+        Type type = Invalid;
+        QString pluginId;
         PluginSpec pluginSpec;
-        QPluginLoader* pluginLoader;
-        PluginInterface* instance;
+        PluginInterface *instance = nullptr;
 
-        Plugin() {
-            pluginLoader = 0;
-            instance = 0;
-        }
+        // InternalPlugin
+        PluginInterface *internalInstance = nullptr;
+
+        // SharedLibraryPlugin
+        QString libraryPath;
+        QPluginLoader *pluginLoader = nullptr;
 
         bool isLoaded() const {
             return instance;
         }
 
         bool operator==(const Plugin &other) const {
-            return (this->fileName == other.fileName &&
-                    this->fullPath == other.fullPath &&
-                    this->pluginSpec == other.pluginSpec &&
-                    this->instance == other.instance);
+            return this->type == other.type &&
+                   this->pluginId == other.pluginId;
         }
     };
 
@@ -97,9 +101,16 @@ signals:
     void pluginUnloaded(PluginInterface* plugin);
 
 private:
-    bool alreadySpecInAvailable(const PluginSpec &spec);
     PluginSpec createSpec(const DesktopFile &metaData) const;
-    PluginInterface* initPlugin(PluginInterface::InitState state , PluginInterface* pluginInterface, QPluginLoader* loader);
+
+    Plugin loadPlugin(const QString &id);
+    Plugin loadInternalPlugin(const QString &name);
+    Plugin loadSharedLibraryPlugin(const QString &name);
+    bool initPlugin(PluginInterface::InitState state, Plugin *plugin);
+    void initInternalPlugin(Plugin *plugin);
+    void initSharedLibraryPlugin(Plugin *plugin);
+
+    void registerAvailablePlugin(const Plugin &plugin);
 
     void refreshLoadedPlugins();
     void loadAvailablePlugins();
