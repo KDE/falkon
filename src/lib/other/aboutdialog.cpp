@@ -45,7 +45,7 @@ AboutDialog::~AboutDialog()
 void AboutDialog::showAbout()
 {
     QString aboutHtml;
-    aboutHtml += "<center><div style='margin:20px;'>";
+    aboutHtml += "<div style='margin:0px 20px;'>";
     aboutHtml += tr("<p><b>Application version %1</b><br/>").arg(
 #ifdef FALKON_GIT_REVISION
                        QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)
@@ -57,6 +57,7 @@ void AboutDialog::showAbout()
     aboutHtml += QString("<p>&copy; %1 %2<br/>").arg(Qz::COPYRIGHT, Qz::AUTHOR);
     aboutHtml += QString("<a href=%1>%1</a></p>").arg(Qz::WWWADDRESS);
     aboutHtml += "<p>" + mApp->userAgentManager()->defaultUserAgent() + "</p>";
-    aboutHtml += "</div></center>";
-    ui->textBrowser->setHtml(aboutHtml);
+    aboutHtml += "</div>";
+    ui->textLabel->setText(aboutHtml);
+    setFixedHeight(sizeHint().height());
 }
