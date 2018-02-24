@@ -15,6 +15,8 @@ set( GreaseMonkey_SRCS
 	settings/gm_settingslistwidget.cpp
 	)
 
+ecm_create_qm_loader( GreaseMonkey_SRCS falkon_greasemonkey_qt )
+
 set( GreaseMonkey_UIS
 	gm_addscriptdialog.ui
 	gm_notification.ui

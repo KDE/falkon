@@ -19,6 +19,7 @@ include(ECMInstallIcons)
 include(ECMSetupVersion)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
+include(ECMPoQmTools)
 
 # Output dirs (like ECM 5.38 does)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")

@@ -13,6 +13,8 @@ set( StatusBarIcons_SRCS
 	sbi_zoomwidget.cpp
 	)
 
+ecm_create_qm_loader( StatusBarIcons_SRCS falkon_statusbaricons_qt )
+
 set( StatusBarIcons_UIS
 	sbi_proxywidget.ui
 	sbi_networkicondialog.ui

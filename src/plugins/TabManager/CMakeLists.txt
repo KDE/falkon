@@ -7,6 +7,8 @@ set( TabManager_SRCS
 	tldextractor/tldextractor.cpp
 	)
 
+ecm_create_qm_loader( TabManager_SRCS falkon_tabmanager_qt )
+
 set( TabManager_UIS
 	tabmanagerwidget.ui
 	tabmanagersettings.ui

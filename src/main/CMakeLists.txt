@@ -12,6 +12,7 @@ endif()
 if (${CMAKE_SYSTEM} MATCHES "OS2")
     set(SRCS ${SRCS} appicon_os2.rc)
 endif()
+ecm_create_qm_loader(SRCS falkon_qt)
 add_executable(falkon ${SRCS})
 
 target_link_libraries(falkon FalkonPrivate)
@@ -32,8 +33,8 @@ endif()
 
 if (UNIX AND NOT APPLE)
     install(TARGETS falkon ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-    #install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/locale DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
     install(DIRECTORY ${CMAKE_SOURCE_DIR}/themes DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/falkon)
+    ecm_install_po_files_as_qm(${CMAKE_SOURCE_DIR}/po)
 
     install(PROGRAMS ../../linux/applications/org.kde.falkon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 

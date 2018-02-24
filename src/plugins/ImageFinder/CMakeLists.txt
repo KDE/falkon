@@ -4,6 +4,8 @@ set( ImageFinder_SRCS
 	imagefindersettings.cpp
 	)
 
+ecm_create_qm_loader( ImageFinder_SRCS falkon_imagefinder_qt )
+
 set( ImageFinder_UIS
 	imagefindersettings.ui
 	)

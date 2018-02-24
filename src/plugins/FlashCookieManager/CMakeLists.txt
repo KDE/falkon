@@ -4,6 +4,8 @@ set( FlashCookieManager_SRCS
 	fcm_notification.cpp
 	)
 
+ecm_create_qm_loader( FlashCookieManager_SRCS falkon_flashcookiemanager_qt )
+
 set( FlashCookieManager_UIS
 	fcm_dialog.ui
 	fcm_notification.ui

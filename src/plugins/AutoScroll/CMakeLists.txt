@@ -5,6 +5,8 @@ set( AutoScroll_SRCS
 	autoscrollsettings.cpp
 	)
 
+ecm_create_qm_loader( AutoScroll_SRCS falkon_autoscroll_qt )
+
 set( AutoScroll_UIS
 	autoscrollsettings.ui
 	)

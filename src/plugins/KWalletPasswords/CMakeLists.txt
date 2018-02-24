@@ -3,6 +3,8 @@ set( KWalletPasswords_SRCS
 	kwalletpasswordbackend.cpp
 	)
 
+ecm_create_qm_loader( KWalletPasswords_SRCS falkon_kwalletpasswords_qt )
+
 set( KWalletPasswords_RSCS
 	kwalletpasswords.qrc
 	)

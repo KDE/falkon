@@ -5,6 +5,8 @@ set( GnomeKeyringPasswords_SRCS
 	gnomekeyringpasswordbackend.cpp
 	)
 
+ecm_create_qm_loader( GnomeKeyringPasswords_SRCS falkon_gnomekeyringpasswords_qt )
+
 set( GnomeKeyringPasswords_RSCS
 	gnomekeyringpasswords.qrc
 	)

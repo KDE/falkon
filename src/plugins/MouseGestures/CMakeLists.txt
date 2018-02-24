@@ -14,6 +14,8 @@ set( MouseGestures_SRCS
 	mousegesturessettingsdialog.cpp
 	)
 
+ecm_create_qm_loader( MouseGestures_SRCS falkon_mousegestures_qt )
+
 set( MouseGestures_UIS
 	mousegesturessettingsdialog.ui
 	)

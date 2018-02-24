@@ -4,6 +4,8 @@ set( PIM_SRCS
 	PIM_settings.cpp
 	)
 
+ecm_create_qm_loader( PIM_SRCS falkon_pim_qt )
+
 set( PIM_UIS
 	PIM_settings.ui
 	)

@@ -12,6 +12,8 @@ set( VerticalTabs_SRCS
     verticaltabsschemehandler.cpp
 )
 
+ecm_create_qm_loader( VerticalTabs_SRCS falkon_verticaltabs_qt )
+
 set( VerticalTabs_UIS
     verticaltabssettings.ui
 )
