@@ -32,7 +32,7 @@ AboutDialog::AboutDialog(QWidget* parent)
     setAttribute(Qt::WA_DeleteOnClose);
 
     ui->setupUi(this);
-    ui->label->setPixmap(QIcon(QSL(":icons/other/about.png")).pixmap(300, 130));
+    ui->label->setPixmap(QIcon(QSL(":icons/other/about.svg")).pixmap(QSize(256, 100) * 1.1));
 
     showAbout();
 }

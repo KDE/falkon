@@ -149,7 +149,7 @@ QString FalkonSchemeReply::startPage()
     }
 
     sPage.append(QzTools::readAllFileContents(":html/start.html"));
-    sPage.replace(QLatin1String("%ABOUT-IMG%"), QzTools::pixmapToDataUrl(QzTools::dpiAwarePixmap(QSL(":icons/other/startpage.png"))).toString());
+    sPage.replace(QLatin1String("%ABOUT-IMG%"), QSL("qrc:icons/other/startpage.svg"));
 
     sPage.replace(QLatin1String("%TITLE%"), tr("Start Page"));
     sPage.replace(QLatin1String("%BUTTON-LABEL%"), tr("Search on Web"));
@@ -168,7 +168,7 @@ QString FalkonSchemeReply::aboutPage()
 
     if (aPage.isEmpty()) {
         aPage.append(QzTools::readAllFileContents(":html/about.html"));
-        aPage.replace(QLatin1String("%ABOUT-IMG%"), QzTools::pixmapToDataUrl(QzTools::dpiAwarePixmap(QSL(":icons/other/about.png"))).toString());
+        aPage.replace(QLatin1String("%ABOUT-IMG%"), QSL("qrc:icons/other/about.svg"));
         aPage.replace(QLatin1String("%COPYRIGHT-INCLUDE%"), QzTools::readAllFileContents(":html/copyright").toHtmlEscaped());
 
         aPage.replace(QLatin1String("%TITLE%"), tr("About Falkon"));
@@ -279,7 +279,7 @@ QString FalkonSchemeReply::configPage()
 
     if (cPage.isEmpty()) {
         cPage.append(QzTools::readAllFileContents(":html/config.html"));
-        cPage.replace(QLatin1String("%ABOUT-IMG%"), QzTools::pixmapToDataUrl(QzTools::dpiAwarePixmap(QSL(":icons/other/about.png"))).toString());
+        cPage.replace(QLatin1String("%ABOUT-IMG%"), QSL("qrc:icons/other/about.svg"));
 
         cPage.replace(QLatin1String("%TITLE%"), tr("Configuration Information"));
         cPage.replace(QLatin1String("%CONFIG%"), tr("Configuration Information"));
