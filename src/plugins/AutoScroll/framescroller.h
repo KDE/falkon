@@ -39,7 +39,7 @@ public:
     void startScrolling(int lengthX, int lengthY);
     void stopScrolling();
 
-private slots:
+private Q_SLOTS:
     void scrollStep();
 
 private:

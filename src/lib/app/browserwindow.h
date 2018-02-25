@@ -125,11 +125,11 @@ public:
     TabModel *tabModel() const;
     TabMruModel *tabMruModel() const;
 
-signals:
+Q_SIGNALS:
     void startingCompleted();
     void aboutToClose();
 
-public slots:
+public Q_SLOTS:
     void goHome();
     void goHomeInNewTab();
     void goBack();
@@ -161,7 +161,7 @@ public slots:
     void loadAddress(const QUrl &url);
     void showSource(WebView *view = Q_NULLPTR);
 
-private slots:
+private Q_SLOTS:
     void addTab();
     void openLocation();
     void openFile();

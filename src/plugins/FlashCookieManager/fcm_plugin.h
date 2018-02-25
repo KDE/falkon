@@ -71,7 +71,7 @@ public:
 
     void removeCookie(const FlashCookie &flashCookie);
 
-private slots:
+private Q_SLOTS:
     void autoRefresh();
     void showFlashCookieManager();
     void mainWindowCreated(BrowserWindow* window);

@@ -109,7 +109,7 @@ public:
     QSize sizeHint() const override;
     QAction* editAction(EditAction action) const;
 
-public slots:
+public Q_SLOTS:
     void setLeftMargin(int margin);
     void updateTextMargins();
 
@@ -123,7 +123,7 @@ protected:
 
     QMenu* createContextMenu();
 
-private slots:
+private Q_SLOTS:
     void updateActions();
     void updatePasteActions();
     void slotDelete();
@@ -148,7 +148,7 @@ class FALKON_EXPORT SideWidget : public QWidget
 {
     Q_OBJECT
 
-signals:
+Q_SIGNALS:
     void sizeHintChanged();
 
 public:

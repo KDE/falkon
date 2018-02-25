@@ -24,7 +24,7 @@ class UpdaterTest : public QObject
 {
     Q_OBJECT
 
-private slots:
+private Q_SLOTS:
     void parseVersionsTest_data();
     void parseVersionsTest();
 

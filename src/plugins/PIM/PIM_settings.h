@@ -36,7 +36,7 @@ public:
     explicit PIM_Settings(const QString &settingsFile, QWidget* parent = 0);
     ~PIM_Settings();
 
-private slots:
+private Q_SLOTS:
     void dialogAccepted();
 
 private:

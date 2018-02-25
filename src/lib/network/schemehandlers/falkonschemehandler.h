@@ -46,7 +46,7 @@ public:
     qint64 readData(char *data, qint64 maxSize) Q_DECL_OVERRIDE;
     qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE;
 
-private slots:
+private Q_SLOTS:
     void loadPage();
 
 private:

@@ -29,9 +29,7 @@ class FALKON_EXPORT Widget : public QWidget
 public:
     explicit Widget(QWidget* parent = 0);
 
-signals:
-
-public slots:
+public Q_SLOTS:
     void slotResize(const QSize &size);
 
 };
@@ -42,9 +40,7 @@ class FALKON_EXPORT ResizableFrame : public QFrame
 public:
     explicit ResizableFrame(QWidget* parent = 0);
 
-signals:
-
-public slots:
+public Q_SLOTS:
     void slotResize(const QSize &size);
 };
 

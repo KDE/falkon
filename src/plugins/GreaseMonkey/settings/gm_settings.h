@@ -38,7 +38,7 @@ public:
     explicit GM_Settings(GM_Manager* manager, QWidget* parent = 0);
     ~GM_Settings();
 
-private slots:
+private Q_SLOTS:
     void showItemInfo(QListWidgetItem* item);
     void updateItem(QListWidgetItem* item);
     void removeItem(QListWidgetItem* item);

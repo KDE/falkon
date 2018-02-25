@@ -68,11 +68,11 @@ public:
     bool isUpdating();
     void updateScript();
 
-signals:
+Q_SIGNALS:
     void scriptChanged();
     void updatingChanged(bool updating);
 
-private slots:
+private Q_SLOTS:
     void watchedFileChanged(const QString &file);
 
 private:

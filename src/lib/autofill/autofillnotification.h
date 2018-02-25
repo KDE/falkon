@@ -42,7 +42,7 @@ public:
                                   const PasswordEntry &updateData);
     ~AutoFillNotification();
 
-private slots:
+private Q_SLOTS:
     void update();
     void remember();
     void never();

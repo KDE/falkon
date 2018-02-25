@@ -32,7 +32,7 @@ public:
     QString id() const override;
     QString name() const override;
 
-private slots:
+private Q_SLOTS:
     void openSettings();
 
 private:

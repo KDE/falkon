@@ -67,16 +67,16 @@ public:
 
     bool isLoading() const;
 
-signals:
+Q_SIGNALS:
     void privacyChanged(bool status);
     void printRequested();
     void navigationRequestAccepted(const QUrl &url, NavigationType type, bool isMainFrame);
 
-protected slots:
+protected Q_SLOTS:
     void progress(int prog);
     void finished();
 
-private slots:
+private Q_SLOTS:
     void urlChanged(const QUrl &url);
     void watchedFileChanged(const QString &file);
     void windowCloseRequested();

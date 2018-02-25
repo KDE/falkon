@@ -32,7 +32,7 @@ public:
 
     QPixmap pixmap(const QModelIndex &index);
 
-signals:
+Q_SIGNALS:
     void updateIndex(const QModelIndex &index);
 
 private:

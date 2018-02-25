@@ -39,10 +39,10 @@ public:
     QList<QStandardItem*> completions() const;
     QString domainCompletion() const;
 
-signals:
+Q_SIGNALS:
     void finished();
 
-private slots:
+private Q_SLOTS:
     void slotFinished();
     void jobCancelled();
 

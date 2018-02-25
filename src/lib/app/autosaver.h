@@ -33,11 +33,11 @@ public:
     // Emits save() if timer is running. Call this from destructor.
     void saveIfNecessary();
 
-public slots:
+public Q_SLOTS:
     // Tells AutoSaver that change occurred. Signal save() will be emitted after a delay
     void changeOccurred();
 
-signals:
+Q_SIGNALS:
     void save();
 
 private:

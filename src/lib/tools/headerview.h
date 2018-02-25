@@ -35,7 +35,7 @@ public:
 
     bool restoreState(const QByteArray &state);
 
-private slots:
+private Q_SLOTS:
     void toggleSectionVisibility();
 
 private:

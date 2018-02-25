@@ -158,19 +158,19 @@ public:
     // Duration of tab slide animation when releasing dragged tab
     static int slideAnimationDuration();
 
-public slots:
+public Q_SLOTS:
     void setUpLayout();
     void ensureVisible(int index = -1, int xmargin = -1);
     void setCurrentIndex(int index);
 
-signals:
+Q_SIGNALS:
     void overFlowChanged(bool overFlow);
     void currentChanged(int index);
     void tabCloseRequested(int index);
     void tabMoved(int from, int to);
     void scrollBarValueChanged(int value);
 
-private slots:
+private Q_SLOTS:
     void setMinimumWidths();
     void slotCurrentChanged(int index);
     void slotTabCloseRequested(int index);
@@ -264,7 +264,7 @@ public:
 
     static void initStyleBaseOption(QStyleOptionTabBarBase* optTabBase, QTabBar* tabbar, QSize size);
 
-public slots:
+public Q_SLOTS:
     void setCurrentIndex(int index);
 
 private:
@@ -328,7 +328,7 @@ public:
     bool isOverflowed() const;
     int tabAt(const QPoint &pos) const;
 
-public slots:
+public Q_SLOTS:
     void ensureVisible(int index = -1, int xmargin = 132);
     void scrollToLeft(int n = 5, QEasingCurve::Type type = QEasingCurve::OutQuad);
     void scrollToRight(int n = 5, QEasingCurve::Type type = QEasingCurve::OutQuad);
@@ -336,7 +336,7 @@ public slots:
     void scrollToRightEdge();
     void setUpLayout();
 
-private slots:
+private Q_SLOTS:
     void overFlowChanged(bool overflowed);
     void scrollStart();
     void updateScrollButtonsState();

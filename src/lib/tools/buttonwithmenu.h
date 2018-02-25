@@ -66,18 +66,18 @@ public:
     QVector<Item> allItems() { return m_items; }
     QMenu* menu() const;
 
-signals:
+Q_SIGNALS:
     void activeItemChanged(const ButtonWithMenu::Item &item);
     void itemAdded(const ButtonWithMenu::Item &item);
     void itemRemoved(const ButtonWithMenu::Item &item);
 
-public slots:
+public Q_SLOTS:
     void clearItems();
 
     void selectNextItem();
     void selectPreviousItem();
 
-private slots:
+private Q_SLOTS:
     void setCurrentItem();
     void generateMenu();
 

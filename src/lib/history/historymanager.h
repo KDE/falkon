@@ -46,10 +46,10 @@ public:
     void restoreState(const QByteArray &state);
     QByteArray saveState();
 
-public slots:
+public Q_SLOTS:
     void search(const QString &searchText);
 
-private slots:
+private Q_SLOTS:
     void urlActivated(const QUrl &url);
     void urlCtrlActivated(const QUrl &url);
     void urlShiftActivated(const QUrl &url);

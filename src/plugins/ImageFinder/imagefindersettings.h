@@ -36,7 +36,7 @@ public:
 
     ~ImageFinderSettings();
 
-private slots:
+private Q_SLOTS:
     void accepted();
 
 private:

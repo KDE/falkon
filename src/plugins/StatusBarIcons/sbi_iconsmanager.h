@@ -48,9 +48,7 @@ public:
     void reloadIcons();
     void destroyIcons();
 
-signals:
-
-public slots:
+public Q_SLOTS:
     void mainWindowCreated(BrowserWindow* window);
     void mainWindowDeleted(BrowserWindow* window);
 

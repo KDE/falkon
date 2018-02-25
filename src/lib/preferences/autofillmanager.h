@@ -39,7 +39,7 @@ public:
 
     void showExceptions();
 
-private slots:
+private Q_SLOTS:
     void loadPasswords();
     void changePasswordBackend();
     void showBackendOptions();

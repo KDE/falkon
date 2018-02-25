@@ -40,7 +40,7 @@ public:
 
     QIcon getIcon();
 
-private slots:
+private Q_SLOTS:
     void chooseFile();
     void searchIcon(const QString &string);
 

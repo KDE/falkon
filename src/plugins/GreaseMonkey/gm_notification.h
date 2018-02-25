@@ -36,7 +36,7 @@ public:
     explicit GM_Notification(GM_Manager* manager, const QString &tmpfileName, const QString &fileName);
     ~GM_Notification();
 
-private slots:
+private Q_SLOTS:
     void installScript();
 
 private:

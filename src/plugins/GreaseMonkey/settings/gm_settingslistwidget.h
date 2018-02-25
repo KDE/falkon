@@ -28,11 +28,11 @@ class GM_SettingsListWidget : public QListWidget
 public:
     explicit GM_SettingsListWidget(QWidget* parent = 0);
 
-signals:
+Q_SIGNALS:
     void removeItemRequested(QListWidgetItem* item);
     void updateItemRequested(QListWidgetItem* item);
 
-public slots:
+public Q_SLOTS:
 
 private:
     bool containsRemoveIcon(const QPoint &pos) const;

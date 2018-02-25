@@ -65,10 +65,10 @@ public:
     bool asTabBarReplacement() const;
     void setAsTabBarReplacement(bool yes);
 
-public slots:
+public Q_SLOTS:
     void insertManagerWidget();
 
-private slots:
+private Q_SLOTS:
     void mainWindowCreated(BrowserWindow* window, bool refresh = true);
 
 private:

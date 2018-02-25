@@ -46,11 +46,11 @@ public:
 
     int exec();
 
-private slots:
+private Q_SLOTS:
     void copyDownloadLink();
     void emitDialogFinished(int status);
 
-signals:
+Q_SIGNALS:
     void dialogFinished(int);
 
 private:

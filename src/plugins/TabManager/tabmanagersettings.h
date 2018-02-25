@@ -16,7 +16,7 @@ public:
     explicit TabManagerSettings(TabManagerPlugin* plugin, QWidget *parent = 0);
     ~TabManagerSettings();
 
-public slots:
+public Q_SLOTS:
     void accept();
 
 private:

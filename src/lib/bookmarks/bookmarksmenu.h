@@ -35,7 +35,7 @@ public:
 
     void setMainWindow(BrowserWindow* window);
 
-private slots:
+private Q_SLOTS:
     void bookmarkPage();
     void bookmarkAllTabs();
     void showBookmarksManager();

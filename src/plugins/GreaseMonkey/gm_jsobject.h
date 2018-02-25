@@ -32,7 +32,7 @@ public:
 
     void setSettingsFile(const QString &name);
 
-public slots:
+public Q_SLOTS:
     QString getValue(const QString &nspace, const QString &name, const QString &dValue);
     bool setValue(const QString &nspace, const QString &name, const QString &value);
     bool deleteValue(const QString &nspace, const QString &name);

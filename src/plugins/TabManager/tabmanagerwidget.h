@@ -49,7 +49,7 @@ public:
 
     void setEnableDragTabs(bool enable);
 
-signals:
+Q_SIGNALS:
     void requestRefreshTree();
 
 };
@@ -77,7 +77,7 @@ public:
 
     static QString domainFromUrl(const QUrl &url, bool useHostName = false);
 
-public slots:
+public Q_SLOTS:
     void delayedRefreshTree(WebPage* p = 0);
     void changeGroupType();
 
@@ -100,7 +100,7 @@ private:
 
     static TLDExtractor* s_tldExtractor;
 
-private slots:
+private Q_SLOTS:
     void refreshTree();
     void processActions();
     void onItemActivated(QTreeWidgetItem* item, int column);
@@ -112,7 +112,7 @@ private slots:
 protected:
     bool eventFilter(QObject* obj, QEvent* event);
 
-signals:
+Q_SIGNALS:
     void showSideBySide();
     void groupTypeChanged(TabManagerWidget::GroupType);
 };
@@ -137,7 +137,7 @@ public:
 
     bool isTab() const;
 
-public slots:
+public Q_SLOTS:
     void updateIcon();
     void setTitle(const QString& title);
     void setIsActiveOrCaption(bool yes);

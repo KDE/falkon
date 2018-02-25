@@ -66,7 +66,7 @@ public:
     WebView *webView() const;
     void setWebView(WebView *view);
 
-signals:
+Q_SIGNALS:
     void activeChanged(bool active);
     void visibleChanged(bool visible);
     void titleChanged(const QString &title);

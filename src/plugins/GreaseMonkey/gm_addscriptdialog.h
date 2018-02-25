@@ -36,7 +36,7 @@ public:
     explicit GM_AddScriptDialog(GM_Manager *manager, GM_Script *script, QWidget *parent = Q_NULLPTR);
     ~GM_AddScriptDialog();
 
-private slots:
+private Q_SLOTS:
     void showSource();
 
     void accepted();

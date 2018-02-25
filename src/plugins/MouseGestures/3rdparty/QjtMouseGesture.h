@@ -97,7 +97,7 @@ public:
 
     const DirectionList directions() const;
 
-signals:
+Q_SIGNALS:
     void gestured();
 
 private:

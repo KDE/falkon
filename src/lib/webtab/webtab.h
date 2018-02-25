@@ -133,11 +133,11 @@ public:
     static AddChildBehavior addChildBehavior();
     static void setAddChildBehavior(AddChildBehavior behavior);
 
-private slots:
+private Q_SLOTS:
     void showNotification(QWidget* notif);
     void loadFinished();
 
-signals:
+Q_SIGNALS:
     void titleChanged(const QString &title);
     void iconChanged(const QIcon &icon);
     void pinnedChanged(bool pinned);

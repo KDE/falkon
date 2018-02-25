@@ -39,10 +39,10 @@ public:
     static QStringList defaultLanguage();
     static QByteArray generateHeader(const QStringList &langs);
 
-public slots:
+public Q_SLOTS:
     void accept();
 
-private slots:
+private Q_SLOTS:
     void addLanguage();
     void removeLanguage();
     void upLanguage();

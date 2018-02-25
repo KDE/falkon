@@ -40,7 +40,7 @@ public:
     static void registerView(QWebEngineView *view);
     static void unregisterView(QWebEngineView *view);
 
-private slots:
+private Q_SLOTS:
     void loadFinished();
 
 private:

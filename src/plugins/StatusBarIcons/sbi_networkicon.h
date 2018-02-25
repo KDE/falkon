@@ -31,7 +31,7 @@ class SBI_NetworkIcon : public SBI_Icon
 public:
     explicit SBI_NetworkIcon(BrowserWindow* window);
 
-private slots:
+private Q_SLOTS:
     void onlineStateChanged(bool online);
     void showDialog();
 

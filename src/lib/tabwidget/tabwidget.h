@@ -55,7 +55,7 @@ class FALKON_EXPORT MenuTabs : public QMenu
 public:
     explicit MenuTabs(QWidget* parent = 0) : QMenu(parent) {}
 
-signals:
+Q_SIGNALS:
     void closeTab(int);
 
 private:
@@ -101,7 +101,7 @@ public:
 
     void detachTab(WebTab* tab);
 
-public slots:
+public Q_SLOTS:
     int addView(const LoadRequest &req, const Qz::NewTabPositionFlags &openFlags, bool selectLine = false, bool pinned = false);
     int addView(const LoadRequest &req, const QString &title = tr("New tab"), const Qz::NewTabPositionFlags &openFlags = Qz::NT_SelectedTab, bool selectLine = false, int position = -1, bool pinned = false);
     int addView(WebTab *tab, const Qz::NewTabPositionFlags &openFlags);
@@ -132,13 +132,13 @@ public slots:
 
     void tabBarOverFlowChanged(bool overflowed);
 
-signals:
+Q_SIGNALS:
     void changed();
     void tabInserted(int index);
     void tabRemoved(int index);
     void tabMoved(int from, int to);
 
-private slots:
+private Q_SLOTS:
     void loadSettings();
 
     void aboutToShowTabsMenu();

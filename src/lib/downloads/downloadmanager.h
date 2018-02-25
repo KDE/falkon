@@ -76,15 +76,15 @@ public:
     void setLastDownloadPath(const QString &lastPath) { m_lastDownloadPath = lastPath; }
     void setLastDownloadOption(const DownloadOption &option) { m_lastDownloadOption = option; }
 
-public slots:
+public Q_SLOTS:
     void show();
 
-private slots:
+private Q_SLOTS:
     void clearList();
     void deleteItem(DownloadItem* item);
     void downloadFinished(bool success);
 
-signals:
+Q_SIGNALS:
     void resized(QSize);
     void downloadsCountChanged();
 

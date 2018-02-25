@@ -89,7 +89,7 @@ public:
     // SpeedDial
     SpeedDial* speedDial() { return m_speedDial; }
 
-public slots:
+public Q_SLOTS:
     void loadSettings();
 
     void loadPlugins();
@@ -97,7 +97,7 @@ public slots:
 protected:
     QList<PluginInterface*> m_loadedPlugins;
 
-signals:
+Q_SIGNALS:
     void pluginUnloaded(PluginInterface* plugin);
 
 private:

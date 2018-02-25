@@ -38,7 +38,7 @@ public:
     void setWebView(WebView* view);
     void setIcon(const QIcon &icon);
 
-private slots:
+private Q_SLOTS:
     void updateIcon();
     void popupClosed();
 

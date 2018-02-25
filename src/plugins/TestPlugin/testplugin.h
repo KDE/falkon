@@ -45,7 +45,7 @@ public:
     void populateWebViewMenu(QMenu *menu, WebView *view, const WebHitTestResult &r) override;
     bool mousePress(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
 
-private slots:
+private Q_SLOTS:
     void actionSlot();
 
 private:

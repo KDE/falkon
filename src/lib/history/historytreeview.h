@@ -43,7 +43,7 @@ public:
 
     HeaderView* header() const;
 
-signals:
+Q_SIGNALS:
     // Open url in current tab
     void urlActivated(const QUrl &url);
     // Open url in new tab
@@ -53,7 +53,7 @@ signals:
     // Context menu signal with point mapped to global
     void contextMenuRequested(const QPoint &point);
 
-public slots:
+public Q_SLOTS:
     void search(const QString &string);
     void removeSelectedItems();
 

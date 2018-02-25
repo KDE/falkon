@@ -40,7 +40,7 @@ public:
     explicit CookieManager(QWidget *parent = nullptr);
     ~CookieManager();
 
-private slots:
+private Q_SLOTS:
     void currentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem* parent);
     void remove();
     void removeAll();

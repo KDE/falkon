@@ -32,7 +32,7 @@ public:
     explicit VerticalTabsSettings(VerticalTabsPlugin *plugin, QWidget *parent = nullptr);
     ~VerticalTabsSettings();
 
-private slots:
+private Q_SLOTS:
     void themeValueChanged(int index);
 
 private:

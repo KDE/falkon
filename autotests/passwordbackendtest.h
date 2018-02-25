@@ -30,7 +30,7 @@ class PasswordBackendTest : public QObject
 public:
     explicit PasswordBackendTest();
 
-private slots:
+private Q_SLOTS:
     void initTestCase();
     void cleanupTestCase();
 

@@ -63,14 +63,14 @@ public:
 
     static bool canRunOnScheme(const QString &scheme);
 
-signals:
+Q_SIGNALS:
     void scriptsChanged();
 
-public slots:
+public Q_SLOTS:
     void mainWindowCreated(BrowserWindow* window);
     void mainWindowDeleted(BrowserWindow* window);
 
-private slots:
+private Q_SLOTS:
     void load();
     void scriptChanged();
 

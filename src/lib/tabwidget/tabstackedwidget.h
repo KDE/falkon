@@ -62,17 +62,17 @@ public:
     int indexOf(QWidget* widget) const;
     int count() const;
 
-signals:
+Q_SIGNALS:
     void currentChanged(int index);
     void tabCloseRequested(int index);
     void pinStateChanged(int index, bool pinned);
 
-public slots:
+public Q_SLOTS:
     void setCurrentIndex(int index);
     void setCurrentWidget(QWidget* widget);
     void setUpLayout();
 
-private slots:
+private Q_SLOTS:
     void showTab(int index);
     void tabWasMoved(int from, int to);
     void tabWasRemoved(int index);

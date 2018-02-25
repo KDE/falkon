@@ -87,11 +87,11 @@ public:
 
     static AdBlockManager* instance();
 
-signals:
+Q_SIGNALS:
     void enabledChanged(bool enabled);
     void blockedRequestsChanged(const QUrl &url);
 
-public slots:
+public Q_SLOTS:
     void setEnabled(bool enabled);
     void showRule();
 

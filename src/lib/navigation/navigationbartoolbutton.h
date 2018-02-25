@@ -33,7 +33,7 @@ public:
 
     void updateVisibility();
 
-signals:
+Q_SIGNALS:
     void visibilityChangeRequested();
 
 private:

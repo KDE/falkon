@@ -46,10 +46,10 @@ public:
 
     static Data *data();
 
-signals:
+Q_SIGNALS:
     void resized();
 
-private slots:
+private Q_SLOTS:
     void showLoadingAnimation();
     void hideLoadingAnimation();
 

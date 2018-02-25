@@ -67,9 +67,7 @@ public:
 
     void removeTopLevelIndexes(const QList<QPersistentModelIndex> &indexes);
 
-signals:
-
-private slots:
+private Q_SLOTS:
     void resetHistory();
 
     void historyEntryAdded(const HistoryEntry &entry);
@@ -92,17 +90,17 @@ class FALKON_EXPORT HistoryFilterModel : public QSortFilterProxyModel
 public:
     explicit HistoryFilterModel(QAbstractItemModel* parent);
 
-public slots:
+public Q_SLOTS:
     void setFilterFixedString(const QString &pattern);
 
-signals:
+Q_SIGNALS:
     void expandAllItems();
     void collapseAllItems();
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;
 
-private slots:
+private Q_SLOTS:
     void startFiltering();
 
 private:

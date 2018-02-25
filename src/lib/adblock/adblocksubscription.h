@@ -87,15 +87,15 @@ public:
     virtual bool removeRule(int offset);
     virtual const AdBlockRule* replaceRule(AdBlockRule* rule, int offset);
 
-public slots:
+public Q_SLOTS:
     void updateSubscription();
 
-signals:
+Q_SIGNALS:
     void subscriptionChanged();
     void subscriptionUpdated();
     void subscriptionError(const QString &message);
 
-protected slots:
+protected Q_SLOTS:
     void subscriptionDownloaded();
 
 protected:

@@ -72,7 +72,7 @@ public:
     static bool forceContextMenuOnMouseRelease();
     static void setForceContextMenuOnMouseRelease(bool force);
 
-signals:
+Q_SIGNALS:
     void pageChanged(WebPage *page);
     void focusChanged(bool);
     void viewportResized(QSize);
@@ -81,7 +81,7 @@ signals:
     void zoomLevelChanged(int);
     void backgroundActivityChanged(bool);
 
-public slots:
+public Q_SLOTS:
     void zoomIn();
     void zoomOut();
     void zoomReset();
@@ -111,7 +111,7 @@ public slots:
     virtual bool isFullScreen() = 0;
     virtual void requestFullScreen(bool enable) = 0;
 
-protected slots:
+protected Q_SLOTS:
     void slotLoadStarted();
     void slotLoadProgress(int progress);
     void slotLoadFinished(bool ok);
@@ -166,7 +166,7 @@ protected:
     void checkForForm(QAction *action, const QPoint &pos);
     void createSearchEngine();
 
-private slots:
+private Q_SLOTS:
     void addSpeedDial();
     void configureSpeedDial();
     void reloadAllSpeedDials();

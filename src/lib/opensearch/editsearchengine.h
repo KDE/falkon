@@ -47,11 +47,9 @@ public:
 
     void hideIconLabels();
 
-signals:
+public Q_SLOTS:
 
-public slots:
-
-private slots:
+private Q_SLOTS:
     void chooseIcon();
 
 private:

@@ -55,15 +55,15 @@ public:
     bool isFullScreen() Q_DECL_OVERRIDE;
     void requestFullScreen(bool enable) Q_DECL_OVERRIDE;
 
-signals:
+Q_SIGNALS:
     void wantsCloseTab(int);
     void ipChanged(QString);
 
-public slots:
+public Q_SLOTS:
     void setAsCurrentTab();
     void userLoadAction(const LoadRequest &req);
 
-private slots:
+private Q_SLOTS:
     void slotLoadStarted();
     void slotLoadFinished();
     void slotLoadProgress(int prog);

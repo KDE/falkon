@@ -66,12 +66,12 @@ public:
     static SearchEngine searchEngine();
     static LoadAction loadAction(const QString &text);
 
-public slots:
+public Q_SLOTS:
     void setText(const QString &text);
     void showUrl(const QUrl &url);
     void loadRequest(const LoadRequest &request);
 
-private slots:
+private Q_SLOTS:
     void textEdited(const QString &text);
     void requestLoadUrl();
     void pasteAndGo();

@@ -29,7 +29,7 @@ class SBI_ZoomWidget : public QSlider
 public:
     explicit SBI_ZoomWidget(BrowserWindow* parent = 0);
 
-private slots:
+private Q_SLOTS:
     void valueChanged(int value);
     void currentViewChanged();
 

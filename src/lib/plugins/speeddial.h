@@ -68,12 +68,12 @@ public:
     QString backgroundImageSize();
     QString initialScript();
 
-signals:
+Q_SIGNALS:
     void pagesChanged();
     void thumbnailLoaded(const QString &url, const QString &src);
     void pageTitleLoaded(const QString &url, const QString &title);
 
-public slots:
+public Q_SLOTS:
     void changed(const QString &allPages);
     void loadThumbnail(const QString &url, bool loadTitle);
     void removeImageForUrl(const QString &url);
@@ -86,7 +86,7 @@ public slots:
     void setSdSize(int count);
     void setSdCentered(bool centered);
 
-private slots:
+private Q_SLOTS:
     void thumbnailCreated(const QPixmap &pixmap);
     void saveSettings();
 

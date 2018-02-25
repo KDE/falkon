@@ -40,7 +40,7 @@ public:
     void load();
     void save();
 
-private slots:
+private Q_SLOTS:
     void settingsClicked();
     void currentChanged(QListWidgetItem* item);
     void itemChanged(QListWidgetItem* item);

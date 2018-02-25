@@ -95,7 +95,7 @@ private:
 
     QHash<QString, PasswordBackend*> m_backends;
 
-signals:
+Q_SIGNALS:
     void passwordBackendChanged();
 };
 

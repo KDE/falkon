@@ -29,7 +29,7 @@ class AutoFillJsObject : public QObject
 public:
     explicit AutoFillJsObject(ExternalJsObject *parent);
 
-public slots:
+public Q_SLOTS:
     void formSubmitted(const QString &frameUrl, const QString &username, const QString &password, const QByteArray &data);
 
 private:

@@ -128,10 +128,10 @@ public:
     int count() const {return m_tabs.count(); }
     QRect tabRect(int index) const;
 
-signals:
+Q_SIGNALS:
     void currentChanged(int);
 
-public slots:
+public Q_SLOTS:
     void emitCurrentIndex();
 
 private:
@@ -190,12 +190,12 @@ public:
     Mode mode() const { return mode_; }
     QPixmap bgPixmap() { return background_pixmap_; }
 
-public slots:
+public Q_SLOTS:
     void SetCurrentIndex(int index);
     void SetMode(Mode mode);
     void SetMode(int mode) { SetMode(Mode(mode)); }
 
-signals:
+Q_SIGNALS:
     void CurrentChanged(int index);
     void ModeChanged(FancyTabWidget::Mode mode);
 
@@ -203,7 +203,7 @@ protected:
     void paintEvent(QPaintEvent* event);
     void contextMenuEvent(QContextMenuEvent* e);
 
-private slots:
+private Q_SLOTS:
     void ShowWidget(int index);
 
 private:

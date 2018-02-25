@@ -70,7 +70,7 @@ public:
 
     BookmarkItem* item(const QModelIndex &index) const;
 
-private slots:
+private Q_SLOTS:
     void bookmarkChanged(BookmarkItem* item);
 
 private:
@@ -85,13 +85,13 @@ class FALKON_EXPORT BookmarksFilterModel : public QSortFilterProxyModel
 public:
     explicit BookmarksFilterModel(QAbstractItemModel* parent);
 
-public slots:
+public Q_SLOTS:
     void setFilterFixedString(const QString &pattern);
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;
 
-private slots:
+private Q_SLOTS:
     void startFiltering();
 
 private:

@@ -35,7 +35,7 @@ public:
     explicit AutoScrollSettings(AutoScroller* scroller, QWidget* parent = 0);
     ~AutoScrollSettings();
 
-private slots:
+private Q_SLOTS:
     void accepted();
 
 private:

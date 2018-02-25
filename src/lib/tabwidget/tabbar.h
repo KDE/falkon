@@ -43,10 +43,10 @@ public:
 
     void wheelEvent(QWheelEvent* event);
 
-signals:
+Q_SIGNALS:
     void moveAddTabButton(int posX);
 
-private slots:
+private Q_SLOTS:
     void currentTabChanged(int index);
     void overflowChanged(bool overflowed);
     void closeTabFromButton();

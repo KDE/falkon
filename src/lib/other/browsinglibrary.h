@@ -46,7 +46,7 @@ public:
     HistoryManager* historyManager() { return m_historyManager; }
     BookmarksManager* bookmarksManager() { return m_bookmarksManager; }
 
-private slots:
+private Q_SLOTS:
     void search();
 
     void importBookmarks();

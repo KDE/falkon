@@ -60,14 +60,14 @@ public:
     void emitMainWindowCreated(BrowserWindow* window);
     void emitMainWindowDeleted(BrowserWindow* window);
 
-signals:
+Q_SIGNALS:
     void webPageCreated(WebPage* page);
     void webPageDeleted(WebPage* page);
 
     void mainWindowCreated(BrowserWindow* window);
     void mainWindowDeleted(BrowserWindow* window);
 
-private slots:
+private Q_SLOTS:
     void pluginUnloaded(PluginInterface* plugin);
 
 private:

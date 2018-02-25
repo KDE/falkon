@@ -30,7 +30,7 @@ class FALKON_EXPORT MenuBar : public QMenuBar
 public:
     explicit MenuBar(BrowserWindow* parent);
 
-private slots:
+private Q_SLOTS:
     void contextMenuRequested(const QPoint &pos);
 
 private:

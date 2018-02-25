@@ -51,7 +51,7 @@ public:
         QString versionString() const;
     };
 
-private slots:
+private Q_SLOTS:
     void downCompleted();
     void start();
     void downloadNewVersion();

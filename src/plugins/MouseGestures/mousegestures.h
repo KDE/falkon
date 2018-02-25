@@ -52,7 +52,7 @@ public:
     void loadSettings();
     void saveSettings();
 
-private slots:
+private Q_SLOTS:
     void upGestured();
     void downGestured();
     void leftGestured();

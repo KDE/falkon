@@ -31,11 +31,7 @@ public:
     explicit ButtonBox(QWidget* parent = 0);
     ButtonRole clickedButtonRole();
 
-signals:
-
-public slots:
-
-private slots:
+private Q_SLOTS:
     void buttonClicked(QAbstractButton* button);
 
 private:

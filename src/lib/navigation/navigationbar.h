@@ -72,7 +72,7 @@ public:
     void addToolButton(AbstractButtonInterface *button);
     void removeToolButton(AbstractButtonInterface *button);
 
-public slots:
+public Q_SLOTS:
     void refreshHistory();
 
     void stop();
@@ -82,7 +82,7 @@ public slots:
     void goForward();
     void goForwardInNewTab();
 
-private slots:
+private Q_SLOTS:
     void aboutToShowHistoryNextMenu();
     void aboutToShowHistoryBackMenu();
     void aboutToShowToolsMenu();

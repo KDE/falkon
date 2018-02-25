@@ -68,7 +68,7 @@ public:
 
     void loadSettings();
 
-signals:
+Q_SIGNALS:
     void historyEntryAdded(const HistoryEntry &entry);
     void historyEntryDeleted(const HistoryEntry &entry);
     void historyEntryEdited(const HistoryEntry &before, const HistoryEntry &after);

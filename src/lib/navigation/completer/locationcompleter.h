@@ -44,11 +44,11 @@ public:
     bool isVisible() const;
     void closePopup();
 
-public slots:
+public Q_SLOTS:
     void complete(const QString &string);
     void showMostVisited();
 
-signals:
+Q_SIGNALS:
     void showCompletion(const QString &completion, bool completeDomain);
     void showDomainCompletion(const QString &completion);
     void clearCompletion();
@@ -56,7 +56,7 @@ signals:
     void cancelRefreshJob();
     void loadRequested(const LoadRequest &request);
 
-private slots:
+private Q_SLOTS:
     void refreshJobFinished();
     void slotPopupClosed();
     void addSuggestions(const QStringList &suggestions);

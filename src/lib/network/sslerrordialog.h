@@ -42,7 +42,7 @@ public:
     void setText(const QString &text);
     Result result();
 
-private slots:
+private Q_SLOTS:
     void buttonClicked(QAbstractButton* button);
 
 private:

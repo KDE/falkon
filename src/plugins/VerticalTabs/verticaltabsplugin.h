@@ -65,7 +65,7 @@ public:
 
     QString styleSheet() const;
 
-signals:
+Q_SIGNALS:
     void viewTypeChanged(ViewType type);
     void styleSheetChanged(const QString &styleSheet);
 

@@ -64,11 +64,11 @@ public:
     bool removeBookmark(BookmarkItem* item);
     void changeBookmark(BookmarkItem* item);
 
-public slots:
+public Q_SLOTS:
     void setShowOnlyIconsInToolbar(bool state);
     void setShowOnlyTextInToolbar(bool state);
 
-signals:
+Q_SIGNALS:
     // Item was added to bookmarks
     void bookmarkAdded(BookmarkItem* item);
     // Item was removed from bookmarks
@@ -79,7 +79,7 @@ signals:
     void showOnlyIconsInToolbarChanged(bool show);
     void showOnlyTextInToolbarChanged(bool show);
 
-private slots:
+private Q_SLOTS:
     void saveSettings();
 
 private:

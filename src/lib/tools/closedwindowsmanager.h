@@ -53,7 +53,7 @@ public:
     QByteArray saveState() const;
     void restoreState(const QByteArray &state);
 
-public slots:
+public Q_SLOTS:
     void restoreClosedWindow();
     void restoreAllClosedWindows();
     void clearClosedWindows();

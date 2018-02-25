@@ -44,10 +44,10 @@ public:
 
     QAction* action(const QString &name) const;
 
-public slots:
+public Q_SLOTS:
     void setWindow(BrowserWindow* window);
 
-private slots:
+private Q_SLOTS:
     // Standard actions
     void showAboutDialog();
     void showPreferences();

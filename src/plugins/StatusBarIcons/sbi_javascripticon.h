@@ -30,7 +30,7 @@ class SBI_JavaScriptIcon : public SBI_Icon
 public:
     explicit SBI_JavaScriptIcon(BrowserWindow* window);
 
-private slots:
+private Q_SLOTS:
     void showMenu(const QPoint &point);
     void updateIcon();
 

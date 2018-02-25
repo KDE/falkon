@@ -36,7 +36,7 @@ public:
     explicit JsOptions(QWidget* parent = 0);
     ~JsOptions();
 
-public slots:
+public Q_SLOTS:
     void accept();
 
 private:

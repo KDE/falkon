@@ -44,7 +44,7 @@ public:
     void setTitle(const QString &title);
     void setWidget(QWidget* widget);
 
-public slots:
+public Q_SLOTS:
     void close();
 
 private:
@@ -72,7 +72,7 @@ public:
     static void addSidebar(const QString &id, SideBarInterface* interface);
     static void removeSidebar(const QString &id);
 
-private slots:
+private Q_SLOTS:
     void slotShowSideBar();
 
 private:

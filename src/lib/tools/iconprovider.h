@@ -68,7 +68,7 @@ public:
 
     static IconProvider* instance();
 
-public slots:
+public Q_SLOTS:
     void saveIconsToDatabase();
     void clearOldIconsInDatabase();
 

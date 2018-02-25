@@ -35,7 +35,7 @@ public:
     void setWebView(WebView* view);
     void checkBookmark(const QUrl &url, bool forceCheck = false);
 
-private slots:
+private Q_SLOTS:
     void bookmarksChanged();
     void speedDialChanged();
 

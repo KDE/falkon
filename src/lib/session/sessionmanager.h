@@ -56,14 +56,14 @@ public:
     void backupSavedSessions();
     void writeCurrentSession(const QString &filePath);
 
-signals:
+Q_SIGNALS:
     void sessionsMetaDataChanged();
 
-public slots:
+public Q_SLOTS:
     void autoSaveLastSession();
     void openSessionManagerDialog();
 
-private slots:
+private Q_SLOTS:
     void aboutToShowSessionsMenu();
     void sessionsDirectoryChanged();
     void openSession(QString sessionFilePath = QString(), SessionFlags flags = nullptr);

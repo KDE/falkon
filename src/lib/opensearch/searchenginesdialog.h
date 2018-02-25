@@ -38,10 +38,10 @@ public:
     explicit SearchEnginesDialog(QWidget* parent = 0);
     ~SearchEnginesDialog();
 
-public slots:
+public Q_SLOTS:
     void accept() override;
 
-private slots:
+private Q_SLOTS:
     void addEngine();
     void removeEngine();
     void editEngine();

@@ -38,7 +38,7 @@ public:
 
     QJsonArray restoreData() const;
 
-public slots:
+public Q_SLOTS:
     void startNewSession();
     void restoreSession(const QStringList &excludeWin, const QStringList &excludeTab);
 

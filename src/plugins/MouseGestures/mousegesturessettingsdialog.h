@@ -36,7 +36,7 @@ public:
     explicit MouseGesturesSettingsDialog(MouseGestures* gestures, QWidget* parent = 0);
     ~MouseGesturesSettingsDialog();
 
-private slots:
+private Q_SLOTS:
     void showLicense();
     void accepted();
 

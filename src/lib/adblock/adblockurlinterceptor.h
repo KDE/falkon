@@ -34,7 +34,7 @@ public:
 
     void interceptRequest(QWebEngineUrlRequestInfo &request);
 
-signals:
+Q_SIGNALS:
     void requestBlocked(const AdBlockedRequest &request);
 
 private:

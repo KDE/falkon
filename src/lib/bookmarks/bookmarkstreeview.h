@@ -51,10 +51,10 @@ public:
     // Expand up to root item
     void ensureBookmarkVisible(BookmarkItem* item);
 
-public slots:
+public Q_SLOTS:
     void search(const QString &string);
 
-signals:
+Q_SIGNALS:
     // Open bookmark in current tab
     void bookmarkActivated(BookmarkItem* item);
     // Open bookmark in new tab
@@ -66,7 +66,7 @@ signals:
     // If all bookmarks have been deselected, items is empty
     void bookmarksSelected(QList<BookmarkItem*> items);
 
-private slots:
+private Q_SLOTS:
     void indexExpanded(const QModelIndex &parent);
     void indexCollapsed(const QModelIndex &parent);
 

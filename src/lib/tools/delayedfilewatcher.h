@@ -32,11 +32,11 @@ public:
     explicit DelayedFileWatcher(QObject* parent = 0);
     explicit DelayedFileWatcher(const QStringList &paths, QObject* parent = 0);
 
-signals:
+Q_SIGNALS:
     void delayedDirectoryChanged(const QString &path);
     void delayedFileChanged(const QString &path);
 
-private slots:
+private Q_SLOTS:
     void slotDirectoryChanged(const QString &path);
     void slotFileChanged(const QString &path);
 

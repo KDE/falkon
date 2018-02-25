@@ -40,7 +40,7 @@ public:
     explicit BookmarksWidget(WebView* view, BookmarkItem* bookmark, QWidget* parent = 0);
     ~BookmarksWidget();
 
-private slots:
+private Q_SLOTS:
     void toggleSpeedDial();
     void toggleBookmark();
     void bookmarkEdited();

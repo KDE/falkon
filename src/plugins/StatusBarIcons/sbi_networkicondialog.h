@@ -35,7 +35,7 @@ public:
     explicit SBI_NetworkIconDialog(QWidget* parent = 0);
     ~SBI_NetworkIconDialog();
 
-private slots:
+private Q_SLOTS:
     void addProxy();
     void removeProxy();
     void saveProxy();

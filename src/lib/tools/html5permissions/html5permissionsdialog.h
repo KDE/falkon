@@ -37,7 +37,7 @@ public:
 
     void showFeaturePermissions(QWebEnginePage::Feature feature);
 
-private slots:
+private Q_SLOTS:
     void removeEntry();
     void featureIndexChanged();
 

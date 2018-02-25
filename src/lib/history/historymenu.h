@@ -34,9 +34,7 @@ public:
 
     void setMainWindow(BrowserWindow* window);
 
-signals:
-
-private slots:
+private Q_SLOTS:
     void goBack();
     void goForward();
     void goHome();

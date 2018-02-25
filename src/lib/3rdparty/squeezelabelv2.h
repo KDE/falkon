@@ -33,7 +33,7 @@ public:
     QString originalText();
     void setText(const QString &txt);
 
-private slots:
+private Q_SLOTS:
     void copy();
 
 protected:

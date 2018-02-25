@@ -36,10 +36,10 @@ public:
     bool closeOnMiddleClick() const;
     void setCloseOnMiddleClick(bool close);
 
-signals:
+Q_SIGNALS:
     void menuMiddleClicked(Menu*);
 
-public slots:
+public Q_SLOTS:
 
 private:
     void mouseReleaseEvent(QMouseEvent* e);
@@ -58,11 +58,11 @@ public:
     explicit Action(const QString &text, QObject* parent = 0);
     explicit Action(const QIcon &icon, const QString &text, QObject* parent = 0);
 
-signals:
+Q_SIGNALS:
     void ctrlTriggered();
     void shiftTriggered();
 
-public slots:
+public Q_SLOTS:
     void emitCtrlTriggered();
     void emitShiftTriggered();
 

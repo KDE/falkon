@@ -43,7 +43,7 @@ public:
     void startLoading();
     void stopLoading();
 
-public slots:
+public Q_SLOTS:
     void showUrl(const QUrl &url);
     void showSiteIcon();
 

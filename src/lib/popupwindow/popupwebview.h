@@ -40,7 +40,7 @@ public:
     bool isFullScreen() Q_DECL_OVERRIDE;
     void requestFullScreen(bool enable) Q_DECL_OVERRIDE;
 
-public slots:
+public Q_SLOTS:
     void inspectElement();
 
 private:

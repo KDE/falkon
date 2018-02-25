@@ -45,7 +45,7 @@ public:
     QSize sizeHint() const override;
     QSize minimumSizeHint() const override;
 
-private slots:
+private Q_SLOTS:
     void createMenu();
 
     void menuAboutToShow();

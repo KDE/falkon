@@ -48,7 +48,7 @@ public:
 
     bool eventFilter(QObject* object, QEvent* event);
 
-signals:
+Q_SIGNALS:
     void closed();
     void searchEnginesDialogRequested();
     void loadRequested(const LoadRequest &request);
@@ -58,7 +58,7 @@ signals:
     void indexShiftActivated(const QModelIndex &index);
     void indexDeleteRequested(const QModelIndex &index);
 
-public slots:
+public Q_SLOTS:
     void close();
 
 private:

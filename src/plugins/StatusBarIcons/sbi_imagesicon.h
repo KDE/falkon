@@ -29,7 +29,7 @@ class SBI_ImagesIcon : public SBI_Icon
 public:
     explicit SBI_ImagesIcon(BrowserWindow* window, const QString &settingsPath);
 
-private slots:
+private Q_SLOTS:
     void showMenu(const QPoint &point);
     void updateIcon();
 

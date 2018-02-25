@@ -44,7 +44,7 @@ public:
     QString elementHidingRules() const;
     QString elementHidingRulesForDomain(const QString &domain) const;
 
-public slots:
+public Q_SLOTS:
     void update();
     void clear();
 

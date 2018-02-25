@@ -42,13 +42,11 @@ public:
 
     void unloadPlugin();
 
-signals:
-
-public slots:
+public Q_SLOTS:
     void webPageCreated(WebPage* page);
     void showSettings(QWidget* parent = 0);
 
-private slots:
+private Q_SLOTS:
     void loadSettings();
     void pimInsert();
 

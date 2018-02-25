@@ -44,10 +44,10 @@ public:
     QStatusBar* statusBar();
     PopupWebView* webView();
 
-public slots:
+public Q_SLOTS:
     void setWindowGeometry(QRect newRect);
 
-private slots:
+private Q_SLOTS:
     void titleChanged();
     void showNotification(QWidget* notif);
     void showStatusBarMessage(const QString &message);

@@ -90,14 +90,14 @@ public:
 
     static QIcon iconForSearchEngine(const QUrl &url);
 
-signals:
+Q_SIGNALS:
     void enginesChanged();
     void activeEngineChanged();
     void defaultEngineChanged();
 
-public slots:
+public Q_SLOTS:
 
-private slots:
+private Q_SLOTS:
     void engineChangedImage();
     void replyFinished();
 

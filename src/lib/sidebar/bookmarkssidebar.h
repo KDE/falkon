@@ -39,7 +39,7 @@ public:
     explicit BookmarksSidebar(BrowserWindow* window, QWidget* parent = 0);
     ~BookmarksSidebar();
 
-private slots:
+private Q_SLOTS:
     void bookmarkActivated(BookmarkItem* item);
     void bookmarkCtrlActivated(BookmarkItem* item);
     void bookmarkShiftActivated(BookmarkItem* item);

@@ -33,11 +33,11 @@ public:
     void showStopButton();
     void showReloadButton();
 
-signals:
+Q_SIGNALS:
     void stopClicked();
     void reloadClicked();
 
-private slots:
+private Q_SLOTS:
     void updateButton();
     void buttonClicked();
 

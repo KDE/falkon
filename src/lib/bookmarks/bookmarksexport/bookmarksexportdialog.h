@@ -37,7 +37,7 @@ public:
     explicit BookmarksExportDialog(QWidget* parent = 0);
     ~BookmarksExportDialog();
 
-private slots:
+private Q_SLOTS:
     void setPath();
     void exportBookmarks();
 

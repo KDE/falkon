@@ -43,7 +43,7 @@ public:
 
     explicit TabContextMenu(int index, BrowserWindow *window, Options options = DefaultOptions);
 
-signals:
+Q_SIGNALS:
     void reloadTab(int index);
     void stopTab(int index);
     void tabCloseRequested(int index);
@@ -55,7 +55,7 @@ signals:
     void loadTab(int index);
     void unloadTab(int index);
 
-private slots:
+private Q_SLOTS:
     void reloadTab() { emit reloadTab(m_clickedTab); }
     void stopTab() { emit stopTab(m_clickedTab); }
     void closeTab() { emit tabCloseRequested(m_clickedTab); }

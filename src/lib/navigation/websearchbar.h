@@ -51,7 +51,7 @@ class FALKON_EXPORT WebSearchBar : public LineEdit
 public:
     explicit WebSearchBar(BrowserWindow* window);
 
-private slots:
+private Q_SLOTS:
     void searchChanged(const ButtonWithMenu::Item &item);
     void setupEngines();
 

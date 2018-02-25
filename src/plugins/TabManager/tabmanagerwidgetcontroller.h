@@ -46,7 +46,7 @@ public:
     void addStatusBarIcon(BrowserWindow* window);
     void removeStatusBarIcon(BrowserWindow* window);
 
-public slots:
+public Q_SLOTS:
     void setGroupType(TabManagerWidget::GroupType type);
     void mainWindowDeleted(BrowserWindow* window);
     void raiseTabManager();
@@ -60,7 +60,7 @@ private:
     QHash<BrowserWindow*, AbstractButtonInterface*> m_statusBarIcons;
     QHash<BrowserWindow*, QAction*> m_actions;
 
-signals:
+Q_SIGNALS:
     void requestRefreshTree(WebPage* p = 0);
 };
 

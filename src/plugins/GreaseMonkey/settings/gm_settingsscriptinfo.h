@@ -35,7 +35,7 @@ public:
     explicit GM_SettingsScriptInfo(GM_Script* script, QWidget* parent = 0);
     ~GM_SettingsScriptInfo();
 
-private slots:
+private Q_SLOTS:
     void editInTextEditor();
     void loadScript();
 

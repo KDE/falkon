@@ -35,11 +35,11 @@ public:
     void showRule(const AdBlockRule* rule);
     void refresh();
 
-public slots:
+public Q_SLOTS:
     void addRule();
     void removeRule();
 
-private slots:
+private Q_SLOTS:
     void contextMenuRequested(const QPoint &pos);
     void itemChanged(QTreeWidgetItem* item);
     void copyFilter();

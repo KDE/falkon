@@ -39,7 +39,7 @@ public:
     explicit BookmarksImportDialog(QWidget* parent = 0);
     ~BookmarksImportDialog();
 
-private slots:
+private Q_SLOTS:
     void nextPage();
     void previousPage();
     void setFile();

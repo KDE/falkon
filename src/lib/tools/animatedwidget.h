@@ -34,11 +34,11 @@ public:
 
     QWidget* widget() { return m_widget; }
 
-public slots:
+public Q_SLOTS:
     void hide();
     void startAnimation();
 
-private slots:
+private Q_SLOTS:
     void animateFrame(int frame);
 
 private:

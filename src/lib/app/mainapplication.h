@@ -121,7 +121,7 @@ public:
     static bool isTestModeEnabled();
     static void setTestModeEnabled(bool enabled);
 
-public slots:
+public Q_SLOTS:
     void addNewTab(const QUrl &url = QUrl());
     void startPrivateBrowsing(const QUrl &startUrl = QUrl());
 
@@ -131,11 +131,11 @@ public slots:
     void changeOccurred();
     void quitApplication();
 
-signals:
+Q_SIGNALS:
     void settingsReloaded();
     void activeWindowChanged(BrowserWindow* window);
 
-private slots:
+private Q_SLOTS:
     void postLaunch();
 
     void saveSettings();

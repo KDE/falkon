@@ -33,7 +33,7 @@ public:
     void setWebView(WebView* view);
     void setUsernames(const QStringList &usernames);
 
-private slots:
+private Q_SLOTS:
     void iconClicked();
 
 private:

@@ -38,7 +38,7 @@ public:
     explicit UserAgentDialog(QWidget* parent = 0);
     ~UserAgentDialog();
 
-private slots:
+private Q_SLOTS:
     void addSite();
     void removeSite();
     void editSite();

@@ -38,7 +38,7 @@ public:
     explicit HTML5PermissionsNotification(const QUrl &origin, QWebEnginePage* page, const QWebEnginePage::Feature &feature);
     ~HTML5PermissionsNotification();
 
-private slots:
+private Q_SLOTS:
     void grantPermissions();
     void denyPermissions();
 

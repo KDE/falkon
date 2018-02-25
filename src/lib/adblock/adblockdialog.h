@@ -37,7 +37,7 @@ public:
 
     void showRule(const AdBlockRule* rule) const;
 
-private slots:
+private Q_SLOTS:
     void addRule();
     void removeRule();
 

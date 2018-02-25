@@ -39,11 +39,11 @@ public:
 
     void updateScript(const QString& fileName);
 
-signals:
+Q_SIGNALS:
     void finished(const QString& fileName);
     void error();
 
-private slots:
+private Q_SLOTS:
     void scriptDownloaded();
     void requireDownloaded();
 

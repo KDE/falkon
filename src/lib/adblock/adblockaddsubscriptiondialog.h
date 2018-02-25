@@ -39,7 +39,7 @@ public:
     QString title() const;
     QString url() const;
 
-private slots:
+private Q_SLOTS:
     void indexChanged(int index);
 
 private:

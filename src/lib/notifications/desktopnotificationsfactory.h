@@ -47,7 +47,7 @@ public:
     void showNotification(const QPixmap &icon, const QString &heading, const QString &text);
     void nativeNotificationPreview();
 
-private slots:
+private Q_SLOTS:
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
     void updateLastId(const QDBusMessage &msg);
     void error(const QDBusError &error);

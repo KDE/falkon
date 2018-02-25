@@ -46,10 +46,10 @@ public:
 
     void start();
 
-signals:
+Q_SIGNALS:
     void thumbnailCreated(const QPixmap &);
 
-public slots:
+public Q_SLOTS:
     QString afterLoadScript() const;
     void createThumbnail(bool status);
 

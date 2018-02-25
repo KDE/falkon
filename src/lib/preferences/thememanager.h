@@ -42,7 +42,7 @@ public:
 
     void save();
 
-private slots:
+private Q_SLOTS:
     void currentChanged();
     void showLicense();
 

@@ -44,10 +44,10 @@ public:
 
     void setMainWindow(BrowserWindow* window);
 
-public slots:
+public Q_SLOTS:
     void search(const QString &string);
 
-private slots:
+private Q_SLOTS:
     void bookmarkActivated(BookmarkItem* item);
     void bookmarkCtrlActivated(BookmarkItem* item);
     void bookmarkShiftActivated(BookmarkItem* item);

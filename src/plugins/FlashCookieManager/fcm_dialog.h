@@ -45,7 +45,7 @@ public:
     void refreshView(bool forceReload = false);
     void showPage(int index);
 
-private slots:
+private Q_SLOTS:
     void currentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem* parent);
     void removeCookie();
     void removeAll();

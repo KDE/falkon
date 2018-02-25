@@ -106,7 +106,7 @@ public:
 
     void delayedExec();
 
-public slots:
+public Q_SLOTS:
     void accept();
     void reject();
     void showSettingPage();
@@ -130,7 +130,7 @@ class AskMasterPassword : public QDialog
 public:
     explicit AskMasterPassword(DatabaseEncryptedPasswordBackend* backend, QWidget* parent = 0);
 
-private slots:
+private Q_SLOTS:
     void verifyPassword();
 
 private:

@@ -53,11 +53,11 @@ public:
     static QString remaingTimeToString(QTime time);
     static QString currentSpeedToString(double speed);
 
-signals:
+Q_SIGNALS:
     void deleteItem(DownloadItem*);
     void downloadFinished(bool success);
 
-private slots:
+private Q_SLOTS:
     void parentResized(const QSize &size);
     void finished();
     void downloadProgress(qint64 received, qint64 total);

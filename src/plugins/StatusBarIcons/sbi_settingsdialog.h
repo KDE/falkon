@@ -35,7 +35,7 @@ public:
     explicit SBI_SettingsDialog(SBI_IconsManager* manager, QWidget* parent = 0);
     ~SBI_SettingsDialog();
 
-private slots:
+private Q_SLOTS:
     void saveSettings();
 
 private:

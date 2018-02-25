@@ -35,7 +35,7 @@ public:
     explicit AboutDialog(QWidget* parent = 0);
     ~AboutDialog();
 
-private slots:
+private Q_SLOTS:
     void showAbout();
 
 private:

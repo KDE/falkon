@@ -37,7 +37,7 @@ public:
     static void clearWebDatabases();
     static void clearCache();
 
-private slots:
+private Q_SLOTS:
     void historyClicked(bool state);
     void dialogAccepted();
     void optimizeDb();

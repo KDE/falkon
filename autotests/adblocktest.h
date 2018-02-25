@@ -24,7 +24,7 @@ class AdBlockTest : public QObject
 {
     Q_OBJECT
 
-private slots:
+private Q_SLOTS:
     void isMatchingCookieTest_data();
     void isMatchingCookieTest();
     void parseRegExpFilterTest_data();

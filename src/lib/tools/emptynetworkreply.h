@@ -28,7 +28,7 @@ class FALKON_EXPORT EmptyNetworkReply : public QNetworkReply
 public:
     explicit EmptyNetworkReply(QObject* parent = 0);
 
-private slots:
+private Q_SLOTS:
     void delayedFinish();
 
 protected:

@@ -45,15 +45,15 @@ public:
     void deleteItem(QTreeWidgetItem* item);
     void deleteItems(const QList<QTreeWidgetItem*> &items);
 
-signals:
+Q_SIGNALS:
     void itemControlClicked(QTreeWidgetItem* item);
     void itemMiddleButtonClicked(QTreeWidgetItem* item);
 
-public slots:
+public Q_SLOTS:
     void filterString(const QString &string);
     void clear();
 
-private slots:
+private Q_SLOTS:
     void sheduleRefresh();
 
 private:

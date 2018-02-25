@@ -35,10 +35,10 @@ public:
 
     BookmarkItem* selectedFolder() const;
 
-signals:
+Q_SIGNALS:
     void folderSelected(BookmarkItem* folder);
 
-private slots:
+private Q_SLOTS:
     void folderChoosed();
 
 private:
@@ -57,10 +57,10 @@ public:
 
     BookmarkItem* selectedFolder() const;
 
-signals:
+Q_SIGNALS:
     void selectedFolderChanged(BookmarkItem* folder);
 
-public slots:
+public Q_SLOTS:
     void setSelectedFolder(BookmarkItem* folder);
 
 private:

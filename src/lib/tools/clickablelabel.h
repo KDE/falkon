@@ -43,7 +43,7 @@ public:
     QIcon fallbackIcon() const;
     void setFallbackIcon(const QIcon &fallbackIcon);
 
-signals:
+Q_SIGNALS:
     void clicked(QPoint);
     void middleClicked(QPoint);
 

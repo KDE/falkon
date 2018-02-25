@@ -44,7 +44,7 @@ public:
 
     static bool canShowSiteInfo(const QUrl &url);
 
-private slots:
+private Q_SLOTS:
     void showImagePreview(QTreeWidgetItem *item);
     void imagesCustomContextMenuRequested(const QPoint &p);
     void copyActionData();

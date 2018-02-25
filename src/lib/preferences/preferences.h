@@ -46,7 +46,7 @@ public:
     explicit Preferences(BrowserWindow* window);
     ~Preferences();
 
-private slots:
+private Q_SLOTS:
     void saveSettings();
 
     void buttonClicked(QAbstractButton* button);

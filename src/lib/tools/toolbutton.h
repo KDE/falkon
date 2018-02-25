@@ -73,7 +73,7 @@ public:
     bool toolbarButtonLook() const;
     void setToolbarButtonLook(bool enable);
 
-signals:
+Q_SIGNALS:
     void middleMouseClicked();
     void controlClicked();
     void doubleClicked();
@@ -82,7 +82,7 @@ signals:
     void aboutToShowMenu();
     void aboutToHideMenu();
 
-private slots:
+private Q_SLOTS:
     void menuAboutToHide();
     void showMenu();
 
