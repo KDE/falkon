@@ -105,7 +105,7 @@ void VerticalTabsPlugin::showSettings(QWidget *parent)
     settings->exec();
 }
 
-bool VerticalTabsPlugin::keyPress(const Qz::ObjectName &type, QObject *obj, QKeyEvent *event)
+bool VerticalTabsPlugin::keyPress(Qz::ObjectName type, QObject *obj, QKeyEvent *event)
 {
     if (type == Qz::ON_TabWidget) {
         return m_controller->handleKeyPress(event, static_cast<TabWidget*>(obj));

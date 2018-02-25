@@ -42,7 +42,7 @@ public:
     void showSettings(QWidget *parent) override;
 
     void populateWebViewMenu(QMenu *menu, WebView *view, const WebHitTestResult &r) override;
-    bool keyPress(const Qz::ObjectName &type, QObject *obj, QKeyEvent *event) override;
+    bool keyPress(Qz::ObjectName type, QObject *obj, QKeyEvent *event) override;
 
 private:
     PIM_Handler* m_handler;

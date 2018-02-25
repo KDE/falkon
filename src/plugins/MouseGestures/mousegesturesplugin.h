@@ -37,9 +37,9 @@ public:
     QTranslator *getTranslator(const QString &locale) override;
     void showSettings(QWidget *parent) override;
 
-    bool mousePress(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
-    bool mouseRelease(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
-    bool mouseMove(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
+    bool mousePress(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
+    bool mouseRelease(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
+    bool mouseMove(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
 
 private:
     MouseGestures* m_gestures;

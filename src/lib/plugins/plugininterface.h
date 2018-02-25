@@ -52,19 +52,19 @@ public:
     virtual void populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTestResult &r) { Q_UNUSED(menu) Q_UNUSED(view) Q_UNUSED(r) }
     virtual void populateExtensionsMenu(QMenu *menu) { Q_UNUSED(menu) }
 
-    virtual bool mouseDoubleClick(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
-    virtual bool mousePress(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
-    virtual bool mouseRelease(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
-    virtual bool mouseMove(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
+    virtual bool mouseDoubleClick(Qz::ObjectName type, QObject* obj, QMouseEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
+    virtual bool mousePress(Qz::ObjectName type, QObject* obj, QMouseEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
+    virtual bool mouseRelease(Qz::ObjectName type, QObject* obj, QMouseEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
+    virtual bool mouseMove(Qz::ObjectName type, QObject* obj, QMouseEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
 
-    virtual bool wheelEvent(const Qz::ObjectName &type, QObject* obj, QWheelEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
+    virtual bool wheelEvent(Qz::ObjectName type, QObject* obj, QWheelEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
 
-    virtual bool keyPress(const Qz::ObjectName &type, QObject* obj, QKeyEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
-    virtual bool keyRelease(const Qz::ObjectName &type, QObject* obj, QKeyEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
+    virtual bool keyPress(Qz::ObjectName type, QObject* obj, QKeyEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
+    virtual bool keyRelease(Qz::ObjectName type, QObject* obj, QKeyEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
 
     virtual bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) { Q_UNUSED(page); Q_UNUSED(url); Q_UNUSED(type); Q_UNUSED(isMainFrame); return true; }
 };
 
-Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.1")
+Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.2")
 
 #endif // PLUGININTERFACE_H

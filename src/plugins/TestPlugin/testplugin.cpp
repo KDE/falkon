@@ -156,7 +156,7 @@ void TestPlugin::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTes
     menu->addAction(tr("My first plugin action") + title, this, SLOT(actionSlot()));
 }
 
-bool TestPlugin::mousePress(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool TestPlugin::mousePress(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     qDebug() << "mousePress" << type << obj << event;
 

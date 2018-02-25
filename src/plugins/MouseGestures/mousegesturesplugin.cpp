@@ -71,7 +71,7 @@ void MouseGesturesPlugin::showSettings(QWidget* parent)
     m_gestures->showSettings(parent);
 }
 
-bool MouseGesturesPlugin::mousePress(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool MouseGesturesPlugin::mousePress(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     if (type == Qz::ON_WebView) {
         m_gestures->mousePress(obj, event);
@@ -80,7 +80,7 @@ bool MouseGesturesPlugin::mousePress(const Qz::ObjectName &type, QObject* obj, Q
     return false;
 }
 
-bool MouseGesturesPlugin::mouseRelease(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool MouseGesturesPlugin::mouseRelease(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     if (type == Qz::ON_WebView) {
         return m_gestures->mouseRelease(obj, event);
@@ -89,7 +89,7 @@ bool MouseGesturesPlugin::mouseRelease(const Qz::ObjectName &type, QObject* obj,
     return false;
 }
 
-bool MouseGesturesPlugin::mouseMove(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool MouseGesturesPlugin::mouseMove(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     if (type == Qz::ON_WebView) {
         m_gestures->mouseMove(obj, event);

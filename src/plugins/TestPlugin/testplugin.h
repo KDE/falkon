@@ -43,7 +43,7 @@ public:
     void showSettings(QWidget *parent) override;
 
     void populateWebViewMenu(QMenu *menu, WebView *view, const WebHitTestResult &r) override;
-    bool mousePress(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
+    bool mousePress(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
 
 private Q_SLOTS:
     void actionSlot();

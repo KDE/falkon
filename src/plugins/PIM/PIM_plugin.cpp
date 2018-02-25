@@ -79,7 +79,7 @@ void PIM_Plugin::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTes
     m_handler->populateWebViewMenu(menu, view, r);
 }
 
-bool PIM_Plugin::keyPress(const Qz::ObjectName &type, QObject* obj, QKeyEvent* event)
+bool PIM_Plugin::keyPress(Qz::ObjectName type, QObject* obj, QKeyEvent* event)
 {
     if (type == Qz::ON_WebView) {
         WebView* view = qobject_cast<WebView*>(obj);

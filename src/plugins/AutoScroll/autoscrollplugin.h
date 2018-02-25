@@ -39,10 +39,10 @@ public:
     QTranslator *getTranslator(const QString &locale) override;
     void showSettings(QWidget *parent) override;
 
-    bool mouseMove(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
-    bool mousePress(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
-    bool mouseRelease(const Qz::ObjectName &type, QObject *obj, QMouseEvent *event) override;
-    bool wheelEvent(const Qz::ObjectName &type, QObject *obj, QWheelEvent *event) override;
+    bool mouseMove(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
+    bool mousePress(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
+    bool mouseRelease(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
+    bool wheelEvent(Qz::ObjectName type, QObject *obj, QWheelEvent *event) override;
 
 private:
     AutoScroller* m_scroller;

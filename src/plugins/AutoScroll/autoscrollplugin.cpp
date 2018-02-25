@@ -77,7 +77,7 @@ void AutoScrollPlugin::showSettings(QWidget* parent)
     m_settings.data()->raise();
 }
 
-bool AutoScrollPlugin::mouseMove(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool AutoScrollPlugin::mouseMove(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     if (type == Qz::ON_WebView) {
         return m_scroller->mouseMove(obj, event);
@@ -86,7 +86,7 @@ bool AutoScrollPlugin::mouseMove(const Qz::ObjectName &type, QObject* obj, QMous
     return false;
 }
 
-bool AutoScrollPlugin::mousePress(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool AutoScrollPlugin::mousePress(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     if (type == Qz::ON_WebView) {
         return m_scroller->mousePress(obj, event);
@@ -95,7 +95,7 @@ bool AutoScrollPlugin::mousePress(const Qz::ObjectName &type, QObject* obj, QMou
     return false;
 }
 
-bool AutoScrollPlugin::mouseRelease(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool AutoScrollPlugin::mouseRelease(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     if (type == Qz::ON_WebView) {
         return m_scroller->mouseRelease(obj, event);
@@ -104,7 +104,7 @@ bool AutoScrollPlugin::mouseRelease(const Qz::ObjectName &type, QObject* obj, QM
     return false;
 }
 
-bool AutoScrollPlugin::wheelEvent(const Qz::ObjectName &type, QObject *obj, QWheelEvent *event)
+bool AutoScrollPlugin::wheelEvent(Qz::ObjectName type, QObject *obj, QWheelEvent *event)
 {
     if (type == Qz::ON_WebView) {
         return m_scroller->wheel(obj, event);
