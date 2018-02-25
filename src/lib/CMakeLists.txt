@@ -3,15 +3,10 @@ add_definitions(-DFALKON_SHAREDLIBRARY)
 set(CMAKE_CXX_STANDARD 14) # Enable C++14, with cmake >= 3.1
 set(CMAKE_CXX_EXTENSIONS OFF) # Don't enable gcc-specific extensions
 
-if (WIN32)
-add_definitions(-DQT_QTSINGLEAPPLICATION_EXPORT=)
-endif()
-
 set(SRCS
     3rdparty/qtsingleapplication/qtsingleapplication.cpp
     3rdparty/qtsingleapplication/qtlocalpeer.cpp
 )
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/qtsingleapplication)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     set(SRCS ${SRCS} ${CMAKE_SOURCE_DIR}/tests/modeltest/modeltest.cpp)
