@@ -19,7 +19,6 @@
 #define DESKTOPNOTIFICATIONSFACTORY_H
 
 #include "qzcommon.h"
-#include "../config.h"
 
 #include <QObject>
 #include <QPoint>
@@ -48,10 +47,8 @@ public:
     void nativeNotificationPreview();
 
 private Q_SLOTS:
-#if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
     void updateLastId(const QDBusMessage &msg);
     void error(const QDBusError &error);
-#endif
 
 private:
     bool m_enabled;

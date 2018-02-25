@@ -111,17 +111,21 @@ void DesktopNotificationsFactory::nativeNotificationPreview()
     m_notifType = type;
 }
 
-#if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
 void DesktopNotificationsFactory::updateLastId(const QDBusMessage &msg)
 {
+    Q_UNUSED(msg)
+#if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
     QVariantList list = msg.arguments();
     if (list.count() > 0) {
         m_uint = list.at(0).toInt();
     }
+#endif
 }
 
 void DesktopNotificationsFactory::error(const QDBusError &error)
 {
+    Q_UNUSED(error)
+#if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
     qWarning() << "QDBusError:" << error.message();
-}
 #endif
+}
