@@ -25,6 +25,7 @@
 #include "qzcommon.h"
 #include "plugininterface.h"
 
+class QLibrary;
 class QPluginLoader;
 
 class SpeedDial;
@@ -53,7 +54,8 @@ public:
         enum Type {
             Invalid = 0,
             InternalPlugin,
-            SharedLibraryPlugin
+            SharedLibraryPlugin,
+            PythonPlugin
         };
         Type type = Invalid;
         QString pluginId;
@@ -66,6 +68,9 @@ public:
         // SharedLibraryPlugin
         QString libraryPath;
         QPluginLoader *pluginLoader = nullptr;
+
+        // Other
+        QVariant data;
 
         bool isLoaded() const {
             return instance;
@@ -89,6 +94,8 @@ public:
     // SpeedDial
     SpeedDial* speedDial() { return m_speedDial; }
 
+    static PluginSpec createSpec(const DesktopFile &metaData);
+
 public Q_SLOTS:
     void loadSettings();
 
@@ -101,14 +108,14 @@ Q_SIGNALS:
     void pluginUnloaded(PluginInterface* plugin);
 
 private:
-    PluginSpec createSpec(const DesktopFile &metaData) const;
-
     Plugin loadPlugin(const QString &id);
     Plugin loadInternalPlugin(const QString &name);
     Plugin loadSharedLibraryPlugin(const QString &name);
+    Plugin loadPythonPlugin(const QString &name);
     bool initPlugin(PluginInterface::InitState state, Plugin *plugin);
     void initInternalPlugin(Plugin *plugin);
     void initSharedLibraryPlugin(Plugin *plugin);
+    void initPythonPlugin(Plugin *plugin);
 
     void registerAvailablePlugin(const Plugin &plugin);
 
@@ -122,6 +129,8 @@ private:
 
     SpeedDial* m_speedDial;
     QList<PluginInterface*> m_internalPlugins;
+
+    QLibrary *m_pythonPlugin = nullptr;
 };
 
 Q_DECLARE_METATYPE(Plugins::Plugin)

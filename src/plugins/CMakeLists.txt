@@ -22,3 +22,5 @@ endif()
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_subdirectory(TestPlugin)
 endif()
+
+#add_subdirectory(PyFalkon)

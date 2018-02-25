@@ -35,6 +35,13 @@ Plugins::Plugins(QObject* parent)
     , m_speedDial(new SpeedDial(this))
 {
     loadSettings();
+
+    m_pythonPlugin = new QLibrary(QSL("PyFalkonPrivate"), this);
+    if (!m_pythonPlugin->load()) {
+        qDebug() << "Failed to load python support plugin" << m_pythonPlugin->errorString();
+        delete m_pythonPlugin;
+        m_pythonPlugin = nullptr;
+    }
 }
 
 QList<Plugins::Plugin> Plugins::getAvailablePlugins()
@@ -93,6 +100,27 @@ void Plugins::shutdown()
     }
 }
 
+PluginSpec Plugins::createSpec(const DesktopFile &metaData)
+{
+    PluginSpec spec;
+    spec.name = metaData.name(mApp->currentLanguage());
+    spec.description = metaData.comment(mApp->currentLanguage());
+    spec.version = metaData.value(QSL("X-Falkon-Version")).toString();
+    spec.author = QSL("%1 <%2>").arg(metaData.value(QSL("X-Falkon-Author")).toString(), metaData.value(QSL("X-Falkon-Email")).toString());
+    spec.hasSettings = metaData.value(QSL("X-Falkon-Settings")).toBool();
+
+    const QString iconName = metaData.icon();
+    if (!iconName.isEmpty()) {
+        if (QFileInfo::exists(iconName)) {
+            spec.icon = QIcon(iconName).pixmap(32);
+        } else {
+            spec.icon = QIcon::fromTheme(iconName).pixmap(32);
+        }
+    }
+
+    return spec;
+}
+
 void Plugins::loadPlugins()
 {
     QDir settingsDir(DataPaths::currentProfilePath() + "/extensions/");
@@ -147,6 +175,19 @@ void Plugins::loadAvailablePlugins()
             registerAvailablePlugin(plugin);
         }
     }
+
+    // PythonPlugin
+    if (m_pythonPlugin) {
+        auto f = (QVector<Plugin>(*)()) m_pythonPlugin->resolve("pyfalkon_load_available_plugins");
+        if (!f) {
+            qWarning() << "Failed to resolve" << "pyfalkon_load_available_plugins";
+        } else {
+            const auto plugins = f();
+            for (const auto &plugin : plugins) {
+                registerAvailablePlugin(plugin);
+            }
+        }
+    }
 }
 
 void Plugins::registerAvailablePlugin(const Plugin &plugin)
@@ -179,6 +220,8 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
             type = Plugin::InternalPlugin;
         } else if (t == QL1S("lib")) {
             type = Plugin::SharedLibraryPlugin;
+        } else if (t == QL1S("python")) {
+            type = Plugin::PythonPlugin;
         }
         name = id.mid(colon + 1);
     } else {
@@ -192,6 +235,9 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
 
     case Plugin::SharedLibraryPlugin:
         return loadSharedLibraryPlugin(name);
+
+    case Plugin::PythonPlugin:
+        return loadPythonPlugin(name);
 
     default:
         return Plugin();
@@ -242,6 +288,22 @@ Plugins::Plugin Plugins::loadSharedLibraryPlugin(const QString &name)
     return plugin;
 }
 
+Plugins::Plugin Plugins::loadPythonPlugin(const QString &name)
+{
+    if (!m_pythonPlugin) {
+        qWarning() << "Python support plugin is not loaded";
+        return Plugin();
+    }
+
+    auto f = (Plugin(*)(const QString &)) m_pythonPlugin->resolve("pyfalkon_load_plugin");
+    if (!f) {
+        qWarning() << "Failed to resolve" << "pyfalkon_load_plugin";
+        return Plugin();
+    }
+
+    return f(name);
+}
+
 bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
 {
     if (!plugin) {
@@ -255,6 +317,10 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
 
     case Plugin::SharedLibraryPlugin:
         initSharedLibraryPlugin(plugin);
+        break;
+
+    case Plugin::PythonPlugin:
+        initPythonPlugin(plugin);
         break;
 
     default:
@@ -291,23 +357,20 @@ void Plugins::initSharedLibraryPlugin(Plugin *plugin)
     plugin->instance = qobject_cast<PluginInterface*>(plugin->pluginLoader->instance());
 }
 
-PluginSpec Plugins::createSpec(const DesktopFile &metaData) const
+void Plugins::initPythonPlugin(Plugin *plugin)
 {
-    PluginSpec spec;
-    spec.name = metaData.name(mApp->currentLanguage());
-    spec.description = metaData.comment(mApp->currentLanguage());
-    spec.version = metaData.value(QSL("X-Falkon-Version")).toString();
-    spec.author = QSL("%1 <%2>").arg(metaData.value(QSL("X-Falkon-Author")).toString(), metaData.value(QSL("X-Falkon-Email")).toString());
-    spec.hasSettings = metaData.value(QSL("X-Falkon-Settings")).toBool();
+    Q_ASSERT(plugin->type == Plugin::PythonPlugin);
 
-    const QString iconName = metaData.icon();
-    if (!iconName.isEmpty()) {
-        if (QFileInfo::exists(iconName)) {
-            spec.icon = QIcon(iconName).pixmap(32);
-        } else {
-            spec.icon = QIcon::fromTheme(iconName).pixmap(32);
-        }
+    if (!m_pythonPlugin) {
+        qWarning() << "Python support plugin is not loaded";
+        return;
     }
 
-    return spec;
+    auto f = (void(*)(Plugin *)) m_pythonPlugin->resolve("pyfalkon_init_plugin");
+    if (!f) {
+        qWarning() << "Failed to resolve" << "pyfalkon_init_plugin";
+        return;
+    }
+
+    f(plugin);
 }
