@@ -28,7 +28,7 @@ PluginProxy::PluginProxy(QObject *parent)
     connect(this, SIGNAL(pluginUnloaded(PluginInterface*)), this, SLOT(pluginUnloaded(PluginInterface*)));
 }
 
-void PluginProxy::registerAppEventHandler(const PluginProxy::EventHandlerType &type, PluginInterface* obj)
+void PluginProxy::registerAppEventHandler(PluginProxy::EventHandlerType type, PluginInterface* obj)
 {
     switch (type) {
     case MouseDoubleClickHandler:
@@ -112,7 +112,7 @@ void PluginProxy::populateExtensionsMenu(QMenu *menu)
     }
 }
 
-bool PluginProxy::processMouseDoubleClick(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool PluginProxy::processMouseDoubleClick(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     bool accepted = false;
 
@@ -125,7 +125,7 @@ bool PluginProxy::processMouseDoubleClick(const Qz::ObjectName &type, QObject* o
     return accepted;
 }
 
-bool PluginProxy::processMousePress(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool PluginProxy::processMousePress(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     bool accepted = false;
 
@@ -138,7 +138,7 @@ bool PluginProxy::processMousePress(const Qz::ObjectName &type, QObject* obj, QM
     return accepted;
 }
 
-bool PluginProxy::processMouseRelease(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool PluginProxy::processMouseRelease(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     bool accepted = false;
 
@@ -151,7 +151,7 @@ bool PluginProxy::processMouseRelease(const Qz::ObjectName &type, QObject* obj, 
     return accepted;
 }
 
-bool PluginProxy::processMouseMove(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event)
+bool PluginProxy::processMouseMove(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
 {
     bool accepted = false;
 
@@ -164,7 +164,7 @@ bool PluginProxy::processMouseMove(const Qz::ObjectName &type, QObject* obj, QMo
     return accepted;
 }
 
-bool PluginProxy::processWheelEvent(const Qz::ObjectName &type, QObject* obj, QWheelEvent* event)
+bool PluginProxy::processWheelEvent(Qz::ObjectName type, QObject* obj, QWheelEvent* event)
 {
     bool accepted = false;
 
@@ -177,7 +177,7 @@ bool PluginProxy::processWheelEvent(const Qz::ObjectName &type, QObject* obj, QW
     return accepted;
 }
 
-bool PluginProxy::processKeyPress(const Qz::ObjectName &type, QObject* obj, QKeyEvent* event)
+bool PluginProxy::processKeyPress(Qz::ObjectName type, QObject* obj, QKeyEvent* event)
 {
     bool accepted = false;
 
@@ -190,7 +190,7 @@ bool PluginProxy::processKeyPress(const Qz::ObjectName &type, QObject* obj, QKey
     return accepted;
 }
 
-bool PluginProxy::processKeyRelease(const Qz::ObjectName &type, QObject* obj, QKeyEvent* event)
+bool PluginProxy::processKeyRelease(Qz::ObjectName type, QObject* obj, QKeyEvent* event)
 {
     bool accepted = false;
 
@@ -235,4 +235,3 @@ void PluginProxy::emitMainWindowDeleted(BrowserWindow* window)
 {
     emit mainWindowDeleted(window);
 }
-

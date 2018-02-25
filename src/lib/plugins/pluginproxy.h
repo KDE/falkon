@@ -37,20 +37,20 @@ public:
 
     explicit PluginProxy(QObject *parent = nullptr);
 
-    void registerAppEventHandler(const EventHandlerType &type, PluginInterface* obj);
+    void registerAppEventHandler(EventHandlerType type, PluginInterface* obj);
 
     void populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTestResult &r);
     void populateExtensionsMenu(QMenu *menu);
 
-    bool processMouseDoubleClick(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event);
-    bool processMousePress(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event);
-    bool processMouseRelease(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event);
-    bool processMouseMove(const Qz::ObjectName &type, QObject* obj, QMouseEvent* event);
+    bool processMouseDoubleClick(Qz::ObjectName type, QObject* obj, QMouseEvent* event);
+    bool processMousePress(Qz::ObjectName type, QObject* obj, QMouseEvent* event);
+    bool processMouseRelease(Qz::ObjectName type, QObject* obj, QMouseEvent* event);
+    bool processMouseMove(Qz::ObjectName type, QObject* obj, QMouseEvent* event);
 
-    bool processWheelEvent(const Qz::ObjectName &type, QObject* obj, QWheelEvent* event);
+    bool processWheelEvent(Qz::ObjectName type, QObject* obj, QWheelEvent* event);
 
-    bool processKeyPress(const Qz::ObjectName &type, QObject* obj, QKeyEvent* event);
-    bool processKeyRelease(const Qz::ObjectName &type, QObject* obj, QKeyEvent* event);
+    bool processKeyPress(Qz::ObjectName type, QObject* obj, QKeyEvent* event);
+    bool processKeyRelease(Qz::ObjectName type, QObject* obj, QKeyEvent* event);
 
     bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame);
 
