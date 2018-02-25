@@ -16,7 +16,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "pythonplugin.h"
-#include "pythonpluginobject.h"
 
 #include "plugins.h"
 #include "datapaths.h"
@@ -38,7 +37,7 @@ enum State
 
 State state = PythonUninitialized;
 
-PythonPluginObject *pluginObject = nullptr;
+PluginInterface *pluginInterface = nullptr;
 QHash<PyObject*, PluginInterface*> pluginInstances;
 
 static QStringList script_paths()
@@ -55,7 +54,6 @@ static void cleanup()
     if (state > PythonUninitialized) {
         Py_Finalize();
         state = PythonUninitialized;
-        delete pluginObject;
     }
 }
 
@@ -67,34 +65,6 @@ static void set_path(const QStringList &scriptPaths)
     paths.append(originalPath);
 
     qputenv("PYTHONPATH", paths.join(QL1C(':')).toLocal8Bit());
-}
-
-static void register_plugin_object()
-{
-    pluginObject = new PythonPluginObject();
-
-    PyTypeObject *typeObject = Shiboken::SbkType<PythonPluginObject>();
-    PyObject *po = Shiboken::Conversions::pointerToPython(reinterpret_cast<const SbkObjectType *>(typeObject), pluginObject);
-    if (!po) {
-        qWarning() << "Failed to create wrapper for" << pluginObject;
-        return;
-    }
-    Py_INCREF(po);
-
-    PyObject *module = PyImport_AddModule("Falkon");
-    if (!module) {
-        Py_DECREF(po);
-        PyErr_Print();
-        qWarning() << "Failed to locate Falkon module!";
-        return;
-    }
-
-    if (PyModule_AddObject(module, "plugin", po) < 0) {
-        Py_DECREF(po);
-        PyErr_Print();
-        qWarning() << "Failed to add plugin object to Falkon module!";
-        return;
-    }
 }
 
 static State init()
@@ -121,9 +91,12 @@ static State init()
         return state = PythonError;
     }
 
-    register_plugin_object();
-
     return state;
+}
+
+void pyfalkon_register_plugin(PluginInterface *plugin)
+{
+    pluginInterface = plugin;
 }
 
 Plugins::Plugin pyfalkon_load_plugin(const QString &name)
@@ -160,7 +133,7 @@ void pyfalkon_init_plugin(Plugins::Plugin *plugin)
 
     const QString moduleName = plugin->pluginId.mid(7);
 
-    pluginObject->ptr = nullptr;
+    pluginInterface = nullptr;
 
     module = PyImport_ImportModule(qPrintable(moduleName));
     if (!module) {
@@ -168,13 +141,13 @@ void pyfalkon_init_plugin(Plugins::Plugin *plugin)
         qWarning() << "Failed to import module" << moduleName;
         return;
     }
-    if (!pluginObject->ptr) {
-        qWarning() << "No plugin registered! Falkon.plugin.registerPlugin() must be called from script.";
+    if (!pluginInterface) {
+        qWarning() << "No plugin registered! Falkon.registerPlugin() must be called from script.";
         return;
     }
 
-    pluginInstances[module] = pluginObject->ptr;
-    plugin->instance = pluginObject->ptr;
+    pluginInstances[module] = pluginInterface;
+    plugin->instance = pluginInterface;
     plugin->data = QVariant::fromValue(static_cast<void*>(module));
 }
 

@@ -2,17 +2,20 @@
 <typesystem package="PyFalkon">
     <load-typesystem name="typesystem_webenginewidgets.xml" generate="no"/>
 
+    <inject-code class="native" position="beginning">
+      #include &lt;pythonplugin.h&gt;
+    </inject-code>
+
     <value-type name="DesktopFile"/>
     <object-type name="PluginInterface">
       <enum-type name="InitState"/>
     </object-type>
 
-    <object-type name="PythonPluginObject">
-      <modify-function signature="registerPlugin(PluginInterface*)">
-        <modify-argument index="1">
-          <define-ownership owner="c++"/>
-        </modify-argument>
-      </modify-function>
-    </object-type>
+    <add-function signature="registerPlugin(PluginInterface*)">
+      <inject-code class="target" position="beginning">
+        Py_INCREF(%PYARG_1);
+        pyfalkon_register_plugin(%1);
+      </inject-code>
+    </add-function>
 
 </typesystem>
