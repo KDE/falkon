@@ -201,6 +201,15 @@
       </inject-code>
     </add-function>
 
+    <inject-code class="target" position="end">
+    QList&lt;QByteArray&gt; version = QByteArray(Qz::VERSION).split('.');
+    PyObject *pyFalkonVersion = PyTuple_New(3);
+    for (int i = 0; i &lt; 3; ++i)
+        PyTuple_SET_ITEM(pyFalkonVersion, i, PyInt_FromLong(version[i].toInt()));
+    PyModule_AddObject(module, "__version_info__", pyFalkonVersion);
+    PyModule_AddStringConstant(module, "__version__", Qz::VERSION);
+    </inject-code>
+
     <suppress-warning text="Unable to translate type &quot;std::function&lt;QPoint (QSize)&gt;&quot;:*"/>
     <suppress-warning text="Unable to translate type &quot;std::function&lt;void ()&gt;&quot;:*"/>
     <suppress-warning text="skipping field 'ClickController::popupClosed'*"/>
