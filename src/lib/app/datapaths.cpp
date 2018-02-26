@@ -156,7 +156,6 @@ void DataPaths::initCurrentProfile(const QString &profilePath)
 
 void DataPaths::initAssetsIn(const QString &path)
 {
-    m_paths[Translations].append(path + QLatin1String("/locale"));
     m_paths[Themes].append(path + QLatin1String("/themes"));
     m_paths[Plugins].append(path + QLatin1String("/plugins"));
 }

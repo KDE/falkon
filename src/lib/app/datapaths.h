@@ -28,17 +28,16 @@ class FALKON_EXPORT DataPaths
 {
 public:
     enum Path {
-        AppData = 0,             // /usr/share/falkon or . or ../Resources
-        Translations = 1,        // $AppData/locale
-        Themes = 2,              // $AppData/themes
-        Plugins = 3,             // $AppData/plugins
-        Config = 4,              // $XDG_CONFIG_HOME/falkon or %LOCALAPPDATA%/falkon or $AppData/data (portable)
-        Profiles = 5,            // $Config/profiles
-        CurrentProfile = 6,      // $Profiles/current_profile
-        Temp = 7,                // $Config/tmp
-        Cache = 8,               // $XDG_CACHE_HOME/falkon or $CurrentProfile/cache
-        Sessions = 9,            // $CurrentProfile/sessions
-        LastPath = 10
+        AppData = 0,
+        Themes,
+        Plugins,
+        Config,
+        Profiles,
+        CurrentProfile,
+        Temp,
+        Cache,
+        Sessions,
+        LastPath
     };
 
     explicit DataPaths();

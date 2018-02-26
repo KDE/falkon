@@ -326,8 +326,7 @@ QString FalkonSchemeReply::configPage()
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Saved session"), SessionManager::defaultSessionPath()) +
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Data"), allPaths(DataPaths::AppData)) +
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Themes"), allPaths(DataPaths::Themes)) +
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Extensions"), allPaths(DataPaths::Plugins)) +
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Translations"), allPaths(DataPaths::Translations)));
+                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Extensions"), allPaths(DataPaths::Plugins)));
 
 #ifdef QT_DEBUG
         QString debugBuild = tr("<b>Enabled</b>");
