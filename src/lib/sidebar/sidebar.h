@@ -69,7 +69,7 @@ public:
     void closeSideBar();
 
     static void addSidebar(const QString &id, SideBarInterface* interface);
-    static void removeSidebar(const QString &id);
+    static void removeSidebar(SideBarInterface *interface);
 
 private Q_SLOTS:
     void slotShowSideBar();

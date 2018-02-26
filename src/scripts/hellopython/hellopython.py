@@ -41,7 +41,7 @@ class HelloPlugin(Falkon.PluginInterface, QtCore.QObject):
     def unload(self):
         print("unload")
 
-        Falkon.SideBarManager.removeSidebar("hellopython-sidebar")
+        Falkon.SideBarManager.removeSidebar(self.sidebar)
 
         for window in Falkon.MainApplication.instance().windows():
             self.mainWindowDeleted(window)
