@@ -30,16 +30,15 @@
     </value-type>
     <object-type name="WebPage">
       <enum-type name="JsWorld"/>
-      <modify-function signature="execJavaScript(QString,quint32,int)" remove="all"/>
+      <modify-function signature="execJavaScript(QString,quint32,int)">
+        <modify-argument index="2">
+          <replace-default-expression with="WebPage::UnsafeJsWorld"/>
+        </modify-argument>
+      </modify-function>
     </object-type>
     <object-type name="WebView"/>
-    <object-type name="PopupWebView"/>
-    <object-type name="TabbedWebView"/>
+    <object-type name="WebInspector"/>
     <value-type name="WebHitTestResult"/>
-    <object-type name="WebTab">
-      <enum-type name="AddChildBehavior"/>
-    </object-type>
-    <value-type name="DesktopFile"/>
     <object-type name="PluginInterface">
       <enum-type name="InitState"/>
     </object-type>
@@ -58,9 +57,141 @@
     <object-type name="DesktopNotificationsFactory">
       <enum-type name="Type"/>
     </object-type>
+
+    <object-type name="AutoSaver"/>
+    <object-type name="BrowserWindow"/>
+    <object-type name="DataPaths">
+      <enum-type name="Path"/>
+    </object-type>
     <object-type name="MainApplication">
       <enum-type name="AfterLaunch"/>
       <modify-function signature="MainApplication(int&amp;,char**)" remove="all"/>
+    </object-type>
+    <object-type name="Settings"/>
+
+    <object-type name="AutoFill"/>
+    <value-type name="PageFormData"/>
+    <object-type name="PasswordManager"/>
+    <value-type name="PasswordEntry"/>
+    <object-type name="PasswordBackend">
+      <include file-name="passwordbackends/passwordbackend.h" location="global"/>
+    </object-type>
+
+    <object-type name="BookmarkItem">
+      <enum-type name="Type"/>
+    </object-type>
+    <object-type name="Bookmarks"/>
+    <object-type name="BookmarksModel">
+      <enum-type name="Roles"/>
+    </object-type>
+    <object-type name="BookmarksFoldersMenu"/>
+    <object-type name="BookmarksFoldersButton"/>
+    <object-type name="BookmarksTools"/>
+
+    <object-type name="CookieJar"/>
+    <object-type name="CookieManager"/>
+
+    <object-type name="DownloadItem"/>
+    <object-type name="DownloadManager">
+      <enum-type name="DownloadOption"/>
+      <value-type name="DownloadInfo"/>
+    </object-type>
+
+    <object-type name="History">
+      <value-type name="HistoryEntry"/>
+    </object-type>
+    <object-type name="HistoryItem"/>
+    <object-type name="HistoryModel">
+      <enum-type name="Roles"/>
+    </object-type>
+
+    <object-type name="LocationBar">
+      <value-type name="LoadAction">
+        <enum-type name="Type"/>
+      </value-type>
+    </object-type>
+    <object-type name="NavigationBar"/>
+
+    <object-type name="NetworkManager"/>
+    <!-- FIXME: Missing QWebEngineUrlRequest{Info,Job} in PySide
+    <object-type name="UrlInterceptor"/>
+    <object-type name="ExtensionSchemeHandler">
+      <include file-name="schemehandlers/extensionschemehandler.h" location="global"/>
+    </object-type>
+    -->
+
+    <object-type name="SearchEnginesDialog"/>
+    <object-type name="SearchEnginesManager">
+      <value-type name="Engine"/>
+    </object-type>
+
+    <object-type name="CheckBoxDialog"/>
+    <object-type name="QzSettings"/>
+    <object-type name="StatusBar"/>
+
+    <object-type name="SideBarManager">
+      <modify-function signature="addSidebar(QString,SideBarInterface*)">
+        <modify-argument index="2">
+          <define-ownership owner="c++"/>
+        </modify-argument>
+      </modify-function>
+    </object-type>
+    <object-type name="SideBarInterface">
+      <modify-function signature="createMenuAction()">
+        <modify-argument index="return">
+          <define-ownership class="target" owner="c++"/>
+        </modify-argument>
+      </modify-function>
+      <modify-function signature="createSideBarWidget(BrowserWindow*)">
+        <modify-argument index="return">
+          <define-ownership class="target" owner="c++"/>
+        </modify-argument>
+      </modify-function>
+    </object-type>
+
+    <object-type name="ComboTabBar">
+      <enum-type name="SizeType"/>
+      <enum-type name="DropIndicatorPosition"/>
+    </object-type>
+    <object-type name="TabBar"/>
+    <object-type name="TabContextMenu">
+      <enum-type name="Option" flags="Options"/>
+    </object-type>
+    <object-type name="TabIcon">
+      <value-type name="Data"/>
+    </object-type>
+    <object-type name="TabModel">
+      <enum-type name="Roles"/>
+    </object-type>
+    <object-type name="TabMruModel"/>
+    <object-type name="TabStackedWidget"/>
+    <object-type name="TabTreeModel"/>
+    <object-type name="TabWidget">
+      <modify-function signature="addView(LoadRequest,QString,QFlags&lt;Qz::NewTabPositionFlag&gt;,bool,int,bool)">
+        <modify-argument index="2">
+          <replace-default-expression with="TabWidget::tr(&quot;New tab&quot;)"/>
+        </modify-argument>
+      </modify-function>
+    </object-type>
+
+    <object-type name="AbstractButtonInterface">
+      <object-type name="ClickController"/>
+    </object-type>
+    <object-type name="ClickableLabel"/>
+    <object-type name="DelayedFileWatcher"/>
+    <value-type name="DesktopFile"/>
+    <object-type name="IconProvider"/>
+    <object-type name="QzTools"/>
+    <object-type name="SqlDatabase"/>
+    <object-type name="ToolButton"/>
+    <value-type name="WheelHelper">
+      <enum-type name="Direction"/>
+    </value-type>
+
+    <object-type name="SearchToolBar"/>
+    <object-type name="TabbedWebView"/>
+    <object-type name="WebTab">
+      <enum-type name="AddChildBehavior"/>
     </object-type>
 
     <add-function signature="registerPlugin(PluginInterface*)">

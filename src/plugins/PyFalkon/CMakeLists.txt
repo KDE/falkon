@@ -6,13 +6,17 @@ endif()
 # Get all relevant Qt include dirs, to pass them on to shiboken.
 get_property(QT_CORE_INCLUDE_DIRS TARGET Qt5::Core PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 get_property(QT_GUI_INCLUDE_DIRS TARGET Qt5::Gui PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
+get_property(QT_SQL_INCLUDE_DIRS TARGET Qt5::Sql PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 get_property(QT_WIDGETS_INCLUDE_DIRS TARGET Qt5::Widgets PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
+get_property(QT_NETWORK_INCLUDE_DIRS TARGET Qt5::Network PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 get_property(QT_WEBENGINECORE_INCLUDE_DIRS TARGET Qt5::WebEngineCore PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 get_property(QT_WEBENGINEWIDGETS_INCLUDE_DIRS TARGET Qt5::WebEngineWidgets PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
-set(QT_INCLUDE_DIRS 
+set(QT_INCLUDE_DIRS
     ${QT_CORE_INCLUDE_DIRS}
     ${QT_GUI_INCLUDE_DIRS}
+    ${QT_SQL_INCLUDE_DIRS}
     ${QT_WIDGETS_INCLUDE_DIRS}
+    ${QT_NETWORK_INCLUDE_DIRS}
     ${QT_WEBENGINECORE_INCLUDE_DIRS}
     ${QT_WEBENGINEWIDGETS_INCLUDE_DIRS}
 )
@@ -47,7 +51,6 @@ set(GENERATED_SOURCES
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/desktopfile_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/plugininterface_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/loadrequest_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/popupwebview_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/qz_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/desktopnotificationsfactory_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/externaljsobject_wrapper.cpp
@@ -62,6 +65,63 @@ set(GENERATED_SOURCES
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/sidewidget_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/webtab_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/mainapplication_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/datapaths_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/settings_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/autosaver_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/browserwindow_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/pageformdata_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/passwordentry_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/passwordbackend_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/autofill_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/passwordmanager_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/bookmarkitem_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/bookmarkstools_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/bookmarks_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/bookmarksmodel_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/bookmarksfoldersmenu_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/bookmarksfoldersbutton_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/cookiemanager_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/cookiejar_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/downloaditem_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/downloadmanager_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/downloadmanager_downloadinfo_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/history_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/history_historyentry_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/historyitem_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/historymodel_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/locationbar_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/locationbar_loadaction_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/navigationbar_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/networkmanager_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/searchenginesdialog_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/searchenginesmanager_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/searchenginesmanager_engine_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/sidebarmanager_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/sidebarinterface_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/webinspector_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/combotabbar_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/tabbar_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/tabcontextmenu_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/tabicon_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/tabicon_data_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/tabmodel_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/tabmrumodel_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/tabstackedwidget_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/tabtreemodel_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/tabwidget_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/searchtoolbar_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/checkboxdialog_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/qzsettings_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/statusbar_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/abstractbuttoninterface_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/abstractbuttoninterface_clickcontroller_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/clickablelabel_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/delayedfilewatcher_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/iconprovider_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/qztools_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/sqldatabase_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/toolbutton_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/wheelhelper_wrapper.cpp
 )
 set(GENERATED_SOURCES_DEPENDENCIES
     ${GLOBAL_HEADER}

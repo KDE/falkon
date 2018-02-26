@@ -16,6 +16,9 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 
+// Make "signals:", "slots:" visible as access specifiers
+#define QT_ANNOTATE_ACCESS_SPECIFIER(a) __attribute__((annotate(#a)))
+
 // 3rdparty
 #include "lineedit.h"
 #include "squeezelabelv1.h"
@@ -23,27 +26,97 @@
 #include "qtsingleapplication/qtsingleapplication.h"
 
 // app
+#include "autosaver.h"
+#include "browserwindow.h"
+#include "datapaths.h"
 #include "mainapplication.h"
+#include "settings.h"
+
+// autofill
+#include "autofill.h"
+#include "passwordmanager.h"
+#include "passwordbackends/passwordbackend.h"
+
+// bookmarks
+#include "bookmarkitem.h"
+#include "bookmarks.h"
+#include "bookmarksmodel.h"
+#include "bookmarkstools.h"
+
+// cookies
+#include "cookiejar.h"
+#include "cookiemanager.h"
+
+// downloads
+#include "downloaditem.h"
+#include "downloadmanager.h"
+
+// history
+#include "history.h"
+#include "historyitem.h"
+#include "historymodel.h"
+
+// navigation
+#include "locationbar.h"
+#include "navigationbar.h"
+
+// network
+#include "networkmanager.h"
+//#include "urlinterceptor.h"
+//#include "schemehandlers/extensionschemehandler.h"
 
 // notifications
 #include "desktopnotificationsfactory.h"
+
+// opensearch
+#include "searchenginesdialog.h"
+#include "searchenginesmanager.h"
+
+// other
+#include "checkboxdialog.h"
+#include "qzsettings.h"
+#include "statusbar.h"
 
 // plugins
 #include "pluginproxy.h"
 #include "plugininterface.h"
 
-// popupwindow
-#include "popupwebview.h"
+// sidebar
+#include "sidebar.h"
+#include "sidebarinterface.h"
+
+// tabwidget
+#include "combotabbar.h"
+#include "tabbar.h"
+#include "tabcontextmenu.h"
+#include "tabicon.h"
+#include "tabmodel.h"
+#include "tabmrumodel.h"
+#include "tabstackedwidget.h"
+#include "tabtreemodel.h"
+#include "tabwidget.h"
+#include <QItemSelection>
 
 // tools
+#include "abstractbuttoninterface.h"
+#include "clickablelabel.h"
+#include "delayedfilewatcher.h"
 #include "desktopfile.h"
+#include "iconprovider.h"
+#include "qztools.h"
+#include "sqldatabase.h"
+#include "toolbutton.h"
+#include "wheelhelper.h"
 
 // webengine
+#include "loadrequest.h"
+#include "webhittestresult.h"
+#include "webinspector.h"
 #include "webpage.h"
 #include "webview.h"
-#include "loadrequest.h"
 #include "javascript/externaljsobject.h"
 
 // webtab
-#include "webtab.h"
+#include "searchtoolbar.h"
 #include "tabbedwebview.h"
+#include "webtab.h"
