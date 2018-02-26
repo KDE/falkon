@@ -104,6 +104,9 @@ find_package(PythonLibs "3.0")
 set_package_properties(PySide2 PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
 set_package_properties(Shiboken2 PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
 set_package_properties(PythonLibs PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
+if (PySide2_FOUND AND Shiboken2_FOUND AND PythonLibs_FOUND)
+    set(ENABLE_PYTHON_PLUGINS TRUE)
+endif()
 
 # Git revision
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")

@@ -19,7 +19,7 @@ if (KF5Wallet_FOUND)
     add_subdirectory(KWalletPasswords)
 endif()
 
-if (PySide2_FOUND AND Shiboken2_FOUND AND PythonLibs_FOUND)
+if (ENABLE_PYTHON_PLUGINS)
     add_subdirectory(PyFalkon)
 endif()
 
