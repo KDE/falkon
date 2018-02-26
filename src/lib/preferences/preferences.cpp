@@ -100,7 +100,6 @@ Preferences::Preferences(BrowserWindow* window)
 {
     setAttribute(Qt::WA_DeleteOnClose);
     ui->setupUi(this);
-    ui->languages->setLayoutDirection(Qt::LeftToRight);
     QzTools::centerWidgetOnScreen(this);
 
     m_themesManager = new ThemeManager(ui->themesWidget, this);
@@ -456,37 +455,6 @@ Preferences::Preferences(BrowserWindow* window)
         ui->spellcheckLanguages->hide();
     } else {
         ui->spellcheckNoLanguages->hide();
-    }
-
-    //OTHER
-    //Languages
-    QString activeLanguage = mApp->currentLanguage();
-
-    if (!activeLanguage.isEmpty() && activeLanguage != QLatin1String("en_US")) {
-        ui->languages->addItem(createLanguageItem(activeLanguage), activeLanguage);
-    }
-
-    ui->languages->addItem("English (en_US)");
-
-    const QStringList translationPaths = DataPaths::allPaths(DataPaths::Translations);
-
-    foreach (const QString &path, translationPaths) {
-        QDir lanDir(path);
-        QStringList list = lanDir.entryList(QStringList("*.qm"));
-        foreach (const QString &name, list) {
-            if (name.startsWith(QLatin1String("qt_"))) {
-                continue;
-            }
-
-            QString loc = name;
-            loc.remove(QLatin1String(".qm"));
-
-            if (loc == activeLanguage) {
-                continue;
-            }
-
-            ui->languages->addItem(createLanguageItem(loc), loc);
-        }
     }
 
     // Proxy Configuration
@@ -1019,11 +987,6 @@ void Preferences::saveSettings()
     settings.setValue("SearchFromAddressBar", ui->searchFromAddressBar->isChecked());
     settings.setValue("SearchWithDefaultEngine", ui->searchWithDefaultEngine->isChecked());
     settings.setValue("showSearchSuggestions", ui->showABSearchSuggestions->isChecked());
-    settings.endGroup();
-
-    //Languages
-    settings.beginGroup("Language");
-    settings.setValue("language", ui->languages->itemData(ui->languages->currentIndex()).toString());
     settings.endGroup();
 
     //Proxy Configuration

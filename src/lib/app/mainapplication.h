@@ -91,9 +91,6 @@ public:
     QString styleName() const;
     void setProxyStyle(ProxyStyle *style);
 
-    QString currentLanguageFile() const;
-    QString currentLanguage() const;
-
     History* history();
     Bookmarks* bookmarks();
 
@@ -157,8 +154,6 @@ private:
     void loadSettings();
     void loadTheme(const QString &name);
 
-    void translateApp();
-
     void setupUserScripts();
     void setUserStyleSheet(const QString &filePath);
 
@@ -196,8 +191,6 @@ private:
     QPointer<BrowserWindow> m_lastActiveWindow;
 
     QList<PostLaunchAction> m_postLaunchActions;
-
-    QString m_languageFile;
 
     void createJumpList();
     void initPulseSupport();

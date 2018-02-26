@@ -795,7 +795,7 @@ void WebView::createPageContextMenu(QMenu* menu)
         const QUrl w3url = QUrl::fromEncoded("http://validator.w3.org/check?uri=" + QUrl::toPercentEncoding(url().toEncoded()));
         menu->addAction(QIcon(":icons/sites/w3.png"), tr("Validate page"), this, SLOT(openUrlInSelectedTab()))->setData(w3url);
 
-        QByteArray langCode = mApp->currentLanguage().left(2).toUtf8();
+        QByteArray langCode = QLocale::system().name().left(2).toUtf8();
         const QUrl gturl = QUrl::fromEncoded("http://translate.google.com/translate?sl=auto&tl=" + langCode + "&u=" + QUrl::toPercentEncoding(url().toEncoded()));
         menu->addAction(QIcon(":icons/sites/translate.png"), tr("Translate page"), this, SLOT(openUrlInSelectedTab()))->setData(gturl);
     }
@@ -868,7 +868,7 @@ void WebView::createSelectedTextContextMenu(QMenu* menu, const WebHitTestResult 
     menu->addAction(QIcon::fromTheme("mail-message-new"), tr("Send text..."), this, SLOT(sendTextByMail()))->setData(selectedText);
     menu->addSeparator();
 
-    QString langCode = mApp->currentLanguage().left(2).toUtf8();
+    QString langCode = QLocale::system().name().left(2).toUtf8();
     QUrl googleTranslateUrl = QUrl(QString("https://translate.google.com/#auto/%1/%2").arg(langCode, selectedText));
     Action* gtwact = new Action(QIcon(":icons/sites/translate.png"), tr("Google Translate"));
     gtwact->setData(googleTranslateUrl);

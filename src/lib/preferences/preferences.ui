@@ -412,46 +412,6 @@
              </property>
             </widget>
            </item>
-           <item row="18" column="1" colspan="2">
-            <widget class="QLabel" name="label_17">
-             <property name="text">
-              <string>In order to change language, you must restart browser.</string>
-             </property>
-            </widget>
-           </item>
-           <item row="14" column="0" colspan="3">
-            <widget class="QLabel" name="label_11">
-             <property name="text">
-              <string>&lt;b&gt;Language&lt;/b&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="15" column="1">
-            <layout class="QHBoxLayout" name="horizontalLayout_13">
-             <item>
-              <widget class="QLabel" name="label_16">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>200</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>Available translations: </string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item row="15" column="2">
-            <widget class="QComboBox" name="languages"/>
-           </item>
            <item row="5" column="1" colspan="2">
             <widget class="QCheckBox" name="dontLoadTabsUntilSelected">
              <property name="text">
@@ -2419,8 +2379,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>560</width>
-                <height>80</height>
+                <width>96</width>
+                <height>31</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_14">

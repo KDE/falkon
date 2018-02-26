@@ -29,11 +29,11 @@ public:
     explicit DesktopFile();
     explicit DesktopFile(const QString &filePath);
 
-    QString name(const QString &locale = QString()) const;
-    QString comment(const QString &locale = QString()) const;
+    QString name() const;
+    QString comment() const;
     QString type() const;
     QString icon() const;
-    QVariant value(const QString &key, const QString &locale = QString()) const;
+    QVariant value(const QString &key, bool localized = false) const;
 
 private:
     QSharedPointer<QSettings> m_settings;

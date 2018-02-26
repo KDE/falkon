@@ -111,8 +111,8 @@ ThemeManager::Theme ThemeManager::parseTheme(const QString &path, const QString 
     }
 
     DesktopFile metadata(path + QSL("metadata.desktop"));
-    info.name = metadata.name(mApp->currentLanguage());
-    info.description = metadata.comment(mApp->currentLanguage());
+    info.name = metadata.name();
+    info.description = metadata.comment();
     info.author = metadata.value(QSL("X-Falkon-Author")).toString();
 
     const QString iconName = metadata.icon();

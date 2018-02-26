@@ -97,8 +97,8 @@ void Plugins::shutdown()
 PluginSpec Plugins::createSpec(const DesktopFile &metaData)
 {
     PluginSpec spec;
-    spec.name = metaData.name(mApp->currentLanguage());
-    spec.description = metaData.comment(mApp->currentLanguage());
+    spec.name = metaData.name();
+    spec.description = metaData.comment();
     spec.version = metaData.value(QSL("X-Falkon-Version")).toString();
     spec.author = QSL("%1 <%2>").arg(metaData.value(QSL("X-Falkon-Author")).toString(), metaData.value(QSL("X-Falkon-Email")).toString());
     spec.hasSettings = metaData.value(QSL("X-Falkon-Settings")).toBool();
@@ -352,7 +352,6 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
         return false;
     }
 
-    qApp->installTranslator(plugin->instance->getTranslator(mApp->currentLanguageFile()));
     return true;
 }
 

@@ -305,7 +305,6 @@ MainApplication::MainApplication(int &argc, char** argv)
             m_restoreManager = new RestoreManager(sessionManager()->askSessionFromUser());
     }
 
-    translateApp();
     loadSettings();
 
     m_plugins = new PluginProxy(this);
@@ -487,22 +486,6 @@ void MainApplication::setProxyStyle(ProxyStyle *style)
 {
     m_proxyStyle = style;
     setStyle(style);
-}
-
-QString MainApplication::currentLanguageFile() const
-{
-    return m_languageFile;
-}
-
-QString MainApplication::currentLanguage() const
-{
-    QString lang = m_languageFile;
-
-    if (lang.isEmpty()) {
-        return "en_US";
-    }
-
-    return lang.left(lang.length() - 3);
 }
 
 History* MainApplication::history()
@@ -1021,65 +1004,6 @@ void MainApplication::loadTheme(const QString &name)
     QString relativePath = QDir::current().relativeFilePath(activeThemePath);
     qss.replace(QRegularExpression(QSL("url\\s*\\(\\s*([^\\*:\\);]+)\\s*\\)")), QString("url(%1/\\1)").arg(relativePath));
     setStyleSheet(qss);
-}
-
-void MainApplication::translateApp()
-{
-    QString file = Settings().value(QSL("Language/language"), QLocale::system().name()).toString();
-
-    // It can only be "C" locale, for which we will use default English language
-    if (file.size() < 2)
-        file.clear();
-
-    if (!file.isEmpty() && !file.endsWith(QL1S(".qm")))
-        file.append(QL1S(".qm"));
-
-    // Either we load default language (with empty file), or we attempt to load xx.qm (xx_yy.qm)
-    Q_ASSERT(file.isEmpty() || file.size() >= 5);
-
-    QString translationPath = DataPaths::path(DataPaths::Translations);
-
-    if (!file.isEmpty()) {
-        const QStringList translationsPaths = DataPaths::allPaths(DataPaths::Translations);
-
-        foreach (const QString &path, translationsPaths) {
-            // If "xx_yy" translation doesn't exists, try to use "xx*" translation
-            // It can only happen when language is chosen from system locale
-
-            if (!QFile(QString("%1/%2").arg(path, file)).exists()) {
-                QDir dir(path);
-                QString lang = file.left(2) + QL1S("*.qm");
-
-                const QStringList translations = dir.entryList(QStringList(lang));
-
-                // If no translation can be found, default English will be used
-                file = translations.isEmpty() ? QString() : translations.at(0);
-            }
-
-            if (!file.isEmpty() && QFile(QString("%1/%2").arg(path, file)).exists()) {
-                translationPath = path;
-                break;
-            }
-        }
-    }
-
-    // Load application translation
-    QTranslator* app = new QTranslator(this);
-    app->load(file, translationPath);
-
-    // Load Qt translation (first try to load from Qt path)
-    QTranslator* sys = new QTranslator(this);
-    sys->load(QL1S("qt_") + file, QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-
-    // If there is no translation in Qt path for specified language, try to load it from our path
-    if (sys->isEmpty()) {
-        sys->load(QL1S("qt_") + file, translationPath);
-    }
-
-    m_languageFile = file;
-
-    installTranslator(app);
-    installTranslator(sys);
 }
 
 void MainApplication::checkDefaultWebBrowser()

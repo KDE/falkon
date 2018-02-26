@@ -30,14 +30,14 @@ DesktopFile::DesktopFile(const QString &filePath)
     m_settings->beginGroup(QSL("Desktop Entry"));
 }
 
-QString DesktopFile::name(const QString &locale) const
+QString DesktopFile::name() const
 {
-    return value(QSL("Name"), locale).toString();
+    return value(QSL("Name"), true).toString();
 }
 
-QString DesktopFile::comment(const QString &locale) const
+QString DesktopFile::comment() const
 {
-    return value(QSL("Comment"), locale).toString();
+    return value(QSL("Comment"), true).toString();
 }
 
 QString DesktopFile::type() const
@@ -50,15 +50,27 @@ QString DesktopFile::icon() const
     return value(QSL("Icon")).toString();
 }
 
-QVariant DesktopFile::value(const QString &key, const QString &locale) const
+QVariant DesktopFile::value(const QString &key, bool localized) const
 {
     if (!m_settings) {
         return QVariant();
     }
-    if (!locale.isEmpty()) {
-        const QString localeKey = QSL("%1[%2]").arg(key, locale);
+    if (localized) {
+        const QLocale locale = QLocale::system();
+        QString localeKey = QSL("%1[%2]").arg(key, locale.name());
         if (m_settings->contains(localeKey)) {
             return m_settings->value(localeKey);
+        }
+        localeKey = QSL("%1[%2]").arg(key, locale.bcp47Name());
+        if (m_settings->contains(localeKey)) {
+            return m_settings->value(localeKey);
+        }
+        const int i = locale.name().indexOf(QLatin1Char('_'));
+        if (i > 0) {
+            localeKey = QSL("%1[%2]").arg(key, locale.name().left(i));
+            if (m_settings->contains(localeKey)) {
+                return m_settings->value(localeKey);
+            }
         }
     }
     return m_settings->value(key);
