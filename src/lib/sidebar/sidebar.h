@@ -68,7 +68,6 @@ public:
     void sideBarRemoved(const QString &id);
     void closeSideBar();
 
-    static QHash<QString, QPointer<SideBarInterface> > s_sidebars;
     static void addSidebar(const QString &id, SideBarInterface* interface);
     static void removeSidebar(const QString &id);
 

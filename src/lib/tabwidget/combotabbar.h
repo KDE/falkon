@@ -122,7 +122,6 @@ public:
     int pinnedTabsCount() const;
     int normalTabsCount() const;
     bool isPinned(int index) const;
-    void setMaxVisiblePinnedTab(int max);
 
     void setFocusPolicy(Qt::FocusPolicy policy);
     void setObjectName(const QString &name);

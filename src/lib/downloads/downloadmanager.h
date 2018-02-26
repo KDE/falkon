@@ -74,7 +74,7 @@ public:
     void startExternalManager(const QUrl &url);
 
     void setLastDownloadPath(const QString &lastPath) { m_lastDownloadPath = lastPath; }
-    void setLastDownloadOption(const DownloadOption &option) { m_lastDownloadOption = option; }
+    void setLastDownloadOption(DownloadOption option) { m_lastDownloadOption = option; }
 
 public Q_SLOTS:
     void show();

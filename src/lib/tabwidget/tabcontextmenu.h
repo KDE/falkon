@@ -56,13 +56,13 @@ Q_SIGNALS:
     void unloadTab(int index);
 
 private Q_SLOTS:
-    void reloadTab() { emit reloadTab(m_clickedTab); }
-    void stopTab() { emit stopTab(m_clickedTab); }
-    void closeTab() { emit tabCloseRequested(m_clickedTab); }
-    void duplicateTab() { emit duplicateTab(m_clickedTab); }
-    void detachTab() { emit detachTab(m_clickedTab); }
-    void loadTab() { emit loadTab(m_clickedTab); }
-    void unloadTab() { emit unloadTab(m_clickedTab); }
+    void reloadTab() { Q_EMIT reloadTab(m_clickedTab); }
+    void stopTab() { Q_EMIT stopTab(m_clickedTab); }
+    void closeTab() { Q_EMIT tabCloseRequested(m_clickedTab); }
+    void duplicateTab() { Q_EMIT duplicateTab(m_clickedTab); }
+    void detachTab() { Q_EMIT detachTab(m_clickedTab); }
+    void loadTab() { Q_EMIT loadTab(m_clickedTab); }
+    void unloadTab() { Q_EMIT unloadTab(m_clickedTab); }
 
     void pinTab();
     void muteTab();

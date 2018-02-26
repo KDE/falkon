@@ -26,7 +26,7 @@
 
 #include <QMenu>
 
-QHash<QString, QPointer<SideBarInterface> > SideBarManager::s_sidebars;
+QHash<QString, QPointer<SideBarInterface> > s_sidebars;
 
 SideBar::SideBar(SideBarManager* manager, BrowserWindow* window)
     : QWidget(window)
