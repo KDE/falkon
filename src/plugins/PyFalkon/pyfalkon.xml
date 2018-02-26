@@ -201,4 +201,9 @@
       </inject-code>
     </add-function>
 
+    <suppress-warning text="Unable to translate type &quot;std::function&lt;QPoint (QSize)&gt;&quot;:*"/>
+    <suppress-warning text="Unable to translate type &quot;std::function&lt;void ()&gt;&quot;:*"/>
+    <suppress-warning text="skipping field 'ClickController::popupClosed'*"/>
+    <suppress-warning text="skipping field 'ClickController::popupPosition'*"/>
+
 </typesystem>
