@@ -48,6 +48,7 @@ void DataPaths::setPortableVersion()
 {
     DataPaths* d = qz_data_paths();
     d->m_paths[Config] = d->m_paths[AppData];
+    d->m_paths[Plugins] = QStringList{d->m_paths[Plugins].at(0)};
 
     d->m_paths[Profiles] = d->m_paths[Config];
     d->m_paths[Profiles].first().append(QLatin1String("/profiles"));

@@ -148,17 +148,13 @@ void Plugins::loadAvailablePlugins()
 
     m_pluginsLoaded = true;
 
-    QStringList dirs = DataPaths::allPaths(DataPaths::Plugins);
-
-    // Portable build: Load only plugins from DATADIR/plugins/ directory.
-    if (mApp->isPortable())
-        dirs = QStringList(DataPaths::path(DataPaths::Plugins));
+    const QStringList dirs = DataPaths::allPaths(DataPaths::Plugins);
 
     // InternalPlugin
     registerAvailablePlugin(loadInternalPlugin(QSL("adblock")));
 
     // SharedLibraryPlugin
-    for (const QString &dir : qAsConst(dirs)) {
+    for (const QString &dir : dirs) {
         const auto files = QDir(dir).entryInfoList(QDir::Files);
         for (const QFileInfo &info : files) {
             if (info.baseName() == QL1S("PyFalkon")) {
