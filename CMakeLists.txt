@@ -97,6 +97,14 @@ set(KF5_MIN_VERSION "5.27.0")
 find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5Wallet PROPERTIES DESCRIPTION "KWallet password backend plugin" TYPE OPTIONAL)
 
+# Optional: PySide2
+find_package(PySide2 "2.0.0")
+find_package(Shiboken2 "2.0.0")
+find_package(PythonLibs "3.0")
+set_package_properties(PySide2 PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
+set_package_properties(Shiboken2 PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
+set_package_properties(PythonLibs PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
+
 # Git revision
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
   find_package(Git QUIET)

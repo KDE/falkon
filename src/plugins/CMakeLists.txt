@@ -19,8 +19,10 @@ if (KF5Wallet_FOUND)
     add_subdirectory(KWalletPasswords)
 endif()
 
+if (PySide2_FOUND AND Shiboken2_FOUND AND PythonLibs_FOUND)
+    add_subdirectory(PyFalkon)
+endif()
+
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_subdirectory(TestPlugin)
 endif()
-
-#add_subdirectory(PyFalkon)

@@ -83,15 +83,7 @@ static State init()
 
     Py_Initialize();
     qAddPostRoutine(cleanup);
-    state = PythonInitialized;
-
-    if (!PyImport_ImportModule("Falkon")) {
-        PyErr_Print();
-        qWarning() << "Failed to import Falkon module!";
-        return state = PythonError;
-    }
-
-    return state;
+    return state = PythonInitialized;
 }
 
 void pyfalkon_register_plugin(PluginInterface *plugin)

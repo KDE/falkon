@@ -37,6 +37,7 @@ Plugins::Plugins(QObject* parent)
     loadSettings();
 
     m_pythonPlugin = new QLibrary(QSL("PyFalkonPrivate"), this);
+    m_pythonPlugin->setLoadHints(QLibrary::ExportExternalSymbolsHint);
     if (!m_pythonPlugin->load()) {
         qDebug() << "Failed to load python support plugin" << m_pythonPlugin->errorString();
         delete m_pythonPlugin;
