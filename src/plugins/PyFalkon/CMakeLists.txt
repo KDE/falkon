@@ -1,6 +1,3 @@
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-
 # Enable policy to run automoc on generated files.
 if(POLICY CMP0071)
   cmake_policy(SET CMP0071 NEW)
@@ -95,11 +92,10 @@ set( PyFalkon_SRCS
     ${GENERATED_SOURCES}
 )
 
-add_library(PyFalkonPrivate SHARED ${PyFalkon_SRCS})
-set_target_properties(PyFalkonPrivate PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION "2")
-install(TARGETS PyFalkonPrivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
+add_library(PyFalkon MODULE ${PyFalkon_SRCS})
+install(TARGETS PyFalkon DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 
-target_include_directories(PyFalkonPrivate
+target_include_directories(PyFalkon
     PRIVATE
     ${SHIBOKEN_INCLUDE_DIR}
     ${SHIBOKEN_PYTHON_INCLUDE_DIR}
@@ -109,7 +105,7 @@ target_include_directories(PyFalkonPrivate
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon
 )
 
-target_link_libraries(PyFalkonPrivate
+target_link_libraries(PyFalkon
     PRIVATE
     FalkonPrivate
     ${PYTHON_LIBRARIES}
@@ -119,4 +115,4 @@ target_link_libraries(PyFalkonPrivate
 )
 
 # Same as CONFIG += no_keywords to avoid syntax errors in object.h due to the usage of the word Slot
-target_compile_definitions(PyFalkonPrivate PRIVATE QT_NO_KEYWORDS)
+target_compile_definitions(PyFalkon PRIVATE QT_NO_KEYWORDS)

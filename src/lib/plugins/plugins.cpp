@@ -35,14 +35,7 @@ Plugins::Plugins(QObject* parent)
     , m_speedDial(new SpeedDial(this))
 {
     loadSettings();
-
-    m_pythonPlugin = new QLibrary(QSL("PyFalkonPrivate"), this);
-    m_pythonPlugin->setLoadHints(QLibrary::ExportExternalSymbolsHint);
-    if (!m_pythonPlugin->load()) {
-        qDebug() << "Failed to load python support plugin" << m_pythonPlugin->errorString();
-        delete m_pythonPlugin;
-        m_pythonPlugin = nullptr;
-    }
+    loadPythonSupport();
 }
 
 QList<Plugins::Plugin> Plugins::getAvailablePlugins()
@@ -168,6 +161,9 @@ void Plugins::loadAvailablePlugins()
     for (const QString &dir : qAsConst(dirs)) {
         const auto files = QDir(dir).entryInfoList(QDir::Files);
         for (const QFileInfo &info : files) {
+            if (info.baseName() == QL1S("PyFalkon")) {
+                continue;
+            }
             Plugin plugin = loadSharedLibraryPlugin(info.absoluteFilePath());
             if (plugin.pluginSpec.name.isEmpty()) {
                 qWarning() << "Invalid plugin spec of" << info.absoluteFilePath() << "plugin";
@@ -205,6 +201,26 @@ void Plugins::refreshLoadedPlugins()
     foreach (const Plugin &plugin, m_availablePlugins) {
         if (plugin.isLoaded()) {
             m_loadedPlugins.append(plugin.instance);
+        }
+    }
+}
+
+void Plugins::loadPythonSupport()
+{
+    const QStringList dirs = DataPaths::allPaths(DataPaths::Plugins);
+    for (const QString &dir : dirs) {
+        const auto files = QDir(dir).entryInfoList({QSL("PyFalkon*")}, QDir::Files);
+        for (const QFileInfo &info : files) {
+            m_pythonPlugin = new QLibrary(info.absoluteFilePath(), this);
+            m_pythonPlugin->setLoadHints(QLibrary::ExportExternalSymbolsHint);
+            if (!m_pythonPlugin->load()) {
+                qWarning() << "Failed to load python support plugin" << m_pythonPlugin->errorString();
+                delete m_pythonPlugin;
+                m_pythonPlugin = nullptr;
+            } else {
+                std::cout << "Falkon: Python plugin support initialized" << std::endl;
+                return;
+            }
         }
     }
 }

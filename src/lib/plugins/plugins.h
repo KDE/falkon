@@ -108,6 +108,7 @@ Q_SIGNALS:
     void pluginUnloaded(PluginInterface* plugin);
 
 private:
+    void loadPythonSupport();
     Plugin loadPlugin(const QString &id);
     Plugin loadInternalPlugin(const QString &name);
     Plugin loadSharedLibraryPlugin(const QString &name);
