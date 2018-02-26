@@ -36,6 +36,14 @@ public:
         std::function<QPoint(QSize)> popupPosition;
         bool popupOpened = false;
         std::function<void()> popupClosed;
+
+        QPoint callPopupPosition(const QSize &size) const {
+            return popupPosition(size);
+        }
+
+        void callPopupClosed() const {
+            popupClosed();
+        }
     };
 
     explicit AbstractButtonInterface(QObject *parent = nullptr);
