@@ -6,9 +6,61 @@
       #include &lt;pythonplugin.h&gt;
     </inject-code>
 
+    <namespace-type name="Qz">
+      <enum-type name="BrowserWindowType"/>
+      <enum-type name="CommandLineAction"/>
+      <enum-type name="ObjectName"/>
+      <enum-type name="NewTabPositionFlag" flags="NewTabPositionFlags"/>
+    </namespace-type>
+
+    <object-type name="LineEdit">
+      <enum-type name="WidgetPosition"/>
+      <enum-type name="EditAction"/>
+    </object-type>
+    <object-type name="SideWidget"/>
+    <object-type name="SqueezeLabelV1"/>
+    <object-type name="SqueezeLabelV2"/>
+    <object-type name="QtSingleApplication">
+      <include file-name="qtsingleapplication/qtsingleapplication.h" location="global"/>
+      <modify-function signature="QtSingleApplication(int&amp;,char**,bool)" remove="all"/>
+      <modify-function signature="QtSingleApplication(QString,int&amp;,char**)" remove="all"/>
+    </object-type>
+    <value-type name="LoadRequest">
+      <enum-type name="Operation"/>
+    </value-type>
+    <object-type name="WebPage">
+      <enum-type name="JsWorld"/>
+      <modify-function signature="execJavaScript(QString,quint32,int)" remove="all"/>
+    </object-type>
+    <object-type name="WebView"/>
+    <object-type name="PopupWebView"/>
+    <object-type name="TabbedWebView"/>
+    <value-type name="WebHitTestResult"/>
+    <object-type name="WebTab">
+      <enum-type name="AddChildBehavior"/>
+    </object-type>
     <value-type name="DesktopFile"/>
     <object-type name="PluginInterface">
       <enum-type name="InitState"/>
+    </object-type>
+    <object-type name="ExternalJsObject">
+      <include file-name="javascript/externaljsobject.h" location="global"/>
+    </object-type>
+    <object-type name="Plugins">
+      <value-type name="Plugin">
+        <enum-type name="Type"/>
+      </value-type>
+    </object-type>
+    <value-type name="PluginSpec"/>
+    <object-type name="PluginProxy">
+      <enum-type name="EventHandlerType"/>
+    </object-type>
+    <object-type name="DesktopNotificationsFactory">
+      <enum-type name="Type"/>
+    </object-type>
+    <object-type name="MainApplication">
+      <enum-type name="AfterLaunch"/>
+      <modify-function signature="MainApplication(int&amp;,char**)" remove="all"/>
     </object-type>
 
     <add-function signature="registerPlugin(PluginInterface*)">
