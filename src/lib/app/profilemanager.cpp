@@ -194,12 +194,7 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
     }
 
     // No change in 2.0
-    if (prof < Updater::Version("2.0.99")) {
-        return;
-    }
-
-    // No change in 2.1
-    if (prof < Updater::Version("2.1.99")) {
+    if (prof < Updater::Version("2.9.99")) {
         return;
     }
 
