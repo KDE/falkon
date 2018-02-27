@@ -1,5 +1,5 @@
 # ============================================================
-# HelloPython plugin for Falkon
+# Falkon - Qt web browser
 # Copyright (C) 2018 David Rosca <nowrep@gmail.com>
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,26 +15,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ============================================================
-import Falkon
-from PySide2 import QtGui, QtWidgets
-from hellopython.i18n import i18n
+import gettext
+from PySide2 import QtCore
 
-class HelloSidebar(Falkon.SideBarInterface):
-    def title(self):
-        return i18n("Hello Python Sidebar")
+locale = QtCore.QLocale.system()
+languages = [ locale.name(), locale.bcp47Name() ]
+i = locale.name().find('_')
+if i > 0: languages.append(locale.name()[:i])
+localedir = QtCore.QStandardPaths.locate(QtCore.QStandardPaths.GenericDataLocation, 'locale', QtCore.QStandardPaths.LocateDirectory)
 
-    def createMenuAction(self):
-        act = QtWidgets.QAction(i18n("Hello Python Sidebar"))
-        act.setCheckable(True)
-        return act
-
-    def createSideBarWidget(self, window):
-        w = QtWidgets.QWidget()
-        b = QtWidgets.QPushButton("Hello Python v0.0.1");
-        label = QtWidgets.QLabel()
-        label.setPixmap(QtGui.QPixmap(":icons/other/about.svg"));
-        l = QtWidgets.QVBoxLayout(w);
-        l.addWidget(label);
-        l.addWidget(b);
-        w.setLayout(l);
-        return w
+t = gettext.translation('falkon_' + __package__, localedir, languages, fallback=True)
+i18n = t.gettext
+i18np = t.ngettext

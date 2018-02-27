@@ -18,6 +18,7 @@
 import Falkon
 from PySide2 import QtCore, QtGui, QtWidgets
 from hellopython import sidebar, button
+from hellopython.i18n import i18n
 
 class HelloPlugin(Falkon.PluginInterface, QtCore.QObject):
     buttons = {}
@@ -62,19 +63,19 @@ class HelloPlugin(Falkon.PluginInterface, QtCore.QObject):
         if r.isContentEditable():
             title += " on input"
 
-        menu.addAction("My first plugin action" + title, self.actionSlot)
+        menu.addAction(i18n("My first plugin action") + title, self.actionSlot)
 
     def mousePress(self, type, obj, event):
         print("mousePress {} {} {}".format(type, obj, event))
         return False
 
     def actionSlot(self):
-        QtWidgets.QMessageBox.information(self.view, "Hello", "First plugin action works :-)")
+        QtWidgets.QMessageBox.information(self.view, i18n("Hello"), i18n("First plugin action works :-)"))
 
     def showSettings(self, parent):
         self.settings = QtWidgets.QDialog(parent)
         b = QtWidgets.QPushButton("Hello Python v0.0.1")
-        closeButton = QtWidgets.QPushButton("Close")
+        closeButton = QtWidgets.QPushButton(i18n("Close"))
         label = QtWidgets.QLabel()
         label.setPixmap(QtGui.QPixmap(":icons/other/about.svg"))
 
@@ -84,7 +85,7 @@ class HelloPlugin(Falkon.PluginInterface, QtCore.QObject):
         l.addWidget(closeButton)
 
         self.settings.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-        self.settings.setWindowTitle("Hello Python Settings")
+        self.settings.setWindowTitle(i18n("Hello Python Settings"))
         self.settings.setWindowIcon(QtGui.QIcon(":icons/falkon.svg"))
         closeButton.clicked.connect(self.settings.close)
 
