@@ -27,8 +27,6 @@
 #include "../config.h"
 #include "desktopfile.h"
 
-#include <QTranslator>
-
 GM_Plugin::GM_Plugin()
     : QObject()
     , m_manager(0)
@@ -65,13 +63,6 @@ bool GM_Plugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator* GM_Plugin::getTranslator(const QString &locale)
-{
-    QTranslator* translator = new QTranslator(this);
-    translator->load(locale, ":/gm/locale/");
-    return translator;
 }
 
 void GM_Plugin::showSettings(QWidget* parent)

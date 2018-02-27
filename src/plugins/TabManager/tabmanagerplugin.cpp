@@ -29,7 +29,6 @@
 #include "desktopfile.h"
 
 #include <QInputDialog>
-#include <QTranslator>
 #include <QSettings>
 #include <QAction>
 #include <QTimer>
@@ -90,13 +89,6 @@ void TabManagerPlugin::unload()
 bool TabManagerPlugin::testPlugin()
 {
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator* TabManagerPlugin::getTranslator(const QString &locale)
-{
-    QTranslator* translator = new QTranslator(this);
-    translator->load(locale, ":/tabmanager/locale/");
-    return translator;
 }
 
 void TabManagerPlugin::showSettings(QWidget* parent)

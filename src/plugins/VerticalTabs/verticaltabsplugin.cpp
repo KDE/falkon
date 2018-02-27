@@ -31,7 +31,6 @@
 #include "desktopfile.h"
 
 #include <QSettings>
-#include <QTranslator>
 
 VerticalTabsPlugin::VerticalTabsPlugin()
     : QObject()
@@ -90,13 +89,6 @@ void VerticalTabsPlugin::unload()
 bool VerticalTabsPlugin::testPlugin()
 {
     return (Qz::VERSION == QSL(FALKON_VERSION));
-}
-
-QTranslator *VerticalTabsPlugin::getTranslator(const QString &locale)
-{
-    QTranslator *translator = new QTranslator(this);
-    translator->load(locale, QSL(":/verticaltabs/locale/"));
-    return translator;
 }
 
 void VerticalTabsPlugin::showSettings(QWidget *parent)

@@ -24,8 +24,6 @@
 #include "mainapplication.h"
 #include "desktopfile.h"
 
-#include <QTranslator>
-
 StatusBarIconsPlugin::StatusBarIconsPlugin()
     : QObject()
     , m_manager(0)
@@ -68,13 +66,6 @@ bool StatusBarIconsPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator* StatusBarIconsPlugin::getTranslator(const QString &locale)
-{
-    QTranslator* translator = new QTranslator(this);
-    translator->load(locale, ":/sbi/locale/");
-    return translator;
 }
 
 void StatusBarIconsPlugin::showSettings(QWidget* parent)

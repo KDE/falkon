@@ -25,8 +25,6 @@
 #include "passwordmanager.h"
 #include "desktopfile.h"
 
-#include <QTranslator>
-
 KWalletPlugin::KWalletPlugin()
     : QObject()
     , m_backend(0)
@@ -57,11 +55,4 @@ bool KWalletPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator* KWalletPlugin::getTranslator(const QString &locale)
-{
-    QTranslator* translator = new QTranslator(this);
-    translator->load(locale, ":/kwp/locale/");
-    return translator;
 }

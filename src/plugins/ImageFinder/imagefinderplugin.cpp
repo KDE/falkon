@@ -27,7 +27,6 @@
 #include "desktopfile.h"
 
 #include <QMenu>
-#include <QTranslator>
 
 ImageFinderPlugin::ImageFinderPlugin()
     : QObject()
@@ -56,13 +55,6 @@ bool ImageFinderPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator *ImageFinderPlugin::getTranslator(const QString &locale)
-{
-    QTranslator *translator = new QTranslator(this);
-    translator->load(locale, QSL(":/imgfinder/locale/"));
-    return translator;
 }
 
 void ImageFinderPlugin::showSettings(QWidget *parent)

@@ -35,7 +35,6 @@ public:
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;
-    QTranslator* getTranslator(const QString &locale) override;
     void showSettings(QWidget* parent = 0) override;
 
     bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;

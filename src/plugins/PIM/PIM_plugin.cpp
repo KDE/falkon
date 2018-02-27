@@ -26,8 +26,6 @@
 #include "../config.h"
 #include "desktopfile.h"
 
-#include <QTranslator>
-
 PIM_Plugin::PIM_Plugin()
     : QObject()
     , m_handler(0)
@@ -60,13 +58,6 @@ bool PIM_Plugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator* PIM_Plugin::getTranslator(const QString &locale)
-{
-    QTranslator* translator = new QTranslator(this);
-    translator->load(locale, ":/PIM/locale/");
-    return translator;
 }
 
 void PIM_Plugin::showSettings(QWidget* parent)

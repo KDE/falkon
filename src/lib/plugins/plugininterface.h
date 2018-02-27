@@ -18,14 +18,12 @@
 #ifndef PLUGININTERFACE_H
 #define PLUGININTERFACE_H
 
-#include <QPixmap>
 #include <QtPlugin>
 #include <QWebEnginePage>
 
 #include "qzcommon.h"
 #include "webhittestresult.h"
 
-class QTranslator;
 class QMenu;
 class QMouseEvent;
 class QKeyEvent;
@@ -38,15 +36,18 @@ class DesktopFile;
 class PluginInterface
 {
 public:
-    enum InitState { StartupInitState, LateInitState };
+    enum InitState {
+        StartupInitState,
+        LateInitState
+    };
+
+    virtual ~PluginInterface() { }
 
     virtual DesktopFile metaData() const = 0;
     virtual void init(InitState state, const QString &settingsPath) = 0;
     virtual void unload() = 0;
     virtual bool testPlugin() = 0;
 
-    virtual ~PluginInterface() { }
-    virtual QTranslator* getTranslator(const QString &locale) { Q_UNUSED(locale) return 0; }
     virtual void showSettings(QWidget* parent = 0) { Q_UNUSED(parent) }
 
     virtual void populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTestResult &r) { Q_UNUSED(menu) Q_UNUSED(view) Q_UNUSED(r) }
@@ -65,6 +66,6 @@ public:
     virtual bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) { Q_UNUSED(page); Q_UNUSED(url); Q_UNUSED(type); Q_UNUSED(isMainFrame); return true; }
 };
 
-Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.2")
+Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.3")
 
 #endif // PLUGININTERFACE_H

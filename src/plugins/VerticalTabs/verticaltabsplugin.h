@@ -37,7 +37,6 @@ public:
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;
-    QTranslator* getTranslator(const QString &locale) override;
     void showSettings(QWidget *parent = nullptr) override;
     bool keyPress(Qz::ObjectName type, QObject *obj, QKeyEvent *event) override;
 

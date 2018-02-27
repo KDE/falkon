@@ -41,7 +41,6 @@ public:
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;
-    QTranslator *getTranslator(const QString &locale) override;
     void showSettings(QWidget *parent) override;
 
     void populateWebViewMenu(QMenu *menu, WebView *view, const WebHitTestResult &r) override;

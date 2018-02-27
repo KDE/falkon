@@ -25,8 +25,6 @@
 #include "passwordmanager.h"
 #include "desktopfile.h"
 
-#include <QTranslator>
-
 GnomeKeyringPlugin::GnomeKeyringPlugin()
     : QObject()
     , m_backend(0)
@@ -57,11 +55,4 @@ bool GnomeKeyringPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator* GnomeKeyringPlugin::getTranslator(const QString &locale)
-{
-    QTranslator* translator = new QTranslator(this);
-    translator->load(locale, ":/gkp/locale/");
-    return translator;
 }

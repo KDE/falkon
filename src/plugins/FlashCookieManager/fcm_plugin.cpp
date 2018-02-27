@@ -32,7 +32,6 @@
 
 #include <QTimer>
 #include <QSettings>
-#include <QTranslator>
 #include <QDir>
 #include <QMenu>
 
@@ -118,13 +117,6 @@ void FCM_Plugin::unload()
 bool FCM_Plugin::testPlugin()
 {
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator* FCM_Plugin::getTranslator(const QString &locale)
-{
-    QTranslator* translator = new QTranslator(this);
-    translator->load(locale, ":/flashcookiemanager/locale/");
-    return translator;
 }
 
 void FCM_Plugin::showSettings(QWidget* parent)

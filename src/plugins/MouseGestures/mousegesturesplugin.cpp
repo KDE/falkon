@@ -23,8 +23,6 @@
 #include "../config.h"
 #include "desktopfile.h"
 
-#include <QTranslator>
-
 MouseGesturesPlugin::MouseGesturesPlugin()
     : QObject()
     , m_gestures(0)
@@ -57,13 +55,6 @@ bool MouseGesturesPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator* MouseGesturesPlugin::getTranslator(const QString &locale)
-{
-    QTranslator* translator = new QTranslator(this);
-    translator->load(locale, ":/mousegestures/locale/");
-    return translator;
 }
 
 void MouseGesturesPlugin::showSettings(QWidget* parent)

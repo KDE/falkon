@@ -27,7 +27,6 @@
 #include "desktopfile.h"
 
 #include <QMenu>
-#include <QTranslator>
 #include <QPushButton>
 
 TestPlugin::TestPlugin()
@@ -94,16 +93,6 @@ bool TestPlugin::testPlugin()
     // If this function returns false, plugin is automatically unloaded
 
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator* TestPlugin::getTranslator(const QString &locale)
-{
-    // Loads translation according to locale file
-    // QString locale will contains "fr_FR.qm" for French locale
-
-    QTranslator* translator = new QTranslator(this);
-    translator->load(locale, ":/testplugin/locale/");
-    return translator;
 }
 
 void TestPlugin::showSettings(QWidget* parent)

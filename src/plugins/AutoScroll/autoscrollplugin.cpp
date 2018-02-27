@@ -24,8 +24,6 @@
 #include "../config.h"
 #include "desktopfile.h"
 
-#include <QTranslator>
-
 AutoScrollPlugin::AutoScrollPlugin()
     : QObject()
     , m_scroller(0)
@@ -58,13 +56,6 @@ bool AutoScrollPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));
-}
-
-QTranslator* AutoScrollPlugin::getTranslator(const QString &locale)
-{
-    QTranslator* translator = new QTranslator(this);
-    translator->load(locale, ":/autoscroll/locale/");
-    return translator;
 }
 
 void AutoScrollPlugin::showSettings(QWidget* parent)

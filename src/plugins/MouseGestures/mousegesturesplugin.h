@@ -34,7 +34,6 @@ public:
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;
-    QTranslator *getTranslator(const QString &locale) override;
     void showSettings(QWidget *parent) override;
 
     bool mousePress(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
