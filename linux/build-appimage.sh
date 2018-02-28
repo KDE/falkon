@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/sh
 ###############################################################################
 # Compile Falkon source and pack it as Appimage.
 ###############################################################################
@@ -7,7 +7,7 @@ set -e
 SCRIPT_PATH="$(dirname "$(readlink -f "$0")")"
 NCPUS=$(getconf _NPROCESSORS_ONLN)  || :
 
-which mksquashfs >/dev/null 2>&1 || TEST=no 
+which mksquashfs >/dev/null 2>&1 || TEST=no
 which chrpath >/dev/null 2>&1 || TEST=no
 TEST=${TEST:-yes}
 
@@ -36,9 +36,9 @@ SOURCE_DIR=${SOURCE_DIR:-${SCRIPT_PATH}/..} ; export SOURCE_DIR
 QMAKE=${QMAKE:-$SYSTEM_QMAKE} ; export QMAKE
 DEBUG_BUILD="-DCMAKE_BUILD_TYPE=Debug" ; export DEBUG_BUILD
 
-CFLAGS="${CFLAGS:--O2 -g -pipe -Wall }" ; export CFLAGS ; 
+CFLAGS="${CFLAGS:--O2 -g -pipe -Wall }" ; export CFLAGS ;
 CXXFLAGS="${CXXFLAGS:--O2 -g -pipe -Wall }" ; export CXXFLAGS ;
-LDFLAGS="${LDFLAGS:--Wl,-z,relro }"; export LDFLAGS ; 
+LDFLAGS="${LDFLAGS:--Wl,-z,relro }"; export LDFLAGS ;
 
 optPrint(){
 printf "\n\t\t${ITL1}VALID OPTIONS ARE${ITL0}:\n
@@ -71,8 +71,8 @@ ${BLD1}--disable-dbus${BLD0}
 
 ${BLD1}--sourcedir=${BLD0}
 
-          Assuming this script is located in ${ITL1}falkon/scripts${ITL0},
-          otherwise you must specify the path to 
+          Assuming this script is located in ${ITL1}falkon/linux${ITL0},
+          otherwise you must specify the path to
           Falkon source directory.
 
                ${UDR1}example:--sourcedir="/home/build/falkon"${UDR0}
@@ -112,7 +112,7 @@ printf "\n\tBuild configuration:\n
     Disable X11=${YNOX11}
     Disable DBUS=${DISABLE_DBUS}
     Runtime binary=${RUNTIME_BINARY}
-    Qmake=${QMAKE}\n" | sed -r 's/=$/ » Not set/g' 
+    Qmake=${QMAKE}\n" | sed -r 's/=$/ » Not set/g'
 }
 
 getVal(){
@@ -170,7 +170,7 @@ cd "${SOURCE_DIR}"
 
 if [[ "${UPDATE_SOURCE}" == "true" ]]; then
 git pull || :
-fi 
+fi
 
 rm -fr build || :
 mkdir build && cd build
@@ -200,13 +200,11 @@ make -j$NCPUS
 if [[ $? == 0 ]] ; then
 make DESTDIR="${PWD}" install
 fi
- 
+
 mv usr/local bundle_build_dir
-mv bundle_build_dir/lib/plugins/falkon bundle_build_dir/share/falkon/plugins
-rmdir bundle_build_dir/lib/plugins
-pushd bundle_build_dir/share/falkon/plugins
-chrpath --replace '$ORIGIN/../../../lib' *.so 
-popd 
+pushd bundle_build_dir/lib/plugins/falkon
+chrpath --replace '$ORIGIN/../..' *.so
+popd
 
 NEEDEDLIBSLIST="libicudata.so.56
 libicui18n.so.56
@@ -284,10 +282,10 @@ cp ../linux/applications/org.kde.falkon.desktop bundle_build_dir
 cp ../linux/pixmaps/falkon.png bundle_build_dir
 ln -s falkon.png bundle_build_dir/.DirIcon
 
-pushd bundle_build_dir 
+pushd bundle_build_dir
 mv bin/falkon ./ && rm -fr bin
-chrpath --replace '$ORIGIN' lib/libFalkonPrivate.so.2
-chrpath --replace '$ORIGIN/lib' falkon 
+chrpath --replace '$ORIGIN' lib/libFalkonPrivate.so.3.*
+chrpath --replace '$ORIGIN/lib' falkon
 chrpath --replace '$ORIGIN/lib' QtWebEngineProcess
 
 cat <<EOQTCFG >qt.conf
@@ -306,19 +304,20 @@ set -e
 FALKON_DIR="\$(dirname "\$(readlink -f "\$0")")"
 
 XDG_DATA_DIRS="\${FALKON_DIR}/share:\${XDG_DATA_DIRS}"
-export XDG_DATA_DIRS
+FALKON_PLUGIN_PATH="\${FALKON_DIR}/lib/plugins/falkon"
+export XDG_DATA_DIRS FALKON_PLUGIN_PATH
 
 cd "\${FALKON_DIR}/"
-exec ./falkon "\$@" 
+exec ./falkon "\$@"
 EOF
-chmod +x AppRun 
-popd 
+chmod +x AppRun
+popd
 
 printf "Generating app image\n"
-mksquashfs bundle_build_dir falkon.squashfs -root-owned -noappend 
+mksquashfs bundle_build_dir falkon.squashfs -root-owned -noappend
 
 cat "${RUNTIME_BINARY}" >bin/Falkon.AppImage
-cat falkon.squashfs >>bin/Falkon.AppImage 
+cat falkon.squashfs >>bin/Falkon.AppImage
 chmod a+x bin/Falkon.AppImage
 }
 
@@ -333,22 +332,22 @@ if [[ ! -d "${SOURCE_DIR}/src" ]]; then
 printf "Please install ${UDR1}$0${UDR0} in „${BLD1}scripts${BLD0}“ ${ITL1}(a sub folder in Falkon source directory)${ITL0},
 or specify the source path with ${BLD1}--sourcedir=${BLD0}full/path!\n"
 exit 1
-fi 
+fi
 
 if [[ ${TEST} != "yes" ]]  ; then
 printf "${RDFG}You must have the following tools installed:${DFFG}
-          ${ITL1}mmksquashfs, chrpath${ITL0}!\n"
+          ${ITL1}mksquashfs, chrpath${ITL0}!\n"
 exit 1
 fi
 
 if [[ "${QMAKE}" == "${SYSTEM_QMAKE}" ]] ; then
-printf "${RDFG}You should use precompiled Qt package${DFFG} 
+printf "${RDFG}You should use precompiled Qt package${DFFG}
 downloaded from ${UDR1}${ITL1}http://download.qt.io/official_releases/qt/${ALL0}\n"
 exit 1
 elif
 [[ -z ${RUNTIME_BINARY} ]] ; then
 printf "\n${RDFG}Required precompiled „${BLD1}runtime${BLD0}“ binary!${DFFG}
-It's a part of ${ITL1}AppImageKit${ITL0} 
+It's a part of ${ITL1}AppImageKit${ITL0}
 ${UDR1}https://github.com/probonopd/AppImageKit${UDR0}\n"
 exit 1
 fi
