@@ -21,6 +21,7 @@
 #include "mainapplication.h"
 #include "webpage.h"
 #include "useragentmanager.h"
+#include "../config.h"
 
 #include <QWebEnginePage>
 #include <QWebEngineProfile>
