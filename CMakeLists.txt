@@ -53,7 +53,7 @@ endif()
 
 if (UNIX AND NOT APPLE AND NOT NO_X11)
     add_definitions(-DQZ_WS_X11)
-    find_package(XCB COMPONENTS XCB)
+    find_package(XCB REQUIRED COMPONENTS XCB UTIL)
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS X11Extras)
 endif()
 if (WIN32)
