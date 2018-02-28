@@ -27,6 +27,7 @@
 #include "iconprovider.h"
 #include "sessionmanager.h"
 #include "restoremanager.h"
+#include "../config.h"
 
 #include <QTimer>
 #include <QSettings>
