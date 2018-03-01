@@ -342,11 +342,18 @@ MainApplication::MainApplication(int &argc, char** argv)
         }
     }
 
+    QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, DataPaths::currentProfilePath());
+
+    connect(this, SIGNAL(messageReceived(QString)), this, SLOT(messageReceived(QString)));
+    connect(this, SIGNAL(aboutToQuit()), this, SLOT(saveSettings()));
+
     QTimer::singleShot(0, this, SLOT(postLaunch()));
 }
 
 MainApplication::~MainApplication()
 {
+    m_isClosing = true;
+
     IconProvider::instance()->saveIconsToDatabase();
 
     // Wait for all QtConcurrent jobs to finish
@@ -713,11 +720,6 @@ void MainApplication::postLaunch()
     if (m_postLaunchActions.contains(ToggleFullScreen)) {
         getWindow()->toggleFullScreen();
     }
-
-    QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, DataPaths::currentProfilePath());
-
-    connect(this, SIGNAL(messageReceived(QString)), this, SLOT(messageReceived(QString)));
-    connect(this, SIGNAL(aboutToQuit()), this, SLOT(saveSettings()));
 
     createJumpList();
     initPulseSupport();
