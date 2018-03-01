@@ -21,7 +21,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="Frame" name="frame">
+    <widget class="QFrame" name="frame">
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>
@@ -98,14 +98,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>Frame</class>
-   <extends>QFrame</extends>
-   <header>frame.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

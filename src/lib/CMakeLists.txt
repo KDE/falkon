@@ -195,7 +195,6 @@ set(SRCS ${SRCS}
     tools/docktitlebarwidget.cpp
     tools/enhancedmenu.cpp
     tools/focusselectlineedit.cpp
-    tools/frame.cpp
     tools/headerview.cpp
     tools/horizontallistwidget.cpp
     tools/html5permissions/html5permissionsdialog.cpp
