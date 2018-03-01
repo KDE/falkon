@@ -124,6 +124,9 @@ void Plugins::loadPlugins()
 
     foreach (const QString &pluginId, m_allowedPlugins) {
         Plugin plugin = loadPlugin(pluginId);
+        if (plugin.type == Plugin::Invalid) {
+            continue;
+        }
         if (plugin.pluginSpec.name.isEmpty()) {
             qWarning() << "Invalid plugin spec of" << pluginId << "plugin";
             continue;
@@ -161,6 +164,9 @@ void Plugins::loadAvailablePlugins()
                 continue;
             }
             Plugin plugin = loadSharedLibraryPlugin(info.absoluteFilePath());
+            if (plugin.type == Plugin::Invalid) {
+                continue;
+            }
             if (plugin.pluginSpec.name.isEmpty()) {
                 qWarning() << "Invalid plugin spec of" << info.absoluteFilePath() << "plugin";
                 continue;
