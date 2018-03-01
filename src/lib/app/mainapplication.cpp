@@ -921,6 +921,8 @@ void MainApplication::loadSettings()
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     webSettings->setAttribute(QWebEngineSettings::JavascriptCanPaste, settings.value("allowJavaScriptPaste", true).toBool());
+    webSettings->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, settings.value("DisableVideoAutoPlay", false).toBool());
+    webSettings->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, settings.value("WebRTCPublicIpOnly", true).toBool());
 #endif
 
     webSettings->setDefaultTextEncoding(settings.value("DefaultEncoding", webSettings->defaultTextEncoding()).toString());

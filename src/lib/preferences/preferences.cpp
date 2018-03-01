@@ -110,6 +110,11 @@ Preferences::Preferences(BrowserWindow* window)
     ui->checkUpdates->setVisible(false);
 #endif
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+    ui->disableVideoAutoPlay->setVisible(false);
+    ui->webRTCPublicIpOnly->setVisible(false);
+#endif
+
     auto setCategoryIcon = [this](int index, const QIcon &icon) {
         ui->listWidget->item(index)->setIcon(QIcon(icon.pixmap(32)));
     };
@@ -273,6 +278,8 @@ Preferences::Preferences(BrowserWindow* window)
     ui->xssAuditing->setChecked(settings.value("XSSAuditing", false).toBool());
     ui->printEBackground->setChecked(settings.value("PrintElementBackground", true).toBool());
     ui->useNativeScrollbars->setChecked(settings.value("UseNativeScrollbars", false).toBool());
+    ui->disableVideoAutoPlay->setChecked(settings.value("DisableVideoAutoPlay", false).toBool());
+    ui->webRTCPublicIpOnly->setChecked(settings.value("WebRTCPublicIpOnly", true).toBool());
 
     foreach (int level, WebView::zoomLevels()) {
         ui->defaultZoomLevel->addItem(QString("%1%").arg(level));
@@ -924,6 +931,9 @@ void Preferences::saveSettings()
     settings.setValue("PrintElementBackground", ui->printEBackground->isChecked());
     settings.setValue("closeAppWithCtrlQ", ui->closeAppWithCtrlQ->isChecked());
     settings.setValue("UseNativeScrollbars", ui->useNativeScrollbars->isChecked());
+    settings.setValue("DisableVideoAutoPlay", ui->disableVideoAutoPlay->isChecked());
+    settings.setValue("WebRTCPublicIpOnly", ui->webRTCPublicIpOnly->isChecked());
+
 #ifdef Q_OS_WIN
     settings.setValue("CheckDefaultBrowser", ui->checkDefaultBrowser->isChecked());
 #endif

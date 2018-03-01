@@ -1061,6 +1061,20 @@
                    </property>
                   </widget>
                  </item>
+                 <item>
+                  <widget class="QCheckBox" name="disableVideoAutoPlay">
+                   <property name="text">
+                    <string>Disable automatic playing of videos</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="webRTCPublicIpOnly">
+                   <property name="text">
+                    <string>Prevent WebRTC from leaking local IP address</string>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </item>
                <item row="2" column="0">
