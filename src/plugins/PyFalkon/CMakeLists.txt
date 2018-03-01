@@ -31,7 +31,7 @@ endforeach()
 
 # Set up the options to pass to shiboken.
 set(GLOBAL_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/pyfalkon_global.h)
-set(TYPESYSTEM_FILE ${CMAKE_CURRENT_SOURCE_DIR}/pyfalkon.xml)
+set(TYPESYSTEM_FILE ${CMAKE_CURRENT_SOURCE_DIR}/typesystem_pyfalkon.xml)
 
 set(SHIBOKEN_OPTIONS --generator-set=shiboken --enable-parent-ctor-heuristic
     --enable-pyside-extensions --enable-return-value-heuristic --use-isnull-as-nb_nonzero
