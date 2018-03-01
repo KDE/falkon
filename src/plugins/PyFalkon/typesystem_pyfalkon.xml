@@ -180,8 +180,47 @@
     <object-type name="ClickableLabel"/>
     <object-type name="DelayedFileWatcher"/>
     <value-type name="DesktopFile"/>
+    <object-type name="Menu"/>
+    <object-type name="Action"/>
     <object-type name="IconProvider"/>
-    <object-type name="QzTools"/>
+    <object-type name="QzTools">
+      <modify-function signature="getOpenFileName(const QString&amp;, QWidget*, const QString&amp;, const QString&amp;, const QString&amp;, QString*, QFlags&lt;QFileDialog::Option&gt;)">
+        <modify-argument index="return">
+          <replace-type modified-type="(fileName, selectedFilter)"/>
+        </modify-argument>
+        <modify-argument index="6">
+          <replace-type modified-type="QString"/>
+          <replace-default-expression with="QString()"/>
+        </modify-argument>
+        <inject-code class="target" position="end">
+          <insert-template name="return_for_QFileDialog"/>
+        </inject-code>
+      </modify-function>
+      <modify-function signature="getOpenFileNames(const QString&amp;, QWidget*, const QString&amp;, const QString&amp;, const QString&amp;, QString*, QFlags&lt;QFileDialog::Option&gt;)">
+        <modify-argument index="return">
+          <replace-type modified-type="(fileNames, selectedFilter)"/>
+        </modify-argument>
+        <modify-argument index="6">
+          <replace-type modified-type="QString"/>
+          <replace-default-expression with="QString()"/>
+        </modify-argument>
+        <inject-code class="target" position="end">
+          <insert-template name="return_for_QFileDialog"/>
+        </inject-code>
+      </modify-function>
+      <modify-function signature="getSaveFileName(const QString&amp;, QWidget*, const QString&amp;, const QString&amp;, const QString&amp;, QString*, QFlags&lt;QFileDialog::Option&gt;)">
+        <modify-argument index="return">
+          <replace-type modified-type="(fileName, selectedFilter)"/>
+        </modify-argument>
+        <modify-argument index="6">
+          <replace-type modified-type="QString"/>
+          <replace-default-expression with="QString()"/>
+        </modify-argument>
+        <inject-code class="target" position="end">
+          <insert-template name="return_for_QFileDialog"/>
+        </inject-code>
+      </modify-function>
+    </object-type>
     <object-type name="SqlDatabase"/>
     <object-type name="ToolButton"/>
     <value-type name="WheelHelper">
@@ -209,6 +248,15 @@
     PyModule_AddObject(module, "__version_info__", pyFalkonVersion);
     PyModule_AddStringConstant(module, "__version__", Qz::VERSION);
     </inject-code>
+
+    <template name="return_for_QFileDialog">
+    %BEGIN_ALLOW_THREADS
+    %RETURN_TYPE retval_ = %CPPSELF.%FUNCTION_NAME(%1, %2, %3, %4, %5, &amp;%6, %7);
+    %END_ALLOW_THREADS
+    %PYARG_0 = PyTuple_New(2);
+    PyTuple_SET_ITEM(%PYARG_0, 0, %CONVERTTOPYTHON[%RETURN_TYPE](retval_));
+    PyTuple_SET_ITEM(%PYARG_0, 1, %CONVERTTOPYTHON[%ARG6_TYPE](%6));
+    </template>
 
     <suppress-warning text="Unable to translate type &quot;std::function&lt;QPoint (QSize)&gt;&quot;:*"/>
     <suppress-warning text="Unable to translate type &quot;std::function&lt;void ()&gt;&quot;:*"/>

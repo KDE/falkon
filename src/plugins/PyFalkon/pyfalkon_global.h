@@ -102,6 +102,7 @@
 #include "clickablelabel.h"
 #include "delayedfilewatcher.h"
 #include "desktopfile.h"
+#include "enhancedmenu.h"
 #include "iconprovider.h"
 #include "qztools.h"
 #include "sqldatabase.h"
