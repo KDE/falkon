@@ -193,7 +193,6 @@ set(SRCS ${SRCS}
     tools/delayedfilewatcher.cpp
     tools/desktopfile.cpp
     tools/docktitlebarwidget.cpp
-    tools/emptynetworkreply.cpp
     tools/enhancedmenu.cpp
     tools/focusselectlineedit.cpp
     tools/frame.cpp

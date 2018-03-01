@@ -21,7 +21,6 @@
 #include "webpage.h"
 #include "pluginproxy.h"
 #include "mainapplication.h"
-#include "emptynetworkreply.h"
 #include "tabwidget.h"
 #include "webtab.h"
 #include "../config.h"
