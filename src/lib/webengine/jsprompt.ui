@@ -145,7 +145,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="ButtonBox" name="buttonBox">
+       <widget class="QDialogButtonBox" name="buttonBox">
         <property name="standardButtons">
          <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
         </property>
@@ -182,13 +182,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>ButtonBox</class>
-   <extends>QDialogButtonBox</extends>
-   <header>buttonbox.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

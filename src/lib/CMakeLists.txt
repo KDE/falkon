@@ -183,7 +183,6 @@ set(SRCS ${SRCS}
     tools/abstractbuttoninterface.cpp
     tools/aesinterface.cpp
     tools/animatedwidget.cpp
-    tools/buttonbox.cpp
     tools/buttonwithmenu.cpp
     tools/certificateinfowidget.cpp
     tools/clickablelabel.cpp
@@ -212,7 +211,6 @@ set(SRCS ${SRCS}
     tools/sqldatabase.cpp
     tools/toolbutton.cpp
     tools/treewidget.cpp
-    tools/widget.cpp
     tools/wheelhelper.cpp
     webengine/javascript/autofilljsobject.cpp
     webengine/javascript/externaljsobject.cpp

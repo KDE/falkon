@@ -22,7 +22,6 @@
 #include "downloadmanager.h"
 #include "mainapplication.h"
 #include "checkboxdialog.h"
-#include "widget.h"
 #include "qztools.h"
 #include "speeddial.h"
 #include "autofill.h"
@@ -478,7 +477,7 @@ bool WebPage::javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, c
         return false;
     }
 
-    ResizableFrame* widget = new ResizableFrame(view()->overlayWidget());
+    QFrame *widget = new QFrame(view()->overlayWidget());
 
     widget->setObjectName("jsFrame");
     Ui_jsPrompt* ui = new Ui_jsPrompt();
@@ -489,7 +488,12 @@ bool WebPage::javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, c
     widget->resize(view()->size());
     widget->show();
 
-    connect(view(), SIGNAL(viewportResized(QSize)), widget, SLOT(slotResize(QSize)));
+    QAbstractButton *clicked = nullptr;
+    connect(ui->buttonBox, &QDialogButtonBox::clicked, this, [&](QAbstractButton *button) {
+        clicked = button;
+    });
+
+    connect(view(), &WebView::viewportResized, widget, qOverload<const QSize &>(&QFrame::resize));
     connect(ui->lineEdit, SIGNAL(returnPressed()), ui->buttonBox->button(QDialogButtonBox::Ok), SLOT(animateClick()));
 
     QEventLoop eLoop;
@@ -502,7 +506,7 @@ bool WebPage::javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, c
     m_runningLoop = 0;
 
     QString x = ui->lineEdit->text();
-    bool _result = ui->buttonBox->clickedButtonRole() == QDialogButtonBox::AcceptRole;
+    bool _result = ui->buttonBox->buttonRole(clicked) == QDialogButtonBox::AcceptRole;
     *result = x;
 
     delete widget;
@@ -521,7 +525,7 @@ bool WebPage::javaScriptConfirm(const QUrl &securityOrigin, const QString &msg)
         return false;
     }
 
-    ResizableFrame* widget = new ResizableFrame(view()->overlayWidget());
+    QFrame *widget = new QFrame(view()->overlayWidget());
 
     widget->setObjectName("jsFrame");
     Ui_jsConfirm* ui = new Ui_jsConfirm();
@@ -531,7 +535,12 @@ bool WebPage::javaScriptConfirm(const QUrl &securityOrigin, const QString &msg)
     widget->resize(view()->size());
     widget->show();
 
-    connect(view(), SIGNAL(viewportResized(QSize)), widget, SLOT(slotResize(QSize)));
+    QAbstractButton *clicked = nullptr;
+    connect(ui->buttonBox, &QDialogButtonBox::clicked, this, [&](QAbstractButton *button) {
+        clicked = button;
+    });
+
+    connect(view(), &WebView::viewportResized, widget, qOverload<const QSize &>(&QFrame::resize));
 
     QEventLoop eLoop;
     m_runningLoop = &eLoop;
@@ -542,7 +551,7 @@ bool WebPage::javaScriptConfirm(const QUrl &securityOrigin, const QString &msg)
     }
     m_runningLoop = 0;
 
-    bool result = ui->buttonBox->clickedButtonRole() == QDialogButtonBox::AcceptRole;
+    bool result = ui->buttonBox->buttonRole(clicked) == QDialogButtonBox::AcceptRole;
 
     delete widget;
     view()->setFocus();
@@ -576,7 +585,7 @@ void WebPage::javaScriptAlert(const QUrl &securityOrigin, const QString &msg)
         return;
     }
 
-    ResizableFrame* widget = new ResizableFrame(view()->overlayWidget());
+    QFrame *widget = new QFrame(view()->overlayWidget());
 
     widget->setObjectName("jsFrame");
     Ui_jsAlert* ui = new Ui_jsAlert();
@@ -586,7 +595,7 @@ void WebPage::javaScriptAlert(const QUrl &securityOrigin, const QString &msg)
     widget->resize(view()->size());
     widget->show();
 
-    connect(view(), SIGNAL(viewportResized(QSize)), widget, SLOT(slotResize(QSize)));
+    connect(view(), &WebView::viewportResized, widget, qOverload<const QSize &>(&QFrame::resize));
 
     QEventLoop eLoop;
     m_runningLoop = &eLoop;
