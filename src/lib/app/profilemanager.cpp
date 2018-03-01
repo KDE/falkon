@@ -183,8 +183,12 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
 
     Updater::Version prof(profile);
 
+    // Profile is from newer version than running application
     if (prof > Updater::Version(Qz::VERSION)) {
-        copyDataToProfile();
+        // Only copy data when profile is not from development version
+        if (prof.revisionNumber != 99) {
+            copyDataToProfile();
+        }
         return;
     }
 

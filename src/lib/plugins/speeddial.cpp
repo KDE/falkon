@@ -62,13 +62,6 @@ void SpeedDial::loadSettings()
     m_sdcentered = settings.value("sdcenter", false).toBool();
     settings.endGroup();
 
-    if (allPages.isEmpty()) {
-        allPages = "url:\"https:/kde.org\"|title:\"KDE Community Home\";"
-                   "url:\"https://phabricator.kde.org/source/falkon/\"|title:\"Falkon Git\";"
-                   "url:\"https://bugs.kde.org/describecomponents.cgi?product=Falkon\"|title:\"Falkon Bug Tracker\";"
-                   "url:\"https://duckduckgo.com\"|title:\"DuckDuckGo\";";
-
-    }
     changed(allPages);
 
     m_thumbnailsDir = DataPaths::currentProfilePath() + "/thumbnails/";
@@ -232,10 +225,6 @@ QString SpeedDial::initialScript()
 
 void SpeedDial::changed(const QString &allPages)
 {
-    if (allPages.isEmpty()) {
-        return;
-    }
-
     const QStringList entries = allPages.split(QLatin1String("\";"), QString::SkipEmptyParts);
     m_pages.clear();
 

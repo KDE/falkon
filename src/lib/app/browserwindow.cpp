@@ -582,7 +582,7 @@ void BrowserWindow::loadSettings()
     //Browser Window settings
     settings.beginGroup("Browser-View-Settings");
     bool showStatusBar = settings.value("showStatusBar", false).toBool();
-    bool showBookmarksToolbar = settings.value("showBookmarksToolbar", true).toBool();
+    bool showBookmarksToolbar = settings.value("showBookmarksToolbar", false).toBool();
     bool showNavigationToolbar = settings.value("showNavigationToolbar", true).toBool();
     bool showMenuBar = settings.value("showMenubar", false).toBool();
 
@@ -809,8 +809,8 @@ void BrowserWindow::loadAddress(const QUrl &url)
         int index = m_tabWidget->addView(url, qzSettings->newTabPosition);
         weView(index)->setFocus();
     } else {
-        weView()->load(url);
         weView()->setFocus();
+        weView()->load(url);
     }
 }
 
