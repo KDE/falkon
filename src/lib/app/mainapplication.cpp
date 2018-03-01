@@ -923,6 +923,7 @@ void MainApplication::loadSettings()
     webSettings->setAttribute(QWebEngineSettings::JavascriptCanPaste, settings.value("allowJavaScriptPaste", true).toBool());
     webSettings->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, settings.value("DisableVideoAutoPlay", false).toBool());
     webSettings->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, settings.value("WebRTCPublicIpOnly", true).toBool());
+    webSettings->setUnknownUrlSchemePolicy(QWebEngineSettings::AllowAllUnknownUrlSchemes);
 #endif
 
     webSettings->setDefaultTextEncoding(settings.value("DefaultEncoding", webSettings->defaultTextEncoding()).toString());
