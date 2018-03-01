@@ -102,18 +102,9 @@ void PluginListDelegate::paint(QPainter* painter, const QStyleOptionViewItem &op
     painter->setFont(versionFont);
     style->drawItemText(painter, versionRect, Qt::AlignLeft, textPalette, true, version, colorRole);
 
-    // Draw author
-    const int infoYPos = nameRect.bottom() + opt.fontMetrics.leading();
-    QRect infoRect(nameRect.x(), infoYPos, nameRect.width(), opt.fontMetrics.height());
-    const QString info = opt.fontMetrics.elidedText(index.data(Qt::UserRole + 1).toString(), Qt::ElideRight, infoRect.width());
-    QFont font = opt.font;
-    font.setPointSize(font.pointSize() - 1);
-    painter->setFont(font);
-    style->drawItemText(painter, infoRect, Qt::TextSingleLine | Qt::AlignLeft, textPalette, true, info, colorRole);
-
     // Draw description
-    const int descriptionYPos = infoRect.bottom() + opt.fontMetrics.leading();
-    QRect descriptionRect(infoRect.x(), descriptionYPos, infoRect.width(), opt.fontMetrics.height());
+    const int descriptionYPos = nameRect.bottom() + opt.fontMetrics.leading();
+    QRect descriptionRect(nameRect.x(), descriptionYPos, nameRect.width(), opt.fontMetrics.height());
     const QString description = opt.fontMetrics.elidedText(index.data(Qt::UserRole + 2).toString(), Qt::ElideRight, descriptionRect.width());
     painter->setFont(opt.font);
     style->drawItemText(painter, descriptionRect, Qt::TextSingleLine | Qt::AlignLeft, textPalette, true, description, colorRole);
@@ -139,7 +130,7 @@ QSize PluginListDelegate::sizeHint(const QStyleOptionViewItem &option, const QMo
 
         const QFontMetrics titleMetrics(titleFont);
 
-        m_rowHeight = 2 * m_padding + 2 * opt.fontMetrics.leading() + 2 * opt.fontMetrics.height() + titleMetrics.height();
+        m_rowHeight = 2 * m_padding + 2 * opt.fontMetrics.leading() + opt.fontMetrics.height() + titleMetrics.height();
     }
 
     return QSize(200, m_rowHeight);
