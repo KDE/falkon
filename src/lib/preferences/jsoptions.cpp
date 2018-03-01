@@ -29,11 +29,20 @@ JsOptions::JsOptions(QWidget* parent)
 
     ui->setupUi(this);
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
+    ui->jscanActivateWindow->setVisible(false);
+#endif
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+    ui->jscanPaste->setVisible(false);
+#endif
+
     Settings settings;
     settings.beginGroup("Web-Browser-Settings");
     ui->jscanOpenWindow->setChecked(settings.value("allowJavaScriptOpenWindow", false).toBool());
-    ui->jscanChangeSize->setChecked(settings.value("allowJavaScriptGeometryChange", true).toBool());
-    ui->jscanAccessClipboard->setChecked(settings.value("allowJavaScriptAccessClipboard", false).toBool());
+    ui->jscanActivateWindow->setChecked(settings.value("allowJavaScriptActivateWindow", false).toBool());
+    ui->jscanAccessClipboard->setChecked(settings.value("allowJavaScriptAccessClipboard", true).toBool());
+    ui->jscanPaste->setChecked(settings.value("allowJavaScriptPaste", true).toBool());
     settings.endGroup();
 }
 
@@ -42,8 +51,9 @@ void JsOptions::accept()
     Settings settings;
     settings.beginGroup("Web-Browser-Settings");
     settings.setValue("allowJavaScriptOpenWindow", ui->jscanOpenWindow->isChecked());
-    settings.setValue("allowJavaScriptGeometryChange", ui->jscanChangeSize->isChecked());
+    settings.setValue("allowJavaScriptActivateWindow", ui->jscanActivateWindow->isChecked());
     settings.setValue("allowJavaScriptAccessClipboard", ui->jscanAccessClipboard->isChecked());
+    settings.setValue("allowJavaScriptPaste", ui->jscanPaste->isChecked());
     settings.endGroup();
 
     QDialog::close();

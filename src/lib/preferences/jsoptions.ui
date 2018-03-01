@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>214</width>
-    <height>193</height>
+    <width>268</width>
+    <height>222</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,9 +31,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="jscanChangeSize">
+      <widget class="QCheckBox" name="jscanActivateWindow">
        <property name="text">
-        <string>Change window size</string>
+        <string>Activate windows</string>
        </property>
       </widget>
      </item>
@@ -41,6 +41,13 @@
       <widget class="QCheckBox" name="jscanAccessClipboard">
        <property name="text">
         <string>Access clipboard</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="jscanPaste">
+       <property name="text">
+        <string>Paste from clipboard</string>
        </property>
       </widget>
      </item>
