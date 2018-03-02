@@ -83,6 +83,9 @@ if (WIN32)
     add_definitions(-D_WIN32_WINNT=${ver})
 endif()
 
+# Mandatory: KF5I18n (only for ki18n_install)
+find_package(KF5I18n REQUIRED)
+
 # Optional: GnomeKeyring
 find_package(PkgConfig)
 if (PKG_CONFIG_FOUND)
