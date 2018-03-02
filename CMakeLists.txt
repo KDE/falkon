@@ -163,4 +163,7 @@ if (BUILD_TESTING)
     add_subdirectory(tests/benchmarks)
 endif()
 
+# Tell releaseme that po is already taken care of
+# SKIP_PO_INSTALL
+
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
