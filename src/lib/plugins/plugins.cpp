@@ -108,7 +108,12 @@ PluginSpec Plugins::createSpec(const DesktopFile &metaData)
         if (QFileInfo::exists(iconName)) {
             spec.icon = QIcon(iconName).pixmap(32);
         } else {
-            spec.icon = QIcon::fromTheme(iconName).pixmap(32);
+            const QString relativeFile = QFileInfo(metaData.fileName()).dir().absoluteFilePath(iconName);
+            if (QFileInfo::exists(relativeFile)) {
+                spec.icon = QIcon(relativeFile).pixmap(32);
+            } else {
+                spec.icon = QIcon::fromTheme(iconName).pixmap(32);
+            }
         }
     }
 

@@ -23,11 +23,16 @@ DesktopFile::DesktopFile()
 {
 }
 
-DesktopFile::DesktopFile(const QString &filePath)
+DesktopFile::DesktopFile(const QString &fileName)
 {
-    m_settings.reset(new QSettings(filePath, QSettings::IniFormat));
+    m_settings.reset(new QSettings(fileName, QSettings::IniFormat));
     m_settings->setIniCodec("UTF-8");
     m_settings->beginGroup(QSL("Desktop Entry"));
+}
+
+QString DesktopFile::fileName() const
+{
+    return m_settings ? m_settings->fileName() : QString();
 }
 
 QString DesktopFile::name() const

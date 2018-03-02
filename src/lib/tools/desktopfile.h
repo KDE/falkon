@@ -27,7 +27,9 @@ class FALKON_EXPORT DesktopFile
 {
 public:
     explicit DesktopFile();
-    explicit DesktopFile(const QString &filePath);
+    explicit DesktopFile(const QString &fileName);
+
+    QString fileName() const;
 
     QString name() const;
     QString comment() const;
