@@ -17,60 +17,6 @@ add_executable(falkon ${SRCS})
 
 target_link_libraries(falkon FalkonPrivate)
 
-# Same as ecm_install_po_files_as_qm, but only for *_qt.po
-function(install_po_files_as_qm podir)
-    if (LOCALE_INSTALL_DIR)
-        set(locale_install_destination "${LOCALE_INSTALL_DIR}")
-    elseif (CMAKE_INSTALL_LOCALEDIR)
-        set(locale_install_destination "${CMAKE_INSTALL_LOCALEDIR}")
-    else()
-        set(locale_install_destination share/locale)
-    endif()
-    file(GLOB po_files "${podir}/*/*_qt.po")
-    foreach(po_file ${po_files})
-        get_filename_component(po_dir ${po_file} DIRECTORY)
-        get_filename_component(lang ${po_dir} NAME)
-        ecm_process_po_files_as_qm(
-            ${lang} ALL
-            PO_FILES ${po_file}
-            INSTALL_DESTINATION ${locale_install_destination}
-        )
-    endforeach()
-endfunction()
-
-# Same as ki18n_install, but skips *_qt.po
-function(install_po_files podir)
-    if (LOCALE_INSTALL_DIR)
-        set(locale_install_destination "${LOCALE_INSTALL_DIR}")
-    elseif (CMAKE_INSTALL_LOCALEDIR)
-        set(locale_install_destination "${CMAKE_INSTALL_LOCALEDIR}")
-    else()
-        set(locale_install_destination share/locale)
-    endif()
-    get_filename_component(dirname ${locale_install_destination} NAME)
-    get_filename_component(destname ${locale_install_destination} DIRECTORY)
-
-    get_filename_component(absolute_podir ${podir} ABSOLUTE)
-    string(MD5 pathmd5 ${absolute_podir})
-
-    add_custom_target(pofiles-${pathmd5} ALL
-        COMMENT "Generating mo..."
-        COMMAND ${CMAKE_COMMAND}
-                -DGETTEXT_MSGFMT_EXECUTABLE=${GETTEXT_MSGFMT_EXECUTABLE}
-                -DCOPY_TO=${CMAKE_CURRENT_BINARY_DIR}/${dirname}
-                -DPO_DIR=${absolute_podir}
-                -P ${CMAKE_SOURCE_DIR}/cmake/build-po-files.cmake
-    )
-
-    if (NOT TARGET pofiles)
-        add_custom_target(pofiles)
-    endif()
-    add_dependencies(pofiles pofiles-${pathmd5})
-
-    file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${dirname})
-    install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${dirname} DESTINATION ${destname})
-endfunction()
-
 if (APPLE)
     set_target_properties(falkon PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/main/Info.plist)
     set_target_properties(falkon PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.falkon")
@@ -88,8 +34,8 @@ endif()
 if (UNIX AND NOT APPLE)
     install(TARGETS falkon ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
     install(DIRECTORY ${CMAKE_SOURCE_DIR}/themes DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/falkon)
-    install_po_files_as_qm(${CMAKE_SOURCE_DIR}/po)
-    install_po_files(${CMAKE_SOURCE_DIR}/po)
+    ki18n_install(${CMAKE_SOURCE_DIR}/po)
+    ecm_install_po_files_as_qm(${CMAKE_SOURCE_DIR}/poqm)
 
     install(PROGRAMS ../../linux/applications/org.kde.falkon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 

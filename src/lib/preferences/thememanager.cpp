@@ -129,7 +129,7 @@ ThemeManager::Theme ThemeManager::parseTheme(const QString &path, const QString 
         info.license = QzTools::readAllFileContents(path + licensePath);
     }
 
-    if (info.name.isEmpty() || m_themeHash.contains(info.name)) {
+    if (info.name.isEmpty() || m_themeHash.contains(name)) {
         return info;
     }
 
