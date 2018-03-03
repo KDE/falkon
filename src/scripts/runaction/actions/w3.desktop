@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Validate page
+
+Icon=w3.png
+Type=Service
+
+X-RunAction-Type="Url"
+X-RunAction-TypeCondition="Page"
+X-RunAction-Exec="http://validator.w3.org/check?uri={url}"

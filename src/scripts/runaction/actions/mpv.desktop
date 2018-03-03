@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=mpv
+
+Icon=mpv
+TryExec=mpv
+Type=Service
+
+X-RunAction-Type="Command"
+X-RunAction-TypeCondition="Page;Link;Media"
+X-RunAction-Exec="mpv {url}"

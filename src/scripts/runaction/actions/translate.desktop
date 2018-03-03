@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Translate page
+
+Icon=translate.png
+Type=Service
+
+X-RunAction-Type="Url"
+X-RunAction-TypeCondition="Page"
+X-RunAction-Exec="http://translate.google.com/translate?sl=auto&tl={lang}&u={url}"

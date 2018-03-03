@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Dictionary
+
+Type=Service
+
+X-RunAction-Type="Url"
+X-RunAction-TypeCondition="Text"
+X-RunAction-Exec="http://{lang}.wiktionary.org/wiki/Special:Search?search={text}"

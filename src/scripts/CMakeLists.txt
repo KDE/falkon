@@ -6,3 +6,4 @@ function(install_python_script name)
 endfunction()
 
 install_python_script(hellopython)
+install_python_script(runaction)

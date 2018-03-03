@@ -8,4 +8,11 @@ XGETTEXT_FLAGS_PYTHON="\
 -ki18n:1 -ki18np:1,2 \
 "
 
-$XGETTEXT_PROGRAM $XGETTEXT_FLAGS_PYTHON `find hellopython -name '*.py'` -o $podir/falkon_hellopython.pot
+python_scripts="
+hellopython
+runaction
+"
+
+for script in $python_scripts; do
+    $XGETTEXT_PROGRAM $XGETTEXT_FLAGS_PYTHON `find $script -name '*.py'` -o $podir/falkon_$script.pot
+done

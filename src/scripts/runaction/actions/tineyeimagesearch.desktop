@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=TinEye
+Comment=Search with...
+
+Icon=tineye.png
+Type=Service
+
+X-RunAction-Type="Url"
+X-RunAction-TypeCondition="Image"
+X-RunAction-Submenu="search_with"
+X-RunAction-Exec="http://www.tineye.com/search?url={url}"
