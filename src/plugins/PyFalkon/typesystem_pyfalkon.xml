@@ -35,6 +35,7 @@
           <replace-default-expression with="WebPage::UnsafeJsWorld"/>
         </modify-argument>
       </modify-function>
+      <modify-function signature="javaScriptPrompt(const QUrl&amp;, const QString&amp;, const QString&amp;, QString*)" remove="all"/>
     </object-type>
     <object-type name="WebView"/>
     <object-type name="WebInspector"/>
@@ -250,9 +251,7 @@
     </inject-code>
 
     <template name="return_for_QFileDialog">
-    %BEGIN_ALLOW_THREADS
     %RETURN_TYPE retval_ = %CPPSELF.%FUNCTION_NAME(%1, %2, %3, %4, %5, &amp;%6, %7);
-    %END_ALLOW_THREADS
     %PYARG_0 = PyTuple_New(2);
     PyTuple_SET_ITEM(%PYARG_0, 0, %CONVERTTOPYTHON[%RETURN_TYPE](retval_));
     PyTuple_SET_ITEM(%PYARG_0, 1, %CONVERTTOPYTHON[%ARG6_TYPE](%6));
