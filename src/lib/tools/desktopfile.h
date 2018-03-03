@@ -37,6 +37,8 @@ public:
     QString icon() const;
     QVariant value(const QString &key, bool localized = false) const;
 
+    bool tryExec() const;
+
 private:
     QSharedPointer<QSettings> m_settings;
 };

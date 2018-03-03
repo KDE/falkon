@@ -18,6 +18,7 @@
 #include "desktopfile.h"
 
 #include <QSettings>
+#include <QStandardPaths>
 
 DesktopFile::DesktopFile()
 {
@@ -79,4 +80,14 @@ QVariant DesktopFile::value(const QString &key, bool localized) const
         }
     }
     return m_settings->value(key);
+}
+
+bool DesktopFile::tryExec() const
+{
+    if (!m_settings) {
+        return false;
+    }
+
+    const QString exec = m_settings->value(QSL("TryExec")).toString();
+    return exec.isEmpty() || !QStandardPaths::findExecutable(exec).isEmpty();
 }
