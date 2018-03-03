@@ -187,7 +187,7 @@ void LocationBar::showDomainCompletion(const QString &completion)
 
     // We need to manually force the completion because model is updated asynchronously
     // But only force completion when the user actually added new text
-    if (m_oldTextLength < m_currentTextLength)
+    if (!completion.isEmpty() && m_oldTextLength < m_currentTextLength)
         completer()->complete();
 }
 
