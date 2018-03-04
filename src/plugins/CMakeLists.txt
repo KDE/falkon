@@ -10,6 +10,7 @@ add_subdirectory(PIM)
 add_subdirectory(StatusBarIcons)
 add_subdirectory(TabManager)
 add_subdirectory(VerticalTabs)
+add_subdirectory(YoutubeDownload)
 
 if (GNOME_KEYRING_FOUND)
     add_subdirectory(GnomeKeyringPasswords)

@@ -307,13 +307,14 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     loadSettings();
 
-    m_plugins = new PluginProxy(this);
-    m_autoFill = new AutoFill(this);
-
-    if (!noAddons)
-        m_plugins->loadPlugins();
-
     BrowserWindow* window = createWindow(Qz::BW_FirstAppWindow, startUrl);
+
+	m_plugins = new PluginProxy(this);
+	m_autoFill = new AutoFill(this);
+
+	if (!noAddons)
+		m_plugins->loadPlugins();
+
     connect(window, SIGNAL(startingCompleted()), this, SLOT(restoreOverrideCursor()));
 
     connect(this, SIGNAL(focusChanged(QWidget*,QWidget*)), this, SLOT(onFocusChanged()));
