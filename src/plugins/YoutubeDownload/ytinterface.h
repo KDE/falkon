@@ -27,6 +27,7 @@ public:
 	void saveSettings();
 	void loadSettings();
 
+	bool s_debug;
 	bool s_askalways;
 	bool s_metadata;
 	bool s_subtitle;

@@ -12,6 +12,7 @@
 #include "ytsettings.h"
 #include "tabwidget.h"
 #include "tabbar.h"
+#include "desktopnotificationsfactory.h"
 
 #include <QMenu>
 #include <QTranslator>
@@ -36,13 +37,13 @@ DesktopFile YtInterface::metaData() const
 
 void YtInterface::init(InitState state, const QString &settingsPath)
 {
+	Q_UNUSED(state)
 	m_download = new YtIcon();
 	m_download->setIcon(QIcon(QL1S(":ytdownload/data/icon.svg")));
 	mApp->getWindow()->navigationBar()->addToolButton(m_download);
 	connect(m_download, SIGNAL(clicked(ClickController*)), this, SLOT(actionSlot()));
 
 	m_settingsPath = settingsPath + QL1S("/ytdownload/ytdownload.ini");
-	qWarning() << m_settingsPath;
 	loadSettings();
 }
 
@@ -80,6 +81,8 @@ void YtInterface::actionSlot()
 
 	QStringList args;
 
+	if(s_debug)
+		args.append("--verbose");
 	if(s_metadata)
 		args.append(QL1S("--add-metadata"));
 	if(s_subtitle)
@@ -87,18 +90,24 @@ void YtInterface::actionSlot()
 	if(s_thumbnail)
 		args.append(QL1S("--embed-thumbnail"));
 
-	args.append("-f 'bestvideo[ext=" + s_formatvideo + "]+bestaudio[ext=" + s_formataudio + "]'");
-	args.append("-o '" + s_outputformat + "'");
+	args.append("-f");
+	args.append("bestvideo[ext=" + s_formatvideo + "]+bestaudio[ext=" + s_formataudio + "]");
+	args.append("-o");
+	args.append(s_defaultdir + "/" + s_outputformat);
 	args.append(mApp->getWindow()->tabWidget()->webTab(mApp->getWindow()->tabWidget()->currentIndex())->url().toString());
-	qWarning() << s_executable << args;
+
 	exe->execute(s_executable, args);
-	qWarning() << exe->errorString() << exe->exitCode();
+
+	DesktopNotificationsFactory* notify = new DesktopNotificationsFactory();
+	//if(QFile::exists(s_defaultdir + "/" + s_outputformat))
+	notify->showNotification(QPixmap(QL1S(":ytdownload/data/icon-white.svg")),"Youtube video downloaded", "The youtube video has been downloaded!");
 }
 
 void YtInterface::saveSettings()
 {
 	QSettings settings(m_settingsPath, QSettings::IniFormat);
 	settings.beginGroup("General");
+	settings.setValue("Debug", s_debug);
 	settings.setValue("AskAlways", s_askalways);
 	settings.setValue("ExecutablePath", s_executable);
 	settings.endGroup();
@@ -120,11 +129,9 @@ void YtInterface::saveSettings()
 
 void YtInterface::loadSettings()
 {
-	if(!QFileInfo::exists(m_settingsPath))
-		return;
-
 	QSettings settings(m_settingsPath, QSettings::IniFormat);
 	settings.beginGroup("General");
+	s_debug = settings.value("Debug", false).toBool();
 	s_askalways = settings.value("AskAlways", false).toBool();
 	s_executable = settings.value("ExecutablePath", "/bin/youtube-dl").toString();
 	settings.endGroup();
