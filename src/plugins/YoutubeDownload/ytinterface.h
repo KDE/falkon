@@ -3,12 +3,11 @@
 
 // Include plugininterface.h for your version of Falkon
 #include "plugininterface.h"
+#include "yticon.h"
 
 #include <QLabel>
 #include <QMessageBox>
 #include <QVBoxLayout>
-#include <QPointer>
-#include "yticon.h"
 
 class YtInterface : public QObject, public PluginInterface
 {
@@ -23,7 +22,7 @@ public:
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;
-    void showSettings(QWidget *parent) override;
+	void showSettings(QWidget *parent) override;
 	void saveSettings();
 	void loadSettings();
 
@@ -32,17 +31,24 @@ public:
 	bool s_metadata;
 	bool s_subtitle;
 	bool s_thumbnail;
+	bool s_extractaudio;
+	bool s_useproxy;
+	bool s_askalwaysfile;
 	QString s_formataudio;
 	QString s_formatvideo;
 	QString s_defaultdir;
-	QString s_outputformat;
+
+	int s_audioquality;
+
 	QString s_executable;
 
 private slots:
     void actionSlot();
+	void downloadFinished();
 
 private:
-	QPointer<QDialog> m_settings;
+
+	int dialogSettings(QWidget* parent = nullptr);
 	YtIcon* m_download;
 	WebView* m_view;
 	QString m_settingsPath;

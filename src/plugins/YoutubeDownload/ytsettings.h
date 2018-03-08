@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "ytinterface.h"
+#include "ytprocess.h"
 
 namespace Ui {
 class YtSettings;
@@ -21,6 +22,10 @@ private Q_SLOTS:
 	void on_buttonBox_accepted();
 
 	void on_buttonBox_rejected();
+
+	void selectFile();
+	void selectDir();
+	void changeExec(const QString& file);
 
 private:
 

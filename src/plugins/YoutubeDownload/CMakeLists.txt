@@ -2,6 +2,7 @@ set( YoutubeDownload_SRCS
     yticon.cpp
     ytinterface.cpp
     ytsettings.cpp
+    ytprocess.cpp
 )
 
 set( YoutubeDownload_UIS
