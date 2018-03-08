@@ -111,7 +111,8 @@ void YtInterface::actionSlot()
 
 	args << "--audio-format" <<  s_formataudio;
 	args << "--audio-quality" << QString::number(s_audioquality);
-	args << "--recode-video" << s_formatvideo;
+	if(!s_extractaudio)
+		args << "--recode-video" << s_formatvideo;
 	args << "-o" << outputfile;
 
 	exe->setExecutable(s_executable);
