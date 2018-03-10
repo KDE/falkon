@@ -1,4 +1,4 @@
- 
+
 #include "ytinterface.h"
 #include "ytsettings.h"
 #include "ytprocess.h"
@@ -42,10 +42,11 @@ DesktopFile YtInterface::metaData() const
 void YtInterface::init(InitState state, const QString &settingsPath)
 {
 	Q_UNUSED(state)
+
 	m_download = new YtIcon();
 	m_download->setIcon(QIcon(QL1S(":ytdownload/data/icon.svg")));
-	mApp->getWindow()->navigationBar()->addToolButton(m_download);
 	connect(m_download, SIGNAL(clicked(ClickController*)), this, SLOT(actionSlot()));
+	connect(mApp, SIGNAL(windowCreated(BrowserWindow*)), this, SLOT(windowCreated(BrowserWindow*)));
 
 	m_settingsPath = settingsPath + QL1S("/ytdownload/ytdownload.ini");
 	loadSettings();
@@ -76,6 +77,10 @@ void YtInterface::showSettings(QWidget* parent)
 	dialogSettings(parent);
 }
 
+void YtInterface::windowCreated(BrowserWindow *window)
+{
+	window->navigationBar()->addToolButton(m_download);
+}
 
 void YtInterface::actionSlot()
 {
@@ -84,7 +89,7 @@ void YtInterface::actionSlot()
 	QString outputfile;
 	QUrl url = mApp->getWindow()->tabWidget()->webTab(mApp->getWindow()->tabWidget()->currentIndex())->url();
 
-	connect(exe, SIGNAL(finished()), this, SLOT(downloadFinished()));
+	connect(exe, SIGNAL(downloadFinished(QString)), this, SLOT(downloadFinished(QString)));
 
 	if(s_askalways)
 		if(dialogSettings() == QDialog::Rejected)
@@ -94,7 +99,8 @@ void YtInterface::actionSlot()
 	else
 		outputfile = s_defaultdir + "/" + YtProcess::getVideoTitle(s_executable, url.toString());
 
-	outputfile.append(".%(ext)s");
+	if(outputfile.isEmpty())
+		return;
 
 	if(s_useproxy)
 		args << "--proxy" << "HTTP://" + mApp->networkManager()->proxy().hostName() + ":" + QString::number(mApp->networkManager()->proxy().port());
@@ -113,11 +119,11 @@ void YtInterface::actionSlot()
 	args << "--audio-quality" << QString::number(s_audioquality);
 	if(!s_extractaudio)
 		args << "--recode-video" << s_formatvideo;
-	args << "-o" << outputfile;
 
 	exe->setExecutable(s_executable);
 	exe->setArguments(args);
 	exe->setUrl(url);
+	exe->setOutputFile(outputfile);
 	exe->start();
 }
 
@@ -172,9 +178,12 @@ void YtInterface::loadSettings()
 	settings.endGroup();
 }
 
-void YtInterface::downloadFinished()
+void YtInterface::downloadFinished(const QString &file)
 {
 	DesktopNotificationsFactory* notify = new DesktopNotificationsFactory();
-	//if(QFile::exists(s_defaultdir + "/" + s_outputformat))
-	notify->showNotification(QPixmap(QL1S(":ytdownload/data/icon-white.svg")),"Youtube video downloaded", "The youtube video has been downloaded!");
+	QString f = file + "." + (s_extractaudio ? s_formataudio : s_formatvideo);
+	if(QFile::exists(f))
+		notify->showNotification(QPixmap(QL1S(":ytdownload/data/icon-white.svg")),"Youtube video downloaded", "The youtube video has been downloaded!");
+	else
+		notify->showNotification(QPixmap(QL1S(":ytdownload/data/icon-white.svg")),"Download failed", "The youtube video cannot be downloaded!");
 }

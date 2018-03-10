@@ -131,6 +131,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void settingsReloaded();
     void activeWindowChanged(BrowserWindow* window);
+	void windowCreated(BrowserWindow* window);
 
 private Q_SLOTS:
     void postLaunch();

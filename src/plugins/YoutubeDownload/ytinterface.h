@@ -4,6 +4,7 @@
 // Include plugininterface.h for your version of Falkon
 #include "plugininterface.h"
 #include "yticon.h"
+#include "browserwindow.h"
 
 #include <QLabel>
 #include <QMessageBox>
@@ -26,6 +27,8 @@ public:
 	void saveSettings();
 	void loadSettings();
 
+	QString getOutputFile(const QString &url);
+
 	bool s_debug;
 	bool s_askalways;
 	bool s_metadata;
@@ -44,7 +47,8 @@ public:
 
 private slots:
     void actionSlot();
-	void downloadFinished();
+	void downloadFinished(const QString &file);
+	void windowCreated(BrowserWindow* window);
 
 private:
 

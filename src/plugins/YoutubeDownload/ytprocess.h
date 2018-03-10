@@ -16,17 +16,26 @@ public:
 	static bool test(const QString& e);
 
 	static QString getVideoTitle(const QString& _exe, const QString& _url);
+
 	void setExecutable(const QString& _exe);
 	void setArguments(const QStringList& _args);
 	void setUrl(const QUrl &_url);
+	void setOutputFile(const QString &out);
+
+	QString executable();
+	QStringList arguments();
+	QUrl url();
+	QString outputfile();
+
 signals:
 	void readOutput(const QString& out);
-	void downloadFinished(int errCode);
+	void downloadFinished(const QString& file);
 private:
 	QProcess* proc;
 	QString exe;
 	QStringList args;
-	QUrl url;
+	QUrl u;
+	QString of;
 };
 
 #endif //YTPROCESS_H

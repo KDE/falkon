@@ -14,14 +14,14 @@ YtProcess::~YtProcess()
 
 void YtProcess::run()
 {
-	if(exe.isEmpty() || args.isEmpty() || url.isEmpty())
+	if(exe.isEmpty() || args.isEmpty() || u.isEmpty() || of.isEmpty())
 	{
 		qWarning() << "[YoutubeDownload][FAIL] program or arguments are not found";
 		return;
 	}
 
 	QStringList temp = args;
-	temp << url.toString();
+	temp << "-o" << of + ".%(ext)s" << u.toString();
 
 	proc->start(exe, temp, QIODevice::ReadOnly);
 	if(!proc->waitForStarted())
@@ -32,6 +32,9 @@ void YtProcess::run()
 	{
 		emit readOutput(proc->readLine());
 	}
+	proc->waitForFinished();
+	emit downloadFinished(of);
+
 }
 
 QString YtProcess::getVideoTitle(const QString& _exe, const QString &_url)
@@ -70,4 +73,10 @@ bool YtProcess::test(const QString &e)
 
 void YtProcess::setExecutable(const QString &_exe) { exe = _exe; }
 void YtProcess::setArguments(const QStringList& _args) { args = _args; }
-void YtProcess::setUrl(const QUrl &_url) { url = _url; }
+void YtProcess::setUrl(const QUrl &_url) { u = _url; }
+void YtProcess::setOutputFile(const QString &out) { of = out; }
+
+QString YtProcess::executable() { return exe; }
+QStringList YtProcess::arguments() { return args; }
+QUrl YtProcess::url() { return u; }
+QString YtProcess::outputfile() { return of; }
