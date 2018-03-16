@@ -1,5 +1,5 @@
 /* ============================================================
-* KWalletPasswords - KWallet support plugin for Falkon
+* KDESupport - KDE support plugin for Falkon
 * Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "kwalletplugin.h"
+#include "kdesupportplugin.h"
 #include "kwalletpasswordbackend.h"
 #include "pluginproxy.h"
 #include "browserwindow.h"
@@ -25,18 +25,18 @@
 #include "passwordmanager.h"
 #include "desktopfile.h"
 
-KWalletPlugin::KWalletPlugin()
+KDESupportPlugin::KDESupportPlugin()
     : QObject()
     , m_backend(0)
 {
 }
 
-DesktopFile KWalletPlugin::metaData() const
+DesktopFile KDESupportPlugin::metaData() const
 {
-    return DesktopFile(QSL(":kwp/metadata.desktop"));
+    return DesktopFile(QSL(":kdesupport/metadata.desktop"));
 }
 
-void KWalletPlugin::init(InitState state, const QString &settingsPath)
+void KDESupportPlugin::init(InitState state, const QString &settingsPath)
 {
     Q_UNUSED(state);
     Q_UNUSED(settingsPath);
@@ -45,13 +45,13 @@ void KWalletPlugin::init(InitState state, const QString &settingsPath)
     mApp->autoFill()->passwordManager()->registerBackend(QSL("KWallet"), m_backend);
 }
 
-void KWalletPlugin::unload()
+void KDESupportPlugin::unload()
 {
     mApp->autoFill()->passwordManager()->unregisterBackend(m_backend);
     delete m_backend;
 }
 
-bool KWalletPlugin::testPlugin()
+bool KDESupportPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));

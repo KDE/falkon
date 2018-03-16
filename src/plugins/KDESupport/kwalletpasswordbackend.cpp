@@ -1,5 +1,5 @@
 /* ============================================================
-* KWalletPasswords - KWallet support plugin for Falkon
+* KDESupport - KDE support plugin for Falkon
 * Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "kwalletpasswordbackend.h"
-#include "kwalletplugin.h"
+#include "kdesupportplugin.h"
 #include "mainapplication.h"
 #include "browserwindow.h"
 
@@ -48,7 +48,7 @@ KWalletPasswordBackend::KWalletPasswordBackend()
 
 QString KWalletPasswordBackend::name() const
 {
-    return KWalletPlugin::tr("KWallet");
+    return KDESupportPlugin::tr("KWallet");
 }
 
 QVector<PasswordEntry> KWalletPasswordBackend::getEntries(const QUrl &url)

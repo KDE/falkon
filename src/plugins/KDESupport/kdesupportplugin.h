@@ -1,5 +1,5 @@
 /* ============================================================
-* KWalletPasswords - KWallet support plugin for Falkon
+* KDESupport - KDE support plugin for Falkon
 * Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -15,21 +15,21 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef KWALLETPLUGIN_H
-#define KWALLETPLUGIN_H
+#ifndef KDESUPPORTPLUGIN_H
+#define KDESUPPORTPLUGIN_H
 
 #include "plugininterface.h"
 
 class KWalletPasswordBackend;
 
-class KWalletPlugin : public QObject, public PluginInterface
+class KDESupportPlugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.KWalletPasswords")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.KDESupport")
 
 public:
-    explicit KWalletPlugin();
+    explicit KDESupportPlugin();
 
     DesktopFile metaData() const override;
     void init(InitState state, const QString &settingsPath) override;
@@ -41,4 +41,4 @@ private:
 
 };
 
-#endif // KWALLETPLUGIN_H
+#endif // KDESUPPORTPLUGIN_H
