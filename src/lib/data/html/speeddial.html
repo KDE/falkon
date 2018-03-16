@@ -178,6 +178,8 @@ div.entry:hover .edit, div.entry:hover .close, div.entry:hover .reload {
 #overlay-edit {
     outline: none;
     width: 500px;
+    height: auto;
+    max-height: 120%;
     margin-%LEFT_STR%: auto;
     margin-%RIGHT_STR%: auto;
     margin-top: 5%;
@@ -187,6 +189,8 @@ div.entry:hover .edit, div.entry:hover .close, div.entry:hover .reload {
     box-shadow: 0 0 0 1px rgba(255,255,255, 0.6);
     padding: 15px;
     padding-bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #overlay-edit img {
