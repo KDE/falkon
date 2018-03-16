@@ -283,12 +283,8 @@ LocationBar::LoadAction LocationBar::loadAction(const QString &text)
         const bool forceLoad = guessedUrl.scheme() == QL1S("javascript");
         // Only allow spaces in query
         if (forceLoad || !QzTools::containsSpace(guessedUrl.toString(QUrl::RemoveQuery))) {
-            // Only allow whitelisted schemes
-            static const QSet<QString> whitelistedSchemes = {
-                QSL("http"), QSL("https"), QSL("ftp"), QSL("file"),
-                QSL("data"), QSL("about"), QSL("falkon")
-            };
-            if (forceLoad || whitelistedSchemes.contains(guessedUrl.scheme())) {
+            // Only allow supported schemes
+            if (forceLoad || WebPage::supportedSchemes().contains(guessedUrl.scheme())) {
                 action.type = LoadAction::Url;
                 action.loadRequest = guessedUrl;
                 return action;
