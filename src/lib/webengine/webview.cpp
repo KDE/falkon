@@ -783,7 +783,12 @@ void WebView::createPageContextMenu(QMenu* menu)
     menu->addSeparator();
     menu->addAction(QIcon::fromTheme("edit-select-all"), tr("Select &all"), this, SLOT(editSelectAll()));
     menu->addSeparator();
-    menu->addAction(QIcon::fromTheme("text-html"), tr("Show so&urce code"), this, SLOT(showSource()));
+
+    const QString scheme = url().scheme();
+
+    if (scheme != QL1S("view-source") && WebPage::internalSchemes().contains(scheme)) {
+        menu->addAction(QIcon::fromTheme("text-html"), tr("Show so&urce code"), this, SLOT(showSource()));
+    }
 
     if (SiteInfo::canShowSiteInfo(url()))
         menu->addAction(QIcon::fromTheme("dialog-information"), tr("Show info ab&out site"), this, SLOT(showSiteInfo()));
