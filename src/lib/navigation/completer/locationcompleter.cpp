@@ -98,6 +98,26 @@ void LocationCompleter::complete(const QString &string)
     } else {
         m_oldSuggestions.clear();
     }
+
+    // Add search/visit item
+    if (!trimmedStr.isEmpty()) {
+        QStandardItem *item = new QStandardItem();
+        item->setText(trimmedStr);
+        item->setData(trimmedStr, LocationCompleterModel::UrlRole);
+        item->setData(trimmedStr, LocationCompleterModel::SearchStringRole);
+        item->setData(true, LocationCompleterModel::VisitSearchItemRole);
+        s_model->setCompletions({item});
+        addSuggestions(m_oldSuggestions);
+        showPopup();
+        if (!s_view->currentIndex().isValid()) {
+            m_ignoreCurrentChanged = true;
+            s_view->setCurrentIndex(s_model->index(0, 0));
+            m_ignoreCurrentChanged = false;
+        }
+    }
+
+    m_originalText = m_locationBar->text();
+    s_view->setOriginalText(m_originalText);
 }
 
 void LocationCompleter::showMostVisited()
@@ -115,10 +135,10 @@ void LocationCompleter::refreshJobFinished()
     // Also don't open the popup again when it was already closed
     if (!job->isCanceled() && job->timestamp() > m_lastRefreshTimestamp && !m_popupClosed) {
         s_model->setCompletions(job->completions());
-        m_lastRefreshTimestamp = job->timestamp();
-
-        showPopup();
         addSuggestions(m_oldSuggestions);
+        showPopup();
+
+        m_lastRefreshTimestamp = job->timestamp();
 
         if (!s_view->currentIndex().isValid() && s_model->index(0, 0).data(LocationCompleterModel::VisitSearchItemRole).toBool()) {
             m_ignoreCurrentChanged = true;
@@ -129,9 +149,6 @@ void LocationCompleter::refreshJobFinished()
         if (qzSettings->useInlineCompletion) {
             emit showDomainCompletion(job->domainCompletion());
         }
-
-        m_originalText = m_locationBar->text();
-        s_view->setOriginalText(m_originalText);
     }
 
     job->deleteLater();
