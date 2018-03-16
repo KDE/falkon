@@ -31,7 +31,6 @@ public:
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
 
     void setForceVisitItem(bool enable);
-    void setOriginalText(const QString &originalText);
 
 private:
     int viewItemDrawText(QPainter *p, const QStyleOptionViewItem *option, const QRect &rect,
@@ -41,7 +40,6 @@ private:
     mutable int m_rowHeight;
     mutable int m_padding;
     bool m_forceVisitItem = false;
-    QString m_originalText;
 };
 
 #endif // LOCATIONCOMPLETERDELEGATE_H

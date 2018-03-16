@@ -79,7 +79,6 @@ private:
     BrowserWindow* m_window;
     LocationBar* m_locationBar;
     qint64 m_lastRefreshTimestamp;
-    QString m_originalText;
     bool m_popupClosed;
     bool m_ignoreCurrentChanged = false;
     OpenSearchEngine* m_openSearchEngine = nullptr;

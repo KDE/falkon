@@ -99,25 +99,29 @@ void LocationCompleter::complete(const QString &string)
         m_oldSuggestions.clear();
     }
 
-    // Add search/visit item
-    if (!trimmedStr.isEmpty()) {
-        QStandardItem *item = new QStandardItem();
-        item->setText(trimmedStr);
-        item->setData(trimmedStr, LocationCompleterModel::UrlRole);
-        item->setData(trimmedStr, LocationCompleterModel::SearchStringRole);
-        item->setData(true, LocationCompleterModel::VisitSearchItemRole);
-        s_model->setCompletions({item});
-        addSuggestions(m_oldSuggestions);
+    // Add/update search/visit item
+    QTimer::singleShot(0, this, [=]() {
+        const QModelIndex index = s_model->index(0, 0);
+        if (index.data(LocationCompleterModel::VisitSearchItemRole).toBool()) {
+            s_model->setData(index, trimmedStr, Qt::DisplayRole);
+            s_model->setData(index, trimmedStr, LocationCompleterModel::UrlRole);
+            s_model->setData(index, m_locationBar->text(), LocationCompleterModel::SearchStringRole);
+        } else {
+            QStandardItem *item = new QStandardItem();
+            item->setText(trimmedStr);
+            item->setData(trimmedStr, LocationCompleterModel::UrlRole);
+            item->setData(m_locationBar->text(), LocationCompleterModel::SearchStringRole);
+            item->setData(true, LocationCompleterModel::VisitSearchItemRole);
+            s_model->setCompletions({item});
+            addSuggestions(m_oldSuggestions);
+        }
         showPopup();
         if (!s_view->currentIndex().isValid()) {
             m_ignoreCurrentChanged = true;
             s_view->setCurrentIndex(s_model->index(0, 0));
             m_ignoreCurrentChanged = false;
         }
-    }
-
-    m_originalText = m_locationBar->text();
-    s_view->setOriginalText(m_originalText);
+    });
 }
 
 void LocationCompleter::showMostVisited()
@@ -149,6 +153,8 @@ void LocationCompleter::refreshJobFinished()
         if (qzSettings->useInlineCompletion) {
             emit showDomainCompletion(job->domainCompletion());
         }
+
+        s_model->setData(s_model->index(0, 0), m_locationBar->text(), LocationCompleterModel::SearchStringRole);
     }
 
     job->deleteLater();
@@ -211,14 +217,16 @@ void LocationCompleter::currentChanged(const QModelIndex &index)
 
     bool completeDomain = index.data(LocationCompleterModel::VisitSearchItemRole).toBool();
 
+    const QString originalText = s_model->index(0, 0).data(LocationCompleterModel::SearchStringRole).toString();
+
     // Domain completion was dismissed
-    if (completeDomain && completion == m_originalText) {
+    if (completeDomain && completion == originalText) {
         completeDomain = false;
     }
 
     if (completion.isEmpty()) {
         completeDomain = true;
-        completion = m_originalText;
+        completion = originalText;
     }
 
     emit showCompletion(completion, completeDomain);
@@ -272,7 +280,7 @@ void LocationCompleter::indexShiftActivated(const QModelIndex &index)
 
     // Load request
     if (index.data(LocationCompleterModel::VisitSearchItemRole).toBool()) {
-        loadRequest(LoadRequest(QUrl(m_originalText)));
+        loadRequest(LoadRequest(index.data(LocationCompleterModel::SearchStringRole).toUrl()));
     } else {
         loadRequest(createLoadRequest(index));
     }
@@ -314,7 +322,7 @@ LoadRequest LocationCompleter::createLoadRequest(const QModelIndex &index)
         const QString text = index.data(LocationCompleterModel::TitleRole).toString();
         request = mApp->searchEnginesManager()->searchResult(LocationBar::searchEngine(), text);
     } else if (index.data(LocationCompleterModel::VisitSearchItemRole).toBool()) {
-        const auto action = LocationBar::loadAction(m_originalText);
+        const auto action = LocationBar::loadAction(index.data(LocationCompleterModel::SearchStringRole).toString());
         switch (action.type) {
         case LocationBar::LoadAction::Url:
         case LocationBar::LoadAction::Search:
@@ -413,11 +421,6 @@ void LocationCompleter::showPopup()
 
 void LocationCompleter::adjustPopupSize()
 {
-    if (s_view->currentIndex().row() == 0) {
-        m_originalText = m_locationBar->text();
-        s_view->setOriginalText(m_originalText);
-    }
-
     s_view->adjustSize();
     s_view->show();
 }
