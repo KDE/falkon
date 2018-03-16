@@ -42,8 +42,6 @@ public:
     QModelIndex currentIndex() const;
     void setCurrentIndex(const QModelIndex &index);
 
-    void setOriginalText(const QString &originalText);
-
     void adjustSize();
 
     bool eventFilter(QObject* object, QEvent* event);
@@ -68,7 +66,6 @@ private:
     QListView *m_view;
     LocationCompleterDelegate *m_delegate;
     QHBoxLayout *m_searchEnginesLayout;
-    QString m_originalText;
     int m_resizeHeight = -1;
     QTimer *m_resizeTimer = nullptr;
     bool m_forceResize = true;

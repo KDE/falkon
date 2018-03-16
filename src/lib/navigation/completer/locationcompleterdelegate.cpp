@@ -84,7 +84,7 @@ void LocationCompleterDelegate::paint(QPainter* painter, const QStyleOptionViewI
     BookmarkItem *bookmark = static_cast<BookmarkItem*>(index.data(LocationCompleterModel::BookmarkItemRole).value<void*>());
 
     if (isVisitSearchItem) {
-        loadAction = LocationBar::loadAction(m_originalText);
+        loadAction = LocationBar::loadAction(index.data(LocationCompleterModel::SearchStringRole).toString());
         isWebSearch = loadAction.type == LocationBar::LoadAction::Search;
         if (!m_forceVisitItem) {
             bookmark = loadAction.bookmark;
@@ -132,7 +132,7 @@ void LocationCompleterDelegate::paint(QPainter* painter, const QStyleOptionViewI
         if (bookmark) {
             title = bookmark->title();
         } else {
-            title = m_originalText.trimmed();
+            title = index.data(LocationCompleterModel::SearchStringRole).toString();
             searchText.clear();
         }
     }
@@ -230,11 +230,6 @@ QSize LocationCompleterDelegate::sizeHint(const QStyleOptionViewItem &option, co
 void LocationCompleterDelegate::setForceVisitItem(bool enable)
 {
     m_forceVisitItem = enable;
-}
-
-void LocationCompleterDelegate::setOriginalText(const QString &originalText)
-{
-    m_originalText = originalText;
 }
 
 static bool sizeBiggerThan(const QString &s1, const QString &s2)

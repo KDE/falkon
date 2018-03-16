@@ -114,12 +114,6 @@ QItemSelectionModel *LocationCompleterView::selectionModel() const
     return m_view->selectionModel();
 }
 
-void LocationCompleterView::setOriginalText(const QString &originalText)
-{
-    m_originalText = originalText;
-    m_delegate->setOriginalText(originalText);
-}
-
 void LocationCompleterView::adjustSize()
 {
     const int maxItemsCount = 12;
@@ -395,7 +389,8 @@ void LocationCompleterView::setupSearchEngines()
         button->setAutoRaise(true);
         button->setIconSize(QSize(16, 16));
         connect(button, &ToolButton::clicked, this, [=]() {
-            emit loadRequested(mApp->searchEnginesManager()->searchResult(engine, m_originalText));
+            const QString text = model()->index(0, 0).data(LocationCompleterModel::SearchStringRole).toString();
+            emit loadRequested(mApp->searchEnginesManager()->searchResult(engine, text));
         });
         m_searchEnginesLayout->addWidget(button);
     }
