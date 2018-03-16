@@ -14,8 +14,8 @@ if (GNOME_KEYRING_FOUND)
     add_subdirectory(GnomeKeyringPasswords)
 endif()
 
-if (KF5Wallet_FOUND)
-    add_subdirectory(KWalletPasswords)
+if (KF5Wallet_FOUND AND KF5KIO_FOUND)
+    add_subdirectory(KDESupport)
 endif()
 
 if (ENABLE_PYTHON_PLUGINS)

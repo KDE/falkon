@@ -24,6 +24,12 @@
 #include "autofill.h"
 #include "passwordmanager.h"
 #include "desktopfile.h"
+#include "kioschemehandler.h"
+#include "webpage.h"
+
+#include <KProtocolInfo>
+
+#include <QWebEngineProfile>
 
 KDESupportPlugin::KDESupportPlugin()
     : QObject()
@@ -43,12 +49,30 @@ void KDESupportPlugin::init(InitState state, const QString &settingsPath)
 
     m_backend = new KWalletPasswordBackend;
     mApp->autoFill()->passwordManager()->registerBackend(QSL("KWallet"), m_backend);
+
+    const auto protocols = KProtocolInfo::protocols();
+    for (const QString &protocol : protocols) {
+        if (WebPage::internalSchemes().contains(protocol)) {
+            continue;
+        }
+        KIOSchemeHandler *handler = new KIOSchemeHandler(protocol, this);
+        m_kioSchemeHandlers.append(handler);
+        mApp->webProfile()->installUrlSchemeHandler(protocol.toUtf8(), handler);
+        WebPage::addSupportedScheme(protocol);
+    }
 }
 
 void KDESupportPlugin::unload()
 {
     mApp->autoFill()->passwordManager()->unregisterBackend(m_backend);
     delete m_backend;
+
+    for (KIOSchemeHandler *handler : qAsConst(m_kioSchemeHandlers)) {
+        mApp->webProfile()->removeUrlSchemeHandler(handler);
+        WebPage::removeSupportedScheme(handler->protocol());
+        delete handler;
+    }
+    m_kioSchemeHandlers.clear();
 }
 
 bool KDESupportPlugin::testPlugin()

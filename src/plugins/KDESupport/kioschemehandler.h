@@ -1,6 +1,6 @@
 /* ============================================================
 * KDESupport - KDE support plugin for Falkon
-* Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -15,31 +15,19 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef KDESUPPORTPLUGIN_H
-#define KDESUPPORTPLUGIN_H
+#pragma once
 
-#include "plugininterface.h"
+#include <QWebEngineUrlSchemeHandler>
 
-class KWalletPasswordBackend;
-class KIOSchemeHandler;
-
-class KDESupportPlugin : public QObject, public PluginInterface
+class KIOSchemeHandler : public QWebEngineUrlSchemeHandler
 {
-    Q_OBJECT
-    Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.KDESupport")
-
 public:
-    explicit KDESupportPlugin();
+    explicit KIOSchemeHandler(const QString &protocol, QObject *parent = nullptr);
 
-    DesktopFile metaData() const override;
-    void init(InitState state, const QString &settingsPath) override;
-    void unload() override;
-    bool testPlugin() override;
+    QString protocol() const;
+
+    void requestStarted(QWebEngineUrlRequestJob *job) override;
 
 private:
-    KWalletPasswordBackend* m_backend;
-    QVector<KIOSchemeHandler*> m_kioSchemeHandlers;
+    QString m_protocol;
 };
-
-#endif // KDESUPPORTPLUGIN_H
