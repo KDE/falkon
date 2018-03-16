@@ -60,6 +60,7 @@
 QString WebPage::s_lastUploadLocation = QDir::homePath();
 QUrl WebPage::s_lastUnsupportedUrl;
 QTime WebPage::s_lastUnsupportedUrlTime;
+QStringList s_supportedSchemes;
 
 static const bool kEnableJsOutput = qEnvironmentVariableIsSet("FALKON_ENABLE_JS_OUTPUT");
 static const bool kEnableJsNonBlockDialogs = qEnvironmentVariableIsSet("FALKON_ENABLE_JS_NONBLOCK_DIALOGS");
@@ -196,6 +197,45 @@ bool WebPage::isRunningLoop()
 bool WebPage::isLoading() const
 {
     return m_loadProgress < 100;
+}
+
+// static
+QStringList WebPage::internalSchemes()
+{
+    return QStringList{
+        QSL("http"),
+        QSL("https"),
+        QSL("file"),
+        QSL("ftp"),
+        QSL("data"),
+        QSL("about"),
+        QSL("view-source"),
+        QSL("chrome")
+    };
+}
+
+// static
+QStringList WebPage::supportedSchemes()
+{
+    if (s_supportedSchemes.isEmpty()) {
+        s_supportedSchemes = internalSchemes();
+    }
+    return s_supportedSchemes;
+}
+
+// static
+void WebPage::addSupportedScheme(const QString &scheme)
+{
+    s_supportedSchemes = supportedSchemes();
+    if (!s_supportedSchemes.contains(scheme)) {
+        s_supportedSchemes.append(scheme);
+    }
+}
+
+// static
+void WebPage::removeSupportedScheme(const QString &scheme)
+{
+    s_supportedSchemes.removeOne(scheme);
 }
 
 void WebPage::urlChanged(const QUrl &url)

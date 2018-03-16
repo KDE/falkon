@@ -67,6 +67,11 @@ public:
 
     bool isLoading() const;
 
+    static QStringList internalSchemes();
+    static QStringList supportedSchemes();
+    static void addSupportedScheme(const QString &scheme);
+    static void removeSupportedScheme(const QString &scheme);
+
 Q_SIGNALS:
     void privacyChanged(bool status);
     void printRequested();

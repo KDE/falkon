@@ -27,6 +27,7 @@
 #include "networkurlinterceptor.h"
 #include "schemehandlers/falkonschemehandler.h"
 #include "schemehandlers/extensionschemehandler.h"
+#include "webpage.h"
 
 #include <QLabel>
 #include <QDialog>
@@ -44,9 +45,11 @@ NetworkManager::NetworkManager(QObject *parent)
     : QNetworkAccessManager(parent)
 {
     // Create scheme handlers
-    mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("falkon"), new FalkonSchemeHandler());
     m_extensionScheme = new ExtensionSchemeManager();
+    mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("falkon"), new FalkonSchemeHandler());
     mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("extension"), m_extensionScheme);
+    WebPage::addSupportedScheme(QSL("falkon"));
+    WebPage::addSupportedScheme(QSL("extension"));
 
     // Create url interceptor
     m_urlInterceptor = new NetworkUrlInterceptor(this);
