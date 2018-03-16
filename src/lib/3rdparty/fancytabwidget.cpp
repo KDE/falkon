@@ -416,7 +416,7 @@ void FancyTabBar::paintTab(QPainter* painter, int tabIndex) const
         painter->drawLine(rect.bottomLeft() + QPoint(0, -1), rect.bottomRight() - QPoint(0, 1));
     }
 
-    QString tabText(painter->fontMetrics().elidedText(this->tabText(tabIndex), Qt::ElideMiddle, width()));
+    // QString tabText(painter->fontMetrics().elidedText(this->tabText(tabIndex), Qt::ElideMiddle, width()));
     QRect tabTextRect(tabRect(tabIndex));
     QRect tabIconRect(tabTextRect);
     tabIconRect.adjust(+4, +4, -4, -4);
@@ -426,8 +426,8 @@ void FancyTabBar::paintTab(QPainter* painter, int tabIndex) const
     boldFont.setBold(true);
     painter->setFont(boldFont);
     painter->setPen(selected ? QColor(255, 255, 255, 160) : QColor(0, 0, 0, 110));
-    int textFlags = Qt::AlignCenter | Qt::AlignBottom;
-    painter->drawText(tabTextRect, textFlags, tabText);
+    // int textFlags = Qt::AlignCenter | Qt::AlignBottom;
+    // painter->drawText(tabTextRect, textFlags, tabText);
     painter->setPen(selected ? QColor(60, 60, 60) : Utils::StyleHelper::panelTextColor());
 #ifndef Q_OS_MACOS
     if (!selected) {
@@ -447,12 +447,12 @@ void FancyTabBar::paintTab(QPainter* painter, int tabIndex) const
     }
 #endif
 
-    const int textHeight = painter->fontMetrics().height();
-    tabIconRect.adjust(0, 4, 0, -textHeight);
+    // const int textHeight = painter->fontMetrics().height();
+    tabIconRect.adjust(0, 6, 0, -6);
     Utils::StyleHelper::drawIconWithShadow(tabIcon(tabIndex), tabIconRect, painter, selected ? QIcon::Selected : QIcon::Normal);
 
     painter->translate(0, -1);
-    painter->drawText(tabTextRect, textFlags, tabText);
+    // painter->drawText(tabTextRect, textFlags, tabText);
     painter->restore();
 }
 

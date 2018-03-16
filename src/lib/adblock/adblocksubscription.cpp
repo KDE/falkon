@@ -116,6 +116,7 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
         return;
     }
 
+    qDeleteAll(m_rules);
     m_rules.clear();
 
     while (!textStream.atEnd()) {
