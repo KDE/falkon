@@ -99,9 +99,9 @@ RestoreData RestoreManager::restoreData() const
 
 void RestoreManager::clearRestoreData()
 {
+    QByteArray crashedSession = m_data.crashedSession;
     m_data.clear();
-
-    QDataStream stream(&m_data.crashedSession, QIODevice::ReadOnly);
+    QDataStream stream(&crashedSession, QIODevice::ReadOnly);
     stream >> m_data;
 }
 
