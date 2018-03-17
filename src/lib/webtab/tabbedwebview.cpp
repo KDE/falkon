@@ -46,7 +46,6 @@ TabbedWebView::TabbedWebView(WebTab* webTab)
     connect(this, SIGNAL(loadStarted()), this, SLOT(slotLoadStarted()));
     connect(this, SIGNAL(loadProgress(int)), this, SLOT(slotLoadProgress(int)));
     connect(this, SIGNAL(loadFinished(bool)), this, SLOT(slotLoadFinished()));
-    connect(this, SIGNAL(urlChanged(QUrl)), this, SLOT(urlChanged(QUrl)));
 }
 
 void TabbedWebView::setPage(WebPage* page)
@@ -82,15 +81,6 @@ WebTab* TabbedWebView::webTab() const
 QString TabbedWebView::getIp() const
 {
     return m_currentIp;
-}
-
-void TabbedWebView::urlChanged(const QUrl &url)
-{
-    Q_UNUSED(url)
-
-    if (m_webTab->isCurrentTab() && m_window) {
-        m_window->navigationBar()->refreshHistory();
-    }
 }
 
 void TabbedWebView::slotLoadProgress(int prog)

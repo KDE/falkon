@@ -67,7 +67,6 @@ private Q_SLOTS:
     void slotLoadStarted();
     void slotLoadFinished();
     void slotLoadProgress(int prog);
-    void urlChanged(const QUrl &url);
     void linkHovered(const QString &link);
     void setIp(const QHostInfo &info);
 

@@ -93,7 +93,6 @@ TabWidget::TabWidget(BrowserWindow *window, QWidget *parent)
     m_tabBar = new TabBar(m_window, this);
     setTabBar(m_tabBar);
 
-    connect(this, SIGNAL(currentChanged(int)), m_window, SLOT(refreshHistory()));
     connect(this, &TabWidget::changed, mApp, &MainApplication::changeOccurred);
     connect(this, &TabStackedWidget::pinStateChanged, this, &TabWidget::changed);
 
