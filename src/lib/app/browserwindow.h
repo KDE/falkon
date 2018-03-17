@@ -170,7 +170,6 @@ private Q_SLOTS:
     void loadSettings();
     void postLaunch();
 
-    void refreshHistory();
     void webSearch();
     void searchOnPage();
     void changeEncoding();

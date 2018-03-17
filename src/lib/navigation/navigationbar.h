@@ -73,8 +73,6 @@ public:
     void removeToolButton(AbstractButtonInterface *button);
 
 public Q_SLOTS:
-    void refreshHistory();
-
     void stop();
     void reload();
     void goBack();
@@ -114,6 +112,8 @@ private:
     Menu *m_menuTools;
     ToolButton* m_supMenu;
     ToolButton *m_exitFullscreen;
+    QMetaObject::Connection m_backConnection;
+    QMetaObject::Connection m_forwardConnection;
 
     struct WidgetData {
         QString id;

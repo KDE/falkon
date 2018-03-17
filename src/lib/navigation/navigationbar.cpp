@@ -225,6 +225,24 @@ void NavigationBar::setCurrentView(TabbedWebView *view)
             data.button->setWebView(view);
         }
     }
+
+    if (!view) {
+        return;
+    }
+
+    auto updateButton = [](ToolButton *button, QAction *action) {
+        button->setEnabled(action->isEnabled());
+    };
+    auto updateBackButton = std::bind(updateButton, m_buttonBack, view->pageAction(QWebEnginePage::Back));
+    auto updateForwardButton = std::bind(updateButton, m_buttonForward, view->pageAction(QWebEnginePage::Forward));
+
+    updateBackButton();
+    updateForwardButton();
+
+    disconnect(m_backConnection);
+    disconnect(m_forwardConnection);
+    m_backConnection = connect(view->pageAction(QWebEnginePage::Back), &QAction::changed, this, updateBackButton);
+    m_forwardConnection = connect(view->pageAction(QWebEnginePage::Forward), &QAction::changed, this, updateForwardButton);
 }
 
 void NavigationBar::showReloadButton()
@@ -431,7 +449,6 @@ void NavigationBar::clearHistory()
 {
     QWebEngineHistory* history = m_window->weView()->page()->history();
     history->clear();
-    refreshHistory();
 }
 
 void NavigationBar::contextMenuRequested(const QPoint &pos)
@@ -599,17 +616,6 @@ void NavigationBar::loadHistoryIndexInNewTab(int index)
     loadHistoryItemInNewTab(history->itemAt(index));
 }
 
-void NavigationBar::refreshHistory()
-{
-    if (mApp->isClosing() || !m_window->weView()) {
-        return;
-    }
-
-    QWebEngineHistory* history = m_window->weView()->page()->history();
-    m_buttonBack->setEnabled(history->canGoBack());
-    m_buttonForward->setEnabled(history->canGoForward());
-}
-
 void NavigationBar::stop()
 {
     m_window->action(QSL("View/Stop"))->trigger();
@@ -657,8 +663,6 @@ void NavigationBar::goForwardInNewTab()
 void NavigationBar::loadHistoryItem(const QWebEngineHistoryItem &item)
 {
     m_window->weView()->page()->history()->goToItem(item);
-
-    refreshHistory();
 }
 
 void NavigationBar::loadHistoryItemInNewTab(const QWebEngineHistoryItem &item)

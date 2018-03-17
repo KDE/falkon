@@ -967,11 +967,6 @@ void BrowserWindow::toggleWebInspector()
     }
 }
 
-void BrowserWindow::refreshHistory()
-{
-    m_navigationToolbar->refreshHistory();
-}
-
 void BrowserWindow::currentTabChanged()
 {
     TabbedWebView* view = weView();
