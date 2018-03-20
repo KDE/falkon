@@ -22,6 +22,7 @@
 #include "tabmodel.h"
 #include "webtab.h"
 #include "tabcontextmenu.h"
+#include "browserwindow.h"
 
 #include <QTimer>
 #include <QToolTip>
@@ -200,8 +201,12 @@ bool TabTreeView::viewportEvent(QEvent *event)
         const QModelIndex index = indexAt(me->pos());
         updateIndex(index);
         WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
-        if (me->buttons() == Qt::MiddleButton && tab) {
-            tab->closeTab();
+        if (me->buttons() == Qt::MiddleButton) {
+            if (tab) {
+                tab->closeTab();
+            } else {
+                m_window->addTab();
+            }
         }
         if (me->buttons() != Qt::LeftButton) {
             m_pressedIndex = QModelIndex();
@@ -265,6 +270,15 @@ bool TabTreeView::viewportEvent(QEvent *event)
         if (m_pressedButton == CloseButton) {
             me->accept();
             return true;
+        }
+        break;
+    }
+
+    case QEvent::MouseButtonDblClick: {
+        QMouseEvent *me = static_cast<QMouseEvent*>(event);
+        const QModelIndex index = indexAt(me->pos());
+        if (me->button() == Qt::LeftButton && !index.isValid()) {
+            m_window->addTab();
         }
         break;
     }

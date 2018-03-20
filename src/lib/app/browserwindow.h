@@ -130,6 +130,8 @@ Q_SIGNALS:
     void aboutToClose();
 
 public Q_SLOTS:
+    void addTab();
+
     void goHome();
     void goHomeInNewTab();
     void goBack();
@@ -162,7 +164,6 @@ public Q_SLOTS:
     void showSource(WebView *view = Q_NULLPTR);
 
 private Q_SLOTS:
-    void addTab();
     void openLocation();
     void openFile();
     void closeWindow();
