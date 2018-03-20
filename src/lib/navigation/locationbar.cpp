@@ -630,7 +630,6 @@ void LocationBar::loadStarted()
     m_progressVisible = true;
     m_progressTimer->stop();
     m_autofillIcon->hide();
-    m_siteIcon->setIcon(IconProvider::emptyWebIcon());
 }
 
 void LocationBar::loadProgress(int progress)
