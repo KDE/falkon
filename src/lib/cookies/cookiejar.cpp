@@ -121,7 +121,7 @@ void CookieJar::slotCookieRemoved(const QNetworkCookie &cookie)
 }
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 11, 0)
-void CookieJar::cookieFilter(QWebEngineCookieStore::FilterRequest &request) const
+bool CookieJar::cookieFilter(const QWebEngineCookieStore::FilterRequest &request) const
 {
     if (!m_allowCookies) {
         bool result = listMatchesDomain(m_whitelist, request.origin.host());
@@ -129,8 +129,7 @@ void CookieJar::cookieFilter(QWebEngineCookieStore::FilterRequest &request) cons
 #ifdef COOKIE_DEBUG
             qDebug() << "not in whitelist" << request.origin;
 #endif
-            request.accepted = false;
-            return;
+            return false;
         }
     }
 
@@ -140,8 +139,7 @@ void CookieJar::cookieFilter(QWebEngineCookieStore::FilterRequest &request) cons
 #ifdef COOKIE_DEBUG
             qDebug() << "found in blacklist" << request.origin.host();
 #endif
-            request.accepted = false;
-            return;
+            return false;
         }
     }
 
@@ -149,9 +147,10 @@ void CookieJar::cookieFilter(QWebEngineCookieStore::FilterRequest &request) cons
 #ifdef COOKIE_DEBUG
         qDebug() << "thirdParty" << request.firstPartyUrl << request.origin;
 #endif
-        request.accepted = false;
-        return;
+        return false;
     }
+
+    return true;
 }
 #endif
 
