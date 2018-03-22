@@ -45,9 +45,6 @@ BookmarksToolbar::BookmarksToolbar(BrowserWindow* window, QWidget* parent)
     m_layout->setSpacing(style()->pixelMetric(QStyle::PM_ToolBarItemSpacing, 0, this));
     setLayout(m_layout);
 
-    // Set some sane value
-    setMinimumHeight(20);
-
     m_updateTimer = new QTimer(this);
     m_updateTimer->setInterval(300);
     m_updateTimer->setSingleShot(true);
@@ -213,16 +210,18 @@ void BookmarksToolbar::addItem(BookmarkItem* item)
     button->setShowOnlyIcon(m_bookmarks->showOnlyIconsInToolbar());
     button->setShowOnlyText(m_bookmarks->showOnlyTextInToolbar());
     m_layout->addWidget(button);
-
-    if (!m_fixedMinHeight) {
-        m_fixedMinHeight = true;
-        setMinimumHeight(minimumSizeHint().height());
-    }
 }
 
 BookmarksToolbarButton* BookmarksToolbar::buttonAt(const QPoint &pos)
 {
     return qobject_cast<BookmarksToolbarButton*>(QApplication::widgetAt(mapToGlobal(pos)));
+}
+
+QSize BookmarksToolbar::minimumSizeHint() const
+{
+    QSize size = QWidget::minimumSizeHint();
+    size.setHeight(qMax(20, size.height()));
+    return size;
 }
 
 void BookmarksToolbar::dropEvent(QDropEvent* e)

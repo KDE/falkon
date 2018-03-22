@@ -55,6 +55,8 @@ private:
     void addItem(BookmarkItem* item);
     BookmarksToolbarButton* buttonAt(const QPoint &pos);
 
+    QSize minimumSizeHint() const override;
+
     void dropEvent(QDropEvent* e);
     void dragEnterEvent(QDragEnterEvent* e);
 
@@ -65,8 +67,6 @@ private:
     QTimer* m_updateTimer;
     QAction* m_actShowOnlyIcons = nullptr;
     QAction* m_actShowOnlyText = nullptr;
-
-    bool m_fixedMinHeight = false;
 };
 
 #endif // BOOKMARKSTOOLBAR_H
