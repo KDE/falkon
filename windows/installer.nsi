@@ -11,7 +11,7 @@
 ; http://nsis.sourceforge.net/Registry_plug-in
 
 !ifndef CUSTOM
-  !define VERSION 2.1.2
+  !define VERSION 3.0.0
   !define ARCH x86
   !define MSVC_VER 140
   !define OPENSSL_BIN_DIR .
@@ -104,7 +104,7 @@ SetCompressor /SOLID /FINAL lzma
 !insertmacro MUI_RESERVEFILE_LANGDLL
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "${PRODUCT_NAME} ${PRODUCT_VERSION} Installer.exe"
+OutFile "${PRODUCT_NAME} Installer ${PRODUCT_VERSION}.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}\"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
