@@ -38,6 +38,8 @@ include_directories(
     webtab
 )
 
+include_directories(${OPENSSL_INCLUDE_DIR})
+
 set(SRCS ${SRCS}
     3rdparty/fancytabwidget.cpp
     3rdparty/lineedit.cpp
@@ -295,13 +297,21 @@ qt5_add_resources(SRCS
 
 add_library(FalkonPrivate SHARED ${SRCS})
 
-target_link_libraries(FalkonPrivate Qt5::Widgets Qt5::WebEngineWidgets Qt5::Network Qt5::Sql Qt5::PrintSupport Qt5::QuickWidgets Qt5::WebChannel)
+target_link_libraries(FalkonPrivate
+    Qt5::Widgets
+    Qt5::WebEngineWidgets
+    Qt5::Network
+    Qt5::Sql
+    Qt5::PrintSupport
+    Qt5::QuickWidgets
+    Qt5::WebChannel
+    ${OPENSSL_LIBRARIES}
+)
 
 if (UNIX AND NOT APPLE)
     if (NOT NO_X11)
         target_link_libraries(FalkonPrivate XCB::XCB Qt5::X11Extras)
     endif()
-    target_link_libraries(FalkonPrivate crypto)
 
     set_target_properties(FalkonPrivate PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION "3")
     install(TARGETS FalkonPrivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
@@ -309,16 +319,10 @@ endif()
 
 if (WIN32)
     target_link_libraries(FalkonPrivate Qt5::WinExtras)
-    target_link_libraries(FalkonPrivate libeay32)
 endif()
 
 if (APPLE)
-    # homebrew openssl
-    execute_process(COMMAND "readlink `brew --prefix openssl` | sed 's/..//'"
-                    OUTPUT_VARIABLE READLINK_OUTPUT)
-    set(BREW_OPENSSL "/usr/local${READLINK_OUTPUT}")
-    include_directories(${BREW_OPENSSL}/include)
-    target_link_libraries(FalkonPrivate ${BREW_OPENSSL}/lib/libcrypto.so "-framework CoreServices -framework AppKit")
+    target_link_libraries(FalkonPrivate "-framework CoreServices -framework AppKit")
 endif()
 
 if (NOT DISABLE_DBUS)
