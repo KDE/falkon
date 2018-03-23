@@ -305,7 +305,7 @@ target_link_libraries(FalkonPrivate
     Qt5::PrintSupport
     Qt5::QuickWidgets
     Qt5::WebChannel
-    ${OPENSSL_LIBRARIES}
+    ${OPENSSL_CRYPTO_LIBRARY}
 )
 
 if (UNIX AND NOT APPLE)
