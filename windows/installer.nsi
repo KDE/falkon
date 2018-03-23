@@ -260,14 +260,15 @@ SectionEnd
     SectionGroup $(TITLE_SecSetASDefault) SecSetASDefault
         Section $(TITLE_SecExtensions) SecExtensions
           SetOutPath "$INSTDIR"
-          ${RegisterAssociation} ".htm" "$INSTDIR\falkon.exe" "Falkon.HTM" $(FILE_Htm) "$INSTDIR\falkon.exe,1" "file"
-          ${RegisterAssociation} ".html" "$INSTDIR\falkon.exe" "Falkon.HTML" $(FILE_Html) "$INSTDIR\falkon.exe,1" "file"
+          ${RegisterAssociation} ".htm" "$INSTDIR\falkon.exe" "FalkonHTML" "Falkon HTML Document" "$INSTDIR\falkon.exe,1" "file"
+          ${RegisterAssociation} ".html" "$INSTDIR\falkon.exe" "FalkonHTML" "Falkon HTML Document" "$INSTDIR\falkon.exe,1" "file"
           ${UpdateSystemIcons}
         SectionEnd
 
         Section $(TITLE_SecProtocols) SecProtocols
-          ${RegisterAssociation} "http" "$INSTDIR\falkon.exe" "Falkon.HTTP" "URL:HyperText Transfer Protocol" "$INSTDIR\falkon.exe,0" "protocol"
-          ${RegisterAssociation} "https" "$INSTDIR\falkon.exe" "Falkon.HTTPS" "URL:HyperText Transfer Protocol with Privacy" "$INSTDIR\falkon.exe,0" "protocol"
+          ${RegisterAssociation} "http" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
+          ${RegisterAssociation} "https" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
+          ${RegisterAssociation} "ftp" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
           ${UpdateSystemIcons}
         SectionEnd
     SectionGroupEnd
@@ -323,10 +324,11 @@ SectionEnd
       DeleteRegKey HKLM "Software\${PRODUCT_NAME}"
       DeleteRegValue HKLM "SOFTWARE\RegisteredApplications" "${PRODUCT_NAME}"
 
-      ${UnRegisterAssociation} ".htm" "Falkon.HTM" "$INSTDIR\falkon.exe" "file"
-      ${UnRegisterAssociation} ".html" "Falkon.HTML" "$INSTDIR\falkon.exe" "file"
-      ${UnRegisterAssociation} "http" "Falkon.HTTP" "$INSTDIR\falkon.exe" "protocol"
-      ${UnRegisterAssociation} "https" "Falkon.HTTPS" "$INSTDIR\falkon.exe" "protocol"
+      ${UnRegisterAssociation} ".htm" "FalkonHTML" "$INSTDIR\falkon.exe" "file"
+      ${UnRegisterAssociation} ".html" "FalkonHTML" "$INSTDIR\falkon.exe" "file"
+      ${UnRegisterAssociation} "http" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
+      ${UnRegisterAssociation} "https" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
+      ${UnRegisterAssociation} "ftp" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
       ${UpdateSystemIcons}
     SectionEnd
 !endif
@@ -433,19 +435,18 @@ Function RegisterCapabilities
             ; even if we don't associate Falkon as default for ".htm" and ".html"
             ; we need to write these ProgIds for future use!
             ;(e.g.: user uses "Default Programs" on Win7 or Vista to set Falkon as default.)
-            ${CreateProgId} "Falkon.HTM" "$INSTDIR\falkon.exe" $(FILE_Htm) "$INSTDIR\falkon.exe,1"
-            ${CreateProgId} "Falkon.HTML" "$INSTDIR\falkon.exe" $(FILE_Html) "$INSTDIR\falkon.exe,1"
-            ${CreateProgId} "Falkon.HTTP" "$INSTDIR\falkon.exe" "URL:HyperText Transfer Protocol" "$INSTDIR\falkon.exe,0"
-            ${CreateProgId} "Falkon.HTTPS" "$INSTDIR\falkon.exe" "URL:HyperText Transfer Protocol with Privacy" "$INSTDIR\falkon.exe,0"
+            ${CreateProgId} "FalkonHTML" "$INSTDIR\falkon.exe" "Falkon HTML Document" "$INSTDIR\falkon.exe,1"
+            ${CreateProgId} "FalkonURL" "$INSTDIR\falkon.exe" "Falkon URL" "$INSTDIR\falkon.exe,0"
 
             ; note: these lines just introduce capabilities of Falkon to OS and don't change defaults!
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationDescription" "$(PRODUCT_DESC)"
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationIcon" "$INSTDIR\falkon.exe,0"
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationName" "${PRODUCT_NAME}"
-            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".htm" "Falkon.HTM"
-            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".html" "Falkon.HTML"
-            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "http" "Falkon.HTTP"
-            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "https" "Falkon.HTTPS"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".htm" "FalkonHTML"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".html" "FalkonHTML"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "http" "FalkonURL"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "https" "FalkonURL"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "ftp" "FalkonURL"
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\Startmenu" "StartMenuInternet" "$INSTDIR\falkon.exe"
             WriteRegStr HKLM "SOFTWARE\RegisteredApplications" "${PRODUCT_NAME}" "${PRODUCT_CAPABILITIES_KEY}"
         ${EndIf}
