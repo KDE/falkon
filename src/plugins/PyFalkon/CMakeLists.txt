@@ -179,3 +179,7 @@ target_link_libraries(PyFalkon
 
 # Same as CONFIG += no_keywords to avoid syntax errors in object.h due to the usage of the word Slot
 target_compile_definitions(PyFalkon PRIVATE QT_NO_KEYWORDS)
+
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()

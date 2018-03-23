@@ -35,7 +35,10 @@ Plugins::Plugins(QObject* parent)
     , m_speedDial(new SpeedDial(this))
 {
     loadSettings();
-    loadPythonSupport();
+
+    if (!MainApplication::isTestModeEnabled()) {
+        loadPythonSupport();
+    }
 }
 
 QList<Plugins::Plugin> Plugins::getAvailablePlugins()

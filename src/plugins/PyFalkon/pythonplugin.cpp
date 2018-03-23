@@ -162,3 +162,17 @@ QVector<Plugins::Plugin> pyfalkon_load_available_plugins()
 
     return plugins;
 }
+
+bool pyfalkon_run_script(const QByteArray &script)
+{
+    if (init() != PythonInitialized) {
+        return false;
+    }
+
+    if (PyRun_SimpleString(script.constData()) != 0) {
+        PyErr_Print();
+        return false;
+    }
+
+    return true;
+}
