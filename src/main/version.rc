@@ -1,11 +1,12 @@
 #include "winver.h"
+#include "falkonversion.h"
 
 IDI_ICON1 ICON DISCARDABLE "..\lib\data\icons\exeicons\falkon.ico"
 IDI_ICON2 ICON DISCARDABLE "..\lib\data\icons\exeicons\page.ico"
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,1,2,0
- PRODUCTVERSION 2,1,2,0
+ FILEVERSION FALKON_VERSION_MAJOR,FALKON_VERSION_MINOR,FALKON_VERSION_PATCH,0
+ PRODUCTVERSION FALKON_VERSION_MAJOR,FALKON_VERSION_MINOR,FALKON_VERSION_PATCH,0
  FILEFLAGS 0x0L
  FILEFLAGSMASK 0x3fL
  FILEOS 0x00040004L
@@ -16,14 +17,14 @@ BEGIN
     BEGIN
         BLOCK "000004b0"
         BEGIN
-            VALUE "CompanyName", "Falkon Team"
-            VALUE "FileDescription", "Falkon Web Browser"
-            VALUE "FileVersion", "2.1.2"
-            VALUE "LegalCopyright", "Copyright (C) 2010-2017 David Rosca"
+            VALUE "CompanyName", "KDE"
+            VALUE "FileDescription", "Falkon"
+            VALUE "FileVersion", FALKON_VERSION_STRING
+            VALUE "LegalCopyright", "Copyright (C) 2010-2018 David Rosca"
             VALUE "InternalName", "falkon"
             VALUE "OriginalFilename", "falkon.exe"
             VALUE "ProductName", "Falkon"
-            VALUE "ProductVersion", "2.1.2"
+            VALUE "ProductVersion", FALKON_VERSION_STRING
         END
     END
     BLOCK "VarFileInfo"

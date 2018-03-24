@@ -40,7 +40,7 @@ class FALKON_EXPORT WebTab : public QWidget
 {
     Q_OBJECT
 public:
-    struct SavedTab {
+    struct FALKON_EXPORT SavedTab {
         QString title;
         QUrl url;
         QIcon icon;

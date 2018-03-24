@@ -83,8 +83,13 @@ if (WIN32)
     add_definitions(-D_WIN32_WINNT=${ver})
 endif()
 
-# Mandatory: KF5I18n (only for ki18n_install)
-find_package(KF5I18n REQUIRED)
+# Mandatory: OpenSSL
+find_package(OpenSSL REQUIRED)
+
+# KF5I18n: Mandatory with downloaded translations (only for ki18n_install)
+if (EXISTS "${CMAKE_SOURCE_DIR}/po")
+    find_package(KF5I18n REQUIRED)
+endif()
 
 # Optional: GnomeKeyring
 find_package(PkgConfig)

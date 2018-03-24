@@ -1175,14 +1175,15 @@ void MainApplication::initPulseSupport()
 RegisterQAppAssociation* MainApplication::associationManager()
 {
     if (!m_registerQAppAssociation) {
-        QString desc = tr("Falkon is a new, fast and secure open-source WWW browser. Falkon is licensed under GPL version 3 or (at your option) any later version. It is based on WebKit core and Qt Framework.");
+        QString desc = tr("Falkon is a new, fast and secure open-source WWW browser. Falkon is licensed under GPL version 3 or (at your option) any later version. It is based on QtWebEngine and Qt Framework.");
         QString fileIconPath = QApplication::applicationFilePath() + ",1";
         QString appIconPath = QApplication::applicationFilePath() + ",0";
         m_registerQAppAssociation = new RegisterQAppAssociation("Falkon", QApplication::applicationFilePath(), appIconPath, desc, this);
-        m_registerQAppAssociation->addCapability(".html", "Falkon.HTML", "HTML File", fileIconPath, RegisterQAppAssociation::FileAssociation);
-        m_registerQAppAssociation->addCapability(".htm", "Falkon.HTM", "HTM File", fileIconPath, RegisterQAppAssociation::FileAssociation);
-        m_registerQAppAssociation->addCapability("http", "Falkon.HTTP", "URL:HyperText Transfer Protocol", appIconPath, RegisterQAppAssociation::UrlAssociation);
-        m_registerQAppAssociation->addCapability("https", "Falkon.HTTPS", "URL:HyperText Transfer Protocol with Privacy", appIconPath, RegisterQAppAssociation::UrlAssociation);
+        m_registerQAppAssociation->addCapability(".html", "FalkonHTML", "Falkon HTML Document", fileIconPath, RegisterQAppAssociation::FileAssociation);
+        m_registerQAppAssociation->addCapability(".htm", "FalkonHTML", "Falkon HTML Document", fileIconPath, RegisterQAppAssociation::FileAssociation);
+        m_registerQAppAssociation->addCapability("http", "FalkonURL", "Falkon URL", appIconPath, RegisterQAppAssociation::UrlAssociation);
+        m_registerQAppAssociation->addCapability("https", "FalkonURL", "Falkon URL", appIconPath, RegisterQAppAssociation::UrlAssociation);
+        m_registerQAppAssociation->addCapability("ftp", "FalkonURL", "Falkon URL", appIconPath, RegisterQAppAssociation::UrlAssociation);
     }
     return m_registerQAppAssociation;
 }

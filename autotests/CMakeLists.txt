@@ -31,6 +31,7 @@ falkon_tests(
 )
 
 set(falkon_autotests_SRCS passwordbackendtest.cpp)
+include_directories(${OPENSSL_INCLUDE_DIR})
 falkon_tests(
     databasepasswordbackendtest
     databaseencryptedpasswordbackendtest

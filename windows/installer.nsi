@@ -11,12 +11,13 @@
 ; http://nsis.sourceforge.net/Registry_plug-in
 
 !ifndef CUSTOM
-  !define VERSION 2.1.2
+  !define VERSION 3.0.0
   !define ARCH x86
   !define MSVC_VER 140
   !define OPENSSL_BIN_DIR .
   !define MSVC_REDIST_DIR .
-  !define QZ_BIN_DIR .
+  !define FALKON_SRC_DIR ..\..\
+  !define FALKON_BIN_DIR .
   !define ICU_BIN_DIR .
   !define QT_DIR .
   !define QT_BIN_DIR .
@@ -59,7 +60,7 @@ SetCompressor /SOLID /FINAL lzma
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "wininstall\welcome.bmp"
 
 !insertmacro MUI_PAGE_WELCOME
-!insertmacro MUI_PAGE_LICENSE ${QZ_BIN_DIR}\COPYRIGHT.txt
+!insertmacro MUI_PAGE_LICENSE ${FALKON_BIN_DIR}\COPYRIGHT.txt
 !insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
@@ -104,7 +105,7 @@ SetCompressor /SOLID /FINAL lzma
 !insertmacro MUI_RESERVEFILE_LANGDLL
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "${PRODUCT_NAME} ${PRODUCT_VERSION} Installer.exe"
+OutFile "${PRODUCT_NAME} Installer ${PRODUCT_VERSION}.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}\"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -127,10 +128,10 @@ notRunning:
   SetOverwrite on
 
   SetOutPath "$INSTDIR"
-  File "${QZ_BIN_DIR}\COPYRIGHT.txt"
-  File "${QZ_BIN_DIR}\falkon.exe"
-  File "${QZ_BIN_DIR}\falkon.dll"
-  File "${QZ_BIN_DIR}\qt.conf"
+  File "${FALKON_BIN_DIR}\COPYRIGHT.txt"
+  File "${FALKON_BIN_DIR}\falkon.exe"
+  File "${FALKON_BIN_DIR}\falkonprivate.dll"
+  File "${FALKON_BIN_DIR}\qt.conf"
   File "${OPENSSL_BIN_DIR}\libeay32.dll"
   File "${OPENSSL_BIN_DIR}\ssleay32.dll"
   File "${MSVC_REDIST_DIR}\*"
@@ -183,6 +184,9 @@ notRunning:
   SetOutPath "$INSTDIR\sqldrivers"
   File "${QT_PLUGINS_DIR}\sqldrivers\qsqlite.dll"
 
+  SetOutPath "$INSTDIR\styles"
+  File "${QT_PLUGINS_DIR}\styles\*.dll"
+
   SetOutPath "$INSTDIR\translations\qtwebengine_locales"
   File "${QT_DIR}\translations\qtwebengine_locales\*"
 
@@ -204,38 +208,38 @@ SectionGroup $(TITLE_SecThemes) SecThemes
   Section Default SecDefault
   SectionIn RO
   SetOutPath "$INSTDIR\themes\windows"
-  File "${QZ_BIN_DIR}\themes\windows\*"
+  File "${FALKON_SRC_DIR}\themes\windows\*"
   SetOutPath "$INSTDIR\themes\windows\images"
-  File "${QZ_BIN_DIR}\themes\windows\images\*"
+  File "${FALKON_SRC_DIR}\themes\windows\images\*"
   SectionEnd
 
   Section Chrome SecChrome
   SetOutPath "$INSTDIR\themes\chrome"
-  File "${QZ_BIN_DIR}\themes\chrome\*"
+  File "${FALKON_SRC_DIR}\themes\chrome\*"
   SetOutPath "$INSTDIR\themes\chrome\images"
-  File "${QZ_BIN_DIR}\themes\chrome\images\*"
+  File "${FALKON_SRC_DIR}\themes\chrome\images\*"
   SectionEnd
 
   Section Mac SecMac
   SetOutPath "$INSTDIR\themes\mac"
-  File "${QZ_BIN_DIR}\themes\mac\*"
+  File "${FALKON_SRC_DIR}\themes\mac\*"
   SetOutPath "$INSTDIR\themes\mac\images"
-  File "${QZ_BIN_DIR}\themes\mac\images\*"
+  File "${FALKON_SRC_DIR}\themes\mac\images\*"
   SectionEnd
 SectionGroupEnd
 
 Section $(TITLE_SecTranslations) SecTranslations
-  SetOutPath "$INSTDIR\locale"
-  File "${QZ_BIN_DIR}\locale\*.qm"
-  SetOutPath "$INSTDIR\qtwebengine_dictionaries\doc"
-  File "${QTWEBENGINE_DICTIONARIES_DIR}\doc\*"
-  SetOutPath "$INSTDIR\qtwebengine_dictionaries"
-  File "${QTWEBENGINE_DICTIONARIES_DIR}\*.bdic"
+  #SetOutPath "$INSTDIR\locale"
+  #File "${FALKON_BIN_DIR}\locale\*.qm"
+  #SetOutPath "$INSTDIR\qtwebengine_dictionaries\doc"
+  #File "${QTWEBENGINE_DICTIONARIES_DIR}\doc\*"
+  #SetOutPath "$INSTDIR\qtwebengine_dictionaries"
+  #File "${QTWEBENGINE_DICTIONARIES_DIR}\*.bdic"
 SectionEnd
 
 Section $(TITLE_SecPlugins) SecPlugins
   SetOutPath "$INSTDIR\plugins"
-  File "${QZ_BIN_DIR}\plugins\*.dll"
+  File "${FALKON_BIN_DIR}\plugins\*.dll"
 SectionEnd
 
 
@@ -260,14 +264,15 @@ SectionEnd
     SectionGroup $(TITLE_SecSetASDefault) SecSetASDefault
         Section $(TITLE_SecExtensions) SecExtensions
           SetOutPath "$INSTDIR"
-          ${RegisterAssociation} ".htm" "$INSTDIR\falkon.exe" "Falkon.HTM" $(FILE_Htm) "$INSTDIR\falkon.exe,1" "file"
-          ${RegisterAssociation} ".html" "$INSTDIR\falkon.exe" "Falkon.HTML" $(FILE_Html) "$INSTDIR\falkon.exe,1" "file"
+          ${RegisterAssociation} ".htm" "$INSTDIR\falkon.exe" "FalkonHTML" "Falkon HTML Document" "$INSTDIR\falkon.exe,1" "file"
+          ${RegisterAssociation} ".html" "$INSTDIR\falkon.exe" "FalkonHTML" "Falkon HTML Document" "$INSTDIR\falkon.exe,1" "file"
           ${UpdateSystemIcons}
         SectionEnd
 
         Section $(TITLE_SecProtocols) SecProtocols
-          ${RegisterAssociation} "http" "$INSTDIR\falkon.exe" "Falkon.HTTP" "URL:HyperText Transfer Protocol" "$INSTDIR\falkon.exe,0" "protocol"
-          ${RegisterAssociation} "https" "$INSTDIR\falkon.exe" "Falkon.HTTPS" "URL:HyperText Transfer Protocol with Privacy" "$INSTDIR\falkon.exe,0" "protocol"
+          ${RegisterAssociation} "http" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
+          ${RegisterAssociation} "https" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
+          ${RegisterAssociation} "ftp" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
           ${UpdateSystemIcons}
         SectionEnd
     SectionGroupEnd
@@ -315,18 +320,59 @@ SectionEnd
     notRunning:
       SetShellVarContext all
       Delete "$DESKTOP\Falkon.lnk"
-      RMDir /r "$INSTDIR"
-      RMDir /r "$SMPROGRAMS\Falkon"
+
+      Delete "$INSTDIR\falkon.exe"
+      Delete "$INSTDIR\falkonprivate.dll"
+      Delete "$INSTDIR\uninstall.exe"
+      Delete "$INSTDIR\COPYRIGHT.txt"
+      Delete "$INSTDIR\qt.conf"
+      Delete "$INSTDIR\libeay32.dll"
+      Delete "$INSTDIR\ssleay32.dll"
+      Delete "$INSTDIR\libEGL.dll"
+      Delete "$INSTDIR\libGLESv2.dll"
+      Delete "$INSTDIR\opengl32sw.dll"
+      Delete "$INSTDIR\D3Dcompiler_47.dll"
+      Delete "$INSTDIR\QtWebEngineProcess.exe"
+
+      ; Wildcard delete to compact script of uninstall section
+      Delete "$INSTDIR\icu*.dll"
+      Delete "$INSTDIR\Qt5*.dll"
+      Delete "$INSTDIR\msvc*.dll"
+      Delete "$INSTDIR\vc*.dll"
+      Delete "$INSTDIR\concrt*.dll"
+
+      ; Recursively delete folders in root of $INSTDIR
+      RMDir /r "$INSTDIR\iconengines"
+      RMDir /r "$INSTDIR\imageformats"
+      RMDir /r "$INSTDIR\platforms"
+      RMDir /r "$INSTDIR\printsupport"
+      RMDir /r "$INSTDIR\qml"
+      RMDir /r "$INSTDIR\resources"
+      RMDir /r "$INSTDIR\translations"
+      RMDir /r "$INSTDIR\sqldrivers"
+      RMDir /r "$INSTDIR\styles"
+      RMDir /r "$INSTDIR\qtwebengine_dictionaries"
+      RMDir /r "$INSTDIR\themes"
+      RMDir /r "$INSTDIR\locale"
+      RMDir /r "$INSTDIR\plugins"
+
+      ; Remove $INSTDIR if it is empty
+      RMDir "$INSTDIR"
+
+      ; Remove start menu programs folder
+      RMDir /r "$SMPROGRAMS\${PRODUCT_NAME}"
+
       DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
       DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
 
       DeleteRegKey HKLM "Software\${PRODUCT_NAME}"
       DeleteRegValue HKLM "SOFTWARE\RegisteredApplications" "${PRODUCT_NAME}"
 
-      ${UnRegisterAssociation} ".htm" "Falkon.HTM" "$INSTDIR\falkon.exe" "file"
-      ${UnRegisterAssociation} ".html" "Falkon.HTML" "$INSTDIR\falkon.exe" "file"
-      ${UnRegisterAssociation} "http" "Falkon.HTTP" "$INSTDIR\falkon.exe" "protocol"
-      ${UnRegisterAssociation} "https" "Falkon.HTTPS" "$INSTDIR\falkon.exe" "protocol"
+      ${UnRegisterAssociation} ".htm" "FalkonHTML" "$INSTDIR\falkon.exe" "file"
+      ${UnRegisterAssociation} ".html" "FalkonHTML" "$INSTDIR\falkon.exe" "file"
+      ${UnRegisterAssociation} "http" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
+      ${UnRegisterAssociation} "https" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
+      ${UnRegisterAssociation} "ftp" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
       ${UpdateSystemIcons}
     SectionEnd
 !endif
@@ -433,19 +479,18 @@ Function RegisterCapabilities
             ; even if we don't associate Falkon as default for ".htm" and ".html"
             ; we need to write these ProgIds for future use!
             ;(e.g.: user uses "Default Programs" on Win7 or Vista to set Falkon as default.)
-            ${CreateProgId} "Falkon.HTM" "$INSTDIR\falkon.exe" $(FILE_Htm) "$INSTDIR\falkon.exe,1"
-            ${CreateProgId} "Falkon.HTML" "$INSTDIR\falkon.exe" $(FILE_Html) "$INSTDIR\falkon.exe,1"
-            ${CreateProgId} "Falkon.HTTP" "$INSTDIR\falkon.exe" "URL:HyperText Transfer Protocol" "$INSTDIR\falkon.exe,0"
-            ${CreateProgId} "Falkon.HTTPS" "$INSTDIR\falkon.exe" "URL:HyperText Transfer Protocol with Privacy" "$INSTDIR\falkon.exe,0"
+            ${CreateProgId} "FalkonHTML" "$INSTDIR\falkon.exe" "Falkon HTML Document" "$INSTDIR\falkon.exe,1"
+            ${CreateProgId} "FalkonURL" "$INSTDIR\falkon.exe" "Falkon URL" "$INSTDIR\falkon.exe,0"
 
             ; note: these lines just introduce capabilities of Falkon to OS and don't change defaults!
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationDescription" "$(PRODUCT_DESC)"
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationIcon" "$INSTDIR\falkon.exe,0"
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationName" "${PRODUCT_NAME}"
-            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".htm" "Falkon.HTM"
-            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".html" "Falkon.HTML"
-            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "http" "Falkon.HTTP"
-            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "https" "Falkon.HTTPS"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".htm" "FalkonHTML"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".html" "FalkonHTML"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "http" "FalkonURL"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "https" "FalkonURL"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\URLAssociations" "ftp" "FalkonURL"
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\Startmenu" "StartMenuInternet" "$INSTDIR\falkon.exe"
             WriteRegStr HKLM "SOFTWARE\RegisteredApplications" "${PRODUCT_NAME}" "${PRODUCT_CAPABILITIES_KEY}"
         ${EndIf}
@@ -454,4 +499,15 @@ FunctionEnd
 
 Function RunFalkonAsUser
     ${StdUtils.ExecShellAsUser} $0 "$INSTDIR\falkon.exe" "open" ""
+FunctionEnd
+
+Function un.onInit
+    ReadRegStr $R0 ${PRODUCT_UNINST_ROOT_KEY}  "${PRODUCT_UNINST_KEY}" "InstallLocation"
+    IfErrors +2 0
+        StrCpy $INSTDIR "$R0"
+
+    IfFileExists "$INSTDIR\falkon.exe" found
+        MessageBox MB_OK|MB_ICONSTOP "$(MSG_InvalidInstallPath)"
+        Abort
+    found:
 FunctionEnd
