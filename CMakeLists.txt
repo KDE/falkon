@@ -86,8 +86,10 @@ endif()
 # Mandatory: OpenSSL
 find_package(OpenSSL REQUIRED)
 
-# Mandatory: KF5I18n (only for ki18n_install)
-find_package(KF5I18n REQUIRED)
+# KF5I18n: Mandatory with downloaded translations (only for ki18n_install)
+if (EXISTS "${CMAKE_SOURCE_DIR}/po")
+    find_package(KF5I18n REQUIRED)
+endif()
 
 # Optional: GnomeKeyring
 find_package(PkgConfig)
