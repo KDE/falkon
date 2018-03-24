@@ -184,6 +184,9 @@ notRunning:
   SetOutPath "$INSTDIR\sqldrivers"
   File "${QT_PLUGINS_DIR}\sqldrivers\qsqlite.dll"
 
+  SetOutPath "$INSTDIR\styles"
+  File "${QT_PLUGINS_DIR}\styles\*.dll"
+
   SetOutPath "$INSTDIR\translations\qtwebengine_locales"
   File "${QT_DIR}\translations\qtwebengine_locales\*"
 
@@ -317,8 +320,48 @@ SectionEnd
     notRunning:
       SetShellVarContext all
       Delete "$DESKTOP\Falkon.lnk"
-      RMDir /r "$INSTDIR"
-      RMDir /r "$SMPROGRAMS\Falkon"
+
+      Delete "$INSTDIR\falkon.exe"
+      Delete "$INSTDIR\falkonprivate.dll"
+      Delete "$INSTDIR\uninstall.exe"
+      Delete "$INSTDIR\COPYRIGHT.txt"
+      Delete "$INSTDIR\qt.conf"
+      Delete "$INSTDIR\libeay32.dll"
+      Delete "$INSTDIR\ssleay32.dll"
+      Delete "$INSTDIR\libEGL.dll"
+      Delete "$INSTDIR\libGLESv2.dll"
+      Delete "$INSTDIR\opengl32sw.dll"
+      Delete "$INSTDIR\D3Dcompiler_47.dll"
+      Delete "$INSTDIR\QtWebEngineProcess.exe"
+
+      ; Wildcard delete to compact script of uninstall section
+      Delete "$INSTDIR\icu*.dll"
+      Delete "$INSTDIR\Qt5*.dll"
+      Delete "$INSTDIR\msvc*.dll"
+      Delete "$INSTDIR\vc*.dll"
+      Delete "$INSTDIR\concrt*.dll"
+
+      ; Recursively delete folders in root of $INSTDIR
+      RMDir /r "$INSTDIR\iconengines"
+      RMDir /r "$INSTDIR\imageformats"
+      RMDir /r "$INSTDIR\platforms"
+      RMDir /r "$INSTDIR\printsupport"
+      RMDir /r "$INSTDIR\qml"
+      RMDir /r "$INSTDIR\resources"
+      RMDir /r "$INSTDIR\translations"
+      RMDir /r "$INSTDIR\sqldrivers"
+      RMDir /r "$INSTDIR\styles"
+      RMDir /r "$INSTDIR\qtwebengine_dictionaries"
+      RMDir /r "$INSTDIR\themes"
+      RMDir /r "$INSTDIR\locale"
+      RMDir /r "$INSTDIR\plugins"
+
+      ; Remove $INSTDIR if it is empty
+      RMDir "$INSTDIR"
+
+      ; Remove start menu programs folder
+      RMDir /r "$SMPROGRAMS\${PRODUCT_NAME}"
+
       DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
       DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
 
@@ -456,4 +499,15 @@ FunctionEnd
 
 Function RunFalkonAsUser
     ${StdUtils.ExecShellAsUser} $0 "$INSTDIR\falkon.exe" "open" ""
+FunctionEnd
+
+Function un.onInit
+    ReadRegStr $R0 ${PRODUCT_UNINST_ROOT_KEY}  "${PRODUCT_UNINST_KEY}" "InstallLocation"
+    IfErrors +2 0
+        StrCpy $INSTDIR "$R0"
+
+    IfFileExists "$INSTDIR\falkon.exe" found
+        MessageBox MB_OK|MB_ICONSTOP "$(MSG_InvalidInstallPath)"
+        Abort
+    found:
 FunctionEnd
