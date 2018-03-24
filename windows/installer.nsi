@@ -16,7 +16,8 @@
   !define MSVC_VER 140
   !define OPENSSL_BIN_DIR .
   !define MSVC_REDIST_DIR .
-  !define QZ_BIN_DIR .
+  !define FALKON_SRC_DIR ..\..\
+  !define FALKON_BIN_DIR .
   !define ICU_BIN_DIR .
   !define QT_DIR .
   !define QT_BIN_DIR .
@@ -59,7 +60,7 @@ SetCompressor /SOLID /FINAL lzma
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "wininstall\welcome.bmp"
 
 !insertmacro MUI_PAGE_WELCOME
-!insertmacro MUI_PAGE_LICENSE ${QZ_BIN_DIR}\COPYRIGHT.txt
+!insertmacro MUI_PAGE_LICENSE ${FALKON_BIN_DIR}\COPYRIGHT.txt
 !insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
@@ -127,10 +128,10 @@ notRunning:
   SetOverwrite on
 
   SetOutPath "$INSTDIR"
-  File "${QZ_BIN_DIR}\COPYRIGHT.txt"
-  File "${QZ_BIN_DIR}\falkon.exe"
-  File "${QZ_BIN_DIR}\falkon.dll"
-  File "${QZ_BIN_DIR}\qt.conf"
+  File "${FALKON_BIN_DIR}\COPYRIGHT.txt"
+  File "${FALKON_BIN_DIR}\falkon.exe"
+  File "${FALKON_BIN_DIR}\falkon.dll"
+  File "${FALKON_BIN_DIR}\qt.conf"
   File "${OPENSSL_BIN_DIR}\libeay32.dll"
   File "${OPENSSL_BIN_DIR}\ssleay32.dll"
   File "${MSVC_REDIST_DIR}\*"
@@ -204,38 +205,38 @@ SectionGroup $(TITLE_SecThemes) SecThemes
   Section Default SecDefault
   SectionIn RO
   SetOutPath "$INSTDIR\themes\windows"
-  File "${QZ_BIN_DIR}\themes\windows\*"
+  File "${FALKON_SRC_DIR}\themes\windows\*"
   SetOutPath "$INSTDIR\themes\windows\images"
-  File "${QZ_BIN_DIR}\themes\windows\images\*"
+  File "${FALKON_SRC_DIR}\themes\windows\images\*"
   SectionEnd
 
   Section Chrome SecChrome
   SetOutPath "$INSTDIR\themes\chrome"
-  File "${QZ_BIN_DIR}\themes\chrome\*"
+  File "${FALKON_SRC_DIR}\themes\chrome\*"
   SetOutPath "$INSTDIR\themes\chrome\images"
-  File "${QZ_BIN_DIR}\themes\chrome\images\*"
+  File "${FALKON_SRC_DIR}\themes\chrome\images\*"
   SectionEnd
 
   Section Mac SecMac
   SetOutPath "$INSTDIR\themes\mac"
-  File "${QZ_BIN_DIR}\themes\mac\*"
+  File "${FALKON_SRC_DIR}\themes\mac\*"
   SetOutPath "$INSTDIR\themes\mac\images"
-  File "${QZ_BIN_DIR}\themes\mac\images\*"
+  File "${FALKON_SRC_DIR}\themes\mac\images\*"
   SectionEnd
 SectionGroupEnd
 
 Section $(TITLE_SecTranslations) SecTranslations
-  SetOutPath "$INSTDIR\locale"
-  File "${QZ_BIN_DIR}\locale\*.qm"
-  SetOutPath "$INSTDIR\qtwebengine_dictionaries\doc"
-  File "${QTWEBENGINE_DICTIONARIES_DIR}\doc\*"
-  SetOutPath "$INSTDIR\qtwebengine_dictionaries"
-  File "${QTWEBENGINE_DICTIONARIES_DIR}\*.bdic"
+  #SetOutPath "$INSTDIR\locale"
+  #File "${FALKON_BIN_DIR}\locale\*.qm"
+  #SetOutPath "$INSTDIR\qtwebengine_dictionaries\doc"
+  #File "${QTWEBENGINE_DICTIONARIES_DIR}\doc\*"
+  #SetOutPath "$INSTDIR\qtwebengine_dictionaries"
+  #File "${QTWEBENGINE_DICTIONARIES_DIR}\*.bdic"
 SectionEnd
 
 Section $(TITLE_SecPlugins) SecPlugins
   SetOutPath "$INSTDIR\plugins"
-  File "${QZ_BIN_DIR}\plugins\*.dll"
+  File "${FALKON_BIN_DIR}\plugins\*.dll"
 SectionEnd
 
 
