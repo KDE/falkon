@@ -128,7 +128,7 @@ void TabIcon::show()
 
     m_hideTimer->stop();
 
-    if (isVisible()) {
+    if (isVisible() && width() == 16) {
         return;
     }
 
@@ -139,7 +139,11 @@ void TabIcon::show()
 
 void TabIcon::hide()
 {
-    if (shouldBeVisible() || isHidden()) {
+    if (shouldBeVisible()) {
+        return;
+    }
+
+    if (isHidden() && width() == 1) {
         return;
     }
 
@@ -164,6 +168,13 @@ bool TabIcon::event(QEvent *event)
             QToolTip::showText(e->globalPos(), m_tab->isMuted() ? tr("Unmute Tab") : tr("Mute Tab"), this);
             event->accept();
             return true;
+        }
+    } else if (event->type() == QEvent::Resize) {
+        // Force resize to correct size
+        if (isVisible()) {
+            QTimer::singleShot(0, this, &TabIcon::show);
+        } else {
+            QTimer::singleShot(0, this, &TabIcon::hide);
         }
     }
 
