@@ -130,7 +130,7 @@ notRunning:
   SetOutPath "$INSTDIR"
   File "${FALKON_BIN_DIR}\COPYRIGHT.txt"
   File "${FALKON_BIN_DIR}\falkon.exe"
-  File "${FALKON_BIN_DIR}\falkon.dll"
+  File "${FALKON_BIN_DIR}\falkonprivate.dll"
   File "${FALKON_BIN_DIR}\qt.conf"
   File "${OPENSSL_BIN_DIR}\libeay32.dll"
   File "${OPENSSL_BIN_DIR}\ssleay32.dll"
