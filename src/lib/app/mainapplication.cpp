@@ -205,6 +205,11 @@ MainApplication::MainApplication(int &argc, char** argv)
         }
     }
 
+    if (!isPortable()) {
+        QSettings falkonConf(QSL("%1/falkon.conf").arg(applicationDirPath()), QSettings::IniFormat);
+        m_isPortable = falkonConf.value(QSL("Config/Portable")).toBool();
+    }
+
     if (isPortable()) {
         std::cout << "Falkon: Running in Portable Mode." << std::endl;
         DataPaths::setPortableVersion();
