@@ -156,6 +156,20 @@ void DownloadManager::closeDownloadTab(const QUrl &url) const
     }
 }
 
+QWinTaskbarButton *DownloadManager::taskbarButton()
+{
+#ifdef Q_OS_WIN
+    if (!m_taskbarButton) {
+        BrowserWindow *window = mApp->getWindow();
+        m_taskbarButton = new QWinTaskbarButton(window ? window->windowHandle() : windowHandle());
+        m_taskbarButton->progress()->setRange(0, 100);
+    }
+    return m_taskbarButton;
+#else
+    return nullptr;
+#endif
+}
+
 void DownloadManager::startExternalManager(const QUrl &url)
 {
     QString arguments = m_externalArguments;
@@ -176,9 +190,7 @@ void DownloadManager::timerEvent(QTimerEvent* e)
             ui->speedLabel->clear();
             setWindowTitle(tr("Download Manager"));
 #ifdef Q_OS_WIN
-            if (m_taskbarButton) {
-                m_taskbarButton->progress()->hide();
-            }
+            taskbarButton()->progress()->hide();
 #endif
             return;
         }
@@ -220,10 +232,8 @@ void DownloadManager::timerEvent(QTimerEvent* e)
 #endif
         setWindowTitle(tr("%1% - Download Manager").arg(progress));
 #ifdef Q_OS_WIN
-        if (m_taskbarButton) {
-            m_taskbarButton->progress()->show();
-            m_taskbarButton->progress()->setValue(progress);
-        }
+        taskbarButton()->progress()->show();
+        taskbarButton()->progress()->setValue(progress);
 #endif
     }
 
@@ -407,26 +417,12 @@ void DownloadManager::downloadFinished(bool success)
         ui->speedLabel->clear();
         setWindowTitle(tr("Download Manager"));
 #ifdef Q_OS_WIN
-        if (m_taskbarButton) {
-            m_taskbarButton->progress()->hide();
-        }
+        taskbarButton()->progress()->hide();
 #endif
         if (m_closeOnFinish) {
             close();
         }
     }
-}
-
-void DownloadManager::showEvent(QShowEvent *event)
-{
-    QWidget::showEvent(event);
-#ifdef Q_OS_WIN
-    if (!m_taskbarButton) {
-        m_taskbarButton = new QWinTaskbarButton(this);
-    }
-    m_taskbarButton->setWindow(windowHandle());
-    m_taskbarButton->progress()->setRange(0, 100);
-#endif
 }
 
 void DownloadManager::deleteItem(DownloadItem* item)
