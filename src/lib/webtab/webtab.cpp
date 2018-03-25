@@ -196,7 +196,7 @@ WebTab::WebTab(QWidget *parent)
     // Workaround QTabBar not immediately noticing resizing of tab buttons
     connect(m_tabIcon, &TabIcon::resized, this, [this]() {
         if (m_tabBar) {
-            m_tabBar->setTabButton(tabIndex(), m_tabBar->iconButtonPosition(), m_tabIcon);
+            m_tabBar->update();
         }
     });
 }
@@ -349,7 +349,7 @@ void WebTab::attach(BrowserWindow* window)
     m_locationBar->setBrowserWindow(m_window);
     m_tabBar->setTabText(tabIndex(), title());
     m_tabBar->setTabButton(tabIndex(), m_tabBar->iconButtonPosition(), m_tabIcon);
-    m_tabIcon->updateIcon();
+    QTimer::singleShot(0, m_tabIcon, &TabIcon::updateIcon);
 
     auto currentChanged = [this](int index) {
         const bool wasCurrent = m_isCurrentTab;

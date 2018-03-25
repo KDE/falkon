@@ -147,8 +147,8 @@ void TabIcon::hide()
         return;
     }
 
-    emit resized();
     setFixedSize(1, qMax(minimumHeight(), 16));
+    emit resized();
     QWidget::hide();
 }
 
@@ -168,13 +168,6 @@ bool TabIcon::event(QEvent *event)
             QToolTip::showText(e->globalPos(), m_tab->isMuted() ? tr("Unmute Tab") : tr("Mute Tab"), this);
             event->accept();
             return true;
-        }
-    } else if (event->type() == QEvent::Resize) {
-        // Force resize to correct size
-        if (isVisible()) {
-            QTimer::singleShot(0, this, &TabIcon::show);
-        } else {
-            QTimer::singleShot(0, this, &TabIcon::hide);
         }
     }
 
