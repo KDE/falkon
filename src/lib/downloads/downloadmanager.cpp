@@ -43,6 +43,7 @@
 
 #ifdef Q_OS_WIN
 #include <QtWin>
+#include <QWindow>
 #include <QWinTaskbarButton>
 #include <QWinTaskbarProgress>
 #endif
