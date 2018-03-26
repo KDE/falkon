@@ -21,6 +21,16 @@ LangString DESC_SecExtensions ${LANG_ENGLISH} "Associate Falkon with .htm(l) fil
 LangString DESC_SecThemes ${LANG_ENGLISH} "Additional themes for Falkon"
 LangString DESC_SecSetASDefault ${LANG_ENGLISH} "Set Falkon as default internet browser"
 LangString DESC_SecProtocols ${LANG_ENGLISH} "Associate Falkon with http(s) and ftp protocols"
+
+LangString TITLE_InstallationMode ${LANG_ENGLISH} "Installation Mode"
+LangString DESC_InstallationMode ${LANG_ENGLISH} "Select installation mode"
+LangString TITLE_StandardInstallation ${LANG_ENGLISH} "Standard installation"
+LangString TITLE_PortableInstallation ${LANG_ENGLISH} "Portable installation"
+LangString DESC_PortableInstallation ${LANG_ENGLISH} "Falkon will be installed as a 'Portable Application' to the selected location."
+LangString DESC_StandardInstallation ${LANG_ENGLISH} "Falkon will be installed on your computer."
+LangString MSG_PortableWriteError ${LANG_ENGLISH} "Error occurred when creating 'falkon.conf' in installation folder. Create it manually."
+LangString TITLE_InstallInfo ${LANG_ENGLISH}  "Ready to install"
+LangString DESC_InstallInfo ${LANG_ENGLISH} "To start installation click 'install'."
 ;
 LangString MSG_RunningInstance ${LANG_ENGLISH} "Falkon is already running! Do you want the installer try to terminate it?"
 LangString MSG_InstallationCanceled ${LANG_ENGLISH} "Process cancelled by user."
@@ -541,6 +551,16 @@ LangString DESC_SecExtensions ${LANG_FARSI} "کوپزیلا را برای باز
 LangString DESC_SecThemes ${LANG_FARSI} "فرهشت‌های اضافی برای کوپزیلا"
 LangString DESC_SecSetASDefault ${LANG_FARSI} "تنظیم کوپزیلا به عنوان مرورگر پیش‌فرض"
 LangString DESC_SecProtocols ${LANG_FARSI} "کوپزیلا را به پروتکل‌های http(s)‎ و ftp  اختصاص می‌دهد."
+
+LangString TITLE_InstallationMode ${LANG_FARSI} "حالت نصب"
+LangString DESC_InstallationMode ${LANG_FARSI} "حالت نصب را انتخاب کنید"
+LangString TITLE_StandardInstallation ${LANG_FARSI} "نصب استاندارد"
+LangString TITLE_PortableInstallation ${LANG_FARSI} "نصب همراه"
+LangString DESC_PortableInstallation ${LANG_FARSI} "فالکون به عنوان 'نرم‌افزار همراه' در مکان انتخاب شده نصب خواهد شد."
+LangString DESC_StandardInstallation ${LANG_FARSI} "فالکون بر روی رایانه شما نصب خواهد شد."
+LangString MSG_PortableWriteError ${LANG_FARSI} "خطایی هنگام ایجاد فایل 'falkon.conf' در محل نصب رخ داد. فایلی خالی با نام 'falkon.conf' در پوشه نصب ایجاد نمایید."
+LangString TITLE_InstallInfo ${LANG_FARSI} "آماده برای آغاز نصب"
+LangString DESC_InstallInfo ${LANG_FARSI} "برای شروع نصب روی دکمه 'نصب' کلیک کنید."
 ;
 LangString MSG_RunningInstance ${LANG_FARSI} "کوپزیلا هم‌اکنون در حال اجراست! آیا می‌خواهید برنامه نصب تلاش کند به اجرای آن خاتمه دهد؟"
 LangString MSG_InstallationCanceled ${LANG_FARSI} "فرایند توسط کاربر لغو گردید."
