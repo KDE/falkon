@@ -235,7 +235,7 @@ SectionGroupEnd
 
 Section $(TITLE_SecTranslations) SecTranslations
   SetOutPath "$INSTDIR\locale"
-  File "${FALKON_BIN_DIR}\locale\*"
+  File /r "${FALKON_BIN_DIR}\locale\*"
 
   SetOutPath "$INSTDIR\translations\qtwebengine_locales"
   File "${QT_DIR}\translations\qtwebengine_locales\*"
