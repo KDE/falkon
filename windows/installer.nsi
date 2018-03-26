@@ -191,17 +191,6 @@ notRunning:
   SetOutPath "$INSTDIR\styles"
   File "${QT_PLUGINS_DIR}\styles\*.dll"
 
-  SetOutPath "$INSTDIR\translations\qtwebengine_locales"
-  File "${QT_DIR}\translations\qtwebengine_locales\*"
-
-  SetOutPath "$INSTDIR\qtwebengine_dictionaries\doc"
-  ; In some packages underline '_' is used and in some other packages dash '-' is used so we use wildcard
-  File "${QTWEBENGINE_DICTIONARIES_DIR}\doc\README*en*US.txt"
-
-  SetOutPath "$INSTDIR\qtwebengine_dictionaries"
-  ; in some packages *.bdic files use dash '-' instead of underline '_' followed by a version number. e.g. en-US-3-0.bdic
-  File "${QTWEBENGINE_DICTIONARIES_DIR}\en*US*.bdic"
-
   call RegisterCapabilities
 
   StrCmp $installAsPortable "YES" 0 skipPortableMode
@@ -245,12 +234,19 @@ SectionGroup $(TITLE_SecThemes) SecThemes
 SectionGroupEnd
 
 Section $(TITLE_SecTranslations) SecTranslations
-  #SetOutPath "$INSTDIR\locale"
-  #File "${FALKON_BIN_DIR}\locale\*.qm"
-  #SetOutPath "$INSTDIR\qtwebengine_dictionaries\doc"
-  #File "${QTWEBENGINE_DICTIONARIES_DIR}\doc\*"
-  #SetOutPath "$INSTDIR\qtwebengine_dictionaries"
-  #File "${QTWEBENGINE_DICTIONARIES_DIR}\*.bdic"
+  SetOutPath "$INSTDIR\locale"
+  File "${FALKON_BIN_DIR}\locale\*"
+
+  SetOutPath "$INSTDIR\translations\qtwebengine_locales"
+  File "${QT_DIR}\translations\qtwebengine_locales\*"
+
+  SetOutPath "$INSTDIR\qtwebengine_dictionaries\doc"
+  ; In some packages underline '_' is used and in some other packages dash '-' is used so we use wildcard
+  File "${QTWEBENGINE_DICTIONARIES_DIR}\doc\README*en*US.txt"
+
+  SetOutPath "$INSTDIR\qtwebengine_dictionaries"
+  ; in some packages *.bdic files use dash '-' instead of underline '_' followed by a version number. e.g. en-US-3-0.bdic
+  File "${QTWEBENGINE_DICTIONARIES_DIR}\en*US*.bdic"
 SectionEnd
 
 Section $(TITLE_SecPlugins) SecPlugins
@@ -542,7 +538,7 @@ Function InstallationModePage
     WriteINIStr "$PLUGINSDIR\portable-mode.ini" "Field 1" "Text" "$(TITLE_StandardInstallation)"
     WriteINIStr "$PLUGINSDIR\portable-mode.ini" "Field 2" "Text" "$(TITLE_PortableInstallation)"
     ; set layout direction
-	IntCmp $(^RTL) 1 0 +2
+    IntCmp $(^RTL) 1 0 +2
     WriteINIStr "$PLUGINSDIR\portable-mode.ini" "Settings" "RTL" 1
 
     InstallOptions::dialog $PLUGINSDIR\portable-mode.ini
@@ -566,7 +562,7 @@ FunctionEnd
 Function installationInfoPage
     !insertmacro MUI_HEADER_TEXT "$(TITLE_InstallInfo)" "$(DESC_InstallInfo)"
     ; set layout direction
-	IntCmp $(^RTL) 1 0 +2
+    IntCmp $(^RTL) 1 0 +2
     WriteINIStr "$PLUGINSDIR\portable-info.ini" "Settings" "RTL" 1
 
     StrCmp $installAsPortable "NO" 0 infoPortable
