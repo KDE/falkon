@@ -385,7 +385,7 @@ void NavigationBar::aboutToShowHistoryBackMenu()
     }
 
     m_menuBack->addSeparator();
-    m_menuBack->addAction(tr("Clear history"), this, SLOT(clearHistory()));
+    m_menuBack->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear history"), this, SLOT(clearHistory()));
 }
 
 void NavigationBar::aboutToShowHistoryNextMenu()
@@ -419,7 +419,7 @@ void NavigationBar::aboutToShowHistoryNextMenu()
     }
 
     m_menuForward->addSeparator();
-    m_menuForward->addAction(tr("Clear history"), this, SLOT(clearHistory()));
+    m_menuForward->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear history"), this, SLOT(clearHistory()));
 }
 
 void NavigationBar::aboutToShowToolsMenu()
