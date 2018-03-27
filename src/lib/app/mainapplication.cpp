@@ -1167,7 +1167,7 @@ void MainApplication::initPulseSupport()
 RegisterQAppAssociation* MainApplication::associationManager()
 {
     if (!m_registerQAppAssociation) {
-        QString desc = tr("Falkon is a new, fast and secure open-source WWW browser. Falkon is licensed under GPL version 3 or (at your option) any later version. It is based on QtWebEngine and Qt Framework.");
+        QString desc = tr("Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL version 3 or (at your option) any later version. It is based on QtWebEngine and Qt Framework.");
         QString fileIconPath = QApplication::applicationFilePath() + ",1";
         QString appIconPath = QApplication::applicationFilePath() + ",0";
         m_registerQAppAssociation = new RegisterQAppAssociation("Falkon", QApplication::applicationFilePath(), appIconPath, desc, this);
