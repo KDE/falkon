@@ -1,5 +1,5 @@
 ;;;;English
-!define PRODUCT_DESC  "Falkon is a new, fast and secure open-source WWW browser. Falkon is licensed under GPL version 3 or (at your option) any later version. It is based on WebKit core and Qt Framework."
+!define PRODUCT_DESC  "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL version 3 or (at your option) any later version. It is based on QtWebEngine and Qt Framework."
 
 !define TITLE_SecMain "Main Components"
 !define TITLE_SecTranslations "Translations"
