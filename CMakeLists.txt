@@ -36,7 +36,9 @@ if (IS_ABSOLUTE ${FALKON_INSTALL_PLUGINDIR})
 else()
     set(PLUGIN_PATH "${CMAKE_INSTALL_PREFIX}/${FALKON_INSTALL_PLUGINDIR}")
 endif()
-set(FALKON_PLUGIN_PATH "${PLUGIN_PATH}" CACHE PATH "Default plugin search path")
+if (NOT WIN32)
+    set(FALKON_PLUGIN_PATH "${PLUGIN_PATH}" CACHE PATH "Default plugin search path")
+endif()
 
 # Defines that are always set
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_NO_CAST_TO_ASCII)

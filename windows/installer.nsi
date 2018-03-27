@@ -32,11 +32,8 @@
 !include /NONFATAL WinVer.nsh
 !include x64.nsh
 
-!ifndef PORTABLE
-  RequestExecutionLevel admin
-!else
-  RequestExecutionLevel user
-!endif
+Var installAsPortable
+RequestExecutionLevel admin
 
 !addplugindir "wininstall\"
 
@@ -61,8 +58,15 @@ SetCompressor /SOLID /FINAL lzma
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_LICENSE ${FALKON_BIN_DIR}\COPYRIGHT.txt
+;;;
+Page custom InstallationModePage InstallationModeLeave
+;;;
+!define MUI_PAGE_CUSTOMFUNCTION_PRE "SkipComponentsIfPortableInstalltion"
 !insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
+;;;
+Page custom installationInfoPage installationInfoLeave
+;;;
 !insertmacro MUI_PAGE_INSTFILES
 
 !define MUI_FINISHPAGE_RUN
@@ -75,34 +79,6 @@ SetCompressor /SOLID /FINAL lzma
 !insertmacro MUI_UNPAGE_FINISH
 
 !insertmacro MUI_LANGUAGE "English"
-!insertmacro MUI_LANGUAGE "Czech"
-!insertmacro MUI_LANGUAGE "Slovak"
-!insertmacro MUI_LANGUAGE "German"
-!insertmacro MUI_LANGUAGE "Dutch"
-!insertmacro MUI_LANGUAGE "Portuguese"
-!insertmacro MUI_LANGUAGE "Greek"
-!insertmacro MUI_LANGUAGE "French"
-!insertmacro MUI_LANGUAGE "Italian"
-!insertmacro MUI_LANGUAGE "Romanian"
-!insertmacro MUI_LANGUAGE "Tradchinese"
-!insertmacro MUI_LANGUAGE "Simpchinese"
-!insertmacro MUI_LANGUAGE "Indonesian"
-!insertmacro MUI_LANGUAGE "Georgian"
-!insertmacro MUI_LANGUAGE "Japanese"
-!insertmacro MUI_LANGUAGE "Swedish"
-!insertmacro MUI_LANGUAGE "Polish"
-!insertmacro MUI_LANGUAGE "Ukrainian"
-!insertmacro MUI_LANGUAGE "Catalan"
-!insertmacro MUI_LANGUAGE "Serbian"
-!insertmacro MUI_LANGUAGE "SerbianLatin"
-!insertmacro MUI_LANGUAGE "Farsi"
-!insertmacro MUI_LANGUAGE "Hebrew"
-!insertmacro MUI_LANGUAGE "Spanish"
-!insertmacro MUI_LANGUAGE "Arabic"
-!insertmacro MUI_LANGUAGE "Basque"
-!insertmacro MUI_LANGUAGE "Danish"
-
-!insertmacro MUI_RESERVEFILE_LANGDLL
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 OutFile "${PRODUCT_NAME} Installer ${PRODUCT_VERSION}.exe"
@@ -111,18 +87,18 @@ InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
 ShowUnInstDetails show
 
-!include "wininstall\languages.nsh"
+!include "wininstall\strings.nsh"
 
-Section !$(TITLE_SecMain) SecMain
+Section "${TITLE_SecMain}" SecMain
   SectionIn RO
   FindProcDLL::FindProc "falkon.exe"
   IntCmp $R0 1 0 notRunning
-  MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "$(MSG_RunningInstance)" /SD IDOK IDCANCEL AbortInstallation
+  MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "${MSG_RunningInstance}" /SD IDOK IDCANCEL AbortInstallation
     KillProcDLL::KillProc "falkon.exe"
     Sleep 100
     Goto notRunning
 AbortInstallation:
-  Abort "$(MSG_InstallationCanceled)"
+  Abort "${MSG_InstallationCanceled}"
 
 notRunning:
   SetOverwrite on
@@ -187,23 +163,24 @@ notRunning:
   SetOutPath "$INSTDIR\styles"
   File "${QT_PLUGINS_DIR}\styles\*.dll"
 
-  SetOutPath "$INSTDIR\translations\qtwebengine_locales"
-  File "${QT_DIR}\translations\qtwebengine_locales\*"
+  call RegisterCapabilities
 
-  SetOutPath "$INSTDIR\qtwebengine_dictionaries\doc"
-  ; In some packages underline '_' is used and in some other packages dash '-' is used so we use wildcard
-  File "${QTWEBENGINE_DICTIONARIES_DIR}\doc\README*en*US.txt"
+  StrCmp $installAsPortable "YES" 0 skipPortableMode
+  FileOpen $0 $INSTDIR\falkon.conf w
+  FileWrite $0 "[Config]$\r$\n"
+  FileWrite $0 "Portable=true$\r$\n"
 
-  SetOutPath "$INSTDIR\qtwebengine_dictionaries"
-  ; in some packages *.bdic files use dash '-' instead of underline '_' followed by a version number. e.g. en-US-3-0.bdic
-  File "${QTWEBENGINE_DICTIONARIES_DIR}\en*US*.bdic"
+  StrCmp $0 "" 0 closeHandle
+  MessageBox MB_OK|MB_ICONEXCLAMATION "${MSG_PortableWriteError}"
+  goto skipPortableMode
 
-  !ifndef PORTABLE
-    call RegisterCapabilities
-  !endif
+closeHandle:
+  FileClose $0
+
+skipPortableMode:
 SectionEnd
 
-SectionGroup $(TITLE_SecThemes) SecThemes
+SectionGroup "${TITLE_SecThemes}" SecThemes
 
   Section Default SecDefault
   SectionIn RO
@@ -228,154 +205,165 @@ SectionGroup $(TITLE_SecThemes) SecThemes
   SectionEnd
 SectionGroupEnd
 
-Section $(TITLE_SecTranslations) SecTranslations
-  #SetOutPath "$INSTDIR\locale"
-  #File "${FALKON_BIN_DIR}\locale\*.qm"
-  #SetOutPath "$INSTDIR\qtwebengine_dictionaries\doc"
-  #File "${QTWEBENGINE_DICTIONARIES_DIR}\doc\*"
-  #SetOutPath "$INSTDIR\qtwebengine_dictionaries"
-  #File "${QTWEBENGINE_DICTIONARIES_DIR}\*.bdic"
+Section "${TITLE_SecTranslations}" SecTranslations
+  SetOutPath "$INSTDIR\locale"
+  File /r "${FALKON_BIN_DIR}\locale\*"
+
+  SetOutPath "$INSTDIR\translations\qtwebengine_locales"
+  File "${QT_DIR}\translations\qtwebengine_locales\*"
+
+  SetOutPath "$INSTDIR\qtwebengine_dictionaries\doc"
+  ; In some packages underline '_' is used and in some other packages dash '-' is used so we use wildcard
+  File "${QTWEBENGINE_DICTIONARIES_DIR}\doc\README*en*US.txt"
+
+  SetOutPath "$INSTDIR\qtwebengine_dictionaries"
+  ; in some packages *.bdic files use dash '-' instead of underline '_' followed by a version number. e.g. en-US-3-0.bdic
+  File "${QTWEBENGINE_DICTIONARIES_DIR}\en*US*.bdic"
 SectionEnd
 
-Section $(TITLE_SecPlugins) SecPlugins
+Section "${TITLE_SecPlugins}" SecPlugins
   SetOutPath "$INSTDIR\plugins"
   File "${FALKON_BIN_DIR}\plugins\*.dll"
 SectionEnd
 
 
-!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
-  !insertmacro MUI_DESCRIPTION_TEXT ${SecMain} $(DESC_SecMain)
-  !insertmacro MUI_DESCRIPTION_TEXT ${SecTranslations} $(DESC_SecTranslations)
-  !insertmacro MUI_DESCRIPTION_TEXT ${SecPlugins} $(DESC_SecPlugins)
-  !ifndef PORTABLE
-    !insertmacro MUI_DESCRIPTION_TEXT ${SecDesktop} $(DESC_SecDesktop)
-    !insertmacro MUI_DESCRIPTION_TEXT ${SecExtensions} $(DESC_SecExtensions)
-  !endif
-  !insertmacro MUI_DESCRIPTION_TEXT ${SecThemes} $(DESC_SecThemes)
+SectionGroup "${TITLE_SecSetASDefault}" SecSetASDefault
+    Section "${TITLE_SecExtensions}" SecExtensions
+      StrCmp $installAsPortable "NO" 0 skipSetExtentions
+      SetOutPath "$INSTDIR"
+      ${RegisterAssociation} ".htm" "$INSTDIR\falkon.exe" "FalkonHTML" "Falkon HTML Document" "$INSTDIR\falkon.exe,1" "file"
+      ${RegisterAssociation} ".html" "$INSTDIR\falkon.exe" "FalkonHTML" "Falkon HTML Document" "$INSTDIR\falkon.exe,1" "file"
+      ${UpdateSystemIcons}
+      skipSetExtentions:
+    SectionEnd
 
-  !ifndef PORTABLE
-    !insertmacro MUI_DESCRIPTION_TEXT ${SecSetASDefault} $(DESC_SecSetASDefault)
-    !insertmacro MUI_DESCRIPTION_TEXT ${SecProtocols} $(DESC_SecProtocols)
-  !endif
+    Section "${TITLE_SecProtocols}" SecProtocols
+      StrCmp $installAsPortable "NO" 0 skipSecProtocols
+      ${RegisterAssociation} "http" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
+      ${RegisterAssociation} "https" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
+      ${RegisterAssociation} "ftp" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
+      ${UpdateSystemIcons}
+      skipSecProtocols:
+    SectionEnd
+SectionGroupEnd
+
+Section -StartMenu
+  StrCmp $installAsPortable "NO" 0 skipStartMenu
+  SetOutPath "$INSTDIR"
+  SetShellVarContext all
+  CreateDirectory "$SMPROGRAMS\Falkon"
+  CreateShortCut "$SMPROGRAMS\Falkon\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
+  CreateShortCut "$SMPROGRAMS\Falkon\Falkon.lnk" "$INSTDIR\falkon.exe"
+  CreateShortCut "$SMPROGRAMS\Falkon\License.lnk" "$INSTDIR\COPYRIGHT.txt"
+  skipStartMenu:
+SectionEnd
+
+Section "${TITLE_SecDesktop}" SecDesktop
+  StrCmp $installAsPortable "NO" 0 skipDesktopIcon
+  SetOutPath "$INSTDIR"
+  CreateShortCut "$DESKTOP\Falkon.lnk" "$INSTDIR\falkon.exe" ""
+  skipDesktopIcon:
+SectionEnd
+
+!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecMain} "${DESC_SecMain}"
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecTranslations} "${DESC_SecTranslations}"
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecPlugins} "${DESC_SecPlugins}"
+
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecDesktop} "${DESC_SecDesktop}"
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecExtensions} "${DESC_SecExtensions}"
+
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecThemes} "${DESC_SecThemes}"
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecSetASDefault} "${DESC_SecSetASDefault}"
+  !insertmacro MUI_DESCRIPTION_TEXT ${SecProtocols} "${DESC_SecProtocols}"
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
+Section -Uninstaller
+  StrCmp $installAsPortable "NO" 0 skipUninstaller
+  WriteUninstaller "$INSTDIR\uninstall.exe"
+  WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\falkon.exe"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayName" "$(^Name)"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "UninstallString" "$INSTDIR\Uninstall.exe"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\falkon.exe"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "Falkon Team"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "HelpLink" "https://userbase.kde.org/Falkon"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "InstallLocation" "$INSTDIR"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "InstallSource" "$EXEDIR"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "https://kde.org"
+  ${GetSize} "$INSTDIR" "/S=0K" $0 $1 $2
+  WriteRegDWORD ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "EstimatedSize" "$0"
+  skipUninstaller:
+SectionEnd
 
-!ifndef PORTABLE
-    SectionGroup $(TITLE_SecSetASDefault) SecSetASDefault
-        Section $(TITLE_SecExtensions) SecExtensions
-          SetOutPath "$INSTDIR"
-          ${RegisterAssociation} ".htm" "$INSTDIR\falkon.exe" "FalkonHTML" "Falkon HTML Document" "$INSTDIR\falkon.exe,1" "file"
-          ${RegisterAssociation} ".html" "$INSTDIR\falkon.exe" "FalkonHTML" "Falkon HTML Document" "$INSTDIR\falkon.exe,1" "file"
-          ${UpdateSystemIcons}
-        SectionEnd
+Section Uninstall
+  FindProcDLL::FindProc "falkon.exe"
+  IntCmp $R0 1 0 notRunning
+  MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "${MSG_RunningInstance}" /SD IDOK IDCANCEL AbortInstallation
+    KillProcDLL::KillProc "falkon.exe"
+    Sleep 100
+    Goto notRunning
+AbortInstallation:
+  Abort "${MSG_InstallationCanceled}"
 
-        Section $(TITLE_SecProtocols) SecProtocols
-          ${RegisterAssociation} "http" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
-          ${RegisterAssociation} "https" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
-          ${RegisterAssociation} "ftp" "$INSTDIR\falkon.exe" "FalkonURL" "Falkon URL" "$INSTDIR\falkon.exe,0" "protocol"
-          ${UpdateSystemIcons}
-        SectionEnd
-    SectionGroupEnd
+notRunning:
+  SetShellVarContext all
+  Delete "$DESKTOP\Falkon.lnk"
 
-    Section -StartMenu
-      SetOutPath "$INSTDIR"
-      SetShellVarContext all
-      CreateDirectory "$SMPROGRAMS\Falkon"
-      CreateShortCut "$SMPROGRAMS\Falkon\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
-      CreateShortCut "$SMPROGRAMS\Falkon\Falkon.lnk" "$INSTDIR\falkon.exe"
-      CreateShortCut "$SMPROGRAMS\Falkon\License.lnk" "$INSTDIR\COPYRIGHT.txt"
-    SectionEnd
+  Delete "$INSTDIR\falkon.exe"
+  Delete "$INSTDIR\falkonprivate.dll"
+  Delete "$INSTDIR\uninstall.exe"
+  Delete "$INSTDIR\COPYRIGHT.txt"
+  Delete "$INSTDIR\qt.conf"
+  Delete "$INSTDIR\libeay32.dll"
+  Delete "$INSTDIR\ssleay32.dll"
+  Delete "$INSTDIR\libEGL.dll"
+  Delete "$INSTDIR\libGLESv2.dll"
+  Delete "$INSTDIR\opengl32sw.dll"
+  Delete "$INSTDIR\D3Dcompiler_47.dll"
+  Delete "$INSTDIR\QtWebEngineProcess.exe"
 
-    Section $(TITLE_SecDesktop) SecDesktop
-      SetOutPath "$INSTDIR"
-      CreateShortCut "$DESKTOP\Falkon.lnk" "$INSTDIR\falkon.exe" ""
-    SectionEnd
+  ; Wildcard delete to compact script of uninstall section
+  Delete "$INSTDIR\icu*.dll"
+  Delete "$INSTDIR\Qt5*.dll"
+  Delete "$INSTDIR\msvc*.dll"
+  Delete "$INSTDIR\vc*.dll"
+  Delete "$INSTDIR\concrt*.dll"
 
-    Section -Uninstaller
-      WriteUninstaller "$INSTDIR\uninstall.exe"
-      WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\falkon.exe"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayName" "$(^Name)"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "UninstallString" "$INSTDIR\Uninstall.exe"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\falkon.exe"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "Falkon Team"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "HelpLink" "https://userbase.kde.org/Falkon"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "InstallLocation" "$INSTDIR"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "InstallSource" "$EXEDIR"
-      WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "https://kde.org"
-      ${GetSize} "$INSTDIR" "/S=0K" $0 $1 $2
-      WriteRegDWORD ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "EstimatedSize" "$0"
-    SectionEnd
+  ; Recursively delete folders in root of $INSTDIR
+  RMDir /r "$INSTDIR\iconengines"
+  RMDir /r "$INSTDIR\imageformats"
+  RMDir /r "$INSTDIR\platforms"
+  RMDir /r "$INSTDIR\printsupport"
+  RMDir /r "$INSTDIR\qml"
+  RMDir /r "$INSTDIR\resources"
+  RMDir /r "$INSTDIR\translations"
+  RMDir /r "$INSTDIR\sqldrivers"
+  RMDir /r "$INSTDIR\styles"
+  RMDir /r "$INSTDIR\qtwebengine_dictionaries"
+  RMDir /r "$INSTDIR\themes"
+  RMDir /r "$INSTDIR\locale"
+  RMDir /r "$INSTDIR\plugins"
 
-    Section Uninstall
-      FindProcDLL::FindProc "falkon.exe"
-      IntCmp $R0 1 0 notRunning
-      MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "$(MSG_RunningInstance)" /SD IDOK IDCANCEL AbortInstallation
-        KillProcDLL::KillProc "falkon.exe"
-        Sleep 100
-        Goto notRunning
-    AbortInstallation:
-      Abort "$(MSG_InstallationCanceled)"
+  ; Remove $INSTDIR if it is empty
+  RMDir "$INSTDIR"
 
-    notRunning:
-      SetShellVarContext all
-      Delete "$DESKTOP\Falkon.lnk"
+  ; Remove start menu programs folder
+  RMDir /r "$SMPROGRAMS\${PRODUCT_NAME}"
 
-      Delete "$INSTDIR\falkon.exe"
-      Delete "$INSTDIR\falkonprivate.dll"
-      Delete "$INSTDIR\uninstall.exe"
-      Delete "$INSTDIR\COPYRIGHT.txt"
-      Delete "$INSTDIR\qt.conf"
-      Delete "$INSTDIR\libeay32.dll"
-      Delete "$INSTDIR\ssleay32.dll"
-      Delete "$INSTDIR\libEGL.dll"
-      Delete "$INSTDIR\libGLESv2.dll"
-      Delete "$INSTDIR\opengl32sw.dll"
-      Delete "$INSTDIR\D3Dcompiler_47.dll"
-      Delete "$INSTDIR\QtWebEngineProcess.exe"
+  DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
+  DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
 
-      ; Wildcard delete to compact script of uninstall section
-      Delete "$INSTDIR\icu*.dll"
-      Delete "$INSTDIR\Qt5*.dll"
-      Delete "$INSTDIR\msvc*.dll"
-      Delete "$INSTDIR\vc*.dll"
-      Delete "$INSTDIR\concrt*.dll"
+  DeleteRegKey HKLM "Software\${PRODUCT_NAME}"
+  DeleteRegValue HKLM "SOFTWARE\RegisteredApplications" "${PRODUCT_NAME}"
 
-      ; Recursively delete folders in root of $INSTDIR
-      RMDir /r "$INSTDIR\iconengines"
-      RMDir /r "$INSTDIR\imageformats"
-      RMDir /r "$INSTDIR\platforms"
-      RMDir /r "$INSTDIR\printsupport"
-      RMDir /r "$INSTDIR\qml"
-      RMDir /r "$INSTDIR\resources"
-      RMDir /r "$INSTDIR\translations"
-      RMDir /r "$INSTDIR\sqldrivers"
-      RMDir /r "$INSTDIR\styles"
-      RMDir /r "$INSTDIR\qtwebengine_dictionaries"
-      RMDir /r "$INSTDIR\themes"
-      RMDir /r "$INSTDIR\locale"
-      RMDir /r "$INSTDIR\plugins"
-
-      ; Remove $INSTDIR if it is empty
-      RMDir "$INSTDIR"
-
-      ; Remove start menu programs folder
-      RMDir /r "$SMPROGRAMS\${PRODUCT_NAME}"
-
-      DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
-      DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
-
-      DeleteRegKey HKLM "Software\${PRODUCT_NAME}"
-      DeleteRegValue HKLM "SOFTWARE\RegisteredApplications" "${PRODUCT_NAME}"
-
-      ${UnRegisterAssociation} ".htm" "FalkonHTML" "$INSTDIR\falkon.exe" "file"
-      ${UnRegisterAssociation} ".html" "FalkonHTML" "$INSTDIR\falkon.exe" "file"
-      ${UnRegisterAssociation} "http" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
-      ${UnRegisterAssociation} "https" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
-      ${UnRegisterAssociation} "ftp" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
-      ${UpdateSystemIcons}
-    SectionEnd
-!endif
+  ${UnRegisterAssociation} ".htm" "FalkonHTML" "$INSTDIR\falkon.exe" "file"
+  ${UnRegisterAssociation} ".html" "FalkonHTML" "$INSTDIR\falkon.exe" "file"
+  ${UnRegisterAssociation} "http" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
+  ${UnRegisterAssociation} "https" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
+  ${UnRegisterAssociation} "ftp" "FalkonURL" "$INSTDIR\falkon.exe" "protocol"
+  ${UpdateSystemIcons}
+SectionEnd
 
 BrandingText "${PRODUCT_NAME} ${PRODUCT_VERSION} Installer"
 
@@ -396,84 +384,27 @@ Function .onInit
           ${Endif}
         ${EndIf}
 
-        !ifdef PORTABLE
-            StrCpy $InstDir "$DESKTOP\${PRODUCT_NAME} Portable\"
-        !endif
+        ;Extract InstallOptions files
+        ;$PLUGINSDIR will automatically be removed when the installer closes
+        InitPluginsDir
+        File /oname=$PLUGINSDIR\portable-mode.ini "portable-mode.ini"
+        File /oname=$PLUGINSDIR\portable-info.ini "portable-info.ini"
+
 
         ;Prevent Multiple Instances
         System::Call 'kernel32::CreateMutexA(i 0, i 0, t "FalkonInstaller-4ECB4694-2C39-4f93-9122-A986344C4E7B") i .r1 ?e'
         Pop $R0
-        StrCmp $R0 0 +3
-          MessageBox MB_OK|MB_ICONEXCLAMATION "Falkon installer is already running!" /SD IDOK
-        Abort
-
-        ;Language selection dialog¨
-        ;Return when running silent instalation
-
-        IfSilent 0 +2
-          return
-
-        Push ""
-        Push ${LANG_ENGLISH}
-        Push English
-        Push ${LANG_CZECH}
-        Push Czech
-        Push ${LANG_SLOVAK}
-        Push Slovak
-        Push ${LANG_GERMAN}
-        Push German
-        Push ${LANG_DUTCH}
-        Push Dutch
-        Push ${LANG_PORTUGUESE}
-        Push Portuguese
-        Push ${LANG_GREEK}
-        Push Greek
-        Push ${LANG_FRENCH}
-        Push French
-        Push ${LANG_ITALIAN}
-        Push Italian
-        Push ${LANG_ROMANIAN}
-        Push Romanian
-        Push ${LANG_TRADCHINESE}
-        Push TraditionalChinese
-        Push ${LANG_SIMPCHINESE}
-        Push SimplifiedChinese
-        Push ${LANG_INDONESIAN}
-        Push Indonesian
-        Push ${LANG_GEORGIAN}
-        Push Georgian
-        Push ${LANG_JAPANESE}
-        Push Japanese
-        Push ${LANG_SWEDISH}
-        Push Swedish
-        Push ${LANG_POLISH}
-        Push Polish
-        Push ${LANG_UKRAINIAN}
-        Push Ukrainian
-        Push ${LANG_CATALAN}
-        Push Catalan
-        Push ${LANG_SERBIAN}
-        Push Serbian
-        Push ${LANG_SERBIANLATIN}
-        Push SerbianLatin
-        Push ${LANG_FARSI}
-        Push Persian
-        Push ${LANG_HEBREW}
-        Push Hebrew
-        Push ${LANG_SPANISH}
-        Push Spanish
-        Push ${LANG_DANISH}
-        Push Danish
-        Push A ; A means auto count languages
-               ; for the auto count to work the first empty push (Push "") must remain
-        LangDLL::LangDialog "Installer Language" "Please select the language of the installer"
-
-        Pop $LANGUAGE
-        StrCmp $LANGUAGE "cancel" 0 +2
-                Abort
+        StrCmp $R0 0 skip
+          ;Return when running silent instalation
+          IfSilent doAbort 0
+            MessageBox MB_OK|MB_ICONEXCLAMATION "Falkon installer is already running!" /SD IDOK
+        doAbort:
+            Abort
+    skip:
 FunctionEnd
 
 Function RegisterCapabilities
+    StrCmp $installAsPortable "NO" 0 skipRegisterCapabilities
     !ifdef ___WINVER__NSH___
         ${If} ${AtLeastWinVista}
             ; even if we don't associate Falkon as default for ".htm" and ".html"
@@ -483,7 +414,7 @@ Function RegisterCapabilities
             ${CreateProgId} "FalkonURL" "$INSTDIR\falkon.exe" "Falkon URL" "$INSTDIR\falkon.exe,0"
 
             ; note: these lines just introduce capabilities of Falkon to OS and don't change defaults!
-            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationDescription" "$(PRODUCT_DESC)"
+            WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationDescription" "${PRODUCT_DESC}"
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationIcon" "$INSTDIR\falkon.exe,0"
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}" "ApplicationName" "${PRODUCT_NAME}"
             WriteRegStr HKLM "${PRODUCT_CAPABILITIES_KEY}\FileAssociations" ".htm" "FalkonHTML"
@@ -495,6 +426,7 @@ Function RegisterCapabilities
             WriteRegStr HKLM "SOFTWARE\RegisteredApplications" "${PRODUCT_NAME}" "${PRODUCT_CAPABILITIES_KEY}"
         ${EndIf}
     !endif
+skipRegisterCapabilities:
 FunctionEnd
 
 Function RunFalkonAsUser
@@ -507,7 +439,54 @@ Function un.onInit
         StrCpy $INSTDIR "$R0"
 
     IfFileExists "$INSTDIR\falkon.exe" found
-        MessageBox MB_OK|MB_ICONSTOP "$(MSG_InvalidInstallPath)"
+        MessageBox MB_OK|MB_ICONSTOP "${MSG_InvalidInstallPath}"
         Abort
     found:
+FunctionEnd
+
+Function InstallationModePage
+    !insertmacro MUI_HEADER_TEXT "${TITLE_InstallationMode}" "${DESC_InstallationMode}"
+
+    WriteINIStr "$PLUGINSDIR\portable-mode.ini" "Field 1" "Text" "${TITLE_StandardInstallation}"
+    WriteINIStr "$PLUGINSDIR\portable-mode.ini" "Field 2" "Text" "${TITLE_PortableInstallation}"
+
+    InstallOptions::dialog $PLUGINSDIR\portable-mode.ini
+FunctionEnd
+
+Function InstallationModeLeave
+  ReadINIStr $0 "$PLUGINSDIR\portable-mode.ini" "Field 2" "State"
+
+  StrCmp $0 1 0 notchecked
+  StrCpy $installAsPortable "YES"
+  StrCpy $InstDir "$DESKTOP\${PRODUCT_NAME} Portable\"
+
+  goto skip
+
+ notchecked:
+  StrCpy $installAsPortable "NO"
+
+ skip:
+FunctionEnd
+
+Function installationInfoPage
+    !insertmacro MUI_HEADER_TEXT "${TITLE_InstallInfo}" "${DESC_InstallInfo}"
+
+    StrCmp $installAsPortable "NO" 0 infoPortable
+    WriteINIStr "$PLUGINSDIR\portable-info.ini" "Field 1" "Text" "${DESC_StandardInstallation}"
+
+    Goto showInfo
+
+infoPortable:
+    WriteINIStr "$PLUGINSDIR\portable-info.ini" "Field 1" "Text" "${DESC_PortableInstallation}"
+
+showInfo:
+    InstallOptions::dialog $PLUGINSDIR\portable-info.ini
+FunctionEnd
+
+Function installationInfoLeave
+FunctionEnd
+
+Function SkipComponentsIfPortableInstalltion
+StrCmp $installAsPortable "YES" 0 +2
+    Abort
 FunctionEnd

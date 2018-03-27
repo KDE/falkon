@@ -146,15 +146,22 @@ Preferences::Preferences(BrowserWindow* window)
     ui->dontLoadTabsUntilSelected->setChecked(settings.value("Web-Browser-Settings/LoadTabsOnActivation", true).toBool());
 
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
-    ui->checkDefaultBrowser->setChecked(settings.value("Web-Browser-Settings/CheckDefaultBrowser", DEFAULT_CHECK_DEFAULTBROWSER).toBool());
-    if (mApp->associationManager()->isDefaultForAllCapabilities()) {
-        ui->checkNowDefaultBrowser->setText(tr("Default"));
-        ui->checkNowDefaultBrowser->setEnabled(false);
+    if (!mApp->isPortable()) {
+        ui->checkDefaultBrowser->setChecked(settings.value("Web-Browser-Settings/CheckDefaultBrowser",
+                                                           DEFAULT_CHECK_DEFAULTBROWSER).toBool());
+        if (mApp->associationManager()->isDefaultForAllCapabilities()) {
+            ui->checkNowDefaultBrowser->setText(tr("Default"));
+            ui->checkNowDefaultBrowser->setEnabled(false);
+        }
+        else {
+            ui->checkNowDefaultBrowser->setText(tr("Set as default"));
+            ui->checkNowDefaultBrowser->setEnabled(true);
+            connect(ui->checkNowDefaultBrowser, SIGNAL(clicked()), this, SLOT(makeFalkonDefault()));
+        }
     }
     else {
-        ui->checkNowDefaultBrowser->setText(tr("Set as default"));
-        ui->checkNowDefaultBrowser->setEnabled(true);
-        connect(ui->checkNowDefaultBrowser, SIGNAL(clicked()), this, SLOT(makeFalkonDefault()));
+        ui->checkDefaultBrowser->hide();
+        ui->checkNowDefaultBrowser->hide();
     }
 #else // No Default Browser settings on non-Windows platform
     ui->hSpacerDefaultBrowser->changeSize(0, 0, QSizePolicy::Fixed, QSizePolicy::Fixed);

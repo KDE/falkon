@@ -19,6 +19,7 @@
 #define DOWNLOADMANAGER_H
 
 #include <QWidget>
+#include <QPointer>
 #include <QBasicTimer>
 
 #include "qzcommon.h"
@@ -89,13 +90,13 @@ Q_SIGNALS:
     void downloadsCountChanged();
 
 private:
-    void showEvent(QShowEvent *event) override;
     void timerEvent(QTimerEvent* e) override;
     void closeEvent(QCloseEvent* e) override;
     void resizeEvent(QResizeEvent* e) override;
     void keyPressEvent(QKeyEvent* e) override;
 
     void closeDownloadTab(const QUrl &url) const;
+    QWinTaskbarButton *taskbarButton();
 
     Ui::DownloadManager* ui;
     QBasicTimer m_timer;
@@ -113,7 +114,7 @@ private:
 
     DownloadOption m_lastDownloadOption;
 
-    QWinTaskbarButton *m_taskbarButton = nullptr;
+    QPointer<QWinTaskbarButton> m_taskbarButton;
 };
 
 #endif // DOWNLOADMANAGER_H

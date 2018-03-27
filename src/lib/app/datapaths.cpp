@@ -47,19 +47,21 @@ void DataPaths::setCurrentProfilePath(const QString &profilePath)
 void DataPaths::setPortableVersion()
 {
     DataPaths* d = qz_data_paths();
-    d->m_paths[Config] = d->m_paths[AppData];
-    d->m_paths[Plugins] = QStringList{d->m_paths[Plugins].at(0)};
 
-    d->m_paths[Profiles] = d->m_paths[Config];
-    d->m_paths[Profiles].first().append(QLatin1String("/profiles"));
+    const QString appDir = QCoreApplication::applicationDirPath();
 
-    d->m_paths[Temp] = d->m_paths[Config];
-    d->m_paths[Temp].first().append(QLatin1String("/tmp"));
+    d->m_paths[AppData] = QStringList{appDir};
+    d->m_paths[Config] = QStringList{appDir + QSL("/config")};
+    d->m_paths[Cache] = QStringList{appDir + QSL("/cache")};
+    d->m_paths[Profiles] = QStringList{appDir + QSL("/config/profiles")};
+
+    d->m_paths[Themes].clear();
+    d->m_paths[Plugins].clear();
+    d->initAssetsIn(appDir);
 
     // Make sure the Config and Temp paths exists
-    QDir dir;
-    dir.mkpath(d->m_paths[Config].at(0));
-    dir.mkpath(d->m_paths[Temp].at(0));
+    QDir().mkpath(d->m_paths[Config].at(0));
+    QDir().mkpath(d->m_paths[Temp].at(0));
 }
 
 // static
@@ -133,10 +135,8 @@ void DataPaths::init()
 
     m_paths[Cache].append(QStandardPaths::writableLocation(QStandardPaths::CacheLocation));
 
-    // Make sure the Config and Temp paths exists
-    QDir dir;
-    dir.mkpath(m_paths[Config].at(0));
-    dir.mkpath(m_paths[Temp].at(0));
+    // Make sure Config path exists
+    QDir().mkpath(m_paths[Config].at(0));
 }
 
 void DataPaths::initCurrentProfile(const QString &profilePath)
