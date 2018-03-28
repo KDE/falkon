@@ -214,4 +214,17 @@ void LocationBarTest::loadAction_issue2578()
     QCOMPARE(action.type, LocationBar::LoadAction::Invalid);
 }
 
+void LocationBarTest::loadAction_kdebug392445()
+{
+    // %20 in url will make it incorrectly treat as web search
+
+    qzSettings->searchFromAddressBar = true;
+
+    LocationBar::LoadAction action;
+
+    action = LocationBar::loadAction("http://www.example.com/my%20beautiful%20page");
+    QCOMPARE(action.type, LocationBar::LoadAction::Url);
+    QCOMPARE(action.loadRequest.url(), QUrl("http://www.example.com/my%20beautiful%20page"));
+}
+
 FALKONTEST_MAIN(LocationBarTest)

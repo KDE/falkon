@@ -277,12 +277,12 @@ LocationBar::LoadAction LocationBar::loadAction(const QString &text)
     }
 
     // Otherwise load as url
-    const QUrl &guessedUrl = QUrl::fromUserInput(t);
+    const QUrl guessedUrl = QUrl::fromUserInput(t);
     if (guessedUrl.isValid()) {
         // Always allow javascript: to be loaded
         const bool forceLoad = guessedUrl.scheme() == QL1S("javascript");
         // Only allow spaces in query
-        if (forceLoad || !QzTools::containsSpace(guessedUrl.toString(QUrl::RemoveQuery))) {
+        if (forceLoad || !QzTools::containsSpace(t) || !QzTools::containsSpace(guessedUrl.toString(QUrl::RemoveQuery))) {
             // Only allow supported schemes
             if (forceLoad || WebPage::supportedSchemes().contains(guessedUrl.scheme())) {
                 action.type = LoadAction::Url;
