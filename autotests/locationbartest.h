@@ -34,4 +34,5 @@ private Q_SLOTS:
     void loadAction_kdebug389491();
     void loadActionSpecialSchemesTest();
     void loadAction_issue2578();
+    void loadAction_kdebug392445();
 };
