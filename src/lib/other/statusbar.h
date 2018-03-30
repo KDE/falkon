@@ -30,6 +30,8 @@ class AbstractButtonInterface;
 
 class FALKON_EXPORT TipLabel : public SqueezeLabelV1
 {
+    Q_OBJECT
+
 public:
     explicit TipLabel(QWidget* parent);
 
@@ -46,6 +48,8 @@ private:
 
 class FALKON_EXPORT StatusBar : public QStatusBar
 {
+    Q_OBJECT
+
 public:
     explicit StatusBar(BrowserWindow *window);
 
