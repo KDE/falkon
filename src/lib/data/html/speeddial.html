@@ -627,7 +627,9 @@ function onEditClick(box) {
     $('#fadeOverlay').css({'filter' : 'alpha(opacity=100)'}).fadeIn();
     $('#fadeOverlay').click(function() {hideEditBox()});
     $('#overlay-edit').click(function(event) { event.stopPropagation(); });
-    $('#formUrl').focus().val($('#formUrl').val()); // focus and move cursor to end
+
+    var temp = $('#formUrl').val();
+    $('#formUrl').focus().val('').val(temp); // focus and move cursor to end
 }
 
 function onReloadClick(box) {
