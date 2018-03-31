@@ -28,6 +28,8 @@
 #include <QSqlDatabase>
 #include <QMessageBox>
 #include <QSettings>
+#include <QStandardPaths>
+
 #include <iostream>
 
 ProfileManager::ProfileManager()
@@ -38,7 +40,11 @@ void ProfileManager::initConfigDir()
 {
     QDir dir(DataPaths::path(DataPaths::Config));
 
-    if (dir.exists() && QFile(dir.filePath(QLatin1String("profiles/profiles.ini"))).exists()) {
+    if (!dir.exists()) {
+        migrateFromQupZilla();
+    }
+
+    if (QFileInfo::exists(dir.filePath(QLatin1String("profiles/profiles.ini")))) {
         return;
     }
 
@@ -238,6 +244,29 @@ void ProfileManager::copyDataToProfile()
                              "backed up in following file:<br/><br/><b>" + browseDataBackup + "<br/></b>";
         QMessageBox::warning(0, "Falkon: Incompatible profile version", text);
     }
+}
+
+void ProfileManager::migrateFromQupZilla()
+{
+    if (mApp->isPortable()) {
+        return;
+    }
+
+#if defined(Q_OS_WIN)
+    const QString qzConfig = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QL1S("/qupzilla");
+#elif defined(Q_OS_MACOS)
+    const QString qzConfig = QDir::homePath() + QLatin1String("/Library/Application Support/QupZilla");
+#else // Unix
+    const QString qzConfig = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QL1S("/qupzilla");
+#endif
+
+    if (!QFileInfo::exists(qzConfig)) {
+        return;
+    }
+
+    std::cout << "Falkon: Migrating config from QupZilla..." << std::endl;
+
+    QzTools::copyRecursively(qzConfig, DataPaths::path(DataPaths::Config));
 }
 
 void ProfileManager::connectDatabase()

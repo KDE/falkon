@@ -59,8 +59,7 @@ void DataPaths::setPortableVersion()
     d->m_paths[Plugins].clear();
     d->initAssetsIn(appDir);
 
-    // Make sure the Config and Temp paths exists
-    QDir().mkpath(d->m_paths[Config].at(0));
+    // Make sure Temp path exists
     QDir().mkpath(d->m_paths[Temp].at(0));
 }
 
@@ -134,9 +133,6 @@ void DataPaths::init()
     }
 
     m_paths[Cache].append(QStandardPaths::writableLocation(QStandardPaths::CacheLocation));
-
-    // Make sure Config path exists
-    QDir().mkpath(m_paths[Config].at(0));
 }
 
 void DataPaths::initCurrentProfile(const QString &profilePath)
