@@ -115,7 +115,7 @@ bool ProfileManager::removeProfile(const QString &profileName)
         return false;
     }
 
-    QzTools::removeDir(dir.absolutePath());
+    QzTools::removeRecursively(dir.absolutePath());
     return true;
 }
 

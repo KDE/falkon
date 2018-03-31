@@ -23,7 +23,7 @@
 #define FALKONTEST_MAIN(Test) \
     int main(int argc, char **argv) \
     { \
-        QzTools::removeDir(QDir::tempPath() + QSL("/Falkon-test")); \
+        QzTools::removeRecursively(QDir::tempPath() + QSL("/Falkon-test")); \
         MainApplication::setTestModeEnabled(true); \
         MainApplication app(argc, argv); \
         QTEST_DISABLE_KEYPAD_NAVIGATION; \

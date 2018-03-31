@@ -41,6 +41,9 @@ private Q_SLOTS:
     void escapeSqlGlobString();
 
     void ensureUniqueFilename();
+    void copyRecursivelyTest();
+    void removeRecursivelyTest();
+    void dontFollowSymlinksTest();
 
 private:
     QString createPath(const char *file) const;

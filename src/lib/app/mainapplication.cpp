@@ -787,7 +787,7 @@ void MainApplication::saveSettings()
         m_cookieJar->deleteAllCookies();
     }
     if (deleteCache) {
-        QzTools::removeDir(mApp->webProfile()->cachePath());
+        QzTools::removeRecursively(mApp->webProfile()->cachePath());
     }
 
     m_searchEnginesManager->saveSettings();

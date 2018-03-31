@@ -48,6 +48,8 @@
 
 #ifdef Q_OS_WIN
 #include <windows.h>
+#else
+#include <unistd.h>
 #endif
 
 #ifdef Q_OS_MACOS
@@ -131,35 +133,67 @@ void QzTools::centerWidgetToParent(QWidget* w, QWidget* parent)
     w->move(p);
 }
 
-bool QzTools::removeFile(const QString &fullFileName)
+bool QzTools::removeRecursively(const QString &filePath)
 {
-    QFile f(fullFileName);
-    if (f.exists()) {
-        return f.remove();
+    const QFileInfo fileInfo(filePath);
+    if (!fileInfo.exists() && !fileInfo.isSymLink()) {
+        return true;
     }
-    else {
+    if (fileInfo.isDir() && !fileInfo.isSymLink()) {
+        QDir dir(filePath);
+        dir = dir.canonicalPath();
+        if (dir.isRoot() || dir.path() == QDir::home().canonicalPath()) {
+            qCritical() << "Attempt to remove root/home directory" << dir;
+            return false;
+        }
+        const QStringList fileNames = dir.entryList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot | QDir::Hidden | QDir::System);
+        for (const QString &fileName : fileNames) {
+            if (!removeRecursively(filePath + QLatin1Char('/') + fileName)) {
+                return false;
+            }
+        }
+        if (!QDir::root().rmdir(dir.path())) {
+            return false;
+        }
+    } else if (!QFile::remove(filePath)) {
         return false;
     }
+    return true;
 }
 
-void QzTools::removeDir(const QString &d)
+bool QzTools::copyRecursively(const QString &sourcePath, const QString &targetPath)
 {
-    QDir dir(d);
-    if (dir.exists()) {
-        const QFileInfoList list = dir.entryInfoList();
-        QFileInfo fi;
-        for (int l = 0; l < list.size(); l++) {
-            fi = list.at(l);
-            if (fi.isDir() && fi.fileName() != QLatin1String(".") && fi.fileName() != QLatin1String("..")) {
-                QzTools::removeDir(fi.absoluteFilePath());
-            }
-            else if (fi.isFile()) {
-                QzTools::removeFile(fi.absoluteFilePath());
-            }
-
+    const QFileInfo srcFileInfo(sourcePath);
+    if (srcFileInfo.isDir() && !srcFileInfo.isSymLink()) {
+        QDir targetDir(targetPath);
+        targetDir.cdUp();
+        if (!targetDir.mkdir(QFileInfo(targetPath).fileName())) {
+            return false;
         }
-        dir.rmdir(d);
+        const QStringList fileNames = QDir(sourcePath).entryList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot | QDir::Hidden | QDir::System);
+        for (const QString &fileName : fileNames) {
+            const QString newSourcePath = sourcePath + QL1C('/') + fileName;
+            const QString newTargetPath = targetPath + QL1C('/') + fileName;
+            if (!copyRecursively(newSourcePath, newTargetPath)) {
+                return false;
+            }
+        }
+#ifndef Q_OS_WIN
+    } else if (srcFileInfo.isSymLink()) {
+        const QByteArray pathData = sourcePath.toLocal8Bit();
+        char buf[1024];
+        ssize_t len = readlink(pathData.constData(), buf, sizeof(buf) - 1);
+        if (len < 0) {
+            qWarning() << "Error getting symlink path" << pathData;
+            return false;
+        }
+        buf[len] = '\0';
+        return QFile::link(QString::fromLocal8Bit(buf), targetPath);
+#endif
+    } else if (!QFile::copy(sourcePath, targetPath)) {
+        return false;
     }
+    return true;
 }
 
 /* Finds same part of @one in @other from the beginning */
