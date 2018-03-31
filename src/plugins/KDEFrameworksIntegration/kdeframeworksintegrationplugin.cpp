@@ -1,5 +1,5 @@
 /* ============================================================
-* KDESupport - KDE support plugin for Falkon
+* KDEFrameworksIntegration - KDE support plugin for Falkon
 * Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "kdesupportplugin.h"
+#include "kdeframeworksintegrationplugin.h"
 #include "kwalletpasswordbackend.h"
 #include "pluginproxy.h"
 #include "browserwindow.h"
@@ -33,18 +33,18 @@
 
 #include <QWebEngineProfile>
 
-KDESupportPlugin::KDESupportPlugin()
+KDEFrameworksIntegrationPlugin::KDEFrameworksIntegrationPlugin()
     : QObject()
     , m_backend(0)
 {
 }
 
-DesktopFile KDESupportPlugin::metaData() const
+DesktopFile KDEFrameworksIntegrationPlugin::metaData() const
 {
-    return DesktopFile(QSL(":kdesupport/metadata.desktop"));
+    return DesktopFile(QSL(":kdeframeworksintegration/metadata.desktop"));
 }
 
-void KDESupportPlugin::init(InitState state, const QString &settingsPath)
+void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settingsPath)
 {
     Q_UNUSED(state);
     Q_UNUSED(settingsPath);
@@ -70,7 +70,7 @@ void KDESupportPlugin::init(InitState state, const QString &settingsPath)
     KCrash::setFlags(KCrash::KeepFDs);
 }
 
-void KDESupportPlugin::unload()
+void KDEFrameworksIntegrationPlugin::unload()
 {
     mApp->autoFill()->passwordManager()->unregisterBackend(m_backend);
     delete m_backend;
@@ -83,7 +83,7 @@ void KDESupportPlugin::unload()
     m_kioSchemeHandlers.clear();
 }
 
-bool KDESupportPlugin::testPlugin()
+bool KDEFrameworksIntegrationPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (Qz::VERSION == QLatin1String(FALKON_VERSION));

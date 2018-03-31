@@ -1,5 +1,5 @@
 /* ============================================================
-* KDESupport - KDE support plugin for Falkon
+* KDEFrameworksIntegration - KDE support plugin for Falkon
 * Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
@@ -15,22 +15,21 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef KDESUPPORTPLUGIN_H
-#define KDESUPPORTPLUGIN_H
+#pragma once
 
 #include "plugininterface.h"
 
 class KWalletPasswordBackend;
 class KIOSchemeHandler;
 
-class KDESupportPlugin : public QObject, public PluginInterface
+class KDEFrameworksIntegrationPlugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.KDESupport")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.KDEFrameworksIntegration")
 
 public:
-    explicit KDESupportPlugin();
+    explicit KDEFrameworksIntegrationPlugin();
 
     DesktopFile metaData() const override;
     void init(InitState state, const QString &settingsPath) override;
@@ -41,5 +40,3 @@ private:
     KWalletPasswordBackend* m_backend;
     QVector<KIOSchemeHandler*> m_kioSchemeHandlers;
 };
-
-#endif // KDESUPPORTPLUGIN_H
