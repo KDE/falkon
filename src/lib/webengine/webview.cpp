@@ -511,7 +511,21 @@ void WebView::copyLinkToClipboard()
 
 void WebView::savePageAs()
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    page()->runJavaScript(QSL("document.contentType"), WebPage::SafeJsWorld, [this](const QVariant &res) {
+        const QSet<QString> webPageTypes = {
+            QSL("text/html"),
+            QSL("application/xhtml+xml")
+        };
+        if (res.isNull() || webPageTypes.contains(res.toString())) {
+            triggerPageAction(QWebEnginePage::SavePage);
+        } else {
+            page()->download(url());
+        }
+    });
+#else
     triggerPageAction(QWebEnginePage::SavePage);
+#endif
 }
 
 void WebView::copyImageToClipboard()
@@ -824,11 +838,13 @@ void WebView::createLinkContextMenu(QMenu* menu, const WebHitTestResult &hitTest
 void WebView::createImageContextMenu(QMenu* menu, const WebHitTestResult &hitTest)
 {
     menu->addSeparator();
-    Action* act = new Action(tr("Show i&mage"));
-    act->setData(hitTest.imageUrl());
-    connect(act, SIGNAL(triggered()), this, SLOT(openActionUrl()));
-    connect(act, SIGNAL(ctrlTriggered()), this, SLOT(userDefinedOpenUrlInNewTab()));
-    menu->addAction(act);
+    if (hitTest.imageUrl() != url()) {
+        Action *act = new Action(tr("Show i&mage"));
+        act->setData(hitTest.imageUrl());
+        connect(act, SIGNAL(triggered()), this, SLOT(openActionUrl()));
+        connect(act, SIGNAL(ctrlTriggered()), this, SLOT(userDefinedOpenUrlInNewTab()));
+        menu->addAction(act);
+    }
     menu->addAction(tr("Copy image"), this, SLOT(copyImageToClipboard()));
     menu->addAction(QIcon::fromTheme("edit-copy"), tr("Copy image ad&dress"), this, SLOT(copyLinkToClipboard()))->setData(hitTest.imageUrl());
     menu->addSeparator();
