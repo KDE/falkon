@@ -830,11 +830,13 @@ void WebView::createLinkContextMenu(QMenu* menu, const WebHitTestResult &hitTest
 void WebView::createImageContextMenu(QMenu* menu, const WebHitTestResult &hitTest)
 {
     menu->addSeparator();
-    Action* act = new Action(tr("Show i&mage"));
-    act->setData(hitTest.imageUrl());
-    connect(act, SIGNAL(triggered()), this, SLOT(openActionUrl()));
-    connect(act, SIGNAL(ctrlTriggered()), this, SLOT(userDefinedOpenUrlInNewTab()));
-    menu->addAction(act);
+    if (hitTest.imageUrl() != url()) {
+        Action *act = new Action(tr("Show i&mage"));
+        act->setData(hitTest.imageUrl());
+        connect(act, SIGNAL(triggered()), this, SLOT(openActionUrl()));
+        connect(act, SIGNAL(ctrlTriggered()), this, SLOT(userDefinedOpenUrlInNewTab()));
+        menu->addAction(act);
+    }
     menu->addAction(tr("Copy image"), this, SLOT(copyImageToClipboard()));
     menu->addAction(QIcon::fromTheme("edit-copy"), tr("Copy image ad&dress"), this, SLOT(copyLinkToClipboard()))->setData(hitTest.imageUrl());
     menu->addSeparator();
