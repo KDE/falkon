@@ -36,6 +36,7 @@ public:
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;
+    void showSettings(QWidget *parent = nullptr) override;
 
 private:
     void webPageCreated(WebPage *page);

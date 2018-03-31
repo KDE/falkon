@@ -98,7 +98,7 @@ public Q_SLOTS:
     void updateMatcher();
     void updateAllSubscriptions();
 
-    AdBlockDialog* showDialog();
+    AdBlockDialog *showDialog(QWidget *parent = nullptr);
 
 private:
     bool m_loaded;

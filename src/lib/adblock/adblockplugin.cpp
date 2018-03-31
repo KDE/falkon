@@ -70,6 +70,11 @@ bool AdBlockPlugin::testPlugin()
     return true;
 }
 
+void AdBlockPlugin::showSettings(QWidget *parent)
+{
+    AdBlockManager::instance()->showDialog(parent);
+}
+
 void AdBlockPlugin::webPageCreated(WebPage *page)
 {
     connect(page, &WebPage::loadFinished, this, [=]() {

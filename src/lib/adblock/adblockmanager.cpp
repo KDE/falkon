@@ -434,10 +434,10 @@ AdBlockSubscription* AdBlockManager::subscriptionByName(const QString &name) con
     return 0;
 }
 
-AdBlockDialog* AdBlockManager::showDialog()
+AdBlockDialog *AdBlockManager::showDialog(QWidget *parent)
 {
     if (!m_adBlockDialog) {
-        m_adBlockDialog = new AdBlockDialog(mApp->getWindow());
+        m_adBlockDialog = new AdBlockDialog(parent ? parent : mApp->getWindow());
     }
 
     m_adBlockDialog.data()->show();
