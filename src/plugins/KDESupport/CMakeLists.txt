@@ -13,4 +13,11 @@ qt5_add_resources(RSCS ${KDESupport_RSCS})
 
 add_library(KDESupport MODULE ${KDESupport_SRCS} ${RSCS})
 install(TARGETS KDESupport DESTINATION ${FALKON_INSTALL_PLUGINDIR})
-target_link_libraries(KDESupport FalkonPrivate KF5::Wallet KF5::KIOCore KF5::KIOWidgets)
+target_link_libraries(KDESupport
+    FalkonPrivate
+    KF5::Wallet
+    KF5::KIOCore
+    KF5::KIOWidgets
+    KF5::Crash
+    KF5::CoreAddons
+)

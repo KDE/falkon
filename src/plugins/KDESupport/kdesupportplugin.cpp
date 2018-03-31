@@ -27,6 +27,8 @@
 #include "kioschemehandler.h"
 #include "webpage.h"
 
+#include <KCrash>
+#include <KAboutData>
 #include <KProtocolInfo>
 
 #include <QWebEngineProfile>
@@ -60,6 +62,12 @@ void KDESupportPlugin::init(InitState state, const QString &settingsPath)
         mApp->webProfile()->installUrlSchemeHandler(protocol.toUtf8(), handler);
         WebPage::addSupportedScheme(protocol);
     }
+
+    KAboutData aboutData(QSL("falkon"), QSL("Falkon"), QCoreApplication::applicationVersion());
+    KAboutData::setApplicationData(aboutData);
+
+    KCrash::initialize();
+    KCrash::setFlags(KCrash::KeepFDs);
 }
 
 void KDESupportPlugin::unload()

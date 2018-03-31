@@ -102,12 +102,16 @@ if (PKG_CONFIG_FOUND)
     endif()
 endif()
 
-# Optional: KWallet + KIO
+# Optional: KWallet, KIO, KCrash, KCoreAddons
 set(KF5_MIN_VERSION "5.27.0")
 find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5Wallet PROPERTIES DESCRIPTION "KDESupport plugin" TYPE OPTIONAL)
 find_package(KF5KIO ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5KIO PROPERTIES DESCRIPTION "KDESupport plugin" TYPE OPTIONAL)
+find_package(KF5Crash ${KF5_MIN_VERSION} CONFIG)
+set_package_properties(KF5Crash PROPERTIES DESCRIPTION "KDESupport plugin" TYPE OPTIONAL)
+find_package(KF5CoreAddons ${KF5_MIN_VERSION} CONFIG)
+set_package_properties(KF5CoreAddons PROPERTIES DESCRIPTION "KDESupport plugin" TYPE OPTIONAL)
 
 # Optional: PySide2
 find_package(PySide2 "2.0.0")
