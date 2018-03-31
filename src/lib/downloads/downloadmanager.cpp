@@ -122,6 +122,9 @@ void DownloadManager::closeDownloadTab(const QUrl &url) const
 {
     // Attempt to close empty tab that was opened only for loading the download url
     auto testWebView = [](TabbedWebView *view, const QUrl &url) {
+        if (!view->webTab()->isRestored()) {
+            return false;
+        }
         if (view->browserWindow()->tabWidget()->tabBar()->normalTabsCount() < 2) {
             return false;
         }
