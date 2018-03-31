@@ -51,6 +51,7 @@ private:
     void updateCurrentProfile();
     void updateProfile(const QString &current, const QString &profile);
     void copyDataToProfile();
+    void migrateFromQupZilla();
 
     void connectDatabase();
 };

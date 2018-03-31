@@ -271,6 +271,110 @@ void QzToolsTest::ensureUniqueFilename()
     }
 }
 
+static void createTestDirectoryStructure(const QString &path)
+{
+    QDir().mkdir(path);
+    QDir dir(path);
+    dir.mkdir("dir1");
+    dir.mkdir("dir2");
+    dir.mkdir("dir3");
+    dir.cd("dir1");
+    dir.mkdir("dir1_1");
+    dir.mkdir("dir1_2");
+    dir.mkdir("dir1_3");
+    dir.cdUp();
+    dir.cd("dir3");
+    dir.mkdir("dir3_1");
+    QFile file(path + "/dir1/dir1_2/file1.txt");
+    file.open(QFile::WriteOnly);
+    file.write("test");
+    file.close();
+}
+
+void QzToolsTest::copyRecursivelyTest()
+{
+    const QString testDir = createPath("copyRecursivelyTest");
+    createTestDirectoryStructure(testDir);
+
+    QVERIFY(!QFileInfo(testDir + "-copy").exists());
+
+    // Copy to non-existant target
+    QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy"), true);
+
+    QCOMPARE(QFileInfo(testDir + "-copy").isDir(), true);
+    QCOMPARE(QFileInfo(testDir + "-copy/dir1").isDir(), true);
+    QCOMPARE(QFileInfo(testDir + "-copy/dir2").isDir(), true);
+    QCOMPARE(QFileInfo(testDir + "-copy/dir3").isDir(), true);
+    QCOMPARE(QFileInfo(testDir + "-copy/dir1/dir1_1").isDir(), true);
+    QCOMPARE(QFileInfo(testDir + "-copy/dir1/dir1_2").isDir(), true);
+    QCOMPARE(QFileInfo(testDir + "-copy/dir1/dir1_3").isDir(), true);
+    QCOMPARE(QFileInfo(testDir + "-copy/dir3/dir3_1").isDir(), true);
+    QCOMPARE(QFileInfo(testDir + "-copy/dir1/dir1_2/file1.txt").isFile(), true);
+
+    QFile file(testDir + "-copy/dir1/dir1_2/file1.txt");
+    file.open(QFile::ReadOnly);
+    QCOMPARE(file.readAll(), QByteArray("test"));
+
+    // Copy to target that already exists
+    QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy"), false);
+
+    // Cleanup
+    QCOMPARE(QzTools::removeRecursively(testDir), true);
+    QCOMPARE(QzTools::removeRecursively(testDir + "-copy"), true);
+}
+
+void QzToolsTest::removeRecursivelyTest()
+{
+    const QString testDir = createPath("removeRecursivelyTest");
+    createTestDirectoryStructure(testDir);
+
+    QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy"), true);
+    QCOMPARE(QzTools::removeRecursively(testDir + "-copy"), true);
+    QCOMPARE(QFileInfo(testDir + "-copy").exists(), false);
+
+    // Remove non-existant path returns success
+    QCOMPARE(QzTools::removeRecursively(testDir + "-copy"), true);
+
+    QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy2"), true);
+
+    QFile dir(testDir + "-copy2");
+    dir.setPermissions(dir.permissions() & ~(QFile::WriteOwner | QFile::WriteUser | QFile::WriteGroup | QFile::WriteOther));
+
+    QCOMPARE(QzTools::removeRecursively(testDir + "-copy2"), false);
+
+    dir.setPermissions(dir.permissions() | QFile::WriteOwner);
+
+    QCOMPARE(QzTools::removeRecursively(testDir + "-copy2"), true);
+
+    // Cleanup
+    QCOMPARE(QzTools::removeRecursively(testDir), true);
+}
+
+void QzToolsTest::dontFollowSymlinksTest()
+{
+    const QString testDir = createPath("removeRecursivelyTest");
+    createTestDirectoryStructure(testDir);
+
+    QDir().mkpath(testDir + "/subdir");
+    QFile::link(testDir, testDir + "/subdir/link");
+
+    QVERIFY(QzTools::removeRecursively(testDir + "/subdir"));
+
+    QVERIFY(!QFile::exists(testDir + "/subdir"));
+    QVERIFY(QFile::exists(testDir));
+
+    QDir().mkpath(testDir + "/subdir/normalfolder");
+    QFile::link("..", testDir + "/subdir/link");
+
+    QVERIFY(QzTools::copyRecursively(testDir + "/subdir", testDir + "/subdir2"));
+
+    QCOMPARE(QFile::exists(testDir + "/subdir2/link"), true);
+    QCOMPARE(QFile::exists(testDir + "/subdir2/normalfolder"), true);
+
+    // Cleanup
+    QCOMPARE(QzTools::removeRecursively(testDir), true);
+}
+
 QString QzToolsTest::createPath(const char *file) const
 {
     return m_tmpPath + QL1S("/") + file;

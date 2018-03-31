@@ -67,22 +67,22 @@ void ClearPrivateData::clearLocalStorage()
 {
     const QString profile = DataPaths::currentProfilePath();
 
-    QzTools::removeDir(profile + "/Local Storage");
+    QzTools::removeRecursively(profile + "/Local Storage");
 }
 
 void ClearPrivateData::clearWebDatabases()
 {
     const QString profile = DataPaths::currentProfilePath();
 
-    QzTools::removeDir(profile + "/IndexedDB");
-    QzTools::removeDir(profile + "/databases");
+    QzTools::removeRecursively(profile + "/IndexedDB");
+    QzTools::removeRecursively(profile + "/databases");
 }
 
 void ClearPrivateData::clearCache()
 {
     const QString profile = DataPaths::currentProfilePath();
 
-    QzTools::removeDir(profile + "/GPUCache");
+    QzTools::removeRecursively(profile + "/GPUCache");
 
     mApp->webProfile()->clearHttpCache();
 }

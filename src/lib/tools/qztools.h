@@ -43,8 +43,8 @@ public:
     static void centerWidgetOnScreen(QWidget* w);
     static void centerWidgetToParent(QWidget* w, QWidget* parent);
 
-    static bool removeFile(const QString &fullFileName);
-    static void removeDir(const QString &d);
+    static bool removeRecursively(const QString &filePath);
+    static bool copyRecursively(const QString &sourcePath, const QString &targetPath);
 
     static QString samePartOfStrings(const QString &one, const QString &other);
     static QString urlEncodeQueryString(const QUrl &url);
