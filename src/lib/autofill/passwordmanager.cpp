@@ -151,7 +151,10 @@ void PasswordManager::switchBackend(const QString &backendID)
         return;
     }
 
-    m_backend->setActive(false);
+    if (m_backend) {
+        m_backend->setActive(false);
+    }
+
     m_backend = backend;
     m_backend->setActive(true);
 

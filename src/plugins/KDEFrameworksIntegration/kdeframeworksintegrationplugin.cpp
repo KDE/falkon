@@ -52,6 +52,11 @@ void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settin
     m_backend = new KWalletPasswordBackend;
     mApp->autoFill()->passwordManager()->registerBackend(QSL("KWallet"), m_backend);
 
+    // Enable KWallet password backend inside KDE session
+    if (qgetenv("KDE_FULL_SESSION") == QByteArray("true")) {
+        mApp->autoFill()->passwordManager()->switchBackend(QSL("KWallet"));
+    }
+
     const auto protocols = KProtocolInfo::protocols();
     for (const QString &protocol : protocols) {
         if (WebPage::internalSchemes().contains(protocol)) {
