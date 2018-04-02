@@ -84,9 +84,18 @@ void Plugins::unloadPlugin(Plugins::Plugin* plugin)
 
 void Plugins::loadSettings()
 {
+    QStringList defaultAllowedPlugins = {
+        QSL("internal:adblock")
+    };
+
+    // Enable KDE Frameworks Integration when running inside KDE session
+    if (qgetenv("KDE_FULL_SESSION") == QByteArray("true")) {
+        defaultAllowedPlugins.append(QSL("lib:KDEFrameworksIntegration.so"));
+    }
+
     Settings settings;
     settings.beginGroup("Plugin-Settings");
-    m_allowedPlugins = settings.value("AllowedPlugins", QStringList(QSL("internal:adblock"))).toStringList();
+    m_allowedPlugins = settings.value("AllowedPlugins", defaultAllowedPlugins).toStringList();
     settings.endGroup();
 }
 
