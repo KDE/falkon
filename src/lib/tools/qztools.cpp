@@ -1001,3 +1001,20 @@ QString QzTools::operatingSystemLong()
     return QzTools::operatingSystem() + QSL(" ") + arch;
 }
 
+void QzTools::paintDropIndicator(QWidget *widget, const QRect &r)
+{
+    // Modified code from KFilePlacesView
+    QColor color = widget->palette().brush(QPalette::Normal, QPalette::Highlight).color();
+    const int x = (r.left() + r.right()) / 2;
+    const int thickness = qRound(r.width() / 2.0);
+    int alpha = 255;
+    const int alphaDec = alpha / (thickness + 1);
+    QStylePainter p(widget);
+    for (int i = 0; i < thickness; i++) {
+        color.setAlpha(alpha);
+        alpha -= alphaDec;
+        p.setPen(color);
+        p.drawLine(x - i, r.top(), x - i, r.bottom());
+        p.drawLine(x + i, r.top(), x + i, r.bottom());
+    }
+}

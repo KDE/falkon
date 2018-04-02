@@ -20,6 +20,7 @@
 
 #include <QAbstractItemModel>
 #include <QSortFilterProxyModel>
+#include <QMimeData>
 
 #include "qzcommon.h"
 
@@ -97,6 +98,25 @@ private Q_SLOTS:
 private:
     QString m_pattern;
     QTimer* m_filterTimer;
+};
+
+class FALKON_EXPORT BookmarksButtonMimeData : public QMimeData
+{
+    Q_OBJECT
+
+public:
+    explicit BookmarksButtonMimeData();
+
+    BookmarkItem *item() const;
+    void setBookmarkItem(BookmarkItem *item);
+
+    bool hasFormat(const QString &format) const override;
+    QStringList formats() const override;
+
+    static QString mimeType();
+
+private:
+    BookmarkItem* m_item;
 };
 
 #endif // BOOKMARKSMODEL_H

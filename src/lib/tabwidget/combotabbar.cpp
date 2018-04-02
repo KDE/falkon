@@ -22,6 +22,7 @@
 #include "mainapplication.h"
 #include "proxystyle.h"
 #include "qzsettings.h"
+#include "qztools.h"
 
 #include <QIcon>
 #include <QHBoxLayout>
@@ -1379,19 +1380,7 @@ void TabBarHelper::paintEvent(QPaintEvent *)
             const int rightOffset = m_dropIndicatorIndex == count() - 1 ? -2 : 0;
             r = QRect(tr.right() + rightOffset, tr.top(), 3, tr.height());
         }
-        // Modified code from KFilePlacesView
-        QColor color = palette().brush(QPalette::Normal, QPalette::Highlight).color();
-        const int x = (r.left() + r.right()) / 2;
-        const int thickness = qRound(r.width() / 2.0);
-        int alpha = 255;
-        const int alphaDec = alpha / (thickness + 1);
-        for (int i = 0; i < thickness; i++) {
-            color.setAlpha(alpha);
-            alpha -= alphaDec;
-            p.setPen(color);
-            p.drawLine(x - i, r.top(), x - i, r.bottom());
-            p.drawLine(x + i, r.top(), x + i, r.bottom());
-        }
+        QzTools::paintDropIndicator(this, r);
     }
 }
 

@@ -59,6 +59,9 @@ private:
 
     void dropEvent(QDropEvent* e);
     void dragEnterEvent(QDragEnterEvent* e);
+    void dragMoveEvent(QDragMoveEvent* e);
+    void dragLeaveEvent(QDragLeaveEvent* e);
+    void paintEvent(QPaintEvent* p);
 
     BrowserWindow* m_window;
     Bookmarks* m_bookmarks;
@@ -67,6 +70,10 @@ private:
     QTimer* m_updateTimer;
     QAction* m_actShowOnlyIcons = nullptr;
     QAction* m_actShowOnlyText = nullptr;
+
+    int m_dropRow;
+    QPoint m_dropPos;
+    void clearDropIndicator();
 };
 
 #endif // BOOKMARKSTOOLBAR_H

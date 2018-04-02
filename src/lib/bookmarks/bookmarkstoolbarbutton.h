@@ -67,13 +67,19 @@ private:
     void leaveEvent(QEvent* event) override;
     void mousePressEvent(QMouseEvent* event) override;
     void mouseReleaseEvent(QMouseEvent* event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
     void paintEvent(QPaintEvent* event) override;
+
+    void dragEnterEvent(QDragEnterEvent *event) override;
+    void dragLeaveEvent(QDragLeaveEvent *event) override;
+    void dropEvent(QDropEvent *event) override;
 
     BookmarkItem* m_bookmark;
     BrowserWindow* m_window;
 
     bool m_showOnlyIcon;
     bool m_showOnlyText;
+    QPoint m_dragStartPosition;
 };
 
 #endif // BOOKMARKSTOOLBARBUTTON_H

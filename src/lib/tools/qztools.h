@@ -19,6 +19,7 @@
 #define QZTOOLS_H
 
 #include <QFileDialog>
+#include <QStylePainter>
 
 #include "qzcommon.h"
 
@@ -95,6 +96,8 @@ public:
     {
         return (index >= 0 && container.count() > index);
     }
+
+    static void paintDropIndicator(QWidget *widget, const QRect &r);
 };
 
 #endif // QZTOOLS_H

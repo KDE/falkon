@@ -17,6 +17,7 @@
 * ============================================================ */
 #include "bookmarkstoolbarbutton.h"
 #include "bookmarkstools.h"
+#include "bookmarksmodel.h"
 #include "bookmarkitem.h"
 #include "bookmarks.h"
 #include "mainapplication.h"
@@ -26,6 +27,8 @@
 #include <QPainter>
 #include <QMouseEvent>
 #include <QStyleOptionButton>
+#include <QDrag>
+#include <QMimeData>
 
 #define MAX_WIDTH 150
 #define SEPARATOR_WIDTH 8
@@ -38,6 +41,10 @@ BookmarksToolbarButton::BookmarksToolbarButton(BookmarkItem* bookmark, QWidget* 
     , m_showOnlyIcon(false)
 {
     init();
+
+    if (m_bookmark->isFolder()) {
+        setAcceptDrops(true);
+    }
 }
 
 BookmarkItem* BookmarksToolbarButton::bookmark() const
@@ -266,6 +273,8 @@ void BookmarksToolbarButton::mousePressEvent(QMouseEvent* event)
         }
     }
 
+    m_dragStartPosition = event->pos();
+
     QPushButton::mousePressEvent(event);
 }
 
@@ -292,6 +301,23 @@ void BookmarksToolbarButton::mouseReleaseEvent(QMouseEvent* event)
     }
 
     QPushButton::mouseReleaseEvent(event);
+}
+
+void BookmarksToolbarButton::mouseMoveEvent(QMouseEvent *event)
+{
+    if ((event->pos() - m_dragStartPosition).manhattanLength() < QApplication::startDragDistance()) {
+        QPushButton::mouseMoveEvent(event);
+        return;
+    }
+
+    setDown(false);
+
+    QDrag *drag = new QDrag(this);
+    BookmarksButtonMimeData* mime = new BookmarksButtonMimeData;
+    mime->setBookmarkItem(m_bookmark);
+    drag->setMimeData(mime);
+    drag->setPixmap(grab());
+    drag->exec();
 }
 
 void BookmarksToolbarButton::paintEvent(QPaintEvent* event)
@@ -361,4 +387,49 @@ void BookmarksToolbarButton::paintEvent(QPaintEvent* event)
         style()->drawItemText(&p, QStyle::visualRect(option.direction, option.rect, textRect),
                               Qt::TextSingleLine | Qt::AlignCenter, option.palette, true, txt);
     }
+}
+
+void BookmarksToolbarButton::dragEnterEvent(QDragEnterEvent *event)
+{
+    const QMimeData* mime = event->mimeData();
+    if ((mime->hasUrls() && mime->hasText()) || mime->hasFormat(BookmarksButtonMimeData::mimeType())) {
+        event->acceptProposedAction();
+        setDown(true);
+        return;
+    }
+
+    QPushButton::dragEnterEvent(event);
+}
+
+void BookmarksToolbarButton::dragLeaveEvent(QDragLeaveEvent *event)
+{
+    Q_UNUSED(event);
+    setDown(false);
+}
+
+void BookmarksToolbarButton::dropEvent(QDropEvent *event)
+{
+    setDown(false);
+
+    const QMimeData* mime = event->mimeData();
+    if (!mime->hasUrls() && !mime->hasFormat(BookmarksButtonMimeData::mimeType())) {
+        QPushButton::dropEvent(event);
+        return;
+    }
+
+    BookmarkItem* bookmark = nullptr;
+
+    if (mime->hasFormat(BookmarksButtonMimeData::mimeType())) {
+        const BookmarksButtonMimeData* bookmarkMime = static_cast<const BookmarksButtonMimeData*>(mime);
+        bookmark = bookmarkMime->item();
+    } else {
+        const QUrl url = mime->urls().at(0);
+        const QString title = mime->hasText() ? mime->text() : url.toEncoded(QUrl::RemoveScheme);
+
+        bookmark = new BookmarkItem(BookmarkItem::Url);
+        bookmark->setTitle(title);
+        bookmark->setUrl(url);
+    }
+
+    mApp->bookmarks()->addBookmark(m_bookmark, bookmark);
 }

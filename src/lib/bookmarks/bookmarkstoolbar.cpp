@@ -18,10 +18,12 @@
 #include "bookmarkstoolbar.h"
 #include "bookmarkstoolbarbutton.h"
 #include "bookmarkstools.h"
+#include "bookmarksmodel.h"
 #include "bookmarkitem.h"
 #include "bookmarks.h"
 #include "mainapplication.h"
 #include "iconprovider.h"
+#include "qztools.h"
 
 #include <QDragEnterEvent>
 #include <QHBoxLayout>
@@ -34,6 +36,7 @@ BookmarksToolbar::BookmarksToolbar(BrowserWindow* window, QWidget* parent)
     , m_window(window)
     , m_bookmarks(mApp->bookmarks())
     , m_clickedBookmark(0)
+    , m_dropRow(-1)
 {
     setObjectName("bookmarksbar");
     setAcceptDrops(true);
@@ -226,36 +229,104 @@ QSize BookmarksToolbar::minimumSizeHint() const
 
 void BookmarksToolbar::dropEvent(QDropEvent* e)
 {
+    int row = m_dropRow;
+    clearDropIndicator();
+
     const QMimeData* mime = e->mimeData();
 
-    if (!mime->hasUrls()) {
+    if (!mime->hasUrls() && !mime->hasFormat(BookmarksButtonMimeData::mimeType())) {
         QWidget::dropEvent(e);
         return;
     }
 
-    QUrl url = mime->urls().at(0);
-    QString title = mime->hasText() ? mime->text() : url.toEncoded(QUrl::RemoveScheme);
-
     BookmarkItem* parent = m_bookmarks->toolbarFolder();
-    BookmarksToolbarButton* button = buttonAt(e->pos());
-    if (button && button->bookmark()->isFolder()) {
-        parent = button->bookmark();
+    BookmarkItem* bookmark = nullptr;
+
+    if (mime->hasFormat(BookmarksButtonMimeData::mimeType())) {
+        const BookmarksButtonMimeData* bookmarkMime = static_cast<const BookmarksButtonMimeData*>(mime);
+        bookmark = bookmarkMime->item();
+        const int initialIndex = bookmark->parent()->children().indexOf(bookmark);
+        BookmarksToolbarButton* current = buttonAt(m_dropPos);
+        if (initialIndex < m_layout->indexOf(current)) {
+            row -= 1;
+        }
+    } else {
+        const QUrl url = mime->urls().at(0);
+        const QString title = mime->hasText() ? mime->text() : url.toEncoded(QUrl::RemoveScheme);
+
+        bookmark = new BookmarkItem(BookmarkItem::Url);
+        bookmark->setTitle(title);
+        bookmark->setUrl(url);
     }
 
-    BookmarkItem* bookmark = new BookmarkItem(BookmarkItem::Url);
-    bookmark->setTitle(title);
-    bookmark->setUrl(url);
-    m_bookmarks->addBookmark(parent, bookmark);
+    if (row >= 0) {
+        m_bookmarks->insertBookmark(parent, row, bookmark);
+    } else {
+        m_bookmarks->addBookmark(parent, bookmark);
+    }
 }
 
 void BookmarksToolbar::dragEnterEvent(QDragEnterEvent* e)
 {
     const QMimeData* mime = e->mimeData();
 
-    if (mime->hasUrls() && mime->hasText()) {
+    if ((mime->hasUrls() && mime->hasText()) || mime->hasFormat(BookmarksButtonMimeData::mimeType())) {
         e->acceptProposedAction();
         return;
     }
 
     QWidget::dragEnterEvent(e);
+}
+
+void BookmarksToolbar::dragMoveEvent(QDragMoveEvent *e)
+{
+    int eventX = e->pos().x();
+    BookmarksToolbarButton* button = buttonAt(e->pos());
+    m_dropPos = e->pos();
+    m_dropRow = m_layout->indexOf(button);
+    if (button) {
+        bool res = eventX - button->x() < button->x() + button->width() -eventX;
+        m_dropRow = res ? m_dropRow : m_dropRow + 1;
+    } else {
+        m_dropRow = -1;
+    }
+
+    update();
+}
+
+void BookmarksToolbar::dragLeaveEvent(QDragLeaveEvent *e)
+{
+    Q_UNUSED(e);
+    clearDropIndicator();
+}
+
+void BookmarksToolbar::clearDropIndicator()
+{
+    m_dropRow = -1;
+    update();
+}
+
+void BookmarksToolbar::paintEvent(QPaintEvent *p)
+{
+    QWidget::paintEvent(p);
+
+    // Draw drop indicator
+    if (m_dropRow != -1) {
+        BookmarksToolbarButton* button = buttonAt(m_dropPos);
+        if (button) {
+            if (button->bookmark()->isFolder()) {
+                return;
+            }
+            const QRect tr = QRect(button->x(), 0, button->width(), height());
+            QRect r;
+
+            if (m_dropRow == m_layout->indexOf(button)) {
+                r = QRect(qMax(0, tr.left() - 2), tr.top(), 3, tr.height());
+            } else {
+                r = QRect(tr.right() + 0, tr.top(), 3, tr.height());
+            }
+
+            QzTools::paintDropIndicator(this, r);
+        }
+    }
 }

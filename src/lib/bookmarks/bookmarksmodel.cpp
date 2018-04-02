@@ -349,3 +349,33 @@ void BookmarksFilterModel::startFiltering()
 {
     QSortFilterProxyModel::setFilterFixedString(m_pattern);
 }
+
+BookmarksButtonMimeData::BookmarksButtonMimeData()
+    : QMimeData()
+{
+}
+
+BookmarkItem *BookmarksButtonMimeData::item() const
+{
+    return m_item;
+}
+
+void BookmarksButtonMimeData::setBookmarkItem(BookmarkItem *item)
+{
+    m_item = item;
+}
+
+bool BookmarksButtonMimeData::hasFormat(const QString &format) const
+{
+    return mimeType() == format;
+}
+
+QStringList BookmarksButtonMimeData::formats() const
+{
+    return {mimeType()};
+}
+
+QString BookmarksButtonMimeData::mimeType()
+{
+    return QSL("application/falkon.bookmarktoolbutton.bookmarkitem");
+}
