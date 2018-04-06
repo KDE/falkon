@@ -341,6 +341,7 @@ void LocationBar::refreshTextFormat()
 void LocationBar::requestLoadUrl()
 {
     loadRequest(loadAction(text()).loadRequest);
+    updateSiteIcon();
 }
 
 void LocationBar::textEdited(const QString &text)
