@@ -29,7 +29,7 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    QzTools::removeDir(QDir::tempPath() + QSL("/Falkon-test"));
+    QzTools::removeRecursively(QDir::tempPath() + QSL("/Falkon-test"));
     MainApplication::setTestModeEnabled(true);
     MainApplication app(argc, argv);
 
