@@ -82,54 +82,56 @@ void History::addHistoryEntry(const QUrl &url, QString title)
         title = tr("Empty Page");
     }
 
-    QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT id, count, date, title FROM history WHERE url=?");
-    query.bindValue(0, url);
-    query.exec();
-    if (!query.next()) {
-        query.prepare("INSERT INTO history (count, date, url, title) VALUES (1,?,?,?)");
-        query.bindValue(0, QDateTime::currentMSecsSinceEpoch());
-        query.bindValue(1, url);
-        query.bindValue(2, title);
-        query.exec();
+    auto job = new SqlQueryJob(QSL("SELECT id, count, date, title FROM history WHERE url=?"), this);
+    job->addBindValue(url);
+    connect(job, &SqlQueryJob::finished, this, [=]() {
+        if (job->records().isEmpty()) {
+            auto job = new SqlQueryJob(QSL("INSERT INTO history (count, date, url, title) VALUES (1,?,?,?)"), this);
+            job->addBindValue(QDateTime::currentMSecsSinceEpoch());
+            job->addBindValue(url);
+            job->addBindValue(title);
+            connect(job, &SqlQueryJob::finished, this, [=]() {
+                HistoryEntry entry;
+                entry.id = job->lastInsertId().toInt();
+                entry.count = 1;
+                entry.date = QDateTime::currentDateTime();
+                entry.url = url;
+                entry.urlString = url.toEncoded();
+                entry.title = title;
+                emit historyEntryAdded(entry);
+            });
+            job->start();
+        } else {
+            const auto record = job->records().at(0);
+            const int id = record.value(0).toInt();
+            const int count = record.value(1).toInt();
+            const QDateTime date = QDateTime::fromMSecsSinceEpoch(record.value(2).toLongLong());
+            const QString oldTitle = record.value(3).toString();
 
-        int id = query.lastInsertId().toInt();
-        HistoryEntry entry;
-        entry.id = id;
-        entry.count = 1;
-        entry.date = QDateTime::currentDateTime();
-        entry.url = url;
-        entry.urlString = url.toEncoded();
-        entry.title = title;
-        emit historyEntryAdded(entry);
-    }
-    else {
-        int id = query.value(0).toInt();
-        int count = query.value(1).toInt();
-        QDateTime date = QDateTime::fromMSecsSinceEpoch(query.value(2).toLongLong());
-        QString oldTitle = query.value(3).toString();
+            auto job = new SqlQueryJob(QSL("UPDATE history SET count = count + 1, date=?, title=? WHERE url=?"), this);
+            job->addBindValue(QDateTime::currentMSecsSinceEpoch());
+            job->addBindValue(title);
+            job->addBindValue(url);
+            connect(job, &SqlQueryJob::finished, this, [=]() {
+                HistoryEntry before;
+                before.id = id;
+                before.count = count;
+                before.date = date;
+                before.url = url;
+                before.urlString = url.toEncoded();
+                before.title = oldTitle;
 
-        query.prepare("UPDATE history SET count = count + 1, date=?, title=? WHERE url=?");
-        query.bindValue(0, QDateTime::currentMSecsSinceEpoch());
-        query.bindValue(1, title);
-        query.bindValue(2, url);
-        query.exec();
+                HistoryEntry after = before;
+                after.count = count + 1;
+                after.date = QDateTime::currentDateTime();
+                after.title = title;
 
-        HistoryEntry before;
-        before.id = id;
-        before.count = count;
-        before.date = date;
-        before.url = url;
-        before.urlString = url.toEncoded();
-        before.title = oldTitle;
-
-        HistoryEntry after = before;
-        after.count = count + 1;
-        after.date = QDateTime::currentDateTime();
-        after.title = title;
-
-        emit historyEntryEdited(before, after);
-    }
+                emit historyEntryEdited(before, after);
+            });
+            job->start();
+        }
+    });
+    job->start();
 }
 
 // DeleteHistoryEntry
@@ -210,15 +212,6 @@ QList<int> History::indexesFromTimeRange(qint64 start, qint64 end)
     }
 
     return list;
-}
-
-bool History::urlIsStored(const QString &url)
-{
-    QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT id FROM history WHERE url=?");
-    query.bindValue(0, url);
-    query.exec();
-    return query.next();
 }
 
 QVector<HistoryEntry> History::mostVisited(int count)

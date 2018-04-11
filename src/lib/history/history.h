@@ -58,8 +58,6 @@ public:
 
     QList<int> indexesFromTimeRange(qint64 start, qint64 end);
 
-    bool urlIsStored(const QString &url);
-
     QVector<HistoryEntry> mostVisited(int count);
 
     void clearHistory();
