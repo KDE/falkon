@@ -99,14 +99,12 @@ WebPage::WebPage(QObject* parent)
         disconnect(m_contentsResizedConnection);
     });
 
-    // Workaround for broken load started/finished signals in QtWebEngine 5.10
-    if (qstrncmp(qVersion(), "5.10.", 5) == 0) {
-        connect(this, &QWebEnginePage::loadProgress, this, [this](int progress) {
-            if (progress == 100) {
-                emit loadFinished(true);
-            }
-        });
-    }
+    // Workaround for broken load started/finished signals in QtWebEngine 5.10, 5.11
+    connect(this, &QWebEnginePage::loadProgress, this, [this](int progress) {
+        if (progress == 100) {
+            emit loadFinished(true);
+        }
+    });
 
     // Workaround for changing webchannel world inside acceptNavigationRequest not working
     m_setupChannelTimer = new QTimer(this);
