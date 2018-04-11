@@ -22,6 +22,7 @@
 #include <QStyle>
 #include <QImage>
 #include <QUrl>
+#include <QCache>
 
 #include <functional>
 
@@ -80,6 +81,7 @@ private:
     QImage m_emptyWebImage;
     QIcon m_bookmarkIcon;
     QVector<BufferedIcon> m_iconBuffer;
+    QCache<QByteArray, QImage> m_urlImageCache;
 
     AutoSaver* m_autoSaver;
 };

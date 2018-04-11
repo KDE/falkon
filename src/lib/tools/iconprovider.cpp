@@ -189,6 +189,10 @@ QImage IconProvider::imageForUrl(const QUrl &url, bool allowNull)
 
     const QByteArray encodedUrl = encodeUrl(url);
 
+    if (QImage *img = instance()->m_urlImageCache.object(encodedUrl)) {
+        return img->isNull() && !allowNull ? IconProvider::emptyWebImage() : *img;
+    }
+
     foreach (const BufferedIcon &ic, instance()->m_iconBuffer) {
         if (encodeUrl(ic.first) == encodedUrl) {
             return ic.second;
@@ -200,11 +204,13 @@ QImage IconProvider::imageForUrl(const QUrl &url, bool allowNull)
     query.addBindValue(QString("%1*").arg(QzTools::escapeSqlGlobString(QString::fromUtf8(encodedUrl))));
     query.exec();
 
+    QImage *img = new QImage;
     if (query.next()) {
-        return QImage::fromData(query.value(0).toByteArray());
+        img->loadFromData(query.value(0).toByteArray());
     }
+    instance()->m_urlImageCache.insert(encodedUrl, img);
 
-    return allowNull ? QImage() : IconProvider::emptyWebImage();
+    return img->isNull() && !allowNull ? IconProvider::emptyWebImage() : *img;
 }
 
 QIcon IconProvider::iconForDomain(const QUrl &url, bool allowNull)
@@ -248,9 +254,13 @@ void IconProvider::saveIconsToDatabase()
         QBuffer buffer(&ba);
         buffer.open(QIODevice::WriteOnly);
         ic.second.save(&buffer, "PNG");
+
+        const QByteArray encodedUrl = encodeUrl(ic.first);
+        m_urlImageCache.remove(encodedUrl);
+
         auto job = new SqlQueryJob(QSL("INSERT OR REPLACE INTO icons (icon, url) VALUES (?,?)"), this);
         job->addBindValue(buffer.data());
-        job->addBindValue(QString::fromUtf8(encodeUrl(ic.first)));
+        job->addBindValue(QString::fromUtf8(encodedUrl));
         job->start();
     }
 
