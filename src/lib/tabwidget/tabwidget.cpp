@@ -297,7 +297,7 @@ void TabWidget::aboutToShowClosedTabsMenu()
     else {
         m_menuClosedTabs->addSeparator();
         m_menuClosedTabs->addAction(tr("Restore All Closed Tabs"), this, SLOT(restoreAllClosedTabs()));
-        m_menuClosedTabs->addAction(tr("Clear list"), this, SLOT(clearClosedTabsList()));
+        m_menuClosedTabs->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear list"), this, SLOT(clearClosedTabsList()));
     }
 }
 

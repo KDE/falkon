@@ -159,7 +159,7 @@ void HistoryMenu::aboutToShowClosedTabs()
     else {
         m_menuClosedTabs->addSeparator();
         m_menuClosedTabs->addAction(tr("Restore All Closed Tabs"), tabWidget, SLOT(restoreAllClosedTabs()));
-        m_menuClosedTabs->addAction(tr("Clear list"), tabWidget, SLOT(clearClosedTabsList()));
+        m_menuClosedTabs->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear list"), tabWidget, SLOT(clearClosedTabsList()));
     }
 }
 
@@ -187,7 +187,7 @@ void HistoryMenu::aboutToShowClosedWindows()
     } else {
         m_menuClosedWindows->addSeparator();
         m_menuClosedWindows->addAction(tr("Restore All Closed Windows"), manager, SLOT(restoreAllClosedWindows()));
-        m_menuClosedWindows->addAction(tr("Clear list"), manager, SLOT(clearClosedWindows()));
+        m_menuClosedWindows->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear list"), manager, SLOT(clearClosedWindows()));
     }
 }
 
