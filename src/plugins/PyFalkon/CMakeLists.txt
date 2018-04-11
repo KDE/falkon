@@ -120,6 +120,7 @@ set(GENERATED_SOURCES
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/delayedfilewatcher_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/iconprovider_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/qztools_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/sqlqueryjob_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/sqldatabase_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/toolbutton_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/wheelhelper_wrapper.cpp

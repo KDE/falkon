@@ -19,12 +19,89 @@
 
 #include <QApplication>
 #include <QThreadStorage>
-
+#include <QFutureWatcher>
 #include <QtConcurrent/QtConcurrentRun>
 
 QThreadStorage<QSqlDatabase> s_databases;
 
 Q_GLOBAL_STATIC(SqlDatabase, qz_sql_database)
+
+// SqlQueryJob
+SqlQueryJob::SqlQueryJob(QObject *parent)
+    : QObject(parent)
+{
+}
+
+SqlQueryJob::SqlQueryJob(const QString &query, QObject *parent)
+    : QObject(parent)
+{
+    setQuery(query);
+}
+
+void SqlQueryJob::setQuery(const QString &query)
+{
+    m_query = query;
+}
+
+void SqlQueryJob::addBindValue(const QVariant &value)
+{
+    m_boundValues.append(value);
+}
+
+QSqlError SqlQueryJob::error() const
+{
+    return m_error;
+}
+
+QVariant SqlQueryJob::lastInsertId() const
+{
+    return m_lastInsertId;
+}
+
+QVector<QSqlRecord> SqlQueryJob::records() const
+{
+    return m_records;
+}
+
+void SqlQueryJob::start()
+{
+    struct Result {
+        QSqlError error;
+        QVariant lastInsertId;
+        QVector<QSqlRecord> records;
+    };
+
+    const QString query = m_query;
+    m_query.clear();
+    const QVector<QVariant> boundValues = m_boundValues;
+    m_boundValues.clear();
+
+    auto watcher = new QFutureWatcher<Result>(this);
+    connect(watcher, &QFutureWatcher<Result>::finished, this, [=]() {
+        deleteLater();
+        const auto result = watcher->result();
+        m_error = result.error;
+        m_lastInsertId = result.lastInsertId;
+        m_records = result.records;
+        emit finished(this);
+    });
+
+    watcher->setFuture(QtConcurrent::run([=]() {
+        QSqlQuery q(SqlDatabase::instance()->database());
+        q.prepare(query);
+        for (const QVariant &value : boundValues) {
+            q.addBindValue(value);
+        }
+        q.exec();
+        Result res;
+        res.error = q.lastError();
+        res.lastInsertId = q.lastInsertId();
+        while (q.next()) {
+            res.records.append(q.record());
+        }
+        return res;
+    }));
+}
 
 // SqlDatabase
 SqlDatabase::SqlDatabase(QObject* parent)

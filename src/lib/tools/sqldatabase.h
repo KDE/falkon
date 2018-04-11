@@ -18,12 +18,39 @@
 #ifndef SQLDATABASE_H
 #define SQLDATABASE_H
 
-#include <QHash>
-#include <QMutex>
-#include <QFuture>
 #include <QSqlQuery>
+#include <QSqlError>
+#include <QSqlRecord>
 
 #include "qzcommon.h"
+
+class FALKON_EXPORT SqlQueryJob : public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit SqlQueryJob(QObject *parent = nullptr);
+    explicit SqlQueryJob(const QString &query, QObject *parent = nullptr);
+
+    void setQuery(const QString &query);
+    void addBindValue(const QVariant &value);
+
+    QSqlError error() const;
+    QVariant lastInsertId() const;
+    QVector<QSqlRecord> records() const;
+
+    void start();
+
+Q_SIGNALS:
+    void finished(SqlQueryJob *job);
+
+private:
+    QString m_query;
+    QVector<QVariant> m_boundValues;
+    QSqlError m_error;
+    QVariant m_lastInsertId;
+    QVector<QSqlRecord> m_records;
+};
 
 class FALKON_EXPORT SqlDatabase : public QObject
 {
