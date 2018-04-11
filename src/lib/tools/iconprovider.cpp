@@ -244,25 +244,14 @@ IconProvider* IconProvider::instance()
 void IconProvider::saveIconsToDatabase()
 {
     foreach (const BufferedIcon &ic, m_iconBuffer) {
-        QSqlQuery query(SqlDatabase::instance()->database());
-        query.prepare("SELECT id FROM icons WHERE url = ?");
-        query.bindValue(0, encodeUrl(ic.first));
-        query.exec();
-
-        if (query.next()) {
-            query.prepare("UPDATE icons SET icon = ? WHERE url = ?");
-        }
-        else {
-            query.prepare("INSERT INTO icons (icon, url) VALUES (?,?)");
-        }
-
         QByteArray ba;
         QBuffer buffer(&ba);
         buffer.open(QIODevice::WriteOnly);
         ic.second.save(&buffer, "PNG");
-        query.bindValue(0, buffer.data());
-        query.bindValue(1, QString::fromUtf8(encodeUrl(ic.first)));
-        query.exec();
+        auto job = new SqlQueryJob(QSL("INSERT OR REPLACE INTO icons (icon, url) VALUES (?,?)"), this);
+        job->addBindValue(buffer.data());
+        job->addBindValue(QString::fromUtf8(encodeUrl(ic.first)));
+        job->start();
     }
 
     m_iconBuffer.clear();
