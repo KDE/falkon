@@ -18,12 +18,14 @@
 #include "autosaver.h"
 
 #include <QTimerEvent>
+#include <QCoreApplication>
 
 #define SAVE_DELAY 1000 * 10 // 10 seconds
 
 AutoSaver::AutoSaver(QObject* parent)
     : QObject(parent)
 {
+    connect(qApp, &QCoreApplication::aboutToQuit, this, &AutoSaver::saveIfNecessary);
 }
 
 void AutoSaver::saveIfNecessary()
