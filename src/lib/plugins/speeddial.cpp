@@ -76,10 +76,6 @@ void SpeedDial::saveSettings()
 {
     ENSURE_LOADED;
 
-    if (m_pages.isEmpty()) {
-        return;
-    }
-
     Settings settings;
     settings.beginGroup("SpeedDial");
     settings.setValue("pages", generateAllPages());
