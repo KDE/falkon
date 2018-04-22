@@ -531,7 +531,7 @@ bool WebPage::javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, c
         clicked = button;
     });
 
-    connect(view(), &WebView::viewportResized, widget, qOverload<const QSize &>(&QFrame::resize));
+    connect(view(), &WebView::viewportResized, widget, QOverload<const QSize &>::of(&QFrame::resize));
     connect(ui->lineEdit, SIGNAL(returnPressed()), ui->buttonBox->button(QDialogButtonBox::Ok), SLOT(animateClick()));
 
     QEventLoop eLoop;
@@ -578,7 +578,7 @@ bool WebPage::javaScriptConfirm(const QUrl &securityOrigin, const QString &msg)
         clicked = button;
     });
 
-    connect(view(), &WebView::viewportResized, widget, qOverload<const QSize &>(&QFrame::resize));
+    connect(view(), &WebView::viewportResized, widget, QOverload<const QSize &>::of(&QFrame::resize));
 
     QEventLoop eLoop;
     m_runningLoop = &eLoop;
@@ -633,7 +633,7 @@ void WebPage::javaScriptAlert(const QUrl &securityOrigin, const QString &msg)
     widget->resize(view()->size());
     widget->show();
 
-    connect(view(), &WebView::viewportResized, widget, qOverload<const QSize &>(&QFrame::resize));
+    connect(view(), &WebView::viewportResized, widget, QOverload<const QSize &>::of(&QFrame::resize));
 
     QEventLoop eLoop;
     m_runningLoop = &eLoop;
