@@ -44,6 +44,13 @@ CookieJar::CookieJar(QObject* parent)
     connect(m_client, &QWebEngineCookieStore::cookieRemoved, this, &CookieJar::slotCookieRemoved);
 }
 
+CookieJar::~CookieJar()
+{
+#if QT_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+    m_client->setCookieFilter(nullptr);
+#endif
+}
+
 void CookieJar::loadSettings()
 {
     Settings settings;
