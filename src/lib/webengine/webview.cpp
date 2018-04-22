@@ -76,22 +76,6 @@ WebView::WebView(QWidget* parent)
     }
 
     WebInspector::registerView(this);
-
-    // Hack to find widget that receives input events
-    QStackedLayout *l = qobject_cast<QStackedLayout*>(layout());
-    connect(l, &QStackedLayout::currentChanged, this, [this]() {
-        QTimer::singleShot(0, this, [this]() {
-            m_rwhvqt = focusProxy();
-            if (!m_rwhvqt) {
-                qCritical() << "Focus proxy is null!";
-                return;
-            }
-            m_rwhvqt->installEventFilter(this);
-            if (QQuickWidget *w = qobject_cast<QQuickWidget*>(m_rwhvqt)) {
-                w->setClearColor(palette().color(QPalette::Window));
-            }
-        });
-    });
 }
 
 WebView::~WebView()
@@ -1287,6 +1271,15 @@ bool WebView::eventFilter(QObject *obj, QEvent *event)
     // Keyboard events are sent to parent widget
     if (obj == this && event->type() == QEvent::ParentChange && parentWidget()) {
         parentWidget()->installEventFilter(this);
+    }
+
+    // Hack to find widget that receives input events
+    if (obj == this && event->type() == QEvent::ChildAdded && !m_rwhvqt && focusProxy()) {
+        m_rwhvqt = focusProxy();
+        m_rwhvqt->installEventFilter(this);
+        if (QQuickWidget *w = qobject_cast<QQuickWidget*>(m_rwhvqt)) {
+            w->setClearColor(palette().color(QPalette::Window));
+        }
     }
 
     // Forward events to WebView
