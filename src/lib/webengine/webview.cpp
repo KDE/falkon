@@ -1274,12 +1274,16 @@ bool WebView::eventFilter(QObject *obj, QEvent *event)
     }
 
     // Hack to find widget that receives input events
-    if (obj == this && event->type() == QEvent::ChildAdded && !m_rwhvqt && focusProxy()) {
-        m_rwhvqt = focusProxy();
-        m_rwhvqt->installEventFilter(this);
-        if (QQuickWidget *w = qobject_cast<QQuickWidget*>(m_rwhvqt)) {
-            w->setClearColor(palette().color(QPalette::Window));
-        }
+    if (obj == this && event->type() == QEvent::ChildAdded) {
+        QTimer::singleShot(0, this, [this]() {
+            if (focusProxy() && m_rwhvqt != focusProxy()) {
+                m_rwhvqt = focusProxy();
+                m_rwhvqt->installEventFilter(this);
+                if (QQuickWidget *w = qobject_cast<QQuickWidget*>(m_rwhvqt)) {
+                    w->setClearColor(palette().color(QPalette::Window));
+                }
+            }
+        });
     }
 
     // Forward events to WebView
