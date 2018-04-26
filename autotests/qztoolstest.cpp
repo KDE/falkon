@@ -314,6 +314,7 @@ void QzToolsTest::copyRecursivelyTest()
     QFile file(testDir + "-copy/dir1/dir1_2/file1.txt");
     file.open(QFile::ReadOnly);
     QCOMPARE(file.readAll(), QByteArray("test"));
+    file.close();
 
     // Copy to target that already exists
     QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy"), false);
