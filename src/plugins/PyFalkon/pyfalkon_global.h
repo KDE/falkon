@@ -62,8 +62,8 @@
 
 // network
 #include "networkmanager.h"
-//#include "urlinterceptor.h"
-//#include "schemehandlers/extensionschemehandler.h"
+#include "urlinterceptor.h"
+#include "schemehandlers/extensionschemehandler.h"
 
 // notifications
 #include "desktopnotificationsfactory.h"

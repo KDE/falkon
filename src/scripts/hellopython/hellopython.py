@@ -35,6 +35,9 @@ class HelloPlugin(Falkon.PluginInterface, QtCore.QObject):
         self.sidebar = sidebar.HelloSidebar()
         Falkon.SideBarManager.addSidebar("hellopython-sidebar", self.sidebar)
 
+        self.schemeHandler = HelloSchemeHandler()
+        Falkon.MainApplication.instance().networkManager().registerExtensionSchemeHandler("hello", self.schemeHandler)
+
         if state == Falkon.PluginInterface.LateInitState:
             for window in Falkon.MainApplication.instance().windows():
                 self.mainWindowCreated(window)
@@ -105,3 +108,8 @@ class HelloPlugin(Falkon.PluginInterface, QtCore.QObject):
         del self.buttons[window]
 
 Falkon.registerPlugin(HelloPlugin())
+
+class HelloSchemeHandler(Falkon.ExtensionSchemeHandler):
+    def requestStarted(self, job):
+        print("req {}".format(job.requestUrl()))
+        self.setReply(job, "text/html", "<h1>TEST</h1>{}".format(job.requestUrl()))

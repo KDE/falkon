@@ -122,6 +122,8 @@ set(GENERATED_SOURCES
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/sqldatabase_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/toolbutton_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/wheelhelper_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/urlinterceptor_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/extensionschemehandler_wrapper.cpp
 )
 set(GENERATED_SOURCES_DEPENDENCIES
     ${GLOBAL_HEADER}
@@ -144,6 +146,7 @@ foreach(INCLUDE_DIR ${PYSIDE_INCLUDE_DIR})
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtNetwork")
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtWidgets")
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtWebChannel")
+    list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtWebEngineCore")
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtWebEngineWidgets")
 endforeach()
 

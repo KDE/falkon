@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <typesystem package="PyFalkon">
+    <load-typesystem name="typesystem_webenginecore.xml" generate="no"/>
     <load-typesystem name="typesystem_webenginewidgets.xml" generate="no"/>
 
     <inject-code class="native" position="beginning">
@@ -113,12 +114,10 @@
     <object-type name="NavigationBar"/>
 
     <object-type name="NetworkManager"/>
-    <!-- FIXME: Missing QWebEngineUrlRequest{Info,Job} in PySide
     <object-type name="UrlInterceptor"/>
     <object-type name="ExtensionSchemeHandler">
       <include file-name="schemehandlers/extensionschemehandler.h" location="global"/>
     </object-type>
-    -->
 
     <object-type name="SearchEnginesDialog"/>
     <object-type name="SearchEnginesManager">
