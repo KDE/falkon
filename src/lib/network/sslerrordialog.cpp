@@ -63,6 +63,11 @@ void SslErrorDialog::buttonClicked(QAbstractButton* button)
         accept();
         break;
 
+    case QDialogButtonBox::NoRole:
+        m_result = NoForThisSession;
+        reject();
+        break;
+
     default:
         m_result = No;
         reject();

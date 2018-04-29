@@ -71,6 +71,10 @@ bool NetworkManager::certificateError(const QWebEngineCertificateError &error, Q
 {
     const QString &host = error.url().host();
 
+    if (m_rejectedSslErrors.contains(host) && m_rejectedSslErrors.value(host) == error.error()) {
+        return false;
+    }
+
     if (m_ignoredSslErrors.contains(host) && m_ignoredSslErrors.value(host) == error.error())
         return true;
 
@@ -88,10 +92,13 @@ bool NetworkManager::certificateError(const QWebEngineCertificateError &error, Q
     case SslErrorDialog::Yes:
         // TODO: Permanent exceptions
     case SslErrorDialog::OnlyForThisSession:
-        m_ignoredSslErrors[error.url().host()] = error.error();
+        m_ignoredSslErrors[host] = error.error();
         return true;
 
-    case SslErrorDialog::No:
+    case SslErrorDialog::NoForThisSession:
+        m_rejectedSslErrors[host] = error.error();
+        return false;
+
     default:
         return false;
     }

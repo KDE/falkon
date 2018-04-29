@@ -55,6 +55,7 @@ private:
     NetworkUrlInterceptor *m_urlInterceptor;
     ExtensionSchemeManager *m_extensionScheme;
     QHash<QString, QWebEngineCertificateError::Error> m_ignoredSslErrors;
+    QHash<QString, QWebEngineCertificateError::Error> m_rejectedSslErrors;
 };
 
 #endif // NETWORKMANAGER_H
