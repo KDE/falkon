@@ -71,6 +71,9 @@ void VerticalTabsPlugin::init(InitState state, const QString &settingsPath)
         const auto windows = mApp->windows();
         for (BrowserWindow *window : windows) {
             mainWindowCreated(window);
+            if (window->sideBarManager()->activeSideBar().isEmpty()) {
+                window->sideBarManager()->showSideBar(QSL("VerticalTabs"));
+            }
         }
     }
 }
@@ -187,9 +190,7 @@ QString VerticalTabsPlugin::styleSheet() const
 
 void VerticalTabsPlugin::mainWindowCreated(BrowserWindow *window)
 {
-    if (window->sideBarManager()->activeSideBar().isEmpty()) {
-        window->sideBarManager()->showSideBar(QSL("VerticalTabs"));
-    }
+    Q_UNUSED(window)
     setTabBarVisible(!m_replaceTabBar);
 }
 
