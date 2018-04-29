@@ -324,14 +324,14 @@ bool TabTreeView::viewportEvent(QEvent *event)
 void TabTreeView::initView()
 {
     // Restore expanded state
-    expandAll();
-    QModelIndex index = model()->index(0, 0);
-    while (index.isValid()) {
-        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
-        if (tab) {
-            setExpanded(index, tab->sessionData().value(m_expandedSessionKey, true).toBool());
-        }
-        index = indexBelow(index);
+    for (int i = 0; i < model()->rowCount(); ++i) {
+        const QModelIndex index = model()->index(i, 0);
+        reverseTraverse(index, [this](const QModelIndex &index) {
+            WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+            if (tab) {
+                setExpanded(index, tab->sessionData().value(m_expandedSessionKey, true).toBool());
+            }
+        });
     }
 
     m_initializing = false;
