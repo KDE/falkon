@@ -43,6 +43,7 @@ LDFLAGS="${LDFLAGS:--Wl,-z,relro }"; export LDFLAGS ;
 optPrint(){
 printf "\n\t\t${ITL1}VALID OPTIONS ARE${ITL0}:\n
          --sourcedir=[path]
+         --outdir=[path]
          --qmake=[path to executable]
          --disable-debug | -D
          --runtime=[path]
@@ -77,6 +78,9 @@ ${BLD1}--sourcedir=${BLD0}
 
                ${UDR1}example:--sourcedir="/home/build/falkon"${UDR0}
 
+${BLD1}--outdir=${BLD0}
+
+          Where to copy final AppImage.
 
 ${BLD1}--runtime=[path]${BLD0}
 
@@ -126,6 +130,10 @@ while [ $# != 0 ] ;do
          --sourcedir=*)
                SOURCE_DIR=$(getVal "${CFG_OPT}")
                 export SOURCE_DIR
+             ;;
+         --outdir=*)
+                OUT_DIR=$(getVal "${CFG_OPT}")
+                export OUT_DIR
              ;;
          --disable-debug|-D)
                 unset DEBUG_BUILD
@@ -357,6 +365,9 @@ nowBldImg
 if [[ $? == 0 ]] && [[ -x bin/Falkon.AppImage ]]; then
  printf "\\033c"
  printf "Done!\nThe compiled files are in "${PWD}"/bin\n"
+ if [ ! -z "$OUT_DIR" ]; then
+     cp bin/Falkon.AppImage "$OUT_DIR"
+ fi
 fi
 
 exit 0
