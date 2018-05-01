@@ -1071,26 +1071,29 @@ void MainApplication::setupUserScripts()
     script.setInjectionPoint(QWebEngineScript::DocumentCreation);
     script.setWorldId(WebPage::SafeJsWorld);
     script.setRunsOnSubFrames(true);
-    script.setSourceCode(Scripts::setupWebChannel(script.worldId()));
+    script.setSourceCode(Scripts::setupWebChannel());
     m_webProfile->scripts()->insert(script);
 
-    // WebChannel for UnsafeJsWorld
-    QWebEngineScript script2;
-    script2.setName(QSL("_falkon_webchannel2"));
-    script2.setInjectionPoint(QWebEngineScript::DocumentCreation);
-    script2.setWorldId(WebPage::UnsafeJsWorld);
-    script2.setRunsOnSubFrames(true);
-    script2.setSourceCode(Scripts::setupWebChannel(script2.worldId()));
-    m_webProfile->scripts()->insert(script2);
+    // falkon:restore
+    QWebEngineScript falkonRestore;
+    falkonRestore.setWorldId(WebPage::SafeJsWorld);
+    falkonRestore.setSourceCode(QzTools::readAllFileContents(QSL(":html/restore.user.js")));
+    m_webProfile->scripts()->insert(falkonRestore);
+
+    // falkon:speeddial
+    QWebEngineScript falkonSpeedDial;
+    falkonSpeedDial.setWorldId(WebPage::SafeJsWorld);
+    falkonSpeedDial.setSourceCode(Scripts::setupSpeedDial());
+    m_webProfile->scripts()->insert(falkonSpeedDial);
 
     // document.window object addons
-    QWebEngineScript script3;
-    script3.setName(QSL("_falkon_window_object"));
-    script3.setInjectionPoint(QWebEngineScript::DocumentCreation);
-    script3.setWorldId(WebPage::UnsafeJsWorld);
-    script3.setRunsOnSubFrames(true);
-    script3.setSourceCode(Scripts::setupWindowObject());
-    m_webProfile->scripts()->insert(script3);
+    QWebEngineScript documentWindowAddons;
+    documentWindowAddons.setName(QSL("_falkon_window_object"));
+    documentWindowAddons.setInjectionPoint(QWebEngineScript::DocumentCreation);
+    documentWindowAddons.setWorldId(WebPage::UnsafeJsWorld);
+    documentWindowAddons.setRunsOnSubFrames(true);
+    documentWindowAddons.setSourceCode(Scripts::setupWindowObject());
+    m_webProfile->scripts()->insert(documentWindowAddons);
 }
 
 void MainApplication::setUserStyleSheet(const QString &filePath)

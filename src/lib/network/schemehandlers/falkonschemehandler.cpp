@@ -203,8 +203,6 @@ QString FalkonSchemeReply::speeddialPage()
         dPage.replace(QLatin1String("%IMG_CLOSE%"), QLatin1String("qrc:html/close.svg"));
         dPage.replace(QLatin1String("%IMG_EDIT%"), QLatin1String("qrc:html/edit.svg"));
         dPage.replace(QLatin1String("%IMG_RELOAD%"), QLatin1String("qrc:html/reload.svg"));
-        dPage.replace(QLatin1String("%JQUERY%"), QLatin1String("qrc:html/jquery.js"));
-        dPage.replace(QLatin1String("%JQUERY-UI%"), QLatin1String("qrc:html/jquery-ui.js"));
         dPage.replace(QLatin1String("%LOADING-IMG%"), QLatin1String("qrc:html/loading.gif"));
         dPage.replace(QLatin1String("%IMG_SETTINGS%"), QLatin1String("qrc:html/configure.svg"));
 

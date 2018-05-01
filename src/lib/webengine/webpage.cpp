@@ -73,6 +73,10 @@ WebPage::WebPage(QObject* parent)
     , m_blockAlerts(false)
     , m_secureStatus(false)
 {
+    QWebChannel *channel = new QWebChannel(this);
+    ExternalJsObject::setupWebChannel(channel, this);
+    setWebChannel(channel, SafeJsWorld);
+
     connect(this, &QWebEnginePage::loadProgress, this, &WebPage::progress);
     connect(this, &QWebEnginePage::loadFinished, this, &WebPage::finished);
     connect(this, &QWebEnginePage::urlChanged, this, &WebPage::urlChanged);
@@ -104,14 +108,6 @@ WebPage::WebPage(QObject* parent)
         if (progress == 100) {
             emit loadFinished(true);
         }
-    });
-
-    // Workaround for changing webchannel world inside acceptNavigationRequest not working
-    m_setupChannelTimer = new QTimer(this);
-    m_setupChannelTimer->setSingleShot(true);
-    m_setupChannelTimer->setInterval(100);
-    connect(m_setupChannelTimer, &QTimer::timeout, this, [this]() {
-        setupWebChannelForUrl(m_channelUrl);
     });
 }
 
@@ -372,25 +368,6 @@ void WebPage::renderProcessTerminated(QWebEnginePage::RenderProcessTerminationSt
     });
 }
 
-void WebPage::setupWebChannelForUrl(const QUrl &url)
-{
-    QWebChannel *channel = webChannel();
-    if (!channel) {
-        channel = new QWebChannel(this);
-        ExternalJsObject::setupWebChannel(channel, this);
-    }
-    int worldId = -1;
-    if (url.scheme() == QL1S("falkon") || url.scheme() == QL1S("extension")) {
-        worldId = UnsafeJsWorld;
-    } else {
-        worldId = SafeJsWorld;
-    }
-    if (worldId != m_channelWorldId) {
-        m_channelWorldId = worldId;
-        setWebChannel(channel, m_channelWorldId);
-    }
-}
-
 bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame)
 {
     if (mApp->isClosing()) {
@@ -418,8 +395,6 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
             const bool isWeb = url.scheme() == QL1S("http") || url.scheme() == QL1S("https") || url.scheme() == QL1S("file");
             const bool globalJsEnabled = mApp->webSettings()->testAttribute(QWebEngineSettings::JavascriptEnabled);
             settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, isWeb ? globalJsEnabled : true);
-            m_channelUrl = url;
-            m_setupChannelTimer->start();
         }
         emit navigationRequestAccepted(url, type, isMainFrame);
     }

@@ -85,7 +85,6 @@ private Q_SLOTS:
     void renderProcessTerminated(RenderProcessTerminationStatus terminationStatus, int exitCode);
 
 private:
-    void setupWebChannelForUrl(const QUrl &url);
     bool acceptNavigationRequest(const QUrl &url, NavigationType type, bool isMainFrame) Q_DECL_OVERRIDE;
     bool certificateError(const QWebEngineCertificateError &error) Q_DECL_OVERRIDE;
     QStringList chooseFiles(FileSelectionMode mode, const QStringList &oldFiles, const QStringList &acceptedMimeTypes) Q_DECL_OVERRIDE;
@@ -108,10 +107,6 @@ private:
     bool m_secureStatus;
 
     QMetaObject::Connection m_contentsResizedConnection;
-
-    QUrl m_channelUrl;
-    int m_channelWorldId = -1;
-    QTimer *m_setupChannelTimer = nullptr;
 
     friend class WebView;
 };

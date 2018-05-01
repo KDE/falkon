@@ -27,6 +27,7 @@
 #include <QFileDialog>
 #include <QWebEnginePage>
 #include <QImage>
+#include <QJsonDocument>
 
 #define ENSURE_LOADED if (!m_loaded) loadSettings();
 
@@ -199,6 +200,8 @@ QString SpeedDial::initialScript()
     m_regenerateScript = false;
     m_initialScript.clear();
 
+    QVariantList pages;
+
     foreach (const Page &page, m_pages) {
         QString imgSource = m_thumbnailsDir + QCryptographicHash::hash(page.url.toUtf8(), QCryptographicHash::Md4).toHex() + ".png";
 
@@ -213,9 +216,14 @@ QString SpeedDial::initialScript()
             imgSource = QzTools::pixmapToDataUrl(QPixmap(imgSource)).toString();
         }
 
-        m_initialScript.append(QString("addBox('%1', '%2', '%3');\n").arg(page.url, page.title, imgSource));
+        QVariantMap map;
+        map[QSL("url")] = page.url;
+        map[QSL("title")] = page.title;
+        map[QSL("img")] = imgSource;
+        pages.append(map);
     }
 
+    m_initialScript = QJsonDocument::fromVariant(pages).toJson(QJsonDocument::Compact);
     return m_initialScript;
 }
 

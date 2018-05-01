@@ -28,9 +28,10 @@ class QWebEngineView;
 class FALKON_EXPORT Scripts
 {
 public:
-    static QString setupWebChannel(quint32 worldId);
+    static QString setupWebChannel();
     static QString setupFormObserver();
     static QString setupWindowObject();
+    static QString setupSpeedDial();
 
     static QString setCss(const QString &css);
     static QString sendPostData(const QUrl &url, const QByteArray &data);

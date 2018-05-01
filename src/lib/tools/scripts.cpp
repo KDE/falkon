@@ -22,13 +22,10 @@
 
 #include <QUrlQuery>
 
-QString Scripts::setupWebChannel(quint32 worldId)
+QString Scripts::setupWebChannel()
 {
-    QString source =  QL1S("// ==UserScript==\n"
-                           "%1\n"
-                           "// ==/UserScript==\n\n"
-                           "(function() {"
-                           "%2"
+    QString source =  QL1S("(function() {"
+                           "%1"
                            ""
                            "function registerExternal(e) {"
                            "    window.external = e;"
@@ -70,13 +67,7 @@ QString Scripts::setupWebChannel(quint32 worldId)
                            ""
                            "})()");
 
-    QString match;
-    if (worldId == WebPage::SafeJsWorld) {
-        match = QSL("// @exclude falkon:*\n// @exclude extension:*");
-    } else {
-        match = QSL("// @include falkon:*\n// @include extension:*");
-    }
-    return source.arg(match, QzTools::readAllFileContents(QSL(":/qtwebchannel/qwebchannel.js")));
+    return source.arg(QzTools::readAllFileContents(QSL(":/qtwebchannel/qwebchannel.js")));
 }
 
 QString Scripts::setupFormObserver()
@@ -160,6 +151,14 @@ QString Scripts::setupWindowObject()
                           "};"
                           "})()");
 
+    return source;
+}
+
+QString Scripts::setupSpeedDial()
+{
+    QString source = QzTools::readAllFileContents(QSL(":html/speeddial.user.js"));
+    source.replace(QL1S("%JQUERY%"), QzTools::readAllFileContents(QSL(":html/jquery.js")));
+    source.replace(QL1S("%JQUERY-UI%"), QzTools::readAllFileContents(QSL(":html/jquery-ui.js")));
     return source;
 }
 
