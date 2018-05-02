@@ -46,6 +46,7 @@ public:
 public Q_SLOTS:
     void showUrl(const QUrl &url);
     void showSiteIcon();
+    void setPrivacyState(bool state);
 
 private:
     PopupWebView* m_view;

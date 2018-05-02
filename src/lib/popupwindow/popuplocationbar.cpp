@@ -106,5 +106,14 @@ void PopupLocationBar::showUrl(const QUrl &url)
 
 void PopupLocationBar::showSiteIcon()
 {
-    m_siteIcon->setIcon(m_view->icon());
+    QIcon icon = IconProvider::emptyWebIcon();
+    if (property("secured").toBool()) {
+        icon = QIcon::fromTheme(QSL("document-encrypted"), icon);
+    }
+    m_siteIcon->setIcon(QIcon(icon.pixmap(16)));
+}
+
+void PopupLocationBar::setPrivacyState(bool state)
+{
+    setProperty("secured", QVariant(state));
 }
