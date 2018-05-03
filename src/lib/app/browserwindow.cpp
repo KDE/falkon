@@ -196,7 +196,6 @@ BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QUrl &startUrl)
     , m_startTab(0)
     , m_startPage(0)
     , m_sideBarManager(new SideBarManager(this))
-    , m_isHtmlFullScreen(false)
     , m_hideNavigationTimer(0)
 {
     setAttribute(Qt::WA_DeleteOnClose);
@@ -927,7 +926,7 @@ void BrowserWindow::toggleTabsOnTop(bool enable)
 
 void BrowserWindow::toggleFullScreen()
 {
-    if (m_isHtmlFullScreen) {
+    if (m_htmlFullScreenView) {
         weView()->triggerPageAction(QWebEnginePage::ExitFullScreen);
         return;
     }
@@ -939,7 +938,7 @@ void BrowserWindow::toggleFullScreen()
     }
 }
 
-void BrowserWindow::toggleHtmlFullScreen(bool enable)
+void BrowserWindow::requestHtmlFullScreen(TabbedWebView *view, bool enable)
 {
     if (enable) {
         setWindowState(windowState() | Qt::WindowFullScreen);
@@ -950,7 +949,7 @@ void BrowserWindow::toggleHtmlFullScreen(bool enable)
     if (m_sideBar)
         m_sideBar.data()->setHidden(enable);
 
-    m_isHtmlFullScreen = enable;
+    m_htmlFullScreenView = enable ? view : nullptr;
 }
 
 void BrowserWindow::showWebInspector()
@@ -1183,7 +1182,7 @@ bool BrowserWindow::fullScreenNavigationVisible() const
 
 void BrowserWindow::showNavigationWithFullScreen()
 {
-    if (m_isHtmlFullScreen)
+    if (m_htmlFullScreenView)
         return;
 
     if (m_hideNavigationTimer->isActive()) {
@@ -1242,7 +1241,7 @@ bool BrowserWindow::event(QEvent *event)
             m_navigationContainer->show();
             m_navigationToolbar->setSuperMenuVisible(!m_menuBarVisible);
             m_navigationToolbar->leaveFullScreen();
-            m_isHtmlFullScreen = false;
+            m_htmlFullScreenView = nullptr;
         }
 
         if (m_hideNavigationTimer) {

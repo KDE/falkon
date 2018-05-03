@@ -153,7 +153,7 @@ public Q_SLOTS:
     void toggleTabsOnTop(bool enable);
 
     void toggleFullScreen();
-    void toggleHtmlFullScreen(bool enable);
+    void requestHtmlFullScreen(TabbedWebView *view, bool enable);
 
     void loadActionUrl(QObject* obj = 0);
     void loadActionUrlInNewTab(QObject* obj = 0);
@@ -234,7 +234,7 @@ private:
     // Remember visibility of menubar and statusbar after entering Fullscreen
     bool m_menuBarVisible;
     bool m_statusBarVisible;
-    bool m_isHtmlFullScreen;
+    QPointer<TabbedWebView> m_htmlFullScreenView;
     QTimer* m_hideNavigationTimer;
 
     QList<QPointer<QWidget> > m_deleteOnCloseWidgets;
