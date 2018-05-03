@@ -172,7 +172,7 @@ void TabbedWebView::requestFullScreen(bool enable)
     if (!m_window)
         return;
 
-    m_window->toggleHtmlFullScreen(enable);
+    m_window->requestHtmlFullScreen(this, enable);
 }
 
 void TabbedWebView::setAsCurrentTab()
