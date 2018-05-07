@@ -25,7 +25,13 @@ RUN yum -y install \
     alsa-lib-devel \
     libXi-devel \
     libXtst-devel \
-    libXrandr-devel
+    libXrandr-devel \
+    xcb-util-keysyms-devel \
+    gperf \
+    flex \
+    bison \
+    libgcrypt-devel \
+    systemd-devel
 
 RUN yum -y install devtoolset-4-gcc-c++
 

@@ -237,7 +237,9 @@ libQt5WebEngine.so.5
 libQt5WebEngineWidgets.so.5
 libQt5Widgets.so.5
 libQt5X11Extras.so.5
-libQt5XcbQpa.so.5"
+libQt5XcbQpa.so.5
+libQt5Concurrent.so.5
+libQt5Xml.so.5"
 
 NEEDEDPLUGINSLIST="bearer
 generic
