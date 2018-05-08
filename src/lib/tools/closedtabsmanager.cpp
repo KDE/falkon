@@ -38,6 +38,7 @@ void ClosedTabsManager::saveTab(WebTab *tab)
 
     Tab closedTab;
     closedTab.position = tab->tabIndex();
+    closedTab.parentTab = tab->parentTab();
     closedTab.tabState = WebTab::SavedTab(tab);
     m_closedTabs.prepend(closedTab);
 }

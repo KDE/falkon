@@ -776,6 +776,7 @@ void TabWidget::restoreClosedTab(QObject* obj)
 
     int index = addView(QUrl(), tab.tabState.title, Qz::NT_CleanSelectedTab, false, tab.position);
     WebTab* webTab = weTab(index);
+    webTab->setParentTab(tab.parentTab);
     webTab->p_restoreTab(tab.tabState);
 
     updateClosedTabsButton();
@@ -791,6 +792,7 @@ void TabWidget::restoreAllClosedTabs()
     for (const ClosedTabsManager::Tab &tab : closedTabs) {
         int index = addView(QUrl(), tab.tabState.title, Qz::NT_CleanSelectedTab);
         WebTab* webTab = weTab(index);
+        webTab->setParentTab(tab.parentTab);
         webTab->p_restoreTab(tab.tabState);
     }
 

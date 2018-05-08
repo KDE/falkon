@@ -19,6 +19,7 @@
 #define CLOSEDTABSMANAGER_H
 
 #include <QVector>
+#include <QPointer>
 
 #include "webtab.h"
 #include "qzcommon.h"
@@ -30,6 +31,7 @@ class FALKON_EXPORT ClosedTabsManager
 public:
     struct Tab {
         int position = -1;
+        QPointer<WebTab> parentTab;
         WebTab::SavedTab tabState;
 
         bool isValid() const {

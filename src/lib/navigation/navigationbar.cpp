@@ -628,8 +628,9 @@ void NavigationBar::reload()
 
 void NavigationBar::goBack()
 {
-    QWebEngineHistory* history = m_window->weView()->page()->history();
-    history->back();
+    auto view = m_window->weView();
+    view->setFocus();
+    view->back();
 }
 
 void NavigationBar::goBackInNewTab()
@@ -645,8 +646,9 @@ void NavigationBar::goBackInNewTab()
 
 void NavigationBar::goForward()
 {
-    QWebEngineHistory* history = m_window->weView()->page()->history();
-    history->forward();
+    auto view = m_window->weView();
+    view->setFocus();
+    view->forward();
 }
 
 void NavigationBar::goForwardInNewTab()
