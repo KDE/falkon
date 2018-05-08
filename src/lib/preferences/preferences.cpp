@@ -442,6 +442,8 @@ Preferences::Preferences(BrowserWindow* window)
             QListWidgetItem *item = new QListWidgetItem;
             item->setText(langName);
             item->setData(Qt::UserRole, lang);
+            item->setFlags(item->flags() & ~Qt::ItemIsSelectable);
+            item->setCheckState(Qt::Unchecked);
             ui->spellcheckLanguages->addItem(item);
         }
     }
@@ -455,7 +457,7 @@ Preferences::Preferences(BrowserWindow* window)
         QListWidgetItem *item = items.at(0);
         ui->spellcheckLanguages->takeItem(ui->spellcheckLanguages->row(item));
         ui->spellcheckLanguages->insertItem(topIndex++, item);
-        ui->spellcheckLanguages->setCurrentItem(item, QItemSelectionModel::Select);
+        item->setCheckState(Qt::Checked);
     }
 
     if (ui->spellcheckLanguages->count() == 0) {
@@ -968,7 +970,7 @@ void Preferences::saveSettings()
     QStringList languages;
     for (int i = 0; i < ui->spellcheckLanguages->count(); ++i) {
         QListWidgetItem *item = ui->spellcheckLanguages->item(i);
-        if (item->isSelected()) {
+        if (item->checkState() == Qt::Checked) {
             languages.append(item->data(Qt::UserRole).toString());
         }
     }
