@@ -11,7 +11,7 @@ MODULE_VERSION="${FRAMEWORK_VERSION}.0"
 
 QTDIR="/root/Qt/5.10.1/gcc_64"
 
-trap "rm -rf *${MODULE_VERSION} *.tar.xz phonon* qt-installer setup.sh" EXIT 1 2
+trap "rm -rf *${MODULE_VERSION} *.tar.xz phonon* qt-installer* setup.sh" EXIT 1 2
 
 # Install Qt
 cd /root
@@ -85,3 +85,9 @@ for MODULE_NAME in ${NEEDED_MODULES}; do
     moduleBuild
     popd
 done
+
+pushd $QTDIR/plugins/kf5
+chrpath --replace '$ORIGIN/../../lib' *.so
+chrpath --replace '$ORIGIN/../../../lib' */*.so
+popd
+exit

@@ -261,6 +261,10 @@ done
 for P in ${NEEDEDPLUGINSLIST} ; do
   cp -r ${PLUGINSARETHERE}/${P} bundle_build_dir/plugins ;
 done
+if [[ -d "${PLUGINSARETHERE}/kf5/org.kde.kwindowsystem.platforms" ]]; then
+mkdir bundle_build_dir/plugins/kf5
+cp -r ${PLUGINSARETHERE}/kf5/org.kde.kwindowsystem.platforms bundle_build_dir/plugins/kf5
+fi
 install ${PLUGINSARETHERE}/platforms/libqxcb.so bundle_build_dir/plugins/platforms
 install ${PLUGINSARETHERE}/sqldrivers/libqsqlite.so bundle_build_dir/plugins/sqldrivers
 cp -r ${QMLSARETHERE}/{QtQuick.2,QtWebEngine} bundle_build_dir/qml
