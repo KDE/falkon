@@ -85,6 +85,8 @@ if (WIN32)
     add_definitions(-D_WIN32_WINNT=${ver})
 endif()
 
+set(HAVE_QTWEBENGINE_5_10 NOT Qt5WebEngineWidgets_VERSION VERSION_LESS 5.10.0)
+
 # Mandatory: OpenSSL
 find_package(OpenSSL REQUIRED)
 
