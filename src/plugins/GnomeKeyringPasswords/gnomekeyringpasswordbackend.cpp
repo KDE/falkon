@@ -73,6 +73,31 @@ static GnomeKeyringAttributeList* createAttributes(const PasswordEntry &entry)
     return attributes;
 }
 
+static void storeEntry(PasswordEntry &entry)
+{
+    guint32 itemId;
+    GnomeKeyringAttributeList* attributes = createAttributes(entry);
+
+    QByteArray pass = entry.password.toUtf8();
+    QByteArray host = entry.host.toUtf8();
+
+    GnomeKeyringResult result = gnome_keyring_item_create_sync(GNOME_KEYRING_DEFAULT,
+                                GNOME_KEYRING_ITEM_GENERIC_SECRET,
+                                host.constData(),
+                                attributes,
+                                pass.constData(),
+                                TRUE, // Update if exists
+                                &itemId);
+
+    gnome_keyring_attribute_list_free(attributes);
+
+    if (result != GNOME_KEYRING_RESULT_OK) {
+        qWarning() << "GnomeKeyringPasswordBackend::addEntry Cannot add entry to keyring!";
+    }
+
+    entry.id = itemId;
+}
+
 GnomeKeyringPasswordBackend::GnomeKeyringPasswordBackend()
     : PasswordBackend()
     , m_loaded(false)
@@ -118,27 +143,7 @@ void GnomeKeyringPasswordBackend::addEntry(const PasswordEntry &entry)
     PasswordEntry stored = entry;
     stored.updated = QDateTime::currentDateTime().toTime_t();
 
-    guint32 itemId;
-    GnomeKeyringAttributeList* attributes = createAttributes(stored);
-
-    QByteArray pass = stored.password.toUtf8();
-    QByteArray host = stored.host.toUtf8();
-
-    GnomeKeyringResult result = gnome_keyring_item_create_sync(GNOME_KEYRING_DEFAULT,
-                                GNOME_KEYRING_ITEM_GENERIC_SECRET,
-                                host.constData(),
-                                attributes,
-                                pass.constData(),
-                                TRUE, // Update if exists
-                                &itemId);
-
-    gnome_keyring_attribute_list_free(attributes);
-
-    if (result != GNOME_KEYRING_RESULT_OK) {
-        qWarning() << "GnomeKeyringPasswordBackend::addEntry Cannot add entry to keyring!";
-    }
-
-    stored.id = itemId;
+    storeEntry(stored);
 
     m_allEntries.append(stored);
 }
@@ -263,6 +268,22 @@ void GnomeKeyringPasswordBackend::initialize()
         return;
     }
 
+    bool migrate = false;
+    if (result == GNOME_KEYRING_RESULT_NO_MATCH) {
+        result = gnome_keyring_find_itemsv_sync(GNOME_KEYRING_ITEM_GENERIC_SECRET, &found,
+                 "application", GNOME_KEYRING_ATTRIBUTE_TYPE_STRING, "QupZilla",
+                 NULL);
+
+        if (result != GNOME_KEYRING_RESULT_OK && result != GNOME_KEYRING_RESULT_NO_MATCH) {
+            qWarning() << "GnomeKeyringPasswordBackend::initialize Cannot read items from keyring!";
+            return;
+        }
+
+        if (result == GNOME_KEYRING_RESULT_OK) {
+            migrate = true;
+        }
+    }
+
     GList* tmp = found;
 
     while (tmp) {
@@ -272,6 +293,12 @@ void GnomeKeyringPasswordBackend::initialize()
     }
 
     gnome_keyring_found_list_free(found);
+
+    if (migrate) {
+        for (PasswordEntry &entry : m_allEntries) {
+            storeEntry(entry);
+        }
+    }
 
     m_loaded = true;
 }

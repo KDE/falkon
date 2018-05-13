@@ -164,14 +164,23 @@ void KWalletPasswordBackend::initialize()
         return;
     }
 
+    bool migrate = !m_wallet->hasFolder("Falkon") && m_wallet->hasFolder("QupZilla");
+
     if (!m_wallet->hasFolder("Falkon") && !m_wallet->createFolder("Falkon")) {
         qWarning() << "KWalletPasswordBackend::initialize Cannot create folder \"Falkon\"!";
         return;
     }
 
-    if (!m_wallet->setFolder("Falkon")) {
-        qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"Falkon\"!";
-        return;
+    if (migrate) {
+        if (!m_wallet->setFolder("QupZilla")) {
+            qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"QupZilla\"!";
+            return;
+        }
+    } else {
+        if (!m_wallet->setFolder("Falkon")) {
+            qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"Falkon\"!";
+            return;
+        }
     }
 
     QMap<QString, QByteArray> entries;
@@ -187,6 +196,17 @@ void KWalletPasswordBackend::initialize()
             m_allEntries.append(entry);
         }
         ++i;
+    }
+
+    if (migrate) {
+        if (!m_wallet->setFolder("Falkon")) {
+            qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"Falkon\"!";
+            return;
+        }
+
+        foreach (const PasswordEntry &entry, m_allEntries) {
+            m_wallet->writeEntry(entry.id.toString(), encodeEntry(entry));
+        }
     }
 }
 
