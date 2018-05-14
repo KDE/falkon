@@ -495,7 +495,7 @@ void WebView::copyLinkToClipboard()
 
 void WebView::savePageAs()
 {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+#if HAVE_QTWEBENGINE_5_10
     page()->runJavaScript(QSL("document.contentType"), WebPage::SafeJsWorld, [this](const QVariant &res) {
         const QSet<QString> webPageTypes = {
             QSL("text/html"),

@@ -1,3 +1,21 @@
+Version 3.0.1
+    * released 8 May 2018
+    * added profile migration from QupZilla
+    * fix incorrectly completing form data on some sites (BUG 391327)
+    * fix showing incorrect state of back and forward buttons (BUG 391331)
+    * fix loading urls containing %20 from location bar (BUG 392445)
+    * fix save page action for downloading text files (BUG 391300)
+    * fix download manager trying to closing not restored tabs (BUG 392565)
+    * fix updating location bar site icon after using paste and go action (BUG 392747)
+    * fix various issues with QtWebEngine 5.11 (BUG 392885, 393398)
+    * fix speed dial sometimes loading with no pages (BUG 391875)
+    * fix leaving html fullscreen after closing tab (BUG 393797)
+    * fix saving speed dial settings when there are no configured pages
+    * fix restoring nested crashed sessions
+    * fix setting minimum height of bookmarks toolbar
+    * VerticalTabs: fix preserving expanded state of times inside collapsed parent (BUG 393567)
+    * VerticalTabs: don't force open sidebar when opening new window (BUG 393629)
+
 Version 3.0.0
     * released 27 February 2018
     * first Falkon release

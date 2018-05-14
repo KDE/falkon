@@ -208,12 +208,10 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
         return;
     }
 
-    // No change in 3.1
+    // No change in 3.0
     if (prof < Updater::Version("3.0.99")) {
         return;
     }
-
-    // Nothing for now
 }
 
 void ProfileManager::copyDataToProfile()

@@ -9,3 +9,6 @@
 
 /* Disable DBus support */
 #cmakedefine DISABLE_DBUS
+
+/* QtWebEngine is at least version 5.10 */
+#cmakedefine01 HAVE_QTWEBENGINE_5_10
