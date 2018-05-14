@@ -45,7 +45,7 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_NO_CAS
 
 # Mandatory: Qt5
 set(QT_MIN_VERSION "5.9.0")
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets Network Sql QuickWidgets PrintSupport WebEngineWidgets WebChannel)
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets Network Sql QuickWidgets PrintSupport WebEngine WebEngineWidgets WebChannel)
 if (BUILD_TESTING)
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Test)
 endif()
@@ -84,8 +84,6 @@ if (WIN32)
     get_WIN32_WINNT(ver)
     add_definitions(-D_WIN32_WINNT=${ver})
 endif()
-
-set(HAVE_QTWEBENGINE_5_10 NOT Qt5WebEngineWidgets_VERSION VERSION_LESS 5.10.0)
 
 # Mandatory: OpenSSL
 find_package(OpenSSL REQUIRED)

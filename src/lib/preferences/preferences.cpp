@@ -110,7 +110,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->checkUpdates->setVisible(false);
 #endif
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINE_VERSION < QT_VERSION_CHECK(5, 11, 0)
     ui->disableVideoAutoPlay->setVisible(false);
     ui->webRTCPublicIpOnly->setVisible(false);
 #endif
