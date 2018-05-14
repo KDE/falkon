@@ -297,6 +297,9 @@ qt5_add_resources(SRCS
 
 add_library(FalkonPrivate SHARED ${SRCS})
 
+get_property(QT_WEBENGINE_INCLUDE_DIRS TARGET Qt5::WebEngine PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
+target_include_directories(FalkonPrivate SYSTEM PUBLIC ${QT_WEBENGINE_INCLUDE_DIRS})
+
 target_link_libraries(FalkonPrivate
     Qt5::Widgets
     Qt5::WebEngineWidgets

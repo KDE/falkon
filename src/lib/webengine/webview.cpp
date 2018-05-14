@@ -35,7 +35,6 @@
 #include "scripts.h"
 #include "webhittestresult.h"
 #include "webscrollbarmanager.h"
-#include "../config.h"
 
 #include <iostream>
 
@@ -496,7 +495,7 @@ void WebView::copyLinkToClipboard()
 
 void WebView::savePageAs()
 {
-#if HAVE_QTWEBENGINE_5_10
+#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     page()->runJavaScript(QSL("document.contentType"), WebPage::SafeJsWorld, [this](const QVariant &res) {
         const QSet<QString> webPageTypes = {
             QSL("text/html"),
