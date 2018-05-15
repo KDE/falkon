@@ -41,20 +41,21 @@ public:
     void unload();
     bool testPlugin();
 
-    QString name();
     void setName(const QString &name);
-    QJSValue jsInit();
-    void setJsInit(const QJSValue &init);
-    QJSValue jsUnload();
-    void setJsUnload(const QJSValue &unload);
-    QJSValue jsTestPlugin();
-    void setJsTestPlugin(const QJSValue &testPlugin);
 
 private:
     QString m_name;
     QJSValue m_jsInit;
     QJSValue m_jsUnload;
     QJSValue m_jsTestPlugin;
+
+    QString name();
+    QJSValue jsInit();
+    void setJsInit(const QJSValue &init);
+    QJSValue jsUnload();
+    void setJsUnload(const QJSValue &unload);
+    QJSValue jsTestPlugin();
+    void setJsTestPlugin(const QJSValue &testPlugin);
 };
 
 #endif // QMLPLUGININTERFACE_H
