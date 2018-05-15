@@ -24,12 +24,13 @@
 
 #include "qzcommon.h"
 #include "plugininterface.h"
-#include "qml/qmlplugininterface.h"
+#include "qml/qmlpluginloader.h"
 
 class QLibrary;
 class QPluginLoader;
 
 class SpeedDial;
+class QmlPluginLoader;
 
 struct PluginSpec {
     QString name;
@@ -73,7 +74,7 @@ public:
         QPluginLoader *pluginLoader = nullptr;
 
         // QmlPlugin
-        QmlPluginInterface *qmlComponentInstance = nullptr;
+        QmlPluginLoader *qmlPluginLoader = nullptr;
 
         // Other
         QVariant data;

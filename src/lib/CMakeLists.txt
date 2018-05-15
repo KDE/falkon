@@ -154,6 +154,7 @@ set(SRCS ${SRCS}
     plugins/pluginproxy.cpp
     plugins/plugins.cpp
     plugins/speeddial.cpp
+    plugins/qml/qmlpluginloader.cpp
     plugins/qml/qmlplugins.cpp
     plugins/qml/qmlplugininterface.cpp
     popupwindow/popuplocationbar.cpp

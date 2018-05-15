@@ -391,13 +391,9 @@ Plugins::Plugin Plugins::loadQmlPlugin(const QString &name)
     plugin.type = Plugin::QmlPlugin;
     plugin.pluginId = QSL("qml:%1").arg(QFileInfo(name).fileName());
     plugin.pluginSpec = createSpec(DesktopFile(fullPath + QSL("/metadata.desktop")));
-
-    QQmlEngine* engine = new QQmlEngine();
-    QQmlComponent component(engine, QDir(fullPath).filePath(plugin.pluginSpec.entryPoint));
-    plugin.qmlComponentInstance = qobject_cast<QmlPluginInterface*>(component.create());
-
-    if (!plugin.qmlComponentInstance) {
-        qWarning() << "Loading" << fullPath << "failed:" << component.errorString();
+    plugin.qmlPluginLoader = new QmlPluginLoader(QDir(fullPath).filePath(plugin.pluginSpec.entryPoint));
+    if (!plugin.qmlPluginLoader->instance()) {
+        qWarning() << "Loading" << fullPath << "failed:" << plugin.qmlPluginLoader->component()->errorString();
         return Plugin();
     }
 
@@ -482,6 +478,6 @@ void Plugins::initQmlPlugin(Plugin *plugin)
 {
     Q_ASSERT(plugin->type == Plugin::QmlPlugin);
 
-    plugin->qmlComponentInstance->setName(plugin->pluginSpec.name);
-    plugin->instance = qobject_cast<PluginInterface*>(plugin->qmlComponentInstance);
+    plugin->qmlPluginLoader->setName(plugin->pluginSpec.name);
+    plugin->instance = qobject_cast<PluginInterface*>(plugin->qmlPluginLoader->instance());
 }
