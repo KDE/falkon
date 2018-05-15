@@ -24,10 +24,13 @@
 #include "adblock/adblockplugin.h"
 #include "../config.h"
 #include "desktopfile.h"
+#include "qml/qmlplugins.h"
 
 #include <iostream>
 #include <QPluginLoader>
 #include <QDir>
+#include <QQmlEngine>
+#include <QQmlComponent>
 
 Plugins::Plugins(QObject* parent)
     : QObject(parent)
@@ -39,6 +42,8 @@ Plugins::Plugins(QObject* parent)
     if (!MainApplication::isTestModeEnabled()) {
         loadPythonSupport();
     }
+
+    loadQmlSupport();
 }
 
 QList<Plugins::Plugin> Plugins::getAvailablePlugins()
@@ -113,6 +118,7 @@ PluginSpec Plugins::createSpec(const DesktopFile &metaData)
     spec.description = metaData.comment();
     spec.version = metaData.value(QSL("X-Falkon-Version")).toString();
     spec.author = QSL("%1 <%2>").arg(metaData.value(QSL("X-Falkon-Author")).toString(), metaData.value(QSL("X-Falkon-Email")).toString());
+    spec.entryPoint = metaData.value(QSL("X-Falkon-EntryPoint")).toString();
     spec.hasSettings = metaData.value(QSL("X-Falkon-Settings")).toBool();
 
     const QString iconName = metaData.icon();
@@ -204,6 +210,24 @@ void Plugins::loadAvailablePlugins()
             }
         }
     }
+
+    // QmlPlugin
+    for (QString dir: dirs) {
+        // qml plugins will be loaded from subdirectory qml
+        dir.append(QSL("/qml"));
+        const auto qmlDirs = QDir(dir).entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
+        for (const QFileInfo &info : qmlDirs) {
+            Plugin plugin = loadQmlPlugin(info.absoluteFilePath());
+            if (plugin.type == Plugin::Invalid) {
+                continue;
+            }
+            if (plugin.pluginSpec.name.isEmpty()) {
+                qWarning() << "Invalid plugin spec of" << info.absoluteFilePath() << "plugin";
+                continue;
+            }
+            registerAvailablePlugin(plugin);
+        }
+    }
 }
 
 void Plugins::registerAvailablePlugin(const Plugin &plugin)
@@ -244,6 +268,11 @@ void Plugins::loadPythonSupport()
     }
 }
 
+void Plugins::loadQmlSupport()
+{
+    QmlPlugins::registerQmlTypes();
+}
+
 Plugins::Plugin Plugins::loadPlugin(const QString &id)
 {
     QString name;
@@ -258,6 +287,8 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
             type = Plugin::SharedLibraryPlugin;
         } else if (t == QL1S("python")) {
             type = Plugin::PythonPlugin;
+        } else if (t == QL1S("qml")) {
+            type = Plugin::QmlPlugin;
         }
         name = id.mid(colon + 1);
     } else {
@@ -274,6 +305,9 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
 
     case Plugin::PythonPlugin:
         return loadPythonPlugin(name);
+
+    case Plugin::QmlPlugin:
+        return loadQmlPlugin(name);
 
     default:
         return Plugin();
@@ -340,6 +374,36 @@ Plugins::Plugin Plugins::loadPythonPlugin(const QString &name)
     return f(name);
 }
 
+Plugins::Plugin Plugins::loadQmlPlugin(const QString &name)
+{
+    QString fullPath;
+    if (QFileInfo(name).isAbsolute()) {
+        fullPath = name;
+    } else {
+        fullPath = DataPaths::locate(DataPaths::Plugins, QSL("qml/") + name);
+        if (fullPath.isEmpty()) {
+            qWarning() << "Plugin" << name << "not found";
+            return Plugin();
+        }
+    }
+
+    Plugin plugin;
+    plugin.type = Plugin::QmlPlugin;
+    plugin.pluginId = QSL("qml:%1").arg(QFileInfo(name).fileName());
+    plugin.pluginSpec = createSpec(DesktopFile(fullPath + QSL("/metadata.desktop")));
+
+    QQmlEngine* engine = new QQmlEngine();
+    QQmlComponent component(engine, QDir(fullPath).filePath(plugin.pluginSpec.entryPoint));
+    plugin.qmlComponentInstance = qobject_cast<QmlPluginInterface*>(component.create());
+
+    if (!plugin.qmlComponentInstance) {
+        qWarning() << "Loading" << fullPath << "failed:" << component.errorString();
+        return Plugin();
+    }
+
+    return plugin;
+}
+
 bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
 {
     if (!plugin) {
@@ -357,6 +421,10 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
 
     case Plugin::PythonPlugin:
         initPythonPlugin(plugin);
+        break;
+
+    case Plugin::QmlPlugin:
+        initQmlPlugin(plugin);
         break;
 
     default:
@@ -408,4 +476,12 @@ void Plugins::initPythonPlugin(Plugin *plugin)
     }
 
     f(plugin);
+}
+
+void Plugins::initQmlPlugin(Plugin *plugin)
+{
+    Q_ASSERT(plugin->type == Plugin::QmlPlugin);
+
+    plugin->qmlComponentInstance->setName(plugin->pluginSpec.name);
+    plugin->instance = qobject_cast<PluginInterface*>(plugin->qmlComponentInstance);
 }

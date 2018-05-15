@@ -24,6 +24,7 @@
 
 #include "qzcommon.h"
 #include "plugininterface.h"
+#include "qml/qmlplugininterface.h"
 
 class QLibrary;
 class QPluginLoader;
@@ -36,6 +37,7 @@ struct PluginSpec {
     QString author;
     QString version;
     QPixmap icon;
+    QString entryPoint;
     bool hasSettings = false;
 
     bool operator==(const PluginSpec &other) const {
@@ -55,7 +57,8 @@ public:
             Invalid = 0,
             InternalPlugin,
             SharedLibraryPlugin,
-            PythonPlugin
+            PythonPlugin,
+            QmlPlugin
         };
         Type type = Invalid;
         QString pluginId;
@@ -68,6 +71,9 @@ public:
         // SharedLibraryPlugin
         QString libraryPath;
         QPluginLoader *pluginLoader = nullptr;
+
+        // QmlPlugin
+        QmlPluginInterface *qmlComponentInstance = nullptr;
 
         // Other
         QVariant data;
@@ -109,14 +115,17 @@ Q_SIGNALS:
 
 private:
     void loadPythonSupport();
+    void loadQmlSupport();
     Plugin loadPlugin(const QString &id);
     Plugin loadInternalPlugin(const QString &name);
     Plugin loadSharedLibraryPlugin(const QString &name);
     Plugin loadPythonPlugin(const QString &name);
+    Plugin loadQmlPlugin(const QString &name);
     bool initPlugin(PluginInterface::InitState state, Plugin *plugin);
     void initInternalPlugin(Plugin *plugin);
     void initSharedLibraryPlugin(Plugin *plugin);
     void initPythonPlugin(Plugin *plugin);
+    void initQmlPlugin(Plugin *plugin);
 
     void registerAvailablePlugin(const Plugin &plugin);
 
