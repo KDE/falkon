@@ -25,6 +25,7 @@
 #include "../config.h"
 #include "desktopfile.h"
 #include "qml/qmlplugins.h"
+#include "sqldatabase.h"
 
 #include <iostream>
 #include <QPluginLoader>
@@ -89,19 +90,15 @@ void Plugins::unloadPlugin(Plugins::Plugin* plugin)
 
 void Plugins::loadSettings()
 {
-    QStringList defaultAllowedPlugins = {
-        QSL("internal:adblock")
-    };
-
-    // Enable KDE Frameworks Integration when running inside KDE session
-    if (qgetenv("KDE_FULL_SESSION") == QByteArray("true")) {
-        defaultAllowedPlugins.append(QSL("lib:KDEFrameworksIntegration.so"));
+    QSqlQuery query(SqlDatabase::instance()->database());
+    if (mApp->isPrivate()) {
+        query.exec(QSL("SELECT * FROM allowed_plugins WHERE allowInPrivateMode=1"));
+    } else {
+        query.exec(QSL("SELECT * FROM allowed_plugins"));
     }
-
-    Settings settings;
-    settings.beginGroup("Plugin-Settings");
-    m_allowedPlugins = settings.value("AllowedPlugins", defaultAllowedPlugins).toStringList();
-    settings.endGroup();
+    while (query.next()) {
+        m_allowedPlugins.append(query.value(0).toString());
+    }
 }
 
 void Plugins::shutdown()
@@ -480,4 +477,19 @@ void Plugins::initQmlPlugin(Plugin *plugin)
 
     plugin->qmlPluginLoader->setName(plugin->pluginSpec.name);
     plugin->instance = qobject_cast<PluginInterface*>(plugin->qmlPluginLoader->instance());
+}
+
+// static
+QStringList Plugins::getDefaultAllowedPlugins()
+{
+    QStringList defaultAllowedPlugins = {
+        QSL("internal:adblock")
+    };
+
+    // Enable KDE Frameworks Integration when running inside KDE session
+    if (qgetenv("KDE_FULL_SESSION") == QByteArray("true")) {
+        defaultAllowedPlugins.append(QSL("lib:KDEFrameworksIntegration.so"));
+    }
+
+    return defaultAllowedPlugins;
 }

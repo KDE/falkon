@@ -21,6 +21,7 @@
 #include <QWidget>
 
 #include "qzcommon.h"
+#include "pluginproxy.h"
 
 namespace Ui
 {
@@ -44,14 +45,17 @@ private Q_SLOTS:
     void settingsClicked();
     void currentChanged(QListWidgetItem* item);
     void itemChanged(QListWidgetItem* item);
+    void allowInPrivateModeBoxToggled(bool state);
 
     void refresh();
 
 private:
     void sortItems();
+    Plugins::Plugin getCurrentPlugin();
 
     Ui::PluginsList* ui;
     bool m_loaded;
+    QMap<QString, int> m_allowInPrivateMode;
 };
 
 #endif // PLUGINSMANAGER_H

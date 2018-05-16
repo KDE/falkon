@@ -17,7 +17,6 @@
 * ============================================================ */
 #include "pluginsmanager.h"
 #include "ui_pluginslist.h"
-#include "pluginproxy.h"
 #include "mainapplication.h"
 #include "plugininterface.h"
 #include "pluginlistdelegate.h"
@@ -25,10 +24,12 @@
 #include "settings.h"
 #include "iconprovider.h"
 #include "../config.h"
+#include "sqldatabase.h"
 
 #include <QInputDialog>
 #include <QMessageBox>
 #include <QTimer>
+#include <QCheckBox>
 
 PluginsManager::PluginsManager(QWidget* parent)
     : QWidget(parent)
@@ -50,7 +51,7 @@ PluginsManager::PluginsManager(QWidget* parent)
     connect(ui->butSettings, SIGNAL(clicked()), this, SLOT(settingsClicked()));
     connect(ui->list, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)), this, SLOT(currentChanged(QListWidgetItem*)));
     connect(ui->list, SIGNAL(itemChanged(QListWidgetItem*)), this, SLOT(itemChanged(QListWidgetItem*)));
-
+    connect(ui->allowInPrivateModeBox, &QCheckBox::toggled, this, &PluginsManager::allowInPrivateModeBoxToggled);
     ui->list->setItemDelegate(new PluginListDelegate(ui->list));
 }
 
@@ -68,20 +69,25 @@ void PluginsManager::save()
         return;
     }
 
-    QStringList allowedPlugins;
-    for (int i = 0; i < ui->list->count(); i++) {
-        QListWidgetItem* item = ui->list->item(i);
-
-        if (item->checkState() == Qt::Checked) {
-            const Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
-            allowedPlugins.append(plugin.pluginId);
-        }
+    if (mApp->isPrivate()) {
+        QMessageBox::warning(this, tr("Error!"), tr("Cannot manage extensions in private mode!"));
+        return;
     }
 
-    Settings settings;
-    settings.beginGroup("Plugin-Settings");
-    settings.setValue("AllowedPlugins", allowedPlugins);
-    settings.endGroup();
+    for (int i = 0; i < ui->list->count(); i++) {
+        QListWidgetItem* item = ui->list->item(i);
+        const Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
+        if (item->checkState() == Qt::Checked) {
+            auto job = new SqlQueryJob(QSL("INSERT OR REPLACE INTO allowed_plugins (pluginId, allowInPrivateMode) VALUES (?, ?)"), this);
+            job->addBindValue(plugin.pluginId);
+            job->addBindValue(m_allowInPrivateMode[plugin.pluginId]);
+            job->start();
+        } else {
+            auto job = new SqlQueryJob(QSL("DELETE FROM allowed_plugins WHERE pluginId = ?"), this);
+            job->addBindValue(plugin.pluginId);
+            job->start();
+        }
+    }
 }
 
 void PluginsManager::refresh()
@@ -120,6 +126,12 @@ void PluginsManager::refresh()
     sortItems();
 
     connect(ui->list, SIGNAL(itemChanged(QListWidgetItem*)), this, SLOT(itemChanged(QListWidgetItem*)));
+
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.exec(QSL("SELECT * FROM allowed_plugins"));
+    while (query.next()) {
+        m_allowInPrivateMode[query.value(0).toString()] = query.value(1).toInt();
+    }
 }
 
 void PluginsManager::sortItems()
@@ -154,12 +166,21 @@ void PluginsManager::currentChanged(QListWidgetItem* item)
 
     const Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
     bool showSettings = plugin.pluginSpec.hasSettings;
+    bool enableAllowInPrivateModeBox = true;
 
-    if (!plugin.isLoaded()) {
+    if (plugin.isLoaded()) {
+        if (m_allowInPrivateMode[plugin.pluginId]) {
+            ui->allowInPrivateModeBox->setChecked(true);
+        } else {
+            ui->allowInPrivateModeBox->setChecked(false);
+        }
+    } else {
         showSettings = false;
+        enableAllowInPrivateModeBox = false;
     }
 
     ui->butSettings->setEnabled(showSettings);
+    ui->allowInPrivateModeBox->setEnabled(enableAllowInPrivateModeBox);
 }
 
 void PluginsManager::itemChanged(QListWidgetItem* item)
@@ -194,17 +215,10 @@ void PluginsManager::itemChanged(QListWidgetItem* item)
 
 void PluginsManager::settingsClicked()
 {
-    QListWidgetItem* item = ui->list->currentItem();
-    if (!item || item->checkState() == Qt::Unchecked) {
+    Plugins::Plugin plugin = getCurrentPlugin();
+
+    if (plugin.type == Plugins::Plugin::Invalid) {
         return;
-    }
-
-    Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
-
-    if (!plugin.isLoaded()) {
-        mApp->plugins()->loadPlugin(&plugin);
-
-        item->setData(Qt::UserRole + 10, QVariant::fromValue(plugin));
     }
 
     if (plugin.isLoaded() && plugin.pluginSpec.hasSettings) {
@@ -215,4 +229,39 @@ void PluginsManager::settingsClicked()
 PluginsManager::~PluginsManager()
 {
     delete ui;
+}
+
+void PluginsManager::allowInPrivateModeBoxToggled(bool state)
+{
+    Plugins::Plugin plugin = getCurrentPlugin();
+
+    if (plugin.type == Plugins::Plugin::Invalid) {
+        return;
+    }
+
+    if (plugin.isLoaded()) {
+        if (state) {
+            m_allowInPrivateMode[plugin.pluginId] = 1;
+        } else {
+            m_allowInPrivateMode[plugin.pluginId] = 0;
+        }
+    }
+}
+
+Plugins::Plugin PluginsManager::getCurrentPlugin()
+{
+    QListWidgetItem* item = ui->list->currentItem();
+    if (!item || item->checkState() == Qt::Unchecked) {
+        return Plugins::Plugin();
+    }
+
+    Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
+
+    if (!plugin.isLoaded()) {
+        mApp->plugins()->loadPlugin(&plugin);
+
+        item->setData(Qt::UserRole + 10, QVariant::fromValue(plugin));
+    }
+
+    return plugin;
 }

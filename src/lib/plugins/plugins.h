@@ -103,6 +103,8 @@ public:
 
     static PluginSpec createSpec(const DesktopFile &metaData);
 
+    static QStringList getDefaultAllowedPlugins();
+
 public Q_SLOTS:
     void loadSettings();
 

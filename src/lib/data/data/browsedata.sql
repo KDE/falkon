@@ -55,4 +55,9 @@ CREATE TABLE icons (
 );
 CREATE UNIQUE INDEX icons_urluniqueindex ON icons (url);
 
+CREATE TABLE allowed_plugins (
+    pluginId TEXT NOT NULL UNIQUE,
+    allowInPrivateMode INTEGER DEFAULT 0 NOT NULL
+);
+
 -- Data
