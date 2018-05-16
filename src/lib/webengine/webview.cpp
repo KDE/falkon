@@ -495,7 +495,7 @@ void WebView::copyLinkToClipboard()
 
 void WebView::savePageAs()
 {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     page()->runJavaScript(QSL("document.contentType"), WebPage::SafeJsWorld, [this](const QVariant &res) {
         const QSet<QString> webPageTypes = {
             QSL("text/html"),
@@ -1250,7 +1250,7 @@ void WebView::contextMenuEvent(QContextMenuEvent *event)
 
 bool WebView::focusNextPrevChild(bool next)
 {
-#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINE_VERSION < QT_VERSION_CHECK(5, 11, 0)
     // QTBUG-67043
     // Workaround QtWebEngine issue where QWebEngineView loses focus on second load() call.
     if (next) {

@@ -20,6 +20,7 @@
 
 #include <QDebug>
 #include <QFlags>
+#include <QtWebEngineVersion>
 
 #ifdef FALKON_SHAREDLIBRARY
 #define FALKON_EXPORT Q_DECL_EXPORT

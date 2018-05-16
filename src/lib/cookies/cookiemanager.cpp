@@ -75,7 +75,7 @@ CookieManager::CookieManager(QWidget *parent)
     ui->blackList->addItems(settings.value("blacklist", QStringList()).toStringList());
     settings.endGroup();
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINE_VERSION < QT_VERSION_CHECK(5, 11, 0)
     ui->filter3rdParty->hide();
 #endif
 

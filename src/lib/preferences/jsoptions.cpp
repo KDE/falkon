@@ -29,11 +29,11 @@ JsOptions::JsOptions(QWidget* parent)
 
     ui->setupUi(this);
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 10, 0)
+#if QTWEBENGINE_VERSION < QT_VERSION_CHECK(5, 10, 0)
     ui->jscanActivateWindow->setVisible(false);
 #endif
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINE_VERSION < QT_VERSION_CHECK(5, 11, 0)
     ui->jscanPaste->setVisible(false);
 #endif
 

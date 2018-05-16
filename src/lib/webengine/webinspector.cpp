@@ -67,7 +67,7 @@ void WebInspector::setView(WebView *view)
     m_view = view;
     Q_ASSERT(isEnabled());
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     page()->setInspectedPage(m_view->page());
     connect(m_view, &WebView::pageChanged, this, &WebInspector::deleteLater);
 #else
@@ -97,7 +97,7 @@ void WebInspector::inspectElement()
 
 bool WebInspector::isEnabled()
 {
-#if QT_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINE_VERSION < QT_VERSION_CHECK(5, 11, 0)
     if (!qEnvironmentVariableIsSet("QTWEBENGINE_REMOTE_DEBUGGING")) {
         return false;
     }

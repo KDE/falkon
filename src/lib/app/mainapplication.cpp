@@ -921,11 +921,11 @@ void MainApplication::loadSettings()
     webSettings->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, true);
     webSettings->setAttribute(QWebEngineSettings::FocusOnNavigationEnabled, false);
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     webSettings->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, settings.value("allowJavaScriptActivateWindow", false).toBool());
 #endif
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     webSettings->setAttribute(QWebEngineSettings::JavascriptCanPaste, settings.value("allowJavaScriptPaste", true).toBool());
     webSettings->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, settings.value("DisableVideoAutoPlay", false).toBool());
     webSettings->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, settings.value("WebRTCPublicIpOnly", true).toBool());
