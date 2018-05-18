@@ -17,6 +17,8 @@
 * ============================================================ */
 #include "qmlplugins.h"
 #include "qmlplugininterface.h"
+#include "api/qmlbookmarktreenode.h"
+#include "api/qmlbookmarks.h"
 
 #include <QQmlEngine>
 
@@ -24,10 +26,37 @@
 void QmlPlugins::registerQmlTypes()
 {
     registerQmlPluginInterface();
+
+    registerQmlBookmarkTreeNode();
+    registerQmlBookmarks();
 }
 
 // private static
 void QmlPlugins::registerQmlPluginInterface()
 {
     qmlRegisterType<QmlPluginInterface>("org.kde.falkon", 1, 0, "PluginInterface");
+}
+
+// private static
+void QmlPlugins::registerQmlBookmarkTreeNode()
+{
+    qmlRegisterSingletonType<QmlBookmarkTreeNode>("org.kde.falkon", 1, 0, "BookmarkTreeNode", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlBookmarkTreeNode();
+        return object;
+    });
+}
+
+// private static
+void QmlPlugins::registerQmlBookmarks()
+{
+    qmlRegisterSingletonType<QmlBookmarks>("org.kde.falkon", 1, 0, "Bookmarks", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlBookmarks();
+        return object;
+    });
 }

@@ -157,6 +157,8 @@ set(SRCS ${SRCS}
     plugins/qml/qmlpluginloader.cpp
     plugins/qml/qmlplugins.cpp
     plugins/qml/qmlplugininterface.cpp
+    plugins/qml/api/qmlbookmarktreenode.cpp
+    plugins/qml/api/qmlbookmarks.cpp
     popupwindow/popuplocationbar.cpp
     popupwindow/popupstatusbarmessage.cpp
     popupwindow/popupwebview.cpp

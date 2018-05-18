@@ -21,6 +21,9 @@
 class QmlPlugins
 {
     static void registerQmlPluginInterface();
+
+    static void registerQmlBookmarkTreeNode();
+    static void registerQmlBookmarks();
 public:
     static void registerQmlTypes();
 };
