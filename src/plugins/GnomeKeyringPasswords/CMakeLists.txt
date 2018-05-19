@@ -14,5 +14,5 @@ qt5_add_resources(RSCS ${GnomeKeyringPasswords_RSCS})
 
 add_library(GnomeKeyringPasswords MODULE ${GnomeKeyringPasswords_SRCS} ${RSCS})
 install(TARGETS GnomeKeyringPasswords DESTINATION ${FALKON_INSTALL_PLUGINDIR})
-target_link_libraries(GnomeKeyringPasswords ${GNOME_KEYRING_LIBRARIES} FalkonPrivate)
+target_link_libraries(GnomeKeyringPasswords PkgConfig::GNOME_KEYRING FalkonPrivate)
 
