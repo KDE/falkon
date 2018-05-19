@@ -42,6 +42,8 @@ QmlBookmarks::QmlBookmarks(QObject *parent) :
 BookmarkItem *QmlBookmarks::getBookmarkItem(QmlBookmarkTreeNode *treeNode)
 {
     auto bookmarks = mApp->bookmarks();
+    QList<BookmarkItem*> items;
+
     if (treeNode->url().isEmpty()) {
         if (isTreeNodeEqualsItem(treeNode, bookmarks->rootItem())) {
             return bookmarks->rootItem();
@@ -54,20 +56,35 @@ BookmarkItem *QmlBookmarks::getBookmarkItem(QmlBookmarkTreeNode *treeNode)
 
         } else if (isTreeNodeEqualsItem(treeNode, bookmarks->unsortedFolder())) {
             return bookmarks->unsortedFolder();
-
-        } else if (isTreeNodeEqualsItem(treeNode, bookmarks->lastUsedFolder())) {
-            return bookmarks->lastUsedFolder();
         }
+
+        items = bookmarks->searchBookmarks(treeNode->title());
     } else {
-        auto items = bookmarks->searchBookmarks(QUrl(treeNode->url()));
-        for (auto item : items) {
-            if (item->urlString() == treeNode->url()) {
-                return item;
-            }
+        items = bookmarks->searchBookmarks(QUrl(treeNode->url()));
+    }
+
+    for (auto item : items) {
+        if (isTreeNodeEqualsItem(treeNode, item)) {
+            return item;
         }
     }
 
     return nullptr;
+}
+
+BookmarkItem *QmlBookmarks::getBookmarkItem(QObject *object)
+{
+    auto treeNode = qobject_cast<QmlBookmarkTreeNode*>(object);
+    if (!treeNode) {
+        return nullptr;
+    }
+
+    auto item = getBookmarkItem(treeNode);
+    if (!item || item->urlString() != treeNode->url()) {
+        return nullptr;
+    }
+
+    return item;
 }
 
 bool QmlBookmarks::isBookmarked(const QUrl &url)
@@ -106,16 +123,30 @@ QmlBookmarkTreeNode *QmlBookmarks::lastUsedFolder() const
 
 bool QmlBookmarks::create(const QVariantMap &map)
 {
-    if (!map["parent"].isValid() || !map["type"].isValid()) {
-        qWarning() << "Unable to create new bookmark";
+    if (!map["parent"].isValid()) {
+        qWarning() << "Unable to create new bookmark:" << "parent not found";
         return false;
     }
     QString title = map["title"].toString();
     QString urlString = map["url"].toString();
     QString description = map["description"].toString();
-    auto type = BookmarkItem::Type(map["type"].toInt());
-    auto parentTreeNode = qvariant_cast<QmlBookmarkTreeNode*>(map["parent"]);
-    auto parent = getBookmarkItem(parentTreeNode);
+
+    BookmarkItem::Type type;
+    if (map["type"].isValid()) {
+        type = BookmarkItem::Type(map["type"].toInt(false));
+    } else if (urlString.isEmpty()){
+        if (!title.isEmpty()) {
+            type = BookmarkItem::Folder;
+        } else {
+            type = BookmarkItem::Invalid;
+        }
+    } else {
+        type = BookmarkItem::Url;
+    }
+
+    // FIXME: try removing qvariant_cast
+    auto object = qvariant_cast<QObject*>(map["parent"]);
+    auto parent = getBookmarkItem(object);
     if (!parent) {
         qWarning() << "Unable to create new bookmark:" << "parent not found";
         return false;
@@ -128,14 +159,13 @@ bool QmlBookmarks::create(const QVariantMap &map)
     return true;
 }
 
-bool QmlBookmarks::remove(const QVariant &var)
+bool QmlBookmarks::remove(QObject *object)
 {
-    if (!var.isValid()) {
-        qWarning() << "Unable to remove bookmark";
+    auto item = getBookmarkItem(object);
+    if (!item) {
+        qWarning() << "Unable to remove bookmark:" <<"BookmarkItem not found";
         return false;
     }
-    auto treeNode = qvariant_cast<QmlBookmarkTreeNode*>(var);
-    auto item = getBookmarkItem(treeNode);
     mApp->bookmarks()->removeBookmark(item);
     return true;
 }
@@ -162,17 +192,16 @@ QList<QObject*> QmlBookmarks::search(const QVariantMap &map)
     return ret;
 }
 
-bool QmlBookmarks::update(const QVariant &var, const QVariantMap &changes)
+bool QmlBookmarks::update(QObject *object, const QVariantMap &changes)
 {
-    if (!var.isValid()) {
-        qWarning() << "Unable to update bookmark:" << "invalid parameter";
+    auto treeNode = qobject_cast<QmlBookmarkTreeNode*>(object);
+    if (!treeNode) {
+        qWarning() << "Unable to update bookmark:" << "unable to cast QVariant to QmlBookmarkTreeNode";
         return false;
     }
 
-    auto treeNode = qvariant_cast<QmlBookmarkTreeNode*>(var);
     auto item = getBookmarkItem(treeNode);
-
-    if (!item || item->urlString() != treeNode->url()) {
+    if (!item) {
         qWarning() << "Unable to update bookmark:" << "bookmark not found";
         return false;
     }
@@ -192,17 +221,11 @@ bool QmlBookmarks::update(const QVariant &var, const QVariantMap &changes)
     return true;
 }
 
-QmlBookmarkTreeNode *QmlBookmarks::get(const QVariant &var)
+QmlBookmarkTreeNode *QmlBookmarks::get(const QString &string)
 {
-    if (!var.isValid()) {
-        qWarning() << "Unable to get bookmark:" << "invalid paramater";
-        return new QmlBookmarkTreeNode();
-    }
-
-    QString urlString = var.toString();
-    auto items = mApp->bookmarks()->searchBookmarks(QUrl(urlString));
+    auto items = mApp->bookmarks()->searchBookmarks(QUrl(string));
     for (auto item : items) {
-        if (item->urlString() == urlString) {
+        if (item->urlString() == string) {
             return QmlBookmarkTreeNode::fromBookmarkItem(item);
         }
     }
@@ -210,23 +233,17 @@ QmlBookmarkTreeNode *QmlBookmarks::get(const QVariant &var)
     return new QmlBookmarkTreeNode();
 }
 
-QList<QObject*> QmlBookmarks::getChildren(const QVariant &var)
+QList<QObject*> QmlBookmarks::getChildren(QObject *object)
 {
     QList<QObject*> ret;
-    if (!var.isValid()) {
-        qWarning() << "Unable to get children:" << "invalid parameter";
+
+    auto bookmarkItem = getBookmarkItem(object);
+    if (!bookmarkItem) {
+        qWarning() << "Unable to get children:" << "parent not found";
         return ret;
     }
 
-    auto treeNode = qvariant_cast<QmlBookmarkTreeNode*>(var);
-    auto item = getBookmarkItem(treeNode);
-
-    if (!item || item->urlString() != treeNode->url()) {
-        qWarning() << "Unable to get children:" << "bookmark not found";
-        return ret;
-    }
-
-    auto items = item->children();
+    auto items = bookmarkItem->children();
     for (auto item : items) {
         ret.append(QmlBookmarkTreeNode::fromBookmarkItem(item));
     }

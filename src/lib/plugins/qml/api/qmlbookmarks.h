@@ -29,7 +29,6 @@ class QmlBookmarks : public QObject
 
 public:
     QmlBookmarks(QObject *parent = 0);
-    BookmarkItem *getBookmarkItem(QmlBookmarkTreeNode *treeNode);
 
     Q_INVOKABLE bool isBookmarked(const QUrl &url);
     Q_INVOKABLE QmlBookmarkTreeNode *rootItem() const;
@@ -38,11 +37,11 @@ public:
     Q_INVOKABLE QmlBookmarkTreeNode *unsortedFolder() const;
     Q_INVOKABLE QmlBookmarkTreeNode *lastUsedFolder() const;
     Q_INVOKABLE bool create(const QVariantMap &map);
-    Q_INVOKABLE bool remove(const QVariant &var);
+    Q_INVOKABLE bool remove(QObject *object);
     Q_INVOKABLE QList<QObject*> search(const QVariantMap &map);
-    Q_INVOKABLE bool update(const QVariant &var, const QVariantMap &changes);
-    Q_INVOKABLE QmlBookmarkTreeNode *get(const QVariant &var);
-    Q_INVOKABLE QList<QObject*> getChildren(const QVariant &var);
+    Q_INVOKABLE bool update(QObject *object, const QVariantMap &changes);
+    Q_INVOKABLE QmlBookmarkTreeNode *get(const QString &string);
+    Q_INVOKABLE QList<QObject*> getChildren(QObject *object);
 signals:
     void created(QmlBookmarkTreeNode *treeNode);
     void changed(QmlBookmarkTreeNode *treeNode);
@@ -50,6 +49,8 @@ signals:
 
 private:
     bool isTreeNodeEqualsItem(QmlBookmarkTreeNode *treeNode, BookmarkItem *item);
+    BookmarkItem *getBookmarkItem(QmlBookmarkTreeNode *treeNode);
+    BookmarkItem *getBookmarkItem(QObject *object);
 };
 
 #endif // QMLBOOKMARKS_H
