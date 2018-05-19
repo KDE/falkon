@@ -9,5 +9,14 @@ function(install_python_script name)
     endif()
 endfunction()
 
+function(install_qml_script name)
+    install(
+        DIRECTORY ${name}
+        DESTINATION "${FALKON_INSTALL_PLUGINDIR}/qml"
+    )
+endfunction()
+
 install_python_script(hellopython)
 install_python_script(runaction)
+
+install_qml_script(helloqml)
