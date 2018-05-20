@@ -133,7 +133,7 @@ bool QmlBookmarks::create(const QVariantMap &map)
 
     BookmarkItem::Type type;
     if (map["type"].isValid()) {
-        type = BookmarkItem::Type(map["type"].toInt(false));
+        type = BookmarkItem::Type(map["type"].toInt());
     } else if (urlString.isEmpty()){
         if (!title.isEmpty()) {
             type = BookmarkItem::Folder;
