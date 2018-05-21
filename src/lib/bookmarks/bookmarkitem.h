@@ -103,4 +103,6 @@ private:
     bool m_sidebarExpanded;
 };
 
+Q_DECLARE_METATYPE(BookmarkItem*)
+
 #endif // BOOKMARKITEM_H
