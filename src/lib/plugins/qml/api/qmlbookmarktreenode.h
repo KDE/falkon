@@ -36,15 +36,25 @@ public:
 
     Q_ENUMS(Type)
 
-    Q_INVOKABLE Type type() const;
-    Q_INVOKABLE QString title() const;
-    Q_INVOKABLE QString url() const;
-    Q_INVOKABLE QString description() const;
-    Q_INVOKABLE QString keyword() const;
-    Q_INVOKABLE int visitCount() const;
-    Q_INVOKABLE QmlBookmarkTreeNode *parent() const;
-    Q_INVOKABLE bool unmodifiable() const;
-    Q_INVOKABLE QList<QObject*> children() const;
+    Q_PROPERTY(Type type READ type CONSTANT)
+    Q_PROPERTY(QString title READ title CONSTANT)
+    Q_PROPERTY(QString url READ url CONSTANT)
+    Q_PROPERTY(QString description READ description CONSTANT)
+    Q_PROPERTY(QString keyword READ keyword CONSTANT)
+    Q_PROPERTY(int visitCount READ visitCount CONSTANT)
+    Q_PROPERTY(QmlBookmarkTreeNode* parent READ parent CONSTANT)
+    Q_PROPERTY(bool unmodifiable READ unmodifiable CONSTANT)
+    Q_PROPERTY(QList<QObject*> children READ children CONSTANT)
+
+    Type type() const;
+    QString title() const;
+    QString url() const;
+    QString description() const;
+    QString keyword() const;
+    int visitCount() const;
+    QmlBookmarkTreeNode *parent() const;
+    bool unmodifiable() const;
+    QList<QObject*> children() const;
 
     static QmlBookmarkTreeNode *fromBookmarkItem(BookmarkItem *item);
 
