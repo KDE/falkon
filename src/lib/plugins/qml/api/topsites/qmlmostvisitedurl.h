@@ -15,20 +15,23 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLPLUGINS_H
-#define QMLPLUGINS_H
+#ifndef QMLMOSTVISITEDURL_H
+#define QMLMOSTVISITEDURL_H
 
-class QmlPlugins
+#include <QObject>
+
+class QmlMostVisitedUrl : public QObject
 {
-    static void registerQmlPluginInterface();
-
-    static void registerQmlBookmarkTreeNode();
-    static void registerQmlBookmarks();
-
-    static void registerQmlMostVisitedUrl();
-    static void registerQmlTopSites();
+    Q_OBJECT
+    Q_PROPERTY(QString title READ title CONSTANT)
+    Q_PROPERTY(QString url READ url CONSTANT)
 public:
-    static void registerQmlTypes();
+    explicit QmlMostVisitedUrl(QString title = 0, QString url = 0, QObject *parent = 0);
+    QString title() const;
+    QString url() const;
+private:
+    QString m_title;
+    QString m_url;
 };
 
-#endif // QMLPLUGINS_H
+#endif // QMLMOSTVISITEDURL_H

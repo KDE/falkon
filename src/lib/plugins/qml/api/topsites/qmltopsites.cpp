@@ -15,20 +15,25 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLPLUGINS_H
-#define QMLPLUGINS_H
+#include "qmltopsites.h"
+#include "speeddial.h"
+#include "mainapplication.h"
+#include "pluginproxy.h"
 
-class QmlPlugins
+QmlTopSites::QmlTopSites(QObject *parent) :
+    QObject(parent)
 {
-    static void registerQmlPluginInterface();
+}
 
-    static void registerQmlBookmarkTreeNode();
-    static void registerQmlBookmarks();
+QList<QObject*> QmlTopSites::get() const
+{
+    // FIXME: this slows the startup of browser
 
-    static void registerQmlMostVisitedUrl();
-    static void registerQmlTopSites();
-public:
-    static void registerQmlTypes();
-};
-
-#endif // QMLPLUGINS_H
+    QList<SpeedDial::Page> pages = mApp->plugins()->speedDial()->pages();
+    QList<QObject*> list;
+    foreach(SpeedDial::Page page, pages) {
+        auto mostVisitedUrl = new QmlMostVisitedUrl(page.title, page.url);
+        list.append(mostVisitedUrl);
+    }
+    return list;
+}

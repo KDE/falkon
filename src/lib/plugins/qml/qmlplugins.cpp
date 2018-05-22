@@ -17,8 +17,10 @@
 * ============================================================ */
 #include "qmlplugins.h"
 #include "qmlplugininterface.h"
-#include "api/qmlbookmarktreenode.h"
-#include "api/qmlbookmarks.h"
+#include "api/bookmarks/qmlbookmarktreenode.h"
+#include "api/bookmarks/qmlbookmarks.h"
+#include "api/topsites/qmlmostvisitedurl.h"
+#include "api/topsites/qmltopsites.h"
 
 #include <QQmlEngine>
 
@@ -29,6 +31,9 @@ void QmlPlugins::registerQmlTypes()
 
     registerQmlBookmarkTreeNode();
     registerQmlBookmarks();
+
+    registerQmlMostVisitedUrl();
+    registerQmlTopSites();
 }
 
 // private static
@@ -57,6 +62,30 @@ void QmlPlugins::registerQmlBookmarks()
         Q_UNUSED(scriptEngine)
 
         auto *object = new QmlBookmarks();
+        return object;
+    });
+}
+
+// private static
+void QmlPlugins::registerQmlMostVisitedUrl()
+{
+    qmlRegisterSingletonType<QmlMostVisitedUrl>("org.kde.falkon", 1, 0, "MostVisitedURL", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlMostVisitedUrl();
+        return object;
+    });
+}
+
+// private static
+void QmlPlugins::registerQmlTopSites()
+{
+    qmlRegisterSingletonType<QmlTopSites>("org.kde.falkon", 1, 0, "TopSites", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlTopSites();
         return object;
     });
 }
