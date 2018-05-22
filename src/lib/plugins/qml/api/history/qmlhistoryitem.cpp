@@ -15,23 +15,50 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLPLUGINS_H
-#define QMLPLUGINS_H
+#include "qmlhistoryitem.h"
 
-class QmlPlugins
+QmlHistoryItem::QmlHistoryItem(HistoryEntry *entry, QObject *parent) :
+    QObject(parent)
+  , m_entry(entry)
 {
-    static void registerQmlPluginInterface();
+}
 
-    static void registerQmlBookmarkTreeNode();
-    static void registerQmlBookmarks();
+int QmlHistoryItem::id() const
+{
+    if (!m_entry) {
+        return 0;
+    }
+    return m_entry->id;
+}
 
-    static void registerQmlMostVisitedUrl();
-    static void registerQmlTopSites();
+QString QmlHistoryItem::url() const
+{
+    if (!m_entry) {
+        return QString();
+    }
+    return m_entry->url.toString();
+}
 
-    static void registerQmlHistoryItem();
-    static void registerQmlHistory();
-public:
-    static void registerQmlTypes();
-};
+QString QmlHistoryItem::title() const
+{
+    if (!m_entry) {
+        return QString();
+    }
+    return m_entry->title;
+}
 
-#endif // QMLPLUGINS_H
+int QmlHistoryItem::visitCount() const
+{
+    if (!m_entry) {
+        return 0;
+    }
+    return m_entry->count;
+}
+
+QDateTime QmlHistoryItem::lastVisitTime() const
+{
+    if (!m_entry) {
+        return QDateTime().currentDateTime().addMonths(1);
+    }
+    return m_entry->date;
+}

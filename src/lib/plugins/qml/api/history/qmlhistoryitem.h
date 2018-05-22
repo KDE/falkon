@@ -15,23 +15,29 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLPLUGINS_H
-#define QMLPLUGINS_H
+#ifndef QMLHISTORYITEM_H
+#define QMLHISTORYITEM_H
 
-class QmlPlugins
+#include <QObject>
+#include "history.h"
+
+class QmlHistoryItem : public QObject
 {
-    static void registerQmlPluginInterface();
-
-    static void registerQmlBookmarkTreeNode();
-    static void registerQmlBookmarks();
-
-    static void registerQmlMostVisitedUrl();
-    static void registerQmlTopSites();
-
-    static void registerQmlHistoryItem();
-    static void registerQmlHistory();
+    Q_OBJECT
+    Q_PROPERTY(int id READ id CONSTANT)
+    Q_PROPERTY(QString url READ url CONSTANT)
+    Q_PROPERTY(QString title READ title CONSTANT)
+    Q_PROPERTY(int visitCount READ visitCount CONSTANT)
+    Q_PROPERTY(QDateTime lastVisitTime READ lastVisitTime CONSTANT)
 public:
-    static void registerQmlTypes();
+    explicit QmlHistoryItem(HistoryEntry *entry = 0, QObject *parent = 0);
+    int id() const;
+    QString url() const;
+    QString title() const;
+    int visitCount() const;
+    QDateTime lastVisitTime() const;
+private:
+    HistoryEntry *m_entry;
 };
 
-#endif // QMLPLUGINS_H
+#endif // QMLHISTORYITEM_H

@@ -21,6 +21,8 @@
 #include "api/bookmarks/qmlbookmarks.h"
 #include "api/topsites/qmlmostvisitedurl.h"
 #include "api/topsites/qmltopsites.h"
+#include "api/history/qmlhistoryitem.h"
+#include "api/history/qmlhistory.h"
 
 #include <QQmlEngine>
 
@@ -34,6 +36,9 @@ void QmlPlugins::registerQmlTypes()
 
     registerQmlMostVisitedUrl();
     registerQmlTopSites();
+
+    registerQmlHistoryItem();
+    registerQmlHistory();
 }
 
 // private static
@@ -86,6 +91,30 @@ void QmlPlugins::registerQmlTopSites()
         Q_UNUSED(scriptEngine)
 
         auto *object = new QmlTopSites();
+        return object;
+    });
+}
+
+// private static
+void QmlPlugins::registerQmlHistoryItem()
+{
+    qmlRegisterSingletonType<QmlHistoryItem>("org.kde.falkon", 1, 0, "HistoryItem", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlHistoryItem();
+        return object;
+    });
+}
+
+// private static
+void QmlPlugins::registerQmlHistory()
+{
+    qmlRegisterSingletonType<QmlHistory>("org.kde.falkon", 1, 0, "History", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlHistory();
         return object;
     });
 }

@@ -54,6 +54,7 @@ public:
 
     void deleteHistoryEntry(int index);
     void deleteHistoryEntry(const QList<int> &list);
+    void deleteHistoryEntry(const QString &url);
     void deleteHistoryEntry(const QString &url, const QString &title);
 
     QList<int> indexesFromTimeRange(qint64 start, qint64 end);
@@ -65,6 +66,10 @@ public:
     void setSaving(bool state);
 
     void loadSettings();
+
+    QList<HistoryEntry *> searchHistoryEntry(const QString &text);
+    HistoryEntry *getHistoryEntry(const QString &text);
+    void deleteRange(double startTime, double endTime);
 
 Q_SIGNALS:
     void historyEntryAdded(const HistoryEntry &entry);

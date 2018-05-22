@@ -15,23 +15,26 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLPLUGINS_H
-#define QMLPLUGINS_H
+#ifndef QMLHISTORY_H
+#define QMLHISTORY_H
 
-class QmlPlugins
+#include <QObject>
+#include "qmlhistoryitem.h"
+
+class QmlHistory : public QObject
 {
-    static void registerQmlPluginInterface();
-
-    static void registerQmlBookmarkTreeNode();
-    static void registerQmlBookmarks();
-
-    static void registerQmlMostVisitedUrl();
-    static void registerQmlTopSites();
-
-    static void registerQmlHistoryItem();
-    static void registerQmlHistory();
+    Q_OBJECT
 public:
-    static void registerQmlTypes();
+    explicit QmlHistory(QObject *parent = 0);
+    Q_INVOKABLE QList<QObject*> search(const QVariantMap &map);
+    Q_INVOKABLE int getVisits(const QVariantMap &map);
+    Q_INVOKABLE void addUrl(const QVariantMap &map);
+    Q_INVOKABLE void deleteUrl(const QString &url);
+    Q_INVOKABLE void deleteRange(const QVariantMap &map);
+    Q_INVOKABLE void deleteAll();
+signals:
+    void visited(QmlHistoryItem *historyItem);
+    void visitRemoved(QmlHistoryItem *historyItem);
 };
 
-#endif // QMLPLUGINS_H
+#endif // QMLHISTORY_H
