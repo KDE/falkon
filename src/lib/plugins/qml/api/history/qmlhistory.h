@@ -29,7 +29,7 @@ public:
     Q_INVOKABLE QList<QObject*> search(const QVariantMap &map);
     Q_INVOKABLE int getVisits(const QVariantMap &map);
     Q_INVOKABLE void addUrl(const QVariantMap &map);
-    Q_INVOKABLE void deleteUrl(const QString &url);
+    Q_INVOKABLE void deleteUrl(const QVariantMap &map);
     Q_INVOKABLE void deleteRange(const QVariantMap &map);
     Q_INVOKABLE void deleteAll();
 signals:
