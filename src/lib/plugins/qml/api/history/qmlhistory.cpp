@@ -80,8 +80,9 @@ void QmlHistory::deleteUrl(const QVariantMap &map)
 {
     if (!map["url"].isValid()) {
         qWarning() << "Error:" << "wrong arguments passed to" << __FUNCTION__;
-        return 0;
+        return;
     }
+    QString url = map["url"].toString();
     mApp->history()->deleteHistoryEntry(url);
 }
 

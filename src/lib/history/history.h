@@ -87,5 +87,6 @@ typedef History::HistoryEntry HistoryEntry;
 
 // Hint to QVector to use std::realloc on item moving
 Q_DECLARE_TYPEINFO(HistoryEntry, Q_MOVABLE_TYPE);
+Q_DECLARE_METATYPE(HistoryEntry)
 
 #endif // HISTORY_H

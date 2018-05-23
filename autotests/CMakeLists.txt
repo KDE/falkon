@@ -56,4 +56,5 @@ endmacro()
 falkon_qml_tests(
     qmlbookmarksapitest
     qmltopsitesapitest
+    qmlhistoryapitest
 )
