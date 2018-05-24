@@ -15,26 +15,25 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLPLUGINS_H
-#define QMLPLUGINS_H
+#ifndef QMLCOOKIES_H
+#define QMLCOOKIES_H
 
-class QmlPlugins
+#include <QObject>
+#include "qmlcookie.h"
+
+class QmlCookies : public QObject
 {
-    static void registerQmlPluginInterface();
-
-    static void registerQmlBookmarkTreeNode();
-    static void registerQmlBookmarks();
-
-    static void registerQmlMostVisitedUrl();
-    static void registerQmlTopSites();
-
-    static void registerQmlHistoryItem();
-    static void registerQmlHistory();
-
-    static void registerQmlCookie();
-    static void registerQmlCookies();
+    Q_OBJECT
 public:
-    static void registerQmlTypes();
+    explicit QmlCookies(QObject *parent = 0);
+    Q_INVOKABLE QmlCookie *get(const QVariantMap &map);
+    Q_INVOKABLE QList<QObject*> getAll(const QVariantMap &map);
+    Q_INVOKABLE void set(const QVariantMap &map);
+    Q_INVOKABLE void remove(const QVariantMap &map);
+signals:
+    void changed(QmlCookie *cookie, bool removed);
+private:
+    QNetworkCookie *getNetworkCookie(const QVariantMap &map);
 };
 
-#endif // QMLPLUGINS_H
+#endif // QMLCOOKIES_H

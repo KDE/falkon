@@ -15,26 +15,34 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLPLUGINS_H
-#define QMLPLUGINS_H
+#ifndef QMLCOOKIE_H
+#define QMLCOOKIE_H
 
-class QmlPlugins
+#include <QObject>
+#include <QDateTime>
+#include <QNetworkCookie>
+
+class QmlCookie : public QObject
 {
-    static void registerQmlPluginInterface();
-
-    static void registerQmlBookmarkTreeNode();
-    static void registerQmlBookmarks();
-
-    static void registerQmlMostVisitedUrl();
-    static void registerQmlTopSites();
-
-    static void registerQmlHistoryItem();
-    static void registerQmlHistory();
-
-    static void registerQmlCookie();
-    static void registerQmlCookies();
+    Q_OBJECT
+    Q_PROPERTY(QString domain READ domain CONSTANT)
+    Q_PROPERTY(QDateTime expirationDate READ expirationDate CONSTANT)
+    Q_PROPERTY(QString name READ name CONSTANT)
+    Q_PROPERTY(QString path READ path CONSTANT)
+    Q_PROPERTY(bool secure READ secure CONSTANT)
+    Q_PROPERTY(bool session READ session CONSTANT)
+    Q_PROPERTY(QString value READ value CONSTANT)
 public:
-    static void registerQmlTypes();
+    explicit QmlCookie(QNetworkCookie *cookie = 0, QObject *parent = 0);
+    QString domain() const;
+    QDateTime expirationDate() const;
+    QString name() const;
+    QString path() const;
+    bool secure() const;
+    bool session() const;
+    QString value() const;
+private:
+    QNetworkCookie *m_cookie;
 };
 
-#endif // QMLPLUGINS_H
+#endif // QMLCOOKIE_H

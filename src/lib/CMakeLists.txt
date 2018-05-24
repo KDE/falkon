@@ -163,6 +163,8 @@ set(SRCS ${SRCS}
     plugins/qml/api/topsites/qmltopsites.cpp
     plugins/qml/api/history/qmlhistoryitem.cpp
     plugins/qml/api/history/qmlhistory.cpp
+    plugins/qml/api/cookies/qmlcookie.cpp
+    plugins/qml/api/cookies/qmlcookies.cpp
     popupwindow/popuplocationbar.cpp
     popupwindow/popupstatusbarmessage.cpp
     popupwindow/popupwebview.cpp

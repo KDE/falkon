@@ -23,6 +23,8 @@
 #include "api/topsites/qmltopsites.h"
 #include "api/history/qmlhistoryitem.h"
 #include "api/history/qmlhistory.h"
+#include "api/cookies/qmlcookie.h"
+#include "api/cookies/qmlcookies.h"
 
 #include <QQmlEngine>
 
@@ -39,6 +41,9 @@ void QmlPlugins::registerQmlTypes()
 
     registerQmlHistoryItem();
     registerQmlHistory();
+
+    registerQmlCookie();
+    registerQmlCookies();
 }
 
 // private static
@@ -115,6 +120,30 @@ void QmlPlugins::registerQmlHistory()
         Q_UNUSED(scriptEngine)
 
         auto *object = new QmlHistory();
+        return object;
+    });
+}
+
+// private static
+void QmlPlugins::registerQmlCookie()
+{
+    qmlRegisterSingletonType<QmlCookie>("org.kde.falkon", 1, 0, "Cookie", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlCookie();
+        return object;
+    });
+}
+
+// private static
+void QmlPlugins::registerQmlCookies()
+{
+    qmlRegisterSingletonType<QmlCookies>("org.kde.falkon", 1, 0, "Cookies", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlCookies();
         return object;
     });
 }
