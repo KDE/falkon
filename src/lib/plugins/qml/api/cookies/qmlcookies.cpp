@@ -24,12 +24,14 @@ QmlCookies::QmlCookies(QObject *parent) :
     QObject(parent)
 {
     connect(mApp->cookieJar(), &CookieJar::cookieAdded, this, [=](QNetworkCookie network_cookie){
-        QmlCookie *cookie = new QmlCookie(&network_cookie);
+        // FIXME: improve this
+        QmlCookie *cookie = new QmlCookie(new QNetworkCookie(network_cookie));
         emit changed(cookie, false);
     });
 
     connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, [=](QNetworkCookie network_cookie){
-        QmlCookie *cookie = new QmlCookie(&network_cookie);
+        // FIXME: improve this
+        QmlCookie *cookie = new QmlCookie(new QNetworkCookie(network_cookie));
         emit changed(cookie, true);
     });
 }
