@@ -41,7 +41,7 @@ public:
     void deleteCookie(const QNetworkCookie &cookie);
 
     QVector<QNetworkCookie> getAllCookies() const;
-    void deleteAllCookies();
+    void deleteAllCookies(bool deleteAll = true);
 
 Q_SIGNALS:
     void cookieAdded(const QNetworkCookie &cookie);
