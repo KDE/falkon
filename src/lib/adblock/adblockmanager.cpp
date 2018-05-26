@@ -359,7 +359,9 @@ void AdBlockManager::updateMatcher()
 {
     QMutexLocker locker(&m_mutex);
 
+    mApp->networkManager()->removeUrlInterceptor(m_interceptor);
     m_matcher->update();
+    mApp->networkManager()->installUrlInterceptor(m_interceptor);
 }
 
 void AdBlockManager::updateAllSubscriptions()

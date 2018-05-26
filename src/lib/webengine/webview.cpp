@@ -35,6 +35,7 @@
 #include "scripts.h"
 #include "webhittestresult.h"
 #include "webscrollbarmanager.h"
+#include "../config.h"
 
 #include <iostream>
 
