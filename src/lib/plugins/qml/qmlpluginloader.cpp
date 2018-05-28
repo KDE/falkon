@@ -21,21 +21,11 @@ QmlPluginLoader::QmlPluginLoader(const QString &path)
 {
     m_engine = new QQmlEngine();
     m_component = new QQmlComponent(m_engine, path);
-    createComponent();
 }
 
 void QmlPluginLoader::createComponent()
 {
     m_interface = qobject_cast<QmlPluginInterface*>(m_component->create());
-}
-
-void QmlPluginLoader::setName(const QString &name)
-{
-    if (!m_interface) {
-        return;
-    }
-
-    m_interface->setName(name);
 }
 
 QQmlComponent *QmlPluginLoader::component() const
@@ -46,4 +36,9 @@ QQmlComponent *QmlPluginLoader::component() const
 QmlPluginInterface *QmlPluginLoader::instance() const
 {
     return m_interface;
+}
+
+void QmlPluginLoader::setName(const QString &name)
+{
+    m_interface->setName(name);
 }

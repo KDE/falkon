@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLBOOKMARKS_H
-#define QMLBOOKMARKS_H
+#pragma once
 
 #include "qmlbookmarktreenode.h"
 #include "mainapplication.h"
@@ -28,29 +27,28 @@ class QmlBookmarks : public QObject
     Q_OBJECT
 
 public:
-    QmlBookmarks(QObject *parent = 0);
+    explicit QmlBookmarks(QObject *parent = 0);
 
-    Q_INVOKABLE bool isBookmarked(const QUrl &url);
+    Q_INVOKABLE bool isBookmarked(const QUrl &url) const;
     Q_INVOKABLE QmlBookmarkTreeNode *rootItem() const;
     Q_INVOKABLE QmlBookmarkTreeNode *toolbarFolder() const;
     Q_INVOKABLE QmlBookmarkTreeNode *menuFolder() const;
     Q_INVOKABLE QmlBookmarkTreeNode *unsortedFolder() const;
     Q_INVOKABLE QmlBookmarkTreeNode *lastUsedFolder() const;
-    Q_INVOKABLE bool create(const QVariantMap &map);
-    Q_INVOKABLE bool remove(QObject *object);
-    Q_INVOKABLE QList<QObject*> search(const QVariantMap &map);
-    Q_INVOKABLE bool update(QObject *object, const QVariantMap &changes);
-    Q_INVOKABLE QmlBookmarkTreeNode *get(const QString &string);
-    Q_INVOKABLE QList<QObject*> getChildren(QObject *object);
-signals:
+    Q_INVOKABLE bool create(const QVariantMap &map) const;
+    Q_INVOKABLE bool remove(QmlBookmarkTreeNode *treeNode) const;
+    Q_INVOKABLE QList<QObject*> search(const QVariantMap &map) const;
+    Q_INVOKABLE bool update(QObject *object, const QVariantMap &changes) const;
+    Q_INVOKABLE QmlBookmarkTreeNode *get(const QString &string) const;
+    Q_INVOKABLE QList<QObject*> getChildren(QObject *object) const;
+
+Q_SIGNALS:
     void created(QmlBookmarkTreeNode *treeNode);
     void changed(QmlBookmarkTreeNode *treeNode);
     void removed(QmlBookmarkTreeNode *treeNode);
 
 private:
-    bool isTreeNodeEqualsItem(QmlBookmarkTreeNode *treeNode, BookmarkItem *item);
-    BookmarkItem *getBookmarkItem(QmlBookmarkTreeNode *treeNode);
-    BookmarkItem *getBookmarkItem(QObject *object);
+    bool isTreeNodeEqualsItem(QmlBookmarkTreeNode *treeNode, BookmarkItem *item) const;
+    BookmarkItem *getBookmarkItem(QmlBookmarkTreeNode *treeNode) const;
+    BookmarkItem *getBookmarkItem(QObject *object) const;
 };
-
-#endif // QMLBOOKMARKS_H

@@ -17,10 +17,10 @@
 * ============================================================ */
 #include "qmlmostvisitedurl.h"
 
-QmlMostVisitedUrl::QmlMostVisitedUrl(QString title, QString url, QObject *parent) :
-    QObject(parent)
-  , m_title(title)
-  , m_url(url)
+QmlMostVisitedUrl::QmlMostVisitedUrl(QString title, QString url, QObject *parent)
+    : QObject(parent)
+    , m_title(title)
+    , m_url(url)
 {
 }
 

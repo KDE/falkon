@@ -18,9 +18,9 @@
 #include "qmlcookie.h"
 #include <QDebug>
 
-QmlCookie::QmlCookie(QNetworkCookie *cookie, QObject *parent) :
-    QObject(parent)
-  , m_cookie(cookie)
+QmlCookie::QmlCookie(QNetworkCookie *cookie, QObject *parent)
+    : QObject(parent)
+    , m_cookie(cookie)
 {
 }
 

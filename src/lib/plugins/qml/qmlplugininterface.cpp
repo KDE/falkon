@@ -24,14 +24,15 @@ QmlPluginInterface::QmlPluginInterface()
 
 void QmlPluginInterface::init(InitState state, const QString &settingsPath)
 {
-    if (m_jsInit.isCallable()) {
-        QJSValueList args;
-        args.append(state);
-        args.append(settingsPath);
-        m_jsInit.call(args);
-    } else {
-        qWarning() << "Unable to call init on" << m_name << "plugin";
+    if (!m_jsInit.isCallable()) {
+        qWarning() << "Unable to call" << __FUNCTION__ << "on" << m_name << "plugin";
+        return;
     }
+
+    QJSValueList args;
+    args.append(state);
+    args.append(settingsPath);
+    m_jsInit.call(args);
 }
 
 DesktopFile QmlPluginInterface::metaData() const
@@ -41,35 +42,26 @@ DesktopFile QmlPluginInterface::metaData() const
 
 void QmlPluginInterface::unload()
 {
-    if (m_jsUnload.isCallable()) {
-        m_jsUnload.call();
-    } else {
-        qWarning() << "Unable to call unload on" << m_name << "plugin";
+    if (!m_jsUnload.isCallable()) {
+        qWarning() << "Unable to call" << __FUNCTION__ << "on" << m_name << "plugin";
+        return;
     }
+
+    m_jsUnload.call();
 }
 
 bool QmlPluginInterface::testPlugin()
 {
-    if (m_jsTestPlugin.isCallable()) {
-        QJSValue ret = m_jsTestPlugin.call();
-        return ret.toBool();
-    } else {
-        qWarning() << "Unable to call testPlugin on" << m_name << "plugin";
+    if (!m_jsTestPlugin.isCallable()) {
+        qWarning() << "Unable to call" << __FUNCTION__ << "on" << m_name << "plugin";
         return false;
     }
+
+    QJSValue ret = m_jsTestPlugin.call();
+    return ret.toBool();
 }
 
-QString QmlPluginInterface::name()
-{
-    return m_name;
-}
-
-void QmlPluginInterface::setName(const QString &name)
-{
-    m_name = name;
-}
-
-QJSValue QmlPluginInterface::jsInit()
+QJSValue QmlPluginInterface::jsInit() const
 {
     return m_jsInit;
 }
@@ -79,7 +71,7 @@ void QmlPluginInterface::setJsInit(const QJSValue &init)
     m_jsInit = init;
 }
 
-QJSValue QmlPluginInterface::jsUnload()
+QJSValue QmlPluginInterface::jsUnload() const
 {
     return m_jsUnload;
 }
@@ -89,7 +81,7 @@ void QmlPluginInterface::setJsUnload(const QJSValue &unload)
     m_jsUnload = unload;
 }
 
-QJSValue QmlPluginInterface::jsTestPlugin()
+QJSValue QmlPluginInterface::jsTestPlugin() const
 {
     return m_jsTestPlugin;
 }
@@ -97,4 +89,9 @@ QJSValue QmlPluginInterface::jsTestPlugin()
 void QmlPluginInterface::setJsTestPlugin(const QJSValue &testPlugin)
 {
     m_jsTestPlugin = testPlugin;
+}
+
+void QmlPluginInterface::setName(const QString &name)
+{
+    m_name = name;
 }

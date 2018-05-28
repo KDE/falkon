@@ -20,8 +20,8 @@
 #include "mainapplication.h"
 #include "pluginproxy.h"
 
-QmlTopSites::QmlTopSites(QObject *parent) :
-    QObject(parent)
+QmlTopSites::QmlTopSites(QObject *parent)
+    : QObject(parent)
 {
 }
 

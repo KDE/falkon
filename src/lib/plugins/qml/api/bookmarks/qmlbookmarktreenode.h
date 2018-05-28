@@ -15,27 +15,12 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLBOOKMARKTREENODE_H
-#define QMLBOOKMARKTREENODE_H
-
+#pragma once
 #include "bookmarkitem.h"
 
 class QmlBookmarkTreeNode : public QObject
 {
     Q_OBJECT
-
-public:
-    QmlBookmarkTreeNode(BookmarkItem *item = nullptr);
-    enum Type {
-        Root = BookmarkItem::Root,
-        Url = BookmarkItem::Url,
-        Folder = BookmarkItem::Folder,
-        Separator = BookmarkItem::Separator,
-        Invalid = BookmarkItem::Invalid
-    };
-
-    Q_ENUMS(Type)
-
     Q_PROPERTY(Type type READ type CONSTANT)
     Q_PROPERTY(QString title READ title CONSTANT)
     Q_PROPERTY(QString url READ url CONSTANT)
@@ -45,6 +30,18 @@ public:
     Q_PROPERTY(QmlBookmarkTreeNode* parent READ parent CONSTANT)
     Q_PROPERTY(bool unmodifiable READ unmodifiable CONSTANT)
     Q_PROPERTY(QList<QObject*> children READ children CONSTANT)
+
+public:
+    enum Type {
+        Root = BookmarkItem::Root,
+        Url = BookmarkItem::Url,
+        Folder = BookmarkItem::Folder,
+        Separator = BookmarkItem::Separator,
+        Invalid = BookmarkItem::Invalid
+    };
+    Q_ENUMS(Type)
+
+    explicit QmlBookmarkTreeNode(BookmarkItem *item = nullptr);
 
     Type type() const;
     QString title() const;
@@ -61,5 +58,3 @@ public:
 private:
     BookmarkItem *m_item;
 };
-
-#endif // QMLBOOKMARKTREENODE_H

@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLTESTHELPER_H
-#define QMLTESTHELPER_H
+#pragma once
 
 #include "qmltestitem.h"
 #include <QQmlEngine>
@@ -30,5 +29,3 @@ public:
     QQmlEngine engine;
     QmlTestItem *testItem;
 };
-
-#endif // QMLTESTHELPER_H

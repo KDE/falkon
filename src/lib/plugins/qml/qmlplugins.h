@@ -15,26 +15,10 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLPLUGINS_H
-#define QMLPLUGINS_H
+#pragma once
 
 class QmlPlugins
 {
-    static void registerQmlPluginInterface();
-
-    static void registerQmlBookmarkTreeNode();
-    static void registerQmlBookmarks();
-
-    static void registerQmlMostVisitedUrl();
-    static void registerQmlTopSites();
-
-    static void registerQmlHistoryItem();
-    static void registerQmlHistory();
-
-    static void registerQmlCookie();
-    static void registerQmlCookies();
 public:
     static void registerQmlTypes();
 };
-
-#endif // QMLPLUGINS_H

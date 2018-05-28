@@ -209,7 +209,7 @@ void Plugins::loadAvailablePlugins()
     }
 
     // QmlPlugin
-    for (QString dir: dirs) {
+    for (QString dir : dirs) {
         // qml plugins will be loaded from subdirectory qml
         dir.append(QSL("/qml"));
         const auto qmlDirs = QDir(dir).entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
@@ -389,11 +389,6 @@ Plugins::Plugin Plugins::loadQmlPlugin(const QString &name)
     plugin.pluginId = QSL("qml:%1").arg(QFileInfo(name).fileName());
     plugin.pluginSpec = createSpec(DesktopFile(fullPath + QSL("/metadata.desktop")));
     plugin.qmlPluginLoader = new QmlPluginLoader(QDir(fullPath).filePath(plugin.pluginSpec.entryPoint));
-    if (!plugin.qmlPluginLoader->instance()) {
-        qWarning() << "Loading" << fullPath << "failed:" << plugin.qmlPluginLoader->component()->errorString();
-        return Plugin();
-    }
-
     return plugin;
 }
 
@@ -475,7 +470,15 @@ void Plugins::initQmlPlugin(Plugin *plugin)
 {
     Q_ASSERT(plugin->type == Plugin::QmlPlugin);
 
-    plugin->qmlPluginLoader->setName(plugin->pluginSpec.name);
+    const QString name = plugin->pluginSpec.name;
+
+    plugin->qmlPluginLoader->createComponent();
+    if (!plugin->qmlPluginLoader->instance()) {
+        qWarning() << "Initializing" << name << "failed:" << plugin->qmlPluginLoader->component()->errorString();
+        return;
+    }
+
+    plugin->qmlPluginLoader->setName(name);
     plugin->instance = qobject_cast<PluginInterface*>(plugin->qmlPluginLoader->instance());
 }
 

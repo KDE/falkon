@@ -17,9 +17,9 @@
 * ============================================================ */
 #include "qmlhistoryitem.h"
 
-QmlHistoryItem::QmlHistoryItem(HistoryEntry *entry, QObject *parent) :
-    QObject(parent)
-  , m_entry(entry)
+QmlHistoryItem::QmlHistoryItem(HistoryEntry *entry, QObject *parent)
+    : QObject(parent)
+    , m_entry(entry)
 {
 }
 
@@ -36,7 +36,7 @@ QString QmlHistoryItem::url() const
     if (!m_entry) {
         return QString();
     }
-    return m_entry->url.toString();
+    return QString::fromUtf8(m_entry->url.toEncoded());
 }
 
 QString QmlHistoryItem::title() const

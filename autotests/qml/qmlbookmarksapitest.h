@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLBOOKMARKSAPITEST_H
-#define QMLBOOKMARKSAPITEST_H
+#pragma once
 
 #include <QObject>
 
@@ -36,6 +35,3 @@ private Q_SLOTS:
     void testBookmarksModification();
     void testBookmarksRemoval();
 };
-
-
-#endif // QMLBOOKMARKSAPITEST_H

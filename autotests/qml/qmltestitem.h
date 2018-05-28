@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLTESTITEM_H
-#define QMLTESTITEM_H
+#pragma once
 
 #include <QObject>
 #include <QJSValue>
@@ -35,5 +34,3 @@ public:
 private:
     QJSValue m_evalFunc;
 };
-
-#endif // QMLTESTITEM_H

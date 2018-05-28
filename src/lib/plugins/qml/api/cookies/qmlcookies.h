@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLCOOKIES_H
-#define QMLCOOKIES_H
+#pragma once
 
 #include <QObject>
 #include "qmlcookie.h"
@@ -30,10 +29,8 @@ public:
     Q_INVOKABLE QList<QObject*> getAll(const QVariantMap &map);
     Q_INVOKABLE void set(const QVariantMap &map);
     Q_INVOKABLE void remove(const QVariantMap &map);
-signals:
+Q_SIGNALS:
     void changed(QmlCookie *cookie, bool removed);
 private:
     QNetworkCookie *getNetworkCookie(const QVariantMap &map);
 };
-
-#endif // QMLCOOKIES_H

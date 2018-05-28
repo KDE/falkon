@@ -19,8 +19,8 @@
 #include "mainapplication.h"
 #include "bookmarks.h"
 
-QmlBookmarkTreeNode::QmlBookmarkTreeNode(BookmarkItem *item) :
-    m_item(item)
+QmlBookmarkTreeNode::QmlBookmarkTreeNode(BookmarkItem *item)
+    : m_item(item)
 {
 }
 

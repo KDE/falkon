@@ -31,42 +31,12 @@
 // static
 void QmlPlugins::registerQmlTypes()
 {
-    registerQmlPluginInterface();
-
-    registerQmlBookmarkTreeNode();
-    registerQmlBookmarks();
-
-    registerQmlMostVisitedUrl();
-    registerQmlTopSites();
-
-    registerQmlHistoryItem();
-    registerQmlHistory();
-
-    registerQmlCookie();
-    registerQmlCookies();
-}
-
-// private static
-void QmlPlugins::registerQmlPluginInterface()
-{
+    // PluginInterface
     qmlRegisterType<QmlPluginInterface>("org.kde.falkon", 1, 0, "PluginInterface");
-}
 
-// private static
-void QmlPlugins::registerQmlBookmarkTreeNode()
-{
-    qmlRegisterSingletonType<QmlBookmarkTreeNode>("org.kde.falkon", 1, 0, "BookmarkTreeNode", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
-        Q_UNUSED(engine)
-        Q_UNUSED(scriptEngine)
+    // Bookmarks
+    qmlRegisterUncreatableType<QmlBookmarkTreeNode>("org.kde.falkon", 1, 0, "BookmarkTreeNode", "Unable to create Type: BookmarkTreeNode");
 
-        auto *object = new QmlBookmarkTreeNode();
-        return object;
-    });
-}
-
-// private static
-void QmlPlugins::registerQmlBookmarks()
-{
     qmlRegisterSingletonType<QmlBookmarks>("org.kde.falkon", 1, 0, "Bookmarks", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
@@ -74,23 +44,10 @@ void QmlPlugins::registerQmlBookmarks()
         auto *object = new QmlBookmarks();
         return object;
     });
-}
 
-// private static
-void QmlPlugins::registerQmlMostVisitedUrl()
-{
-    qmlRegisterSingletonType<QmlMostVisitedUrl>("org.kde.falkon", 1, 0, "MostVisitedURL", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
-        Q_UNUSED(engine)
-        Q_UNUSED(scriptEngine)
+    // TopSites
+    qmlRegisterUncreatableType<QmlMostVisitedUrl>("org.kde.falkon", 1, 0, "MostVisitedURL", "Unable to create Type: MostVisitedURL");
 
-        auto *object = new QmlMostVisitedUrl();
-        return object;
-    });
-}
-
-// private static
-void QmlPlugins::registerQmlTopSites()
-{
     qmlRegisterSingletonType<QmlTopSites>("org.kde.falkon", 1, 0, "TopSites", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
@@ -98,23 +55,10 @@ void QmlPlugins::registerQmlTopSites()
         auto *object = new QmlTopSites();
         return object;
     });
-}
 
-// private static
-void QmlPlugins::registerQmlHistoryItem()
-{
-    qmlRegisterSingletonType<QmlHistoryItem>("org.kde.falkon", 1, 0, "HistoryItem", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
-        Q_UNUSED(engine)
-        Q_UNUSED(scriptEngine)
+    // History
+    qmlRegisterUncreatableType<QmlHistoryItem>("org.kde.falkon", 1, 0, "HistoryItem", "Unable to create Type: HistoryItem");
 
-        auto *object = new QmlHistoryItem();
-        return object;
-    });
-}
-
-// private static
-void QmlPlugins::registerQmlHistory()
-{
     qmlRegisterSingletonType<QmlHistory>("org.kde.falkon", 1, 0, "History", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
@@ -122,23 +66,10 @@ void QmlPlugins::registerQmlHistory()
         auto *object = new QmlHistory();
         return object;
     });
-}
 
-// private static
-void QmlPlugins::registerQmlCookie()
-{
-    qmlRegisterSingletonType<QmlCookie>("org.kde.falkon", 1, 0, "Cookie", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
-        Q_UNUSED(engine)
-        Q_UNUSED(scriptEngine)
+    // Cookies
+    qmlRegisterUncreatableType<QmlCookie>("org.kde.falkon", 1, 0, "Cookie", "Unable to create Type: Cookie");
 
-        auto *object = new QmlCookie();
-        return object;
-    });
-}
-
-// private static
-void QmlPlugins::registerQmlCookies()
-{
     qmlRegisterSingletonType<QmlCookies>("org.kde.falkon", 1, 0, "Cookies", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)

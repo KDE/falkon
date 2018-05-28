@@ -20,16 +20,16 @@
 #include "cookiejar.h"
 #include "qwebengineprofile.h"
 
-QmlCookies::QmlCookies(QObject *parent) :
-    QObject(parent)
+QmlCookies::QmlCookies(QObject *parent)
+    : QObject(parent)
 {
-    connect(mApp->cookieJar(), &CookieJar::cookieAdded, this, [=](QNetworkCookie network_cookie){
+    connect(mApp->cookieJar(), &CookieJar::cookieAdded, this, [this](QNetworkCookie network_cookie){
         // FIXME: improve this
         QmlCookie *cookie = new QmlCookie(new QNetworkCookie(network_cookie));
         emit changed(cookie, false);
     });
 
-    connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, [=](QNetworkCookie network_cookie){
+    connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, [this](QNetworkCookie network_cookie){
         // FIXME: improve this
         QmlCookie *cookie = new QmlCookie(new QNetworkCookie(network_cookie));
         emit changed(cookie, true);
@@ -38,12 +38,12 @@ QmlCookies::QmlCookies(QObject *parent) :
 
 QNetworkCookie *QmlCookies::getNetworkCookie(const QVariantMap &map)
 {
-    if (!map["name"].isValid() || !map["url"].isValid()) {
+    if (!map.contains(QSL("name")) || !map.contains(QSL("url"))) {
         qWarning() << "Error:" << "Wrong arguments passed to" << __FUNCTION__;
         return nullptr;
     }
-    QString name = map["name"].toString();
-    QString url = map["url"].toString();
+    QString name = map.value(QSL("name")).toString();
+    QString url = map.value(QSL("url")).toString();
     QVector<QNetworkCookie> cookies = mApp->cookieJar()->getAllCookies();
     for (QNetworkCookie cookie : cookies) {
         if (cookie.name() == name && cookie.domain() == url) {
@@ -66,18 +66,18 @@ QmlCookie *QmlCookies::get(const QVariantMap &map)
 QList<QObject*> QmlCookies::getAll(const QVariantMap &map)
 {
     QList<QObject*> qmlCookies;
-    QString name = map["name"].toString();
-    QString url = map["url"].toString();
-    QString path = map["path"].toString();
-    bool secure = map["secure"].toBool();
-    bool session = map["session"].toBool();
+    QString name = map.value(QSL("name")).toString();
+    QString url = map.value(QSL("url")).toString();
+    QString path = map.value(QSL("path")).toString();
+    bool secure = map.value(QSL("secure")).toBool();
+    bool session = map.value(QSL("session")).toBool();
     QVector<QNetworkCookie> cookies = mApp->cookieJar()->getAllCookies();
     for (QNetworkCookie cookie : cookies) {
-        if ((!map["name"].isValid() || cookie.name() == name)
-                && (!map["url"].isValid() || cookie.domain() == url)
-                && (!map["path"].isValid() || cookie.path() == path)
-                && (!map["secure"].isValid() || cookie.isSecure() == secure)
-                && (!map["session"].isValid() || cookie.isSessionCookie() == session)) {
+        if ((!map.contains(QSL("name")) || cookie.name() == name)
+                && (!map.contains(QSL("url")) || cookie.domain() == url)
+                && (!map.contains(QSL("path")) || cookie.path() == path)
+                && (!map.contains(QSL("secure")) || cookie.isSecure() == secure)
+                && (!map.contains(QSL("session")) || cookie.isSessionCookie() == session)) {
             QNetworkCookie *netCookie = new QNetworkCookie(cookie);
             QmlCookie *qmlCookie = new QmlCookie(netCookie);
             qmlCookies.append(qmlCookie);
@@ -88,21 +88,21 @@ QList<QObject*> QmlCookies::getAll(const QVariantMap &map)
 
 void QmlCookies::set(const QVariantMap &map)
 {
-    QString name = map["name"].toString();
-    QString url = map["url"].toString();
-    QString path = map["path"].toString();
-    bool secure = map["secure"].toBool();
-    QDateTime expirationDate = QDateTime::fromMSecsSinceEpoch(map["expirationDate"].toDouble());
-    bool httpOnly = map["httpOnly"].toBool();
-    QString value = map["value"].toString();
+    QString name = map.value(QSL("name")).toString();
+    QString url = map.value(QSL("url")).toString();
+    QString path = map.value(QSL("path")).toString();
+    bool secure = map.value(QSL("secure")).toBool();
+    QDateTime expirationDate = QDateTime::fromMSecsSinceEpoch(map.value(QSL("expirationDate")).toDouble());
+    bool httpOnly = map.value(QSL("httpOnly")).toBool();
+    QString value = map.value(QSL("value")).toString();
     QNetworkCookie cookie;
-    cookie.setName(name.toLocal8Bit());
+    cookie.setName(name.toUtf8());
     cookie.setDomain(url);
     cookie.setPath(path);
     cookie.setSecure(secure);
     cookie.setExpirationDate(expirationDate);
     cookie.setHttpOnly(httpOnly);
-    cookie.setValue(value.toLocal8Bit());
+    cookie.setValue(value.toUtf8());
     mApp->webProfile()->cookieStore()->setCookie(cookie);
 }
 

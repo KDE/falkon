@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLHISTORY_H
-#define QMLHISTORY_H
+#pragma once
 
 #include <QObject>
 #include "qmlhistoryitem.h"
@@ -32,9 +31,7 @@ public:
     Q_INVOKABLE void deleteUrl(const QVariantMap &map);
     Q_INVOKABLE void deleteRange(const QVariantMap &map);
     Q_INVOKABLE void deleteAll();
-signals:
+Q_SIGNALS:
     void visited(QmlHistoryItem *historyItem);
     void visitRemoved(QmlHistoryItem *historyItem);
 };
-
-#endif // QMLHISTORY_H

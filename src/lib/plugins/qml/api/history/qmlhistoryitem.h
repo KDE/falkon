@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLHISTORYITEM_H
-#define QMLHISTORYITEM_H
+#pragma once
 
 #include <QObject>
 #include "history.h"
@@ -39,5 +38,3 @@ public:
 private:
     HistoryEntry *m_entry;
 };
-
-#endif // QMLHISTORYITEM_H

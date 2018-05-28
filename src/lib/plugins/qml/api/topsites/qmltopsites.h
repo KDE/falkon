@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLTOPSITES_H
-#define QMLTOPSITES_H
+#pragma once
 
 #include <QObject>
 #include "qmlmostvisitedurl.h"
@@ -28,5 +27,3 @@ public:
     explicit QmlTopSites(QObject *parent = 0);
     Q_INVOKABLE QList<QObject*> get() const;
 };
-
-#endif // QMLTOPSITES_H

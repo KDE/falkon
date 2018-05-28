@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLPLUGINLOADER_H
-#define QMLPLUGINLOADER_H
+#pragma once
 
 #include <QQmlEngine>
 #include <QQmlComponent>
@@ -25,15 +24,14 @@
 
 class QmlPluginLoader
 {
+public:
+    explicit QmlPluginLoader(const QString &path);
+    void createComponent();
+    QQmlComponent *component() const;
+    QmlPluginInterface *instance() const;
+    void setName(const QString &name);
+private:
     QQmlEngine *m_engine;
     QQmlComponent *m_component;
     QmlPluginInterface *m_interface;
-public:
-    QmlPluginLoader(const QString &path);
-    void createComponent();
-    void setName(const QString &name);
-    QQmlComponent *component() const;
-    QmlPluginInterface *instance() const;
 };
-
-#endif // QMLPLUGINLOADER_H

@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLPLUGININTERFACE_H
-#define QMLPLUGININTERFACE_H
+#pragma once
 
 #include <QJSValue>
 #include <QObject>
@@ -29,7 +28,6 @@ class QmlPluginInterface : public QObject, public PluginInterface
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
     Q_ENUMS(InitState)
-    Q_PROPERTY(QString __name__ READ name CONSTANT)
     Q_PROPERTY(QJSValue init READ jsInit WRITE setJsInit)
     Q_PROPERTY(QJSValue unload READ jsUnload WRITE setJsUnload)
     Q_PROPERTY(QJSValue testPlugin READ jsTestPlugin WRITE setJsTestPlugin)
@@ -40,7 +38,6 @@ public:
     void init(InitState state, const QString &settingsPath);
     void unload();
     bool testPlugin();
-
     void setName(const QString &name);
 
 private:
@@ -49,13 +46,10 @@ private:
     QJSValue m_jsUnload;
     QJSValue m_jsTestPlugin;
 
-    QString name();
-    QJSValue jsInit();
+    QJSValue jsInit() const;
     void setJsInit(const QJSValue &init);
-    QJSValue jsUnload();
+    QJSValue jsUnload() const;
     void setJsUnload(const QJSValue &unload);
-    QJSValue jsTestPlugin();
+    QJSValue jsTestPlugin() const;
     void setJsTestPlugin(const QJSValue &testPlugin);
 };
-
-#endif // QMLPLUGININTERFACE_H

@@ -15,8 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QMLHISTORYAPITEST_H
-#define QMLHSITORYAPITEST_H
+#pragma once
 
 #include <QObject>
 
@@ -33,6 +32,3 @@ private Q_SLOTS:
     void testVisits();
     void testRemoval();
 };
-
-
-#endif // QMLHSITORYAPITEST_H
