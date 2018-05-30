@@ -25,6 +25,8 @@
 #include "api/history/qmlhistory.h"
 #include "api/cookies/qmlcookie.h"
 #include "api/cookies/qmlcookies.h"
+#include "api/notifications/qmlnotifications.h"
+#include "api/clipboard/qmlclipboard.h"
 
 #include <QQmlEngine>
 
@@ -77,4 +79,20 @@ void QmlPlugins::registerQmlTypes()
         auto *object = new QmlCookies();
         return object;
     });
-}
+
+    // Notifications
+    qmlRegisterSingletonType<QmlNotifications>("org.kde.falkon", 1, 0, "Notifications", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlNotifications();
+        return object;
+    });
+    // Clipboard
+    qmlRegisterSingletonType<QmlClipboard>("org.kde.falkon", 1, 0, "Clipboard", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlClipboard();
+        return object;
+    });}
