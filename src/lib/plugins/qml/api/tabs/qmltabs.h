@@ -41,6 +41,7 @@ public:
     Q_INVOKABLE int normalTabsCount(const QVariantMap &map = QVariantMap()) const;
     Q_INVOKABLE int pinnedTabsCount(const QVariantMap &map = QVariantMap()) const;
     Q_INVOKABLE QList<QObject*> getAll(const QVariantMap &map = QVariantMap()) const;
+    Q_INVOKABLE QList<QObject*> search(const QVariantMap &map);
 Q_SIGNALS:
     void changed(const QVariantMap &map);
     void tabInserted(const QVariantMap &map);

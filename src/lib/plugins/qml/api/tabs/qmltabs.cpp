@@ -302,6 +302,23 @@ QList<QObject*> QmlTabs::getAll(const QVariantMap &map) const
     return list;
 }
 
+QList<QObject*> QmlTabs::search(const QVariantMap &map)
+{
+    QString title = map.value(QSL("title")).toString();
+    QString url = map.value(QSL("url")).toString();
+    bool withPinned = map.value(QSL("withPinned")).toBool();
+    QList<QObject*> list;
+    foreach (BrowserWindow *window, mApp->windows()) {
+        foreach (WebTab *webTab, window->tabWidget()->allTabs(withPinned)) {
+            if (webTab->title().contains(title, Qt::CaseInsensitive)
+                    || QString::fromUtf8(webTab->url().toEncoded()).contains(url, Qt::CaseInsensitive)) {
+                list.append(new QmlTab(webTab));
+            }
+        }
+    }
+    return list;
+}
+
 BrowserWindow *QmlTabs::getWindow(const QVariantMap &map) const
 {
     int windowId = map.value(QSL("windowId"), -1).toInt();
