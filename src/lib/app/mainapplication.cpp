@@ -786,7 +786,7 @@ void MainApplication::saveSettings()
         ClearPrivateData::clearLocalStorage();
     }
     if (deleteCookies) {
-        m_cookieJar->deleteAllCookies();
+        m_cookieJar->deleteAllCookies(false);
     }
     if (deleteCache) {
         QzTools::removeRecursively(mApp->webProfile()->cachePath());

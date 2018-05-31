@@ -78,9 +78,18 @@ QVector<QNetworkCookie> CookieJar::getAllCookies() const
     return m_cookies;
 }
 
-void CookieJar::deleteAllCookies()
+void CookieJar::deleteAllCookies(bool deleteAll)
 {
-    m_client->deleteAllCookies();
+    if (deleteAll || m_whitelist.isEmpty()) {
+        m_client->deleteAllCookies();
+        return;
+    }
+
+    for (const QNetworkCookie &cookie : qAsConst(m_cookies)) {
+        if (!listMatchesDomain(m_whitelist, cookie.domain())) {
+            m_client->deleteCookie(cookie);
+        }
+    }
 }
 
 bool CookieJar::matchDomain(QString cookieDomain, QString siteDomain) const
