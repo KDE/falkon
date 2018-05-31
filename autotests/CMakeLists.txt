@@ -58,4 +58,5 @@ falkon_qml_tests(
     qmltopsitesapitest
     qmlhistoryapitest
     qmlcookiesapitest
+    qmlclipboardapitest
 )
