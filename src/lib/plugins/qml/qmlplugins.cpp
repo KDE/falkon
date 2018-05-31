@@ -25,6 +25,10 @@
 #include "api/history/qmlhistory.h"
 #include "api/cookies/qmlcookie.h"
 #include "api/cookies/qmlcookies.h"
+#include "api/tabs/qmltab.h"
+#include "api/tabs/qmltabs.h"
+#include "api/notifications/qmlnotifications.h"
+#include "api/clipboard/qmlclipboard.h"
 
 #include <QQmlEngine>
 
@@ -35,7 +39,7 @@ void QmlPlugins::registerQmlTypes()
     qmlRegisterType<QmlPluginInterface>("org.kde.falkon", 1, 0, "PluginInterface");
 
     // Bookmarks
-    qmlRegisterUncreatableType<QmlBookmarkTreeNode>("org.kde.falkon", 1, 0, "BookmarkTreeNode", "Unable to create Type: BookmarkTreeNode");
+    qmlRegisterUncreatableType<QmlBookmarkTreeNode>("org.kde.falkon", 1, 0, "BookmarkTreeNode", "Unable to register type: BookmarkTreeNode");
 
     qmlRegisterSingletonType<QmlBookmarks>("org.kde.falkon", 1, 0, "Bookmarks", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
@@ -46,7 +50,7 @@ void QmlPlugins::registerQmlTypes()
     });
 
     // TopSites
-    qmlRegisterUncreatableType<QmlMostVisitedUrl>("org.kde.falkon", 1, 0, "MostVisitedURL", "Unable to create Type: MostVisitedURL");
+    qmlRegisterUncreatableType<QmlMostVisitedUrl>("org.kde.falkon", 1, 0, "MostVisitedURL", "Unable to register type: MostVisitedURL");
 
     qmlRegisterSingletonType<QmlTopSites>("org.kde.falkon", 1, 0, "TopSites", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
@@ -57,7 +61,7 @@ void QmlPlugins::registerQmlTypes()
     });
 
     // History
-    qmlRegisterUncreatableType<QmlHistoryItem>("org.kde.falkon", 1, 0, "HistoryItem", "Unable to create Type: HistoryItem");
+    qmlRegisterUncreatableType<QmlHistoryItem>("org.kde.falkon", 1, 0, "HistoryItem", "Unable to register type: HistoryItem");
 
     qmlRegisterSingletonType<QmlHistory>("org.kde.falkon", 1, 0, "History", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
@@ -68,13 +72,42 @@ void QmlPlugins::registerQmlTypes()
     });
 
     // Cookies
-    qmlRegisterUncreatableType<QmlCookie>("org.kde.falkon", 1, 0, "Cookie", "Unable to create Type: Cookie");
+    qmlRegisterUncreatableType<QmlCookie>("org.kde.falkon", 1, 0, "Cookie", "Unable to register type: Cookie");
 
     qmlRegisterSingletonType<QmlCookies>("org.kde.falkon", 1, 0, "Cookies", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
         auto *object = new QmlCookies();
+        return object;
+    });
+
+    // Tabs
+    qmlRegisterUncreatableType<QmlTab>("org.kde.falkon", 1, 0, "Tab", "Unable to register type: Tab");
+
+    qmlRegisterSingletonType<QmlTabs>("org.kde.falkon", 1, 0, "Tabs", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlTabs();
+        return object;
+    });
+
+    // Notifications
+    qmlRegisterSingletonType<QmlNotifications>("org.kde.falkon", 1, 0, "Notifications", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlNotifications();
+        return object;
+    });
+
+    // Clipboard
+    qmlRegisterSingletonType<QmlClipboard>("org.kde.falkon", 1, 0, "Clipboard", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlClipboard();
         return object;
     });
 }
