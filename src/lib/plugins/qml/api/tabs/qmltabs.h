@@ -26,22 +26,23 @@ class QmlTabs : public QObject
     Q_OBJECT
 public:
     explicit QmlTabs(QObject *parent = 0);
-    Q_INVOKABLE void setCurrentIndex(const QVariantMap &map);
-    Q_INVOKABLE void nextTab(const QVariantMap &map = QVariantMap());
-    Q_INVOKABLE void previousTab(const QVariantMap &map = QVariantMap());
-    Q_INVOKABLE void moveTab(const QVariantMap &map);
+    Q_INVOKABLE bool setCurrentIndex(const QVariantMap &map);
+    Q_INVOKABLE bool nextTab(const QVariantMap &map = QVariantMap());
+    Q_INVOKABLE bool previousTab(const QVariantMap &map = QVariantMap());
+    Q_INVOKABLE bool moveTab(const QVariantMap &map);
     Q_INVOKABLE bool pinTab(const QVariantMap &map);
     Q_INVOKABLE bool unpinTab(const QVariantMap &map);
-    Q_INVOKABLE void detachTab(const QVariantMap &map);
-    Q_INVOKABLE void duplicate(const QVariantMap &map);
-    Q_INVOKABLE void closeTab(const QVariantMap &map);
-    Q_INVOKABLE void reloadTab(const QVariantMap &map);
-    Q_INVOKABLE void stopTab(const QVariantMap &map);
+    Q_INVOKABLE bool detachTab(const QVariantMap &map);
+    Q_INVOKABLE bool duplicate(const QVariantMap &map);
+    Q_INVOKABLE bool closeTab(const QVariantMap &map);
+    Q_INVOKABLE bool reloadTab(const QVariantMap &map);
+    Q_INVOKABLE bool stopTab(const QVariantMap &map);
     Q_INVOKABLE QmlTab *get(const QVariantMap &map) const;
     Q_INVOKABLE int normalTabsCount(const QVariantMap &map = QVariantMap()) const;
     Q_INVOKABLE int pinnedTabsCount(const QVariantMap &map = QVariantMap()) const;
     Q_INVOKABLE QList<QObject*> getAll(const QVariantMap &map = QVariantMap()) const;
     Q_INVOKABLE QList<QObject*> search(const QVariantMap &map);
+    Q_INVOKABLE bool addTab(const QVariantMap &map);
 Q_SIGNALS:
     void changed(const QVariantMap &map);
     void tabInserted(const QVariantMap &map);

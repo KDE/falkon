@@ -70,49 +70,52 @@ QmlTabs::QmlTabs(QObject *parent)
     });
 }
 
-void QmlTabs::setCurrentIndex(const QVariantMap &map)
+bool QmlTabs::setCurrentIndex(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
         qWarning() << "Unable to set current index:" << "index not defined";
-        return;
+        return false;
     }
 
     int index = map.value(QSL("index")).toInt();
 
     const auto window = getWindow(map);
     if (!window) {
-        return;
+        return false;
     }
     window->tabWidget()->setCurrentIndex(index);
+    return true;
 }
 
-void QmlTabs::nextTab(const QVariantMap &map)
+bool QmlTabs::nextTab(const QVariantMap &map)
 {
     const auto window = getWindow(map);
     if (!window) {
-        return;
+        return false;
     }
     window->tabWidget()->nextTab();
+    return true;
 }
 
-void QmlTabs::previousTab(const QVariantMap &map)
+bool QmlTabs::previousTab(const QVariantMap &map)
 {
     const auto window = getWindow(map);
     if (!window) {
-        return;
+        return false;
     }
     window->tabWidget()->previousTab();
+    return true;
 }
 
-void QmlTabs::moveTab(const QVariantMap &map)
+bool QmlTabs::moveTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("from"))) {
         qWarning() << "Unable to move tab:" << "from not defined";
-        return;
+        return false;
     }
     if (!map.contains(QSL("to"))) {
         qWarning() << "Unable to move tab:" << "to not defined";
-        return;
+        return false;
     }
 
     int from = map.value(QSL("from")).toInt();
@@ -120,9 +123,10 @@ void QmlTabs::moveTab(const QVariantMap &map)
 
     const auto window = getWindow(map);
     if (!window) {
-        return;
+        return false;
     }
     window->tabWidget()->moveTab(from, to);
+    return true;
 }
 
 bool QmlTabs::pinTab(const QVariantMap &map)
@@ -169,84 +173,89 @@ bool QmlTabs::unpinTab(const QVariantMap &map)
     return true;
 }
 
-void QmlTabs::detachTab(const QVariantMap &map)
+bool QmlTabs::detachTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
         qWarning() << "Unable to detatch tab:" << "index not defined";
-        return;
+        return false;
     }
 
     int index = map.value(QSL("index")).toInt();
 
     const auto window = getWindow(map);
     if (!window) {
-        return;
+        return false;
     }
     window->tabWidget()->detachTab(index);
+    return true;
 }
 
-void QmlTabs::duplicate(const QVariantMap &map)
+bool QmlTabs::duplicate(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
         qWarning() << "Unable to duplicate:" << "index not defined";
-        return;
+        return false;
     }
 
     int index = map.value(QSL("index")).toInt();
 
     const auto window = getWindow(map);
     if (!window) {
-        return;
+        return false;
     }
     window->tabWidget()->duplicateTab(index);
+    return true;
 }
 
-void QmlTabs::closeTab(const QVariantMap &map)
+bool QmlTabs::closeTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
         qWarning() << "Unable to close tab:" << "index not defined";
-        return;
+        return false;
     }
 
     int index = map.value(QSL("index")).toInt();
 
     const auto window = getWindow(map);
     if (!window) {
-        return;
+        return false;
     }
     window->tabWidget()->closeTab(index);
+    return true;
 }
 
-void QmlTabs::reloadTab(const QVariantMap &map)
+bool QmlTabs::reloadTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
         qWarning() << "Unable to reload tab:" << "index not defined";
-        return;
+        return false;
     }
 
     int index = map.value(QSL("index")).toInt();
 
     const auto window = getWindow(map);
     if (!window) {
-        return;
+        return false;
     }
     window->tabWidget()->reloadTab(index);
+    return true;
 }
 
-void QmlTabs::stopTab(const QVariantMap &map)
+bool QmlTabs::stopTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
         qWarning() << "Unable to close tab:" << "index not defined";
-        return;
+        return false;
     }
 
     int index = map.value(QSL("index")).toInt();
 
     const auto window = getWindow(map);
     if (!window) {
-        return;
+        return false;
     }
     window->tabWidget()->stopTab(index);
+    return true;
 }
 
 QmlTab *QmlTabs::get(const QVariantMap &map) const
@@ -317,6 +326,20 @@ QList<QObject*> QmlTabs::search(const QVariantMap &map)
         }
     }
     return list;
+}
+
+bool QmlTabs::addTab(const QVariantMap &map)
+{
+    QString urlString = map.value(QSL("url")).toString();
+    const auto window = getWindow(map);
+    if (!window) {
+        qDebug() << "Unable to add tab:" << "window not found";
+        return false;
+    }
+    LoadRequest req;
+    req.setUrl(QUrl::fromEncoded(urlString.toUtf8()));
+    int ret = window->tabWidget()->addView(req);
+    return ret != -1 ? true : false;
 }
 
 BrowserWindow *QmlTabs::getWindow(const QVariantMap &map) const
