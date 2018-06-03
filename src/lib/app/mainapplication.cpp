@@ -103,6 +103,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     , m_desktopNotifications(0)
     , m_webProfile(0)
     , m_autoSaver(0)
+    , m_newWindowId(0)
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
     , m_registerQAppAssociation(0)
 #endif
@@ -406,6 +407,11 @@ QList<BrowserWindow*> MainApplication::windows() const
     return m_windows;
 }
 
+QHash<BrowserWindow*, int> MainApplication::windowIdHash() const
+{
+    return m_windowIdHash;
+}
+
 BrowserWindow* MainApplication::getWindow() const
 {
     if (m_lastActiveWindow) {
@@ -425,6 +431,7 @@ BrowserWindow* MainApplication::createWindow(Qz::BrowserWindowType type, const Q
     connect(window, SIGNAL(destroyed(QObject*)), this, SLOT(windowDestroyed(QObject*)));
 
     m_windows.prepend(window);
+    m_windowIdHash.insert(window, m_newWindowId++);
     return window;
 }
 
@@ -868,6 +875,7 @@ void MainApplication::windowDestroyed(QObject* window)
     Q_ASSERT(m_windows.contains(static_cast<BrowserWindow*>(window)));
 
     m_windows.removeOne(static_cast<BrowserWindow*>(window));
+    m_windowIdHash.remove(static_cast<BrowserWindow*>(window));
 }
 
 void MainApplication::onFocusChanged()

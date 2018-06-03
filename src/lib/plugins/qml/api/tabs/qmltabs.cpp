@@ -27,23 +27,6 @@ QmlTabs::QmlTabs(QObject *parent)
     }
 
     connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &QmlTabs::windowCreated);
-
-    connect(mApp->plugins(), &PluginProxy::mainWindowDeleted, this, [this](BrowserWindow *window){
-        // FIXME: make it more efficient
-        windowIdHash.remove(window);
-        // If the window is not destroyed (which is almost always),
-        // then remove bias(= 1) from the index of window in the list
-        // for the correct index
-        int bias = 0;
-        for (int i = 0; i < mApp->windowCount(); i++) {
-            BrowserWindow *windowAtI = mApp->windows().at(i);
-            if (windowAtI == window) {
-                bias = 1;
-                continue;
-            }
-            windowIdHash[windowAtI] = i - bias;
-        }
-    });
 }
 
 bool QmlTabs::setCurrentIndex(const QVariantMap &map)
@@ -326,54 +309,46 @@ BrowserWindow *QmlTabs::getWindow(const QVariantMap &map) const
 {
     int windowId = map.value(QSL("windowId"), -1).toInt();
 
-    if (windowId < -1 || windowId >= mApp->windowCount()) {
-        qWarning() << "Unable to get window" << "windowId is out of bounds";
-        return nullptr;
-    }
-
-    BrowserWindow *window;
     if (windowId == -1) {
-        window = mApp->getWindow();
-    } else {
-        window = mApp->windows().at(windowId);
+        return mApp->getWindow();
     }
 
-    return window;
+    for(BrowserWindow *window : mApp->windowIdHash().keys()) {
+        if (mApp->windowIdHash().value(window) == windowId) {
+            return window;
+        }
+    }
+
+    qWarning() << "Unable to get window with given windowId";
+    return nullptr;
 }
 
 void QmlTabs::windowCreated(BrowserWindow *window)
 {
-    // FIXME: make it more efficient
-    for (int i = 0; i < mApp->windowCount(); i++) {
-        windowIdHash[mApp->windows().at(i)] = i;
-    }
+    int windowId = mApp->windowIdHash().value(window);
 
-    connect(window->tabWidget(), &TabWidget::changed, this, [this, window]{
+    connect(window->tabWidget(), &TabWidget::changed, this, [this, windowId]{
         QVariantMap map;
-        int windowId = windowIdHash.value(window);
         map.insert(QSL("windowId"), windowId);
         emit changed(map);
     });
 
-    connect(window->tabWidget(), &TabWidget::tabInserted, this, [this, window](int index){
+    connect(window->tabWidget(), &TabWidget::tabInserted, this, [this, windowId](int index){
         QVariantMap map;
-        int windowId = windowIdHash.value(window);
         map.insert(QSL("windowId"), windowId);
         map.insert(QSL("index"), index);
         emit tabInserted(map);
     });
 
-    connect(window->tabWidget(), &TabWidget::tabRemoved, this, [this, window](int index){
+    connect(window->tabWidget(), &TabWidget::tabRemoved, this, [this, windowId](int index){
         QVariantMap map;
-        int windowId = windowIdHash.value(window);
         map.insert(QSL("windowId"), windowId);
         map.insert(QSL("index"), index);
         emit tabRemoved(map);
     });
 
-    connect(window->tabWidget(), &TabWidget::tabMoved, this, [this, window](int from, int to){
+    connect(window->tabWidget(), &TabWidget::tabMoved, this, [this, windowId](int from, int to){
         QVariantMap map;
-        int windowId = windowIdHash.value(window);
         map.insert(QSL("windowId"), windowId);
         map.insert(QSL("from"), from);
         map.insert(QSL("to"), to);

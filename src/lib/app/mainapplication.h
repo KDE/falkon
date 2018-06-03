@@ -76,6 +76,7 @@ public:
 
     int windowCount() const;
     QList<BrowserWindow*> windows() const;
+    QHash<BrowserWindow*, int> windowIdHash() const;
 
     BrowserWindow* getWindow() const;
     BrowserWindow* createWindow(Qz::BrowserWindowType type, const QUrl &startUrl = QUrl());
@@ -188,6 +189,8 @@ private:
     ProxyStyle *m_proxyStyle = nullptr;
 
     QList<BrowserWindow*> m_windows;
+    int m_newWindowId;
+    QHash<BrowserWindow*, int> m_windowIdHash;
     QPointer<BrowserWindow> m_lastActiveWindow;
 
     QList<PostLaunchAction> m_postLaunchActions;

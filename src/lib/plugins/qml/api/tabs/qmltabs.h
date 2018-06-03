@@ -51,5 +51,4 @@ Q_SIGNALS:
 private:
     BrowserWindow *getWindow(const QVariantMap &map) const;
     void windowCreated(BrowserWindow *window);
-    QHash<BrowserWindow*, int> windowIdHash;
 };
