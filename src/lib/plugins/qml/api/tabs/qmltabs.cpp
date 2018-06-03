@@ -22,35 +22,11 @@
 QmlTabs::QmlTabs(QObject *parent)
     : QObject(parent)
 {
-    connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, [this](BrowserWindow *window){
-        // FIXME: make it more efficient
-        for (int i = 0; i < mApp->windowCount(); i++) {
-            windowIdHash[mApp->windows().at(i)] = i;
-        }
+    for (BrowserWindow *window : mApp->windows()) {
+        windowCreated(window);
+    }
 
-        connect(window->tabWidget(), &TabWidget::changed, this, [this, window]{
-            QVariantMap map;
-            int windowId = windowIdHash.value(window);
-            map.insert(QSL("windowId"), windowId);
-            emit changed(map);
-        });
-
-        connect(window->tabWidget(), &TabWidget::tabInserted, this, [this, window](int index){
-            QVariantMap map;
-            int windowId = windowIdHash.value(window);
-            map.insert(QSL("windowId"), windowId);
-            map.insert(QSL("index"), index);
-            emit tabInserted(map);
-        });
-
-        connect(window->tabWidget(), &TabWidget::tabRemoved, this, [this, window](int index){
-            QVariantMap map;
-            int windowId = windowIdHash.value(window);
-            map.insert(QSL("windowId"), windowId);
-            map.insert(QSL("index"), index);
-            emit tabRemoved(map);
-        });
-    });
+    connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &QmlTabs::windowCreated);
 
     connect(mApp->plugins(), &PluginProxy::mainWindowDeleted, this, [this](BrowserWindow *window){
         // FIXME: make it more efficient
@@ -143,11 +119,13 @@ bool QmlTabs::pinTab(const QVariantMap &map)
         return false;
     }
 
-    if (window->tabWidget()->webTab(index)->isPinned()) {
+    WebTab *webTab = window->tabWidget()->webTab(index);
+
+    if (webTab->isPinned()) {
         return false;
     }
 
-    window->tabWidget()->pinUnPinTab(index);
+    webTab->togglePinned();
     return true;
 }
 
@@ -165,11 +143,13 @@ bool QmlTabs::unpinTab(const QVariantMap &map)
         return false;
     }
 
-    if (!window->tabWidget()->webTab(index)->isPinned()) {
+    WebTab *webTab = window->tabWidget()->webTab(index);
+
+    if (!webTab->isPinned()) {
         return false;
     }
 
-    window->tabWidget()->pinUnPinTab(index);
+    webTab->togglePinned();
     return true;
 }
 
@@ -359,4 +339,44 @@ BrowserWindow *QmlTabs::getWindow(const QVariantMap &map) const
     }
 
     return window;
+}
+
+void QmlTabs::windowCreated(BrowserWindow *window)
+{
+    // FIXME: make it more efficient
+    for (int i = 0; i < mApp->windowCount(); i++) {
+        windowIdHash[mApp->windows().at(i)] = i;
+    }
+
+    connect(window->tabWidget(), &TabWidget::changed, this, [this, window]{
+        QVariantMap map;
+        int windowId = windowIdHash.value(window);
+        map.insert(QSL("windowId"), windowId);
+        emit changed(map);
+    });
+
+    connect(window->tabWidget(), &TabWidget::tabInserted, this, [this, window](int index){
+        QVariantMap map;
+        int windowId = windowIdHash.value(window);
+        map.insert(QSL("windowId"), windowId);
+        map.insert(QSL("index"), index);
+        emit tabInserted(map);
+    });
+
+    connect(window->tabWidget(), &TabWidget::tabRemoved, this, [this, window](int index){
+        QVariantMap map;
+        int windowId = windowIdHash.value(window);
+        map.insert(QSL("windowId"), windowId);
+        map.insert(QSL("index"), index);
+        emit tabRemoved(map);
+    });
+
+    connect(window->tabWidget(), &TabWidget::tabMoved, this, [this, window](int from, int to){
+        QVariantMap map;
+        int windowId = windowIdHash.value(window);
+        map.insert(QSL("windowId"), windowId);
+        map.insert(QSL("from"), from);
+        map.insert(QSL("to"), to);
+        emit tabMoved(map);
+    });
 }

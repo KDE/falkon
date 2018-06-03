@@ -47,7 +47,9 @@ Q_SIGNALS:
     void changed(const QVariantMap &map);
     void tabInserted(const QVariantMap &map);
     void tabRemoved(const QVariantMap &map);
+    void tabMoved(const QVariantMap &map);
 private:
     BrowserWindow *getWindow(const QVariantMap &map) const;
+    void windowCreated(BrowserWindow *window);
     QHash<BrowserWindow*, int> windowIdHash;
 };
