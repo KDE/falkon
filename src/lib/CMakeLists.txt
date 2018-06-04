@@ -169,6 +169,10 @@ set(SRCS ${SRCS}
     plugins/qml/api/tabs/qmltabs.cpp
     plugins/qml/api/notifications/qmlnotifications.cpp
     plugins/qml/api/clipboard/qmlclipboard.cpp
+    plugins/qml/api/windows/qmlwindow.cpp
+    plugins/qml/api/windows/qmlwindows.cpp
+    plugins/qml/api/windows/qmlwindowstate.cpp
+    plugins/qml/api/windows/qmlwindowtype.cpp
     popupwindow/popuplocationbar.cpp
     popupwindow/popupstatusbarmessage.cpp
     popupwindow/popupwebview.cpp

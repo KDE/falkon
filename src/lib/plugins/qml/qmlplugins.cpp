@@ -29,6 +29,10 @@
 #include "api/tabs/qmltabs.h"
 #include "api/notifications/qmlnotifications.h"
 #include "api/clipboard/qmlclipboard.h"
+#include "api/windows/qmlwindow.h"
+#include "api/windows/qmlwindows.h"
+#include "api/windows/qmlwindowstate.h"
+#include "api/windows/qmlwindowtype.h"
 
 #include <QQmlEngine>
 
@@ -108,6 +112,21 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(scriptEngine)
 
         auto *object = new QmlClipboard();
+        return object;
+    });
+
+    // Windows
+    qmlRegisterUncreatableType<QmlWindow>("org.kde.falkon", 1, 0, "Window", "Unable to register type: Window");
+
+    qmlRegisterUncreatableType<QmlWindowState>("org.kde.falkon", 1, 0, "WindowState", "Unable to register type: WindowState");
+
+    qmlRegisterUncreatableType<QmlWindowType>("org.kde.falkon", 1, 0, "WindowType", "Unable to register type: WindowType");
+
+    qmlRegisterSingletonType<QmlWindows>("org.kde.falkon", 1, 0, "Windows", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlWindows();
         return object;
     });
 }
