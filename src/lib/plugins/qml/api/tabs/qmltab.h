@@ -19,6 +19,7 @@
 
 #include <QObject>
 #include "webtab.h"
+#include "../windows/qmlwindow.h"
 
 class QmlTab : public QObject
 {
@@ -32,6 +33,7 @@ class QmlTab : public QObject
     Q_PROPERTY(bool restored READ restored CONSTANT)
     Q_PROPERTY(bool current READ current CONSTANT)
     Q_PROPERTY(bool playing READ playing CONSTANT)
+    Q_PROPERTY(QmlWindow* browserWindow READ browserWindow CONSTANT)
 public:
     explicit QmlTab(WebTab *webTab = 0, QObject *parent = 0);
     QString url() const;
@@ -43,6 +45,7 @@ public:
     bool restored() const;
     bool current() const;
     bool playing() const;
+    QmlWindow *browserWindow() const;
 
     Q_INVOKABLE void detach();
     Q_INVOKABLE void setZoomLevel(const QVariantMap &map);

@@ -140,6 +140,15 @@ bool QmlTab::playing() const
     return m_webTab->isPlaying();
 }
 
+QmlWindow *QmlTab::browserWindow() const
+{
+    if (!m_webTab) {
+        return nullptr;
+    }
+
+    return new QmlWindow(m_webTab->browserWindow());
+}
+
 void QmlTab::detach()
 {
     if (!m_webTab) {
