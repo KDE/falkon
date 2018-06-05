@@ -84,8 +84,6 @@ void QmlTabsApiTest::testTabsAPI()
     QCOMPARE(qmlTabObject3->property("index").toInt(), 0);
     QCOMPARE(qmlTabObject3->property("pinned").toBool(), false);
 
-    // TODO: when the windowId is different from current window
-
     // Next-Previous-Current
     QCOMPARE(mApp->getWindow()->tabWidget()->currentIndex(), 0);
     qmlTest.evaluate("Falkon.Tabs.nextTab()");
@@ -103,7 +101,7 @@ void QmlTabsApiTest::testTabsAPI()
 
     // Move Tab
     QSignalSpy qmlTabsMovedSpy(qmlTabsObject, SIGNAL(tabMoved(QVariantMap)));
-    qmlTest.evaluate("Falkon.Tabs.moveTab({from: 0, to:1})");
+    qmlTest.evaluate("Falkon.Tabs.moveTab({from: 0, to:1, windowId: 0})");
     QCOMPARE(qmlTabsMovedSpy.count(), 1);
 
     // Tab Removal
@@ -112,6 +110,20 @@ void QmlTabsApiTest::testTabsAPI()
     qmlTest.evaluate("Falkon.Tabs.closeTab({index: 0})");
     QCOMPARE(qmlTabsRemovedSpy.count(), 1);
     QCOMPARE(mApp->getWindow()->tabCount(), 1);
+
+    // windowId is different from current window
+    BrowserWindow *otherWindow = mApp->createWindow(Qz::BW_NewWindow);
+    QCOMPARE(otherWindow->tabCount(), 0);
+    qmlTest.evaluate("Falkon.Tabs.addTab({"
+                     "    url: 'https://example.com/',"
+                     "    windowId: 1"
+                     "})");
+    QCOMPARE(otherWindow->tabCount(), 1);
+    QObject *otherWindowTab = qmlTest.evaluateQObject("Falkon.Tabs.get({index: 0, windowId: 1})");
+    QVERIFY(otherWindowTab);
+    QObject *windowOfOtherWindowTab = qvariant_cast<QObject*>(otherWindowTab->property("browserWindow"));
+    QVERIFY(windowOfOtherWindowTab);
+    QCOMPARE(windowOfOtherWindowTab->property("id").toInt(), mApp->windowIdHash().value(otherWindow));
 }
 
 FALKONTEST_MAIN(QmlTabsApiTest)
