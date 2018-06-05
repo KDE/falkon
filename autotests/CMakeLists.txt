@@ -60,4 +60,5 @@ falkon_qml_tests(
     qmlcookiesapitest
     qmlclipboardapitest
     qmltabsapitest
+    qmlwindowsapitest
 )

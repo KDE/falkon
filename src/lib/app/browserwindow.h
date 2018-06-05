@@ -246,4 +246,6 @@ private:
 #endif
 };
 
+Q_DECLARE_METATYPE(BrowserWindow*)
+
 #endif // BROWSERWINDOW_H
