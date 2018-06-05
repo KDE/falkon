@@ -30,7 +30,7 @@ public:
     Q_INVOKABLE void set(const QVariantMap &map);
     Q_INVOKABLE void remove(const QVariantMap &map);
 Q_SIGNALS:
-    void changed(QmlCookie *cookie, bool removed);
+    void changed(const QVariantMap &map);
 private:
     QNetworkCookie *getNetworkCookie(const QVariantMap &map);
 };

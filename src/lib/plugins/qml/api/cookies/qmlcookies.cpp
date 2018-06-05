@@ -26,13 +26,19 @@ QmlCookies::QmlCookies(QObject *parent)
     connect(mApp->cookieJar(), &CookieJar::cookieAdded, this, [this](QNetworkCookie network_cookie){
         // FIXME: improve this
         QmlCookie *cookie = new QmlCookie(new QNetworkCookie(network_cookie));
-        emit changed(cookie, false);
+        QVariantMap map;
+        map.insert(QSL("cookie"), QVariant::fromValue(cookie));
+        map.insert(QSL("removed"), false);
+        emit changed(map);
     });
 
     connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, [this](QNetworkCookie network_cookie){
         // FIXME: improve this
         QmlCookie *cookie = new QmlCookie(new QNetworkCookie(network_cookie));
-        emit changed(cookie, true);
+        QVariantMap map;
+        map.insert(QSL("cookie"), QVariant::fromValue(cookie));
+        map.insert(QSL("removed"), true);
+        emit changed(map);
     });
 }
 

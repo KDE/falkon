@@ -43,3 +43,5 @@ public:
 private:
     QNetworkCookie *m_cookie;
 };
+
+Q_DECLARE_METATYPE(QmlCookie*)

@@ -45,22 +45,24 @@ void QmlCookiesApiTest::testCookieAdditionRemoval()
     QCOMPARE(netCookie.name(), "Example");
     QObject *object = qmlTest.evaluateQObject("Falkon.Cookies");
     QVERIFY(object);
-    QSignalSpy qmlCookieSpy(object, SIGNAL(changed(QmlCookie*, bool)));
+    QSignalSpy qmlCookieSpy(object, SIGNAL(changed(QVariantMap)));
     QNetworkCookie anotherNetCookie;
     anotherNetCookie.setName(QString("Hello").toLocal8Bit());
     anotherNetCookie.setDomain(".mydomain.com");
     anotherNetCookie.setExpirationDate(QDateTime::currentDateTime().addSecs(60));
     mApp->webProfile()->cookieStore()->setCookie(anotherNetCookie);
     QTRY_COMPARE(qmlCookieSpy.count(), 1);
-    QObject *addedQmlCookie = qvariant_cast<QObject*>(qmlCookieSpy.at(0).at(0));
-    bool removed = qvariant_cast<bool>(qmlCookieSpy.at(0).at(1));
+    QVariantMap addedQmlCookieMap = QVariant(qmlCookieSpy.at(0).at(0)).toMap();
+    QObject *addedQmlCookie = qvariant_cast<QObject*>(addedQmlCookieMap.value("cookie"));
+    bool removed = addedQmlCookieMap.value("removed").toBool();
     QCOMPARE(addedQmlCookie->property("name").toString(), "Hello");
     QCOMPARE(removed, false);
 
     mApp->webProfile()->cookieStore()->deleteCookie(netCookie);
     QTRY_COMPARE(qmlCookieSpy.count(), 2);
-    QObject *removedQmlCookie = qvariant_cast<QObject*>(qmlCookieSpy.at(1).at(0));
-    removed = qvariant_cast<bool>(qmlCookieSpy.at(1).at(1));
+    QVariantMap removedQmlCookieMap = QVariant(qmlCookieSpy.at(1).at(0)).toMap();
+    QObject *removedQmlCookie = qvariant_cast<QObject*>(removedQmlCookieMap.value("cookie"));
+    removed = removedQmlCookieMap.value("removed").toBool();
     QCOMPARE(removedQmlCookie->property("name").toString(), "Example");
     QCOMPARE(removed, true);
 

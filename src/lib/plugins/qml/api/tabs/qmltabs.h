@@ -27,8 +27,8 @@ class QmlTabs : public QObject
 public:
     explicit QmlTabs(QObject *parent = 0);
     Q_INVOKABLE bool setCurrentIndex(const QVariantMap &map);
-    Q_INVOKABLE bool nextTab(const QVariantMap &map = QVariantMap());
-    Q_INVOKABLE bool previousTab(const QVariantMap &map = QVariantMap());
+    Q_INVOKABLE bool nextTab(int windowId = -1);
+    Q_INVOKABLE bool previousTab(int windowId = -1);
     Q_INVOKABLE bool moveTab(const QVariantMap &map);
     Q_INVOKABLE bool pinTab(const QVariantMap &map);
     Q_INVOKABLE bool unpinTab(const QVariantMap &map);
@@ -38,17 +38,18 @@ public:
     Q_INVOKABLE bool reloadTab(const QVariantMap &map);
     Q_INVOKABLE bool stopTab(const QVariantMap &map);
     Q_INVOKABLE QmlTab *get(const QVariantMap &map) const;
-    Q_INVOKABLE int normalTabsCount(const QVariantMap &map = QVariantMap()) const;
-    Q_INVOKABLE int pinnedTabsCount(const QVariantMap &map = QVariantMap()) const;
+    Q_INVOKABLE int normalTabsCount(int windowId = -1) const;
+    Q_INVOKABLE int pinnedTabsCount(int windowId = -1) const;
     Q_INVOKABLE QList<QObject*> getAll(const QVariantMap &map = QVariantMap()) const;
     Q_INVOKABLE QList<QObject*> search(const QVariantMap &map);
     Q_INVOKABLE bool addTab(const QVariantMap &map);
 Q_SIGNALS:
-    void changed(const QVariantMap &map);
+    void changed(int windowId);
     void tabInserted(const QVariantMap &map);
     void tabRemoved(const QVariantMap &map);
     void tabMoved(const QVariantMap &map);
 private:
     BrowserWindow *getWindow(const QVariantMap &map) const;
+    BrowserWindow *getWindow(int windowId) const;
     void windowCreated(BrowserWindow *window);
 };

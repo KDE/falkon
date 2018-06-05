@@ -46,9 +46,9 @@ bool QmlTabs::setCurrentIndex(const QVariantMap &map)
     return true;
 }
 
-bool QmlTabs::nextTab(const QVariantMap &map)
+bool QmlTabs::nextTab(int windowId)
 {
-    const auto window = getWindow(map);
+    const auto window = getWindow(windowId);
     if (!window) {
         return false;
     }
@@ -56,9 +56,9 @@ bool QmlTabs::nextTab(const QVariantMap &map)
     return true;
 }
 
-bool QmlTabs::previousTab(const QVariantMap &map)
+bool QmlTabs::previousTab(int windowId)
 {
-    const auto window = getWindow(map);
+    const auto window = getWindow(windowId);
     if (!window) {
         return false;
     }
@@ -238,18 +238,18 @@ QmlTab *QmlTabs::get(const QVariantMap &map) const
     return new QmlTab(webTab);
 }
 
-int QmlTabs::normalTabsCount(const QVariantMap &map) const
+int QmlTabs::normalTabsCount(int windowId) const
 {
-    const auto window = getWindow(map);
+    const auto window = getWindow(windowId);
     if (!window) {
         return -1;
     }
     return window->tabWidget()->normalTabsCount();
 }
 
-int QmlTabs::pinnedTabsCount(const QVariantMap &map) const
+int QmlTabs::pinnedTabsCount(int windowId) const
 {
-    const auto window = getWindow(map);
+    const auto window = getWindow(windowId);
     if (!window) {
         return -1;
     }
@@ -308,7 +308,11 @@ bool QmlTabs::addTab(const QVariantMap &map)
 BrowserWindow *QmlTabs::getWindow(const QVariantMap &map) const
 {
     int windowId = map.value(QSL("windowId"), -1).toInt();
+    return getWindow(windowId);
+}
 
+BrowserWindow *QmlTabs::getWindow(int windowId) const
+{
     if (windowId == -1) {
         return mApp->getWindow();
     }
@@ -328,9 +332,7 @@ void QmlTabs::windowCreated(BrowserWindow *window)
     int windowId = mApp->windowIdHash().value(window);
 
     connect(window->tabWidget(), &TabWidget::changed, this, [this, windowId]{
-        QVariantMap map;
-        map.insert(QSL("windowId"), windowId);
-        emit changed(map);
+        emit changed(windowId);
     });
 
     connect(window->tabWidget(), &TabWidget::tabInserted, this, [this, windowId](int index){
