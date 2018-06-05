@@ -34,6 +34,11 @@ class QmlTab : public QObject
     Q_PROPERTY(bool current READ current CONSTANT)
     Q_PROPERTY(bool playing READ playing CONSTANT)
     Q_PROPERTY(QmlWindow* browserWindow READ browserWindow CONSTANT)
+    Q_PROPERTY(bool loading READ loading CONSTANT)
+    Q_PROPERTY(int loadingProgress READ loadingProgress CONSTANT)
+    Q_PROPERTY(bool backgroundActivity READ backgroundActivity CONSTANT)
+    Q_PROPERTY(bool canGoBack READ canGoBack CONSTANT)
+    Q_PROPERTY(bool canGoForward READ canGoForward CONSTANT)
 public:
     explicit QmlTab(WebTab *webTab = 0, QObject *parent = 0);
     QString url() const;
@@ -46,6 +51,11 @@ public:
     bool current() const;
     bool playing() const;
     QmlWindow *browserWindow() const;
+    bool loading() const;
+    int loadingProgress() const;
+    bool backgroundActivity() const;
+    bool canGoBack() const;
+    bool canGoForward() const;
 
     Q_INVOKABLE void detach();
     Q_INVOKABLE void setZoomLevel(const QVariantMap &map);
@@ -53,6 +63,18 @@ public:
     Q_INVOKABLE void reload();
     Q_INVOKABLE void unload();
     Q_INVOKABLE void load(const QVariantMap &map);
+    Q_INVOKABLE void zoomIn();
+    Q_INVOKABLE void zoomOut();
+    Q_INVOKABLE void zoomReset();
+    Q_INVOKABLE void undo();
+    Q_INVOKABLE void redo();
+    Q_INVOKABLE void selectAll();
+    Q_INVOKABLE void reloadBypassCache();
+    Q_INVOKABLE void back();
+    Q_INVOKABLE void forward();
+    Q_INVOKABLE void printPage();
+    Q_INVOKABLE void showSource();
+    Q_INVOKABLE void sendPageByMail();
 
 Q_SIGNALS:
     void titleChanged(const QVariantMap &map);
@@ -61,6 +83,8 @@ Q_SIGNALS:
     void mutedChanged(const QVariantMap &map);
     void restoredChanged(const QVariantMap &map);
     void playingChanged(const QVariantMap &map);
+    void zoomLevelChanged(int zoomLevel);
+    void backgroundActivityChanged(int backgroundActivityChanged);
 private:
     WebTab *m_webTab;
 };

@@ -17,6 +17,8 @@
 * ============================================================ */
 #include "qmltab.h"
 #include "loadrequest.h"
+#include "tabbedwebview.h"
+#include <QWebEngineHistory>
 
 QmlTab::QmlTab(WebTab *webTab, QObject *parent)
     : QObject(parent)
@@ -57,6 +59,9 @@ QmlTab::QmlTab(WebTab *webTab, QObject *parent)
         map.insert(QSL("playing"), playing);
         emit playingChanged(map);
     });
+
+    connect(m_webTab->webView(), &TabbedWebView::zoomLevelChanged, this, &QmlTab::zoomLevelChanged);
+    connect(m_webTab->webView(), &TabbedWebView::backgroundActivityChanged, this, &QmlTab::backgroundActivityChanged);
 }
 
 QString QmlTab::url() const
@@ -149,6 +154,51 @@ QmlWindow *QmlTab::browserWindow() const
     return new QmlWindow(m_webTab->browserWindow());
 }
 
+bool QmlTab::loading() const
+{
+    if (!m_webTab) {
+        return false;
+    }
+
+    return m_webTab->webView()->isLoading();
+}
+
+int QmlTab::loadingProgress() const
+{
+    if (!m_webTab) {
+        return -1;
+    }
+
+    return m_webTab->webView()->loadingProgress();
+}
+
+bool QmlTab::backgroundActivity() const
+{
+    if (!m_webTab) {
+        return false;
+    }
+
+    return m_webTab->webView()->backgroundActivity();
+}
+
+bool QmlTab::canGoBack() const
+{
+    if (!m_webTab) {
+        return false;
+    }
+
+    return m_webTab->webView()->history()->canGoBack();
+}
+
+bool QmlTab::canGoForward() const
+{
+    if (!m_webTab) {
+        return false;
+    }
+
+    return m_webTab->webView()->history()->canGoForward();
+}
+
 void QmlTab::detach()
 {
     if (!m_webTab) {
@@ -215,4 +265,112 @@ void QmlTab::load(const QVariantMap &map)
     LoadRequest req;
     req.setUrl(QUrl::fromEncoded(url.toUtf8()));
     m_webTab->load(req);
+}
+
+void QmlTab::zoomIn()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->zoomIn();
+}
+
+void QmlTab::zoomOut()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->zoomOut();
+}
+
+void QmlTab::zoomReset()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->zoomReset();
+}
+
+void QmlTab::undo()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->editUndo();
+}
+
+void QmlTab::redo()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->editRedo();
+}
+
+void QmlTab::selectAll()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->editSelectAll();
+}
+
+void QmlTab::reloadBypassCache()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->reloadBypassCache();
+}
+
+void QmlTab::back()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->back();
+}
+
+void QmlTab::forward()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->forward();
+}
+
+void QmlTab::printPage()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->printPage();
+}
+
+void QmlTab::showSource()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->showSource();
+}
+
+void QmlTab::sendPageByMail()
+{
+    if (!m_webTab) {
+        return;
+    }
+
+    m_webTab->webView()->sendPageByMail();
 }
