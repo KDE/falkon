@@ -29,7 +29,7 @@ class QmlHistoryItem : public QObject
     Q_PROPERTY(int visitCount READ visitCount CONSTANT)
     Q_PROPERTY(QDateTime lastVisitTime READ lastVisitTime CONSTANT)
 public:
-    explicit QmlHistoryItem(HistoryEntry *entry = 0, QObject *parent = 0);
+    explicit QmlHistoryItem(HistoryEntry *entry = nullptr, QObject *parent = nullptr);
     int id() const;
     QString url() const;
     QString title() const;

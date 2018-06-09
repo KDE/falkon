@@ -24,7 +24,7 @@ class QmlHistory : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlHistory(QObject *parent = 0);
+    explicit QmlHistory(QObject *parent = nullptr);
     Q_INVOKABLE QList<QObject*> search(const QVariantMap &map);
     Q_INVOKABLE int getVisits(const QVariantMap &map);
     Q_INVOKABLE void addUrl(const QVariantMap &map);

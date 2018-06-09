@@ -88,9 +88,7 @@ QmlCookieData::QmlCookieData()
 
 QmlCookieData::~QmlCookieData()
 {
-    for (QmlCookie *qmlCookie : m_cookies.values()) {
-        qmlCookie->deleteLater();
-    }
+    qDeleteAll(m_cookies);
 }
 
 QmlCookie *QmlCookieData::get(QNetworkCookie *cookie)

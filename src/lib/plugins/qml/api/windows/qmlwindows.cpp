@@ -42,7 +42,7 @@ QmlWindow *QmlWindows::get(const QVariantMap &map) const
         return nullptr;
     }
 
-    int id = map.value(QSL("id")).toInt();
+    const int id = map.value(QSL("id")).toInt();
     return windowData->get(getBrowserWindow(id));
 }
 
@@ -62,8 +62,8 @@ QList<QObject*> QmlWindows::getAll() const
 
 QmlWindow *QmlWindows::create(const QVariantMap &map) const
 {
-    QUrl url = QUrl::fromEncoded(map.value(QSL("url")).toString().toUtf8());
-    Qz::BrowserWindowType type = Qz::BrowserWindowType(map.value(QSL("type"), QmlWindowType::NewWindow).toInt());
+    const QUrl url = QUrl::fromEncoded(map.value(QSL("url")).toString().toUtf8());
+    const Qz::BrowserWindowType type = Qz::BrowserWindowType(map.value(QSL("type"), QmlWindowType::NewWindow).toInt());
     BrowserWindow *window = mApp->createWindow(type, url);
     return windowData->get(window);
 }

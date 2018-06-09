@@ -25,7 +25,7 @@ class QmlTabs : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlTabs(QObject *parent = 0);
+    explicit QmlTabs(QObject *parent = nullptr);
     Q_INVOKABLE bool setCurrentIndex(const QVariantMap &map);
     Q_INVOKABLE bool nextTab(int windowId = -1);
     Q_INVOKABLE bool previousTab(int windowId = -1);

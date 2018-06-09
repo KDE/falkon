@@ -35,7 +35,7 @@ class QmlWindow : public QObject
     Q_PROPERTY(int height READ height CONSTANT)
     Q_PROPERTY(int width READ width CONSTANT)
 public:
-    QmlWindow(BrowserWindow *window = 0, QObject *parent = 0);
+    QmlWindow(BrowserWindow *window = nullptr, QObject *parent = nullptr);
     int id() const;
     bool incognito() const;
     QString title() const;

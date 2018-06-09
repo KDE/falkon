@@ -27,7 +27,7 @@ class QmlBookmarks : public QObject
     Q_OBJECT
 
 public:
-    explicit QmlBookmarks(QObject *parent = 0);
+    explicit QmlBookmarks(QObject *parent = nullptr);
 
     Q_INVOKABLE bool isBookmarked(const QUrl &url) const;
     Q_INVOKABLE QmlBookmarkTreeNode *rootItem() const;

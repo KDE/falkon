@@ -32,5 +32,5 @@ public:
     };
     Q_ENUMS(WindowType)
 
-    QmlWindowType(QObject *parent = 0);
+    QmlWindowType(QObject *parent = nullptr);
 };

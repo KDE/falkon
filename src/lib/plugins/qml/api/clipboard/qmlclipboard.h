@@ -23,6 +23,6 @@ class QmlClipboard : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlClipboard(QObject *parent = 0);
+    explicit QmlClipboard(QObject *parent = nullptr);
     Q_INVOKABLE void copy(const QVariantMap &map);
 };

@@ -24,7 +24,7 @@ class QmlWindows : public QObject
 {
     Q_OBJECT
 public:
-    QmlWindows(QObject *parent = 0);
+    QmlWindows(QObject *parent = nullptr);
     Q_INVOKABLE QmlWindow *get(const QVariantMap &map) const;
     Q_INVOKABLE QmlWindow *getCurrent() const;
     Q_INVOKABLE QList<QObject*> getAll() const;

@@ -18,7 +18,7 @@
 #include "qmlmostvisitedurl.h"
 #include <QQmlEngine>
 
-QmlMostVisitedUrl::QmlMostVisitedUrl(QString title, QString url, QObject *parent)
+QmlMostVisitedUrl::QmlMostVisitedUrl(const QString &title, const QString &url, QObject *parent)
     : QObject(parent)
     , m_title(title)
     , m_url(url)
@@ -42,17 +42,15 @@ QmlMostVisitedUrlData::QmlMostVisitedUrlData()
 
 QmlMostVisitedUrlData::~QmlMostVisitedUrlData()
 {
-    for (QmlMostVisitedUrl *url : m_urls.values()) {
-        url->deleteLater();
-    }
+    qDeleteAll(m_urls);
 }
 
-QmlMostVisitedUrl *QmlMostVisitedUrlData::get(QString title, QString url, QObject *parent)
+QmlMostVisitedUrl *QmlMostVisitedUrlData::get(const QString &title, const QString &url)
 {
-    QmlMostVisitedUrl *visitedUrl = m_urls.value(QPair<QString, QString>(title, url));
+    QmlMostVisitedUrl *visitedUrl = m_urls.value({title, url});
     if (!visitedUrl) {
-        visitedUrl = new QmlMostVisitedUrl(title, url, parent);
-        m_urls.insert(QPair<QString, QString>(title, url), visitedUrl);
+        visitedUrl = new QmlMostVisitedUrl(title, url);
+        m_urls.insert({title, url}, visitedUrl);
     }
     return visitedUrl;
 }

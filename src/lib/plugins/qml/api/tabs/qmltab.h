@@ -40,7 +40,7 @@ class QmlTab : public QObject
     Q_PROPERTY(bool canGoBack READ canGoBack CONSTANT)
     Q_PROPERTY(bool canGoForward READ canGoForward CONSTANT)
 public:
-    explicit QmlTab(WebTab *webTab = 0, QObject *parent = 0);
+    explicit QmlTab(WebTab *webTab = nullptr, QObject *parent = nullptr);
     QString url() const;
     QString title() const;
     int zoomLevel() const;

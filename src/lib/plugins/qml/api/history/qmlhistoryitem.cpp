@@ -71,9 +71,7 @@ QmlHistoryItemData::QmlHistoryItemData()
 
 QmlHistoryItemData::~QmlHistoryItemData()
 {
-    for (QmlHistoryItem *item : m_items.values()) {
-        item->deleteLater();
-    }
+    qDeleteAll(m_items);
 }
 
 QmlHistoryItem *QmlHistoryItemData::get(HistoryEntry *entry)

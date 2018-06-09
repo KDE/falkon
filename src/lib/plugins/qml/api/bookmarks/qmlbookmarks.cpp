@@ -126,9 +126,9 @@ bool QmlBookmarks::create(const QVariantMap &map) const
         qWarning() << "Unable to create new bookmark:" << "parent not found";
         return false;
     }
-    QString title = map.value(QSL("title")).toString();
-    QString urlString = map.value(QSL("url")).toString();
-    QString description = map.value(QSL("description")).toString();
+    const QString title = map.value(QSL("title")).toString();
+    const QString urlString = map.value(QSL("url")).toString();
+    const QString description = map.value(QSL("description")).toString();
 
     BookmarkItem::Type type;
     if (map.contains(QSL("type"))) {
@@ -175,8 +175,8 @@ QList<QObject*> QmlBookmarks::search(const QVariantMap &map) const
         return QList<QObject*>();
     }
 
-    QString query = map.value(QSL("query")).toString();
-    QString urlString = map.value(QSL("url")).toString();
+    const QString query = map.value(QSL("query")).toString();
+    const QString urlString = map.value(QSL("url")).toString();
     QList<BookmarkItem*> items;
     if (urlString.isEmpty()) {
         items = mApp->bookmarks()->searchBookmarks(query);

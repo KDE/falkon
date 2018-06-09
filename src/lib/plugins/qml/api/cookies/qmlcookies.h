@@ -24,7 +24,7 @@ class QmlCookies : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlCookies(QObject *parent = 0);
+    explicit QmlCookies(QObject *parent = nullptr);
     Q_INVOKABLE QmlCookie *get(const QVariantMap &map);
     Q_INVOKABLE QList<QObject*> getAll(const QVariantMap &map);
     Q_INVOKABLE void set(const QVariantMap &map);

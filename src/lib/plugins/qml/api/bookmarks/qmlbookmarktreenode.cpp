@@ -114,9 +114,9 @@ bool QmlBookmarkTreeNode::unmodifiable() const
 
 QList<QObject*> QmlBookmarkTreeNode::children() const
 {
-    auto items = m_item->children();
+    const auto items = m_item->children();
     QList<QObject*> ret;
-    for (auto item : items) {
+    for (const auto &item : items) {
         ret.append(bookmarkTreeNodeData->get(item));
     }
     return ret;
@@ -128,9 +128,7 @@ QmlBookmarkTreeNodeData::QmlBookmarkTreeNodeData()
 
 QmlBookmarkTreeNodeData::~QmlBookmarkTreeNodeData()
 {
-    for (QmlBookmarkTreeNode *node : m_nodes.values()) {
-        node->deleteLater();
-    }
+    qDeleteAll(m_nodes);
 }
 
 QmlBookmarkTreeNode *QmlBookmarkTreeNodeData::get(BookmarkItem *item)

@@ -32,7 +32,7 @@ class QmlCookie : public QObject
     Q_PROPERTY(bool session READ session CONSTANT)
     Q_PROPERTY(QString value READ value CONSTANT)
 public:
-    explicit QmlCookie(QNetworkCookie *cookie = 0, QObject *parent = 0);
+    explicit QmlCookie(QNetworkCookie *cookie = nullptr, QObject *parent = nullptr);
     QString domain() const;
     QDateTime expirationDate() const;
     QString name() const;

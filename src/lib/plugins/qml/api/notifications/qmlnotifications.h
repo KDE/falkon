@@ -23,6 +23,6 @@ class QmlNotifications : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlNotifications(QObject *parent = 0);
+    explicit QmlNotifications(QObject *parent = nullptr);
     Q_INVOKABLE void create(const QVariantMap &map);
 };

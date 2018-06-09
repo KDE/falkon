@@ -43,7 +43,7 @@ QList<QObject*> QmlHistory::search(const QVariantMap &map)
         qWarning() << "Error:" << "wrong arguments passed to" << __FUNCTION__;
         return list;
     }
-    QString text = map.value(QSL("text")).toString();
+    const QString text = map.value(QSL("text")).toString();
     QList<HistoryEntry*> result = mApp->history()->searchHistoryEntry(text);
 
     foreach(auto entry, result) {
@@ -59,7 +59,7 @@ int QmlHistory::getVisits(const QVariantMap &map)
         qWarning() << "Error:" << "wrong arguments passed to" << __FUNCTION__;
         return 0;
     }
-    QString url = map.value(QSL("url")).toString();
+    const QString url = map.value(QSL("url")).toString();
     HistoryEntry *entry = mApp->history()->getHistoryEntry(url);
     return entry->count;
 }
@@ -71,7 +71,7 @@ void QmlHistory::addUrl(const QVariantMap &map)
         return;
     }
     QString title = map.value(QSL("title")).toString();
-    QString url = map.value(QSL("url")).toString();
+    const QString url = map.value(QSL("url")).toString();
 
     title = title.isEmpty() ? url : title;
 
@@ -84,7 +84,7 @@ void QmlHistory::deleteUrl(const QVariantMap &map)
         qWarning() << "Error:" << "wrong arguments passed to" << __FUNCTION__;
         return;
     }
-    QString url = map.value(QSL("url")).toString();
+    const QString url = map.value(QSL("url")).toString();
     mApp->history()->deleteHistoryEntry(url);
 }
 
@@ -94,8 +94,8 @@ void QmlHistory::deleteRange(const QVariantMap &map)
         qWarning() << "Error:" << "wrong arguments passed to" << __FUNCTION__;
         return;
     }
-    double startTime = map.value(QSL("startTime")).toDouble();
-    double endTime = map.value(QSL("endTime")).toDouble();
+    const double startTime = map.value(QSL("startTime")).toDouble();
+    const double endTime = map.value(QSL("endTime")).toDouble();
     mApp->history()->deleteRange(startTime, endTime);
 }
 

@@ -21,6 +21,8 @@
 #include <QWebEngineHistory>
 #include <QQmlEngine>
 
+Q_GLOBAL_STATIC(QmlWindowData, windowData)
+
 QmlTab::QmlTab(WebTab *webTab, QObject *parent)
     : QObject(parent)
     , m_webTab(webTab)
@@ -154,7 +156,7 @@ QmlWindow *QmlTab::browserWindow() const
         return nullptr;
     }
 
-    return new QmlWindow(m_webTab->browserWindow());
+    return windowData->get(m_webTab->browserWindow());
 }
 
 bool QmlTab::loading() const
@@ -264,7 +266,7 @@ void QmlTab::load(const QVariantMap &map)
         return;
     }
 
-    QString url = map.value(QSL("url")).toString();
+    const QString url = map.value(QSL("url")).toString();
     LoadRequest req;
     req.setUrl(QUrl::fromEncoded(url.toUtf8()));
     m_webTab->load(req);
@@ -384,9 +386,7 @@ QmlTabData::QmlTabData()
 
 QmlTabData::~QmlTabData()
 {
-    for (QmlTab *tab : m_tabs.values()) {
-        tab->deleteLater();
-    }
+    qDeleteAll(m_tabs);
 }
 
 QmlTab *QmlTabData::get(WebTab *webTab)

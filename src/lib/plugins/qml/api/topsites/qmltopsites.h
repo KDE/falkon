@@ -24,6 +24,6 @@ class QmlTopSites : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlTopSites(QObject *parent = 0);
+    explicit QmlTopSites(QObject *parent = nullptr);
     Q_INVOKABLE QList<QObject*> get() const;
 };

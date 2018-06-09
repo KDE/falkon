@@ -27,7 +27,7 @@ class QmlMostVisitedUrl : public QObject
     Q_PROPERTY(QString title READ title CONSTANT)
     Q_PROPERTY(QString url READ url CONSTANT)
 public:
-    explicit QmlMostVisitedUrl(QString title = 0, QString url = 0, QObject *parent = 0);
+    explicit QmlMostVisitedUrl(const QString &title = QString(), const QString &url = QString(), QObject *parent = nullptr);
     QString title() const;
     QString url() const;
 private:
@@ -40,7 +40,7 @@ class QmlMostVisitedUrlData
 public:
     explicit QmlMostVisitedUrlData();
     ~QmlMostVisitedUrlData();
-    QmlMostVisitedUrl *get(QString title = 0, QString url = 0, QObject *parent = 0);
+    QmlMostVisitedUrl *get(const QString &title = QString(), const QString &url = QString());
 private:
     QHash<QPair<QString, QString>, QmlMostVisitedUrl*> m_urls;
 };

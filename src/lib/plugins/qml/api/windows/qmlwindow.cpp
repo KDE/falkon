@@ -134,9 +134,7 @@ QmlWindowData::QmlWindowData()
 
 QmlWindowData::~QmlWindowData()
 {
-    for (QmlWindow *window : m_windows.values()) {
-        window->deleteLater();
-    }
+    qDeleteAll(m_windows);
 }
 
 QmlWindow *QmlWindowData::get(BrowserWindow *window)
