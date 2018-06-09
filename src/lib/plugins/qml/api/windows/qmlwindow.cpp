@@ -19,11 +19,13 @@
 #include "mainapplication.h"
 #include "../tabs/qmltab.h"
 #include "tabwidget.h"
+#include <QQmlEngine>
 
 QmlWindow::QmlWindow(BrowserWindow *window, QObject *parent)
     : QObject(parent)
     , m_window(window)
 {
+    QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
 int QmlWindow::id() const
@@ -124,4 +126,25 @@ int QmlWindow::width() const
     }
 
     return m_window->width();
+}
+
+QmlWindowData::QmlWindowData()
+{
+}
+
+QmlWindowData::~QmlWindowData()
+{
+    for (QmlWindow *window : m_windows.values()) {
+        window->deleteLater();
+    }
+}
+
+QmlWindow *QmlWindowData::get(BrowserWindow *window)
+{
+    QmlWindow *qmlWindow = m_windows.value(window);
+    if (!qmlWindow) {
+        qmlWindow = new QmlWindow(window);
+        m_windows.insert(window, qmlWindow);
+    }
+    return qmlWindow;
 }

@@ -19,6 +19,8 @@
 #include "tabwidget.h"
 #include "pluginproxy.h"
 
+Q_GLOBAL_STATIC(QmlTabData, tabData)
+
 QmlTabs::QmlTabs(QObject *parent)
     : QObject(parent)
 {
@@ -225,17 +227,17 @@ QmlTab *QmlTabs::get(const QVariantMap &map) const
 {
     if (!map.contains(QSL("index"))) {
         qWarning() << "Unable to set current index:" << "index not defined";
-        return new QmlTab();
+        return nullptr;
     }
 
     int index = map.value(QSL("index")).toInt();
 
     const auto window = getWindow(map);
     if (!window) {
-        return new QmlTab();
+        return nullptr;
     }
     const auto webTab = window->tabWidget()->webTab(index);
-    return new QmlTab(webTab);
+    return tabData->get(webTab);
 }
 
 int QmlTabs::normalTabsCount(int windowId) const
@@ -268,7 +270,7 @@ QList<QObject*> QmlTabs::getAll(const QVariantMap &map) const
 
     QList<QObject*> list;
     for (const auto tab : tabList) {
-        list.append(new QmlTab(tab));
+        list.append(tabData->get(tab));
     }
 
     return list;
@@ -284,7 +286,7 @@ QList<QObject*> QmlTabs::search(const QVariantMap &map)
         foreach (WebTab *webTab, window->tabWidget()->allTabs(withPinned)) {
             if (webTab->title().contains(title, Qt::CaseInsensitive)
                     || QString::fromUtf8(webTab->url().toEncoded()).contains(url, Qt::CaseInsensitive)) {
-                list.append(new QmlTab(webTab));
+                list.append(tabData->get(webTab));
             }
         }
     }

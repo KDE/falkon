@@ -19,11 +19,14 @@
 #include "loadrequest.h"
 #include "tabbedwebview.h"
 #include <QWebEngineHistory>
+#include <QQmlEngine>
 
 QmlTab::QmlTab(WebTab *webTab, QObject *parent)
     : QObject(parent)
     , m_webTab(webTab)
 {
+    QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
+
     connect(m_webTab, &WebTab::titleChanged, this, [this](const QString &title){
         QVariantMap map;
         map.insert(QSL("title"), title);
@@ -373,4 +376,25 @@ void QmlTab::sendPageByMail()
     }
 
     m_webTab->webView()->sendPageByMail();
+}
+
+QmlTabData::QmlTabData()
+{
+}
+
+QmlTabData::~QmlTabData()
+{
+    for (QmlTab *tab : m_tabs.values()) {
+        tab->deleteLater();
+    }
+}
+
+QmlTab *QmlTabData::get(WebTab *webTab)
+{
+    QmlTab *tab = m_tabs.value(webTab);
+    if (!tab) {
+        tab = new QmlTab(webTab);
+        m_tabs.insert(webTab, tab);
+    }
+    return tab;
 }

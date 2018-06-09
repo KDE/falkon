@@ -16,12 +16,14 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmlmostvisitedurl.h"
+#include <QQmlEngine>
 
 QmlMostVisitedUrl::QmlMostVisitedUrl(QString title, QString url, QObject *parent)
     : QObject(parent)
     , m_title(title)
     , m_url(url)
 {
+    QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
 QString QmlMostVisitedUrl::title() const
@@ -32,4 +34,25 @@ QString QmlMostVisitedUrl::title() const
 QString QmlMostVisitedUrl::url() const
 {
     return m_url;
+}
+
+QmlMostVisitedUrlData::QmlMostVisitedUrlData()
+{
+}
+
+QmlMostVisitedUrlData::~QmlMostVisitedUrlData()
+{
+    for (QmlMostVisitedUrl *url : m_urls.values()) {
+        url->deleteLater();
+    }
+}
+
+QmlMostVisitedUrl *QmlMostVisitedUrlData::get(QString title, QString url, QObject *parent)
+{
+    QmlMostVisitedUrl *visitedUrl = m_urls.value(QPair<QString, QString>(title, url));
+    if (!visitedUrl) {
+        visitedUrl = new QmlMostVisitedUrl(title, url, parent);
+        m_urls.insert(QPair<QString, QString>(title, url), visitedUrl);
+    }
+    return visitedUrl;
 }

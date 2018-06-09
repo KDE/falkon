@@ -44,4 +44,14 @@ private:
     QNetworkCookie *m_cookie;
 };
 
+class QmlCookieData
+{
+public:
+    explicit QmlCookieData();
+    ~QmlCookieData();
+    QmlCookie *get(QNetworkCookie *cookie);
+private:
+    QHash<QNetworkCookie*, QmlCookie*> m_cookies;
+};
+
 Q_DECLARE_METATYPE(QmlCookie*)

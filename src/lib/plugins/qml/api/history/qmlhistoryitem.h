@@ -38,3 +38,13 @@ public:
 private:
     HistoryEntry *m_entry;
 };
+
+class QmlHistoryItemData
+{
+public:
+    explicit QmlHistoryItemData();
+    ~QmlHistoryItemData();
+    QmlHistoryItem *get(HistoryEntry *entry);
+private:
+    QHash<HistoryEntry*, QmlHistoryItem*> m_items;
+};

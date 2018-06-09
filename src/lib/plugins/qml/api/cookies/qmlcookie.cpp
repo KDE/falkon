@@ -17,11 +17,13 @@
 * ============================================================ */
 #include "qmlcookie.h"
 #include <QDebug>
+#include <QQmlEngine>
 
 QmlCookie::QmlCookie(QNetworkCookie *cookie, QObject *parent)
     : QObject(parent)
     , m_cookie(cookie)
 {
+    QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
 QString QmlCookie::domain() const
@@ -78,4 +80,25 @@ QString QmlCookie::value() const
         return QString();
     }
     return QString(m_cookie->value());
+}
+
+QmlCookieData::QmlCookieData()
+{
+}
+
+QmlCookieData::~QmlCookieData()
+{
+    for (QmlCookie *qmlCookie : m_cookies.values()) {
+        qmlCookie->deleteLater();
+    }
+}
+
+QmlCookie *QmlCookieData::get(QNetworkCookie *cookie)
+{
+    QmlCookie *qmlCookie = m_cookies.value(cookie);
+    if (!qmlCookie) {
+        qmlCookie = new QmlCookie(cookie);
+        m_cookies.insert(cookie, qmlCookie);
+    }
+    return qmlCookie;
 }

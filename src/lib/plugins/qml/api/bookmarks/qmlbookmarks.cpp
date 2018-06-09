@@ -20,21 +20,23 @@
 
 #include <QDebug>
 
+Q_GLOBAL_STATIC(QmlBookmarkTreeNodeData, bookmarkTreeNodeData)
+
 QmlBookmarks::QmlBookmarks(QObject *parent)
     : QObject(parent)
 {
     connect(mApp->bookmarks(), &Bookmarks::bookmarkAdded, this, [this](BookmarkItem *item){
-        auto treeNode = QmlBookmarkTreeNode::fromBookmarkItem(item);
+        auto treeNode = bookmarkTreeNodeData->get(item);
         emit created(treeNode);
     });
 
     connect(mApp->bookmarks(), &Bookmarks::bookmarkChanged, this, [this](BookmarkItem *item){
-        auto treeNode = QmlBookmarkTreeNode::fromBookmarkItem(item);
+        auto treeNode = bookmarkTreeNodeData->get(item);
         emit changed(treeNode);
     });
 
     connect(mApp->bookmarks(), &Bookmarks::bookmarkRemoved, this, [this](BookmarkItem *item){
-        auto treeNode = QmlBookmarkTreeNode::fromBookmarkItem(item);
+        auto treeNode = bookmarkTreeNodeData->get(item);
         emit removed(treeNode);
     });
 }
@@ -94,31 +96,28 @@ bool QmlBookmarks::isBookmarked(const QUrl &url) const
 
 QmlBookmarkTreeNode *QmlBookmarks::rootItem() const
 {
-    return QmlBookmarkTreeNode::fromBookmarkItem(mApp->bookmarks()->rootItem());
+    return bookmarkTreeNodeData->get(mApp->bookmarks()->rootItem());
 }
-
 
 QmlBookmarkTreeNode *QmlBookmarks::toolbarFolder() const
 {
-    return QmlBookmarkTreeNode::fromBookmarkItem(mApp->bookmarks()->toolbarFolder());
+    return bookmarkTreeNodeData->get(mApp->bookmarks()->toolbarFolder());
 }
-
 
 QmlBookmarkTreeNode *QmlBookmarks::menuFolder() const
 {
-    return QmlBookmarkTreeNode::fromBookmarkItem(mApp->bookmarks()->menuFolder());
+    return bookmarkTreeNodeData->get(mApp->bookmarks()->menuFolder());
 }
-
 
 QmlBookmarkTreeNode *QmlBookmarks::unsortedFolder() const
 {
-    return QmlBookmarkTreeNode::fromBookmarkItem(mApp->bookmarks()->unsortedFolder());
+    return bookmarkTreeNodeData->get(mApp->bookmarks()->unsortedFolder());
 }
 
 
 QmlBookmarkTreeNode *QmlBookmarks::lastUsedFolder() const
 {
-    return QmlBookmarkTreeNode::fromBookmarkItem(mApp->bookmarks()->lastUsedFolder());
+    return bookmarkTreeNodeData->get(mApp->bookmarks()->lastUsedFolder());
 }
 
 bool QmlBookmarks::create(const QVariantMap &map) const
@@ -186,7 +185,7 @@ QList<QObject*> QmlBookmarks::search(const QVariantMap &map) const
     }
     QList<QObject*> ret;
     for (auto item : items) {
-        ret.append(QmlBookmarkTreeNode::fromBookmarkItem(item));
+        ret.append(bookmarkTreeNodeData->get(item));
     }
     return ret;
 }
@@ -234,11 +233,11 @@ QmlBookmarkTreeNode *QmlBookmarks::get(const QString &string) const
     auto items = mApp->bookmarks()->searchBookmarks(QUrl(string));
     for (auto item : items) {
         if (item->urlString() == string) {
-            return QmlBookmarkTreeNode::fromBookmarkItem(item);
+            return bookmarkTreeNodeData->get(item);
         }
     }
 
-    return new QmlBookmarkTreeNode();
+    return nullptr;
 }
 
 QList<QObject*> QmlBookmarks::getChildren(QObject *object) const
@@ -253,7 +252,7 @@ QList<QObject*> QmlBookmarks::getChildren(QObject *object) const
 
     auto items = bookmarkItem->children();
     for (auto item : items) {
-        ret.append(QmlBookmarkTreeNode::fromBookmarkItem(item));
+        ret.append(bookmarkTreeNodeData->get(item));
     }
 
     return ret;

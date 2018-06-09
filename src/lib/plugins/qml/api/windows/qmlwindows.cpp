@@ -19,16 +19,18 @@
 #include "mainapplication.h"
 #include "pluginproxy.h"
 
+Q_GLOBAL_STATIC(QmlWindowData, windowData)
+
 QmlWindows::QmlWindows(QObject *parent)
     : QObject(parent)
 {
     connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, [this](BrowserWindow *window){
-        QmlWindow *qmlWindow = new QmlWindow(window);
+        QmlWindow *qmlWindow = windowData->get(window);
         emit created(qmlWindow);
     });
 
     connect(mApp->plugins(), &PluginProxy::mainWindowDeleted, this, [this](BrowserWindow *window){
-        QmlWindow *qmlWindow = new QmlWindow(window);
+        QmlWindow *qmlWindow = windowData->get(window);
         emit removed(qmlWindow);
     });
 }
@@ -41,19 +43,19 @@ QmlWindow *QmlWindows::get(const QVariantMap &map) const
     }
 
     int id = map.value(QSL("id")).toInt();
-    return new QmlWindow(getBrowserWindow(id));
+    return windowData->get(getBrowserWindow(id));
 }
 
 QmlWindow *QmlWindows::getCurrent() const
 {
-    return new QmlWindow(mApp->getWindow());
+    return windowData->get(mApp->getWindow());
 }
 
 QList<QObject*> QmlWindows::getAll() const
 {
     QList<QObject*> list;
     for (BrowserWindow *window : mApp->windows()) {
-        list.append(new QmlWindow(window));
+        list.append(windowData->get(window));
     }
     return list;
 }
@@ -63,7 +65,7 @@ QmlWindow *QmlWindows::create(const QVariantMap &map) const
     QUrl url = QUrl::fromEncoded(map.value(QSL("url")).toString().toUtf8());
     Qz::BrowserWindowType type = Qz::BrowserWindowType(map.value(QSL("type"), QmlWindowType::NewWindow).toInt());
     BrowserWindow *window = mApp->createWindow(type, url);
-    return new QmlWindow(window);
+    return windowData->get(window);
 }
 
 void QmlWindows::remove(int windowId) const

@@ -53,8 +53,16 @@ public:
     bool unmodifiable() const;
     QList<QObject*> children() const;
 
-    static QmlBookmarkTreeNode *fromBookmarkItem(BookmarkItem *item);
-
 private:
     BookmarkItem *m_item;
+};
+
+class QmlBookmarkTreeNodeData
+{
+public:
+    explicit QmlBookmarkTreeNodeData();
+    ~QmlBookmarkTreeNodeData();
+    QmlBookmarkTreeNode *get(BookmarkItem *item);
+private:
+    QMap<BookmarkItem*, QmlBookmarkTreeNode*> m_nodes;
 };

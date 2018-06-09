@@ -20,12 +20,14 @@
 #include "cookiejar.h"
 #include "qwebengineprofile.h"
 
+Q_GLOBAL_STATIC(QmlCookieData, cookieData)
+
 QmlCookies::QmlCookies(QObject *parent)
     : QObject(parent)
 {
     connect(mApp->cookieJar(), &CookieJar::cookieAdded, this, [this](QNetworkCookie network_cookie){
         // FIXME: improve this
-        QmlCookie *cookie = new QmlCookie(new QNetworkCookie(network_cookie));
+        QmlCookie *cookie = cookieData->get(new QNetworkCookie(network_cookie));
         QVariantMap map;
         map.insert(QSL("cookie"), QVariant::fromValue(cookie));
         map.insert(QSL("removed"), false);
@@ -34,7 +36,7 @@ QmlCookies::QmlCookies(QObject *parent)
 
     connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, [this](QNetworkCookie network_cookie){
         // FIXME: improve this
-        QmlCookie *cookie = new QmlCookie(new QNetworkCookie(network_cookie));
+        QmlCookie *cookie = cookieData->get(new QNetworkCookie(network_cookie));
         QVariantMap map;
         map.insert(QSL("cookie"), QVariant::fromValue(cookie));
         map.insert(QSL("removed"), true);
@@ -66,7 +68,7 @@ QmlCookie *QmlCookies::get(const QVariantMap &map)
     if (!netCookie) {
         return nullptr;
     }
-    return new QmlCookie(netCookie);
+    return cookieData->get(netCookie);
 }
 
 QList<QObject*> QmlCookies::getAll(const QVariantMap &map)
@@ -85,7 +87,7 @@ QList<QObject*> QmlCookies::getAll(const QVariantMap &map)
                 && (!map.contains(QSL("secure")) || cookie.isSecure() == secure)
                 && (!map.contains(QSL("session")) || cookie.isSessionCookie() == session)) {
             QNetworkCookie *netCookie = new QNetworkCookie(cookie);
-            QmlCookie *qmlCookie = new QmlCookie(netCookie);
+            QmlCookie *qmlCookie = cookieData->get(netCookie);
             qmlCookies.append(qmlCookie);
         }
     }

@@ -19,16 +19,18 @@
 #include "mainapplication.h"
 #include "history.h"
 
+Q_GLOBAL_STATIC(QmlHistoryItemData, historyItemData)
+
 QmlHistory::QmlHistory(QObject *parent)
     : QObject(parent)
 {
     connect(mApp->history(), &History::historyEntryAdded, this, [this](HistoryEntry entry){
-        QmlHistoryItem *historyItem = new QmlHistoryItem(&entry);
+        QmlHistoryItem *historyItem = historyItemData->get(&entry);
         emit visited(historyItem);
     });
 
     connect(mApp->history(), &History::historyEntryDeleted, this, [this](HistoryEntry entry){
-        QmlHistoryItem *historyItem = new QmlHistoryItem(&entry);
+        QmlHistoryItem *historyItem = historyItemData->get(&entry);
         emit visitRemoved(historyItem);
     });
 }
@@ -45,7 +47,7 @@ QList<QObject*> QmlHistory::search(const QVariantMap &map)
     QList<HistoryEntry*> result = mApp->history()->searchHistoryEntry(text);
 
     foreach(auto entry, result) {
-        auto item = new QmlHistoryItem(entry);
+        auto item = historyItemData->get(entry);
         list.append(item);
     }
     return list;

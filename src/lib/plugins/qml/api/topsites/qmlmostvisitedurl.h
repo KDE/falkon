@@ -18,6 +18,8 @@
 #pragma once
 
 #include <QObject>
+#include <QHash>
+#include <QPair>
 
 class QmlMostVisitedUrl : public QObject
 {
@@ -31,4 +33,14 @@ public:
 private:
     QString m_title;
     QString m_url;
+};
+
+class QmlMostVisitedUrlData
+{
+public:
+    explicit QmlMostVisitedUrlData();
+    ~QmlMostVisitedUrlData();
+    QmlMostVisitedUrl *get(QString title = 0, QString url = 0, QObject *parent = 0);
+private:
+    QHash<QPair<QString, QString>, QmlMostVisitedUrl*> m_urls;
 };

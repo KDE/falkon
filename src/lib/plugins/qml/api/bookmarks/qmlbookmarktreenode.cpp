@@ -18,10 +18,14 @@
 #include "qmlbookmarktreenode.h"
 #include "mainapplication.h"
 #include "bookmarks.h"
+#include <QQmlEngine>
+
+Q_GLOBAL_STATIC(QmlBookmarkTreeNodeData, bookmarkTreeNodeData)
 
 QmlBookmarkTreeNode::QmlBookmarkTreeNode(BookmarkItem *item)
     : m_item(item)
 {
+    QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
 QmlBookmarkTreeNode::Type QmlBookmarkTreeNode::type() const
@@ -97,10 +101,10 @@ int QmlBookmarkTreeNode::visitCount() const
 QmlBookmarkTreeNode *QmlBookmarkTreeNode::parent() const
 {
     if (!m_item) {
-        return new QmlBookmarkTreeNode();
+        return nullptr;
     }
 
-    return fromBookmarkItem(m_item->parent());
+    return bookmarkTreeNodeData->get(m_item->parent());
 }
 
 bool QmlBookmarkTreeNode::unmodifiable() const
@@ -113,13 +117,28 @@ QList<QObject*> QmlBookmarkTreeNode::children() const
     auto items = m_item->children();
     QList<QObject*> ret;
     for (auto item : items) {
-        ret.append(QmlBookmarkTreeNode::fromBookmarkItem(item));
+        ret.append(bookmarkTreeNodeData->get(item));
     }
     return ret;
 }
 
-// static
-QmlBookmarkTreeNode *QmlBookmarkTreeNode::fromBookmarkItem(BookmarkItem *item)
+QmlBookmarkTreeNodeData::QmlBookmarkTreeNodeData()
 {
-    return new QmlBookmarkTreeNode(item);
+}
+
+QmlBookmarkTreeNodeData::~QmlBookmarkTreeNodeData()
+{
+    for (QmlBookmarkTreeNode *node : m_nodes.values()) {
+        node->deleteLater();
+    }
+}
+
+QmlBookmarkTreeNode *QmlBookmarkTreeNodeData::get(BookmarkItem *item)
+{
+    QmlBookmarkTreeNode *node = m_nodes.value(item);
+    if (!node) {
+        node = new QmlBookmarkTreeNode(item);
+        m_nodes.insert(item, node);
+    }
+    return node;
 }

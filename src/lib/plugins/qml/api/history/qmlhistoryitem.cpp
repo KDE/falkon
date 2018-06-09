@@ -16,11 +16,13 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmlhistoryitem.h"
+#include <QQmlEngine>
 
 QmlHistoryItem::QmlHistoryItem(HistoryEntry *entry, QObject *parent)
     : QObject(parent)
     , m_entry(entry)
 {
+    QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
 int QmlHistoryItem::id() const
@@ -61,4 +63,25 @@ QDateTime QmlHistoryItem::lastVisitTime() const
         return QDateTime().currentDateTime().addMonths(1);
     }
     return m_entry->date;
+}
+
+QmlHistoryItemData::QmlHistoryItemData()
+{
+}
+
+QmlHistoryItemData::~QmlHistoryItemData()
+{
+    for (QmlHistoryItem *item : m_items.values()) {
+        item->deleteLater();
+    }
+}
+
+QmlHistoryItem *QmlHistoryItemData::get(HistoryEntry *entry)
+{
+    QmlHistoryItem *item = m_items.value(entry);
+    if (!item) {
+        item = new QmlHistoryItem(entry);
+        m_items.insert(entry, item);
+    }
+    return item;
 }

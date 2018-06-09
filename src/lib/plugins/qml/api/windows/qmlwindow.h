@@ -48,3 +48,13 @@ public:
 private:
     BrowserWindow *m_window;
 };
+
+class QmlWindowData
+{
+public:
+    explicit QmlWindowData();
+    ~QmlWindowData();
+    QmlWindow *get(BrowserWindow *window);
+private:
+    QHash<BrowserWindow*, QmlWindow*> m_windows;
+};

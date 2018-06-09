@@ -88,3 +88,13 @@ Q_SIGNALS:
 private:
     WebTab *m_webTab;
 };
+
+class QmlTabData
+{
+public:
+    explicit QmlTabData();
+    ~QmlTabData();
+    QmlTab *get(WebTab *webTab);
+private:
+    QHash<WebTab*, QmlTab*> m_tabs;
+};

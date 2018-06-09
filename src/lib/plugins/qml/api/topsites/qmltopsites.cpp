@@ -20,6 +20,8 @@
 #include "mainapplication.h"
 #include "pluginproxy.h"
 
+Q_GLOBAL_STATIC(QmlMostVisitedUrlData, mostVisitedUrlData)
+
 QmlTopSites::QmlTopSites(QObject *parent)
     : QObject(parent)
 {
@@ -32,7 +34,7 @@ QList<QObject*> QmlTopSites::get() const
     QList<SpeedDial::Page> pages = mApp->plugins()->speedDial()->pages();
     QList<QObject*> list;
     foreach(SpeedDial::Page page, pages) {
-        auto mostVisitedUrl = new QmlMostVisitedUrl(page.title, page.url);
+        auto mostVisitedUrl = mostVisitedUrlData->get(page.title, page.url);
         list.append(mostVisitedUrl);
     }
     return list;
