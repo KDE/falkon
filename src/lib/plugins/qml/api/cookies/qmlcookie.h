@@ -21,6 +21,9 @@
 #include <QDateTime>
 #include <QNetworkCookie>
 
+/**
+ * @brief The class exposing QNetworkCookie to QML
+ */
 class QmlCookie : public QObject
 {
     Q_OBJECT

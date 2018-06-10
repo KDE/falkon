@@ -20,15 +20,21 @@
 #include <QObject>
 #include "qzcommon.h"
 
+/**
+ * @brief The class exposing window type to QML
+ */
 class QmlWindowType : public QObject
 {
     Q_OBJECT
 public:
+    /**
+     * @brief The WindowType enum
+     */
     enum WindowType {
-        FirstAppWindow = Qz::BW_FirstAppWindow,
-        MacFirstWindow = Qz::BW_MacFirstWindow,
-        NewWindow = Qz::BW_NewWindow,
-        OtherRestoredWindow = Qz::BW_OtherRestoredWindow
+        FirstAppWindow = Qz::BW_FirstAppWindow,          //! Represents first app window
+        MacFirstWindow = Qz::BW_MacFirstWindow,          //! Represents first mac window
+        NewWindow = Qz::BW_NewWindow,                    //! Represents new window
+        OtherRestoredWindow = Qz::BW_OtherRestoredWindow //! Represents other restored window
     };
     Q_ENUMS(WindowType)
 

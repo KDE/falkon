@@ -32,7 +32,7 @@ void QmlClipboardApiTest::cleanupTestCase()
 void QmlClipboardApiTest::testClipboard()
 {
     QmlTestHelper qmlTest;
-    qmlTest.evaluate("Falkon.Clipboard.copy({text: 'this text is copied'})");
+    qmlTest.evaluate("Falkon.Clipboard.copy('this text is copied')");
     QCOMPARE(mApp->clipboard()->text(), "this text is copied");
 }
 

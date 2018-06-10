@@ -19,6 +19,9 @@
 
 #include <QObject>
 
+/**
+ * @brief The class to display notifications
+ */
 class QmlNotifications : public QObject
 {
     Q_OBJECT

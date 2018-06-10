@@ -18,6 +18,9 @@
 #pragma once
 #include "bookmarkitem.h"
 
+/**
+ * @brief The class exposing the bookmark item to QML
+ */
 class QmlBookmarkTreeNode : public QObject
 {
     Q_OBJECT
@@ -32,12 +35,17 @@ class QmlBookmarkTreeNode : public QObject
     Q_PROPERTY(QList<QObject*> children READ children CONSTANT)
 
 public:
+    /**
+     * @brief The Type enum
+     *
+     * Contains the information of the type of the bookmark item,
+     */
     enum Type {
-        Root = BookmarkItem::Root,
-        Url = BookmarkItem::Url,
-        Folder = BookmarkItem::Folder,
-        Separator = BookmarkItem::Separator,
-        Invalid = BookmarkItem::Invalid
+        Root = BookmarkItem::Root,           //! Represents the root bookmark item
+        Url = BookmarkItem::Url,             //! Represents the single bookmark item of type url
+        Folder = BookmarkItem::Folder,       //! Represents the bookmark folder
+        Separator = BookmarkItem::Separator, //! Represents the bookmark seperator
+        Invalid = BookmarkItem::Invalid      //! Represents invalid bookmark item
     };
     Q_ENUMS(Type)
 

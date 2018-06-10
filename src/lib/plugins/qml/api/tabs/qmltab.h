@@ -21,6 +21,9 @@
 #include "webtab.h"
 #include "../windows/qmlwindow.h"
 
+/**
+ * @brief The class exposing a browser tab to QML
+ */
 class QmlTab : public QObject
 {
     Q_OBJECT
@@ -58,11 +61,11 @@ public:
     bool canGoForward() const;
 
     Q_INVOKABLE void detach();
-    Q_INVOKABLE void setZoomLevel(const QVariantMap &map);
+    Q_INVOKABLE void setZoomLevel(int zoomLevel);
     Q_INVOKABLE void stop();
     Q_INVOKABLE void reload();
     Q_INVOKABLE void unload();
-    Q_INVOKABLE void load(const QVariantMap &map);
+    Q_INVOKABLE void load(const QString &url);
     Q_INVOKABLE void zoomIn();
     Q_INVOKABLE void zoomOut();
     Q_INVOKABLE void zoomReset();
@@ -77,13 +80,52 @@ public:
     Q_INVOKABLE void sendPageByMail();
 
 Q_SIGNALS:
-    void titleChanged(const QVariantMap &map);
-    void pinnedChanged(const QVariantMap &map);
-    void loadingChanged(const QVariantMap &map);
-    void mutedChanged(const QVariantMap &map);
-    void restoredChanged(const QVariantMap &map);
-    void playingChanged(const QVariantMap &map);
+    /**
+     * @brief The signal emitted when the tab title is changed
+     * @param String representing the new title
+     */
+    void titleChanged(const QString &title);
+
+    /**
+     * @brief The signal emitted when pinned state of the tab is changed
+     * @param Bool representing if a tab is pinned
+     */
+    void pinnedChanged(bool pinned);
+
+    /**
+     * @brief The signal emitted when loading state of the tab is changed
+     * @param Bool representing if the tab is loading
+     */
+    void loadingChanged(bool loading);
+
+    /**
+     * @brief The signal emitted when muted state of the tab is changed
+     * @param Bool representing if the tab is muted
+     */
+    void mutedChanged(bool muted);
+
+    /**
+     * @brief The signal emitted when restored state of the tab is changed
+     * @param Bool representing if the tab is restored
+     */
+    void restoredChanged(bool restored);
+
+    /**
+     * @brief The signal emitted when playing state of the tab is changed
+     * @param Bool representing if the tab is in playing state
+     */
+    void playingChanged(bool playing);
+
+    /**
+     * @brief The signal emitted when zoom level of the tab is changed
+     * @param Integer representing the zoom level
+     */
     void zoomLevelChanged(int zoomLevel);
+
+    /**
+     * @brief The signal emitted when background activity of the tab is changed
+     * @param Bool representing if there is background activity attached to the tab
+     */
     void backgroundActivityChanged(int backgroundActivityChanged);
 private:
     WebTab *m_webTab;

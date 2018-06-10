@@ -59,19 +59,19 @@ void QmlHistoryApiTest::testSearch()
     mApp->history()->addHistoryEntry(QUrl("https://another-example.com"), "Another Example Domain");
     mApp->history()->addHistoryEntry(QUrl("https://sample.com"), "Sample Domain");
     QTRY_COMPARE(historySpy.count(), 3);
-    auto list = qmlTest.evaluate("Falkon.History.search({text: 'example'})").toVariant().toList();
+    auto list = qmlTest.evaluate("Falkon.History.search('example')").toVariant().toList();
     QCOMPARE(list.length(), 2);
 }
 
 void QmlHistoryApiTest::testVisits()
 {
     QmlTestHelper qmlTest;
-    int visits = qmlTest.evaluate("Falkon.History.getVisits({url: 'https://sample.com'})").toInt();
+    int visits = qmlTest.evaluate("Falkon.History.getVisits('https://sample.com')").toInt();
     QCOMPARE(visits, 1);
     QSignalSpy historySpy(mApp->history(), &History::historyEntryEdited);
     mApp->history()->addHistoryEntry(QUrl("https://sample.com"), "Sample Domain");
     QTRY_COMPARE(historySpy.count(), 1);
-    visits = qmlTest.evaluate("Falkon.History.getVisits({url: 'https://sample.com'})").toInt();
+    visits = qmlTest.evaluate("Falkon.History.getVisits('https://sample.com')").toInt();
     QCOMPARE(visits, 2);
 }
 
@@ -79,7 +79,7 @@ void QmlHistoryApiTest::testRemoval()
 {
     QmlTestHelper qmlTest;
     QSignalSpy historySpy(mApp->history(), &History::historyEntryDeleted);
-    qmlTest.evaluate("Falkon.History.deleteUrl({url: 'https://sample.com'})");
+    qmlTest.evaluate("Falkon.History.deleteUrl('https://sample.com')");
     QTRY_COMPARE(historySpy.count(), 1);
 
     auto object = qmlTest.evaluateQObject("Falkon.History");

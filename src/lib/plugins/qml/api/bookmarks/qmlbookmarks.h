@@ -22,6 +22,9 @@
 
 #include <QObject>
 
+/**
+ * @brief The class exposing the Bookmarks API to QML
+ */
 class QmlBookmarks : public QObject
 {
     Q_OBJECT
@@ -29,7 +32,7 @@ class QmlBookmarks : public QObject
 public:
     explicit QmlBookmarks(QObject *parent = nullptr);
 
-    Q_INVOKABLE bool isBookmarked(const QUrl &url) const;
+    Q_INVOKABLE bool isBookmarked(const QString &url) const;
     Q_INVOKABLE QmlBookmarkTreeNode *rootItem() const;
     Q_INVOKABLE QmlBookmarkTreeNode *toolbarFolder() const;
     Q_INVOKABLE QmlBookmarkTreeNode *menuFolder() const;
@@ -43,8 +46,22 @@ public:
     Q_INVOKABLE QList<QObject*> getChildren(QObject *object) const;
 
 Q_SIGNALS:
+    /**
+     * @brief This signal is emitted when a new bookmark item is created
+     * @param bookmark item, exposed to QML as [QmlBookmarkTreeNode](@ref QmlBookmarkTreeNode)
+     */
     void created(QmlBookmarkTreeNode *treeNode);
+
+    /**
+     * @brief This signal is emitted when a bookmark item is edited
+     * @param bookmark item, exposed to QML as [QmlBookmarkTreeNode](@ref QmlBookmarkTreeNode)
+     */
     void changed(QmlBookmarkTreeNode *treeNode);
+
+    /**
+     * @brief This signal is emitted when a bookmark item is removed
+     * @param bookmark item, exposed to QML as [QmlBookmarkTreeNode](@ref QmlBookmarkTreeNode)
+     */
     void removed(QmlBookmarkTreeNode *treeNode);
 
 private:

@@ -20,18 +20,32 @@
 #include <QObject>
 #include "qmlhistoryitem.h"
 
+/**
+ * @brief The class exposing the History API to QML
+ */
 class QmlHistory : public QObject
 {
     Q_OBJECT
 public:
     explicit QmlHistory(QObject *parent = nullptr);
-    Q_INVOKABLE QList<QObject*> search(const QVariantMap &map);
-    Q_INVOKABLE int getVisits(const QVariantMap &map);
+    Q_INVOKABLE QList<QObject*> search(const QString &text);
+    Q_INVOKABLE int getVisits(const QString &url);
     Q_INVOKABLE void addUrl(const QVariantMap &map);
-    Q_INVOKABLE void deleteUrl(const QVariantMap &map);
+    Q_INVOKABLE void deleteUrl(const QString &url);
     Q_INVOKABLE void deleteRange(const QVariantMap &map);
     Q_INVOKABLE void deleteAll();
 Q_SIGNALS:
+    /**
+     * @brief The signal emitted when a HistoryEntry is added
+     * @param Object of type [QmlHistoryItem](@ref QmlHistoryItem), representing
+     *        the added History Entry
+     */
     void visited(QmlHistoryItem *historyItem);
+
+    /**
+     * @brief The signal emitted when a HistoryEntry is removed
+     * @param Object of type [QmlHistoryItem](@ref QmlHistoryItem), representing
+     *        the removed History Entry
+     */
     void visitRemoved(QmlHistoryItem *historyItem);
 };

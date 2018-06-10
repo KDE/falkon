@@ -20,6 +20,9 @@
 #include <QObject>
 #include "qmlmostvisitedurl.h"
 
+/**
+ * @brief The class exposing TopSites API to QML
+ */
 class QmlTopSites : public QObject
 {
     Q_OBJECT

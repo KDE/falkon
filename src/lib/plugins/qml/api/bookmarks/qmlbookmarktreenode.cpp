@@ -28,6 +28,10 @@ QmlBookmarkTreeNode::QmlBookmarkTreeNode(BookmarkItem *item)
     QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
+/**
+ * @brief Get the type of the bookmark item
+ * @return Type of the bookmark item
+ */
 QmlBookmarkTreeNode::Type QmlBookmarkTreeNode::type() const
 {
     if (!m_item) {
@@ -53,6 +57,10 @@ QmlBookmarkTreeNode::Type QmlBookmarkTreeNode::type() const
     }
 }
 
+/**
+ * @brief Get the title of the bookmark item
+ * @return String representing the title of the bookmark item
+ */
 QString QmlBookmarkTreeNode::title() const
 {
     if (!m_item) {
@@ -62,6 +70,11 @@ QString QmlBookmarkTreeNode::title() const
     return m_item->title();
 }
 
+/**
+ * @brief Get the url of the bookmark item
+ * @return String representing the url of the bookmark item. If type of the
+ * bookmark item is not Url, then empty string is returned.
+ */
 QString QmlBookmarkTreeNode::url() const
 {
     if (!m_item) {
@@ -71,6 +84,10 @@ QString QmlBookmarkTreeNode::url() const
     return m_item->urlString();
 }
 
+/**
+ * @brief Get the description of the bookmark item
+ * @return String representing the description of the bookmark item
+ */
 QString QmlBookmarkTreeNode::description() const
 {
     if (!m_item) {
@@ -80,6 +97,10 @@ QString QmlBookmarkTreeNode::description() const
     return m_item->description();
 }
 
+/**
+ * @brief Get the keyword of the bookmark item
+ * @return String representing the keyword of the bookmark item
+ */
 QString QmlBookmarkTreeNode::keyword() const
 {
     if (!m_item) {
@@ -89,6 +110,10 @@ QString QmlBookmarkTreeNode::keyword() const
     return m_item->keyword();
 }
 
+/**
+ * @brief Get visit count of the bookmark item.
+ * @return Integer representing the visit count of the bookmark item
+ */
 int QmlBookmarkTreeNode::visitCount() const
 {
     if (!m_item) {
@@ -98,6 +123,11 @@ int QmlBookmarkTreeNode::visitCount() const
     return m_item->visitCount();
 }
 
+/**
+ * @brief Get the parent of the bookmark item. This will return null
+ * if the item is root item.
+ * @return Parent of the bookmark item
+ */
 QmlBookmarkTreeNode *QmlBookmarkTreeNode::parent() const
 {
     if (!m_item) {
@@ -107,11 +137,19 @@ QmlBookmarkTreeNode *QmlBookmarkTreeNode::parent() const
     return bookmarkTreeNodeData->get(m_item->parent());
 }
 
+/**
+ * @brief Checks if the bookmark item can be modified
+ * @return false if it can be modified, else true
+ */
 bool QmlBookmarkTreeNode::unmodifiable() const
 {
     return !mApp->bookmarks()->canBeModified(m_item);
 }
 
+/**
+ * @brief Get the children of the bookmark item
+ * @return List containing children of the bookmark item
+ */
 QList<QObject*> QmlBookmarkTreeNode::children() const
 {
     const auto items = m_item->children();

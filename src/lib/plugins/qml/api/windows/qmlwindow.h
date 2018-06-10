@@ -22,6 +22,9 @@
 #include "qmlwindowstate.h"
 #include "qmlwindowtype.h"
 
+/**
+ * @brief The class exposing Browser window to QML
+ */
 class QmlWindow : public QObject
 {
     Q_OBJECT

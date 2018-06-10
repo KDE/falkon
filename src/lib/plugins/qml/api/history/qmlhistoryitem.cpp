@@ -25,6 +25,10 @@ QmlHistoryItem::QmlHistoryItem(HistoryEntry *entry, QObject *parent)
     QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
+/**
+ * @brief Get the id of the HistoryEntry
+ * @return Integer representing the id of the HistoryEntry if it exists, else 0
+ */
 int QmlHistoryItem::id() const
 {
     if (!m_entry) {
@@ -33,6 +37,10 @@ int QmlHistoryItem::id() const
     return m_entry->id;
 }
 
+/**
+ * @brief Get the url of the HistoryEntry
+ * @return String representing the url of the HistoryEntry
+ */
 QString QmlHistoryItem::url() const
 {
     if (!m_entry) {
@@ -41,6 +49,10 @@ QString QmlHistoryItem::url() const
     return QString::fromUtf8(m_entry->url.toEncoded());
 }
 
+/**
+ * @brief Get the title of the HistoryEntry
+ * @return String representing the title of the HistoryEntry
+ */
 QString QmlHistoryItem::title() const
 {
     if (!m_entry) {
@@ -49,6 +61,10 @@ QString QmlHistoryItem::title() const
     return m_entry->title;
 }
 
+/**
+ * @brief Get the visit count of the HistoryEntry
+ * @return Integer representing the visit count of the HistoryEntry
+ */
 int QmlHistoryItem::visitCount() const
 {
     if (!m_entry) {
@@ -57,6 +73,10 @@ int QmlHistoryItem::visitCount() const
     return m_entry->count;
 }
 
+/**
+ * @brief Get the last visit time of the HistoryEntry
+ * @return Last visit time of the HistoryEntry
+ */
 QDateTime QmlHistoryItem::lastVisitTime() const
 {
     if (!m_entry) {

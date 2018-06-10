@@ -21,6 +21,9 @@
 #include "mainapplication.h"
 #include "qmltab.h"
 
+/**
+ * @brief The class exposing Tabs API to QML
+ */
 class QmlTabs : public QObject
 {
     Q_OBJECT
@@ -44,9 +47,42 @@ public:
     Q_INVOKABLE QList<QObject*> search(const QVariantMap &map);
     Q_INVOKABLE bool addTab(const QVariantMap &map);
 Q_SIGNALS:
+    /**
+     * @brief The signal emitted when tabs in the tab widget are changed
+     * @param window id representing the window in which the change occurs
+     */
     void changed(int windowId);
+
+    /**
+     * @brief The signal emitted when a tab is inserted
+     * @param A JavaScript object containing
+     *        - index:
+     *          The index of the inserted tab
+     *        - windowId:
+     *          The id of window in which the tab is inserted
+     */
     void tabInserted(const QVariantMap &map);
+
+    /**
+     * @brief The signal emitted when a tab is removed
+     * @param A JavaScript object containing
+     *        - index:
+     *          The index of the removed tab
+     *        - windowId:
+     *          The id of window in which the tab is removed
+     */
     void tabRemoved(const QVariantMap &map);
+
+    /**
+     * @brief The signal emitted when a tab is moved
+     * @param A JavaScript object containing
+     *        - from:
+     *          The initial index of the moved tab
+     *        - to:
+     *          The final index of the moved tab
+     *        - windowId:
+     *          The id of window in which the tab is moved
+     */
     void tabMoved(const QVariantMap &map);
 private:
     BrowserWindow *getWindow(const QVariantMap &map) const;

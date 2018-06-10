@@ -28,6 +28,10 @@ QmlWindow::QmlWindow(BrowserWindow *window, QObject *parent)
     QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
+/**
+ * @brief Get the Id of the window
+ * @return Integer representing the window id if window exists, else -1
+ */
 int QmlWindow::id() const
 {
     if (!mApp->windowIdHash().contains(m_window)) {
@@ -37,11 +41,19 @@ int QmlWindow::id() const
     return mApp->windowIdHash().value(m_window);
 }
 
+/**
+ * @brief Checks if the window is private window
+ * @return True if the window is private, else false
+ */
 bool QmlWindow::incognito() const
 {
     return mApp->isPrivate();
 }
 
+/**
+ * @brief Get the window title
+ * @return String representing the window title
+ */
 QString QmlWindow::title() const
 {
     if (!m_window) {
@@ -51,6 +63,10 @@ QString QmlWindow::title() const
     return m_window->windowTitle();
 }
 
+/**
+ * @brief Gets the [window state](@ref QmlWindowState)
+ * @return Window State
+ */
 QmlWindowState::WindowState QmlWindow::state() const
 {
     if (!m_window) {
@@ -68,6 +84,10 @@ QmlWindowState::WindowState QmlWindow::state() const
     }
 }
 
+/**
+ * @brief Gets the [window type](@ref QmlWindowType)
+ * @return Window Type
+ */
 QmlWindowType::WindowType QmlWindow::type() const
 {
     if (!m_window) {
@@ -86,6 +106,10 @@ QmlWindowType::WindowType QmlWindow::type() const
     }
 }
 
+/**
+ * @brief Get the window tabs
+ * @return List of tabs of type [QmlTab](@ref QmlTab)
+ */
 QList<QObject*> QmlWindow::tabs() const
 {
     if (!m_window) {
@@ -101,6 +125,10 @@ QList<QObject*> QmlWindow::tabs() const
     return list;
 }
 
+/**
+ * @brief Checks if the window is under focus
+ * @return True if the window is under focus, else false
+ */
 bool QmlWindow::focussed() const
 {
     if (!m_window) {
@@ -110,6 +138,10 @@ bool QmlWindow::focussed() const
     return m_window->isActiveWindow();
 }
 
+/**
+ * @brief Get the window height
+ * @return Integer representing the window height
+ */
 int QmlWindow::height() const
 {
     if (!m_window) {
@@ -119,6 +151,10 @@ int QmlWindow::height() const
     return m_window->height();
 }
 
+/**
+ * @brief Get the window width
+ * @return Integer representing the window width
+ */
 int QmlWindow::width() const
 {
     if (!m_window) {

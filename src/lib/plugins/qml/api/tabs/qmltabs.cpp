@@ -31,6 +31,15 @@ QmlTabs::QmlTabs(QObject *parent)
     connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &QmlTabs::windowCreated);
 }
 
+/**
+ * @brief Sets the current tab in a window
+ * @param A JavaScript object containing
+ *        - index:
+ *          Integer representing new current index
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return True if success, else false
+ */
 bool QmlTabs::setCurrentIndex(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
@@ -48,6 +57,11 @@ bool QmlTabs::setCurrentIndex(const QVariantMap &map)
     return true;
 }
 
+/**
+ * @brief Sets the next tab as current tab
+ * @param Integer representing the window
+ * @return True if success, else false
+ */
 bool QmlTabs::nextTab(int windowId)
 {
     const auto window = getWindow(windowId);
@@ -58,6 +72,11 @@ bool QmlTabs::nextTab(int windowId)
     return true;
 }
 
+/**
+ * @brief Sets the prvious tab as current tab
+ * @param Integer representing the window
+ * @return True if success, else false
+ */
 bool QmlTabs::previousTab(int windowId)
 {
     const auto window = getWindow(windowId);
@@ -68,6 +87,17 @@ bool QmlTabs::previousTab(int windowId)
     return true;
 }
 
+/**
+ * @brief Moves a tab
+ * @param A JavaScript object containing
+ *        - from:
+ *          The initial index of the tab
+ *        - to:
+ *          The final index of the tab
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return True if tab is moved, else false
+ */
 bool QmlTabs::moveTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("from"))) {
@@ -90,6 +120,15 @@ bool QmlTabs::moveTab(const QVariantMap &map)
     return true;
 }
 
+/**
+ * @brief Pins a tab
+ * @param A JavaScript object containing
+ *        - index:
+ *          Integer representing the tab to be pinned
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return True if success, else false
+ */
 bool QmlTabs::pinTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
@@ -114,6 +153,15 @@ bool QmlTabs::pinTab(const QVariantMap &map)
     return true;
 }
 
+/**
+ * @brief Un-pins a tab
+ * @param A JavaScript object containing
+ *        - index:
+ *          Integer representing the tab to be unpinned
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return True if success, else false
+ */
 bool QmlTabs::unpinTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
@@ -138,6 +186,15 @@ bool QmlTabs::unpinTab(const QVariantMap &map)
     return true;
 }
 
+/**
+ * @brief Detaches a tab
+ * @param A JavaScript object containing
+ *        - index:
+ *          Integer representing the tab to be detached
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return True if tab is detached, else false
+ */
 bool QmlTabs::detachTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
@@ -155,6 +212,15 @@ bool QmlTabs::detachTab(const QVariantMap &map)
     return true;
 }
 
+/**
+ * @brief Duplicates a tab
+ * @param A JavaScript object containing
+ *        - index:
+ *          Integer representing the tab to duplicate
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return True if success, else false
+ */
 bool QmlTabs::duplicate(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
@@ -172,6 +238,15 @@ bool QmlTabs::duplicate(const QVariantMap &map)
     return true;
 }
 
+/**
+ * @brief Close a tab
+ * @param A JavaScript object containing
+ *        - index:
+ *          Integer representing the tab to be closed
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return True if success, else false
+ */
 bool QmlTabs::closeTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
@@ -189,6 +264,15 @@ bool QmlTabs::closeTab(const QVariantMap &map)
     return true;
 }
 
+/**
+ * @brief Reloads a tab
+ * @param A JavaScript object containing
+ *        - index:
+ *          Integer representing the tab to be reloaded
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return True if success, else false
+ */
 bool QmlTabs::reloadTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
@@ -206,6 +290,15 @@ bool QmlTabs::reloadTab(const QVariantMap &map)
     return true;
 }
 
+/**
+ * @brief Stops a tab
+ * @param A JavaScript object containing
+ *        - index:
+ *          Integer representing the tab to be stoped
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return True if success, else false
+ */
 bool QmlTabs::stopTab(const QVariantMap &map)
 {
     if (!map.contains(QSL("index"))) {
@@ -223,6 +316,15 @@ bool QmlTabs::stopTab(const QVariantMap &map)
     return true;
 }
 
+/**
+ * @brief Gets a tab
+ * @param A JavaScript object contining
+ *        - index:
+ *          Integer representign the index of the tab
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return Tab of type [QmlTab](@ref QmlTab) if exists, else null
+ */
 QmlTab *QmlTabs::get(const QVariantMap &map) const
 {
     if (!map.contains(QSL("index"))) {
@@ -240,6 +342,11 @@ QmlTab *QmlTabs::get(const QVariantMap &map) const
     return tabData->get(webTab);
 }
 
+/**
+ * @brief Get the normal tabs count in a window
+ * @param Integer representing the window
+ * @return Number of normal tabs in the window
+ */
 int QmlTabs::normalTabsCount(int windowId) const
 {
     const auto window = getWindow(windowId);
@@ -249,6 +356,11 @@ int QmlTabs::normalTabsCount(int windowId) const
     return window->tabWidget()->normalTabsCount();
 }
 
+/**
+ * @brief Get the pinned tabs count in a window
+ * @param Integer representing the window
+ * @return Number of pinned tabs in the window
+ */
 int QmlTabs::pinnedTabsCount(int windowId) const
 {
     const auto window = getWindow(windowId);
@@ -258,6 +370,15 @@ int QmlTabs::pinnedTabsCount(int windowId) const
     return window->tabWidget()->pinnedTabsCount();
 }
 
+/**
+ * @brief Gets all the tabs of a window
+ * @param A JavaScript object containing
+ *        - windowId:
+ *          The id of window containing the tab
+ *        - withPinned:
+ *          Bool representing if the searched tab can be pinned
+ * @return List of tabs, each of type [QmlTab](@ref QmlTab)
+ */
 QList<QObject*> QmlTabs::getAll(const QVariantMap &map) const
 {
     const auto window = getWindow(map);
@@ -276,6 +397,18 @@ QList<QObject*> QmlTabs::getAll(const QVariantMap &map) const
     return list;
 }
 
+/**
+ * @brief Searches tabs against a criteria
+ * @param A JavaScript object containing
+ *        - title:
+ *          String representing the title to be searched
+ *        - url:
+ *          String representing the url to be searched
+ *        - withPinned:
+ *          Bool representing if the searched tab can be pinned
+ * @return List of tabs, each of type [QmlTab](@ref QmlTab), which are
+ *         matched against the criteria
+ */
 QList<QObject*> QmlTabs::search(const QVariantMap &map)
 {
     const QString title = map.value(QSL("title")).toString();
@@ -293,6 +426,15 @@ QList<QObject*> QmlTabs::search(const QVariantMap &map)
     return list;
 }
 
+/**
+ * @brief Adds a tab
+ * @param A JavaScript object containing
+ *        - url:
+ *          String representing the url of the tab
+ *        - windowId:
+ *          The id of window containing the tab
+ * @return True if the tab is added, else false
+ */
 bool QmlTabs::addTab(const QVariantMap &map)
 {
     const QString urlString = map.value(QSL("url")).toString();

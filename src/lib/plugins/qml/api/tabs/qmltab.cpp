@@ -30,45 +30,37 @@ QmlTab::QmlTab(WebTab *webTab, QObject *parent)
     QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 
     connect(m_webTab, &WebTab::titleChanged, this, [this](const QString &title){
-        QVariantMap map;
-        map.insert(QSL("title"), title);
-        emit titleChanged(map);
+        emit titleChanged(title);
     });
 
     connect(m_webTab, &WebTab::pinnedChanged, this, [this](bool pinned){
-        QVariantMap map;
-        map.insert(QSL("pinned"), pinned);
-        emit pinnedChanged(map);
+        emit pinnedChanged(pinned);
     });
 
     connect(m_webTab, &WebTab::loadingChanged, this, [this](bool loading){
-        QVariantMap map;
-        map.insert(QSL("loading"), loading);
-        emit loadingChanged(map);
+        emit loadingChanged(loading);
     });
 
     connect(m_webTab, &WebTab::mutedChanged, this, [this](bool muted){
-        QVariantMap map;
-        map.insert(QSL("muted"), muted);
-        emit mutedChanged(map);
+        emit mutedChanged(muted);
     });
 
     connect(m_webTab, &WebTab::restoredChanged, this, [this](bool restored){
-        QVariantMap map;
-        map.insert(QSL("restored"), restored);
-        emit restoredChanged(map);
+        emit restoredChanged(restored);
     });
 
     connect(m_webTab, &WebTab::playingChanged, this, [this](bool playing){
-        QVariantMap map;
-        map.insert(QSL("playing"), playing);
-        emit playingChanged(map);
+        emit playingChanged(playing);
     });
 
     connect(m_webTab->webView(), &TabbedWebView::zoomLevelChanged, this, &QmlTab::zoomLevelChanged);
     connect(m_webTab->webView(), &TabbedWebView::backgroundActivityChanged, this, &QmlTab::backgroundActivityChanged);
 }
 
+/**
+ * @brief Get the url of the tab
+ * @return String representing the url of the tab
+ */
 QString QmlTab::url() const
 {
     if (!m_webTab) {
@@ -78,6 +70,10 @@ QString QmlTab::url() const
     return QString::fromUtf8(m_webTab->url().toEncoded());
 }
 
+/**
+ * @brief Get the title of the tab
+ * @return String representing the title of the tab
+ */
 QString QmlTab::title() const
 {
     if (!m_webTab) {
@@ -87,6 +83,36 @@ QString QmlTab::title() const
     return m_webTab->title();
 }
 
+/**
+ * @brief Get the zoom level of the tab
+ *
+ * Zoom level will have the following values
+ * <table>
+ * <caption>Zoom Levels</caption>
+ * <tr><th>Zoom Level</th><th>Zoom Percentage</th></tr>
+ * <tr><td>0</td><td>30</td></tr>
+ * <tr><td>1</td><td>40</td></tr>
+ * <tr><td>2</td><td>50</td></tr>
+ * <tr><td>3</td><td>67</td></tr>
+ * <tr><td>4</td><td>80</td></tr>
+ * <tr><td>5</td><td>90</td></tr>
+ * <tr><td>6</td><td>100</td></tr>
+ * <tr><td>7</td><td>110</td></tr>
+ * <tr><td>8</td><td>120</td></tr>
+ * <tr><td>9</td><td>133</td></tr>
+ * <tr><td>10</td><td>150</td></tr>
+ * <tr><td>11</td><td>170</td></tr>
+ * <tr><td>12</td><td>200</td></tr>
+ * <tr><td>13</td><td>220</td></tr>
+ * <tr><td>14</td><td>233</td></tr>
+ * <tr><td>15</td><td>250</td></tr>
+ * <tr><td>16</td><td>270</td></tr>
+ * <tr><td>17</td><td>285</td></tr>
+ * <tr><td>18</td><td>300</td></tr>
+ * </table>
+ *
+ * @return Integer representing the zoom level of the tab
+ */
 int QmlTab::zoomLevel() const
 {
     if (!m_webTab) {
@@ -96,6 +122,10 @@ int QmlTab::zoomLevel() const
     return m_webTab->zoomLevel();
 }
 
+/**
+ * @brief Get the index of the tab
+ * @return Integer representing index if the tab exists, else -1
+ */
 int QmlTab::index() const
 {
     if (!m_webTab) {
@@ -105,6 +135,10 @@ int QmlTab::index() const
     return m_webTab->tabIndex();
 }
 
+/**
+ * @brief Checks if the tab is pinned
+ * @return True if the tab is pinned, else false
+ */
 bool QmlTab::pinned() const
 {
     if (!m_webTab) {
@@ -114,6 +148,10 @@ bool QmlTab::pinned() const
     return m_webTab->isPinned();
 }
 
+/**
+ * @brief Checks if the tab is muted
+ * @return True if the tab is muted, else false
+ */
 bool QmlTab::muted() const
 {
     if (!m_webTab) {
@@ -123,6 +161,10 @@ bool QmlTab::muted() const
     return m_webTab->isMuted();
 }
 
+/**
+ * @brief Checks if the tab is restored
+ * @return True if the tab is restored, else false
+ */
 bool QmlTab::restored() const
 {
     if (!m_webTab) {
@@ -132,6 +174,10 @@ bool QmlTab::restored() const
     return m_webTab->isRestored();
 }
 
+/**
+ * @brief Checks if the tab is current tab
+ * @return True if the tab is current tab, else false
+ */
 bool QmlTab::current() const
 {
     if (!m_webTab) {
@@ -141,6 +187,10 @@ bool QmlTab::current() const
     return m_webTab->isCurrentTab();
 }
 
+/**
+ * @brief Checks if the tab is in playing state
+ * @return True if the tab is in playing state, else false
+ */
 bool QmlTab::playing() const
 {
     if (!m_webTab) {
@@ -150,6 +200,11 @@ bool QmlTab::playing() const
     return m_webTab->isPlaying();
 }
 
+/**
+ * @brief Get the browser window of the tab
+ * @return Browser window of type [QmlWindow](@ref QmlWindow), representing
+ *         the window associated with the tab
+ */
 QmlWindow *QmlTab::browserWindow() const
 {
     if (!m_webTab) {
@@ -159,6 +214,10 @@ QmlWindow *QmlTab::browserWindow() const
     return windowData->get(m_webTab->browserWindow());
 }
 
+/**
+ * @brief Checks if the tab is loading
+ * @return True if the tab is loading, else false
+ */
 bool QmlTab::loading() const
 {
     if (!m_webTab) {
@@ -168,6 +227,11 @@ bool QmlTab::loading() const
     return m_webTab->webView()->isLoading();
 }
 
+/**
+ * @brief Get the loading progress of the tab
+ * @return Integer representing the loading progress of the tab
+ *         if the tab exists, else -1
+ */
 int QmlTab::loadingProgress() const
 {
     if (!m_webTab) {
@@ -177,6 +241,11 @@ int QmlTab::loadingProgress() const
     return m_webTab->webView()->loadingProgress();
 }
 
+/**
+ * @brief Checks if there is a background activity associated
+ *        with the tab
+ * @return True if the background activity is associated, else false
+ */
 bool QmlTab::backgroundActivity() const
 {
     if (!m_webTab) {
@@ -186,6 +255,10 @@ bool QmlTab::backgroundActivity() const
     return m_webTab->webView()->backgroundActivity();
 }
 
+/**
+ * @brief Checks if webview associated with the tab can go back
+ * @return True if can go back, else false
+ */
 bool QmlTab::canGoBack() const
 {
     if (!m_webTab) {
@@ -195,6 +268,10 @@ bool QmlTab::canGoBack() const
     return m_webTab->webView()->history()->canGoBack();
 }
 
+/**
+ * @brief Checks if webview associated with the tab can go forward
+ * @return True if can go forward, else false
+ */
 bool QmlTab::canGoForward() const
 {
     if (!m_webTab) {
@@ -204,6 +281,9 @@ bool QmlTab::canGoForward() const
     return m_webTab->webView()->history()->canGoForward();
 }
 
+/**
+ * @brief Detaches the tab
+ */
 void QmlTab::detach()
 {
     if (!m_webTab) {
@@ -213,21 +293,22 @@ void QmlTab::detach()
     m_webTab->detach();
 }
 
-void QmlTab::setZoomLevel(const QVariantMap &map)
+/**
+ * @brief Set the zoom level of the tab
+ * @param Integer representing the zoom level
+ */
+void QmlTab::setZoomLevel(int zoomLevel)
 {
     if (!m_webTab) {
         return;
     }
 
-    if (!map.contains(QSL("zoomLevel"))) {
-        qDebug() << "Unable to set zoomLevel:" << "zoomLevel not defined";
-        return;
-    }
-
-    int zoomLevel = map.value(QSL("zoomLevel")).toInt();
     m_webTab->setZoomLevel(zoomLevel);
 }
 
+/**
+ * @brief Stops webview associated with the tab
+ */
 void QmlTab::stop()
 {
     if (!m_webTab) {
@@ -237,6 +318,9 @@ void QmlTab::stop()
     m_webTab->stop();
 }
 
+/**
+ * @brief Reloads webview associated with the tab
+ */
 void QmlTab::reload()
 {
     if (!m_webTab) {
@@ -246,6 +330,9 @@ void QmlTab::reload()
     m_webTab->reload();
 }
 
+/**
+ * @brief Unloads the tab
+ */
 void QmlTab::unload()
 {
     if (!m_webTab) {
@@ -255,23 +342,24 @@ void QmlTab::unload()
     m_webTab->unload();
 }
 
-void QmlTab::load(const QVariantMap &map)
+/**
+ * @brief Loads webview associated with the tab
+ * @param String representing the url to load
+ */
+void QmlTab::load(const QString &url)
 {
     if (!m_webTab) {
         return;
     }
 
-    if (!map.contains(QSL("url"))) {
-        qDebug() << "Unable to load tab:" << "zoomLevel not defined";
-        return;
-    }
-
-    const QString url = map.value(QSL("url")).toString();
     LoadRequest req;
     req.setUrl(QUrl::fromEncoded(url.toUtf8()));
     m_webTab->load(req);
 }
 
+/**
+ * @brief Decreases the zoom level of the tab
+ */
 void QmlTab::zoomIn()
 {
     if (!m_webTab) {
@@ -281,6 +369,9 @@ void QmlTab::zoomIn()
     m_webTab->webView()->zoomIn();
 }
 
+/**
+ * @brief Increases the zoom level of the tab
+ */
 void QmlTab::zoomOut()
 {
     if (!m_webTab) {
@@ -290,6 +381,9 @@ void QmlTab::zoomOut()
     m_webTab->webView()->zoomOut();
 }
 
+/**
+ * @brief Resets the tab zoom level
+ */
 void QmlTab::zoomReset()
 {
     if (!m_webTab) {
@@ -299,6 +393,9 @@ void QmlTab::zoomReset()
     m_webTab->webView()->zoomReset();
 }
 
+/**
+ * @brief Performs edit undo on the tab
+ */
 void QmlTab::undo()
 {
     if (!m_webTab) {
@@ -308,6 +405,9 @@ void QmlTab::undo()
     m_webTab->webView()->editUndo();
 }
 
+/**
+ * @brief Performs edit redo on the tab
+ */
 void QmlTab::redo()
 {
     if (!m_webTab) {
@@ -317,6 +417,9 @@ void QmlTab::redo()
     m_webTab->webView()->editRedo();
 }
 
+/**
+ * @brief Performs edit select-all on the tab
+ */
 void QmlTab::selectAll()
 {
     if (!m_webTab) {
@@ -326,6 +429,9 @@ void QmlTab::selectAll()
     m_webTab->webView()->editSelectAll();
 }
 
+/**
+ * @brief Reloads the tab by bypassing the cache
+ */
 void QmlTab::reloadBypassCache()
 {
     if (!m_webTab) {
@@ -335,6 +441,9 @@ void QmlTab::reloadBypassCache()
     m_webTab->webView()->reloadBypassCache();
 }
 
+/**
+ * @brief Loads the previous page
+ */
 void QmlTab::back()
 {
     if (!m_webTab) {
@@ -344,6 +453,9 @@ void QmlTab::back()
     m_webTab->webView()->back();
 }
 
+/**
+ * @brief Loads the next page
+ */
 void QmlTab::forward()
 {
     if (!m_webTab) {
@@ -353,6 +465,9 @@ void QmlTab::forward()
     m_webTab->webView()->forward();
 }
 
+/**
+ * @brief Prints the page
+ */
 void QmlTab::printPage()
 {
     if (!m_webTab) {
@@ -362,6 +477,9 @@ void QmlTab::printPage()
     m_webTab->webView()->printPage();
 }
 
+/**
+ * @brief Shows the page source
+ */
 void QmlTab::showSource()
 {
     if (!m_webTab) {
@@ -371,6 +489,9 @@ void QmlTab::showSource()
     m_webTab->webView()->showSource();
 }
 
+/**
+ * @brief Sends page by mail
+ */
 void QmlTab::sendPageByMail()
 {
     if (!m_webTab) {

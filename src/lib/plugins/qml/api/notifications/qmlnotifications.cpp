@@ -24,6 +24,16 @@ QmlNotifications::QmlNotifications(QObject *parent)
 {
 }
 
+/**
+ * @brief Create and display a notification
+ * @param JavaScript object containing
+ *        - icon:
+ *          String representing the icon file url
+ *        - heading:
+ *          String representing the heading of the notification
+ *        - message:
+ *          String representing the message of the notification
+ */
 void QmlNotifications::create(const QVariantMap &map)
 {
     const QString fileUrl = map.value(QSL("icon")).toString();

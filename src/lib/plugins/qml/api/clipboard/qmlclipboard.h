@@ -19,10 +19,14 @@
 
 #include <QObject>
 
+/**
+ * @brief The class exposing application
+ *        clipboard to QML
+ */
 class QmlClipboard : public QObject
 {
     Q_OBJECT
 public:
     explicit QmlClipboard(QObject *parent = nullptr);
-    Q_INVOKABLE void copy(const QVariantMap &map);
+    Q_INVOKABLE void copy(const QString &text);
 };

@@ -19,16 +19,22 @@
 
 #include <QObject>
 
+/**
+ * @brief The class exposing window state to QML
+ */
 class QmlWindowState : public QObject
 {
     Q_OBJECT
 public:
+    /**
+     * @brief The WindowState enum
+     */
     enum WindowState {
-        FullScreen,
-        Maximized,
-        Minimized,
-        Normal,
-        Invalid
+        FullScreen, //! Represents full screen window
+        Maximized,  //! Represents maximized window
+        Minimized,  //! Represents minimized window
+        Normal,     //! Represents normal window
+        Invalid     //! Represents a invalid window
     };
     Q_ENUMS(WindowState)
 

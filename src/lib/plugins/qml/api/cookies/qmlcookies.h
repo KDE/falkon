@@ -20,6 +20,9 @@
 #include <QObject>
 #include "qmlcookie.h"
 
+/**
+ * @brief The class exposing Cookies API to QML
+ */
 class QmlCookies : public QObject
 {
     Q_OBJECT
@@ -30,6 +33,14 @@ public:
     Q_INVOKABLE void set(const QVariantMap &map);
     Q_INVOKABLE void remove(const QVariantMap &map);
 Q_SIGNALS:
+    /**
+     * @brief The signal emitted when a cookie is added or removed
+     * @param A JavaScript object containing
+     *        - cookie:
+     *          Object of type [QmlCookie](@ref QmlCookie), which is added or removed
+     *        - removed:
+     *          Bool representing if the cookie is removed
+     */
     void changed(const QVariantMap &map);
 private:
     QNetworkCookie *getNetworkCookie(const QVariantMap &map);

@@ -24,8 +24,11 @@ QmlClipboard::QmlClipboard(QObject *parent)
 {
 }
 
-void QmlClipboard::copy(const QVariantMap &map)
+/**
+ * @brief Copy the string to clipboard
+ * @param String representing the text to be copied
+ */
+void QmlClipboard::copy(const QString &text)
 {
-    const QString text = map.value(QSL("text")).toString();
     mApp->clipboard()->setText(text);
 }

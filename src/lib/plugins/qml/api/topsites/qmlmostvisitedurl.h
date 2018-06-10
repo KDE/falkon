@@ -21,6 +21,9 @@
 #include <QHash>
 #include <QPair>
 
+/**
+ * @brief The class exposing MostVisitedUrl type to QML
+ */
 class QmlMostVisitedUrl : public QObject
 {
     Q_OBJECT

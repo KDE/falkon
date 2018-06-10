@@ -20,6 +20,9 @@
 #include <QObject>
 #include "history.h"
 
+/**
+ * @brief The class exposing HistoryEntry to QML
+ */
 class QmlHistoryItem : public QObject
 {
     Q_OBJECT
