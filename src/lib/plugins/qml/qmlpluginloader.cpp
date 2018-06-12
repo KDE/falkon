@@ -19,13 +19,20 @@
 
 QmlPluginLoader::QmlPluginLoader(const QString &path)
 {
+    m_path = path;
     m_engine = new QQmlEngine();
-    m_component = new QQmlComponent(m_engine, path);
+    m_component = new QQmlComponent(m_engine, m_path);
 }
 
 void QmlPluginLoader::createComponent()
 {
     m_interface = qobject_cast<QmlPluginInterface*>(m_component->create());
+    connect(m_interface, &QmlPluginInterface::qmlPluginUnloaded, this, [this]{
+        delete m_component;
+        delete m_engine;
+        m_engine = new QQmlEngine();
+        m_component = new QQmlComponent(m_engine, m_path);
+    });
 }
 
 QQmlComponent *QmlPluginLoader::component() const

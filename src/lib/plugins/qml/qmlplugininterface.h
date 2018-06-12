@@ -40,6 +40,9 @@ public:
     bool testPlugin();
     void setName(const QString &name);
 
+Q_SIGNALS:
+    void qmlPluginUnloaded();
+
 private:
     QString m_name;
     QJSValue m_jsInit;

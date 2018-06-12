@@ -48,6 +48,7 @@ void QmlPluginInterface::unload()
     }
 
     m_jsUnload.call();
+    emit qmlPluginUnloaded();
 }
 
 bool QmlPluginInterface::testPlugin()

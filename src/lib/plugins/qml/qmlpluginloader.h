@@ -22,8 +22,9 @@
 
 #include "qmlplugininterface.h"
 
-class QmlPluginLoader
+class QmlPluginLoader : public QObject
 {
+    Q_OBJECT
 public:
     explicit QmlPluginLoader(const QString &path);
     void createComponent();
@@ -31,6 +32,7 @@ public:
     QmlPluginInterface *instance() const;
     void setName(const QString &name);
 private:
+    QString m_path;
     QQmlEngine *m_engine;
     QQmlComponent *m_component;
     QmlPluginInterface *m_interface;
