@@ -37,3 +37,5 @@
 !define MSG_InvalidInstallPath "Install path invalid!"
 
 !define MSG_PortableWriteError "Error occurred when creating 'falkon.conf' in installation folder. Create it manually."
+
+!define MSG_HotfixNeeded "To run Falkon you have to install hotfix 'KB2999226'. Proceed to Windows update website?"

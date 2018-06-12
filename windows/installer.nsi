@@ -402,6 +402,7 @@ Function .onInit
         doAbort:
             Abort
     skip:
+        call notifyUserIfHotfixNeeded
 FunctionEnd
 
 Function RegisterCapabilities
@@ -490,4 +491,21 @@ FunctionEnd
 Function SkipComponentsIfPortableInstalltion
 StrCmp $installAsPortable "YES" 0 +2
     Abort
+FunctionEnd
+
+Function notifyUserIfHotfixNeeded
+    ; check if Windows 10 family. Taken from: http://nsis.sourceforge.net/Get_Windows_version
+    ReadRegStr $R0 HKLM "SOFTWARE\Microsoft\Windows NT\CurrentVersion" CurrentMajorVersionNumber
+    StrCmp $R0 '' 0 skiphotfixwarn
+
+    ClearErrors
+    nsExec::ExecToStack 'cmd /Q /C "%SYSTEMROOT%\System32\wbem\wmic.exe qfe get hotfixid | %SYSTEMROOT%\System32\findstr.exe "^KB2999226""'
+    Pop $0 ; return value (it always 0 even if an error occured)
+    Pop $1 ; command output KB2999226
+
+    StrCmp $1 "" 0 skiphotfixwarn
+      MessageBox MB_YESNO|MB_ICONQUESTION "${MSG_HotfixNeeded}" IDNO +2
+        ExecShell open "https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows"
+
+    skiphotfixwarn:
 FunctionEnd
