@@ -8,7 +8,7 @@ function GM_deleteValue(aKey) {
 
 function GM_getValue(aKey, aDefault) {
     var val = localStorage.getItem("%1" + aKey)
-    if (null === val && 'undefined' != typeof aDefault) return aDefault;
+    if (null === val) return aDefault;
     return val;
 }
 
