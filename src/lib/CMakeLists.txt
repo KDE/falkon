@@ -174,6 +174,7 @@ set(SRCS ${SRCS}
     plugins/qml/api/windows/qmlwindowstate.cpp
     plugins/qml/api/windows/qmlwindowtype.cpp
     plugins/qml/api/browseraction/qmlbrowseraction.cpp
+    plugins/qml/api/sidebar/qmlsidebar.cpp
     popupwindow/popuplocationbar.cpp
     popupwindow/popupstatusbarmessage.cpp
     popupwindow/popupwebview.cpp

@@ -34,6 +34,7 @@
 #include "api/windows/qmlwindowstate.h"
 #include "api/windows/qmlwindowtype.h"
 #include "api/browseraction/qmlbrowseraction.h"
+#include "api/sidebar/qmlsidebar.h"
 
 #include <QQmlEngine>
 
@@ -133,4 +134,7 @@ void QmlPlugins::registerQmlTypes()
 
     // BrowserAction
     qmlRegisterType<QmlBrowserAction>("org.kde.falkon", 1, 0, "BrowserAction");
+
+    // SideBar
+    qmlRegisterType<QmlSideBar>("org.kde.falkon", 1, 0, "SideBar");
 }

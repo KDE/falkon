@@ -21,6 +21,7 @@
 #include "statusbar.h"
 #include "browserwindow.h"
 #include "navigationbar.h"
+#include "sidebar.h"
 #include <QDebug>
 
 QmlPluginInterface::QmlPluginInterface()
@@ -119,6 +120,17 @@ void QmlPluginInterface::setBrowserAction(QmlBrowserAction *browserAction)
 {
     m_browserAction = browserAction;
     connect(m_browserAction, &QmlBrowserAction::locationChanged, this, &QmlPluginInterface::addButton);
+}
+
+QmlSideBar *QmlPluginInterface::sideBar() const
+{
+    return m_sideBar;
+}
+
+void QmlPluginInterface::setSideBar(QmlSideBar *sideBar)
+{
+    m_sideBar = sideBar;
+    SideBarManager::addSidebar(m_sideBar->name(), m_sideBar);
 }
 
 void QmlPluginInterface::addButton()
