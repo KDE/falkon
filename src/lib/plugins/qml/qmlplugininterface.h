@@ -22,6 +22,7 @@
 
 #include "desktopfile.h"
 #include "plugininterface.h"
+#include "api/browseraction/qmlbrowseraction.h"
 
 class QmlPluginInterface : public QObject, public PluginInterface
 {
@@ -31,6 +32,8 @@ class QmlPluginInterface : public QObject, public PluginInterface
     Q_PROPERTY(QJSValue init READ jsInit WRITE setJsInit)
     Q_PROPERTY(QJSValue unload READ jsUnload WRITE setJsUnload)
     Q_PROPERTY(QJSValue testPlugin READ jsTestPlugin WRITE setJsTestPlugin)
+    Q_PROPERTY(QmlBrowserAction* browserAction READ browserAction WRITE setBrowserAction)
+    Q_CLASSINFO("DefaultProperty", "browserAction")
 
 public:
     explicit QmlPluginInterface();
@@ -48,6 +51,7 @@ private:
     QJSValue m_jsInit;
     QJSValue m_jsUnload;
     QJSValue m_jsTestPlugin;
+    QmlBrowserAction *m_browserAction;
 
     QJSValue jsInit() const;
     void setJsInit(const QJSValue &init);
@@ -55,4 +59,10 @@ private:
     void setJsUnload(const QJSValue &unload);
     QJSValue jsTestPlugin() const;
     void setJsTestPlugin(const QJSValue &testPlugin);
+    QmlBrowserAction *browserAction() const;
+    void setBrowserAction(QmlBrowserAction *browserAction);
+
+    void addButton();
+    void addToolButton();
+    void addStatusBarButton();
 };

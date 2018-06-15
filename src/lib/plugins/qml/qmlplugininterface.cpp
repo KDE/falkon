@@ -16,9 +16,15 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmlplugininterface.h"
+#include "mainapplication.h"
+#include "pluginproxy.h"
+#include "statusbar.h"
+#include "browserwindow.h"
+#include "navigationbar.h"
 #include <QDebug>
 
 QmlPluginInterface::QmlPluginInterface()
+    : m_browserAction(nullptr)
 {
 }
 
@@ -48,6 +54,13 @@ void QmlPluginInterface::unload()
     }
 
     m_jsUnload.call();
+
+    for (BrowserWindow *window : mApp->windows()) {
+        if (m_browserAction) {
+            window->navigationBar()->removeToolButton(m_browserAction);
+        }
+    }
+
     emit qmlPluginUnloaded();
 }
 
@@ -95,4 +108,48 @@ void QmlPluginInterface::setJsTestPlugin(const QJSValue &testPlugin)
 void QmlPluginInterface::setName(const QString &name)
 {
     m_name = name;
+}
+
+QmlBrowserAction *QmlPluginInterface::browserAction() const
+{
+    return m_browserAction;
+}
+
+void QmlPluginInterface::setBrowserAction(QmlBrowserAction *browserAction)
+{
+    m_browserAction = browserAction;
+    connect(m_browserAction, &QmlBrowserAction::locationChanged, this, &QmlPluginInterface::addButton);
+}
+
+void QmlPluginInterface::addButton()
+{
+    if (m_browserAction->location().testFlag(QmlBrowserAction::NavigationToolBar)) {
+        addToolButton();
+    }
+
+    if (m_browserAction->location().testFlag(QmlBrowserAction::StatusBar)) {
+        addStatusBarButton();
+    }
+}
+
+void QmlPluginInterface::addToolButton()
+{
+    for (BrowserWindow *window : mApp->windows()) {
+        window->navigationBar()->addToolButton(m_browserAction);
+    }
+
+    connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, [this](BrowserWindow *window){
+        window->navigationBar()->addToolButton(m_browserAction);
+    });
+}
+
+void QmlPluginInterface::addStatusBarButton()
+{
+    for (BrowserWindow *window : mApp->windows()) {
+        window->statusBar()->addButton(m_browserAction);
+    }
+
+    connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, [this](BrowserWindow *window){
+        window->statusBar()->addButton(m_browserAction);
+    });
 }

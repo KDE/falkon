@@ -33,6 +33,7 @@
 #include "api/windows/qmlwindows.h"
 #include "api/windows/qmlwindowstate.h"
 #include "api/windows/qmlwindowtype.h"
+#include "api/browseraction/qmlbrowseraction.h"
 
 #include <QQmlEngine>
 
@@ -129,4 +130,7 @@ void QmlPlugins::registerQmlTypes()
         auto *object = new QmlWindows();
         return object;
     });
+
+    // BrowserAction
+    qmlRegisterType<QmlBrowserAction>("org.kde.falkon", 1, 0, "BrowserAction");
 }
