@@ -26,6 +26,7 @@
 
 QmlPluginInterface::QmlPluginInterface()
     : m_browserAction(nullptr)
+    , m_sideBar(nullptr)
 {
 }
 
@@ -40,6 +41,18 @@ void QmlPluginInterface::init(InitState state, const QString &settingsPath)
     args.append(state);
     args.append(settingsPath);
     m_jsInit.call(args);
+
+    if (m_browserAction) {
+        for (BrowserWindow *window : mApp->windows()) {
+            addButton(window);
+        }
+
+        connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &QmlPluginInterface::addButton);
+    }
+
+    if (m_sideBar) {
+        SideBarManager::addSidebar(m_sideBar->name(), m_sideBar);
+    }
 }
 
 DesktopFile QmlPluginInterface::metaData() const
@@ -56,10 +69,16 @@ void QmlPluginInterface::unload()
 
     m_jsUnload.call();
 
-    for (BrowserWindow *window : mApp->windows()) {
-        if (m_browserAction) {
-            window->navigationBar()->removeToolButton(m_browserAction);
+    if (m_browserAction) {
+        for (BrowserWindow *window : mApp->windows()) {
+            removeButton(window);
         }
+
+        disconnect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &QmlPluginInterface::addButton);
+    }
+
+    if (m_sideBar) {
+        SideBarManager::removeSidebar(m_sideBar);
     }
 
     emit qmlPluginUnloaded();
@@ -119,7 +138,6 @@ QmlBrowserAction *QmlPluginInterface::browserAction() const
 void QmlPluginInterface::setBrowserAction(QmlBrowserAction *browserAction)
 {
     m_browserAction = browserAction;
-    connect(m_browserAction, &QmlBrowserAction::locationChanged, this, &QmlPluginInterface::addButton);
 }
 
 QmlSideBar *QmlPluginInterface::sideBar() const
@@ -130,38 +148,26 @@ QmlSideBar *QmlPluginInterface::sideBar() const
 void QmlPluginInterface::setSideBar(QmlSideBar *sideBar)
 {
     m_sideBar = sideBar;
-    SideBarManager::addSidebar(m_sideBar->name(), m_sideBar);
 }
 
-void QmlPluginInterface::addButton()
+void QmlPluginInterface::addButton(BrowserWindow *window)
 {
     if (m_browserAction->location().testFlag(QmlBrowserAction::NavigationToolBar)) {
-        addToolButton();
+        window->navigationBar()->addToolButton(m_browserAction);
     }
 
     if (m_browserAction->location().testFlag(QmlBrowserAction::StatusBar)) {
-        addStatusBarButton();
+        window->statusBar()->addButton(m_browserAction);
     }
 }
 
-void QmlPluginInterface::addToolButton()
+void QmlPluginInterface::removeButton(BrowserWindow *window)
 {
-    for (BrowserWindow *window : mApp->windows()) {
-        window->navigationBar()->addToolButton(m_browserAction);
+    if (m_browserAction->location().testFlag(QmlBrowserAction::NavigationToolBar)) {
+        window->navigationBar()->removeToolButton(m_browserAction);
     }
 
-    connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, [this](BrowserWindow *window){
-        window->navigationBar()->addToolButton(m_browserAction);
-    });
-}
-
-void QmlPluginInterface::addStatusBarButton()
-{
-    for (BrowserWindow *window : mApp->windows()) {
-        window->statusBar()->addButton(m_browserAction);
+    if (m_browserAction->location().testFlag(QmlBrowserAction::StatusBar)) {
+        window->statusBar()->removeButton(m_browserAction);
     }
-
-    connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, [this](BrowserWindow *window){
-        window->statusBar()->addButton(m_browserAction);
-    });
 }

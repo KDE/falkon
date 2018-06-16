@@ -54,6 +54,7 @@ private:
     QJSValue m_jsTestPlugin;
     QmlBrowserAction *m_browserAction;
     QmlSideBar *m_sideBar;
+    bool loaded;
 
     QJSValue jsInit() const;
     void setJsInit(const QJSValue &init);
@@ -66,7 +67,6 @@ private:
     QmlSideBar *sideBar() const;
     void setSideBar(QmlSideBar *sideBar);
 
-    void addButton();
-    void addToolButton();
-    void addStatusBarButton();
+    void addButton(BrowserWindow *window);
+    void removeButton(BrowserWindow *window);
 };
