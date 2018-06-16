@@ -18,6 +18,7 @@
 #include "qmlnotifications.h"
 #include "mainapplication.h"
 #include "desktopnotificationsfactory.h"
+#include "qztools.h"
 
 QmlNotifications::QmlNotifications(QObject *parent)
     : QObject(parent)
@@ -36,9 +37,9 @@ QmlNotifications::QmlNotifications(QObject *parent)
  */
 void QmlNotifications::create(const QVariantMap &map)
 {
-    const QString fileUrl = map.value(QSL("icon")).toString();
-    const QString fileName = QUrl::fromEncoded(fileUrl.toUtf8()).toLocalFile();
-    const QPixmap icon(fileName);
+    const QString iconUrl = map.value(QSL("icon")).toString();
+    const QString iconPath = QzTools::getPathFromUrl(QUrl(iconUrl));
+    const QPixmap icon(iconPath);
     const QString heading = map.value(QSL("heading")).toString();
     const QString message = map.value(QSL("message")).toString();
     mApp->desktopNotifications()->showNotification(icon, heading, message);

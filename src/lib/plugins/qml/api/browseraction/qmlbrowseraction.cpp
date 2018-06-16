@@ -17,6 +17,7 @@
 * ============================================================ */
 #include "qmlbrowseraction.h"
 #include "mainapplication.h"
+#include "qztools.h"
 #include <QQuickWindow>
 
 QmlBrowserAction::QmlBrowserAction(QObject *parent)
@@ -54,8 +55,8 @@ QString QmlBrowserAction::iconUrl() const
 void QmlBrowserAction::setIconUrl(const QString &iconUrl)
 {
     m_iconUrl = iconUrl;
-    QString fileName = QUrl(m_iconUrl.toUtf8()).toLocalFile();
-    setIcon(QIcon(fileName));
+    QString iconPath = QzTools::getPathFromUrl(QUrl(m_iconUrl));
+    setIcon(QIcon(iconPath));
 }
 
 QQmlComponent* QmlBrowserAction::popup() const

@@ -17,6 +17,7 @@
 * ============================================================ */
 #include "qmlsidebar.h"
 #include "mainapplication.h"
+#include "qztools.h"
 #include <QAction>
 #include <QQuickWindow>
 
@@ -92,7 +93,8 @@ QAction *QmlSideBar::createMenuAction()
     action->setText(m_title);
     action->setCheckable(m_checkable);
     action->setShortcut(QKeySequence(m_shortcut));
-    action->setIcon(QIcon(QUrl(m_iconUrl).toLocalFile()));
+    QString iconPath = QzTools::getPathFromUrl(QUrl(m_iconUrl));
+    action->setIcon(QIcon(iconPath));
     return action;
 }
 

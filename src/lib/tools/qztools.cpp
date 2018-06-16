@@ -1018,3 +1018,16 @@ void QzTools::paintDropIndicator(QWidget *widget, const QRect &r)
         p.drawLine(x + i, r.top(), x + i, r.bottom());
     }
 }
+
+QString QzTools::getPathFromUrl(const QUrl &url)
+{
+    if (url.isLocalFile()) {
+        return url.toLocalFile();
+    } else if (url.scheme() == QSL("qrc")) {
+        const QString path = url.toString(QUrl::RemoveScheme);
+        return QSL(":") + path;
+    } else {
+        const QString path = url.toString(QUrl::RemoveScheme);
+        return path;
+    }
+}
