@@ -19,6 +19,10 @@
 // Make "signals:", "slots:" visible as access specifiers
 #define QT_ANNOTATE_ACCESS_SPECIFIER(a) __attribute__((annotate(#a)))
 
+// PYSIDE-711
+#include <QHstsPolicy>
+#include <QWebEngineContextMenuData>
+
 // 3rdparty
 #include "lineedit.h"
 #include "squeezelabelv1.h"
