@@ -22,9 +22,16 @@
 #include <QQuickWindow>
 
 QmlSideBar::QmlSideBar(QObject *parent)
-    : SideBarInterface(parent)
+    : QObject(parent)
     , m_item(nullptr)
 {
+    m_sideBarHelper = new QmlSideBarHelper(this);
+
+    connect(this, &QmlSideBar::titleChanged, m_sideBarHelper, &QmlSideBarHelper::setTitle);
+    connect(this, &QmlSideBar::iconChanged, m_sideBarHelper, &QmlSideBarHelper::setIcon);
+    connect(this, &QmlSideBar::shortcutChanged, m_sideBarHelper, &QmlSideBarHelper::setShortcut);
+    connect(this, &QmlSideBar::checkableChanged, m_sideBarHelper, &QmlSideBarHelper::setCheckable);
+    connect(this, &QmlSideBar::itemChanged, m_sideBarHelper, &QmlSideBarHelper::setItem);
 }
 
 QString QmlSideBar::name() const
@@ -45,6 +52,7 @@ QString QmlSideBar::title() const
 void QmlSideBar::setTitle(const QString &title)
 {
     m_title = title;
+    emit titleChanged(title);
 }
 
 QString QmlSideBar::icon() const
@@ -55,6 +63,7 @@ QString QmlSideBar::icon() const
 void QmlSideBar::setIcon(const QString &icon)
 {
     m_iconUrl = icon;
+    emit iconChanged(m_iconUrl);
 }
 
 QString QmlSideBar::shortcut() const
@@ -65,6 +74,7 @@ QString QmlSideBar::shortcut() const
 void QmlSideBar::setShortcut(const QString &shortcut)
 {
     m_shortcut = shortcut;
+    emit shortcutChanged(m_shortcut);
 }
 
 bool QmlSideBar::checkable()
@@ -75,6 +85,7 @@ bool QmlSideBar::checkable()
 void QmlSideBar::setCheckable(bool checkable)
 {
     m_checkable = checkable;
+    emit checkableChanged(m_checkable);
 }
 
 QQmlComponent *QmlSideBar::item() const
@@ -85,20 +96,35 @@ QQmlComponent *QmlSideBar::item() const
 void QmlSideBar::setItem(QQmlComponent *item)
 {
     m_item = item;
+    emit itemChanged(m_item);
 }
 
-QAction *QmlSideBar::createMenuAction()
+SideBarInterface *QmlSideBar::sideBar() const
 {
-    QAction *action = new QAction;
-    action->setText(m_title);
-    action->setCheckable(m_checkable);
+    return m_sideBarHelper;
+}
+
+QmlSideBarHelper::QmlSideBarHelper(QObject *parent)
+    : SideBarInterface(parent)
+    , m_item(nullptr)
+{
+}
+
+QString QmlSideBarHelper::title() const
+{
+    return m_title;
+}
+
+QAction *QmlSideBarHelper::createMenuAction()
+{
+    QAction *action = new QAction(m_title);
     action->setShortcut(QKeySequence(m_shortcut));
-    QString iconPath = QzTools::getPathFromUrl(QUrl(m_iconUrl));
-    action->setIcon(QIcon(iconPath));
+    action->setIcon(QIcon(QzTools::getPathFromUrl(QUrl(m_iconUrl))));
+    action->setCheckable(m_checkable);
     return action;
 }
 
-QWidget *QmlSideBar::createSideBarWidget(BrowserWindow *mainWindow)
+QWidget *QmlSideBarHelper::createSideBarWidget(BrowserWindow *mainWindow)
 {
     Q_UNUSED(mainWindow)
 
@@ -109,4 +135,29 @@ QWidget *QmlSideBar::createSideBarWidget(BrowserWindow *mainWindow)
     }
 
     return QWidget::createWindowContainer(window);
+}
+
+void QmlSideBarHelper::setTitle(const QString &title)
+{
+    m_title = title;
+}
+
+void QmlSideBarHelper::setIcon(const QString &icon)
+{
+    m_iconUrl = icon;
+}
+
+void QmlSideBarHelper::setShortcut(const QString &shortcut)
+{
+    m_shortcut = shortcut;
+}
+
+void QmlSideBarHelper::setCheckable(bool checkable)
+{
+    m_checkable = checkable;
+}
+
+void QmlSideBarHelper::setItem(QQmlComponent *item)
+{
+    m_item = item;
 }

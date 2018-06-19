@@ -19,19 +19,21 @@
 #include "sidebarinterface.h"
 #include <QQmlComponent>
 
-class QmlSideBar : public SideBarInterface
+class QmlSideBarHelper;
+
+class QmlSideBar : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString name READ name WRITE setName)
-    Q_PROPERTY(QString title READ title WRITE setTitle)
-    Q_PROPERTY(QString icon READ icon WRITE setIcon)
-    Q_PROPERTY(QString shortcut READ shortcut WRITE setShortcut)
-    Q_PROPERTY(bool checkable READ checkable WRITE setCheckable)
-    Q_PROPERTY(QQmlComponent* item READ item WRITE setItem)
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+    Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
+    Q_PROPERTY(QString icon READ icon WRITE setIcon NOTIFY iconChanged)
+    Q_PROPERTY(QString shortcut READ shortcut WRITE setShortcut NOTIFY shortcutChanged)
+    Q_PROPERTY(bool checkable READ checkable WRITE setCheckable NOTIFY checkableChanged)
+    Q_PROPERTY(QQmlComponent* item READ item WRITE setItem NOTIFY itemChanged)
     Q_CLASSINFO("DefaultProperty", "item")
 
 public:
-    QmlSideBar(QObject *parent = nullptr);
+    explicit QmlSideBar(QObject *parent = nullptr);
     QString name() const;
     void setName(const QString &name);
     QString title() const;
@@ -45,11 +47,43 @@ public:
     QQmlComponent *item() const;
     void setItem(QQmlComponent *item);
 
-    QAction *createMenuAction();
-    QWidget *createSideBarWidget(BrowserWindow *mainWindow);
+    SideBarInterface *sideBar() const;
+
+Q_SIGNALS:
+    void nameChanged(const QString &name);
+    void titleChanged(const QString &title);
+    void iconChanged(const QString &icon);
+    void shortcutChanged(const QString &shortcut);
+    void checkableChanged(bool checkable);
+    void itemChanged(QQmlComponent *item);
 
 private:
     QString m_name;
+    QString m_title;
+    QString m_iconUrl;
+    QString m_shortcut;
+    bool m_checkable;
+    QQmlComponent *m_item;
+
+    QmlSideBarHelper *m_sideBarHelper;
+};
+
+class QmlSideBarHelper : public SideBarInterface
+{
+    Q_OBJECT
+public:
+    explicit QmlSideBarHelper(QObject *parent = nullptr);
+    QString title() const;
+    QAction *createMenuAction();
+    QWidget *createSideBarWidget(BrowserWindow *mainWindow);
+
+    void setTitle(const QString &title);
+    void setIcon(const QString &icon);
+    void setShortcut(const QString &shortcut);
+    void setCheckable(bool checkable);
+    void setItem(QQmlComponent *item);
+
+private:
     QString m_title;
     QString m_iconUrl;
     QString m_shortcut;

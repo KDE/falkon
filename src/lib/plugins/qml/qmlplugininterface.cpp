@@ -51,7 +51,7 @@ void QmlPluginInterface::init(InitState state, const QString &settingsPath)
     }
 
     if (m_sideBar) {
-        SideBarManager::addSidebar(m_sideBar->name(), m_sideBar);
+        SideBarManager::addSidebar(m_sideBar->name(), m_sideBar->sideBar());
     }
 }
 
@@ -78,7 +78,7 @@ void QmlPluginInterface::unload()
     }
 
     if (m_sideBar) {
-        SideBarManager::removeSidebar(m_sideBar);
+        SideBarManager::removeSidebar(m_sideBar->sideBar());
     }
 
     emit qmlPluginUnloaded();
