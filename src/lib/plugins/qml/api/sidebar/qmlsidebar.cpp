@@ -39,6 +39,11 @@ QString QmlSideBar::name() const
     return m_name;
 }
 
+SideBarInterface *QmlSideBar::sideBar() const
+{
+    return m_sideBarHelper;
+}
+
 void QmlSideBar::setName(const QString &name)
 {
     m_name = name;
@@ -97,11 +102,6 @@ void QmlSideBar::setItem(QQmlComponent *item)
 {
     m_item = item;
     emit itemChanged(m_item);
-}
-
-SideBarInterface *QmlSideBar::sideBar() const
-{
-    return m_sideBarHelper;
 }
 
 QmlSideBarHelper::QmlSideBarHelper(QObject *parent)

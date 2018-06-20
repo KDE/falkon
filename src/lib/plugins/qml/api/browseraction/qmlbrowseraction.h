@@ -21,27 +21,133 @@
 
 class QmlBrowserActionButton;
 
+/**
+ * @brief The class exposing BrowserAction API to QML
+ */
 class QmlBrowserAction : public QObject
 {
     Q_OBJECT
+
+    /**
+     * @brief identity for the button. This is a required property.
+     */
     Q_PROPERTY(QString identity READ identity WRITE setIdentity NOTIFY identityChanged)
+
+    /**
+     * @brief name of the button. This is a required property.
+     */
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+
+    /**
+     * @brief title of the button.
+     */
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
+
+    /**
+     * @brief tool tip of the button.
+     */
     Q_PROPERTY(QString toolTip READ toolTip WRITE setToolTip NOTIFY toolTipChanged)
+
+    /**
+     * @brief Url of the icon of button
+     */
     Q_PROPERTY(QString icon READ icon WRITE setIcon NOTIFY iconChanged)
+
+    /**
+     * @brief badge text of the button
+     */
     Q_PROPERTY(QString badgeText READ badgeText WRITE setBadgeText NOTIFY badgeTextChanged)
+
+    /**
+     * @brief the popup shown when the button is clicked. This must be a QML Window.
+     */
     Q_PROPERTY(QQmlComponent* popup READ popup WRITE setPopup NOTIFY popupChanged)
+
+    /**
+     * @brief represents locations where the button is to be added.
+     */
     Q_PROPERTY(Locations location READ location WRITE setLocation NOTIFY locationChanged)
 
 public:
+    /**
+     * @brief The Location enum
+     */
     enum Location {
-        NavigationToolBar = 0x1,
-        StatusBar = 0x2
+        NavigationToolBar = 0x1, //!< to add the button in navigation tool bar
+        StatusBar = 0x2          //!< to add the button in status bar
     };
     Q_DECLARE_FLAGS(Locations, Location)
     Q_ENUMS(Locations)
 
     explicit QmlBrowserAction(QObject *parent = nullptr);
+    QmlBrowserActionButton *button() const;
+    Locations location() const;
+
+Q_SIGNALS:
+    /**
+     * @brief This signal is emitted when identity property is changed
+     * @param QString representing identity
+     */
+    void identityChanged(const QString &identity);
+
+    /**
+     * @brief This signal is emitted when name property is changed
+     * @param QString representing name
+     */
+    void nameChanged(const QString &name);
+
+    /**
+     * @brief This signal is emitted when title property is changed
+     * @param QString representing title
+     */
+    void titleChanged(const QString &title);
+
+    /**
+     * @brief This signal is emitted when the toolTip property is changed
+     * @param QString representing toolTip
+     */
+    void toolTipChanged(const QString &toolTip);
+
+    /**
+     * @brief This signal is emitted when the icon property is changed
+     * @param QString representing icon
+     */
+    void iconChanged(const QString &icon);
+
+    /**
+     * @brief This signal is emitted when the badgeText property is changed
+     * @param QString representing badgeText
+     */
+    void badgeTextChanged(const QString &badgeText);
+
+    /**
+     * @brief This signal is emitted when the popup property is changed
+     * @param QQmComponent representing popup
+     */
+    void popupChanged(QQmlComponent *popup);
+
+    /**
+     * @brief This signal is emitted when the locations property is changed
+     * @param locations
+     */
+    void locationChanged(const Locations &locations);
+
+    /**
+     * @brief This signal is emitted when the button is clicked
+     */
+    void clicked();
+
+private:
+    QString m_identity;
+    QString m_name;
+    QString m_title;
+    QString m_toolTip;
+    QString m_icon;
+    QString m_badgeText;
+    QQmlComponent* m_popup;
+    Locations m_locations;
+    QmlBrowserActionButton *m_button;
+
     QString identity() const;
     void setIdentity(const QString &identity);
     QString name() const;
@@ -56,32 +162,7 @@ public:
     void setBadgeText(const QString &badgeText);
     QQmlComponent* popup() const;
     void setPopup(QQmlComponent* popup);
-    Locations location() const;
     void setLocation(const Locations &locations);
-
-    QmlBrowserActionButton *button() const;
-
-Q_SIGNALS:
-    void identityChanged(const QString &identity);
-    void nameChanged(const QString &name);
-    void titleChanged(const QString &title);
-    void toolTipChanged(const QString &toolTip);
-    void iconChanged(const QString &icon);
-    void badgeTextChanged(const QString &badgeText);
-    void popupChanged(QQmlComponent *popup);
-    void locationChanged(const Locations &locations);
-    void clicked();
-
-private:
-    QString m_identity;
-    QString m_name;
-    QString m_title;
-    QString m_toolTip;
-    QString m_icon;
-    QString m_badgeText;
-    QQmlComponent* m_popup;
-    Locations m_locations;
-    QmlBrowserActionButton *m_button;
 };
 
 class QmlBrowserActionButton : public AbstractButtonInterface

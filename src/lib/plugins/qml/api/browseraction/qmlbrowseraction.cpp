@@ -37,6 +37,16 @@ QmlBrowserAction::QmlBrowserAction(QObject *parent)
     connect(m_button, &QmlBrowserActionButton::clicked, this, &QmlBrowserAction::clicked);
 }
 
+QmlBrowserActionButton *QmlBrowserAction::button() const
+{
+    return m_button;
+}
+
+QmlBrowserAction::Locations QmlBrowserAction::location() const
+{
+    return m_locations;
+}
+
 QString QmlBrowserAction::identity() const
 {
     return m_identity;
@@ -114,20 +124,10 @@ void QmlBrowserAction::setPopup(QQmlComponent* popup)
     emit popupChanged(m_popup);
 }
 
-QmlBrowserAction::Locations QmlBrowserAction::location() const
-{
-    return m_locations;
-}
-
 void QmlBrowserAction::setLocation(const Locations &locations)
 {
     m_locations = locations;
     emit locationChanged(m_locations);
-}
-
-QmlBrowserActionButton *QmlBrowserAction::button() const
-{
-    return m_button;
 }
 
 QmlBrowserActionButton::QmlBrowserActionButton(QObject *parent)
