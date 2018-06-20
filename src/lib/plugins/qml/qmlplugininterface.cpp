@@ -153,21 +153,21 @@ void QmlPluginInterface::setSideBar(QmlSideBar *sideBar)
 void QmlPluginInterface::addButton(BrowserWindow *window)
 {
     if (m_browserAction->location().testFlag(QmlBrowserAction::NavigationToolBar)) {
-        window->navigationBar()->addToolButton(m_browserAction);
+        window->navigationBar()->addToolButton(m_browserAction->button());
     }
 
     if (m_browserAction->location().testFlag(QmlBrowserAction::StatusBar)) {
-        window->statusBar()->addButton(m_browserAction);
+        window->statusBar()->addButton(m_browserAction->button());
     }
 }
 
 void QmlPluginInterface::removeButton(BrowserWindow *window)
 {
     if (m_browserAction->location().testFlag(QmlBrowserAction::NavigationToolBar)) {
-        window->navigationBar()->removeToolButton(m_browserAction);
+        window->navigationBar()->removeToolButton(m_browserAction->button());
     }
 
     if (m_browserAction->location().testFlag(QmlBrowserAction::StatusBar)) {
-        window->statusBar()->removeButton(m_browserAction);
+        window->statusBar()->removeButton(m_browserAction->button());
     }
 }

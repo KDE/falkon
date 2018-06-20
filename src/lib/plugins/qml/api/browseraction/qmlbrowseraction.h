@@ -19,49 +19,93 @@
 #include "abstractbuttoninterface.h"
 #include <QQmlComponent>
 
-class QmlBrowserAction : public AbstractButtonInterface
+class QmlBrowserActionButton;
+
+class QmlBrowserAction : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString identity READ id WRITE setId)
-    Q_PROPERTY(QString name READ name WRITE setName)
-    Q_PROPERTY(QString title READ title WRITE setTitle)
-    Q_PROPERTY(QString toolTip READ toolTip WRITE setToolTip)
-    Q_PROPERTY(QString icon READ iconUrl WRITE setIconUrl)
-    Q_PROPERTY(QString badgeText READ badgeText WRITE setBadgeText)
-    Q_PROPERTY(QQmlComponent* popup READ popup WRITE setPopup)
-    Q_PROPERTY(LocationFlags location READ location WRITE setLocation NOTIFY locationChanged)
+    Q_PROPERTY(QString identity READ identity WRITE setIdentity NOTIFY identityChanged)
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+    Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
+    Q_PROPERTY(QString toolTip READ toolTip WRITE setToolTip NOTIFY toolTipChanged)
+    Q_PROPERTY(QString icon READ icon WRITE setIcon NOTIFY iconChanged)
+    Q_PROPERTY(QString badgeText READ badgeText WRITE setBadgeText NOTIFY badgeTextChanged)
+    Q_PROPERTY(QQmlComponent* popup READ popup WRITE setPopup NOTIFY popupChanged)
+    Q_PROPERTY(Locations location READ location WRITE setLocation NOTIFY locationChanged)
 
 public:
     enum Location {
         NavigationToolBar = 0x1,
         StatusBar = 0x2
     };
-    Q_DECLARE_FLAGS(LocationFlags, Location)
-    Q_ENUMS(LocationFlags)
+    Q_DECLARE_FLAGS(Locations, Location)
+    Q_ENUMS(Locations)
 
     explicit QmlBrowserAction(QObject *parent = nullptr);
+    QString identity() const;
+    void setIdentity(const QString &identity);
+    QString name() const;
+    void setName(const QString &name);
+    QString title() const;
+    void setTitle(const QString &title);
+    QString toolTip() const;
+    void setToolTip(const QString &toolTip);
+    QString icon() const;
+    void setIcon(const QString &icon);
+    QString badgeText() const;
+    void setBadgeText(const QString &badgeText);
+    QQmlComponent* popup() const;
+    void setPopup(QQmlComponent* popup);
+    Locations location() const;
+    void setLocation(const Locations &locations);
+
+    QmlBrowserActionButton *button() const;
+
+Q_SIGNALS:
+    void identityChanged(const QString &identity);
+    void nameChanged(const QString &name);
+    void titleChanged(const QString &title);
+    void toolTipChanged(const QString &toolTip);
+    void iconChanged(const QString &icon);
+    void badgeTextChanged(const QString &badgeText);
+    void popupChanged(QQmlComponent *popup);
+    void locationChanged(const Locations &locations);
+    void clicked();
+
+private:
+    QString m_identity;
+    QString m_name;
+    QString m_title;
+    QString m_toolTip;
+    QString m_icon;
+    QString m_badgeText;
+    QQmlComponent* m_popup;
+    Locations m_locations;
+    QmlBrowserActionButton *m_button;
+};
+
+class QmlBrowserActionButton : public AbstractButtonInterface
+{
+    Q_OBJECT
+public:
+    explicit QmlBrowserActionButton(QObject *parent = nullptr);
     QString id() const;
     void setId(const QString &id);
     QString name() const;
     void setName(const QString &name);
-    QString iconUrl() const;
-    void setIconUrl(const QString &iconUrl);
-    QQmlComponent* popup() const;
-    void setPopup(QQmlComponent* popup);
-    LocationFlags location() const;
-    void setLocation(const LocationFlags &locationFlags);
+    void setTitle(const QString &title);
+    void setToolTip(const QString &toolTip);
+    void setIcon(const QString &icon);
+    void setBadgeText(const QString &badgeText);
+    void setPopup(QQmlComponent *popup);
 
-Q_SIGNALS:
-    void locationChanged();
+    void positionPopup(ClickController *clickController);
 
 private:
     QString m_id;
     QString m_name;
     QString m_iconUrl;
-    QQmlComponent* m_popup;
-    LocationFlags m_displayFlags;
-
-    void clicked(ClickController *clickController);
+    QQmlComponent *m_popup;
 };
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(QmlBrowserAction::LocationFlags)
+Q_DECLARE_OPERATORS_FOR_FLAGS(QmlBrowserAction::Locations)

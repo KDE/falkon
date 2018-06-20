@@ -21,20 +21,31 @@
 #include <QQuickWindow>
 
 QmlBrowserAction::QmlBrowserAction(QObject *parent)
-    : AbstractButtonInterface(parent)
+    : QObject(parent)
     , m_popup(nullptr)
 {
-    connect(this, &AbstractButtonInterface::clicked, this, &QmlBrowserAction::clicked);
+    m_button = new QmlBrowserActionButton();
+
+    connect(this, &QmlBrowserAction::identityChanged, m_button, &QmlBrowserActionButton::setId);
+    connect(this, &QmlBrowserAction::nameChanged, m_button, &QmlBrowserActionButton::setName);
+    connect(this, &QmlBrowserAction::titleChanged, m_button, &QmlBrowserActionButton::setTitle);
+    connect(this, &QmlBrowserAction::toolTipChanged, m_button, &QmlBrowserActionButton::setToolTip);
+    connect(this, &QmlBrowserAction::iconChanged, m_button, &QmlBrowserActionButton::setIcon);
+    connect(this, &QmlBrowserAction::badgeTextChanged, m_button, &QmlBrowserActionButton::setBadgeText);
+    connect(this, &QmlBrowserAction::popupChanged, m_button, &QmlBrowserActionButton::setPopup);
+
+    connect(m_button, &QmlBrowserActionButton::clicked, this, &QmlBrowserAction::clicked);
 }
 
-QString QmlBrowserAction::id() const
+QString QmlBrowserAction::identity() const
 {
-    return m_id;
+    return m_identity;
 }
 
-void QmlBrowserAction::setId(const QString &id)
+void QmlBrowserAction::setIdentity(const QString &identity)
 {
-    m_id = id;
+    m_identity = identity;
+    emit identityChanged(m_identity);
 }
 
 QString QmlBrowserAction::name() const
@@ -45,18 +56,51 @@ QString QmlBrowserAction::name() const
 void QmlBrowserAction::setName(const QString &name)
 {
     m_name = name;
+    emit nameChanged(m_name);
 }
 
-QString QmlBrowserAction::iconUrl() const
+QString QmlBrowserAction::title() const
 {
-    return m_iconUrl;
+    return m_title;
 }
 
-void QmlBrowserAction::setIconUrl(const QString &iconUrl)
+void QmlBrowserAction::setTitle(const QString &title)
 {
-    m_iconUrl = iconUrl;
-    QString iconPath = QzTools::getPathFromUrl(QUrl(m_iconUrl));
-    setIcon(QIcon(iconPath));
+    m_title = title;
+    emit titleChanged(m_title);
+}
+
+QString QmlBrowserAction::toolTip() const
+{
+    return m_toolTip;
+}
+
+void QmlBrowserAction::setToolTip(const QString &toolTip)
+{
+    m_toolTip = toolTip;
+    emit toolTipChanged(m_toolTip);
+}
+
+QString QmlBrowserAction::icon() const
+{
+    return m_icon;
+}
+
+void QmlBrowserAction::setIcon(const QString &icon)
+{
+    m_icon = icon;
+    emit iconChanged(m_icon);
+}
+
+QString QmlBrowserAction::badgeText() const
+{
+    return m_badgeText;
+}
+
+void QmlBrowserAction::setBadgeText(const QString &badgeText)
+{
+    m_badgeText = badgeText;
+    emit badgeTextChanged(m_badgeText);
 }
 
 QQmlComponent* QmlBrowserAction::popup() const
@@ -67,20 +111,79 @@ QQmlComponent* QmlBrowserAction::popup() const
 void QmlBrowserAction::setPopup(QQmlComponent* popup)
 {
     m_popup = popup;
+    emit popupChanged(m_popup);
 }
 
-QmlBrowserAction::LocationFlags QmlBrowserAction::location() const
+QmlBrowserAction::Locations QmlBrowserAction::location() const
 {
-    return m_displayFlags;
+    return m_locations;
 }
 
-void QmlBrowserAction::setLocation(const LocationFlags &locationFlags)
+void QmlBrowserAction::setLocation(const Locations &locations)
 {
-    m_displayFlags = locationFlags;
-    emit locationChanged();
+    m_locations = locations;
+    emit locationChanged(m_locations);
 }
 
-void QmlBrowserAction::clicked(ClickController *clickController)
+QmlBrowserActionButton *QmlBrowserAction::button() const
+{
+    return m_button;
+}
+
+QmlBrowserActionButton::QmlBrowserActionButton(QObject *parent)
+    : AbstractButtonInterface(parent)
+    , m_popup(nullptr)
+{
+    connect(this, &AbstractButtonInterface::clicked, this, &QmlBrowserActionButton::positionPopup);
+}
+
+QString QmlBrowserActionButton::id() const
+{
+    return m_id;
+}
+
+void QmlBrowserActionButton::setId(const QString &id)
+{
+    m_id = id;
+}
+
+QString QmlBrowserActionButton::name() const
+{
+    return m_name;
+}
+
+void QmlBrowserActionButton::setName(const QString &name)
+{
+    m_name = name;
+}
+
+void QmlBrowserActionButton::setTitle(const QString &title)
+{
+    AbstractButtonInterface::setTitle(title);
+}
+
+void QmlBrowserActionButton::setToolTip(const QString &toolTip)
+{
+    AbstractButtonInterface::setToolTip(toolTip);
+}
+
+void QmlBrowserActionButton::setIcon(const QString &icon)
+{
+    m_iconUrl = icon;
+    AbstractButtonInterface::setIcon(QIcon(QzTools::getPathFromUrl(QUrl(m_iconUrl))));
+}
+
+void QmlBrowserActionButton::setBadgeText(const QString &badgeText)
+{
+    AbstractButtonInterface::setBadgeText(badgeText);
+}
+
+void QmlBrowserActionButton::setPopup(QQmlComponent *popup)
+{
+    m_popup = popup;
+}
+
+void QmlBrowserActionButton::positionPopup(ClickController *clickController)
 {
     if (!m_popup) {
         qWarning() << "No popup to show";
