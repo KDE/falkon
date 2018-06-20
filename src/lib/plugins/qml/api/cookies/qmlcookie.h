@@ -27,15 +27,47 @@
 class QmlCookie : public QObject
 {
     Q_OBJECT
+
+    /**
+     * @brief domain of the cookie
+     */
     Q_PROPERTY(QString domain READ domain CONSTANT)
+
+    /**
+     * @brief expiration date of the cookie
+     */
     Q_PROPERTY(QDateTime expirationDate READ expirationDate CONSTANT)
+
+    /**
+     * @brief name of the cookie
+     */
     Q_PROPERTY(QString name READ name CONSTANT)
+
+    /**
+     * @brief path of the cookie
+     */
     Q_PROPERTY(QString path READ path CONSTANT)
+
+    /**
+     * @brief checks if cookie is secure
+     */
     Q_PROPERTY(bool secure READ secure CONSTANT)
+
+    /**
+     * @brief checks if cookie is a session cookie
+     */
     Q_PROPERTY(bool session READ session CONSTANT)
+
+    /**
+     * @brief value of the cookie
+     */
     Q_PROPERTY(QString value READ value CONSTANT)
 public:
     explicit QmlCookie(QNetworkCookie *cookie = nullptr, QObject *parent = nullptr);
+
+private:
+    QNetworkCookie *m_cookie;
+
     QString domain() const;
     QDateTime expirationDate() const;
     QString name() const;
@@ -43,8 +75,6 @@ public:
     bool secure() const;
     bool session() const;
     QString value() const;
-private:
-    QNetworkCookie *m_cookie;
 };
 
 class QmlCookieData

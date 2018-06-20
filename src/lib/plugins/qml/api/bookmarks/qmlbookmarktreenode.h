@@ -24,14 +24,50 @@
 class QmlBookmarkTreeNode : public QObject
 {
     Q_OBJECT
+
+    /**
+     * @brief type of bookmark tree node.
+     */
     Q_PROPERTY(Type type READ type CONSTANT)
+
+    /**
+     * @brief title of bookmark tree node.
+     */
     Q_PROPERTY(QString title READ title CONSTANT)
+
+    /**
+     * @brief url of bookmark tree node.
+     */
     Q_PROPERTY(QString url READ url CONSTANT)
+
+    /**
+     * @brief description of bookmark tree node.
+     */
     Q_PROPERTY(QString description READ description CONSTANT)
+
+    /**
+     * @brief keyword of bookmark tree node.
+     */
     Q_PROPERTY(QString keyword READ keyword CONSTANT)
+
+    /**
+     * @brief visit count of bookmark tree node.
+     */
     Q_PROPERTY(int visitCount READ visitCount CONSTANT)
+
+    /**
+     * @brief parent of bookmark tree node.
+     */
     Q_PROPERTY(QmlBookmarkTreeNode* parent READ parent CONSTANT)
+
+    /**
+     * @brief checks if bookmark tree node is unmodifiable.
+     */
     Q_PROPERTY(bool unmodifiable READ unmodifiable CONSTANT)
+
+    /**
+     * @brief gets children of bookmark tree node.
+     */
     Q_PROPERTY(QList<QObject*> children READ children CONSTANT)
 
 public:
@@ -41,11 +77,11 @@ public:
      * Contains the information of the type of the bookmark item,
      */
     enum Type {
-        Root = BookmarkItem::Root,           //! Represents the root bookmark item
-        Url = BookmarkItem::Url,             //! Represents the single bookmark item of type url
-        Folder = BookmarkItem::Folder,       //! Represents the bookmark folder
-        Separator = BookmarkItem::Separator, //! Represents the bookmark seperator
-        Invalid = BookmarkItem::Invalid      //! Represents invalid bookmark item
+        Root = BookmarkItem::Root,           //!< Represents the root bookmark item
+        Url = BookmarkItem::Url,             //!< Represents the single bookmark item of type url
+        Folder = BookmarkItem::Folder,       //!< Represents the bookmark folder
+        Separator = BookmarkItem::Separator, //!< Represents the bookmark seperator
+        Invalid = BookmarkItem::Invalid      //!< Represents invalid bookmark item
     };
     Q_ENUMS(Type)
 
@@ -56,13 +92,14 @@ public:
     QString url() const;
     QString description() const;
     QString keyword() const;
+
+private:
+    BookmarkItem *m_item;
+
     int visitCount() const;
     QmlBookmarkTreeNode *parent() const;
     bool unmodifiable() const;
     QList<QObject*> children() const;
-
-private:
-    BookmarkItem *m_item;
 };
 
 class QmlBookmarkTreeNodeData

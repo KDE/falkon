@@ -27,38 +27,108 @@
 class QmlTab : public QObject
 {
     Q_OBJECT
+
+    /**
+     * @brief url of the tab
+     */
     Q_PROPERTY(QString url READ url CONSTANT)
+
+    /**
+     * @brief title of the tab
+     */
     Q_PROPERTY(QString title READ title CONSTANT)
+
+    /**
+     * @brief zoom level of the tab
+     *
+     * Zoom level will have the following values
+     * <table>
+     * <caption>Zoom Levels</caption>
+     * <tr><th>Zoom Level</th><th>Zoom Percentage</th></tr>
+     * <tr><td>0</td><td>30</td></tr>
+     * <tr><td>1</td><td>40</td></tr>
+     * <tr><td>2</td><td>50</td></tr>
+     * <tr><td>3</td><td>67</td></tr>
+     * <tr><td>4</td><td>80</td></tr>
+     * <tr><td>5</td><td>90</td></tr>
+     * <tr><td>6</td><td>100</td></tr>
+     * <tr><td>7</td><td>110</td></tr>
+     * <tr><td>8</td><td>120</td></tr>
+     * <tr><td>9</td><td>133</td></tr>
+     * <tr><td>10</td><td>150</td></tr>
+     * <tr><td>11</td><td>170</td></tr>
+     * <tr><td>12</td><td>200</td></tr>
+     * <tr><td>13</td><td>220</td></tr>
+     * <tr><td>14</td><td>233</td></tr>
+     * <tr><td>15</td><td>250</td></tr>
+     * <tr><td>16</td><td>270</td></tr>
+     * <tr><td>17</td><td>285</td></tr>
+     * <tr><td>18</td><td>300</td></tr>
+     * </table>
+     */
     Q_PROPERTY(int zoomLevel READ zoomLevel CONSTANT)
+
+    /**
+     * @brief index of the tab
+     */
     Q_PROPERTY(int index READ index CONSTANT)
+
+    /**
+     * @brief checks if the tab is pinned
+     */
     Q_PROPERTY(bool pinned READ pinned CONSTANT)
+
+    /**
+     * @brief checks if the tab is muted
+     */
     Q_PROPERTY(bool muted READ muted CONSTANT)
+
+    /**
+     * @brief checks if the tab is restored
+     */
     Q_PROPERTY(bool restored READ restored CONSTANT)
+
+    /**
+     * @brief checks if the tab is the current tab
+     */
     Q_PROPERTY(bool current READ current CONSTANT)
+
+    /**
+     * @brief checks if the tab is playing
+     */
     Q_PROPERTY(bool playing READ playing CONSTANT)
+
+    /**
+     * @brief window of the tab
+     */
     Q_PROPERTY(QmlWindow* browserWindow READ browserWindow CONSTANT)
+
+    /**
+     * @brief checks if the tab is loading
+     */
     Q_PROPERTY(bool loading READ loading CONSTANT)
+
+    /**
+     * @brief get the loading progress of the tab
+     */
     Q_PROPERTY(int loadingProgress READ loadingProgress CONSTANT)
+
+    /**
+     * @brief checks if the tab has associated background activity
+     */
     Q_PROPERTY(bool backgroundActivity READ backgroundActivity CONSTANT)
+
+    /**
+     * @brief checks if the tab is can go back
+     */
     Q_PROPERTY(bool canGoBack READ canGoBack CONSTANT)
+
+    /**
+     * @brief checks if the tab is can go forward
+     */
     Q_PROPERTY(bool canGoForward READ canGoForward CONSTANT)
 public:
     explicit QmlTab(WebTab *webTab = nullptr, QObject *parent = nullptr);
-    QString url() const;
-    QString title() const;
-    int zoomLevel() const;
-    int index() const;
-    bool pinned() const;
-    bool muted() const;
-    bool restored() const;
-    bool current() const;
-    bool playing() const;
-    QmlWindow *browserWindow() const;
-    bool loading() const;
-    int loadingProgress() const;
-    bool backgroundActivity() const;
-    bool canGoBack() const;
-    bool canGoForward() const;
 
     Q_INVOKABLE void detach();
     Q_INVOKABLE void setZoomLevel(int zoomLevel);
@@ -129,6 +199,22 @@ Q_SIGNALS:
     void backgroundActivityChanged(int backgroundActivityChanged);
 private:
     WebTab *m_webTab;
+
+    QString url() const;
+    QString title() const;
+    int zoomLevel() const;
+    int index() const;
+    bool pinned() const;
+    bool muted() const;
+    bool restored() const;
+    bool current() const;
+    bool playing() const;
+    QmlWindow *browserWindow() const;
+    bool loading() const;
+    int loadingProgress() const;
+    bool backgroundActivity() const;
+    bool canGoBack() const;
+    bool canGoForward() const;
 };
 
 class QmlTabData

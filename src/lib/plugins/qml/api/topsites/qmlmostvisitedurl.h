@@ -27,15 +27,25 @@
 class QmlMostVisitedUrl : public QObject
 {
     Q_OBJECT
+
+    /**
+     * @brief title of "most visited url" item
+     */
     Q_PROPERTY(QString title READ title CONSTANT)
+
+    /**
+     * @brief url of "most visited url" item
+     */
     Q_PROPERTY(QString url READ url CONSTANT)
 public:
     explicit QmlMostVisitedUrl(const QString &title = QString(), const QString &url = QString(), QObject *parent = nullptr);
-    QString title() const;
-    QString url() const;
+
 private:
     QString m_title;
     QString m_url;
+
+    QString title() const;
+    QString url() const;
 };
 
 class QmlMostVisitedUrlData

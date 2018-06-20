@@ -26,10 +26,6 @@ QmlCookie::QmlCookie(QNetworkCookie *cookie, QObject *parent)
     QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
-/**
- * @brief Get the domain of the cookie
- * @return String representing the domain of the cookie
- */
 QString QmlCookie::domain() const
 {
     if (!m_cookie) {
@@ -38,10 +34,6 @@ QString QmlCookie::domain() const
     return m_cookie->domain();
 }
 
-/**
- * @brief Get expiration date of the cookie
- * @return expiration date of the cookie
- */
 QDateTime QmlCookie::expirationDate() const
 {
     if (!m_cookie) {
@@ -50,10 +42,6 @@ QDateTime QmlCookie::expirationDate() const
     return m_cookie->expirationDate();
 }
 
-/**
- * @brief Get the name of the cookie
- * @return String representing the name of the cookie
- */
 QString QmlCookie::name() const
 {
     if (!m_cookie) {
@@ -62,10 +50,6 @@ QString QmlCookie::name() const
     return QString(m_cookie->name());
 }
 
-/**
- * @brief Get the path of the cookie
- * @return String representing the path of the cookie
- */
 QString QmlCookie::path() const
 {
     if (!m_cookie) {
@@ -74,10 +58,6 @@ QString QmlCookie::path() const
     return m_cookie->path();
 }
 
-/**
- * @brief Checks if the cookie is secure
- * @return true if the cookie is secure, else false
- */
 bool QmlCookie::secure() const
 {
     if (!m_cookie) {
@@ -86,10 +66,6 @@ bool QmlCookie::secure() const
     return m_cookie->isSecure();
 }
 
-/**
- * @brief Checks if the cookie is a session cookie
- * @return true if the cookie is a session cookie, else false
- */
 bool QmlCookie::session() const
 {
     if (!m_cookie) {
@@ -98,10 +74,6 @@ bool QmlCookie::session() const
     return m_cookie->isSessionCookie();
 }
 
-/**
- * @brief Get the value of the cookie
- * @return String representing the value of the cookie
- */
 QString QmlCookie::value() const
 {
     if (!m_cookie) {

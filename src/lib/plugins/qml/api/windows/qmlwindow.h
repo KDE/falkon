@@ -28,17 +28,57 @@
 class QmlWindow : public QObject
 {
     Q_OBJECT
+
+    /**
+     * @brief id of window
+     */
     Q_PROPERTY(int id READ id CONSTANT)
+
+    /**
+     * @brief checks if the window is private
+     */
     Q_PROPERTY(bool incognito READ incognito CONSTANT)
+
+    /**
+     * @brief title of window
+     */
     Q_PROPERTY(QString title READ title CONSTANT)
+
+    /**
+     * @brief [window state](@ref QmlWindowState::WindowState) of window
+     */
     Q_PROPERTY(QmlWindowState::WindowState state READ state CONSTANT)
+
+    /**
+     * @brief [window type](@ref QmlWindowType::WindowType) of window
+     */
     Q_PROPERTY(QmlWindowType::WindowType type READ type CONSTANT)
+
+    /**
+     * @brief list of all tabs of window
+     */
     Q_PROPERTY(QList<QObject*> tabs READ tabs CONSTANT)
+
+    /**
+     * @brief checks if the window is focussed
+     */
     Q_PROPERTY(bool focussed READ focussed CONSTANT)
+
+    /**
+     * @brief height of window
+     */
     Q_PROPERTY(int height READ height CONSTANT)
+
+    /**
+     * @brief width of window
+     */
     Q_PROPERTY(int width READ width CONSTANT)
 public:
     QmlWindow(BrowserWindow *window = nullptr, QObject *parent = nullptr);
+
+private:
+    BrowserWindow *m_window;
+
     int id() const;
     bool incognito() const;
     QString title() const;
@@ -48,8 +88,6 @@ public:
     bool focussed() const;
     int height() const;
     int width() const;
-private:
-    BrowserWindow *m_window;
 };
 
 class QmlWindowData

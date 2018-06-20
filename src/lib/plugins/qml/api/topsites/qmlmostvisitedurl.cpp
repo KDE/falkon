@@ -26,19 +26,11 @@ QmlMostVisitedUrl::QmlMostVisitedUrl(const QString &title, const QString &url, Q
     QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
-/**
- * @brief Get the title of the MostVisitedUrl item
- * @return String representing the title
- */
 QString QmlMostVisitedUrl::title() const
 {
     return m_title;
 }
 
-/**
- * @brief Get the url of the MostVisitedUrl item
- * @return String representing the url
- */
 QString QmlMostVisitedUrl::url() const
 {
     return m_url;

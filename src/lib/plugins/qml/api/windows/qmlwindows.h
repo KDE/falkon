@@ -21,7 +21,7 @@
 #include "qmlwindow.h"
 
 /**
- * @brief The class exposing QmlWindow
+ * @brief The class exposing Windows API to QML
  */
 class QmlWindows : public QObject
 {

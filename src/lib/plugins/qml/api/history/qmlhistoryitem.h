@@ -26,20 +26,42 @@
 class QmlHistoryItem : public QObject
 {
     Q_OBJECT
+
+    /**
+     * @brief id of the history item
+     */
     Q_PROPERTY(int id READ id CONSTANT)
+
+    /**
+     * @brief url of the history item
+     */
     Q_PROPERTY(QString url READ url CONSTANT)
+
+    /**
+     * @brief title of the history item
+     */
     Q_PROPERTY(QString title READ title CONSTANT)
+
+    /**
+     * @brief visit count of the history item
+     */
     Q_PROPERTY(int visitCount READ visitCount CONSTANT)
+
+    /**
+     * @brief last visit time of the history item
+     */
     Q_PROPERTY(QDateTime lastVisitTime READ lastVisitTime CONSTANT)
 public:
     explicit QmlHistoryItem(HistoryEntry *entry = nullptr, QObject *parent = nullptr);
+
+private:
+    HistoryEntry *m_entry;
+
     int id() const;
     QString url() const;
     QString title() const;
     int visitCount() const;
     QDateTime lastVisitTime() const;
-private:
-    HistoryEntry *m_entry;
 };
 
 class QmlHistoryItemData
