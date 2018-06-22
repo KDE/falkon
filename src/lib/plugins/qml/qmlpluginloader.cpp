@@ -27,6 +27,11 @@ QmlPluginLoader::QmlPluginLoader(const QString &path)
 void QmlPluginLoader::createComponent()
 {
     m_interface = qobject_cast<QmlPluginInterface*>(m_component->create());
+
+    if (!m_interface) {
+        return;
+    }
+
     m_interface->setEngine(m_engine);
     connect(m_interface, &QmlPluginInterface::qmlPluginUnloaded, this, [this]{
         delete m_component;

@@ -474,7 +474,7 @@ void Plugins::initQmlPlugin(Plugin *plugin)
 
     plugin->qmlPluginLoader->createComponent();
     if (!plugin->qmlPluginLoader->instance()) {
-        qWarning() << "Initializing" << name << "failed:" << plugin->qmlPluginLoader->component()->errorString();
+        qWarning().noquote() << "Falied to create component for" << name << "plugin:" << plugin->qmlPluginLoader->component()->errorString();
         return;
     }
 
