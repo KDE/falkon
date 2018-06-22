@@ -128,7 +128,7 @@ QWidget *QmlSideBarHelper::createSideBarWidget(BrowserWindow *mainWindow)
 {
     Q_UNUSED(mainWindow)
 
-    QQuickWindow *window = qobject_cast<QQuickWindow*>(m_item->create());
+    QQuickWindow *window = qobject_cast<QQuickWindow*>(m_item->create(m_item->creationContext()));
     if (!window) {
         qWarning() << "Unable to create QQuickWindow";
         return nullptr;

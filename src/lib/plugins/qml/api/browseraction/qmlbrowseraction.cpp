@@ -190,7 +190,7 @@ void QmlBrowserActionButton::positionPopup(ClickController *clickController)
         return;
     }
 
-    QQuickWindow *quickWindow = dynamic_cast<QQuickWindow*>(m_popup->create());
+    QQuickWindow *quickWindow = dynamic_cast<QQuickWindow*>(m_popup->create(m_popup->creationContext()));
     if (!quickWindow) {
         qWarning() << "Cannot create QQuickWindow from popup";
         return;

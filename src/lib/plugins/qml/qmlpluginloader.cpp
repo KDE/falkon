@@ -26,7 +26,7 @@ QmlPluginLoader::QmlPluginLoader(const QString &path)
 
 void QmlPluginLoader::createComponent()
 {
-    m_interface = qobject_cast<QmlPluginInterface*>(m_component->create());
+    m_interface = qobject_cast<QmlPluginInterface*>(m_component->create(m_component->creationContext()));
 
     if (!m_interface) {
         return;
