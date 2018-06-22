@@ -187,10 +187,18 @@ void SearchEnginesManager::restoreDefaults()
     google.shortcut = "g";
     google.suggestionsUrl = "https://suggestqueries.google.com/complete/search?output=firefox&q=%s";
 
+    Engine bing;
+    bing.name = "Bing";
+    bing.icon = QIcon(":icons/sites/bing.png");
+    bing.url = "https://www.bing.com/search?q=%s";
+    bing.shortcut = "b";
+    bing.suggestionsUrl = "https://www.bing.com/osjson.aspx?query=%s";
+
     addEngine(duck);
     addEngine(sp);
     addEngine(wiki);
     addEngine(google);
+    addEngine(bing);
 
     m_defaultEngine = duck;
 
