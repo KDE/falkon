@@ -15,38 +15,23 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "qmlpluginloader.h"
+#pragma once
 
-QmlPluginLoader::QmlPluginLoader(const QString &path)
-{
-    m_path = path;
-    m_engine = new QQmlEngine();
-    m_component = new QQmlComponent(m_engine, m_path);
-}
+#include "qmlaction.h"
+#include <QMenu>
 
-void QmlPluginLoader::createComponent()
+class QmlMenu : public QObject
 {
-    m_interface = qobject_cast<QmlPluginInterface*>(m_component->create());
-    m_interface->setEngine(m_engine);
-    connect(m_interface, &QmlPluginInterface::qmlPluginUnloaded, this, [this]{
-        delete m_component;
-        delete m_engine;
-        m_engine = new QQmlEngine();
-        m_component = new QQmlComponent(m_engine, m_path);
-    });
-}
+    Q_OBJECT
+public:
+    explicit QmlMenu(QMenu *menu, QObject *parent = nullptr);
+    Q_INVOKABLE QmlAction *addAction(const QVariantMap &map);
+    Q_INVOKABLE QmlMenu *addMenu(const QVariantMap &map);
+    Q_INVOKABLE void addSeparator();
 
-QQmlComponent *QmlPluginLoader::component() const
-{
-    return m_component;
-}
+Q_SIGNALS:
+    void triggered();
 
-QmlPluginInterface *QmlPluginLoader::instance() const
-{
-    return m_interface;
-}
-
-void QmlPluginLoader::setName(const QString &name)
-{
-    m_interface->setName(name);
-}
+private:
+    QMenu *m_menu;
+};

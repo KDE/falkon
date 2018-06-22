@@ -35,6 +35,9 @@
 #include "api/windows/qmlwindowtype.h"
 #include "api/browseraction/qmlbrowseraction.h"
 #include "api/sidebar/qmlsidebar.h"
+#include "api/menus/qmlmenu.h"
+#include "api/menus/qmlaction.h"
+#include "api/menus/qmlwebhittestresult.h"
 
 #include <QQmlEngine>
 
@@ -137,4 +140,13 @@ void QmlPlugins::registerQmlTypes()
 
     // SideBar
     qmlRegisterType<QmlSideBar>("org.kde.falkon", 1, 0, "SideBar");
+
+    // Menu
+    qmlRegisterUncreatableType<QmlMenu>("org.kde.falkon", 1, 0, "Menu", "Unable to register type: Menu");
+
+    // Action
+    qmlRegisterUncreatableType<QmlAction>("org.kde.falkon", 1, 0, "Action", "Unable to register type: Action");
+
+    // WebHitTestResult
+    qmlRegisterUncreatableType<QmlWebHitTestResult>("org.kde.falkon", 1, 0, "WebHitTestResult", "Unable to register type: WebHitTestResult");
 }

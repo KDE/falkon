@@ -30,11 +30,12 @@ class QmlPluginInterface : public QObject, public PluginInterface
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
     Q_ENUMS(InitState)
-    Q_PROPERTY(QJSValue init READ jsInit WRITE setJsInit)
-    Q_PROPERTY(QJSValue unload READ jsUnload WRITE setJsUnload)
-    Q_PROPERTY(QJSValue testPlugin READ jsTestPlugin WRITE setJsTestPlugin)
+    Q_PROPERTY(QJSValue init READ readInit WRITE setInit)
+    Q_PROPERTY(QJSValue unload READ readUnload WRITE setUnload)
+    Q_PROPERTY(QJSValue testPlugin READ readTestPlugin WRITE setTestPlugin)
     Q_PROPERTY(QmlBrowserAction* browserAction READ browserAction WRITE setBrowserAction)
     Q_PROPERTY(QmlSideBar* sideBar READ sideBar WRITE setSideBar)
+    Q_PROPERTY(QJSValue populateWebViewMenu READ readPopulateWebViewMenu WRITE setPopulateWebViewMenu)
 
 public:
     explicit QmlPluginInterface();
@@ -42,30 +43,35 @@ public:
     void init(InitState state, const QString &settingsPath);
     void unload();
     bool testPlugin();
+    void setEngine(QQmlEngine *engine);
     void setName(const QString &name);
+    void populateWebViewMenu(QMenu *menu, WebView *webview, const WebHitTestResult &webHitTestResult) override;
 
 Q_SIGNALS:
     void qmlPluginUnloaded();
 
 private:
+    QQmlEngine *m_engine;
     QString m_name;
-    QJSValue m_jsInit;
-    QJSValue m_jsUnload;
-    QJSValue m_jsTestPlugin;
+    QJSValue m_init;
+    QJSValue m_unload;
+    QJSValue m_testPlugin;
     QmlBrowserAction *m_browserAction;
     QmlSideBar *m_sideBar;
-    bool loaded;
+    QJSValue m_populateWebViewMenu;
 
-    QJSValue jsInit() const;
-    void setJsInit(const QJSValue &init);
-    QJSValue jsUnload() const;
-    void setJsUnload(const QJSValue &unload);
-    QJSValue jsTestPlugin() const;
-    void setJsTestPlugin(const QJSValue &testPlugin);
+    QJSValue readInit() const;
+    void setInit(const QJSValue &init);
+    QJSValue readUnload() const;
+    void setUnload(const QJSValue &unload);
+    QJSValue readTestPlugin() const;
+    void setTestPlugin(const QJSValue &testPlugin);
     QmlBrowserAction *browserAction() const;
     void setBrowserAction(QmlBrowserAction *browserAction);
     QmlSideBar *sideBar() const;
     void setSideBar(QmlSideBar *sideBar);
+    QJSValue readPopulateWebViewMenu() const;
+    void setPopulateWebViewMenu(const QJSValue &value);
 
     void addButton(BrowserWindow *window);
     void removeButton(BrowserWindow *window);

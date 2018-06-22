@@ -15,38 +15,36 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "qmlpluginloader.h"
+#include "qmlaction.h"
+#include "qztools.h"
 
-QmlPluginLoader::QmlPluginLoader(const QString &path)
+QmlAction::QmlAction(QAction *action, QObject *parent)
+    : QObject(parent)
+    , m_action(action)
 {
-    m_path = path;
-    m_engine = new QQmlEngine();
-    m_component = new QQmlComponent(m_engine, m_path);
+    connect(m_action, &QAction::triggered, this, &QmlAction::triggered);
 }
 
-void QmlPluginLoader::createComponent()
+void QmlAction::setProperties(const QVariantMap &map)
 {
-    m_interface = qobject_cast<QmlPluginInterface*>(m_component->create());
-    m_interface->setEngine(m_engine);
-    connect(m_interface, &QmlPluginInterface::qmlPluginUnloaded, this, [this]{
-        delete m_component;
-        delete m_engine;
-        m_engine = new QQmlEngine();
-        m_component = new QQmlComponent(m_engine, m_path);
-    });
+    if (!m_action) {
+        return;
+    }
+
+    for (const QString &key : map.keys()) {
+        if (key == QSL("icon")) {
+            QUrl url = map.value(key).toUrl();
+            QIcon icon(QzTools::getPathFromUrl(url));
+            m_action->setIcon(icon);
+        } else if (key == QSL("shortcut")) {
+            m_action->setShortcut(QKeySequence(map.value(key).toString()));
+        } else {
+            m_action->setProperty(key.toUtf8(), map.value(key));
+        }
+    }
 }
 
-QQmlComponent *QmlPluginLoader::component() const
+void  QmlAction::update(const QVariantMap &map)
 {
-    return m_component;
-}
-
-QmlPluginInterface *QmlPluginLoader::instance() const
-{
-    return m_interface;
-}
-
-void QmlPluginLoader::setName(const QString &name)
-{
-    m_interface->setName(name);
+    setProperties(map);
 }

@@ -15,38 +15,26 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "qmlpluginloader.h"
+#pragma once
 
-QmlPluginLoader::QmlPluginLoader(const QString &path)
-{
-    m_path = path;
-    m_engine = new QQmlEngine();
-    m_component = new QQmlComponent(m_engine, m_path);
-}
+#include "webhittestresult.h"
+#include <QObject>
 
-void QmlPluginLoader::createComponent()
+class QmlWebHitTestResult : public QObject
 {
-    m_interface = qobject_cast<QmlPluginInterface*>(m_component->create());
-    m_interface->setEngine(m_engine);
-    connect(m_interface, &QmlPluginInterface::qmlPluginUnloaded, this, [this]{
-        delete m_component;
-        delete m_engine;
-        m_engine = new QQmlEngine();
-        m_component = new QQmlComponent(m_engine, m_path);
-    });
-}
+    Q_OBJECT
+public:
+    explicit QmlWebHitTestResult(const WebHitTestResult &webHitTestResult, QObject *parent = nullptr);
+    Q_INVOKABLE bool isImage() const;
+    Q_INVOKABLE bool isContentEditable() const;
+    Q_INVOKABLE bool isContentSelected() const;
+    Q_INVOKABLE bool isNull() const;
+    Q_INVOKABLE bool isLink() const;
+    Q_INVOKABLE bool isMedia() const;
+    Q_INVOKABLE bool mediaPaused() const;
+    Q_INVOKABLE bool mediaMuted() const;
+    Q_INVOKABLE QString tagName() const;
 
-QQmlComponent *QmlPluginLoader::component() const
-{
-    return m_component;
-}
-
-QmlPluginInterface *QmlPluginLoader::instance() const
-{
-    return m_interface;
-}
-
-void QmlPluginLoader::setName(const QString &name)
-{
-    m_interface->setName(name);
-}
+private:
+    WebHitTestResult m_webHitTestResult;
+};

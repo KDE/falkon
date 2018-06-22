@@ -22,6 +22,8 @@
 #include "browserwindow.h"
 #include "navigationbar.h"
 #include "sidebar.h"
+#include "api/menus/qmlmenu.h"
+#include "api/menus/qmlwebhittestresult.h"
 #include <QDebug>
 
 QmlPluginInterface::QmlPluginInterface()
@@ -32,7 +34,7 @@ QmlPluginInterface::QmlPluginInterface()
 
 void QmlPluginInterface::init(InitState state, const QString &settingsPath)
 {
-    if (!m_jsInit.isCallable()) {
+    if (!m_init.isCallable()) {
         qWarning() << "Unable to call" << __FUNCTION__ << "on" << m_name << "plugin";
         return;
     }
@@ -40,7 +42,7 @@ void QmlPluginInterface::init(InitState state, const QString &settingsPath)
     QJSValueList args;
     args.append(state);
     args.append(settingsPath);
-    m_jsInit.call(args);
+    m_init.call(args);
 
     if (m_browserAction) {
         for (BrowserWindow *window : mApp->windows()) {
@@ -62,12 +64,12 @@ DesktopFile QmlPluginInterface::metaData() const
 
 void QmlPluginInterface::unload()
 {
-    if (!m_jsUnload.isCallable()) {
+    if (!m_unload.isCallable()) {
         qWarning() << "Unable to call" << __FUNCTION__ << "on" << m_name << "plugin";
         return;
     }
 
-    m_jsUnload.call();
+    m_unload.call();
 
     if (m_browserAction) {
         for (BrowserWindow *window : mApp->windows()) {
@@ -86,43 +88,69 @@ void QmlPluginInterface::unload()
 
 bool QmlPluginInterface::testPlugin()
 {
-    if (!m_jsTestPlugin.isCallable()) {
+    if (!m_testPlugin.isCallable()) {
         qWarning() << "Unable to call" << __FUNCTION__ << "on" << m_name << "plugin";
         return false;
     }
 
-    QJSValue ret = m_jsTestPlugin.call();
+    QJSValue ret = m_testPlugin.call();
     return ret.toBool();
 }
 
-QJSValue QmlPluginInterface::jsInit() const
+void QmlPluginInterface::populateWebViewMenu(QMenu *menu, WebView *webview, const WebHitTestResult &webHitTestResult)
 {
-    return m_jsInit;
+    Q_UNUSED(webview)
+
+    if (!m_populateWebViewMenu.isCallable()) {
+        return;
+    }
+
+    QmlMenu *qmlMenu = new QmlMenu(menu);
+    QmlWebHitTestResult *qmlWebHitTestResult = new QmlWebHitTestResult(webHitTestResult);
+
+    QJSValueList args;
+    args.append(m_engine->newQObject(qmlMenu));
+    args.append(m_engine->newQObject(qmlWebHitTestResult));
+    m_populateWebViewMenu.call(args);
+    menu->addSeparator();
+
+    qmlMenu->deleteLater();
+    qmlWebHitTestResult->deleteLater();
 }
 
-void QmlPluginInterface::setJsInit(const QJSValue &init)
+QJSValue QmlPluginInterface::readInit() const
 {
-    m_jsInit = init;
+    return m_init;
 }
 
-QJSValue QmlPluginInterface::jsUnload() const
+void QmlPluginInterface::setInit(const QJSValue &init)
 {
-    return m_jsUnload;
+    m_init = init;
 }
 
-void QmlPluginInterface::setJsUnload(const QJSValue &unload)
+QJSValue QmlPluginInterface::readUnload() const
 {
-    m_jsUnload = unload;
+    return m_unload;
 }
 
-QJSValue QmlPluginInterface::jsTestPlugin() const
+void QmlPluginInterface::setUnload(const QJSValue &unload)
 {
-    return m_jsTestPlugin;
+    m_unload = unload;
 }
 
-void QmlPluginInterface::setJsTestPlugin(const QJSValue &testPlugin)
+QJSValue QmlPluginInterface::readTestPlugin() const
 {
-    m_jsTestPlugin = testPlugin;
+    return m_testPlugin;
+}
+
+void QmlPluginInterface::setTestPlugin(const QJSValue &testPlugin)
+{
+    m_testPlugin = testPlugin;
+}
+
+void QmlPluginInterface::setEngine(QQmlEngine *engine)
+{
+    m_engine = engine;
 }
 
 void QmlPluginInterface::setName(const QString &name)
@@ -148,6 +176,16 @@ QmlSideBar *QmlPluginInterface::sideBar() const
 void QmlPluginInterface::setSideBar(QmlSideBar *sideBar)
 {
     m_sideBar = sideBar;
+}
+
+QJSValue QmlPluginInterface::readPopulateWebViewMenu() const
+{
+    return m_populateWebViewMenu;
+}
+
+void QmlPluginInterface::setPopulateWebViewMenu(const QJSValue &value)
+{
+    m_populateWebViewMenu = value;
 }
 
 void QmlPluginInterface::addButton(BrowserWindow *window)
