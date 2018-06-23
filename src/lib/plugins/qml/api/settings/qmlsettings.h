@@ -20,9 +20,17 @@
 #include <QObject>
 #include <QSettings>
 
+/**
+ * @brief The class exposing Settings API to QML
+ */
 class QmlSettings : public QObject
 {
     Q_OBJECT
+
+    /**
+     * @brief name of the folder in which settings.ini file is located
+     *        on the standard extension path.
+     */
     Q_PROPERTY(QString name READ name WRITE setName)
 
 public:
