@@ -20,6 +20,9 @@
 #include "qmlaction.h"
 #include <QMenu>
 
+/**
+ * @brief The class exposing WebView contextmenu to QML as Menu API
+ */
 class QmlMenu : public QObject
 {
     Q_OBJECT
@@ -30,6 +33,9 @@ public:
     Q_INVOKABLE void addSeparator();
 
 Q_SIGNALS:
+    /**
+     * @brief This signal is emitted when the menu is triggred
+     */
     void triggered();
 
 private:

@@ -25,46 +25,82 @@ QmlWebHitTestResult::QmlWebHitTestResult(const WebHitTestResult &webHitTestResul
 {
 }
 
+/**
+ * @brief Checks if the context menu is requested on image.
+ * @return true if image, else false
+ */
 bool QmlWebHitTestResult::isImage() const
 {
     return NOT m_webHitTestResult.imageUrl().isEmpty();
 }
 
+/**
+ * @brief Checks if the context menu is requested on editable content.
+ * @return true if the content is editable, else false
+ */
 bool QmlWebHitTestResult::isContentEditable() const
 {
     return m_webHitTestResult.isContentEditable();
 }
 
+/**
+ * @brief Checks if the context menu is requested on the selected content.
+ * @return true if content is selected, else false.
+ */
 bool QmlWebHitTestResult::isContentSelected() const
 {
     return m_webHitTestResult.isContentSelected();
 }
 
+/**
+ * @brief Checks if the context menu is requested on null element.
+ * @return true if the element is null, else false
+ */
 bool QmlWebHitTestResult::isNull() const
 {
     return m_webHitTestResult.isNull();
 }
 
+/**
+ * @brief Checks if the context menu is requested on a link.
+ * @return true if the element is link, else false
+ */
 bool QmlWebHitTestResult::isLink() const
 {
     return NOT m_webHitTestResult.linkUrl().isEmpty();
 }
 
+/**
+ * @brief Checks if the context menu is requested on a media element.
+ * @return true if the element is media, else false
+ */
 bool QmlWebHitTestResult::isMedia() const
 {
     return NOT m_webHitTestResult.mediaUrl().isEmpty();
 }
 
+/**
+ * @brief Checks if the context menu requested on media element is paused.
+ * @return true if media is paused, else false
+ */
 bool QmlWebHitTestResult::mediaPaused() const
 {
     return m_webHitTestResult.mediaPaused();
 }
 
+/**
+ * @brief Checks if the context menu requested on media element is muted.
+ * @return true if media is muted, else false
+ */
 bool QmlWebHitTestResult::mediaMuted() const
 {
     return m_webHitTestResult.mediaMuted();
 }
 
+/**
+ * @brief Gets the tagName of the element on which the contex menu is requested.
+ * @return String representing the tag name of the element
+ */
 QString QmlWebHitTestResult::tagName() const
 {
     return m_webHitTestResult.tagName();

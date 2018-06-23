@@ -21,6 +21,9 @@
 #include <QAction>
 #include <QVariantMap>
 
+/**
+ * @brief The class exposing Action API to QML
+ */
 class QmlAction : public QObject
 {
     Q_OBJECT
@@ -30,6 +33,9 @@ public:
     Q_INVOKABLE void update(const QVariantMap &map);
 
 Q_SIGNALS:
+    /**
+     * @brief This signal is emitted when the action is triggered.
+     */
     void triggered();
 
 private:

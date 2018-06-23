@@ -20,6 +20,9 @@
 #include "webhittestresult.h"
 #include <QObject>
 
+/**
+ * @brief The class exposing result of WebHitTest to QML
+ */
 class QmlWebHitTestResult : public QObject
 {
     Q_OBJECT

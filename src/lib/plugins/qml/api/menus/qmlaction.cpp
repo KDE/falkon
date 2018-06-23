@@ -44,6 +44,10 @@ void QmlAction::setProperties(const QVariantMap &map)
     }
 }
 
+/**
+ * @brief Updates the properties of the action
+ * @param A JavaScript object containing the updated properties of the action.
+ */
 void  QmlAction::update(const QVariantMap &map)
 {
     setProperties(map);
