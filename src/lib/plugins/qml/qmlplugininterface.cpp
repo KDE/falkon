@@ -117,9 +117,6 @@ void QmlPluginInterface::populateWebViewMenu(QMenu *menu, WebView *webview, cons
     args.append(m_engine->newQObject(qmlWebHitTestResult));
     m_populateWebViewMenu.call(args);
     menu->addSeparator();
-
-    qmlMenu->deleteLater();
-    qmlWebHitTestResult->deleteLater();
 }
 
 void QmlPluginInterface::showSettings(QWidget *parent)
@@ -139,6 +136,7 @@ void QmlPluginInterface::showSettings(QWidget *parent)
     QDialog *dialog = new QDialog(parent);
     QVBoxLayout *boxLayout = new QVBoxLayout;
     boxLayout->addWidget(widget);
+    boxLayout->setContentsMargins(0 ,0 ,0 ,0);
     dialog->setLayout(boxLayout);
     dialog->setFixedSize(window->size());
     dialog->exec();

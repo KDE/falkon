@@ -79,4 +79,81 @@ Falkon.PluginInterface {
             }
         }
     }
+    
+    populateWebViewMenu: function(menu, webHitTestResult) {
+        var text = 'My first qml plugin action'
+        var action = menu.addAction({
+            text: text,
+            icon: Qt.resolvedUrl('qrc:/icons/preferences/extensions.svg')
+        })
+        
+        if (webHitTestResult.isImage()) {
+            action.update({
+                text: text + " on image"
+            })
+        } else if (webHitTestResult.isLink()) {
+            action.update({
+                text: text + " on link"
+            })
+        } else if (webHitTestResult.isContentEditable()) {
+            action.update({
+                text: text + " on input"
+            })
+        }
+        
+        action.triggered.connect(function() {
+            Falkon.Notifications.create({
+                heading: 'Hello QML',
+                message: 'First qml plugin action works :-)',
+                icon: Qt.resolvedUrl('qrc:/icons/preferences/extensions.svg')
+            })
+        })
+    }
+    
+    Falkon.Settings {
+        id: settings
+        name: 'HelloQML'
+    }
+    
+    settingsWindow: Window {
+        id: window
+        width: 256
+        height: 200
+        Image {
+            id: image
+            source: Qt.resolvedUrl('qrc:/icons/other/about.svg')
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+        }
+        TextField {
+            id: textField
+            text: settings.value({key: 'text'})
+            placeholderText: 'Enter text to save'
+            width: 256
+            height: 50
+            anchors.top: image.bottom
+            onTextChanged: function() {
+                button.text = 'Save'
+            }
+        }
+        Button {
+            id: button
+            text: 'Save'
+            width: 256
+            height: 50
+            anchors.top: textField.bottom
+            onClicked: function() {
+                var res = settings.setValue({
+                    key: 'text',
+                    value: textField.text
+                })
+                if (res) {
+                    button.text = 'Saved!'
+                } else {
+                    button.text = 'Error occurred, try again!'
+                }
+            }
+        }
+    }
 }

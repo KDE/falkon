@@ -17,11 +17,14 @@
 * ============================================================ */
 #include "qmlmenu.h"
 #include "qztools.h"
+#include <QQmlEngine>
 
 QmlMenu::QmlMenu(QMenu *menu, QObject *parent)
     : QObject(parent)
     , m_menu(menu)
 {
+    QQmlEngine::setObjectOwnership(this, QQmlEngine::JavaScriptOwnership);
+
     connect(m_menu, &QMenu::triggered, this, &QmlMenu::triggered);
 }
 

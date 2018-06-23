@@ -16,6 +16,7 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmlwebhittestresult.h"
+#include <QQmlEngine>
 
 #define NOT !
 
@@ -23,6 +24,7 @@ QmlWebHitTestResult::QmlWebHitTestResult(const WebHitTestResult &webHitTestResul
     : QObject(parent)
     , m_webHitTestResult(webHitTestResult)
 {
+    QQmlEngine::setObjectOwnership(this, QQmlEngine::JavaScriptOwnership);
 }
 
 /**
