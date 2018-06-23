@@ -188,6 +188,11 @@ void QmlPluginInterface::setPopulateWebViewMenu(const QJSValue &value)
     m_populateWebViewMenu = value;
 }
 
+QQmlListProperty<QObject> QmlPluginInterface::childItems()
+{
+    return QQmlListProperty<QObject>(this, m_childItems);
+}
+
 void QmlPluginInterface::addButton(BrowserWindow *window)
 {
     if (m_browserAction->location().testFlag(QmlBrowserAction::NavigationToolBar)) {
