@@ -98,10 +98,77 @@ bool QmlWebHitTestResult::mediaMuted() const
 }
 
 /**
- * @brief Gets the tagName of the element on which the contex menu is requested.
+ * @brief Gets the tagName of the element on which the context menu is requested.
  * @return String representing the tag name of the element
  */
 QString QmlWebHitTestResult::tagName() const
 {
     return m_webHitTestResult.tagName();
+}
+
+/**
+ * @brief Gets the base url on which the context menu is requested.
+ * @return String representing the base url
+ */
+QString QmlWebHitTestResult::baseUrl() const
+{
+    QUrl base = m_webHitTestResult.baseUrl();
+    return QString::fromUtf8(base.toEncoded());
+}
+
+/**
+ * @brief Gets the link title on which the context menu is requested.
+ * @return String representing the link title
+ */
+QString QmlWebHitTestResult::linkTitle() const
+{
+    return m_webHitTestResult.linkTitle();
+}
+
+/**
+ * @brief Gets the link url on which the context menu is requested.
+ * @return String representing the link url
+ */
+QString QmlWebHitTestResult::linkUrl() const
+{
+    QUrl link = m_webHitTestResult.linkUrl();
+    return QString::fromUtf8(link.toEncoded());
+}
+
+/**
+ * @brief Gets the url of image on which the context menu is requested.
+ * @return String representing the image url
+ */
+QString QmlWebHitTestResult::imageUrl() const
+{
+    QUrl image = m_webHitTestResult.imageUrl();
+    return QString::fromUtf8(image.toEncoded());
+}
+
+/**
+ * @brief Gets the url of media on which the context menu is requested.
+ * @return String representing the media url
+ */
+QString QmlWebHitTestResult::mediaUrl() const
+{
+    QUrl media = m_webHitTestResult.mediaUrl();
+    return QString::fromUtf8(media.toEncoded());
+}
+
+/**
+ * @brief Gets the position at which the context menu is requested.
+ * @return QPoint representing the position
+ */
+QPoint QmlWebHitTestResult::pos() const
+{
+    return m_webHitTestResult.pos();
+}
+
+/**
+ * @brief Gets the viewport position at which the context menu is requested.
+ * @return QPoint representing the viewport position
+ */
+QPointF QmlWebHitTestResult::viewportPos() const
+{
+    return m_webHitTestResult.viewportPos();
 }

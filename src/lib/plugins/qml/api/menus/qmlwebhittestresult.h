@@ -37,6 +37,13 @@ public:
     Q_INVOKABLE bool mediaPaused() const;
     Q_INVOKABLE bool mediaMuted() const;
     Q_INVOKABLE QString tagName() const;
+    Q_INVOKABLE QString baseUrl() const;
+    Q_INVOKABLE QString linkTitle() const;
+    Q_INVOKABLE QString linkUrl() const;
+    Q_INVOKABLE QString imageUrl() const;
+    Q_INVOKABLE QString mediaUrl() const;
+    Q_INVOKABLE QPoint pos() const;
+    Q_INVOKABLE QPointF viewportPos() const;
 
 private:
     WebHitTestResult m_webHitTestResult;
