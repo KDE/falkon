@@ -25,10 +25,14 @@
 #include "api/menus/qmlmenu.h"
 #include "api/menus/qmlwebhittestresult.h"
 #include <QDebug>
+#include <QQuickWindow>
+#include <QDialog>
+#include <QVBoxLayout>
 
 QmlPluginInterface::QmlPluginInterface()
     : m_browserAction(nullptr)
     , m_sideBar(nullptr)
+    , m_settingsWindow(nullptr)
 {
 }
 
@@ -118,6 +122,29 @@ void QmlPluginInterface::populateWebViewMenu(QMenu *menu, WebView *webview, cons
     qmlWebHitTestResult->deleteLater();
 }
 
+void QmlPluginInterface::showSettings(QWidget *parent)
+{
+    if (!m_settingsWindow) {
+        qWarning() << "No dialog to show";
+        return;
+    }
+
+    QQuickWindow *window = qobject_cast<QQuickWindow*>(m_settingsWindow->create(m_settingsWindow->creationContext()));
+    if (!window) {
+        qWarning() << "Unable to created window";
+        return;
+    }
+
+    QWidget *widget = QWidget::createWindowContainer(window);
+    QDialog *dialog = new QDialog(parent);
+    QVBoxLayout *boxLayout = new QVBoxLayout;
+    boxLayout->addWidget(widget);
+    dialog->setLayout(boxLayout);
+    dialog->setFixedSize(window->size());
+    dialog->exec();
+    window->destroy();
+}
+
 QJSValue QmlPluginInterface::readInit() const
 {
     return m_init;
@@ -186,6 +213,16 @@ QJSValue QmlPluginInterface::readPopulateWebViewMenu() const
 void QmlPluginInterface::setPopulateWebViewMenu(const QJSValue &value)
 {
     m_populateWebViewMenu = value;
+}
+
+QQmlComponent *QmlPluginInterface::settingsWindow() const
+{
+    return m_settingsWindow;
+}
+
+void QmlPluginInterface::setSettingsWindow(QQmlComponent *settingsWindow)
+{
+    m_settingsWindow = settingsWindow;
 }
 
 QQmlListProperty<QObject> QmlPluginInterface::childItems()

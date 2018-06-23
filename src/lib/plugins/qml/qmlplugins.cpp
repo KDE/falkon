@@ -38,6 +38,7 @@
 #include "api/menus/qmlmenu.h"
 #include "api/menus/qmlaction.h"
 #include "api/menus/qmlwebhittestresult.h"
+#include "api/settings/qmlsettings.h"
 
 #include <QQmlEngine>
 
@@ -149,4 +150,7 @@ void QmlPlugins::registerQmlTypes()
 
     // WebHitTestResult
     qmlRegisterUncreatableType<QmlWebHitTestResult>("org.kde.falkon", 1, 0, "WebHitTestResult", "Unable to register type: WebHitTestResult");
+
+    // Settings
+    qmlRegisterType<QmlSettings>("org.kde.falkon", 1, 0, "Settings");
 }

@@ -36,6 +36,7 @@ class QmlPluginInterface : public QObject, public PluginInterface
     Q_PROPERTY(QmlBrowserAction* browserAction READ browserAction WRITE setBrowserAction)
     Q_PROPERTY(QmlSideBar* sideBar READ sideBar WRITE setSideBar)
     Q_PROPERTY(QJSValue populateWebViewMenu READ readPopulateWebViewMenu WRITE setPopulateWebViewMenu)
+    Q_PROPERTY(QQmlComponent* settingsWindow READ settingsWindow WRITE setSettingsWindow)
     Q_PROPERTY(QQmlListProperty<QObject> childItems READ childItems)
     Q_CLASSINFO("DefaultProperty", "childItems")
 
@@ -48,6 +49,7 @@ public:
     void setEngine(QQmlEngine *engine);
     void setName(const QString &name);
     void populateWebViewMenu(QMenu *menu, WebView *webview, const WebHitTestResult &webHitTestResult) override;
+    void showSettings(QWidget *parent = 0);
 
 Q_SIGNALS:
     void qmlPluginUnloaded();
@@ -61,6 +63,7 @@ private:
     QmlBrowserAction *m_browserAction;
     QmlSideBar *m_sideBar;
     QJSValue m_populateWebViewMenu;
+    QQmlComponent *m_settingsWindow;
     QList<QObject*> m_childItems;
 
     QJSValue readInit() const;
@@ -75,6 +78,8 @@ private:
     void setSideBar(QmlSideBar *sideBar);
     QJSValue readPopulateWebViewMenu() const;
     void setPopulateWebViewMenu(const QJSValue &value);
+    QQmlComponent *settingsWindow() const;
+    void setSettingsWindow(QQmlComponent *settingsWindow);
     QQmlListProperty<QObject> childItems();
 
     void addButton(BrowserWindow *window);

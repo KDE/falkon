@@ -423,6 +423,8 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
         return false;
     }
 
+    // DataPaths::currentProfilePath() + QL1S("/extensions") is duplicated in qmlsettings.cpp
+    // If you change this, please change it there too.
     plugin->instance->init(state, DataPaths::currentProfilePath() + QL1S("/extensions"));
 
     if (!plugin->instance->testPlugin()) {

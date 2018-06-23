@@ -178,6 +178,7 @@ set(SRCS ${SRCS}
     plugins/qml/api/menus/qmlmenu.cpp
     plugins/qml/api/menus/qmlaction.cpp
     plugins/qml/api/menus/qmlwebhittestresult.cpp
+    plugins/qml/api/settings/qmlsettings.cpp
     popupwindow/popuplocationbar.cpp
     popupwindow/popupstatusbarmessage.cpp
     popupwindow/popupwebview.cpp
