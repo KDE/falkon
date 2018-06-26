@@ -39,6 +39,9 @@
 #include "api/menus/qmlaction.h"
 #include "api/menus/qmlwebhittestresult.h"
 #include "api/settings/qmlsettings.h"
+#include "api/events/qmlqzobjects.h"
+#include "api/events/qmlmouseevent.h"
+#include "api/events/qmlwheelevent.h"
 
 #include <QQmlEngine>
 
@@ -153,4 +156,13 @@ void QmlPlugins::registerQmlTypes()
 
     // Settings
     qmlRegisterType<QmlSettings>("org.kde.falkon", 1, 0, "Settings");
+
+    // Qz::Objects
+    qmlRegisterUncreatableType<QmlQzObjects>("org.kde.falkon", 1, 0, "QzObjects", "Unable to register type: QzObjects");
+
+    // MouseEvents
+    qmlRegisterUncreatableType<QmlMouseEvent>("org.kde.falkon", 1, 0, "MouseEvent", "Unable to register type: MouseEvent");
+
+    // WheelEvents
+    qmlRegisterUncreatableType<QmlWheelEvent>("org.kde.falkon", 1, 0, "WheelEvent", "Unable to register type: WheelEvent");
 }

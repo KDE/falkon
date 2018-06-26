@@ -24,6 +24,10 @@
 #include "sidebar.h"
 #include "api/menus/qmlmenu.h"
 #include "api/menus/qmlwebhittestresult.h"
+#include "api/events/qmlqzobjects.h"
+#include "api/events/qmlmouseevent.h"
+#include "api/events/qmlwheelevent.h"
+#include "api/events/qmlkeyevent.h"
 #include <QDebug>
 #include <QQuickWindow>
 #include <QDialog>
@@ -143,6 +147,104 @@ void QmlPluginInterface::showSettings(QWidget *parent)
     window->destroy();
 }
 
+bool QmlPluginInterface::mouseDoubleClick(Qz::ObjectName type, QObject *obj, QMouseEvent *event)
+{
+    Q_UNUSED(obj)
+    if (!m_mouseDoubleClick.isCallable()) {
+        qWarning() << "Unable to call" << __FUNCTION__;
+        return false;
+    }
+    QJSValueList args;
+    args.append(QmlQzObjects::ObjectName(type));
+    args.append(m_engine->newQObject(new QmlMouseEvent(event)));
+    m_mouseDoubleClick.call(args);
+    return false;
+}
+
+bool QmlPluginInterface::mousePress(Qz::ObjectName type, QObject *obj, QMouseEvent *event)
+{
+    Q_UNUSED(obj)
+    if (!m_mousePress.isCallable()) {
+        qWarning() << "Unable to call" << __FUNCTION__;
+        return false;
+    }
+    QJSValueList args;
+    args.append(QmlQzObjects::ObjectName(type));
+    args.append(m_engine->newQObject(new QmlMouseEvent(event)));
+    m_mousePress.call(args);
+    return false;
+}
+
+bool QmlPluginInterface::mouseRelease(Qz::ObjectName type, QObject *obj, QMouseEvent *event)
+{
+    Q_UNUSED(obj)
+    if (!m_mouseRelease.isCallable()) {
+        qWarning() << "Unable to call" << __FUNCTION__;
+        return false;
+    }
+    QJSValueList args;
+    args.append(QmlQzObjects::ObjectName(type));
+    args.append(m_engine->newQObject(new QmlMouseEvent(event)));
+    m_mouseRelease.call(args);
+    return false;
+}
+
+bool QmlPluginInterface::mouseMove(Qz::ObjectName type, QObject *obj, QMouseEvent *event)
+{
+    Q_UNUSED(obj)
+    if (!m_mouseMove.isCallable()) {
+        qWarning() << "Unable to call" << __FUNCTION__;
+        return false;
+    }
+    QJSValueList args;
+    args.append(QmlQzObjects::ObjectName(type));
+    args.append(m_engine->newQObject(new QmlMouseEvent(event)));
+    m_mouseMove.call(args);
+    return false;
+}
+
+bool QmlPluginInterface::wheelEvent(Qz::ObjectName type, QObject *obj, QWheelEvent *event)
+{
+    Q_UNUSED(obj)
+    if (!m_wheelEvent.isCallable()) {
+        qWarning() << "Unable to call" << __FUNCTION__;
+        return false;
+    }
+    QJSValueList args;
+    args.append(QmlQzObjects::ObjectName(type));
+    args.append(m_engine->newQObject(new QmlWheelEvent(event)));
+    m_wheelEvent.call(args);
+    return false;
+}
+
+bool QmlPluginInterface::keyPress(Qz::ObjectName type, QObject *obj, QKeyEvent *event)
+{
+    Q_UNUSED(obj)
+    if (!m_keyPress.isCallable()) {
+        qWarning() << "Unable to call" << __FUNCTION__;
+        return false;
+    }
+    QJSValueList args;
+    args.append(QmlQzObjects::ObjectName(type));
+    args.append(m_engine->newQObject(new QmlKeyEvent(event)));
+    m_keyPress.call(args);
+    return false;
+}
+
+bool QmlPluginInterface::keyRelease(Qz::ObjectName type, QObject *obj, QKeyEvent *event)
+{
+    Q_UNUSED(obj)
+    if (!m_keyRelease.isCallable()) {
+        qWarning() << "Unable to call" << __FUNCTION__;
+        return false;
+    }
+    QJSValueList args;
+    args.append(QmlQzObjects::ObjectName(type));
+    args.append(m_engine->newQObject(new QmlKeyEvent(event)));
+    m_keyRelease.call(args);
+    return false;
+}
+
 QJSValue QmlPluginInterface::readInit() const
 {
     return m_init;
@@ -221,6 +323,83 @@ QQmlComponent *QmlPluginInterface::settingsWindow() const
 void QmlPluginInterface::setSettingsWindow(QQmlComponent *settingsWindow)
 {
     m_settingsWindow = settingsWindow;
+}
+
+QJSValue QmlPluginInterface::readMouseDoubleClick() const
+{
+    return m_mouseDoubleClick;
+}
+
+void QmlPluginInterface::setMouseDoubleClick(const QJSValue &mouseDoubleClick)
+{
+    m_mouseDoubleClick = mouseDoubleClick;
+    mApp->plugins()->registerAppEventHandler(PluginProxy::MouseDoubleClickHandler, this);
+}
+
+QJSValue QmlPluginInterface::readMousePress() const
+{
+    return m_mousePress;
+}
+
+void QmlPluginInterface::setMousePress(const QJSValue &mousePress)
+{
+    m_mousePress = mousePress;
+    mApp->plugins()->registerAppEventHandler(PluginProxy::MousePressHandler, this);
+}
+
+QJSValue QmlPluginInterface::readMouseRelease() const
+{
+    return m_mouseRelease;
+}
+
+void QmlPluginInterface::setMouseRelease(const QJSValue &mouseRelease)
+{
+    m_mouseRelease = mouseRelease;
+    mApp->plugins()->registerAppEventHandler(PluginProxy::MouseReleaseHandler, this);
+}
+
+QJSValue QmlPluginInterface::readMouseMove() const
+{
+    return m_mouseMove;
+}
+
+void QmlPluginInterface::setMouseMove(const QJSValue &mouseMove)
+{
+    m_mouseMove = mouseMove;
+    mApp->plugins()->registerAppEventHandler(PluginProxy::MouseMoveHandler, this);
+}
+
+QJSValue QmlPluginInterface::readWheelEvent() const
+{
+    return m_wheelEvent;
+}
+
+void QmlPluginInterface::setWheelEvent(const QJSValue &wheelEvent)
+{
+    m_wheelEvent = wheelEvent;
+    mApp->plugins()->registerAppEventHandler(PluginProxy::WheelEventHandler, this);
+}
+
+QJSValue QmlPluginInterface::readKeyPress() const
+{
+    return m_keyPress;
+}
+
+void QmlPluginInterface::setKeyPress(const QJSValue &keyPress)
+{
+    m_keyPress = keyPress;
+    mApp->plugins()->registerAppEventHandler(PluginProxy::KeyPressHandler, this);
+}
+
+QJSValue QmlPluginInterface::readKeyRelease() const
+{
+    return m_keyRelease;
+}
+
+void QmlPluginInterface::setKeyRelease(const QJSValue &keyRelease)
+{
+    m_keyRelease = keyRelease;
+    mApp->plugins()->registerAppEventHandler(PluginProxy::KeyReleaseHandler, this);
 }
 
 QQmlListProperty<QObject> QmlPluginInterface::childItems()

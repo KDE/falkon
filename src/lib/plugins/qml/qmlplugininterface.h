@@ -37,6 +37,13 @@ class QmlPluginInterface : public QObject, public PluginInterface
     Q_PROPERTY(QmlSideBar* sideBar READ sideBar WRITE setSideBar)
     Q_PROPERTY(QJSValue populateWebViewMenu READ readPopulateWebViewMenu WRITE setPopulateWebViewMenu)
     Q_PROPERTY(QQmlComponent* settingsWindow READ settingsWindow WRITE setSettingsWindow)
+    Q_PROPERTY(QJSValue mouseDoubleClick READ readMouseDoubleClick WRITE setMouseDoubleClick)
+    Q_PROPERTY(QJSValue mousePress READ readMousePress WRITE setMousePress)
+    Q_PROPERTY(QJSValue mouseRelease READ readMouseRelease WRITE setMouseRelease)
+    Q_PROPERTY(QJSValue mouseMove READ readMouseMove WRITE setMouseMove)
+    Q_PROPERTY(QJSValue wheelEvent READ readWheelEvent WRITE setWheelEvent)
+    Q_PROPERTY(QJSValue keyPress READ readKeyPress WRITE setKeyPress)
+    Q_PROPERTY(QJSValue keyRelease READ readKeyRelease WRITE setKeyRelease)
     Q_PROPERTY(QQmlListProperty<QObject> childItems READ childItems)
     Q_CLASSINFO("DefaultProperty", "childItems")
 
@@ -51,6 +58,16 @@ public:
     void populateWebViewMenu(QMenu *menu, WebView *webview, const WebHitTestResult &webHitTestResult) override;
     void showSettings(QWidget *parent = 0);
 
+    bool mouseDoubleClick(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
+    bool mousePress(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
+    bool mouseRelease(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
+    bool mouseMove(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
+
+    bool wheelEvent(Qz::ObjectName type, QObject *obj, QWheelEvent *event) override;
+
+    bool keyPress(Qz::ObjectName type, QObject *obj, QKeyEvent *event) override;
+    bool keyRelease(Qz::ObjectName type, QObject *obj, QKeyEvent *event) override;
+
 Q_SIGNALS:
     void qmlPluginUnloaded();
 
@@ -64,6 +81,13 @@ private:
     QmlSideBar *m_sideBar;
     QJSValue m_populateWebViewMenu;
     QQmlComponent *m_settingsWindow;
+    QJSValue m_mouseDoubleClick;
+    QJSValue m_mousePress;
+    QJSValue m_mouseRelease;
+    QJSValue m_mouseMove;
+    QJSValue m_wheelEvent;
+    QJSValue m_keyPress;
+    QJSValue m_keyRelease;
     QList<QObject*> m_childItems;
 
     QJSValue readInit() const;
@@ -80,6 +104,20 @@ private:
     void setPopulateWebViewMenu(const QJSValue &value);
     QQmlComponent *settingsWindow() const;
     void setSettingsWindow(QQmlComponent *settingsWindow);
+    QJSValue readMouseDoubleClick() const;
+    void setMouseDoubleClick(const QJSValue &mouseDoubleClick);
+    QJSValue readMousePress() const;
+    void setMousePress(const QJSValue &mousePress);
+    QJSValue readMouseRelease() const;
+    void setMouseRelease(const QJSValue &mouseRelease);
+    QJSValue readMouseMove() const;
+    void setMouseMove(const QJSValue &mouseMove);
+    QJSValue readWheelEvent() const;
+    void setWheelEvent(const QJSValue &wheelEvent);
+    QJSValue readKeyPress() const;
+    void setKeyPress(const QJSValue &keyPress);
+    QJSValue readKeyRelease() const;
+    void setKeyRelease(const QJSValue &keyRelease);
     QQmlListProperty<QObject> childItems();
 
     void addButton(BrowserWindow *window);
