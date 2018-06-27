@@ -20,6 +20,9 @@
 #include <QObject>
 #include "webtab.h"
 #include "../windows/qmlwindow.h"
+#include <QJSValue>
+#include "qml/api/menus/qmlwebhittestresult.h"
+#include <QWebEnginePage>
 
 /**
  * @brief The class exposing a browser tab to QML
@@ -148,6 +151,10 @@ public:
     Q_INVOKABLE void printPage();
     Q_INVOKABLE void showSource();
     Q_INVOKABLE void sendPageByMail();
+    Q_INVOKABLE QVariant execJavaScript(const QJSValue &value);
+    Q_INVOKABLE QmlWebHitTestResult *hitTestContent(const QPoint &point);
+
+    void setWebPage(WebPage *webPage);
 
 Q_SIGNALS:
     /**
@@ -197,8 +204,18 @@ Q_SIGNALS:
      * @param Bool representing if there is background activity attached to the tab
      */
     void backgroundActivityChanged(int backgroundActivityChanged);
+
+    /**
+     * @brief The signal emitted when navigation request is accepted
+     * @param url, representing requested url
+     * @param type of navigation
+     * @param isMainFrame, represents if navigation is requested for a top level page.
+     */
+    void navigationRequestAccepted(const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame);
+
 private:
     WebTab *m_webTab;
+    WebPage *m_webPage;
 
     QString url() const;
     QString title() const;
@@ -215,6 +232,8 @@ private:
     bool backgroundActivity() const;
     bool canGoBack() const;
     bool canGoForward() const;
+
+    void createConnections();
 };
 
 class QmlTabData

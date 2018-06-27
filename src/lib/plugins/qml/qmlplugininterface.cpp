@@ -28,6 +28,8 @@
 #include "api/events/qmlmouseevent.h"
 #include "api/events/qmlwheelevent.h"
 #include "api/events/qmlkeyevent.h"
+#include "api/tabs/qmltab.h"
+#include "webpage.h"
 #include <QDebug>
 #include <QQuickWindow>
 #include <QDialog>
@@ -245,6 +247,21 @@ bool QmlPluginInterface::keyRelease(Qz::ObjectName type, QObject *obj, QKeyEvent
     return false;
 }
 
+bool QmlPluginInterface::acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame)
+{
+    if (!m_acceptNavigationRequest.isCallable()) {
+        return true;
+    }
+    QmlTab *qmlTab = new QmlTab();
+    qmlTab->setWebPage(page);
+    QJSValueList args;
+    args.append(m_engine->newQObject(qmlTab));
+    args.append(QString::fromUtf8(url.toEncoded()));
+    args.append(type);
+    args.append(isMainFrame);
+    return m_acceptNavigationRequest.call(args).toBool();
+}
+
 QJSValue QmlPluginInterface::readInit() const
 {
     return m_init;
@@ -400,6 +417,16 @@ void QmlPluginInterface::setKeyRelease(const QJSValue &keyRelease)
 {
     m_keyRelease = keyRelease;
     mApp->plugins()->registerAppEventHandler(PluginProxy::KeyReleaseHandler, this);
+}
+
+QJSValue QmlPluginInterface::readAcceptNavigationRequest() const
+{
+    return m_acceptNavigationRequest;
+}
+
+void QmlPluginInterface::setAcceptNavigationRequest(const QJSValue &acceptNavigationRequest)
+{
+    m_acceptNavigationRequest = acceptNavigationRequest;
 }
 
 QQmlListProperty<QObject> QmlPluginInterface::childItems()

@@ -44,6 +44,7 @@ class QmlPluginInterface : public QObject, public PluginInterface
     Q_PROPERTY(QJSValue wheelEvent READ readWheelEvent WRITE setWheelEvent)
     Q_PROPERTY(QJSValue keyPress READ readKeyPress WRITE setKeyPress)
     Q_PROPERTY(QJSValue keyRelease READ readKeyRelease WRITE setKeyRelease)
+    Q_PROPERTY(QJSValue acceptNavigationRequest READ readAcceptNavigationRequest WRITE setAcceptNavigationRequest)
     Q_PROPERTY(QQmlListProperty<QObject> childItems READ childItems)
     Q_CLASSINFO("DefaultProperty", "childItems")
 
@@ -68,6 +69,8 @@ public:
     bool keyPress(Qz::ObjectName type, QObject *obj, QKeyEvent *event) override;
     bool keyRelease(Qz::ObjectName type, QObject *obj, QKeyEvent *event) override;
 
+    bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;
+
 Q_SIGNALS:
     void qmlPluginUnloaded();
 
@@ -88,6 +91,7 @@ private:
     QJSValue m_wheelEvent;
     QJSValue m_keyPress;
     QJSValue m_keyRelease;
+    QJSValue m_acceptNavigationRequest;
     QList<QObject*> m_childItems;
 
     QJSValue readInit() const;
@@ -118,6 +122,8 @@ private:
     void setKeyPress(const QJSValue &keyPress);
     QJSValue readKeyRelease() const;
     void setKeyRelease(const QJSValue &keyRelease);
+    QJSValue readAcceptNavigationRequest() const;
+    void setAcceptNavigationRequest(const QJSValue &acceptNavigationRequest);
     QQmlListProperty<QObject> childItems();
 
     void addButton(BrowserWindow *window);

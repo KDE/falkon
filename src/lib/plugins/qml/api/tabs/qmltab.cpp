@@ -18,6 +18,7 @@
 #include "qmltab.h"
 #include "loadrequest.h"
 #include "tabbedwebview.h"
+#include "webpage.h"
 #include <QWebEngineHistory>
 #include <QQmlEngine>
 
@@ -26,35 +27,15 @@ Q_GLOBAL_STATIC(QmlWindowData, windowData)
 QmlTab::QmlTab(WebTab *webTab, QObject *parent)
     : QObject(parent)
     , m_webTab(webTab)
+    , m_webPage(nullptr)
 {
     QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 
-    connect(m_webTab, &WebTab::titleChanged, this, [this](const QString &title){
-        emit titleChanged(title);
-    });
+    if (!m_webTab) {
+        return;
+    }
 
-    connect(m_webTab, &WebTab::pinnedChanged, this, [this](bool pinned){
-        emit pinnedChanged(pinned);
-    });
-
-    connect(m_webTab, &WebTab::loadingChanged, this, [this](bool loading){
-        emit loadingChanged(loading);
-    });
-
-    connect(m_webTab, &WebTab::mutedChanged, this, [this](bool muted){
-        emit mutedChanged(muted);
-    });
-
-    connect(m_webTab, &WebTab::restoredChanged, this, [this](bool restored){
-        emit restoredChanged(restored);
-    });
-
-    connect(m_webTab, &WebTab::playingChanged, this, [this](bool playing){
-        emit playingChanged(playing);
-    });
-
-    connect(m_webTab->webView(), &TabbedWebView::zoomLevelChanged, this, &QmlTab::zoomLevelChanged);
-    connect(m_webTab->webView(), &TabbedWebView::backgroundActivityChanged, this, &QmlTab::backgroundActivityChanged);
+    createConnections();
 }
 
 /**
@@ -277,6 +258,41 @@ void QmlTab::sendPageByMail()
     m_webTab->webView()->sendPageByMail();
 }
 
+/**
+ * @brief execute JavaScript function in a page
+ * @param value, representing JavaScript function
+ * @return QVariant, the return value of executed javascript
+ */
+QVariant QmlTab::execJavaScript(const QJSValue &value)
+{
+    if (!m_webPage && !m_webTab) {
+        return QVariant();
+    }
+    WebPage *webPage = m_webPage;
+    if (!m_webPage) {
+        webPage = m_webTab->webView()->page();
+    }
+    return webPage->execJavaScript(value.toString());
+}
+
+/**
+ * @brief Gets result of web hit test at a given point
+ * @param point
+ * @return result of web hit test
+ */
+QmlWebHitTestResult *QmlTab::hitTestContent(const QPoint &point)
+{
+    if (!m_webPage && !m_webTab) {
+        return nullptr;
+    }
+    WebPage *webPage = m_webPage;
+    if (!m_webPage) {
+        webPage = m_webTab->webView()->page();
+    }
+    WebHitTestResult result = webPage->hitTestContent(point);
+    return new QmlWebHitTestResult(result);
+}
+
 QString QmlTab::url() const
 {
     if (!m_webTab) {
@@ -411,6 +427,50 @@ bool QmlTab::canGoForward() const
     }
 
     return m_webTab->webView()->history()->canGoForward();
+}
+
+void QmlTab::setWebPage(WebPage *webPage)
+{
+    m_webPage = webPage;
+    TabbedWebView *tabbedWebView = qobject_cast<TabbedWebView*>(m_webPage->view());
+    m_webTab = tabbedWebView->webTab();
+    if (m_webTab) {
+        createConnections();
+    }
+}
+
+void QmlTab::createConnections()
+{
+    connect(m_webTab, &WebTab::titleChanged, this, [this](const QString &title){
+        emit titleChanged(title);
+    });
+
+    connect(m_webTab, &WebTab::pinnedChanged, this, [this](bool pinned){
+        emit pinnedChanged(pinned);
+    });
+
+    connect(m_webTab, &WebTab::loadingChanged, this, [this](bool loading){
+        emit loadingChanged(loading);
+    });
+
+    connect(m_webTab, &WebTab::mutedChanged, this, [this](bool muted){
+        emit mutedChanged(muted);
+    });
+
+    connect(m_webTab, &WebTab::restoredChanged, this, [this](bool restored){
+        emit restoredChanged(restored);
+    });
+
+    connect(m_webTab, &WebTab::playingChanged, this, [this](bool playing){
+        emit playingChanged(playing);
+    });
+
+    connect(m_webTab->webView(), &TabbedWebView::zoomLevelChanged, this, &QmlTab::zoomLevelChanged);
+    connect(m_webTab->webView(), &TabbedWebView::backgroundActivityChanged, this, &QmlTab::backgroundActivityChanged);
+
+    if (m_webPage) {
+        connect(m_webPage, &WebPage::navigationRequestAccepted, this, &QmlTab::navigationRequestAccepted);
+    }
 }
 
 QmlTabData::QmlTabData()
