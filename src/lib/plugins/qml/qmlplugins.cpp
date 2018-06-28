@@ -42,8 +42,10 @@
 #include "api/events/qmlqzobjects.h"
 #include "api/events/qmlmouseevent.h"
 #include "api/events/qmlwheelevent.h"
+#include "api/i18n/qmli18n.h"
 
 #include <QQmlEngine>
+#include <QQmlContext>
 
 // static
 void QmlPlugins::registerQmlTypes()
@@ -165,4 +167,12 @@ void QmlPlugins::registerQmlTypes()
 
     // WheelEvents
     qmlRegisterUncreatableType<QmlWheelEvent>("org.kde.falkon", 1, 0, "WheelEvent", "Unable to register type: WheelEvent");
+
+    // i18n
+    qmlRegisterSingletonType<QmlI18n>("org.kde.falkon", 1, 0, "I18n", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(scriptEngine)
+        QString pluginName = engine->rootContext()->contextProperty("__name__").toString();
+        auto *object = new QmlI18n(pluginName);
+        return object;
+    });
 }

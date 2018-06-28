@@ -183,6 +183,7 @@ set(SRCS ${SRCS}
     plugins/qml/api/events/qmlmouseevent.cpp
     plugins/qml/api/events/qmlwheelevent.cpp
     plugins/qml/api/events/qmlkeyevent.cpp
+    plugins/qml/api/i18n/qmli18n.cpp
     popupwindow/popuplocationbar.cpp
     popupwindow/popupstatusbarmessage.cpp
     popupwindow/popupwebview.cpp

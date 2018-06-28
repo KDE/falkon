@@ -16,6 +16,7 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmlpluginloader.h"
+#include <QQmlContext>
 
 QmlPluginLoader::QmlPluginLoader(const QString &path)
 {
@@ -54,4 +55,5 @@ QmlPluginInterface *QmlPluginLoader::instance() const
 void QmlPluginLoader::setName(const QString &name)
 {
     m_interface->setName(name);
+    m_engine->rootContext()->setContextProperty("__name__", name);
 }
