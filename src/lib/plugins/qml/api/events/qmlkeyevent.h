@@ -23,16 +23,24 @@
 class QmlKeyEvent : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(int count READ count CONSTANT)
+    Q_PROPERTY(bool autoRepeat READ isAutoRepeat CONSTANT)
+    Q_PROPERTY(int key READ key CONSTANT)
+    Q_PROPERTY(int modifiers READ modifiers CONSTANT)
+    Q_PROPERTY(quint32 nativeModifiers READ nativeModifiers CONSTANT)
+    Q_PROPERTY(quint32 nativeScanCode READ nativeScanCode CONSTANT)
+    Q_PROPERTY(quint32 nativeVirtualKey READ nativeVirtualKey CONSTANT)
+    Q_PROPERTY(QString text READ text CONSTANT)
 public:
     explicit QmlKeyEvent(QKeyEvent *keyEvent = nullptr, QObject *parent = nullptr);
-    Q_INVOKABLE int count() const;
-    Q_INVOKABLE bool isAutoRepeat() const;
-    Q_INVOKABLE int key() const;
-    Q_INVOKABLE int modifiers() const;
-    Q_INVOKABLE quint32 nativeModifiers() const;
-    Q_INVOKABLE quint32 nativeScanCode() const;
-    Q_INVOKABLE quint32 nativeVirtualKey() const;
-    Q_INVOKABLE QString text() const;
+    int count() const;
+    bool isAutoRepeat() const;
+    int key() const;
+    int modifiers() const;
+    quint32 nativeModifiers() const;
+    quint32 nativeScanCode() const;
+    quint32 nativeVirtualKey() const;
+    QString text() const;
 
 private:
     QKeyEvent *m_keyEvent;

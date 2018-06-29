@@ -23,22 +23,36 @@
 class QmlWheelEvent : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QPoint angleDelta READ angleDelta CONSTANT)
+    Q_PROPERTY(int buttons READ buttons CONSTANT)
+    Q_PROPERTY(QPoint globalPos READ globalPos CONSTANT)
+    Q_PROPERTY(QPointF globalPosF READ globalPosF CONSTANT)
+    Q_PROPERTY(int globalX READ globalX CONSTANT)
+    Q_PROPERTY(int globalY READ globalY CONSTANT)
+    Q_PROPERTY(bool inverted READ inverted CONSTANT)
+    Q_PROPERTY(int phase READ phase CONSTANT)
+    Q_PROPERTY(QPoint pixelDelta READ pixelDelta CONSTANT)
+    Q_PROPERTY(QPoint pos READ pos CONSTANT)
+    Q_PROPERTY(QPointF posF READ posF CONSTANT)
+    Q_PROPERTY(int source READ source CONSTANT)
+    Q_PROPERTY(int x READ x CONSTANT)
+    Q_PROPERTY(int y READ y CONSTANT)
 public:
     explicit QmlWheelEvent(QWheelEvent *wheelEvent = nullptr, QObject *parent = nullptr);
-    Q_INVOKABLE QPoint angleDelta() const;
-    Q_INVOKABLE int buttons() const;
-    Q_INVOKABLE QPoint globalPos() const;
-    Q_INVOKABLE QPointF globalPosF() const;
-    Q_INVOKABLE int globalX() const;
-    Q_INVOKABLE int globalY() const;
-    Q_INVOKABLE bool inverted() const;
-    Q_INVOKABLE int phase() const;
-    Q_INVOKABLE QPoint pixelDelta() const;
-    Q_INVOKABLE QPoint pos() const;
-    Q_INVOKABLE QPointF posF() const;
-    Q_INVOKABLE int source() const;
-    Q_INVOKABLE int x() const;
-    Q_INVOKABLE int y() const;
+    QPoint angleDelta() const;
+    int buttons() const;
+    QPoint globalPos() const;
+    QPointF globalPosF() const;
+    int globalX() const;
+    int globalY() const;
+    bool inverted() const;
+    int phase() const;
+    QPoint pixelDelta() const;
+    QPoint pos() const;
+    QPointF posF() const;
+    int source() const;
+    int x() const;
+    int y() const;
 private:
     QWheelEvent *m_wheelEvent;
 };

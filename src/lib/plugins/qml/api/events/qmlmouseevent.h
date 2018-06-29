@@ -22,20 +22,32 @@
 class QmlMouseEvent : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(int button READ button CONSTANT)
+    Q_PROPERTY(int buttons READ buttons CONSTANT)
+    Q_PROPERTY(QPoint globalPos READ globalPos CONSTANT)
+    Q_PROPERTY(int globalX READ globalX CONSTANT)
+    Q_PROPERTY(int globalY READ globalY CONSTANT)
+    Q_PROPERTY(QPointF localPos READ localPos CONSTANT)
+    Q_PROPERTY(QPoint pos READ pos CONSTANT)
+    Q_PROPERTY(QPointF screenPos READ screenPos CONSTANT)
+    Q_PROPERTY(int source READ source CONSTANT)
+    Q_PROPERTY(QPointF windowPos READ windowPos CONSTANT)
+    Q_PROPERTY(int x READ x CONSTANT)
+    Q_PROPERTY(int y READ y CONSTANT)
 public:
     explicit QmlMouseEvent(QMouseEvent *mouseEvent = nullptr, QObject *parent = nullptr);
-    Q_INVOKABLE int button() const;
-    Q_INVOKABLE int buttons() const;
-    Q_INVOKABLE QPoint globalPos() const;
-    Q_INVOKABLE int globalX() const;
-    Q_INVOKABLE int globalY() const;
-    Q_INVOKABLE QPointF localPos() const;
-    Q_INVOKABLE QPoint pos() const;
-    Q_INVOKABLE QPointF screenPos() const;
-    Q_INVOKABLE int source() const;
-    Q_INVOKABLE QPointF windowPos() const;
-    Q_INVOKABLE int x() const;
-    Q_INVOKABLE int y() const;
+    int button() const;
+    int buttons() const;
+    QPoint globalPos() const;
+    int globalX() const;
+    int globalY() const;
+    QPointF localPos() const;
+    QPoint pos() const;
+    QPointF screenPos() const;
+    int source() const;
+    QPointF windowPos() const;
+    int x() const;
+    int y() const;
 
 private:
     QMouseEvent *m_mouseEvent;
