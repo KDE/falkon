@@ -18,6 +18,7 @@
 #include "qmlsidebar.h"
 #include "mainapplication.h"
 #include "qztools.h"
+#include "sidebar.h"
 #include <QAction>
 #include <QQuickWindow>
 
@@ -34,6 +35,16 @@ QmlSideBar::QmlSideBar(QObject *parent)
     connect(this, &QmlSideBar::itemChanged, m_sideBarHelper, &QmlSideBarHelper::setItem);
 }
 
+QmlSideBar::~QmlSideBar()
+{
+    SideBarManager::removeSidebar(m_sideBarHelper);
+}
+
+void QmlSideBar::componentComplete()
+{
+    SideBarManager::addSidebar(name(), sideBar());
+}
+
 QString QmlSideBar::name() const
 {
     return m_name;
@@ -47,6 +58,7 @@ SideBarInterface *QmlSideBar::sideBar() const
 void QmlSideBar::setName(const QString &name)
 {
     m_name = name;
+    emit nameChanged(m_name);
 }
 
 QString QmlSideBar::title() const

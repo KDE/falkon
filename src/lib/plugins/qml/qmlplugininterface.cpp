@@ -36,9 +36,7 @@
 #include <QVBoxLayout>
 
 QmlPluginInterface::QmlPluginInterface()
-    : m_browserAction(nullptr)
-    , m_sideBar(nullptr)
-    , m_settingsWindow(nullptr)
+    : m_settingsWindow(nullptr)
 {
 }
 
@@ -53,18 +51,6 @@ void QmlPluginInterface::init(InitState state, const QString &settingsPath)
     args.append(state);
     args.append(settingsPath);
     m_init.call(args);
-
-    if (m_browserAction) {
-        for (BrowserWindow *window : mApp->windows()) {
-            addButton(window);
-        }
-
-        connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &QmlPluginInterface::addButton);
-    }
-
-    if (m_sideBar) {
-        SideBarManager::addSidebar(m_sideBar->name(), m_sideBar->sideBar());
-    }
 }
 
 DesktopFile QmlPluginInterface::metaData() const
@@ -81,16 +67,8 @@ void QmlPluginInterface::unload()
 
     m_unload.call();
 
-    if (m_browserAction) {
-        for (BrowserWindow *window : mApp->windows()) {
-            removeButton(window);
-        }
-
-        disconnect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &QmlPluginInterface::addButton);
-    }
-
-    if (m_sideBar) {
-        SideBarManager::removeSidebar(m_sideBar->sideBar());
+    for (QObject *childItem : m_childItems) {
+        childItem->deleteLater();
     }
 
     emit qmlPluginUnloaded();
@@ -302,26 +280,6 @@ void QmlPluginInterface::setName(const QString &name)
     m_name = name;
 }
 
-QmlBrowserAction *QmlPluginInterface::browserAction() const
-{
-    return m_browserAction;
-}
-
-void QmlPluginInterface::setBrowserAction(QmlBrowserAction *browserAction)
-{
-    m_browserAction = browserAction;
-}
-
-QmlSideBar *QmlPluginInterface::sideBar() const
-{
-    return m_sideBar;
-}
-
-void QmlPluginInterface::setSideBar(QmlSideBar *sideBar)
-{
-    m_sideBar = sideBar;
-}
-
 QJSValue QmlPluginInterface::readPopulateWebViewMenu() const
 {
     return m_populateWebViewMenu;
@@ -432,26 +390,4 @@ void QmlPluginInterface::setAcceptNavigationRequest(const QJSValue &acceptNaviga
 QQmlListProperty<QObject> QmlPluginInterface::childItems()
 {
     return QQmlListProperty<QObject>(this, m_childItems);
-}
-
-void QmlPluginInterface::addButton(BrowserWindow *window)
-{
-    if (m_browserAction->location().testFlag(QmlBrowserAction::NavigationToolBar)) {
-        window->navigationBar()->addToolButton(m_browserAction->button());
-    }
-
-    if (m_browserAction->location().testFlag(QmlBrowserAction::StatusBar)) {
-        window->statusBar()->addButton(m_browserAction->button());
-    }
-}
-
-void QmlPluginInterface::removeButton(BrowserWindow *window)
-{
-    if (m_browserAction->location().testFlag(QmlBrowserAction::NavigationToolBar)) {
-        window->navigationBar()->removeToolButton(m_browserAction->button());
-    }
-
-    if (m_browserAction->location().testFlag(QmlBrowserAction::StatusBar)) {
-        window->statusBar()->removeButton(m_browserAction->button());
-    }
 }

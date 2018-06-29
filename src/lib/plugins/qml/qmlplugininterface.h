@@ -19,11 +19,10 @@
 
 #include <QJSValue>
 #include <QObject>
+#include <QQmlComponent>
 
 #include "desktopfile.h"
 #include "plugininterface.h"
-#include "api/browseraction/qmlbrowseraction.h"
-#include "api/sidebar/qmlsidebar.h"
 
 class QmlPluginInterface : public QObject, public PluginInterface
 {
@@ -33,8 +32,6 @@ class QmlPluginInterface : public QObject, public PluginInterface
     Q_PROPERTY(QJSValue init READ readInit WRITE setInit)
     Q_PROPERTY(QJSValue unload READ readUnload WRITE setUnload)
     Q_PROPERTY(QJSValue testPlugin READ readTestPlugin WRITE setTestPlugin)
-    Q_PROPERTY(QmlBrowserAction* browserAction READ browserAction WRITE setBrowserAction)
-    Q_PROPERTY(QmlSideBar* sideBar READ sideBar WRITE setSideBar)
     Q_PROPERTY(QJSValue populateWebViewMenu READ readPopulateWebViewMenu WRITE setPopulateWebViewMenu)
     Q_PROPERTY(QQmlComponent* settingsWindow READ settingsWindow WRITE setSettingsWindow)
     Q_PROPERTY(QJSValue mouseDoubleClick READ readMouseDoubleClick WRITE setMouseDoubleClick)
@@ -80,8 +77,6 @@ private:
     QJSValue m_init;
     QJSValue m_unload;
     QJSValue m_testPlugin;
-    QmlBrowserAction *m_browserAction;
-    QmlSideBar *m_sideBar;
     QJSValue m_populateWebViewMenu;
     QQmlComponent *m_settingsWindow;
     QJSValue m_mouseDoubleClick;
@@ -100,10 +95,6 @@ private:
     void setUnload(const QJSValue &unload);
     QJSValue readTestPlugin() const;
     void setTestPlugin(const QJSValue &testPlugin);
-    QmlBrowserAction *browserAction() const;
-    void setBrowserAction(QmlBrowserAction *browserAction);
-    QmlSideBar *sideBar() const;
-    void setSideBar(QmlSideBar *sideBar);
     QJSValue readPopulateWebViewMenu() const;
     void setPopulateWebViewMenu(const QJSValue &value);
     QQmlComponent *settingsWindow() const;
@@ -125,7 +116,4 @@ private:
     QJSValue readAcceptNavigationRequest() const;
     void setAcceptNavigationRequest(const QJSValue &acceptNavigationRequest);
     QQmlListProperty<QObject> childItems();
-
-    void addButton(BrowserWindow *window);
-    void removeButton(BrowserWindow *window);
 };

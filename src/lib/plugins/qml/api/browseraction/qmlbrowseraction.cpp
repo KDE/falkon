@@ -16,8 +16,10 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmlbrowseraction.h"
-#include "mainapplication.h"
 #include "qztools.h"
+#include "navigationbar.h"
+#include "statusbar.h"
+#include "pluginproxy.h"
 #include <QQuickWindow>
 
 QmlBrowserAction::QmlBrowserAction(QObject *parent)
@@ -35,6 +37,22 @@ QmlBrowserAction::QmlBrowserAction(QObject *parent)
     connect(this, &QmlBrowserAction::popupChanged, m_button, &QmlBrowserActionButton::setPopup);
 
     connect(m_button, &QmlBrowserActionButton::clicked, this, &QmlBrowserAction::clicked);
+
+    connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &QmlBrowserAction::addButton);
+}
+
+void QmlBrowserAction::componentComplete()
+{
+    for (BrowserWindow *window : mApp->windows()) {
+        addButton(window);
+    }
+}
+
+QmlBrowserAction::~QmlBrowserAction()
+{
+    for (BrowserWindow *window : mApp->windows()) {
+        removeButton(window);
+    }
 }
 
 QmlBrowserActionButton *QmlBrowserAction::button() const
@@ -128,6 +146,28 @@ void QmlBrowserAction::setLocation(const Locations &locations)
 {
     m_locations = locations;
     emit locationChanged(m_locations);
+}
+
+void QmlBrowserAction::addButton(BrowserWindow *window)
+{
+    if (location().testFlag(NavigationToolBar)) {
+        window->navigationBar()->addToolButton(button());
+    }
+
+    if (location().testFlag(StatusBar)) {
+        window->statusBar()->addButton(button());
+    }
+}
+
+void QmlBrowserAction::removeButton(BrowserWindow *window)
+{
+    if (location().testFlag(NavigationToolBar)) {
+        window->navigationBar()->removeToolButton(button());
+    }
+
+    if (location().testFlag(StatusBar)) {
+        window->statusBar()->removeButton(button());
+    }
 }
 
 QmlBrowserActionButton::QmlBrowserActionButton(QObject *parent)

@@ -17,16 +17,19 @@
 * ============================================================ */
 #pragma once
 #include "abstractbuttoninterface.h"
+#include "mainapplication.h"
 #include <QQmlComponent>
+#include <QQmlParserStatus>
 
 class QmlBrowserActionButton;
 
 /**
  * @brief The class exposing BrowserAction API to QML
  */
-class QmlBrowserAction : public QObject
+class QmlBrowserAction : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
 
     /**
      * @brief identity for the button. This is a required property.
@@ -80,6 +83,9 @@ public:
     Q_ENUMS(Locations)
 
     explicit QmlBrowserAction(QObject *parent = nullptr);
+    ~QmlBrowserAction();
+    void classBegin() {}
+    void componentComplete();
     QmlBrowserActionButton *button() const;
     Locations location() const;
 
@@ -163,6 +169,9 @@ private:
     QQmlComponent* popup() const;
     void setPopup(QQmlComponent* popup);
     void setLocation(const Locations &locations);
+
+    void addButton(BrowserWindow *window);
+    void removeButton(BrowserWindow *window);
 };
 
 class QmlBrowserActionButton : public AbstractButtonInterface

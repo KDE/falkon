@@ -18,15 +18,17 @@
 #pragma once
 #include "sidebarinterface.h"
 #include <QQmlComponent>
+#include <QQmlParserStatus>
 
 class QmlSideBarHelper;
 
 /**
  * @brief The class exposing SideBar API to QML
  */
-class QmlSideBar : public QObject
+class QmlSideBar : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
 
     /**
      * @brief name of the sidebar. This is required property.
@@ -62,6 +64,9 @@ class QmlSideBar : public QObject
 
 public:
     explicit QmlSideBar(QObject *parent = nullptr);
+    ~QmlSideBar();
+    void classBegin() {}
+    void componentComplete();
     QString name() const;
     SideBarInterface *sideBar() const;
 
