@@ -16,7 +16,7 @@ Falkon.PluginInterface {
         console.log('Bye!')
     }
     
-    browserAction: Falkon.BrowserAction {
+    Falkon.BrowserAction {
         name: 'helloqml-button'
         identity: 'helloqml-id'
         title: 'Testing QML Title'
@@ -58,7 +58,7 @@ Falkon.PluginInterface {
         }
     }
     
-    sideBar: Falkon.SideBar {
+    Falkon.SideBar {
         name: 'helloqml-sidebar'
         title: 'Testing QML SideBar'
         icon: Qt.resolvedUrl('qrc:/icons/preferences/extensions.svg')
