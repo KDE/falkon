@@ -64,8 +64,13 @@ QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
     QMenu *newMenu = new QMenu();
     for (const QString &key : map.keys()) {
         if (key == QSL("icon")) {
-            QUrl url = map.value(key).toUrl();
-            QIcon icon(QzTools::getPathFromUrl(url));
+            QString iconPath = map.value(key).toString();
+            QIcon icon;
+            if (QIcon::hasThemeIcon(iconPath)) {
+                icon = QIcon::fromTheme(iconPath);
+            } else {
+                icon = QIcon(QzTools::getPathFromUrl(QUrl::fromEncoded(iconPath.toUtf8())));
+            }
             newMenu->setIcon(icon);
             continue;
         }

@@ -210,7 +210,11 @@ void QmlBrowserActionButton::setToolTip(const QString &toolTip)
 void QmlBrowserActionButton::setIcon(const QString &icon)
 {
     m_iconUrl = icon;
-    AbstractButtonInterface::setIcon(QIcon(QzTools::getPathFromUrl(QUrl(m_iconUrl))));
+    if (QIcon::hasThemeIcon(m_iconUrl)) {
+        AbstractButtonInterface::setIcon(QIcon::fromTheme(m_iconUrl));
+    } else {
+        AbstractButtonInterface::setIcon(QIcon(QzTools::getPathFromUrl(QUrl(m_iconUrl))));
+    }
 }
 
 void QmlBrowserActionButton::setBadgeText(const QString &badgeText)

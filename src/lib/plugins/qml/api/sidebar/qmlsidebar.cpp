@@ -131,7 +131,11 @@ QAction *QmlSideBarHelper::createMenuAction()
 {
     QAction *action = new QAction(m_title);
     action->setShortcut(QKeySequence(m_shortcut));
-    action->setIcon(QIcon(QzTools::getPathFromUrl(QUrl(m_iconUrl))));
+    if (QIcon::hasThemeIcon(m_iconUrl)) {
+        action->setIcon(QIcon::fromTheme(m_iconUrl));
+    } else {
+        action->setIcon(QIcon(QzTools::getPathFromUrl(QUrl(m_iconUrl))));
+    }
     action->setCheckable(m_checkable);
     return action;
 }
