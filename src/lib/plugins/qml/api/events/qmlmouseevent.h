@@ -19,20 +19,59 @@
 
 #include <QMouseEvent>
 
+/**
+ * @brief The class exposing MouseEvent to QML
+ */
 class QmlMouseEvent : public QObject
 {
     Q_OBJECT
+    /**
+     * @brief button associated with the event
+     */
     Q_PROPERTY(int button READ button CONSTANT)
+    /**
+     * @brief button state associated with the event
+     */
     Q_PROPERTY(int buttons READ buttons CONSTANT)
+    /**
+     * @brief global position of mouse cursor at the time of event
+     */
     Q_PROPERTY(QPoint globalPos READ globalPos CONSTANT)
+    /**
+     * @brief global x position of mouse cursor at the time of event
+     */
     Q_PROPERTY(int globalX READ globalX CONSTANT)
+    /**
+     * @brief global y position of mouse cursor at the time of event
+     */
     Q_PROPERTY(int globalY READ globalY CONSTANT)
+    /**
+     * @brief local position of mouse cursor at the time of event
+     */
     Q_PROPERTY(QPointF localPos READ localPos CONSTANT)
+    /**
+     * @brief position of mouse cursor at the time of event
+     */
     Q_PROPERTY(QPoint pos READ pos CONSTANT)
+    /**
+     * @brief screen position of mouse cursor at the time of event
+     */
     Q_PROPERTY(QPointF screenPos READ screenPos CONSTANT)
+    /**
+     * @brief source of the event
+     */
     Q_PROPERTY(int source READ source CONSTANT)
+    /**
+     * @brief window position of mouse cursor at the time of event
+     */
     Q_PROPERTY(QPointF windowPos READ windowPos CONSTANT)
+    /**
+     * @brief x position of mouse cursor at the time of event
+     */
     Q_PROPERTY(int x READ x CONSTANT)
+    /**
+     * @brief y position of mouse cursor at the time of event
+     */
     Q_PROPERTY(int y READ y CONSTANT)
 public:
     explicit QmlMouseEvent(QMouseEvent *mouseEvent = nullptr, QObject *parent = nullptr);

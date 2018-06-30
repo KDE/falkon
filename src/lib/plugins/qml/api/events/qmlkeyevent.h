@@ -20,16 +20,43 @@
 #include <QKeyEvent>
 #include <QObject>
 
+/**
+ * @brief The class exposing KeyEvent to QML
+ */
 class QmlKeyEvent : public QObject
 {
     Q_OBJECT
+    /**
+     * @brief number of keys involved in this event
+     */
     Q_PROPERTY(int count READ count CONSTANT)
+    /**
+     * @brief checks if the event comes from an auto-repeating key
+     */
     Q_PROPERTY(bool autoRepeat READ isAutoRepeat CONSTANT)
+    /**
+     * @brief key code which is pressed/released
+     */
     Q_PROPERTY(int key READ key CONSTANT)
+    /**
+     * @brief modifiers associated with the event
+     */
     Q_PROPERTY(int modifiers READ modifiers CONSTANT)
+    /**
+     * @brief native modifiers of the event
+     */
     Q_PROPERTY(quint32 nativeModifiers READ nativeModifiers CONSTANT)
+    /**
+     * @brief native scan code of the event
+     */
     Q_PROPERTY(quint32 nativeScanCode READ nativeScanCode CONSTANT)
+    /**
+     * @brief native virtual key, or key sum of the event
+     */
     Q_PROPERTY(quint32 nativeVirtualKey READ nativeVirtualKey CONSTANT)
+    /**
+     * @brief Returns the Unicode text that this key generated
+     */
     Q_PROPERTY(QString text READ text CONSTANT)
 public:
     explicit QmlKeyEvent(QKeyEvent *keyEvent = nullptr, QObject *parent = nullptr);

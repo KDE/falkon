@@ -20,15 +20,21 @@
 #include <qzcommon.h>
 #include <QObject>
 
+/**
+ * @brief The class exposing Qz ObjectName to QML
+ */
 class QmlQzObjects : public QObject
 {
     Q_OBJECT
 public:
+    /**
+     * @brief The ObjectName enum
+     */
     enum ObjectName {
-        ON_WebView = Qz::ON_WebView,
-        ON_TabBar = Qz::ON_TabBar,
-        ON_TabWidget = Qz::ON_TabWidget,
-        ON_BrowserWindow = Qz::ON_BrowserWindow
+        ON_WebView = Qz::ON_WebView,            //!< Represents object is webview
+        ON_TabBar = Qz::ON_TabBar,              //!< Represents object is tabbar
+        ON_TabWidget = Qz::ON_TabWidget,        //!< Represents object is tabwidget
+        ON_BrowserWindow = Qz::ON_BrowserWindow //!< Represents object is browser window
     };
     Q_ENUMS(ObjectName)
 
