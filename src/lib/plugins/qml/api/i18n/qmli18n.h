@@ -20,6 +20,10 @@
 #include <QObject>
 #include <libintl.h>
 
+// libintl.h redefines inline which causes MSVC to abort compilation with the message
+// fatal error C1189: #error :  The C++ Standard Library forbids macroizing keywords
+#undef inline
+
 class QmlI18n : public QObject
 {
     Q_OBJECT

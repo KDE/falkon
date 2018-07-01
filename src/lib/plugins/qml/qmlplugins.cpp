@@ -42,7 +42,10 @@
 #include "api/events/qmlqzobjects.h"
 #include "api/events/qmlmouseevent.h"
 #include "api/events/qmlwheelevent.h"
-#include "api/i18n/qmli18n.h"
+
+#ifdef LibIntl_FOUND
+#include "qml/api/i18n/qmli18n.h"
+#endif
 
 #include <QQmlEngine>
 #include <QQmlContext>
@@ -168,6 +171,7 @@ void QmlPlugins::registerQmlTypes()
     // WheelEvents
     qmlRegisterUncreatableType<QmlWheelEvent>("org.kde.falkon", 1, 0, "WheelEvent", "Unable to register type: WheelEvent");
 
+#ifdef LibIntl_FOUND
     // i18n
     qmlRegisterSingletonType<QmlI18n>("org.kde.falkon", 1, 0, "I18n", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(scriptEngine)
@@ -175,4 +179,5 @@ void QmlPlugins::registerQmlTypes()
         auto *object = new QmlI18n(pluginName);
         return object;
     });
+#endif
 }

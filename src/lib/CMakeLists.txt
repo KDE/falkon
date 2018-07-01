@@ -183,7 +183,6 @@ set(SRCS ${SRCS}
     plugins/qml/api/events/qmlmouseevent.cpp
     plugins/qml/api/events/qmlwheelevent.cpp
     plugins/qml/api/events/qmlkeyevent.cpp
-    plugins/qml/api/i18n/qmli18n.cpp
     popupwindow/popuplocationbar.cpp
     popupwindow/popupstatusbarmessage.cpp
     popupwindow/popupwebview.cpp
@@ -258,6 +257,10 @@ set(SRCS ${SRCS}
     webtab/webtab.cpp
 )
 
+if (LibIntl_FOUND)
+    set(SRCS ${SRCS} plugins/qml/api/i18n/qmli18n.cpp)
+endif()
+
 if (WIN32)
     set(SRCS ${SRCS} other/registerqappassociation.cpp)
 endif()
@@ -322,6 +325,11 @@ qt5_add_resources(SRCS
 )
 
 add_library(FalkonPrivate SHARED ${SRCS})
+
+# define macro to for LibIntl_FOUND
+if (LibIntl_FOUND)
+    target_compile_definitions(FalkonPrivate PRIVATE LibIntl_FOUND=1)
+endif()
 
 get_property(QT_WEBENGINE_INCLUDE_DIRS TARGET Qt5::WebEngine PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 target_include_directories(FalkonPrivate SYSTEM PUBLIC ${QT_WEBENGINE_INCLUDE_DIRS})
