@@ -17,28 +17,20 @@
 * ============================================================ */
 #pragma once
 
-#include "qmluserscript.h"
 #include <QObject>
 
-class FALKON_EXPORT QmlUserScripts : public QObject
+class QmlUserScriptApiTest : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int count READ count CONSTANT)
-    Q_PROPERTY(int size READ size CONSTANT)
-    Q_PROPERTY(bool empty READ empty CONSTANT)
-public:
-    explicit QmlUserScripts(QObject *parent = nullptr);
-    Q_INVOKABLE bool contains(QObject *object) const;
-    Q_INVOKABLE QObject *findScript(const QString &name) const;
-    Q_INVOKABLE QList<QObject *> findScripts(const QString &name) const;
-    Q_INVOKABLE void insert(QObject *object) const;
-    Q_INVOKABLE void insert(const QList<QObject*> &list) const;
-    Q_INVOKABLE void remove(QObject *object) const;
-    Q_INVOKABLE QList<QObject *> toList() const;
-private:
-    int count() const;
-    int size() const;
-    bool empty() const;
 
-    QList<QObject *> toQObjectList(QList<QWebEngineScript> list) const;
+private Q_SLOTS:
+    void initTestCase();
+    void cleanupTestCase();
+
+    void testCount();
+    void testSize();
+    void testEmpty();
+    void testContains();
+    void testFind();
+    void testInsertRemove();
 };

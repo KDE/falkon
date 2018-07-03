@@ -17,10 +17,12 @@
 * ============================================================ */
 #pragma once
 
+#include "qzcommon.h"
+
 #include <QObject>
 #include <QWebEngineScript>
 
-class QmlUserScript : public QObject
+class FALKON_EXPORT QmlUserScript : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool null READ null CONSTANT)

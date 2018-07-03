@@ -61,7 +61,7 @@ bool QmlUserScripts::contains(QObject *object) const
     return mApp->webProfile()->scripts()->contains(webEngineScript);
 }
 
-QmlUserScript *QmlUserScripts::findScript(const QString &name) const
+QObject *QmlUserScripts::findScript(const QString &name) const
 {
     QWebEngineScript webEngineScript = mApp->webProfile()->scripts()->findScript(name);
     QmlUserScript *qmlUserScript = new QmlUserScript();
