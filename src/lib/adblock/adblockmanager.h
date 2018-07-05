@@ -27,8 +27,8 @@
 
 #include "qzcommon.h"
 
-#define ADBLOCK_EASYLIST_URL "https://easylist-downloads.adblockplus.org/easylist.txt"
-#define ADBLOCK_NOCOINLIST_URL "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt"
+#define ADBLOCK_EASYLIST_URL QSL("https://easylist-downloads.adblockplus.org/easylist.txt")
+#define ADBLOCK_NOCOINLIST_URL QSL("https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt")
 
 class AdBlockRule;
 class AdBlockDialog;

@@ -37,9 +37,9 @@ DatabaseEncryptedPasswordBackend::DatabaseEncryptedPasswordBackend()
 {
     QSqlDatabase db = SqlDatabase::instance()->database();
     if (!db.tables().contains(QLatin1String("autofill_encrypted"))) {
-        db.exec("CREATE TABLE autofill_encrypted (data_encrypted TEXT, id INTEGER PRIMARY KEY,"
-                "password_encrypted TEXT, server TEXT, username_encrypted TEXT, last_used NUMERIC)");
-        db.exec("CREATE INDEX autofillEncryptedServer ON autofill_encrypted(server ASC)");
+        db.exec(QSL("CREATE TABLE autofill_encrypted (data_encrypted TEXT, id INTEGER PRIMARY KEY,"
+                "password_encrypted TEXT, server TEXT, username_encrypted TEXT, last_used NUMERIC)"));
+        db.exec(QSL("CREATE INDEX autofillEncryptedServer ON autofill_encrypted(server ASC)"));
     }
 }
 
@@ -54,7 +54,7 @@ QStringList DatabaseEncryptedPasswordBackend::getUsernames(const QUrl &url)
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT username_encrypted FROM autofill_encrypted WHERE server=? ORDER BY last_used DESC");
+    query.prepare(QSL("SELECT username_encrypted FROM autofill_encrypted WHERE server=? ORDER BY last_used DESC"));
     query.addBindValue(PasswordManager::createHost(url));
     query.exec();
 
@@ -74,8 +74,8 @@ QVector<PasswordEntry> DatabaseEncryptedPasswordBackend::getEntries(const QUrl &
     const QString host = PasswordManager::createHost(url);
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT id, username_encrypted, password_encrypted, data_encrypted FROM autofill_encrypted "
-                  "WHERE server=? ORDER BY last_used DESC");
+    query.prepare(QSL("SELECT id, username_encrypted, password_encrypted, data_encrypted FROM autofill_encrypted "
+                  "WHERE server=? ORDER BY last_used DESC"));
     query.addBindValue(host);
     query.exec();
 
@@ -105,7 +105,7 @@ QVector<PasswordEntry> DatabaseEncryptedPasswordBackend::getAllEntries()
     AesInterface aesDecryptor;
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT id, server, username_encrypted, password_encrypted, data_encrypted FROM autofill_encrypted");
+    query.prepare(QSL("SELECT id, server, username_encrypted, password_encrypted, data_encrypted FROM autofill_encrypted"));
     query.exec();
 
     if (query.next() && hasPermission()) {
@@ -160,7 +160,7 @@ void DatabaseEncryptedPasswordBackend::addEntry(const PasswordEntry &entry)
     if (entry.data.isEmpty()) {
         // Multiple-usernames for HTTP/FTP authorization not supported
         QSqlQuery query(SqlDatabase::instance()->database());
-        query.prepare("SELECT username_encrypted FROM autofill_encrypted WHERE server=?");
+        query.prepare(QSL("SELECT username_encrypted FROM autofill_encrypted WHERE server=?"));
         query.addBindValue(entry.host);
         query.exec();
 
@@ -174,8 +174,8 @@ void DatabaseEncryptedPasswordBackend::addEntry(const PasswordEntry &entry)
 
     if (hasPermission() && encryptPasswordEntry(encryptedEntry, &aesEncryptor)) {
         QSqlQuery query(SqlDatabase::instance()->database());
-        query.prepare("INSERT INTO autofill_encrypted (server, data_encrypted, username_encrypted, password_encrypted, last_used) "
-                      "VALUES (?,?,?,?,strftime('%s', 'now'))");
+        query.prepare(QSL("INSERT INTO autofill_encrypted (server, data_encrypted, username_encrypted, password_encrypted, last_used) "
+                      "VALUES (?,?,?,?,strftime('%s', 'now'))"));
         query.bindValue(0, encryptedEntry.host);
         query.bindValue(1, encryptedEntry.data);
         query.bindValue(2, encryptedEntry.username);
@@ -194,13 +194,13 @@ bool DatabaseEncryptedPasswordBackend::updateEntry(const PasswordEntry &entry)
 
         // Data is empty only for HTTP/FTP authorization
         if (entry.data.isEmpty()) {
-            query.prepare("UPDATE autofill_encrypted SET username_encrypted=?, password_encrypted=? WHERE server=?");
+            query.prepare(QSL("UPDATE autofill_encrypted SET username_encrypted=?, password_encrypted=? WHERE server=?"));
             query.bindValue(0, encryptedEntry.username);
             query.bindValue(1, encryptedEntry.password);
             query.bindValue(2, encryptedEntry.host);
         }
         else {
-            query.prepare("UPDATE autofill_encrypted SET data_encrypted=?, username_encrypted=?, password_encrypted=? WHERE id=?");
+            query.prepare(QSL("UPDATE autofill_encrypted SET data_encrypted=?, username_encrypted=?, password_encrypted=? WHERE id=?"));
             query.addBindValue(encryptedEntry.data);
             query.addBindValue(encryptedEntry.username);
             query.addBindValue(encryptedEntry.password);
@@ -216,7 +216,7 @@ bool DatabaseEncryptedPasswordBackend::updateEntry(const PasswordEntry &entry)
 void DatabaseEncryptedPasswordBackend::updateLastUsed(PasswordEntry &entry)
 {
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("UPDATE autofill_encrypted SET last_used=strftime('%s', 'now') WHERE id=?");
+    query.prepare(QSL("UPDATE autofill_encrypted SET last_used=strftime('%s', 'now') WHERE id=?"));
     query.addBindValue(entry.id);
     query.exec();
 }
@@ -228,7 +228,7 @@ void DatabaseEncryptedPasswordBackend::removeEntry(const PasswordEntry &entry)
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("DELETE FROM autofill_encrypted WHERE id=?");
+    query.prepare(QSL("DELETE FROM autofill_encrypted WHERE id=?"));
     query.addBindValue(entry.id);
     query.exec();
 
@@ -245,7 +245,7 @@ void DatabaseEncryptedPasswordBackend::removeAll()
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("DELETE FROM autofill_encrypted");
+    query.prepare(QSL("DELETE FROM autofill_encrypted"));
     query.exec();
 
     m_stateOfMasterPassword = PasswordIsSetted;
@@ -393,7 +393,7 @@ void DatabaseEncryptedPasswordBackend::encryptDataBaseTableOnFly(const QByteArra
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT id, data_encrypted, password_encrypted, username_encrypted, server FROM autofill_encrypted");
+    query.prepare(QSL("SELECT id, data_encrypted, password_encrypted, username_encrypted, server FROM autofill_encrypted"));
     query.exec();
 
     AesInterface encryptor;
@@ -423,7 +423,7 @@ void DatabaseEncryptedPasswordBackend::encryptDataBaseTableOnFly(const QByteArra
         }
 
         QSqlQuery updateQuery(SqlDatabase::instance()->database());
-        updateQuery.prepare("UPDATE autofill_encrypted SET data_encrypted = ?, password_encrypted = ?, username_encrypted = ? WHERE id = ?");
+        updateQuery.prepare(QSL("UPDATE autofill_encrypted SET data_encrypted = ?, password_encrypted = ?, username_encrypted = ? WHERE id = ?"));
         updateQuery.addBindValue(data);
         updateQuery.addBindValue(password);
         updateQuery.addBindValue(username);
@@ -439,7 +439,7 @@ QByteArray DatabaseEncryptedPasswordBackend::someDataFromDatabase()
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT password_encrypted, data_encrypted, username_encrypted FROM autofill_encrypted");
+    query.prepare(QSL("SELECT password_encrypted, data_encrypted, username_encrypted FROM autofill_encrypted"));
     query.exec();
 
     QByteArray someData;
@@ -467,7 +467,7 @@ QByteArray DatabaseEncryptedPasswordBackend::someDataFromDatabase()
 void DatabaseEncryptedPasswordBackend::updateSampleData(const QByteArray &password)
 {
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT id FROM autofill_encrypted WHERE server = ?");
+    query.prepare(QSL("SELECT id FROM autofill_encrypted WHERE server = ?"));
     query.addBindValue(INTERNAL_SERVER_ID);
     query.exec();
 
@@ -476,10 +476,10 @@ void DatabaseEncryptedPasswordBackend::updateSampleData(const QByteArray &passwo
         m_someDataStoredOnDataBase = aes.encrypt(AesInterface::createRandomData(16), password);
 
         if (query.next()) {
-            query.prepare("UPDATE autofill_encrypted SET password_encrypted = ? WHERE server=?");
+            query.prepare(QSL("UPDATE autofill_encrypted SET password_encrypted = ? WHERE server=?"));
         }
         else {
-            query.prepare("INSERT INTO autofill_encrypted (password_encrypted, server) VALUES (?,?)");
+            query.prepare(QSL("INSERT INTO autofill_encrypted (password_encrypted, server) VALUES (?,?)"));
         }
 
         query.addBindValue(QString::fromUtf8(m_someDataStoredOnDataBase));
@@ -489,7 +489,7 @@ void DatabaseEncryptedPasswordBackend::updateSampleData(const QByteArray &passwo
         m_stateOfMasterPassword = PasswordIsSetted;
     }
     else if (query.next()) {
-        query.prepare("DELETE FROM autofill_encrypted WHERE server = ?");
+        query.prepare(QSL("DELETE FROM autofill_encrypted WHERE server = ?"));
         query.addBindValue(INTERNAL_SERVER_ID);
         query.exec();
 
@@ -580,7 +580,7 @@ void MasterPasswordDialog::reject()
                                  AutoFill::tr("This backend needs a master password to be set! "
                                               "Falkon just switches to its default backend"));
         // active default backend
-        mApp->autoFill()->passwordManager()->switchBackend("database");
+        mApp->autoFill()->passwordManager()->switchBackend(QSL("database"));
         return;
     }
 }
@@ -610,7 +610,7 @@ void MasterPasswordDialog::clearMasterPasswordAndConvert(bool forcedAskPass)
 
     if (m_backend->hasPermission()) {
         QVector<PasswordEntry> list = m_backend->getAllEntries();
-        PasswordBackend* databaseBackend = mApp->autoFill()->passwordManager()->availableBackends().value("database");
+        PasswordBackend* databaseBackend = mApp->autoFill()->passwordManager()->availableBackends().value(QSL("database"));
         if (!databaseBackend) {
             return;
         }
@@ -638,11 +638,11 @@ void MasterPasswordDialog::clearMasterPasswordAndConvert(bool forcedAskPass)
             m_backend->removeMasterPassword();
             m_backend->setAskMasterPasswordState(false);
 
-            mApp->autoFill()->passwordManager()->switchBackend("database");
+            mApp->autoFill()->passwordManager()->switchBackend(QSL("database"));
         }
         else {
             QMessageBox::information(this, tr("Warning!"), tr("Some data has not been decrypted. The master password was not cleared!"));
-            mApp->autoFill()->passwordManager()->switchBackend("database");
+            mApp->autoFill()->passwordManager()->switchBackend(QSL("database"));
         }
     }
     reject();

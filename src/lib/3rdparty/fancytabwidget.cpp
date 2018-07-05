@@ -122,8 +122,8 @@ void FancyTabProxyStyle::drawControl(
     p->drawText(text_rect, textFlags, text);
     p->setPen(selected ? QColor(60, 60, 60) : Utils::StyleHelper::panelTextColor());
     if (widget) {
-        const QString fader_key = "tab_" + text + "_fader";
-        const QString animation_key = "tab_" + text + "_animation";
+        const QString fader_key = QSL("tab_") + text + QSL("_fader");
+        const QString animation_key = QSL("tab_") + text + QSL("_animation");
 
         const QString tab_hover = widget->property("tab_hover").toString();
         int fader = widget->property(fader_key.toUtf8().constData()).toInt();
@@ -174,7 +174,7 @@ void FancyTabProxyStyle::drawControl(
 
 void FancyTabProxyStyle::polish(QWidget* widget)
 {
-    if (QString(widget->metaObject()->className()) == QLatin1String("QTabBar")) {
+    if (QString::fromLatin1(widget->metaObject()->className()) == QLatin1String("QTabBar")) {
         widget->setMouseTracking(true);
         widget->installEventFilter(this);
     }
@@ -492,13 +492,13 @@ private:
 FancyTabWidget::FancyTabWidget(QWidget* parent)
     : QWidget(parent),
       mode_(Mode_None),
-      tab_bar_(NULL),
+      tab_bar_(nullptr),
       stack_(new QStackedLayout),
       side_widget_(new QWidget),
       side_layout_(new QVBoxLayout),
       top_layout_(new QVBoxLayout),
       use_background_(false),
-      menu_(NULL),
+      menu_(nullptr),
       proxy_style_(new FancyTabProxyStyle)
 {
     side_layout_->setSpacing(0);
@@ -602,7 +602,7 @@ void FancyTabWidget::SetMode(Mode mode)
 {
     // Remove previous tab bar
     delete tab_bar_;
-    tab_bar_ = NULL;
+    tab_bar_ = nullptr;
 
     use_background_ = false;
 

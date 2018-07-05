@@ -31,8 +31,8 @@
 AdBlockDialog::AdBlockDialog(QWidget* parent)
     : QDialog(parent)
     , m_manager(AdBlockManager::instance())
-    , m_currentTreeWidget(0)
-    , m_currentSubscription(0)
+    , m_currentTreeWidget(nullptr)
+    , m_currentSubscription(nullptr)
     , m_loaded(false)
 {
     setAttribute(Qt::WA_DeleteOnClose);
@@ -157,7 +157,7 @@ void AdBlockDialog::aboutToShowMenu()
 
 void AdBlockDialog::learnAboutRules()
 {
-    mApp->addNewTab(QUrl("http://adblockplus.org/en/filters"));
+    mApp->addNewTab(QUrl(QSL("http://adblockplus.org/en/filters")));
 }
 
 void AdBlockDialog::loadSubscriptions()

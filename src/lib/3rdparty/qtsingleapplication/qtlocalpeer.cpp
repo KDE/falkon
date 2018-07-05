@@ -85,7 +85,7 @@ QtLocalPeer::QtLocalPeer(QObject* parent, const QString &appId)
 #endif
         prefix = id.section(QLatin1Char('/'), -1);
     }
-    prefix.remove(QRegExp("[^a-zA-Z]"));
+    prefix.remove(QRegExp(QLatin1String("[^a-zA-Z]")));
     prefix.truncate(6);
 
     QByteArray idc = id.toUtf8();
@@ -163,7 +163,7 @@ bool QtLocalPeer::sendMessage(const QString &message, int timeout)
         Sleep(DWORD(ms));
 #else
         struct timespec ts = { ms / 1000, (ms % 1000) * 1000 * 1000 };
-        nanosleep(&ts, NULL);
+        nanosleep(&ts, nullptr);
 #endif
     }
     if (!connOk) {

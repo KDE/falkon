@@ -53,7 +53,7 @@ static bool compareEntries(const PasswordEntry &value, const PasswordEntry &ref)
 
 PasswordBackendTest::PasswordBackendTest()
     : QObject()
-    , m_backend(0)
+    , m_backend(nullptr)
 {
 }
 
@@ -83,28 +83,28 @@ void PasswordBackendTest::storeTest()
 
     /* Basic password entry */
     PasswordEntry entry;
-    entry.host = "org.falkon.google.com";
-    entry.username = "user1";
-    entry.password = "pass1";
+    entry.host = QSL("org.falkon.google.com");
+    entry.username = QSL("user1");
+    entry.password = QSL("pass1");
     entry.data = "entry1-data=23&username=user1&password=pass1";
 
     m_backend->addEntry(entry);
 
     // Check entry that may be stored in cache
-    PasswordEntry stored = m_backend->getEntries(QUrl("org.falkon.google.com")).constFirst();
+    PasswordEntry stored = m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).constFirst();
     QVERIFY(compareEntries(stored, entry) == true);
 
     reloadBackend();
 
     // Check entry retrieved from backend engine
-    QVERIFY(!m_backend->getEntries(QUrl("org.falkon.google.com")).isEmpty());
-    stored = m_backend->getEntries(QUrl("org.falkon.google.com")).constFirst();
+    QVERIFY(!m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).isEmpty());
+    stored = m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).constFirst();
     QVERIFY(compareEntries(stored, entry) == true);
 
 
     /* UTF-8 password entry */
     PasswordEntry entry2;
-    entry2.host = "org.falkon.falkon.com";
+    entry2.host = QSL("org.falkon.falkon.com");
     entry2.username = QString::fromUtf8("+ě ++ éí§`]|~đ11 +!:");
     entry2.password = QString::fromUtf8("+ěš asn~đ°#&# |€");
     entry2.data = "use%C2%B6+_nam%C4%8D=%2B%C4%9B+%2B%2B+%C3%A9%C3%AD%C2%A7%60%5D%7C%7E%C4%9111+%2B%21%3A"
@@ -113,28 +113,28 @@ void PasswordBackendTest::storeTest()
     m_backend->addEntry(entry2);
 
     // Check entry that may be stored in cache
-    PasswordEntry stored2 = m_backend->getEntries(QUrl("org.falkon.falkon.com")).constFirst();
+    PasswordEntry stored2 = m_backend->getEntries(QUrl(QSL("org.falkon.falkon.com"))).constFirst();
     QVERIFY(compareEntries(stored2, entry2) == true);
 
     reloadBackend();
 
     // Check entry retrieved from backend engine
-    stored2 = m_backend->getEntries(QUrl("org.falkon.falkon.com")).constFirst();
+    stored2 = m_backend->getEntries(QUrl(QSL("org.falkon.falkon.com"))).constFirst();
     QVERIFY(compareEntries(stored2, entry2) == true);
 
     /* Cleanup */
     // Local cleanup
     m_backend->removeEntry(stored);
-    QCOMPARE(m_backend->getEntries(QUrl("org.falkon.google.com")).count(), 0);
+    QCOMPARE(m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).count(), 0);
 
     m_backend->removeEntry(stored2);
-    QCOMPARE(m_backend->getEntries(QUrl("org.falkon.falkon.com")).count(), 0);
+    QCOMPARE(m_backend->getEntries(QUrl(QSL("org.falkon.falkon.com"))).count(), 0);
 
     reloadBackend();
 
     // Backend engine cleanup
-    QCOMPARE(m_backend->getEntries(QUrl("org.falkon.google.com")).count(), 0);
-    QCOMPARE(m_backend->getEntries(QUrl("org.falkon.falkon.com")).count(), 0);
+    QCOMPARE(m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).count(), 0);
+    QCOMPARE(m_backend->getEntries(QUrl(QSL("org.falkon.falkon.com"))).count(), 0);
 }
 
 void PasswordBackendTest::removeAllTest()
@@ -142,28 +142,28 @@ void PasswordBackendTest::removeAllTest()
     reloadBackend();
 
     PasswordEntry entry;
-    entry.host = "org.falkon.google.com";
-    entry.username = "user1";
-    entry.password = "pass1";
+    entry.host = QSL("org.falkon.google.com");
+    entry.username = QSL("user1");
+    entry.password = QSL("pass1");
     entry.data = "entry1-data=23&username=user1&password=pass1";
     m_backend->addEntry(entry);
 
-    entry.username.append("s");
+    entry.username.append(QSL("s"));
     m_backend->addEntry(entry);
 
-    entry.username.append("s");
+    entry.username.append(QSL("s"));
     m_backend->addEntry(entry);
 
-    entry.username.append("s");
+    entry.username.append(QSL("s"));
     m_backend->addEntry(entry);
 
-    entry.username.append("s");
+    entry.username.append(QSL("s"));
     m_backend->addEntry(entry);
 
-    entry.username.append("s");
+    entry.username.append(QSL("s"));
     m_backend->addEntry(entry);
 
-    entry.username.append("s");
+    entry.username.append(QSL("s"));
     m_backend->addEntry(entry);
 
     QCOMPARE(m_backend->getEntries(QUrl("org.falkon.google.com")).count(), 7);
@@ -182,9 +182,9 @@ void PasswordBackendTest::updateLastUsedTest()
     reloadBackend();
 
     PasswordEntry entry;
-    entry.host = "org.falkon.google.com";
-    entry.username = "user1";
-    entry.password = "pass1";
+    entry.host = QSL("org.falkon.google.com");
+    entry.username = QSL("user1");
+    entry.password = QSL("pass1");
     entry.data = "entry1-data=23&username=user1&password=pass1";
     m_backend->addEntry(entry);
 
@@ -194,17 +194,17 @@ void PasswordBackendTest::updateLastUsedTest()
     sleep(1);
 #endif
 
-    entry.username.append("s");
+    entry.username.append(QSL("s"));
     m_backend->addEntry(entry);
 
-    QVERIFY(!m_backend->getEntries(QUrl("org.falkon.google.com")).isEmpty());
-    QVERIFY(compareEntries(entry, m_backend->getEntries(QUrl("org.falkon.google.com")).constFirst()));
+    QVERIFY(!m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).isEmpty());
+    QVERIFY(compareEntries(entry, m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).constFirst()));
     reloadBackend();
-    QVERIFY(!m_backend->getEntries(QUrl("org.falkon.google.com")).isEmpty());
-    QVERIFY(compareEntries(entry, m_backend->getEntries(QUrl("org.falkon.google.com")).constFirst()));
+    QVERIFY(!m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).isEmpty());
+    QVERIFY(compareEntries(entry, m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).constFirst()));
 
-    m_backend->removeEntry(m_backend->getEntries(QUrl("org.falkon.google.com")).constFirst());
-    m_backend->removeEntry(m_backend->getEntries(QUrl("org.falkon.google.com")).constFirst());
+    m_backend->removeEntry(m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).constFirst());
+    m_backend->removeEntry(m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).constFirst());
 
     QCOMPARE(m_backend->getAllEntries().count(), 0);
     reloadBackend();

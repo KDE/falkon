@@ -190,18 +190,18 @@ QDataStream &operator>>(QDataStream &stream, BrowserWindow::SavedWindow &window)
 }
 
 BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QUrl &startUrl)
-    : QMainWindow(0)
+    : QMainWindow(nullptr)
     , m_startUrl(startUrl)
     , m_windowType(type)
-    , m_startTab(0)
-    , m_startPage(0)
+    , m_startTab(nullptr)
+    , m_startPage(nullptr)
     , m_sideBarManager(new SideBarManager(this))
-    , m_hideNavigationTimer(0)
+    , m_hideNavigationTimer(nullptr)
 {
     setAttribute(Qt::WA_DeleteOnClose);
     setAttribute(Qt::WA_DontCreateNativeAncestors);
 
-    setObjectName("mainwindow");
+    setObjectName(QSL("mainwindow"));
     setWindowTitle(tr("Falkon"));
     setProperty("private", mApp->isPrivate());
 
@@ -218,10 +218,10 @@ BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QUrl &startUrl)
     QTimer::singleShot(0, this, SLOT(postLaunch()));
 
     if (mApp->isPrivate()) {
-        QzTools::setWmClass("Falkon Browser (Private Window)", this);
+        QzTools::setWmClass(QSL("Falkon Browser (Private Window)"), this);
     }
     else {
-        QzTools::setWmClass("Falkon Browser", this);
+        QzTools::setWmClass(QSL("Falkon Browser"), this);
     }
 }
 
@@ -259,7 +259,7 @@ void BrowserWindow::postLaunch()
         break;
 
     case MainApplication::OpenSpeedDial:
-        startUrl = QUrl("falkon:speeddial");
+        startUrl = QUrl(QSL("falkon:speeddial"));
         break;
 
     case MainApplication::OpenHomePage:
@@ -281,7 +281,7 @@ void BrowserWindow::postLaunch()
         if (mApp->isStartingAfterCrash()) {
             addTab = false;
             startUrl.clear();
-            m_tabWidget->addView(QUrl("falkon:restore"), Qz::NT_CleanSelectedTabAtTheEnd);
+            m_tabWidget->addView(QUrl(QSL("falkon:restore")), Qz::NT_CleanSelectedTabAtTheEnd);
         }
         else if (mApp->afterLaunch() == MainApplication::SelectSession || mApp->afterLaunch() == MainApplication::RestoreSession) {
             addTab = m_tabWidget->count() <= 0;
@@ -338,7 +338,7 @@ void BrowserWindow::postLaunch()
 void BrowserWindow::setupUi()
 {
     Settings settings;
-    settings.beginGroup("Browser-View-Settings");
+    settings.beginGroup(QSL("Browser-View-Settings"));
     const QByteArray windowGeometry = settings.value(QSL("WindowGeometry")).toByteArray();
 
     const QStringList keys = {
@@ -364,7 +364,7 @@ void BrowserWindow::setupUi()
     m_mainLayout->setContentsMargins(0, 0, 0, 0);
     m_mainLayout->setSpacing(0);
     m_mainSplitter = new QSplitter(this);
-    m_mainSplitter->setObjectName("sidebar-splitter");
+    m_mainSplitter->setObjectName(QSL("sidebar-splitter"));
     m_tabWidget = new TabWidget(this);
     m_superMenu = new QMenu(this);
     m_navigationToolbar = new NavigationBar(this);
@@ -386,12 +386,12 @@ void BrowserWindow::setupUi()
     m_mainLayout->addWidget(m_mainSplitter);
 
     m_statusBar = new StatusBar(this);
-    m_statusBar->setObjectName("mainwindow-statusbar");
+    m_statusBar->setObjectName(QSL("mainwindow-statusbar"));
     m_statusBar->setCursor(Qt::ArrowCursor);
     setStatusBar(m_statusBar);
     m_progressBar = new ProgressBar(m_statusBar);
     m_ipLabel = new QLabel(this);
-    m_ipLabel->setObjectName("statusbar-ip-label");
+    m_ipLabel->setObjectName(QSL("statusbar-ip-label"));
     m_ipLabel->setToolTip(tr("IP Address of current page"));
 
     m_statusBar->addPermanentWidget(m_progressBar);
@@ -471,10 +471,10 @@ void BrowserWindow::setupMenu()
     connect(closeTabAction, SIGNAL(activated()), this, SLOT(closeTab()));
     connect(closeTabAction2, SIGNAL(activated()), this, SLOT(closeTab()));
 
-    QShortcut* reloadAction = new QShortcut(QKeySequence("Ctrl+R"), this);
+    QShortcut* reloadAction = new QShortcut(QKeySequence(QSL("Ctrl+R")), this);
     connect(reloadAction, SIGNAL(activated()), this, SLOT(reload()));
 
-    QShortcut* openLocationAction = new QShortcut(QKeySequence("Alt+D"), this);
+    QShortcut* openLocationAction = new QShortcut(QKeySequence(QSL("Alt+D")), this);
     connect(openLocationAction, SIGNAL(activated()), this, SLOT(openLocation()));
 
     QShortcut* inspectorAction = new QShortcut(QKeySequence(QSL("F12")), this);
@@ -574,35 +574,35 @@ void BrowserWindow::loadSettings()
     Settings settings;
 
     //Url settings
-    settings.beginGroup("Web-URL-Settings");
-    m_homepage = settings.value("homepage", "falkon:start").toUrl();
+    settings.beginGroup(QSL("Web-URL-Settings"));
+    m_homepage = settings.value(QSL("homepage"), QSL("falkon:start")).toUrl();
     settings.endGroup();
 
     //Browser Window settings
-    settings.beginGroup("Browser-View-Settings");
-    bool showStatusBar = settings.value("showStatusBar", false).toBool();
-    bool showBookmarksToolbar = settings.value("showBookmarksToolbar", false).toBool();
-    bool showNavigationToolbar = settings.value("showNavigationToolbar", true).toBool();
-    bool showMenuBar = settings.value("showMenubar", false).toBool();
+    settings.beginGroup(QSL("Browser-View-Settings"));
+    bool showStatusBar = settings.value(QSL("showStatusBar"), false).toBool();
+    bool showBookmarksToolbar = settings.value(QSL("showBookmarksToolbar"), false).toBool();
+    bool showNavigationToolbar = settings.value(QSL("showNavigationToolbar"), true).toBool();
+    bool showMenuBar = settings.value(QSL("showMenubar"), false).toBool();
 
     // Make sure both menubar and navigationbar are not hidden
     // Fixes #781
     if (!showNavigationToolbar) {
         showMenuBar = true;
-        settings.setValue("showMenubar", true);
+        settings.setValue(QSL("showMenubar"), true);
     }
 
     settings.endGroup();
 
-    settings.beginGroup("Shortcuts");
-    m_useTabNumberShortcuts = settings.value("useTabNumberShortcuts", true).toBool();
-    m_useSpeedDialNumberShortcuts = settings.value("useSpeedDialNumberShortcuts", true).toBool();
-    m_useSingleKeyShortcuts = settings.value("useSingleKeyShortcuts", false).toBool();
+    settings.beginGroup(QSL("Shortcuts"));
+    m_useTabNumberShortcuts = settings.value(QSL("useTabNumberShortcuts"), true).toBool();
+    m_useSpeedDialNumberShortcuts = settings.value(QSL("useSpeedDialNumberShortcuts"), true).toBool();
+    m_useSingleKeyShortcuts = settings.value(QSL("useSingleKeyShortcuts"), false).toBool();
     settings.endGroup();
 
-    settings.beginGroup("Web-Browser-Settings");
+    settings.beginGroup(QSL("Web-Browser-Settings"));
     QAction *quitAction = m_mainMenu->action(QSL("Standard/Quit"));
-    if (settings.value("closeAppWithCtrlQ", true).toBool()) {
+    if (settings.value(QSL("closeAppWithCtrlQ"), true).toBool()) {
         quitAction->setShortcut(QzTools::actionShortcut(QKeySequence::Quit, QKeySequence(QSL("Ctrl+Q"))));
     } else {
         quitAction->setShortcut(QKeySequence());
@@ -656,7 +656,7 @@ TabbedWebView* BrowserWindow::weView(int index) const
 {
     WebTab* webTab = qobject_cast<WebTab*>(m_tabWidget->widget(index));
     if (!webTab) {
-        return 0;
+        return nullptr;
     }
 
     return webTab->webView();
@@ -745,7 +745,7 @@ void BrowserWindow::changeEncoding()
         mApp->webSettings()->setDefaultTextEncoding(encoding);
 
         Settings settings;
-        settings.setValue("Web-Browser-Settings/DefaultEncoding", encoding);
+        settings.setValue(QSL("Web-Browser-Settings/DefaultEncoding"), encoding);
 
         weView()->reload();
     }
@@ -868,7 +868,7 @@ void BrowserWindow::toggleShowMenubar()
 
     setUpdatesEnabled(true);
 
-    Settings().setValue("Browser-View-Settings/showMenubar", menuBar()->isVisible());
+    Settings().setValue(QSL("Browser-View-Settings/showMenubar"), menuBar()->isVisible());
 
     // Make sure we show Navigation Toolbar when Menu Bar is hidden
     if (!m_navigationToolbar->isVisible() && !menuBar()->isVisible()) {
@@ -884,7 +884,7 @@ void BrowserWindow::toggleShowStatusBar()
 
     setUpdatesEnabled(true);
 
-    Settings().setValue("Browser-View-Settings/showStatusBar", m_statusBar->isVisible());
+    Settings().setValue(QSL("Browser-View-Settings/showStatusBar"), m_statusBar->isVisible());
 
 }
 
@@ -896,8 +896,8 @@ void BrowserWindow::toggleShowBookmarksToolbar()
 
     setUpdatesEnabled(true);
 
-    Settings().setValue("Browser-View-Settings/showBookmarksToolbar", m_bookmarksToolbar->isVisible());
-    Settings().setValue("Browser-View-Settings/instantBookmarksToolbar", false);
+    Settings().setValue(QSL("Browser-View-Settings/showBookmarksToolbar"), m_bookmarksToolbar->isVisible());
+    Settings().setValue(QSL("Browser-View-Settings/instantBookmarksToolbar"), false);
 }
 
 void BrowserWindow::toggleShowNavigationToolbar()
@@ -908,7 +908,7 @@ void BrowserWindow::toggleShowNavigationToolbar()
 
     setUpdatesEnabled(true);
 
-    Settings().setValue("Browser-View-Settings/showNavigationToolbar", m_navigationToolbar->isVisible());
+    Settings().setValue(QSL("Browser-View-Settings/showNavigationToolbar"), m_navigationToolbar->isVisible());
 
 #ifndef Q_OS_MACOS
     // Make sure we show Menu Bar when Navigation Toolbar is hidden
@@ -1056,7 +1056,7 @@ void BrowserWindow::createToolbarsMenu(QMenu* menu)
 
     action = menu->addAction(tr("&Bookmarks Toolbar"), this, SLOT(toggleShowBookmarksToolbar()));
     action->setCheckable(true);
-    action->setChecked(Settings().value("Browser-View-Settings/showBookmarksToolbar").toBool());
+    action->setChecked(Settings().value(QSL("Browser-View-Settings/showBookmarksToolbar")).toBool());
 
     menu->addSeparator();
 
@@ -1109,11 +1109,11 @@ void BrowserWindow::createEncodingMenu(QMenu* menu)
     if (!menu->isEmpty())
         menu->addSeparator();
 
-    createEncodingSubMenu("ISO", isoCodecs, menu);
-    createEncodingSubMenu("UTF", utfCodecs, menu);
-    createEncodingSubMenu("Windows", windowsCodecs, menu);
-    createEncodingSubMenu("Iscii", isciiCodecs, menu);
-    createEncodingSubMenu("IBM", ibmCodecs, menu);
+    createEncodingSubMenu(QSL("ISO"), isoCodecs, menu);
+    createEncodingSubMenu(QSL("UTF"), utfCodecs, menu);
+    createEncodingSubMenu(QSL("Windows"), windowsCodecs, menu);
+    createEncodingSubMenu(QSL("Iscii"), isciiCodecs, menu);
+    createEncodingSubMenu(QSL("IBM"), ibmCodecs, menu);
     createEncodingSubMenu(tr("Other"), otherCodecs, menu);
 }
 
@@ -1143,7 +1143,7 @@ void BrowserWindow::searchOnPage()
 {
     if (weView() && weView()->webTab()) {
         const QString searchText = weView()->page()->selectedText();
-        if (!searchText.contains('\n')) {
+        if (!searchText.contains(QL1C('\n'))) {
             weView()->webTab()->showSearchToolBar(searchText);
         } else {
             weView()->webTab()->showSearchToolBar();
@@ -1153,12 +1153,12 @@ void BrowserWindow::searchOnPage()
 
 void BrowserWindow::openFile()
 {
-    const QString fileTypes = QString("%1(*.html *.htm *.shtml *.shtm *.xhtml);;"
+    const QString fileTypes = QSL("%1(*.html *.htm *.shtml *.shtm *.xhtml);;"
                                       "%2(*.png *.jpg *.jpeg *.bmp *.gif *.svg *.tiff);;"
                                       "%3(*.txt);;"
                                       "%4(*.*)").arg(tr("HTML files"), tr("Image files"), tr("Text files"), tr("All files"));
 
-    const QString filePath = QzTools::getOpenFileName("MainWindow-openFile", this, tr("Open file..."), QDir::homePath(), fileTypes);
+    const QString filePath = QzTools::getOpenFileName(QSL("MainWindow-openFile"), this, tr("Open file..."), QDir::homePath(), fileTypes);
 
     if (!filePath.isEmpty()) {
         loadAddress(QUrl::fromLocalFile(filePath));
@@ -1489,7 +1489,7 @@ void BrowserWindow::closeEvent(QCloseEvent* event)
     }
 
     Settings settings;
-    bool askOnClose = settings.value("Browser-Tabs-Settings/AskOnClosing", true).toBool();
+    bool askOnClose = settings.value(QSL("Browser-Tabs-Settings/AskOnClosing"), true).toBool();
 
     if ((mApp->afterLaunch() == MainApplication::SelectSession || mApp->afterLaunch() == MainApplication::RestoreSession) && mApp->windowCount() == 1) {
         askOnClose = false;
@@ -1511,7 +1511,7 @@ void BrowserWindow::closeEvent(QCloseEvent* event)
         }
 
         if (dialog.isChecked()) {
-            settings.setValue("Browser-Tabs-Settings/AskOnClosing", false);
+            settings.setValue(QSL("Browser-Tabs-Settings/AskOnClosing"), false);
         }
     }
 
@@ -1547,8 +1547,8 @@ void BrowserWindow::saveSettings()
     }
 
     Settings settings;
-    settings.beginGroup("Browser-View-Settings");
-    settings.setValue("WindowGeometry", saveGeometry());
+    settings.beginGroup(QSL("Browser-View-Settings"));
+    settings.setValue(QSL("WindowGeometry"), saveGeometry());
 
     const auto state = saveUiState();
     for (auto it = state.constBegin(); it != state.constEnd(); ++it) {
