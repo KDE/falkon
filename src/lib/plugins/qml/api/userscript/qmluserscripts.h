@@ -20,11 +20,23 @@
 #include "qmluserscript.h"
 #include <QObject>
 
+/**
+ * @brief The class exposing QWebEngineScriptCollection to QML
+ */
 class FALKON_EXPORT QmlUserScripts : public QObject
 {
     Q_OBJECT
+    /**
+     * @brief Number of elements in the collection
+     */
     Q_PROPERTY(int count READ count CONSTANT)
+    /**
+     * @brief Size of the collection
+     */
     Q_PROPERTY(int size READ size CONSTANT)
+    /**
+     * @brief Checks if the collection is empty
+     */
     Q_PROPERTY(bool empty READ empty CONSTANT)
 public:
     explicit QmlUserScripts(QObject *parent = nullptr);

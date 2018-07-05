@@ -24,6 +24,9 @@
 // fatal error C1189: #error :  The C++ Standard Library forbids macroizing keywords
 #undef inline
 
+/**
+ * @brief The class exposing GNU Gettext to QML
+ */
 class QmlI18n : public QObject
 {
     Q_OBJECT

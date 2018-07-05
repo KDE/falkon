@@ -22,25 +22,52 @@
 #include <QObject>
 #include <QWebEngineScript>
 
+/**
+ * @brief The class exposing QWebEngineScript to QML
+ */
 class FALKON_EXPORT QmlUserScript : public QObject
 {
     Q_OBJECT
+    /**
+     * @brief Checks if the UserScript is null
+     */
     Q_PROPERTY(bool null READ null CONSTANT)
+    /**
+     * @brief Name of the UserScript
+     */
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+    /**
+     * @brief Checks if the UserScript runs on sub frames
+     */
     Q_PROPERTY(bool runsOnSubFrames READ runsOnSubFrames WRITE setRunsOnSubFrames NOTIFY runsOnSubFramesChanged)
+    /**
+     * @brief WorldId of the UserScript
+     */
     Q_PROPERTY(int worldId READ worldId WRITE setWorldId NOTIFY worldIdChanged)
+    /**
+     * @brief Source code of the UserScript
+     */
     Q_PROPERTY(QString sourceCode READ sourceCode WRITE setSourceCode NOTIFY sourceCodeChanged)
+    /**
+     * @brief Injection point of the UserScript
+     */
     Q_PROPERTY(int injectionPoint READ injectionPoint WRITE setInjectionPoint NOTIFY injectionPointChanged)
 public:
+    /**
+     * @brief The enum exposing QWebEngineScript::InjectionPoint
+     */
     enum InjectionPoint {
-        DocumentCreation = QWebEngineScript::DocumentCreation,
-        DocumentReady = QWebEngineScript::DocumentReady,
-        Deferred = QWebEngineScript::Deferred
+        DocumentCreation = QWebEngineScript::DocumentCreation, //!< Represents QWebEngineScript::DocumentCreation
+        DocumentReady = QWebEngineScript::DocumentReady,       //!< Represents QWebEngineScript::DocumentReady,
+        Deferred = QWebEngineScript::Deferred                  //!< Represents QWebEngineScript::Deferred
     };
+    /**
+     * @brief The enum wrapping QWebEngineScript::ScriptWorldId
+     */
     enum ScriptWorldId {
-        MainWorld = QWebEngineScript::MainWorld,
-        ApplicationWorld = QWebEngineScript::ApplicationWorld,
-        UserWorld = QWebEngineScript::UserWorld
+        MainWorld = QWebEngineScript::MainWorld,               //!< Represents QWebEngineScript::MainWorld
+        ApplicationWorld = QWebEngineScript::ApplicationWorld, //!< Represents QWebEngineScript::ApplicationWorld
+        UserWorld = QWebEngineScript::UserWorld                //! < Represents QWebEngineScript::UserWorld
     };
     Q_ENUMS(InjectionPoint)
     Q_ENUMS(ScriptWorldId)
@@ -49,10 +76,25 @@ public:
     QWebEngineScript webEngineScript() const;
     void setWebEngineScript(const QWebEngineScript &script);
 Q_SIGNALS:
+    /**
+     * @brief The signal emitted when the script name is changed
+     */
     void nameChanged(const QString &name);
+    /**
+     * @brief The signal emitted when runsOnSubFrame property of the script is changed
+     */
     void runsOnSubFramesChanged(bool runsOnSubFrames);
+    /**
+     * @brief The signal emitted when worldId property of the script is changed
+     */
     void worldIdChanged(int worldId);
+    /**
+     * @brief The signal emitted when source code of the script is changed
+     */
     void sourceCodeChanged(const QString &sourceCode);
+    /**
+     * @brief The signal emitted when injectionPoint property of the script is changed
+     */
     void injectionPointChanged(int injectionPoint);
 private:
     QWebEngineScript m_webEngineScript;
