@@ -54,7 +54,7 @@ public:
     void setEngine(QQmlEngine *engine);
     void setName(const QString &name);
     void populateWebViewMenu(QMenu *menu, WebView *webview, const WebHitTestResult &webHitTestResult) override;
-    void showSettings(QWidget *parent = 0);
+    void showSettings(QWidget *parent = nullptr);
 
     bool mouseDoubleClick(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
     bool mousePress(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
