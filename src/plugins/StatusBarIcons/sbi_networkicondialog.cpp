@@ -31,8 +31,8 @@ SBI_NetworkIconDialog::SBI_NetworkIconDialog(QWidget* parent)
 
     ui->setupUi(this);
 
-    ui->addButton->setIcon(QIcon::fromTheme("document-new", QIcon(":sbi/data/add.png")));
-    ui->removeButton->setIcon(QIcon::fromTheme("edit-delete", QIcon(":sbi/data/remove.png")));
+    ui->addButton->setIcon(QIcon::fromTheme(QLatin1String("document-new"), QIcon(QLatin1String(":sbi/data/add.png"))));
+    ui->removeButton->setIcon(QIcon::fromTheme(QLatin1String("edit-delete"), QIcon(QLatin1String(":sbi/data/remove.png"))));
 
     const QHash<QString, SBI_NetworkProxy*> &proxies = SBINetManager->proxies();
 

@@ -31,7 +31,7 @@ static const int bookmarksVersion = 1;
 
 Bookmarks::Bookmarks(QObject* parent)
     : QObject(parent)
-    , m_autoSaver(0)
+    , m_autoSaver(nullptr)
 {
     m_autoSaver = new AutoSaver(this);
     connect(m_autoSaver, SIGNAL(save()), this, SLOT(saveSettings()));
@@ -49,9 +49,9 @@ Bookmarks::~Bookmarks()
 void Bookmarks::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("Bookmarks");
-    m_showOnlyIconsInToolbar = settings.value("showOnlyIconsInToolbar", false).toBool();
-    m_showOnlyTextInToolbar = settings.value("showOnlyTextInToolbar", false).toBool();
+    settings.beginGroup(QSL("Bookmarks"));
+    m_showOnlyIconsInToolbar = settings.value(QSL("showOnlyIconsInToolbar"), false).toBool();
+    m_showOnlyTextInToolbar = settings.value(QSL("showOnlyTextInToolbar"), false).toBool();
     settings.endGroup();
 }
 
@@ -191,9 +191,9 @@ void Bookmarks::setShowOnlyTextInToolbar(bool state)
 void Bookmarks::saveSettings()
 {
     Settings settings;
-    settings.beginGroup("Bookmarks");
-    settings.setValue("showOnlyIconsInToolbar", m_showOnlyIconsInToolbar);
-    settings.setValue("showOnlyTextInToolbar", m_showOnlyTextInToolbar);
+    settings.beginGroup(QSL("Bookmarks"));
+    settings.setValue(QSL("showOnlyIconsInToolbar"), m_showOnlyIconsInToolbar);
+    settings.setValue(QSL("showOnlyTextInToolbar"), m_showOnlyTextInToolbar);
     settings.endGroup();
 
     saveBookmarks();
@@ -254,13 +254,13 @@ void Bookmarks::loadBookmarks()
         Q_ASSERT(err.error == QJsonParseError::NoError);
         Q_ASSERT(data.type() == QVariant::Map);
 
-        loadBookmarksFromMap(data.toMap().value("roots").toMap());
+        loadBookmarksFromMap(data.toMap().value(QSL("roots")).toMap());
 
         // Don't forget to save the bookmarks
         m_autoSaver->changeOccurred();
     }
     else {
-        loadBookmarksFromMap(res.toMap().value("roots").toMap());
+        loadBookmarksFromMap(res.toMap().value(QSL("roots")).toMap());
     }
 }
 
@@ -270,22 +270,22 @@ void Bookmarks::saveBookmarks()
 
 #define WRITE_FOLDER(name, mapName, folder) \
     QVariantMap mapName; \
-    mapName.insert("children", writeBookmarks(folder)); \
-    mapName.insert("expanded", folder->isExpanded()); \
-    mapName.insert("expanded_sidebar", folder->isSidebarExpanded()); \
-    mapName.insert("name", folder->title()); \
-    mapName.insert("description", folder->description()); \
-    mapName.insert("type", "folder"); \
+    mapName.insert(QSL("children"), writeBookmarks(folder)); \
+    mapName.insert(QSL("expanded"), folder->isExpanded()); \
+    mapName.insert(QSL("expanded_sidebar"), folder->isSidebarExpanded()); \
+    mapName.insert(QSL("name"), folder->title()); \
+    mapName.insert(QSL("description"), folder->description()); \
+    mapName.insert(QSL("type"), QSL("folder")); \
     bookmarksMap.insert(name, mapName);
 
-    WRITE_FOLDER("bookmark_bar", toolbarMap, m_folderToolbar)
-    WRITE_FOLDER("bookmark_menu", menuMap, m_folderMenu)
-    WRITE_FOLDER("other", unsortedMap, m_folderUnsorted)
+    WRITE_FOLDER(QSL("bookmark_bar"), toolbarMap, m_folderToolbar)
+    WRITE_FOLDER(QSL("bookmark_menu"), menuMap, m_folderMenu)
+    WRITE_FOLDER(QSL("other"), unsortedMap, m_folderUnsorted)
 #undef WRITE_FOLDER
 
     QVariantMap map;
-    map.insert("version", bookmarksVersion);
-    map.insert("roots", bookmarksMap);
+    map.insert(QSL("version"), bookmarksVersion);
+    map.insert(QSL("roots"), bookmarksMap);
 
     const QJsonDocument json = QJsonDocument::fromVariant(map);
     const QByteArray data = json.toJson();
@@ -308,13 +308,13 @@ void Bookmarks::saveBookmarks()
 void Bookmarks::loadBookmarksFromMap(const QVariantMap &map)
 {
 #define READ_FOLDER(name, folder) \
-    readBookmarks(map.value(name).toMap().value("children").toList(), folder); \
-    folder->setExpanded(map.value(name).toMap().value("expanded").toBool()); \
-    folder->setSidebarExpanded(map.value(name).toMap().value("expanded_sidebar").toBool());
+    readBookmarks(map.value(name).toMap().value(QSL("children")).toList(), folder); \
+    folder->setExpanded(map.value(name).toMap().value(QSL("expanded")).toBool()); \
+    folder->setSidebarExpanded(map.value(name).toMap().value(QSL("expanded_sidebar")).toBool());
 
-    READ_FOLDER("bookmark_bar", m_folderToolbar)
-    READ_FOLDER("bookmark_menu", m_folderMenu)
-    READ_FOLDER("other", m_folderUnsorted)
+    READ_FOLDER(QSL("bookmark_bar"), m_folderToolbar)
+    READ_FOLDER(QSL("bookmark_menu"), m_folderMenu)
+    READ_FOLDER(QSL("other"), m_folderUnsorted)
 #undef READ_FOLDER
 }
 
@@ -324,7 +324,7 @@ void Bookmarks::readBookmarks(const QVariantList &list, BookmarkItem* parent)
 
     foreach (const QVariant &entry, list) {
         const QVariantMap map = entry.toMap();
-        BookmarkItem::Type type = BookmarkItem::typeFromString(map.value("type").toString());
+        BookmarkItem::Type type = BookmarkItem::typeFromString(map.value(QSL("type")).toString());
 
         if (type == BookmarkItem::Invalid) {
             continue;
@@ -334,26 +334,26 @@ void Bookmarks::readBookmarks(const QVariantList &list, BookmarkItem* parent)
 
         switch (type) {
         case BookmarkItem::Url:
-            item->setUrl(QUrl::fromEncoded(map.value("url").toByteArray()));
-            item->setTitle(map.value("name").toString());
-            item->setDescription(map.value("description").toString());
-            item->setKeyword(map.value("keyword").toString());
-            item->setVisitCount(map.value("visit_count").toInt());
+            item->setUrl(QUrl::fromEncoded(map.value(QSL("url")).toByteArray()));
+            item->setTitle(map.value(QSL("name")).toString());
+            item->setDescription(map.value(QSL("description")).toString());
+            item->setKeyword(map.value(QSL("keyword")).toString());
+            item->setVisitCount(map.value(QSL("visit_count")).toInt());
             break;
 
         case BookmarkItem::Folder:
-            item->setTitle(map.value("name").toString());
-            item->setDescription(map.value("description").toString());
-            item->setExpanded(map.value("expanded").toBool());
-            item->setSidebarExpanded(map.value("expanded_sidebar").toBool());
+            item->setTitle(map.value(QSL("name")).toString());
+            item->setDescription(map.value(QSL("description")).toString());
+            item->setExpanded(map.value(QSL("expanded")).toBool());
+            item->setSidebarExpanded(map.value(QSL("expanded_sidebar")).toBool());
             break;
 
         default:
             break;
         }
 
-        if (map.contains("children")) {
-            readBookmarks(map.value("children").toList(), item);
+        if (map.contains(QSL("children"))) {
+            readBookmarks(map.value(QSL("children")).toList(), item);
         }
     }
 }
@@ -366,22 +366,22 @@ QVariantList Bookmarks::writeBookmarks(BookmarkItem* parent)
 
     foreach (BookmarkItem* child, parent->children()) {
         QVariantMap map;
-        map.insert("type", BookmarkItem::typeToString(child->type()));
+        map.insert(QSL("type"), BookmarkItem::typeToString(child->type()));
 
         switch (child->type()) {
         case BookmarkItem::Url:
-            map.insert("url", child->urlString());
-            map.insert("name", child->title());
-            map.insert("description", child->description());
-            map.insert("keyword", child->keyword());
-            map.insert("visit_count", child->visitCount());
+            map.insert(QSL("url"), child->urlString());
+            map.insert(QSL("name"), child->title());
+            map.insert(QSL("description"), child->description());
+            map.insert(QSL("keyword"), child->keyword());
+            map.insert(QSL("visit_count"), child->visitCount());
             break;
 
         case BookmarkItem::Folder:
-            map.insert("name", child->title());
-            map.insert("description", child->description());
-            map.insert("expanded", child->isExpanded());
-            map.insert("expanded_sidebar", child->isSidebarExpanded());
+            map.insert(QSL("name"), child->title());
+            map.insert(QSL("description"), child->description());
+            map.insert(QSL("expanded"), child->isExpanded());
+            map.insert(QSL("expanded_sidebar"), child->isSidebarExpanded());
             break;
 
         default:
@@ -389,7 +389,7 @@ QVariantList Bookmarks::writeBookmarks(BookmarkItem* parent)
         }
 
         if (!child->children().isEmpty()) {
-            map.insert("children", writeBookmarks(child));
+            map.insert(QSL("children"), writeBookmarks(child));
         }
 
         list.append(map);

@@ -34,7 +34,7 @@ BookmarksManager::BookmarksManager(BrowserWindow* window, QWidget* parent)
     , ui(new Ui::BookmarksManager)
     , m_window(window)
     , m_bookmarks(mApp->bookmarks())
-    , m_selectedBookmark(0)
+    , m_selectedBookmark(nullptr)
     , m_blockDescriptionChangedSignal(false)
     , m_adjustHeaderSizesOnShow(true)
 {
@@ -48,7 +48,7 @@ BookmarksManager::BookmarksManager(BrowserWindow* window, QWidget* parent)
     connect(ui->tree, SIGNAL(contextMenuRequested(QPoint)), this, SLOT(createContextMenu(QPoint)));
 
     // Box for editing bookmarks
-    updateEditBox(0);
+    updateEditBox(nullptr);
     connect(ui->title, SIGNAL(textEdited(QString)), this, SLOT(bookmarkEdited()));
     connect(ui->address, SIGNAL(textEdited(QString)), this, SLOT(bookmarkEdited()));
     connect(ui->keyword, SIGNAL(textEdited(QString)), this, SLOT(bookmarkEdited()));
@@ -90,8 +90,8 @@ void BookmarksManager::bookmarkShiftActivated(BookmarkItem* item)
 void BookmarksManager::bookmarksSelected(const QList<BookmarkItem*> &items)
 {
     if (items.size() != 1) {
-        m_selectedBookmark = 0;
-        updateEditBox(0);
+        m_selectedBookmark = nullptr;
+        updateEditBox(nullptr);
     }
     else {
         m_selectedBookmark = items.at(0);
@@ -111,7 +111,7 @@ void BookmarksManager::createContextMenu(const QPoint &pos)
     menu.addAction(tr("New Folder"), this, SLOT(addFolder()));
     menu.addAction(tr("New Separator"), this, SLOT(addSeparator()));
     menu.addSeparator();
-    QAction* actDelete = menu.addAction(QIcon::fromTheme("edit-delete"), tr("Delete"));
+    QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"));
 
     connect(actNewTab, SIGNAL(triggered()), this, SLOT(openBookmarkInNewTab()));
     connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewWindow()));
@@ -169,7 +169,7 @@ void BookmarksManager::addBookmark()
 {
     BookmarkItem* item = new BookmarkItem(BookmarkItem::Url);
     item->setTitle(tr("New Bookmark"));
-    item->setUrl(QUrl("http://"));
+    item->setUrl(QUrl(QSL("http://")));
     addBookmark(item);
 }
 

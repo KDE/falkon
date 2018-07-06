@@ -42,7 +42,7 @@ void SqlDatabaseTest::sqlQueryJobTest()
     QTemporaryFile file;
     file.open();
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    QSqlDatabase db = QSqlDatabase::addDatabase(QSL("QSQLITE"));
     db.setDatabaseName(file.fileName());
     db.open();
 
@@ -51,37 +51,37 @@ void SqlDatabaseTest::sqlQueryJobTest()
     QCOMPARE(db.tables().count(), 0);
 
     SqlQueryJob *job = new SqlQueryJob();
-    job->setQuery("CREATE TABLE test1 (data TEXT, id INTEGER PRIMARY KEY)");
+    job->setQuery(QSL("CREATE TABLE test1 (data TEXT, id INTEGER PRIMARY KEY)"));
     job->start();
     QVERIFY(waitForFinished(job));
     QVERIFY(!job->error().isValid());
 
-    QCOMPARE(db.tables(), QStringList{"test1"});
+    QCOMPARE(db.tables(), QStringList{QSL("test1")});
 
     job = new SqlQueryJob();
-    job->setQuery("INSERT INTO test1 (data) VALUES (?)");
-    job->addBindValue("test-value");
+    job->setQuery(QSL("INSERT INTO test1 (data) VALUES (?)"));
+    job->addBindValue(QSL("test-value"));
     job->start();
     QVERIFY(waitForFinished(job));
     QVERIFY(!job->error().isValid());
 
     QCOMPARE(job->lastInsertId().toInt(), 1);
-    QSqlQuery query("SELECT data FROM test1", db);
+    QSqlQuery query(QSL("SELECT data FROM test1"), db);
     query.next();
-    QCOMPARE(query.value(0).toString(), QString("test-value"));
+    QCOMPARE(query.value(0).toString(), QSL("test-value"));
     QVERIFY(!query.next());
 
     job = new SqlQueryJob();
-    job->setQuery("SELECT data FROM test1");
+    job->setQuery(QSL("SELECT data FROM test1"));
     job->start();
     QVERIFY(waitForFinished(job));
     QVERIFY(!job->error().isValid());
 
     QCOMPARE(job->records().size(), 1);
-    QCOMPARE(job->records().at(0).value(0).toString(), QString("test-value"));
+    QCOMPARE(job->records().at(0).value(0).toString(), QSL("test-value"));
 
     job = new SqlQueryJob();
-    job->setQuery("SELECT invalid sql syntax; 1321sdsa from");
+    job->setQuery(QSL("SELECT invalid sql syntax; 1321sdsa from"));
     job->start();
     QVERIFY(waitForFinished(job));
     QVERIFY(job->error().isValid());

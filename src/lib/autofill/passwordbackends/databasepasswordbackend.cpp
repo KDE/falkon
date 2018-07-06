@@ -37,8 +37,8 @@ QVector<PasswordEntry> DatabasePasswordBackend::getEntries(const QUrl &url)
     const QString host = PasswordManager::createHost(url);
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT id, username, password, data FROM autofill "
-                  "WHERE server=? ORDER BY last_used DESC");
+    query.prepare(QSL("SELECT id, username, password, data FROM autofill "
+                  "WHERE server=? ORDER BY last_used DESC"));
     query.addBindValue(host);
     query.exec();
 
@@ -63,7 +63,7 @@ QVector<PasswordEntry> DatabasePasswordBackend::getAllEntries()
     QVector<PasswordEntry> list;
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT id, server, username, password, data FROM autofill");
+    query.prepare(QSL("SELECT id, server, username, password, data FROM autofill"));
     query.exec();
 
     while (query.next()) {
@@ -86,7 +86,7 @@ void DatabasePasswordBackend::addEntry(const PasswordEntry &entry)
     if (entry.data.isEmpty()) {
         // Multiple-usernames for HTTP/FTP authorization not supported
         QSqlQuery query(SqlDatabase::instance()->database());
-        query.prepare("SELECT username FROM autofill WHERE server=?");
+        query.prepare(QSL("SELECT username FROM autofill WHERE server=?"));
         query.addBindValue(entry.host);
         query.exec();
 
@@ -96,8 +96,8 @@ void DatabasePasswordBackend::addEntry(const PasswordEntry &entry)
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("INSERT INTO autofill (server, data, username, password, last_used) "
-                  "VALUES (?,?,?,?,strftime('%s', 'now'))");
+    query.prepare(QSL("INSERT INTO autofill (server, data, username, password, last_used) "
+                  "VALUES (?,?,?,?,strftime('%s', 'now'))"));
     query.bindValue(0, entry.host);
     query.bindValue(1, entry.data);
     query.bindValue(2, entry.username);
@@ -111,13 +111,13 @@ bool DatabasePasswordBackend::updateEntry(const PasswordEntry &entry)
 
     // Data is empty only for HTTP/FTP authorization
     if (entry.data.isEmpty()) {
-        query.prepare("UPDATE autofill SET username=?, password=? WHERE server=?");
+        query.prepare(QSL("UPDATE autofill SET username=?, password=? WHERE server=?"));
         query.bindValue(0, entry.username);
         query.bindValue(1, entry.password);
         query.bindValue(2, entry.host);
     }
     else {
-        query.prepare("UPDATE autofill SET data=?, username=?, password=? WHERE id=?");
+        query.prepare(QSL("UPDATE autofill SET data=?, username=?, password=? WHERE id=?"));
         query.addBindValue(entry.data);
         query.addBindValue(entry.username);
         query.addBindValue(entry.password);
@@ -130,7 +130,7 @@ bool DatabasePasswordBackend::updateEntry(const PasswordEntry &entry)
 void DatabasePasswordBackend::updateLastUsed(PasswordEntry &entry)
 {
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("UPDATE autofill SET last_used=strftime('%s', 'now') WHERE id=?");
+    query.prepare(QSL("UPDATE autofill SET last_used=strftime('%s', 'now') WHERE id=?"));
     query.addBindValue(entry.id);
     query.exec();
 }
@@ -138,7 +138,7 @@ void DatabasePasswordBackend::updateLastUsed(PasswordEntry &entry)
 void DatabasePasswordBackend::removeEntry(const PasswordEntry &entry)
 {
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("DELETE FROM autofill WHERE id=?");
+    query.prepare(QSL("DELETE FROM autofill WHERE id=?"));
     query.addBindValue(entry.id);
     query.exec();
 }
@@ -146,5 +146,5 @@ void DatabasePasswordBackend::removeEntry(const PasswordEntry &entry)
 void DatabasePasswordBackend::removeAll()
 {
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.exec("DELETE FROM autofill");
+    query.exec(QSL("DELETE FROM autofill"));
 }

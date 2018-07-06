@@ -67,36 +67,36 @@ void AdBlockTest::parseRegExpFilterTest_data()
     QTest::addColumn<QString>("parsedFilter");
     QTest::addColumn<QStringList>("result");
 
-    QTest::newRow("test1") << "||doubleclick.net/pfadx/tmg.telegraph."
-                           << (QStringList() << "doubleclick.net/pfadx/tmg.telegraph.");
-    QTest::newRow("test2") << "||doubleclick.net/pfadx/*.mtvi"
-                           << (QStringList() << "doubleclick.net/pfadx/" << ".mtvi");
-    QTest::newRow("test3") << "&prvtof=*&poru="
-                           << (QStringList() << "&prvtof=" << "&poru=");
-    QTest::newRow("test4") << "/addyn|*;adtech;"
-                           << (QStringList() << "/addyn" << ";adtech;");
-    QTest::newRow("test5") << "/eas_fif.html^"
-                           << (QStringList() << "/eas_fif.html");
-    QTest::newRow("test6") << "://findnsave.^.*/api/groupon.json?"
-                           << (QStringList() << "://findnsave." << "/api/groupon.json?");
-    QTest::newRow("test7") << "^fp=*&prvtof="
-                           << (QStringList() << "fp=" << "&prvtof=");
-    QTest::newRow("test8") << "|http://ax-d.*/jstag^"
-                           << (QStringList() << "http://ax-d." << "/jstag");
-    QTest::newRow("test9") << "||reuters.com^*/rcom-wt-mlt.js"
-                           << (QStringList() << "reuters.com" <<"/rcom-wt-mlt.js");
-    QTest::newRow("test10") << "||chip.de^*/tracking.js"
-                           << (QStringList() << "chip.de" << "/tracking.js");
-    QTest::newRow("ignore1char") << "/search.php?uid=*.*&src="
-                           << (QStringList() << "/search.php?uid=" << "&src=");
-    QTest::newRow("ignoreDuplicates") << "/search.*.dup.*.dup.*&src="
-                           << (QStringList() << "/search." << ".dup." << "&src=");
+    QTest::newRow("test1") << QSL("||doubleclick.net/pfadx/tmg.telegraph.")
+                           << (QStringList() << QSL("doubleclick.net/pfadx/tmg.telegraph."));
+    QTest::newRow("test2") << QSL("||doubleclick.net/pfadx/*.mtvi")
+                           << (QStringList() << QSL("doubleclick.net/pfadx/") << QSL(".mtvi"));
+    QTest::newRow("test3") << QSL("&prvtof=*&poru=")
+                           << (QStringList() << QSL("&prvtof=") << QSL("&poru="));
+    QTest::newRow("test4") << QSL("/addyn|*;adtech;")
+                           << (QStringList() << QSL("/addyn") << QSL(";adtech;"));
+    QTest::newRow("test5") << QSL("/eas_fif.html^")
+                           << (QStringList() << QSL("/eas_fif.html"));
+    QTest::newRow("test6") << QSL("://findnsave.^.*/api/groupon.json?")
+                           << (QStringList() << QSL("://findnsave.") << QSL("/api/groupon.json?"));
+    QTest::newRow("test7") << QSL("^fp=*&prvtof=")
+                           << (QStringList() << QSL("fp=") << QSL("&prvtof="));
+    QTest::newRow("test8") << QSL("|http://ax-d.*/jstag^")
+                           << (QStringList() << QSL("http://ax-d.") << QSL("/jstag"));
+    QTest::newRow("test9") << QSL("||reuters.com^*/rcom-wt-mlt.js")
+                           << (QStringList() << QSL("reuters.com") <<QSL("/rcom-wt-mlt.js"));
+    QTest::newRow("test10") << QSL("||chip.de^*/tracking.js")
+                           << (QStringList() << QSL("chip.de") << QSL("/tracking.js"));
+    QTest::newRow("ignore1char") << QSL("/search.php?uid=*.*&src=")
+                           << (QStringList() << QSL("/search.php?uid=") << QSL("&src="));
+    QTest::newRow("ignoreDuplicates") << QSL("/search.*.dup.*.dup.*&src=")
+                           << (QStringList() << QSL("/search.") << QSL(".dup.") << QSL("&src="));
     QTest::newRow("empty") << QString()
                            << (QStringList());
-    QTest::newRow("justspaces") << QString("       ")
-                           << (QStringList() << "       ");
-    QTest::newRow("spacesWithMetachars") << QString("   *    ?")
-                           << (QStringList() << "   " << "    ?");
+    QTest::newRow("justspaces") << QSL("       ")
+                           << (QStringList() << QSL("       "));
+    QTest::newRow("spacesWithMetachars") << QSL("   *    ?")
+                           << (QStringList() << QSL("   ") << QSL("    ?"));
 }
 
 void AdBlockTest::parseRegExpFilterTest()
@@ -111,13 +111,13 @@ void AdBlockTest::parseRegExpFilterTest()
 
 void AdBlockTest::ignoreEmptyLinesInSubscriptionTest()
 {
-    AdBlockSubscription subscription("test-subscription");
-    subscription.setFilePath(":autotests/data/adblock_empty_lines.txt");
+    AdBlockSubscription subscription(QSL("test-subscription"));
+    subscription.setFilePath(QSL(":autotests/data/adblock_empty_lines.txt"));
     subscription.loadSubscription({});
 
     QCOMPARE(subscription.allRules().count(), 3);
-    QCOMPARE(subscription.allRules().at(0)->filter(), QString("filter.com"));
-    QCOMPARE(subscription.allRules().at(1)->filter(), QString("test"));
+    QCOMPARE(subscription.allRules().at(0)->filter(), QSL("filter.com"));
+    QCOMPARE(subscription.allRules().at(1)->filter(), QSL("test"));
     QCOMPARE(subscription.allRules().at(2)->isComment(), true);
 }
 

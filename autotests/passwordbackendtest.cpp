@@ -166,9 +166,9 @@ void PasswordBackendTest::removeAllTest()
     entry.username.append(QSL("s"));
     m_backend->addEntry(entry);
 
-    QCOMPARE(m_backend->getEntries(QUrl("org.falkon.google.com")).count(), 7);
+    QCOMPARE(m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).count(), 7);
     reloadBackend();
-    QCOMPARE(m_backend->getEntries(QUrl("org.falkon.google.com")).count(), 7);
+    QCOMPARE(m_backend->getEntries(QUrl(QSL("org.falkon.google.com"))).count(), 7);
 
     m_backend->removeAll();
 

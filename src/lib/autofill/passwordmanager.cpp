@@ -61,25 +61,25 @@ QDataStream &operator >>(QDataStream &stream, PasswordEntry &entry)
 PasswordManager::PasswordManager(QObject* parent)
     : QObject(parent)
     , m_loaded(false)
-    , m_backend(0)
+    , m_backend(nullptr)
     , m_databaseBackend(new DatabasePasswordBackend)
     , m_databaseEncryptedBackend(new DatabaseEncryptedPasswordBackend)
 {
-    m_backends["database"] = m_databaseBackend;
-    m_backends["database-encrypted"] = m_databaseEncryptedBackend;
+    m_backends[QSL("database")] = m_databaseBackend;
+    m_backends[QSL("database-encrypted")] = m_databaseEncryptedBackend;
 }
 
 void PasswordManager::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("PasswordManager");
-    QString backendId = settings.value("Backend", "database").toString();
+    settings.beginGroup(QSL("PasswordManager"));
+    QString backendId = settings.value(QSL("Backend"), QSL("database")).toString();
     settings.endGroup();
 
     if (m_backend) {
         m_backend->setActive(false);
     }
-    m_backend = m_backends[m_backends.contains(backendId) ? backendId : "database"];
+    m_backend = m_backends[m_backends.contains(backendId) ? backendId : QSL("database")];
     m_backend->setActive(true);
 }
 
@@ -159,8 +159,8 @@ void PasswordManager::switchBackend(const QString &backendID)
     m_backend->setActive(true);
 
     Settings settings;
-    settings.beginGroup("PasswordManager");
-    settings.setValue("Backend", backendID);
+    settings.beginGroup(QSL("PasswordManager"));
+    settings.setValue(QSL("Backend"), backendID);
     settings.endGroup();
 
     emit passwordBackendChanged();

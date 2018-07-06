@@ -43,8 +43,8 @@ void AutoFillWidget::setUsernames(const QStringList &usernames)
         }
 
         QPushButton* button = new QPushButton(this);
-        button->setIcon(QIcon(":icons/other/login.png"));
-        button->setStyleSheet("text-align:left;font-weight:bold;");
+        button->setIcon(QIcon(QSL(":icons/other/login.png")));
+        button->setStyleSheet(QSL("text-align:left;font-weight:bold;"));
         button->setText(username);
         button->setFlat(true);
 

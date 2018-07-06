@@ -60,7 +60,7 @@ class FALKON_EXPORT AdBlockSubscription : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdBlockSubscription(const QString &title, QObject* parent = 0);
+    explicit AdBlockSubscription(const QString &title, QObject* parent = nullptr);
     ~AdBlockSubscription();
 
     QString title() const;
@@ -116,7 +116,7 @@ class AdBlockCustomList : public AdBlockSubscription
 {
     Q_OBJECT
 public:
-    explicit AdBlockCustomList(QObject* parent = 0);
+    explicit AdBlockCustomList(QObject* parent = nullptr);
 
     void loadSubscription(const QStringList &disabledRules);
     void saveSubscription();

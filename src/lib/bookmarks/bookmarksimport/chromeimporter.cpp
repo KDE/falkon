@@ -47,7 +47,7 @@ QString ChromeImporter::standardPath() const
 
 QString ChromeImporter::getPath(QWidget* parent)
 {
-    m_path = QFileDialog::getOpenFileName(parent, BookmarksImporter::tr("Choose file..."), standardPath(), "Bookmarks (Bookmarks)");
+    m_path = QFileDialog::getOpenFileName(parent, BookmarksImporter::tr("Choose file..."), standardPath(), QSL("Bookmarks (Bookmarks)"));
     return m_path;
 }
 
@@ -74,25 +74,25 @@ BookmarkItem* ChromeImporter::importBookmarks()
 
     if (err.error != QJsonParseError::NoError || res.type() != QVariant::Map) {
         setError(BookmarksImporter::tr("Cannot parse JSON file!"));
-        return 0;
+        return nullptr;
     }
 
-    QVariantMap rootMap = res.toMap().value("roots").toMap();
+    QVariantMap rootMap = res.toMap().value(QSL("roots")).toMap();
 
     BookmarkItem* root = new BookmarkItem(BookmarkItem::Folder);
-    root->setTitle("Chrome Import");
+    root->setTitle(QSL("Chrome Import"));
 
     BookmarkItem* toolbar = new BookmarkItem(BookmarkItem::Folder, root);
-    toolbar->setTitle(rootMap.value("bookmark_bar").toMap().value("name").toString());
-    readBookmarks(rootMap.value("bookmark_bar").toMap().value("children").toList(), toolbar);
+    toolbar->setTitle(rootMap.value(QSL("bookmark_bar")).toMap().value(QSL("name")).toString());
+    readBookmarks(rootMap.value(QSL("bookmark_bar")).toMap().value(QSL("children")).toList(), toolbar);
 
     BookmarkItem* other = new BookmarkItem(BookmarkItem::Folder, root);
-    other->setTitle(rootMap.value("other").toMap().value("name").toString());
-    readBookmarks(rootMap.value("other").toMap().value("children").toList(), other);
+    other->setTitle(rootMap.value(QSL("other")).toMap().value(QSL("name")).toString());
+    readBookmarks(rootMap.value(QSL("other")).toMap().value(QSL("children")).toList(), other);
 
     BookmarkItem* synced = new BookmarkItem(BookmarkItem::Folder, root);
-    synced->setTitle(rootMap.value("synced").toMap().value("name").toString());
-    readBookmarks(rootMap.value("synced").toMap().value("synced").toList(), other);
+    synced->setTitle(rootMap.value(QSL("synced")).toMap().value(QSL("name")).toString());
+    readBookmarks(rootMap.value(QSL("synced")).toMap().value(QSL("synced")).toList(), other);
 
     return root;
 }
@@ -103,7 +103,7 @@ void ChromeImporter::readBookmarks(const QVariantList &list, BookmarkItem* paren
 
     foreach (const QVariant &entry, list) {
         const QVariantMap map = entry.toMap();
-        const QString typeString = map.value("type").toString();
+        const QString typeString = map.value(QSL("type")).toString();
         BookmarkItem::Type type;
 
         if (typeString == QLatin1String("url")) {
@@ -117,14 +117,14 @@ void ChromeImporter::readBookmarks(const QVariantList &list, BookmarkItem* paren
         }
 
         BookmarkItem* item = new BookmarkItem(type, parent);
-        item->setTitle(map.value("name").toString());
+        item->setTitle(map.value(QSL("name")).toString());
 
         if (item->isUrl()) {
-            item->setUrl(QUrl::fromEncoded(map.value("url").toByteArray()));
+            item->setUrl(QUrl::fromEncoded(map.value(QSL("url")).toByteArray()));
         }
 
-        if (map.contains("children")) {
-            readBookmarks(map.value("children").toList(), item);
+        if (map.contains(QSL("children"))) {
+            readBookmarks(map.value(QSL("children")).toList(), item);
         }
     }
 }

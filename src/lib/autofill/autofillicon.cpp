@@ -22,9 +22,9 @@
 
 AutoFillIcon::AutoFillIcon(QWidget* parent)
     : ClickableLabel(parent)
-    , m_view(0)
+    , m_view(nullptr)
 {
-    setObjectName("locationbar-autofillicon");
+    setObjectName(QSL("locationbar-autofillicon"));
     setCursor(Qt::PointingHandCursor);
     setToolTip(AutoFillWidget::tr("Choose username to login"));
     setFocusPolicy(Qt::ClickFocus);
