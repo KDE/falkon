@@ -44,6 +44,7 @@
 #include "api/events/qmlwheelevent.h"
 #include "api/userscript/qmluserscript.h"
 #include "api/userscript/qmluserscripts.h"
+#include "api/userscript/qmlexternaljsobject.h"
 
 #ifdef LibIntl_FOUND
 #include "qml/api/i18n/qmli18n.h"
@@ -191,6 +192,14 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(scriptEngine)
 
         auto *object = new QmlUserScripts();
+        return object;
+    });
+
+    qmlRegisterSingletonType<QmlExternalJsObject>("org.kde.falkon", 1, 0, "ExternalJsObject", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        auto *object = new QmlExternalJsObject();
         return object;
     });
 }

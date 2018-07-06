@@ -185,6 +185,7 @@ set(SRCS ${SRCS}
     plugins/qml/api/events/qmlkeyevent.cpp
     plugins/qml/api/userscript/qmluserscript.cpp
     plugins/qml/api/userscript/qmluserscripts.cpp
+    plugins/qml/api/userscript/qmlexternaljsobject.cpp
     popupwindow/popuplocationbar.cpp
     popupwindow/popupstatusbarmessage.cpp
     popupwindow/popupwebview.cpp
