@@ -268,10 +268,7 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
     QString downloadPath;
     bool openFile = false;
 
-    QString fileName = QFileInfo(downloadItem->path()).fileName();
-    fileName = QUrl::fromPercentEncoding(fileName.toUtf8());
-    // Filename may have been percent encoded and actually containing path
-    fileName = QFileInfo(fileName).fileName();
+    const QString fileName = QFileInfo(downloadItem->path()).fileName();
 
     const bool forceAsk = downloadItem->savePageFormat() != QWebEngineDownloadItem::UnknownSaveFormat
             || downloadItem->type() == QWebEngineDownloadItem::UserRequested;
