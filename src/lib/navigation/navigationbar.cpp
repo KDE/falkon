@@ -230,19 +230,24 @@ void NavigationBar::setCurrentView(TabbedWebView *view)
         return;
     }
 
-    auto updateButton = [](ToolButton *button, QAction *action) {
-        button->setEnabled(action->isEnabled());
+    auto connectPageActions = [this](QWebEnginePage *page) {
+        auto updateButton = [](ToolButton *button, QAction *action) {
+            button->setEnabled(action->isEnabled());
+        };
+        auto updateBackButton = std::bind(updateButton, m_buttonBack, page->action(QWebEnginePage::Back));
+        auto updateForwardButton = std::bind(updateButton, m_buttonForward, page->action(QWebEnginePage::Forward));
+
+        updateBackButton();
+        updateForwardButton();
+
+        disconnect(m_backConnection);
+        disconnect(m_forwardConnection);
+        m_backConnection = connect(page->action(QWebEnginePage::Back), &QAction::changed, this, updateBackButton);
+        m_forwardConnection = connect(page->action(QWebEnginePage::Forward), &QAction::changed, this, updateForwardButton);
     };
-    auto updateBackButton = std::bind(updateButton, m_buttonBack, view->pageAction(QWebEnginePage::Back));
-    auto updateForwardButton = std::bind(updateButton, m_buttonForward, view->pageAction(QWebEnginePage::Forward));
 
-    updateBackButton();
-    updateForwardButton();
-
-    disconnect(m_backConnection);
-    disconnect(m_forwardConnection);
-    m_backConnection = connect(view->pageAction(QWebEnginePage::Back), &QAction::changed, this, updateBackButton);
-    m_forwardConnection = connect(view->pageAction(QWebEnginePage::Forward), &QAction::changed, this, updateForwardButton);
+    connectPageActions(view->page());
+    connect(view, &TabbedWebView::pageChanged, this, connectPageActions);
 }
 
 void NavigationBar::showReloadButton()
