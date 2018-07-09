@@ -40,17 +40,19 @@ class FALKON_EXPORT QmlUserScripts : public QObject
     Q_PROPERTY(bool empty READ empty CONSTANT)
 public:
     explicit QmlUserScripts(QObject *parent = nullptr);
+    ~QmlUserScripts();
     Q_INVOKABLE bool contains(QObject *object) const;
     Q_INVOKABLE QObject *findScript(const QString &name) const;
     Q_INVOKABLE QList<QObject *> findScripts(const QString &name) const;
-    Q_INVOKABLE void insert(QObject *object) const;
-    Q_INVOKABLE void insert(const QList<QObject*> &list) const;
+    Q_INVOKABLE void insert(QObject *object);
+    Q_INVOKABLE void insert(const QList<QObject*> &list);
     Q_INVOKABLE void remove(QObject *object) const;
     Q_INVOKABLE QList<QObject *> toList() const;
 private:
     int count() const;
     int size() const;
     bool empty() const;
+    QList<QWebEngineScript> m_webEngineScripts;
 
     QList<QObject *> toQObjectList(QList<QWebEngineScript> list) const;
 };

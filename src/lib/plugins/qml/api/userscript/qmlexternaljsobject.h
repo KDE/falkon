@@ -24,6 +24,9 @@ class QmlExternalJsObject : public QObject
     Q_OBJECT
 public:
     explicit QmlExternalJsObject(QObject *parent = nullptr);
+    ~QmlExternalJsObject();
     Q_INVOKABLE void registerExtraObject(const QVariantMap &map);
     Q_INVOKABLE void unregisterExtraObject(QObject *object);
+private:
+    QList<QObject *> m_objects;
 };

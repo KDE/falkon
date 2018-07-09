@@ -23,6 +23,13 @@ QmlExternalJsObject::QmlExternalJsObject(QObject *parent)
 {
 }
 
+QmlExternalJsObject::~QmlExternalJsObject()
+{
+    for (QObject *object : m_objects) {
+        ExternalJsObject::unregisterExtraObject(object);
+    }
+}
+
 void QmlExternalJsObject::registerExtraObject(const QVariantMap &map)
 {
     if (!map.contains(QSL("id")) || !map.contains(QSL("object"))) {
@@ -37,6 +44,7 @@ void QmlExternalJsObject::registerExtraObject(const QVariantMap &map)
         return;
     }
     ExternalJsObject::registerExtraObject(id, object);
+    m_objects.append(object);
 }
 
 void QmlExternalJsObject::unregisterExtraObject(QObject *object)
