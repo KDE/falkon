@@ -45,6 +45,8 @@
 #include "api/userscript/qmluserscript.h"
 #include "api/userscript/qmluserscripts.h"
 #include "api/userscript/qmlexternaljsobject.h"
+#include "api/extensionscheme/qmlextensionscheme.h"
+#include "api/extensionscheme/qmlwebengineurlrequestjob.h"
 
 #ifdef LibIntl_FOUND
 #include "qml/api/i18n/qmli18n.h"
@@ -202,4 +204,9 @@ void QmlPlugins::registerQmlTypes()
         auto *object = new QmlExternalJsObject();
         return object;
     });
+
+    // SchemeHandler
+    qmlRegisterType<QmlExtensionScheme>("org.kde.falkon", 1, 0, "ExtensionScheme");
+
+    qmlRegisterUncreatableType<QmlWebEngineUrlRequestJob>("org.kde.falkon", 1, 0, "WebEngineUrlRequestJob", "Unable to register type: WebEngineUrlRequestJob");
 }
