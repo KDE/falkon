@@ -19,13 +19,33 @@
 
 #include <QObject>
 
+/**
+ * @brief The QmlFileUtils class, exposed to QML as FileUtils
+ */
 class QmlFileUtils : public QObject
 {
     Q_OBJECT
 public:
     explicit QmlFileUtils(QString filePath, QObject *parent = nullptr);
+    /**
+     * @brief Get the path of the file within the plugin directory.
+     *        If the filePath provided is resolved to be outside the plugin
+     *        directory then empty string is returned
+     * @param file path within the plugin directory
+     * @return resolved path
+     */
     Q_INVOKABLE QString resolve(const QString &filePath);
+    /**
+     * @brief Read the contents of the file within the plugin directory
+     * @param file path within the plugin directory
+     * @return contents of the file
+     */
     Q_INVOKABLE QString readAllFileContents(const QString &fileName);
+    /**
+     * @brief Checks if the file exists within the plugin directory
+     * @param file path within the plugin directory
+     * @return true if file exists, otherwise false
+     */
     Q_INVOKABLE bool exists(const QString &filePath);
 private:
     QString m_path;
