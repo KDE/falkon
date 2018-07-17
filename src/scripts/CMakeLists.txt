@@ -11,3 +11,4 @@ endfunction()
 
 install_python_script(hellopython)
 install_python_script(runaction)
+install_python_script(middleclickloader)
