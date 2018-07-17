@@ -47,6 +47,7 @@
 #include "api/userscript/qmlexternaljsobject.h"
 #include "api/extensionscheme/qmlextensionscheme.h"
 #include "api/extensionscheme/qmlwebengineurlrequestjob.h"
+#include "api/fileutils/qmlfileutils.h"
 
 #ifdef LibIntl_FOUND
 #include "qml/api/i18n/qmli18n.h"
@@ -205,8 +206,19 @@ void QmlPlugins::registerQmlTypes()
         return object;
     });
 
-    // SchemeHandler
+    // ExtensionScheme
     qmlRegisterType<QmlExtensionScheme>("org.kde.falkon", 1, 0, "ExtensionScheme");
 
     qmlRegisterUncreatableType<QmlWebEngineUrlRequestJob>("org.kde.falkon", 1, 0, "WebEngineUrlRequestJob", "Unable to register type: WebEngineUrlRequestJob");
+
+    // FileUtils
+    qmlRegisterSingletonType<QmlFileUtils>("org.kde.falkon", 1, 0, "FileUtils", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        QString filePath = engine->rootContext()->contextProperty("__path__").toString();
+
+        auto *object = new QmlFileUtils(filePath);
+        return object;
+    });
 }

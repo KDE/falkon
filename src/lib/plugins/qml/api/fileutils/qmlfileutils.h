@@ -17,25 +17,16 @@
 * ============================================================ */
 #pragma once
 
-#include <QQmlEngine>
-#include <QQmlComponent>
+#include <QObject>
 
-#include "qmlplugininterface.h"
-
-class QmlPluginLoader : public QObject
+class QmlFileUtils : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlPluginLoader(const QString &path);
-    void createComponent();
-    QQmlComponent *component() const;
-    QmlPluginInterface *instance() const;
-    void setName(const QString &name);
+    explicit QmlFileUtils(QString filePath, QObject *parent = nullptr);
+    Q_INVOKABLE QString resolve(const QString &filePath);
+    Q_INVOKABLE QString readAllFileContents(const QString &fileName);
+    Q_INVOKABLE bool exists(const QString &filePath);
 private:
     QString m_path;
-    QQmlEngine *m_engine;
-    QQmlComponent *m_component;
-    QmlPluginInterface *m_interface;
-
-    void initEngineAndComponent();
 };

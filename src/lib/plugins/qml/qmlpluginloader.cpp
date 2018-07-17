@@ -21,8 +21,7 @@
 QmlPluginLoader::QmlPluginLoader(const QString &path)
 {
     m_path = path;
-    m_engine = new QQmlEngine();
-    m_component = new QQmlComponent(m_engine, m_path);
+    initEngineAndComponent();
 }
 
 void QmlPluginLoader::createComponent()
@@ -37,8 +36,7 @@ void QmlPluginLoader::createComponent()
     connect(m_interface, &QmlPluginInterface::qmlPluginUnloaded, this, [this]{
         delete m_component;
         delete m_engine;
-        m_engine = new QQmlEngine();
-        m_component = new QQmlComponent(m_engine, m_path);
+        initEngineAndComponent();
     });
 }
 
@@ -56,4 +54,11 @@ void QmlPluginLoader::setName(const QString &name)
 {
     m_interface->setName(name);
     m_engine->rootContext()->setContextProperty("__name__", name);
+}
+
+void QmlPluginLoader::initEngineAndComponent()
+{
+    m_engine = new QQmlEngine();
+    m_component = new QQmlComponent(m_engine, m_path);
+    m_engine->rootContext()->setContextProperty("__path__", m_path);
 }
