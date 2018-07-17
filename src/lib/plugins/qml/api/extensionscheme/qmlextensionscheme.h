@@ -24,9 +24,15 @@
 
 class QmlExtensionSchemeHandler;
 
+/**
+ * @brief The QmlExtensionScheme class, exposed to QML as ExtensionScheme
+ */
 class QmlExtensionScheme : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
+    /**
+     * @brief extension scheme handle name
+     */
     Q_PROPERTY(QString name READ name WRITE setName)
 public:
     explicit QmlExtensionScheme(QObject *parent = nullptr);
@@ -34,6 +40,10 @@ public:
     void classBegin() {}
     void componentComplete();
 Q_SIGNALS:
+    /**
+     * @brief The signal emitted when the request to the scheme handle is started
+     * @param request of the type [QmlWebEngineUrlRequestJob](@ref QmlWebEngineUrlRequestJob)
+     */
     void requestStarted(QmlWebEngineUrlRequestJob *request);
 private:
     QString m_name;

@@ -26,6 +26,10 @@ QmlWebEngineUrlRequestJob::QmlWebEngineUrlRequestJob(QWebEngineUrlRequestJob *jo
 {
 }
 
+/**
+ * @brief Fails the request with the error
+ * @param error
+ */
 void QmlWebEngineUrlRequestJob::fail(QmlWebEngineUrlRequestJob::Error error)
 {
     if (!m_job) {
@@ -34,6 +38,10 @@ void QmlWebEngineUrlRequestJob::fail(QmlWebEngineUrlRequestJob::Error error)
     m_job->fail(QWebEngineUrlRequestJob::Error(error));
 }
 
+/**
+ * @brief Redirects the request to the url
+ * @param urlString, represents the url to which the request is to be redirected
+ */
 void QmlWebEngineUrlRequestJob::redirect(const QString &urlString)
 {
     if (!m_job) {
@@ -42,6 +50,12 @@ void QmlWebEngineUrlRequestJob::redirect(const QString &urlString)
     return m_job->redirect(QUrl::fromEncoded(urlString.toUtf8()));
 }
 
+/**
+ * @brief Replies to the request
+ * @param A JavaScript object containing
+ *        - content: String representing the reply data
+ *        - contentType: String representing the contentType of reply data
+ */
 void QmlWebEngineUrlRequestJob::reply(const QVariantMap &map)
 {
     if (!m_job) {

@@ -19,20 +19,35 @@
 
 #include <QWebEngineUrlRequestJob>
 
+/**
+ * @brief The QmlWebEngineUrlRequestJob class
+ */
 class QmlWebEngineUrlRequestJob : public QObject
 {
     Q_OBJECT
+    /**
+     * @brief initiator of the QWebEngineUrlRequestJob
+     */
     Q_PROPERTY(QString initiator READ initiator CONSTANT)
+    /**
+     * @brief request url of the QWebEngineUrlRequestJob
+     */
     Q_PROPERTY(QString requestUrl READ requestUrl CONSTANT)
+    /**
+     * @brief request method of the QWebEngineUrlRequestJob
+     */
     Q_PROPERTY(QString requestMethod READ requestMethod CONSTANT)
 public:
+    /**
+     * @brief The Error enum, exposes QWebEngineUrlRequestJob::Error to QML
+     */
     enum Error {
-        NoError = QWebEngineUrlRequestJob::NoError,
-        UrlNotFound = QWebEngineUrlRequestJob::UrlNotFound,
-        UrlInvaild = QWebEngineUrlRequestJob::UrlInvalid,
-        RequestAborted = QWebEngineUrlRequestJob::RequestAborted,
-        RequestDenied = QWebEngineUrlRequestJob::RequestDenied,
-        RequestFailed = QWebEngineUrlRequestJob::RequestFailed
+        NoError = QWebEngineUrlRequestJob::NoError,               //! No error
+        UrlNotFound = QWebEngineUrlRequestJob::UrlNotFound,       //! Url not found error
+        UrlInvaild = QWebEngineUrlRequestJob::UrlInvalid,         //! Url invalid error
+        RequestAborted = QWebEngineUrlRequestJob::RequestAborted, //! Request aborted
+        RequestDenied = QWebEngineUrlRequestJob::RequestDenied,   //! Request denied
+        RequestFailed = QWebEngineUrlRequestJob::RequestFailed    //! Request failed
     };
     Q_ENUMS(Error)
     explicit QmlWebEngineUrlRequestJob(QWebEngineUrlRequestJob *job = nullptr, QObject *parent = nullptr);
