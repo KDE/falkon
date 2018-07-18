@@ -30,7 +30,13 @@ QmlNotifications::QmlNotifications(QObject *parent)
  * @brief Create and display a notification
  * @param JavaScript object containing
  *        - icon:
- *          String representing the icon file url
+ *          String representing the icon file url. The icon path will be
+ *          search in the following order
+ *          - Falkon resource: for the icons starting with ":", they are searched in
+ *               falkon resource file
+ *          - Files in plugin directory: All other paths will be resolved relative to
+ *               the plugin directory. If the icon path is outside the
+ *               plugin directory, then it will be resolved as empty path.
  *        - heading:
  *          String representing the heading of the notification
  *        - message:

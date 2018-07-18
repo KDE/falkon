@@ -52,7 +52,17 @@ class QmlBrowserAction : public QObject, public QQmlParserStatus
     Q_PROPERTY(QString toolTip READ toolTip WRITE setToolTip NOTIFY toolTipChanged)
 
     /**
-     * @brief Url of the icon of button
+     * @brief icon path of button
+     *
+     * The icon path will be search in the following order
+     * - Theme icon: if the icon is found as a theme icon, then it will
+     *               be used even if the icon file with same name is present
+     *               in the plugin directory
+     * - Falkon resource: for the icons starting with ":", they are searched in
+     *               falkon resource file
+     * - Files in plugin directory: All other paths will be resolved relative to
+     *               the plugin directory. If the icon path is outside the
+     *               plugin directory, then it will be resolved as empty path.
      */
     Q_PROPERTY(QString icon READ icon WRITE setIcon NOTIFY iconChanged)
 
