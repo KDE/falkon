@@ -31,6 +31,7 @@ public:
     Q_INVOKABLE QmlAction *addAction(const QVariantMap &map);
     Q_INVOKABLE QmlMenu *addMenu(const QVariantMap &map);
     Q_INVOKABLE void addSeparator();
+    void setPluginPath(const QString &path);
 
 Q_SIGNALS:
     /**
@@ -40,4 +41,5 @@ Q_SIGNALS:
 
 private:
     QMenu *m_menu;
+    QString m_pluginPath;
 };

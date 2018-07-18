@@ -122,7 +122,10 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
+        QString filePath = engine->rootContext()->contextProperty("__path__").toString();
+
         auto *object = new QmlNotifications();
+        object->setPluginPath(filePath);
         return object;
     });
 

@@ -21,7 +21,7 @@ Falkon.PluginInterface {
         identity: 'helloqml-id'
         title: 'Testing QML Title'
         toolTip: 'Testing QML Tooltip'
-        icon: Qt.resolvedUrl('qrc:/icons/preferences/extensions.svg')
+        icon: ':/icons/preferences/extensions.svg'
         location: Falkon.BrowserAction.NavigationToolBar | Falkon.BrowserAction.StatusBar
         popup: Window {
             property var borderMargin: 1
@@ -41,7 +41,7 @@ Falkon.PluginInterface {
                 color: 'white'
                 Image {
                     id: image
-                    source: Qt.resolvedUrl('qrc:/icons/other/startpage.svg')
+                    source: 'qrc:/icons/other/startpage.svg'
                     anchors.left: parent.left
                     anchors.right: parent.right
                     anchors.top: parent.top
@@ -61,11 +61,11 @@ Falkon.PluginInterface {
     Falkon.SideBar {
         name: 'helloqml-sidebar'
         title: 'Testing QML SideBar'
-        icon: Qt.resolvedUrl('qrc:/icons/preferences/extensions.svg')
+        icon: ':/icons/preferences/extensions.svg'
         checkable: true
         Window {
             Image {
-                source: Qt.resolvedUrl('qrc:/icons/other/startpage.svg')
+                source: 'qrc:/icons/other/startpage.svg'
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.left: parent.left
                 anchors.right: parent.right
@@ -84,7 +84,7 @@ Falkon.PluginInterface {
         var text = 'My first qml plugin action'
         var action = menu.addAction({
             text: text,
-            icon: Qt.resolvedUrl('qrc:/icons/preferences/extensions.svg')
+            icon: ':/icons/preferences/extensions.svg'
         })
         
         if (webHitTestResult.isImage()) {
@@ -105,7 +105,7 @@ Falkon.PluginInterface {
             Falkon.Notifications.create({
                 heading: 'Hello QML',
                 message: 'First qml plugin action works :-)',
-                icon: Qt.resolvedUrl('qrc:/icons/preferences/extensions.svg')
+                icon: ':/icons/preferences/extensions.svg'
             })
         })
     }
@@ -121,7 +121,7 @@ Falkon.PluginInterface {
         height: 200
         Image {
             id: image
-            source: Qt.resolvedUrl('qrc:/icons/other/about.svg')
+            source: 'qrc:/icons/other/about.svg'
             anchors.top: parent.top
             anchors.left: parent.left
             anchors.right: parent.right

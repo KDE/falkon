@@ -19,8 +19,10 @@
 #include "mainapplication.h"
 #include "qztools.h"
 #include "sidebar.h"
+#include "qml/api/fileutils/qmlfileutils.h"
 #include <QAction>
 #include <QQuickWindow>
+#include <QQmlContext>
 
 QmlSideBar::QmlSideBar(QObject *parent)
     : QObject(parent)
@@ -133,8 +135,13 @@ QAction *QmlSideBarHelper::createMenuAction()
     action->setShortcut(QKeySequence(m_shortcut));
     if (QIcon::hasThemeIcon(m_iconUrl)) {
         action->setIcon(QIcon::fromTheme(m_iconUrl));
+    } else if (m_iconUrl.startsWith(QSL(":"))) {
+        // Icon is loaded from falkon resource
+        action->setIcon(QIcon(m_iconUrl));
     } else {
-        action->setIcon(QIcon(QzTools::getPathFromUrl(QUrl(m_iconUrl))));
+        const QString pluginPath = m_item->creationContext()->contextProperty("__path__").toString();
+        QmlFileUtils fileUtils(pluginPath);
+        action->setIcon(QIcon(fileUtils.resolve(m_iconUrl)));
     }
     action->setCheckable(m_checkable);
     return action;

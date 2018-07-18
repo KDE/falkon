@@ -17,6 +17,7 @@
 * ============================================================ */
 #include "qmlmenu.h"
 #include "qztools.h"
+#include "qml/api/fileutils/qmlfileutils.h"
 #include <QQmlEngine>
 
 QmlMenu::QmlMenu(QMenu *menu, QObject *parent)
@@ -43,6 +44,7 @@ QmlAction *QmlMenu::addAction(const QVariantMap &map)
 
     QAction *action = new QAction();
     QmlAction *qmlAction = new QmlAction(action, this);
+    qmlAction->setPluginPath(m_pluginPath);
     qmlAction->setProperties(map);
     m_menu->addAction(action);
 
@@ -68,8 +70,12 @@ QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
             QIcon icon;
             if (QIcon::hasThemeIcon(iconPath)) {
                 icon = QIcon::fromTheme(iconPath);
+            } else if (iconPath.startsWith(QSL(":"))) {
+                // Icon is loaded from falkon resource
+                icon = QIcon(iconPath);
             } else {
-                icon = QIcon(QzTools::getPathFromUrl(QUrl::fromEncoded(iconPath.toUtf8())));
+                QmlFileUtils fileUtils(m_pluginPath);
+                icon = QIcon(fileUtils.resolve(iconPath));
             }
             newMenu->setIcon(icon);
             continue;
@@ -78,6 +84,7 @@ QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
     }
     m_menu->addMenu(newMenu);
     QmlMenu *newQmlMenu = new QmlMenu(newMenu, this);
+    newQmlMenu->setPluginPath(m_pluginPath);
     return newQmlMenu;
 }
 
@@ -91,4 +98,9 @@ void QmlMenu::addSeparator()
     }
 
     m_menu->addSeparator();
+}
+
+void QmlMenu::setPluginPath(const QString &path)
+{
+    m_pluginPath = path;
 }

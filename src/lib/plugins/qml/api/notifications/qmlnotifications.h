@@ -28,4 +28,7 @@ class QmlNotifications : public QObject
 public:
     explicit QmlNotifications(QObject *parent = nullptr);
     Q_INVOKABLE void create(const QVariantMap &map);
+    void setPluginPath(const QString &path);
+private:
+    QString m_pluginPath;
 };

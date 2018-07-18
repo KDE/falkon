@@ -34,6 +34,7 @@
 #include <QQuickWindow>
 #include <QDialog>
 #include <QVBoxLayout>
+#include <QQmlContext>
 
 QmlPluginInterface::QmlPluginInterface()
     : m_settingsWindow(nullptr)
@@ -94,8 +95,8 @@ void QmlPluginInterface::populateWebViewMenu(QMenu *menu, WebView *webview, cons
     }
 
     QmlMenu *qmlMenu = new QmlMenu(menu);
+    qmlMenu->setPluginPath(m_engine->rootContext()->contextProperty("__path__").toString());
     QmlWebHitTestResult *qmlWebHitTestResult = new QmlWebHitTestResult(webHitTestResult);
-
     QJSValueList args;
     args.append(m_engine->newQObject(qmlMenu));
     args.append(m_engine->newQObject(qmlWebHitTestResult));

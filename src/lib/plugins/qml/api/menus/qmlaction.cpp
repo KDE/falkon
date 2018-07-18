@@ -17,6 +17,7 @@
 * ============================================================ */
 #include "qmlaction.h"
 #include "qztools.h"
+#include "qml/api/fileutils/qmlfileutils.h"
 
 QmlAction::QmlAction(QAction *action, QObject *parent)
     : QObject(parent)
@@ -37,8 +38,12 @@ void QmlAction::setProperties(const QVariantMap &map)
             QIcon icon;
             if (QIcon::hasThemeIcon(iconPath)) {
                 icon = QIcon::fromTheme(iconPath);
+            } else if (iconPath.startsWith(QSL(":"))) {
+                // Icon is loaded from falkon resource
+                icon = QIcon(iconPath);
             } else {
-                icon = QIcon(QzTools::getPathFromUrl(QUrl::fromEncoded(iconPath.toUtf8())));
+                QmlFileUtils fileUtils(m_pluginPath);
+                icon = QIcon(fileUtils.resolve(iconPath));
             }
             m_action->setIcon(icon);
         } else if (key == QSL("shortcut")) {
@@ -56,4 +61,9 @@ void QmlAction::setProperties(const QVariantMap &map)
 void  QmlAction::update(const QVariantMap &map)
 {
     setProperties(map);
+}
+
+void QmlAction::setPluginPath(const QString &path)
+{
+    m_pluginPath = path;
 }

@@ -31,6 +31,7 @@ public:
     explicit QmlAction(QAction *action, QObject *parent = nullptr);
     void setProperties(const QVariantMap &map);
     Q_INVOKABLE void update(const QVariantMap &map);
+    void setPluginPath(const QString &path);
 
 Q_SIGNALS:
     /**
@@ -40,4 +41,5 @@ Q_SIGNALS:
 
 private:
     QAction *m_action;
+    QString m_pluginPath;
 };
