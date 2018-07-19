@@ -386,6 +386,14 @@ void TabTreeView::addMenuActions(QMenu *menu, const QModelIndex &index) const
                 tab->closeTab();
             }
         });
+        m->addAction(tr("Unload Tree"), this, [=]() {
+            reverseTraverse(pindex, [&](const QModelIndex &index) {
+                WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+                if (tab && tab->isRestored()) {
+                    tab->unload();
+                }
+            });
+        });
     }
 
     m->addSeparator();
