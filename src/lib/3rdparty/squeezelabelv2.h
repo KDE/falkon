@@ -27,7 +27,7 @@ class FALKON_EXPORT SqueezeLabelV2 : public QLabel
     Q_OBJECT
 
 public:
-    SqueezeLabelV2(QWidget* parent = 0);
+    explicit SqueezeLabelV2(QWidget* parent = nullptr);
     SqueezeLabelV2(const QString &string);
 
     QString originalText();

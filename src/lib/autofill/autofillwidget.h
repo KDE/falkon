@@ -36,7 +36,7 @@ class FALKON_EXPORT AutoFillWidget : public LocationBarPopup
     Q_OBJECT
 
 public:
-    explicit AutoFillWidget(WebView* view, QWidget* parent = 0);
+    explicit AutoFillWidget(WebView* view, QWidget* parent = nullptr);
     ~AutoFillWidget();
 
     void setUsernames(const QStringList &usernames);

@@ -28,7 +28,7 @@ class FALKON_EXPORT AutoFillIcon : public ClickableLabel
     Q_OBJECT
 
 public:
-    explicit AutoFillIcon(QWidget* parent = 0);
+    explicit AutoFillIcon(QWidget* parent = nullptr);
 
     void setWebView(WebView* view);
     void setUsernames(const QStringList &usernames);

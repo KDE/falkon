@@ -72,9 +72,9 @@ void CookiesTest::listMatchesDomainTest_data()
     QTest::addColumn<bool>("result");
 
     QStringList list;
-    list << "www.example.com" << "accounts.google.com";
+    list << QSL("www.example.com") << QSL("accounts.google.com");
     QStringList list2;
-    list2 << "anotherexample.com" << "a.b.x.google.com";
+    list2 << QSL("anotherexample.com") << QSL("a.b.x.google.com");
 
     QTest::newRow("test1") << list << ".www.example.com" << true;
     QTest::newRow("test2") << list << ".google.com" << false;

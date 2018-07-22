@@ -147,8 +147,8 @@ void AdBlockIcon::clicked(ClickController *controller)
 
     if (!pageUrl.host().isEmpty() && manager->isEnabled() && manager->canRunOnScheme(pageUrl.scheme())) {
         const QString host = view->url().host().contains(QLatin1String("www.")) ? pageUrl.host().mid(4) : pageUrl.host();
-        const QString hostFilter = QString("@@||%1^$document").arg(host);
-        const QString pageFilter = QString("@@|%1|$document").arg(pageUrl.toString());
+        const QString hostFilter = QSL("@@||%1^$document").arg(host);
+        const QString pageFilter = QSL("@@|%1|$document").arg(pageUrl.toString());
 
         QAction* act = menu->addAction(tr("Disable on %1").arg(host));
         act->setCheckable(true);

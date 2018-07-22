@@ -58,7 +58,7 @@ class FALKON_EXPORT PasswordManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit PasswordManager(QObject* parent = 0);
+    explicit PasswordManager(QObject* parent = nullptr);
     ~PasswordManager();
 
     void loadSettings();

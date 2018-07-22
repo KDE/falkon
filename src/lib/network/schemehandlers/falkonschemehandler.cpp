@@ -89,8 +89,7 @@ FalkonSchemeReply::FalkonSchemeReply(QWebEngineUrlRequestJob *job, QObject *pare
 {
     m_pageName = m_job->requestUrl().path();
 
-    open(QIODevice::ReadOnly);
-    m_buffer.open(QIODevice::ReadWrite);
+    QTimer::singleShot(0, this, &FalkonSchemeReply::loadPage);
 }
 
 void FalkonSchemeReply::loadPage()
@@ -98,38 +97,40 @@ void FalkonSchemeReply::loadPage()
     if (m_loaded)
         return;
 
-    QTextStream stream(&m_buffer);
-    stream.setCodec("UTF-8");
+    QString contents;
 
     if (m_pageName == QLatin1String("about")) {
-        stream << aboutPage();
-    }
-    else if (m_pageName == QLatin1String("start")) {
-        stream << startPage();
-    }
-    else if (m_pageName == QLatin1String("speeddial")) {
-        stream << speeddialPage();
-    }
-    else if (m_pageName == QLatin1String("config")) {
-        stream << configPage();
-    }
-    else if (m_pageName == QLatin1String("restore")) {
-        stream << restorePage();
+        contents = aboutPage();
+    } else if (m_pageName == QLatin1String("start")) {
+        contents = startPage();
+    } else if (m_pageName == QLatin1String("speeddial")) {
+        contents = speeddialPage();
+    } else if (m_pageName == QLatin1String("config")) {
+        contents = configPage();
+    } else if (m_pageName == QLatin1String("restore")) {
+        contents = restorePage();
     }
 
-    stream.flush();
-    m_buffer.reset();
+    QMutexLocker lock(&m_mutex);
+    m_buffer.setData(contents.toUtf8());
+    m_buffer.open(QIODevice::ReadOnly);
+    lock.unlock();
+
+    open(QIODevice::ReadOnly);
+    emit readyRead();
+
     m_loaded = true;
 }
 
 qint64 FalkonSchemeReply::bytesAvailable() const
 {
+    QMutexLocker lock(&m_mutex);
     return m_buffer.bytesAvailable();
 }
 
 qint64 FalkonSchemeReply::readData(char *data, qint64 maxSize)
 {
-    loadPage();
+    QMutexLocker lock(&m_mutex);
     return m_buffer.read(data, maxSize);
 }
 

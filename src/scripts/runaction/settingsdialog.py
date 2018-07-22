@@ -29,6 +29,8 @@ class SettingsDialog(QtWidgets.QDialog):
         file = QtCore.QFile(os.path.join(os.path.dirname(__file__), "settings.ui"))
         file.open(QtCore.QFile.ReadOnly)
         self.ui = QtUiTools.QUiLoader().load(file, self)
+        file.close()
+
         layout = QtWidgets.QVBoxLayout(self)
         layout.addWidget(self.ui)
 

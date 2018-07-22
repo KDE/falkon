@@ -23,12 +23,12 @@
 
 #include <QSettings>
 
-SBI_NetworkManager* SBI_NetworkManager::s_instance = 0;
+SBI_NetworkManager* SBI_NetworkManager::s_instance = nullptr;
 
 SBI_NetworkManager::SBI_NetworkManager(const QString &settingsPath, QObject* parent)
     : QObject(parent)
     , m_settingsFile(settingsPath + QL1S("/networkicon.ini"))
-    , m_currentProxy(0)
+    , m_currentProxy(nullptr)
 {
     s_instance = this;
 
@@ -58,8 +58,8 @@ void SBI_NetworkManager::loadSettings()
         m_proxies[group] = proxy;
     }
 
-    const QString currentName = settings.value("CurrentProxy", QString()).toString();
-    m_currentProxy = m_proxies.contains(currentName) ? m_proxies.value(currentName) : 0;
+    const QString currentName = settings.value(QSL("CurrentProxy"), QString()).toString();
+    m_currentProxy = m_proxies.contains(currentName) ? m_proxies.value(currentName) : nullptr;
 
     applyCurrentProxy();
 }
@@ -77,9 +77,9 @@ SBI_NetworkProxy* SBI_NetworkManager::currentProxy() const
 void SBI_NetworkManager::setCurrentProxy(const QString &name)
 {
     QSettings settings(m_settingsFile, QSettings::IniFormat);
-    settings.setValue("CurrentProxy", name);
+    settings.setValue(QSL("CurrentProxy"), name);
 
-    m_currentProxy = m_proxies.contains(name) ? m_proxies.value(name) : 0;
+    m_currentProxy = m_proxies.contains(name) ? m_proxies.value(name) : nullptr;
     applyCurrentProxy();
 }
 

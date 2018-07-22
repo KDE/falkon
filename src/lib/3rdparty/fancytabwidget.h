@@ -100,16 +100,16 @@ class FALKON_EXPORT FancyTabBar : public QWidget
     Q_OBJECT
 
 public:
-    FancyTabBar(QWidget* parent = 0);
-    ~FancyTabBar();
+    explicit FancyTabBar(QWidget* parent = nullptr);
+    ~FancyTabBar() override;
 
-    void paintEvent(QPaintEvent* event);
+    void paintEvent(QPaintEvent* event) override;
     void paintTab(QPainter* painter, int tabIndex) const;
-    void mousePressEvent(QMouseEvent*);
+    void mousePressEvent(QMouseEvent*) override;
     bool validIndex(int index) const { return index >= 0 && index < m_tabs.count(); }
 
-    QSize sizeHint() const;
-    QSize minimumSizeHint() const;
+    QSize sizeHint() const override;
+    QSize minimumSizeHint() const override;
 
     void addTab(const QIcon &icon, const QString &label);
     void addSpacer(int size = 40);
@@ -151,7 +151,7 @@ class FALKON_EXPORT FancyTabWidget : public QWidget
     Q_PROPERTY(QPixmap bgPixmap READ bgPixmap WRITE SetBackgroundPixmap)
 
 public:
-    FancyTabWidget(QWidget* parent = 0);
+    explicit FancyTabWidget(QWidget* parent = nullptr);
 
     // Values are persisted - only add to the end
     enum Mode {

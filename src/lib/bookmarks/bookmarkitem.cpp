@@ -192,7 +192,7 @@ void BookmarkItem::addChild(BookmarkItem* child, int index)
 
 void BookmarkItem::removeChild(BookmarkItem* child)
 {
-    child->m_parent = 0;
+    child->m_parent = nullptr;
     m_children.removeOne(child);
 }
 
@@ -217,15 +217,15 @@ QString BookmarkItem::typeToString(BookmarkItem::Type type)
 {
     switch (type) {
     case Url:
-        return QString("url");
+        return QSL("url");
 
     case Folder:
-        return QString("folder");
+        return QSL("folder");
 
     case Separator:
-        return QString("separator");
+        return QSL("separator");
 
     default:
-        return QString("invalid");
+        return QSL("invalid");
     }
 }

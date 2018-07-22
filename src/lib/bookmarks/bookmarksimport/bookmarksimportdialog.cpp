@@ -34,9 +34,9 @@ BookmarksImportDialog::BookmarksImportDialog(QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::BookmarksImportDialog)
     , m_currentPage(0)
-    , m_importer(0)
-    , m_importedFolder(0)
-    , m_model(0)
+    , m_importer(nullptr)
+    , m_importedFolder(nullptr)
+    , m_model(nullptr)
 {
     setAttribute(Qt::WA_DeleteOnClose);
     ui->setupUi(this);
@@ -56,7 +56,7 @@ BookmarksImportDialog::BookmarksImportDialog(QWidget* parent)
 
 BookmarksImportDialog::~BookmarksImportDialog()
 {
-    ui->treeView->setModel(0);
+    ui->treeView->setModel(nullptr);
     delete m_model;
     delete m_importedFolder;
     delete m_importer;
@@ -148,7 +148,7 @@ void BookmarksImportDialog::previousPage()
         ui->stackedWidget->setCurrentIndex(--m_currentPage);
 
         delete m_importer;
-        m_importer = 0;
+        m_importer = nullptr;
         break;
 
     case 2:
@@ -159,12 +159,12 @@ void BookmarksImportDialog::previousPage()
         ui->backButton->setEnabled(true);
         ui->stackedWidget->setCurrentIndex(--m_currentPage);
 
-        ui->treeView->setModel(0);
+        ui->treeView->setModel(nullptr);
         delete m_model;
-        m_model = 0;
+        m_model = nullptr;
 
         delete m_importedFolder;
-        m_importedFolder = 0;
+        m_importedFolder = nullptr;
         break;
 
     default:
@@ -185,12 +185,12 @@ void BookmarksImportDialog::showImporterPage()
     ui->iconLabel->setPixmap(ui->browserList->currentItem()->icon().pixmap(48));
     ui->importingFromLabel->setText(tr("<b>Importing from %1</b>").arg(ui->browserList->currentItem()->text()));
     ui->fileText1->setText(m_importer->description());
-    ui->standardDirLabel->setText(QString("<i>%1</i>").arg(m_importer->standardPath()));
+    ui->standardDirLabel->setText(QSL("<i>%1</i>").arg(m_importer->standardPath()));
 }
 
 void BookmarksImportDialog::showExportedBookmarks()
 {
-    m_model = new BookmarksModel(m_importedFolder, 0, this);
+    m_model = new BookmarksModel(m_importedFolder, nullptr, this);
     ui->treeView->setModel(m_model);
     ui->treeView->header()->resizeSection(0, ui->treeView->header()->width() / 2);
     ui->treeView->expandAll();
@@ -199,5 +199,5 @@ void BookmarksImportDialog::showExportedBookmarks()
 void BookmarksImportDialog::addExportedBookmarks()
 {
     mApp->bookmarks()->addBookmark(mApp->bookmarks()->unsortedFolder(), m_importedFolder);
-    m_importedFolder = 0;
+    m_importedFolder = nullptr;
 }

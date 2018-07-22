@@ -78,8 +78,8 @@ void AdBlockManager::setEnabled(bool enabled)
     emit enabledChanged(enabled);
 
     Settings settings;
-    settings.beginGroup("AdBlock");
-    settings.setValue("enabled", m_enabled);
+    settings.beginGroup(QSL("AdBlock"));
+    settings.setValue(QSL("enabled"), m_enabled);
     settings.endGroup();
 
     load();
@@ -183,7 +183,7 @@ bool AdBlockManager::addSubscriptionFromUrl(const QUrl &url)
 
     const QString message = AdBlockManager::tr("Do you want to add <b>%1</b> subscription?").arg(subscriptionTitle);
 
-    QMessageBox::StandardButton result = QMessageBox::question(0, AdBlockManager::tr("AdBlock Subscription"), message, QMessageBox::Yes | QMessageBox::No);
+    QMessageBox::StandardButton result = QMessageBox::question(nullptr, AdBlockManager::tr("AdBlock Subscription"), message, QMessageBox::Yes | QMessageBox::No);
     if (result == QMessageBox::Yes) {
         AdBlockManager::instance()->addSubscription(subscriptionTitle, subscriptionUrl);
         AdBlockManager::instance()->showDialog();
@@ -195,18 +195,18 @@ bool AdBlockManager::addSubscriptionFromUrl(const QUrl &url)
 AdBlockSubscription* AdBlockManager::addSubscription(const QString &title, const QString &url)
 {
     if (title.isEmpty() || url.isEmpty()) {
-        return 0;
+        return nullptr;
     }
 
-    QString fileName = QzTools::filterCharsFromFilename(title.toLower()) + ".txt";
-    QString filePath = QzTools::ensureUniqueFilename(DataPaths::currentProfilePath() + "/adblock/" + fileName);
+    QString fileName = QzTools::filterCharsFromFilename(title.toLower()) + QSL(".txt");
+    QString filePath = QzTools::ensureUniqueFilename(DataPaths::currentProfilePath() + QSL("/adblock/") + fileName);
 
-    QByteArray data = QString("Title: %1\nUrl: %2\n[Adblock Plus 1.1.1]").arg(title, url).toLatin1();
+    QByteArray data = QSL("Title: %1\nUrl: %2\n[Adblock Plus 1.1.1]").arg(title, url).toLatin1();
 
     QSaveFile file(filePath);
     if (!file.open(QFile::WriteOnly)) {
         qWarning() << "AdBlockManager: Cannot write to file" << filePath;
-        return 0;
+        return nullptr;
     }
     file.write(data);
     file.commit();
@@ -250,7 +250,7 @@ AdBlockCustomList* AdBlockManager::customList() const
         }
     }
 
-    return 0;
+    return nullptr;
 }
 
 void AdBlockManager::load()
@@ -267,23 +267,23 @@ void AdBlockManager::load()
 #endif
 
     Settings settings;
-    settings.beginGroup("AdBlock");
-    m_enabled = settings.value("enabled", m_enabled).toBool();
-    m_disabledRules = settings.value("disabledRules", QStringList()).toStringList();
-    QDateTime lastUpdate = settings.value("lastUpdate", QDateTime()).toDateTime();
+    settings.beginGroup(QSL("AdBlock"));
+    m_enabled = settings.value(QSL("enabled"), m_enabled).toBool();
+    m_disabledRules = settings.value(QSL("disabledRules"), QStringList()).toStringList();
+    QDateTime lastUpdate = settings.value(QSL("lastUpdate"), QDateTime()).toDateTime();
     settings.endGroup();
 
     if (!m_enabled) {
         return;
     }
 
-    QDir adblockDir(DataPaths::currentProfilePath() + "/adblock");
+    QDir adblockDir(DataPaths::currentProfilePath() + QSL("/adblock"));
     // Create if neccessary
     if (!adblockDir.exists()) {
-        QDir(DataPaths::currentProfilePath()).mkdir("adblock");
+        QDir(DataPaths::currentProfilePath()).mkdir(QSL("adblock"));
     }
 
-    foreach (const QString &fileName, adblockDir.entryList(QStringList("*.txt"), QDir::Files)) {
+    foreach (const QString &fileName, adblockDir.entryList(QStringList(QSL("*.txt")), QDir::Files)) {
         if (fileName == QLatin1String("customlist.txt")) {
             continue;
         }
@@ -371,8 +371,8 @@ void AdBlockManager::updateAllSubscriptions()
     }
 
     Settings settings;
-    settings.beginGroup("AdBlock");
-    settings.setValue("lastUpdate", QDateTime::currentDateTime());
+    settings.beginGroup(QSL("AdBlock"));
+    settings.setValue(QSL("lastUpdate"), QDateTime::currentDateTime());
     settings.endGroup();
 }
 
@@ -387,9 +387,9 @@ void AdBlockManager::save()
     }
 
     Settings settings;
-    settings.beginGroup("AdBlock");
-    settings.setValue("enabled", m_enabled);
-    settings.setValue("disabledRules", m_disabledRules);
+    settings.beginGroup(QSL("AdBlock"));
+    settings.setValue(QSL("enabled"), m_enabled);
+    settings.setValue(QSL("disabledRules"), m_disabledRules);
     settings.endGroup();
 }
 
@@ -433,7 +433,7 @@ AdBlockSubscription* AdBlockManager::subscriptionByName(const QString &name) con
         }
     }
 
-    return 0;
+    return nullptr;
 }
 
 AdBlockDialog *AdBlockManager::showDialog(QWidget *parent)

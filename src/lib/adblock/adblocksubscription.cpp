@@ -57,7 +57,7 @@
 
 AdBlockSubscription::AdBlockSubscription(const QString &title, QObject* parent)
     : QObject(parent)
-    , m_reply(0)
+    , m_reply(nullptr)
     , m_title(title)
     , m_updated(false)
 {
@@ -191,7 +191,7 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
     }
 
     // Write subscription header
-    file.write(QString("Title: %1\nUrl: %2\n").arg(title(), url().toString()).toUtf8());
+    file.write(QSL("Title: %1\nUrl: %2\n").arg(title(), url().toString()).toUtf8());
     file.write(data);
     file.commit();
     return true;
@@ -200,7 +200,7 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
 const AdBlockRule* AdBlockSubscription::rule(int offset) const
 {
     if (!QzTools::containsIndex(m_rules, offset)) {
-        return 0;
+        return nullptr;
     }
 
     return m_rules[offset];
@@ -214,7 +214,7 @@ QVector<AdBlockRule*> AdBlockSubscription::allRules() const
 const AdBlockRule* AdBlockSubscription::enableRule(int offset)
 {
     if (!QzTools::containsIndex(m_rules, offset)) {
-        return 0;
+        return nullptr;
     }
 
     AdBlockRule* rule = m_rules[offset];
@@ -232,7 +232,7 @@ const AdBlockRule* AdBlockSubscription::enableRule(int offset)
 const AdBlockRule* AdBlockSubscription::disableRule(int offset)
 {
     if (!QzTools::containsIndex(m_rules, offset)) {
-        return 0;
+        return nullptr;
     }
 
     AdBlockRule* rule = m_rules[offset];
@@ -273,7 +273,7 @@ const AdBlockRule* AdBlockSubscription::replaceRule(AdBlockRule* rule, int offse
 {
     Q_UNUSED(rule)
     Q_UNUSED(offset)
-    return 0;
+    return nullptr;
 }
 
 AdBlockSubscription::~AdBlockSubscription()

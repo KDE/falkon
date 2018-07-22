@@ -52,7 +52,7 @@ public:
     static QString fromPunycode(const QString &str);
     static QString escapeSqlGlobString(QString urlString);
 
-    static QString ensureUniqueFilename(const QString &name, const QString &appendFormat = QString("(%1)"));
+    static QString ensureUniqueFilename(const QString &name, const QString &appendFormat = QSL("(%1)"));
     static QString getFileNameFromUrl(const QUrl &url);
     static QString filterCharsFromFilename(const QString &name);
 

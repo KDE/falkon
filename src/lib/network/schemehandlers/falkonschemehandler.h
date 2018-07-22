@@ -18,6 +18,7 @@
 #ifndef FALKONSCHEMEHANDLER_H
 #define FALKONSCHEMEHANDLER_H
 
+#include <QMutex>
 #include <QBuffer>
 #include <QIODevice>
 #include <QWebEngineUrlSchemeHandler>
@@ -60,6 +61,7 @@ private:
     QBuffer m_buffer;
     QString m_pageName;
     QWebEngineUrlRequestJob *m_job;
+    mutable QMutex m_mutex;
 };
 
 #endif // FALKONSCHEMEHANDLER_H

@@ -43,8 +43,8 @@ void DatabaseEncryptedPasswordBackendTest::init()
 {
     QSqlDatabase db = QSqlDatabase::database();
     if (!db.isValid()) {
-        db = QSqlDatabase::addDatabase("QSQLITE");
-        db.setDatabaseName(":memory:");
+        db = QSqlDatabase::addDatabase(QSL("QSQLITE"));
+        db.setDatabaseName(QSL(":memory:"));
     }
     db.open();
 }

@@ -37,7 +37,7 @@ public:
         Invalid
     };
 
-    explicit BookmarkItem(Type type, BookmarkItem* parent = 0);
+    explicit BookmarkItem(Type type, BookmarkItem* parent = nullptr);
     ~BookmarkItem();
 
     Type type() const;

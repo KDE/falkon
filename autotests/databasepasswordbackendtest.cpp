@@ -29,12 +29,12 @@ void DatabasePasswordBackendTest::reloadBackend()
 
 void DatabasePasswordBackendTest::init()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(":memory:");
+    QSqlDatabase db = QSqlDatabase::addDatabase(QSL("QSQLITE"));
+    db.setDatabaseName(QSL(":memory:"));
     db.open();
 
-    db.exec("CREATE TABLE autofill (data TEXT, id INTEGER PRIMARY KEY, password TEXT,"
-            "server TEXT, username TEXT, last_used NUMERIC)");
+    db.exec(QSL("CREATE TABLE autofill (data TEXT, id INTEGER PRIMARY KEY, password TEXT,"
+            "server TEXT, username TEXT, last_used NUMERIC)"));
 }
 
 void DatabasePasswordBackendTest::cleanup()

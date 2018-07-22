@@ -33,7 +33,7 @@ class FALKON_EXPORT AdBlockDialog : public QDialog, public Ui_AdBlockDialog
     Q_OBJECT
 
 public:
-    explicit AdBlockDialog(QWidget* parent = 0);
+    explicit AdBlockDialog(QWidget* parent = nullptr);
 
     void showRule(const AdBlockRule* rule) const;
 

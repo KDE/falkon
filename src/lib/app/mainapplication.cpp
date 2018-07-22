@@ -86,23 +86,23 @@ MainApplication::MainApplication(int &argc, char** argv)
     , m_isPortable(false)
     , m_isClosing(false)
     , m_isStartingAfterCrash(false)
-    , m_history(0)
-    , m_bookmarks(0)
-    , m_autoFill(0)
-    , m_cookieJar(0)
-    , m_plugins(0)
-    , m_browsingLibrary(0)
-    , m_networkManager(0)
-    , m_restoreManager(0)
-    , m_sessionManager(0)
-    , m_downloadManager(0)
-    , m_userAgentManager(0)
-    , m_searchEnginesManager(0)
-    , m_closedWindowsManager(0)
-    , m_html5PermissionsManager(0)
-    , m_desktopNotifications(0)
-    , m_webProfile(0)
-    , m_autoSaver(0)
+    , m_history(nullptr)
+    , m_bookmarks(nullptr)
+    , m_autoFill(nullptr)
+    , m_cookieJar(nullptr)
+    , m_plugins(nullptr)
+    , m_browsingLibrary(nullptr)
+    , m_networkManager(nullptr)
+    , m_restoreManager(nullptr)
+    , m_sessionManager(nullptr)
+    , m_downloadManager(nullptr)
+    , m_userAgentManager(nullptr)
+    , m_searchEnginesManager(nullptr)
+    , m_closedWindowsManager(nullptr)
+    , m_html5PermissionsManager(nullptr)
+    , m_desktopNotifications(nullptr)
+    , m_webProfile(nullptr)
+    , m_autoSaver(nullptr)
     , m_newWindowId(0)
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
     , m_registerQAppAssociation(0)
@@ -119,7 +119,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 #ifdef GIT_REVISION
     setApplicationVersion(QSL("%1 (%2)").arg(Qz::VERSION, GIT_REVISION));
 #else
-    setApplicationVersion(Qz::VERSION);
+    setApplicationVersion(QString::fromLatin1(Qz::VERSION));
 #endif
 
     // Set fallback icon theme (eg. on Windows/Mac)
@@ -129,7 +129,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     // QSQLITE database plugin is required
     if (!QSqlDatabase::isDriverAvailable(QSL("QSQLITE"))) {
-        QMessageBox::critical(0, QSL("Error"), QSL("Qt SQLite database plugin is not available. Please install it and restart the application."));
+        QMessageBox::critical(nullptr, QSL("Error"), QSL("Qt SQLite database plugin is not available. Please install it and restart the application."));
         m_isClosing = true;
         return;
     }
@@ -670,7 +670,7 @@ void MainApplication::startPrivateBrowsing(const QUrl &startUrl)
 
 void MainApplication::reloadUserStyleSheet()
 {
-    const QString userCssFile = Settings().value("Web-Browser-Settings/userStyleSheet", QString()).toString();
+    const QString userCssFile = Settings().value(QSL("Web-Browser-Settings/userStyleSheet"), QString()).toString();
     setUserStyleSheet(userCssFile);
 }
 
@@ -771,19 +771,19 @@ void MainApplication::saveSettings()
     m_isClosing = true;
 
     Settings settings;
-    settings.beginGroup("SessionRestore");
-    settings.setValue("isRunning", false);
-    settings.setValue("isRestoring", false);
+    settings.beginGroup(QSL("SessionRestore"));
+    settings.setValue(QSL("isRunning"), false);
+    settings.setValue(QSL("isRestoring"), false);
     settings.endGroup();
 
-    settings.beginGroup("Web-Browser-Settings");
-    bool deleteCache = settings.value("deleteCacheOnClose", false).toBool();
-    bool deleteHistory = settings.value("deleteHistoryOnClose", false).toBool();
-    bool deleteHtml5Storage = settings.value("deleteHTML5StorageOnClose", false).toBool();
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    bool deleteCache = settings.value(QSL("deleteCacheOnClose"), false).toBool();
+    bool deleteHistory = settings.value(QSL("deleteHistoryOnClose"), false).toBool();
+    bool deleteHtml5Storage = settings.value(QSL("deleteHTML5StorageOnClose"), false).toBool();
     settings.endGroup();
 
-    settings.beginGroup("Cookie-Settings");
-    bool deleteCookies = settings.value("deleteCookiesOnClose", false).toBool();
+    settings.beginGroup(QSL("Cookie-Settings"));
+    bool deleteCookies = settings.value(QSL("deleteCookiesOnClose"), false).toBool();
     settings.endGroup();
 
     if (deleteHistory) {
@@ -903,8 +903,8 @@ void MainApplication::downloadRequested(QWebEngineDownloadItem *download)
 void MainApplication::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("Themes");
-    QString activeTheme = settings.value("activeTheme", DEFAULT_THEME_NAME).toString();
+    settings.beginGroup(QSL("Themes"));
+    QString activeTheme = settings.value(QSL("activeTheme"), DEFAULT_THEME_NAME).toString();
     settings.endGroup();
 
     loadTheme(activeTheme);
@@ -912,54 +912,54 @@ void MainApplication::loadSettings()
     QWebEngineSettings* webSettings = m_webProfile->settings();
 
     // Web browsing settings
-    settings.beginGroup("Web-Browser-Settings");
+    settings.beginGroup(QSL("Web-Browser-Settings"));
 
-    webSettings->setAttribute(QWebEngineSettings::LocalStorageEnabled, settings.value("HTML5StorageEnabled", true).toBool());
-    webSettings->setAttribute(QWebEngineSettings::PluginsEnabled, settings.value("allowPlugins", true).toBool());
-    webSettings->setAttribute(QWebEngineSettings::JavascriptEnabled, settings.value("allowJavaScript", true).toBool());
-    webSettings->setAttribute(QWebEngineSettings::JavascriptCanOpenWindows, settings.value("allowJavaScriptOpenWindow", false).toBool());
-    webSettings->setAttribute(QWebEngineSettings::JavascriptCanAccessClipboard, settings.value("allowJavaScriptAccessClipboard", true).toBool());
-    webSettings->setAttribute(QWebEngineSettings::LinksIncludedInFocusChain, settings.value("IncludeLinkInFocusChain", false).toBool());
-    webSettings->setAttribute(QWebEngineSettings::XSSAuditingEnabled, settings.value("XSSAuditing", false).toBool());
-    webSettings->setAttribute(QWebEngineSettings::PrintElementBackgrounds, settings.value("PrintElementBackground", true).toBool());
-    webSettings->setAttribute(QWebEngineSettings::SpatialNavigationEnabled, settings.value("SpatialNavigation", false).toBool());
-    webSettings->setAttribute(QWebEngineSettings::ScrollAnimatorEnabled, settings.value("AnimateScrolling", true).toBool());
+    webSettings->setAttribute(QWebEngineSettings::LocalStorageEnabled, settings.value(QSL("HTML5StorageEnabled"), true).toBool());
+    webSettings->setAttribute(QWebEngineSettings::PluginsEnabled, settings.value(QSL("allowPlugins"), true).toBool());
+    webSettings->setAttribute(QWebEngineSettings::JavascriptEnabled, settings.value(QSL("allowJavaScript"), true).toBool());
+    webSettings->setAttribute(QWebEngineSettings::JavascriptCanOpenWindows, settings.value(QSL("allowJavaScriptOpenWindow"), false).toBool());
+    webSettings->setAttribute(QWebEngineSettings::JavascriptCanAccessClipboard, settings.value(QSL("allowJavaScriptAccessClipboard"), true).toBool());
+    webSettings->setAttribute(QWebEngineSettings::LinksIncludedInFocusChain, settings.value(QSL("IncludeLinkInFocusChain"), false).toBool());
+    webSettings->setAttribute(QWebEngineSettings::XSSAuditingEnabled, settings.value(QSL("XSSAuditing"), false).toBool());
+    webSettings->setAttribute(QWebEngineSettings::PrintElementBackgrounds, settings.value(QSL("PrintElementBackground"), true).toBool());
+    webSettings->setAttribute(QWebEngineSettings::SpatialNavigationEnabled, settings.value(QSL("SpatialNavigation"), false).toBool());
+    webSettings->setAttribute(QWebEngineSettings::ScrollAnimatorEnabled, settings.value(QSL("AnimateScrolling"), true).toBool());
     webSettings->setAttribute(QWebEngineSettings::HyperlinkAuditingEnabled, false);
     webSettings->setAttribute(QWebEngineSettings::FullScreenSupportEnabled, true);
     webSettings->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, true);
     webSettings->setAttribute(QWebEngineSettings::FocusOnNavigationEnabled, false);
 
 #if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 10, 0)
-    webSettings->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, settings.value("allowJavaScriptActivateWindow", false).toBool());
+    webSettings->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, settings.value(QSL("allowJavaScriptActivateWindow"), false).toBool());
 #endif
 
 #if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 11, 0)
-    webSettings->setAttribute(QWebEngineSettings::JavascriptCanPaste, settings.value("allowJavaScriptPaste", true).toBool());
-    webSettings->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, settings.value("DisableVideoAutoPlay", false).toBool());
-    webSettings->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, settings.value("WebRTCPublicIpOnly", true).toBool());
+    webSettings->setAttribute(QWebEngineSettings::JavascriptCanPaste, settings.value(QSL("allowJavaScriptPaste"), true).toBool());
+    webSettings->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, settings.value(QSL("DisableVideoAutoPlay"), false).toBool());
+    webSettings->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, settings.value(QSL("WebRTCPublicIpOnly"), true).toBool());
     webSettings->setUnknownUrlSchemePolicy(QWebEngineSettings::AllowAllUnknownUrlSchemes);
 #endif
 
-    webSettings->setDefaultTextEncoding(settings.value("DefaultEncoding", webSettings->defaultTextEncoding()).toString());
+    webSettings->setDefaultTextEncoding(settings.value(QSL("DefaultEncoding"), webSettings->defaultTextEncoding()).toString());
 
-    setWheelScrollLines(settings.value("wheelScrollLines", wheelScrollLines()).toInt());
+    setWheelScrollLines(settings.value(QSL("wheelScrollLines"), wheelScrollLines()).toInt());
 
-    const QString userCss = settings.value("userStyleSheet", QString()).toString();
+    const QString userCss = settings.value(QSL("userStyleSheet"), QString()).toString();
     settings.endGroup();
 
     setUserStyleSheet(userCss);
 
-    settings.beginGroup("Browser-Fonts");
-    webSettings->setFontFamily(QWebEngineSettings::StandardFont, settings.value("StandardFont", webSettings->fontFamily(QWebEngineSettings::StandardFont)).toString());
-    webSettings->setFontFamily(QWebEngineSettings::CursiveFont, settings.value("CursiveFont", webSettings->fontFamily(QWebEngineSettings::CursiveFont)).toString());
-    webSettings->setFontFamily(QWebEngineSettings::FantasyFont, settings.value("FantasyFont", webSettings->fontFamily(QWebEngineSettings::FantasyFont)).toString());
-    webSettings->setFontFamily(QWebEngineSettings::FixedFont, settings.value("FixedFont", webSettings->fontFamily(QWebEngineSettings::FixedFont)).toString());
-    webSettings->setFontFamily(QWebEngineSettings::SansSerifFont, settings.value("SansSerifFont", webSettings->fontFamily(QWebEngineSettings::SansSerifFont)).toString());
-    webSettings->setFontFamily(QWebEngineSettings::SerifFont, settings.value("SerifFont", webSettings->fontFamily(QWebEngineSettings::SerifFont)).toString());
-    webSettings->setFontSize(QWebEngineSettings::DefaultFontSize, settings.value("DefaultFontSize", 15).toInt());
-    webSettings->setFontSize(QWebEngineSettings::DefaultFixedFontSize, settings.value("FixedFontSize", 14).toInt());
-    webSettings->setFontSize(QWebEngineSettings::MinimumFontSize, settings.value("MinimumFontSize", 3).toInt());
-    webSettings->setFontSize(QWebEngineSettings::MinimumLogicalFontSize, settings.value("MinimumLogicalFontSize", 5).toInt());
+    settings.beginGroup(QSL("Browser-Fonts"));
+    webSettings->setFontFamily(QWebEngineSettings::StandardFont, settings.value(QSL("StandardFont"), webSettings->fontFamily(QWebEngineSettings::StandardFont)).toString());
+    webSettings->setFontFamily(QWebEngineSettings::CursiveFont, settings.value(QSL("CursiveFont"), webSettings->fontFamily(QWebEngineSettings::CursiveFont)).toString());
+    webSettings->setFontFamily(QWebEngineSettings::FantasyFont, settings.value(QSL("FantasyFont"), webSettings->fontFamily(QWebEngineSettings::FantasyFont)).toString());
+    webSettings->setFontFamily(QWebEngineSettings::FixedFont, settings.value(QSL("FixedFont"), webSettings->fontFamily(QWebEngineSettings::FixedFont)).toString());
+    webSettings->setFontFamily(QWebEngineSettings::SansSerifFont, settings.value(QSL("SansSerifFont"), webSettings->fontFamily(QWebEngineSettings::SansSerifFont)).toString());
+    webSettings->setFontFamily(QWebEngineSettings::SerifFont, settings.value(QSL("SerifFont"), webSettings->fontFamily(QWebEngineSettings::SerifFont)).toString());
+    webSettings->setFontSize(QWebEngineSettings::DefaultFontSize, settings.value(QSL("DefaultFontSize"), 15).toInt());
+    webSettings->setFontSize(QWebEngineSettings::DefaultFixedFontSize, settings.value(QSL("FixedFontSize"), 14).toInt());
+    webSettings->setFontSize(QWebEngineSettings::MinimumFontSize, settings.value(QSL("MinimumFontSize"), 3).toInt());
+    webSettings->setFontSize(QWebEngineSettings::MinimumLogicalFontSize, settings.value(QSL("MinimumLogicalFontSize"), 5).toInt());
     settings.endGroup();
 
     QWebEngineProfile* profile = QWebEngineProfile::defaultProfile();
@@ -969,7 +969,7 @@ void MainApplication::loadSettings()
     QString defaultPath = DataPaths::path(DataPaths::Cache);
     if (!defaultPath.startsWith(DataPaths::currentProfilePath()))
         defaultPath.append(QLatin1Char('/') + ProfileManager::currentProfile());
-    const QString &cachePath = settings.value("Web-Browser-Settings/CachePath", defaultPath).toString();
+    const QString &cachePath = settings.value(QSL("Web-Browser-Settings/CachePath"), defaultPath).toString();
     profile->setCachePath(cachePath);
 
     const bool allowCache = settings.value(QSL("Web-Browser-Settings/AllowLocalCache"), true).toBool();
@@ -1003,7 +1003,7 @@ void MainApplication::loadTheme(const QString &name)
 
     if (activeThemePath.isEmpty()) {
         qWarning() << "Cannot load theme " << name;
-        activeThemePath = QString("%1/%2").arg(DataPaths::path(DataPaths::Themes), DEFAULT_THEME_NAME);
+        activeThemePath = QSL("%1/%2").arg(DataPaths::path(DataPaths::Themes), DEFAULT_THEME_NAME);
     }
 
     QString qss = QzTools::readAllFileContents(activeThemePath + QLatin1String("/main.css"));
@@ -1027,7 +1027,7 @@ void MainApplication::loadTheme(const QString &name)
     qss.append(QzTools::readAllFileContents(DataPaths::currentProfilePath() + QL1S("/userChrome.css")));
 
     QString relativePath = QDir::current().relativeFilePath(activeThemePath);
-    qss.replace(QRegularExpression(QSL("url\\s*\\(\\s*([^\\*:\\);]+)\\s*\\)")), QString("url(%1/\\1)").arg(relativePath));
+    qss.replace(QRegularExpression(QSL("url\\s*\\(\\s*([^\\*:\\);]+)\\s*\\)")), QSL("url(%1/\\1)").arg(relativePath));
     setStyleSheet(qss);
 }
 
@@ -1039,7 +1039,7 @@ void MainApplication::checkDefaultWebBrowser()
 
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
     Settings settings;
-    bool checkNow = settings.value("Web-Browser-Settings/CheckDefaultBrowser", DEFAULT_CHECK_DEFAULTBROWSER).toBool();
+    bool checkNow = settings.value(QSL("Web-Browser-Settings/CheckDefaultBrowser"), DEFAULT_CHECK_DEFAULTBROWSER).toBool();
 
     if (!checkNow) {
         return;
@@ -1064,7 +1064,7 @@ void MainApplication::checkDefaultWebBrowser()
         checkAgain = dialog.isChecked();
     }
 
-    settings.setValue("Web-Browser-Settings/CheckDefaultBrowser", checkAgain);
+    settings.setValue(QSL("Web-Browser-Settings/CheckDefaultBrowser"), checkAgain);
 #endif
 }
 

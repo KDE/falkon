@@ -63,7 +63,7 @@ class FALKON_EXPORT AdBlockRule
     Q_DISABLE_COPY(AdBlockRule)
 
 public:
-    AdBlockRule(const QString &filter = QString(), AdBlockSubscription* subscription = 0);
+    AdBlockRule(const QString &filter = QString(), AdBlockSubscription* subscription = nullptr);
     ~AdBlockRule();
 
     AdBlockRule* copy() const;
