@@ -162,6 +162,14 @@ QString Scripts::setupSpeedDial()
     return source;
 }
 
+QString Scripts::setupExtensions()
+{
+    QString source = QzTools::readAllFileContents(QSL(":html/extensions.user.js"));
+    source.replace(QL1S("%JQUERY%"), QzTools::readAllFileContents(QSL(":html/jquery.js")));
+    source.replace(QL1S("%JQUERY-UI%"), QzTools::readAllFileContents(QSL(":html/jquery-ui.js")));
+    return source;
+}
+
 QString Scripts::setCss(const QString &css)
 {
     QString source = QL1S("(function() {"

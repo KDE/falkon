@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2015-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2018 Anmol Gautam <tarptaeya@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -15,32 +16,32 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-
-#ifndef SCRIPTS_H
-#define SCRIPTS_H
-
-#include <QString>
-
+#pragma once
+#include <QObject>
+#include <QIcon>
 #include "qzcommon.h"
 
-class QWebEngineView;
-
-class FALKON_EXPORT Scripts
+class FALKON_EXPORT Themes : public QObject
 {
+    Q_OBJECT
 public:
-    static QString setupWebChannel();
-    static QString setupFormObserver();
-    static QString setupWindowObject();
-    static QString setupSpeedDial();
-    static QString setupExtensions();
+    struct Theme {
+        bool isValid;
+        QIcon icon;
+        QString name;
+        QString dirName;
+        QString author;
+        QString description;
+        QString license;
+    };
+    explicit Themes(QObject *parent = nullptr);
 
-    static QString setCss(const QString &css);
-    static QString sendPostData(const QUrl &url, const QByteArray &data);
-    static QString completeFormData(const QByteArray &data);
-    static QString getOpenSearchLinks();
-    static QString getAllImages();
-    static QString getAllMetaAttributes();
-    static QString getFormData(const QPointF &pos);
+    static QList<Theme> getAvailableThemes();
+    static QString getActiveTheme();
+public Q_SLOTS:
+    void showLicense(const QString &themeName);
+    void makeCurrent(const QString &themeName);
+private:
+    static Theme parseTheme(const QString &path, const QString &name);
+    Theme getThemeByName(const QString &themeName) const;
 };
-
-#endif // SCRIPTS_H

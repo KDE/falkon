@@ -28,6 +28,8 @@
 #include "sessionmanager.h"
 #include "restoremanager.h"
 #include "../config.h"
+#include "sqldatabase.h"
+#include "themes.h"
 
 #include <QTimer>
 #include <QSettings>
@@ -52,7 +54,12 @@ void FalkonSchemeHandler::requestStarted(QWebEngineUrlRequestJob *job)
     }
 
     QStringList knownPages;
-    knownPages << "about" << "start" << "speeddial" << "config" << "restore";
+    knownPages << "about" << "start" << "speeddial" << "config" << "restore" << "extensions";
+
+    if (job->requestUrl().path().contains("config") ||
+            job->requestUrl().path().contains("extensions")) {
+        mApp->plugins()->getAvailablePlugins();
+    }
 
     if (knownPages.contains(job->requestUrl().path()))
         job->reply(QByteArrayLiteral("text/html"), new FalkonSchemeReply(job));
@@ -109,6 +116,8 @@ void FalkonSchemeReply::loadPage()
         contents = configPage();
     } else if (m_pageName == QLatin1String("restore")) {
         contents = restorePage();
+    } else if (m_pageName == QLatin1String("extensions")) {
+        contents = extensionsPage();
     }
 
     QMutexLocker lock(&m_mutex);
@@ -414,5 +423,93 @@ QString FalkonSchemeReply::configPage()
 
     page.replace(QLatin1String("%PREFS-INFO%"), allGroupsString);
 
+    return page;
+}
+
+QString FalkonSchemeReply::extensionsPage()
+{
+    static QString ePage;
+
+    if (ePage.isEmpty()) {
+        ePage.append(QzTools::readAllFileContents(":html/extensions.html"));
+        ePage.replace(QLatin1String("%TITLE%"), tr("Falkon Extensions"));
+        ePage.replace(QLatin1String("%SIDEBAR-WIDTH%"), "200px");
+        ePage = QzTools::applyDirectionToPage(ePage);
+    }
+
+    QString page = ePage;
+
+    // Plugins
+    QSet<QString> allowedPluginsInPrivateMode;
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.exec(QSL("SELECT * FROM allowed_plugins WHERE allowInPrivateMode=1"));
+    while (query.next()) {
+        allowedPluginsInPrivateMode.insert(query.value(0).toString());
+    }
+
+    QString pluginsString;
+    QString pluginsList = QzTools::readAllFileByteContents(":html/extensions.list.html");
+    const QList<Plugins::Plugin> &availablePlugins = mApp->plugins()->getAvailablePlugins();
+    int charsInShortDescription = 75;
+    foreach (const Plugins::Plugin &plugin, availablePlugins) {
+        QString pluginListItem = pluginsList;
+        PluginSpec spec = plugin.pluginSpec;
+        QImage extensionImage = spec.icon.toImage();
+        QByteArray byteArray;
+        QBuffer buffer(&byteArray);
+        extensionImage.save(&buffer, "PNG");
+        pluginListItem.replace(QLatin1String("%EXTENSION-ICON%"), QString::fromLatin1(byteArray.toBase64().data()));
+        pluginListItem.replace(QLatin1String("%EXTENSION-NAME%"), spec.name);
+        pluginListItem.replace(QLatin1String("%EXTENSION-DESCRIPTION-SHORT%"), QString("%1%2").arg(spec.description.left(charsInShortDescription), spec.description.length() > charsInShortDescription ? "..." : ""));
+        pluginListItem.replace(QLatin1String("%EXTENSION-DESCRIPTION%"), spec.description);
+        pluginListItem.replace(QLatin1String("%EXTENSION-DESCRIPTION-SHORT-ID%"), QString("%1-description-short-id").arg(plugin.pluginId));
+        pluginListItem.replace(QLatin1String("%EXTENSION-DESCRIPTION-ID%"), QString("%1-description-id").arg(plugin.pluginId));
+        pluginListItem.replace(QLatin1String("%EXTENSION-DESCRIPTION-STATE-BUTTON-ID%"), QString("%1-description-state-button-id").arg(plugin.pluginId));
+        pluginListItem.replace(QLatin1String("%EXTENSION-AUTHOR%"), spec.author);
+        pluginListItem.replace(QLatin1String("%EXTENSION-VERSION%"), spec.version);
+        pluginListItem.replace(QLatin1String("%EXTENSION-ENABLE-BUTTON-ID%"), QString("%1-enable-button-id").arg(plugin.pluginId));
+        pluginListItem.replace(QLatin1String("%EXTENSION-SETTINGS-BUTTON-ID%"), QString("%1-settings-button-id").arg(plugin.pluginId));
+        pluginListItem.replace(QLatin1String("%EXTENSION-REMOVE-BUTTON-ID%"), QString("%1-remove-button-id").arg(plugin.pluginId));
+        pluginListItem.replace(QLatin1String("%EXTENSION-STATE%"), plugin.isLoaded() ? tr("Disable") : tr("Enable"));
+        pluginListItem.replace(QLatin1String("%DISABLE-SETTINGS%"), plugin.isLoaded() && spec.hasSettings ? tr("") : tr("disabled"));
+        pluginListItem.replace(QLatin1String("%DISABLE-REMOVE%"), plugin.type == Plugins::Plugin::QmlPlugin ? tr("") : tr("disabled"));
+        pluginListItem.replace(QLatin1String("%DISABLE-ALLOW-IN-INCOGNITO%"), plugin.isLoaded() ? tr("") : tr("disabled"));
+        pluginListItem.replace(QLatin1String("%EXTENSION-ALLOW-IN-INCOGNITO-ID%"), QString("%1-allow-in-incognito-id").arg(plugin.pluginId));
+        pluginListItem.replace(QLatin1String("%EXTENSION-ALLOWED-IN-INCOGNITO%"), allowedPluginsInPrivateMode.contains(plugin.pluginId) ? "checked" : "");
+        pluginsString.append(pluginListItem);
+    }
+    page.replace(QLatin1String("%EXTENSIONS-LIST%"), pluginsString);
+
+    // Themes
+    const QString activeTheme = Themes::getActiveTheme();
+    const QList<Themes::Theme> &availableThemes = Themes::getAvailableThemes();
+    QString themesString;
+    QString themesList = QzTools::readAllFileByteContents(":html/themes.list.html");
+    foreach (const Themes::Theme &theme, availableThemes) {
+        QString themeListItem = themesList;
+        QImage themeImage = theme.icon.pixmap(32, 32).toImage();
+        QByteArray byteArray;
+        QBuffer buffer(&byteArray);
+        themeImage.save(&buffer, "PNG");
+        themeListItem.replace(QLatin1String("%THEME-ICON%"), QString::fromLatin1(byteArray.toBase64().data()));
+        themeListItem.replace(QLatin1String("%THEME-NAME%"), theme.name);
+        themeListItem.replace(QLatin1String("%THEME-DESCRIPTION-SHORT%"), QString("%1%2").arg(theme.description.left(charsInShortDescription), theme.description.length() > charsInShortDescription ? "..." : ""));
+        themeListItem.replace(QLatin1String("%THEME-DESCRIPTION%"), theme.description);
+        themeListItem.replace(QLatin1String("%THEME-DESCRIPTION-SHORT-ID%"), QString("%1-description-short-id").arg(theme.name));
+        themeListItem.replace(QLatin1String("%THEME-DESCRIPTION-ID%"), QString("%1-description-id").arg(theme.name));
+        themeListItem.replace(QLatin1String("%THEME-DESCRIPTION-STATE-BUTTON-ID%"), QString("%1-description-state-button-id").arg(theme.name));
+        themeListItem.replace(QLatin1String("%THEME-AUTHOR%"), theme.author);
+        themeListItem.replace(QLatin1String("%THEME-ENABLE-BUTTON-ID%"), QString("%1-enable-button-id").arg(theme.name));
+        themeListItem.replace(QLatin1String("%THEME-LICENSE-BUTTON-ID%"), QString("%1-license-button-id").arg(theme.name));
+        themeListItem.replace(QLatin1String("%THEME-REMOVE-BUTTON-ID%"), QString("%1-remove-button-id").arg(theme.name));
+        themeListItem.replace(QLatin1String("%DISABLE-LICENSE%"), theme.license.isEmpty() ? "disabled" : "");
+        if (activeTheme == theme.dirName) {
+            themeListItem.replace(QLatin1String("%DISABLE-ENABLE%"), QLatin1String("disabled"));
+        } else {
+            themeListItem.replace(QLatin1String("%DISABLE-ENABLE%"), QLatin1String(""));
+        }
+        themesString.append(themeListItem);
+    }
+    page.replace(QLatin1String("%THEMES-LIST%"), themesString);
     return page;
 }

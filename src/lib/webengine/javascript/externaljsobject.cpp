@@ -19,9 +19,11 @@
 #include "mainapplication.h"
 #include "pluginproxy.h"
 #include "speeddial.h"
+#include "extensions.h"
 #include "webpage.h"
 #include "autofilljsobject.h"
 #include "restoremanager.h"
+#include "themes.h"
 
 #include <QWebChannel>
 
@@ -31,6 +33,7 @@ ExternalJsObject::ExternalJsObject(WebPage *page)
     : QObject(page)
     , m_page(page)
     , m_autoFill(new AutoFillJsObject(this))
+    , m_themes(new Themes(this))
 {
 }
 
@@ -80,4 +83,20 @@ QObject *ExternalJsObject::recovery() const
         return Q_NULLPTR;
 
     return mApp->restoreManager()->recoveryObject(m_page);
+}
+
+QObject *ExternalJsObject::extensions() const
+{
+    if (m_page->url().toString() != QL1S("falkon:extensions"))
+        return Q_NULLPTR;
+
+    return mApp->plugins()->extensions();
+}
+
+QObject *ExternalJsObject::themes() const
+{
+    if (m_page->url().toString() != QL1S("falkon:extensions"))
+        return Q_NULLPTR;
+
+    return m_themes;
 }

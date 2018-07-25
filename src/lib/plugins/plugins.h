@@ -30,6 +30,7 @@ class QLibrary;
 class QPluginLoader;
 
 class SpeedDial;
+class Extensions;
 class QmlPluginLoader;
 
 struct PluginSpec {
@@ -95,11 +96,15 @@ public:
 
     bool loadPlugin(Plugin* plugin);
     void unloadPlugin(Plugin* plugin);
+    void removePlugin(Plugin *plugin);
 
     void shutdown();
 
     // SpeedDial
     SpeedDial* speedDial() { return m_speedDial; }
+
+    // Extensions
+    Extensions *extensions() { return m_extensions; }
 
     static PluginSpec createSpec(const DesktopFile &metaData);
 
@@ -115,6 +120,7 @@ protected:
 
 Q_SIGNALS:
     void pluginUnloaded(PluginInterface* plugin);
+    void refreshedLoadedPlugins();
 
 private:
     void loadPythonSupport();
@@ -141,6 +147,7 @@ private:
     bool m_pluginsLoaded;
 
     SpeedDial* m_speedDial;
+    Extensions *m_extensions;
     QList<PluginInterface*> m_internalPlugins;
 
     QLibrary *m_pythonPlugin = nullptr;

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>%TITLE%</title>
+<style>
+html, body { width: 100%; height: 100%; margin: 0; }
+body { direction: %DIRECTION%; }
+h1 { color: #1a4ba4; font-size: 160%; margin-bottom: 0;}
+section { display: none; }
+div { margin: 0; }
+#sidebar { display: inline-block; float: left; width: %SIDEBAR-WIDTH%; margin: 0; }
+#content-box { display: inline-block; float: right; width: calc(100% - %SIDEBAR-WIDTH%); margin: 0; }
+.sidebar-menu { margin: 0; padding: 10px; cursor: pointer; font-size: 20px; }
+.sidebar-menu.active { color: #1a4ba4; }
+.sidebar-menu:hover { background-color: #dbdbdb; }
+.extension-list-item, .theme-list-item { padding: 20px; border-bottom: 1px solid #d0d0d0; }
+.extension-list-image, .theme-list-image { display: inline-block; width: 30px; vertical-align: top; }
+.extension-list-data, .theme-list-data { display: inline-block; width: calc(100% - 30px - 5px); margin-left: 5px; }
+.extension-name, .theme-name { font-size: 25px; line-height: 25px; display: inline-block; height: 25px; }
+.extension-description-short, .theme-description-short { display: none; }
+.extension-description, .theme-description { display: none; }
+.visible { display: inline-block; }
+.invisible { display: none; }
+.extension-description-state-button, .theme-description-state-button { color: blue; cursor: pointer; }
+.extension-description-state-button:hover, .theme-description-state-button:hover { text-decoration: underline; }
+.extension-control-buttons, .theme-control-buttons { display: inline-block; float: right; }
+.extension-control-button, .theme-control-button { display: inline-block; padding: 3px 6px; outline: none; }
+@media only screen and (max-width: 600px) {
+}
+</style>
+</head>
+<body>
+
+<div id="sidebar">
+<div class="sidebar-menu active" id="extensions-button">Extensions</div>
+<div class="sidebar-menu" id="themes-button">Themes</div>
+</div>
+<div id="content-box">
+<div id="content">
+</div>
+</div>
+
+<section id="extensions">
+    %EXTENSIONS-LIST%
+</section>
+
+<section id="themes">
+    %THEMES-LIST%
+</section>
+
+<script>
+function initDisplay() {
+    // Extensions is default selection for page
+    var content = document.getElementById("extensions").innerHTML;
+    document.getElementById("content").innerHTML = content;
+}
+
+window.onload = function() {
+    initDisplay();
+}
+</script>
+
+</body>
+</html>

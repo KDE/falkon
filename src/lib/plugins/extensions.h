@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2015-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2018 Anmol Gautam <tarptaeya@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -15,32 +15,27 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-
-#ifndef SCRIPTS_H
-#define SCRIPTS_H
-
-#include <QString>
-
+#pragma once
+#include <QObject>
+#include "plugins.h"
+#include "mainapplication.h"
+#include "pluginproxy.h"
 #include "qzcommon.h"
 
-class QWebEngineView;
-
-class FALKON_EXPORT Scripts
+class FALKON_EXPORT Extensions : public QObject
 {
+    Q_OBJECT
 public:
-    static QString setupWebChannel();
-    static QString setupFormObserver();
-    static QString setupWindowObject();
-    static QString setupSpeedDial();
-    static QString setupExtensions();
-
-    static QString setCss(const QString &css);
-    static QString sendPostData(const QUrl &url, const QByteArray &data);
-    static QString completeFormData(const QByteArray &data);
-    static QString getOpenSearchLinks();
-    static QString getAllImages();
-    static QString getAllMetaAttributes();
-    static QString getFormData(const QPointF &pos);
+    explicit Extensions(QObject *parent = nullptr);
+Q_SIGNALS:
+    void reload();
+public Q_SLOTS:
+    void requestSync();
+    void requestReload();
+    void pluginStateChanged(const QString &pluginId);
+    void showSettings(const QString &pluginId);
+    void removeExtension(const QString &pluginId);
+    void allowInIncognito(const QString &pluginId, bool allowed);
+private:
+    QList<Plugins::Plugin> m_availablePlugins;
 };
-
-#endif // SCRIPTS_H

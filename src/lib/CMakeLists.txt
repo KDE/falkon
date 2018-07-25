@@ -189,6 +189,8 @@ set(SRCS ${SRCS}
     plugins/qml/api/extensionscheme/qmlextensionscheme.cpp
     plugins/qml/api/extensionscheme/qmlwebengineurlrequestjob.cpp
     plugins/qml/api/fileutils/qmlfileutils.cpp
+    plugins/extensions.cpp
+    plugins/themes.cpp
     popupwindow/popuplocationbar.cpp
     popupwindow/popupstatusbarmessage.cpp
     popupwindow/popupwebview.cpp

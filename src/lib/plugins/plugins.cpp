@@ -19,6 +19,7 @@
 #include "plugininterface.h"
 #include "mainapplication.h"
 #include "speeddial.h"
+#include "extensions.h"
 #include "settings.h"
 #include "datapaths.h"
 #include "adblock/adblockplugin.h"
@@ -37,6 +38,7 @@ Plugins::Plugins(QObject* parent)
     : QObject(parent)
     , m_pluginsLoaded(false)
     , m_speedDial(new SpeedDial(this))
+    , m_extensions(new Extensions(this))
 {
     loadSettings();
 
@@ -45,6 +47,8 @@ Plugins::Plugins(QObject* parent)
     }
 
     loadQmlSupport();
+
+    connect(this, &Plugins::refreshedLoadedPlugins, m_extensions, &Extensions::requestReload);
 }
 
 QList<Plugins::Plugin> Plugins::getAvailablePlugins()
@@ -86,6 +90,28 @@ void Plugins::unloadPlugin(Plugins::Plugin* plugin)
     m_availablePlugins.append(*plugin);
 
     refreshLoadedPlugins();
+}
+
+void Plugins::removePlugin(Plugins::Plugin *plugin)
+{
+    if (plugin->type != Plugin::QmlPlugin) {
+        return;
+    }
+    if (plugin->isLoaded()) {
+        unloadPlugin(plugin);
+    }
+
+    // For QML plugins, pluginId is qml:<plugin-dir-name>
+    const QString dirName = plugin->pluginId.remove(0, QLatin1String("qml:").size());
+    const QString dirPath = DataPaths::locate(DataPaths::Plugins, QSL("qml/") + dirName);
+    bool result = QDir(dirPath).removeRecursively();
+    if (!result) {
+        qWarning() << "Unable to remove" << plugin->pluginSpec.name;
+        return;
+    }
+
+    m_availablePlugins.removeOne(*plugin);
+    refreshedLoadedPlugins();
 }
 
 void Plugins::loadSettings()
@@ -243,6 +269,8 @@ void Plugins::refreshLoadedPlugins()
             m_loadedPlugins.append(plugin.instance);
         }
     }
+
+    emit refreshedLoadedPlugins();
 }
 
 void Plugins::loadPythonSupport()

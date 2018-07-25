@@ -1107,6 +1107,12 @@ void MainApplication::setupUserScripts()
     falkonSpeedDial.setSourceCode(Scripts::setupSpeedDial());
     m_webProfile->scripts()->insert(falkonSpeedDial);
 
+    // falkon:extensions
+    QWebEngineScript falkonExtensions;
+    falkonExtensions.setWorldId(WebPage::SafeJsWorld);
+    falkonExtensions.setSourceCode(Scripts::setupExtensions());
+    m_webProfile->scripts()->insert(falkonExtensions);
+
     // document.window object addons
     QWebEngineScript documentWindowAddons;
     documentWindowAddons.setName(QSL("_falkon_window_object"));

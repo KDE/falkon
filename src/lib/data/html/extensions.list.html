@@ -1,0 +1,24 @@
+<div class="extension-list-item">
+    <img class="extension-list-image" src="data:image/png;base64, %EXTENSION-ICON%"><div class="extension-list-data">
+        <div class="extension-name">%EXTENSION-NAME%</div>
+        <div>
+            <div class="extension-description-short visible" id="%EXTENSION-DESCRIPTION-SHORT-ID%">
+                %EXTENSION-DESCRIPTION-SHORT%
+                <span class="extension-description-state-button" id="%EXTENSION-DESCRIPTION-STATE-BUTTON-ID%">more</span>
+            </div>
+            <div class="extension-description" id="%EXTENSION-DESCRIPTION-ID%">
+                %EXTENSION-DESCRIPTION%
+                <table>
+                    <tr><td><b>Author</b></td><td>%EXTENSION-AUTHOR%</td></tr>
+                    <tr><td><b>Version</b></td><td>%EXTENSION-VERSION%</td></tr>
+                </table>
+                <label class="allow-in-incognito-button"><input class="allow-in-incognito-button-checkbox" id="%EXTENSION-ALLOW-IN-INCOGNITO-ID%" type="checkbox" autocomplete="off" %DISABLE-ALLOW-IN-INCOGNITO% %EXTENSION-ALLOWED-IN-INCOGNITO%>Allow in Incognito</label>
+            </div>
+            <div class="extension-control-buttons">
+                <button class="extension-control-button enable" id="%EXTENSION-ENABLE-BUTTON-ID%">%EXTENSION-STATE%</button>
+                <button class="extension-control-button settings" id="%EXTENSION-SETTINGS-BUTTON-ID%" %DISABLE-SETTINGS%>Settings</button>
+                <button class="extension-control-button remove" id="%EXTENSION-REMOVE-BUTTON-ID%" %DISABLE-REMOVE%>Remove</button>
+            </div>
+        </div>
+    </div>
+</div>

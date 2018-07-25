@@ -25,6 +25,7 @@
 #include "iconprovider.h"
 #include "../config.h"
 #include "sqldatabase.h"
+#include "extensions.h"
 
 #include <QInputDialog>
 #include <QMessageBox>

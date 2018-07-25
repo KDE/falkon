@@ -56,6 +56,7 @@ private:
     QString speeddialPage();
     QString restorePage();
     QString configPage();
+    QString extensionsPage();
 
     bool m_loaded;
     QBuffer m_buffer;

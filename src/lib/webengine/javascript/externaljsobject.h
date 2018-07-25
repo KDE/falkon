@@ -24,6 +24,7 @@
 
 class WebPage;
 class AutoFillJsObject;
+class Themes;
 
 class QWebChannel;
 
@@ -33,6 +34,8 @@ class FALKON_EXPORT ExternalJsObject : public QObject
     Q_PROPERTY(QObject* speedDial READ speedDial CONSTANT)
     Q_PROPERTY(QObject* autoFill READ autoFill CONSTANT)
     Q_PROPERTY(QObject* recovery READ recovery CONSTANT)
+    Q_PROPERTY(QObject* extensions READ extensions CONSTANT)
+    Q_PROPERTY(QObject* themes READ themes CONSTANT)
 
 public:
     explicit ExternalJsObject(WebPage *page);
@@ -48,9 +51,12 @@ private:
     QObject *speedDial() const;
     QObject *autoFill() const;
     QObject *recovery() const;
+    QObject *extensions() const;
+    QObject *themes() const;
 
     WebPage *m_page;
     AutoFillJsObject *m_autoFill;
+    Themes *m_themes;
 };
 
 #endif // EXTERNALJSOBJECT_H
