@@ -98,7 +98,6 @@ public:
     }
 
     static void paintDropIndicator(QWidget *widget, const QRect &r);
-    static QString getPathFromUrl(const QUrl &url);
 };
 
 #endif // QZTOOLS_H
