@@ -19,7 +19,6 @@
 #include "plugininterface.h"
 #include "mainapplication.h"
 #include "speeddial.h"
-#include "extensions.h"
 #include "settings.h"
 #include "datapaths.h"
 #include "adblock/adblockplugin.h"
