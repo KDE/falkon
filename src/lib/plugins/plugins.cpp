@@ -38,7 +38,6 @@ Plugins::Plugins(QObject* parent)
     : QObject(parent)
     , m_pluginsLoaded(false)
     , m_speedDial(new SpeedDial(this))
-    , m_extensions(new Extensions(this))
 {
     loadSettings();
 
@@ -47,8 +46,6 @@ Plugins::Plugins(QObject* parent)
     }
 
     loadQmlSupport();
-
-    connect(this, &Plugins::refreshedLoadedPlugins, m_extensions, &Extensions::requestReload);
 }
 
 QList<Plugins::Plugin> Plugins::getAvailablePlugins()

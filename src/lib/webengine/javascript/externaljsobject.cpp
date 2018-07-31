@@ -23,6 +23,7 @@
 #include "webpage.h"
 #include "autofilljsobject.h"
 #include "restoremanager.h"
+#include "extensions.h"
 #include "themes.h"
 
 #include <QWebChannel>
@@ -33,8 +34,10 @@ ExternalJsObject::ExternalJsObject(WebPage *page)
     : QObject(page)
     , m_page(page)
     , m_autoFill(new AutoFillJsObject(this))
+    , m_extensions(new Extensions(this))
     , m_themes(new Themes(this))
 {
+    connect(mApp->plugins(), &PluginProxy::refreshedLoadedPlugins, m_extensions, &Extensions::requestReload);
 }
 
 WebPage *ExternalJsObject::page() const
@@ -90,7 +93,7 @@ QObject *ExternalJsObject::extensions() const
     if (m_page->url().toString() != QL1S("falkon:extensions"))
         return Q_NULLPTR;
 
-    return mApp->plugins()->extensions();
+    return m_extensions;
 }
 
 QObject *ExternalJsObject::themes() const

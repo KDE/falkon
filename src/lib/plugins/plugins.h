@@ -103,9 +103,6 @@ public:
     // SpeedDial
     SpeedDial* speedDial() { return m_speedDial; }
 
-    // Extensions
-    Extensions *extensions() { return m_extensions; }
-
     static PluginSpec createSpec(const DesktopFile &metaData);
 
     static QStringList getDefaultAllowedPlugins();
@@ -147,7 +144,6 @@ private:
     bool m_pluginsLoaded;
 
     SpeedDial* m_speedDial;
-    Extensions *m_extensions;
     QList<PluginInterface*> m_internalPlugins;
 
     QLibrary *m_pythonPlugin = nullptr;

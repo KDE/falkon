@@ -24,6 +24,7 @@
 
 class WebPage;
 class AutoFillJsObject;
+class Extensions;
 class Themes;
 
 class QWebChannel;
@@ -56,6 +57,7 @@ private:
 
     WebPage *m_page;
     AutoFillJsObject *m_autoFill;
+    Extensions *m_extensions;
     Themes *m_themes;
 };
 
