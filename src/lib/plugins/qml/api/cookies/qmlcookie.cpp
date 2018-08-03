@@ -95,8 +95,9 @@ QmlCookie *QmlCookieData::get(QNetworkCookie *cookie)
 {
     QmlCookie *qmlCookie = m_cookies.value(cookie);
     if (!qmlCookie) {
-        qmlCookie = new QmlCookie(cookie);
-        m_cookies.insert(cookie, qmlCookie);
+        QNetworkCookie *netCookie = new QNetworkCookie(*cookie);
+        qmlCookie = new QmlCookie(netCookie);
+        m_cookies.insert(netCookie, qmlCookie);
     }
     return qmlCookie;
 }

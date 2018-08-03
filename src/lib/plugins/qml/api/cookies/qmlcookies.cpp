@@ -27,7 +27,7 @@ QmlCookies::QmlCookies(QObject *parent)
 {
     connect(mApp->cookieJar(), &CookieJar::cookieAdded, this, [this](QNetworkCookie network_cookie){
         // FIXME: improve this
-        QmlCookie *cookie = cookieData->get(new QNetworkCookie(network_cookie));
+        QmlCookie *cookie = cookieData->get(&network_cookie);
         QVariantMap map;
         map.insert(QSL("cookie"), QVariant::fromValue(cookie));
         map.insert(QSL("removed"), false);
@@ -36,7 +36,7 @@ QmlCookies::QmlCookies(QObject *parent)
 
     connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, [this](QNetworkCookie network_cookie){
         // FIXME: improve this
-        QmlCookie *cookie = cookieData->get(new QNetworkCookie(network_cookie));
+        QmlCookie *cookie = cookieData->get(&network_cookie);
         QVariantMap map;
         map.insert(QSL("cookie"), QVariant::fromValue(cookie));
         map.insert(QSL("removed"), true);
@@ -53,10 +53,9 @@ QNetworkCookie *QmlCookies::getNetworkCookie(const QVariantMap &map)
     const QString name = map.value(QSL("name")).toString();
     const QString url = map.value(QSL("url")).toString();
     QVector<QNetworkCookie> cookies = mApp->cookieJar()->getAllCookies();
-    for (const QNetworkCookie &cookie : cookies) {
+    for (const QNetworkCookie &cookie : qAsConst(cookies)) {
         if (cookie.name() == name && cookie.domain() == url) {
-            QNetworkCookie *netCookie = new QNetworkCookie(cookie);
-            return netCookie;
+            return new QNetworkCookie(cookie);
         }
     }
     return nullptr;
@@ -105,14 +104,13 @@ QList<QObject*> QmlCookies::getAll(const QVariantMap &map)
     const bool secure = map.value(QSL("secure")).toBool();
     const bool session = map.value(QSL("session")).toBool();
     QVector<QNetworkCookie> cookies = mApp->cookieJar()->getAllCookies();
-    for (QNetworkCookie cookie : cookies) {
+    for (QNetworkCookie cookie : qAsConst(cookies)) {
         if ((!map.contains(QSL("name")) || cookie.name() == name)
                 && (!map.contains(QSL("url")) || cookie.domain() == url)
                 && (!map.contains(QSL("path")) || cookie.path() == path)
                 && (!map.contains(QSL("secure")) || cookie.isSecure() == secure)
                 && (!map.contains(QSL("session")) || cookie.isSessionCookie() == session)) {
-            QNetworkCookie *netCookie = new QNetworkCookie(cookie);
-            QmlCookie *qmlCookie = cookieData->get(netCookie);
+            QmlCookie *qmlCookie = cookieData->get(&cookie);
             qmlCookies.append(qmlCookie);
         }
     }
