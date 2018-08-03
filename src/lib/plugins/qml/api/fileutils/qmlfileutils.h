@@ -40,7 +40,7 @@ public:
      * @param file path within the plugin directory
      * @return contents of the file
      */
-    Q_INVOKABLE QString readAllFileContents(const QString &fileName);
+    Q_INVOKABLE QByteArray readAllFileContents(const QString &fileName);
     /**
      * @brief Checks if the file exists within the plugin directory
      * @param file path within the plugin directory

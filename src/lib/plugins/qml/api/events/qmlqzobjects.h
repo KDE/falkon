@@ -36,7 +36,7 @@ public:
         ON_TabWidget = Qz::ON_TabWidget,        //!< Represents object is tabwidget
         ON_BrowserWindow = Qz::ON_BrowserWindow //!< Represents object is browser window
     };
-    Q_ENUMS(ObjectName)
+    Q_ENUM(ObjectName)
 
     explicit QmlQzObjects(QObject *parent = nullptr);
 };

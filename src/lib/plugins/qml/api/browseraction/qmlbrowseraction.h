@@ -90,7 +90,7 @@ public:
         StatusBar = 0x2          //!< to add the button in status bar
     };
     Q_DECLARE_FLAGS(Locations, Location)
-    Q_ENUMS(Locations)
+    Q_ENUM(Locations)
 
     explicit QmlBrowserAction(QObject *parent = nullptr);
     ~QmlBrowserAction();
@@ -205,7 +205,7 @@ private:
     QString m_id;
     QString m_name;
     QString m_iconUrl;
-    QQmlComponent *m_popup;
+    QQmlComponent *m_popup = nullptr;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(QmlBrowserAction::Locations)

@@ -69,8 +69,7 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        auto *object = new QmlBookmarks();
-        return object;
+        return new QmlBookmarks();
     });
 
     // TopSites
@@ -80,8 +79,7 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        auto *object = new QmlTopSites();
-        return object;
+        return new QmlTopSites();
     });
 
     // History
@@ -91,8 +89,7 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        auto *object = new QmlHistory();
-        return object;
+        return new QmlHistory();
     });
 
     // Cookies
@@ -102,8 +99,7 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        auto *object = new QmlCookies();
-        return object;
+        return new QmlCookies();
     });
 
     // Tabs
@@ -113,8 +109,7 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        auto *object = new QmlTabs();
-        return object;
+        return new QmlTabs();
     });
 
     // Notifications
@@ -134,8 +129,7 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        auto *object = new QmlClipboard();
-        return object;
+        return new QmlClipboard();
     });
 
     // Windows
@@ -149,8 +143,7 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        auto *object = new QmlWindows();
-        return object;
+        return new QmlWindows();
     });
 
     // BrowserAction
@@ -185,8 +178,7 @@ void QmlPlugins::registerQmlTypes()
     qmlRegisterSingletonType<QmlI18n>("org.kde.falkon", 1, 0, "I18n", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(scriptEngine)
         QString pluginName = engine->rootContext()->contextProperty("__name__").toString();
-        auto *object = new QmlI18n(pluginName);
-        return object;
+        return new QmlI18n(pluginName);
     });
 #endif
 
@@ -197,16 +189,14 @@ void QmlPlugins::registerQmlTypes()
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        auto *object = new QmlUserScripts();
-        return object;
+        return new QmlUserScripts();
     });
 
     qmlRegisterSingletonType<QmlExternalJsObject>("org.kde.falkon", 1, 0, "ExternalJsObject", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        auto *object = new QmlExternalJsObject();
-        return object;
+        return new QmlExternalJsObject();
     });
 
     // ExtensionScheme
@@ -221,7 +211,6 @@ void QmlPlugins::registerQmlTypes()
 
         QString filePath = engine->rootContext()->contextProperty("__path__").toString();
 
-        auto *object = new QmlFileUtils(filePath);
-        return object;
+        return new QmlFileUtils(filePath);
     });
 }

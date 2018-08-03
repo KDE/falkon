@@ -18,8 +18,6 @@
 #include "qmlwebhittestresult.h"
 #include <QQmlEngine>
 
-#define NOT !
-
 QmlWebHitTestResult::QmlWebHitTestResult(const WebHitTestResult &webHitTestResult, QObject *parent)
     : QObject(parent)
     , m_webHitTestResult(webHitTestResult)
@@ -33,7 +31,7 @@ QmlWebHitTestResult::QmlWebHitTestResult(const WebHitTestResult &webHitTestResul
  */
 bool QmlWebHitTestResult::isImage() const
 {
-    return NOT m_webHitTestResult.imageUrl().isEmpty();
+    return !m_webHitTestResult.imageUrl().isEmpty();
 }
 
 /**
@@ -69,7 +67,7 @@ bool QmlWebHitTestResult::isNull() const
  */
 bool QmlWebHitTestResult::isLink() const
 {
-    return NOT m_webHitTestResult.linkUrl().isEmpty();
+    return !m_webHitTestResult.linkUrl().isEmpty();
 }
 
 /**
@@ -78,7 +76,7 @@ bool QmlWebHitTestResult::isLink() const
  */
 bool QmlWebHitTestResult::isMedia() const
 {
-    return NOT m_webHitTestResult.mediaUrl().isEmpty();
+    return !m_webHitTestResult.mediaUrl().isEmpty();
 }
 
 /**
@@ -114,7 +112,7 @@ QString QmlWebHitTestResult::tagName() const
  */
 QString QmlWebHitTestResult::baseUrl() const
 {
-    QUrl base = m_webHitTestResult.baseUrl();
+    const QUrl base = m_webHitTestResult.baseUrl();
     return QString::fromUtf8(base.toEncoded());
 }
 
@@ -133,7 +131,7 @@ QString QmlWebHitTestResult::linkTitle() const
  */
 QString QmlWebHitTestResult::linkUrl() const
 {
-    QUrl link = m_webHitTestResult.linkUrl();
+    const QUrl link = m_webHitTestResult.linkUrl();
     return QString::fromUtf8(link.toEncoded());
 }
 
@@ -143,7 +141,7 @@ QString QmlWebHitTestResult::linkUrl() const
  */
 QString QmlWebHitTestResult::imageUrl() const
 {
-    QUrl image = m_webHitTestResult.imageUrl();
+    const QUrl image = m_webHitTestResult.imageUrl();
     return QString::fromUtf8(image.toEncoded());
 }
 
@@ -153,7 +151,7 @@ QString QmlWebHitTestResult::imageUrl() const
  */
 QString QmlWebHitTestResult::mediaUrl() const
 {
-    QUrl media = m_webHitTestResult.mediaUrl();
+    const QUrl media = m_webHitTestResult.mediaUrl();
     return QString::fromUtf8(media.toEncoded());
 }
 

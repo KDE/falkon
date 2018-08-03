@@ -36,7 +36,7 @@ public:
         Normal,     //! Represents normal window
         Invalid     //! Represents a invalid window
     };
-    Q_ENUMS(WindowState)
+    Q_ENUM(WindowState)
 
     QmlWindowState(QObject *parent = nullptr);
 };

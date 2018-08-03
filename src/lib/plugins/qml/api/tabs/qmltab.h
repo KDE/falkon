@@ -44,30 +44,7 @@ class QmlTab : public QObject
     /**
      * @brief zoom level of the tab
      *
-     * Zoom level will have the following values
-     * <table>
-     * <caption>Zoom Levels</caption>
-     * <tr><th>Zoom Level</th><th>Zoom Percentage</th></tr>
-     * <tr><td>0</td><td>30</td></tr>
-     * <tr><td>1</td><td>40</td></tr>
-     * <tr><td>2</td><td>50</td></tr>
-     * <tr><td>3</td><td>67</td></tr>
-     * <tr><td>4</td><td>80</td></tr>
-     * <tr><td>5</td><td>90</td></tr>
-     * <tr><td>6</td><td>100</td></tr>
-     * <tr><td>7</td><td>110</td></tr>
-     * <tr><td>8</td><td>120</td></tr>
-     * <tr><td>9</td><td>133</td></tr>
-     * <tr><td>10</td><td>150</td></tr>
-     * <tr><td>11</td><td>170</td></tr>
-     * <tr><td>12</td><td>200</td></tr>
-     * <tr><td>13</td><td>220</td></tr>
-     * <tr><td>14</td><td>233</td></tr>
-     * <tr><td>15</td><td>250</td></tr>
-     * <tr><td>16</td><td>270</td></tr>
-     * <tr><td>17</td><td>285</td></tr>
-     * <tr><td>18</td><td>300</td></tr>
-     * </table>
+     * Zoom levels are from 0 to 18
      */
     Q_PROPERTY(int zoomLevel READ zoomLevel CONSTANT)
 

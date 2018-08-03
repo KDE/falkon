@@ -83,7 +83,7 @@ public:
         Separator = BookmarkItem::Separator, //!< Represents the bookmark seperator
         Invalid = BookmarkItem::Invalid      //!< Represents invalid bookmark item
     };
-    Q_ENUMS(Type)
+    Q_ENUM(Type)
 
     explicit QmlBookmarkTreeNode(BookmarkItem *item = nullptr);
 
@@ -109,5 +109,5 @@ public:
     ~QmlBookmarkTreeNodeData();
     QmlBookmarkTreeNode *get(BookmarkItem *item);
 private:
-    QMap<BookmarkItem*, QmlBookmarkTreeNode*> m_nodes;
+    QHash<BookmarkItem*, QmlBookmarkTreeNode*> m_nodes;
 };

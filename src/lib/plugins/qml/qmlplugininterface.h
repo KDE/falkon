@@ -28,7 +28,7 @@ class QmlPluginInterface : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_ENUMS(InitState)
+    Q_ENUM(InitState)
     Q_PROPERTY(QJSValue init READ readInit WRITE setInit)
     Q_PROPERTY(QJSValue unload READ readUnload WRITE setUnload)
     Q_PROPERTY(QJSValue testPlugin READ readTestPlugin WRITE setTestPlugin)

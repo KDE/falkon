@@ -36,7 +36,7 @@ public:
         NewWindow = Qz::BW_NewWindow,                    //! Represents new window
         OtherRestoredWindow = Qz::BW_OtherRestoredWindow //! Represents other restored window
     };
-    Q_ENUMS(WindowType)
+    Q_ENUM(WindowType)
 
     QmlWindowType(QObject *parent = nullptr);
 };

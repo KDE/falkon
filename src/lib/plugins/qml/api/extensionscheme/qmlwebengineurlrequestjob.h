@@ -49,7 +49,7 @@ public:
         RequestDenied = QWebEngineUrlRequestJob::RequestDenied,   //! Request denied
         RequestFailed = QWebEngineUrlRequestJob::RequestFailed    //! Request failed
     };
-    Q_ENUMS(Error)
+    Q_ENUM(Error)
     explicit QmlWebEngineUrlRequestJob(QWebEngineUrlRequestJob *job = nullptr, QObject *parent = nullptr);
     Q_INVOKABLE void fail(Error error);
     Q_INVOKABLE void redirect(const QString &urlString);

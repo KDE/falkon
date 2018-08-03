@@ -26,6 +26,14 @@
 class QmlWebHitTestResult : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString tagName READ tagName CONSTANT)
+    Q_PROPERTY(QString baseUrl READ baseUrl CONSTANT)
+    Q_PROPERTY(QString linkTitle READ linkTitle CONSTANT)
+    Q_PROPERTY(QString linkUrl READ linkUrl CONSTANT)
+    Q_PROPERTY(QString imageUrl READ imageUrl CONSTANT)
+    Q_PROPERTY(QString mediaUrl READ mediaUrl CONSTANT)
+    Q_PROPERTY(QPoint pos READ pos CONSTANT)
+    Q_PROPERTY(QPointF viewportPos READ viewportPos CONSTANT)
 public:
     explicit QmlWebHitTestResult(const WebHitTestResult &webHitTestResult, QObject *parent = nullptr);
     Q_INVOKABLE bool isImage() const;
@@ -36,14 +44,14 @@ public:
     Q_INVOKABLE bool isMedia() const;
     Q_INVOKABLE bool mediaPaused() const;
     Q_INVOKABLE bool mediaMuted() const;
-    Q_INVOKABLE QString tagName() const;
-    Q_INVOKABLE QString baseUrl() const;
-    Q_INVOKABLE QString linkTitle() const;
-    Q_INVOKABLE QString linkUrl() const;
-    Q_INVOKABLE QString imageUrl() const;
-    Q_INVOKABLE QString mediaUrl() const;
-    Q_INVOKABLE QPoint pos() const;
-    Q_INVOKABLE QPointF viewportPos() const;
+    QString tagName() const;
+    QString baseUrl() const;
+    QString linkTitle() const;
+    QString linkUrl() const;
+    QString imageUrl() const;
+    QString mediaUrl() const;
+    QPoint pos() const;
+    QPointF viewportPos() const;
 
 private:
     WebHitTestResult m_webHitTestResult;

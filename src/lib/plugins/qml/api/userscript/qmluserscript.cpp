@@ -93,12 +93,12 @@ void QmlUserScript::setSourceCode(const QString &sourceCode)
     emit sourceCodeChanged(sourceCode);
 }
 
-int QmlUserScript::injectionPoint() const
+QmlUserScript::InjectionPoint QmlUserScript::injectionPoint() const
 {
-    return (int)m_webEngineScript.injectionPoint();
+    return (InjectionPoint)m_webEngineScript.injectionPoint();
 }
 
-void QmlUserScript::setInjectionPoint(int injectionPoint)
+void QmlUserScript::setInjectionPoint(InjectionPoint injectionPoint)
 {
     switch (injectionPoint) {
     case QWebEngineScript::DocumentCreation:

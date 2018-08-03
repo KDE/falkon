@@ -51,7 +51,7 @@ class FALKON_EXPORT QmlUserScript : public QObject
     /**
      * @brief Injection point of the UserScript
      */
-    Q_PROPERTY(int injectionPoint READ injectionPoint WRITE setInjectionPoint NOTIFY injectionPointChanged)
+    Q_PROPERTY(InjectionPoint injectionPoint READ injectionPoint WRITE setInjectionPoint NOTIFY injectionPointChanged)
 public:
     /**
      * @brief The enum exposing QWebEngineScript::InjectionPoint
@@ -69,8 +69,8 @@ public:
         ApplicationWorld = QWebEngineScript::ApplicationWorld, //!< Represents QWebEngineScript::ApplicationWorld
         UserWorld = QWebEngineScript::UserWorld                //! < Represents QWebEngineScript::UserWorld
     };
-    Q_ENUMS(InjectionPoint)
-    Q_ENUMS(ScriptWorldId)
+    Q_ENUM(InjectionPoint)
+    Q_ENUM(ScriptWorldId)
 
     explicit QmlUserScript(QObject *parent = nullptr);
     QWebEngineScript webEngineScript() const;
@@ -108,6 +108,6 @@ private:
     void setWorldId(int worldId);
     QString sourceCode() const;
     void setSourceCode(const QString &sourceCode);
-    int injectionPoint() const;
-    void setInjectionPoint(int injectionPoint);
+    InjectionPoint injectionPoint() const;
+    void setInjectionPoint(InjectionPoint injectionPoint);
 };

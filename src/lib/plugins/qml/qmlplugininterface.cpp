@@ -30,6 +30,7 @@
 #include "api/events/qmlkeyevent.h"
 #include "api/tabs/qmltab.h"
 #include "webpage.h"
+#include "qztools.h"
 #include <QDebug>
 #include <QQuickWindow>
 #include <QDialog>
@@ -118,21 +119,16 @@ void QmlPluginInterface::showSettings(QWidget *parent)
     }
 
     QWidget *widget = QWidget::createWindowContainer(window);
-    QDialog *dialog = new QDialog(parent);
-    QVBoxLayout *boxLayout = new QVBoxLayout;
-    boxLayout->addWidget(widget);
-    boxLayout->setContentsMargins(0 ,0 ,0 ,0);
-    dialog->setLayout(boxLayout);
-    dialog->setFixedSize(window->size());
-    dialog->exec();
-    window->destroy();
+    widget->setFixedSize(window->size());
+    widget->show();
+    QzTools::centerWidgetToParent(widget, parent);
+    connect(widget, &QWidget::destroyed, window, &QQuickWindow::destroy);
 }
 
 bool QmlPluginInterface::mouseDoubleClick(Qz::ObjectName type, QObject *obj, QMouseEvent *event)
 {
     Q_UNUSED(obj)
     if (!m_mouseDoubleClick.isCallable()) {
-        qWarning() << "Unable to call" << __FUNCTION__;
         return false;
     }
     QJSValueList args;
@@ -146,7 +142,6 @@ bool QmlPluginInterface::mousePress(Qz::ObjectName type, QObject *obj, QMouseEve
 {
     Q_UNUSED(obj)
     if (!m_mousePress.isCallable()) {
-        qWarning() << "Unable to call" << __FUNCTION__;
         return false;
     }
     QJSValueList args;
@@ -160,7 +155,6 @@ bool QmlPluginInterface::mouseRelease(Qz::ObjectName type, QObject *obj, QMouseE
 {
     Q_UNUSED(obj)
     if (!m_mouseRelease.isCallable()) {
-        qWarning() << "Unable to call" << __FUNCTION__;
         return false;
     }
     QJSValueList args;
@@ -174,7 +168,6 @@ bool QmlPluginInterface::mouseMove(Qz::ObjectName type, QObject *obj, QMouseEven
 {
     Q_UNUSED(obj)
     if (!m_mouseMove.isCallable()) {
-        qWarning() << "Unable to call" << __FUNCTION__;
         return false;
     }
     QJSValueList args;
@@ -188,7 +181,6 @@ bool QmlPluginInterface::wheelEvent(Qz::ObjectName type, QObject *obj, QWheelEve
 {
     Q_UNUSED(obj)
     if (!m_wheelEvent.isCallable()) {
-        qWarning() << "Unable to call" << __FUNCTION__;
         return false;
     }
     QJSValueList args;
@@ -202,7 +194,6 @@ bool QmlPluginInterface::keyPress(Qz::ObjectName type, QObject *obj, QKeyEvent *
 {
     Q_UNUSED(obj)
     if (!m_keyPress.isCallable()) {
-        qWarning() << "Unable to call" << __FUNCTION__;
         return false;
     }
     QJSValueList args;
@@ -216,7 +207,6 @@ bool QmlPluginInterface::keyRelease(Qz::ObjectName type, QObject *obj, QKeyEvent
 {
     Q_UNUSED(obj)
     if (!m_keyRelease.isCallable()) {
-        qWarning() << "Unable to call" << __FUNCTION__;
         return false;
     }
     QJSValueList args;

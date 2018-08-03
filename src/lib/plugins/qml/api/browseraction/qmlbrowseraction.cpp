@@ -174,7 +174,6 @@ void QmlBrowserAction::removeButton(BrowserWindow *window)
 
 QmlBrowserActionButton::QmlBrowserActionButton(QObject *parent)
     : AbstractButtonInterface(parent)
-    , m_popup(nullptr)
 {
     connect(this, &AbstractButtonInterface::clicked, this, &QmlBrowserActionButton::positionPopup);
 }

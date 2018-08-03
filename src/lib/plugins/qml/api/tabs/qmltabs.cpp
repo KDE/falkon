@@ -443,8 +443,7 @@ bool QmlTabs::addTab(const QVariantMap &map)
         qDebug() << "Unable to add tab:" << "window not found";
         return false;
     }
-    LoadRequest req;
-    req.setUrl(QUrl::fromEncoded(urlString.toUtf8()));
+    LoadRequest req(QUrl::fromEncoded(urlString.toUtf8()));
     const int ret = window->tabWidget()->addView(req);
     return ret != -1 ? true : false;
 }

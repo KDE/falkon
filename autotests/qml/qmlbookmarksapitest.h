@@ -19,6 +19,8 @@
 
 #include <QObject>
 
+#include "bookmarkitem.h"
+
 class QmlBookmarksApiTest : public QObject
 {
     Q_OBJECT
@@ -35,3 +37,5 @@ private Q_SLOTS:
     void testBookmarksModification();
     void testBookmarksRemoval();
 };
+
+Q_DECLARE_METATYPE(BookmarkItem *)

@@ -213,8 +213,7 @@ bool QmlBookmarks::remove(QmlBookmarkTreeNode *treeNode) const
         qWarning() << "Unable to remove bookmark:" <<"BookmarkItem not found";
         return false;
     }
-    mApp->bookmarks()->removeBookmark(item);
-    return true;
+    return mApp->bookmarks()->removeBookmark(item);
 }
 
 /**

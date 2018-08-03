@@ -41,22 +41,22 @@ QmlFileUtils::QmlFileUtils(QString filePath, QObject *parent)
 
 QString QmlFileUtils::resolve(const QString &filePath)
 {
-    QUrl resolvedUrl = QUrl::fromLocalFile(m_path).resolved(QUrl::fromEncoded(filePath.toUtf8()));
-    QString resolvedPath = resolvedUrl.toLocalFile();
+    const QUrl resolvedUrl = QUrl::fromLocalFile(m_path).resolved(QUrl::fromEncoded(filePath.toUtf8()));
+    const QString resolvedPath = resolvedUrl.toLocalFile();
     if (resolvedPath.contains(m_path)) {
         return resolvedPath;
     }
     return QString();
 }
 
-QString QmlFileUtils::readAllFileContents(const QString &fileName)
+QByteArray QmlFileUtils::readAllFileContents(const QString &fileName)
 {
-    QString path = resolve(fileName);
-    return QzTools::readAllFileContents(path);
+    const QString path = resolve(fileName);
+    return QzTools::readAllFileByteContents(path);
 }
 
 bool QmlFileUtils::exists(const QString &filePath)
 {
-    QString path = resolve(filePath);
+    const QString path = resolve(filePath);
     return QFile(path).exists();
 }

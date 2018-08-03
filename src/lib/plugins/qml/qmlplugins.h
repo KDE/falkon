@@ -16,9 +16,12 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #pragma once
+#include "browserwindow.h"
 
-class QmlPlugins
+class FALKON_EXPORT QmlPlugins
 {
 public:
     static void registerQmlTypes();
 };
+
+Q_DECLARE_METATYPE(BrowserWindow *)
