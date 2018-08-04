@@ -460,7 +460,7 @@ BrowserWindow *QmlTabs::getWindow(int windowId) const
         return mApp->getWindow();
     }
 
-    for(BrowserWindow *window : mApp->windowIdHash().keys()) {
+    for (BrowserWindow *window : mApp->windowIdHash().keys()) {
         if (mApp->windowIdHash().value(window) == windowId) {
             return window;
         }

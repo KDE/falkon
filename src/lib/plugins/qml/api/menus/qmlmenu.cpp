@@ -64,7 +64,9 @@ QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
     }
 
     QMenu *newMenu = new QMenu();
-    for (const QString &key : map.keys()) {
+    QMapIterator<QString, QVariant> it(map);
+    while (it.hasNext()) {
+        const QString key = it.key();
         if (key == QSL("icon")) {
             QString iconPath = map.value(key).toString();
             QIcon icon;

@@ -27,7 +27,7 @@ QmlFileUtils::QmlFileUtils(QString filePath, QObject *parent)
     // Get the plugin root directory - of the form
     // some-path-in-plugin-paths/qml/plugin-directory
     const QStringList dirs = DataPaths::allPaths(DataPaths::Plugins);
-    for (QString path : dirs) {
+    for (QString path : qAsConst(dirs)) {
         path.append(QSL("/qml/"));
         if (filePath.contains(path)) {
             m_path = path;

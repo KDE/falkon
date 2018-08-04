@@ -46,7 +46,7 @@ QList<QObject*> QmlHistory::search(const QString &text)
     QList<QObject*> list;
     QList<HistoryEntry*> result = mApp->history()->searchHistoryEntry(text);
 
-    foreach(auto entry, result) {
+    for (const auto entry : qAsConst(result)) {
         auto item = historyItemData->get(entry);
         list.append(item);
     }

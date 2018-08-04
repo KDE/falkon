@@ -28,7 +28,7 @@ QmlUserScripts::QmlUserScripts(QObject *parent)
 QmlUserScripts::~QmlUserScripts()
 {
     // remove scripts added by the plugin
-    for (const QWebEngineScript &webEngineScript : m_webEngineScripts) {
+    for (const QWebEngineScript &webEngineScript : qAsConst(m_webEngineScripts)) {
         mApp->webProfile()->scripts()->remove(webEngineScript);
     }
 }
@@ -51,7 +51,7 @@ bool QmlUserScripts::empty() const
 QList<QObject *> QmlUserScripts::toQObjectList(QList<QWebEngineScript> list) const
 {
     QList<QObject *> userScriptList;
-    for (const QWebEngineScript &script : list) {
+    for (const QWebEngineScript &script : qAsConst(list)) {
         QmlUserScript *userScript = new QmlUserScript();
         userScript->setWebEngineScript(script);
         userScriptList.append(userScript);

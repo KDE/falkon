@@ -65,7 +65,7 @@ BookmarkItem *QmlBookmarks::getBookmarkItem(QmlBookmarkTreeNode *treeNode) const
         items = bookmarks->searchBookmarks(QUrl::fromEncoded(treeNode->url().toUtf8()));
     }
 
-    for (auto item : items) {
+    for (const auto item : qAsConst(items)) {
         if (isTreeNodeEqualsItem(treeNode, item)) {
             return item;
         }
@@ -242,7 +242,7 @@ QList<QObject*> QmlBookmarks::search(const QVariantMap &map) const
         items = mApp->bookmarks()->searchBookmarks(QUrl::fromEncoded(urlString.toUtf8()));
     }
     QList<QObject*> ret;
-    for (auto item : items) {
+    for (auto item : qAsConst(items)) {
         ret.append(bookmarkTreeNodeData->get(item));
     }
     return ret;
@@ -308,7 +308,7 @@ bool QmlBookmarks::update(QObject *object, const QVariantMap &changes) const
 QmlBookmarkTreeNode *QmlBookmarks::get(const QString &string) const
 {
     auto items = mApp->bookmarks()->searchBookmarks(QUrl(string));
-    for (auto item : items) {
+    for (const auto item : qAsConst(items)) {
         if (item->urlString() == string) {
             return bookmarkTreeNodeData->get(item);
         }
@@ -334,7 +334,7 @@ QList<QObject*> QmlBookmarks::getChildren(QObject *object) const
     }
 
     auto items = bookmarkItem->children();
-    for (auto item : items) {
+    for (auto item : qAsConst(items)) {
         ret.append(bookmarkTreeNodeData->get(item));
     }
 

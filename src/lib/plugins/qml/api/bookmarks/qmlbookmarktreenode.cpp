@@ -116,7 +116,7 @@ QList<QObject*> QmlBookmarkTreeNode::children() const
 {
     const auto items = m_item->children();
     QList<QObject*> ret;
-    for (const auto &item : items) {
+    for (const auto &item : qAsConst(items)) {
         ret.append(bookmarkTreeNodeData->get(item));
     }
     return ret;

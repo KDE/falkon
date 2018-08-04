@@ -32,7 +32,10 @@ void QmlAction::setProperties(const QVariantMap &map)
         return;
     }
 
-    for (const QString &key : map.keys()) {
+    QMapIterator<QString, QVariant> it(map);
+    while (it.hasNext()) {
+        it.next();
+        const QString key = it.key();
         if (key == QSL("icon")) {
             QString iconPath = map.value(key).toString();
             QIcon icon;
