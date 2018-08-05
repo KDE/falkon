@@ -32,17 +32,102 @@ class QmlBookmarks : public QObject
 public:
     explicit QmlBookmarks(QObject *parent = nullptr);
 
+    /**
+     * @brief Checks if the url is bookmarked
+     * @param String representing the url to check
+     * @return true if bookmarked, else false
+     */
     Q_INVOKABLE bool isBookmarked(const QString &url) const;
+    /**
+     * @brief Get the root bookmark item
+     * @return Root boomkark item
+     */
     Q_INVOKABLE QmlBookmarkTreeNode *rootItem() const;
+    /**
+     * @brief Get the bookmarks toolbar
+     * @return Bookmarks toolbar
+     */
     Q_INVOKABLE QmlBookmarkTreeNode *toolbarFolder() const;
+    /**
+     * @brief Get the bookmarks menu folder
+     * @return Bookmarks menu folder
+     */
     Q_INVOKABLE QmlBookmarkTreeNode *menuFolder() const;
+    /**
+     * @brief Get the unsorted bookmarks folder
+     * @return Unsorted bookmarks folder
+     */
     Q_INVOKABLE QmlBookmarkTreeNode *unsortedFolder() const;
+    /**
+     * @brief Get the last used bookmarks folder
+     * @return Last used bookmarks folder
+     */
     Q_INVOKABLE QmlBookmarkTreeNode *lastUsedFolder() const;
+    /**
+     * @brief Creates a bookmark item
+     * @param A JavaScript object containing
+     *        - parent:
+     *          Object of type [QmlBookmarkTreeNode](@ref QmlBookmarkTreeNode), representing
+     *          the parent of the new bookmark item. This is required field.
+     *        - title:
+     *          String representing the title of the new bookmark item. Defaults to empty string
+     *        - url:
+     *          String representing the url of the new bookmark item. Defaults to empty string
+     *        - description
+     *          String representing the description of the new bookmark item. Defaults to empty string
+     *        - type:
+     *          [Type](@ref QmlBookmarkTreeNode::Type) representing the type of the new bookmark item.
+     *          Defaults to [Url](@ref QmlBookmarkTreeNode::Url) if url is provided, else
+     *          [Folder](@ref QmlBookmarkTreeNode::Folder) if title is provided, else
+     *          [Invalid](@ref QmlBookmarkTreeNode::Invalid)
+     * @return true if the bookmark it created, else false
+     */
     Q_INVOKABLE bool create(const QVariantMap &map) const;
+    /**
+     * @brief Removes a bookmark item
+     * @param treeNode:
+     *        Object of type [QmlBookmarkTreeNode](@ref QmlBookmarkTreeNode) to be removed
+     * @return true if the bookmark is removed, else false
+     */
     Q_INVOKABLE bool remove(QmlBookmarkTreeNode *treeNode) const;
+    /**
+     * @brief QmlBookmarks::search
+     * @param A JavaScript object containing
+     *        - query:
+     *          String containing search query
+     *        - url:
+     *          String representing url to be search
+     * @return List containing [QmlBookmarkTreeNode](@ref QmlBookmarkTreeNode). If both
+     *         query and url are not supplied then empty list is returned.
+     */
     Q_INVOKABLE QList<QObject*> search(const QVariantMap &map) const;
+    /**
+     * @brief Updates a bookmark item
+     * @param Object of type [QmlBookmarkTreeNode](@ref QmlBookmarkTreeNode), representing the bookmark
+     *        to update
+     * @param JavaScript object containing the values to be updated
+     *        - title:
+     *          String representing the new title of the bookmark item
+     *        - description:
+     *          String representing the new description of the bookmark item
+     *        - keyword:
+     *          String representing the new keyword of the bookmark item
+     * @return true if the bookmark is updated, else false
+     */
     Q_INVOKABLE bool update(QObject *object, const QVariantMap &changes) const;
+    /**
+     * @brief Get the first matched bookmark item
+     * @param String representing the query
+     * @return Object of type [QmlBookmarkTreeNode](@ref QmlBookmarkTreeNode) if
+     *         the query is matched with a bookmark, else null
+     */
     Q_INVOKABLE QmlBookmarkTreeNode *get(const QString &string) const;
+    /**
+     * @brief Get children of the bookmark item
+     * @param Object of type [QmlBookmarkTreeNode](@ref QmlBookmarkTreeNode), representing
+     *        the parent whose children are requested.
+     * @return List containing the children, of type [QmlBookmarkTreeNode](@ref QmlBookmarkTreeNode)
+     */
     Q_INVOKABLE QList<QObject*> getChildren(QObject *object) const;
 
 Q_SIGNALS:

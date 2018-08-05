@@ -87,6 +87,7 @@ public:
 
     explicit QmlBookmarkTreeNode(BookmarkItem *item = nullptr);
 
+    BookmarkItem *item();
     Type type() const;
     QString title() const;
     QString url() const;

@@ -28,5 +28,10 @@ class QmlTopSites : public QObject
     Q_OBJECT
 public:
     explicit QmlTopSites(QObject *parent = nullptr);
+    /**
+     * @brief Get the topsites. These refer to the sites which
+     *        are displayed in the speed-dial (New tab page)
+     * @return List of MostVisitedUrl objects of type [QmlMostVisitedUrl](@ref QmlMostVisitedUrl)
+     */
     Q_INVOKABLE QList<QObject*> get() const;
 };

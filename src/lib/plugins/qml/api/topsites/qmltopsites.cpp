@@ -27,15 +27,8 @@ QmlTopSites::QmlTopSites(QObject *parent)
 {
 }
 
-/**
- * @brief Get the topsites. These refer to the sites which
- *        are displayed in the speed-dial (New tab page)
- * @return List of MostVisitedUrl objects of type [QmlMostVisitedUrl](@ref QmlMostVisitedUrl)
- */
 QList<QObject*> QmlTopSites::get() const
 {
-    // FIXME: this slows the startup of browser
-
     QList<SpeedDial::Page> pages = mApp->plugins()->speedDial()->pages();
     QList<QObject*> list;
     foreach(SpeedDial::Page page, pages) {

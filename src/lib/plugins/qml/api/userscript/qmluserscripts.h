@@ -41,12 +41,42 @@ class FALKON_EXPORT QmlUserScripts : public QObject
 public:
     explicit QmlUserScripts(QObject *parent = nullptr);
     ~QmlUserScripts();
+    /**
+     * @brief Checks if the script is in collection
+     * @param object of type QmlUserScript
+     * @return true if the the script in in collection, else false
+     */
     Q_INVOKABLE bool contains(QObject *object) const;
+    /**
+     * @brief Finds a script in collection by name
+     * @param name of the script
+     * @return object of type QmlUserScript, representing the script of given name
+     */
     Q_INVOKABLE QObject *findScript(const QString &name) const;
+    /**
+     * @brief Finds all scripts in collection by a given name
+     * @return list of objects, each of type QmlUserScript, representing the script of given name
+     */
     Q_INVOKABLE QList<QObject *> findScripts(const QString &name) const;
+    /**
+     * @brief Inserts a script into collection
+     * @param object of type QmlUserScript
+     */
     Q_INVOKABLE void insert(QObject *object);
+    /**
+     * @brief Inserts a list of scripts into collection
+     * @param list of objects, each of type QmlUserScript
+     */
     Q_INVOKABLE void insert(const QList<QObject*> &list);
+    /**
+     * @brief Removes a script from collection
+     * @param object of type QmlUserScript
+     */
     Q_INVOKABLE void remove(QObject *object) const;
+    /**
+     * @brief Gets all the scripts of the collection
+     * @return list of objects, each of type QmlUserScript
+     */
     Q_INVOKABLE QList<QObject *> toList() const;
 private:
     int count() const;

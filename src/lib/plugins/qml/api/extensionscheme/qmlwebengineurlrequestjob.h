@@ -51,8 +51,22 @@ public:
     };
     Q_ENUM(Error)
     explicit QmlWebEngineUrlRequestJob(QWebEngineUrlRequestJob *job = nullptr, QObject *parent = nullptr);
+    /**
+     * @brief Fails the request with the error
+     * @param error
+     */
     Q_INVOKABLE void fail(Error error);
+    /**
+     * @brief Redirects the request to the url
+     * @param urlString, represents the url to which the request is to be redirected
+     */
     Q_INVOKABLE void redirect(const QString &urlString);
+    /**
+     * @brief Replies to the request
+     * @param A JavaScript object containing
+     *        - content: String representing the reply data
+     *        - contentType: String representing the contentType of reply data
+     */
     Q_INVOKABLE void reply(const QVariantMap &map);
 private:
     QWebEngineUrlRequestJob *m_job;

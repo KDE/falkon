@@ -27,112 +27,70 @@ QmlWheelEvent::QmlWheelEvent(QWheelEvent *wheelEvent, QObject *parent)
 
 QPoint QmlWheelEvent::angleDelta() const
 {
-    if (!m_wheelEvent) {
-        return QPoint(-1, -1);
-    }
     return m_wheelEvent->angleDelta();
 }
 
 int QmlWheelEvent::buttons() const
 {
-    if (!m_wheelEvent) {
-        return -1;
-    }
     return (int)m_wheelEvent->buttons();
 }
 
 QPoint QmlWheelEvent::globalPos() const
 {
-    if (!m_wheelEvent) {
-        return QPoint(-1, -1);
-    }
     return m_wheelEvent->globalPos();
 }
 
 QPointF QmlWheelEvent::globalPosF() const
 {
-    if (!m_wheelEvent) {
-        return QPointF(-1, -1);
-    }
     return m_wheelEvent->globalPosF();
 }
 
 int QmlWheelEvent::globalX() const
 {
-    if (!m_wheelEvent) {
-        return -1;
-    }
     return m_wheelEvent->globalX();
 }
 
 int QmlWheelEvent::globalY() const
 {
-    if (!m_wheelEvent) {
-        return -1;
-    }
     return m_wheelEvent->globalY();
 }
 
 bool QmlWheelEvent::inverted() const
 {
-    if (!m_wheelEvent) {
-        return false;
-    }
     return m_wheelEvent->inverted();
 }
 
 int QmlWheelEvent::phase() const
 {
-    if (!m_wheelEvent) {
-        return -1;
-    }
     return (int)m_wheelEvent->phase();
 }
 
 QPoint QmlWheelEvent::pixelDelta() const
 {
-    if (!m_wheelEvent) {
-        return QPoint(-1, -1);
-    }
     return m_wheelEvent->pixelDelta();
 }
 
 QPoint QmlWheelEvent::pos() const
 {
-    if (!m_wheelEvent) {
-        return QPoint(-1, -1);
-    }
     return m_wheelEvent->pos();
 }
 
 QPointF QmlWheelEvent::posF() const
 {
-    if (!m_wheelEvent) {
-        return QPointF(-1, -1);
-    }
     return m_wheelEvent->posF();
 }
 
 int QmlWheelEvent::source() const
 {
-    if (!m_wheelEvent) {
-        return -1;
-    }
     return (int)m_wheelEvent->source();
 }
 
 int QmlWheelEvent::x() const
 {
-    if (!m_wheelEvent) {
-        return -1;
-    }
     return m_wheelEvent->x();
 }
 
 int QmlWheelEvent::y() const
 {
-    if (!m_wheelEvent) {
-        return -1;
-    }
     return m_wheelEvent->y();
 }

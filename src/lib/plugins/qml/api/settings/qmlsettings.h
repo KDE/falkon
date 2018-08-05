@@ -35,10 +35,39 @@ class QmlSettings : public QObject
 
 public:
     explicit QmlSettings(QObject *parent = nullptr);
+    ~QmlSettings();
+    /**
+     * @brief Sets the value for a given key.
+     * @param A JavaScript object containing
+     *        - key: QString representing the key
+     *        - value: QVariant representing the value for the key
+     * @return true if value is set, else false
+     */
     Q_INVOKABLE bool setValue(const QVariantMap &map);
+    /**
+     * @brief Gets the value for a given key.
+     * @param A JavaScript object containing
+     *        - key: QString representing the key
+     *        - defaultValue: QVariant representing the default value for the key
+     * @return QVariant representing value
+     */
     Q_INVOKABLE QVariant value(const QVariantMap &map);
+    /**
+     * @brief Checks if a given key exists.
+     * @param QString representing the key
+     * @return true if key exists, else false
+     */
     Q_INVOKABLE bool contains(const QString &key);
+    /**
+     * @brief Removes the given key-value from the settings.
+     * @param QString representing the key
+     * @return true if key-value pair is removed, else false
+     */
     Q_INVOKABLE bool remove(const QString &key);
+    /**
+     * @brief syncs the settings
+     * @return true if success, else false
+     */
     Q_INVOKABLE bool sync();
 
 private:

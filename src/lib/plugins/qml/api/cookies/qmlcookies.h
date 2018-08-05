@@ -28,9 +28,60 @@ class QmlCookies : public QObject
     Q_OBJECT
 public:
     explicit QmlCookies(QObject *parent = nullptr);
+    /**
+     * @brief Get a cookie
+     * @param A JavaScript object containing
+     *        - name:
+     *          String representing the name of the cookie
+     *        - url:
+     *          String representing the url of the cookie
+     * @return Cookie of type [QmlCookie](@ref QmlCookie)
+     *         if such cookie exists, else null
+     */
     Q_INVOKABLE QmlCookie *get(const QVariantMap &map);
+    /**
+     * @brief Get all cookies matching a criteria
+     * @param A JavaScript object containing
+     *        - name:
+     *          String representing the name of the cookie
+     *        - url:
+     *          String representing the url of the cookie
+     *        - path:
+     *          String representing the path of the cookie
+     *        - secure:
+     *          Bool representing if the cookie is secure
+     *        - session:
+     *          Bool representing if the cookie is a session cookie
+     * @return List containing cookies, each of type [QmlCookie](@ref QmlCookie)
+     */
     Q_INVOKABLE QList<QObject*> getAll(const QVariantMap &map);
+    /**
+     * @brief Set a cookie
+     * @param A JavaScript object containing
+     *        - name:
+     *          String representing the name of the cookie
+     *        - url:
+     *          String representing the name of the cookie
+     *        - path:
+     *          String representing the path of the cookie
+     *        - secure:
+     *          Bool representing if the cookie is secure
+     *        - expirationDate:
+     *          A JavaScript Date object, representing the expiration date of the cookie
+     *        - httpOnly:
+     *          Bool representing if the cookie is httpOnly
+     *        - value:
+     *          String representing the value of the cookie
+     */
     Q_INVOKABLE void set(const QVariantMap &map);
+    /**
+     * @brief Remove a cookie
+     * @param A JavaScript object containing
+     *        - name:
+     *          String representing the name of the cookie
+     *        - url:
+     *          String representing the url of the cookie
+     */
     Q_INVOKABLE void remove(const QVariantMap &map);
 Q_SIGNALS:
     /**

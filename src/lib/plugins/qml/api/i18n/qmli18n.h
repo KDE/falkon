@@ -18,11 +18,10 @@
 #pragma once
 
 #include <QObject>
-#include <libintl.h>
 
-// libintl.h redefines inline which causes MSVC to abort compilation with the message
-// fatal error C1189: #error :  The C++ Standard Library forbids macroizing keywords
-#undef inline
+extern "C" {
+#include <libintl.h>
+}
 
 /**
  * @brief The class exposing GNU Gettext to QML
@@ -33,7 +32,13 @@ class QmlI18n : public QObject
 public:
     explicit QmlI18n(const QString &pluginName, QObject *parent = nullptr);
     void initTranslations();
+    /**
+     * @brief wrapper for gettext function
+     */
     Q_INVOKABLE QString i18n(const QString &string);
+    /**
+     * @brief wrapper for ngettext function
+     */
     Q_INVOKABLE QString i18np(const QString &string1, const QString &string2, int count);
 private:
     QString m_pluginName;

@@ -35,29 +35,16 @@ QmlWindows::QmlWindows(QObject *parent)
     });
 }
 
-/**
- * @brief Gets a browser window
- * @param Integer representing the browser window
- * @return Object of type [QmlWindow](@ref QmlWindow)
- */
 QmlWindow *QmlWindows::get(int id) const
 {
     return windowData->get(getBrowserWindow(id));
 }
 
-/**
- * @brief Gets the current browser window
- * @return Object of type [QmlWindow](@ref QmlWindow)
- */
 QmlWindow *QmlWindows::getCurrent() const
 {
     return windowData->get(mApp->getWindow());
 }
 
-/**
- * @brief Get all the browser window
- * @return List of windows of type [QmlWindow](@ref QmlWindow)
- */
 QList<QObject*> QmlWindows::getAll() const
 {
     QList<QObject*> list;
@@ -67,15 +54,6 @@ QList<QObject*> QmlWindows::getAll() const
     return list;
 }
 
-/**
- * @brief Creates a browser window
- * @param A JavaScript object containing
- *        - url:
- *          The url of the first tab of the window
- *        - type:
- *          The window [type](@ref QmlWindowType)
- * @return
- */
 QmlWindow *QmlWindows::create(const QVariantMap &map) const
 {
     const QUrl url = QUrl::fromEncoded(map.value(QSL("url")).toString().toUtf8());
@@ -84,10 +62,6 @@ QmlWindow *QmlWindows::create(const QVariantMap &map) const
     return windowData->get(window);
 }
 
-/**
- * @brief Removes a browser window
- * @param Integer representing the window id
- */
 void QmlWindows::remove(int windowId) const
 {
     BrowserWindow *window = getBrowserWindow(windowId);

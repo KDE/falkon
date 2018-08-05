@@ -37,14 +37,13 @@ Plugins::Plugins(QObject* parent)
     : QObject(parent)
     , m_pluginsLoaded(false)
     , m_speedDial(new SpeedDial(this))
+    , m_qmlSupportLoaded(false)
 {
     loadSettings();
 
     if (!MainApplication::isTestModeEnabled()) {
         loadPythonSupport();
     }
-
-    loadQmlSupport();
 }
 
 QList<Plugins::Plugin> Plugins::getAvailablePlugins()
@@ -292,6 +291,7 @@ void Plugins::loadPythonSupport()
 void Plugins::loadQmlSupport()
 {
     QmlPlugins::registerQmlTypes();
+    m_qmlSupportLoaded = true;
 }
 
 Plugins::Plugin Plugins::loadPlugin(const QString &id)
@@ -397,6 +397,10 @@ Plugins::Plugin Plugins::loadPythonPlugin(const QString &name)
 
 Plugins::Plugin Plugins::loadQmlPlugin(const QString &name)
 {
+    if (!m_qmlSupportLoaded) {
+        loadQmlSupport();
+    }
+
     QString fullPath;
     if (QFileInfo(name).isAbsolute()) {
         fullPath = name;

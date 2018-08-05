@@ -22,69 +22,46 @@ QmlKeyEvent::QmlKeyEvent(QKeyEvent *keyEvent, QObject *parent)
     : QObject(parent)
     , m_keyEvent(keyEvent)
 {
+    delete keyEvent;
     QQmlEngine::setObjectOwnership(this, QQmlEngine::JavaScriptOwnership);
 }
 
 int QmlKeyEvent::count() const
 {
-    if (!m_keyEvent) {
-        return -1;
-    }
     return m_keyEvent->count();
 }
 
 bool QmlKeyEvent::isAutoRepeat() const
 {
-    if (!m_keyEvent) {
-        return false;
-    }
     return m_keyEvent->isAutoRepeat();
 }
 
 int QmlKeyEvent::key() const
 {
-    if (!m_keyEvent) {
-        return -1;
-    }
     return m_keyEvent->key();
 }
 
 int QmlKeyEvent::modifiers() const
 {
-    if (!m_keyEvent) {
-        return -1;
-    }
     return (int)m_keyEvent->modifiers();
 }
 
 quint32 QmlKeyEvent::nativeModifiers() const
 {
-    if (!m_keyEvent) {
-        return -1;
-    }
     return m_keyEvent->nativeModifiers();
 }
 
 quint32 QmlKeyEvent::nativeScanCode() const
 {
-    if (!m_keyEvent) {
-        return -1;
-    }
     return m_keyEvent->nativeScanCode();
 }
 
 quint32 QmlKeyEvent::nativeVirtualKey() const
 {
-    if (!m_keyEvent) {
-        return -1;
-    }
     return m_keyEvent->nativeVirtualKey();
 }
 
 QString QmlKeyEvent::text() const
 {
-    if (!m_keyEvent) {
-        return QString();
-    }
     return m_keyEvent->text();
 }

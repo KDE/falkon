@@ -24,10 +24,6 @@ QmlClipboard::QmlClipboard(QObject *parent)
 {
 }
 
-/**
- * @brief Copy the string to clipboard
- * @param String representing the text to be copied
- */
 void QmlClipboard::copy(const QString &text)
 {
     mApp->clipboard()->setText(text);

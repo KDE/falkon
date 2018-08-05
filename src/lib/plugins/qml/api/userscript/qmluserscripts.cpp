@@ -59,11 +59,6 @@ QList<QObject *> QmlUserScripts::toQObjectList(QList<QWebEngineScript> list) con
     return userScriptList;
 }
 
-/**
- * @brief Checks if the script is in collection
- * @param object of type QmlUserScript
- * @return true if the the script in in collection, else false
- */
 bool QmlUserScripts::contains(QObject *object) const
 {
     QmlUserScript *userScript = qobject_cast<QmlUserScript*>(object);
@@ -74,11 +69,6 @@ bool QmlUserScripts::contains(QObject *object) const
     return mApp->webProfile()->scripts()->contains(webEngineScript);
 }
 
-/**
- * @brief Finds a script in collection by name
- * @param name of the script
- * @return object of type QmlUserScript, representing the script of given name
- */
 QObject *QmlUserScripts::findScript(const QString &name) const
 {
     QWebEngineScript webEngineScript = mApp->webProfile()->scripts()->findScript(name);
@@ -87,20 +77,12 @@ QObject *QmlUserScripts::findScript(const QString &name) const
     return qmlUserScript;
 }
 
-/**
- * @brief Finds all scripts in collection by a given name
- * @return list of objects, each of type QmlUserScript, representing the script of given name
- */
 QList<QObject*> QmlUserScripts::findScripts(const QString &name) const
 {
     QList<QWebEngineScript> list = mApp->webProfile()->scripts()->findScripts(name);
     return toQObjectList(list);
 }
 
-/**
- * @brief Inserts a script into collection
- * @param object of type QmlUserScript
- */
 void QmlUserScripts::insert(QObject *object)
 {
     QmlUserScript *userScript = qobject_cast<QmlUserScript*>(object);
@@ -112,10 +94,6 @@ void QmlUserScripts::insert(QObject *object)
     m_webEngineScripts.append(webEngineScript);
 }
 
-/**
- * @brief Inserts a list of scripts into collection
- * @param list of objects, each of type QmlUserScript
- */
 void QmlUserScripts::insert(const QList<QObject *> &list)
 {
     for (QObject *object : list) {
@@ -129,10 +107,6 @@ void QmlUserScripts::insert(const QList<QObject *> &list)
     }
 }
 
-/**
- * @brief Removes a script from collection
- * @param object of type QmlUserScript
- */
 void QmlUserScripts::remove(QObject *object) const
 {
     QmlUserScript *userScript = qobject_cast<QmlUserScript*>(object);
@@ -143,10 +117,6 @@ void QmlUserScripts::remove(QObject *object) const
     mApp->webProfile()->scripts()->remove(webEngineScript);
 }
 
-/**
- * @brief Gets all the scripts of the collection
- * @return list of objects, each of type QmlUserScript
- */
 QList<QObject *> QmlUserScripts::toList() const
 {
     QList<QWebEngineScript> list = mApp->webProfile()->scripts()->toList();

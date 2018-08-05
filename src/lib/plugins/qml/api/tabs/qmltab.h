@@ -18,11 +18,12 @@
 #pragma once
 
 #include <QObject>
+#include <QJSValue>
+#include <QWebEnginePage>
+
 #include "webtab.h"
 #include "../windows/qmlwindow.h"
-#include <QJSValue>
 #include "qml/api/menus/qmlwebhittestresult.h"
-#include <QWebEnginePage>
 
 /**
  * @brief The class exposing a browser tab to QML
@@ -110,25 +111,91 @@ class QmlTab : public QObject
 public:
     explicit QmlTab(WebTab *webTab = nullptr, QObject *parent = nullptr);
 
+    /**
+     * @brief Detaches the tab
+     */
     Q_INVOKABLE void detach();
+    /**
+     * @brief Set the zoom level of the tab
+     * @param Integer representing the zoom level
+     */
     Q_INVOKABLE void setZoomLevel(int zoomLevel);
+    /**
+     * @brief Stops webview associated with the tab
+     */
     Q_INVOKABLE void stop();
+    /**
+     * @brief Reloads webview associated with the tab
+     */
     Q_INVOKABLE void reload();
+    /**
+     * @brief Unloads the tab
+     */
     Q_INVOKABLE void unload();
+    /**
+     * @brief Loads webview associated with the tab
+     * @param String representing the url to load
+     */
     Q_INVOKABLE void load(const QString &url);
+    /**
+     * @brief Decreases the zoom level of the tab
+     */
     Q_INVOKABLE void zoomIn();
+    /**
+     * @brief Increases the zoom level of the tab
+     */
     Q_INVOKABLE void zoomOut();
+    /**
+     * @brief Resets the tab zoom level
+     */
     Q_INVOKABLE void zoomReset();
+    /**
+     * @brief Performs edit undo on the tab
+     */
     Q_INVOKABLE void undo();
+    /**
+     * @brief Performs edit redo on the tab
+     */
     Q_INVOKABLE void redo();
+    /**
+     * @brief Performs edit select-all on the tab
+     */
     Q_INVOKABLE void selectAll();
+    /**
+     * @brief Reloads the tab by bypassing the cache
+     */
     Q_INVOKABLE void reloadBypassCache();
+    /**
+     * @brief Loads the previous page
+     */
     Q_INVOKABLE void back();
+    /**
+     * @brief Loads the next page
+     */
     Q_INVOKABLE void forward();
+    /**
+     * @brief Prints the page
+     */
     Q_INVOKABLE void printPage();
+    /**
+     * @brief Shows the page source
+     */
     Q_INVOKABLE void showSource();
+    /**
+     * @brief Sends page by mail
+     */
     Q_INVOKABLE void sendPageByMail();
+    /**
+     * @brief execute JavaScript function in a page
+     * @param value, representing JavaScript function
+     * @return QVariant, the return value of executed javascript
+     */
     Q_INVOKABLE QVariant execJavaScript(const QJSValue &value);
+    /**
+     * @brief Gets result of web hit test at a given point
+     * @param point
+     * @return result of web hit test
+     */
     Q_INVOKABLE QmlWebHitTestResult *hitTestContent(const QPoint &point);
 
     void setWebPage(WebPage *webPage);
@@ -193,6 +260,7 @@ Q_SIGNALS:
 private:
     WebTab *m_webTab;
     WebPage *m_webPage;
+    QList<QMetaObject::Connection> m_lambdaConnections;
 
     QString url() const;
     QString title() const;
@@ -211,6 +279,7 @@ private:
     bool canGoForward() const;
 
     void createConnections();
+    void removeConnections();
 };
 
 class QmlTabData

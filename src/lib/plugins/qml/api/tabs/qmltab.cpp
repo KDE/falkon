@@ -38,9 +38,6 @@ QmlTab::QmlTab(WebTab *webTab, QObject *parent)
     createConnections();
 }
 
-/**
- * @brief Detaches the tab
- */
 void QmlTab::detach()
 {
     if (!m_webTab) {
@@ -50,10 +47,6 @@ void QmlTab::detach()
     m_webTab->detach();
 }
 
-/**
- * @brief Set the zoom level of the tab
- * @param Integer representing the zoom level
- */
 void QmlTab::setZoomLevel(int zoomLevel)
 {
     if (!m_webTab) {
@@ -63,9 +56,6 @@ void QmlTab::setZoomLevel(int zoomLevel)
     m_webTab->setZoomLevel(zoomLevel);
 }
 
-/**
- * @brief Stops webview associated with the tab
- */
 void QmlTab::stop()
 {
     if (!m_webTab) {
@@ -75,9 +65,6 @@ void QmlTab::stop()
     m_webTab->stop();
 }
 
-/**
- * @brief Reloads webview associated with the tab
- */
 void QmlTab::reload()
 {
     if (!m_webTab) {
@@ -87,9 +74,6 @@ void QmlTab::reload()
     m_webTab->reload();
 }
 
-/**
- * @brief Unloads the tab
- */
 void QmlTab::unload()
 {
     if (!m_webTab) {
@@ -99,10 +83,6 @@ void QmlTab::unload()
     m_webTab->unload();
 }
 
-/**
- * @brief Loads webview associated with the tab
- * @param String representing the url to load
- */
 void QmlTab::load(const QString &url)
 {
     if (!m_webTab) {
@@ -114,9 +94,6 @@ void QmlTab::load(const QString &url)
     m_webTab->load(req);
 }
 
-/**
- * @brief Decreases the zoom level of the tab
- */
 void QmlTab::zoomIn()
 {
     if (!m_webTab) {
@@ -126,9 +103,6 @@ void QmlTab::zoomIn()
     m_webTab->webView()->zoomIn();
 }
 
-/**
- * @brief Increases the zoom level of the tab
- */
 void QmlTab::zoomOut()
 {
     if (!m_webTab) {
@@ -138,9 +112,6 @@ void QmlTab::zoomOut()
     m_webTab->webView()->zoomOut();
 }
 
-/**
- * @brief Resets the tab zoom level
- */
 void QmlTab::zoomReset()
 {
     if (!m_webTab) {
@@ -150,9 +121,6 @@ void QmlTab::zoomReset()
     m_webTab->webView()->zoomReset();
 }
 
-/**
- * @brief Performs edit undo on the tab
- */
 void QmlTab::undo()
 {
     if (!m_webTab) {
@@ -162,9 +130,6 @@ void QmlTab::undo()
     m_webTab->webView()->editUndo();
 }
 
-/**
- * @brief Performs edit redo on the tab
- */
 void QmlTab::redo()
 {
     if (!m_webTab) {
@@ -174,9 +139,6 @@ void QmlTab::redo()
     m_webTab->webView()->editRedo();
 }
 
-/**
- * @brief Performs edit select-all on the tab
- */
 void QmlTab::selectAll()
 {
     if (!m_webTab) {
@@ -186,9 +148,6 @@ void QmlTab::selectAll()
     m_webTab->webView()->editSelectAll();
 }
 
-/**
- * @brief Reloads the tab by bypassing the cache
- */
 void QmlTab::reloadBypassCache()
 {
     if (!m_webTab) {
@@ -198,9 +157,6 @@ void QmlTab::reloadBypassCache()
     m_webTab->webView()->reloadBypassCache();
 }
 
-/**
- * @brief Loads the previous page
- */
 void QmlTab::back()
 {
     if (!m_webTab) {
@@ -210,9 +166,6 @@ void QmlTab::back()
     m_webTab->webView()->back();
 }
 
-/**
- * @brief Loads the next page
- */
 void QmlTab::forward()
 {
     if (!m_webTab) {
@@ -222,9 +175,6 @@ void QmlTab::forward()
     m_webTab->webView()->forward();
 }
 
-/**
- * @brief Prints the page
- */
 void QmlTab::printPage()
 {
     if (!m_webTab) {
@@ -234,9 +184,6 @@ void QmlTab::printPage()
     m_webTab->webView()->printPage();
 }
 
-/**
- * @brief Shows the page source
- */
 void QmlTab::showSource()
 {
     if (!m_webTab) {
@@ -246,9 +193,6 @@ void QmlTab::showSource()
     m_webTab->webView()->showSource();
 }
 
-/**
- * @brief Sends page by mail
- */
 void QmlTab::sendPageByMail()
 {
     if (!m_webTab) {
@@ -258,11 +202,6 @@ void QmlTab::sendPageByMail()
     m_webTab->webView()->sendPageByMail();
 }
 
-/**
- * @brief execute JavaScript function in a page
- * @param value, representing JavaScript function
- * @return QVariant, the return value of executed javascript
- */
 QVariant QmlTab::execJavaScript(const QJSValue &value)
 {
     if (!m_webPage && !m_webTab) {
@@ -275,11 +214,6 @@ QVariant QmlTab::execJavaScript(const QJSValue &value)
     return webPage->execJavaScript(value.toString());
 }
 
-/**
- * @brief Gets result of web hit test at a given point
- * @param point
- * @return result of web hit test
- */
 QmlWebHitTestResult *QmlTab::hitTestContent(const QPoint &point)
 {
     if (!m_webPage && !m_webTab) {
@@ -431,6 +365,9 @@ bool QmlTab::canGoForward() const
 
 void QmlTab::setWebPage(WebPage *webPage)
 {
+    if (m_webPage) {
+        removeConnections();
+    }
     m_webPage = webPage;
     TabbedWebView *tabbedWebView = qobject_cast<TabbedWebView*>(m_webPage->view());
     m_webTab = tabbedWebView->webTab();
@@ -441,35 +378,58 @@ void QmlTab::setWebPage(WebPage *webPage)
 
 void QmlTab::createConnections()
 {
-    connect(m_webTab, &WebTab::titleChanged, this, [this](const QString &title){
+    Q_ASSERT(m_lambdaConnections.length() == 0);
+
+    auto titleChangedConnection = connect(m_webTab, &WebTab::titleChanged, this, [this](const QString &title){
         emit titleChanged(title);
     });
+    m_lambdaConnections.append(titleChangedConnection);
 
-    connect(m_webTab, &WebTab::pinnedChanged, this, [this](bool pinned){
+    auto pinnedChangedConnection = connect(m_webTab, &WebTab::pinnedChanged, this, [this](bool pinned){
         emit pinnedChanged(pinned);
     });
+    m_lambdaConnections.append(pinnedChangedConnection);
 
-    connect(m_webTab, &WebTab::loadingChanged, this, [this](bool loading){
+    auto loadingChangedConnection = connect(m_webTab, &WebTab::loadingChanged, this, [this](bool loading){
         emit loadingChanged(loading);
     });
+    m_lambdaConnections.append(loadingChangedConnection);
 
-    connect(m_webTab, &WebTab::mutedChanged, this, [this](bool muted){
+    auto mutedChangedConnection = connect(m_webTab, &WebTab::mutedChanged, this, [this](bool muted){
         emit mutedChanged(muted);
     });
+    m_lambdaConnections.append(mutedChangedConnection);
 
-    connect(m_webTab, &WebTab::restoredChanged, this, [this](bool restored){
+    auto restoredChangedConnection = connect(m_webTab, &WebTab::restoredChanged, this, [this](bool restored){
         emit restoredChanged(restored);
     });
+    m_lambdaConnections.append(restoredChangedConnection);
 
-    connect(m_webTab, &WebTab::playingChanged, this, [this](bool playing){
+    auto playingChangedConnection = connect(m_webTab, &WebTab::playingChanged, this, [this](bool playing){
         emit playingChanged(playing);
     });
+    m_lambdaConnections.append(playingChangedConnection);
 
     connect(m_webTab->webView(), &TabbedWebView::zoomLevelChanged, this, &QmlTab::zoomLevelChanged);
     connect(m_webTab->webView(), &TabbedWebView::backgroundActivityChanged, this, &QmlTab::backgroundActivityChanged);
 
     if (m_webPage) {
         connect(m_webPage, &WebPage::navigationRequestAccepted, this, &QmlTab::navigationRequestAccepted);
+    }
+}
+
+void QmlTab::removeConnections()
+{
+    for (auto connection : qAsConst(m_lambdaConnections)) {
+        disconnect(connection);
+    }
+    m_lambdaConnections.clear();
+
+    disconnect(m_webTab->webView(), &TabbedWebView::zoomLevelChanged, this, &QmlTab::zoomLevelChanged);
+    disconnect(m_webTab->webView(), &TabbedWebView::backgroundActivityChanged, this, &QmlTab::backgroundActivityChanged);
+
+    if (m_webPage) {
+        disconnect(m_webPage, &WebPage::navigationRequestAccepted, this, &QmlTab::navigationRequestAccepted);
     }
 }
 

@@ -26,7 +26,6 @@ QmlCookies::QmlCookies(QObject *parent)
     : QObject(parent)
 {
     connect(mApp->cookieJar(), &CookieJar::cookieAdded, this, [this](QNetworkCookie network_cookie){
-        // FIXME: improve this
         QmlCookie *cookie = cookieData->get(&network_cookie);
         QVariantMap map;
         map.insert(QSL("cookie"), QVariant::fromValue(cookie));
@@ -35,7 +34,6 @@ QmlCookies::QmlCookies(QObject *parent)
     });
 
     connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, [this](QNetworkCookie network_cookie){
-        // FIXME: improve this
         QmlCookie *cookie = cookieData->get(&network_cookie);
         QVariantMap map;
         map.insert(QSL("cookie"), QVariant::fromValue(cookie));
@@ -61,16 +59,6 @@ QNetworkCookie *QmlCookies::getNetworkCookie(const QVariantMap &map)
     return nullptr;
 }
 
-/**
- * @brief Get a cookie
- * @param A JavaScript object containing
- *        - name:
- *          String representing the name of the cookie
- *        - url:
- *          String representing the url of the cookie
- * @return Cookie of type [QmlCookie](@ref QmlCookie)
- *         if such cookie exists, else null
- */
 QmlCookie *QmlCookies::get(const QVariantMap &map)
 {
     QNetworkCookie *netCookie = getNetworkCookie(map);
@@ -80,21 +68,6 @@ QmlCookie *QmlCookies::get(const QVariantMap &map)
     return cookieData->get(netCookie);
 }
 
-/**
- * @brief Get all cookies matching a criteria
- * @param A JavaScript object containing
- *        - name:
- *          String representing the name of the cookie
- *        - url:
- *          String representing the url of the cookie
- *        - path:
- *          String representing the path of the cookie
- *        - secure:
- *          Bool representing if the cookie is secure
- *        - session:
- *          Bool representing if the cookie is a session cookie
- * @return List containing cookies, each of type [QmlCookie](@ref QmlCookie)
- */
 QList<QObject*> QmlCookies::getAll(const QVariantMap &map)
 {
     QList<QObject*> qmlCookies;
@@ -117,24 +90,6 @@ QList<QObject*> QmlCookies::getAll(const QVariantMap &map)
     return qmlCookies;
 }
 
-/**
- * @brief Set a cookie
- * @param A JavaScript object containing
- *        - name:
- *          String representing the name of the cookie
- *        - url:
- *          String representing the name of the cookie
- *        - path:
- *          String representing the path of the cookie
- *        - secure:
- *          Bool representing if the cookie is secure
- *        - expirationDate:
- *          A JavaScript Date object, representing the expiration date of the cookie
- *        - httpOnly:
- *          Bool representing if the cookie is httpOnly
- *        - value:
- *          String representing the value of the cookie
- */
 void QmlCookies::set(const QVariantMap &map)
 {
     const QString name = map.value(QSL("name")).toString();
@@ -155,14 +110,6 @@ void QmlCookies::set(const QVariantMap &map)
     mApp->webProfile()->cookieStore()->setCookie(cookie);
 }
 
-/**
- * @brief Remove a cookie
- * @param A JavaScript object containing
- *        - name:
- *          String representing the name of the cookie
- *        - url:
- *          String representing the url of the cookie
- */
 void QmlCookies::remove(const QVariantMap &map)
 {
     QNetworkCookie *netCookie = getNetworkCookie(map);

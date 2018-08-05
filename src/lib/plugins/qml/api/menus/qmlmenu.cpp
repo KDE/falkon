@@ -29,13 +29,6 @@ QmlMenu::QmlMenu(QMenu *menu, QObject *parent)
     connect(m_menu, &QMenu::triggered, this, &QmlMenu::triggered);
 }
 
-/**
- * @brief Adds action to menu
- * @param A JavaScript object containing properties for action.
- *        The icon property must be in form of url of the path
- *        and shortcut in form string.
- * @return action of type [QmlAction](@ref QmlAction)
- */
 QmlAction *QmlMenu::addAction(const QVariantMap &map)
 {
     if (!m_menu) {
@@ -51,12 +44,6 @@ QmlAction *QmlMenu::addAction(const QVariantMap &map)
     return qmlAction;
 }
 
-/**
- * @brief Adds sub-menu to menu
- * @param A JavaScript object containing properties of menu.
- *        The icon property must be in form of url of the path.
- * @return menu of type [QmlMenu](@ref QmlMenu)
- */
 QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
 {
     if (!m_menu) {
@@ -72,9 +59,6 @@ QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
             QIcon icon;
             if (QIcon::hasThemeIcon(iconPath)) {
                 icon = QIcon::fromTheme(iconPath);
-            } else if (iconPath.startsWith(QSL(":"))) {
-                // Icon is loaded from falkon resource
-                icon = QIcon(iconPath);
             } else {
                 QmlFileUtils fileUtils(m_pluginPath);
                 icon = QIcon(fileUtils.resolve(iconPath));
@@ -90,9 +74,6 @@ QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
     return newQmlMenu;
 }
 
-/**
- * @brief Adds a separator to menu
- */
 void QmlMenu::addSeparator()
 {
     if (!m_menu) {

@@ -26,13 +26,11 @@ QmlSettings::QmlSettings(QObject *parent)
     m_settingsPath = DataPaths::currentProfilePath() + QL1S("/extensions");
 }
 
-/**
- * @brief Sets the value for a given key.
- * @param A JavaScript object containing
- *        - key: QString representing the key
- *        - value: QVariant representing the value for the key
- * @return true if value is set, else false
- */
+QmlSettings::~QmlSettings()
+{
+    m_settings->deleteLater();
+}
+
 bool QmlSettings::setValue(const QVariantMap &map)
 {
     if (!m_settings) {
@@ -49,13 +47,6 @@ bool QmlSettings::setValue(const QVariantMap &map)
     return true;
 }
 
-/**
- * @brief Gets the value for a given key.
- * @param A JavaScript object containing
- *        - key: QString representing the key
- *        - defaultValue: QVariant representing the default value for the key
- * @return QVariant representing value
- */
 QVariant QmlSettings::value(const QVariantMap &map)
 {
     if (!m_settings) {
@@ -72,11 +63,6 @@ QVariant QmlSettings::value(const QVariantMap &map)
     return m_settings->value(key, defaultValue);
 }
 
-/**
- * @brief Checks if a given key exists.
- * @param QString representing the key
- * @return true if key exists, else false
- */
 bool QmlSettings::contains(const QString &key)
 {
     if (!m_settings) {
@@ -86,11 +72,6 @@ bool QmlSettings::contains(const QString &key)
     return m_settings->contains(key);
 }
 
-/**
- * @brief Removes the given key-value from the settings.
- * @param QString representing the key
- * @return true if key-value pair is removed, else false
- */
 bool QmlSettings::remove(const QString &key)
 {
     if (!m_settings) {
@@ -101,10 +82,6 @@ bool QmlSettings::remove(const QString &key)
     return true;
 }
 
-/**
- * @brief syncs the settings
- * @return true if success, else false
- */
 bool QmlSettings::sync()
 {
     if (!m_settings) {

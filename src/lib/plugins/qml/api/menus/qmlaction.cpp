@@ -41,9 +41,6 @@ void QmlAction::setProperties(const QVariantMap &map)
             QIcon icon;
             if (QIcon::hasThemeIcon(iconPath)) {
                 icon = QIcon::fromTheme(iconPath);
-            } else if (iconPath.startsWith(QSL(":"))) {
-                // Icon is loaded from falkon resource
-                icon = QIcon(iconPath);
             } else {
                 QmlFileUtils fileUtils(m_pluginPath);
                 icon = QIcon(fileUtils.resolve(iconPath));
@@ -57,10 +54,6 @@ void QmlAction::setProperties(const QVariantMap &map)
     }
 }
 
-/**
- * @brief Updates the properties of the action
- * @param A JavaScript object containing the updated properties of the action.
- */
 void  QmlAction::update(const QVariantMap &map)
 {
     setProperties(map);

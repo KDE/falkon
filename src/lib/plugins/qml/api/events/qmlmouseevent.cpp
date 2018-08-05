@@ -27,96 +27,60 @@ QmlMouseEvent::QmlMouseEvent(QMouseEvent *mouseEvent, QObject *parent)
 
 int QmlMouseEvent::button() const
 {
-    if (!m_mouseEvent) {
-        return -1;
-    }
     return (int)m_mouseEvent->button();
 }
 
 int QmlMouseEvent::buttons() const
 {
-    if (!m_mouseEvent) {
-        return -1;
-    }
     return (int)m_mouseEvent->buttons();
 }
 
 QPoint QmlMouseEvent::globalPos() const
 {
-    if (!m_mouseEvent) {
-        return QPoint(-1, -1);
-    }
     return m_mouseEvent->globalPos();
 }
 
 int QmlMouseEvent::globalX() const
 {
-    if (!m_mouseEvent) {
-        return -1;
-    }
     return m_mouseEvent->globalX();
 }
 
 int QmlMouseEvent::globalY() const
 {
-    if (!m_mouseEvent) {
-        return -1;
-    }
     return m_mouseEvent->globalY();
 }
 
 QPointF QmlMouseEvent::localPos() const
 {
-    if (!m_mouseEvent) {
-        return QPointF(-1, -1);
-    }
     return m_mouseEvent->localPos();
 }
 
 QPoint QmlMouseEvent::pos() const
 {
-    if (!m_mouseEvent) {
-        return QPoint(-1, -1);
-    }
     return m_mouseEvent->pos();
 }
 
 QPointF QmlMouseEvent::screenPos() const
 {
-    if (!m_mouseEvent) {
-        return QPointF(-1, -1);
-    }
     return m_mouseEvent->screenPos();
 }
 
 int QmlMouseEvent::source() const
 {
-    if (!m_mouseEvent) {
-        return -1;
-    }
     return (int)m_mouseEvent->source();
 }
 
 QPointF QmlMouseEvent::windowPos() const
 {
-    if (!m_mouseEvent) {
-        return QPointF(-1, -1);
-    }
     return m_mouseEvent->windowPos();
 }
 
 int QmlMouseEvent::x() const
 {
-    if (!m_mouseEvent) {
-        return -1;
-    }
     return m_mouseEvent->x();
 }
 
 int QmlMouseEvent::y() const
 {
-    if (!m_mouseEvent) {
-        return -1;
-    }
     return m_mouseEvent->y();
 }

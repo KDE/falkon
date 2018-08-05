@@ -27,6 +27,22 @@ class QmlNotifications : public QObject
     Q_OBJECT
 public:
     explicit QmlNotifications(QObject *parent = nullptr);
+    /**
+     * @brief Create and display a notification
+     * @param JavaScript object containing
+     *        - icon:
+     *          String representing the icon file url. The icon path will be
+     *          search in the following order
+     *          - Falkon resource: for the icons starting with ":", they are searched in
+     *               falkon resource file
+     *          - Files in plugin directory: All other paths will be resolved relative to
+     *               the plugin directory. If the icon path is outside the
+     *               plugin directory, then it will be resolved as empty path.
+     *        - heading:
+     *          String representing the heading of the notification
+     *        - message:
+     *          String representing the message of the notification
+     */
     Q_INVOKABLE void create(const QVariantMap &map);
     void setPluginPath(const QString &path);
 private:

@@ -28,10 +28,36 @@ class QmlWindows : public QObject
     Q_OBJECT
 public:
     QmlWindows(QObject *parent = nullptr);
+    /**
+     * @brief Gets a browser window
+     * @param Integer representing the browser window
+     * @return Object of type [QmlWindow](@ref QmlWindow)
+     */
     Q_INVOKABLE QmlWindow *get(int id) const;
+    /**
+     * @brief Gets the current browser window
+     * @return Object of type [QmlWindow](@ref QmlWindow)
+     */
     Q_INVOKABLE QmlWindow *getCurrent() const;
+    /**
+     * @brief Get all the browser window
+     * @return List of windows of type [QmlWindow](@ref QmlWindow)
+     */
     Q_INVOKABLE QList<QObject*> getAll() const;
+    /**
+     * @brief Creates a browser window
+     * @param A JavaScript object containing
+     *        - url:
+     *          The url of the first tab of the window
+     *        - type:
+     *          The window [type](@ref QmlWindowType)
+     * @return
+     */
     Q_INVOKABLE QmlWindow *create(const QVariantMap &map) const;
+    /**
+     * @brief Removes a browser window
+     * @param Integer representing the window id
+     */
     Q_INVOKABLE void remove(int windowId) const;
 Q_SIGNALS:
     /**

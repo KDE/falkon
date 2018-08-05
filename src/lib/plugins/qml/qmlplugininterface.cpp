@@ -39,6 +39,7 @@
 
 QmlPluginInterface::QmlPluginInterface()
     : m_settingsWindow(nullptr)
+    , m_qmlReusableTab(new QmlTab())
 {
 }
 
@@ -221,10 +222,9 @@ bool QmlPluginInterface::acceptNavigationRequest(WebPage *page, const QUrl &url,
     if (!m_acceptNavigationRequest.isCallable()) {
         return true;
     }
-    QmlTab *qmlTab = new QmlTab();
-    qmlTab->setWebPage(page);
+    m_qmlReusableTab->setWebPage(page);
     QJSValueList args;
-    args.append(m_engine->newQObject(qmlTab));
+    args.append(m_engine->newQObject(m_qmlReusableTab));
     args.append(QString::fromUtf8(url.toEncoded()));
     args.append(type);
     args.append(isMainFrame);

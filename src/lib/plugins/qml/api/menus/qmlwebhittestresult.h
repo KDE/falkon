@@ -26,23 +26,79 @@
 class QmlWebHitTestResult : public QObject
 {
     Q_OBJECT
+    /**
+     * @brief Gets the tagName of the element on which the context menu is requested.
+     */
     Q_PROPERTY(QString tagName READ tagName CONSTANT)
+    /**
+     * @brief Gets the base url on which the context menu is requested.
+     */
     Q_PROPERTY(QString baseUrl READ baseUrl CONSTANT)
+    /**
+     * @brief Gets the link title on which the context menu is requested.
+     */
     Q_PROPERTY(QString linkTitle READ linkTitle CONSTANT)
+    /**
+     * @brief Gets the link url on which the context menu is requested.
+     */
     Q_PROPERTY(QString linkUrl READ linkUrl CONSTANT)
+    /**
+     * @brief Gets the url of image on which the context menu is requested.
+     */
     Q_PROPERTY(QString imageUrl READ imageUrl CONSTANT)
+    /**
+     * @brief Gets the url of media on which the context menu is requested.
+     */
     Q_PROPERTY(QString mediaUrl READ mediaUrl CONSTANT)
+    /**
+     * @brief Gets the position at which the context menu is requested.
+     */
     Q_PROPERTY(QPoint pos READ pos CONSTANT)
+    /**
+     * @brief Gets the viewport position at which the context menu is requested.
+     */
     Q_PROPERTY(QPointF viewportPos READ viewportPos CONSTANT)
 public:
     explicit QmlWebHitTestResult(const WebHitTestResult &webHitTestResult, QObject *parent = nullptr);
+    /**
+     * @brief Checks if the context menu is requested on image.
+     * @return true if image, else false
+     */
     Q_INVOKABLE bool isImage() const;
+    /**
+     * @brief Checks if the context menu is requested on editable content.
+     * @return true if the content is editable, else false
+     */
     Q_INVOKABLE bool isContentEditable() const;
+    /**
+     * @brief Checks if the context menu is requested on the selected content.
+     * @return true if content is selected, else false.
+     */
     Q_INVOKABLE bool isContentSelected() const;
+    /**
+     * @brief Checks if the context menu is requested on null element.
+     * @return true if the element is null, else false
+     */
     Q_INVOKABLE bool isNull() const;
+    /**
+     * @brief Checks if the context menu is requested on a link.
+     * @return true if the element is link, else false
+     */
     Q_INVOKABLE bool isLink() const;
+    /**
+     * @brief Checks if the context menu is requested on a media element.
+     * @return true if the element is media, else false
+     */
     Q_INVOKABLE bool isMedia() const;
+    /**
+     * @brief Checks if the context menu requested on media element is paused.
+     * @return true if media is paused, else false
+     */
     Q_INVOKABLE bool mediaPaused() const;
+    /**
+     * @brief Checks if the context menu requested on media element is muted.
+     * @return true if media is muted, else false
+     */
     Q_INVOKABLE bool mediaMuted() const;
     QString tagName() const;
     QString baseUrl() const;

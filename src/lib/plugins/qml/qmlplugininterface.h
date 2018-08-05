@@ -24,6 +24,8 @@
 #include "desktopfile.h"
 #include "plugininterface.h"
 
+class QmlTab;
+
 class QmlPluginInterface : public QObject, public PluginInterface
 {
     Q_OBJECT
@@ -72,13 +74,13 @@ Q_SIGNALS:
     void qmlPluginUnloaded();
 
 private:
-    QQmlEngine *m_engine;
+    QQmlEngine *m_engine = nullptr;
     QString m_name;
     QJSValue m_init;
     QJSValue m_unload;
     QJSValue m_testPlugin;
     QJSValue m_populateWebViewMenu;
-    QQmlComponent *m_settingsWindow;
+    QQmlComponent *m_settingsWindow = nullptr;
     QJSValue m_mouseDoubleClick;
     QJSValue m_mousePress;
     QJSValue m_mouseRelease;
@@ -88,6 +90,7 @@ private:
     QJSValue m_keyRelease;
     QJSValue m_acceptNavigationRequest;
     QList<QObject*> m_childItems;
+    QmlTab *m_qmlReusableTab = nullptr;
 
     QJSValue readInit() const;
     void setInit(const QJSValue &init);

@@ -28,8 +28,24 @@ class QmlMenu : public QObject
     Q_OBJECT
 public:
     explicit QmlMenu(QMenu *menu, QObject *parent = nullptr);
+    /**
+     * @brief Adds action to menu
+     * @param A JavaScript object containing properties for action.
+     *        The icon property must be in form of url of the path
+     *        and shortcut in form string.
+     * @return action of type [QmlAction](@ref QmlAction)
+     */
     Q_INVOKABLE QmlAction *addAction(const QVariantMap &map);
+    /**
+     * @brief Adds sub-menu to menu
+     * @param A JavaScript object containing properties of menu.
+     *        The icon property must be in form of url of the path.
+     * @return menu of type [QmlMenu](@ref QmlMenu)
+     */
     Q_INVOKABLE QmlMenu *addMenu(const QVariantMap &map);
+    /**
+     * @brief Adds a separator to menu
+     */
     Q_INVOKABLE void addSeparator();
     void setPluginPath(const QString &path);
 

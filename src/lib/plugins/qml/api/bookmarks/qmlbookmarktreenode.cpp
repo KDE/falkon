@@ -28,6 +28,11 @@ QmlBookmarkTreeNode::QmlBookmarkTreeNode(BookmarkItem *item)
     QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 }
 
+BookmarkItem *QmlBookmarkTreeNode::item()
+{
+    return m_item;
+}
+
 QmlBookmarkTreeNode::Type QmlBookmarkTreeNode::type() const
 {
     if (!m_item) {

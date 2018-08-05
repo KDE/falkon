@@ -16,13 +16,15 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmltesthelper.h"
+#include "qml/qmlplugins.h"
 #include <QQmlComponent>
 #include <QDebug>
 
 QmlTestHelper::QmlTestHelper()
 {
-    qmlRegisterType<QmlTestItem>("org.kde.falkon.test", 1, 0, "TestItem");
+    QmlPlugins::registerQmlTypes();
 
+    qmlRegisterType<QmlTestItem>("org.kde.falkon.test", 1, 0, "TestItem");
     QQmlComponent component(&engine);
     component.setData("import org.kde.falkon 1.0 as Falkon\n"
                       "import org.kde.falkon.test 1.0 as FalkonTest\n"

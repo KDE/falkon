@@ -37,17 +37,11 @@ void QmlI18n::initTranslations()
     textdomain(domain.toUtf8());
 }
 
-/**
- * @brief wrapper for gettext function
- */
 QString QmlI18n::i18n(const QString &string)
 {
     return QString::fromUtf8(gettext(string.toUtf8()));
 }
 
-/**
- * @brief wrapper for ngettext function
- */
 QString QmlI18n::i18np(const QString &string1, const QString &string2, int count)
 {
     return QString::fromUtf8(ngettext(string1.toUtf8(), string2.toUtf8(), count));

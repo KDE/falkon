@@ -28,5 +28,9 @@ class QmlClipboard : public QObject
     Q_OBJECT
 public:
     explicit QmlClipboard(QObject *parent = nullptr);
+    /**
+     * @brief Copy the string to clipboard
+     * @param String representing the text to be copied
+     */
     Q_INVOKABLE void copy(const QString &text);
 };

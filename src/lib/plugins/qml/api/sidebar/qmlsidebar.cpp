@@ -135,9 +135,6 @@ QAction *QmlSideBarHelper::createMenuAction()
     action->setShortcut(QKeySequence(m_shortcut));
     if (QIcon::hasThemeIcon(m_iconUrl)) {
         action->setIcon(QIcon::fromTheme(m_iconUrl));
-    } else if (m_iconUrl.startsWith(QSL(":"))) {
-        // Icon is loaded from falkon resource
-        action->setIcon(QIcon(m_iconUrl));
     } else {
         const QString pluginPath = m_item->creationContext()->contextProperty("__path__").toString();
         QmlFileUtils fileUtils(pluginPath);

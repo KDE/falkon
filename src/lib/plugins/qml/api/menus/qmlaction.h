@@ -30,6 +30,10 @@ class QmlAction : public QObject
 public:
     explicit QmlAction(QAction *action, QObject *parent = nullptr);
     void setProperties(const QVariantMap &map);
+    /**
+     * @brief Updates the properties of the action
+     * @param A JavaScript object containing the updated properties of the action.
+     */
     Q_INVOKABLE void update(const QVariantMap &map);
     void setPluginPath(const QString &path);
 

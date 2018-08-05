@@ -147,6 +147,7 @@ private:
     QList<PluginInterface*> m_internalPlugins;
 
     QLibrary *m_pythonPlugin = nullptr;
+    bool m_qmlSupportLoaded;
 };
 
 Q_DECLARE_METATYPE(Plugins::Plugin)

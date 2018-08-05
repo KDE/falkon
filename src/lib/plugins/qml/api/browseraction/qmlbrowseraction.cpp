@@ -213,9 +213,6 @@ void QmlBrowserActionButton::setIcon(const QString &icon)
     m_iconUrl = icon;
     if (QIcon::hasThemeIcon(m_iconUrl)) {
         AbstractButtonInterface::setIcon(QIcon::fromTheme(m_iconUrl));
-    } else if (m_iconUrl.startsWith(QSL(":"))) {
-        // Icon is loaded from falkon resource
-        AbstractButtonInterface::setIcon(QIcon(m_iconUrl));
     } else {
         const QString pluginPath = m_popup->creationContext()->contextProperty("__path__").toString();
         QmlFileUtils fileUtils(pluginPath);

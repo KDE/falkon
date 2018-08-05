@@ -26,34 +26,12 @@ QmlNotifications::QmlNotifications(QObject *parent)
 {
 }
 
-/**
- * @brief Create and display a notification
- * @param JavaScript object containing
- *        - icon:
- *          String representing the icon file url. The icon path will be
- *          search in the following order
- *          - Falkon resource: for the icons starting with ":", they are searched in
- *               falkon resource file
- *          - Files in plugin directory: All other paths will be resolved relative to
- *               the plugin directory. If the icon path is outside the
- *               plugin directory, then it will be resolved as empty path.
- *        - heading:
- *          String representing the heading of the notification
- *        - message:
- *          String representing the message of the notification
- */
 void QmlNotifications::create(const QVariantMap &map)
 {
     const QString iconUrl = map.value(QSL("icon")).toString();
-    QPixmap icon;
-    if (iconUrl.startsWith(QSL(":"))) {
-        // Icon is loaded from falkon resource
-        icon = QPixmap(iconUrl);
-    } else {
-        QmlFileUtils fileUtils(m_pluginPath);
-        const QString iconPath = fileUtils.resolve(iconUrl);
-        icon = QPixmap(iconPath);
-    }
+    QmlFileUtils fileUtils(m_pluginPath);
+    const QString iconPath = fileUtils.resolve(iconUrl);
+    QPixmap icon = QPixmap(iconPath);
     const QString heading = map.value(QSL("heading")).toString();
     const QString message = map.value(QSL("message")).toString();
     mApp->desktopNotifications()->showNotification(icon, heading, message);
