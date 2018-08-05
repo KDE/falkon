@@ -416,7 +416,7 @@ Plugins::Plugin Plugins::loadQmlPlugin(const QString &name)
     plugin.type = Plugin::QmlPlugin;
     plugin.pluginId = QSL("qml:%1").arg(QFileInfo(name).fileName());
     plugin.pluginSpec = createSpec(DesktopFile(fullPath + QSL("/metadata.desktop")));
-    plugin.qmlPluginLoader = new QmlPluginLoader(QDir(fullPath).filePath(plugin.pluginSpec.entryPoint));
+    plugin.data = QVariant::fromValue(new QmlPluginLoader(QDir(fullPath).filePath(plugin.pluginSpec.entryPoint)));
     return plugin;
 }
 
@@ -502,14 +502,19 @@ void Plugins::initQmlPlugin(Plugin *plugin)
 
     const QString name = plugin->pluginSpec.name;
 
-    plugin->qmlPluginLoader->createComponent();
-    if (!plugin->qmlPluginLoader->instance()) {
-        qWarning().noquote() << "Falied to create component for" << name << "plugin:" << plugin->qmlPluginLoader->component()->errorString();
+    auto qmlPluginLoader = static_cast<QmlPluginLoader *>(plugin->data.value<void *>());
+    if (!qmlPluginLoader) {
+        qWarning() << "Failed to cast from data";
+        return;
+    }
+    qmlPluginLoader->createComponent();
+    if (!qmlPluginLoader->instance()) {
+        qWarning().noquote() << "Falied to create component for" << name << "plugin:" << qmlPluginLoader->component()->errorString();
         return;
     }
 
-    plugin->qmlPluginLoader->setName(name);
-    plugin->instance = qobject_cast<PluginInterface*>(plugin->qmlPluginLoader->instance());
+    qmlPluginLoader->setName(name);
+    plugin->instance = qobject_cast<PluginInterface*>(qmlPluginLoader->instance());
 }
 
 // static

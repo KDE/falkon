@@ -39,3 +39,5 @@ private:
 
     void initEngineAndComponent();
 };
+
+Q_DECLARE_METATYPE(QmlPluginLoader *)

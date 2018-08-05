@@ -9,7 +9,3 @@
 
 /* Disable DBus support */
 #cmakedefine DISABLE_DBUS
-
-if (LibIntl_FOUND)
-    target_compile_definitions(FalkonPrivate PRIVATE LibIntl_FOUND=1)
-endif()

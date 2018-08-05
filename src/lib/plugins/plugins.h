@@ -31,7 +31,6 @@ class QPluginLoader;
 
 class SpeedDial;
 class Extensions;
-class QmlPluginLoader;
 
 struct PluginSpec {
     QString name;
@@ -73,9 +72,6 @@ public:
         // SharedLibraryPlugin
         QString libraryPath;
         QPluginLoader *pluginLoader = nullptr;
-
-        // QmlPlugin
-        QmlPluginLoader *qmlPluginLoader = nullptr;
 
         // Other
         QVariant data;
