@@ -69,6 +69,8 @@ public:
     quint32 nativeVirtualKey() const;
     QString text() const;
 
+    void makeNull();
+
 private:
     QKeyEvent *m_keyEvent;
 };

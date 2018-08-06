@@ -132,10 +132,12 @@ bool QmlPluginInterface::mouseDoubleClick(Qz::ObjectName type, QObject *obj, QMo
     if (!m_mouseDoubleClick.isCallable()) {
         return false;
     }
+    auto qmlMouseEvent = new QmlMouseEvent(event);
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(new QmlMouseEvent(event)));
+    args.append(m_engine->newQObject(qmlMouseEvent));
     m_mouseDoubleClick.call(args);
+    qmlMouseEvent->makeNull();
     return false;
 }
 
@@ -145,10 +147,12 @@ bool QmlPluginInterface::mousePress(Qz::ObjectName type, QObject *obj, QMouseEve
     if (!m_mousePress.isCallable()) {
         return false;
     }
+    auto qmlMouseEvent = new QmlMouseEvent(event);
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(new QmlMouseEvent(event)));
+    args.append(m_engine->newQObject(qmlMouseEvent));
     m_mousePress.call(args);
+    qmlMouseEvent->makeNull();
     return false;
 }
 
@@ -158,10 +162,12 @@ bool QmlPluginInterface::mouseRelease(Qz::ObjectName type, QObject *obj, QMouseE
     if (!m_mouseRelease.isCallable()) {
         return false;
     }
+    auto qmlMouseEvent = new QmlMouseEvent(event);
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(new QmlMouseEvent(event)));
+    args.append(m_engine->newQObject(qmlMouseEvent));
     m_mouseRelease.call(args);
+    qmlMouseEvent->makeNull();
     return false;
 }
 
@@ -171,10 +177,12 @@ bool QmlPluginInterface::mouseMove(Qz::ObjectName type, QObject *obj, QMouseEven
     if (!m_mouseMove.isCallable()) {
         return false;
     }
+    auto qmlMouseEvent = new QmlMouseEvent(event);
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(new QmlMouseEvent(event)));
+    args.append(m_engine->newQObject(qmlMouseEvent));
     m_mouseMove.call(args);
+    qmlMouseEvent->makeNull();
     return false;
 }
 
@@ -184,10 +192,12 @@ bool QmlPluginInterface::wheelEvent(Qz::ObjectName type, QObject *obj, QWheelEve
     if (!m_wheelEvent.isCallable()) {
         return false;
     }
+    auto qmlWheelEvent = new QmlWheelEvent(event);
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(new QmlWheelEvent(event)));
+    args.append(m_engine->newQObject(qmlWheelEvent));
     m_wheelEvent.call(args);
+    qmlWheelEvent->makeNull();
     return false;
 }
 
@@ -197,10 +207,12 @@ bool QmlPluginInterface::keyPress(Qz::ObjectName type, QObject *obj, QKeyEvent *
     if (!m_keyPress.isCallable()) {
         return false;
     }
+    auto qmlKeyEvent = new QmlKeyEvent(event);
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(new QmlKeyEvent(event)));
+    args.append(m_engine->newQObject(qmlKeyEvent));
     m_keyPress.call(args);
+    qmlKeyEvent->makeNull();
     return false;
 }
 
@@ -210,10 +222,12 @@ bool QmlPluginInterface::keyRelease(Qz::ObjectName type, QObject *obj, QKeyEvent
     if (!m_keyRelease.isCallable()) {
         return false;
     }
+    auto qmlKeyEvent = new QmlKeyEvent(event);
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(new QmlKeyEvent(event)));
+    args.append(m_engine->newQObject(qmlKeyEvent));
     m_keyRelease.call(args);
+    qmlKeyEvent->makeNull();
     return false;
 }
 

@@ -98,6 +98,8 @@ public:
     int source() const;
     int x() const;
     int y() const;
+
+    void makeNull();
 private:
     QWheelEvent *m_wheelEvent;
 };

@@ -88,6 +88,8 @@ public:
     int x() const;
     int y() const;
 
+    void makeNull();
+
 private:
     QMouseEvent *m_mouseEvent;
 };

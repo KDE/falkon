@@ -157,6 +157,7 @@ set(SRCS ${SRCS}
     plugins/qml/qmlpluginloader.cpp
     plugins/qml/qmlplugins.cpp
     plugins/qml/qmlplugininterface.cpp
+    plugins/qml/qmlengine.cpp
     plugins/qml/api/bookmarks/qmlbookmarktreenode.cpp
     plugins/qml/api/bookmarks/qmlbookmarks.cpp
     plugins/qml/api/topsites/qmlmostvisitedurl.cpp
@@ -333,11 +334,6 @@ qt5_add_resources(SRCS
 )
 
 add_library(FalkonPrivate SHARED ${SRCS})
-
-# define macro to for LibIntl_FOUND
-if (LibIntl_FOUND)
-    target_compile_definitions(FalkonPrivate PRIVATE LibIntl_FOUND=1)
-endif()
 
 get_property(QT_WEBENGINE_INCLUDE_DIRS TARGET Qt5::WebEngine PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 target_include_directories(FalkonPrivate SYSTEM PUBLIC ${QT_WEBENGINE_INCLUDE_DIRS})

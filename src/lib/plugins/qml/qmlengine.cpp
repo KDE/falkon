@@ -15,32 +15,29 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "qmli18n.h"
-#include "qztools.h"
-#include <QStandardPaths>
+#include "qmlengine.h"
 
-QmlI18n::QmlI18n(const QString &pluginName, QObject *parent)
-    : QObject(parent)
+QmlEngine::QmlEngine(QObject *parent)
+    : QQmlEngine(parent)
 {
-    m_pluginName = pluginName;
-    setlocale(LC_MESSAGES, "");
-    initTranslations();
 }
 
-void QmlI18n::initTranslations()
+QString QmlEngine::extensionName()
 {
-    QString domain = QString("falkon_%1").arg(m_pluginName);
-    QString localeDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "locale", QStandardPaths::LocateDirectory);
-    bindtextdomain(domain.toUtf8(), localeDir.toUtf8());
-    textdomain(domain.toUtf8());
+    return m_extensionName;
 }
 
-QString QmlI18n::i18n(const QString &string)
+void QmlEngine::setExtensionName(const QString &name)
 {
-    return QString::fromUtf8(gettext(string.toUtf8()));
+    m_extensionName = name;
 }
 
-QString QmlI18n::i18np(const QString &string1, const QString &string2, int count)
+QString QmlEngine::extensionPath()
 {
-    return QString::fromUtf8(ngettext(string1.toUtf8(), string2.toUtf8(), count));
+    return m_extensionPath;
+}
+
+void QmlEngine::setExtensionPath(const QString &path)
+{
+    m_extensionPath = path;
 }

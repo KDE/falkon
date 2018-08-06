@@ -17,6 +17,7 @@
 * ============================================================ */
 #include "qmlplugins.h"
 #include "qmlplugininterface.h"
+#include "qmlengine.h"
 #include "api/bookmarks/qmlbookmarktreenode.h"
 #include "api/bookmarks/qmlbookmarks.h"
 #include "api/topsites/qmlmostvisitedurl.h"
@@ -49,7 +50,9 @@
 #include "api/extensionscheme/qmlwebengineurlrequestjob.h"
 #include "api/fileutils/qmlfileutils.h"
 
-#ifdef LibIntl_FOUND
+#include "../config.h"
+
+#ifdef HAVE_LIBINTL
 #include "qml/api/i18n/qmli18n.h"
 #endif
 
@@ -114,10 +117,14 @@ void QmlPlugins::registerQmlTypes()
 
     // Notifications
     qmlRegisterSingletonType<QmlNotifications>("org.kde.falkon", 1, 0, "Notifications", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
-        Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        QString filePath = engine->rootContext()->contextProperty("__path__").toString();
+        QmlEngine *qmlEngine = dynamic_cast<QmlEngine *>(engine);
+        if (!qmlEngine) {
+            qWarning() << "Unable to cast QQmlEngine * to QmlEngine *";
+            return nullptr;
+        }
+        QString filePath = qmlEngine->extensionPath();
 
         auto *object = new QmlNotifications();
         object->setPluginPath(filePath);
@@ -173,11 +180,17 @@ void QmlPlugins::registerQmlTypes()
     // WheelEvents
     qmlRegisterUncreatableType<QmlWheelEvent>("org.kde.falkon", 1, 0, "WheelEvent", "Unable to register type: WheelEvent");
 
-#ifdef LibIntl_FOUND
+#ifdef HAVE_LIBINTL
     // i18n
     qmlRegisterSingletonType<QmlI18n>("org.kde.falkon", 1, 0, "I18n", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(scriptEngine)
-        QString pluginName = engine->rootContext()->contextProperty("__name__").toString();
+
+        QmlEngine *qmlEngine = dynamic_cast<QmlEngine *>(engine);
+        if (!qmlEngine) {
+            qWarning() << "Unable to cast QQmlEngine * to QmlEngine *";
+            return nullptr;
+        }
+        QString pluginName = qmlEngine->extensionName();
         return new QmlI18n(pluginName);
     });
 #endif
@@ -206,10 +219,14 @@ void QmlPlugins::registerQmlTypes()
 
     // FileUtils
     qmlRegisterSingletonType<QmlFileUtils>("org.kde.falkon", 1, 0, "FileUtils", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
-        Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        QString filePath = engine->rootContext()->contextProperty("__path__").toString();
+        QmlEngine *qmlEngine = dynamic_cast<QmlEngine *>(engine);
+        if (!qmlEngine) {
+            qWarning() << "Unable to cast QQmlEngine * to QmlEngine *";
+            return nullptr;
+        }
+        QString filePath = qmlEngine->extensionPath();
 
         return new QmlFileUtils(filePath);
     });

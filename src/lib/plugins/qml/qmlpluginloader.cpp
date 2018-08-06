@@ -16,6 +16,7 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmlpluginloader.h"
+#include "qmlengine.h"
 #include <QQmlContext>
 
 QmlPluginLoader::QmlPluginLoader(const QString &path)
@@ -53,12 +54,12 @@ QmlPluginInterface *QmlPluginLoader::instance() const
 void QmlPluginLoader::setName(const QString &name)
 {
     m_interface->setName(name);
-    m_engine->rootContext()->setContextProperty("__name__", name);
+    m_engine->setExtensionName(name);
 }
 
 void QmlPluginLoader::initEngineAndComponent()
 {
-    m_engine = new QQmlEngine();
+    m_engine = new QmlEngine();
     m_component = new QQmlComponent(m_engine, m_path);
-    m_engine->rootContext()->setContextProperty("__path__", m_path);
+    m_engine->setExtensionPath(m_path);
 }

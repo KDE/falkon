@@ -9,3 +9,5 @@
 
 /* Disable DBus support */
 #cmakedefine DISABLE_DBUS
+
+#define HAVE_LIBINTL LibIntl_FOUND
