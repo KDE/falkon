@@ -38,7 +38,6 @@ struct PluginSpec {
     QString author;
     QString version;
     QPixmap icon;
-    QString entryPoint;
     bool hasSettings = false;
 
     bool operator==(const PluginSpec &other) const {
@@ -117,17 +116,14 @@ Q_SIGNALS:
 
 private:
     void loadPythonSupport();
-    void loadQmlSupport();
     Plugin loadPlugin(const QString &id);
     Plugin loadInternalPlugin(const QString &name);
     Plugin loadSharedLibraryPlugin(const QString &name);
     Plugin loadPythonPlugin(const QString &name);
-    Plugin loadQmlPlugin(const QString &name);
     bool initPlugin(PluginInterface::InitState state, Plugin *plugin);
     void initInternalPlugin(Plugin *plugin);
     void initSharedLibraryPlugin(Plugin *plugin);
     void initPythonPlugin(Plugin *plugin);
-    void initQmlPlugin(Plugin *plugin);
 
     void registerAvailablePlugin(const Plugin &plugin);
 
@@ -143,7 +139,6 @@ private:
     QList<PluginInterface*> m_internalPlugins;
 
     QLibrary *m_pythonPlugin = nullptr;
-    bool m_qmlSupportLoaded;
 };
 
 Q_DECLARE_METATYPE(Plugins::Plugin)

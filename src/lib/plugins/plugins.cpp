@@ -26,6 +26,7 @@
 #include "desktopfile.h"
 #include "qml/qmlplugins.h"
 #include "sqldatabase.h"
+#include "qml/qmlplugin.h"
 
 #include <iostream>
 #include <QPluginLoader>
@@ -37,7 +38,6 @@ Plugins::Plugins(QObject* parent)
     : QObject(parent)
     , m_pluginsLoaded(false)
     , m_speedDial(new SpeedDial(this))
-    , m_qmlSupportLoaded(false)
 {
     loadSettings();
 
@@ -136,7 +136,6 @@ PluginSpec Plugins::createSpec(const DesktopFile &metaData)
     spec.description = metaData.comment();
     spec.version = metaData.value(QSL("X-Falkon-Version")).toString();
     spec.author = QSL("%1 <%2>").arg(metaData.value(QSL("X-Falkon-Author")).toString(), metaData.value(QSL("X-Falkon-Email")).toString());
-    spec.entryPoint = metaData.value(QSL("X-Falkon-EntryPoint")).toString();
     spec.hasSettings = metaData.value(QSL("X-Falkon-Settings")).toBool();
 
     const QString iconName = metaData.icon();
@@ -235,7 +234,7 @@ void Plugins::loadAvailablePlugins()
         dir.append(QSL("/qml"));
         const auto qmlDirs = QDir(dir).entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
         for (const QFileInfo &info : qmlDirs) {
-            Plugin plugin = loadQmlPlugin(info.absoluteFilePath());
+            Plugin plugin = QmlPlugin::loadPlugin(info.absoluteFilePath());
             if (plugin.type == Plugin::Invalid) {
                 continue;
             }
@@ -288,12 +287,6 @@ void Plugins::loadPythonSupport()
     }
 }
 
-void Plugins::loadQmlSupport()
-{
-    QmlPlugins::registerQmlTypes();
-    m_qmlSupportLoaded = true;
-}
-
 Plugins::Plugin Plugins::loadPlugin(const QString &id)
 {
     QString name;
@@ -328,7 +321,7 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
         return loadPythonPlugin(name);
 
     case Plugin::QmlPlugin:
-        return loadQmlPlugin(name);
+        return QmlPlugin::loadPlugin(name);
 
     default:
         return Plugin();
@@ -395,31 +388,6 @@ Plugins::Plugin Plugins::loadPythonPlugin(const QString &name)
     return f(name);
 }
 
-Plugins::Plugin Plugins::loadQmlPlugin(const QString &name)
-{
-    if (!m_qmlSupportLoaded) {
-        loadQmlSupport();
-    }
-
-    QString fullPath;
-    if (QFileInfo(name).isAbsolute()) {
-        fullPath = name;
-    } else {
-        fullPath = DataPaths::locate(DataPaths::Plugins, QSL("qml/") + name);
-        if (fullPath.isEmpty()) {
-            qWarning() << "Plugin" << name << "not found";
-            return Plugin();
-        }
-    }
-
-    Plugin plugin;
-    plugin.type = Plugin::QmlPlugin;
-    plugin.pluginId = QSL("qml:%1").arg(QFileInfo(name).fileName());
-    plugin.pluginSpec = createSpec(DesktopFile(fullPath + QSL("/metadata.desktop")));
-    plugin.data = QVariant::fromValue(new QmlPluginLoader(QDir(fullPath).filePath(plugin.pluginSpec.entryPoint)));
-    return plugin;
-}
-
 bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
 {
     if (!plugin) {
@@ -440,7 +408,7 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
         break;
 
     case Plugin::QmlPlugin:
-        initQmlPlugin(plugin);
+        QmlPlugin::initPlugin(plugin);
         break;
 
     default:
@@ -494,27 +462,6 @@ void Plugins::initPythonPlugin(Plugin *plugin)
     }
 
     f(plugin);
-}
-
-void Plugins::initQmlPlugin(Plugin *plugin)
-{
-    Q_ASSERT(plugin->type == Plugin::QmlPlugin);
-
-    const QString name = plugin->pluginSpec.name;
-
-    auto qmlPluginLoader = static_cast<QmlPluginLoader *>(plugin->data.value<void *>());
-    if (!qmlPluginLoader) {
-        qWarning() << "Failed to cast from data";
-        return;
-    }
-    qmlPluginLoader->createComponent();
-    if (!qmlPluginLoader->instance()) {
-        qWarning().noquote() << "Falied to create component for" << name << "plugin:" << qmlPluginLoader->component()->errorString();
-        return;
-    }
-
-    qmlPluginLoader->setName(name);
-    plugin->instance = qobject_cast<PluginInterface*>(qmlPluginLoader->instance());
 }
 
 // static

@@ -128,6 +128,9 @@ if (PySide2_FOUND AND Shiboken2_FOUND AND PythonLibs_FOUND)
 endif()
 
 find_package(LibIntl)
+if (LibIntl_FOUND)
+    set(HAVE_LIBINTL TRUE)
+endif()
 
 # Git revision
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")

@@ -69,7 +69,6 @@ public:
 
     QList<HistoryEntry *> searchHistoryEntry(const QString &text);
     HistoryEntry *getHistoryEntry(const QString &text);
-    void deleteRange(double startTime, double endTime);
 
 Q_SIGNALS:
     void historyEntryAdded(const HistoryEntry &entry);
@@ -87,6 +86,5 @@ typedef History::HistoryEntry HistoryEntry;
 
 // Hint to QVector to use std::realloc on item moving
 Q_DECLARE_TYPEINFO(HistoryEntry, Q_MOVABLE_TYPE);
-Q_DECLARE_METATYPE(HistoryEntry)
 
 #endif // HISTORY_H

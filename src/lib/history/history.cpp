@@ -335,12 +335,3 @@ HistoryEntry *History::getHistoryEntry(const QString &text)
     }
     return entry;
 }
-
-void History::deleteRange(double startTime, double endTime)
-{
-    QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare(QSL("DELETE FROM history WHERE date >= ? AND date <= ?"));
-    query.bindValue(0, startTime);
-    query.bindValue(1, endTime);
-    query.exec();
-}
