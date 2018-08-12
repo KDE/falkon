@@ -67,6 +67,7 @@ public:
     QString backgroundImageUrl();
     QString backgroundImageSize();
     QString initialScript();
+    QList<Page> pages();
 
 Q_SIGNALS:
     void pagesChanged();

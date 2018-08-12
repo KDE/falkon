@@ -180,6 +180,18 @@ void History::deleteHistoryEntry(const QList<int> &list)
     db.commit();
 }
 
+void History::deleteHistoryEntry(const QString &url)
+{
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.prepare("SELECT id FROM history WHERE url=?");
+    query.bindValue(0, url);
+    query.exec();
+    if (query.next()) {
+        int id = query.value(0).toInt();
+        deleteHistoryEntry(id);
+    }
+}
+
 void History::deleteHistoryEntry(const QString &url, const QString &title)
 {
     QSqlQuery query(SqlDatabase::instance()->database());
@@ -284,4 +296,42 @@ QString History::titleCaseLocalizedMonth(int month)
         qWarning("Month number out of range!");
         return QString();
     }
+}
+
+QList<HistoryEntry*> History::searchHistoryEntry(const QString &text)
+{
+    QList<HistoryEntry*> list;
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.prepare("SELECT count, date, id, title, url FROM history WHERE title LIKE ? OR url LIKE ?");
+    query.bindValue(0, QString("%%1%").arg(text));
+    query.bindValue(1, QString("%%1%").arg(text));
+    query.exec();
+    while (query.next()) {
+        HistoryEntry *entry = new HistoryEntry;
+        entry->count = query.value(0).toInt();
+        entry->date = query.value(1).toDateTime();
+        entry->id = query.value(2).toInt();
+        entry->title = query.value(3).toString();
+        entry->url = query.value(4).toUrl();
+        list.append(entry);
+    }
+    return list;
+}
+
+HistoryEntry *History::getHistoryEntry(const QString &text)
+{
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.prepare("SELECT count, date, id, title, url FROM history WHERE url = ?");
+    query.bindValue(0, text);
+    query.exec();
+
+    HistoryEntry *entry = new HistoryEntry;
+    if (query.next()) {
+        entry->count = query.value(0).toInt();
+        entry->date = query.value(1).toDateTime();
+        entry->id = query.value(2).toInt();
+        entry->title = query.value(3).toString();
+        entry->url = query.value(4).toUrl();
+    }
+    return entry;
 }

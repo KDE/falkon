@@ -9,3 +9,5 @@
 
 /* Disable DBus support */
 #cmakedefine DISABLE_DBUS
+
+#cmakedefine HAVE_LIBINTL

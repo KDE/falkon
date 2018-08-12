@@ -21,6 +21,7 @@
 #include "updater.h"
 #include "qztools.h"
 #include "sqldatabase.h"
+#include "plugins.h"
 
 #include <QDir>
 #include <QSqlError>
@@ -301,6 +302,18 @@ void ProfileManager::connectDatabase()
             QSqlQuery query;
             if (!query.exec(stmt)) {
                 qCritical() << "Error creating database schema" << query.lastError().text();
+            }
+        }
+
+        // Insert default allowed plugins to allowed_plugins table
+        QStringList defaultAllowedPlugins = Plugins::getDefaultAllowedPlugins();
+        QSqlQuery query(SqlDatabase::instance()->database());
+        for (const QString &defaultPlugin : defaultAllowedPlugins) {
+            query.prepare("INSERT INTO allowed_plugins VALUES (?, ?)");
+            query.addBindValue(defaultPlugin);
+            query.addBindValue(1);
+            if (!query.exec()) {
+                qWarning() << "Unable to insert" << defaultPlugin << "into database";
             }
         }
     }

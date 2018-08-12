@@ -24,10 +24,15 @@
 #include "adblock/adblockplugin.h"
 #include "../config.h"
 #include "desktopfile.h"
+#include "qml/qmlplugins.h"
+#include "sqldatabase.h"
+#include "qml/qmlplugin.h"
 
 #include <iostream>
 #include <QPluginLoader>
 #include <QDir>
+#include <QQmlEngine>
+#include <QQmlComponent>
 
 Plugins::Plugins(QObject* parent)
     : QObject(parent)
@@ -82,21 +87,39 @@ void Plugins::unloadPlugin(Plugins::Plugin* plugin)
     refreshLoadedPlugins();
 }
 
-void Plugins::loadSettings()
+void Plugins::removePlugin(Plugins::Plugin *plugin)
 {
-    QStringList defaultAllowedPlugins = {
-        QSL("internal:adblock")
-    };
-
-    // Enable KDE Frameworks Integration when running inside KDE session
-    if (qgetenv("KDE_FULL_SESSION") == QByteArray("true")) {
-        defaultAllowedPlugins.append(QSL("lib:KDEFrameworksIntegration.so"));
+    if (plugin->type != Plugin::QmlPlugin) {
+        return;
+    }
+    if (plugin->isLoaded()) {
+        unloadPlugin(plugin);
     }
 
-    Settings settings;
-    settings.beginGroup("Plugin-Settings");
-    m_allowedPlugins = settings.value("AllowedPlugins", defaultAllowedPlugins).toStringList();
-    settings.endGroup();
+    // For QML plugins, pluginId is qml:<plugin-dir-name>
+    const QString dirName = plugin->pluginId.remove(0, QLatin1String("qml:").size());
+    const QString dirPath = DataPaths::locate(DataPaths::Plugins, QSL("qml/") + dirName);
+    bool result = QDir(dirPath).removeRecursively();
+    if (!result) {
+        qWarning() << "Unable to remove" << plugin->pluginSpec.name;
+        return;
+    }
+
+    m_availablePlugins.removeOne(*plugin);
+    refreshedLoadedPlugins();
+}
+
+void Plugins::loadSettings()
+{
+    QSqlQuery query(SqlDatabase::instance()->database());
+    if (mApp->isPrivate()) {
+        query.exec(QSL("SELECT * FROM allowed_plugins WHERE allowInPrivateMode=1"));
+    } else {
+        query.exec(QSL("SELECT * FROM allowed_plugins"));
+    }
+    while (query.next()) {
+        m_allowedPlugins.append(query.value(0).toString());
+    }
 }
 
 void Plugins::shutdown()
@@ -204,6 +227,24 @@ void Plugins::loadAvailablePlugins()
             }
         }
     }
+
+    // QmlPlugin
+    for (QString dir : dirs) {
+        // qml plugins will be loaded from subdirectory qml
+        dir.append(QSL("/qml"));
+        const auto qmlDirs = QDir(dir).entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
+        for (const QFileInfo &info : qmlDirs) {
+            Plugin plugin = QmlPlugin::loadPlugin(info.absoluteFilePath());
+            if (plugin.type == Plugin::Invalid) {
+                continue;
+            }
+            if (plugin.pluginSpec.name.isEmpty()) {
+                qWarning() << "Invalid plugin spec of" << info.absoluteFilePath() << "plugin";
+                continue;
+            }
+            registerAvailablePlugin(plugin);
+        }
+    }
 }
 
 void Plugins::registerAvailablePlugin(const Plugin &plugin)
@@ -222,6 +263,8 @@ void Plugins::refreshLoadedPlugins()
             m_loadedPlugins.append(plugin.instance);
         }
     }
+
+    emit refreshedLoadedPlugins();
 }
 
 void Plugins::loadPythonSupport()
@@ -258,6 +301,8 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
             type = Plugin::SharedLibraryPlugin;
         } else if (t == QL1S("python")) {
             type = Plugin::PythonPlugin;
+        } else if (t == QL1S("qml")) {
+            type = Plugin::QmlPlugin;
         }
         name = id.mid(colon + 1);
     } else {
@@ -274,6 +319,9 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
 
     case Plugin::PythonPlugin:
         return loadPythonPlugin(name);
+
+    case Plugin::QmlPlugin:
+        return QmlPlugin::loadPlugin(name);
 
     default:
         return Plugin();
@@ -359,6 +407,10 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
         initPythonPlugin(plugin);
         break;
 
+    case Plugin::QmlPlugin:
+        QmlPlugin::initPlugin(plugin);
+        break;
+
     default:
         return false;
     }
@@ -367,6 +419,8 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
         return false;
     }
 
+    // DataPaths::currentProfilePath() + QL1S("/extensions") is duplicated in qmlsettings.cpp
+    // If you change this, please change it there too.
     plugin->instance->init(state, DataPaths::currentProfilePath() + QL1S("/extensions"));
 
     if (!plugin->instance->testPlugin()) {
@@ -408,4 +462,19 @@ void Plugins::initPythonPlugin(Plugin *plugin)
     }
 
     f(plugin);
+}
+
+// static
+QStringList Plugins::getDefaultAllowedPlugins()
+{
+    QStringList defaultAllowedPlugins = {
+        QSL("internal:adblock")
+    };
+
+    // Enable KDE Frameworks Integration when running inside KDE session
+    if (qgetenv("KDE_FULL_SESSION") == QByteArray("true")) {
+        defaultAllowedPlugins.append(QSL("lib:KDEFrameworksIntegration.so"));
+    }
+
+    return defaultAllowedPlugins;
 }

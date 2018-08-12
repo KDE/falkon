@@ -376,3 +376,10 @@ QString SpeedDial::generateAllPages()
 
     return allPages;
 }
+
+QList<SpeedDial::Page> SpeedDial::pages()
+{
+    ENSURE_LOADED;
+
+    return m_pages;
+}
