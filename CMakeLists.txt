@@ -127,6 +127,8 @@ if (PySide2_FOUND AND Shiboken2_FOUND AND PythonLibs_FOUND)
     set(ENABLE_PYTHON_PLUGINS TRUE)
 endif()
 
+find_package(LibIntl)
+
 # Git revision
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
   find_package(Git QUIET)

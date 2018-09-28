@@ -154,6 +154,43 @@ set(SRCS ${SRCS}
     plugins/pluginproxy.cpp
     plugins/plugins.cpp
     plugins/speeddial.cpp
+    plugins/qml/qmlpluginloader.cpp
+    plugins/qml/qmlplugin.cpp
+    plugins/qml/qmlplugins.cpp
+    plugins/qml/qmlplugininterface.cpp
+    plugins/qml/qmlengine.cpp
+    plugins/qml/qmlstaticdata.cpp
+    plugins/qml/api/bookmarks/qmlbookmarktreenode.cpp
+    plugins/qml/api/bookmarks/qmlbookmarks.cpp
+    plugins/qml/api/topsites/qmlmostvisitedurl.cpp
+    plugins/qml/api/topsites/qmltopsites.cpp
+    plugins/qml/api/history/qmlhistoryitem.cpp
+    plugins/qml/api/history/qmlhistory.cpp
+    plugins/qml/api/cookies/qmlcookie.cpp
+    plugins/qml/api/cookies/qmlcookies.cpp
+    plugins/qml/api/tabs/qmltab.cpp
+    plugins/qml/api/tabs/qmltabs.cpp
+    plugins/qml/api/notifications/qmlnotifications.cpp
+    plugins/qml/api/clipboard/qmlclipboard.cpp
+    plugins/qml/api/windows/qmlwindow.cpp
+    plugins/qml/api/windows/qmlwindows.cpp
+    plugins/qml/api/browseraction/qmlbrowseraction.cpp
+    plugins/qml/api/sidebar/qmlsidebar.cpp
+    plugins/qml/api/menus/qmlmenu.cpp
+    plugins/qml/api/menus/qmlaction.cpp
+    plugins/qml/api/menus/qmlwebhittestresult.cpp
+    plugins/qml/api/settings/qmlsettings.cpp
+    plugins/qml/api/events/qmlqzobjects.cpp
+    plugins/qml/api/events/qmlmouseevent.cpp
+    plugins/qml/api/events/qmlwheelevent.cpp
+    plugins/qml/api/events/qmlkeyevent.cpp
+    plugins/qml/api/userscript/qmluserscript.cpp
+    plugins/qml/api/userscript/qmluserscripts.cpp
+    plugins/qml/api/userscript/qmlexternaljsobject.cpp
+    plugins/qml/api/extensionscheme/qmlextensionscheme.cpp
+    plugins/qml/api/extensionscheme/qmlwebengineurlrequestjob.cpp
+    plugins/qml/api/fileutils/qmlfileutils.cpp
+    plugins/qml/api/qmlenums.cpp
     popupwindow/popuplocationbar.cpp
     popupwindow/popupstatusbarmessage.cpp
     popupwindow/popupwebview.cpp
@@ -227,6 +264,10 @@ set(SRCS ${SRCS}
     webtab/tabbedwebview.cpp
     webtab/webtab.cpp
 )
+
+if (HAVE_LIBINTL)
+    set(SRCS ${SRCS} plugins/qml/api/i18n/qmli18n.cpp)
+endif()
 
 if (WIN32)
     set(SRCS ${SRCS} other/registerqappassociation.cpp)

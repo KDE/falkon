@@ -24,6 +24,7 @@
 
 #include "qzcommon.h"
 #include "plugininterface.h"
+#include "qml/qmlpluginloader.h"
 
 class QLibrary;
 class QPluginLoader;
@@ -55,7 +56,8 @@ public:
             Invalid = 0,
             InternalPlugin,
             SharedLibraryPlugin,
-            PythonPlugin
+            PythonPlugin,
+            QmlPlugin
         };
         Type type = Invalid;
         QString pluginId;
@@ -88,6 +90,7 @@ public:
 
     bool loadPlugin(Plugin* plugin);
     void unloadPlugin(Plugin* plugin);
+    void removePlugin(Plugin *plugin);
 
     void shutdown();
 
@@ -106,6 +109,7 @@ protected:
 
 Q_SIGNALS:
     void pluginUnloaded(PluginInterface* plugin);
+    void refreshedLoadedPlugins();
 
 private:
     void loadPythonSupport();

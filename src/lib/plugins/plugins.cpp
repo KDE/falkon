@@ -24,10 +24,14 @@
 #include "adblock/adblockplugin.h"
 #include "../config.h"
 #include "desktopfile.h"
+#include "qml/qmlplugins.h"
+#include "qml/qmlplugin.h"
 
 #include <iostream>
 #include <QPluginLoader>
 #include <QDir>
+#include <QQmlEngine>
+#include <QQmlComponent>
 
 Plugins::Plugins(QObject* parent)
     : QObject(parent)
@@ -80,6 +84,28 @@ void Plugins::unloadPlugin(Plugins::Plugin* plugin)
     m_availablePlugins.append(*plugin);
 
     refreshLoadedPlugins();
+}
+
+void Plugins::removePlugin(Plugins::Plugin *plugin)
+{
+    if (plugin->type != Plugin::QmlPlugin) {
+        return;
+    }
+    if (plugin->isLoaded()) {
+        unloadPlugin(plugin);
+    }
+
+    // For QML plugins, pluginId is qml:<plugin-dir-name>
+    const QString dirName = plugin->pluginId.mid(4);
+    const QString dirPath = DataPaths::locate(DataPaths::Plugins, QSL("qml/") + dirName);
+    bool result = QDir(dirPath).removeRecursively();
+    if (!result) {
+        qWarning() << "Unable to remove" << plugin->pluginSpec.name;
+        return;
+    }
+
+    m_availablePlugins.removeOne(*plugin);
+    refreshedLoadedPlugins();
 }
 
 void Plugins::loadSettings()
@@ -204,6 +230,24 @@ void Plugins::loadAvailablePlugins()
             }
         }
     }
+
+    // QmlPlugin
+    for (QString dir : dirs) {
+        // qml plugins will be loaded from subdirectory qml
+        dir.append(QSL("/qml"));
+        const auto qmlDirs = QDir(dir).entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
+        for (const QFileInfo &info : qmlDirs) {
+            Plugin plugin = QmlPlugin::loadPlugin(info.absoluteFilePath());
+            if (plugin.type == Plugin::Invalid) {
+                continue;
+            }
+            if (plugin.pluginSpec.name.isEmpty()) {
+                qWarning() << "Invalid plugin spec of" << info.absoluteFilePath() << "plugin";
+                continue;
+            }
+            registerAvailablePlugin(plugin);
+        }
+    }
 }
 
 void Plugins::registerAvailablePlugin(const Plugin &plugin)
@@ -222,6 +266,8 @@ void Plugins::refreshLoadedPlugins()
             m_loadedPlugins.append(plugin.instance);
         }
     }
+
+    emit refreshedLoadedPlugins();
 }
 
 void Plugins::loadPythonSupport()
@@ -258,6 +304,8 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
             type = Plugin::SharedLibraryPlugin;
         } else if (t == QL1S("python")) {
             type = Plugin::PythonPlugin;
+        } else if (t == QL1S("qml")) {
+            type = Plugin::QmlPlugin;
         }
         name = id.mid(colon + 1);
     } else {
@@ -274,6 +322,9 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
 
     case Plugin::PythonPlugin:
         return loadPythonPlugin(name);
+
+    case Plugin::QmlPlugin:
+        return QmlPlugin::loadPlugin(name);
 
     default:
         return Plugin();
@@ -359,6 +410,10 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
         initPythonPlugin(plugin);
         break;
 
+    case Plugin::QmlPlugin:
+        QmlPlugin::initPlugin(plugin);
+        break;
+
     default:
         return false;
     }
@@ -367,6 +422,8 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
         return false;
     }
 
+    // DataPaths::currentProfilePath() + QL1S("/extensions") is duplicated in qmlsettings.cpp
+    // If you change this, please change it there too.
     plugin->instance->init(state, DataPaths::currentProfilePath() + QL1S("/extensions"));
 
     if (!plugin->instance->testPlugin()) {
