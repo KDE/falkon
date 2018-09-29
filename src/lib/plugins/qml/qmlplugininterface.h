@@ -49,15 +49,15 @@ class QmlPluginInterface : public QObject, public PluginInterface
 
 public:
     explicit QmlPluginInterface();
-    ~QmlPluginInterface();
-    DesktopFile metaData() const;
-    void init(InitState state, const QString &settingsPath);
-    void unload();
-    bool testPlugin();
+    ~QmlPluginInterface() override;
+    DesktopFile metaData() const override;
+    void init(InitState state, const QString &settingsPath) override;
+    void unload() override;
+    bool testPlugin() override;
     void setEngine(QQmlEngine *engine);
     void setName(const QString &name);
     void populateWebViewMenu(QMenu *menu, WebView *webview, const WebHitTestResult &webHitTestResult) override;
-    void showSettings(QWidget *parent = nullptr);
+    void showSettings(QWidget *parent = nullptr) override;
 
     bool mouseDoubleClick(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
     bool mousePress(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;

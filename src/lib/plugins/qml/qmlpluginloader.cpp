@@ -66,7 +66,7 @@ void QmlPluginLoader::initEngineAndComponent()
     m_component = new QQmlComponent(m_engine, QDir(m_path).filePath(m_entryPoint));
     m_engine->setExtensionPath(m_path);
     m_engine->setExtensionName(m_name);
-#ifdef HAVE_LIBINTL
+#if HAVE_LIBINTL
     auto i18n = new QmlI18n(m_name);
     m_engine->globalObject().setProperty(QSL("__falkon_i18n"), m_engine->newQObject(i18n));
     m_engine->globalObject().setProperty(QSL("i18n"), m_engine->evaluate(QSL("function (s) { return __falkon_i18n.i18n(s) }")));

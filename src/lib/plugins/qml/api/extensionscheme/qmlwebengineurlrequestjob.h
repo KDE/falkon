@@ -70,7 +70,6 @@ public:
     Q_INVOKABLE void reply(const QVariantMap &map);
 private:
     QWebEngineUrlRequestJob *m_job = nullptr;
-
     QString initiator() const;
     QString requestUrl() const;
     QString requestMethod() const;

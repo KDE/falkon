@@ -59,13 +59,16 @@ void QmlWebEngineUrlRequestJob::reply(const QVariantMap &map)
     buffer->seek(0);
     m_job->reply(contentType, buffer);
 }
-
 QString QmlWebEngineUrlRequestJob::initiator() const
 {
     if (!m_job) {
         return QString();
     }
-    return QString::fromUtf8(m_job->initiator().toEncoded());
+    QString initiatorString;
+#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+    initiatorString = QString::fromUtf8(m_job->initiator().toEncoded());
+#endif
+    return initiatorString;
 }
 
 QString QmlWebEngineUrlRequestJob::requestUrl() const
