@@ -153,6 +153,7 @@ QWidget *QmlSideBarHelper::createSideBarWidget(BrowserWindow *mainWindow)
 
     QQuickWidget *widget = new QQuickWidget();
     widget->setContent(m_item->url(), m_item, m_item->create(m_item->creationContext()));
+    widget->setResizeMode(QQuickWidget::SizeRootObjectToView);
 
     return widget;
 }
