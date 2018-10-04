@@ -562,7 +562,7 @@ void MainMenu::init()
     m_menuView->addSeparator();
     ADD_ACTION("View/PageSource", m_menuView, QIcon::fromTheme(QSL("text-html")), tr("&Page Source"), SLOT(showPageSource()), "Ctrl+U");
     action->setShortcutContext(Qt::WidgetShortcut);
-    ADD_CHECKABLE_ACTION("View/FullScreen", m_menuView, QIcon(), tr("&FullScreen"), SLOT(showFullScreen()), "F11");
+    ADD_CHECKABLE_ACTION("View/FullScreen", m_menuView, QIcon::fromTheme(QSL("view-fullscreen")), tr("&FullScreen"), SLOT(showFullScreen()), "F11");
 
     // Tools menu
     m_menuTools = new QMenu(tr("&Tools"));
