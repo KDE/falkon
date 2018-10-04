@@ -568,7 +568,7 @@ void MainMenu::init()
     m_menuTools = new QMenu(tr("&Tools"));
     connect(m_menuTools, SIGNAL(aboutToShow()), this, SLOT(aboutToShowToolsMenu()));
 
-    ADD_ACTION("Tools/WebSearch", m_menuTools, QIcon(), tr("&Web Search"), SLOT(webSearch()), "Ctrl+K");
+    ADD_ACTION("Tools/WebSearch", m_menuTools, QIcon::fromTheme(QSL("edit-find")), tr("&Web Search"), SLOT(webSearch()), "Ctrl+K");
     ADD_ACTION("Tools/SiteInfo", m_menuTools, QIcon::fromTheme(QSL("dialog-information")), tr("Site &Info"), SLOT(showSiteInfo()), "Ctrl+I");
     action->setShortcutContext(Qt::WidgetShortcut);
     m_menuTools->addSeparator();
