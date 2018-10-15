@@ -1,46 +1,40 @@
 /****************************************************************************
 **
-** Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
-** All rights reserved.
-** Contact: Nokia Corporation (qt-info@nokia.com)
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
 **
-** This file is part of a Qt Solutions component.
+** This file is part of the Qt Solutions component.
 **
-** Commercial Usage
-** Licensees holding valid Qt Commercial licenses may use this file in
-** accordance with the Qt Solutions Commercial License Agreement provided
-** with the Software or, alternatively, in accordance with the terms
-** contained in a written agreement between you and Nokia.
+** $QT_BEGIN_LICENSE:BSD$
+** You may use this file under the terms of the BSD license as follows:
 **
-** GNU Lesser General Public License Usage
-** Alternatively, this file may be used under the terms of the GNU Lesser
-** General Public License version 2.1 as published by the Free Software
-** Foundation and appearing in the file LICENSE.LGPL included in the
-** packaging of this file.  Please review the following information to
-** ensure the GNU Lesser General Public License version 2.1 requirements
-** will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+** "Redistribution and use in source and binary forms, with or without
+** modification, are permitted provided that the following conditions are
+** met:
+**   * Redistributions of source code must retain the above copyright
+**     notice, this list of conditions and the following disclaimer.
+**   * Redistributions in binary form must reproduce the above copyright
+**     notice, this list of conditions and the following disclaimer in
+**     the documentation and/or other materials provided with the
+**     distribution.
+**   * Neither the name of Digia Plc and its Subsidiary(-ies) nor the names
+**     of its contributors may be used to endorse or promote products derived
+**     from this software without specific prior written permission.
 **
-** In addition, as a special exception, Nokia gives you certain
-** additional rights. These rights are described in the Nokia Qt LGPL
-** Exception version 1.1, included in the file LGPL_EXCEPTION.txt in this
-** package.
 **
-** GNU General Public License Usage
-** Alternatively, this file may be used under the terms of the GNU
-** General Public License version 3.0 as published by the Free Software
-** Foundation and appearing in the file LICENSE.GPL included in the
-** packaging of this file.  Please review the following information to
-** ensure the GNU General Public License version 3.0 requirements will be
-** met: http://www.gnu.org/copyleft/gpl.html.
+** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+** "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
 **
-** Please note Third Party Software included with Qt Solutions may impose
-** additional restrictions and it is the user's responsibility to ensure
-** that they have met the licensing requirements of the GPL, LGPL, or Qt
-** Solutions Commercial license and the relevant license of the Third
-** Party Software they are using.
-**
-** If you are unsure which license is appropriate for your use, please
-** contact Nokia at qt-info@nokia.com.
+** $QT_END_LICENSE$
 **
 ****************************************************************************/
 
@@ -68,28 +62,31 @@
     that will be compared instead.
 
     The application should create the QtSingleApplication object early
-    in the startup phase, and call isRunning() or sendMessage() to
-    find out if another instance of this application is already
-    running. Startup parameters (e.g. the name of the file the user
-    wanted this new instance to open) can be passed to the running
-    instance in the sendMessage() function.
+    in the startup phase, and call isRunning() to find out if another
+    instance of this application is already running. If isRunning()
+    returns false, it means that no other instance is running, and
+    this instance has assumed the role as the running instance. In
+    this case, the application should continue with the initialization
+    of the application user interface before entering the event loop
+    with exec(), as normal.
 
-    If isRunning() or sendMessage() returns false, it means that no
-    other instance is running, and this instance has assumed the role
-    as the running instance. The application should continue with the
-    initialization of the application user interface before entering
-    the event loop with exec(), as normal. The messageReceived()
-    signal will be emitted when the application receives messages from
-    another instance of the same application.
+    The messageReceived() signal will be emitted when the running
+    application receives messages from another instance of the same
+    application. When a message is received it might be helpful to the
+    user to raise the application so that it becomes visible. To
+    facilitate this, QtSingleApplication provides the
+    setActivationWindow() function and the activateWindow() slot.
 
-    If isRunning() or sendMessage() returns true, another instance is
-    already running, and the application should terminate or enter
-    client mode.
+    If isRunning() returns true, another instance is already
+    running. It may be alerted to the fact that another instance has
+    started by using the sendMessage() function. Also data such as
+    startup parameters (e.g. the name of the file the user wanted this
+    new instance to open) can be passed to the running instance with
+    this function. Then, the application should terminate (or enter
+    client mode).
 
-    If a message is received it might be helpful to the user to raise
-    the application so that it becomes visible. To facilitate this,
-    QtSingleApplication provides the setActivationWindow() function
-    and the activateWindow() slot.
+    If isRunning() returns true, but sendMessage() fails, that is an
+    indication that the running instance is frozen.
 
     Here's an example that shows how to convert an existing
     application to use QtSingleApplication. It is very simple and does
@@ -103,7 +100,6 @@
         QApplication app(argc, argv);
 
         MyMainWidget mmw;
-
         mmw.show();
         return app.exec();
     }
@@ -114,19 +110,17 @@
         QtSingleApplication app(argc, argv);
 
         if (app.isRunning())
-            return 0;
+            return !app.sendMessage(someDataString);
 
         MyMainWidget mmw;
-
         app.setActivationWindow(&mmw);
-
         mmw.show();
         return app.exec();
     }
     \endcode
 
-    Once this QtSingleApplication instance is destroyed(for example,
-    when the user quits), when the user next attempts to run the
+    Once this QtSingleApplication instance is destroyed (normally when
+    the process exits or crashes), when the user next attempts to run the
     application this instance will not, of course, be encountered. The
     next instance to call isRunning() or sendMessage() will assume the
     role as the new running instance.
@@ -143,7 +137,7 @@ void QtSingleApplication::sysInit(const QString &appId)
 {
     actWin = 0;
     peer = new QtLocalPeer(this, appId);
-    connect(peer, SIGNAL(messageReceived(QString)), SIGNAL(messageReceived(QString)));
+    connect(peer, SIGNAL(messageReceived(const QString&)), SIGNAL(messageReceived(const QString&)));
 }
 
 
@@ -157,11 +151,10 @@ void QtSingleApplication::sysInit(const QString &appId)
     QtSingleCoreApplication instead.
 */
 
-QtSingleApplication::QtSingleApplication(int &argc, char** argv, bool GUIenabled)
+QtSingleApplication::QtSingleApplication(int &argc, char **argv, bool GUIenabled)
     : QApplication(argc, argv, GUIenabled)
-    , peer(0)
-    , actWin(0)
 {
+    sysInit();
 }
 
 
@@ -171,13 +164,66 @@ QtSingleApplication::QtSingleApplication(int &argc, char** argv, bool GUIenabled
     QAppliation constructor.
 */
 
-QtSingleApplication::QtSingleApplication(const QString &appId, int &argc, char** argv)
+QtSingleApplication::QtSingleApplication(const QString &appId, int &argc, char **argv)
     : QApplication(argc, argv)
-    , peer(0)
-    , actWin(0)
 {
     sysInit(appId);
 }
+
+#if QT_VERSION < 0x050000
+
+/*!
+    Creates a QtSingleApplication object. The application identifier
+    will be QCoreApplication::applicationFilePath(). \a argc, \a
+    argv, and \a type are passed on to the QAppliation constructor.
+*/
+QtSingleApplication::QtSingleApplication(int &argc, char **argv, Type type)
+    : QApplication(argc, argv, type)
+{
+}
+
+
+#  if defined(Q_WS_X11)
+/*!
+  Special constructor for X11, ref. the documentation of
+  QApplication's corresponding constructor. The application identifier
+  will be QCoreApplication::applicationFilePath(). \a dpy, \a visual,
+  and \a cmap are passed on to the QApplication constructor.
+*/
+QtSingleApplication::QtSingleApplication(Display* dpy, Qt::HANDLE visual, Qt::HANDLE cmap)
+    : QApplication(dpy, visual, cmap)
+{
+    sysInit();
+}
+
+/*!
+  Special constructor for X11, ref. the documentation of
+  QApplication's corresponding constructor. The application identifier
+  will be QCoreApplication::applicationFilePath(). \a dpy, \a argc, \a
+  argv, \a visual, and \a cmap are passed on to the QApplication
+  constructor.
+*/
+QtSingleApplication::QtSingleApplication(Display *dpy, int &argc, char **argv, Qt::HANDLE visual, Qt::HANDLE cmap)
+    : QApplication(dpy, argc, argv, visual, cmap)
+{
+    sysInit();
+}
+
+/*!
+  Special constructor for X11, ref. the documentation of
+  QApplication's corresponding constructor. The application identifier
+  will be \a appId. \a dpy, \a argc, \a
+  argv, \a visual, and \a cmap are passed on to the QApplication
+  constructor.
+*/
+QtSingleApplication::QtSingleApplication(Display* dpy, const QString &appId, int argc, char **argv, Qt::HANDLE visual, Qt::HANDLE cmap)
+    : QApplication(dpy, argc, argv, visual, cmap)
+{
+    sysInit(appId);
+}
+#  endif // Q_WS_X11
+#endif // QT_VERSION < 0x050000
+
 
 /*!
     Returns true if another instance of this application is running;
@@ -192,11 +238,7 @@ QtSingleApplication::QtSingleApplication(const QString &appId, int &argc, char**
 
 bool QtSingleApplication::isRunning()
 {
-#ifdef Q_OS_HAIKU
-    return false;
-#else
-    return (peer && peer->isClient());
-#endif
+    return peer->isClient();
 }
 
 void QtSingleApplication::setAppId(const QString &id)
@@ -220,11 +262,7 @@ void QtSingleApplication::setAppId(const QString &id)
 */
 bool QtSingleApplication::sendMessage(const QString &message, int timeout)
 {
-#ifdef Q_OS_HAIKU
-    return false;
-#else
-    return (peer && peer->sendMessage(message, timeout));
-#endif
+    return peer->sendMessage(message, timeout);
 }
 
 
@@ -234,7 +272,7 @@ bool QtSingleApplication::sendMessage(const QString &message, int timeout)
 */
 QString QtSingleApplication::id() const
 {
-    return (peer ? peer->applicationId() : QString());
+    return peer->applicationId();
 }
 
 
@@ -253,16 +291,10 @@ QString QtSingleApplication::id() const
 void QtSingleApplication::setActivationWindow(QWidget* aw, bool activateOnMessage)
 {
     actWin = aw;
-    if (!peer) {
-        return;
-    }
-
-    if (activateOnMessage) {
-        connect(peer, SIGNAL(messageReceived(QString)), this, SLOT(activateWindow()));
-    }
-    else {
-        disconnect(peer, SIGNAL(messageReceived(QString)), this, SLOT(activateWindow()));
-    }
+    if (activateOnMessage)
+        connect(peer, SIGNAL(messageReceived(const QString&)), this, SLOT(activateWindow()));
+    else
+        disconnect(peer, SIGNAL(messageReceived(const QString&)), this, SLOT(activateWindow()));
 }
 
 
@@ -303,7 +335,6 @@ void QtSingleApplication::activateWindow()
         actWin->setWindowState(actWin->windowState() & ~Qt::WindowMinimized);
         actWin->raise();
         actWin->activateWindow();
-        actWin->setFocus();
     }
 }
 
