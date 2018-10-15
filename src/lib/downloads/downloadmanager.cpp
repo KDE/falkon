@@ -142,8 +142,14 @@ void DownloadManager::closeDownloadTab(const QUrl &url) const
         return tabUrl.host() == url.host();
     };
 
-    if (testWebView(mApp->getWindow()->weView(), url)) {
-        mApp->getWindow()->weView()->closeView();
+    BrowserWindow* mainWindow = mApp->getWindow();
+    // If the main window was closed, there is no need to go further
+    if (mainWindow == nullptr) {
+        return;
+    }
+
+    if (testWebView(mainWindow->weView(), url)) {
+        mainWindow->weView()->closeView();
         return;
     }
 
