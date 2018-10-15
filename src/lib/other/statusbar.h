@@ -59,6 +59,9 @@ public:
     void addButton(AbstractButtonInterface *button);
     void removeButton(AbstractButtonInterface *button);
 
+protected:
+    void mousePressEvent(QMouseEvent *event);
+
 private:
     BrowserWindow *m_window;
     TipLabel *m_statusBarText;

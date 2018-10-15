@@ -32,6 +32,7 @@
 #include <QToolTip>
 #include <QStylePainter>
 #include <QTimer>
+#include <QMouseEvent>
 
 class StatusBarButton : public ClickableLabel
 {
@@ -240,4 +241,15 @@ void StatusBar::removeButton(AbstractButtonInterface *button)
     }
 
     delete m_widgets.take(button->id()).widget;
+}
+
+void StatusBar::mousePressEvent(QMouseEvent *event)
+{
+    if (event->button() == Qt::RightButton) {
+        QMenu context;
+        context.addAction(tr("Hide"), m_window, &BrowserWindow::toggleShowStatusBar);
+        context.exec(QCursor::pos());
+    }
+
+    QStatusBar::mousePressEvent(event);
 }
