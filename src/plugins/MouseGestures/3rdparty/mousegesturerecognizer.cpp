@@ -286,7 +286,7 @@ PosList MouseGestureRecognizer::limitDirections(const PosList &positions, bool a
 }
 
 /*
- *  simplify - joins together contignous movements in the same direction.
+ *  simplify - joins together continuous movements in the same direction.
  *
  *  Notice! This function expects a list of limited directions.
  */

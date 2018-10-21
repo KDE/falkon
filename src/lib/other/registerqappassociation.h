@@ -67,7 +67,7 @@ private:
     QString _appDesc;
     QString _UserRootKey;
 
-    QHash<QString, QString> _fileAssocHash; // (extention, progId)
+    QHash<QString, QString> _fileAssocHash; // (extension, progId)
     QHash<QString, QString> _urlAssocHash; // (protocol, progId)
     QHash<QString, QPair<QString, QString> > _assocDescHash; // (progId, (desc, icon))
 };

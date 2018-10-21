@@ -278,7 +278,7 @@ void AdBlockManager::load()
     }
 
     QDir adblockDir(DataPaths::currentProfilePath() + QSL("/adblock"));
-    // Create if neccessary
+    // Create if necessary
     if (!adblockDir.exists()) {
         QDir(DataPaths::currentProfilePath()).mkdir(QSL("adblock"));
     }

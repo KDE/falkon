@@ -107,7 +107,7 @@ bool NetworkManager::certificateError(const QWebEngineCertificateError &error, Q
 void NetworkManager::authentication(const QUrl &url, QAuthenticator *auth, QWidget *parent)
 {
     QDialog* dialog = new QDialog(parent);
-    dialog->setWindowTitle(tr("Authorisation required"));
+    dialog->setWindowTitle(tr("Authorization required"));
 
     QFormLayout* formLa = new QFormLayout(dialog);
 
@@ -193,7 +193,7 @@ void NetworkManager::proxyAuthentication(const QString &proxyHost, QAuthenticato
     }
 
     QDialog* dialog = new QDialog(parent);
-    dialog->setWindowTitle(tr("Proxy authorisation required"));
+    dialog->setWindowTitle(tr("Proxy authorization required"));
 
     QFormLayout* formLa = new QFormLayout(dialog);
 

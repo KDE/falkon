@@ -99,7 +99,7 @@ private:
     bool m_autoMode;
     bool m_deleteOnClose;
     bool m_enableNotification;
-    QStringList m_blaklist;
+    QStringList m_blacklist;
     QStringList m_whitelist;
     QStringList m_newCookiesList;
 };

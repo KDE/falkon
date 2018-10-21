@@ -1,5 +1,5 @@
 /*
- *   Bespin library for Qt style, KWin decoration and everythng else
+ *   Bespin library for Qt style, KWin decoration and everything else
  *   Copyright 2007-2012 by Thomas Lübking <thomas.luebking@gmail.com>
  *
  *   This library is free software; you can redistribute it and/or modify

@@ -46,7 +46,7 @@ public:
      */
     Q_INVOKABLE bool nextTab(int windowId = -1);
     /**
-     * @brief Sets the prvious tab as current tab
+     * @brief Sets the previous tab as current tab
      * @param Integer representing the window
      * @return True if success, else false
      */
@@ -127,7 +127,7 @@ public:
      * @brief Stops a tab
      * @param A JavaScript object containing
      *        - index:
-     *          Integer representing the tab to be stoped
+     *          Integer representing the tab to be stopped
      *        - windowId:
      *          The id of window containing the tab
      * @return True if success, else false
@@ -135,9 +135,9 @@ public:
     Q_INVOKABLE bool stopTab(const QVariantMap &map);
     /**
      * @brief Gets a tab
-     * @param A JavaScript object contining
+     * @param A JavaScript object containing
      *        - index:
-     *          Integer representign the index of the tab
+     *          Integer representing the index of the tab
      *        - windowId:
      *          The id of window containing the tab
      * @return Tab of type [QmlTab](@ref QmlTab) if exists, else null

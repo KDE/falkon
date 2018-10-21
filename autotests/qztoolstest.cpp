@@ -298,7 +298,7 @@ void QzToolsTest::copyRecursivelyTest()
 
     QVERIFY(!QFileInfo(testDir + "-copy").exists());
 
-    // Copy to non-existant target
+    // Copy to non-existent target
     QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy"), true);
 
     QCOMPARE(QFileInfo(testDir + "-copy").isDir(), true);
@@ -333,7 +333,7 @@ void QzToolsTest::removeRecursivelyTest()
     QCOMPARE(QzTools::removeRecursively(testDir + "-copy"), true);
     QCOMPARE(QFileInfo(testDir + "-copy").exists(), false);
 
-    // Remove non-existant path returns success
+    // Remove non-existent path returns success
     QCOMPARE(QzTools::removeRecursively(testDir + "-copy"), true);
 
     QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy2"), true);

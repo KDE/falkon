@@ -80,7 +80,7 @@ public:
         Root = BookmarkItem::Root,           //!< Represents the root bookmark item
         Url = BookmarkItem::Url,             //!< Represents the single bookmark item of type url
         Folder = BookmarkItem::Folder,       //!< Represents the bookmark folder
-        Separator = BookmarkItem::Separator, //!< Represents the bookmark seperator
+        Separator = BookmarkItem::Separator, //!< Represents the bookmark separator
         Invalid = BookmarkItem::Invalid      //!< Represents invalid bookmark item
     };
     Q_ENUM(Type)

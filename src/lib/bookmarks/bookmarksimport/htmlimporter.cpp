@@ -77,7 +77,7 @@ BookmarkItem* HtmlImporter::importBookmarks()
     m_file.close();
 
     // Converting tags to lower case -,-
-    // For some reason Qt::CaseInsensitive is not everytime insensitive :-D
+    // For some reason Qt::CaseInsensitive is not every time insensitive :-D
 
     bookmarks.replace(QLatin1String("<DL"), QLatin1String("<dl"));
     bookmarks.replace(QLatin1String("</DL"), QLatin1String("</dl"));

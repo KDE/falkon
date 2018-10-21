@@ -68,7 +68,7 @@
     are the classes provided for reading and writing OpenSearch descriptions.
 
     Default constructed engines need to be filled with the necessary information before
-    they can be used to peform search requests. First of all, a search engine should have
+    they can be used to perform search requests. First of all, a search engine should have
     the metadata including the name and the description.
     However, the most important are URL templates, which are the construction of URLs
     but can also contain template parameters, that are replaced with corresponding values
@@ -84,7 +84,7 @@
     Both types of URLs are constructed by the class, by searchUrl() and suggestionsUrl()
     functions respectively. However, search requests are supposed to be performed outside
     the class, while suggestion queries can be executed using the requestSuggestions()
-    method. The class will take care of peforming the network request and parsing the
+    method. The class will take care of performing the network request and parsing the
     JSON response.
 
     Both the image request and suggestion queries need network access. The class can

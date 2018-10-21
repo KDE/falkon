@@ -34,7 +34,7 @@ QmlExternalJsObject::~QmlExternalJsObject()
 void QmlExternalJsObject::registerExtraObject(const QVariantMap &map)
 {
     if (!map.contains(QSL("id")) || !map.contains(QSL("object"))) {
-        qWarning() << "Unable to call" << __FUNCTION__ << ": unsufficient parameters";
+        qWarning() << "Unable to call" << __FUNCTION__ << ": insufficient parameters";
         return;
     }
 

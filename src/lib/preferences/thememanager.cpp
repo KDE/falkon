@@ -96,7 +96,7 @@ void ThemeManager::currentChanged()
 
     ui->name->setText(currentTheme.name);
     ui->author->setText(currentTheme.author);
-    ui->descirption->setText(currentTheme.description);
+    ui->description->setText(currentTheme.description);
     ui->license->setHidden(currentTheme.license.isEmpty());
 }
 

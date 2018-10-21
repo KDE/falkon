@@ -58,7 +58,7 @@ class QmlWindow : public QObject
     Q_PROPERTY(QList<QObject*> tabs READ tabs CONSTANT)
 
     /**
-     * @brief checks if the window is focussed
+     * @brief checks if the window is focused
      */
     Q_PROPERTY(bool focussed READ focussed CONSTANT)
 

@@ -1522,8 +1522,8 @@ bool TabScrollBar::isScrolling() const
 void TabScrollBar::animateToValue(int to, QEasingCurve::Type type)
 {
     to = qBound(minimum(), to, maximum());
-    int lenght = qAbs(to - value());
-    int duration = qMin(1500, 200 + lenght / 2);
+    int length = qAbs(to - value());
+    int duration = qMin(1500, 200 + length / 2);
 
     m_animation->stop();
     m_animation->setEasingCurve(type);

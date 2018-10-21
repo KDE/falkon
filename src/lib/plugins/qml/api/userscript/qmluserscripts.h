@@ -44,7 +44,7 @@ public:
     /**
      * @brief Checks if the script is in collection
      * @param object of type QmlUserScript
-     * @return true if the the script in in collection, else false
+     * @return true if the script is in collection, else false
      */
     Q_INVOKABLE bool contains(QObject *object) const;
     /**

@@ -141,7 +141,7 @@ void DatabaseEncryptedPasswordBackend::setActive(bool active)
     if (active) {
         setAskMasterPasswordState(isMasterPasswordSetted());
         if (!isMasterPasswordSetted()) {
-            // master-password is not setted this backend needs master-password
+            // master-password is not set this backend needs master-password
             showMasterPasswordDialog();
         }
     }
@@ -575,7 +575,7 @@ void MasterPasswordDialog::reject()
     QDialog::reject();
 
     if (m_backend->isActive() && !m_backend->isMasterPasswordSetted()) {
-        // master password not setted
+        // master password not set
         QMessageBox::information(this, AutoFill::tr("Warning!"),
                                  AutoFill::tr("This backend needs a master password to be set! "
                                               "Falkon just switches to its default backend"));

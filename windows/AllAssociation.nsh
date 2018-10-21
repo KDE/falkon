@@ -10,7 +10,7 @@ _____________________________________________________________________________
  ; Date: 2012-Nov-18, S. Razi Alavizadeh, v0.1                            ;
  ; Some Codes are based on code taken from:                               ;
  ; http://nsis.sourceforge.net/File_Association                           ;
- ; Ability to register protocol and extention associations.               ;
+ ; Ability to register protocol and extension associations.               ;
  ; It supports old association method and new method by using             ;
  ; IApplicationAssociationRegistration APIs.                              ;
  ; that needed 'AppAssocReg' plugins, downloadable from:                  ;
@@ -35,7 +35,7 @@ _____________________________________________________________________________
 
  ${RegisterAssociation} "[assoc_name]" "[executable]" "[prog_id]" "[description]" "[icon]" "[type]"
 
-"[assoc_name]"     ; assoc_name, which is file format's extention if type is "file" and is protocol's name if type is "protocol".
+"[assoc_name]"     ; assoc_name, which is file format's extension if type is "file" and is protocol's name if type is "protocol".
                    ;
 "[executable]"     ; executable which opens the file format or is protocol handler.
                    ;
@@ -45,18 +45,18 @@ _____________________________________________________________________________
                    ;
 "[icon]"           ; icon path for this association.
                    ;
-"[type]"           ; type of association. "file" for extention and "protocol" for protocol handler.
+"[type]"           ; type of association. "file" for extension and "protocol" for protocol handler.
                    ;
 
  ${UnRegisterAssociation} "[assoc_name]" "[prog_id]" "[executable]" "[type]"
 
-"[assoc_name]"     ; assoc_name, which is file format's extention if type is "file" and is protocol's name if type is "protocol".
+"[assoc_name]"     ; assoc_name, which is file format's extension if type is "file" and is protocol's name if type is "protocol".
                    ;
 "[prog_id]"        ; registery internal id for assoc_name
                    ;
 "[executable]"     ; executable which opens the file format or is protocol handler.
                    ;
-"[type]"           ; type of association. "file" for extention and "protocol" for protocol handler.
+"[type]"           ; type of association. "file" for extension and "protocol" for protocol handler.
                    ;
 
  ${CreateProgId} "[prog_id]" "[executable]" "[description]" "[icon]"
@@ -75,9 +75,9 @@ _____________________________________________________________________________
 
 "[prog_id]" 	   ; registery internal id for assoc_name
                    ;
-"[assoc_name]"     ; assoc_name, which is file format's extention if type is "file" and is protocol's name if type is "protocol".
+"[assoc_name]"     ; assoc_name, which is file format's extension if type is "file" and is protocol's name if type is "protocol".
                    ;
-"[type]"           ; type of association. "file" for extention and "protocol" for protocol handler.
+"[type]"           ; type of association. "file" for extension and "protocol" for protocol handler.
                    ;
 
  ${UpdateSystemIcons} ; it has not arguments and just notifies OS for updating icons for new associations.
