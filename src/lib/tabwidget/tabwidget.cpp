@@ -610,7 +610,8 @@ void TabWidget::closeAllButCurrent(int index)
 
     WebTab* akt = weTab(index);
 
-    foreach (WebTab* tab, allTabs(false)) {
+    const auto tabs = allTabs(false);
+    for (const WebTab* tab : tabs) {
         int tabIndex = tab->tabIndex();
         if (akt == widget(tabIndex)) {
             continue;
@@ -625,7 +626,8 @@ void TabWidget::closeToRight(int index)
         return;
     }
 
-    foreach (WebTab* tab, allTabs(false)) {
+    const auto tabs = allTabs(false);
+    for (const WebTab* tab : tabs) {
         int tabIndex = tab->tabIndex();
         if (index >= tabIndex) {
             continue;
@@ -641,7 +643,8 @@ void TabWidget::closeToLeft(int index)
         return;
     }
 
-    foreach (WebTab* tab, allTabs(false)) {
+    const auto tabs = allTabs(false);
+    for (const WebTab* tab : tabs) {
         int tabIndex = tab->tabIndex();
         if (index <= tabIndex) {
             continue;
