@@ -19,6 +19,8 @@
 
 #include "plugininterface.h"
 
+#include <PurposeWidgets/Menu>
+
 class KWalletPasswordBackend;
 class KIOSchemeHandler;
 
@@ -35,8 +37,10 @@ public:
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;
+    void populateWebViewMenu(QMenu *menu, WebView *view, const WebHitTestResult &r) override;
 
 private:
     KWalletPasswordBackend* m_backend;
     QVector<KIOSchemeHandler*> m_kioSchemeHandlers;
+    Purpose::Menu *m_sharePageMenu;
 };

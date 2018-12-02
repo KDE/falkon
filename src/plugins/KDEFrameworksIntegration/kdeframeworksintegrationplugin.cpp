@@ -26,17 +26,25 @@
 #include "desktopfile.h"
 #include "kioschemehandler.h"
 #include "webpage.h"
+#include "webview.h"
 
 #include <KCrash>
 #include <KAboutData>
 #include <KProtocolInfo>
+#include <PurposeWidgets/Menu>
+#include <Purpose/AlternativesModel>
 
 #include <QWebEngineProfile>
+#include <QMenu>
 
 KDEFrameworksIntegrationPlugin::KDEFrameworksIntegrationPlugin()
     : QObject()
     , m_backend(0)
+    , m_sharePageMenu(new Purpose::Menu(this))
 {
+    m_sharePageMenu->setTitle(tr("Share page"));
+    m_sharePageMenu->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
+    m_sharePageMenu->model()->setPluginType(QStringLiteral("ShareUrl"));
 }
 
 DesktopFile KDEFrameworksIntegrationPlugin::metaData() const
@@ -86,6 +94,19 @@ void KDEFrameworksIntegrationPlugin::unload()
         delete handler;
     }
     m_kioSchemeHandlers.clear();
+}
+
+void KDEFrameworksIntegrationPlugin::populateWebViewMenu(QMenu *menu, WebView *view, const WebHitTestResult &r)
+{
+    Q_UNUSED(r)
+
+    m_sharePageMenu->model()->setInputData(QJsonObject{
+        { QStringLiteral("urls"), QJsonValue(view->url()) },
+        { QStringLiteral("title"), QJsonValue(view->title()) }
+    });
+    m_sharePageMenu->reload();
+
+    menu->addAction(m_sharePageMenu->menuAction());
 }
 
 bool KDEFrameworksIntegrationPlugin::testPlugin()
