@@ -24,7 +24,6 @@
 
 #include "qzcommon.h"
 #include "plugininterface.h"
-#include "qml/qmlpluginloader.h"
 
 class QLibrary;
 class QPluginLoader;

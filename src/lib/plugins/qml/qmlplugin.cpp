@@ -17,6 +17,7 @@
 * ============================================================ */
 #include "qmlplugin.h"
 #include "qmlplugins.h"
+#include "qmlpluginloader.h"
 #include "datapaths.h"
 #include "desktopfile.h"
 
