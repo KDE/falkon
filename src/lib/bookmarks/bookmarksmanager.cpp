@@ -292,7 +292,11 @@ void BookmarksManager::addBookmark(BookmarkItem* item)
     BookmarkItem* parent = parentForNewBookmark();
     Q_ASSERT(parent);
 
-    m_bookmarks->insertBookmark(parent, 0, item);
+    int row = 0;
+    if (m_selectedBookmark->isUrl() || m_selectedBookmark->isSeparator()) {
+        row = m_bookmarks->model()->index(m_selectedBookmark).row();
+    }
+    m_bookmarks->insertBookmark(parent, row, item);
 
     // Select newly added bookmark
     ui->tree->selectBookmark(item);
