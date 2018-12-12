@@ -21,6 +21,7 @@
 #include <QVector>
 #include <QStringList>
 #include <QWebEngineCookieStore>
+#include <QtWebEngineWidgetsVersion>
 
 #include "qzcommon.h"
 
@@ -55,7 +56,7 @@ private:
     void slotCookieAdded(const QNetworkCookie &cookie);
     void slotCookieRemoved(const QNetworkCookie &cookie);
 
-#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     bool cookieFilter(const QWebEngineCookieStore::FilterRequest &request) const;
 #endif
 

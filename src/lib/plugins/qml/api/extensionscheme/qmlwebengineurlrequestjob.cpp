@@ -16,9 +16,11 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmlwebengineurlrequestjob.h"
+#include "qztools.h"
+
 #include <QBuffer>
 #include <QVariantMap>
-#include <qztools.h>
+#include <QtWebEngineWidgetsVersion>
 
 QmlWebEngineUrlRequestJob::QmlWebEngineUrlRequestJob(QWebEngineUrlRequestJob *job, QObject *parent)
     : QObject(parent)
@@ -65,7 +67,7 @@ QString QmlWebEngineUrlRequestJob::initiator() const
         return QString();
     }
     QString initiatorString;
-#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     initiatorString = QString::fromUtf8(m_job->initiator().toEncoded());
 #endif
     return initiatorString;

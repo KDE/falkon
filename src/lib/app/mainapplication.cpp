@@ -65,6 +65,7 @@
 #include <QWebEngineDownloadItem>
 #include <QWebEngineScriptCollection>
 #include <QRegularExpression>
+#include <QtWebEngineWidgetsVersion>
 
 #ifdef Q_OS_WIN
 #include <QtWin>
@@ -921,11 +922,11 @@ void MainApplication::loadSettings()
     webSettings->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, true);
     webSettings->setAttribute(QWebEngineSettings::FocusOnNavigationEnabled, false);
 
-#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     webSettings->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, settings.value(QSL("allowJavaScriptActivateWindow"), false).toBool());
 #endif
 
-#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     webSettings->setAttribute(QWebEngineSettings::JavascriptCanPaste, settings.value(QSL("allowJavaScriptPaste"), true).toBool());
     webSettings->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, settings.value(QSL("DisableVideoAutoPlay"), false).toBool());
     webSettings->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, settings.value(QSL("WebRTCPublicIpOnly"), true).toBool());

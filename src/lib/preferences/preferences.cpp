@@ -58,6 +58,7 @@
 #include <QWebEngineProfile>
 #include <QWebEngineSettings>
 #include <QLibraryInfo>
+#include <QtWebEngineWidgetsVersion>
 
 static QString createLanguageItem(const QString &lang)
 {
@@ -110,7 +111,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->checkUpdates->setVisible(false);
 #endif
 
-#if QTWEBENGINE_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 11, 0)
     ui->disableVideoAutoPlay->setVisible(false);
     ui->webRTCPublicIpOnly->setVisible(false);
 #endif

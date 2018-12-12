@@ -27,6 +27,7 @@
 #include <QJsonDocument>
 #include <QNetworkReply>
 #include <QWebEngineSettings>
+#include <QtWebEngineWidgetsVersion>
 
 QList<QWebEngineView*> WebInspector::s_views;
 
@@ -67,7 +68,7 @@ void WebInspector::setView(WebView *view)
     m_view = view;
     Q_ASSERT(isEnabled());
 
-#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     page()->setInspectedPage(m_view->page());
     connect(m_view, &WebView::pageChanged, this, &WebInspector::deleteLater);
 #else
@@ -97,7 +98,7 @@ void WebInspector::inspectElement()
 
 bool WebInspector::isEnabled()
 {
-#if QTWEBENGINE_VERSION < QT_VERSION_CHECK(5, 11, 0)
+#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 11, 0)
     if (!qEnvironmentVariableIsSet("QTWEBENGINE_REMOTE_DEBUGGING")) {
         return false;
     }
