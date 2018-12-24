@@ -1,8 +1,8 @@
-#Falkon Web Browser
+# Falkon Web Browser
 
 QtWebEngine web browser.
 
-##Building
+## Building
 
 Falkon uses CMake, to build it run:
 
