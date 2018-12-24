@@ -243,11 +243,15 @@ QString BookmarksToolbarButton::createTooltip() const
         return m_bookmark->description();
     }
 
-    if (!m_bookmark->url().isEmpty()) {
+    if (!m_bookmark->title().isEmpty() && !m_bookmark->url().isEmpty()) {
         return QString("%1\n%2").arg(m_bookmark->title(), m_bookmark->urlString());
     }
 
-    return m_bookmark->title();
+    if (!m_bookmark->title().isEmpty()) {
+        return m_bookmark->title();
+    }
+
+    return m_bookmark->urlString();
 }
 
 void BookmarksToolbarButton::enterEvent(QEvent* event)
