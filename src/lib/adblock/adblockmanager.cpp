@@ -172,9 +172,9 @@ bool AdBlockManager::addSubscriptionFromUrl(const QUrl &url)
 
     for (int i = 0; i < queryItems.count(); ++i) {
         QPair<QString, QString> pair = queryItems.at(i);
-        if (pair.first == QL1S("location"))
+        if (pair.first.endsWith(QL1S("location")))
             subscriptionUrl = pair.second;
-        else if (pair.first == QL1S("title"))
+        else if (pair.first.endsWith(QL1S("title")))
             subscriptionTitle = pair.second;
     }
 
