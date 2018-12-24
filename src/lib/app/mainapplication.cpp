@@ -200,6 +200,9 @@ MainApplication::MainApplication(int &argc, char** argv)
             case Qz::CL_ExitAction:
                 m_isClosing = true;
                 return;
+            case Qz::CL_WMClass:
+                m_wmClass = pair.text.toUtf8();
+                break;
             default:
                 break;
             }
@@ -498,6 +501,11 @@ void MainApplication::setProxyStyle(ProxyStyle *style)
 {
     m_proxyStyle = style;
     setStyle(style);
+}
+
+QByteArray MainApplication::wmClass() const
+{
+    return m_wmClass;
 }
 
 History* MainApplication::history()

@@ -91,6 +91,8 @@ public:
     QString styleName() const;
     void setProxyStyle(ProxyStyle *style);
 
+    QByteArray wmClass() const;
+
     History* history();
     Bookmarks* bookmarks();
 
@@ -186,6 +188,8 @@ private:
 
     AutoSaver* m_autoSaver;
     ProxyStyle *m_proxyStyle = nullptr;
+
+    QByteArray m_wmClass;
 
     QList<BrowserWindow*> m_windows;
     QPointer<BrowserWindow> m_lastActiveWindow;

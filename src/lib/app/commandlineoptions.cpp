@@ -75,6 +75,10 @@ void CommandLineOptions::parseActions()
     QCommandLineOption fullscreenOption(QStringList({QSL("f"), QSL("fullscreen")}));
     fullscreenOption.setDescription(QSL("Toggles fullscreen."));
 
+    QCommandLineOption wmclassOption(QStringList({QSL("wmclass")}));
+    wmclassOption.setValueName(QSL("WM_CLASS"));
+    wmclassOption.setDescription(QSL("Application class (X11 only)."));
+
     // Parser
     QCommandLineParser parser;
     parser.setApplicationDescription(QSL("QtWebEngine based browser"));
@@ -92,6 +96,7 @@ void CommandLineOptions::parseActions()
     parser.addOption(currentTabOption);
     parser.addOption(openWindowOption);
     parser.addOption(fullscreenOption);
+    parser.addOption(wmclassOption);
     parser.addPositionalArgument(QSL("URL"), QSL("URLs to open"), QSL("[URL...]"));
 
     // parse() and not process() so we can pass arbitrary options to Chromium
@@ -183,6 +188,13 @@ void CommandLineOptions::parseActions()
     if (parser.isSet(fullscreenOption)) {
         ActionPair pair;
         pair.action = Qz::CL_ToggleFullScreen;
+        m_actions.append(pair);
+    }
+
+    if (parser.isSet(wmclassOption)) {
+        ActionPair pair;
+        pair.action = Qz::CL_WMClass;
+        pair.text = parser.value(wmclassOption);
         m_actions.append(pair);
     }
 

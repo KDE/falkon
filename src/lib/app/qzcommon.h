@@ -82,7 +82,8 @@ enum CommandLineAction {
     CL_StartPrivateBrowsing,
     CL_StartNewInstance,
     CL_StartPortable,
-    CL_ExitAction
+    CL_ExitAction,
+    CL_WMClass
 };
 
 enum ObjectName {

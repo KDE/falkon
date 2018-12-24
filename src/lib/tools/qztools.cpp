@@ -18,6 +18,7 @@
 #include "qztools.h"
 #include "datapaths.h"
 #include "settings.h"
+#include "mainapplication.h"
 
 #include <QTextDocument>
 #include <QDateTime>
@@ -862,8 +863,8 @@ void QzTools::setWmClass(const QString &name, const QWidget* widget)
     if (QGuiApplication::platformName() != QL1S("xcb"))
         return;
 
-    const QByteArray &nameData = name.toUtf8();
-    const QByteArray &classData = QByteArrayLiteral("Falkon");
+    const QByteArray nameData = name.toUtf8();
+    const QByteArray classData = mApp->wmClass().isEmpty() ? QByteArrayLiteral("Falkon") : mApp->wmClass();
 
     uint32_t class_len = nameData.length() + 1 + classData.length() + 1;
     char *class_hint = (char*) malloc(class_len);
