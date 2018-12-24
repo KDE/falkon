@@ -74,8 +74,6 @@ DownloadItem::DownloadItem(QListWidgetItem *item, QWebEngineDownloadItem* downlo
     connect(this, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(customContextMenuRequested(QPoint)));
     connect(ui->button, SIGNAL(clicked(QPoint)), this, SLOT(stop()));
     connect(manager, SIGNAL(resized(QSize)), this, SLOT(parentResized(QSize)));
-
-    startDownloading();
 }
 
 void DownloadItem::startDownloading()
@@ -84,7 +82,9 @@ void DownloadItem::startDownloading()
     connect(m_download, &QWebEngineDownloadItem::downloadProgress, this, &DownloadItem::downloadProgress);
 
     m_downloading = true;
-    m_downTimer.start();
+    if (m_downTimer.elapsed() < 1) {
+        m_downTimer.start();
+    }
 
     updateDownloadInfo(0, m_download->receivedBytes(), m_download->totalBytes());
 

@@ -269,6 +269,9 @@ void DownloadManager::clearList()
 
 void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
 {
+    QTime downloadTimer;
+    downloadTimer.start();
+
     closeDownloadTab(downloadItem->url());
 
     QString downloadPath;
@@ -373,6 +376,8 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
     // Create download item
     QListWidgetItem* listItem = new QListWidgetItem(ui->list);
     DownloadItem* downItem = new DownloadItem(listItem, downloadItem, QFileInfo(downloadPath).absolutePath(), QFileInfo(downloadPath).fileName(), openFile, this);
+    downItem->setDownTimer(downloadTimer);
+    downItem->startDownloading();
     connect(downItem, SIGNAL(deleteItem(DownloadItem*)), this, SLOT(deleteItem(DownloadItem*)));
     connect(downItem, SIGNAL(downloadFinished(bool)), this, SLOT(downloadFinished(bool)));
     ui->list->setItemWidget(listItem, downItem);

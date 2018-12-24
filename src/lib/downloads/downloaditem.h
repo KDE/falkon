@@ -49,6 +49,9 @@ public:
     double currentSpeed() { return m_currSpeed; }
     int progress();
     ~DownloadItem();
+    void setDownTimer(const QTime &timer) { m_downTimer = timer; }
+
+    void startDownloading();
 
     static QString remaingTimeToString(QTime time);
     static QString currentSpeedToString(double speed);
@@ -70,8 +73,6 @@ private Q_SLOTS:
     void copyDownloadLink();
 
 private:
-    void startDownloading();
-
     void updateDownloadInfo(double currSpeed, qint64 received, qint64 total);
     void mouseDoubleClickEvent(QMouseEvent* e);
 
@@ -83,7 +84,6 @@ private:
     QString m_fileName;
     QTime m_downTimer;
     QTime m_remTime;
-    QBasicTimer m_timer;
     QUrl m_downUrl;
     bool m_openFile;
 
