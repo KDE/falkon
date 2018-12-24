@@ -239,7 +239,7 @@ QString FalkonSchemeReply::speeddialPage()
     QString page = dPage;
     SpeedDial* dial = mApp->plugins()->speedDial();
 
-    page.replace(QLatin1String("%INITIAL-SCRIPT%"), dial->initialScript());
+    page.replace(QLatin1String("%INITIAL-SCRIPT%"), dial->initialScript().toUtf8().toBase64());
     page.replace(QLatin1String("%IMG_BACKGROUND%"), dial->backgroundImage());
     page.replace(QLatin1String("%URL_BACKGROUND%"), dial->backgroundImageUrl());
     page.replace(QLatin1String("%B_SIZE%"), dial->backgroundImageSize());

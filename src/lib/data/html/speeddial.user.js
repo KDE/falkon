@@ -450,7 +450,7 @@ function init() {
             $('#fadeOverlay').click();
     });
 
-    var pages = JSON.parse(scriptData.initialScript);
+    var pages = JSON.parse(atob(scriptData.initialScript));
     for (var i = 0; i < pages.length; ++i) {
         var page = pages[i];
         addBox(page.url, page.title, page.img);
