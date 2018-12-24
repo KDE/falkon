@@ -811,7 +811,7 @@ void BrowserWindow::loadAddress(const QUrl &url)
         weView(index)->setFocus();
     } else {
         weView()->setFocus();
-        weView()->load(url);
+        weView()->load(LoadRequest(url));
     }
 }
 
