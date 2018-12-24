@@ -226,7 +226,9 @@ void WebTab::showWebInspector(bool inspectElement)
     if (inspectElement)
         inspector->inspectElement();
 
+    const int height = inspector->sizeHint().height();
     m_splitter->addWidget(inspector);
+    m_splitter->setSizes({m_splitter->height() - height, height});
 }
 
 void WebTab::toggleWebInspector()

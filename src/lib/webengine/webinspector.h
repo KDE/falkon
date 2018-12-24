@@ -34,6 +34,8 @@ public:
     void setView(WebView *view);
     void inspectElement();
 
+    QSize sizeHint() const override;
+
     static bool isEnabled();
     static void pushView(QWebEngineView *view);
     static void registerView(QWebEngineView *view);
@@ -43,7 +45,6 @@ private Q_SLOTS:
     void loadFinished();
 
 private:
-    QSize sizeHint() const override;
     void keyPressEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
     void keyReleaseEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
 
