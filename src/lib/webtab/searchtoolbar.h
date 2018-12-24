@@ -60,6 +60,7 @@ private:
     WebView* m_view;
 
     QWebEnginePage::FindFlags m_findFlags;
+    int m_searchRequests = 0;
 };
 
 #endif // SEARCHTOOLBAR_H

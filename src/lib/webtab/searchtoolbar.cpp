@@ -120,9 +120,13 @@ void SearchToolBar::setText(const QString &text)
 
 void SearchToolBar::searchText(const QString &text)
 {
+    m_searchRequests++;
     QPointer<SearchToolBar> guard = this;
     m_view->findText(text, m_findFlags, [=](bool found) {
         if (!guard) {
+            return;
+        }
+        if (--m_searchRequests != 0) {
             return;
         }
         if (ui->lineEdit->text().isEmpty())
