@@ -203,7 +203,11 @@ bool TabTreeView::viewportEvent(QEvent *event)
         WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
         if (me->buttons() == Qt::MiddleButton) {
             if (tab) {
-                tab->closeTab();
+                if (isExpanded(index)) {
+                    tab->closeTab();
+                } else {
+                    closeTree(index);
+                }
             } else {
                 m_window->addTab();
             }
@@ -363,7 +367,7 @@ TabTreeView::DelegateButton TabTreeView::buttonAt(const QPoint &pos, const QMode
     return NoButton;
 }
 
-void TabTreeView::addMenuActions(QMenu *menu, const QModelIndex &index) const
+void TabTreeView::addMenuActions(QMenu *menu, const QModelIndex &index)
 {
     if (!m_haveTreeModel) {
         return;
@@ -375,24 +379,10 @@ void TabTreeView::addMenuActions(QMenu *menu, const QModelIndex &index) const
     if (index.isValid() && model()->rowCount(index) > 0) {
         QPersistentModelIndex pindex = index;
         m->addAction(tr("Close Tree"), this, [=]() {
-            QVector<WebTab*> tabs;
-            reverseTraverse(pindex, [&](const QModelIndex &index) {
-                WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
-                if (tab) {
-                    tabs.append(tab);
-                }
-            });
-            for (WebTab *tab : qAsConst(tabs)) {
-                tab->closeTab();
-            }
+            closeTree(pindex);
         });
         m->addAction(tr("Unload Tree"), this, [=]() {
-            reverseTraverse(pindex, [&](const QModelIndex &index) {
-                WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
-                if (tab && tab->isRestored()) {
-                    tab->unload();
-                }
-            });
+            unloadTree(pindex);
         });
     }
 
@@ -410,4 +400,28 @@ void TabTreeView::reverseTraverse(const QModelIndex &root, std::function<void(co
         reverseTraverse(model()->index(i, 0, root), callback);
     }
     callback(root);
+}
+
+void TabTreeView::closeTree(const QModelIndex &root)
+{
+    QVector<WebTab*> tabs;
+    reverseTraverse(root, [&](const QModelIndex &index) {
+        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        if (tab) {
+            tabs.append(tab);
+        }
+    });
+    for (WebTab *tab : qAsConst(tabs)) {
+        tab->closeTab();
+    }
+}
+
+void TabTreeView::unloadTree(const QModelIndex &root)
+{
+    reverseTraverse(root, [&](const QModelIndex &index) {
+        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        if (tab && tab->isRestored()) {
+            tab->unload();
+        }
+    });
 }
