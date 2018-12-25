@@ -95,7 +95,7 @@ private:
     void resizeEvent(QResizeEvent* e) override;
     void keyPressEvent(QKeyEvent* e) override;
 
-    void closeDownloadTab(const QUrl &url) const;
+    void closeDownloadTab(QWebEngineDownloadItem *item) const;
     QWinTaskbarButton *taskbarButton();
 
     Ui::DownloadManager* ui;

@@ -40,6 +40,7 @@
 #include <QStandardPaths>
 #include <QWebEngineHistory>
 #include <QWebEngineDownloadItem>
+#include <QtWebEngineWidgetsVersion>
 
 #ifdef Q_OS_WIN
 #include <QtWin>
@@ -118,7 +119,7 @@ void DownloadManager::keyPressEvent(QKeyEvent* e)
     QWidget::keyPressEvent(e);
 }
 
-void DownloadManager::closeDownloadTab(const QUrl &url) const
+void DownloadManager::closeDownloadTab(QWebEngineDownloadItem *item) const
 {
     // Attempt to close empty tab that was opened only for loading the download url
     auto testWebView = [](TabbedWebView *view, const QUrl &url) {
@@ -132,6 +133,9 @@ void DownloadManager::closeDownloadTab(const QUrl &url) const
         if (page->history()->count() != 0) {
             return false;
         }
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        return true;
+#else
         if (page->url() != QUrl()) {
             return false;
         }
@@ -140,15 +144,32 @@ void DownloadManager::closeDownloadTab(const QUrl &url) const
             tabUrl = QUrl(view->webTab()->locationBar()->text());
         }
         return tabUrl.host() == url.host();
+#endif
     };
 
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+    if (!item->page()) {
+        return;
+    }
+    WebPage *page = qobject_cast<WebPage*>(item->page());
+    if (!page) {
+        return;
+    }
+    TabbedWebView *view = qobject_cast<TabbedWebView*>(page->view());
+    if (!view) {
+        return;
+    }
+    if (testWebView(view, QUrl())) {
+        view->closeView();
+    }
+#else
     BrowserWindow* mainWindow = mApp->getWindow();
     // If the main window was closed, there is no need to go further
     if (mainWindow == nullptr) {
         return;
     }
 
-    if (testWebView(mainWindow->weView(), url)) {
+    if (testWebView(mainWindow->weView(), item->url())) {
         mainWindow->weView()->closeView();
         return;
     }
@@ -158,12 +179,13 @@ void DownloadManager::closeDownloadTab(const QUrl &url) const
         const auto tabs = window->tabWidget()->allTabs();
         for (auto *tab : tabs) {
             auto *view = tab->webView();
-            if (testWebView(view, url)) {
+            if (testWebView(view, item->url())) {
                 view->closeView();
                 return;
             }
         }
     }
+#endif
 }
 
 QWinTaskbarButton *DownloadManager::taskbarButton()
@@ -272,7 +294,7 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
     QTime downloadTimer;
     downloadTimer.start();
 
-    closeDownloadTab(downloadItem->url());
+    closeDownloadTab(downloadItem);
 
     QString downloadPath;
     bool openFile = false;
