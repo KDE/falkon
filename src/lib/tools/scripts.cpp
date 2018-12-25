@@ -21,6 +21,7 @@
 #include "webpage.h"
 
 #include <QUrlQuery>
+#include <QtWebEngineWidgetsVersion>
 
 QString Scripts::setupWebChannel()
 {
@@ -146,9 +147,11 @@ QString Scripts::setupWindowObject()
                           "    return false;"
                           "};"
                           "window.external = external;"
+#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 12, 0)
                           "window.print = function() {"
                           "    window.location = 'falkon:PrintPage';"
                           "};"
+#endif
                           "})()");
 
     return source;

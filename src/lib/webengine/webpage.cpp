@@ -56,6 +56,7 @@
 #include <QAuthenticator>
 #include <QPushButton>
 #include <QUrlQuery>
+#include <QtWebEngineWidgetsVersion>
 
 QString WebPage::s_lastUploadLocation = QDir::homePath();
 QUrl WebPage::s_lastUnsupportedUrl;
@@ -109,6 +110,10 @@ WebPage::WebPage(QObject* parent)
             emit loadFinished(true);
         }
     });
+
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+    connect(this, &QWebEnginePage::printRequested, this, &WebPage::printRequested);
+#endif
 }
 
 WebPage::~WebPage()
@@ -421,9 +426,11 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
             QUrlQuery query(url);
             mApp->searchEnginesManager()->addEngine(QUrl(query.queryItemValue(QSL("url"))));
             return false;
+#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 12, 0)
         } else if (url.path() == QL1S("PrintPage")) {
             emit printRequested();
             return false;
+#endif
         }
     }
 
