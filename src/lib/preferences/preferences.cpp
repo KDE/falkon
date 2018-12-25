@@ -116,6 +116,10 @@ Preferences::Preferences(BrowserWindow* window)
     ui->webRTCPublicIpOnly->setVisible(false);
 #endif
 
+#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 12, 0)
+    ui->dnsPrefetech->setVisible(false);
+#endif
+
     auto setCategoryIcon = [this](int index, const QIcon &icon) {
         ui->listWidget->item(index)->setIcon(QIcon(icon.pixmap(32)));
     };
@@ -288,6 +292,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->useNativeScrollbars->setChecked(settings.value("UseNativeScrollbars", false).toBool());
     ui->disableVideoAutoPlay->setChecked(settings.value("DisableVideoAutoPlay", false).toBool());
     ui->webRTCPublicIpOnly->setChecked(settings.value("WebRTCPublicIpOnly", true).toBool());
+    ui->dnsPrefetch->setChecked(settings.value("DNSPrefetch", true).toBool());
 
     foreach (int level, WebView::zoomLevels()) {
         ui->defaultZoomLevel->addItem(QString("%1%").arg(level));
@@ -943,6 +948,7 @@ void Preferences::saveSettings()
     settings.setValue("UseNativeScrollbars", ui->useNativeScrollbars->isChecked());
     settings.setValue("DisableVideoAutoPlay", ui->disableVideoAutoPlay->isChecked());
     settings.setValue("WebRTCPublicIpOnly", ui->webRTCPublicIpOnly->isChecked());
+    settings.setValue("DNSPrefetch", ui->dnsPrefetch->isChecked());
 
 #ifdef Q_OS_WIN
     settings.setValue("CheckDefaultBrowser", ui->checkDefaultBrowser->isChecked());

@@ -1075,6 +1075,13 @@
                    </property>
                   </widget>
                  </item>
+                 <item>
+                  <widget class="QCheckBox" name="dnsPrefetch">
+                   <property name="text">
+                    <string>Enable DNS prefetching</string>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </item>
                <item row="2" column="0">
@@ -2394,7 +2401,7 @@
                 <x>0</x>
                 <y>0</y>
                 <width>96</width>
-                <height>31</height>
+                <height>28</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_14">

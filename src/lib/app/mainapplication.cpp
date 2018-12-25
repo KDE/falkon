@@ -941,6 +941,10 @@ void MainApplication::loadSettings()
     webSettings->setUnknownUrlSchemePolicy(QWebEngineSettings::AllowAllUnknownUrlSchemes);
 #endif
 
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+    webSettings->setAttribute(QWebEngineSettings::DnsPrefetchEnabled, settings.value(QSL("DNSPrefetch"), true).toBool());
+#endif
+
     webSettings->setDefaultTextEncoding(settings.value(QSL("DefaultEncoding"), webSettings->defaultTextEncoding()).toString());
 
     setWheelScrollLines(settings.value(QSL("wheelScrollLines"), wheelScrollLines()).toInt());
