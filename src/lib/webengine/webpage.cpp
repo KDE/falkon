@@ -113,6 +113,10 @@ WebPage::WebPage(QObject* parent)
 
 #if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
     connect(this, &QWebEnginePage::printRequested, this, &WebPage::printRequested);
+    connect(this, &QWebEnginePage::selectClientCertificate, this, [this](QWebEngineClientCertificateSelection selection) {
+        // TODO: It should prompt user
+        selection.select(selection.certificates().at(0));
+    });
 #endif
 }
 
