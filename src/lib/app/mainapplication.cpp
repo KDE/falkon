@@ -929,7 +929,10 @@ void MainApplication::loadSettings()
     webSettings->setAttribute(QWebEngineSettings::FullScreenSupportEnabled, true);
     webSettings->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, true);
     webSettings->setAttribute(QWebEngineSettings::FocusOnNavigationEnabled, false);
+
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     webSettings->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, settings.value(QSL("allowJavaScriptActivateWindow"), false).toBool());
+#endif
 
 #if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     webSettings->setAttribute(QWebEngineSettings::JavascriptCanPaste, settings.value(QSL("allowJavaScriptPaste"), true).toBool());

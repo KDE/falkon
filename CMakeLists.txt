@@ -44,7 +44,7 @@ endif()
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_NO_CAST_TO_ASCII)
 
 # Mandatory: Qt5
-set(QT_MIN_VERSION "5.10.0")
+set(QT_MIN_VERSION "5.9.0")
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets Network Sql QuickWidgets PrintSupport WebEngine WebEngineWidgets WebChannel)
 if (BUILD_TESTING)
     find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Test)

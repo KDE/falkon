@@ -496,6 +496,7 @@ void WebView::copyLinkToClipboard()
 
 void WebView::savePageAs()
 {
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     page()->runJavaScript(QSL("document.contentType"), WebPage::SafeJsWorld, [this](const QVariant &res) {
         const QSet<QString> webPageTypes = {
             QSL("text/html"),
@@ -507,6 +508,9 @@ void WebView::savePageAs()
             page()->download(url());
         }
     });
+#else
+    triggerPageAction(QWebEnginePage::SavePage);
+#endif
 }
 
 void WebView::copyImageToClipboard()
