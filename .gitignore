@@ -1,4 +1,4 @@
-build
+/build*/
 DEBIAN
 *.deb
 *.pro.user*
@@ -38,4 +38,4 @@ tests/autotests/autotests
 .ycm_extra_conf.py*
 *.stash
 bin/profiles
-CMakeLists.txt.user
+CMakeLists.txt.user*
