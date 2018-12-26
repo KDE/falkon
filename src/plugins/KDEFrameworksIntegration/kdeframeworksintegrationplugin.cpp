@@ -40,7 +40,7 @@
 KDEFrameworksIntegrationPlugin::KDEFrameworksIntegrationPlugin()
     : QObject()
     , m_backend(0)
-    , m_sharePageMenu(new Purpose::Menu(this))
+    , m_sharePageMenu(new Purpose::Menu())
 {
     m_sharePageMenu->setTitle(tr("Share page"));
     m_sharePageMenu->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
@@ -87,6 +87,7 @@ void KDEFrameworksIntegrationPlugin::unload()
 {
     mApp->autoFill()->passwordManager()->unregisterBackend(m_backend);
     delete m_backend;
+    delete m_sharePageMenu;
 
     for (KIOSchemeHandler *handler : qAsConst(m_kioSchemeHandlers)) {
         mApp->webProfile()->removeUrlSchemeHandler(handler);
@@ -101,7 +102,7 @@ void KDEFrameworksIntegrationPlugin::populateWebViewMenu(QMenu *menu, WebView *v
     Q_UNUSED(r)
 
     m_sharePageMenu->model()->setInputData(QJsonObject{
-        { QStringLiteral("urls"), QJsonValue(view->url()) },
+        { QStringLiteral("urls"), QJsonValue(view->url().toString()) },
         { QStringLiteral("title"), QJsonValue(view->title()) }
     });
     m_sharePageMenu->reload();
