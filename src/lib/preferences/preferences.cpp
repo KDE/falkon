@@ -117,7 +117,7 @@ Preferences::Preferences(BrowserWindow* window)
 #endif
 
 #if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 12, 0)
-    ui->dnsPrefetech->setVisible(false);
+    ui->dnsPrefetch->setVisible(false);
 #endif
 
     auto setCategoryIcon = [this](int index, const QIcon &icon) {
