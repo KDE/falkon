@@ -34,7 +34,7 @@ Bookmarks::Bookmarks(QObject* parent)
     , m_autoSaver(nullptr)
 {
     m_autoSaver = new AutoSaver(this);
-    connect(m_autoSaver, SIGNAL(save()), this, SLOT(saveSettings()));
+    connect(m_autoSaver, &AutoSaver::save, this, &Bookmarks::saveSettings);
 
     init();
     loadSettings();

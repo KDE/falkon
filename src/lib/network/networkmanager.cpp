@@ -126,8 +126,8 @@ void NetworkManager::authentication(const QUrl &url, QAuthenticator *auth, QWidg
     QDialogButtonBox* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
-    connect(box, SIGNAL(rejected()), dialog, SLOT(reject()));
-    connect(box, SIGNAL(accepted()), dialog, SLOT(accept()));
+    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
 
     label->setText(tr("A username and password are being requested by %1. "
                       "The site says: \"%2\"").arg(url.host(), auth->realm().toHtmlEscaped()));
@@ -210,8 +210,8 @@ void NetworkManager::proxyAuthentication(const QString &proxyHost, QAuthenticato
     QDialogButtonBox* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
-    connect(box, SIGNAL(rejected()), dialog, SLOT(reject()));
-    connect(box, SIGNAL(accepted()), dialog, SLOT(accept()));
+    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
 
     label->setText(tr("A username and password are being requested by proxy %1. ").arg(proxyHost));
     formLa->addRow(label);

@@ -34,12 +34,12 @@ BookmarksSidebar::BookmarksSidebar(BrowserWindow* window, QWidget* parent)
     ui->setupUi(this);
     ui->tree->setViewType(BookmarksTreeView::BookmarksSidebarViewType);
 
-    connect(ui->tree, SIGNAL(bookmarkActivated(BookmarkItem*)), this, SLOT(bookmarkActivated(BookmarkItem*)));
-    connect(ui->tree, SIGNAL(bookmarkCtrlActivated(BookmarkItem*)), this, SLOT(bookmarkCtrlActivated(BookmarkItem*)));
-    connect(ui->tree, SIGNAL(bookmarkShiftActivated(BookmarkItem*)), this, SLOT(bookmarkShiftActivated(BookmarkItem*)));
-    connect(ui->tree, SIGNAL(contextMenuRequested(QPoint)), this, SLOT(createContextMenu(QPoint)));
+    connect(ui->tree, &BookmarksTreeView::bookmarkActivated, this, &BookmarksSidebar::bookmarkActivated);
+    connect(ui->tree, &BookmarksTreeView::bookmarkCtrlActivated, this, &BookmarksSidebar::bookmarkCtrlActivated);
+    connect(ui->tree, &BookmarksTreeView::bookmarkShiftActivated, this, &BookmarksSidebar::bookmarkShiftActivated);
+    connect(ui->tree, &BookmarksTreeView::contextMenuRequested, this, &BookmarksSidebar::createContextMenu);
 
-    connect(ui->search, SIGNAL(textChanged(QString)), ui->tree, SLOT(search(QString)));
+    connect(ui->search, &QLineEdit::textChanged, ui->tree, &BookmarksTreeView::search);
 }
 
 BookmarksSidebar::~BookmarksSidebar()
@@ -110,7 +110,7 @@ void BookmarksSidebar::createContextMenu(const QPoint &pos)
     connect(actNewTab, SIGNAL(triggered()), this, SLOT(openBookmarkInNewTab()));
     connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewWindow()));
     connect(actNewPrivateWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewPrivateWindow()));
-    connect(actDelete, SIGNAL(triggered()), this, SLOT(deleteBookmarks()));
+    connect(actDelete, &QAction::triggered, this, &BookmarksSidebar::deleteBookmarks);
 
     bool canBeDeleted = false;
     QList<BookmarkItem*> items = ui->tree->selectedBookmarks();

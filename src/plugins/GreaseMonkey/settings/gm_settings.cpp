@@ -37,20 +37,20 @@ GM_Settings::GM_Settings(GM_Manager* manager, QWidget* parent)
     ui->setupUi(this);
     ui->iconLabel->setPixmap(QIcon(QSL(":gm/data/icon.svg")).pixmap(32));
 
-    connect(ui->listWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
-            this, SLOT(showItemInfo(QListWidgetItem*)));
-    connect(ui->listWidget, SIGNAL(updateItemRequested(QListWidgetItem*)),
-            this, SLOT(updateItem(QListWidgetItem*)));
-    connect(ui->listWidget, SIGNAL(removeItemRequested(QListWidgetItem*)),
-            this, SLOT(removeItem(QListWidgetItem*)));
-    connect(ui->openDirectory, SIGNAL(clicked()),
-            this, SLOT(openScriptsDirectory()));
-    connect(ui->newScript, SIGNAL(clicked()),
-            this, SLOT(newScript()));
-    connect(ui->link, SIGNAL(clicked(QPoint)),
-            this, SLOT(openUserJs()));
-    connect(manager, SIGNAL(scriptsChanged()),
-            this, SLOT(loadScripts()));
+    connect(ui->listWidget, &QListWidget::itemDoubleClicked,
+            this, &GM_Settings::showItemInfo);
+    connect(ui->listWidget, &GM_SettingsListWidget::updateItemRequested,
+            this, &GM_Settings::updateItem);
+    connect(ui->listWidget, &GM_SettingsListWidget::removeItemRequested,
+            this, &GM_Settings::removeItem);
+    connect(ui->openDirectory, &QAbstractButton::clicked,
+            this, &GM_Settings::openScriptsDirectory);
+    connect(ui->newScript, &QAbstractButton::clicked,
+            this, &GM_Settings::newScript);
+    connect(ui->link, &ClickableLabel::clicked,
+            this, &GM_Settings::openUserJs);
+    connect(manager, &GM_Manager::scriptsChanged,
+            this, &GM_Settings::loadScripts);
 
     loadScripts();
 }
@@ -147,8 +147,8 @@ void GM_Settings::newScript()
 
 void GM_Settings::loadScripts()
 {
-    disconnect(ui->listWidget, SIGNAL(itemChanged(QListWidgetItem*)),
-               this, SLOT(itemChanged(QListWidgetItem*)));
+    disconnect(ui->listWidget, &QListWidget::itemChanged,
+               this, &GM_Settings::itemChanged);
 
     ui->listWidget->clear();
 
@@ -188,7 +188,7 @@ void GM_Settings::loadScripts()
     }
     while (itemMoved);
 
-    connect(ui->listWidget, SIGNAL(itemChanged(QListWidgetItem*)), this, SLOT(itemChanged(QListWidgetItem*)));
+    connect(ui->listWidget, &QListWidget::itemChanged, this, &GM_Settings::itemChanged);
 }
 
 GM_Script* GM_Settings::getScript(QListWidgetItem* item)

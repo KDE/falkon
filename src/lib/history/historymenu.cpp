@@ -101,9 +101,9 @@ void HistoryMenu::aboutToShow()
         Action* act = new Action(title);
         act->setData(url);
         act->setIcon(IconProvider::iconForUrl(url));
-        connect(act, SIGNAL(triggered()), this, SLOT(historyEntryActivated()));
-        connect(act, SIGNAL(ctrlTriggered()), this, SLOT(historyEntryCtrlActivated()));
-        connect(act, SIGNAL(shiftTriggered()), this, SLOT(historyEntryShiftActivated()));
+        connect(act, &QAction::triggered, this, &HistoryMenu::historyEntryActivated);
+        connect(act, &Action::ctrlTriggered, this, &HistoryMenu::historyEntryCtrlActivated);
+        connect(act, &Action::shiftTriggered, this, &HistoryMenu::historyEntryShiftActivated);
         addAction(act);
     }
 }
@@ -125,9 +125,9 @@ void HistoryMenu::aboutToShowMostVisited()
         Action* act = new Action(QzTools::truncatedText(entry.title, 40));
         act->setData(entry.url);
         act->setIcon(IconProvider::iconForUrl(entry.url));
-        connect(act, SIGNAL(triggered()), this, SLOT(historyEntryActivated()));
-        connect(act, SIGNAL(ctrlTriggered()), this, SLOT(historyEntryCtrlActivated()));
-        connect(act, SIGNAL(shiftTriggered()), this, SLOT(historyEntryShiftActivated()));
+        connect(act, &QAction::triggered, this, &HistoryMenu::historyEntryActivated);
+        connect(act, &Action::ctrlTriggered, this, &HistoryMenu::historyEntryCtrlActivated);
+        connect(act, &Action::shiftTriggered, this, &HistoryMenu::historyEntryShiftActivated);
         m_menuMostVisited->addAction(act);
     }
 
@@ -158,8 +158,8 @@ void HistoryMenu::aboutToShowClosedTabs()
     }
     else {
         m_menuClosedTabs->addSeparator();
-        m_menuClosedTabs->addAction(tr("Restore All Closed Tabs"), tabWidget, SLOT(restoreAllClosedTabs()));
-        m_menuClosedTabs->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear list"), tabWidget, SLOT(clearClosedTabsList()));
+        m_menuClosedTabs->addAction(tr("Restore All Closed Tabs"), tabWidget, &TabWidget::restoreAllClosedTabs);
+        m_menuClosedTabs->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear list"), tabWidget, &TabWidget::clearClosedTabsList);
     }
 }
 
@@ -173,7 +173,7 @@ void HistoryMenu::aboutToShowClosedWindows()
     for (int i = 0; i < closedWindows.count(); ++i) {
         const ClosedWindowsManager::Window window = closedWindows.at(i);
         const QString title = QzTools::truncatedText(window.title, 40);
-        QAction *act = m_menuClosedWindows->addAction(window.icon, title, manager, SLOT(restoreClosedWindow()));
+        QAction *act = m_menuClosedWindows->addAction(window.icon, title, manager, &ClosedWindowsManager::restoreClosedWindow);
         if (i == 0) {
             act->setShortcut(QKeySequence(QSL("Ctrl+Shift+N")));
             act->setShortcutContext(Qt::WidgetShortcut);
@@ -186,8 +186,8 @@ void HistoryMenu::aboutToShowClosedWindows()
         m_menuClosedWindows->addAction(tr("Empty"))->setEnabled(false);
     } else {
         m_menuClosedWindows->addSeparator();
-        m_menuClosedWindows->addAction(tr("Restore All Closed Windows"), manager, SLOT(restoreAllClosedWindows()));
-        m_menuClosedWindows->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear list"), manager, SLOT(clearClosedWindows()));
+        m_menuClosedWindows->addAction(tr("Restore All Closed Windows"), manager, &ClosedWindowsManager::restoreAllClosedWindows);
+        m_menuClosedWindows->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear list"), manager, &ClosedWindowsManager::clearClosedWindows);
     }
 }
 
@@ -235,16 +235,16 @@ void HistoryMenu::init()
 {
     setTitle(tr("Hi&story"));
 
-    QAction* act = addAction(IconProvider::standardIcon(QStyle::SP_ArrowBack), tr("&Back"), this, SLOT(goBack()));
+    QAction* act = addAction(IconProvider::standardIcon(QStyle::SP_ArrowBack), tr("&Back"), this, &HistoryMenu::goBack);
     act->setShortcut(QzTools::actionShortcut(QKeySequence::Back, Qt::ALT + Qt::Key_Left, QKeySequence::Forward, Qt::ALT + Qt::Key_Right));
 
-    act = addAction(IconProvider::standardIcon(QStyle::SP_ArrowForward), tr("&Forward"), this, SLOT(goForward()));
+    act = addAction(IconProvider::standardIcon(QStyle::SP_ArrowForward), tr("&Forward"), this, &HistoryMenu::goForward);
     act->setShortcut(QzTools::actionShortcut(QKeySequence::Forward, Qt::ALT + Qt::Key_Right, QKeySequence::Back, Qt::ALT + Qt::Key_Left));
 
-    act = addAction(QIcon::fromTheme("go-home"), tr("&Home"), this, SLOT(goHome()));
+    act = addAction(QIcon::fromTheme("go-home"), tr("&Home"), this, &HistoryMenu::goHome);
     act->setShortcut(QKeySequence(Qt::ALT + Qt::Key_Home));
 
-    act = addAction(QIcon::fromTheme("deep-history", QIcon(":/icons/menu/history.svg")), tr("Show &All History"), this, SLOT(showHistoryManager()));
+    act = addAction(QIcon::fromTheme("deep-history", QIcon(":/icons/menu/history.svg")), tr("Show &All History"), this, &HistoryMenu::showHistoryManager);
     act->setShortcut(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_H));
 
     addSeparator();
@@ -253,10 +253,10 @@ void HistoryMenu::init()
     connect(this, SIGNAL(aboutToHide()), this, SLOT(aboutToHide()));
 
     m_menuMostVisited = new Menu(tr("Most Visited"), this);
-    connect(m_menuMostVisited, SIGNAL(aboutToShow()), this, SLOT(aboutToShowMostVisited()));
+    connect(m_menuMostVisited, &QMenu::aboutToShow, this, &HistoryMenu::aboutToShowMostVisited);
 
     m_menuClosedTabs = new Menu(tr("Closed Tabs"));
-    connect(m_menuClosedTabs, SIGNAL(aboutToShow()), this, SLOT(aboutToShowClosedTabs()));
+    connect(m_menuClosedTabs, &QMenu::aboutToShow, this, &HistoryMenu::aboutToShowClosedTabs);
 
     m_menuClosedWindows = new Menu(tr("Closed Windows"));
     connect(m_menuClosedWindows, &QMenu::aboutToShow, this, &HistoryMenu::aboutToShowClosedWindows);

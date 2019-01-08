@@ -54,7 +54,7 @@ QString FirefoxImporter::standardPath() const
 
 QString FirefoxImporter::getPath(QWidget* parent)
 {
-    m_path = QFileDialog::getOpenFileName(parent, BookmarksImporter::tr("Choose file..."), standardPath(), "Places (places.sqlite)");
+    m_path = QFileDialog::getOpenFileName(parent, BookmarksImporter::tr("Choose file..."), standardPath(), QStringLiteral("Places (places.sqlite)"));
     return m_path;
 }
 
@@ -64,7 +64,7 @@ bool FirefoxImporter::prepareImport()
     QSqlDatabase::removeDatabase(CONNECTION);
 
     // Create new connection
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", CONNECTION);
+    QSqlDatabase db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), CONNECTION);
 
     if (!QFile::exists(m_path)) {
         setError(BookmarksImportDialog::tr("File does not exist."));
@@ -86,10 +86,10 @@ BookmarkItem* FirefoxImporter::importBookmarks()
     QList<Item> items;
 
     BookmarkItem* root = new BookmarkItem(BookmarkItem::Folder);
-    root->setTitle("Firefox Import");
+    root->setTitle(QStringLiteral("Firefox Import"));
 
     QSqlQuery query(QSqlDatabase::database(CONNECTION));
-    query.prepare("SELECT id, parent, type, title, fk FROM moz_bookmarks WHERE fk NOT NULL OR type = 3");
+    query.prepare(QStringLiteral("SELECT id, parent, type, title, fk FROM moz_bookmarks WHERE fk NOT NULL OR type = 3"));
     query.exec();
 
     while (query.next()) {
@@ -105,7 +105,7 @@ BookmarkItem* FirefoxImporter::importBookmarks()
         }
 
         QSqlQuery query(QSqlDatabase::database(CONNECTION));
-        query.prepare("SELECT url FROM moz_places WHERE id=?");
+        query.prepare(QStringLiteral("SELECT url FROM moz_places WHERE id=?"));
         query.addBindValue(fk);
         query.exec();
 

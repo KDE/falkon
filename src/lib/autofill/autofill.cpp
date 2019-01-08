@@ -58,9 +58,9 @@ PasswordManager* AutoFill::passwordManager() const
 void AutoFill::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    m_isStoring = settings.value("SavePasswordsOnSites", true).toBool();
-    m_isAutoComplete = settings.value("AutoCompletePasswords", true).toBool();
+    settings.beginGroup(QStringLiteral("Web-Browser-Settings"));
+    m_isStoring = settings.value(QStringLiteral("SavePasswordsOnSites"), true).toBool();
+    m_isAutoComplete = settings.value(QStringLiteral("AutoCompletePasswords"), true).toBool();
     settings.endGroup();
 }
 
@@ -85,7 +85,7 @@ bool AutoFill::isStoringEnabled(const QUrl &url)
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT count(id) FROM autofill_exceptions WHERE server=?");
+    query.prepare(QStringLiteral("SELECT count(id) FROM autofill_exceptions WHERE server=?"));
     query.addBindValue(server);
     query.exec();
 
@@ -104,7 +104,7 @@ void AutoFill::blockStoringforUrl(const QUrl &url)
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("INSERT INTO autofill_exceptions (server) VALUES (?)");
+    query.prepare(QStringLiteral("INSERT INTO autofill_exceptions (server) VALUES (?)"));
     query.addBindValue(server);
     query.exec();
 }
@@ -253,26 +253,26 @@ QByteArray AutoFill::exportPasswords()
     stream.setAutoFormatting(true);
 
     stream.writeStartDocument();
-    stream.writeStartElement("passwords");
-    stream.writeAttribute("version", "1.0");
+    stream.writeStartElement(QStringLiteral("passwords"));
+    stream.writeAttribute(QStringLiteral("version"), QStringLiteral("1.0"));
 
     QVector<PasswordEntry> entries = m_manager->getAllEntries();
 
     foreach (const PasswordEntry &entry, entries) {
-        stream.writeStartElement("entry");
-        stream.writeTextElement("server", entry.host);
-        stream.writeTextElement("username", entry.username);
-        stream.writeTextElement("password", entry.password);
-        stream.writeTextElement("data", entry.data);
+        stream.writeStartElement(QStringLiteral("entry"));
+        stream.writeTextElement(QStringLiteral("server"), entry.host);
+        stream.writeTextElement(QStringLiteral("username"), entry.username);
+        stream.writeTextElement(QStringLiteral("password"), entry.password);
+        stream.writeTextElement(QStringLiteral("data"), entry.data);
         stream.writeEndElement();
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT server FROM autofill_exceptions");
+    query.prepare(QStringLiteral("SELECT server FROM autofill_exceptions"));
     query.exec();
     while (query.next()) {
-        stream.writeStartElement("exception");
-        stream.writeTextElement("server", query.value(0).toString());
+        stream.writeStartElement(QStringLiteral("exception"));
+        stream.writeTextElement(QStringLiteral("server"), query.value(0).toString());
         stream.writeEndElement();
     }
 
@@ -345,12 +345,12 @@ bool AutoFill::importPasswords(const QByteArray &data)
 
                 if (!server.isEmpty()) {
                     QSqlQuery query(SqlDatabase::instance()->database());
-                    query.prepare("SELECT id FROM autofill_exceptions WHERE server=?");
+                    query.prepare(QStringLiteral("SELECT id FROM autofill_exceptions WHERE server=?"));
                     query.addBindValue(server);
                     query.exec();
 
                     if (!query.next()) {
-                        query.prepare("INSERT INTO autofill_exceptions (server) VALUES (?)");
+                        query.prepare(QStringLiteral("INSERT INTO autofill_exceptions (server) VALUES (?)"));
                         query.addBindValue(server);
                         query.exec();
                     }

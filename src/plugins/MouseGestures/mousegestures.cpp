@@ -53,34 +53,34 @@ void MouseGestures::initFilter()
     m_filter = new QjtMouseGestureFilter(false, m_button, 20);
 
     QjtMouseGesture* upGesture = new QjtMouseGesture(DirectionList() << Up, m_filter);
-    connect(upGesture, SIGNAL(gestured()), this, SLOT(upGestured()));
+    connect(upGesture, &QjtMouseGesture::gestured, this, &MouseGestures::upGestured);
 
     QjtMouseGesture* downGesture = new QjtMouseGesture(DirectionList() << Down, m_filter);
-    connect(downGesture, SIGNAL(gestured()), this, SLOT(downGestured()));
+    connect(downGesture, &QjtMouseGesture::gestured, this, &MouseGestures::downGestured);
 
     QjtMouseGesture* leftGesture = new QjtMouseGesture(DirectionList() << Left, m_filter);
-    connect(leftGesture, SIGNAL(gestured()), this, SLOT(leftGestured()));
+    connect(leftGesture, &QjtMouseGesture::gestured, this, &MouseGestures::leftGestured);
 
     QjtMouseGesture* rightGesture = new QjtMouseGesture(DirectionList() << Right, m_filter);
-    connect(rightGesture, SIGNAL(gestured()), this, SLOT(rightGestured()));
+    connect(rightGesture, &QjtMouseGesture::gestured, this, &MouseGestures::rightGestured);
 
     QjtMouseGesture* downRightGesture = new QjtMouseGesture(DirectionList() << Down << Right, m_filter);
-    connect(downRightGesture, SIGNAL(gestured()), this, SLOT(downRightGestured()));
+    connect(downRightGesture, &QjtMouseGesture::gestured, this, &MouseGestures::downRightGestured);
 
     QjtMouseGesture* downLeftGesture = new QjtMouseGesture(DirectionList() << Down << Left, m_filter);
-    connect(downLeftGesture, SIGNAL(gestured()), this, SLOT(downLeftGestured()));
+    connect(downLeftGesture, &QjtMouseGesture::gestured, this, &MouseGestures::downLeftGestured);
 
     QjtMouseGesture* downUpGesture = new QjtMouseGesture(DirectionList() << Down << Up, m_filter);
-    connect(downUpGesture, SIGNAL(gestured()), this, SLOT(downUpGestured()));
+    connect(downUpGesture, &QjtMouseGesture::gestured, this, &MouseGestures::downUpGestured);
 
     QjtMouseGesture* upDownGesture = new QjtMouseGesture(DirectionList() << Up << Down, m_filter);
-    connect(upDownGesture, SIGNAL(gestured()), this, SLOT(upDownGestured()));
+    connect(upDownGesture, &QjtMouseGesture::gestured, this, &MouseGestures::upDownGestured);
 
     QjtMouseGesture* upLeftGesture = new QjtMouseGesture(DirectionList() << Up << Left, m_filter);
-    connect(upLeftGesture, SIGNAL(gestured()), this, SLOT(upLeftGestured()));
+    connect(upLeftGesture, &QjtMouseGesture::gestured, this, &MouseGestures::upLeftGestured);
 
     QjtMouseGesture* upRightGesture = new QjtMouseGesture(DirectionList() << Up << Right, m_filter);
-    connect(upRightGesture, SIGNAL(gestured()), this, SLOT(upRightGestured()));
+    connect(upRightGesture, &QjtMouseGesture::gestured, this, &MouseGestures::upRightGestured);
 
     m_filter->addGesture(upGesture);
     m_filter->addGesture(downGesture);

@@ -44,8 +44,8 @@ MouseGesturesSettingsDialog::MouseGesturesSettingsDialog(MouseGestures* gestures
     setAttribute(Qt::WA_DeleteOnClose);
 
     connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(accepted()));
-    connect(ui->buttonBox, SIGNAL(rejected()), this, SLOT(close()));
-    connect(ui->licenseButton, SIGNAL(clicked()), this, SLOT(showLicense()));
+    connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &QWidget::close);
+    connect(ui->licenseButton, &QAbstractButton::clicked, this, &MouseGesturesSettingsDialog::showLicense);
 }
 
 MouseGesturesSettingsDialog::~MouseGesturesSettingsDialog()

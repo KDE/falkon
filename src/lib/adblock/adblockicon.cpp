@@ -154,13 +154,13 @@ void AdBlockIcon::clicked(ClickController *controller)
         act->setCheckable(true);
         act->setChecked(customList->containsFilter(hostFilter));
         act->setData(hostFilter);
-        connect(act, SIGNAL(triggered()), this, SLOT(toggleCustomFilter()));
+        connect(act, &QAction::triggered, this, &AdBlockIcon::toggleCustomFilter);
 
         act = menu->addAction(tr("Disable only on this page"));
         act->setCheckable(true);
         act->setChecked(customList->containsFilter(pageFilter));
         act->setData(pageFilter);
-        connect(act, SIGNAL(triggered()), this, SLOT(toggleCustomFilter()));
+        connect(act, &QAction::triggered, this, &AdBlockIcon::toggleCustomFilter);
     }
 
     connect(menu, &QMenu::aboutToHide, this, [=]() {

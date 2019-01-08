@@ -33,8 +33,8 @@ SBI_SettingsDialog::SBI_SettingsDialog(SBI_IconsManager* manager, QWidget* paren
     ui->showNetworkIcon->setChecked(m_manager->showNetworkIcon());
     ui->showZoomWidget->setChecked(m_manager->showZoomWidget());
 
-    connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(saveSettings()));
-    connect(ui->buttonBox, SIGNAL(rejected()), this, SLOT(close()));
+    connect(ui->buttonBox, &QDialogButtonBox::accepted, this, &SBI_SettingsDialog::saveSettings);
+    connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &QWidget::close);
 }
 
 void SBI_SettingsDialog::saveSettings()

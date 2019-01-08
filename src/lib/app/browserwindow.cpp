@@ -211,11 +211,11 @@ BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QUrl &startUrl)
     m_hideNavigationTimer = new QTimer(this);
     m_hideNavigationTimer->setInterval(1000);
     m_hideNavigationTimer->setSingleShot(true);
-    connect(m_hideNavigationTimer, SIGNAL(timeout()), this, SLOT(hideNavigationSlot()));
+    connect(m_hideNavigationTimer, &QTimer::timeout, this, &BrowserWindow::hideNavigationSlot);
 
-    connect(mApp, SIGNAL(settingsReloaded()), this, SLOT(loadSettings()));
+    connect(mApp, &MainApplication::settingsReloaded, this, &BrowserWindow::loadSettings);
 
-    QTimer::singleShot(0, this, SLOT(postLaunch()));
+    QTimer::singleShot(0, this, &BrowserWindow::postLaunch);
 
     if (mApp->isPrivate()) {
         QzTools::setWmClass(QSL("Falkon Browser (Private Window)"), this);
@@ -463,22 +463,22 @@ void BrowserWindow::setupMenu()
     // Setup other shortcuts
     QShortcut* reloadBypassCacheAction = new QShortcut(QKeySequence(QSL("Ctrl+F5")), this);
     QShortcut* reloadBypassCacheAction2 = new QShortcut(QKeySequence(QSL("Ctrl+Shift+R")), this);
-    connect(reloadBypassCacheAction, SIGNAL(activated()), this, SLOT(reloadBypassCache()));
-    connect(reloadBypassCacheAction2, SIGNAL(activated()), this, SLOT(reloadBypassCache()));
+    connect(reloadBypassCacheAction, &QShortcut::activated, this, &BrowserWindow::reloadBypassCache);
+    connect(reloadBypassCacheAction2, &QShortcut::activated, this, &BrowserWindow::reloadBypassCache);
 
     QShortcut* closeTabAction = new QShortcut(QKeySequence(QSL("Ctrl+W")), this);
     QShortcut* closeTabAction2 = new QShortcut(QKeySequence(QSL("Ctrl+F4")), this);
-    connect(closeTabAction, SIGNAL(activated()), this, SLOT(closeTab()));
-    connect(closeTabAction2, SIGNAL(activated()), this, SLOT(closeTab()));
+    connect(closeTabAction, &QShortcut::activated, this, &BrowserWindow::closeTab);
+    connect(closeTabAction2, &QShortcut::activated, this, &BrowserWindow::closeTab);
 
     QShortcut* reloadAction = new QShortcut(QKeySequence(QSL("Ctrl+R")), this);
-    connect(reloadAction, SIGNAL(activated()), this, SLOT(reload()));
+    connect(reloadAction, &QShortcut::activated, this, &BrowserWindow::reload);
 
     QShortcut* openLocationAction = new QShortcut(QKeySequence(QSL("Alt+D")), this);
-    connect(openLocationAction, SIGNAL(activated()), this, SLOT(openLocation()));
+    connect(openLocationAction, &QShortcut::activated, this, &BrowserWindow::openLocation);
 
     QShortcut* inspectorAction = new QShortcut(QKeySequence(QSL("F12")), this);
-    connect(inspectorAction, SIGNAL(activated()), this, SLOT(toggleWebInspector()));
+    connect(inspectorAction, &QShortcut::activated, this, &BrowserWindow::toggleWebInspector);
 
     QShortcut* restoreClosedWindow = new QShortcut(QKeySequence(QSL("Ctrl+Shift+N")), this);
     connect(restoreClosedWindow, &QShortcut::activated, mApp->closedWindowsManager(), &ClosedWindowsManager::restoreClosedWindow);
@@ -503,7 +503,7 @@ QAction* BrowserWindow::createEncodingAction(const QString &codecName,
     QAction* action = new QAction(codecName, menu);
     action->setData(codecName);
     action->setCheckable(true);
-    connect(action, SIGNAL(triggered()), this, SLOT(changeEncoding()));
+    connect(action, &QAction::triggered, this, &BrowserWindow::changeEncoding);
     if (activeCodecName.compare(codecName, Qt::CaseInsensitive) == 0) {
         action->setChecked(true);
     }
@@ -1045,16 +1045,16 @@ void BrowserWindow::createToolbarsMenu(QMenu* menu)
     QAction* action;
 
 #ifndef Q_OS_MACOS
-    action = menu->addAction(tr("&Menu Bar"), this, SLOT(toggleShowMenubar()));
+    action = menu->addAction(tr("&Menu Bar"), this, &BrowserWindow::toggleShowMenubar);
     action->setCheckable(true);
     action->setChecked(menuBar()->isVisible());
 #endif
 
-    action = menu->addAction(tr("&Navigation Toolbar"), this, SLOT(toggleShowNavigationToolbar()));
+    action = menu->addAction(tr("&Navigation Toolbar"), this, &BrowserWindow::toggleShowNavigationToolbar);
     action->setCheckable(true);
     action->setChecked(m_navigationToolbar->isVisible());
 
-    action = menu->addAction(tr("&Bookmarks Toolbar"), this, SLOT(toggleShowBookmarksToolbar()));
+    action = menu->addAction(tr("&Bookmarks Toolbar"), this, &BrowserWindow::toggleShowBookmarksToolbar);
     action->setCheckable(true);
     action->setChecked(Settings().value(QSL("Browser-View-Settings/showBookmarksToolbar")).toBool());
 

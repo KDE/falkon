@@ -85,9 +85,9 @@ TabManagerWidget::TabManagerWidget(BrowserWindow* mainClass, QWidget* parent, bo
 
     ui->treeWidget->setItemDelegate(new TabManagerDelegate(ui->treeWidget));
 
-    connect(closeButton, SIGNAL(clicked(bool)), this, SLOT(filterBarClosed()));
+    connect(closeButton, &QAbstractButton::clicked, this, &TabManagerWidget::filterBarClosed);
     connect(ui->filterBar, SIGNAL(textChanged(QString)), this, SLOT(filterChanged(QString)));
-    connect(ui->treeWidget, SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(onItemActivated(QTreeWidgetItem*,int)));
+    connect(ui->treeWidget, &QTreeWidget::itemClicked, this, &TabManagerWidget::onItemActivated);
     connect(ui->treeWidget, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(customContextMenuRequested(QPoint)));
     connect(ui->treeWidget, SIGNAL(requestRefreshTree()), this, SLOT(delayedRefreshTree()));
 }
@@ -152,7 +152,7 @@ void TabManagerWidget::delayedRefreshTree(WebPage* p)
 
     m_webPage = p;
     m_waitForRefresh = true;
-    QTimer::singleShot(50, this, SLOT(refreshTree()));
+    QTimer::singleShot(50, this, &TabManagerWidget::refreshTree);
 }
 
 void TabManagerWidget::refreshTree()
@@ -304,17 +304,17 @@ void TabManagerWidget::customContextMenuRequested(const QPoint &pos)
 
     QAction* action;
     QMenu groupTypeSubmenu(tr("Group by"));
-    action = groupTypeSubmenu.addAction(tr("&Window"), this, SLOT(changeGroupType()));
+    action = groupTypeSubmenu.addAction(tr("&Window"), this, &TabManagerWidget::changeGroupType);
     action->setData(GroupByWindow);
     action->setCheckable(true);
     action->setChecked(m_groupType == GroupByWindow);
 
-    action = groupTypeSubmenu.addAction(tr("&Domain"), this, SLOT(changeGroupType()));
+    action = groupTypeSubmenu.addAction(tr("&Domain"), this, &TabManagerWidget::changeGroupType);
     action->setData(GroupByDomain);
     action->setCheckable(true);
     action->setChecked(m_groupType == GroupByDomain);
 
-    action = groupTypeSubmenu.addAction(tr("&Host"), this, SLOT(changeGroupType()));
+    action = groupTypeSubmenu.addAction(tr("&Host"), this, &TabManagerWidget::changeGroupType);
     action->setData(GroupByHost);
     action->setCheckable(true);
     action->setChecked(m_groupType == GroupByHost);
@@ -322,16 +322,16 @@ void TabManagerWidget::customContextMenuRequested(const QPoint &pos)
     menu->addMenu(&groupTypeSubmenu);
 
     if (m_isDefaultWidget) {
-        menu->addAction(QIcon(":/tabmanager/data/side-by-side.png"), tr("&Show side by side"), this, SIGNAL(showSideBySide()))->setObjectName("sideBySide");
+        menu->addAction(QIcon(":/tabmanager/data/side-by-side.png"), tr("&Show side by side"), this, &TabManagerWidget::showSideBySide)->setObjectName("sideBySide");
     }
 
     menu->addSeparator();
 
     if (isTabSelected()) {
-        menu->addAction(QIcon(":/tabmanager/data/tab-detach.png"), tr("&Detach checked tabs"), this, SLOT(processActions()))->setObjectName("detachSelection");
-        menu->addAction(QIcon(":/tabmanager/data/tab-bookmark.png"), tr("Book&mark checked tabs"), this, SLOT(processActions()))->setObjectName("bookmarkSelection");
-        menu->addAction(QIcon(":/tabmanager/data/tab-close.png"), tr("&Close checked tabs"), this, SLOT(processActions()))->setObjectName("closeSelection");
-        menu->addAction(tr("&Unload checked tabs"), this, SLOT(processActions()))->setObjectName("unloadSelection");
+        menu->addAction(QIcon(":/tabmanager/data/tab-detach.png"), tr("&Detach checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("detachSelection");
+        menu->addAction(QIcon(":/tabmanager/data/tab-bookmark.png"), tr("Book&mark checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("bookmarkSelection");
+        menu->addAction(QIcon(":/tabmanager/data/tab-close.png"), tr("&Close checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("closeSelection");
+        menu->addAction(tr("&Unload checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("unloadSelection");
     }
 
     menu->exec(ui->treeWidget->viewport()->mapToGlobal(pos));
@@ -576,8 +576,8 @@ bool TabManagerWidget::bookmarkSelectedTabs(const QHash<BrowserWindow*, WebTab*>
     QDialogButtonBox* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
-    QObject::connect(box, SIGNAL(rejected()), dialog, SLOT(reject()));
-    QObject::connect(box, SIGNAL(accepted()), dialog, SLOT(accept()));
+    QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+    QObject::connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
 
     layout->addWidget(label);
     layout->addWidget(folderButton);
@@ -793,8 +793,8 @@ void TabItem::setWebTab(WebTab* webTab)
     else
         setIsSavedTab(true);
 
-    connect(m_webTab->webView(), SIGNAL(titleChanged(QString)), this, SLOT(setTitle(QString)));
-    connect(m_webTab->webView(), SIGNAL(iconChanged(QIcon)), this, SLOT(updateIcon()));
+    connect(m_webTab->webView(), &QWebEngineView::titleChanged, this, &TabItem::setTitle);
+    connect(m_webTab->webView(), &QWebEngineView::iconChanged, this, &TabItem::updateIcon);
 
     auto pageChanged = [this](WebPage *page) {
         connect(page, &WebPage::audioMutedChanged, this, &TabItem::updateIcon);

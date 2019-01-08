@@ -120,7 +120,7 @@ TipLabel::TipLabel(QWidget* parent)
     m_timer = new QTimer(this);
     m_timer->setSingleShot(true);
     m_timer->setInterval(500);
-    connect(m_timer, SIGNAL(timeout()), this, SLOT(hide()));
+    connect(m_timer, &QTimer::timeout, this, &QWidget::hide);
 }
 
 void TipLabel::show(QWidget* widget)

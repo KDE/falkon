@@ -257,7 +257,7 @@ FancyTabBar::FancyTabBar(QWidget* parent)
     setLayout(layout);
 
     // We use a zerotimer to keep the sidebar responsive
-    connect(&m_triggerTimer, SIGNAL(timeout()), this, SLOT(emitCurrentIndex()));
+    connect(&m_triggerTimer, &QTimer::timeout, this, &FancyTabBar::emitCurrentIndex);
 }
 
 FancyTabBar::~FancyTabBar()
@@ -628,7 +628,7 @@ void FancyTabWidget::SetMode(Mode mode)
         }
 
         bar->setCurrentIndex(stack_->currentIndex());
-        connect(bar, SIGNAL(currentChanged(int)), SLOT(ShowWidget(int)));
+        connect(bar, &FancyTabBar::currentChanged, this, &FancyTabWidget::ShowWidget);
 
         use_background_ = true;
 
@@ -742,6 +742,6 @@ void FancyTabWidget::MakeTabBar(QTabBar::Shape shape, bool text, bool icons,
     }
 
     bar->setCurrentIndex(stack_->currentIndex());
-    connect(bar, SIGNAL(currentChanged(int)), SLOT(ShowWidget(int)));
+    connect(bar, &QTabBar::currentChanged, this, &FancyTabWidget::ShowWidget);
     tab_bar_ = bar;
 }

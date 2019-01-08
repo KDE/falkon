@@ -33,9 +33,9 @@ BookmarksExportDialog::BookmarksExportDialog(QWidget* parent)
 
     init();
 
-    connect(ui->chooseOutput, SIGNAL(clicked()), this, SLOT(setPath()));
-    connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(exportBookmarks()));
-    connect(ui->buttonBox, SIGNAL(rejected()), this, SLOT(close()));
+    connect(ui->chooseOutput, &QAbstractButton::clicked, this, &BookmarksExportDialog::setPath);
+    connect(ui->buttonBox, &QDialogButtonBox::accepted, this, &BookmarksExportDialog::exportBookmarks);
+    connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &QWidget::close);
 }
 
 BookmarksExportDialog::~BookmarksExportDialog()

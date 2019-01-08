@@ -44,10 +44,10 @@ BookmarksImportDialog::BookmarksImportDialog(QWidget* parent)
     ui->browserList->setCurrentRow(0);
     ui->treeView->setItemDelegate(new BookmarksItemDelegate(ui->treeView));
 
-    connect(ui->nextButton, SIGNAL(clicked()), this, SLOT(nextPage()));
-    connect(ui->backButton, SIGNAL(clicked()), this, SLOT(previousPage()));
-    connect(ui->chooseFile, SIGNAL(clicked()), this, SLOT(setFile()));
-    connect(ui->cancelButton, SIGNAL(rejected()), this, SLOT(close()));
+    connect(ui->nextButton, &QAbstractButton::clicked, this, &BookmarksImportDialog::nextPage);
+    connect(ui->backButton, &QAbstractButton::clicked, this, &BookmarksImportDialog::previousPage);
+    connect(ui->chooseFile, &QAbstractButton::clicked, this, &BookmarksImportDialog::setFile);
+    connect(ui->cancelButton, &QDialogButtonBox::rejected, this, &QWidget::close);
 
 #ifndef Q_OS_WIN
     ui->browserList->setItemHidden(ui->browserList->item(IE), true);

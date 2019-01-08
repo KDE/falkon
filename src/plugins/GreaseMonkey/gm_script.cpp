@@ -46,7 +46,7 @@ GM_Script::GM_Script(GM_Manager* manager, const QString &filePath)
 {
     parseScript();
 
-    connect(m_fileWatcher, SIGNAL(delayedFileChanged(QString)), this, SLOT(watchedFileChanged(QString)));
+    connect(m_fileWatcher, &DelayedFileWatcher::delayedFileChanged, this, &GM_Script::watchedFileChanged);
 }
 
 bool GM_Script::isValid() const

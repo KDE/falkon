@@ -33,9 +33,9 @@ BookmarksMenu::BookmarksMenu(QWidget* parent)
 {
     init();
 
-    connect(mApp->bookmarks(), SIGNAL(bookmarkAdded(BookmarkItem*)), this, SLOT(bookmarksChanged()));
-    connect(mApp->bookmarks(), SIGNAL(bookmarkRemoved(BookmarkItem*)), this, SLOT(bookmarksChanged()));
-    connect(mApp->bookmarks(), SIGNAL(bookmarkChanged(BookmarkItem*)), this, SLOT(bookmarksChanged()));
+    connect(mApp->bookmarks(), &Bookmarks::bookmarkAdded, this, &BookmarksMenu::bookmarksChanged);
+    connect(mApp->bookmarks(), &Bookmarks::bookmarkRemoved, this, &BookmarksMenu::bookmarksChanged);
+    connect(mApp->bookmarks(), &Bookmarks::bookmarkChanged, this, &BookmarksMenu::bookmarksChanged);
 }
 
 void BookmarksMenu::setMainWindow(BrowserWindow* window)
@@ -164,9 +164,9 @@ void BookmarksMenu::init()
 {
     setTitle(tr("&Bookmarks"));
 
-    addAction(tr("Bookmark &This Page"), this, SLOT(bookmarkPage()))->setShortcut(QKeySequence("Ctrl+D"));
-    addAction(tr("Bookmark &All Tabs"), this, SLOT(bookmarkAllTabs()));
-    addAction(QIcon::fromTheme("bookmarks-organize"), tr("Organize &Bookmarks"), this, SLOT(showBookmarksManager()))->setShortcut(QKeySequence("Ctrl+Shift+O"));
+    addAction(tr("Bookmark &This Page"), this, &BookmarksMenu::bookmarkPage)->setShortcut(QKeySequence("Ctrl+D"));
+    addAction(tr("Bookmark &All Tabs"), this, &BookmarksMenu::bookmarkAllTabs);
+    addAction(QIcon::fromTheme("bookmarks-organize"), tr("Organize &Bookmarks"), this, &BookmarksMenu::showBookmarksManager)->setShortcut(QKeySequence("Ctrl+Shift+O"));
     addSeparator();
 
     connect(this, SIGNAL(aboutToShow()), this, SLOT(aboutToShow()));

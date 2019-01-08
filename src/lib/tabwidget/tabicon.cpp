@@ -36,7 +36,7 @@ TabIcon::TabIcon(QWidget* parent)
 
     m_updateTimer = new QTimer(this);
     m_updateTimer->setInterval(data()->animationInterval);
-    connect(m_updateTimer, SIGNAL(timeout()), this, SLOT(updateAnimationFrame()));
+    connect(m_updateTimer, &QTimer::timeout, this, &TabIcon::updateAnimationFrame);
 
     m_hideTimer = new QTimer(this);
     m_hideTimer->setInterval(250);
@@ -49,8 +49,8 @@ void TabIcon::setWebTab(WebTab* tab)
 {
     m_tab = tab;
 
-    connect(m_tab->webView(), SIGNAL(loadStarted()), this, SLOT(showLoadingAnimation()));
-    connect(m_tab->webView(), SIGNAL(loadFinished(bool)), this, SLOT(hideLoadingAnimation()));
+    connect(m_tab->webView(), &QWebEngineView::loadStarted, this, &TabIcon::showLoadingAnimation);
+    connect(m_tab->webView(), &QWebEngineView::loadFinished, this, &TabIcon::hideLoadingAnimation);
     connect(m_tab->webView(), &WebView::iconChanged, this, &TabIcon::updateIcon);
     connect(m_tab->webView(), &WebView::backgroundActivityChanged, this, [this]() { update(); });
 

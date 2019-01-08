@@ -37,7 +37,7 @@ GM_Notification::GM_Notification(GM_Manager* manager, const QString &tmpfileName
     ui->iconLabel->setPixmap(QIcon(QSL(":gm/data/icon.svg")).pixmap(24));
     ui->close->setIcon(IconProvider::standardIcon(QStyle::SP_DialogCloseButton));
 
-    connect(ui->install, SIGNAL(clicked()), this, SLOT(installScript()));
+    connect(ui->install, &QAbstractButton::clicked, this, &GM_Notification::installScript);
     connect(ui->close, SIGNAL(clicked()), this, SLOT(hide()));
 
     startAnimation();

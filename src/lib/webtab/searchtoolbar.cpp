@@ -41,17 +41,17 @@ SearchToolBar::SearchToolBar(WebView* view, QWidget* parent)
     ui->previous->setShortcut(QKeySequence("Ctrl+Shift+G"));
 
     connect(ui->closeButton, SIGNAL(clicked()), this, SLOT(close()));
-    connect(ui->lineEdit, SIGNAL(textEdited(QString)), this, SLOT(findNext()));
-    connect(ui->lineEdit, SIGNAL(returnPressed()), this, SLOT(findNext()));
-    connect(ui->next, SIGNAL(clicked()), this, SLOT(findNext()));
-    connect(ui->previous, SIGNAL(clicked()), this, SLOT(findPrevious()));
-    connect(ui->caseSensitive, SIGNAL(clicked()), this, SLOT(caseSensitivityChanged()));
+    connect(ui->lineEdit, &QLineEdit::textEdited, this, &SearchToolBar::findNext);
+    connect(ui->lineEdit, &QLineEdit::returnPressed, this, &SearchToolBar::findNext);
+    connect(ui->next, &QAbstractButton::clicked, this, &SearchToolBar::findNext);
+    connect(ui->previous, &QAbstractButton::clicked, this, &SearchToolBar::findPrevious);
+    connect(ui->caseSensitive, &QAbstractButton::clicked, this, &SearchToolBar::caseSensitivityChanged);
 
     QShortcut* findNextAction = new QShortcut(QKeySequence("F3"), this);
-    connect(findNextAction, SIGNAL(activated()), this, SLOT(findNext()));
+    connect(findNextAction, &QShortcut::activated, this, &SearchToolBar::findNext);
 
     QShortcut* findPreviousAction = new QShortcut(QKeySequence("Shift+F3"), this);
-    connect(findPreviousAction, SIGNAL(activated()), this, SLOT(findPrevious()));
+    connect(findPreviousAction, &QShortcut::activated, this, &SearchToolBar::findPrevious);
 
     parent->installEventFilter(this);
 }

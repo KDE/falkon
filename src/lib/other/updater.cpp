@@ -115,7 +115,7 @@ Updater::Updater(BrowserWindow* window, QObject* parent)
     : QObject(parent)
     , m_window(window)
 {
-    QTimer::singleShot(60 * 1000, this, SLOT(start())); // Start checking after 1 minute
+    QTimer::singleShot(60 * 1000, this, &Updater::start); // Start checking after 1 minute
 }
 
 void Updater::start()
@@ -131,7 +131,7 @@ void Updater::startDownloadingUpdateInfo(const QUrl &url)
 {
     QNetworkReply *reply = mApp->networkManager()->get(QNetworkRequest(QUrl(url)));
 
-    connect(reply, SIGNAL(finished()), this, SLOT(downCompleted()));
+    connect(reply, &QNetworkReply::finished, this, &Updater::downCompleted);
 }
 
 void Updater::downCompleted()

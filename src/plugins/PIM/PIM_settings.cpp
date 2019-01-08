@@ -49,7 +49,7 @@ PIM_Settings::PIM_Settings(const QString &settingsFile, QWidget* parent)
     ui->pim_special3->setText(settings.value("Special3", QString()).toString());
     settings.endGroup();
 
-    connect(this, SIGNAL(accepted()), this, SLOT(dialogAccepted()));
+    connect(this, &QDialog::accepted, this, &PIM_Settings::dialogAccepted);
 }
 
 void PIM_Settings::dialogAccepted()

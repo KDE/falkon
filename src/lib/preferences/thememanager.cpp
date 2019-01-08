@@ -65,8 +65,8 @@ ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
         }
     }
 
-    connect(ui->listWidget, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)), this, SLOT(currentChanged()));
-    connect(ui->license, SIGNAL(clicked(QPoint)), this, SLOT(showLicense()));
+    connect(ui->listWidget, &QListWidget::currentItemChanged, this, &ThemeManager::currentChanged);
+    connect(ui->license, &ClickableLabel::clicked, this, &ThemeManager::showLicense);
 
     currentChanged();
 }

@@ -24,7 +24,7 @@ DockTitleBarWidget::DockTitleBarWidget(const QString &title, QWidget* parent)
     setupUi(this);
     closeButton->setIcon(QIcon(IconProvider::standardIcon(QStyle::SP_DialogCloseButton).pixmap(16)));
     label->setText(title);
-    connect(closeButton, SIGNAL(clicked()), parent, SLOT(close()));
+    connect(closeButton, &QAbstractButton::clicked, parent, &QWidget::close);
 
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
 }

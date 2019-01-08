@@ -31,8 +31,8 @@ GM_SettingsScriptInfo::GM_SettingsScriptInfo(GM_Script* script, QWidget* parent)
     ui->setupUi(this);
     loadScript();
 
-    connect(m_script, SIGNAL(scriptChanged()), this, SLOT(loadScript()));
-    connect(ui->editInEditor, SIGNAL(clicked()), this, SLOT(editInTextEditor()));
+    connect(m_script, &GM_Script::scriptChanged, this, &GM_SettingsScriptInfo::loadScript);
+    connect(ui->editInEditor, &QAbstractButton::clicked, this, &GM_SettingsScriptInfo::editInTextEditor);
 }
 
 void GM_SettingsScriptInfo::editInTextEditor()

@@ -46,7 +46,7 @@ SBI_ImagesIcon::SBI_ImagesIcon(BrowserWindow* window, const QString &settingsPat
     updateIcon();
 
     connect(m_window->tabWidget(), SIGNAL(currentChanged(int)), this, SLOT(updateIcon()));
-    connect(this, SIGNAL(clicked(QPoint)), this, SLOT(showMenu(QPoint)));
+    connect(this, &ClickableLabel::clicked, this, &SBI_ImagesIcon::showMenu);
 }
 
 void SBI_ImagesIcon::showMenu(const QPoint &point)
@@ -58,10 +58,10 @@ void SBI_ImagesIcon::showMenu(const QPoint &point)
     menu.addAction(m_icon, tr("Current Page Settings"))->setFont(boldFont);
 
     if (testCurrentPageWebAttribute(QWebEngineSettings::AutoLoadImages)) {
-        menu.addAction(tr("Disable loading images (temporarily)"), this, SLOT(toggleLoadingImages()));
+        menu.addAction(tr("Disable loading images (temporarily)"), this, &SBI_ImagesIcon::toggleLoadingImages);
     }
     else {
-        menu.addAction(tr("Enable loading images (temporarily)"), this, SLOT(toggleLoadingImages()));
+        menu.addAction(tr("Enable loading images (temporarily)"), this, &SBI_ImagesIcon::toggleLoadingImages);
     }
 
     menu.addSeparator();
@@ -70,7 +70,7 @@ void SBI_ImagesIcon::showMenu(const QPoint &point)
     QAction* act = menu.addAction(tr("Automatically load images"));
     act->setCheckable(true);
     act->setChecked(m_loadingImages);
-    connect(act, SIGNAL(toggled(bool)), this, SLOT(setGlobalLoadingImages(bool)));
+    connect(act, &QAction::toggled, this, &SBI_ImagesIcon::setGlobalLoadingImages);
 
     menu.exec(point);
 }

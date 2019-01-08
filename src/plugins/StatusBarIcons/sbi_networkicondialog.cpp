@@ -45,11 +45,11 @@ SBI_NetworkIconDialog::SBI_NetworkIconDialog(QWidget* parent)
     updateWidgets();
     showProxy(ui->comboBox->currentText());
 
-    connect(ui->addButton, SIGNAL(clicked()), this, SLOT(addProxy()));
-    connect(ui->removeButton, SIGNAL(clicked()), this, SLOT(removeProxy()));
+    connect(ui->addButton, &QAbstractButton::clicked, this, &SBI_NetworkIconDialog::addProxy);
+    connect(ui->removeButton, &QAbstractButton::clicked, this, &SBI_NetworkIconDialog::removeProxy);
     connect(ui->comboBox, SIGNAL(currentIndexChanged(QString)), this, SLOT(showProxy(QString)));
-    connect(ui->proxyButtonBox, SIGNAL(accepted()), this, SLOT(saveProxy()));
-    connect(ui->closeButton, SIGNAL(clicked(QAbstractButton*)), this, SLOT(close()));
+    connect(ui->proxyButtonBox, &QDialogButtonBox::accepted, this, &SBI_NetworkIconDialog::saveProxy);
+    connect(ui->closeButton, &QDialogButtonBox::clicked, this, &QWidget::close);
 }
 
 void SBI_NetworkIconDialog::addProxy()

@@ -120,12 +120,12 @@ NavigationBar::NavigationBar(BrowserWindow* window)
     m_menuBack = new Menu(this);
     m_menuBack->setCloseOnMiddleClick(true);
     m_buttonBack->setMenu(m_menuBack);
-    connect(m_buttonBack, SIGNAL(aboutToShowMenu()), this, SLOT(aboutToShowHistoryBackMenu()));
+    connect(m_buttonBack, &ToolButton::aboutToShowMenu, this, &NavigationBar::aboutToShowHistoryBackMenu);
 
     m_menuForward = new Menu(this);
     m_menuForward->setCloseOnMiddleClick(true);
     m_buttonForward->setMenu(m_menuForward);
-    connect(m_buttonForward, SIGNAL(aboutToShowMenu()), this, SLOT(aboutToShowHistoryNextMenu()));
+    connect(m_buttonForward, &ToolButton::aboutToShowMenu, this, &NavigationBar::aboutToShowHistoryNextMenu);
 
     ToolButton *buttonTools = new ToolButton(this);
     buttonTools->setObjectName("navigation-button-tools");
@@ -169,23 +169,23 @@ NavigationBar::NavigationBar(BrowserWindow* window)
     m_exitFullscreen->setVisible(false);
 
     setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(this, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenuRequested(QPoint)));
+    connect(this, &QWidget::customContextMenuRequested, this, &NavigationBar::contextMenuRequested);
 
-    connect(m_buttonBack, SIGNAL(clicked()), this, SLOT(goBack()));
-    connect(m_buttonBack, SIGNAL(middleMouseClicked()), this, SLOT(goBackInNewTab()));
-    connect(m_buttonBack, SIGNAL(controlClicked()), this, SLOT(goBackInNewTab()));
-    connect(m_buttonForward, SIGNAL(clicked()), this, SLOT(goForward()));
-    connect(m_buttonForward, SIGNAL(middleMouseClicked()), this, SLOT(goForwardInNewTab()));
-    connect(m_buttonForward, SIGNAL(controlClicked()), this, SLOT(goForwardInNewTab()));
+    connect(m_buttonBack, &QAbstractButton::clicked, this, &NavigationBar::goBack);
+    connect(m_buttonBack, &ToolButton::middleMouseClicked, this, &NavigationBar::goBackInNewTab);
+    connect(m_buttonBack, &ToolButton::controlClicked, this, &NavigationBar::goBackInNewTab);
+    connect(m_buttonForward, &QAbstractButton::clicked, this, &NavigationBar::goForward);
+    connect(m_buttonForward, &ToolButton::middleMouseClicked, this, &NavigationBar::goForwardInNewTab);
+    connect(m_buttonForward, &ToolButton::controlClicked, this, &NavigationBar::goForwardInNewTab);
 
-    connect(m_reloadStop, SIGNAL(stopClicked()), this, SLOT(stop()));
-    connect(m_reloadStop, SIGNAL(reloadClicked()), this, SLOT(reload()));
-    connect(buttonHome, SIGNAL(clicked()), m_window, SLOT(goHome()));
-    connect(buttonHome, SIGNAL(middleMouseClicked()), m_window, SLOT(goHomeInNewTab()));
-    connect(buttonHome, SIGNAL(controlClicked()), m_window, SLOT(goHomeInNewTab()));
-    connect(buttonAddTab, SIGNAL(clicked()), m_window, SLOT(addTab()));
-    connect(buttonAddTab, SIGNAL(middleMouseClicked()), m_window->tabWidget(), SLOT(addTabFromClipboard()));
-    connect(m_exitFullscreen, SIGNAL(clicked(bool)), m_window, SLOT(toggleFullScreen()));
+    connect(m_reloadStop, &ReloadStopButton::stopClicked, this, &NavigationBar::stop);
+    connect(m_reloadStop, &ReloadStopButton::reloadClicked, this, &NavigationBar::reload);
+    connect(buttonHome, &QAbstractButton::clicked, m_window, &BrowserWindow::goHome);
+    connect(buttonHome, &ToolButton::middleMouseClicked, m_window, &BrowserWindow::goHomeInNewTab);
+    connect(buttonHome, &ToolButton::controlClicked, m_window, &BrowserWindow::goHomeInNewTab);
+    connect(buttonAddTab, &QAbstractButton::clicked, m_window, &BrowserWindow::addTab);
+    connect(buttonAddTab, &ToolButton::middleMouseClicked, m_window->tabWidget(), &TabWidget::addTabFromClipboard);
+    connect(m_exitFullscreen, &QAbstractButton::clicked, m_window, &BrowserWindow::toggleFullScreen);
 
     addWidget(backNextWidget, QSL("button-backforward"), tr("Back and Forward buttons"));
     addWidget(m_reloadStop, QSL("button-reloadstop"), tr("Reload button"));
@@ -378,7 +378,7 @@ void NavigationBar::aboutToShowHistoryBackMenu()
             const QIcon icon = iconForPage(item.url(), IconProvider::standardIcon(QStyle::SP_ArrowBack));
             Action* act = new Action(icon, title);
             act->setData(i);
-            connect(act, SIGNAL(triggered()), this, SLOT(loadHistoryIndex()));
+            connect(act, &QAction::triggered, this, &NavigationBar::loadHistoryIndex);
             connect(act, SIGNAL(ctrlTriggered()), this, SLOT(loadHistoryIndexInNewTab()));
             m_menuBack->addAction(act);
         }
@@ -390,7 +390,7 @@ void NavigationBar::aboutToShowHistoryBackMenu()
     }
 
     m_menuBack->addSeparator();
-    m_menuBack->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear history"), this, SLOT(clearHistory()));
+    m_menuBack->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear history"), this, &NavigationBar::clearHistory);
 }
 
 void NavigationBar::aboutToShowHistoryNextMenu()
@@ -412,7 +412,7 @@ void NavigationBar::aboutToShowHistoryNextMenu()
             const QIcon icon = iconForPage(item.url(), IconProvider::standardIcon(QStyle::SP_ArrowForward));
             Action* act = new Action(icon, title);
             act->setData(i);
-            connect(act, SIGNAL(triggered()), this, SLOT(loadHistoryIndex()));
+            connect(act, &QAction::triggered, this, &NavigationBar::loadHistoryIndex);
             connect(act, SIGNAL(ctrlTriggered()), this, SLOT(loadHistoryIndexInNewTab()));
             m_menuForward->addAction(act);
         }
@@ -424,7 +424,7 @@ void NavigationBar::aboutToShowHistoryNextMenu()
     }
 
     m_menuForward->addSeparator();
-    m_menuForward->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear history"), this, SLOT(clearHistory()));
+    m_menuForward->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear history"), this, &NavigationBar::clearHistory);
 }
 
 void NavigationBar::aboutToShowToolsMenu()
@@ -447,7 +447,7 @@ void NavigationBar::aboutToShowToolsMenu()
     }
 
     m_menuTools->addSeparator();
-    m_menuTools->addAction(IconProvider::settingsIcon(), tr("Configure Toolbar"), this, SLOT(openConfigurationDialog()));
+    m_menuTools->addAction(IconProvider::settingsIcon(), tr("Configure Toolbar"), this, &NavigationBar::openConfigurationDialog);
 }
 
 void NavigationBar::clearHistory()
@@ -461,7 +461,7 @@ void NavigationBar::contextMenuRequested(const QPoint &pos)
     QMenu menu;
     m_window->createToolbarsMenu(&menu);
     menu.addSeparator();
-    menu.addAction(IconProvider::settingsIcon(), tr("Configure Toolbar"), this, SLOT(openConfigurationDialog()));
+    menu.addAction(IconProvider::settingsIcon(), tr("Configure Toolbar"), this, &NavigationBar::openConfigurationDialog);
     menu.exec(mapToGlobal(pos));
 }
 

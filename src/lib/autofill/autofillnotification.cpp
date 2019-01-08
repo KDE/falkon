@@ -58,8 +58,8 @@ AutoFillNotification::AutoFillNotification(const QUrl &url, const PageFormData &
     }
 
     connect(ui->update, SIGNAL(clicked()), this, SLOT(update()));
-    connect(ui->remember, SIGNAL(clicked()), this, SLOT(remember()));
-    connect(ui->never, SIGNAL(clicked()), this, SLOT(never()));
+    connect(ui->remember, &QAbstractButton::clicked, this, &AutoFillNotification::remember);
+    connect(ui->never, &QAbstractButton::clicked, this, &AutoFillNotification::never);
     connect(ui->notnow, SIGNAL(clicked()), this, SLOT(hide()));
     connect(ui->closeButton, SIGNAL(clicked()), this, SLOT(hide()));
 

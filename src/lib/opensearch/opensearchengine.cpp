@@ -427,7 +427,7 @@ void OpenSearchEngine::loadImage() const
     }
 
     QNetworkReply* reply = m_networkAccessManager->get(QNetworkRequest(QUrl::fromEncoded(m_imageUrl.toUtf8())));
-    connect(reply, SIGNAL(finished()), this, SLOT(imageObtained()));
+    connect(reply, &QNetworkReply::finished, this, &OpenSearchEngine::imageObtained);
 }
 
 void OpenSearchEngine::imageObtained()
@@ -583,7 +583,7 @@ void OpenSearchEngine::requestSuggestions(const QString &searchTerm)
         m_suggestionsReply = m_networkAccessManager->post(QNetworkRequest(suggestionsUrl(searchTerm)), data);
     }
 
-    connect(m_suggestionsReply, SIGNAL(finished()), this, SLOT(suggestionsObtained()));
+    connect(m_suggestionsReply, &QNetworkReply::finished, this, &OpenSearchEngine::suggestionsObtained);
 }
 
 /*!

@@ -111,8 +111,8 @@ MainApplication::MainApplication(int &argc, char** argv)
     setAttribute(Qt::AA_UseHighDpiPixmaps);
     setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
 
-    setApplicationName(QLatin1String("falkon"));
-    setOrganizationDomain(QLatin1String("org.kde"));
+    setApplicationName(QStringLiteral("falkon"));
+    setOrganizationDomain(QStringLiteral("org.kde"));
     setWindowIcon(QIcon::fromTheme(QSL("falkon"), QIcon(QSL(":icons/falkon.svg"))));
     setDesktopFileName(QSL("org.kde.falkon"));
 
@@ -165,18 +165,18 @@ MainApplication::MainApplication(int &argc, char** argv)
                 m_isPortable = true;
                 break;
             case Qz::CL_NewTab:
-                messages.append(QLatin1String("ACTION:NewTab"));
+                messages.append(QStringLiteral("ACTION:NewTab"));
                 m_postLaunchActions.append(OpenNewTab);
                 break;
             case Qz::CL_NewWindow:
-                messages.append(QLatin1String("ACTION:NewWindow"));
+                messages.append(QStringLiteral("ACTION:NewWindow"));
                 break;
             case Qz::CL_ToggleFullScreen:
-                messages.append(QLatin1String("ACTION:ToggleFullScreen"));
+                messages.append(QStringLiteral("ACTION:ToggleFullScreen"));
                 m_postLaunchActions.append(ToggleFullScreen);
                 break;
             case Qz::CL_ShowDownloadManager:
-                messages.append(QLatin1String("ACTION:ShowDownloadManager"));
+                messages.append(QStringLiteral("ACTION:ShowDownloadManager"));
                 m_postLaunchActions.append(OpenDownloadManager);
                 break;
             case Qz::CL_StartPrivateBrowsing:
@@ -221,7 +221,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     // Don't start single application in private browsing
     if (!isPrivate()) {
-        QString appId = QLatin1String("FalkonWebBrowser");
+        QString appId = QStringLiteral("FalkonWebBrowser");
 
         if (isPortable()) {
             appId.append(QLatin1String("Portable"));
@@ -248,7 +248,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     // If there is nothing to tell other instance, we need to at least wake it
     if (messages.isEmpty()) {
-        messages.append(QLatin1String(" "));
+        messages.append(QStringLiteral(" "));
     }
 
     if (isRunning()) {
@@ -289,7 +289,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     if (!isPrivate() && !isTestModeEnabled()) {
         m_sessionManager = new SessionManager(this);
         m_autoSaver = new AutoSaver(this);
-        connect(m_autoSaver, SIGNAL(save()), m_sessionManager, SLOT(autoSaveLastSession()));
+        connect(m_autoSaver, &AutoSaver::save, m_sessionManager, &SessionManager::autoSaveLastSession);
 
         Settings settings;
         settings.beginGroup(QSL("SessionRestore"));
@@ -324,7 +324,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     BrowserWindow* window = createWindow(Qz::BW_FirstAppWindow, startUrl);
     connect(window, SIGNAL(startingCompleted()), this, SLOT(restoreOverrideCursor()));
 
-    connect(this, SIGNAL(focusChanged(QWidget*,QWidget*)), this, SLOT(onFocusChanged()));
+    connect(this, &QApplication::focusChanged, this, &MainApplication::onFocusChanged);
 
     if (!isPrivate() && !isTestModeEnabled()) {
 #ifndef DISABLE_CHECK_UPDATES
@@ -353,9 +353,9 @@ MainApplication::MainApplication(int &argc, char** argv)
     QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, DataPaths::currentProfilePath());
 
     connect(this, SIGNAL(messageReceived(QString)), this, SLOT(messageReceived(QString)));
-    connect(this, SIGNAL(aboutToQuit()), this, SLOT(saveSettings()));
+    connect(this, &QCoreApplication::aboutToQuit, this, &MainApplication::saveSettings);
 
-    QTimer::singleShot(0, this, SLOT(postLaunch()));
+    QTimer::singleShot(0, this, &MainApplication::postLaunch);
 }
 
 MainApplication::~MainApplication()
@@ -426,7 +426,7 @@ BrowserWindow* MainApplication::createWindow(Qz::BrowserWindowType type, const Q
     }
 
     BrowserWindow* window = new BrowserWindow(type, startUrl);
-    connect(window, SIGNAL(destroyed(QObject*)), this, SLOT(windowDestroyed(QObject*)));
+    connect(window, &QObject::destroyed, this, &MainApplication::windowDestroyed);
 
     m_windows.prepend(window);
     return window;

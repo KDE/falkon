@@ -50,19 +50,19 @@ CookieManager::CookieManager(QWidget *parent)
     }
 
     // Stored Cookies
-    connect(ui->cookieTree, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), this, SLOT(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)));
-    connect(ui->removeAll, SIGNAL(clicked()), this, SLOT(removeAll()));
-    connect(ui->removeOne, SIGNAL(clicked()), this, SLOT(remove()));
-    connect(ui->close, SIGNAL(clicked(QAbstractButton*)), this, SLOT(close()));
-    connect(ui->close2, SIGNAL(clicked(QAbstractButton*)), this, SLOT(close()));
-    connect(ui->close3, SIGNAL(clicked(QAbstractButton*)), this, SLOT(close()));
-    connect(ui->search, SIGNAL(textChanged(QString)), this, SLOT(filterString(QString)));
+    connect(ui->cookieTree, &QTreeWidget::currentItemChanged, this, &CookieManager::currentItemChanged);
+    connect(ui->removeAll, &QAbstractButton::clicked, this, &CookieManager::removeAll);
+    connect(ui->removeOne, &QAbstractButton::clicked, this, &CookieManager::remove);
+    connect(ui->close, &QDialogButtonBox::clicked, this, &QWidget::close);
+    connect(ui->close2, &QDialogButtonBox::clicked, this, &QWidget::close);
+    connect(ui->close3, &QDialogButtonBox::clicked, this, &QWidget::close);
+    connect(ui->search, &QLineEdit::textChanged, this, &CookieManager::filterString);
 
     // Cookie Filtering
-    connect(ui->whiteAdd, SIGNAL(clicked()), this, SLOT(addWhitelist()));
-    connect(ui->whiteRemove, SIGNAL(clicked()), this, SLOT(removeWhitelist()));
+    connect(ui->whiteAdd, &QAbstractButton::clicked, this, &CookieManager::addWhitelist);
+    connect(ui->whiteRemove, &QAbstractButton::clicked, this, &CookieManager::removeWhitelist);
     connect(ui->blackAdd, SIGNAL(clicked()), this, SLOT(addBlacklist()));
-    connect(ui->blackRemove, SIGNAL(clicked()), this, SLOT(removeBlacklist()));
+    connect(ui->blackRemove, &QAbstractButton::clicked, this, &CookieManager::removeBlacklist);
 
     // Cookie Settings
     Settings settings;
@@ -89,9 +89,9 @@ CookieManager::CookieManager(QWidget *parent)
     ui->blackList->setSortingEnabled(true);
 
     QShortcut* removeShortcut = new QShortcut(QKeySequence("Del"), this);
-    connect(removeShortcut, SIGNAL(activated()), this, SLOT(deletePressed()));
+    connect(removeShortcut, &QShortcut::activated, this, &CookieManager::deletePressed);
 
-    connect(ui->search, SIGNAL(textChanged(QString)), this, SLOT(filterString(QString)));
+    connect(ui->search, &QLineEdit::textChanged, this, &CookieManager::filterString);
     connect(mApp->cookieJar(), &CookieJar::cookieAdded, this, &CookieManager::addCookie);
     connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, &CookieManager::removeCookie);
 

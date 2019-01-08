@@ -58,7 +58,7 @@ VerticalTabsWidget::VerticalTabsWidget(BrowserWindow *window)
     buttonAddTab->setToolTip(tr("New Tab"));
     buttonAddTab->setIcon(QIcon::fromTheme(QSL("list-add")));
     buttonAddTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-    connect(buttonAddTab, SIGNAL(clicked()), m_window, SLOT(addTab()));
+    connect(buttonAddTab, &QAbstractButton::clicked, m_window, &BrowserWindow::addTab);
 
     m_groupMenu = new QMenu(this);
     buttonAddTab->setMenu(m_groupMenu);

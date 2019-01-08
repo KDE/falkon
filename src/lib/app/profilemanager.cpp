@@ -44,7 +44,7 @@ void ProfileManager::initConfigDir()
         migrateFromQupZilla();
     }
 
-    if (QFileInfo::exists(dir.filePath(QLatin1String("profiles/profiles.ini")))) {
+    if (QFileInfo::exists(dir.filePath(QStringLiteral("profiles/profiles.ini")))) {
         return;
     }
 
@@ -54,22 +54,22 @@ void ProfileManager::initConfigDir()
         dir.mkpath(dir.absolutePath());
     }
 
-    dir.mkdir(QLatin1String("profiles"));
-    dir.cd(QLatin1String("profiles"));
+    dir.mkdir(QStringLiteral("profiles"));
+    dir.cd(QStringLiteral("profiles"));
 
     // $Config/profiles
-    QFile(dir.filePath(QLatin1String("profiles.ini"))).remove();
-    QFile(QLatin1String(":data/profiles.ini")).copy(dir.filePath(QLatin1String("profiles.ini")));
-    QFile(dir.filePath(QLatin1String("profiles.ini"))).setPermissions(QFile::ReadUser | QFile::WriteUser);
+    QFile(dir.filePath(QStringLiteral("profiles.ini"))).remove();
+    QFile(QStringLiteral(":data/profiles.ini")).copy(dir.filePath(QStringLiteral("profiles.ini")));
+    QFile(dir.filePath(QStringLiteral("profiles.ini"))).setPermissions(QFile::ReadUser | QFile::WriteUser);
 
-    dir.mkdir(QLatin1String("default"));
-    dir.cd(QLatin1String("default"));
+    dir.mkdir(QStringLiteral("default"));
+    dir.cd(QStringLiteral("default"));
 
     // $Config/profiles/default
-    QFile(QLatin1String(":data/bookmarks.json")).copy(dir.filePath(QLatin1String("bookmarks.json")));
-    QFile(dir.filePath(QLatin1String("bookmarks.json"))).setPermissions(QFile::ReadUser | QFile::WriteUser);
+    QFile(QStringLiteral(":data/bookmarks.json")).copy(dir.filePath(QStringLiteral("bookmarks.json")));
+    QFile(dir.filePath(QStringLiteral("bookmarks.json"))).setPermissions(QFile::ReadUser | QFile::WriteUser);
 
-    QFile versionFile(dir.filePath(QLatin1String("version")));
+    QFile versionFile(dir.filePath(QStringLiteral("version")));
     versionFile.open(QFile::WriteOnly);
     versionFile.write(Qz::VERSION);
     versionFile.close();
@@ -105,7 +105,7 @@ int ProfileManager::createProfile(const QString &profileName)
 
     dir.cd(profileName);
 
-    QFile versionFile(dir.filePath(QLatin1String("version")));
+    QFile versionFile(dir.filePath(QStringLiteral("version")));
     versionFile.open(QFile::WriteOnly);
     versionFile.write(Qz::VERSION);
     versionFile.close();
@@ -136,14 +136,14 @@ QString ProfileManager::currentProfile()
 QString ProfileManager::startingProfile()
 {
     QSettings settings(DataPaths::path(DataPaths::Profiles) + QLatin1String("/profiles.ini"), QSettings::IniFormat);
-    return settings.value(QLatin1String("Profiles/startProfile"), QLatin1String("default")).toString();
+    return settings.value(QStringLiteral("Profiles/startProfile"), QLatin1String("default")).toString();
 }
 
 // static
 void ProfileManager::setStartingProfile(const QString &profileName)
 {
     QSettings settings(DataPaths::path(DataPaths::Profiles) + QLatin1String("/profiles.ini"), QSettings::IniFormat);
-    settings.setValue(QLatin1String("Profiles/startProfile"), profileName);
+    settings.setValue(QStringLiteral("Profiles/startProfile"), profileName);
 }
 
 // static
@@ -162,7 +162,7 @@ void ProfileManager::updateCurrentProfile()
         newDir.mkdir(profileDir.dirName());
     }
 
-    QFile versionFile(profileDir.filePath(QLatin1String("version")));
+    QFile versionFile(profileDir.filePath(QStringLiteral("version")));
 
     // If file exists, just update the profile to current version
     if (versionFile.exists()) {
@@ -198,18 +198,18 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
         return;
     }
 
-    if (prof < Updater::Version("1.9.0")) {
+    if (prof < Updater::Version(QStringLiteral("1.9.0"))) {
         std::cout << "Falkon: Using profile from QupZilla " << qPrintable(profile) << " is not supported!" << std::endl;
         return;
     }
 
     // No change in 2.0
-    if (prof < Updater::Version("2.9.99")) {
+    if (prof < Updater::Version(QStringLiteral("2.9.99"))) {
         return;
     }
 
     // No change in 3.0
-    if (prof < Updater::Version("3.0.99")) {
+    if (prof < Updater::Version(QStringLiteral("3.0.99"))) {
         return;
     }
 }
@@ -218,10 +218,10 @@ void ProfileManager::copyDataToProfile()
 {
     QDir profileDir(DataPaths::currentProfilePath());
 
-    QFile browseData(profileDir.filePath(QLatin1String("browsedata.db")));
+    QFile browseData(profileDir.filePath(QStringLiteral("browsedata.db")));
 
     if (browseData.exists()) {
-        const QString browseDataBackup = QzTools::ensureUniqueFilename(profileDir.filePath(QLatin1String("browsedata-backup.db")));
+        const QString browseDataBackup = QzTools::ensureUniqueFilename(profileDir.filePath(QStringLiteral("browsedata-backup.db")));
         browseData.copy(browseDataBackup);
         browseData.remove();
 
@@ -245,7 +245,7 @@ void ProfileManager::copyDataToProfile()
 
         const QString text = "Incompatible profile version has been detected. To avoid losing your profile data, they were "
                              "backed up in following file:<br/><br/><b>" + browseDataBackup + "<br/></b>";
-        QMessageBox::warning(0, "Falkon: Incompatible profile version", text);
+        QMessageBox::warning(0, QStringLiteral("Falkon: Incompatible profile version"), text);
     }
 }
 
@@ -274,14 +274,14 @@ void ProfileManager::migrateFromQupZilla()
 
 void ProfileManager::connectDatabase()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase(QLatin1String("QSQLITE"));
+    QSqlDatabase db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"));
     if (!db.isValid()) {
         qCritical() << "Qt sqlite database driver is missing! Continuing without database....";
         return;
     }
 
     if (mApp->isPrivate()) {
-        db.setConnectOptions("QSQLITE_OPEN_READONLY");
+        db.setConnectOptions(QStringLiteral("QSQLITE_OPEN_READONLY"));
     }
 
     db.setDatabaseName(DataPaths::currentProfilePath() + QLatin1String("/browsedata.db"));

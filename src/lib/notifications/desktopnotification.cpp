@@ -33,7 +33,7 @@ DesktopNotification::DesktopNotification(bool setPosition)
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint | Qt::X11BypassWindowManagerHint);
 
     m_timer->setSingleShot(true);
-    connect(m_timer, SIGNAL(timeout()), this, SLOT(close()));
+    connect(m_timer, &QTimer::timeout, this, &QWidget::close);
 
     if (m_settingPosition) {
         setCursor(Qt::OpenHandCursor);

@@ -272,7 +272,7 @@ void WebPage::finished()
         if (info.isFile()) {
             if (!m_fileWatcher) {
                 m_fileWatcher = new DelayedFileWatcher(this);
-                connect(m_fileWatcher, SIGNAL(delayedFileChanged(QString)), this, SLOT(watchedFileChanged(QString)));
+                connect(m_fileWatcher, &DelayedFileWatcher::delayedFileChanged, this, &WebPage::watchedFileChanged);
             }
 
             const QString filePath = url().toLocalFile();
@@ -522,7 +522,7 @@ bool WebPage::javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, c
 
     QEventLoop eLoop;
     m_runningLoop = &eLoop;
-    connect(ui->buttonBox, SIGNAL(clicked(QAbstractButton*)), &eLoop, SLOT(quit()));
+    connect(ui->buttonBox, &QDialogButtonBox::clicked, &eLoop, &QEventLoop::quit);
 
     if (eLoop.exec() == 1) {
         return result;
@@ -568,7 +568,7 @@ bool WebPage::javaScriptConfirm(const QUrl &securityOrigin, const QString &msg)
 
     QEventLoop eLoop;
     m_runningLoop = &eLoop;
-    connect(ui->buttonBox, SIGNAL(clicked(QAbstractButton*)), &eLoop, SLOT(quit()));
+    connect(ui->buttonBox, &QDialogButtonBox::clicked, &eLoop, &QEventLoop::quit);
 
     if (eLoop.exec() == 1) {
         return false;
@@ -623,7 +623,7 @@ void WebPage::javaScriptAlert(const QUrl &securityOrigin, const QString &msg)
 
     QEventLoop eLoop;
     m_runningLoop = &eLoop;
-    connect(ui->buttonBox, SIGNAL(clicked(QAbstractButton*)), &eLoop, SLOT(quit()));
+    connect(ui->buttonBox, &QDialogButtonBox::clicked, &eLoop, &QEventLoop::quit);
 
     if (eLoop.exec() == 1) {
         return;

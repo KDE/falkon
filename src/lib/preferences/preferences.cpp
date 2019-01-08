@@ -195,8 +195,8 @@ Preferences::Preferences(BrowserWindow* window)
     connect(ui->afterLaunch, SIGNAL(currentIndexChanged(int)), this, SLOT(afterLaunchChanged(int)));
     connect(ui->newTab, SIGNAL(currentIndexChanged(int)), this, SLOT(newTabChanged(int)));
     if (m_window) {
-        connect(ui->useCurrentBut, SIGNAL(clicked()), this, SLOT(useActualHomepage()));
-        connect(ui->newTabUseCurrent, SIGNAL(clicked()), this, SLOT(useActualNewTab()));
+        connect(ui->useCurrentBut, &QAbstractButton::clicked, this, &Preferences::useActualHomepage);
+        connect(ui->newTabUseCurrent, &QAbstractButton::clicked, this, &Preferences::useActualNewTab);
     }
     else {
         ui->useCurrentBut->setEnabled(false);
@@ -214,8 +214,8 @@ Preferences::Preferences(BrowserWindow* window)
         }
     }
 
-    connect(ui->createProfile, SIGNAL(clicked()), this, SLOT(createProfile()));
-    connect(ui->deleteProfile, SIGNAL(clicked()), this, SLOT(deleteProfile()));
+    connect(ui->createProfile, &QAbstractButton::clicked, this, &Preferences::createProfile);
+    connect(ui->deleteProfile, &QAbstractButton::clicked, this, &Preferences::deleteProfile);
     connect(ui->startProfile, SIGNAL(currentIndexChanged(int)), this, SLOT(startProfileIndexChanged(int)));
     startProfileIndexChanged(ui->startProfile->currentIndex());
 
@@ -227,8 +227,8 @@ Preferences::Preferences(BrowserWindow* window)
     ui->showBookmarksToolbar->setChecked(settings.value("showBookmarksToolbar", false).toBool());
     ui->instantBookmarksToolbar->setDisabled(settings.value("showBookmarksToolbar", false).toBool());
     ui->showBookmarksToolbar->setDisabled(settings.value("instantBookmarksToolbar").toBool());
-    connect(ui->instantBookmarksToolbar, SIGNAL(toggled(bool)), ui->showBookmarksToolbar, SLOT(setDisabled(bool)));
-    connect(ui->showBookmarksToolbar, SIGNAL(toggled(bool)), ui->instantBookmarksToolbar, SLOT(setDisabled(bool)));
+    connect(ui->instantBookmarksToolbar, &QAbstractButton::toggled, ui->showBookmarksToolbar, &QWidget::setDisabled);
+    connect(ui->showBookmarksToolbar, &QAbstractButton::toggled, ui->instantBookmarksToolbar, &QWidget::setDisabled);
     ui->showNavigationToolbar->setChecked(settings.value("showNavigationToolbar", true).toBool());
     int currentSettingsPage = settings.value("settingsDialogPage", 0).toInt(0);
     settings.endGroup();
@@ -265,7 +265,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->progressBarColorSelector->setEnabled(pbInABuseCC);
     QColor pbColor = settings.value("CustomProgressColor", palette().color(QPalette::Highlight)).value<QColor>();
     setProgressBarColorIcon(pbColor);
-    connect(ui->customColorToolButton, SIGNAL(clicked(bool)), SLOT(selectCustomProgressBarColor()));
+    connect(ui->customColorToolButton, &QAbstractButton::clicked, this, &Preferences::selectCustomProgressBarColor);
     connect(ui->resetProgressBarcolor, SIGNAL(clicked()), SLOT(setProgressBarColorIcon()));
     settings.endGroup();
 
@@ -276,7 +276,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->searchWithDefaultEngine->setChecked(settings.value("SearchWithDefaultEngine", false).toBool());
     ui->showABSearchSuggestions->setEnabled(searchFromAB);
     ui->showABSearchSuggestions->setChecked(settings.value("showSearchSuggestions", true).toBool());
-    connect(ui->searchFromAddressBar, SIGNAL(toggled(bool)), this, SLOT(searchFromAddressBarChanged(bool)));
+    connect(ui->searchFromAddressBar, &QAbstractButton::toggled, this, &Preferences::searchFromAddressBarChanged);
     settings.endGroup();
 
     // BROWSING
@@ -305,8 +305,8 @@ Preferences::Preferences(BrowserWindow* window)
     ui->removeCache->setChecked(settings.value("deleteCacheOnClose", false).toBool());
     ui->cacheMB->setValue(settings.value("LocalCacheSize", 50).toInt());
     ui->cachePath->setText(settings.value("CachePath", QWebEngineProfile::defaultProfile()->cachePath()).toString());
-    connect(ui->allowCache, SIGNAL(clicked(bool)), this, SLOT(allowCacheChanged(bool)));
-    connect(ui->changeCachePath, SIGNAL(clicked()), this, SLOT(changeCachePathClicked()));
+    connect(ui->allowCache, &QAbstractButton::clicked, this, &Preferences::allowCacheChanged);
+    connect(ui->changeCachePath, &QAbstractButton::clicked, this, &Preferences::changeCachePathClicked);
     allowCacheChanged(ui->allowCache->isChecked());
 
     //PASSWORD MANAGER
@@ -320,18 +320,18 @@ Preferences::Preferences(BrowserWindow* window)
     if (!ui->saveHistory->isChecked()) {
         ui->deleteHistoryOnClose->setEnabled(false);
     }
-    connect(ui->saveHistory, SIGNAL(toggled(bool)), this, SLOT(saveHistoryChanged(bool)));
+    connect(ui->saveHistory, &QAbstractButton::toggled, this, &Preferences::saveHistoryChanged);
 
     // Html5Storage
     ui->html5storage->setChecked(settings.value("HTML5StorageEnabled", true).toBool());
     ui->deleteHtml5storageOnClose->setChecked(settings.value("deleteHTML5StorageOnClose", false).toBool());
-    connect(ui->html5storage, SIGNAL(toggled(bool)), this, SLOT(allowHtml5storageChanged(bool)));
+    connect(ui->html5storage, &QAbstractButton::toggled, this, &Preferences::allowHtml5storageChanged);
     // Other
     ui->doNotTrack->setChecked(settings.value("DoNotTrack", false).toBool());
 
     //CSS Style
     ui->userStyleSheet->setText(settings.value("userStyleSheet", "").toString());
-    connect(ui->chooseUserStylesheet, SIGNAL(clicked()), this, SLOT(chooseUserStyleClicked()));
+    connect(ui->chooseUserStylesheet, &QAbstractButton::clicked, this, &Preferences::chooseUserStyleClicked);
     settings.endGroup();
 
     //DOWNLOADS
@@ -348,12 +348,12 @@ Preferences::Preferences(BrowserWindow* window)
     ui->externalDownExecutable->setText(settings.value("ExternalManagerExecutable", "").toString());
     ui->externalDownArguments->setText(settings.value("ExternalManagerArguments", "").toString());
 
-    connect(ui->useExternalDownManager, SIGNAL(toggled(bool)), this, SLOT(useExternalDownManagerChanged(bool)));
+    connect(ui->useExternalDownManager, &QAbstractButton::toggled, this, &Preferences::useExternalDownManagerChanged);
 
 
-    connect(ui->useDefined, SIGNAL(toggled(bool)), this, SLOT(downLocChanged(bool)));
-    connect(ui->downButt, SIGNAL(clicked()), this, SLOT(chooseDownPath()));
-    connect(ui->chooseExternalDown, SIGNAL(clicked()), this, SLOT(chooseExternalDownloadManager()));
+    connect(ui->useDefined, &QAbstractButton::toggled, this, &Preferences::downLocChanged);
+    connect(ui->downButt, &QAbstractButton::clicked, this, &Preferences::chooseDownPath);
+    connect(ui->chooseExternalDown, &QAbstractButton::clicked, this, &Preferences::chooseExternalDownloadManager);
     downLocChanged(ui->useDefined->isChecked());
     useExternalDownManagerChanged(ui->useExternalDownManager->isChecked());
     settings.endGroup();
@@ -501,19 +501,19 @@ Preferences::Preferences(BrowserWindow* window)
     settings.endGroup();
 
     setManualProxyConfigurationEnabled(ui->manualProxy->isChecked());
-    connect(ui->manualProxy, SIGNAL(toggled(bool)), this, SLOT(setManualProxyConfigurationEnabled(bool)));
+    connect(ui->manualProxy, &QAbstractButton::toggled, this, &Preferences::setManualProxyConfigurationEnabled);
 
     //CONNECTS
-    connect(ui->buttonBox, SIGNAL(clicked(QAbstractButton*)), this, SLOT(buttonClicked(QAbstractButton*)));
-    connect(ui->cookieManagerBut, SIGNAL(clicked()), this, SLOT(showCookieManager()));
-    connect(ui->html5permissions, SIGNAL(clicked()), this, SLOT(showHtml5Permissions()));
-    connect(ui->preferredLanguages, SIGNAL(clicked()), this, SLOT(showAcceptLanguage()));
-    connect(ui->deleteHtml5storage, SIGNAL(clicked()), this, SLOT(deleteHtml5storage()));
-    connect(ui->uaManager, SIGNAL(clicked()), this, SLOT(openUserAgentManager()));
-    connect(ui->jsOptionsButton, SIGNAL(clicked()), this, SLOT(openJsOptions()));
-    connect(ui->searchEngines, SIGNAL(clicked()), this, SLOT(openSearchEnginesManager()));
+    connect(ui->buttonBox, &QDialogButtonBox::clicked, this, &Preferences::buttonClicked);
+    connect(ui->cookieManagerBut, &QAbstractButton::clicked, this, &Preferences::showCookieManager);
+    connect(ui->html5permissions, &QAbstractButton::clicked, this, &Preferences::showHtml5Permissions);
+    connect(ui->preferredLanguages, &QAbstractButton::clicked, this, &Preferences::showAcceptLanguage);
+    connect(ui->deleteHtml5storage, &QAbstractButton::clicked, this, &Preferences::deleteHtml5storage);
+    connect(ui->uaManager, &QAbstractButton::clicked, this, &Preferences::openUserAgentManager);
+    connect(ui->jsOptionsButton, &QAbstractButton::clicked, this, &Preferences::openJsOptions);
+    connect(ui->searchEngines, &QAbstractButton::clicked, this, &Preferences::openSearchEnginesManager);
 
-    connect(ui->listWidget, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)), this, SLOT(showStackedPage(QListWidgetItem*)));
+    connect(ui->listWidget, &QListWidget::currentItemChanged, this, &Preferences::showStackedPage);
     ui->listWidget->setItemSelected(ui->listWidget->itemAt(5, 5), true);
 
     ui->listWidget->setCurrentRow(currentSettingsPage);

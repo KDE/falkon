@@ -43,7 +43,7 @@ SiteIcon::SiteIcon(LocationBar *parent)
     m_updateTimer = new QTimer(this);
     m_updateTimer->setInterval(100);
     m_updateTimer->setSingleShot(true);
-    connect(m_updateTimer, SIGNAL(timeout()), this, SLOT(updateIcon()));
+    connect(m_updateTimer, &QTimer::timeout, this, &SiteIcon::updateIcon);
 }
 
 void SiteIcon::setBrowserWindow(BrowserWindow *window)
@@ -173,7 +173,7 @@ bool SiteIcon::showPopup()
     SiteInfoWidget* info = new SiteInfoWidget(m_window);
     info->showAt(parentWidget());
 
-    connect(info, SIGNAL(destroyed()), this, SLOT(popupClosed()));
+    connect(info, &QObject::destroyed, this, &SiteIcon::popupClosed);
 
     return true;
 }

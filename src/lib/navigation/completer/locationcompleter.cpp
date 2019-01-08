@@ -82,7 +82,7 @@ void LocationCompleter::complete(const QString &string)
     emit cancelRefreshJob();
 
     LocationCompleterRefreshJob* job = new LocationCompleterRefreshJob(trimmedStr);
-    connect(job, SIGNAL(finished()), this, SLOT(refreshJobFinished()));
+    connect(job, &LocationCompleterRefreshJob::finished, this, &LocationCompleter::refreshJobFinished);
     connect(this, SIGNAL(cancelRefreshJob()), job, SLOT(jobCancelled()));
 
     if (qzSettings->searchFromAddressBar && qzSettings->showABSearchSuggestions && trimmedStr.length() >= 2) {
@@ -165,14 +165,14 @@ void LocationCompleter::slotPopupClosed()
     m_popupClosed = true;
     m_oldSuggestions.clear();
 
-    disconnect(s_view, SIGNAL(closed()), this, SLOT(slotPopupClosed()));
-    disconnect(s_view, SIGNAL(indexActivated(QModelIndex)), this, SLOT(indexActivated(QModelIndex)));
-    disconnect(s_view, SIGNAL(indexCtrlActivated(QModelIndex)), this, SLOT(indexCtrlActivated(QModelIndex)));
-    disconnect(s_view, SIGNAL(indexShiftActivated(QModelIndex)), this, SLOT(indexShiftActivated(QModelIndex)));
-    disconnect(s_view, SIGNAL(indexDeleteRequested(QModelIndex)), this, SLOT(indexDeleteRequested(QModelIndex)));
+    disconnect(s_view, &LocationCompleterView::closed, this, &LocationCompleter::slotPopupClosed);
+    disconnect(s_view, &LocationCompleterView::indexActivated, this, &LocationCompleter::indexActivated);
+    disconnect(s_view, &LocationCompleterView::indexCtrlActivated, this, &LocationCompleter::indexCtrlActivated);
+    disconnect(s_view, &LocationCompleterView::indexShiftActivated, this, &LocationCompleter::indexShiftActivated);
+    disconnect(s_view, &LocationCompleterView::indexDeleteRequested, this, &LocationCompleter::indexDeleteRequested);
     disconnect(s_view, &LocationCompleterView::loadRequested, this, &LocationCompleter::loadRequested);
     disconnect(s_view, &LocationCompleterView::searchEnginesDialogRequested, this, &LocationCompleter::openSearchEnginesDialog);
-    disconnect(s_view->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)), this, SLOT(currentChanged(QModelIndex)));
+    disconnect(s_view->selectionModel(), &QItemSelectionModel::currentChanged, this, &LocationCompleter::currentChanged);
 
     emit popupClosed();
 }
@@ -404,14 +404,14 @@ void LocationCompleter::showPopup()
     s_view->setFocusProxy(m_locationBar);
     s_view->setCurrentIndex(QModelIndex());
 
-    connect(s_view, SIGNAL(closed()), this, SLOT(slotPopupClosed()));
-    connect(s_view, SIGNAL(indexActivated(QModelIndex)), this, SLOT(indexActivated(QModelIndex)));
-    connect(s_view, SIGNAL(indexCtrlActivated(QModelIndex)), this, SLOT(indexCtrlActivated(QModelIndex)));
-    connect(s_view, SIGNAL(indexShiftActivated(QModelIndex)), this, SLOT(indexShiftActivated(QModelIndex)));
-    connect(s_view, SIGNAL(indexDeleteRequested(QModelIndex)), this, SLOT(indexDeleteRequested(QModelIndex)));
+    connect(s_view, &LocationCompleterView::closed, this, &LocationCompleter::slotPopupClosed);
+    connect(s_view, &LocationCompleterView::indexActivated, this, &LocationCompleter::indexActivated);
+    connect(s_view, &LocationCompleterView::indexCtrlActivated, this, &LocationCompleter::indexCtrlActivated);
+    connect(s_view, &LocationCompleterView::indexShiftActivated, this, &LocationCompleter::indexShiftActivated);
+    connect(s_view, &LocationCompleterView::indexDeleteRequested, this, &LocationCompleter::indexDeleteRequested);
     connect(s_view, &LocationCompleterView::loadRequested, this, &LocationCompleter::loadRequested);
     connect(s_view, &LocationCompleterView::searchEnginesDialogRequested, this, &LocationCompleter::openSearchEnginesDialog);
-    connect(s_view->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)), this, SLOT(currentChanged(QModelIndex)));
+    connect(s_view->selectionModel(), &QItemSelectionModel::currentChanged, this, &LocationCompleter::currentChanged);
 
     s_view->createWinId();
     s_view->windowHandle()->setTransientParent(m_window->windowHandle());

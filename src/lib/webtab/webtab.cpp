@@ -177,8 +177,8 @@ WebTab::WebTab(QWidget *parent)
     nlayout->setContentsMargins(0, 0, 0, 0);
     nlayout->setSpacing(1);
 
-    connect(m_webView, SIGNAL(showNotification(QWidget*)), this, SLOT(showNotification(QWidget*)));
-    connect(m_webView, SIGNAL(loadFinished(bool)), this, SLOT(loadFinished()));
+    connect(m_webView, &WebView::showNotification, this, &WebTab::showNotification);
+    connect(m_webView, &QWebEngineView::loadFinished, this, &WebTab::loadFinished);
     connect(m_webView, &TabbedWebView::titleChanged, this, &WebTab::titleWasChanged);
     connect(m_webView, &TabbedWebView::titleChanged, this, &WebTab::titleChanged);
     connect(m_webView, &TabbedWebView::iconChanged, this, &WebTab::iconChanged);

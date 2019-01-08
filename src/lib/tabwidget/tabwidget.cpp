@@ -96,28 +96,28 @@ TabWidget::TabWidget(BrowserWindow *window, QWidget *parent)
     connect(this, &TabWidget::changed, mApp, &MainApplication::changeOccurred);
     connect(this, &TabStackedWidget::pinStateChanged, this, &TabWidget::changed);
 
-    connect(m_tabBar, SIGNAL(tabCloseRequested(int)), this, SLOT(requestCloseTab(int)));
+    connect(m_tabBar, &ComboTabBar::tabCloseRequested, this, &TabWidget::requestCloseTab);
     connect(m_tabBar, &TabBar::tabMoved, this, &TabWidget::tabWasMoved);
 
-    connect(m_tabBar, SIGNAL(moveAddTabButton(int)), this, SLOT(moveAddTabButton(int)));
+    connect(m_tabBar, &TabBar::moveAddTabButton, this, &TabWidget::moveAddTabButton);
 
-    connect(mApp, SIGNAL(settingsReloaded()), this, SLOT(loadSettings()));
+    connect(mApp, &MainApplication::settingsReloaded, this, &TabWidget::loadSettings);
 
     m_menuTabs = new MenuTabs(this);
-    connect(m_menuTabs, SIGNAL(closeTab(int)), this, SLOT(requestCloseTab(int)));
+    connect(m_menuTabs, &MenuTabs::closeTab, this, &TabWidget::requestCloseTab);
 
     m_menuClosedTabs = new QMenu(this);
 
     // AddTab button displayed next to last tab
     m_buttonAddTab = new AddTabButton(this, m_tabBar);
     m_buttonAddTab->setProperty("outside-tabbar", false);
-    connect(m_buttonAddTab, SIGNAL(clicked()), m_window, SLOT(addTab()));
+    connect(m_buttonAddTab, &QAbstractButton::clicked, m_window, &BrowserWindow::addTab);
 
     // AddTab button displayed outside tabbar (as corner widget)
     m_buttonAddTab2 = new AddTabButton(this, m_tabBar);
     m_buttonAddTab2->setProperty("outside-tabbar", true);
     m_buttonAddTab2->hide();
-    connect(m_buttonAddTab2, SIGNAL(clicked()), m_window, SLOT(addTab()));
+    connect(m_buttonAddTab2, &QAbstractButton::clicked, m_window, &BrowserWindow::addTab);
 
     // ClosedTabs button displayed as a permanent corner widget
     m_buttonClosedTabs = new ToolButton(m_tabBar);
@@ -128,7 +128,7 @@ TabWidget::TabWidget(BrowserWindow *window, QWidget *parent)
     m_buttonClosedTabs->setAutoRaise(true);
     m_buttonClosedTabs->setFocusPolicy(Qt::NoFocus);
     m_buttonClosedTabs->setShowMenuInside(true);
-    connect(m_buttonClosedTabs, SIGNAL(aboutToShowMenu()), this, SLOT(aboutToShowClosedTabsMenu()));
+    connect(m_buttonClosedTabs, &ToolButton::aboutToShowMenu, this, &TabWidget::aboutToShowClosedTabsMenu);
 
     // ListTabs button is showed only when tabbar overflows
     m_buttonListTabs = new ToolButton(m_tabBar);
@@ -140,12 +140,12 @@ TabWidget::TabWidget(BrowserWindow *window, QWidget *parent)
     m_buttonListTabs->setFocusPolicy(Qt::NoFocus);
     m_buttonListTabs->setShowMenuInside(true);
     m_buttonListTabs->hide();
-    connect(m_buttonListTabs, SIGNAL(aboutToShowMenu()), this, SLOT(aboutToShowTabsMenu()));
+    connect(m_buttonListTabs, &ToolButton::aboutToShowMenu, this, &TabWidget::aboutToShowTabsMenu);
 
     m_tabBar->addCornerWidget(m_buttonAddTab2, Qt::TopRightCorner);
     m_tabBar->addCornerWidget(m_buttonClosedTabs, Qt::TopRightCorner);
     m_tabBar->addCornerWidget(m_buttonListTabs, Qt::TopRightCorner);
-    connect(m_tabBar, SIGNAL(overFlowChanged(bool)), this, SLOT(tabBarOverFlowChanged(bool)));
+    connect(m_tabBar, &ComboTabBar::overFlowChanged, this, &TabWidget::tabBarOverFlowChanged);
 
     loadSettings();
 }
@@ -275,7 +275,7 @@ void TabWidget::aboutToShowTabsMenu()
         action->setText(QzTools::truncatedText(title, 40));
 
         action->setData(QVariant::fromValue(qobject_cast<QWidget*>(tab)));
-        connect(action, SIGNAL(triggered()), this, SLOT(actionChangeIndex()));
+        connect(action, &QAction::triggered, this, &TabWidget::actionChangeIndex);
         m_menuTabs->addAction(action);
     }
 }
@@ -296,8 +296,8 @@ void TabWidget::aboutToShowClosedTabsMenu()
     }
     else {
         m_menuClosedTabs->addSeparator();
-        m_menuClosedTabs->addAction(tr("Restore All Closed Tabs"), this, SLOT(restoreAllClosedTabs()));
-        m_menuClosedTabs->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear list"), this, SLOT(clearClosedTabsList()));
+        m_menuClosedTabs->addAction(tr("Restore All Closed Tabs"), this, &TabWidget::restoreAllClosedTabs);
+        m_menuClosedTabs->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear list"), this, &TabWidget::clearClosedTabsList);
     }
 }
 
@@ -361,9 +361,9 @@ int TabWidget::addView(const LoadRequest &req, const QString &title, const Qz::N
         m_lastBackgroundTab = webTab;
     }
 
-    connect(webTab->webView(), SIGNAL(wantsCloseTab(int)), this, SLOT(closeTab(int)));
-    connect(webTab->webView(), SIGNAL(urlChanged(QUrl)), this, SIGNAL(changed()));
-    connect(webTab->webView(), SIGNAL(ipChanged(QString)), m_window->ipLabel(), SLOT(setText(QString)));
+    connect(webTab->webView(), &TabbedWebView::wantsCloseTab, this, &TabWidget::closeTab);
+    connect(webTab->webView(), &QWebEngineView::urlChanged, this, &TabWidget::changed);
+    connect(webTab->webView(), &TabbedWebView::ipChanged, m_window->ipLabel(), &QLabel::setText);
     connect(webTab->webView(), &WebView::urlChanged, this, [this](const QUrl &url) {
         if (url != m_urlOnNewTab)
             m_currentTabFresh = false;
@@ -410,9 +410,9 @@ int TabWidget::insertView(int index, WebTab *tab, const Qz::NewTabPositionFlags 
         m_lastBackgroundTab = tab;
     }
 
-    connect(tab->webView(), SIGNAL(wantsCloseTab(int)), this, SLOT(closeTab(int)));
-    connect(tab->webView(), SIGNAL(urlChanged(QUrl)), this, SIGNAL(changed()));
-    connect(tab->webView(), SIGNAL(ipChanged(QString)), m_window->ipLabel(), SLOT(setText(QString)));
+    connect(tab->webView(), &TabbedWebView::wantsCloseTab, this, &TabWidget::closeTab);
+    connect(tab->webView(), &QWebEngineView::urlChanged, this, &TabWidget::changed);
+    connect(tab->webView(), &TabbedWebView::ipChanged, m_window->ipLabel(), &QLabel::setText);
 
     // Make sure user notice opening new background tabs
     if (!(openFlags & Qz::NT_SelectedTab)) {
@@ -454,9 +454,9 @@ void TabWidget::closeTab(int index)
 
     TabbedWebView *webView = webTab->webView();
     m_locationBars->removeWidget(webView->webTab()->locationBar());
-    disconnect(webView, SIGNAL(wantsCloseTab(int)), this, SLOT(closeTab(int)));
-    disconnect(webView, SIGNAL(urlChanged(QUrl)), this, SIGNAL(changed()));
-    disconnect(webView, SIGNAL(ipChanged(QString)), m_window->ipLabel(), SLOT(setText(QString)));
+    disconnect(webView, &TabbedWebView::wantsCloseTab, this, &TabWidget::closeTab);
+    disconnect(webView, &QWebEngineView::urlChanged, this, &TabWidget::changed);
+    disconnect(webView, &TabbedWebView::ipChanged, m_window->ipLabel(), &QLabel::setText);
 
     m_lastBackgroundTab = nullptr;
 
@@ -690,9 +690,9 @@ void TabWidget::detachTab(WebTab* tab)
     }
 
     m_locationBars->removeWidget(tab->locationBar());
-    disconnect(tab->webView(), SIGNAL(wantsCloseTab(int)), this, SLOT(closeTab(int)));
-    disconnect(tab->webView(), SIGNAL(urlChanged(QUrl)), this, SIGNAL(changed()));
-    disconnect(tab->webView(), SIGNAL(ipChanged(QString)), m_window->ipLabel(), SLOT(setText(QString)));
+    disconnect(tab->webView(), &TabbedWebView::wantsCloseTab, this, &TabWidget::closeTab);
+    disconnect(tab->webView(), &QWebEngineView::urlChanged, this, &TabWidget::changed);
+    disconnect(tab->webView(), &TabbedWebView::ipChanged, m_window->ipLabel(), &QLabel::setText);
 
     const int index = tab->tabIndex();
 

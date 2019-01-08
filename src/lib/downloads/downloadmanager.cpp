@@ -65,10 +65,10 @@ DownloadManager::DownloadManager(QWidget* parent)
     ui->clearButton->setIcon(QIcon::fromTheme("edit-clear"));
     QzTools::centerWidgetOnScreen(this);
 
-    connect(ui->clearButton, SIGNAL(clicked()), this, SLOT(clearList()));
+    connect(ui->clearButton, &QAbstractButton::clicked, this, &DownloadManager::clearList);
 
     QShortcut* clearShortcut = new QShortcut(QKeySequence("CTRL+L"), this);
-    connect(clearShortcut, SIGNAL(activated()), this, SLOT(clearList()));
+    connect(clearShortcut, &QShortcut::activated, this, &DownloadManager::clearList);
 
     loadSettings();
 
@@ -400,8 +400,8 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
     DownloadItem* downItem = new DownloadItem(listItem, downloadItem, QFileInfo(downloadPath).absolutePath(), QFileInfo(downloadPath).fileName(), openFile, this);
     downItem->setDownTimer(downloadTimer);
     downItem->startDownloading();
-    connect(downItem, SIGNAL(deleteItem(DownloadItem*)), this, SLOT(deleteItem(DownloadItem*)));
-    connect(downItem, SIGNAL(downloadFinished(bool)), this, SLOT(downloadFinished(bool)));
+    connect(downItem, &DownloadItem::deleteItem, this, &DownloadManager::deleteItem);
+    connect(downItem, &DownloadItem::downloadFinished, this, &DownloadManager::downloadFinished);
     ui->list->setItemWidget(listItem, downItem);
     listItem->setSizeHint(downItem->sizeHint());
     downItem->show();

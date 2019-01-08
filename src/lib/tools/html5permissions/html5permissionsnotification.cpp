@@ -68,9 +68,9 @@ HTML5PermissionsNotification::HTML5PermissionsNotification(const QUrl &origin, Q
         break;
     }
 
-    connect(ui->allow, SIGNAL(clicked()), this, SLOT(grantPermissions()));
-    connect(ui->deny, SIGNAL(clicked()), this, SLOT(denyPermissions()));
-    connect(ui->close, SIGNAL(clicked()), this, SLOT(denyPermissions()));
+    connect(ui->allow, &QAbstractButton::clicked, this, &HTML5PermissionsNotification::grantPermissions);
+    connect(ui->deny, &QAbstractButton::clicked, this, &HTML5PermissionsNotification::denyPermissions);
+    connect(ui->close, &QAbstractButton::clicked, this, &HTML5PermissionsNotification::denyPermissions);
 
     connect(m_page.data(), &QWebEnginePage::loadStarted, this, &QObject::deleteLater);
     connect(m_page.data(), &QWebEnginePage::featurePermissionRequestCanceled, this, [this](const QUrl &origin, QWebEnginePage::Feature feature) {

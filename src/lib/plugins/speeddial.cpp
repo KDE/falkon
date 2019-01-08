@@ -40,8 +40,8 @@ SpeedDial::SpeedDial(QObject* parent)
     , m_regenerateScript(true)
 {
     m_autoSaver = new AutoSaver(this);
-    connect(m_autoSaver, SIGNAL(save()), this, SLOT(saveSettings()));
-    connect(this, SIGNAL(pagesChanged()), m_autoSaver, SLOT(changeOccurred()));
+    connect(m_autoSaver, &AutoSaver::save, this, &SpeedDial::saveSettings);
+    connect(this, &SpeedDial::pagesChanged, m_autoSaver, &AutoSaver::changeOccurred);
 }
 
 SpeedDial::~SpeedDial()
@@ -261,7 +261,7 @@ void SpeedDial::loadThumbnail(const QString &url, bool loadTitle)
     PageThumbnailer* thumbnailer = new PageThumbnailer(this);
     thumbnailer->setUrl(QUrl::fromEncoded(url.toUtf8()));
     thumbnailer->setLoadTitle(loadTitle);
-    connect(thumbnailer, SIGNAL(thumbnailCreated(QPixmap)), this, SLOT(thumbnailCreated(QPixmap)));
+    connect(thumbnailer, &PageThumbnailer::thumbnailCreated, this, &SpeedDial::thumbnailCreated);
 
     thumbnailer->start();
 }

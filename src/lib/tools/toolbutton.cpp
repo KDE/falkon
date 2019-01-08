@@ -101,10 +101,10 @@ void ToolButton::setMenu(QMenu* menu)
     Q_ASSERT(menu);
 
     if (m_menu)
-        disconnect(m_menu, SIGNAL(aboutToHide()), this, SLOT(menuAboutToHide()));
+        disconnect(m_menu, &QMenu::aboutToHide, this, &ToolButton::menuAboutToHide);
 
     m_menu = menu;
-    connect(m_menu, SIGNAL(aboutToHide()), this, SLOT(menuAboutToHide()));
+    connect(m_menu, &QMenu::aboutToHide, this, &ToolButton::menuAboutToHide);
 }
 
 bool ToolButton::showMenuInside() const

@@ -50,8 +50,8 @@ DownloadOptionsDialog::DownloadOptionsDialog(const QString &fileName, QWebEngine
 
     ui->buttonBox->setFocus();
 
-    connect(ui->copyDownloadLink, SIGNAL(clicked(QPoint)), this, SLOT(copyDownloadLink()));
-    connect(this, SIGNAL(finished(int)), this, SLOT(emitDialogFinished(int)));
+    connect(ui->copyDownloadLink, &ClickableLabel::clicked, this, &DownloadOptionsDialog::copyDownloadLink);
+    connect(this, &QDialog::finished, this, &DownloadOptionsDialog::emitDialogFinished);
 }
 
 void DownloadOptionsDialog::showExternalManagerOption(bool show)

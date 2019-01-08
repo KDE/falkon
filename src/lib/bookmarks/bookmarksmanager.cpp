@@ -41,18 +41,18 @@ BookmarksManager::BookmarksManager(BrowserWindow* window, QWidget* parent)
     ui->setupUi(this);
     ui->tree->setViewType(BookmarksTreeView::BookmarksManagerViewType);
 
-    connect(ui->tree, SIGNAL(bookmarkActivated(BookmarkItem*)), this, SLOT(bookmarkActivated(BookmarkItem*)));
-    connect(ui->tree, SIGNAL(bookmarkCtrlActivated(BookmarkItem*)), this, SLOT(bookmarkCtrlActivated(BookmarkItem*)));
-    connect(ui->tree, SIGNAL(bookmarkShiftActivated(BookmarkItem*)), this, SLOT(bookmarkShiftActivated(BookmarkItem*)));
+    connect(ui->tree, &BookmarksTreeView::bookmarkActivated, this, &BookmarksManager::bookmarkActivated);
+    connect(ui->tree, &BookmarksTreeView::bookmarkCtrlActivated, this, &BookmarksManager::bookmarkCtrlActivated);
+    connect(ui->tree, &BookmarksTreeView::bookmarkShiftActivated, this, &BookmarksManager::bookmarkShiftActivated);
     connect(ui->tree, SIGNAL(bookmarksSelected(QList<BookmarkItem*>)), this, SLOT(bookmarksSelected(QList<BookmarkItem*>)));
-    connect(ui->tree, SIGNAL(contextMenuRequested(QPoint)), this, SLOT(createContextMenu(QPoint)));
+    connect(ui->tree, &BookmarksTreeView::contextMenuRequested, this, &BookmarksManager::createContextMenu);
 
     // Box for editing bookmarks
     updateEditBox(nullptr);
-    connect(ui->title, SIGNAL(textEdited(QString)), this, SLOT(bookmarkEdited()));
-    connect(ui->address, SIGNAL(textEdited(QString)), this, SLOT(bookmarkEdited()));
-    connect(ui->keyword, SIGNAL(textEdited(QString)), this, SLOT(bookmarkEdited()));
-    connect(ui->description, SIGNAL(textChanged()), this, SLOT(descriptionEdited()));
+    connect(ui->title, &QLineEdit::textEdited, this, &BookmarksManager::bookmarkEdited);
+    connect(ui->address, &QLineEdit::textEdited, this, &BookmarksManager::bookmarkEdited);
+    connect(ui->keyword, &QLineEdit::textEdited, this, &BookmarksManager::bookmarkEdited);
+    connect(ui->description, &QPlainTextEdit::textChanged, this, &BookmarksManager::descriptionEdited);
 }
 
 BookmarksManager::~BookmarksManager()
@@ -108,15 +108,15 @@ void BookmarksManager::createContextMenu(const QPoint &pos)
 
     menu.addSeparator();
     menu.addAction(tr("New Bookmark"), this, SLOT(addBookmark()));
-    menu.addAction(tr("New Folder"), this, SLOT(addFolder()));
-    menu.addAction(tr("New Separator"), this, SLOT(addSeparator()));
+    menu.addAction(tr("New Folder"), this, &BookmarksManager::addFolder);
+    menu.addAction(tr("New Separator"), this, &BookmarksManager::addSeparator);
     menu.addSeparator();
     QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"));
 
     connect(actNewTab, SIGNAL(triggered()), this, SLOT(openBookmarkInNewTab()));
     connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewWindow()));
     connect(actNewPrivateWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewPrivateWindow()));
-    connect(actDelete, SIGNAL(triggered()), this, SLOT(deleteBookmarks()));
+    connect(actDelete, &QAction::triggered, this, &BookmarksManager::deleteBookmarks);
 
     bool canBeDeleted = false;
     QList<BookmarkItem*> items = ui->tree->selectedBookmarks();
@@ -279,7 +279,7 @@ void BookmarksManager::updateEditBox(BookmarkItem* item)
     m_blockDescriptionChangedSignal = false;
 
     // Prevent flickering
-    QTimer::singleShot(10, this, SLOT(enableUpdates()));
+    QTimer::singleShot(10, this, &BookmarksManager::enableUpdates);
 }
 
 bool BookmarksManager::bookmarkEditable(BookmarkItem* item) const

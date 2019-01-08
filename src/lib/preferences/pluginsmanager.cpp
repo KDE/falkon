@@ -47,9 +47,9 @@ PluginsManager::PluginsManager(QWidget* parent)
 
     ui->list->setEnabled(appPluginsEnabled);
 
-    connect(ui->butSettings, SIGNAL(clicked()), this, SLOT(settingsClicked()));
-    connect(ui->list, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)), this, SLOT(currentChanged(QListWidgetItem*)));
-    connect(ui->list, SIGNAL(itemChanged(QListWidgetItem*)), this, SLOT(itemChanged(QListWidgetItem*)));
+    connect(ui->butSettings, &QAbstractButton::clicked, this, &PluginsManager::settingsClicked);
+    connect(ui->list, &QListWidget::currentItemChanged, this, &PluginsManager::currentChanged);
+    connect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
 
     ui->list->setItemDelegate(new PluginListDelegate(ui->list));
 }
@@ -88,7 +88,7 @@ void PluginsManager::refresh()
 {
     ui->list->clear();
     ui->butSettings->setEnabled(false);
-    disconnect(ui->list, SIGNAL(itemChanged(QListWidgetItem*)), this, SLOT(itemChanged(QListWidgetItem*)));
+    disconnect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
 
     const QList<Plugins::Plugin> &allPlugins = mApp->plugins()->getAvailablePlugins();
 
@@ -119,7 +119,7 @@ void PluginsManager::refresh()
 
     sortItems();
 
-    connect(ui->list, SIGNAL(itemChanged(QListWidgetItem*)), this, SLOT(itemChanged(QListWidgetItem*)));
+    connect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
 }
 
 void PluginsManager::sortItems()
@@ -177,7 +177,7 @@ void PluginsManager::itemChanged(QListWidgetItem* item)
         mApp->plugins()->unloadPlugin(&plugin);
     }
 
-    disconnect(ui->list, SIGNAL(itemChanged(QListWidgetItem*)), this, SLOT(itemChanged(QListWidgetItem*)));
+    disconnect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
 
     if (item->checkState() == Qt::Checked && !plugin.isLoaded()) {
         item->setCheckState(Qt::Unchecked);
@@ -186,7 +186,7 @@ void PluginsManager::itemChanged(QListWidgetItem* item)
 
     item->setData(Qt::UserRole + 10, QVariant::fromValue(plugin));
 
-    connect(ui->list, SIGNAL(itemChanged(QListWidgetItem*)), this, SLOT(itemChanged(QListWidgetItem*)));
+    connect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
 
 
     currentChanged(ui->list->currentItem());

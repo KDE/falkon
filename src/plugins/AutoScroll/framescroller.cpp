@@ -30,7 +30,7 @@ FrameScroller::FrameScroller(QObject* parent)
 {
     m_timer = new QTimer(this);
     m_timer->setInterval(10);
-    connect(m_timer, SIGNAL(timeout()), this, SLOT(scrollStep()));
+    connect(m_timer, &QTimer::timeout, this, &FrameScroller::scrollStep);
 }
 
 void FrameScroller::setPage(WebPage *page)

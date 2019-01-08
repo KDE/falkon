@@ -104,12 +104,12 @@ TabBar::TabBar(BrowserWindow* window, TabWidget* tabWidget)
     setDrawBase(false);
     setMovable(true);
 
-    connect(this, SIGNAL(currentChanged(int)), this, SLOT(currentTabChanged(int)));
+    connect(this, &ComboTabBar::currentChanged, this, &TabBar::currentTabChanged);
 
     // ComboTabBar features
     setUsesScrollButtons(true);
     setCloseButtonsToolTip(BrowserWindow::tr("Close Tab"));
-    connect(this, SIGNAL(overFlowChanged(bool)), this, SLOT(overflowChanged(bool)));
+    connect(this, &ComboTabBar::overFlowChanged, this, &TabBar::overflowChanged);
 
     tabMetrics()->init();
 

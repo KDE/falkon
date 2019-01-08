@@ -72,8 +72,8 @@ DownloadItem::DownloadItem(QListWidgetItem *item, QWebEngineDownloadItem* downlo
 
     setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(customContextMenuRequested(QPoint)));
-    connect(ui->button, SIGNAL(clicked(QPoint)), this, SLOT(stop()));
-    connect(manager, SIGNAL(resized(QSize)), this, SLOT(parentResized(QSize)));
+    connect(ui->button, &ClickableLabel::clicked, this, &DownloadItem::stop);
+    connect(manager, &DownloadManager::resized, this, &DownloadItem::parentResized);
 }
 
 void DownloadItem::startDownloading()
@@ -279,14 +279,14 @@ void DownloadItem::mouseDoubleClickEvent(QMouseEvent* e)
 void DownloadItem::customContextMenuRequested(const QPoint &pos)
 {
     QMenu menu;
-    menu.addAction(QIcon::fromTheme("document-open"), tr("Open File"), this, SLOT(openFile()));
+    menu.addAction(QIcon::fromTheme("document-open"), tr("Open File"), this, &DownloadItem::openFile);
 
-    menu.addAction(tr("Open Folder"), this, SLOT(openFolder()));
+    menu.addAction(tr("Open Folder"), this, &DownloadItem::openFolder);
     menu.addSeparator();
-    menu.addAction(QIcon::fromTheme("edit-copy"), tr("Copy Download Link"), this, SLOT(copyDownloadLink()));
+    menu.addAction(QIcon::fromTheme("edit-copy"), tr("Copy Download Link"), this, &DownloadItem::copyDownloadLink);
     menu.addSeparator();
-    menu.addAction(QIcon::fromTheme("process-stop"), tr("Cancel downloading"), this, SLOT(stop()))->setEnabled(m_downloading);
-    menu.addAction(QIcon::fromTheme("list-remove"), tr("Remove From List"), this, SLOT(clear()))->setEnabled(!m_downloading);
+    menu.addAction(QIcon::fromTheme("process-stop"), tr("Cancel downloading"), this, &DownloadItem::stop)->setEnabled(m_downloading);
+    menu.addAction(QIcon::fromTheme("list-remove"), tr("Remove From List"), this, &DownloadItem::clear)->setEnabled(!m_downloading);
 
     if (m_downloading || ui->downloadInfo->text().startsWith(tr("Cancelled")) || ui->downloadInfo->text().startsWith(tr("Error"))) {
         menu.actions().at(0)->setEnabled(false);

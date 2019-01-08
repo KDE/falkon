@@ -32,7 +32,7 @@ AutoScrollSettings::AutoScrollSettings(AutoScroller* scroller, QWidget* parent)
     ui->iconLabel->setPixmap(QIcon(QStringLiteral(":/autoscroll/data/scroll_all.png")).pixmap(32));
 
     connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(accepted()));
-    connect(ui->buttonBox, SIGNAL(rejected()), this, SLOT(close()));
+    connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &QWidget::close);
 }
 
 AutoScrollSettings::~AutoScrollSettings()

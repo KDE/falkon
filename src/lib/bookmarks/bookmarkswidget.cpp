@@ -123,20 +123,20 @@ void BookmarksWidget::init()
 
         Q_ASSERT(m_bookmark->parent());
         ui->folderButton->setSelectedFolder(m_bookmark->parent());
-        connect(ui->folderButton, SIGNAL(selectedFolderChanged(BookmarkItem*)), SLOT(bookmarkEdited()));
+        connect(ui->folderButton, &BookmarksFoldersButton::selectedFolderChanged, this, &BookmarksWidget::bookmarkEdited);
     }
 
-    connect(ui->speeddialButton, SIGNAL(clicked()), this, SLOT(toggleSpeedDial()));
-    connect(ui->bookmarksButton, SIGNAL(clicked()), this, SLOT(toggleBookmark()));
+    connect(ui->speeddialButton, &QAbstractButton::clicked, this, &BookmarksWidget::toggleSpeedDial);
+    connect(ui->bookmarksButton, &QAbstractButton::clicked, this, &BookmarksWidget::toggleBookmark);
 
 }
 
 void BookmarksWidget::closePopup()
 {
     // Prevent clicking again on buttons while popup is being closed
-    disconnect(ui->speeddialButton, SIGNAL(clicked()), this, SLOT(toggleSpeedDial()));
-    disconnect(ui->bookmarksButton, SIGNAL(clicked()), this, SLOT(toggleBookmark()));
+    disconnect(ui->speeddialButton, &QAbstractButton::clicked, this, &BookmarksWidget::toggleSpeedDial);
+    disconnect(ui->bookmarksButton, &QAbstractButton::clicked, this, &BookmarksWidget::toggleBookmark);
 
-    QTimer::singleShot(HIDE_DELAY, this, SLOT(close()));
+    QTimer::singleShot(HIDE_DELAY, this, &QWidget::close);
 }
 

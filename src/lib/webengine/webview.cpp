@@ -753,10 +753,10 @@ void WebView::createPageContextMenu(QMenu* menu)
     // Special menu for Speed Dial page
     if (url().toString() == QL1S("falkon:speeddial")) {
         menu->addSeparator();
-        menu->addAction(QIcon::fromTheme("list-add"), tr("&Add New Page"), this, SLOT(addSpeedDial()));
-        menu->addAction(IconProvider::settingsIcon(), tr("&Configure Speed Dial"), this, SLOT(configureSpeedDial()));
+        menu->addAction(QIcon::fromTheme("list-add"), tr("&Add New Page"), this, &WebView::addSpeedDial);
+        menu->addAction(IconProvider::settingsIcon(), tr("&Configure Speed Dial"), this, &WebView::configureSpeedDial);
         menu->addSeparator();
-        menu->addAction(QIcon::fromTheme(QSL("view-refresh")), tr("Reload All Dials"), this, SLOT(reloadAllSpeedDials()));
+        menu->addAction(QIcon::fromTheme(QSL("view-refresh")), tr("Reload All Dials"), this, &WebView::reloadAllSpeedDials);
         return;
     }
 
@@ -775,22 +775,22 @@ void WebView::createPageContextMenu(QMenu* menu)
     });
 
     menu->addSeparator();
-    menu->addAction(QIcon::fromTheme("bookmark-new"), tr("Book&mark page"), this, SLOT(bookmarkLink()));
-    menu->addAction(QIcon::fromTheme("document-save"), tr("&Save page as..."), this, SLOT(savePageAs()));
-    menu->addAction(QIcon::fromTheme("edit-copy"), tr("&Copy page link"), this, SLOT(copyLinkToClipboard()))->setData(url());
-    menu->addAction(QIcon::fromTheme("mail-message-new"), tr("Send page link..."), this, SLOT(sendPageByMail()));
+    menu->addAction(QIcon::fromTheme("bookmark-new"), tr("Book&mark page"), this, &WebView::bookmarkLink);
+    menu->addAction(QIcon::fromTheme("document-save"), tr("&Save page as..."), this, &WebView::savePageAs);
+    menu->addAction(QIcon::fromTheme("edit-copy"), tr("&Copy page link"), this, &WebView::copyLinkToClipboard)->setData(url());
+    menu->addAction(QIcon::fromTheme("mail-message-new"), tr("Send page link..."), this, &WebView::sendPageByMail);
     menu->addSeparator();
-    menu->addAction(QIcon::fromTheme("edit-select-all"), tr("Select &all"), this, SLOT(editSelectAll()));
+    menu->addAction(QIcon::fromTheme("edit-select-all"), tr("Select &all"), this, &WebView::editSelectAll);
     menu->addSeparator();
 
     const QString scheme = url().scheme();
 
     if (scheme != QL1S("view-source") && WebPage::internalSchemes().contains(scheme)) {
-        menu->addAction(QIcon::fromTheme("text-html"), tr("Show so&urce code"), this, SLOT(showSource()));
+        menu->addAction(QIcon::fromTheme("text-html"), tr("Show so&urce code"), this, &WebView::showSource);
     }
 
     if (SiteInfo::canShowSiteInfo(url()))
-        menu->addAction(QIcon::fromTheme("dialog-information"), tr("Show info ab&out site"), this, SLOT(showSiteInfo()));
+        menu->addAction(QIcon::fromTheme("dialog-information"), tr("Show info ab&out site"), this, &WebView::showSiteInfo);
 }
 
 void WebView::createLinkContextMenu(QMenu* menu, const WebHitTestResult &hitTest)
@@ -801,17 +801,17 @@ void WebView::createLinkContextMenu(QMenu* menu, const WebHitTestResult &hitTest
     connect(act, SIGNAL(triggered()), this, SLOT(userDefinedOpenUrlInNewTab()));
     connect(act, SIGNAL(ctrlTriggered()), this, SLOT(userDefinedOpenUrlInBgTab()));
     menu->addAction(act);
-    menu->addAction(IconProvider::newWindowIcon(), tr("Open link in new &window"), this, SLOT(openUrlInNewWindow()))->setData(hitTest.linkUrl());
+    menu->addAction(IconProvider::newWindowIcon(), tr("Open link in new &window"), this, &WebView::openUrlInNewWindow)->setData(hitTest.linkUrl());
     menu->addAction(IconProvider::privateBrowsingIcon(), tr("Open link in &private window"), mApp, SLOT(startPrivateBrowsing()))->setData(hitTest.linkUrl());
     menu->addSeparator();
 
     QVariantList bData;
     bData << hitTest.linkUrl() << hitTest.linkTitle();
-    menu->addAction(QIcon::fromTheme("bookmark-new"), tr("B&ookmark link"), this, SLOT(bookmarkLink()))->setData(bData);
+    menu->addAction(QIcon::fromTheme("bookmark-new"), tr("B&ookmark link"), this, &WebView::bookmarkLink)->setData(bData);
 
-    menu->addAction(QIcon::fromTheme("document-save"), tr("&Save link as..."), this, SLOT(downloadLinkToDisk()));
-    menu->addAction(QIcon::fromTheme("mail-message-new"), tr("Send link..."), this, SLOT(sendTextByMail()))->setData(hitTest.linkUrl().toEncoded());
-    menu->addAction(QIcon::fromTheme("edit-copy"), tr("&Copy link address"), this, SLOT(copyLinkToClipboard()))->setData(hitTest.linkUrl());
+    menu->addAction(QIcon::fromTheme("document-save"), tr("&Save link as..."), this, &WebView::downloadLinkToDisk);
+    menu->addAction(QIcon::fromTheme("mail-message-new"), tr("Send link..."), this, &WebView::sendTextByMail)->setData(hitTest.linkUrl().toEncoded());
+    menu->addAction(QIcon::fromTheme("edit-copy"), tr("&Copy link address"), this, &WebView::copyLinkToClipboard)->setData(hitTest.linkUrl());
     menu->addSeparator();
 
     if (!selectedText().isEmpty()) {
@@ -826,15 +826,15 @@ void WebView::createImageContextMenu(QMenu* menu, const WebHitTestResult &hitTes
     if (hitTest.imageUrl() != url()) {
         Action *act = new Action(tr("Show i&mage"));
         act->setData(hitTest.imageUrl());
-        connect(act, SIGNAL(triggered()), this, SLOT(openActionUrl()));
+        connect(act, &QAction::triggered, this, &WebView::openActionUrl);
         connect(act, SIGNAL(ctrlTriggered()), this, SLOT(userDefinedOpenUrlInNewTab()));
         menu->addAction(act);
     }
-    menu->addAction(tr("Copy image"), this, SLOT(copyImageToClipboard()));
-    menu->addAction(QIcon::fromTheme("edit-copy"), tr("Copy image ad&dress"), this, SLOT(copyLinkToClipboard()))->setData(hitTest.imageUrl());
+    menu->addAction(tr("Copy image"), this, &WebView::copyImageToClipboard);
+    menu->addAction(QIcon::fromTheme("edit-copy"), tr("Copy image ad&dress"), this, &WebView::copyLinkToClipboard)->setData(hitTest.imageUrl());
     menu->addSeparator();
-    menu->addAction(QIcon::fromTheme("document-save"), tr("&Save image as..."), this, SLOT(downloadImageToDisk()));
-    menu->addAction(QIcon::fromTheme("mail-message-new"), tr("Send image..."), this, SLOT(sendTextByMail()))->setData(hitTest.imageUrl().toEncoded());
+    menu->addAction(QIcon::fromTheme("document-save"), tr("&Save image as..."), this, &WebView::downloadImageToDisk);
+    menu->addAction(QIcon::fromTheme("mail-message-new"), tr("Send image..."), this, &WebView::sendTextByMail)->setData(hitTest.imageUrl().toEncoded());
     menu->addSeparator();
 
     if (!selectedText().isEmpty()) {
@@ -853,7 +853,7 @@ void WebView::createSelectedTextContextMenu(QMenu* menu, const WebHitTestResult 
     if (!menu->actions().contains(pageAction(QWebEnginePage::Copy))) {
         menu->addAction(pageAction(QWebEnginePage::Copy));
     }
-    menu->addAction(QIcon::fromTheme("mail-message-new"), tr("Send text..."), this, SLOT(sendTextByMail()))->setData(selectedText);
+    menu->addAction(QIcon::fromTheme("mail-message-new"), tr("Send text..."), this, &WebView::sendTextByMail)->setData(selectedText);
     menu->addSeparator();
 
     // #379: Remove newlines
@@ -868,7 +868,7 @@ void WebView::createSelectedTextContextMenu(QMenu* menu, const WebHitTestResult 
         Action* act = new Action(QIcon::fromTheme("document-open-remote"), tr("Go to &web address"));
         act->setData(guessedUrl);
 
-        connect(act, SIGNAL(triggered()), this, SLOT(openActionUrl()));
+        connect(act, &QAction::triggered, this, &WebView::openActionUrl);
         connect(act, SIGNAL(ctrlTriggered()), this, SLOT(userDefinedOpenUrlInNewTab()));
         menu->addAction(act);
     }
@@ -880,8 +880,8 @@ void WebView::createSelectedTextContextMenu(QMenu* menu, const WebHitTestResult 
 
     SearchEngine engine = mApp->searchEnginesManager()->defaultEngine();
     Action* act = new Action(engine.icon, tr("Search \"%1 ..\" with %2").arg(selectedText, engine.name));
-    connect(act, SIGNAL(triggered()), this, SLOT(searchSelectedText()));
-    connect(act, SIGNAL(ctrlTriggered()), this, SLOT(searchSelectedTextInBackgroundTab()));
+    connect(act, &QAction::triggered, this, &WebView::searchSelectedText);
+    connect(act, &Action::ctrlTriggered, this, &WebView::searchSelectedTextInBackgroundTab);
     menu->addAction(act);
 
     // Search with ...
@@ -892,8 +892,8 @@ void WebView::createSelectedTextContextMenu(QMenu* menu, const WebHitTestResult 
         Action* act = new Action(en.icon, en.name);
         act->setData(QVariant::fromValue(en));
 
-        connect(act, SIGNAL(triggered()), this, SLOT(searchSelectedText()));
-        connect(act, SIGNAL(ctrlTriggered()), this, SLOT(searchSelectedTextInBackgroundTab()));
+        connect(act, &QAction::triggered, this, &WebView::searchSelectedText);
+        connect(act, &Action::ctrlTriggered, this, &WebView::searchSelectedTextInBackgroundTab);
         swMenu->addAction(act);
     }
 
@@ -906,12 +906,12 @@ void WebView::createMediaContextMenu(QMenu *menu, const WebHitTestResult &hitTes
     bool muted = hitTest.mediaMuted();
 
     menu->addSeparator();
-    menu->addAction(paused ? tr("&Play") : tr("&Pause"), this, SLOT(toggleMediaPause()))->setIcon(QIcon::fromTheme(paused ? "media-playback-start" : "media-playback-pause"));
-    menu->addAction(muted ? tr("Un&mute") : tr("&Mute"), this, SLOT(toggleMediaMute()))->setIcon(QIcon::fromTheme(muted ? "audio-volume-muted" : "audio-volume-high"));
+    menu->addAction(paused ? tr("&Play") : tr("&Pause"), this, &WebView::toggleMediaPause)->setIcon(QIcon::fromTheme(paused ? "media-playback-start" : "media-playback-pause"));
+    menu->addAction(muted ? tr("Un&mute") : tr("&Mute"), this, &WebView::toggleMediaMute)->setIcon(QIcon::fromTheme(muted ? "audio-volume-muted" : "audio-volume-high"));
     menu->addSeparator();
-    menu->addAction(QIcon::fromTheme("edit-copy"), tr("&Copy Media Address"), this, SLOT(copyLinkToClipboard()))->setData(hitTest.mediaUrl());
-    menu->addAction(QIcon::fromTheme("mail-message-new"), tr("&Send Media Address"), this, SLOT(sendTextByMail()))->setData(hitTest.mediaUrl().toEncoded());
-    menu->addAction(QIcon::fromTheme("document-save"), tr("Save Media To &Disk"), this, SLOT(downloadMediaToDisk()));
+    menu->addAction(QIcon::fromTheme("edit-copy"), tr("&Copy Media Address"), this, &WebView::copyLinkToClipboard)->setData(hitTest.mediaUrl());
+    menu->addAction(QIcon::fromTheme("mail-message-new"), tr("&Send Media Address"), this, &WebView::sendTextByMail)->setData(hitTest.mediaUrl().toEncoded());
+    menu->addAction(QIcon::fromTheme("document-save"), tr("Save Media To &Disk"), this, &WebView::downloadMediaToDisk);
 }
 
 void WebView::checkForForm(QAction *action, const QPoint &pos)

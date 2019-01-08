@@ -81,7 +81,7 @@ SiteInfoWidget::SiteInfoWidget(BrowserWindow* window, QWidget* parent)
         }
     }
 
-    connect(ui->pushButton, SIGNAL(clicked()), m_window->action(QSL("Tools/SiteInfo")), SLOT(trigger()));
+    connect(ui->pushButton, &QAbstractButton::clicked, m_window->action(QSL("Tools/SiteInfo")), &QAction::trigger);
 }
 
 SiteInfoWidget::~SiteInfoWidget()

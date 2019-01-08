@@ -71,7 +71,7 @@ void HeaderView::contextMenuEvent(QContextMenuEvent* event)
             act->setCheckable(true);
             act->setData(i);
 
-            connect(act, SIGNAL(triggered()), this, SLOT(toggleSectionVisibility()));
+            connect(act, &QAction::triggered, this, &HeaderView::toggleSectionVisibility);
             m_menu->addAction(act);
         }
     }

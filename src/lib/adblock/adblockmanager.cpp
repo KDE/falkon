@@ -217,8 +217,8 @@ AdBlockSubscription* AdBlockManager::addSubscription(const QString &title, const
     subscription->loadSubscription(m_disabledRules);
 
     m_subscriptions.insert(m_subscriptions.count() - 1, subscription);
-    connect(subscription, SIGNAL(subscriptionUpdated()), mApp, SLOT(reloadUserStyleSheet()));
-    connect(subscription, SIGNAL(subscriptionChanged()), this, SLOT(updateMatcher()));
+    connect(subscription, &AdBlockSubscription::subscriptionUpdated, mApp, &MainApplication::reloadUserStyleSheet);
+    connect(subscription, &AdBlockSubscription::subscriptionChanged, this, &AdBlockManager::updateMatcher);
 
     return subscription;
 }
@@ -332,12 +332,12 @@ void AdBlockManager::load()
     foreach (AdBlockSubscription* subscription, m_subscriptions) {
         subscription->loadSubscription(m_disabledRules);
 
-        connect(subscription, SIGNAL(subscriptionUpdated()), mApp, SLOT(reloadUserStyleSheet()));
-        connect(subscription, SIGNAL(subscriptionChanged()), this, SLOT(updateMatcher()));
+        connect(subscription, &AdBlockSubscription::subscriptionUpdated, mApp, &MainApplication::reloadUserStyleSheet);
+        connect(subscription, &AdBlockSubscription::subscriptionChanged, this, &AdBlockManager::updateMatcher);
     }
 
     if (lastUpdate.addDays(5) < QDateTime::currentDateTime()) {
-        QTimer::singleShot(1000 * 60, this, SLOT(updateAllSubscriptions()));
+        QTimer::singleShot(1000 * 60, this, &AdBlockManager::updateAllSubscriptions);
     }
 
 #ifdef ADBLOCK_DEBUG

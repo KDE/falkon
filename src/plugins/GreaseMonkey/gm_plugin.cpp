@@ -41,8 +41,8 @@ void GM_Plugin::init(InitState state, const QString &settingsPath)
 {
     m_manager = new GM_Manager(settingsPath, this);
 
-    connect(mApp->plugins(), SIGNAL(mainWindowCreated(BrowserWindow*)), m_manager, SLOT(mainWindowCreated(BrowserWindow*)));
-    connect(mApp->plugins(), SIGNAL(mainWindowDeleted(BrowserWindow*)), m_manager, SLOT(mainWindowDeleted(BrowserWindow*)));
+    connect(mApp->plugins(), &PluginProxy::mainWindowCreated, m_manager, &GM_Manager::mainWindowCreated);
+    connect(mApp->plugins(), &PluginProxy::mainWindowDeleted, m_manager, &GM_Manager::mainWindowDeleted);
 
     // Make sure userscripts works also with already created WebPages
     if (state == LateInitState) {

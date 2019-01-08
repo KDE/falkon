@@ -29,7 +29,7 @@ AutoFillIcon::AutoFillIcon(QWidget* parent)
     setToolTip(AutoFillWidget::tr("Choose username to login"));
     setFocusPolicy(Qt::ClickFocus);
 
-    connect(this, SIGNAL(clicked(QPoint)), this, SLOT(iconClicked()));
+    connect(this, &ClickableLabel::clicked, this, &AutoFillIcon::iconClicked);
 }
 
 void AutoFillIcon::setWebView(WebView* view)

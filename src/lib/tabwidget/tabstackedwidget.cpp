@@ -44,7 +44,7 @@ TabStackedWidget::TabStackedWidget(QWidget* parent)
     m_mainLayout->addWidget(m_stack);
     setLayout(m_mainLayout);
 
-    connect(m_stack, SIGNAL(widgetRemoved(int)), this, SLOT(tabWasRemoved(int)));
+    connect(m_stack, &QStackedWidget::widgetRemoved, this, &TabStackedWidget::tabWasRemoved);
 }
 
 TabStackedWidget::~TabStackedWidget()
@@ -70,12 +70,12 @@ void TabStackedWidget::setTabBar(ComboTabBar* tb)
     m_tabBar = tb;
     setFocusProxy(m_tabBar);
 
-    connect(m_tabBar, SIGNAL(currentChanged(int)), this, SLOT(showTab(int)));
+    connect(m_tabBar, &ComboTabBar::currentChanged, this, &TabStackedWidget::showTab);
     connect(m_tabBar, &ComboTabBar::tabMoved, this, &TabStackedWidget::tabWasMoved);
-    connect(m_tabBar, SIGNAL(overFlowChanged(bool)), this, SLOT(setUpLayout()));
+    connect(m_tabBar, &ComboTabBar::overFlowChanged, this, &TabStackedWidget::setUpLayout);
 
     if (m_tabBar->tabsClosable()) {
-        connect(m_tabBar, SIGNAL(tabCloseRequested(int)), this, SIGNAL(tabCloseRequested(int)));
+        connect(m_tabBar, &ComboTabBar::tabCloseRequested, this, &TabStackedWidget::tabCloseRequested);
     }
 
     setDocumentMode(m_tabBar->documentMode());
@@ -227,7 +227,7 @@ int TabStackedWidget::insertTab(int index, QWidget* w, const QString &label, boo
     if (m_currentIndex >= index)
         ++m_currentIndex;
 
-    QTimer::singleShot(0, this, SLOT(setUpLayout()));
+    QTimer::singleShot(0, this, &TabStackedWidget::setUpLayout);
 
     return index;
 }

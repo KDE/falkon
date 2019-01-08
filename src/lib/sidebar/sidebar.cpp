@@ -104,14 +104,14 @@ void SideBarManager::createMenu(QMenu* menu)
 
     QActionGroup *group = new QActionGroup(menu);
 
-    QAction* act = menu->addAction(SideBar::tr("Bookmarks"), this, SLOT(slotShowSideBar()));
+    QAction* act = menu->addAction(SideBar::tr("Bookmarks"), this, &SideBarManager::slotShowSideBar);
     act->setCheckable(true);
     act->setShortcut(QKeySequence("Ctrl+Shift+B"));
     act->setData("Bookmarks");
     act->setChecked(m_activeBar == QL1S("Bookmarks"));
     group->addAction(act);
 
-    act = menu->addAction(SideBar::tr("History"), this, SLOT(slotShowSideBar()));
+    act = menu->addAction(SideBar::tr("History"), this, &SideBarManager::slotShowSideBar);
     act->setCheckable(true);
     act->setShortcut(QKeySequence("Ctrl+H"));
     act->setData("History");
@@ -123,7 +123,7 @@ void SideBarManager::createMenu(QMenu* menu)
             QAction* act = sidebar.data()->createMenuAction();
             act->setData(s_sidebars.key(sidebar));
             act->setChecked(m_activeBar == s_sidebars.key(sidebar));
-            connect(act, SIGNAL(triggered()), this, SLOT(slotShowSideBar()));
+            connect(act, &QAction::triggered, this, &SideBarManager::slotShowSideBar);
             menu->addAction(act);
             group->addAction(act);
         }

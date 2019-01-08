@@ -72,9 +72,9 @@ LocationBar::LocationBar(QWidget *parent)
 
     m_completer = new LocationCompleter(this);
     m_completer->setLocationBar(this);
-    connect(m_completer, SIGNAL(showCompletion(QString,bool)), this, SLOT(showCompletion(QString,bool)));
-    connect(m_completer, SIGNAL(showDomainCompletion(QString)), this, SLOT(showDomainCompletion(QString)));
-    connect(m_completer, SIGNAL(clearCompletion()), this, SLOT(clearCompletion()));
+    connect(m_completer, &LocationCompleter::showCompletion, this, &LocationBar::showCompletion);
+    connect(m_completer, &LocationCompleter::showDomainCompletion, this, &LocationBar::showDomainCompletion);
+    connect(m_completer, &LocationCompleter::clearCompletion, this, &LocationBar::clearCompletion);
     connect(m_completer, &LocationCompleter::loadRequested, this, &LocationBar::loadRequest);
     connect(m_completer, &LocationCompleter::popupClosed, this, &LocationBar::updateSiteIcon);
 
@@ -91,14 +91,14 @@ LocationBar::LocationBar(QWidget *parent)
 
     editAction(PasteAndGo)->setText(tr("Paste And &Go"));
     editAction(PasteAndGo)->setIcon(QIcon::fromTheme(QSL("edit-paste")));
-    connect(editAction(PasteAndGo), SIGNAL(triggered()), this, SLOT(pasteAndGo()));
+    connect(editAction(PasteAndGo), &QAction::triggered, this, &LocationBar::pasteAndGo);
 
     connect(this, SIGNAL(textEdited(QString)), this, SLOT(textEdited(QString)));
-    connect(m_goIcon, SIGNAL(clicked(QPoint)), this, SLOT(requestLoadUrl()));
-    connect(down, SIGNAL(clicked(QPoint)), m_completer, SLOT(showMostVisited()));
-    connect(mApp->searchEnginesManager(), SIGNAL(activeEngineChanged()), this, SLOT(updatePlaceHolderText()));
-    connect(mApp->searchEnginesManager(), SIGNAL(defaultEngineChanged()), this, SLOT(updatePlaceHolderText()));
-    connect(mApp, SIGNAL(settingsReloaded()), SLOT(loadSettings()));
+    connect(m_goIcon, &ClickableLabel::clicked, this, &LocationBar::requestLoadUrl);
+    connect(down, &ClickableLabel::clicked, m_completer, &LocationCompleter::showMostVisited);
+    connect(mApp->searchEnginesManager(), &SearchEnginesManager::activeEngineChanged, this, &LocationBar::updatePlaceHolderText);
+    connect(mApp->searchEnginesManager(), &SearchEnginesManager::defaultEngineChanged, this, &LocationBar::updatePlaceHolderText);
+    connect(mApp, &MainApplication::settingsReloaded, this, &LocationBar::loadSettings);
 
     loadSettings();
 
@@ -108,7 +108,7 @@ LocationBar::LocationBar(QWidget *parent)
     m_goIcon->setVisible(qzSettings->alwaysShowGoIcon);
     m_autofillIcon->hide();
 
-    QTimer::singleShot(0, this, SLOT(updatePlaceHolderText()));
+    QTimer::singleShot(0, this, &LocationBar::updatePlaceHolderText);
 }
 
 BrowserWindow *LocationBar::browserWindow() const
@@ -136,11 +136,11 @@ void LocationBar::setWebView(TabbedWebView* view)
     m_siteIcon->setWebView(m_webView);
     m_autofillIcon->setWebView(m_webView);
 
-    connect(m_webView, SIGNAL(loadStarted()), SLOT(loadStarted()));
-    connect(m_webView, SIGNAL(loadProgress(int)), SLOT(loadProgress(int)));
-    connect(m_webView, SIGNAL(loadFinished(bool)), SLOT(loadFinished()));
-    connect(m_webView, SIGNAL(urlChanged(QUrl)), this, SLOT(showUrl(QUrl)));
-    connect(m_webView, SIGNAL(privacyChanged(bool)), this, SLOT(setPrivacyState(bool)));
+    connect(m_webView, &QWebEngineView::loadStarted, this, &LocationBar::loadStarted);
+    connect(m_webView, &QWebEngineView::loadProgress, this, &LocationBar::loadProgress);
+    connect(m_webView, &QWebEngineView::loadFinished, this, &LocationBar::loadFinished);
+    connect(m_webView, &QWebEngineView::urlChanged, this, &LocationBar::showUrl);
+    connect(m_webView, &WebView::privacyChanged, this, &LocationBar::setPrivacyState);
 }
 
 void LocationBar::setText(const QString &text)

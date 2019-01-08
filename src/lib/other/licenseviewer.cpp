@@ -37,7 +37,7 @@ LicenseViewer::LicenseViewer(QWidget* parent)
 
     QDialogButtonBox* buttonBox = new QDialogButtonBox(this);
     buttonBox->setStandardButtons(QDialogButtonBox::Close);
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(close()));
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QWidget::close);
 
     QVBoxLayout* l = new QVBoxLayout(this);
     l->addWidget(m_textBrowser);

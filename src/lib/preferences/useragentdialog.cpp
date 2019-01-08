@@ -79,13 +79,13 @@ UserAgentDialog::UserAgentDialog(QWidget* parent)
 
     ui->table->sortByColumn(-1);
 
-    connect(ui->add, SIGNAL(clicked()), this, SLOT(addSite()));
-    connect(ui->remove, SIGNAL(clicked()), this, SLOT(removeSite()));
-    connect(ui->edit, SIGNAL(clicked()), this, SLOT(editSite()));
-    connect(ui->table, SIGNAL(itemDoubleClicked(QTableWidgetItem*)), this, SLOT(editSite()));
+    connect(ui->add, &QAbstractButton::clicked, this, &UserAgentDialog::addSite);
+    connect(ui->remove, &QAbstractButton::clicked, this, &UserAgentDialog::removeSite);
+    connect(ui->edit, &QAbstractButton::clicked, this, &UserAgentDialog::editSite);
+    connect(ui->table, &QTableWidget::itemDoubleClicked, this, &UserAgentDialog::editSite);
 
-    connect(ui->changeGlobal, SIGNAL(clicked(bool)), this, SLOT(enableGlobalComboBox(bool)));
-    connect(ui->changePerSite, SIGNAL(clicked(bool)), this, SLOT(enablePerSiteFrame(bool)));
+    connect(ui->changeGlobal, &QAbstractButton::clicked, this, &UserAgentDialog::enableGlobalComboBox);
+    connect(ui->changePerSite, &QAbstractButton::clicked, this, &UserAgentDialog::enablePerSiteFrame);
 
     enableGlobalComboBox(ui->changeGlobal->isChecked());
     enablePerSiteFrame(ui->changePerSite->isChecked());
@@ -210,8 +210,8 @@ bool UserAgentDialog::showEditDialog(const QString &title, QString* rSite, QStri
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
 
-    connect(box, SIGNAL(rejected()), dialog, SLOT(reject()));
-    connect(box, SIGNAL(accepted()), dialog, SLOT(accept()));
+    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
 
     layout->addRow(new QLabel(tr("Site domain: ")), editSite);
     layout->addRow(new QLabel(tr("User Agent: ")), editAgent);

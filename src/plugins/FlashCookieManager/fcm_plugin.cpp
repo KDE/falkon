@@ -74,12 +74,12 @@ void FCM_Plugin::init(InitState state, const QString &settingsPath)
 {
     m_settingsPath = settingsPath;
 
-    connect(mApp->plugins(), SIGNAL(mainWindowCreated(BrowserWindow*)), this, SLOT(mainWindowCreated(BrowserWindow*)));
-    connect(mApp->plugins(), SIGNAL(mainWindowDeleted(BrowserWindow*)), this, SLOT(mainWindowDeleted(BrowserWindow*)));
+    connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &FCM_Plugin::mainWindowCreated);
+    connect(mApp->plugins(), &PluginProxy::mainWindowDeleted, this, &FCM_Plugin::mainWindowDeleted);
 
     m_timer = new QTimer(this);
     m_timer->setInterval(refreshInterval);
-    connect(m_timer, SIGNAL(timeout()), this, SLOT(autoRefresh()));
+    connect(m_timer, &QTimer::timeout, this, &FCM_Plugin::autoRefresh);
 
     // start timer if needed
     startStopTimer();
@@ -130,7 +130,7 @@ void FCM_Plugin::showSettings(QWidget* parent)
 void FCM_Plugin::populateExtensionsMenu(QMenu* menu)
 {
     QAction* showFCM = new QAction(QIcon(":/flashcookiemanager/data/flash-cookie-manager.png"), tr("Flash Cookie Manager"), menu);
-    connect(showFCM, SIGNAL(triggered()), this, SLOT(showFlashCookieManager()));
+    connect(showFCM, &QAction::triggered, this, &FCM_Plugin::showFlashCookieManager);
     menu->addAction(showFCM);
 }
 

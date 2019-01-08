@@ -36,7 +36,7 @@ BookmarksModel::BookmarksModel(BookmarkItem* root, Bookmarks* bookmarks, QObject
     , m_bookmarks(bookmarks)
 {
     if (m_bookmarks) {
-        connect(m_bookmarks, SIGNAL(bookmarkChanged(BookmarkItem*)), this, SLOT(bookmarkChanged(BookmarkItem*)));
+        connect(m_bookmarks, &Bookmarks::bookmarkChanged, this, &BookmarksModel::bookmarkChanged);
     }
 
 #ifdef BOOKMARKSMODEL_DEBUG
@@ -321,7 +321,7 @@ BookmarksFilterModel::BookmarksFilterModel(QAbstractItemModel* parent)
     m_filterTimer->setSingleShot(true);
     m_filterTimer->setInterval(300);
 
-    connect(m_filterTimer, SIGNAL(timeout()), this, SLOT(startFiltering()));
+    connect(m_filterTimer, &QTimer::timeout, this, &BookmarksFilterModel::startFiltering);
 }
 
 void BookmarksFilterModel::setFilterFixedString(const QString &pattern)

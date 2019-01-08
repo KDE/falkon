@@ -48,24 +48,24 @@ AutoFillManager::AutoFillManager(QWidget* parent)
         ui->treeExcept->setLayoutDirection(Qt::LeftToRight);
     }
 
-    connect(ui->removePass, SIGNAL(clicked()), this, SLOT(removePass()));
-    connect(ui->removeAllPass, SIGNAL(clicked()), this, SLOT(removeAllPass()));
-    connect(ui->editPass, SIGNAL(clicked()), this, SLOT(editPass()));
-    connect(ui->showPasswords, SIGNAL(clicked()), this, SLOT(showPasswords()));
-    connect(ui->search, SIGNAL(textChanged(QString)), ui->treePass, SLOT(filterString(QString)));
-    connect(ui->changeBackend, SIGNAL(clicked()), this, SLOT(changePasswordBackend()));
-    connect(ui->backendOptions, SIGNAL(clicked()), this, SLOT(showBackendOptions()));
-    connect(m_passwordManager, SIGNAL(passwordBackendChanged()), this, SLOT(currentPasswordBackendChanged()));
+    connect(ui->removePass, &QAbstractButton::clicked, this, &AutoFillManager::removePass);
+    connect(ui->removeAllPass, &QAbstractButton::clicked, this, &AutoFillManager::removeAllPass);
+    connect(ui->editPass, &QAbstractButton::clicked, this, &AutoFillManager::editPass);
+    connect(ui->showPasswords, &QAbstractButton::clicked, this, &AutoFillManager::showPasswords);
+    connect(ui->search, &QLineEdit::textChanged, ui->treePass, &TreeWidget::filterString);
+    connect(ui->changeBackend, &QAbstractButton::clicked, this, &AutoFillManager::changePasswordBackend);
+    connect(ui->backendOptions, &QAbstractButton::clicked, this, &AutoFillManager::showBackendOptions);
+    connect(m_passwordManager, &PasswordManager::passwordBackendChanged, this, &AutoFillManager::currentPasswordBackendChanged);
 
-    connect(ui->removeExcept, SIGNAL(clicked()), this, SLOT(removeExcept()));
-    connect(ui->removeAllExcept, SIGNAL(clicked()), this, SLOT(removeAllExcept()));
+    connect(ui->removeExcept, &QAbstractButton::clicked, this, &AutoFillManager::removeExcept);
+    connect(ui->removeAllExcept, &QAbstractButton::clicked, this, &AutoFillManager::removeAllExcept);
 
     ui->treePass->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->treePass, &TreeWidget::customContextMenuRequested, this, &AutoFillManager::passwordContextMenu);
 
     QMenu* menu = new QMenu(this);
-    menu->addAction(tr("Import Passwords from File..."), this, SLOT(importPasswords()));
-    menu->addAction(tr("Export Passwords to File..."), this, SLOT(exportPasswords()));
+    menu->addAction(tr("Import Passwords from File..."), this, &AutoFillManager::importPasswords);
+    menu->addAction(tr("Export Passwords to File..."), this, &AutoFillManager::exportPasswords);
     ui->importExport->setMenu(menu);
     ui->search->setPlaceholderText(tr("Search"));
 
@@ -74,7 +74,7 @@ AutoFillManager::AutoFillManager(QWidget* parent)
     ui->backendOptions->setVisible(m_passwordManager->activeBackend()->hasSettings());
 
     // Load passwords
-    QTimer::singleShot(0, this, SLOT(loadPasswords()));
+    QTimer::singleShot(0, this, &AutoFillManager::loadPasswords);
 }
 
 void AutoFillManager::loadPasswords()
@@ -304,7 +304,7 @@ void AutoFillManager::importPasswords()
         return;
     }
 
-    QTimer::singleShot(0, this, SLOT(slotImportPasswords()));
+    QTimer::singleShot(0, this, &AutoFillManager::slotImportPasswords);
 }
 
 void AutoFillManager::exportPasswords()
@@ -315,7 +315,7 @@ void AutoFillManager::exportPasswords()
         return;
     }
 
-    QTimer::singleShot(0, this, SLOT(slotExportPasswords()));
+    QTimer::singleShot(0, this, &AutoFillManager::slotExportPasswords);
 }
 
 void AutoFillManager::slotImportPasswords()
@@ -362,7 +362,7 @@ void AutoFillManager::currentPasswordBackendChanged()
     ui->currentBackend->setText(QString("<b>%1</b>").arg(m_passwordManager->activeBackend()->name()));
     ui->backendOptions->setVisible(m_passwordManager->activeBackend()->hasSettings());
 
-    QTimer::singleShot(0, this, SLOT(loadPasswords()));
+    QTimer::singleShot(0, this, &AutoFillManager::loadPasswords);
 }
 
 void AutoFillManager::passwordContextMenu(const QPoint &pos)

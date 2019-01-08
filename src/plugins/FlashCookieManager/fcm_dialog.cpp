@@ -49,22 +49,22 @@ FCM_Dialog::FCM_Dialog(FCM_Plugin* manager, QWidget* parent)
         ui->blackList->setLayoutDirection(Qt::LeftToRight);
     }
 
-    connect(ui->flashCookieTree, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), this, SLOT(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)));
-    connect(ui->removeAll, SIGNAL(clicked()), this, SLOT(removeAll()));
-    connect(ui->removeOne, SIGNAL(clicked()), this, SLOT(removeCookie()));
-    connect(ui->close, SIGNAL(clicked(QAbstractButton*)), this, SLOT(close()));
-    connect(ui->close2, SIGNAL(clicked(QAbstractButton*)), this, SLOT(close()));
-    connect(ui->close3, SIGNAL(clicked(QAbstractButton*)), this, SLOT(close()));
-    connect(ui->search, SIGNAL(textChanged(QString)), this, SLOT(filterString(QString)));
-    connect(ui->reloadFromDisk, SIGNAL(clicked()), this, SLOT(reloadFromDisk()));
+    connect(ui->flashCookieTree, &QTreeWidget::currentItemChanged, this, &FCM_Dialog::currentItemChanged);
+    connect(ui->removeAll, &QAbstractButton::clicked, this, &FCM_Dialog::removeAll);
+    connect(ui->removeOne, &QAbstractButton::clicked, this, &FCM_Dialog::removeCookie);
+    connect(ui->close, &QDialogButtonBox::clicked, this, &QWidget::close);
+    connect(ui->close2, &QDialogButtonBox::clicked, this, &QWidget::close);
+    connect(ui->close3, &QDialogButtonBox::clicked, this, &QWidget::close);
+    connect(ui->search, &QLineEdit::textChanged, this, &FCM_Dialog::filterString);
+    connect(ui->reloadFromDisk, &QAbstractButton::clicked, this, &FCM_Dialog::reloadFromDisk);
 
     connect(ui->whiteAdd, SIGNAL(clicked()), this, SLOT(addWhitelist()));
-    connect(ui->whiteRemove, SIGNAL(clicked()), this, SLOT(removeWhitelist()));
+    connect(ui->whiteRemove, &QAbstractButton::clicked, this, &FCM_Dialog::removeWhitelist);
     connect(ui->blackAdd, SIGNAL(clicked()), this, SLOT(addBlacklist()));
-    connect(ui->blackRemove, SIGNAL(clicked()), this, SLOT(removeBlacklist()));
+    connect(ui->blackRemove, &QAbstractButton::clicked, this, &FCM_Dialog::removeBlacklist);
 
-    connect(ui->autoMode, SIGNAL(toggled(bool)), ui->notification, SLOT(setEnabled(bool)));
-    connect(ui->autoMode, SIGNAL(toggled(bool)), ui->labelNotification, SLOT(setEnabled(bool)));
+    connect(ui->autoMode, &QAbstractButton::toggled, ui->notification, &QWidget::setEnabled);
+    connect(ui->autoMode, &QAbstractButton::toggled, ui->labelNotification, &QWidget::setEnabled);
 
     ui->autoMode->setChecked(m_manager->readSettings().value(QL1S("autoMode")).toBool());
     ui->notification->setEnabled(m_manager->readSettings().value(QL1S("autoMode")).toBool());
@@ -80,10 +80,10 @@ FCM_Dialog::FCM_Dialog(FCM_Plugin* manager, QWidget* parent)
     ui->flashCookieTree->setFocus();
 
     ui->flashCookieTree->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(ui->flashCookieTree, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(cookieTreeContextMenuRequested(QPoint)));
+    connect(ui->flashCookieTree, &QWidget::customContextMenuRequested, this, &FCM_Dialog::cookieTreeContextMenuRequested);
 
     QShortcut* removeShortcut = new QShortcut(QKeySequence("Del"), this);
-    connect(removeShortcut, SIGNAL(activated()), this, SLOT(deletePressed()));
+    connect(removeShortcut, &QShortcut::activated, this, &FCM_Dialog::deletePressed);
 
     QzTools::setWmClass("FlashCookies", this);
 }
@@ -180,18 +180,18 @@ void FCM_Dialog::currentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem* p
 
 void FCM_Dialog::refreshView(bool forceReload)
 {
-    disconnect(ui->search, SIGNAL(textChanged(QString)), this, SLOT(filterString(QString)));
+    disconnect(ui->search, &QLineEdit::textChanged, this, &FCM_Dialog::filterString);
     ui->search->clear();
     ui->textEdit->clear();
-    connect(ui->search, SIGNAL(textChanged(QString)), this, SLOT(filterString(QString)));
+    connect(ui->search, &QLineEdit::textChanged, this, &FCM_Dialog::filterString);
 
     if (forceReload) {
         m_manager->clearCache();
         m_manager->clearNewOrigins();
     }
 
-    QTimer::singleShot(0, this, SLOT(refreshFlashCookiesTree()));
-    QTimer::singleShot(0, this, SLOT(refreshFilters()));
+    QTimer::singleShot(0, this, &FCM_Dialog::refreshFlashCookiesTree);
+    QTimer::singleShot(0, this, &FCM_Dialog::refreshFilters);
 }
 
 void FCM_Dialog::showPage(int index)

@@ -32,12 +32,12 @@ HistorySideBar::HistorySideBar(BrowserWindow* window, QWidget* parent)
     ui->setupUi(this);
     ui->historyTree->setViewType(HistoryTreeView::HistorySidebarViewType);
 
-    connect(ui->historyTree, SIGNAL(urlActivated(QUrl)), this, SLOT(urlActivated(QUrl)));
-    connect(ui->historyTree, SIGNAL(urlCtrlActivated(QUrl)), this, SLOT(urlCtrlActivated(QUrl)));
-    connect(ui->historyTree, SIGNAL(urlShiftActivated(QUrl)), this, SLOT(urlShiftActivated(QUrl)));
-    connect(ui->historyTree, SIGNAL(contextMenuRequested(QPoint)), this, SLOT(createContextMenu(QPoint)));
+    connect(ui->historyTree, &HistoryTreeView::urlActivated, this, &HistorySideBar::urlActivated);
+    connect(ui->historyTree, &HistoryTreeView::urlCtrlActivated, this, &HistorySideBar::urlCtrlActivated);
+    connect(ui->historyTree, &HistoryTreeView::urlShiftActivated, this, &HistorySideBar::urlShiftActivated);
+    connect(ui->historyTree, &HistoryTreeView::contextMenuRequested, this, &HistorySideBar::createContextMenu);
 
-    connect(ui->search, SIGNAL(textEdited(QString)), ui->historyTree, SLOT(search(QString)));
+    connect(ui->search, &QLineEdit::textEdited, ui->historyTree, &HistoryTreeView::search);
 }
 
 void HistorySideBar::urlActivated(const QUrl &url)
@@ -92,7 +92,7 @@ void HistorySideBar::createContextMenu(const QPoint &pos)
     connect(actNewTab, SIGNAL(triggered()), this, SLOT(openUrlInNewTab()));
     connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openUrlInNewWindow()));
     connect(actNewPrivateWindow, SIGNAL(triggered()), this, SLOT(openUrlInNewPrivateWindow()));
-    connect(actDelete, SIGNAL(triggered()), ui->historyTree, SLOT(removeSelectedItems()));
+    connect(actDelete, &QAction::triggered, ui->historyTree, &HistoryTreeView::removeSelectedItems);
 
     if (ui->historyTree->selectedUrl().isEmpty()) {
         actNewTab->setDisabled(true);

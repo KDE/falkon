@@ -51,14 +51,14 @@ BookmarksToolbar::BookmarksToolbar(BrowserWindow* window, QWidget* parent)
     m_updateTimer = new QTimer(this);
     m_updateTimer->setInterval(300);
     m_updateTimer->setSingleShot(true);
-    connect(m_updateTimer, SIGNAL(timeout()), this, SLOT(refresh()));
+    connect(m_updateTimer, &QTimer::timeout, this, &BookmarksToolbar::refresh);
 
-    connect(m_bookmarks, SIGNAL(bookmarkAdded(BookmarkItem*)), this, SLOT(bookmarksChanged()));
-    connect(m_bookmarks, SIGNAL(bookmarkRemoved(BookmarkItem*)), this, SLOT(bookmarksChanged()));
-    connect(m_bookmarks, SIGNAL(bookmarkChanged(BookmarkItem*)), this, SLOT(bookmarksChanged()));
-    connect(m_bookmarks, SIGNAL(showOnlyIconsInToolbarChanged(bool)), this, SLOT(showOnlyIconsChanged(bool)));
-    connect(m_bookmarks, SIGNAL(showOnlyTextInToolbarChanged(bool)), this, SLOT(showOnlyTextChanged(bool)));
-    connect(this, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenuRequested(QPoint)));
+    connect(m_bookmarks, &Bookmarks::bookmarkAdded, this, &BookmarksToolbar::bookmarksChanged);
+    connect(m_bookmarks, &Bookmarks::bookmarkRemoved, this, &BookmarksToolbar::bookmarksChanged);
+    connect(m_bookmarks, &Bookmarks::bookmarkChanged, this, &BookmarksToolbar::bookmarksChanged);
+    connect(m_bookmarks, &Bookmarks::showOnlyIconsInToolbarChanged, this, &BookmarksToolbar::showOnlyIconsChanged);
+    connect(m_bookmarks, &Bookmarks::showOnlyTextInToolbarChanged, this, &BookmarksToolbar::showOnlyTextChanged);
+    connect(this, &QWidget::customContextMenuRequested, this, &BookmarksToolbar::contextMenuRequested);
 
     refresh();
 }
@@ -79,17 +79,17 @@ void BookmarksToolbar::contextMenuRequested(const QPoint &pos)
     m_actShowOnlyIcons = menu.addAction(tr("Show Only Icons"));
     m_actShowOnlyIcons->setCheckable(true);
     m_actShowOnlyIcons->setChecked(m_bookmarks->showOnlyIconsInToolbar());
-    connect(m_actShowOnlyIcons, SIGNAL(toggled(bool)), m_bookmarks, SLOT(setShowOnlyIconsInToolbar(bool)));
+    connect(m_actShowOnlyIcons, &QAction::toggled, m_bookmarks, &Bookmarks::setShowOnlyIconsInToolbar);
     m_actShowOnlyText = menu.addAction(tr("Show Only Text"));
     m_actShowOnlyText->setCheckable(true);
     m_actShowOnlyText->setChecked(m_bookmarks->showOnlyTextInToolbar());
-    connect(m_actShowOnlyText, SIGNAL(toggled(bool)), m_bookmarks, SLOT(setShowOnlyTextInToolbar(bool)));
+    connect(m_actShowOnlyText, &QAction::toggled, m_bookmarks, &Bookmarks::setShowOnlyTextInToolbar);
 
-    connect(actNewTab, SIGNAL(triggered()), this, SLOT(openBookmarkInNewTab()));
-    connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewWindow()));
-    connect(actNewPrivateWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewPrivateWindow()));
-    connect(actEdit, SIGNAL(triggered()), this, SLOT(editBookmark()));
-    connect(actDelete, SIGNAL(triggered()), this, SLOT(deleteBookmark()));
+    connect(actNewTab, &QAction::triggered, this, &BookmarksToolbar::openBookmarkInNewTab);
+    connect(actNewWindow, &QAction::triggered, this, &BookmarksToolbar::openBookmarkInNewWindow);
+    connect(actNewPrivateWindow, &QAction::triggered, this, &BookmarksToolbar::openBookmarkInNewPrivateWindow);
+    connect(actEdit, &QAction::triggered, this, &BookmarksToolbar::editBookmark);
+    connect(actDelete, &QAction::triggered, this, &BookmarksToolbar::deleteBookmark);
 
     actEdit->setEnabled(m_clickedBookmark && m_bookmarks->canBeModified(m_clickedBookmark));
     actDelete->setEnabled(m_clickedBookmark && m_bookmarks->canBeModified(m_clickedBookmark));

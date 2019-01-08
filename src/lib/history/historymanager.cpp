@@ -38,13 +38,13 @@ HistoryManager::HistoryManager(BrowserWindow* window, QWidget* parent)
     ui->setupUi(this);
     ui->historyTree->setViewType(HistoryTreeView::HistoryManagerViewType);
 
-    connect(ui->historyTree, SIGNAL(urlActivated(QUrl)), this, SLOT(urlActivated(QUrl)));
-    connect(ui->historyTree, SIGNAL(urlCtrlActivated(QUrl)), this, SLOT(urlCtrlActivated(QUrl)));
-    connect(ui->historyTree, SIGNAL(urlShiftActivated(QUrl)), this, SLOT(urlShiftActivated(QUrl)));
-    connect(ui->historyTree, SIGNAL(contextMenuRequested(QPoint)), this, SLOT(createContextMenu(QPoint)));
+    connect(ui->historyTree, &HistoryTreeView::urlActivated, this, &HistoryManager::urlActivated);
+    connect(ui->historyTree, &HistoryTreeView::urlCtrlActivated, this, &HistoryManager::urlCtrlActivated);
+    connect(ui->historyTree, &HistoryTreeView::urlShiftActivated, this, &HistoryManager::urlShiftActivated);
+    connect(ui->historyTree, &HistoryTreeView::contextMenuRequested, this, &HistoryManager::createContextMenu);
 
-    connect(ui->deleteB, SIGNAL(clicked()), ui->historyTree, SLOT(removeSelectedItems()));
-    connect(ui->clearAll, SIGNAL(clicked()), this, SLOT(clearHistory()));
+    connect(ui->deleteB, &QAbstractButton::clicked, ui->historyTree, &HistoryTreeView::removeSelectedItems);
+    connect(ui->clearAll, &QAbstractButton::clicked, this, &HistoryManager::clearHistory);
 
     ui->historyTree->setFocus();
 }
@@ -147,8 +147,8 @@ void HistoryManager::createContextMenu(const QPoint &pos)
     QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), tr("Open in new private window"));
 
     menu.addSeparator();
-    QAction* actCopyUrl = menu.addAction(tr("Copy url"), this, SLOT(copyUrl()));
-    QAction* actCopyTitle = menu.addAction(tr("Copy title"), this, SLOT(copyTitle()));
+    QAction* actCopyUrl = menu.addAction(tr("Copy url"), this, &HistoryManager::copyUrl);
+    QAction* actCopyTitle = menu.addAction(tr("Copy title"), this, &HistoryManager::copyTitle);
 
     menu.addSeparator();
     QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"));
@@ -156,7 +156,7 @@ void HistoryManager::createContextMenu(const QPoint &pos)
     connect(actNewTab, SIGNAL(triggered()), this, SLOT(openUrlInNewTab()));
     connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openUrlInNewWindow()));
     connect(actNewPrivateWindow, SIGNAL(triggered()), this, SLOT(openUrlInNewPrivateWindow()));
-    connect(actDelete, SIGNAL(triggered()), ui->historyTree, SLOT(removeSelectedItems()));
+    connect(actDelete, &QAction::triggered, ui->historyTree, &HistoryTreeView::removeSelectedItems);
 
     if (ui->historyTree->selectedUrl().isEmpty()) {
         actNewTab->setDisabled(true);

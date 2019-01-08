@@ -39,8 +39,8 @@ void StatusBarIconsPlugin::init(InitState state, const QString &settingsPath)
 {
     m_manager = new SBI_IconsManager(settingsPath);
 
-    connect(mApp->plugins(), SIGNAL(mainWindowCreated(BrowserWindow*)), m_manager, SLOT(mainWindowCreated(BrowserWindow*)));
-    connect(mApp->plugins(), SIGNAL(mainWindowDeleted(BrowserWindow*)), m_manager, SLOT(mainWindowDeleted(BrowserWindow*)));
+    connect(mApp->plugins(), &PluginProxy::mainWindowCreated, m_manager, &SBI_IconsManager::mainWindowCreated);
+    connect(mApp->plugins(), &PluginProxy::mainWindowDeleted, m_manager, &SBI_IconsManager::mainWindowDeleted);
 
     // Make sure icons are added also to already created windows
     if (state == LateInitState) {

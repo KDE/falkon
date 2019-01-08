@@ -62,10 +62,10 @@ ComboTabBar::ComboTabBar(QWidget* parent)
     m_mainTabBar->setScrollArea(m_mainTabBarWidget->scrollArea());
     m_pinnedTabBar->setScrollArea(m_pinnedTabBarWidget->scrollArea());
 
-    connect(m_mainTabBarWidget->scrollBar(), SIGNAL(rangeChanged(int,int)), this, SLOT(setMinimumWidths()));
-    connect(m_mainTabBarWidget->scrollBar(), SIGNAL(valueChanged(int)), this, SIGNAL(scrollBarValueChanged(int)));
-    connect(m_pinnedTabBarWidget->scrollBar(), SIGNAL(rangeChanged(int,int)), this, SLOT(setMinimumWidths()));
-    connect(m_pinnedTabBarWidget->scrollBar(), SIGNAL(valueChanged(int)), this, SIGNAL(scrollBarValueChanged(int)));
+    connect(m_mainTabBarWidget->scrollBar(), &QAbstractSlider::rangeChanged, this, &ComboTabBar::setMinimumWidths);
+    connect(m_mainTabBarWidget->scrollBar(), &QAbstractSlider::valueChanged, this, &ComboTabBar::scrollBarValueChanged);
+    connect(m_pinnedTabBarWidget->scrollBar(), &QAbstractSlider::rangeChanged, this, &ComboTabBar::setMinimumWidths);
+    connect(m_pinnedTabBarWidget->scrollBar(), &QAbstractSlider::valueChanged, this, &ComboTabBar::scrollBarValueChanged);
     connect(this, SIGNAL(overFlowChanged(bool)), m_mainTabBarWidget, SLOT(overFlowChanged(bool)));
 
     m_mainTabBar->setActiveTabBar(true);
@@ -92,13 +92,13 @@ ComboTabBar::ComboTabBar(QWidget* parent)
     m_mainLayout->addWidget(m_rightContainer);
     setLayout(m_mainLayout);
 
-    connect(m_mainTabBar, SIGNAL(currentChanged(int)), this, SLOT(slotCurrentChanged(int)));
-    connect(m_mainTabBar, SIGNAL(tabCloseRequested(int)), this, SLOT(slotTabCloseRequested(int)));
-    connect(m_mainTabBar, SIGNAL(tabMoved(int,int)), this, SLOT(slotTabMoved(int,int)));
+    connect(m_mainTabBar, &QTabBar::currentChanged, this, &ComboTabBar::slotCurrentChanged);
+    connect(m_mainTabBar, &QTabBar::tabCloseRequested, this, &ComboTabBar::slotTabCloseRequested);
+    connect(m_mainTabBar, &QTabBar::tabMoved, this, &ComboTabBar::slotTabMoved);
 
-    connect(m_pinnedTabBar, SIGNAL(currentChanged(int)), this, SLOT(slotCurrentChanged(int)));
-    connect(m_pinnedTabBar, SIGNAL(tabCloseRequested(int)), this, SLOT(slotTabCloseRequested(int)));
-    connect(m_pinnedTabBar, SIGNAL(tabMoved(int,int)), this, SLOT(slotTabMoved(int,int)));
+    connect(m_pinnedTabBar, &QTabBar::currentChanged, this, &ComboTabBar::slotCurrentChanged);
+    connect(m_pinnedTabBar, &QTabBar::tabCloseRequested, this, &ComboTabBar::slotTabCloseRequested);
+    connect(m_pinnedTabBar, &QTabBar::tabMoved, this, &ComboTabBar::slotTabMoved);
 
     setAutoFillBackground(false);
     m_mainTabBar->setAutoFillBackground(false);
@@ -561,7 +561,7 @@ void ComboTabBar::insertCloseButton(int index)
     QAbstractButton* closeButton = new CloseButton(this);
     closeButton->setFixedSize(closeButtonSize());
     closeButton->setToolTip(m_closeButtonsToolTip);
-    connect(closeButton, SIGNAL(clicked()), this, SLOT(closeTabFromButton()));
+    connect(closeButton, &QAbstractButton::clicked, this, &ComboTabBar::closeTabFromButton);
     m_mainTabBar->setTabButton(index, closeButtonPosition(), closeButton);
 }
 
@@ -978,7 +978,7 @@ void ComboTabBar::setMinimumWidths()
     if (realTabBarWidth <= width()) {
         if (m_mainBarOverFlowed) {
             m_mainBarOverFlowed = false;
-            QTimer::singleShot(0, this, SLOT(emitOverFlowChanged()));
+            QTimer::singleShot(0, this, &ComboTabBar::emitOverFlowChanged);
         }
 
         m_mainTabBar->useFastTabSizeHint(false);
@@ -987,7 +987,7 @@ void ComboTabBar::setMinimumWidths()
     else {
         if (!m_mainBarOverFlowed) {
             m_mainBarOverFlowed = true;
-            QTimer::singleShot(0, this, SLOT(emitOverFlowChanged()));
+            QTimer::singleShot(0, this, &ComboTabBar::emitOverFlowChanged);
         }
 
         // All tabs have now same width, we can use fast tabSizeHint
@@ -1558,8 +1558,8 @@ TabBarScrollWidget::TabBarScrollWidget(QTabBar* tabBar, QWidget* parent)
     m_leftScrollButton->setAutoRepeat(true);
     m_leftScrollButton->setAutoRepeatDelay(200);
     m_leftScrollButton->setAutoRepeatInterval(200);
-    connect(m_leftScrollButton, SIGNAL(pressed()), this, SLOT(scrollStart()));
-    connect(m_leftScrollButton, SIGNAL(doubleClicked()), this, SLOT(scrollToLeftEdge()));
+    connect(m_leftScrollButton, &QAbstractButton::pressed, this, &TabBarScrollWidget::scrollStart);
+    connect(m_leftScrollButton, &ToolButton::doubleClicked, this, &TabBarScrollWidget::scrollToLeftEdge);
     connect(m_leftScrollButton, SIGNAL(middleMouseClicked()), this, SLOT(ensureVisible()));
 
     m_rightScrollButton = new ToolButton(this);
@@ -1569,8 +1569,8 @@ TabBarScrollWidget::TabBarScrollWidget(QTabBar* tabBar, QWidget* parent)
     m_rightScrollButton->setAutoRepeat(true);
     m_rightScrollButton->setAutoRepeatDelay(200);
     m_rightScrollButton->setAutoRepeatInterval(200);
-    connect(m_rightScrollButton, SIGNAL(pressed()), this, SLOT(scrollStart()));
-    connect(m_rightScrollButton, SIGNAL(doubleClicked()), this, SLOT(scrollToRightEdge()));
+    connect(m_rightScrollButton, &QAbstractButton::pressed, this, &TabBarScrollWidget::scrollStart);
+    connect(m_rightScrollButton, &ToolButton::doubleClicked, this, &TabBarScrollWidget::scrollToRightEdge);
     connect(m_rightScrollButton, SIGNAL(middleMouseClicked()), this, SLOT(ensureVisible()));
 
     QHBoxLayout* hLayout = new QHBoxLayout;
@@ -1582,7 +1582,7 @@ TabBarScrollWidget::TabBarScrollWidget(QTabBar* tabBar, QWidget* parent)
     setLayout(hLayout);
 
     m_scrollArea->viewport()->setAutoFillBackground(false);
-    connect(m_scrollBar, SIGNAL(valueChanged(int)), this, SLOT(updateScrollButtonsState()));
+    connect(m_scrollBar, &QAbstractSlider::valueChanged, this, &TabBarScrollWidget::updateScrollButtonsState);
 
     updateScrollButtonsState();
     overFlowChanged(false);

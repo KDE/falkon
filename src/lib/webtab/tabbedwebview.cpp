@@ -191,7 +191,7 @@ void TabbedWebView::_contextMenuEvent(QContextMenuEvent *event)
 
     if (WebInspector::isEnabled()) {
         m_menu->addSeparator();
-        m_menu->addAction(tr("Inspect Element"), this, SLOT(inspectElement()));
+        m_menu->addAction(tr("Inspect Element"), this, &TabbedWebView::inspectElement);
     }
 
     if (!m_menu->isEmpty()) {

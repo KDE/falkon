@@ -42,10 +42,10 @@ HistoryModel::HistoryModel(History* history)
 {
     init();
 
-    connect(m_history, SIGNAL(resetHistory()), this, SLOT(resetHistory()));
-    connect(m_history, SIGNAL(historyEntryAdded(HistoryEntry)), this, SLOT(historyEntryAdded(HistoryEntry)));
-    connect(m_history, SIGNAL(historyEntryDeleted(HistoryEntry)), this, SLOT(historyEntryDeleted(HistoryEntry)));
-    connect(m_history, SIGNAL(historyEntryEdited(HistoryEntry,HistoryEntry)), this, SLOT(historyEntryEdited(HistoryEntry,HistoryEntry)));
+    connect(m_history, &History::resetHistory, this, &HistoryModel::resetHistory);
+    connect(m_history, &History::historyEntryAdded, this, &HistoryModel::historyEntryAdded);
+    connect(m_history, &History::historyEntryDeleted, this, &HistoryModel::historyEntryDeleted);
+    connect(m_history, &History::historyEntryEdited, this, &HistoryModel::historyEntryEdited);
 }
 
 QVariant HistoryModel::headerData(int section, Qt::Orientation orientation, int role) const
@@ -522,7 +522,7 @@ HistoryFilterModel::HistoryFilterModel(QAbstractItemModel* parent)
     m_filterTimer->setSingleShot(true);
     m_filterTimer->setInterval(300);
 
-    connect(m_filterTimer, SIGNAL(timeout()), this, SLOT(startFiltering()));
+    connect(m_filterTimer, &QTimer::timeout, this, &HistoryFilterModel::startFiltering);
 }
 
 void HistoryFilterModel::setFilterFixedString(const QString &pattern)

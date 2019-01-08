@@ -32,7 +32,7 @@ SslErrorDialog::SslErrorDialog(QWidget* parent)
     //ui->buttonBox->addButton(tr("Only for this session"), QDialogButtonBox::ApplyRole);
     ui->buttonBox->button(QDialogButtonBox::No)->setFocus();
 
-    connect(ui->buttonBox, SIGNAL(clicked(QAbstractButton*)), this, SLOT(buttonClicked(QAbstractButton*)));
+    connect(ui->buttonBox, &QDialogButtonBox::clicked, this, &SslErrorDialog::buttonClicked);
 }
 
 SslErrorDialog::~SslErrorDialog()

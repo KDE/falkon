@@ -35,7 +35,7 @@ QString HtmlImporter::description() const
 
 QString HtmlImporter::standardPath() const
 {
-    return QString(".htm, .html");
+    return QStringLiteral(".htm, .html");
 }
 
 QString HtmlImporter::getPath(QWidget* parent)
@@ -95,7 +95,7 @@ BookmarkItem* HtmlImporter::importBookmarks()
     int start = bookmarks.indexOf(QLatin1String("<dl><p>"));
 
     BookmarkItem* root = new BookmarkItem(BookmarkItem::Folder);
-    root->setTitle("HTML Import");
+    root->setTitle(QStringLiteral("HTML Import"));
 
     QList<BookmarkItem*> folders;
     folders.append(root);

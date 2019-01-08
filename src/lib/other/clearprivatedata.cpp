@@ -47,10 +47,10 @@ ClearPrivateData::ClearPrivateData(QWidget* parent)
 
     ui->setupUi(this);
     ui->buttonBox->setFocus();
-    connect(ui->history, SIGNAL(clicked(bool)), this, SLOT(historyClicked(bool)));
-    connect(ui->clear, SIGNAL(clicked(bool)), this, SLOT(dialogAccepted()));
-    connect(ui->optimizeDb, SIGNAL(clicked(bool)), this, SLOT(optimizeDb()));
-    connect(ui->editCookies, SIGNAL(clicked()), this, SLOT(showCookieManager()));
+    connect(ui->history, &QAbstractButton::clicked, this, &ClearPrivateData::historyClicked);
+    connect(ui->clear, &QAbstractButton::clicked, this, &ClearPrivateData::dialogAccepted);
+    connect(ui->optimizeDb, &QAbstractButton::clicked, this, &ClearPrivateData::optimizeDb);
+    connect(ui->editCookies, &QAbstractButton::clicked, this, &ClearPrivateData::showCookieManager);
 
     Settings settings;
     settings.beginGroup("ClearPrivateData");
@@ -153,7 +153,7 @@ void ClearPrivateData::dialogAccepted()
     ui->clear->setEnabled(false);
     ui->clear->setText(tr("Done"));
 
-    QTimer::singleShot(1000, this, SLOT(close()));
+    QTimer::singleShot(1000, this, &QWidget::close);
 }
 
 void ClearPrivateData::optimizeDb()

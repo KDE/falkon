@@ -91,7 +91,7 @@ void PIM_Handler::showSettings(QWidget* parent)
     if (!m_settings) {
         m_settings = new PIM_Settings(m_settingsFile, parent);
 
-        connect(m_settings.data(), SIGNAL(accepted()), this, SLOT(loadSettings()));
+        connect(m_settings.data(), &QDialog::accepted, this, &PIM_Handler::loadSettings);
     }
 
     m_settings.data()->show();
@@ -116,7 +116,7 @@ void PIM_Handler::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTe
 
     if (!m_allInfo[PI_FirstName].isEmpty() && !m_allInfo[PI_LastName].isEmpty()) {
         const QString fullname = m_allInfo[PI_FirstName] + " " + m_allInfo[PI_LastName];
-        QAction* action = pimMenu->addAction(fullname, this, SLOT(pimInsert()));
+        QAction* action = pimMenu->addAction(fullname, this, &PIM_Handler::pimInsert);
         action->setData(fullname);
     }
 
@@ -126,7 +126,7 @@ void PIM_Handler::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTe
             continue;
         }
 
-        QAction* action = pimMenu->addAction(info, this, SLOT(pimInsert()));
+        QAction* action = pimMenu->addAction(info, this, &PIM_Handler::pimInsert);
         action->setData(info);
         action->setStatusTip(m_translations[PI_Type(i)]);
     }
@@ -179,7 +179,7 @@ void PIM_Handler::unloadPlugin()
 
 void PIM_Handler::webPageCreated(WebPage* page)
 {
-    connect(page, SIGNAL(loadFinished(bool)), this, SLOT(pageLoadFinished()));
+    connect(page, &QWebEnginePage::loadFinished, this, &PIM_Handler::pageLoadFinished);
 }
 
 void PIM_Handler::pimInsert()

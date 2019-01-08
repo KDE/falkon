@@ -29,7 +29,7 @@ AnimatedWidget::AnimatedWidget(const Direction &direction, int duration, QWidget
 {
     m_timeLine.setDuration(duration);
     m_timeLine.setFrameRange(0, 100);
-    connect(&m_timeLine, SIGNAL(frameChanged(int)), this, SLOT(animateFrame(int)));
+    connect(&m_timeLine, &QTimeLine::frameChanged, this, &AnimatedWidget::animateFrame);
 
     setMaximumHeight(0);
 }
@@ -73,7 +73,7 @@ void AnimatedWidget::hide()
     m_timeLine.setDirection(QTimeLine::Backward);
     m_timeLine.start();
 
-    connect(&m_timeLine, SIGNAL(finished()), this, SLOT(close()));
+    connect(&m_timeLine, &QTimeLine::finished, this, &QWidget::close);
 
     QWidget* p = parentWidget();
     if (p) {

@@ -32,8 +32,8 @@ IconChooser::IconChooser(QWidget* parent)
 
     ui->iconList->setItemDelegate(new IconChooserDelegate(ui->iconList));
 
-    connect(ui->chooseFile, SIGNAL(clicked()), this, SLOT(chooseFile()));
-    connect(ui->siteUrl, SIGNAL(textChanged(QString)), this, SLOT(searchIcon(QString)));
+    connect(ui->chooseFile, &QAbstractButton::clicked, this, &IconChooser::chooseFile);
+    connect(ui->siteUrl, &QLineEdit::textChanged, this, &IconChooser::searchIcon);
 }
 
 void IconChooser::chooseFile()

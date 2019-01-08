@@ -105,10 +105,10 @@ AcceptLanguage::AcceptLanguage(QWidget* parent)
         ui->listWidget->addItem(label);
     }
 
-    connect(ui->add, SIGNAL(clicked()), this, SLOT(addLanguage()));
-    connect(ui->remove, SIGNAL(clicked()), this, SLOT(removeLanguage()));
-    connect(ui->up, SIGNAL(clicked()), this, SLOT(upLanguage()));
-    connect(ui->down, SIGNAL(clicked()), this, SLOT(downLanguage()));
+    connect(ui->add, &QAbstractButton::clicked, this, &AcceptLanguage::addLanguage);
+    connect(ui->remove, &QAbstractButton::clicked, this, &AcceptLanguage::removeLanguage);
+    connect(ui->up, &QAbstractButton::clicked, this, &AcceptLanguage::upLanguage);
+    connect(ui->down, &QAbstractButton::clicked, this, &AcceptLanguage::downLanguage);
 }
 
 QStringList AcceptLanguage::expand(const QLocale::Language &language)
@@ -150,7 +150,7 @@ void AcceptLanguage::addLanguage()
 
     acceptLangUi.listWidget->addItems(allLanguages);
 
-    connect(acceptLangUi.listWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)), &dialog, SLOT(accept()));
+    connect(acceptLangUi.listWidget, &QListWidget::itemDoubleClicked, &dialog, &QDialog::accept);
 
     if (dialog.exec() == QDialog::Rejected) {
         return;

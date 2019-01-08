@@ -42,8 +42,8 @@ HistoryTreeView::HistoryTreeView(QWidget* parent)
     m_header->setSectionHidden(4, true);
     setHeader(m_header);
 
-    connect(m_filter, SIGNAL(expandAllItems()), this, SLOT(expandAll()));
-    connect(m_filter, SIGNAL(collapseAllItems()), this, SLOT(collapseAll()));
+    connect(m_filter, &HistoryFilterModel::expandAllItems, this, &QTreeView::expandAll);
+    connect(m_filter, &HistoryFilterModel::collapseAllItems, this, &QTreeView::collapseAll);
 }
 
 HistoryTreeView::ViewType HistoryTreeView::viewType() const

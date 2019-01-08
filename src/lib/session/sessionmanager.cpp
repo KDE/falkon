@@ -43,7 +43,7 @@ SessionManager::SessionManager(QObject* parent)
     , m_secondBackupSession(DataPaths::currentProfilePath() + QL1S("/session.dat.old1"))
 {
     QFileSystemWatcher* sessionFilesWatcher = new QFileSystemWatcher({DataPaths::path(DataPaths::Sessions)}, this);
-    connect(sessionFilesWatcher, SIGNAL(directoryChanged(QString)), this, SLOT(sessionsDirectoryChanged()));
+    connect(sessionFilesWatcher, &QFileSystemWatcher::directoryChanged, this, &SessionManager::sessionsDirectoryChanged);
     connect(sessionFilesWatcher, &QFileSystemWatcher::directoryChanged, this, &SessionManager::sessionsMetaDataChanged);
 
     loadSettings();

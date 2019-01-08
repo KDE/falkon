@@ -58,12 +58,12 @@ BrowsingLibrary::BrowsingLibrary(BrowserWindow* window, QWidget* parent)
     ui->tabs->setFocus();
 
     QMenu* m = new QMenu(this);
-    m->addAction(tr("Import Bookmarks..."), this, SLOT(importBookmarks()));
-    m->addAction(tr("Export Bookmarks..."), this, SLOT(exportBookmarks()));
+    m->addAction(tr("Import Bookmarks..."), this, &BrowsingLibrary::importBookmarks);
+    m->addAction(tr("Export Bookmarks..."), this, &BrowsingLibrary::exportBookmarks);
     ui->importExport->setMenu(m);
 
     connect(ui->tabs, &FancyTabWidget::CurrentChanged, ui->searchLine, &QLineEdit::clear);
-    connect(ui->searchLine, SIGNAL(textChanged(QString)), this, SLOT(search()));
+    connect(ui->searchLine, &QLineEdit::textChanged, this, &BrowsingLibrary::search);
 
     QzTools::setWmClass("Browsing Library", this);
 }

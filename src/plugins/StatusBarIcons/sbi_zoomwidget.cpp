@@ -34,7 +34,7 @@ SBI_ZoomWidget::SBI_ZoomWidget(BrowserWindow* parent)
     setRange(0, WebView::zoomLevels().count() - 1);
 
     connect(this, SIGNAL(valueChanged(int)), this, SLOT(valueChanged(int)));
-    connect(m_window->tabWidget(), SIGNAL(currentChanged(int)), this, SLOT(currentViewChanged()));
+    connect(m_window->tabWidget(), &TabStackedWidget::currentChanged, this, &SBI_ZoomWidget::currentViewChanged);
 
     currentViewChanged();
 }
@@ -54,7 +54,7 @@ void SBI_ZoomWidget::currentViewChanged()
     TabbedWebView* view = m_window->weView();
 
     if (view) {
-        connect(view, SIGNAL(zoomLevelChanged(int)), this, SLOT(setValue(int)));
+        connect(view, &WebView::zoomLevelChanged, this, &QAbstractSlider::setValue);
         setValue(view->zoomLevel());
     }
 }

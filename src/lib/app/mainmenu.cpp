@@ -466,24 +466,24 @@ void MainMenu::init()
     // Standard actions - needed on Mac to be placed correctly in "application" menu
     QAction* action = new QAction(QIcon::fromTheme(QSL("help-about")), tr("&About Falkon"), this);
     action->setMenuRole(QAction::AboutRole);
-    connect(action, SIGNAL(triggered()), this, SLOT(showAboutDialog()));
+    connect(action, &QAction::triggered, this, &MainMenu::showAboutDialog);
     m_actions[QSL("Standard/About")] = action;
 
     action = new QAction(IconProvider::settingsIcon(), tr("Pr&eferences"), this);
     action->setMenuRole(QAction::PreferencesRole);
     action->setShortcut(QKeySequence(QKeySequence::Preferences));
-    connect(action, SIGNAL(triggered()), this, SLOT(showPreferences()));
+    connect(action, &QAction::triggered, this, &MainMenu::showPreferences);
     m_actions[QSL("Standard/Preferences")] = action;
 
     action = new QAction(QIcon::fromTheme(QSL("application-exit")), tr("Quit"), this);
     action->setMenuRole(QAction::QuitRole);
     // shortcut set from browserwindow
-    connect(action, SIGNAL(triggered()), this, SLOT(quitApplication()));
+    connect(action, &QAction::triggered, this, &MainMenu::quitApplication);
     m_actions[QSL("Standard/Quit")] = action;
 
     // File menu
     m_menuFile = new QMenu(tr("&File"));
-    connect(m_menuFile, SIGNAL(aboutToShow()), this, SLOT(aboutToShowFileMenu()));
+    connect(m_menuFile, &QMenu::aboutToShow, this, &MainMenu::aboutToShowFileMenu);
 
     ADD_ACTION("File/NewTab", m_menuFile, IconProvider::newTabIcon(), tr("New Tab"), SLOT(newTab()), "Ctrl+T");
     ADD_ACTION("File/NewWindow", m_menuFile, IconProvider::newWindowIcon(), tr("&New Window"), SLOT(newWindow()), "Ctrl+N");
@@ -498,7 +498,7 @@ void MainMenu::init()
         connect(sessionsSubmenu, SIGNAL(aboutToShow()), mApp->sessionManager(), SLOT(aboutToShowSessionsMenu()));
         m_menuFile->addMenu(sessionsSubmenu);
         action = new QAction(tr("Session Manager"), this);
-        connect(action, SIGNAL(triggered()), mApp->sessionManager(), SLOT(openSessionManagerDialog()));
+        connect(action, &QAction::triggered, mApp->sessionManager(), &SessionManager::openSessionManagerDialog);
         m_actions[QSL("File/SessionManager")] = action;
         m_menuFile->addAction(action);
         m_menuFile->addSeparator();
@@ -512,7 +512,7 @@ void MainMenu::init()
 
     // Edit menu
     m_menuEdit = new QMenu(tr("&Edit"));
-    connect(m_menuEdit, SIGNAL(aboutToShow()), this, SLOT(aboutToShowEditMenu()));
+    connect(m_menuEdit, &QMenu::aboutToShow, this, &MainMenu::aboutToShowEditMenu);
 
     ADD_ACTION("Edit/Undo", m_menuEdit, QIcon::fromTheme(QSL("edit-undo")), tr("&Undo"), SLOT(editUndo()), "Ctrl+Z");
     action->setShortcutContext(Qt::WidgetShortcut);
@@ -534,14 +534,14 @@ void MainMenu::init()
 
     // View menu
     m_menuView = new QMenu(tr("&View"));
-    connect(m_menuView, SIGNAL(aboutToShow()), this, SLOT(aboutToShowViewMenu()));
+    connect(m_menuView, &QMenu::aboutToShow, this, &MainMenu::aboutToShowViewMenu);
 
     QMenu* toolbarsMenu = new QMenu(tr("Toolbars"));
-    connect(toolbarsMenu, SIGNAL(aboutToShow()), this, SLOT(aboutToShowToolbarsMenu()));
+    connect(toolbarsMenu, &QMenu::aboutToShow, this, &MainMenu::aboutToShowToolbarsMenu);
     QMenu* sidebarMenu = new QMenu(tr("Sidebar"));
-    connect(sidebarMenu, SIGNAL(aboutToShow()), this, SLOT(aboutToShowSidebarsMenu()));
+    connect(sidebarMenu, &QMenu::aboutToShow, this, &MainMenu::aboutToShowSidebarsMenu);
     QMenu* encodingMenu = new QMenu(tr("Character &Encoding"));
-    connect(encodingMenu, SIGNAL(aboutToShow()), this, SLOT(aboutToShowEncodingMenu()));
+    connect(encodingMenu, &QMenu::aboutToShow, this, &MainMenu::aboutToShowEncodingMenu);
 
     // Create menus to make shortcuts available even before first showing the menu
     m_window->createToolbarsMenu(toolbarsMenu);
@@ -566,7 +566,7 @@ void MainMenu::init()
 
     // Tools menu
     m_menuTools = new QMenu(tr("&Tools"));
-    connect(m_menuTools, SIGNAL(aboutToShow()), this, SLOT(aboutToShowToolsMenu()));
+    connect(m_menuTools, &QMenu::aboutToShow, this, &MainMenu::aboutToShowToolsMenu);
 
     ADD_ACTION("Tools/WebSearch", m_menuTools, QIcon::fromTheme(QSL("edit-find")), tr("&Web Search"), SLOT(webSearch()), "Ctrl+K");
     ADD_ACTION("Tools/SiteInfo", m_menuTools, QIcon::fromTheme(QSL("dialog-information")), tr("Site &Info"), SLOT(showSiteInfo()), "Ctrl+I");
@@ -611,7 +611,7 @@ void MainMenu::init()
     // Other actions
     action = new QAction(QIcon::fromTheme(QSL("user-trash")), tr("Restore &Closed Tab"), this);
     action->setShortcut(QKeySequence(QSL("Ctrl+Shift+T")));
-    connect(action, SIGNAL(triggered()), this, SLOT(restoreClosedTab()));
+    connect(action, &QAction::triggered, this, &MainMenu::restoreClosedTab);
     m_actions[QSL("Other/RestoreClosedTab")] = action;
 
 #ifdef Q_OS_MACOS

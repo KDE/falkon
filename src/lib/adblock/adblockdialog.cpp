@@ -46,22 +46,22 @@ AdBlockDialog::AdBlockDialog(QWidget* parent)
     adblockCheckBox->setChecked(m_manager->isEnabled());
 
     QMenu* menu = new QMenu(buttonOptions);
-    m_actionAddRule = menu->addAction(tr("Add Rule"), this, SLOT(addRule()));
-    m_actionRemoveRule = menu->addAction(tr("Remove Rule"), this, SLOT(removeRule()));
+    m_actionAddRule = menu->addAction(tr("Add Rule"), this, &AdBlockDialog::addRule);
+    m_actionRemoveRule = menu->addAction(tr("Remove Rule"), this, &AdBlockDialog::removeRule);
     menu->addSeparator();
-    m_actionAddSubscription = menu->addAction(tr("Add Subscription"), this, SLOT(addSubscription()));
-    m_actionRemoveSubscription = menu->addAction(tr("Remove Subscription"), this, SLOT(removeSubscription()));
-    menu->addAction(tr("Update Subscriptions"), m_manager, SLOT(updateAllSubscriptions()));
+    m_actionAddSubscription = menu->addAction(tr("Add Subscription"), this, &AdBlockDialog::addSubscription);
+    m_actionRemoveSubscription = menu->addAction(tr("Remove Subscription"), this, &AdBlockDialog::removeSubscription);
+    menu->addAction(tr("Update Subscriptions"), m_manager, &AdBlockManager::updateAllSubscriptions);
     menu->addSeparator();
-    menu->addAction(tr("Learn about writing rules..."), this, SLOT(learnAboutRules()));
+    menu->addAction(tr("Learn about writing rules..."), this, &AdBlockDialog::learnAboutRules);
 
     buttonOptions->setMenu(menu);
-    connect(menu, SIGNAL(aboutToShow()), this, SLOT(aboutToShowMenu()));
+    connect(menu, &QMenu::aboutToShow, this, &AdBlockDialog::aboutToShowMenu);
 
-    connect(adblockCheckBox, SIGNAL(toggled(bool)), this, SLOT(enableAdBlock(bool)));
-    connect(search, SIGNAL(textChanged(QString)), this, SLOT(filterString(QString)));
-    connect(tabWidget, SIGNAL(currentChanged(int)), this, SLOT(currentChanged(int)));
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(close()));
+    connect(adblockCheckBox, &QAbstractButton::toggled, this, &AdBlockDialog::enableAdBlock);
+    connect(search, &QLineEdit::textChanged, this, &AdBlockDialog::filterString);
+    connect(tabWidget, &QTabWidget::currentChanged, this, &AdBlockDialog::currentChanged);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QWidget::close);
 
     load();
 
@@ -181,5 +181,5 @@ void AdBlockDialog::load()
 
     m_loaded = true;
 
-    QTimer::singleShot(50, this, SLOT(loadSubscriptions()));
+    QTimer::singleShot(50, this, &AdBlockDialog::loadSubscriptions);
 }

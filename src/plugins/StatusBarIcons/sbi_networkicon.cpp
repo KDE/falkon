@@ -34,8 +34,8 @@ SBI_NetworkIcon::SBI_NetworkIcon(BrowserWindow* window)
 
     onlineStateChanged(m_networkConfiguration->isOnline());
 
-    connect(m_networkConfiguration, SIGNAL(onlineStateChanged(bool)), this, SLOT(onlineStateChanged(bool)));
-    connect(this, SIGNAL(clicked(QPoint)), this, SLOT(showMenu(QPoint)));
+    connect(m_networkConfiguration, &QNetworkConfigurationManager::onlineStateChanged, this, &SBI_NetworkIcon::onlineStateChanged);
+    connect(this, &ClickableLabel::clicked, this, &SBI_NetworkIcon::showMenu);
 }
 
 void SBI_NetworkIcon::onlineStateChanged(bool online)
@@ -71,7 +71,7 @@ void SBI_NetworkIcon::showMenu(const QPoint &pos)
     QHashIterator<QString, SBI_NetworkProxy*> it(proxies);
     while (it.hasNext()) {
         it.next();
-        QAction* act = proxyMenu->addAction(it.key(), this, SLOT(useProxy()));
+        QAction* act = proxyMenu->addAction(it.key(), this, &SBI_NetworkIcon::useProxy);
         act->setData(it.key());
         act->setCheckable(true);
         act->setChecked(it.value() == SBINetManager->currentProxy());
@@ -82,7 +82,7 @@ void SBI_NetworkIcon::showMenu(const QPoint &pos)
     }
 
     menu.addSeparator();
-    menu.addAction(tr("Manage proxies"), this, SLOT(showDialog()));
+    menu.addAction(tr("Manage proxies"), this, &SBI_NetworkIcon::showDialog);
     menu.exec(pos);
 }
 

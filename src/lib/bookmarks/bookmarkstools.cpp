@@ -75,7 +75,7 @@ void BookmarksFoldersMenu::createMenu(QMenu* menu, BookmarkItem* parent)
 {
     QAction* act = menu->addAction(tr("Choose %1").arg(parent->title()));
     act->setData(QVariant::fromValue<void*>(static_cast<void*>(parent)));
-    connect(act, SIGNAL(triggered()), this, SLOT(folderChoosed()));
+    connect(act, &QAction::triggered, this, &BookmarksFoldersMenu::folderChoosed);
 
     menu->addSeparator();
 
@@ -96,7 +96,7 @@ BookmarksFoldersButton::BookmarksFoldersButton(QWidget* parent, BookmarkItem* fo
 {
     init();
 
-    connect(m_menu, SIGNAL(folderSelected(BookmarkItem*)), this, SLOT(setSelectedFolder(BookmarkItem*)));
+    connect(m_menu, &BookmarksFoldersMenu::folderSelected, this, &BookmarksFoldersButton::setSelectedFolder);
 }
 
 BookmarkItem* BookmarksFoldersButton::selectedFolder() const
@@ -141,8 +141,8 @@ bool BookmarksTools::addBookmarkDialog(QWidget* parent, const QUrl &url, const Q
     QDialogButtonBox* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
-    QObject::connect(box, SIGNAL(rejected()), dialog, SLOT(reject()));
-    QObject::connect(box, SIGNAL(accepted()), dialog, SLOT(accept()));
+    QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+    QObject::connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
 
     layout->addWidget(label);
     layout->addWidget(edit);
@@ -186,8 +186,8 @@ bool BookmarksTools::bookmarkAllTabsDialog(QWidget* parent, TabWidget* tabWidget
     QDialogButtonBox* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
-    QObject::connect(box, SIGNAL(rejected()), dialog, SLOT(reject()));
-    QObject::connect(box, SIGNAL(accepted()), dialog, SLOT(accept()));
+    QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+    QObject::connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
 
     layout->addWidget(label);
     layout->addWidget(folderButton);

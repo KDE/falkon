@@ -517,8 +517,8 @@ MasterPasswordDialog::MasterPasswordDialog(DatabaseEncryptedPasswordBackend* bac
     ui->currentPassword->setVisible(m_backend->isMasterPasswordSetted());
     ui->labelCurrentPassword->setVisible(m_backend->isMasterPasswordSetted());
 
-    connect(ui->setMasterPassword, SIGNAL(clicked()), this, SLOT(showSetMasterPasswordPage()));
-    connect(ui->clearMasterPassword, SIGNAL(clicked()), this, SLOT(clearMasterPasswordAndConvert()));
+    connect(ui->setMasterPassword, &QAbstractButton::clicked, this, &MasterPasswordDialog::showSetMasterPasswordPage);
+    connect(ui->clearMasterPassword, &QAbstractButton::clicked, this, &MasterPasswordDialog::clearMasterPasswordAndConvert);
     connect(ui->buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
     connect(ui->buttonBoxMasterPassword, SIGNAL(rejected()), this, SLOT(reject()));
     connect(ui->buttonBoxMasterPassword, SIGNAL(accepted()), this, SLOT(accept()));
@@ -531,7 +531,7 @@ MasterPasswordDialog::~MasterPasswordDialog()
 
 void MasterPasswordDialog::delayedExec()
 {
-    QTimer::singleShot(0, this, SLOT(exec()));
+    QTimer::singleShot(0, this, &QDialog::exec);
 }
 
 void MasterPasswordDialog::accept()
@@ -689,9 +689,9 @@ AskMasterPassword::AskMasterPassword(DatabaseEncryptedPasswordBackend* backend, 
     verticalLayout->addWidget(m_buttonBox);
     setLayout(verticalLayout);
 
-    connect(m_lineEdit, SIGNAL(returnPressed()), this, SLOT(verifyPassword()));
-    connect(m_buttonBox, SIGNAL(accepted()), this, SLOT(verifyPassword()));
-    connect(m_buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(m_lineEdit, &QLineEdit::returnPressed, this, &AskMasterPassword::verifyPassword);
+    connect(m_buttonBox, &QDialogButtonBox::accepted, this, &AskMasterPassword::verifyPassword);
+    connect(m_buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
     setAttribute(Qt::WA_DeleteOnClose);
 }

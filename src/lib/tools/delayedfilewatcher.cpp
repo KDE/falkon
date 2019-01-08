@@ -33,20 +33,20 @@ DelayedFileWatcher::DelayedFileWatcher(const QStringList &paths, QObject* parent
 
 void DelayedFileWatcher::init()
 {
-    connect(this, SIGNAL(directoryChanged(QString)), this, SLOT(slotDirectoryChanged(QString)));
-    connect(this, SIGNAL(fileChanged(QString)), this, SLOT(slotFileChanged(QString)));
+    connect(this, &QFileSystemWatcher::directoryChanged, this, &DelayedFileWatcher::slotDirectoryChanged);
+    connect(this, &QFileSystemWatcher::fileChanged, this, &DelayedFileWatcher::slotFileChanged);
 }
 
 void DelayedFileWatcher::slotDirectoryChanged(const QString &path)
 {
     m_dirQueue.enqueue(path);
-    QTimer::singleShot(500, this, SLOT(dequeueDirectory()));
+    QTimer::singleShot(500, this, &DelayedFileWatcher::dequeueDirectory);
 }
 
 void DelayedFileWatcher::slotFileChanged(const QString &path)
 {
     m_fileQueue.enqueue(path);
-    QTimer::singleShot(500, this, SLOT(dequeueFile()));
+    QTimer::singleShot(500, this, &DelayedFileWatcher::dequeueFile);
 }
 
 void DelayedFileWatcher::dequeueDirectory()

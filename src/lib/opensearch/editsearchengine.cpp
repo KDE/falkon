@@ -28,7 +28,7 @@ EditSearchEngine::EditSearchEngine(const QString &title, QWidget* parent)
     setWindowTitle(title);
     ui->setupUi(this);
 
-    connect(ui->iconFromFile, SIGNAL(clicked()), this, SLOT(chooseIcon()));
+    connect(ui->iconFromFile, &QAbstractButton::clicked, this, &EditSearchEngine::chooseIcon);
 
     ui->buttonBox->setFocus();
 

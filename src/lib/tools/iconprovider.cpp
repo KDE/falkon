@@ -39,7 +39,7 @@ IconProvider::IconProvider()
     : QWidget()
 {
     m_autoSaver = new AutoSaver(this);
-    connect(m_autoSaver, SIGNAL(save()), this, SLOT(saveIconsToDatabase()));
+    connect(m_autoSaver, &AutoSaver::save, this, &IconProvider::saveIconsToDatabase);
 }
 
 void IconProvider::saveIcon(WebView* view)

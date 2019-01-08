@@ -32,15 +32,15 @@ SearchEnginesDialog::SearchEnginesDialog(QWidget* parent)
 
     ui->setupUi(this);
 
-    connect(ui->add, SIGNAL(clicked()), this, SLOT(addEngine()));
-    connect(ui->remove, SIGNAL(clicked()), this, SLOT(removeEngine()));
-    connect(ui->edit, SIGNAL(clicked()), this, SLOT(editEngine()));
-    connect(ui->setAsDefault, SIGNAL(clicked()), this, SLOT(setDefaultEngine()));
-    connect(ui->defaults, SIGNAL(clicked()), this, SLOT(defaults()));
-    connect(ui->moveUp, SIGNAL(clicked()), this, SLOT(moveUp()));
-    connect(ui->moveDown, SIGNAL(clicked()), this, SLOT(moveDown()));
+    connect(ui->add, &QAbstractButton::clicked, this, &SearchEnginesDialog::addEngine);
+    connect(ui->remove, &QAbstractButton::clicked, this, &SearchEnginesDialog::removeEngine);
+    connect(ui->edit, &QAbstractButton::clicked, this, &SearchEnginesDialog::editEngine);
+    connect(ui->setAsDefault, &QAbstractButton::clicked, this, &SearchEnginesDialog::setDefaultEngine);
+    connect(ui->defaults, &QAbstractButton::clicked, this, &SearchEnginesDialog::defaults);
+    connect(ui->moveUp, &QAbstractButton::clicked, this, &SearchEnginesDialog::moveUp);
+    connect(ui->moveDown, &QAbstractButton::clicked, this, &SearchEnginesDialog::moveDown);
 
-    connect(ui->treeWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), this, SLOT(editEngine()));
+    connect(ui->treeWidget, &QTreeWidget::itemDoubleClicked, this, &SearchEnginesDialog::editEngine);
 
     ui->treeWidget->setItemDelegate(new RemoveItemFocusDelegate(ui->treeWidget));
     ui->treeWidget->sortByColumn(-1);

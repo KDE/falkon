@@ -46,7 +46,7 @@ QString OperaImporter::standardPath() const
 
 QString OperaImporter::getPath(QWidget* parent)
 {
-    m_path = QFileDialog::getOpenFileName(parent, BookmarksImporter::tr("Choose file..."), standardPath(), "Bookmarks (*.adr)");
+    m_path = QFileDialog::getOpenFileName(parent, BookmarksImporter::tr("Choose file..."), standardPath(), QStringLiteral("Bookmarks (*.adr)"));
     return m_path;
 }
 

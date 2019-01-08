@@ -38,7 +38,7 @@ LocationCompleterRefreshJob::LocationCompleterRefreshJob(const QString &searchSt
     , m_jobCancelled(false)
 {
     m_watcher = new QFutureWatcher<void>(this);
-    connect(m_watcher, SIGNAL(finished()), this, SLOT(slotFinished()));
+    connect(m_watcher, &QFutureWatcherBase::finished, this, &LocationCompleterRefreshJob::slotFinished);
 
     QFuture<void> future = QtConcurrent::run(this, &LocationCompleterRefreshJob::runJob);
     m_watcher->setFuture(future);

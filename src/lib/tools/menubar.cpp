@@ -26,8 +26,8 @@ MenuBar::MenuBar(BrowserWindow* parent)
     setCursor(Qt::ArrowCursor);
     setContextMenuPolicy(Qt::CustomContextMenu);
 
-    connect(this, SIGNAL(customContextMenuRequested(QPoint)),
-            this, SLOT(contextMenuRequested(QPoint)));
+    connect(this, &QWidget::customContextMenuRequested,
+            this, &MenuBar::contextMenuRequested);
 }
 
 void MenuBar::contextMenuRequested(const QPoint &pos)

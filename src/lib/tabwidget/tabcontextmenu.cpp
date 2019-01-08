@@ -36,7 +36,7 @@ TabContextMenu::TabContextMenu(int index, BrowserWindow *window, Options options
     setObjectName("tabcontextmenu");
 
     TabWidget *tabWidget = m_window->tabWidget();
-    connect(this, SIGNAL(tabCloseRequested(int)), tabWidget->tabBar(), SIGNAL(tabCloseRequested(int)));
+    connect(this, &TabContextMenu::tabCloseRequested, tabWidget->tabBar(), &ComboTabBar::tabCloseRequested);
     connect(this, SIGNAL(reloadTab(int)), tabWidget, SLOT(reloadTab(int)));
     connect(this, SIGNAL(stopTab(int)), tabWidget, SLOT(stopTab(int)));
     connect(this, SIGNAL(closeAllButCurrent(int)), tabWidget, SLOT(closeAllButCurrent(int)));
@@ -126,8 +126,8 @@ void TabContextMenu::init()
             addAction(QIcon::fromTheme("tab-detach"), tr("D&etach Tab"), this, SLOT(detachTab()));
         }
 
-        addAction(webTab->isPinned() ? tr("Un&pin Tab") : tr("&Pin Tab"), this, SLOT(pinTab()));
-        addAction(webTab->isMuted() ? tr("Un&mute Tab") : tr("&Mute Tab"), this, SLOT(muteTab()));
+        addAction(webTab->isPinned() ? tr("Un&pin Tab") : tr("&Pin Tab"), this, &TabContextMenu::pinTab);
+        addAction(webTab->isMuted() ? tr("Un&mute Tab") : tr("&Mute Tab"), this, &TabContextMenu::muteTab);
 
         if (!webTab->isRestored()) {
             addAction(tr("Load Tab"), this, SLOT(loadTab()));
@@ -136,8 +136,8 @@ void TabContextMenu::init()
         }
 
         addSeparator();
-        addAction(tr("Re&load All Tabs"), tabWidget, SLOT(reloadAllTabs()));
-        addAction(tr("Bookmark &All Tabs"), m_window, SLOT(bookmarkAllTabs()));
+        addAction(tr("Re&load All Tabs"), tabWidget, &TabWidget::reloadAllTabs);
+        addAction(tr("Bookmark &All Tabs"), m_window, &BrowserWindow::bookmarkAllTabs);
         addSeparator();
 
         if (m_options & ShowCloseOtherTabsActions) {
@@ -148,12 +148,12 @@ void TabContextMenu::init()
         }
 
         addAction(m_window->action(QSL("Other/RestoreClosedTab")));
-        addAction(QIcon::fromTheme("window-close"), tr("Cl&ose Tab"), this, SLOT(closeTab()));
+        addAction(QIcon::fromTheme("window-close"), tr("Cl&ose Tab"), this, &TabContextMenu::closeTab);
     } else {
-        addAction(IconProvider::newTabIcon(), tr("&New tab"), m_window, SLOT(addTab()));
+        addAction(IconProvider::newTabIcon(), tr("&New tab"), m_window, &BrowserWindow::addTab);
         addSeparator();
-        addAction(tr("Reloa&d All Tabs"), tabWidget, SLOT(reloadAllTabs()));
-        addAction(tr("Bookmark &All Tabs"), m_window, SLOT(bookmarkAllTabs()));
+        addAction(tr("Reloa&d All Tabs"), tabWidget, &TabWidget::reloadAllTabs);
+        addAction(tr("Bookmark &All Tabs"), m_window, &BrowserWindow::bookmarkAllTabs);
         addSeparator();
         addAction(m_window->action(QSL("Other/RestoreClosedTab")));
     }

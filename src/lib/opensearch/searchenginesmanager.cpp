@@ -75,7 +75,7 @@ SearchEnginesManager::SearchEnginesManager(QObject* parent)
     m_defaultEngineName = settings.value("DefaultEngine", "DuckDuckGo").toString();
     settings.endGroup();
 
-    connect(this, SIGNAL(enginesChanged()), this, SLOT(scheduleSave()));
+    connect(this, &SearchEnginesManager::enginesChanged, this, &SearchEnginesManager::scheduleSave);
 }
 
 void SearchEnginesManager::loadSettings()
@@ -357,7 +357,7 @@ void SearchEnginesManager::addEngine(OpenSearchEngine* engine)
 
     addEngine(en);
 
-    connect(engine, SIGNAL(imageChanged()), this, SLOT(engineChangedImage()));
+    connect(engine, &OpenSearchEngine::imageChanged, this, &SearchEnginesManager::engineChangedImage);
 }
 
 void SearchEnginesManager::addEngine(const QUrl &url)
@@ -372,7 +372,7 @@ void SearchEnginesManager::addEngine(const QUrl &url)
 
     QNetworkReply* reply = mApp->networkManager()->get(QNetworkRequest(url));
     reply->setParent(this);
-    connect(reply, SIGNAL(finished()), this, SLOT(replyFinished()));
+    connect(reply, &QNetworkReply::finished, this, &SearchEnginesManager::replyFinished);
 }
 
 void SearchEnginesManager::replyFinished()

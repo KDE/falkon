@@ -27,7 +27,7 @@ ButtonWithMenu::ButtonWithMenu(QWidget* parent)
     setCursor(Qt::ArrowCursor);
     setFocusPolicy(Qt::NoFocus);
 
-    connect(this, SIGNAL(aboutToShowMenu()), this, SLOT(generateMenu()));
+    connect(this, &ToolButton::aboutToShowMenu, this, &ButtonWithMenu::generateMenu);
     connect(m_menu, &QMenu::aboutToShow, this, std::bind(&ButtonWithMenu::setDown, this, true));
     connect(m_menu, &QMenu::aboutToHide, this, std::bind(&ButtonWithMenu::setDown, this, false));
 }

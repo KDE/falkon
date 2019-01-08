@@ -57,7 +57,7 @@ GM_AddScriptDialog::GM_AddScriptDialog(GM_Manager* manager, GM_Script* script, Q
     QString scriptInfo = QString("<b>%1</b> %2<br/>%3 %4 %5").arg(script->name(), script->version(), script->description(), runsAt, dontRunsAt);
     ui->textBrowser->setText(scriptInfo);
 
-    connect(ui->showSource, SIGNAL(clicked()), this, SLOT(showSource()));
+    connect(ui->showSource, &QAbstractButton::clicked, this, &GM_AddScriptDialog::showSource);
     connect(this, SIGNAL(accepted()), this, SLOT(accepted()));
 }
 
