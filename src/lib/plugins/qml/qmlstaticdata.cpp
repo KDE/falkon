@@ -78,7 +78,7 @@ QmlCookie *QmlStaticData::getCookie(const QNetworkCookie &cookie)
     return qmlCookie;
 }
 
-QmlHistoryItem *QmlStaticData::getHistoryItem(HistoryEntry entry)
+QmlHistoryItem *QmlStaticData::getHistoryItem(const HistoryEntry &entry)
 {
     QmlHistoryItem *item = m_historyItems.value(entry);
     if (!item) {

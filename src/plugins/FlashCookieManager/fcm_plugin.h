@@ -81,7 +81,7 @@ private:
     AbstractButtonInterface* createStatusBarIcon(BrowserWindow* mainWindow);
     void loadFlashCookies();
     void loadFlashCookies(QString path);
-    void insertFlashCookie(QString path);
+    void insertFlashCookie(const QString &path);
     QString extractOriginFrom(const QString &path);
     bool isBlacklisted(const FlashCookie &flashCookie);
     bool isWhitelisted(const FlashCookie &flashCookie);

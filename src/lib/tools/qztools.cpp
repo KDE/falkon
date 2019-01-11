@@ -745,7 +745,7 @@ bool QzTools::matchDomain(const QString &pattern, const QString &domain)
     return index > 0 && domain[index - 1] == QLatin1Char('.');
 }
 
-QKeySequence QzTools::actionShortcut(QKeySequence shortcut, QKeySequence fallBack, QKeySequence shortcutRtl, QKeySequence fallbackRtl)
+QKeySequence QzTools::actionShortcut(const QKeySequence &shortcut, const QKeySequence &fallBack, const QKeySequence &shortcutRtl, const QKeySequence &fallbackRtl)
 {
     if (QApplication::isRightToLeft() && (!shortcutRtl.isEmpty() || !fallbackRtl.isEmpty()))
         return shortcutRtl.isEmpty() ? fallbackRtl : shortcutRtl;

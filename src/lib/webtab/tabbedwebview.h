@@ -57,7 +57,7 @@ public:
 
 Q_SIGNALS:
     void wantsCloseTab(int);
-    void ipChanged(QString);
+    void ipChanged(const QString&);
 
 public Q_SLOTS:
     void setAsCurrentTab();

@@ -25,12 +25,12 @@
 QmlHistory::QmlHistory(QObject *parent)
     : QObject(parent)
 {
-    connect(mApp->history(), &History::historyEntryAdded, this, [this](HistoryEntry entry){
+    connect(mApp->history(), &History::historyEntryAdded, this, [this](const HistoryEntry &entry){
         QmlHistoryItem *historyItem = QmlStaticData::instance().getHistoryItem(entry);
         emit visited(historyItem);
     });
 
-    connect(mApp->history(), &History::historyEntryDeleted, this, [this](HistoryEntry entry){
+    connect(mApp->history(), &History::historyEntryDeleted, this, [this](const HistoryEntry &entry){
         QmlHistoryItem *historyItem = QmlStaticData::instance().getHistoryItem(entry);
         emit visitRemoved(historyItem);
     });

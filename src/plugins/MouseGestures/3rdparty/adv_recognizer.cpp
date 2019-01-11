@@ -116,7 +116,7 @@ void RealTimeMouseGestureRecognizer::addPoint(int x, int y)
 }
 
 struct DirectionSort {
-    bool operator()(GestureDefinition a, GestureDefinition b) {
+    bool operator()(const GestureDefinition &a, const GestureDefinition &b) {
         return a.directions.size() > b.directions.size();
     }
 };

@@ -44,7 +44,7 @@ public:
 
     Qt::DropActions supportedDropActions() const;
     QStringList mimeTypes() const;
-    QMimeData* mimeData(const QList<QTreeWidgetItem*> items) const;
+    QMimeData* mimeData(const QList<QTreeWidgetItem*> &items) const;
     bool dropMimeData(QTreeWidgetItem *parent, int index, const QMimeData *data, Qt::DropAction action);
 
     void setEnableDragTabs(bool enable);

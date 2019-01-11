@@ -398,7 +398,7 @@ void FCM_Plugin::loadFlashCookies(QString path)
     }
 }
 
-void FCM_Plugin::insertFlashCookie(QString path)
+void FCM_Plugin::insertFlashCookie(const QString &path)
 {
     QFile solFile(path);
     if (!solFile.open(QFile::ReadOnly)) {

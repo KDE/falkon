@@ -58,7 +58,7 @@ private:
     bool isDefaultEngine(QTreeWidgetItem* item);
     SearchEngine getEngine(QTreeWidgetItem* item);
 
-    void setEngine(QTreeWidgetItem* item, SearchEngine engine);
+    void setEngine(QTreeWidgetItem* item, const SearchEngine &engine);
     void changeItemToDefault(QTreeWidgetItem* item, bool isDefault);
 
     void reloadEngines();

@@ -30,7 +30,7 @@ public:
     {
     }
 
-    bool matchDomain(QString cookieDomain, QString siteDomain) const
+    bool matchDomain(const QString &cookieDomain, const QString &siteDomain) const
     {
         return CookieJar::matchDomain(cookieDomain, siteDomain);
     }

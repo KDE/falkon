@@ -33,7 +33,7 @@ QmlCookies::QmlCookies(QObject *parent)
         emit changed(map);
     });
 
-    connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, [this](QNetworkCookie network_cookie){
+    connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, [this](const QNetworkCookie &network_cookie){
         QmlCookie *cookie = QmlStaticData::instance().getCookie(network_cookie);
         QVariantMap map;
         map.insert(QSL("cookie"), QVariant::fromValue(cookie));

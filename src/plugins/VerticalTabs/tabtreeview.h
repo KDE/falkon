@@ -65,7 +65,7 @@ private:
     void initView();
     DelegateButton buttonAt(const QPoint &pos, const QModelIndex &index) const;
     void addMenuActions(QMenu *menu, const QModelIndex &index);
-    void reverseTraverse(const QModelIndex &root, std::function<void(const QModelIndex&)> callback) const;
+    void reverseTraverse(const QModelIndex &root, const std::function<void(const QModelIndex&)> &callback) const;
 
     void closeTree(const QModelIndex &root);
     void unloadTree(const QModelIndex &root);

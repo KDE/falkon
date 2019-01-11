@@ -22,7 +22,7 @@
 #include <QDebug>
 #include <QQmlEngine>
 
-QmlFileUtils::QmlFileUtils(QString filePath, QObject *parent)
+QmlFileUtils::QmlFileUtils(const QString &filePath, QObject *parent)
     : QObject(parent)
 {
     m_path = filePath;

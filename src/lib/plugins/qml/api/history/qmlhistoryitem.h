@@ -52,7 +52,7 @@ class QmlHistoryItem : public QObject
      */
     Q_PROPERTY(QDateTime lastVisitTime READ lastVisitTime CONSTANT)
 public:
-    explicit QmlHistoryItem(HistoryEntry entry, QObject *parent = nullptr);
+    explicit QmlHistoryItem(const HistoryEntry &entry, QObject *parent = nullptr);
 
 private:
     HistoryEntry m_entry;

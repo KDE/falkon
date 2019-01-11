@@ -18,7 +18,7 @@
 #include "qmlhistoryitem.h"
 #include <QQmlEngine>
 
-QmlHistoryItem::QmlHistoryItem(HistoryEntry entry, QObject *parent)
+QmlHistoryItem::QmlHistoryItem(const HistoryEntry &entry, QObject *parent)
     : QObject(parent)
     , m_entry(entry)
 {

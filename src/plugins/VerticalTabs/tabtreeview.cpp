@@ -391,7 +391,7 @@ void TabTreeView::addMenuActions(QMenu *menu, const QModelIndex &index)
     m->addAction(tr("Collapse All"), this, &TabTreeView::collapseAll);
 }
 
-void TabTreeView::reverseTraverse(const QModelIndex &root, std::function<void(const QModelIndex&)> callback) const
+void TabTreeView::reverseTraverse(const QModelIndex &root, const std::function<void(const QModelIndex&)> &callback) const
 {
     if (!root.isValid()) {
         return;

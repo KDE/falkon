@@ -64,7 +64,7 @@ Q_SIGNALS:
     // Context menu signal with point mapped to global
     void contextMenuRequested(const QPoint &point);
     // If all bookmarks have been deselected, items is empty
-    void bookmarksSelected(QList<BookmarkItem*> items);
+    void bookmarksSelected(const QList<BookmarkItem*> &items);
 
 private Q_SLOTS:
     void indexExpanded(const QModelIndex &parent);

@@ -52,7 +52,7 @@ public:
     static QmlStaticData &instance();
     QmlBookmarkTreeNode *getBookmarkTreeNode(BookmarkItem *item);
     QmlCookie *getCookie(const QNetworkCookie &cookie);
-    QmlHistoryItem *getHistoryItem(HistoryEntry entry);
+    QmlHistoryItem *getHistoryItem(const HistoryEntry &entry);
     QmlTab *getTab(WebTab *webTab);
     QmlMostVisitedUrl *getMostVisitedUrl(const QString &title = QString(), const QString &url = QString());
     QmlWindow *getWindow(BrowserWindow *window);

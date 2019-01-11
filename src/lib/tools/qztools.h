@@ -83,7 +83,7 @@ public:
     static QString getSaveFileName(const QString &name, QWidget* parent = 0, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString* selectedFilter = 0, QFileDialog::Options options = 0);
 
     static bool matchDomain(const QString &pattern, const QString &domain);
-    static QKeySequence actionShortcut(QKeySequence shortcut, QKeySequence fallBack, QKeySequence shortcutRtl = QKeySequence(), QKeySequence fallbackRtl = QKeySequence());
+    static QKeySequence actionShortcut(const QKeySequence &shortcut, const QKeySequence &fallBack, const QKeySequence &shortcutRtl = QKeySequence(), const QKeySequence &fallbackRtl = QKeySequence());
 
     static QString operatingSystem();
     static QString cpuArchitecture();

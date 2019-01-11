@@ -26,7 +26,7 @@ class QmlFileUtils : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlFileUtils(QString filePath, QObject *parent = nullptr);
+    explicit QmlFileUtils(const QString &filePath, QObject *parent = nullptr);
     /**
      * @brief Get the path of the file within the plugin directory.
      *        If the filePath provided is resolved to be outside the plugin

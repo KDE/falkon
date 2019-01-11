@@ -170,7 +170,7 @@ SearchEngine SearchEnginesDialog::getEngine(QTreeWidgetItem* item)
     return item->data(0, EngineRole).value<SearchEngine>();
 }
 
-void SearchEnginesDialog::setEngine(QTreeWidgetItem* item, SearchEngine engine)
+void SearchEnginesDialog::setEngine(QTreeWidgetItem* item, const SearchEngine &engine)
 {
     QVariant v;
     v.setValue<SearchEngine>(engine);
