@@ -42,7 +42,7 @@ public:
     void showSettings(QWidget* parent);
     void downloadScript(const QUrl &url);
 
-    QString settinsPath() const;
+    QString settingsPath() const;
     QString scriptsDirectory() const;
     QString requireScripts(const QStringList &urlList) const;
     QString bootstrapScript() const;

@@ -111,7 +111,7 @@ void GM_Downloader::requireDownloaded()
         return;
     }
 
-    QSettings settings(m_manager->settinsPath() + QL1S("/greasemonkey/requires/requires.ini"), QSettings::IniFormat);
+    QSettings settings(m_manager->settingsPath() + QL1S("/greasemonkey/requires/requires.ini"), QSettings::IniFormat);
     settings.beginGroup("Files");
 
     if (m_fileName.isEmpty()) {
@@ -123,11 +123,11 @@ void GM_Downloader::requireDownloaded()
             } else if (!name.endsWith(QL1S(".js"))) {
                 name.append(QSL(".js"));
             }
-            const QString filePath = m_manager->settinsPath() + QL1S("/greasemonkey/requires/") + name;
+            const QString filePath = m_manager->settingsPath() + QL1S("/greasemonkey/requires/") + name;
             m_fileName = QzTools::ensureUniqueFilename(filePath, "%1");
         }
         if (!QFileInfo(m_fileName).isAbsolute()) {
-            m_fileName.prepend(m_manager->settinsPath() + QL1S("/greasemonkey/requires/"));
+            m_fileName.prepend(m_manager->settingsPath() + QL1S("/greasemonkey/requires/"));
         }
     }
 

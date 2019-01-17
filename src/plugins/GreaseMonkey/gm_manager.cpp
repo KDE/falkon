@@ -85,7 +85,7 @@ void GM_Manager::downloadScript(const QUrl &url)
     });
 }
 
-QString GM_Manager::settinsPath() const
+QString GM_Manager::settingsPath() const
 {
     return m_settingsPath;
 }
