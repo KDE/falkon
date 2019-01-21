@@ -24,6 +24,7 @@ Name[sv]=Falkon
 Name[uk]=Falkon
 Name[x-test]=xxFalkonxx
 Name[zh_CN]=Falkon
+Name[zh_TW]=Falkon
 Type=Application
 Icon=falkon
 Categories=Network;WebBrowser;
@@ -52,6 +53,7 @@ Comment[sv]=En snabb och säker webbläsare
 Comment[uk]=Проста і безпечна програма для перегляду інтернету
 Comment[x-test]=xxA fast and secure web browserxx
 Comment[zh_CN]=快速、安全的网页浏览器
+Comment[zh_TW]=快速且安全的網路瀏覽器
 GenericName=Web Browser
 GenericName[ar]=متصفّح وبّ
 GenericName[ast]=Restolador web
@@ -77,6 +79,7 @@ GenericName[sv]=Webbläsare
 GenericName[uk]=Переглядач інтернету
 GenericName[x-test]=xxWeb Browserxx
 GenericName[zh_CN]=网页浏览器
+GenericName[zh_TW]=網路瀏覽器
 Exec=falkon %u
 StartupWMClass=Falkon
 MimeType=text/html;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;application/x-mimearchive;
@@ -109,6 +112,7 @@ Name[sv]=Öppna ny flik
 Name[uk]=Відкрити нову вкладку
 Name[x-test]=xxOpen new tabxx
 Name[zh_CN]=打开新标签
+Name[zh_TW]=開啟新分頁
 Exec=falkon --new-tab
 
 [Desktop Action NewWindow]
@@ -137,6 +141,7 @@ Name[sv]=Öppna nytt fönster
 Name[uk]=Відкрити нове вікно
 Name[x-test]=xxOpen new windowxx
 Name[zh_CN]=打开新窗口
+Name[zh_TW]=開啟新視窗
 Exec=falkon --new-window
 
 [Desktop Action PrivateBrowsing]
@@ -165,4 +170,5 @@ Name[sv]=Starta privat webbläsning
 Name[uk]=Конфіденційний перегляд
 Name[x-test]=xxStart private browsingxx
 Name[zh_CN]=启动隐身浏览
+Name[zh_TW]=開始隱私瀏覽
 Exec=falkon --private-browsing
