@@ -57,6 +57,7 @@ void KIOSchemeHandler::requestStarted(QWebEngineUrlRequestJob *job)
             qWarning() << "Error:" << reply->errorString();
             job->fail(QWebEngineUrlRequestJob::RequestFailed);
         } else {
+            reply->setParent(job);
             job->reply(reply->header(QNetworkRequest::ContentTypeHeader).toByteArray(), reply);
         }
     });

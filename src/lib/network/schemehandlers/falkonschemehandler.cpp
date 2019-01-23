@@ -55,7 +55,7 @@ void FalkonSchemeHandler::requestStarted(QWebEngineUrlRequestJob *job)
     knownPages << "about" << "start" << "speeddial" << "config" << "restore";
 
     if (knownPages.contains(job->requestUrl().path()))
-        job->reply(QByteArrayLiteral("text/html"), new FalkonSchemeReply(job));
+        job->reply(QByteArrayLiteral("text/html"), new FalkonSchemeReply(job, job));
     else
         job->fail(QWebEngineUrlRequestJob::UrlInvalid);
 }
