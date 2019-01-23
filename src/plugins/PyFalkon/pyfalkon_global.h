@@ -16,9 +16,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 
-// Make "signals:", "slots:" visible as access specifiers
-#define QT_ANNOTATE_ACCESS_SPECIFIER(a) __attribute__((annotate(#a)))
-
 // PYSIDE-711
 #include <QHstsPolicy>
 #include <QWebEngineContextMenuData>
