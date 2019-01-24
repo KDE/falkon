@@ -41,6 +41,7 @@
 #include "ui_jsalert.h"
 #include "ui_jsprompt.h"
 #include "passwordmanager.h"
+#include "scripts.h"
 
 #include <iostream>
 
@@ -98,8 +99,7 @@ WebPage::WebPage(QObject* parent)
     m_contentsResizedConnection = connect(this, &QWebEnginePage::contentsSizeChanged, this, [this]() {
         const QString fragment = url().fragment();
         if (!fragment.isEmpty()) {
-            const QString src = QSL("var els = document.querySelectorAll(\"[name='%1']\"); if (els.length) els[0].scrollIntoView();");
-            runJavaScript(src.arg(fragment));
+            runJavaScript(Scripts::scrollToAnchor(fragment));
         }
         disconnect(m_contentsResizedConnection);
     });

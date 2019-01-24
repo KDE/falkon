@@ -332,3 +332,19 @@ QString Scripts::getFormData(const QPointF &pos)
 
     return source.arg(pos.x()).arg(pos.y());
 }
+
+QString Scripts::scrollToAnchor(const QString &anchor)
+{
+    QString source = QL1S("(function() {"
+                          "var e = document.getElementById(\"%1\");"
+                          "if (!e) {"
+                          "    var els = document.querySelectorAll(\"[name='%1']\");"
+                          "    if (els.length)"
+                          "        e = els[0];"
+                          "}"
+                          "if (e)"
+                          "    e.scrollIntoView();"
+                          "})()");
+
+    return source.arg(anchor);
+}

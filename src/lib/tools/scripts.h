@@ -40,6 +40,7 @@ public:
     static QString getAllImages();
     static QString getAllMetaAttributes();
     static QString getFormData(const QPointF &pos);
+    static QString scrollToAnchor(const QString &anchor);
 };
 
 #endif // SCRIPTS_H
