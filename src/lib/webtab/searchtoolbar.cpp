@@ -42,7 +42,6 @@ SearchToolBar::SearchToolBar(WebView* view, QWidget* parent)
 
     connect(ui->closeButton, SIGNAL(clicked()), this, SLOT(close()));
     connect(ui->lineEdit, &QLineEdit::textEdited, this, &SearchToolBar::findNext);
-    connect(ui->lineEdit, &QLineEdit::returnPressed, this, &SearchToolBar::findNext);
     connect(ui->next, &QAbstractButton::clicked, this, &SearchToolBar::findNext);
     connect(ui->previous, &QAbstractButton::clicked, this, &SearchToolBar::findPrevious);
     connect(ui->caseSensitive, &QAbstractButton::clicked, this, &SearchToolBar::caseSensitivityChanged);
@@ -150,8 +149,23 @@ bool SearchToolBar::eventFilter(QObject* obj, QEvent* event)
 {
     Q_UNUSED(obj);
 
-    if (event->type() == QEvent::KeyPress && static_cast<QKeyEvent*>(event)->key() == Qt::Key_Escape) {
-        close();
+    if (event->type() == QEvent::KeyPress) {
+        QKeyEvent *ke = static_cast<QKeyEvent*>(event);
+        switch (ke->key()) {
+        case Qt::Key_Escape:
+            close();
+            break;
+        case Qt::Key_Enter:
+        case Qt::Key_Return:
+            if (ke->modifiers() & Qt::ShiftModifier) {
+                findPrevious();
+            } else {
+                findNext();
+            }
+            break;
+        default:
+            break;
+        }
     }
 
     return false;
