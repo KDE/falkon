@@ -88,8 +88,7 @@ FalkonSchemeReply::FalkonSchemeReply(QWebEngineUrlRequestJob *job, QObject *pare
     , m_job(job)
 {
     m_pageName = m_job->requestUrl().path();
-
-    QTimer::singleShot(0, this, &FalkonSchemeReply::loadPage);
+    loadPage();
 }
 
 void FalkonSchemeReply::loadPage()
@@ -116,7 +115,6 @@ void FalkonSchemeReply::loadPage()
     m_buffer.open(QIODevice::ReadOnly);
     lock.unlock();
 
-    open(QIODevice::ReadOnly);
     emit readyRead();
 
     m_loaded = true;
