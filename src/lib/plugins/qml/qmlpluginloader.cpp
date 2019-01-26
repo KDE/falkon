@@ -71,5 +71,8 @@ void QmlPluginLoader::initEngineAndComponent()
     m_engine->globalObject().setProperty(QSL("__falkon_i18n"), m_engine->newQObject(i18n));
     m_engine->globalObject().setProperty(QSL("i18n"), m_engine->evaluate(QSL("function (s) { return __falkon_i18n.i18n(s) }")));
     m_engine->globalObject().setProperty(QSL("i18np"), m_engine->evaluate(QSL("function (s1, s2) { return __falkon_i18n.i18np(s1, s2) }")));
+#else
+    m_engine->globalObject().setProperty(QSL("i18n"), m_engine->evaluate(QSL("function (s) { return s }")));
+    m_engine->globalObject().setProperty(QSL("i18np"), m_engine->evaluate(QSL("function (s1, s2) { return s1 }")));
 #endif
 }
