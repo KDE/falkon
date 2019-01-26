@@ -1279,8 +1279,8 @@ bool WebView::eventFilter(QObject *obj, QEvent *event)
 #if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         QPointer<QWidget> child = qobject_cast<QWidget*>(static_cast<QChildEvent*>(event)->child());
         QTimer::singleShot(0, this, [=]() {
-        if (child && child->inherits("QtWebEngineCore::RenderWidgetHostViewQtDelegateWidget")) {
-            m_rwhvqt = child;
+            if (child && child->inherits("QtWebEngineCore::RenderWidgetHostViewQtDelegateWidget")) {
+                m_rwhvqt = child;
 #else
         QTimer::singleShot(0, this, [this]() {
             if (focusProxy() && m_rwhvqt != focusProxy()) {
