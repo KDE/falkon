@@ -120,8 +120,9 @@ QSqlDatabase SqlDatabase::database()
     }
 
     if (!s_databases.hasLocalData()) {
-        const QString threadStr = QString::number((quintptr) QThread::currentThread());
-        QSqlDatabase db = QSqlDatabase::addDatabase(QSL("QSQLITE"), QSL("Falkon/") + threadStr);
+        const QString threadStr = QStringLiteral("Falkon/%1").arg((quintptr) QThread::currentThread());
+        QSqlDatabase::removeDatabase(threadStr);
+        QSqlDatabase db = QSqlDatabase::addDatabase(QSL("QSQLITE"), threadStr);
         db.setDatabaseName(m_databaseName);
         db.setConnectOptions(m_connectOptions);
         db.open();
