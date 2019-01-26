@@ -1078,12 +1078,12 @@ void WebView::_mousePressEvent(QMouseEvent *event)
     }
 
     switch (event->button()) {
-    case Qt::XButton1:
+    case Qt::BackButton:
         back();
         event->accept();
         break;
 
-    case Qt::XButton2:
+    case Qt::ForwardButton:
         forward();
         event->accept();
         break;
