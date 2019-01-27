@@ -38,6 +38,8 @@ SiteInfoWidget::SiteInfoWidget(BrowserWindow* window, QWidget* parent)
 
     WebView* view = m_window->weView();
 
+    ui->titleLabel->setText(tr("<b>Site %1<b/>").arg(view->url().host()));
+
     if (view->url().scheme() == QL1S("https")) {
         ui->secureLabel->setText(tr("Your connection to this site is <b>secured</b>."));
         ui->secureIcon->setPixmap(QPixmap(":/icons/locationbar/safe.png"));
