@@ -52,6 +52,7 @@ class DesktopNotificationsFactory;
 class ProxyStyle;
 class SessionManager;
 class ClosedWindowsManager;
+class ProtocolHandlerManager;
 
 class FALKON_EXPORT MainApplication : public QtSingleApplication
 {
@@ -108,6 +109,7 @@ public:
     UserAgentManager* userAgentManager();
     SearchEnginesManager* searchEnginesManager();
     ClosedWindowsManager* closedWindowsManager();
+    ProtocolHandlerManager *protocolHandlerManager();
     HTML5PermissionsManager* html5PermissionsManager();
     DesktopNotificationsFactory* desktopNotifications();
     QWebEngineProfile* webProfile() const;
@@ -182,6 +184,7 @@ private:
     UserAgentManager* m_userAgentManager;
     SearchEnginesManager* m_searchEnginesManager;
     ClosedWindowsManager* m_closedWindowsManager;
+    ProtocolHandlerManager *m_protocolHandlerManager;
     HTML5PermissionsManager* m_html5PermissionsManager;
     DesktopNotificationsFactory* m_desktopNotifications;
     QWebEngineProfile* m_webProfile;

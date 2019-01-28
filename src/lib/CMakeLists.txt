@@ -151,6 +151,7 @@ set(SRCS ${SRCS}
     other/statusbar.cpp
     other/updater.cpp
     other/useragentmanager.cpp
+    other/protocolhandlermanager.cpp
     plugins/pluginproxy.cpp
     plugins/plugins.cpp
     plugins/speeddial.cpp

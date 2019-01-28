@@ -46,6 +46,16 @@ void Settings::syncSettings()
     s_settings->sync();
 }
 
+QStringList Settings::childKeys() const
+{
+    return s_settings->childKeys();
+}
+
+QStringList Settings::childGroups() const
+{
+    return s_settings->childGroups();
+}
+
 bool Settings::contains(const QString &key) const
 {
     return s_settings->contains(key);

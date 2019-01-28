@@ -46,6 +46,7 @@
 #include "scripts.h"
 #include "sessionmanager.h"
 #include "closedwindowsmanager.h"
+#include "protocolhandlermanager.h"
 #include "../config.h"
 
 #include <QWebEngineSettings>
@@ -100,6 +101,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     , m_userAgentManager(nullptr)
     , m_searchEnginesManager(nullptr)
     , m_closedWindowsManager(nullptr)
+    , m_protocolHandlerManager(nullptr)
     , m_html5PermissionsManager(nullptr)
     , m_desktopNotifications(nullptr)
     , m_webProfile(nullptr)
@@ -317,6 +319,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     m_plugins = new PluginProxy(this);
     m_autoFill = new AutoFill(this);
+    mApp->protocolHandlerManager();
 
     if (!noAddons)
         m_plugins->loadPlugins();
@@ -595,6 +598,14 @@ ClosedWindowsManager* MainApplication::closedWindowsManager()
         m_closedWindowsManager = new ClosedWindowsManager(this);
     }
     return m_closedWindowsManager;
+}
+
+ProtocolHandlerManager *MainApplication::protocolHandlerManager()
+{
+    if (!m_protocolHandlerManager) {
+        m_protocolHandlerManager = new ProtocolHandlerManager(this);
+    }
+    return m_protocolHandlerManager;
 }
 
 HTML5PermissionsManager* MainApplication::html5PermissionsManager()

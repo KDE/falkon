@@ -23,6 +23,7 @@
 #include "webpage.h"
 #include "tabbedwebview.h"
 #include "sqldatabase.h"
+#include "protocolhandlermanager.h"
 
 #include <QToolTip>
 
@@ -83,10 +84,38 @@ SiteInfoWidget::SiteInfoWidget(BrowserWindow* window, QWidget* parent)
         }
     }
 
+    updateProtocolHandler();
+
     connect(ui->pushButton, &QAbstractButton::clicked, m_window->action(QSL("Tools/SiteInfo")), &QAction::trigger);
+    connect(ui->protocolHandlerButton, &QPushButton::clicked, this, &SiteInfoWidget::protocolHandlerButtonClicked);
 }
 
 SiteInfoWidget::~SiteInfoWidget()
 {
     delete ui;
+}
+
+void SiteInfoWidget::updateProtocolHandler()
+{
+    WebPage *page = m_window->weView()->page();
+
+    const QString scheme = page->registerProtocolHandlerRequestScheme();
+    const QUrl registeredUrl = mApp->protocolHandlerManager()->protocolHandlers().value(scheme);
+
+    if (!scheme.isEmpty() && registeredUrl != page->registerProtocolHandlerRequestUrl()) {
+        ui->protocolHandlerLabel->setText(tr("Register as <b>%1</b> links handler").arg(page->registerProtocolHandlerRequestScheme()));
+        ui->protocolHandlerButton->setText(tr("Register"));
+    } else {
+        ui->protocolHandlerLabel->hide();
+        ui->protocolHandlerButton->hide();
+        ui->protocolHandlerLine->hide();
+    }
+}
+
+void SiteInfoWidget::protocolHandlerButtonClicked()
+{
+    WebPage *page = m_window->weView()->page();
+
+    mApp->protocolHandlerManager()->addProtocolHandler(page->registerProtocolHandlerRequestScheme(), page->registerProtocolHandlerRequestUrl());
+    close();
 }

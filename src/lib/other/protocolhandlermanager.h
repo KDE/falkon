@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2019 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -15,34 +15,30 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef SITEINFOWIDGET_H
-#define SITEINFOWIDGET_H
+#pragma once
 
-#include <QMenu>
+#include <QUrl>
+#include <QHash>
+#include <QObject>
 
 #include "qzcommon.h"
-#include <locationbarpopup.h>
 
-namespace Ui
-{
-class SiteInfoWidget;
-}
-
-class BrowserWindow;
-
-class FALKON_EXPORT SiteInfoWidget : public LocationBarPopup
+class FALKON_EXPORT ProtocolHandlerManager : public QObject
 {
     Q_OBJECT
+
 public:
-    explicit SiteInfoWidget(BrowserWindow* window, QWidget* parent = 0);
-    ~SiteInfoWidget();
+    explicit ProtocolHandlerManager(QObject *parent = nullptr);
+
+    QHash<QString, QUrl> protocolHandlers() const;
+
+    void addProtocolHandler(const QString &scheme, const QUrl &url);
+    void removeProtocolHandler(const QString &scheme);
 
 private:
-    void updateProtocolHandler();
-    void protocolHandlerButtonClicked();
+    void init();
+    void save();
+    void registerHandler(const QString &scheme, const QUrl &url);
 
-    Ui::SiteInfoWidget* ui;
-    BrowserWindow* m_window;
+    QHash<QString, QUrl> m_protocolHandlers;
 };
-
-#endif // SITEINFOWIDGET_H

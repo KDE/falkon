@@ -38,6 +38,9 @@ public:
     static QSettings* globalSettings();
     static QzSettings* staticSettings();
 
+    QStringList childKeys() const;
+    QStringList childGroups() const;
+
     bool contains(const QString &key) const;
     void remove(const QString &key);
 

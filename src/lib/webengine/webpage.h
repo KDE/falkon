@@ -27,6 +27,7 @@
 
 class QEventLoop;
 class QWebEngineDownloadItem;
+class QWebEngineRegisterProtocolHandlerRequest;
 
 class WebView;
 class WebHitTestResult;
@@ -62,6 +63,9 @@ public:
     void javaScriptConsoleMessage(JavaScriptConsoleMessageLevel level, const QString &message, int lineNumber, const QString &sourceID) override;
 
     QStringList autoFillUsernames() const;
+
+    QUrl registerProtocolHandlerRequestUrl() const;
+    QString registerProtocolHandlerRequestScheme() const;
 
     bool isRunningLoop();
 
@@ -106,6 +110,7 @@ private:
     QEventLoop* m_runningLoop;
 
     QStringList m_autoFillUsernames;
+    QWebEngineRegisterProtocolHandlerRequest *m_registerProtocolHandlerRequest = nullptr;
 
     int m_loadProgress;
     bool m_blockAlerts;

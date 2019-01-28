@@ -59,6 +59,10 @@
 #include <QUrlQuery>
 #include <QtWebEngineWidgetsVersion>
 
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+#include <QWebEngineRegisterProtocolHandlerRequest>
+#endif
+
 QString WebPage::s_lastUploadLocation = QDir::homePath();
 QUrl WebPage::s_lastUnsupportedUrl;
 QTime WebPage::s_lastUnsupportedUrlTime;
@@ -111,6 +115,13 @@ WebPage::WebPage(QObject* parent)
         }
     });
 
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+    connect(this, &QWebEnginePage::registerProtocolHandlerRequested, this, [this](QWebEngineRegisterProtocolHandlerRequest request) {
+        delete m_registerProtocolHandlerRequest;
+        m_registerProtocolHandlerRequest = new QWebEngineRegisterProtocolHandlerRequest(request);
+    });
+#endif
+
 #if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
     connect(this, &QWebEnginePage::printRequested, this, &WebPage::printRequested);
     connect(this, &QWebEnginePage::selectClientCertificate, this, [this](QWebEngineClientCertificateSelection selection) {
@@ -122,6 +133,8 @@ WebPage::WebPage(QObject* parent)
 
 WebPage::~WebPage()
 {
+    delete m_registerProtocolHandlerRequest;
+
     if (m_runningLoop) {
         m_runningLoop->exit(1);
         m_runningLoop = 0;
@@ -489,6 +502,22 @@ QStringList WebPage::chooseFiles(QWebEnginePage::FileSelectionMode mode, const Q
 QStringList WebPage::autoFillUsernames() const
 {
     return m_autoFillUsernames;
+}
+
+QUrl WebPage::registerProtocolHandlerRequestUrl() const
+{
+    if (m_registerProtocolHandlerRequest && url().host() == m_registerProtocolHandlerRequest->origin().host()) {
+        return m_registerProtocolHandlerRequest->origin();
+    }
+    return QUrl();
+}
+
+QString WebPage::registerProtocolHandlerRequestScheme() const
+{
+    if (m_registerProtocolHandlerRequest && url().host() == m_registerProtocolHandlerRequest->origin().host()) {
+        return m_registerProtocolHandlerRequest->scheme();
+    }
+    return QString();
 }
 
 bool WebPage::javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, const QString &defaultValue, QString* result)
