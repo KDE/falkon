@@ -19,6 +19,7 @@ opts=(
     '(-)'{-r,--no-remote}'[open new browser instance]'
     '(-)'{-c,--current-tab=}'[open URL in current tab]'
     '(-)'{-u,--open-window=}'[open URL in new window]'
+    '--wmclass[application class (X11 only)]'
     '*:files:_files'
     )
 

@@ -11,7 +11,7 @@ _falkon()
           -e --no-extensions -o --portable -t --new-tab
           -w --new-window -i --private-browsing -d --download-manager
           -f --fullscreen -r --no-remote -c --current-tab=
-          -u --open-window="
+          -u --open-window= --wmclass"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
