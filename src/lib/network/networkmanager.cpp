@@ -40,12 +40,29 @@
 #include <QNetworkProxy>
 #include <QWebEngineProfile>
 #include <QWebEngineCertificateError>
+#include <QtWebEngineWidgetsVersion>
+
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+#include <QWebEngineUrlScheme>
+#endif
 
 NetworkManager::NetworkManager(QObject *parent)
     : QNetworkAccessManager(parent)
 {
     // Create scheme handlers
     m_extensionScheme = new ExtensionSchemeManager();
+
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+    QWebEngineUrlScheme falkonScheme("falkon");
+    falkonScheme.setFlags(QWebEngineUrlScheme::SecureScheme | QWebEngineUrlScheme::ContentSecurityPolicyIgnored);
+    falkonScheme.setSyntax(QWebEngineUrlScheme::Syntax::Path);
+    QWebEngineUrlScheme::registerScheme(falkonScheme);
+    QWebEngineUrlScheme extensionScheme("extension");
+    extensionScheme.setFlags(QWebEngineUrlScheme::SecureScheme | QWebEngineUrlScheme::ContentSecurityPolicyIgnored);
+    extensionScheme.setSyntax(QWebEngineUrlScheme::Syntax::Path);
+    QWebEngineUrlScheme::registerScheme(extensionScheme);
+#endif
+
     mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("falkon"), new FalkonSchemeHandler());
     mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("extension"), m_extensionScheme);
     WebPage::addSupportedScheme(QSL("falkon"));
