@@ -44,6 +44,11 @@
 #include <QDataStream>
 #include <QTime>
 
+#include "../config.h"
+#if defined(Q_OS_LINUX) && !defined(DISABLE_DBUS)
+#define USE_DBUS
+#endif
+
 #if defined(Q_OS_WIN)
 #include <QLibrary>
 #include <qt_windows.h>
@@ -64,6 +69,33 @@ namespace QtLP_Private {
 #include "qtlockedfile_unix.cpp"
 #endif
 }
+
+#ifdef USE_DBUS
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusAbstractAdaptor>
+
+class QtSingleAppDBusInterface : public QDBusAbstractAdaptor
+{
+    Q_OBJECT
+    Q_CLASSINFO("D-Bus Interface", "org.kde.QtSingleApplication")
+
+public:
+    explicit QtSingleAppDBusInterface(QObject *parent)
+        : QDBusAbstractAdaptor(parent)
+    {
+    }
+
+public Q_SLOTS:
+    void SendMessage(const QString &message)
+    {
+        Q_EMIT messageReceived(message);
+    }
+
+Q_SIGNALS:
+    void messageReceived(const QString &message);
+};
+#endif
 
 const char* QtLocalPeer::ack = "ack";
 
@@ -100,18 +132,36 @@ QtLocalPeer::QtLocalPeer(QObject* parent, const QString &appId)
     socketName += QLatin1Char('-') + QString::number(::getuid(), 16);
 #endif
 
+#ifdef USE_DBUS
+    if (!QDBusConnection::sessionBus().isConnected()) {
+        qCritical("Failed to connect to session bus!");
+    }
+    m_dbusRegistered = QDBusConnection::sessionBus().registerService(id);
+    if (m_dbusRegistered) {
+        QtSingleAppDBusInterface *iface = new QtSingleAppDBusInterface(this);
+        connect(iface, &QtSingleAppDBusInterface::messageReceived, this, &QtLocalPeer::messageReceived);
+        QDBusConnection::sessionBus().registerObject(QStringLiteral("/"), this);
+    }
+#else
     server = new QLocalServer(this);
     QString lockName = QDir(QDir::tempPath()).absolutePath()
                        + QLatin1Char('/') + socketName
                        + QLatin1String("-lockfile");
     lockFile.setFileName(lockName);
     lockFile.open(QIODevice::ReadWrite);
+#endif
 }
 
 
 
 bool QtLocalPeer::isClient()
 {
+#ifdef USE_DBUS
+    if (m_dbusRegistered) {
+        return false;
+    }
+    return QDBusConnection::sessionBus().interface()->isServiceRegistered(id).value();
+#else
     if (lockFile.isLocked())
         return false;
 
@@ -130,6 +180,7 @@ bool QtLocalPeer::isClient()
         qWarning("QtSingleCoreApplication: listen on local socket failed, %s", qPrintable(server->errorString()));
     QObject::connect(server, &QLocalServer::newConnection, this, &QtLocalPeer::receiveConnection);
     return false;
+#endif
 }
 
 
@@ -138,6 +189,13 @@ bool QtLocalPeer::sendMessage(const QString &message, int timeout)
     if (!isClient())
         return false;
 
+#ifdef USE_DBUS
+    QDBusMessage msg = QDBusMessage::createMethodCall(id, QStringLiteral("/"),
+                                                      QStringLiteral("org.kde.QtSingleApplication"),
+                                                      QStringLiteral("SendMessage"));
+    msg << message;
+    return QDBusConnection::sessionBus().call(msg, QDBus::Block, timeout).type() == QDBusMessage::ReplyMessage;
+#else
     QLocalSocket socket;
     bool connOk = false;
     for(int i = 0; i < 2; i++) {
@@ -167,15 +225,19 @@ bool QtLocalPeer::sendMessage(const QString &message, int timeout)
             res &= (socket.read(qstrlen(ack)) == ack);
     }
     return res;
+#endif
 }
 
 void QtLocalPeer::removeLockedFile()
 {
+#ifndef USE_DBUS
     lockFile.remove();
+#endif
 }
 
 void QtLocalPeer::receiveConnection()
 {
+#ifndef USE_DBUS
     QLocalSocket* socket = server->nextPendingConnection();
     if (!socket)
         return;
@@ -214,4 +276,7 @@ void QtLocalPeer::receiveConnection()
     socket->waitForDisconnected(1000); // make sure client reads ack
     delete socket;
     emit messageReceived(message); //### (might take a long time to return)
+#endif
 }
+
+#include "qtlocalpeer.moc"

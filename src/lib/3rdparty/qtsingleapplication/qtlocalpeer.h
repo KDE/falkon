@@ -73,6 +73,7 @@ protected:
 
 private:
     static const char* ack;
+    bool m_dbusRegistered = false;
 };
 
 #endif // QTLOCALPEER_H

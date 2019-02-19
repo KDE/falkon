@@ -223,14 +223,14 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     // Don't start single application in private browsing
     if (!isPrivate()) {
-        QString appId = QStringLiteral("FalkonWebBrowser");
+        QString appId = QStringLiteral("org.kde.Falkon");
 
         if (isPortable()) {
-            appId.append(QLatin1String("Portable"));
+            appId.append(QLatin1String(".Portable"));
         }
 
         if (isTestModeEnabled()) {
-            appId.append(QSL("TestMode"));
+            appId.append(QSL(".TestMode"));
         }
 
         if (newInstance) {
@@ -241,7 +241,7 @@ MainApplication::MainApplication(int &argc, char** argv)
                 // Generate unique appId so it is possible to start more separate instances
                 // of the same profile. It is dangerous to run more instances of the same profile,
                 // but if the user wants it, we should allow it.
-                appId.append(startProfile + QString::number(QDateTime::currentMSecsSinceEpoch()));
+                appId.append(QLatin1Char('.') + startProfile + QString::number(QDateTime::currentMSecsSinceEpoch()));
             }
         }
 
