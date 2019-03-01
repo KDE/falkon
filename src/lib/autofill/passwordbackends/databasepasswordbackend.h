@@ -26,17 +26,17 @@ class FALKON_EXPORT DatabasePasswordBackend : public PasswordBackend
 public:
     explicit DatabasePasswordBackend();
 
-    QString name() const;
+    QString name() const override;
 
-    QVector<PasswordEntry> getEntries(const QUrl &url);
-    QVector<PasswordEntry> getAllEntries();
+    QVector<PasswordEntry> getEntries(const QUrl &url) override;
+    QVector<PasswordEntry> getAllEntries() override;
 
-    void addEntry(const PasswordEntry &entry);
-    bool updateEntry(const PasswordEntry &entry);
-    void updateLastUsed(PasswordEntry &entry);
+    void addEntry(const PasswordEntry &entry) override;
+    bool updateEntry(const PasswordEntry &entry) override;
+    void updateLastUsed(PasswordEntry &entry) override;
 
-    void removeEntry(const PasswordEntry &entry);
-    void removeAll();
+    void removeEntry(const PasswordEntry &entry) override;
+    void removeAll() override;
 };
 
 #endif // DATABASEPASSWORDBACKEND_H

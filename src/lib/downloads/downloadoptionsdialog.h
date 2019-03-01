@@ -44,7 +44,7 @@ public:
 
     void setLastDownloadOption(const DownloadManager::DownloadOption &option);
 
-    int exec();
+    int exec() override;
 
 private Q_SLOTS:
     void copyDownloadLink();

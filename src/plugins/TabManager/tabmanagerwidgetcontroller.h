@@ -32,9 +32,9 @@ public:
     explicit TabManagerWidgetController(QObject* parent = 0);
     ~TabManagerWidgetController();
 
-    QString title() const;
-    QAction* createMenuAction();
-    QWidget* createSideBarWidget(BrowserWindow* mainWindow);
+    QString title() const override;
+    QAction* createMenuAction() override;
+    QWidget* createSideBarWidget(BrowserWindow* mainWindow) override;
 
     AbstractButtonInterface* createStatusBarIcon(BrowserWindow* mainWindow);
 

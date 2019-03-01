@@ -55,7 +55,7 @@ public:
         m_object = object;
     }
 
-    void callback() {
+    void callback() override {
         m_object->emitGestured();
     }
 

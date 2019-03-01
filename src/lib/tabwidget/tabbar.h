@@ -36,12 +36,12 @@ public:
     void loadSettings();
 
     TabWidget* tabWidget() const;
-    void setVisible(bool visible);
+    void setVisible(bool visible) override;
     void setForceHidden(bool hidden);
 
     void setTabText(int index, const QString &text);
 
-    void wheelEvent(QWheelEvent* event);
+    void wheelEvent(QWheelEvent* event) override;
 
 Q_SIGNALS:
     void moveAddTabButton(int posX);
@@ -54,26 +54,26 @@ private Q_SLOTS:
 private:
     inline bool validIndex(int index) const { return index >= 0 && index < count(); }
 
-    void tabInserted(int index);
-    void tabRemoved(int index);
+    void tabInserted(int index) override;
+    void tabRemoved(int index) override;
 
     void hideCloseButton(int index);
     void showCloseButton(int index);
     void updatePinnedTabCloseButton(int index);
 
-    void contextMenuEvent(QContextMenuEvent* event);
-    void mouseDoubleClickEvent(QMouseEvent* event);
-    void mousePressEvent(QMouseEvent* event);
-    void mouseMoveEvent(QMouseEvent* event);
-    void mouseReleaseEvent(QMouseEvent* event);
+    void contextMenuEvent(QContextMenuEvent* event) override;
+    void mouseDoubleClickEvent(QMouseEvent* event) override;
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseMoveEvent(QMouseEvent* event) override;
+    void mouseReleaseEvent(QMouseEvent* event) override;
 
-    void dragEnterEvent(QDragEnterEvent* event);
-    void dragMoveEvent(QDragMoveEvent *event);
-    void dragLeaveEvent(QDragLeaveEvent *event);
-    void dropEvent(QDropEvent* event);
+    void dragEnterEvent(QDragEnterEvent* event) override;
+    void dragMoveEvent(QDragMoveEvent *event) override;
+    void dragLeaveEvent(QDragLeaveEvent *event) override;
+    void dropEvent(QDropEvent* event) override;
 
-    QSize tabSizeHint(int index, bool fast) const;
-    int comboTabBarPixelMetric(ComboTabBar::SizeType sizeType) const;
+    QSize tabSizeHint(int index, bool fast) const override;
+    int comboTabBarPixelMetric(ComboTabBar::SizeType sizeType) const override;
     WebTab* webTab(int index = -1) const;
 
     BrowserWindow* m_window;

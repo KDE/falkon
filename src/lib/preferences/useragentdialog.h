@@ -43,7 +43,7 @@ private Q_SLOTS:
     void removeSite();
     void editSite();
 
-    void accept();
+    void accept() override;
 
     void enableGlobalComboBox(bool enable);
     void enablePerSiteFrame(bool enable);

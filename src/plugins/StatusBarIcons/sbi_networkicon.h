@@ -40,7 +40,7 @@ private Q_SLOTS:
 
 private:
     void updateToolTip();
-    void enterEvent(QEvent* event);
+    void enterEvent(QEvent* event) override;
 
     QNetworkConfigurationManager* m_networkConfiguration;
 };

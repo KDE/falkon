@@ -17,7 +17,7 @@ public:
     ~TabManagerSettings();
 
 public Q_SLOTS:
-    void accept();
+    void accept() override;
 
 private:
     Ui::TabManagerSettings* ui;

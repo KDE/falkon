@@ -87,11 +87,11 @@ private Q_SLOTS:
     void showMenu();
 
 protected:
-    void mousePressEvent(QMouseEvent* e);
-    void mouseReleaseEvent(QMouseEvent* e);
-    void mouseDoubleClickEvent(QMouseEvent* e);
-    void contextMenuEvent(QContextMenuEvent *e);
-    void paintEvent(QPaintEvent* e);
+    void mousePressEvent(QMouseEvent* e) override;
+    void mouseReleaseEvent(QMouseEvent* e) override;
+    void mouseDoubleClickEvent(QMouseEvent* e) override;
+    void contextMenuEvent(QContextMenuEvent *e) override;
+    void paintEvent(QPaintEvent* e) override;
 
 private:
     QImage m_multiIcon;

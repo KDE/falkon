@@ -48,12 +48,12 @@ public:
     QString getIp() const;
     int tabIndex() const;
 
-    QWidget* overlayWidget() Q_DECL_OVERRIDE;
-    void closeView() Q_DECL_OVERRIDE;
-    void loadInNewTab(const LoadRequest &req, Qz::NewTabPositionFlags position) Q_DECL_OVERRIDE;
+    QWidget* overlayWidget() override;
+    void closeView() override;
+    void loadInNewTab(const LoadRequest &req, Qz::NewTabPositionFlags position) override;
 
-    bool isFullScreen() Q_DECL_OVERRIDE;
-    void requestFullScreen(bool enable) Q_DECL_OVERRIDE;
+    bool isFullScreen() override;
+    void requestFullScreen(bool enable) override;
 
 Q_SIGNALS:
     void wantsCloseTab(int);
@@ -73,8 +73,8 @@ private Q_SLOTS:
     void inspectElement();
 
 private:
-    void _contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
-    void _mouseMoveEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    void _contextMenuEvent(QContextMenuEvent *event) override;
+    void _mouseMoveEvent(QMouseEvent *event) override;
 
     BrowserWindow* m_window;
     WebTab* m_webTab;

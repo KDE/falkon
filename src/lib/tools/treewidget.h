@@ -57,7 +57,7 @@ private Q_SLOTS:
     void sheduleRefresh();
 
 private:
-    void mousePressEvent(QMouseEvent* event);
+    void mousePressEvent(QMouseEvent* event) override;
     void iterateAllItems(QTreeWidgetItem* parent);
 
     bool m_refreshAllItemsNeeded;

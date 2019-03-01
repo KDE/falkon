@@ -29,13 +29,13 @@ public:
     explicit FirefoxImporter(QObject* parent = 0);
     ~FirefoxImporter();
 
-    QString description() const;
-    QString standardPath() const;
+    QString description() const override;
+    QString standardPath() const override;
 
-    QString getPath(QWidget* parent);
-    bool prepareImport();
+    QString getPath(QWidget* parent) override;
+    bool prepareImport() override;
 
-    BookmarkItem* importBookmarks();
+    BookmarkItem* importBookmarks() override;
 
 private:
     enum Type {

@@ -37,7 +37,7 @@ public:
     ~JsOptions();
 
 public Q_SLOTS:
-    void accept();
+    void accept() override;
 
 private:
     Ui::JsOptions* ui;

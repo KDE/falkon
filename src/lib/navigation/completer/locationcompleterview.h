@@ -44,7 +44,7 @@ public:
 
     void adjustSize();
 
-    bool eventFilter(QObject* object, QEvent* event);
+    bool eventFilter(QObject* object, QEvent* event) override;
 
 Q_SIGNALS:
     void closed();

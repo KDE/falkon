@@ -57,7 +57,7 @@ class QmlExtensionSchemeHandler : public ExtensionSchemeHandler
 {
     Q_OBJECT
 public:
-    void requestStarted(QWebEngineUrlRequestJob *job);
+    void requestStarted(QWebEngineUrlRequestJob *job) override;
 Q_SIGNALS:
     void _requestStarted(QWebEngineUrlRequestJob *job);
 };

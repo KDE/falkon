@@ -42,10 +42,10 @@ class TabTreeWidget : public QTreeWidget
 public:
     TabTreeWidget(QWidget* parent = 0);
 
-    Qt::DropActions supportedDropActions() const;
-    QStringList mimeTypes() const;
-    QMimeData* mimeData(const QList<QTreeWidgetItem*> &items) const;
-    bool dropMimeData(QTreeWidgetItem *parent, int index, const QMimeData *data, Qt::DropAction action);
+    Qt::DropActions supportedDropActions() const override;
+    QStringList mimeTypes() const override;
+    QMimeData* mimeData(const QList<QTreeWidgetItem*> items) const override;
+    bool dropMimeData(QTreeWidgetItem *parent, int index, const QMimeData *data, Qt::DropAction action) override;
 
     void setEnableDragTabs(bool enable);
 
@@ -110,7 +110,7 @@ private Q_SLOTS:
     void filterBarClosed();
 
 protected:
-    bool eventFilter(QObject* obj, QEvent* event);
+    bool eventFilter(QObject* obj, QEvent* event) override;
 
 Q_SIGNALS:
     void showSideBySide();

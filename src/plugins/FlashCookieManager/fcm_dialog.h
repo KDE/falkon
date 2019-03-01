@@ -69,8 +69,8 @@ private Q_SLOTS:
     void cookieTreeContextMenuRequested(const QPoint &pos);
 
 private:
-    void closeEvent(QCloseEvent* e);
-    void keyPressEvent(QKeyEvent* e);
+    void closeEvent(QCloseEvent* e) override;
+    void keyPressEvent(QKeyEvent* e) override;
 
     Ui::FCM_Dialog* ui;
 

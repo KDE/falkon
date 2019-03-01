@@ -476,7 +476,7 @@ public:
         setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Preferred);
     }
 
-    void mousePressEvent(QMouseEvent* ev) {
+    void mousePressEvent(QMouseEvent* ev) override {
         if (ev->modifiers() & Qt::ShiftModifier) {
             Utils::StyleHelper::setBaseColor(QColorDialog::getColor(Utils::StyleHelper::requestedBaseColor(), m_parent));
         }

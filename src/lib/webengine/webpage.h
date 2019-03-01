@@ -57,9 +57,9 @@ public:
     void scroll(int x, int y);
     void setScrollPosition(const QPointF &pos);
 
-    bool javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, const QString &defaultValue, QString* result) Q_DECL_OVERRIDE;
-    bool javaScriptConfirm(const QUrl &securityOrigin, const QString &msg) Q_DECL_OVERRIDE;
-    void javaScriptAlert(const QUrl &securityOrigin, const QString &msg) Q_DECL_OVERRIDE;
+    bool javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, const QString &defaultValue, QString* result) override;
+    bool javaScriptConfirm(const QUrl &securityOrigin, const QString &msg) override;
+    void javaScriptAlert(const QUrl &securityOrigin, const QString &msg) override;
     void javaScriptConsoleMessage(JavaScriptConsoleMessageLevel level, const QString &message, int lineNumber, const QString &sourceID) override;
 
     QStringList autoFillUsernames() const;
@@ -94,10 +94,10 @@ private Q_SLOTS:
     void renderProcessTerminated(RenderProcessTerminationStatus terminationStatus, int exitCode);
 
 private:
-    bool acceptNavigationRequest(const QUrl &url, NavigationType type, bool isMainFrame) Q_DECL_OVERRIDE;
-    bool certificateError(const QWebEngineCertificateError &error) Q_DECL_OVERRIDE;
-    QStringList chooseFiles(FileSelectionMode mode, const QStringList &oldFiles, const QStringList &acceptedMimeTypes) Q_DECL_OVERRIDE;
-    QWebEnginePage* createWindow(QWebEnginePage::WebWindowType type) Q_DECL_OVERRIDE;
+    bool acceptNavigationRequest(const QUrl &url, NavigationType type, bool isMainFrame) override;
+    bool certificateError(const QWebEngineCertificateError &error) override;
+    QStringList chooseFiles(FileSelectionMode mode, const QStringList &oldFiles, const QStringList &acceptedMimeTypes) override;
+    QWebEnginePage* createWindow(QWebEnginePage::WebWindowType type) override;
 
     void handleUnknownProtocol(const QUrl &url);
     void desktopServicesOpen(const QUrl &url);

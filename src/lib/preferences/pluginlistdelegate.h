@@ -29,8 +29,8 @@ class FALKON_EXPORT PluginListDelegate : public QStyledItemDelegate
 public:
     explicit PluginListDelegate(QListWidget* parent);
 
-    void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
 private:
     mutable int m_rowHeight;

@@ -42,8 +42,8 @@ public:
     explicit AddTabButton(TabWidget* tabWidget, TabBar* tabBar);
 
 private:
-    void wheelEvent(QWheelEvent* event);
-    void mouseReleaseEvent(QMouseEvent* event);
+    void wheelEvent(QWheelEvent* event) override;
+    void mouseReleaseEvent(QMouseEvent* event) override;
 
     TabBar* m_tabBar;
     TabWidget* m_tabWidget;
@@ -59,7 +59,7 @@ Q_SIGNALS:
     void closeTab(int);
 
 private:
-    void mouseReleaseEvent(QMouseEvent* event);
+    void mouseReleaseEvent(QMouseEvent* event) override;
 };
 
 class FALKON_EXPORT TabWidget : public TabStackedWidget

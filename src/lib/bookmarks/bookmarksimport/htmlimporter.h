@@ -27,13 +27,13 @@ class FALKON_EXPORT HtmlImporter : public BookmarksImporter
 public:
     explicit HtmlImporter(QObject* parent = 0);
 
-    QString description() const;
-    QString standardPath() const;
+    QString description() const override;
+    QString standardPath() const override;
 
-    QString getPath(QWidget* parent);
-    bool prepareImport();
+    QString getPath(QWidget* parent) override;
+    bool prepareImport() override;
 
-    BookmarkItem* importBookmarks();
+    BookmarkItem* importBookmarks() override;
 
 private:
     QString m_path;

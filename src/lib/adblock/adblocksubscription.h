@@ -118,18 +118,18 @@ class AdBlockCustomList : public AdBlockSubscription
 public:
     explicit AdBlockCustomList(QObject* parent = nullptr);
 
-    void loadSubscription(const QStringList &disabledRules);
-    void saveSubscription();
+    void loadSubscription(const QStringList &disabledRules) override;
+    void saveSubscription() override;
 
-    bool canEditRules() const;
-    bool canBeRemoved() const;
+    bool canEditRules() const override;
+    bool canBeRemoved() const override;
 
     bool containsFilter(const QString &filter) const;
     bool removeFilter(const QString &filter);
 
-    int addRule(AdBlockRule* rule);
-    bool removeRule(int offset);
-    const AdBlockRule* replaceRule(AdBlockRule* rule, int offset);
+    int addRule(AdBlockRule* rule) override;
+    bool removeRule(int offset) override;
+    const AdBlockRule* replaceRule(AdBlockRule* rule, int offset) override;
 };
 
 #endif // ADBLOCKSUBSCRIPTION_H

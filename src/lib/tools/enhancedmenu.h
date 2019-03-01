@@ -42,8 +42,8 @@ Q_SIGNALS:
 public Q_SLOTS:
 
 private:
-    void mouseReleaseEvent(QMouseEvent* e);
-    void keyPressEvent(QKeyEvent* e);
+    void mouseReleaseEvent(QMouseEvent* e) override;
+    void keyPressEvent(QKeyEvent* e) override;
 
     void closeAllMenus();
 

@@ -28,7 +28,7 @@ private:
     QByteArray m_testMasterPassword;
 
 protected:
-    void reloadBackend();
-    void init();
-    void cleanup();
+    void reloadBackend() override;
+    void init() override;
+    void cleanup() override;
 };

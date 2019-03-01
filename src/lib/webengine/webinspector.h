@@ -45,8 +45,8 @@ private Q_SLOTS:
     void loadFinished();
 
 private:
-    void keyPressEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
-    void keyReleaseEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *event) override;
+    void keyReleaseEvent(QKeyEvent *event) override;
 
     static QList<QWebEngineView*> s_views;
 

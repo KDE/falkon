@@ -29,9 +29,9 @@ class HtmlExporter : public BookmarksExporter
 public:
     explicit HtmlExporter(QObject* parent = 0);
 
-    QString name() const;
-    QString getPath(QWidget* parent);
-    bool exportBookmarks(BookmarkItem* root);
+    QString name() const override;
+    QString getPath(QWidget* parent) override;
+    bool exportBookmarks(BookmarkItem* root) override;
 
 private:
     void writeBookmark(BookmarkItem* item, QTextStream &stream, int level);

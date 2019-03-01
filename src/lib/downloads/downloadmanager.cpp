@@ -134,6 +134,7 @@ void DownloadManager::closeDownloadTab(QWebEngineDownloadItem *item) const
             return false;
         }
 #if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        Q_UNUSED(url)
         return true;
 #else
         if (page->url() != QUrl()) {

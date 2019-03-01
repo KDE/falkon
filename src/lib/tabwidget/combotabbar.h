@@ -182,10 +182,10 @@ protected:
     int mainTabBarWidth() const;
     int pinTabBarWidth() const;
 
-    bool event(QEvent *event);
-    void wheelEvent(QWheelEvent* event);
-    bool eventFilter(QObject* obj, QEvent* ev);
-    void paintEvent(QPaintEvent* ev);
+    bool event(QEvent *event) override;
+    void wheelEvent(QWheelEvent* event) override;
+    bool eventFilter(QObject* obj, QEvent* ev) override;
+    void paintEvent(QPaintEvent* ev) override;
 
     virtual int comboTabBarPixelMetric(SizeType sizeType) const;
     virtual QSize tabSizeHint(int index, bool fast = false) const;
@@ -241,7 +241,7 @@ public:
 
     void setTabButton(int index, QTabBar::ButtonPosition position, QWidget* widget);
 
-    QSize tabSizeHint(int index) const;
+    QSize tabSizeHint(int index) const override;
     QSize baseClassTabSizeHint(int index) const;
 
     QRect draggedTabRect() const;
@@ -267,11 +267,11 @@ public Q_SLOTS:
     void setCurrentIndex(int index);
 
 private:
-    bool event(QEvent* ev);
-    void paintEvent(QPaintEvent* event);
-    void mousePressEvent(QMouseEvent* event);
-    void mouseMoveEvent(QMouseEvent *event);
-    void mouseReleaseEvent(QMouseEvent* event);
+    bool event(QEvent* ev) override;
+    void paintEvent(QPaintEvent* event) override;
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent* event) override;
 
     int dragOffset(QStyleOptionTab *option, int tabIndex) const;
     void initStyleOption(QStyleOptionTab* option, int tabIndex) const;
@@ -341,8 +341,8 @@ private Q_SLOTS:
     void updateScrollButtonsState();
 
 private:
-    void mouseMoveEvent(QMouseEvent* event);
-    void resizeEvent(QResizeEvent* event);
+    void mouseMoveEvent(QMouseEvent* event) override;
+    void resizeEvent(QResizeEvent* event) override;
 
     QTabBar* m_tabBar;
     QScrollArea* m_scrollArea;

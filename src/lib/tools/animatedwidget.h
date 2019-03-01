@@ -42,7 +42,7 @@ private Q_SLOTS:
     void animateFrame(int frame);
 
 private:
-    void resizeEvent(QResizeEvent* e);
+    void resizeEvent(QResizeEvent* e) override;
 
     Direction m_direction;
     QTimeLine m_timeLine;

@@ -140,9 +140,9 @@ class QmlSideBarHelper : public SideBarInterface
     Q_OBJECT
 public:
     explicit QmlSideBarHelper(QObject *parent = nullptr);
-    QString title() const;
-    QAction *createMenuAction();
-    QWidget *createSideBarWidget(BrowserWindow *mainWindow);
+    QString title() const override;
+    QAction *createMenuAction() override;
+    QWidget *createSideBarWidget(BrowserWindow *mainWindow) override;
 
     void setTitle(const QString &title);
     void setIcon(const QString &icon);

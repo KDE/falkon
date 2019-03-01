@@ -82,8 +82,8 @@ private Q_SLOTS:
     void generateMenu();
 
 private:
-    void mousePressEvent(QMouseEvent *event);
-    void wheelEvent(QWheelEvent* event);
+    void mousePressEvent(QMouseEvent *event) override;
+    void wheelEvent(QWheelEvent* event) override;
 
     QMenu* m_menu;
     QVector<Item> m_items;

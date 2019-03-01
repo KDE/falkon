@@ -25,7 +25,7 @@ class TabManagerDelegate : public QStyledItemDelegate
 public:
     explicit TabManagerDelegate(QObject* parent = 0);
 
-    void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
 private:
     void viewItemDrawText(QPainter *p, const QStyleOptionViewItem *option, const QRect &rect,

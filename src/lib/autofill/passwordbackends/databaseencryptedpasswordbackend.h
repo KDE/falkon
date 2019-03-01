@@ -40,23 +40,23 @@ public:
 
     ~DatabaseEncryptedPasswordBackend();
 
-    QStringList getUsernames(const QUrl &url);
-    QVector<PasswordEntry> getEntries(const QUrl &url);
-    QVector<PasswordEntry> getAllEntries();
+    QStringList getUsernames(const QUrl &url) override;
+    QVector<PasswordEntry> getEntries(const QUrl &url) override;
+    QVector<PasswordEntry> getAllEntries() override;
 
-    void setActive(bool active);
+    void setActive(bool active) override;
 
-    void addEntry(const PasswordEntry &entry);
-    bool updateEntry(const PasswordEntry &entry);
-    void updateLastUsed(PasswordEntry &entry);
+    void addEntry(const PasswordEntry &entry) override;
+    bool updateEntry(const PasswordEntry &entry) override;
+    void updateLastUsed(PasswordEntry &entry) override;
 
-    void removeEntry(const PasswordEntry &entry);
-    void removeAll();
+    void removeEntry(const PasswordEntry &entry) override;
+    void removeAll() override;
 
-    QString name() const;
+    QString name() const override;
 
-    bool hasSettings() const;
-    void showSettings(QWidget* parent);
+    bool hasSettings() const override;
+    void showSettings(QWidget* parent) override;
 
     bool isMasterPasswordSetted();
 
@@ -107,8 +107,8 @@ public:
     void delayedExec();
 
 public Q_SLOTS:
-    void accept();
-    void reject();
+    void accept() override;
+    void reject() override;
     void showSettingPage();
     void showSetMasterPasswordPage();
     void clearMasterPasswordAndConvert(bool forcedAskPass = true);

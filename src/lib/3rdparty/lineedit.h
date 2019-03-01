@@ -155,7 +155,7 @@ public:
     SideWidget(QWidget* parent = 0);
 
 protected:
-    bool event(QEvent* event);
+    bool event(QEvent* event) override;
 
 };
 

@@ -78,8 +78,8 @@ private Q_SLOTS:
     void tabWasRemoved(int index);
 
 protected:
-    bool eventFilter(QObject* obj, QEvent* event);
-    void keyPressEvent(QKeyEvent* event);
+    bool eventFilter(QObject* obj, QEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) override;
 
 private:
     bool validIndex(int index) const;

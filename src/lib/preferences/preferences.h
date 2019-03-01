@@ -89,7 +89,7 @@ private Q_SLOTS:
     void makeFalkonDefault();
 
 private:
-    void closeEvent(QCloseEvent* event);
+    void closeEvent(QCloseEvent* event) override;
 
     Ui::Preferences* ui;
     BrowserWindow* m_window;

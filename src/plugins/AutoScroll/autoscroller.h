@@ -58,7 +58,7 @@ public:
     void setScrollDivider(double divider);
 
 private:
-    bool eventFilter(QObject* obj, QEvent* event);
+    bool eventFilter(QObject* obj, QEvent* event) override;
 
     bool showIndicator(WebView* view, const QPoint &pos);
     void stopScrolling();

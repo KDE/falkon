@@ -40,7 +40,7 @@ public:
     static QByteArray generateHeader(const QStringList &langs);
 
 public Q_SLOTS:
-    void accept();
+    void accept() override;
 
 private Q_SLOTS:
     void addLanguage();

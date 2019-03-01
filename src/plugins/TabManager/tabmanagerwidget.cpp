@@ -880,7 +880,7 @@ QStringList TabTreeWidget::mimeTypes() const
     return types;
 }
 
-QMimeData *TabTreeWidget::mimeData(const QList<QTreeWidgetItem*> &items) const
+QMimeData *TabTreeWidget::mimeData(const QList<QTreeWidgetItem*> items) const
 {
     QMimeData* mimeData = new QMimeData();
     QByteArray encodedData;

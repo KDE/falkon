@@ -25,7 +25,7 @@ class DatabasePasswordBackendTest : public PasswordBackendTest
     Q_OBJECT
 
 protected:
-    void reloadBackend();
-    void init();
-    void cleanup();
+    void reloadBackend() override;
+    void init() override;
+    void cleanup() override;
 };

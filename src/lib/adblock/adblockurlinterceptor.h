@@ -32,7 +32,7 @@ class FALKON_EXPORT AdBlockUrlInterceptor : public UrlInterceptor
 public:
     explicit AdBlockUrlInterceptor(AdBlockManager *manager);
 
-    void interceptRequest(QWebEngineUrlRequestInfo &request);
+    void interceptRequest(QWebEngineUrlRequestInfo &request) override;
 
 Q_SIGNALS:
     void requestBlocked(const AdBlockedRequest &request);

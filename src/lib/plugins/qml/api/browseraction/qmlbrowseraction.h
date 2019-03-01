@@ -189,9 +189,9 @@ class QmlBrowserActionButton : public AbstractButtonInterface
     Q_OBJECT
 public:
     explicit QmlBrowserActionButton(QObject *parent = nullptr);
-    QString id() const;
+    QString id() const override;
     void setId(const QString &id);
-    QString name() const;
+    QString name() const override;
     void setName(const QString &name);
     void setTitle(const QString &title);
     void setToolTip(const QString &toolTip);

@@ -36,7 +36,7 @@ public:
 private:
     QIcon m_icon;
 
-    void paintEvent(QPaintEvent*) {
+    void paintEvent(QPaintEvent*) override {
         QPainter p(this);
         m_icon.paint(&p, rect());
     }

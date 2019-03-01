@@ -34,7 +34,7 @@ public Q_SLOTS:
     void setValue(int value);
 
 protected:
-    void paintEvent(QPaintEvent* e);
+    void paintEvent(QPaintEvent* e) override;
     void initStyleOption(QStyleOptionProgressBar* option);
 
 private:

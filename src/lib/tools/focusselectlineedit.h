@@ -32,8 +32,8 @@ public Q_SLOTS:
     void setFocus();
 
 protected:
-    void focusInEvent(QFocusEvent* event);
-    void mousePressEvent(QMouseEvent* event);
+    void focusInEvent(QFocusEvent* event) override;
+    void mousePressEvent(QMouseEvent* event) override;
 
     bool m_mouseFocusReason;
 

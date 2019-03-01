@@ -33,18 +33,18 @@ class FALKON_EXPORT PopupWebView : public WebView
 public:
     explicit PopupWebView(QWidget* parent = 0);
 
-    QWidget* overlayWidget() Q_DECL_OVERRIDE;
-    void loadInNewTab(const LoadRequest &req, Qz::NewTabPositionFlags position) Q_DECL_OVERRIDE;
+    QWidget* overlayWidget() override;
+    void loadInNewTab(const LoadRequest &req, Qz::NewTabPositionFlags position) override;
 
-    void closeView() Q_DECL_OVERRIDE;
-    bool isFullScreen() Q_DECL_OVERRIDE;
-    void requestFullScreen(bool enable) Q_DECL_OVERRIDE;
+    void closeView() override;
+    bool isFullScreen() override;
+    void requestFullScreen(bool enable) override;
 
 public Q_SLOTS:
     void inspectElement();
 
 private:
-    void _contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
+    void _contextMenuEvent(QContextMenuEvent *event) override;
 
     Menu* m_menu;
     QPointer<WebInspector> m_inspector;

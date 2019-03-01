@@ -42,7 +42,7 @@ public:
     void showMinimalInPopupWindow();
 
     void focusSearchLine();
-    bool eventFilter(QObject* obj, QEvent* event);
+    bool eventFilter(QObject* obj, QEvent* event) override;
 
 public Q_SLOTS:
     void setText(const QString &text);

@@ -49,7 +49,7 @@ private Q_SLOTS:
 
 private:
     void adjustItemFeatures(QTreeWidgetItem* item, const AdBlockRule* rule);
-    void keyPressEvent(QKeyEvent* event);
+    void keyPressEvent(QKeyEvent* event) override;
 
     AdBlockSubscription* m_subscription;
     QTreeWidgetItem* m_topItem;

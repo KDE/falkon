@@ -39,8 +39,8 @@ private Q_SLOTS:
     void toggleSectionVisibility();
 
 private:
-    void showEvent(QShowEvent* event);
-    void contextMenuEvent(QContextMenuEvent* event);
+    void showEvent(QShowEvent* event) override;
+    void contextMenuEvent(QContextMenuEvent* event) override;
 
     QAbstractItemView* m_parent;
     QMenu* m_menu;

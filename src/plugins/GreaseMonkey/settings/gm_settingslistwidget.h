@@ -38,8 +38,8 @@ private:
     bool containsRemoveIcon(const QPoint &pos) const;
     bool containsUpdateIcon(const QPoint &pos) const;
 
-    void mousePressEvent(QMouseEvent* event);
-    void mouseDoubleClickEvent(QMouseEvent* event);
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseDoubleClickEvent(QMouseEvent* event) override;
 
     GM_SettingsListDelegate* m_delegate;
 

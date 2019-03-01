@@ -50,8 +50,8 @@ Q_SIGNALS:
 private:
     void updateIcon();
 
-    void resizeEvent(QResizeEvent *ev);
-    void mouseReleaseEvent(QMouseEvent* ev);
+    void resizeEvent(QResizeEvent *ev) override;
+    void mouseReleaseEvent(QMouseEvent* ev) override;
 
     QString m_themeIcon;
     QIcon m_fallbackIcon;
