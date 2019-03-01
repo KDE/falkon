@@ -63,7 +63,7 @@ PopupWindow::PopupWindow(PopupWebView* view)
     m_notificationWidget = new QWidget(this);
     m_notificationWidget->setAutoFillBackground(true);
     QPalette pal = m_notificationWidget->palette();
-    pal.setColor(QPalette::Background, pal.window().color().darker(110));
+    pal.setColor(QPalette::Window, pal.window().color().darker(110));
     m_notificationWidget->setPalette(pal);
 
     QVBoxLayout *nlayout = new QVBoxLayout(m_notificationWidget);
@@ -73,7 +73,7 @@ PopupWindow::PopupWindow(PopupWebView* view)
 
     QWidget *viewSpacer = new QWidget(this);
     pal = viewSpacer->palette();
-    pal.setColor(QPalette::Background, pal.window().color().darker(125));
+    pal.setColor(QPalette::Window, pal.window().color().darker(125));
     viewSpacer->setPalette(pal);
     viewSpacer->setFixedHeight(1);
     viewSpacer->setAutoFillBackground(true);

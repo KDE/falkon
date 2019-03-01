@@ -169,7 +169,7 @@ WebTab::WebTab(QWidget *parent)
     m_notificationWidget = new QWidget(this);
     m_notificationWidget->setAutoFillBackground(true);
     QPalette pal = m_notificationWidget->palette();
-    pal.setColor(QPalette::Background, pal.window().color().darker(110));
+    pal.setColor(QPalette::Window, pal.window().color().darker(110));
     m_notificationWidget->setPalette(pal);
 
     QVBoxLayout *nlayout = new QVBoxLayout(m_notificationWidget);

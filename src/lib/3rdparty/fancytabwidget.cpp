@@ -502,18 +502,18 @@ FancyTabWidget::FancyTabWidget(QWidget* parent)
       proxy_style_(new FancyTabProxyStyle)
 {
     side_layout_->setSpacing(0);
-    side_layout_->setMargin(0);
+    side_layout_->setContentsMargins(0, 0, 0, 0);
     side_layout_->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding));
 
     side_widget_->setLayout(side_layout_);
     side_widget_->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
 
-    top_layout_->setMargin(0);
+    top_layout_->setContentsMargins(0, 0, 0, 0);
     top_layout_->setSpacing(0);
     top_layout_->addLayout(stack_);
 
     QHBoxLayout* main_layout = new QHBoxLayout;
-    main_layout->setMargin(0);
+    main_layout->setContentsMargins(0, 0, 0, 0);
     main_layout->setSpacing(1);
     main_layout->addWidget(side_widget_);
     main_layout->addLayout(top_layout_);
