@@ -41,7 +41,7 @@ public:
     explicit WebSearchBar_Button(QWidget* parent = 0);
 
 private:
-    void contextMenuEvent(QContextMenuEvent* event);
+    void contextMenuEvent(QContextMenuEvent* event) override;
 };
 
 class FALKON_EXPORT WebSearchBar : public LineEdit
@@ -69,11 +69,11 @@ private Q_SLOTS:
     void instantSearchChanged(bool);
 
 private:
-    void focusOutEvent(QFocusEvent* e);
-    void dropEvent(QDropEvent* event);
-    void keyPressEvent(QKeyEvent* event);
+    void focusOutEvent(QFocusEvent* e) override;
+    void dropEvent(QDropEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) override;
 
-    void contextMenuEvent(QContextMenuEvent* event);
+    void contextMenuEvent(QContextMenuEvent* event) override;
 
     QCompleter* m_completer;
     QStringListModel* m_completerModel;

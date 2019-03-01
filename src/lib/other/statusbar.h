@@ -38,10 +38,10 @@ public:
     void show(QWidget* widget);
     void hideDelayed();
 
-    bool eventFilter(QObject* o, QEvent* e);
+    bool eventFilter(QObject* o, QEvent* e) override;
 
 private:
-    void paintEvent(QPaintEvent* ev);
+    void paintEvent(QPaintEvent* ev) override;
 
     QTimer* m_timer;
 };
@@ -60,7 +60,7 @@ public:
     void removeButton(AbstractButtonInterface *button);
 
 protected:
-    void mousePressEvent(QMouseEvent *event);
+    void mousePressEvent(QMouseEvent *event) override;
 
 private:
     BrowserWindow *m_window;

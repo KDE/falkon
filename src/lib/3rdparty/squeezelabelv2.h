@@ -37,12 +37,12 @@ private Q_SLOTS:
     void copy();
 
 protected:
-    void contextMenuEvent(QContextMenuEvent* event);
-    void keyPressEvent(QKeyEvent* event);
-    void resizeEvent(QResizeEvent* event);
+    void contextMenuEvent(QContextMenuEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) override;
+    void resizeEvent(QResizeEvent* event) override;
 
-    void mousePressEvent(QMouseEvent* event);
-    void mouseMoveEvent(QMouseEvent* event);
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseMoveEvent(QMouseEvent* event) override;
 
 private:
     QString m_originalText;

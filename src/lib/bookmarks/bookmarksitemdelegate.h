@@ -31,7 +31,7 @@ class FALKON_EXPORT BookmarksItemDelegate : public QStyledItemDelegate
 public:
     explicit BookmarksItemDelegate(QTreeView* parent = 0);
 
-    void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
 private:
     QTreeView* m_tree;

@@ -53,8 +53,8 @@ private Q_SLOTS:
     void exportBookmarks();
 
 private:
-    void closeEvent(QCloseEvent* e);
-    void keyPressEvent(QKeyEvent* e);
+    void closeEvent(QCloseEvent* e) override;
+    void keyPressEvent(QKeyEvent* e) override;
 
     Ui::BrowsingLibrary* ui;
     HistoryManager* m_historyManager;

@@ -53,20 +53,20 @@ public:
     void addBookmark(BookmarkItem* parent, int row, BookmarkItem* item);
     void removeBookmark(BookmarkItem* item);
 
-    Qt::ItemFlags flags(const QModelIndex &index) const;
-    QVariant data(const QModelIndex &index, int role) const;
-    QVariant headerData(int section, Qt::Orientation orientation, int role) const;
-    int rowCount(const QModelIndex &parent) const;
-    int columnCount(const QModelIndex &parent) const;
-    bool hasChildren(const QModelIndex &parent) const;
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
+    int rowCount(const QModelIndex &parent) const override;
+    int columnCount(const QModelIndex &parent) const override;
+    bool hasChildren(const QModelIndex &parent) const override;
 
-    Qt::DropActions supportedDropActions() const;
-    QStringList mimeTypes() const;
-    QMimeData* mimeData(const QModelIndexList &indexes) const;
-    bool dropMimeData(const QMimeData* data, Qt::DropAction action, int row, int column, const QModelIndex &parent);
+    Qt::DropActions supportedDropActions() const override;
+    QStringList mimeTypes() const override;
+    QMimeData* mimeData(const QModelIndexList &indexes) const override;
+    bool dropMimeData(const QMimeData* data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
 
-    QModelIndex parent(const QModelIndex &child) const;
-    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
+    QModelIndex parent(const QModelIndex &child) const override;
+    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     QModelIndex index(BookmarkItem* item, int column = 0) const;
 
     BookmarkItem* item(const QModelIndex &index) const;
@@ -90,7 +90,7 @@ public Q_SLOTS:
     void setFilterFixedString(const QString &pattern);
 
 protected:
-    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 
 private Q_SLOTS:
     void startFiltering();

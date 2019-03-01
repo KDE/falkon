@@ -44,7 +44,7 @@ private Q_SLOTS:
     void showCookieManager();
 
 private:
-    void closeEvent(QCloseEvent* e);
+    void closeEvent(QCloseEvent* e) override;
 
     void restoreState(const QByteArray &state);
     QByteArray saveState();

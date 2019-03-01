@@ -180,11 +180,11 @@ private Q_SLOTS:
     void hideNavigationSlot();
 
 private:
-    bool event(QEvent* event);
-    void resizeEvent(QResizeEvent* event);
-    void keyPressEvent(QKeyEvent* event);
-    void keyReleaseEvent(QKeyEvent* event);
-    void closeEvent(QCloseEvent* event);
+    bool event(QEvent* event) override;
+    void resizeEvent(QResizeEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) override;
+    void keyReleaseEvent(QKeyEvent* event) override;
+    void closeEvent(QCloseEvent* event) override;
 
     void setupUi();
     void setupMenu();

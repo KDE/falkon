@@ -41,7 +41,7 @@ Q_SIGNALS:
     void save();
 
 private:
-    void timerEvent(QTimerEvent* event);
+    void timerEvent(QTimerEvent* event) override;
 
     QBasicTimer m_timer;
 };

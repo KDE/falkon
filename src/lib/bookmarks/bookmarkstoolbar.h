@@ -57,11 +57,11 @@ private:
 
     QSize minimumSizeHint() const override;
 
-    void dropEvent(QDropEvent* e);
-    void dragEnterEvent(QDragEnterEvent* e);
-    void dragMoveEvent(QDragMoveEvent* e);
-    void dragLeaveEvent(QDragLeaveEvent* e);
-    void paintEvent(QPaintEvent* p);
+    void dropEvent(QDropEvent* e) override;
+    void dragEnterEvent(QDragEnterEvent* e) override;
+    void dragMoveEvent(QDragMoveEvent* e) override;
+    void dragLeaveEvent(QDragLeaveEvent* e) override;
+    void paintEvent(QPaintEvent* p) override;
 
     BrowserWindow* m_window;
     Bookmarks* m_bookmarks;

@@ -45,7 +45,7 @@ public:
     SqueezeLabelV1(QWidget* parent = 0);
 
 protected:
-    void paintEvent(QPaintEvent* event);
+    void paintEvent(QPaintEvent* event) override;
 
 private:
     QString m_SqueezedTextCache;

@@ -58,8 +58,8 @@ private Q_SLOTS:
     void removeCookie(const QNetworkCookie &cookie);
 
 private:
-    void closeEvent(QCloseEvent* e);
-    void keyPressEvent(QKeyEvent* e);
+    void closeEvent(QCloseEvent* e) override;
+    void keyPressEvent(QKeyEvent* e) override;
 
     void addBlacklist(const QString &server);
     QString cookieDomain(const QNetworkCookie &cookie) const;

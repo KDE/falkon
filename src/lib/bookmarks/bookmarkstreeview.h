@@ -72,15 +72,15 @@ private Q_SLOTS:
 
 private:
     void restoreExpandedState(const QModelIndex &parent);
-    void rowsInserted(const QModelIndex &parent, int start, int end);
-    void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
+    void rowsInserted(const QModelIndex &parent, int start, int end) override;
+    void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected) override;
 
-    void contextMenuEvent(QContextMenuEvent* event);
-    void mouseMoveEvent(QMouseEvent* event);
-    void mousePressEvent(QMouseEvent* event);
-    void mouseReleaseEvent(QMouseEvent* event);
-    void mouseDoubleClickEvent(QMouseEvent* event);
-    void keyPressEvent(QKeyEvent* event);
+    void contextMenuEvent(QContextMenuEvent* event) override;
+    void mouseMoveEvent(QMouseEvent* event) override;
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseReleaseEvent(QMouseEvent* event) override;
+    void mouseDoubleClickEvent(QMouseEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) override;
 
     Bookmarks* m_bookmarks;
     BookmarksModel* m_model;

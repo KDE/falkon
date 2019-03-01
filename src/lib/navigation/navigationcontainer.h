@@ -37,7 +37,7 @@ public:
     void toggleTabsOnTop(bool enable);
 
 private:
-    void paintEvent(QPaintEvent* event);
+    void paintEvent(QPaintEvent* event) override;
 
     QVBoxLayout* m_layout;
     TabBar* m_tabBar;

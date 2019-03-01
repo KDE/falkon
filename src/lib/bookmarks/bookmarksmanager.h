@@ -75,8 +75,8 @@ private:
     BookmarkItem* parentForNewBookmark() const;
     BrowserWindow* getWindow();
 
-    void showEvent(QShowEvent* event);
-    void keyPressEvent(QKeyEvent* event);
+    void showEvent(QShowEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) override;
 
     Ui::BookmarksManager* ui;
     QPointer<BrowserWindow> m_window;

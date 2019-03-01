@@ -58,13 +58,13 @@ class FALKON_EXPORT FancyTabProxyStyle : public QProxyStyle
 
 public:
     void drawControl(ControlElement element, const QStyleOption* option,
-                     QPainter* painter, const QWidget* widget) const;
-    void polish(QWidget* widget);
-    void polish(QApplication* app);
-    void polish(QPalette &palette);
+                     QPainter* painter, const QWidget* widget) const override;
+    void polish(QWidget* widget) override;
+    void polish(QApplication* app) override;
+    void polish(QPalette &palette) override;
 
 protected:
-    bool eventFilter(QObject* o, QEvent* e);
+    bool eventFilter(QObject* o, QEvent* e) override;
 };
 
 class FALKON_EXPORT FancyTab : public QWidget
@@ -77,7 +77,7 @@ public:
     float fader() { return m_fader; }
     void setFader(float value);
 
-    QSize sizeHint() const;
+    QSize sizeHint() const override;
 
     void fadeIn();
     void fadeOut();
@@ -86,8 +86,8 @@ public:
     QString text;
 
 protected:
-    void enterEvent(QEvent*);
-    void leaveEvent(QEvent*);
+    void enterEvent(QEvent*) override;
+    void leaveEvent(QEvent*) override;
 
 private:
     QPropertyAnimation animator;
@@ -200,8 +200,8 @@ Q_SIGNALS:
     void ModeChanged(FancyTabWidget::Mode mode);
 
 protected:
-    void paintEvent(QPaintEvent* event);
-    void contextMenuEvent(QContextMenuEvent* e);
+    void paintEvent(QPaintEvent* event) override;
+    void contextMenuEvent(QContextMenuEvent* e) override;
 
 private Q_SLOTS:
     void ShowWidget(int index);

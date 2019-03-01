@@ -100,13 +100,13 @@ private:
         ProgressTop
     };
 
-    void contextMenuEvent(QContextMenuEvent* event);
-    void showEvent(QShowEvent* event);
-    void focusInEvent(QFocusEvent* event);
-    void focusOutEvent(QFocusEvent* event);
-    void keyPressEvent(QKeyEvent* event);
-    void dropEvent(QDropEvent* event);
-    void paintEvent(QPaintEvent* event);
+    void contextMenuEvent(QContextMenuEvent* event) override;
+    void showEvent(QShowEvent* event) override;
+    void focusInEvent(QFocusEvent* event) override;
+    void focusOutEvent(QFocusEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) override;
+    void dropEvent(QDropEvent* event) override;
+    void paintEvent(QPaintEvent* event) override;
 
     void refreshTextFormat();
 

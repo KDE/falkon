@@ -58,14 +58,14 @@ public Q_SLOTS:
     void removeSelectedItems();
 
 protected:
-    void contextMenuEvent(QContextMenuEvent* event);
-    void mouseMoveEvent(QMouseEvent* event);
-    void mousePressEvent(QMouseEvent* event);
-    void mouseReleaseEvent(QMouseEvent* event);
-    void mouseDoubleClickEvent(QMouseEvent* event);
-    void keyPressEvent(QKeyEvent* event);
+    void contextMenuEvent(QContextMenuEvent* event) override;
+    void mouseMoveEvent(QMouseEvent* event) override;
+    void mousePressEvent(QMouseEvent* event) override;
+    void mouseReleaseEvent(QMouseEvent* event) override;
+    void mouseDoubleClickEvent(QMouseEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) override;
 
-    void drawRow(QPainter* painter, const QStyleOptionViewItem &options, const QModelIndex &index) const;
+    void drawRow(QPainter* painter, const QStyleOptionViewItem &options, const QModelIndex &index) const override;
 
 private:
     History* m_history;

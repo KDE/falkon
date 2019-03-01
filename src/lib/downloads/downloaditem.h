@@ -74,7 +74,7 @@ private Q_SLOTS:
 
 private:
     void updateDownloadInfo(double currSpeed, qint64 received, qint64 total);
-    void mouseDoubleClickEvent(QMouseEvent* e);
+    void mouseDoubleClickEvent(QMouseEvent* e) override;
 
     Ui::DownloadItem* ui;
 

@@ -42,8 +42,8 @@ private Q_SLOTS:
     void iconClicked();
 
 private:
-    void contextMenuEvent(QContextMenuEvent* ev);
-    void mousePressEvent(QMouseEvent* ev);
+    void contextMenuEvent(QContextMenuEvent* ev) override;
+    void mousePressEvent(QMouseEvent* ev) override;
 
     void setBookmarkSaved();
     void setBookmarkDisabled();

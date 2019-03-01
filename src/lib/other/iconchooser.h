@@ -53,8 +53,8 @@ class FALKON_EXPORT IconChooserDelegate : public QStyledItemDelegate
 public:
     explicit IconChooserDelegate(QWidget* parent = 0);
 
-    void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 };
 
 #endif // ICONCHOOSER_H
