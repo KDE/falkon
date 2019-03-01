@@ -133,7 +133,9 @@ WebPage::WebPage(QObject* parent)
 
 WebPage::~WebPage()
 {
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     delete m_registerProtocolHandlerRequest;
+#endif
 
     if (m_runningLoop) {
         m_runningLoop->exit(1);
@@ -506,17 +508,21 @@ QStringList WebPage::autoFillUsernames() const
 
 QUrl WebPage::registerProtocolHandlerRequestUrl() const
 {
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     if (m_registerProtocolHandlerRequest && url().host() == m_registerProtocolHandlerRequest->origin().host()) {
         return m_registerProtocolHandlerRequest->origin();
     }
+#endif
     return QUrl();
 }
 
 QString WebPage::registerProtocolHandlerRequestScheme() const
 {
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     if (m_registerProtocolHandlerRequest && url().host() == m_registerProtocolHandlerRequest->origin().host()) {
         return m_registerProtocolHandlerRequest->scheme();
     }
+#endif
     return QString();
 }
 
