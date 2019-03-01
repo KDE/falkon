@@ -94,4 +94,80 @@ private:
     qint64 m_total;
 };
 
+class FALKON_EXPORT DownloadItem2 : public QObject
+{
+    Q_OBJECT
+
+public:
+    enum Flag {
+        CanPause = 1,
+        ActiveDownload = 2, // inactive download = eg. download from history
+    };
+    Q_DECLARE_FLAGS(Flags, Flag)
+
+    enum State {
+        DownloadStarting = 0,
+        DownloadInProgress,
+        DownloadPaused,
+        DownloadFinished,
+        DownloadCanceled,
+        DownloadError
+    };
+
+    enum Error {
+        NoError = 0,
+        UnknownError
+    };
+
+    explicit DownloadItem2(QObject *parent = nullptr);
+
+    Flags flags() const;
+    State state() const;
+    Error error() const;
+    bool isError() const;
+    bool isPaused() const;
+    bool isFinished() const;
+    bool isCanceled() const;
+
+    QUrl url() const;
+    QString path() const;
+
+    int progress() const;
+    qint64 bytesReceived() const;
+    qint64 bytesTotal() const;
+    qint64 currentSpeed() const;
+
+    virtual void cancel();
+    virtual void pause();
+    virtual void resume();
+
+Q_SIGNALS:
+    void finished();
+    void stateChanged(State state);
+    void downloadProgress(qint64 received, qint64 total);
+
+protected:
+    void setFlags(Flags flags);
+    void setState(State state);
+    void setError(Error error);
+    void setUrl(const QUrl &url);
+    void setPath(const QString &path);
+    void updateProgress(qint64 received, qint64 total);
+
+    void resetSpeedTimer();
+
+private:
+    Flags m_flags;
+    State m_state = DownloadStarting;
+    Error m_error = NoError;
+    QUrl m_url;
+    QString m_path;
+    qint64 m_bytesReceived = 0;
+    qint64 m_bytesTotal = 0;
+    qint64 m_currentSpeed = 0;
+    QTime m_speedTimer;
+};
+
+Q_DECLARE_OPERATORS_FOR_FLAGS(DownloadItem2::Flags)
+
 #endif // DOWNLOADITEM_H

@@ -117,4 +117,41 @@ private:
     QPointer<QWinTaskbarButton> m_taskbarButton;
 };
 
+class DownloadItem2;
+
+class FALKON_EXPORT DownloadManager2 : public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit DownloadManager2(QObject *parent = nullptr);
+
+    QString defaultDownloadPath() const;
+
+    QString lastDownloadPath() const;
+    void setLastDownloadPath(const QString &path);
+
+    void loadSettings();
+
+    QVector<DownloadItem2*> downloads() const;
+
+    void addDownload(DownloadItem2 *item);
+    void removeDownload(DownloadItem2 *item);
+
+    void startExternalManager(const QUrl &url);
+
+Q_SIGNALS:
+    void downloadAdded(DownloadItem2 *item);
+    void downloadRemoved(DownloadItem2 *item);
+
+private:
+    QVector<DownloadItem2*> m_downloads;
+    QString m_downloadPath;
+    QString m_lastDownloadPath;
+
+    bool m_useExternalManager = false;
+    QString m_externalExecutable;
+    QString m_externalArguments;
+};
+
 #endif // DOWNLOADMANAGER_H

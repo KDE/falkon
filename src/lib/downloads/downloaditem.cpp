@@ -340,3 +340,139 @@ DownloadItem::~DownloadItem()
     delete ui;
     delete m_item;
 }
+
+
+
+
+
+
+DownloadItem2::DownloadItem2(QObject *parent)
+    : QObject(parent)
+{
+}
+
+DownloadItem2::Flags DownloadItem2::flags() const
+{
+    return m_flags;
+}
+
+DownloadItem2::State DownloadItem2::state() const
+{
+    return m_state;
+}
+
+DownloadItem2::Error DownloadItem2::error() const
+{
+    return m_error;
+}
+
+bool DownloadItem2::isError() const
+{
+    return m_state == DownloadError;
+}
+
+bool DownloadItem2::isPaused() const
+{
+    return m_state == DownloadPaused;
+}
+
+bool DownloadItem2::isFinished() const
+{
+    return m_state == DownloadFinished;
+}
+
+bool DownloadItem2::isCanceled() const
+{
+    return m_state == DownloadCanceled;
+}
+
+QUrl DownloadItem2::url() const
+{
+    return m_url;
+}
+
+QString DownloadItem2::path() const
+{
+    return m_path;
+}
+
+int DownloadItem2::progress() const
+{
+    if (m_bytesReceived >= 0 && m_bytesTotal > 0) {
+        return (m_bytesReceived / double(m_bytesTotal)) * 100;
+    }
+    return -1;
+}
+
+qint64 DownloadItem2::bytesReceived() const
+{
+    return m_bytesReceived;
+}
+
+qint64 DownloadItem2::bytesTotal() const
+{
+    return m_bytesTotal;
+}
+
+qint64 DownloadItem2::currentSpeed() const
+{
+    return m_currentSpeed;
+}
+
+void DownloadItem2::cancel()
+{
+}
+
+void DownloadItem2::pause()
+{
+}
+
+void DownloadItem2::resume()
+{
+}
+
+void DownloadItem2::setFlags(Flags flags)
+{
+    m_flags = flags;
+}
+
+void DownloadItem2::setState(State state)
+{
+    m_state = state;
+    emit stateChanged(m_state);
+    if (m_state == DownloadFinished) {
+        emit finished();
+    }
+}
+
+void DownloadItem2::setError(Error error)
+{
+    m_error = error;
+    setState(DownloadError);
+}
+
+void DownloadItem2::setUrl(const QUrl &url)
+{
+    m_url = url;
+}
+
+void DownloadItem2::setPath(const QString &path)
+{
+    m_path = path;
+}
+
+void DownloadItem2::updateProgress(qint64 received, qint64 total)
+{
+    m_currentSpeed = (received - m_bytesReceived) / (m_speedTimer.elapsed() / 1000.0);
+    m_speedTimer.restart();
+
+    m_bytesReceived = received;
+    m_bytesTotal = total;
+
+    emit downloadProgress(m_bytesReceived, m_bytesTotal);
+}
+
+void DownloadItem2::resetSpeedTimer()
+{
+    m_speedTimer.restart();
+}

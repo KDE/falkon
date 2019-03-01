@@ -514,3 +514,71 @@ DownloadManager::~DownloadManager()
     delete ui;
 }
 
+
+
+
+
+DownloadManager2::DownloadManager2(QObject *parent)
+    : QObject(parent)
+{
+    loadSettings();
+}
+
+QString DownloadManager2::defaultDownloadPath() const
+{
+    return m_downloadPath;
+}
+
+QString DownloadManager2::lastDownloadPath() const
+{
+    return m_lastDownloadPath;
+}
+
+void DownloadManager2::setLastDownloadPath(const QString &path)
+{
+    m_lastDownloadPath = path;
+    Settings().setValue(QSL("DownloadManager/lastDownloadPath"), m_lastDownloadPath);
+}
+
+void DownloadManager2::loadSettings()
+{
+    Settings settings;
+    settings.beginGroup(QSL("DownloadManager"));
+    m_downloadPath = settings.value(QSL("defaultDownloadPath"), QString()).toString();
+    m_lastDownloadPath = settings.value(QSL("lastDownloadPath"), QStandardPaths::writableLocation(QStandardPaths::DownloadLocation)).toString();
+
+    m_useExternalManager = settings.value(QSL("UseExternalManager"), false).toBool();
+    m_externalExecutable = settings.value(QSL("ExternalManagerExecutable"), QString()).toString();
+    m_externalArguments = settings.value(QSL("ExternalManagerArguments"), QString()).toString();
+    settings.endGroup();
+
+    if (!m_externalArguments.contains(QLatin1String("%d"))) {
+        m_externalArguments.append(QLatin1String(" %d"));
+    }
+}
+
+QVector<DownloadItem2*> DownloadManager2::downloads() const
+{
+    return m_downloads;
+}
+
+void DownloadManager2::addDownload(DownloadItem2 *item)
+{
+    m_downloads.append(item);
+    emit downloadAdded(item);
+}
+
+void DownloadManager2::removeDownload(DownloadItem2 *item)
+{
+    if (m_downloads.removeOne(item)) {
+        item->deleteLater();
+        emit downloadRemoved(item);
+    }
+}
+
+void DownloadManager2::startExternalManager(const QUrl &url)
+{
+    QString arguments = m_externalArguments;
+    arguments.replace(QLatin1String("%d"), url.toEncoded());
+    QzTools::startExternalProcess(m_externalExecutable, arguments);
+}
