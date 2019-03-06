@@ -4,8 +4,6 @@
 // @include  falkon:speeddial
 // ==/UserScript==
 
-(function() {
-
 var scriptData = {};
 var editingId = -1;
 var ignoreNextChanged = false;
@@ -498,5 +496,3 @@ if (window._falkon_external) {
 } else {
     document.addEventListener("_falkon_external_created", init);
 }
-
-})();

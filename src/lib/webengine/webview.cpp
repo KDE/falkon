@@ -945,17 +945,17 @@ void WebView::createSearchEngine()
 
 void WebView::addSpeedDial()
 {
-    page()->runJavaScript("addSpeedDial()");
+    page()->runJavaScript("addSpeedDial()", WebPage::SafeJsWorld);
 }
 
 void WebView::configureSpeedDial()
 {
-    page()->runJavaScript("configureSpeedDial()");
+    page()->runJavaScript("configureSpeedDial()", WebPage::SafeJsWorld);
 }
 
 void WebView::reloadAllSpeedDials()
 {
-    page()->runJavaScript("reloadAll()");
+    page()->runJavaScript("reloadAll()", WebPage::SafeJsWorld);
 }
 
 void WebView::toggleMediaPause()
