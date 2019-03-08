@@ -35,9 +35,7 @@ SearchToolBar::SearchToolBar(WebView* view, QWidget* parent)
     ui->setupUi(this);
 
     ui->closeButton->setIcon(IconProvider::instance()->standardIcon(QStyle::SP_DialogCloseButton));
-    ui->next->setIcon(IconProvider::instance()->standardIcon(QStyle::SP_ArrowDown));
     ui->next->setShortcut(QKeySequence("Ctrl+G"));
-    ui->previous->setIcon(IconProvider::instance()->standardIcon(QStyle::SP_ArrowUp));
     ui->previous->setShortcut(QKeySequence("Ctrl+Shift+G"));
 
     connect(ui->closeButton, SIGNAL(clicked()), this, SLOT(close()));

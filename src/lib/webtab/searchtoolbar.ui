@@ -31,13 +31,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Search: </string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="FocusSelectLineEdit" name="lineEdit">
      <property name="minimumSize">
       <size>
@@ -47,43 +40,52 @@
      </property>
      <property name="maximumSize">
       <size>
-       <width>200</width>
+       <width>16777215</width>
        <height>16777215</height>
       </size>
      </property>
      <property name="placeholderText">
-      <string>Search...</string>
+      <string>Find...</string>
      </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="MacToolButton" name="previous">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="autoRaise">
+     <property name="clearButtonEnabled">
       <bool>true</bool>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="MacToolButton" name="next">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+    <widget class="QToolButton" name="next">
+     <property name="toolTip">
+      <string>Find the next match for the current search phrase</string>
      </property>
-     <property name="autoRaise">
-      <bool>true</bool>
+     <property name="text">
+      <string>&amp;Next</string>
+     </property>
+     <property name="icon">
+      <iconset theme="go-down-search"/>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="MacToolButton" name="caseSensitive">
+    <widget class="QToolButton" name="previous">
+     <property name="toolTip">
+      <string>Find the previous match for the current search phrase</string>
+     </property>
+     <property name="text">
+      <string>&amp;Previous</string>
+     </property>
+     <property name="icon">
+      <iconset theme="go-up-search"/>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="caseSensitive">
      <property name="text">
       <string>&amp;Match Case</string>
      </property>
@@ -98,19 +100,6 @@
       <string/>
      </property>
     </widget>
-   </item>
-   <item>
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>5</width>
-       <height>1</height>
-      </size>
-     </property>
-    </spacer>
    </item>
   </layout>
  </widget>
