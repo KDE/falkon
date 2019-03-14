@@ -151,6 +151,7 @@ set(SRCS ${SRCS}
     other/statusbar.cpp
     other/updater.cpp
     other/useragentmanager.cpp
+    other/protocolhandlerdialog.cpp
     other/protocolhandlermanager.cpp
     plugins/pluginproxy.cpp
     plugins/plugins.cpp
@@ -302,6 +303,7 @@ qt5_wrap_ui(SRCS
     other/browsinglibrary.ui
     other/clearprivatedata.ui
     other/iconchooser.ui
+    other/protocolhandlerdialog.ui
     other/siteinfo.ui
     other/siteinfowidget.ui
     preferences/acceptlanguage.ui

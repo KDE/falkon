@@ -46,6 +46,7 @@
 #include "html5permissions/html5permissionsdialog.h"
 #include "searchenginesdialog.h"
 #include "webscrollbarmanager.h"
+#include "protocolhandlerdialog.h"
 #include "../config.h"
 
 #include <QSettings>
@@ -512,6 +513,7 @@ Preferences::Preferences(BrowserWindow* window)
     connect(ui->uaManager, &QAbstractButton::clicked, this, &Preferences::openUserAgentManager);
     connect(ui->jsOptionsButton, &QAbstractButton::clicked, this, &Preferences::openJsOptions);
     connect(ui->searchEngines, &QAbstractButton::clicked, this, &Preferences::openSearchEnginesManager);
+    connect(ui->protocolHandlers, &QAbstractButton::clicked, this, &Preferences::openProtocolHandlersManager);
 
     connect(ui->listWidget, &QListWidget::currentItemChanged, this, &Preferences::showStackedPage);
     ui->listWidget->setItemSelected(ui->listWidget->itemAt(5, 5), true);
@@ -724,6 +726,12 @@ void Preferences::useExternalDownManagerChanged(bool state)
 void Preferences::openSearchEnginesManager()
 {
     SearchEnginesDialog* dialog = new SearchEnginesDialog(this);
+    dialog->open();
+}
+
+void Preferences::openProtocolHandlersManager()
+{
+    ProtocolHandlerDialog *dialog = new ProtocolHandlerDialog(this);
     dialog->open();
 }
 
