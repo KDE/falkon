@@ -48,6 +48,9 @@ BookmarksIcon::BookmarksIcon(QWidget* parent)
 void BookmarksIcon::setWebView(WebView* view)
 {
     m_view = view;
+    connect(view, &WebView::urlChanged, this, [this](const QUrl &url) {
+        checkBookmark(url);
+    });
 }
 
 void BookmarksIcon::checkBookmark(const QUrl &url, bool forceCheck)
