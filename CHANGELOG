@@ -1,3 +1,19 @@
+Version 3.1.0
+    * released 19 March 2019
+    * add support for writing plugins in QML
+    * add MiddleClickLoader Python plugin
+    * add page sharing to KDE Frameworks Integration plugin
+    * add basic support for client certificates (QtWebEngine >= 5.12)
+    * add support for registering custom protocol handlers (QtWebEngine >= 5.12)
+    * change search bar appearance to match other KDE apps
+    * use DBus instead of lockfile/socket to check and communicate with other instances (Linux)
+    * whitelisted cookies are no longer deleted when deleting all cookies
+    * Python plugin support is now stable
+    * close entire tree after middle click on collapsed tabs in VerticalTabs plugin
+    * fix some compatibility issues with QtWebEngine up to 5.12
+    * fix some possible crashes in AdBlock
+    * fix builds with standalone QtWebEngine releases
+
 Version 3.0.1
     * released 8 May 2018
     * added profile migration from QupZilla

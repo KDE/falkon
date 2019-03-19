@@ -212,6 +212,11 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
     if (prof < Updater::Version(QStringLiteral("3.0.99"))) {
         return;
     }
+
+    // No change in 3.1
+    if (prof < Updater::Version(QStringLiteral("3.1.99"))) {
+        return;
+    }
 }
 
 void ProfileManager::copyDataToProfile()
