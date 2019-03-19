@@ -1,18 +1,32 @@
 # Falkon
 
-__Falkon__ is a KDE web browser & It is built on the QtWebEngine.
+Falkon is a KDE web browser. It uses QtWebEngine rendering engine.
+
 ![image](https://www.falkon.org/images/screenshot.png)
 
 ## Downloads
 
-To download Falkon [click here](https://www.falkon.org/download/).
+Falkon downloads are available from [homepage](https://www.falkon.org/download/).
 
 ## Building
 
 ```sh
-$ mkdir build && cd build
-$ cmake ..
-$ make && make install
+mkdir build && cd build
+cmake ..
+make && make install
+```
+
+### Install to custom prefix
+
+When installing Falkon to custom prefix, you may need to adjust `XDG_DATA_DIRS` environment variable.
+
+```sh
+# Build
+cmake -DCMAKE_INSTALL_PREFIX=$HOME/falkon
+
+# Run
+export XDG_DATA_DIRS="$HOME/falkon/share:$XDG_DATA_DIRS"
+$HOME/falkon/bin/falkon
 ```
 
 ## Contributing
