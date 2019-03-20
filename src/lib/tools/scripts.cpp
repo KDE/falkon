@@ -146,13 +146,13 @@ QString Scripts::setupWindowObject()
                           "    console.warn('NOT IMPLEMENTED: IsSearchProviderInstalled()');"
                           "    return false;"
                           "};"
-                          "window.external = external;"
+                          "window.external = external;");
 #if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 12, 0)
-                          "window.print = function() {"
+           source += QL1S("window.print = function() {"
                           "    window.location = 'falkon:PrintPage';"
-                          "};"
+                          "};");
 #endif
-                          "})()");
+           source += QL1S("})()");
 
     return source;
 }
