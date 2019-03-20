@@ -48,6 +48,8 @@ public:
     void loadSettings();
     void shutdown();
 
+    static void registerSchemes();
+
 protected:
     QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData) override;
 

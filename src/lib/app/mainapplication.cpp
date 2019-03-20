@@ -281,6 +281,8 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     Settings::createSettings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"));
 
+    NetworkManager::registerSchemes();
+
     m_webProfile = isPrivate() ? new QWebEngineProfile(this) : QWebEngineProfile::defaultProfile();
     connect(m_webProfile, &QWebEngineProfile::downloadRequested, this, &MainApplication::downloadRequested);
 
