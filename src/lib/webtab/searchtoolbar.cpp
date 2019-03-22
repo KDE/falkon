@@ -57,7 +57,6 @@ void SearchToolBar::showMinimalInPopupWindow()
 {
     // Show only essentials widget + set minimum width
     ui->caseSensitive->hide();
-    ui->results->hide();
     ui->horizontalLayout->setSpacing(2);
     ui->horizontalLayout->setContentsMargins(2, 6, 2, 6);
     setMinimumWidth(260);
@@ -128,11 +127,6 @@ void SearchToolBar::searchText(const QString &text)
         }
         if (ui->lineEdit->text().isEmpty())
             found = true;
-
-        if (!found)
-            ui->results->setText(tr("No results found."));
-        else
-            ui->results->clear();
 
         ui->lineEdit->setProperty("notfound", QVariant(!found));
         ui->lineEdit->style()->unpolish(ui->lineEdit);
