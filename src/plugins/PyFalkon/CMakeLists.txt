@@ -136,7 +136,7 @@ set(GENERATED_SOURCES_DEPENDENCIES
 
 # Add custom target to run shiboken.
 add_custom_command(OUTPUT ${GENERATED_SOURCES}
-                    COMMAND ${SHIBOKEN_BINARY}
+                    COMMAND Shiboken2::shiboken2
                     ${SHIBOKEN_OPTIONS} ${GLOBAL_HEADER} ${TYPESYSTEM_FILE}
                     DEPENDS ${GENERATED_SOURCES_DEPENDENCIES}
                     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
@@ -144,17 +144,19 @@ add_custom_command(OUTPUT ${GENERATED_SOURCES}
 
 # We need to include the headers for the module bindings that we use.
 set(PYSIDE_ADDITIONAL_INCLUDES "")
-foreach(INCLUDE_DIR ${PYSIDE_INCLUDE_DIR})
+get_target_property(PYSIDE_INCLUDE_DIRS PySide2::pyside2 INTERFACE_INCLUDE_DIRECTORIES)
+foreach(INCLUDE_DIR ${PYSIDE_INCLUDE_DIRS})
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtCore")
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtGui")
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtNetwork")
+    list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtPrintSupport")
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtWidgets")
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtWebChannel")
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtWebEngineCore")
     list(APPEND PYSIDE_ADDITIONAL_INCLUDES "${INCLUDE_DIR}/QtWebEngineWidgets")
 endforeach()
 
-set( PyFalkon_SRCS
+set(PyFalkon_SRCS
     pythonplugin.cpp
     ${GENERATED_SOURCES}
 )
@@ -164,9 +166,6 @@ install(TARGETS PyFalkon DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 
 target_include_directories(PyFalkon
     PRIVATE
-    ${SHIBOKEN_INCLUDE_DIR}
-    ${SHIBOKEN_PYTHON_INCLUDE_DIR}
-    ${PYSIDE_INCLUDE_DIR}
     ${PYSIDE_ADDITIONAL_INCLUDES}
     ${CMAKE_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon
@@ -175,10 +174,9 @@ target_include_directories(PyFalkon
 target_link_libraries(PyFalkon
     PRIVATE
     FalkonPrivate
-    ${PYTHON_LIBRARIES}
-    ${SHIBOKEN_LIBRARY}
-    ${SHIBOKEN_PYTHON_LIBRARIES}
-    ${PYSIDE_LIBRARY}
+    Shiboken2::libshiboken
+    PySide2::pyside2
+    Python3::Python
 )
 
 # Same as CONFIG += no_keywords to avoid syntax errors in object.h due to the usage of the word Slot
