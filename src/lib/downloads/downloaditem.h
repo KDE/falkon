@@ -65,6 +65,7 @@ private Q_SLOTS:
     void finished();
     void downloadProgress(qint64 received, qint64 total);
     void stop();
+    void pauseResume();
     void openFile();
     void openFolder();
     void customContextMenuRequested(const QPoint &pos);

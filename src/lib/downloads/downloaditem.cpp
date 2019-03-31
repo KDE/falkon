@@ -66,13 +66,15 @@ DownloadItem::DownloadItem(QListWidgetItem *item, QWebEngineDownloadItem* downlo
     ui->setupUi(this);
     setMaximumWidth(525);
 
-    ui->button->setPixmap(QIcon::fromTheme(QSL("process-stop")).pixmap(20, 20));
+    ui->cancelButton->setPixmap(QIcon::fromTheme(QSL("process-stop")).pixmap(20, 20));
+    ui->pauseResumeButton->setPixmap(QIcon::fromTheme(QSL("media-playback-pause")).pixmap(20, 20));
     ui->fileName->setText(m_fileName);
     ui->downloadInfo->setText(tr("Remaining time unavailable"));
 
     setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(customContextMenuRequested(QPoint)));
-    connect(ui->button, &ClickableLabel::clicked, this, &DownloadItem::stop);
+    connect(ui->cancelButton, &ClickableLabel::clicked, this, &DownloadItem::stop);
+    connect(ui->pauseResumeButton, &ClickableLabel::clicked, this, &DownloadItem::pauseResume);
     connect(manager, &DownloadManager::resized, this, &DownloadItem::parentResized);
 }
 
@@ -138,7 +140,8 @@ void DownloadItem::finished()
     }
 
     ui->progressBar->hide();
-    ui->button->hide();
+    ui->cancelButton->hide();
+    ui->pauseResumeButton->hide();
     ui->frame->hide();
 
     m_item->setSizeHint(sizeHint());
@@ -231,6 +234,10 @@ void DownloadItem::updateDownloadInfo(double currSpeed, qint64 received, qint64 
     //          | m_remTime |   |m_currSize|  |m_fileSize|  |m_speed|
     // Remaining 26 minutes -     339MB of      693 MB        (350kB/s)
 
+    if (m_download->isPaused()) {
+        return;
+    }
+
     int estimatedTime = ((total - received) / 1024) / (currSpeed / 1024);
     QString speed = currentSpeedToString(currSpeed);
     // We have QString speed now
@@ -261,13 +268,26 @@ void DownloadItem::stop()
     }
     m_downloadStopped = true;
     ui->progressBar->hide();
-    ui->button->hide();
+    ui->cancelButton->hide();
+    ui->pauseResumeButton->hide();
     m_item->setSizeHint(sizeHint());
     ui->downloadInfo->setText(tr("Cancelled - %1").arg(m_download->url().host()));
     m_download->cancel();
     m_downloading = false;
 
     emit downloadFinished(false);
+}
+
+void DownloadItem::pauseResume()
+{
+    if (m_download->isPaused()) {
+        m_download->resume();
+        ui->pauseResumeButton->setPixmap(QIcon::fromTheme(QSL("media-playback-pause")).pixmap(20, 20));
+    } else {
+        m_download->pause();
+        ui->pauseResumeButton->setPixmap(QIcon::fromTheme(QSL("media-playback-start")).pixmap(20, 20));
+        ui->downloadInfo->setText(tr("Paused - %1").arg(m_download->url().host()));
+    }
 }
 
 void DownloadItem::mouseDoubleClickEvent(QMouseEvent* e)
@@ -286,6 +306,13 @@ void DownloadItem::customContextMenuRequested(const QPoint &pos)
     menu.addAction(QIcon::fromTheme("edit-copy"), tr("Copy Download Link"), this, &DownloadItem::copyDownloadLink);
     menu.addSeparator();
     menu.addAction(QIcon::fromTheme("process-stop"), tr("Cancel downloading"), this, &DownloadItem::stop)->setEnabled(m_downloading);
+
+    if (m_download->isPaused()) {
+        menu.addAction(QIcon::fromTheme("media-playback-start"), tr("Resume downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
+    } else {
+        menu.addAction(QIcon::fromTheme("media-playback-pause"), tr("Pause downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
+    }
+
     menu.addAction(QIcon::fromTheme("list-remove"), tr("Remove From List"), this, &DownloadItem::clear)->setEnabled(!m_downloading);
 
     if (m_downloading || ui->downloadInfo->text().startsWith(tr("Cancelled")) || ui->downloadInfo->text().startsWith(tr("Error"))) {
