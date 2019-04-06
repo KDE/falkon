@@ -37,3 +37,29 @@ falkon_tests(
     databasepasswordbackendtest
     databaseencryptedpasswordbackendtest
 )
+
+set(falkon_autotests_SRCS
+    qml/qmltestitem.cpp
+    qml/qmltesthelper.cpp
+)
+
+macro(falkon_qml_tests)
+    foreach(_testname ${ARGN})
+        add_executable(${_testname} qml/${_testname}.cpp ${falkon_autotests_SRCS})
+        target_link_libraries(${_testname} Qt5::Test FalkonPrivate)
+        add_test(NAME falkon-qml-${_testname} COMMAND ${_testname})
+        ecm_mark_as_test(${_testname})
+        set_tests_properties(falkon-qml-${_testname} PROPERTIES RUN_SERIAL TRUE)
+    endforeach(_testname)
+endmacro()
+
+falkon_qml_tests(
+    qmlbookmarksapitest
+    qmltopsitesapitest
+    qmlhistoryapitest
+    qmlcookiesapitest
+    qmlclipboardapitest
+    qmltabsapitest
+    qmlwindowsapitest
+    qmluserscriptapitest
+)
