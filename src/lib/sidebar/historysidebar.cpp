@@ -103,6 +103,12 @@ void HistorySideBar::createContextMenu(const QPoint &pos)
     menu.exec(pos);
 }
 
+void HistorySideBar::showEvent(QShowEvent *event)
+{
+    QWidget::showEvent(event);
+    ui->search->setFocus();
+}
+
 HistorySideBar::~HistorySideBar()
 {
     delete ui;

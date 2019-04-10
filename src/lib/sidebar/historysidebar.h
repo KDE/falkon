@@ -51,6 +51,8 @@ private Q_SLOTS:
     void createContextMenu(const QPoint &pos);
 
 private:
+    void showEvent(QShowEvent *event) override;
+
     Ui::HistorySideBar* ui;
     BrowserWindow* m_window;
 };

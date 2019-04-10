@@ -134,3 +134,9 @@ void BookmarksSidebar::createContextMenu(const QPoint &pos)
 
     menu.exec(pos);
 }
+
+void BookmarksSidebar::showEvent(QShowEvent *event)
+{
+    QWidget::showEvent(event);
+    ui->search->setFocus();
+}

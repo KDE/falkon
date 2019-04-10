@@ -53,6 +53,8 @@ private Q_SLOTS:
     void createContextMenu(const QPoint &pos);
 
 private:
+    void showEvent(QShowEvent *event) override;
+
     Ui::BookmarksSideBar* ui;
     BrowserWindow* m_window;
     Bookmarks* m_bookmarks;
