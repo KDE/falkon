@@ -65,7 +65,7 @@ void QmlBookmarksApiTest::testBookmarksCreation()
     QVERIFY(qmlBookmarks);
 
     QSignalSpy qmlBookmarksSpy(qmlBookmarks, SIGNAL(created(QmlBookmarkTreeNode*)));
-    mApp->bookmarks()->addBookmark(mApp->bookmarks()->rootItem(), item);
+    mApp->bookmarks()->addBookmark(mApp->bookmarks()->toolbarFolder(), item);
 
     QCOMPARE(qmlBookmarksSpy.count(), 1);
 
