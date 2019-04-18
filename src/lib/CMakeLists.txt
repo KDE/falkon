@@ -156,6 +156,7 @@ set(SRCS ${SRCS}
     plugins/pluginproxy.cpp
     plugins/plugins.cpp
     plugins/speeddial.cpp
+    plugins/ocssupport.cpp
     plugins/qml/qmlpluginloader.cpp
     plugins/qml/qmlplugin.cpp
     plugins/qml/qmlplugins.cpp
@@ -348,6 +349,7 @@ target_link_libraries(FalkonPrivate
     Qt5::PrintSupport
     Qt5::QuickWidgets
     Qt5::WebChannel
+    KF5::Archive
     ${OPENSSL_CRYPTO_LIBRARY}
 )
 

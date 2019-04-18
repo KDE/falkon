@@ -61,6 +61,11 @@ bool DesktopNotificationsFactory::supportsNativeNotifications() const
 #endif
 }
 
+void DesktopNotificationsFactory::showNotification(const QString &heading, const QString &text)
+{
+    showNotification(QPixmap(), heading, text);
+}
+
 void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QString &heading, const QString &text)
 {
     if (!m_enabled) {

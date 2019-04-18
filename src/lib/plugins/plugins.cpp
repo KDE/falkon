@@ -47,8 +47,7 @@ bool Plugins::Plugin::isRemovable() const
 
 bool Plugins::Plugin::operator==(const Plugin &other) const
 {
-    return type == other.type &&
-           pluginId == other.pluginId;
+    return type == other.type && pluginId == other.pluginId;
 }
 
 Plugins::Plugins(QObject* parent)
@@ -129,6 +128,21 @@ void Plugins::removePlugin(Plugins::Plugin *plugin)
 
     m_availablePlugins.removeOne(*plugin);
     emit availablePluginsChanged();
+}
+
+bool Plugins::addPlugin(const QString &id)
+{
+    Plugin plugin = loadPlugin(id);
+    if (plugin.type == Plugin::Invalid) {
+        return false;
+    }
+    if (plugin.pluginSpec.name.isEmpty()) {
+        qWarning() << "Invalid plugin spec of" << id << "plugin";
+        return false;
+    }
+    registerAvailablePlugin(plugin);
+    emit availablePluginsChanged();
+    return true;
 }
 
 void Plugins::loadSettings()

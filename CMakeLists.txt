@@ -88,6 +88,9 @@ endif()
 # Mandatory: OpenSSL
 find_package(OpenSSL REQUIRED)
 
+# Mandatory: KF5
+find_package(KF5 REQUIRED COMPONENTS Archive)
+
 # KF5I18n: Mandatory with downloaded translations (only for ki18n_install)
 if (EXISTS "${CMAKE_SOURCE_DIR}/po")
     find_package(KF5I18n REQUIRED)

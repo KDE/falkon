@@ -42,6 +42,7 @@
 #include "ui_jsprompt.h"
 #include "passwordmanager.h"
 #include "scripts.h"
+#include "ocssupport.h"
 
 #include <iostream>
 
@@ -451,6 +452,10 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
             return false;
 #endif
         }
+    }
+
+    if (url.scheme() == QL1S("ocs") && OcsSupport::instance()->handleUrl(url)) {
+        return false;
     }
 
     const bool result = QWebEnginePage::acceptNavigationRequest(url, type, isMainFrame);

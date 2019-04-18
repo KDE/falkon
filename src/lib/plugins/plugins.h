@@ -86,6 +86,8 @@ public:
     void unloadPlugin(Plugin* plugin);
     void removePlugin(Plugin *plugin);
 
+    bool addPlugin(const QString &id);
+
     void shutdown();
 
     // SpeedDial
