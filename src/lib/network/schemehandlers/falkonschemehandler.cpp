@@ -356,7 +356,7 @@ QString FalkonSchemeReply::configPage()
     page.replace(QLatin1String("%USER-AGENT%"), mApp->webProfile()->httpUserAgent());
 
     QString pluginsString;
-    const QList<Plugins::Plugin> &availablePlugins = mApp->plugins()->getAvailablePlugins();
+    const QList<Plugins::Plugin> &availablePlugins = mApp->plugins()->availablePlugins();
 
     foreach (const Plugins::Plugin &plugin, availablePlugins) {
         PluginSpec spec = plugin.pluginSpec;

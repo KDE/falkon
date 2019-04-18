@@ -60,6 +60,7 @@ public:
         };
         Type type = Invalid;
         QString pluginId;
+        QString pluginPath;
         PluginSpec pluginSpec;
         PluginInterface *instance = nullptr;
 
@@ -67,25 +68,19 @@ public:
         PluginInterface *internalInstance = nullptr;
 
         // SharedLibraryPlugin
-        QString libraryPath;
         QPluginLoader *pluginLoader = nullptr;
 
         // Other
         QVariant data;
 
-        bool isLoaded() const {
-            return instance;
-        }
-
-        bool operator==(const Plugin &other) const {
-            return this->type == other.type &&
-                   this->pluginId == other.pluginId;
-        }
+        bool isLoaded() const;
+        bool isRemovable() const;
+        bool operator==(const Plugin &other) const;
     };
 
     explicit Plugins(QObject* parent = 0);
 
-    QList<Plugin> getAvailablePlugins();
+    QList<Plugin> availablePlugins();
 
     bool loadPlugin(Plugin* plugin);
     void unloadPlugin(Plugin* plugin);
@@ -108,7 +103,7 @@ protected:
 
 Q_SIGNALS:
     void pluginUnloaded(PluginInterface* plugin);
-    void refreshedLoadedPlugins();
+    void availablePluginsChanged();
 
 private:
     void loadPythonSupport();

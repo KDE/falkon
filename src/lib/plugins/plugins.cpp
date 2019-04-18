@@ -28,10 +28,28 @@
 #include "qml/qmlplugin.h"
 
 #include <iostream>
+
 #include <QPluginLoader>
 #include <QDir>
 #include <QQmlEngine>
 #include <QQmlComponent>
+#include <QFileInfo>
+
+bool Plugins::Plugin::isLoaded() const
+{
+    return instance;
+}
+
+bool Plugins::Plugin::isRemovable() const
+{
+    return !pluginPath.isEmpty() && QFileInfo(pluginPath).isWritable();
+}
+
+bool Plugins::Plugin::operator==(const Plugin &other) const
+{
+    return type == other.type &&
+           pluginId == other.pluginId;
+}
 
 Plugins::Plugins(QObject* parent)
     : QObject(parent)
@@ -45,10 +63,9 @@ Plugins::Plugins(QObject* parent)
     }
 }
 
-QList<Plugins::Plugin> Plugins::getAvailablePlugins()
+QList<Plugins::Plugin> Plugins::availablePlugins()
 {
     loadAvailablePlugins();
-
     return m_availablePlugins;
 }
 
@@ -88,24 +105,30 @@ void Plugins::unloadPlugin(Plugins::Plugin* plugin)
 
 void Plugins::removePlugin(Plugins::Plugin *plugin)
 {
-    if (plugin->type != Plugin::QmlPlugin) {
+    if (!plugin->isRemovable()) {
         return;
     }
+
     if (plugin->isLoaded()) {
         unloadPlugin(plugin);
     }
 
-    // For QML plugins, pluginId is qml:<plugin-dir-name>
-    const QString dirName = plugin->pluginId.mid(4);
-    const QString dirPath = DataPaths::locate(DataPaths::Plugins, QSL("qml/") + dirName);
-    bool result = QDir(dirPath).removeRecursively();
+    bool result = false;
+
+    QFileInfo info(plugin->pluginPath);
+    if (info.isDir()) {
+        result = QDir(plugin->pluginPath).removeRecursively();
+    } else if (info.isFile()) {
+        result = QFile::remove(plugin->pluginPath);
+    }
+
     if (!result) {
-        qWarning() << "Unable to remove" << plugin->pluginSpec.name;
+        qWarning() << "Failed to remove" << plugin->pluginSpec.name;
         return;
     }
 
     m_availablePlugins.removeOne(*plugin);
-    refreshedLoadedPlugins();
+    emit availablePluginsChanged();
 }
 
 void Plugins::loadSettings()
@@ -233,7 +256,7 @@ void Plugins::loadAvailablePlugins()
 
     // QmlPlugin
     for (QString dir : dirs) {
-        // qml plugins will be loaded from subdirectory qml
+        // Qml plugins will be loaded from subdirectory qml
         dir.append(QSL("/qml"));
         const auto qmlDirs = QDir(dir).entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
         for (const QFileInfo &info : qmlDirs) {
@@ -267,7 +290,7 @@ void Plugins::refreshLoadedPlugins()
         }
     }
 
-    emit refreshedLoadedPlugins();
+    emit availablePluginsChanged();
 }
 
 void Plugins::loadPythonSupport()
@@ -369,7 +392,7 @@ Plugins::Plugin Plugins::loadSharedLibraryPlugin(const QString &name)
     Plugin plugin;
     plugin.type = Plugin::SharedLibraryPlugin;
     plugin.pluginId = QSL("lib:%1").arg(QFileInfo(fullPath).fileName());
-    plugin.libraryPath = fullPath;
+    plugin.pluginPath = fullPath;
     plugin.pluginLoader = loader;
     plugin.pluginSpec = createSpec(iPlugin->metaData());
     return plugin;

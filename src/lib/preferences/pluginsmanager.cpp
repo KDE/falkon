@@ -38,6 +38,7 @@ PluginsManager::PluginsManager(QWidget* parent)
     ui->setupUi(this);
     ui->list->setLayoutDirection(Qt::LeftToRight);
     ui->butSettings->setIcon(IconProvider::settingsIcon());
+    ui->butRemove->setIcon(QIcon::fromTheme(QSL("edit-delete")));
 
     //Application Extensions
     Settings settings;
@@ -48,8 +49,10 @@ PluginsManager::PluginsManager(QWidget* parent)
     ui->list->setEnabled(appPluginsEnabled);
 
     connect(ui->butSettings, &QAbstractButton::clicked, this, &PluginsManager::settingsClicked);
+    connect(ui->butRemove, &QAbstractButton::clicked, this, &PluginsManager::removeClicked);
     connect(ui->list, &QListWidget::currentItemChanged, this, &PluginsManager::currentChanged);
     connect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
+    connect(mApp->plugins(), &Plugins::availablePluginsChanged, this, &PluginsManager::refresh);
 
     ui->list->setItemDelegate(new PluginListDelegate(ui->list));
 }
@@ -86,11 +89,17 @@ void PluginsManager::save()
 
 void PluginsManager::refresh()
 {
+    if (m_blockRefresh) {
+        return;
+    }
+
+    const int oldCurrentRow = ui->list->currentRow();
+
     ui->list->clear();
     ui->butSettings->setEnabled(false);
     disconnect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
 
-    const QList<Plugins::Plugin> &allPlugins = mApp->plugins()->getAvailablePlugins();
+    const QList<Plugins::Plugin> &allPlugins = mApp->plugins()->availablePlugins();
 
     foreach (const Plugins::Plugin &plugin, allPlugins) {
         PluginSpec spec = plugin.pluginSpec;
@@ -118,6 +127,11 @@ void PluginsManager::refresh()
     }
 
     sortItems();
+
+    if (oldCurrentRow >= 0) {
+        ui->list->setCurrentRow(qMax(0, oldCurrentRow - 1));
+        ui->list->setFocus();
+    }
 
     connect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
 }
@@ -153,13 +167,8 @@ void PluginsManager::currentChanged(QListWidgetItem* item)
     }
 
     const Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
-    bool showSettings = plugin.pluginSpec.hasSettings;
-
-    if (!plugin.isLoaded()) {
-        showSettings = false;
-    }
-
-    ui->butSettings->setEnabled(showSettings);
+    ui->butSettings->setEnabled(plugin.isLoaded() && plugin.pluginSpec.hasSettings);
+    ui->butRemove->setEnabled(plugin.isRemovable());
 }
 
 void PluginsManager::itemChanged(QListWidgetItem* item)
@@ -170,12 +179,16 @@ void PluginsManager::itemChanged(QListWidgetItem* item)
 
     Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
 
+    m_blockRefresh = true;
+
     if (item->checkState() == Qt::Checked) {
         mApp->plugins()->loadPlugin(&plugin);
     }
     else {
         mApp->plugins()->unloadPlugin(&plugin);
     }
+
+    m_blockRefresh = false;
 
     disconnect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
 
@@ -187,7 +200,6 @@ void PluginsManager::itemChanged(QListWidgetItem* item)
     item->setData(Qt::UserRole + 10, QVariant::fromValue(plugin));
 
     connect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
-
 
     currentChanged(ui->list->currentItem());
 }
@@ -209,6 +221,20 @@ void PluginsManager::settingsClicked()
 
     if (plugin.isLoaded() && plugin.pluginSpec.hasSettings) {
         plugin.instance->showSettings(this);
+    }
+}
+
+void PluginsManager::removeClicked()
+{
+    QListWidgetItem* item = ui->list->currentItem();
+    if (!item) {
+        return;
+    }
+
+    Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
+
+    if (plugin.isRemovable()) {
+        mApp->plugins()->removePlugin(&plugin);
     }
 }
 

@@ -42,6 +42,7 @@ public:
 
 private Q_SLOTS:
     void settingsClicked();
+    void removeClicked();
     void currentChanged(QListWidgetItem* item);
     void itemChanged(QListWidgetItem* item);
 
@@ -52,6 +53,7 @@ private:
 
     Ui::PluginsList* ui;
     bool m_loaded;
+    bool m_blockRefresh = false;
 };
 
 #endif // PLUGINSMANAGER_H

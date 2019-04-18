@@ -50,6 +50,7 @@ Plugins::Plugin QmlPlugin::loadPlugin(const QString &name)
     Plugins::Plugin plugin;
     plugin.type = Plugins::Plugin::QmlPlugin;
     plugin.pluginId = QSL("qml:%1").arg(QFileInfo(name).fileName());
+    plugin.pluginPath = fullPath;
     DesktopFile desktopFile(fullPath + QSL("/metadata.desktop"));
     plugin.pluginSpec = Plugins::createSpec(desktopFile);
     QString entryPoint = desktopFile.value(QSL("X-Falkon-EntryPoint")).toString();

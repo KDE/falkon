@@ -107,6 +107,7 @@ Plugins::Plugin pyfalkon_load_plugin(const QString &name)
     Plugins::Plugin plugin;
     plugin.type = Plugins::Plugin::PythonPlugin;
     plugin.pluginId = QSL("python:%1").arg(QFileInfo(name).fileName());
+    plugin.pluginPath = fullPath;
     plugin.pluginSpec = Plugins::createSpec(DesktopFile(fullPath + QSL("/metadata.desktop")));
     return plugin;
 }

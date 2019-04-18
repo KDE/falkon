@@ -70,6 +70,16 @@
        </property>
       </spacer>
      </item>
+     <item>
+      <widget class="QPushButton" name="butRemove">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
   </layout>
