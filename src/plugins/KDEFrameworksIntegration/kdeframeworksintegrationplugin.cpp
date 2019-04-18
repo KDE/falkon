@@ -39,12 +39,7 @@
 
 KDEFrameworksIntegrationPlugin::KDEFrameworksIntegrationPlugin()
     : QObject()
-    , m_backend(0)
-    , m_sharePageMenu(new Purpose::Menu())
 {
-    m_sharePageMenu->setTitle(tr("Share page"));
-    m_sharePageMenu->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
-    m_sharePageMenu->model()->setPluginType(QStringLiteral("ShareUrl"));
 }
 
 DesktopFile KDEFrameworksIntegrationPlugin::metaData() const
@@ -75,6 +70,11 @@ void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settin
         mApp->webProfile()->installUrlSchemeHandler(protocol.toUtf8(), handler);
         WebPage::addSupportedScheme(protocol);
     }
+
+    m_sharePageMenu = new Purpose::Menu();
+    m_sharePageMenu->setTitle(tr("Share page"));
+    m_sharePageMenu->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
+    m_sharePageMenu->model()->setPluginType(QStringLiteral("ShareUrl"));
 
     KAboutData aboutData(QSL("falkon"), QSL("Falkon"), QCoreApplication::applicationVersion());
     KAboutData::setApplicationData(aboutData);

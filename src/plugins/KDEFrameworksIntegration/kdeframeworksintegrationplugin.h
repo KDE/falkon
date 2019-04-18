@@ -40,7 +40,7 @@ public:
     void populateWebViewMenu(QMenu *menu, WebView *view, const WebHitTestResult &r) override;
 
 private:
-    KWalletPasswordBackend* m_backend;
+    KWalletPasswordBackend *m_backend = nullptr;
     QVector<KIOSchemeHandler*> m_kioSchemeHandlers;
-    Purpose::Menu *m_sharePageMenu;
+    Purpose::Menu *m_sharePageMenu = nullptr;
 };
