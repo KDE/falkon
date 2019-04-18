@@ -25,11 +25,10 @@
 #include "qml/api/i18n/qmli18n.h"
 #endif
 
-QmlPluginLoader::QmlPluginLoader(const QString &name, const QString &path, const QString &entryPoint)
+QmlPluginLoader::QmlPluginLoader(const QString &name, const QString &path)
 {
     m_name = name;
     m_path = path;
-    m_entryPoint = entryPoint;
     initEngineAndComponent();
 }
 
@@ -63,7 +62,7 @@ QmlPluginInterface *QmlPluginLoader::instance() const
 void QmlPluginLoader::initEngineAndComponent()
 {
     m_engine = new QmlEngine();
-    m_component = new QQmlComponent(m_engine, QDir(m_path).filePath(m_entryPoint));
+    m_component = new QQmlComponent(m_engine, QDir(m_path).filePath(QStringLiteral("main.qml")));
     m_engine->setExtensionPath(m_path);
     m_engine->setExtensionName(m_name);
 #if HAVE_LIBINTL

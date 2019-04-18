@@ -29,14 +29,13 @@ class QmlPluginLoader : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlPluginLoader(const QString &name, const QString &path, const QString &entryPoint);
+    explicit QmlPluginLoader(const QString &name, const QString &path);
     void createComponent();
     QQmlComponent *component() const;
     QmlPluginInterface *instance() const;
 private:
     QString m_path;
     QString m_name;
-    QString m_entryPoint;
     QmlEngine *m_engine = nullptr;
     QQmlComponent *m_component = nullptr;
     QmlPluginInterface *m_interface = nullptr;
