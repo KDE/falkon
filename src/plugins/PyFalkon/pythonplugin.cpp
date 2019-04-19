@@ -40,15 +40,6 @@ State state = PythonUninitialized;
 PluginInterface *pluginInterface = nullptr;
 QHash<PyObject*, PluginInterface*> pluginInstances;
 
-static QStringList script_paths()
-{
-    QStringList dirs = DataPaths::allPaths(DataPaths::Plugins);
-    for (int i = 0; i < dirs.count(); ++i) {
-        dirs[i].append(QSL("/python"));
-    }
-    return dirs;
-}
-
 static void cleanup()
 {
     if (state > PythonUninitialized) {
@@ -73,7 +64,7 @@ static State init()
         return state;
     }
 
-    set_path(script_paths());
+    set_path(DataPaths::allPaths(DataPaths::Plugins));
 
     if (PyImport_AppendInittab("Falkon", PyInit_PyFalkon) != 0) {
         PyErr_Print();
@@ -142,38 +133,4 @@ void pyfalkon_init_plugin(Plugins::Plugin *plugin)
     pluginInstances[module] = pluginInterface;
     plugin->instance = pluginInterface;
     plugin->data = QVariant::fromValue(static_cast<void*>(module));
-}
-
-QVector<Plugins::Plugin> pyfalkon_load_available_plugins()
-{
-    QVector<Plugins::Plugin> plugins;
-
-    const QStringList dirs = script_paths();
-    for (const QString &dir : dirs) {
-        const auto modules = QDir(dir).entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
-        for (const QFileInfo &info : modules) {
-            Plugins::Plugin plugin = pyfalkon_load_plugin(info.absoluteFilePath());
-            if (plugin.pluginSpec.name.isEmpty()) {
-                qWarning() << "Invalid plugin spec of" << info.absoluteFilePath() << "plugin";
-                continue;
-            }
-            plugins.append(plugin);
-        }
-    }
-
-    return plugins;
-}
-
-bool pyfalkon_run_script(const QByteArray &script)
-{
-    if (init() != PythonInitialized) {
-        return false;
-    }
-
-    if (PyRun_SimpleString(script.constData()) != 0) {
-        PyErr_Print();
-        return false;
-    }
-
-    return true;
 }

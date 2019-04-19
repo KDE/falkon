@@ -236,50 +236,34 @@ void Plugins::loadAvailablePlugins()
     // InternalPlugin
     registerAvailablePlugin(loadInternalPlugin(QSL("adblock")));
 
-    // SharedLibraryPlugin
     for (const QString &dir : dirs) {
-        const auto files = QDir(dir).entryInfoList(QDir::Files);
+        const auto files = QDir(dir).entryInfoList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot);
         for (const QFileInfo &info : files) {
-            if (info.baseName() == QL1S("PyFalkon")) {
-                continue;
+            Plugin plugin;
+            const QString pluginPath = info.absoluteFilePath();
+            if (info.isFile()) {
+                // SharedLibraryPlugin
+                if (info.baseName() != QL1S("PyFalkon")) {
+                    plugin = loadSharedLibraryPlugin(pluginPath);
+                }
+            } else if (info.isDir()) {
+                const DesktopFile metaData(QDir(pluginPath).filePath(QSL("metadata.desktop")));
+                const QString type = metaData.value(QSL("X-Falkon-Type")).toString();
+                if (type == QL1S("Extension/Python")) {
+                    // PythonPlugin
+                    plugin = loadPythonPlugin(pluginPath);
+                } else if (type == QL1S("Extension/Qml")) {
+                    // QmlPlugin
+                    plugin = QmlPlugin::loadPlugin(pluginPath);
+                } else {
+                    qWarning() << "Invalid type" << type << "of" << pluginPath << "plugin";
+                }
             }
-            Plugin plugin = loadSharedLibraryPlugin(info.absoluteFilePath());
             if (plugin.type == Plugin::Invalid) {
                 continue;
             }
             if (plugin.pluginSpec.name.isEmpty()) {
-                qWarning() << "Invalid plugin spec of" << info.absoluteFilePath() << "plugin";
-                continue;
-            }
-            registerAvailablePlugin(plugin);
-        }
-    }
-
-    // PythonPlugin
-    if (m_pythonPlugin) {
-        auto f = (QVector<Plugin>(*)()) m_pythonPlugin->resolve("pyfalkon_load_available_plugins");
-        if (!f) {
-            qWarning() << "Failed to resolve" << "pyfalkon_load_available_plugins";
-        } else {
-            const auto plugins = f();
-            for (const auto &plugin : plugins) {
-                registerAvailablePlugin(plugin);
-            }
-        }
-    }
-
-    // QmlPlugin
-    for (QString dir : dirs) {
-        // Qml plugins will be loaded from subdirectory qml
-        dir.append(QSL("/qml"));
-        const auto qmlDirs = QDir(dir).entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
-        for (const QFileInfo &info : qmlDirs) {
-            Plugin plugin = QmlPlugin::loadPlugin(info.absoluteFilePath());
-            if (plugin.type == Plugin::Invalid) {
-                continue;
-            }
-            if (plugin.pluginSpec.name.isEmpty()) {
-                qWarning() << "Invalid plugin spec of" << info.absoluteFilePath() << "plugin";
+                qWarning() << "Invalid plugin spec of" << pluginPath << "plugin";
                 continue;
             }
             registerAvailablePlugin(plugin);

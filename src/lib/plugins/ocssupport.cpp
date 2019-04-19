@@ -19,6 +19,7 @@
 #include "pluginproxy.h"
 #include "datapaths.h"
 #include "networkmanager.h"
+#include "desktopfile.h"
 #include "desktopnotificationsfactory.h"
 #include "mainapplication.h"
 
@@ -30,6 +31,18 @@
 #include <KArchive/KZip>
 
 Q_GLOBAL_STATIC(OcsSupport, qz_ocs_support)
+
+static DesktopFile readMetaData(const KArchiveDirectory *directory)
+{
+    const KArchiveEntry *entry = directory->entry(QSL("metadata.desktop"));
+    if (!entry || !entry->isFile()) {
+        qWarning() << "No metadata.desktop found";
+        return DesktopFile();
+    }
+    const QString tempDir = DataPaths::path(DataPaths::Temp);
+    static_cast<const KArchiveFile*>(entry)->copyTo(tempDir);
+    return DesktopFile(tempDir + QL1S("/metadata.desktop"));
+}
 
 OcsSupport::OcsSupport(QObject *parent)
     : QObject(parent)
@@ -124,6 +137,8 @@ void OcsSupport::installTheme(const KArchiveDirectory *directory)
         return;
     }
 
+    const DesktopFile metaData = readMetaData(static_cast<const KArchiveDirectory*>(entry));
+
     const QString targetDir = DataPaths::path(DataPaths::Config) + QL1S("/themes");
     QDir().mkpath(targetDir);
 
@@ -141,7 +156,7 @@ void OcsSupport::installTheme(const KArchiveDirectory *directory)
 
     qInfo() << "Theme installed to" << targetDir;
 
-    mApp->desktopNotifications()->showNotification(tr("Theme installed"), tr("Theme was successfully installed"));
+    mApp->desktopNotifications()->showNotification(tr("Theme installed"), tr("'%1' was successfully installed").arg(metaData.name()));
 }
 
 void OcsSupport::installExtension(const KArchiveDirectory *directory)
@@ -164,21 +179,23 @@ void OcsSupport::installExtension(const KArchiveDirectory *directory)
         return;
     }
 
+    const DesktopFile metaData = readMetaData(static_cast<const KArchiveDirectory*>(entry));
+    const QString extensionType = metaData.value(QSL("X-Falkon-Type")).toString();
+
     QString type;
-    const QStringList files = static_cast<const KArchiveDirectory*>(entry)->entries();
-    if (files.contains(QL1S("__init__.py"))) {
+    if (extensionType == QL1S("Extension/Python")) {
         type = QSL("python");
-    } else if (files.contains(QL1S("main.qml"))) {
+    } else if (extensionType == QL1S("Extension/Qml")) {
         type = QSL("qml");
     }
 
     if (type.isEmpty()) {
-        qWarning() << "Unsupported extension type";
+        qWarning() << "Unsupported extension type" << extensionType;
         showError();
         return;
     }
 
-    const QString targetDir = DataPaths::path(DataPaths::Config) + QL1S("/plugins/") + type;
+    const QString targetDir = DataPaths::path(DataPaths::Config) + QL1S("/plugins/");
     QDir().mkpath(targetDir);
 
     if (QFileInfo::exists(targetDir + QL1S("/") + name)) {
@@ -202,5 +219,5 @@ void OcsSupport::installExtension(const KArchiveDirectory *directory)
         return;
     }
 
-    mApp->desktopNotifications()->showNotification(tr("Extension installed"), tr("Extension was successfully installed"));
+    mApp->desktopNotifications()->showNotification(tr("Extension installed"), tr("'%1' was successfully installed").arg(metaData.name()));
 }
