@@ -26,14 +26,6 @@ QmlUserScripts::QmlUserScripts(QObject *parent)
 {
 }
 
-QmlUserScripts::~QmlUserScripts()
-{
-    // remove scripts added by the plugin
-    for (const QWebEngineScript &webEngineScript : qAsConst(m_webEngineScripts)) {
-        mApp->webProfile()->scripts()->remove(webEngineScript);
-    }
-}
-
 int QmlUserScripts::count() const
 {
     return mApp->webProfile()->scripts()->count();
@@ -85,30 +77,6 @@ QList<QObject*> QmlUserScripts::findScripts(const QString &name) const
     return toQObjectList(list);
 }
 
-void QmlUserScripts::insert(QObject *object)
-{
-    QmlUserScript *userScript = qobject_cast<QmlUserScript*>(object);
-    if (!userScript) {
-        return;
-    }
-    QWebEngineScript webEngineScript = userScript->webEngineScript();
-    mApp->webProfile()->scripts()->insert(webEngineScript);
-    m_webEngineScripts.append(webEngineScript);
-}
-
-void QmlUserScripts::insert(const QList<QObject*> &list)
-{
-    for (QObject *object : list) {
-        QmlUserScript *userScript = qobject_cast<QmlUserScript*>(object);
-        if (!userScript) {
-            continue;
-        }
-        QWebEngineScript webEngineScript = userScript->webEngineScript();
-        mApp->webProfile()->scripts()->insert(webEngineScript);
-        m_webEngineScripts.append(webEngineScript);
-    }
-}
-
 void QmlUserScripts::remove(QObject *object) const
 {
     QmlUserScript *userScript = qobject_cast<QmlUserScript*>(object);
@@ -123,4 +91,14 @@ QList<QObject*> QmlUserScripts::toList() const
 {
     QList<QWebEngineScript> list = mApp->webProfile()->scripts()->toList();
     return toQObjectList(list);
+}
+
+void QmlUserScripts::insert(QObject *object)
+{
+    QmlUserScript *userScript = qobject_cast<QmlUserScript*>(object);
+    if (!userScript) {
+        return;
+    }
+    QWebEngineScript webEngineScript = userScript->webEngineScript();
+    mApp->webProfile()->scripts()->insert(webEngineScript);
 }

@@ -20,6 +20,7 @@
 #include "qzcommon.h"
 
 #include <QObject>
+#include <QBasicTimer>
 #include <QWebEngineScript>
 
 /**
@@ -73,6 +74,7 @@ public:
     Q_ENUM(ScriptWorldId)
 
     explicit QmlUserScript(QObject *parent = nullptr);
+    ~QmlUserScript();
     QWebEngineScript webEngineScript() const;
     void setWebEngineScript(const QWebEngineScript &script);
 Q_SIGNALS:
@@ -98,6 +100,7 @@ Q_SIGNALS:
     void injectionPointChanged(int injectionPoint);
 private:
     QWebEngineScript m_webEngineScript;
+    QBasicTimer m_basicTimer;
 
     bool null() const;
     QString name() const;
@@ -110,4 +113,7 @@ private:
     void setSourceCode(const QString &sourceCode);
     InjectionPoint injectionPoint() const;
     void setInjectionPoint(InjectionPoint injectionPoint);
+
+    void timerEvent(QTimerEvent *e) override;
+    void aboutToUpdateUnderlyingScript();
 };
