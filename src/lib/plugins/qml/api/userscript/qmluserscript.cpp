@@ -16,10 +16,16 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmluserscript.h"
+#include "../../qmlstaticdata.h"
 
 QmlUserScript::QmlUserScript(QObject *parent)
     : QObject(parent)
 {
+}
+
+QmlUserScript::~QmlUserScript()
+{
+    QmlStaticData::instance().getUserScriptsSingleton()->remove(this);
 }
 
 QWebEngineScript QmlUserScript::webEngineScript() const
@@ -46,6 +52,7 @@ void QmlUserScript::setName(const QString &name)
 {
     m_webEngineScript.setName(name);
     emit nameChanged(name);
+    aboutToUpdateUnderlyingScript();
 }
 
 bool QmlUserScript::runsOnSubFrames() const
@@ -57,6 +64,7 @@ void QmlUserScript::setRunsOnSubFrames(bool runsOnSubFrames)
 {
     m_webEngineScript.setRunsOnSubFrames(runsOnSubFrames);
     emit runsOnSubFramesChanged(runsOnSubFrames);
+    aboutToUpdateUnderlyingScript();
 }
 
 int QmlUserScript::worldId() const
@@ -80,6 +88,7 @@ void QmlUserScript::setWorldId(int worldId)
         break;
     }
     emit worldIdChanged(worldId);
+    aboutToUpdateUnderlyingScript();
 }
 
 QString QmlUserScript::sourceCode() const
@@ -91,6 +100,7 @@ void QmlUserScript::setSourceCode(const QString &sourceCode)
 {
     m_webEngineScript.setSourceCode(sourceCode);
     emit sourceCodeChanged(sourceCode);
+    aboutToUpdateUnderlyingScript();
 }
 
 QmlUserScript::InjectionPoint QmlUserScript::injectionPoint() const
@@ -114,4 +124,24 @@ void QmlUserScript::setInjectionPoint(InjectionPoint injectionPoint)
         break;
     }
     emit injectionPointChanged(injectionPoint);
+    aboutToUpdateUnderlyingScript();
+}
+
+void QmlUserScript::timerEvent(QTimerEvent *e)
+{
+    if (e->timerId() != m_basicTimer.timerId()) {
+        QObject::timerEvent(e);
+        return;
+    }
+    m_basicTimer.stop();
+    QmlStaticData::instance().getUserScriptsSingleton()->insert(this);
+}
+
+void QmlUserScript::aboutToUpdateUnderlyingScript()
+{
+    if (!m_basicTimer.isActive()) {
+        QmlStaticData::instance().getUserScriptsSingleton()->remove(this);
+    }
+    // Defer updates to the next event loop
+    m_basicTimer.start(0, this);
 }

@@ -25,7 +25,6 @@ Falkon.PluginInterface {
             id: 'helloQmlObject',
             object: helloQmlObject
         })
-        Falkon.UserScripts.insert(testingHelloQmlUserScript)
     }
 
     testPlugin: function() {

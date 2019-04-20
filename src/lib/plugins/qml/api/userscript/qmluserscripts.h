@@ -40,7 +40,6 @@ class FALKON_EXPORT QmlUserScripts : public QObject
     Q_PROPERTY(bool empty READ empty CONSTANT)
 public:
     explicit QmlUserScripts(QObject *parent = nullptr);
-    ~QmlUserScripts();
     /**
      * @brief Checks if the script is in collection
      * @param object of type QmlUserScript
@@ -59,16 +58,6 @@ public:
      */
     Q_INVOKABLE QList<QObject*> findScripts(const QString &name) const;
     /**
-     * @brief Inserts a script into collection
-     * @param object of type QmlUserScript
-     */
-    Q_INVOKABLE void insert(QObject *object);
-    /**
-     * @brief Inserts a list of scripts into collection
-     * @param list of objects, each of type QmlUserScript
-     */
-    Q_INVOKABLE void insert(const QList<QObject*> &list);
-    /**
      * @brief Removes a script from collection
      * @param object of type QmlUserScript
      */
@@ -78,11 +67,12 @@ public:
      * @return list of objects, each of type QmlUserScript
      */
     Q_INVOKABLE QList<QObject*> toList() const;
+
+    void insert(QObject *object);
 private:
     int count() const;
     int size() const;
     bool empty() const;
-    QList<QWebEngineScript> m_webEngineScripts;
 
     QList<QObject*> toQObjectList(const QList<QWebEngineScript> &list) const;
 };

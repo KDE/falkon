@@ -70,7 +70,7 @@ void QmlPlugin::initPlugin(Plugins::Plugin *plugin)
     }
     qmlPluginLoader->createComponent();
     if (!qmlPluginLoader->instance()) {
-        qWarning().noquote() << "Falied to create component for" << name << "plugin:" << qmlPluginLoader->component()->errorString();
+        qWarning().noquote() << "Failed to create component for" << name << "plugin:" << qmlPluginLoader->component()->errorString();
         return;
     }
 
