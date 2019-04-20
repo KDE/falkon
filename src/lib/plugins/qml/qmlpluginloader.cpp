@@ -29,7 +29,7 @@ QmlPluginLoader::QmlPluginLoader(const QString &name, const QString &path, const
 {
     m_name = name;
     m_path = path;
-    m_entryPoint = entryPoint;
+    m_entryPoint = entryPoint.isEmpty() ? QSL("main.qml") : entryPoint;
     initEngineAndComponent();
 }
 
