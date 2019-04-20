@@ -56,18 +56,53 @@ QWidget *VerticalTabsController::createSideBarWidget(BrowserWindow *window)
 
 bool VerticalTabsController::handleKeyPress(QKeyEvent *event, TabWidget *tabWidget)
 {
-    if (event->key() == Qt::Key_Tab && event->modifiers() == Qt::ControlModifier) {
+    auto switchToNextTab = [=]() {
         VerticalTabsWidget *widget = m_widgets.value(tabWidget->browserWindow());
         if (widget) {
             widget->switchToNextTab();
             return true;
         }
-    } else if (event->key() == Qt::Key_Backtab && event->modifiers() == (Qt::ShiftModifier | Qt::ControlModifier)) {
+        return false;
+    };
+
+    auto switchToPreviousTab = [=]() {
         VerticalTabsWidget *widget = m_widgets.value(tabWidget->browserWindow());
         if (widget) {
             widget->switchToPreviousTab();
             return true;
         }
+        return false;
+    };
+
+    switch (event->key()) {
+    case Qt::Key_Tab:
+    case Qt::Key_PageDown:
+        if (event->modifiers() == Qt::ControlModifier) {
+            if (switchToNextTab()) {
+                return true;
+            }
+        }
+        break;
+
+    case Qt::Key_Backtab:
+        if (event->modifiers() == (Qt::ShiftModifier | Qt::ControlModifier)) {
+            if (switchToPreviousTab()) {
+                return true;
+            }
+        }
+        break;
+
+    case Qt::Key_PageUp:
+        if (event->modifiers() == Qt::ControlModifier) {
+            if (switchToPreviousTab()) {
+                return true;
+            }
+        }
+        break;
+
+    default:
+        break;
     }
+
     return false;
 }
