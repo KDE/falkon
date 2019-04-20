@@ -25,6 +25,8 @@
 #include "api/fileutils/qmlfileutils.h"
 #include "pluginproxy.h"
 
+#include <QQmlEngine>
+
 QmlStaticData::QmlStaticData(QObject *parent)
     : QObject(parent)
 {
@@ -138,53 +140,62 @@ QIcon QmlStaticData::getIcon(const QString &iconPath, const QString &pluginPath)
 QmlBookmarks *QmlStaticData::getBookmarksSingleton()
 {
     static QmlBookmarks *bookmarks = new QmlBookmarks(this);
+    QQmlEngine::setObjectOwnership(bookmarks, QQmlEngine::CppOwnership);
     return bookmarks;
 }
 
 QmlHistory *QmlStaticData::getHistorySingleton()
 {
     static QmlHistory *history = new QmlHistory(this);
+    QQmlEngine::setObjectOwnership(history, QQmlEngine::CppOwnership);
     return history;
 }
 
 QmlCookies *QmlStaticData::getCookiesSingleton()
 {
     static QmlCookies *cookies = new QmlCookies(this);
+    QQmlEngine::setObjectOwnership(cookies, QQmlEngine::CppOwnership);
     return cookies;
 }
 
 QmlTopSites *QmlStaticData::getTopSitesSingleton()
 {
     static QmlTopSites *topSites = new QmlTopSites(this);
+    QQmlEngine::setObjectOwnership(topSites, QQmlEngine::CppOwnership);
     return topSites;
 }
 
 QmlTabs *QmlStaticData::getTabsSingleton()
 {
     static QmlTabs *tabs = new QmlTabs(this);
+    QQmlEngine::setObjectOwnership(tabs, QQmlEngine::CppOwnership);
     return tabs;
 }
 
 QmlClipboard *QmlStaticData::getClipboardSingleton()
 {
     static QmlClipboard *clipboard = new QmlClipboard(this);
+    QQmlEngine::setObjectOwnership(clipboard, QQmlEngine::CppOwnership);
     return clipboard;
 }
 
 QmlWindows *QmlStaticData::getWindowsSingleton()
 {
     static QmlWindows *windows = new QmlWindows(this);
+    QQmlEngine::setObjectOwnership(windows, QQmlEngine::CppOwnership);
     return windows;
 }
 
 QmlExternalJsObject *QmlStaticData::getExternalJsObjectSingleton()
 {
     static QmlExternalJsObject *externalJsObject = new QmlExternalJsObject(this);
+    QQmlEngine::setObjectOwnership(externalJsObject, QQmlEngine::CppOwnership);
     return externalJsObject;
 }
 
 QmlUserScripts *QmlStaticData::getUserScriptsSingleton()
 {
     static QmlUserScripts *userScripts = new QmlUserScripts(this);
+    QQmlEngine::setObjectOwnership(userScripts, QQmlEngine::CppOwnership);
     return userScripts;
 }
