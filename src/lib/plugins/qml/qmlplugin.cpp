@@ -40,9 +40,9 @@ Plugins::Plugin QmlPlugin::loadPlugin(const QString &name)
     if (QFileInfo(name).isAbsolute()) {
         fullPath = name;
     } else {
-        fullPath = DataPaths::locate(DataPaths::Plugins, QSL("qml/") + name);
+        fullPath = DataPaths::locate(DataPaths::Plugins, name);
         if (fullPath.isEmpty()) {
-            qWarning() << "Plugin" << name << "not found";
+            qWarning() << "QML plugin" << name << "not found";
             return Plugins::Plugin();
         }
     }

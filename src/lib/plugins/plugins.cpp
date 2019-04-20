@@ -374,7 +374,7 @@ Plugins::Plugin Plugins::loadSharedLibraryPlugin(const QString &name)
     } else {
         fullPath = DataPaths::locate(DataPaths::Plugins, name);
         if (fullPath.isEmpty()) {
-            qWarning() << "Plugin" << name << "not found";
+            qWarning() << "Library plugin" << name << "not found";
             return Plugin();
         }
     }

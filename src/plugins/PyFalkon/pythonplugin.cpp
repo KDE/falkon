@@ -88,9 +88,9 @@ Plugins::Plugin pyfalkon_load_plugin(const QString &name)
     if (QFileInfo(name).isAbsolute()) {
         fullPath = name;
     } else {
-        fullPath = DataPaths::locate(DataPaths::Plugins, QSL("python/") + name);
+        fullPath = DataPaths::locate(DataPaths::Plugins, name);
         if (fullPath.isEmpty()) {
-            qWarning() << "Plugin" << name << "not found";
+            qWarning() << "Python plugin" << name << "not found";
             return Plugins::Plugin();
         }
     }
