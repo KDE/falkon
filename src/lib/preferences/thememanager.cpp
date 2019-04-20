@@ -26,15 +26,17 @@
 #include "mainapplication.h"
 
 #include <QDir>
+#include <QMessageBox>
 
 ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
-    : QWidget()
+    : QWidget(parent)
     , ui(new Ui::ThemeManager)
     , m_preferences(preferences)
 {
     ui->setupUi(parent);
     ui->listWidget->setLayoutDirection(Qt::LeftToRight);
     ui->license->hide();
+    ui->remove->setIcon(QIcon::fromTheme(QSL("edit-delete")));
 
     Settings settings;
     settings.beginGroup("Themes");
@@ -67,6 +69,7 @@ ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
 
     connect(ui->listWidget, &QListWidget::currentItemChanged, this, &ThemeManager::currentChanged);
     connect(ui->license, &ClickableLabel::clicked, this, &ThemeManager::showLicense);
+    connect(ui->remove, &QPushButton::clicked, this, &ThemeManager::removeTheme);
 
     currentChanged();
 }
@@ -85,6 +88,25 @@ void ThemeManager::showLicense()
     v->show();
 }
 
+void ThemeManager::removeTheme()
+{
+    QListWidgetItem* currentItem = ui->listWidget->currentItem();
+    if (!currentItem) {
+        return;
+    }
+    Theme currentTheme = m_themeHash[currentItem->data(Qt::UserRole).toString()];
+
+    const auto button = QMessageBox::warning(this, tr("Confirmation"),
+                                             tr("Are you sure you want to remove '%1'?").arg(currentTheme.name),
+                                             QMessageBox::Yes | QMessageBox::No);
+    if (button != QMessageBox::Yes) {
+        return;
+    }
+
+    QDir(currentTheme.themePath).removeRecursively();
+    delete currentItem;
+}
+
 void ThemeManager::currentChanged()
 {
     QListWidgetItem* currentItem = ui->listWidget->currentItem();
@@ -98,6 +120,7 @@ void ThemeManager::currentChanged()
     ui->author->setText(currentTheme.author);
     ui->description->setText(currentTheme.description);
     ui->license->setHidden(currentTheme.license.isEmpty());
+    ui->remove->setEnabled(QFileInfo(currentTheme.themePath).isWritable());
 }
 
 ThemeManager::Theme ThemeManager::parseTheme(const QString &path, const QString &name)
@@ -114,6 +137,7 @@ ThemeManager::Theme ThemeManager::parseTheme(const QString &path, const QString 
     info.name = metadata.name();
     info.description = metadata.comment();
     info.author = metadata.value(QSL("X-Falkon-Author")).toString();
+    info.themePath = path.chopped(1);
 
     const QString iconName = metadata.icon();
     if (!iconName.isEmpty()) {

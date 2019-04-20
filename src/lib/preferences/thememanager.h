@@ -45,6 +45,7 @@ public:
 private Q_SLOTS:
     void currentChanged();
     void showLicense();
+    void removeTheme();
 
 private:
     struct Theme {
@@ -54,6 +55,7 @@ private:
         QString author;
         QString description;
         QString license;
+        QString themePath;
     };
 
     Theme parseTheme(const QString &path, const QString &name);
