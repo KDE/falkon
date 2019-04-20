@@ -107,9 +107,9 @@ void BookmarksManager::createContextMenu(const QPoint &pos)
     QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), tr("Open in new private window"));
 
     menu.addSeparator();
-    menu.addAction(tr("New Bookmark"), this, SLOT(addBookmark()));
-    menu.addAction(tr("New Folder"), this, &BookmarksManager::addFolder);
-    menu.addAction(tr("New Separator"), this, &BookmarksManager::addSeparator);
+    QAction *actNewBookmark = menu.addAction(tr("New Bookmark"), this, SLOT(addBookmark()));
+    QAction *actNewFolder = menu.addAction(tr("New Folder"), this, &BookmarksManager::addFolder);
+    QAction *actNewSeparator = menu.addAction(tr("New Separator"), this, &BookmarksManager::addSeparator);
     menu.addSeparator();
     QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"));
 
@@ -136,6 +136,12 @@ void BookmarksManager::createContextMenu(const QPoint &pos)
         actNewTab->setDisabled(true);
         actNewWindow->setDisabled(true);
         actNewPrivateWindow->setDisabled(true);
+    }
+
+    if (!m_selectedBookmark) {
+        actNewBookmark->setDisabled(true);
+        actNewFolder->setDisabled(true);
+        actNewSeparator->setDisabled(true);
     }
 
     menu.exec(pos);
