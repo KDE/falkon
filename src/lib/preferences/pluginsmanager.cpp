@@ -233,9 +233,14 @@ void PluginsManager::removeClicked()
 
     Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
 
-    if (plugin.isRemovable()) {
-        mApp->plugins()->removePlugin(&plugin);
+    const auto button = QMessageBox::warning(this, tr("Confirmation"),
+                                             tr("Are you sure you want to remove '%1'?").arg(plugin.pluginSpec.name),
+                                             QMessageBox::Yes | QMessageBox::No);
+    if (button != QMessageBox::Yes) {
+        return;
     }
+
+    mApp->plugins()->removePlugin(&plugin);
 }
 
 PluginsManager::~PluginsManager()
