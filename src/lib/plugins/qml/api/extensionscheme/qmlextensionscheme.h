@@ -30,6 +30,7 @@ class QmlExtensionSchemeHandler;
 class QmlExtensionScheme : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
     /**
      * @brief extension scheme handle name
      */
