@@ -283,7 +283,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     NetworkManager::registerSchemes();
 
-    m_webProfile = isPrivate() ? new QWebEngineProfile(this) : QWebEngineProfile::defaultProfile();
+    m_webProfile = isPrivate() ? new QWebEngineProfile() : QWebEngineProfile::defaultProfile();
     connect(m_webProfile, &QWebEngineProfile::downloadRequested, this, &MainApplication::downloadRequested);
 
     m_networkManager = new NetworkManager(this);
