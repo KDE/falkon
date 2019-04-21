@@ -93,6 +93,7 @@ public:
     // SpeedDial
     SpeedDial* speedDial() { return m_speedDial; }
 
+    static PluginSpec createSpec(const QJsonObject &metaData);
     static PluginSpec createSpec(const DesktopFile &metaData);
 
 public Q_SLOTS:

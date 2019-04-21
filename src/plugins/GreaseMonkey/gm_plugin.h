@@ -27,11 +27,10 @@ class GM_Plugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.GreaseMonkey")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.GreaseMonkey" FILE "greasemonkey.json")
 
 public:
     explicit GM_Plugin();
-    DesktopFile metaData() const override;
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;

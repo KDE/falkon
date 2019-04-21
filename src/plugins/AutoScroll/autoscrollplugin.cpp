@@ -22,17 +22,11 @@
 #include "pluginproxy.h"
 #include "mainapplication.h"
 #include "../config.h"
-#include "desktopfile.h"
 
 AutoScrollPlugin::AutoScrollPlugin()
     : QObject()
     , m_scroller(0)
 {
-}
-
-DesktopFile AutoScrollPlugin::metaData() const
-{
-    return DesktopFile(QSL(":autoscroll/metadata.desktop"));
 }
 
 void AutoScrollPlugin::init(InitState state, const QString &settingsPath)

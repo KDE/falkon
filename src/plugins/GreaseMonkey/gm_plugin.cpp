@@ -24,17 +24,11 @@
 #include "tabwidget.h"
 #include "webtab.h"
 #include "../config.h"
-#include "desktopfile.h"
 
 GM_Plugin::GM_Plugin()
     : QObject()
     , m_manager(0)
 {
-}
-
-DesktopFile GM_Plugin::metaData() const
-{
-    return DesktopFile(QSL(":gm/metadata.desktop"));
 }
 
 void GM_Plugin::init(InitState state, const QString &settingsPath)

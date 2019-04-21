@@ -24,7 +24,6 @@
 #include "sidebar.h"
 #include "webhittestresult.h"
 #include "../config.h"
-#include "desktopfile.h"
 
 #include <QMenu>
 #include <QPushButton>
@@ -33,13 +32,6 @@ TestPlugin::TestPlugin()
     : QObject()
     , m_view(0)
 {
-    // Don't do anything expensive in constructor!
-    // It will be called even if user doesn't have the plugin allowed
-}
-
-DesktopFile TestPlugin::metaData() const
-{
-    return DesktopFile(QSL(":testplugin/metadata.desktop"));
 }
 
 void TestPlugin::init(InitState state, const QString &settingsPath)

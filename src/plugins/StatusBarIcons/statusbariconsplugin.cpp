@@ -22,17 +22,11 @@
 #include "browserwindow.h"
 #include "../config.h"
 #include "mainapplication.h"
-#include "desktopfile.h"
 
 StatusBarIconsPlugin::StatusBarIconsPlugin()
     : QObject()
     , m_manager(0)
 {
-}
-
-DesktopFile StatusBarIconsPlugin::metaData() const
-{
-    return DesktopFile(QSL(":sbi/metadata.desktop"));
 }
 
 void StatusBarIconsPlugin::init(InitState state, const QString &settingsPath)

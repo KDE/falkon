@@ -3,12 +3,6 @@ set( TestPlugin_SRCS
 	testplugin_sidebar.cpp
 	)
 
-
-set( TestPlugin_RSCS
-    testplugin.qrc
-)
-qt5_add_resources(RSCS ${TestPlugin_RSCS})
-
 ecm_create_qm_loader( TestPlugin_SRCS falkon_testplugin_qt )
 
 add_library(TestPlugin MODULE ${TestPlugin_SRCS} ${RSCS})

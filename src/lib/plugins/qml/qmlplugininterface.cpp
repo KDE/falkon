@@ -60,11 +60,6 @@ void QmlPluginInterface::init(InitState state, const QString &settingsPath)
     m_init.call(args);
 }
 
-DesktopFile QmlPluginInterface::metaData() const
-{
-    return DesktopFile();
-}
-
 void QmlPluginInterface::unload()
 {
     if (!m_unload.isCallable()) {

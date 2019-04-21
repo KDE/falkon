@@ -34,6 +34,7 @@
 #include <QQmlEngine>
 #include <QQmlComponent>
 #include <QFileInfo>
+#include <QSettings>
 
 bool Plugins::Plugin::isLoaded() const
 {
@@ -169,6 +170,30 @@ void Plugins::shutdown()
     }
 }
 
+PluginSpec Plugins::createSpec(const QJsonObject &metaData)
+{
+    const QString tempIcon = DataPaths::path(DataPaths::Temp) + QL1S("/icon");
+    const QString tempMetadata = DataPaths::path(DataPaths::Temp) + QL1S("/metadata.desktop");
+    QFile::remove(tempIcon);
+    QFile::remove(tempMetadata);
+    QSettings settings(tempMetadata, QSettings::IniFormat);
+    settings.beginGroup(QSL("Desktop Entry"));
+    for (auto it = metaData.begin(); it != metaData.end(); ++it) {
+        const QString value = it.value().toString();
+        if (it.key() == QL1S("Icon") && value.startsWith(QL1S("base64:"))) {
+            QFile file(tempIcon);
+            if (file.open(QFile::WriteOnly)) {
+                file.write(QByteArray::fromBase64(value.mid(7).toUtf8()));
+                settings.setValue(it.key(), tempIcon);
+            }
+        } else {
+            settings.setValue(it.key(), it.value().toString());
+        }
+    }
+    settings.sync();
+    return createSpec(DesktopFile(tempMetadata));
+}
+
 PluginSpec Plugins::createSpec(const DesktopFile &metaData)
 {
     PluginSpec spec;
@@ -241,7 +266,7 @@ void Plugins::loadAvailablePlugins()
         for (const QFileInfo &info : files) {
             Plugin plugin;
             const QString pluginPath = info.absoluteFilePath();
-            if (info.isFile()) {
+            if (info.isFile() && QLibrary::isLibrary(pluginPath)) {
                 // SharedLibraryPlugin
                 if (info.baseName() != QL1S("PyFalkon")) {
                     plugin = loadSharedLibraryPlugin(pluginPath);
@@ -359,7 +384,7 @@ Plugins::Plugin Plugins::loadInternalPlugin(const QString &name)
         plugin.type = Plugin::InternalPlugin;
         plugin.pluginId = QSL("internal:adblock");
         plugin.internalInstance = new AdBlockPlugin();
-        plugin.pluginSpec = createSpec(plugin.internalInstance->metaData());
+        plugin.pluginSpec = createSpec(DesktopFile(QSL(":adblock/metadata.desktop")));
         return plugin;
     } else {
         return Plugin();
@@ -379,20 +404,12 @@ Plugins::Plugin Plugins::loadSharedLibraryPlugin(const QString &name)
         }
     }
 
-    QPluginLoader *loader = new QPluginLoader(fullPath);
-    PluginInterface *iPlugin = qobject_cast<PluginInterface*>(loader->instance());
-
-    if (!iPlugin) {
-        qWarning() << "Loading" << fullPath << "failed:" << loader->errorString();
-        return Plugin();
-    }
-
     Plugin plugin;
     plugin.type = Plugin::SharedLibraryPlugin;
     plugin.pluginId = QSL("lib:%1").arg(QFileInfo(fullPath).fileName());
     plugin.pluginPath = fullPath;
-    plugin.pluginLoader = loader;
-    plugin.pluginSpec = createSpec(iPlugin->metaData());
+    plugin.pluginLoader = new QPluginLoader(fullPath);
+    plugin.pluginSpec = createSpec(plugin.pluginLoader->metaData().value(QSL("MetaData")).toObject());
     return plugin;
 }
 
@@ -468,6 +485,10 @@ void Plugins::initSharedLibraryPlugin(Plugin *plugin)
     Q_ASSERT(plugin->type == Plugin::SharedLibraryPlugin);
 
     plugin->instance = qobject_cast<PluginInterface*>(plugin->pluginLoader->instance());
+
+    if (!plugin->instance) {
+        qWarning() << "Loading" << plugin->pluginPath << "failed:" << plugin->pluginLoader->errorString();
+    }
 }
 
 void Plugins::initPythonPlugin(Plugin *plugin)

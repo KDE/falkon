@@ -26,7 +26,6 @@
 #include "tabbar.h"
 #include "tabmanagersettings.h"
 #include "../config.h"
-#include "desktopfile.h"
 
 #include <QInputDialog>
 #include <QSettings>
@@ -44,11 +43,6 @@ TabManagerPlugin::TabManagerPlugin()
     , m_initState(false)
     , m_asTabBarReplacement(false)
 {
-}
-
-DesktopFile TabManagerPlugin::metaData() const
-{
-    return DesktopFile(QSL(":tabmanager/metadata.desktop"));
 }
 
 void TabManagerPlugin::init(InitState state, const QString &settingsPath)

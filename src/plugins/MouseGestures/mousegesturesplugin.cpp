@@ -21,17 +21,11 @@
 #include "mainapplication.h"
 #include "browserwindow.h"
 #include "../config.h"
-#include "desktopfile.h"
 
 MouseGesturesPlugin::MouseGesturesPlugin()
     : QObject()
     , m_gestures(0)
 {
-}
-
-DesktopFile MouseGesturesPlugin::metaData() const
-{
-    return DesktopFile(QSL(":mousegestures/metadata.desktop"));
 }
 
 void MouseGesturesPlugin::init(InitState state, const QString &settingsPath)

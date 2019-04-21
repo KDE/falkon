@@ -24,17 +24,11 @@
 #include "browserwindow.h"
 #include "webview.h"
 #include "../config.h"
-#include "desktopfile.h"
 
 PIM_Plugin::PIM_Plugin()
     : QObject()
     , m_handler(0)
 {
-}
-
-DesktopFile PIM_Plugin::metaData() const
-{
-    return DesktopFile(QSL(":PIM/metadata.desktop"));
 }
 
 void PIM_Plugin::init(InitState state, const QString &settingsPath)

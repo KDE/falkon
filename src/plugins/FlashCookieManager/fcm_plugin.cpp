@@ -28,7 +28,6 @@
 #include "../config.h"
 #include "statusbar.h"
 #include "navigationbar.h"
-#include "desktopfile.h"
 
 #include <QTimer>
 #include <QSettings>
@@ -63,11 +62,6 @@ public:
 FCM_Plugin::FCM_Plugin()
     : QObject()
 {
-}
-
-DesktopFile FCM_Plugin::metaData() const
-{
-    return DesktopFile(QSL(":flashcookiemanager/metadata.desktop"));
 }
 
 void FCM_Plugin::init(InitState state, const QString &settingsPath)

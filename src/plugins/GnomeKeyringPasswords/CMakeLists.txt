@@ -7,11 +7,6 @@ set( GnomeKeyringPasswords_SRCS
 
 ecm_create_qm_loader( GnomeKeyringPasswords_SRCS falkon_gnomekeyringpasswords_qt )
 
-set( GnomeKeyringPasswords_RSCS
-	gnomekeyringpasswords.qrc
-	)
-qt5_add_resources(RSCS ${GnomeKeyringPasswords_RSCS})
-
 add_library(GnomeKeyringPasswords MODULE ${GnomeKeyringPasswords_SRCS} ${RSCS})
 install(TARGETS GnomeKeyringPasswords DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 target_link_libraries(GnomeKeyringPasswords PkgConfig::GNOME_KEYRING FalkonPrivate)

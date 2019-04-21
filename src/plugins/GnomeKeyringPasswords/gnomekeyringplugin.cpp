@@ -23,17 +23,11 @@
 #include "mainapplication.h"
 #include "autofill.h"
 #include "passwordmanager.h"
-#include "desktopfile.h"
 
 GnomeKeyringPlugin::GnomeKeyringPlugin()
     : QObject()
     , m_backend(0)
 {
-}
-
-DesktopFile GnomeKeyringPlugin::metaData() const
-{
-    return DesktopFile(QSL(":gkp/metadata.desktop"));
 }
 
 void GnomeKeyringPlugin::init(InitState state, const QString &settingsPath)

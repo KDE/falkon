@@ -26,12 +26,10 @@ class GnomeKeyringPlugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.GnomeKeyringPasswords")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.GnomeKeyringPasswords" FILE "gnomekeyringpasswords.json")
 
 public:
     explicit GnomeKeyringPlugin();
-
-    DesktopFile metaData() const override;
 
     void init(InitState state, const QString &settingsPath);
     void unload();

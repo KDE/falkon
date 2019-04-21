@@ -23,7 +23,6 @@
 #include "mainapplication.h"
 #include "autofill.h"
 #include "passwordmanager.h"
-#include "desktopfile.h"
 #include "kioschemehandler.h"
 #include "webpage.h"
 #include "webview.h"
@@ -40,11 +39,6 @@
 KDEFrameworksIntegrationPlugin::KDEFrameworksIntegrationPlugin()
     : QObject()
 {
-}
-
-DesktopFile KDEFrameworksIntegrationPlugin::metaData() const
-{
-    return DesktopFile(QSL(":kdeframeworksintegration/metadata.desktop"));
 }
 
 void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settingsPath)

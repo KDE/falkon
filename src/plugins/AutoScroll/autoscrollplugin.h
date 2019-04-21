@@ -27,12 +27,11 @@ class AutoScrollPlugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.AutoScroll")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.AutoScroll" FILE "autoscroll.json")
 
 public:
     explicit AutoScrollPlugin();
 
-    DesktopFile metaData() const override;
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;

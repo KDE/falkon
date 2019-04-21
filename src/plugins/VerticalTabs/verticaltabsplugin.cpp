@@ -28,18 +28,12 @@
 #include "sidebar.h"
 #include "networkmanager.h"
 #include "../config.h"
-#include "desktopfile.h"
 
 #include <QSettings>
 
 VerticalTabsPlugin::VerticalTabsPlugin()
     : QObject()
 {
-}
-
-DesktopFile VerticalTabsPlugin::metaData() const
-{
-    return DesktopFile(QSL(":verticaltabs/metadata.desktop"));
 }
 
 void VerticalTabsPlugin::init(InitState state, const QString &settingsPath)

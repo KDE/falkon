@@ -46,12 +46,11 @@ class FCM_Plugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.FlashCookieManager")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.FlashCookieManager" FILE "flashcookiemanager.json")
 
 public:
     explicit FCM_Plugin();
 
-    DesktopFile metaData() const override;
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;

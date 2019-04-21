@@ -29,12 +29,11 @@ class PIM_Plugin : public QObject, public PluginInterface
 {
     Q_OBJECT
     Q_INTERFACES(PluginInterface)
-    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.PIM")
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.PIM" FILE "PIM.json")
 
 public:
     PIM_Plugin();
 
-    DesktopFile metaData() const override;
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;

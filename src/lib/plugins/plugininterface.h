@@ -43,7 +43,6 @@ public:
 
     virtual ~PluginInterface() { }
 
-    virtual DesktopFile metaData() const = 0;
     virtual void init(InitState state, const QString &settingsPath) = 0;
     virtual void unload() = 0;
     virtual bool testPlugin() = 0;
@@ -66,6 +65,6 @@ public:
     virtual bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) { Q_UNUSED(page); Q_UNUSED(url); Q_UNUSED(type); Q_UNUSED(isMainFrame); return true; }
 };
 
-Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.3")
+Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.4")
 
 #endif // PLUGININTERFACE_H

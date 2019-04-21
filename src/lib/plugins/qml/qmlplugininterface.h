@@ -50,7 +50,6 @@ class QmlPluginInterface : public QObject, public PluginInterface
 public:
     explicit QmlPluginInterface();
     ~QmlPluginInterface() override;
-    DesktopFile metaData() const override;
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;

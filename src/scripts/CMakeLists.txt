@@ -17,8 +17,11 @@ function(install_qml_script name)
     )
 endfunction()
 
-# install_python_script(hellopython)
 install_python_script(runaction)
 install_python_script(middleclickloader)
 
-# install_qml_script(helloqml)
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    install_python_script(hellopython)
+    install_qml_script(helloqml)
+endif()
+
