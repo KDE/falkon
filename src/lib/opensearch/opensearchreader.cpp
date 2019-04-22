@@ -39,6 +39,8 @@
 
 #include <qiodevice.h>
 
+#include <KLocalizedString>
+
 /*!
     \class OpenSearchReader
     \brief A class reading a search engine description from an external source
@@ -102,7 +104,7 @@ OpenSearchEngine* OpenSearchReader::read()
     if (!m_searchXml.contains(QLatin1String("http://a9.com/-/spec/opensearch/1.1/")) &&
         !m_searchXml.contains(QLatin1String("http://www.mozilla.org/2006/browser/search/"))
        ) {
-        raiseError(QObject::tr("The file is not an OpenSearch 1.1 file."));
+        raiseError(i18n("The file is not an OpenSearch 1.1 file."));
         return engine;
     }
 

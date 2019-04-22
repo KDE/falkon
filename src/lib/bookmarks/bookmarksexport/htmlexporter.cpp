@@ -21,6 +21,8 @@
 
 #include <QTextStream>
 
+#include <KLocalizedString>
+
 HtmlExporter::HtmlExporter(QObject* parent)
     : BookmarksExporter(parent)
 {
@@ -28,14 +30,14 @@ HtmlExporter::HtmlExporter(QObject* parent)
 
 QString HtmlExporter::name() const
 {
-    return BookmarksExporter::tr("HTML File") + QL1S(" (bookmarks.html)");
+    return i18n("HTML File") + QL1S(" (bookmarks.html)");
 }
 
 QString HtmlExporter::getPath(QWidget* parent)
 {
     const QString defaultPath = QDir::homePath() + QLatin1String("/bookmarks.html");
-    const QString filter = BookmarksExporter::tr("HTML Bookmarks") + QL1S(" (.html)");
-    m_path = QzTools::getSaveFileName(QStringLiteral("HtmlExporter"), parent, BookmarksExporter::tr("Choose file..."), defaultPath, filter);
+    const QString filter = i18n("HTML Bookmarks") + QL1S(" (.html)");
+    m_path = QzTools::getSaveFileName(QStringLiteral("HtmlExporter"), parent, i18n("Choose file..."), defaultPath, filter);
     return m_path;
 }
 
@@ -44,7 +46,7 @@ bool HtmlExporter::exportBookmarks(BookmarkItem* root)
     QFile file(m_path);
 
     if (!file.open(QFile::WriteOnly | QFile::Truncate)) {
-        setError(BookmarksExporter::tr("Cannot open file for writing!"));
+        setError(i18n("Cannot open file for writing!"));
         return false;
     }
 

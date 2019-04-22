@@ -84,6 +84,8 @@
 #include <xcb/xcb_atom.h>
 #endif
 
+#include <KLocalizedString>
+
 static const int savedWindowVersion = 2;
 
 BrowserWindow::SavedWindow::SavedWindow()
@@ -202,7 +204,7 @@ BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QUrl &startUrl)
     setAttribute(Qt::WA_DontCreateNativeAncestors);
 
     setObjectName(QSL("mainwindow"));
-    setWindowTitle(tr("Falkon"));
+    setWindowTitle(i18n("Falkon"));
     setProperty("private", mApp->isPrivate());
 
     setupUi();
@@ -392,7 +394,7 @@ void BrowserWindow::setupUi()
     m_progressBar = new ProgressBar(m_statusBar);
     m_ipLabel = new QLabel(this);
     m_ipLabel->setObjectName(QSL("statusbar-ip-label"));
-    m_ipLabel->setToolTip(tr("IP Address of current page"));
+    m_ipLabel->setToolTip(i18n("IP Address of current page"));
 
     m_statusBar->addPermanentWidget(m_progressBar);
     m_statusBar->addPermanentWidget(m_ipLabel);
@@ -732,7 +734,7 @@ void BrowserWindow::setWindowTitle(const QString &t)
     QString title = t;
 
     if (mApp->isPrivate()) {
-        title.append(tr(" (Private Browsing)"));
+        title.append(i18n(" (Private Browsing)"));
     }
 
     QMainWindow::setWindowTitle(title);
@@ -977,9 +979,9 @@ void BrowserWindow::currentTabChanged()
 
     const QString title = view->webTab()->title(/*allowEmpty*/true);
     if (title.isEmpty()) {
-        setWindowTitle(tr("Falkon"));
+        setWindowTitle(i18n("Falkon"));
     } else {
-        setWindowTitle(tr("%1 - Falkon").arg(title));
+        setWindowTitle(i18n("%1 - Falkon", title));
     }
     m_ipLabel->setText(view->getIp());
     view->setFocus();
@@ -1045,22 +1047,22 @@ void BrowserWindow::createToolbarsMenu(QMenu* menu)
     QAction* action;
 
 #ifndef Q_OS_MACOS
-    action = menu->addAction(tr("&Menu Bar"), this, &BrowserWindow::toggleShowMenubar);
+    action = menu->addAction(i18n("&Menu Bar"), this, &BrowserWindow::toggleShowMenubar);
     action->setCheckable(true);
     action->setChecked(menuBar()->isVisible());
 #endif
 
-    action = menu->addAction(tr("&Navigation Toolbar"), this, &BrowserWindow::toggleShowNavigationToolbar);
+    action = menu->addAction(i18n("&Navigation Toolbar"), this, &BrowserWindow::toggleShowNavigationToolbar);
     action->setCheckable(true);
     action->setChecked(m_navigationToolbar->isVisible());
 
-    action = menu->addAction(tr("&Bookmarks Toolbar"), this, &BrowserWindow::toggleShowBookmarksToolbar);
+    action = menu->addAction(i18n("&Bookmarks Toolbar"), this, &BrowserWindow::toggleShowBookmarksToolbar);
     action->setCheckable(true);
     action->setChecked(Settings().value(QSL("Browser-View-Settings/showBookmarksToolbar")).toBool());
 
     menu->addSeparator();
 
-    action = menu->addAction(tr("&Tabs on Top"), this, SLOT(toggleTabsOnTop(bool)));
+    action = menu->addAction(i18n("&Tabs on Top"), this, SLOT(toggleTabsOnTop(bool)));
     action->setCheckable(true);
     action->setChecked(qzSettings->tabsOnTop);
 
@@ -1114,7 +1116,7 @@ void BrowserWindow::createEncodingMenu(QMenu* menu)
     createEncodingSubMenu(QSL("Windows"), windowsCodecs, menu);
     createEncodingSubMenu(QSL("Iscii"), isciiCodecs, menu);
     createEncodingSubMenu(QSL("IBM"), ibmCodecs, menu);
-    createEncodingSubMenu(tr("Other"), otherCodecs, menu);
+    createEncodingSubMenu(i18n("Other"), otherCodecs, menu);
 }
 
 void BrowserWindow::removeActions(const QList<QAction *> &actions)
@@ -1156,9 +1158,9 @@ void BrowserWindow::openFile()
     const QString fileTypes = QSL("%1(*.html *.htm *.shtml *.shtm *.xhtml);;"
                                       "%2(*.png *.jpg *.jpeg *.bmp *.gif *.svg *.tiff);;"
                                       "%3(*.txt);;"
-                                      "%4(*.*)").arg(tr("HTML files"), tr("Image files"), tr("Text files"), tr("All files"));
+                                      "%4(*.*)").arg(i18n("HTML files"), i18n("Image files"), i18n("Text files"), i18n("All files"));
 
-    const QString filePath = QzTools::getOpenFileName(QSL("MainWindow-openFile"), this, tr("Open file..."), QDir::homePath(), fileTypes);
+    const QString filePath = QzTools::getOpenFileName(QSL("MainWindow-openFile"), this, i18n("Open file..."), QDir::homePath(), fileTypes);
 
     if (!filePath.isEmpty()) {
         loadAddress(QUrl::fromLocalFile(filePath));
@@ -1498,11 +1500,11 @@ void BrowserWindow::closeEvent(QCloseEvent* event)
     if (askOnClose && m_tabWidget->normalTabsCount() > 1) {
         CheckBoxDialog dialog(QMessageBox::Yes | QMessageBox::No, this);
         dialog.setDefaultButton(QMessageBox::No);
-        //~ singular There is still %n open tab and your session won't be stored.\nAre you sure you want to close this window?
-        //~ plural There are still %n open tabs and your session won't be stored.\nAre you sure you want to close this window?
-        dialog.setText(tr("There are still %n open tabs and your session won't be stored.\nAre you sure you want to close this window?", "", m_tabWidget->count()));
-        dialog.setCheckBoxText(tr("Don't ask again"));
-        dialog.setWindowTitle(tr("There are still open tabs"));
+        dialog.setText(i18np("There is still %1 open tab and your session won't be stored.\nAre you sure you want to close this window?",
+                            "There are still %1 open tabs and your session won't be stored.\nAre you sure you want to close this window?",
+                            m_tabWidget->count()));
+        dialog.setCheckBoxText(i18n("Don't ask again"));
+        dialog.setWindowTitle(i18n("There are still open tabs"));
         dialog.setIcon(QMessageBox::Warning);
 
         if (dialog.exec() != QMessageBox::Yes) {

@@ -22,6 +22,8 @@
 
 #include <QVector>
 
+#include <KLocalizedString>
+
 DatabasePasswordBackend::DatabasePasswordBackend()
     : PasswordBackend()
 {
@@ -29,7 +31,7 @@ DatabasePasswordBackend::DatabasePasswordBackend()
 
 QString DatabasePasswordBackend::name() const
 {
-    return AutoFill::tr("Database (plaintext)");
+    return i18n("Database (plaintext)");
 }
 
 QVector<PasswordEntry> DatabasePasswordBackend::getEntries(const QUrl &url)

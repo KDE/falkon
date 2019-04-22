@@ -60,6 +60,8 @@
 #include <QUrlQuery>
 #include <QtWebEngineWidgetsVersion>
 
+#include <KLocalizedString>
+
 #if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
 #include <QWebEngineRegisterProtocolHandlerRequest>
 #endif
@@ -336,13 +338,13 @@ void WebPage::handleUnknownProtocol(const QUrl &url)
     dialog.setDefaultButton(QMessageBox::Yes);
 
     const QString wrappedUrl = QzTools::alignTextToWidth(url.toString(), "<br/>", dialog.fontMetrics(), 450);
-    const QString text = tr("Falkon cannot handle <b>%1:</b> links. The requested link "
+    const QString text = i18n("Falkon cannot handle <b>%1:</b> links. The requested link "
                             "is <ul><li>%2</li></ul>Do you want Falkon to try "
-                            "open this link in system application?").arg(protocol, wrappedUrl);
+                            "open this link in system application?", protocol, wrappedUrl);
 
     dialog.setText(text);
-    dialog.setCheckBoxText(tr("Remember my choice for this protocol"));
-    dialog.setWindowTitle(tr("External Protocol Request"));
+    dialog.setCheckBoxText(i18n("Remember my choice for this protocol"));
+    dialog.setWindowTitle(i18n("External Protocol Request"));
     dialog.setIcon(QMessageBox::Question);
 
     switch (dialog.exec()) {
@@ -422,11 +424,11 @@ void WebPage::renderProcessTerminated(QWebEnginePage::RenderProcessTerminationSt
     QTimer::singleShot(0, this, [this]() {
         QString page = QzTools::readAllFileContents(":html/tabcrash.html");
         page.replace(QL1S("%IMAGE%"), QzTools::pixmapToDataUrl(IconProvider::standardIcon(QStyle::SP_MessageBoxWarning).pixmap(45)).toString());
-        page.replace(QL1S("%TITLE%"), tr("Failed loading page"));
-        page.replace(QL1S("%HEADING%"), tr("Failed loading page"));
-        page.replace(QL1S("%LI-1%"), tr("Something went wrong while loading this page."));
-        page.replace(QL1S("%LI-2%"), tr("Try reloading the page or closing some tabs to make more memory available."));
-        page.replace(QL1S("%RELOAD-PAGE%"), tr("Reload page"));
+        page.replace(QL1S("%TITLE%"), i18n("Failed loading page"));
+        page.replace(QL1S("%HEADING%"), i18n("Failed loading page"));
+        page.replace(QL1S("%LI-1%"), i18n("Something went wrong while loading this page."));
+        page.replace(QL1S("%LI-2%"), i18n("Try reloading the page or closing some tabs to make more memory available."));
+        page.replace(QL1S("%RELOAD-PAGE%"), i18n("Reload page"));
         page = QzTools::applyDirectionToPage(page);
         setHtml(page.toUtf8(), url());
     });
@@ -488,11 +490,11 @@ QStringList WebPage::chooseFiles(QWebEnginePage::FileSelectionMode mode, const Q
 
     switch (mode) {
     case FileSelectOpen:
-        files = QStringList(QzTools::getOpenFileName("WebPage-ChooseFile", view(), tr("Choose file..."), suggestedFileName));
+        files = QStringList(QzTools::getOpenFileName("WebPage-ChooseFile", view(), i18n("Choose file..."), suggestedFileName));
         break;
 
     case FileSelectOpenMultiple:
-        files = QzTools::getOpenFileNames("WebPage-ChooseFile", view(), tr("Choose files..."), suggestedFileName);
+        files = QzTools::getOpenFileNames("WebPage-ChooseFile", view(), i18n("Choose files..."), suggestedFileName);
         break;
 
     default:
@@ -632,7 +634,7 @@ void WebPage::javaScriptAlert(const QUrl &securityOrigin, const QString &msg)
     }
 
     if (!kEnableJsNonBlockDialogs) {
-        QString title = tr("JavaScript alert");
+        QString title = i18n("JavaScript alert");
         if (!url().host().isEmpty()) {
             title.append(QString(" - %1").arg(url().host()));
         }
@@ -641,7 +643,7 @@ void WebPage::javaScriptAlert(const QUrl &securityOrigin, const QString &msg)
         dialog.setDefaultButton(QMessageBox::Ok);
         dialog.setWindowTitle(title);
         dialog.setText(msg);
-        dialog.setCheckBoxText(tr("Prevent this page from creating additional dialogs"));
+        dialog.setCheckBoxText(i18n("Prevent this page from creating additional dialogs"));
         dialog.setIcon(QMessageBox::Information);
         dialog.exec();
 

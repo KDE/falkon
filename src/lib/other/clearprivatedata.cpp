@@ -39,6 +39,8 @@
 #include <QFileInfo>
 #include <QWebEngineProfile>
 
+#include <KLocalizedString>
+
 ClearPrivateData::ClearPrivateData(QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::ClearPrivateData)
@@ -151,7 +153,7 @@ void ClearPrivateData::dialogAccepted()
     QApplication::restoreOverrideCursor();
 
     ui->clear->setEnabled(false);
-    ui->clear->setText(tr("Done"));
+    ui->clear->setText(i18n("Done"));
 
     QTimer::singleShot(1000, this, &QWidget::close);
 }
@@ -169,7 +171,7 @@ void ClearPrivateData::optimizeDb()
 
     mApp->restoreOverrideCursor();
 
-    QMessageBox::information(this, tr("Database Optimized"), tr("Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/><b>Database Size After: </b>%2").arg(sizeBefore, sizeAfter));
+    QMessageBox::information(this, i18n("Database Optimized"), i18n("Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/><b>Database Size After: </b>%2", sizeBefore, sizeAfter));
 }
 
 void ClearPrivateData::showCookieManager()

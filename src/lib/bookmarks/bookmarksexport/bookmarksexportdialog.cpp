@@ -23,6 +23,8 @@
 
 #include <QMessageBox>
 
+#include <KLocalizedString>
+
 BookmarksExportDialog::BookmarksExportDialog(QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::BookmarksExportDialog)
@@ -61,7 +63,7 @@ void BookmarksExportDialog::exportBookmarks()
     bool ok = m_currentExporter->exportBookmarks(mApp->bookmarks()->rootItem());
 
     if (!ok) {
-        QMessageBox::critical(this, tr("Error!"), m_currentExporter->errorString());
+        QMessageBox::critical(this, i18n("Error!"), m_currentExporter->errorString());
     }
     else {
         close();

@@ -20,13 +20,15 @@
 
 #include <QContextMenuEvent>
 
+#include <KLocalizedString>
+
 AutoFillIcon::AutoFillIcon(QWidget* parent)
     : ClickableLabel(parent)
     , m_view(nullptr)
 {
     setObjectName(QSL("locationbar-autofillicon"));
     setCursor(Qt::PointingHandCursor);
-    setToolTip(AutoFillWidget::tr("Choose username to login"));
+    setToolTip(i18n("Choose username to login"));
     setFocusPolicy(Qt::ClickFocus);
 
     connect(this, &ClickableLabel::clicked, this, &AutoFillIcon::iconClicked);

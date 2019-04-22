@@ -26,6 +26,8 @@
 #include "tabwidget.h"
 #include "iconprovider.h"
 
+#include <KLocalizedString>
+
 BookmarksMenu::BookmarksMenu(QWidget* parent)
     : Menu(parent)
     , m_window(0)
@@ -162,11 +164,11 @@ void BookmarksMenu::openBookmarkInNewWindow(BookmarkItem* item)
 
 void BookmarksMenu::init()
 {
-    setTitle(tr("&Bookmarks"));
+    setTitle(i18n("&Bookmarks"));
 
-    addAction(tr("Bookmark &This Page"), this, &BookmarksMenu::bookmarkPage)->setShortcut(QKeySequence("Ctrl+D"));
-    addAction(tr("Bookmark &All Tabs"), this, &BookmarksMenu::bookmarkAllTabs);
-    addAction(QIcon::fromTheme("bookmarks-organize"), tr("Organize &Bookmarks"), this, &BookmarksMenu::showBookmarksManager)->setShortcut(QKeySequence("Ctrl+Shift+O"));
+    addAction(i18n("Bookmark &This Page"), this, &BookmarksMenu::bookmarkPage)->setShortcut(QKeySequence("Ctrl+D"));
+    addAction(i18n("Bookmark &All Tabs"), this, &BookmarksMenu::bookmarkAllTabs);
+    addAction(QIcon::fromTheme("bookmarks-organize"), i18n("Organize &Bookmarks"), this, &BookmarksMenu::showBookmarksManager)->setShortcut(QKeySequence("Ctrl+Shift+O"));
     addSeparator();
 
     connect(this, SIGNAL(aboutToShow()), this, SLOT(aboutToShow()));

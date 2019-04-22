@@ -23,6 +23,8 @@
 
 #include <QMessageBox>
 
+#include <KLocalizedString>
+
 SearchEnginesDialog::SearchEnginesDialog(QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::SearchEnginesDialog)
@@ -49,7 +51,7 @@ SearchEnginesDialog::SearchEnginesDialog(QWidget* parent)
 
 void SearchEnginesDialog::addEngine()
 {
-    EditSearchEngine dialog(tr("Add Search Engine"), this);
+    EditSearchEngine dialog(i18n("Add Search Engine"), this);
     dialog.hideIconLabels();
 
     if (dialog.exec() != QDialog::Accepted) {
@@ -86,9 +88,9 @@ void SearchEnginesDialog::removeEngine()
 
     if (isDefaultEngine(item)) {
         SearchEngine en = getEngine(item);
-        QMessageBox::warning(this, tr("Remove Engine"),
-                             tr("You can't remove the default search engine.<br>"
-                                "Set a different engine as default before removing %1.").arg(en.name));
+        QMessageBox::warning(this, i18n("Remove Engine"),
+                             i18n("You can't remove the default search engine.<br>"
+                                "Set a different engine as default before removing %1.", en.name));
     }
     else {
         delete item;
@@ -104,7 +106,7 @@ void SearchEnginesDialog::editEngine()
 
     SearchEngine engine = getEngine(item);
 
-    EditSearchEngine dialog(tr("Edit Search Engine"), this);
+    EditSearchEngine dialog(i18n("Edit Search Engine"), this);
 
     dialog.setName(engine.name);
     dialog.setUrl(engine.url);

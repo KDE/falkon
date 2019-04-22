@@ -30,6 +30,8 @@
 #include <QMouseEvent>
 #include <QTextLayout>
 
+#include <KLocalizedString>
+
 LocationCompleterDelegate::LocationCompleterDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
     , m_rowHeight(0)
@@ -154,13 +156,13 @@ void LocationCompleterDelegate::paint(QPainter* painter, const QStyleOptionViewI
         if (!opt.state.testFlag(QStyle::State_Selected) && !opt.state.testFlag(QStyle::State_MouseOver)) {
             link.clear();
         } else if (isVisitSearchItem && (!isWebSearch || m_forceVisitItem)) {
-            link = tr("Visit");
+            link = i18n("Visit");
         } else {
             QString searchEngineName = loadAction.searchEngine.name;
             if (searchEngineName.isEmpty()) {
                 searchEngineName = LocationBar::searchEngine().name;
             }
-            link = tr("Search with %1").arg(searchEngineName);
+            link = i18n("Search with %1", searchEngineName);
         }
     }
 
@@ -194,7 +196,7 @@ void LocationCompleterDelegate::paint(QPainter* painter, const QStyleOptionViewI
 
         QRect textRect(linkRect);
         textRect.setX(textRect.x() + m_padding + 16 + m_padding);
-        viewItemDrawText(painter, &opt, textRect, tr("Switch to tab"), textPalette.color(colorLinkRole));
+        viewItemDrawText(painter, &opt, textRect, i18n("Switch to tab"), textPalette.color(colorLinkRole));
     } else if (isVisitSearchItem || isSearchSuggestion) {
         viewItemDrawText(painter, &opt, linkRect, link, textPalette.color(colorLinkRole));
     } else {

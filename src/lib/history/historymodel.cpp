@@ -24,6 +24,8 @@
 #include <QDateTime>
 #include <QTimer>
 
+#include <KLocalizedString>
+
 static QString dateTimeToString(const QDateTime &dateTime)
 {
     const QDateTime current = QDateTime::currentDateTime();
@@ -53,13 +55,13 @@ QVariant HistoryModel::headerData(int section, Qt::Orientation orientation, int 
     if (orientation == Qt::Horizontal && role == Qt::DisplayRole) {
         switch (section) {
         case 0:
-            return tr("Title");
+            return i18n("Title");
         case 1:
-            return tr("Address");
+            return i18n("Address");
         case 2:
-            return tr("Visit Date");
+            return i18n("Visit Date");
         case 3:
-            return tr("Visit Count");
+            return i18n("Visit Count");
         }
     }
 
@@ -337,7 +339,7 @@ void HistoryModel::historyEntryAdded(const HistoryEntry &entry)
         m_todayItem = new HistoryItem(0);
         m_todayItem->setStartTimestamp(-1);
         m_todayItem->setEndTimestamp(QDateTime(QDate::currentDate()).toMSecsSinceEpoch());
-        m_todayItem->title = tr("Today");
+        m_todayItem->title = i18n("Today");
 
         m_rootItem->prependChild(m_todayItem);
 
@@ -468,17 +470,17 @@ void HistoryModel::init()
         if (timestampDate == today) {
             endTimestamp = QDateTime(today).toMSecsSinceEpoch();
 
-            itemName = tr("Today");
+            itemName = i18n("Today");
         }
         else if (timestampDate >= week) {
             endTimestamp = QDateTime(week).toMSecsSinceEpoch();
 
-            itemName = tr("This Week");
+            itemName = i18n("This Week");
         }
         else if (timestampDate.month() == month.month() && timestampDate.year() == month.year()) {
             endTimestamp = QDateTime(month).toMSecsSinceEpoch();
 
-            itemName = tr("This Month");
+            itemName = i18n("This Month");
         }
         else {
             QDate startDate(timestampDate.year(), timestampDate.month(), timestampDate.daysInMonth());

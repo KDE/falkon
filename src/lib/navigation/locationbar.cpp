@@ -42,6 +42,8 @@
 #include <QContextMenuEvent>
 #include <QStyleOptionFrameV3>
 
+#include <KLocalizedString>
+
 LocationBar::LocationBar(QWidget *parent)
     : LineEdit(parent)
     , m_window(nullptr)
@@ -89,7 +91,7 @@ LocationBar::LocationBar(QWidget *parent)
     m_progressTimer->setSingleShot(true);
     connect(m_progressTimer, &QTimer::timeout, this, &LocationBar::hideProgress);
 
-    editAction(PasteAndGo)->setText(tr("Paste And &Go"));
+    editAction(PasteAndGo)->setText(i18n("Paste And &Go"));
     editAction(PasteAndGo)->setIcon(QIcon::fromTheme(QSL("edit-paste")));
     connect(editAction(PasteAndGo), &QAction::triggered, this, &LocationBar::pasteAndGo);
 
@@ -156,9 +158,9 @@ void LocationBar::setText(const QString &text)
 void LocationBar::updatePlaceHolderText()
 {
     if (qzSettings->searchFromAddressBar) {
-        setPlaceholderText(tr("Enter address or search with %1").arg(searchEngine().name));
+        setPlaceholderText(i18n("Enter address or search with %1", searchEngine().name));
     } else
-        setPlaceholderText(tr("Enter address"));
+        setPlaceholderText(i18n("Enter address"));
 }
 
 void LocationBar::showCompletion(const QString &completion, bool completeDomain)

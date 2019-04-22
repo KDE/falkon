@@ -24,6 +24,8 @@
 #include <QTimer>
 #include <QStyle>
 
+#include <KLocalizedString>
+
 //#define BOOKMARKSMODEL_DEBUG
 
 #ifdef BOOKMARKSMODEL_DEBUG
@@ -145,9 +147,9 @@ QVariant BookmarksModel::headerData(int section, Qt::Orientation orientation, in
     if (orientation == Qt::Horizontal && role == Qt::DisplayRole) {
         switch (section) {
         case 0:
-            return tr("Title");
+            return i18n("Title");
         case 1:
-            return tr("Address");
+            return i18n("Address");
         }
     }
 

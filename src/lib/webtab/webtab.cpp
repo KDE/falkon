@@ -36,6 +36,8 @@
 #include <QTimer>
 #include <QSplitter>
 
+#include <KLocalizedString>
+
 static const int savedTabVersion = 6;
 
 WebTab::SavedTab::SavedTab()
@@ -621,7 +623,7 @@ void WebTab::titleWasChanged(const QString &title)
     }
 
     if (m_isCurrentTab) {
-        m_window->setWindowTitle(tr("%1 - Falkon").arg(title));
+        m_window->setWindowTitle(i18n("%1 - Falkon", title));
     }
 
     m_tabBar->setTabText(tabIndex(), title);

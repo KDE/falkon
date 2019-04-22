@@ -28,6 +28,8 @@
 #include <QMessageBox>
 #include <QInputDialog>
 
+#include <KLocalizedString>
+
 AdBlockDialog::AdBlockDialog(QWidget* parent)
     : QDialog(parent)
     , m_manager(AdBlockManager::instance())
@@ -46,14 +48,14 @@ AdBlockDialog::AdBlockDialog(QWidget* parent)
     adblockCheckBox->setChecked(m_manager->isEnabled());
 
     QMenu* menu = new QMenu(buttonOptions);
-    m_actionAddRule = menu->addAction(tr("Add Rule"), this, &AdBlockDialog::addRule);
-    m_actionRemoveRule = menu->addAction(tr("Remove Rule"), this, &AdBlockDialog::removeRule);
+    m_actionAddRule = menu->addAction(i18n("Add Rule"), this, &AdBlockDialog::addRule);
+    m_actionRemoveRule = menu->addAction(i18n("Remove Rule"), this, &AdBlockDialog::removeRule);
     menu->addSeparator();
-    m_actionAddSubscription = menu->addAction(tr("Add Subscription"), this, &AdBlockDialog::addSubscription);
-    m_actionRemoveSubscription = menu->addAction(tr("Remove Subscription"), this, &AdBlockDialog::removeSubscription);
-    menu->addAction(tr("Update Subscriptions"), m_manager, &AdBlockManager::updateAllSubscriptions);
+    m_actionAddSubscription = menu->addAction(i18n("Add Subscription"), this, &AdBlockDialog::addSubscription);
+    m_actionRemoveSubscription = menu->addAction(i18n("Remove Subscription"), this, &AdBlockDialog::removeSubscription);
+    menu->addAction(i18n("Update Subscriptions"), m_manager, &AdBlockManager::updateAllSubscriptions);
     menu->addSeparator();
-    menu->addAction(tr("Learn about writing rules..."), this, &AdBlockDialog::learnAboutRules);
+    menu->addAction(i18n("Learn about writing rules..."), this, &AdBlockDialog::learnAboutRules);
 
     buttonOptions->setMenu(menu);
     connect(menu, &QMenu::aboutToShow, this, &AdBlockDialog::aboutToShowMenu);

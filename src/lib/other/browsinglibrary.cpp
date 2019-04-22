@@ -28,6 +28,8 @@
 #include <QMenu>
 #include <QCloseEvent>
 
+#include <KLocalizedString>
+
 BrowsingLibrary::BrowsingLibrary(BrowserWindow* window, QWidget* parent)
     : QWidget(parent)
     , ui(new Ui::BrowsingLibrary)
@@ -52,14 +54,14 @@ BrowsingLibrary::BrowsingLibrary(BrowserWindow* window, QWidget* parent)
     bookmarksIcon.addFile(QSL(":/icons/other/bigstar.svg"), QSize(), QIcon::Normal);
     bookmarksIcon.addFile(QSL(":/icons/other/bigstar-selected.svg"), QSize(), QIcon::Selected);
 
-    ui->tabs->AddTab(m_historyManager, historyIcon, tr("History"));
-    ui->tabs->AddTab(m_bookmarksManager, bookmarksIcon, tr("Bookmarks"));
+    ui->tabs->AddTab(m_historyManager, historyIcon, i18n("History"));
+    ui->tabs->AddTab(m_bookmarksManager, bookmarksIcon, i18n("Bookmarks"));
     ui->tabs->SetMode(FancyTabWidget::Mode_LargeSidebar);
     ui->tabs->setFocus();
 
     QMenu* m = new QMenu(this);
-    m->addAction(tr("Import Bookmarks..."), this, &BrowsingLibrary::importBookmarks);
-    m->addAction(tr("Export Bookmarks..."), this, &BrowsingLibrary::exportBookmarks);
+    m->addAction(i18n("Import Bookmarks..."), this, &BrowsingLibrary::importBookmarks);
+    m->addAction(i18n("Export Bookmarks..."), this, &BrowsingLibrary::exportBookmarks);
     ui->importExport->setMenu(m);
 
     connect(ui->tabs, &FancyTabWidget::CurrentChanged, ui->searchLine, &QLineEdit::clear);

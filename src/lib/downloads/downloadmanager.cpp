@@ -49,6 +49,8 @@
 #include <QWinTaskbarProgress>
 #endif
 
+#include <KLocalizedString>
+
 DownloadManager::DownloadManager(QWidget* parent)
     : QWidget(parent)
     , ui(new Ui::DownloadManager)
@@ -221,7 +223,7 @@ void DownloadManager::timerEvent(QTimerEvent* e)
     if (e->timerId() == m_timer.timerId()) {
         if (!ui->list->count()) {
             ui->speedLabel->clear();
-            setWindowTitle(tr("Download Manager"));
+            setWindowTitle(i18n("Download Manager"));
 #ifdef Q_OS_WIN
             taskbarButton()->progress()->hide();
 #endif
@@ -259,11 +261,11 @@ void DownloadManager::timerEvent(QTimerEvent* e)
         }
 
 #ifndef Q_OS_WIN
-        ui->speedLabel->setText(tr("%1% of %2 files (%3) %4 remaining").arg(QString::number(progress), QString::number(progresses.count()),
+        ui->speedLabel->setText(i18n("%1% of %2 files (%3) %4 remaining", progress, progresses.count(),
                                 DownloadItem::currentSpeedToString(speed),
                                 DownloadItem::remaingTimeToString(remaining)));
 #endif
-        setWindowTitle(tr("%1% - Download Manager").arg(progress));
+        setWindowTitle(i18n("%1% - Download Manager", progress));
 #ifdef Q_OS_WIN
         taskbarButton()->progress()->show();
         taskbarButton()->progress()->setValue(progress);
@@ -333,7 +335,7 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
             break;
 
         case Save:
-            downloadPath = QFileDialog::getSaveFileName(mApp->activeWindow(), tr("Save file as..."), m_lastDownloadPath + QLatin1Char('/') + fileName);
+            downloadPath = QFileDialog::getSaveFileName(mApp->activeWindow(), i18n("Save file as..."), m_lastDownloadPath + QLatin1Char('/') + fileName);
 
             if (!downloadPath.isEmpty()) {
                 m_lastDownloadPath = QFileInfo(downloadPath).absolutePath();
@@ -343,13 +345,13 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
             break;
 
         case SavePage: {
-            const QString mhtml = tr("MIME HTML Archive (*.mhtml)");
-            const QString htmlSingle = tr("HTML Page, single (*.html)");
-            const QString htmlComplete = tr("HTML Page, complete (*.html)");
+            const QString mhtml = i18n("MIME HTML Archive (*.mhtml)");
+            const QString htmlSingle = i18n("HTML Page, single (*.html)");
+            const QString htmlComplete = i18n("HTML Page, complete (*.html)");
             const QString filter = QStringLiteral("%1;;%2;;%3").arg(mhtml, htmlSingle, htmlComplete);
 
             QString selectedFilter;
-            downloadPath = QFileDialog::getSaveFileName(mApp->activeWindow(), tr("Save page as..."),
+            downloadPath = QFileDialog::getSaveFileName(mApp->activeWindow(), i18n("Save page as..."),
                                                         m_lastDownloadPath + QLatin1Char('/') + fileName,
                                                         filter, &selectedFilter);
 
@@ -443,14 +445,14 @@ void DownloadManager::downloadFinished(bool success)
 
     if (downloadingAllFilesFinished) {
         if (success && qApp->activeWindow() != this) {
-            mApp->desktopNotifications()->showNotification(QIcon::fromTheme(QSL("download"), QIcon(QSL(":icons/other/download.svg"))).pixmap(48), tr("Falkon: Download Finished"), tr("All files have been successfully downloaded."));
+            mApp->desktopNotifications()->showNotification(QIcon::fromTheme(QSL("download"), QIcon(QSL(":icons/other/download.svg"))).pixmap(48), i18n("Falkon: Download Finished"), i18n("All files have been successfully downloaded."));
             if (!m_closeOnFinish) {
                 raise();
                 activateWindow();
             }
         }
         ui->speedLabel->clear();
-        setWindowTitle(tr("Download Manager"));
+        setWindowTitle(i18n("Download Manager"));
 #ifdef Q_OS_WIN
         taskbarButton()->progress()->hide();
 #endif
@@ -497,8 +499,8 @@ void DownloadManager::closeEvent(QCloseEvent* e)
 {
     if (mApp->windowCount() == 0) { // No main windows -> we are going to quit
         if (!canClose()) {
-            QMessageBox::StandardButton button = QMessageBox::warning(this, tr("Warning"),
-                                                 tr("Are you sure you want to quit? All uncompleted downloads will be cancelled!"), QMessageBox::Yes | QMessageBox::No);
+            QMessageBox::StandardButton button = QMessageBox::warning(this, i18n("Warning"),
+                                                 i18n("Are you sure you want to quit? All uncompleted downloads will be cancelled!"), QMessageBox::Yes | QMessageBox::No);
             if (button != QMessageBox::Yes) {
                 e->ignore();
                 return;

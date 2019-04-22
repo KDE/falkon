@@ -668,11 +668,11 @@ void FancyTabWidget::contextMenuEvent(QContextMenuEvent* e)
 
 //    QSignalMapper* mapper = new QSignalMapper(this);
 //    QActionGroup* group = new QActionGroup(this);
-//    AddMenuItem(mapper, group, tr("Large sidebar"), Mode_LargeSidebar);
-//    AddMenuItem(mapper, group, tr("Small sidebar"), Mode_SmallSidebar);
-//    AddMenuItem(mapper, group, tr("Plain sidebar"), Mode_PlainSidebar);
-//    AddMenuItem(mapper, group, tr("Tabs on top"), Mode_Tabs);
-//    AddMenuItem(mapper, group, tr("Icons on top"), Mode_IconOnlyTabs);
+//    AddMenuItem(mapper, group, i18n("Large sidebar"), Mode_LargeSidebar);
+//    AddMenuItem(mapper, group, i18n("Small sidebar"), Mode_SmallSidebar);
+//    AddMenuItem(mapper, group, i18n("Plain sidebar"), Mode_PlainSidebar);
+//    AddMenuItem(mapper, group, i18n("Tabs on top"), Mode_Tabs);
+//    AddMenuItem(mapper, group, i18n("Icons on top"), Mode_IconOnlyTabs);
 //    menu_->addActions(group->actions());
 
 //    connect(mapper, SIGNAL(mapped(int)), SLOT(SetMode(int)));

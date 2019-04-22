@@ -40,6 +40,8 @@
 #include <QWebEngineHistory>
 #include <QClipboard>
 
+#include <KLocalizedString>
+
 AddTabButton::AddTabButton(TabWidget* tabWidget, TabBar* tabBar)
     : ToolButton(tabBar)
     , m_tabBar(tabBar)
@@ -49,7 +51,7 @@ AddTabButton::AddTabButton(TabWidget* tabWidget, TabBar* tabBar)
     setAutoRaise(true);
     setFocusPolicy(Qt::NoFocus);
     setAcceptDrops(true);
-    setToolTip(TabWidget::tr("New Tab"));
+    setToolTip(i18n("New Tab"));
 }
 
 void AddTabButton::wheelEvent(QWheelEvent* event)
@@ -124,7 +126,7 @@ TabWidget::TabWidget(BrowserWindow *window, QWidget *parent)
     m_buttonClosedTabs->setObjectName("tabwidget-button-closedtabs");
     m_buttonClosedTabs->setMenu(m_menuClosedTabs);
     m_buttonClosedTabs->setPopupMode(QToolButton::InstantPopup);
-    m_buttonClosedTabs->setToolTip(tr("Closed tabs"));
+    m_buttonClosedTabs->setToolTip(i18n("Closed tabs"));
     m_buttonClosedTabs->setAutoRaise(true);
     m_buttonClosedTabs->setFocusPolicy(Qt::NoFocus);
     m_buttonClosedTabs->setShowMenuInside(true);
@@ -135,7 +137,7 @@ TabWidget::TabWidget(BrowserWindow *window, QWidget *parent)
     m_buttonListTabs->setObjectName("tabwidget-button-opentabs");
     m_buttonListTabs->setMenu(m_menuTabs);
     m_buttonListTabs->setPopupMode(QToolButton::InstantPopup);
-    m_buttonListTabs->setToolTip(tr("List of tabs"));
+    m_buttonListTabs->setToolTip(i18n("List of tabs"));
     m_buttonListTabs->setAutoRaise(true);
     m_buttonListTabs->setFocusPolicy(Qt::NoFocus);
     m_buttonListTabs->setShowMenuInside(true);
@@ -292,12 +294,12 @@ void TabWidget::aboutToShowClosedTabsMenu()
     }
 
     if (m_menuClosedTabs->isEmpty()) {
-        m_menuClosedTabs->addAction(tr("Empty"))->setEnabled(false);
+        m_menuClosedTabs->addAction(i18n("Empty"))->setEnabled(false);
     }
     else {
         m_menuClosedTabs->addSeparator();
-        m_menuClosedTabs->addAction(tr("Restore All Closed Tabs"), this, &TabWidget::restoreAllClosedTabs);
-        m_menuClosedTabs->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear list"), this, &TabWidget::clearClosedTabsList);
+        m_menuClosedTabs->addAction(i18n("Restore All Closed Tabs"), this, &TabWidget::restoreAllClosedTabs);
+        m_menuClosedTabs->addAction(QIcon::fromTheme(QSL("edit-clear")), i18n("Clear list"), this, &TabWidget::clearClosedTabsList);
     }
 }
 

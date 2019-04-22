@@ -27,6 +27,8 @@
 #include <QLineEdit>
 #include <QLabel>
 
+#include <KLocalizedString>
+
 UserAgentDialog::UserAgentDialog(QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::UserAgentDialog)
@@ -96,7 +98,7 @@ void UserAgentDialog::addSite()
     QString site;
     QString userAgent;
 
-    if (showEditDialog(tr("Add new site"), &site, &userAgent)) {
+    if (showEditDialog(i18n("Add new site"), &site, &userAgent)) {
         QTableWidgetItem* siteItem = new QTableWidgetItem(site);
         QTableWidgetItem* userAgentItem = new QTableWidgetItem(userAgent);
 
@@ -134,7 +136,7 @@ void UserAgentDialog::editSite()
         QString site = siteItem->text();
         QString userAgent = userAgentItem->text();
 
-        if (showEditDialog(tr("Edit site"), &site, &userAgent)) {
+        if (showEditDialog(i18n("Edit site"), &site, &userAgent)) {
             siteItem->setText(site);
             userAgentItem->setText(userAgent);
         }
@@ -213,8 +215,8 @@ bool UserAgentDialog::showEditDialog(const QString &title, QString* rSite, QStri
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
 
-    layout->addRow(new QLabel(tr("Site domain: ")), editSite);
-    layout->addRow(new QLabel(tr("User Agent: ")), editAgent);
+    layout->addRow(new QLabel(i18n("Site domain: ")), editSite);
+    layout->addRow(new QLabel(i18n("User Agent: ")), editAgent);
     layout->addRow(box);
 
     editSite->setText(*rSite);

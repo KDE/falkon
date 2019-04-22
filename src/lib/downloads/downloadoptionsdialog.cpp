@@ -23,6 +23,8 @@
 #include <QMimeDatabase>
 #include <QWebEngineDownloadItem>
 
+#include <KLocalizedString>
+
 DownloadOptionsDialog::DownloadOptionsDialog(const QString &fileName, QWebEngineDownloadItem *downloadItem, QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::DownloadOptionsDialog)
@@ -46,7 +48,7 @@ DownloadOptionsDialog::DownloadOptionsDialog(const QString &fileName, QWebEngine
         ui->iconLabel->setPixmap(fileIcon.pixmap(22));
     }
 
-    setWindowTitle(tr("Opening %1").arg(fileName));
+    setWindowTitle(i18n("Opening %1", fileName));
 
     ui->buttonBox->setFocus();
 
@@ -109,7 +111,7 @@ int DownloadOptionsDialog::exec()
 void DownloadOptionsDialog::copyDownloadLink()
 {
     QApplication::clipboard()->setText(m_downloadItem->url().toString());
-    ui->copyDownloadLink->setText(tr("Download link copied."));
+    ui->copyDownloadLink->setText(i18n("Download link copied."));
 }
 
 void DownloadOptionsDialog::emitDialogFinished(int status)

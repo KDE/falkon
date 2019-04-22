@@ -29,6 +29,8 @@
 #include <QMenu>
 #include <QTimer>
 
+#include <KLocalizedString>
+
 BookmarksManager::BookmarksManager(BrowserWindow* window, QWidget* parent)
     : QWidget(parent)
     , ui(new Ui::BookmarksManager)
@@ -102,16 +104,16 @@ void BookmarksManager::bookmarksSelected(const QList<BookmarkItem*> &items)
 void BookmarksManager::createContextMenu(const QPoint &pos)
 {
     QMenu menu;
-    QAction* actNewTab = menu.addAction(IconProvider::newTabIcon(), tr("Open in new tab"));
-    QAction* actNewWindow = menu.addAction(IconProvider::newWindowIcon(), tr("Open in new window"));
-    QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), tr("Open in new private window"));
+    QAction* actNewTab = menu.addAction(IconProvider::newTabIcon(), i18n("Open in new tab"));
+    QAction* actNewWindow = menu.addAction(IconProvider::newWindowIcon(), i18n("Open in new window"));
+    QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), i18n("Open in new private window"));
 
     menu.addSeparator();
-    QAction *actNewBookmark = menu.addAction(tr("New Bookmark"), this, SLOT(addBookmark()));
-    QAction *actNewFolder = menu.addAction(tr("New Folder"), this, &BookmarksManager::addFolder);
-    QAction *actNewSeparator = menu.addAction(tr("New Separator"), this, &BookmarksManager::addSeparator);
+    QAction *actNewBookmark = menu.addAction(i18n("New Bookmark"), this, SLOT(addBookmark()));
+    QAction *actNewFolder = menu.addAction(i18n("New Folder"), this, &BookmarksManager::addFolder);
+    QAction *actNewSeparator = menu.addAction(i18n("New Separator"), this, &BookmarksManager::addSeparator);
     menu.addSeparator();
-    QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"));
+    QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), i18n("Delete"));
 
     connect(actNewTab, SIGNAL(triggered()), this, SLOT(openBookmarkInNewTab()));
     connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewWindow()));
@@ -174,7 +176,7 @@ void BookmarksManager::openBookmarkInNewPrivateWindow(BookmarkItem* item)
 void BookmarksManager::addBookmark()
 {
     BookmarkItem* item = new BookmarkItem(BookmarkItem::Url);
-    item->setTitle(tr("New Bookmark"));
+    item->setTitle(i18n("New Bookmark"));
     item->setUrl(QUrl(QSL("http://")));
     addBookmark(item);
 }
@@ -182,7 +184,7 @@ void BookmarksManager::addBookmark()
 void BookmarksManager::addFolder()
 {
     BookmarkItem* item = new BookmarkItem(BookmarkItem::Folder);
-    item->setTitle(tr("New Folder"));
+    item->setTitle(i18n("New Folder"));
     addBookmark(item);
 }
 

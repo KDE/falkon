@@ -44,6 +44,8 @@
 #include <QElapsedTimer>
 #endif
 
+#include <KLocalizedString>
+
 Q_GLOBAL_STATIC(AdBlockManager, qz_adblock_manager)
 
 AdBlockManager::AdBlockManager(QObject* parent)
@@ -181,9 +183,9 @@ bool AdBlockManager::addSubscriptionFromUrl(const QUrl &url)
     if (subscriptionTitle.isEmpty() || subscriptionUrl.isEmpty())
         return false;
 
-    const QString message = AdBlockManager::tr("Do you want to add <b>%1</b> subscription?").arg(subscriptionTitle);
+    const QString message = i18n("Do you want to add <b>%1</b> subscription?", subscriptionTitle);
 
-    QMessageBox::StandardButton result = QMessageBox::question(nullptr, AdBlockManager::tr("AdBlock Subscription"), message, QMessageBox::Yes | QMessageBox::No);
+    QMessageBox::StandardButton result = QMessageBox::question(nullptr, i18n("AdBlock Subscription"), message, QMessageBox::Yes | QMessageBox::No);
     if (result == QMessageBox::Yes) {
         AdBlockManager::instance()->addSubscription(subscriptionTitle, subscriptionUrl);
         AdBlockManager::instance()->showDialog();
@@ -313,12 +315,12 @@ void AdBlockManager::load()
 
     // Add EasyList + NoCoinList if subscriptions are empty
     if (m_subscriptions.isEmpty()) {
-        AdBlockSubscription *easyList = new AdBlockSubscription(tr("EasyList"), this);
+        AdBlockSubscription *easyList = new AdBlockSubscription(i18n("EasyList"), this);
         easyList->setUrl(QUrl(ADBLOCK_EASYLIST_URL));
         easyList->setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/easylist.txt"));
         m_subscriptions.append(easyList);
 
-        AdBlockSubscription *noCoinList = new AdBlockSubscription(tr("NoCoin List"), this);
+        AdBlockSubscription *noCoinList = new AdBlockSubscription(i18n("NoCoin List"), this);
         noCoinList->setUrl(QUrl(ADBLOCK_NOCOINLIST_URL));
         noCoinList->setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/nocoinlist.txt"));
         m_subscriptions.append(noCoinList);

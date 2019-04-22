@@ -30,6 +30,8 @@
 #include <QMessageBox>
 #include <QTimer>
 
+#include <KLocalizedString>
+
 PluginsManager::PluginsManager(QWidget* parent)
     : QWidget(parent)
     , ui(new Ui::PluginsList)
@@ -194,7 +196,7 @@ void PluginsManager::itemChanged(QListWidgetItem* item)
 
     if (item->checkState() == Qt::Checked && !plugin.isLoaded()) {
         item->setCheckState(Qt::Unchecked);
-        QMessageBox::critical(this, tr("Error!"), tr("Cannot load extension!"));
+        QMessageBox::critical(this, i18n("Error!"), i18n("Cannot load extension!"));
     }
 
     item->setData(Qt::UserRole + 10, QVariant::fromValue(plugin));
@@ -233,8 +235,8 @@ void PluginsManager::removeClicked()
 
     Plugins::Plugin plugin = item->data(Qt::UserRole + 10).value<Plugins::Plugin>();
 
-    const auto button = QMessageBox::warning(this, tr("Confirmation"),
-                                             tr("Are you sure you want to remove '%1'?").arg(plugin.pluginSpec.name),
+    const auto button = QMessageBox::warning(this, i18n("Confirmation"),
+                                             i18n("Are you sure you want to remove '%1'?", plugin.pluginSpec.name),
                                              QMessageBox::Yes | QMessageBox::No);
     if (button != QMessageBox::Yes) {
         return;

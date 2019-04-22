@@ -26,6 +26,7 @@
 #include "iconprovider.h"
 #include "checkboxdialog.h"
 
+#include <KLocalizedString>
 
 TabContextMenu::TabContextMenu(int index, BrowserWindow *window, Options options)
     : QMenu()
@@ -60,7 +61,7 @@ static bool canCloseTabs(const QString &settingsKey, const QString &title, const
         dialog.setDefaultButton(QMessageBox::No);
         dialog.setWindowTitle(title);
         dialog.setText(description);
-        dialog.setCheckBoxText(TabBar::tr("Don't ask again"));
+        dialog.setCheckBoxText(i18n("Don't ask again"));
         dialog.setIcon(QMessageBox::Question);
 
         if (dialog.exec() != QMessageBox::Yes) {
@@ -77,7 +78,7 @@ static bool canCloseTabs(const QString &settingsKey, const QString &title, const
 
 void TabContextMenu::closeAllButCurrent()
 {
-    if (canCloseTabs(QLatin1String("AskOnClosingAllButCurrent"), tr("Close Tabs"), tr("Do you really want to close other tabs?"))) {
+    if (canCloseTabs(QLatin1String("AskOnClosingAllButCurrent"), i18n("Close Tabs"), i18n("Do you really want to close other tabs?"))) {
         emit closeAllButCurrent(m_clickedTab);
     }
 }
@@ -85,10 +86,10 @@ void TabContextMenu::closeAllButCurrent()
 void TabContextMenu::closeToRight()
 {
     const QString label = m_options & HorizontalTabs
-            ? tr("Do you really want to close all tabs to the right?")
-            : tr("Do you really want to close all tabs to the bottom?");
+            ? i18n("Do you really want to close all tabs to the right?")
+            : i18n("Do you really want to close all tabs to the bottom?");
 
-    if (canCloseTabs(QLatin1String("AskOnClosingToRight"), tr("Close Tabs"), label)) {
+    if (canCloseTabs(QLatin1String("AskOnClosingToRight"), i18n("Close Tabs"), label)) {
         emit closeToRight(m_clickedTab);
     }
 }
@@ -96,10 +97,10 @@ void TabContextMenu::closeToRight()
 void TabContextMenu::closeToLeft()
 {
     const QString label = m_options & HorizontalTabs
-            ? tr("Do you really want to close all tabs to the left?")
-            : tr("Do you really want to close all tabs to the top?");
+            ? i18n("Do you really want to close all tabs to the left?")
+            : i18n("Do you really want to close all tabs to the top?");
 
-    if (canCloseTabs(QLatin1String("AskOnClosingToLeft"), tr("Close Tabs"), label)) {
+    if (canCloseTabs(QLatin1String("AskOnClosingToLeft"), i18n("Close Tabs"), label)) {
         emit closeToLeft(m_clickedTab);
     }
 }
@@ -114,46 +115,46 @@ void TabContextMenu::init()
         }
 
         if (m_window->weView(m_clickedTab)->isLoading()) {
-            addAction(QIcon::fromTheme(QSL("process-stop")), tr("&Stop Tab"), this, SLOT(stopTab()));
+            addAction(QIcon::fromTheme(QSL("process-stop")), i18n("&Stop Tab"), this, SLOT(stopTab()));
         }
         else {
-            addAction(QIcon::fromTheme(QSL("view-refresh")), tr("&Reload Tab"), this, SLOT(reloadTab()));
+            addAction(QIcon::fromTheme(QSL("view-refresh")), i18n("&Reload Tab"), this, SLOT(reloadTab()));
         }
 
-        addAction(QIcon::fromTheme("tab-duplicate"), tr("&Duplicate Tab"), this, SLOT(duplicateTab()));
+        addAction(QIcon::fromTheme("tab-duplicate"), i18n("&Duplicate Tab"), this, SLOT(duplicateTab()));
 
         if (m_options & ShowDetachTabAction && (mApp->windowCount() > 1 || tabWidget->count() > 1)) {
-            addAction(QIcon::fromTheme("tab-detach"), tr("D&etach Tab"), this, SLOT(detachTab()));
+            addAction(QIcon::fromTheme("tab-detach"), i18n("D&etach Tab"), this, SLOT(detachTab()));
         }
 
-        addAction(webTab->isPinned() ? tr("Un&pin Tab") : tr("&Pin Tab"), this, &TabContextMenu::pinTab);
-        addAction(webTab->isMuted() ? tr("Un&mute Tab") : tr("&Mute Tab"), this, &TabContextMenu::muteTab);
+        addAction(webTab->isPinned() ? i18n("Un&pin Tab") : i18n("&Pin Tab"), this, &TabContextMenu::pinTab);
+        addAction(webTab->isMuted() ? i18n("Un&mute Tab") : i18n("&Mute Tab"), this, &TabContextMenu::muteTab);
 
         if (!webTab->isRestored()) {
-            addAction(tr("Load Tab"), this, SLOT(loadTab()));
+            addAction(i18n("Load Tab"), this, SLOT(loadTab()));
         } else {
-            addAction(tr("Unload Tab"), this, SLOT(unloadTab()));
+            addAction(i18n("Unload Tab"), this, SLOT(unloadTab()));
         }
 
         addSeparator();
-        addAction(tr("Re&load All Tabs"), tabWidget, &TabWidget::reloadAllTabs);
-        addAction(tr("Bookmark &All Tabs"), m_window, &BrowserWindow::bookmarkAllTabs);
+        addAction(i18n("Re&load All Tabs"), tabWidget, &TabWidget::reloadAllTabs);
+        addAction(i18n("Bookmark &All Tabs"), m_window, &BrowserWindow::bookmarkAllTabs);
         addSeparator();
 
         if (m_options & ShowCloseOtherTabsActions) {
-            addAction(tr("Close Ot&her Tabs"), this, SLOT(closeAllButCurrent()));
-            addAction(m_options & HorizontalTabs ? tr("Close Tabs To The Right") : tr("Close Tabs To The Bottom"), this, SLOT(closeToRight()));
-            addAction(m_options & HorizontalTabs ? tr("Close Tabs To The Left") : tr("Close Tabs To The Top"), this, SLOT(closeToLeft()));
+            addAction(i18n("Close Ot&her Tabs"), this, SLOT(closeAllButCurrent()));
+            addAction(m_options & HorizontalTabs ? i18n("Close Tabs To The Right") : i18n("Close Tabs To The Bottom"), this, SLOT(closeToRight()));
+            addAction(m_options & HorizontalTabs ? i18n("Close Tabs To The Left") : i18n("Close Tabs To The Top"), this, SLOT(closeToLeft()));
             addSeparator();
         }
 
         addAction(m_window->action(QSL("Other/RestoreClosedTab")));
-        addAction(QIcon::fromTheme("window-close"), tr("Cl&ose Tab"), this, &TabContextMenu::closeTab);
+        addAction(QIcon::fromTheme("window-close"), i18n("Cl&ose Tab"), this, &TabContextMenu::closeTab);
     } else {
-        addAction(IconProvider::newTabIcon(), tr("&New tab"), m_window, &BrowserWindow::addTab);
+        addAction(IconProvider::newTabIcon(), i18n("&New tab"), m_window, &BrowserWindow::addTab);
         addSeparator();
-        addAction(tr("Reloa&d All Tabs"), tabWidget, &TabWidget::reloadAllTabs);
-        addAction(tr("Bookmark &All Tabs"), m_window, &BrowserWindow::bookmarkAllTabs);
+        addAction(i18n("Reloa&d All Tabs"), tabWidget, &TabWidget::reloadAllTabs);
+        addAction(i18n("Bookmark &All Tabs"), m_window, &BrowserWindow::bookmarkAllTabs);
         addSeparator();
         addAction(m_window->action(QSL("Other/RestoreClosedTab")));
     }

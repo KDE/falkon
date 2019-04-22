@@ -34,6 +34,8 @@
 #include <QTimer>
 #include <QMouseEvent>
 
+#include <KLocalizedString>
+
 class StatusBarButton : public ClickableLabel
 {
 public:
@@ -247,7 +249,7 @@ void StatusBar::mousePressEvent(QMouseEvent *event)
 {
     if (event->button() == Qt::RightButton) {
         QMenu context;
-        context.addAction(tr("Hide"), m_window, &BrowserWindow::toggleShowStatusBar);
+        context.addAction(i18n("Hide"), m_window, &BrowserWindow::toggleShowStatusBar);
         context.exec(QCursor::pos());
     }
 

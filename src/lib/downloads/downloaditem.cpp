@@ -38,6 +38,8 @@
 #include <QWebEngineDownloadItem>
 #include <QtWebEngineWidgetsVersion>
 
+#include <KLocalizedString>
+
 #ifdef Q_OS_WIN
 #include "Shlwapi.h"
 #include "shellapi.h"
@@ -70,7 +72,7 @@ DownloadItem::DownloadItem(QListWidgetItem *item, QWebEngineDownloadItem* downlo
     ui->cancelButton->setPixmap(QIcon::fromTheme(QSL("process-stop")).pixmap(20, 20));
     ui->pauseResumeButton->setPixmap(QIcon::fromTheme(QSL("media-playback-pause")).pixmap(20, 20));
     ui->fileName->setText(m_fileName);
-    ui->downloadInfo->setText(tr("Remaining time unavailable"));
+    ui->downloadInfo->setText(i18n("Remaining time unavailable"));
 
     setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(customContextMenuRequested(QPoint)));
@@ -125,15 +127,15 @@ void DownloadItem::finished()
     switch (m_download->state()) {
     case QWebEngineDownloadItem::DownloadCompleted:
         success = true;
-        ui->downloadInfo->setText(tr("Done - %1 (%2)").arg(host, QDateTime::currentDateTime().toString(Qt::DefaultLocaleShortDate)));
+        ui->downloadInfo->setText(i18n("Done - %1 (%2)", host, QDateTime::currentDateTime().toString(Qt::DefaultLocaleShortDate)));
         break;
 
     case QWebEngineDownloadItem::DownloadInterrupted:
-        ui->downloadInfo->setText(tr("Error - %1").arg(host));
+        ui->downloadInfo->setText(i18n("Error - %1", host));
         break;
 
     case QWebEngineDownloadItem::DownloadCancelled:
-        ui->downloadInfo->setText(tr("Cancelled - %1").arg(host));
+        ui->downloadInfo->setText(i18n("Cancelled - %1", host));
         break;
 
     default:
@@ -181,49 +183,43 @@ int DownloadItem::progress()
 
 bool DownloadItem::isCancelled()
 {
-    return ui->downloadInfo->text().startsWith(tr("Cancelled"));
+    return ui->downloadInfo->text().startsWith(i18n("Cancelled"));
 }
 
 QString DownloadItem::remaingTimeToString(QTime time)
 {
     if (time < QTime(0, 0, 10)) {
-        return tr("few seconds");
+        return i18n("few seconds");
     }
     else if (time < QTime(0, 1)) {
-        //~ singular %n second
-        //~ plural %n seconds
-        return tr("%n seconds", "", time.second());
+        return i18np("%1 second", "%1 seconds", time.second());
     }
     else if (time < QTime(1, 0)) {
-        //~ singular %n minute
-        //~ plural %n minutes
-        return tr("%n minutes", "", time.minute());
+        return i18np("%1 minute", "%1 minutes", time.minute());
     }
     else {
-        //~ singular %n hour
-        //~ plural %n hours
-        return tr("%n hours", "", time.hour());
+        return i18np("%1 hour", "%1 hours", time.hour());
     }
 }
 
 QString DownloadItem::currentSpeedToString(double speed)
 {
     if (speed < 0) {
-        return tr("Unknown speed");
+        return i18n("Unknown speed");
     }
 
     speed /= 1024; // kB
     if (speed < 1000) {
-        return QString::number(speed, 'f', 0) + QLatin1String(" ") + tr("kB/s");
+        return QString::number(speed, 'f', 0) + QLatin1String(" ") + i18n("kB/s");
     }
 
     speed /= 1024; //MB
     if (speed < 1000) {
-        return QString::number(speed, 'f', 2) + QLatin1String(" ") + tr("MB/s");
+        return QString::number(speed, 'f', 2) + QLatin1String(" ") + i18n("MB/s");
     }
 
     speed /= 1024; //GB
-    return QString::number(speed, 'f', 2) + QLatin1String(" ") + tr("GB/s");
+    return QString::number(speed, 'f', 2) + QLatin1String(" ") + i18n("GB/s");
 }
 
 void DownloadItem::updateDownloadInfo(double currSpeed, qint64 received, qint64 total)
@@ -253,11 +249,11 @@ void DownloadItem::updateDownloadInfo(double currSpeed, qint64 received, qint64 
     QString currSize = QzTools::fileSizeToString(received);
     QString fileSize = QzTools::fileSizeToString(total);
 
-    if (fileSize == tr("Unknown size")) {
-        ui->downloadInfo->setText(tr("%2 - unknown size (%3)").arg(currSize, speed));
+    if (fileSize == i18n("Unknown size")) {
+        ui->downloadInfo->setText(i18n("%1 - unknown size (%2)", currSize, speed));
     }
     else {
-        ui->downloadInfo->setText(tr("Remaining %1 - %2 of %3 (%4)").arg(remTime, currSize, fileSize, speed));
+        ui->downloadInfo->setText(i18n("Remaining %1 - %2 of %3 (%4)", remTime, currSize, fileSize, speed));
     }
 }
 
@@ -274,7 +270,7 @@ void DownloadItem::stop()
     ui->cancelButton->hide();
     ui->pauseResumeButton->hide();
     m_item->setSizeHint(sizeHint());
-    ui->downloadInfo->setText(tr("Cancelled - %1").arg(m_download->url().host()));
+    ui->downloadInfo->setText(i18n("Cancelled - %1", m_download->url().host()));
     m_download->cancel();
     m_downloading = false;
 
@@ -290,7 +286,7 @@ void DownloadItem::pauseResume()
     } else {
         m_download->pause();
         ui->pauseResumeButton->setPixmap(QIcon::fromTheme(QSL("media-playback-start")).pixmap(20, 20));
-        ui->downloadInfo->setText(tr("Paused - %1").arg(m_download->url().host()));
+        ui->downloadInfo->setText(i18n("Paused - %1", m_download->url().host()));
     }
 #endif
 }
@@ -304,25 +300,25 @@ void DownloadItem::mouseDoubleClickEvent(QMouseEvent* e)
 void DownloadItem::customContextMenuRequested(const QPoint &pos)
 {
     QMenu menu;
-    menu.addAction(QIcon::fromTheme("document-open"), tr("Open File"), this, &DownloadItem::openFile);
+    menu.addAction(QIcon::fromTheme("document-open"), i18n("Open File"), this, &DownloadItem::openFile);
 
-    menu.addAction(tr("Open Folder"), this, &DownloadItem::openFolder);
+    menu.addAction(i18n("Open Folder"), this, &DownloadItem::openFolder);
     menu.addSeparator();
-    menu.addAction(QIcon::fromTheme("edit-copy"), tr("Copy Download Link"), this, &DownloadItem::copyDownloadLink);
+    menu.addAction(QIcon::fromTheme("edit-copy"), i18n("Copy Download Link"), this, &DownloadItem::copyDownloadLink);
     menu.addSeparator();
-    menu.addAction(QIcon::fromTheme("process-stop"), tr("Cancel downloading"), this, &DownloadItem::stop)->setEnabled(m_downloading);
+    menu.addAction(QIcon::fromTheme("process-stop"), i18n("Cancel downloading"), this, &DownloadItem::stop)->setEnabled(m_downloading);
 
 #if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     if (m_download->isPaused()) {
-        menu.addAction(QIcon::fromTheme("media-playback-start"), tr("Resume downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
+        menu.addAction(QIcon::fromTheme("media-playback-start"), i18n("Resume downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
     } else {
-        menu.addAction(QIcon::fromTheme("media-playback-pause"), tr("Pause downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
+        menu.addAction(QIcon::fromTheme("media-playback-pause"), i18n("Pause downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
     }
 #endif
 
-    menu.addAction(QIcon::fromTheme("list-remove"), tr("Remove From List"), this, &DownloadItem::clear)->setEnabled(!m_downloading);
+    menu.addAction(QIcon::fromTheme("list-remove"), i18n("Remove From List"), this, &DownloadItem::clear)->setEnabled(!m_downloading);
 
-    if (m_downloading || ui->downloadInfo->text().startsWith(tr("Cancelled")) || ui->downloadInfo->text().startsWith(tr("Error"))) {
+    if (m_downloading || ui->downloadInfo->text().startsWith(i18n("Cancelled")) || ui->downloadInfo->text().startsWith(i18n("Error"))) {
         menu.actions().at(0)->setEnabled(false);
     }
     menu.exec(mapToGlobal(pos));
@@ -348,7 +344,7 @@ void DownloadItem::openFile()
         QDesktopServices::openUrl(QUrl::fromLocalFile(info.absoluteFilePath()));
     }
     else {
-        QMessageBox::warning(m_item->listWidget()->parentWidget(), tr("Not found"), tr("Sorry, the file \n %1 \n was not found!").arg(info.absoluteFilePath()));
+        QMessageBox::warning(m_item->listWidget()->parentWidget(), i18n("Not found"), i18n("Sorry, the file \n %1 \n was not found!", info.absoluteFilePath()));
     }
 }
 

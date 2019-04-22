@@ -55,6 +55,8 @@
 #include <QNetworkReply>
 #include <QSaveFile>
 
+#include <KLocalizedString>
+
 AdBlockSubscription::AdBlockSubscription(const QString &title, QObject* parent)
     : QObject(parent)
     , m_reply(nullptr)
@@ -171,7 +173,7 @@ void AdBlockSubscription::subscriptionDownloaded()
     m_reply = 0;
 
     if (error) {
-        emit subscriptionError(tr("Cannot load subscription!"));
+        emit subscriptionError(i18n("Cannot load subscription!"));
         return;
     }
 
@@ -284,7 +286,7 @@ AdBlockSubscription::~AdBlockSubscription()
 // AdBlockCustomList
 
 AdBlockCustomList::AdBlockCustomList(QObject* parent)
-    : AdBlockSubscription(tr("Custom Rules"), parent)
+    : AdBlockSubscription(i18n("Custom Rules"), parent)
 {
     setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/customlist.txt"));
 }

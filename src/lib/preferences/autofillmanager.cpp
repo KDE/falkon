@@ -33,6 +33,8 @@
 #include <QFileDialog>
 #include <QClipboard>
 
+#include <KLocalizedString>
+
 AutoFillManager::AutoFillManager(QWidget* parent)
     : QWidget(parent)
     , ui(new Ui::AutoFillManager)
@@ -64,10 +66,10 @@ AutoFillManager::AutoFillManager(QWidget* parent)
     connect(ui->treePass, &TreeWidget::customContextMenuRequested, this, &AutoFillManager::passwordContextMenu);
 
     QMenu* menu = new QMenu(this);
-    menu->addAction(tr("Import Passwords from File..."), this, &AutoFillManager::importPasswords);
-    menu->addAction(tr("Export Passwords to File..."), this, &AutoFillManager::exportPasswords);
+    menu->addAction(i18n("Import Passwords from File..."), this, &AutoFillManager::importPasswords);
+    menu->addAction(i18n("Export Passwords to File..."), this, &AutoFillManager::exportPasswords);
     ui->importExport->setMenu(menu);
-    ui->search->setPlaceholderText(tr("Search"));
+    ui->search->setPlaceholderText(i18n("Search"));
 
     // Password backends
     ui->currentBackend->setText(QString("<b>%1</b>").arg(m_passwordManager->activeBackend()->name()));
@@ -79,7 +81,7 @@ AutoFillManager::AutoFillManager(QWidget* parent)
 
 void AutoFillManager::loadPasswords()
 {
-    ui->showPasswords->setText(tr("Show Passwords"));
+    ui->showPasswords->setText(i18n("Show Passwords"));
     m_passwordsShown = false;
 
     QVector<PasswordEntry> allEntries = mApp->autoFill()->getAllFormData();
@@ -127,7 +129,7 @@ void AutoFillManager::changePasswordBackend()
         items << i.value()->name();
     }
 
-    QString item = QInputDialog::getItem(this, tr("Change backend..."), tr("Change backend:"), items, current, false);
+    QString item = QInputDialog::getItem(this, i18n("Change backend..."), i18n("Change backend:"), items, current, false);
 
     // Switch backends
     if (!item.isEmpty()) {
@@ -168,7 +170,7 @@ void AutoFillManager::showPasswords()
             item->setText(2, "*****");
         }
 
-        ui->showPasswords->setText(tr("Show Passwords"));
+        ui->showPasswords->setText(i18n("Show Passwords"));
         m_passwordsShown = false;
 
         return;
@@ -176,7 +178,7 @@ void AutoFillManager::showPasswords()
 
     m_passwordsShown = true;
 
-    int result = QMessageBox::question(this, tr("Show Passwords"), tr("Are you sure that you want to show all passwords?"),
+    int result = QMessageBox::question(this, i18n("Show Passwords"), i18n("Are you sure that you want to show all passwords?"),
                                        QMessageBox::Yes | QMessageBox::No, QMessageBox::No);
     if (result != QMessageBox::Yes) {
         return;
@@ -191,7 +193,7 @@ void AutoFillManager::showPasswords()
         item->setText(2, item->data(0, Qt::UserRole + 10).value<PasswordEntry>().password);
     }
 
-    ui->showPasswords->setText(tr("Hide Passwords"));
+    ui->showPasswords->setText(i18n("Hide Passwords"));
 }
 
 void AutoFillManager::copyPassword()
@@ -229,8 +231,8 @@ void AutoFillManager::removePass()
 
 void AutoFillManager::removeAllPass()
 {
-    QMessageBox::StandardButton button = QMessageBox::warning(this, tr("Confirmation"),
-                                         tr("Are you sure you want to delete all passwords on your computer?"), QMessageBox::Yes | QMessageBox::No);
+    QMessageBox::StandardButton button = QMessageBox::warning(this, i18n("Confirmation"),
+                                         i18n("Are you sure you want to delete all passwords on your computer?"), QMessageBox::Yes | QMessageBox::No);
     if (button != QMessageBox::Yes) {
         return;
     }
@@ -249,7 +251,7 @@ void AutoFillManager::editPass()
     PasswordEntry entry = curItem->data(0, Qt::UserRole + 10).value<PasswordEntry>();
 
     bool ok;
-    QString text = QInputDialog::getText(this, tr("Edit password"), tr("Change password:"), QLineEdit::Normal, entry.password, &ok);
+    QString text = QInputDialog::getText(this, i18n("Edit password"), i18n("Change password:"), QLineEdit::Normal, entry.password, &ok);
 
     if (ok && !text.isEmpty() && text != entry.password) {
         QByteArray oldPass = "=" + PasswordManager::urlEncodePassword(entry.password);
@@ -298,7 +300,7 @@ void AutoFillManager::showExceptions()
 
 void AutoFillManager::importPasswords()
 {
-    m_fileName = QzTools::getOpenFileName("AutoFill-ImportPasswords", this, tr("Choose file..."), QDir::homePath() + "/passwords.xml", "*.xml");
+    m_fileName = QzTools::getOpenFileName("AutoFill-ImportPasswords", this, i18n("Choose file..."), QDir::homePath() + "/passwords.xml", "*.xml");
 
     if (m_fileName.isEmpty()) {
         return;
@@ -309,7 +311,7 @@ void AutoFillManager::importPasswords()
 
 void AutoFillManager::exportPasswords()
 {
-    m_fileName = QzTools::getSaveFileName("AutoFill-ExportPasswords", this, tr("Choose file..."), QDir::homePath() + "/passwords.xml", "*.xml");
+    m_fileName = QzTools::getSaveFileName("AutoFill-ExportPasswords", this, i18n("Choose file..."), QDir::homePath() + "/passwords.xml", "*.xml");
 
     if (m_fileName.isEmpty()) {
         return;
@@ -323,7 +325,7 @@ void AutoFillManager::slotImportPasswords()
     QFile file(m_fileName);
 
     if (!file.open(QFile::ReadOnly)) {
-        ui->importExportLabel->setText(tr("Cannot read file!"));
+        ui->importExportLabel->setText(i18n("Cannot read file!"));
         return;
     }
 
@@ -332,7 +334,7 @@ void AutoFillManager::slotImportPasswords()
     bool status = mApp->autoFill()->importPasswords(file.readAll());
     file.close();
 
-    ui->importExportLabel->setText(status ? tr("Successfully imported") : tr("Error while importing!"));
+    ui->importExportLabel->setText(status ? i18n("Successfully imported") : i18n("Error while importing!"));
     loadPasswords();
 
     QApplication::restoreOverrideCursor();
@@ -343,7 +345,7 @@ void AutoFillManager::slotExportPasswords()
     QFile file(m_fileName);
 
     if (!file.open(QFile::WriteOnly)) {
-        ui->importExportLabel->setText(tr("Cannot write to file!"));
+        ui->importExportLabel->setText(i18n("Cannot write to file!"));
         return;
     }
 
@@ -352,7 +354,7 @@ void AutoFillManager::slotExportPasswords()
     file.write(mApp->autoFill()->exportPasswords());
     file.close();
 
-    ui->importExportLabel->setText(tr("Successfully exported"));
+    ui->importExportLabel->setText(i18n("Successfully exported"));
 
     QApplication::restoreOverrideCursor();
 }
@@ -369,10 +371,10 @@ void AutoFillManager::passwordContextMenu(const QPoint &pos)
 {
     QMenu *menu = new QMenu;
     menu->setAttribute(Qt::WA_DeleteOnClose);
-    menu->addAction(tr("Copy Username"), this, &AutoFillManager::copyUsername);
-    menu->addAction(tr("Copy Password"), this, &AutoFillManager::copyPassword);
+    menu->addAction(i18n("Copy Username"), this, &AutoFillManager::copyUsername);
+    menu->addAction(i18n("Copy Password"), this, &AutoFillManager::copyPassword);
     menu->addSeparator();
-    menu->addAction(tr("Edit Password"), this, &AutoFillManager::editPass);
+    menu->addAction(i18n("Edit Password"), this, &AutoFillManager::editPass);
     menu->popup(ui->treePass->viewport()->mapToGlobal(pos));
 }
 

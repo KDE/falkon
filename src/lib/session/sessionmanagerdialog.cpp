@@ -24,6 +24,8 @@
 #include <QFileInfo>
 #include <QDateTime>
 
+#include <KLocalizedString>
+
 SessionManagerDialog::SessionManagerDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SessionManagerDialog)
@@ -137,7 +139,7 @@ void SessionManagerDialog::updateButtons()
     ui->cloneButton->setEnabled(item && !isBackup);
     ui->deleteButton->setEnabled(item && !isBackup && !isDefault && !isActive);
     ui->switchToButton->setEnabled(item && !isActive);
-    ui->switchToButton->setText(isBackup ? tr("Restore") : tr("Switch To"));
+    ui->switchToButton->setText(isBackup ? i18n("Restore") : i18n("Switch To"));
 }
 
 void SessionManagerDialog::updateItem(QTreeWidgetItem *item)

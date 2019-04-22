@@ -30,6 +30,8 @@
 
 #include <QMessageBox>
 
+#include <KLocalizedString>
+
 BookmarksImportDialog::BookmarksImportDialog(QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::BookmarksImportDialog)
@@ -110,19 +112,19 @@ void BookmarksImportDialog::nextPage()
         }
 
         if (m_importer->error()) {
-            QMessageBox::critical(this, tr("Error!"), m_importer->errorString());
+            QMessageBox::critical(this, i18n("Error!"), m_importer->errorString());
             return;
         }
 
         if (!m_importedFolder || m_importedFolder->children().isEmpty()) {
-            QMessageBox::warning(this, tr("Error!"), tr("No bookmarks were found."));
+            QMessageBox::warning(this, i18n("Error!"), i18n("No bookmarks were found."));
             return;
         }
 
         Q_ASSERT(m_importedFolder->isFolder());
 
         ui->stackedWidget->setCurrentIndex(++m_currentPage);
-        ui->nextButton->setText(tr("Finish"));
+        ui->nextButton->setText(i18n("Finish"));
         showExportedBookmarks();
         break;
 
@@ -154,7 +156,7 @@ void BookmarksImportDialog::previousPage()
     case 2:
         showImporterPage();
 
-        ui->nextButton->setText(tr("Next >"));
+        ui->nextButton->setText(i18n("Next >"));
         ui->nextButton->setEnabled(true);
         ui->backButton->setEnabled(true);
         ui->stackedWidget->setCurrentIndex(--m_currentPage);
@@ -183,7 +185,7 @@ void BookmarksImportDialog::setFile()
 void BookmarksImportDialog::showImporterPage()
 {
     ui->iconLabel->setPixmap(ui->browserList->currentItem()->icon().pixmap(48));
-    ui->importingFromLabel->setText(tr("<b>Importing from %1</b>").arg(ui->browserList->currentItem()->text()));
+    ui->importingFromLabel->setText(i18n("<b>Importing from %1</b>", ui->browserList->currentItem()->text()));
     ui->fileText1->setText(m_importer->description());
     ui->standardDirLabel->setText(QSL("<i>%1</i>").arg(m_importer->standardPath()));
 }

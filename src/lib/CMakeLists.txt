@@ -279,8 +279,7 @@ if (APPLE)
     set(SRCS ${SRCS} tools/disablewindowtabbbing.mm)
 endif()
 
-# TODO: use ki18n_wrap_ui?
-qt5_wrap_ui(SRCS
+ki18n_wrap_ui(SRCS
     adblock/adblockaddsubscriptiondialog.ui
     adblock/adblockdialog.ui
     autofill/autofillnotification.ui
@@ -349,6 +348,7 @@ target_link_libraries(FalkonPrivate
     Qt5::PrintSupport
     Qt5::QuickWidgets
     Qt5::WebChannel
+    KF5::I18n
     KF5::Archive
     ${OPENSSL_CRYPTO_LIBRARY}
 )

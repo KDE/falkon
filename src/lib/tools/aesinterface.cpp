@@ -29,6 +29,8 @@
 #include <QByteArray>
 #include <QMessageBox>
 
+#include <KLocalizedString>
+
 //////////////////////////////////////////////
 /// Version 1:
 /// init(): n=5, EVP_CIPHER=EVP_aes_256_cbc(), EVP_MD=EVP_sha256(), Random IV
@@ -144,7 +146,7 @@ QByteArray AesInterface::decrypt(const QByteArray &cipherData, const QByteArray 
     }
 
     if (cipherSections.at(0).toInt() > AesInterface::VERSION) {
-        QMessageBox::information(0, tr("Warning!"), tr("Data has been encrypted with a newer version of Falkon."
+        QMessageBox::information(0, i18n("Warning!"), i18n("Data has been encrypted with a newer version of Falkon."
                                  "\nPlease install latest version of Falkon."));
         return QByteArray();
     }

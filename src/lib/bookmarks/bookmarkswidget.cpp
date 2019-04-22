@@ -27,6 +27,8 @@
 
 #include <QTimer>
 
+#include <KLocalizedString>
+
 #define HIDE_DELAY 270
 
 BookmarksWidget::BookmarksWidget(WebView* view, BookmarkItem* bookmark, QWidget* parent)
@@ -95,7 +97,7 @@ void BookmarksWidget::bookmarkEdited()
     }
 
     m_edited = true;
-    ui->bookmarksButton->setText(tr("Update Bookmark"));
+    ui->bookmarksButton->setText(i18n("Update Bookmark"));
     ui->bookmarksButton->setFlat(true);
 }
 
@@ -109,16 +111,16 @@ void BookmarksWidget::init()
     const SpeedDial::Page page = m_speedDial->pageForUrl(m_view->url());
     if (page.url.isEmpty()) {
         ui->speeddialButton->setFlat(true);
-        ui->speeddialButton->setText(tr("Add to Speed Dial"));
+        ui->speeddialButton->setText(i18n("Add to Speed Dial"));
     }
     else {
         ui->speeddialButton->setFlat(false);
-        ui->speeddialButton->setText(tr("Remove from Speed Dial"));
+        ui->speeddialButton->setText(i18n("Remove from Speed Dial"));
     }
 
     // Init Bookmarks button
     if (m_bookmark) {
-        ui->bookmarksButton->setText(tr("Remove from Bookmarks"));
+        ui->bookmarksButton->setText(i18n("Remove from Bookmarks"));
         ui->bookmarksButton->setFlat(false);
 
         Q_ASSERT(m_bookmark->parent());

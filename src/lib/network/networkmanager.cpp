@@ -42,6 +42,8 @@
 #include <QWebEngineCertificateError>
 #include <QtWebEngineWidgetsVersion>
 
+#include <KLocalizedString>
+
 #if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
 #include <QWebEngineUrlScheme>
 #endif
@@ -84,9 +86,9 @@ bool NetworkManager::certificateError(const QWebEngineCertificateError &error, Q
     if (m_ignoredSslErrors.contains(host) && m_ignoredSslErrors.value(host) == error.error())
         return true;
 
-    QString title = tr("SSL Certificate Error!");
-    QString text1 = tr("The page you are trying to access has the following errors in the SSL certificate:");
-    QString text2 = tr("Would you like to make an exception for this certificate?");
+    QString title = i18n("SSL Certificate Error!");
+    QString text1 = i18n("The page you are trying to access has the following errors in the SSL certificate:");
+    QString text2 = i18n("Would you like to make an exception for this certificate?");
 
     QString message = QSL("<b>%1</b><p>%2</p><ul><li>%3</li></ul><p>%4</p>").arg(title, text1, error.errorDescription(), text2);
 
@@ -113,21 +115,21 @@ bool NetworkManager::certificateError(const QWebEngineCertificateError &error, Q
 void NetworkManager::authentication(const QUrl &url, QAuthenticator *auth, QWidget *parent)
 {
     QDialog* dialog = new QDialog(parent);
-    dialog->setWindowTitle(tr("Authorization required"));
+    dialog->setWindowTitle(i18n("Authorization required"));
 
     QFormLayout* formLa = new QFormLayout(dialog);
 
     QLabel* label = new QLabel(dialog);
     QLabel* userLab = new QLabel(dialog);
     QLabel* passLab = new QLabel(dialog);
-    userLab->setText(tr("Username: "));
-    passLab->setText(tr("Password: "));
+    userLab->setText(i18n("Username: "));
+    passLab->setText(i18n("Password: "));
 
     QLineEdit* user = new QLineEdit(dialog);
     QLineEdit* pass = new QLineEdit(dialog);
     pass->setEchoMode(QLineEdit::Password);
     QCheckBox* save = new QCheckBox(dialog);
-    save->setText(tr("Save username and password for this site"));
+    save->setText(i18n("Save username and password for this site"));
 
     QDialogButtonBox* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
@@ -135,8 +137,8 @@ void NetworkManager::authentication(const QUrl &url, QAuthenticator *auth, QWidg
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
 
-    label->setText(tr("A username and password are being requested by %1. "
-                      "The site says: \"%2\"").arg(url.host(), auth->realm().toHtmlEscaped()));
+    label->setText(i18n("A username and password are being requested by %1. "
+                      "The site says: \"%2\"", url.host(), auth->realm().toHtmlEscaped()));
 
     formLa->addRow(label);
     formLa->addRow(userLab, user);
@@ -199,15 +201,15 @@ void NetworkManager::proxyAuthentication(const QString &proxyHost, QAuthenticato
     }
 
     QDialog* dialog = new QDialog(parent);
-    dialog->setWindowTitle(tr("Proxy authorization required"));
+    dialog->setWindowTitle(i18n("Proxy authorization required"));
 
     QFormLayout* formLa = new QFormLayout(dialog);
 
     QLabel* label = new QLabel(dialog);
     QLabel* userLab = new QLabel(dialog);
     QLabel* passLab = new QLabel(dialog);
-    userLab->setText(tr("Username: "));
-    passLab->setText(tr("Password: "));
+    userLab->setText(i18n("Username: "));
+    passLab->setText(i18n("Password: "));
 
     QLineEdit* user = new QLineEdit(dialog);
     QLineEdit* pass = new QLineEdit(dialog);
@@ -219,7 +221,7 @@ void NetworkManager::proxyAuthentication(const QString &proxyHost, QAuthenticato
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
 
-    label->setText(tr("A username and password are being requested by proxy %1. ").arg(proxyHost));
+    label->setText(i18n("A username and password are being requested by proxy %1.", proxyHost));
     formLa->addRow(label);
     formLa->addRow(userLab, user);
     formLa->addRow(passLab, pass);

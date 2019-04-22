@@ -27,6 +27,8 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 
+#include <KLocalizedString>
+
 Updater::Version::Version(const QString &s)
     : isValid(false)
     , majorVersion(-1)
@@ -148,7 +150,7 @@ void Updater::downCompleted()
         Version updated(html);
 
         if (current.isValid && updated.isValid && current < updated) {
-            mApp->desktopNotifications()->showNotification(QIcon(":icons/falkon.svg").pixmap(48), tr("Update available"), tr("New version of Falkon is ready to download."));
+            mApp->desktopNotifications()->showNotification(QIcon(":icons/falkon.svg").pixmap(48), i18n("Update available"), i18n("New version of Falkon is ready to download."));
         }
     }
 
@@ -157,5 +159,5 @@ void Updater::downCompleted()
 
 void Updater::downloadNewVersion()
 {
-    m_window->tabWidget()->addView(QUrl::fromEncoded(QByteArray(Qz::WWWADDRESS) + QByteArray("/download")), tr("Update"), Qz::NT_NotSelectedTab);
+    m_window->tabWidget()->addView(QUrl::fromEncoded(QByteArray(Qz::WWWADDRESS) + QByteArray("/download")), i18n("Update"), Qz::NT_NotSelectedTab);
 }

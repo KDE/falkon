@@ -30,6 +30,8 @@
 #include <QClipboard>
 #include <QKeyEvent>
 
+#include <KLocalizedString>
+
 HistoryManager::HistoryManager(BrowserWindow* window, QWidget* parent)
     : QWidget(parent)
     , ui(new Ui::HistoryManager)
@@ -75,8 +77,8 @@ QByteArray HistoryManager::saveState()
 
 void HistoryManager::clearHistory()
 {
-    QMessageBox::StandardButton button = QMessageBox::warning(this, tr("Confirmation"),
-                                         tr("Are you sure you want to delete all history?"), QMessageBox::Yes | QMessageBox::No);
+    QMessageBox::StandardButton button = QMessageBox::warning(this, i18n("Confirmation"),
+                                         i18n("Are you sure you want to delete all history?"), QMessageBox::Yes | QMessageBox::No);
     if (button != QMessageBox::Yes) {
         return;
     }
@@ -142,16 +144,16 @@ void HistoryManager::openUrlInNewPrivateWindow(const QUrl &url)
 void HistoryManager::createContextMenu(const QPoint &pos)
 {
     QMenu menu;
-    QAction* actNewTab = menu.addAction(IconProvider::newTabIcon(), tr("Open in new tab"));
-    QAction* actNewWindow = menu.addAction(IconProvider::newWindowIcon(), tr("Open in new window"));
-    QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), tr("Open in new private window"));
+    QAction* actNewTab = menu.addAction(IconProvider::newTabIcon(), i18n("Open in new tab"));
+    QAction* actNewWindow = menu.addAction(IconProvider::newWindowIcon(), i18n("Open in new window"));
+    QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), i18n("Open in new private window"));
 
     menu.addSeparator();
-    QAction* actCopyUrl = menu.addAction(tr("Copy url"), this, &HistoryManager::copyUrl);
-    QAction* actCopyTitle = menu.addAction(tr("Copy title"), this, &HistoryManager::copyTitle);
+    QAction* actCopyUrl = menu.addAction(i18n("Copy url"), this, &HistoryManager::copyUrl);
+    QAction* actCopyTitle = menu.addAction(i18n("Copy title"), this, &HistoryManager::copyTitle);
 
     menu.addSeparator();
-    QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"));
+    QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), i18n("Delete"));
 
     connect(actNewTab, SIGNAL(triggered()), this, SLOT(openUrlInNewTab()));
     connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openUrlInNewWindow()));

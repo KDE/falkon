@@ -23,11 +23,13 @@
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 
+#include <KLocalizedString>
+
 LicenseViewer::LicenseViewer(QWidget* parent)
     : QWidget()
 {
     setAttribute(Qt::WA_DeleteOnClose);
-    setWindowTitle(tr("License Viewer"));
+    setWindowTitle(i18n("License Viewer"));
 
     m_textBrowser = new QTextBrowser(this);
 

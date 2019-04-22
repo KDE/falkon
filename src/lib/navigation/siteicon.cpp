@@ -28,6 +28,8 @@
 #include <QApplication>
 #include <QContextMenuEvent>
 
+#include <KLocalizedString>
+
 SiteIcon::SiteIcon(LocationBar *parent)
     : ToolButton(parent)
     , m_window(nullptr)
@@ -37,7 +39,7 @@ SiteIcon::SiteIcon(LocationBar *parent)
     setObjectName("locationbar-siteicon");
     setToolButtonStyle(Qt::ToolButtonIconOnly);
     setCursor(Qt::ArrowCursor);
-    setToolTip(LocationBar::tr("Show information about this page"));
+    setToolTip(i18n("Show information about this page"));
     setFocusPolicy(Qt::NoFocus);
 
     m_updateTimer = new QTimer(this);

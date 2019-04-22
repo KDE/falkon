@@ -28,10 +28,12 @@
 
 #include <QMenu>
 
+#include <KLocalizedString>
+
 AdBlockIcon::AdBlockIcon(QObject *parent)
     : AbstractButtonInterface(parent)
 {
-    setTitle(tr("AdBlock"));
+    setTitle(i18n("AdBlock"));
     setIcon(QIcon(QSL(":adblock/data/adblock.png")));
 
     updateState();
@@ -49,7 +51,7 @@ QString AdBlockIcon::id() const
 
 QString AdBlockIcon::name() const
 {
-    return tr("AdBlock Icon");
+    return i18n("AdBlock Icon");
 }
 
 void AdBlockIcon::toggleCustomFilter()
@@ -83,19 +85,19 @@ void AdBlockIcon::updateState()
     }
     if (!AdBlockManager::instance()->isEnabled()) {
         setActive(false);
-        setToolTip(tr("AdBlock is disabled"));
+        setToolTip(i18n("AdBlock is disabled"));
         setBadgeText(QString());
         return;
     }
     if (!AdBlockManager::instance()->canRunOnScheme(view->url().scheme())) {
         setActive(false);
-        setToolTip(tr("AdBlock is disabled on this site "));
+        setToolTip(i18n("AdBlock is disabled on this site "));
         setBadgeText(QString());
         return;
     }
 
     setActive(true);
-    setToolTip(tr("AdBlock is active"));
+    setToolTip(i18n("AdBlock is active"));
     updateBadgeText();
 }
 
@@ -142,7 +144,7 @@ void AdBlockIcon::clicked(ClickController *controller)
 
     QMenu *menu = new QMenu();
     menu->setAttribute(Qt::WA_DeleteOnClose);
-    menu->addAction(tr("Show AdBlock &Settings"), manager, SLOT(showDialog()));
+    menu->addAction(i18n("Show AdBlock &Settings"), manager, SLOT(showDialog()));
     menu->addSeparator();
 
     if (!pageUrl.host().isEmpty() && manager->isEnabled() && manager->canRunOnScheme(pageUrl.scheme())) {
@@ -150,13 +152,13 @@ void AdBlockIcon::clicked(ClickController *controller)
         const QString hostFilter = QSL("@@||%1^$document").arg(host);
         const QString pageFilter = QSL("@@|%1|$document").arg(pageUrl.toString());
 
-        QAction* act = menu->addAction(tr("Disable on %1").arg(host));
+        QAction* act = menu->addAction(i18n("Disable on %1", host));
         act->setCheckable(true);
         act->setChecked(customList->containsFilter(hostFilter));
         act->setData(hostFilter);
         connect(act, &QAction::triggered, this, &AdBlockIcon::toggleCustomFilter);
 
-        act = menu->addAction(tr("Disable only on this page"));
+        act = menu->addAction(i18n("Disable only on this page"));
         act->setCheckable(true);
         act->setChecked(customList->containsFilter(pageFilter));
         act->setData(pageFilter);

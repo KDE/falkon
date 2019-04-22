@@ -18,6 +18,8 @@
 #include "mainapplication.h"
 #include "proxystyle.h"
 
+#include <KLocalizedString>
+
 #include <iostream>
 
 #ifndef Q_OS_WIN
@@ -65,6 +67,7 @@ int main(int argc, char* argv[])
     }
 
     MainApplication app(argc, argv);
+    KLocalizedString::setApplicationDomain("falkon");
 
     if (app.isClosing())
         return 0;

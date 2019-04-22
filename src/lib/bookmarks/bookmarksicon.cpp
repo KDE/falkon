@@ -27,6 +27,8 @@
 #include <QStyle>
 #include <QContextMenuEvent>
 
+#include <KLocalizedString>
+
 BookmarksIcon::BookmarksIcon(QWidget* parent)
     : ClickableLabel(parent)
     , m_view(0)
@@ -34,7 +36,7 @@ BookmarksIcon::BookmarksIcon(QWidget* parent)
 {
     setObjectName("locationbar-bookmarkicon");
     setCursor(Qt::PointingHandCursor);
-    setToolTip(tr("Bookmark this Page"));
+    setToolTip(i18n("Bookmark this Page"));
     setFocusPolicy(Qt::ClickFocus);
 
     connect(mApp->bookmarks(), SIGNAL(bookmarkAdded(BookmarkItem*)), this, SLOT(bookmarksChanged()));
@@ -97,7 +99,7 @@ void BookmarksIcon::setBookmarkSaved()
     setProperty("bookmarked", QVariant(true));
     style()->unpolish(this);
     style()->polish(this);
-    setToolTip(tr("Edit this bookmark"));
+    setToolTip(i18n("Edit this bookmark"));
 }
 
 void BookmarksIcon::setBookmarkDisabled()
@@ -105,7 +107,7 @@ void BookmarksIcon::setBookmarkDisabled()
     setProperty("bookmarked", QVariant(false));
     style()->unpolish(this);
     style()->polish(this);
-    setToolTip(tr("Bookmark this Page"));
+    setToolTip(i18n("Bookmark this Page"));
 }
 
 void BookmarksIcon::contextMenuEvent(QContextMenuEvent* ev)

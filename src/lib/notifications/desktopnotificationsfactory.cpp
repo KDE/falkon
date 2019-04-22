@@ -26,6 +26,8 @@
 #include <QFile>
 #include <QDir>
 
+#include <KLocalizedString>
+
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
 #include <QDBusInterface>
 #endif
@@ -112,7 +114,7 @@ void DesktopNotificationsFactory::nativeNotificationPreview()
 
     m_notifType = DesktopNative;
     const QPixmap icon = mApp->getWindow()->windowIcon().pixmap(64);
-    showNotification(icon, QObject::tr("Native System Notification"), tr("Preview"));
+    showNotification(icon, i18n("Native System Notification"), i18n("Preview"));
     m_notifType = type;
 }
 

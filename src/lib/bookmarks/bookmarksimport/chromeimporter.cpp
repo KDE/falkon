@@ -23,6 +23,8 @@
 #include <QVariantList>
 #include <QJsonDocument>
 
+#include <KLocalizedString>
+
 ChromeImporter::ChromeImporter(QObject* parent)
     : BookmarksImporter(parent)
 {
@@ -30,7 +32,7 @@ ChromeImporter::ChromeImporter(QObject* parent)
 
 QString ChromeImporter::description() const
 {
-    return BookmarksImporter::tr("Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. "
+    return i18n("Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. "
                                  "This file is usually located in");
 }
 
@@ -47,7 +49,7 @@ QString ChromeImporter::standardPath() const
 
 QString ChromeImporter::getPath(QWidget* parent)
 {
-    m_path = QFileDialog::getOpenFileName(parent, BookmarksImporter::tr("Choose file..."), standardPath(), QSL("Bookmarks (Bookmarks)"));
+    m_path = QFileDialog::getOpenFileName(parent, i18n("Choose file..."), standardPath(), QSL("Bookmarks (Bookmarks)"));
     return m_path;
 }
 
@@ -56,7 +58,7 @@ bool ChromeImporter::prepareImport()
     m_file.setFileName(m_path);
 
     if (!m_file.open(QFile::ReadOnly)) {
-        setError(BookmarksImporter::tr("Unable to open file."));
+        setError(i18n("Unable to open file."));
         return false;
     }
 
@@ -73,7 +75,7 @@ BookmarkItem* ChromeImporter::importBookmarks()
     const QVariant res = json.toVariant();
 
     if (err.error != QJsonParseError::NoError || res.type() != QVariant::Map) {
-        setError(BookmarksImporter::tr("Cannot parse JSON file!"));
+        setError(i18n("Cannot parse JSON file!"));
         return nullptr;
     }
 

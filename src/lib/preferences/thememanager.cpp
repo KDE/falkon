@@ -28,6 +28,8 @@
 #include <QDir>
 #include <QMessageBox>
 
+#include <KLocalizedString>
+
 ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
     : QWidget(parent)
     , ui(new Ui::ThemeManager)
@@ -96,8 +98,8 @@ void ThemeManager::removeTheme()
     }
     Theme currentTheme = m_themeHash[currentItem->data(Qt::UserRole).toString()];
 
-    const auto button = QMessageBox::warning(this, tr("Confirmation"),
-                                             tr("Are you sure you want to remove '%1'?").arg(currentTheme.name),
+    const auto button = QMessageBox::warning(this, i18n("Confirmation"),
+                                             i18n("Are you sure you want to remove '%1'?", currentTheme.name),
                                              QMessageBox::Yes | QMessageBox::No);
     if (button != QMessageBox::Yes) {
         return;

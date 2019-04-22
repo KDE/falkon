@@ -19,13 +19,15 @@
 #include "mainapplication.h"
 #include "downloadmanager.h"
 
+#include <KLocalizedString>
+
 DownloadsButton::DownloadsButton(QObject *parent)
     : AbstractButtonInterface(parent)
     , m_manager(mApp->downloadManager())
 {
     setIcon(QIcon::fromTheme(QSL("edit-download"), QIcon(QSL(":icons/menu/download.svg"))));
-    setTitle(tr("Downloads"));
-    setToolTip(tr("Open Download Manager"));
+    setTitle(i18n("Downloads"));
+    setToolTip(i18n("Open Download Manager"));
 
     connect(this, &AbstractButtonInterface::clicked, this, &DownloadsButton::clicked);
     connect(m_manager, &DownloadManager::downloadsCountChanged, this, &DownloadsButton::updateState);
@@ -40,7 +42,7 @@ QString DownloadsButton::id() const
 
 QString DownloadsButton::name() const
 {
-    return tr("Downloads");
+    return i18n("Downloads");
 }
 
 void DownloadsButton::updateState()

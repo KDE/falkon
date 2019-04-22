@@ -24,6 +24,8 @@
 #include <QDrag>
 #include <QMenu>
 
+#include <KLocalizedString>
+
 SqueezeLabelV2::SqueezeLabelV2(QWidget* parent)
     : QLabel(parent)
 {
@@ -61,7 +63,7 @@ void SqueezeLabelV2::contextMenuEvent(QContextMenuEvent* event)
     }
 
     QMenu menu;
-    QAction* act = menu.addAction(tr("Copy"), this, &SqueezeLabelV2::copy);
+    QAction* act = menu.addAction(i18n("Copy"), this, &SqueezeLabelV2::copy);
     act->setShortcut(QKeySequence(QSL("Ctrl+C")));
     act->setEnabled(hasSelectedText());
 

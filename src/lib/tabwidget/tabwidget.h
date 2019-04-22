@@ -20,6 +20,7 @@
 
 #include <QMenu>
 #include <QPointer>
+#include <KLocalizedString>
 
 #include "tabstackedwidget.h"
 #include "toolbutton.h"
@@ -103,7 +104,7 @@ public:
 
 public Q_SLOTS:
     int addView(const LoadRequest &req, const Qz::NewTabPositionFlags &openFlags, bool selectLine = false, bool pinned = false);
-    int addView(const LoadRequest &req, const QString &title = tr("New tab"), const Qz::NewTabPositionFlags &openFlags = Qz::NT_SelectedTab, bool selectLine = false, int position = -1, bool pinned = false);
+    int addView(const LoadRequest &req, const QString &title = i18n("New tab"), const Qz::NewTabPositionFlags &openFlags = Qz::NT_SelectedTab, bool selectLine = false, int position = -1, bool pinned = false);
     int addView(WebTab *tab, const Qz::NewTabPositionFlags &openFlags);
     int insertView(int index, WebTab *tab, const Qz::NewTabPositionFlags &openFlags);
 

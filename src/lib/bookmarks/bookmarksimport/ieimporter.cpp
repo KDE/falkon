@@ -23,6 +23,8 @@
 #include <QSettings>
 #include <QFileDialog>
 
+#include <KLocalizedString>
+
 IeImporter::IeImporter(QObject* parent)
     : BookmarksImporter(parent)
 {
@@ -30,7 +32,7 @@ IeImporter::IeImporter(QObject* parent)
 
 QString IeImporter::description() const
 {
-    return BookmarksImporter::tr("Internet Explorer stores its bookmarks in <b>Favorites</b> folder. "
+    return i18n("Internet Explorer stores its bookmarks in <b>Favorites</b> folder. "
                                  "This folder is usually located in");
 }
 
@@ -41,7 +43,7 @@ QString IeImporter::standardPath() const
 
 QString IeImporter::getPath(QWidget* parent)
 {
-    m_path = QFileDialog::getExistingDirectory(parent, BookmarksImporter::tr("Choose file..."), standardPath());
+    m_path = QFileDialog::getExistingDirectory(parent, i18n("Choose file..."), standardPath());
     return m_path;
 }
 
@@ -49,7 +51,7 @@ bool IeImporter::prepareImport()
 {
     QDir dir(m_path);
     if (!dir.exists()) {
-        setError(BookmarksImporter::tr("Directory does not exist."));
+        setError(i18n("Directory does not exist."));
         return false;
     }
 

@@ -25,6 +25,8 @@
 
 #include <QMenu>
 
+#include <KLocalizedString>
+
 BookmarksSidebar::BookmarksSidebar(BrowserWindow* window, QWidget* parent)
     : QWidget(parent)
     , ui(new Ui::BookmarksSideBar)
@@ -100,12 +102,12 @@ void BookmarksSidebar::deleteBookmarks()
 void BookmarksSidebar::createContextMenu(const QPoint &pos)
 {
     QMenu menu;
-    QAction* actNewTab = menu.addAction(IconProvider::newTabIcon(), tr("Open in new tab"));
-    QAction* actNewWindow = menu.addAction(IconProvider::newWindowIcon(), tr("Open in new window"));
-    QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), tr("Open in new private window"));
+    QAction* actNewTab = menu.addAction(IconProvider::newTabIcon(), i18n("Open in new tab"));
+    QAction* actNewWindow = menu.addAction(IconProvider::newWindowIcon(), i18n("Open in new window"));
+    QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), i18n("Open in new private window"));
 
     menu.addSeparator();
-    QAction* actDelete = menu.addAction(QIcon::fromTheme("edit-delete"), tr("Delete"));
+    QAction* actDelete = menu.addAction(QIcon::fromTheme("edit-delete"), i18n("Delete"));
 
     connect(actNewTab, SIGNAL(triggered()), this, SLOT(openBookmarkInNewTab()));
     connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewWindow()));

@@ -31,8 +31,9 @@
 #include <QNetworkReply>
 #include <QMessageBox>
 #include <QBuffer>
-
 #include <QUrlQuery>
+
+#include <KLocalizedString>
 
 #define ENSURE_LOADED if (!m_settingsLoaded) loadSettings();
 
@@ -313,7 +314,7 @@ void SearchEnginesManager::addEngineFromForm(const QVariantMap &formData, WebVie
         engine.url.replace(inputName + QL1S("=SEARCH"), inputName + QL1S("=%s"));
     }
 
-    EditSearchEngine dialog(SearchEnginesDialog::tr("Add Search Engine"), view);
+    EditSearchEngine dialog(i18n("Add Search Engine"), view);
     dialog.setName(engine.name);
     dialog.setIcon(engine.icon);
     dialog.setUrl(engine.url);
@@ -399,15 +400,15 @@ void SearchEnginesManager::replyFinished()
 
     if (checkEngine(engine)) {
         addEngine(engine);
-        QMessageBox::information(0, tr("Search Engine Added"), tr("Search Engine \"%1\" has been successfully added.").arg(engine->name()));
+        QMessageBox::information(0, i18n("Search Engine Added"), i18n("Search Engine \"%1\" has been successfully added.", engine->name()));
     }
 }
 
 bool SearchEnginesManager::checkEngine(OpenSearchEngine* engine)
 {
     if (!engine->isValid()) {
-        QString errorString = tr("Search Engine is not valid!");
-        QMessageBox::warning(0, tr("Error"), tr("Error while adding Search Engine <br><b>Error Message: </b> %1").arg(errorString));
+        QString errorString = i18n("Search Engine is not valid!");
+        QMessageBox::warning(0, i18n("Error"), i18n("Error while adding Search Engine <br><b>Error Message: </b> %1", errorString));
 
         return false;
     }

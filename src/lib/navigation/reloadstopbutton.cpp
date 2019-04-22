@@ -20,6 +20,8 @@
 #include <QTimer>
 #include <QStyle>
 
+#include <KLocalizedString>
+
 ReloadStopButton::ReloadStopButton(QWidget* parent)
     : ToolButton(parent)
     , m_loadInProgress(false)
@@ -54,11 +56,11 @@ void ReloadStopButton::showReloadButton()
 void ReloadStopButton::updateButton()
 {
     if (m_loadInProgress) {
-        setToolTip(tr("Stop"));
+        setToolTip(i18n("Stop"));
         setObjectName(QSL("navigation-button-stop"));
     }
     else {
-        setToolTip(tr("Reload"));
+        setToolTip(i18n("Reload"));
         setObjectName(QSL("navigation-button-reload"));
     }
 

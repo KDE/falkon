@@ -22,6 +22,8 @@
 #include "animatedwidget.h"
 #include "iconprovider.h"
 
+#include <KLocalizedString>
+
 AutoFillNotification::AutoFillNotification(const QUrl &url, const PageFormData &formData, const PasswordEntry &updateData)
     : AnimatedWidget(AnimatedWidget::Down, 300, 0)
     , ui(new Ui::AutoFillNotification)
@@ -38,21 +40,21 @@ AutoFillNotification::AutoFillNotification(const QUrl &url, const PageFormData &
     QString userPart;
 
     if (!url.host().isEmpty()) {
-        hostPart = tr("on %1").arg(url.host());
+        hostPart = i18n("on %1", url.host());
     }
 
     if (!m_formData.username.isEmpty()) {
-        userPart = tr("for <b>%1</b>").arg(m_formData.username);
+        userPart = i18n("for <b>%1</b>", m_formData.username);
     }
 
     if (m_updateData.isValid()) {
-        ui->label->setText(tr("Do you want Falkon to update saved password %1?").arg(userPart));
+        ui->label->setText(i18n("Do you want Falkon to update saved password %1?", userPart));
 
         ui->remember->setVisible(false);
         ui->never->setVisible(false);
     }
     else {
-        ui->label->setText(tr("Do you want Falkon to remember the password %1 %2?").arg(userPart, hostPart));
+        ui->label->setText(i18n("Do you want Falkon to remember the password %1 %2?", userPart, hostPart));
 
         ui->update->setVisible(false);
     }

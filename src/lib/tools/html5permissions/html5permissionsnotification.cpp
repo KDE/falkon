@@ -24,6 +24,8 @@
 #include <QTimer>
 #include <QWebEnginePage>
 
+#include <KLocalizedString>
+
 HTML5PermissionsNotification::HTML5PermissionsNotification(const QUrl &origin, QWebEnginePage* page, const QWebEnginePage::Feature &feature)
     : AnimatedWidget(AnimatedWidget::Down, 300, 0)
     , ui(new Ui::HTML5PermissionsNotification)
@@ -36,31 +38,31 @@ HTML5PermissionsNotification::HTML5PermissionsNotification(const QUrl &origin, Q
 
     ui->close->setIcon(IconProvider::standardIcon(QStyle::SP_DialogCloseButton));
 
-    const QString site = m_origin.host().isEmpty() ? tr("this site") : QString("<b>%1</b>").arg(m_origin.host());
+    const QString site = m_origin.host().isEmpty() ? i18n("this site") : QString("<b>%1</b>").arg(m_origin.host());
 
     switch (feature) {
     case QWebEnginePage::Notifications:
-        ui->textLabel->setText(tr("Allow %1 to show desktop notifications?").arg(site));
+        ui->textLabel->setText(i18n("Allow %1 to show desktop notifications?", site));
         break;
 
     case QWebEnginePage::Geolocation:
-        ui->textLabel->setText(tr("Allow %1 to locate your position?").arg(site));
+        ui->textLabel->setText(i18n("Allow %1 to locate your position?", site));
         break;
 
     case QWebEnginePage::MediaAudioCapture:
-        ui->textLabel->setText(tr("Allow %1 to use your microphone?").arg(site));
+        ui->textLabel->setText(i18n("Allow %1 to use your microphone?", site));
         break;
 
     case QWebEnginePage::MediaVideoCapture:
-        ui->textLabel->setText(tr("Allow %1 to use your camera?").arg(site));
+        ui->textLabel->setText(i18n("Allow %1 to use your camera?", site));
         break;
 
     case QWebEnginePage::MediaAudioVideoCapture:
-        ui->textLabel->setText(tr("Allow %1 to use your microphone and camera?").arg(site));
+        ui->textLabel->setText(i18n("Allow %1 to use your microphone and camera?", site));
         break;
 
     case QWebEnginePage::MouseLock:
-        ui->textLabel->setText(tr("Allow %1 to hide your pointer?").arg(site));
+        ui->textLabel->setText(i18n("Allow %1 to hide your pointer?", site));
         break;
 
     default:

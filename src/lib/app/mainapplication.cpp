@@ -80,6 +80,8 @@
 #include "registerqappassociation.h"
 #endif
 
+#include <KLocalizedString>
+
 static bool s_testMode = false;
 
 MainApplication::MainApplication(int &argc, char** argv)
@@ -1068,10 +1070,10 @@ void MainApplication::checkDefaultWebBrowser()
     if (!associationManager()->isDefaultForAllCapabilities()) {
         CheckBoxDialog dialog(QMessageBox::Yes | QMessageBox::No, getWindow());
         dialog.setDefaultButton(QMessageBox::Yes);
-        dialog.setText(tr("Falkon is not currently your default browser. Would you like to make it your default browser?"));
-        dialog.setCheckBoxText(tr("Always perform this check when starting Falkon."));
+        dialog.setText(i18n("Falkon is not currently your default browser. Would you like to make it your default browser?"));
+        dialog.setCheckBoxText(i18n("Always perform this check when starting Falkon."));
         dialog.setDefaultCheckState(Qt::Checked);
-        dialog.setWindowTitle(tr("Default Browser"));
+        dialog.setWindowTitle(i18n("Default Browser"));
         dialog.setIcon(QMessageBox::Warning);
 
         if (dialog.exec() == QMessageBox::Yes) {
@@ -1192,9 +1194,9 @@ void MainApplication::createJumpList()
     // Tasks
     QWinJumpListCategory *tasks = jumpList->tasks();
     tasks->setVisible(true);
-    tasks->addLink(IconProvider::newTabIcon(), tr("Open new tab"), applicationFilePath(), {QSL("--new-tab")});
-    tasks->addLink(IconProvider::newWindowIcon(), tr("Open new window"), applicationFilePath(), {QSL("--new-window")});
-    tasks->addLink(IconProvider::privateBrowsingIcon(), tr("Open new private window"), applicationFilePath(), {QSL("--private-browsing")});
+    tasks->addLink(IconProvider::newTabIcon(), i18n("Open new tab"), applicationFilePath(), {QSL("--new-tab")});
+    tasks->addLink(IconProvider::newWindowIcon(), i18n("Open new window"), applicationFilePath(), {QSL("--new-window")});
+    tasks->addLink(IconProvider::privateBrowsingIcon(), i18n("Open new private window"), applicationFilePath(), {QSL("--private-browsing")});
 #endif
 }
 
@@ -1209,7 +1211,7 @@ void MainApplication::initPulseSupport()
 RegisterQAppAssociation* MainApplication::associationManager()
 {
     if (!m_registerQAppAssociation) {
-        QString desc = tr("Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL version 3 or (at your option) any later version. It is based on QtWebEngine and Qt Framework.");
+        QString desc = i18n("Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL version 3 or (at your option) any later version. It is based on QtWebEngine and Qt Framework.");
         QString fileIconPath = QApplication::applicationFilePath() + ",1";
         QString appIconPath = QApplication::applicationFilePath() + ",0";
         m_registerQAppAssociation = new RegisterQAppAssociation("Falkon", QApplication::applicationFilePath(), appIconPath, desc, this);

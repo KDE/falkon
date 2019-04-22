@@ -27,6 +27,8 @@
 #include <QSettings>
 #include <QDir>
 
+#include <KLocalizedString>
+
 RegisterQAppAssociation::RegisterQAppAssociation(QObject* parent) :
     QObject(parent)
 {
@@ -107,8 +109,8 @@ bool RegisterQAppAssociation::registerAppCapabilities()
         capabilitiesKey = regLocalMachine.value("Software/RegisteredApplications/" + _appRegisteredName).toString();
 
         if (capabilitiesKey.isEmpty()) {
-            QMessageBox::warning(mApp->getWindow(), tr("Warning!"),
-                                 tr("There are some problems. Please, reinstall Falkon.\n"
+            QMessageBox::warning(mApp->getWindow(), i18n("Warning!"),
+                                 i18n("There are some problems. Please, reinstall Falkon.\n"
                                     "Maybe relaunch with administrator right do a magic for you! ;)"));
             return false;
         }

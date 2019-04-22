@@ -29,6 +29,8 @@
 #include <QImage>
 #include <QJsonDocument>
 
+#include <KLocalizedString>
+
 #define ENSURE_LOADED if (!m_loaded) loadSettings();
 
 SpeedDial::SpeedDial(QObject* parent)
@@ -277,8 +279,8 @@ void SpeedDial::removeImageForUrl(const QString &url)
 
 QStringList SpeedDial::getOpenFileName()
 {
-    const QString fileTypes = QString("%3(*.png *.jpg *.jpeg *.bmp *.gif *.svg *.tiff)").arg(tr("Image files"));
-    const QString image = QzTools::getOpenFileName("SpeedDial-GetOpenFileName", 0, tr("Click to select image..."), QDir::homePath(), fileTypes);
+    const QString fileTypes = QString("%3(*.png *.jpg *.jpeg *.bmp *.gif *.svg *.tiff)").arg(i18n("Image files"));
+    const QString image = QzTools::getOpenFileName("SpeedDial-GetOpenFileName", 0, i18n("Click to select image..."), QDir::homePath(), fileTypes);
 
     if (image.isEmpty())
         return QStringList();
@@ -333,7 +335,7 @@ void SpeedDial::thumbnailCreated(const QPixmap &pixmap)
 
     if (pixmap.isNull()) {
         fileName = ":/html/broken-page.svg";
-        title = tr("Unable to load");
+        title = i18n("Unable to load");
     }
     else {
         if (!pixmap.save(fileName, "PNG")) {

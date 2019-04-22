@@ -23,6 +23,8 @@
 #include <QSslCertificate>
 #include <QDateTime>
 
+#include <KLocalizedString>
+
 QString CertificateInfoWidget::certificateItemText(const QSslCertificate &cert)
 {
     QString commonName = cert.subjectInfo(QSslCertificate::CommonName).isEmpty() ? QString() : cert.subjectInfo(QSslCertificate::CommonName).at(0);
@@ -297,7 +299,7 @@ QString CertificateInfoWidget::clearCertSpecialSymbols(const QStringList &string
 QString CertificateInfoWidget::showCertInfo(const QString &string)
 {
     if (string.isEmpty()) {
-        return QObject::tr("<not set in certificate>");
+        return i18n("<not set in certificate>");
     }
     else {
         return clearCertSpecialSymbols(string);

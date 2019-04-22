@@ -26,6 +26,8 @@
 
 #include <QWebEngineProfile>
 
+#include <KLocalizedString>
+
 History::History(QObject* parent)
     : QObject(parent)
     , m_isSaving(true)
@@ -79,7 +81,7 @@ void History::addHistoryEntry(const QUrl &url, QString title)
     }
 
     if (title.isEmpty()) {
-        title = tr("Empty Page");
+        title = i18n("Empty Page");
     }
 
     auto job = new SqlQueryJob(QSL("SELECT id, count, date, title FROM history WHERE url=?"), this);
@@ -269,29 +271,29 @@ QString History::titleCaseLocalizedMonth(int month)
 {
     switch (month) {
     case 1:
-        return tr("January");
+        return i18n("January");
     case 2:
-        return tr("February");
+        return i18n("February");
     case 3:
-        return tr("March");
+        return i18n("March");
     case 4:
-        return tr("April");
+        return i18n("April");
     case 5:
-        return tr("May");
+        return i18n("May");
     case 6:
-        return tr("June");
+        return i18n("June");
     case 7:
-        return tr("July");
+        return i18n("July");
     case 8:
-        return tr("August");
+        return i18n("August");
     case 9:
-        return tr("September");
+        return i18n("September");
     case 10:
-        return tr("October");
+        return i18n("October");
     case 11:
-        return tr("November");
+        return i18n("November");
     case 12:
-        return tr("December");
+        return i18n("December");
     default:
         qWarning("Month number out of range!");
         return QString();

@@ -89,12 +89,7 @@ endif()
 find_package(OpenSSL REQUIRED)
 
 # Mandatory: KF5
-find_package(KF5 REQUIRED COMPONENTS Archive)
-
-# KF5I18n: Mandatory with downloaded translations (only for ki18n_install)
-if (EXISTS "${CMAKE_SOURCE_DIR}/po")
-    find_package(KF5I18n REQUIRED)
-endif()
+find_package(KF5 REQUIRED COMPONENTS I18n Archive)
 
 # Optional: KWallet, KIO, KCrash, KCoreAddons
 set(KF5_MIN_VERSION "5.54.0")
@@ -179,8 +174,5 @@ if (BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(tests/benchmarks)
 endif()
-
-# Tell releaseme that po is already taken care of
-# SKIP_PO_INSTALL
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

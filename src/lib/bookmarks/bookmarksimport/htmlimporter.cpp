@@ -22,6 +22,8 @@
 #include <QFileDialog>
 #include <QRegularExpression>
 
+#include <KLocalizedString>
+
 HtmlImporter::HtmlImporter(QObject* parent)
     : BookmarksImporter(parent)
 {
@@ -29,7 +31,7 @@ HtmlImporter::HtmlImporter(QObject* parent)
 
 QString HtmlImporter::description() const
 {
-    return BookmarksImporter::tr("You can import bookmarks from any browser that supports HTML exporting. "
+    return i18n("You can import bookmarks from any browser that supports HTML exporting. "
                                  "This file has usually these suffixes");
 }
 
@@ -40,8 +42,8 @@ QString HtmlImporter::standardPath() const
 
 QString HtmlImporter::getPath(QWidget* parent)
 {
-    const QString filter = BookmarksImporter::tr("HTML Bookmarks") + QLatin1String(" (*.htm *.html)");
-    m_path = QFileDialog::getOpenFileName(parent, BookmarksImporter::tr("Choose file..."), QDir::homePath(), filter);
+    const QString filter = i18n("HTML Bookmarks") + QLatin1String(" (*.htm *.html)");
+    m_path = QFileDialog::getOpenFileName(parent, i18n("Choose file..."), QDir::homePath(), filter);
     return m_path;
 }
 
@@ -50,7 +52,7 @@ bool HtmlImporter::prepareImport()
     m_file.setFileName(m_path);
 
     if (!m_file.open(QFile::ReadOnly)) {
-        setError(BookmarksImporter::tr("Unable to open file."));
+        setError(i18n("Unable to open file."));
         return false;
     }
 

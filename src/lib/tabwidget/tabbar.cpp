@@ -39,6 +39,8 @@
 #include <QHBoxLayout>
 #include <QDrag>
 
+#include <KLocalizedString>
+
 #define MIMETYPE QSL("application/falkon.tabbar.tab")
 
 class TabBarTabMetrics : public QWidget
@@ -108,7 +110,7 @@ TabBar::TabBar(BrowserWindow* window, TabWidget* tabWidget)
 
     // ComboTabBar features
     setUsesScrollButtons(true);
-    setCloseButtonsToolTip(BrowserWindow::tr("Close Tab"));
+    setCloseButtonsToolTip(i18n("Close Tab"));
     connect(this, &ComboTabBar::overFlowChanged, this, &TabBar::overflowChanged);
 
     tabMetrics()->init();

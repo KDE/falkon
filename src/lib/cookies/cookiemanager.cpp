@@ -32,6 +32,8 @@
 #include <QInputDialog>
 #include <QCloseEvent>
 
+#include <KLocalizedString>
+
 CookieManager::CookieManager(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::CookieManager)
@@ -79,7 +81,7 @@ CookieManager::CookieManager(QWidget *parent)
     ui->filter3rdParty->hide();
 #endif
 
-    ui->search->setPlaceholderText(tr("Search"));
+    ui->search->setPlaceholderText(i18n("Search"));
     ui->cookieTree->setDefaultItemShowMode(TreeWidget::ItemsCollapsed);
     ui->cookieTree->sortItems(0, Qt::AscendingOrder);
     ui->cookieTree->header()->setDefaultSectionSize(220);
@@ -104,8 +106,8 @@ CookieManager::CookieManager(QWidget *parent)
 
 void CookieManager::removeAll()
 {
-    QMessageBox::StandardButton button = QMessageBox::warning(this, tr("Confirmation"),
-                                         tr("Are you sure you want to delete all cookies on your computer?"), QMessageBox::Yes | QMessageBox::No);
+    QMessageBox::StandardButton button = QMessageBox::warning(this, i18n("Confirmation"),
+                                         i18n("Are you sure you want to delete all cookies on your computer?"), QMessageBox::Yes | QMessageBox::No);
     if (button != QMessageBox::Yes) {
         return;
     }
@@ -150,14 +152,14 @@ void CookieManager::currentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem
     }
 
     if (current->text(1).isEmpty()) {
-        ui->name->setText(tr("<cookie not selected>"));
-        ui->value->setText(tr("<cookie not selected>"));
-        ui->server->setText(tr("<cookie not selected>"));
-        ui->path->setText(tr("<cookie not selected>"));
-        ui->secure->setText(tr("<cookie not selected>"));
-        ui->expiration->setText(tr("<cookie not selected>"));
+        ui->name->setText(i18n("<cookie not selected>"));
+        ui->value->setText(i18n("<cookie not selected>"));
+        ui->server->setText(i18n("<cookie not selected>"));
+        ui->path->setText(i18n("<cookie not selected>"));
+        ui->secure->setText(i18n("<cookie not selected>"));
+        ui->expiration->setText(i18n("<cookie not selected>"));
 
-        ui->removeOne->setText(tr("Remove cookies"));
+        ui->removeOne->setText(i18n("Remove cookies"));
         return;
     }
 
@@ -167,22 +169,22 @@ void CookieManager::currentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem
     ui->value->setText(cookie.value());
     ui->server->setText(cookie.domain());
     ui->path->setText(cookie.path());
-    cookie.isSecure() ? ui->secure->setText(tr("Secure only")) : ui->secure->setText(tr("All connections"));
-    cookie.isSessionCookie() ? ui->expiration->setText(tr("Session cookie")) : ui->expiration->setText(QDateTime(cookie.expirationDate()).toString("hh:mm:ss dddd d. MMMM yyyy"));
+    cookie.isSecure() ? ui->secure->setText(i18n("Secure only")) : ui->secure->setText(i18n("All connections"));
+    cookie.isSessionCookie() ? ui->expiration->setText(i18n("Session cookie")) : ui->expiration->setText(QDateTime(cookie.expirationDate()).toString("hh:mm:ss dddd d. MMMM yyyy"));
 
-    ui->removeOne->setText(tr("Remove cookie"));
+    ui->removeOne->setText(i18n("Remove cookie"));
 }
 
 void CookieManager::addWhitelist()
 {
-    const QString server = QInputDialog::getText(this, tr("Add to whitelist"), tr("Server:"));
+    const QString server = QInputDialog::getText(this, i18n("Add to whitelist"), i18n("Server:"));
 
     if (server.isEmpty()) {
         return;
     }
 
     if (!ui->blackList->findItems(server, Qt::MatchFixedString).isEmpty()) {
-        QMessageBox::information(this, tr("Already blacklisted!"), tr("The server \"%1\" is already in blacklist, please remove it first.").arg(server));
+        QMessageBox::information(this, i18n("Already blacklisted!"), i18n("The server \"%1\" is already in blacklist, please remove it first.", server));
         return;
     }
 
@@ -198,7 +200,7 @@ void CookieManager::removeWhitelist()
 
 void CookieManager::addBlacklist()
 {
-    const QString server = QInputDialog::getText(this, tr("Add to blacklist"), tr("Server:"));
+    const QString server = QInputDialog::getText(this, i18n("Add to blacklist"), i18n("Server:"));
     addBlacklist(server);
 }
 
@@ -209,7 +211,7 @@ void CookieManager::addBlacklist(const QString &server)
     }
 
     if (!ui->whiteList->findItems(server, Qt::MatchFixedString).isEmpty()) {
-        QMessageBox::information(this, tr("Already whitelisted!"), tr("The server \"%1\" is already in whitelist, please remove it first.").arg(server));
+        QMessageBox::information(this, i18n("Already whitelisted!"), i18n("The server \"%1\" is already in whitelist, please remove it first.", server));
         return;
     }
 

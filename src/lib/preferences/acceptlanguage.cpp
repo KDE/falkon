@@ -40,6 +40,8 @@
 #include "networkmanager.h"
 #include "settings.h"
 
+#include <KLocalizedString>
+
 QStringList AcceptLanguage::defaultLanguage()
 {
     QString longCode = QLocale::system().name().replace(QLatin1Char('_'), QLatin1Char('-'));
@@ -96,7 +98,7 @@ AcceptLanguage::AcceptLanguage(QWidget* parent)
         QString label;
 
         if (loc.language() == QLocale::C) {
-            label = tr("Personal [%1]").arg(code);
+            label = i18n("Personal [%1]", code);
         }
         else {
             label = QString("%1/%2 [%3]").arg(loc.languageToString(loc.language()), loc.countryToString(loc.country()), code);
@@ -157,7 +159,7 @@ void AcceptLanguage::addLanguage()
     }
 
     if (!acceptLangUi.ownDefinition->text().isEmpty()) {
-        QString title = tr("Personal [%1]").arg(acceptLangUi.ownDefinition->text());
+        QString title = i18n("Personal [%1]", acceptLangUi.ownDefinition->text());
         ui->listWidget->addItem(title);
     }
     else {

@@ -28,7 +28,8 @@
 #include <QUrlQuery>
 #include <QNetworkReply>
 
-#include <KArchive/KZip>
+#include <KZip>
+#include <KLocalizedString>
 
 Q_GLOBAL_STATIC(OcsSupport, qz_ocs_support)
 
@@ -120,7 +121,7 @@ OcsSupport *OcsSupport::instance()
 void OcsSupport::installTheme(const KArchiveDirectory *directory)
 {
     auto showError = []() {
-        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Failed to install theme"));
+        mApp->desktopNotifications()->showNotification(i18n("Installation failed"), i18n("Failed to install theme"));
     };
 
     if (directory->entries().size() != 1) {
@@ -144,7 +145,7 @@ void OcsSupport::installTheme(const KArchiveDirectory *directory)
 
     if (QFileInfo::exists(targetDir + QL1C('/') + name)) {
         qWarning() << "Theme" << name << "already exists";
-        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Theme is already installed"));
+        mApp->desktopNotifications()->showNotification(i18n("Installation failed"), i18n("Theme is already installed"));
         return;
     }
 
@@ -156,13 +157,13 @@ void OcsSupport::installTheme(const KArchiveDirectory *directory)
 
     qInfo() << "Theme installed to" << targetDir;
 
-    mApp->desktopNotifications()->showNotification(tr("Theme installed"), tr("'%1' was successfully installed").arg(metaData.name()));
+    mApp->desktopNotifications()->showNotification(i18n("Theme installed"), i18n("'%1' was successfully installed", metaData.name()));
 }
 
 void OcsSupport::installExtension(const KArchiveDirectory *directory)
 {
     auto showError = []() {
-        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Failed to install extension"));
+        mApp->desktopNotifications()->showNotification(i18n("Installation failed"), i18n("Failed to install extension"));
     };
 
     if (directory->entries().size() != 1) {
@@ -200,7 +201,7 @@ void OcsSupport::installExtension(const KArchiveDirectory *directory)
 
     if (QFileInfo::exists(targetDir + QL1S("/") + name)) {
         qWarning() << "Extension" << name << "already exists";
-        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Extension is already installed"));
+        mApp->desktopNotifications()->showNotification(i18n("Installation failed"), i18n("Extension is already installed"));
         return;
     }
 
@@ -219,5 +220,5 @@ void OcsSupport::installExtension(const KArchiveDirectory *directory)
         return;
     }
 
-    mApp->desktopNotifications()->showNotification(tr("Extension installed"), tr("'%1' was successfully installed").arg(metaData.name()));
+    mApp->desktopNotifications()->showNotification(i18n("Extension installed"), i18n("'%1' was successfully installed", metaData.name()));
 }

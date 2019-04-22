@@ -24,6 +24,8 @@
 #include <QApplication>
 #include <QInputDialog>
 
+#include <KLocalizedString>
+
 AdBlockTreeWidget::AdBlockTreeWidget(AdBlockSubscription* subscription, QWidget* parent)
     : TreeWidget(parent)
     , m_subscription(subscription)
@@ -77,9 +79,9 @@ void AdBlockTreeWidget::contextMenuRequested(const QPoint &pos)
     }
 
     QMenu menu;
-    menu.addAction(tr("Add Rule"), this, &AdBlockTreeWidget::addRule);
+    menu.addAction(i18n("Add Rule"), this, &AdBlockTreeWidget::addRule);
     menu.addSeparator();
-    QAction* deleteAction = menu.addAction(tr("Remove Rule"), this, &AdBlockTreeWidget::removeRule);
+    QAction* deleteAction = menu.addAction(i18n("Remove Rule"), this, &AdBlockTreeWidget::removeRule);
 
     if (!item->parent()) {
         deleteAction->setDisabled(true);
@@ -138,7 +140,7 @@ void AdBlockTreeWidget::addRule()
         return;
     }
 
-    QString newRule = QInputDialog::getText(this, tr("Add Custom Rule"), tr("Please write your rule here:"));
+    QString newRule = QInputDialog::getText(this, i18n("Add Custom Rule"), i18n("Please write your rule here:"));
     if (newRule.isEmpty()) {
         return;
     }
@@ -176,7 +178,7 @@ void AdBlockTreeWidget::subscriptionUpdated()
     refresh();
 
     m_itemChangingBlock = true;
-    m_topItem->setText(0, tr("%1 (recently updated)").arg(m_subscription->title()));
+    m_topItem->setText(0, i18n("%1 (recently updated)", m_subscription->title()));
     m_itemChangingBlock = false;
 }
 
@@ -185,7 +187,7 @@ void AdBlockTreeWidget::subscriptionError(const QString &message)
     refresh();
 
     m_itemChangingBlock = true;
-    m_topItem->setText(0, tr("%1 (Error: %2)").arg(m_subscription->title(), message));
+    m_topItem->setText(0, i18n("%1 (Error: %2)", m_subscription->title(), message));
     m_itemChangingBlock = false;
 }
 

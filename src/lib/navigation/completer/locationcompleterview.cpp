@@ -31,6 +31,8 @@
 #include <QHBoxLayout>
 #include <QLabel>
 
+#include <KLocalizedString>
+
 LocationCompleterView::LocationCompleterView()
     : QWidget(nullptr)
 {
@@ -70,12 +72,12 @@ LocationCompleterView::LocationCompleterView()
 
     ToolButton *searchSettingsButton = new ToolButton(this);
     searchSettingsButton->setIcon(IconProvider::settingsIcon());
-    searchSettingsButton->setToolTip(tr("Manage Search Engines"));
+    searchSettingsButton->setToolTip(i18n("Manage Search Engines"));
     searchSettingsButton->setAutoRaise(true);
     searchSettingsButton->setIconSize(QSize(16, 16));
     connect(searchSettingsButton, &ToolButton::clicked, this, &LocationCompleterView::searchEnginesDialogRequested);
 
-    QLabel *searchLabel = new QLabel(tr("Search with:"));
+    QLabel *searchLabel = new QLabel(i18n("Search with:"));
     m_searchEnginesLayout = new QHBoxLayout();
 
     setupSearchEngines();

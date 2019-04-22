@@ -61,6 +61,8 @@
 #include <QLibraryInfo>
 #include <QtWebEngineWidgetsVersion>
 
+#include <KLocalizedString>
+
 static QString createLanguageItem(const QString &lang)
 {
     QLocale locale(lang);
@@ -156,11 +158,11 @@ Preferences::Preferences(BrowserWindow* window)
         ui->checkDefaultBrowser->setChecked(settings.value("Web-Browser-Settings/CheckDefaultBrowser",
                                                            DEFAULT_CHECK_DEFAULTBROWSER).toBool());
         if (mApp->associationManager()->isDefaultForAllCapabilities()) {
-            ui->checkNowDefaultBrowser->setText(tr("Default"));
+            ui->checkNowDefaultBrowser->setText(i18n("Default"));
             ui->checkNowDefaultBrowser->setEnabled(false);
         }
         else {
-            ui->checkNowDefaultBrowser->setText(tr("Set as default"));
+            ui->checkNowDefaultBrowser->setText(i18n("Set as default"));
             ui->checkNowDefaultBrowser->setEnabled(true);
             connect(ui->checkNowDefaultBrowser, SIGNAL(clicked()), this, SLOT(makeFalkonDefault()));
         }
@@ -539,7 +541,7 @@ Preferences::Preferences(BrowserWindow* window)
 
 void Preferences::chooseExternalDownloadManager()
 {
-    QString path = QzTools::getOpenFileName("Preferences-ExternalDownloadManager", this, tr("Choose executable location..."), QDir::homePath());
+    QString path = QzTools::getOpenFileName("Preferences-ExternalDownloadManager", this, i18n("Choose executable location..."), QDir::homePath());
     if (path.isEmpty()) {
         return;
     }
@@ -582,8 +584,8 @@ void Preferences::showNotificationPreview()
         }
 
         m_notification = new DesktopNotification(true);
-        m_notification.data()->setHeading(tr("OSD Notification"));
-        m_notification.data()->setText(tr("Drag it on the screen to place it where you want."));
+        m_notification.data()->setHeading(i18n("OSD Notification"));
+        m_notification.data()->setText(i18n("Drag it on the screen to place it where you want."));
         m_notification.data()->move(m_notifPosition);
         m_notification.data()->show();
     }
@@ -596,7 +598,7 @@ void Preferences::makeFalkonDefault()
 {
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
     disconnect(ui->checkNowDefaultBrowser, SIGNAL(clicked()), this, SLOT(makeFalkonDefault()));
-    ui->checkNowDefaultBrowser->setText(tr("Default"));
+    ui->checkNowDefaultBrowser->setText(i18n("Default"));
     ui->checkNowDefaultBrowser->setEnabled(false);
 
     if (!mApp->associationManager()->showNativeDefaultAppSettingsUi())
@@ -632,7 +634,7 @@ void Preferences::useActualNewTab()
 
 void Preferences::chooseDownPath()
 {
-    QString userFileName = QzTools::getExistingDirectory("Preferences-ChooseDownPath", this, tr("Choose download location..."), QDir::homePath());
+    QString userFileName = QzTools::getExistingDirectory("Preferences-ChooseDownPath", this, i18n("Choose download location..."), QDir::homePath());
     if (userFileName.isEmpty()) {
         return;
     }
@@ -646,7 +648,7 @@ void Preferences::chooseDownPath()
 
 void Preferences::chooseUserStyleClicked()
 {
-    QString file = QzTools::getOpenFileName("Preferences-UserStyle", this, tr("Choose stylesheet location..."), QDir::homePath(), "*.css");
+    QString file = QzTools::getOpenFileName("Preferences-UserStyle", this, i18n("Choose stylesheet location..."), QDir::homePath(), "*.css");
     if (file.isEmpty()) {
         return;
     }
@@ -657,7 +659,7 @@ void Preferences::deleteHtml5storage()
 {
     ClearPrivateData::clearLocalStorage();
 
-    ui->deleteHtml5storage->setText(tr("Deleted"));
+    ui->deleteHtml5storage->setText(i18n("Deleted"));
     ui->deleteHtml5storage->setEnabled(false);
 }
 
@@ -753,7 +755,7 @@ void Preferences::afterLaunchChanged(int value)
 
 void Preferences::changeCachePathClicked()
 {
-    QString path = QzTools::getExistingDirectory("Preferences-CachePath", this, tr("Choose cache path..."), ui->cachePath->text());
+    QString path = QzTools::getExistingDirectory("Preferences-CachePath", this, i18n("Choose cache path..."), ui->cachePath->text());
     if (path.isEmpty()) {
         return;
     }
@@ -784,7 +786,7 @@ void Preferences::buttonClicked(QAbstractButton* button)
 
 void Preferences::createProfile()
 {
-    QString name = QInputDialog::getText(this, tr("New Profile"), tr("Enter the new profile's name:"));
+    QString name = QInputDialog::getText(this, i18n("New Profile"), i18n("Enter the new profile's name:"));
     name = QzTools::filterCharsFromFilename(name);
 
     if (name.isEmpty()) {
@@ -794,12 +796,12 @@ void Preferences::createProfile()
     int res = ProfileManager::createProfile(name);
 
     if (res == -1) {
-        QMessageBox::warning(this, tr("Error!"), tr("This profile already exists!"));
+        QMessageBox::warning(this, i18n("Error!"), i18n("This profile already exists!"));
         return;
     }
 
     if (res != 0) {
-        QMessageBox::warning(this, tr("Error!"), tr("Cannot create profile directory!"));
+        QMessageBox::warning(this, i18n("Error!"), i18n("Cannot create profile directory!"));
         return;
     }
 
@@ -810,8 +812,8 @@ void Preferences::createProfile()
 void Preferences::deleteProfile()
 {
     QString name = ui->startProfile->currentText();
-    QMessageBox::StandardButton button = QMessageBox::warning(this, tr("Confirmation"),
-                                         tr("Are you sure you want to permanently delete \"%1\" profile? This action cannot be undone!").arg(name), QMessageBox::Yes | QMessageBox::No);
+    QMessageBox::StandardButton button = QMessageBox::warning(this, i18n("Confirmation"),
+                                         i18n("Are you sure you want to permanently delete \"%1\" profile? This action cannot be undone!", name), QMessageBox::Yes | QMessageBox::No);
     if (button != QMessageBox::Yes) {
         return;
     }
@@ -826,7 +828,7 @@ void Preferences::startProfileIndexChanged(int index)
     const bool current = ui->startProfile->itemText(index) == ProfileManager::currentProfile();
 
     ui->deleteProfile->setEnabled(!current);
-    ui->cannotDeleteActiveProfileLabel->setText(current ? tr("Note: You cannot delete active profile.") : QString());
+    ui->cannotDeleteActiveProfileLabel->setText(current ? i18n("Note: You cannot delete active profile.") : QString());
 }
 
 void Preferences::closeEvent(QCloseEvent* event)
@@ -1081,7 +1083,7 @@ void Preferences::setProgressBarColorIcon(QColor color)
 
 void Preferences::selectCustomProgressBarColor()
 {
-    QColor newColor = QColorDialog::getColor(ui->customColorToolButton->property("ProgressColor").value<QColor>(), this, tr("Select Color"));
+    QColor newColor = QColorDialog::getColor(ui->customColorToolButton->property("ProgressColor").value<QColor>(), this, i18n("Select Color"));
     if (newColor.isValid()) {
         setProgressBarColorIcon(newColor);
     }

@@ -25,6 +25,8 @@
 #include <QToolTip>
 #include <QMouseEvent>
 
+#include <KLocalizedString>
+
 TabIcon::TabIcon(QWidget* parent)
     : QWidget(parent)
     , m_tab(0)
@@ -165,7 +167,7 @@ bool TabIcon::event(QEvent *event)
     if (event->type() == QEvent::ToolTip) {
         QHelpEvent *e = static_cast<QHelpEvent*>(event);
         if (m_audioIconDisplayed && m_audioIconRect.contains(e->pos())) {
-            QToolTip::showText(e->globalPos(), m_tab->isMuted() ? tr("Unmute Tab") : tr("Mute Tab"), this);
+            QToolTip::showText(e->globalPos(), m_tab->isMuted() ? i18n("Unmute Tab") : i18n("Mute Tab"), this);
             event->accept();
             return true;
         }

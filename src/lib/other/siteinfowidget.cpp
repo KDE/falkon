@@ -27,6 +27,8 @@
 
 #include <QToolTip>
 
+#include <KLocalizedString>
+
 SiteInfoWidget::SiteInfoWidget(BrowserWindow* window, QWidget* parent)
     : LocationBarPopup(parent)
     , ui(new Ui::SiteInfoWidget)
@@ -39,14 +41,14 @@ SiteInfoWidget::SiteInfoWidget(BrowserWindow* window, QWidget* parent)
 
     WebView* view = m_window->weView();
 
-    ui->titleLabel->setText(tr("<b>Site %1<b/>").arg(view->url().host()));
+    ui->titleLabel->setText(i18n("<b>Site %1<b/>", view->url().host()));
 
     if (view->url().scheme() == QL1S("https")) {
-        ui->secureLabel->setText(tr("Your connection to this site is <b>secured</b>."));
+        ui->secureLabel->setText(i18n("Your connection to this site is <b>secured</b>."));
         ui->secureIcon->setPixmap(QPixmap(":/icons/locationbar/safe.png"));
     }
     else {
-        ui->secureLabel->setText(tr("Your connection to this site is <b>unsecured</b>."));
+        ui->secureLabel->setText(i18n("Your connection to this site is <b>unsecured</b>."));
         ui->secureIcon->setPixmap(QPixmap(":/icons/locationbar/unsafe.png"));
     }
 
@@ -61,26 +63,26 @@ SiteInfoWidget::SiteInfoWidget(BrowserWindow* window, QWidget* parent)
     if (query.next()) {
         int count = query.value(0).toInt();
         if (count > 3) {
-            ui->historyLabel->setText(tr("This is your <b>%1</b> visit of this site.").arg(QString::number(count) + "."));
+            ui->historyLabel->setText(i18n("This is your <b>%1.</b> visit of this site.", count));
             ui->historyIcon->setPixmap(QPixmap(":/icons/locationbar/visit3.png"));
         }
         else if (count == 0) {
-            ui->historyLabel->setText(tr("You have <b>never</b> visited this site before."));
+            ui->historyLabel->setText(i18n("You have <b>never</b> visited this site before."));
             ui->historyIcon->setPixmap(QPixmap(":/icons/locationbar/visit1.png"));
         }
         else {
             ui->historyIcon->setPixmap(QPixmap(":/icons/locationbar/visit2.png"));
             QString text;
             if (count == 1) {
-                text = tr("first");
+                text = i18n("first");
             }
             else if (count == 2) {
-                text = tr("second");
+                text = i18n("second");
             }
             else if (count == 3) {
-                text = tr("third");
+                text = i18n("third");
             }
-            ui->historyLabel->setText(tr("This is your <b>%1</b> visit of this site.").arg(text));
+            ui->historyLabel->setText(i18n("This is your <b>%1</b> visit of this site.", text));
         }
     }
 
@@ -103,8 +105,8 @@ void SiteInfoWidget::updateProtocolHandler()
     const QUrl registeredUrl = mApp->protocolHandlerManager()->protocolHandlers().value(scheme);
 
     if (!scheme.isEmpty() && registeredUrl != page->registerProtocolHandlerRequestUrl()) {
-        ui->protocolHandlerLabel->setText(tr("Register as <b>%1</b> links handler").arg(page->registerProtocolHandlerRequestScheme()));
-        ui->protocolHandlerButton->setText(tr("Register"));
+        ui->protocolHandlerLabel->setText(i18n("Register as <b>%1</b> links handler", page->registerProtocolHandlerRequestScheme()));
+        ui->protocolHandlerButton->setText(i18n("Register"));
     } else {
         ui->protocolHandlerLabel->hide();
         ui->protocolHandlerButton->hide();
