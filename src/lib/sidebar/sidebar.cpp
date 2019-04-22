@@ -166,6 +166,10 @@ void SideBarManager::showSideBar(const QString &id, bool toggle)
 
     if (!m_sideBar) {
         m_sideBar = m_window->addSideBar();
+        connect(m_sideBar, &QObject::destroyed, this, [this]() {
+            m_activeBar.clear();
+            m_window->saveSideBarSettings();
+        });
     }
 
     if (id == m_activeBar) {
