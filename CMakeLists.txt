@@ -118,11 +118,6 @@ if (PySide2_FOUND AND Shiboken2_FOUND AND Python3_FOUND)
     set(ENABLE_PYTHON_PLUGINS TRUE)
 endif()
 
-find_package(Intl)
-if (Intl_FOUND)
-    set(HAVE_LIBINTL TRUE)
-endif()
-
 # Git revision
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
   find_package(Git QUIET)

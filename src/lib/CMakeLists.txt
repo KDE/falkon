@@ -268,10 +268,6 @@ set(SRCS ${SRCS}
     webtab/webtab.cpp
 )
 
-if (HAVE_LIBINTL)
-    set(SRCS ${SRCS} plugins/qml/api/i18n/qmli18n.cpp)
-endif()
-
 if (WIN32)
     set(SRCS ${SRCS} other/registerqappassociation.cpp)
 endif()

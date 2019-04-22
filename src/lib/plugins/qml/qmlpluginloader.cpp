@@ -17,13 +17,12 @@
 * ============================================================ */
 #include "qmlpluginloader.h"
 #include "qmlengine.h"
-#include <QQmlContext>
-#include <QDir>
 #include "../config.h"
 
-#if HAVE_LIBINTL
-#include "qml/api/i18n/qmli18n.h"
-#endif
+#include <QDir>
+#include <QQmlContext>
+
+#include <KLocalizedContext>
 
 QmlPluginLoader::QmlPluginLoader(const QString &name, const QString &path)
 {
@@ -62,16 +61,10 @@ QmlPluginInterface *QmlPluginLoader::instance() const
 void QmlPluginLoader::initEngineAndComponent()
 {
     m_engine = new QmlEngine();
+    KLocalizedContext *context = new KLocalizedContext(this);
+    context->setTranslationDomain(QSL("falkon_%1").arg(m_name));
+    m_engine->rootContext()->setContextObject(context);
     m_component = new QQmlComponent(m_engine, QDir(m_path).filePath(QStringLiteral("main.qml")));
     m_engine->setExtensionPath(m_path);
     m_engine->setExtensionName(m_name);
-#if HAVE_LIBINTL
-    auto i18n = new QmlI18n(m_name);
-    m_engine->globalObject().setProperty(QSL("__falkon_i18n"), m_engine->newQObject(i18n));
-    m_engine->evaluate(QSL("i18n = function (s) { return __falkon_i18n.i18n(s) };"));
-    m_engine->evaluate(QSL("i18np = function (s1, s2) { return __falkon_i18n.i18np(s1, s2) }"));
-#else
-    m_engine->evaluate(QSL("i18n = function (s) { return s; };"));
-    m_engine->evaluate(QSL("i18np = function (s1, s2) { return s1; }"));
-#endif
 }
