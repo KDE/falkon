@@ -28,6 +28,8 @@
 #include <QMessageBox>
 #include <QInputDialog>
 
+#include <KLocalizedString>
+
 GM_Settings::GM_Settings(GM_Manager* manager, QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::GM_Settings)
@@ -88,8 +90,8 @@ void GM_Settings::removeItem(QListWidgetItem* item)
         return;
     }
 
-    QMessageBox::StandardButton button = QMessageBox::question(this, tr("Remove script"),
-                                         tr("Are you sure you want to remove '%1'?").arg(script->name()),
+    QMessageBox::StandardButton button = QMessageBox::question(this, i18n("Remove script"),
+                                         i18n("Are you sure you want to remove '%1'?", script->name()),
                                          QMessageBox::Yes | QMessageBox::No);
 
     if (button == QMessageBox::Yes) {
@@ -119,7 +121,7 @@ void GM_Settings::openScriptsDirectory()
 
 void GM_Settings::newScript()
 {
-    const QString name = QInputDialog::getText(this, tr("Add script"), tr("Choose name for script:"));
+    const QString name = QInputDialog::getText(this, i18n("Add script"), i18n("Choose name for script:"));
     if (name.isEmpty())
         return;
 

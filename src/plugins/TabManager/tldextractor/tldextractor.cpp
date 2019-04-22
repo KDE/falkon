@@ -23,6 +23,8 @@
 #include <QMessageBox>
 #include <QUrl>
 
+#include <KLocalizedString>
+
 TLDExtractor* TLDExtractor::s_instance = 0;
 
 TLDExtractor::TLDExtractor(QObject* parent)
@@ -257,10 +259,10 @@ void TLDExtractor::loadData()
 
     if (!parsedDataFileExist) {
         const QString tldDataFileDownloadLink = QLatin1String("http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1");
-        QMessageBox::information(0, tr("File not found!"),
-                                 tr("File \'effective_tld_names.dat\' was not found!\n"
-                                    "You can download it from \'<a href=\"%1\"><b>here</b></a>\' to one of the following paths:\n%2")
-                                 .arg(tldDataFileDownloadLink).arg(m_dataSearchPaths.join("\n")));
+        QMessageBox::information(0, i18n("File not found!"),
+                                 i18n("File \'effective_tld_names.dat\' was not found!\n"
+                                    "You can download it from \'<a href=\"%1\"><b>here</b></a>\' to one of the following paths:\n%2",
+                                 tldDataFileDownloadLink, m_dataSearchPaths.join("\n")));
 
         return;
     }
@@ -360,10 +362,10 @@ bool TLDExtractor::test()
     if (!testDataFileExist) {
         const QString testFileDownloadLink = QLatin1String("http://mxr.mozilla.org/mozilla-central/source/netwerk/test/unit/data/test_psl.txt?raw=1");
 
-        QMessageBox::information(0, tr("File not found!"),
-                                 tr("File \'test_psl.txt\' was not found!\n"
-                                    "You can download it from \'<a href=\"%1\"><b>here</b></a>\' to one of the following paths:\n%2")
-                                 .arg(testFileDownloadLink).arg(m_dataSearchPaths.join("\n")));
+        QMessageBox::information(0, i18n("File not found!"),
+                                 i18n("File \'test_psl.txt\' was not found!\n"
+                                    "You can download it from \'<a href=\"%1\"><b>here</b></a>\' to one of the following paths:\n%2",
+                                 testFileDownloadLink, m_dataSearchPaths.join("\n")));
 
         return false;
     }

@@ -24,6 +24,8 @@
 
 #include <QFile>
 
+#include <KLocalizedString>
+
 GM_Notification::GM_Notification(GM_Manager* manager, const QString &tmpfileName, const QString &fileName)
     : AnimatedWidget(AnimatedWidget::Down, 300, 0)
     , ui(new Ui::GM_Notification)
@@ -48,7 +50,7 @@ void GM_Notification::installScript()
     bool success = false;
 
     GM_Script* script = 0;
-    QString message = tr("Cannot install script");
+    QString message = i18n("Cannot install script");
 
     if (QFile::copy(m_tmpFileName, m_fileName)) {
         script = new GM_Script(m_manager, m_fileName);
@@ -56,7 +58,7 @@ void GM_Notification::installScript()
     }
 
     if (success) {
-        message = tr("'%1' installed successfully").arg(script->name());
+        message = i18n("'%1' installed successfully", script->name());
     }
 
     m_manager->showNotification(message);

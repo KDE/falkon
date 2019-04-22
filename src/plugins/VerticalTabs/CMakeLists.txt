@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN="falkon_verticaltabs")
+
 set( VerticalTabs_SRCS
     verticaltabsplugin.cpp
     verticaltabscontroller.cpp
@@ -12,12 +14,10 @@ set( VerticalTabs_SRCS
     verticaltabsschemehandler.cpp
 )
 
-ecm_create_qm_loader( VerticalTabs_SRCS falkon_verticaltabs_qt )
-
 set( VerticalTabs_UIS
     verticaltabssettings.ui
 )
-qt5_wrap_ui(UIS ${VerticalTabs_UIS})
+ki18n_wrap_ui(UIS ${VerticalTabs_UIS})
 
 set( VerticalTabs_RSCS
     verticaltabs.qrc

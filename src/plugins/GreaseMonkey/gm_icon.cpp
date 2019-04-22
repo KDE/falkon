@@ -20,13 +20,15 @@
 
 #include "webview.h"
 
+#include <KLocalizedString>
+
 GM_Icon::GM_Icon(GM_Manager *manager)
     : AbstractButtonInterface(manager)
     , m_manager(manager)
 {
     setIcon(QIcon(":gm/data/icon.svg"));
-    setTitle(tr("GreaseMonkey"));
-    setToolTip(tr("Open GreaseMonkey settings"));
+    setTitle(i18n("GreaseMonkey"));
+    setToolTip(i18n("Open GreaseMonkey settings"));
 
     connect(this, &AbstractButtonInterface::clicked, this, &GM_Icon::openSettings);
 }
@@ -38,7 +40,7 @@ QString GM_Icon::id() const
 
 QString GM_Icon::name() const
 {
-    return tr("GreaseMonkey Icon");
+    return i18n("GreaseMonkey Icon");
 }
 
 void GM_Icon::openSettings()

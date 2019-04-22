@@ -23,6 +23,7 @@
 #include <QDateTime>
 
 #include <KWallet>
+#include <KLocalizedString>
 
 static PasswordEntry decodeEntry(const QByteArray &data)
 {
@@ -48,7 +49,7 @@ KWalletPasswordBackend::KWalletPasswordBackend()
 
 QString KWalletPasswordBackend::name() const
 {
-    return KDEFrameworksIntegrationPlugin::tr("KWallet");
+    return i18n("KWallet");
 }
 
 QVector<PasswordEntry> KWalletPasswordBackend::getEntries(const QUrl &url)

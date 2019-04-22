@@ -39,6 +39,8 @@
 #include <QWebEngineProfile>
 #include <QWebEngineScriptCollection>
 
+#include <KLocalizedString>
+
 GM_Manager::GM_Manager(const QString &sPath, QObject* parent)
     : QObject(parent)
     , m_settingsPath(sPath)
@@ -74,7 +76,7 @@ void GM_Manager::downloadScript(const QUrl &url)
                 deleteScript = dialog.exec() != QDialog::Accepted;
             }
             else {
-                showNotification(tr("'%1' is already installed").arg(script->name()));
+                showNotification(i18n("'%1' is already installed", script->name()));
             }
         }
 
@@ -227,7 +229,7 @@ void GM_Manager::showNotification(const QString &message, const QString &title)
 {
     QIcon icon(":gm/data/icon.svg");
 
-    mApp->desktopNotifications()->showNotification(icon.pixmap(48), title.isEmpty() ? tr("GreaseMonkey") : title, message);
+    mApp->desktopNotifications()->showNotification(icon.pixmap(48), title.isEmpty() ? i18n("GreaseMonkey") : title, message);
 }
 
 void GM_Manager::load()

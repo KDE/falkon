@@ -42,6 +42,7 @@
 #include <QLabel>
 #include <QMimeData>
 
+#include <KLocalizedString>
 
 TLDExtractor* TabManagerWidget::s_tldExtractor = 0;
 
@@ -108,13 +109,13 @@ QString TabManagerWidget::domainFromUrl(const QUrl &url, bool useHostName)
     QString urlString = url.toString();
 
     if (url.scheme() == "file") {
-        return tr("Local File System:");
+        return i18n("Local File System:");
     }
     else if (url.scheme() == "falkon" || urlString.isEmpty()) {
-        return tr("Falkon:");
+        return i18n("Falkon:");
     }
     else if (url.scheme() == "ftp") {
-        appendString.prepend(tr(" [FTP]"));
+        appendString.prepend(i18n(" [FTP]"));
     }
 
     QString host = url.host();
@@ -303,18 +304,18 @@ void TabManagerWidget::customContextMenuRequested(const QPoint &pos)
     menu->setAttribute(Qt::WA_DeleteOnClose);
 
     QAction* action;
-    QMenu groupTypeSubmenu(tr("Group by"));
-    action = groupTypeSubmenu.addAction(tr("&Window"), this, &TabManagerWidget::changeGroupType);
+    QMenu groupTypeSubmenu(i18n("Group by"));
+    action = groupTypeSubmenu.addAction(i18n("&Window"), this, &TabManagerWidget::changeGroupType);
     action->setData(GroupByWindow);
     action->setCheckable(true);
     action->setChecked(m_groupType == GroupByWindow);
 
-    action = groupTypeSubmenu.addAction(tr("&Domain"), this, &TabManagerWidget::changeGroupType);
+    action = groupTypeSubmenu.addAction(i18n("&Domain"), this, &TabManagerWidget::changeGroupType);
     action->setData(GroupByDomain);
     action->setCheckable(true);
     action->setChecked(m_groupType == GroupByDomain);
 
-    action = groupTypeSubmenu.addAction(tr("&Host"), this, &TabManagerWidget::changeGroupType);
+    action = groupTypeSubmenu.addAction(i18n("&Host"), this, &TabManagerWidget::changeGroupType);
     action->setData(GroupByHost);
     action->setCheckable(true);
     action->setChecked(m_groupType == GroupByHost);
@@ -322,16 +323,16 @@ void TabManagerWidget::customContextMenuRequested(const QPoint &pos)
     menu->addMenu(&groupTypeSubmenu);
 
     if (m_isDefaultWidget) {
-        menu->addAction(QIcon(":/tabmanager/data/side-by-side.png"), tr("&Show side by side"), this, &TabManagerWidget::showSideBySide)->setObjectName("sideBySide");
+        menu->addAction(QIcon(":/tabmanager/data/side-by-side.png"), i18n("&Show side by side"), this, &TabManagerWidget::showSideBySide)->setObjectName("sideBySide");
     }
 
     menu->addSeparator();
 
     if (isTabSelected()) {
-        menu->addAction(QIcon(":/tabmanager/data/tab-detach.png"), tr("&Detach checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("detachSelection");
-        menu->addAction(QIcon(":/tabmanager/data/tab-bookmark.png"), tr("Book&mark checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("bookmarkSelection");
-        menu->addAction(QIcon(":/tabmanager/data/tab-close.png"), tr("&Close checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("closeSelection");
-        menu->addAction(tr("&Unload checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("unloadSelection");
+        menu->addAction(QIcon(":/tabmanager/data/tab-detach.png"), i18n("&Detach checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("detachSelection");
+        menu->addAction(QIcon(":/tabmanager/data/tab-bookmark.png"), i18n("Book&mark checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("bookmarkSelection");
+        menu->addAction(QIcon(":/tabmanager/data/tab-close.png"), i18n("&Close checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("closeSelection");
+        menu->addAction(i18n("&Unload checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("unloadSelection");
     }
 
     menu->exec(ui->treeWidget->viewport()->mapToGlobal(pos));
@@ -583,8 +584,8 @@ bool TabManagerWidget::bookmarkSelectedTabs(const QHash<BrowserWindow*, WebTab*>
     layout->addWidget(folderButton);
     layout->addWidget(box);
 
-    label->setText(tr("Choose folder for bookmarks:"));
-    dialog->setWindowTitle(tr("Bookmark Selected Tabs"));
+    label->setText(i18n("Choose folder for bookmarks:"));
+    dialog->setWindowTitle(i18n("Bookmark Selected Tabs"));
 
     QSize size = dialog->size();
     size.setWidth(350);
@@ -702,8 +703,8 @@ QTreeWidgetItem* TabManagerWidget::groupByWindow()
         BrowserWindow* mainWin = windows.at(win);
         TabItem* winItem = new TabItem(ui->treeWidget, true, false);
         winItem->setBrowserWindow(mainWin);
-        winItem->setText(0, tr("Window %1").arg(QString::number(win + 1)));
-        winItem->setToolTip(0, tr("Double click to switch"));
+        winItem->setText(0, i18n("Window %1", win + 1));
+        winItem->setToolTip(0, i18n("Double click to switch"));
         winItem->setIsActiveOrCaption(win == currentWindowIdx);
 
         QList<WebTab*> tabs = mainWin->tabWidget()->allTabs();

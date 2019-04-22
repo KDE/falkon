@@ -26,12 +26,14 @@
 #include <QWebEngineSettings>
 #include <QMenu>
 
+#include <KLocalizedString>
+
 SBI_JavaScriptIcon::SBI_JavaScriptIcon(BrowserWindow* window)
     : SBI_Icon(window)
 {
     setObjectName(QSL("sbi_javascripticon"));
     setCursor(Qt::PointingHandCursor);
-    setToolTip(tr("Modify JavaScript settings per-site and globally"));
+    setToolTip(i18n("Modify JavaScript settings per-site and globally"));
 
     m_icon = QIcon::fromTheme("application-x-javascript", QIcon(":sbi/data/javascript.png"));
     setPixmap(m_icon.pixmap(16));
@@ -48,13 +50,13 @@ void SBI_JavaScriptIcon::showMenu(const QPoint &point)
     boldFont.setBold(true);
 
     QMenu menu;
-    menu.addAction(m_icon, tr("Current Page Settings"))->setFont(boldFont);
+    menu.addAction(m_icon, i18n("Current Page Settings"))->setFont(boldFont);
 
     if (testCurrentPageWebAttribute(QWebEngineSettings::JavascriptEnabled)) {
-        menu.addAction(tr("Disable JavaScript (temporarily)"), this, &SBI_JavaScriptIcon::toggleJavaScript);
+        menu.addAction(i18n("Disable JavaScript (temporarily)"), this, &SBI_JavaScriptIcon::toggleJavaScript);
     }
     else {
-        menu.addAction(tr("Enable JavaScript (temporarily)"), this, &SBI_JavaScriptIcon::toggleJavaScript);
+        menu.addAction(i18n("Enable JavaScript (temporarily)"), this, &SBI_JavaScriptIcon::toggleJavaScript);
     }
 
     // JavaScript needs to be always enabled for falkon: sites
@@ -63,8 +65,8 @@ void SBI_JavaScriptIcon::showMenu(const QPoint &point)
     }
 
     menu.addSeparator();
-    menu.addAction(m_icon, tr("Global Settings"))->setFont(boldFont);
-    menu.addAction(tr("Manage JavaScript settings"), this, &SBI_JavaScriptIcon::openJavaScriptSettings);
+    menu.addAction(m_icon, i18n("Global Settings"))->setFont(boldFont);
+    menu.addAction(i18n("Manage JavaScript settings"), this, &SBI_JavaScriptIcon::openJavaScriptSettings);
     menu.exec(point);
 }
 

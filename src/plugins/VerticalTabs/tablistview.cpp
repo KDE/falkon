@@ -27,6 +27,8 @@
 #include <QToolTip>
 #include <QHoverEvent>
 
+#include <KLocalizedString>
+
 TabListView::TabListView(BrowserWindow *window, QWidget *parent)
     : QListView(parent)
     , m_window(window)
@@ -193,7 +195,7 @@ bool TabListView::viewportEvent(QEvent *event)
         DelegateButton button = buttonAt(he->pos(), index);
         if (button == AudioButton) {
             const bool muted = index.data(TabModel::AudioMutedRole).toBool();
-            QToolTip::showText(he->globalPos(), muted ? tr("Unmute Tab") : tr("Mute Tab"), this, visualRect(index));
+            QToolTip::showText(he->globalPos(), muted ? i18n("Unmute Tab") : i18n("Mute Tab"), this, visualRect(index));
             he->accept();
             return true;
         } else if (button == NoButton) {

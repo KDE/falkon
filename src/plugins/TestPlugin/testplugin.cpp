@@ -28,6 +28,8 @@
 #include <QMenu>
 #include <QPushButton>
 
+#include <KLocalizedString>
+
 TestPlugin::TestPlugin()
     : QObject()
     , m_view(0)
@@ -95,7 +97,7 @@ void TestPlugin::showSettings(QWidget* parent)
     if (!m_settings) {
         m_settings = new QDialog(parent);
         QPushButton* b = new QPushButton("Example Plugin v0.0.1");
-        QPushButton* closeButton = new QPushButton(tr("Close"));
+        QPushButton* closeButton = new QPushButton(i18n("Close"));
         QLabel* label = new QLabel();
         label->setPixmap(QPixmap(":icons/other/about.svg"));
 
@@ -106,7 +108,7 @@ void TestPlugin::showSettings(QWidget* parent)
         m_settings.data()->setLayout(l);
 
         m_settings.data()->setAttribute(Qt::WA_DeleteOnClose);
-        m_settings.data()->setWindowTitle(tr("Example Plugin Settings"));
+        m_settings.data()->setWindowTitle(i18n("Example Plugin Settings"));
         m_settings.data()->setWindowIcon(QIcon(":icons/falkon.svg"));
         connect(closeButton, SIGNAL(clicked()), m_settings.data(), SLOT(close()));
     }
@@ -136,7 +138,7 @@ void TestPlugin::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTes
         title += " on input";
     }
 
-    menu->addAction(tr("My first plugin action") + title, this, SLOT(actionSlot()));
+    menu->addAction(i18n("My first plugin action") + title, this, SLOT(actionSlot()));
 }
 
 bool TestPlugin::mousePress(Qz::ObjectName type, QObject* obj, QMouseEvent* event)
@@ -151,5 +153,5 @@ bool TestPlugin::mousePress(Qz::ObjectName type, QObject* obj, QMouseEvent* even
 
 void TestPlugin::actionSlot()
 {
-    QMessageBox::information(m_view, tr("Hello"), tr("First plugin action works :-)"));
+    QMessageBox::information(m_view, i18n("Hello"), i18n("First plugin action works :-)"));
 }

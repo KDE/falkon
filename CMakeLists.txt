@@ -89,10 +89,10 @@ endif()
 find_package(OpenSSL REQUIRED)
 
 # Mandatory: KF5
-find_package(KF5 REQUIRED COMPONENTS I18n Archive)
-
-# Optional: KWallet, KIO, KCrash, KCoreAddons
 set(KF5_MIN_VERSION "5.54.0")
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n Archive)
+
+# Optional: KWallet, KIO, KCrash, KCoreAddons, KPurpose
 find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5Wallet PROPERTIES DESCRIPTION "KDE Frameworks Integration plugin" TYPE OPTIONAL)
 find_package(KF5KIO ${KF5_MIN_VERSION} CONFIG)

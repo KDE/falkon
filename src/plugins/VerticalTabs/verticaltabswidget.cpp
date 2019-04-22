@@ -32,6 +32,8 @@
 #include <QVBoxLayout>
 #include <QWheelEvent>
 
+#include <KLocalizedString>
+
 VerticalTabsWidget::VerticalTabsWidget(BrowserWindow *window)
     : QWidget()
     , m_window(window)
@@ -55,7 +57,7 @@ VerticalTabsWidget::VerticalTabsWidget(BrowserWindow *window)
     buttonAddTab->setObjectName(QSL("verticaltabs-button-addtab"));
     buttonAddTab->setAutoRaise(true);
     buttonAddTab->setFocusPolicy(Qt::NoFocus);
-    buttonAddTab->setToolTip(tr("New Tab"));
+    buttonAddTab->setToolTip(i18n("New Tab"));
     buttonAddTab->setIcon(QIcon::fromTheme(QSL("list-add")));
     buttonAddTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     connect(buttonAddTab, &QAbstractButton::clicked, m_window, &BrowserWindow::addTab);
@@ -197,7 +199,7 @@ void VerticalTabsWidget::updateGroupMenu()
     }
 
     m_groupMenu->addSeparator();
-    m_groupMenu->addAction(tr("Add New Group..."), this, [this]() {
+    m_groupMenu->addAction(i18n("Add New Group..."), this, [this]() {
         m_window->tabWidget()->addView(QUrl(QSL("extension://verticaltabs/group")), Qz::NT_SelectedTab);
     });
 }

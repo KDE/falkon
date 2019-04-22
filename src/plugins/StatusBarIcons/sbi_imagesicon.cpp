@@ -26,12 +26,14 @@
 #include <QSettings>
 #include <QMenu>
 
+#include <KLocalizedString>
+
 SBI_ImagesIcon::SBI_ImagesIcon(BrowserWindow* window, const QString &settingsPath)
     : SBI_Icon(window, settingsPath)
 {
     setObjectName(QSL("sbi_imagesicon"));
     setCursor(Qt::PointingHandCursor);
-    setToolTip(tr("Modify images loading settings per-site and globally"));
+    setToolTip(i18n("Modify images loading settings per-site and globally"));
 
     m_icon = QIcon::fromTheme("image-x-generic", QIcon(":sbi/data/images.png"));
     setPixmap(m_icon.pixmap(16));
@@ -55,19 +57,19 @@ void SBI_ImagesIcon::showMenu(const QPoint &point)
     boldFont.setBold(true);
 
     QMenu menu;
-    menu.addAction(m_icon, tr("Current Page Settings"))->setFont(boldFont);
+    menu.addAction(m_icon, i18n("Current Page Settings"))->setFont(boldFont);
 
     if (testCurrentPageWebAttribute(QWebEngineSettings::AutoLoadImages)) {
-        menu.addAction(tr("Disable loading images (temporarily)"), this, &SBI_ImagesIcon::toggleLoadingImages);
+        menu.addAction(i18n("Disable loading images (temporarily)"), this, &SBI_ImagesIcon::toggleLoadingImages);
     }
     else {
-        menu.addAction(tr("Enable loading images (temporarily)"), this, &SBI_ImagesIcon::toggleLoadingImages);
+        menu.addAction(i18n("Enable loading images (temporarily)"), this, &SBI_ImagesIcon::toggleLoadingImages);
     }
 
     menu.addSeparator();
-    menu.addAction(m_icon, tr("Global Settings"))->setFont(boldFont);
+    menu.addAction(m_icon, i18n("Global Settings"))->setFont(boldFont);
 
-    QAction* act = menu.addAction(tr("Automatically load images"));
+    QAction* act = menu.addAction(i18n("Automatically load images"));
     act->setCheckable(true);
     act->setChecked(m_loadingImages);
     connect(act, &QAction::toggled, this, &SBI_ImagesIcon::setGlobalLoadingImages);

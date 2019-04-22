@@ -31,6 +31,8 @@
 #include <QFile>
 #include <QDir>
 
+#include <KLocalizedString>
+
 GM_AddScriptDialog::GM_AddScriptDialog(GM_Manager* manager, GM_Script* script, QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::GM_AddScriptDialog)
@@ -47,11 +49,11 @@ GM_AddScriptDialog::GM_AddScriptDialog(GM_Manager* manager, GM_Script* script, Q
     const QStringList exclude = script->exclude();
 
     if (!include.isEmpty()) {
-        runsAt = tr("<p>runs at<br/><i>%1</i></p>").arg(include.join("<br/>"));
+        runsAt = i18n("<p>runs at<br/><i>%1</i></p>", include.join("<br/>"));
     }
 
     if (!exclude.isEmpty()) {
-        dontRunsAt = tr("<p>does not run at<br/><i>%1</i></p>").arg(exclude.join("<br/>"));
+        dontRunsAt = i18n("<p>does not run at<br/><i>%1</i></p>", exclude.join("<br/>"));
     }
 
     QString scriptInfo = QString("<b>%1</b> %2<br/>%3 %4 %5").arg(script->name(), script->version(), script->description(), runsAt, dontRunsAt);
@@ -81,10 +83,10 @@ void GM_AddScriptDialog::showSource()
 
 void GM_AddScriptDialog::accepted()
 {
-    QString message = tr("Cannot install script");
+    QString message = i18n("Cannot install script");
 
     if (m_manager->addScript(m_script)) {
-        message = tr("'%1' installed successfully").arg(m_script->name());
+        message = i18n("'%1' installed successfully", m_script->name());
     }
 
     m_manager->showNotification(message);

@@ -1,10 +1,10 @@
+add_definitions(-DTRANSLATION_DOMAIN="falkon_kdeframeworksintegration")
+
 set(KDEFrameworksIntegration_SRCS
     kdeframeworksintegrationplugin.cpp
     kwalletpasswordbackend.cpp
     kioschemehandler.cpp
 )
-
-ecm_create_qm_loader(KDEFrameworksIntegration_SRCS falkon_kdeframeworksintegration_qt)
 
 set(KDEFrameworksIntegration_RSCS
     kdeframeworksintegration.qrc

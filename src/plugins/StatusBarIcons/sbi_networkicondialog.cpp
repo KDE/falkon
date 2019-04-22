@@ -23,6 +23,8 @@
 #include <QInputDialog>
 #include <QMessageBox>
 
+#include <KLocalizedString>
+
 SBI_NetworkIconDialog::SBI_NetworkIconDialog(QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::SBI_NetworkIconDialog)
@@ -54,7 +56,7 @@ SBI_NetworkIconDialog::SBI_NetworkIconDialog(QWidget* parent)
 
 void SBI_NetworkIconDialog::addProxy()
 {
-    const QString name = QInputDialog::getText(this, tr("Add proxy"), tr("Name of proxy:"));
+    const QString name = QInputDialog::getText(this, i18n("Add proxy"), i18n("Name of proxy:"));
     if (name.isEmpty() || ui->comboBox->findText(name) > -1) {
         return;
     }
@@ -67,7 +69,7 @@ void SBI_NetworkIconDialog::addProxy()
 
 void SBI_NetworkIconDialog::removeProxy()
 {
-    QMessageBox::StandardButton button = QMessageBox::warning(this, tr("Remove current proxy"), tr("Are you sure you want to remove current proxy?"),
+    QMessageBox::StandardButton button = QMessageBox::warning(this, i18n("Remove current proxy"), i18n("Are you sure you want to remove current proxy?"),
                                          QMessageBox::Yes | QMessageBox::No, QMessageBox::No);
 
     if (button != QMessageBox::Yes) {

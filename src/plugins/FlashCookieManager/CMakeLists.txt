@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN="falkon_flashcookiemanager")
+
 set( FlashCookieManager_SRCS
 	fcm_plugin.cpp
 	fcm_dialog.cpp
@@ -10,7 +12,7 @@ set( FlashCookieManager_UIS
 	fcm_dialog.ui
 	fcm_notification.ui
 	)
-qt5_wrap_ui(UIS ${FlashCookieManager_UIS})
+ki18n_wrap_ui(UIS ${FlashCookieManager_UIS})
 
 set( FlashCookieManager_RSCS
 	flashcookiemanager.qrc

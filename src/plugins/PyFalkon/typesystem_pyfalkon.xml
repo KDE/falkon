@@ -166,13 +166,7 @@
     <object-type name="TabMruModel"/>
     <object-type name="TabStackedWidget"/>
     <object-type name="TabTreeModel"/>
-    <object-type name="TabWidget">
-      <modify-function signature="addView(LoadRequest,QString,QFlags&lt;Qz::NewTabPositionFlag&gt;,bool,int,bool)">
-        <modify-argument index="2">
-          <replace-default-expression with="TabWidget::tr(&quot;New tab&quot;)"/>
-        </modify-argument>
-      </modify-function>
-    </object-type>
+    <object-type name="TabWidget"/>
 
     <object-type name="AbstractButtonInterface">
       <object-type name="ClickController"/>

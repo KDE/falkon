@@ -1,9 +1,9 @@
+add_definitions(-DTRANSLATION_DOMAIN="falkon_testplugin")
+
 set( TestPlugin_SRCS
 	testplugin.cpp
 	testplugin_sidebar.cpp
 	)
-
-ecm_create_qm_loader( TestPlugin_SRCS falkon_testplugin_qt )
 
 add_library(TestPlugin MODULE ${TestPlugin_SRCS} ${RSCS})
 install(TARGETS TestPlugin DESTINATION ${FALKON_INSTALL_PLUGINDIR})

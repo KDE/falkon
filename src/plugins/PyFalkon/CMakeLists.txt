@@ -3,7 +3,7 @@ if(POLICY CMP0071)
   cmake_policy(SET CMP0071 NEW)
 endif()
 
-# Get all relevant Qt include dirs, to pass them on to shiboken.
+# Get all relevant include dirs, to pass them on to shiboken.
 get_property(QT_CORE_INCLUDE_DIRS TARGET Qt5::Core PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 get_property(QT_GUI_INCLUDE_DIRS TARGET Qt5::Gui PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 get_property(QT_SQL_INCLUDE_DIRS TARGET Qt5::Sql PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
@@ -11,7 +11,9 @@ get_property(QT_WIDGETS_INCLUDE_DIRS TARGET Qt5::Widgets PROPERTY INTERFACE_INCL
 get_property(QT_NETWORK_INCLUDE_DIRS TARGET Qt5::Network PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 get_property(QT_WEBENGINECORE_INCLUDE_DIRS TARGET Qt5::WebEngineCore PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 get_property(QT_WEBENGINEWIDGETS_INCLUDE_DIRS TARGET Qt5::WebEngineWidgets PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
-set(QT_INCLUDE_DIRS
+get_property(KF5_I18N_INCLUDE_DIRS TARGET KF5::I18n PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
+get_property(FalkonPrivate_INCLUDE_DIRS TARGET FalkonPrivate PROPERTY INCLUDE_DIRECTORIES)
+set(INCLUDE_DIRS
     ${QT_CORE_INCLUDE_DIRS}
     ${QT_GUI_INCLUDE_DIRS}
     ${QT_SQL_INCLUDE_DIRS}
@@ -19,14 +21,12 @@ set(QT_INCLUDE_DIRS
     ${QT_NETWORK_INCLUDE_DIRS}
     ${QT_WEBENGINECORE_INCLUDE_DIRS}
     ${QT_WEBENGINEWIDGETS_INCLUDE_DIRS}
+    ${KF5_I18N_INCLUDE_DIRS}
+    ${FalkonPrivate_INCLUDE_DIRS}
 )
-set(INCLUDES "")
-foreach(INCLUDE_DIR ${QT_INCLUDE_DIRS})
-    list(APPEND INCLUDES "-I${INCLUDE_DIR}")
-endforeach()
-get_property(FalkonPrivate_INCLUDE_DIRS TARGET FalkonPrivate PROPERTY INCLUDE_DIRECTORIES)
-foreach(INCLUDE_DIR ${FalkonPrivate_INCLUDE_DIRS})
-    list(APPEND INCLUDES "-I${INCLUDE_DIR}")
+set(SHIBOKEN_INCLUDES "")
+foreach(INCLUDE_DIR ${INCLUDE_DIRS})
+    list(APPEND SHIBOKEN_INCLUDES "-I${INCLUDE_DIR}")
 endforeach()
 
 # Set up the options to pass to shiboken.
@@ -36,7 +36,7 @@ set(TYPESYSTEM_FILE ${CMAKE_CURRENT_SOURCE_DIR}/typesystem_pyfalkon.xml)
 set(SHIBOKEN_OPTIONS --generator-set=shiboken --enable-parent-ctor-heuristic
     --enable-pyside-extensions --enable-return-value-heuristic --use-isnull-as-nb_nonzero
     --avoid-protected-hack
-    ${INCLUDES}
+    ${SHIBOKEN_INCLUDES}
     -T${PYSIDE_TYPESYSTEMS}
     --output-directory=${CMAKE_CURRENT_BINARY_DIR}
     --api-version="${Qt5_VERSION_MAJOR}.${Qt5_VERSION_MINOR}"

@@ -22,6 +22,8 @@
 #include <QDir>
 #include <QFileDialog>
 
+#include <KLocalizedString>
+
 VerticalTabsSettings::VerticalTabsSettings(VerticalTabsPlugin *plugin, QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::VerticalTabsSettings)
@@ -58,7 +60,7 @@ void VerticalTabsSettings::themeValueChanged(int index)
 {
     const int customIndex = ui->theme->count() - 1;
     if (index == customIndex) {
-        const QString path = QFileDialog::getOpenFileName(this, tr("Theme file"), QDir::homePath(), {QSL("*.css")});
+        const QString path = QFileDialog::getOpenFileName(this, i18n("Theme file"), QDir::homePath(), {QSL("*.css")});
         if (path.isEmpty()) {
             loadThemes();
         } else {
@@ -83,7 +85,7 @@ void VerticalTabsSettings::loadThemes()
         }
     }
     ui->theme->setToolTip(m_plugin->theme());
-    ui->theme->addItem(tr("Custom..."), found ? QString() : m_plugin->theme());
+    ui->theme->addItem(i18n("Custom..."), found ? QString() : m_plugin->theme());
     if (!found) {
         ui->theme->setCurrentIndex(ui->theme->count() - 1);
     }

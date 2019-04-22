@@ -20,6 +20,8 @@
 #include "browserwindow.h"
 #include "tabwidget.h"
 
+#include <KLocalizedString>
+
 SBI_ZoomWidget::SBI_ZoomWidget(BrowserWindow* parent)
     : QSlider(parent)
     , m_window(parent)
@@ -45,7 +47,7 @@ void SBI_ZoomWidget::valueChanged(int value)
 
     if (view) {
         view->setZoomLevel(value);
-        setToolTip(tr("Zoom: %1%").arg(view->zoomFactor() * 100));
+        setToolTip(i18n("Zoom: %1%", view->zoomFactor() * 100));
     }
 }
 

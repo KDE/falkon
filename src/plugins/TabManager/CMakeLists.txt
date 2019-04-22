@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN="falkon_tabmanager")
+
 set( TabManager_SRCS
 	tabmanagerplugin.cpp
 	tabmanagerwidget.cpp
@@ -7,13 +9,11 @@ set( TabManager_SRCS
 	tldextractor/tldextractor.cpp
 	)
 
-ecm_create_qm_loader( TabManager_SRCS falkon_tabmanager_qt )
-
 set( TabManager_UIS
 	tabmanagerwidget.ui
 	tabmanagersettings.ui
 	)
-qt5_wrap_ui(UIS ${TabManager_UIS})
+ki18n_wrap_ui(UIS ${TabManager_UIS})
 
 set( TabManager_RSCS
 	tabmanagerplugin.qrc

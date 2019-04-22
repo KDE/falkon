@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN="falkon_greasemonkey")
+
 include_directories(settings)
 
 set( GreaseMonkey_SRCS
@@ -15,15 +17,13 @@ set( GreaseMonkey_SRCS
 	settings/gm_settingslistwidget.cpp
 	)
 
-ecm_create_qm_loader( GreaseMonkey_SRCS falkon_greasemonkey_qt )
-
 set( GreaseMonkey_UIS
 	gm_addscriptdialog.ui
 	gm_notification.ui
 	settings/gm_settings.ui
 	settings/gm_settingsscriptinfo.ui
 	)
-qt5_wrap_ui(UIS ${GreaseMonkey_UIS})
+ki18n_wrap_ui(UIS ${GreaseMonkey_UIS})
 
 set( GreaseMonkey_RSCS
 	greasemonkey.qrc

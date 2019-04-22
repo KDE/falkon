@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN="falkon_autoscroll")
+
 set( AutoScroll_SRCS
 	autoscrollplugin.cpp
 	autoscroller.cpp
@@ -5,12 +7,10 @@ set( AutoScroll_SRCS
 	autoscrollsettings.cpp
 	)
 
-ecm_create_qm_loader( AutoScroll_SRCS falkon_autoscroll_qt )
-
 set( AutoScroll_UIS
 	autoscrollsettings.ui
 	)
-qt5_wrap_ui(UIS ${AutoScroll_UIS})
+ki18n_wrap_ui(UIS ${AutoScroll_UIS})
 
 set( AutoScroll_RSCS
 	autoscroll.qrc

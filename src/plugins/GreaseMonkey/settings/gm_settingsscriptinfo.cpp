@@ -21,6 +21,8 @@
 
 #include <QDesktopServices>
 
+#include <KLocalizedString>
+
 GM_SettingsScriptInfo::GM_SettingsScriptInfo(GM_Script* script, QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::GM_SettingsScriptInfo)
@@ -42,7 +44,7 @@ void GM_SettingsScriptInfo::editInTextEditor()
 
 void GM_SettingsScriptInfo::loadScript()
 {
-    setWindowTitle(tr("Script Details of %1").arg(m_script->name()));
+    setWindowTitle(i18n("Script Details of %1", m_script->name()));
 
     ui->name->setText(m_script->name());
     ui->nspace->setText(m_script->nameSpace());

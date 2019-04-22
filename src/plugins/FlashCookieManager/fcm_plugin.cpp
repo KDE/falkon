@@ -34,6 +34,8 @@
 #include <QDir>
 #include <QMenu>
 
+#include <KLocalizedString>
+
 #if defined(Q_OS_WIN) || defined(Q_OS_OS2)
 #include <QProcessEnvironment>
 #endif
@@ -55,7 +57,7 @@ public:
 
     QString name() const override
     {
-        return tr("Flash Cookie Manager button");
+        return i18n("Flash Cookie Manager button");
     }
 };
 
@@ -123,7 +125,7 @@ void FCM_Plugin::showSettings(QWidget* parent)
 
 void FCM_Plugin::populateExtensionsMenu(QMenu* menu)
 {
-    QAction* showFCM = new QAction(QIcon(":/flashcookiemanager/data/flash-cookie-manager.png"), tr("Flash Cookie Manager"), menu);
+    QAction* showFCM = new QAction(QIcon(":/flashcookiemanager/data/flash-cookie-manager.png"), i18n("Flash Cookie Manager"), menu);
     connect(showFCM, &QAction::triggered, this, &FCM_Plugin::showFlashCookieManager);
     menu->addAction(showFCM);
 }
@@ -353,8 +355,8 @@ AbstractButtonInterface* FCM_Plugin::createStatusBarIcon(BrowserWindow* mainWind
 
     FCM_Button* icon = new FCM_Button(this);
     icon->setIcon(QIcon(QSL(":/flashcookiemanager/data/flash-cookie-manager.png")));
-    icon->setTitle(tr("Flash Cookie Manager"));
-    icon->setToolTip(tr("Show Flash Cookie Manager"));
+    icon->setTitle(i18n("Flash Cookie Manager"));
+    icon->setToolTip(i18n("Show Flash Cookie Manager"));
     connect(icon, &AbstractButtonInterface::clicked, this, &FCM_Plugin::showFlashCookieManager);
 
     m_statusBarIcons.insert(mainWindow, icon);
@@ -435,7 +437,7 @@ QString FCM_Plugin::extractOriginFrom(const QString &path)
     else if (path.startsWith(flashPlayerDataPath() + QL1S("/macromedia.com/support/flashplayer/sys/"))) {
         origin.remove(flashPlayerDataPath() + QL1S("/macromedia.com/support/flashplayer/sys/"));
         if (origin == QL1S("settings.sol")) {
-            return tr("!default");
+            return i18n("!default");
         }
         else if (origin.startsWith(QL1C('#'))) {
             origin.remove(0, 1);
@@ -447,7 +449,7 @@ QString FCM_Plugin::extractOriginFrom(const QString &path)
 
     int index = origin.indexOf(QL1C('/'));
     if (index == -1) {
-        return tr("!other");
+        return i18n("!other");
     }
     origin = origin.remove(index, origin.size());
     if (origin == QL1S("localhost") || origin == QL1S("local")) {

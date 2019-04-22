@@ -28,6 +28,8 @@
 #include <QToolTip>
 #include <QHoverEvent>
 
+#include <KLocalizedString>
+
 TabTreeView::TabTreeView(BrowserWindow *window, QWidget *parent)
     : QTreeView(parent)
     , m_window(window)
@@ -303,11 +305,11 @@ bool TabTreeView::viewportEvent(QEvent *event)
         DelegateButton button = buttonAt(he->pos(), index);
         if (button == AudioButton) {
             const bool muted = index.data(TabModel::AudioMutedRole).toBool();
-            QToolTip::showText(he->globalPos(), muted ? tr("Unmute Tab") : tr("Mute Tab"), this, visualRect(index));
+            QToolTip::showText(he->globalPos(), muted ? i18n("Unmute Tab") : i18n("Mute Tab"), this, visualRect(index));
             he->accept();
             return true;
         } else if (button == CloseButton) {
-            QToolTip::showText(he->globalPos(), tr("Close Tab"), this, visualRect(index));
+            QToolTip::showText(he->globalPos(), i18n("Close Tab"), this, visualRect(index));
             he->accept();
             return true;
         } else if (button == NoButton) {
@@ -374,21 +376,21 @@ void TabTreeView::addMenuActions(QMenu *menu, const QModelIndex &index)
     }
 
     menu->addSeparator();
-    QMenu *m = menu->addMenu(tr("Tab Tree"));
+    QMenu *m = menu->addMenu(i18n("Tab Tree"));
 
     if (index.isValid() && model()->rowCount(index) > 0) {
         QPersistentModelIndex pindex = index;
-        m->addAction(tr("Close Tree"), this, [=]() {
+        m->addAction(i18n("Close Tree"), this, [=]() {
             closeTree(pindex);
         });
-        m->addAction(tr("Unload Tree"), this, [=]() {
+        m->addAction(i18n("Unload Tree"), this, [=]() {
             unloadTree(pindex);
         });
     }
 
     m->addSeparator();
-    m->addAction(tr("Expand All"), this, &TabTreeView::expandAll);
-    m->addAction(tr("Collapse All"), this, &TabTreeView::collapseAll);
+    m->addAction(i18n("Expand All"), this, &TabTreeView::expandAll);
+    m->addAction(i18n("Collapse All"), this, &TabTreeView::collapseAll);
 }
 
 void TabTreeView::reverseTraverse(const QModelIndex &root, const std::function<void(const QModelIndex&)> &callback) const

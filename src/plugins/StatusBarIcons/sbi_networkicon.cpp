@@ -25,6 +25,8 @@
 #include <QMenu>
 #include <QNetworkConfigurationManager>
 
+#include <KLocalizedString>
+
 SBI_NetworkIcon::SBI_NetworkIcon(BrowserWindow* window)
     : SBI_Icon(window)
     , m_networkConfiguration(new QNetworkConfigurationManager(this))
@@ -62,9 +64,9 @@ void SBI_NetworkIcon::showMenu(const QPoint &pos)
     boldFont.setBold(true);
 
     QMenu menu;
-    menu.addAction(QIcon::fromTheme("preferences-system-network", QIcon(":sbi/data/preferences-network.png")), tr("Proxy Configuration"))->setFont(boldFont);
+    menu.addAction(QIcon::fromTheme("preferences-system-network", QIcon(":sbi/data/preferences-network.png")), i18n("Proxy Configuration"))->setFont(boldFont);
 
-    QMenu* proxyMenu = menu.addMenu(tr("Select proxy"));
+    QMenu* proxyMenu = menu.addMenu(i18n("Select proxy"));
 
     const QHash<QString, SBI_NetworkProxy*> &proxies = SBINetManager->proxies();
 
@@ -78,11 +80,11 @@ void SBI_NetworkIcon::showMenu(const QPoint &pos)
     }
 
     if (proxyMenu->actions().count() == 0) {
-        proxyMenu->addAction(tr("Empty"))->setEnabled(false);
+        proxyMenu->addAction(i18n("Empty"))->setEnabled(false);
     }
 
     menu.addSeparator();
-    menu.addAction(tr("Manage proxies"), this, &SBI_NetworkIcon::showDialog);
+    menu.addAction(i18n("Manage proxies"), this, &SBI_NetworkIcon::showDialog);
     menu.exec(pos);
 }
 
@@ -98,23 +100,23 @@ void SBI_NetworkIcon::updateToolTip()
     QString tooltip = tr("Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/><br/><b>Proxy:</b><br/>%2");
 
     if (m_networkConfiguration->isOnline()) {
-        tooltip = tooltip.arg(tr("Connected"));
+        tooltip = tooltip.arg(i18n("Connected"));
     }
     else {
-        tooltip = tooltip.arg(tr("Offline"));
+        tooltip = tooltip.arg(i18n("Offline"));
     }
 
     switch (QNetworkProxy::applicationProxy().type()) {
     case QNetworkProxy::DefaultProxy:
-        tooltip = tooltip.arg(tr("System proxy"));
+        tooltip = tooltip.arg(i18n("System proxy"));
         break;
 
     case QNetworkProxy::NoProxy:
-        tooltip = tooltip.arg(tr("No proxy"));
+        tooltip = tooltip.arg(i18n("No proxy"));
         break;
 
     default:
-        tooltip = tooltip.arg(tr("User defined"));
+        tooltip = tooltip.arg(i18n("User defined"));
         break;
     }
 

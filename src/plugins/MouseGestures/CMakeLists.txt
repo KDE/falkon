@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN="falkon_mousegestures")
+
 include_directories(3rdparty)
 
 set( MouseGestures_HDRS
@@ -14,12 +16,10 @@ set( MouseGestures_SRCS
 	mousegesturessettingsdialog.cpp
 	)
 
-ecm_create_qm_loader( MouseGestures_SRCS falkon_mousegestures_qt )
-
 set( MouseGestures_UIS
 	mousegesturessettingsdialog.ui
 	)
-qt5_wrap_ui(UIS ${MouseGestures_UIS})
+ki18n_wrap_ui(UIS ${MouseGestures_UIS})
 
 set( MouseGestures_RSCS
 	mousegestures.qrc

@@ -20,6 +20,8 @@
 #include "iconprovider.h"
 #include "fcm_plugin.h"
 
+#include <KLocalizedString>
+
 FCM_Notification::FCM_Notification(FCM_Plugin* manager, int newOriginsCount)
     : AnimatedWidget(AnimatedWidget::Down, 300, 0)
     , ui(new Ui::FCM_Notification)
@@ -31,10 +33,10 @@ FCM_Notification::FCM_Notification(FCM_Plugin* manager, int newOriginsCount)
     ui->close->setIcon(IconProvider::standardIcon(QStyle::SP_DialogCloseButton));
 
     if (newOriginsCount == 1) {
-        ui->textLabel->setText(tr("A new flash cookie was detected"));
+        ui->textLabel->setText(i18n("A new flash cookie was detected"));
     }
     else {
-        ui->textLabel->setText(tr("%1 new flash cookies were detected").arg(newOriginsCount));
+        ui->textLabel->setText(i18n("%1 new flash cookies were detected", newOriginsCount));
     }
     connect(ui->buttonView, SIGNAL(clicked()), m_manager, SLOT(showFlashCookieManager()));
     connect(ui->buttonView, SIGNAL(clicked()), this, SLOT(hide()));

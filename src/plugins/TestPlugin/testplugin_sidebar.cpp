@@ -22,6 +22,8 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
+#include <KLocalizedString>
+
 TestPlugin_Sidebar::TestPlugin_Sidebar(QObject* parent)
     : SideBarInterface(parent)
 {
@@ -29,7 +31,7 @@ TestPlugin_Sidebar::TestPlugin_Sidebar(QObject* parent)
 
 QString TestPlugin_Sidebar::title() const
 {
-    return tr("Testing Sidebar");
+    return i18n("Testing Sidebar");
 }
 
 QAction* TestPlugin_Sidebar::createMenuAction()
@@ -37,7 +39,7 @@ QAction* TestPlugin_Sidebar::createMenuAction()
     // The action must be parented to some object from plugin, otherwise
     // there may be a crash when unloading the plugin.
 
-    QAction* act = new QAction(tr("Testing Sidebar"), this);
+    QAction* act = new QAction(i18n("Testing Sidebar"), this);
     act->setCheckable(true);
 
     return act;

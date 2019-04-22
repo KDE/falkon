@@ -23,6 +23,8 @@
 #include <QUrlQuery>
 #include <QWebEngineUrlRequestJob>
 
+#include <KLocalizedString>
+
 VerticalTabsSchemeHandler::VerticalTabsSchemeHandler(QObject *parent)
     : ExtensionSchemeHandler(parent)
 {
@@ -44,7 +46,7 @@ QByteArray VerticalTabsSchemeHandler::indexPage() const
 {
     QString page = QzTools::readAllFileContents(QSL(":verticaltabs/data/index.html"));
 
-    page.replace(QSL("%NAME%"), tr("Vertical Tabs"));
+    page.replace(QSL("%NAME%"), i18n("Vertical Tabs"));
 
     return page.toUtf8();
 }
@@ -54,7 +56,7 @@ QByteArray VerticalTabsSchemeHandler::groupPage() const
     QString page = QzTools::readAllFileContents(QSL(":verticaltabs/data/group.html"));
 
     page.replace(QSL("%FAVICON%"), QzTools::pixmapToDataUrl(QIcon(QSL(":verticaltabs/data/group.svg")).pixmap(16)).toString());
-    page.replace(QSL("%NEW-GROUP%"), tr("New Group"));
+    page.replace(QSL("%NEW-GROUP%"), i18n("New Group"));
 
     return page.toUtf8();
 }

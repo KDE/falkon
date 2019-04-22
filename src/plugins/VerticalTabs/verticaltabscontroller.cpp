@@ -24,6 +24,8 @@
 #include <QAction>
 #include <QKeyEvent>
 
+#include <KLocalizedString>
+
 VerticalTabsController::VerticalTabsController(VerticalTabsPlugin *plugin)
     : SideBarInterface(plugin)
     , m_plugin(plugin)
@@ -32,7 +34,7 @@ VerticalTabsController::VerticalTabsController(VerticalTabsPlugin *plugin)
 
 QString VerticalTabsController::title() const
 {
-    return tr("Vertical Tabs");
+    return i18n("Vertical Tabs");
 }
 
 QAction *VerticalTabsController::createMenuAction()

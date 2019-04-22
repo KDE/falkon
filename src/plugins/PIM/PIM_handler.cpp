@@ -28,6 +28,8 @@
 #include <QToolTip>
 #include <QKeyEvent>
 
+#include <KLocalizedString>
+
 PIM_Handler::PIM_Handler(const QString &sPath, QObject* parent)
     : QObject(parent)
     , m_settingsFile(sPath + QL1S("/extensions.ini"))
@@ -56,20 +58,20 @@ void PIM_Handler::loadSettings()
     m_allInfo[PI_Special3] = settings.value("Special3", QString()).toString();
     settings.endGroup();
 
-    m_translations[PI_LastName] = tr("Last Name");
-    m_translations[PI_FirstName] = tr("First Name");
-    m_translations[PI_Email] = tr("E-mail");
-    m_translations[PI_Mobile] = tr("Mobile");
-    m_translations[PI_Phone] = tr("Phone");
-    m_translations[PI_Address] = tr("Address");
-    m_translations[PI_City] = tr("City");
-    m_translations[PI_Zip] = tr("ZIP Code");
-    m_translations[PI_State] = tr("State/Region");
-    m_translations[PI_Country] = tr("Country");
-    m_translations[PI_HomePage] = tr("Home Page");
-    m_translations[PI_Special1] = tr("Custom 1");
-    m_translations[PI_Special2] = tr("Custom 2");
-    m_translations[PI_Special3] = tr("Custom 3");
+    m_translations[PI_LastName] = i18n("Last Name");
+    m_translations[PI_FirstName] = i18n("First Name");
+    m_translations[PI_Email] = i18n("E-mail");
+    m_translations[PI_Mobile] = i18n("Mobile");
+    m_translations[PI_Phone] = i18n("Phone");
+    m_translations[PI_Address] = i18n("Address");
+    m_translations[PI_City] = i18n("City");
+    m_translations[PI_Zip] = i18n("ZIP Code");
+    m_translations[PI_State] = i18n("State/Region");
+    m_translations[PI_Country] = i18n("Country");
+    m_translations[PI_HomePage] = i18n("Home Page");
+    m_translations[PI_Special1] = i18n("Custom 1");
+    m_translations[PI_Special2] = i18n("Custom 2");
+    m_translations[PI_Special3] = i18n("Custom 3");
 
     m_infoMatches[PI_LastName] << "lastname" << "surname";
     m_infoMatches[PI_FirstName] << "firstname" << "name";
@@ -111,7 +113,7 @@ void PIM_Handler::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTe
         loadSettings();
     }
 
-    QMenu* pimMenu = new QMenu(tr("Insert Personal Information"));
+    QMenu* pimMenu = new QMenu(i18n("Insert Personal Information"));
     pimMenu->setIcon(QIcon(":/PIM/data/PIM.png"));
 
     if (!m_allInfo[PI_FirstName].isEmpty() && !m_allInfo[PI_LastName].isEmpty()) {
@@ -132,7 +134,7 @@ void PIM_Handler::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTe
     }
 
     pimMenu->addSeparator();
-    pimMenu->addAction(tr("Edit"), this, SLOT(showSettings()));
+    pimMenu->addAction(i18n("Edit"), this, SLOT(showSettings()));
 
     menu->addMenu(pimMenu);
     menu->addSeparator();
