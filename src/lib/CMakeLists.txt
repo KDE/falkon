@@ -157,11 +157,10 @@ set(SRCS ${SRCS}
     plugins/plugins.cpp
     plugins/speeddial.cpp
     plugins/ocssupport.cpp
+    plugins/qml/qmlplugincontext.cpp
     plugins/qml/qmlpluginloader.cpp
-    plugins/qml/qmlplugin.cpp
     plugins/qml/qmlplugins.cpp
     plugins/qml/qmlplugininterface.cpp
-    plugins/qml/qmlengine.cpp
     plugins/qml/qmlstaticdata.cpp
     plugins/qml/api/bookmarks/qmlbookmarktreenode.cpp
     plugins/qml/api/bookmarks/qmlbookmarks.cpp

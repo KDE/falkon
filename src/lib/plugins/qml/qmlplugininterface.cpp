@@ -31,15 +31,18 @@
 #include "api/tabs/qmltab.h"
 #include "webpage.h"
 #include "qztools.h"
-#include "qml/qmlengine.h"
+#include "qml/qmlplugincontext.h"
+
 #include <QDebug>
 #include <QQuickWidget>
 #include <QDialog>
 #include <QVBoxLayout>
+#include <QQmlEngine>
 
 QmlPluginInterface::QmlPluginInterface()
     : m_qmlReusableTab(new QmlTab())
 {
+    // QQmlEngine::setContextForObject(m_qmlReusableTab, QmlPluginContext::contextForObject(this));
 }
 
 QmlPluginInterface::~QmlPluginInterface()
@@ -95,11 +98,13 @@ void QmlPluginInterface::populateWebViewMenu(QMenu *menu, WebView *webview, cons
         return;
     }
 
-    QmlMenu *qmlMenu = new QmlMenu(menu, m_engine);
+    QmlMenu *qmlMenu = new QmlMenu(menu);
+    QQmlEngine::setContextForObject(qmlMenu, QmlPluginContext::contextForObject(this));
     QmlWebHitTestResult *qmlWebHitTestResult = new QmlWebHitTestResult(webHitTestResult);
+    QQmlEngine::setContextForObject(qmlWebHitTestResult, QmlPluginContext::contextForObject(this));
     QJSValueList args;
-    args.append(m_engine->newQObject(qmlMenu));
-    args.append(m_engine->newQObject(qmlWebHitTestResult));
+    args.append(qmlEngine(this)->newQObject(qmlMenu));
+    args.append(qmlEngine(this)->newQObject(qmlWebHitTestResult));
     m_populateWebViewMenu.call(args);
     menu->addSeparator();
 }
@@ -125,9 +130,10 @@ bool QmlPluginInterface::mouseDoubleClick(Qz::ObjectName type, QObject *obj, QMo
         return false;
     }
     auto qmlMouseEvent = new QmlMouseEvent(event);
+    QQmlEngine::setContextForObject(qmlMouseEvent, QmlPluginContext::contextForObject(this));
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(qmlMouseEvent));
+    args.append(qmlEngine(this)->newQObject(qmlMouseEvent));
     m_mouseDoubleClick.call(args);
     qmlMouseEvent->clear();
     return false;
@@ -140,9 +146,10 @@ bool QmlPluginInterface::mousePress(Qz::ObjectName type, QObject *obj, QMouseEve
         return false;
     }
     auto qmlMouseEvent = new QmlMouseEvent(event);
+    QQmlEngine::setContextForObject(qmlMouseEvent, QmlPluginContext::contextForObject(this));
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(qmlMouseEvent));
+    args.append(qmlEngine(this)->newQObject(qmlMouseEvent));
     m_mousePress.call(args);
     qmlMouseEvent->clear();
     return false;
@@ -155,9 +162,10 @@ bool QmlPluginInterface::mouseRelease(Qz::ObjectName type, QObject *obj, QMouseE
         return false;
     }
     auto qmlMouseEvent = new QmlMouseEvent(event);
+    QQmlEngine::setContextForObject(qmlMouseEvent, QmlPluginContext::contextForObject(this));
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(qmlMouseEvent));
+    args.append(qmlEngine(this)->newQObject(qmlMouseEvent));
     m_mouseRelease.call(args);
     qmlMouseEvent->clear();
     return false;
@@ -170,9 +178,10 @@ bool QmlPluginInterface::mouseMove(Qz::ObjectName type, QObject *obj, QMouseEven
         return false;
     }
     auto qmlMouseEvent = new QmlMouseEvent(event);
+    QQmlEngine::setContextForObject(qmlMouseEvent, QmlPluginContext::contextForObject(this));
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(qmlMouseEvent));
+    args.append(qmlEngine(this)->newQObject(qmlMouseEvent));
     m_mouseMove.call(args);
     qmlMouseEvent->clear();
     return false;
@@ -185,9 +194,10 @@ bool QmlPluginInterface::wheelEvent(Qz::ObjectName type, QObject *obj, QWheelEve
         return false;
     }
     auto qmlWheelEvent = new QmlWheelEvent(event);
+    QQmlEngine::setContextForObject(qmlWheelEvent, QmlPluginContext::contextForObject(this));
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(qmlWheelEvent));
+    args.append(qmlEngine(this)->newQObject(qmlWheelEvent));
     m_wheelEvent.call(args);
     qmlWheelEvent->clear();
     return false;
@@ -200,9 +210,10 @@ bool QmlPluginInterface::keyPress(Qz::ObjectName type, QObject *obj, QKeyEvent *
         return false;
     }
     auto qmlKeyEvent = new QmlKeyEvent(event);
+    QQmlEngine::setContextForObject(qmlKeyEvent, QmlPluginContext::contextForObject(this));
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(qmlKeyEvent));
+    args.append(qmlEngine(this)->newQObject(qmlKeyEvent));
     m_keyPress.call(args);
     qmlKeyEvent->clear();
     return false;
@@ -215,9 +226,10 @@ bool QmlPluginInterface::keyRelease(Qz::ObjectName type, QObject *obj, QKeyEvent
         return false;
     }
     auto qmlKeyEvent = new QmlKeyEvent(event);
+    QQmlEngine::setContextForObject(qmlKeyEvent, QmlPluginContext::contextForObject(this));
     QJSValueList args;
     args.append(QmlQzObjects::ObjectName(type));
-    args.append(m_engine->newQObject(qmlKeyEvent));
+    args.append(qmlEngine(this)->newQObject(qmlKeyEvent));
     m_keyRelease.call(args);
     qmlKeyEvent->clear();
     return false;
@@ -230,7 +242,7 @@ bool QmlPluginInterface::acceptNavigationRequest(WebPage *page, const QUrl &url,
     }
     m_qmlReusableTab->setWebPage(page);
     QJSValueList args;
-    args.append(m_engine->newQObject(m_qmlReusableTab));
+    args.append(qmlEngine(this)->newQObject(m_qmlReusableTab));
     args.append(QString::fromUtf8(url.toEncoded()));
     args.append(type);
     args.append(isMainFrame);
@@ -265,16 +277,6 @@ QJSValue QmlPluginInterface::readTestPlugin() const
 void QmlPluginInterface::setTestPlugin(const QJSValue &testPlugin)
 {
     m_testPlugin = testPlugin;
-}
-
-void QmlPluginInterface::setEngine(QQmlEngine *engine)
-{
-    m_engine = engine;
-}
-
-void QmlPluginInterface::setName(const QString &name)
-{
-    m_name = name;
 }
 
 QJSValue QmlPluginInterface::readPopulateWebViewMenu() const

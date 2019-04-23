@@ -21,10 +21,11 @@
 #include "statusbar.h"
 #include "pluginproxy.h"
 #include "qml/api/fileutils/qmlfileutils.h"
-#include "qml/qmlengine.h"
+#include "qml/qmlplugincontext.h"
 #include "qml/qmlstaticdata.h"
+
 #include <QQuickWidget>
-#include <QQmlContext>
+#include <QQmlEngine>
 
 QmlBrowserAction::QmlBrowserAction(QObject *parent)
     : QObject(parent)
@@ -217,13 +218,10 @@ void QmlBrowserActionButton::setIcon(const QString &icon)
     if (!m_popup) {
         return;
     }
-    auto qmlEngine = qobject_cast<QmlEngine*>(m_popup->creationContext()->engine());
-    if (!qmlEngine) {
-        return;
-    }
-    const QString pluginPath = qmlEngine->extensionPath();
-    QIcon qicon = QmlStaticData::instance().getIcon(m_iconUrl, pluginPath);
+#if 0
+    QIcon qicon = QmlStaticData::instance().getIcon(m_iconUrl, QmlPluginContext::contextForObject(this)->pluginPath());
     AbstractButtonInterface::setIcon(qicon);
+#endif
 }
 
 void QmlBrowserActionButton::setBadgeText(const QString &badgeText)

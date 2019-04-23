@@ -21,7 +21,7 @@
 #include <QAction>
 #include <QVariantMap>
 
-class QmlEngine;
+class QQmlEngine;
 
 /**
  * @brief The class exposing Action API to QML
@@ -30,7 +30,7 @@ class QmlAction : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlAction(QAction *action, QmlEngine *engine, QObject *parent = nullptr);
+    explicit QmlAction(QAction *action, QObject *parent = nullptr);
     void setProperties(const QVariantMap &map);
     /**
      * @brief Updates the properties of the action
@@ -46,5 +46,4 @@ Q_SIGNALS:
 
 private:
     QAction *m_action = nullptr;
-    QString m_pluginPath;
 };

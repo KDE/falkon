@@ -18,10 +18,9 @@
 #pragma once
 
 #include "qmlaction.h"
-#include <QMenu>
-#include <QQmlEngine>
 
-class QmlEngine;
+#include <QMenu>
+#include <QJSValue>
 
 /**
  * @brief The class exposing WebView contextmenu to QML as Menu API
@@ -30,7 +29,7 @@ class QmlMenu : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlMenu(QMenu *menu, QQmlEngine *engine, QObject *parent = nullptr);
+    explicit QmlMenu(QMenu *menu, QObject *parent = nullptr);
     /**
      * @brief Adds action to menu
      * @param A JavaScript object containing properties for action.
@@ -38,14 +37,14 @@ public:
      *        and shortcut in form string.
      * @return action of type [QmlAction](@ref QmlAction)
      */
-    Q_INVOKABLE QmlAction *addAction(const QVariantMap &map);
+    Q_INVOKABLE QJSValue addAction(const QVariantMap &map);
     /**
      * @brief Adds sub-menu to menu
      * @param A JavaScript object containing properties of menu.
      *        The icon property must be in form of url of the path.
      * @return menu of type [QmlMenu](@ref QmlMenu)
      */
-    Q_INVOKABLE QmlMenu *addMenu(const QVariantMap &map);
+    Q_INVOKABLE QJSValue addMenu(const QVariantMap &map);
     /**
      * @brief Adds a separator to menu
      */
@@ -59,6 +58,4 @@ Q_SIGNALS:
 
 private:
     QMenu *m_menu = nullptr;
-    QString m_pluginPath;
-    QmlEngine *m_engine = nullptr;
 };

@@ -18,61 +18,51 @@
 #include "qmlmenu.h"
 #include "qztools.h"
 #include "qml/api/fileutils/qmlfileutils.h"
-#include "qml/qmlengine.h"
+#include "qml/qmlplugincontext.h"
 #include "qml/qmlstaticdata.h"
 
-QmlMenu::QmlMenu(QMenu *menu, QQmlEngine *engine, QObject *parent)
+#include <QQmlEngine>
+
+QmlMenu::QmlMenu(QMenu *menu, QObject *parent)
     : QObject(parent)
     , m_menu(menu)
 {
-    QQmlEngine::setObjectOwnership(this, QQmlEngine::JavaScriptOwnership);
-
-    m_engine = qobject_cast<QmlEngine*>(engine);
-    m_pluginPath = m_engine->extensionPath();
+    Q_ASSERT(m_menu);
     connect(m_menu, &QMenu::triggered, this, &QmlMenu::triggered);
 }
 
-QmlAction *QmlMenu::addAction(const QVariantMap &map)
+QJSValue QmlMenu::addAction(const QVariantMap &map)
 {
-    if (!m_menu) {
-        return nullptr;
-    }
-
     QAction *action = new QAction();
-    QmlAction *qmlAction = new QmlAction(action, m_engine, this);
+    QmlAction *qmlAction = new QmlAction(action, this);
+    QQmlEngine::setContextForObject(qmlAction, QmlPluginContext::contextForObject(this));
+    action->setParent(qmlAction);
     qmlAction->setProperties(map);
     m_menu->addAction(action);
-
-    return qmlAction;
+    return qmlEngine(this)->newQObject(qmlAction);
 }
 
-QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
+QJSValue QmlMenu::addMenu(const QVariantMap &map)
 {
-    if (!m_menu) {
-        return nullptr;
-    }
-
     QMenu *newMenu = new QMenu();
     for (auto it = map.cbegin(); it != map.cend(); it++) {
         const QString key = it.key();
         if (key == QSL("icon")) {
             const QString iconPath = map.value(key).toString();
-            const QIcon icon = QmlStaticData::instance().getIcon(iconPath, m_pluginPath);
+            const QIcon icon = QmlStaticData::instance().getIcon(iconPath, QmlPluginContext::contextForObject(this)->pluginPath());
             newMenu->setIcon(icon);
             continue;
         }
         newMenu->setProperty(key.toUtf8(), map.value(key));
     }
     m_menu->addMenu(newMenu);
-    QmlMenu *newQmlMenu = new QmlMenu(newMenu, m_engine, this);
-    return newQmlMenu;
+    QmlMenu *newQmlMenu = new QmlMenu(newMenu, this);
+    QQmlEngine::setContextForObject(newQmlMenu, QmlPluginContext::contextForObject(this));
+    connect(newQmlMenu, &QObject::destroyed, newMenu, &QObject::deleteLater);
+    return qmlEngine(this)->newQObject(newQmlMenu);
 }
 
 void QmlMenu::addSeparator()
 {
-    if (!m_menu) {
-        return;
-    }
-
     m_menu->addSeparator();
 }

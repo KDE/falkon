@@ -16,42 +16,30 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qmlpluginloader.h"
-#include "qmlengine.h"
-#include <QQmlContext>
-#include <QDir>
+#include "qmlplugincontext.h"
+#include "qmlplugininterface.h"
 #include "../config.h"
+
+#include <QDir>
+#include <QFileInfo>
+#include <QQmlEngine>
+#include <QQmlComponent>
 
 #if HAVE_LIBINTL
 #include "qml/api/i18n/qmli18n.h"
 #endif
 
-QmlPluginLoader::QmlPluginLoader(const QString &name, const QString &path)
+Q_GLOBAL_STATIC(QQmlEngine, s_engine)
+
+QmlPluginLoader::QmlPluginLoader(const Plugins::Plugin &plugin)
+    : QObject()
+    , m_plugin(plugin)
 {
-    m_name = name;
-    m_path = path;
-    initEngineAndComponent();
 }
 
-void QmlPluginLoader::createComponent()
+QString QmlPluginLoader::errorString() const
 {
-    m_interface = qobject_cast<QmlPluginInterface*>(m_component->create(m_component->creationContext()));
-
-    if (!m_interface) {
-        return;
-    }
-
-    m_interface->setEngine(m_engine);
-    m_interface->setName(m_name);
-    connect(m_interface, &QmlPluginInterface::qmlPluginUnloaded, this, [this] {
-        delete m_component;
-        delete m_engine;
-        initEngineAndComponent();
-    });
-}
-
-QQmlComponent *QmlPluginLoader::component() const
-{
-    return m_component;
+    return m_component ? m_component->errorString() : QString();
 }
 
 QmlPluginInterface *QmlPluginLoader::instance() const
@@ -59,19 +47,39 @@ QmlPluginInterface *QmlPluginLoader::instance() const
     return m_interface;
 }
 
+void QmlPluginLoader::createComponent()
+{
+    initEngineAndComponent();
+
+    m_interface = qobject_cast<QmlPluginInterface*>(m_component->create(m_context));
+    if (!m_interface) {
+        qWarning() << "Failed to create QmlPluginInterface!";
+        return;
+    }
+
+    connect(m_interface, &QmlPluginInterface::qmlPluginUnloaded, this, [this] {
+        m_component->deleteLater();
+        m_component = nullptr;
+        m_context->deleteLater();
+        m_context = nullptr;
+    });
+}
+
 void QmlPluginLoader::initEngineAndComponent()
 {
-    m_engine = new QmlEngine();
-    m_component = new QQmlComponent(m_engine, QDir(m_path).filePath(QStringLiteral("main.qml")));
-    m_engine->setExtensionPath(m_path);
-    m_engine->setExtensionName(m_name);
+    if (m_component) {
+        return;
+    }
+
+    m_component = new QQmlComponent(s_engine(), QDir(m_plugin.pluginPath).filePath(QStringLiteral("main.qml")), this);
+    m_context = new QmlPluginContext(m_plugin, s_engine(), this);
 #if HAVE_LIBINTL
-    auto i18n = new QmlI18n(m_name);
-    m_engine->globalObject().setProperty(QSL("__falkon_i18n"), m_engine->newQObject(i18n));
-    m_engine->evaluate(QSL("i18n = function (s) { return __falkon_i18n.i18n(s) };"));
-    m_engine->evaluate(QSL("i18np = function (s1, s2) { return __falkon_i18n.i18np(s1, s2) }"));
+    auto i18n = new QmlI18n(QFileInfo(m_plugin.pluginPath).fileName());
+    s_engine()->globalObject().setProperty(QSL("__falkon_i18n"), s_engine()->newQObject(i18n));
+    s_engine()->evaluate(QSL("i18n = function (s) { return __falkon_i18n.i18n(s) };"));
+    s_engine()->evaluate(QSL("i18np = function (s1, s2) { return __falkon_i18n.i18np(s1, s2) }"));
 #else
-    m_engine->evaluate(QSL("i18n = function (s) { return s; };"));
-    m_engine->evaluate(QSL("i18np = function (s1, s2) { return s1; }"));
+    s_engine()->evaluate(QSL("i18n = function (s) { return s; };"));
+    s_engine()->evaluate(QSL("i18np = function (s1, s2) { return s1; }"));
 #endif
 }

@@ -18,30 +18,24 @@
 #include "qmlaction.h"
 #include "qztools.h"
 #include "qml/api/fileutils/qmlfileutils.h"
-#include "qml/qmlengine.h"
+#include "qml/qmlplugincontext.h"
 #include "qml/qmlstaticdata.h"
-#include <QQmlEngine>
 
-QmlAction::QmlAction(QAction *action, QmlEngine *engine, QObject *parent)
+QmlAction::QmlAction(QAction *action, QObject *parent)
     : QObject(parent)
     , m_action(action)
 {
-    QmlEngine *qmlEngine = qobject_cast<QmlEngine*>(engine);
-    m_pluginPath = qmlEngine->extensionPath();
+    Q_ASSERT(m_action);
     connect(m_action, &QAction::triggered, this, &QmlAction::triggered);
 }
 
 void QmlAction::setProperties(const QVariantMap &map)
 {
-    if (!m_action) {
-        return;
-    }
-
     for (auto it = map.cbegin(); it != map.cend(); it++) {
         const QString key = it.key();
         if (key == QSL("icon")) {
             QString iconPath = map.value(key).toString();
-            QIcon icon = QmlStaticData::instance().getIcon(iconPath, m_pluginPath);
+            QIcon icon = QmlStaticData::instance().getIcon(iconPath, QmlPluginContext::contextForObject(this)->pluginPath());
             m_action->setIcon(icon);
         } else if (key == QSL("shortcut")) {
             m_action->setShortcut(QKeySequence(map.value(key).toString()));
@@ -51,7 +45,7 @@ void QmlAction::setProperties(const QVariantMap &map)
     }
 }
 
-void  QmlAction::update(const QVariantMap &map)
+void QmlAction::update(const QVariantMap &map)
 {
     setProperties(map);
 }

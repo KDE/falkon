@@ -17,30 +17,33 @@
 * ============================================================ */
 #pragma once
 
-#include <QQmlEngine>
-#include <QQmlComponent>
+#include <QObject>
 
-#include "qmlplugininterface.h"
 #include "plugins.h"
 
-class QmlEngine;
+class QQmlComponent;
+
+class QmlPluginContext;
+class QmlPluginInterface;
 
 class QmlPluginLoader : public QObject
 {
     Q_OBJECT
 public:
-    explicit QmlPluginLoader(const QString &name, const QString &path);
-    void createComponent();
-    QQmlComponent *component() const;
+    explicit QmlPluginLoader(const Plugins::Plugin &plugin);
+
+    QString errorString() const;
     QmlPluginInterface *instance() const;
+
+    void createComponent();
+
 private:
-    QString m_path;
-    QString m_name;
-    QmlEngine *m_engine = nullptr;
+    void initEngineAndComponent();
+
+    Plugins::Plugin m_plugin;
+    QmlPluginContext *m_context = nullptr;
     QQmlComponent *m_component = nullptr;
     QmlPluginInterface *m_interface = nullptr;
-
-    void initEngineAndComponent();
 };
 
 Q_DECLARE_METATYPE(QmlPluginLoader *)

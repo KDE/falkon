@@ -53,8 +53,6 @@ public:
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;
-    void setEngine(QQmlEngine *engine);
-    void setName(const QString &name);
     void populateWebViewMenu(QMenu *menu, WebView *webview, const WebHitTestResult &webHitTestResult) override;
     void showSettings(QWidget *parent = nullptr) override;
 
@@ -74,7 +72,6 @@ Q_SIGNALS:
     void qmlPluginUnloaded();
 
 private:
-    QQmlEngine *m_engine = nullptr;
     QString m_name;
     QJSValue m_init;
     QJSValue m_unload;

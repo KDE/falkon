@@ -20,11 +20,12 @@
 #include "qztools.h"
 #include "sidebar.h"
 #include "qml/api/fileutils/qmlfileutils.h"
-#include "qml/qmlengine.h"
+#include "qml/qmlplugincontext.h"
 #include "qml/qmlstaticdata.h"
+
 #include <QAction>
 #include <QQuickWidget>
-#include <QQmlContext>
+#include <QQmlEngine>
 
 QmlSideBar::QmlSideBar(QObject *parent)
     : QObject(parent)
@@ -137,13 +138,10 @@ QAction *QmlSideBarHelper::createMenuAction()
     if (!m_item) {
         return action;
     }
-    auto qmlEngine = qobject_cast<QmlEngine*>(m_item->creationContext()->engine());
-    if (qmlEngine) {
-        return action;
-    }
-    const QString pluginPath = qmlEngine->extensionPath();
-    const QIcon icon = QmlStaticData::instance().getIcon(m_iconUrl, pluginPath);
+#if 0
+    const QIcon icon = QmlStaticData::instance().getIcon(m_iconUrl, QmlPluginContext::contextForObject(this)->pluginPath());
     action->setIcon(icon);
+#endif
     return action;
 }
 

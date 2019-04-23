@@ -25,7 +25,8 @@
 #include "../config.h"
 #include "desktopfile.h"
 #include "qml/qmlplugins.h"
-#include "qml/qmlplugin.h"
+#include "qml/qmlpluginloader.h"
+#include "qml/qmlplugininterface.h"
 
 #include <iostream>
 
@@ -61,6 +62,7 @@ Plugins::Plugins(QObject* parent)
     if (!MainApplication::isTestModeEnabled()) {
         loadPythonSupport();
     }
+    QmlPlugins::registerQmlTypes();
 }
 
 QList<Plugins::Plugin> Plugins::availablePlugins()
@@ -279,7 +281,7 @@ void Plugins::loadAvailablePlugins()
                     plugin = loadPythonPlugin(pluginPath);
                 } else if (type == QL1S("Extension/Qml")) {
                     // QmlPlugin
-                    plugin = QmlPlugin::loadPlugin(pluginPath);
+                    plugin = loadQmlPlugin(pluginPath);
                 } else {
                     qWarning() << "Invalid type" << type << "of" << pluginPath << "plugin";
                 }
@@ -370,7 +372,7 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
         return loadPythonPlugin(name);
 
     case Plugin::QmlPlugin:
-        return QmlPlugin::loadPlugin(name);
+        return loadQmlPlugin(name);
 
     default:
         return Plugin();
@@ -429,6 +431,29 @@ Plugins::Plugin Plugins::loadPythonPlugin(const QString &name)
     return f(name);
 }
 
+Plugins::Plugin Plugins::loadQmlPlugin(const QString &name)
+{
+    QString fullPath;
+    if (QFileInfo(name).isAbsolute()) {
+        fullPath = name;
+    } else {
+        fullPath = DataPaths::locate(DataPaths::Plugins, name);
+        if (fullPath.isEmpty()) {
+            qWarning() << "QML plugin" << name << "not found";
+            return Plugins::Plugin();
+        }
+    }
+
+    Plugins::Plugin plugin;
+    plugin.type = Plugins::Plugin::QmlPlugin;
+    plugin.pluginId = QSL("qml:%1").arg(QFileInfo(name).fileName());
+    plugin.pluginPath = fullPath;
+    DesktopFile desktopFile(fullPath + QSL("/metadata.desktop"));
+    plugin.pluginSpec = Plugins::createSpec(desktopFile);
+    plugin.data = QVariant::fromValue(new QmlPluginLoader(plugin));
+    return plugin;
+}
+
 bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
 {
     if (!plugin) {
@@ -449,7 +474,7 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
         break;
 
     case Plugin::QmlPlugin:
-        QmlPlugin::initPlugin(plugin);
+        initQmlPlugin(plugin);
         break;
 
     default:
@@ -507,4 +532,25 @@ void Plugins::initPythonPlugin(Plugin *plugin)
     }
 
     f(plugin);
+}
+
+void Plugins::initQmlPlugin(Plugin *plugin)
+{
+    Q_ASSERT(plugin->type == Plugins::Plugin::QmlPlugin);
+
+    const QString name = plugin->pluginSpec.name;
+
+    auto qmlPluginLoader = plugin->data.value<QmlPluginLoader*>();
+    if (!qmlPluginLoader) {
+        qWarning() << "Failed to cast from data";
+        return;
+    }
+
+    qmlPluginLoader->createComponent();
+    if (!qmlPluginLoader->instance()) {
+        qWarning() << "Failed to create component for" << name << "plugin:" << qmlPluginLoader->errorString();
+        return;
+    }
+
+    plugin->instance = qobject_cast<PluginInterface*>(qmlPluginLoader->instance());
 }

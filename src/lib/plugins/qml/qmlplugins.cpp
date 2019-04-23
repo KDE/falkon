@@ -17,7 +17,7 @@
 * ============================================================ */
 #include "qmlplugins.h"
 #include "qmlplugininterface.h"
-#include "qmlengine.h"
+#include "qmlplugincontext.h"
 #include "api/bookmarks/qmlbookmarktreenode.h"
 #include "api/bookmarks/qmlbookmarks.h"
 #include "api/topsites/qmlmostvisitedurl.h"
@@ -116,15 +116,17 @@ void QmlPlugins::registerQmlTypes()
     qmlRegisterSingletonType<QmlNotifications>(url, majorVersion, minorVersion, "Notifications", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(scriptEngine)
 
-        QmlEngine *qmlEngine = qobject_cast<QmlEngine*>(engine);
+#if 0
+        auto context = qobject_cast<QmlEngine*>(engine);
         if (!qmlEngine) {
             qWarning() << "Unable to cast QQmlEngine * to QmlEngine *";
             return nullptr;
         }
         QString filePath = qmlEngine->extensionPath();
+#endif
 
         auto *object = new QmlNotifications();
-        object->setPluginPath(filePath);
+        object->setPluginPath(QString());
         return object;
     });
 
@@ -202,13 +204,15 @@ void QmlPlugins::registerQmlTypes()
     qmlRegisterSingletonType<QmlFileUtils>(url, majorVersion, minorVersion, "FileUtils", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(scriptEngine)
 
+#if 0
         QmlEngine *qmlEngine = qobject_cast<QmlEngine*>(engine);
         if (!qmlEngine) {
             qWarning() << "Unable to cast QQmlEngine * to QmlEngine *";
             return nullptr;
         }
         QString filePath = qmlEngine->extensionPath();
-        return new QmlFileUtils(filePath);
+#endif
+        return new QmlFileUtils(QString());
     });
 
     qmlRegisterUncreatableType<QmlEnums>(url, majorVersion, minorVersion, "Enums", QSL("Unable to register type: Enums"));

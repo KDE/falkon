@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2018 Anmol Gautam <tarptaeya@gmail.com>
+* Copyright (C) 2019 David Rosca <nowrep@gmail.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -17,18 +17,24 @@
 * ============================================================ */
 #pragma once
 
-#include <QQmlEngine>
+#include <QQmlContext>
 
-class QmlEngine : public QQmlEngine
+#include "plugins.h"
+
+class QmlPluginContext : public QQmlContext
 {
     Q_OBJECT
+
 public:
-    explicit QmlEngine(QObject *parent = nullptr);
-    QString extensionName();
-    void setExtensionName(const QString &name);
-    QString extensionPath();
-    void setExtensionPath(const QString &path);
+    explicit QmlPluginContext(const Plugins::Plugin &plugin, QQmlEngine *engine, QObject *parent = nullptr);
+
+    QString pluginPath() const;
+    QString pluginName() const;
+
+    Plugins::Plugin plugin() const;
+
+    static QmlPluginContext *contextForObject(const QObject *object);
+
 private:
-    QString m_extensionName;
-    QString m_extensionPath;
+    Plugins::Plugin m_plugin;
 };
