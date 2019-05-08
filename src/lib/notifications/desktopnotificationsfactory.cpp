@@ -90,15 +90,19 @@ void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QS
         tmp.open(QFile::WriteOnly);
         icon.save(tmp.fileName());
 
+        const QVariantMap hints {
+            {QStringLiteral("desktop-entry"), QGuiApplication::desktopFileName()}
+        };
+
         QDBusInterface dbus("org.freedesktop.Notifications", "/org/freedesktop/Notifications", "org.freedesktop.Notifications", QDBusConnection::sessionBus());
         QVariantList args;
-        args.append(QLatin1String("falkon"));
+        args.append(QLatin1String("Falkon"));
         args.append(m_uint);
         args.append(tmp.fileName());
         args.append(heading);
         args.append(text);
         args.append(QStringList());
-        args.append(QVariantMap());
+        args.append(hints);
         args.append(m_timeout);
         dbus.callWithCallback("Notify", args, this, SLOT(updateLastId(QDBusMessage)), SLOT(error(QDBusError)));
 #endif
