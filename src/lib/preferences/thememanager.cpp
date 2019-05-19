@@ -137,7 +137,8 @@ ThemeManager::Theme ThemeManager::parseTheme(const QString &path, const QString 
     info.name = metadata.name();
     info.description = metadata.comment();
     info.author = metadata.value(QSL("X-Falkon-Author")).toString();
-    info.themePath = path.chopped(1);
+    info.themePath = path;
+    info.themePath.chop(1);
 
     const QString iconName = metadata.icon();
     if (!iconName.isEmpty()) {
