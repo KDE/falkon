@@ -19,6 +19,9 @@
    </item>
    <item>
     <widget class="QListWidget" name="listWidget">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
      <property name="iconSize">
       <size>
        <width>16</width>
