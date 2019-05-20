@@ -358,7 +358,9 @@ void TabTreeView::initView()
 TabTreeView::DelegateButton TabTreeView::buttonAt(const QPoint &pos, const QModelIndex &index) const
 {
     if (m_delegate->expandButtonRect(index).contains(pos)) {
-        return ExpandButton;
+        if (model()->rowCount(index) > 0) {
+            return ExpandButton;
+        }
     } else if (m_delegate->audioButtonRect(index).contains(pos)) {
         return AudioButton;
     } else if (m_delegate->closeButtonRect(index).contains(pos)) {
