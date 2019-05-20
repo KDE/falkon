@@ -415,18 +415,26 @@ Plugins::Plugin Plugins::loadSharedLibraryPlugin(const QString &name)
 
 Plugins::Plugin Plugins::loadPythonPlugin(const QString &name)
 {
+    Plugin out;
+
     if (!m_pythonPlugin) {
         qWarning() << "Python support plugin is not loaded";
-        return Plugin();
+        return out;
     }
 
-    auto f = (Plugin(*)(const QString &)) m_pythonPlugin->resolve("pyfalkon_load_plugin");
+    auto f = (Plugin*(*)(const QString &)) m_pythonPlugin->resolve("pyfalkon_load_plugin");
     if (!f) {
         qWarning() << "Failed to resolve" << "pyfalkon_load_plugin";
-        return Plugin();
+        return out;
     }
 
-    return f(name);
+    Plugin *p = f(name);
+    if (p) {
+        out = *p;
+        delete p;
+    }
+
+    return out;
 }
 
 bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)

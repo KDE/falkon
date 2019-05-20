@@ -82,7 +82,7 @@ void pyfalkon_register_plugin(PluginInterface *plugin)
     pluginInterface = plugin;
 }
 
-Plugins::Plugin pyfalkon_load_plugin(const QString &name)
+Plugins::Plugin *pyfalkon_load_plugin(const QString &name)
 {
     QString fullPath;
     if (QFileInfo(name).isAbsolute()) {
@@ -91,15 +91,15 @@ Plugins::Plugin pyfalkon_load_plugin(const QString &name)
         fullPath = DataPaths::locate(DataPaths::Plugins, name);
         if (fullPath.isEmpty()) {
             qWarning() << "Python plugin" << name << "not found";
-            return Plugins::Plugin();
+            return nullptr;
         }
     }
 
-    Plugins::Plugin plugin;
-    plugin.type = Plugins::Plugin::PythonPlugin;
-    plugin.pluginId = QSL("python:%1").arg(QFileInfo(name).fileName());
-    plugin.pluginPath = fullPath;
-    plugin.pluginSpec = Plugins::createSpec(DesktopFile(fullPath + QSL("/metadata.desktop")));
+    Plugins::Plugin *plugin = new Plugins::Plugin;
+    plugin->type = Plugins::Plugin::PythonPlugin;
+    plugin->pluginId = QSL("python:%1").arg(QFileInfo(name).fileName());
+    plugin->pluginPath = fullPath;
+    plugin->pluginSpec = Plugins::createSpec(DesktopFile(fullPath + QSL("/metadata.desktop")));
     return plugin;
 }
 
