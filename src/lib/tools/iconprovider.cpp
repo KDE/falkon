@@ -187,6 +187,8 @@ QImage IconProvider::imageForUrl(const QUrl &url, bool allowNull)
         return allowNull ? QImage() : IconProvider::emptyWebImage();
     }
 
+    QMutexLocker locker(&instance()->m_iconCacheMutex);
+
     const QByteArray encodedUrl = encodeUrl(url);
 
     if (QImage *img = instance()->m_urlImageCache.object(encodedUrl)) {
@@ -224,6 +226,8 @@ QImage IconProvider::imageForDomain(const QUrl &url, bool allowNull)
         return allowNull ? QImage() : IconProvider::emptyWebImage();
     }
 
+    QMutexLocker locker(&instance()->m_iconCacheMutex);
+
     foreach (const BufferedIcon &ic, instance()->m_iconBuffer) {
         if (ic.first.host() == url.host()) {
             return ic.second;
@@ -249,6 +253,8 @@ IconProvider* IconProvider::instance()
 
 void IconProvider::saveIconsToDatabase()
 {
+    QMutexLocker locker(&instance()->m_iconCacheMutex);
+
     foreach (const BufferedIcon &ic, m_iconBuffer) {
         QByteArray ba;
         QBuffer buffer(&ba);

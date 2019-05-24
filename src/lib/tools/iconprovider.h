@@ -23,6 +23,7 @@
 #include <QImage>
 #include <QUrl>
 #include <QCache>
+#include <QMutex>
 
 #include <functional>
 
@@ -82,6 +83,7 @@ private:
     QIcon m_bookmarkIcon;
     QVector<BufferedIcon> m_iconBuffer;
     QCache<QByteArray, QImage> m_urlImageCache;
+    QMutex m_iconCacheMutex;
 
     AutoSaver* m_autoSaver;
 };
