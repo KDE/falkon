@@ -30,11 +30,11 @@ class HelloSidebar(Falkon.SideBarInterface):
 
     def createSideBarWidget(self, window):
         w = QtWidgets.QWidget()
-        b = QtWidgets.QPushButton("Hello Python v0.0.1");
+        b = QtWidgets.QPushButton("Hello Python v0.0.1")
         label = QtWidgets.QLabel()
-        label.setPixmap(QtGui.QPixmap(":icons/other/about.svg"));
-        l = QtWidgets.QVBoxLayout(w);
-        l.addWidget(label);
-        l.addWidget(b);
-        w.setLayout(l);
+        label.setPixmap(QtGui.QPixmap(":icons/other/about.svg"))
+        l = QtWidgets.QVBoxLayout(w)
+        l.addWidget(label)
+        l.addWidget(b)
+        w.setLayout(l)
         return w
