@@ -32,6 +32,7 @@ include_directories(
     preferences
     session
     sidebar
+    sync
     tabwidget
     tools
     webengine
@@ -204,6 +205,7 @@ set(SRCS ${SRCS}
     preferences/pluginlistdelegate.cpp
     preferences/pluginsmanager.cpp
     preferences/preferences.cpp
+    preferences/syncoptions.cpp
     preferences/thememanager.cpp
     preferences/useragentdialog.cpp
     session/recoveryjsobject.cpp
@@ -213,6 +215,7 @@ set(SRCS ${SRCS}
     sidebar/bookmarkssidebar.cpp
     sidebar/historysidebar.cpp
     sidebar/sidebar.cpp
+    sync/hkdf.cpp
     tabwidget/combotabbar.cpp
     tabwidget/tabbar.cpp
     tabwidget/tabicon.cpp
@@ -313,6 +316,7 @@ qt5_wrap_ui(SRCS
     preferences/jsoptions.ui
     preferences/pluginslist.ui
     preferences/preferences.ui
+    preferences/syncoptions.ui
     preferences/thememanager.ui
     preferences/useragentdialog.ui
     session/sessionmanagerdialog.ui

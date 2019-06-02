@@ -117,6 +117,11 @@
      </item>
      <item>
       <property name="text">
+       <string>Sync</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>Other</string>
       </property>
      </item>
@@ -145,8 +150,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>582</width>
-        <height>476</height>
+        <width>602</width>
+        <height>456</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -168,7 +173,7 @@
           <enum>Qt::NoFocus</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>12</number>
          </property>
          <widget class="QWidget" name="generalPage">
           <layout class="QGridLayout" name="gridLayout_6">
@@ -2400,8 +2405,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>560</width>
-                <height>80</height>
+                <width>96</width>
+                <height>30</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_14">
@@ -2436,6 +2441,19 @@
             </widget>
            </item>
           </layout>
+         </widget>
+         <widget class="QWidget" name="syncPage">
+          <widget class="QWidget" name="horizontalLayoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>601</width>
+             <height>451</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="syncFrame"/>
+          </widget>
          </widget>
          <widget class="QWidget" name="otherPage">
           <layout class="QGridLayout" name="gridLayout_13">

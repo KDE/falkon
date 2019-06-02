@@ -37,6 +37,7 @@ class BrowserWindow;
 class PluginsManager;
 class DesktopNotification;
 class ThemeManager;
+class SyncOptions;
 
 class FALKON_EXPORT Preferences : public QDialog
 {
@@ -97,6 +98,7 @@ private:
     AutoFillManager* m_autoFillManager;
     PluginsManager* m_pluginsList;
     ThemeManager* m_themesManager;
+    SyncOptions* m_syncOptions;
     QPointer<DesktopNotification> m_notification;
 
     QUrl m_homepage;

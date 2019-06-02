@@ -166,6 +166,7 @@ include_directories(
      ${CMAKE_SOURCE_DIR}/src/lib/preferences
      ${CMAKE_SOURCE_DIR}/src/lib/session
      ${CMAKE_SOURCE_DIR}/src/lib/sidebar
+     ${CMAKE_SOURCE_DIR}/src/lib/sync
      ${CMAKE_SOURCE_DIR}/src/lib/tabwidget
      ${CMAKE_SOURCE_DIR}/src/lib/tools
      ${CMAKE_SOURCE_DIR}/src/lib/webengine

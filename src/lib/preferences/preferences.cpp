@@ -48,6 +48,7 @@
 #include "webscrollbarmanager.h"
 #include "protocolhandlerdialog.h"
 #include "../config.h"
+#include "syncoptions.h"
 
 #include <QSettings>
 #include <QInputDialog>
@@ -137,7 +138,8 @@ Preferences::Preferences(BrowserWindow* window)
     setCategoryIcon(9, QIcon(":/icons/preferences/notifications.svg"));
     setCategoryIcon(10, QIcon(":/icons/preferences/extensions.svg"));
     setCategoryIcon(11, QIcon(":/icons/preferences/spellcheck.svg"));
-    setCategoryIcon(12, QIcon(":/icons/preferences/other.svg"));
+    setCategoryIcon(12, QIcon(":/icons/preferences/sync.svg"));
+    setCategoryIcon(13, QIcon(":/icons/preferences/other.svg"));
 
     Settings settings;
     //GENERAL URLs
@@ -204,6 +206,10 @@ Preferences::Preferences(BrowserWindow* window)
         ui->newTabUseCurrent->setEnabled(false);
     }
 
+    // SYNC
+    m_syncOptions = new SyncOptions(this);
+    ui->syncFrame->addWidget(m_syncOptions);
+    
     // PROFILES
     QString startingProfile = ProfileManager::startingProfile();
     ui->activeProfile->setText("<b>" + ProfileManager::currentProfile() + "</b>");
