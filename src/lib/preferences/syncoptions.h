@@ -1,4 +1,3 @@
-
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2019 Prasenjit Kumar Shaw <shawprasenjit07@gmail.com>
@@ -16,13 +15,12 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-
-
 #ifndef SYNCOPTIONS_H
 #define SYNCOPTIONS_H
 
 #include <QWidget>
 #include <QUrl>
+#include <QWebEnginePage>
 
 #include "qzcommon.h"
 
@@ -34,13 +32,14 @@ namespace Ui
 class FALKON_EXPORT SyncOptions : public QWidget
 {
     Q_OBJECT
-    
+
 public:
     explicit SyncOptions(QWidget* parent = 0);
     ~SyncOptions();
-    
+
 private:
     const QUrl FxALoginUrl = QUrl("https://accounts.firefox.com/signin?service=sync&context=fx_desktop_v3");
+    QWebEnginePage *loginPage;
     Ui::SyncOptions *ui;
 };
 

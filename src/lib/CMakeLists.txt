@@ -215,7 +215,8 @@ set(SRCS ${SRCS}
     sidebar/bookmarkssidebar.cpp
     sidebar/historysidebar.cpp
     sidebar/sidebar.cpp
-    sync/hkdf.cpp
+    sync/fxalogin.cpp
+    sync/synccrypto.cpp
     tabwidget/combotabbar.cpp
     tabwidget/tabbar.cpp
     tabwidget/tabicon.cpp

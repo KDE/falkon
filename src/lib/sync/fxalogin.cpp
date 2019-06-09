@@ -1,4 +1,3 @@
-
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2019 Prasenjit Kumar Shaw <shawprasenjit07@gmail.com>
@@ -16,37 +15,12 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
+#include "fxalogin.h"
 
-#include "hkdf.h"
+#include <QWebEnginePage>
 
-#include <openssl/evp.h>
-#include <openssl/kdf.h>
-#include <QByteArray>
-
-HKDF::HKDF(const QByteArray key, const QByteArray salt)
+FxALoginPage::FxALoginPage(QWidget* parent)
+    : QWebEnginePage(parent)
 {
-    pctx = EVP_PKEY_CTX_new_id(EVP_PKEY_HKDF,NULL);
-    
-    init(key, salt);
-}
-
-HKDF::~HKDF() {
-    ;
-}
-
-void HKDF::init(const QByteArray key, const QByteArray salt)
-{
-    size_t keylen = key.size();
-    size_t saltlen = salt.size();
-    
-    EVP_PKEY_derive_init(pctx);
-    EVP_PKEY_CTX_set_hkdf_md(pctx, EVP_sha256());
-    EVP_PKEY_CTX_set1_hkdf_salt(pctx, (uchar *)salt.data(), saltlen);
-    EVP_PKEY_CTX_set1_hkdf_key(pctx, (uchar *)key.data(), keylen);
-}
-
-QByteArray HKDF::getKey(size_t outlen) {
-    QByteArray out;
-    EVP_PKEY_derive(pctx, (uchar *)out.data(), &outlen);
-    return out;
+    this->load(FxALoginUrl);
 }

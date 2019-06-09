@@ -138,7 +138,6 @@ Preferences::Preferences(BrowserWindow* window)
     setCategoryIcon(9, QIcon(":/icons/preferences/notifications.svg"));
     setCategoryIcon(10, QIcon(":/icons/preferences/extensions.svg"));
     setCategoryIcon(11, QIcon(":/icons/preferences/spellcheck.svg"));
-    setCategoryIcon(12, QIcon(":/icons/preferences/sync.svg"));
     setCategoryIcon(13, QIcon(":/icons/preferences/other.svg"));
 
     Settings settings;

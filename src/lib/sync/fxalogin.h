@@ -1,4 +1,3 @@
-
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2019 Prasenjit Kumar Shaw <shawprasenjit07@gmail.com>
@@ -18,19 +17,16 @@
 * ============================================================ */
 #pragma once
 
-#include <openssl/evp.h>
-#include <QByteArray>
+#include <QUrl>
+#include <QWebEnginePage>
 
-class HKDF
+class FxALoginPage : public QWebEnginePage
 {
+    Q_OBJECT
+
 public:
-    explicit HKDF(const QByteArray key, const QByteArray salt);
-    ~HKDF();
-    
-    QByteArray getKey(size_t outlen);
-    
+    explicit FxALoginPage(QWidget *parent = 0);
+
 private:
-    void init(const QByteArray key, const QByteArray salt);
-    
-    EVP_PKEY_CTX *pctx;
+    const QUrl FxALoginUrl = QUrl("https://accounts.firefox.com/signin?service=sync&context=fx_desktop_v3");
 };

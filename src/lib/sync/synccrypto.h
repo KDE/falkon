@@ -15,25 +15,22 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "syncoptions.h"
-#include "ui_syncoptions.h"
-#include "fxalogin.h"
+#pragma once
 
-#include <QWebEngineView>
-#include <QWebEnginePage>
+#include <openssl/evp.h>
+#include <QByteArray>
 
-SyncOptions::SyncOptions(QWidget* parent)
-    : QWidget(parent)
-    , ui(new Ui::SyncOptions)
+class HKDF
 {
-    ui->setupUi(this);
+public:
+    explicit HKDF(const QByteArray key, const QByteArray salt, const QByteArray info);
+    ~HKDF();
 
-    loginPage = new FxALoginPage(this);
-    ui->fxaLoginView->setPage(loginPage);
-    ui->fxaLoginView->show();
-}
+    QByteArray getKey(size_t outlen);
 
-SyncOptions::~SyncOptions()
-{
-    delete ui;
-}
+private:
+    void init(const QByteArray key, const QByteArray salt, const QByteArray info);
+
+    EVP_PKEY_CTX *pctx;
+};
+
