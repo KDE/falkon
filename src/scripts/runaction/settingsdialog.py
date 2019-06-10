@@ -15,10 +15,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ============================================================
-import Falkon
 import os
-from PySide2 import QtCore, QtGui, QtWidgets, QtUiTools
+from PySide2 import QtCore, QtWidgets, QtUiTools
 from runaction.i18n import i18n
+
 
 class SettingsDialog(QtWidgets.QDialog):
     def __init__(self, manager, parent=None):
@@ -36,7 +36,7 @@ class SettingsDialog(QtWidgets.QDialog):
 
         self.setMinimumSize(400, 250)
         self.setWindowTitle(i18n("Run Action Settings"))
-        self.ui.label.setText("<b>{}</b>".format(i18n("Available actions")))
+        self.ui.label.setText(i18n("Available actions"))
 
         for action in self.manager.actions:
             item = QtWidgets.QListWidgetItem(self.ui.listWidget)

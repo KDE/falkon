@@ -16,10 +16,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ============================================================
 import Falkon
-import os, subprocess
-from PySide2 import QtCore, QtGui, QtWidgets, QtUiTools
+import os
+import subprocess
+from PySide2 import QtCore
 from runaction.action import Action
 from runaction.settingsdialog import SettingsDialog
+
 
 class ActionManager(QtCore.QObject):
     actions = []
@@ -58,7 +60,7 @@ class ActionManager(QtCore.QObject):
                 act = Falkon.Action(action.icon, action.title, self)
                 act.triggered.connect(lambda a=action, w=webView, u=url, t=text: self.execAction(a, w, u, t))
                 if action.submenu:
-                    if not action.submenu in menus:
+                    if action.submenu not in menus:
                         menu = Falkon.Menu(action.menuTitle, webView)
                         menus[action.submenu] = menu
                         out.append(menu)

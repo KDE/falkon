@@ -20,6 +20,7 @@ import os
 from PySide2 import QtGui, QtWidgets
 from runaction.i18n import i18n
 
+
 class RunActionButton(Falkon.AbstractButtonInterface):
     def __init__(self, manager):
         super().__init__()
