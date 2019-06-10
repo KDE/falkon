@@ -43,6 +43,8 @@ public:
     void switchToNextTab();
     void switchToPreviousTab();
 
+    void addChildTab();
+
 private:
     WebTab *nextTab() const;
     WebTab *previousTab() const;
