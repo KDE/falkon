@@ -59,6 +59,7 @@ VerticalTabsWidget::VerticalTabsWidget(BrowserWindow *window)
     buttonAddTab->setIcon(QIcon::fromTheme(QSL("list-add")));
     buttonAddTab->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     connect(buttonAddTab, &QAbstractButton::clicked, m_window, &BrowserWindow::addTab);
+    connect(buttonAddTab, &ToolButton::middleMouseClicked, this, &VerticalTabsWidget::addChildTab);
 
     m_groupMenu = new QMenu(this);
     buttonAddTab->setMenu(m_groupMenu);
@@ -200,4 +201,11 @@ void VerticalTabsWidget::updateGroupMenu()
     m_groupMenu->addAction(tr("Add New Group..."), this, [this]() {
         m_window->tabWidget()->addView(QUrl(QSL("extension://verticaltabs/group")), Qz::NT_SelectedTab);
     });
+}
+
+void VerticalTabsWidget::addChildTab()
+{
+    WebTab *tab = m_window->tabWidget()->webTab();
+    m_window->addTab();
+    m_window->tabWidget()->webTab()->setParentTab(tab);
 }

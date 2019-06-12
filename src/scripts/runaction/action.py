@@ -16,8 +16,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ============================================================
 import Falkon
-import os, re, enum, shlex
+import os
+import re
+import enum
+import shlex
 from PySide2 import QtCore, QtGui
+
 
 class Action():
     class Type(enum.Enum):
@@ -53,19 +57,22 @@ class Action():
         self.supported = data.tryExec()
 
     def testAction(self, condition, url):
-        if not self.supported: return False
-        if not condition in self.typeCondition: return False
-        if not re.match(self.urlCondition, url.toString()): return False
+        if not self.supported:
+            return False
+        if condition not in self.typeCondition:
+            return False
+        if not re.match(self.urlCondition, url.toString()):
+            return False
         return True
 
     def execAction(self, url, text=""):
-        url = str(url.toEncoded())
+        url = str(url.toEncoded(), "utf-8")
         if self.actionType == Action.Type.Command:
             url = shlex.quote(url)
             text = shlex.quote(text)
         elif self.actionType == Action.Type.Url:
-            url = str(QtCore.QUrl.toPercentEncoding(url))
-            text = str(QtCore.QUrl.toPercentEncoding(text))
+            url = str(QtCore.QUrl.toPercentEncoding(url), "utf-8")
+            text = str(QtCore.QUrl.toPercentEncoding(text), "utf-8")
         command = self.normalExec if text == "" else self.textExec
         command = command.replace("{url}", url)
         command = command.replace("{text}", text)

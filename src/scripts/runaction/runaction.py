@@ -19,6 +19,7 @@ import Falkon
 from PySide2 import QtCore
 from runaction import actionmanager, button
 
+
 class RunActionPlugin(Falkon.PluginInterface, QtCore.QObject):
     buttons = {}
     manager = None
@@ -61,10 +62,12 @@ class RunActionPlugin(Falkon.PluginInterface, QtCore.QObject):
         self.buttons[window] = b
 
     def mainWindowDeleted(self, window):
-        if not window in self.buttons: return
+        if window not in self.buttons:
+            return
         b = self.buttons[window]
         window.statusBar().removeButton(b)
         window.navigationBar().removeToolButton(b)
         del self.buttons[window]
+
 
 Falkon.registerPlugin(RunActionPlugin())

@@ -148,6 +148,7 @@ void TabTreeDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     const bool expanded = m_view->isExpanded(index);
     const bool children = m_view->model()->rowCount(index) > 0;
     const int depth = indexDepth(index);
+    const bool isRestoredTab = index.data(TabModel::RestoredRole).toBool();
 
     QStyleOptionViewItem opt = option;
     initStyleOption(&opt, index);
@@ -162,6 +163,9 @@ void TabTreeDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     const QPalette::ColorRole colorRole = opt.state & QStyle::State_Selected ? QPalette::HighlightedText : QPalette::Text;
 
     QPalette::ColorGroup cg = opt.state & QStyle::State_Enabled ? QPalette::Normal : QPalette::Disabled;
+    if (!isRestoredTab) {
+        cg = QPalette::Disabled;
+    }
     if (cg == QPalette::Normal && !(opt.state & QStyle::State_Active)) {
         cg = QPalette::Inactive;
     }
