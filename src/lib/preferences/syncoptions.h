@@ -20,8 +20,9 @@
 
 #include <QWidget>
 #include <QUrl>
-#include <QWebEnginePage>
+#include <QWebEngineView>
 
+#include "fxalogin.h"
 #include "qzcommon.h"
 
 namespace Ui
@@ -38,8 +39,7 @@ public:
     ~SyncOptions();
 
 private:
-    const QUrl FxALoginUrl = QUrl("https://accounts.firefox.com/signin?service=sync&context=fx_desktop_v3");
-    QWebEnginePage *loginPage;
+    FxALoginPage *loginPage;
     Ui::SyncOptions *ui;
 };
 

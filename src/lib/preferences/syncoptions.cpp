@@ -29,8 +29,7 @@ SyncOptions::SyncOptions(QWidget* parent)
     ui->setupUi(this);
 
     loginPage = new FxALoginPage(this);
-    ui->fxaLoginView->setPage(loginPage);
-    ui->fxaLoginView->show();
+    ui->fxaloginframe->addWidget(loginPage);
 }
 
 SyncOptions::~SyncOptions()

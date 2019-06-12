@@ -18,15 +18,54 @@
 #pragma once
 
 #include <QUrl>
-#include <QWebEnginePage>
+#include <QWebEngineView>
+#include <QObject>
 
-class FxALoginPage : public QWebEnginePage
+class QWebChannel;
+class QWebEngineScript;
+class QWebEnginePage;
+class QJsonObject;
+class MessageReceiver;
+
+class FxALoginPage : public QWebEngineView
 {
     Q_OBJECT
 
 public:
-    explicit FxALoginPage(QWidget *parent = 0);
+    explicit FxALoginPage(QWidget *parent = nullptr);
+    ~FxALoginPage();
+
+protected slots:
+    void pageLoadFinished(bool pageLoaded);
+    void slotMessageReceived();
 
 private:
+    QJsonObject * parseMessage(QJsonObject *msg);
+    void sendMessage(QJsonObject *msg);
+
+    QWebEnginePage *page;
+    QWebChannel *channel;
+    MessageReceiver *communicator;
+
     const QUrl FxALoginUrl = QUrl("https://accounts.firefox.com/signin?service=sync&context=fx_desktop_v3");
+};
+
+
+class MessageReceiver : public QObject
+{
+    Q_OBJECT
+
+public:
+    MessageReceiver(QObject *parent = nullptr);
+    ~MessageReceiver();
+    QJsonObject *getMessage();
+
+public slots:
+    void receiveJSON(const QVariantMap &data);
+
+signals:
+    void signalMessageReceived();
+
+private:
+    QJsonObject *message;
 };
