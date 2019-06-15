@@ -40,12 +40,12 @@ protected slots:
     void slotMessageReceived();
 
 private:
-    QJsonObject * parseMessage(QJsonObject *msg);
-    void sendMessage(QJsonObject *msg);
+    void parseMessage(QJsonObject *msg);
+    void sendMessage(QJsonObject msg);
 
-    QWebEnginePage *page;
-    QWebChannel *channel;
-    MessageReceiver *communicator;
+    QWebEnginePage *m_page;
+    QWebChannel *m_channel;
+    MessageReceiver *m_communicator;
 
     const QUrl FxALoginUrl = QUrl("https://accounts.firefox.com/signin?service=sync&context=fx_desktop_v3");
 };
@@ -67,5 +67,5 @@ signals:
     void signalMessageReceived();
 
 private:
-    QJsonObject *message;
+    QJsonObject *m_message;
 };

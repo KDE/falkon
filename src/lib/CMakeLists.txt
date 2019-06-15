@@ -339,6 +339,7 @@ qt5_add_resources(SRCS
     data/icons.qrc
     data/breeze-fallback.qrc
     adblock/adblock.qrc
+    sync/sync.qrc
 )
 
 add_library(FalkonPrivate SHARED ${SRCS})

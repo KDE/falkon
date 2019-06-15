@@ -28,20 +28,19 @@
 FxALoginPage::FxALoginPage(QWidget* parent)
     : QWebEngineView(parent)
 {
-    page = new QWebEnginePage();
-    channel = new QWebChannel(page);
-    page->setWebChannel(channel);
-    
-    page->load(FxALoginUrl);
-    this->setPage(page);
-    connect(page, SIGNAL(loadFinished(bool)), this, SLOT(pageLoadFinished(bool)));
+    m_page = new QWebEnginePage();
+    m_channel = new QWebChannel(m_page);
+    m_page->setWebChannel(m_channel);
+    m_page->load(FxALoginUrl);
+    this->setPage(m_page);
+    connect(m_page, SIGNAL(loadFinished(bool)), this, SLOT(pageLoadFinished(bool)));
 }
 
 FxALoginPage::~FxALoginPage()
 {
-    delete communicator;
-    delete channel;
-    delete page;
+    delete m_communicator;
+    delete m_channel;
+    delete m_page;
 }
 
 void  FxALoginPage::pageLoadFinished(bool pageLoaded)
@@ -53,74 +52,72 @@ void  FxALoginPage::pageLoadFinished(bool pageLoaded)
         }
         QString apiScript = QString::fromLatin1(apiFile.readAll());
         apiFile.close();
-        page->runJavaScript(apiScript);
+        m_page->runJavaScript(apiScript);
 
-        communicator = new MessageReceiver(this);
-        connect(communicator, SIGNAL(signalMessageReceived()),
+        m_communicator = new MessageReceiver(this);
+        connect(m_communicator, SIGNAL(signalMessageReceived()),
                 this, SLOT(slotMessageReceived()));
+        m_channel->registerObject(QString("communicator"), m_communicator);
 
-        channel->registerObject(QString("communicator"), communicator);
-
-        page->runJavaScript("new QWebChannel(qt.webChannelTransport, function(channel) {"
-                            "    communicator = channel.objects.communicator;"
-                            "    window.comm = communicator;"
-                            "});"
-                            "window.addEventListener('WebChannelMessageToChrome', function(event) {"
-                            "    let e = {type: event.type, detail: event.detail};"
-                            "    window.comm.receiveJSON(e);"
-                            "});"
-                            "function sendMessage(response) {  let e = new window.CustomEvent('WebChannelMessageToContent', {detail: response}); window.dispatchEvent(e)};"
-                            );
+        QFile scriptFile(":/data/inject.js");
+        if(!scriptFile.open(QIODevice::ReadOnly)) {
+            qDebug() << "Couldn't load JavaScript file to inject.";
+        }
+        QString injectScript = QString::fromLatin1(scriptFile.readAll());
+        scriptFile.close();
+        m_page->runJavaScript(injectScript);
     }
 }
 
 void FxALoginPage::slotMessageReceived()
 {
-    qDebug() << "===Msg Rcvd by FxALoginPage===";
-    QJsonObject *message = communicator->getMessage();
-    qDebug() << "Message Recieved: ";
-    QJsonObject *response = parseMessage(message);
-    sendMessage(response);
+    QJsonObject *message = m_communicator->getMessage();
+    qDebug() << ">>> Received from server:\n  " << (*message);
+    parseMessage(message);
+
 }
 
-QJsonObject * FxALoginPage::parseMessage(QJsonObject *msg)
+void FxALoginPage::parseMessage(QJsonObject *msg)
 {
-    /* TODO:
-     *  Parse the recived message and respond with proper resonse
-     */ 
-    QJsonValue type = msg->value("type");
-    QJsonObject detail = msg->value("detail").toObject();
+    QJsonValue command = (*msg).value("detail").toObject().value("message").toObject().value("command");
+    if(command.toString() == QString("fxaccounts:can_link_account")) {
+        QJsonObject responseData;
+        responseData.insert("ok", true);
+        QJsonObject message;
+        message.insert("command", command);
+        message.insert("data", responseData);
+        message.insert("messageId", (*msg).value("detail").toObject().value("message").toObject().value("messageId"));
+        QJsonObject response;
+        response.insert("id", (*msg).value("detail").toObject().value("id"));
+        response.insert("message", message);
+        sendMessage(response);
+    }
+    else if(command.toString() == QString("fxaccounts:login")) {
+        QJsonObject data = (*msg).value("detail").toObject().value("message").toObject().value("data").toObject();
+        QString email = data.value("email").toString();
+        QString uid = data.value("uid").toString();
+        QString session_token = data.value("sessionToken").toString();
+        QString key_fetch_token = data.value("keyFetchToken").toString();
+        QString unwrap_kb = data.value("unwrapBKey").toString();
 
-    QJsonValue channelId = detail.value("id");
-    QJsonObject message = detail.value("message").toObject();
-
-    QJsonValue command = message.value("command");
-    QJsonObject data = message.value("data").toObject();
-    QJsonValue messageId = message.value("messageId");
-
-    QJsonObject resp_data;
-    resp_data.insert("ok", QJsonValue(true));
-
-    QJsonObject resp_message;
-    resp_message.insert("command", command);
-    resp_message.insert("data", QJsonValue(resp_data));
-    resp_message.insert("messageId", messageId);
-
-    QJsonObject *response = new QJsonObject();
-    response->insert("id", channelId);
-    response->insert("message", QJsonValue(resp_message));
-
-    return response;
+        qDebug() << "===Recieved login credentials:===\n"
+                 << "  Email: " << email << '\n'
+                 << "  UID: " << uid << '\n'
+                 << "  Session Token: " << session_token << '\n'
+                 << "  Key Fetch Token: " << key_fetch_token << '\n'
+                 << "  unwrapBKey: " << unwrap_kb << '\n'
+                 << "=================================\n";
+    }
 }
 
-void FxALoginPage::sendMessage(QJsonObject* msg)
+void FxALoginPage::sendMessage(QJsonObject msg)
 {
-    QJsonDocument doc(*msg);
+    QJsonDocument doc(msg);
     QString stringMsg(doc.toJson(QJsonDocument::Compact));
-    qDebug() << ">>> Sending to server: " << stringMsg;
+    qDebug() << "<<< Sending to server:\n  " << stringMsg;
 
     QString srcCode = "sendMessage(" + stringMsg + ");";
-    page->runJavaScript(srcCode);
+    m_page->runJavaScript(srcCode);
 }
 
 
@@ -131,18 +128,17 @@ MessageReceiver::MessageReceiver(QObject *parent)
 
 MessageReceiver::~MessageReceiver()
 {
-    delete message;
+    delete m_message;
 }
 
 void MessageReceiver::receiveJSON(const QVariantMap &data)
 {
     QJsonObject obj = QJsonObject::fromVariantMap(data);
-    qDebug() << "Received JSON:\n  " << obj;
-    message = new QJsonObject(obj);
+    m_message = new QJsonObject(obj);
     emit signalMessageReceived();
 }
 
 QJsonObject * MessageReceiver::getMessage()
 {
-    return message;
+    return m_message;
 }
