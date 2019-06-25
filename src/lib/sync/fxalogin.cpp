@@ -28,42 +28,41 @@
 FxALoginPage::FxALoginPage(QWidget* parent)
     : QWebEngineView(parent)
 {
-    m_page = new QWebEnginePage();
+    m_page = new QWebEnginePage(this);
     m_channel = new QWebChannel(m_page);
     m_page->setWebChannel(m_channel);
     m_page->load(FxALoginUrl);
-    this->setPage(m_page);
-    connect(m_page, SIGNAL(loadFinished(bool)), this, SLOT(pageLoadFinished(bool)));
+    setPage(m_page);
+    connect(m_page, &QWebEnginePage::loadFinished, this, &FxALoginPage::pageLoadFinished);
 }
 
 FxALoginPage::~FxALoginPage()
 {
     delete m_communicator;
     delete m_channel;
-    delete m_page;
 }
 
 void  FxALoginPage::pageLoadFinished(bool pageLoaded)
 {
-    if(pageLoaded) {
+    if (pageLoaded) {
         QFile apiFile(":/qtwebchannel/qwebchannel.js");
-        if(!apiFile.open(QIODevice::ReadOnly)) {
-            qDebug() << "Couldn't load Qt's Webchannel API!";
+        if (!apiFile.open(QIODevice::ReadOnly)) {
+            qWarning() << "Couldn't load Qt's Webchannel API!";
         }
-        QString apiScript = QString::fromLatin1(apiFile.readAll());
+        QString apiScript = QString::fromUtf8(apiFile.readAll());
         apiFile.close();
         m_page->runJavaScript(apiScript);
 
         m_communicator = new MessageReceiver(this);
-        connect(m_communicator, SIGNAL(signalMessageReceived()),
-                this, SLOT(slotMessageReceived()));
+        connect(m_communicator, &MessageReceiver::signalMessageReceived,
+                this, &FxALoginPage::slotMessageReceived);
         m_channel->registerObject(QString("communicator"), m_communicator);
 
         QFile scriptFile(":/data/inject.js");
-        if(!scriptFile.open(QIODevice::ReadOnly)) {
-            qDebug() << "Couldn't load JavaScript file to inject.";
+        if (!scriptFile.open(QIODevice::ReadOnly)) {
+            qWarning() << "Couldn't load JavaScript file to inject.";
         }
-        QString injectScript = QString::fromLatin1(scriptFile.readAll());
+        QString injectScript = QString::fromUtf8(scriptFile.readAll());
         scriptFile.close();
         m_page->runJavaScript(injectScript);
     }
@@ -79,21 +78,20 @@ void FxALoginPage::slotMessageReceived()
 
 void FxALoginPage::parseMessage(QJsonObject *msg)
 {
-    QJsonValue command = (*msg).value("detail").toObject().value("message").toObject().value("command");
-    if(command.toString() == QString("fxaccounts:can_link_account")) {
+    QJsonValue command = msg->value("detail").toObject().value("message").toObject().value("command");
+    if (command.toString() == QLatin1String("fxaccounts:can_link_account")) {
         QJsonObject responseData;
-        responseData.insert("ok", true);
+        responseData.insert(QString("ok"), true);
         QJsonObject message;
         message.insert("command", command);
         message.insert("data", responseData);
-        message.insert("messageId", (*msg).value("detail").toObject().value("message").toObject().value("messageId"));
+        message.insert("messageId", msg->value("detail").toObject().value("message").toObject().value("messageId"));
         QJsonObject response;
-        response.insert("id", (*msg).value("detail").toObject().value("id"));
+        response.insert("id", msg->value("detail").toObject().value("id"));
         response.insert("message", message);
         sendMessage(response);
-    }
-    else if(command.toString() == QString("fxaccounts:login")) {
-        QJsonObject data = (*msg).value("detail").toObject().value("message").toObject().value("data").toObject();
+    } else if (command.toString() == QLatin1String("fxaccounts:login")) {
+        QJsonObject data = msg->value("detail").toObject().value("message").toObject().value("data").toObject();
         QString email = data.value("email").toString();
         QString uid = data.value("uid").toString();
         QString session_token = data.value("sessionToken").toString();

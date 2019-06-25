@@ -17,20 +17,12 @@
 * ============================================================ */
 #pragma once
 
-#include <openssl/evp.h>
 #include <QByteArray>
+#include <QString>
 
-class HKDF
-{
-public:
-    explicit HKDF(const QByteArray key, const QByteArray salt, const QByteArray info);
-    ~HKDF();
+#define SHA256_DIGEST_SIZE 32
 
-    QByteArray getKey(size_t outlen);
-
-private:
-    void init(const QByteArray key, const QByteArray salt, const QByteArray info);
-
-    EVP_PKEY_CTX *pctx;
-};
-
+u_char *syncCryptoHkdf(QByteArray *in, QByteArray *info, size_t out_len);
+void syncCryptoKW(QByteArray *kw, QString name);
+void deriveSessionToken(QByteArray *sessionToken, QByteArray *tokenId, QByteArray *reqHMACKey, QByteArray *reqKey);
+void deriveKeyFetchToken(QByteArray *keyFetchToken, QByteArray *tokenId, QByteArray *reqHMACKey, QByteArray *respHMACKey, QByteArray *respXORKey);

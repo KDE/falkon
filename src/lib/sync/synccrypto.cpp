@@ -15,57 +15,91 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-
 #include "synccrypto.h"
 
-#include <openssl/evp.h>
-#include <openssl/kdf.h>
+#include <nettle/sha2.h>
+#include <nettle/hkdf.h>
+#include <nettle/hmac.h>
 
 #include <QByteArray>
+#include <QString>
 
-HKDF::HKDF(const QByteArray key, const QByteArray salt, const QByteArray info)
+u_char *syncCryptoHkdf(QByteArray *in, QByteArray *info, size_t out_len)
 {
-    pctx = EVP_PKEY_CTX_new_id(EVP_PKEY_HKDF,NULL);
+    hmac_sha256_ctx *ctx = new hmac_sha256_ctx;
 
-    init(key, salt,info);
+    size_t in_len = in->size();
+    size_t info_len = info->size();
+    u_char *salt = new u_char[SHA256_DIGEST_SIZE] {0};
+    u_char *prk = new u_char[SHA256_DIGEST_SIZE];
+    u_char *output = new u_char[out_len];
+
+    nettle_hmac_sha256_set_key(ctx, SHA256_DIGEST_SIZE, salt);
+    nettle_hkdf_extract(ctx,
+                        (nettle_hash_update_func *)hmac_sha256_update,
+                        (nettle_hash_digest_func *)hmac_sha256_digest,
+                        SHA256_DIGEST_SIZE,
+                        in_len, (u_char *)in->data(), prk);
+    nettle_hmac_sha256_set_key(ctx, SHA256_DIGEST_SIZE, prk);
+    nettle_hkdf_expand(ctx,
+                       (nettle_hash_update_func *)hmac_sha256_update,
+                       (nettle_hash_digest_func *)hmac_sha256_digest,
+                       SHA256_DIGEST_SIZE,
+                       info_len, (u_char *)info->data(), out_len, output);
+
+    delete[] prk;
+    return output;
 }
 
-HKDF::~HKDF() {
-}
-
-void HKDF::init(const QByteArray key, const QByteArray salt, const QByteArray info)
+void syncCryptoKW(QByteArray *kw, QString name)
 {
-    size_t keylen = key.size();
-    size_t saltlen = salt.size();
-    size_t infolen = info.size();
-
-    if (EVP_PKEY_derive_init(pctx) <= 0) {
-        qWarning("Unable to initialize public key algorithm context for HKDF.");
-        return;
-    }
-    if (EVP_PKEY_CTX_set_hkdf_md(pctx, EVP_sha256()) <= 0) {
-        qWarning("Unable to set HKDF message digest.");
-        return;
-    }
-    if (EVP_PKEY_CTX_set1_hkdf_salt(pctx, (uchar *)salt.data(), saltlen) <= 0) {
-        qWarning("Unable to set salt.");
-        return;
-    }
-    if (EVP_PKEY_CTX_set1_hkdf_key(pctx, (uchar *)key.data(), keylen) <= 0) {
-        qWarning("Unable to set key.");
-        return;
-    }
-    if (EVP_PKEY_CTX_add1_hkdf_info(pctx, (uchar *)info.data(), infolen) <= 0) {
-        qWarning("Uable to set info for HKDF.");
-        return;
-    }
+    // Concatenate "name" to Mozilla prefix to get the required KW.
+    // See https://raw.githubusercontent.com/wiki/mozilla/fxa-auth-server/images/onepw-create.png for details.
+    QString info = QString("identity.mozilla.com/picl/v1/").append(name);
+    kw->append(info.toUtf8());
 }
 
-QByteArray HKDF::getKey(size_t outlen) {
-    QByteArray out;
-    if (EVP_PKEY_derive(pctx, (uchar *)out.data(), &outlen) <= 0) {
-        qWarning("Unable to derive HKDF key.");
-    }
-    return out;
+void deriveSessionToken(QByteArray *sessionToken, QByteArray *tokenId, QByteArray *reqHMACKey, QByteArray *reqKey)
+{
+    QByteArray *kw = new QByteArray();
+    syncCryptoKW(kw, QString("sessionToken"));
+    size_t len = 32;
+
+    u_char *out = syncCryptoHkdf(sessionToken, kw, 3 * len);
+    QByteArray *temp = new QByteArray(QByteArray::fromRawData((const char *)out, 3 * len));
+    QByteArray tId(*temp);
+    tId.remove(len, 2 * len);
+    tokenId->append(tId);
+    reqKey->append(temp->right(len));
+    temp->remove(0, len);
+    temp->remove(len, len);
+    reqHMACKey->append(*temp);
 }
 
+void deriveKeyFetchToken(QByteArray *keyFetchToken, QByteArray *tokenId, QByteArray *reqHMACKey, QByteArray *respHMACKey, QByteArray *respXORKey)
+{
+    QByteArray *infoKft = new QByteArray();
+    syncCryptoKW(infoKft, "keyFetchToken");
+    QByteArray *infoKeys = new QByteArray();
+    syncCryptoKW(infoKeys, "account/keys");
+    size_t len = 32;
+
+    u_char *out1 = syncCryptoHkdf(keyFetchToken, infoKft, 3 * len);
+    QByteArray *temp = new QByteArray(QByteArray::fromRawData((const char *)out1, 3 * len));
+    QByteArray tId(*temp);
+    tId.remove(len, 2 * len);
+    tokenId->append(tId);
+    QByteArray *reqKey = new QByteArray();
+    reqKey->append(temp->right(len));
+    temp->remove(0, len);
+    temp->remove(len, len);
+    reqHMACKey->append(*temp);
+
+    u_char *out2 = syncCryptoHkdf(reqKey, infoKeys, 3 * len);
+    QByteArray *temp2 = new QByteArray(QByteArray::fromRawData((const char *)out2, 3 * len));
+    QByteArray respHKey(*temp2);
+    respHKey.remove(len, 2 * len);
+    respHMACKey->append(respHKey);
+    temp2->remove(0, len);
+    respXORKey->append(*temp2);
+}
