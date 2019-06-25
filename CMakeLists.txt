@@ -9,7 +9,7 @@ include(FeatureSummary)
 find_package(ECM 5.27.0 CONFIG)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/frameworks/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_SOURCE_DIR})
 
 # Many includes from ECM, to get all the nice cmake functions and settings
 include(KDEInstallDirs)
@@ -87,6 +87,9 @@ endif()
 
 # Mandatory: OpenSSL
 find_package(OpenSSL REQUIRED)
+
+# Mandatory: Nettle 
+find_package(Nettle REQUIRED)
 
 # Mandatory: KF5
 find_package(KF5 REQUIRED COMPONENTS Archive)
