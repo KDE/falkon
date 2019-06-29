@@ -16,6 +16,8 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "fxalogin.h"
+#include "javascript/externaljsobject.h"
+#include "webpage.h"
 
 #include <QWebEnginePage>
 #include <QWebEngineScript>
@@ -28,43 +30,32 @@
 FxALoginPage::FxALoginPage(QWidget* parent)
     : QWebEngineView(parent)
 {
-    m_page = new QWebEnginePage(this);
-    m_channel = new QWebChannel(m_page);
-    m_page->setWebChannel(m_channel);
+    m_communicator = new MessageReceiver(this);
+    ExternalJsObject::registerExtraObject(QString("communicator"), m_communicator);
+    connect(m_communicator, &MessageReceiver::signalMessageReceived,
+                this, &FxALoginPage::slotMessageReceived);
+
+    m_page = new WebPage(this);
     m_page->load(FxALoginUrl);
     setPage(m_page);
-    connect(m_page, &QWebEnginePage::loadFinished, this, &FxALoginPage::pageLoadFinished);
+    connect(m_page, &WebPage::loadFinished, this, &FxALoginPage::pageLoadFinished);
 }
 
 FxALoginPage::~FxALoginPage()
 {
     delete m_communicator;
-    delete m_channel;
 }
 
 void  FxALoginPage::pageLoadFinished(bool pageLoaded)
 {
     if (pageLoaded) {
-        QFile apiFile(":/qtwebchannel/qwebchannel.js");
-        if (!apiFile.open(QIODevice::ReadOnly)) {
-            qWarning() << "Couldn't load Qt's Webchannel API!";
-        }
-        QString apiScript = QString::fromUtf8(apiFile.readAll());
-        apiFile.close();
-        m_page->runJavaScript(apiScript);
-
-        m_communicator = new MessageReceiver(this);
-        connect(m_communicator, &MessageReceiver::signalMessageReceived,
-                this, &FxALoginPage::slotMessageReceived);
-        m_channel->registerObject(QString("communicator"), m_communicator);
-
         QFile scriptFile(":/data/inject.js");
         if (!scriptFile.open(QIODevice::ReadOnly)) {
             qWarning() << "Couldn't load JavaScript file to inject.";
         }
         QString injectScript = QString::fromUtf8(scriptFile.readAll());
         scriptFile.close();
-        m_page->runJavaScript(injectScript);
+        m_page->runJavaScript(injectScript, WebPage::SafeJsWorld);
     }
 }
 
@@ -115,7 +106,7 @@ void FxALoginPage::sendMessage(QJsonObject msg)
     qDebug() << "<<< Sending to server:\n  " << stringMsg;
 
     QString srcCode = "sendMessage(" + stringMsg + ");";
-    m_page->runJavaScript(srcCode);
+    m_page->runJavaScript(srcCode, WebPage::SafeJsWorld);
 }
 
 

@@ -26,6 +26,7 @@ class QWebEngineScript;
 class QWebEnginePage;
 class QJsonObject;
 class MessageReceiver;
+class WebPage;
 
 class FxALoginPage : public QWebEngineView
 {
@@ -43,8 +44,7 @@ private:
     void parseMessage(QJsonObject *msg);
     void sendMessage(QJsonObject msg);
 
-    QWebEnginePage *m_page;
-    QWebChannel *m_channel;
+    WebPage *m_page;
     MessageReceiver *m_communicator;
 
     const QUrl FxALoginUrl = QUrl("https://accounts.firefox.com/signin?service=sync&context=fx_desktop_v3");
@@ -60,10 +60,10 @@ public:
     ~MessageReceiver();
     QJsonObject *getMessage();
 
-public slots:
+public Q_SLOTS:
     void receiveJSON(const QVariantMap &data);
 
-signals:
+Q_SIGNALS:
     void signalMessageReceived();
 
 private:
