@@ -18,10 +18,9 @@
 #include "fxalogin.h"
 #include "javascript/externaljsobject.h"
 #include "webpage.h"
+#include "communicator.h"
+#include "qztools.h"
 
-#include <QWebEnginePage>
-#include <QWebEngineScript>
-#include <QWebChannel>
 #include <QJsonObject>
 #include <QDebug>
 #include <QFile>
@@ -30,10 +29,10 @@
 FxALoginPage::FxALoginPage(QWidget* parent)
     : QWebEngineView(parent)
 {
-    m_communicator = new MessageReceiver(this);
+    m_communicator = new Communicator(this);
     ExternalJsObject::registerExtraObject(QString("communicator"), m_communicator);
-    connect(m_communicator, &MessageReceiver::signalMessageReceived,
-                this, &FxALoginPage::slotMessageReceived);
+    connect(m_communicator, &Communicator::signalMessageReceived,
+            this, &FxALoginPage::slotMessageReceived);
 
     m_page = new WebPage(this);
     m_page->load(FxALoginUrl);
@@ -49,12 +48,7 @@ FxALoginPage::~FxALoginPage()
 void  FxALoginPage::pageLoadFinished(bool pageLoaded)
 {
     if (pageLoaded) {
-        QFile scriptFile(":/data/inject.js");
-        if (!scriptFile.open(QIODevice::ReadOnly)) {
-            qWarning() << "Couldn't load JavaScript file to inject.";
-        }
-        QString injectScript = QString::fromUtf8(scriptFile.readAll());
-        scriptFile.close();
+        QString injectScript = QzTools::readAllFileContents(":/data/inject.js");
         m_page->runJavaScript(injectScript, WebPage::SafeJsWorld);
     }
 }
@@ -109,25 +103,3 @@ void FxALoginPage::sendMessage(QJsonObject msg)
     m_page->runJavaScript(srcCode, WebPage::SafeJsWorld);
 }
 
-
-MessageReceiver::MessageReceiver(QObject *parent)
-    : QObject(parent)
-{
-}
-
-MessageReceiver::~MessageReceiver()
-{
-    delete m_message;
-}
-
-void MessageReceiver::receiveJSON(const QVariantMap &data)
-{
-    QJsonObject obj = QJsonObject::fromVariantMap(data);
-    m_message = new QJsonObject(obj);
-    emit signalMessageReceived();
-}
-
-QJsonObject * MessageReceiver::getMessage()
-{
-    return m_message;
-}

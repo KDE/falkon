@@ -17,32 +17,24 @@
 * ============================================================ */
 #pragma once
 
-#include <QUrl>
-#include <QWebEngineView>
 #include <QObject>
+#include <QJsonObject>
 
-class QJsonObject;
-class WebPage;
-class Communicator;
-
-class FxALoginPage : public QWebEngineView
+class Communicator : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit FxALoginPage(QWidget *parent = nullptr);
-    ~FxALoginPage();
+    Communicator(QObject *parent = nullptr);
+    ~Communicator();
+    QJsonObject *getMessage();
 
-protected slots:
-    void pageLoadFinished(bool pageLoaded);
-    void slotMessageReceived();
+public Q_SLOTS:
+    void receiveJSON(const QVariantMap &data);
+
+Q_SIGNALS:
+    void signalMessageReceived();
 
 private:
-    void parseMessage(QJsonObject *msg);
-    void sendMessage(QJsonObject msg);
-
-    WebPage *m_page;
-    Communicator *m_communicator;
-
-    const QUrl FxALoginUrl = QUrl("https://accounts.firefox.com/signin?service=sync&context=fx_desktop_v3");
+    QJsonObject *m_message;
 };

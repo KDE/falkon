@@ -15,34 +15,28 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#pragma once
+#include "communicator.h"
 
-#include <QUrl>
-#include <QWebEngineView>
-#include <QObject>
+#include <QJsonObject>
 
-class QJsonObject;
-class WebPage;
-class Communicator;
-
-class FxALoginPage : public QWebEngineView
+Communicator::Communicator(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
+}
 
-public:
-    explicit FxALoginPage(QWidget *parent = nullptr);
-    ~FxALoginPage();
+Communicator::~Communicator()
+{
+    delete m_message;
+}
 
-protected slots:
-    void pageLoadFinished(bool pageLoaded);
-    void slotMessageReceived();
+void Communicator::receiveJSON(const QVariantMap &data)
+{
+    QJsonObject obj = QJsonObject::fromVariantMap(data);
+    m_message = new QJsonObject(obj);
+    emit signalMessageReceived();
+}
 
-private:
-    void parseMessage(QJsonObject *msg);
-    void sendMessage(QJsonObject msg);
-
-    WebPage *m_page;
-    Communicator *m_communicator;
-
-    const QUrl FxALoginUrl = QUrl("https://accounts.firefox.com/signin?service=sync&context=fx_desktop_v3");
-};
+QJsonObject * Communicator::getMessage()
+{
+    return m_message;
+}
