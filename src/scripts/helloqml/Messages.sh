@@ -2,7 +2,7 @@
 
 XGETTEXT_FLAGS_QML="\
 --copyright-holder=This_file_is_part_of_KDE \
---msgid-bugs-address=http://bugs.kde.org \
+--msgid-bugs-address=https://bugs.kde.org \
 --from-code=UTF-8 \
 -L javascript \
 -ki18n:1 -ki18np:1,2 \
