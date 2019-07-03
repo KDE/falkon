@@ -41,6 +41,7 @@ include_directories(
 
 include_directories(${OPENSSL_INCLUDE_DIR})
 include_directories(${NETTLE_INCLUDE_DIR})
+include_directories(${GMP_INCLUDE_DIR})
 
 set(SRCS ${SRCS}
     3rdparty/fancytabwidget.cpp
@@ -360,6 +361,8 @@ target_link_libraries(FalkonPrivate
     KF5::Archive
     ${OPENSSL_CRYPTO_LIBRARY}
     ${NETTLE_LIBRARY}
+    ${GMP_LIBRARY}
+    ${HOGWEED_LIBRARY}
 )
 
 if (UNIX AND NOT APPLE)

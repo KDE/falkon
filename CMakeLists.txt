@@ -91,6 +91,12 @@ find_package(OpenSSL REQUIRED)
 # Mandatory: Nettle 
 find_package(Nettle REQUIRED)
 
+# Mandatory: Hogweed 
+find_package(Hogweed REQUIRED)
+
+# Mandatory: GMP 
+find_package(GMP REQUIRED)
+
 # Mandatory: KF5
 find_package(KF5 REQUIRED COMPONENTS Archive)
 
