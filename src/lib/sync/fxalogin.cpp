@@ -20,6 +20,7 @@
 #include "webpage.h"
 #include "communicator.h"
 #include "qztools.h"
+#include "settings.h"
 
 #include <QJsonObject>
 #include <QDebug>
@@ -90,6 +91,15 @@ void FxALoginPage::parseMessage(QJsonObject *msg)
                  << "  Key Fetch Token: " << key_fetch_token << '\n'
                  << "  unwrapBKey: " << unwrap_kb << '\n'
                  << "=================================\n";
+
+        Settings settings;
+        settings.beginGroup(QSL("SyncCredentials"));
+        settings.setValue(QSL("Email"), email);
+        settings.setValue(QSL("UID"), uid);
+        settings.setValue(QSL("SessionToken"), session_token);
+        settings.setValue(QSL("KeyFetchToken"), key_fetch_token);
+        settings.setValue(QSL("UnwrapBKey"), unwrap_kb);
+        settings.endGroup();
     }
 }
 
@@ -102,4 +112,3 @@ void FxALoginPage::sendMessage(QJsonObject msg)
     QString srcCode = "sendMessage(" + stringMsg + ");";
     m_page->runJavaScript(srcCode, WebPage::SafeJsWorld);
 }
-
