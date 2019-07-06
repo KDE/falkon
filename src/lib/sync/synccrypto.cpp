@@ -20,9 +20,33 @@
 #include <nettle/sha2.h>
 #include <nettle/hkdf.h>
 #include <nettle/hmac.h>
+#include <nettle/rsa.h>
+#include <nettle/cbc.h>
 
 #include <QByteArray>
 #include <QString>
+
+#include <random>
+
+/* This function is required for Nettle's RSA support.
+ * We are not using random_ctx, instead we are using C++11's <random>'s
+ * Merseinne Twister.
+ */
+void generateRandomBytes(void* randomCtx, size_t numBytes, u_char* out)
+{
+    Q_UNUSED(randomCtx);
+
+    std::random_device device;
+    std::mt19937 generator(device());
+
+    // Generate a uniform int distribution in range of 0 to 255, that is 8-bit range
+    std::uniform_int_distribution<std::mt19937::result_type> distribution(0, 255);
+
+    for (size_t i = 0; i < numBytes; ++i) {
+        out[i] = (u_char)distribution(generator);
+    }
+}
+
 
 u_char *syncCryptoHkdf(QByteArray *in, QByteArray *info, size_t out_len)
 {
@@ -102,4 +126,29 @@ void deriveKeyFetchToken(QByteArray *keyFetchToken, QByteArray *tokenId, QByteAr
     respHMACKey->append(respHKey);
     temp2->remove(0, len);
     respXORKey->append(*temp2);
+}
+
+RSAKeyPair  *generateRSAKeyPair()
+{
+    RSAKeyPair *keyPair = new RSAKeyPair();
+    rsa_public_key publicKey;
+    rsa_private_key privateKey;
+
+    rsa_public_key_init(&publicKey);
+    rsa_private_key_init(&privateKey);
+
+    // Set public key exponent to a small Fermat prime number
+    mpz_set_ui(publicKey.e, 65537);
+
+    // Using key size 2048 for security
+    int success = rsa_generate_keypair(&publicKey, &privateKey,
+                                       NULL, generateRandomBytes,
+                                       NULL, NULL, 2048, 0);
+
+    Q_ASSERT(success);
+
+    keyPair->m_publicKey = publicKey;
+    keyPair->m_privateKey = privateKey;
+
+    return keyPair;
 }

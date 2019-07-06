@@ -19,10 +19,18 @@
 
 #include <QByteArray>
 #include <QString>
+#include <nettle/rsa.h>
 
 #define SHA256_DIGEST_SIZE 32
 
+struct RSAKeyPair {
+    rsa_public_key m_publicKey;
+    rsa_private_key m_privateKey;
+};
+
+void generateRandomBytes(void *randomCtx, size_t numBytes, u_char *out);
 u_char *syncCryptoHkdf(QByteArray *in, QByteArray *info, size_t out_len);
 void syncCryptoKW(QByteArray *kw, QString name);
 void deriveSessionToken(QByteArray *sessionToken, QByteArray *tokenId, QByteArray *reqHMACKey, QByteArray *reqKey);
 void deriveKeyFetchToken(QByteArray *keyFetchToken, QByteArray *tokenId, QByteArray *reqHMACKey, QByteArray *respHMACKey, QByteArray *respXORKey);
+RSAKeyPair  *generateRSAKeyPair();
