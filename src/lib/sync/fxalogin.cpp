@@ -100,6 +100,7 @@ void FxALoginPage::parseMessage(QJsonObject *msg)
         settings.setValue(QSL("KeyFetchToken"), key_fetch_token);
         settings.setValue(QSL("UnwrapBKey"), unwrap_kb);
         settings.endGroup();
+        // derive the various tokens and save into settings right here and instead of synccreds, create a user_data object
     }
 }
 

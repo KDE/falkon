@@ -15,29 +15,31 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "syncoptions.h"
-#include "ui_syncoptions.h"
-#include "fxalogin.h"
-#include "mainapplication.h"
-#include "syncmanager.h"
 
-#include <QWebEngineView>
-#include <QWebEnginePage>
-#include <QPushButton>
+#pragma once
 
-SyncOptions::SyncOptions(QWidget* parent)
-    : QWidget(parent)
-    , ui(new Ui::SyncOptions)
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QNetworkRequest>
+#include <QQueue>
+#include <QObject>
+
+class SyncRequestManager : public QObject
 {
-    ui->setupUi(this);
+    Q_OBJECT
 
-    loginPage = new FxALoginPage(this);
-    ui->fxaloginframe->addWidget(loginPage);
+public:
+    explicit SyncRequestManager(QObject *parent = nullptr);
+    void addRequest(QNetworkRequest *request, bool post);
+    void startSync(bool start);
 
-    connect(ui->btnSyncNow, &QPushButton::clicked, mApp->syncManager(), &SyncManager::sync);
-}
+private:
+    struct RequestPair {
+        QNetworkRequest request;
+        bool post;
+    };
 
-SyncOptions::~SyncOptions()
-{
-    delete ui;
-}
+    QNetworkAccessManager *m_requestManager;
+    QQueue<RequestPair> *m_requestQueue;
+    bool startRequests;
+};

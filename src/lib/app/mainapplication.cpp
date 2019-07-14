@@ -48,6 +48,7 @@
 #include "closedwindowsmanager.h"
 #include "protocolhandlermanager.h"
 #include "../config.h"
+#include "syncmanager.h"
 
 #include <QWebEngineSettings>
 #include <QDesktopServices>
@@ -106,6 +107,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     , m_desktopNotifications(nullptr)
     , m_webProfile(nullptr)
     , m_autoSaver(nullptr)
+    , m_syncManager(nullptr)
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
     , m_registerQAppAssociation(0)
 #endif
@@ -289,6 +291,8 @@ MainApplication::MainApplication(int &argc, char** argv)
     m_networkManager = new NetworkManager(this);
 
     setupUserScripts();
+    
+    m_syncManager = new SyncManager(this);
 
     if (!isPrivate() && !isTestModeEnabled()) {
         m_sessionManager = new SessionManager(this);
@@ -378,6 +382,8 @@ MainApplication::~MainApplication()
     delete m_cookieJar;
     m_cookieJar = nullptr;
 
+    m_syncManager->deleteLater();
+    
     Settings::syncSettings();
 }
 
@@ -635,6 +641,12 @@ QWebEngineSettings *MainApplication::webSettings() const
 {
     return m_webProfile->settings();
 }
+
+SyncManager * MainApplication::syncManager()
+{
+    return m_syncManager;
+}
+
 
 // static
 MainApplication* MainApplication::instance()

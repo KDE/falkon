@@ -53,6 +53,7 @@ class ProxyStyle;
 class SessionManager;
 class ClosedWindowsManager;
 class ProtocolHandlerManager;
+class SyncManager;
 
 class FALKON_EXPORT MainApplication : public QtSingleApplication
 {
@@ -114,6 +115,7 @@ public:
     DesktopNotificationsFactory* desktopNotifications();
     QWebEngineProfile* webProfile() const;
     QWebEngineSettings *webSettings() const;
+    SyncManager* syncManager();
 
     QByteArray saveState() const;
 
@@ -188,6 +190,7 @@ private:
     HTML5PermissionsManager* m_html5PermissionsManager;
     DesktopNotificationsFactory* m_desktopNotifications;
     QWebEngineProfile* m_webProfile;
+    SyncManager* m_syncManager;
 
     AutoSaver* m_autoSaver;
     ProxyStyle *m_proxyStyle = nullptr;

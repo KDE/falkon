@@ -33,6 +33,7 @@ include_directories(
     session
     sidebar
     sync
+    sync/hawk
     tabwidget
     tools
     webengine
@@ -220,6 +221,8 @@ set(SRCS ${SRCS}
     sync/communicator.cpp
     sync/fxalogin.cpp
     sync/synccrypto.cpp
+    sync/hawk/hawk.cpp
+    sync/syncmanager.cpp
     tabwidget/combotabbar.cpp
     tabwidget/tabbar.cpp
     tabwidget/tabicon.cpp
