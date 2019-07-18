@@ -17,6 +17,7 @@
 * ============================================================ */
 #pragma once
 #include "hawk.h"
+#include "synccrypto.h"
 
 #include <QVariant>
 #include <QHash>
@@ -31,7 +32,7 @@ class QByteArray;
 class SyncCredentials
 {
 public:
-    SyncCredentials();      // load the sync credentials from settings
+    SyncCredentials();
     ~SyncCredentials();
     void addSyncCredentials(QString key, QString value);
     QString getValue(QString key);
@@ -54,22 +55,28 @@ private:
 
 class SyncManager : public QObject
 {
+    Q_OBJECT
+
 public:
-    explicit SyncManager(QObject *parent = nullptr);      // load m_syncCreds
+    explicit SyncManager(QObject *parent = nullptr);
     ~SyncManager();
-    void sync();    // call it from fxalogin.cpp/mainapplication.cpp after recieving sessionToken
+    void sync();
     void saveSyncState();
 
 public Q_SLOTS:
     void startSync();
 
+private Q_SLOTS:
+    void recievedBrowserSignedCertificate();
+
 private:
     bool getBrowserSignedCertificate();
     bool getCryptoKeys();
 
-    void createHawkPostReqeuest(QString endpoint, QByteArray *id, QByteArray *key, size_t keyLen, QByteArray *data);
-    void createHawkGetRequest(QString endpoint, QByteArray *id, QByteArray *key, size_t keyLen);
+    bool verifyBrowserSignedCertificate(QByteArray *certificate);
 
+    QNetworkRequest createHawkPostReqeuest(QString endpoint, QByteArray *id, QByteArray *key, size_t keyLen, QByteArray *data);
+    QNetworkRequest createHawkGetRequest(QString endpoint, QByteArray *id, QByteArray *key, size_t keyLen);
 
     bool m_storageCredentialsExpired = true;
     bool m_syncSuccess = false;
@@ -80,4 +87,5 @@ private:
     QNetworkAccessManager *m_networkManager;
     SyncCredentials *m_syncCreds;
     SyncState *m_syncState;
+    RSAKeyPair *m_keyPair;
 };

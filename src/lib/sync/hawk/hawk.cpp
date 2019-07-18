@@ -40,17 +40,6 @@ HawkOptions::HawkOptions(const char* app, const char* dlg, const char* ext, cons
     m_nonce = new QByteArray(nonce);
     m_payload = new QByteArray(payload);
     m_timestamp = new QByteArray(timestamp);
-
-    qDebug() << "New HawkOptions created: "
-             << "\n  m_app: " << m_app->data()
-             << "\n  m_dlg: " << m_dlg->data()
-             << "\n  m_ext: " << m_ext->data()
-             << "\n  m_contentType: " << m_contentType->data()
-             << "\n  m_hash: " << m_hash->data()
-             << "\n  m_localTimeOffset: " << m_localTimeOffset->data()
-             << "\n  m_nonce: " << m_nonce->data()
-             << "\n  m_payload: " << m_payload->data()
-             << "\n  m_timestamp: " << m_timestamp->data();
 }
 
 HawkOptions::~HawkOptions()
@@ -88,18 +77,6 @@ HawkArtifacts::HawkArtifacts(const char* app, const char* dlg, const char* ext, 
     } else {
         m_timestamp = new QByteArray();
     }
-
-    qDebug() << "New HawkOptions created: "
-             << "\n  m_app: " << m_app->data()
-             << "\n  m_dlg: " << m_dlg->data()
-             << "\n  m_ext: " << m_ext->data()
-             << "\n  m_hash: " << m_hash->data()
-             << "\n  m_host: " << m_host->data()
-             << "\n  m_method: " << m_method->data()
-             << "\n  m_nonce: " << m_nonce->data()
-             << "\n  m_resource: " << m_resource->data()
-             << "\n  m_port: " << m_port->data()
-             << "\n  m_timestamp: " << m_timestamp->data();
 }
 
 HawkArtifacts::~HawkArtifacts()
@@ -117,17 +94,13 @@ HawkArtifacts::~HawkArtifacts()
 
 HawkHeader::HawkHeader(const char* url, const char* method, const char* id, const char* key, size_t keyLen, HawkOptions* option)
 {
-    qDebug() << "Inside HawkHeader constructor";
     qint64 ts = QDateTime::currentSecsSinceEpoch();
-    qDebug() << "timestamp: " << ts;
 
     QString *hash = new QString(option->m_hash->data());
     QString *payload = new QString(option->m_payload->data());
     QString *timestamp = new QString(option->m_timestamp->data());
 
-    qDebug() << "Debug#1";
     QUrl uri = QUrl(QString(url));
-    qDebug() << "URL query: " << uri.query() << " length: " << uri.query().length();
     QString *resource = (uri.query().length() == 0) ?
                         (new QString(uri.path())) :
                         (new QString(uri.path() + QString("?") + uri.query()));
@@ -136,7 +109,6 @@ HawkHeader::HawkHeader(const char* url, const char* method, const char* id, cons
     if (option->m_nonce->length() > 0) {
         nonce = new QString(option->m_nonce->data());
     } else {
-        qDebug() << "Creating random nonce";
         u_char *bytes = new u_char(NONCE_LEN / 2);
         generateRandomBytes(nullptr, NONCE_LEN / 2, bytes);
         QByteArray temp = QByteArray::fromRawData((const char *)bytes, NONCE_LEN / 2);
@@ -148,7 +120,6 @@ HawkHeader::HawkHeader(const char* url, const char* method, const char* id, cons
         QString *localTimeOffset = new QString(option->m_localTimeOffset->data());
         quint64 offset = 0;
         if (localTimeOffset->length() > 0) {
-            qDebug() << "Adding offset using localTimeOffset";
             offset = localTimeOffset->toInt(nullptr, 10);
         }
         ts = timestamp->toInt(nullptr, 10) + offset;
@@ -165,7 +136,6 @@ HawkHeader::HawkHeader(const char* url, const char* method, const char* id, cons
 
         QByteArray *tempPayload = new QByteArray();
         tempPayload->append(option->m_payload->data());
-        qDebug() << "Going to hawkComputePayloadHash";
         QByteArray *tempHash = hawkComputePayloadHash(tempPayload, contentType);
         hash = new QString(tempHash->data());
 
@@ -182,7 +152,6 @@ HawkHeader::HawkHeader(const char* url, const char* method, const char* id, cons
     }
     qint64 port = uri.port(defaultPort);
 
-    qDebug() << "Creating Hawk Artifact";
     m_artifacts = new HawkArtifacts(option ? option->m_app->data() : nullptr,
                                     option ? option->m_dlg->data() : nullptr,
                                     option ? option->m_ext->data() : nullptr,
@@ -198,7 +167,7 @@ HawkHeader::HawkHeader(const char* url, const char* method, const char* id, cons
 
     if (m_artifacts->m_hash->length() > 0) {
         QByteArray *name = new QByteArray("hash");
-        QByteArray *value = new QByteArray(m_artifacts->m_hash->toHex().data());
+        QByteArray *value = new QByteArray(m_artifacts->m_hash->data());
         header = hawkAppendToHeader(header, name, value);
         delete name;
         delete value;
@@ -252,8 +221,6 @@ HawkHeader::HawkHeader(const char* url, const char* method, const char* id, cons
     delete resource;
     delete nonce;
     delete header;
-
-    qDebug() << "Inside newHawkHeader, header data: " << m_header->data();
 }
 
 HawkHeader::~HawkHeader()
@@ -265,12 +232,13 @@ HawkHeader::~HawkHeader()
 QByteArray * HawkHeader::hawkParseContentType(QByteArray* contentType)
 {
     QByteArray temp;
-    int index = contentType->indexOf(';', 0);
-    temp.append(*contentType);
-    temp.truncate(index + 1);
+    int index = contentType->indexOf(';');
+    temp.append(contentType->data());
+    if (index > 0) {
+        temp.truncate(index);
+    }
     QByteArray *ret = new QByteArray();
     ret->append(temp.toLower());
-    qDebug() << "Inside hawkParseContentType: " << ret->data();
     return ret;
 }
 
@@ -295,8 +263,6 @@ QByteArray * HawkHeader::hawkComputePayloadHash(QByteArray* payload, QByteArray*
     delete content;
     delete outTemp;
 
-    qDebug() << "Payload: " << payload->data();
-    qDebug() << "Inside hawkComputePayloadHash: " << out->data();
     return out;
 }
 
@@ -304,7 +270,6 @@ QByteArray * HawkHeader::hawkAppendToHeader(QByteArray* header, QByteArray* name
 {
     QString tempString = QString("%1, %2=\"%3\"").arg(header->data()).arg(name->data()).arg(value->data());
     QByteArray *out = new QByteArray(tempString.toUtf8().data());
-    qDebug() << "Inside hawkAppendToHeader: " << out->data();
     return out;
 }
 
@@ -344,7 +309,6 @@ QByteArray * HawkHeader::hawkNormalizeString(QByteArray* type, HawkArtifacts* ar
     }
 
     QByteArray *out = new QByteArray(normalized.toUtf8().data());
-    qDebug() << "Inside hawkNormalizeString:\n" << out->data();
     return out;
 }
 
@@ -358,5 +322,6 @@ QByteArray * HawkHeader::hawkComputeMac(QByteArray* type, QByteArray* key, size_
     u_char *out = new u_char(SHA256_DIGEST_SIZE);
     hmac_sha256_digest(ctx, SHA256_DIGEST_SIZE, out);
     QByteArray *mac = new QByteArray(QByteArray::fromRawData((const char *)out, SHA256_DIGEST_SIZE));
-    return mac; // convert to hex and then to base64 encoding before using
+
+    return mac;
 }

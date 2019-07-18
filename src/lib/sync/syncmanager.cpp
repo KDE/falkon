@@ -38,7 +38,6 @@ SyncCredentials::SyncCredentials()
 
 SyncCredentials::~SyncCredentials()
 {
-    qDebug() << "Deleting SyncCreds...";
 }
 
 void SyncCredentials::addSyncCredentials(QString key, QString value)
@@ -75,16 +74,13 @@ SyncState::SyncState()
 SyncState::~SyncState()
 {
     delete m_lastSyncTime;
-    qDebug() << "Deleting SyncState...";
 }
 
 void SyncState::saveSyncState(bool syncSuccess)
 {
-    qDebug() << "Entered saveSyncState  syncSuccess=" << syncSuccess;
     if (syncSuccess) {
         *m_lastSyncTime = QDateTime::currentDateTimeUtc();
         m_isInitialSync = false;
-        qDebug() << "lastSyncTime = " << m_lastSyncTime->toString() << "  isInitialSync= " << m_isInitialSync;
         Settings settings;
         settings.beginGroup(QSL("SyncState"));
         settings.setValue(QSL("IsInitialSync"), m_isInitialSync);
@@ -110,20 +106,19 @@ SyncManager::SyncManager(QObject *parent)
     m_syncCreds = new SyncCredentials();
     m_syncState = new SyncState();
     m_networkManager = new QNetworkAccessManager(this);
+    m_keyPair = generateRSAKeyPair();
 }
 
 SyncManager::~SyncManager()
 {
-    qDebug() << "Deleting SyncManager...";
     saveSyncState();
     delete m_syncCreds;
     delete m_syncState;
-    //m_networkManager->deleteLater();
+    delete m_keyPair;
 }
 
 void SyncManager::saveSyncState()
 {
-    qDebug() << QSL("saveSyncState(%1)").arg(m_syncSuccess ? "true" : "false");
     m_syncState->saveSyncState(m_syncSuccess);
 }
 
@@ -135,14 +130,11 @@ void SyncManager::sync()
         if (!error) {
             m_storageCredentialsExpired = false;
         }
-        qDebug() << "Got Browser Certs...";
+    } else {
+        qDebug() << "Getting Crypto Keys";
+        getCryptoKeys();
     }
-    /*
-     if(true) {
-         qDebug() << "Getting Crypto Keys";
-         getCryptoKeys();
-     }
-     */
+
     if (error) {
         m_syncSuccess = false;
         qDebug() << "Sync Failed";
@@ -163,8 +155,7 @@ bool SyncManager::getBrowserSignedCertificate()
 
     QString endpoint("certificate/sign");
 
-    RSAKeyPair *keyPair = generateRSAKeyPair();
-    QByteArray *sessionToken = new QByteArray(m_syncCreds->getValue("SessionToken").toUtf8().data());
+    QByteArray *sessionToken = new QByteArray(QByteArray::fromHex(m_syncCreds->getValue("SessionToken").toUtf8().data()));
     QByteArray *tokenId = new QByteArray();
     QByteArray *requestHMACKey = new QByteArray();
     QByteArray *requestKey = new QByteArray();
@@ -172,12 +163,10 @@ bool SyncManager::getBrowserSignedCertificate()
 
     QByteArray *tokenIdHex = new QByteArray(tokenId->toHex().data());
 
-    qDebug() << "TokenId hex: " << tokenIdHex->data();
-
     char *n;
     char *e;
-    n = mpz_get_str(nullptr, 10, keyPair->m_publicKey.n);
-    e = mpz_get_str(nullptr, 10, keyPair->m_publicKey.e);
+    n = mpz_get_str(nullptr, 10, m_keyPair->m_publicKey.n);
+    e = mpz_get_str(nullptr, 10, m_keyPair->m_publicKey.e);
 
     QJsonObject objBody;
     QJsonObject objKey;
@@ -188,11 +177,15 @@ bool SyncManager::getBrowserSignedCertificate()
     objBody.insert("publicKey", objKey);
 
     QJsonDocument doc(objBody);
-    QByteArray *requestBody = new QByteArray(doc.toJson(QJsonDocument::Compact));
+    QByteArray *data = new QByteArray(doc.toJson(QJsonDocument::Compact));
 
-    createHawkPostReqeuest(endpoint, tokenIdHex, requestHMACKey, 32, requestBody);
+    QNetworkRequest request = createHawkPostReqeuest(endpoint, tokenIdHex, requestHMACKey, 32, data);
 
-    delete keyPair;
+    QNetworkReply *reply = m_networkManager->post(request, *data);
+    connect(reply, &QNetworkReply::finished, this, &SyncManager::recievedBrowserSignedCertificate);
+
+    qDebug() << "Hawk POST Request sent to /certificate/sign endpoint.";
+
     delete sessionToken;
     delete tokenId;
     delete requestHMACKey;
@@ -200,15 +193,86 @@ bool SyncManager::getBrowserSignedCertificate()
     delete tokenIdHex;
     delete n;
     delete e;
-    delete requestBody;
+    delete data;
 
     return error;
 }
 
+void SyncManager::recievedBrowserSignedCertificate()
+{
+    QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
+    if (!reply) {
+        return;
+    }
+
+    if (reply->error() != QNetworkReply::NoError) {
+        qWarning() << "Error in recieving Browser Signed Certificate for Firefox Sync.";
+        reply->close();
+        reply->deleteLater();
+        return;
+    }
+
+    QByteArray response = reply->readAll();
+    QJsonDocument doc = QJsonDocument::fromJson(response);
+    QJsonObject obj = doc.object();
+
+    if (obj.contains(QString("cert"))) {
+        QByteArray certificate(obj.value(QString("cert")).toString().toUtf8());
+        if (verifyBrowserSignedCertificate(&certificate)) {
+            qDebug() << "Valid Browser Signed Certificate Response.";
+            m_storageCredentialsExpired = false;
+            sync();
+        } else {
+            qWarning() << "Invalid Browser ID Assertion Response Recieved.";
+        }
+    } else {
+        qWarning() << "Invalid Browser ID Assertion Response Recieved.";
+    }
+
+    reply->deleteLater();
+}
+
+bool SyncManager::verifyBrowserSignedCertificate(QByteArray* certificate)
+{
+    QList<QByteArray> list = certificate->split('.');
+
+    QByteArray header(QByteArray::fromBase64(list[0]));
+    QByteArray payload(QByteArray::fromBase64(list[1]));
+    qDebug() << "header: " << header << "\n" << "payload: " << payload;
+
+    if (!header.size() || !payload.size()) {
+        qDebug() << "header or payoad empty";
+        return false;
+    }
+
+    QJsonDocument headerDoc = QJsonDocument::fromJson(header);
+    QJsonObject headerJson = headerDoc.object();
+    QJsonDocument payloadDoc = QJsonDocument::fromJson(payload);
+    QJsonObject payloadJson = payloadDoc.object();
+
+    if (!headerJson.contains("alg") || !payloadJson.contains("principal")) {
+        qDebug() << "invalid header or payload";
+        return false;
+    }
+    if (headerJson.value("alg").toString() != QString("RS256")) {
+        return false;
+    }
+
+    QJsonObject princial = payloadJson.value("principal").toObject();
+    QString email = princial.value("email").toString();
+    QString uid = m_syncCreds->getValue("UID");
+    QString expected = QSL("%1@%2").arg(uid).arg(QUrl(m_FxAServerUrl).host());
+    if (expected != email) {
+        return false;
+    }
+    return true;
+}
+
+
 bool SyncManager::getCryptoKeys()
 {
     QString endpoint("account/keys");
-    QByteArray *keyFetchToken = new QByteArray(m_syncCreds->getValue("KeyFetchToken").toUtf8().data());
+    QByteArray *keyFetchToken = new QByteArray(QByteArray::fromHex(m_syncCreds->getValue("KeyFetchToken").toUtf8().data()));
     QByteArray *tokenId = new QByteArray();
     QByteArray *reqHMACKey = new QByteArray();
     QByteArray *respHMACKey = new QByteArray();
@@ -217,37 +281,7 @@ bool SyncManager::getCryptoKeys()
 
     QByteArray *tokenIdHex = new QByteArray(tokenId->toHex().data());
 
-    createHawkGetRequest(endpoint, tokenIdHex, reqHMACKey, 32);
-
-    delete keyFetchToken;
-    delete tokenId;
-    delete reqHMACKey;
-    delete respHMACKey;
-    delete respXorKey;
-    delete tokenIdHex;
-
-    return false;
-}
-
-
-void SyncManager::createHawkGetRequest(QString endpoint, QByteArray* id, QByteArray* key, size_t keyLen)
-{
-    QString url = m_FxAServerUrl + QString("/") + endpoint;
-
-    QNetworkRequest request;
-    request.setUrl(QUrl(url.toUtf8()));
-    qDebug() << "Hawk GET req";
-
-    HawkOptions *nullOption = new HawkOptions(nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
-    HawkHeader *header = new HawkHeader(url.toUtf8(), "GET", id->data(), key->data(), keyLen, nullOption);
-
-    request.setRawHeader("Authorization", header->m_header->data());
-
-    QList<QByteArray> headerList = request.rawHeaderList();
-    for (int i = 0; i < headerList.size(); ++i) {
-        QByteArray item = headerList[i];
-        qDebug() << "  " << item.data() << " : " << request.rawHeader(item).data();
-    }
+    QNetworkRequest request = createHawkGetRequest(endpoint, tokenIdHex, reqHMACKey, 32);
 
     QNetworkReply *reply = m_networkManager->get(request);
     connect(reply, &QNetworkReply::finished, this, [ = ]() {
@@ -261,11 +295,36 @@ void SyncManager::createHawkGetRequest(QString endpoint, QByteArray* id, QByteAr
         reply->deleteLater();
     });
 
-    delete nullOption;
-    delete header;
+    delete keyFetchToken;
+    delete tokenId;
+    delete reqHMACKey;
+    delete respHMACKey;
+    delete respXorKey;
+    delete tokenIdHex;
+
+    return false;
 }
 
-void SyncManager::createHawkPostReqeuest(QString endpoint, QByteArray *id, QByteArray *key, size_t keyLen, QByteArray *data)
+
+QNetworkRequest SyncManager::createHawkGetRequest(QString endpoint, QByteArray* id, QByteArray* key, size_t keyLen)
+{
+    QString url = m_FxAServerUrl + QString("/") + endpoint;
+
+    QNetworkRequest request;
+    request.setUrl(QUrl(url.toUtf8()));
+
+    HawkOptions *nullOption = new HawkOptions(nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
+    HawkHeader *header = new HawkHeader(url.toUtf8(), "GET", id->data(), key->data(), keyLen, nullOption);
+
+    request.setRawHeader(QByteArray("Authorization"), *(header->m_header));
+
+    delete nullOption;
+    delete header;
+
+    return request;
+}
+
+QNetworkRequest SyncManager::createHawkPostReqeuest(QString endpoint, QByteArray *id, QByteArray *key, size_t keyLen, QByteArray *data)
 {
     QString contentType = QString("application/json; charset=utf-8");
 
@@ -274,37 +333,15 @@ void SyncManager::createHawkPostReqeuest(QString endpoint, QByteArray *id, QByte
     QNetworkRequest request;
     request.setUrl(QUrl(url.toUtf8()));
 
-    qDebug() << "Creating Hawk Option";
     HawkOptions *options = new HawkOptions(nullptr, nullptr, nullptr, contentType.toUtf8(), nullptr, nullptr, nullptr, data->data(), nullptr);
-    qDebug() << "Creating Hawk Header";
     HawkHeader *header = new HawkHeader(url.toUtf8(), "POST", id->data(), key->data(), keyLen, options);
-    qDebug() << "Inside createHawkPostReqeuest header data: " << header->m_header->data();
-    request.setRawHeader("Authorization", header->m_header->data());
-    request.setRawHeader("Content-Type", contentType.toUtf8());
+    request.setRawHeader(QByteArray("Authorization"), *(header->m_header));
+    request.setRawHeader(QByteArray("Content-Type"), QByteArray(contentType.toUtf8()));
     QByteArray contentLength(QSL("%1").arg(data->size()).toUtf8());
-    request.setRawHeader("Content-Length", contentLength);
-
-    qDebug() << "Request content:";
-    QList<QByteArray> headerList = request.rawHeaderList();
-    for (int i = 0; i < headerList.size(); ++i) {
-        QByteArray item = headerList[i];
-        qDebug() << "  " << item.data() << " : " << request.rawHeader(item).data();
-    }
-    qDebug() << "   Data: " << data->data();
-    qDebug() << "   Url: " << url;
-
-    QNetworkReply *reply = m_networkManager->post(request, *data);
-
-    connect(reply, &QNetworkReply::finished, this, [ = ]() {
-        reply->deleteLater();
-        if (reply->error() != QNetworkReply::NoError) {
-            qWarning() << "Reply Error" << reply->error() << reply->errorString();
-            qDebug() << "Reply: " << reply->readAll();
-            return;
-        }
-        qDebug() << "Reply: " << reply->readAll();
-    });
+    request.setRawHeader(QByteArray("Content-Length"), QByteArray(contentLength));
 
     delete options;
     delete header;
+
+    return request;
 }

@@ -75,4 +75,3 @@ private:
     QByteArray *hawkComputeMac(QByteArray *type, QByteArray *key, size_t keyLen, HawkArtifacts *artifact);
 };
 
-

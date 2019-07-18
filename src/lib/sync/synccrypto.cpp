@@ -25,6 +25,7 @@
 
 #include <QByteArray>
 #include <QString>
+#include <QDebug>
 
 #include <random>
 
