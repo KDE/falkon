@@ -16,6 +16,7 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "synccrypto.h"
+#include "syncutils.h"
 
 #include <nettle/sha2.h>
 #include <nettle/hkdf.h>
@@ -26,6 +27,7 @@
 #include <QByteArray>
 #include <QString>
 #include <QDebug>
+#include <QDateTime>
 
 #include <random>
 
@@ -152,4 +154,159 @@ RSAKeyPair  *generateRSAKeyPair()
     keyPair->m_privateKey = privateKey;
 
     return keyPair;
+}
+
+QByteArray *createBowserIdAssertion(QByteArray *certificate, QByteArray *audience, qint64 seconds, RSAKeyPair *keyPair)
+{
+    QByteArray *assertion = new QByteArray();
+    mpz_t signature;
+    
+    QString tempHeader("{\"alg\": \"RS256\"}");
+    QByteArray header = QByteArray(tempHeader.toUtf8());
+    header.toBase64();
+    
+    qint64 expiry = QDateTime::currentMSecsSinceEpoch() + seconds * 1000;
+    QString tempBody = QString("{\"exp\": %1, \"aud\": \"%2\"}").arg(expiry).arg(audience->data());
+    QByteArray body = QByteArray(tempBody.toUtf8());
+    body.toBase64();
+    
+    QByteArray toSign = QByteArray((QString("%1.%2").arg(header.data()).arg(header.data())).toUtf8());
+    u_char *digest = new u_char[SHA256_DIGEST_SIZE];
+    sha256_ctx *ctx = new sha256_ctx;
+    sha256_init(ctx);
+    sha256_update(ctx, toSign.size(), (u_char *)(toSign.data()));
+    sha256_digest(ctx, SHA256_DIGEST_SIZE, digest);
+    delete ctx;
+    
+    mpz_init(signature);
+    int success = nettle_rsa_sha256_sign_digest_tr(&(keyPair->m_publicKey), &(keyPair->m_privateKey), nullptr, generateRandomBytes, digest, signature);
+    Q_ASSERT(success);
+    
+    size_t expectedSize = (mpz_sizeinbase(signature, 2) + 7) / 8;
+    size_t count;
+    u_char *sig = new u_char[expectedSize];
+    mpz_export(sig, &count, 1, sizeof(quint8), 0, 0, signature);
+    Q_ASSERT(count == expectedSize);
+    
+    QByteArray sigBase64 = QByteArray::fromRawData((const char *)sig, count);
+    sigBase64.toBase64();
+    
+    assertion->append((QString("%1~%2.%3.%4").arg(certificate->data()).arg(header.data()).arg(body.data()).arg(sigBase64.data())).toUtf8());
+
+    mpz_clear(signature);
+    delete digest;
+    delete sig;
+    return assertion;
+}
+
+
+QByteArray *xorQByteArray(QByteArray *a, QByteArray *b, size_t len)
+{
+    QByteArray *xored = new QByteArray();
+    
+    char *aData = a->data();
+    char *bData = b->data();
+    char *xorData = new char[len];
+    
+    for(int i = 0; i < len; ++i) {
+        xorData[i] = aData[i] ^ bData[i];
+    }
+    xored->append(xorData, len);
+    
+    return xored;
+}
+
+bool deriveMasterKey(QByteArray *bundleHex, QByteArray *respHMACKey, QByteArray *respXORKey, QByteArray *unwrapKb, QByteArray *ka, QByteArray *kb)
+{
+    bool returnVal = true;
+    QByteArray *bundle = new QByteArray(QByteArray::fromHex(bundleHex->data()));
+    size_t masterKeyLen = 32;
+    QByteArray *cipherText = new QByteArray(bundle->data());
+    cipherText->chop(masterKeyLen);
+    QByteArray *respHMAC = new QByteArray(bundle->right(masterKeyLen).data());
+    
+    hmac_sha256_ctx *ctx = new hmac_sha256_ctx;
+    hmac_sha256_set_key(ctx, respHMACKey->size(), (u_char *)respHMACKey->data());
+    hmac_sha256_update(ctx, cipherText->length(), (u_char *)cipherText->data());
+    u_char *out = new u_char[SHA256_DIGEST_SIZE];
+    hmac_sha256_digest(ctx, SHA256_DIGEST_SIZE, out);
+    QByteArray *respHMAC2 = new QByteArray(QByteArray::fromRawData((const char *)out, SHA256_DIGEST_SIZE));
+    
+    
+    QByteArray mac(respHMAC->data());
+    QByteArray mac2(respHMAC2->data());
+    qDebug() << "mac: " << mac.toHex().data() << "\ndigest:" << mac2.toHex().data();
+    
+    if (*respHMAC == *respHMAC2) {
+        QByteArray *xored = xorQByteArray(cipherText, respXORKey, 2 * masterKeyLen);
+        ka->append(xored->data());
+        ka->chop(masterKeyLen);
+        QByteArray *wrapKb = new QByteArray(xored->right(masterKeyLen));
+        QByteArray *xored2 = xorQByteArray(unwrapKb, wrapKb, masterKeyLen);
+        kb->append(xored2->data());
+        
+        delete xored;
+        delete wrapKb;
+        delete xored2;
+    } else {
+        returnVal = false;
+    }
+    
+    delete bundle;
+    delete cipherText;
+    delete respHMAC;
+    delete ctx;
+    
+    return returnVal;
+}
+
+
+void testDeriveMasterKey()
+{
+    bool returnVal = true;
+    QByteArray bundle(QByteArray::fromHex("ee5c58845c7c9412b11bbd20920c2fddd83c33c9cd2c2de2d66b222613364636fc7e59d854d599f10e212801de3a47c34333f3b838ee3471e0f285649c332bbb4c17f42a0b319bbba327d2b326ad23e937219b4de32e3ec7b3e3f740522ad6ef"));
+    size_t masterKeyLen = 32;
+    QByteArray cipherText(bundle.data());
+    cipherText.chop(masterKeyLen);
+    QByteArray respHMAC(bundle.right(masterKeyLen).data());
+    
+    QByteArray respHMACKey(QByteArray::fromHex("f824d2953aab9faf51a1cb65ba9e7f9e5bf91c8d8fd1ac1c8c2d31853a8a1210"));
+    QByteArray respXORKey(QByteArray::fromHex("ce7d7aa77859b2359932970bbe2101f2e80d01faf9191bd5ee52181d2f0b78098281ba8cff3925433a89f7c3095e0c89900a469d60790c833281c4df1a11c763"));
+    
+    QByteArray unwrapKb(QByteArray::fromHex("de6a2648b78284fcb9ffa81ba95803309cfba7af583c01a8a1a63e567234dd28"));
+    
+    hmac_sha256_ctx *ctx = new hmac_sha256_ctx;
+    hmac_sha256_set_key(ctx, respHMACKey.size(), (u_char *)respHMACKey.data());
+    hmac_sha256_update(ctx, cipherText.length(), (u_char *)cipherText.data());
+    u_char *out = new u_char[SHA256_DIGEST_SIZE];
+    hmac_sha256_digest(ctx, SHA256_DIGEST_SIZE, out);
+    QByteArray respHMAC2(QByteArray::fromRawData((const char *)out, SHA256_DIGEST_SIZE));
+    
+    
+    QByteArray mac(respHMAC.data());
+    QByteArray mac2(respHMAC2.data());
+    qDebug() << "mac: " << mac.toHex().data() << "\ndigest:" << mac2.toHex().data() << "\nequal? " << (respHMAC == respHMAC2);
+    
+    if (respHMAC == respHMAC2) {
+        QByteArray *xored = xorQByteArray(&cipherText, &respXORKey, 2 * masterKeyLen);
+        QByteArray ka(xored->data());
+        ka.chop(masterKeyLen);
+        QByteArray *wrapKb = new QByteArray(xored->right(masterKeyLen));
+        QByteArray *xored2 = xorQByteArray(&unwrapKb, wrapKb, masterKeyLen);
+        QByteArray kb(xored2->data());
+        
+        QByteArray expectedKa(QByteArray::fromHex("202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f"));
+        QByteArray expectedKb(("a095c51c1c6e384e8d5777d97e3c487a4fc2128a00ab395a73d57fedf41631f0"));
+        
+        qDebug() << "ka? " << (ka == expectedKa) << "\nkb? " << (kb == expectedKb);
+        
+        delete xored;
+        delete wrapKb;
+        delete xored2;
+    } else {
+        returnVal = false;
+    }
+    
+    delete ctx;
+    delete out;
 }

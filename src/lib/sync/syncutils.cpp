@@ -15,29 +15,26 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "syncoptions.h"
-#include "ui_syncoptions.h"
-#include "fxalogin.h"
-#include "mainapplication.h"
-#include "syncmanager.h"
 
-#include <QWebEngineView>
-#include <QWebEnginePage>
-#include <QPushButton>
+#include "syncutils.h"
 
-SyncOptions::SyncOptions(QWidget* parent)
-    : QWidget(parent)
-    , ui(new Ui::SyncOptions)
+#include <QString>
+#include <QUrl>
+#include <qzcommon.h>
+
+QString getAudience(QUrl url)
 {
-    ui->setupUi(this);
-
-    loginPage = new FxALoginPage(this);
-    ui->fxaloginframe->addWidget(loginPage);
-
-    connect(ui->btnSyncNow, &QPushButton::clicked, mApp->syncManager(), &SyncManager::startSync);
-}
-
-SyncOptions::~SyncOptions()
-{
-    delete ui;
+    QString host = url.host();
+    QString scheme = url.scheme();
+    
+    qint64 port = url.port(0);
+    
+    QString audience;
+    if(port == 0) {
+        audience = QSL("%s://%s").arg(scheme).arg(host);
+    }
+    else {
+        audience = QSL("%s://%s:%s").arg(scheme).arg(host).arg(port);
+    }
+    return audience;
 }

@@ -29,8 +29,17 @@ struct RSAKeyPair {
 };
 
 void generateRandomBytes(void *randomCtx, size_t numBytes, u_char *out);
+
 u_char *syncCryptoHkdf(QByteArray *in, QByteArray *info, size_t out_len);
 void syncCryptoKW(QByteArray *kw, QString name);
+
 void deriveSessionToken(QByteArray *sessionToken, QByteArray *tokenId, QByteArray *reqHMACKey, QByteArray *reqKey);
 void deriveKeyFetchToken(QByteArray *keyFetchToken, QByteArray *tokenId, QByteArray *reqHMACKey, QByteArray *respHMACKey, QByteArray *respXORKey);
+bool deriveMasterKey(QByteArray *bundleHex, QByteArray *respHMACKey, QByteArray *respXORKey, QByteArray *unwrapKb, QByteArray *ka, QByteArray *kb);
+
 RSAKeyPair  *generateRSAKeyPair();
+
+QByteArray *createBowserIdAssertion(QByteArray *certificate, QByteArray *audience, qint64 seconds, RSAKeyPair *keyPair);
+
+QByteArray *xorQByteArray(QByteArray *a, QByteArray *b, size_t len);
+void testDeriveMasterKey();

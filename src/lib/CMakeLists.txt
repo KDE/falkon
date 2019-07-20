@@ -223,6 +223,7 @@ set(SRCS ${SRCS}
     sync/synccrypto.cpp
     sync/hawk/hawk.cpp
     sync/syncmanager.cpp
+    sync/syncutils.cpp
     tabwidget/combotabbar.cpp
     tabwidget/tabbar.cpp
     tabwidget/tabicon.cpp

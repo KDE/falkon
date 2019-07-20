@@ -16,8 +16,8 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "syncmanager.h"
-#include "syncrequest.h"
 #include "synccrypto.h"
+#include "syncutils.h"
 #include "settings.h"
 #include "hawk.h"
 #include "mainapplication.h"
@@ -79,7 +79,7 @@ SyncState::~SyncState()
 void SyncState::saveSyncState(bool syncSuccess)
 {
     if (syncSuccess) {
-        *m_lastSyncTime = QDateTime::currentDateTimeUtc();
+        *m_lastSyncTime = QDateTime::currentDateTime();
         m_isInitialSync = false;
         Settings settings;
         settings.beginGroup(QSL("SyncState"));
@@ -107,14 +107,19 @@ SyncManager::SyncManager(QObject *parent)
     m_syncState = new SyncState();
     m_networkManager = new QNetworkAccessManager(this);
     m_keyPair = generateRSAKeyPair();
+    m_browserCertificate = new QByteArray();
+    
+    testDeriveMasterKey();
 }
 
 SyncManager::~SyncManager()
 {
     saveSyncState();
+    m_networkManager->deleteLater();
     delete m_syncCreds;
     delete m_syncState;
     delete m_keyPair;
+    delete m_browserCertificate;
 }
 
 void SyncManager::saveSyncState()
@@ -124,35 +129,49 @@ void SyncManager::saveSyncState()
 
 void SyncManager::sync()
 {
-    bool error = false;
-    if (m_storageCredentialsExpired) {
-        error = getBrowserSignedCertificate();
-        if (!error) {
-            m_storageCredentialsExpired = false;
-        }
-    } else {
-        qDebug() << "Getting Crypto Keys";
-        getCryptoKeys();
+    switch(m_syncStep) {
+        case enum_ERROR:
+            qWarning() << "Error occured in Sync Process.";
+            m_syncSuccess = false;
+            saveSyncState();
+            break;
+        case enum_FetchBrowserId:
+            getBrowserSignedCertificate();
+            break;
+        case enum_TradeBrowserIdAssertion:
+            tradeBrowserIdAssertion();
+            break;
+        case enum_FetchAccountKeys:
+            getCryptoKeys();
+            break;
+        case enum_UploadDevice:
+            uploadDevice();
+            break;
+        case enum_NoRequestPending:
+            qDebug() << "No sync requests pending.";
+            m_syncSuccess = true;
+            saveSyncState();
+            break;
+        default:
+            saveSyncState();
+            break;
     }
-
-    if (error) {
-        m_syncSuccess = false;
-        qDebug() << "Sync Failed";
-    } else {
-        m_syncSuccess = true;
-    }
-    saveSyncState();
 }
 
 void SyncManager::startSync()
 {
+    if(m_syncState->isInitialSync()) {
+        qDebug() << "is initial sync, going to uploadDevice";
+        m_syncStep = enum_UploadDevice;
+    } else {
+        qDebug() << "not initial sync, going to fetchBrowserId";
+        m_syncStep = enum_FetchBrowserId;
+    }
     sync();
 }
 
-bool SyncManager::getBrowserSignedCertificate()
+void SyncManager::getBrowserSignedCertificate()
 {
-    bool error = false;
-
     QString endpoint("certificate/sign");
 
     QByteArray *sessionToken = new QByteArray(QByteArray::fromHex(m_syncCreds->getValue("SessionToken").toUtf8().data()));
@@ -182,7 +201,7 @@ bool SyncManager::getBrowserSignedCertificate()
     QNetworkRequest request = createHawkPostReqeuest(endpoint, tokenIdHex, requestHMACKey, 32, data);
 
     QNetworkReply *reply = m_networkManager->post(request, *data);
-    connect(reply, &QNetworkReply::finished, this, &SyncManager::recievedBrowserSignedCertificate);
+    connect(reply, &QNetworkReply::finished, this, &SyncManager::callback_getBrowserSignedCertificate);
 
     qDebug() << "Hawk POST Request sent to /certificate/sign endpoint.";
 
@@ -194,25 +213,27 @@ bool SyncManager::getBrowserSignedCertificate()
     delete n;
     delete e;
     delete data;
-
-    return error;
 }
 
-void SyncManager::recievedBrowserSignedCertificate()
+void SyncManager::callback_getBrowserSignedCertificate()
 {
     QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
     if (!reply) {
+        m_syncStep = enum_ERROR;
+        sync();
         return;
     }
 
     if (reply->error() != QNetworkReply::NoError) {
-        qWarning() << "Error in recieving Browser Signed Certificate for Firefox Sync.";
+        qWarning() << "Error in receiving Browser Signed Certificate for Firefox Sync.";
         reply->close();
         reply->deleteLater();
+        m_syncStep = enum_ERROR;
+        sync();
         return;
     }
 
-    QByteArray response = reply->readAll();
+    QByteArray response(reply->readAll().data());
     QJsonDocument doc = QJsonDocument::fromJson(response);
     QJsonObject obj = doc.object();
 
@@ -221,15 +242,24 @@ void SyncManager::recievedBrowserSignedCertificate()
         if (verifyBrowserSignedCertificate(&certificate)) {
             qDebug() << "Valid Browser Signed Certificate Response.";
             m_storageCredentialsExpired = false;
-            sync();
+            m_browserCertificate->clear();
+            m_browserCertificate->append(certificate.data());
+            if (m_syncState->isInitialSync()) {
+                m_syncStep = enum_FetchAccountKeys;
+            } else {
+                m_syncStep = enum_TradeBrowserIdAssertion;
+            }
         } else {
-            qWarning() << "Invalid Browser ID Assertion Response Recieved.";
+            qWarning() << "Invalid Browser ID Assertion Response Received.";
+            m_syncStep = enum_ERROR;
         }
     } else {
-        qWarning() << "Invalid Browser ID Assertion Response Recieved.";
+        qWarning() << "Invalid Browser ID Assertion Response Received.";
+        m_syncStep = enum_ERROR;
     }
 
     reply->deleteLater();
+    sync();
 }
 
 bool SyncManager::verifyBrowserSignedCertificate(QByteArray* certificate)
@@ -268,9 +298,16 @@ bool SyncManager::verifyBrowserSignedCertificate(QByteArray* certificate)
     return true;
 }
 
-
-bool SyncManager::getCryptoKeys()
+void SyncManager::tradeBrowserIdAssertion()
 {
+    
+    m_syncStep = enum_NoRequestPending;
+    sync();
+}
+
+void SyncManager::getCryptoKeys()
+{
+    qDebug() << "getCryptoKeys";
     QString endpoint("account/keys");
     QByteArray *keyFetchToken = new QByteArray(QByteArray::fromHex(m_syncCreds->getValue("KeyFetchToken").toUtf8().data()));
     QByteArray *tokenId = new QByteArray();
@@ -278,33 +315,163 @@ bool SyncManager::getCryptoKeys()
     QByteArray *respHMACKey = new QByteArray();
     QByteArray *respXorKey = new QByteArray();
     deriveKeyFetchToken(keyFetchToken, tokenId, reqHMACKey, respHMACKey, respXorKey);
-
+    
+    QByteArray respHMACKeyHex(respHMACKey->toHex().data());
+    QByteArray reqHMACKeyHex(reqHMACKey->toHex().data());
+    QByteArray respXorKeyHex(respXorKey->toHex().data());
+    
+    m_syncCreds->addSyncCredentials(QString("RespHMACKey"), QString(respHMACKeyHex.data()));
+    m_syncCreds->addSyncCredentials(QString("ReqHMACKey"), QString(reqHMACKeyHex.data()));
+    m_syncCreds->addSyncCredentials(QString("RespXORKey"), QString(respXorKeyHex.data()));
+    qDebug() << "derived keyFetchToken";
     QByteArray *tokenIdHex = new QByteArray(tokenId->toHex().data());
 
     QNetworkRequest request = createHawkGetRequest(endpoint, tokenIdHex, reqHMACKey, 32);
-
+    qDebug() << "Request created";
     QNetworkReply *reply = m_networkManager->get(request);
-    connect(reply, &QNetworkReply::finished, this, [ = ]() {
-        if (reply->error() != QNetworkReply::NoError) {
-            qWarning() << "Reply Error" << reply->error() << reply->errorString();
-            qDebug() << "Reply: " << reply->readAll();
-            reply->deleteLater();
-            return;
-        }
-        qDebug() << "Reply: " << reply->readAll();
-        reply->deleteLater();
-    });
+    connect(reply, &QNetworkReply::finished, this, &SyncManager::callback_getCryptoKeys);
 
+    qDebug() << "Hawk POST Request sent to /account/keys endpoint.";
+    
     delete keyFetchToken;
     delete tokenId;
     delete reqHMACKey;
     delete respHMACKey;
     delete respXorKey;
     delete tokenIdHex;
-
-    return false;
 }
 
+void SyncManager::callback_getCryptoKeys()
+{
+    QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
+    qDebug() << "Received reply";
+    if (!reply) {
+        qDebug()<< "No reply";
+        m_syncStep = enum_ERROR;
+        sync();
+        return;
+    }
+
+    if (reply->error() != QNetworkReply::NoError) {
+        qWarning() << "Error in receiving Crypto Keys for Firefox Sync.";
+        qDebug() << reply->readAll();
+        reply->close();
+        reply->deleteLater();
+        m_syncStep = enum_ERROR;
+        sync();
+        return;
+    }
+
+    qDebug() << "received bundle";
+    QByteArray response(reply->readAll().data());
+    qDebug() << "account/keys response:\n" << response;
+    QJsonDocument doc = QJsonDocument::fromJson(response);
+    QJsonObject obj = doc.object();
+
+    if (obj.contains(QString("bundle"))) {
+        QByteArray *bundle = new QByteArray(obj.value(QString("bundle")).toString().toUtf8());
+        qDebug() << "bundle: " << bundle->data();
+        m_syncCreds->addSyncCredentials(QString("Bundle"), QString(bundle->data()));
+        QByteArray *ka = new QByteArray();
+        QByteArray *kb = new QByteArray();
+        QByteArray *unwrapKb = new QByteArray(QByteArray::fromHex(m_syncCreds->getValue(QString("UnwrapBKey")).toUtf8()));
+        QByteArray *respHMACKey = new QByteArray(QByteArray::fromHex(m_syncCreds->getValue(QString("RespHMACKey")).toUtf8()));
+        QByteArray *respXorKey = new QByteArray(QByteArray::fromHex(m_syncCreds->getValue(QString("RespXORKey")).toUtf8()));
+        if(!deriveMasterKey(bundle, respHMACKey, respXorKey, unwrapKb, ka, kb)) {
+            qWarning() << "Failed to retrieve Sync Key.";
+            m_syncStep = enum_ERROR;
+        } else {
+            m_syncCreds->addSyncCredentials(QString("MasterKey"), QString(kb->toHex().data()));
+            m_syncStep = enum_TradeBrowserIdAssertion;
+        }
+        delete bundle;
+        delete ka;
+        delete kb;
+        delete unwrapKb;
+        delete respHMACKey;
+        delete respXorKey;
+    } else {
+        qWarning() << "Invalid Crypto Keys Response Recieved.";
+        m_syncStep = enum_ERROR;
+    }
+
+    reply->deleteLater();
+    sync();
+}
+
+
+void SyncManager::uploadDevice()
+{
+    QString endpoint("account/device");
+    
+    QJsonObject obj;
+    obj.insert(QString("name"), QString("Falkon"));
+    obj.insert(QString("type"), QString("desktop"));
+    QJsonDocument doc(obj);
+    QByteArray *data = new QByteArray(doc.toJson(QJsonDocument::Compact));
+    
+    QByteArray *sessionToken = new QByteArray(QByteArray::fromHex(m_syncCreds->getValue("SessionToken").toUtf8().data()));
+    QByteArray *tokenId = new QByteArray();
+    QByteArray *requestHMACKey = new QByteArray();
+    QByteArray *requestKey = new QByteArray();
+    deriveSessionToken(sessionToken, tokenId, requestHMACKey, requestKey);
+
+    QByteArray *tokenIdHex = new QByteArray(tokenId->toHex().data());
+    
+    QNetworkRequest request = createHawkPostReqeuest(endpoint, tokenIdHex, requestHMACKey, 32, data);
+    QNetworkReply *reply = m_networkManager->post(request, *data);
+    connect(reply, &QNetworkReply::finished, this, &SyncManager::callback_uploadDevice);
+    
+    qDebug() << "Hawk POST Request sent to /account/device endpoint.";
+
+    
+    delete sessionToken;
+    delete tokenId;
+    delete requestHMACKey;
+    delete requestKey;
+    delete tokenIdHex;
+    delete data;
+}
+
+void SyncManager::callback_uploadDevice()
+{
+    QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
+    qDebug() << "Received reply";
+    if (!reply) {
+        qDebug()<< "No reply";
+        m_syncStep = enum_ERROR;
+        sync();
+        return;
+    }
+
+    if (reply->error() != QNetworkReply::NoError) {
+        qWarning() << "Error in uploading Device Name to Firefox Sync.";
+        qDebug() << reply->readAll();
+        reply->close();
+        reply->deleteLater();
+        m_syncStep = enum_ERROR;
+        sync();
+        return;
+    }
+
+    QByteArray response(reply->readAll().data());
+    qDebug() << "account/device response:\n" << response;
+    QJsonDocument doc = QJsonDocument::fromJson(response);
+    QJsonObject obj = doc.object();
+
+    if (obj.contains(QString("id"))) {
+        QString id = obj.value(QString("id")).toString();
+        qDebug() << "id of device:" << id;
+        m_syncCreds->addSyncCredentials(QString("DeviceId"), id);
+        m_syncStep = enum_FetchBrowserId;
+    } else {
+        qWarning() << "Invalid Upload Device Response Recieved.";
+        m_syncStep = enum_ERROR;
+    }
+
+    reply->deleteLater();
+    sync();
+}
 
 QNetworkRequest SyncManager::createHawkGetRequest(QString endpoint, QByteArray* id, QByteArray* key, size_t keyLen)
 {

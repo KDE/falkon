@@ -15,31 +15,9 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-
 #pragma once
 
-#include <QNetworkAccessManager>
-#include <QNetworkReply>
-#include <QNetworkRequest>
-#include <QQueue>
-#include <QObject>
+#include <QString>
+#include <QUrl>
 
-class SyncRequestManager : public QObject
-{
-    Q_OBJECT
-
-public:
-    explicit SyncRequestManager(QObject *parent = nullptr);
-    void addRequest(QNetworkRequest *request, bool post);
-    void startSync(bool start);
-
-private:
-    struct RequestPair {
-        QNetworkRequest request;
-        bool post;
-    };
-
-    QNetworkAccessManager *m_requestManager;
-    QQueue<RequestPair> *m_requestQueue;
-    bool startRequests;
-};
+QString getAudience(QUrl url);

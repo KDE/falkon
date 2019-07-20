@@ -58,6 +58,15 @@ class SyncManager : public QObject
     Q_OBJECT
 
 public:
+    enum SyncStep {
+        enum_ERROR = 0,
+        enum_NoRequestPending = 1,
+        enum_FetchBrowserId = 2,
+        enum_UploadDevice = 3,
+        enum_TradeBrowserIdAssertion = 4,
+        enum_FetchAccountKeys  = 5
+    };
+    
     explicit SyncManager(QObject *parent = nullptr);
     ~SyncManager();
     void sync();
@@ -67,11 +76,15 @@ public Q_SLOTS:
     void startSync();
 
 private Q_SLOTS:
-    void recievedBrowserSignedCertificate();
+    void callback_getBrowserSignedCertificate();
+    void callback_getCryptoKeys();
+    void callback_uploadDevice();
 
 private:
-    bool getBrowserSignedCertificate();
-    bool getCryptoKeys();
+    void getBrowserSignedCertificate();
+    void tradeBrowserIdAssertion();
+    void getCryptoKeys();
+    void uploadDevice();
 
     bool verifyBrowserSignedCertificate(QByteArray *certificate);
 
@@ -88,4 +101,8 @@ private:
     SyncCredentials *m_syncCreds;
     SyncState *m_syncState;
     RSAKeyPair *m_keyPair;
+    
+    QByteArray *m_browserCertificate;
+    
+    uint m_syncStep = enum_FetchBrowserId;
 };
