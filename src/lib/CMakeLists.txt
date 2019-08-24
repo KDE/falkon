@@ -268,6 +268,9 @@ set(SRCS ${SRCS}
     webtab/webtab.cpp
 )
 
+# add the logging category for FALKON
+ecm_qt_declare_logging_category(LOGGING_SRCS HEADER falkon_private_debug.h IDENTIFIER "FALKON_PRIVATE_LOG" CATEGORY_NAME "org.kde.falkon")
+
 if (HAVE_LIBINTL)
     set(SRCS ${SRCS} plugins/qml/api/i18n/qmli18n.cpp)
 endif()
@@ -336,7 +339,7 @@ qt5_add_resources(SRCS
     adblock/adblock.qrc
 )
 
-add_library(FalkonPrivate SHARED ${SRCS})
+add_library(FalkonPrivate SHARED ${SRCS} ${LOGGING_SRCS})
 
 get_property(QT_WEBENGINE_INCLUDE_DIRS TARGET Qt5::WebEngine PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 target_include_directories(FalkonPrivate SYSTEM PUBLIC ${QT_WEBENGINE_INCLUDE_DIRS})
