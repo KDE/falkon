@@ -118,6 +118,7 @@ Name[uk]=Відкрити нову вкладку
 Name[x-test]=xxOpen new tabxx
 Name[zh_CN]=打开新标签
 Name[zh_TW]=開啟新分頁
+Icon=tab-new
 Exec=falkon --new-tab
 
 [Desktop Action NewWindow]
@@ -148,6 +149,7 @@ Name[uk]=Відкрити нове вікно
 Name[x-test]=xxOpen new windowxx
 Name[zh_CN]=打开新窗口
 Name[zh_TW]=開啟新視窗
+Icon=window-new
 Exec=falkon --new-window
 
 [Desktop Action PrivateBrowsing]
@@ -178,4 +180,5 @@ Name[uk]=Конфіденційний перегляд
 Name[x-test]=xxStart private browsingxx
 Name[zh_CN]=启动隐身浏览
 Name[zh_TW]=開始隱私瀏覽
+Icon=view-private
 Exec=falkon --private-browsing
