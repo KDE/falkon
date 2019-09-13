@@ -190,7 +190,7 @@ void SiteInfo::saveImage()
     QString imageFileName = QzTools::getFileNameFromUrl(QUrl(item->text(1)));
     int index = imageFileName.lastIndexOf(QLatin1Char('.'));
     if (index != -1) {
-        imageFileName = imageFileName.left(index);
+        imageFileName.truncate(index);
         imageFileName.append(QL1S(".png"));
     }
 

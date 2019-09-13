@@ -55,7 +55,7 @@ QStringList AcceptLanguage::defaultLanguage()
 
 QByteArray AcceptLanguage::generateHeader(const QStringList &langs)
 {
-    if (langs.count() == 0) {
+    if (langs.isEmpty()) {
         return QByteArray();
     }
 
@@ -126,7 +126,7 @@ QStringList AcceptLanguage::expand(const QLocale::Language &language)
             languageString = QString(QLatin1String("%1/%2 [%3]"))
                              .arg(QLocale::languageToString(language))
                              .arg(QLocale::countryToString(countries.at(j)))
-                             .arg(QLocale(language, countries.at(j)).name().split(QLatin1Char('_')).join(QLatin1String("-")).toLower());
+                             .arg(QLocale(language, countries.at(j)).name().split(QLatin1Char('_')).join(QLatin1Char('-')).toLower());
 
         }
         if (!allLanguages.contains(languageString)) {

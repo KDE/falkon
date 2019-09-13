@@ -77,7 +77,7 @@ void SBI_NetworkIcon::showMenu(const QPoint &pos)
         act->setChecked(it.value() == SBINetManager->currentProxy());
     }
 
-    if (proxyMenu->actions().count() == 0) {
+    if (proxyMenu->actions().isEmpty()) {
         proxyMenu->addAction(tr("Empty"))->setEnabled(false);
     }
 

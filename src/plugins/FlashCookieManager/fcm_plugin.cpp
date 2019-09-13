@@ -449,7 +449,7 @@ QString FCM_Plugin::extractOriginFrom(const QString &path)
     if (index == -1) {
         return tr("!other");
     }
-    origin = origin.remove(index, origin.size());
+    origin.remove(index, origin.size());
     if (origin == QL1S("localhost") || origin == QL1S("local")) {
         origin = QL1S("!localhost");
     }

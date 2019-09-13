@@ -115,7 +115,7 @@ void PIM_Handler::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTe
     pimMenu->setIcon(QIcon(":/PIM/data/PIM.png"));
 
     if (!m_allInfo[PI_FirstName].isEmpty() && !m_allInfo[PI_LastName].isEmpty()) {
-        const QString fullname = m_allInfo[PI_FirstName] + " " + m_allInfo[PI_LastName];
+        const QString fullname = m_allInfo[PI_FirstName] + QLatin1Char(' ') + m_allInfo[PI_LastName];
         QAction* action = pimMenu->addAction(fullname, this, &PIM_Handler::pimInsert);
         action->setData(fullname);
     }

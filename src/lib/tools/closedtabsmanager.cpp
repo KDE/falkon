@@ -32,7 +32,7 @@ void ClosedTabsManager::saveTab(WebTab *tab)
     }
 
     // Don't save empty tab
-    if (tab->url().isEmpty() && tab->history()->items().count() == 0) {
+    if (tab->url().isEmpty() && tab->history()->items().isEmpty()) {
         return;
     }
 

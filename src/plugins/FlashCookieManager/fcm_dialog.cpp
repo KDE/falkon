@@ -215,7 +215,7 @@ void FCM_Dialog::refreshFlashCookiesTree()
 
         QString cookieOrigin = flashCookie.origin;
         if (cookieOrigin.startsWith(QLatin1Char('.'))) {
-            cookieOrigin = cookieOrigin.mid(1);
+            cookieOrigin.remove(0, 1);
         }
 
         QTreeWidgetItem* findParent = hash.value(cookieOrigin);

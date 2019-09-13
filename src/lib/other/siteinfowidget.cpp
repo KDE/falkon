@@ -61,7 +61,7 @@ SiteInfoWidget::SiteInfoWidget(BrowserWindow* window, QWidget* parent)
     if (query.next()) {
         int count = query.value(0).toInt();
         if (count > 3) {
-            ui->historyLabel->setText(tr("This is your <b>%1</b> visit of this site.").arg(QString::number(count) + "."));
+            ui->historyLabel->setText(tr("This is your <b>%1</b> visit of this site.").arg(QString::number(count) + QLatin1Char('.')));
             ui->historyIcon->setPixmap(QPixmap(":/icons/locationbar/visit3.png"));
         }
         else if (count == 0) {

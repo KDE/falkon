@@ -87,7 +87,7 @@ QString TLDExtractor::TLD(const QString &host)
         const int labelCount = rule.count(QLatin1Char('.')) + 1;
 
         if (rule.startsWith(QLatin1Char('!'))) {
-            rule = rule.remove(0, 1);
+            rule.remove(0, 1);
 
             rule = QString::fromUtf8(QUrl::toAce(rule));
             isExceptionTLD = true;
@@ -135,7 +135,7 @@ QString TLDExtractor::TLD(const QString &host)
 
                 temp = temp.mid(temp.lastIndexOf(QLatin1Char('.')) + 1);
 
-                tldPart = temp.isEmpty() ? rule : (temp + "." + rule);
+                tldPart = temp.isEmpty() ? rule : (temp + QLatin1Char('.') + rule);
             }
         }
     }

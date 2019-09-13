@@ -222,7 +222,7 @@ QString CookieManager::cookieDomain(const QNetworkCookie &cookie) const
 {
     QString domain = cookie.domain();
     if (domain.startsWith(QLatin1Char('.'))) {
-        domain = domain.mid(1);
+        domain.remove(0, 1);
     }
     return domain;
 }

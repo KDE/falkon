@@ -98,11 +98,11 @@ bool CookieJar::matchDomain(QString cookieDomain, QString siteDomain) const
 
     // Remove leading dot
     if (cookieDomain.startsWith(QLatin1Char('.'))) {
-        cookieDomain = cookieDomain.mid(1);
+        cookieDomain.remove(0, 1);
     }
 
     if (siteDomain.startsWith(QLatin1Char('.'))) {
-        siteDomain = siteDomain.mid(1);
+        siteDomain.remove(0, 1);
     }
 
     return QzTools::matchDomain(cookieDomain, siteDomain);

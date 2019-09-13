@@ -90,7 +90,7 @@ void ButtonWithMenu::removeItem(const Item &item)
 
     m_items.remove(index);
 
-    if (m_items.count() == 0) {
+    if (m_items.isEmpty()) {
         setIcon(QIcon());
         return;
     }

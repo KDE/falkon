@@ -122,7 +122,7 @@ QString OpenSearchEngine::parseTemplate(const QString &searchTerm, const QString
 {
     QString language = QLocale().name();
     // Simple conversion to RFC 3066.
-    language = language.replace(QLatin1Char('_'), QLatin1Char('-'));
+    language.replace(QLatin1Char('_'), QLatin1Char('-'));
 
     QString result = searchTemplate;
     result.replace(QLatin1String("{count}"), QLatin1String("20"));
@@ -540,7 +540,7 @@ QByteArray OpenSearchEngine::getSuggestionsParameters()
     Parameters::const_iterator end = m_suggestionsParameters.constEnd();
     Parameters::const_iterator i = m_suggestionsParameters.constBegin();
     for (; i != end; ++i) {
-        parameters.append(i->first + QLatin1String("=") + i->second);
+        parameters.append(i->first + QLatin1Char('=') + i->second);
     }
 
     QByteArray data = parameters.join(QLatin1String("&")).toUtf8();
@@ -576,7 +576,7 @@ void OpenSearchEngine::requestSuggestions(const QString &searchTerm)
         Parameters::const_iterator end = m_suggestionsParameters.constEnd();
         Parameters::const_iterator i = m_suggestionsParameters.constBegin();
         for (; i != end; ++i) {
-            parameters.append(i->first + QLatin1String("=") + i->second);
+            parameters.append(i->first + QLatin1Char('=') + i->second);
         }
 
         QByteArray data = parameters.join(QLatin1String("&")).toUtf8();
@@ -613,7 +613,7 @@ void OpenSearchEngine::requestSearchResults(const QString &searchTerm)
         Parameters::const_iterator end = m_searchParameters.constEnd();
         Parameters::const_iterator i = m_searchParameters.constBegin();
         for (; i != end; ++i) {
-            parameters.append(i->first + QLatin1String("=") + i->second);
+            parameters.append(i->first + QLatin1Char('=') + i->second);
         }
 
         data = parameters.join(QLatin1String("&")).toUtf8();

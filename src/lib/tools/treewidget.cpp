@@ -143,7 +143,7 @@ void TreeWidget::filterString(const QString &string)
 bool TreeWidget::appendToParentItem(const QString &parentText, QTreeWidgetItem* item)
 {
     QList<QTreeWidgetItem*> list = findItems(parentText, Qt::MatchExactly);
-    if (list.count() == 0) {
+    if (list.isEmpty()) {
         return false;
     }
     QTreeWidgetItem* parentItem = list.at(0);
@@ -170,7 +170,7 @@ bool TreeWidget::appendToParentItem(QTreeWidgetItem* parent, QTreeWidgetItem* it
 bool TreeWidget::prependToParentItem(const QString &parentText, QTreeWidgetItem* item)
 {
     QList<QTreeWidgetItem*> list = findItems(parentText, Qt::MatchExactly);
-    if (list.count() == 0) {
+    if (list.isEmpty()) {
         return false;
     }
     QTreeWidgetItem* parentItem = list.at(0);

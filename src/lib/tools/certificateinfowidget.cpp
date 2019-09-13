@@ -279,8 +279,8 @@ QString CertificateInfoWidget::clearCertSpecialSymbols(const QString &string)
     n.replace(QLatin1String("\\xC2\\xBD"), QLatin1String("1/2"));      // one half
     n.replace(QLatin1String("\\xC2\\xBE"), QLatin1String("3/4"));      // three quarters
     n.replace(QLatin1String("\\xCA\\xBF"), QLatin1String("\\x27"));    // c-single quote
-    n.replace(QLatin1String("\\xCC\\xA8"), QString());                 // modifier - under curve
-    n.replace(QLatin1String("\\xCC\\xB1"), QString());                 // modifier - under line
+    n.remove(QLatin1String("\\xCC\\xA8"));                 // modifier - under curve
+    n.remove(QLatin1String("\\xCC\\xB1"));                 // modifier - under line
 
     return n;
 }
