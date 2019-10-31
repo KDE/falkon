@@ -21,8 +21,8 @@
 
 void pyfalkon_register_plugin(PluginInterface *plugin);
 
-extern "C" Q_DECL_EXPORT Plugins::Plugin pyfalkon_load_plugin(const QString &name);
+extern "C" Q_DECL_EXPORT bool pyfalkon_load_plugin(const QString &name, Plugins::Plugin *out);
 extern "C" Q_DECL_EXPORT void pyfalkon_init_plugin(Plugins::Plugin *plugin);
-extern "C" Q_DECL_EXPORT QVector<Plugins::Plugin> pyfalkon_load_available_plugins();
+extern "C" Q_DECL_EXPORT void pyfalkon_load_available_plugins(QVector<Plugins::Plugin> *out);
 
 extern "C" Q_DECL_EXPORT bool pyfalkon_run_script(const QByteArray &script);

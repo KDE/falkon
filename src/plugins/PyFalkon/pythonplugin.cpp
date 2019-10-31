@@ -91,7 +91,7 @@ void pyfalkon_register_plugin(PluginInterface *plugin)
     pluginInterface = plugin;
 }
 
-Plugins::Plugin pyfalkon_load_plugin(const QString &name)
+bool pyfalkon_load_plugin(const QString &name, Plugins::Plugin *out)
 {
     QString fullPath;
     if (QFileInfo(name).isAbsolute()) {
@@ -100,15 +100,14 @@ Plugins::Plugin pyfalkon_load_plugin(const QString &name)
         fullPath = DataPaths::locate(DataPaths::Plugins, QSL("python/") + name);
         if (fullPath.isEmpty()) {
             qWarning() << "Plugin" << name << "not found";
-            return Plugins::Plugin();
+            return false;
         }
     }
 
-    Plugins::Plugin plugin;
-    plugin.type = Plugins::Plugin::PythonPlugin;
-    plugin.pluginId = QSL("python:%1").arg(QFileInfo(name).fileName());
-    plugin.pluginSpec = Plugins::createSpec(DesktopFile(fullPath + QSL("/metadata.desktop")));
-    return plugin;
+    out->type = Plugins::Plugin::PythonPlugin;
+    out->pluginId = QSL("python:%1").arg(QFileInfo(name).fileName());
+    out->pluginSpec = Plugins::createSpec(DesktopFile(fullPath + QSL("/metadata.desktop")));
+    return true;
 }
 
 void pyfalkon_init_plugin(Plugins::Plugin *plugin)
@@ -143,24 +142,21 @@ void pyfalkon_init_plugin(Plugins::Plugin *plugin)
     plugin->data = QVariant::fromValue(static_cast<void*>(module));
 }
 
-QVector<Plugins::Plugin> pyfalkon_load_available_plugins()
+void pyfalkon_load_available_plugins(QVector<Plugins::Plugin> *out)
 {
-    QVector<Plugins::Plugin> plugins;
-
     const QStringList dirs = script_paths();
     for (const QString &dir : dirs) {
         const auto modules = QDir(dir).entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
         for (const QFileInfo &info : modules) {
-            Plugins::Plugin plugin = pyfalkon_load_plugin(info.absoluteFilePath());
+            Plugins::Plugin plugin;
+            pyfalkon_load_plugin(info.absoluteFilePath(), &plugin);
             if (plugin.pluginSpec.name.isEmpty()) {
                 qWarning() << "Invalid plugin spec of" << info.absoluteFilePath() << "plugin";
                 continue;
             }
-            plugins.append(plugin);
+            out->append(plugin);
         }
     }
-
-    return plugins;
 }
 
 bool pyfalkon_run_script(const QByteArray &script)

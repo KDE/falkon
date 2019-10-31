@@ -220,11 +220,12 @@ void Plugins::loadAvailablePlugins()
 
     // PythonPlugin
     if (m_pythonPlugin) {
-        auto f = (QVector<Plugin>(*)()) m_pythonPlugin->resolve("pyfalkon_load_available_plugins");
+        auto f = (void(*)(QVector<Plugin>*)) m_pythonPlugin->resolve("pyfalkon_load_available_plugins");
         if (!f) {
             qWarning() << "Failed to resolve" << "pyfalkon_load_available_plugins";
         } else {
-            const auto plugins = f();
+            QVector<Plugin> plugins;
+            f(&plugins);
             for (const auto &plugin : plugins) {
                 registerAvailablePlugin(plugin);
             }
@@ -382,13 +383,15 @@ Plugins::Plugin Plugins::loadPythonPlugin(const QString &name)
         return Plugin();
     }
 
-    auto f = (Plugin(*)(const QString &)) m_pythonPlugin->resolve("pyfalkon_load_plugin");
+    auto f = (bool(*)(const QString &,Plugin*)) m_pythonPlugin->resolve("pyfalkon_load_plugin");
     if (!f) {
         qWarning() << "Failed to resolve" << "pyfalkon_load_plugin";
         return Plugin();
     }
 
-    return f(name);
+    Plugin plugin;
+    f(name, &plugin);
+    return plugin;
 }
 
 bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
