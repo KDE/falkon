@@ -731,6 +731,7 @@ int TabWidget::duplicateTab(int index)
 
     int id = addView(QUrl(), webTab->title(), Qz::NT_CleanSelectedTab);
     weTab(id)->p_restoreTab(webTab->url(), webTab->historyData(), webTab->zoomLevel());
+    weTab(id)->setParentTab(webTab);
 
     return id;
 }
