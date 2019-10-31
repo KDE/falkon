@@ -55,6 +55,9 @@
        </item>
        <item row="2" column="0" colspan="2">
         <widget class="TreeWidget" name="cookieTree">
+         <property name="selectionMode">
+          <enum>QAbstractItemView::ExtendedSelection</enum>
+         </property>
          <property name="sortingEnabled">
           <bool>true</bool>
          </property>

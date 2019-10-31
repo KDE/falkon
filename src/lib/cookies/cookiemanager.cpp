@@ -119,22 +119,22 @@ void CookieManager::removeAll()
 
 void CookieManager::remove()
 {
-    QTreeWidgetItem* current = ui->cookieTree->currentItem();
-    if (!current) {
-        return;
-    }
-
     QList<QNetworkCookie> cookies;
+    auto selection = ui->cookieTree->selectedItems();
 
-    if (current->childCount()) {
-        for (int i = 0; i < current->childCount(); ++i) {
-            QTreeWidgetItem *item = current->child(i);
-            if (item && m_itemHash.contains(item)) {
-                cookies.append(m_itemHash.value(item));
+    for (int i = 0; i < selection.count(); i++) {
+        QTreeWidgetItem* current = selection[i];
+
+        if (current->childCount()) {
+            for (int i = 0; i < current->childCount(); ++i) {
+                QTreeWidgetItem *item = current->child(i);
+                if (item && m_itemHash.contains(item)) {
+                    cookies.append(m_itemHash.value(item));
+                }
             }
+        } else if (m_itemHash.contains(current)) {
+            cookies.append(m_itemHash.value(current));
         }
-    } else if (m_itemHash.contains(current)) {
-        cookies.append(m_itemHash.value(current));
     }
 
     foreach (const QNetworkCookie &cookie, cookies) {
@@ -156,6 +156,16 @@ void CookieManager::currentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem
         ui->path->setText(tr("<cookie not selected>"));
         ui->secure->setText(tr("<cookie not selected>"));
         ui->expiration->setText(tr("<cookie not selected>"));
+
+        ui->removeOne->setText(tr("Remove cookies"));
+        return;
+    } else if (ui->cookieTree->selectedItems().count() > 1) {
+        ui->name->setText(tr("<multiple cookies selected>"));
+        ui->value->setText(tr("<multiple cookies selected>"));
+        ui->server->setText(tr("<multiple cookies selected>"));
+        ui->path->setText(tr("<multiple cookies selected>"));
+        ui->secure->setText(tr("<multiple cookies selected>"));
+        ui->expiration->setText(tr("<multiple cookies selected>"));
 
         ui->removeOne->setText(tr("Remove cookies"));
         return;
