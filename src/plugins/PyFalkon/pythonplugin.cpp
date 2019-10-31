@@ -82,7 +82,7 @@ void pyfalkon_register_plugin(PluginInterface *plugin)
     pluginInterface = plugin;
 }
 
-Plugins::Plugin *pyfalkon_load_plugin(const QString &name)
+void *pyfalkon_load_plugin(const QString &name)
 {
     QString fullPath;
     if (QFileInfo(name).isAbsolute()) {
