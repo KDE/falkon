@@ -115,7 +115,7 @@ TipLabel::TipLabel(QWidget* parent)
     setPalette(QToolTip::palette());
     ensurePolished();
     setFrameStyle(QFrame::NoFrame);
-    setMargin(3);
+    setContentsMargins(3, 3, 3, 3);
 
     m_timer = new QTimer(this);
     m_timer->setSingleShot(true);
