@@ -30,6 +30,7 @@
 #include "../config.h"
 
 #include <QSettings>
+#include <QFile>
 
 VerticalTabsPlugin::VerticalTabsPlugin()
     : QObject()
