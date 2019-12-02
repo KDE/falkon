@@ -31,6 +31,7 @@
 #include "desktopfile.h"
 
 #include <QSettings>
+#include <QFile>
 
 VerticalTabsPlugin::VerticalTabsPlugin()
     : QObject()
