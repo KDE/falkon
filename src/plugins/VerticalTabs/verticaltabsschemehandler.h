@@ -21,6 +21,7 @@
 
 class VerticalTabsSchemeHandler : public ExtensionSchemeHandler
 {
+    Q_OBJECT
 public:
     explicit VerticalTabsSchemeHandler(QObject *parent = nullptr);
 
