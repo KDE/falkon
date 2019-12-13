@@ -43,6 +43,7 @@ const int refreshInterval = 60 * 1000;
 
 class FCM_Button : public AbstractButtonInterface
 {
+    Q_OBJECT
 public:
     explicit FCM_Button(QObject *parent = nullptr)
         : AbstractButtonInterface(parent)
@@ -462,3 +463,5 @@ QString FCM_Plugin::extractOriginFrom(const QString &path)
 
     return origin;
 }
+
+#include "fcm_plugin.moc"

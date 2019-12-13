@@ -34,6 +34,7 @@
 
 class TabManagerButton : public AbstractButtonInterface
 {
+    Q_OBJECT
 public:
     explicit TabManagerButton(QObject *parent = nullptr)
         : AbstractButtonInterface(parent)
@@ -236,3 +237,5 @@ void TabManagerWidgetController::emitRefreshTree()
 {
     emit requestRefreshTree();
 }
+
+#include "tabmanagerwidgetcontroller.moc"

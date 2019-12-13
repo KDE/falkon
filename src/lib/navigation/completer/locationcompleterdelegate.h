@@ -24,6 +24,7 @@
 
 class FALKON_EXPORT LocationCompleterDelegate : public QStyledItemDelegate
 {
+    Q_OBJECT
 public:
     explicit LocationCompleterDelegate(QObject *parent = 0);
 
