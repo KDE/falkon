@@ -356,6 +356,11 @@ target_link_libraries(FalkonPrivate
     ${OPENSSL_CRYPTO_LIBRARY}
 )
 
+if (HAVE_LIBINTL)
+    target_include_directories(FalkonPrivate SYSTEM PUBLIC ${Intl_INCLUDE_DIRS})
+    target_link_libraries(FalkonPrivate ${Intl_LIBRARIES})
+endif()
+
 if (UNIX AND NOT APPLE)
     if (NOT NO_X11)
         target_link_libraries(FalkonPrivate XCB::XCB Qt5::X11Extras)
