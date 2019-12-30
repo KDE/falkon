@@ -96,8 +96,10 @@ CookieManager::CookieManager(QWidget *parent)
     connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, &CookieManager::removeCookie);
 
     // Load cookies
-    foreach (const QNetworkCookie &cookie, mApp->cookieJar()->getAllCookies())
+    const auto allCookies = mApp->cookieJar()->getAllCookies();
+    for (const QNetworkCookie &cookie : allCookies) {
         addCookie(cookie);
+    }
 
     QzTools::setWmClass("Cookies", this);
 }
@@ -137,7 +139,7 @@ void CookieManager::remove()
         }
     }
 
-    foreach (const QNetworkCookie &cookie, cookies) {
+    for (const QNetworkCookie &cookie : qAsConst(cookies)) {
         mApp->cookieJar()->deleteCookie(cookie);
     }
 }
