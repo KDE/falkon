@@ -86,7 +86,8 @@ void FCM_Plugin::init(InitState state, const QString &settingsPath)
     }
 
     if (state == LateInitState) {
-        foreach (BrowserWindow* window, mApp->windows()) {
+        const auto windows = mApp->windows();
+        for (BrowserWindow* window : windows) {
             mainWindowCreated(window);
         }
     }
@@ -102,7 +103,8 @@ void FCM_Plugin::unload()
         removeAllButWhitelisted();
     }
 
-    foreach (BrowserWindow* window, mApp->windows()) {
+    const auto windows = mApp->windows();
+    for (BrowserWindow* window : windows) {
         mainWindowDeleted(window);
     }
 
@@ -169,7 +171,7 @@ bool FCM_Plugin::isWhitelisted(const FlashCookie &flashCookie)
 
 void FCM_Plugin::removeAllButWhitelisted()
 {
-    foreach (const FlashCookie &flashCookie, m_flashCookies) {
+    for (const FlashCookie &flashCookie : qAsConst(m_flashCookies)) {
         if (isWhitelisted(flashCookie)) {
             continue;
         }
@@ -255,7 +257,7 @@ void FCM_Plugin::autoRefresh()
     loadFlashCookies();
     QStringList newCookieList;
 
-    foreach (const FlashCookie &flashCookie, m_flashCookies) {
+    for (const FlashCookie &flashCookie : qAsConst(m_flashCookies)) {
         if (isBlacklisted(flashCookie)) {
             removeCookie(flashCookie);
             continue;
@@ -266,7 +268,7 @@ void FCM_Plugin::autoRefresh()
         }
 
         bool newCookie = true;
-        foreach (const FlashCookie &oldFlashCookie, oldflashCookies) {
+        for (const FlashCookie &oldFlashCookie : qAsConst(oldflashCookies)) {
             if (QString(oldFlashCookie.path + oldFlashCookie.name) ==
                     QString(flashCookie.path + flashCookie.name)) {
                 newCookie = false;
@@ -376,7 +378,7 @@ void FCM_Plugin::loadFlashCookies(QString path)
     entryList.removeAll(QL1S("."));
     entryList.removeAll(QL1S(".."));
 
-    foreach(QString entry, entryList) {
+    for (QString entry : qAsConst(entryList)) {
         if (path.endsWith(QL1S("#SharedObjects")) && entry == QL1S("#AppContainer")) {
             // specific to IE and Windows
             continue;

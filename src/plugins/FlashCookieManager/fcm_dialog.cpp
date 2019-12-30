@@ -97,7 +97,7 @@ void FCM_Dialog::removeAll()
     }
 
     const QList<FlashCookie> &flashCookies = m_manager->flashCookies();
-    foreach (const FlashCookie &flashCookie, flashCookies) {
+    for (const FlashCookie &flashCookie : flashCookies) {
          m_manager->removeCookie(flashCookie);
     }
 
@@ -118,7 +118,7 @@ void FCM_Dialog::removeCookie()
     if (data.isNull()) {     //Remove whole cookie group
         const QString origin = current->text(0);
         const QList<FlashCookie> &flashCookies = m_manager->flashCookies();
-        foreach (const FlashCookie &flashCookie, flashCookies) {
+        for (const FlashCookie &flashCookie : flashCookies) {
             if (flashCookie.origin == origin) {
                 m_manager->removeCookie(flashCookie);
             }
