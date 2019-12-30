@@ -189,7 +189,7 @@ void TabManagerDelegate::viewItemDrawText(QPainter *p, const QStyleOptionViewIte
         // Look for longer parts first
         std::sort(searchStrings.begin(), searchStrings.end(), sizeBiggerThan);
 
-        foreach (const QString &string, searchStrings) {
+        for (const QString &string : qAsConst(searchStrings)) {
             int delimiter = text.indexOf(string, 0, Qt::CaseInsensitive);
 
             while (delimiter != -1) {

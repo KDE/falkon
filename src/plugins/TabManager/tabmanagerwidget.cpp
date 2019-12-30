@@ -525,10 +525,10 @@ void TabManagerWidget::closeSelectedTabs(const QHash<BrowserWindow*, WebTab*> &t
     }
 
     const QList<BrowserWindow*> &windows = tabsHash.uniqueKeys();
-    foreach (BrowserWindow* mainWindow, windows) {
-        QList<WebTab*> tabs = tabsHash.values(mainWindow);
+    for (BrowserWindow* mainWindow : windows) {
+        const QList<WebTab*> tabs = tabsHash.values(mainWindow);
 
-        foreach (WebTab* webTab, tabs) {
+        for (WebTab* webTab : tabs) {
             mainWindow->tabWidget()->requestCloseTab(webTab->tabIndex());
         }
     }
@@ -537,9 +537,9 @@ void TabManagerWidget::closeSelectedTabs(const QHash<BrowserWindow*, WebTab*> &t
 static void detachTabsTo(BrowserWindow* targetWindow, const QHash<BrowserWindow*, WebTab*> &tabsHash)
 {
     const QList<BrowserWindow*> &windows = tabsHash.uniqueKeys();
-    foreach (BrowserWindow* mainWindow, windows) {
+    for (BrowserWindow* mainWindow : windows) {
         const QList<WebTab*> &tabs = tabsHash.values(mainWindow);
-        foreach (WebTab* webTab, tabs) {
+        for (WebTab* webTab : tabs) {
             mainWindow->tabWidget()->detachTab(webTab);
 
             if (mainWindow && mainWindow->tabCount() == 0) {
@@ -595,7 +595,7 @@ bool TabManagerWidget::bookmarkSelectedTabs(const QHash<BrowserWindow*, WebTab*>
         return false;
     }
 
-    foreach (WebTab* tab, tabsHash) {
+    for (WebTab* tab : tabsHash) {
         if (!tab->url().isEmpty()) {
             BookmarkItem* bookmark = new BookmarkItem(BookmarkItem::Url);
             bookmark->setTitle(tab->title());
@@ -615,10 +615,10 @@ void TabManagerWidget::unloadSelectedTabs(const QHash<BrowserWindow*, WebTab*> &
     }
 
     const QList<BrowserWindow*> &windows = tabsHash.uniqueKeys();
-    foreach (BrowserWindow* mainWindow, windows) {
-        QList<WebTab*> tabs = tabsHash.values(mainWindow);
+    for (BrowserWindow* mainWindow : windows) {
+        const QList<WebTab*> tabs = tabsHash.values(mainWindow);
 
-        foreach (WebTab* webTab, tabs) {
+        for (WebTab* webTab : tabs) {
             mainWindow->tabWidget()->unloadTab(webTab->tabIndex());
         }
     }
