@@ -358,7 +358,7 @@ QString FalkonSchemeReply::configPage()
     QString pluginsString;
     const QList<Plugins::Plugin> &availablePlugins = mApp->plugins()->availablePlugins();
 
-    foreach (const Plugins::Plugin &plugin, availablePlugins) {
+    for (const Plugins::Plugin &plugin : availablePlugins) {
         PluginSpec spec = plugin.pluginSpec;
         pluginsString.append(QString("<tr><td>%1</td><td>%2</td><td>%3</td><td>%4</td></tr>").arg(
                                  spec.name, spec.version, spec.author.toHtmlEscaped(), spec.description));
@@ -372,11 +372,13 @@ QString FalkonSchemeReply::configPage()
 
     QString allGroupsString;
     QSettings* settings = Settings::globalSettings();
-    foreach (const QString &group, settings->childGroups()) {
+    const auto groups = settings->childGroups();
+    for (const QString &group : groups) {
         QString groupString = QString("<tr><th colspan=\"2\">[%1]</th></tr>").arg(group);
         settings->beginGroup(group);
 
-        foreach (const QString &key, settings->childKeys()) {
+        const auto keys = settings->childKeys();
+        for (const QString &key : keys) {
             const QVariant keyValue = settings->value(key);
             QString keyString;
 
