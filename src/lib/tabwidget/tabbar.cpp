@@ -683,7 +683,8 @@ void TabBar::dropEvent(QDropEvent* event)
     int index = tabAt(event->pos());
     if (index == -1) {
         if (mime->hasUrls()) {
-            foreach (const QUrl &url, mime->urls()) {
+            const auto urls = mime->urls();
+            for (const QUrl &url : urls) {
                 m_tabWidget->addView(url, Qz::NT_SelectedTabAtTheEnd);
             }
         } else if (mime->hasText()) {
