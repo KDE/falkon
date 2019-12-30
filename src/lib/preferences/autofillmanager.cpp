@@ -82,10 +82,10 @@ void AutoFillManager::loadPasswords()
     ui->showPasswords->setText(tr("Show Passwords"));
     m_passwordsShown = false;
 
-    QVector<PasswordEntry> allEntries = mApp->autoFill()->getAllFormData();
+    const QVector<PasswordEntry> allEntries = mApp->autoFill()->getAllFormData();
 
     ui->treePass->clear();
-    foreach (const PasswordEntry &entry, allEntries) {
+    for (const PasswordEntry &entry : allEntries) {
         QTreeWidgetItem* item = new QTreeWidgetItem(ui->treePass);
         item->setText(0, entry.host);
         item->setText(1, entry.username);

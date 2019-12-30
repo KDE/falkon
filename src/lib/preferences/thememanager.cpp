@@ -45,10 +45,10 @@ ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
 
     const QStringList themePaths = DataPaths::allPaths(DataPaths::Themes);
 
-    foreach (const QString &path, themePaths) {
+    for (const QString &path : themePaths) {
         QDir dir(path);
-        QStringList list = dir.entryList(QDir::AllDirs | QDir::NoDotAndDotDot);
-        foreach (const QString &name, list) {
+        const QStringList list = dir.entryList(QDir::AllDirs | QDir::NoDotAndDotDot);
+        for (const QString &name : list) {
             Theme themeInfo = parseTheme(dir.absoluteFilePath(name) + QLatin1Char('/'), name);
             if (!themeInfo.isValid) {
                 continue;

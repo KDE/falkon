@@ -209,7 +209,8 @@ Preferences::Preferences(BrowserWindow* window)
     ui->activeProfile->setText("<b>" + ProfileManager::currentProfile() + "</b>");
     ui->startProfile->addItem(startingProfile);
 
-    foreach (const QString &name, ProfileManager::availableProfiles()) {
+    const auto names = ProfileManager::availableProfiles();
+    for (const QString &name : names) {
         if (startingProfile != name) {
             ui->startProfile->addItem(name);
         }
@@ -295,7 +296,8 @@ Preferences::Preferences(BrowserWindow* window)
     ui->webRTCPublicIpOnly->setChecked(settings.value("WebRTCPublicIpOnly", true).toBool());
     ui->dnsPrefetch->setChecked(settings.value("DNSPrefetch", true).toBool());
 
-    foreach (int level, WebView::zoomLevels()) {
+    const auto levels = WebView::zoomLevels();
+    for (int level : levels) {
         ui->defaultZoomLevel->addItem(QString("%1%").arg(level));
     }
     ui->defaultZoomLevel->setCurrentIndex(settings.value("DefaultZoomLevel", WebView::zoomLevels().indexOf(100)).toInt());

@@ -101,7 +101,7 @@ void PluginsManager::refresh()
 
     const QList<Plugins::Plugin> &allPlugins = mApp->plugins()->availablePlugins();
 
-    foreach (const Plugins::Plugin &plugin, allPlugins) {
+    for (const Plugins::Plugin &plugin : allPlugins) {
         PluginSpec spec = plugin.pluginSpec;
 
         QListWidgetItem* item = new QListWidgetItem(ui->list);
