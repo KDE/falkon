@@ -100,7 +100,7 @@ void LocationCompleterRefreshJob::runJob()
     }
 
     // Load all icons into QImage
-    foreach (QStandardItem* item, m_items) {
+    for (QStandardItem* item : qAsConst(m_items)) {
         if (m_jobCancelled) {
             return;
         }
@@ -151,9 +151,9 @@ void LocationCompleterRefreshJob::completeFromHistory()
     // Search in bookmarks
     if (showType == HistoryAndBookmarks || showType == Bookmarks) {
         const int bookmarksLimit = 10;
-        QList<BookmarkItem*> bookmarks = mApp->bookmarks()->searchBookmarks(m_searchString, bookmarksLimit);
+        const QList<BookmarkItem*> bookmarks = mApp->bookmarks()->searchBookmarks(m_searchString, bookmarksLimit);
 
-        foreach (BookmarkItem* bookmark, bookmarks) {
+        for (BookmarkItem* bookmark : bookmarks) {
             Q_ASSERT(bookmark->isUrl());
 
             // Keyword bookmark replaces visit/search item

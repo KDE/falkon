@@ -126,7 +126,7 @@ QSqlQuery LocationCompleterModel::createHistoryQuery(const QString &searchString
         sqlQuery.addBindValue(QString("%%1%").arg(searchString));
     }
     else {
-        foreach (const QString &str, searchList) {
+        for (const QString &str : qAsConst(searchList)) {
             sqlQuery.addBindValue(QString("%%1%").arg(str));
             sqlQuery.addBindValue(QString("%%1%").arg(str));
         }
@@ -150,7 +150,7 @@ void LocationCompleterModel::setTabPosition(QStandardItem* item) const
     const QUrl url = item->data(UrlRole).toUrl();
     const QList<BrowserWindow*> windows = mApp->windows();
 
-    foreach (BrowserWindow* window, windows) {
+    for (BrowserWindow* window : windows) {
         QList<WebTab*> tabs = window->tabWidget()->allTabs();
         for (int i = 0; i < tabs.count(); ++i) {
             WebTab* tab = tabs.at(i);

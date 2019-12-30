@@ -112,7 +112,7 @@ void WebSearchBar::aboutToShowMenu()
 
     m_window->weView()->page()->runJavaScript(Scripts::getOpenSearchLinks(), WebPage::SafeJsWorld, [this, menu](const QVariant &res) {
         const QVariantList &list = res.toList();
-        Q_FOREACH (const QVariant &val, list) {
+        for (const QVariant &val : list) {
             const QVariantMap &link = val.toMap();
             QUrl url = m_window->weView()->url().resolved(link.value(QSL("url")).toUrl());
             QString title = link.value(QSL("title")).toString();
@@ -174,7 +174,8 @@ void WebSearchBar::setupEngines()
 
     m_boxSearchType->clearItems();
 
-    foreach (const SearchEngine &en, m_searchManager->allEngines()) {
+    const auto engines = m_searchManager->allEngines();
+    for (const SearchEngine &en : engines) {
         ButtonWithMenu::Item item;
         item.icon = en.icon;
         item.text = en.name;

@@ -279,7 +279,7 @@ int LocationCompleterDelegate::viewItemDrawText(QPainter *p, const QStyleOptionV
         // Look for longer parts first
         std::sort(searchStrings.begin(), searchStrings.end(), sizeBiggerThan);
 
-        foreach (const QString &string, searchStrings) {
+        for (const QString &string : qAsConst(searchStrings)) {
             int delimiter = text.indexOf(string, 0, Qt::CaseInsensitive);
 
             while (delimiter != -1) {
