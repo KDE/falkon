@@ -119,7 +119,7 @@ SearchEngine SearchEnginesManager::engineForShortcut(const QString &shortcut)
         return returnEngine;
     }
 
-    foreach (const Engine &en, m_allEngines) {
+    for (const Engine &en : qAsConst(m_allEngines)) {
         if (en.shortcut == shortcut) {
             returnEngine = en;
             break;
@@ -217,7 +217,7 @@ void SearchEnginesManager::engineChangedImage()
         return;
     }
 
-    foreach (Engine e, m_allEngines) {
+    for (Engine e : qAsConst(m_allEngines)) {
         if (e.name == engine->name() &&
             e.url.contains(engine->searchUrl("%s").toString()) &&
             !engine->image().isNull()
@@ -280,7 +280,7 @@ void SearchEnginesManager::addEngineFromForm(const QVariantMap &formData, WebVie
     query.addQueryItem(inputName, QSL("SEARCH"));
 
     const QVariantList &inputs = formData.value(QSL("inputs")).toList();
-    foreach (const QVariant &pair, inputs) {
+    for (const QVariant &pair : inputs) {
         const QVariantList &list = pair.toList();
         if (list.size() != 2)
             continue;
@@ -496,7 +496,7 @@ void SearchEnginesManager::saveSettings()
     QSqlQuery query(SqlDatabase::instance()->database());
     query.exec("DELETE FROM search_engines");
 
-    foreach (const Engine &en, m_allEngines) {
+    for (const Engine &en : qAsConst(m_allEngines)) {
         query.prepare("INSERT INTO search_engines (name, icon, url, shortcut, suggestionsUrl, suggestionsParameters, postData) VALUES (?, ?, ?, ?, ?, ?, ?)");
         query.addBindValue(en.name);
         query.addBindValue(iconToBase64(en.icon));

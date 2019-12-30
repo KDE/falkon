@@ -221,7 +221,8 @@ void SearchEnginesDialog::reloadEngines()
     ui->treeWidget->clear();
     const SearchEngine defaultEngine = mApp->searchEnginesManager()->defaultEngine();
 
-    foreach (const SearchEngine &en, m_manager->allEngines()) {
+    const auto engines = m_manager->allEngines();
+    for (const SearchEngine &en : engines) {
         QTreeWidgetItem* item = new QTreeWidgetItem();
         setEngine(item, en);
         changeItemToDefault(item, en == defaultEngine);

@@ -644,8 +644,10 @@ void OpenSearchEngine::suggestionsObtained()
 
     QStringList out;
 
-    foreach (const QVariant &v, list.at(1).toList())
+    const auto items = list.at(1).toList();
+    for (const QVariant &v : items) {
         out.append(v.toString());
+    }
 
     emit suggestions(out);
 }
