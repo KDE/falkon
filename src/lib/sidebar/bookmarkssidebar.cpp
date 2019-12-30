@@ -88,9 +88,9 @@ void BookmarksSidebar::openBookmarkInNewPrivateWindow(BookmarkItem* item)
 
 void BookmarksSidebar::deleteBookmarks()
 {
-    QList<BookmarkItem*> items = ui->tree->selectedBookmarks();
+    const QList<BookmarkItem*> items = ui->tree->selectedBookmarks();
 
-    foreach (BookmarkItem* item, items) {
+    for (BookmarkItem* item : items) {
         if (m_bookmarks->canBeModified(item)) {
             m_bookmarks->removeBookmark(item);
         }
@@ -113,9 +113,9 @@ void BookmarksSidebar::createContextMenu(const QPoint &pos)
     connect(actDelete, &QAction::triggered, this, &BookmarksSidebar::deleteBookmarks);
 
     bool canBeDeleted = false;
-    QList<BookmarkItem*> items = ui->tree->selectedBookmarks();
+    const QList<BookmarkItem*> items = ui->tree->selectedBookmarks();
 
-    foreach (BookmarkItem* item, items) {
+    for (BookmarkItem* item : items) {
         if (m_bookmarks->canBeModified(item)) {
             canBeDeleted = true;
             break;

@@ -118,7 +118,7 @@ void SideBarManager::createMenu(QMenu* menu)
     act->setChecked(m_activeBar == QL1S("History"));
     group->addAction(act);
 
-    foreach (const QPointer<SideBarInterface> &sidebar, s_sidebars) {
+    for (const QPointer<SideBarInterface> &sidebar : qAsConst(s_sidebars)) {
         if (sidebar) {
             QAction* act = sidebar.data()->createMenuAction();
             act->setData(s_sidebars.key(sidebar));
@@ -146,7 +146,8 @@ void SideBarManager::removeSidebar(SideBarInterface *interface)
 
     s_sidebars.remove(id);
 
-    foreach (BrowserWindow* window, mApp->windows()) {
+    const auto windows = mApp->windows();
+    for (BrowserWindow* window : windows) {
         window->sideBarManager()->sideBarRemoved(id);
     }
 }
