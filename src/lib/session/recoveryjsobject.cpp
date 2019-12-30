@@ -45,10 +45,12 @@ QJsonArray RecoveryJsObject::restoreData() const
     QJsonArray out;
 
     int i = 0;
-    Q_FOREACH (const BrowserWindow::SavedWindow &w, m_manager->restoreData().windows) {
+    const auto windows = m_manager->restoreData().windows;
+    for (const BrowserWindow::SavedWindow &w : windows) {
         int j = 0;
         QJsonArray tabs;
-        Q_FOREACH (const WebTab::SavedTab &t, w.tabs) {
+        const auto windowTabs = w.tabs;
+        for (const WebTab::SavedTab &t : windowTabs) {
             const QIcon icon = t.icon.isNull() ? IconProvider::emptyWebIcon() : t.icon;
             QJsonObject tab;
             tab[QSL("tab")] = j;
