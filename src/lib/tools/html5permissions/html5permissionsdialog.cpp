@@ -53,7 +53,8 @@ void HTML5PermissionsDialog::showFeaturePermissions(QWebEnginePage::Feature feat
 
     ui->treeWidget->clear();
 
-    foreach (const QString &site, m_granted.value(feature)) {
+    const auto grantedSites = m_granted.value(feature);
+    for (const QString &site : grantedSites) {
         QTreeWidgetItem* item = new QTreeWidgetItem(ui->treeWidget);
         item->setText(0, site);
         item->setText(1, tr("Allow"));
@@ -61,7 +62,8 @@ void HTML5PermissionsDialog::showFeaturePermissions(QWebEnginePage::Feature feat
         ui->treeWidget->addTopLevelItem(item);
     }
 
-    foreach (const QString &site, m_denied.value(feature)) {
+    const auto deniedSites = m_denied.value(feature);
+    for (const QString &site : deniedSites) {
         QTreeWidgetItem* item = new QTreeWidgetItem(ui->treeWidget);
         item->setText(0, site);
         item->setText(1, tr("Deny"));

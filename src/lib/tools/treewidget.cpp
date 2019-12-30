@@ -103,10 +103,10 @@ QList<QTreeWidgetItem*> TreeWidget::allItems()
 
 void TreeWidget::filterString(const QString &string)
 {
-    QList<QTreeWidgetItem*> _allItems = allItems();
+    const QList<QTreeWidgetItem*> _allItems = allItems();
     QList<QTreeWidgetItem*> parents;
     bool stringIsEmpty = string.isEmpty();
-    foreach (QTreeWidgetItem* item, _allItems) {
+    for (QTreeWidgetItem* item : _allItems) {
         bool containsString = stringIsEmpty || item->text(0).contains(string, Qt::CaseInsensitive);
         if (containsString) {
             item->setHidden(false);

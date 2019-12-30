@@ -515,9 +515,9 @@ QString QzTools::resolveFromPath(const QString &name)
         return QString();
     }
 
-    QStringList dirs = path.split(QLatin1Char(':'), QString::SkipEmptyParts);
+    const QStringList dirs = path.split(QLatin1Char(':'), QString::SkipEmptyParts);
 
-    foreach (const QString &dir, dirs) {
+    for (const QString &dir : dirs) {
         QDir d(dir);
         if (d.exists(name)) {
             return d.absoluteFilePath(name);
@@ -609,7 +609,7 @@ bool QzTools::isUtf8(const char* string)
 
 bool QzTools::containsSpace(const QString &str)
 {
-    Q_FOREACH (const QChar &c, str) {
+    for (const QChar &c : str) {
         if (c.isSpace())
             return true;
     }

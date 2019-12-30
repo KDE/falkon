@@ -195,7 +195,8 @@ QImage IconProvider::imageForUrl(const QUrl &url, bool allowNull)
         return img->isNull() && !allowNull ? IconProvider::emptyWebImage() : *img;
     }
 
-    foreach (const BufferedIcon &ic, instance()->m_iconBuffer) {
+    const auto iconBuffer = instance()->m_iconBuffer;
+    for (const BufferedIcon &ic : iconBuffer) {
         if (encodeUrl(ic.first) == encodedUrl) {
             return ic.second;
         }
@@ -228,7 +229,8 @@ QImage IconProvider::imageForDomain(const QUrl &url, bool allowNull)
 
     QMutexLocker locker(&instance()->m_iconCacheMutex);
 
-    foreach (const BufferedIcon &ic, instance()->m_iconBuffer) {
+    const auto iconBuffer = instance()->m_iconBuffer;
+    for (const BufferedIcon &ic : iconBuffer) {
         if (ic.first.host() == url.host()) {
             return ic.second;
         }
@@ -255,7 +257,7 @@ void IconProvider::saveIconsToDatabase()
 {
     QMutexLocker locker(&instance()->m_iconCacheMutex);
 
-    foreach (const BufferedIcon &ic, m_iconBuffer) {
+    for (const BufferedIcon &ic : qAsConst(m_iconBuffer)) {
         QByteArray ba;
         QBuffer buffer(&ba);
         buffer.open(QIODevice::WriteOnly);

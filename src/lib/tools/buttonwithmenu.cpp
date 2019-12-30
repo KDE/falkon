@@ -76,7 +76,7 @@ void ButtonWithMenu::addItem(const Item &item)
 
 void ButtonWithMenu::addItems(const QVector<Item> &items)
 {
-    foreach (const Item &item, items) {
+    for (const Item &item : items) {
         addItem(item);
     }
 }
@@ -158,7 +158,7 @@ void ButtonWithMenu::generateMenu()
 {
     m_menu->clear();
 
-    foreach (const Item &item, m_items) {
+    for (const Item &item : qAsConst(m_items)) {
         QVariant variant;
         variant.setValue<Item>(item);
         m_menu->addAction(item.icon, item.text, this, SLOT(setCurrentItem()))->setData(variant);
