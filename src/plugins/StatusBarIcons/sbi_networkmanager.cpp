@@ -44,7 +44,8 @@ void SBI_NetworkManager::loadSettings()
 {
     QSettings settings(m_settingsFile, QSettings::IniFormat);
 
-    foreach (const QString &group, settings.childGroups()) {
+    const auto groups = settings.childGroups();
+    for (const QString &group : groups) {
         if (group.isEmpty()) {
             continue;
         }

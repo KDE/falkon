@@ -155,7 +155,8 @@ void SBI_IconsManager::mainWindowCreated(BrowserWindow* window)
 
 void SBI_IconsManager::mainWindowDeleted(BrowserWindow* window)
 {
-    foreach (QWidget* w, m_windows[window]) {
+    const auto windows =  m_windows[window];
+    for (QWidget* w : windows) {
         window->statusBar()->removeWidget(w);
         delete w;
     }
