@@ -75,7 +75,7 @@ SiteInfo::SiteInfo(WebView *view)
     // Meta
     m_view->page()->runJavaScript(Scripts::getAllMetaAttributes(), WebPage::SafeJsWorld, [this](const QVariant &res) {
         const QVariantList &list = res.toList();
-        Q_FOREACH (const QVariant &val, list) {
+        for (const QVariant &val : list) {
             const QVariantMap &meta = val.toMap();
             QString content = meta.value(QSL("content")).toString();
             QString name = meta.value(QSL("name")).toString();
@@ -96,7 +96,7 @@ SiteInfo::SiteInfo(WebView *view)
     // Images
     m_view->page()->runJavaScript(Scripts::getAllImages(), WebPage::SafeJsWorld, [this](const QVariant &res) {
         const QVariantList &list = res.toList();
-        Q_FOREACH (const QVariant &val, list) {
+        for (const QVariant &val : list) {
             const QVariantMap &img = val.toMap();
             QString src = img.value(QSL("src")).toString();
             QString alt = img.value(QSL("alt")).toString();
