@@ -110,7 +110,7 @@ bool CookieJar::matchDomain(QString cookieDomain, QString siteDomain) const
 
 bool CookieJar::listMatchesDomain(const QStringList &list, const QString &cookieDomain) const
 {
-    foreach (const QString &d, list) {
+    for (const QString &d : list) {
         if (matchDomain(d, cookieDomain)) {
             return true;
         }
