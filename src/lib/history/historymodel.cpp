@@ -236,7 +236,7 @@ HistoryItem* HistoryModel::itemFromIndex(const QModelIndex &index) const
 
 void HistoryModel::removeTopLevelIndexes(const QList<QPersistentModelIndex> &indexes)
 {
-    foreach (const QPersistentModelIndex &index, indexes) {
+    for (const QPersistentModelIndex &index : indexes) {
         if (index.parent().isValid()) {
             continue;
         }
@@ -321,7 +321,7 @@ void HistoryModel::fetchMore(const QModelIndex &parent)
 
     beginInsertRows(parent, 0, list.size() - 1);
 
-    foreach (const HistoryEntry &entry, list) {
+    for (const HistoryEntry &entry : qAsConst(list)) {
         HistoryItem* newItem = new HistoryItem(parentItem);
         newItem->historyEntry = entry;
     }

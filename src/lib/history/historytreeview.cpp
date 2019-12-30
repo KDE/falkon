@@ -105,7 +105,8 @@ void HistoryTreeView::removeSelectedItems()
 
     QList<QPersistentModelIndex> topLevelIndexes;
 
-    foreach (const QModelIndex &index, selectedIndexes()) {
+    const auto indexes = selectedIndexes();
+    for (const QModelIndex &index : indexes) {
         if (index.column() > 0) {
             continue;
         }

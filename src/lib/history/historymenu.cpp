@@ -121,7 +121,7 @@ void HistoryMenu::aboutToShowMostVisited()
 
     const QVector<HistoryEntry> mostVisited = mApp->history()->mostVisited(10);
 
-    foreach (const HistoryEntry &entry, mostVisited) {
+    for (const HistoryEntry &entry : mostVisited) {
         Action* act = new Action(QzTools::truncatedText(entry.title, 40));
         act->setData(entry.url);
         act->setIcon(IconProvider::iconForUrl(entry.url));
