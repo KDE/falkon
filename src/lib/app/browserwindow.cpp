@@ -229,7 +229,7 @@ BrowserWindow::~BrowserWindow()
 {
     mApp->plugins()->emitMainWindowDeleted(this);
 
-    foreach (const QPointer<QWidget> &pointer, m_deleteOnCloseWidgets) {
+    for (const QPointer<QWidget> &pointer : qAsConst(m_deleteOnCloseWidgets)) {
         if (pointer) {
             pointer->deleteLater();
         }
@@ -527,7 +527,7 @@ void BrowserWindow::createEncodingSubMenu(const QString &name, QStringList &code
 
     QActionGroup *group = new QActionGroup(subMenu);
 
-    foreach (const QString &codecName, codecNames) {
+    for (const QString &codecName : qAsConst(codecNames)) {
         QAction *act = createEncodingAction(codecName, activeCodecName, subMenu);
         group->addAction(act);
         subMenu->addAction(act);
@@ -1084,7 +1084,8 @@ void BrowserWindow::createEncodingMenu(QMenu* menu)
     QStringList otherCodecs;
     QStringList allCodecs;
 
-    foreach (const int mib, QTextCodec::availableMibs()) {
+    const auto mibs = QTextCodec::availableMibs();
+    for (const int mib : mibs) {
         const QString codecName = QString::fromUtf8(QTextCodec::codecForMib(mib)->name());
 
         if (!allCodecs.contains(codecName))
@@ -1119,7 +1120,7 @@ void BrowserWindow::createEncodingMenu(QMenu* menu)
 
 void BrowserWindow::removeActions(const QList<QAction *> &actions)
 {
-    foreach (QAction *action, actions) {
+    for (QAction *action : actions) {
         removeAction(action);
     }
 }

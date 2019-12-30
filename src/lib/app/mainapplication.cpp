@@ -155,7 +155,8 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     if (argc > 1) {
         CommandLineOptions cmd;
-        foreach (const CommandLineOptions::ActionPair &pair, cmd.getActions()) {
+        const auto actions = cmd.getActions();
+        for (const CommandLineOptions::ActionPair &pair : actions) {
             switch (pair.action) {
             case Qz::CL_StartWithoutAddons:
                 noAddons = true;
@@ -255,7 +256,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     if (isRunning()) {
         m_isClosing = true;
-        foreach (const QString &message, messages) {
+        for (const QString &message : qAsConst(messages)) {
             sendMessage(message);
         }
         return;
@@ -457,7 +458,8 @@ void MainApplication::openSession(BrowserWindow* window, RestoreData &restoreDat
         window->restoreWindow(restoreData.windows.takeAt(0));
     }
 
-    foreach (const BrowserWindow::SavedWindow &data, restoreData.windows) {
+    const auto restoreWindows = restoreData.windows;
+    for (const BrowserWindow::SavedWindow &data : restoreWindows) {
         BrowserWindow* window = createWindow(Qz::BW_OtherRestoredWindow);
         window->restoreWindow(data);
     }
