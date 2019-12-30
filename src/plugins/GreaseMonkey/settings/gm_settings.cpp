@@ -152,7 +152,8 @@ void GM_Settings::loadScripts()
 
     ui->listWidget->clear();
 
-    foreach (GM_Script* script, m_manager->allScripts()) {
+    const auto allScripts = m_manager->allScripts();
+    for (GM_Script* script : allScripts) {
         QListWidgetItem* item = new QListWidgetItem(ui->listWidget);
         item->setText(script->name());
         item->setIcon(script->icon());

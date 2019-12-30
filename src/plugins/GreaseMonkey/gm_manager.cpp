@@ -107,7 +107,7 @@ QString GM_Manager::requireScripts(const QStringList &urlList) const
 
     QString script;
 
-    foreach (const QString &url, urlList) {
+    for (const QString &url : urlList) {
         if (settings.contains(url)) {
             QString fileName = settings.value(url).toString();
             if (!QFileInfo(fileName).isAbsolute()) {
@@ -158,7 +158,7 @@ QList<GM_Script*> GM_Manager::allScripts() const
 
 bool GM_Manager::containsScript(const QString &fullName) const
 {
-    foreach (GM_Script* script, m_scripts) {
+    for (GM_Script* script : qAsConst(m_scripts)) {
         if (fullName == script->fullName()) {
             return true;
         }
@@ -248,7 +248,8 @@ void GM_Manager::load()
     settings.beginGroup("GreaseMonkey");
     m_disabledScripts = settings.value("disabledScripts", QStringList()).toStringList();
 
-    foreach (const QString &fileName, gmDir.entryList(QStringList("*.js"), QDir::Files)) {
+    const auto fileNames = gmDir.entryList(QStringList("*.js"), QDir::Files);
+    for (const QString &fileName : fileNames) {
         const QString absolutePath = gmDir.absoluteFilePath(fileName);
         GM_Script* script = new GM_Script(this, absolutePath);
 
