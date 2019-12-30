@@ -188,7 +188,7 @@ void AutoFill::saveForm(WebPage *page, const QUrl &frameUrl, const PageFormData 
     if (isStored(frameUrl)) {
         const QVector<PasswordEntry> &list = getFormData(frameUrl);
 
-        foreach (const PasswordEntry &data, list) {
+        for (const PasswordEntry &data : list) {
             if (data.username == formData.username) {
                 updateData = data;
                 updateLastUsed(updateData);
@@ -256,9 +256,9 @@ QByteArray AutoFill::exportPasswords()
     stream.writeStartElement(QStringLiteral("passwords"));
     stream.writeAttribute(QStringLiteral("version"), QStringLiteral("1.0"));
 
-    QVector<PasswordEntry> entries = m_manager->getAllEntries();
+    const QVector<PasswordEntry> entries = m_manager->getAllEntries();
 
-    foreach (const PasswordEntry &entry, entries) {
+    for (const PasswordEntry &entry : entries) {
         stream.writeStartElement(QStringLiteral("entry"));
         stream.writeTextElement(QStringLiteral("server"), entry.host);
         stream.writeTextElement(QStringLiteral("username"), entry.username);
@@ -318,7 +318,8 @@ bool AutoFill::importPasswords(const QByteArray &data)
                 if (entry.isValid()) {
                     bool containsEntry = false;
 
-                    foreach (const PasswordEntry &e, m_manager->getEntries(QUrl(entry.host))) {
+                    const auto entries = m_manager->getEntries(QUrl(entry.host));
+                    for (const PasswordEntry &e : entries) {
                         if (e.username == entry.username) {
                             containsEntry = true;
                             break;

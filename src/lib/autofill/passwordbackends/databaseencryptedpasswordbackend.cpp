@@ -609,17 +609,17 @@ void MasterPasswordDialog::clearMasterPasswordAndConvert(bool forcedAskPass)
     }
 
     if (m_backend->hasPermission()) {
-        QVector<PasswordEntry> list = m_backend->getAllEntries();
+        const QVector<PasswordEntry> list = m_backend->getAllEntries();
         PasswordBackend* databaseBackend = mApp->autoFill()->passwordManager()->availableBackends().value(QSL("database"));
         if (!databaseBackend) {
             return;
         }
 
-        QVector<PasswordEntry> databaseList = databaseBackend->getAllEntries();
+        const QVector<PasswordEntry> databaseList = databaseBackend->getAllEntries();
         bool allDataMoved = true;
-        foreach (const PasswordEntry &entry, list) {
+        for (const PasswordEntry &entry : list) {
             bool sameEntry = false;
-            foreach (const PasswordEntry &dbEntry, databaseList) {
+            for (const PasswordEntry &dbEntry : databaseList) {
                 sameEntry = samePasswordEntry(dbEntry, entry);
                 if (sameEntry) {
                     allDataMoved = false;
