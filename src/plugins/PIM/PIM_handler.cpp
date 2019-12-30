@@ -251,8 +251,9 @@ QString PIM_Handler::matchingJsTable() const
         }
     }
 
-    if (!values.isEmpty())
+    if (!values.isEmpty()) {
         values = values.left(values.size() - 1);
+    }
 
     return QSL("{ %1 }").arg(values);
 }
