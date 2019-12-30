@@ -96,7 +96,7 @@ SpeedDial::Page SpeedDial::pageForUrl(const QUrl &url)
     if (urlString.endsWith(QL1C('/')))
         urlString = urlString.left(urlString.size() - 1);
 
-    foreach (const Page &page, m_pages) {
+    for (const Page &page : qAsConst(m_pages)) {
         if (page.url == urlString) {
             return page;
         }
@@ -202,7 +202,7 @@ QString SpeedDial::initialScript()
 
     QVariantList pages;
 
-    foreach (const Page &page, m_pages) {
+    for (const Page &page : qAsConst(m_pages)) {
         QString imgSource = m_thumbnailsDir + QCryptographicHash::hash(page.url.toUtf8(), QCryptographicHash::Md4).toHex() + ".png";
 
         if (!QFile(imgSource).exists()) {
@@ -232,7 +232,7 @@ void SpeedDial::changed(const QString &allPages)
     const QStringList entries = allPages.split(QLatin1String("\";"), QString::SkipEmptyParts);
     m_pages.clear();
 
-    foreach (const QString &entry, entries) {
+    for (const QString &entry : entries) {
         if (entry.isEmpty()) {
             continue;
         }
@@ -369,7 +369,7 @@ QString SpeedDial::generateAllPages()
 {
     QString allPages;
 
-    foreach (const Page &page, m_pages) {
+    for (const Page &page : qAsConst(m_pages)) {
         const QString string = QString("url:\"%1\"|title:\"%2\";").arg(page.url, page.title);
         allPages.append(string);
     }

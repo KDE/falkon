@@ -96,7 +96,7 @@ void PluginProxy::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTe
         return;
     }
 
-    foreach (PluginInterface* iPlugin, m_loadedPlugins) {
+    for (PluginInterface* iPlugin : qAsConst(m_loadedPlugins)) {
         iPlugin->populateWebViewMenu(menu, view, r);
     }
 }
@@ -107,7 +107,7 @@ void PluginProxy::populateExtensionsMenu(QMenu *menu)
         return;
     }
 
-    foreach (PluginInterface* iPlugin, m_loadedPlugins) {
+    for (PluginInterface* iPlugin : qAsConst(m_loadedPlugins)) {
         iPlugin->populateExtensionsMenu(menu);
     }
 }
@@ -116,7 +116,7 @@ bool PluginProxy::processMouseDoubleClick(Qz::ObjectName type, QObject* obj, QMo
 {
     bool accepted = false;
 
-    foreach (PluginInterface* iPlugin, m_mouseDoubleClickHandlers) {
+    for (PluginInterface* iPlugin : qAsConst(m_mouseDoubleClickHandlers)) {
         if (iPlugin->mouseDoubleClick(type, obj, event)) {
             accepted = true;
         }
@@ -129,7 +129,7 @@ bool PluginProxy::processMousePress(Qz::ObjectName type, QObject* obj, QMouseEve
 {
     bool accepted = false;
 
-    foreach (PluginInterface* iPlugin, m_mousePressHandlers) {
+    for (PluginInterface* iPlugin : qAsConst(m_mousePressHandlers)) {
         if (iPlugin->mousePress(type, obj, event)) {
             accepted = true;
         }
@@ -142,7 +142,7 @@ bool PluginProxy::processMouseRelease(Qz::ObjectName type, QObject* obj, QMouseE
 {
     bool accepted = false;
 
-    foreach (PluginInterface* iPlugin, m_mouseReleaseHandlers) {
+    for (PluginInterface* iPlugin : qAsConst(m_mouseReleaseHandlers)) {
         if (iPlugin->mouseRelease(type, obj, event)) {
             accepted = true;
         }
@@ -155,7 +155,7 @@ bool PluginProxy::processMouseMove(Qz::ObjectName type, QObject* obj, QMouseEven
 {
     bool accepted = false;
 
-    foreach (PluginInterface* iPlugin, m_mouseMoveHandlers) {
+    for (PluginInterface* iPlugin : qAsConst(m_mouseMoveHandlers)) {
         if (iPlugin->mouseMove(type, obj, event)) {
             accepted = true;
         }
@@ -168,7 +168,7 @@ bool PluginProxy::processWheelEvent(Qz::ObjectName type, QObject* obj, QWheelEve
 {
     bool accepted = false;
 
-    foreach (PluginInterface* iPlugin, m_wheelEventHandlers) {
+    for (PluginInterface* iPlugin : qAsConst(m_wheelEventHandlers)) {
         if (iPlugin->wheelEvent(type, obj, event)) {
             accepted = true;
         }
@@ -181,7 +181,7 @@ bool PluginProxy::processKeyPress(Qz::ObjectName type, QObject* obj, QKeyEvent* 
 {
     bool accepted = false;
 
-    foreach (PluginInterface* iPlugin, m_keyPressHandlers) {
+    for (PluginInterface* iPlugin : qAsConst(m_keyPressHandlers)) {
         if (iPlugin->keyPress(type, obj, event)) {
             accepted = true;
         }
@@ -194,7 +194,7 @@ bool PluginProxy::processKeyRelease(Qz::ObjectName type, QObject* obj, QKeyEvent
 {
     bool accepted = false;
 
-    foreach (PluginInterface* iPlugin, m_keyReleaseHandlers) {
+    for (PluginInterface* iPlugin : qAsConst(m_keyReleaseHandlers)) {
         if (iPlugin->keyRelease(type, obj, event)) {
             accepted = true;
         }
@@ -207,7 +207,7 @@ bool PluginProxy::acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEn
 {
     bool accepted = true;
 
-    foreach (PluginInterface* iPlugin, m_loadedPlugins) {
+    for (PluginInterface* iPlugin : qAsConst(m_loadedPlugins)) {
         if (!iPlugin->acceptNavigationRequest(page, url, type, isMainFrame)) {
             accepted = false;
         }
