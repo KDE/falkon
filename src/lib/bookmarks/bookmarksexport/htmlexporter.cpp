@@ -79,26 +79,30 @@ void HtmlExporter::writeBookmark(BookmarkItem* item, QTextStream &stream, int le
         stream << indent << "<HR>" << endl;
         break;
 
-    case BookmarkItem::Folder:
+    case BookmarkItem::Folder: {
         stream << indent << "<DT><H3>" << item->title() << "</H3>" << endl;
         stream << indent << "<DL><p>" << endl;
 
-        foreach (BookmarkItem* child, item->children()) {
+        const auto children = item->children();
+        for (BookmarkItem* child : children) {
             writeBookmark(child, stream, level + 1);
         }
 
         stream << indent << "</DL><p>" << endl;
         break;
+    }
 
-    case BookmarkItem::Root:
+    case BookmarkItem::Root: {
         stream << indent << "<DL><p>" << endl;
 
-        foreach (BookmarkItem* child, item->children()) {
+        const auto children = item->children();
+        for (BookmarkItem* child : children) {
             writeBookmark(child, stream, level + 1);
         }
 
         stream << indent << "</DL><p>" << endl;
         break;
+    }
 
     default:
         break;

@@ -101,7 +101,7 @@ void ChromeImporter::readBookmarks(const QVariantList &list, BookmarkItem* paren
 {
     Q_ASSERT(parent);
 
-    foreach (const QVariant &entry, list) {
+    for (const QVariant &entry : list) {
         const QVariantMap map = entry.toMap();
         const QString typeString = map.value(QSL("type")).toString();
         BookmarkItem::Type type;

@@ -85,7 +85,8 @@ QList<BookmarkItem*> BookmarksTreeView::selectedBookmarks() const
 {
     QList<BookmarkItem*> items;
 
-    foreach (const QModelIndex &index, selectionModel()->selectedRows()) {
+    const auto indexes = selectionModel()->selectedRows();
+    for (const QModelIndex &index : indexes) {
         BookmarkItem* item = m_model->item(m_filter->mapToSource(index));
         items.append(item);
     }

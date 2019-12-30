@@ -322,7 +322,7 @@ void Bookmarks::readBookmarks(const QVariantList &list, BookmarkItem* parent)
 {
     Q_ASSERT(parent);
 
-    foreach (const QVariant &entry, list) {
+    for (const QVariant &entry : list) {
         const QVariantMap map = entry.toMap();
         BookmarkItem::Type type = BookmarkItem::typeFromString(map.value(QSL("type")).toString());
 
@@ -364,7 +364,8 @@ QVariantList Bookmarks::writeBookmarks(BookmarkItem* parent)
 
     QVariantList list;
 
-    foreach (BookmarkItem* child, parent->children()) {
+    const auto children = parent->children();
+    for (BookmarkItem* child : children) {
         QVariantMap map;
         map.insert(QSL("type"), BookmarkItem::typeToString(child->type()));
 
@@ -405,11 +406,13 @@ void Bookmarks::search(QList<BookmarkItem*>* items, BookmarkItem* parent, const 
 
     switch (parent->type()) {
     case BookmarkItem::Root:
-    case BookmarkItem::Folder:
-        foreach (BookmarkItem* child, parent->children()) {
+    case BookmarkItem::Folder: {
+        const auto children = parent->children();
+        for (BookmarkItem* child : children) {
             search(items, child, url);
         }
         break;
+    }
 
     case BookmarkItem::Url:
         if (parent->url() == url) {
@@ -433,11 +436,13 @@ void Bookmarks::search(QList<BookmarkItem*>* items, BookmarkItem* parent, const 
 
     switch (parent->type()) {
     case BookmarkItem::Root:
-    case BookmarkItem::Folder:
-        foreach (BookmarkItem* child, parent->children()) {
+    case BookmarkItem::Folder: {
+        const auto children = parent->children();
+        for (BookmarkItem* child : children) {
             search(items, child, string, limit, sensitive);
         }
         break;
+    }
 
     case BookmarkItem::Url:
         if (parent->title().contains(string, sensitive) ||
@@ -461,10 +466,12 @@ void Bookmarks::searchKeyword(QList<BookmarkItem*>* items, BookmarkItem* parent,
 
     switch (parent->type()) {
     case BookmarkItem::Root:
-    case BookmarkItem::Folder:
-        foreach (BookmarkItem* child, parent->children())
+    case BookmarkItem::Folder: {
+        const auto children = parent->children();
+        for (BookmarkItem* child : children)
             searchKeyword(items, child, keyword);
         break;
+    }
 
     case BookmarkItem::Url:
         if (parent->keyword() == keyword)

@@ -126,7 +126,7 @@ BookmarkItem* FirefoxImporter::importBookmarks()
 
     QHash<int, BookmarkItem*> hash;
 
-    foreach (const Item &item, items) {
+    for (const Item &item : qAsConst(items)) {
         BookmarkItem* parent = hash.value(item.parent);
         BookmarkItem* bookmark = new BookmarkItem(item.type, parent ? parent : root);
         bookmark->setTitle(item.title.isEmpty() ? item.url.toString() : item.title);

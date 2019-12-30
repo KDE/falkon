@@ -79,7 +79,8 @@ void BookmarksFoldersMenu::createMenu(QMenu* menu, BookmarkItem* parent)
 
     menu->addSeparator();
 
-    foreach (BookmarkItem* child, parent->children()) {
+    const auto children = parent->children();
+    for (BookmarkItem* child : children) {
         if (child->isFolder()) {
             QMenu* m = menu->addMenu(child->icon(), child->title());
             createMenu(m, child);
@@ -205,7 +206,8 @@ bool BookmarksTools::bookmarkAllTabsDialog(QWidget* parent, TabWidget* tabWidget
         return false;
     }
 
-    foreach (WebTab* tab, tabWidget->allTabs(false)) {
+    const auto allTabs = tabWidget->allTabs(false);
+    for (WebTab* tab : allTabs) {
         if (!tab->url().isEmpty()) {
             BookmarkItem* bookmark = new BookmarkItem(BookmarkItem::Url);
             bookmark->setTitle(tab->title());
@@ -326,9 +328,11 @@ void BookmarksTools::openFolderInTabs(BrowserWindow* window, BookmarkItem* folde
     Q_ASSERT(window);
     Q_ASSERT(folder->isFolder());
 
+    const auto children = folder->children();
+
     bool showWarning = folder->children().size() > 10;
     if (!showWarning) {
-        foreach (BookmarkItem* child, folder->children()) {
+        for (BookmarkItem* child : children) {
             if (child->isFolder()) {
                 showWarning = true;
                 break;
@@ -345,7 +349,7 @@ void BookmarksTools::openFolderInTabs(BrowserWindow* window, BookmarkItem* folde
         }
     }
 
-    foreach (BookmarkItem* child, folder->children()) {
+    for (BookmarkItem* child : children) {
         if (child->isUrl()) {
             openBookmarkInNewTab(window, child);
         }
@@ -427,7 +431,8 @@ void BookmarksTools::addFolderContentsToMenu(QObject *receiver, Menu *menu, Book
     QObject::connect(menu, SIGNAL(aboutToShow()), receiver, SLOT(menuAboutToShow()));
     QObject::connect(menu, SIGNAL(menuMiddleClicked(Menu*)), receiver, SLOT(menuMiddleClicked(Menu*)));
 
-    foreach (BookmarkItem* child, folder->children()) {
+    const auto children = folder->children();
+    for (BookmarkItem* child : children) {
         addActionToMenu(receiver, menu, child);
     }
 

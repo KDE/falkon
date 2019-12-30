@@ -200,7 +200,7 @@ QMimeData* BookmarksModel::mimeData(const QModelIndexList &indexes) const
 
     QDataStream stream(&encodedData, QIODevice::WriteOnly);
 
-    foreach (const QModelIndex &index, indexes) {
+    for (const QModelIndex &index : indexes) {
         // If item's parent (=folder) is also selected, we will just move the whole folder
         if (index.isValid() && index.column() == 0 && !indexes.contains(index.parent())) {
             stream << index.row() << (quintptr) index.internalPointer();
@@ -252,7 +252,7 @@ bool BookmarksModel::dropMimeData(const QMimeData* data, Qt::DropAction action, 
 
     row = qMax(row, 0);
 
-    foreach (BookmarkItem* itm, items) {
+    for (BookmarkItem* itm : qAsConst(items)) {
         // If we are moving an item through the folder and item is above the row to insert,
         // we must decrease row by one (by the dropped folder)
         if (itm->parent() == parentItm && itm->parent()->children().indexOf(itm) < row) {
