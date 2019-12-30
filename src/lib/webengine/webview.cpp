@@ -888,7 +888,8 @@ void WebView::createSelectedTextContextMenu(QMenu* menu, const WebHitTestResult 
     Menu* swMenu = new Menu(tr("Search with..."), menu);
     swMenu->setCloseOnMiddleClick(true);
     SearchEnginesManager* searchManager = mApp->searchEnginesManager();
-    foreach (const SearchEngine &en, searchManager->allEngines()) {
+    const auto engines = searchManager->allEngines();
+    for (const SearchEngine &en : engines) {
         Action* act = new Action(en.icon, en.name);
         act->setData(QVariant::fromValue(en));
 
