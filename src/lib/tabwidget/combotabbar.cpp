@@ -36,6 +36,7 @@
 #include <QMouseEvent>
 #include <QApplication>
 #include <QToolTip>
+#include <QtGuiVersion>
 
 class QMovableTabWidget : public QWidget
 {
@@ -1085,7 +1086,11 @@ QPixmap TabBarHelper::tabPixmap(int index) const
     }
 
     if (closeButton) {
+#if QTGUI_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+        const int width = tab.fontMetrics.horizontalAdvance(tab.text) + closeButton->width();
+#else
         const int width = tab.fontMetrics.width(tab.text) + closeButton->width();
+#endif
         tab.text = tab.fontMetrics.elidedText(tabText(index), Qt::ElideRight, width);
     }
 

@@ -21,6 +21,7 @@
 
 #include <QApplication>
 #include <QPainter>
+#include <QtGuiVersion>
 
 ListItemDelegate::ListItemDelegate(int iconSize, QWidget* parent)
     : QStyledItemDelegate(parent)
@@ -114,8 +115,11 @@ QSize ListItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QMode
             p->setFixedHeight(m_itemHeight + 2 * frameWidth);
         }
     }
-
+#if QTGUI_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+    int width = 2 * m_padding + option.fontMetrics.horizontalAdvance(index.data(Qt::DisplayRole).toString());
+#else
     int width = 2 * m_padding + option.fontMetrics.width(index.data(Qt::DisplayRole).toString());
+#endif
     width = width > (m_iconSize + 2 * m_padding) ? width : m_iconSize + 2 * m_padding;
 
     if (m_uniformItemSizes) {

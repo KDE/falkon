@@ -23,6 +23,7 @@
 #include <QPainter>
 #include <QListWidget>
 #include <QApplication>
+#include <QtGuiVersion>
 
 GM_SettingsListDelegate::GM_SettingsListDelegate(QObject* parent)
     : QStyledItemDelegate(parent)
@@ -110,7 +111,11 @@ void GM_SettingsListDelegate::paint(QPainter* painter, const QStyleOptionViewIte
     const QString name = index.data(Qt::DisplayRole).toString();
     const int leftTitleEdge = leftPosition + 2;
     const int rightTitleEdge = rightPosition - m_padding;
+#if QTGUI_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+    const int leftPosForVersion = titleMetrics.horizontalAdvance(name) + m_padding;
+#else
     const int leftPosForVersion = titleMetrics.width(name) + m_padding;
+#endif
     QRect nameRect(leftTitleEdge, opt.rect.top() + m_padding, rightTitleEdge - leftTitleEdge, titleMetrics.height());
     painter->setFont(titleFont);
     style->drawItemText(painter, nameRect, Qt::AlignLeft, textPalette, true, name, colorRole);

@@ -29,6 +29,7 @@
 #include <QApplication>
 #include <QMouseEvent>
 #include <QTextLayout>
+#include <QtGuiVersion>
 
 LocationCompleterDelegate::LocationCompleterDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
@@ -141,7 +142,11 @@ void LocationCompleterDelegate::paint(QPainter* painter, const QStyleOptionViewI
     leftPosition += m_padding * 2;
 
     // Trim link to maximum number of characters that can be visible, otherwise there may be perf issue with huge URLs
+#if QTGUI_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+    const int maxChars = (opt.rect.width() - leftPosition) / opt.fontMetrics.horizontalAdvance(QL1C('i'));
+#else
     const int maxChars = (opt.rect.width() - leftPosition) / opt.fontMetrics.width(QL1C('i'));
+#endif
     QString link;
     const QByteArray linkArray = index.data(Qt::DisplayRole).toByteArray();
     if (!linkArray.startsWith("data") && !linkArray.startsWith("javascript")) {
@@ -171,7 +176,11 @@ void LocationCompleterDelegate::paint(QPainter* painter, const QStyleOptionViewI
     // Draw separator
     if (!link.isEmpty()) {
         QChar separator = QL1C('-');
+#if QTGUI_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+        QRect separatorRect(leftPosition, center - linkMetrics.height() / 2, linkMetrics.horizontalAdvance(separator), linkMetrics.height());
+#else
         QRect separatorRect(leftPosition, center - linkMetrics.height() / 2, linkMetrics.width(separator), linkMetrics.height());
+#endif
         style->drawItemText(painter, separatorRect, Qt::AlignCenter, textPalette, true, separator, colorRole);
         leftPosition += separatorRect.width() + m_padding * 2;
     }
