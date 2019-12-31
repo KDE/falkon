@@ -50,7 +50,7 @@ BookmarksImportDialog::BookmarksImportDialog(QWidget* parent)
     connect(ui->cancelButton, &QDialogButtonBox::rejected, this, &QWidget::close);
 
 #ifndef Q_OS_WIN
-    ui->browserList->setItemHidden(ui->browserList->item(IE), true);
+    ui->browserList->item(IE)->setHidden(true);
 #endif
 }
 
