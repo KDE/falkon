@@ -58,15 +58,13 @@ public:
 private:
     void paintEvent(QPaintEvent *ev) override
     {
-        Q_UNUSED(ev)
-
         QStyleOption option;
         option.initFrom(this);
         option.rect = rect();
 
         QPainter p(this);
         if (mApp->styleName() == QL1S("breeze")) {
-            p.fillRect(ev->rect(), option.palette.background());
+            p.fillRect(ev->rect(), option.palette.window());
         } else {
             style()->drawPrimitive(QStyle::PE_PanelScrollAreaCorner, &option, &p, this);
         }
