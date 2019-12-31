@@ -143,7 +143,7 @@ bool QzTools::removeRecursively(const QString &filePath)
     }
     if (fileInfo.isDir() && !fileInfo.isSymLink()) {
         QDir dir(filePath);
-        dir = dir.canonicalPath();
+        dir.setPath(dir.canonicalPath());
         if (dir.isRoot() || dir.path() == QDir::home().canonicalPath()) {
             qCritical() << "Attempt to remove root/home directory" << dir;
             return false;
