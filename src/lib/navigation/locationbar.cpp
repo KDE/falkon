@@ -678,11 +678,12 @@ void LocationBar::paintEvent(QPaintEvent* event)
         QStyleOptionFrame option;
         initStyleOption(&option);
 
-        int lm, tm, rm, bm;
-        getTextMargins(&lm, &tm, &rm, &bm);
+        QMargins margins = textMargins();
 
         QRect contentsRect = style()->subElementRect(QStyle::SE_LineEditContents, &option, this);
-        contentsRect.adjust(lm, tm, -rm, -bm);
+        contentsRect.adjust(
+            margins.left(), margins.top(), -margins.right(), -margins.bottom()
+        );
 
         QColor bg = m_progressColor;
         if (!bg.isValid() || bg.alpha() == 0) {
