@@ -43,7 +43,7 @@ SearchEnginesDialog::SearchEnginesDialog(QWidget* parent)
     connect(ui->treeWidget, &QTreeWidget::itemDoubleClicked, this, &SearchEnginesDialog::editEngine);
 
     ui->treeWidget->setItemDelegate(new RemoveItemFocusDelegate(ui->treeWidget));
-    ui->treeWidget->sortByColumn(-1);
+    ui->treeWidget->sortByColumn(-1, Qt::AscendingOrder);
     reloadEngines();
 }
 

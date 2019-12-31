@@ -107,8 +107,8 @@ void AutoFillManager::loadPasswords()
         ui->treeExcept->addTopLevelItem(item);
     }
 
-    ui->treePass->sortByColumn(-1);
-    ui->treeExcept->sortByColumn(-1);
+    ui->treePass->sortByColumn(-1, Qt::AscendingOrder);
+    ui->treeExcept->sortByColumn(-1, Qt::AscendingOrder);
 }
 
 void AutoFillManager::changePasswordBackend()
