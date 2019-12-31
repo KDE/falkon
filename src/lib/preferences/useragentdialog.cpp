@@ -77,7 +77,7 @@ UserAgentDialog::UserAgentDialog(QWidget* parent)
         ui->table->setItem(row, 1, userAgentItem);
     }
 
-    ui->table->sortByColumn(-1);
+    ui->table->sortByColumn(-1, Qt::AscendingOrder);
 
     connect(ui->add, &QAbstractButton::clicked, this, &UserAgentDialog::addSite);
     connect(ui->remove, &QAbstractButton::clicked, this, &UserAgentDialog::removeSite);
