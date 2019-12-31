@@ -518,7 +518,7 @@ Preferences::Preferences(BrowserWindow* window)
     connect(ui->protocolHandlers, &QAbstractButton::clicked, this, &Preferences::openProtocolHandlersManager);
 
     connect(ui->listWidget, &QListWidget::currentItemChanged, this, &Preferences::showStackedPage);
-    ui->listWidget->setItemSelected(ui->listWidget->itemAt(5, 5), true);
+    ui->listWidget->itemAt(5, 5)->setSelected(true);
 
     ui->listWidget->setCurrentRow(currentSettingsPage);
 
