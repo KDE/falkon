@@ -27,6 +27,7 @@
 
 #include <QDir>
 #include <QMessageBox>
+#include <QtCoreVersion>
 
 ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
     : QWidget(parent)
@@ -137,7 +138,12 @@ ThemeManager::Theme ThemeManager::parseTheme(const QString &path, const QString 
     info.name = metadata.name();
     info.description = metadata.comment();
     info.author = metadata.value(QSL("X-Falkon-Author")).toString();
+#if QTCORE_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     info.themePath = path.chopped(1);
+#else
+    info.themePath = path;
+    info.themePath.chop(1);
+#endif
 
     const QString iconName = metadata.icon();
     if (!iconName.isEmpty()) {
