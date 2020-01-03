@@ -132,6 +132,8 @@ public Q_SLOTS:
 
     void tabBarOverFlowChanged(bool overflowed);
 
+    void unloadAllTabsInCurrentWindow(int index, bool pinned);
+
 Q_SIGNALS:
     void changed();
     void tabInserted(int index);
