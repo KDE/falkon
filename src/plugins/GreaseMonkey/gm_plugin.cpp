@@ -25,7 +25,7 @@
 #include "webtab.h"
 #include "../config.h"
 
-#include <QtWebEngineVersion>
+#include <QtWebEngineWidgetsVersion>
 
 GM_Plugin::GM_Plugin()
     : QObject()
@@ -71,7 +71,7 @@ bool GM_Plugin::acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEngi
     Q_UNUSED(page)
     Q_UNUSED(isMainFrame)
 
-#if QTWEBENGINE_VERSION >= QT_VERSION_CHECK(5, 14, 0)
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 14, 0)
     bool navigationType = type == QWebEnginePage::NavigationTypeLinkClicked || type == QWebEnginePage::NavigationTypeRedirect;
 #else
     bool navigationType = type == QWebEnginePage::NavigationTypeLinkClicked;
