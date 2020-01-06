@@ -67,6 +67,11 @@
 #include <QWebEngineScriptCollection>
 #include <QRegularExpression>
 #include <QtWebEngineWidgetsVersion>
+#include <QtWebEngineCoreVersion>
+
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(5, 13, 0)
+#include <QWebEngineNotification>
+#endif
 
 #ifdef Q_OS_WIN
 #include <QtWin>
@@ -286,6 +291,15 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     m_webProfile = isPrivate() ? new QWebEngineProfile() : QWebEngineProfile::defaultProfile();
     connect(m_webProfile, &QWebEngineProfile::downloadRequested, this, &MainApplication::downloadRequested);
+
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(5, 13, 0)
+    m_webProfile->setNotificationPresenter([&] (std::unique_ptr<QWebEngineNotification> notification) {
+        auto notifications = desktopNotifications();
+        notifications->showNotification(
+            QPixmap::fromImage(notification->icon()), notification->title(), notification->message()
+        );
+    });
+#endif
 
     m_networkManager = new NetworkManager(this);
 
