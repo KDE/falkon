@@ -121,6 +121,10 @@ Preferences::Preferences(BrowserWindow* window)
     ui->dnsPrefetch->setVisible(false);
 #endif
 
+#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 13, 0)
+    ui->intPDFViewer->setVisible(false);
+#endif
+
     auto setCategoryIcon = [this](int index, const QIcon &icon) {
         ui->listWidget->item(index)->setIcon(QIcon(icon.pixmap(32)));
     };
@@ -284,6 +288,7 @@ Preferences::Preferences(BrowserWindow* window)
     // BROWSING
     settings.beginGroup("Web-Browser-Settings");
     ui->allowPlugins->setChecked(settings.value("allowPlugins", true).toBool());
+    connect(ui->allowPlugins, &QAbstractButton::toggled, this, &Preferences::allowPluginsToggled);
     ui->allowJavaScript->setChecked(settings.value("allowJavaScript", true).toBool());
     ui->linksInFocusChain->setChecked(settings.value("IncludeLinkInFocusChain", false).toBool());
     ui->spatialNavigation->setChecked(settings.value("SpatialNavigation", false).toBool());
@@ -295,6 +300,8 @@ Preferences::Preferences(BrowserWindow* window)
     ui->disableVideoAutoPlay->setChecked(settings.value("DisableVideoAutoPlay", false).toBool());
     ui->webRTCPublicIpOnly->setChecked(settings.value("WebRTCPublicIpOnly", true).toBool());
     ui->dnsPrefetch->setChecked(settings.value("DNSPrefetch", true).toBool());
+    ui->intPDFViewer->setChecked(settings.value("intPDFViewer", false).toBool());
+    ui->intPDFViewer->setEnabled(ui->allowPlugins->isChecked());
 
     const auto levels = WebView::zoomLevels();
     for (int level : levels) {
@@ -537,6 +544,11 @@ Preferences::Preferences(BrowserWindow* window)
     settings.endGroup();
 
     QzTools::setWmClass("Preferences", this);
+}
+
+void Preferences::allowPluginsToggled(bool checked)
+{
+    ui->intPDFViewer->setEnabled(checked);
 }
 
 void Preferences::chooseExternalDownloadManager()
@@ -959,6 +971,7 @@ void Preferences::saveSettings()
     settings.setValue("DisableVideoAutoPlay", ui->disableVideoAutoPlay->isChecked());
     settings.setValue("WebRTCPublicIpOnly", ui->webRTCPublicIpOnly->isChecked());
     settings.setValue("DNSPrefetch", ui->dnsPrefetch->isChecked());
+    settings.setValue("intPDFViewer", ui->intPDFViewer->isChecked());
 
 #ifdef Q_OS_WIN
     settings.setValue("CheckDefaultBrowser", ui->checkDefaultBrowser->isChecked());

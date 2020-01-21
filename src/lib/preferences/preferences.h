@@ -74,6 +74,7 @@ private Q_SLOTS:
     void setManualProxyConfigurationEnabled(bool state);
     void useExternalDownManagerChanged(bool state);
     void changeCachePathClicked();
+    void allowPluginsToggled(bool checked);
 
     void newTabChanged(int value);
     void afterLaunchChanged(int value);

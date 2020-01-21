@@ -1008,7 +1008,14 @@
                  <item>
                   <widget class="QCheckBox" name="allowPlugins">
                    <property name="text">
-                    <string>Allow Pepper Plugins (Flash plugin)</string>
+                    <string>Enable Pepper plugin API (PPAPI)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="intPDFViewer">
+                   <property name="text">
+                    <string>Use built-in PDF viewer (requires PPAPI)</string>
                    </property>
                   </widget>
                  </item>
