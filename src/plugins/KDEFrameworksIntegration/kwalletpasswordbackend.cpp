@@ -82,6 +82,10 @@ void KWalletPasswordBackend::addEntry(const PasswordEntry &entry)
 {
     initialize();
 
+    if (!m_wallet) {
+        return;
+    }
+
     PasswordEntry stored = entry;
     stored.id = QString("%1/%2").arg(entry.host, entry.username);
     stored.updated = QDateTime::currentDateTime().toTime_t();
@@ -93,6 +97,10 @@ void KWalletPasswordBackend::addEntry(const PasswordEntry &entry)
 bool KWalletPasswordBackend::updateEntry(const PasswordEntry &entry)
 {
     initialize();
+
+    if (!m_wallet) {
+        return false;
+    }
 
     m_wallet->removeEntry(entry.id.toString());
     m_wallet->writeEntry(entry.id.toString(), encodeEntry(entry));
@@ -109,6 +117,10 @@ bool KWalletPasswordBackend::updateEntry(const PasswordEntry &entry)
 void KWalletPasswordBackend::updateLastUsed(PasswordEntry &entry)
 {
     initialize();
+
+    if (!m_wallet) {
+        return;        
+    }
 
     m_wallet->removeEntry(entry.id.toString());
 
@@ -127,6 +139,10 @@ void KWalletPasswordBackend::removeEntry(const PasswordEntry &entry)
 {
     initialize();
 
+    if (!m_wallet) {
+        return; 
+    }
+
     m_wallet->removeEntry(entry.id.toString());
 
     int index = m_allEntries.indexOf(entry);
@@ -139,6 +155,10 @@ void KWalletPasswordBackend::removeEntry(const PasswordEntry &entry)
 void KWalletPasswordBackend::removeAll()
 {
     initialize();
+
+    if (!m_wallet) {
+        return; 
+    }
 
     m_allEntries.clear();
 
