@@ -8,6 +8,12 @@ var scriptData = {};
 var editingId = -1;
 var ignoreNextChanged = false;
 
+function b64DecodeUnicode(str) {
+    return decodeURIComponent(atob(str).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+}
+
 function emitChanged(pages)
 {
     ignoreNextChanged = true;
@@ -46,6 +52,7 @@ function configureSpeedDial()
     $('#fadeOverlay2').click(function() { $(this).fadeOut('slow'); });
     $('#settingsBox').click(function(event) { event.stopPropagation(); });
 }
+
 function escapeTitle(title) {
     title = title.replace(/"/g, '&quot;');
     title = title.replace(/'/g, '&apos;');
@@ -448,7 +455,7 @@ function init() {
             $('#fadeOverlay').click();
     });
 
-    var pages = JSON.parse(atob(scriptData.initialScript));
+    var pages = JSON.parse(b64DecodeUnicode(scriptData.initialScript));
     for (var i = 0; i < pages.length; ++i) {
         var page = pages[i];
         addBox(page.url, page.title, page.img);
