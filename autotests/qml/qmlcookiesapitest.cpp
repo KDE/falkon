@@ -41,7 +41,7 @@ void QmlCookiesApiTest::testCookieAdditionRemoval()
                      "})");
     QTRY_COMPARE(cookieAddSpy.count(), 1);
     QNetworkCookie netCookie = qvariant_cast<QNetworkCookie>(cookieAddSpy.at(0).at(0));
-    QCOMPARE(netCookie.name(), "Example");
+    QCOMPARE(netCookie.name(), QByteArrayLiteral("Example"));
     QObject *object = m_testHelper.evaluateQObject("Falkon.Cookies");
     QVERIFY(object);
     QSignalSpy qmlCookieSpy(object, SIGNAL(changed(QVariantMap)));
@@ -54,7 +54,7 @@ void QmlCookiesApiTest::testCookieAdditionRemoval()
     QVariantMap addedQmlCookieMap = QVariant(qmlCookieSpy.at(0).at(0)).toMap();
     QObject *addedQmlCookie = qvariant_cast<QObject*>(addedQmlCookieMap.value("cookie"));
     bool removed = addedQmlCookieMap.value("removed").toBool();
-    QCOMPARE(addedQmlCookie->property("name").toString(), "Hello");
+    QCOMPARE(addedQmlCookie->property("name").toString(), QSL("Hello"));
     QCOMPARE(removed, false);
 
     mApp->webProfile()->cookieStore()->deleteCookie(netCookie);
@@ -62,7 +62,7 @@ void QmlCookiesApiTest::testCookieAdditionRemoval()
     QVariantMap removedQmlCookieMap = QVariant(qmlCookieSpy.at(1).at(0)).toMap();
     QObject *removedQmlCookie = qvariant_cast<QObject*>(removedQmlCookieMap.value("cookie"));
     removed = removedQmlCookieMap.value("removed").toBool();
-    QCOMPARE(removedQmlCookie->property("name").toString(), "Example");
+    QCOMPARE(removedQmlCookie->property("name").toString(), QSL("Example"));
     QCOMPARE(removed, true);
 
     QSignalSpy cookieRemoveSpy(mApp->cookieJar(), &CookieJar::cookieRemoved);
@@ -72,7 +72,7 @@ void QmlCookiesApiTest::testCookieAdditionRemoval()
                      "})");
     QTRY_COMPARE(cookieRemoveSpy.count(), 1);
     netCookie = qvariant_cast<QNetworkCookie>(cookieRemoveSpy.at(0).at(0));
-    QCOMPARE(netCookie.name(), "Hello");
+    QCOMPARE(netCookie.name(), QByteArrayLiteral("Hello"));
 }
 
 void QmlCookiesApiTest::testCookieGet()
@@ -112,7 +112,7 @@ void QmlCookiesApiTest::testCookieGet()
                      "    url: '.mango-domain.com'"
                      "})");
     QVERIFY(mangoCookie);
-    QCOMPARE(mangoCookie->property("name").toString(), "Mango");
+    QCOMPARE(mangoCookie->property("name").toString(), QSL("Mango"));
     QCOMPARE(mangoCookie->property("expirationDate").toDateTime(), actualMangoCookie.expirationDate());
 
     QList<QVariant> mangoCookies = m_testHelper.evaluate("Falkon.Cookies.getAll({name: 'Mango'})").toVariant().toList();

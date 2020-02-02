@@ -55,7 +55,7 @@ void QmlTabsApiTest::testTabsAPI()
     QVERIFY(qmlTabObject1);
     QCOMPARE(qmlTabObject1->property("index").toInt(), 0);
     QCOMPARE(qmlTabObject1->property("pinned").toBool(), false);
-    QTRY_COMPARE(qmlTabObject1->property("url").toString(), "https://example.com/");
+    QTRY_COMPARE(qmlTabObject1->property("url").toString(), QSL("https://example.com/"));
 
     m_testHelper.evaluate("Falkon.Tabs.addTab({"
                      "    url: 'https://another-example.com/',"
@@ -73,13 +73,13 @@ void QmlTabsApiTest::testTabsAPI()
     QVERIFY(qmlTabObject2);
     QCOMPARE(qmlTabObject2->property("index").toInt(), 0);
     QCOMPARE(qmlTabObject2->property("pinned").toBool(), true);
-    QTRY_COMPARE(qmlTabObject2->property("url").toString(), "https://another-example.com/");
+    QTRY_COMPARE(qmlTabObject2->property("url").toString(), QSL("https://another-example.com/"));
 
     bool unpinnedTab = m_testHelper.evaluate("Falkon.Tabs.unpinTab({index: 0})").toBool();
     QVERIFY(unpinnedTab);
     QObject *qmlTabObject3 = m_testHelper.evaluateQObject("Falkon.Tabs.get({index: 0})");
     QVERIFY(qmlTabObject3);
-    QCOMPARE(qmlTabObject3->property("url").toString(), "https://another-example.com/");
+    QCOMPARE(qmlTabObject3->property("url").toString(), QSL("https://another-example.com/"));
     QCOMPARE(qmlTabObject3->property("index").toInt(), 0);
     QCOMPARE(qmlTabObject3->property("pinned").toBool(), false);
 

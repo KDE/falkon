@@ -43,7 +43,7 @@ void QmlHistoryApiTest::testAddition()
                      "})");
     QTRY_COMPARE(historySpy.count(), 1);
     HistoryEntry entry = qvariant_cast<HistoryEntry>(historySpy.at(0).at(0));
-    QCOMPARE(entry.title, "Example Domain");
+    QCOMPARE(entry.title, QSL("Example Domain"));
 
     auto object = m_testHelper.evaluateQObject("Falkon.History");
     QSignalSpy qmlHistorySpy(object, SIGNAL(visited(QmlHistoryItem*)));
