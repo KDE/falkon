@@ -19,6 +19,11 @@
 #define SEARCHTOOLBAR_H
 
 #include <QWebEnginePage>
+#include <QtWebEngineCoreVersion>
+
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(5, 14, 0)
+#include <QWebEngineFindTextResult>
+#endif
 
 #include "qzcommon.h"
 
@@ -52,6 +57,10 @@ public Q_SLOTS:
 
     void findNext();
     void findPrevious();
+
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(5, 14, 0)
+    void showSearchResults(const QWebEngineFindTextResult &result);
+#endif
 
     void close();
 
