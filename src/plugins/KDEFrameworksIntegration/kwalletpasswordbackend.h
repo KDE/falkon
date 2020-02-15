@@ -47,6 +47,7 @@ public:
 
 private:
     void initialize();
+    void showErrorNotification();
 
     KWallet::Wallet* m_wallet;
     QVector<PasswordEntry> m_allEntries;

@@ -19,6 +19,7 @@
 #include "kdeframeworksintegrationplugin.h"
 #include "mainapplication.h"
 #include "browserwindow.h"
+#include "desktopnotificationsfactory.h"
 
 #include <QDateTime>
 
@@ -83,6 +84,7 @@ void KWalletPasswordBackend::addEntry(const PasswordEntry &entry)
     initialize();
 
     if (!m_wallet) {
+        showErrorNotification();
         return;
     }
 
@@ -99,6 +101,7 @@ bool KWalletPasswordBackend::updateEntry(const PasswordEntry &entry)
     initialize();
 
     if (!m_wallet) {
+        showErrorNotification();
         return false;
     }
 
@@ -119,6 +122,7 @@ void KWalletPasswordBackend::updateLastUsed(PasswordEntry &entry)
     initialize();
 
     if (!m_wallet) {
+        showErrorNotification();
         return;        
     }
 
@@ -140,6 +144,7 @@ void KWalletPasswordBackend::removeEntry(const PasswordEntry &entry)
     initialize();
 
     if (!m_wallet) {
+        showErrorNotification();
         return; 
     }
 
@@ -157,6 +162,7 @@ void KWalletPasswordBackend::removeAll()
     initialize();
 
     if (!m_wallet) {
+        showErrorNotification();
         return; 
     }
 
@@ -164,6 +170,16 @@ void KWalletPasswordBackend::removeAll()
 
     m_wallet->removeFolder("Falkon");
     m_wallet->createFolder("Falkon");
+}
+
+void KWalletPasswordBackend::showErrorNotification()
+{
+    static bool initialized;
+    
+    if (!initialized) {
+        initialized = true;
+        mApp->desktopNotifications()->showNotification(KDEFrameworksIntegrationPlugin::tr("KWallet disabled"), KDEFrameworksIntegrationPlugin::tr("Please enable KWallet to save password."));
+    }
 }
 
 void KWalletPasswordBackend::initialize()
