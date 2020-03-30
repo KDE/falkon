@@ -25,6 +25,7 @@
 #include <QByteArray>
 #include <QPixmap>
 #include <QPainter>
+#include <QPainterPath>
 #include <QBuffer>
 #include <QFile>
 #include <QDir>
