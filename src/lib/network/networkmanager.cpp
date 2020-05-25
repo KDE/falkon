@@ -59,7 +59,11 @@ NetworkManager::NetworkManager(QObject *parent)
 
     // Create url interceptor
     m_urlInterceptor = new NetworkUrlInterceptor(this);
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 13, 0)
+    mApp->webProfile()->setUrlRequestInterceptor(m_urlInterceptor);
+#else
     mApp->webProfile()->setRequestInterceptor(m_urlInterceptor);
+#endif
 
     // Create cookie jar
     mApp->cookieJar();
@@ -295,7 +299,11 @@ void NetworkManager::loadSettings()
 
 void NetworkManager::shutdown()
 {
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 13, 0)
+    mApp->webProfile()->setUrlRequestInterceptor(nullptr);
+#else
     mApp->webProfile()->setRequestInterceptor(nullptr);
+#endif
 }
 
 // static
