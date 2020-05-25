@@ -81,6 +81,8 @@ WebPage::WebPage(QObject* parent)
     , m_secureStatus(false)
 {
     QWebChannel *channel = new QWebChannel(this);
+    // Prevents white flashes.
+    setBackgroundColor(MainApplication::palette().color(QPalette::Window));
     ExternalJsObject::setupWebChannel(channel, this);
     setWebChannel(channel, SafeJsWorld);
 
