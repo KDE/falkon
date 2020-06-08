@@ -23,6 +23,7 @@
 
 #include <QDateTime>
 
+#include <kwallet_version.h>
 #include <KWallet>
 
 static PasswordEntry decodeEntry(const QByteArray &data)
@@ -220,7 +221,13 @@ void KWalletPasswordBackend::initialize()
     }
 
     QMap<QString, QByteArray> entries;
-    if (m_wallet->readEntryList("*", entries) != 0) {
+    bool ok = false;
+#if KWALLET_VERSION < QT_VERSION_CHECK(5, 72, 0)
+    ok = m_wallet->readEntryList("*", entries) == 0;
+#else
+    entries = m_wallet->entriesList(&ok);
+#endif
+    if (!ok) {
         qWarning() << "KWalletPasswordBackend::initialize Cannot read entries!";
         return;
     }
