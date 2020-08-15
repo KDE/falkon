@@ -47,6 +47,7 @@ private Q_SLOTS:
     void openBookmarkInNewTab();
     void openBookmarkInNewWindow();
     void openBookmarkInNewPrivateWindow();
+    void createNewFolder();
     void editBookmark();
     void deleteBookmark();
 

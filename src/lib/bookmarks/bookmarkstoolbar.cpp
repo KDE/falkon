@@ -30,6 +30,7 @@
 #include <QMimeData>
 #include <QTimer>
 #include <QFrame>
+#include <QInputDialog>
 
 BookmarksToolbar::BookmarksToolbar(BrowserWindow* window, QWidget* parent)
     : QWidget(parent)
@@ -73,6 +74,7 @@ void BookmarksToolbar::contextMenuRequested(const QPoint &pos)
     QAction* actNewWindow = menu.addAction(IconProvider::newWindowIcon(), tr("Open in new window"));
     QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), tr("Open in new private window"));
     menu.addSeparator();
+    QAction* actNewFolder = menu.addAction(QIcon::fromTheme("folder-new"), tr("New Folder"));
     QAction* actEdit = menu.addAction(tr("Edit"));
     QAction* actDelete = menu.addAction(QIcon::fromTheme("edit-delete"), tr("Delete"));
     menu.addSeparator();
@@ -88,6 +90,7 @@ void BookmarksToolbar::contextMenuRequested(const QPoint &pos)
     connect(actNewTab, &QAction::triggered, this, &BookmarksToolbar::openBookmarkInNewTab);
     connect(actNewWindow, &QAction::triggered, this, &BookmarksToolbar::openBookmarkInNewWindow);
     connect(actNewPrivateWindow, &QAction::triggered, this, &BookmarksToolbar::openBookmarkInNewPrivateWindow);
+    connect(actNewFolder, &QAction::triggered, this, &BookmarksToolbar::createNewFolder);
     connect(actEdit, &QAction::triggered, this, &BookmarksToolbar::editBookmark);
     connect(actDelete, &QAction::triggered, this, &BookmarksToolbar::deleteBookmark);
 
@@ -174,6 +177,25 @@ void BookmarksToolbar::openBookmarkInNewPrivateWindow()
 {
     if (m_clickedBookmark) {
         BookmarksTools::openBookmarkInNewPrivateWindow(m_clickedBookmark);
+    }
+}
+
+void BookmarksToolbar::createNewFolder() 
+{
+    QString name = QInputDialog::getText(nullptr, tr("New Folder"), tr("Enter Folder Name:"));
+    
+    if (!name.isEmpty()) {
+        BookmarkItem* parent;
+        
+        if (m_clickedBookmark) {
+            parent = m_clickedBookmark;
+        } else {
+            parent = m_bookmarks->toolbarFolder();
+        }
+        
+        auto folder = new BookmarkItem(BookmarkItem::Folder);
+        folder->setTitle(name);
+        m_bookmarks->addBookmark(parent, folder);
     }
 }
 
