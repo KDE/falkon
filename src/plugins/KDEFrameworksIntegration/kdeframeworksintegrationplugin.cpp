@@ -35,6 +35,7 @@
 
 #include <QWebEngineProfile>
 #include <QMenu>
+#include <QJsonArray>
 
 KDEFrameworksIntegrationPlugin::KDEFrameworksIntegrationPlugin()
     : QObject()
@@ -96,7 +97,7 @@ void KDEFrameworksIntegrationPlugin::populateWebViewMenu(QMenu *menu, WebView *v
     Q_UNUSED(r)
 
     m_sharePageMenu->model()->setInputData(QJsonObject{
-        { QStringLiteral("urls"), QJsonValue(view->url().toString()) },
+        { QStringLiteral("urls"), QJsonArray {QJsonValue(view->url().toString())} },
         { QStringLiteral("title"), QJsonValue(view->title()) }
     });
     m_sharePageMenu->reload();
