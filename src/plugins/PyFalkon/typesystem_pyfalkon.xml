@@ -12,6 +12,7 @@
       <enum-type name="CommandLineAction"/>
       <enum-type name="ObjectName"/>
       <enum-type name="NewTabPositionFlag" flags="NewTabPositionFlags"/>
+      <rejection class="*" field-name="sessionVersion"/>
     </namespace-type>
 
     <object-type name="LineEdit">
