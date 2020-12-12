@@ -45,6 +45,7 @@ private Q_SLOTS:
     void removeClicked();
     void currentChanged(QListWidgetItem* item);
     void itemChanged(QListWidgetItem* item);
+    void addFilter(const QString& newText);
 
     void refresh();
 

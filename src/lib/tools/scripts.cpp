@@ -232,7 +232,7 @@ QString Scripts::completeFormData(const QByteArray &data)
                           "        var type = input.type.toLowerCase();"
                           "        if (type != 'text' && type != 'password' && type != 'email')"
                           "            continue;"
-                          "        if (input.name == key) {"
+                          "        if (input.name == key && input.name != "") {"
                           "            input.value = val;"
                           "            input.dispatchEvent(new Event('change'));"
                           "        }"

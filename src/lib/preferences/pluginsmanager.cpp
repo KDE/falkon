@@ -52,6 +52,7 @@ PluginsManager::PluginsManager(QWidget* parent)
     connect(ui->butRemove, &QAbstractButton::clicked, this, &PluginsManager::removeClicked);
     connect(ui->list, &QListWidget::currentItemChanged, this, &PluginsManager::currentChanged);
     connect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
+    connect(ui->search, &QLineEdit::textChanged, this, &PluginsManager::addFilter);
     connect(mApp->plugins(), &Plugins::availablePluginsChanged, this, &PluginsManager::refresh);
 
     ui->list->setItemDelegate(new PluginListDelegate(ui->list));
@@ -241,6 +242,19 @@ void PluginsManager::removeClicked()
     }
 
     mApp->plugins()->removePlugin(&plugin);
+}
+
+void PluginsManager::addFilter(const QString& filter) {
+    for (int i = 0; i < ui->list->count(); ++i) {
+        const QString& pluginName = ui->list->item(i)->text();
+
+        if (pluginName.contains(filter,Qt::CaseInsensitive) || !filter.size()) {
+            ui->list->item(i)->setHidden(false);
+        }
+        else {
+            ui->list->item(i)->setHidden(true);
+        }
+    }
 }
 
 PluginsManager::~PluginsManager()

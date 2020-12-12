@@ -12,6 +12,13 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
+    <widget class="QLineEdit" name="search">
+     <property name="placeholderText">
+      <string>Enter name</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QListWidget" name="list">
      <property name="alternatingRowColors">
       <bool>true</bool>
