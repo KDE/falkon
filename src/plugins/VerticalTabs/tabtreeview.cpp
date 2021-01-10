@@ -226,6 +226,8 @@ bool TabTreeView::viewportEvent(QEvent *event)
                 } else {
                     expand(m_pressedIndex);
                 }
+                me->accept();
+                return true;
             } else if (m_pressedButton == NoButton && tab) {
                 tab->makeCurrentTab();
             }
