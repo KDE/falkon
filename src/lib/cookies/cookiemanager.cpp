@@ -85,8 +85,8 @@ CookieManager::CookieManager(QWidget *parent)
     ui->cookieTree->header()->setDefaultSectionSize(220);
     ui->cookieTree->setFocus();
 
-    ui->whiteList->setSortingEnabled(true);
-    ui->blackList->setSortingEnabled(true);
+    ui->whiteList->sortItems(Qt::AscendingOrder);
+    ui->blackList->sortItems(Qt::AscendingOrder);
 
     QShortcut* removeShortcut = new QShortcut(QKeySequence("Del"), this);
     connect(removeShortcut, &QShortcut::activated, this, &CookieManager::deletePressed);
