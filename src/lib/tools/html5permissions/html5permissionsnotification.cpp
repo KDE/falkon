@@ -23,6 +23,8 @@
 
 #include <QTimer>
 #include <QWebEnginePage>
+#include <QtWebEngineWidgetsVersion>
+
 
 HTML5PermissionsNotification::HTML5PermissionsNotification(const QUrl &origin, QWebEnginePage* page, const QWebEnginePage::Feature &feature)
     : AnimatedWidget(AnimatedWidget::Down, 300, 0)
@@ -63,6 +65,15 @@ HTML5PermissionsNotification::HTML5PermissionsNotification(const QUrl &origin, Q
         ui->textLabel->setText(tr("Allow %1 to hide your pointer?").arg(site));
         break;
 
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    case QWebEnginePage::DesktopVideoCapture:
+        ui->textLabel->setText(tr("Allow %1 to capture your screen?").arg(site));
+        break;
+
+    case QWebEnginePage::DesktopAudioVideoCapture:
+        ui->textLabel->setText(tr("Allow %1 to capture your screen and audio?").arg(site));
+        break;
+#endif
     default:
         qWarning() << "Unknown feature" << feature;
         break;

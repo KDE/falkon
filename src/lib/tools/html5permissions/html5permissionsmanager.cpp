@@ -20,6 +20,8 @@
 #include "settings.h"
 #include "webview.h"
 
+#include <QtWebEngineWidgetsVersion>
+
 
 HTML5PermissionsManager::HTML5PermissionsManager(QObject* parent)
     : QObject(parent)
@@ -95,6 +97,14 @@ void HTML5PermissionsManager::loadSettings()
     m_granted[QWebEnginePage::MouseLock] = settings.value("MouseLockGranted", QStringList()).toStringList();
     m_denied[QWebEnginePage::MouseLock] = settings.value("MouseLockDenied", QStringList()).toStringList();
 
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    m_granted[QWebEnginePage::DesktopVideoCapture] = settings.value("DesktopVideoCaptureGranted", QStringList()).toStringList();
+    m_denied[QWebEnginePage::DesktopVideoCapture] = settings.value("DesktopVideoCaptureDenied", QStringList()).toStringList();
+
+    m_granted[QWebEnginePage::DesktopAudioVideoCapture] = settings.value("DesktopAudioVideoCaptureGranted", QStringList()).toStringList();
+    m_denied[QWebEnginePage::DesktopAudioVideoCapture] = settings.value("DesktopAudioVideoCaptureDenied", QStringList()).toStringList();
+#endif
+
     settings.endGroup();
 }
 
@@ -120,6 +130,14 @@ void HTML5PermissionsManager::saveSettings()
 
     settings.setValue("MouseLockGranted", m_granted[QWebEnginePage::MouseLock]);
     settings.setValue("MouseLockDenied", m_denied[QWebEnginePage::MouseLock]);
+
+#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    settings.setValue("DesktopVideoCaptureGranted", m_granted[QWebEnginePage::DesktopVideoCapture]);
+    settings.setValue("DesktopVideoCaptureDenied", m_denied[QWebEnginePage::DesktopVideoCapture]);
+
+    settings.setValue("DesktopAudioVideoCaptureGranted", m_granted[QWebEnginePage::DesktopAudioVideoCapture]);
+    settings.setValue("DesktopAudioVideoCaptureDenied", m_denied[QWebEnginePage::DesktopAudioVideoCapture]);
+#endif
 
     settings.endGroup();
 }
