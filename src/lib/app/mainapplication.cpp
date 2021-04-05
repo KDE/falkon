@@ -976,6 +976,7 @@ void MainApplication::loadSettings()
 
 #if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 13, 0)
     webSettings->setAttribute(QWebEngineSettings::PdfViewerEnabled, settings.value(QSL("intPDFViewer"), false).toBool());
+    webSettings->setAttribute(QWebEngineSettings::ScreenCaptureEnabled, settings.value(QSL("screenCaptureEnabled"), false).toBool());
 #endif
 
     webSettings->setDefaultTextEncoding(settings.value(QSL("DefaultEncoding"), webSettings->defaultTextEncoding()).toString());

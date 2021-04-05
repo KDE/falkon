@@ -123,7 +123,9 @@ Preferences::Preferences(BrowserWindow* window)
 
 #if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 13, 0)
     ui->intPDFViewer->setVisible(false);
+    ui->screenCaptureEnabled->setVisible(false);
 #endif
+
 
     auto setCategoryIcon = [this](int index, const QIcon &icon) {
         ui->listWidget->item(index)->setIcon(QIcon(icon.pixmap(32)));
@@ -302,6 +304,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->dnsPrefetch->setChecked(settings.value("DNSPrefetch", true).toBool());
     ui->intPDFViewer->setChecked(settings.value("intPDFViewer", false).toBool());
     ui->intPDFViewer->setEnabled(ui->allowPlugins->isChecked());
+    ui->screenCaptureEnabled->setChecked(settings.value("screenCaptureEnabled", false).toBool());
 
     const auto levels = WebView::zoomLevels();
     for (int level : levels) {
@@ -972,6 +975,7 @@ void Preferences::saveSettings()
     settings.setValue("WebRTCPublicIpOnly", ui->webRTCPublicIpOnly->isChecked());
     settings.setValue("DNSPrefetch", ui->dnsPrefetch->isChecked());
     settings.setValue("intPDFViewer", ui->intPDFViewer->isChecked());
+    settings.setValue("screenCaptureEnabled", ui->screenCaptureEnabled->isChecked());
 
 #ifdef Q_OS_WIN
     settings.setValue("CheckDefaultBrowser", ui->checkDefaultBrowser->isChecked());
