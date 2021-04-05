@@ -123,6 +123,9 @@ Preferences::Preferences(BrowserWindow* window)
 
 #if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 13, 0)
     ui->intPDFViewer->setVisible(false);
+#endif
+
+#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 13, 2)
     ui->screenCaptureEnabled->setVisible(false);
 #endif
 
