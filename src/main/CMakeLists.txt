@@ -39,8 +39,6 @@ if (UNIX AND NOT APPLE)
 
     install(PROGRAMS ../../linux/applications/org.kde.falkon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
-    install(FILES ../../linux/pixmaps/falkon.png DESTINATION ${KDE_INSTALL_DATADIR}/pixmaps)
-
     ecm_install_icons(ICONS
         ../../linux/hicolor/16-apps-falkon.png
         ../../linux/hicolor/32-apps-falkon.png
