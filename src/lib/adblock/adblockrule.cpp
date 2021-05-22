@@ -149,6 +149,11 @@ QString AdBlockRule::cssSelector() const
     return m_matchString;
 }
 
+bool AdBlockRule::isUnsupportedRule() const
+{
+    return m_type == ExtendedCssRule || m_type == SnippetRule || m_isInternalDisabled;
+}
+
 bool AdBlockRule::isDocument() const
 {
     return hasOption(DocumentOption);
@@ -356,13 +361,44 @@ void AdBlockRule::parseFilter()
         return;
     }
 
+    // Exception always starts with @@
+    if (parsedLine.startsWith(QL1S("@@"))) {
+        m_isException = true;
+        parsedLine.remove(0, 2);
+    }
+
+    // Extended CSS element hiding
+    if (parsedLine.contains(QL1S("#?#"))) {
+        m_type = ExtendedCssRule;
+        int pos = parsedLine.indexOf(QL1C('#'));
+        if (!parsedLine.startsWith(QL1S("#"))) {
+            QString domains = parsedLine.left(pos);
+            parseDomains(domains, QL1C(','));
+        }
+        m_matchString = parsedLine.mid(pos + 3);
+        // CSS rule cannot have more options -> stop parsing
+        return;
+    }
+
+    // Snippet rule
+    if (parsedLine.contains(QL1S("#$#"))) {
+        m_type = SnippetRule;
+        int pos = parsedLine.indexOf(QL1C('#'));
+        if (!parsedLine.startsWith(QL1S("#"))) {
+            QString domains = parsedLine.left(pos);
+            parseDomains(domains, QL1C(','));
+        }
+        m_matchString = parsedLine.mid(pos + 3);
+        return;
+    }
+
     // CSS Element hiding rule
     if (parsedLine.contains(QL1S("##")) || parsedLine.contains(QL1S("#@#"))) {
         m_type = CssRule;
         int pos = parsedLine.indexOf(QL1C('#'));
 
         // Domain restricted rule
-        if (!parsedLine.startsWith(QL1S("##"))) {
+        if (!parsedLine.startsWith(QL1S("#"))) {
             QString domains = parsedLine.left(pos);
             parseDomains(domains, QL1C(','));
         }
@@ -372,12 +408,6 @@ void AdBlockRule::parseFilter()
 
         // CSS rule cannot have more options -> stop parsing
         return;
-    }
-
-    // Exception always starts with @@
-    if (parsedLine.startsWith(QL1S("@@"))) {
-        m_isException = true;
-        parsedLine.remove(0, 2);
     }
 
     // Parse all options following $ char

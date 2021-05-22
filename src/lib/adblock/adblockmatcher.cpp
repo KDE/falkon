@@ -132,6 +132,9 @@ void AdBlockMatcher::update()
             // Don't add internally disabled rules to cache
             if (rule->isInternalDisabled())
                 continue;
+            // Or unsupported ones
+            if (rule->isUnsupportedRule())
+                continue;
 
             if (rule->isCssRule()) {
                 // We will add only enabled css rules to cache, because there is no enabled/disabled
@@ -153,8 +156,7 @@ void AdBlockMatcher::update()
             else if (rule->isException()) {
                 if (!m_networkExceptionTree.add(rule))
                     m_networkExceptionRules.append(rule);
-            }
-            else {
+            } else {
                 if (!m_networkBlockTree.add(rule))
                     m_networkBlockRules.append(rule);
             }

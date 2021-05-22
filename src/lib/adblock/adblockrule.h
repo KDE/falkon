@@ -77,6 +77,8 @@ public:
     bool isCssRule() const;
     QString cssSelector() const;
 
+    bool isUnsupportedRule() const;
+
     bool isDocument() const;
     bool isElemhide() const;
 
@@ -112,7 +114,9 @@ private:
         StringEndsMatchRule = 3,
         StringContainsMatchRule = 4,
         MatchAllUrlsRule = 5,
-        Invalid = 6
+        ExtendedCssRule = 6,
+        SnippetRule = 7,
+        Invalid = 8
     };
 
     enum RuleOption {
