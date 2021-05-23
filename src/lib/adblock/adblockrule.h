@@ -81,6 +81,7 @@ public:
 
     bool isDocument() const;
     bool isElemhide() const;
+    bool isGenerichide() const;
 
     bool isDomainRestricted() const;
     bool isException() const;
@@ -152,6 +153,8 @@ private:
         // Exception only options
         DocumentOption          = 1 << 20,
         ElementHideOption       = 1 << 21,
+        GenericHideOption       = 1 << 22,
+        GenericBlockOption      = 1 << 23,
     };
 
     Q_DECLARE_FLAGS(RuleOptions, RuleOption)

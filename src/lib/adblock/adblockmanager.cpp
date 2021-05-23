@@ -412,7 +412,7 @@ bool AdBlockManager::canBeBlocked(const QUrl &url) const
 
 QString AdBlockManager::elementHidingRules(const QUrl &url) const
 {
-    if (!isEnabled() || !canRunOnScheme(url.scheme()) || !canBeBlocked(url))
+    if (!isEnabled() || !canRunOnScheme(url.scheme()) || m_matcher->genericElemHideDisabledForUrl(url))
         return QString();
 
     return m_matcher->elementHidingRules();
@@ -420,7 +420,7 @@ QString AdBlockManager::elementHidingRules(const QUrl &url) const
 
 QString AdBlockManager::elementHidingRulesForDomain(const QUrl &url) const
 {
-    if (!isEnabled() || !canRunOnScheme(url.scheme()) || !canBeBlocked(url))
+    if (!isEnabled() || !canRunOnScheme(url.scheme()) || m_matcher->elemHideDisabledForUrl(url))
         return QString();
 
     return m_matcher->elementHidingRulesForDomain(url.host());

@@ -83,6 +83,20 @@ bool AdBlockMatcher::elemHideDisabledForUrl(const QUrl &url) const
     return false;
 }
 
+bool AdBlockMatcher::genericElemHideDisabledForUrl(const QUrl &url) const
+{
+    if (elemHideDisabledForUrl(url))
+        return true;
+
+    int count = m_generichideRules.count();
+
+    for (int i = 0; i < count; ++i)
+        if (m_generichideRules.at(i)->urlMatch(url))
+            return true;
+
+    return false;
+}
+
 QString AdBlockMatcher::elementHidingRules() const
 {
     return m_elementHidingRules;
@@ -152,6 +166,9 @@ void AdBlockMatcher::update()
             }
             else if (rule->isElemhide()) {
                 m_elemhideRules.append(rule);
+            }
+            else if (rule->isGenerichide()) {
+                m_generichideRules.append(rule);
             }
             else if (rule->isException()) {
                 if (!m_networkExceptionTree.add(rule))

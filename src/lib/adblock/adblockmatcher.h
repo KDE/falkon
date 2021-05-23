@@ -40,6 +40,7 @@ public:
 
     bool adBlockDisabledForUrl(const QUrl &url) const;
     bool elemHideDisabledForUrl(const QUrl &url) const;
+    bool genericElemHideDisabledForUrl(const QUrl &url) const;
 
     QString elementHidingRules() const;
     QString elementHidingRulesForDomain(const QString &domain) const;
@@ -57,6 +58,7 @@ private:
     QVector<const AdBlockRule*> m_domainRestrictedCssRules;
     QVector<const AdBlockRule*> m_documentRules;
     QVector<const AdBlockRule*> m_elemhideRules;
+    QVector<const AdBlockRule*> m_generichideRules;
 
     QString m_elementHidingRules;
     AdBlockSearchTree m_networkBlockTree;

@@ -164,6 +164,11 @@ bool AdBlockRule::isElemhide() const
     return hasOption(ElementHideOption);
 }
 
+bool AdBlockRule::isGenerichide() const
+{
+    return hasOption(GenericHideOption);
+}
+
 bool AdBlockRule::isDomainRestricted() const
 {
     return hasOption(DomainRestrictedOption);
@@ -201,7 +206,7 @@ bool AdBlockRule::isInternalDisabled() const
 
 bool AdBlockRule::urlMatch(const QUrl &url) const
 {
-    if (!hasOption(DocumentOption) && !hasOption(ElementHideOption)) {
+    if (!hasOption(DocumentOption) && !hasOption(ElementHideOption) && !hasOption(GenericHideOption) && !hasOption(GenericBlockOption)) {
         return false;
     }
 
@@ -485,6 +490,10 @@ void AdBlockRule::parseFilter()
                 setException(OtherOption, option.startsWith(QL1C('~')));
                 ++handledOptions;
             }
+            else if (option == QL1S("collapse")) {
+                // Hiding placeholders of blocked elements is enabled by default
+                ++handledOptions;
+            }
             else if (option == QL1S("popup")) {
                 // doesn't do anything yet
                 setOption(PopupOption);
@@ -498,9 +507,14 @@ void AdBlockRule::parseFilter()
                 setOption(ElementHideOption);
                 ++handledOptions;
             }
-            else if (option == QL1S("collapse")) {
-                // Hiding placeholders of blocked elements is enabled by default
+            else if (option == QL1S("generichide") && m_isException) {
+                setOption(GenericHideOption);
                 ++handledOptions;
+            }
+            else if (option == QL1S("genericblock") && m_isException) {
+                // doesn't do anything yet
+                setOption(GenericBlockOption);
+//                 ++handledOptions;
             }
         }
 
