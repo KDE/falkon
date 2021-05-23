@@ -95,17 +95,8 @@ public:
 
     bool matchDomain(const QString &domain) const;
     bool matchThirdParty(const QWebEngineUrlRequestInfo &request) const;
-    bool matchObject(const QWebEngineUrlRequestInfo &request) const;
-    bool matchSubdocument(const QWebEngineUrlRequestInfo &request) const;
-    bool matchXmlHttpRequest(const QWebEngineUrlRequestInfo &request) const;
-    bool matchImage(const QWebEngineUrlRequestInfo &request) const;
-    bool matchScript(const QWebEngineUrlRequestInfo &request) const;
-    bool matchStyleSheet(const QWebEngineUrlRequestInfo &request) const;
-    bool matchObjectSubrequest(const QWebEngineUrlRequestInfo &request) const;
-    bool matchPing(const QWebEngineUrlRequestInfo &request) const;
-    bool matchMedia(const QWebEngineUrlRequestInfo &request) const;
-    bool matchFont(const QWebEngineUrlRequestInfo &request) const;
-    bool matchOther(const QWebEngineUrlRequestInfo &request) const;
+
+    bool matchType(const QWebEngineUrlRequestInfo &request) const;
 
 protected:
     bool stringMatch(const QString &domain, const QString &encodedUrl) const;
@@ -125,24 +116,38 @@ private:
     };
 
     enum RuleOption {
-        NoOption = 0,
-        DomainRestrictedOption = 1,
-        ThirdPartyOption = 2,
-        ObjectOption = 4,
-        SubdocumentOption = 8,
-        XMLHttpRequestOption = 16,
-        ImageOption = 32,
-        ScriptOption = 64,
-        StyleSheetOption = 128,
-        ObjectSubrequestOption = 256,
-        PingOption = 512,
-        MediaOption = 1024,
-        FontOption = 2048,
-        OtherOption = 4096,
+        NoOption                = 0,
+        DomainRestrictedOption  = 1,
+        ThirdPartyOption        = 1 << 1,
+
+        ObjectOption            = 1 << 2,
+        SubdocumentOption       = 1 << 3,
+        XMLHttpRequestOption    = 1 << 4,
+        ImageOption             = 1 << 5,
+        ScriptOption            = 1 << 6,
+        StyleSheetOption        = 1 << 7,
+        ObjectSubrequestOption  = 1 << 8,
+        PingOption              = 1 << 9,
+        MediaOption             = 1 << 10,
+        FontOption              = 1 << 11,
+        OtherOption             = 1 << 12,
+        TypeOptions = ObjectOption
+                    | SubdocumentOption
+                    | XMLHttpRequestOption
+                    | ImageOption
+                    | ScriptOption
+                    | StyleSheetOption
+                    | ObjectSubrequestOption
+                    | PingOption
+                    | MediaOption
+                    | FontOption
+                    | OtherOption,
+
+        PopupOption             = 1 << 13,
 
         // Exception only options
-        DocumentOption = 8192,
-        ElementHideOption = 16384
+        DocumentOption          = 1 << 20,
+        ElementHideOption       = 1 << 21,
     };
 
     Q_DECLARE_FLAGS(RuleOptions, RuleOption)
