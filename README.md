@@ -43,4 +43,4 @@ You can report any bugs or feature request in KDE [bugzilla](https://bugs.kde.or
 
 #### Contact
 
-You can get in contact with developers using [mailing list](https://mail.kde.org/mailman/listinfo/falkon) or __IRC__ `#falkon` at `chat.freenode.net`.
+You can get in contact with developers using [mailing list](https://mail.kde.org/mailman/listinfo/falkon) or __IRC__ `#falkon` at `irc.libera.chat`.
