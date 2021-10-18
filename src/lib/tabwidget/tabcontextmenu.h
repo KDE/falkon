@@ -37,7 +37,7 @@ public:
         ShowCloseOtherTabsActions = 1 << 2,
         ShowDetachTabAction = 1 << 3,
 
-        DefaultOptions = HorizontalTabs | ShowCloseOtherTabsActions
+        DefaultOptions = HorizontalTabs | ShowCloseOtherTabsActions | ShowDetachTabAction
     };
     Q_DECLARE_FLAGS(Options, Option)
 
