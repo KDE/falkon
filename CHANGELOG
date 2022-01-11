@@ -1,11 +1,13 @@
 Version 3.2.0
     * not released yet
+<<<<<<< HEAD
     * Add support for Screen Capture (Qt 5.13.2+)
     * Option for internal PDFium-based viewer (Qt 5.13+)
     * CookieManager: Add support for selecting more than one cookie at once
     * Correct the sorting for cookies white- and black- lists
     * Speeddial: decode initialScript data as Utf8
     * Set current tab as parent for duplicated tab
+    * add support for detaching tabs via context menu (BUG 443947, !22 from Fran Rogers)
     * BookmarksManager: Don't allow to create bookmark without parent
     * Remove the padding of the bookmark bar
     * Added context menu item to bookmarks toolbar for creating folder
@@ -37,7 +39,7 @@ Version 3.2.0
     * VerticalTabs: Also override Ctrl+PgUp/PgDown shortcuts
 
     * Remove GnomeKeyringPasswords plugin
-    
+
 Version 3.1.0
     * released 19 March 2019
     * add support for writing plugins in QML
