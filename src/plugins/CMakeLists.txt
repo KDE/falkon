@@ -9,6 +9,10 @@ add_subdirectory(StatusBarIcons)
 add_subdirectory(TabManager)
 add_subdirectory(VerticalTabs)
 
+if (GNOME_KEYRING_FOUND)
+    add_subdirectory(GnomeKeyringPasswords)
+endif()
+
 if (ENABLE_KDE_FRAMEWORKS_INTEGRATION_PLUGIN)
     add_subdirectory(KDEFrameworksIntegration)
 endif()

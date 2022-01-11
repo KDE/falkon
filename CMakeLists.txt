@@ -98,6 +98,15 @@ if (EXISTS "${CMAKE_SOURCE_DIR}/po")
     find_package(KF5I18n REQUIRED)
 endif()
 
+# Optional: GnomeKeyring
+find_package(PkgConfig)
+if (PKG_CONFIG_FOUND)
+    option(BUILD_KEYRING "Gnome keyring password plugin" ON)
+    if (BUILD_KEYRING)
+        pkg_check_modules(GNOME_KEYRING IMPORTED_TARGET gnome-keyring-1 )
+    endif()
+endif()
+
 # Optional: KWallet, KIO, KCrash, KCoreAddons
 set(KF5_MIN_VERSION "5.54.0")
 find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG)
