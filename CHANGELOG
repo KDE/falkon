@@ -1,6 +1,43 @@
 Version 3.2.0
     * not released yet
+    * Add support for Screen Capture (Qt 5.13.2+)
+    * Option for internal PDFium-based viewer (Qt 5.13+)
+    * CookieManager: Add support for selecting more than one cookie at once
+    * Correct the sorting for cookies white- and black- lists
+    * Speeddial: decode initialScript data as Utf8
+    * Set current tab as parent for duplicated tab
+    * BookmarksManager: Don't allow to create bookmark without parent
+    * Remove the padding of the bookmark bar
+    * Added context menu item to bookmarks toolbar for creating folder
+    * Preferences: Add links to KDE store for installing themes/extensions
+    * OcsSupport: Add initial support for downloading themes/extensions
+    * Add filter to preferences extensions page
+    * SideBarManager: Clear active sidebar upon close
+    * Added focus for searchbar in history sidebar & bookmark sidebar
+    * SearchToolBar: Remove warning message that no results were found
+    * SearchBar - Show number of matches found on page search
+    * added pause/resume for downloads
+    * Prompt user when KWallet is disabled
+    * KDEFrameworksIntegration: Create Purpose menu in init
+    * GreaseMonkey: Fix detecting *.user.js urls
 
+    * Added QLoggingCategory to Falkon
+    * Handle web push notifications with Falkon notification system
+    * Fix name and set desktop entry for notifications
+    * NetworkManager: Fix QtWebEngine warning about registering schemes
+    * Don't use subfolders for QML/Python extensions
+    * ThemeManager: Implement removing locally installed themes
+    * Plugins: Implement removing locally installed plugins
+    * Plugins: Use embedded JSON metadata for shared library plugins
+    * RunAction plugin: set alternatingRowColors for listWidget
+    * VerticalTabs: Accept click event on tree collapse
+    * VerticalTabs: Draw unloaded tabs with "Disabled" color palette
+    * VerticalTabs: Add child tab with middle click on "New Tab" button
+    * VerticalTabs: Corectly recognize tree collapse / expand button
+    * VerticalTabs: Also override Ctrl+PgUp/PgDown shortcuts
+
+    * Remove GnomeKeyringPasswords plugin
+    
 Version 3.1.0
     * released 19 March 2019
     * add support for writing plugins in QML
