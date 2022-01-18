@@ -34,6 +34,19 @@ void QmlTopSitesApiTest::testTopSites()
 {
     mApp->plugins()->speedDial()->addPage(QUrl("https://example.com"), "Example Domain");
     auto list = m_testHelper.evaluate("Falkon.TopSites.get()").toVariant().toList();
+    qDebug() << "Top sites list size=" << list.length();
+    for( const auto& site : list )
+    {
+        QObject* object = qvariant_cast<QObject*>(site);
+        if (object)
+        {
+            qDebug() << ".." << object->property("title") << object->property("url");
+        }
+        else
+        {
+            qDebug() << ".." << site;
+        }
+    }
     QCOMPARE(list.length(), 1);
     QObject* object = qvariant_cast<QObject*>(list.at(0));
     QVERIFY(object);
