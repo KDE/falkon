@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.1)
 
 # Project name and version
-project(Falkon VERSION 3.1.99)
+project(Falkon VERSION 3.2.0)
 
 # Find ECM, with nice error handling in case of failure
 include(FeatureSummary)
