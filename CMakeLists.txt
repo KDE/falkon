@@ -1,13 +1,13 @@
 # CMake version required. This must be the very first line, because it sets default policies affecting everything else
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.18)
 
 # Project name and version
 project(Falkon VERSION 3.2.99)
 
 # Find ECM, with nice error handling in case of failure
 include(FeatureSummary)
-find_package(ECM 5.27.0 CONFIG)
-set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
+find_package(ECM 5.78.0 CONFIG)
+set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://invent.kde.org/frameworks/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
@@ -44,7 +44,7 @@ endif()
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_NO_CAST_TO_ASCII)
 
 # Mandatory: Qt5
-set(QT_MIN_VERSION "5.9.0")
+set(QT_MIN_VERSION "5.15.0")
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets Network Sql QuickWidgets PrintSupport WebChannel)
 find_package(Qt5WebEngine ${QT_MIN_VERSION} REQUIRED)
 find_package(Qt5WebEngineWidgets ${QT_MIN_VERSION} REQUIRED)
@@ -108,7 +108,7 @@ if (PKG_CONFIG_FOUND)
 endif()
 
 # Optional: KWallet, KIO, KCrash, KCoreAddons
-set(KF5_MIN_VERSION "5.54.0")
+set(KF5_MIN_VERSION "5.78.0")
 find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5Wallet PROPERTIES DESCRIPTION "KDE Frameworks Integration plugin" TYPE OPTIONAL)
 find_package(KF5KIO ${KF5_MIN_VERSION} CONFIG)
