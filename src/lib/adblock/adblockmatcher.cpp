@@ -235,6 +235,7 @@ void AdBlockMatcher::clear()
     m_elementHidingRules.clear();
     m_documentRules.clear();
     m_elemhideRules.clear();
+    m_generichideRules.clear();
     qDeleteAll(m_createdRules);
     m_createdRules.clear();
 }
