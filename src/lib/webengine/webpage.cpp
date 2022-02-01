@@ -754,5 +754,5 @@ QWebEnginePage* WebPage::createWindow(QWebEnginePage::WebWindowType type)
         break;
     }
 
-    return Q_NULLPTR;
+    return nullptr;
 }

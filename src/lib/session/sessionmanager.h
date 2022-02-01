@@ -44,7 +44,7 @@ public:
     };
     Q_DECLARE_FLAGS(SessionFlags, SessionFlag)
 
-    explicit SessionManager(QObject* parent = 0);
+    explicit SessionManager(QObject* parent = nullptr);
 
     void loadSettings();
     void saveSettings();
@@ -66,8 +66,8 @@ public Q_SLOTS:
 private Q_SLOTS:
     void aboutToShowSessionsMenu();
     void sessionsDirectoryChanged();
-    void openSession(QString sessionFilePath = QString(), SessionFlags flags = nullptr);
-    void renameSession(QString sessionFilePath = QString(), SessionFlags flags = nullptr);
+    void openSession(QString sessionFilePath = QString(), SessionFlags flags = {});
+    void renameSession(QString sessionFilePath = QString(), SessionFlags flags = {});
     void saveSession();
 
     void replaceSession(const QString &filePath);
