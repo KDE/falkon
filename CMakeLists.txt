@@ -1,8 +1,14 @@
 # CMake version required. This must be the very first line, because it sets default policies affecting everything else
 cmake_minimum_required(VERSION 3.18)
 
+# KDE Application Version, managed by release script
+set(RELEASE_SERVICE_VERSION_MAJOR "22")
+set(RELEASE_SERVICE_VERSION_MINOR "03")
+set(RELEASE_SERVICE_VERSION_MICRO "70")
+set(RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}.${RELEASE_SERVICE_VERSION_MICRO}")
+
 # Project name and version
-project(Falkon VERSION 3.2.99)
+project(Falkon VERSION ${RELEASE_SERVICE_VERSION})
 
 # Find ECM, with nice error handling in case of failure
 include(FeatureSummary)
