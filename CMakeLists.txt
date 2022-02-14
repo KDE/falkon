@@ -1,7 +1,7 @@
 # CMake version required. This must be the very first line, because it sets default policies affecting everything else
 cmake_minimum_required(VERSION 3.18)
 
-# KDE Application Version, managed by release script
+# KDE Gear Version, managed by release script
 set(RELEASE_SERVICE_VERSION_MAJOR "22")
 set(RELEASE_SERVICE_VERSION_MINOR "03")
 set(RELEASE_SERVICE_VERSION_MICRO "70")
