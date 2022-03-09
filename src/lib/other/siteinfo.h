@@ -30,6 +30,7 @@ class SiteInfo;
 
 class QNetworkReply;
 class QTreeWidgetItem;
+class QTreeWidget;
 
 class WebView;
 class CertificateInfoWidget;
@@ -47,7 +48,8 @@ public:
 private Q_SLOTS:
     void showImagePreview(QTreeWidgetItem *item);
     void imagesCustomContextMenuRequested(const QPoint &p);
-    void copyActionData();
+    void tagsCustomContextMenuRequested(const QPoint &p);
+    void copySelectedItems(const QTreeWidget* treeWidget, const bool both);
     void saveImage();
 
 private:

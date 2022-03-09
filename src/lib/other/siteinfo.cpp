@@ -36,6 +36,7 @@
 #include <QClipboard>
 #include <QTimer>
 #include <QGraphicsPixmapItem>
+#include <QShortcut>
 
 SiteInfo::SiteInfo(WebView *view)
     : QDialog(view)
@@ -125,10 +126,28 @@ SiteInfo::SiteInfo(WebView *view)
     connect(ui->listWidget, SIGNAL(currentRowChanged(int)), ui->stackedWidget, SLOT(setCurrentIndex(int)));
     connect(ui->treeImages, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), this, SLOT(showImagePreview(QTreeWidgetItem*)));
     connect(ui->treeImages, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(imagesCustomContextMenuRequested(QPoint)));
+    connect(ui->treeTags, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(tagsCustomContextMenuRequested(QPoint)));
+
+    QShortcut *shortcutTagsCopyAll = new QShortcut(QKeySequence("Ctrl+C"), ui->treeTags);
+    shortcutTagsCopyAll->setContext(Qt::WidgetShortcut);
+    connect(shortcutTagsCopyAll, &QShortcut::activated, [=]{copySelectedItems(ui->treeTags, false);});
+
+    QShortcut *shortcutTagsCopyValues = new QShortcut(QKeySequence("Ctrl+Shift+C"), ui->treeTags);
+    shortcutTagsCopyValues->setContext(Qt::WidgetShortcut);
+    connect(shortcutTagsCopyValues, &QShortcut::activated, [=]{copySelectedItems(ui->treeTags, true);});
+
+    QShortcut *shortcutImagesCopyAll = new QShortcut(QKeySequence("Ctrl+C"), ui->treeImages);
+    shortcutImagesCopyAll->setContext(Qt::WidgetShortcut);
+    connect(shortcutImagesCopyAll, &QShortcut::activated, [=]{copySelectedItems(ui->treeImages, false);});
+
+    QShortcut *shortcutImagesCopyValues = new QShortcut(QKeySequence("Ctrl+Shift+C"), ui->treeImages);
+    shortcutImagesCopyValues->setContext(Qt::WidgetShortcut);
+    connect(shortcutImagesCopyValues, &QShortcut::activated, [=]{copySelectedItems(ui->treeImages, true);});
 
     ui->treeImages->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->treeImages->sortByColumn(-1, Qt::AscendingOrder);
 
+    ui->treeTags->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->treeTags->sortByColumn(-1, Qt::AscendingOrder);
 
     QzTools::setWmClass("Site Info", this);
@@ -153,18 +172,42 @@ void SiteInfo::imagesCustomContextMenuRequested(const QPoint &p)
     }
 
     QMenu menu;
-    menu.addAction(QIcon::fromTheme("edit-copy"), tr("Copy Image Location"), this, SLOT(copyActionData()))->setData(item->text(1));
-    menu.addAction(tr("Copy Image Name"), this, SLOT(copyActionData()))->setData(item->text(0));
+    menu.addAction(QIcon::fromTheme("edit-copy"), tr("Copy Image Location"), this, [=]{copySelectedItems(ui->treeImages, false);}, QKeySequence("Ctrl+C"));
+    menu.addAction(tr("Copy Image Name"), this, [=]{copySelectedItems(ui->treeImages, true);}, QKeySequence("Ctrl+Shift+C"));
     menu.addSeparator();
     menu.addAction(QIcon::fromTheme("document-save"), tr("Save Image to Disk"), this, SLOT(saveImage()));
     menu.exec(ui->treeImages->viewport()->mapToGlobal(p));
 }
 
-void SiteInfo::copyActionData()
+void SiteInfo::tagsCustomContextMenuRequested(const QPoint &p)
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
-        qApp->clipboard()->setText(action->data().toString());
+    QTreeWidgetItem* item = ui->treeTags->itemAt(p);
+    if (!item) {
+        return;
     }
+
+    QMenu menu;
+    menu.addAction(tr("Copy Values"), this, [=]{copySelectedItems(ui->treeTags, false);}, QKeySequence("Ctrl+C"));
+    menu.addAction(tr("Copy Tags and Values"), this, [=]{copySelectedItems(ui->treeTags, true);}, QKeySequence("Ctrl+Shift+C"));
+    menu.exec(ui->treeTags->viewport()->mapToGlobal(p));
+}
+
+void SiteInfo::copySelectedItems(const QTreeWidget* treeWidget, const bool both)
+{
+    QList<QTreeWidgetItem*> itemList = treeWidget->selectedItems();
+    QString tmpText = QSL("");
+
+    for (int i = 0; i < itemList.size(); ++i) {
+        if (i != 0) {
+            tmpText.append(QSL("\n"));
+        }
+        if (both) {
+            tmpText.append((itemList[i])->text(0));
+            tmpText.append(QSL("\t"));
+        }
+        tmpText.append((itemList[i])->text(1));
+    }
+    qApp->clipboard()->setText(tmpText);
 }
 
 void SiteInfo::saveImage()
