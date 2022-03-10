@@ -277,7 +277,7 @@ void SiteInfo::showPixmap(QPixmap pixmap)
 
 void SiteInfo::showImagePreview(QTreeWidgetItem *item)
 {
-    if (!item) {
+    if ((!item) || (item->treeWidget()->selectedItems().length() > 1)) {
         return;
     }
     QUrl imageUrl = QUrl::fromEncoded(item->text(1).toUtf8());
