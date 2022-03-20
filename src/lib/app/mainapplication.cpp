@@ -151,6 +151,10 @@ MainApplication::MainApplication(int &argc, char** argv)
     }
 #endif
 
+    QByteArray flags = qgetenv("QTWEBENGINE_CHROMIUM_FLAGS");
+    flags.append(" --enable-features=WebRTCPipeWireCapturer");
+    qputenv("QTWEBENGINE_CHROMIUM_FLAGS", flags);
+
     QUrl startUrl;
     QString startProfile;
     QStringList messages;
