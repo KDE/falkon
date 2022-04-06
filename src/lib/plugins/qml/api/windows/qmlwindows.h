@@ -50,7 +50,7 @@ public:
      *        - url:
      *          The url of the first tab of the window
      *        - type:
-     *          The window [type](@ref QmlWindowType)
+     *          The window [type](@ref QmlEnums::WindowType)
      * @return
      */
     Q_INVOKABLE QmlWindow *create(const QVariantMap &map) const;

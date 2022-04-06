@@ -43,12 +43,12 @@ class QmlWindow : public QObject
     Q_PROPERTY(QString title READ title CONSTANT)
 
     /**
-     * @brief [window state](@ref QmlWindowState::WindowState) of window
+     * @brief [window state](@ref QmlEnums::WindowState) of window
      */
     Q_PROPERTY(QmlEnums::WindowState state READ state CONSTANT)
 
     /**
-     * @brief [window type](@ref QmlWindowType::WindowType) of window
+     * @brief [window type](@ref QmlEnums::WindowType) of window
      */
     Q_PROPERTY(QmlEnums::WindowType type READ type CONSTANT)
 
