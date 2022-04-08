@@ -31,11 +31,11 @@ public:
      * @brief The WindowState enum
      */
     enum WindowState {
-        FullScreen, //! Represents full screen window
-        Maximized,  //! Represents maximized window
-        Minimized,  //! Represents minimized window
-        Normal,     //! Represents normal window
-        Invalid     //! Represents a invalid window
+        FullScreen, //!< Represents full screen window
+        Maximized,  //!< Represents maximized window
+        Minimized,  //!< Represents minimized window
+        Normal,     //!< Represents normal window
+        Invalid     //!< Represents a invalid window
     };
     Q_ENUM(WindowState)
 
@@ -43,10 +43,10 @@ public:
      * @brief The WindowType enum
      */
     enum WindowType {
-        FirstAppWindow = Qz::BW_FirstAppWindow,          //! Represents first app window
-        MacFirstWindow = Qz::BW_MacFirstWindow,          //! Represents first mac window
-        NewWindow = Qz::BW_NewWindow,                    //! Represents new window
-        OtherRestoredWindow = Qz::BW_OtherRestoredWindow //! Represents other restored window
+        FirstAppWindow = Qz::BW_FirstAppWindow,          //!< Represents first app window
+        MacFirstWindow = Qz::BW_MacFirstWindow,          //!< Represents first mac window
+        NewWindow = Qz::BW_NewWindow,                    //!< Represents new window
+        OtherRestoredWindow = Qz::BW_OtherRestoredWindow //!< Represents other restored window
     };
     Q_ENUM(WindowType)
 

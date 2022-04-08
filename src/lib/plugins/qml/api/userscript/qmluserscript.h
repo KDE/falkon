@@ -68,7 +68,7 @@ public:
     enum ScriptWorldId {
         MainWorld = QWebEngineScript::MainWorld,               //!< Represents QWebEngineScript::MainWorld
         ApplicationWorld = QWebEngineScript::ApplicationWorld, //!< Represents QWebEngineScript::ApplicationWorld
-        UserWorld = QWebEngineScript::UserWorld                //! < Represents QWebEngineScript::UserWorld
+        UserWorld = QWebEngineScript::UserWorld                //!< Represents QWebEngineScript::UserWorld
     };
     Q_ENUM(InjectionPoint)
     Q_ENUM(ScriptWorldId)

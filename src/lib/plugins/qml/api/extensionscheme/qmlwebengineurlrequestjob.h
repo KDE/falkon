@@ -42,12 +42,12 @@ public:
      * @brief The Error enum, exposes QWebEngineUrlRequestJob::Error to QML
      */
     enum Error {
-        NoError = QWebEngineUrlRequestJob::NoError,               //! No error
-        UrlNotFound = QWebEngineUrlRequestJob::UrlNotFound,       //! Url not found error
-        UrlInvaild = QWebEngineUrlRequestJob::UrlInvalid,         //! Url invalid error
-        RequestAborted = QWebEngineUrlRequestJob::RequestAborted, //! Request aborted
-        RequestDenied = QWebEngineUrlRequestJob::RequestDenied,   //! Request denied
-        RequestFailed = QWebEngineUrlRequestJob::RequestFailed    //! Request failed
+        NoError = QWebEngineUrlRequestJob::NoError,               //!< No error
+        UrlNotFound = QWebEngineUrlRequestJob::UrlNotFound,       //!< Url not found error
+        UrlInvaild = QWebEngineUrlRequestJob::UrlInvalid,         //!< Url invalid error
+        RequestAborted = QWebEngineUrlRequestJob::RequestAborted, //!< Request aborted
+        RequestDenied = QWebEngineUrlRequestJob::RequestDenied,   //!< Request denied
+        RequestFailed = QWebEngineUrlRequestJob::RequestFailed    //!< Request failed
     };
     Q_ENUM(Error)
     explicit QmlWebEngineUrlRequestJob(QWebEngineUrlRequestJob *job = nullptr, QObject *parent = nullptr);
