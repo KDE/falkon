@@ -19,12 +19,12 @@ ecm_create_qm_loader( MouseGestures_SRCS falkon_mousegestures_qt )
 set( MouseGestures_UIS
 	mousegesturessettingsdialog.ui
 	)
-qt5_wrap_ui(UIS ${MouseGestures_UIS})
+qt_wrap_ui(UIS ${MouseGestures_UIS})
 
 set( MouseGestures_RSCS
 	mousegestures.qrc
 	)
-qt5_add_resources(RSCS ${MouseGestures_RSCS})
+qt_add_resources(RSCS ${MouseGestures_RSCS})
 
 KDE_ENABLE_EXCEPTIONS()
 

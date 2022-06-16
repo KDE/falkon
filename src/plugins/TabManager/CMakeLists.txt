@@ -13,13 +13,13 @@ set( TabManager_UIS
 	tabmanagerwidget.ui
 	tabmanagersettings.ui
 	)
-qt5_wrap_ui(UIS ${TabManager_UIS})
+qt_wrap_ui(UIS ${TabManager_UIS})
 
 set( TabManager_RSCS
 	tabmanagerplugin.qrc
 	tldextractor/tldextractor.qrc
 	)
-qt5_add_resources(RSCS ${TabManager_RSCS})
+qt_add_resources(RSCS ${TabManager_RSCS})
 
 add_library(TabManager MODULE ${TabManager_SRCS} ${UIS} ${RSCS})
 install(TARGETS TabManager DESTINATION ${FALKON_INSTALL_PLUGINDIR})

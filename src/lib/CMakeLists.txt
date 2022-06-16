@@ -283,7 +283,7 @@ if (APPLE)
 endif()
 
 # TODO: use ki18n_wrap_ui?
-qt5_wrap_ui(SRCS
+qt_wrap_ui(SRCS
     adblock/adblockaddsubscriptiondialog.ui
     adblock/adblockdialog.ui
     autofill/autofillnotification.ui
@@ -331,7 +331,7 @@ qt5_wrap_ui(SRCS
     webtab/searchtoolbar.ui
 )
 
-qt5_add_resources(SRCS
+qt_add_resources(SRCS
     data/data.qrc
     data/html.qrc
     data/icons.qrc
@@ -341,17 +341,17 @@ qt5_add_resources(SRCS
 
 add_library(FalkonPrivate SHARED ${SRCS} ${LOGGING_SRCS})
 
-get_property(QT_WEBENGINE_INCLUDE_DIRS TARGET Qt5::WebEngine PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
+get_property(QT_WEBENGINE_INCLUDE_DIRS TARGET Qt::WebEngine PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 target_include_directories(FalkonPrivate SYSTEM PUBLIC ${QT_WEBENGINE_INCLUDE_DIRS})
 
 target_link_libraries(FalkonPrivate
-    Qt5::Widgets
-    Qt5::WebEngineWidgets
-    Qt5::Network
-    Qt5::Sql
-    Qt5::PrintSupport
-    Qt5::QuickWidgets
-    Qt5::WebChannel
+    Qt::Widgets
+    Qt::WebEngineWidgets
+    Qt::Network
+    Qt::Sql
+    Qt::PrintSupport
+    Qt::QuickWidgets
+    Qt::WebChannel
     KF5::Archive
     ${OPENSSL_CRYPTO_LIBRARY}
 )
@@ -363,7 +363,7 @@ endif()
 
 if (UNIX AND NOT APPLE)
     if (NOT NO_X11)
-        target_link_libraries(FalkonPrivate XCB::XCB Qt5::X11Extras)
+        target_link_libraries(FalkonPrivate XCB::XCB Qt::X11Extras)
     endif()
 
     set_target_properties(FalkonPrivate PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION "3")
@@ -371,7 +371,7 @@ if (UNIX AND NOT APPLE)
 endif()
 
 if (WIN32)
-    target_link_libraries(FalkonPrivate Qt5::WinExtras)
+    target_link_libraries(FalkonPrivate Qt::WinExtras)
 endif()
 
 if (APPLE)
@@ -379,5 +379,5 @@ if (APPLE)
 endif()
 
 if (NOT DISABLE_DBUS)
-    target_link_libraries(FalkonPrivate Qt5::DBus)
+    target_link_libraries(FalkonPrivate Qt::DBus)
 endif()

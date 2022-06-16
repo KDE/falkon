@@ -20,12 +20,12 @@ set( StatusBarIcons_UIS
 	sbi_networkicondialog.ui
 	sbi_settingsdialog.ui
 	)
-qt5_wrap_ui(UIS ${StatusBarIcons_UIS})
+qt_wrap_ui(UIS ${StatusBarIcons_UIS})
 
 set( StatusBarIcons_RSCS
 	statusbaricons.qrc
 	)
-qt5_add_resources(RSCS ${StatusBarIcons_RSCS})
+qt_add_resources(RSCS ${StatusBarIcons_RSCS})
 
 add_library(StatusBarIcons MODULE ${StatusBarIcons_SRCS} ${UIS} ${RSCS})
 install(TARGETS StatusBarIcons DESTINATION ${FALKON_INSTALL_PLUGINDIR})

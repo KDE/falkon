@@ -10,12 +10,12 @@ set( FlashCookieManager_UIS
 	fcm_dialog.ui
 	fcm_notification.ui
 	)
-qt5_wrap_ui(UIS ${FlashCookieManager_UIS})
+qt_wrap_ui(UIS ${FlashCookieManager_UIS})
 
 set( FlashCookieManager_RSCS
 	flashcookiemanager.qrc
 	)
-qt5_add_resources(RSCS ${FlashCookieManager_RSCS})
+qt_add_resources(RSCS ${FlashCookieManager_RSCS})
 
 add_library(FlashCookieManager MODULE ${FlashCookieManager_SRCS} ${UIS} ${RSCS})
 install(TARGETS FlashCookieManager DESTINATION ${FALKON_INSTALL_PLUGINDIR})

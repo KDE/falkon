@@ -23,12 +23,12 @@ set( GreaseMonkey_UIS
 	settings/gm_settings.ui
 	settings/gm_settingsscriptinfo.ui
 	)
-qt5_wrap_ui(UIS ${GreaseMonkey_UIS})
+qt_wrap_ui(UIS ${GreaseMonkey_UIS})
 
 set( GreaseMonkey_RSCS
 	greasemonkey.qrc
 	)
-qt5_add_resources(RSCS ${GreaseMonkey_RSCS})
+qt_add_resources(RSCS ${GreaseMonkey_RSCS})
 
 add_library(GreaseMonkey MODULE ${GreaseMonkey_SRCS} ${UIS} ${RSCS})
 install(TARGETS GreaseMonkey DESTINATION ${FALKON_INSTALL_PLUGINDIR})

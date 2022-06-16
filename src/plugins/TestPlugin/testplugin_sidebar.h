@@ -26,10 +26,10 @@ class TestPlugin_Sidebar : public SideBarInterface
 public:
     explicit TestPlugin_Sidebar(QObject* parent = 0);
 
-    QString title() const;
-    QAction* createMenuAction();
+    QString title() const override;
+    QAction* createMenuAction() override;
 
-    QWidget* createSideBarWidget(BrowserWindow* mainWindow);
+    QWidget* createSideBarWidget(BrowserWindow* mainWindow) override;
 };
 
 #endif // TESTPLUGIN_SIDEBAR_H

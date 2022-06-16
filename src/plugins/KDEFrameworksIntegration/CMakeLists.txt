@@ -9,7 +9,7 @@ ecm_create_qm_loader(KDEFrameworksIntegration_SRCS falkon_kdeframeworksintegrati
 set(KDEFrameworksIntegration_RSCS
     kdeframeworksintegration.qrc
 )
-qt5_add_resources(RSCS ${KDEFrameworksIntegration_RSCS})
+qt_add_resources(RSCS ${KDEFrameworksIntegration_RSCS})
 
 add_library(KDEFrameworksIntegration MODULE ${KDEFrameworksIntegration_SRCS} ${RSCS})
 install(TARGETS KDEFrameworksIntegration DESTINATION ${FALKON_INSTALL_PLUGINDIR})
