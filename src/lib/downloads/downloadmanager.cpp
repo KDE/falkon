@@ -133,22 +133,10 @@ void DownloadManager::closeDownloadTab(QWebEngineDownloadItem *item) const
         if (page->history()->count() != 0) {
             return false;
         }
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         Q_UNUSED(url)
         return true;
-#else
-        if (page->url() != QUrl()) {
-            return false;
-        }
-        QUrl tabUrl = page->requestedUrl();
-        if (tabUrl.isEmpty()) {
-            tabUrl = QUrl(view->webTab()->locationBar()->text());
-        }
-        return tabUrl.host() == url.host();
-#endif
     };
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
     if (!item->page()) {
         return;
     }
@@ -163,30 +151,6 @@ void DownloadManager::closeDownloadTab(QWebEngineDownloadItem *item) const
     if (testWebView(view, QUrl())) {
         view->closeView();
     }
-#else
-    BrowserWindow* mainWindow = mApp->getWindow();
-    // If the main window was closed, there is no need to go further
-    if (mainWindow == nullptr) {
-        return;
-    }
-
-    if (testWebView(mainWindow->weView(), item->url())) {
-        mainWindow->weView()->closeView();
-        return;
-    }
-
-    const auto windows = mApp->windows();
-    for (auto *window : windows) {
-        const auto tabs = window->tabWidget()->allTabs();
-        for (auto *tab : tabs) {
-            auto *view = tab->webView();
-            if (testWebView(view, item->url())) {
-                view->closeView();
-                return;
-            }
-        }
-    }
-#endif
 }
 
 QWinTaskbarButton *DownloadManager::taskbarButton()

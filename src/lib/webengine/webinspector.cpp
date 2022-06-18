@@ -68,27 +68,8 @@ void WebInspector::setView(WebView *view)
     m_view = view;
     Q_ASSERT(isEnabled());
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     page()->setInspectedPage(m_view->page());
     connect(m_view, &WebView::pageChanged, this, &WebInspector::deleteLater);
-#else
-    int port = qEnvironmentVariableIntValue("QTWEBENGINE_REMOTE_DEBUGGING");
-    QUrl inspectorUrl = QUrl(QSL("http://localhost:%1").arg(port));
-    int index = s_views.indexOf(m_view);
-
-    QNetworkReply *reply = mApp->networkManager()->get(QNetworkRequest(inspectorUrl.resolved(QUrl("json/list"))));
-    connect(reply, &QNetworkReply::finished, this, [=]() {
-        QJsonArray clients = QJsonDocument::fromJson(reply->readAll()).array();
-        QUrl pageUrl;
-        if (clients.size() > index) {
-            QJsonObject object = clients.at(index).toObject();
-            pageUrl = inspectorUrl.resolved(QUrl(object.value(QSL("devtoolsFrontendUrl")).toString()));
-        }
-        load(pageUrl);
-        pushView(this);
-        show();
-    });
-#endif
 }
 
 void WebInspector::inspectElement()
@@ -98,11 +79,6 @@ void WebInspector::inspectElement()
 
 bool WebInspector::isEnabled()
 {
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 11, 0)
-    if (!qEnvironmentVariableIsSet("QTWEBENGINE_REMOTE_DEBUGGING")) {
-        return false;
-    }
-#endif
     if (!mApp->webSettings()->testAttribute(QWebEngineSettings::JavascriptEnabled)) {
         return false;
     }

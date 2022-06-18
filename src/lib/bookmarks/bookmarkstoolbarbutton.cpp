@@ -93,11 +93,7 @@ QSize BookmarksToolbarButton::sizeHint() const
         width = SEPARATOR_WIDTH;
     }
     else if (!m_showOnlyIcon) {
-#if QTGUI_VERSION >= QT_VERSION_CHECK(5, 11, 0)
         width += PADDING * 2 + fontMetrics().horizontalAdvance(m_bookmark->title());
-#else
-        width += PADDING * 2 + fontMetrics().width(m_bookmark->title());
-#endif
 
         if (menu()) {
             width += PADDING + 8;

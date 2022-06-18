@@ -112,23 +112,6 @@ Preferences::Preferences(BrowserWindow* window)
     ui->checkUpdates->setVisible(false);
 #endif
 
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 11, 0)
-    ui->disableVideoAutoPlay->setVisible(false);
-    ui->webRTCPublicIpOnly->setVisible(false);
-#endif
-
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 12, 0)
-    ui->dnsPrefetch->setVisible(false);
-#endif
-
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 13, 0)
-    ui->intPDFViewer->setVisible(false);
-#endif
-
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 13, 2)
-    ui->screenCaptureEnabled->setVisible(false);
-#endif
-
 
     auto setCategoryIcon = [this](int index, const QIcon &icon) {
         ui->listWidget->item(index)->setIcon(QIcon(icon.pixmap(32)));

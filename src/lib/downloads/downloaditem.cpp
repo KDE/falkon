@@ -235,11 +235,9 @@ void DownloadItem::updateDownloadInfo(double currSpeed, qint64 received, qint64 
     //          | m_remTime |   |m_currSize|  |m_fileSize|  |m_speed|
     // Remaining 26 minutes -     339MB of      693 MB        (350kB/s)
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     if (m_download->isPaused()) {
         return;
     }
-#endif
 
     int estimatedTime = ((total - received) / 1024) / (currSpeed / 1024);
     QString speed = currentSpeedToString(currSpeed);
@@ -283,7 +281,6 @@ void DownloadItem::stop()
 
 void DownloadItem::pauseResume()
 {
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     if (m_download->isPaused()) {
         m_download->resume();
         ui->pauseResumeButton->setPixmap(QIcon::fromTheme(QSL("media-playback-pause")).pixmap(20, 20));
@@ -292,7 +289,6 @@ void DownloadItem::pauseResume()
         ui->pauseResumeButton->setPixmap(QIcon::fromTheme(QSL("media-playback-start")).pixmap(20, 20));
         ui->downloadInfo->setText(tr("Paused - %1").arg(m_download->url().host()));
     }
-#endif
 }
 
 void DownloadItem::mouseDoubleClickEvent(QMouseEvent* e)
@@ -312,13 +308,11 @@ void DownloadItem::customContextMenuRequested(const QPoint &pos)
     menu.addSeparator();
     menu.addAction(QIcon::fromTheme("process-stop"), tr("Cancel downloading"), this, &DownloadItem::stop)->setEnabled(m_downloading);
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     if (m_download->isPaused()) {
         menu.addAction(QIcon::fromTheme("media-playback-start"), tr("Resume downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
     } else {
         menu.addAction(QIcon::fromTheme("media-playback-pause"), tr("Pause downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
     }
-#endif
 
     menu.addAction(QIcon::fromTheme("list-remove"), tr("Remove From List"), this, &DownloadItem::clear)->setEnabled(!m_downloading);
 

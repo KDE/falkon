@@ -67,9 +67,7 @@ QString QmlWebEngineUrlRequestJob::initiator() const
         return QString();
     }
     QString initiatorString;
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     initiatorString = QString::fromUtf8(m_job->initiator().toEncoded());
-#endif
     return initiatorString;
 }
 

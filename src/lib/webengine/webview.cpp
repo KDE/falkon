@@ -496,7 +496,6 @@ void WebView::copyLinkToClipboard()
 
 void WebView::savePageAs()
 {
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     page()->runJavaScript(QSL("document.contentType"), WebPage::SafeJsWorld, [this](const QVariant &res) {
         const QSet<QString> webPageTypes = {
             QSL("text/html"),
@@ -508,9 +507,6 @@ void WebView::savePageAs()
             page()->download(url());
         }
     });
-#else
-    triggerPageAction(QWebEnginePage::SavePage);
-#endif
 }
 
 void WebView::copyImageToClipboard()
@@ -1252,14 +1248,6 @@ void WebView::contextMenuEvent(QContextMenuEvent *event)
 
 bool WebView::focusNextPrevChild(bool next)
 {
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 11, 0)
-    // QTBUG-67043
-    // Workaround QtWebEngine issue where QWebEngineView loses focus on second load() call.
-    if (next) {
-        setFocus();
-        return false;
-    }
-#endif
     return QWebEngineView::focusNextPrevChild(next);
 }
 
@@ -1277,16 +1265,10 @@ bool WebView::eventFilter(QObject *obj, QEvent *event)
 
     // Hack to find widget that receives input events
     if (obj == this && event->type() == QEvent::ChildAdded) {
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         QPointer<QWidget> child = qobject_cast<QWidget*>(static_cast<QChildEvent*>(event)->child());
         QTimer::singleShot(0, this, [=]() {
             if (child && child->inherits("QtWebEngineCore::RenderWidgetHostViewQtDelegateWidget")) {
                 m_rwhvqt = child;
-#else
-        QTimer::singleShot(0, this, [this]() {
-            if (focusProxy() && m_rwhvqt != focusProxy()) {
-                m_rwhvqt = focusProxy();
-#endif
                 m_rwhvqt->installEventFilter(this);
                 if (QQuickWidget *w = qobject_cast<QQuickWidget*>(m_rwhvqt)) {
                     w->setClearColor(palette().color(QPalette::Window));

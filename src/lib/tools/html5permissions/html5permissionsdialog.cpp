@@ -40,12 +40,6 @@ HTML5PermissionsDialog::HTML5PermissionsDialog(QWidget* parent)
     connect(ui->feature, SIGNAL(currentIndexChanged(int)), this, SLOT(featureIndexChanged()));
     connect(ui->buttonBox, &QDialogButtonBox::accepted, this, &HTML5PermissionsDialog::saveSettings);
 
-/* Hide unsupported HTML5 permissions */
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 10, 0)
-    ui->feature->removeItem(7);
-    ui->feature->removeItem(6);
-#endif
-
     showFeaturePermissions(currentFeature());
 }
 
@@ -119,12 +113,10 @@ QWebEnginePage::Feature HTML5PermissionsDialog::currentFeature() const
         return QWebEnginePage::MediaAudioVideoCapture;
     case 5:
         return QWebEnginePage::MouseLock;
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     case 6:
         return QWebEnginePage::DesktopVideoCapture;
     case 7:
         return QWebEnginePage::DesktopAudioVideoCapture;
-#endif
     default:
         Q_UNREACHABLE();
         return QWebEnginePage::Notifications;
@@ -154,13 +146,11 @@ void HTML5PermissionsDialog::loadSettings()
     m_granted[QWebEnginePage::MouseLock] = settings.value("MouseLockGranted", QStringList()).toStringList();
     m_denied[QWebEnginePage::MouseLock] = settings.value("MouseLockDenied", QStringList()).toStringList();
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     m_granted[QWebEnginePage::DesktopVideoCapture] = settings.value("DesktopVideoCaptureGranted", QStringList()).toStringList();
     m_denied[QWebEnginePage::DesktopVideoCapture] = settings.value("DesktopVideoCaptureDenied", QStringList()).toStringList();
 
     m_granted[QWebEnginePage::DesktopAudioVideoCapture] = settings.value("DesktopAudioVideoCaptureGranted", QStringList()).toStringList();
     m_denied[QWebEnginePage::DesktopAudioVideoCapture] = settings.value("DesktopAudioVideoCaptureDenied", QStringList()).toStringList();
-#endif
 
     settings.endGroup();
 }
@@ -188,13 +178,11 @@ void HTML5PermissionsDialog::saveSettings()
     settings.setValue("MouseLockGranted", m_granted[QWebEnginePage::MouseLock]);
     settings.setValue("MouseLockDenied", m_denied[QWebEnginePage::MouseLock]);
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     settings.setValue("DesktopVideoCaptureGranted", m_granted[QWebEnginePage::DesktopVideoCapture]);
     settings.setValue("DesktopVideoCaptureDenied", m_denied[QWebEnginePage::DesktopVideoCapture]);
 
     settings.setValue("DesktopAudioVideoCaptureGranted", m_granted[QWebEnginePage::DesktopAudioVideoCapture]);
     settings.setValue("DesktopAudioVideoCaptureDenied", m_denied[QWebEnginePage::DesktopAudioVideoCapture]);
-#endif
 
     settings.endGroup();
 

@@ -75,10 +75,6 @@ CookieManager::CookieManager(QWidget *parent)
     ui->blackList->addItems(settings.value("blacklist", QStringList()).toStringList());
     settings.endGroup();
 
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 11, 0)
-    ui->filter3rdParty->hide();
-#endif
-
     ui->search->setPlaceholderText(tr("Search"));
     ui->cookieTree->setDefaultItemShowMode(TreeWidget::ItemsCollapsed);
     ui->cookieTree->sortItems(0, Qt::AscendingOrder);

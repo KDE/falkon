@@ -39,9 +39,7 @@ SearchToolBar::SearchToolBar(WebView* view, QWidget* parent)
     ui->previous->setShortcut(QKeySequence("Ctrl+Shift+G"));
 
     ui->resultsInfo->hide();
-#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(5, 14, 0)
     connect(view->page(), &QWebEnginePage::findTextFinished, this, &SearchToolBar::showSearchResults);
-#endif
 
     connect(ui->closeButton, SIGNAL(clicked()), this, SLOT(close()));
     connect(ui->lineEdit, &QLineEdit::textEdited, this, &SearchToolBar::findNext);
@@ -142,7 +140,6 @@ void SearchToolBar::searchText(const QString &text)
     });
 }
 
-#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(5, 14, 0)
 void SearchToolBar::showSearchResults(const QWebEngineFindTextResult &result)
 {
     if (result.numberOfMatches() == 0) {
@@ -154,7 +151,6 @@ void SearchToolBar::showSearchResults(const QWebEngineFindTextResult &result)
         QString::number(result.activeMatch()), QString::number(result.numberOfMatches())));
     ui->resultsInfo->show();
 }
-#endif
 
 bool SearchToolBar::eventFilter(QObject* obj, QEvent* event)
 {

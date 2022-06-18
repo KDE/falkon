@@ -36,9 +36,7 @@ CookieJar::CookieJar(QObject* parent)
     loadSettings();
     m_client->loadAllCookies();
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     m_client->setCookieFilter(std::bind(&CookieJar::cookieFilter, this, std::placeholders::_1));
-#endif
 
     connect(m_client, &QWebEngineCookieStore::cookieAdded, this, &CookieJar::slotCookieAdded);
     connect(m_client, &QWebEngineCookieStore::cookieRemoved, this, &CookieJar::slotCookieRemoved);
@@ -46,9 +44,7 @@ CookieJar::CookieJar(QObject* parent)
 
 CookieJar::~CookieJar()
 {
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     m_client->setCookieFilter(nullptr);
-#endif
 }
 
 void CookieJar::loadSettings()
@@ -136,7 +132,6 @@ void CookieJar::slotCookieRemoved(const QNetworkCookie &cookie)
         emit cookieRemoved(cookie);
 }
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
 bool CookieJar::cookieFilter(const QWebEngineCookieStore::FilterRequest &request) const
 {
     if (!m_allowCookies) {
@@ -168,7 +163,6 @@ bool CookieJar::cookieFilter(const QWebEngineCookieStore::FilterRequest &request
 
     return true;
 }
-#endif
 
 bool CookieJar::rejectCookie(const QString &domain, const QNetworkCookie &cookie, const QString &cookieDomain) const
 {

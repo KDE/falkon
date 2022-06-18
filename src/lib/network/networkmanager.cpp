@@ -42,9 +42,7 @@
 #include <QWebEngineCertificateError>
 #include <QtWebEngineWidgetsVersion>
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
 #include <QWebEngineUrlScheme>
-#endif
 
 NetworkManager::NetworkManager(QObject *parent)
     : QNetworkAccessManager(parent)
@@ -59,11 +57,7 @@ NetworkManager::NetworkManager(QObject *parent)
 
     // Create url interceptor
     m_urlInterceptor = new NetworkUrlInterceptor(this);
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 13, 0)
     mApp->webProfile()->setUrlRequestInterceptor(m_urlInterceptor);
-#else
-    mApp->webProfile()->setRequestInterceptor(m_urlInterceptor);
-#endif
 
     // Create cookie jar
     mApp->cookieJar();
@@ -299,17 +293,12 @@ void NetworkManager::loadSettings()
 
 void NetworkManager::shutdown()
 {
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 13, 0)
     mApp->webProfile()->setUrlRequestInterceptor(nullptr);
-#else
-    mApp->webProfile()->setRequestInterceptor(nullptr);
-#endif
 }
 
 // static
 void NetworkManager::registerSchemes()
 {
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
     QWebEngineUrlScheme falkonScheme("falkon");
     falkonScheme.setFlags(QWebEngineUrlScheme::SecureScheme | QWebEngineUrlScheme::ContentSecurityPolicyIgnored);
     falkonScheme.setSyntax(QWebEngineUrlScheme::Syntax::Path);
@@ -318,7 +307,6 @@ void NetworkManager::registerSchemes()
     extensionScheme.setFlags(QWebEngineUrlScheme::SecureScheme | QWebEngineUrlScheme::ContentSecurityPolicyIgnored);
     extensionScheme.setSyntax(QWebEngineUrlScheme::Syntax::Path);
     QWebEngineUrlScheme::registerScheme(extensionScheme);
-#endif
 }
 
 QNetworkReply *NetworkManager::createRequest(QNetworkAccessManager::Operation op, const QNetworkRequest &request, QIODevice *outgoingData)

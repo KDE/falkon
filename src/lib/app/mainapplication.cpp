@@ -69,9 +69,7 @@
 #include <QtWebEngineWidgetsVersion>
 #include <QtWebEngineCoreVersion>
 
-#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(5, 13, 0)
 #include <QWebEngineNotification>
-#endif
 
 #ifdef Q_OS_WIN
 #include <QtWin>
@@ -296,14 +294,12 @@ MainApplication::MainApplication(int &argc, char** argv)
     m_webProfile = isPrivate() ? new QWebEngineProfile() : QWebEngineProfile::defaultProfile();
     connect(m_webProfile, &QWebEngineProfile::downloadRequested, this, &MainApplication::downloadRequested);
 
-#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(5, 13, 0)
     m_webProfile->setNotificationPresenter([&] (std::unique_ptr<QWebEngineNotification> notification) {
         auto notifications = desktopNotifications();
         notifications->showNotification(
             QPixmap::fromImage(notification->icon()), notification->title(), notification->message()
         );
     });
-#endif
 
     m_networkManager = new NetworkManager(this);
 
@@ -963,25 +959,15 @@ void MainApplication::loadSettings()
     webSettings->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, true);
     webSettings->setAttribute(QWebEngineSettings::FocusOnNavigationEnabled, false);
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     webSettings->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, settings.value(QSL("allowJavaScriptActivateWindow"), false).toBool());
-#endif
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     webSettings->setAttribute(QWebEngineSettings::JavascriptCanPaste, settings.value(QSL("allowJavaScriptPaste"), true).toBool());
     webSettings->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, settings.value(QSL("DisableVideoAutoPlay"), false).toBool());
     webSettings->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, settings.value(QSL("WebRTCPublicIpOnly"), true).toBool());
     webSettings->setUnknownUrlSchemePolicy(QWebEngineSettings::AllowAllUnknownUrlSchemes);
-#endif
-
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
     webSettings->setAttribute(QWebEngineSettings::DnsPrefetchEnabled, settings.value(QSL("DNSPrefetch"), true).toBool());
-#endif
-
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 13, 0)
     webSettings->setAttribute(QWebEngineSettings::PdfViewerEnabled, settings.value(QSL("intPDFViewer"), false).toBool());
     webSettings->setAttribute(QWebEngineSettings::ScreenCaptureEnabled, settings.value(QSL("screenCaptureEnabled"), false).toBool());
-#endif
 
     webSettings->setDefaultTextEncoding(settings.value(QSL("DefaultEncoding"), webSettings->defaultTextEncoding()).toString());
 

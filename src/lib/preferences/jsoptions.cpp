@@ -30,14 +30,6 @@ JsOptions::JsOptions(QWidget* parent)
 
     ui->setupUi(this);
 
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 10, 0)
-    ui->jscanActivateWindow->setVisible(false);
-#endif
-
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 11, 0)
-    ui->jscanPaste->setVisible(false);
-#endif
-
     Settings settings;
     settings.beginGroup("Web-Browser-Settings");
     ui->jscanOpenWindow->setChecked(settings.value("allowJavaScriptOpenWindow", false).toBool());

@@ -21,9 +21,7 @@
 #include <QWebEnginePage>
 #include <QtWebEngineWidgetsVersion>
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
 #include <QWebEngineRegisterProtocolHandlerRequest>
-#endif
 
 ProtocolHandlerManager::ProtocolHandlerManager(QObject *parent)
     : QObject(parent)
@@ -83,10 +81,8 @@ void ProtocolHandlerManager::registerHandler(const QString &scheme, const QUrl &
 
     QWebEnginePage *page = new QWebEnginePage(this);
     connect(page, &QWebEnginePage::loadFinished, page, &QObject::deleteLater);
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     connect(page, &QWebEnginePage::registerProtocolHandlerRequested, this, [](QWebEngineRegisterProtocolHandlerRequest request) {
         request.accept();
     });
-#endif
     page->setHtml(QSL("<script>navigator.registerProtocolHandler('%1', '%2', '')</script>").arg(scheme, urlString), url);
 }

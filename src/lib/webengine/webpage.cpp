@@ -60,9 +60,7 @@
 #include <QUrlQuery>
 #include <QtWebEngineWidgetsVersion>
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
 #include <QWebEngineRegisterProtocolHandlerRequest>
-#endif
 
 QString WebPage::s_lastUploadLocation = QDir::homePath();
 QUrl WebPage::s_lastUnsupportedUrl;
@@ -116,27 +114,20 @@ WebPage::WebPage(QObject* parent)
         }
     });
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     connect(this, &QWebEnginePage::registerProtocolHandlerRequested, this, [this](QWebEngineRegisterProtocolHandlerRequest request) {
         delete m_registerProtocolHandlerRequest;
         m_registerProtocolHandlerRequest = new QWebEngineRegisterProtocolHandlerRequest(request);
     });
-#endif
-
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 12, 0)
     connect(this, &QWebEnginePage::printRequested, this, &WebPage::printRequested);
     connect(this, &QWebEnginePage::selectClientCertificate, this, [this](QWebEngineClientCertificateSelection selection) {
         // TODO: It should prompt user
         selection.select(selection.certificates().at(0));
     });
-#endif
 }
 
 WebPage::~WebPage()
 {
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     delete m_registerProtocolHandlerRequest;
-#endif
 
     if (m_runningLoop) {
         m_runningLoop->exit(1);
@@ -513,21 +504,17 @@ QStringList WebPage::autoFillUsernames() const
 
 QUrl WebPage::registerProtocolHandlerRequestUrl() const
 {
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     if (m_registerProtocolHandlerRequest && url().host() == m_registerProtocolHandlerRequest->origin().host()) {
         return m_registerProtocolHandlerRequest->origin();
     }
-#endif
     return QUrl();
 }
 
 QString WebPage::registerProtocolHandlerRequestScheme() const
 {
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     if (m_registerProtocolHandlerRequest && url().host() == m_registerProtocolHandlerRequest->origin().host()) {
         return m_registerProtocolHandlerRequest->scheme();
     }
-#endif
     return QString();
 }
 

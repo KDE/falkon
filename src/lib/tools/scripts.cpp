@@ -147,11 +147,6 @@ QString Scripts::setupWindowObject()
                           "    return false;"
                           "};"
                           "window.external = external;");
-#if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 12, 0)
-           source += QL1S("window.print = function() {"
-                          "    window.location = 'falkon:PrintPage';"
-                          "};");
-#endif
            source += QL1S("})()");
 
     return source;

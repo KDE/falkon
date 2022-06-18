@@ -56,9 +56,7 @@ private:
     void slotCookieAdded(const QNetworkCookie &cookie);
     void slotCookieRemoved(const QNetworkCookie &cookie);
 
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 11, 0)
     bool cookieFilter(const QWebEngineCookieStore::FilterRequest &request) const;
-#endif
 
     bool acceptCookie(const QUrl &firstPartyUrl, const QByteArray &cookieLine, const QUrl &cookieSource) const;
     bool rejectCookie(const QString &domain, const QNetworkCookie &cookie, const QString &cookieDomain) const;
