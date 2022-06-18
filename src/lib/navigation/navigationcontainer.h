@@ -29,7 +29,7 @@ class TabBar;
 class FALKON_EXPORT NavigationContainer : public QWidget
 {
 public:
-    explicit NavigationContainer(QWidget* parent = 0);
+    explicit NavigationContainer(QWidget* parent = nullptr);
 
     void addWidget(QWidget* widget);
     void setTabBar(TabBar* tabBar);

@@ -36,7 +36,7 @@ class FALKON_EXPORT MainMenu : public QMenu
     Q_OBJECT
 
 public:
-    explicit MainMenu(BrowserWindow* window, QWidget* parent = 0);
+    explicit MainMenu(BrowserWindow* window, QWidget* parent = nullptr);
 
 
     void initMenuBar(QMenuBar* menuBar) const;

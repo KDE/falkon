@@ -32,7 +32,7 @@ class HTML5PermissionsDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit HTML5PermissionsDialog(QWidget* parent = 0);
+    explicit HTML5PermissionsDialog(QWidget* parent = nullptr);
     ~HTML5PermissionsDialog();
 
     void showFeaturePermissions(QWebEnginePage::Feature feature);

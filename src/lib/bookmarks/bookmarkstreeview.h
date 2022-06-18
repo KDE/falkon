@@ -37,7 +37,7 @@ public:
         BookmarksSidebarViewType
     };
 
-    explicit BookmarksTreeView(QWidget* parent = 0);
+    explicit BookmarksTreeView(QWidget* parent = nullptr);
 
     ViewType viewType() const;
     void setViewType(ViewType type);

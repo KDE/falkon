@@ -23,7 +23,7 @@
 class HorizontalListWidget : public QListWidget
 {
 public:
-    explicit HorizontalListWidget(QWidget* parent = 0);
+    explicit HorizontalListWidget(QWidget* parent = nullptr);
 
 private:
     void mousePressEvent(QMouseEvent* event) override;

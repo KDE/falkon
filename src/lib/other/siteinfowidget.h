@@ -34,7 +34,7 @@ class FALKON_EXPORT SiteInfoWidget : public LocationBarPopup
 {
     Q_OBJECT
 public:
-    explicit SiteInfoWidget(BrowserWindow* window, QWidget* parent = 0);
+    explicit SiteInfoWidget(BrowserWindow* window, QWidget* parent = nullptr);
     ~SiteInfoWidget();
 
 private:

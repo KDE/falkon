@@ -35,7 +35,7 @@ class FALKON_EXPORT HistorySideBar : public QWidget
     Q_OBJECT
 
 public:
-    explicit HistorySideBar(BrowserWindow* window, QWidget* parent = 0);
+    explicit HistorySideBar(BrowserWindow* window, QWidget* parent = nullptr);
     ~HistorySideBar();
 
 private Q_SLOTS:

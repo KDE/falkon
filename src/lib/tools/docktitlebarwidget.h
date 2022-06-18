@@ -26,7 +26,7 @@
 class FALKON_EXPORT DockTitleBarWidget : public QWidget, public Ui_DockTitleBarWidget
 {
 public:
-    explicit DockTitleBarWidget(const QString &title, QWidget* parent = 0);
+    explicit DockTitleBarWidget(const QString &title, QWidget* parent = nullptr);
     ~DockTitleBarWidget();
 
     void setTitle(const QString &title);

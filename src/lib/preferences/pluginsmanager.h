@@ -34,7 +34,7 @@ class FALKON_EXPORT PluginsManager : public QWidget
     Q_OBJECT
 
 public:
-    explicit PluginsManager(QWidget* parent = 0);
+    explicit PluginsManager(QWidget* parent = nullptr);
     ~PluginsManager();
 
     void load();

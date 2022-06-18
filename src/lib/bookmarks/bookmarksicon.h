@@ -30,7 +30,7 @@ class FALKON_EXPORT BookmarksIcon : public ClickableLabel
 {
     Q_OBJECT
 public:
-    explicit BookmarksIcon(QWidget* parent = 0);
+    explicit BookmarksIcon(QWidget* parent = nullptr);
 
     void setWebView(WebView* view);
     void checkBookmark(const QUrl &url, bool forceCheck = false);

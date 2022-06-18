@@ -28,7 +28,7 @@ class FALKON_EXPORT AdBlockTreeWidget : public TreeWidget
 {
     Q_OBJECT
 public:
-    explicit AdBlockTreeWidget(AdBlockSubscription* subscription, QWidget* parent = 0);
+    explicit AdBlockTreeWidget(AdBlockSubscription* subscription, QWidget* parent = nullptr);
 
     AdBlockSubscription* subscription() const;
 

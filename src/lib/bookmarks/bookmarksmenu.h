@@ -31,7 +31,7 @@ class FALKON_EXPORT BookmarksMenu : public Menu
     Q_OBJECT
 
 public:
-    explicit BookmarksMenu(QWidget* parent = 0);
+    explicit BookmarksMenu(QWidget* parent = nullptr);
 
     void setMainWindow(BrowserWindow* window);
 

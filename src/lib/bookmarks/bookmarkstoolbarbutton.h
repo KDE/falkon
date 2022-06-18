@@ -31,7 +31,7 @@ class FALKON_EXPORT BookmarksToolbarButton : public QPushButton
     Q_OBJECT
 
 public:
-    explicit BookmarksToolbarButton(BookmarkItem* bookmark, QWidget* parent = 0);
+    explicit BookmarksToolbarButton(BookmarkItem* bookmark, QWidget* parent = nullptr);
 
     BookmarkItem* bookmark() const;
     void setMainWindow(BrowserWindow* window);

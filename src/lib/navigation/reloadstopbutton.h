@@ -28,7 +28,7 @@ class FALKON_EXPORT ReloadStopButton : public ToolButton
     Q_OBJECT
 
 public:
-    explicit ReloadStopButton(QWidget* parent = 0);
+    explicit ReloadStopButton(QWidget* parent = nullptr);
 
     void showStopButton();
     void showReloadButton();

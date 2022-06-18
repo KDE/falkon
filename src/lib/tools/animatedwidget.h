@@ -30,7 +30,7 @@ class FALKON_EXPORT AnimatedWidget : public QWidget
 public:
     enum Direction { Down, Up };
 
-    explicit AnimatedWidget(const Direction &direction = Down, int duration = 300, QWidget* parent = 0);
+    explicit AnimatedWidget(const Direction &direction = Down, int duration = 300, QWidget* parent = nullptr);
 
     QWidget* widget() { return m_widget; }
 

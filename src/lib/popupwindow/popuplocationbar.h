@@ -36,7 +36,7 @@ class FALKON_EXPORT PopupLocationBar : public LineEdit
     Q_PROPERTY(int fixedheight READ height WRITE setFixedHeight)
 
 public:
-    explicit PopupLocationBar(QWidget* parent = 0);
+    explicit PopupLocationBar(QWidget* parent = nullptr);
 
     void setView(PopupWebView* view);
 

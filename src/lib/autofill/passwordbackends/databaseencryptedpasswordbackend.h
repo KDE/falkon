@@ -101,7 +101,7 @@ class MasterPasswordDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit MasterPasswordDialog(DatabaseEncryptedPasswordBackend* backend, QWidget* parent = 0);
+    explicit MasterPasswordDialog(DatabaseEncryptedPasswordBackend* backend, QWidget* parent = nullptr);
     ~MasterPasswordDialog();
 
     void delayedExec();
@@ -128,7 +128,7 @@ class AskMasterPassword : public QDialog
     Q_OBJECT
 
 public:
-    explicit AskMasterPassword(DatabaseEncryptedPasswordBackend* backend, QWidget* parent = 0);
+    explicit AskMasterPassword(DatabaseEncryptedPasswordBackend* backend, QWidget* parent = nullptr);
 
 private Q_SLOTS:
     void verifyPassword();

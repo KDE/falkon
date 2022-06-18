@@ -34,7 +34,7 @@ class FALKON_EXPORT BookmarksExportDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit BookmarksExportDialog(QWidget* parent = 0);
+    explicit BookmarksExportDialog(QWidget* parent = nullptr);
     ~BookmarksExportDialog();
 
 private Q_SLOTS:

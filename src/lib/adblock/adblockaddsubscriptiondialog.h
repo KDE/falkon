@@ -33,7 +33,7 @@ class FALKON_EXPORT AdBlockAddSubscriptionDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit AdBlockAddSubscriptionDialog(QWidget* parent = 0);
+    explicit AdBlockAddSubscriptionDialog(QWidget* parent = nullptr);
     ~AdBlockAddSubscriptionDialog();
 
     QString title() const;

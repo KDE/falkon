@@ -31,7 +31,7 @@ class FALKON_EXPORT EditSearchEngine : public QDialog
 {
     Q_OBJECT
 public:
-    explicit EditSearchEngine(const QString &title, QWidget* parent = 0);
+    explicit EditSearchEngine(const QString &title, QWidget* parent = nullptr);
 
     void setName(const QString &name);
     void setUrl(const QString &url);

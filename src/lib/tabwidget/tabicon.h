@@ -39,7 +39,7 @@ public:
         QPixmap audioPlayingPixmap;
         QPixmap audioMutedPixmap;
     };
-    explicit TabIcon(QWidget* parent = 0);
+    explicit TabIcon(QWidget* parent = nullptr);
 
     void setWebTab(WebTab* tab);
     void updateIcon();

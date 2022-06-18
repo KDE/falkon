@@ -57,7 +57,7 @@ public:
         AfterTab
     };
 
-    explicit ComboTabBar(QWidget* parent = 0);
+    explicit ComboTabBar(QWidget* parent = nullptr);
 
     int addTab(const QString &text);
     int addTab(const QIcon &icon, const QString &text);
@@ -296,7 +296,7 @@ class FALKON_EXPORT TabScrollBar : public QScrollBar
 {
     Q_OBJECT
 public:
-    explicit TabScrollBar(QWidget* parent = 0);
+    explicit TabScrollBar(QWidget* parent = nullptr);
     ~TabScrollBar();
 
     bool isScrolling() const;
@@ -312,7 +312,7 @@ class FALKON_EXPORT TabBarScrollWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit TabBarScrollWidget(QTabBar* tabBar, QWidget* parent = 0);
+    explicit TabBarScrollWidget(QTabBar* tabBar, QWidget* parent = nullptr);
 
     QTabBar* tabBar();
     QScrollArea* scrollArea();

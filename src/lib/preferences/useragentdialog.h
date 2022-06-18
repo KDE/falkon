@@ -35,7 +35,7 @@ class FALKON_EXPORT UserAgentDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit UserAgentDialog(QWidget* parent = 0);
+    explicit UserAgentDialog(QWidget* parent = nullptr);
     ~UserAgentDialog();
 
 private Q_SLOTS:

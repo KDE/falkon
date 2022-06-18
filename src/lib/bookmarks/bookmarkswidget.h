@@ -37,7 +37,7 @@ class FALKON_EXPORT BookmarksWidget : public LocationBarPopup
 {
     Q_OBJECT
 public:
-    explicit BookmarksWidget(WebView* view, BookmarkItem* bookmark, QWidget* parent = 0);
+    explicit BookmarksWidget(WebView* view, BookmarkItem* bookmark, QWidget* parent = nullptr);
     ~BookmarksWidget();
 
 private Q_SLOTS:

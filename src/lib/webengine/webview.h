@@ -34,7 +34,7 @@ class FALKON_EXPORT WebView : public QWebEngineView
     Q_OBJECT
 
 public:
-    explicit WebView(QWidget* parent = 0);
+    explicit WebView(QWidget* parent = nullptr);
     ~WebView();
 
     QIcon icon(bool allowNull = false) const;

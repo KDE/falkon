@@ -26,7 +26,7 @@ class FALKON_EXPORT FocusSelectLineEdit : public QLineEdit
 {
     Q_OBJECT
 public:
-    explicit FocusSelectLineEdit(QWidget* parent = 0);
+    explicit FocusSelectLineEdit(QWidget* parent = nullptr);
 
 public Q_SLOTS:
     void setFocus();

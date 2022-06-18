@@ -42,7 +42,7 @@ class FALKON_EXPORT SqueezeLabelV1 : public QLabel
     Q_OBJECT
 
 public:
-    SqueezeLabelV1(QWidget* parent = 0);
+    SqueezeLabelV1(QWidget* parent = nullptr);
 
 protected:
     void paintEvent(QPaintEvent* event) override;

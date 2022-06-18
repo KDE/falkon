@@ -35,7 +35,7 @@ class FALKON_EXPORT ClickableLabel : public QLabel
     Q_PROPERTY(QIcon fallbackIcon READ fallbackIcon WRITE setFallbackIcon)
 
 public:
-    explicit ClickableLabel(QWidget* parent = 0);
+    explicit ClickableLabel(QWidget* parent = nullptr);
 
     QString themeIcon() const;
     void setThemeIcon(const QString &name);

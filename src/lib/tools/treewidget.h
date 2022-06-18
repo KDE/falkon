@@ -26,7 +26,7 @@ class FALKON_EXPORT TreeWidget : public QTreeWidget
 {
     Q_OBJECT
 public:
-    explicit TreeWidget(QWidget* parent = 0);
+    explicit TreeWidget(QWidget* parent = nullptr);
     enum ItemShowMode { ItemsCollapsed = 0, ItemsExpanded = 1 };
     ItemShowMode defaultItemShowMode() { return m_showMode; }
     void setDefaultItemShowMode(ItemShowMode mode) { m_showMode = mode; }

@@ -28,7 +28,7 @@ class FALKON_EXPORT ProgressBar : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ProgressBar(QWidget* parent = 0);
+    explicit ProgressBar(QWidget* parent = nullptr);
 
 public Q_SLOTS:
     void setValue(int value);

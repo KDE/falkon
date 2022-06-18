@@ -34,7 +34,7 @@ class FALKON_EXPORT AutoFillManager : public QWidget
     Q_OBJECT
 
 public:
-    explicit AutoFillManager(QWidget* parent = 0);
+    explicit AutoFillManager(QWidget* parent = nullptr);
     ~AutoFillManager();
 
     void showExceptions();

@@ -24,7 +24,7 @@
 class FALKON_EXPORT DownIcon : public ClickableLabel
 {
 public:
-    explicit DownIcon(QWidget* parent = 0);
+    explicit DownIcon(QWidget* parent = nullptr);
 
 private:
     void contextMenuEvent(QContextMenuEvent* ev) override;

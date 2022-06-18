@@ -32,7 +32,7 @@ class QSslCertificate;
 class FALKON_EXPORT CertificateInfoWidget : public QWidget
 {
 public:
-    explicit CertificateInfoWidget(const QSslCertificate &cert, QWidget* parent = 0);
+    explicit CertificateInfoWidget(const QSslCertificate &cert, QWidget* parent = nullptr);
     ~CertificateInfoWidget();
 
     // Qt5 compatibility

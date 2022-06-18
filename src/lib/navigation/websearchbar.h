@@ -38,7 +38,7 @@ class OpenSearchEngine;
 class FALKON_EXPORT WebSearchBar_Button : public ClickableLabel
 {
 public:
-    explicit WebSearchBar_Button(QWidget* parent = 0);
+    explicit WebSearchBar_Button(QWidget* parent = nullptr);
 
 private:
     void contextMenuEvent(QContextMenuEvent* event) override;

@@ -36,7 +36,7 @@ class FALKON_EXPORT DownloadOptionsDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit DownloadOptionsDialog(const QString &fileName, QWebEngineDownloadItem *downloadItem, QWidget* parent = 0);
+    explicit DownloadOptionsDialog(const QString &fileName, QWebEngineDownloadItem *downloadItem, QWidget* parent = nullptr);
     ~DownloadOptionsDialog();
 
     void showExternalManagerOption(bool show);

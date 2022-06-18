@@ -38,7 +38,7 @@ class FALKON_EXPORT HistoryManager : public QWidget
     Q_OBJECT
 
 public:
-    explicit HistoryManager(BrowserWindow* window, QWidget* parent = 0);
+    explicit HistoryManager(BrowserWindow* window, QWidget* parent = nullptr);
     ~HistoryManager();
 
     void setMainWindow(BrowserWindow* window);

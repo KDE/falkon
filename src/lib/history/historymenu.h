@@ -30,7 +30,7 @@ class FALKON_EXPORT HistoryMenu : public Menu
     Q_OBJECT
 
 public:
-    explicit HistoryMenu(QWidget* parent = 0);
+    explicit HistoryMenu(QWidget* parent = nullptr);
 
     void setMainWindow(BrowserWindow* window);
 

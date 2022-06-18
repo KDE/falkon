@@ -31,7 +31,7 @@ class FALKON_EXPORT PopupWebView : public WebView
 {
     Q_OBJECT
 public:
-    explicit PopupWebView(QWidget* parent = 0);
+    explicit PopupWebView(QWidget* parent = nullptr);
 
     QWidget* overlayWidget() override;
     void loadInNewTab(const LoadRequest &req, Qz::NewTabPositionFlags position) override;

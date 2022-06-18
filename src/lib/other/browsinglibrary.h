@@ -35,7 +35,7 @@ class FALKON_EXPORT BrowsingLibrary : public QWidget
     Q_OBJECT
 
 public:
-    explicit BrowsingLibrary(BrowserWindow* window, QWidget* parent = 0);
+    explicit BrowsingLibrary(BrowserWindow* window, QWidget* parent = nullptr);
     ~BrowsingLibrary();
 
     void showHistory(BrowserWindow* window);

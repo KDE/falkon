@@ -33,7 +33,7 @@ public:
         HistorySidebarViewType
     };
 
-    explicit HistoryTreeView(QWidget* parent = 0);
+    explicit HistoryTreeView(QWidget* parent = nullptr);
 
     ViewType viewType() const;
     void setViewType(ViewType type);

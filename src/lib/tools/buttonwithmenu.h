@@ -53,7 +53,7 @@ public:
         }
     };
 
-    explicit ButtonWithMenu(QWidget* parent = 0);
+    explicit ButtonWithMenu(QWidget* parent = nullptr);
     ~ButtonWithMenu();
 
     void addItem(const Item &item);

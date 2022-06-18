@@ -35,7 +35,7 @@ class FALKON_EXPORT IconChooser : public QDialog
     Q_OBJECT
 
 public:
-    explicit IconChooser(QWidget* parent = 0);
+    explicit IconChooser(QWidget* parent = nullptr);
     ~IconChooser();
 
     QIcon getIcon();
@@ -51,7 +51,7 @@ private:
 class FALKON_EXPORT IconChooserDelegate : public QStyledItemDelegate
 {
 public:
-    explicit IconChooserDelegate(QWidget* parent = 0);
+    explicit IconChooserDelegate(QWidget* parent = nullptr);
 
     void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;

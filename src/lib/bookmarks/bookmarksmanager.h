@@ -39,7 +39,7 @@ class FALKON_EXPORT BookmarksManager : public QWidget
     Q_OBJECT
 
 public:
-    explicit BookmarksManager(BrowserWindow* window, QWidget* parent = 0);
+    explicit BookmarksManager(BrowserWindow* window, QWidget* parent = nullptr);
     ~BookmarksManager();
 
     void setMainWindow(BrowserWindow* window);

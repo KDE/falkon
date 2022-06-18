@@ -24,7 +24,7 @@
 class FALKON_EXPORT GoIcon : public ClickableLabel
 {
 public:
-    explicit GoIcon(QWidget* parent = 0);
+    explicit GoIcon(QWidget* parent = nullptr);
 
 private:
     void contextMenuEvent(QContextMenuEvent* ev) override;

@@ -33,7 +33,7 @@ class FALKON_EXPORT JsOptions : public QDialog
     Q_OBJECT
 
 public:
-    explicit JsOptions(QWidget* parent = 0);
+    explicit JsOptions(QWidget* parent = nullptr);
     ~JsOptions();
 
 public Q_SLOTS:

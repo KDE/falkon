@@ -29,7 +29,7 @@ class FALKON_EXPORT LicenseViewer : public QWidget
     Q_OBJECT
 
 public:
-    explicit LicenseViewer(QWidget* parent = 0);
+    explicit LicenseViewer(QWidget* parent = nullptr);
 
     void setLicenseFile(const QString &fileName);
     void setText(const QString &text);

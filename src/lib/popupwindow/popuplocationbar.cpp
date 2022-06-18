@@ -27,7 +27,7 @@
 class FALKON_EXPORT PopupSiteIcon : public QWidget
 {
 public:
-    explicit PopupSiteIcon(QWidget* parent = 0) : QWidget(parent) { }
+    explicit PopupSiteIcon(QWidget* parent = nullptr) : QWidget(parent) { }
     void setIcon(const QIcon &icon) {
         m_icon = QIcon(icon.pixmap(16));
         update();

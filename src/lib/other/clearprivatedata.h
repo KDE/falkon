@@ -31,7 +31,7 @@ class FALKON_EXPORT ClearPrivateData : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ClearPrivateData(QWidget* parent = 0);
+    explicit ClearPrivateData(QWidget* parent = nullptr);
 
     static void clearLocalStorage();
     static void clearWebDatabases();

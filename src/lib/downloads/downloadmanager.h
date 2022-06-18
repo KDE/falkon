@@ -59,7 +59,7 @@ public:
         }
     };
 
-    explicit DownloadManager(QWidget* parent = 0);
+    explicit DownloadManager(QWidget* parent = nullptr);
     ~DownloadManager();
 
     void loadSettings();

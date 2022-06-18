@@ -30,7 +30,7 @@ class FALKON_EXPORT MacToolButton : public QPushButton
     Q_PROPERTY(bool autoRaise READ autoRaise WRITE setAutoRaise)
 
 public:
-    explicit MacToolButton(QWidget* parent = 0);
+    explicit MacToolButton(QWidget* parent = nullptr);
 
     void setIconSize(const QSize &size);
 
@@ -49,7 +49,7 @@ class FALKON_EXPORT MacToolButton : public QToolButton
     Q_OBJECT
 
 public:
-    explicit MacToolButton(QWidget* parent = 0);
+    explicit MacToolButton(QWidget* parent = nullptr);
 };
 #endif
 #endif // MACTOOLBUTTON_H

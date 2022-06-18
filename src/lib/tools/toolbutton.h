@@ -36,7 +36,7 @@ class FALKON_EXPORT ToolButton : public QToolButton
     Q_PROPERTY(QIcon fallbackIcon READ fallbackIcon WRITE setFallbackIcon)
 
 public:
-    explicit ToolButton(QWidget* parent = 0);
+    explicit ToolButton(QWidget* parent = nullptr);
 
     // MultiIcon - Image containing pixmaps for all button states
     QImage multiIcon() const;

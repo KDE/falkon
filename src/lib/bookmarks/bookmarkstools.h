@@ -31,7 +31,7 @@ class FALKON_EXPORT BookmarksFoldersMenu : public QMenu
     Q_OBJECT
 
 public:
-    explicit BookmarksFoldersMenu(QWidget* parent = 0);
+    explicit BookmarksFoldersMenu(QWidget* parent = nullptr);
 
     BookmarkItem* selectedFolder() const;
 

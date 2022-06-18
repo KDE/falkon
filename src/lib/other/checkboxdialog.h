@@ -27,7 +27,7 @@ class FALKON_EXPORT CheckBoxDialog : public QMessageBox
 {
     Q_OBJECT
 public:
-    explicit CheckBoxDialog(const QMessageBox::StandardButtons &buttons, QWidget* parent = 0);
+    explicit CheckBoxDialog(const QMessageBox::StandardButtons &buttons, QWidget* parent = nullptr);
 
     void setCheckBoxText(const QString &text);
 

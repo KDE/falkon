@@ -36,7 +36,7 @@ class FALKON_EXPORT SslErrorDialog : public QDialog
 public:
     enum Result { Yes, No, OnlyForThisSession, NoForThisSession };
 
-    explicit SslErrorDialog(QWidget* parent = 0);
+    explicit SslErrorDialog(QWidget* parent = nullptr);
     ~SslErrorDialog();
 
     void setText(const QString &text);

@@ -92,7 +92,7 @@ public:
         SelectAll = 8
     };
 
-    LineEdit(QWidget* parent = 0);
+    LineEdit(QWidget* parent = nullptr);
 
     void addWidget(QWidget* widget, WidgetPosition position);
     void removeWidget(QWidget* widget);
@@ -152,7 +152,7 @@ Q_SIGNALS:
     void sizeHintChanged();
 
 public:
-    SideWidget(QWidget* parent = 0);
+    SideWidget(QWidget* parent = nullptr);
 
 protected:
     bool event(QEvent* event) override;

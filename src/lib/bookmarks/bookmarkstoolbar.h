@@ -34,7 +34,7 @@ class FALKON_EXPORT BookmarksToolbar : public QWidget
 {
     Q_OBJECT
 public:
-    explicit BookmarksToolbar(BrowserWindow* window, QWidget* parent = 0);
+    explicit BookmarksToolbar(BrowserWindow* window, QWidget* parent = nullptr);
 
 private Q_SLOTS:
     void contextMenuRequested(const QPoint &pos);

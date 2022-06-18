@@ -35,7 +35,7 @@ class FALKON_EXPORT SearchEnginesDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit SearchEnginesDialog(QWidget* parent = 0);
+    explicit SearchEnginesDialog(QWidget* parent = nullptr);
     ~SearchEnginesDialog();
 
 public Q_SLOTS:
