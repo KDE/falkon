@@ -25,7 +25,7 @@
 class IeImporter : public BookmarksImporter
 {
 public:
-    explicit IeImporter(QObject* parent = 0);
+    explicit IeImporter(QObject* parent = nullptr);
 
     QString description() const override;
     QString standardPath() const override;

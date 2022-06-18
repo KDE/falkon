@@ -30,7 +30,7 @@ class FALKON_EXPORT UserAgentManager : QObject
     Q_OBJECT
 
 public:
-    explicit UserAgentManager(QObject* parent = 0);
+    explicit UserAgentManager(QObject* parent = nullptr);
 
     void loadSettings();
 

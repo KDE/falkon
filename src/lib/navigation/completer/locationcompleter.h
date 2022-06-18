@@ -36,7 +36,7 @@ class FALKON_EXPORT LocationCompleter : public QObject
 {
     Q_OBJECT
 public:
-    explicit LocationCompleter(QObject* parent = 0);
+    explicit LocationCompleter(QObject* parent = nullptr);
 
     void setMainWindow(BrowserWindow* window);
     void setLocationBar(LocationBar* locationBar);

@@ -74,7 +74,7 @@ public:
     Q_PROPERTY(bool valid READ isValid)
     Q_PROPERTY(QNetworkAccessManager* networkAccessManager READ networkAccessManager WRITE setNetworkAccessManager)
 
-    OpenSearchEngine(QObject* parent = 0);
+    OpenSearchEngine(QObject* parent = nullptr);
     ~OpenSearchEngine();
 
     QString name() const;

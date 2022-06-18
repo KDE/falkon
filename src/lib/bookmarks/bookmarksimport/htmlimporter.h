@@ -25,7 +25,7 @@
 class FALKON_EXPORT HtmlImporter : public BookmarksImporter
 {
 public:
-    explicit HtmlImporter(QObject* parent = 0);
+    explicit HtmlImporter(QObject* parent = nullptr);
 
     QString description() const override;
     QString standardPath() const override;

@@ -44,7 +44,7 @@ public:
         SearchSuggestionRole
     };
 
-    explicit LocationCompleterModel(QObject* parent = 0);
+    explicit LocationCompleterModel(QObject* parent = nullptr);
 
     void setCompletions(const QList<QStandardItem*> &items);
     void addCompletions(const QList<QStandardItem*> &items);

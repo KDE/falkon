@@ -29,7 +29,7 @@ class FALKON_EXPORT BookmarksExporter : public QObject
     Q_OBJECT
 
 public:
-    explicit BookmarksExporter(QObject* parent = 0);
+    explicit BookmarksExporter(QObject* parent = nullptr);
     virtual ~BookmarksExporter();
 
     bool error() const;

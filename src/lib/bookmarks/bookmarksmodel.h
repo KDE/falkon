@@ -48,7 +48,7 @@ public:
         MaxRole = SidebarExpandedRole
     };
 
-    explicit BookmarksModel(BookmarkItem* root, Bookmarks* bookmarks, QObject* parent = 0);
+    explicit BookmarksModel(BookmarkItem* root, Bookmarks* bookmarks, QObject* parent = nullptr);
 
     void addBookmark(BookmarkItem* parent, int row, BookmarkItem* item);
     void removeBookmark(BookmarkItem* item);

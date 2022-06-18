@@ -36,7 +36,7 @@ class FALKON_EXPORT AesInterface : public QObject
 public:
     static const int VERSION;
 
-    explicit AesInterface(QObject* parent = 0);
+    explicit AesInterface(QObject* parent = nullptr);
     ~AesInterface();
 
     bool isOk();

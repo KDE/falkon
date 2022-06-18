@@ -35,7 +35,7 @@ class FALKON_EXPORT SearchEnginesManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit SearchEnginesManager(QObject* parent = 0);
+    explicit SearchEnginesManager(QObject* parent = nullptr);
 
     struct Engine {
         QString name;

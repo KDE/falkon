@@ -26,7 +26,7 @@
 class FALKON_EXPORT ChromeImporter : public BookmarksImporter
 {
 public:
-    explicit ChromeImporter(QObject* parent = 0);
+    explicit ChromeImporter(QObject* parent = nullptr);
 
     QString description() const override;
     QString standardPath() const override;

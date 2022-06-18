@@ -53,7 +53,7 @@ class FALKON_EXPORT AdBlockManager : public QObject
     Q_OBJECT
 
 public:
-    AdBlockManager(QObject* parent = 0);
+    AdBlockManager(QObject* parent = nullptr);
     ~AdBlockManager();
 
     void load();

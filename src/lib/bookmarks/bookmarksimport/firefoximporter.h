@@ -26,7 +26,7 @@
 class FALKON_EXPORT FirefoxImporter : public BookmarksImporter
 {
 public:
-    explicit FirefoxImporter(QObject* parent = 0);
+    explicit FirefoxImporter(QObject* parent = nullptr);
     ~FirefoxImporter();
 
     QString description() const override;

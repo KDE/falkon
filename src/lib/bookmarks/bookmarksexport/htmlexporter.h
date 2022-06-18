@@ -27,7 +27,7 @@ class BookmarkItem;
 class HtmlExporter : public BookmarksExporter
 {
 public:
-    explicit HtmlExporter(QObject* parent = 0);
+    explicit HtmlExporter(QObject* parent = nullptr);
 
     QString name() const override;
     QString getPath(QWidget* parent) override;

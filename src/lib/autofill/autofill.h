@@ -48,7 +48,7 @@ class FALKON_EXPORT AutoFill : public QObject
     Q_OBJECT
 
 public:
-    explicit AutoFill(QObject* parent = 0);
+    explicit AutoFill(QObject* parent = nullptr);
 
     PasswordManager* passwordManager() const;
     void loadSettings();

@@ -78,7 +78,7 @@ public:
         bool operator==(const Plugin &other) const;
     };
 
-    explicit Plugins(QObject* parent = 0);
+    explicit Plugins(QObject* parent = nullptr);
 
     QList<Plugin> availablePlugins();
 

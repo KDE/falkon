@@ -31,7 +31,7 @@ class FALKON_EXPORT BookmarksImporter : public QObject
     Q_OBJECT
 
 public:
-    explicit BookmarksImporter(QObject* parent = 0);
+    explicit BookmarksImporter(QObject* parent = nullptr);
     virtual ~BookmarksImporter();
 
     bool error() const;

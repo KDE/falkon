@@ -28,7 +28,7 @@ class FALKON_EXPORT AutoSaver : public QObject
     Q_OBJECT
 
 public:
-    explicit AutoSaver(QObject* parent = 0);
+    explicit AutoSaver(QObject* parent = nullptr);
 
     // Emits save() if timer is running. Call this from destructor.
     void saveIfNecessary();

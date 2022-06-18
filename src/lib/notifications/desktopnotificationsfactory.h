@@ -37,7 +37,7 @@ class FALKON_EXPORT DesktopNotificationsFactory : public QObject
 public:
     enum Type { DesktopNative, PopupWidget };
 
-    explicit DesktopNotificationsFactory(QObject* parent = 0);
+    explicit DesktopNotificationsFactory(QObject* parent = nullptr);
 
     void loadSettings();
 

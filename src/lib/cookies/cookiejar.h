@@ -32,7 +32,7 @@ class FALKON_EXPORT CookieJar : public QObject
     Q_OBJECT
 
 public:
-    explicit CookieJar(QObject* parent = 0);
+    explicit CookieJar(QObject* parent = nullptr);
     ~CookieJar();
 
     void loadSettings();

@@ -31,7 +31,7 @@ class FALKON_EXPORT Updater : public QObject
 {
     Q_OBJECT
 public:
-    explicit Updater(BrowserWindow* window, QObject* parent = 0);
+    explicit Updater(BrowserWindow* window, QObject* parent = nullptr);
 
     struct FALKON_EXPORT Version {
         bool isValid;

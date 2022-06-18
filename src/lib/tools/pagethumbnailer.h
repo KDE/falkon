@@ -32,7 +32,7 @@ class FALKON_EXPORT PageThumbnailer : public QObject
     Q_OBJECT
 
 public:
-    explicit PageThumbnailer(QObject* parent = 0);
+    explicit PageThumbnailer(QObject* parent = nullptr);
     ~PageThumbnailer();
 
     void setSize(const QSize &size);

@@ -26,7 +26,7 @@
 class FALKON_EXPORT OperaImporter : public BookmarksImporter
 {
 public:
-    explicit OperaImporter(QObject* parent = 0);
+    explicit OperaImporter(QObject* parent = nullptr);
 
     QString description() const override;
     QString standardPath() const override;

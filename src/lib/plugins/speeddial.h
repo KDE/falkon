@@ -48,7 +48,7 @@ public:
         }
     };
 
-    explicit SpeedDial(QObject* parent = 0);
+    explicit SpeedDial(QObject* parent = nullptr);
     ~SpeedDial();
 
     void loadSettings();

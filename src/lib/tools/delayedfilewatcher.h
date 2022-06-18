@@ -29,8 +29,8 @@ class FALKON_EXPORT DelayedFileWatcher : public QFileSystemWatcher
     Q_OBJECT
 
 public:
-    explicit DelayedFileWatcher(QObject* parent = 0);
-    explicit DelayedFileWatcher(const QStringList &paths, QObject* parent = 0);
+    explicit DelayedFileWatcher(QObject* parent = nullptr);
+    explicit DelayedFileWatcher(const QStringList &paths, QObject* parent = nullptr);
 
 Q_SIGNALS:
     void delayedDirectoryChanged(const QString &path);

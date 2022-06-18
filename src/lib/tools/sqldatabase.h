@@ -57,7 +57,7 @@ class FALKON_EXPORT SqlDatabase : public QObject
     Q_OBJECT
 
 public:
-    explicit SqlDatabase(QObject* parent = 0);
+    explicit SqlDatabase(QObject* parent = nullptr);
     ~SqlDatabase();
 
     // Returns database connection for current thread

@@ -43,7 +43,7 @@ public:
         SafeJsWorld = QWebEngineScript::ApplicationWorld
     };
 
-    explicit WebPage(QObject* parent = 0);
+    explicit WebPage(QObject* parent = nullptr);
     ~WebPage();
 
     WebView *view() const;
