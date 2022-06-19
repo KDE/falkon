@@ -45,7 +45,7 @@ void Menu::setCloseOnMiddleClick(bool close)
 void Menu::mouseReleaseEvent(QMouseEvent* e)
 {
     QAction* qact = activeAction();
-    Action* act = qobject_cast<Action*> (qact);
+    auto* act = qobject_cast<Action*> (qact);
 
     if (qact && qact->menu()) {
         Menu* m = qobject_cast<Menu*> (qact->menu());
@@ -92,7 +92,7 @@ void Menu::keyPressEvent(QKeyEvent* e)
     }
 
     QAction* qact = activeAction();
-    Action* act = qobject_cast<Action*> (qact);
+    auto* act = qobject_cast<Action*> (qact);
 
     if (!act) {
         QMenu::keyPressEvent(e);

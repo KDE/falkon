@@ -61,7 +61,7 @@ QmlBookmarkTreeNode::Type QmlBookmarkTreeNode::type() const
 QString QmlBookmarkTreeNode::title() const
 {
     if (!m_item) {
-        return QString();
+        return {};
     }
 
     return m_item->title();
@@ -70,7 +70,7 @@ QString QmlBookmarkTreeNode::title() const
 QString QmlBookmarkTreeNode::url() const
 {
     if (!m_item) {
-        return QString();
+        return {};
     }
 
     return m_item->urlString();
@@ -79,7 +79,7 @@ QString QmlBookmarkTreeNode::url() const
 QString QmlBookmarkTreeNode::description() const
 {
     if (!m_item) {
-        return QString();
+        return {};
     }
 
     return m_item->description();
@@ -88,7 +88,7 @@ QString QmlBookmarkTreeNode::description() const
 QString QmlBookmarkTreeNode::keyword() const
 {
     if (!m_item) {
-        return QString();
+        return {};
     }
 
     return m_item->keyword();

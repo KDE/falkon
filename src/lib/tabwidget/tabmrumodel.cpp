@@ -94,13 +94,13 @@ int TabMruModel::columnCount(const QModelIndex &parent) const
 QModelIndex TabMruModel::parent(const QModelIndex &index) const
 {
     Q_UNUSED(index)
-    return QModelIndex();
+    return {};
 }
 
 QModelIndex TabMruModel::index(int row, int column, const QModelIndex &parent) const
 {
     if (!hasIndex(row, column, parent)) {
-        return QModelIndex();
+        return {};
     }
     return createIndex(row, column, m_root->children.at(row));
 }
@@ -114,7 +114,7 @@ QModelIndex TabMruModel::mapToSource(const QModelIndex &proxyIndex) const
 {
     TabMruModelItem *it = item(proxyIndex);
     if (!it) {
-        return QModelIndex();
+        return {};
     }
     return it->sourceIndex;
 }
@@ -138,7 +138,7 @@ void TabMruModel::init()
 QModelIndex TabMruModel::index(TabMruModelItem *item) const
 {
     if (!item || item == m_root) {
-        return QModelIndex();
+        return {};
     }
     return createIndex(m_root->children.indexOf(item), 0, item);
 }
@@ -176,10 +176,10 @@ void TabMruModel::sourceRowsInserted(const QModelIndex &parent, int start, int e
 {
     for (int i = start; i <= end; ++i) {
         const QModelIndex index = sourceModel()->index(i, 0, parent);
-        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
         if (tab) {
             beginInsertRows(QModelIndex(), m_items.count(), m_items.count());
-            TabMruModelItem *item = new TabMruModelItem(tab, index);
+            auto *item = new TabMruModelItem(tab, index);
             m_items[tab] = item;
             m_root->children.append(item);
             endInsertRows();

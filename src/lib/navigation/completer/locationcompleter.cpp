@@ -81,7 +81,7 @@ void LocationCompleter::complete(const QString &string)
 
     emit cancelRefreshJob();
 
-    LocationCompleterRefreshJob* job = new LocationCompleterRefreshJob(trimmedStr);
+    auto* job = new LocationCompleterRefreshJob(trimmedStr);
     connect(job, &LocationCompleterRefreshJob::finished, this, &LocationCompleter::refreshJobFinished);
     connect(this, SIGNAL(cancelRefreshJob()), job, SLOT(jobCancelled()));
 
@@ -107,7 +107,7 @@ void LocationCompleter::complete(const QString &string)
             s_model->setData(index, trimmedStr, LocationCompleterModel::UrlRole);
             s_model->setData(index, m_locationBar->text(), LocationCompleterModel::SearchStringRole);
         } else {
-            QStandardItem *item = new QStandardItem();
+            auto *item = new QStandardItem();
             item->setText(trimmedStr);
             item->setData(trimmedStr, LocationCompleterModel::UrlRole);
             item->setData(m_locationBar->text(), LocationCompleterModel::SearchStringRole);
@@ -132,7 +132,7 @@ void LocationCompleter::showMostVisited()
 
 void LocationCompleter::refreshJobFinished()
 {
-    LocationCompleterRefreshJob* job = qobject_cast<LocationCompleterRefreshJob*>(sender());
+    auto* job = qobject_cast<LocationCompleterRefreshJob*>(sender());
     Q_ASSERT(job);
 
     // Don't show results of older jobs
@@ -190,7 +190,7 @@ void LocationCompleter::addSuggestions(const QStringList &suggestions)
     // Add new suggestions
     QList<QStandardItem*> items;
     for (const QString &suggestion : suggestions) {
-        QStandardItem* item = new QStandardItem();
+        auto* item = new QStandardItem();
         item->setText(suggestion);
         item->setData(suggestion, LocationCompleterModel::TitleRole);
         item->setData(suggestion, LocationCompleterModel::UrlRole);
@@ -378,7 +378,7 @@ void LocationCompleter::openSearchEnginesDialog()
     // Clear locationbar
     emit clearCompletion();
 
-    SearchEnginesDialog *dialog = new SearchEnginesDialog(m_window);
+    auto *dialog = new SearchEnginesDialog(m_window);
     dialog->open();
 }
 

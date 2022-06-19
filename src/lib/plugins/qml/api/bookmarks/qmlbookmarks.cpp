@@ -169,7 +169,7 @@ QList<QObject*> QmlBookmarks::search(const QVariantMap &map) const
 {
     if (!map.contains(QSL("query")) && !map.contains(QSL("url"))) {
         qWarning() << "Unable to search bookmarks";
-        return QList<QObject*>();
+        return {};
     }
 
     const QString query = map.value(QSL("query")).toString();

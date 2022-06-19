@@ -39,7 +39,7 @@ void QmlExternalJsObject::registerExtraObject(const QVariantMap &map)
     }
 
     const QString id = map.value(QSL("id")).toString();
-    QObject *object = qvariant_cast<QObject*>(map.value(QSL("object")));
+    auto *object = qvariant_cast<QObject*>(map.value(QSL("object")));
     if (!object) {
         qWarning() << "Unable to cast to QObject";
         return;

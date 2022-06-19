@@ -49,7 +49,7 @@ private:
         QString title;
         QString url;
 
-        Subscription() {}
+        Subscription() = default;
 
         Subscription(const QString &t, const QString &u) {
             title = t;

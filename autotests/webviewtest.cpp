@@ -67,7 +67,7 @@ void WebViewTest::cleanupTestCase()
 void WebViewTest::loadSignalsChangePageTest()
 {
     TestWebView view;
-    WebPage *page1 = new WebPage;
+    auto *page1 = new WebPage;
     view.setPage(page1);
 
     QSignalSpy loadStartedSpy(&view, &WebView::loadStarted);
@@ -78,7 +78,7 @@ void WebViewTest::loadSignalsChangePageTest()
     QTRY_COMPARE(loadStartedSpy.count(), 1);
     loadStartedSpy.clear();
 
-    WebPage *page2 = new WebPage;
+    auto *page2 = new WebPage;
     view.setPage(page2);
 
     // WebPage: Workaround for broken load started/finished signals in QtWebEngine 5.10
@@ -89,7 +89,7 @@ void WebViewTest::loadSignalsChangePageTest()
     loadFinishedSpy.clear();
 
     QWebEngineView view2;
-    WebPage *page3 = new WebPage;
+    auto *page3 = new WebPage;
     view2.setPage(page3);
 
     QSignalSpy page3LoadStart(page3, &WebPage::loadStarted);

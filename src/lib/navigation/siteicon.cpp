@@ -143,8 +143,8 @@ void SiteIcon::mouseMoveEvent(QMouseEvent* e)
         return;
     }
 
-    QDrag* drag = new QDrag(this);
-    QMimeData* mime = new QMimeData;
+    auto* drag = new QDrag(this);
+    auto* mime = new QMimeData;
     mime->setUrls(QList<QUrl>() << url);
     mime->setText(title);
     mime->setImageData(icon().pixmap(16).toImage());
@@ -170,7 +170,7 @@ bool SiteIcon::showPopup()
 
     setDown(true);
 
-    SiteInfoWidget* info = new SiteInfoWidget(m_window);
+    auto* info = new SiteInfoWidget(m_window);
     info->showAt(parentWidget());
 
     connect(info, &QObject::destroyed, this, &SiteIcon::popupClosed);

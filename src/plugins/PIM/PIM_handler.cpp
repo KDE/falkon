@@ -111,7 +111,7 @@ void PIM_Handler::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTe
         loadSettings();
     }
 
-    QMenu* pimMenu = new QMenu(tr("Insert Personal Information"));
+    auto* pimMenu = new QMenu(tr("Insert Personal Information"));
     pimMenu->setIcon(QIcon(QStringLiteral(":/PIM/data/PIM.png")));
 
     if (!m_allInfo[PI_FirstName].isEmpty() && !m_allInfo[PI_LastName].isEmpty()) {
@@ -187,7 +187,7 @@ void PIM_Handler::pimInsert()
     if (!m_view || m_clickedPos.isNull())
         return;
 
-    QAction* action = qobject_cast<QAction*>(sender());
+    auto* action = qobject_cast<QAction*>(sender());
     if (!action)
         return;
 
@@ -206,7 +206,7 @@ void PIM_Handler::pimInsert()
 
 void PIM_Handler::pageLoadFinished()
 {
-    WebPage* page = qobject_cast<WebPage*>(sender());
+    auto* page = qobject_cast<WebPage*>(sender());
     if (!page) {
         return;
     }

@@ -114,7 +114,7 @@ TabBar::TabBar(BrowserWindow* window, TabWidget* tabWidget)
     tabMetrics()->init();
 
     if (mApp->isPrivate()) {
-        QLabel* privateBrowsing = new QLabel(this);
+        auto* privateBrowsing = new QLabel(this);
         privateBrowsing->setObjectName(QSL("private-browsing-icon"));
         privateBrowsing->setPixmap(IconProvider::privateBrowsingIcon().pixmap(16));
         privateBrowsing->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
@@ -193,8 +193,8 @@ QSize TabBar::tabSizeHint(int index, bool fast) const
         return size;
     }
 
-    WebTab* webTab = qobject_cast<WebTab*>(m_tabWidget->widget(index));
-    TabBar* tabBar = const_cast <TabBar*>(this);
+    auto* webTab = qobject_cast<WebTab*>(m_tabWidget->widget(index));
+    auto* tabBar = const_cast <TabBar*>(this);
 
     if (webTab && webTab->isPinned()) {
         size.setWidth(pinnedTabWidth);
@@ -271,7 +271,7 @@ QSize TabBar::tabSizeHint(int index, bool fast) const
     }
 
     if (index == count() - 1) {
-        WebTab* lastMainActiveTab = qobject_cast<WebTab*>(m_tabWidget->widget(mainTabBarCurrentIndex()));
+        auto* lastMainActiveTab = qobject_cast<WebTab*>(m_tabWidget->widget(mainTabBarCurrentIndex()));
         int xForAddTabButton = cornerWidth(Qt::TopLeftCorner) + pinTabBarWidth() + normalTabsCount() * m_normalTabWidth;
 
         if (lastMainActiveTab && m_activeTabWidth > m_normalTabWidth) {
@@ -330,8 +330,8 @@ void TabBar::showCloseButton(int index)
         return;
     }
 
-    WebTab* webTab = qobject_cast<WebTab*>(m_tabWidget->widget(index));
-    QAbstractButton* button = qobject_cast<QAbstractButton*>(tabButton(index, closeButtonPosition()));
+    auto* webTab = qobject_cast<WebTab*>(m_tabWidget->widget(index));
+    auto* button = qobject_cast<QAbstractButton*>(tabButton(index, closeButtonPosition()));
 
     if (button || (webTab && webTab->isPinned())) {
         return;
@@ -362,7 +362,7 @@ void TabBar::hideCloseButton(int index)
         return;
     }
 
-    CloseButton* button = qobject_cast<CloseButton*>(tabButton(index, closeButtonPosition()));
+    auto* button = qobject_cast<CloseButton*>(tabButton(index, closeButtonPosition()));
     if (!button) {
         return;
     }
@@ -377,8 +377,8 @@ void TabBar::updatePinnedTabCloseButton(int index)
         return;
     }
 
-    WebTab* webTab = qobject_cast<WebTab*>(m_tabWidget->widget(index));
-    QAbstractButton* button = qobject_cast<QAbstractButton*>(tabButton(index, closeButtonPosition()));
+    auto* webTab = qobject_cast<WebTab*>(m_tabWidget->widget(index));
+    auto* button = qobject_cast<QAbstractButton*>(tabButton(index, closeButtonPosition()));
 
     bool pinned = webTab && webTab->isPinned();
 
@@ -546,8 +546,8 @@ void TabBar::mouseMoveEvent(QMouseEvent* event)
                 QMouseEvent mouse(QEvent::MouseButtonRelease, w->mapFromGlobal(global), Qt::LeftButton, Qt::LeftButton, event->modifiers());
                 QApplication::sendEvent(w, &mouse);
             }
-            QDrag *drag = new QDrag(this);
-            QMimeData *mime = new QMimeData;
+            auto *drag = new QDrag(this);
+            auto *mime = new QMimeData;
             mime->setData(MIMETYPE, QByteArray());
             drag->setMimeData(mime);
             drag->setPixmap(tabPixmap(currentIndex()));
@@ -678,7 +678,7 @@ void TabBar::dropEvent(QDropEvent* event)
 
     event->acceptProposedAction();
 
-    TabBar *sourceTabBar = qobject_cast<TabBar*>(event->source());
+    auto *sourceTabBar = qobject_cast<TabBar*>(event->source());
 
     int index = tabAt(event->pos());
     if (index == -1) {

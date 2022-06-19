@@ -54,7 +54,7 @@ QString AdBlockIcon::name() const
 
 void AdBlockIcon::toggleCustomFilter()
 {
-    QAction* action = qobject_cast<QAction*>(sender());
+    auto* action = qobject_cast<QAction*>(sender());
     if (!action) {
         return;
     }
@@ -67,7 +67,7 @@ void AdBlockIcon::toggleCustomFilter()
         customList->removeFilter(filter);
     }
     else {
-        AdBlockRule* rule = new AdBlockRule(filter, customList);
+        auto* rule = new AdBlockRule(filter, customList);
         customList->addRule(rule);
     }
 }
@@ -140,7 +140,7 @@ void AdBlockIcon::clicked(ClickController *controller)
 
     const QUrl pageUrl = view->url();
 
-    QMenu *menu = new QMenu();
+    auto *menu = new QMenu();
     menu->setAttribute(Qt::WA_DeleteOnClose);
     menu->addAction(tr("Show AdBlock &Settings"), manager, SLOT(showDialog()));
     menu->addSeparator();

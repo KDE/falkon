@@ -116,7 +116,7 @@ void QmlPlugins::registerQmlTypes()
     qmlRegisterSingletonType<QmlNotifications>(url, majorVersion, minorVersion, "Notifications", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(scriptEngine)
 
-        QmlEngine *qmlEngine = qobject_cast<QmlEngine*>(engine);
+        auto *qmlEngine = qobject_cast<QmlEngine*>(engine);
         if (!qmlEngine) {
             qWarning() << "Unable to cast QQmlEngine * to QmlEngine *";
             return nullptr;
@@ -202,7 +202,7 @@ void QmlPlugins::registerQmlTypes()
     qmlRegisterSingletonType<QmlFileUtils>(url, majorVersion, minorVersion, "FileUtils", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(scriptEngine)
 
-        QmlEngine *qmlEngine = qobject_cast<QmlEngine*>(engine);
+        auto *qmlEngine = qobject_cast<QmlEngine*>(engine);
         if (!qmlEngine) {
             qWarning() << "Unable to cast QQmlEngine * to QmlEngine *";
             return nullptr;

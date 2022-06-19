@@ -57,7 +57,7 @@ void QmlWindowsApiTest::testWindowsAPI()
     QTRY_COMPARE(qmlWindowCreatedSignal.count(), 2);
     QTRY_COMPARE(windowCreatedSingal.count(), 2);
 
-    QObject *newQmlSignalWindow = qvariant_cast<QObject*>(qmlWindowCreatedSignal.at(1).at(0));
+    auto *newQmlSignalWindow = qvariant_cast<QObject*>(qmlWindowCreatedSignal.at(1).at(0));
     QVERIFY(newQmlSignalWindow);
     QCOMPARE(newQmlWindow->property("id").toInt(), newQmlSignalWindow->property("id").toInt());
 

@@ -113,7 +113,7 @@ void AdBlockTreeWidget::itemChanged(QTreeWidgetItem* item)
     }
     else if (m_subscription->canEditRules()) {
         // Custom rule has been changed
-        AdBlockRule* newRule = new AdBlockRule(item->text(0), m_subscription);
+        auto* newRule = new AdBlockRule(item->text(0), m_subscription);
         const AdBlockRule* rule = m_subscription->replaceRule(newRule, offset);
 
         adjustItemFeatures(item, rule);
@@ -143,10 +143,10 @@ void AdBlockTreeWidget::addRule()
         return;
     }
 
-    AdBlockRule* rule = new AdBlockRule(newRule, m_subscription);
+    auto* rule = new AdBlockRule(newRule, m_subscription);
     int offset = m_subscription->addRule(rule);
 
-    QTreeWidgetItem* item = new QTreeWidgetItem();
+    auto* item = new QTreeWidgetItem();
     item->setText(0, newRule);
     item->setData(0, Qt::UserRole + 10, offset);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
@@ -254,7 +254,7 @@ void AdBlockTreeWidget::refresh()
 
     int index = 0;
     for (const AdBlockRule* rule : allRules) {
-        QTreeWidgetItem* item = new QTreeWidgetItem(m_topItem);
+        auto* item = new QTreeWidgetItem(m_topItem);
         item->setText(0, rule->filter());
         item->setData(0, Qt::UserRole + 10, index);
 

@@ -330,7 +330,7 @@ void Bookmarks::readBookmarks(const QVariantList &list, BookmarkItem* parent)
             continue;
         }
 
-        BookmarkItem* item = new BookmarkItem(type, parent);
+        auto* item = new BookmarkItem(type, parent);
 
         switch (type) {
         case BookmarkItem::Url:

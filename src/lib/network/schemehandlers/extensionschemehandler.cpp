@@ -24,7 +24,7 @@
 // ExtensionSchemeHandler
 void ExtensionSchemeHandler::setReply(QWebEngineUrlRequestJob *job, const QByteArray &contentType, const QByteArray &content)
 {
-    QBuffer *buffer = new QBuffer(job);
+    auto *buffer = new QBuffer(job);
     buffer->open(QIODevice::ReadWrite);
     buffer->write(content);
     buffer->seek(0);

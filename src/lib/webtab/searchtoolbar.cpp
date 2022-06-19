@@ -47,10 +47,10 @@ SearchToolBar::SearchToolBar(WebView* view, QWidget* parent)
     connect(ui->previous, &QAbstractButton::clicked, this, &SearchToolBar::findPrevious);
     connect(ui->caseSensitive, &QAbstractButton::clicked, this, &SearchToolBar::caseSensitivityChanged);
 
-    QShortcut* findNextAction = new QShortcut(QKeySequence("F3"), this);
+    auto* findNextAction = new QShortcut(QKeySequence("F3"), this);
     connect(findNextAction, &QShortcut::activated, this, &SearchToolBar::findNext);
 
-    QShortcut* findPreviousAction = new QShortcut(QKeySequence("Shift+F3"), this);
+    auto* findPreviousAction = new QShortcut(QKeySequence("Shift+F3"), this);
     connect(findPreviousAction, &QShortcut::activated, this, &SearchToolBar::findPrevious);
 
     parent->installEventFilter(this);
@@ -157,7 +157,7 @@ bool SearchToolBar::eventFilter(QObject* obj, QEvent* event)
     Q_UNUSED(obj);
 
     if (event->type() == QEvent::KeyPress) {
-        QKeyEvent *ke = static_cast<QKeyEvent*>(event);
+        auto *ke = static_cast<QKeyEvent*>(event);
         switch (ke->key()) {
         case Qt::Key_Escape:
             close();

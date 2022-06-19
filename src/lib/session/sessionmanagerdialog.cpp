@@ -112,7 +112,7 @@ void SessionManagerDialog::refresh()
 
     const auto sessions = mApp->sessionManager()->sessionMetaData();
     for (const auto &session : sessions) {
-        QTreeWidgetItem *item = new QTreeWidgetItem;
+        auto *item = new QTreeWidgetItem;
         item->setText(0, session.name);
         item->setText(1, QFileInfo(session.filePath).lastModified().toString(Qt::DefaultLocaleShortDate));
         item->setData(0, SessionFileRole, session.filePath);

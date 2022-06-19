@@ -76,7 +76,7 @@ static QString createLanguageItem(const QString &lang)
         return QString::fromUtf8("Castellano");
     }
     if (lang == QLatin1String("nqo")) {
-        return QString("N'ko (nqo)");
+        return {"N'ko (nqo)"};
     }
     if (lang == QLatin1String("sr")) {
         return QString::fromUtf8("српски екавски");
@@ -451,7 +451,7 @@ Preferences::Preferences(BrowserWindow* window)
             if (!ui->spellcheckLanguages->findItems(langName, Qt::MatchExactly).isEmpty()) {
                 continue;
             }
-            QListWidgetItem *item = new QListWidgetItem;
+            auto *item = new QListWidgetItem;
             item->setText(langName);
             item->setData(Qt::UserRole, lang);
             item->setFlags(item->flags() & ~Qt::ItemIsSelectable);
@@ -666,7 +666,7 @@ void Preferences::deleteHtml5storage()
 
 void Preferences::openUserAgentManager()
 {
-    UserAgentDialog* dialog = new UserAgentDialog(this);
+    auto* dialog = new UserAgentDialog(this);
     dialog->open();
 }
 
@@ -703,19 +703,19 @@ void Preferences::allowHtml5storageChanged(bool stat)
 
 void Preferences::showCookieManager()
 {
-    CookieManager* dialog = new CookieManager(this);
+    auto* dialog = new CookieManager(this);
     dialog->show();
 }
 
 void Preferences::showHtml5Permissions()
 {
-    HTML5PermissionsDialog* dialog = new HTML5PermissionsDialog(this);
+    auto* dialog = new HTML5PermissionsDialog(this);
     dialog->open();
 }
 
 void Preferences::openJsOptions()
 {
-    JsOptions* dialog = new JsOptions(this);
+    auto* dialog = new JsOptions(this);
     dialog->open();
 }
 
@@ -728,19 +728,19 @@ void Preferences::useExternalDownManagerChanged(bool state)
 
 void Preferences::openSearchEnginesManager()
 {
-    SearchEnginesDialog* dialog = new SearchEnginesDialog(this);
+    auto* dialog = new SearchEnginesDialog(this);
     dialog->open();
 }
 
 void Preferences::openProtocolHandlersManager()
 {
-    ProtocolHandlerDialog *dialog = new ProtocolHandlerDialog(this);
+    auto *dialog = new ProtocolHandlerDialog(this);
     dialog->open();
 }
 
 void Preferences::showAcceptLanguage()
 {
-    AcceptLanguage* dialog = new AcceptLanguage(this);
+    auto* dialog = new AcceptLanguage(this);
     dialog->open();
 }
 

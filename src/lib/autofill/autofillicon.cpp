@@ -48,7 +48,7 @@ void AutoFillIcon::iconClicked()
         return;
     }
 
-    AutoFillWidget* widget = new AutoFillWidget(m_view, this);
+    auto* widget = new AutoFillWidget(m_view, this);
     widget->setUsernames(m_usernames);
     widget->showAt(parentWidget());
 }

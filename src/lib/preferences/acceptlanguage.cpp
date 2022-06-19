@@ -56,7 +56,7 @@ QStringList AcceptLanguage::defaultLanguage()
 QByteArray AcceptLanguage::generateHeader(const QStringList &langs)
 {
     if (langs.isEmpty()) {
-        return QByteArray();
+        return {};
     }
 
     QByteArray header;

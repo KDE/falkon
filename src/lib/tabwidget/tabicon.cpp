@@ -163,7 +163,7 @@ bool TabIcon::shouldBeVisible() const
 bool TabIcon::event(QEvent *event)
 {
     if (event->type() == QEvent::ToolTip) {
-        QHelpEvent *e = static_cast<QHelpEvent*>(event);
+        auto *e = static_cast<QHelpEvent*>(event);
         if (m_audioIconDisplayed && m_audioIconRect.contains(e->pos())) {
             QToolTip::showText(e->globalPos(), m_tab->isMuted() ? tr("Unmute Tab") : tr("Mute Tab"), this);
             event->accept();

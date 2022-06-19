@@ -49,34 +49,34 @@ void MouseGestures::initFilter()
 
     m_filter = new QjtMouseGestureFilter(false, m_button, 20);
 
-    QjtMouseGesture* upGesture = new QjtMouseGesture(DirectionList() << Up, m_filter);
+    auto* upGesture = new QjtMouseGesture(DirectionList() << Up, m_filter);
     connect(upGesture, &QjtMouseGesture::gestured, this, &MouseGestures::upGestured);
 
-    QjtMouseGesture* downGesture = new QjtMouseGesture(DirectionList() << Down, m_filter);
+    auto* downGesture = new QjtMouseGesture(DirectionList() << Down, m_filter);
     connect(downGesture, &QjtMouseGesture::gestured, this, &MouseGestures::downGestured);
 
-    QjtMouseGesture* leftGesture = new QjtMouseGesture(DirectionList() << Left, m_filter);
+    auto* leftGesture = new QjtMouseGesture(DirectionList() << Left, m_filter);
     connect(leftGesture, &QjtMouseGesture::gestured, this, &MouseGestures::leftGestured);
 
-    QjtMouseGesture* rightGesture = new QjtMouseGesture(DirectionList() << Right, m_filter);
+    auto* rightGesture = new QjtMouseGesture(DirectionList() << Right, m_filter);
     connect(rightGesture, &QjtMouseGesture::gestured, this, &MouseGestures::rightGestured);
 
-    QjtMouseGesture* downRightGesture = new QjtMouseGesture(DirectionList() << Down << Right, m_filter);
+    auto* downRightGesture = new QjtMouseGesture(DirectionList() << Down << Right, m_filter);
     connect(downRightGesture, &QjtMouseGesture::gestured, this, &MouseGestures::downRightGestured);
 
-    QjtMouseGesture* downLeftGesture = new QjtMouseGesture(DirectionList() << Down << Left, m_filter);
+    auto* downLeftGesture = new QjtMouseGesture(DirectionList() << Down << Left, m_filter);
     connect(downLeftGesture, &QjtMouseGesture::gestured, this, &MouseGestures::downLeftGestured);
 
-    QjtMouseGesture* downUpGesture = new QjtMouseGesture(DirectionList() << Down << Up, m_filter);
+    auto* downUpGesture = new QjtMouseGesture(DirectionList() << Down << Up, m_filter);
     connect(downUpGesture, &QjtMouseGesture::gestured, this, &MouseGestures::downUpGestured);
 
-    QjtMouseGesture* upDownGesture = new QjtMouseGesture(DirectionList() << Up << Down, m_filter);
+    auto* upDownGesture = new QjtMouseGesture(DirectionList() << Up << Down, m_filter);
     connect(upDownGesture, &QjtMouseGesture::gestured, this, &MouseGestures::upDownGestured);
 
-    QjtMouseGesture* upLeftGesture = new QjtMouseGesture(DirectionList() << Up << Left, m_filter);
+    auto* upLeftGesture = new QjtMouseGesture(DirectionList() << Up << Left, m_filter);
     connect(upLeftGesture, &QjtMouseGesture::gestured, this, &MouseGestures::upLeftGestured);
 
-    QjtMouseGesture* upRightGesture = new QjtMouseGesture(DirectionList() << Up << Right, m_filter);
+    auto* upRightGesture = new QjtMouseGesture(DirectionList() << Up << Right, m_filter);
     connect(upRightGesture, &QjtMouseGesture::gestured, this, &MouseGestures::upRightGestured);
 
     m_filter->addGesture(upGesture);
@@ -172,7 +172,7 @@ void MouseGestures::upGestured()
 
 void MouseGestures::downGestured()
 {
-    TabbedWebView* view = qobject_cast<TabbedWebView*>(m_view.data());
+    auto* view = qobject_cast<TabbedWebView*>(m_view.data());
     if (!view)
         return;
 
@@ -218,7 +218,7 @@ void MouseGestures::rightGestured()
 
 void MouseGestures::downRightGestured()
 {
-    TabbedWebView *view = qobject_cast<TabbedWebView*>(m_view.data());
+    auto *view = qobject_cast<TabbedWebView*>(m_view.data());
     if (!view)
         return;
 
@@ -245,7 +245,7 @@ void MouseGestures::downLeftGestured()
 
 void MouseGestures::downUpGestured()
 {
-    TabbedWebView* view = qobject_cast<TabbedWebView*>(m_view.data());
+    auto* view = qobject_cast<TabbedWebView*>(m_view.data());
     if (!view)
         return;
 
@@ -268,7 +268,7 @@ void MouseGestures::upDownGestured()
 
 void MouseGestures::upLeftGestured()
 {
-    TabbedWebView* view = qobject_cast<TabbedWebView*>(m_view.data());
+    auto* view = qobject_cast<TabbedWebView*>(m_view.data());
     if (!view)
         return;
 
@@ -284,7 +284,7 @@ void MouseGestures::upLeftGestured()
 
 void MouseGestures::upRightGestured()
 {
-    TabbedWebView* view = qobject_cast<TabbedWebView*>(m_view.data());
+    auto* view = qobject_cast<TabbedWebView*>(m_view.data());
     if (!view)
         return;
 

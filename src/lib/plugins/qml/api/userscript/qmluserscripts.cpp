@@ -46,7 +46,7 @@ QList<QObject*> QmlUserScripts::toQObjectList(const QList<QWebEngineScript> &lis
     QList<QObject*> userScriptList;
     userScriptList.reserve(list.size());
     for (const QWebEngineScript &script : list) {
-        QmlUserScript *userScript = new QmlUserScript();
+        auto *userScript = new QmlUserScript();
         userScript->setWebEngineScript(script);
         userScriptList.append(userScript);
     }
@@ -55,7 +55,7 @@ QList<QObject*> QmlUserScripts::toQObjectList(const QList<QWebEngineScript> &lis
 
 bool QmlUserScripts::contains(QObject *object) const
 {
-    QmlUserScript *userScript = qobject_cast<QmlUserScript*>(object);
+    auto *userScript = qobject_cast<QmlUserScript*>(object);
     if (!userScript) {
         return false;
     }
@@ -66,7 +66,7 @@ bool QmlUserScripts::contains(QObject *object) const
 QObject *QmlUserScripts::findScript(const QString &name) const
 {
     QWebEngineScript webEngineScript = mApp->webProfile()->scripts()->findScript(name);
-    QmlUserScript *qmlUserScript = new QmlUserScript();
+    auto *qmlUserScript = new QmlUserScript();
     qmlUserScript->setWebEngineScript(webEngineScript);
     return qmlUserScript;
 }
@@ -79,7 +79,7 @@ QList<QObject*> QmlUserScripts::findScripts(const QString &name) const
 
 void QmlUserScripts::remove(QObject *object) const
 {
-    QmlUserScript *userScript = qobject_cast<QmlUserScript*>(object);
+    auto *userScript = qobject_cast<QmlUserScript*>(object);
     if (!userScript) {
         return;
     }
@@ -95,7 +95,7 @@ QList<QObject*> QmlUserScripts::toList() const
 
 void QmlUserScripts::insert(QObject *object)
 {
-    QmlUserScript *userScript = qobject_cast<QmlUserScript*>(object);
+    auto *userScript = qobject_cast<QmlUserScript*>(object);
     if (!userScript) {
         return;
     }

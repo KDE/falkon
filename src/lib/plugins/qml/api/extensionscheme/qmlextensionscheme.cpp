@@ -27,7 +27,7 @@ QmlExtensionScheme::QmlExtensionScheme(QObject *parent)
 {
     m_schemeHandler = new QmlExtensionSchemeHandler;
     connect(m_schemeHandler, &QmlExtensionSchemeHandler::_requestStarted, this, [this](QWebEngineUrlRequestJob *job) {
-        QmlWebEngineUrlRequestJob *qmlRequest = new QmlWebEngineUrlRequestJob(job);
+        auto *qmlRequest = new QmlWebEngineUrlRequestJob(job);
         const QJSValue request = qmlEngine(this)->newQObject(qmlRequest);
         emit requestStarted(request);
     });

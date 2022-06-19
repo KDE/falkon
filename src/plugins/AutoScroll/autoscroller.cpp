@@ -132,7 +132,7 @@ bool AutoScroller::mouseMove(QObject* obj, QMouseEvent* event)
 bool AutoScroller::mousePress(QObject* obj, QMouseEvent* event)
 {
     bool middleButton = event->buttons() == Qt::MiddleButton;
-    WebView* view = qobject_cast<WebView*>(obj);
+    auto* view = qobject_cast<WebView*>(obj);
     Q_ASSERT(view);
 
     // Start?

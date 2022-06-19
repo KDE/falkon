@@ -75,7 +75,7 @@ public Q_SLOTS:
     void clearOldIconsInDatabase();
 
 private:
-    typedef QPair<QUrl, QImage> BufferedIcon;
+    using BufferedIcon = QPair<QUrl, QImage>;
 
     QIcon iconFromImage(const QImage &image);
 

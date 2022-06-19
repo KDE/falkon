@@ -50,7 +50,7 @@ void SqlDatabaseTest::sqlQueryJobTest()
 
     QCOMPARE(db.tables().count(), 0);
 
-    SqlQueryJob *job = new SqlQueryJob();
+    auto *job = new SqlQueryJob();
     job->setQuery(QSL("CREATE TABLE test1 (data TEXT, id INTEGER PRIMARY KEY)"));
     job->start();
     QVERIFY(waitForFinished(job));

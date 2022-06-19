@@ -105,7 +105,7 @@ void PluginsManager::refresh()
     for (const Plugins::Plugin &plugin : allPlugins) {
         PluginSpec spec = plugin.pluginSpec;
 
-        QListWidgetItem* item = new QListWidgetItem(ui->list);
+        auto* item = new QListWidgetItem(ui->list);
         QIcon icon = QIcon(spec.icon);
         if (icon.isNull()) {
             icon = QIcon(QSL(":/icons/preferences/extensions.svg"));

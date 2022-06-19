@@ -76,7 +76,7 @@ bool OperaImporter::prepareImport()
 
 BookmarkItem* OperaImporter::importBookmarks()
 {
-    BookmarkItem* root = new BookmarkItem(BookmarkItem::Folder);
+    auto* root = new BookmarkItem(BookmarkItem::Folder);
     root->setTitle(QSL("Opera Import"));
 
     QList<BookmarkItem*> folders;

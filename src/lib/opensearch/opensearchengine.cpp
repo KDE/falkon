@@ -115,8 +115,7 @@ OpenSearchEngine::OpenSearchEngine(QObject* parent)
     A destructor.
 */
 OpenSearchEngine::~OpenSearchEngine()
-{
-}
+= default;
 
 QString OpenSearchEngine::parseTemplate(const QString &searchTerm, const QString &searchTemplate)
 {
@@ -222,7 +221,7 @@ void OpenSearchEngine::setSearchUrlTemplate(const QString &searchUrlTemplate)
 QUrl OpenSearchEngine::searchUrl(const QString &searchTerm) const
 {
     if (m_searchUrlTemplate.isEmpty()) {
-        return QUrl();
+        return {};
     }
 
     QUrl retVal = QUrl::fromEncoded(parseTemplate(searchTerm, m_searchUrlTemplate).toUtf8());
@@ -243,7 +242,7 @@ QUrl OpenSearchEngine::searchUrl(const QString &searchTerm) const
 QByteArray OpenSearchEngine::getPostData(const QString &searchTerm) const
 {
     if (m_searchMethod != QLatin1String("post")) {
-        return QByteArray();
+        return {};
     }
 
     QUrl retVal = QUrl("http://foo.bar");
@@ -308,7 +307,7 @@ QUrl OpenSearchEngine::suggestionsUrl(const QString &searchTerm) const
     }
 
     if (m_suggestionsUrlTemplate.isEmpty()) {
-        return QUrl();
+        return {};
     }
 
     QUrl retVal = QUrl::fromEncoded(parseTemplate(searchTerm, m_suggestionsUrlTemplate).toUtf8());
@@ -432,7 +431,7 @@ void OpenSearchEngine::loadImage() const
 
 void OpenSearchEngine::imageObtained()
 {
-    QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
+    auto* reply = qobject_cast<QNetworkReply*>(sender());
 
     if (!reply) {
         return;

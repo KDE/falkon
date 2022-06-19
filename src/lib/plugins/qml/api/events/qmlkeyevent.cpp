@@ -83,7 +83,7 @@ quint32 QmlKeyEvent::nativeVirtualKey() const
 QString QmlKeyEvent::text() const
 {
     if (!m_keyEvent) {
-        return QString();
+        return {};
     }
     return m_keyEvent->text();
 }

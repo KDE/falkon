@@ -237,7 +237,7 @@ void WebSearchBar::searchInNewTab()
 
 void WebSearchBar::addEngineFromAction()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         m_searchManager->addEngine(action->data().toUrl());
     }
 }

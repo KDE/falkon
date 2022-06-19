@@ -136,7 +136,7 @@ void Updater::startDownloadingUpdateInfo(const QUrl &url)
 
 void Updater::downCompleted()
 {
-    QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
+    auto* reply = qobject_cast<QNetworkReply*>(sender());
     if (!reply)
         return;
 

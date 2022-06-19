@@ -373,7 +373,7 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
         return QmlPlugin::loadPlugin(name);
 
     default:
-        return Plugin();
+        return {};
     }
 }
 
@@ -387,7 +387,7 @@ Plugins::Plugin Plugins::loadInternalPlugin(const QString &name)
         plugin.pluginSpec = createSpec(DesktopFile(QSL(":adblock/metadata.desktop")));
         return plugin;
     } else {
-        return Plugin();
+        return {};
     }
 }
 
@@ -400,7 +400,7 @@ Plugins::Plugin Plugins::loadSharedLibraryPlugin(const QString &name)
         fullPath = DataPaths::locate(DataPaths::Plugins, name);
         if (fullPath.isEmpty()) {
             qWarning() << "Library plugin" << name << "not found";
-            return Plugin();
+            return {};
         }
     }
 

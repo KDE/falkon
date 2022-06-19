@@ -23,8 +23,7 @@ BookmarksImporter::BookmarksImporter(QObject* parent)
 }
 
 BookmarksImporter::~BookmarksImporter()
-{
-}
+= default;
 
 bool BookmarksImporter::error() const
 {

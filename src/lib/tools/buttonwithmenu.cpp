@@ -34,7 +34,7 @@ ButtonWithMenu::ButtonWithMenu(QWidget* parent)
 
 void ButtonWithMenu::setCurrentItem()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         setCurrentItem(action->data().value<Item>());
     }
 }
@@ -177,5 +177,4 @@ void ButtonWithMenu::mousePressEvent(QMouseEvent *event)
 }
 
 ButtonWithMenu::~ButtonWithMenu()
-{
-}
+= default;

@@ -95,7 +95,7 @@ QModelIndex TabTreeModel::tabIndex(WebTab *tab) const
 {
     TabTreeModelItem *item = m_items.value(tab);
     if (!item) {
-        return QModelIndex();
+        return {};
     }
     return createIndex(item->parent->children.indexOf(item), 0, item);
 }
@@ -154,7 +154,7 @@ QModelIndex TabTreeModel::parent(const QModelIndex &child) const
 {
     TabTreeModelItem *it = item(child);
     if (!it) {
-        return QModelIndex();
+        return {};
     }
     return index(it->parent);
 }
@@ -162,7 +162,7 @@ QModelIndex TabTreeModel::parent(const QModelIndex &child) const
 QModelIndex TabTreeModel::index(int row, int column, const QModelIndex &parent) const
 {
     if (!hasIndex(row, column, parent)) {
-        return QModelIndex();
+        return {};
     }
     TabTreeModelItem *parentItem = item(parent);
     return createIndex(row, column, parentItem->children.at(row));
@@ -177,7 +177,7 @@ QModelIndex TabTreeModel::mapToSource(const QModelIndex &proxyIndex) const
 {
     TabTreeModelItem *it = item(proxyIndex);
     if (!it) {
-        return QModelIndex();
+        return {};
     }
     return it->sourceIndex;
 }
@@ -189,7 +189,7 @@ bool TabTreeModel::canDropMimeData(const QMimeData *data, Qt::DropAction action,
     if (action != Qt::MoveAction || column > 0 || !m_window) {
         return false;
     }
-    const TabModelMimeData *mimeData = qobject_cast<const TabModelMimeData*>(data);
+    const auto *mimeData = qobject_cast<const TabModelMimeData*>(data);
     if (!mimeData) {
         return false;
     }
@@ -210,7 +210,7 @@ bool TabTreeModel::dropMimeData(const QMimeData *data, Qt::DropAction action, in
         return false;
     }
 
-    const TabModelMimeData *mimeData = static_cast<const TabModelMimeData*>(data);
+    const auto *mimeData = static_cast<const TabModelMimeData*>(data);
     WebTab *tab = mimeData->tab();
 
     if (tab->isPinned()) {
@@ -261,9 +261,9 @@ void TabTreeModel::init()
 
     for (int i = 0; i < sourceModel()->rowCount(); ++i) {
         const QModelIndex index = sourceModel()->index(i, 0);
-        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
         if (tab && !tab->parentTab()) {
-            TabTreeModelItem *item = new TabTreeModelItem(tab, index);
+            auto *item = new TabTreeModelItem(tab, index);
             m_items[tab] = item;
             m_root->addChild(createItems(item));
         }
@@ -282,14 +282,14 @@ void TabTreeModel::init()
 QModelIndex TabTreeModel::index(TabTreeModelItem *item) const
 {
     if (!item || item == m_root) {
-        return QModelIndex();
+        return {};
     }
     return createIndex(item->parent->children.indexOf(item), 0, item);
 }
 
 TabTreeModelItem *TabTreeModel::item(const QModelIndex &index) const
 {
-    TabTreeModelItem *it = static_cast<TabTreeModelItem*>(index.internalPointer());
+    auto *it = static_cast<TabTreeModelItem*>(index.internalPointer());
     return it ? it : m_root;
 }
 
@@ -298,7 +298,7 @@ TabTreeModelItem *TabTreeModel::createItems(TabTreeModelItem *root)
     const auto children = root->tab->childTabs();
     for (WebTab *child : children) {
         const QModelIndex index = sourceModel()->index(child->tabIndex(), 0);
-        TabTreeModelItem *item = new TabTreeModelItem(child, index);
+        auto *item = new TabTreeModelItem(child, index);
         m_items[child] = item;
         root->addChild(createItems(item));
     }
@@ -333,7 +333,7 @@ void TabTreeModel::sourceReset()
 
 void TabTreeModel::insertIndex(const QModelIndex &sourceIndex)
 {
-    WebTab *tab = sourceIndex.data(TabModel::WebTabRole).value<WebTab*>();
+    auto *tab = sourceIndex.data(TabModel::WebTabRole).value<WebTab*>();
     if (!tab) {
         return;
     }
@@ -341,7 +341,7 @@ void TabTreeModel::insertIndex(const QModelIndex &sourceIndex)
     if (!parent) {
         parent = m_root;
     }
-    TabTreeModelItem *item = new TabTreeModelItem(tab, sourceIndex);
+    auto *item = new TabTreeModelItem(tab, sourceIndex);
 
     const int idx = parent->children.count();
     beginInsertRows(tabIndex(tab->parentTab()), idx, idx);
@@ -354,7 +354,7 @@ void TabTreeModel::insertIndex(const QModelIndex &sourceIndex)
 
 void TabTreeModel::removeIndex(const QModelIndex &sourceIndex)
 {
-    WebTab *tab = sourceIndex.data(TabModel::WebTabRole).value<WebTab*>();
+    auto *tab = sourceIndex.data(TabModel::WebTabRole).value<WebTab*>();
     if (!tab) {
         return;
     }

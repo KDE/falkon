@@ -102,7 +102,7 @@ SpeedDial::Page SpeedDial::pageForUrl(const QUrl &url)
         }
     }
 
-    return Page();
+    return {};
 }
 
 QUrl SpeedDial::urlForShortcut(int key)
@@ -110,7 +110,7 @@ QUrl SpeedDial::urlForShortcut(int key)
     ENSURE_LOADED;
 
     if (key < 0 || m_pages.count() <= key) {
-        return QUrl();
+        return {};
     }
 
     return QUrl::fromEncoded(m_pages.at(key).url.toUtf8());
@@ -258,7 +258,7 @@ void SpeedDial::changed(const QString &allPages)
 
 void SpeedDial::loadThumbnail(const QString &url, bool loadTitle)
 {
-    PageThumbnailer* thumbnailer = new PageThumbnailer(this);
+    auto* thumbnailer = new PageThumbnailer(this);
     thumbnailer->setUrl(QUrl::fromEncoded(url.toUtf8()));
     thumbnailer->setLoadTitle(loadTitle);
     connect(thumbnailer, &PageThumbnailer::thumbnailCreated, this, &SpeedDial::thumbnailCreated);
@@ -281,7 +281,7 @@ QStringList SpeedDial::getOpenFileName()
     const QString image = QzTools::getOpenFileName("SpeedDial-GetOpenFileName", 0, tr("Click to select image..."), QDir::homePath(), fileTypes);
 
     if (image.isEmpty())
-        return QStringList();
+        return {};
 
     return {QzTools::pixmapToDataUrl(QPixmap(image)).toString(), QUrl::fromLocalFile(image).toEncoded()};
 }
@@ -321,7 +321,7 @@ void SpeedDial::setSdCentered(bool centered)
 
 void SpeedDial::thumbnailCreated(const QPixmap &pixmap)
 {
-    PageThumbnailer* thumbnailer = qobject_cast<PageThumbnailer*>(sender());
+    auto* thumbnailer = qobject_cast<PageThumbnailer*>(sender());
     if (!thumbnailer) {
         return;
     }
@@ -370,7 +370,7 @@ QString SpeedDial::generateAllPages()
     QString allPages;
 
     for (const Page &page : qAsConst(m_pages)) {
-        const QString string = QString("url:\"%1\"|title:\"%2\";").arg(page.url, page.title);
+        const QString string = QString(R"(url:"%1"|title:"%2";)").arg(page.url, page.title);
         allPages.append(string);
     }
 

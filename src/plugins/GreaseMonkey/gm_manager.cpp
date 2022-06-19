@@ -64,10 +64,10 @@ void GM_Manager::showSettings(QWidget* parent)
 
 void GM_Manager::downloadScript(const QUrl &url)
 {
-    GM_Downloader *downloader = new GM_Downloader(url, this);
+    auto *downloader = new GM_Downloader(url, this);
     connect(downloader, &GM_Downloader::finished, this, [=](const QString &fileName) {
         bool deleteScript = true;
-        GM_Script *script = new GM_Script(this, fileName);
+        auto *script = new GM_Script(this, fileName);
         if (script->isValid()) {
             if (!containsScript(script->fullName())) {
                 GM_AddScriptDialog dialog(this, script);
@@ -99,7 +99,7 @@ QString GM_Manager::requireScripts(const QStringList &urlList) const
 {
     QDir requiresDir(m_settingsPath + QL1S("/greasemonkey/requires"));
     if (!requiresDir.exists() || urlList.isEmpty()) {
-        return QString();
+        return {};
     }
 
     QSettings settings(m_settingsPath + QL1S("/greasemonkey/requires/requires.ini"), QSettings::IniFormat);
@@ -251,7 +251,7 @@ void GM_Manager::load()
     const auto fileNames = gmDir.entryList(QStringList("*.js"), QDir::Files);
     for (const QString &fileName : fileNames) {
         const QString absolutePath = gmDir.absoluteFilePath(fileName);
-        GM_Script* script = new GM_Script(this, absolutePath);
+        auto* script = new GM_Script(this, absolutePath);
 
         if (!script->isValid()) {
             delete script;
@@ -274,7 +274,7 @@ void GM_Manager::load()
 
 void GM_Manager::scriptChanged()
 {
-    GM_Script *script = qobject_cast<GM_Script*>(sender());
+    auto *script = qobject_cast<GM_Script*>(sender());
     if (!script)
         return;
 
@@ -291,7 +291,7 @@ bool GM_Manager::canRunOnScheme(const QString &scheme)
 
 void GM_Manager::mainWindowCreated(BrowserWindow* window)
 {
-    GM_Icon *icon = new GM_Icon(this);
+    auto *icon = new GM_Icon(this);
     window->statusBar()->addButton(icon);
     window->navigationBar()->addToolButton(icon);
     m_windows[window] = icon;

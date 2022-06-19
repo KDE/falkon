@@ -20,8 +20,7 @@
 #include <QWheelEvent>
 
 WheelHelper::WheelHelper()
-{
-}
+= default;
 
 void WheelHelper::reset()
 {

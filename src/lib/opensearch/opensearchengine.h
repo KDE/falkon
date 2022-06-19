@@ -58,8 +58,8 @@ Q_SIGNALS:
     void suggestions(const QStringList &suggestions);
 
 public:
-    typedef QPair<QString, QString> Parameter;
-    typedef QList<Parameter> Parameters;
+    using Parameter = QPair<QString, QString>;
+    using Parameters = QList<Parameter>;
 
     Q_PROPERTY(QString name READ name WRITE setName)
     Q_PROPERTY(QString description READ description WRITE setDescription)

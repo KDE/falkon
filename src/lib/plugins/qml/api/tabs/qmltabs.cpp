@@ -263,7 +263,7 @@ QList<QObject*> QmlTabs::getAll(const QVariantMap &map) const
 {
     const auto window = getWindow(map);
     if (!window) {
-        return QList<QObject*>();
+        return {};
     }
 
     const bool withPinned = map.value(QSL("withPinned")).toBool();

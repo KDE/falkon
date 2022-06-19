@@ -58,7 +58,7 @@ bool IeImporter::prepareImport()
 
 BookmarkItem* IeImporter::importBookmarks()
 {
-    BookmarkItem* root = new BookmarkItem(BookmarkItem::Folder);
+    auto* root = new BookmarkItem(BookmarkItem::Folder);
     root->setTitle(QStringLiteral("Internet Explorer Import"));
 
     readDir(QDir(m_path), root);
@@ -70,7 +70,7 @@ void IeImporter::readDir(const QDir &dir, BookmarkItem *parent)
     const auto files = dir.entryInfoList(QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot);
     for (const QFileInfo &file : files) {
         if (file.isDir()) {
-            BookmarkItem* folder = new BookmarkItem(BookmarkItem::Folder, parent);
+            auto* folder = new BookmarkItem(BookmarkItem::Folder, parent);
             folder->setTitle(file.baseName());
 
             QDir folderDir = dir;
@@ -81,7 +81,7 @@ void IeImporter::readDir(const QDir &dir, BookmarkItem *parent)
             QSettings urlFile(file.absoluteFilePath(), QSettings::IniFormat);
             const QUrl url = urlFile.value(QStringLiteral("InternetShortcut/URL")).toUrl();
 
-            BookmarkItem* item = new BookmarkItem(BookmarkItem::Url, parent);
+            auto* item = new BookmarkItem(BookmarkItem::Url, parent);
             item->setTitle(file.baseName());
             item->setUrl(url);
         }

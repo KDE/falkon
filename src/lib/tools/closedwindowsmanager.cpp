@@ -71,7 +71,7 @@ ClosedWindowsManager::Window ClosedWindowsManager::takeClosedWindowAt(int index)
 void ClosedWindowsManager::restoreClosedWindow()
 {
     Window window;
-    QAction *act = qobject_cast<QAction*>(sender());
+    auto *act = qobject_cast<QAction*>(sender());
     if (act) {
         window = takeClosedWindowAt(act->data().toInt());
     } else {

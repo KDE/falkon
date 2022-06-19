@@ -87,7 +87,7 @@ bool TabManagerPlugin::testPlugin()
 
 void TabManagerPlugin::showSettings(QWidget* parent)
 {
-    TabManagerSettings* settings = new TabManagerSettings(this, parent);
+    auto* settings = new TabManagerSettings(this, parent);
     settings->exec();
 }
 

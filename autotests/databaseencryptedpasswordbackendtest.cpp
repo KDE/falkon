@@ -25,7 +25,7 @@
 void DatabaseEncryptedPasswordBackendTest::reloadBackend()
 {
     delete m_backend;
-    DatabaseEncryptedPasswordBackend* backend = new DatabaseEncryptedPasswordBackend;
+    auto* backend = new DatabaseEncryptedPasswordBackend;
 
     if (m_testMasterPassword.isEmpty()) {
         m_testMasterPassword = AesInterface::passwordToHash(QString::fromUtf8(AesInterface::createRandomData(8)));

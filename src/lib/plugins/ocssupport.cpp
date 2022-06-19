@@ -37,7 +37,7 @@ static DesktopFile readMetaData(const KArchiveDirectory *directory)
     const KArchiveEntry *entry = directory->entry(QSL("metadata.desktop"));
     if (!entry || !entry->isFile()) {
         qWarning() << "No metadata.desktop found";
-        return DesktopFile();
+        return {};
     }
     const QString tempDir = DataPaths::path(DataPaths::Temp);
     static_cast<const KArchiveFile*>(entry)->copyTo(tempDir);

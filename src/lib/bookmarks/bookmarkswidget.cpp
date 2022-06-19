@@ -79,7 +79,7 @@ void BookmarksWidget::toggleBookmark()
     }
     else {
         // Save bookmark
-        BookmarkItem* bookmark = new BookmarkItem(BookmarkItem::Url);
+        auto* bookmark = new BookmarkItem(BookmarkItem::Url);
         bookmark->setTitle(m_view->title());
         bookmark->setUrl(m_view->url());
         m_bookmarks->addBookmark(ui->folderButton->selectedFolder(), bookmark);

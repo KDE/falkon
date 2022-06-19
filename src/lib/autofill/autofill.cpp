@@ -210,7 +210,7 @@ void AutoFill::saveForm(WebPage *page, const QUrl &frameUrl, const PageFormData 
         m_lastNotification->close();
     }
 
-    AutoFillNotification* aWidget = new AutoFillNotification(frameUrl, formData, updateData);
+    auto* aWidget = new AutoFillNotification(frameUrl, formData, updateData);
     page->view()->addNotification(aWidget);
 
     m_lastNotification = aWidget;

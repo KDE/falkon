@@ -33,7 +33,7 @@ private Q_SLOTS:
 void AdBlockParseRule::parseEasyList()
 {
     QBENCHMARK {
-        AdBlockSubscription* subscription = new AdBlockSubscription(QSL("EasyList"), this);
+        auto* subscription = new AdBlockSubscription(QSL("EasyList"), this);
         subscription->setFilePath(QSL(":/files/easylist.txt"));
         subscription->loadSubscription(QStringList());
     }

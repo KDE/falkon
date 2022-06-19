@@ -51,7 +51,7 @@ SiteInfo::SiteInfo(WebView *view)
     ui->treeTags->setLayoutDirection(Qt::LeftToRight);
     QzTools::centerWidgetOnScreen(this);
 
-    ListItemDelegate* delegate = new ListItemDelegate(24, ui->listWidget);
+    auto* delegate = new ListItemDelegate(24, ui->listWidget);
     delegate->setUpdateParentHeight(true);
     delegate->setUniformItemSizes(true);
     ui->listWidget->setItemDelegate(delegate);
@@ -87,7 +87,7 @@ SiteInfo::SiteInfo(WebView *view)
             if (content.isEmpty() || name.isEmpty())
                 continue;
 
-            QTreeWidgetItem* item = new QTreeWidgetItem(ui->treeTags);
+            auto* item = new QTreeWidgetItem(ui->treeTags);
             item->setText(0, name);
             item->setText(1, content);
             ui->treeTags->addTopLevelItem(item);
@@ -115,7 +115,7 @@ SiteInfo::SiteInfo(WebView *view)
             if (src.isEmpty() || alt.isEmpty())
                 continue;
 
-            QTreeWidgetItem* item = new QTreeWidgetItem(ui->treeImages);
+            auto* item = new QTreeWidgetItem(ui->treeImages);
             item->setText(0, alt);
             item->setText(1, src);
             ui->treeImages->addTopLevelItem(item);
@@ -128,19 +128,19 @@ SiteInfo::SiteInfo(WebView *view)
     connect(ui->treeImages, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(imagesCustomContextMenuRequested(QPoint)));
     connect(ui->treeTags, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(tagsCustomContextMenuRequested(QPoint)));
 
-    QShortcut *shortcutTagsCopyAll = new QShortcut(QKeySequence("Ctrl+C"), ui->treeTags);
+    auto *shortcutTagsCopyAll = new QShortcut(QKeySequence("Ctrl+C"), ui->treeTags);
     shortcutTagsCopyAll->setContext(Qt::WidgetShortcut);
     connect(shortcutTagsCopyAll, &QShortcut::activated, [=]{copySelectedItems(ui->treeTags, false);});
 
-    QShortcut *shortcutTagsCopyValues = new QShortcut(QKeySequence("Ctrl+Shift+C"), ui->treeTags);
+    auto *shortcutTagsCopyValues = new QShortcut(QKeySequence("Ctrl+Shift+C"), ui->treeTags);
     shortcutTagsCopyValues->setContext(Qt::WidgetShortcut);
     connect(shortcutTagsCopyValues, &QShortcut::activated, [=]{copySelectedItems(ui->treeTags, true);});
 
-    QShortcut *shortcutImagesCopyAll = new QShortcut(QKeySequence("Ctrl+C"), ui->treeImages);
+    auto *shortcutImagesCopyAll = new QShortcut(QKeySequence("Ctrl+C"), ui->treeImages);
     shortcutImagesCopyAll->setContext(Qt::WidgetShortcut);
     connect(shortcutImagesCopyAll, &QShortcut::activated, [=]{copySelectedItems(ui->treeImages, false);});
 
-    QShortcut *shortcutImagesCopyValues = new QShortcut(QKeySequence("Ctrl+Shift+C"), ui->treeImages);
+    auto *shortcutImagesCopyValues = new QShortcut(QKeySequence("Ctrl+Shift+C"), ui->treeImages);
     shortcutImagesCopyValues->setContext(Qt::WidgetShortcut);
     connect(shortcutImagesCopyValues, &QShortcut::activated, [=]{copySelectedItems(ui->treeImages, true);});
 
@@ -221,7 +221,7 @@ void SiteInfo::saveImage()
         return;
 
     QGraphicsItem *graphicsItem = ui->mediaPreview->scene()->items().at(0);
-    QGraphicsPixmapItem *pixmapItem = static_cast<QGraphicsPixmapItem*>(graphicsItem);
+    auto *pixmapItem = static_cast<QGraphicsPixmapItem*>(graphicsItem);
     if (graphicsItem->type() != QGraphicsPixmapItem::Type || !pixmapItem)
         return;
 
@@ -253,7 +253,7 @@ void SiteInfo::saveImage()
 void SiteInfo::showLoadingText()
 {
     delete ui->mediaPreview->scene();
-    QGraphicsScene* scene = new QGraphicsScene(ui->mediaPreview);
+    auto* scene = new QGraphicsScene(ui->mediaPreview);
 
     scene->addText(tr("Loading..."));
 
@@ -265,7 +265,7 @@ void SiteInfo::showPixmap(QPixmap pixmap)
     pixmap.setDevicePixelRatio(devicePixelRatioF());
 
     delete ui->mediaPreview->scene();
-    QGraphicsScene* scene = new QGraphicsScene(ui->mediaPreview);
+    auto* scene = new QGraphicsScene(ui->mediaPreview);
 
     if (pixmap.isNull())
         scene->addText(tr("Preview not available"));

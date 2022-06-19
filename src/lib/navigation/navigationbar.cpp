@@ -91,17 +91,17 @@ NavigationBar::NavigationBar(BrowserWindow* window)
     m_buttonForward->setEnabled(false);
     m_buttonForward->setFocusPolicy(Qt::NoFocus);
 
-    QHBoxLayout* backNextLayout = new QHBoxLayout();
+    auto* backNextLayout = new QHBoxLayout();
     backNextLayout->setContentsMargins(0, 0, 0, 0);
     backNextLayout->setSpacing(0);
     backNextLayout->addWidget(m_buttonBack);
     backNextLayout->addWidget(m_buttonForward);
-    QWidget *backNextWidget = new QWidget(this);
+    auto *backNextWidget = new QWidget(this);
     backNextWidget->setLayout(backNextLayout);
 
     m_reloadStop = new ReloadStopButton(this);
 
-    ToolButton *buttonHome = new ToolButton(this);
+    auto *buttonHome = new ToolButton(this);
     buttonHome->setObjectName("navigation-button-home");
     buttonHome->setToolTip(tr("Home"));
     buttonHome->setToolButtonStyle(Qt::ToolButtonIconOnly);
@@ -109,7 +109,7 @@ NavigationBar::NavigationBar(BrowserWindow* window)
     buttonHome->setAutoRaise(true);
     buttonHome->setFocusPolicy(Qt::NoFocus);
 
-    ToolButton *buttonAddTab = new ToolButton(this);
+    auto *buttonAddTab = new ToolButton(this);
     buttonAddTab->setObjectName("navigation-button-addtab");
     buttonAddTab->setToolTip(tr("New Tab"));
     buttonAddTab->setToolButtonStyle(Qt::ToolButtonIconOnly);
@@ -127,7 +127,7 @@ NavigationBar::NavigationBar(BrowserWindow* window)
     m_buttonForward->setMenu(m_menuForward);
     connect(m_buttonForward, &ToolButton::aboutToShowMenu, this, &NavigationBar::aboutToShowHistoryNextMenu);
 
-    ToolButton *buttonTools = new ToolButton(this);
+    auto *buttonTools = new ToolButton(this);
     buttonTools->setObjectName("navigation-button-tools");
     buttonTools->setPopupMode(QToolButton::InstantPopup);
     buttonTools->setToolbarButtonLook(true);
@@ -330,7 +330,7 @@ void NavigationBar::addToolButton(AbstractButtonInterface *button)
         return;
     }
 
-    NavigationBarToolButton *toolButton = new NavigationBarToolButton(button, this);
+    auto *toolButton = new NavigationBarToolButton(button, this);
     toolButton->setProperty("button-id", button->id());
     connect(toolButton, &NavigationBarToolButton::visibilityChangeRequested, this, [=]() {
         if (m_layout->indexOf(toolButton) != -1) {
@@ -376,7 +376,7 @@ void NavigationBar::aboutToShowHistoryBackMenu()
             QString title = titleForUrl(item.title(), item.url());
 
             const QIcon icon = iconForPage(item.url(), IconProvider::standardIcon(QStyle::SP_ArrowBack));
-            Action* act = new Action(icon, title);
+            auto* act = new Action(icon, title);
             act->setData(i);
             connect(act, &QAction::triggered, this, &NavigationBar::loadHistoryIndex);
             connect(act, SIGNAL(ctrlTriggered()), this, SLOT(loadHistoryIndexInNewTab()));
@@ -410,7 +410,7 @@ void NavigationBar::aboutToShowHistoryNextMenu()
             QString title = titleForUrl(item.title(), item.url());
 
             const QIcon icon = iconForPage(item.url(), IconProvider::standardIcon(QStyle::SP_ArrowForward));
-            Action* act = new Action(icon, title);
+            auto* act = new Action(icon, title);
             act->setData(i);
             connect(act, &QAction::triggered, this, &NavigationBar::loadHistoryIndex);
             connect(act, SIGNAL(ctrlTriggered()), this, SLOT(loadHistoryIndexInNewTab()));
@@ -467,13 +467,13 @@ void NavigationBar::contextMenuRequested(const QPoint &pos)
 
 void NavigationBar::openConfigurationDialog()
 {
-    NavigationBarConfigDialog *dialog = new NavigationBarConfigDialog(this);
+    auto *dialog = new NavigationBarConfigDialog(this);
     dialog->show();
 }
 
 void NavigationBar::toolActionActivated()
 {
-    QAction *act = qobject_cast<QAction*>(sender());
+    auto *act = qobject_cast<QAction*>(sender());
     if (!act) {
         return;
     }
@@ -485,12 +485,12 @@ void NavigationBar::toolActionActivated()
     if (!data.button) {
         return;
     }
-    ToolButton *buttonTools = qobject_cast<ToolButton*>(m_widgets.value(QSL("button-tools")).widget);
+    auto *buttonTools = qobject_cast<ToolButton*>(m_widgets.value(QSL("button-tools")).widget);
     if (!buttonTools) {
         return;
     }
 
-    AbstractButtonInterface::ClickController *c = new AbstractButtonInterface::ClickController;
+    auto *c = new AbstractButtonInterface::ClickController;
     c->visualParent = buttonTools;
     c->popupPosition = [=](const QSize &size) {
         QPoint pos = buttonTools->mapToGlobal(buttonTools->rect().bottomRight());
@@ -572,7 +572,7 @@ void NavigationBar::reloadLayout()
         const WidgetData data = m_widgets.value(id);
         if (data.widget) {
             m_layout->addWidget(data.widget);
-            NavigationBarToolButton *button = qobject_cast<NavigationBarToolButton*>(data.widget);
+            auto *button = qobject_cast<NavigationBarToolButton*>(data.widget);
             if (button) {
                 button->updateVisibility();
             } else {
@@ -602,14 +602,14 @@ void NavigationBar::loadHistoryIndex()
 {
     QWebEngineHistory* history = m_window->weView()->page()->history();
 
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         loadHistoryItem(history->itemAt(action->data().toInt()));
     }
 }
 
 void NavigationBar::loadHistoryIndexInNewTab(int index)
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         index = action->data().toInt();
     }
 

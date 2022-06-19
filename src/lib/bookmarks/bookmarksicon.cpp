@@ -88,7 +88,7 @@ void BookmarksIcon::iconClicked()
         return;
     }
 
-    BookmarksWidget* widget = new BookmarksWidget(m_view, m_bookmark, parentWidget());
+    auto* widget = new BookmarksWidget(m_view, m_bookmark, parentWidget());
     widget->showAt(parentWidget());
 }
 

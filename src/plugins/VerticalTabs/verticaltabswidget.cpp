@@ -36,12 +36,12 @@ VerticalTabsWidget::VerticalTabsWidget(BrowserWindow *window)
     : QWidget()
     , m_window(window)
 {
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->setSpacing(0);
     layout->setContentsMargins(0, 0, 0, 0);
 
     m_pinnedView = new TabListView(m_window, this);
-    TabFilterModel *model = new TabFilterModel(m_pinnedView);
+    auto *model = new TabFilterModel(m_pinnedView);
     model->setFilterPinnedTabs(false);
     model->setRejectDropOnLastIndex(true);
     model->setSourceModel(m_window->tabModel());
@@ -51,7 +51,7 @@ VerticalTabsWidget::VerticalTabsWidget(BrowserWindow *window)
     m_normalView = new TabTreeView(m_window, this);
     m_pinnedView->setFocusProxy(m_normalView);
 
-    ToolButton *buttonAddTab = new ToolButton(this);
+    auto *buttonAddTab = new ToolButton(this);
     buttonAddTab->setObjectName(QSL("verticaltabs-button-addtab"));
     buttonAddTab->setAutoRaise(true);
     buttonAddTab->setFocusPolicy(Qt::NoFocus);
@@ -72,7 +72,7 @@ VerticalTabsWidget::VerticalTabsWidget(BrowserWindow *window)
 
 void VerticalTabsWidget::setViewType(VerticalTabsPlugin::ViewType type)
 {
-    TabFilterModel *model = new TabFilterModel(m_normalView);
+    auto *model = new TabFilterModel(m_normalView);
     model->setFilterPinnedTabs(true);
 
     delete m_normalView->model();

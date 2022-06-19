@@ -94,7 +94,7 @@ BookmarkItem* HtmlImporter::importBookmarks()
     bookmarks = bookmarks.left(bookmarks.lastIndexOf(QLatin1String("</dl><p>")));
     int start = bookmarks.indexOf(QLatin1String("<dl><p>"));
 
-    BookmarkItem* root = new BookmarkItem(BookmarkItem::Folder);
+    auto* root = new BookmarkItem(BookmarkItem::Folder);
     root->setTitle(QStringLiteral("HTML Import"));
 
     QList<BookmarkItem*> folders;
@@ -118,7 +118,7 @@ BookmarkItem* HtmlImporter::importBookmarks()
             QRegularExpressionMatch match = rx.match(string);
             QString folderName = match.captured(2).trimmed();
 
-            BookmarkItem* folder = new BookmarkItem(BookmarkItem::Folder, folders.isEmpty() ? root : folders.last());
+            auto* folder = new BookmarkItem(BookmarkItem::Folder, folders.isEmpty() ? root : folders.last());
             folder->setTitle(folderName);
             folders.append(folder);
 
@@ -150,7 +150,7 @@ BookmarkItem* HtmlImporter::importBookmarks()
             if (url.isEmpty() || url.scheme() == QL1S("place") || url.scheme() == QL1S("about"))
                 continue;
 
-            BookmarkItem* b = new BookmarkItem(BookmarkItem::Url, folders.isEmpty() ? root : folders.last());
+            auto* b = new BookmarkItem(BookmarkItem::Url, folders.isEmpty() ? root : folders.last());
             b->setTitle(linkName.isEmpty() ? url.toString() : linkName);
             b->setUrl(url);
         }

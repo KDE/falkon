@@ -52,7 +52,7 @@ void QmlCookiesApiTest::testCookieAdditionRemoval()
     mApp->webProfile()->cookieStore()->setCookie(anotherNetCookie);
     QTRY_COMPARE(qmlCookieSpy.count(), 1);
     QVariantMap addedQmlCookieMap = QVariant(qmlCookieSpy.at(0).at(0)).toMap();
-    QObject *addedQmlCookie = qvariant_cast<QObject*>(addedQmlCookieMap.value("cookie"));
+    auto *addedQmlCookie = qvariant_cast<QObject*>(addedQmlCookieMap.value("cookie"));
     bool removed = addedQmlCookieMap.value("removed").toBool();
     QCOMPARE(addedQmlCookie->property("name").toString(), QSL("Hello"));
     QCOMPARE(removed, false);
@@ -60,7 +60,7 @@ void QmlCookiesApiTest::testCookieAdditionRemoval()
     mApp->webProfile()->cookieStore()->deleteCookie(netCookie);
     QTRY_COMPARE(qmlCookieSpy.count(), 2);
     QVariantMap removedQmlCookieMap = QVariant(qmlCookieSpy.at(1).at(0)).toMap();
-    QObject *removedQmlCookie = qvariant_cast<QObject*>(removedQmlCookieMap.value("cookie"));
+    auto *removedQmlCookie = qvariant_cast<QObject*>(removedQmlCookieMap.value("cookie"));
     removed = removedQmlCookieMap.value("removed").toBool();
     QCOMPARE(removedQmlCookie->property("name").toString(), QSL("Example"));
     QCOMPARE(removed, true);

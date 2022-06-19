@@ -22,8 +22,7 @@
 #include <QWebEngineHistory>
 
 ClosedTabsManager::ClosedTabsManager()
-{
-}
+= default;
 
 void ClosedTabsManager::saveTab(WebTab *tab)
 {

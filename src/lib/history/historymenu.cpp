@@ -98,7 +98,7 @@ void HistoryMenu::aboutToShow()
         const QUrl url = query.value(1).toUrl();
         const QString title = QzTools::truncatedText(query.value(0).toString(), 40);
 
-        Action* act = new Action(title);
+        auto* act = new Action(title);
         act->setData(url);
         act->setIcon(IconProvider::iconForUrl(url));
         connect(act, &QAction::triggered, this, &HistoryMenu::historyEntryActivated);
@@ -122,7 +122,7 @@ void HistoryMenu::aboutToShowMostVisited()
     const QVector<HistoryEntry> mostVisited = mApp->history()->mostVisited(10);
 
     for (const HistoryEntry &entry : mostVisited) {
-        Action* act = new Action(QzTools::truncatedText(entry.title, 40));
+        auto* act = new Action(QzTools::truncatedText(entry.title, 40));
         act->setData(entry.url);
         act->setIcon(IconProvider::iconForUrl(entry.url));
         connect(act, &QAction::triggered, this, &HistoryMenu::historyEntryActivated);
@@ -193,21 +193,21 @@ void HistoryMenu::aboutToShowClosedWindows()
 
 void HistoryMenu::historyEntryActivated()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         openUrl(action->data().toUrl());
     }
 }
 
 void HistoryMenu::historyEntryCtrlActivated()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         openUrlInNewTab(action->data().toUrl());
     }
 }
 
 void HistoryMenu::historyEntryShiftActivated()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         openUrlInNewWindow(action->data().toUrl());
     }
 }

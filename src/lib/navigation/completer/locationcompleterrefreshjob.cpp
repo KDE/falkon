@@ -130,7 +130,7 @@ void LocationCompleterRefreshJob::runJob()
 
     // Add search/visit item
     if (!m_searchString.isEmpty()) {
-        QStandardItem* item = new QStandardItem();
+        auto* item = new QStandardItem();
         item->setText(m_searchString);
         item->setData(m_searchString, LocationCompleterModel::UrlRole);
         item->setData(m_searchString, LocationCompleterModel::SearchStringRole);
@@ -161,7 +161,7 @@ void LocationCompleterRefreshJob::completeFromHistory()
                 continue;
             }
 
-            QStandardItem* item = new QStandardItem();
+            auto* item = new QStandardItem();
             item->setText(bookmark->url().toEncoded());
             item->setData(-1, LocationCompleterModel::IdRole);
             item->setData(bookmark->title(), LocationCompleterModel::TitleRole);
@@ -192,7 +192,7 @@ void LocationCompleterRefreshJob::completeFromHistory()
                 continue;
             }
 
-            QStandardItem* item = new QStandardItem();
+            auto* item = new QStandardItem();
             item->setText(url.toEncoded());
             item->setData(query.value(0), LocationCompleterModel::IdRole);
             item->setData(query.value(2), LocationCompleterModel::TitleRole);
@@ -212,7 +212,7 @@ void LocationCompleterRefreshJob::completeMostVisited()
     query.exec(QSL("SELECT id, url, title FROM history ORDER BY count DESC LIMIT 15"));
 
     while (query.next()) {
-        QStandardItem* item = new QStandardItem();
+        auto* item = new QStandardItem();
         const QUrl url = query.value(1).toUrl();
 
         item->setText(url.toEncoded());

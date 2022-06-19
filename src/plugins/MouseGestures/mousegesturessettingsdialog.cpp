@@ -55,7 +55,7 @@ MouseGesturesSettingsDialog::~MouseGesturesSettingsDialog()
 
 void MouseGesturesSettingsDialog::showLicense()
 {
-    LicenseViewer* v = new LicenseViewer(this);
+    auto* v = new LicenseViewer(this);
     v->setLicenseFile(":mousegestures/data/copyright");
 
     v->show();

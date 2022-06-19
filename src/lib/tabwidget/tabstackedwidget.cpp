@@ -48,8 +48,7 @@ TabStackedWidget::TabStackedWidget(QWidget* parent)
 }
 
 TabStackedWidget::~TabStackedWidget()
-{
-}
+= default;
 
 ComboTabBar* TabStackedWidget::tabBar()
 {

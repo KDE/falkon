@@ -55,9 +55,9 @@ void QmlUserScriptApiTest::testContains()
 {
     QWebEngineScript script = mApp->webProfile()->scripts()->toList().at(0);
     QObject *object = m_testHelper.evaluateQObject("Falkon.UserScripts");
-    QmlUserScripts *userScripts = dynamic_cast<QmlUserScripts*>(object);
+    auto *userScripts = dynamic_cast<QmlUserScripts*>(object);
     QVERIFY(userScripts);
-    QmlUserScript *userScript = new QmlUserScript();
+    auto *userScript = new QmlUserScript();
     userScript->setWebEngineScript(script);
     bool contains = userScripts->contains(userScript);
     QCOMPARE(contains, true);
@@ -67,7 +67,7 @@ void QmlUserScriptApiTest::testFind()
 {
     QWebEngineScript script = mApp->webProfile()->scripts()->toList().at(0);
     QObject *object = m_testHelper.evaluateQObject("Falkon.UserScripts");
-    QmlUserScripts *userScripts = dynamic_cast<QmlUserScripts*>(object);
+    auto *userScripts = dynamic_cast<QmlUserScripts*>(object);
     QVERIFY(userScripts);
     QObject *scriptFound = userScripts->findScript(script.name());
     QVERIFY(scriptFound);
@@ -78,9 +78,9 @@ void QmlUserScriptApiTest::testInsertRemove()
 {
     int initialCount = m_testHelper.evaluate("Falkon.UserScripts.count").toInt();
     QObject *object = m_testHelper.evaluateQObject("Falkon.UserScripts");
-    QmlUserScripts *userScripts = dynamic_cast<QmlUserScripts*>(object);
+    auto *userScripts = dynamic_cast<QmlUserScripts*>(object);
     QVERIFY(userScripts);
-    QmlUserScript *userScript = new QmlUserScript();
+    auto *userScript = new QmlUserScript();
     userScript->setProperty("name", "Hello World");
     userScript->setProperty("sourceCode", "(function() {"
                               "    alert('Hello World')"

@@ -23,8 +23,7 @@ BookmarksExporter::BookmarksExporter(QObject* parent)
 }
 
 BookmarksExporter::~BookmarksExporter()
-{
-}
+= default;
 
 bool BookmarksExporter::error() const
 {

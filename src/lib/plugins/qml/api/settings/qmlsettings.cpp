@@ -44,12 +44,12 @@ bool QmlSettings::setValue(const QVariantMap &map)
 QVariant QmlSettings::value(const QVariantMap &map)
 {
     if (!m_settings) {
-        return QVariant();
+        return {};
     }
 
     if (!map.contains(QSL("key"))) {
         qWarning() << "Unable to get value:" << "key not defined";
-        return QVariant();
+        return {};
     }
 
     const QString key = map.value(QSL("key")).toString();

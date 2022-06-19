@@ -95,13 +95,13 @@ void QzToolsTest::splitCommandArguments_data()
                            << QStringList();
     QTest::newRow("OnlySpaces") << QString("                   ")
                            << QStringList();
-    QTest::newRow("OnlyQuotes") << QString("\"\" \"\"")
+    QTest::newRow("OnlyQuotes") << QString(R"("" "")")
                            << QStringList();
-    QTest::newRow("EmptyQuotesAndSpace") << QString("\"\" \"\" \" \"")
+    QTest::newRow("EmptyQuotesAndSpace") << QString(R"("" "" " ")")
                            << QStringList(" ");
     QTest::newRow("MultipleSpaces") << "    /usr/foo   -o    foo.out    "
                            << (QStringList() << "/usr/foo" << "-o" << "foo.out");
-    QTest::newRow("Quotes") << "\"/usr/foo\" \"-o\" \"foo.out\""
+    QTest::newRow("Quotes") << R"("/usr/foo" "-o" "foo.out")"
                            << (QStringList() << "/usr/foo" << "-o" << "foo.out");
     QTest::newRow("SingleQuotes") << "'/usr/foo' '-o' 'foo.out'"
                            << (QStringList() << "/usr/foo" << "-o" << "foo.out");
@@ -111,7 +111,7 @@ void QzToolsTest::splitCommandArguments_data()
                            << (QStringList() << "/usr/foo" << "-o 'ds' " << "foo.out");
     QTest::newRow("DoubleInSingleQuotes") << "/usr/foo -o 'foo\" d \".out' "
                            << (QStringList() << "/usr/foo" << "-o" << "foo\" d \".out");
-    QTest::newRow("SpacesWithQuotes") << QString("  \"   \"     \"   \"     ")
+    QTest::newRow("SpacesWithQuotes") << QString(R"(  "   "     "   "     )")
                            << (QStringList() << "   " << "   ");
     QTest::newRow("QuotesAndSpaces") << "/usr/foo -o \"foo - out\""
                            << (QStringList() << "/usr/foo" << "-o" << "foo - out");

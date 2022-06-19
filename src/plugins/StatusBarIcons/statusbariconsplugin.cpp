@@ -66,6 +66,6 @@ bool StatusBarIconsPlugin::testPlugin()
 
 void StatusBarIconsPlugin::showSettings(QWidget* parent)
 {
-    SBI_SettingsDialog* dialog = new SBI_SettingsDialog(m_manager, parent);
+    auto* dialog = new SBI_SettingsDialog(m_manager, parent);
     dialog->open();
 }

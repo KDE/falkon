@@ -25,8 +25,7 @@
 #include <QDir>
 
 QmlPlugin::QmlPlugin()
-{
-}
+= default;
 
 Plugins::Plugin QmlPlugin::loadPlugin(const QString &name)
 {
@@ -43,7 +42,7 @@ Plugins::Plugin QmlPlugin::loadPlugin(const QString &name)
         fullPath = DataPaths::locate(DataPaths::Plugins, name);
         if (fullPath.isEmpty()) {
             qWarning() << "QML plugin" << name << "not found";
-            return Plugins::Plugin();
+            return {};
         }
     }
 

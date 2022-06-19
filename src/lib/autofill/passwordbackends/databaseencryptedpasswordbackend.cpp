@@ -44,8 +44,7 @@ DatabaseEncryptedPasswordBackend::DatabaseEncryptedPasswordBackend()
 }
 
 DatabaseEncryptedPasswordBackend::~DatabaseEncryptedPasswordBackend()
-{
-}
+= default;
 
 QStringList DatabaseEncryptedPasswordBackend::getUsernames(const QUrl &url)
 {
@@ -265,7 +264,7 @@ bool DatabaseEncryptedPasswordBackend::hasSettings() const
 
 void DatabaseEncryptedPasswordBackend::showSettings(QWidget* parent)
 {
-    MasterPasswordDialog* masterPasswordDialog = new MasterPasswordDialog(this, parent);
+    auto* masterPasswordDialog = new MasterPasswordDialog(this, parent);
     masterPasswordDialog->showSettingPage();
 }
 
@@ -295,7 +294,7 @@ bool DatabaseEncryptedPasswordBackend::hasPermission()
 
     m_askPasswordDialogVisible = true;
 
-    AskMasterPassword* dialog = new AskMasterPassword(this);
+    auto* dialog = new AskMasterPassword(this);
 
     bool authorized = dialog->exec() == QDialog::Accepted;
 
@@ -349,7 +348,7 @@ bool DatabaseEncryptedPasswordBackend::encryptPasswordEntry(PasswordEntry &entry
 
 void DatabaseEncryptedPasswordBackend::showMasterPasswordDialog()
 {
-    MasterPasswordDialog* masterPasswordDialog = new MasterPasswordDialog(this, mApp->getWindow());
+    auto* masterPasswordDialog = new MasterPasswordDialog(this, mApp->getWindow());
     masterPasswordDialog->showSetMasterPasswordPage();
     masterPasswordDialog->delayedExec();
 }
@@ -669,8 +668,8 @@ AskMasterPassword::AskMasterPassword(DatabaseEncryptedPasswordBackend* backend, 
     setWindowModality(Qt::ApplicationModal);
     setWindowTitle(AutoFill::tr("Enter Master Password"));
 
-    QVBoxLayout* verticalLayout = new QVBoxLayout(this);
-    QLabel* label = new QLabel(this);
+    auto* verticalLayout = new QVBoxLayout(this);
+    auto* label = new QLabel(this);
     label->setText(AutoFill::tr("Permission is required, please enter Master Password:"));
     m_lineEdit = new QLineEdit(this);
     m_lineEdit->setEchoMode(QLineEdit::Password);

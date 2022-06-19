@@ -85,7 +85,7 @@ BookmarkItem* FirefoxImporter::importBookmarks()
 {
     QList<Item> items;
 
-    BookmarkItem* root = new BookmarkItem(BookmarkItem::Folder);
+    auto* root = new BookmarkItem(BookmarkItem::Folder);
     root->setTitle(QStringLiteral("Firefox Import"));
 
     QSqlQuery query(QSqlDatabase::database(CONNECTION));
@@ -128,7 +128,7 @@ BookmarkItem* FirefoxImporter::importBookmarks()
 
     for (const Item &item : qAsConst(items)) {
         BookmarkItem* parent = hash.value(item.parent);
-        BookmarkItem* bookmark = new BookmarkItem(item.type, parent ? parent : root);
+        auto* bookmark = new BookmarkItem(item.type, parent ? parent : root);
         bookmark->setTitle(item.title.isEmpty() ? item.url.toString() : item.title);
         bookmark->setUrl(item.url);
 

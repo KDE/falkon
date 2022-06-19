@@ -43,7 +43,7 @@ LocationCompleterView::LocationCompleterView()
         setWindowFlags(Qt::Popup);
     }
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
 
@@ -63,19 +63,19 @@ LocationCompleterView::LocationCompleterView()
     m_delegate = new LocationCompleterDelegate(this);
     m_view->setItemDelegate(m_delegate);
 
-    QFrame *searchFrame = new QFrame(this);
+    auto *searchFrame = new QFrame(this);
     searchFrame->setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
-    QHBoxLayout *searchLayout = new QHBoxLayout(searchFrame);
+    auto *searchLayout = new QHBoxLayout(searchFrame);
     searchLayout->setContentsMargins(10, 4, 4, 4);
 
-    ToolButton *searchSettingsButton = new ToolButton(this);
+    auto *searchSettingsButton = new ToolButton(this);
     searchSettingsButton->setIcon(IconProvider::settingsIcon());
     searchSettingsButton->setToolTip(tr("Manage Search Engines"));
     searchSettingsButton->setAutoRaise(true);
     searchSettingsButton->setIconSize(QSize(16, 16));
     connect(searchSettingsButton, &ToolButton::clicked, this, &LocationCompleterView::searchEnginesDialogRequested);
 
-    QLabel *searchLabel = new QLabel(tr("Search with:"));
+    auto *searchLabel = new QLabel(tr("Search with:"));
     m_searchEnginesLayout = new QHBoxLayout();
 
     setupSearchEngines();
@@ -160,7 +160,7 @@ bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
 
     if (object == m_view->viewport()) {
         if (event->type() == QEvent::MouseButtonRelease) {
-            QMouseEvent *e = static_cast<QMouseEvent*>(event);
+            auto *e = static_cast<QMouseEvent*>(event);
             QModelIndex idx = m_view->indexAt(e->pos());
             if (!idx.isValid()) {
                 return false;
@@ -189,7 +189,7 @@ bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
 
     switch (event->type()) {
     case QEvent::KeyPress: {
-        QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
+        auto* keyEvent = static_cast<QKeyEvent*>(event);
         Qt::KeyboardModifiers modifiers = keyEvent->modifiers();
         const QModelIndex idx = m_view->currentIndex();
         const QModelIndex visitSearchIdx = model()->index(0, 0).data(LocationCompleterModel::VisitSearchItemRole).toBool() ? model()->index(0, 0) : QModelIndex();
@@ -322,7 +322,7 @@ bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
     }
 
     case QEvent::KeyRelease: {
-        QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
+        auto* keyEvent = static_cast<QKeyEvent*>(event);
 
         switch (keyEvent->key()) {
         case Qt::Key_Shift:
@@ -342,7 +342,7 @@ bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
         break;
 
     case QEvent::FocusOut: {
-        QFocusEvent *focusEvent = static_cast<QFocusEvent*>(event);
+        auto *focusEvent = static_cast<QFocusEvent*>(event);
         if (focusEvent->reason() != Qt::PopupFocusReason && focusEvent->reason() != Qt::MouseFocusReason) {
             close();
         }
@@ -383,7 +383,7 @@ void LocationCompleterView::setupSearchEngines()
 
     const auto engines = mApp->searchEnginesManager()->allEngines();
     for (const SearchEngine &engine : engines) {
-        ToolButton *button = new ToolButton(this);
+        auto *button = new ToolButton(this);
         button->setIcon(engine.icon);
         button->setToolTip(engine.name);
         button->setAutoRaise(true);

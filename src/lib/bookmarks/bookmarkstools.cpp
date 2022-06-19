@@ -52,7 +52,7 @@ BookmarkItem* BookmarksFoldersMenu::selectedFolder() const
 
 void BookmarksFoldersMenu::folderChoosed()
 {
-    if (QAction* act = qobject_cast<QAction*>(sender())) {
+    if (auto* act = qobject_cast<QAction*>(sender())) {
         BookmarkItem* folder = static_cast<BookmarkItem*>(act->data().value<void*>());
         emit folderSelected(folder);
     }
@@ -133,13 +133,13 @@ bool BookmarksTools::addBookmarkDialog(QWidget* parent, const QUrl &url, const Q
         return false;
     }
 
-    QDialog* dialog = new QDialog(parent);
-    QBoxLayout* layout = new QBoxLayout(QBoxLayout::TopToBottom, dialog);
-    QLabel* label = new QLabel(dialog);
-    QLineEdit* edit = new QLineEdit(dialog);
-    BookmarksFoldersButton* folderButton = new BookmarksFoldersButton(dialog, folder);
+    auto* dialog = new QDialog(parent);
+    auto* layout = new QBoxLayout(QBoxLayout::TopToBottom, dialog);
+    auto* label = new QLabel(dialog);
+    auto* edit = new QLineEdit(dialog);
+    auto* folderButton = new BookmarksFoldersButton(dialog, folder);
 
-    QDialogButtonBox* box = new QDialogButtonBox(dialog);
+    auto* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
     QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
@@ -166,7 +166,7 @@ bool BookmarksTools::addBookmarkDialog(QWidget* parent, const QUrl &url, const Q
         return false;
     }
 
-    BookmarkItem* bookmark = new BookmarkItem(BookmarkItem::Url);
+    auto* bookmark = new BookmarkItem(BookmarkItem::Url);
     bookmark->setTitle(edit->text());
     bookmark->setUrl(url);
     mApp->bookmarks()->addBookmark(folderButton->selectedFolder(), bookmark);
@@ -179,12 +179,12 @@ bool BookmarksTools::bookmarkAllTabsDialog(QWidget* parent, TabWidget* tabWidget
 {
     Q_ASSERT(tabWidget);
 
-    QDialog* dialog = new QDialog(parent);
-    QBoxLayout* layout = new QBoxLayout(QBoxLayout::TopToBottom, dialog);
-    QLabel* label = new QLabel(dialog);
-    BookmarksFoldersButton* folderButton = new BookmarksFoldersButton(dialog, folder);
+    auto* dialog = new QDialog(parent);
+    auto* layout = new QBoxLayout(QBoxLayout::TopToBottom, dialog);
+    auto* label = new QLabel(dialog);
+    auto* folderButton = new BookmarksFoldersButton(dialog, folder);
 
-    QDialogButtonBox* box = new QDialogButtonBox(dialog);
+    auto* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
     QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
@@ -209,7 +209,7 @@ bool BookmarksTools::bookmarkAllTabsDialog(QWidget* parent, TabWidget* tabWidget
     const auto allTabs = tabWidget->allTabs(false);
     for (WebTab* tab : allTabs) {
         if (!tab->url().isEmpty()) {
-            BookmarkItem* bookmark = new BookmarkItem(BookmarkItem::Url);
+            auto* bookmark = new BookmarkItem(BookmarkItem::Url);
             bookmark->setTitle(tab->title());
             bookmark->setUrl(tab->url());
             mApp->bookmarks()->addBookmark(folderButton->selectedFolder(), bookmark);
@@ -222,15 +222,15 @@ bool BookmarksTools::bookmarkAllTabsDialog(QWidget* parent, TabWidget* tabWidget
 
 bool BookmarksTools::editBookmarkDialog(QWidget* parent, BookmarkItem *item)
 {
-    QDialog* dialog = new QDialog(parent);
-    QFormLayout* layout = new QFormLayout(dialog);
+    auto* dialog = new QDialog(parent);
+    auto* layout = new QFormLayout(dialog);
 
-    QLineEdit* title = new QLineEdit;
-    QLineEdit* address = new QLineEdit;
-    QLineEdit* keyword = new QLineEdit;
-    QPlainTextEdit* description = new QPlainTextEdit;
+    auto* title = new QLineEdit;
+    auto* address = new QLineEdit;
+    auto* keyword = new QLineEdit;
+    auto* description = new QPlainTextEdit;
 
-    QDialogButtonBox* box = new QDialogButtonBox(dialog);
+    auto* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
     QObject::connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
@@ -403,7 +403,7 @@ void BookmarksTools::addUrlToMenu(QObject* receiver, Menu* menu, BookmarkItem* b
     Q_ASSERT(bookmark);
     Q_ASSERT(bookmark->isUrl());
 
-    Action* act = new Action(menu);
+    auto* act = new Action(menu);
     QString title = QFontMetrics(act->font()).elidedText(bookmark->title(), Qt::ElideRight, 250);
     act->setText(title);
     act->setData(QVariant::fromValue<void*>(static_cast<void*>(bookmark)));
@@ -463,7 +463,7 @@ bool BookmarksTools::migrateBookmarksIfNecessary(Bookmarks* bookmarks)
         bool subfolder = query.value(1).toString() == QLatin1String("yes");
 
         BookmarkItem* parent = subfolder ? bookmarks->toolbarFolder() : bookmarks->unsortedFolder();
-        BookmarkItem* folder = new BookmarkItem(BookmarkItem::Folder, parent);
+        auto* folder = new BookmarkItem(BookmarkItem::Folder, parent);
         folder->setTitle(title);
         folders.insert(folder->title(), folder);
     }
@@ -480,7 +480,7 @@ bool BookmarksTools::migrateBookmarksIfNecessary(Bookmarks* bookmarks)
         }
         Q_ASSERT(parent);
 
-        BookmarkItem* bookmark = new BookmarkItem(BookmarkItem::Url, parent);
+        auto* bookmark = new BookmarkItem(BookmarkItem::Url, parent);
         bookmark->setTitle(title);
         bookmark->setUrl(url);
     }

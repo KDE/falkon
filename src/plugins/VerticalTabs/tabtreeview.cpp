@@ -59,7 +59,7 @@ TabTreeView::TabTreeView(BrowserWindow *window, QWidget *parent)
         if (m_initializing) {
             return;
         }
-        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
         if (tab) {
             tab->setSessionData(m_expandedSessionKey, expanded);
         }
@@ -197,10 +197,10 @@ bool TabTreeView::viewportEvent(QEvent *event)
 {
     switch (event->type()) {
     case QEvent::MouseButtonPress: {
-        QMouseEvent *me = static_cast<QMouseEvent*>(event);
+        auto *me = static_cast<QMouseEvent*>(event);
         const QModelIndex index = indexAt(me->pos());
         updateIndex(index);
-        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
         if (me->buttons() == Qt::MiddleButton) {
             if (tab) {
                 if (isExpanded(index)) {
@@ -240,7 +240,7 @@ bool TabTreeView::viewportEvent(QEvent *event)
     }
 
     case QEvent::MouseMove: {
-        QMouseEvent *me = static_cast<QMouseEvent*>(event);
+        auto *me = static_cast<QMouseEvent*>(event);
         if (m_pressedButton == CloseButton) {
             me->accept();
             return true;
@@ -249,7 +249,7 @@ bool TabTreeView::viewportEvent(QEvent *event)
     }
 
     case QEvent::MouseButtonRelease: {
-        QMouseEvent *me = static_cast<QMouseEvent*>(event);
+        auto *me = static_cast<QMouseEvent*>(event);
         if (me->buttons() != Qt::NoButton) {
             break;
         }
@@ -264,7 +264,7 @@ bool TabTreeView::viewportEvent(QEvent *event)
                 me->accept();
                 return true;
             }
-            WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+            auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
             if (tab) {
                 if (m_pressedButton == CloseButton) {
                     tab->closeTab();
@@ -281,7 +281,7 @@ bool TabTreeView::viewportEvent(QEvent *event)
     }
 
     case QEvent::MouseButtonDblClick: {
-        QMouseEvent *me = static_cast<QMouseEvent*>(event);
+        auto *me = static_cast<QMouseEvent*>(event);
         const QModelIndex index = indexAt(me->pos());
         if (me->button() == Qt::LeftButton && !index.isValid()) {
             m_window->addTab();
@@ -292,7 +292,7 @@ bool TabTreeView::viewportEvent(QEvent *event)
     case QEvent::HoverEnter:
     case QEvent::HoverLeave:
     case QEvent::HoverMove: {
-        QHoverEvent *he = static_cast<QHoverEvent*>(event);
+        auto *he = static_cast<QHoverEvent*>(event);
         updateIndex(m_hoveredIndex);
         m_hoveredIndex = indexAt(he->pos());
         updateIndex(m_hoveredIndex);
@@ -300,7 +300,7 @@ bool TabTreeView::viewportEvent(QEvent *event)
     }
 
     case QEvent::ToolTip: {
-        QHelpEvent *he = static_cast<QHelpEvent*>(event);
+        auto *he = static_cast<QHelpEvent*>(event);
         const QModelIndex index = indexAt(he->pos());
         DelegateButton button = buttonAt(he->pos(), index);
         if (button == AudioButton) {
@@ -321,9 +321,9 @@ bool TabTreeView::viewportEvent(QEvent *event)
     }
 
     case QEvent::ContextMenu: {
-        QContextMenuEvent *ce = static_cast<QContextMenuEvent*>(event);
+        auto *ce = static_cast<QContextMenuEvent*>(event);
         const QModelIndex index = indexAt(ce->pos());
-        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
         const int tabIndex = tab ? tab->tabIndex() : -1;
         TabContextMenu::Options options = TabContextMenu::VerticalTabs | TabContextMenu::ShowDetachTabAction;
         if (m_tabsInOrder) {
@@ -347,7 +347,7 @@ void TabTreeView::initView()
     for (int i = 0; i < model()->rowCount(); ++i) {
         const QModelIndex index = model()->index(i, 0);
         reverseTraverse(index, [this](const QModelIndex &index) {
-            WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+            auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
             if (tab) {
                 setExpanded(index, tab->sessionData().value(m_expandedSessionKey, true).toBool());
             }
@@ -410,7 +410,7 @@ void TabTreeView::closeTree(const QModelIndex &root)
 {
     QVector<WebTab*> tabs;
     reverseTraverse(root, [&](const QModelIndex &index) {
-        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
         if (tab) {
             tabs.append(tab);
         }
@@ -423,7 +423,7 @@ void TabTreeView::closeTree(const QModelIndex &root)
 void TabTreeView::unloadTree(const QModelIndex &root)
 {
     reverseTraverse(root, [&](const QModelIndex &index) {
-        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
         if (tab && tab->isRestored()) {
             tab->unload();
         }

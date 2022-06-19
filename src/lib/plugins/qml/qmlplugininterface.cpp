@@ -95,8 +95,8 @@ void QmlPluginInterface::populateWebViewMenu(QMenu *menu, WebView *webview, cons
         return;
     }
 
-    QmlMenu *qmlMenu = new QmlMenu(menu, m_engine);
-    QmlWebHitTestResult *qmlWebHitTestResult = new QmlWebHitTestResult(webHitTestResult);
+    auto *qmlMenu = new QmlMenu(menu, m_engine);
+    auto *qmlWebHitTestResult = new QmlWebHitTestResult(webHitTestResult);
     QJSValueList args;
     args.append(m_engine->newQObject(qmlMenu));
     args.append(m_engine->newQObject(qmlWebHitTestResult));
@@ -111,7 +111,7 @@ void QmlPluginInterface::showSettings(QWidget *parent)
         return;
     }
 
-    QQuickWidget *widget = new QQuickWidget();
+    auto *widget = new QQuickWidget();
     widget->setContent(m_settingsWindow->url(), m_settingsWindow, m_settingsWindow->create(m_settingsWindow->creationContext()));
     widget->show();
 

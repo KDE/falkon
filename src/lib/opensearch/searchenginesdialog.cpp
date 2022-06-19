@@ -67,7 +67,7 @@ void SearchEnginesDialog::addEngine()
         return;
     }
 
-    QTreeWidgetItem* item = new QTreeWidgetItem();
+    auto* item = new QTreeWidgetItem();
     setEngine(item, engine);
 
     changeItemToDefault(item, false);
@@ -223,7 +223,7 @@ void SearchEnginesDialog::reloadEngines()
 
     const auto engines = m_manager->allEngines();
     for (const SearchEngine &en : engines) {
-        QTreeWidgetItem* item = new QTreeWidgetItem();
+        auto* item = new QTreeWidgetItem();
         setEngine(item, en);
         changeItemToDefault(item, en == defaultEngine);
         item->setIcon(0, en.icon);

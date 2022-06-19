@@ -294,7 +294,7 @@ QString History::titleCaseLocalizedMonth(int month)
         return tr("December");
     default:
         qWarning("Month number out of range!");
-        return QString();
+        return {};
     }
 }
 

@@ -84,7 +84,7 @@ CookieManager::CookieManager(QWidget *parent)
     ui->whiteList->sortItems(Qt::AscendingOrder);
     ui->blackList->sortItems(Qt::AscendingOrder);
 
-    QShortcut* removeShortcut = new QShortcut(QKeySequence("Del"), this);
+    auto* removeShortcut = new QShortcut(QKeySequence("Del"), this);
     connect(removeShortcut, &QShortcut::activated, this, &CookieManager::deletePressed);
 
     connect(ui->search, &QLineEdit::textChanged, this, &CookieManager::filterString);
@@ -291,7 +291,7 @@ void CookieManager::addCookie(const QNetworkCookie &cookie)
         item = new QTreeWidgetItem(findParent);
     }
     else {
-        QTreeWidgetItem* newParent = new QTreeWidgetItem(ui->cookieTree);
+        auto* newParent = new QTreeWidgetItem(ui->cookieTree);
         newParent->setText(0, domain);
         newParent->setIcon(0, IconProvider::standardIcon(QStyle::SP_DirIcon));
         newParent->setData(0, Qt::UserRole + 10, cookie.domain());

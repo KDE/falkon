@@ -27,7 +27,7 @@ class FALKON_EXPORT PasswordBackend
 {
 public:
     explicit PasswordBackend();
-    virtual ~PasswordBackend() { }
+    virtual ~PasswordBackend() = default;
 
     virtual QString name() const = 0;
 

@@ -67,7 +67,7 @@ void HeaderView::contextMenuEvent(QContextMenuEvent* event)
         m_menu = new QMenu(this);
 
         for (int i = 0; i < count(); ++i) {
-            QAction* act = new QAction(model()->headerData(i, Qt::Horizontal).toString(), m_menu);
+            auto* act = new QAction(model()->headerData(i, Qt::Horizontal).toString(), m_menu);
             act->setCheckable(true);
             act->setData(i);
 
@@ -87,7 +87,7 @@ void HeaderView::contextMenuEvent(QContextMenuEvent* event)
 
 void HeaderView::toggleSectionVisibility()
 {
-    if (QAction* act = qobject_cast<QAction*>(sender())) {
+    if (auto* act = qobject_cast<QAction*>(sender())) {
         int index = act->data().toInt();
 
         setSectionHidden(index, !isSectionHidden(index));

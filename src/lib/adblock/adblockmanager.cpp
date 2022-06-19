@@ -211,7 +211,7 @@ AdBlockSubscription* AdBlockManager::addSubscription(const QString &title, const
     file.write(data);
     file.commit();
 
-    AdBlockSubscription* subscription = new AdBlockSubscription(title, this);
+    auto* subscription = new AdBlockSubscription(title, this);
     subscription->setUrl(QUrl(url));
     subscription->setFilePath(filePath);
     subscription->loadSubscription(m_disabledRules);
@@ -243,7 +243,7 @@ bool AdBlockManager::removeSubscription(AdBlockSubscription* subscription)
 AdBlockCustomList* AdBlockManager::customList() const
 {
     for (AdBlockSubscription* subscription : qAsConst(m_subscriptions)) {
-        AdBlockCustomList* list = qobject_cast<AdBlockCustomList*>(subscription);
+        auto* list = qobject_cast<AdBlockCustomList*>(subscription);
 
         if (list) {
             return list;
@@ -305,7 +305,7 @@ void AdBlockManager::load()
             continue;
         }
 
-        AdBlockSubscription* subscription = new AdBlockSubscription(title, this);
+        auto* subscription = new AdBlockSubscription(title, this);
         subscription->setUrl(url);
         subscription->setFilePath(absolutePath);
 
@@ -314,19 +314,19 @@ void AdBlockManager::load()
 
     // Add EasyList + NoCoinList if subscriptions are empty
     if (m_subscriptions.isEmpty()) {
-        AdBlockSubscription *easyList = new AdBlockSubscription(tr("EasyList"), this);
+        auto *easyList = new AdBlockSubscription(tr("EasyList"), this);
         easyList->setUrl(QUrl(ADBLOCK_EASYLIST_URL));
         easyList->setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/easylist.txt"));
         m_subscriptions.append(easyList);
 
-        AdBlockSubscription *noCoinList = new AdBlockSubscription(tr("NoCoin List"), this);
+        auto *noCoinList = new AdBlockSubscription(tr("NoCoin List"), this);
         noCoinList->setUrl(QUrl(ADBLOCK_NOCOINLIST_URL));
         noCoinList->setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/nocoinlist.txt"));
         m_subscriptions.append(noCoinList);
     }
 
     // Append CustomList
-    AdBlockCustomList* customList = new AdBlockCustomList(this);
+    auto* customList = new AdBlockCustomList(this);
     m_subscriptions.append(customList);
 
     // Load all subscriptions
@@ -413,7 +413,7 @@ bool AdBlockManager::canBeBlocked(const QUrl &url) const
 QString AdBlockManager::elementHidingRules(const QUrl &url) const
 {
     if (!isEnabled() || !canRunOnScheme(url.scheme()) || m_matcher->genericElemHideDisabledForUrl(url))
-        return QString();
+        return {};
 
     return m_matcher->elementHidingRules();
 }
@@ -421,7 +421,7 @@ QString AdBlockManager::elementHidingRules(const QUrl &url) const
 QString AdBlockManager::elementHidingRulesForDomain(const QUrl &url) const
 {
     if (!isEnabled() || !canRunOnScheme(url.scheme()) || m_matcher->elemHideDisabledForUrl(url))
-        return QString();
+        return {};
 
     return m_matcher->elementHidingRulesForDomain(url.host());
 }
@@ -452,7 +452,7 @@ AdBlockDialog *AdBlockManager::showDialog(QWidget *parent)
 
 void AdBlockManager::showRule()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         const AdBlockRule* rule = static_cast<const AdBlockRule*>(action->data().value<void*>());
 
         if (rule) {

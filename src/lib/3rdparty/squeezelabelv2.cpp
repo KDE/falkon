@@ -109,8 +109,8 @@ void SqueezeLabelV2::mouseMoveEvent(QMouseEvent* event)
         return;
     }
 
-    QDrag* drag = new QDrag(this);
-    QMimeData* mime = new QMimeData;
+    auto* drag = new QDrag(this);
+    auto* mime = new QMimeData;
     mime->setText(m_originalText);
 
     drag->setMimeData(mime);

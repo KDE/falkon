@@ -49,7 +49,7 @@ void IconChooser::chooseFile()
     QIcon icon(path);
 
     if (!icon.isNull()) {
-        QListWidgetItem* item = new QListWidgetItem(ui->iconList);
+        auto* item = new QListWidgetItem(ui->iconList);
         item->setIcon(icon);
 
         ui->iconList->setCurrentItem(item);
@@ -72,7 +72,7 @@ void IconChooser::searchIcon(const QString &string)
     while (query.next()) {
         QImage image = QImage::fromData(query.value(0).toByteArray());
         if (!image.isNull()) {
-            QListWidgetItem* item = new QListWidgetItem(ui->iconList);
+            auto* item = new QListWidgetItem(ui->iconList);
             item->setIcon(QPixmap::fromImage(image));
         }
     }

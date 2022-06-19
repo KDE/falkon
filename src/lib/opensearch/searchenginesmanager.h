@@ -118,7 +118,7 @@ private:
     Engine m_defaultEngine;
 };
 
-typedef SearchEnginesManager::Engine SearchEngine;
+using SearchEngine = SearchEnginesManager::Engine;
 
 // Hint to QVector to use std::realloc on item moving
 Q_DECLARE_TYPEINFO(SearchEngine, Q_MOVABLE_TYPE);

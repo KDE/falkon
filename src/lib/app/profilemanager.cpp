@@ -33,8 +33,7 @@
 #include <iostream>
 
 ProfileManager::ProfileManager()
-{
-}
+= default;
 
 void ProfileManager::initConfigDir()
 {

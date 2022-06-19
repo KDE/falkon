@@ -55,7 +55,7 @@ void NavigationBarToolButton::updateVisibility()
 
 void NavigationBarToolButton::clicked()
 {
-    AbstractButtonInterface::ClickController *c = new AbstractButtonInterface::ClickController;
+    auto *c = new AbstractButtonInterface::ClickController;
     c->visualParent = this;
     c->popupPosition = [=](const QSize &size) {
         QPoint pos = mapToGlobal(rect().bottomRight());

@@ -82,7 +82,7 @@ FCM_Dialog::FCM_Dialog(FCM_Plugin* manager, QWidget* parent)
     ui->flashCookieTree->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->flashCookieTree, &QWidget::customContextMenuRequested, this, &FCM_Dialog::cookieTreeContextMenuRequested);
 
-    QShortcut* removeShortcut = new QShortcut(QKeySequence("Del"), this);
+    auto* removeShortcut = new QShortcut(QKeySequence("Del"), this);
     connect(removeShortcut, &QShortcut::activated, this, &FCM_Dialog::deletePressed);
 
     QzTools::setWmClass("FlashCookies", this);
@@ -223,7 +223,7 @@ void FCM_Dialog::refreshFlashCookiesTree()
             item = new QTreeWidgetItem(findParent);
         }
         else {
-            QTreeWidgetItem* newParent = new QTreeWidgetItem(ui->flashCookieTree);
+            auto* newParent = new QTreeWidgetItem(ui->flashCookieTree);
             newParent->setText(0, cookieOrigin);
             newParent->setIcon(0, IconProvider::standardIcon(QStyle::SP_DirIcon));
             ui->flashCookieTree->addTopLevelItem(newParent);

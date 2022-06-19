@@ -62,7 +62,7 @@ LocationBar::LocationBar(QWidget *parent)
     m_goIcon = new GoIcon(this);
     m_siteIcon = new SiteIcon(this);
     m_autofillIcon = new AutoFillIcon(this);
-    DownIcon* down = new DownIcon(this);
+    auto* down = new DownIcon(this);
 
     addWidget(m_siteIcon, LineEdit::LeftSide);
     addWidget(m_autofillIcon, LineEdit::RightSide);
@@ -79,7 +79,7 @@ LocationBar::LocationBar(QWidget *parent)
     connect(m_completer, &LocationCompleter::popupClosed, this, &LocationBar::updateSiteIcon);
 
     m_domainCompleterModel = new QStringListModel(this);
-    QCompleter* domainCompleter = new QCompleter(this);
+    auto* domainCompleter = new QCompleter(this);
     domainCompleter->setCompletionMode(QCompleter::InlineCompletion);
     domainCompleter->setModel(m_domainCompleterModel);
     setCompleter(domainCompleter);
@@ -211,7 +211,7 @@ QString LocationBar::convertUrlToText(const QUrl &url)
 SearchEnginesManager::Engine LocationBar::searchEngine()
 {
     if (!qzSettings->searchFromAddressBar) {
-        return SearchEngine();
+        return {};
     } else if (qzSettings->searchWithDefaultEngine) {
         return mApp->searchEnginesManager()->defaultEngine();
     } else {
@@ -643,7 +643,7 @@ void LocationBar::loadFinished()
         m_progressTimer->start();
     }
 
-    WebPage* page = qobject_cast<WebPage*>(m_webView->page());
+    auto* page = qobject_cast<WebPage*>(m_webView->page());
 
     if (page && !page->autoFillUsernames().isEmpty()) {
         m_autofillIcon->setUsernames(page->autoFillUsernames());

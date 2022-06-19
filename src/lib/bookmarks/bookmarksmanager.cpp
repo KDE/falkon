@@ -173,7 +173,7 @@ void BookmarksManager::openBookmarkInNewPrivateWindow(BookmarkItem* item)
 
 void BookmarksManager::addBookmark()
 {
-    BookmarkItem* item = new BookmarkItem(BookmarkItem::Url);
+    auto* item = new BookmarkItem(BookmarkItem::Url);
     item->setTitle(tr("New Bookmark"));
     item->setUrl(QUrl(QSL("http://")));
     addBookmark(item);
@@ -181,14 +181,14 @@ void BookmarksManager::addBookmark()
 
 void BookmarksManager::addFolder()
 {
-    BookmarkItem* item = new BookmarkItem(BookmarkItem::Folder);
+    auto* item = new BookmarkItem(BookmarkItem::Folder);
     item->setTitle(tr("New Folder"));
     addBookmark(item);
 }
 
 void BookmarksManager::addSeparator()
 {
-    BookmarkItem* item = new BookmarkItem(BookmarkItem::Separator);
+    auto* item = new BookmarkItem(BookmarkItem::Separator);
     addBookmark(item);
 }
 
@@ -267,7 +267,7 @@ void BookmarksManager::updateEditBox(BookmarkItem* item)
     ui->keyword->setVisible(showAddressAndKeyword);
 
     // Without removing widgets from layout, there is unwanted extra spacing
-    QFormLayout* l = static_cast<QFormLayout*>(ui->editBox->layout());
+    auto* l = static_cast<QFormLayout*>(ui->editBox->layout());
 
     if (showAddressAndKeyword) {
         // Show Address + Keyword

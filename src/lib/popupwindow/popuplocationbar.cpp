@@ -53,7 +53,7 @@ PopupLocationBar::PopupLocationBar(QWidget* parent)
     m_bookmarkIcon = new BookmarksIcon(this);
     m_autofillIcon = new AutoFillIcon(this);
 
-    QWidget* rightSpacer = new QWidget(this);
+    auto* rightSpacer = new QWidget(this);
     rightSpacer->setFixedWidth(3);
 
     addWidget(m_siteIcon, LineEdit::LeftSide);
@@ -88,7 +88,7 @@ void PopupLocationBar::stopLoading()
 {
     m_bookmarkIcon->checkBookmark(m_view->url());
 
-    WebPage* page = qobject_cast<WebPage*>(m_view->page());
+    auto* page = qobject_cast<WebPage*>(m_view->page());
 
     if (page && !page->autoFillUsernames().isEmpty()) {
         m_autofillIcon->setUsernames(page->autoFillUsernames());

@@ -60,7 +60,7 @@ static QString toSecondLevelDomain(const QUrl &url)
     const QString urlHost = url.host();
 
     if (topLevelDomain.isEmpty() || urlHost.isEmpty()) {
-        return QString();
+        return {};
     }
 
     QString domain = urlHost.left(urlHost.size() - topLevelDomain.size());
@@ -95,7 +95,7 @@ AdBlockRule::~AdBlockRule()
 
 AdBlockRule* AdBlockRule::copy() const
 {
-    AdBlockRule* rule = new AdBlockRule();
+    auto* rule = new AdBlockRule();
     rule->m_subscription = m_subscription;
     rule->m_type = m_type;
     rule->m_options = m_options;

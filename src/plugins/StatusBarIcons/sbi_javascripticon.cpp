@@ -74,7 +74,7 @@ void SBI_JavaScriptIcon::updateIcon()
         setGraphicsEffect(0);
     }
     else {
-        QGraphicsColorizeEffect* effect = new QGraphicsColorizeEffect(this);
+        auto* effect = new QGraphicsColorizeEffect(this);
         effect->setColor(Qt::gray);
         setGraphicsEffect(effect);
     }
@@ -105,6 +105,6 @@ void SBI_JavaScriptIcon::toggleJavaScript()
 
 void SBI_JavaScriptIcon::openJavaScriptSettings()
 {
-    JsOptions* dialog = new JsOptions(m_window);
+    auto* dialog = new JsOptions(m_window);
     dialog->open();
 }

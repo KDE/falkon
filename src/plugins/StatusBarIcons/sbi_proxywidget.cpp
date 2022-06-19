@@ -39,7 +39,7 @@ void SBI_ProxyWidget::clear()
 
 SBI_NetworkProxy* SBI_ProxyWidget::getProxy() const
 {
-    SBI_NetworkProxy* proxy = new SBI_NetworkProxy;
+    auto* proxy = new SBI_NetworkProxy;
 
     proxy->setHostName(ui->proxyServer->text());
     proxy->setPort(ui->proxyPort->text().toInt());

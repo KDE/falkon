@@ -79,18 +79,18 @@ BookmarkItem* ChromeImporter::importBookmarks()
 
     QVariantMap rootMap = res.toMap().value(QSL("roots")).toMap();
 
-    BookmarkItem* root = new BookmarkItem(BookmarkItem::Folder);
+    auto* root = new BookmarkItem(BookmarkItem::Folder);
     root->setTitle(QSL("Chrome Import"));
 
-    BookmarkItem* toolbar = new BookmarkItem(BookmarkItem::Folder, root);
+    auto* toolbar = new BookmarkItem(BookmarkItem::Folder, root);
     toolbar->setTitle(rootMap.value(QSL("bookmark_bar")).toMap().value(QSL("name")).toString());
     readBookmarks(rootMap.value(QSL("bookmark_bar")).toMap().value(QSL("children")).toList(), toolbar);
 
-    BookmarkItem* other = new BookmarkItem(BookmarkItem::Folder, root);
+    auto* other = new BookmarkItem(BookmarkItem::Folder, root);
     other->setTitle(rootMap.value(QSL("other")).toMap().value(QSL("name")).toString());
     readBookmarks(rootMap.value(QSL("other")).toMap().value(QSL("children")).toList(), other);
 
-    BookmarkItem* synced = new BookmarkItem(BookmarkItem::Folder, root);
+    auto* synced = new BookmarkItem(BookmarkItem::Folder, root);
     synced->setTitle(rootMap.value(QSL("synced")).toMap().value(QSL("name")).toString());
     readBookmarks(rootMap.value(QSL("synced")).toMap().value(QSL("synced")).toList(), other);
 
@@ -116,7 +116,7 @@ void ChromeImporter::readBookmarks(const QVariantList &list, BookmarkItem* paren
             continue;
         }
 
-        BookmarkItem* item = new BookmarkItem(type, parent);
+        auto* item = new BookmarkItem(type, parent);
         item->setTitle(map.value(QSL("name")).toString());
 
         if (item->isUrl()) {

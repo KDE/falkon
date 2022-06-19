@@ -68,7 +68,7 @@ StatusBarButton::StatusBarButton(AbstractButtonInterface *button, QWidget *paren
 
 void StatusBarButton::clicked()
 {
-    AbstractButtonInterface::ClickController *c = new AbstractButtonInterface::ClickController;
+    auto *c = new AbstractButtonInterface::ClickController;
     c->visualParent = this;
     c->popupPosition = [=](const QSize &size) {
         QPoint pos = mapToGlobal(rect().topRight());
@@ -222,7 +222,7 @@ void StatusBar::addButton(AbstractButtonInterface *button)
         return;
     }
 
-    StatusBarButton *widget = new StatusBarButton(button, this);
+    auto *widget = new StatusBarButton(button, this);
     widget->setProperty("button-id", button->id());
 
     WidgetData data;

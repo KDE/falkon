@@ -124,7 +124,7 @@ void WebScrollBarManager::addWebView(WebView *view)
 
     delete m_scrollbars.value(view);
 
-    ScrollBarData *data = new ScrollBarData;
+    auto *data = new ScrollBarData;
     data->vscrollbar = new WebScrollBar(Qt::Vertical, view);
     data->hscrollbar = new WebScrollBar(Qt::Horizontal, view);
     data->corner = new WebScrollBarCornerWidget(view);

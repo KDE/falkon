@@ -153,14 +153,14 @@ WebTab::WebTab(QWidget *parent)
     m_layout->setSpacing(0);
     m_layout->addWidget(m_webView);
 
-    QWidget *viewWidget = new QWidget(this);
+    auto *viewWidget = new QWidget(this);
     viewWidget->setLayout(m_layout);
 
     m_splitter = new QSplitter(Qt::Vertical, this);
     m_splitter->setChildrenCollapsible(false);
     m_splitter->addWidget(viewWidget);
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
     layout->addWidget(m_splitter);
@@ -172,7 +172,7 @@ WebTab::WebTab(QWidget *parent)
     pal.setColor(QPalette::Window, pal.window().color().darker(110));
     m_notificationWidget->setPalette(pal);
 
-    QVBoxLayout *nlayout = new QVBoxLayout(m_notificationWidget);
+    auto *nlayout = new QVBoxLayout(m_notificationWidget);
     nlayout->setSizeConstraint(QLayout::SetMinAndMaxSize);
     nlayout->setContentsMargins(0, 0, 0, 0);
     nlayout->setSpacing(1);
@@ -221,7 +221,7 @@ void WebTab::showWebInspector(bool inspectElement)
     if (!WebInspector::isEnabled() || haveInspector())
         return;
 
-    WebInspector *inspector = new WebInspector(this);
+    auto *inspector = new WebInspector(this);
     inspector->setView(m_webView);
     if (inspectElement)
         inspector->inspectElement();

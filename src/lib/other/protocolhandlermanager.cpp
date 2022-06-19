@@ -79,7 +79,7 @@ void ProtocolHandlerManager::registerHandler(const QString &scheme, const QUrl &
     QString urlString = url.toString();
     urlString.replace(QL1S("%25s"), QL1S("%s"));
 
-    QWebEnginePage *page = new QWebEnginePage(this);
+    auto *page = new QWebEnginePage(this);
     connect(page, &QWebEnginePage::loadFinished, page, &QObject::deleteLater);
     connect(page, &QWebEnginePage::registerProtocolHandlerRequested, this, [](QWebEngineRegisterProtocolHandlerRequest request) {
         request.accept();

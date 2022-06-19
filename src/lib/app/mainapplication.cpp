@@ -445,7 +445,7 @@ BrowserWindow* MainApplication::createWindow(Qz::BrowserWindowType type, const Q
         type = Qz::BW_FirstAppWindow;
     }
 
-    BrowserWindow* window = new BrowserWindow(type, startUrl);
+    auto* window = new BrowserWindow(type, startUrl);
     connect(window, &QObject::destroyed, this, &MainApplication::windowDestroyed);
 
     m_windows.prepend(window);
@@ -682,7 +682,7 @@ void MainApplication::addNewTab(const QUrl &url)
 void MainApplication::startPrivateBrowsing(const QUrl &startUrl)
 {
     QUrl url = startUrl;
-    if (QAction* act = qobject_cast<QAction*>(sender())) {
+    if (auto* act = qobject_cast<QAction*>(sender())) {
         url = act->data().toUrl();
     }
 
@@ -863,7 +863,7 @@ void MainApplication::messageReceived(const QString &message)
             actWin = downloadManager();
         }
         else if (text == QLatin1String("ToggleFullScreen") && actWin) {
-            BrowserWindow* qz = static_cast<BrowserWindow*>(actWin);
+            auto* qz = static_cast<BrowserWindow*>(actWin);
             qz->toggleFullScreen();
         }
         else if (text.startsWith(QLatin1String("OpenUrlInCurrentTab"))) {
@@ -892,7 +892,7 @@ void MainApplication::messageReceived(const QString &message)
     actWin->activateWindow();
     actWin->setFocus();
 
-    BrowserWindow* win = qobject_cast<BrowserWindow*>(actWin);
+    auto* win = qobject_cast<BrowserWindow*>(actWin);
 
     if (win && !actUrl.isEmpty()) {
         win->loadAddress(actUrl);
@@ -910,7 +910,7 @@ void MainApplication::windowDestroyed(QObject* window)
 
 void MainApplication::onFocusChanged()
 {
-    BrowserWindow* activeBrowserWindow = qobject_cast<BrowserWindow*>(activeWindow());
+    auto* activeBrowserWindow = qobject_cast<BrowserWindow*>(activeWindow());
 
     if (activeBrowserWindow) {
         m_lastActiveWindow = activeBrowserWindow;

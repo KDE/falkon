@@ -243,10 +243,10 @@ void QmlBrowserActionButton::positionPopup(ClickController *clickController)
         return;
     }
 
-    QQuickWidget *quickWidget = new QQuickWidget();
+    auto *quickWidget = new QQuickWidget();
     quickWidget->setContent(m_popup->url(), m_popup, m_popup->create(m_popup->creationContext()));
 
-    QWidget *widget = new QWidget();
+    auto *widget = new QWidget();
     quickWidget->setParent(widget);
 
     widget->setWindowFlag(Qt::Popup);

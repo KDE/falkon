@@ -107,7 +107,7 @@ QByteArray AesInterface::encrypt(const QByteArray &plainData, const QByteArray &
     int dataLength = plainData.size();
     int cipherlength = dataLength + AES_BLOCK_SIZE;
     int finalLength = 0;
-    uchar* ciphertext = (uchar*)malloc(cipherlength);
+    auto* ciphertext = (uchar*)malloc(cipherlength);
 
     // allows reusing of 'm_encodeCTX' for multiple encryption cycles
     EVP_EncryptInit_ex(m_encodeCTX, NULL, NULL, NULL, NULL);
@@ -134,28 +134,28 @@ QByteArray AesInterface::decrypt(const QByteArray &cipherData, const QByteArray 
 
     if (cipherData.isEmpty()) {
         m_ok = true;
-        return QByteArray();
+        return {};
     }
 
     QList<QByteArray> cipherSections(cipherData.split('$'));
     if (cipherSections.size() != 3) {
         qWarning() << "Decrypt error: It seems data is corrupted";
-        return QByteArray();
+        return {};
     }
 
     if (cipherSections.at(0).toInt() > AesInterface::VERSION) {
         QMessageBox::information(0, tr("Warning!"), tr("Data has been encrypted with a newer version of Falkon."
                                  "\nPlease install latest version of Falkon."));
-        return QByteArray();
+        return {};
     }
 
     if (cipherSections.at(0).toInt() != 1) {
         qWarning() << Q_FUNC_INFO << "There is just version 1 of decoder, yet ;-)";
-        return QByteArray();
+        return {};
     }
 
     if (!init(EVP_PKEY_MO_DECRYPT, password, QByteArray::fromBase64(cipherSections.at(1)))) {
-        return QByteArray();
+        return {};
     }
 
     QByteArray cipherArray = QByteArray::fromBase64(cipherSections.at(2));
@@ -163,9 +163,9 @@ QByteArray AesInterface::decrypt(const QByteArray &cipherData, const QByteArray 
     int plainTextLength = cipherLength;
     int finalLength = 0;
 
-    uchar* cipherText = (uchar*)cipherArray.data();
+    auto* cipherText = (uchar*)cipherArray.data();
     // because we have padding ON, we must allocate an extra cipher block size of memory
-    uchar* plainText = (uchar*)malloc(plainTextLength + AES_BLOCK_SIZE);
+    auto* plainText = (uchar*)malloc(plainTextLength + AES_BLOCK_SIZE);
 
     EVP_DecryptInit_ex(m_decodeCTX, NULL, NULL, NULL, NULL);
     EVP_DecryptUpdate(m_decodeCTX, plainText, &plainTextLength, cipherText, cipherLength);
@@ -177,7 +177,7 @@ QByteArray AesInterface::decrypt(const QByteArray &cipherData, const QByteArray 
     free(plainText);
 
     if (success != 1) {
-        return QByteArray();
+        return {};
     }
 
     m_ok = true;
@@ -193,13 +193,13 @@ QByteArray AesInterface::passwordToHash(const QString &masterPassword)
         return result.toBase64();
     }
     else {
-        return QByteArray();
+        return {};
     }
 }
 
 QByteArray AesInterface::createRandomData(int length)
 {
-    uchar* randomData = (uchar*)malloc(length);
+    auto* randomData = (uchar*)malloc(length);
 
     RAND_bytes(randomData, length);
     QByteArray data((char*)randomData, length);

@@ -91,7 +91,7 @@ bool VerticalTabsPlugin::testPlugin()
 
 void VerticalTabsPlugin::showSettings(QWidget *parent)
 {
-    VerticalTabsSettings *settings = new VerticalTabsSettings(this, parent);
+    auto *settings = new VerticalTabsSettings(this, parent);
     settings->exec();
 }
 

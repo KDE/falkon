@@ -138,7 +138,7 @@ void BookmarksToolbar::showOnlyIconsChanged(bool state)
     }
 
     for (int i = 0; i < m_layout->count(); ++i) {
-        BookmarksToolbarButton* b = qobject_cast<BookmarksToolbarButton*>(m_layout->itemAt(i)->widget());
+        auto* b = qobject_cast<BookmarksToolbarButton*>(m_layout->itemAt(i)->widget());
         if (b) {
             b->setShowOnlyIcon(state);
         }
@@ -152,7 +152,7 @@ void BookmarksToolbar::showOnlyTextChanged(bool state)
     }
 
     for (int i = 0; i < m_layout->count(); ++i) {
-        BookmarksToolbarButton* b = qobject_cast<BookmarksToolbarButton*>(m_layout->itemAt(i)->widget());
+        auto* b = qobject_cast<BookmarksToolbarButton*>(m_layout->itemAt(i)->widget());
         if (b) {
             b->setShowOnlyText(state);
         }
@@ -231,7 +231,7 @@ void BookmarksToolbar::addItem(BookmarkItem* item)
 {
     Q_ASSERT(item);
 
-    BookmarksToolbarButton* button = new BookmarksToolbarButton(item, this);
+    auto* button = new BookmarksToolbarButton(item, this);
     button->setMainWindow(m_window);
     button->setShowOnlyIcon(m_bookmarks->showOnlyIconsInToolbar());
     button->setShowOnlyText(m_bookmarks->showOnlyTextInToolbar());
@@ -266,7 +266,7 @@ void BookmarksToolbar::dropEvent(QDropEvent* e)
     BookmarkItem* bookmark = nullptr;
 
     if (mime->hasFormat(BookmarksButtonMimeData::mimeType())) {
-        const BookmarksButtonMimeData* bookmarkMime = static_cast<const BookmarksButtonMimeData*>(mime);
+        const auto* bookmarkMime = static_cast<const BookmarksButtonMimeData*>(mime);
         bookmark = bookmarkMime->item();
         const int initialIndex = bookmark->parent()->children().indexOf(bookmark);
         BookmarksToolbarButton* current = buttonAt(m_dropPos);

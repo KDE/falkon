@@ -71,7 +71,7 @@ void MenuTabs::mouseReleaseEvent(QMouseEvent* event)
     if (event->button() == Qt::MiddleButton) {
         QAction* action = actionAt(event->pos());
         if (action && action->isEnabled()) {
-            WebTab* tab = qobject_cast<WebTab*>(qvariant_cast<QWidget*>(action->data()));
+            auto* tab = qobject_cast<WebTab*>(qvariant_cast<QWidget*>(action->data()));
             if (tab) {
                 emit closeTab(tab->tabIndex());
                 action->setEnabled(false);
@@ -261,7 +261,7 @@ void TabWidget::aboutToShowTabsMenu()
             continue;
         }
 
-        QAction* action = new QAction(this);
+        auto* action = new QAction(this);
         action->setIcon(tab->icon());
 
         if (i == currentIndex()) {
@@ -303,8 +303,8 @@ void TabWidget::aboutToShowClosedTabsMenu()
 
 void TabWidget::actionChangeIndex()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
-        WebTab* tab = qobject_cast<WebTab*>(qvariant_cast<QWidget*>(action->data()));
+    if (auto* action = qobject_cast<QAction*>(sender())) {
+        auto* tab = qobject_cast<WebTab*>(qvariant_cast<QWidget*>(action->data()));
         if (tab) {
             m_tabBar->ensureVisible(tab->tabIndex());
             setCurrentIndex(tab->tabIndex());
@@ -343,7 +343,7 @@ int TabWidget::addView(const LoadRequest &req, const QString &title, const Qz::N
         }
     }
 
-    WebTab* webTab = new WebTab(m_window);
+    auto* webTab = new WebTab(m_window);
     webTab->setPinned(pinned);
     webTab->locationBar()->showUrl(url);
     m_locationBars->addWidget(webTab->locationBar());
@@ -766,7 +766,7 @@ void TabWidget::restoreClosedTab(QObject* obj)
 
     ClosedTabsManager::Tab tab;
 
-    QAction* action = qobject_cast<QAction*>(obj);
+    auto* action = qobject_cast<QAction*>(obj);
     if (action && action->data().toInt() != 0) {
         tab = m_closedTabsManager->takeTabAt(action->data().toInt());
     }

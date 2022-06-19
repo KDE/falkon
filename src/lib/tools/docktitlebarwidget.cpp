@@ -35,5 +35,4 @@ void DockTitleBarWidget::setTitle(const QString &title)
 }
 
 DockTitleBarWidget::~DockTitleBarWidget()
-{
-}
+= default;

@@ -288,7 +288,7 @@ QString CertificateInfoWidget::clearCertSpecialSymbols(const QString &string)
 QString CertificateInfoWidget::clearCertSpecialSymbols(const QStringList &stringList)
 {
     if (stringList.isEmpty()) {
-        return QString();
+        return {};
     }
 
     return clearCertSpecialSymbols(stringList.at(0));
@@ -307,7 +307,7 @@ QString CertificateInfoWidget::showCertInfo(const QString &string)
 QString CertificateInfoWidget::showCertInfo(const QStringList &stringList)
 {
     if (stringList.isEmpty()) {
-        return QString();
+        return {};
     }
 
     return showCertInfo(stringList.at(0));

@@ -96,7 +96,7 @@ OpenSearchEngine* OpenSearchReader::read(QIODevice* device)
 
 OpenSearchEngine* OpenSearchReader::read()
 {
-    OpenSearchEngine* engine = new OpenSearchEngine();
+    auto* engine = new OpenSearchEngine();
     m_searchXml = device()->peek(1024 * 5);
 
     if (!m_searchXml.contains(QLatin1String("http://a9.com/-/spec/opensearch/1.1/")) &&

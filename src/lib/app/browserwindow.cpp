@@ -87,8 +87,7 @@
 static const int savedWindowVersion = 2;
 
 BrowserWindow::SavedWindow::SavedWindow()
-{
-}
+= default;
 
 BrowserWindow::SavedWindow::SavedWindow(BrowserWindow *window)
 {
@@ -356,7 +355,7 @@ void BrowserWindow::setupUi()
     }
     settings.endGroup();
 
-    QWidget* widget = new QWidget(this);
+    auto* widget = new QWidget(this);
     widget->setCursor(Qt::ArrowCursor);
     setCentralWidget(widget);
 
@@ -397,7 +396,7 @@ void BrowserWindow::setupUi()
     m_statusBar->addPermanentWidget(m_progressBar);
     m_statusBar->addPermanentWidget(m_ipLabel);
 
-    DownloadsButton *downloadsButton = new DownloadsButton(this);
+    auto *downloadsButton = new DownloadsButton(this);
     m_statusBar->addButton(downloadsButton);
     m_navigationToolbar->addToolButton(downloadsButton);
 
@@ -461,26 +460,26 @@ void BrowserWindow::setupMenu()
     m_mainMenu->initSuperMenu(m_superMenu);
 
     // Setup other shortcuts
-    QShortcut* reloadBypassCacheAction = new QShortcut(QKeySequence(QSL("Ctrl+F5")), this);
-    QShortcut* reloadBypassCacheAction2 = new QShortcut(QKeySequence(QSL("Ctrl+Shift+R")), this);
+    auto* reloadBypassCacheAction = new QShortcut(QKeySequence(QSL("Ctrl+F5")), this);
+    auto* reloadBypassCacheAction2 = new QShortcut(QKeySequence(QSL("Ctrl+Shift+R")), this);
     connect(reloadBypassCacheAction, &QShortcut::activated, this, &BrowserWindow::reloadBypassCache);
     connect(reloadBypassCacheAction2, &QShortcut::activated, this, &BrowserWindow::reloadBypassCache);
 
-    QShortcut* closeTabAction = new QShortcut(QKeySequence(QSL("Ctrl+W")), this);
-    QShortcut* closeTabAction2 = new QShortcut(QKeySequence(QSL("Ctrl+F4")), this);
+    auto* closeTabAction = new QShortcut(QKeySequence(QSL("Ctrl+W")), this);
+    auto* closeTabAction2 = new QShortcut(QKeySequence(QSL("Ctrl+F4")), this);
     connect(closeTabAction, &QShortcut::activated, this, &BrowserWindow::closeTab);
     connect(closeTabAction2, &QShortcut::activated, this, &BrowserWindow::closeTab);
 
-    QShortcut* reloadAction = new QShortcut(QKeySequence(QSL("Ctrl+R")), this);
+    auto* reloadAction = new QShortcut(QKeySequence(QSL("Ctrl+R")), this);
     connect(reloadAction, &QShortcut::activated, this, &BrowserWindow::reload);
 
-    QShortcut* openLocationAction = new QShortcut(QKeySequence(QSL("Alt+D")), this);
+    auto* openLocationAction = new QShortcut(QKeySequence(QSL("Alt+D")), this);
     connect(openLocationAction, &QShortcut::activated, this, &BrowserWindow::openLocation);
 
-    QShortcut* inspectorAction = new QShortcut(QKeySequence(QSL("F12")), this);
+    auto* inspectorAction = new QShortcut(QKeySequence(QSL("F12")), this);
     connect(inspectorAction, &QShortcut::activated, this, &BrowserWindow::toggleWebInspector);
 
-    QShortcut* restoreClosedWindow = new QShortcut(QKeySequence(QSL("Ctrl+Shift+N")), this);
+    auto* restoreClosedWindow = new QShortcut(QKeySequence(QSL("Ctrl+Shift+N")), this);
     connect(restoreClosedWindow, &QShortcut::activated, mApp->closedWindowsManager(), &ClosedWindowsManager::restoreClosedWindow);
 }
 
@@ -500,7 +499,7 @@ void BrowserWindow::updateStartupFocus()
 QAction* BrowserWindow::createEncodingAction(const QString &codecName,
                                              const QString &activeCodecName, QMenu* menu)
 {
-    QAction* action = new QAction(codecName, menu);
+    auto* action = new QAction(codecName, menu);
     action->setData(codecName);
     action->setCheckable(true);
     connect(action, &QAction::triggered, this, &BrowserWindow::changeEncoding);
@@ -522,10 +521,10 @@ void BrowserWindow::createEncodingSubMenu(const QString &name, QStringList &code
         return collator.compare(a, b) < 0;
     });
 
-    QMenu* subMenu = new QMenu(name, menu);
+    auto* subMenu = new QMenu(name, menu);
     const QString activeCodecName = mApp->webSettings()->defaultTextEncoding();
 
-    QActionGroup *group = new QActionGroup(subMenu);
+    auto *group = new QActionGroup(subMenu);
 
     for (const QString &codecName : qAsConst(codecNames)) {
         QAction *act = createEncodingAction(codecName, activeCodecName, subMenu);
@@ -654,7 +653,7 @@ TabbedWebView* BrowserWindow::weView() const
 
 TabbedWebView* BrowserWindow::weView(int index) const
 {
-    WebTab* webTab = qobject_cast<WebTab*>(m_tabWidget->widget(index));
+    auto* webTab = qobject_cast<WebTab*>(m_tabWidget->widget(index));
     if (!webTab) {
         return nullptr;
     }
@@ -740,7 +739,7 @@ void BrowserWindow::setWindowTitle(const QString &t)
 
 void BrowserWindow::changeEncoding()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         const QString encoding = action->data().toString();
         mApp->webSettings()->setDefaultTextEncoding(encoding);
 
@@ -788,7 +787,7 @@ void BrowserWindow::loadActionUrl(QObject* obj)
         obj = sender();
     }
 
-    if (QAction* action = qobject_cast<QAction*>(obj)) {
+    if (auto* action = qobject_cast<QAction*>(obj)) {
         loadAddress(action->data().toUrl());
     }
 }
@@ -799,7 +798,7 @@ void BrowserWindow::loadActionUrlInNewTab(QObject* obj)
         obj = sender();
     }
 
-    if (QAction* action = qobject_cast<QAction*>(obj)) {
+    if (auto* action = qobject_cast<QAction*>(obj)) {
         m_tabWidget->addView(action->data().toUrl(), Qz::NT_SelectedTabAtTheEnd);
     }
 }
@@ -1216,7 +1215,7 @@ void BrowserWindow::hideNavigationSlot()
 bool BrowserWindow::event(QEvent *event)
 {
     if (event->type() == QEvent::WindowStateChange) {
-        QWindowStateChangeEvent *e = static_cast<QWindowStateChangeEvent*>(event);
+        auto *e = static_cast<QWindowStateChangeEvent*>(event);
         if (!(e->oldState() & Qt::WindowFullScreen) && windowState() & Qt::WindowFullScreen) {
             // Enter fullscreen
             m_statusBarVisible = m_statusBar->isVisible();

@@ -26,7 +26,7 @@ QmlAction::QmlAction(QAction *action, QmlEngine *engine, QObject *parent)
     : QObject(parent)
     , m_action(action)
 {
-    QmlEngine *qmlEngine = qobject_cast<QmlEngine*>(engine);
+    auto *qmlEngine = qobject_cast<QmlEngine*>(engine);
     m_pluginPath = qmlEngine->extensionPath();
     connect(m_action, &QAction::triggered, this, &QmlAction::triggered);
 }

@@ -81,7 +81,7 @@ void MainMenu::initSuperMenu(QMenu* superMenu) const
     superMenu->addAction(m_actions[QSL("File/OpenFile")]);
     if (mApp->sessionManager()) {
         superMenu->addSeparator();
-        QMenu* sessionsSubmenu = new QMenu(tr("Sessions"));
+        auto* sessionsSubmenu = new QMenu(tr("Sessions"));
         connect(sessionsSubmenu, SIGNAL(aboutToShow()), mApp->sessionManager(), SLOT(aboutToShowSessionsMenu()));
         superMenu->addMenu(sessionsSubmenu);
         superMenu->addAction(m_actions[QSL("File/SessionManager")]);
@@ -119,7 +119,7 @@ QAction* MainMenu::action(const QString &name) const
 
 void MainMenu::showAboutDialog()
 {
-    AboutDialog* dialog = new AboutDialog(m_window);
+    auto* dialog = new AboutDialog(m_window);
     dialog->open();
 }
 
@@ -295,7 +295,7 @@ void MainMenu::webSearch()
 void MainMenu::showSiteInfo()
 {
     if (m_window && SiteInfo::canShowSiteInfo(m_window->weView()->url())) {
-        SiteInfo* info = new SiteInfo(m_window->weView());
+        auto* info = new SiteInfo(m_window->weView());
         info->show();
     }
 }
@@ -309,7 +309,7 @@ void MainMenu::showDownloadManager()
 
 void MainMenu::showCookieManager()
 {
-    CookieManager* m = new CookieManager(m_window);
+    auto* m = new CookieManager(m_window);
     m->show();
     m->raise();
 }
@@ -321,7 +321,7 @@ void MainMenu::toggleWebInspector()
 
 void MainMenu::showClearRecentHistoryDialog()
 {
-    ClearPrivateData* dialog = new ClearPrivateData(m_window);
+    auto* dialog = new ClearPrivateData(m_window);
     dialog->open();
 }
 
@@ -418,7 +418,7 @@ void MainMenu::aboutToShowSuperMenu()
 
 void MainMenu::aboutToShowToolbarsMenu()
 {
-    QMenu* menu = qobject_cast<QMenu*>(sender());
+    auto* menu = qobject_cast<QMenu*>(sender());
     Q_ASSERT(menu);
 
     if (m_window) {
@@ -429,7 +429,7 @@ void MainMenu::aboutToShowToolbarsMenu()
 
 void MainMenu::aboutToShowSidebarsMenu()
 {
-    QMenu* menu = qobject_cast<QMenu*>(sender());
+    auto* menu = qobject_cast<QMenu*>(sender());
     Q_ASSERT(menu);
 
     if (m_window) {
@@ -439,7 +439,7 @@ void MainMenu::aboutToShowSidebarsMenu()
 
 void MainMenu::aboutToShowEncodingMenu()
 {
-    QMenu* menu = qobject_cast<QMenu*>(sender());
+    auto* menu = qobject_cast<QMenu*>(sender());
     Q_ASSERT(menu);
 
     if (m_window) {
@@ -464,7 +464,7 @@ void MainMenu::init()
     m_actions[QSL(name)] = action
 
     // Standard actions - needed on Mac to be placed correctly in "application" menu
-    QAction* action = new QAction(QIcon::fromTheme(QSL("help-about")), tr("&About Falkon"), this);
+    auto* action = new QAction(QIcon::fromTheme(QSL("help-about")), tr("&About Falkon"), this);
     action->setMenuRole(QAction::AboutRole);
     connect(action, &QAction::triggered, this, &MainMenu::showAboutDialog);
     m_actions[QSL("Standard/About")] = action;
@@ -494,7 +494,7 @@ void MainMenu::init()
     m_menuFile->addSeparator();
 
     if (mApp->sessionManager()) {
-        QMenu* sessionsSubmenu = new QMenu(tr("Sessions"));
+        auto* sessionsSubmenu = new QMenu(tr("Sessions"));
         connect(sessionsSubmenu, SIGNAL(aboutToShow()), mApp->sessionManager(), SLOT(aboutToShowSessionsMenu()));
         m_menuFile->addMenu(sessionsSubmenu);
         action = new QAction(tr("Session Manager"), this);
@@ -536,11 +536,11 @@ void MainMenu::init()
     m_menuView = new QMenu(tr("&View"));
     connect(m_menuView, &QMenu::aboutToShow, this, &MainMenu::aboutToShowViewMenu);
 
-    QMenu* toolbarsMenu = new QMenu(tr("Toolbars"));
+    auto* toolbarsMenu = new QMenu(tr("Toolbars"));
     connect(toolbarsMenu, &QMenu::aboutToShow, this, &MainMenu::aboutToShowToolbarsMenu);
-    QMenu* sidebarMenu = new QMenu(tr("Sidebar"));
+    auto* sidebarMenu = new QMenu(tr("Sidebar"));
     connect(sidebarMenu, &QMenu::aboutToShow, this, &MainMenu::aboutToShowSidebarsMenu);
-    QMenu* encodingMenu = new QMenu(tr("Character &Encoding"));
+    auto* encodingMenu = new QMenu(tr("Character &Encoding"));
     connect(encodingMenu, &QMenu::aboutToShow, this, &MainMenu::aboutToShowEncodingMenu);
 
     // Create menus to make shortcuts available even before first showing the menu

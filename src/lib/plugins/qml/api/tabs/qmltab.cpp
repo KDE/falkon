@@ -203,7 +203,7 @@ void QmlTab::sendPageByMail()
 QVariant QmlTab::execJavaScript(const QJSValue &value)
 {
     if (!m_webPage && !m_webTab) {
-        return QVariant();
+        return {};
     }
     WebPage *webPage = m_webPage;
     if (!m_webPage) {
@@ -228,7 +228,7 @@ QmlWebHitTestResult *QmlTab::hitTestContent(const QPoint &point)
 QString QmlTab::url() const
 {
     if (!m_webTab) {
-        return QString();
+        return {};
     }
 
     return QString::fromUtf8(m_webTab->url().toEncoded());
@@ -237,7 +237,7 @@ QString QmlTab::url() const
 QString QmlTab::title() const
 {
     if (!m_webTab) {
-        return QString();
+        return {};
     }
 
     return m_webTab->title();
@@ -367,7 +367,7 @@ void QmlTab::setWebPage(WebPage *webPage)
         removeConnections();
     }
     m_webPage = webPage;
-    TabbedWebView *tabbedWebView = qobject_cast<TabbedWebView*>(m_webPage->view());
+    auto *tabbedWebView = qobject_cast<TabbedWebView*>(m_webPage->view());
     m_webTab = tabbedWebView->webTab();
     if (m_webTab) {
         createConnections();

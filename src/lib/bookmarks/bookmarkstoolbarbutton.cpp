@@ -159,7 +159,7 @@ void BookmarksToolbarButton::menuMiddleClicked(Menu* menu)
 
 void BookmarksToolbarButton::bookmarkActivated(BookmarkItem* item)
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         item = static_cast<BookmarkItem*>(action->data().value<void*>());
     }
 
@@ -169,7 +169,7 @@ void BookmarksToolbarButton::bookmarkActivated(BookmarkItem* item)
 
 void BookmarksToolbarButton::bookmarkCtrlActivated(BookmarkItem* item)
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         item = static_cast<BookmarkItem*>(action->data().value<void*>());
     }
 
@@ -179,7 +179,7 @@ void BookmarksToolbarButton::bookmarkCtrlActivated(BookmarkItem* item)
 
 void BookmarksToolbarButton::bookmarkShiftActivated(BookmarkItem* item)
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         item = static_cast<BookmarkItem*>(action->data().value<void*>());
     }
 
@@ -318,8 +318,8 @@ void BookmarksToolbarButton::mouseMoveEvent(QMouseEvent *event)
 
     setDown(false);
 
-    QDrag *drag = new QDrag(this);
-    BookmarksButtonMimeData* mime = new BookmarksButtonMimeData;
+    auto *drag = new QDrag(this);
+    auto* mime = new BookmarksButtonMimeData;
     mime->setBookmarkItem(m_bookmark);
     drag->setMimeData(mime);
     drag->setPixmap(grab());
@@ -426,7 +426,7 @@ void BookmarksToolbarButton::dropEvent(QDropEvent *event)
     BookmarkItem* bookmark = nullptr;
 
     if (mime->hasFormat(BookmarksButtonMimeData::mimeType())) {
-        const BookmarksButtonMimeData* bookmarkMime = static_cast<const BookmarksButtonMimeData*>(mime);
+        const auto* bookmarkMime = static_cast<const BookmarksButtonMimeData*>(mime);
         bookmark = bookmarkMime->item();
     } else {
         const QUrl url = mime->urls().at(0);

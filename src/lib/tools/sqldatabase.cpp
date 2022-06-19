@@ -110,8 +110,7 @@ SqlDatabase::SqlDatabase(QObject* parent)
 }
 
 SqlDatabase::~SqlDatabase()
-{
-}
+= default;
 
 QSqlDatabase SqlDatabase::database()
 {

@@ -30,7 +30,7 @@ public:
         QString text;
     };
 
-    typedef QVector<ActionPair> ActionPairList;
+    using ActionPairList = QVector<ActionPair>;
 
     explicit CommandLineOptions();
     ActionPairList getActions();

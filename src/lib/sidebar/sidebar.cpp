@@ -63,14 +63,14 @@ void SideBar::setWidget(QWidget* widget)
 void SideBar::showBookmarks()
 {
     m_titleBar->setTitle(tr("Bookmarks"));
-    BookmarksSidebar* bar = new BookmarksSidebar(m_window);
+    auto* bar = new BookmarksSidebar(m_window);
     setWidget(bar);
 }
 
 void SideBar::showHistory()
 {
     m_titleBar->setTitle(tr("History"));
-    HistorySideBar* bar = new HistorySideBar(m_window);
+    auto* bar = new HistorySideBar(m_window);
     setWidget(bar);
 }
 
@@ -102,7 +102,7 @@ void SideBarManager::createMenu(QMenu* menu)
     m_window->removeActions(menu->actions());
     menu->clear();
 
-    QActionGroup *group = new QActionGroup(menu);
+    auto *group = new QActionGroup(menu);
 
     QAction* act = menu->addAction(SideBar::tr("Bookmarks"), this, &SideBarManager::slotShowSideBar);
     act->setCheckable(true);
@@ -154,7 +154,7 @@ void SideBarManager::removeSidebar(SideBarInterface *interface)
 
 void SideBarManager::slotShowSideBar()
 {
-    if (QAction* act = qobject_cast<QAction*>(sender())) {
+    if (auto* act = qobject_cast<QAction*>(sender())) {
         showSideBar(act->data().toString());
     }
 }

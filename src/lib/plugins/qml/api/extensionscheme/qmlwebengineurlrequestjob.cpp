@@ -55,7 +55,7 @@ void QmlWebEngineUrlRequestJob::reply(const QVariantMap &map)
     }
     QByteArray content = map.value(QSL("content")).toString().toUtf8();
     QByteArray contentType = map.value(QSL("contentType")).toString().toUtf8();
-    QBuffer *buffer = new QBuffer();
+    auto *buffer = new QBuffer();
     buffer->open(QIODevice::ReadWrite);
     buffer->write(content);
     buffer->seek(0);
@@ -64,7 +64,7 @@ void QmlWebEngineUrlRequestJob::reply(const QVariantMap &map)
 QString QmlWebEngineUrlRequestJob::initiator() const
 {
     if (!m_job) {
-        return QString();
+        return {};
     }
     QString initiatorString;
     initiatorString = QString::fromUtf8(m_job->initiator().toEncoded());
@@ -74,7 +74,7 @@ QString QmlWebEngineUrlRequestJob::initiator() const
 QString QmlWebEngineUrlRequestJob::requestUrl() const
 {
     if (!m_job) {
-        return QString();
+        return {};
     }
     return QString::fromUtf8(m_job->requestUrl().toEncoded());
 }
@@ -82,7 +82,7 @@ QString QmlWebEngineUrlRequestJob::requestUrl() const
 QString QmlWebEngineUrlRequestJob::requestMethod() const
 {
     if (!m_job) {
-        return QString();
+        return {};
     }
     return QString::fromUtf8(m_job->requestMethod());
 }

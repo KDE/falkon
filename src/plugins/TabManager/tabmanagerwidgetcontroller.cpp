@@ -61,8 +61,7 @@ TabManagerWidgetController::TabManagerWidgetController(QObject* parent)
 }
 
 TabManagerWidgetController::~TabManagerWidgetController()
-{
-}
+= default;
 
 QString TabManagerWidgetController::title() const
 {
@@ -71,7 +70,7 @@ QString TabManagerWidgetController::title() const
 
 QAction* TabManagerWidgetController::createMenuAction()
 {
-    QAction* act = new QAction(tr("Tab Manager"), this);
+    auto* act = new QAction(tr("Tab Manager"), this);
     act->setCheckable(true);
     act->setIcon(QIcon(":tabmanager/data/tabmanager.png"));
     act->setShortcut(QKeySequence("Ctrl+Shift+M"));
@@ -95,7 +94,7 @@ AbstractButtonInterface* TabManagerWidgetController::createStatusBarIcon(Browser
         return m_statusBarIcons.value(mainWindow);
     }
 
-    TabManagerButton* icon = new TabManagerButton(this);
+    auto* icon = new TabManagerButton(this);
     icon->setIcon(QPixmap(":tabmanager/data/tabmanager.png"));
     icon->setTitle(tr("Tab Manager"));
     icon->setToolTip(tr("Show Tab Manager"));
@@ -141,7 +140,7 @@ void TabManagerWidgetController::setGroupType(TabManagerWidget::GroupType type)
 
 TabManagerWidget* TabManagerWidgetController::createTabManagerWidget(BrowserWindow* mainClass, QWidget* parent, bool defaultWidget)
 {
-    TabManagerWidget* tabManagerWidget = new TabManagerWidget(mainClass, parent, defaultWidget);
+    auto* tabManagerWidget = new TabManagerWidget(mainClass, parent, defaultWidget);
     tabManagerWidget->setGroupType(m_groupType);
 
     if (defaultWidget) {

@@ -53,7 +53,7 @@ void HTML5PermissionsManager::requestPermissions(WebPage* page, const QUrl &orig
     }
 
     // Ask user for permission
-    HTML5PermissionsNotification* notif = new HTML5PermissionsNotification(origin, page, feature);
+    auto* notif = new HTML5PermissionsNotification(origin, page, feature);
     page->view()->addNotification(notif);
 }
 

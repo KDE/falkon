@@ -63,7 +63,7 @@ AutoFillManager::AutoFillManager(QWidget* parent)
     ui->treePass->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->treePass, &TreeWidget::customContextMenuRequested, this, &AutoFillManager::passwordContextMenu);
 
-    QMenu* menu = new QMenu(this);
+    auto* menu = new QMenu(this);
     menu->addAction(tr("Import Passwords from File..."), this, &AutoFillManager::importPasswords);
     menu->addAction(tr("Export Passwords to File..."), this, &AutoFillManager::exportPasswords);
     ui->importExport->setMenu(menu);
@@ -86,7 +86,7 @@ void AutoFillManager::loadPasswords()
 
     ui->treePass->clear();
     for (const PasswordEntry &entry : allEntries) {
-        QTreeWidgetItem* item = new QTreeWidgetItem(ui->treePass);
+        auto* item = new QTreeWidgetItem(ui->treePass);
         item->setText(0, entry.host);
         item->setText(1, entry.username);
         item->setText(2, "*****");
@@ -101,7 +101,7 @@ void AutoFillManager::loadPasswords()
     query.exec("SELECT server, id FROM autofill_exceptions");
     ui->treeExcept->clear();
     while (query.next()) {
-        QTreeWidgetItem* item = new QTreeWidgetItem(ui->treeExcept);
+        auto* item = new QTreeWidgetItem(ui->treeExcept);
         item->setText(0, query.value(0).toString());
         item->setData(0, Qt::UserRole + 10, query.value(1).toString());
         ui->treeExcept->addTopLevelItem(item);
@@ -367,7 +367,7 @@ void AutoFillManager::currentPasswordBackendChanged()
 
 void AutoFillManager::passwordContextMenu(const QPoint &pos)
 {
-    QMenu *menu = new QMenu;
+    auto *menu = new QMenu;
     menu->setAttribute(Qt::WA_DeleteOnClose);
     menu->addAction(tr("Copy Username"), this, &AutoFillManager::copyUsername);
     menu->addAction(tr("Copy Password"), this, &AutoFillManager::copyPassword);

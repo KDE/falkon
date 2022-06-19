@@ -66,7 +66,7 @@ int ProxyStyle::pixelMetric(PixelMetric metric, const QStyleOption* option, cons
 void ProxyStyle::drawPrimitive(PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget) const
 {
     if (element == PE_FrameTabBarBase) {
-        TabBarHelper *tabBar = qobject_cast<TabBarHelper*>(option->styleObject);
+        auto *tabBar = qobject_cast<TabBarHelper*>(option->styleObject);
         if (tabBar && tabBar->baseColor().isValid()) {
             painter->setPen(QPen(tabBar->baseColor(), 0));
             painter->drawLine(option->rect.topLeft(), option->rect.topRight());

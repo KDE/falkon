@@ -59,7 +59,7 @@ bool TLDExtractor::isDataLoaded()
 QString TLDExtractor::TLD(const QString &host)
 {
     if (host.isEmpty() || host.startsWith(QLatin1Char('.'))) {
-        return QString();
+        return {};
     }
 
     QString cleanHost = normalizedHost(host);
@@ -156,7 +156,7 @@ QString TLDExtractor::domain(const QString &host)
 QString TLDExtractor::domainHelper(const QString &host, const QString &tldPart)
 {
     if (host.isEmpty() || tldPart.isEmpty()) {
-        return QString();
+        return {};
     }
 
     QString temp = normalizedHost(host);
@@ -172,7 +172,7 @@ QString TLDExtractor::domainHelper(const QString &host, const QString &tldPart)
 QString TLDExtractor::registrableDomainHelper(const QString &domainPart, const QString &tldPart)
 {
     if (tldPart.isEmpty() || domainPart.isEmpty()) {
-        return QString();
+        return {};
     }
     else {
         return QString("%1.%2").arg(domainPart).arg(tldPart);
@@ -193,7 +193,7 @@ QString TLDExtractor::subdomainHelper(const QString &host, const QString &regist
         return subdomain;
     }
 
-    return QString();
+    return {};
 }
 
 QString TLDExtractor::registrableDomain(const QString &host)

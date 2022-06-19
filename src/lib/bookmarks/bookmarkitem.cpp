@@ -85,7 +85,7 @@ QIcon BookmarkItem::icon()
     case Folder:
         return IconProvider::standardIcon(QStyle::SP_DirIcon);
     default:
-        return QIcon();
+        return {};
     }
 }
 

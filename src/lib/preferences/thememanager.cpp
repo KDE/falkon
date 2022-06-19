@@ -55,7 +55,7 @@ ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
                 continue;
             }
 
-            QListWidgetItem* item = new QListWidgetItem(ui->listWidget);
+            auto* item = new QListWidgetItem(ui->listWidget);
             item->setText(themeInfo.name);
             item->setIcon(themeInfo.icon);
             item->setData(Qt::UserRole, name);
@@ -84,7 +84,7 @@ void ThemeManager::showLicense()
 
     Theme currentTheme = m_themeHash[currentItem->data(Qt::UserRole).toString()];
 
-    LicenseViewer* v = new LicenseViewer(m_preferences);
+    auto* v = new LicenseViewer(m_preferences);
     v->setText(currentTheme.license);
     v->show();
 }

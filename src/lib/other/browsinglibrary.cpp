@@ -57,7 +57,7 @@ BrowsingLibrary::BrowsingLibrary(BrowserWindow* window, QWidget* parent)
     ui->tabs->SetMode(FancyTabWidget::Mode_LargeSidebar);
     ui->tabs->setFocus();
 
-    QMenu* m = new QMenu(this);
+    auto* m = new QMenu(this);
     m->addAction(tr("Import Bookmarks..."), this, &BrowsingLibrary::importBookmarks);
     m->addAction(tr("Export Bookmarks..."), this, &BrowsingLibrary::exportBookmarks);
     ui->importExport->setMenu(m);
@@ -80,13 +80,13 @@ void BrowsingLibrary::search()
 
 void BrowsingLibrary::importBookmarks()
 {
-    BookmarksImportDialog* d = new BookmarksImportDialog(this);
+    auto* d = new BookmarksImportDialog(this);
     d->open();
 }
 
 void BrowsingLibrary::exportBookmarks()
 {
-    BookmarksExportDialog* d = new BookmarksExportDialog(this);
+    auto* d = new BookmarksExportDialog(this);
     d->open();
 }
 

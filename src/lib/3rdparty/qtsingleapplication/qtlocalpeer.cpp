@@ -56,8 +56,8 @@ typedef BOOL(WINAPI*PProcessIdToSessionId)(DWORD,DWORD*);
 static PProcessIdToSessionId pProcessIdToSessionId = 0;
 #endif
 #if defined(Q_OS_UNIX)
+#include <ctime>
 #include <sys/types.h>
-#include <time.h>
 #include <unistd.h>
 #endif
 
@@ -138,7 +138,7 @@ QtLocalPeer::QtLocalPeer(QObject* parent, const QString &appId)
     }
     m_dbusRegistered = QDBusConnection::sessionBus().registerService(id);
     if (m_dbusRegistered) {
-        QtSingleAppDBusInterface *iface = new QtSingleAppDBusInterface(this);
+        auto *iface = new QtSingleAppDBusInterface(this);
         connect(iface, &QtSingleAppDBusInterface::messageReceived, this, &QtLocalPeer::messageReceived);
         QDBusConnection::sessionBus().registerObject(QStringLiteral("/"), this);
     }

@@ -82,7 +82,7 @@ private:
     HistoryModel* m_model;
 };
 
-typedef History::HistoryEntry HistoryEntry;
+using HistoryEntry = History::HistoryEntry;
 
 // Hint to QVector to use std::realloc on item moving
 Q_DECLARE_TYPEINFO(HistoryEntry, Q_MOVABLE_TYPE);

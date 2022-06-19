@@ -73,7 +73,7 @@ class FALKON_EXPORT LineEdit : public QLineEdit
     Q_PROPERTY(int minHeight READ minHeight WRITE setMinHeight)
 
 public:
-    typedef QList<QTextLayout::FormatRange> TextFormat;
+    using TextFormat = QList<QTextLayout::FormatRange>;
 
     enum WidgetPosition {
         LeftSide,

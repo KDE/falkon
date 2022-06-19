@@ -45,7 +45,7 @@ void ProtocolHandlerDialog::init()
 {
     const auto handlers = mApp->protocolHandlerManager()->protocolHandlers();
     for (auto it = handlers.cbegin(); it != handlers.cend(); ++it) {
-        QTreeWidgetItem *item = new QTreeWidgetItem(ui->treeWidget);
+        auto *item = new QTreeWidgetItem(ui->treeWidget);
         item->setText(0, it.key());
         item->setText(1, it.value().host());
         ui->treeWidget->addTopLevelItem(item);

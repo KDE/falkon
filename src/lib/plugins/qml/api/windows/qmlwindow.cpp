@@ -46,7 +46,7 @@ bool QmlWindow::incognito() const
 QString QmlWindow::title() const
 {
     if (!m_window) {
-        return QString();
+        return {};
     }
 
     return m_window->windowTitle();
@@ -90,7 +90,7 @@ QmlEnums::WindowType QmlWindow::type() const
 QList<QObject*> QmlWindow::tabs() const
 {
     if (!m_window) {
-        return QList<QObject*>();
+        return {};
     }
 
     QList<QObject*> list;

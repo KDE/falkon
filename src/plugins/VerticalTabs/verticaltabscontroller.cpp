@@ -37,14 +37,14 @@ QString VerticalTabsController::title() const
 
 QAction *VerticalTabsController::createMenuAction()
 {
-    QAction *act = new QAction(title(), this);
+    auto *act = new QAction(title(), this);
     act->setCheckable(true);
     return act;
 }
 
 QWidget *VerticalTabsController::createSideBarWidget(BrowserWindow *window)
 {
-    VerticalTabsWidget *widget = new VerticalTabsWidget(window);
+    auto *widget = new VerticalTabsWidget(window);
     widget->setViewType(m_plugin->viewType());
     widget->setStyleSheet(m_plugin->styleSheet());
     connect(m_plugin, &VerticalTabsPlugin::viewTypeChanged, widget, &VerticalTabsWidget::setViewType);

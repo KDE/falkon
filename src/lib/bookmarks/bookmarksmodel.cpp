@@ -94,7 +94,7 @@ QVariant BookmarksModel::data(const QModelIndex &index, int role) const
     BookmarkItem* itm = item(index);
 
     if (!itm) {
-        return QVariant();
+        return {};
     }
 
     switch (role) {
@@ -128,15 +128,15 @@ QVariant BookmarksModel::data(const QModelIndex &index, int role) const
         case 1:
             return itm->url().toEncoded();
         default:
-            return QVariant();
+            return {};
         }
     case Qt::DecorationRole:
         if (index.column() == 0) {
             return itm->icon();
         }
-        return QVariant();
+        return {};
     default:
-        return QVariant();
+        return {};
     }
 }
 
@@ -195,7 +195,7 @@ QStringList BookmarksModel::mimeTypes() const
 
 QMimeData* BookmarksModel::mimeData(const QModelIndexList &indexes) const
 {
-    QMimeData* mimeData = new QMimeData();
+    auto* mimeData = new QMimeData();
     QByteArray encodedData;
 
     QDataStream stream(&encodedData, QIODevice::WriteOnly);
@@ -269,7 +269,7 @@ bool BookmarksModel::dropMimeData(const QMimeData* data, Qt::DropAction action, 
 QModelIndex BookmarksModel::parent(const QModelIndex &child) const
 {
     if (!child.isValid()) {
-        return QModelIndex();
+        return {};
     }
 
     BookmarkItem* itm = item(child);
@@ -279,7 +279,7 @@ QModelIndex BookmarksModel::parent(const QModelIndex &child) const
 QModelIndex BookmarksModel::index(int row, int column, const QModelIndex &parent) const
 {
     if (!hasIndex(row, column, parent)) {
-        return QModelIndex();
+        return {};
     }
 
     BookmarkItem* parentItem = item(parent);
@@ -291,7 +291,7 @@ QModelIndex BookmarksModel::index(BookmarkItem* item, int column) const
     BookmarkItem* parent = item->parent();
 
     if (!parent) {
-        return QModelIndex();
+        return {};
     }
 
     return createIndex(parent->children().indexOf(item), column, item);
@@ -299,7 +299,7 @@ QModelIndex BookmarksModel::index(BookmarkItem* item, int column) const
 
 BookmarkItem* BookmarksModel::item(const QModelIndex &index) const
 {
-    BookmarkItem* itm = static_cast<BookmarkItem*>(index.internalPointer());
+    auto* itm = static_cast<BookmarkItem*>(index.internalPointer());
     return itm ? itm : m_root;
 }
 

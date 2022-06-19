@@ -29,7 +29,7 @@ public:
         : QObject(animator)
         , m_animator(animator)
     {
-        QTimer *timer = new QTimer(this);
+        auto *timer = new QTimer(this);
         timer->setInterval(TabIcon::data()->animationInterval);
         connect(timer, &QTimer::timeout, this, [this]() {
             m_currentFrame = (m_currentFrame + 1) % TabIcon::data()->framesCount;

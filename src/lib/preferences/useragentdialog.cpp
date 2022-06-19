@@ -67,8 +67,8 @@ UserAgentDialog::UserAgentDialog(QWidget* parent)
     while (i.hasNext()) {
         i.next();
 
-        QTableWidgetItem* siteItem = new QTableWidgetItem(i.key());
-        QTableWidgetItem* userAgentItem = new QTableWidgetItem(i.value());
+        auto* siteItem = new QTableWidgetItem(i.key());
+        auto* userAgentItem = new QTableWidgetItem(i.value());
 
         int row = ui->table->rowCount();
 
@@ -97,8 +97,8 @@ void UserAgentDialog::addSite()
     QString userAgent;
 
     if (showEditDialog(tr("Add new site"), &site, &userAgent)) {
-        QTableWidgetItem* siteItem = new QTableWidgetItem(site);
-        QTableWidgetItem* userAgentItem = new QTableWidgetItem(userAgent);
+        auto* siteItem = new QTableWidgetItem(site);
+        auto* userAgentItem = new QTableWidgetItem(userAgent);
 
         int row = ui->table->rowCount();
 
@@ -198,15 +198,15 @@ bool UserAgentDialog::showEditDialog(const QString &title, QString* rSite, QStri
         return false;
     }
 
-    QDialog* dialog = new QDialog(this);
-    QFormLayout* layout = new QFormLayout(dialog);
-    QLineEdit* editSite = new QLineEdit(dialog);
-    QComboBox* editAgent = new QComboBox(dialog);
+    auto* dialog = new QDialog(this);
+    auto* layout = new QFormLayout(dialog);
+    auto* editSite = new QLineEdit(dialog);
+    auto* editAgent = new QComboBox(dialog);
     editAgent->setLayoutDirection(Qt::LeftToRight);
     editAgent->setEditable(true);
     editAgent->addItems(m_knownUserAgents);
 
-    QDialogButtonBox* box = new QDialogButtonBox(dialog);
+    auto* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
 

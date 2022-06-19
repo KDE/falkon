@@ -21,8 +21,7 @@
 #include <QStandardPaths>
 
 DesktopFile::DesktopFile()
-{
-}
+= default;
 
 DesktopFile::DesktopFile(const QString &fileName)
 {
@@ -59,7 +58,7 @@ QString DesktopFile::icon() const
 QVariant DesktopFile::value(const QString &key, bool localized) const
 {
     if (!m_settings) {
-        return QVariant();
+        return {};
     }
     if (localized) {
         const QLocale locale = QLocale::system();

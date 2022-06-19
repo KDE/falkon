@@ -126,7 +126,7 @@ void FCM_Plugin::showSettings(QWidget* parent)
 
 void FCM_Plugin::populateExtensionsMenu(QMenu* menu)
 {
-    QAction* showFCM = new QAction(QIcon(":/flashcookiemanager/data/flash-cookie-manager.png"), tr("Flash Cookie Manager"), menu);
+    auto* showFCM = new QAction(QIcon(":/flashcookiemanager/data/flash-cookie-manager.png"), tr("Flash Cookie Manager"), menu);
     connect(showFCM, &QAction::triggered, this, &FCM_Plugin::showFlashCookieManager);
     menu->addAction(showFCM);
 }
@@ -292,7 +292,7 @@ void FCM_Plugin::autoRefresh()
             return;
         }
 
-        FCM_Notification* notif = new FCM_Notification(this, newCookieList.size());
+        auto* notif = new FCM_Notification(this, newCookieList.size());
         weView->addNotification(notif);
     }
 }
@@ -354,7 +354,7 @@ AbstractButtonInterface* FCM_Plugin::createStatusBarIcon(BrowserWindow* mainWind
         return m_statusBarIcons.value(mainWindow);
     }
 
-    FCM_Button* icon = new FCM_Button(this);
+    auto* icon = new FCM_Button(this);
     icon->setIcon(QIcon(QSL(":/flashcookiemanager/data/flash-cookie-manager.png")));
     icon->setTitle(tr("Flash Cookie Manager"));
     icon->setToolTip(tr("Show Flash Cookie Manager"));

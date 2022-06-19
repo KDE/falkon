@@ -99,42 +99,42 @@ void LineEdit::init()
     connect(m_leftWidget, &SideWidget::sizeHintChanged, this, &LineEdit::updateTextMargins);
     connect(m_rightWidget, &SideWidget::sizeHintChanged, this, &LineEdit::updateTextMargins);
 
-    QAction* undoAction = new QAction(QIcon::fromTheme(QSL("edit-undo")), tr("&Undo"), this);
+    auto* undoAction = new QAction(QIcon::fromTheme(QSL("edit-undo")), tr("&Undo"), this);
     undoAction->setShortcut(QKeySequence(QSL("Ctrl+Z")));
     undoAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(undoAction, &QAction::triggered, this, &QLineEdit::undo);
 
-    QAction* redoAction = new QAction(QIcon::fromTheme(QSL("edit-redo")), tr("&Redo"), this);
+    auto* redoAction = new QAction(QIcon::fromTheme(QSL("edit-redo")), tr("&Redo"), this);
     redoAction->setShortcut(QKeySequence(QSL("Ctrl+Shift+Z")));
     redoAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(redoAction, &QAction::triggered, this, &QLineEdit::redo);
 
-    QAction* cutAction = new QAction(QIcon::fromTheme(QSL("edit-cut")), tr("Cu&t"), this);
+    auto* cutAction = new QAction(QIcon::fromTheme(QSL("edit-cut")), tr("Cu&t"), this);
     cutAction->setShortcut(QKeySequence(QSL("Ctrl+X")));
     cutAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(cutAction, &QAction::triggered, this, &QLineEdit::cut);
 
-    QAction* copyAction = new QAction(QIcon::fromTheme(QSL("edit-copy")), tr("&Copy"), this);
+    auto* copyAction = new QAction(QIcon::fromTheme(QSL("edit-copy")), tr("&Copy"), this);
     copyAction->setShortcut(QKeySequence(QSL("Ctrl+C")));
     copyAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(copyAction, &QAction::triggered, this, &QLineEdit::copy);
 
-    QAction* pasteAction = new QAction(QIcon::fromTheme(QSL("edit-paste")), tr("&Paste"), this);
+    auto* pasteAction = new QAction(QIcon::fromTheme(QSL("edit-paste")), tr("&Paste"), this);
     pasteAction->setShortcut(QKeySequence(QSL("Ctrl+V")));
     pasteAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(pasteAction, &QAction::triggered, this, &QLineEdit::paste);
 
-    QAction* pasteAndGoAction = new QAction(this);
+    auto* pasteAndGoAction = new QAction(this);
     pasteAndGoAction->setShortcut(QKeySequence(QSL("Ctrl+Shift+V")));
     pasteAndGoAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
 
-    QAction* deleteAction = new QAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"), this);
+    auto* deleteAction = new QAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"), this);
     connect(deleteAction, &QAction::triggered, this, &LineEdit::slotDelete);
 
-    QAction* clearAllAction = new QAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear All"), this);
+    auto* clearAllAction = new QAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear All"), this);
     connect(clearAllAction, &QAction::triggered, this, &QLineEdit::clear);
 
-    QAction* selectAllAction = new QAction(QIcon::fromTheme(QSL("edit-select-all")), tr("Select All"), this);
+    auto* selectAllAction = new QAction(QIcon::fromTheme(QSL("edit-select-all")), tr("Select All"), this);
     selectAllAction->setShortcut(QKeySequence(QSL("Ctrl+A")));
     selectAllAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(selectAllAction, &QAction::triggered, this, &QLineEdit::selectAll);
@@ -190,7 +190,7 @@ bool LineEdit::event(QEvent* event)
 // Modified QLineEdit::createStandardContextMenu to support icons and PasteAndGo action
 QMenu* LineEdit::createContextMenu()
 {
-    QMenu* popup = new QMenu(this);
+    auto* popup = new QMenu(this);
     popup->setObjectName(QSL("qt_edit_menu"));
 
     if (!isReadOnly()) {

@@ -78,7 +78,7 @@ WebPage::WebPage(QObject* parent)
     , m_blockAlerts(false)
     , m_secureStatus(false)
 {
-    QWebChannel *channel = new QWebChannel(this);
+    auto *channel = new QWebChannel(this);
     ExternalJsObject::setupWebChannel(channel, this);
     setWebChannel(channel, SafeJsWorld);
 
@@ -507,7 +507,7 @@ QUrl WebPage::registerProtocolHandlerRequestUrl() const
     if (m_registerProtocolHandlerRequest && url().host() == m_registerProtocolHandlerRequest->origin().host()) {
         return m_registerProtocolHandlerRequest->origin();
     }
-    return QUrl();
+    return {};
 }
 
 QString WebPage::registerProtocolHandlerRequestScheme() const
@@ -515,7 +515,7 @@ QString WebPage::registerProtocolHandlerRequestScheme() const
     if (m_registerProtocolHandlerRequest && url().host() == m_registerProtocolHandlerRequest->origin().host()) {
         return m_registerProtocolHandlerRequest->scheme();
     }
-    return QString();
+    return {};
 }
 
 bool WebPage::javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, const QString &defaultValue, QString* result)
@@ -528,10 +528,10 @@ bool WebPage::javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, c
         return false;
     }
 
-    QFrame *widget = new QFrame(view()->overlayWidget());
+    auto *widget = new QFrame(view()->overlayWidget());
 
     widget->setObjectName("jsFrame");
-    Ui_jsPrompt* ui = new Ui_jsPrompt();
+    auto* ui = new Ui_jsPrompt();
     ui->setupUi(widget);
     ui->message->setText(msg);
     ui->lineEdit->setText(defaultValue);
@@ -576,10 +576,10 @@ bool WebPage::javaScriptConfirm(const QUrl &securityOrigin, const QString &msg)
         return false;
     }
 
-    QFrame *widget = new QFrame(view()->overlayWidget());
+    auto *widget = new QFrame(view()->overlayWidget());
 
     widget->setObjectName("jsFrame");
-    Ui_jsConfirm* ui = new Ui_jsConfirm();
+    auto* ui = new Ui_jsConfirm();
     ui->setupUi(widget);
     ui->message->setText(msg);
     ui->buttonBox->button(QDialogButtonBox::Ok)->setFocus();
@@ -636,10 +636,10 @@ void WebPage::javaScriptAlert(const QUrl &securityOrigin, const QString &msg)
         return;
     }
 
-    QFrame *widget = new QFrame(view()->overlayWidget());
+    auto *widget = new QFrame(view()->overlayWidget());
 
     widget->setObjectName("jsFrame");
-    Ui_jsAlert* ui = new Ui_jsAlert();
+    auto* ui = new Ui_jsAlert();
     ui->setupUi(widget);
     ui->message->setText(msg);
     ui->buttonBox->button(QDialogButtonBox::Ok)->setFocus();
@@ -689,7 +689,7 @@ void WebPage::javaScriptConsoleMessage(JavaScriptConsoleMessageLevel level, cons
 
 QWebEnginePage* WebPage::createWindow(QWebEnginePage::WebWindowType type)
 {
-    TabbedWebView *tView = qobject_cast<TabbedWebView*>(view());
+    auto *tView = qobject_cast<TabbedWebView*>(view());
     BrowserWindow *window = tView ? tView->browserWindow() : mApp->getWindow();
 
     auto createTab = [=](Qz::NewTabPositionFlags pos) {
@@ -715,16 +715,16 @@ QWebEnginePage* WebPage::createWindow(QWebEnginePage::WebWindowType type)
     switch (type) {
     case QWebEnginePage::WebBrowserWindow: {
         BrowserWindow *window = mApp->createWindow(Qz::BW_NewWindow);
-        WebPage *page = new WebPage;
+        auto *page = new WebPage;
         window->setStartPage(page);
         return page;
     }
 
     case QWebEnginePage::WebDialog:
         if (!qzSettings->openPopupsInTabs) {
-            PopupWebView* view = new PopupWebView;
+            auto* view = new PopupWebView;
             view->setPage(new WebPage);
-            PopupWindow* popup = new PopupWindow(view);
+            auto* popup = new PopupWindow(view);
             popup->show();
             window->addDeleteOnCloseWidget(popup);
             return view->page();

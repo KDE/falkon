@@ -64,7 +64,7 @@ QModelIndex TabModel::tabIndex(WebTab *tab) const
 {
     const int idx = m_tabs.indexOf(tab);
     if (idx < 0) {
-        return QModelIndex();
+        return {};
     }
     return index(idx);
 }
@@ -93,12 +93,12 @@ Qt::ItemFlags TabModel::flags(const QModelIndex &index) const
 QVariant TabModel::data(const QModelIndex &index, int role) const
 {
     if (index.row() < 0 || index.row() > m_tabs.count()) {
-        return QVariant();
+        return {};
     }
 
     WebTab *t = tab(index);
     if (!t) {
-        return QVariant();
+        return {};
     }
 
     switch (role) {
@@ -135,7 +135,7 @@ QVariant TabModel::data(const QModelIndex &index, int role) const
         return t->backgroundActivity();
 
     default:
-        return QVariant();
+        return {};
     }
 }
 
@@ -154,11 +154,11 @@ QMimeData *TabModel::mimeData(const QModelIndexList &indexes) const
     if (indexes.isEmpty()) {
         return nullptr;
     }
-    WebTab *tab = indexes.at(0).data(WebTabRole).value<WebTab*>();
+    auto *tab = indexes.at(0).data(WebTabRole).value<WebTab*>();
     if (!tab) {
         return nullptr;
     }
-    TabModelMimeData *mimeData = new TabModelMimeData;
+    auto *mimeData = new TabModelMimeData;
     mimeData->setTab(tab);
     return mimeData;
 }
@@ -169,7 +169,7 @@ bool TabModel::canDropMimeData(const QMimeData *data, Qt::DropAction action, int
     if (action != Qt::MoveAction || parent.isValid() || column > 0 || !m_window) {
         return false;
     }
-    const TabModelMimeData *mimeData = qobject_cast<const TabModelMimeData*>(data);
+    const auto *mimeData = qobject_cast<const TabModelMimeData*>(data);
     if (!mimeData) {
         return false;
     }
@@ -182,7 +182,7 @@ bool TabModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int ro
         return false;
     }
 
-    const TabModelMimeData *mimeData = static_cast<const TabModelMimeData*>(data);
+    const auto *mimeData = static_cast<const TabModelMimeData*>(data);
     WebTab *tab = mimeData->tab();
 
     if (tab->browserWindow() == m_window) {

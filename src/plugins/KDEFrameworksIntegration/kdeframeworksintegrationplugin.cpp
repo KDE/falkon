@@ -60,7 +60,7 @@ void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settin
         if (WebPage::internalSchemes().contains(protocol)) {
             continue;
         }
-        KIOSchemeHandler *handler = new KIOSchemeHandler(protocol, this);
+        auto *handler = new KIOSchemeHandler(protocol, this);
         m_kioSchemeHandlers.append(handler);
         mApp->webProfile()->installUrlSchemeHandler(protocol.toUtf8(), handler);
         WebPage::addSupportedScheme(protocol);

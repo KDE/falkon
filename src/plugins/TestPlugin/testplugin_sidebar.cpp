@@ -37,7 +37,7 @@ QAction* TestPlugin_Sidebar::createMenuAction()
     // The action must be parented to some object from plugin, otherwise
     // there may be a crash when unloading the plugin.
 
-    QAction* act = new QAction(tr("Testing Sidebar"), this);
+    auto* act = new QAction(tr("Testing Sidebar"), this);
     act->setCheckable(true);
 
     return act;
@@ -47,12 +47,12 @@ QWidget* TestPlugin_Sidebar::createSideBarWidget(BrowserWindow* mainWindow)
 {
     Q_UNUSED(mainWindow)
 
-    QWidget* w = new QWidget;
-    QPushButton* b = new QPushButton("Example Plugin v0.0.1");
-    QLabel* label = new QLabel();
+    auto* w = new QWidget;
+    auto* b = new QPushButton("Example Plugin v0.0.1");
+    auto* label = new QLabel();
     label->setPixmap(QPixmap(":icons/other/about.svg"));
 
-    QVBoxLayout* l = new QVBoxLayout(w);
+    auto* l = new QVBoxLayout(w);
     l->addWidget(label);
     l->addWidget(b);
     w->setLayout(l);

@@ -34,8 +34,7 @@ DataPaths::DataPaths()
 }
 
 DataPaths::~DataPaths()
-{
-}
+= default;
 
 // static
 void DataPaths::setCurrentProfilePath(const QString &profilePath)
@@ -89,7 +88,7 @@ QString DataPaths::locate(Path type, const QString &file)
             return fullPath;
         }
     }
-    return QString();
+    return {};
 }
 
 // static

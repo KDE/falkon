@@ -45,7 +45,7 @@ AdBlockDialog::AdBlockDialog(QWidget* parent)
 #endif
     adblockCheckBox->setChecked(m_manager->isEnabled());
 
-    QMenu* menu = new QMenu(buttonOptions);
+    auto* menu = new QMenu(buttonOptions);
     m_actionAddRule = menu->addAction(tr("Add Rule"), this, &AdBlockDialog::addRule);
     m_actionRemoveRule = menu->addAction(tr("Remove Rule"), this, &AdBlockDialog::removeRule);
     menu->addSeparator();
@@ -76,7 +76,7 @@ void AdBlockDialog::showRule(const AdBlockRule* rule) const
     }
 
     for (int i = 0; i < tabWidget->count(); ++i) {
-        AdBlockTreeWidget* treeWidget = qobject_cast<AdBlockTreeWidget*>(tabWidget->widget(i));
+        auto* treeWidget = qobject_cast<AdBlockTreeWidget*>(tabWidget->widget(i));
 
         if (subscription == treeWidget->subscription()) {
             treeWidget->showRule(rule);
@@ -107,7 +107,7 @@ void AdBlockDialog::addSubscription()
     QString url = dialog.url();
 
     if (AdBlockSubscription* subscription = m_manager->addSubscription(title, url)) {
-        AdBlockTreeWidget* tree = new AdBlockTreeWidget(subscription, tabWidget);
+        auto* tree = new AdBlockTreeWidget(subscription, tabWidget);
         int index = tabWidget->insertTab(tabWidget->count() - 1, tree, subscription->title());
 
         tabWidget->setCurrentIndex(index);
@@ -163,7 +163,7 @@ void AdBlockDialog::learnAboutRules()
 void AdBlockDialog::loadSubscriptions()
 {
     for (int i = 0; i < tabWidget->count(); ++i) {
-        AdBlockTreeWidget* treeWidget = qobject_cast<AdBlockTreeWidget*>(tabWidget->widget(i));
+        auto* treeWidget = qobject_cast<AdBlockTreeWidget*>(tabWidget->widget(i));
         treeWidget->refresh();
     }
 }
@@ -176,7 +176,7 @@ void AdBlockDialog::load()
 
     const auto subscriptions = m_manager->subscriptions();
     for (AdBlockSubscription* subscription : subscriptions) {
-        AdBlockTreeWidget* tree = new AdBlockTreeWidget(subscription, tabWidget);
+        auto* tree = new AdBlockTreeWidget(subscription, tabWidget);
         tabWidget->addTab(tree, subscription->title());
     }
 

@@ -40,7 +40,7 @@ NavigationBarConfigDialog::NavigationBarConfigDialog(NavigationBar *navigationBa
 void NavigationBarConfigDialog::loadSettings()
 {
     auto createItem = [this](const NavigationBar::WidgetData &data) {
-        QListWidgetItem *item = new QListWidgetItem();
+        auto *item = new QListWidgetItem();
         item->setText(data.name);
         item->setData(Qt::UserRole + 10, data.id);
 #if 0

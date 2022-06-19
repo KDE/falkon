@@ -97,7 +97,7 @@ void AdBlockPlugin::webPageDeleted(WebPage *page)
 
 void AdBlockPlugin::mainWindowCreated(BrowserWindow *window)
 {
-    AdBlockIcon *icon = new AdBlockIcon(window);
+    auto *icon = new AdBlockIcon(window);
     m_icons[window] = icon;
     window->statusBar()->addButton(icon);
     window->navigationBar()->addToolButton(icon);

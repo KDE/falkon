@@ -71,7 +71,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     HistoryItem* item = itemFromIndex(index);
 
     if (index.row() < 0 || !item) {
-        return QVariant();
+        return {};
     }
 
     if (item->isTopLevel()) {
@@ -89,7 +89,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
             return index.column() == 0 ? QIcon::fromTheme(QSL("view-calendar"), QIcon(":/icons/menu/history_entry.svg")) : QVariant();
         }
 
-        return QVariant();
+        return {};
     }
 
     const HistoryEntry entry = item->historyEntry;
@@ -135,7 +135,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         }
     }
 
-    return QVariant();
+    return {};
 }
 
 bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -158,7 +158,7 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
 QModelIndex HistoryModel::index(int row, int column, const QModelIndex &parent) const
 {
     if (!hasIndex(row, column, parent)) {
-        return QModelIndex();
+        return {};
     }
 
     HistoryItem* parentItem = itemFromIndex(parent);
@@ -170,14 +170,14 @@ QModelIndex HistoryModel::index(int row, int column, const QModelIndex &parent) 
 QModelIndex HistoryModel::parent(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return QModelIndex();
+        return {};
     }
 
     HistoryItem* childItem = itemFromIndex(index);
     HistoryItem* parentItem = childItem->parent();
 
     if (!parentItem || parentItem == m_rootItem) {
-        return QModelIndex();
+        return {};
     }
 
     return createIndex(parentItem->row(), 0, parentItem);
@@ -224,7 +224,7 @@ bool HistoryModel::hasChildren(const QModelIndex &parent) const
 HistoryItem* HistoryModel::itemFromIndex(const QModelIndex &index) const
 {
     if (index.isValid()) {
-        HistoryItem* item = static_cast<HistoryItem*>(index.internalPointer());
+        auto* item = static_cast<HistoryItem*>(index.internalPointer());
 
         if (item) {
             return item;
@@ -322,7 +322,7 @@ void HistoryModel::fetchMore(const QModelIndex &parent)
     beginInsertRows(parent, 0, list.size() - 1);
 
     for (const HistoryEntry &entry : qAsConst(list)) {
-        HistoryItem* newItem = new HistoryItem(parentItem);
+        auto* newItem = new HistoryItem(parentItem);
         newItem->historyEntry = entry;
     }
 
@@ -346,7 +346,7 @@ void HistoryModel::historyEntryAdded(const HistoryEntry &entry)
 
     beginInsertRows(createIndex(0, 0, m_todayItem), 0, 0);
 
-    HistoryItem* item = new HistoryItem();
+    auto* item = new HistoryItem();
     item->historyEntry = entry;
 
     m_todayItem->prependChild(item);
@@ -496,7 +496,7 @@ void HistoryModel::init()
         query.exec();
 
         if (query.next()) {
-            HistoryItem* item = new HistoryItem(m_rootItem);
+            auto* item = new HistoryItem(m_rootItem);
             item->setStartTimestamp(timestamp == currentTimestamp ? -1 : timestamp);
             item->setEndTimestamp(endTimestamp);
             item->title = itemName;

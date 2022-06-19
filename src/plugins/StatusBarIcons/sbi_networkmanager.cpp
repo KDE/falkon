@@ -50,7 +50,7 @@ void SBI_NetworkManager::loadSettings()
             continue;
         }
 
-        SBI_NetworkProxy* proxy = new SBI_NetworkProxy;
+        auto* proxy = new SBI_NetworkProxy;
 
         settings.beginGroup(group);
         proxy->loadFromSettings(settings);

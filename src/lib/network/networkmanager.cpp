@@ -110,24 +110,24 @@ bool NetworkManager::certificateError(const QWebEngineCertificateError &error, Q
 
 void NetworkManager::authentication(const QUrl &url, QAuthenticator *auth, QWidget *parent)
 {
-    QDialog* dialog = new QDialog(parent);
+    auto* dialog = new QDialog(parent);
     dialog->setWindowTitle(tr("Authorization required"));
 
-    QFormLayout* formLa = new QFormLayout(dialog);
+    auto* formLa = new QFormLayout(dialog);
 
-    QLabel* label = new QLabel(dialog);
-    QLabel* userLab = new QLabel(dialog);
-    QLabel* passLab = new QLabel(dialog);
+    auto* label = new QLabel(dialog);
+    auto* userLab = new QLabel(dialog);
+    auto* passLab = new QLabel(dialog);
     userLab->setText(tr("Username: "));
     passLab->setText(tr("Password: "));
 
-    QLineEdit* user = new QLineEdit(dialog);
-    QLineEdit* pass = new QLineEdit(dialog);
+    auto* user = new QLineEdit(dialog);
+    auto* pass = new QLineEdit(dialog);
     pass->setEchoMode(QLineEdit::Password);
-    QCheckBox* save = new QCheckBox(dialog);
+    auto* save = new QCheckBox(dialog);
     save->setText(tr("Save username and password for this site"));
 
-    QDialogButtonBox* box = new QDialogButtonBox(dialog);
+    auto* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
@@ -196,22 +196,22 @@ void NetworkManager::proxyAuthentication(const QString &proxyHost, QAuthenticato
         return;
     }
 
-    QDialog* dialog = new QDialog(parent);
+    auto* dialog = new QDialog(parent);
     dialog->setWindowTitle(tr("Proxy authorization required"));
 
-    QFormLayout* formLa = new QFormLayout(dialog);
+    auto* formLa = new QFormLayout(dialog);
 
-    QLabel* label = new QLabel(dialog);
-    QLabel* userLab = new QLabel(dialog);
-    QLabel* passLab = new QLabel(dialog);
+    auto* label = new QLabel(dialog);
+    auto* userLab = new QLabel(dialog);
+    auto* passLab = new QLabel(dialog);
     userLab->setText(tr("Username: "));
     passLab->setText(tr("Password: "));
 
-    QLineEdit* user = new QLineEdit(dialog);
-    QLineEdit* pass = new QLineEdit(dialog);
+    auto* user = new QLineEdit(dialog);
+    auto* pass = new QLineEdit(dialog);
     pass->setEchoMode(QLineEdit::Password);
 
-    QDialogButtonBox* box = new QDialogButtonBox(dialog);
+    auto* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);

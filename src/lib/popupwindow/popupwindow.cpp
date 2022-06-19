@@ -44,8 +44,8 @@ PopupWindow::PopupWindow(PopupWebView* view)
     m_locationBar = new PopupLocationBar(this);
     m_locationBar->setView(m_view);
 
-    QWidget *locationWidget = new QWidget(this);
-    QVBoxLayout *llayout = new QVBoxLayout();
+    auto *locationWidget = new QWidget(this);
+    auto *llayout = new QVBoxLayout();
     llayout->setContentsMargins(3, 3, 3, 5);
     llayout->addWidget(m_locationBar);
     locationWidget->setLayout(llayout);
@@ -66,12 +66,12 @@ PopupWindow::PopupWindow(PopupWebView* view)
     pal.setColor(QPalette::Window, pal.window().color().darker(110));
     m_notificationWidget->setPalette(pal);
 
-    QVBoxLayout *nlayout = new QVBoxLayout(m_notificationWidget);
+    auto *nlayout = new QVBoxLayout(m_notificationWidget);
     nlayout->setSizeConstraint(QLayout::SetMinAndMaxSize);
     nlayout->setContentsMargins(0, 0, 0, 0);
     nlayout->setSpacing(1);
 
-    QWidget *viewSpacer = new QWidget(this);
+    auto *viewSpacer = new QWidget(this);
     pal = viewSpacer->palette();
     pal.setColor(QPalette::Window, pal.window().color().darker(125));
     viewSpacer->setPalette(pal);
@@ -80,7 +80,7 @@ PopupWindow::PopupWindow(PopupWebView* view)
 
     m_menuBar = new QMenuBar(this);
 
-    QMenu* menuFile = new QMenu(tr("File"));
+    auto* menuFile = new QMenu(tr("File"));
     menuFile->addAction(QIcon::fromTheme("mail-message-new"), tr("Send Link..."), m_view, &WebView::sendPageByMail);
     menuFile->addAction(QIcon::fromTheme("document-print"), tr("&Print..."), m_view, &WebView::printPage)->setShortcut(QKeySequence("Ctrl+P"));
     menuFile->addSeparator();
@@ -121,12 +121,12 @@ PopupWindow::PopupWindow(PopupWebView* view)
         addAction(action);
     }
 
-    QVBoxLayout *l = new QVBoxLayout();
+    auto *l = new QVBoxLayout();
     l->setContentsMargins(0, 0, 0, 0);
     l->setSpacing(0);
     l->addWidget(m_view);
 
-    QWidget *viewWidget = new QWidget(this);
+    auto *viewWidget = new QWidget(this);
     viewWidget->setLayout(l);
 
     m_layout->insertWidget(0, m_menuBar);

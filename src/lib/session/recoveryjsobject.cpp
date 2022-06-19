@@ -119,7 +119,7 @@ void RecoveryJsObject::restoreSession(const QStringList &excludeWin, const QStri
 
 void RecoveryJsObject::closeTab()
 {
-    TabbedWebView *view = qobject_cast<TabbedWebView*>(m_page->view());
+    auto *view = qobject_cast<TabbedWebView*>(m_page->view());
     if (!view) {
         return;
     }

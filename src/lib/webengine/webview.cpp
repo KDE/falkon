@@ -387,11 +387,11 @@ void WebView::printPage()
 {
     Q_ASSERT(m_page);
 
-    QPrinter *printer = new QPrinter();
+    auto *printer = new QPrinter();
     printer->setCreator(tr("Falkon %1 (%2)").arg(Qz::VERSION, Qz::WWWADDRESS));
     printer->setDocName(QzTools::filterCharsFromFilename(title()));
 
-    QPrintDialog *dialog = new QPrintDialog(printer, this);
+    auto *dialog = new QPrintDialog(printer, this);
     dialog->setOptions(QAbstractPrintDialog::PrintToFile | QAbstractPrintDialog::PrintShowPageSize);
 #ifndef Q_OS_WIN
     dialog->setOption(QAbstractPrintDialog::PrintPageRange);
@@ -468,14 +468,14 @@ void WebView::slotTitleChanged(const QString &title)
 
 void WebView::openUrlInNewWindow()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         mApp->createWindow(Qz::BW_NewWindow, action->data().toUrl());
     }
 }
 
 void WebView::sendTextByMail()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         const QUrl mailUrl = QUrl::fromEncoded("mailto:%20?body=" + QUrl::toPercentEncoding(action->data().toString()));
         QDesktopServices::openUrl(mailUrl);
     }
@@ -489,7 +489,7 @@ void WebView::sendPageByMail()
 
 void WebView::copyLinkToClipboard()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         QApplication::clipboard()->setText(action->data().toUrl().toEncoded());
     }
 }
@@ -536,7 +536,7 @@ void WebView::openUrlInNewTab(const QUrl &url, Qz::NewTabPositionFlags position)
 
 void WebView::openActionUrl()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         load(action->data().toUrl());
     }
 }
@@ -556,14 +556,14 @@ void WebView::showSource()
 
 void WebView::showSiteInfo()
 {
-    SiteInfo* s = new SiteInfo(this);
+    auto* s = new SiteInfo(this);
     s->show();
 }
 
 void WebView::searchSelectedText()
 {
     SearchEngine engine = mApp->searchEnginesManager()->defaultEngine();
-    if (QAction* act = qobject_cast<QAction*>(sender())) {
+    if (auto* act = qobject_cast<QAction*>(sender())) {
         if (act->data().isValid()) {
             engine = act->data().value<SearchEngine>();
         }
@@ -576,7 +576,7 @@ void WebView::searchSelectedText()
 void WebView::searchSelectedTextInBackgroundTab()
 {
     SearchEngine engine = mApp->searchEnginesManager()->defaultEngine();
-    if (QAction* act = qobject_cast<QAction*>(sender())) {
+    if (auto* act = qobject_cast<QAction*>(sender())) {
         if (act->data().isValid()) {
             engine = act->data().value<SearchEngine>();
         }
@@ -588,7 +588,7 @@ void WebView::searchSelectedTextInBackgroundTab()
 
 void WebView::bookmarkLink()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         if (action->data().isNull()) {
             BookmarksTools::addBookmarkDialog(this, url(), title());
         }
@@ -603,14 +603,14 @@ void WebView::bookmarkLink()
 
 void WebView::openUrlInSelectedTab()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         openUrlInNewTab(action->data().toUrl(), Qz::NT_CleanSelectedTab);
     }
 }
 
 void WebView::openUrlInBackgroundTab()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         openUrlInNewTab(action->data().toUrl(), Qz::NT_CleanNotSelectedTab);
     }
 }
@@ -634,7 +634,7 @@ void WebView::userDefinedOpenUrlInNewTab(const QUrl &url, bool invert)
     if (!url.isEmpty()) {
         actionUrl = url;
     }
-    else if (QAction* action = qobject_cast<QAction*>(sender())) {
+    else if (auto* action = qobject_cast<QAction*>(sender())) {
         actionUrl = action->data().toUrl();
     }
 
@@ -648,7 +648,7 @@ void WebView::userDefinedOpenUrlInBgTab(const QUrl &url)
     if (!url.isEmpty()) {
         actionUrl = url;
     }
-    else if (QAction* action = qobject_cast<QAction*>(sender())) {
+    else if (auto* action = qobject_cast<QAction*>(sender())) {
         actionUrl = action->data().toUrl();
     }
 
@@ -792,7 +792,7 @@ void WebView::createPageContextMenu(QMenu* menu)
 void WebView::createLinkContextMenu(QMenu* menu, const WebHitTestResult &hitTest)
 {
     menu->addSeparator();
-    Action* act = new Action(IconProvider::newTabIcon(), tr("Open link in new &tab"));
+    auto* act = new Action(IconProvider::newTabIcon(), tr("Open link in new &tab"));
     act->setData(hitTest.linkUrl());
     connect(act, SIGNAL(triggered()), this, SLOT(userDefinedOpenUrlInNewTab()));
     connect(act, SIGNAL(ctrlTriggered()), this, SLOT(userDefinedOpenUrlInBgTab()));
@@ -820,7 +820,7 @@ void WebView::createImageContextMenu(QMenu* menu, const WebHitTestResult &hitTes
 {
     menu->addSeparator();
     if (hitTest.imageUrl() != url()) {
-        Action *act = new Action(tr("Show i&mage"));
+        auto *act = new Action(tr("Show i&mage"));
         act->setData(hitTest.imageUrl());
         connect(act, &QAction::triggered, this, &WebView::openActionUrl);
         connect(act, SIGNAL(ctrlTriggered()), this, SLOT(userDefinedOpenUrlInNewTab()));
@@ -861,7 +861,7 @@ void WebView::createSelectedTextContextMenu(QMenu* menu, const WebHitTestResult 
     QUrl guessedUrl = QUrl::fromUserInput(selectedString);
 
     if (isUrlValid(guessedUrl)) {
-        Action* act = new Action(QIcon::fromTheme("document-open-remote"), tr("Go to &web address"));
+        auto* act = new Action(QIcon::fromTheme("document-open-remote"), tr("Go to &web address"));
         act->setData(guessedUrl);
 
         connect(act, &QAction::triggered, this, &WebView::openActionUrl);
@@ -875,7 +875,7 @@ void WebView::createSelectedTextContextMenu(QMenu* menu, const WebHitTestResult 
     selectedText.replace(QLatin1Char('\n'), QLatin1Char(' ')).replace(QLatin1Char('\t'), QLatin1Char(' '));
 
     SearchEngine engine = mApp->searchEnginesManager()->defaultEngine();
-    Action* act = new Action(engine.icon, tr("Search \"%1 ..\" with %2").arg(selectedText, engine.name));
+    auto* act = new Action(engine.icon, tr("Search \"%1 ..\" with %2").arg(selectedText, engine.name));
     connect(act, &QAction::triggered, this, &WebView::searchSelectedText);
     connect(act, &Action::ctrlTriggered, this, &WebView::searchSelectedTextInBackgroundTab);
     menu->addAction(act);
@@ -886,7 +886,7 @@ void WebView::createSelectedTextContextMenu(QMenu* menu, const WebHitTestResult 
     SearchEnginesManager* searchManager = mApp->searchEnginesManager();
     const auto engines = searchManager->allEngines();
     for (const SearchEngine &en : engines) {
-        Action* act = new Action(en.icon, en.name);
+        auto* act = new Action(en.icon, en.name);
         act->setData(QVariant::fromValue(en));
 
         connect(act, &QAction::triggered, this, &WebView::searchSelectedText);
@@ -1270,7 +1270,7 @@ bool WebView::eventFilter(QObject *obj, QEvent *event)
             if (child && child->inherits("QtWebEngineCore::RenderWidgetHostViewQtDelegateWidget")) {
                 m_rwhvqt = child;
                 m_rwhvqt->installEventFilter(this);
-                if (QQuickWidget *w = qobject_cast<QQuickWidget*>(m_rwhvqt)) {
+                if (auto *w = qobject_cast<QQuickWidget*>(m_rwhvqt)) {
                     w->setClearColor(palette().color(QPalette::Window));
                 }
             }

@@ -49,7 +49,7 @@ void QmlBookmarksApiTest::testBookmarkTreeNode()
     QCOMPARE(toolbarFolder->urlString(), bookmark->property("url").toString());
     QCOMPARE(toolbarFolder->description(), bookmark->property("description").toString());
     QCOMPARE(!mApp->bookmarks()->canBeModified(toolbarFolder), bookmark->property("unmodifiable").toBool());
-    QObject* parent = qvariant_cast<QObject*>(bookmark->property("parent"));
+    auto* parent = qvariant_cast<QObject*>(bookmark->property("parent"));
     QVERIFY(parent);
     QCOMPARE(mApp->bookmarks()->rootItem()->title(), parent->property("title").toString());
 }
@@ -69,7 +69,7 @@ void QmlBookmarksApiTest::testBookmarksCreation()
 
     QCOMPARE(qmlBookmarksSpy.count(), 1);
 
-    QObject *created = qvariant_cast<QObject*>(qmlBookmarksSpy.at(0).at(0));
+    auto *created = qvariant_cast<QObject*>(qmlBookmarksSpy.at(0).at(0));
     QVERIFY(created);
     QCOMPARE(item->title(), created->property("title").toString());
 
@@ -84,7 +84,7 @@ void QmlBookmarksApiTest::testBookmarksCreation()
     QVERIFY(out.toBool());
 
     QCOMPARE(bookmarksSpy.count(), 1);
-    BookmarkItem* createdItem = qvariant_cast<BookmarkItem*>(bookmarksSpy.at(0).at(0));
+    auto* createdItem = qvariant_cast<BookmarkItem*>(bookmarksSpy.at(0).at(0));
     QVERIFY(createdItem);
     QCOMPARE(createdItem->title(), QString("Example Plugin"));
 }
@@ -112,7 +112,7 @@ void QmlBookmarksApiTest::testBookmarksModification()
 
     QCOMPARE(qmlBookmarksSpy.count(), 1);
 
-    QObject *modified = qvariant_cast<QObject*>(qmlBookmarksSpy.at(0).at(0));
+    auto *modified = qvariant_cast<QObject*>(qmlBookmarksSpy.at(0).at(0));
     QVERIFY(modified);
     QCOMPARE(modified->property("title").toString(), QString("Modified Example Domain"));
 
@@ -125,7 +125,7 @@ void QmlBookmarksApiTest::testBookmarksModification()
     QVERIFY(out.toBool());
 
     QCOMPARE(bookmarksSpy.count(), 1);
-    BookmarkItem* modifiedItem = qvariant_cast<BookmarkItem*>(bookmarksSpy.at(0).at(0));
+    auto* modifiedItem = qvariant_cast<BookmarkItem*>(bookmarksSpy.at(0).at(0));
     QVERIFY(modifiedItem);
     QCOMPARE(modifiedItem->title(), QString("Modified Example Plugin"));
 }
@@ -143,7 +143,7 @@ void QmlBookmarksApiTest::testBookmarksRemoval()
 
     QCOMPARE(qmlBookmarksSpy.count(), 1);
 
-    QObject *removed = qvariant_cast<QObject*>(qmlBookmarksSpy.at(0).at(0));
+    auto *removed = qvariant_cast<QObject*>(qmlBookmarksSpy.at(0).at(0));
     QVERIFY(removed);
     QCOMPARE(removed->property("title").toString(), QString("Modified Example Domain"));
 
@@ -154,7 +154,7 @@ void QmlBookmarksApiTest::testBookmarksRemoval()
     QVERIFY(out.toBool());
 
     QCOMPARE(bookmarksSpy.count(), 1);
-    BookmarkItem* removedItem = qvariant_cast<BookmarkItem*>(bookmarksSpy.at(0).at(0));
+    auto* removedItem = qvariant_cast<BookmarkItem*>(bookmarksSpy.at(0).at(0));
     QVERIFY(removedItem);
     QCOMPARE(removedItem->title(), QString("Modified Example Plugin"));
 }

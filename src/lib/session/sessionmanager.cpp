@@ -42,7 +42,7 @@ SessionManager::SessionManager(QObject* parent)
     , m_firstBackupSession(DataPaths::currentProfilePath() + QL1S("/session.dat.old"))
     , m_secondBackupSession(DataPaths::currentProfilePath() + QL1S("/session.dat.old1"))
 {
-    QFileSystemWatcher* sessionFilesWatcher = new QFileSystemWatcher({DataPaths::path(DataPaths::Sessions)}, this);
+    auto* sessionFilesWatcher = new QFileSystemWatcher({DataPaths::path(DataPaths::Sessions)}, this);
     connect(sessionFilesWatcher, &QFileSystemWatcher::directoryChanged, this, &SessionManager::sessionsDirectoryChanged);
     connect(sessionFilesWatcher, &QFileSystemWatcher::directoryChanged, this, &SessionManager::sessionsMetaDataChanged);
 
@@ -51,10 +51,10 @@ SessionManager::SessionManager(QObject* parent)
 
 void SessionManager::aboutToShowSessionsMenu()
 {
-    QMenu* menu = qobject_cast<QMenu*>(sender());
+    auto* menu = qobject_cast<QMenu*>(sender());
     menu->clear();
 
-    QActionGroup *group = new QActionGroup(menu);
+    auto *group = new QActionGroup(menu);
 
     const auto sessions = sessionMetaData(/*withBackups*/ false);
     for (const SessionManager::SessionMetaData &metaData : sessions) {
@@ -76,7 +76,7 @@ void SessionManager::sessionsDirectoryChanged()
 void SessionManager::openSession(QString sessionFilePath, SessionFlags flags)
 {
     if (sessionFilePath.isEmpty()) {
-        QAction* action = qobject_cast<QAction*>(sender());
+        auto* action = qobject_cast<QAction*>(sender());
         if (!action)
             return;
 
@@ -115,7 +115,7 @@ void SessionManager::openSession(QString sessionFilePath, SessionFlags flags)
 void SessionManager::renameSession(QString sessionFilePath, SessionFlags flags)
 {
     if (sessionFilePath.isEmpty()) {
-        QAction* action = qobject_cast<QAction*>(sender());
+        auto* action = qobject_cast<QAction*>(sender());
         if (!action)
             return;
 
@@ -371,7 +371,7 @@ void SessionManager::writeCurrentSession(const QString &filePath)
 
 void SessionManager::openSessionManagerDialog()
 {
-    SessionManagerDialog *dialog = new SessionManagerDialog(mApp->getWindow());
+    auto *dialog = new SessionManagerDialog(mApp->getWindow());
     dialog->open();
 }
 

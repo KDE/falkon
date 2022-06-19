@@ -38,8 +38,8 @@ QmlAction *QmlMenu::addAction(const QVariantMap &map)
         return nullptr;
     }
 
-    QAction *action = new QAction();
-    QmlAction *qmlAction = new QmlAction(action, m_engine, this);
+    auto *action = new QAction();
+    auto *qmlAction = new QmlAction(action, m_engine, this);
     qmlAction->setProperties(map);
     m_menu->addAction(action);
 
@@ -52,7 +52,7 @@ QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
         return nullptr;
     }
 
-    QMenu *newMenu = new QMenu();
+    auto *newMenu = new QMenu();
     for (auto it = map.cbegin(); it != map.cend(); it++) {
         const QString key = it.key();
         if (key == QSL("icon")) {
@@ -64,7 +64,7 @@ QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
         newMenu->setProperty(key.toUtf8(), map.value(key));
     }
     m_menu->addMenu(newMenu);
-    QmlMenu *newQmlMenu = new QmlMenu(newMenu, m_engine, this);
+    auto *newQmlMenu = new QmlMenu(newMenu, m_engine, this);
     return newQmlMenu;
 }
 

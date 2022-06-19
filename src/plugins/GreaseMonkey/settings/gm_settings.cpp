@@ -68,7 +68,7 @@ void GM_Settings::showItemInfo(QListWidgetItem* item)
         return;
     }
 
-    GM_SettingsScriptInfo* dialog = new GM_SettingsScriptInfo(script, this);
+    auto* dialog = new GM_SettingsScriptInfo(script, this);
     dialog->open();
 }
 
@@ -138,10 +138,10 @@ void GM_Settings::newScript()
     file.write(script.arg(name).toUtf8());
     file.close();
 
-    GM_Script *gmScript = new GM_Script(m_manager, file.fileName());
+    auto *gmScript = new GM_Script(m_manager, file.fileName());
     m_manager->addScript(gmScript);
 
-    GM_SettingsScriptInfo* dialog = new GM_SettingsScriptInfo(gmScript, this);
+    auto* dialog = new GM_SettingsScriptInfo(gmScript, this);
     dialog->open();
 }
 
@@ -154,7 +154,7 @@ void GM_Settings::loadScripts()
 
     const auto allScripts = m_manager->allScripts();
     for (GM_Script* script : allScripts) {
-        QListWidgetItem* item = new QListWidgetItem(ui->listWidget);
+        auto* item = new QListWidgetItem(ui->listWidget);
         item->setText(script->name());
         item->setIcon(script->icon());
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);

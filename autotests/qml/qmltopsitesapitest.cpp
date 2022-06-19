@@ -37,7 +37,7 @@ void QmlTopSitesApiTest::testTopSites()
     qDebug() << "Top sites list size=" << list.length();
     for( const auto& site : list )
     {
-        QObject* object = qvariant_cast<QObject*>(site);
+        auto* object = qvariant_cast<QObject*>(site);
         if (object)
         {
             qDebug() << ".." << object->property("title") << object->property("url");
@@ -48,7 +48,7 @@ void QmlTopSitesApiTest::testTopSites()
         }
     }
     QCOMPARE(list.length(), 1);
-    QObject* object = qvariant_cast<QObject*>(list.at(0));
+    auto* object = qvariant_cast<QObject*>(list.at(0));
     QVERIFY(object);
     QCOMPARE(object->property("title").toString(), QSL("Example Domain"));
     QCOMPARE(object->property("url").toString(), QSL("https://example.com"));

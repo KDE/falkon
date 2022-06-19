@@ -35,7 +35,7 @@ QString QmlFileUtils::resolve(const QString &filePath)
     if (resolvedPath.contains(m_path)) {
         return resolvedPath;
     }
-    return QString();
+    return {};
 }
 
 QByteArray QmlFileUtils::readAllFileContents(const QString &fileName)

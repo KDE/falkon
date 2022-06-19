@@ -52,7 +52,7 @@ void SBI_NetworkIcon::onlineStateChanged(bool online)
 
 void SBI_NetworkIcon::showDialog()
 {
-    SBI_NetworkIconDialog* dialog = new SBI_NetworkIconDialog(m_window);
+    auto* dialog = new SBI_NetworkIconDialog(m_window);
     dialog->open();
 }
 
@@ -88,7 +88,7 @@ void SBI_NetworkIcon::showMenu(const QPoint &pos)
 
 void SBI_NetworkIcon::useProxy()
 {
-    if (QAction* act = qobject_cast<QAction*>(sender())) {
+    if (auto* act = qobject_cast<QAction*>(sender())) {
         SBINetManager->setCurrentProxy(act->data().toString());
     }
 }

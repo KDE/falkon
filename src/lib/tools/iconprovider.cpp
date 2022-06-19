@@ -207,7 +207,7 @@ QImage IconProvider::imageForUrl(const QUrl &url, bool allowNull)
     query.addBindValue(QString("%1*").arg(QzTools::escapeSqlGlobString(QString::fromUtf8(encodedUrl))));
     query.exec();
 
-    QImage *img = new QImage;
+    auto *img = new QImage;
     if (query.next()) {
         img->loadFromData(query.value(0).toByteArray());
     }

@@ -95,7 +95,7 @@ TabTreeDelegate::TabTreeDelegate(TabTreeView *view)
     connect(m_loadingAnimator, &LoadingAnimator::updateIndex, m_view, &TabTreeView::updateIndex);
 
     // Needed to make it stylable the same way as real tabbar close button
-    QTabBar *tabBar = new QTabBar(m_view);
+    auto *tabBar = new QTabBar(m_view);
     tabBar->setObjectName(QSL("tabtree_tabbar"));
     tabBar->lower();
 

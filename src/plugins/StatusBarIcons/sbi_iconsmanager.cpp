@@ -125,13 +125,13 @@ void SBI_IconsManager::destroyIcons()
 void SBI_IconsManager::mainWindowCreated(BrowserWindow* window)
 {
     if (m_showImagesIcon) {
-        SBI_ImagesIcon* w = new SBI_ImagesIcon(window, m_settingsPath);
+        auto* w = new SBI_ImagesIcon(window, m_settingsPath);
         window->statusBar()->addPermanentWidget(w);
         m_windows[window].append(w);
     }
 
     if (m_showJavaScriptIcon) {
-        SBI_JavaScriptIcon* w = new SBI_JavaScriptIcon(window);
+        auto* w = new SBI_JavaScriptIcon(window);
         window->statusBar()->addPermanentWidget(w);
         m_windows[window].append(w);
     }
@@ -141,13 +141,13 @@ void SBI_IconsManager::mainWindowCreated(BrowserWindow* window)
             m_networkManager = new SBI_NetworkManager(m_settingsPath, this);
         }
 
-        SBI_NetworkIcon* w = new SBI_NetworkIcon(window);
+        auto* w = new SBI_NetworkIcon(window);
         window->statusBar()->addPermanentWidget(w);
         m_windows[window].append(w);
     }
 
     if (m_showZoomWidget) {
-        SBI_ZoomWidget* w = new SBI_ZoomWidget(window);
+        auto* w = new SBI_ZoomWidget(window);
         window->statusBar()->addPermanentWidget(w);
         m_windows[window].append(w);
     }

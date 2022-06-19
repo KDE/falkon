@@ -102,7 +102,7 @@ void BookmarksMenu::menuMiddleClicked(Menu* menu)
 
 void BookmarksMenu::bookmarkActivated()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         BookmarkItem* item = static_cast<BookmarkItem*>(action->data().value<void*>());
         Q_ASSERT(item);
         openBookmark(item);
@@ -111,7 +111,7 @@ void BookmarksMenu::bookmarkActivated()
 
 void BookmarksMenu::bookmarkCtrlActivated()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         BookmarkItem* item = static_cast<BookmarkItem*>(action->data().value<void*>());
         Q_ASSERT(item);
         openBookmarkInNewTab(item);
@@ -120,7 +120,7 @@ void BookmarksMenu::bookmarkCtrlActivated()
 
 void BookmarksMenu::bookmarkShiftActivated()
 {
-    if (QAction* action = qobject_cast<QAction*>(sender())) {
+    if (auto* action = qobject_cast<QAction*>(sender())) {
         BookmarkItem* item = static_cast<BookmarkItem*>(action->data().value<void*>());
         Q_ASSERT(item);
         openBookmarkInNewWindow(item);

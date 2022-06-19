@@ -162,7 +162,7 @@ void GM_Script::updateScript()
     m_updating = true;
     emit updatingChanged(m_updating);
 
-    GM_Downloader *downloader = new GM_Downloader(m_downloadUrl, m_manager);
+    auto *downloader = new GM_Downloader(m_downloadUrl, m_manager);
     downloader->updateScript(m_fileName);
     connect(downloader, &GM_Downloader::finished, this, [this]() {
         m_updating = false;
@@ -335,7 +335,7 @@ void GM_Script::downloadRequires()
 {
     for (const QString &url : qAsConst(m_require)) {
         if (m_manager->requireScripts({url}).isEmpty()) {
-            GM_Downloader *downloader = new GM_Downloader(QUrl(url), m_manager, GM_Downloader::DownloadRequireScript);
+            auto *downloader = new GM_Downloader(QUrl(url), m_manager, GM_Downloader::DownloadRequireScript);
             connect(downloader, &GM_Downloader::finished, this, &GM_Script::reloadScript);
         }
     }

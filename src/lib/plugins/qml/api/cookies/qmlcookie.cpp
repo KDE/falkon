@@ -28,7 +28,7 @@ QmlCookie::QmlCookie(QNetworkCookie *cookie, QObject *parent)
 QString QmlCookie::domain() const
 {
     if (!m_cookie) {
-        return QString();
+        return {};
     }
     return m_cookie->domain();
 }
@@ -36,7 +36,7 @@ QString QmlCookie::domain() const
 QDateTime QmlCookie::expirationDate() const
 {
     if (!m_cookie) {
-        return QDateTime();
+        return {};
     }
     return m_cookie->expirationDate();
 }
@@ -44,7 +44,7 @@ QDateTime QmlCookie::expirationDate() const
 QString QmlCookie::name() const
 {
     if (!m_cookie) {
-        return QString();
+        return {};
     }
     return QString(m_cookie->name());
 }
@@ -52,7 +52,7 @@ QString QmlCookie::name() const
 QString QmlCookie::path() const
 {
     if (!m_cookie) {
-        return QString();
+        return {};
     }
     return m_cookie->path();
 }
@@ -76,7 +76,7 @@ bool QmlCookie::session() const
 QString QmlCookie::value() const
 {
     if (!m_cookie) {
-        return QString();
+        return {};
     }
     return QString(m_cookie->value());
 }

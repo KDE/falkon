@@ -82,7 +82,7 @@ void LocationBarTest::loadActionBasicTest()
 
 void LocationBarTest::loadActionBookmarksTest()
 {
-    BookmarkItem* bookmark = new BookmarkItem(BookmarkItem::Url);
+    auto* bookmark = new BookmarkItem(BookmarkItem::Url);
     bookmark->setTitle("KDE Bookmark title");
     bookmark->setUrl(QUrl("http://kde.org"));
     bookmark->setKeyword("kde-bookmark");

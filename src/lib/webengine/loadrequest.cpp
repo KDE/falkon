@@ -23,11 +23,8 @@ LoadRequest::LoadRequest()
 }
 
 LoadRequest::LoadRequest(const LoadRequest &other)
-    : m_url(other.m_url)
-    , m_operation(other.m_operation)
-    , m_data(other.m_data)
-{
-}
+     
+= default;
 
 LoadRequest::LoadRequest(const QUrl &url, LoadRequest::Operation op, const QByteArray &data)
     : m_url(url)
@@ -37,12 +34,7 @@ LoadRequest::LoadRequest(const QUrl &url, LoadRequest::Operation op, const QByte
 }
 
 LoadRequest &LoadRequest::operator=(const LoadRequest &other)
-{
-    m_url = other.m_url;
-    m_operation = other.m_operation;
-    m_data = other.m_data;
-    return *this;
-}
+= default;
 
 bool LoadRequest::isValid() const
 {

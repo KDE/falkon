@@ -55,7 +55,7 @@ bool HtmlExporter::exportBookmarks(BookmarkItem* root)
     stream << "<!-- This is an automatically generated file." << endl;
     stream << "     It will be read and overwritten." << endl;
     stream << "     DO NOT EDIT! -->" << endl;
-    stream << "<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">" << endl;
+    stream << R"(<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">)" << endl;
     stream << "<TITLE>Bookmarks</TITLE>" << endl;
     stream << "<H1>Bookmarks</H1>" << endl;
 

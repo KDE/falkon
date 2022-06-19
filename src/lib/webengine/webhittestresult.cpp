@@ -86,7 +86,7 @@ WebHitTestResult::WebHitTestResult(const WebPage *page, const QPoint &pos)
                           "return res;"
                           "})()");
 
-    WebPage *p = const_cast<WebPage*>(page);
+    auto *p = const_cast<WebPage*>(page);
     m_viewportPos = p->mapToViewport(m_pos);
     const QString &js = source.arg(m_viewportPos.x()).arg(m_viewportPos.y());
     init(p->url(), p->execJavaScript(js, WebPage::SafeJsWorld).toMap());

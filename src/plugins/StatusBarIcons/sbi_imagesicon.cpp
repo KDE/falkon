@@ -113,7 +113,7 @@ void SBI_ImagesIcon::updateIcon()
         setGraphicsEffect(0);
     }
     else {
-        QGraphicsColorizeEffect* effect = new QGraphicsColorizeEffect(this);
+        auto* effect = new QGraphicsColorizeEffect(this);
         effect->setColor(Qt::gray);
         setGraphicsEffect(effect);
     }

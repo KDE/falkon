@@ -67,7 +67,7 @@ DownloadManager::DownloadManager(QWidget* parent)
 
     connect(ui->clearButton, &QAbstractButton::clicked, this, &DownloadManager::clearList);
 
-    QShortcut* clearShortcut = new QShortcut(QKeySequence("CTRL+L"), this);
+    auto* clearShortcut = new QShortcut(QKeySequence("CTRL+L"), this);
     connect(clearShortcut, &QShortcut::activated, this, &DownloadManager::clearList);
 
     loadSettings();
@@ -140,11 +140,11 @@ void DownloadManager::closeDownloadTab(QWebEngineDownloadItem *item) const
     if (!item->page()) {
         return;
     }
-    WebPage *page = qobject_cast<WebPage*>(item->page());
+    auto *page = qobject_cast<WebPage*>(item->page());
     if (!page) {
         return;
     }
-    TabbedWebView *view = qobject_cast<TabbedWebView*>(page->view());
+    auto *view = qobject_cast<TabbedWebView*>(page->view());
     if (!view) {
         return;
     }
@@ -192,7 +192,7 @@ void DownloadManager::timerEvent(QTimerEvent* e)
             return;
         }
         for (int i = 0; i < ui->list->count(); i++) {
-            DownloadItem* downItem = qobject_cast<DownloadItem*>(ui->list->itemWidget(ui->list->item(i)));
+            auto* downItem = qobject_cast<DownloadItem*>(ui->list->itemWidget(ui->list->item(i)));
             if (!downItem || downItem->isCancelled() || !downItem->isDownloading()) {
                 continue;
             }
@@ -241,7 +241,7 @@ void DownloadManager::clearList()
 {
     QList<DownloadItem*> items;
     for (int i = 0; i < ui->list->count(); i++) {
-        DownloadItem* downItem = qobject_cast<DownloadItem*>(ui->list->itemWidget(ui->list->item(i)));
+        auto* downItem = qobject_cast<DownloadItem*>(ui->list->itemWidget(ui->list->item(i)));
         if (!downItem) {
             continue;
         }
@@ -361,8 +361,8 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
     downloadItem->accept();
 
     // Create download item
-    QListWidgetItem* listItem = new QListWidgetItem(ui->list);
-    DownloadItem* downItem = new DownloadItem(listItem, downloadItem, QFileInfo(downloadPath).absolutePath(), QFileInfo(downloadPath).fileName(), openFile, this);
+    auto* listItem = new QListWidgetItem(ui->list);
+    auto* downItem = new DownloadItem(listItem, downloadItem, QFileInfo(downloadPath).absolutePath(), QFileInfo(downloadPath).fileName(), openFile, this);
     downItem->setDownTimer(downloadTimer);
     downItem->startDownloading();
     connect(downItem, &DownloadItem::deleteItem, this, &DownloadManager::deleteItem);
@@ -390,7 +390,7 @@ void DownloadManager::downloadFinished(bool success)
     m_activeDownloadsCount = 0;
     bool downloadingAllFilesFinished = true;
     for (int i = 0; i < ui->list->count(); i++) {
-        DownloadItem* downItem = qobject_cast<DownloadItem*>(ui->list->itemWidget(ui->list->item(i)));
+        auto* downItem = qobject_cast<DownloadItem*>(ui->list->itemWidget(ui->list->item(i)));
         if (!downItem) {
             continue;
         }
@@ -439,7 +439,7 @@ bool DownloadManager::canClose()
 
     bool isDownloading = false;
     for (int i = 0; i < ui->list->count(); i++) {
-        DownloadItem* downItem = qobject_cast<DownloadItem*>(ui->list->itemWidget(ui->list->item(i)));
+        auto* downItem = qobject_cast<DownloadItem*>(ui->list->itemWidget(ui->list->item(i)));
         if (!downItem) {
             continue;
         }

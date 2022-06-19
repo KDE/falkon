@@ -98,7 +98,7 @@ void TabListView::adjustStyleOption(QStyleOptionViewItem *option)
 QModelIndex TabListView::indexAfter(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return QModelIndex();
+        return {};
     }
     const QRect rect = visualRect(index);
     return indexAt(QPoint(rect.right() + rect.width() / 2, rect.y()));
@@ -107,7 +107,7 @@ QModelIndex TabListView::indexAfter(const QModelIndex &index) const
 QModelIndex TabListView::indexBefore(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return QModelIndex();
+        return {};
     }
     const QRect rect = visualRect(index);
     return indexAt(QPoint(rect.left() - rect.width() / 2, rect.y()));
@@ -149,9 +149,9 @@ bool TabListView::viewportEvent(QEvent *event)
 {
     switch (event->type()) {
     case QEvent::MouseButtonPress: {
-        QMouseEvent *me = static_cast<QMouseEvent*>(event);
+        auto *me = static_cast<QMouseEvent*>(event);
         const QModelIndex index = indexAt(me->pos());
-        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
         if (me->buttons() == Qt::MiddleButton && tab) {
             tab->closeTab();
         }
@@ -169,7 +169,7 @@ bool TabListView::viewportEvent(QEvent *event)
     }
 
     case QEvent::MouseButtonRelease: {
-        QMouseEvent *me = static_cast<QMouseEvent*>(event);
+        auto *me = static_cast<QMouseEvent*>(event);
         if (me->buttons() != Qt::NoButton) {
             break;
         }
@@ -179,7 +179,7 @@ bool TabListView::viewportEvent(QEvent *event)
         }
         DelegateButton button = buttonAt(me->pos(), index);
         if (m_pressedButton == button) {
-            WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+            auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
             if (tab && m_pressedButton == AudioButton) {
                 tab->toggleMuted();
             }
@@ -188,7 +188,7 @@ bool TabListView::viewportEvent(QEvent *event)
     }
 
     case QEvent::ToolTip: {
-        QHelpEvent *he = static_cast<QHelpEvent*>(event);
+        auto *he = static_cast<QHelpEvent*>(event);
         const QModelIndex index = indexAt(he->pos());
         DelegateButton button = buttonAt(he->pos(), index);
         if (button == AudioButton) {
@@ -205,9 +205,9 @@ bool TabListView::viewportEvent(QEvent *event)
     }
 
     case QEvent::ContextMenu: {
-        QContextMenuEvent *ce = static_cast<QContextMenuEvent*>(event);
+        auto *ce = static_cast<QContextMenuEvent*>(event);
         const QModelIndex index = indexAt(ce->pos());
-        WebTab *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
+        auto *tab = index.data(TabModel::WebTabRole).value<WebTab*>();
         const int tabIndex = tab ? tab->tabIndex() : -1;
         TabContextMenu::Options options = TabContextMenu::HorizontalTabs | TabContextMenu::ShowDetachTabAction;
         TabContextMenu menu(tabIndex, m_window, options);

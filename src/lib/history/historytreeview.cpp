@@ -82,7 +82,7 @@ QUrl HistoryTreeView::selectedUrl() const
     const QList<QModelIndex> indexes = selectionModel()->selectedRows();
 
     if (indexes.count() != 1)
-        return QUrl();
+        return {};
 
     // TopLevelItems have invalid (empty) UrlRole data
     return indexes.at(0).data(HistoryModel::UrlRole).toUrl();

@@ -662,7 +662,7 @@ void ComboTabBar::wheelEvent(QWheelEvent* event)
 bool ComboTabBar::eventFilter(QObject* obj, QEvent* ev)
 {
     if (obj == m_mainTabBar && ev->type() == QEvent::Resize) {
-        QResizeEvent* event = static_cast<QResizeEvent*>(ev);
+        auto* event = static_cast<QResizeEvent*>(ev);
         if (event->oldSize().height() != event->size().height()) {
             setUpLayout();
         }
@@ -1051,7 +1051,7 @@ QSize TabBarHelper::baseClassTabSizeHint(int index) const
 QRect TabBarHelper::draggedTabRect() const
 {
     if (!m_dragInProgress) {
-        return QRect();
+        return {};
     }
 
     QStyleOptionTab tab;
@@ -1512,8 +1512,7 @@ TabScrollBar::TabScrollBar(QWidget* parent)
 }
 
 TabScrollBar::~TabScrollBar()
-{
-}
+= default;
 
 bool TabScrollBar::isScrolling() const
 {
@@ -1574,7 +1573,7 @@ TabBarScrollWidget::TabBarScrollWidget(QTabBar* tabBar, QWidget* parent)
     connect(m_rightScrollButton, &ToolButton::doubleClicked, this, &TabBarScrollWidget::scrollToRightEdge);
     connect(m_rightScrollButton, SIGNAL(middleMouseClicked()), this, SLOT(ensureVisible()));
 
-    QHBoxLayout* hLayout = new QHBoxLayout;
+    auto* hLayout = new QHBoxLayout;
     hLayout->setSpacing(0);
     hLayout->setContentsMargins(0, 0, 0, 0);
     hLayout->addWidget(m_leftScrollButton);
@@ -1849,9 +1848,9 @@ void CloseButton::paintEvent(QPaintEvent*)
         opt.state |= QStyle::State_Sunken;
     }
 
-    if (TabBarHelper* tb = qobject_cast<TabBarHelper*>(parent())) {
+    if (auto* tb = qobject_cast<TabBarHelper*>(parent())) {
         int index = tb->currentIndex();
-        QTabBar::ButtonPosition closeSide = (QTabBar::ButtonPosition)style()->styleHint(QStyle::SH_TabBar_CloseButtonPosition, 0, tb);
+        auto closeSide = (QTabBar::ButtonPosition)style()->styleHint(QStyle::SH_TabBar_CloseButtonPosition, 0, tb);
         if (tb->tabButton(index, closeSide) == this && tb->isActiveTabBar()) {
             opt.state |= QStyle::State_Selected;
         }

@@ -131,7 +131,7 @@ QString QmlSideBarHelper::title() const
 
 QAction *QmlSideBarHelper::createMenuAction()
 {
-    QAction *action = new QAction(m_title);
+    auto *action = new QAction(m_title);
     action->setShortcut(QKeySequence(m_shortcut));
     action->setCheckable(m_checkable);
     if (!m_item) {
@@ -151,7 +151,7 @@ QWidget *QmlSideBarHelper::createSideBarWidget(BrowserWindow *mainWindow)
 {
     Q_UNUSED(mainWindow)
 
-    QQuickWidget *widget = new QQuickWidget();
+    auto *widget = new QQuickWidget();
     widget->setContent(m_item->url(), m_item, m_item->create(m_item->creationContext()));
     widget->setResizeMode(QQuickWidget::SizeRootObjectToView);
 

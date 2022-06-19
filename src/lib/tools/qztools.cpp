@@ -68,7 +68,7 @@ QByteArray QzTools::pixmapToByteArray(const QPixmap &pix)
         return buffer.buffer().toBase64();
     }
 
-    return QByteArray();
+    return {};
 }
 
 QPixmap QzTools::pixmapFromByteArray(const QByteArray &data)
@@ -110,7 +110,7 @@ QByteArray QzTools::readAllFileByteContents(const QString &filename)
         return a;
     }
 
-    return QByteArray();
+    return {};
 }
 
 void QzTools::centerWidgetOnScreen(QWidget* w)
@@ -204,7 +204,7 @@ QString QzTools::samePartOfStrings(const QString &one, const QString &other)
 {
     int maxSize = qMin(one.size(), other.size());
     if (maxSize <= 0) {
-        return QString();
+        return {};
     }
 
     int i = 0;
@@ -514,7 +514,7 @@ QString QzTools::resolveFromPath(const QString &name)
     const QString path = qgetenv("PATH").trimmed();
 
     if (path.isEmpty()) {
-        return QString();
+        return {};
     }
 
     const QStringList dirs = path.split(QLatin1Char(':'), QString::SkipEmptyParts);
@@ -644,14 +644,14 @@ static QString getFilename(const QString &path)
     }
 
     if (info.isDir()) {
-        return QString();
+        return {};
     }
 
     if (info.dir().exists()) {
         return info.fileName();
     }
 
-    return QString();
+    return {};
 }
 
 QString QzTools::getOpenFileName(const QString &name, QWidget* parent, const QString &caption, const QString &dir, const QString &filter, QString* selectedFilter, QFileDialog::Options options)
@@ -768,7 +768,7 @@ QStringList QzTools::splitCommandArguments(const QString &command)
     QString line = command.trimmed();
 
     if (line.isEmpty()) {
-        return QStringList();
+        return {};
     }
 
     QChar SPACE(' ');
@@ -835,7 +835,7 @@ QStringList QzTools::splitCommandArguments(const QString &command)
 
     // Unmatched quote
     if (inQuote) {
-        return QStringList();
+        return {};
     }
 
     return r;

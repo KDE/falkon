@@ -211,7 +211,7 @@ QIcon SearchEnginesManager::iconForSearchEngine(const QUrl &url)
 
 void SearchEnginesManager::engineChangedImage()
 {
-    OpenSearchEngine* engine = qobject_cast<OpenSearchEngine*>(sender());
+    auto* engine = qobject_cast<OpenSearchEngine*>(sender());
 
     if (!engine) {
         return;
@@ -379,7 +379,7 @@ void SearchEnginesManager::replyFinished()
 {
     qApp->restoreOverrideCursor();
 
-    QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
+    auto* reply = qobject_cast<QNetworkReply*>(sender());
     if (!reply) {
         return;
     }

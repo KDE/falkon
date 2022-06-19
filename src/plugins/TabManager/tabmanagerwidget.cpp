@@ -77,7 +77,7 @@ TabManagerWidget::TabManagerWidget(BrowserWindow* mainClass, QWidget* parent, bo
     ui->treeWidget->installEventFilter(this);
     ui->filterBar->installEventFilter(this);
 
-    QPushButton* closeButton = new QPushButton(ui->filterBar);
+    auto* closeButton = new QPushButton(ui->filterBar);
     closeButton->setFlat(true);
     closeButton->setIcon(style()->standardIcon(QStyle::SP_TitleBarCloseButton));
     ui->filterBar->addWidget(closeButton, LineEdit::RightSide);
@@ -122,7 +122,7 @@ QString TabManagerWidget::domainFromUrl(const QUrl &url, bool useHostName)
         return urlString.append(appendString);
     }
 
-    if (useHostName || host.contains(QRegExp("^[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+$"))) {
+    if (useHostName || host.contains(QRegExp(R"(^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$)"))) {
         if (host.startsWith("www.", Qt::CaseInsensitive)) {
             host.remove(0, 4);
         }
@@ -174,7 +174,7 @@ void TabManagerWidget::refreshTree()
         }
 
         for (int j = 0; j < winItem->childCount(); ++j) {
-            TabItem* tabItem = static_cast<TabItem*>(winItem->child(j));
+            auto* tabItem = static_cast<TabItem*>(winItem->child(j));
             if (!tabItem || tabItem->checkState(0) == Qt::Unchecked) {
                 continue;
             }
@@ -203,7 +203,7 @@ void TabManagerWidget::refreshTree()
         QTreeWidgetItem* winItem = ui->treeWidget->topLevelItem(i);
 
         for (int j = 0; j < winItem->childCount(); ++j) {
-            TabItem* tabItem = static_cast<TabItem*>(winItem->child(j));
+            auto* tabItem = static_cast<TabItem*>(winItem->child(j));
 
             if (tabItem && selectedTabs.contains(tabItem->webTab())) {
                 tabItem->setCheckState(0, Qt::Checked);
@@ -223,7 +223,7 @@ void TabManagerWidget::refreshTree()
 
 void TabManagerWidget::onItemActivated(QTreeWidgetItem* item, int column)
 {
-    TabItem* tabItem = static_cast<TabItem*>(item);
+    auto* tabItem = static_cast<TabItem*>(item);
     if (!tabItem) {
         return;
     }
@@ -276,7 +276,7 @@ void TabManagerWidget::customContextMenuRequested(const QPoint &pos)
 {
     QMenu* menu = nullptr;
 
-    TabItem* item = static_cast<TabItem*>(ui->treeWidget->itemAt(pos));
+    auto* item = static_cast<TabItem*>(ui->treeWidget->itemAt(pos));
 
     if (item) {
         BrowserWindow* mainWindow = item->window();
@@ -364,7 +364,7 @@ void TabManagerWidget::filterChanged(const QString &filter, bool force)
             QTreeWidgetItem* parentItem = ui->treeWidget->topLevelItem(i);
             int visibleChildCount = 0;
             for (int j = 0; j < parentItem->childCount(); ++j) {
-                TabItem* childItem = static_cast<TabItem*>(parentItem->child(j));
+                auto* childItem = static_cast<TabItem*>(parentItem->child(j));
                 if (!childItem) {
                     continue;
                 }
@@ -400,7 +400,7 @@ void TabManagerWidget::filterBarClosed()
 bool TabManagerWidget::eventFilter(QObject* obj, QEvent* event)
 {
     if (event->type() == QEvent::KeyPress) {
-        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        auto *keyEvent = static_cast<QKeyEvent *>(event);
         const QString text = keyEvent->text().simplified();
 
         if (obj == ui->treeWidget) {
@@ -463,7 +463,7 @@ void TabManagerWidget::processActions()
         }
 
         for (int j = 0; j < winItem->childCount(); ++j) {
-            TabItem* tabItem = static_cast<TabItem*>(winItem->child(j));
+            auto* tabItem = static_cast<TabItem*>(winItem->child(j));
             if (!tabItem || tabItem->checkState(0) == Qt::Unchecked) {
                 continue;
             }
@@ -503,7 +503,7 @@ void TabManagerWidget::processActions()
 
 void TabManagerWidget::changeGroupType()
 {
-    QAction* action = qobject_cast<QAction*>(sender());
+    auto* action = qobject_cast<QAction*>(sender());
 
     if (action) {
         int type = action->data().toInt();
@@ -568,12 +568,12 @@ void TabManagerWidget::detachSelectedTabs(const QHash<BrowserWindow*, WebTab*> &
 
 bool TabManagerWidget::bookmarkSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash)
 {
-    QDialog* dialog = new QDialog(getWindow(), Qt::WindowStaysOnTopHint | Qt::MSWindowsFixedSizeDialogHint);
-    QBoxLayout* layout = new QBoxLayout(QBoxLayout::TopToBottom, dialog);
-    QLabel* label = new QLabel(dialog);
-    BookmarksFoldersButton* folderButton = new BookmarksFoldersButton(dialog);
+    auto* dialog = new QDialog(getWindow(), Qt::WindowStaysOnTopHint | Qt::MSWindowsFixedSizeDialogHint);
+    auto* layout = new QBoxLayout(QBoxLayout::TopToBottom, dialog);
+    auto* label = new QLabel(dialog);
+    auto* folderButton = new BookmarksFoldersButton(dialog);
 
-    QDialogButtonBox* box = new QDialogButtonBox(dialog);
+    auto* box = new QDialogButtonBox(dialog);
     box->addButton(QDialogButtonBox::Ok);
     box->addButton(QDialogButtonBox::Cancel);
     QObject::connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
@@ -597,7 +597,7 @@ bool TabManagerWidget::bookmarkSelectedTabs(const QHash<BrowserWindow*, WebTab*>
 
     for (WebTab* tab : tabsHash) {
         if (!tab->url().isEmpty()) {
-            BookmarkItem* bookmark = new BookmarkItem(BookmarkItem::Url);
+            auto* bookmark = new BookmarkItem(BookmarkItem::Url);
             bookmark->setTitle(tab->title());
             bookmark->setUrl(tab->url());
             mApp->bookmarks()->addBookmark(folderButton->selectedFolder(), bookmark);
@@ -651,7 +651,7 @@ QTreeWidgetItem* TabManagerWidget::groupByDomainName(bool useHostName)
             QString domain = domainFromUrl(webTab->url(), useHostName);
 
             if (!tabsGroupedByDomain.contains(domain)) {
-                TabItem* groupItem = new TabItem(ui->treeWidget, false, false, 0, false);
+                auto* groupItem = new TabItem(ui->treeWidget, false, false, 0, false);
                 groupItem->setTitle(domain);
                 groupItem->setIsActiveOrCaption(true);
 
@@ -660,7 +660,7 @@ QTreeWidgetItem* TabManagerWidget::groupByDomainName(bool useHostName)
 
             QTreeWidgetItem* groupItem = tabsGroupedByDomain.value(domain);
 
-            TabItem* tabItem = new TabItem(ui->treeWidget, false, true, groupItem);
+            auto* tabItem = new TabItem(ui->treeWidget, false, true, groupItem);
             tabItem->setBrowserWindow(mainWin);
             tabItem->setWebTab(webTab);
 
@@ -700,7 +700,7 @@ QTreeWidgetItem* TabManagerWidget::groupByWindow()
 
     for (int win = 0; win < windows.count(); ++win) {
         BrowserWindow* mainWin = windows.at(win);
-        TabItem* winItem = new TabItem(ui->treeWidget, true, false);
+        auto* winItem = new TabItem(ui->treeWidget, true, false);
         winItem->setBrowserWindow(mainWin);
         winItem->setText(0, tr("Window %1").arg(QString::number(win + 1)));
         winItem->setToolTip(0, tr("Double click to switch"));
@@ -714,7 +714,7 @@ QTreeWidgetItem* TabManagerWidget::groupByWindow()
                 m_webPage = 0;
                 continue;
             }
-            TabItem* tabItem = new TabItem(ui->treeWidget, true, true, winItem);
+            auto* tabItem = new TabItem(ui->treeWidget, true, true, winItem);
             tabItem->setBrowserWindow(mainWin);
             tabItem->setWebTab(webTab);
 
@@ -882,13 +882,13 @@ QStringList TabTreeWidget::mimeTypes() const
 
 QMimeData *TabTreeWidget::mimeData(const QList<QTreeWidgetItem*> items) const
 {
-    QMimeData* mimeData = new QMimeData();
+    auto* mimeData = new QMimeData();
     QByteArray encodedData;
 
     QDataStream stream(&encodedData, QIODevice::WriteOnly);
 
     if (items.size() > 0) {
-        TabItem* tabItem = static_cast<TabItem*>(items.at(0));
+        auto* tabItem = static_cast<TabItem*>(items.at(0));
         if (!tabItem || !tabItem->isTab())
             return 0;
 
@@ -908,7 +908,7 @@ bool TabTreeWidget::dropMimeData(QTreeWidgetItem *parent, int index, const QMime
         return true;
     }
 
-    TabItem* parentItem = static_cast<TabItem*>(parent);
+    auto* parentItem = static_cast<TabItem*>(parent);
 
     if (!data->hasFormat(MIMETYPE) || !parentItem) {
         return false;
@@ -927,8 +927,8 @@ bool TabTreeWidget::dropMimeData(QTreeWidgetItem *parent, int index, const QMime
 
         stream >> windowPtr >> webTabPtr;
 
-        WebTab* webTab = (WebTab*) webTabPtr;
-        BrowserWindow* window = (BrowserWindow*) windowPtr;
+        auto* webTab = (WebTab*) webTabPtr;
+        auto* window = (BrowserWindow*) windowPtr;
 
         if (window == targetWindow) {
             if (index > 0 && webTab->tabIndex() < index)

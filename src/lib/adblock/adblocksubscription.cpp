@@ -124,7 +124,7 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
         if (line.isEmpty()) {
             continue;
         }
-        AdBlockRule *rule = new AdBlockRule(line, this);
+        auto *rule = new AdBlockRule(line, this);
         if (disabledRules.contains(rule->filter())) {
             rule->setEnabled(false);
         }

@@ -58,7 +58,7 @@ void HTML5PermissionsDialog::showFeaturePermissions(QWebEnginePage::Feature feat
 
     const auto grantedSites = m_granted.value(feature);
     for (const QString &site : grantedSites) {
-        QTreeWidgetItem* item = new QTreeWidgetItem(ui->treeWidget);
+        auto* item = new QTreeWidgetItem(ui->treeWidget);
         item->setText(0, site);
         item->setText(1, tr("Allow"));
         item->setData(0, Qt::UserRole + 10, Allow);
@@ -67,7 +67,7 @@ void HTML5PermissionsDialog::showFeaturePermissions(QWebEnginePage::Feature feat
 
     const auto deniedSites = m_denied.value(feature);
     for (const QString &site : deniedSites) {
-        QTreeWidgetItem* item = new QTreeWidgetItem(ui->treeWidget);
+        auto* item = new QTreeWidgetItem(ui->treeWidget);
         item->setText(0, site);
         item->setText(1, tr("Deny"));
         item->setData(0, Qt::UserRole + 10, Deny);

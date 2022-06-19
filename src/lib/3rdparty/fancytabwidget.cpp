@@ -56,7 +56,7 @@ void FancyTabProxyStyle::drawControl(
     QPainter* p, const QWidget* widget) const
 {
 
-    const QStyleOptionTab* v_opt = qstyleoption_cast<const QStyleOptionTab*>(option);
+    const auto* v_opt = qstyleoption_cast<const QStyleOptionTab*>(option);
 
     if (element != CE_TabBarTab || !v_opt) {
         QProxyStyle::drawControl(element, option, p, widget);
@@ -127,10 +127,10 @@ void FancyTabProxyStyle::drawControl(
 
         const QString tab_hover = widget->property("tab_hover").toString();
         int fader = widget->property(fader_key.toUtf8().constData()).toInt();
-        QPropertyAnimation* animation = widget->property(animation_key.toUtf8().constData()).value<QPropertyAnimation*>();
+        auto* animation = widget->property(animation_key.toUtf8().constData()).value<QPropertyAnimation*>();
 
         if (!animation) {
-            QWidget* mut_widget = const_cast<QWidget*>(widget);
+            auto* mut_widget = const_cast<QWidget*>(widget);
             fader = 0;
             mut_widget->setProperty(fader_key.toUtf8().constData(), fader);
             animation = new QPropertyAnimation(mut_widget, fader_key.toUtf8(), mut_widget);
@@ -193,9 +193,9 @@ void FancyTabProxyStyle::polish(QPalette &palette)
 
 bool FancyTabProxyStyle::eventFilter(QObject* o, QEvent* e)
 {
-    QTabBar* bar = qobject_cast<QTabBar*>(o);
+    auto* bar = qobject_cast<QTabBar*>(o);
     if (bar && (e->type() == QEvent::MouseMove || e->type() == QEvent::Leave)) {
-        QMouseEvent* event = static_cast<QMouseEvent*>(e);
+        auto* event = static_cast<QMouseEvent*>(e);
         const QString old_hovered_tab = bar->property("tab_hover").toString();
         const QString hovered_tab = e->type() == QEvent::Leave ? QString() : bar->tabText(bar->tabAt(event->pos()));
         bar->setProperty("tab_hover", hovered_tab);
@@ -250,7 +250,7 @@ FancyTabBar::FancyTabBar(QWidget* parent)
     setMouseTracking(true); // Needed for hover events
     m_triggerTimer.setSingleShot(true);
 
-    QVBoxLayout* layout = new QVBoxLayout;
+    auto* layout = new QVBoxLayout;
     layout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding));
     layout->setSpacing(0);
     layout->setContentsMargins(0, 0, 0, 0);
@@ -366,7 +366,7 @@ void FancyTabBar::mousePressEvent(QMouseEvent* e)
 
 void FancyTabBar::addTab(const QIcon &icon, const QString &label)
 {
-    FancyTab* tab = new FancyTab(this);
+    auto* tab = new FancyTab(this);
     tab->icon = icon;
     tab->text = label;
     m_tabs.append(tab);
@@ -512,7 +512,7 @@ FancyTabWidget::FancyTabWidget(QWidget* parent)
     top_layout_->setSpacing(0);
     top_layout_->addLayout(stack_);
 
-    QHBoxLayout* main_layout = new QHBoxLayout;
+    auto* main_layout = new QHBoxLayout;
     main_layout->setContentsMargins(0, 0, 0, 0);
     main_layout->setSpacing(1);
     main_layout->addWidget(side_widget_);
@@ -576,10 +576,10 @@ int FancyTabWidget::current_index() const
 
 void FancyTabWidget::SetCurrentIndex(int index)
 {
-    if (FancyTabBar* bar = qobject_cast<FancyTabBar*>(tab_bar_)) {
+    if (auto* bar = qobject_cast<FancyTabBar*>(tab_bar_)) {
         bar->setCurrentIndex(index);
     }
-    else if (QTabBar* bar = qobject_cast<QTabBar*>(tab_bar_)) {
+    else if (auto* bar = qobject_cast<QTabBar*>(tab_bar_)) {
         bar->setCurrentIndex(index);
     }
     else {
@@ -614,7 +614,7 @@ void FancyTabWidget::SetMode(Mode mode)
         // fallthrough
 
     case Mode_LargeSidebar: {
-        FancyTabBar* bar = new FancyTabBar(this);
+        auto* bar = new FancyTabBar(this);
         side_layout_->insertWidget(0, bar);
         tab_bar_ = bar;
 
@@ -697,7 +697,7 @@ void FancyTabWidget::AddMenuItem(QSignalMapper* mapper, QActionGroup* group,
 void FancyTabWidget::MakeTabBar(QTabBar::Shape shape, bool text, bool icons,
                                 bool fancy)
 {
-    QTabBar* bar = new QTabBar(this);
+    auto* bar = new QTabBar(this);
     bar->setShape(shape);
     bar->setDocumentMode(true);
     bar->setUsesScrollButtons(true);
