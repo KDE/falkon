@@ -40,7 +40,7 @@ public:
     bool mouseMove(Qz::ObjectName type, QObject *obj, QMouseEvent *event) override;
 
 private:
-    MouseGestures* m_gestures;
+    MouseGestures* m_gestures = nullptr;
 
 };
 

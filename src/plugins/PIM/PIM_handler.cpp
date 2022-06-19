@@ -112,7 +112,7 @@ void PIM_Handler::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTe
     }
 
     QMenu* pimMenu = new QMenu(tr("Insert Personal Information"));
-    pimMenu->setIcon(QIcon(":/PIM/data/PIM.png"));
+    pimMenu->setIcon(QIcon(QStringLiteral(":/PIM/data/PIM.png")));
 
     if (!m_allInfo[PI_FirstName].isEmpty() && !m_allInfo[PI_LastName].isEmpty()) {
         const QString fullname = m_allInfo[PI_FirstName] + QLatin1Char(' ') + m_allInfo[PI_LastName];

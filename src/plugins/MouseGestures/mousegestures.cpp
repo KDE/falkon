@@ -36,9 +36,6 @@ MouseGestures::MouseGestures(const QString &settingsPath, QObject* parent)
     , m_filter(0)
     , m_settingsFile(settingsPath + QL1S("/extensions.ini"))
     , m_button(Qt::MiddleButton)
-    , m_enableRockerNavigation(false)
-    , m_blockNextRightMouseRelease(false)
-    , m_blockNextLeftMouseRelease(false)
 {
     loadSettings();
 }

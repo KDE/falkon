@@ -76,10 +76,10 @@ private:
 
     QString m_settingsFile;
     Qt::MouseButton m_button;
-    bool m_enableRockerNavigation;
+    bool m_enableRockerNavigation = false;
 
-    bool m_blockNextRightMouseRelease;
-    bool m_blockNextLeftMouseRelease;
+    bool m_blockNextRightMouseRelease = false;
+    bool m_blockNextLeftMouseRelease = false;
 
     bool m_oldWebViewForceContextMenuOnRelease = false;
 };

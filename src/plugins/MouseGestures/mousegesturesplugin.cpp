@@ -24,7 +24,6 @@
 
 MouseGesturesPlugin::MouseGesturesPlugin()
     : QObject()
-    , m_gestures(0)
 {
 }
 
