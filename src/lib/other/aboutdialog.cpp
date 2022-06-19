@@ -25,6 +25,7 @@
 
 #include <QWebEnginePage>
 #include <QWebEngineProfile>
+#include <QtWebEngineCoreVersion>
 
 AboutDialog::AboutDialog(QWidget* parent)
     : QDialog(parent)
@@ -54,7 +55,7 @@ void AboutDialog::showAbout()
                        Qz::VERSION
 #endif
                    );
-    aboutHtml += tr("<b>QtWebEngine version %1</b></p>").arg(qVersion());
+    aboutHtml += tr("<b>QtWebEngine version %1</b></p>").arg(QStringLiteral(QTWEBENGINECORE_VERSION_STR));
     aboutHtml += QString("<p>&copy; %1 %2<br/>").arg(Qz::COPYRIGHT, Qz::AUTHOR);
     aboutHtml += QString("<a href=%1>%1</a></p>").arg(Qz::WWWADDRESS);
     aboutHtml += "<p>" + mApp->userAgentManager()->defaultUserAgent() + "</p>";
