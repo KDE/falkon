@@ -22,7 +22,7 @@ QmlEngine::QmlEngine(QObject *parent)
 {
 }
 
-QString QmlEngine::extensionName()
+QString QmlEngine::extensionName() const
 {
     return m_extensionName;
 }
@@ -32,7 +32,7 @@ void QmlEngine::setExtensionName(const QString &name)
     m_extensionName = name;
 }
 
-QString QmlEngine::extensionPath()
+QString QmlEngine::extensionPath() const
 {
     return m_extensionPath;
 }

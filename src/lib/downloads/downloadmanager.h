@@ -51,7 +51,7 @@ public:
         bool askWhatToDo;
         bool forceChoosingPath;
 
-        DownloadInfo(WebPage* p = 0) {
+        DownloadInfo(WebPage* p = nullptr) {
             page = p;
             suggestedFileName = QString();
             askWhatToDo = true;

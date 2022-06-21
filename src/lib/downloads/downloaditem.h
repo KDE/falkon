@@ -43,10 +43,10 @@ class FALKON_EXPORT DownloadItem : public QWidget
 
 public:
     explicit DownloadItem(QListWidgetItem* item, QWebEngineDownloadItem* downloadItem, const QString &path, const QString &fileName, bool openFile, DownloadManager* manager);
-    bool isDownloading() { return m_downloading; }
+    bool isDownloading() const { return m_downloading; }
     bool isCancelled();
-    QTime remainingTime() { return m_remTime; }
-    double currentSpeed() { return m_currSpeed; }
+    QTime remainingTime() const { return m_remTime; }
+    double currentSpeed() const { return m_currSpeed; }
     int progress();
     ~DownloadItem();
     void setDownTimer(const QTime &timer) { m_downTimer = timer; }

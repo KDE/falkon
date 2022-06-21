@@ -26,7 +26,7 @@
 class FALKON_EXPORT HistoryItem
 {
 public:
-    explicit HistoryItem(HistoryItem* parent = 0);
+    explicit HistoryItem(HistoryItem* parent = nullptr);
     ~HistoryItem();
 
     void changeParent(HistoryItem* parent);

@@ -24,9 +24,9 @@ class QmlEngine : public QQmlEngine
     Q_OBJECT
 public:
     explicit QmlEngine(QObject *parent = nullptr);
-    QString extensionName();
+    QString extensionName() const;
     void setExtensionName(const QString &name);
-    QString extensionPath();
+    QString extensionPath() const;
     void setExtensionPath(const QString &path);
 private:
     QString m_extensionName;
