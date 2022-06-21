@@ -16,7 +16,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "tabmanagerplugin.h"
-#include "tabmanagerwidgetcontroller.h"
 #include "tabmanagerwidget.h"
 #include "browserwindow.h"
 #include "pluginproxy.h"

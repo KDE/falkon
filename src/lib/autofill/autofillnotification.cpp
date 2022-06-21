@@ -17,9 +17,7 @@
 * ============================================================ */
 #include "autofillnotification.h"
 #include "ui_autofillnotification.h"
-#include "autofill.h"
 #include "mainapplication.h"
-#include "animatedwidget.h"
 #include "iconprovider.h"
 
 AutoFillNotification::AutoFillNotification(const QUrl &url, const PageFormData &formData, const PasswordEntry &updateData)

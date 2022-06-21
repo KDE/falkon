@@ -17,7 +17,6 @@
 * ============================================================ */
 #include "qmlhistoryapitest.h"
 #include "autotests.h"
-#include "qmltesthelper.h"
 #include "mainapplication.h"
 #include "history.h"
 #include "qml/api/history/qmlhistoryitem.h"

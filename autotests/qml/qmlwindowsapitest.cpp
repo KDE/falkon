@@ -17,7 +17,6 @@
 * ============================================================ */
 #include "qmlwindowsapitest.h"
 #include "autotests.h"
-#include "qmltesthelper.h"
 #include "mainapplication.h"
 #include "qml/api/windows/qmlwindow.h"
 #include "pluginproxy.h"

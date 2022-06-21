@@ -21,7 +21,6 @@
 #include "webpage.h"
 #include "browserwindow.h"
 #include "mainapplication.h"
-#include "webtab.h"
 #include "clickablelabel.h"
 #include "closedtabsmanager.h"
 #include "locationbar.h"

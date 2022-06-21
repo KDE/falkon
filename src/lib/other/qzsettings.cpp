@@ -16,7 +16,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qzsettings.h"
-#include "settings.h"
 #include "webview.h"
 
 QzSettings::QzSettings()

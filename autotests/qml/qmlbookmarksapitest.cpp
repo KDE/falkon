@@ -19,7 +19,6 @@
 #include "autotests.h"
 #include "mainapplication.h"
 #include "bookmarks.h"
-#include "bookmarkitem.h"
 #include "qml/api/bookmarks/qmlbookmarktreenode.h"
 
 void QmlBookmarksApiTest::initTestCase()

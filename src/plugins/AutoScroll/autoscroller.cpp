@@ -24,7 +24,6 @@
 #include <QApplication>
 #include <QMouseEvent>
 #include <QSettings>
-#include <QLabel>
 #include <QIcon>
 
 ScrollIndicator::ScrollIndicator(QWidget *parent)

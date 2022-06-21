@@ -22,7 +22,6 @@
 #include "iconprovider.h"
 #include "mainapplication.h"
 #include "opensearchreader.h"
-#include "opensearchengine.h"
 #include "settings.h"
 #include "qzsettings.h"
 #include "webview.h"

@@ -20,7 +20,6 @@
 
 #include <QDir>
 #include <QFileDialog>
-#include <QVariantList>
 #include <QJsonDocument>
 
 ChromeImporter::ChromeImporter(QObject* parent)

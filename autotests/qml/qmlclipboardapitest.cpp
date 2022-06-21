@@ -17,7 +17,6 @@
 * ============================================================ */
 #include "qmlclipboardapitest.h"
 #include "autotests.h"
-#include "qmltesthelper.h"
 #include "mainapplication.h"
 #include <QClipboard>
 

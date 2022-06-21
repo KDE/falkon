@@ -32,7 +32,6 @@
 #include <QPropertyAnimation>
 #include <QScrollArea>
 #include <QTimer>
-#include <QTabBar>
 #include <QMouseEvent>
 #include <QApplication>
 #include <QToolTip>

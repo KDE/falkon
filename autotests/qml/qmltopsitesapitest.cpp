@@ -17,7 +17,6 @@
 * ============================================================ */
 #include "qmltopsitesapitest.h"
 #include "autotests.h"
-#include "qmltesthelper.h"
 #include "mainapplication.h"
 #include "pluginproxy.h"
 #include "speeddial.h"

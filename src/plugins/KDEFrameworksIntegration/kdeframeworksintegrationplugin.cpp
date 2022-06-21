@@ -30,7 +30,6 @@
 #include <KCrash>
 #include <KAboutData>
 #include <KProtocolInfo>
-#include <PurposeWidgets/Menu>
 #include <Purpose/AlternativesModel>
 
 #include <QWebEngineProfile>

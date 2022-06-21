@@ -39,7 +39,6 @@
 #include <QNetworkReply>
 #include <QNetworkProxy>
 #include <QWebEngineProfile>
-#include <QWebEngineCertificateError>
 #include <QtWebEngineWidgetsVersion>
 
 #include <QWebEngineUrlScheme>

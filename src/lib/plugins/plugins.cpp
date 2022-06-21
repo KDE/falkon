@@ -16,7 +16,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "pluginproxy.h"
-#include "plugininterface.h"
 #include "mainapplication.h"
 #include "speeddial.h"
 #include "settings.h"

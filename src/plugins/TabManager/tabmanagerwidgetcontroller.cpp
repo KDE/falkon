@@ -17,7 +17,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "tabmanagerwidgetcontroller.h"
-#include "tabmanagerwidget.h"
 #include "abstractbuttoninterface.h"
 #include "browserwindow.h"
 #include "tabwidget.h"

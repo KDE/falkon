@@ -20,7 +20,6 @@
 #include "bookmarks.h"
 
 #include <QApplication>
-#include <QMimeData>
 #include <QTimer>
 #include <QStyle>
 

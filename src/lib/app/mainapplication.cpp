@@ -34,7 +34,6 @@
 #include "checkboxdialog.h"
 #include "networkmanager.h"
 #include "profilemanager.h"
-#include "restoremanager.h"
 #include "browsinglibrary.h"
 #include "downloadmanager.h"
 #include "clearprivatedata.h"

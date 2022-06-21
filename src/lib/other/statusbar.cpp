@@ -19,7 +19,6 @@
 #include "browserwindow.h"
 #include "tabwidget.h"
 #include "tabbedwebview.h"
-#include "squeezelabelv1.h"
 #include "mainapplication.h"
 #include "webpage.h"
 #include "proxystyle.h"
@@ -28,7 +27,6 @@
 #include "clickablelabel.h"
 
 #include <QStyleOptionFrame>
-#include <QStatusBar>
 #include <QToolTip>
 #include <QStylePainter>
 #include <QTimer>

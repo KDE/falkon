@@ -17,7 +17,6 @@
 * ============================================================ */
 #include "qmlcookiesapitest.h"
 #include "autotests.h"
-#include "qmltesthelper.h"
 #include "mainapplication.h"
 #include "cookiejar.h"
 #include "qml/api/cookies/qmlcookie.h"

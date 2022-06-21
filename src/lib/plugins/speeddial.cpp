@@ -25,7 +25,6 @@
 #include <QDir>
 #include <QCryptographicHash>
 #include <QFileDialog>
-#include <QWebEnginePage>
 #include <QImage>
 #include <QJsonDocument>
 

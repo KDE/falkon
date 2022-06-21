@@ -50,7 +50,6 @@
 
 #include <QUrl>
 #include <QString>
-#include <QStringList>
 #include <QWebEnginePage>
 #include <QWebEngineUrlRequestInfo>
 

@@ -17,7 +17,6 @@
 * ============================================================ */
 #include "qmluserscriptapitest.h"
 #include "autotests.h"
-#include "qmltesthelper.h"
 #include "mainapplication.h"
 #include <QWebEngineProfile>
 #include <QWebEngineScript>

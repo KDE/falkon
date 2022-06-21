@@ -17,7 +17,6 @@
 * ============================================================ */
 #include "qmltabsapitest.h"
 #include "autotests.h"
-#include "qmltesthelper.h"
 #include "mainapplication.h"
 #include "tabwidget.h"
 

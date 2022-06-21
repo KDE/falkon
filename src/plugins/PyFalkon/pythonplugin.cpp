@@ -17,7 +17,6 @@
 * ============================================================ */
 #include "pythonplugin.h"
 
-#include "plugins.h"
 #include "datapaths.h"
 #include "desktopfile.h"
 

@@ -21,7 +21,6 @@
 #include <QUrl>
 #include <QDir>
 #include <QFileDialog>
-#include <QTextStream>
 
 OperaImporter::OperaImporter(QObject* parent)
     : BookmarksImporter(parent)

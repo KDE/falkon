@@ -44,7 +44,6 @@
  */
 #include "adblocksubscription.h"
 #include "adblockmanager.h"
-#include "adblocksearchtree.h"
 #include "mainapplication.h"
 #include "networkmanager.h"
 #include "datapaths.h"
