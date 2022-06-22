@@ -228,7 +228,7 @@ QString SpeedDial::initialScript()
 
 void SpeedDial::changed(const QString &allPages)
 {
-    const QStringList entries = allPages.split(QLatin1String("\";"), QString::SkipEmptyParts);
+    const QStringList entries = allPages.split(QLatin1String("\";"), Qt::SkipEmptyParts);
     m_pages.clear();
 
     for (const QString &entry : entries) {
@@ -236,7 +236,7 @@ void SpeedDial::changed(const QString &allPages)
             continue;
         }
 
-        const QStringList tmp = entry.split(QLatin1String("\"|"), QString::SkipEmptyParts);
+        const QStringList tmp = entry.split(QLatin1String("\"|"), Qt::SkipEmptyParts);
         if (tmp.count() != 2) {
             continue;
         }

@@ -185,7 +185,7 @@ void TabManagerDelegate::viewItemDrawText(QPainter *p, const QStyleOptionViewIte
 
     if (!searchText.isEmpty()) {
         QList<int> delimiters;
-        QStringList searchStrings = searchText.split(QLatin1Char(' '), QString::SkipEmptyParts);
+        QStringList searchStrings = searchText.split(QLatin1Char(' '), Qt::SkipEmptyParts);
         // Look for longer parts first
         std::sort(searchStrings.begin(), searchStrings.end(), sizeBiggerThan);
 

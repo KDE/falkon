@@ -411,7 +411,7 @@ void FCM_Plugin::insertFlashCookie(const QString &path)
     }
 
     QString fileStr = QString(file);
-    fileStr = fileStr.split(QL1C('.'), QString::SkipEmptyParts).join(QL1S("\n"));
+    fileStr = fileStr.split(QL1C('.'), Qt::SkipEmptyParts).join(QL1S("\n"));
 
     QFileInfo solFileInfo(solFile);
 

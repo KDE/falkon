@@ -30,7 +30,7 @@ VerticalTabsSchemeHandler::VerticalTabsSchemeHandler(QObject *parent)
 
 void VerticalTabsSchemeHandler::requestStarted(QWebEngineUrlRequestJob *job)
 {
-    const auto parts = job->requestUrl().path().split(QL1C('/'), QString::SkipEmptyParts);
+    const auto parts = job->requestUrl().path().split(QL1C('/'), Qt::SkipEmptyParts);
     if (!parts.isEmpty()) {
         if (parts.at(0) == QL1S("group")) {
             setReply(job, QByteArrayLiteral("text/html"), groupPage());
