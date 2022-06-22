@@ -11,7 +11,20 @@ set( StatusBarIcons_SRCS
 	sbi_settingsdialog.cpp
 	sbi_icon.cpp
 	sbi_zoomwidget.cpp
-	)
+
+        statusbariconsplugin.h
+        sbi_iconsmanager.h
+        sbi_imagesicon.h
+        sbi_javascripticon.h
+        sbi_networkicon.h
+        sbi_networkproxy.h
+        sbi_proxywidget.h
+        sbi_networkicondialog.h
+        sbi_networkmanager.h
+        sbi_settingsdialog.h
+        sbi_icon.h
+        sbi_zoomwidget.h
+    )
 
 ecm_create_qm_loader( StatusBarIcons_SRCS falkon_statusbaricons_qt )
 

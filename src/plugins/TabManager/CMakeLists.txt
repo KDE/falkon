@@ -5,7 +5,13 @@ set( TabManager_SRCS
 	tabmanagersettings.cpp
 	tabmanagerdelegate.cpp
 	tldextractor/tldextractor.cpp
-	)
+        tabmanagerplugin.h
+        tabmanagerwidget.h
+        tabmanagerwidgetcontroller.h
+        tabmanagersettings.h
+        tabmanagerdelegate.h
+        tldextractor/tldextractor.h
+        )
 
 ecm_create_qm_loader( TabManager_SRCS falkon_tabmanager_qt )
 

@@ -10,6 +10,17 @@ set( VerticalTabs_SRCS
     tablistview.cpp
     tablistdelegate.cpp
     verticaltabsschemehandler.cpp
+    verticaltabsplugin.h
+    verticaltabscontroller.h
+    verticaltabswidget.h
+    verticaltabssettings.h
+    tabtreeview.h
+    tabtreedelegate.h
+    loadinganimator.h
+    tabfiltermodel.h
+    tablistview.h
+    tablistdelegate.h
+    verticaltabsschemehandler.h
 )
 
 ecm_create_qm_loader( VerticalTabs_SRCS falkon_verticaltabs_qt )
