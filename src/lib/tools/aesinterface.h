@@ -39,7 +39,7 @@ public:
     explicit AesInterface(QObject* parent = nullptr);
     ~AesInterface();
 
-    bool isOk();
+    bool isOk() const;
 
     QByteArray encrypt(const QByteArray &plainData, const QByteArray &password);
     QByteArray decrypt(const QByteArray &cipherData, const QByteArray &password);
@@ -53,7 +53,7 @@ private:
     EVP_CIPHER_CTX* m_encodeCTX;
     EVP_CIPHER_CTX* m_decodeCTX;
 
-    bool m_ok;
+    bool m_ok = false;
     QByteArray m_iVector;
 };
 #endif //AESINTERFACE_H

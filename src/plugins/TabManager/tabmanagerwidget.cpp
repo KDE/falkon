@@ -513,7 +513,7 @@ void TabManagerWidget::changeGroupType()
 
             delayedRefreshTree();
 
-            emit groupTypeChanged(m_groupType);
+            Q_EMIT groupTypeChanged(m_groupType);
         }
     }
 }
@@ -944,7 +944,7 @@ bool TabTreeWidget::dropMimeData(QTreeWidgetItem *parent, int index, const QMime
                 targetWindow->tabWidget()->tabBar()->moveTab(webTab->tabIndex(), index);
 
                 if (!webTab->isCurrentTab())
-                    emit requestRefreshTree();
+                    Q_EMIT requestRefreshTree();
             }
             else {
                 return false;

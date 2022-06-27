@@ -75,7 +75,7 @@ void AdBlockManager::setEnabled(bool enabled)
     }
 
     m_enabled = enabled;
-    emit enabledChanged(enabled);
+    Q_EMIT enabledChanged(enabled);
 
     Settings settings;
     settings.beginGroup(QSL("AdBlock"));
@@ -144,7 +144,7 @@ QVector<AdBlockedRequest> AdBlockManager::blockedRequestsForUrl(const QUrl &url)
 void AdBlockManager::clearBlockedRequestsForUrl(const QUrl &url)
 {
     if (m_blockedRequests.remove(url)) {
-        emit blockedRequestsChanged(url);
+        Q_EMIT blockedRequestsChanged(url);
     }
 }
 
@@ -350,7 +350,7 @@ void AdBlockManager::load()
 
     connect(m_interceptor, &AdBlockUrlInterceptor::requestBlocked, this, [this](const AdBlockedRequest &request) {
         m_blockedRequests[request.firstPartyUrl].append(request);
-        emit blockedRequestsChanged(request.firstPartyUrl);
+        Q_EMIT blockedRequestsChanged(request.firstPartyUrl);
     });
 
     mApp->networkManager()->installUrlInterceptor(m_interceptor);

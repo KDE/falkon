@@ -54,7 +54,7 @@ void GM_Downloader::scriptDownloaded()
 
     if (m_reply->error() != QNetworkReply::NoError) {
         qWarning() << "GreaseMonkey: Cannot download script" << m_reply->errorString();
-        emit error();
+        Q_EMIT error();
         return;
     }
 
@@ -62,7 +62,7 @@ void GM_Downloader::scriptDownloaded()
 
     if (!response.contains(QByteArray("// ==UserScript=="))) {
         qWarning() << "GreaseMonkey: Script does not contain UserScript header" << m_reply->request().url();
-        emit error();
+        Q_EMIT error();
         return;
     }
 
@@ -75,14 +75,14 @@ void GM_Downloader::scriptDownloaded()
 
     if (!file.open(QFile::WriteOnly)) {
         qWarning() << "GreaseMonkey: Cannot open file for writing" << m_fileName;
-        emit error();
+        Q_EMIT error();
         return;
     }
 
     file.write(response);
     file.close();
 
-    emit finished(m_fileName);
+    Q_EMIT finished(m_fileName);
 }
 
 void GM_Downloader::requireDownloaded()
@@ -93,13 +93,13 @@ void GM_Downloader::requireDownloaded()
     m_reply->deleteLater();
 
     if (m_reply != qobject_cast<QNetworkReply*>(sender())) {
-        emit error();
+        Q_EMIT error();
         return;
     }
 
     if (m_reply->error() != QNetworkReply::NoError) {
         qWarning() << "GreaseMonkey: Cannot download require script" << m_reply->errorString();
-        emit error();
+        Q_EMIT error();
         return;
     }
 
@@ -107,7 +107,7 @@ void GM_Downloader::requireDownloaded()
 
     if (response.isEmpty()) {
         qWarning() << "GreaseMonkey: Empty script downloaded" << m_reply->request().url();
-        emit error();
+        Q_EMIT error();
         return;
     }
 
@@ -135,7 +135,7 @@ void GM_Downloader::requireDownloaded()
 
     if (!file.open(QFile::WriteOnly)) {
         qWarning() << "GreaseMonkey: Cannot open file for writing" << m_fileName;
-        emit error();
+        Q_EMIT error();
         return;
     }
 
@@ -144,5 +144,5 @@ void GM_Downloader::requireDownloaded()
 
     settings.setValue(m_reply->request().url().toString(), QFileInfo(m_fileName).fileName());
 
-    emit finished(m_fileName);
+    Q_EMIT finished(m_fileName);
 }

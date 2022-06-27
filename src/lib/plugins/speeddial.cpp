@@ -130,7 +130,7 @@ void SpeedDial::addPage(const QUrl &url, const QString &title)
     m_pages.append(page);
     m_regenerateScript = true;
 
-    emit pagesChanged();
+    Q_EMIT pagesChanged();
 }
 
 void SpeedDial::removePage(const Page &page)
@@ -145,7 +145,7 @@ void SpeedDial::removePage(const Page &page)
     m_pages.removeAll(page);
     m_regenerateScript = true;
 
-    emit pagesChanged();
+    Q_EMIT pagesChanged();
 }
 
 int SpeedDial::pagesInRow()
@@ -252,7 +252,7 @@ void SpeedDial::changed(const QString &allPages)
     }
 
     m_regenerateScript = true;
-    emit pagesChanged();
+    Q_EMIT pagesChanged();
 }
 
 void SpeedDial::loadThumbnail(const QString &url, bool loadTitle)
@@ -345,9 +345,9 @@ void SpeedDial::thumbnailCreated(const QPixmap &pixmap)
     thumbnailer->deleteLater();
 
     if (loadTitle)
-        emit pageTitleLoaded(url, title);
+        Q_EMIT pageTitleLoaded(url, title);
 
-    emit thumbnailLoaded(url, QzTools::pixmapToDataUrl(QPixmap(fileName)).toString());
+    Q_EMIT thumbnailLoaded(url, QzTools::pixmapToDataUrl(QPixmap(fileName)).toString());
 }
 
 QString SpeedDial::escapeTitle(QString title) const

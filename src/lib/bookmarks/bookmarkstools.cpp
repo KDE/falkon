@@ -54,7 +54,7 @@ void BookmarksFoldersMenu::folderChoosed()
 {
     if (auto* act = qobject_cast<QAction*>(sender())) {
         BookmarkItem* folder = static_cast<BookmarkItem*>(act->data().value<void*>());
-        emit folderSelected(folder);
+        Q_EMIT folderSelected(folder);
     }
 }
 
@@ -115,7 +115,7 @@ void BookmarksFoldersButton::setSelectedFolder(BookmarkItem* folder)
     setIcon(folder->icon());
 
     if (sender()) {
-        emit selectedFolderChanged(folder);
+        Q_EMIT selectedFolderChanged(folder);
     }
 }
 

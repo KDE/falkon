@@ -43,7 +43,7 @@ SiteInfo::SiteInfo(WebView *view)
     , ui(new Ui::SiteInfo)
     , m_certWidget(0)
     , m_view(view)
-    , m_imageReply(Q_NULLPTR)
+    , m_imageReply(nullptr)
     , m_baseUrl(view->url())
 {
     setAttribute(Qt::WA_DeleteOnClose);

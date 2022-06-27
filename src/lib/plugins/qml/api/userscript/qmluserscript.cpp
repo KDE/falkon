@@ -51,7 +51,7 @@ QString QmlUserScript::name() const
 void QmlUserScript::setName(const QString &name)
 {
     m_webEngineScript.setName(name);
-    emit nameChanged(name);
+    Q_EMIT nameChanged(name);
     aboutToUpdateUnderlyingScript();
 }
 
@@ -63,7 +63,7 @@ bool QmlUserScript::runsOnSubFrames() const
 void QmlUserScript::setRunsOnSubFrames(bool runsOnSubFrames)
 {
     m_webEngineScript.setRunsOnSubFrames(runsOnSubFrames);
-    emit runsOnSubFramesChanged(runsOnSubFrames);
+    Q_EMIT runsOnSubFramesChanged(runsOnSubFrames);
     aboutToUpdateUnderlyingScript();
 }
 
@@ -87,7 +87,7 @@ void QmlUserScript::setWorldId(int worldId)
     default:
         break;
     }
-    emit worldIdChanged(worldId);
+    Q_EMIT worldIdChanged(worldId);
     aboutToUpdateUnderlyingScript();
 }
 
@@ -99,7 +99,7 @@ QString QmlUserScript::sourceCode() const
 void QmlUserScript::setSourceCode(const QString &sourceCode)
 {
     m_webEngineScript.setSourceCode(sourceCode);
-    emit sourceCodeChanged(sourceCode);
+    Q_EMIT sourceCodeChanged(sourceCode);
     aboutToUpdateUnderlyingScript();
 }
 
@@ -123,7 +123,7 @@ void QmlUserScript::setInjectionPoint(InjectionPoint injectionPoint)
     default:
         break;
     }
-    emit injectionPointChanged(injectionPoint);
+    Q_EMIT injectionPointChanged(injectionPoint);
     aboutToUpdateUnderlyingScript();
 }
 

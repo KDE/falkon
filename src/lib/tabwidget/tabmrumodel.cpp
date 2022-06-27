@@ -169,7 +169,7 @@ void TabMruModel::currentTabChanged(int index)
 
 void TabMruModel::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles)
 {
-    emit dataChanged(mapFromSource(topLeft), mapFromSource(bottomRight), roles);
+    Q_EMIT dataChanged(mapFromSource(topLeft), mapFromSource(bottomRight), roles);
 }
 
 void TabMruModel::sourceRowsInserted(const QModelIndex &parent, int start, int end)

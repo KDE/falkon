@@ -232,7 +232,7 @@ void TabModel::tabInserted(int index)
 
     auto emitDataChanged = [this](WebTab *tab, int role) {
         const QModelIndex idx = tabIndex(tab);
-        emit dataChanged(idx, idx, {role});
+        Q_EMIT dataChanged(idx, idx, {role});
     };
 
     connect(tab, &WebTab::titleChanged, this, std::bind(emitDataChanged, tab, Qt::DisplayRole));

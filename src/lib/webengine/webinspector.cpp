@@ -33,7 +33,7 @@ QList<QWebEngineView*> WebInspector::s_views;
 
 WebInspector::WebInspector(QWidget *parent)
     : QWebEngineView(parent)
-    , m_view(Q_NULLPTR)
+    , m_view(nullptr)
 {
     setAttribute(Qt::WA_DeleteOnClose);
     setObjectName(QSL("web-inspector"));

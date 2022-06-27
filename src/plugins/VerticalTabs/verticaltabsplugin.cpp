@@ -119,7 +119,7 @@ void VerticalTabsPlugin::setViewType(ViewType type)
     QSettings settings(m_settingsPath, QSettings::IniFormat);
     settings.setValue(QSL("VerticalTabs/ViewType"), m_viewType);
 
-    emit viewTypeChanged(m_viewType);
+    Q_EMIT viewTypeChanged(m_viewType);
 }
 
 bool VerticalTabsPlugin::replaceTabBar() const
@@ -212,5 +212,5 @@ void VerticalTabsPlugin::loadStyleSheet(const QString &theme)
     }
 
     m_styleSheet = QString::fromUtf8(file.readAll());
-    emit styleSheetChanged(m_styleSheet);
+    Q_EMIT styleSheetChanged(m_styleSheet);
 }

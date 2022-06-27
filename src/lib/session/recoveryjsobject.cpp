@@ -29,7 +29,7 @@
 RecoveryJsObject::RecoveryJsObject(RestoreManager *manager)
     : QObject()
     , m_manager(manager)
-    , m_page(Q_NULLPTR)
+    , m_page(nullptr)
 {
 }
 

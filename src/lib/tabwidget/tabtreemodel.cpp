@@ -307,7 +307,7 @@ TabTreeModelItem *TabTreeModel::createItems(TabTreeModelItem *root)
 
 void TabTreeModel::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles)
 {
-    emit dataChanged(mapFromSource(topLeft), mapFromSource(bottomRight), roles);
+    Q_EMIT dataChanged(mapFromSource(topLeft), mapFromSource(bottomRight), roles);
 }
 
 void TabTreeModel::sourceRowsInserted(const QModelIndex &parent, int start, int end)

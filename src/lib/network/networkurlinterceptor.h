@@ -29,7 +29,7 @@ class UrlInterceptor;
 class FALKON_EXPORT NetworkUrlInterceptor : public QWebEngineUrlRequestInterceptor
 {
 public:
-    explicit NetworkUrlInterceptor(QObject* parent = Q_NULLPTR);
+    explicit NetworkUrlInterceptor(QObject* parent = nullptr);
 
     void interceptRequest(QWebEngineUrlRequestInfo &info) Q_DECL_OVERRIDE;
 

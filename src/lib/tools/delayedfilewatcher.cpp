@@ -51,10 +51,10 @@ void DelayedFileWatcher::slotFileChanged(const QString &path)
 
 void DelayedFileWatcher::dequeueDirectory()
 {
-    emit delayedDirectoryChanged(m_dirQueue.dequeue());
+    Q_EMIT delayedDirectoryChanged(m_dirQueue.dequeue());
 }
 
 void DelayedFileWatcher::dequeueFile()
 {
-    emit delayedFileChanged(m_fileQueue.dequeue());
+    Q_EMIT delayedFileChanged(m_fileQueue.dequeue());
 }

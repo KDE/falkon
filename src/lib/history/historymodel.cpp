@@ -148,7 +148,7 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
 
     if (role == IconRole) {
         item->setIcon(value.value<QIcon>());
-        emit dataChanged(index, index);
+        Q_EMIT dataChanged(index, index);
         return true;
     }
 
@@ -186,7 +186,7 @@ QModelIndex HistoryModel::parent(const QModelIndex &index) const
 Qt::ItemFlags HistoryModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return 0;
+        return Qt::NoItemFlags;
     }
 
     return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
@@ -535,7 +535,7 @@ void HistoryFilterModel::setFilterFixedString(const QString &pattern)
 void HistoryFilterModel::startFiltering()
 {
     if (m_pattern.isEmpty()) {
-        emit collapseAllItems();
+        Q_EMIT collapseAllItems();
         QSortFilterProxyModel::setFilterFixedString(m_pattern);
         return;
     }
@@ -543,7 +543,7 @@ void HistoryFilterModel::startFiltering()
     QApplication::setOverrideCursor(Qt::WaitCursor);
 
     // Expand all items also calls fetchmore
-    emit expandAllItems();
+    Q_EMIT expandAllItems();
 
     QSortFilterProxyModel::setFilterFixedString(m_pattern);
 

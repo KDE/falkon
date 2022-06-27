@@ -218,20 +218,20 @@ bool PluginProxy::acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEn
 
 void PluginProxy::emitWebPageCreated(WebPage* page)
 {
-    emit webPageCreated(page);
+    Q_EMIT webPageCreated(page);
 }
 
 void PluginProxy::emitWebPageDeleted(WebPage* page)
 {
-    emit webPageDeleted(page);
+    Q_EMIT webPageDeleted(page);
 }
 
 void PluginProxy::emitMainWindowCreated(BrowserWindow* window)
 {
-    emit mainWindowCreated(window);
+    Q_EMIT mainWindowCreated(window);
 }
 
 void PluginProxy::emitMainWindowDeleted(BrowserWindow* window)
 {
-    emit mainWindowDeleted(window);
+    Q_EMIT mainWindowDeleted(window);
 }

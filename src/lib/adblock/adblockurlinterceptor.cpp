@@ -56,5 +56,5 @@ void AdBlockUrlInterceptor::interceptRequest(QWebEngineUrlRequestInfo &request)
     r.resourceType = request.resourceType();
     r.navigationType = request.navigationType();
     r.rule = ruleFilter;
-    emit requestBlocked(r);
+    Q_EMIT requestBlocked(r);
 }

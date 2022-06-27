@@ -30,7 +30,7 @@ QmlCookies::QmlCookies(QObject *parent)
         QVariantMap map;
         map.insert(QSL("cookie"), QVariant::fromValue(cookie));
         map.insert(QSL("removed"), false);
-        emit changed(map);
+        Q_EMIT changed(map);
     });
 
     connect(mApp->cookieJar(), &CookieJar::cookieRemoved, this, [this](const QNetworkCookie &network_cookie){
@@ -38,7 +38,7 @@ QmlCookies::QmlCookies(QObject *parent)
         QVariantMap map;
         map.insert(QSL("cookie"), QVariant::fromValue(cookie));
         map.insert(QSL("removed"), true);
-        emit changed(map);
+        Q_EMIT changed(map);
     });
 }
 

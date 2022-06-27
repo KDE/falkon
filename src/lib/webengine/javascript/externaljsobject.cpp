@@ -64,7 +64,7 @@ void ExternalJsObject::unregisterExtraObject(QObject *object)
 QObject *ExternalJsObject::speedDial() const
 {
     if (m_page->url().toString() != QL1S("falkon:speeddial"))
-        return Q_NULLPTR;
+        return nullptr;
 
     return mApp->plugins()->speedDial();
 }
@@ -77,7 +77,7 @@ QObject *ExternalJsObject::autoFill() const
 QObject *ExternalJsObject::recovery() const
 {
     if (!mApp->restoreManager() || m_page->url().toString() != QL1S("falkon:restore"))
-        return Q_NULLPTR;
+        return nullptr;
 
     return mApp->restoreManager()->recoveryObject(m_page);
 }

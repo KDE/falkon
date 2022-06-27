@@ -56,10 +56,10 @@ void AboutDialog::showAbout()
 #endif
                    );
     aboutHtml += tr("<b>QtWebEngine version %1</b></p>").arg(QStringLiteral(QTWEBENGINECORE_VERSION_STR));
-    aboutHtml += QString("<p>&copy; %1 %2<br/>").arg(Qz::COPYRIGHT, Qz::AUTHOR);
-    aboutHtml += QString("<a href=%1>%1</a></p>").arg(Qz::WWWADDRESS);
-    aboutHtml += "<p>" + mApp->userAgentManager()->defaultUserAgent() + "</p>";
-    aboutHtml += "</div>";
+    aboutHtml += QStringLiteral("<p>&copy; %1 %2<br/>").arg(Qz::COPYRIGHT, Qz::AUTHOR);
+    aboutHtml += QStringLiteral("<a href=%1>%1</a></p>").arg(Qz::WWWADDRESS);
+    aboutHtml += QStringLiteral("<p>") + mApp->userAgentManager()->defaultUserAgent() + QStringLiteral("</p>");
+    aboutHtml += QStringLiteral("</div>");
     ui->textLabel->setText(aboutHtml);
     setFixedHeight(sizeHint().height());
 }

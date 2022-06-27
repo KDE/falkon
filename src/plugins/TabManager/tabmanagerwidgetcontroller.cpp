@@ -158,7 +158,7 @@ TabManagerWidget* TabManagerWidgetController::createTabManagerWidget(BrowserWind
     connect(tabManagerWidget, SIGNAL(groupTypeChanged(TabManagerWidget::GroupType)), this, SLOT(setGroupType(TabManagerWidget::GroupType)));
     connect(this, SIGNAL(requestRefreshTree(WebPage*)), tabManagerWidget, SLOT(delayedRefreshTree(WebPage*)));
 
-    emit requestRefreshTree();
+    Q_EMIT requestRefreshTree();
 
     return tabManagerWidget;
 }
@@ -193,7 +193,7 @@ void TabManagerWidgetController::mainWindowDeleted(BrowserWindow* window)
 {
     removeStatusBarIcon(window);
 
-    emit requestRefreshTree();
+    Q_EMIT requestRefreshTree();
 }
 
 void TabManagerWidgetController::raiseTabManager()
@@ -233,7 +233,7 @@ void TabManagerWidgetController::showSideBySide()
 
 void TabManagerWidgetController::emitRefreshTree()
 {
-    emit requestRefreshTree();
+    Q_EMIT requestRefreshTree();
 }
 
 #include "tabmanagerwidgetcontroller.moc"

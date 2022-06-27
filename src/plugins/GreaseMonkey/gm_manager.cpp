@@ -197,7 +197,7 @@ bool GM_Manager::addScript(GM_Script* script)
     QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
     collection->insert(script->webScript());
 
-    emit scriptsChanged();
+    Q_EMIT scriptsChanged();
     return true;
 }
 
@@ -219,7 +219,7 @@ bool GM_Manager::removeScript(GM_Script* script, bool removeFile)
         delete script;
     }
 
-    emit scriptsChanged();
+    Q_EMIT scriptsChanged();
     return true;
 }
 

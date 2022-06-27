@@ -70,7 +70,7 @@ void ReloadStopButton::updateButton()
 void ReloadStopButton::buttonClicked()
 {
     if (m_loadInProgress)
-        emit stopClicked();
+        Q_EMIT stopClicked();
     else
-        emit reloadClicked();
+        Q_EMIT reloadClicked();
 }

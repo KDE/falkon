@@ -76,7 +76,7 @@ void LocationCompleterRefreshJob::jobCancelled()
 
 void LocationCompleterRefreshJob::slotFinished()
 {
-    emit finished();
+    Q_EMIT finished();
 }
 
 static bool countBiggerThan(const QStandardItem* i1, const QStandardItem* i2)

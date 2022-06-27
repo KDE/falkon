@@ -276,24 +276,24 @@ void ComboTabBar::slotCurrentChanged(int index)
         if (index == -1 && m_mainTabBar->count() > 0) {
             m_mainTabBar->setActiveTabBar(true);
             m_pinnedTabBar->setActiveTabBar(false);
-            emit currentChanged(pinnedTabsCount());
+            Q_EMIT currentChanged(pinnedTabsCount());
         }
         else {
             m_pinnedTabBar->setActiveTabBar(true);
             m_mainTabBar->setActiveTabBar(false);
-            emit currentChanged(index);
+            Q_EMIT currentChanged(index);
         }
     }
     else {
         if (index == -1 && pinnedTabsCount() > 0) {
             m_pinnedTabBar->setActiveTabBar(true);
             m_mainTabBar->setActiveTabBar(false);
-            emit currentChanged(pinnedTabsCount() - 1);
+            Q_EMIT currentChanged(pinnedTabsCount() - 1);
         }
         else {
             m_mainTabBar->setActiveTabBar(true);
             m_pinnedTabBar->setActiveTabBar(false);
-            emit currentChanged(index + pinnedTabsCount());
+            Q_EMIT currentChanged(index + pinnedTabsCount());
         }
     }
 }
@@ -301,20 +301,20 @@ void ComboTabBar::slotCurrentChanged(int index)
 void ComboTabBar::slotTabCloseRequested(int index)
 {
     if (sender() == m_pinnedTabBar) {
-        emit tabCloseRequested(index);
+        Q_EMIT tabCloseRequested(index);
     }
     else {
-        emit tabCloseRequested(index + pinnedTabsCount());
+        Q_EMIT tabCloseRequested(index + pinnedTabsCount());
     }
 }
 
 void ComboTabBar::slotTabMoved(int from, int to)
 {
     if (sender() == m_pinnedTabBar) {
-        emit tabMoved(from, to);
+        Q_EMIT tabMoved(from, to);
     }
     else {
-        emit tabMoved(from + pinnedTabsCount(), to + pinnedTabsCount());
+        Q_EMIT tabMoved(from + pinnedTabsCount(), to + pinnedTabsCount());
     }
 }
 
@@ -332,7 +332,7 @@ void ComboTabBar::closeTabFromButton()
     }
 
     if (tabToClose != -1) {
-        emit tabCloseRequested(tabToClose + pinnedTabsCount());
+        Q_EMIT tabCloseRequested(tabToClose + pinnedTabsCount());
     }
 }
 
@@ -345,7 +345,7 @@ void ComboTabBar::updateTabBars()
 void ComboTabBar::emitOverFlowChanged()
 {
     if (m_mainBarOverFlowed != m_lastAppliedOverflow) {
-        emit overFlowChanged(m_mainBarOverFlowed);
+        Q_EMIT overFlowChanged(m_mainBarOverFlowed);
         m_lastAppliedOverflow = m_mainBarOverFlowed;
     }
 }
@@ -1183,7 +1183,7 @@ bool TabBarHelper::isDragInProgress() const
 void TabBarHelper::setCurrentIndex(int index)
 {
     if (index == currentIndex() && !m_activeTabBar) {
-        emit currentChanged(currentIndex());
+        Q_EMIT currentChanged(currentIndex());
     }
 
     QTabBar::setCurrentIndex(index);
@@ -1393,7 +1393,7 @@ void TabBarHelper::mousePressEvent(QMouseEvent* event)
             m_dragStartPosition = event->pos();
             // virtualize selecting tab by click
             if (m_pressedIndex == currentIndex() && !m_activeTabBar) {
-                emit currentChanged(currentIndex());
+                Q_EMIT currentChanged(currentIndex());
             }
         }
     }

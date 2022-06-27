@@ -71,7 +71,7 @@ void ButtonWithMenu::addItem(const Item &item)
         setCurrentItem(item);
     }
 
-    emit itemAdded(item);
+    Q_EMIT itemAdded(item);
 }
 
 void ButtonWithMenu::addItems(const QVector<Item> &items)
@@ -113,7 +113,7 @@ void ButtonWithMenu::setCurrentItem(const Item &item, bool emitSignal)
     setToolTip(m_currentItem.text);
 
     if (emitSignal) {
-        emit activeItemChanged(m_currentItem);
+        Q_EMIT activeItemChanged(m_currentItem);
     }
 }
 
@@ -168,7 +168,7 @@ void ButtonWithMenu::generateMenu()
 void ButtonWithMenu::mousePressEvent(QMouseEvent *event)
 {
     if (event->buttons() == Qt::LeftButton && parentWidget() && parentWidget()->parentWidget()) {
-        emit aboutToShowMenu();
+        Q_EMIT aboutToShowMenu();
         QWidget *w = parentWidget()->parentWidget();
         m_menu->popup(w->mapToGlobal(w->rect().bottomLeft()));
     }

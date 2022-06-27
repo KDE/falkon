@@ -117,10 +117,10 @@ void TabbedWebView::setIp(const QHostInfo &info)
         return;
     }
 
-    m_currentIp = QString("%1 (%2)").arg(info.hostName(), info.addresses().at(0).toString());
+    m_currentIp = QStringLiteral("%1 (%2)").arg(info.hostName(), info.addresses().at(0).toString());
 
     if (m_webTab->isCurrentTab()) {
-        emit ipChanged(m_currentIp);
+        Q_EMIT ipChanged(m_currentIp);
     }
 }
 
@@ -148,7 +148,7 @@ QWidget* TabbedWebView::overlayWidget()
 
 void TabbedWebView::closeView()
 {
-    emit wantsCloseTab(tabIndex());
+    Q_EMIT wantsCloseTab(tabIndex());
 }
 
 void TabbedWebView::loadInNewTab(const LoadRequest &req, Qz::NewTabPositionFlags position)

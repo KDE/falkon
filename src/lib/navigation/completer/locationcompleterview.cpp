@@ -170,17 +170,17 @@ bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
             Qt::KeyboardModifiers modifiers = e->modifiers();
 
             if (button == Qt::LeftButton && modifiers == Qt::NoModifier) {
-                emit indexActivated(idx);
+                Q_EMIT indexActivated(idx);
                 return true;
             }
 
             if (button == Qt::MiddleButton || (button == Qt::LeftButton && modifiers == Qt::ControlModifier)) {
-                emit indexCtrlActivated(idx);
+                Q_EMIT indexCtrlActivated(idx);
                 return true;
             }
 
             if (button == Qt::LeftButton && modifiers == Qt::ShiftModifier) {
-                emit indexShiftActivated(idx);
+                Q_EMIT indexShiftActivated(idx);
                 return true;
             }
         }
@@ -206,17 +206,17 @@ bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
             }
 
             if (modifiers == Qt::NoModifier || modifiers == Qt::KeypadModifier) {
-                emit indexActivated(idx);
+                Q_EMIT indexActivated(idx);
                 return true;
             }
 
             if (modifiers == Qt::ControlModifier) {
-                emit indexCtrlActivated(idx);
+                Q_EMIT indexCtrlActivated(idx);
                 return true;
             }
 
             if (modifiers == Qt::ShiftModifier) {
-                emit indexShiftActivated(idx);
+                Q_EMIT indexShiftActivated(idx);
                 return true;
             }
             break;
@@ -304,7 +304,7 @@ bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
 
         case Qt::Key_Delete:
             if (idx != visitSearchIdx && m_view->viewport()->rect().contains(m_view->visualRect(idx))) {
-                emit indexDeleteRequested(idx);
+                Q_EMIT indexDeleteRequested(idx);
                 return true;
             }
             break;
@@ -372,7 +372,7 @@ void LocationCompleterView::close()
     m_delegate->setForceVisitItem(false);
     m_forceResize = true;
 
-    emit closed();
+    Q_EMIT closed();
 }
 
 void LocationCompleterView::setupSearchEngines()
@@ -390,7 +390,7 @@ void LocationCompleterView::setupSearchEngines()
         button->setIconSize(QSize(16, 16));
         connect(button, &ToolButton::clicked, this, [=]() {
             const QString text = model()->index(0, 0).data(LocationCompleterModel::SearchStringRole).toString();
-            emit loadRequested(mApp->searchEnginesManager()->searchResult(engine, text));
+            Q_EMIT loadRequested(mApp->searchEnginesManager()->searchResult(engine, text));
         });
         m_searchEnginesLayout->addWidget(button);
     }

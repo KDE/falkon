@@ -98,7 +98,7 @@ void History::addHistoryEntry(const QUrl &url, QString title)
                 entry.url = url;
                 entry.urlString = url.toEncoded();
                 entry.title = title;
-                emit historyEntryAdded(entry);
+                Q_EMIT historyEntryAdded(entry);
             });
             job->start();
         } else {
@@ -126,7 +126,7 @@ void History::addHistoryEntry(const QUrl &url, QString title)
                 after.date = QDateTime::currentDateTime();
                 after.title = title;
 
-                emit historyEntryEdited(before, after);
+                Q_EMIT historyEntryEdited(before, after);
             });
             job->start();
         }
@@ -174,7 +174,7 @@ void History::deleteHistoryEntry(const QList<int> &list)
         query.addBindValue(entry.url.toEncoded(QUrl::RemoveFragment));
         query.exec();
 
-        emit historyEntryDeleted(entry);
+        Q_EMIT historyEntryDeleted(entry);
     }
 
     db.commit();
@@ -252,7 +252,7 @@ void History::clearHistory()
 
     mApp->webProfile()->clearAllVisitedLinks();
 
-    emit resetHistory();
+    Q_EMIT resetHistory();
 }
 
 void History::setSaving(bool state)

@@ -184,7 +184,7 @@ void TabStackedWidget::showTab(int index)
 
     // This is slot connected to ComboTabBar::currentChanged
     // We must send the signal even with invalid index (-1)
-    emit currentChanged(index);
+    Q_EMIT currentChanged(index);
 }
 
 bool TabStackedWidget::documentMode() const
@@ -277,7 +277,7 @@ int TabStackedWidget::pinUnPinTab(int index, const QString &title)
     // Restore current widget
     setCurrentWidget(currentWidget);
 
-    emit pinStateChanged(newIndex, makePinned);
+    Q_EMIT pinStateChanged(newIndex, makePinned);
 
     return newIndex;
 }

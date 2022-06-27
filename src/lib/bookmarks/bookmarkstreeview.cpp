@@ -173,12 +173,12 @@ void BookmarksTreeView::selectionChanged(const QItemSelection &selected, const Q
     Q_UNUSED(selected)
     Q_UNUSED(deselected)
 
-    emit bookmarksSelected(selectedBookmarks());
+    Q_EMIT bookmarksSelected(selectedBookmarks());
 }
 
 void BookmarksTreeView::contextMenuEvent(QContextMenuEvent* event)
 {
-    emit contextMenuRequested(viewport()->mapToGlobal(event->pos()));
+    Q_EMIT contextMenuRequested(viewport()->mapToGlobal(event->pos()));
 }
 
 void BookmarksTreeView::mouseMoveEvent(QMouseEvent* event)
@@ -210,10 +210,10 @@ void BookmarksTreeView::mousePressEvent(QMouseEvent* event)
             BookmarkItem* item = m_model->item(m_filter->mapToSource(index));
 
             if (buttons == Qt::LeftButton && modifiers == Qt::ShiftModifier) {
-                emit bookmarkShiftActivated(item);
+                Q_EMIT bookmarkShiftActivated(item);
             }
             else if (buttons == Qt::MiddleButton || (buttons == Qt::LeftButton && modifiers == Qt::ControlModifier)) {
-                emit bookmarkCtrlActivated(item);
+                Q_EMIT bookmarkCtrlActivated(item);
             }
         }
     }
@@ -231,7 +231,7 @@ void BookmarksTreeView::mouseReleaseEvent(QMouseEvent* event)
 
             // Activate bookmarks with single mouse click in Sidebar
             if (m_type == BookmarksSidebarViewType && event->button() == Qt::LeftButton && event->modifiers() == Qt::NoModifier) {
-                emit bookmarkActivated(item);
+                Q_EMIT bookmarkActivated(item);
             }
         }
     }
@@ -250,10 +250,10 @@ void BookmarksTreeView::mouseDoubleClickEvent(QMouseEvent* event)
             Qt::KeyboardModifiers modifiers = QApplication::keyboardModifiers();
 
             if (buttons == Qt::LeftButton && modifiers == Qt::NoModifier) {
-                emit bookmarkActivated(item);
+                Q_EMIT bookmarkActivated(item);
             }
             else if (buttons == Qt::LeftButton && modifiers == Qt::ShiftModifier) {
-                emit bookmarkShiftActivated(item);
+                Q_EMIT bookmarkShiftActivated(item);
             }
         }
     }
@@ -277,13 +277,13 @@ void BookmarksTreeView::keyPressEvent(QKeyEvent* event)
                 Qt::KeyboardModifiers modifiers = event->modifiers();
 
                 if (modifiers == Qt::NoModifier || modifiers == Qt::KeypadModifier) {
-                    emit bookmarkActivated(item);
+                    Q_EMIT bookmarkActivated(item);
                 }
                 else if (modifiers == Qt::ControlModifier) {
-                    emit bookmarkCtrlActivated(item);
+                    Q_EMIT bookmarkCtrlActivated(item);
                 }
                 else if (modifiers == Qt::ShiftModifier) {
-                    emit bookmarkShiftActivated(item);
+                    Q_EMIT bookmarkShiftActivated(item);
                 }
             }
             break;

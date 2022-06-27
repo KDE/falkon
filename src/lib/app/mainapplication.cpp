@@ -509,7 +509,7 @@ void MainApplication::destroyRestoreManager()
 void MainApplication::reloadSettings()
 {
     loadSettings();
-    emit settingsReloaded();
+    Q_EMIT settingsReloaded();
 }
 
 QString MainApplication::styleName() const
@@ -723,7 +723,7 @@ void MainApplication::quitApplication()
     }
 
     for (BrowserWindow *window : qAsConst(m_windows)) {
-        emit window->aboutToClose();
+        Q_EMIT window->aboutToClose();
     }
 
     if (m_sessionManager && m_windows.count() > 0) {
@@ -914,7 +914,7 @@ void MainApplication::onFocusChanged()
     if (activeBrowserWindow) {
         m_lastActiveWindow = activeBrowserWindow;
 
-        emit activeWindowChanged(m_lastActiveWindow);
+        Q_EMIT activeWindowChanged(m_lastActiveWindow);
     }
 }
 

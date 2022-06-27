@@ -163,7 +163,7 @@ void PasswordManager::switchBackend(const QString &backendID)
     settings.setValue(QSL("Backend"), backendID);
     settings.endGroup();
 
-    emit passwordBackendChanged();
+    Q_EMIT passwordBackendChanged();
 }
 
 bool PasswordManager::registerBackend(const QString &id, PasswordBackend* backend)

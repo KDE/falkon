@@ -72,7 +72,7 @@ void MenuTabs::mouseReleaseEvent(QMouseEvent* event)
         if (action && action->isEnabled()) {
             auto* tab = qobject_cast<WebTab*>(qvariant_cast<QWidget*>(action->data()));
             if (tab) {
-                emit closeTab(tab->tabIndex());
+                Q_EMIT closeTab(tab->tabIndex());
                 action->setEnabled(false);
                 event->accept();
             }
@@ -386,8 +386,8 @@ int TabWidget::addView(const LoadRequest &req, const QString &title, const Qz::N
         m_tabBar->ensureVisible(index);
     }
 
-    emit changed();
-    emit tabInserted(index);
+    Q_EMIT changed();
+    Q_EMIT tabInserted(index);
 
     return index;
 }
@@ -418,8 +418,8 @@ int TabWidget::insertView(int index, WebTab *tab, const Qz::NewTabPositionFlags 
         m_tabBar->ensureVisible(index);
     }
 
-    emit changed();
-    emit tabInserted(newIndex);
+    Q_EMIT changed();
+    Q_EMIT tabInserted(newIndex);
 
     return newIndex;
 }
@@ -464,8 +464,8 @@ void TabWidget::closeTab(int index)
 
     updateClosedTabsButton();
 
-    emit changed();
-    emit tabRemoved(index);
+    Q_EMIT changed();
+    Q_EMIT tabRemoved(index);
 }
 
 void TabWidget::requestCloseTab(int index)
@@ -518,16 +518,16 @@ void TabWidget::currentTabChanged(int index)
 
     m_window->currentTabChanged();
 
-    emit changed();
+    Q_EMIT changed();
 }
 
 void TabWidget::tabWasMoved(int before, int after)
 {
     m_lastBackgroundTab = nullptr;
 
-    emit changed();
+    Q_EMIT changed();
     if (!m_blockTabMovedSignal) {
-        emit tabMoved(before, after);
+        Q_EMIT tabMoved(before, after);
     }
 }
 
@@ -668,14 +668,14 @@ void TabWidget::moveTab(int from, int to)
     }
     TabStackedWidget::moveTab(tab->tabIndex(), to);
     m_blockTabMovedSignal = false;
-    emit tabMoved(from, to);
+    Q_EMIT tabMoved(from, to);
 }
 
 int TabWidget::pinUnPinTab(int index, const QString &title)
 {
     const int newIndex = TabStackedWidget::pinUnPinTab(index, title);
     if (index != newIndex && !m_blockTabMovedSignal) {
-        emit tabMoved(index, newIndex);
+        Q_EMIT tabMoved(index, newIndex);
     }
     return newIndex;
 }
@@ -698,7 +698,7 @@ void TabWidget::detachTab(WebTab* tab)
     tab->detach();
     tab->setPinned(false);
 
-    emit tabRemoved(index);
+    Q_EMIT tabRemoved(index);
 
     if (count() == 0) {
         m_window->close();

@@ -333,7 +333,7 @@ void WebTab::detach()
 
     if (m_isCurrentTab) {
         m_isCurrentTab = false;
-        emit currentTabChanged(m_isCurrentTab);
+        Q_EMIT currentTabChanged(m_isCurrentTab);
     }
     m_tabBar->disconnect(this);
 
@@ -357,7 +357,7 @@ void WebTab::attach(BrowserWindow* window)
         const bool wasCurrent = m_isCurrentTab;
         m_isCurrentTab = index == tabIndex();
         if (wasCurrent != m_isCurrentTab) {
-            emit currentTabChanged(m_isCurrentTab);
+            Q_EMIT currentTabChanged(m_isCurrentTab);
         }
     };
 
@@ -401,7 +401,7 @@ void WebTab::load(const LoadRequest &request)
 void WebTab::unload()
 {
     m_savedTab = SavedTab(this);
-    emit restoredChanged(isRestored());
+    Q_EMIT restoredChanged(isRestored());
     m_webView->setPage(new WebPage);
     m_webView->setFocus();
 }
@@ -427,7 +427,7 @@ void WebTab::setPinned(bool state)
     }
 
     m_isPinned = state;
-    emit pinnedChanged(m_isPinned);
+    Q_EMIT pinnedChanged(m_isPinned);
 }
 
 bool WebTab::isMuted() const
@@ -485,7 +485,7 @@ void WebTab::setParentTab(WebTab *tab)
         const int index = m_parentTab->m_childTabs.indexOf(this);
         if (index >= 0) {
             m_parentTab->m_childTabs.removeAt(index);
-            emit m_parentTab->childTabRemoved(this, index);
+            Q_EMIT m_parentTab->childTabRemoved(this, index);
         }
     }
 
@@ -495,7 +495,7 @@ void WebTab::setParentTab(WebTab *tab)
         m_parentTab = nullptr;
         tab->addChildTab(this);
     } else {
-        emit parentTabChanged(m_parentTab);
+        Q_EMIT parentTabChanged(m_parentTab);
     }
 }
 
@@ -511,7 +511,7 @@ void WebTab::addChildTab(WebTab *tab, int index)
         const int index = oldParent->m_childTabs.indexOf(tab);
         if (index >= 0) {
             oldParent->m_childTabs.removeAt(index);
-            emit oldParent->childTabRemoved(tab, index);
+            Q_EMIT oldParent->childTabRemoved(tab, index);
         }
     }
 
@@ -525,9 +525,9 @@ void WebTab::addChildTab(WebTab *tab, int index)
     }
 
     m_childTabs.insert(index, tab);
-    emit childTabAdded(tab, index);
+    Q_EMIT childTabAdded(tab, index);
 
-    emit tab->parentTabChanged(this);
+    Q_EMIT tab->parentTabChanged(this);
 }
 
 QVector<WebTab*> WebTab::childTabs() const
@@ -559,7 +559,7 @@ void WebTab::restoreTab(const WebTab::SavedTab &tab)
 
     if (!isPinned() && qzSettings->loadTabsOnActivation) {
         m_savedTab = tab;
-        emit restoredChanged(isRestored());
+        Q_EMIT restoredChanged(isRestored());
         int index = tabIndex();
 
         m_tabBar->setTabText(index, tab.title);
@@ -639,7 +639,7 @@ void WebTab::tabActivated()
         }
         p_restoreTab(m_savedTab);
         m_savedTab.clear();
-        emit restoredChanged(isRestored());
+        Q_EMIT restoredChanged(isRestored());
     });
 }
 

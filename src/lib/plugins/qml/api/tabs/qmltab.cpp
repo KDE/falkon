@@ -379,32 +379,32 @@ void QmlTab::createConnections()
     Q_ASSERT(m_lambdaConnections.length() == 0);
 
     auto titleChangedConnection = connect(m_webTab, &WebTab::titleChanged, this, [this](const QString &title){
-        emit titleChanged(title);
+        Q_EMIT titleChanged(title);
     });
     m_lambdaConnections.append(titleChangedConnection);
 
     auto pinnedChangedConnection = connect(m_webTab, &WebTab::pinnedChanged, this, [this](bool pinned){
-        emit pinnedChanged(pinned);
+        Q_EMIT pinnedChanged(pinned);
     });
     m_lambdaConnections.append(pinnedChangedConnection);
 
     auto loadingChangedConnection = connect(m_webTab, &WebTab::loadingChanged, this, [this](bool loading){
-        emit loadingChanged(loading);
+        Q_EMIT loadingChanged(loading);
     });
     m_lambdaConnections.append(loadingChangedConnection);
 
     auto mutedChangedConnection = connect(m_webTab, &WebTab::mutedChanged, this, [this](bool muted){
-        emit mutedChanged(muted);
+        Q_EMIT mutedChanged(muted);
     });
     m_lambdaConnections.append(mutedChangedConnection);
 
     auto restoredChangedConnection = connect(m_webTab, &WebTab::restoredChanged, this, [this](bool restored){
-        emit restoredChanged(restored);
+        Q_EMIT restoredChanged(restored);
     });
     m_lambdaConnections.append(restoredChangedConnection);
 
     auto playingChangedConnection = connect(m_webTab, &WebTab::playingChanged, this, [this](bool playing){
-        emit playingChanged(playing);
+        Q_EMIT playingChanged(playing);
     });
     m_lambdaConnections.append(playingChangedConnection);
 

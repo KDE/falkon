@@ -78,7 +78,7 @@ QString QmlBrowserAction::identity() const
 void QmlBrowserAction::setIdentity(const QString &identity)
 {
     m_identity = identity;
-    emit identityChanged(m_identity);
+    Q_EMIT identityChanged(m_identity);
 }
 
 QString QmlBrowserAction::name() const
@@ -89,7 +89,7 @@ QString QmlBrowserAction::name() const
 void QmlBrowserAction::setName(const QString &name)
 {
     m_name = name;
-    emit nameChanged(m_name);
+    Q_EMIT nameChanged(m_name);
 }
 
 QString QmlBrowserAction::title() const
@@ -100,7 +100,7 @@ QString QmlBrowserAction::title() const
 void QmlBrowserAction::setTitle(const QString &title)
 {
     m_title = title;
-    emit titleChanged(m_title);
+    Q_EMIT titleChanged(m_title);
 }
 
 QString QmlBrowserAction::toolTip() const
@@ -111,7 +111,7 @@ QString QmlBrowserAction::toolTip() const
 void QmlBrowserAction::setToolTip(const QString &toolTip)
 {
     m_toolTip = toolTip;
-    emit toolTipChanged(m_toolTip);
+    Q_EMIT toolTipChanged(m_toolTip);
 }
 
 QString QmlBrowserAction::icon() const
@@ -122,7 +122,7 @@ QString QmlBrowserAction::icon() const
 void QmlBrowserAction::setIcon(const QString &icon)
 {
     m_icon = icon;
-    emit iconChanged(m_icon);
+    Q_EMIT iconChanged(m_icon);
 }
 
 QString QmlBrowserAction::badgeText() const
@@ -133,7 +133,7 @@ QString QmlBrowserAction::badgeText() const
 void QmlBrowserAction::setBadgeText(const QString &badgeText)
 {
     m_badgeText = badgeText;
-    emit badgeTextChanged(m_badgeText);
+    Q_EMIT badgeTextChanged(m_badgeText);
 }
 
 QQmlComponent *QmlBrowserAction::popup() const
@@ -144,13 +144,13 @@ QQmlComponent *QmlBrowserAction::popup() const
 void QmlBrowserAction::setPopup(QQmlComponent *popup)
 {
     m_popup = popup;
-    emit popupChanged(m_popup);
+    Q_EMIT popupChanged(m_popup);
 }
 
 void QmlBrowserAction::setLocation(const Locations &locations)
 {
     m_locations = locations;
-    emit locationChanged(m_locations);
+    Q_EMIT locationChanged(m_locations);
 }
 
 void QmlBrowserAction::addButton(BrowserWindow *window)

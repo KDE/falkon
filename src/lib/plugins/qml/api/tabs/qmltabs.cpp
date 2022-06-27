@@ -336,21 +336,21 @@ void QmlTabs::windowCreated(BrowserWindow *window)
     const int windowId = QmlStaticData::instance().windowIdHash().value(window, -1);
 
     connect(window->tabWidget(), &TabWidget::changed, this, [this, windowId]{
-        emit changed(windowId);
+        Q_EMIT changed(windowId);
     });
 
     connect(window->tabWidget(), &TabWidget::tabInserted, this, [this, windowId](int index){
         QVariantMap map;
         map.insert(QSL("windowId"), windowId);
         map.insert(QSL("index"), index);
-        emit tabInserted(map);
+        Q_EMIT tabInserted(map);
     });
 
     connect(window->tabWidget(), &TabWidget::tabRemoved, this, [this, windowId](int index){
         QVariantMap map;
         map.insert(QSL("windowId"), windowId);
         map.insert(QSL("index"), index);
-        emit tabRemoved(map);
+        Q_EMIT tabRemoved(map);
     });
 
     connect(window->tabWidget(), &TabWidget::tabMoved, this, [this, windowId](int from, int to){
@@ -358,6 +358,6 @@ void QmlTabs::windowCreated(BrowserWindow *window)
         map.insert(QSL("windowId"), windowId);
         map.insert(QSL("from"), from);
         map.insert(QSL("to"), to);
-        emit tabMoved(map);
+        Q_EMIT tabMoved(map);
     });
 }

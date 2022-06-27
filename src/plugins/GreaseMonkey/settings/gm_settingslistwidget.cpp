@@ -33,12 +33,12 @@ GM_SettingsListWidget::GM_SettingsListWidget(QWidget* parent)
 void GM_SettingsListWidget::mousePressEvent(QMouseEvent* event)
 {
     if (containsRemoveIcon(event->pos())) {
-        emit removeItemRequested(itemAt(event->pos()));
+        Q_EMIT removeItemRequested(itemAt(event->pos()));
         return;
     }
 
     if (containsUpdateIcon(event->pos())) {
-        emit updateItemRequested(itemAt(event->pos()));
+        Q_EMIT updateItemRequested(itemAt(event->pos()));
         return;
     }
 

@@ -79,7 +79,7 @@ void LocationCompleter::complete(const QString &string)
     // Eg. popup was not closed yet this completion session
     m_popupClosed = false;
 
-    emit cancelRefreshJob();
+    Q_EMIT cancelRefreshJob();
 
     auto* job = new LocationCompleterRefreshJob(trimmedStr);
     connect(job, &LocationCompleterRefreshJob::finished, this, &LocationCompleter::refreshJobFinished);
@@ -151,7 +151,7 @@ void LocationCompleter::refreshJobFinished()
         }
 
         if (qzSettings->useInlineCompletion) {
-            emit showDomainCompletion(job->domainCompletion());
+            Q_EMIT showDomainCompletion(job->domainCompletion());
         }
 
         s_model->setData(s_model->index(0, 0), m_locationBar->text(), LocationCompleterModel::SearchStringRole);
@@ -174,7 +174,7 @@ void LocationCompleter::slotPopupClosed()
     disconnect(s_view, &LocationCompleterView::searchEnginesDialogRequested, this, &LocationCompleter::openSearchEnginesDialog);
     disconnect(s_view->selectionModel(), &QItemSelectionModel::currentChanged, this, &LocationCompleter::currentChanged);
 
-    emit popupClosed();
+    Q_EMIT popupClosed();
 }
 
 void LocationCompleter::addSuggestions(const QStringList &suggestions)
@@ -229,7 +229,7 @@ void LocationCompleter::currentChanged(const QModelIndex &index)
         completion = originalText;
     }
 
-    emit showCompletion(completion, completeDomain);
+    Q_EMIT showCompletion(completion, completeDomain);
 }
 
 void LocationCompleter::indexActivated(const QModelIndex &index)
@@ -239,7 +239,7 @@ void LocationCompleter::indexActivated(const QModelIndex &index)
     closePopup();
 
     // Clear locationbar
-    emit clearCompletion();
+    Q_EMIT clearCompletion();
 
     bool ok;
     const int tabPos = index.data(LocationCompleterModel::TabPositionTabRole).toInt(&ok);
@@ -263,7 +263,7 @@ void LocationCompleter::indexCtrlActivated(const QModelIndex &index)
     closePopup();
 
     // Clear locationbar
-    emit clearCompletion();
+    Q_EMIT clearCompletion();
 
     // Load request in new tab
     m_window->tabWidget()->addView(createLoadRequest(index), Qz::NT_CleanSelectedTab);
@@ -276,7 +276,7 @@ void LocationCompleter::indexShiftActivated(const QModelIndex &index)
     closePopup();
 
     // Clear locationbar
-    emit clearCompletion();
+    Q_EMIT clearCompletion();
 
     // Load request
     if (index.data(LocationCompleterModel::VisitSearchItemRole).toBool()) {
@@ -367,16 +367,16 @@ void LocationCompleter::loadRequest(const LoadRequest &request)
     closePopup();
 
     // Show url in locationbar
-    emit showCompletion(request.url().toString(), false);
+    Q_EMIT showCompletion(request.url().toString(), false);
 
     // Load request
-    emit loadRequested(request);
+    Q_EMIT loadRequested(request);
 }
 
 void LocationCompleter::openSearchEnginesDialog()
 {
     // Clear locationbar
-    emit clearCompletion();
+    Q_EMIT clearCompletion();
 
     auto *dialog = new SearchEnginesDialog(m_window);
     dialog->open();

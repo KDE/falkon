@@ -33,7 +33,7 @@ TabContextMenu::TabContextMenu(int index, BrowserWindow *window, Options options
     , m_window(window)
     , m_options(options)
 {
-    setObjectName("tabcontextmenu");
+    setObjectName(QStringLiteral("tabcontextmenu"));
 
     TabWidget *tabWidget = m_window->tabWidget();
     connect(this, &TabContextMenu::tabCloseRequested, tabWidget->tabBar(), &ComboTabBar::tabCloseRequested);
@@ -78,7 +78,7 @@ static bool canCloseTabs(const QString &settingsKey, const QString &title, const
 void TabContextMenu::closeAllButCurrent()
 {
     if (canCloseTabs(QLatin1String("AskOnClosingAllButCurrent"), tr("Close Tabs"), tr("Do you really want to close other tabs?"))) {
-        emit closeAllButCurrent(m_clickedTab);
+        Q_EMIT closeAllButCurrent(m_clickedTab);
     }
 }
 
@@ -89,7 +89,7 @@ void TabContextMenu::closeToRight()
             : tr("Do you really want to close all tabs to the bottom?");
 
     if (canCloseTabs(QLatin1String("AskOnClosingToRight"), tr("Close Tabs"), label)) {
-        emit closeToRight(m_clickedTab);
+        Q_EMIT closeToRight(m_clickedTab);
     }
 }
 
@@ -100,7 +100,7 @@ void TabContextMenu::closeToLeft()
             : tr("Do you really want to close all tabs to the top?");
 
     if (canCloseTabs(QLatin1String("AskOnClosingToLeft"), tr("Close Tabs"), label)) {
-        emit closeToLeft(m_clickedTab);
+        Q_EMIT closeToLeft(m_clickedTab);
     }
 }
 

@@ -135,7 +135,7 @@ void HistoryTreeView::removeSelectedItems()
 
 void HistoryTreeView::contextMenuEvent(QContextMenuEvent* event)
 {
-    emit contextMenuRequested(viewport()->mapToGlobal(event->pos()));
+    Q_EMIT contextMenuRequested(viewport()->mapToGlobal(event->pos()));
 }
 
 void HistoryTreeView::mouseMoveEvent(QMouseEvent* event)
@@ -167,10 +167,10 @@ void HistoryTreeView::mousePressEvent(QMouseEvent* event)
             const QUrl url = index.data(HistoryModel::UrlRole).toUrl();
 
             if (buttons == Qt::LeftButton && modifiers == Qt::ShiftModifier) {
-                emit urlShiftActivated(url);
+                Q_EMIT urlShiftActivated(url);
             }
             else if (buttons == Qt::MiddleButton || (buttons == Qt::LeftButton && modifiers == Qt::ControlModifier)) {
-                emit urlCtrlActivated(url);
+                Q_EMIT urlCtrlActivated(url);
             }
         }
     }
@@ -188,7 +188,7 @@ void HistoryTreeView::mouseReleaseEvent(QMouseEvent* event)
 
             // Activate urls with single mouse click in Sidebar
             if (m_type == HistorySidebarViewType && event->button() == Qt::LeftButton && event->modifiers() == Qt::NoModifier) {
-                emit urlActivated(url);
+                Q_EMIT urlActivated(url);
             }
         }
     }
@@ -207,10 +207,10 @@ void HistoryTreeView::mouseDoubleClickEvent(QMouseEvent* event)
             Qt::KeyboardModifiers modifiers = QApplication::keyboardModifiers();
 
             if (buttons == Qt::LeftButton && modifiers == Qt::NoModifier) {
-                emit urlActivated(url);
+                Q_EMIT urlActivated(url);
             }
             else if (buttons == Qt::LeftButton && modifiers == Qt::ShiftModifier) {
-                emit urlShiftActivated(url);
+                Q_EMIT urlShiftActivated(url);
             }
         }
     }
@@ -235,13 +235,13 @@ void HistoryTreeView::keyPressEvent(QKeyEvent* event)
                 Qt::KeyboardModifiers modifiers = event->modifiers();
 
                 if (modifiers == Qt::NoModifier || modifiers == Qt::KeypadModifier) {
-                    emit urlActivated(url);
+                    Q_EMIT urlActivated(url);
                 }
                 else if (modifiers == Qt::ControlModifier) {
-                    emit urlCtrlActivated(url);
+                    Q_EMIT urlCtrlActivated(url);
                 }
                 else if (modifiers == Qt::ShiftModifier) {
-                    emit urlShiftActivated(url);
+                    Q_EMIT urlShiftActivated(url);
                 }
             }
             break;

@@ -65,11 +65,11 @@ void TreeWidget::insertTopLevelItems(int index, const QList<QTreeWidgetItem*> &i
 void TreeWidget::mousePressEvent(QMouseEvent* event)
 {
     if (event->modifiers() == Qt::ControlModifier) {
-        emit itemControlClicked(itemAt(event->pos()));
+        Q_EMIT itemControlClicked(itemAt(event->pos()));
     }
 
     if (event->buttons() == Qt::MiddleButton) {
-        emit itemMiddleButtonClicked(itemAt(event->pos()));
+        Q_EMIT itemMiddleButtonClicked(itemAt(event->pos()));
     }
 
     QTreeWidget::mousePressEvent(event);

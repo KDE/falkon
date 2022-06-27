@@ -110,7 +110,7 @@ WebPage::WebPage(QObject* parent)
     // Workaround for broken load started/finished signals in QtWebEngine 5.10, 5.11
     connect(this, &QWebEnginePage::loadProgress, this, [this](int progress) {
         if (progress == 100) {
-            emit loadFinished(true);
+            Q_EMIT loadFinished(true);
         }
     });
 
@@ -265,7 +265,7 @@ void WebPage::progress(int prog)
 
     if (secStatus != m_secureStatus) {
         m_secureStatus = secStatus;
-        emit privacyChanged(secStatus);
+        Q_EMIT privacyChanged(secStatus);
     }
 }
 
@@ -439,7 +439,7 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
             return false;
 #if QTWEBENGINEWIDGETS_VERSION < QT_VERSION_CHECK(5, 12, 0)
         } else if (url.path() == QL1S("PrintPage")) {
-            emit printRequested();
+            Q_EMIT printRequested();
             return false;
 #endif
         }
@@ -457,7 +457,7 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
             const bool globalJsEnabled = mApp->webSettings()->testAttribute(QWebEngineSettings::JavascriptEnabled);
             settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, isWeb ? globalJsEnabled : true);
         }
-        emit navigationRequestAccepted(url, type, isMainFrame);
+        Q_EMIT navigationRequestAccepted(url, type, isMainFrame);
     }
 
     return result;

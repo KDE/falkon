@@ -151,7 +151,7 @@ void DownloadItem::finished()
     if (success && m_openFile)
         openFile();
 
-    emit downloadFinished(true);
+    Q_EMIT downloadFinished(true);
 }
 
 void DownloadItem::downloadProgress(qint64 received, qint64 total)
@@ -276,7 +276,7 @@ void DownloadItem::stop()
     m_download->cancel();
     m_downloading = false;
 
-    emit downloadFinished(false);
+    Q_EMIT downloadFinished(false);
 }
 
 void DownloadItem::pauseResume()
@@ -329,7 +329,7 @@ void DownloadItem::copyDownloadLink()
 
 void DownloadItem::clear()
 {
-    emit deleteItem(this);
+    Q_EMIT deleteItem(this);
 }
 
 void DownloadItem::openFile()

@@ -26,17 +26,17 @@ QmlBookmarks::QmlBookmarks(QObject *parent)
 {
     connect(mApp->bookmarks(), &Bookmarks::bookmarkAdded, this, [this](BookmarkItem *item){
         auto treeNode = QmlStaticData::instance().getBookmarkTreeNode(item);
-        emit created(treeNode);
+        Q_EMIT created(treeNode);
     });
 
     connect(mApp->bookmarks(), &Bookmarks::bookmarkChanged, this, [this](BookmarkItem *item){
         auto treeNode = QmlStaticData::instance().getBookmarkTreeNode(item);
-        emit changed(treeNode);
+        Q_EMIT changed(treeNode);
     });
 
     connect(mApp->bookmarks(), &Bookmarks::bookmarkRemoved, this, [this](BookmarkItem *item){
         auto treeNode = QmlStaticData::instance().getBookmarkTreeNode(item);
-        emit removed(treeNode);
+        Q_EMIT removed(treeNode);
     });
 }
 

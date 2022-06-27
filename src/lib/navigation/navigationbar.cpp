@@ -506,7 +506,7 @@ void NavigationBar::toolActionActivated()
         buttonTools->setDown(false);
         delete c;
     };
-    emit data.button->clicked(c);
+    Q_EMIT data.button->clicked(c);
     if (c->popupOpened) {
         buttonTools->setDown(true);
     } else {

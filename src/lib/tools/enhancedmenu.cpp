@@ -22,13 +22,11 @@
 
 Menu::Menu(QWidget* parent)
     : QMenu(parent)
-    , m_closeOnMiddleClick(false)
 {
 }
 
 Menu::Menu(const QString &title, QWidget* parent)
     : QMenu(title, parent)
-    , m_closeOnMiddleClick(false)
 {
 }
 
@@ -56,7 +54,7 @@ void Menu::mouseReleaseEvent(QMouseEvent* e)
 
         if (e->button() == Qt::MiddleButton || (e->button() == Qt::LeftButton && e->modifiers() == Qt::ControlModifier)) {
             closeAllMenus();
-            emit menuMiddleClicked(m);
+            Q_EMIT menuMiddleClicked(m);
         }
     }
 
@@ -143,10 +141,10 @@ Action::Action(const QIcon &icon, const QString &text, QObject* parent)
 
 void Action::emitCtrlTriggered()
 {
-    emit ctrlTriggered();
+    Q_EMIT ctrlTriggered();
 }
 
 void Action::emitShiftTriggered()
 {
-    emit shiftTriggered();
+    Q_EMIT shiftTriggered();
 }

@@ -23,7 +23,6 @@
 HeaderView::HeaderView(QAbstractItemView* parent)
     : QHeaderView(Qt::Horizontal, parent)
     , m_parent(parent)
-    , m_menu(0)
     , m_resizeOnShow(false)
 {
     setSectionsMovable(true);

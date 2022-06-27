@@ -161,7 +161,7 @@ public Q_SLOTS:
     void bookmarkPage();
     void bookmarkAllTabs();
     void loadAddress(const QUrl &url);
-    void showSource(WebView *view = Q_NULLPTR);
+    void showSource(WebView *view = nullptr);
 
 private Q_SLOTS:
     void openLocation();

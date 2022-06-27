@@ -127,13 +127,13 @@ void DownloadOptionsDialog::emitDialogFinished(int status)
     }
 
     m_signalEmited = true;
-    emit dialogFinished(status);
+    Q_EMIT dialogFinished(status);
 }
 
 DownloadOptionsDialog::~DownloadOptionsDialog()
 {
     if (!m_signalEmited) {
-        emit dialogFinished(-1);
+        Q_EMIT dialogFinished(-1);
     }
 
     delete ui;

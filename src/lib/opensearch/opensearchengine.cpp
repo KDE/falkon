@@ -447,7 +447,7 @@ void OpenSearchEngine::imageObtained()
     }
 
     m_image.loadFromData(response);
-    emit imageChanged();
+    Q_EMIT imageChanged();
 }
 
 /*!
@@ -479,7 +479,7 @@ void OpenSearchEngine::setImage(const QImage &image)
     }
 
     m_image = image;
-    emit imageChanged();
+    Q_EMIT imageChanged();
 }
 
 /*!
@@ -648,7 +648,7 @@ void OpenSearchEngine::suggestionsObtained()
         out.append(v.toString());
     }
 
-    emit suggestions(out);
+    Q_EMIT suggestions(out);
 }
 
 /*!

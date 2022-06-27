@@ -157,7 +157,7 @@ void ToolButton::setToolbarButtonLook(bool enable)
 void ToolButton::menuAboutToHide()
 {
     setDown(false);
-    emit aboutToHideMenu();
+    Q_EMIT aboutToHideMenu();
 }
 
 void ToolButton::showMenu()
@@ -165,7 +165,7 @@ void ToolButton::showMenu()
     if (!m_menu || m_menu->isVisible())
         return;
 
-    emit aboutToShowMenu();
+    Q_EMIT aboutToShowMenu();
 
     QPoint pos;
 
@@ -205,11 +205,11 @@ void ToolButton::mouseReleaseEvent(QMouseEvent* e)
     m_pressTimer.stop();
 
     if (e->button() == Qt::MiddleButton && rect().contains(e->pos())) {
-        emit middleMouseClicked();
+        Q_EMIT middleMouseClicked();
         setDown(false);
     }
     else if (e->button() == Qt::LeftButton && rect().contains(e->pos()) && e->modifiers() == Qt::ControlModifier) {
-        emit controlClicked();
+        Q_EMIT controlClicked();
         setDown(false);
     } else {
         QToolButton::mouseReleaseEvent(e);
@@ -223,7 +223,7 @@ void ToolButton::mouseDoubleClickEvent(QMouseEvent* e)
     m_pressTimer.stop();
 
     if (e->buttons() == Qt::LeftButton) {
-        emit doubleClicked();
+        Q_EMIT doubleClicked();
     }
 }
 

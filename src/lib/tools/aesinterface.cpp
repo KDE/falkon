@@ -37,7 +37,6 @@ const int AesInterface::VERSION = 1;
 
 AesInterface::AesInterface(QObject* parent)
     : QObject(parent)
-    , m_ok(false)
 {
     m_encodeCTX = EVP_CIPHER_CTX_new();
     m_decodeCTX = EVP_CIPHER_CTX_new();
@@ -53,7 +52,7 @@ AesInterface::~AesInterface()
     EVP_CIPHER_CTX_free(m_decodeCTX);
 }
 
-bool AesInterface::isOk()
+bool AesInterface::isOk() const
 {
     return m_ok;
 }

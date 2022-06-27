@@ -42,8 +42,8 @@ private:
     void showEvent(QShowEvent* event) override;
     void contextMenuEvent(QContextMenuEvent* event) override;
 
-    QAbstractItemView* m_parent;
-    QMenu* m_menu;
+    QAbstractItemView* m_parent = nullptr;
+    QMenu* m_menu = nullptr;
 
     bool m_resizeOnShow;
     QList<double> m_sectionSizes;

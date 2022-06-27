@@ -38,7 +38,7 @@ bool SideWidget::event(QEvent* event)
 {
     switch (event->type()) {
     case QEvent::LayoutRequest:
-        emit sizeHintChanged();
+        Q_EMIT sizeHintChanged();
         break;
 
     case QEvent::MouseButtonPress:

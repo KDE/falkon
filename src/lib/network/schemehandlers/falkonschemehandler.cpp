@@ -115,7 +115,7 @@ void FalkonSchemeReply::loadPage()
     m_buffer.open(QIODevice::ReadOnly);
     lock.unlock();
 
-    emit readyRead();
+    Q_EMIT readyRead();
 
     m_loaded = true;
 }

@@ -82,7 +82,7 @@ void PageThumbnailer::start()
         m_view->rootObject()->setProperty("url", m_url);
     } else {
         QTimer::singleShot(500, this, [this]() {
-            emit thumbnailCreated(QPixmap());
+            Q_EMIT thumbnailCreated(QPixmap());
         });
     }
 }
@@ -95,13 +95,13 @@ QString PageThumbnailer::afterLoadScript() const
 void PageThumbnailer::createThumbnail(bool status)
 {
     if (!status) {
-        emit thumbnailCreated(QPixmap());
+        Q_EMIT thumbnailCreated(QPixmap());
         return;
     }
 
     QTimer::singleShot(1000, this, [this]() {
         m_title = m_view->rootObject()->property("title").toString().trimmed();
-        emit thumbnailCreated(QPixmap::fromImage(m_view->grabFramebuffer().scaled(m_size, Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+        Q_EMIT thumbnailCreated(QPixmap::fromImage(m_view->grabFramebuffer().scaled(m_size, Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
     });
 }
 

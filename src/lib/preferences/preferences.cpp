@@ -69,8 +69,8 @@ static QString createLanguageItem(const QString &lang)
         return lang;
     }
 
-    QString country = QLocale::countryToString(locale.country());
-    QString language = QLocale::languageToString(locale.language());
+    const QString country = QLocale::countryToString(locale.country());
+    const QString language = QLocale::languageToString(locale.language());
 
     if (lang == QLatin1String("es_ES")) {
         return QString::fromUtf8("Castellano");
@@ -90,7 +90,7 @@ static QString createLanguageItem(const QString &lang)
     if (lang == QLatin1String("sr@ijekavianlatin")) {
         return QString::fromUtf8("srpski ijekavski");
     }
-    return QString("%1, %2 (%3)").arg(language, country, lang);
+    return QStringLiteral("%1, %2 (%3)").arg(language, country, lang);
 }
 
 Preferences::Preferences(BrowserWindow* window)
@@ -117,19 +117,19 @@ Preferences::Preferences(BrowserWindow* window)
         ui->listWidget->item(index)->setIcon(QIcon(icon.pixmap(32)));
     };
 
-    setCategoryIcon(0, QIcon(":/icons/preferences/general.svg"));
-    setCategoryIcon(1, QIcon(":/icons/preferences/appearance.svg"));
-    setCategoryIcon(2, QIcon(":/icons/preferences/tabs.svg"));
-    setCategoryIcon(3, QIcon(":/icons/preferences/browsing.svg"));
-    setCategoryIcon(4, QIcon(":/icons/preferences/fonts.svg"));
-    setCategoryIcon(5, QIcon(":/icons/preferences/shortcuts.svg"));
-    setCategoryIcon(6, QIcon(":/icons/preferences/downloads.svg"));
-    setCategoryIcon(7, QIcon(":/icons/preferences/passwords.svg"));
-    setCategoryIcon(8, QIcon(":/icons/preferences/privacy.svg"));
-    setCategoryIcon(9, QIcon(":/icons/preferences/notifications.svg"));
-    setCategoryIcon(10, QIcon(":/icons/preferences/extensions.svg"));
-    setCategoryIcon(11, QIcon(":/icons/preferences/spellcheck.svg"));
-    setCategoryIcon(12, QIcon(":/icons/preferences/other.svg"));
+    setCategoryIcon(0, QIcon(QStringLiteral(":/icons/preferences/general.svg")));
+    setCategoryIcon(1, QIcon(QStringLiteral(":/icons/preferences/appearance.svg")));
+    setCategoryIcon(2, QIcon(QStringLiteral(":/icons/preferences/tabs.svg")));
+    setCategoryIcon(3, QIcon(QStringLiteral(":/icons/preferences/browsing.svg")));
+    setCategoryIcon(4, QIcon(QStringLiteral(":/icons/preferences/fonts.svg")));
+    setCategoryIcon(5, QIcon(QStringLiteral(":/icons/preferences/shortcuts.svg")));
+    setCategoryIcon(6, QIcon(QStringLiteral(":/icons/preferences/downloads.svg")));
+    setCategoryIcon(7, QIcon(QStringLiteral(":/icons/preferences/passwords.svg")));
+    setCategoryIcon(8, QIcon(QStringLiteral(":/icons/preferences/privacy.svg")));
+    setCategoryIcon(9, QIcon(QStringLiteral(":/icons/preferences/notifications.svg")));
+    setCategoryIcon(10, QIcon(QStringLiteral(":/icons/preferences/extensions.svg")));
+    setCategoryIcon(11, QIcon(QStringLiteral(":/icons/preferences/spellcheck.svg")));
+    setCategoryIcon(12, QIcon(QStringLiteral(":/icons/preferences/other.svg")));
 
     Settings settings;
     //GENERAL URLs
@@ -198,7 +198,7 @@ Preferences::Preferences(BrowserWindow* window)
 
     // PROFILES
     QString startingProfile = ProfileManager::startingProfile();
-    ui->activeProfile->setText("<b>" + ProfileManager::currentProfile() + "</b>");
+    ui->activeProfile->setText(QStringLiteral("<b>") + ProfileManager::currentProfile() + QStringLiteral("</b>"));
     ui->startProfile->addItem(startingProfile);
 
     const auto names = ProfileManager::availableProfiles();

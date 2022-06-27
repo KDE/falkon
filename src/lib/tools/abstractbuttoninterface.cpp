@@ -39,7 +39,7 @@ void AbstractButtonInterface::setActive(bool active)
     }
 
     m_active = active;
-    emit activeChanged(m_active);
+    Q_EMIT activeChanged(m_active);
 }
 
 bool AbstractButtonInterface::isVisible() const
@@ -54,7 +54,7 @@ void AbstractButtonInterface::setVisible(bool visible)
     }
 
     m_visible = visible;
-    emit visibleChanged(m_visible);
+    Q_EMIT visibleChanged(m_visible);
 }
 
 QString AbstractButtonInterface::title() const
@@ -69,7 +69,7 @@ void AbstractButtonInterface::setTitle(const QString &title)
     }
 
     m_title = title;
-    emit titleChanged(m_title);
+    Q_EMIT titleChanged(m_title);
 }
 
 QString AbstractButtonInterface::toolTip() const
@@ -84,7 +84,7 @@ void AbstractButtonInterface::setToolTip(const QString &toolTip)
     }
 
     m_toolTip = toolTip;
-    emit toolTipChanged(m_toolTip);
+    Q_EMIT toolTipChanged(m_toolTip);
 }
 
 QIcon AbstractButtonInterface::icon() const
@@ -95,7 +95,7 @@ QIcon AbstractButtonInterface::icon() const
 void AbstractButtonInterface::setIcon(const QIcon &icon)
 {
     m_icon = icon;
-    emit iconChanged(icon);
+    Q_EMIT iconChanged(icon);
 }
 
 QString AbstractButtonInterface::badgeText() const
@@ -110,7 +110,7 @@ void AbstractButtonInterface::setBadgeText(const QString &badgeText)
     }
 
     m_badgeText = badgeText;
-    emit badgeTextChanged(m_badgeText);
+    Q_EMIT badgeTextChanged(m_badgeText);
 }
 
 WebView *AbstractButtonInterface::webView() const
@@ -125,5 +125,5 @@ void AbstractButtonInterface::setWebView(WebView *view)
     }
 
     m_view = view;
-    emit webViewChanged(m_view);
+    Q_EMIT webViewChanged(m_view);
 }

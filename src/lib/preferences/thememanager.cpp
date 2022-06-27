@@ -129,7 +129,7 @@ ThemeManager::Theme ThemeManager::parseTheme(const QString &path, const QString 
     Theme info;
     info.isValid = false;
 
-    if (!QFile(path + "main.css").exists() || !QFile(path + "metadata.desktop").exists()) {
+    if (!QFile(path + QStringLiteral("main.css")).exists() || !QFile(path + "metadata.desktop").exists()) {
         info.isValid = false;
         return info;
     }

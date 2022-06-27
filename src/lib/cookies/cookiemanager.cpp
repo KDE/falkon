@@ -243,7 +243,7 @@ QTreeWidgetItem *CookieManager::cookieItem(const QNetworkCookie &cookie) const
         if (it.value() == cookie)
             return it.key();
     }
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 void CookieManager::removeBlacklist()
@@ -320,7 +320,7 @@ void CookieManager::removeCookie(const QNetworkCookie &cookie)
     if (item->parent() && item->parent()->childCount() == 1) {
         m_domainHash.remove(cookieDomain(cookie));
         delete item->parent();
-        item = Q_NULLPTR;
+        item = nullptr;
     }
 
     delete item;

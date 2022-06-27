@@ -348,7 +348,7 @@ void FancyTabBar::setTabToolTip(int index, const QString &toolTip)
 // mode itself
 void FancyTabBar::emitCurrentIndex()
 {
-    emit currentChanged(m_currentIndex);
+    Q_EMIT currentChanged(m_currentIndex);
 }
 
 void FancyTabBar::mousePressEvent(QMouseEvent* e)
@@ -460,7 +460,7 @@ void FancyTabBar::setCurrentIndex(int index)
 {
     m_currentIndex = index;
     update();
-    emit currentChanged(m_currentIndex);
+    Q_EMIT currentChanged(m_currentIndex);
 }
 
 
@@ -590,7 +590,7 @@ void FancyTabWidget::SetCurrentIndex(int index)
 void FancyTabWidget::ShowWidget(int index)
 {
     stack_->setCurrentIndex(index);
-    emit CurrentChanged(index);
+    Q_EMIT CurrentChanged(index);
 }
 
 void FancyTabWidget::AddBottomWidget(QWidget* widget)
@@ -656,7 +656,7 @@ void FancyTabWidget::SetMode(Mode mode)
     tab_bar_->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
 
     mode_ = mode;
-    emit ModeChanged(mode);
+    Q_EMIT ModeChanged(mode);
     update();
 }
 

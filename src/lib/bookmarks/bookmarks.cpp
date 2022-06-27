@@ -148,7 +148,7 @@ void Bookmarks::insertBookmark(BookmarkItem* parent, int row, BookmarkItem* item
 
     m_lastFolder = parent;
     m_model->addBookmark(parent, row, item);
-    emit bookmarkAdded(item);
+    Q_EMIT bookmarkAdded(item);
 
     m_autoSaver->changeOccurred();
 }
@@ -160,7 +160,7 @@ bool Bookmarks::removeBookmark(BookmarkItem* item)
     }
 
     m_model->removeBookmark(item);
-    emit bookmarkRemoved(item);
+    Q_EMIT bookmarkRemoved(item);
 
     m_autoSaver->changeOccurred();
     return true;
@@ -169,7 +169,7 @@ bool Bookmarks::removeBookmark(BookmarkItem* item)
 void Bookmarks::changeBookmark(BookmarkItem* item)
 {
     Q_ASSERT(item);
-    emit bookmarkChanged(item);
+    Q_EMIT bookmarkChanged(item);
 
     m_autoSaver->changeOccurred();
 }
@@ -177,14 +177,14 @@ void Bookmarks::changeBookmark(BookmarkItem* item)
 void Bookmarks::setShowOnlyIconsInToolbar(bool state)
 {
     m_showOnlyIconsInToolbar = state;
-    emit showOnlyIconsInToolbarChanged(state);
+    Q_EMIT showOnlyIconsInToolbarChanged(state);
     m_autoSaver->changeOccurred();
 }
 
 void Bookmarks::setShowOnlyTextInToolbar(bool state)
 {
     m_showOnlyTextInToolbar = state;
-    emit showOnlyTextInToolbarChanged(state);
+    Q_EMIT showOnlyTextInToolbarChanged(state);
     m_autoSaver->changeOccurred();
 }
 

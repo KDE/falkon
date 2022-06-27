@@ -213,7 +213,7 @@ void SessionManager::newSession()
     if (!ok)
         return;
 
-    const QString filePath = QString("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions)).arg(sessionName);
+    const QString filePath = QStringLiteral("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions)).arg(sessionName);
     if (QFile::exists(filePath)) {
         QMessageBox::information(mApp->activeWindow(), tr("Error!"), tr("The session file \"%1\" exists. Please enter another name.").arg(sessionName));
         newSession();

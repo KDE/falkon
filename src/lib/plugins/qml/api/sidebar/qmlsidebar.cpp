@@ -61,7 +61,7 @@ SideBarInterface *QmlSideBar::sideBar() const
 void QmlSideBar::setName(const QString &name)
 {
     m_name = name;
-    emit nameChanged(m_name);
+    Q_EMIT nameChanged(m_name);
 }
 
 QString QmlSideBar::title() const
@@ -72,7 +72,7 @@ QString QmlSideBar::title() const
 void QmlSideBar::setTitle(const QString &title)
 {
     m_title = title;
-    emit titleChanged(title);
+    Q_EMIT titleChanged(title);
 }
 
 QString QmlSideBar::icon() const
@@ -83,7 +83,7 @@ QString QmlSideBar::icon() const
 void QmlSideBar::setIcon(const QString &icon)
 {
     m_iconUrl = icon;
-    emit iconChanged(m_iconUrl);
+    Q_EMIT iconChanged(m_iconUrl);
 }
 
 QString QmlSideBar::shortcut() const
@@ -94,7 +94,7 @@ QString QmlSideBar::shortcut() const
 void QmlSideBar::setShortcut(const QString &shortcut)
 {
     m_shortcut = shortcut;
-    emit shortcutChanged(m_shortcut);
+    Q_EMIT shortcutChanged(m_shortcut);
 }
 
 bool QmlSideBar::checkable()
@@ -105,7 +105,7 @@ bool QmlSideBar::checkable()
 void QmlSideBar::setCheckable(bool checkable)
 {
     m_checkable = checkable;
-    emit checkableChanged(m_checkable);
+    Q_EMIT checkableChanged(m_checkable);
 }
 
 QQmlComponent *QmlSideBar::item() const
@@ -116,7 +116,7 @@ QQmlComponent *QmlSideBar::item() const
 void QmlSideBar::setItem(QQmlComponent *item)
 {
     m_item = item;
-    emit itemChanged(m_item);
+    Q_EMIT itemChanged(m_item);
 }
 
 QmlSideBarHelper::QmlSideBarHelper(QObject *parent)

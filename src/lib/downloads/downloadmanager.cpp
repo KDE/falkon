@@ -106,7 +106,7 @@ void DownloadManager::show()
 void DownloadManager::resizeEvent(QResizeEvent* e)
 {
     QWidget::resizeEvent(e);
-    emit resized(size());
+    Q_EMIT resized(size());
 }
 
 void DownloadManager::keyPressEvent(QKeyEvent* e)
@@ -251,7 +251,7 @@ void DownloadManager::clearList()
         items.append(downItem);
     }
     qDeleteAll(items);
-    emit downloadsCountChanged();
+    Q_EMIT downloadsCountChanged();
 }
 
 void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
@@ -372,7 +372,7 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
     downItem->show();
 
     m_activeDownloadsCount++;
-    emit downloadsCountChanged();
+    Q_EMIT downloadsCountChanged();
 }
 
 int DownloadManager::downloadsCount() const
@@ -403,7 +403,7 @@ void DownloadManager::downloadFinished(bool success)
         downloadingAllFilesFinished = false;
     }
 
-    emit downloadsCountChanged();
+    Q_EMIT downloadsCountChanged();
 
     if (downloadingAllFilesFinished) {
         if (success && qApp->activeWindow() != this) {

@@ -170,14 +170,14 @@ void AdBlockSubscription::subscriptionDownloaded()
     m_reply = 0;
 
     if (error) {
-        emit subscriptionError(tr("Cannot load subscription!"));
+        Q_EMIT subscriptionError(tr("Cannot load subscription!"));
         return;
     }
 
     loadSubscription(AdBlockManager::instance()->disabledRules());
 
-    emit subscriptionUpdated();
-    emit subscriptionChanged();
+    Q_EMIT subscriptionUpdated();
+    Q_EMIT subscriptionChanged();
 }
 
 bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
@@ -220,7 +220,7 @@ const AdBlockRule* AdBlockSubscription::enableRule(int offset)
     rule->setEnabled(true);
     AdBlockManager::instance()->removeDisabledRule(rule->filter());
 
-    emit subscriptionChanged();
+    Q_EMIT subscriptionChanged();
 
     if (rule->isCssRule())
         mApp->reloadUserStyleSheet();
@@ -238,7 +238,7 @@ const AdBlockRule* AdBlockSubscription::disableRule(int offset)
     rule->setEnabled(false);
     AdBlockManager::instance()->addDisabledRule(rule->filter());
 
-    emit subscriptionChanged();
+    Q_EMIT subscriptionChanged();
 
     if (rule->isCssRule())
         mApp->reloadUserStyleSheet();
@@ -379,7 +379,7 @@ int AdBlockCustomList::addRule(AdBlockRule* rule)
 {
     m_rules.append(rule);
 
-    emit subscriptionChanged();
+    Q_EMIT subscriptionChanged();
 
     if (rule->isCssRule())
         mApp->reloadUserStyleSheet();
@@ -398,7 +398,7 @@ bool AdBlockCustomList::removeRule(int offset)
 
     m_rules.remove(offset);
 
-    emit subscriptionChanged();
+    Q_EMIT subscriptionChanged();
 
     if (rule->isCssRule())
         mApp->reloadUserStyleSheet();
@@ -418,7 +418,7 @@ const AdBlockRule* AdBlockCustomList::replaceRule(AdBlockRule* rule, int offset)
     AdBlockRule* oldRule = m_rules.at(offset);
     m_rules[offset] = rule;
 
-    emit subscriptionChanged();
+    Q_EMIT subscriptionChanged();
 
     if (rule->isCssRule() || oldRule->isCssRule())
         mApp->reloadUserStyleSheet();

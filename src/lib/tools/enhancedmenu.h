@@ -47,7 +47,7 @@ private:
 
     void closeAllMenus();
 
-    bool m_closeOnMiddleClick;
+    bool m_closeOnMiddleClick = false;
 };
 
 class FALKON_EXPORT Action : public QAction

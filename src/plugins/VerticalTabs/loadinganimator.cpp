@@ -75,6 +75,6 @@ void LoadingAnimator::updatePixmap(LoadingAnimation *animation)
         m_indexes.remove(animation);
         m_animations.remove(index);
     } else {
-        emit updateIndex(index);
+        Q_EMIT updateIndex(index);
     }
 }

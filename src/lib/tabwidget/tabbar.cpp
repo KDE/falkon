@@ -282,7 +282,7 @@ QSize TabBar::tabSizeHint(int index, bool fast) const
             xForAddTabButton = width() - xForAddTabButton;
         }
 
-        emit tabBar->moveAddTabButton(xForAddTabButton);
+        Q_EMIT tabBar->moveAddTabButton(xForAddTabButton);
     }
 
     return size;
@@ -486,7 +486,7 @@ void TabBar::tabRemoved(int index)
         int xForAddTabButton = cornerWidth(Qt::TopLeftCorner) + pinTabBarWidth();
         if (QApplication::layoutDirection() == Qt::RightToLeft)
             xForAddTabButton = width() - xForAddTabButton;
-        emit moveAddTabButton(xForAddTabButton);
+        Q_EMIT moveAddTabButton(xForAddTabButton);
     }
 }
 

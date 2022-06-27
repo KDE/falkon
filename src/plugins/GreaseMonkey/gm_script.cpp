@@ -160,17 +160,17 @@ void GM_Script::updateScript()
         return;
 
     m_updating = true;
-    emit updatingChanged(m_updating);
+    Q_EMIT updatingChanged(m_updating);
 
     auto *downloader = new GM_Downloader(m_downloadUrl, m_manager);
     downloader->updateScript(m_fileName);
     connect(downloader, &GM_Downloader::finished, this, [this]() {
         m_updating = false;
-        emit updatingChanged(m_updating);
+        Q_EMIT updatingChanged(m_updating);
     });
     connect(downloader, &GM_Downloader::error, this, [this]() {
         m_updating = false;
-        emit updatingChanged(m_updating);
+        Q_EMIT updatingChanged(m_updating);
     });
     downloadRequires();
 }
@@ -315,7 +315,7 @@ void GM_Script::reloadScript()
     m_manager->removeScript(this, false);
     m_manager->addScript(this);
 
-    emit scriptChanged();
+    Q_EMIT scriptChanged();
 }
 
 void GM_Script::downloadIcon()

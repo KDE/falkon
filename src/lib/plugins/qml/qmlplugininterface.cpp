@@ -73,7 +73,7 @@ void QmlPluginInterface::unload()
         childItem->deleteLater();
     }
 
-    emit qmlPluginUnloaded();
+    Q_EMIT qmlPluginUnloaded();
 }
 
 bool QmlPluginInterface::testPlugin()

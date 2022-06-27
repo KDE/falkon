@@ -83,7 +83,7 @@ void SqlQueryJob::start()
         m_error = result.error;
         m_lastInsertId = result.lastInsertId;
         m_records = result.records;
-        emit finished(this);
+        Q_EMIT finished(this);
     });
 
     watcher->setFuture(QtConcurrent::run([=]() {

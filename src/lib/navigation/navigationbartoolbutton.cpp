@@ -71,7 +71,7 @@ void NavigationBarToolButton::clicked()
         setDown(false);
         delete c;
     };
-    emit m_button->clicked(c);
+    Q_EMIT m_button->clicked(c);
     if (c->popupOpened) {
         setDown(true);
     } else {

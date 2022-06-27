@@ -67,22 +67,22 @@ void ClearPrivateData::clearLocalStorage()
 {
     const QString profile = DataPaths::currentProfilePath();
 
-    QzTools::removeRecursively(profile + "/Local Storage");
+    QzTools::removeRecursively(profile + QStringLiteral("/Local Storage"));
 }
 
 void ClearPrivateData::clearWebDatabases()
 {
     const QString profile = DataPaths::currentProfilePath();
 
-    QzTools::removeRecursively(profile + "/IndexedDB");
-    QzTools::removeRecursively(profile + "/databases");
+    QzTools::removeRecursively(profile + QStringLiteral("/IndexedDB"));
+    QzTools::removeRecursively(profile + QStringLiteral("/databases"));
 }
 
 void ClearPrivateData::clearCache()
 {
     const QString profile = DataPaths::currentProfilePath();
 
-    QzTools::removeRecursively(profile + "/GPUCache");
+    QzTools::removeRecursively(profile + QStringLiteral("/GPUCache"));
 
     mApp->webProfile()->clearHttpCache();
 }
@@ -161,11 +161,11 @@ void ClearPrivateData::optimizeDb()
     mApp->setOverrideCursor(Qt::WaitCursor);
 
     const QString profilePath = DataPaths::currentProfilePath();
-    QString sizeBefore = QzTools::fileSizeToString(QFileInfo(profilePath + "/browsedata.db").size());
+    QString sizeBefore = QzTools::fileSizeToString(QFileInfo(profilePath + QStringLiteral("/browsedata.db")).size());
 
     IconProvider::instance()->clearOldIconsInDatabase();
 
-    QString sizeAfter = QzTools::fileSizeToString(QFileInfo(profilePath + "/browsedata.db").size());
+    QString sizeAfter = QzTools::fileSizeToString(QFileInfo(profilePath + QStringLiteral("/browsedata.db")).size());
 
     mApp->restoreOverrideCursor();
 

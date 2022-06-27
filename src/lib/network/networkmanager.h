@@ -33,11 +33,11 @@ class FALKON_EXPORT NetworkManager : public QNetworkAccessManager
     Q_OBJECT
 
 public:
-    explicit NetworkManager(QObject *parent = Q_NULLPTR);
+    explicit NetworkManager(QObject *parent = nullptr);
 
-    bool certificateError(const QWebEngineCertificateError &error, QWidget *parent = Q_NULLPTR);
-    void authentication(const QUrl &url, QAuthenticator *auth, QWidget *parent = Q_NULLPTR);
-    void proxyAuthentication(const QString &proxyHost, QAuthenticator *auth, QWidget *parent = Q_NULLPTR);
+    bool certificateError(const QWebEngineCertificateError &error, QWidget *parent = nullptr);
+    void authentication(const QUrl &url, QAuthenticator *auth, QWidget *parent = nullptr);
+    void proxyAuthentication(const QString &proxyHost, QAuthenticator *auth, QWidget *parent = nullptr);
 
     void installUrlInterceptor(UrlInterceptor *interceptor);
     void removeUrlInterceptor(UrlInterceptor *interceptor);

@@ -82,7 +82,7 @@ void StatusBarButton::clicked()
     c->popupClosed = [=]() {
         delete c;
     };
-    emit m_button->clicked(c);
+    Q_EMIT m_button->clicked(c);
     if (!c->popupOpened) {
         c->popupClosed();
     }

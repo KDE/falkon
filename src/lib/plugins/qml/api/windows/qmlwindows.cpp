@@ -26,12 +26,12 @@ QmlWindows::QmlWindows(QObject *parent)
 {
     connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, [this](BrowserWindow *window){
         QmlWindow *qmlWindow = QmlStaticData::instance().getWindow(window);
-        emit created(qmlWindow);
+        Q_EMIT created(qmlWindow);
     });
 
     connect(mApp->plugins(), &PluginProxy::mainWindowDeleted, this, [this](BrowserWindow *window){
         QmlWindow *qmlWindow = QmlStaticData::instance().getWindow(window);
-        emit removed(qmlWindow);
+        Q_EMIT removed(qmlWindow);
     });
 }
 

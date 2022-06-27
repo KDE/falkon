@@ -32,7 +32,7 @@ void AutoSaver::saveIfNecessary()
 {
     if (m_timer.isActive()) {
         m_timer.stop();
-        emit save();
+        Q_EMIT save();
     }
 }
 
@@ -47,7 +47,7 @@ void AutoSaver::timerEvent(QTimerEvent* event)
 {
     if (event->timerId() == m_timer.timerId()) {
         m_timer.stop();
-        emit save();
+        Q_EMIT save();
     }
 
     QObject::timerEvent(event);

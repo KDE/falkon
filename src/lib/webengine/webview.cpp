@@ -142,8 +142,8 @@ void WebView::setPage(WebPage *page)
 
     if (m_page) {
         if (m_page->isLoading()) {
-            emit m_page->loadProgress(100);
-            emit m_page->loadFinished(true);
+            Q_EMIT m_page->loadProgress(100);
+            Q_EMIT m_page->loadFinished(true);
         }
         mApp->plugins()->emitWebPageDeleted(m_page);
         m_page->setView(nullptr);
@@ -155,8 +155,8 @@ void WebView::setPage(WebPage *page)
     m_page = page;
 
     if (m_page->isLoading()) {
-        emit loadStarted();
-        emit loadProgress(m_page->m_loadProgress);
+        Q_EMIT loadStarted();
+        Q_EMIT loadProgress(m_page->m_loadProgress);
     }
 
     connect(m_page, &WebPage::privacyChanged, this, &WebView::privacyChanged);
@@ -171,7 +171,7 @@ void WebView::setPage(WebPage *page)
     // Scrollbars must be added only after QWebEnginePage is set
     WebScrollBarManager::instance()->addWebView(this);
 
-    emit pageChanged(m_page);
+    Q_EMIT pageChanged(m_page);
     mApp->plugins()->emitWebPageCreated(m_page);
 }
 
@@ -286,14 +286,14 @@ void WebView::setForceContextMenuOnMouseRelease(bool force)
 
 void WebView::addNotification(QWidget* notif)
 {
-    emit showNotification(notif);
+    Q_EMIT showNotification(notif);
 }
 
 void WebView::applyZoom()
 {
     setZoomFactor(qreal(zoomLevels().at(m_currentZoomLevel)) / 100.0);
 
-    emit zoomLevelChanged(m_currentZoomLevel);
+    Q_EMIT zoomLevelChanged(m_currentZoomLevel);
 }
 
 void WebView::zoomIn()
@@ -368,7 +368,7 @@ void WebView::back()
     if (history->canGoBack()) {
         history->back();
 
-        emit urlChanged(url());
+        Q_EMIT urlChanged(url());
     }
 }
 
@@ -379,7 +379,7 @@ void WebView::forward()
     if (history->canGoForward()) {
         history->forward();
 
-        emit urlChanged(url());
+        Q_EMIT urlChanged(url());
     }
 }
 
@@ -416,7 +416,7 @@ void WebView::slotLoadStarted()
     m_progress = 0;
 
     if (title(/*allowEmpty*/true).isEmpty()) {
-        emit titleChanged(title());
+        Q_EMIT titleChanged(title());
     }
 }
 
@@ -451,7 +451,7 @@ void WebView::slotUrlChanged(const QUrl &url)
         // Don't treat this as background activity change
         const bool oldActivity = m_backgroundActivity;
         m_backgroundActivity = true;
-        emit titleChanged(title());
+        Q_EMIT titleChanged(title());
         m_backgroundActivity = oldActivity;
     }
 }
@@ -462,7 +462,7 @@ void WebView::slotTitleChanged(const QString &title)
 
     if (!isVisible() && !isLoading() && !m_backgroundActivity) {
         m_backgroundActivity = true;
-        emit backgroundActivityChanged(m_backgroundActivity);
+        Q_EMIT backgroundActivityChanged(m_backgroundActivity);
     }
 }
 
@@ -661,7 +661,7 @@ void WebView::showEvent(QShowEvent *event)
 
     if (m_backgroundActivity) {
         m_backgroundActivity = false;
-        emit backgroundActivityChanged(m_backgroundActivity);
+        Q_EMIT backgroundActivityChanged(m_backgroundActivity);
     }
 }
 
@@ -1228,7 +1228,7 @@ void WebView::_contextMenuEvent(QContextMenuEvent *event)
 void WebView::resizeEvent(QResizeEvent *event)
 {
     QWebEngineView::resizeEvent(event);
-    emit viewportResized(size());
+    Q_EMIT viewportResized(size());
 }
 
 void WebView::contextMenuEvent(QContextMenuEvent *event)
@@ -1349,7 +1349,7 @@ bool WebView::eventFilter(QObject *obj, QEvent *event)
         switch (event->type()) {
         case QEvent::FocusIn:
         case QEvent::FocusOut:
-            emit focusChanged(hasFocus());
+            Q_EMIT focusChanged(hasFocus());
             break;
 
         default:

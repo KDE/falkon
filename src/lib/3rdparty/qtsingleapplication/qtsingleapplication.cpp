@@ -250,7 +250,7 @@ void QtSingleApplication::setAppId(const QString &id)
 /*!
     Tries to send the text \a message to the currently running
     instance. The QtSingleApplication object in the running instance
-    will emit the messageReceived() signal when it receives the
+    will Q_EMIT the messageReceived() signal when it receives the
     message.
 
     This function returns true if the message has been sent to, and

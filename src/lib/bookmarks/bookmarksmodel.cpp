@@ -305,7 +305,7 @@ BookmarkItem* BookmarksModel::item(const QModelIndex &index) const
 void BookmarksModel::bookmarkChanged(BookmarkItem* item)
 {
     QModelIndex idx = index(item);
-    emit dataChanged(idx, idx);
+    Q_EMIT dataChanged(idx, idx);
 }
 
 

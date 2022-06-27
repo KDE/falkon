@@ -70,14 +70,14 @@ void ClickableLabel::mouseReleaseEvent(QMouseEvent* ev)
 {
     if (ev->button() == Qt::LeftButton && rect().contains(ev->pos())) {
         if (ev->modifiers() == Qt::ControlModifier) {
-            emit middleClicked(ev->globalPos());
+            Q_EMIT middleClicked(ev->globalPos());
         }
         else {
-            emit clicked(ev->globalPos());
+            Q_EMIT clicked(ev->globalPos());
         }
     }
     else if (ev->button() == Qt::MiddleButton && rect().contains(ev->pos())) {
-        emit middleClicked(ev->globalPos());
+        Q_EMIT middleClicked(ev->globalPos());
     }
     else {
         QLabel::mouseReleaseEvent(ev);

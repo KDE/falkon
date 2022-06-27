@@ -123,13 +123,13 @@ void CookieJar::slotCookieAdded(const QNetworkCookie &cookie)
     }
 
     m_cookies.append(cookie);
-    emit cookieAdded(cookie);
+    Q_EMIT cookieAdded(cookie);
 }
 
 void CookieJar::slotCookieRemoved(const QNetworkCookie &cookie)
 {
     if (m_cookies.removeOne(cookie))
-        emit cookieRemoved(cookie);
+        Q_EMIT cookieRemoved(cookie);
 }
 
 bool CookieJar::cookieFilter(const QWebEngineCookieStore::FilterRequest &request) const

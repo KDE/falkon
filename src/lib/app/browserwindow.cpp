@@ -327,7 +327,7 @@ void BrowserWindow::postLaunch()
     }
 
     mApp->plugins()->emitMainWindowCreated(this);
-    emit startingCompleted();
+    Q_EMIT startingCompleted();
 
     raise();
     activateWindow();
@@ -1515,7 +1515,7 @@ void BrowserWindow::closeEvent(QCloseEvent* event)
         }
     }
 
-    emit aboutToClose();
+    Q_EMIT aboutToClose();
 
     saveSettings();
     mApp->closedWindowsManager()->saveWindow(this);

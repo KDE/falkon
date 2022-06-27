@@ -28,7 +28,7 @@
 class FALKON_EXPORT FalkonSchemeHandler : public QWebEngineUrlSchemeHandler
 {
 public:
-    explicit FalkonSchemeHandler(QObject *parent = Q_NULLPTR);
+    explicit FalkonSchemeHandler(QObject *parent = nullptr);
 
     void requestStarted(QWebEngineUrlRequestJob *job) Q_DECL_OVERRIDE;
 
@@ -41,7 +41,7 @@ class FALKON_EXPORT FalkonSchemeReply : public QIODevice
     Q_OBJECT
 
 public:
-    explicit FalkonSchemeReply(QWebEngineUrlRequestJob *job, QObject *parent = Q_NULLPTR);
+    explicit FalkonSchemeReply(QWebEngineUrlRequestJob *job, QObject *parent = nullptr);
 
     qint64 bytesAvailable() const Q_DECL_OVERRIDE;
     qint64 readData(char *data, qint64 maxSize) Q_DECL_OVERRIDE;

@@ -193,7 +193,7 @@ void SearchEnginesManager::restoreDefaults()
 
     m_defaultEngine = duck;
 
-    emit enginesChanged();
+    Q_EMIT enginesChanged();
 }
 
 // static
@@ -225,7 +225,7 @@ void SearchEnginesManager::engineChangedImage()
             if (index != -1) {
                 m_allEngines[index].icon = QIcon(QPixmap::fromImage(engine->image()));
 
-                emit enginesChanged();
+                Q_EMIT enginesChanged();
 
                 delete engine;
                 break;
@@ -250,7 +250,7 @@ void SearchEnginesManager::addEngine(const Engine &engine)
 
     m_allEngines.append(engine);
 
-    emit enginesChanged();
+    Q_EMIT enginesChanged();
 }
 
 void SearchEnginesManager::addEngineFromForm(const QVariantMap &formData, WebView *view)
@@ -423,7 +423,7 @@ void SearchEnginesManager::setActiveEngine(const Engine &engine)
     }
 
     m_activeEngine = engine;
-    emit activeEngineChanged();
+    Q_EMIT activeEngineChanged();
 }
 
 void SearchEnginesManager::setDefaultEngine(const SearchEnginesManager::Engine &engine)
@@ -435,7 +435,7 @@ void SearchEnginesManager::setDefaultEngine(const SearchEnginesManager::Engine &
     }
 
     m_defaultEngine = engine;
-    emit defaultEngineChanged();
+    Q_EMIT defaultEngineChanged();
 }
 
 void SearchEnginesManager::removeEngine(const Engine &engine)
@@ -455,7 +455,7 @@ void SearchEnginesManager::removeEngine(const Engine &engine)
     query.exec();
 
     m_allEngines.remove(index);
-    emit enginesChanged();
+    Q_EMIT enginesChanged();
 }
 
 void SearchEnginesManager::setAllEngines(const QVector<Engine> &engines)
@@ -463,7 +463,7 @@ void SearchEnginesManager::setAllEngines(const QVector<Engine> &engines)
     ENSURE_LOADED;
 
     m_allEngines = engines;
-    emit enginesChanged();
+    Q_EMIT enginesChanged();
 }
 
 QVector<SearchEngine> SearchEnginesManager::allEngines()

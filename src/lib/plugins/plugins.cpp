@@ -93,7 +93,7 @@ void Plugins::unloadPlugin(Plugins::Plugin* plugin)
     }
 
     plugin->instance->unload();
-    emit pluginUnloaded(plugin->instance);
+    Q_EMIT pluginUnloaded(plugin->instance);
     plugin->instance = nullptr;
 
     m_availablePlugins.removeOne(*plugin);
@@ -127,7 +127,7 @@ void Plugins::removePlugin(Plugins::Plugin *plugin)
     }
 
     m_availablePlugins.removeOne(*plugin);
-    emit availablePluginsChanged();
+    Q_EMIT availablePluginsChanged();
 }
 
 bool Plugins::addPlugin(const QString &id)
@@ -141,7 +141,7 @@ bool Plugins::addPlugin(const QString &id)
         return false;
     }
     registerAvailablePlugin(plugin);
-    emit availablePluginsChanged();
+    Q_EMIT availablePluginsChanged();
     return true;
 }
 
@@ -221,7 +221,7 @@ PluginSpec Plugins::createSpec(const DesktopFile &metaData)
 
 void Plugins::loadPlugins()
 {
-    QDir settingsDir(DataPaths::currentProfilePath() + "/extensions/");
+    QDir settingsDir(DataPaths::currentProfilePath() + QStringLiteral("/extensions/"));
     if (!settingsDir.exists()) {
         settingsDir.mkdir(settingsDir.absolutePath());
     }
@@ -312,7 +312,7 @@ void Plugins::refreshLoadedPlugins()
         }
     }
 
-    emit availablePluginsChanged();
+    Q_EMIT availablePluginsChanged();
 }
 
 void Plugins::loadPythonSupport()
@@ -472,7 +472,7 @@ bool Plugins::initPlugin(PluginInterface::InitState state, Plugin *plugin)
     plugin->instance->init(state, DataPaths::currentProfilePath() + QL1S("/extensions"));
 
     if (!plugin->instance->testPlugin()) {
-        emit pluginUnloaded(plugin->instance);
+        Q_EMIT pluginUnloaded(plugin->instance);
         plugin->instance = nullptr;
         return false;
     }
