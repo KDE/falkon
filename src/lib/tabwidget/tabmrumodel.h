@@ -32,7 +32,7 @@ class FALKON_EXPORT TabMruModel : public QAbstractProxyModel
 
 public:
     explicit TabMruModel(BrowserWindow *window, QObject *parent = nullptr);
-    ~TabMruModel();
+    ~TabMruModel() override;
 
     QModelIndex tabIndex(WebTab *tab) const;
     WebTab *tab(const QModelIndex &index) const;

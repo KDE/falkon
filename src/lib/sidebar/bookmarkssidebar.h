@@ -37,7 +37,7 @@ class FALKON_EXPORT BookmarksSidebar : public QWidget
 
 public:
     explicit BookmarksSidebar(BrowserWindow* window, QWidget* parent = nullptr);
-    ~BookmarksSidebar();
+    ~BookmarksSidebar() override;
 
 private Q_SLOTS:
     void bookmarkActivated(BookmarkItem* item);

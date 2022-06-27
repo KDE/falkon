@@ -36,7 +36,7 @@ class FALKON_EXPORT BrowsingLibrary : public QWidget
 
 public:
     explicit BrowsingLibrary(BrowserWindow* window, QWidget* parent = nullptr);
-    ~BrowsingLibrary();
+    ~BrowsingLibrary() override;
 
     void showHistory(BrowserWindow* window);
     void showBookmarks(BrowserWindow* window);

@@ -63,7 +63,7 @@ public:
      *  swallowed by the filter.
      */
     QjtMouseGestureFilter(bool allowDiagonals = false, Qt::MouseButton gestureButton = Qt::RightButton, int minimumMovement = 5, double minimumMatch = 0.9, QObject* parent = 0);
-    ~QjtMouseGestureFilter();
+    ~QjtMouseGestureFilter() override;
 
     /*
      *  Adds a gesture to the filter.

@@ -34,7 +34,7 @@ class FALKON_EXPORT TabStackedWidget : public QWidget
     Q_OBJECT
 public:
     explicit TabStackedWidget(QWidget* parent = nullptr);
-    ~TabStackedWidget();
+    ~TabStackedWidget() override;
 
     ComboTabBar* tabBar();
     void setTabBar(ComboTabBar* tb);

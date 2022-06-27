@@ -48,7 +48,7 @@ public:
     QTime remainingTime() const { return m_remTime; }
     double currentSpeed() const { return m_currSpeed; }
     int progress();
-    ~DownloadItem();
+    ~DownloadItem() override;
     void setDownTimer(const QTime &timer) { m_downTimer = timer; }
 
     void startDownloading();

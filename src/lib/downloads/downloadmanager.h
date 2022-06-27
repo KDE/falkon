@@ -60,7 +60,7 @@ public:
     };
 
     explicit DownloadManager(QWidget* parent = nullptr);
-    ~DownloadManager();
+    ~DownloadManager() override;
 
     void loadSettings();
 

@@ -38,7 +38,7 @@ class FALKON_EXPORT CookieManager : public QDialog
 
 public:
     explicit CookieManager(QWidget *parent = nullptr);
-    ~CookieManager();
+    ~CookieManager() override;
 
 private Q_SLOTS:
     void currentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem* parent);

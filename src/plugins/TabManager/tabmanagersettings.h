@@ -14,7 +14,7 @@ class TabManagerSettings : public QDialog
 
 public:
     explicit TabManagerSettings(TabManagerPlugin* plugin, QWidget *parent = 0);
-    ~TabManagerSettings();
+    ~TabManagerSettings() override;
 
 public Q_SLOTS:
     void accept() override;

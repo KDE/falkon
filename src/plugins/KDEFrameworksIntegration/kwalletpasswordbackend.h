@@ -31,7 +31,7 @@ class FALKON_EXPORT KWalletPasswordBackend : public PasswordBackend
 {
 public:
     explicit KWalletPasswordBackend();
-    ~KWalletPasswordBackend();
+    ~KWalletPasswordBackend() override;
 
     QString name() const override;
 

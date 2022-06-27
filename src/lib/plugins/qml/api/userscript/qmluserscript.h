@@ -74,7 +74,7 @@ public:
     Q_ENUM(ScriptWorldId)
 
     explicit QmlUserScript(QObject *parent = nullptr);
-    ~QmlUserScript();
+    ~QmlUserScript() override;
     QWebEngineScript webEngineScript() const;
     void setWebEngineScript(const QWebEngineScript &script);
 Q_SIGNALS:

@@ -54,7 +54,7 @@ public:
     };
 
     explicit ButtonWithMenu(QWidget* parent = nullptr);
-    ~ButtonWithMenu();
+    ~ButtonWithMenu() override;
 
     void addItem(const Item &item);
     void addItems(const QVector<Item> &items);

@@ -34,7 +34,7 @@ class FALKON_EXPORT JsOptions : public QDialog
 
 public:
     explicit JsOptions(QWidget* parent = nullptr);
-    ~JsOptions();
+    ~JsOptions() override;
 
 public Q_SLOTS:
     void accept() override;

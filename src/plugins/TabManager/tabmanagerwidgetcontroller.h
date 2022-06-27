@@ -30,7 +30,7 @@ class TabManagerWidgetController : public SideBarInterface
     Q_OBJECT
 public:
     explicit TabManagerWidgetController(QObject* parent = 0);
-    ~TabManagerWidgetController();
+    ~TabManagerWidgetController() override;
 
     QString title() const override;
     QAction* createMenuAction() override;

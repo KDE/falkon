@@ -34,7 +34,7 @@ class FALKON_EXPORT AcceptLanguage : public QDialog
 
 public:
     explicit AcceptLanguage(QWidget* parent = nullptr);
-    ~AcceptLanguage();
+    ~AcceptLanguage() override;
 
     static QStringList defaultLanguage();
     static QByteArray generateHeader(const QStringList &langs);

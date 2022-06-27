@@ -39,7 +39,7 @@ public:
     void setText(const QString &text) { m_text = text; }
     void setTimeout(int timeout) { m_timeout = timeout; }
     void show();
-    ~DesktopNotification();
+    ~DesktopNotification() override;
 
 private:
     void mousePressEvent(QMouseEvent* e) override;

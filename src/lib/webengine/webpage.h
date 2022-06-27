@@ -44,7 +44,7 @@ public:
     };
 
     explicit WebPage(QObject* parent = nullptr);
-    ~WebPage();
+    ~WebPage() override;
 
     WebView *view() const;
 

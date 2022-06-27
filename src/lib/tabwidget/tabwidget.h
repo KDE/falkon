@@ -67,7 +67,7 @@ class FALKON_EXPORT TabWidget : public TabStackedWidget
     Q_OBJECT
 public:
     explicit TabWidget(BrowserWindow *window, QWidget *parent = nullptr);
-    ~TabWidget();
+    ~TabWidget() override;
 
     BrowserWindow *browserWindow() const;
 

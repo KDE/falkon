@@ -36,7 +36,7 @@ class FALKON_EXPORT UserAgentDialog : public QDialog
 
 public:
     explicit UserAgentDialog(QWidget* parent = nullptr);
-    ~UserAgentDialog();
+    ~UserAgentDialog() override;
 
 private Q_SLOTS:
     void addSite();

@@ -33,7 +33,7 @@ class FALKON_EXPORT TabTreeModel : public QAbstractProxyModel
 
 public:
     explicit TabTreeModel(BrowserWindow *window, QObject *parent = nullptr);
-    ~TabTreeModel();
+    ~TabTreeModel() override;
 
     QModelIndex tabIndex(WebTab *tab) const;
     WebTab *tab(const QModelIndex &index) const;

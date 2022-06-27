@@ -32,7 +32,7 @@ class SessionManagerDialog : public QDialog
 
 public:
     explicit SessionManagerDialog(QWidget *parent = 0);
-    ~SessionManagerDialog();
+    ~SessionManagerDialog() override;
 
 private:
     enum Roles {

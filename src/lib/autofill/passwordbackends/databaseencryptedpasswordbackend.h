@@ -38,7 +38,7 @@ public:
 
     explicit DatabaseEncryptedPasswordBackend();
 
-    ~DatabaseEncryptedPasswordBackend();
+    ~DatabaseEncryptedPasswordBackend() override;
 
     QStringList getUsernames(const QUrl &url) override;
     QVector<PasswordEntry> getEntries(const QUrl &url) override;
@@ -102,7 +102,7 @@ class MasterPasswordDialog : public QDialog
 
 public:
     explicit MasterPasswordDialog(DatabaseEncryptedPasswordBackend* backend, QWidget* parent = nullptr);
-    ~MasterPasswordDialog();
+    ~MasterPasswordDialog() override;
 
     void delayedExec();
 

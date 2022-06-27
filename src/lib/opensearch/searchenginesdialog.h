@@ -36,7 +36,7 @@ class FALKON_EXPORT SearchEnginesDialog : public QDialog
 
 public:
     explicit SearchEnginesDialog(QWidget* parent = nullptr);
-    ~SearchEnginesDialog();
+    ~SearchEnginesDialog() override;
 
 public Q_SLOTS:
     void accept() override;

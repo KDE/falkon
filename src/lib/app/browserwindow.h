@@ -78,7 +78,7 @@ public:
     };
 
     explicit BrowserWindow(Qz::BrowserWindowType type, const QUrl &url = QUrl());
-    ~BrowserWindow();
+    ~BrowserWindow() override;
 
     void setStartTab(WebTab* tab);
     void setStartPage(WebPage* page);

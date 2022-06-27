@@ -40,7 +40,7 @@ class FCM_Dialog : public QDialog
 
 public:
     explicit FCM_Dialog(FCM_Plugin* manager, QWidget* parent = 0);
-    ~FCM_Dialog();
+    ~FCM_Dialog() override;
 
     void refreshView(bool forceReload = false);
     void showPage(int index);

@@ -44,7 +44,7 @@ class FALKON_EXPORT Preferences : public QDialog
 
 public:
     explicit Preferences(BrowserWindow* window);
-    ~Preferences();
+    ~Preferences() override;
 
 private Q_SLOTS:
     void saveSettings();

@@ -36,7 +36,7 @@ class FALKON_EXPORT HistorySideBar : public QWidget
 
 public:
     explicit HistorySideBar(BrowserWindow* window, QWidget* parent = nullptr);
-    ~HistorySideBar();
+    ~HistorySideBar() override;
 
 private Q_SLOTS:
     void urlActivated(const QUrl &url);

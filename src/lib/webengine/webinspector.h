@@ -29,7 +29,7 @@ class FALKON_EXPORT WebInspector : public QWebEngineView
 
 public:
     explicit WebInspector(QWidget *parent = nullptr);
-    ~WebInspector();
+    ~WebInspector() override;
 
     void setView(WebView *view);
     void inspectElement();

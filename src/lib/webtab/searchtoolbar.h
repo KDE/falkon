@@ -40,7 +40,7 @@ class FALKON_EXPORT SearchToolBar : public QWidget
     Q_OBJECT
 public:
     explicit SearchToolBar(WebView* view, QWidget* parent = nullptr);
-    ~SearchToolBar();
+    ~SearchToolBar() override;
 
     void showMinimalInPopupWindow();
 

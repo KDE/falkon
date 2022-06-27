@@ -66,7 +66,7 @@ public:
     };
 
     explicit TabManagerWidget(BrowserWindow* mainClass, QWidget* parent = 0, bool defaultWidget = false);
-    ~TabManagerWidget();
+    ~TabManagerWidget() override;
 
     void closeSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash);
     void detachSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash);
