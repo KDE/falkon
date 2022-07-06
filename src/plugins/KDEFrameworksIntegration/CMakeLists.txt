@@ -2,6 +2,9 @@ set(KDEFrameworksIntegration_SRCS
     kdeframeworksintegrationplugin.cpp
     kwalletpasswordbackend.cpp
     kioschemehandler.cpp
+    kdeframeworksintegrationplugin.h
+    kwalletpasswordbackend.h
+    kioschemehandler.h
 )
 
 ecm_create_qm_loader(KDEFrameworksIntegration_SRCS falkon_kdeframeworksintegration_qt)

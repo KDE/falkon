@@ -2,7 +2,10 @@ set( FlashCookieManager_SRCS
 	fcm_plugin.cpp
 	fcm_dialog.cpp
 	fcm_notification.cpp
-	)
+        fcm_plugin.h
+        fcm_dialog.h
+        fcm_notification.h
+        )
 
 ecm_create_qm_loader( FlashCookieManager_SRCS falkon_flashcookiemanager_qt )
 

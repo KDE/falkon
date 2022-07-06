@@ -3,7 +3,11 @@ set( AutoScroll_SRCS
 	autoscroller.cpp
 	framescroller.cpp
 	autoscrollsettings.cpp
-	)
+        autoscrollplugin.h
+        autoscroller.h
+        framescroller.h
+        autoscrollsettings.h
+        )
 
 ecm_create_qm_loader( AutoScroll_SRCS falkon_autoscroll_qt )
 

@@ -1,7 +1,9 @@
 set( TestPlugin_SRCS
 	testplugin.cpp
 	testplugin_sidebar.cpp
-	)
+        testplugin.h
+        testplugin_sidebar.h
+        )
 
 ecm_create_qm_loader( TestPlugin_SRCS falkon_testplugin_qt )
 
