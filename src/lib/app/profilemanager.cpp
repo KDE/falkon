@@ -89,6 +89,7 @@ void ProfileManager::initCurrentProfile(const QString &profileName)
 
     updateCurrentProfile();
     connectDatabase();
+    updateDatabase();
 }
 
 int ProfileManager::createProfile(const QString &profileName)
@@ -310,4 +311,65 @@ void ProfileManager::connectDatabase()
     }
 
     SqlDatabase::instance()->setDatabase(db);
+}
+
+void ProfileManager::updateDatabase()
+{
+    if ((Qz::VERSION) == profileVersion) {
+        return;
+    }
+
+    Updater::Version prof(profileVersion);
+
+    /* Profile is from newer version than running application */
+    if (prof > Updater::Version(Qz::VERSION)) {
+        // Ignore
+        return;
+    }
+
+    /* Do not try to update database of too old profile */
+    if (prof < Updater::Version(QStringLiteral("1.9.0"))) {
+        std::cout << "Falkon: Using profile from QupZilla " << qPrintable(profileVersion) << " is not supported!" << std::endl;
+        return;
+    }
+
+    /* Update in 22.11.00 */
+    if (prof < Updater::Version(QStringLiteral("22.11.70"))) {
+        std::cout << "Falkon: Updating database to version " << qPrintable(Qz::VERSION) << std::endl;
+
+        QSqlQuery query(SqlDatabase::instance()->database());
+        query.prepare(QStringLiteral(
+            "CREATE TABLE IF NOT EXISTS site_settings ("
+                "id INTEGER PRIMARY KEY,"
+                "domain TEXT NOT NULL,"
+                "zoom_level INTEGER DEFAULT 0,"
+                "allow_cookies INTEGER DEFAULT 0,"
+                "allow_images INTEGER DEFAULT 0,"
+                "allow_javascript INTEGER DEFAULT 0,"
+                "allow_notifications INTEGER DEFAULT 0,"
+                "allow_geolocation INTEGER DEFAULT 0,"
+                "allow_media_audio_capture INTEGER DEFAULT 0,"
+                "allow_media_video_capture INTEGER DEFAULT 0,"
+                "allow_media_audio_video_capture INTEGER DEFAULT 0,"
+                "allow_mouse_lock INTEGER DEFAULT 0,"
+                "allow_desktop_video_capture INTEGER DEFAULT 0,"
+                "allow_desktop_audio_video_capture INTEGER DEFAULT 0"
+            ");"
+        ));
+
+        if (!query.exec()) {
+            qCritical() << "Error while creating table 'site_settings' in database: " << query.lastError().text();
+            qFatal("ProfileManager::updateDatabase Unable to create table 'site_settings' in the database!");
+        }
+
+        query.prepare(QStringLiteral(
+            "CREATE UNIQUE INDEX IF NOT EXISTS site_settings_domainuniqueindex ON site_settings (domain);"
+        ));
+
+        if (!query.exec()) {
+            qCritical() << "Error while creating unique index for table 'site_settings': " << query.lastError().text();
+        }
+
+        return;
+    }
 }

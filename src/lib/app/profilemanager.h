@@ -52,8 +52,11 @@ private:
     void updateProfile(const QString &current, const QString &profile);
     void copyDataToProfile();
     void migrateFromQupZilla();
+    void updateDatabase();
 
     void connectDatabase();
+
+    QString profileVersion;
 };
 
 #endif // PROFILEMANAGER_H

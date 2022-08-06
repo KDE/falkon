@@ -42,6 +42,7 @@
 #include "searchenginesmanager.h"
 #include "desktopnotificationsfactory.h"
 #include "html5permissions/html5permissionsmanager.h"
+#include "sitesettingsmanager.h"
 #include "scripts.h"
 #include "sessionmanager.h"
 #include "closedwindowsmanager.h"
@@ -105,6 +106,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     , m_closedWindowsManager(nullptr)
     , m_protocolHandlerManager(nullptr)
     , m_html5PermissionsManager(nullptr)
+    , m_siteSettingsManager(nullptr)
     , m_desktopNotifications(nullptr)
     , m_webProfile(nullptr)
     , m_autoSaver(nullptr)
@@ -643,6 +645,14 @@ HTML5PermissionsManager* MainApplication::html5PermissionsManager()
         m_html5PermissionsManager = new HTML5PermissionsManager(this);
     }
     return m_html5PermissionsManager;
+}
+
+SiteSettingsManager * MainApplication::siteSettingsManager()
+{
+    if (!m_siteSettingsManager) {
+        m_siteSettingsManager = new SiteSettingsManager(this);
+    }
+    return m_siteSettingsManager;
 }
 
 DesktopNotificationsFactory* MainApplication::desktopNotifications()

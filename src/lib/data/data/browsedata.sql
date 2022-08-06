@@ -55,4 +55,22 @@ CREATE TABLE icons (
 );
 CREATE UNIQUE INDEX icons_urluniqueindex ON icons (url);
 
+CREATE TABLE site_settings (
+    id INTEGER PRIMARY KEY,
+    server TEXT NOT NULL,
+    zoom_level INTEGER DEFAULT 0,
+    allow_cookies INTEGER DEFAULT 0,
+    allow_images INTEGER DEFAULT 0,
+    allow_javascript INTEGER DEFAULT 0,
+    allow_notifications INTEGER DEFAULT 0,
+    allow_geolocation INTEGER DEFAULT 0,
+    allow_media_audio_capture INTEGER DEFAULT 0,
+    allow_media_video_capture INTEGER DEFAULT 0,
+    allow_media_audio_video_capture INTEGER DEFAULT 0,
+    allow_mouse_lock INTEGER DEFAULT 0,
+    allow_desktop_video_capture INTEGER DEFAULT 0,
+    allow_desktop_audio_video_capture INTEGER DEFAULT 0
+);
+CREATE UNIQUE INDEX site_settings_serveruniqueindex ON site_settings (server);
+
 -- Data
