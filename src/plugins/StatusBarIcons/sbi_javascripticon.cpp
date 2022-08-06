@@ -21,6 +21,8 @@
 #include "tabbedwebview.h"
 #include "webpage.h"
 #include "jsoptions.h"
+#include "mainapplication.h"
+#include "sitesettingsmanager.h"
 
 #include <QGraphicsColorizeEffect>
 #include <QWebEngineSettings>
@@ -51,10 +53,10 @@ void SBI_JavaScriptIcon::showMenu(const QPoint &point)
     menu.addAction(m_icon, tr("Current Page Settings"))->setFont(boldFont);
 
     if (testCurrentPageWebAttribute(QWebEngineSettings::JavascriptEnabled)) {
-        menu.addAction(tr("Disable JavaScript (temporarily)"), this, &SBI_JavaScriptIcon::toggleJavaScript);
+        menu.addAction(tr("Disable JavaScript"), this, &SBI_JavaScriptIcon::toggleJavaScript);
     }
     else {
-        menu.addAction(tr("Enable JavaScript (temporarily)"), this, &SBI_JavaScriptIcon::toggleJavaScript);
+        menu.addAction(tr("Enable JavaScript"), this, &SBI_JavaScriptIcon::toggleJavaScript);
     }
 
     // JavaScript needs to be always enabled for falkon: sites
@@ -88,15 +90,10 @@ void SBI_JavaScriptIcon::toggleJavaScript()
     }
 
     bool current = testCurrentPageWebAttribute(QWebEngineSettings::JavascriptEnabled);
-    setCurrentPageWebAttribute(QWebEngineSettings::JavascriptEnabled, !current);
 
     m_settings[page] = !current;
 
-    connect(page, &WebPage::navigationRequestAccepted, this, [=](const QUrl &, WebPage::NavigationType, bool isMainFrame) {
-        if (isMainFrame) {
-            page->settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, m_settings[page]);
-        }
-    });
+    mApp->siteSettingsManager()->setJavascript(page->url(), m_settings[page] ? 1 : -1);
 
     m_window->weView()->reload();
 

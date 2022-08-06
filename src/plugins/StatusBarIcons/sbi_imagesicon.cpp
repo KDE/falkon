@@ -21,6 +21,7 @@
 #include "tabbedwebview.h"
 #include "webpage.h"
 #include "mainapplication.h"
+#include "sitesettingsmanager.h"
 
 #include <QGraphicsColorizeEffect>
 #include <QSettings>
@@ -58,10 +59,10 @@ void SBI_ImagesIcon::showMenu(const QPoint &point)
     menu.addAction(m_icon, tr("Current Page Settings"))->setFont(boldFont);
 
     if (testCurrentPageWebAttribute(QWebEngineSettings::AutoLoadImages)) {
-        menu.addAction(tr("Disable loading images (temporarily)"), this, &SBI_ImagesIcon::toggleLoadingImages);
+        menu.addAction(tr("Disable loading images"), this, &SBI_ImagesIcon::toggleLoadingImages);
     }
     else {
-        menu.addAction(tr("Enable loading images (temporarily)"), this, &SBI_ImagesIcon::toggleLoadingImages);
+        menu.addAction(tr("Enable loading images"), this, &SBI_ImagesIcon::toggleLoadingImages);
     }
 
     menu.addSeparator();
@@ -77,8 +78,13 @@ void SBI_ImagesIcon::showMenu(const QPoint &point)
 
 void SBI_ImagesIcon::toggleLoadingImages()
 {
+    WebPage *page = currentPage();
+    if (!page) {
+        return;
+    }
+
     bool current = testCurrentPageWebAttribute(QWebEngineSettings::AutoLoadImages);
-    setCurrentPageWebAttribute(QWebEngineSettings::AutoLoadImages, !current);
+    mApp->siteSettingsManager()->setImages(page->url(), (!current) ? 1 : -1);
 
     // We should reload page on disabling images
     if (current) {

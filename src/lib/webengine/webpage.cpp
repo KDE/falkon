@@ -33,6 +33,7 @@
 #include "delayedfilewatcher.h"
 #include "searchenginesmanager.h"
 #include "html5permissions/html5permissionsmanager.h"
+#include "sitesettingsmanager.h"
 #include "javascript/externaljsobject.h"
 #include "tabwidget.h"
 #include "networkmanager.h"
@@ -451,8 +452,9 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
     if (result) {
         if (isMainFrame) {
             const bool isWeb = url.scheme() == QL1S("http") || url.scheme() == QL1S("https") || url.scheme() == QL1S("file");
-            const bool globalJsEnabled = mApp->webSettings()->testAttribute(QWebEngineSettings::JavascriptEnabled);
-            settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, isWeb ? globalJsEnabled : true);
+            const SiteWebEngineSettings siteSettings = mApp->siteSettingsManager()->getWebEngineSettings(url);
+            settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, isWeb ? siteSettings.allowJavaScript : true);
+            settings()->setAttribute(QWebEngineSettings::AutoLoadImages, isWeb ? siteSettings.allowImages : true);
         }
         Q_EMIT navigationRequestAccepted(url, type, isMainFrame);
     }

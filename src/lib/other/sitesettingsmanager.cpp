@@ -46,8 +46,8 @@ SiteWebEngineSettings SiteSettingsManager::getWebEngineSettings(const QUrl& url)
     SiteWebEngineSettings settings;
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT allow_images, allow_javascript FROM history WHERE server=?");
-    query.bindValue(0, url.host());
+    query.prepare("SELECT allow_images, allow_javascript FROM site_settings WHERE server=?");
+    query.addBindValue(url.host());
     query.exec();
 
     if (query.next()) {
@@ -74,4 +74,36 @@ SiteWebEngineSettings SiteSettingsManager::getWebEngineSettings(const QUrl& url)
     }
 
     return settings;
+}
+
+void SiteSettingsManager::setJavascript(const QUrl& url, int value)
+{
+    auto job = new SqlQueryJob(QSL("UPDATE site_settings SET allow_javascript=? WHERE server=?"), this);
+    job->addBindValue(value);
+    job->addBindValue(url.host());
+    connect(job, &SqlQueryJob::finished, this, [=]() {
+        if (job->numRowsAffected() == 0) {
+            auto job = new SqlQueryJob(QSL("INSERT INTO site_settings (server, allow_javascript) VALUES (?,?)"), this);
+            job->addBindValue(url.host());
+            job->addBindValue(value);
+            job->start();
+        }
+    });
+    job->start();
+}
+
+void SiteSettingsManager::setImages(const QUrl& url, int value)
+{
+    auto job = new SqlQueryJob(QSL("UPDATE site_settings SET allow_images=? WHERE server=?"), this);
+    job->addBindValue(value);
+    job->addBindValue(url.host());
+    connect(job, &SqlQueryJob::finished, this, [=]() {
+        if (job->numRowsAffected() == 0) {
+            auto job = new SqlQueryJob(QSL("INSERT INTO site_settings (server, allow_images) VALUES (?,?)"), this);
+            job->addBindValue(url.host());
+            job->addBindValue(value);
+            job->start();
+        }
+    });
+    job->start();
 }

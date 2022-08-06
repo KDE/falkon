@@ -47,6 +47,8 @@ public:
      */
     SiteWebEngineSettings getWebEngineSettings(const QUrl &url);
 
+    void setJavascript(const QUrl &url, int value);
+    void setImages(const QUrl &url, int value);
 private:
 };
 
