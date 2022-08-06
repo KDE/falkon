@@ -37,6 +37,7 @@ public:
 
     QSqlError error() const;
     QVariant lastInsertId() const;
+    int numRowsAffected() const;
     QVector<QSqlRecord> records() const;
 
     void start();
@@ -49,6 +50,7 @@ private:
     QVector<QVariant> m_boundValues;
     QSqlError m_error;
     QVariant m_lastInsertId;
+    int m_numRowsAffected;
     QVector<QSqlRecord> m_records;
 };
 

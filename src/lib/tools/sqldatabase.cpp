@@ -58,6 +58,11 @@ QVariant SqlQueryJob::lastInsertId() const
     return m_lastInsertId;
 }
 
+int SqlQueryJob::numRowsAffected() const
+{
+    return m_numRowsAffected;
+}
+
 QVector<QSqlRecord> SqlQueryJob::records() const
 {
     return m_records;
@@ -68,6 +73,7 @@ void SqlQueryJob::start()
     struct Result {
         QSqlError error;
         QVariant lastInsertId;
+        int numRowsAffected;
         QVector<QSqlRecord> records;
     };
 
@@ -82,6 +88,7 @@ void SqlQueryJob::start()
         const auto result = watcher->result();
         m_error = result.error;
         m_lastInsertId = result.lastInsertId;
+        m_numRowsAffected = result.numRowsAffected;
         m_records = result.records;
         Q_EMIT finished(this);
     });
@@ -96,6 +103,7 @@ void SqlQueryJob::start()
         Result res;
         res.error = q.lastError();
         res.lastInsertId = q.lastInsertId();
+        res.numRowsAffected = q.numRowsAffected();
         while (q.next()) {
             res.records.append(q.record());
         }
