@@ -43,13 +43,15 @@
 #include "useragentdialog.h"
 #include "registerqappassociation.h"
 #include "profilemanager.h"
-#include "html5permissions/html5permissionsdialog.h"
 #include "certificatemanager.h"
 #include "searchenginesdialog.h"
 #include "webscrollbarmanager.h"
 #include "protocolhandlerdialog.h"
 #include "schememanager.h"
 #include "../config.h"
+#include "sitesettingsmanager.h"
+#include "sitesettingsattributesitem.h"
+#include "sitesettingshtml5item.h"
 
 #include <QSettings>
 #include <QInputDialog>
@@ -295,6 +297,16 @@ Preferences::Preferences(BrowserWindow* window)
     ui->intPDFViewer->setEnabled(ui->allowPlugins->isChecked());
     ui->screenCaptureEnabled->setChecked(settings.value(QSL("screenCaptureEnabled"), false).toBool());
     ui->hardwareAccel->setChecked(settings.value(QSL("hardwareAccel"), false).toBool());
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    ui->readingFromCanvasEnabled->setChecked(settings.value(QSL("readingFromCanvasEnabled"), false).toBool());
+#else
+    ui->readingFromCanvasEnabled->hide();
+#endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    ui->forceDarkMode->setChecked(settings.value(QSL("forceDarkMode"), false).toBool());
+#else
+    ui->forceDarkMode->hide();
+#endif
 
     const auto levels = WebView::zoomLevels();
     for (int level : levels) {
@@ -324,6 +336,25 @@ Preferences::Preferences(BrowserWindow* window)
         ui->deleteHistoryOnClose->setEnabled(false);
     }
     connect(ui->saveHistory, &QAbstractButton::toggled, this, &Preferences::saveHistoryChanged);
+
+    /* SiteSettings - WebAttributes */
+    const auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
+    for (const auto &attribute : supportedAttribute) {
+        auto* listItem = new QListWidgetItem(ui->siteSettingsList);
+        auto* optionItem = new SiteSettingsAttributesItem(attribute, this);
+
+        ui->siteSettingsList->setItemWidget(listItem, optionItem);
+        listItem->setSizeHint(optionItem->sizeHint());
+    }
+    /* SiteSettings - HTML5 features */
+    const auto supportedFeatures = mApp->siteSettingsManager()->getSupportedFeatures();
+    for (const auto &feature : supportedFeatures) {
+        auto* listItem = new QListWidgetItem(ui->siteSettingsHtml5List);
+        auto* optionItem = new SiteSettingsHtml5Item(feature, this);
+
+        ui->siteSettingsHtml5List->setItemWidget(listItem, optionItem);
+        listItem->setSizeHint(optionItem->sizeHint());
+    }
 
     // Html5Storage
     ui->html5storage->setChecked(settings.value(QSL("HTML5StorageEnabled"), true).toBool());
@@ -514,7 +545,6 @@ Preferences::Preferences(BrowserWindow* window)
     //CONNECTS
     connect(ui->buttonBox, &QDialogButtonBox::clicked, this, &Preferences::buttonClicked);
     connect(ui->cookieManagerBut, &QAbstractButton::clicked, this, &Preferences::showCookieManager);
-    connect(ui->html5permissions, &QAbstractButton::clicked, this, &Preferences::showHtml5Permissions);
     connect(ui->preferredLanguages, &QAbstractButton::clicked, this, &Preferences::showAcceptLanguage);
     connect(ui->deleteHtml5storage, &QAbstractButton::clicked, this, &Preferences::deleteHtml5storage);
     connect(ui->uaManager, &QAbstractButton::clicked, this, &Preferences::openUserAgentManager);
@@ -716,12 +746,6 @@ void Preferences::showCookieManager()
 {
     auto* dialog = new CookieManager(this);
     dialog->show();
-}
-
-void Preferences::showHtml5Permissions()
-{
-    auto* dialog = new HTML5PermissionsDialog(this);
-    dialog->open();
 }
 
 void Preferences::openJsOptions()
@@ -986,6 +1010,12 @@ void Preferences::saveSettings()
     settings.setValue(QSL("intPDFViewer"), ui->intPDFViewer->isChecked());
     settings.setValue(QSL("screenCaptureEnabled"), ui->screenCaptureEnabled->isChecked());
     settings.setValue(QSL("hardwareAccel"), ui->hardwareAccel->isChecked());
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    settings.setValue(QSL("readingFromCanvasEnabled"), ui->readingFromCanvasEnabled->isChecked());
+#endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    settings.setValue(QSL("forceDarkMode"), ui->forceDarkMode->isChecked());
+#endif
 #ifdef Q_OS_WIN
     settings.setValue(QSL("CheckDefaultBrowser"), ui->checkDefaultBrowser->isChecked());
 #endif
@@ -1073,11 +1103,21 @@ void Preferences::saveSettings()
     settings.setValue(QSL("Password"), ui->proxyPassword->text());
     settings.endGroup();
 
+    //SiteSettings
+    settings.beginGroup(QSL("Site-Settings"));
+    /* HTML5 Features */
+    for (int i = 0; i < ui->siteSettingsHtml5List->count(); ++i) {
+        auto *item = static_cast<SiteSettingsHtml5Item*>(ui->siteSettingsHtml5List->itemWidget(ui->siteSettingsHtml5List->item(i)));
+        settings.setValue(mApp->siteSettingsManager()->featureToSqlColumn(item->feature()), item->permission());
+    }
+    settings.endGroup();
+
     ProfileManager::setStartingProfile(ui->startProfile->currentText());
 
     m_pluginsList->save();
     m_themesManager->save();
     mApp->cookieJar()->loadSettings();
+    mApp->siteSettingsManager()->loadSettings();
     mApp->history()->loadSettings();
     mApp->reloadSettings();
     mApp->desktopNotifications()->loadSettings();

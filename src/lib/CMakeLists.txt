@@ -149,7 +149,9 @@ set(SRCS ${SRCS}
     other/licenseviewer.cpp
     other/qzsettings.cpp
     other/siteinfo.cpp
+    other/siteinfopermissionitem.cpp
     other/siteinfowidget.cpp
+    other/sitesettingsmanager.cpp
     other/statusbar.cpp
     other/updater.cpp
     other/useragentmanager.cpp
@@ -208,6 +210,9 @@ set(SRCS ${SRCS}
     preferences/pluginsmanager.cpp
     preferences/preferences.cpp
     preferences/schememanager.cpp
+    preferences/sitesettingsattributesitem.cpp
+    preferences/sitesettingsbrowsedialog.cpp
+    preferences/sitesettingshtml5item.cpp
     preferences/thememanager.cpp
     preferences/useragentdialog.cpp
     session/recoveryjsobject.cpp
@@ -242,7 +247,6 @@ set(SRCS ${SRCS}
     tools/focusselectlineedit.cpp
     tools/headerview.cpp
     tools/horizontallistwidget.cpp
-    tools/html5permissions/html5permissionsdialog.cpp
     tools/html5permissions/html5permissionsmanager.cpp
     tools/html5permissions/html5permissionsnotification.cpp
     tools/iconprovider.cpp
@@ -379,7 +383,9 @@ set(SRCS ${SRCS}
     other/licenseviewer.h
     other/qzsettings.h
     other/siteinfo.h
+    other/siteinfopermissionitem.h
     other/siteinfowidget.h
+    other/sitesettingsmanager.h
     other/statusbar.h
     other/updater.h
     other/useragentmanager.h
@@ -438,6 +444,9 @@ set(SRCS ${SRCS}
     preferences/pluginsmanager.h
     preferences/preferences.h
     preferences/schememanager.h
+    preferences/sitesettingsattributesitem.h
+    preferences/sitesettingsbrowsedialog.h
+    preferences/sitesettingshtml5item.h
     preferences/thememanager.h
     preferences/useragentdialog.h
     session/recoveryjsobject.h
@@ -472,7 +481,6 @@ set(SRCS ${SRCS}
     tools/focusselectlineedit.h
     tools/headerview.h
     tools/horizontallistwidget.h
-    tools/html5permissions/html5permissionsdialog.h
     tools/html5permissions/html5permissionsmanager.h
     tools/html5permissions/html5permissionsnotification.h
     tools/iconprovider.h
@@ -543,6 +551,7 @@ qt_wrap_ui(SRCS
     other/iconchooser.ui
     other/protocolhandlerdialog.ui
     other/siteinfo.ui
+    other/siteinfopermissionitem.ui
     other/siteinfowidget.ui
     preferences/acceptlanguage.ui
     preferences/addacceptlanguage.ui
@@ -552,6 +561,9 @@ qt_wrap_ui(SRCS
     preferences/pluginslist.ui
     preferences/preferences.ui
     preferences/schememanager.ui
+    preferences/sitesettingsattributesitem.ui
+    preferences/sitesettingsbrowsedialog.ui
+    preferences/sitesettingshtml5item.ui
     preferences/thememanager.ui
     preferences/useragentdialog.ui
     session/sessionmanagerdialog.ui
@@ -559,7 +571,6 @@ qt_wrap_ui(SRCS
     sidebar/historysidebar.ui
     tools/certificateinfowidget.ui
     tools/docktitlebarwidget.ui
-    tools/html5permissions/html5permissionsdialog.ui
     tools/html5permissions/html5permissionsnotification.ui
     webengine/jsalert.ui
     webengine/jsconfirm.ui

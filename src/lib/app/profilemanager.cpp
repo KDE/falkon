@@ -21,6 +21,8 @@
 #include "updater.h"
 #include "qztools.h"
 #include "sqldatabase.h"
+#include "sitesettingsmanager.h"
+#include "settings.h"
 
 #include <QDir>
 #include <QSqlError>
@@ -29,6 +31,7 @@
 #include <QMessageBox>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QWebEnginePage>
 
 #include <iostream>
 
@@ -89,6 +92,7 @@ void ProfileManager::initCurrentProfile(const QString &profileName)
 
     updateCurrentProfile();
     connectDatabase();
+    updateDatabase();
 }
 
 int ProfileManager::createProfile(const QString &profileName)
@@ -166,10 +170,10 @@ void ProfileManager::updateCurrentProfile()
     // If file exists, just update the profile to current version
     if (versionFile.exists()) {
         versionFile.open(QFile::ReadOnly);
-        QString profileVersion = QString::fromUtf8(versionFile.readAll());
+        profileVersion = QString::fromUtf8(versionFile.readAll()).trimmed();
         versionFile.close();
 
-        updateProfile(QString::fromLatin1(Qz::VERSION), profileVersion.trimmed());
+        updateProfile(QString::fromLatin1(Qz::VERSION), profileVersion);
     }
     else {
         copyDataToProfile();
@@ -310,4 +314,177 @@ void ProfileManager::connectDatabase()
     }
 
     SqlDatabase::instance()->setDatabase(db);
+}
+
+void ProfileManager::updateDatabase()
+{
+    if (QString::fromLatin1(Qz::VERSION) == profileVersion) {
+        return;
+    }
+
+    Updater::Version prof(profileVersion);
+
+    /* Profile is from newer version than running application */
+    if (prof > Updater::Version(QString::fromLatin1(Qz::VERSION))) {
+        // Ignore
+        return;
+    }
+
+    /* Do not try to update database of too old profile */
+    if (prof < Updater::Version(QStringLiteral("1.9.0"))) {
+        std::cout << "Falkon: Using profile from QupZilla " << qPrintable(profileVersion) << " is not supported!" << std::endl;
+        return;
+    }
+
+    /* Update in 24.08.00 */
+    if (prof < Updater::Version(QStringLiteral("24.07.70"))) {
+        std::cout << "Falkon: Updating database to version " << qPrintable(QString::fromLatin1(Qz::VERSION)) << std::endl;
+
+        SqlDatabase::instance()->database().transaction();
+
+        QSqlQuery query(SqlDatabase::instance()->database());
+        query.prepare(QStringLiteral(
+            "CREATE TABLE IF NOT EXISTS site_settings ("
+                "id INTEGER PRIMARY KEY,"
+                "server TEXT NOT NULL,"
+
+                "zoom_level INTEGER DEFAULT -1,"
+                "allow_cookies INTEGER DEFAULT 0,"
+
+                "wa_autoload_images INTEGER DEFAULT 0,"
+                "wa_js_enabled INTEGER DEFAULT 0,"
+                "wa_js_open_windows INTEGER DEFAULT 0,"
+                "wa_js_access_clipboard INTEGER DEFAULT 0,"
+                "wa_js_can_paste INTEGER DEFAULT 0,"
+                "wa_js_window_activation INTEGER DEFAULT 0,"
+                "wa_local_storage INTEGER DEFAULT 0,"
+                "wa_fullscreen_support INTEGER DEFAULT 0,"
+                "wa_run_insecure_content INTEGER DEFAULT 0,"
+                "wa_playback_needs_gesture INTEGER DEFAULT 0,"
+                "wa_reading_from_canvas INTEGER DEFAULT 0,"
+                "wa_force_dark_mode INTEGER DEFAULT 0,"
+
+                "f_notifications INTEGER DEFAULT 0,"
+                "f_geolocation INTEGER DEFAULT 0,"
+                "f_media_audio_capture INTEGER DEFAULT 0,"
+                "f_media_video_capture INTEGER DEFAULT 0,"
+                "f_media_audio_video_capture INTEGER DEFAULT 0,"
+                "f_mouse_lock INTEGER DEFAULT 0,"
+                "f_desktop_video_capture INTEGER DEFAULT 0,"
+                "f_desktop_audio_video_capture INTEGER DEFAULT 0"
+            ");"
+        ));
+
+        if (!query.exec()) {
+            qCritical() << "Error while creating table 'site_settings' in database: " << query.lastError().text();
+            qFatal("ProfileManager::updateDatabase Unable to create table 'site_settings' in the database!");
+        }
+
+        query.prepare(QStringLiteral(
+            "CREATE UNIQUE INDEX IF NOT EXISTS site_settings_server_uniqueindex ON site_settings (server);"
+        ));
+
+        if (!query.exec()) {
+            qFatal() << "Error while creating unique index for table 'site_settings': " << query.lastError().text();
+        }
+
+        const QHash<QWebEnginePage::Feature, QString> html5SettingPairs = {
+            {QWebEnginePage::Notifications, QSL("Notifications")},
+            {QWebEnginePage::Geolocation, QSL("Geolocation")},
+            {QWebEnginePage::MediaAudioCapture, QSL("MediaAudioCapture")},
+            {QWebEnginePage::MediaVideoCapture, QSL("MediaVideoCapture")},
+            {QWebEnginePage::MediaAudioVideoCapture, QSL("MediaAudioVideoCapture")},
+            {QWebEnginePage::MouseLock, QSL("MouseLock")},
+            {QWebEnginePage::DesktopVideoCapture, QSL("DesktopVideoCapture")},
+            {QWebEnginePage::DesktopAudioVideoCapture,QSL("DesktopAudioVideoCapture")}
+        };
+        QHash<QString, SiteSettingsManager::SiteSettings> siteSettings;
+
+        Settings settings;
+
+        /* HTML5 permissions */
+        settings.beginGroup(QSL("HTML5Notifications"));
+
+        auto loadHtml5Settings = [&](const QString &suflix, const SiteSettingsManager::Permission permission) {
+            for (auto [feature, settingName] : html5SettingPairs.asKeyValueRange()) {
+                auto const serverList = settings.value(settingName + suflix, QStringList()).toStringList();
+
+                for (const auto &server : serverList) {
+                    if (!siteSettings.contains(server)) {
+                        siteSettings[server] = SiteSettingsManager::SiteSettings();
+                        for (auto [f, nameUnused] : html5SettingPairs.asKeyValueRange()) {
+                            siteSettings[server].features[f] = SiteSettingsManager::Default;
+                        }
+                    }
+
+                    siteSettings[server].server = server;
+                    siteSettings[server].features[feature] = permission;
+                }
+            }
+        };
+
+        loadHtml5Settings(QSL("Granted"), SiteSettingsManager::Allow);
+        loadHtml5Settings(QSL("Denied"), SiteSettingsManager::Deny);
+
+        settings.endGroup();
+
+        /* Cookies white/black lists */
+        settings.beginGroup(QSL("Cookie-Settings"));
+
+        auto loadCookiesSettings = [&](const QString &listName, const SiteSettingsManager::Permission permission) {
+            auto const serverList = settings.value(listName, QStringList()).toStringList();
+
+            for (const auto &server : serverList) {
+                if (!siteSettings.contains(server)) {
+                    siteSettings[server] = SiteSettingsManager::SiteSettings();
+                }
+
+                siteSettings[server].server = server;
+                siteSettings[server].AllowCookies = permission;
+            }
+        };
+
+        loadCookiesSettings(QSL("whitelist"), SiteSettingsManager::Allow);
+        loadCookiesSettings(QSL("blacklist"), SiteSettingsManager::Deny);
+
+        settings.endGroup();
+
+        /* Insert SQL for SiteSettings */
+        query.prepare(QSL(
+            "INSERT INTO site_settings ("
+                "server,"
+                "allow_cookies,"
+                "f_notifications,"
+                "f_geolocation,"
+                "f_media_audio_capture,"
+                "f_media_video_capture,"
+                "f_media_audio_video_capture,"
+                "f_mouse_lock,"
+                "f_desktop_video_capture,"
+                "f_desktop_audio_video_capture"
+            ")"
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        ));
+
+        for (const auto &siteSetting : std::as_const(siteSettings)) {
+            query.bindValue(0, siteSetting.server);
+            query.bindValue(1, siteSetting.AllowCookies);
+            query.bindValue(2, siteSetting.features[QWebEnginePage::Notifications]);
+            query.bindValue(3, siteSetting.features[QWebEnginePage::Geolocation]);
+            query.bindValue(4, siteSetting.features[QWebEnginePage::MediaAudioCapture]);
+            query.bindValue(5, siteSetting.features[QWebEnginePage::MediaVideoCapture]);
+            query.bindValue(6, siteSetting.features[QWebEnginePage::MediaAudioVideoCapture]);
+            query.bindValue(7, siteSetting.features[QWebEnginePage::MouseLock]);
+            query.bindValue(8, siteSetting.features[QWebEnginePage::DesktopVideoCapture]);
+            query.bindValue(9, siteSetting.features[QWebEnginePage::DesktopAudioVideoCapture]);
+
+            query.exec();
+        }
+
+        if (!SqlDatabase::instance()->database().commit()) {
+            SqlDatabase::instance()->database().rollback();
+
+            qFatal() << "Unable to update database.";
+        }
+    }
 }

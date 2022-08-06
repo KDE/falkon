@@ -61,12 +61,15 @@ private:
     void closeEvent(QCloseEvent* e) override;
     void keyPressEvent(QKeyEvent* e) override;
 
+    void initWhiteAndBlacklist();
+
     void addBlacklist(const QString &server);
     QString cookieDomain(const QNetworkCookie &cookie) const;
     QTreeWidgetItem *cookieItem(const QNetworkCookie &cookie) const;
 
     Ui::CookieManager* ui;
 
+    QHash<QString, int> m_listModifications;
     QHash<QString, QTreeWidgetItem*> m_domainHash;
     QHash<QTreeWidgetItem*, QNetworkCookie> m_itemHash;
 };

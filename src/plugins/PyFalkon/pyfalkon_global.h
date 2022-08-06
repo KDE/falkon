@@ -89,6 +89,9 @@
 #include "sidebar.h"
 #include "sidebarinterface.h"
 
+// siteSettings
+#include "sitesettingsmanager.h"
+
 // tabwidget
 #include "combotabbar.h"
 #include "tabbar.h"

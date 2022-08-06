@@ -20,7 +20,7 @@
       <enum>Qt::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Ok</set>
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
     </widget>
    </item>
@@ -50,6 +50,11 @@
      <item>
       <property name="text">
        <string>Media</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Permissions</string>
       </property>
      </item>
     </widget>
@@ -281,6 +286,20 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="page3">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QListWidget" name="listPermissions">
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="verticalScrollMode">
+          <enum>QAbstractItemView::ScrollPerPixel</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
   </layout>
@@ -303,7 +322,7 @@
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
    <receiver>SiteInfo</receiver>
-   <slot>close()</slot>
+   <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>248</x>
@@ -312,6 +331,22 @@
     <hint type="destinationlabel">
      <x>157</x>
      <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SiteInfo</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>245</y>
     </hint>
    </hints>
   </connection>

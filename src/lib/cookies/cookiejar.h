@@ -65,9 +65,6 @@ private:
     bool m_filterTrackingCookie;
     bool m_filterThirdParty;
 
-    QStringList m_whitelist;
-    QStringList m_blacklist;
-
     QWebEngineCookieStore *m_client;
     QVector<QNetworkCookie> m_cookies;
 };

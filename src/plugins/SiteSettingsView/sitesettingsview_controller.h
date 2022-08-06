@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2013-2015  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2024 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -15,26 +15,33 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef HTML5PERMISSIONSMANAGER_H
-#define HTML5PERMISSIONSMANAGER_H
 
-#include <QObject>
-#include <QStringList>
+#ifndef SITESETTINGSVIEW_CONTROLLER_H
+#define SITESETTINGSVIEW_CONTROLLER_H
 
-#include "qzcommon.h"
-#include "webpage.h"
+#include "sidebarinterface.h"
 
-class QUrl;
 class WebPage;
+class SiteSettingsView;
+class SiteSettingsView_Widget;
 
-class FALKON_EXPORT HTML5PermissionsManager : public QObject
+class SiteSettingsView_Controller : public SideBarInterface
 {
+    Q_OBJECT
 public:
-    explicit HTML5PermissionsManager(QObject* parent);
+    explicit SiteSettingsView_Controller(QObject* parent = nullptr);
 
-    void requestPermissions(WebPage* page, const QUrl &origin, const QWebEnginePage::Feature &feature);
-    void rememberPermissions(const QUrl &origin, const QWebEnginePage::Feature &feature,
-                             const QWebEnginePage::PermissionPolicy &policy);
+    QString title() const override;
+    QAction* createMenuAction() override;
+
+    QWidget* createSideBarWidget(BrowserWindow* mainWindow) override;
+
+public Q_SLOTS:
+    void webPageCreated(WebPage* page);
+    void mainWindowDeleted(BrowserWindow* window);
+
+private:
+    QHash<BrowserWindow*, QPointer<SiteSettingsView_Widget>> m_widgets;
 };
 
-#endif // HTML5PERMISSIONSMANAGER_H
+#endif // SITESETTINGSVIEW_CONTROLLER_H

@@ -19,6 +19,8 @@
 #define SITEINFO_H
 
 #include "qzcommon.h"
+#include "sitesettingsmanager.h"
+#include "siteinfopermissionitem.h"
 
 #include <QUrl>
 #include <QDialog>
@@ -51,10 +53,14 @@ private Q_SLOTS:
     void tagsCustomContextMenuRequested(const QPoint &p);
     void copySelectedItems(const QTreeWidget* treeWidget, const bool both);
     void saveImage();
+    void saveSiteSettings();
 
 private:
     void showLoadingText();
     void showPixmap(QPixmap pixmap);
+
+    void addSiteSettings();
+    SiteInfoPermissionItem* addPermissionOption(SiteSettingsManager::Permission perm);
 
     Ui::SiteInfo* ui;
     CertificateInfoWidget* m_certWidget;

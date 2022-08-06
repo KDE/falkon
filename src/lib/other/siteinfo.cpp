@@ -37,6 +37,7 @@
 #include <QTimer>
 #include <QGraphicsPixmapItem>
 #include <QShortcut>
+#include <QListWidgetItem>
 
 SiteInfo::SiteInfo(WebView *view)
     : QDialog(view)
@@ -58,6 +59,7 @@ SiteInfo::SiteInfo(WebView *view)
 
     ui->listWidget->item(0)->setIcon(QIcon::fromTheme(QSL("document-properties"), QIcon(QSL(":/icons/preferences/document-properties.png"))));
     ui->listWidget->item(1)->setIcon(QIcon::fromTheme(QSL("applications-graphics"), QIcon(QSL(":/icons/preferences/applications-graphics.png"))));
+    ui->listWidget->item(2)->setIcon(QIcon(QStringLiteral(":/icons/preferences/privacy.svg")));
     ui->listWidget->item(0)->setSelected(true);
 
     // General
@@ -122,11 +124,15 @@ SiteInfo::SiteInfo(WebView *view)
         }
     });
 
+    /* Permissions */
+    addSiteSettings();
+
     connect(ui->saveButton, SIGNAL(clicked(QAbstractButton*)), this, SLOT(saveImage()));
     connect(ui->listWidget, SIGNAL(currentRowChanged(int)), ui->stackedWidget, SLOT(setCurrentIndex(int)));
     connect(ui->treeImages, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), this, SLOT(showImagePreview(QTreeWidgetItem*)));
     connect(ui->treeImages, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(imagesCustomContextMenuRequested(QPoint)));
     connect(ui->treeTags, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(tagsCustomContextMenuRequested(QPoint)));
+    connect(this, &QDialog::accepted, this, &SiteInfo::saveSiteSettings);
 
     auto *shortcutTagsCopyAll = new QShortcut(QKeySequence(QSL("Ctrl+C")), ui->treeTags);
     shortcutTagsCopyAll->setContext(Qt::WidgetShortcut);
@@ -322,4 +328,58 @@ SiteInfo::~SiteInfo()
 {
     delete ui;
     delete m_certWidget;
+}
+
+SiteInfoPermissionItem* SiteInfo::addPermissionOption(SiteSettingsManager::Permission perm)
+{
+    auto* listItem = new QListWidgetItem(ui->listPermissions);
+    auto* optionItem = new SiteInfoPermissionItem(perm, this);
+
+    ui->listPermissions->setItemWidget(listItem, optionItem);
+    listItem->setSizeHint(optionItem->sizeHint());
+
+    return optionItem;
+}
+
+void SiteInfo::addSiteSettings()
+{
+    auto siteSettings = mApp->siteSettingsManager()->getSiteSettings(m_baseUrl);
+    const auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
+    for (const auto &attribute : supportedAttribute) {
+        SiteInfoPermissionItem *item = addPermissionOption(siteSettings.attributes[attribute]);
+        item->setAttribute(attribute);
+    }
+    const auto supportedFeatures = mApp->siteSettingsManager()->getSupportedFeatures();
+    for (const auto &feature : supportedFeatures) {
+        SiteInfoPermissionItem *item = addPermissionOption(siteSettings.features[feature]);
+        item->setFeature(feature);
+    }
+    SiteInfoPermissionItem *item = addPermissionOption(siteSettings.AllowCookies);
+    item->setOption(SiteSettingsManager::poAllowCookies);
+}
+
+void SiteInfo::saveSiteSettings()
+{
+    SiteSettings siteSettings;
+    int index = 0;
+    auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
+    auto supportedFeatures = mApp->siteSettingsManager()->getSupportedFeatures();
+
+    for (int i = 0; i < supportedAttribute.size(); ++i, ++index) {
+        auto* item = static_cast<SiteInfoPermissionItem*>(ui->listPermissions->itemWidget(ui->listPermissions->item(index)));
+        siteSettings.attributes[supportedAttribute[i]] = item->permission();
+    }
+    for (int i = 0; i < supportedFeatures.size(); ++i, ++index) {
+        auto* item = static_cast<SiteInfoPermissionItem*>(ui->listPermissions->itemWidget(ui->listPermissions->item(index)));
+        siteSettings.features[supportedFeatures[i]] = item->permission();
+    }
+    auto* item = static_cast<SiteInfoPermissionItem*>(ui->listPermissions->itemWidget(ui->listPermissions->item(index++)));
+    siteSettings.AllowCookies = item->permission();
+    siteSettings.ZoomLevel = -1;
+
+    siteSettings.server = m_baseUrl.host();
+
+    if (!(siteSettings == mApp->siteSettingsManager()->getSiteSettings(m_baseUrl))) {
+        mApp->siteSettingsManager()->setSiteSettings(siteSettings);
+    }
 }

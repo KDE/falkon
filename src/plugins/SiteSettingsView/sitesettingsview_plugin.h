@@ -1,6 +1,6 @@
 /* ============================================================
 * Falkon - Qt web browser
-* Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2024 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -15,44 +15,37 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef HTML5PERMISSIONSDIALOG_H
-#define HTML5PERMISSIONSDIALOG_H
 
-#include <QDialog>
-#include <QStringList>
-#include <QWebEnginePage>
+#ifndef SITESETTINGSVIEW_PLUGIN_H
+#define SITESETTINGSVIEW_PLUGIN_H
 
-namespace Ui
-{
-class HTML5PermissionsDialog;
-}
+#include "plugininterface.h"
 
-class HTML5PermissionsDialog : public QDialog
+#include <QLabel>
+#include <QMessageBox>
+#include <QVBoxLayout>
+#include <QPointer>
+
+class SiteSettingsView_Controller;
+
+class SiteSettingsView : public QObject, public PluginInterface
 {
     Q_OBJECT
+    Q_INTERFACES(PluginInterface)
+    Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.SiteSettingsView" FILE "sitesettingsview.json")
 
 public:
-    explicit HTML5PermissionsDialog(QWidget* parent = nullptr);
-    ~HTML5PermissionsDialog();
+    explicit SiteSettingsView();
 
-    void showFeaturePermissions(QWebEnginePage::Feature feature);
+    void init(InitState state, const QString &settingsPath) override;
+    void unload() override;
+    bool testPlugin() override;
 
 private Q_SLOTS:
-    void removeEntry();
-    void featureIndexChanged();
-
-    void saveSettings();
 
 private:
-    enum Role { Allow, Deny };
-
-    void loadSettings();
-    QWebEnginePage::Feature currentFeature() const;
-
-    Ui::HTML5PermissionsDialog* ui;
-
-    QHash<QWebEnginePage::Feature, QStringList> m_granted;
-    QHash<QWebEnginePage::Feature, QStringList> m_denied;
+    WebView* m_view;
+    SiteSettingsView_Controller *m_sideBar = nullptr;
 };
 
-#endif // HTML5PERMISSIONSDIALOG_H
+#endif // SITESETTINGSVIEW_PLUGIN_H

@@ -21,6 +21,7 @@
 #include "tabbedwebview.h"
 #include "webpage.h"
 #include "jsoptions.h"
+#include "mainapplication.h"
 
 #include <QGraphicsColorizeEffect>
 #include <QWebEngineSettings>

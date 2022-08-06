@@ -42,6 +42,7 @@
 #include "searchenginesmanager.h"
 #include "desktopnotificationsfactory.h"
 #include "html5permissions/html5permissionsmanager.h"
+#include "sitesettingsmanager.h"
 #include "scripts.h"
 #include "sessionmanager.h"
 #include "closedwindowsmanager.h"
@@ -105,6 +106,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     , m_closedWindowsManager(nullptr)
     , m_protocolHandlerManager(nullptr)
     , m_html5PermissionsManager(nullptr)
+    , m_siteSettingsManager(nullptr)
     , m_desktopNotifications(nullptr)
     , m_webProfile(nullptr)
     , m_autoSaver(nullptr)
@@ -645,6 +647,14 @@ HTML5PermissionsManager* MainApplication::html5PermissionsManager()
     return m_html5PermissionsManager;
 }
 
+SiteSettingsManager * MainApplication::siteSettingsManager()
+{
+    if (!m_siteSettingsManager) {
+        m_siteSettingsManager = new SiteSettingsManager(this);
+    }
+    return m_siteSettingsManager;
+}
+
 DesktopNotificationsFactory* MainApplication::desktopNotifications()
 {
     if (!m_desktopNotifications) {
@@ -979,6 +989,13 @@ void MainApplication::loadSettings()
     webSettings->setAttribute(QWebEngineSettings::DnsPrefetchEnabled, settings.value(QSL("DNSPrefetch"), true).toBool());
     webSettings->setAttribute(QWebEngineSettings::PdfViewerEnabled, settings.value(QSL("intPDFViewer"), false).toBool());
     webSettings->setAttribute(QWebEngineSettings::ScreenCaptureEnabled, settings.value(QSL("screenCaptureEnabled"), false).toBool());
+
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    webSettings->setAttribute(QWebEngineSettings::ReadingFromCanvasEnabled, settings.value(QSL("readingFromCanvasEnabled"), false).toBool());
+#endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    webSettings->setAttribute(QWebEngineSettings::ForceDarkMode, settings.value(QSL("forceDarkMode"), false).toBool());
+#endif
 
     webSettings->setDefaultTextEncoding(settings.value(QSL("DefaultEncoding"), webSettings->defaultTextEncoding()).toString());
 

@@ -6,14 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>840</width>
-    <height>550</height>
+    <width>1035</width>
+    <height>727</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Preferences</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_5">
+   <item row="4" column="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0" rowspan="5">
     <widget class="QListWidget" name="listWidget">
      <property name="minimumSize">
@@ -132,6 +139,13 @@
      </property>
     </widget>
    </item>
+   <item row="3" column="1" colspan="2">
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
    <item row="2" column="1" colspan="2">
     <widget class="QScrollArea" name="scrollArea">
      <property name="frameShape">
@@ -145,8 +159,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>582</width>
-        <height>476</height>
+        <width>783</width>
+        <height>651</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -1117,6 +1131,20 @@
                    </property>
                   </widget>
                  </item>
+                 <item>
+                  <widget class="QCheckBox" name="readingFromCanvasEnabled">
+                   <property name="text">
+                    <string>Allow reading from canvas</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="forceDarkMode">
+                   <property name="text">
+                    <string>Force dark mode</string>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </item>
                <item row="2" column="0">
@@ -2008,147 +2036,154 @@
          </widget>
          <widget class="QWidget" name="privacyPage">
           <layout class="QGridLayout" name="gridLayout_12">
-           <item row="8" column="0" colspan="3">
-            <widget class="QLabel" name="label_12">
-             <property name="text">
-              <string>&lt;b&gt;Cookies&lt;/b&gt;</string>
+           <item row="20" column="1">
+            <widget class="QTabWidget" name="tabWidget_4">
+             <property name="currentIndex">
+              <number>0</number>
              </property>
-            </widget>
-           </item>
-           <item row="20" column="0" colspan="4">
-            <widget class="QLabel" name="label_50">
-             <property name="text">
-              <string>&lt;b&gt;Other&lt;/b&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="28" column="0" colspan="4">
-            <spacer name="verticalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="16" column="3">
-            <widget class="QPushButton" name="jsOptionsButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>JavaScript options</string>
-             </property>
-            </widget>
-           </item>
-           <item row="15" column="0" colspan="4">
-            <widget class="QLabel" name="label_61">
-             <property name="mouseTracking">
-              <bool>true</bool>
-             </property>
-             <property name="text">
-              <string>&lt;b&gt;JavaScript&lt;/b&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="12" column="3">
-            <widget class="QPushButton" name="cookieManagerBut">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>Cookies Manager</string>
-             </property>
-            </widget>
-           </item>
-           <item row="16" column="0" colspan="3">
-            <widget class="QLabel" name="label_25">
-             <property name="mouseTracking">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Manage JavaScript privacy options</string>
-             </property>
-            </widget>
-           </item>
-           <item row="22" column="0">
-            <spacer name="horizontalSpacer_20">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::Fixed</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="19" column="0" colspan="3">
-            <widget class="QLabel" name="label_63">
-             <property name="text">
-              <string>Manage HTML5 permissions</string>
-             </property>
-            </widget>
-           </item>
-           <item row="12" column="0" colspan="3">
-            <widget class="QLabel" name="label_19">
-             <property name="text">
-              <string>Manage Cookies</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="3">
-            <spacer name="horizontalSpacer_22">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="18" column="0" colspan="4">
-            <widget class="QLabel" name="label_62">
-             <property name="text">
-              <string>&lt;b&gt;HTML5 Permissions&lt;/b&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="19" column="3">
-            <widget class="QPushButton" name="html5permissions">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>HTML5 Permissions</string>
-             </property>
-            </widget>
-           </item>
-           <item row="22" column="1" colspan="3">
-            <widget class="QCheckBox" name="doNotTrack">
-             <property name="text">
-              <string>Send Do Not Track header to servers</string>
-             </property>
+             <widget class="QWidget" name="tab_9">
+              <attribute name="title">
+               <string>General</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_24">
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_19">
+                 <property name="text">
+                  <string>Manage Cookies</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QPushButton" name="cookieManagerBut">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>Cookies Manager</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <spacer name="horizontalSpacer_22">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="3" column="0" colspan="3">
+                <widget class="QLabel" name="label_61">
+                 <property name="mouseTracking">
+                  <bool>true</bool>
+                 </property>
+                 <property name="text">
+                  <string>&lt;b&gt;JavaScript&lt;/b&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="2">
+                <widget class="QPushButton" name="jsOptionsButton">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>JavaScript options</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="2">
+                <widget class="QCheckBox" name="doNotTrack">
+                 <property name="text">
+                  <string>Send Do Not Track header to servers</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>&lt;b&gt;Cookies&lt;/b&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="0">
+                <spacer name="horizontalSpacer_20">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_25">
+                 <property name="mouseTracking">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Manage JavaScript privacy options</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0">
+                <widget class="QLabel" name="label_50">
+                 <property name="text">
+                  <string>&lt;b&gt;Other&lt;/b&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0" colspan="3">
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_10">
+              <attribute name="title">
+               <string>HTML5 Permissions</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <widget class="QListWidget" name="siteSettingsHtml5List"/>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_11">
+              <attribute name="title">
+               <string>Site Settings</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <widget class="QListWidget" name="siteSettingsList"/>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -2435,8 +2470,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>560</width>
-                <height>80</height>
+                <width>98</width>
+                <height>29</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_14">
@@ -2838,20 +2873,6 @@
        </item>
       </layout>
      </widget>
-    </widget>
-   </item>
-   <item row="3" column="1" colspan="2">
-    <widget class="Line" name="line_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="2">
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
     </widget>
    </item>
   </layout>

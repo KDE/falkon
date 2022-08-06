@@ -23,6 +23,7 @@ falkon_tests(
     webviewtest
     webtabtest
     sqldatabasetest
+    sitesettingstest
 )
 
 set(falkon_autotests_SRCS ${CMAKE_SOURCE_DIR}/tests/modeltest/modeltest.cpp)
