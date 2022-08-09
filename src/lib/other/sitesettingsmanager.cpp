@@ -46,13 +46,13 @@ SiteWebEngineSettings SiteSettingsManager::getWebEngineSettings(const QUrl& url)
     SiteWebEngineSettings settings;
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT allow_images, allow_javascript FROM site_settings WHERE server=?");
+    query.prepare(QSL("SELECT allow_images, allow_javascript FROM site_settings WHERE server=?"));
     query.addBindValue(url.host());
     query.exec();
 
     if (query.next()) {
-        int allow_images = query.value("allow_images").toInt();
-        int allow_javascript = query.value("allow_javascript").toInt();
+        int allow_images = query.value(QSL("allow_images")).toInt();
+        int allow_javascript = query.value(QSL("allow_javascript")).toInt();
 
         if (allow_images == 0) {
             settings.allowImages = mApp->webSettings()->testAttribute(QWebEngineSettings::AutoLoadImages);
@@ -76,14 +76,30 @@ SiteWebEngineSettings SiteSettingsManager::getWebEngineSettings(const QUrl& url)
     return settings;
 }
 
-void SiteSettingsManager::setJavascript(const QUrl& url, int value)
+void SiteSettingsManager::setJavascript(const QUrl& url, const int value)
 {
-    auto job = new SqlQueryJob(QSL("UPDATE site_settings SET allow_javascript=? WHERE server=?"), this);
+    setOption(poAllowJavascript, url, value);
+}
+
+void SiteSettingsManager::setImages(const QUrl& url, const int value)
+{
+    setOption(poAllowImages, url, value);
+}
+
+void SiteSettingsManager::setOption(const PageOptions option, const QUrl& url, const int value)
+{
+    QString column = optionToSqlColumn(option);
+
+    if (column.isEmpty()) {
+        return;
+    }
+
+    auto job = new SqlQueryJob(QSL("UPDATE site_settings SET %1=? WHERE server=?").arg(column), this);
     job->addBindValue(value);
     job->addBindValue(url.host());
     connect(job, &SqlQueryJob::finished, this, [=]() {
         if (job->numRowsAffected() == 0) {
-            auto job = new SqlQueryJob(QSL("INSERT INTO site_settings (server, allow_javascript) VALUES (?,?)"), this);
+            auto job = new SqlQueryJob(QSL("INSERT INTO site_settings (server, %1) VALUES (?,?)").arg(column), this);
             job->addBindValue(url.host());
             job->addBindValue(value);
             job->start();
@@ -92,18 +108,156 @@ void SiteSettingsManager::setJavascript(const QUrl& url, int value)
     job->start();
 }
 
-void SiteSettingsManager::setImages(const QUrl& url, int value)
+void SiteSettingsManager::setOption(const QWebEnginePage::Feature& feature, const QUrl& url, const Permission &value)
 {
-    auto job = new SqlQueryJob(QSL("UPDATE site_settings SET allow_images=? WHERE server=?"), this);
-    job->addBindValue(value);
-    job->addBindValue(url.host());
-    connect(job, &SqlQueryJob::finished, this, [=]() {
-        if (job->numRowsAffected() == 0) {
-            auto job = new SqlQueryJob(QSL("INSERT INTO site_settings (server, allow_images) VALUES (?,?)"), this);
-            job->addBindValue(url.host());
-            job->addBindValue(value);
-            job->start();
+    auto option = optionFromWebEngineFeature(feature);
+    setOption(option, url, value);
+}
+
+bool SiteSettingsManager::getOption(const SiteSettingsManager::PageOptions option, const QUrl& url)
+{
+    auto perm = getPermission(option, url);
+
+    if (perm == Allow) {
+        return true;
+    }
+    else if (perm == Deny) {
+        return false;
+    }
+    else {
+        return getDefaultOptionValue(option);
+    }
+}
+
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSettingsManager::PageOptions option, const QUrl& url)
+{
+    QString column = optionToSqlColumn(option);
+
+    if (column.isEmpty()) {
+        return Deny;
+    }
+
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.prepare(QSL("SELECT %1 FROM site_settings WHERE server=?").arg(column));
+    query.addBindValue(url.host());
+    query.exec();
+
+    if (query.next()) {
+        int allow_option = query.value(column).toInt();
+
+        if (allow_option == 0) {
+            return Default;
         }
-    });
-    job->start();
+        else {
+            return (allow_option == 1) ? Allow : Deny;
+        }
+    }
+
+    return Default;
+}
+
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEnginePage::Feature& feature, const QUrl& url)
+{
+    auto option = optionFromWebEngineFeature(feature);
+    return getPermission(option, url);
+}
+
+QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOptions &option)
+{
+    switch (option) {
+        case poAllowJavascript:
+            return QSL("allow_javascript");
+
+        case poAllowImages:
+            return QSL("allow_images");
+
+        case poAllowCookies:
+            return QSL("allow_cookies");
+
+        case poZoomLevel:
+            return QSL("zoom_level");
+
+        case poAllowNotifications:
+            return QSL("allow_notifications");
+
+        case poAllowGeolocation:
+            return QSL("allow_geolocation");
+
+        case poAllowMediaAudioCapture:
+            return QSL("allow_media_audio_capture");
+
+        case poAllowMediaVideoCapture:
+            return QSL("allow_media_video_capture");
+
+        case poAllowMediaAudioVideoCapture:
+            return QSL("allow_media_audio_video_capture");
+
+        case poAllowMouseLock:
+            return QSL("allow_mouse_lock");
+
+        case poAllowDesktopVideoCapture:
+            return QSL("allow_desktop_video_capture");
+
+        case poAllowDesktopAudioVideoCapture:
+            return QSL("allow_desktop_audio_video_capture");
+
+        default:
+            qWarning() << "Unknown option" << option;
+            return QLatin1String("");
+    }
+}
+
+bool SiteSettingsManager::getDefaultOptionValue(const SiteSettingsManager::PageOptions& option)
+{
+    switch (option) {
+        case poAllowJavascript:
+            return mApp->webSettings()->testAttribute(QWebEngineSettings::JavascriptEnabled);
+
+        case poAllowImages:
+            return mApp->webSettings()->testAttribute(QWebEngineSettings::AutoLoadImages);
+
+        /* At the moment, no idea */
+        case poAllowCookies:
+            return false;
+
+        case poZoomLevel:
+            return false;
+
+        default:
+            qWarning() << "Unknown option" << option;
+            return false;
+    }
+}
+
+SiteSettingsManager::PageOptions SiteSettingsManager::optionFromWebEngineFeature(const QWebEnginePage::Feature& feature)
+{
+    switch (feature) {
+        case QWebEnginePage::Notifications:
+            return poAllowNotifications;
+
+        case QWebEnginePage::Geolocation:
+            return poAllowGeolocation;
+
+        case QWebEnginePage::MediaAudioCapture:
+            return poAllowMediaAudioCapture;
+
+        case QWebEnginePage::MediaVideoCapture:
+            return poAllowMediaVideoCapture;
+
+        case QWebEnginePage::MediaAudioVideoCapture:
+            return poAllowMediaAudioVideoCapture;
+
+        case QWebEnginePage::MouseLock:
+            return poAllowMouseLock;
+
+        case QWebEnginePage::DesktopVideoCapture:
+            return poAllowDesktopVideoCapture;
+
+        case QWebEnginePage::DesktopAudioVideoCapture:
+            return poAllowDesktopAudioVideoCapture;
+
+        default:
+            qWarning() << "Unknown feature" << feature;
+            return poAllowNotifications;
+    }
 }

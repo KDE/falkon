@@ -186,5 +186,5 @@ void HTML5PermissionsDialog::saveSettings()
 
     settings.endGroup();
 
-    mApp->html5PermissionsManager()->loadSettings();
+//    mApp->html5PermissionsManager()->loadSettings();
 }

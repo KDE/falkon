@@ -36,13 +36,8 @@ public:
     void rememberPermissions(const QUrl &origin, const QWebEnginePage::Feature &feature,
                              const QWebEnginePage::PermissionPolicy &policy);
 
-    void loadSettings();
-
 private:
-    void saveSettings();
-
-    QHash<QWebEnginePage::Feature, QStringList> m_granted;
-    QHash<QWebEnginePage::Feature, QStringList> m_denied;
+    bool checkFeature(const QWebEnginePage::Feature &feature);
 };
 
 #endif // HTML5PERMISSIONSMANAGER_H

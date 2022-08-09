@@ -19,6 +19,7 @@
 #define SITESETTINGS_MANAGER_H
 
 #include "qzcommon.h"
+#include <QWebEnginePage>
 
 class QUrl;
 
@@ -34,6 +35,27 @@ class FALKON_EXPORT SiteSettingsManager : QObject
     Q_OBJECT
 
 public:
+    enum Permission {
+        Deny    = 0,
+        Allow   = 1,
+        Default = 2,
+    };
+
+    enum PageOptions {
+        poAllowJavascript,
+        poAllowImages,
+        poAllowCookies,
+        poZoomLevel,
+        poAllowNotifications,
+        poAllowGeolocation,
+        poAllowMediaAudioCapture,
+        poAllowMediaVideoCapture,
+        poAllowMediaAudioVideoCapture,
+        poAllowMouseLock,
+        poAllowDesktopVideoCapture,
+        poAllowDesktopAudioVideoCapture,
+    };
+
     explicit SiteSettingsManager(QObject *parent = 0);
     ~SiteSettingsManager();
 
@@ -47,9 +69,20 @@ public:
      */
     SiteWebEngineSettings getWebEngineSettings(const QUrl &url);
 
-    void setJavascript(const QUrl &url, int value);
-    void setImages(const QUrl &url, int value);
+    void setJavascript(const QUrl &url, const int value);
+    void setImages(const QUrl &url, const int value);
+
+    bool getOption(const PageOptions option, const QUrl &url);
+    Permission getPermission(const PageOptions option, const QUrl &url);
+    Permission getPermission(const QWebEnginePage::Feature &feature, const QUrl &url);
+
+    void setOption(const PageOptions option, const QUrl &url, const int value);
+    void setOption(const QWebEnginePage::Feature &feature, const QUrl &url, const Permission &value);
+
 private:
+    QString optionToSqlColumn(const PageOptions &option);
+    bool getDefaultOptionValue(const PageOptions &option);
+    PageOptions optionFromWebEngineFeature(const QWebEnginePage::Feature &feature);
 };
 
 #endif // SITESETTINGS_MANAGER_H
