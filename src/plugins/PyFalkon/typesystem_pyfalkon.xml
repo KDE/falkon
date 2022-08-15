@@ -2,6 +2,7 @@
 <typesystem package="PyFalkon">
     <load-typesystem name="typesystem_webenginecore.xml" generate="no"/>
     <load-typesystem name="typesystem_webenginewidgets.xml" generate="no"/>
+    <load-typesystem name="typesystem_sql.xml" generate="no"/>
 
     <inject-code class="native" position="beginning">
       #include &lt;pythonplugin.h&gt;

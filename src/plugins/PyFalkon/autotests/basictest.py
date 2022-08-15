@@ -14,6 +14,9 @@ class BasicTest(unittest.TestCase):
         window = Falkon.MainApplication.instance().createWindow(Falkon.Qz.BW_NewWindow)
         self.assertIsNotNone(window)
 
+    def test_sql_availability(self):
+        self.assertTrue(hasattr(Falkon.SqlDatabase, 'database'))
+
 
 suite = unittest.defaultTestLoader.loadTestsFromTestCase(BasicTest)
 if unittest.TextTestRunner().run(suite).failures:
