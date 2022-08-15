@@ -261,3 +261,8 @@ SiteSettingsManager::PageOptions SiteSettingsManager::optionFromWebEngineFeature
             return poAllowNotifications;
     }
 }
+
+QString SiteSettingsManager::sqlColumnFromWebEngineFeature(const QWebEnginePage::Feature& feature)
+{
+    return optionToSqlColumn(optionFromWebEngineFeature(feature));
+}

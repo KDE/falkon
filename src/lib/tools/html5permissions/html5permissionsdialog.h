@@ -46,13 +46,12 @@ private Q_SLOTS:
 private:
     enum Role { Allow, Deny };
 
-    void loadSettings();
     QWebEnginePage::Feature currentFeature() const;
+    QWebEnginePage::Feature indexToFeature(const int index) const;
 
     Ui::HTML5PermissionsDialog* ui;
 
-    QHash<QWebEnginePage::Feature, QStringList> m_granted;
-    QHash<QWebEnginePage::Feature, QStringList> m_denied;
+    QHash<QWebEnginePage::Feature, QVariantList> m_removed;
 };
 
 #endif // HTML5PERMISSIONSDIALOG_H

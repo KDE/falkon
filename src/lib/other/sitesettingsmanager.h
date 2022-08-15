@@ -30,15 +30,16 @@ public:
     bool allowImages;
 };
 
+
 class FALKON_EXPORT SiteSettingsManager : QObject
 {
     Q_OBJECT
 
 public:
     enum Permission {
-        Deny    = 0,
+        Default = 0,
         Allow   = 1,
-        Default = 2,
+        Deny    = 2,
     };
 
     enum PageOptions {
@@ -54,6 +55,23 @@ public:
         poAllowMouseLock,
         poAllowDesktopVideoCapture,
         poAllowDesktopAudioVideoCapture,
+    };
+
+    struct SiteSettings
+    {
+        Permission AllowJavascript;
+        Permission AllowImages;
+        Permission AllowCookies;
+        Permission ZoomLevel;
+        Permission AllowNotifications;
+        Permission AllowGeolocation;
+        Permission AllowMediaAudioCapture;
+        Permission AllowMediaVideoCapture;
+        Permission AllowMediaAudioVideoCapture;
+        Permission AllowMouseLock;
+        Permission AllowDesktopVideoCapture;
+        Permission AllowDesktopAudioVideoCapture;
+        QString server;
     };
 
     explicit SiteSettingsManager(QObject *parent = 0);
@@ -79,10 +97,19 @@ public:
     void setOption(const PageOptions option, const QUrl &url, const int value);
     void setOption(const QWebEnginePage::Feature &feature, const QUrl &url, const Permission &value);
 
+    QString sqlColumnFromWebEngineFeature(const QWebEnginePage::Feature &feature);
+
 private:
     QString optionToSqlColumn(const PageOptions &option);
     bool getDefaultOptionValue(const PageOptions &option);
     PageOptions optionFromWebEngineFeature(const QWebEnginePage::Feature &feature);
 };
+
+
+using SiteSettings = SiteSettingsManager::SiteSettings;
+
+// Hint to QVector to use std::realloc on item moving
+Q_DECLARE_TYPEINFO(SiteSettings, Q_MOVABLE_TYPE);
+
 
 #endif // SITESETTINGS_MANAGER_H
