@@ -70,7 +70,7 @@ void HTML5PermissionsDialog::showFeaturePermissions(QWebEnginePage::Feature feat
         }
     }
     else {
-        for (auto siteData : m_data[feature]) {
+        for (const auto &siteData : m_data[feature]) {
             createEntry(siteData);
         }
     }
@@ -81,7 +81,7 @@ void HTML5PermissionsDialog::featureIndexChanged()
     showFeaturePermissions(currentFeature());
 }
 
-void HTML5PermissionsDialog::createEntry(HTML5PermissionsDialog::SiteData& siteData)
+void HTML5PermissionsDialog::createEntry(const HTML5PermissionsDialog::SiteData& siteData)
 {
     if (m_removed.contains(currentFeature()) && m_removed[currentFeature()].contains(siteData.id)) {
         return;

@@ -50,7 +50,7 @@ private:
         int id;
         QString host;
     };
-    void createEntry(SiteData &siteData);
+    void createEntry(const SiteData &siteData);
 
     QWebEnginePage::Feature currentFeature() const;
     QWebEnginePage::Feature indexToFeature(const int index) const;
