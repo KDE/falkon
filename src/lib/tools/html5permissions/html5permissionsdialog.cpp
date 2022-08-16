@@ -52,36 +52,51 @@ void HTML5PermissionsDialog::showFeaturePermissions(QWebEnginePage::Feature feat
 {
     ui->treeWidget->clear();
 
-    QString column = mApp->siteSettingsManager()->sqlColumnFromWebEngineFeature(feature);
-    QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare(QSL("SELECT id, server, %1 FROM site_settings WHERE %1 != ?").arg(column));
-    query.addBindValue(SiteSettingsManager::Default);
-    query.exec();
+    if (m_data[feature].length() == 0) {
+        QString column = mApp->siteSettingsManager()->sqlColumnFromWebEngineFeature(feature);
+        QSqlQuery query(SqlDatabase::instance()->database());
+        query.prepare(QSL("SELECT id, server, %1 FROM site_settings WHERE %1 != ?").arg(column));
+        query.addBindValue(SiteSettingsManager::Default);
+        query.exec();
 
-    while (query.next()) {
-        int id = query.value(0).toInt();
-        if (m_removed.contains(feature) && m_removed[feature].contains(id)) {
-            continue;
-        }
+        while (query.next()) {
+            SiteData siteData;
+            siteData.id = query.value(0).toInt();
+            siteData.host = query.value(1).toString();
+            siteData.perm = static_cast<SiteSettingsManager::Permission>(query.value(2).toInt());
+            m_data[feature].append(siteData);
 
-        auto* item = new QTreeWidgetItem(ui->treeWidget);
-        item->setText(0, query.value(1).toString());
-
-        auto perm = static_cast<SiteSettingsManager::Permission>(query.value(2).toInt());
-        if (perm == SiteSettingsManager::Allow) {
-            item->setText(1, tr("Allow"));
+            createEntry(siteData);
         }
-        else {
-            item->setText(1, tr("Deny"));
+    }
+    else {
+        for (auto siteData : m_data[feature]) {
+            createEntry(siteData);
         }
-        item->setData(0, Qt::UserRole + 10, id);
-        ui->treeWidget->addTopLevelItem(item);
     }
 }
 
 void HTML5PermissionsDialog::featureIndexChanged()
 {
     showFeaturePermissions(currentFeature());
+}
+
+void HTML5PermissionsDialog::createEntry(HTML5PermissionsDialog::SiteData& siteData)
+{
+    if (m_removed.contains(currentFeature()) && m_removed[currentFeature()].contains(siteData.id)) {
+        return;
+    }
+    auto* item = new QTreeWidgetItem(ui->treeWidget);
+    item->setText(0, siteData.host);
+
+    if (siteData.perm == SiteSettingsManager::Allow) {
+        item->setText(1, tr("Allow"));
+    }
+    else {
+        item->setText(1, tr("Deny"));
+    }
+    item->setData(0, Qt::UserRole + 10, siteData.id);
+    ui->treeWidget->addTopLevelItem(item);
 }
 
 void HTML5PermissionsDialog::removeEntry()

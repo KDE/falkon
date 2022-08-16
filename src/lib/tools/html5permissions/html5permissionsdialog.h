@@ -18,6 +18,7 @@
 #ifndef HTML5PERMISSIONSDIALOG_H
 #define HTML5PERMISSIONSDIALOG_H
 
+#include "sitesettingsmanager.h"
 #include <QDialog>
 #include <QStringList>
 #include <QWebEnginePage>
@@ -44,13 +45,19 @@ private Q_SLOTS:
     void saveSettings();
 
 private:
-    enum Role { Allow, Deny };
+    struct SiteData {
+        SiteSettingsManager::Permission perm;
+        int id;
+        QString host;
+    };
+    void createEntry(SiteData &siteData);
 
     QWebEnginePage::Feature currentFeature() const;
     QWebEnginePage::Feature indexToFeature(const int index) const;
 
     Ui::HTML5PermissionsDialog* ui;
 
+    QHash<QWebEnginePage::Feature, QList<SiteData>> m_data;
     QHash<QWebEnginePage::Feature, QVariantList> m_removed;
 };
 
