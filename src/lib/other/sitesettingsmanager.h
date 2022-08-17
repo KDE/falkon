@@ -40,6 +40,7 @@ public:
         Default = 0,
         Allow   = 1,
         Deny    = 2,
+        Ask     = 3,
     };
 
     enum PageOptions {
@@ -90,7 +91,6 @@ public:
     void setJavascript(const QUrl &url, const int value);
     void setImages(const QUrl &url, const int value);
 
-    bool getOption(const PageOptions option, const QUrl &url);
     Permission getPermission(const PageOptions option, const QUrl &url);
     Permission getPermission(const QWebEnginePage::Feature &feature, const QUrl &url);
 

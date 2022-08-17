@@ -114,21 +114,6 @@ void SiteSettingsManager::setOption(const QWebEnginePage::Feature& feature, cons
     setOption(option, url, value);
 }
 
-bool SiteSettingsManager::getOption(const SiteSettingsManager::PageOptions option, const QUrl& url)
-{
-    auto perm = getPermission(option, url);
-
-    if (perm == Allow) {
-        return true;
-    }
-    else if (perm == Deny) {
-        return false;
-    }
-    else {
-        return getDefaultOptionValue(option);
-    }
-}
-
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSettingsManager::PageOptions option, const QUrl& url)
 {
     QString column = optionToSqlColumn(option);
@@ -145,11 +130,15 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSet
     if (query.next()) {
         int allow_option = query.value(column).toInt();
 
-        if (allow_option == 0) {
-            return Default;
-        }
-        else {
-            return (allow_option == 1) ? Allow : Deny;
+        switch (allow_option) {
+            case Allow:
+                return Allow;
+            case Deny:
+                return Deny;
+            case Ask:
+                return Ask;
+            default:
+                return Default;
         }
     }
 
