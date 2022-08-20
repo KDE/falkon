@@ -21,7 +21,6 @@
 #include "settings.h"
 #include "sqldatabase.h"
 #include <QUrl>
-#include <qwebenginesettings.h>
 
 SiteSettingsManager::SiteSettingsManager ( QObject* parent )
 : QObject(parent)
@@ -191,8 +190,25 @@ QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOp
             return QSL("allow_desktop_audio_video_capture");
 
         default:
+            Q_UNREACHABLE();
             qWarning() << "Unknown option" << option;
             return QLatin1String("");
+    }
+}
+
+SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const SiteSettingsManager::PageOptions& option)
+{
+    switch (option) {
+        case poAllowJavascript:
+            return testAttribute(QWebEngineSettings::JavascriptEnabled);
+
+        case poAllowImages:
+            return testAttribute(QWebEngineSettings::AutoLoadImages);
+
+        default:
+            Q_UNREACHABLE();
+            qWarning() << "Unknown option" << option;
+            return Deny;
     }
 }
 
@@ -213,12 +229,13 @@ bool SiteSettingsManager::getDefaultOptionValue(const SiteSettingsManager::PageO
             return false;
 
         default:
+            Q_UNREACHABLE();
             qWarning() << "Unknown option" << option;
             return false;
     }
 }
 
-SiteSettingsManager::PageOptions SiteSettingsManager::optionFromWebEngineFeature(const QWebEnginePage::Feature& feature)
+SiteSettingsManager::PageOptions SiteSettingsManager::optionFromWebEngineFeature(const QWebEnginePage::Feature& feature) const
 {
     switch (feature) {
         case QWebEnginePage::Notifications:
@@ -246,6 +263,7 @@ SiteSettingsManager::PageOptions SiteSettingsManager::optionFromWebEngineFeature
             return poAllowDesktopAudioVideoCapture;
 
         default:
+            Q_UNREACHABLE();
             qWarning() << "Unknown feature" << feature;
             return poAllowNotifications;
     }
@@ -254,4 +272,14 @@ SiteSettingsManager::PageOptions SiteSettingsManager::optionFromWebEngineFeature
 QString SiteSettingsManager::sqlColumnFromWebEngineFeature(const QWebEnginePage::Feature& feature)
 {
     return optionToSqlColumn(optionFromWebEngineFeature(feature));
+}
+
+SiteSettingsManager::Permission SiteSettingsManager::testAttribute(const QWebEngineSettings::WebAttribute attribute) const
+{
+    if (mApp->webSettings()->testAttribute(attribute)) {
+        return Allow;
+    }
+    else {
+        return Deny;
+    }
 }

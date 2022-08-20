@@ -19,6 +19,7 @@
 #include "ui_html5permissionsdialog.h"
 #include "settings.h"
 #include "mainapplication.h"
+#include "html5permissionsitem.h"
 #include "html5permissionsmanager.h"
 #include "sitesettingsmanager.h"
 
@@ -41,6 +42,14 @@ HTML5PermissionsDialog::HTML5PermissionsDialog(QWidget* parent)
     connect(ui->buttonBox, &QDialogButtonBox::accepted, this, &HTML5PermissionsDialog::saveSettings);
 
     showFeaturePermissions(currentFeature());
+
+    for (int i = 0; i < 8; ++i) {
+        // Create permission item
+        auto* listItem = new QListWidgetItem(ui->listWidgetDefaults);
+        auto* permItem = new HTML5PermissionsItem(indexToFeature(i), SiteSettingsManager::Ask, this);
+        ui->listWidgetDefaults->setItemWidget(listItem, permItem);
+        listItem->setSizeHint(permItem->sizeHint());
+    }
 }
 
 HTML5PermissionsDialog::~HTML5PermissionsDialog()
