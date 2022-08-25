@@ -42,6 +42,8 @@ private Q_SLOTS:
     void removeEntry();
     void featureIndexChanged();
 
+    void showDefaultPermissions();
+
     void saveSettings();
 
 private:

@@ -109,6 +109,7 @@ void HTML5PermissionsItem::setCombo()
             ui->comboBox->setCurrentIndex(1);
             break;
         case SiteSettingsManager::Ask:
+        case SiteSettingsManager::Default:
             ui->comboBox->setCurrentIndex(2);
             break;
         default:

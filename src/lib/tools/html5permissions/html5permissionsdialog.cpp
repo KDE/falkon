@@ -42,14 +42,7 @@ HTML5PermissionsDialog::HTML5PermissionsDialog(QWidget* parent)
     connect(ui->buttonBox, &QDialogButtonBox::accepted, this, &HTML5PermissionsDialog::saveSettings);
 
     showFeaturePermissions(currentFeature());
-
-    for (int i = 0; i < 8; ++i) {
-        // Create permission item
-        auto* listItem = new QListWidgetItem(ui->listWidgetDefaults);
-        auto* permItem = new HTML5PermissionsItem(indexToFeature(i), SiteSettingsManager::Ask, this);
-        ui->listWidgetDefaults->setItemWidget(listItem, permItem);
-        listItem->setSizeHint(permItem->sizeHint());
-    }
+    showDefaultPermissions();
 }
 
 HTML5PermissionsDialog::~HTML5PermissionsDialog()
@@ -174,5 +167,25 @@ void HTML5PermissionsDialog::saveSettings()
         if (!query.execBatch()) {
             qDebug() << query.lastError();
         }
+    }
+
+    for (int i = 0; i < 8; ++i) {
+        auto* item = static_cast<HTML5PermissionsItem*>(ui->listWidgetDefaults->itemWidget(ui->listWidgetDefaults->item(i)));
+        const auto feature = item->getFeature();
+        const auto permission = item->getPermission();
+        mApp->siteSettingsManager()->setDefaultPermission(feature, permission);
+    }
+}
+
+void HTML5PermissionsDialog::showDefaultPermissions()
+{
+    for (int i = 0; i < 8; ++i) {
+        const auto feature = indexToFeature(i);
+        const auto permission = mApp->siteSettingsManager()->getDefaultPermission(feature);
+
+        auto* listItem = new QListWidgetItem(ui->listWidgetDefaults);
+        auto* permItem = new HTML5PermissionsItem(feature, permission, this);
+        ui->listWidgetDefaults->setItemWidget(listItem, permItem);
+        listItem->setSizeHint(permItem->sizeHint());
     }
 }

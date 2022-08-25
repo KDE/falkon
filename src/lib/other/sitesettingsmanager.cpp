@@ -35,8 +35,44 @@ SiteSettingsManager::~SiteSettingsManager() noexcept
 void SiteSettingsManager::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
+//    settings.beginGroup("Web-Browser-Settings");
 //    m_isSaving = settings.value("allowPerDomainZoom", true).toBool();
+//    settings.endGroup();
+
+    settings.beginGroup("Site-Settings");
+/* These are handled by already existing parts of Falkon */
+//     m_defaults[poAllowJavascript]               = settings.value("allowJavascript", Default).toInt();
+//     m_defaults[poAllowImages]                   = settings.value("allowImages", Default).toInt();
+//     m_defaults[poAllowCookies]                  = settings.value("allowCookies", Default).toInt();
+//     m_defaults[poZoomLevel]                     = settings.value("defaultZoomLevel", Default).toInt(); // fail
+    m_defaults[poAllowNotifications]            = intToPermission(settings.value("allowNotifications",              Default).toInt());
+    m_defaults[poAllowGeolocation]              = intToPermission(settings.value("allowGealocation",                Default).toInt());
+    m_defaults[poAllowMediaAudioCapture]        = intToPermission(settings.value("allowMicrophone",                 Default).toInt());
+    m_defaults[poAllowMediaVideoCapture]        = intToPermission(settings.value("allowCamera",                     Default).toInt());
+    m_defaults[poAllowMediaAudioVideoCapture]   = intToPermission(settings.value("allowCameraAndMicrophone",        Default).toInt());
+    m_defaults[poAllowMouseLock]                = intToPermission(settings.value("allowMouseLock",                  Default).toInt());
+    m_defaults[poAllowDesktopVideoCapture]      = intToPermission(settings.value("allowDesktopVideoCapture",        Default).toInt());
+    m_defaults[poAllowDesktopAudioVideoCapture] = intToPermission(settings.value("allowDesktopAudioVideoCapture",   Default).toInt());
+    settings.endGroup();
+}
+
+void SiteSettingsManager::saveSettings()
+{
+    Settings settings;
+    settings.beginGroup("Site-Settings");
+/* These are handled by already existing parts of Falkon */
+//     settings.setValue("allowJavascript", m_defaults[poAllowJavascript]);
+//     settings.setValue("allowIbutmages", m_defaults[poAllowImages]);
+//     settings.setValue("allowCookies", m_defaults[poAllowCookies]);
+//     settings.setValue("defaultZoomLevel", m_defaults[poZoomLevel]);
+    settings.setValue("allowNotifications",             m_defaults[poAllowNotifications]);
+    settings.setValue("allowGealocation",               m_defaults[poAllowGeolocation]);
+    settings.setValue("allowMicrophone",                m_defaults[poAllowMediaAudioCapture]);
+    settings.setValue("allowCamera",                    m_defaults[poAllowMediaVideoCapture]);
+    settings.setValue("allowCameraAndMicrophone",       m_defaults[poAllowMediaAudioVideoCapture]);
+    settings.setValue("allowMouseLock",                 m_defaults[poAllowMouseLock]);
+    settings.setValue("allowDesktopVideoCapture",       m_defaults[poAllowDesktopVideoCapture]);
+    settings.setValue("allowDesktopAudioVideoCapture",  m_defaults[poAllowDesktopAudioVideoCapture]);
     settings.endGroup();
 }
 
@@ -129,16 +165,7 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSet
     if (query.next()) {
         int allow_option = query.value(column).toInt();
 
-        switch (allow_option) {
-            case Allow:
-                return Allow;
-            case Deny:
-                return Deny;
-            case Ask:
-                return Ask;
-            default:
-                return Default;
-        }
+        return intToPermission(allow_option);
     }
 
     return Default;
@@ -205,11 +232,100 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
         case poAllowImages:
             return testAttribute(QWebEngineSettings::AutoLoadImages);
 
+        case poAllowNotifications:
+            return m_defaults[poAllowNotifications];
+
+        case poAllowGeolocation:
+            return m_defaults[poAllowGeolocation];
+
+        case poAllowMediaAudioCapture:
+            return m_defaults[poAllowMediaAudioCapture];
+
+        case poAllowMediaVideoCapture:
+            return m_defaults[poAllowMediaVideoCapture];
+
+        case poAllowMediaAudioVideoCapture:
+            return m_defaults[poAllowMediaAudioVideoCapture];
+
+        case poAllowMouseLock:
+            return m_defaults[poAllowMouseLock];
+
+        case poAllowDesktopVideoCapture:
+            return m_defaults[poAllowDesktopVideoCapture];
+
+        case poAllowDesktopAudioVideoCapture:
+            return m_defaults[poAllowDesktopAudioVideoCapture];
+
+        // so far not implemented
+        case poZoomLevel:
+        case poAllowCookies:
         default:
             Q_UNREACHABLE();
             qWarning() << "Unknown option" << option;
             return Deny;
     }
+}
+
+SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const QWebEnginePage::Feature& feature)
+{
+    auto option = optionFromWebEngineFeature(feature);
+    return getDefaultPermission(option);
+}
+
+void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOptions& option, const int& value)
+{
+    switch (option) {
+        case poAllowNotifications:
+        case poAllowGeolocation:
+        case poAllowMediaAudioCapture:
+        case poAllowMediaVideoCapture:
+        case poAllowMediaAudioVideoCapture:
+        case poAllowMouseLock:
+        case poAllowDesktopVideoCapture:
+        case poAllowDesktopAudioVideoCapture:
+            setDefaultPermission(option, intToPermission(value));
+            break;
+
+        case poZoomLevel:
+        case poAllowCookies:
+        case poAllowJavascript:
+        case poAllowImages:
+        default:
+            Q_UNREACHABLE();
+            qWarning() << "Unknown option" << option;
+    }
+}
+
+void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOptions& option, const SiteSettingsManager::Permission& permission)
+{
+    switch (option) {
+        case poZoomLevel:
+        case poAllowCookies:
+        case poAllowJavascript:
+        case poAllowImages:
+            qWarning() << "So far not implemented" << option;
+            break;
+
+        case poAllowNotifications:
+        case poAllowGeolocation:
+        case poAllowMediaAudioCapture:
+        case poAllowMediaVideoCapture:
+        case poAllowMediaAudioVideoCapture:
+        case poAllowMouseLock:
+        case poAllowDesktopVideoCapture:
+        case poAllowDesktopAudioVideoCapture:
+            m_defaults[option] = permission;
+            break;
+        default:
+            Q_UNREACHABLE();
+            qWarning() << "Unknown option" << option;
+    }
+}
+
+void SiteSettingsManager::setDefaultPermission(const QWebEnginePage::Feature& feature, const SiteSettingsManager::Permission& value)
+{
+    auto option = optionFromWebEngineFeature(feature);
+    setDefaultPermission(option, value);
 }
 
 bool SiteSettingsManager::getDefaultOptionValue(const SiteSettingsManager::PageOptions& option)
@@ -281,5 +397,19 @@ SiteSettingsManager::Permission SiteSettingsManager::testAttribute(const QWebEng
     }
     else {
         return Deny;
+    }
+}
+
+SiteSettingsManager::Permission SiteSettingsManager::intToPermission(const int permission) const
+{
+    switch (permission) {
+        case Allow:
+            return Allow;
+        case Deny:
+            return Deny;
+        case Ask:
+            return Ask;
+        default:
+            return Default;
     }
 }

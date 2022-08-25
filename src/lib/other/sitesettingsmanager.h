@@ -82,6 +82,7 @@ public:
     ~SiteSettingsManager();
 
     void loadSettings();
+    void saveSettings();
 
     /**
      * @brief Get settings which should be applied to webpage before loading.
@@ -100,14 +101,22 @@ public:
     void setOption(const PageOptions option, const QUrl &url, const int value);
     void setOption(const QWebEnginePage::Feature &feature, const QUrl &url, const Permission &value);
 
+    Permission getDefaultPermission(const PageOptions &option);
+    Permission getDefaultPermission(const QWebEnginePage::Feature &feature);
+    void setDefaultPermission(const PageOptions &option, const Permission &permission);
+    void setDefaultPermission(const QWebEnginePage::Feature &feature, const Permission &value);
+    void setDefaultPermission(const PageOptions &option, const int &value);
+
     QString sqlColumnFromWebEngineFeature(const QWebEnginePage::Feature &feature);
 
 private:
     QString optionToSqlColumn(const PageOptions &option);
     bool getDefaultOptionValue(const PageOptions &option);
-    Permission getDefaultPermission(const PageOptions &option);
     PageOptions optionFromWebEngineFeature(const QWebEnginePage::Feature &feature) const;
     Permission testAttribute(const QWebEngineSettings::WebAttribute attribute) const;
+    Permission intToPermission(const int permission) const;
+
+    QMap<PageOptions, Permission> m_defaults;
 };
 
 
