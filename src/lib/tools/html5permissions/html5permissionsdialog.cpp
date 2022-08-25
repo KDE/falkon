@@ -102,7 +102,7 @@ void HTML5PermissionsDialog::createEntry(const HTML5PermissionsDialog::SiteData&
             item->setText(1, tr("Ask"));
             break;
         default:
-            Q_UNREACHABLE();
+            qWarning() << "Unknown unknown permission" << siteData.perm;
             item->setText(1, tr("Default"));
             break;
     }
@@ -148,7 +148,7 @@ QWebEnginePage::Feature HTML5PermissionsDialog::indexToFeature(const int index) 
         case 7:
             return QWebEnginePage::DesktopAudioVideoCapture;
         default:
-            Q_UNREACHABLE();
+            qWarning() << "Unknown feature index" << index;
             return QWebEnginePage::Notifications;
     }
 }

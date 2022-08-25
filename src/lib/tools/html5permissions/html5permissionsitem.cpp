@@ -51,7 +51,6 @@ void HTML5PermissionsItem::permissionIndexChanged()
             m_permission = SiteSettingsManager::Ask;
             break;
         default:
-            Q_UNREACHABLE();
             qWarning() << "Unknown permission index" << ui->comboBox->currentIndex();
             break;
     }
@@ -93,7 +92,6 @@ void HTML5PermissionsItem::setLabel()
             break;
 
         default:
-            Q_UNREACHABLE();
             qWarning() << "Unknown feature" << m_feature;
             break;
     }
@@ -113,7 +111,7 @@ void HTML5PermissionsItem::setCombo()
             ui->comboBox->setCurrentIndex(2);
             break;
         default:
-            Q_UNREACHABLE();
+            ui->comboBox->setCurrentIndex(2);
             qWarning() << "Unknown permission" << m_permission;
             break;
     }

@@ -217,7 +217,6 @@ QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOp
             return QSL("allow_desktop_audio_video_capture");
 
         default:
-            Q_UNREACHABLE();
             qWarning() << "Unknown option" << option;
             return QLatin1String("");
     }
@@ -260,7 +259,6 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
         case poZoomLevel:
         case poAllowCookies:
         default:
-            Q_UNREACHABLE();
             qWarning() << "Unknown option" << option;
             return Deny;
     }
@@ -291,8 +289,8 @@ void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOp
         case poAllowJavascript:
         case poAllowImages:
         default:
-            Q_UNREACHABLE();
             qWarning() << "Unknown option" << option;
+            break;
     }
 }
 
@@ -317,8 +315,8 @@ void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOp
             m_defaults[option] = permission;
             break;
         default:
-            Q_UNREACHABLE();
             qWarning() << "Unknown option" << option;
+            break;
     }
 }
 
@@ -345,7 +343,6 @@ bool SiteSettingsManager::getDefaultOptionValue(const SiteSettingsManager::PageO
             return false;
 
         default:
-            Q_UNREACHABLE();
             qWarning() << "Unknown option" << option;
             return false;
     }
@@ -379,7 +376,6 @@ SiteSettingsManager::PageOptions SiteSettingsManager::optionFromWebEngineFeature
             return poAllowDesktopAudioVideoCapture;
 
         default:
-            Q_UNREACHABLE();
             qWarning() << "Unknown feature" << feature;
             return poAllowNotifications;
     }
