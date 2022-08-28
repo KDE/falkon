@@ -45,14 +45,14 @@ void SiteSettingsManager::loadSettings()
 //     m_defaults[poAllowImages]                   = settings.value("allowImages", Default).toInt();
 //     m_defaults[poAllowCookies]                  = settings.value("allowCookies", Default).toInt();
 //     m_defaults[poZoomLevel]                     = settings.value("defaultZoomLevel", Default).toInt(); // fail
-    m_defaults[poAllowNotifications]            = intToPermission(settings.value("allowNotifications",              Default).toInt());
-    m_defaults[poAllowGeolocation]              = intToPermission(settings.value("allowGealocation",                Default).toInt());
-    m_defaults[poAllowMediaAudioCapture]        = intToPermission(settings.value("allowMicrophone",                 Default).toInt());
-    m_defaults[poAllowMediaVideoCapture]        = intToPermission(settings.value("allowCamera",                     Default).toInt());
-    m_defaults[poAllowMediaAudioVideoCapture]   = intToPermission(settings.value("allowCameraAndMicrophone",        Default).toInt());
-    m_defaults[poAllowMouseLock]                = intToPermission(settings.value("allowMouseLock",                  Default).toInt());
-    m_defaults[poAllowDesktopVideoCapture]      = intToPermission(settings.value("allowDesktopVideoCapture",        Default).toInt());
-    m_defaults[poAllowDesktopAudioVideoCapture] = intToPermission(settings.value("allowDesktopAudioVideoCapture",   Default).toInt());
+    m_defaults[poAllowNotifications]            = intToPermission(settings.value("allowNotifications",              Ask).toInt());
+    m_defaults[poAllowGeolocation]              = intToPermission(settings.value("allowGealocation",                Ask).toInt());
+    m_defaults[poAllowMediaAudioCapture]        = intToPermission(settings.value("allowMicrophone",                 Ask).toInt());
+    m_defaults[poAllowMediaVideoCapture]        = intToPermission(settings.value("allowCamera",                     Ask).toInt());
+    m_defaults[poAllowMediaAudioVideoCapture]   = intToPermission(settings.value("allowCameraAndMicrophone",        Ask).toInt());
+    m_defaults[poAllowMouseLock]                = intToPermission(settings.value("allowMouseLock",                  Ask).toInt());
+    m_defaults[poAllowDesktopVideoCapture]      = intToPermission(settings.value("allowDesktopVideoCapture",        Ask).toInt());
+    m_defaults[poAllowDesktopAudioVideoCapture] = intToPermission(settings.value("allowDesktopAudioVideoCapture",   Ask).toInt());
     settings.endGroup();
 }
 
