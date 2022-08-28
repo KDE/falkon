@@ -28,6 +28,7 @@
 #include "scripts.h"
 #include "networkmanager.h"
 #include "locationbar.h"
+#include "siteinfopermissionitem.h"
 
 #include <QMenu>
 #include <QMessageBox>
@@ -37,6 +38,7 @@
 #include <QTimer>
 #include <QGraphicsPixmapItem>
 #include <QShortcut>
+#include <QListWidgetItem>
 
 SiteInfo::SiteInfo(WebView *view)
     : QDialog(view)
@@ -121,6 +123,18 @@ SiteInfo::SiteInfo(WebView *view)
             ui->treeImages->addTopLevelItem(item);
         }
     });
+
+    // Permissions
+    addPermissionOption(SiteSettingsManager::poAllowJavascript);
+    addPermissionOption(SiteSettingsManager::poAllowImages);
+    addPermissionOption(SiteSettingsManager::poAllowNotifications);
+    addPermissionOption(SiteSettingsManager::poAllowGeolocation);
+    addPermissionOption(SiteSettingsManager::poAllowMediaAudioCapture);
+    addPermissionOption(SiteSettingsManager::poAllowMediaVideoCapture);
+    addPermissionOption(SiteSettingsManager::poAllowMediaAudioVideoCapture);
+    addPermissionOption(SiteSettingsManager::poAllowMouseLock);
+    addPermissionOption(SiteSettingsManager::poAllowDesktopVideoCapture);
+    addPermissionOption(SiteSettingsManager::poAllowDesktopAudioVideoCapture);
 
     connect(ui->saveButton, SIGNAL(clicked(QAbstractButton*)), this, SLOT(saveImage()));
     connect(ui->listWidget, SIGNAL(currentRowChanged(int)), ui->stackedWidget, SLOT(setCurrentIndex(int)));
@@ -322,4 +336,24 @@ SiteInfo::~SiteInfo()
 {
     delete ui;
     delete m_certWidget;
+}
+
+void SiteInfo::addPermissionOption(const SiteSettingsManager::PageOptions option)
+{
+    auto perm = mApp->siteSettingsManager()->getPermission(SiteSettingsManager::poAllowJavascript, m_baseUrl);
+    auto* listItem = new QListWidgetItem(ui->listPermissions);
+    auto* optionItem = new SiteInfoPermissionItem(option, perm, this);
+
+    switch (option) {
+        case SiteSettingsManager::poAllowJavascript:
+        case SiteSettingsManager::poAllowImages:
+        case SiteSettingsManager::poAllowCookies:
+            optionItem->setHasOptionAsk(false);
+            break;
+        default:
+            break;
+    }
+
+    ui->listPermissions->setItemWidget(listItem, optionItem);
+    listItem->setSizeHint(optionItem->sizeHint());
 }

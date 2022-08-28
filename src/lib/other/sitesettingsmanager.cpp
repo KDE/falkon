@@ -409,3 +409,41 @@ SiteSettingsManager::Permission SiteSettingsManager::intToPermission(const int p
             return Default;
     }
 }
+
+QString SiteSettingsManager::getOptionName(const SiteSettingsManager::PageOptions& option)
+{
+    switch (option) {
+        case poAllowJavascript:
+            return QSL("JavaScript");
+        case poAllowImages:
+            return QSL("Autoload Images");
+        case poZoomLevel:
+            return QSL("Zoom level");
+        case poAllowCookies:
+            return QSL("Cookies");
+        case poAllowNotifications:
+            return QSL("Notifications");
+        case poAllowGeolocation:
+            return QSL("Location");
+        case poAllowMediaAudioCapture:
+            return QSL("Microphone");
+        case poAllowMediaVideoCapture:
+            return QSL("Camera");
+        case poAllowMediaAudioVideoCapture:
+            return QSL("Microphone and Camera");
+        case poAllowMouseLock:
+            return QSL("Hide mouse pointer");
+        case poAllowDesktopVideoCapture:
+            return QSL("Screen capture");
+        case poAllowDesktopAudioVideoCapture:
+            return QSL("Screen capture with audio");
+        default:
+            qWarning() << "Unknown option" << option;
+            return QSL("Unknown");;
+    }
+}
+
+QString SiteSettingsManager::getOptionName(const QWebEnginePage::Feature& feature)
+{
+    return getOptionName(optionFromWebEngineFeature(feature));
+}

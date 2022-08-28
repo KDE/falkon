@@ -19,6 +19,7 @@
 #define SITEINFO_H
 
 #include "qzcommon.h"
+#include "sitesettingsmanager.h"
 
 #include <QUrl>
 #include <QDialog>
@@ -55,6 +56,8 @@ private Q_SLOTS:
 private:
     void showLoadingText();
     void showPixmap(QPixmap pixmap);
+
+    void addPermissionOption(const SiteSettingsManager::PageOptions option);
 
     Ui::SiteInfo* ui;
     CertificateInfoWidget* m_certWidget;

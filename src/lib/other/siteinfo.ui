@@ -52,6 +52,11 @@
        <string>Media</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Permissions</string>
+      </property>
+     </item>
     </widget>
    </item>
    <item row="2" column="0">
@@ -277,6 +282,20 @@
            </item>
           </layout>
          </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page3">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QListWidget" name="listPermissions">
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="verticalScrollMode">
+          <enum>QAbstractItemView::ScrollPerPixel</enum>
+         </property>
         </widget>
        </item>
       </layout>

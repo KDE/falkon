@@ -109,6 +109,9 @@ public:
 
     QString sqlColumnFromWebEngineFeature(const QWebEnginePage::Feature &feature);
 
+    QString getOptionName(const SiteSettingsManager::PageOptions &option);
+    QString getOptionName(const QWebEnginePage::Feature &feature);
+
 private:
     QString optionToSqlColumn(const PageOptions &option);
     bool getDefaultOptionValue(const PageOptions &option);

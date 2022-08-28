@@ -17,6 +17,7 @@
  * ============================================================ */
 #include "html5permissionsitem.h"
 #include "ui_html5permissionsitem.h"
+#include "mainapplication.h"
 
 
 HTML5PermissionsItem::HTML5PermissionsItem(const QWebEnginePage::Feature& feature, const SiteSettingsManager::Permission& permission, QWidget* parent)
@@ -58,43 +59,7 @@ void HTML5PermissionsItem::permissionIndexChanged()
 
 void HTML5PermissionsItem::setLabel()
 {
-    switch (m_feature) {
-        case QWebEnginePage::Notifications:
-            ui->label->setText("Notifications");
-            break;
-
-        case QWebEnginePage::Geolocation:
-            ui->label->setText("Location");
-            break;
-
-        case QWebEnginePage::MediaAudioCapture:
-            ui->label->setText("Microphone");
-            break;
-
-        case QWebEnginePage::MediaVideoCapture:
-            ui->label->setText("Camera");
-            break;
-
-        case QWebEnginePage::MediaAudioVideoCapture:
-            ui->label->setText("Microphone and Camera");
-            break;
-
-        case QWebEnginePage::MouseLock:
-            ui->label->setText("Hide mouse pointer");
-            break;
-
-        case QWebEnginePage::DesktopVideoCapture:
-            ui->label->setText("Screen capture");
-            break;
-
-        case QWebEnginePage::DesktopAudioVideoCapture:
-            ui->label->setText("Screen capture with audio");
-            break;
-
-        default:
-            qWarning() << "Unknown feature" << m_feature;
-            break;
-    }
+    ui->label->setText(mApp->siteSettingsManager()->getOptionName(m_feature));
 }
 
 void HTML5PermissionsItem::setCombo()

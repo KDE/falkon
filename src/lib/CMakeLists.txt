@@ -149,6 +149,7 @@ set(SRCS ${SRCS}
     other/licenseviewer.cpp
     other/qzsettings.cpp
     other/siteinfo.cpp
+    other/siteinfopermissionitem.cpp
     other/siteinfowidget.cpp
     other/sitesettingsmanager.cpp
     other/statusbar.cpp
@@ -381,6 +382,7 @@ set(SRCS ${SRCS}
     other/licenseviewer.h
     other/qzsettings.h
     other/siteinfo.h
+    other/siteinfopermissionitem.h
     other/siteinfowidget.h
     other/sitesettingsmanager.h
     other/statusbar.h
@@ -547,6 +549,7 @@ qt_wrap_ui(SRCS
     other/iconchooser.ui
     other/protocolhandlerdialog.ui
     other/siteinfo.ui
+    other/siteinfopermissionitem.ui
     other/siteinfowidget.ui
     preferences/acceptlanguage.ui
     preferences/addacceptlanguage.ui
