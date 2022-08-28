@@ -92,7 +92,11 @@ void SiteInfoPermissionItem::setPermission(SiteSettingsManager::Permission permi
             m_ui->radioDefault->setChecked(true);
     }
 
-    m_ui->labelDefaultPermission->setText(mApp->siteSettingsManager()->getPermissionName(mApp->siteSettingsManager()->getDefaultPermission(m_option)));
+    auto defaultPermission = mApp->siteSettingsManager()->getDefaultPermission(m_option);
+    if (defaultPermission == SiteSettingsManager::Default) {
+        defaultPermission = SiteSettingsManager::Ask;
+    }
+    m_ui->labelDefaultPermission->setText(mApp->siteSettingsManager()->getPermissionName(defaultPermission));
 }
 
 SiteSettingsManager::Permission SiteInfoPermissionItem::permission() const
