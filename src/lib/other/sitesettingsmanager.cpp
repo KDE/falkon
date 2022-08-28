@@ -454,7 +454,7 @@ QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permis
         case Allow:
             return QSL("Allow");
         case Ask:
-            return QSL("ASK");
+            return QSL("Ask");
         case Deny:
             return QSL("Deny");
         case Default:
