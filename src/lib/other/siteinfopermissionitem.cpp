@@ -91,6 +91,8 @@ void SiteInfoPermissionItem::setPermission(SiteSettingsManager::Permission permi
             qWarning() << "Unknown permission" << permission;
             m_ui->radioDefault->setChecked(true);
     }
+
+    m_ui->labelDefaultPermission->setText(mApp->siteSettingsManager()->getPermissionName(mApp->siteSettingsManager()->getDefaultPermission(m_option)));
 }
 
 SiteSettingsManager::Permission SiteInfoPermissionItem::permission() const

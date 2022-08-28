@@ -447,3 +447,20 @@ QString SiteSettingsManager::getOptionName(const QWebEnginePage::Feature& featur
 {
     return getOptionName(optionFromWebEngineFeature(feature));
 }
+
+QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permission permission)
+{
+    switch (permission) {
+        case Allow:
+            return QSL("Allow");
+        case Ask:
+            return QSL("ASK");
+        case Deny:
+            return QSL("Deny");
+        case Default:
+            return QSL("Default");
+        default:
+            qWarning() << "Uknown permission" << permission;
+            return QSL("Unknown");
+    }
+}

@@ -112,6 +112,8 @@ public:
     QString getOptionName(const SiteSettingsManager::PageOptions &option);
     QString getOptionName(const QWebEnginePage::Feature &feature);
 
+    QString getPermissionName(const Permission permission);
+
 private:
     QString optionToSqlColumn(const PageOptions &option);
     bool getDefaultOptionValue(const PageOptions &option);
