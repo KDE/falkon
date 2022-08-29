@@ -52,6 +52,7 @@ private Q_SLOTS:
     void tagsCustomContextMenuRequested(const QPoint &p);
     void copySelectedItems(const QTreeWidget* treeWidget, const bool both);
     void saveImage();
+    void saveSiteSettings();
 
 private:
     void showLoadingText();

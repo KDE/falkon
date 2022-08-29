@@ -141,6 +141,7 @@ SiteInfo::SiteInfo(WebView *view)
     connect(ui->treeImages, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), this, SLOT(showImagePreview(QTreeWidgetItem*)));
     connect(ui->treeImages, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(imagesCustomContextMenuRequested(QPoint)));
     connect(ui->treeTags, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(tagsCustomContextMenuRequested(QPoint)));
+    connect(this, &QDialog::accepted, this, &SiteInfo::saveSiteSettings);
 
     auto *shortcutTagsCopyAll = new QShortcut(QKeySequence(QSL("Ctrl+C")), ui->treeTags);
     shortcutTagsCopyAll->setContext(Qt::WidgetShortcut);
@@ -340,7 +341,7 @@ SiteInfo::~SiteInfo()
 
 void SiteInfo::addPermissionOption(const SiteSettingsManager::PageOptions option)
 {
-    auto perm = mApp->siteSettingsManager()->getPermission(SiteSettingsManager::poAllowJavascript, m_baseUrl);
+    auto perm = mApp->siteSettingsManager()->getPermission(option, m_baseUrl);
     auto* listItem = new QListWidgetItem(ui->listPermissions);
     auto* optionItem = new SiteInfoPermissionItem(option, perm, this);
 
@@ -356,4 +357,14 @@ void SiteInfo::addPermissionOption(const SiteSettingsManager::PageOptions option
 
     ui->listPermissions->setItemWidget(listItem, optionItem);
     listItem->setSizeHint(optionItem->sizeHint());
+}
+
+void SiteInfo::saveSiteSettings()
+{
+    // Save permissions
+    // This is a nutjob to do it this way, totaly inefficient and stupid, hope it will work at first.
+    for (int i = 0; i < ui->listPermissions->count(); ++i) {
+        auto* item = static_cast<SiteInfoPermissionItem*>(ui->listPermissions->itemWidget(ui->listPermissions->item(i)));
+        mApp->siteSettingsManager()->setOption(item->option(), m_baseUrl, item->permission());
+    }
 }
