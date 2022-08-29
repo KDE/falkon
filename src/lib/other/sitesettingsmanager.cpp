@@ -182,40 +182,28 @@ QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOp
     switch (option) {
         case poAllowJavascript:
             return QSL("allow_javascript");
-
         case poAllowImages:
             return QSL("allow_images");
-
         case poAllowCookies:
             return QSL("allow_cookies");
-
         case poZoomLevel:
             return QSL("zoom_level");
-
         case poAllowNotifications:
             return QSL("allow_notifications");
-
         case poAllowGeolocation:
             return QSL("allow_geolocation");
-
         case poAllowMediaAudioCapture:
             return QSL("allow_media_audio_capture");
-
         case poAllowMediaVideoCapture:
             return QSL("allow_media_video_capture");
-
         case poAllowMediaAudioVideoCapture:
             return QSL("allow_media_audio_video_capture");
-
         case poAllowMouseLock:
             return QSL("allow_mouse_lock");
-
         case poAllowDesktopVideoCapture:
             return QSL("allow_desktop_video_capture");
-
         case poAllowDesktopAudioVideoCapture:
             return QSL("allow_desktop_audio_video_capture");
-
         default:
             qWarning() << "Unknown option" << option;
             return QLatin1String("");
@@ -227,31 +215,22 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
     switch (option) {
         case poAllowJavascript:
             return testAttribute(QWebEngineSettings::JavascriptEnabled);
-
         case poAllowImages:
             return testAttribute(QWebEngineSettings::AutoLoadImages);
-
         case poAllowNotifications:
             return m_defaults[poAllowNotifications];
-
         case poAllowGeolocation:
             return m_defaults[poAllowGeolocation];
-
         case poAllowMediaAudioCapture:
             return m_defaults[poAllowMediaAudioCapture];
-
         case poAllowMediaVideoCapture:
             return m_defaults[poAllowMediaVideoCapture];
-
         case poAllowMediaAudioVideoCapture:
             return m_defaults[poAllowMediaAudioVideoCapture];
-
         case poAllowMouseLock:
             return m_defaults[poAllowMouseLock];
-
         case poAllowDesktopVideoCapture:
             return m_defaults[poAllowDesktopVideoCapture];
-
         case poAllowDesktopAudioVideoCapture:
             return m_defaults[poAllowDesktopAudioVideoCapture];
 
@@ -331,17 +310,13 @@ bool SiteSettingsManager::getDefaultOptionValue(const SiteSettingsManager::PageO
     switch (option) {
         case poAllowJavascript:
             return mApp->webSettings()->testAttribute(QWebEngineSettings::JavascriptEnabled);
-
         case poAllowImages:
             return mApp->webSettings()->testAttribute(QWebEngineSettings::AutoLoadImages);
-
         /* At the moment, no idea */
         case poAllowCookies:
             return false;
-
         case poZoomLevel:
             return false;
-
         default:
             qWarning() << "Unknown option" << option;
             return false;
@@ -353,28 +328,20 @@ SiteSettingsManager::PageOptions SiteSettingsManager::optionFromWebEngineFeature
     switch (feature) {
         case QWebEnginePage::Notifications:
             return poAllowNotifications;
-
         case QWebEnginePage::Geolocation:
             return poAllowGeolocation;
-
         case QWebEnginePage::MediaAudioCapture:
             return poAllowMediaAudioCapture;
-
         case QWebEnginePage::MediaVideoCapture:
             return poAllowMediaVideoCapture;
-
         case QWebEnginePage::MediaAudioVideoCapture:
             return poAllowMediaAudioVideoCapture;
-
         case QWebEnginePage::MouseLock:
             return poAllowMouseLock;
-
         case QWebEnginePage::DesktopVideoCapture:
             return poAllowDesktopVideoCapture;
-
         case QWebEnginePage::DesktopAudioVideoCapture:
             return poAllowDesktopAudioVideoCapture;
-
         default:
             qWarning() << "Unknown feature" << feature;
             return poAllowNotifications;
