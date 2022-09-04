@@ -1,3 +1,12 @@
+Version 22.08
+    * SiteInfo window allows multiselection of items for easier copying (by Juraj Oravec) (BUG: 451284)
+    * Show the actual QtWebEngine version in about dialog (Antonio Rojas)
+    * Various code improvements (mostly by Laurent Montel)
+
+Version 22.04
+    * Various improvements for AdBlock (by Allan Sandfeld Jensen)
+    * Enable WebRTC screen capturer in WebEngine / Screen sharing on Wayland (by Antonio Rojas) (BUG: 450839)
+
 Version 3.2.0
     * Add support for Screen Capture (Qt 5.13.2+)
     * Option for internal PDFium-based viewer (Qt 5.13+)
