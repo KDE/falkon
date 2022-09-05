@@ -305,24 +305,6 @@ void SiteSettingsManager::setDefaultPermission(const QWebEnginePage::Feature& fe
     setDefaultPermission(option, value);
 }
 
-bool SiteSettingsManager::getDefaultOptionValue(const SiteSettingsManager::PageOptions& option)
-{
-    switch (option) {
-        case poAllowJavascript:
-            return mApp->webSettings()->testAttribute(QWebEngineSettings::JavascriptEnabled);
-        case poAllowImages:
-            return mApp->webSettings()->testAttribute(QWebEngineSettings::AutoLoadImages);
-        /* At the moment, no idea */
-        case poAllowCookies:
-            return false;
-        case poZoomLevel:
-            return false;
-        default:
-            qWarning() << "Unknown option" << option;
-            return false;
-    }
-}
-
 SiteSettingsManager::PageOptions SiteSettingsManager::optionFromWebEngineFeature(const QWebEnginePage::Feature& feature) const
 {
     switch (feature) {

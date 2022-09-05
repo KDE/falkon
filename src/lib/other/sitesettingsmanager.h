@@ -116,7 +116,6 @@ public:
 
 private:
     QString optionToSqlColumn(const PageOptions &option);
-    bool getDefaultOptionValue(const PageOptions &option);
     PageOptions optionFromWebEngineFeature(const QWebEnginePage::Feature &feature) const;
     Permission testAttribute(const QWebEngineSettings::WebAttribute attribute) const;
     Permission intToPermission(const int permission) const;
