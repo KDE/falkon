@@ -111,6 +111,53 @@ SiteWebEngineSettings SiteSettingsManager::getWebEngineSettings(const QUrl& url)
     return settings;
 }
 
+QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttributes(const QUrl& url)
+{
+    QHash<QWebEngineSettings::WebAttribute, bool> attribute;
+
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.prepare(QSL("SELECT allow_images, allow_javascript FROM site_settings WHERE server=?"));
+    query.addBindValue(url.host());
+    query.exec();
+
+    // Fill the default values
+    // Might not be required
+    // TODO I hope the defaults are set with default webengine profile settings, needs testing
+    attribute[QWebEngineSettings::AutoLoadImages] = getDefaultPermission(poAllowImages) == Allow;
+    attribute[QWebEngineSettings::JavascriptEnabled] = getDefaultPermission(poAllowJavascript) == Allow;
+
+    if (query.next()) {
+        Permission perm;
+
+        auto paerToBool = [&perm, &attribute]() {
+            if (perm == Allow) {
+                attribute[QWebEngineSettings::AutoLoadImages] = true;
+            }
+            else if (perm == Deny) {
+                attribute[QWebEngineSettings::AutoLoadImages] = false;
+            }
+        };
+
+        perm = intToPermission(query.value(QSL("allow_images")).toInt());
+        if (perm == Allow) {
+            attribute[QWebEngineSettings::AutoLoadImages] = true;
+        }
+        else if (perm == Deny) {
+            attribute[QWebEngineSettings::AutoLoadImages] = false;
+        }
+
+        perm = intToPermission(query.value(QSL("allow_javascript")).toInt());
+        if (perm == Allow) {
+            attribute[QWebEngineSettings::JavascriptEnabled] = true;
+        }
+        else if (perm == Deny) {
+            attribute[QWebEngineSettings::JavascriptEnabled] = false;
+        }
+    }
+
+    return attribute;
+}
+
 void SiteSettingsManager::setJavascript(const QUrl& url, const int value)
 {
     setOption(poAllowJavascript, url, value);

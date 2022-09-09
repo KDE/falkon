@@ -46,8 +46,23 @@ public:
     Q_ENUM(Permission);
 
     enum PageOptions {
-        poAllowJavascript,
         poAllowImages,
+
+        /* Javascript stuff */
+        poAllowJavascript,
+        poJavascriptCanOpenWindows,
+        poJavascriptCanAccessClipboard,
+        poJavascriptCanPaste,
+        poAllowWindowActivationFromJavaScript,
+
+        poLocalStorageEnabled,
+        poScrollAnimatorEnabled,
+        poFullScreenSupportEnabled,
+        poAllowRunningInsecureContent,
+        poAllowGeolocationOnInsecureOrigins,
+        poPlaybackRequiresUserGesture,
+        poWebRTCPublicInterfacesOnly,
+
         poAllowCookies,
         poZoomLevel,
         poAllowNotifications,
@@ -66,7 +81,7 @@ public:
         Permission AllowJavascript;
         Permission AllowImages;
         Permission AllowCookies;
-        Permission ZoomLevel;
+        int ZoomLevel;
         Permission AllowNotifications;
         Permission AllowGeolocation;
         Permission AllowMediaAudioCapture;
@@ -91,6 +106,8 @@ public:
      * @param url Address for which to fetch the settings
      */
     SiteWebEngineSettings getWebEngineSettings(const QUrl &url);
+
+    QHash<QWebEngineSettings::WebAttribute, bool> getWebAttributes(const QUrl &url);
 
     void setJavascript(const QUrl &url, const int value);
     void setImages(const QUrl &url, const int value);
