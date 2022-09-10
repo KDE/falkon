@@ -156,6 +156,7 @@ void WebSearchBar::enableSearchSuggestions(bool enable)
 
     qzSettings->showWSBSearchSuggestions = enable;
     m_completerModel->setStringList(QStringList());
+    updateOpenSearchEngine();
 }
 
 void WebSearchBar::setupEngines()
@@ -200,8 +201,7 @@ void WebSearchBar::searchChanged(const ButtonWithMenu::Item &item)
 
     m_activeEngine = item.userData.value<SearchEngine>();
 
-    m_openSearchEngine->setSuggestionsUrl(m_activeEngine.suggestionsUrl);
-    m_openSearchEngine->setSuggestionsParameters(m_activeEngine.suggestionsParameters);
+    updateOpenSearchEngine();
 
     m_searchManager->setActiveEngine(m_activeEngine);
 
@@ -333,4 +333,15 @@ void WebSearchBar::keyPressEvent(QKeyEvent* event)
     }
 
     LineEdit::keyPressEvent(event);
+}
+
+void WebSearchBar::updateOpenSearchEngine()
+{
+    if (qzSettings->showWSBSearchSuggestions) {
+        m_openSearchEngine->setSuggestionsUrl(m_activeEngine.suggestionsUrl);
+        m_openSearchEngine->setSuggestionsParameters(m_activeEngine.suggestionsParameters);
+    }
+    else {
+        m_openSearchEngine->setSuggestionsUrl(QL1S(""));
+    }
 }
