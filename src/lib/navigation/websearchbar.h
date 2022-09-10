@@ -75,6 +75,8 @@ private:
 
     void contextMenuEvent(QContextMenuEvent* event) override;
 
+    void updateOpenSearchEngine();
+
     QCompleter* m_completer;
     QStringListModel* m_completerModel;
 
