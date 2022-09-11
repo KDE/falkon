@@ -39,12 +39,29 @@ void SiteSettingsManager::loadSettings()
 //    m_isSaving = settings.value("allowPerDomainZoom", true).toBool();
 //    settings.endGroup();
 
+    // TODO Maybe change to Default HTML5 Permissions
     settings.beginGroup("Site-Settings");
 /* These are handled by already existing parts of Falkon */
-//     m_defaults[poAllowJavascript]               = settings.value("allowJavascript", Default).toInt();
-//     m_defaults[poAllowImages]                   = settings.value("allowImages", Default).toInt();
 //     m_defaults[poAllowCookies]                  = settings.value("allowCookies", Default).toInt();
 //     m_defaults[poZoomLevel]                     = settings.value("defaultZoomLevel", Default).toInt(); // fail
+//
+//     m_defaults[poAutoloadImages]                         = intToPermission(settings.value("AllowImages",                         Ask).toInt());
+//
+//     m_defaults[poJavascriptEnabled]                   = intToPermission(settings.value("JavascriptEnabled",                   Ask).toInt());
+//     m_defaults[poJavascriptCanOpenWindows]            = intToPermission(settings.value("JavascriptCanOpenWindows",            Ask).toInt());
+//     m_defaults[poJavascriptCanAccessClipboard]        = intToPermission(settings.value("JavascriptCanAccessClipboard",        Ask).toInt());
+//     m_defaults[poJavascriptCanPaste]                  = intToPermission(settings.value("JavascriptCanPaste",                  Ask).toInt());
+//     m_defaults[poAllowWindowActivationFromJavaScript] = intToPermission(settings.value("AllowWindowActivationFromJavaScript", Ask).toInt());
+//
+//     m_defaults[poLocalStorageEnabled]                 = intToPermission(settings.value("LocalStorageEnabled",                 Ask).toInt());
+//     m_defaults[poScrollAnimatorEnabled]               = intToPermission(settings.value("ScrollAnimatorEnabled",               Ask).toInt());
+//     m_defaults[poFullScreenSupportEnabled]            = intToPermission(settings.value("FullScreenSupportEnabled",            Ask).toInt());
+//     m_defaults[poAllowRunningInsecureContent]         = intToPermission(settings.value("AllowRunningInsecureContent",         Ask).toInt());
+//     m_defaults[poAllowGeolocationOnInsecureOrigins]   = intToPermission(settings.value("AllowGeolocationOnInsecureOrigins",   Ask).toInt());
+//     m_defaults[poPlaybackRequiresUserGesture]         = intToPermission(settings.value("PlaybackRequiresUserGesture",         Ask).toInt());
+//     m_defaults[poWebRTCPublicInterfacesOnly]          = intToPermission(settings.value("WebRTCPublicInterfacesOnly",          Ask).toInt());
+
+
     m_defaults[poAllowNotifications]            = intToPermission(settings.value("allowNotifications",              Ask).toInt());
     m_defaults[poAllowGeolocation]              = intToPermission(settings.value("allowGealocation",                Ask).toInt());
     m_defaults[poAllowMediaAudioCapture]        = intToPermission(settings.value("allowMicrophone",                 Ask).toInt());
@@ -61,8 +78,8 @@ void SiteSettingsManager::saveSettings()
     Settings settings;
     settings.beginGroup("Site-Settings");
 /* These are handled by already existing parts of Falkon */
-//     settings.setValue("allowJavascript", m_defaults[poAllowJavascript]);
-//     settings.setValue("allowIbutmages", m_defaults[poAllowImages]);
+//     settings.setValue("allowJavascript", m_defaults[poJavascriptEnabled]);
+//     settings.setValue("allowIbutmages", m_defaults[poAutoloadImages]);
 //     settings.setValue("allowCookies", m_defaults[poAllowCookies]);
 //     settings.setValue("defaultZoomLevel", m_defaults[poZoomLevel]);
     settings.setValue("allowNotifications",             m_defaults[poAllowNotifications]);
@@ -113,59 +130,40 @@ SiteWebEngineSettings SiteSettingsManager::getWebEngineSettings(const QUrl& url)
 
 QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttributes(const QUrl& url)
 {
-    QHash<QWebEngineSettings::WebAttribute, bool> attribute;
+    QHash<QWebEngineSettings::WebAttribute, bool> attributes;
 
     QSqlQuery query(SqlDatabase::instance()->database());
     query.prepare(QSL("SELECT allow_images, allow_javascript FROM site_settings WHERE server=?"));
     query.addBindValue(url.host());
     query.exec();
 
-    // Fill the default values
-    // Might not be required
-    // TODO I hope the defaults are set with default webengine profile settings, needs testing
-    attribute[QWebEngineSettings::AutoLoadImages] = getDefaultPermission(poAllowImages) == Allow;
-    attribute[QWebEngineSettings::JavascriptEnabled] = getDefaultPermission(poAllowJavascript) == Allow;
-
     if (query.next()) {
-        Permission perm;
-
-        auto paerToBool = [&perm, &attribute]() {
+        auto permToBool = [&attributes](Permission perm, QWebEngineSettings::WebAttribute attribute) {
             if (perm == Allow) {
-                attribute[QWebEngineSettings::AutoLoadImages] = true;
+                attributes[attribute] = true;
             }
             else if (perm == Deny) {
-                attribute[QWebEngineSettings::AutoLoadImages] = false;
+                attributes[attribute] = false;
             }
         };
 
-        perm = intToPermission(query.value(QSL("allow_images")).toInt());
-        if (perm == Allow) {
-            attribute[QWebEngineSettings::AutoLoadImages] = true;
-        }
-        else if (perm == Deny) {
-            attribute[QWebEngineSettings::AutoLoadImages] = false;
-        }
-
-        perm = intToPermission(query.value(QSL("allow_javascript")).toInt());
-        if (perm == Allow) {
-            attribute[QWebEngineSettings::JavascriptEnabled] = true;
-        }
-        else if (perm == Deny) {
-            attribute[QWebEngineSettings::JavascriptEnabled] = false;
+        for (int i = 0; i < query.record().count(); ++i) {
+            SiteSettingsManager::PageOptions option = static_cast<SiteSettingsManager::PageOptions>(i);
+            permToBool(intToPermission(query.value(i).toInt()), optionToAttribute(option));
         }
     }
 
-    return attribute;
+    return attributes;
 }
 
 void SiteSettingsManager::setJavascript(const QUrl& url, const int value)
 {
-    setOption(poAllowJavascript, url, value);
+    setOption(poJavascriptEnabled, url, value);
 }
 
 void SiteSettingsManager::setImages(const QUrl& url, const int value)
 {
-    setOption(poAllowImages, url, value);
+    setOption(poAutoloadImages, url, value);
 }
 
 void SiteSettingsManager::setOption(const PageOptions option, const QUrl& url, const int value)
@@ -227,9 +225,9 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEng
 QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOptions &option)
 {
     switch (option) {
-        case poAllowJavascript:
+        case poJavascriptEnabled:
             return QSL("allow_javascript");
-        case poAllowImages:
+        case poAutoloadImages:
             return QSL("allow_images");
         case poAllowCookies:
             return QSL("allow_cookies");
@@ -260,9 +258,9 @@ QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOp
 SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const SiteSettingsManager::PageOptions& option)
 {
     switch (option) {
-        case poAllowJavascript:
+        case poJavascriptEnabled:
             return testAttribute(QWebEngineSettings::JavascriptEnabled);
-        case poAllowImages:
+        case poAutoloadImages:
             return testAttribute(QWebEngineSettings::AutoLoadImages);
         case poAllowNotifications:
             return m_defaults[poAllowNotifications];
@@ -312,8 +310,8 @@ void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOp
 
         case poZoomLevel:
         case poAllowCookies:
-        case poAllowJavascript:
-        case poAllowImages:
+        case poJavascriptEnabled:
+        case poAutoloadImages:
         default:
             qWarning() << "Unknown option" << option;
             break;
@@ -325,8 +323,8 @@ void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOp
     switch (option) {
         case poZoomLevel:
         case poAllowCookies:
-        case poAllowJavascript:
-        case poAllowImages:
+        case poJavascriptEnabled:
+        case poAutoloadImages:
             qWarning() << "So far not implemented" << option;
             break;
 
@@ -409,9 +407,9 @@ SiteSettingsManager::Permission SiteSettingsManager::intToPermission(const int p
 QString SiteSettingsManager::getOptionName(const SiteSettingsManager::PageOptions& option)
 {
     switch (option) {
-        case poAllowJavascript:
+        case poJavascriptEnabled:
             return QSL("JavaScript");
-        case poAllowImages:
+        case poAutoloadImages:
             return QSL("Autoload Images");
         case poZoomLevel:
             return QSL("Zoom level");
@@ -458,5 +456,41 @@ QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permis
         default:
             qWarning() << "Uknown permission" << permission;
             return QSL("Unknown");
+    }
+}
+
+QWebEngineSettings::WebAttribute SiteSettingsManager::optionToAttribute(const SiteSettingsManager::PageOptions& option) const
+{
+    switch (option) {
+        case poAutoloadImages:
+            return QWebEngineSettings::AutoLoadImages;
+
+        case poJavascriptEnabled:
+            return QWebEngineSettings::JavascriptEnabled;
+        case poJavascriptCanOpenWindows:
+            return QWebEngineSettings::JavascriptCanOpenWindows;
+        case poJavascriptCanAccessClipboard:
+            return QWebEngineSettings::JavascriptCanAccessClipboard;
+        case poJavascriptCanPaste:
+            return QWebEngineSettings::JavascriptCanPaste;
+        case poAllowWindowActivationFromJavaScript:
+            return QWebEngineSettings::AllowWindowActivationFromJavaScript;
+
+        case poLocalStorageEnabled:
+            return QWebEngineSettings::LocalStorageEnabled;
+        case poScrollAnimatorEnabled:
+            return QWebEngineSettings::ScrollAnimatorEnabled;
+        case poFullScreenSupportEnabled:
+            return QWebEngineSettings::FullScreenSupportEnabled;
+        case poAllowRunningInsecureContent:
+            return QWebEngineSettings::AllowRunningInsecureContent;
+        case poAllowGeolocationOnInsecureOrigins:
+            return QWebEngineSettings::AllowGeolocationOnInsecureOrigins;
+        case poPlaybackRequiresUserGesture:
+            return QWebEngineSettings::PlaybackRequiresUserGesture;
+        case poWebRTCPublicInterfacesOnly:
+            return QWebEngineSettings::WebRTCPublicInterfacesOnly;
+        default:
+            return QWebEngineSettings::JavascriptEnabled;
     }
 }

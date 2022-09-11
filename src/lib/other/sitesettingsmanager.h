@@ -45,11 +45,12 @@ public:
     };
     Q_ENUM(Permission);
 
+    /* Keep the attributes at the top */
     enum PageOptions {
-        poAllowImages,
+        poAutoloadImages,
 
         /* Javascript stuff */
-        poAllowJavascript,
+        poJavascriptEnabled,
         poJavascriptCanOpenWindows,
         poJavascriptCanAccessClipboard,
         poJavascriptCanPaste,
@@ -65,6 +66,7 @@ public:
 
         poAllowCookies,
         poZoomLevel,
+
         poAllowNotifications,
         poAllowGeolocation,
         poAllowMediaAudioCapture,
@@ -78,18 +80,10 @@ public:
 
     struct SiteSettings
     {
-        Permission AllowJavascript;
-        Permission AllowImages;
         Permission AllowCookies;
         int ZoomLevel;
-        Permission AllowNotifications;
-        Permission AllowGeolocation;
-        Permission AllowMediaAudioCapture;
-        Permission AllowMediaVideoCapture;
-        Permission AllowMediaAudioVideoCapture;
-        Permission AllowMouseLock;
-        Permission AllowDesktopVideoCapture;
-        Permission AllowDesktopAudioVideoCapture;
+        QHash<QWebEngineSettings::WebAttribute, Permission> attributes; /* Enable disable soem feature eg. Javascript, Images etc */
+        QHash<QWebEnginePage::Feature, Permission> features; /* HTML permissions */
         QString server;
     };
 
@@ -136,6 +130,7 @@ private:
     PageOptions optionFromWebEngineFeature(const QWebEnginePage::Feature &feature) const;
     Permission testAttribute(const QWebEngineSettings::WebAttribute attribute) const;
     Permission intToPermission(const int permission) const;
+    QWebEngineSettings::WebAttribute optionToAttribute(const PageOptions &option) const;
 
     QMap<PageOptions, Permission> m_defaults;
 };

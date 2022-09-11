@@ -125,8 +125,8 @@ SiteInfo::SiteInfo(WebView *view)
     });
 
     // Permissions
-    addPermissionOption(SiteSettingsManager::poAllowJavascript);
-    addPermissionOption(SiteSettingsManager::poAllowImages);
+    addPermissionOption(SiteSettingsManager::poJavascriptEnabled);
+    addPermissionOption(SiteSettingsManager::poAutoloadImages);
     addPermissionOption(SiteSettingsManager::poAllowNotifications);
     addPermissionOption(SiteSettingsManager::poAllowGeolocation);
     addPermissionOption(SiteSettingsManager::poAllowMediaAudioCapture);
@@ -346,8 +346,8 @@ void SiteInfo::addPermissionOption(const SiteSettingsManager::PageOptions option
     auto* optionItem = new SiteInfoPermissionItem(option, perm, this);
 
     switch (option) {
-        case SiteSettingsManager::poAllowJavascript:
-        case SiteSettingsManager::poAllowImages:
+        case SiteSettingsManager::poJavascriptEnabled:
+        case SiteSettingsManager::poAutoloadImages:
         case SiteSettingsManager::poAllowCookies:
             optionItem->setHasOptionAsk(false);
             break;
