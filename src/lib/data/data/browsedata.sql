@@ -58,10 +58,24 @@ CREATE UNIQUE INDEX icons_urluniqueindex ON icons (url);
 CREATE TABLE site_settings (
     id INTEGER PRIMARY KEY,
     server TEXT NOT NULL,
+
     zoom_level INTEGER DEFAULT 0,
     allow_cookies INTEGER DEFAULT 0,
-    allow_images INTEGER DEFAULT 0,
-    allow_javascript INTEGER DEFAULT 0,
+
+    wa_autoload_images INTEGER DEFAULT 0,
+    wa_js_enabled INTEGER DEFAULT 0,
+    wa_js_open_windows INTEGER DEFAULT 0,
+    wa_js_access_clipboard INTEGER DEFAULT 0,
+    wa_js_can_paste INTEGER DEFAULT 0,
+    wa_js_window_activation INTEGER DEFAULT 0,
+    wa_local_storage INTEGER DEFAULT 0,
+    wa_acroll_animator INTEGER DEFAULT 0,
+    wa_fullscreen_support INTEGER DEFAULT 0,
+    wa_run_insecure_content INTEGER DEFAULT 0,
+    wa_insecure_geolocation INTEGER DEFAULT 0,
+    wa_playback_needs_gesture INTEGER DEFAULT 0,
+    wa_webrtc_public_interface_only INTEGER DEFAULT 0,
+
     allow_notifications INTEGER DEFAULT 0,
     allow_geolocation INTEGER DEFAULT 0,
     allow_media_audio_capture INTEGER DEFAULT 0,

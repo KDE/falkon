@@ -29,17 +29,17 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
 
     supportedAttribute.append(QWebEngineSettings::AutoLoadImages);
     supportedAttribute.append(QWebEngineSettings::JavascriptEnabled);
-//     supportedAttribute.append(QWebEngineSettings::JavascriptCanOpenWindows);
-//     supportedAttribute.append(QWebEngineSettings::JavascriptCanAccessClipboard);
-//     supportedAttribute.append(QWebEngineSettings::JavascriptCanPaste);
-//     supportedAttribute.append(QWebEngineSettings::AllowWindowActivationFromJavaScript);
-//     supportedAttribute.append(QWebEngineSettings::LocalStorageEnabled);
-//     supportedAttribute.append(QWebEngineSettings::ScrollAnimatorEnabled);
-//     supportedAttribute.append(QWebEngineSettings::FullScreenSupportEnabled);
-//     supportedAttribute.append(QWebEngineSettings::AllowRunningInsecureContent);
-//     supportedAttribute.append(QWebEngineSettings::AllowGeolocationOnInsecureOrigins);
-//     supportedAttribute.append(QWebEngineSettings::PlaybackRequiresUserGesture);
-//     supportedAttribute.append(QWebEngineSettings::WebRTCPublicInterfacesOnly);
+    supportedAttribute.append(QWebEngineSettings::JavascriptCanOpenWindows);
+    supportedAttribute.append(QWebEngineSettings::JavascriptCanAccessClipboard);
+    supportedAttribute.append(QWebEngineSettings::JavascriptCanPaste);
+    supportedAttribute.append(QWebEngineSettings::AllowWindowActivationFromJavaScript);
+    supportedAttribute.append(QWebEngineSettings::LocalStorageEnabled);
+    supportedAttribute.append(QWebEngineSettings::ScrollAnimatorEnabled);
+    supportedAttribute.append(QWebEngineSettings::FullScreenSupportEnabled);
+    supportedAttribute.append(QWebEngineSettings::AllowRunningInsecureContent);
+    supportedAttribute.append(QWebEngineSettings::AllowGeolocationOnInsecureOrigins);
+    supportedAttribute.append(QWebEngineSettings::PlaybackRequiresUserGesture);
+    supportedAttribute.append(QWebEngineSettings::WebRTCPublicInterfacesOnly);
 
 
     attributesSql = QSL("SELECT ");
@@ -218,9 +218,9 @@ QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOp
 {
     switch (option) {
         case poJavascriptEnabled:
-            return QSL("allow_javascript");
+            return QSL("wa_js_enabled");
         case poAutoloadImages:
-            return QSL("allow_images");
+            return QSL("wa_autoload_images");
         case poAllowCookies:
             return QSL("allow_cookies");
         case poZoomLevel:
@@ -491,12 +491,10 @@ QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::W
 {
     switch (attribute) {
         case QWebEngineSettings::AutoLoadImages:
-            return QSL("allow_images");
-//             return QSL("wa_autoload_images");
+            return QSL("wa_autoload_images");
 
         case QWebEngineSettings::JavascriptEnabled:
-            return QSL("allow_javascript");
-//             return QSL("wa_js_enabled");
+            return QSL("wa_js_enabled");
         case QWebEngineSettings::JavascriptCanOpenWindows:
             return QSL("wa_js_open_windows");
         case QWebEngineSettings::JavascriptCanAccessClipboard:
