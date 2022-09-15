@@ -174,6 +174,9 @@ QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttribu
             else if (perm == Deny) {
                 attributes[attribute] = false;
             }
+            else {
+                attributes[attribute] = mApp->webSettings()->testAttribute(attribute);
+            }
         }
     }
 
