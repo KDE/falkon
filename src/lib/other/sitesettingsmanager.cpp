@@ -119,42 +119,7 @@ void SiteSettingsManager::saveSettings()
     settings.endGroup();
 }
 
-SiteWebEngineSettings SiteSettingsManager::getWebEngineSettings(const QUrl& url)
-{
-    SiteWebEngineSettings settings;
-
-    QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare(QSL("SELECT allow_images, allow_javascript FROM site_settings WHERE server=?"));
-    query.addBindValue(url.host());
-    query.exec();
-
-    if (query.next()) {
-        int allow_images = query.value(QSL("allow_images")).toInt();
-        int allow_javascript = query.value(QSL("allow_javascript")).toInt();
-
-        if (allow_images == 0) {
-            settings.allowImages = mApp->webSettings()->testAttribute(QWebEngineSettings::AutoLoadImages);
-        }
-        else {
-            settings.allowImages = (allow_images == 1);
-        }
-
-        if (allow_javascript == 0) {
-            settings.allowJavaScript = mApp->webSettings()->testAttribute(QWebEngineSettings::JavascriptEnabled);
-        }
-        else {
-            settings.allowJavaScript = (allow_javascript == 1);
-        }
-    }
-    else {
-        settings.allowImages = mApp->webSettings()->testAttribute(QWebEngineSettings::AutoLoadImages);
-        settings.allowJavaScript = mApp->webSettings()->testAttribute(QWebEngineSettings::JavascriptEnabled);
-    }
-
-    return settings;
-}
-
-QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttributes2(const QUrl& url)
+QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttributes(const QUrl& url)
 {
     QHash<QWebEngineSettings::WebAttribute, bool> attributes;
 
@@ -177,34 +142,6 @@ QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttribu
             else {
                 attributes[attribute] = mApp->webSettings()->testAttribute(attribute);
             }
-        }
-    }
-
-    return attributes;
-}
-
-QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttributes(const QUrl& url)
-{
-    QHash<QWebEngineSettings::WebAttribute, bool> attributes;
-
-    QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare(QSL("SELECT allow_images, allow_javascript FROM site_settings WHERE server=?"));
-    query.addBindValue(url.host());
-    query.exec();
-
-    if (query.next()) {
-        auto permToBool = [&attributes](Permission perm, QWebEngineSettings::WebAttribute attribute) {
-            if (perm == Allow) {
-                attributes[attribute] = true;
-            }
-            else if (perm == Deny) {
-                attributes[attribute] = false;
-            }
-        };
-
-        for (int i = 0; i < query.record().count(); ++i) {
-            SiteSettingsManager::PageOptions option = static_cast<SiteSettingsManager::PageOptions>(i);
-            permToBool(intToPermission(query.value(i).toInt()), optionToAttribute(option));
         }
     }
 

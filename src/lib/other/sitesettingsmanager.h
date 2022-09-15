@@ -93,15 +93,6 @@ public:
     void loadSettings();
     void saveSettings();
 
-    /**
-     * @brief Get settings which should be applied to webpage before loading.
-     *        Since this is using blocking database querry group all settings
-     *        in one SQL call for faster laoding.
-     * @param url Address for which to fetch the settings
-     */
-    SiteWebEngineSettings getWebEngineSettings(const QUrl &url);
-
-    QHash<QWebEngineSettings::WebAttribute, bool> getWebAttributes2(const QUrl &url);
     QHash<QWebEngineSettings::WebAttribute, bool> getWebAttributes(const QUrl &url);
 
     void setJavascript(const QUrl &url, const int value);

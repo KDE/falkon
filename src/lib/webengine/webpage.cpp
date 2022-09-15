@@ -454,7 +454,7 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
             const bool isWeb = url.scheme() == QL1S("http") || url.scheme() == QL1S("https") || url.scheme() == QL1S("file");
 
             if (isWeb) {
-                auto webAttributes = mApp->siteSettingsManager()->getWebAttributes2(url);
+                auto webAttributes = mApp->siteSettingsManager()->getWebAttributes(url);
                 if (!webAttributes.empty()) {
                     QHash<QWebEngineSettings::WebAttribute, bool>::iterator it;
                     for (it = webAttributes.begin(); it != webAttributes.end(); ++it) {
@@ -462,12 +462,21 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
                     }
                 }
             }
-
-
-
-//             const SiteWebEngineSettings siteSettings = mApp->siteSettingsManager()->getWebEngineSettings(url);
-//             settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, isWeb ? siteSettings.allowJavaScript : true);
-//             settings()->setAttribute(QWebEngineSettings::AutoLoadImages, isWeb ? siteSettings.allowImages : true);
+            else {
+                settings()->setAttribute(QWebEngineSettings::AutoLoadImages, true);
+                settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
+                settings()->setAttribute(QWebEngineSettings::JavascriptCanOpenWindows, false);
+                settings()->setAttribute(QWebEngineSettings::JavascriptCanAccessClipboard, true);
+                settings()->setAttribute(QWebEngineSettings::JavascriptCanPaste, false);
+                settings()->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, false);
+                settings()->setAttribute(QWebEngineSettings::LocalStorageEnabled, true);
+                settings()->setAttribute(QWebEngineSettings::ScrollAnimatorEnabled, mApp->webSettings()->testAttribute(QWebEngineSettings::ScrollAnimatorEnabled));
+                settings()->setAttribute(QWebEngineSettings::FullScreenSupportEnabled, mApp->webSettings()->testAttribute(QWebEngineSettings::FullScreenSupportEnabled));
+                settings()->setAttribute(QWebEngineSettings::AllowRunningInsecureContent, false);
+                settings()->setAttribute(QWebEngineSettings::AllowGeolocationOnInsecureOrigins, false);
+                settings()->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, mApp->webSettings()->testAttribute(QWebEngineSettings::PlaybackRequiresUserGesture));
+                settings()->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, false);
+            }
         }
         Q_EMIT navigationRequestAccepted(url, type, isMainFrame);
     }
