@@ -27,6 +27,7 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
 {
     loadSettings();
 
+
     supportedAttribute.append(QWebEngineSettings::AutoLoadImages);
     supportedAttribute.append(QWebEngineSettings::JavascriptEnabled);
     supportedAttribute.append(QWebEngineSettings::JavascriptCanOpenWindows);
@@ -41,7 +42,6 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     supportedAttribute.append(QWebEngineSettings::PlaybackRequiresUserGesture);
     supportedAttribute.append(QWebEngineSettings::WebRTCPublicInterfacesOnly);
 
-
     attributesSql = QSL("SELECT ");
 
     for (int i = 0; i < supportedAttribute.size(); ++i) {
@@ -52,6 +52,16 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     }
 
     attributesSql.append(QSL(" FROM site_settings WHERE server=?"));
+
+
+    supportedFeatures.append(QWebEnginePage::Notifications);
+    supportedFeatures.append(QWebEnginePage::Geolocation);
+    supportedFeatures.append(QWebEnginePage::MediaAudioCapture);
+    supportedFeatures.append(QWebEnginePage::MediaVideoCapture);
+    supportedFeatures.append(QWebEnginePage::MediaAudioVideoCapture);
+    supportedFeatures.append(QWebEnginePage::MouseLock);
+    supportedFeatures.append(QWebEnginePage::DesktopVideoCapture);
+    supportedFeatures.append(QWebEnginePage::DesktopAudioVideoCapture);
 }
 
 SiteSettingsManager::~SiteSettingsManager() noexcept
@@ -97,6 +107,14 @@ void SiteSettingsManager::loadSettings()
     m_defaults[poAllowDesktopVideoCapture]      = intToPermission(settings.value("allowDesktopVideoCapture",        Ask).toInt());
     m_defaults[poAllowDesktopAudioVideoCapture] = intToPermission(settings.value("allowDesktopAudioVideoCapture",   Ask).toInt());
     settings.endGroup();
+
+
+    settings.beginGroup("Site-Settings-Default-Features");
+    for (auto &feature : qAsConst(supportedFeatures)) {
+        ;
+        defaultFeatures[feature] = intToPermission(settings.value(featureToSqlColumn(feature), Ask).toInt());
+    }
+    settings.endGroup();
 }
 
 void SiteSettingsManager::saveSettings()
@@ -116,6 +134,13 @@ void SiteSettingsManager::saveSettings()
     settings.setValue("allowMouseLock",                 m_defaults[poAllowMouseLock]);
     settings.setValue("allowDesktopVideoCapture",       m_defaults[poAllowDesktopVideoCapture]);
     settings.setValue("allowDesktopAudioVideoCapture",  m_defaults[poAllowDesktopAudioVideoCapture]);
+    settings.endGroup();
+
+
+    settings.beginGroup("Site-Settings-Default-Features");
+    for (auto it = defaultFeatures.begin(); it != defaultFeatures.end(); ++it) {
+        settings.setValue(featureToSqlColumn(it.key()), it.value());
+    }
     settings.endGroup();
 }
 
@@ -158,10 +183,8 @@ void SiteSettingsManager::setImages(const QUrl& url, const int value)
     setOption(poAutoloadImages, url, value);
 }
 
-void SiteSettingsManager::setOption(const PageOptions option, const QUrl& url, const int value)
+void SiteSettingsManager::setOption(const QString& column, const QUrl& url, const int value)
 {
-    QString column = optionToSqlColumn(option);
-
     if (column.isEmpty()) {
         return;
     }
@@ -180,16 +203,18 @@ void SiteSettingsManager::setOption(const PageOptions option, const QUrl& url, c
     job->start();
 }
 
-void SiteSettingsManager::setOption(const QWebEnginePage::Feature& feature, const QUrl& url, const Permission &value)
+void SiteSettingsManager::setOption(const PageOptions option, const QUrl& url, const int value)
 {
-    auto option = optionFromWebEngineFeature(feature);
-    setOption(option, url, value);
+    setOption(optionToSqlColumn(option), url, value);
 }
 
-SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSettingsManager::PageOptions option, const QUrl& url)
+void SiteSettingsManager::setOption(const QWebEnginePage::Feature& feature, const QUrl& url, const Permission &value)
 {
-    QString column = optionToSqlColumn(option);
+    setOption(featureToSqlColumn(feature), url, value);
+}
 
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString &column, const QUrl& url)
+{
     if (column.isEmpty()) {
         return Deny;
     }
@@ -208,10 +233,14 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSet
     return Default;
 }
 
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSettingsManager::PageOptions option, const QUrl& url)
+{
+    return getPermission(optionToSqlColumn(option), url);
+}
+
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEnginePage::Feature& feature, const QUrl& url)
 {
-    auto option = optionFromWebEngineFeature(feature);
-    return getPermission(option, url);
+    return getPermission(featureToSqlColumn(feature), url);
 }
 
 QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOptions &option)
@@ -226,23 +255,23 @@ QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOp
         case poZoomLevel:
             return QSL("zoom_level");
         case poAllowNotifications:
-            return QSL("allow_notifications");
+            return QSL("f_notifications");
         case poAllowGeolocation:
-            return QSL("allow_geolocation");
+            return QSL("f_geolocation");
         case poAllowMediaAudioCapture:
-            return QSL("allow_media_audio_capture");
+            return QSL("f_media_audio_capture");
         case poAllowMediaVideoCapture:
-            return QSL("allow_media_video_capture");
+            return QSL("f_media_video_capture");
         case poAllowMediaAudioVideoCapture:
-            return QSL("allow_media_audio_video_capture");
+            return QSL("f_media_audio_video_capture");
         case poAllowMouseLock:
-            return QSL("allow_mouse_lock");
+            return QSL("f_mouse_lock");
         case poAllowDesktopVideoCapture:
-            return QSL("allow_desktop_video_capture");
+            return QSL("f_desktop_video_capture");
         case poAllowDesktopAudioVideoCapture:
-            return QSL("allow_desktop_audio_video_capture");
+            return QSL("f_desktop_audio_video_capture");
         default:
-            qWarning() << "Unknown option" << option;
+            qWarning() << "Unknown option:" << option;
             return QLatin1String("");
     }
 }
@@ -275,15 +304,19 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
         case poZoomLevel:
         case poAllowCookies:
         default:
-            qWarning() << "Unknown option" << option;
+            qWarning() << "Unknown option:" << option;
             return Deny;
     }
 }
 
 SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const QWebEnginePage::Feature& feature)
 {
-    auto option = optionFromWebEngineFeature(feature);
-    return getDefaultPermission(option);
+    if (!supportedFeatures.contains(feature)) {
+        qWarning() << "Unknown feature:" << feature;
+        return Deny;
+    }
+
+    return defaultFeatures[feature];
 }
 
 void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOptions& option, const int& value)
@@ -305,7 +338,7 @@ void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOp
         case poJavascriptEnabled:
         case poAutoloadImages:
         default:
-            qWarning() << "Unknown option" << option;
+            qWarning() << "Unknown option:" << option;
             break;
     }
 }
@@ -317,7 +350,7 @@ void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOp
         case poAllowCookies:
         case poJavascriptEnabled:
         case poAutoloadImages:
-            qWarning() << "So far not implemented" << option;
+            qWarning() << "So far not implemented:" << option;
             break;
 
         case poAllowNotifications:
@@ -331,45 +364,19 @@ void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOp
             m_defaults[option] = permission;
             break;
         default:
-            qWarning() << "Unknown option" << option;
+            qWarning() << "Unknown option:" << option;
             break;
     }
 }
 
 void SiteSettingsManager::setDefaultPermission(const QWebEnginePage::Feature& feature, const SiteSettingsManager::Permission& value)
 {
-    auto option = optionFromWebEngineFeature(feature);
-    setDefaultPermission(option, value);
-}
-
-SiteSettingsManager::PageOptions SiteSettingsManager::optionFromWebEngineFeature(const QWebEnginePage::Feature& feature) const
-{
-    switch (feature) {
-        case QWebEnginePage::Notifications:
-            return poAllowNotifications;
-        case QWebEnginePage::Geolocation:
-            return poAllowGeolocation;
-        case QWebEnginePage::MediaAudioCapture:
-            return poAllowMediaAudioCapture;
-        case QWebEnginePage::MediaVideoCapture:
-            return poAllowMediaVideoCapture;
-        case QWebEnginePage::MediaAudioVideoCapture:
-            return poAllowMediaAudioVideoCapture;
-        case QWebEnginePage::MouseLock:
-            return poAllowMouseLock;
-        case QWebEnginePage::DesktopVideoCapture:
-            return poAllowDesktopVideoCapture;
-        case QWebEnginePage::DesktopAudioVideoCapture:
-            return poAllowDesktopAudioVideoCapture;
-        default:
-            qWarning() << "Unknown feature" << feature;
-            return poAllowNotifications;
+    if (!supportedFeatures.contains(feature)) {
+        qWarning() << "Unknown feature:" << feature;
+        return;
     }
-}
 
-QString SiteSettingsManager::sqlColumnFromWebEngineFeature(const QWebEnginePage::Feature& feature)
-{
-    return optionToSqlColumn(optionFromWebEngineFeature(feature));
+    defaultFeatures[feature] = value;
 }
 
 SiteSettingsManager::Permission SiteSettingsManager::testAttribute(const QWebEngineSettings::WebAttribute attribute) const
@@ -410,7 +417,7 @@ QString SiteSettingsManager::getOptionName(const SiteSettingsManager::PageOption
         case poAllowNotifications:
             return QSL("Notifications");
         case poAllowGeolocation:
-            return QSL("Location");
+            return QSL("Geolocation");
         case poAllowMediaAudioCapture:
             return QSL("Microphone");
         case poAllowMediaVideoCapture:
@@ -424,14 +431,72 @@ QString SiteSettingsManager::getOptionName(const SiteSettingsManager::PageOption
         case poAllowDesktopAudioVideoCapture:
             return QSL("Screen capture with audio");
         default:
-            qWarning() << "Unknown option" << option;
+            qWarning() << "Unknown option:" << option;
             return QSL("Unknown");;
     }
 }
 
 QString SiteSettingsManager::getOptionName(const QWebEnginePage::Feature& feature)
 {
-    return getOptionName(optionFromWebEngineFeature(feature));
+    switch (feature) {
+        case QWebEnginePage::Notifications:
+            return QSL("Notifications");
+        case QWebEnginePage::Geolocation:
+            return QSL("Geolocation");
+        case QWebEnginePage::MediaAudioCapture:
+            return QSL("Microphone");
+        case QWebEnginePage::MediaVideoCapture:
+            return QSL("Camera");
+        case QWebEnginePage::MediaAudioVideoCapture:
+            return QSL("Microphone and Camera");
+        case QWebEnginePage::MouseLock:
+            return QSL("Hide mouse pointer");
+        case QWebEnginePage::DesktopVideoCapture:
+            return QSL("Screen capture");
+        case QWebEnginePage::DesktopAudioVideoCapture:
+            return QSL("Screen capture with audio");
+        default:
+            qWarning() << "Unknown feature:" << feature;
+            return QSL("Unknown");
+    }
+}
+
+QString SiteSettingsManager::getOptionName(const QWebEngineSettings::WebAttribute attribute)
+{
+    switch (attribute) {
+        case QWebEngineSettings::AutoLoadImages:
+            return QSL("Autoload images");
+
+        case QWebEngineSettings::JavascriptEnabled:
+            return QSL("Enable JavaScript");
+        case QWebEngineSettings::JavascriptCanOpenWindows:
+            return QSL("JavaScript: Open popup windows");
+        case QWebEngineSettings::JavascriptCanAccessClipboard:
+            return QSL("JavaScript: Access clipboard");
+        case QWebEngineSettings::JavascriptCanPaste:
+            return QSL("JavaScript: Paste from clipboard");
+        case QWebEngineSettings::AllowWindowActivationFromJavaScript:
+            return QSL("JavaScript: Activate windows");
+
+        case QWebEngineSettings::LocalStorageEnabled:
+            return QSL("Local storage");
+        case QWebEngineSettings::ScrollAnimatorEnabled:
+            return QSL("Animated scrolling");
+        case QWebEngineSettings::FullScreenSupportEnabled:
+            return QSL("FullScreen support");
+        case QWebEngineSettings::AllowRunningInsecureContent:
+            return QSL("Run insecure content");
+        case QWebEngineSettings::AllowGeolocationOnInsecureOrigins:
+            return QSL("Geolocation on insecure origin");
+        case QWebEngineSettings::PlaybackRequiresUserGesture:
+            return QSL("Automatic playing of videos");
+        case QWebEngineSettings::WebRTCPublicInterfacesOnly:
+            return QSL("Prevent WebRTC from leaking private IP address");
+
+        default:
+            qWarning() << "Unknown attribute:" << attribute;
+            return QSL("Unknown");
+    }
 }
 
 QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permission permission)
@@ -446,8 +511,33 @@ QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permis
         case Default:
             return QSL("Default");
         default:
-            qWarning() << "Uknown permission" << permission;
+            qWarning() << "Uknown permission:" << permission;
             return QSL("Unknown");
+    }
+}
+
+QString SiteSettingsManager::featureToSqlColumn(const QWebEnginePage::Feature& feature)
+{
+    switch (feature) {
+        case QWebEnginePage::Notifications:
+            return QSL("f_notifications");
+        case QWebEnginePage::Geolocation:
+            return QSL("f_geolocation");
+        case QWebEnginePage::MediaAudioCapture:
+            return QSL("f_media_audio_capture");
+        case QWebEnginePage::MediaVideoCapture:
+            return QSL("f_media_video_capture");
+        case QWebEnginePage::MediaAudioVideoCapture:
+            return QSL("f_media_audio_video_capture");
+        case QWebEnginePage::MouseLock:
+            return QSL("f_mouse_lock");
+        case QWebEnginePage::DesktopVideoCapture:
+            return QSL("f_desktop_video_capture");
+        case QWebEnginePage::DesktopAudioVideoCapture:
+            return QSL("f_desktop_audio_video_capture");
+        default:
+            qWarning() << "Unknown feature:" << feature;
+            return QSL("f_notifications");
     }
 }
 
@@ -484,7 +574,7 @@ QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::W
             return QSL("wa_webrtc_public_interface_only");
 
         default:
-            qWarning() << "Unknown attribute: " << attribute;
+            qWarning() << "Unknown attribute:" << attribute;
             return QSL("wa_js_enabled");
     }
 }

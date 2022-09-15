@@ -55,7 +55,7 @@ void HTML5PermissionsDialog::showFeaturePermissions(QWebEnginePage::Feature feat
     ui->treeWidget->clear();
 
     if (m_data[feature].length() == 0) {
-        QString column = mApp->siteSettingsManager()->sqlColumnFromWebEngineFeature(feature);
+        QString column = mApp->siteSettingsManager()->featureToSqlColumn(feature);
         QSqlQuery query(SqlDatabase::instance()->database());
         query.prepare(QSL("SELECT id, server, %1 FROM site_settings WHERE %1 != ?").arg(column));
         query.addBindValue(SiteSettingsManager::Default);
@@ -159,7 +159,7 @@ void HTML5PermissionsDialog::saveSettings()
 
     for (int i = 0; i < 8; ++i) {
         const QWebEnginePage::Feature feature = indexToFeature(i);
-        const QString column = mApp->siteSettingsManager()->sqlColumnFromWebEngineFeature(feature);
+        const QString column = mApp->siteSettingsManager()->featureToSqlColumn(feature);
         query.prepare(QSL("UPDATE site_settings SET %1 = ? WHERE id = ?").arg(column));
         query.addBindValue(SiteSettingsManager::Default);
         query.addBindValue(m_removed[feature]);

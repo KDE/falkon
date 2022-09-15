@@ -24,13 +24,6 @@
 
 class QUrl;
 
-class SiteWebEngineSettings
-{
-public:
-    bool allowJavaScript;
-    bool allowImages;
-};
-
 
 class FALKON_EXPORT SiteSettingsManager : QObject
 {
@@ -98,9 +91,11 @@ public:
     void setJavascript(const QUrl &url, const int value);
     void setImages(const QUrl &url, const int value);
 
+    Permission getPermission(const QString &column, const QUrl &url);
     Permission getPermission(const PageOptions option, const QUrl &url);
     Permission getPermission(const QWebEnginePage::Feature &feature, const QUrl &url);
 
+    void setOption(const QString &column, const QUrl &url, const int value);
     void setOption(const PageOptions option, const QUrl &url, const int value);
     void setOption(const QWebEnginePage::Feature &feature, const QUrl &url, const Permission &value);
 
@@ -110,22 +105,25 @@ public:
     void setDefaultPermission(const QWebEnginePage::Feature &feature, const Permission &value);
     void setDefaultPermission(const PageOptions &option, const int &value);
 
-    QString sqlColumnFromWebEngineFeature(const QWebEnginePage::Feature &feature);
-
     QString getOptionName(const SiteSettingsManager::PageOptions &option);
     QString getOptionName(const QWebEnginePage::Feature &feature);
+    QString getOptionName(const QWebEngineSettings::WebAttribute attribute);
 
     QString getPermissionName(const Permission permission);
 
-private:
     QString webAttributeToSqlColumn(const QWebEngineSettings::WebAttribute &attribute);
+    QString featureToSqlColumn(const QWebEnginePage::Feature &feature);
+
+private:
     QString optionToSqlColumn(const PageOptions &option);
-    PageOptions optionFromWebEngineFeature(const QWebEnginePage::Feature &feature) const;
+
     Permission testAttribute(const QWebEngineSettings::WebAttribute attribute) const;
     Permission intToPermission(const int permission) const;
 
     QMap<PageOptions, Permission> m_defaults;
     QList<QWebEngineSettings::WebAttribute> supportedAttribute;
+    QList<QWebEnginePage::Feature> supportedFeatures;
+    QMap<QWebEnginePage::Feature, Permission> defaultFeatures;
     QString attributesSql;
 };
 

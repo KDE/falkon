@@ -360,14 +360,14 @@ void ProfileManager::updateDatabase()
                 "wa_playback_needs_gesture INTEGER DEFAULT 0,"
                 "wa_webrtc_public_interface_only INTEGER DEFAULT 0,"
 
-                "allow_notifications INTEGER DEFAULT 0,"
-                "allow_geolocation INTEGER DEFAULT 0,"
-                "allow_media_audio_capture INTEGER DEFAULT 0,"
-                "allow_media_video_capture INTEGER DEFAULT 0,"
-                "allow_media_audio_video_capture INTEGER DEFAULT 0,"
-                "allow_mouse_lock INTEGER DEFAULT 0,"
-                "allow_desktop_video_capture INTEGER DEFAULT 0,"
-                "allow_desktop_audio_video_capture INTEGER DEFAULT 0"
+                "f_notifications INTEGER DEFAULT 0,"
+                "f_geolocation INTEGER DEFAULT 0,"
+                "f_media_audio_capture INTEGER DEFAULT 0,"
+                "f_media_video_capture INTEGER DEFAULT 0,"
+                "f_media_audio_video_capture INTEGER DEFAULT 0,"
+                "f_mouse_lock INTEGER DEFAULT 0,"
+                "f_desktop_video_capture INTEGER DEFAULT 0,"
+                "f_desktop_audio_video_capture INTEGER DEFAULT 0"
             ");"
         ));
 
