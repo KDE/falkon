@@ -26,6 +26,32 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
 : QObject(parent)
 {
     loadSettings();
+
+    supportedAttribute.append(QWebEngineSettings::AutoLoadImages);
+    supportedAttribute.append(QWebEngineSettings::JavascriptEnabled);
+//     supportedAttribute.append(QWebEngineSettings::JavascriptCanOpenWindows);
+//     supportedAttribute.append(QWebEngineSettings::JavascriptCanAccessClipboard);
+//     supportedAttribute.append(QWebEngineSettings::JavascriptCanPaste);
+//     supportedAttribute.append(QWebEngineSettings::AllowWindowActivationFromJavaScript);
+//     supportedAttribute.append(QWebEngineSettings::LocalStorageEnabled);
+//     supportedAttribute.append(QWebEngineSettings::ScrollAnimatorEnabled);
+//     supportedAttribute.append(QWebEngineSettings::FullScreenSupportEnabled);
+//     supportedAttribute.append(QWebEngineSettings::AllowRunningInsecureContent);
+//     supportedAttribute.append(QWebEngineSettings::AllowGeolocationOnInsecureOrigins);
+//     supportedAttribute.append(QWebEngineSettings::PlaybackRequiresUserGesture);
+//     supportedAttribute.append(QWebEngineSettings::WebRTCPublicInterfacesOnly);
+
+
+    attributesSql = QSL("SELECT ");
+
+    for (int i = 0; i < supportedAttribute.size(); ++i) {
+        if (i > 0) {
+            attributesSql.append(QSL(", "));
+        }
+        attributesSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
+    }
+
+    attributesSql.append(QSL(" FROM site_settings WHERE server=?"));
 }
 
 SiteSettingsManager::~SiteSettingsManager() noexcept
@@ -126,6 +152,32 @@ SiteWebEngineSettings SiteSettingsManager::getWebEngineSettings(const QUrl& url)
     }
 
     return settings;
+}
+
+QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttributes2(const QUrl& url)
+{
+    QHash<QWebEngineSettings::WebAttribute, bool> attributes;
+
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.prepare(attributesSql);
+    query.addBindValue(url.host());
+    query.exec();
+
+    if (query.next()) {
+        for (int i = 0; i < query.record().count(); ++i) {
+            Permission perm = intToPermission(query.value(i).toInt());
+            QWebEngineSettings::WebAttribute attribute = supportedAttribute[i];
+
+            if (perm == Allow) {
+                attributes[attribute] = true;
+            }
+            else if (perm == Deny) {
+                attributes[attribute] = false;
+            }
+        }
+    }
+
+    return attributes;
 }
 
 QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttributes(const QUrl& url)
@@ -492,5 +544,45 @@ QWebEngineSettings::WebAttribute SiteSettingsManager::optionToAttribute(const Si
             return QWebEngineSettings::WebRTCPublicInterfacesOnly;
         default:
             return QWebEngineSettings::JavascriptEnabled;
+    }
+}
+
+QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::WebAttribute& attribute)
+{
+    switch (attribute) {
+        case QWebEngineSettings::AutoLoadImages:
+            return QSL("allow_images");
+//             return QSL("wa_autoload_images");
+
+        case QWebEngineSettings::JavascriptEnabled:
+            return QSL("allow_javascript");
+//             return QSL("wa_js_enabled");
+        case QWebEngineSettings::JavascriptCanOpenWindows:
+            return QSL("wa_js_open_windows");
+        case QWebEngineSettings::JavascriptCanAccessClipboard:
+            return QSL("wa_js_access_clipboard");
+        case QWebEngineSettings::JavascriptCanPaste:
+            return QSL("wa_js_can_paste");
+        case QWebEngineSettings::AllowWindowActivationFromJavaScript:
+            return QSL("wa_js_window_activation");
+
+        case QWebEngineSettings::LocalStorageEnabled:
+            return QSL("wa_local_storage");
+        case QWebEngineSettings::ScrollAnimatorEnabled:
+            return QSL("wa_acroll_animator");
+        case QWebEngineSettings::FullScreenSupportEnabled:
+            return QSL("wa_fullscreen_support");
+        case QWebEngineSettings::AllowRunningInsecureContent:
+            return QSL("wa_run_insecure_content");
+        case QWebEngineSettings::AllowGeolocationOnInsecureOrigins:
+            return QSL("wa_insecure_geolocation");
+        case QWebEngineSettings::PlaybackRequiresUserGesture:
+            return QSL("wa_playback_needs_gesture");
+        case QWebEngineSettings::WebRTCPublicInterfacesOnly:
+            return QSL("wa_webrtc_public_interface_only");
+
+        default:
+            qWarning() << "Unknown attribute: " << attribute;
+            return QSL("wa_js_enabled");
     }
 }

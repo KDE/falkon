@@ -452,9 +452,22 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
     if (result) {
         if (isMainFrame) {
             const bool isWeb = url.scheme() == QL1S("http") || url.scheme() == QL1S("https") || url.scheme() == QL1S("file");
-            const SiteWebEngineSettings siteSettings = mApp->siteSettingsManager()->getWebEngineSettings(url);
-            settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, isWeb ? siteSettings.allowJavaScript : true);
-            settings()->setAttribute(QWebEngineSettings::AutoLoadImages, isWeb ? siteSettings.allowImages : true);
+
+            if (isWeb) {
+                auto webAttributes = mApp->siteSettingsManager()->getWebAttributes2(url);
+                if (!webAttributes.empty()) {
+                    QHash<QWebEngineSettings::WebAttribute, bool>::iterator it;
+                    for (it = webAttributes.begin(); it != webAttributes.end(); ++it) {
+                        settings()->setAttribute(it.key(), it.value());
+                    }
+                }
+            }
+
+
+
+//             const SiteWebEngineSettings siteSettings = mApp->siteSettingsManager()->getWebEngineSettings(url);
+//             settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, isWeb ? siteSettings.allowJavaScript : true);
+//             settings()->setAttribute(QWebEngineSettings::AutoLoadImages, isWeb ? siteSettings.allowImages : true);
         }
         Q_EMIT navigationRequestAccepted(url, type, isMainFrame);
     }

@@ -101,6 +101,7 @@ public:
      */
     SiteWebEngineSettings getWebEngineSettings(const QUrl &url);
 
+    QHash<QWebEngineSettings::WebAttribute, bool> getWebAttributes2(const QUrl &url);
     QHash<QWebEngineSettings::WebAttribute, bool> getWebAttributes(const QUrl &url);
 
     void setJavascript(const QUrl &url, const int value);
@@ -126,6 +127,7 @@ public:
     QString getPermissionName(const Permission permission);
 
 private:
+    QString webAttributeToSqlColumn(const QWebEngineSettings::WebAttribute &attribute);
     QString optionToSqlColumn(const PageOptions &option);
     PageOptions optionFromWebEngineFeature(const QWebEnginePage::Feature &feature) const;
     Permission testAttribute(const QWebEngineSettings::WebAttribute attribute) const;
@@ -133,6 +135,8 @@ private:
     QWebEngineSettings::WebAttribute optionToAttribute(const PageOptions &option) const;
 
     QMap<PageOptions, Permission> m_defaults;
+    QList<QWebEngineSettings::WebAttribute> supportedAttribute;
+    QString attributesSql;
 };
 
 
