@@ -451,42 +451,6 @@ QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permis
     }
 }
 
-QWebEngineSettings::WebAttribute SiteSettingsManager::optionToAttribute(const SiteSettingsManager::PageOptions& option) const
-{
-    switch (option) {
-        case poAutoloadImages:
-            return QWebEngineSettings::AutoLoadImages;
-
-        case poJavascriptEnabled:
-            return QWebEngineSettings::JavascriptEnabled;
-        case poJavascriptCanOpenWindows:
-            return QWebEngineSettings::JavascriptCanOpenWindows;
-        case poJavascriptCanAccessClipboard:
-            return QWebEngineSettings::JavascriptCanAccessClipboard;
-        case poJavascriptCanPaste:
-            return QWebEngineSettings::JavascriptCanPaste;
-        case poAllowWindowActivationFromJavaScript:
-            return QWebEngineSettings::AllowWindowActivationFromJavaScript;
-
-        case poLocalStorageEnabled:
-            return QWebEngineSettings::LocalStorageEnabled;
-        case poScrollAnimatorEnabled:
-            return QWebEngineSettings::ScrollAnimatorEnabled;
-        case poFullScreenSupportEnabled:
-            return QWebEngineSettings::FullScreenSupportEnabled;
-        case poAllowRunningInsecureContent:
-            return QWebEngineSettings::AllowRunningInsecureContent;
-        case poAllowGeolocationOnInsecureOrigins:
-            return QWebEngineSettings::AllowGeolocationOnInsecureOrigins;
-        case poPlaybackRequiresUserGesture:
-            return QWebEngineSettings::PlaybackRequiresUserGesture;
-        case poWebRTCPublicInterfacesOnly:
-            return QWebEngineSettings::WebRTCPublicInterfacesOnly;
-        default:
-            return QWebEngineSettings::JavascriptEnabled;
-    }
-}
-
 QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::WebAttribute& attribute)
 {
     switch (attribute) {

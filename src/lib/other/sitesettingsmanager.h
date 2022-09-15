@@ -123,7 +123,6 @@ private:
     PageOptions optionFromWebEngineFeature(const QWebEnginePage::Feature &feature) const;
     Permission testAttribute(const QWebEngineSettings::WebAttribute attribute) const;
     Permission intToPermission(const int permission) const;
-    QWebEngineSettings::WebAttribute optionToAttribute(const PageOptions &option) const;
 
     QMap<PageOptions, Permission> m_defaults;
     QList<QWebEngineSettings::WebAttribute> supportedAttribute;
