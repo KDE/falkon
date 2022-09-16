@@ -38,36 +38,10 @@ public:
     };
     Q_ENUM(Permission);
 
-    /* Keep the attributes at the top */
+    /* Broser options */
     enum PageOptions {
-        poAutoloadImages,
-
-        /* Javascript stuff */
-        poJavascriptEnabled,
-        poJavascriptCanOpenWindows,
-        poJavascriptCanAccessClipboard,
-        poJavascriptCanPaste,
-        poAllowWindowActivationFromJavaScript,
-
-        poLocalStorageEnabled,
-        poScrollAnimatorEnabled,
-        poFullScreenSupportEnabled,
-        poAllowRunningInsecureContent,
-        poAllowGeolocationOnInsecureOrigins,
-        poPlaybackRequiresUserGesture,
-        poWebRTCPublicInterfacesOnly,
-
         poAllowCookies,
         poZoomLevel,
-
-        poAllowNotifications,
-        poAllowGeolocation,
-        poAllowMediaAudioCapture,
-        poAllowMediaVideoCapture,
-        poAllowMediaAudioVideoCapture,
-        poAllowMouseLock,
-        poAllowDesktopVideoCapture,
-        poAllowDesktopAudioVideoCapture,
     };
     Q_ENUM(PageOptions);
 
@@ -99,6 +73,7 @@ public:
     void setOption(const QString &column, const QUrl &url, const int value);
     void setOption(const PageOptions option, const QUrl &url, const int value);
     void setOption(const QWebEnginePage::Feature &feature, const QUrl &url, const Permission &value);
+    void setOption(const QWebEngineSettings::WebAttribute &attribute, const QUrl &url, const Permission &value);
 
     Permission getDefaultPermission(const PageOptions &option);
     Permission getDefaultPermission(const QWebEnginePage::Feature &feature);

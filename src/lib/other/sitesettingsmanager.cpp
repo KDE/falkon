@@ -155,12 +155,12 @@ QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttribu
 
 void SiteSettingsManager::setJavascript(const QUrl& url, const int value)
 {
-    setOption(poJavascriptEnabled, url, value);
+    setOption(QWebEngineSettings::JavascriptEnabled, url, intToPermission(value));
 }
 
 void SiteSettingsManager::setImages(const QUrl& url, const int value)
 {
-    setOption(poAutoloadImages, url, value);
+    setOption(QWebEngineSettings::AutoLoadImages, url, intToPermission(value));
 }
 
 void SiteSettingsManager::setOption(const QString& column, const QUrl& url, const int value)
@@ -191,6 +191,11 @@ void SiteSettingsManager::setOption(const PageOptions option, const QUrl& url, c
 void SiteSettingsManager::setOption(const QWebEnginePage::Feature& feature, const QUrl& url, const Permission &value)
 {
     setOption(featureToSqlColumn(feature), url, value);
+}
+
+void SiteSettingsManager::setOption(const QWebEngineSettings::WebAttribute& attribute, const QUrl& url, const SiteSettingsManager::Permission& value)
+{
+    setOption(webAttributeToSqlColumn(attribute), url, value);
 }
 
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString &column, const QUrl& url)
@@ -231,30 +236,10 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEng
 QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOptions &option)
 {
     switch (option) {
-        case poJavascriptEnabled:
-            return QSL("wa_js_enabled");
-        case poAutoloadImages:
-            return QSL("wa_autoload_images");
         case poAllowCookies:
             return QSL("allow_cookies");
         case poZoomLevel:
             return QSL("zoom_level");
-        case poAllowNotifications:
-            return QSL("f_notifications");
-        case poAllowGeolocation:
-            return QSL("f_geolocation");
-        case poAllowMediaAudioCapture:
-            return QSL("f_media_audio_capture");
-        case poAllowMediaVideoCapture:
-            return QSL("f_media_video_capture");
-        case poAllowMediaAudioVideoCapture:
-            return QSL("f_media_audio_video_capture");
-        case poAllowMouseLock:
-            return QSL("f_mouse_lock");
-        case poAllowDesktopVideoCapture:
-            return QSL("f_desktop_video_capture");
-        case poAllowDesktopAudioVideoCapture:
-            return QSL("f_desktop_audio_video_capture");
         default:
             qWarning() << "Unknown option:" << option;
             return QLatin1String("");
@@ -264,11 +249,6 @@ QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOp
 SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const SiteSettingsManager::PageOptions& option)
 {
     switch (option) {
-        case poJavascriptEnabled:
-            return testAttribute(QWebEngineSettings::JavascriptEnabled);
-        case poAutoloadImages:
-            return testAttribute(QWebEngineSettings::AutoLoadImages);
-
         // so far not implemented
         case poZoomLevel:
         case poAllowCookies:
@@ -360,30 +340,10 @@ SiteSettingsManager::Permission SiteSettingsManager::intToPermission(const int p
 QString SiteSettingsManager::getOptionName(const SiteSettingsManager::PageOptions& option)
 {
     switch (option) {
-        case poJavascriptEnabled:
-            return QSL("JavaScript");
-        case poAutoloadImages:
-            return QSL("Autoload Images");
         case poZoomLevel:
             return QSL("Zoom level");
         case poAllowCookies:
             return QSL("Cookies");
-        case poAllowNotifications:
-            return QSL("Notifications");
-        case poAllowGeolocation:
-            return QSL("Geolocation");
-        case poAllowMediaAudioCapture:
-            return QSL("Microphone");
-        case poAllowMediaVideoCapture:
-            return QSL("Camera");
-        case poAllowMediaAudioVideoCapture:
-            return QSL("Microphone and Camera");
-        case poAllowMouseLock:
-            return QSL("Hide mouse pointer");
-        case poAllowDesktopVideoCapture:
-            return QSL("Screen capture");
-        case poAllowDesktopAudioVideoCapture:
-            return QSL("Screen capture with audio");
         default:
             qWarning() << "Unknown option:" << option;
             return QSL("Unknown");;
