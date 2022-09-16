@@ -75,7 +75,6 @@ void SiteSettingsManager::loadSettings()
 //    m_isSaving = settings.value("allowPerDomainZoom", true).toBool();
 //    settings.endGroup();
 
-    // TODO Maybe change to Default HTML5 Permissions
     settings.beginGroup("Site-Settings");
 /* These are handled by already existing parts of Falkon */
 //     m_defaults[poAllowCookies]                  = settings.value("allowCookies", Default).toInt();
@@ -96,22 +95,11 @@ void SiteSettingsManager::loadSettings()
 //     m_defaults[poAllowGeolocationOnInsecureOrigins]   = intToPermission(settings.value("AllowGeolocationOnInsecureOrigins",   Ask).toInt());
 //     m_defaults[poPlaybackRequiresUserGesture]         = intToPermission(settings.value("PlaybackRequiresUserGesture",         Ask).toInt());
 //     m_defaults[poWebRTCPublicInterfacesOnly]          = intToPermission(settings.value("WebRTCPublicInterfacesOnly",          Ask).toInt());
-
-
-    m_defaults[poAllowNotifications]            = intToPermission(settings.value("allowNotifications",              Ask).toInt());
-    m_defaults[poAllowGeolocation]              = intToPermission(settings.value("allowGealocation",                Ask).toInt());
-    m_defaults[poAllowMediaAudioCapture]        = intToPermission(settings.value("allowMicrophone",                 Ask).toInt());
-    m_defaults[poAllowMediaVideoCapture]        = intToPermission(settings.value("allowCamera",                     Ask).toInt());
-    m_defaults[poAllowMediaAudioVideoCapture]   = intToPermission(settings.value("allowCameraAndMicrophone",        Ask).toInt());
-    m_defaults[poAllowMouseLock]                = intToPermission(settings.value("allowMouseLock",                  Ask).toInt());
-    m_defaults[poAllowDesktopVideoCapture]      = intToPermission(settings.value("allowDesktopVideoCapture",        Ask).toInt());
-    m_defaults[poAllowDesktopAudioVideoCapture] = intToPermission(settings.value("allowDesktopAudioVideoCapture",   Ask).toInt());
     settings.endGroup();
 
 
     settings.beginGroup("Site-Settings-Default-Features");
     for (auto &feature : qAsConst(supportedFeatures)) {
-        ;
         defaultFeatures[feature] = intToPermission(settings.value(featureToSqlColumn(feature), Ask).toInt());
     }
     settings.endGroup();
@@ -126,14 +114,6 @@ void SiteSettingsManager::saveSettings()
 //     settings.setValue("allowIbutmages", m_defaults[poAutoloadImages]);
 //     settings.setValue("allowCookies", m_defaults[poAllowCookies]);
 //     settings.setValue("defaultZoomLevel", m_defaults[poZoomLevel]);
-    settings.setValue("allowNotifications",             m_defaults[poAllowNotifications]);
-    settings.setValue("allowGealocation",               m_defaults[poAllowGeolocation]);
-    settings.setValue("allowMicrophone",                m_defaults[poAllowMediaAudioCapture]);
-    settings.setValue("allowCamera",                    m_defaults[poAllowMediaVideoCapture]);
-    settings.setValue("allowCameraAndMicrophone",       m_defaults[poAllowMediaAudioVideoCapture]);
-    settings.setValue("allowMouseLock",                 m_defaults[poAllowMouseLock]);
-    settings.setValue("allowDesktopVideoCapture",       m_defaults[poAllowDesktopVideoCapture]);
-    settings.setValue("allowDesktopAudioVideoCapture",  m_defaults[poAllowDesktopAudioVideoCapture]);
     settings.endGroup();
 
 
@@ -243,6 +223,11 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEng
     return getPermission(featureToSqlColumn(feature), url);
 }
 
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEngineSettings::WebAttribute& attribute, const QUrl& url)
+{
+    return getPermission(webAttributeToSqlColumn(attribute), url);
+}
+
 QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOptions &option)
 {
     switch (option) {
@@ -283,22 +268,6 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
             return testAttribute(QWebEngineSettings::JavascriptEnabled);
         case poAutoloadImages:
             return testAttribute(QWebEngineSettings::AutoLoadImages);
-        case poAllowNotifications:
-            return m_defaults[poAllowNotifications];
-        case poAllowGeolocation:
-            return m_defaults[poAllowGeolocation];
-        case poAllowMediaAudioCapture:
-            return m_defaults[poAllowMediaAudioCapture];
-        case poAllowMediaVideoCapture:
-            return m_defaults[poAllowMediaVideoCapture];
-        case poAllowMediaAudioVideoCapture:
-            return m_defaults[poAllowMediaAudioVideoCapture];
-        case poAllowMouseLock:
-            return m_defaults[poAllowMouseLock];
-        case poAllowDesktopVideoCapture:
-            return m_defaults[poAllowDesktopVideoCapture];
-        case poAllowDesktopAudioVideoCapture:
-            return m_defaults[poAllowDesktopAudioVideoCapture];
 
         // so far not implemented
         case poZoomLevel:
@@ -319,24 +288,21 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
     return defaultFeatures[feature];
 }
 
+SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const QWebEngineSettings::WebAttribute& attribute)
+{
+    if (!supportedAttribute.contains(attribute)) {
+        qWarning() << "Unknown attribute:" << attribute;
+        return Deny;
+    }
+
+    return testAttribute(attribute);
+}
+
 void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOptions& option, const int& value)
 {
     switch (option) {
-        case poAllowNotifications:
-        case poAllowGeolocation:
-        case poAllowMediaAudioCapture:
-        case poAllowMediaVideoCapture:
-        case poAllowMediaAudioVideoCapture:
-        case poAllowMouseLock:
-        case poAllowDesktopVideoCapture:
-        case poAllowDesktopAudioVideoCapture:
-            setDefaultPermission(option, intToPermission(value));
-            break;
-
         case poZoomLevel:
         case poAllowCookies:
-        case poJavascriptEnabled:
-        case poAutoloadImages:
         default:
             qWarning() << "Unknown option:" << option;
             break;
@@ -348,21 +314,9 @@ void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOp
     switch (option) {
         case poZoomLevel:
         case poAllowCookies:
-        case poJavascriptEnabled:
-        case poAutoloadImages:
             qWarning() << "So far not implemented:" << option;
             break;
 
-        case poAllowNotifications:
-        case poAllowGeolocation:
-        case poAllowMediaAudioCapture:
-        case poAllowMediaVideoCapture:
-        case poAllowMediaAudioVideoCapture:
-        case poAllowMouseLock:
-        case poAllowDesktopVideoCapture:
-        case poAllowDesktopAudioVideoCapture:
-            m_defaults[option] = permission;
-            break;
         default:
             qWarning() << "Unknown option:" << option;
             break;
@@ -577,4 +531,14 @@ QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::W
             qWarning() << "Unknown attribute:" << attribute;
             return QSL("wa_js_enabled");
     }
+}
+
+QList<QWebEngineSettings::WebAttribute> SiteSettingsManager::getSupportedAttribute() const
+{
+    return supportedAttribute;
+}
+
+QList<QWebEnginePage::Feature> SiteSettingsManager::getSupportedFeatures() const
+{
+    return supportedFeatures;
 }

@@ -59,6 +59,8 @@ private:
     void showPixmap(QPixmap pixmap);
 
     void addPermissionOption(const SiteSettingsManager::PageOptions option);
+    void addPermissionOption(const QWebEnginePage::Feature feature);
+    void addPermissionOption(const QWebEngineSettings::WebAttribute attribute);
 
     Ui::SiteInfo* ui;
     CertificateInfoWidget* m_certWidget;

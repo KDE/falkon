@@ -94,6 +94,7 @@ public:
     Permission getPermission(const QString &column, const QUrl &url);
     Permission getPermission(const PageOptions option, const QUrl &url);
     Permission getPermission(const QWebEnginePage::Feature &feature, const QUrl &url);
+    Permission getPermission(const QWebEngineSettings::WebAttribute &attribute, const QUrl &url);
 
     void setOption(const QString &column, const QUrl &url, const int value);
     void setOption(const PageOptions option, const QUrl &url, const int value);
@@ -101,6 +102,7 @@ public:
 
     Permission getDefaultPermission(const PageOptions &option);
     Permission getDefaultPermission(const QWebEnginePage::Feature &feature);
+    Permission getDefaultPermission(const QWebEngineSettings::WebAttribute &attribute);
     void setDefaultPermission(const PageOptions &option, const Permission &permission);
     void setDefaultPermission(const QWebEnginePage::Feature &feature, const Permission &value);
     void setDefaultPermission(const PageOptions &option, const int &value);
@@ -113,9 +115,12 @@ public:
 
     QString webAttributeToSqlColumn(const QWebEngineSettings::WebAttribute &attribute);
     QString featureToSqlColumn(const QWebEnginePage::Feature &feature);
+    QString optionToSqlColumn(const PageOptions &option);
+
+    QList<QWebEngineSettings::WebAttribute> getSupportedAttribute() const;
+    QList<QWebEnginePage::Feature> getSupportedFeatures() const;
 
 private:
-    QString optionToSqlColumn(const PageOptions &option);
 
     Permission testAttribute(const QWebEngineSettings::WebAttribute attribute) const;
     Permission intToPermission(const int permission) const;

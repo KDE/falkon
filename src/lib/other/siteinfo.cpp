@@ -125,16 +125,14 @@ SiteInfo::SiteInfo(WebView *view)
     });
 
     // Permissions
-    addPermissionOption(SiteSettingsManager::poJavascriptEnabled);
-    addPermissionOption(SiteSettingsManager::poAutoloadImages);
-    addPermissionOption(SiteSettingsManager::poAllowNotifications);
-    addPermissionOption(SiteSettingsManager::poAllowGeolocation);
-    addPermissionOption(SiteSettingsManager::poAllowMediaAudioCapture);
-    addPermissionOption(SiteSettingsManager::poAllowMediaVideoCapture);
-    addPermissionOption(SiteSettingsManager::poAllowMediaAudioVideoCapture);
-    addPermissionOption(SiteSettingsManager::poAllowMouseLock);
-    addPermissionOption(SiteSettingsManager::poAllowDesktopVideoCapture);
-    addPermissionOption(SiteSettingsManager::poAllowDesktopAudioVideoCapture);
+    for (auto &attribute : mApp->siteSettingsManager()->getSupportedAttribute()) {
+        addPermissionOption(attribute);
+    }
+    for (auto &feature : mApp->siteSettingsManager()->getSupportedFeatures()) {
+        addPermissionOption(feature);
+    }
+
+
 
     connect(ui->saveButton, SIGNAL(clicked(QAbstractButton*)), this, SLOT(saveImage()));
     connect(ui->listWidget, SIGNAL(currentRowChanged(int)), ui->stackedWidget, SLOT(setCurrentIndex(int)));
@@ -345,15 +343,25 @@ void SiteInfo::addPermissionOption(const SiteSettingsManager::PageOptions option
     auto* listItem = new QListWidgetItem(ui->listPermissions);
     auto* optionItem = new SiteInfoPermissionItem(option, perm, this);
 
-    switch (option) {
-        case SiteSettingsManager::poJavascriptEnabled:
-        case SiteSettingsManager::poAutoloadImages:
-        case SiteSettingsManager::poAllowCookies:
-            optionItem->setHasOptionAsk(false);
-            break;
-        default:
-            break;
-    }
+    ui->listPermissions->setItemWidget(listItem, optionItem);
+    listItem->setSizeHint(optionItem->sizeHint());
+}
+
+void SiteInfo::addPermissionOption(const QWebEnginePage::Feature feature)
+{
+    auto perm = mApp->siteSettingsManager()->getPermission(feature, m_baseUrl);
+    auto* listItem = new QListWidgetItem(ui->listPermissions);
+    auto* optionItem = new SiteInfoPermissionItem(feature, perm, this);
+
+    ui->listPermissions->setItemWidget(listItem, optionItem);
+    listItem->setSizeHint(optionItem->sizeHint());
+}
+
+void SiteInfo::addPermissionOption(const QWebEngineSettings::WebAttribute attribute)
+{
+    auto perm = mApp->siteSettingsManager()->getPermission(attribute, m_baseUrl);
+    auto* listItem = new QListWidgetItem(ui->listPermissions);
+    auto* optionItem = new SiteInfoPermissionItem(attribute, perm, this);
 
     ui->listPermissions->setItemWidget(listItem, optionItem);
     listItem->setSizeHint(optionItem->sizeHint());
@@ -365,6 +373,6 @@ void SiteInfo::saveSiteSettings()
     // This is a nutjob to do it this way, totaly inefficient and stupid, hope it will work at first.
     for (int i = 0; i < ui->listPermissions->count(); ++i) {
         auto* item = static_cast<SiteInfoPermissionItem*>(ui->listPermissions->itemWidget(ui->listPermissions->item(i)));
-        mApp->siteSettingsManager()->setOption(item->option(), m_baseUrl, item->permission());
+        mApp->siteSettingsManager()->setOption(item->sqlColumn(), m_baseUrl, item->permission());
     }
 }
