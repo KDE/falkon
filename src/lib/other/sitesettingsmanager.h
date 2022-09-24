@@ -49,8 +49,8 @@ public:
     {
         Permission AllowCookies;
         int ZoomLevel;
-        QHash<QWebEngineSettings::WebAttribute, Permission> attributes; /* Enable disable soem feature eg. Javascript, Images etc */
-        QHash<QWebEnginePage::Feature, Permission> features; /* HTML permissions */
+        QMap<QWebEngineSettings::WebAttribute, Permission> attributes; /* Enable disable soem feature eg. Javascript, Images etc */
+        QMap<QWebEnginePage::Feature, Permission> features; /* HTML permissions */
         QString server;
     };
 
@@ -95,6 +95,8 @@ public:
     QList<QWebEngineSettings::WebAttribute> getSupportedAttribute() const;
     QList<QWebEnginePage::Feature> getSupportedFeatures() const;
 
+    SiteSettings getSiteSettings(QUrl &url);
+
 private:
 
     Permission testAttribute(const QWebEngineSettings::WebAttribute attribute) const;
@@ -104,7 +106,9 @@ private:
     QList<QWebEngineSettings::WebAttribute> supportedAttribute;
     QList<QWebEnginePage::Feature> supportedFeatures;
     QMap<QWebEnginePage::Feature, Permission> defaultFeatures;
+
     QString attributesSql;
+    QString everythingSql;
 };
 
 

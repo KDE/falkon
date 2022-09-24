@@ -22,42 +22,14 @@
 #include "sitesettingsmanager.h"
 
 
-SiteInfoPermissionItem::SiteInfoPermissionItem(const SiteSettingsManager::PageOptions &a_option, const SiteSettingsManager::Permission &a_permission, QWidget* parent)
+SiteInfoPermissionItem::SiteInfoPermissionItem(const SiteSettingsManager::Permission& a_permission, QWidget* parent)
 : QWidget(parent)
-, m_option(a_option)
-, m_type(Browser)
 , m_ui(new Ui::SiteInfoPermissionItem())
+, m_hasOptionAsk(true)
+, m_hasOptionDefault(true)
 {
     m_ui->setupUi(this);
-
     setPermission(a_permission);
-    setHasOptionAsk(false);
-    m_ui->label->setText(mApp->siteSettingsManager()->getOptionName(a_option));
-}
-
-SiteInfoPermissionItem::SiteInfoPermissionItem(const QWebEnginePage::Feature& a_feature, const SiteSettingsManager::Permission& a_permission, QWidget* parent)
-: QWidget(parent)
-, m_feature(a_feature)
-, m_type(Feature)
-, m_ui(new Ui::SiteInfoPermissionItem())
-{
-    m_ui->setupUi(this);
-
-    setPermission(a_permission);
-    m_ui->label->setText(mApp->siteSettingsManager()->getOptionName(a_feature));
-}
-
-SiteInfoPermissionItem::SiteInfoPermissionItem(const QWebEngineSettings::WebAttribute& a_attribute, const SiteSettingsManager::Permission& a_permission, QWidget* parent)
-: QWidget(parent)
-, m_attribute(a_attribute)
-, m_type(Attribute)
-, m_ui(new Ui::SiteInfoPermissionItem())
-{
-    m_ui->setupUi(this);
-
-    setPermission(a_permission);
-    setHasOptionAsk(false);
-    m_ui->label->setText(mApp->siteSettingsManager()->getOptionName(a_attribute));
 }
 
 SiteInfoPermissionItem::~SiteInfoPermissionItem()
@@ -94,7 +66,7 @@ void SiteInfoPermissionItem::setHasOptionDefault(bool hasOptionDefault)
     m_ui->radioDefault->setVisible(hasOptionDefault);
 }
 
-void SiteInfoPermissionItem::setPermission(SiteSettingsManager::Permission permission)
+void SiteInfoPermissionItem::setPermission(const SiteSettingsManager::Permission permission)
 {
     m_ui->radioAllow->setChecked(false);
     m_ui->radioAsk->setChecked(false);
@@ -118,26 +90,6 @@ void SiteInfoPermissionItem::setPermission(SiteSettingsManager::Permission permi
             qWarning() << "Unknown permission" << permission;
             m_ui->radioDefault->setChecked(true);
     }
-
-    SiteSettingsManager::Permission defaultPermission;
-    switch (m_type) {
-        case Browser:
-            defaultPermission = mApp->siteSettingsManager()->getDefaultPermission(m_option);
-            break;
-        case Attribute:
-            defaultPermission = mApp->siteSettingsManager()->getDefaultPermission(m_attribute);
-            break;
-        case Feature:
-            defaultPermission = mApp->siteSettingsManager()->getDefaultPermission(m_feature);
-            break;
-        default:
-            defaultPermission = SiteSettingsManager::Default;
-            break;
-    }
-    if (defaultPermission == SiteSettingsManager::Default) {
-        defaultPermission = SiteSettingsManager::Ask;
-    }
-    m_ui->labelDefaultPermission->setText(mApp->siteSettingsManager()->getPermissionName(defaultPermission));
 }
 
 SiteSettingsManager::Permission SiteInfoPermissionItem::permission() const
@@ -162,14 +114,36 @@ SiteSettingsManager::Permission SiteInfoPermissionItem::permission() const
 
 QString SiteInfoPermissionItem::sqlColumn()
 {
-    switch (m_type) {
-        case Browser:
-            return mApp->siteSettingsManager()->optionToSqlColumn(m_option);
-        case Attribute:
-            return mApp->siteSettingsManager()->webAttributeToSqlColumn(m_attribute);
-        case Feature:
-            return mApp->siteSettingsManager()->featureToSqlColumn(m_feature);
-        default:
-            return QL1S();
+    return m_sqlColumn;
+}
+
+void SiteInfoPermissionItem::setDefaultPermission(SiteSettingsManager::Permission permission)
+{
+    if (permission == SiteSettingsManager::Default) {
+        permission = SiteSettingsManager::Ask;
     }
+    m_ui->labelDefaultPermission->setText(mApp->siteSettingsManager()->getPermissionName(permission));
+}
+
+void SiteInfoPermissionItem::setAttribute(const QWebEngineSettings::WebAttribute &attribute)
+{
+    m_sqlColumn = mApp->siteSettingsManager()->webAttributeToSqlColumn(attribute);
+    m_ui->label->setText(mApp->siteSettingsManager()->getOptionName(attribute));
+    setDefaultPermission(mApp->siteSettingsManager()->getDefaultPermission(attribute));
+    setHasOptionAsk(false);
+}
+
+void SiteInfoPermissionItem::setFeature(const QWebEnginePage::Feature& feature)
+{
+    m_sqlColumn = mApp->siteSettingsManager()->featureToSqlColumn(feature);
+    m_ui->label->setText(mApp->siteSettingsManager()->getOptionName(feature));
+    setDefaultPermission(mApp->siteSettingsManager()->getDefaultPermission(feature));
+}
+
+void SiteInfoPermissionItem::setOption(const SiteSettingsManager::PageOptions& option)
+{
+    m_sqlColumn = mApp->siteSettingsManager()->optionToSqlColumn(option);
+    m_ui->label->setText(mApp->siteSettingsManager()->getOptionName(option));
+    setDefaultPermission(mApp->siteSettingsManager()->getDefaultPermission(option));
+    setHasOptionAsk(false);
 }

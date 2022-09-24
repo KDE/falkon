@@ -20,6 +20,7 @@
 
 #include "qzcommon.h"
 #include "sitesettingsmanager.h"
+#include "siteinfopermissionitem.h"
 
 #include <QUrl>
 #include <QDialog>
@@ -58,9 +59,8 @@ private:
     void showLoadingText();
     void showPixmap(QPixmap pixmap);
 
-    void addPermissionOption(const SiteSettingsManager::PageOptions option);
-    void addPermissionOption(const QWebEnginePage::Feature feature);
-    void addPermissionOption(const QWebEngineSettings::WebAttribute attribute);
+    void addSiteSettings();
+    SiteInfoPermissionItem* addPermissionOption(SiteSettingsManager::Permission perm);
 
     Ui::SiteInfo* ui;
     CertificateInfoWidget* m_certWidget;

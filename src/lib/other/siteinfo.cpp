@@ -28,7 +28,6 @@
 #include "scripts.h"
 #include "networkmanager.h"
 #include "locationbar.h"
-#include "siteinfopermissionitem.h"
 
 #include <QMenu>
 #include <QMessageBox>
@@ -124,15 +123,8 @@ SiteInfo::SiteInfo(WebView *view)
         }
     });
 
-    // Permissions
-    for (auto &attribute : mApp->siteSettingsManager()->getSupportedAttribute()) {
-        addPermissionOption(attribute);
-    }
-    for (auto &feature : mApp->siteSettingsManager()->getSupportedFeatures()) {
-        addPermissionOption(feature);
-    }
-
-
+    /* Permissions */
+    addSiteSettings();
 
     connect(ui->saveButton, SIGNAL(clicked(QAbstractButton*)), this, SLOT(saveImage()));
     connect(ui->listWidget, SIGNAL(currentRowChanged(int)), ui->stackedWidget, SLOT(setCurrentIndex(int)));
@@ -337,34 +329,30 @@ SiteInfo::~SiteInfo()
     delete m_certWidget;
 }
 
-void SiteInfo::addPermissionOption(const SiteSettingsManager::PageOptions option)
+SiteInfoPermissionItem* SiteInfo::addPermissionOption(SiteSettingsManager::Permission perm)
 {
-    auto perm = mApp->siteSettingsManager()->getPermission(option, m_baseUrl);
     auto* listItem = new QListWidgetItem(ui->listPermissions);
-    auto* optionItem = new SiteInfoPermissionItem(option, perm, this);
+    auto* optionItem = new SiteInfoPermissionItem(perm, this);
 
     ui->listPermissions->setItemWidget(listItem, optionItem);
     listItem->setSizeHint(optionItem->sizeHint());
+
+    return optionItem;
 }
 
-void SiteInfo::addPermissionOption(const QWebEnginePage::Feature feature)
+void SiteInfo::addSiteSettings()
 {
-    auto perm = mApp->siteSettingsManager()->getPermission(feature, m_baseUrl);
-    auto* listItem = new QListWidgetItem(ui->listPermissions);
-    auto* optionItem = new SiteInfoPermissionItem(feature, perm, this);
-
-    ui->listPermissions->setItemWidget(listItem, optionItem);
-    listItem->setSizeHint(optionItem->sizeHint());
-}
-
-void SiteInfo::addPermissionOption(const QWebEngineSettings::WebAttribute attribute)
-{
-    auto perm = mApp->siteSettingsManager()->getPermission(attribute, m_baseUrl);
-    auto* listItem = new QListWidgetItem(ui->listPermissions);
-    auto* optionItem = new SiteInfoPermissionItem(attribute, perm, this);
-
-    ui->listPermissions->setItemWidget(listItem, optionItem);
-    listItem->setSizeHint(optionItem->sizeHint());
+    auto siteSettings = mApp->siteSettingsManager()->getSiteSettings(m_baseUrl);
+    // Attributes
+    for (const auto &attribute : mApp->siteSettingsManager()->getSupportedAttribute()) {
+        SiteInfoPermissionItem *item = addPermissionOption(siteSettings.attributes[attribute]);
+        item->setAttribute(attribute);
+    }
+    // Permissions
+    for (const auto &feature : mApp->siteSettingsManager()->getSupportedFeatures()) {
+        SiteInfoPermissionItem *item = addPermissionOption(siteSettings.features[feature]);
+        item->setFeature(feature);
+    }
 }
 
 void SiteInfo::saveSiteSettings()

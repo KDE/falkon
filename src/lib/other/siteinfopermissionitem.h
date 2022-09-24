@@ -36,16 +36,7 @@ class SiteInfoPermissionItem : public QWidget
     Q_OBJECT
 
 public:
-    enum Type {
-        Browser   = 0,
-        Feature   = 1,
-        Attribute = 2,
-    };
-    Q_ENUM(Type);
-
-    explicit SiteInfoPermissionItem(const SiteSettingsManager::PageOptions &a_option, const SiteSettingsManager::Permission &a_permission, QWidget* parent = nullptr);
-    explicit SiteInfoPermissionItem(const QWebEngineSettings::WebAttribute &a_attribute, const SiteSettingsManager::Permission &a_permission, QWidget* parent = nullptr);
-    explicit SiteInfoPermissionItem(const QWebEnginePage::Feature &a_feature, const SiteSettingsManager::Permission &a_permission, QWidget* parent = nullptr);
+    explicit SiteInfoPermissionItem(const SiteSettingsManager::Permission &a_permission, QWidget* parent = nullptr);
     ~SiteInfoPermissionItem();
 
     bool hasOptionAsk() const;
@@ -54,17 +45,20 @@ public:
     SiteSettingsManager::Permission permission() const;
     QString sqlColumn();
 
+    void setAttribute(const QWebEngineSettings::WebAttribute& attribute);
+    void setFeature(const QWebEnginePage::Feature &feature);
+    void setOption(const SiteSettingsManager::PageOptions &option);
+
     void setHasOptionAsk(bool hasAsk);
     void setHasOptionDefault(bool hasDefault);
-    void setPermission(SiteSettingsManager::Permission permission);
 
 private:
+    void setPermission(const SiteSettingsManager::Permission permission);
+    void setDefaultPermission(SiteSettingsManager::Permission permission);
+
     bool m_hasOptionAsk;
     bool m_hasOptionDefault;
-    SiteSettingsManager::PageOptions m_option;
-    QWebEngineSettings::WebAttribute m_attribute;
-    QWebEnginePage::Feature m_feature;
-    Type m_type;
+    QString m_sqlColumn;
 
 private:
     QScopedPointer<Ui::SiteInfoPermissionItem> m_ui;

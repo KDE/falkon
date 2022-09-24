@@ -62,6 +62,29 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     supportedFeatures.append(QWebEnginePage::MouseLock);
     supportedFeatures.append(QWebEnginePage::DesktopVideoCapture);
     supportedFeatures.append(QWebEnginePage::DesktopAudioVideoCapture);
+
+
+    everythingSql = QSL("SELECT ");
+
+    for (int i = 0; i < supportedAttribute.size(); ++i) {
+        if (i > 0) {
+            everythingSql.append(QSL(", "));
+        }
+        everythingSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
+    }
+
+    for (int i = 0; i < supportedFeatures.size(); ++i) {
+        everythingSql.append(QSL(", "));
+        everythingSql.append(featureToSqlColumn(supportedFeatures[i]));
+    }
+
+    everythingSql.append(QSL(", "));
+    everythingSql.append(optionToSqlColumn(poAllowCookies));
+
+    everythingSql.append(QSL(", "));
+    everythingSql.append(optionToSqlColumn(poZoomLevel));
+
+    everythingSql.append(QSL(" FROM site_settings WHERE server=?"));
 }
 
 SiteSettingsManager::~SiteSettingsManager() noexcept
@@ -99,7 +122,7 @@ void SiteSettingsManager::loadSettings()
 
 
     settings.beginGroup("Site-Settings-Default-Features");
-    for (auto &feature : qAsConst(supportedFeatures)) {
+    for (const auto &feature : qAsConst(supportedFeatures)) {
         defaultFeatures[feature] = intToPermission(settings.value(featureToSqlColumn(feature), Ask).toInt());
     }
     settings.endGroup();
@@ -501,4 +524,32 @@ QList<QWebEngineSettings::WebAttribute> SiteSettingsManager::getSupportedAttribu
 QList<QWebEnginePage::Feature> SiteSettingsManager::getSupportedFeatures() const
 {
     return supportedFeatures;
+}
+
+SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url)
+{
+    SiteSettings siteSettings;
+    int i;
+
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.prepare(everythingSql);
+    query.addBindValue(url.host());
+    query.exec();
+
+    if (query.next()) {
+        Permission perm;
+        for (i = 0; i < supportedAttribute.size(); ++i) {
+            perm = intToPermission(query.value(i).toInt());
+            siteSettings.attributes[supportedAttribute[i]] = perm;
+        }
+        for (i = 0; i < supportedFeatures.size(); ++i) {
+            perm = intToPermission(query.value(i + supportedAttribute.size()).toInt());
+            siteSettings.features[supportedFeatures[i]] = perm;
+        }
+        perm = intToPermission(query.value(supportedAttribute.size() + supportedFeatures.size()).toInt());
+        siteSettings.AllowCookies = perm;
+        siteSettings.ZoomLevel = query.value(supportedAttribute.size() + supportedFeatures.size() + 1).toInt();
+    }
+
+    return siteSettings;
 }
