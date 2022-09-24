@@ -529,7 +529,7 @@ QList<QWebEnginePage::Feature> SiteSettingsManager::getSupportedFeatures() const
 SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url, bool privateMode)
 {
     SiteSettings siteSettings;
-    int i;
+    int index = 0;
 
     QSqlQuery query(SqlDatabase::instance()->database());
     query.prepare(everythingSql.arg(sqlTable(privateMode)));
@@ -538,17 +538,16 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
 
     if (query.next()) {
         Permission perm;
-        for (i = 0; i < supportedAttribute.size(); ++i) {
-            perm = intToPermission(query.value(i).toInt());
+        for (int i = 0; i < supportedAttribute.size(); ++i, ++index) {
+            perm = intToPermission(query.value(index).toInt());
             siteSettings.attributes[supportedAttribute[i]] = perm;
         }
-        for (i = 0; i < supportedFeatures.size(); ++i) {
-            perm = intToPermission(query.value(i + supportedAttribute.size()).toInt());
+        for (int i = 0; i < supportedFeatures.size(); ++i, ++index) {
+            perm = intToPermission(query.value(index).toInt());
             siteSettings.features[supportedFeatures[i]] = perm;
         }
-        perm = intToPermission(query.value(supportedAttribute.size() + supportedFeatures.size()).toInt());
-        siteSettings.AllowCookies = perm;
-        siteSettings.ZoomLevel = query.value(supportedAttribute.size() + supportedFeatures.size() + 1).toInt();
+        siteSettings.AllowCookies = intToPermission(query.value(index++).toInt());
+        siteSettings.ZoomLevel = query.value(index++).toInt();
     }
 
     return siteSettings;

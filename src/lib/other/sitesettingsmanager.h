@@ -47,8 +47,8 @@ public:
 
     struct SiteSettings
     {
-        Permission AllowCookies;
-        int ZoomLevel;
+        Permission AllowCookies = Default;
+        int ZoomLevel = -1;
         QMap<QWebEngineSettings::WebAttribute, Permission> attributes; /* Enable disable soem feature eg. Javascript, Images etc */
         QMap<QWebEnginePage::Feature, Permission> features; /* HTML permissions */
         QString server;
