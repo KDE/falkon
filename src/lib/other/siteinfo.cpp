@@ -342,7 +342,7 @@ SiteInfoPermissionItem* SiteInfo::addPermissionOption(SiteSettingsManager::Permi
 
 void SiteInfo::addSiteSettings()
 {
-    auto siteSettings = mApp->siteSettingsManager()->getSiteSettings(m_baseUrl);
+    auto siteSettings = mApp->siteSettingsManager()->getSiteSettings(m_baseUrl, mApp->isPrivate());
     // Attributes
     for (const auto &attribute : mApp->siteSettingsManager()->getSupportedAttribute()) {
         SiteInfoPermissionItem *item = addPermissionOption(siteSettings.attributes[attribute]);

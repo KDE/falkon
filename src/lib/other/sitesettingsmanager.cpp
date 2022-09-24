@@ -51,7 +51,7 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
         attributesSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
     }
 
-    attributesSql.append(QSL(" FROM site_settings WHERE server=?"));
+    attributesSql.append(QSL(" FROM %1 WHERE server=?").arg(sqlTable()));
 
 
     supportedFeatures.append(QWebEnginePage::Notifications);
@@ -84,7 +84,7 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     everythingSql.append(QSL(", "));
     everythingSql.append(optionToSqlColumn(poZoomLevel));
 
-    everythingSql.append(QSL(" FROM site_settings WHERE server=?"));
+    everythingSql.append(QSL(" FROM %1 WHERE server=?"));
 }
 
 SiteSettingsManager::~SiteSettingsManager() noexcept
@@ -192,12 +192,12 @@ void SiteSettingsManager::setOption(const QString& column, const QUrl& url, cons
         return;
     }
 
-    auto job = new SqlQueryJob(QSL("UPDATE site_settings SET %1=? WHERE server=?").arg(column), this);
+    auto job = new SqlQueryJob(QSL("UPDATE %2 SET %1=? WHERE server=?").arg(column, sqlTable()), this);
     job->addBindValue(value);
     job->addBindValue(url.host());
     connect(job, &SqlQueryJob::finished, this, [=]() {
         if (job->numRowsAffected() == 0) {
-            auto job = new SqlQueryJob(QSL("INSERT INTO site_settings (server, %1) VALUES (?,?)").arg(column), this);
+            auto job = new SqlQueryJob(QSL("INSERT INTO %2 (server, %1) VALUES (?,?)").arg(column, sqlTable()), this);
             job->addBindValue(url.host());
             job->addBindValue(value);
             job->start();
@@ -228,7 +228,7 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare(QSL("SELECT %1 FROM site_settings WHERE server=?").arg(column));
+    query.prepare(QSL("SELECT %1 FROM %2 WHERE server=?").arg(column, sqlTable()));
     query.addBindValue(url.host());
     query.exec();
 
@@ -526,13 +526,13 @@ QList<QWebEnginePage::Feature> SiteSettingsManager::getSupportedFeatures() const
     return supportedFeatures;
 }
 
-SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url)
+SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url, bool privateMode)
 {
     SiteSettings siteSettings;
     int i;
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare(everythingSql);
+    query.prepare(everythingSql.arg(sqlTable(privateMode)));
     query.addBindValue(url.host());
     query.exec();
 
@@ -552,4 +552,19 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
     }
 
     return siteSettings;
+}
+
+QString SiteSettingsManager::sqlTable(bool privateMode)
+{
+    if (privateMode) {
+        return QSL("site_settings_private");
+    }
+    else {
+        return QSL("site_settings");
+    }
+}
+
+QString SiteSettingsManager::sqlTable()
+{
+    return sqlTable(mApp->isPrivate());
 }
