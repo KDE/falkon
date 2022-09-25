@@ -601,6 +601,7 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
         siteSettings.AllowCookies = intToPermission(query.value(index++).toInt());
         siteSettings.ZoomLevel = query.value(index++).toInt();
     }
+    siteSettings.server = url.host();
 
     return siteSettings;
 }

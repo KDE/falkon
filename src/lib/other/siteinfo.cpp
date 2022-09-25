@@ -375,5 +375,7 @@ void SiteInfo::saveSiteSettings()
 
     siteSettings.server = m_baseUrl.host();
 
-    mApp->siteSettingsManager()->setSiteSettings(siteSettings);
+    if (!(siteSettings == mApp->siteSettingsManager()->getSiteSettings(m_baseUrl, mApp->isPrivate()))) {
+        mApp->siteSettingsManager()->setSiteSettings(siteSettings);
+    }
 }

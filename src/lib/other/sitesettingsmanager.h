@@ -52,6 +52,25 @@ public:
         QMap<QWebEngineSettings::WebAttribute, Permission> attributes; /* Enable disable soem feature eg. Javascript, Images etc */
         QMap<QWebEnginePage::Feature, Permission> features; /* HTML permissions */
         QString server;
+        bool operator==(const SiteSettings &other) const {
+            for (auto it = attributes.begin(); it != attributes.end(); ++it) {
+                if (it.value() != other.attributes[it.key()]) {
+                    return false;
+                }
+            }
+            for (auto it = features.begin(); it != features.end(); ++it) {
+                if (it.value() != other.features[it.key()]) {
+                    return false;
+                }
+            }
+            if ((AllowCookies != other.AllowCookies)
+                || (ZoomLevel != other.ZoomLevel)
+                || (server != other.server)
+            ) {
+                return false;
+            }
+            return true;
+        }
     };
 
     explicit SiteSettingsManager(QObject *parent = 0);
