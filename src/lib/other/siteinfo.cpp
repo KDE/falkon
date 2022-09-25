@@ -343,13 +343,13 @@ SiteInfoPermissionItem* SiteInfo::addPermissionOption(SiteSettingsManager::Permi
 void SiteInfo::addSiteSettings()
 {
     auto siteSettings = mApp->siteSettingsManager()->getSiteSettings(m_baseUrl, mApp->isPrivate());
-    // Attributes
-    for (const auto &attribute : mApp->siteSettingsManager()->getSupportedAttribute()) {
+    const auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
+    for (const auto &attribute : supportedAttribute) {
         SiteInfoPermissionItem *item = addPermissionOption(siteSettings.attributes[attribute]);
         item->setAttribute(attribute);
     }
-    // Permissions
-    for (const auto &feature : mApp->siteSettingsManager()->getSupportedFeatures()) {
+    const auto supportedFeatures = mApp->siteSettingsManager()->getSupportedFeatures();
+    for (const auto &feature : supportedFeatures) {
         SiteInfoPermissionItem *item = addPermissionOption(siteSettings.features[feature]);
         item->setFeature(feature);
     }
@@ -357,10 +357,23 @@ void SiteInfo::addSiteSettings()
 
 void SiteInfo::saveSiteSettings()
 {
-    // Save permissions
-    // This is a nutjob to do it this way, totaly inefficient and stupid, hope it will work at first.
-    for (int i = 0; i < ui->listPermissions->count(); ++i) {
-        auto* item = static_cast<SiteInfoPermissionItem*>(ui->listPermissions->itemWidget(ui->listPermissions->item(i)));
-        mApp->siteSettingsManager()->setOption(item->sqlColumn(), m_baseUrl, item->permission());
+    SiteSettings siteSettings;
+    int index = 0;
+    auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
+    auto supportedFeatures = mApp->siteSettingsManager()->getSupportedFeatures();
+
+    for (int i = 0; i < supportedAttribute.size(); ++i, ++index) {
+        auto* item = static_cast<SiteInfoPermissionItem*>(ui->listPermissions->itemWidget(ui->listPermissions->item(index)));
+        siteSettings.attributes[supportedAttribute[i]] = item->permission();
     }
+    for (int i = 0; i < supportedFeatures.size(); ++i, ++index) {
+        auto* item = static_cast<SiteInfoPermissionItem*>(ui->listPermissions->itemWidget(ui->listPermissions->item(index)));
+        siteSettings.features[supportedFeatures[i]] = item->permission();
+    }
+    siteSettings.AllowCookies = SiteSettingsManager::Default;
+    siteSettings.ZoomLevel = -1;
+
+    siteSettings.server = m_baseUrl.host();
+
+    mApp->siteSettingsManager()->setSiteSettings(siteSettings);
 }

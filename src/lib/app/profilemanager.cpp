@@ -343,7 +343,7 @@ void ProfileManager::updateDatabase()
                 "id INTEGER PRIMARY KEY,"
                 "server TEXT NOT NULL,"
 
-                "zoom_level INTEGER DEFAULT 0,"
+                "zoom_level INTEGER DEFAULT -1,"
                 "allow_cookies INTEGER DEFAULT 0,"
 
                 "wa_autoload_images INTEGER DEFAULT 0,"

@@ -42,6 +42,7 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     supportedAttribute.append(QWebEngineSettings::PlaybackRequiresUserGesture);
     supportedAttribute.append(QWebEngineSettings::WebRTCPublicInterfacesOnly);
 
+    /* Select SQL for QtWE Attributes */
     attributesSql = QSL("SELECT ");
 
     for (int i = 0; i < supportedAttribute.size(); ++i) {
@@ -64,6 +65,7 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     supportedFeatures.append(QWebEnginePage::DesktopAudioVideoCapture);
 
 
+    /* Select SQL for SiteSettings */
     everythingSql = QSL("SELECT ");
 
     for (int i = 0; i < supportedAttribute.size(); ++i) {
@@ -85,6 +87,56 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     everythingSql.append(optionToSqlColumn(poZoomLevel));
 
     everythingSql.append(QSL(" FROM %1 WHERE server=?"));
+
+
+    /* Insert SQL for SiteSettings */
+    everythingInsertSql = QSL("INSERT INTO %1 (");
+    for (int i = 0; i < supportedAttribute.size(); ++i) {
+        everythingInsertSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
+        everythingInsertSql.append(QSL(", "));
+    }
+    for (int i = 0; i < supportedFeatures.size(); ++i) {
+        everythingInsertSql.append(featureToSqlColumn(supportedFeatures[i]));
+        everythingInsertSql.append(QSL(", "));
+    }
+
+    everythingInsertSql.append(optionToSqlColumn(poAllowCookies));
+    everythingInsertSql.append(QSL(", "));
+
+    everythingInsertSql.append(optionToSqlColumn(poZoomLevel));
+
+    everythingInsertSql.append(QSL(", server"));
+
+    everythingInsertSql.append(QSL(") Values ("));
+    /* Index = sum(server, numberOfAttributes, numberOfFeatures, cookies, zoom) */
+    int index = 1 + supportedAttribute.size() + supportedFeatures.size() + 2;
+    for (int i = 0; i < index; ++i) {
+        if (i > 0) {
+            everythingInsertSql.append(QSL(", "));
+        }
+        everythingInsertSql.append(QSL("?"));
+    }
+    everythingInsertSql.append(QSL(")"));
+
+
+    /* Update SQL for SiteSettings */
+    everythingUpdateSql = QSL("UPDATE %1 SET ");
+    for (int i = 0; i < supportedAttribute.size(); ++i) {
+        everythingUpdateSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
+        everythingUpdateSql.append(QSL("=?, "));
+    }
+    for (int i = 0; i < supportedFeatures.size(); ++i) {
+        everythingUpdateSql.append(featureToSqlColumn(supportedFeatures[i]));
+        everythingUpdateSql.append(QSL("=?, "));
+    }
+
+    everythingUpdateSql.append(optionToSqlColumn(poAllowCookies));
+    everythingUpdateSql.append(QSL("=?, "));
+
+    everythingUpdateSql.append(optionToSqlColumn(poZoomLevel));
+    everythingUpdateSql.append(QSL("=? "));
+
+    everythingUpdateSql.append(QSL(" WHERE server=?"));
 }
 
 SiteSettingsManager::~SiteSettingsManager() noexcept
@@ -551,6 +603,40 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
     }
 
     return siteSettings;
+}
+
+void SiteSettingsManager::setSiteSettings(SiteSettingsManager::SiteSettings& siteSettings)
+{
+    auto job = new SqlQueryJob(everythingUpdateSql.arg(sqlTable()), this);
+
+    for (int i = 0; i < supportedAttribute.size(); ++i) {
+        job->addBindValue(siteSettings.attributes[supportedAttribute[i]]);
+    }
+    for (int i = 0; i < supportedFeatures.size(); ++i) {
+        job->addBindValue(siteSettings.features[supportedFeatures[i]]);
+    }
+    job->addBindValue(siteSettings.AllowCookies);
+    job->addBindValue(siteSettings.ZoomLevel);
+    job->addBindValue(siteSettings.server);
+
+    connect(job, &SqlQueryJob::finished, this, [=]() {
+        if (job->numRowsAffected() == 0) {
+            auto job = new SqlQueryJob(everythingInsertSql.arg(sqlTable()), this);
+
+            for (int i = 0; i < supportedAttribute.size(); ++i) {
+                job->addBindValue(siteSettings.attributes[supportedAttribute[i]]);
+            }
+            for (int i = 0; i < supportedFeatures.size(); ++i) {
+                job->addBindValue(siteSettings.features[supportedFeatures[i]]);
+            }
+            job->addBindValue(siteSettings.AllowCookies);
+            job->addBindValue(siteSettings.ZoomLevel);
+            job->addBindValue(siteSettings.server);
+
+            job->start();
+        }
+    });
+    job->start();
 }
 
 QString SiteSettingsManager::sqlTable(bool privateMode)
