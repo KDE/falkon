@@ -84,6 +84,11 @@ public:
     void setJavascript(const QUrl &url, const int value);
     void setImages(const QUrl &url, const int value);
 
+    Permission getPermission(const QString &column, const QString &host);
+    Permission getPermission(const PageOptions option, const QString &host);
+    Permission getPermission(const QWebEnginePage::Feature &feature, const QString &host);
+    Permission getPermission(const QWebEngineSettings::WebAttribute &attribute, const QString &host);
+
     Permission getPermission(const QString &column, const QUrl &url);
     Permission getPermission(const PageOptions option, const QUrl &url);
     Permission getPermission(const QWebEnginePage::Feature &feature, const QUrl &url);

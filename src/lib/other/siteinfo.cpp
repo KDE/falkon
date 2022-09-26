@@ -353,6 +353,8 @@ void SiteInfo::addSiteSettings()
         SiteInfoPermissionItem *item = addPermissionOption(siteSettings.features[feature]);
         item->setFeature(feature);
     }
+    SiteInfoPermissionItem *item = addPermissionOption(siteSettings.AllowCookies);
+    item->setOption(SiteSettingsManager::poAllowCookies);
 }
 
 void SiteInfo::saveSiteSettings()
@@ -370,7 +372,8 @@ void SiteInfo::saveSiteSettings()
         auto* item = static_cast<SiteInfoPermissionItem*>(ui->listPermissions->itemWidget(ui->listPermissions->item(index)));
         siteSettings.features[supportedFeatures[i]] = item->permission();
     }
-    siteSettings.AllowCookies = SiteSettingsManager::Default;
+    auto* item = static_cast<SiteInfoPermissionItem*>(ui->listPermissions->itemWidget(ui->listPermissions->item(index++)));
+    siteSettings.AllowCookies = item->permission();
     siteSettings.ZoomLevel = -1;
 
     siteSettings.server = m_baseUrl.host();

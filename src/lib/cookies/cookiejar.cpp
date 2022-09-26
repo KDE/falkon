@@ -21,6 +21,7 @@
 #include "autosaver.h"
 #include "settings.h"
 #include "qztools.h"
+#include "sitesettingsmanager.h"
 
 #include <QNetworkCookie>
 #include <QWebEngineProfile>
@@ -134,24 +135,20 @@ void CookieJar::slotCookieRemoved(const QNetworkCookie &cookie)
 
 bool CookieJar::cookieFilter(const QWebEngineCookieStore::FilterRequest &request) const
 {
-    if (!m_allowCookies) {
-        bool result = listMatchesDomain(m_whitelist, request.origin.host());
-        if (!result) {
+    auto result = mApp->siteSettingsManager()->getPermission(SiteSettingsManager::poAllowCookies, request.origin);
+
+    if (!m_allowCookies && (result != SiteSettingsManager::Allow)) {
 #ifdef COOKIE_DEBUG
-            qDebug() << "not in whitelist" << request.origin;
+        qDebug() << "Cookies not allowed" << request.origin;
 #endif
-            return false;
-        }
+        return false;
     }
 
-    if (m_allowCookies) {
-        bool result = listMatchesDomain(m_blacklist, request.origin.host());
-        if (result) {
+    if (m_allowCookies && (result == SiteSettingsManager::Deny)) {
 #ifdef COOKIE_DEBUG
-            qDebug() << "found in blacklist" << request.origin.host();
+        qDebug() << "Cookies denied" << request.origin;
 #endif
-            return false;
-        }
+        return false;
     }
 
     if (m_filterThirdParty && request.thirdParty) {
@@ -168,24 +165,20 @@ bool CookieJar::rejectCookie(const QString &domain, const QNetworkCookie &cookie
 {
     Q_UNUSED(domain)
 
-    if (!m_allowCookies) {
-        bool result = listMatchesDomain(m_whitelist, cookieDomain);
-        if (!result) {
+    auto result = mApp->siteSettingsManager()->getPermission(SiteSettingsManager::poAllowCookies, cookieDomain);
+
+    if (!m_allowCookies && (result != SiteSettingsManager::Allow)) {
 #ifdef COOKIE_DEBUG
-            qDebug() << "not in whitelist" << cookie;
+        qDebug() << "Cookies not allowed" << cookie;
 #endif
-            return true;
-        }
+        return false;
     }
 
-    if (m_allowCookies) {
-        bool result = listMatchesDomain(m_blacklist, cookieDomain);
-        if (result) {
+    if (m_allowCookies && (result == SiteSettingsManager::Deny)) {
 #ifdef COOKIE_DEBUG
-            qDebug() << "found in blacklist" << cookie;
+        qDebug() << "Cookies denied" << cookie;
 #endif
-            return true;
-        }
+        return false;
     }
 
 #ifdef QTWEBENGINE_DISABLED

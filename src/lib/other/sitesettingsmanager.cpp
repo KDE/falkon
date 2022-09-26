@@ -273,7 +273,7 @@ void SiteSettingsManager::setOption(const QWebEngineSettings::WebAttribute& attr
     setOption(webAttributeToSqlColumn(attribute), url, value);
 }
 
-SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString &column, const QUrl& url)
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString& column, const QString& host)
 {
     if (column.isEmpty()) {
         return Deny;
@@ -281,7 +281,7 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString
 
     QSqlQuery query(SqlDatabase::instance()->database());
     query.prepare(QSL("SELECT %1 FROM %2 WHERE server=?").arg(column, sqlTable()));
-    query.addBindValue(url.host());
+    query.addBindValue(host);
     query.exec();
 
     if (query.next()) {
@@ -293,19 +293,39 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString
     return Default;
 }
 
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSettingsManager::PageOptions option, const QString& host)
+{
+    return getPermission(optionToSqlColumn(option), host);
+}
+
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEnginePage::Feature& feature, const QString& host)
+{
+    return getPermission(featureToSqlColumn(feature), host);
+}
+
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEngineSettings::WebAttribute& attribute, const QString& host)
+{
+    return getPermission(webAttributeToSqlColumn(attribute), host);
+}
+
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString &column, const QUrl& url)
+{
+    return getPermission(column, url.host());
+}
+
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSettingsManager::PageOptions option, const QUrl& url)
 {
-    return getPermission(optionToSqlColumn(option), url);
+    return getPermission(optionToSqlColumn(option), url.host());
 }
 
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEnginePage::Feature& feature, const QUrl& url)
 {
-    return getPermission(featureToSqlColumn(feature), url);
+    return getPermission(featureToSqlColumn(feature), url.host());
 }
 
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEngineSettings::WebAttribute& attribute, const QUrl& url)
 {
-    return getPermission(webAttributeToSqlColumn(attribute), url);
+    return getPermission(webAttributeToSqlColumn(attribute), url.host());
 }
 
 QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOptions &option)
@@ -324,9 +344,16 @@ QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOp
 SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const SiteSettingsManager::PageOptions& option)
 {
     switch (option) {
+        case poAllowCookies: {
+            Settings settings;
+            settings.beginGroup("Cookie-Settings");
+            auto defaultCookies = settings.value("allowCookies", true).toBool() ? Allow : Deny;
+            settings.endGroup();
+
+            return defaultCookies;
+        }
         // so far not implemented
         case poZoomLevel:
-        case poAllowCookies:
         default:
             qWarning() << "Unknown option:" << option;
             return Deny;
