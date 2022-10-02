@@ -1,0 +1,256 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+# Vasilis Tsivikis <vasitsiv.dev@gmail.com>, 2017
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Language: el_GR\n"
+"X-Qt-Contexts: true\n"
+
+#: sbi_imagesicon.cpp:34
+msgctxt "SBI_ImagesIcon|"
+msgid "Modify images loading settings per-site and globally"
+msgstr "Τροποποίηση ρυθμίσεων φόρτωσης εικόνων ανά σελίδα και γενικά"
+
+#: sbi_imagesicon.cpp:58
+msgctxt "SBI_ImagesIcon|"
+msgid "Current Page Settings"
+msgstr "Τρέχουσες ρυθμίσεις σελίδας"
+
+#: sbi_imagesicon.cpp:61
+msgctxt "SBI_ImagesIcon|"
+msgid "Disable loading images (temporarily)"
+msgstr "Απενεργοποίηση φόρτωσης εικόνων (προσωρινά)"
+
+#: sbi_imagesicon.cpp:64
+msgctxt "SBI_ImagesIcon|"
+msgid "Enable loading images (temporarily)"
+msgstr "Ενεργοποίηση φόρτωσης εικόνων (προσωρινά)"
+
+#: sbi_imagesicon.cpp:68
+msgctxt "SBI_ImagesIcon|"
+msgid "Global Settings"
+msgstr "Γενικές ρυθμίσεις"
+
+#: sbi_imagesicon.cpp:70
+msgctxt "SBI_ImagesIcon|"
+msgid "Automatically load images"
+msgstr "Αυτόματη φόρτωση εικόνων"
+
+#: sbi_javascripticon.cpp:34
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Modify JavaScript settings per-site and globally"
+msgstr "Τροποποίηση ρυθμίσεων JavaScript ανά σελίδα και γενικά"
+
+#: sbi_javascripticon.cpp:51
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Current Page Settings"
+msgstr "Τρέχουσες ρυθμίσεις σελίδας"
+
+#: sbi_javascripticon.cpp:54
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Disable JavaScript (temporarily)"
+msgstr "Απενεργοποίηση JavaScript (προσωρινά)"
+
+#: sbi_javascripticon.cpp:57
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Enable JavaScript (temporarily)"
+msgstr "Ενεργοποίηση JavaScript (προσωρινά)"
+
+#: sbi_javascripticon.cpp:66
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Global Settings"
+msgstr "Γενικές ρυθμίσεις"
+
+#: sbi_javascripticon.cpp:67
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Manage JavaScript settings"
+msgstr "Διαχείριση ρυθμίσεων JavaScript"
+
+#: sbi_networkicon.cpp:65
+msgctxt "SBI_NetworkIcon|"
+msgid "Proxy Configuration"
+msgstr "Ρυθμίσεις proxy"
+
+#: sbi_networkicon.cpp:67
+msgctxt "SBI_NetworkIcon|"
+msgid "Select proxy"
+msgstr "Επιλογή proxy"
+
+#: sbi_networkicon.cpp:81
+msgctxt "SBI_NetworkIcon|"
+msgid "Empty"
+msgstr "Άδειο"
+
+#: sbi_networkicon.cpp:85
+msgctxt "SBI_NetworkIcon|"
+msgid "Manage proxies"
+msgstr "Διαχείριση των proxy"
+
+#: sbi_networkicon.cpp:98
+#, qt-format
+msgctxt "SBI_NetworkIcon|"
+msgid ""
+"Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
+"><br/><b>Proxy:</b><br/>%2"
+msgstr ""
+"Εμφανίζει την κατάσταση του δικτύου και διαχειρίζεται το proxy<br/><br/"
+"><b>Δίκτυο:</b><br/>%1<br/><br/><b>Proxy:</b><br/>%2"
+
+#: sbi_networkicon.cpp:101
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected"
+msgstr "Έγινε σύνδεση"
+
+#: sbi_networkicon.cpp:104
+msgctxt "SBI_NetworkIcon|"
+msgid "Offline"
+msgstr "Εκτός σύνδεσης"
+
+#: sbi_networkicon.cpp:109
+msgctxt "SBI_NetworkIcon|"
+msgid "System proxy"
+msgstr "Proxy συστήματος"
+
+#: sbi_networkicon.cpp:113
+msgctxt "SBI_NetworkIcon|"
+msgid "No proxy"
+msgstr "Κανένα proxy"
+
+#: sbi_networkicon.cpp:117
+msgctxt "SBI_NetworkIcon|"
+msgid "User defined"
+msgstr "Καθορισμένο από το Χρήστη"
+
+#: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Add proxy"
+msgstr "Προσθήκη proxy"
+
+#: sbi_networkicondialog.cpp:57
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Name of proxy:"
+msgstr "Ονομασία του proxy:"
+
+#: sbi_networkicondialog.cpp:70
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Remove current proxy"
+msgstr "Αφαίρεση του τρέχων proxy"
+
+#: sbi_networkicondialog.cpp:70
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Are you sure you want to remove current proxy?"
+msgstr "Είστε σίγουρος-η ότι θέλετε να αφαιρέσετε τον τρέχοντα διαμεσολαβητή;"
+
+#: sbi_networkicondialog.ui:14
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Proxy Manager"
+msgstr "Διαχειριστής proxy"
+
+#: sbi_networkicondialog.ui:28
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Select proxy: "
+msgstr "Επιλογή proxy:"
+
+#: sbi_networkicondialog.ui:45
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Remove proxy"
+msgstr "Αφαίρεση proxy"
+
+#: sbi_networkicondialog.ui:69
+msgctxt "SBI_NetworkIconDialog|"
+msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
+msgstr ""
+"Δεν υπάρχουν proxy. Μπορείτε να προσθέσετε proxy κάνοντας κλικ στο κουμπί "
+"<b>Προσθήκη</b>."
+
+#: sbi_networkicondialog.ui:104
+msgctxt "SBI_NetworkIconDialog|"
+msgid "All changes must be saved with <b>Save</b> button."
+msgstr ""
+"Όλες  οι αλλαγές πρέπει να αποθηκευτούν με το κουμπί <b>Αποθήκευση</b>."
+
+#: sbi_proxywidget.ui:14
+msgctxt "SBI_ProxyWidget|"
+msgid "Form"
+msgstr "Φόρμα"
+
+#: sbi_proxywidget.ui:23
+msgctxt "SBI_ProxyWidget|"
+msgid "HTTP"
+msgstr "HTTP"
+
+#: sbi_proxywidget.ui:28
+msgctxt "SBI_ProxyWidget|"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+#: sbi_proxywidget.ui:39
+msgctxt "SBI_ProxyWidget|"
+msgid "Port:"
+msgstr "Θύρα:"
+
+#: sbi_proxywidget.ui:76
+msgctxt "SBI_ProxyWidget|"
+msgid "Username:"
+msgstr "Όνομα χρήστη:"
+
+#: sbi_proxywidget.ui:86
+msgctxt "SBI_ProxyWidget|"
+msgid "Password:"
+msgstr "Κωδικός:"
+
+#: sbi_proxywidget.ui:111
+msgctxt "SBI_ProxyWidget|"
+msgid "S&ystem proxy configuration"
+msgstr "Διαμόρφωση του διαμεσολαβητή &συστήματος"
+
+#: sbi_proxywidget.ui:118
+msgctxt "SBI_ProxyWidget|"
+msgid "&Manual configuration"
+msgstr "&Χειροκίνητη διαμόρφωση"
+
+#: sbi_settingsdialog.ui:14
+msgctxt "SBI_SettingsDialog|"
+msgid "StatusBar Icons"
+msgstr "Εικονίδια μπάρας κατάστασης"
+
+#: sbi_settingsdialog.ui:48
+msgctxt "SBI_SettingsDialog|"
+msgid "<h3>StatusBar Icons</h3>"
+msgstr "<h3>Εικονίδια μπάρας κατάστασης</h3>"
+
+#: sbi_settingsdialog.ui:70
+msgctxt "SBI_SettingsDialog|"
+msgid "These icons will be displayed in statusbar:"
+msgstr "Αυτά τα εικονίδια θα εμφανίζονται στην μπάρα κατάστασης:"
+
+#: sbi_settingsdialog.ui:97
+msgctxt "SBI_SettingsDialog|"
+msgid "Images Icon"
+msgstr "Εικονίδιο εικόνων"
+
+#: sbi_settingsdialog.ui:104
+msgctxt "SBI_SettingsDialog|"
+msgid "JavaScript Icon"
+msgstr "Εικονίδιο JavaScript"
+
+#: sbi_settingsdialog.ui:111
+msgctxt "SBI_SettingsDialog|"
+msgid "Network Icon"
+msgstr "Εικονίδιο δικτύου"
+
+#: sbi_settingsdialog.ui:118
+msgctxt "SBI_SettingsDialog|"
+msgid "Zoom widget"
+msgstr "Γραφικό στοιχείο εστίασης"
+
+#: sbi_zoomwidget.cpp:48
+#, qt-format
+msgctxt "SBI_ZoomWidget|"
+msgid "Zoom: %1%"
+msgstr "Εστίαση: %1%"

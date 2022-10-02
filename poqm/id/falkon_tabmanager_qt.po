@@ -1,0 +1,198 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+# Widya Walesa <walecha99@gmail.com>, 2017.
+# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2022-09-27 18:12+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+"X-Qt-Contexts: true\n"
+
+#: tabmanagersettings.ui:14
+msgctxt "TabManagerSettings|"
+msgid "Tab Manager Settings"
+msgstr "Pengaturan Pengelola Tab"
+
+#: tabmanagersettings.ui:20
+msgctxt "TabManagerSettings|"
+msgid "View"
+msgstr "Tampilan"
+
+#: tabmanagersettings.ui:26
+msgctxt "TabManagerSettings|"
+msgid "Please select view type:"
+msgstr "Silakan pilih jenis tampilan"
+
+#: tabmanagersettings.ui:33
+msgctxt "TabManagerSettings|"
+msgid "SideBar"
+msgstr "Bilah Sisi"
+
+#: tabmanagersettings.ui:40
+msgctxt "TabManagerSettings|"
+msgid "Window"
+msgstr "Jendela"
+
+#: tabmanagersettings.ui:47
+msgctxt "TabManagerSettings|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> The "
+"&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
+"p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Catatan:</span> "
+"Jenis &quot;Window&quot; sangat disarankan untuk mengelola banyak jendela/"
+"tab.</p></body></html>"
+
+#: tabmanagersettings.ui:60
+msgctxt "TabManagerSettings|"
+msgid "Use TabManager plugin as replacement for main TabBar."
+msgstr "Gunakan pengaya TabManager sebagai pengganti TabBar utama."
+
+#: tabmanagerwidget.cpp:111
+msgctxt "TabManagerWidget|"
+msgid "Local File System:"
+msgstr "Sistem File Lokal"
+
+#: tabmanagerwidget.cpp:114
+msgctxt "TabManagerWidget|"
+msgid "Falkon:"
+msgstr "Falkon:"
+
+#: tabmanagerwidget.cpp:117
+msgctxt "TabManagerWidget|"
+msgid " [FTP]"
+msgstr " [FTP]"
+
+#: tabmanagerwidget.cpp:306
+msgctxt "TabManagerWidget|"
+msgid "Group by"
+msgstr "Kelompokkan berdasarkan"
+
+#: tabmanagerwidget.cpp:307
+msgctxt "TabManagerWidget|"
+msgid "&Window"
+msgstr "&Jendela"
+
+#: tabmanagerwidget.cpp:312
+msgctxt "TabManagerWidget|"
+msgid "&Domain"
+msgstr "&Domain"
+
+#: tabmanagerwidget.cpp:317
+msgctxt "TabManagerWidget|"
+msgid "&Host"
+msgstr "&Host"
+
+#: tabmanagerwidget.cpp:325
+msgctxt "TabManagerWidget|"
+msgid "&Show side by side"
+msgstr "&Tampilkan secara berpasangan"
+
+#: tabmanagerwidget.cpp:331
+msgctxt "TabManagerWidget|"
+msgid "&Detach checked tabs"
+msgstr "&Lepas tab terpilih"
+
+#: tabmanagerwidget.cpp:332
+msgctxt "TabManagerWidget|"
+msgid "Book&mark checked tabs"
+msgstr "&Markahi tab terpilih"
+
+#: tabmanagerwidget.cpp:333
+msgctxt "TabManagerWidget|"
+msgid "&Close checked tabs"
+msgstr "&Tutup tab terpilih"
+
+#: tabmanagerwidget.cpp:334
+msgctxt "TabManagerWidget|"
+msgid "&Unload checked tabs"
+msgstr "&Tak memuat tab terpilih"
+
+#: tabmanagerwidget.cpp:586
+msgctxt "TabManagerWidget|"
+msgid "Choose folder for bookmarks:"
+msgstr "Pilih folder untuk markah:"
+
+#: tabmanagerwidget.cpp:587
+msgctxt "TabManagerWidget|"
+msgid "Bookmark Selected Tabs"
+msgstr "Markahi Tab yang Dipilih"
+
+#: tabmanagerwidget.cpp:705
+#, qt-format
+msgctxt "TabManagerWidget|"
+msgid "Window %1"
+msgstr "Jendela %1"
+
+#: tabmanagerwidget.cpp:706
+msgctxt "TabManagerWidget|"
+msgid "Double click to switch"
+msgstr "Klik Ganda untuk beralih"
+
+#: tabmanagerwidget.ui:14
+msgctxt "TabManagerWidget|"
+msgid "Tab Manager"
+msgstr "Pengelola Tab"
+
+#: tabmanagerwidgetcontroller.cpp:50
+msgctxt "TabManagerButton|"
+msgid "Tab Manager button"
+msgstr "Tombol Pengelola Tab"
+
+#: tabmanagerwidgetcontroller.cpp:67 tabmanagerwidgetcontroller.cpp:72
+#: tabmanagerwidgetcontroller.cpp:98
+msgctxt "TabManagerWidgetController|"
+msgid "Tab Manager"
+msgstr "Pengelola Tab"
+
+#: tabmanagerwidgetcontroller.cpp:99
+msgctxt "TabManagerWidgetController|"
+msgid "Show Tab Manager"
+msgstr "Tampilkan Pengelola Tab"
+
+#: tldextractor/tldextractor.cpp:260 tldextractor/tldextractor.cpp:363
+msgctxt "TLDExtractor|"
+msgid "File not found!"
+msgstr "File tidak ditemukan!"
+
+#: tldextractor/tldextractor.cpp:261
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'effective_tld_names.dat' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+"File 'effective_tld_names.dat' tidaklah ditemukan!\n"
+"Kamu bisa mengunduhnya dari '<a href=\"%1\"><b>sini</b></a>' ke salah satu "
+"alur berikut ini:\n"
+"%2"
+
+#: tldextractor/tldextractor.cpp:364
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'test_psl.txt' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+"File 'test_psl.txt' tidaklah ditemukan!\n"
+"Kamu bisa mengunduhnya dari '<a href=\"%1\"><b>sini</b></a>' ke salah satu "
+"alur berikut ini:\n"
+"%2"
+
+#~ msgctxt "TabManagerWidget|"
+#~ msgid "QupZilla:"
+#~ msgstr "QupZilla:"

@@ -1,0 +1,185 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+# Unink-Lio <unink4451@163.com>, 2017
+# Yu Hai <yohanprc@eml.cc>, 2017
+# Wu Cheng-Hong <stu2731652@gmail.com>, 2017
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Language: zh_HK\n"
+"X-Qt-Contexts: true\n"
+
+#: tabmanagersettings.ui:14
+msgctxt "TabManagerSettings|"
+msgid "Tab Manager Settings"
+msgstr "分頁管理員設定"
+
+#: tabmanagersettings.ui:20
+msgctxt "TabManagerSettings|"
+msgid "View"
+msgstr "檢視"
+
+#: tabmanagersettings.ui:26
+msgctxt "TabManagerSettings|"
+msgid "Please select view type:"
+msgstr "請選取檢視類型："
+
+#: tabmanagersettings.ui:33
+msgctxt "TabManagerSettings|"
+msgid "SideBar"
+msgstr "側邊欄"
+
+#: tabmanagersettings.ui:40
+msgctxt "TabManagerSettings|"
+msgid "Window"
+msgstr "視窗"
+
+#: tabmanagersettings.ui:47
+msgctxt "TabManagerSettings|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> The "
+"&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
+"p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">注意：</span>建議使用"
+"「視窗」類型來管理大量視窗╱分頁。</p></body></html>"
+
+#: tabmanagersettings.ui:60
+msgctxt "TabManagerSettings|"
+msgid "Use TabManager plugin as replacement for main TabBar."
+msgstr "使用分頁管理員外掛程式取代主分頁列。"
+
+#: tabmanagerwidget.cpp:111
+msgctxt "TabManagerWidget|"
+msgid "Local File System:"
+msgstr "本地檔案系統："
+
+#: tabmanagerwidget.cpp:114
+msgctxt "TabManagerWidget|"
+msgid "Falkon:"
+msgstr ""
+
+#: tabmanagerwidget.cpp:117
+msgctxt "TabManagerWidget|"
+msgid " [FTP]"
+msgstr " [FTP]"
+
+#: tabmanagerwidget.cpp:306
+msgctxt "TabManagerWidget|"
+msgid "Group by"
+msgstr "分組按照"
+
+#: tabmanagerwidget.cpp:307
+msgctxt "TabManagerWidget|"
+msgid "&Window"
+msgstr "視窗（&W）"
+
+#: tabmanagerwidget.cpp:312
+msgctxt "TabManagerWidget|"
+msgid "&Domain"
+msgstr "域名（&D）"
+
+#: tabmanagerwidget.cpp:317
+msgctxt "TabManagerWidget|"
+msgid "&Host"
+msgstr "主機（&H）"
+
+#: tabmanagerwidget.cpp:325
+msgctxt "TabManagerWidget|"
+msgid "&Show side by side"
+msgstr "並排顯示（&S）"
+
+#: tabmanagerwidget.cpp:331
+msgctxt "TabManagerWidget|"
+msgid "&Detach checked tabs"
+msgstr "所選分頁移往新視窗（&D）"
+
+#: tabmanagerwidget.cpp:332
+msgctxt "TabManagerWidget|"
+msgid "Book&mark checked tabs"
+msgstr "所選分頁加入到書籤（&M）"
+
+#: tabmanagerwidget.cpp:333
+msgctxt "TabManagerWidget|"
+msgid "&Close checked tabs"
+msgstr "關閉所選分頁（&C）"
+
+#: tabmanagerwidget.cpp:334
+msgctxt "TabManagerWidget|"
+msgid "&Unload checked tabs"
+msgstr ""
+
+#: tabmanagerwidget.cpp:586
+msgctxt "TabManagerWidget|"
+msgid "Choose folder for bookmarks:"
+msgstr "選取書籤資料夾："
+
+#: tabmanagerwidget.cpp:587
+msgctxt "TabManagerWidget|"
+msgid "Bookmark Selected Tabs"
+msgstr "所選分頁加入到書籤"
+
+#: tabmanagerwidget.cpp:705
+#, qt-format
+msgctxt "TabManagerWidget|"
+msgid "Window %1"
+msgstr "視窗%1"
+
+#: tabmanagerwidget.cpp:706
+msgctxt "TabManagerWidget|"
+msgid "Double click to switch"
+msgstr "按兩下切換"
+
+#: tabmanagerwidget.ui:14
+msgctxt "TabManagerWidget|"
+msgid "Tab Manager"
+msgstr "分頁管理員"
+
+#: tabmanagerwidgetcontroller.cpp:50
+msgctxt "TabManagerButton|"
+msgid "Tab Manager button"
+msgstr ""
+
+#: tabmanagerwidgetcontroller.cpp:67 tabmanagerwidgetcontroller.cpp:72
+#: tabmanagerwidgetcontroller.cpp:98
+msgctxt "TabManagerWidgetController|"
+msgid "Tab Manager"
+msgstr "分頁管理員"
+
+#: tabmanagerwidgetcontroller.cpp:99
+msgctxt "TabManagerWidgetController|"
+msgid "Show Tab Manager"
+msgstr "顯示分頁管理員"
+
+#: tldextractor/tldextractor.cpp:260 tldextractor/tldextractor.cpp:363
+msgctxt "TLDExtractor|"
+msgid "File not found!"
+msgstr ""
+
+#: tldextractor/tldextractor.cpp:261
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'effective_tld_names.dat' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+
+#: tldextractor/tldextractor.cpp:364
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'test_psl.txt' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+
+#~ msgctxt "TabManagerWidget|"
+#~ msgid "QupZilla:"
+#~ msgstr "QupZilla："

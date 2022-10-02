@@ -1,0 +1,294 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+# Unink-Lio <unink4451@163.com>, 2017
+# Yu Hai <yohanprc@eml.cc>, 2017
+# Wu Cheng-Hong <stu2731652@gmail.com>, 2017
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Language: zh_HK\n"
+"X-Qt-Contexts: true\n"
+
+#: fcm_dialog.cpp:76
+msgctxt "FCM_Dialog|"
+msgid "Search"
+msgstr "搜尋"
+
+#: fcm_dialog.cpp:93
+msgctxt "FCM_Dialog|"
+msgid "Confirmation"
+msgstr "確認"
+
+#: fcm_dialog.cpp:94
+msgctxt "FCM_Dialog|"
+msgid "Are you sure you want to delete all flash cookies on your computer?"
+msgstr "刪除電腦上全部Flash Cookie，確定？"
+
+#: fcm_dialog.cpp:151 fcm_dialog.cpp:152 fcm_dialog.cpp:153 fcm_dialog.cpp:154
+#: fcm_dialog.ui:73 fcm_dialog.ui:120 fcm_dialog.ui:130 fcm_dialog.ui:140
+#: fcm_dialog.ui:256
+msgctxt "FCM_Dialog|"
+msgid "<flash cookie not selected>"
+msgstr "（未選取Flash Cookie）"
+
+#: fcm_dialog.cpp:156 fcm_dialog.ui:283
+msgctxt "FCM_Dialog|"
+msgid "Remove flash cookies"
+msgstr "移除Flash Cookie"
+
+#: fcm_dialog.cpp:166 fcm_dialog.cpp:237
+msgctxt "FCM_Dialog|"
+msgid " (settings)"
+msgstr "（設定）"
+
+#: fcm_dialog.cpp:169
+msgctxt "FCM_Dialog|"
+msgid " Byte"
+msgstr "位元組"
+
+#: fcm_dialog.cpp:175
+msgctxt "FCM_Dialog|"
+msgid "Remove flash cookie"
+msgstr "移除Flash Cookie"
+
+#: fcm_dialog.cpp:241
+msgctxt "FCM_Dialog|"
+msgid " [new]"
+msgstr " [新]"
+
+#: fcm_dialog.cpp:277 fcm_dialog.cpp:305 fcm_dialog.ui:113
+msgctxt "FCM_Dialog|"
+msgid "Origin:"
+msgstr "來源："
+
+#: fcm_dialog.cpp:277 fcm_dialog.cpp:375
+msgctxt "FCM_Dialog|"
+msgid "Add to whitelist"
+msgstr "加入到白名單"
+
+#: fcm_dialog.cpp:289 fcm_dialog.cpp:317
+msgctxt "FCM_Dialog|"
+msgid "Already whitelisted!"
+msgstr "已於白名單！"
+
+#: fcm_dialog.cpp:289
+#, qt-format
+msgctxt "FCM_Dialog|"
+msgid "The server \"%1\" is already in blacklist, please remove it first."
+msgstr "伺服器「%1」現於黑名單，請先移除。"
+
+#: fcm_dialog.cpp:305 fcm_dialog.cpp:374
+msgctxt "FCM_Dialog|"
+msgid "Add to blacklist"
+msgstr "加入到黑名單"
+
+#: fcm_dialog.cpp:317
+#, qt-format
+msgctxt "FCM_Dialog|"
+msgid "The origin \"%1\" is already in whitelist, please remove it first."
+msgstr "來源「%1」現於白名單，請先移除。"
+
+#: fcm_dialog.ui:14
+msgctxt "FCM_Dialog|"
+msgid "Flash Cookies"
+msgstr "Flash Cookie"
+
+#: fcm_dialog.ui:24
+msgctxt "FCM_Dialog|"
+msgid "Stored Flash Cookies"
+msgstr "留駐的Flash Cookie"
+
+#: fcm_dialog.ui:45
+msgctxt "FCM_Dialog|"
+msgid "Find: "
+msgstr "尋找："
+
+#: fcm_dialog.ui:83
+msgctxt "FCM_Dialog|"
+msgid "Last Modified:"
+msgstr "最後修改："
+
+#: fcm_dialog.ui:96
+msgctxt "FCM_Dialog|"
+msgid "Name:"
+msgstr "名稱："
+
+#: fcm_dialog.ui:106
+msgctxt "FCM_Dialog|"
+msgid "Size:"
+msgstr "大小："
+
+#: fcm_dialog.ui:152
+msgctxt "FCM_Dialog|"
+msgid "Extracted latin1 strings:"
+msgstr "提取的latin1字串："
+
+#: fcm_dialog.ui:182
+msgctxt "FCM_Dialog|"
+msgid "These flash cookies are stored on your computer:"
+msgstr "留駐於電腦的Flash Cookie："
+
+#: fcm_dialog.ui:202
+msgctxt "FCM_Dialog|"
+msgid "Origin"
+msgstr "來源"
+
+#: fcm_dialog.ui:227
+msgctxt "FCM_Dialog|"
+msgid "Reload from disk"
+msgstr "重新從磁碟載入"
+
+#: fcm_dialog.ui:240
+msgctxt "FCM_Dialog|"
+msgid "Path:"
+msgstr "路徑："
+
+#: fcm_dialog.ui:253
+msgctxt "FCM_Dialog|"
+msgid "Click to open containing folder"
+msgstr "按下開啟存放位置"
+
+#: fcm_dialog.ui:276
+msgctxt "FCM_Dialog|"
+msgid "Remove all flash cookies"
+msgstr "移除全部Flash Cookie"
+
+#: fcm_dialog.ui:308
+msgctxt "FCM_Dialog|"
+msgid "Flash Cookies Filtering"
+msgstr "過濾Flash Cookie"
+
+#: fcm_dialog.ui:316
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
+"whitelist</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie白名單</"
+"span></p></body></html>"
+
+#: fcm_dialog.ui:348 fcm_dialog.ui:416
+msgctxt "FCM_Dialog|"
+msgid "Remove"
+msgstr "移除"
+
+#: fcm_dialog.ui:355 fcm_dialog.ui:423
+msgctxt "FCM_Dialog|"
+msgid "Add"
+msgstr "加入"
+
+#: fcm_dialog.ui:364
+msgctxt "FCM_Dialog|"
+msgid ""
+"Flash cookies from these origins will not be deleted automatically. (Also "
+"detection of them will not be notified to user.)"
+msgstr "這些來源的Flash Cookie不會被自動刪除。（偵測到也不會通知用戶。）"
+
+#: fcm_dialog.ui:374
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
+"blacklist</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie黑名單</"
+"span></p></body></html>"
+
+#: fcm_dialog.ui:381
+msgctxt "FCM_Dialog|"
+msgid ""
+"Flash cookies from these origins will be deleted without any notification."
+msgstr "這些來源的Flash Cookie會被自動刪除，而不作通知。"
+
+#: fcm_dialog.ui:442
+msgctxt "FCM_Dialog|"
+msgid "Settings"
+msgstr "設定"
+
+#: fcm_dialog.ui:453
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash Cookie "
+"Settings</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash Cookie設定</"
+"span></p></body></html>"
+
+#: fcm_dialog.ui:475
+msgctxt "FCM_Dialog|"
+msgid ""
+"Auto mode: The flash data directory will be checked regularly. and flash "
+"cookies in blacklist will be deleted automatically."
+msgstr "自動模式：Flash資料庫會被定期檢查，自動刪除來自黑名單的Flash Cookie。"
+
+#: fcm_dialog.ui:510
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> This "
+"settings are just applied to flash cookies, to manage HTTP cookies use <span "
+"style=\" font-weight:600;\">Cookies Manager</span>. </p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">注意：</span>這個設定"
+"只會應用到Flash Cookie。管理HTTP Cookie，請前往<span style=\" font-"
+"weight:600;\">Cookie管理員</span>。</p></body></html>"
+
+#: fcm_dialog.ui:538
+msgctxt "FCM_Dialog|"
+msgid ""
+"Notification: User will be notified for every new flash cookie that is not "
+"in blacklist and whitelist."
+msgstr "通知：出現未歸入黑名單或白名單的Flash Cookie時，用戶會收到通知。"
+
+#: fcm_dialog.ui:565
+msgctxt "FCM_Dialog|"
+msgid "Delete all flash cookies on exit/start. (except those are in whitelist)"
+msgstr "離開╱啟動時刪除全部Flash Cookie。（白名單例外）"
+
+#: fcm_notification.cpp:34
+msgctxt "FCM_Notification|"
+msgid "A new flash cookie was detected"
+msgstr "偵測到一個新Flash Cookie"
+
+#: fcm_notification.cpp:37
+#, qt-format
+msgctxt "FCM_Notification|"
+msgid "%1 new flash cookies were detected"
+msgstr "偵測到%1個新Flash Cookie"
+
+#: fcm_notification.ui:45
+msgctxt "FCM_Notification|"
+msgid "New flash cookie was detected!"
+msgstr "偵測到新Flash Cookie！"
+
+#: fcm_notification.ui:52
+msgctxt "FCM_Notification|"
+msgid "View"
+msgstr "檢視"
+
+#: fcm_plugin.cpp:59
+msgctxt "FCM_Button|"
+msgid "Flash Cookie Manager button"
+msgstr ""
+
+#: fcm_plugin.cpp:129 fcm_plugin.cpp:359
+msgctxt "FCM_Plugin|"
+msgid "Flash Cookie Manager"
+msgstr "Flash Cookie管理員"
+
+#: fcm_plugin.cpp:360
+msgctxt "FCM_Plugin|"
+msgid "Show Flash Cookie Manager"
+msgstr "顯示Flash Cookie管理員"
+
+#: fcm_plugin.cpp:441
+msgctxt "FCM_Plugin|"
+msgid "!default"
+msgstr "!預設"
+
+#: fcm_plugin.cpp:453
+msgctxt "FCM_Plugin|"
+msgid "!other"
+msgstr "!其他"

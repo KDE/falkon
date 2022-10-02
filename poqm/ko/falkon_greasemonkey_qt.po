@@ -1,0 +1,216 @@
+# Shinjo Park <kde@peremen.name>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2020-02-16 01:23+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.04.3\n"
+"X-Qt-Contexts: true\n"
+
+#: gm_addscriptdialog.cpp:50
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "<p>runs at<br/><i>%1</i></p>"
+msgstr "<p>실행할 위치:<br/><i>%1</i></p>"
+
+#: gm_addscriptdialog.cpp:54
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "<p>does not run at<br/><i>%1</i></p>"
+msgstr "<p>실행하지 않을 위치:<br/><i>%1</i></p>"
+
+#: gm_addscriptdialog.cpp:84
+msgctxt "GM_AddScriptDialog|"
+msgid "Cannot install script"
+msgstr "스크립트를 설치할 수 없음"
+
+#: gm_addscriptdialog.cpp:87
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "'%1' installed successfully"
+msgstr "'%1'이(가) 설치됨"
+
+#: gm_addscriptdialog.ui:14
+msgctxt "GM_AddScriptDialog|"
+msgid "GreaseMonkey Installation"
+msgstr "그리스몽키 설치"
+
+#: gm_addscriptdialog.ui:45
+msgctxt "GM_AddScriptDialog|"
+msgid "<h3>GreaseMonkey Installation</h3>"
+msgstr "<h3>그리스몽키 설치</h3>"
+
+#: gm_addscriptdialog.ui:67
+msgctxt "GM_AddScriptDialog|"
+msgid "You are about to install this userscript into GreaseMonkey:"
+msgstr "다음 사용자 스크립트를 그리스몽키에 설치합니다:"
+
+#: gm_addscriptdialog.ui:80
+msgctxt "GM_AddScriptDialog|"
+msgid "<b>You should only install scripts from sources you trust!</b>"
+msgstr "<b>신뢰할 수 있는 곳에서 구한 스크립트만 설치하십시오!</b>"
+
+#: gm_addscriptdialog.ui:90
+msgctxt "GM_AddScriptDialog|"
+msgid "Are you sure you want to install it?"
+msgstr "정말 설치하시겠습니까?"
+
+#: gm_addscriptdialog.ui:108
+msgctxt "GM_AddScriptDialog|"
+msgid "Show source code of script"
+msgstr "스크립트 소스 코드 보기"
+
+#: gm_icon.cpp:28
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey"
+msgstr "그리스몽키"
+
+#: gm_icon.cpp:29
+msgctxt "GM_Icon|"
+msgid "Open GreaseMonkey settings"
+msgstr "그리스몽키 설정 열기"
+
+#: gm_icon.cpp:41
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey Icon"
+msgstr "그리스몽키 아이콘"
+
+#: gm_manager.cpp:77
+#, qt-format
+msgctxt "GM_Manager|"
+msgid "'%1' is already installed"
+msgstr "'%1'이(가) 이미 설치됨"
+
+#: gm_manager.cpp:230
+msgctxt "GM_Manager|"
+msgid "GreaseMonkey"
+msgstr "그리스몽키"
+
+#: gm_notification.cpp:51
+msgctxt "GM_Notification|"
+msgid "Cannot install script"
+msgstr "스크립트를 설치할 수 없음"
+
+#: gm_notification.cpp:59
+#, qt-format
+msgctxt "GM_Notification|"
+msgid "'%1' installed successfully"
+msgstr "'%1'이(가) 설치됨"
+
+#: gm_notification.ui:39
+msgctxt "GM_Notification|"
+msgid "This script can be installed with the GreaseMonkey plugin."
+msgstr "그리스몽키 플러그인으로 이 스크립트를 설치할 수 있습니다."
+
+#: gm_notification.ui:59
+msgctxt "GM_Notification|"
+msgid "Install"
+msgstr "설치"
+
+#: settings/gm_settings.cpp:91
+msgctxt "GM_Settings|"
+msgid "Remove script"
+msgstr "스크립트 삭제"
+
+#: settings/gm_settings.cpp:92
+#, qt-format
+msgctxt "GM_Settings|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "'%1'을(를) 삭제하시겠습니까?"
+
+#: settings/gm_settings.cpp:122
+msgctxt "GM_Settings|"
+msgid "Add script"
+msgstr "스크립트 추가"
+
+#: settings/gm_settings.cpp:122
+msgctxt "GM_Settings|"
+msgid "Choose name for script:"
+msgstr "스크립트 이름 입력:"
+
+#: settings/gm_settings.ui:14
+msgctxt "GM_Settings|"
+msgid "GreaseMonkey Scripts"
+msgstr "그리스몽키 스크립트"
+
+#: settings/gm_settings.ui:48
+msgctxt "GM_Settings|"
+msgid "<h3>GreaseMonkey Scripts</h3>"
+msgstr "<h3>그리스몽키 스크립트</h3>"
+
+#: settings/gm_settings.ui:70
+msgctxt "GM_Settings|"
+msgid "Double clicking script will show additional information"
+msgstr "스크립트를 두 번 클릭하면 추가 정보를 볼 수 있습니다"
+
+#: settings/gm_settings.ui:150
+msgctxt "GM_Settings|"
+msgid "More scripts can be downloaded from"
+msgstr "추가 스크립트 다운로드:"
+
+#: settings/gm_settings.ui:193
+msgctxt "GM_Settings|"
+msgid "Open scripts directory"
+msgstr "스크립트 디렉터리 열기"
+
+#: settings/gm_settings.ui:200
+msgctxt "GM_Settings|"
+msgid "New user script"
+msgstr "새 사용자 스크립트"
+
+#: settings/gm_settingsscriptinfo.cpp:45
+#, qt-format
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Script Details of %1"
+msgstr "%1 스크립트 정보"
+
+#: settings/gm_settingsscriptinfo.ui:19
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Runs at:"
+msgstr "실행할 위치:"
+
+#: settings/gm_settingsscriptinfo.ui:45
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Description:"
+msgstr "설명:"
+
+#: settings/gm_settingsscriptinfo.ui:55
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Version:"
+msgstr "버전:"
+
+#: settings/gm_settingsscriptinfo.ui:65
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Start at:"
+msgstr "시작할 위치:"
+
+#: settings/gm_settingsscriptinfo.ui:85
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Name:"
+msgstr "이름:"
+
+#: settings/gm_settingsscriptinfo.ui:115
+msgctxt "GM_SettingsScriptInfo|"
+msgid "URL:"
+msgstr "URL:"
+
+#: settings/gm_settingsscriptinfo.ui:128
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Does not run at:"
+msgstr "실행하지 않을 위치:"
+
+#: settings/gm_settingsscriptinfo.ui:138
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Namespace:"
+msgstr "네임스페이스:"
+
+#: settings/gm_settingsscriptinfo.ui:155
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Edit in text editor"
+msgstr "텍스트 편집기로 열기"

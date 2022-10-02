@@ -1,0 +1,210 @@
+# Translation of falkon_tabmanager_qt.po to Catalan
+# Copyright (C) 2018-2020 This_file_is_part_of_KDE
+# Copyright (C) 2012-2017 Free Software Foundation, Inc.
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Guillem Prats <guprej@gmail.com>, 2012, 2013, 2014.
+# Clara Villalba <cvilmon@gmail.com>, 2012, 2013, 2014.
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016, 2017.
+# David Medina <rbndavid@gmail.com>, 2017.
+# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2020.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: falkon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2018-02-25 02:34+0000\n"
+"PO-Revision-Date: 2020-11-27 20:50+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Language: ca\n"
+"X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: tabmanagersettings.ui:14
+msgctxt "TabManagerSettings|"
+msgid "Tab Manager Settings"
+msgstr "Configuració del Gestor de pestanyes"
+
+#: tabmanagersettings.ui:20
+msgctxt "TabManagerSettings|"
+msgid "View"
+msgstr "Visualitza"
+
+#: tabmanagersettings.ui:26
+msgctxt "TabManagerSettings|"
+msgid "Please select view type:"
+msgstr "Seleccioneu el tipus de vista:"
+
+#: tabmanagersettings.ui:33
+msgctxt "TabManagerSettings|"
+msgid "SideBar"
+msgstr "Barra lateral"
+
+#: tabmanagersettings.ui:40
+msgctxt "TabManagerSettings|"
+msgid "Window"
+msgstr "Finestra"
+
+#: tabmanagersettings.ui:47
+msgctxt "TabManagerSettings|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> The "
+"&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
+"p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Nota:</span> El "
+"tipus &quot;finestra&quot; és recomanable per a gestionar moltes finestres / "
+"pestanyes.</p></body></html>"
+
+#: tabmanagersettings.ui:60
+msgctxt "TabManagerSettings|"
+msgid "Use TabManager plugin as replacement for main TabBar."
+msgstr ""
+"Usa el connector TabManager com a substitut de la barra de pestanyes "
+"principal."
+
+#: tabmanagerwidget.cpp:111
+msgctxt "TabManagerWidget|"
+msgid "Local File System:"
+msgstr "Sistema de fitxers local:"
+
+#: tabmanagerwidget.cpp:114
+msgctxt "TabManagerWidget|"
+msgid "Falkon:"
+msgstr "Falkon:"
+
+#: tabmanagerwidget.cpp:117
+msgctxt "TabManagerWidget|"
+msgid " [FTP]"
+msgstr " [FTP]"
+
+#: tabmanagerwidget.cpp:306
+msgctxt "TabManagerWidget|"
+msgid "Group by"
+msgstr "Agrupa per"
+
+#: tabmanagerwidget.cpp:307
+msgctxt "TabManagerWidget|"
+msgid "&Window"
+msgstr "&Finestra"
+
+#: tabmanagerwidget.cpp:312
+msgctxt "TabManagerWidget|"
+msgid "&Domain"
+msgstr "&Domini"
+
+#: tabmanagerwidget.cpp:317
+msgctxt "TabManagerWidget|"
+msgid "&Host"
+msgstr "&Amfitrió"
+
+#: tabmanagerwidget.cpp:325
+msgctxt "TabManagerWidget|"
+msgid "&Show side by side"
+msgstr "Mostra-le&s una al costat de l'altra"
+
+#: tabmanagerwidget.cpp:331
+msgctxt "TabManagerWidget|"
+msgid "&Detach checked tabs"
+msgstr "&Desprèn les pestanyes marcades"
+
+#: tabmanagerwidget.cpp:332
+msgctxt "TabManagerWidget|"
+msgid "Book&mark checked tabs"
+msgstr "Afegeix les pestanyes &marcades a les adreces d'interès"
+
+#: tabmanagerwidget.cpp:333
+msgctxt "TabManagerWidget|"
+msgid "&Close checked tabs"
+msgstr "Tan&ca les pestanyes marcades"
+
+#: tabmanagerwidget.cpp:334
+msgctxt "TabManagerWidget|"
+msgid "&Unload checked tabs"
+msgstr "&Descarrega les pestanyes marcades"
+
+#: tabmanagerwidget.cpp:586
+msgctxt "TabManagerWidget|"
+msgid "Choose folder for bookmarks:"
+msgstr "Trieu una carpeta per a les adreces d'interès:"
+
+#: tabmanagerwidget.cpp:587
+msgctxt "TabManagerWidget|"
+msgid "Bookmark Selected Tabs"
+msgstr "Afegeix les pestanyes seleccionades a les adreces d'interès"
+
+#: tabmanagerwidget.cpp:705
+#, qt-format
+msgctxt "TabManagerWidget|"
+msgid "Window %1"
+msgstr "Finestra %1"
+
+#: tabmanagerwidget.cpp:706
+msgctxt "TabManagerWidget|"
+msgid "Double click to switch"
+msgstr "Doble clic per al canvi"
+
+#: tabmanagerwidget.ui:14
+msgctxt "TabManagerWidget|"
+msgid "Tab Manager"
+msgstr "Gestor de pestanyes"
+
+#: tabmanagerwidgetcontroller.cpp:50
+msgctxt "TabManagerButton|"
+msgid "Tab Manager button"
+msgstr "Botó del gestor de pestanyes"
+
+#: tabmanagerwidgetcontroller.cpp:67 tabmanagerwidgetcontroller.cpp:72
+#: tabmanagerwidgetcontroller.cpp:98
+msgctxt "TabManagerWidgetController|"
+msgid "Tab Manager"
+msgstr "Gestor de pestanyes"
+
+#: tabmanagerwidgetcontroller.cpp:99
+msgctxt "TabManagerWidgetController|"
+msgid "Show Tab Manager"
+msgstr "Mostra el gestor de pestanyes"
+
+#: tldextractor/tldextractor.cpp:260 tldextractor/tldextractor.cpp:363
+msgctxt "TLDExtractor|"
+msgid "File not found!"
+msgstr "No s'ha trobat el fitxer!"
+
+#: tldextractor/tldextractor.cpp:261
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'effective_tld_names.dat' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+"No s'ha trobat el fitxer «effective_tld_names.dat»!\n"
+"El podeu baixar des d'«<a href=\"%1\"><b>aquí</b></a>» a un dels camins "
+"següents:\n"
+"%2"
+
+#: tldextractor/tldextractor.cpp:364
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'test_psl.txt' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+"No s'ha trobat el fitxer «test_psl.txt»!\n"
+"El podeu baixar des d'«<a href=\"%1\"><b>aquí</b></a>» a un dels camins "
+"següents:\n"
+"%2"
+
+#~ msgctxt "TabManagerWidget|"
+#~ msgid "QupZilla:"
+#~ msgstr "QupZilla:"

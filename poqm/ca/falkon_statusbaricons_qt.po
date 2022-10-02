@@ -1,0 +1,271 @@
+# Translation of falkon_statusbaricons_qt.po to Catalan
+# Copyright (C) 2018-2021 This_file_is_part_of_KDE
+# Copyright (C) 2012-2017 Free Software Foundation, Inc.
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Guillem Prats <guprej@gmail.com>, 2012, 2013, 2014.
+# Clara Villalba <cvilmon@gmail.com>, 2012, 2013, 2014.
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016, 2017.
+# David Medina <rbndavid@gmail.com>, 2017.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2020.
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: falkon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2018-02-25 02:34+0000\n"
+"PO-Revision-Date: 2021-10-29 11:47+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Language: ca\n"
+"X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: sbi_imagesicon.cpp:34
+msgctxt "SBI_ImagesIcon|"
+msgid "Modify images loading settings per-site and globally"
+msgstr "Modifica la configuració de càrrega d'imatges globalment i per lloc"
+
+#: sbi_imagesicon.cpp:58
+msgctxt "SBI_ImagesIcon|"
+msgid "Current Page Settings"
+msgstr "Configuració actual de la pàgina"
+
+#: sbi_imagesicon.cpp:61
+msgctxt "SBI_ImagesIcon|"
+msgid "Disable loading images (temporarily)"
+msgstr "Inhabilita la càrrega d'imatges (temporalment)"
+
+#: sbi_imagesicon.cpp:64
+msgctxt "SBI_ImagesIcon|"
+msgid "Enable loading images (temporarily)"
+msgstr "Habilita la càrrega d'imatges (temporalment)"
+
+#: sbi_imagesicon.cpp:68
+msgctxt "SBI_ImagesIcon|"
+msgid "Global Settings"
+msgstr "Configuració global"
+
+#: sbi_imagesicon.cpp:70
+msgctxt "SBI_ImagesIcon|"
+msgid "Automatically load images"
+msgstr "Carrega les imatges automàticament"
+
+#: sbi_javascripticon.cpp:34
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Modify JavaScript settings per-site and globally"
+msgstr "Modifica la configuració de JavaScript globalment i per lloc"
+
+#: sbi_javascripticon.cpp:51
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Current Page Settings"
+msgstr "Configuració actual de la pàgina"
+
+#: sbi_javascripticon.cpp:54
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Disable JavaScript (temporarily)"
+msgstr "Inhabilita el JavaScript (temporalment)"
+
+#: sbi_javascripticon.cpp:57
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Enable JavaScript (temporarily)"
+msgstr "Habilita el JavaScript (temporalment)"
+
+#: sbi_javascripticon.cpp:66
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Global Settings"
+msgstr "Configuració global"
+
+#: sbi_javascripticon.cpp:67
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Manage JavaScript settings"
+msgstr "Gestiona la configuració de JavaScript"
+
+#: sbi_networkicon.cpp:65
+msgctxt "SBI_NetworkIcon|"
+msgid "Proxy Configuration"
+msgstr "Configuració del servidor intermediari"
+
+#: sbi_networkicon.cpp:67
+msgctxt "SBI_NetworkIcon|"
+msgid "Select proxy"
+msgstr "Selecciona un servidor intermediari"
+
+#: sbi_networkicon.cpp:81
+msgctxt "SBI_NetworkIcon|"
+msgid "Empty"
+msgstr "Buit"
+
+#: sbi_networkicon.cpp:85
+msgctxt "SBI_NetworkIcon|"
+msgid "Manage proxies"
+msgstr "Gestiona els servidors intermediaris"
+
+#: sbi_networkicon.cpp:98
+#, qt-format
+msgctxt "SBI_NetworkIcon|"
+msgid ""
+"Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
+"><br/><b>Proxy:</b><br/>%2"
+msgstr ""
+"Mostra l'estat de la xarxa i gestiona el servidor intermediari<br/><br/"
+"><b>Xarxa:</b><br/>%1<br/><br/><b>Servidor intermediari:</b><br/>%2"
+
+#: sbi_networkicon.cpp:101
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected"
+msgstr "Connectat"
+
+#: sbi_networkicon.cpp:104
+msgctxt "SBI_NetworkIcon|"
+msgid "Offline"
+msgstr "Desconnectat"
+
+#: sbi_networkicon.cpp:109
+msgctxt "SBI_NetworkIcon|"
+msgid "System proxy"
+msgstr "Servidor intermediari del sistema"
+
+#: sbi_networkicon.cpp:113
+msgctxt "SBI_NetworkIcon|"
+msgid "No proxy"
+msgstr "Sense servidor intermediari"
+
+#: sbi_networkicon.cpp:117
+msgctxt "SBI_NetworkIcon|"
+msgid "User defined"
+msgstr "Definit per l'usuari"
+
+#: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Add proxy"
+msgstr "Afegeix un servidor intermediari"
+
+#: sbi_networkicondialog.cpp:57
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Name of proxy:"
+msgstr "Nom del servidor intermediari:"
+
+#: sbi_networkicondialog.cpp:70
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Remove current proxy"
+msgstr "Suprimeix el servidor intermediari actual"
+
+#: sbi_networkicondialog.cpp:70
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Are you sure you want to remove current proxy?"
+msgstr "Esteu segur que voleu suprimir el servidor intermediari actual?"
+
+#: sbi_networkicondialog.ui:14
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Proxy Manager"
+msgstr "Gestor del servidor intermediari"
+
+#: sbi_networkicondialog.ui:28
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Select proxy: "
+msgstr "Selecciona un servidor intermediari:"
+
+#: sbi_networkicondialog.ui:45
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Remove proxy"
+msgstr "Suprimeix el servidor intermediari"
+
+#: sbi_networkicondialog.ui:69
+msgctxt "SBI_NetworkIconDialog|"
+msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
+msgstr ""
+"No hi ha servidors intermediaris. Podeu afegir-ne clicant al botó "
+"<b>Afegeix</b>."
+
+#: sbi_networkicondialog.ui:104
+msgctxt "SBI_NetworkIconDialog|"
+msgid "All changes must be saved with <b>Save</b> button."
+msgstr "Tots els canvis s'han de desar amb el botó <b>Desa</b>."
+
+#: sbi_proxywidget.ui:14
+msgctxt "SBI_ProxyWidget|"
+msgid "Form"
+msgstr "Formulari"
+
+#: sbi_proxywidget.ui:23
+msgctxt "SBI_ProxyWidget|"
+msgid "HTTP"
+msgstr "HTTP"
+
+#: sbi_proxywidget.ui:28
+msgctxt "SBI_ProxyWidget|"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+#: sbi_proxywidget.ui:39
+msgctxt "SBI_ProxyWidget|"
+msgid "Port:"
+msgstr "Port:"
+
+#: sbi_proxywidget.ui:76
+msgctxt "SBI_ProxyWidget|"
+msgid "Username:"
+msgstr "Nom d'usuari:"
+
+#: sbi_proxywidget.ui:86
+msgctxt "SBI_ProxyWidget|"
+msgid "Password:"
+msgstr "Contrasenya:"
+
+#: sbi_proxywidget.ui:111
+msgctxt "SBI_ProxyWidget|"
+msgid "S&ystem proxy configuration"
+msgstr "Configuració del servidor intermediari del s&istema"
+
+#: sbi_proxywidget.ui:118
+msgctxt "SBI_ProxyWidget|"
+msgid "&Manual configuration"
+msgstr "Configuració &manual"
+
+#: sbi_settingsdialog.ui:14
+msgctxt "SBI_SettingsDialog|"
+msgid "StatusBar Icons"
+msgstr "Icones de la barra d'estat"
+
+#: sbi_settingsdialog.ui:48
+msgctxt "SBI_SettingsDialog|"
+msgid "<h3>StatusBar Icons</h3>"
+msgstr "<h3>Icones de la barra d'estat</h3>"
+
+#: sbi_settingsdialog.ui:70
+msgctxt "SBI_SettingsDialog|"
+msgid "These icons will be displayed in statusbar:"
+msgstr "Aquestes icones es mostraran a la barra d'estat:"
+
+#: sbi_settingsdialog.ui:97
+msgctxt "SBI_SettingsDialog|"
+msgid "Images Icon"
+msgstr "Icona de les imatges"
+
+#: sbi_settingsdialog.ui:104
+msgctxt "SBI_SettingsDialog|"
+msgid "JavaScript Icon"
+msgstr "Icona de JavaScript"
+
+#: sbi_settingsdialog.ui:111
+msgctxt "SBI_SettingsDialog|"
+msgid "Network Icon"
+msgstr "Icona de la xarxa"
+
+#: sbi_settingsdialog.ui:118
+msgctxt "SBI_SettingsDialog|"
+msgid "Zoom widget"
+msgstr "Giny de zoom"
+
+#: sbi_zoomwidget.cpp:48
+#, qt-format
+msgctxt "SBI_ZoomWidget|"
+msgid "Zoom: %1%"
+msgstr "Zoom: %1%"

@@ -1,0 +1,191 @@
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2018-02-25 18:07+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: tabmanagersettings.ui:14
+msgctxt "TabManagerSettings|"
+msgid "Tab Manager Settings"
+msgstr "Inställningar av flikhanterare"
+
+#: tabmanagersettings.ui:20
+msgctxt "TabManagerSettings|"
+msgid "View"
+msgstr "Visa"
+
+#: tabmanagersettings.ui:26
+msgctxt "TabManagerSettings|"
+msgid "Please select view type:"
+msgstr "Välj visningstyp:"
+
+#: tabmanagersettings.ui:33
+msgctxt "TabManagerSettings|"
+msgid "SideBar"
+msgstr "Sidorad"
+
+#: tabmanagersettings.ui:40
+msgctxt "TabManagerSettings|"
+msgid "Window"
+msgstr "Fönster"
+
+#: tabmanagersettings.ui:47
+msgctxt "TabManagerSettings|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> The "
+"&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
+"p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Observera:</span> "
+"Typen &quot;Fönster&quot; rekommenderas för att hantera ett stort antal "
+"fönster eller flikar.</p></body></html>"
+
+#: tabmanagersettings.ui:60
+msgctxt "TabManagerSettings|"
+msgid "Use TabManager plugin as replacement for main TabBar."
+msgstr ""
+"Använd insticksprogrammet Flikhanterare som ersättning för huvudflikrad."
+
+#: tabmanagerwidget.cpp:111
+msgctxt "TabManagerWidget|"
+msgid "Local File System:"
+msgstr "Lokalt filsystem:"
+
+#: tabmanagerwidget.cpp:114
+msgctxt "TabManagerWidget|"
+msgid "Falkon:"
+msgstr "Falkon:"
+
+#: tabmanagerwidget.cpp:117
+msgctxt "TabManagerWidget|"
+msgid " [FTP]"
+msgstr " [FTP]"
+
+#: tabmanagerwidget.cpp:306
+msgctxt "TabManagerWidget|"
+msgid "Group by"
+msgstr "Gruppera enligt"
+
+#: tabmanagerwidget.cpp:307
+msgctxt "TabManagerWidget|"
+msgid "&Window"
+msgstr "&Fönster"
+
+#: tabmanagerwidget.cpp:312
+msgctxt "TabManagerWidget|"
+msgid "&Domain"
+msgstr "&Domän"
+
+#: tabmanagerwidget.cpp:317
+msgctxt "TabManagerWidget|"
+msgid "&Host"
+msgstr "&Värddator"
+
+#: tabmanagerwidget.cpp:325
+msgctxt "TabManagerWidget|"
+msgid "&Show side by side"
+msgstr "&Visa sida vid sida"
+
+#: tabmanagerwidget.cpp:331
+msgctxt "TabManagerWidget|"
+msgid "&Detach checked tabs"
+msgstr "&Koppla loss markerade flikar"
+
+#: tabmanagerwidget.cpp:332
+msgctxt "TabManagerWidget|"
+msgid "Book&mark checked tabs"
+msgstr "Bokmärk &markerade flikar"
+
+#: tabmanagerwidget.cpp:333
+msgctxt "TabManagerWidget|"
+msgid "&Close checked tabs"
+msgstr "&Stäng markerade flikar"
+
+#: tabmanagerwidget.cpp:334
+msgctxt "TabManagerWidget|"
+msgid "&Unload checked tabs"
+msgstr "&Ladda ur markerade flikar"
+
+#: tabmanagerwidget.cpp:586
+msgctxt "TabManagerWidget|"
+msgid "Choose folder for bookmarks:"
+msgstr "Välj katalog för bokmärken:"
+
+#: tabmanagerwidget.cpp:587
+msgctxt "TabManagerWidget|"
+msgid "Bookmark Selected Tabs"
+msgstr "Bokmärk markerade flikar"
+
+#: tabmanagerwidget.cpp:705
+#, qt-format
+msgctxt "TabManagerWidget|"
+msgid "Window %1"
+msgstr "Fönster %1"
+
+#: tabmanagerwidget.cpp:706
+msgctxt "TabManagerWidget|"
+msgid "Double click to switch"
+msgstr "Dubbelklicka för att byta"
+
+#: tabmanagerwidget.ui:14
+msgctxt "TabManagerWidget|"
+msgid "Tab Manager"
+msgstr "Flikhanterare"
+
+#: tabmanagerwidgetcontroller.cpp:50
+msgctxt "TabManagerButton|"
+msgid "Tab Manager button"
+msgstr "Knapp för flikhanterare"
+
+#: tabmanagerwidgetcontroller.cpp:67 tabmanagerwidgetcontroller.cpp:72
+#: tabmanagerwidgetcontroller.cpp:98
+msgctxt "TabManagerWidgetController|"
+msgid "Tab Manager"
+msgstr "Flikhanterare"
+
+#: tabmanagerwidgetcontroller.cpp:99
+msgctxt "TabManagerWidgetController|"
+msgid "Show Tab Manager"
+msgstr "Visa flikhanterare"
+
+#: tldextractor/tldextractor.cpp:260 tldextractor/tldextractor.cpp:363
+msgctxt "TLDExtractor|"
+msgid "File not found!"
+msgstr "Filen hittades inte."
+
+#: tldextractor/tldextractor.cpp:261
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'effective_tld_names.dat' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+"Filen 'effective_tld_names.dat' hittades inte.\n"
+"Den går att ladda ner '<a href=\"%1\"><b>härifrån</b></a>' till någon av "
+"följande sökvägar:\n"
+"%2"
+
+#: tldextractor/tldextractor.cpp:364
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'test_psl.txt' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+"Filen 'test_psl.txt' hittades inte.\n"
+"Den går att ladda ner '<a href=\"%1\"><b>härifrån</b></a>' till någon av "
+"följande sökvägar:\n"
+"%2"

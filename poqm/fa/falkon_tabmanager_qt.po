@@ -1,0 +1,228 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+# Seyyed Razi Alavizadeh <s.r.alavizadeh@gmail.com>, 2017
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Language: fa_IR\n"
+"X-Qt-Contexts: true\n"
+
+#: tabmanagersettings.ui:14
+#, fuzzy
+#| msgctxt "TabManagerWidget|"
+#| msgid "Tab Manager"
+msgctxt "TabManagerSettings|"
+msgid "Tab Manager Settings"
+msgstr "مدیر برگه"
+
+#: tabmanagersettings.ui:20
+msgctxt "TabManagerSettings|"
+msgid "View"
+msgstr ""
+
+#: tabmanagersettings.ui:26
+msgctxt "TabManagerSettings|"
+msgid "Please select view type:"
+msgstr ""
+
+#: tabmanagersettings.ui:33
+#, fuzzy
+#| msgctxt "TabManagerPlugin|"
+#| msgid "SideBar"
+msgctxt "TabManagerSettings|"
+msgid "SideBar"
+msgstr "نوار کناری"
+
+#: tabmanagersettings.ui:40
+#, fuzzy
+#| msgctxt "TabManagerPlugin|"
+#| msgid "Window"
+msgctxt "TabManagerSettings|"
+msgid "Window"
+msgstr "پنجره"
+
+#: tabmanagersettings.ui:47
+#, fuzzy
+#| msgctxt "TabManagerPlugin|"
+#| msgid ""
+#| "<p>Please select view type:<br /><b>Note:</b> The \"<i>Window</i>\" type "
+#| "is recommended for managing lots of windows/tabs"
+msgctxt "TabManagerSettings|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> The "
+"&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
+"p></body></html>"
+msgstr ""
+"<p>لطفا فرم نمایش را انتخاب کنید:<br /><b>توجه:</b> نمایش به فرم «<i>پنجره</"
+"i>» برای مدیریت تعداد زیادی پنجره و برگه توصیه می‌شود"
+
+#: tabmanagersettings.ui:60
+msgctxt "TabManagerSettings|"
+msgid "Use TabManager plugin as replacement for main TabBar."
+msgstr ""
+
+#: tabmanagerwidget.cpp:111
+msgctxt "TabManagerWidget|"
+msgid "Local File System:"
+msgstr "پرونده‌های روی سیستم:"
+
+#: tabmanagerwidget.cpp:114
+msgctxt "TabManagerWidget|"
+msgid "Falkon:"
+msgstr ""
+
+#: tabmanagerwidget.cpp:117
+msgctxt "TabManagerWidget|"
+msgid " [FTP]"
+msgstr "‏ [FTP]"
+
+#: tabmanagerwidget.cpp:306
+#, fuzzy
+#| msgctxt "TabManagerWidget|"
+#| msgid "Group By:"
+msgctxt "TabManagerWidget|"
+msgid "Group by"
+msgstr "گروه‌بندی با:"
+
+#: tabmanagerwidget.cpp:307
+#, fuzzy
+#| msgctxt "TabManagerWidget|"
+#| msgid "Window"
+msgctxt "TabManagerWidget|"
+msgid "&Window"
+msgstr "پنجره"
+
+#: tabmanagerwidget.cpp:312
+#, fuzzy
+#| msgctxt "TabManagerWidget|"
+#| msgid "Domain"
+msgctxt "TabManagerWidget|"
+msgid "&Domain"
+msgstr "نام دامنه"
+
+#: tabmanagerwidget.cpp:317
+#, fuzzy
+#| msgctxt "TabManagerWidget|"
+#| msgid "Host"
+msgctxt "TabManagerWidget|"
+msgid "&Host"
+msgstr "نام سایت"
+
+#: tabmanagerwidget.cpp:325
+msgctxt "TabManagerWidget|"
+msgid "&Show side by side"
+msgstr ""
+
+#: tabmanagerwidget.cpp:331
+msgctxt "TabManagerWidget|"
+msgid "&Detach checked tabs"
+msgstr ""
+
+#: tabmanagerwidget.cpp:332
+#, fuzzy
+#| msgctxt "TabManagerWidget|"
+#| msgid "Bookmark Selected Tabs"
+msgctxt "TabManagerWidget|"
+msgid "Book&mark checked tabs"
+msgstr "برگه‌های انتخابی را نشان‌دار کن"
+
+#: tabmanagerwidget.cpp:333
+msgctxt "TabManagerWidget|"
+msgid "&Close checked tabs"
+msgstr ""
+
+#: tabmanagerwidget.cpp:334
+msgctxt "TabManagerWidget|"
+msgid "&Unload checked tabs"
+msgstr ""
+
+#: tabmanagerwidget.cpp:586
+msgctxt "TabManagerWidget|"
+msgid "Choose folder for bookmarks:"
+msgstr "انتخاب پوشه برای نشان‌ها:"
+
+#: tabmanagerwidget.cpp:587
+msgctxt "TabManagerWidget|"
+msgid "Bookmark Selected Tabs"
+msgstr "برگه‌های انتخابی را نشان‌دار کن"
+
+#: tabmanagerwidget.cpp:705
+#, qt-format
+msgctxt "TabManagerWidget|"
+msgid "Window %1"
+msgstr "پنجره %1"
+
+#: tabmanagerwidget.cpp:706
+msgctxt "TabManagerWidget|"
+msgid "Double click to switch"
+msgstr "جفت‌کلیک برای نمایش پنجره"
+
+#: tabmanagerwidget.ui:14
+msgctxt "TabManagerWidget|"
+msgid "Tab Manager"
+msgstr "مدیر برگه"
+
+#: tabmanagerwidgetcontroller.cpp:50
+#, fuzzy
+#| msgctxt "TabManagerWidget|"
+#| msgid "Tab Manager"
+msgctxt "TabManagerButton|"
+msgid "Tab Manager button"
+msgstr "مدیر برگه"
+
+#: tabmanagerwidgetcontroller.cpp:67 tabmanagerwidgetcontroller.cpp:72
+#: tabmanagerwidgetcontroller.cpp:98
+msgctxt "TabManagerWidgetController|"
+msgid "Tab Manager"
+msgstr "مدیر برگه"
+
+#: tabmanagerwidgetcontroller.cpp:99
+msgctxt "TabManagerWidgetController|"
+msgid "Show Tab Manager"
+msgstr "نمایش مدیر برگه"
+
+#: tldextractor/tldextractor.cpp:260 tldextractor/tldextractor.cpp:363
+msgctxt "TLDExtractor|"
+msgid "File not found!"
+msgstr ""
+
+#: tldextractor/tldextractor.cpp:261
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'effective_tld_names.dat' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+
+#: tldextractor/tldextractor.cpp:364
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'test_psl.txt' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+
+#~ msgctxt "TabManagerPlugin|"
+#~ msgid "Tab Manager View Type"
+#~ msgstr "فرم نمایش مدیر برگه"
+
+#~ msgctxt "TabManagerWidget|"
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "TabManagerWidget|"
+#~ msgid "QupZilla:"
+#~ msgstr "کوپزیلا:"
+
+#, fuzzy
+#~ msgctxt "TabManagerWidgetController|"
+#~ msgid "Show/Hide Tab Manager"
+#~ msgstr "نمایش/مخفی‌سازی مدیر برگه"

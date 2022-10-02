@@ -1,0 +1,252 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Language: zh_TW\n"
+"X-Qt-Contexts: true\n"
+
+#: sbi_imagesicon.cpp:34
+msgctxt "SBI_ImagesIcon|"
+msgid "Modify images loading settings per-site and globally"
+msgstr "變更每個網站及全域的讀取圖片設定"
+
+#: sbi_imagesicon.cpp:58
+msgctxt "SBI_ImagesIcon|"
+msgid "Current Page Settings"
+msgstr "目前頁面設定"
+
+#: sbi_imagesicon.cpp:61
+msgctxt "SBI_ImagesIcon|"
+msgid "Disable loading images (temporarily)"
+msgstr "不允許讀取圖片 (暫時)"
+
+#: sbi_imagesicon.cpp:64
+msgctxt "SBI_ImagesIcon|"
+msgid "Enable loading images (temporarily)"
+msgstr "允許讀取圖片 (暫時)"
+
+#: sbi_imagesicon.cpp:68
+msgctxt "SBI_ImagesIcon|"
+msgid "Global Settings"
+msgstr "全域設定"
+
+#: sbi_imagesicon.cpp:70
+msgctxt "SBI_ImagesIcon|"
+msgid "Automatically load images"
+msgstr "自動讀取圖片"
+
+#: sbi_javascripticon.cpp:34
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Modify JavaScript settings per-site and globally"
+msgstr "變更每個網站及全域的 JavaScript 設定"
+
+#: sbi_javascripticon.cpp:51
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Current Page Settings"
+msgstr "目前頁面設定"
+
+#: sbi_javascripticon.cpp:54
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Disable JavaScript (temporarily)"
+msgstr "不允許 JavaScript (暫時)"
+
+#: sbi_javascripticon.cpp:57
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Enable JavaScript (temporarily)"
+msgstr "允許 JavaScript (暫時)"
+
+#: sbi_javascripticon.cpp:66
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Global Settings"
+msgstr "全域設定"
+
+#: sbi_javascripticon.cpp:67
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Manage JavaScript settings"
+msgstr "管理 JavaScript 設定"
+
+#: sbi_networkicon.cpp:65
+msgctxt "SBI_NetworkIcon|"
+msgid "Proxy Configuration"
+msgstr "代理組態"
+
+#: sbi_networkicon.cpp:67
+msgctxt "SBI_NetworkIcon|"
+msgid "Select proxy"
+msgstr "選擇代理伺服器"
+
+#: sbi_networkicon.cpp:81
+msgctxt "SBI_NetworkIcon|"
+msgid "Empty"
+msgstr "空"
+
+#: sbi_networkicon.cpp:85
+msgctxt "SBI_NetworkIcon|"
+msgid "Manage proxies"
+msgstr "管理代理伺服器"
+
+#: sbi_networkicon.cpp:98
+#, qt-format
+msgctxt "SBI_NetworkIcon|"
+msgid ""
+"Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
+"><br/><b>Proxy:</b><br/>%2"
+msgstr ""
+"顯示網路狀態及管理代理伺服器<br/><br/><b>網路：</b><br/>%1<br/><br/><b>代理伺"
+"服器：</b><br/>%2"
+
+#: sbi_networkicon.cpp:101
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected"
+msgstr "已連線"
+
+#: sbi_networkicon.cpp:104
+msgctxt "SBI_NetworkIcon|"
+msgid "Offline"
+msgstr "離線"
+
+#: sbi_networkicon.cpp:109
+msgctxt "SBI_NetworkIcon|"
+msgid "System proxy"
+msgstr "系統代理伺服器"
+
+#: sbi_networkicon.cpp:113
+msgctxt "SBI_NetworkIcon|"
+msgid "No proxy"
+msgstr "無代理伺服器"
+
+#: sbi_networkicon.cpp:117
+msgctxt "SBI_NetworkIcon|"
+msgid "User defined"
+msgstr "使用者自訂"
+
+#: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Add proxy"
+msgstr "新增代理伺服器"
+
+#: sbi_networkicondialog.cpp:57
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Name of proxy:"
+msgstr "代理伺服器名稱："
+
+#: sbi_networkicondialog.cpp:70
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Remove current proxy"
+msgstr "移除目前代理伺服器"
+
+#: sbi_networkicondialog.cpp:70
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Are you sure you want to remove current proxy?"
+msgstr "您確定要移除目前的代理伺服器嗎？"
+
+#: sbi_networkicondialog.ui:14
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Proxy Manager"
+msgstr "代理伺服器管理員"
+
+#: sbi_networkicondialog.ui:28
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Select proxy: "
+msgstr "選擇代理伺服器："
+
+#: sbi_networkicondialog.ui:45
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Remove proxy"
+msgstr "移除代理伺服器"
+
+#: sbi_networkicondialog.ui:69
+msgctxt "SBI_NetworkIconDialog|"
+msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
+msgstr "無代理伺服器。您可以點擊<b>新增</b>按鈕來新增代理伺服器。"
+
+#: sbi_networkicondialog.ui:104
+msgctxt "SBI_NetworkIconDialog|"
+msgid "All changes must be saved with <b>Save</b> button."
+msgstr "所以變更必須點擊<b>儲存</b>按鈕儲存。"
+
+#: sbi_proxywidget.ui:14
+msgctxt "SBI_ProxyWidget|"
+msgid "Form"
+msgstr "表單"
+
+#: sbi_proxywidget.ui:23
+msgctxt "SBI_ProxyWidget|"
+msgid "HTTP"
+msgstr "HTTP"
+
+#: sbi_proxywidget.ui:28
+msgctxt "SBI_ProxyWidget|"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+#: sbi_proxywidget.ui:39
+msgctxt "SBI_ProxyWidget|"
+msgid "Port:"
+msgstr "埠："
+
+#: sbi_proxywidget.ui:76
+msgctxt "SBI_ProxyWidget|"
+msgid "Username:"
+msgstr "使用者名稱："
+
+#: sbi_proxywidget.ui:86
+msgctxt "SBI_ProxyWidget|"
+msgid "Password:"
+msgstr "密碼："
+
+#: sbi_proxywidget.ui:111
+msgctxt "SBI_ProxyWidget|"
+msgid "S&ystem proxy configuration"
+msgstr "系統代理伺服器組態 (&Y)"
+
+#: sbi_proxywidget.ui:118
+msgctxt "SBI_ProxyWidget|"
+msgid "&Manual configuration"
+msgstr "手動設定 (&M)"
+
+#: sbi_settingsdialog.ui:14
+msgctxt "SBI_SettingsDialog|"
+msgid "StatusBar Icons"
+msgstr "狀態列圖示"
+
+#: sbi_settingsdialog.ui:48
+msgctxt "SBI_SettingsDialog|"
+msgid "<h3>StatusBar Icons</h3>"
+msgstr "<h3>狀態列圖示</h3>"
+
+#: sbi_settingsdialog.ui:70
+msgctxt "SBI_SettingsDialog|"
+msgid "These icons will be displayed in statusbar:"
+msgstr "此圖示將會顯示在狀態列："
+
+#: sbi_settingsdialog.ui:97
+msgctxt "SBI_SettingsDialog|"
+msgid "Images Icon"
+msgstr "圖片圖示"
+
+#: sbi_settingsdialog.ui:104
+msgctxt "SBI_SettingsDialog|"
+msgid "JavaScript Icon"
+msgstr "JavaScript 圖示"
+
+#: sbi_settingsdialog.ui:111
+msgctxt "SBI_SettingsDialog|"
+msgid "Network Icon"
+msgstr "網路圖示"
+
+#: sbi_settingsdialog.ui:118
+msgctxt "SBI_SettingsDialog|"
+msgid "Zoom widget"
+msgstr "縮放小工具"
+
+#: sbi_zoomwidget.cpp:48
+#, qt-format
+msgctxt "SBI_ZoomWidget|"
+msgid "Zoom: %1%"
+msgstr "縮放：%1%"

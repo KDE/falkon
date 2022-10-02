@@ -1,0 +1,189 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: falkon_tabmanager_qt\n"
+"PO-Revision-Date: 2020-06-27 03:49+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Qt-Contexts: true\n"
+
+#: tabmanagersettings.ui:14
+msgctxt "TabManagerSettings|"
+msgid "Tab Manager Settings"
+msgstr "xxTab Manager Settingsxx"
+
+#: tabmanagersettings.ui:20
+msgctxt "TabManagerSettings|"
+msgid "View"
+msgstr "xxViewxx"
+
+#: tabmanagersettings.ui:26
+msgctxt "TabManagerSettings|"
+msgid "Please select view type:"
+msgstr "xxPlease select view type:xx"
+
+#: tabmanagersettings.ui:33
+msgctxt "TabManagerSettings|"
+msgid "SideBar"
+msgstr "xxSideBarxx"
+
+#: tabmanagersettings.ui:40
+msgctxt "TabManagerSettings|"
+msgid "Window"
+msgstr "xxWindowxx"
+
+#: tabmanagersettings.ui:47
+msgctxt "TabManagerSettings|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> The "
+"&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
+"p></body></html>"
+msgstr ""
+"xx<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> The "
+"&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
+"p></body></html>xx"
+
+#: tabmanagersettings.ui:60
+msgctxt "TabManagerSettings|"
+msgid "Use TabManager plugin as replacement for main TabBar."
+msgstr "xxUse TabManager plugin as replacement for main TabBar.xx"
+
+#: tabmanagerwidget.cpp:111
+msgctxt "TabManagerWidget|"
+msgid "Local File System:"
+msgstr "xxLocal File System:xx"
+
+#: tabmanagerwidget.cpp:114
+msgctxt "TabManagerWidget|"
+msgid "Falkon:"
+msgstr "xxFalkon:xx"
+
+#: tabmanagerwidget.cpp:117
+msgctxt "TabManagerWidget|"
+msgid " [FTP]"
+msgstr "xx [FTP]xx"
+
+#: tabmanagerwidget.cpp:306
+msgctxt "TabManagerWidget|"
+msgid "Group by"
+msgstr "xxGroup byxx"
+
+#: tabmanagerwidget.cpp:307
+msgctxt "TabManagerWidget|"
+msgid "&Window"
+msgstr "xx&Windowxx"
+
+#: tabmanagerwidget.cpp:312
+msgctxt "TabManagerWidget|"
+msgid "&Domain"
+msgstr "xx&Domainxx"
+
+#: tabmanagerwidget.cpp:317
+msgctxt "TabManagerWidget|"
+msgid "&Host"
+msgstr "xx&Hostxx"
+
+#: tabmanagerwidget.cpp:325
+msgctxt "TabManagerWidget|"
+msgid "&Show side by side"
+msgstr "xx&Show side by sidexx"
+
+#: tabmanagerwidget.cpp:331
+msgctxt "TabManagerWidget|"
+msgid "&Detach checked tabs"
+msgstr "xx&Detach checked tabsxx"
+
+#: tabmanagerwidget.cpp:332
+msgctxt "TabManagerWidget|"
+msgid "Book&mark checked tabs"
+msgstr "xxBook&mark checked tabsxx"
+
+#: tabmanagerwidget.cpp:333
+msgctxt "TabManagerWidget|"
+msgid "&Close checked tabs"
+msgstr "xx&Close checked tabsxx"
+
+#: tabmanagerwidget.cpp:334
+msgctxt "TabManagerWidget|"
+msgid "&Unload checked tabs"
+msgstr "xx&Unload checked tabsxx"
+
+#: tabmanagerwidget.cpp:586
+msgctxt "TabManagerWidget|"
+msgid "Choose folder for bookmarks:"
+msgstr "xxChoose folder for bookmarks:xx"
+
+#: tabmanagerwidget.cpp:587
+msgctxt "TabManagerWidget|"
+msgid "Bookmark Selected Tabs"
+msgstr "xxBookmark Selected Tabsxx"
+
+#: tabmanagerwidget.cpp:705
+#, qt-format
+msgctxt "TabManagerWidget|"
+msgid "Window %1"
+msgstr "xxWindow %1xx"
+
+#: tabmanagerwidget.cpp:706
+msgctxt "TabManagerWidget|"
+msgid "Double click to switch"
+msgstr "xxDouble click to switchxx"
+
+#: tabmanagerwidget.ui:14
+msgctxt "TabManagerWidget|"
+msgid "Tab Manager"
+msgstr "xxTab Managerxx"
+
+#: tabmanagerwidgetcontroller.cpp:50
+msgctxt "TabManagerButton|"
+msgid "Tab Manager button"
+msgstr "xxTab Manager buttonxx"
+
+#: tabmanagerwidgetcontroller.cpp:67 tabmanagerwidgetcontroller.cpp:72
+#: tabmanagerwidgetcontroller.cpp:98
+msgctxt "TabManagerWidgetController|"
+msgid "Tab Manager"
+msgstr "xxTab Managerxx"
+
+#: tabmanagerwidgetcontroller.cpp:99
+msgctxt "TabManagerWidgetController|"
+msgid "Show Tab Manager"
+msgstr "xxShow Tab Managerxx"
+
+#: tldextractor/tldextractor.cpp:260 tldextractor/tldextractor.cpp:363
+msgctxt "TLDExtractor|"
+msgid "File not found!"
+msgstr "xxFile not found!xx"
+
+#: tldextractor/tldextractor.cpp:261
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'effective_tld_names.dat' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+"xxFile 'effective_tld_names.dat' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2xx"
+
+#: tldextractor/tldextractor.cpp:364
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'test_psl.txt' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+"xxFile 'test_psl.txt' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2xx"

@@ -1,0 +1,263 @@
+# Translation of falkon_statusbaricons_qt to Norwegian Nynorsk
+#
+# Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018.
+# Karl Ove Hufthammer <karl@huftis.org>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2018-07-02 10:09+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: qtrich\n"
+"X-Qt-Contexts: true\n"
+
+#: sbi_imagesicon.cpp:34
+msgctxt "SBI_ImagesIcon|"
+msgid "Modify images loading settings per-site and globally"
+msgstr "Endra innstillingar for biletlasting for einskildnettstadar og globalt"
+
+#: sbi_imagesicon.cpp:58
+msgctxt "SBI_ImagesIcon|"
+msgid "Current Page Settings"
+msgstr "Innstillingar for gjeldande side"
+
+#: sbi_imagesicon.cpp:61
+msgctxt "SBI_ImagesIcon|"
+msgid "Disable loading images (temporarily)"
+msgstr "Slå av lasting av bilete (mellombels)"
+
+#: sbi_imagesicon.cpp:64
+msgctxt "SBI_ImagesIcon|"
+msgid "Enable loading images (temporarily)"
+msgstr "Slå på lasting av bilete (mellombels)"
+
+#: sbi_imagesicon.cpp:68
+msgctxt "SBI_ImagesIcon|"
+msgid "Global Settings"
+msgstr "Globale innstillingar"
+
+#: sbi_imagesicon.cpp:70
+msgctxt "SBI_ImagesIcon|"
+msgid "Automatically load images"
+msgstr "Last bilete automatisk"
+
+#: sbi_javascripticon.cpp:34
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Modify JavaScript settings per-site and globally"
+msgstr "Endra JavaScript-innstillingar for einskildnettstadar og globalt"
+
+#: sbi_javascripticon.cpp:51
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Current Page Settings"
+msgstr "Innstillingar for gjeldande side"
+
+#: sbi_javascripticon.cpp:54
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Disable JavaScript (temporarily)"
+msgstr "Slå av JavaScript (mellombels)"
+
+#: sbi_javascripticon.cpp:57
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Enable JavaScript (temporarily)"
+msgstr "Slå på JavaScript (mellombels)"
+
+#: sbi_javascripticon.cpp:66
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Global Settings"
+msgstr "Globale innstillingar"
+
+#: sbi_javascripticon.cpp:67
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Manage JavaScript settings"
+msgstr "Handter JavaScript-innstillingar"
+
+#: sbi_networkicon.cpp:65
+msgctxt "SBI_NetworkIcon|"
+msgid "Proxy Configuration"
+msgstr "Oppsett av mellomtenar"
+
+#: sbi_networkicon.cpp:67
+msgctxt "SBI_NetworkIcon|"
+msgid "Select proxy"
+msgstr "Vel mellomtenar"
+
+#: sbi_networkicon.cpp:81
+msgctxt "SBI_NetworkIcon|"
+msgid "Empty"
+msgstr "Tom"
+
+#: sbi_networkicon.cpp:85
+msgctxt "SBI_NetworkIcon|"
+msgid "Manage proxies"
+msgstr "Handter mellomtenarar"
+
+#: sbi_networkicon.cpp:98
+#, qt-format
+msgctxt "SBI_NetworkIcon|"
+msgid ""
+"Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
+"><br/><b>Proxy:</b><br/>%2"
+msgstr ""
+"Viser nettverksstatus og handterer mellomtenarar<br/><br/><b>Nettverk:</"
+"b><br/>%1<br/><br/><b>Mellomtenar:</b><br/>%2"
+
+#: sbi_networkicon.cpp:101
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected"
+msgstr "Kopla til"
+
+#: sbi_networkicon.cpp:104
+msgctxt "SBI_NetworkIcon|"
+msgid "Offline"
+msgstr "Fråkopla"
+
+#: sbi_networkicon.cpp:109
+msgctxt "SBI_NetworkIcon|"
+msgid "System proxy"
+msgstr "Systemmellomtenar"
+
+#: sbi_networkicon.cpp:113
+msgctxt "SBI_NetworkIcon|"
+msgid "No proxy"
+msgstr "Ingen mellomtenar"
+
+#: sbi_networkicon.cpp:117
+msgctxt "SBI_NetworkIcon|"
+msgid "User defined"
+msgstr "Tilpassa"
+
+#: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Add proxy"
+msgstr "Legg til mellomtenar"
+
+#: sbi_networkicondialog.cpp:57
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Name of proxy:"
+msgstr "Namn på mellomtenar:"
+
+#: sbi_networkicondialog.cpp:70
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Remove current proxy"
+msgstr "Fjern gjeldande mellomtenar"
+
+#: sbi_networkicondialog.cpp:70
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Are you sure you want to remove current proxy?"
+msgstr "Er du sikker på at du vil fjerna den gjeldande mellomtenaren?"
+
+#: sbi_networkicondialog.ui:14
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Proxy Manager"
+msgstr "Mellomtenarhandsamar"
+
+#: sbi_networkicondialog.ui:28
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Select proxy: "
+msgstr "Vel mellomtenar:"
+
+#: sbi_networkicondialog.ui:45
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Remove proxy"
+msgstr "Fjern mellomtenar"
+
+#: sbi_networkicondialog.ui:69
+msgctxt "SBI_NetworkIconDialog|"
+msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
+msgstr ""
+"Ingen mellomtenarar. Du kan leggja til ein mellomtenar med <b>Legg til</b>-"
+"knappen."
+
+#: sbi_networkicondialog.ui:104
+msgctxt "SBI_NetworkIconDialog|"
+msgid "All changes must be saved with <b>Save</b> button."
+msgstr "Alle endringar må lagrast med <b>Lagra</b>-knappen."
+
+#: sbi_proxywidget.ui:14
+msgctxt "SBI_ProxyWidget|"
+msgid "Form"
+msgstr "Skjema"
+
+#: sbi_proxywidget.ui:23
+msgctxt "SBI_ProxyWidget|"
+msgid "HTTP"
+msgstr "HTTP"
+
+#: sbi_proxywidget.ui:28
+msgctxt "SBI_ProxyWidget|"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+#: sbi_proxywidget.ui:39
+msgctxt "SBI_ProxyWidget|"
+msgid "Port:"
+msgstr "Port:"
+
+#: sbi_proxywidget.ui:76
+msgctxt "SBI_ProxyWidget|"
+msgid "Username:"
+msgstr "Brukarnamn:"
+
+#: sbi_proxywidget.ui:86
+msgctxt "SBI_ProxyWidget|"
+msgid "Password:"
+msgstr "Passord:"
+
+#: sbi_proxywidget.ui:111
+msgctxt "SBI_ProxyWidget|"
+msgid "S&ystem proxy configuration"
+msgstr "&Systemoppsett for mellomtenar"
+
+#: sbi_proxywidget.ui:118
+msgctxt "SBI_ProxyWidget|"
+msgid "&Manual configuration"
+msgstr "&Manuelt oppsett"
+
+#: sbi_settingsdialog.ui:14
+msgctxt "SBI_SettingsDialog|"
+msgid "StatusBar Icons"
+msgstr "Statuslinje-ikon"
+
+#: sbi_settingsdialog.ui:48
+msgctxt "SBI_SettingsDialog|"
+msgid "<h3>StatusBar Icons</h3>"
+msgstr "<h3>Statuslinje-ikon</h3>"
+
+#: sbi_settingsdialog.ui:70
+msgctxt "SBI_SettingsDialog|"
+msgid "These icons will be displayed in statusbar:"
+msgstr "Desse ikona visast i statuslinja:"
+
+#: sbi_settingsdialog.ui:97
+msgctxt "SBI_SettingsDialog|"
+msgid "Images Icon"
+msgstr "Biletikon"
+
+#: sbi_settingsdialog.ui:104
+msgctxt "SBI_SettingsDialog|"
+msgid "JavaScript Icon"
+msgstr "JavaScript-ikon"
+
+#: sbi_settingsdialog.ui:111
+msgctxt "SBI_SettingsDialog|"
+msgid "Network Icon"
+msgstr "Nettverksikon"
+
+#: sbi_settingsdialog.ui:118
+msgctxt "SBI_SettingsDialog|"
+msgid "Zoom widget"
+msgstr "Glidebrytar for forstørring"
+
+#: sbi_zoomwidget.cpp:48
+#, qt-format
+msgctxt "SBI_ZoomWidget|"
+msgid "Zoom: %1%"
+msgstr "Forstørring: %1 %"

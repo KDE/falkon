@@ -1,0 +1,306 @@
+# Translation of falkon_flashcookiemanager_qt to Norwegian Bokmål
+#
+# Yngve Levinsen <yngve.levinsen@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Language: nb_NO\n"
+"X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 2.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: qtrich\n"
+
+#: fcm_dialog.cpp:76
+msgctxt "FCM_Dialog|"
+msgid "Search"
+msgstr "Søk"
+
+#: fcm_dialog.cpp:93
+msgctxt "FCM_Dialog|"
+msgid "Confirmation"
+msgstr "Bekreftelse"
+
+#: fcm_dialog.cpp:94
+msgctxt "FCM_Dialog|"
+msgid "Are you sure you want to delete all flash cookies on your computer?"
+msgstr ""
+"Er du sikker på at du ønsker å slette alle Flash-kakene på datamaskinen din?"
+
+#: fcm_dialog.cpp:151 fcm_dialog.cpp:152 fcm_dialog.cpp:153 fcm_dialog.cpp:154
+#: fcm_dialog.ui:73 fcm_dialog.ui:120 fcm_dialog.ui:130 fcm_dialog.ui:140
+#: fcm_dialog.ui:256
+msgctxt "FCM_Dialog|"
+msgid "<flash cookie not selected>"
+msgstr "<Flash-kake ikke valgt>"
+
+#: fcm_dialog.cpp:156 fcm_dialog.ui:283
+msgctxt "FCM_Dialog|"
+msgid "Remove flash cookies"
+msgstr "Fjern Flash-kaker"
+
+#: fcm_dialog.cpp:166 fcm_dialog.cpp:237
+msgctxt "FCM_Dialog|"
+msgid " (settings)"
+msgstr "(innstillinger)"
+
+#: fcm_dialog.cpp:169
+msgctxt "FCM_Dialog|"
+msgid " Byte"
+msgstr "Byte"
+
+#: fcm_dialog.cpp:175
+msgctxt "FCM_Dialog|"
+msgid "Remove flash cookie"
+msgstr "Fjern Flash-kake"
+
+#: fcm_dialog.cpp:241
+msgctxt "FCM_Dialog|"
+msgid " [new]"
+msgstr "[ny]"
+
+#: fcm_dialog.cpp:277 fcm_dialog.cpp:305 fcm_dialog.ui:113
+msgctxt "FCM_Dialog|"
+msgid "Origin:"
+msgstr "Opphav:"
+
+#: fcm_dialog.cpp:277 fcm_dialog.cpp:375
+msgctxt "FCM_Dialog|"
+msgid "Add to whitelist"
+msgstr "Legg til på hvitliste"
+
+#: fcm_dialog.cpp:289 fcm_dialog.cpp:317
+msgctxt "FCM_Dialog|"
+msgid "Already whitelisted!"
+msgstr "Allerede hvitlistet."
+
+#: fcm_dialog.cpp:289
+#, qt-format
+msgctxt "FCM_Dialog|"
+msgid "The server \"%1\" is already in blacklist, please remove it first."
+msgstr "Tjeneren \"%1\" er allerede svartelistet, fjern den først."
+
+#: fcm_dialog.cpp:305 fcm_dialog.cpp:374
+msgctxt "FCM_Dialog|"
+msgid "Add to blacklist"
+msgstr "Legg til på svarteliste"
+
+#: fcm_dialog.cpp:317
+#, qt-format
+msgctxt "FCM_Dialog|"
+msgid "The origin \"%1\" is already in whitelist, please remove it first."
+msgstr "Opphavet \"%1\" er allerede hvitlistet, fjern det først."
+
+#: fcm_dialog.ui:14
+msgctxt "FCM_Dialog|"
+msgid "Flash Cookies"
+msgstr "Flash-kaker"
+
+#: fcm_dialog.ui:24
+msgctxt "FCM_Dialog|"
+msgid "Stored Flash Cookies"
+msgstr "Lagrede Flash-kaker"
+
+#: fcm_dialog.ui:45
+msgctxt "FCM_Dialog|"
+msgid "Find: "
+msgstr "Finn:"
+
+#: fcm_dialog.ui:83
+msgctxt "FCM_Dialog|"
+msgid "Last Modified:"
+msgstr "Sist endret:"
+
+#: fcm_dialog.ui:96
+msgctxt "FCM_Dialog|"
+msgid "Name:"
+msgstr "Navn:"
+
+#: fcm_dialog.ui:106
+msgctxt "FCM_Dialog|"
+msgid "Size:"
+msgstr "Størrelse:"
+
+#: fcm_dialog.ui:152
+msgctxt "FCM_Dialog|"
+msgid "Extracted latin1 strings:"
+msgstr "Uthentede latin1-strenger:"
+
+#: fcm_dialog.ui:182
+msgctxt "FCM_Dialog|"
+msgid "These flash cookies are stored on your computer:"
+msgstr "Disse Flash-kakene er lagret på din datamaskin:"
+
+#: fcm_dialog.ui:202
+msgctxt "FCM_Dialog|"
+msgid "Origin"
+msgstr "Opphav"
+
+#: fcm_dialog.ui:227
+msgctxt "FCM_Dialog|"
+msgid "Reload from disk"
+msgstr "Last inn igjen fra disk"
+
+#: fcm_dialog.ui:240
+msgctxt "FCM_Dialog|"
+msgid "Path:"
+msgstr "Sti:"
+
+#: fcm_dialog.ui:253
+msgctxt "FCM_Dialog|"
+msgid "Click to open containing folder"
+msgstr "Klikk for å åpne inneholdende mappe"
+
+#: fcm_dialog.ui:276
+msgctxt "FCM_Dialog|"
+msgid "Remove all flash cookies"
+msgstr "Fjern alle Flash-kaker"
+
+#: fcm_dialog.ui:308
+msgctxt "FCM_Dialog|"
+msgid "Flash Cookies Filtering"
+msgstr "Filtrering av Flash-kaker"
+
+#: fcm_dialog.ui:316
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
+"whitelist</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Hvitliste for Flash-"
+"kaker</span></p></body></html>"
+
+#: fcm_dialog.ui:348 fcm_dialog.ui:416
+msgctxt "FCM_Dialog|"
+msgid "Remove"
+msgstr "Fjern"
+
+#: fcm_dialog.ui:355 fcm_dialog.ui:423
+msgctxt "FCM_Dialog|"
+msgid "Add"
+msgstr "Legg til"
+
+#: fcm_dialog.ui:364
+msgctxt "FCM_Dialog|"
+msgid ""
+"Flash cookies from these origins will not be deleted automatically. (Also "
+"detection of them will not be notified to user.)"
+msgstr ""
+"Flash-kaker av slikt opphav vil ikke bli slettet automatisk. (Oppdagelse av "
+"dem vil heller ikke bli varslet for brukeren.)"
+
+#: fcm_dialog.ui:374
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
+"blacklist</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Svarteliste for "
+"Flash-kaker</span></p></body></html>"
+
+#: fcm_dialog.ui:381
+msgctxt "FCM_Dialog|"
+msgid ""
+"Flash cookies from these origins will be deleted without any notification."
+msgstr "Flash-kaker av slikt opphav vil bli slettet uten forvarsel."
+
+#: fcm_dialog.ui:442
+msgctxt "FCM_Dialog|"
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: fcm_dialog.ui:453
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash Cookie "
+"Settings</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Innstillinger for "
+"Flash-kaker</span></p></body></html>"
+
+#: fcm_dialog.ui:475
+msgctxt "FCM_Dialog|"
+msgid ""
+"Auto mode: The flash data directory will be checked regularly. and flash "
+"cookies in blacklist will be deleted automatically."
+msgstr ""
+"Automodus: Flash-datamappen vil bli sjekket jevnlig, og Flash-kaker i "
+"svartelisten vil bli slettet automatisk."
+
+#: fcm_dialog.ui:510
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> This "
+"settings are just applied to flash cookies, to manage HTTP cookies use <span "
+"style=\" font-weight:600;\">Cookies Manager</span>. </p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> Disse "
+"innstillingene har bare innvirkning på Flash-kaker, for å behandle HTTP-"
+"kaker, bruk <span style=\" font-weight:600;\">Kake-behandleren</span>. </p></"
+"body></html>"
+
+#: fcm_dialog.ui:538
+msgctxt "FCM_Dialog|"
+msgid ""
+"Notification: User will be notified for every new flash cookie that is not "
+"in blacklist and whitelist."
+msgstr ""
+"Merk: Brukeren vil få beskjed om hver nye Flash-kake som ikke er "
+"svartelistet eller hvitlisten."
+
+#: fcm_dialog.ui:565
+msgctxt "FCM_Dialog|"
+msgid "Delete all flash cookies on exit/start. (except those are in whitelist)"
+msgstr "Slett alle Flash-kaker ved avslutting/start. (Untatt de i hvitlisten)."
+
+#: fcm_notification.cpp:34
+msgctxt "FCM_Notification|"
+msgid "A new flash cookie was detected"
+msgstr "Ny Flash-kake oppdaget"
+
+#: fcm_notification.cpp:37
+#, qt-format
+msgctxt "FCM_Notification|"
+msgid "%1 new flash cookies were detected"
+msgstr "%1 nye Flash-kaker oppdaget"
+
+#: fcm_notification.ui:45
+msgctxt "FCM_Notification|"
+msgid "New flash cookie was detected!"
+msgstr "En ny Flash-kake ble oppdaget!"
+
+#: fcm_notification.ui:52
+msgctxt "FCM_Notification|"
+msgid "View"
+msgstr "Vis"
+
+#: fcm_plugin.cpp:59
+msgctxt "FCM_Button|"
+msgid "Flash Cookie Manager button"
+msgstr "Flashkakebehandler-knapp"
+
+#: fcm_plugin.cpp:129 fcm_plugin.cpp:359
+msgctxt "FCM_Plugin|"
+msgid "Flash Cookie Manager"
+msgstr "Flash-kakebehandler"
+
+#: fcm_plugin.cpp:360
+msgctxt "FCM_Plugin|"
+msgid "Show Flash Cookie Manager"
+msgstr "Vis Flash-kakebehandler"
+
+#: fcm_plugin.cpp:441
+msgctxt "FCM_Plugin|"
+msgid "!default"
+msgstr "!forvalg"
+
+#: fcm_plugin.cpp:453
+msgctxt "FCM_Plugin|"
+msgid "!other"
+msgstr "!annet"

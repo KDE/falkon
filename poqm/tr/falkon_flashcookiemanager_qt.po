@@ -1,0 +1,308 @@
+#
+# Translators:
+# Ferhat AYDIN <ferhataydin44@gmail.com>, 2017
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-09-05 00:16+0000\n"
+"PO-Revision-Date: 2022-01-22 13:00+0000\n"
+"Last-Translator: Ferhat AYDIN <ferhataydin44@gmail.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: fcm_dialog.cpp:76
+msgctxt "FCM_Dialog|"
+msgid "Search"
+msgstr "Ara"
+
+#: fcm_dialog.cpp:93
+msgctxt "FCM_Dialog|"
+msgid "Confirmation"
+msgstr "Onay"
+
+#: fcm_dialog.cpp:94
+msgctxt "FCM_Dialog|"
+msgid "Are you sure you want to delete all flash cookies on your computer?"
+msgstr ""
+"Bilgisayarınızdaki tüm flash çerezlerini silmek istediğinizden emin misiniz?"
+
+#: fcm_dialog.cpp:151 fcm_dialog.cpp:152 fcm_dialog.cpp:153 fcm_dialog.cpp:154
+#: fcm_dialog.ui:73 fcm_dialog.ui:120 fcm_dialog.ui:130 fcm_dialog.ui:140
+#: fcm_dialog.ui:256
+msgctxt "FCM_Dialog|"
+msgid "<flash cookie not selected>"
+msgstr "<flash çerezi seçilmedi>"
+
+#: fcm_dialog.cpp:156 fcm_dialog.ui:283
+msgctxt "FCM_Dialog|"
+msgid "Remove flash cookies"
+msgstr "Flash çerezlerini sil"
+
+#: fcm_dialog.cpp:166 fcm_dialog.cpp:237
+msgctxt "FCM_Dialog|"
+msgid " (settings)"
+msgstr " (ayarlar)"
+
+#: fcm_dialog.cpp:169
+msgctxt "FCM_Dialog|"
+msgid " Byte"
+msgstr " bayt"
+
+#: fcm_dialog.cpp:175
+msgctxt "FCM_Dialog|"
+msgid "Remove flash cookie"
+msgstr "Flash çerezini sil"
+
+#: fcm_dialog.cpp:241
+msgctxt "FCM_Dialog|"
+msgid " [new]"
+msgstr " [yeni]"
+
+#: fcm_dialog.cpp:277 fcm_dialog.cpp:305 fcm_dialog.ui:113
+msgctxt "FCM_Dialog|"
+msgid "Origin:"
+msgstr "Köken:"
+
+#: fcm_dialog.cpp:277 fcm_dialog.cpp:375
+msgctxt "FCM_Dialog|"
+msgid "Add to whitelist"
+msgstr "Beyaz listeye ekle"
+
+#: fcm_dialog.cpp:289 fcm_dialog.cpp:317
+msgctxt "FCM_Dialog|"
+msgid "Already whitelisted!"
+msgstr "Zaten beyaz listede!"
+
+#: fcm_dialog.cpp:289
+#, qt-format
+msgctxt "FCM_Dialog|"
+msgid "The server \"%1\" is already in blacklist, please remove it first."
+msgstr "\"%1\" sunucusu zaten kara listede, lütfen önce onu silin."
+
+#: fcm_dialog.cpp:305 fcm_dialog.cpp:374
+msgctxt "FCM_Dialog|"
+msgid "Add to blacklist"
+msgstr "Kara listeye ekle"
+
+#: fcm_dialog.cpp:317
+#, qt-format
+msgctxt "FCM_Dialog|"
+msgid "The origin \"%1\" is already in whitelist, please remove it first."
+msgstr "\"%1\" sunucusu zaten beyaz listede, lütfen önce onu silin."
+
+#: fcm_dialog.ui:14
+msgctxt "FCM_Dialog|"
+msgid "Flash Cookies"
+msgstr "Flash Çerezleri"
+
+#: fcm_dialog.ui:24
+msgctxt "FCM_Dialog|"
+msgid "Stored Flash Cookies"
+msgstr "Depolanan Flash Çerezleri"
+
+#: fcm_dialog.ui:45
+msgctxt "FCM_Dialog|"
+msgid "Find: "
+msgstr "Bul:"
+
+#: fcm_dialog.ui:83
+msgctxt "FCM_Dialog|"
+msgid "Last Modified:"
+msgstr "Son Değiştirme:"
+
+#: fcm_dialog.ui:96
+msgctxt "FCM_Dialog|"
+msgid "Name:"
+msgstr "Ad:"
+
+#: fcm_dialog.ui:106
+msgctxt "FCM_Dialog|"
+msgid "Size:"
+msgstr "Boyut:"
+
+#: fcm_dialog.ui:152
+msgctxt "FCM_Dialog|"
+msgid "Extracted latin1 strings:"
+msgstr "Latin1 dizilerini ayıkla:"
+
+#: fcm_dialog.ui:182
+msgctxt "FCM_Dialog|"
+msgid "These flash cookies are stored on your computer:"
+msgstr "Bu flash çerezleri bilgisayarınızda saklandı:"
+
+#: fcm_dialog.ui:202
+msgctxt "FCM_Dialog|"
+msgid "Origin"
+msgstr "Köken"
+
+#: fcm_dialog.ui:227
+msgctxt "FCM_Dialog|"
+msgid "Reload from disk"
+msgstr "Diskten yeniden yükle"
+
+#: fcm_dialog.ui:240
+msgctxt "FCM_Dialog|"
+msgid "Path:"
+msgstr "Yol:"
+
+#: fcm_dialog.ui:253
+msgctxt "FCM_Dialog|"
+msgid "Click to open containing folder"
+msgstr "İçeren klasörü açmak için tıklayın"
+
+#: fcm_dialog.ui:276
+msgctxt "FCM_Dialog|"
+msgid "Remove all flash cookies"
+msgstr "Tüm flash çerezlerini sil"
+
+#: fcm_dialog.ui:308
+msgctxt "FCM_Dialog|"
+msgid "Flash Cookies Filtering"
+msgstr "Flash Çerezleri Süzme"
+
+#: fcm_dialog.ui:316
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
+"whitelist</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash Çerezleri "
+"Beyaz Listesi</span></p></body></html>"
+
+#: fcm_dialog.ui:348 fcm_dialog.ui:416
+msgctxt "FCM_Dialog|"
+msgid "Remove"
+msgstr "Kaldır"
+
+#: fcm_dialog.ui:355 fcm_dialog.ui:423
+msgctxt "FCM_Dialog|"
+msgid "Add"
+msgstr "Ekle"
+
+#: fcm_dialog.ui:364
+msgctxt "FCM_Dialog|"
+msgid ""
+"Flash cookies from these origins will not be deleted automatically. (Also "
+"detection of them will not be notified to user.)"
+msgstr ""
+"Bu kaynaktan gelen flash çerezleri otomatik olarak silinmez. (Bu çerezlerin "
+"denetimi kullanıcı tarafından belirlenemez.)"
+
+#: fcm_dialog.ui:374
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
+"blacklist</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash çerez kara "
+"listesi</span></p></body></html>"
+
+#: fcm_dialog.ui:381
+msgctxt "FCM_Dialog|"
+msgid ""
+"Flash cookies from these origins will be deleted without any notification."
+msgstr ""
+"Bu kökenden gelen Flash çerezleri herhangi bir bildirim yapılmadan "
+"silinecektir."
+
+#: fcm_dialog.ui:442
+msgctxt "FCM_Dialog|"
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: fcm_dialog.ui:453
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash Cookie "
+"Settings</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash Çerez "
+"Ayarları</span></p></body></html>"
+
+#: fcm_dialog.ui:475
+msgctxt "FCM_Dialog|"
+msgid ""
+"Auto mode: The flash data directory will be checked regularly. and flash "
+"cookies in blacklist will be deleted automatically."
+msgstr ""
+"Otomatik kip: Flash veri dizini düzenli olarak kontrol edilecektir ve flash "
+"çerezleri kara listesi otomatik olarak silinecektir."
+
+#: fcm_dialog.ui:510
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> This "
+"settings are just applied to flash cookies, to manage HTTP cookies use <span "
+"style=\" font-weight:600;\">Cookies Manager</span>. </p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Not:</span> Bu "
+"ayarlar yalnızca, flash çerezlerinden HTTP çerezler kullananları yönetmek "
+"için uygulanır <span style=\" font-weight:600;\">Cookies Manager</span>. </"
+"p></body></html>"
+
+#: fcm_dialog.ui:538
+msgctxt "FCM_Dialog|"
+msgid ""
+"Notification: User will be notified for every new flash cookie that is not "
+"in blacklist and whitelist."
+msgstr ""
+"Bildirim: Kullanıcı kara ve beyaz listede olmayan her yeni flash çerez için "
+"bildirilecektir."
+
+#: fcm_dialog.ui:565
+msgctxt "FCM_Dialog|"
+msgid "Delete all flash cookies on exit/start. (except those are in whitelist)"
+msgstr "Başlangıçta/Çıkışta flash çerezleri sil. (beyaz listedekiler hariç)"
+
+#: fcm_notification.cpp:34
+msgctxt "FCM_Notification|"
+msgid "A new flash cookie was detected"
+msgstr "Yeni bir flash çerezi algılandı"
+
+#: fcm_notification.cpp:37
+#, qt-format
+msgctxt "FCM_Notification|"
+msgid "%1 new flash cookies were detected"
+msgstr "%1 yeni flash çerezleri algılandı"
+
+#: fcm_notification.ui:45
+msgctxt "FCM_Notification|"
+msgid "New flash cookie was detected!"
+msgstr "Yeni flash çerezi algılandı!"
+
+#: fcm_notification.ui:52
+msgctxt "FCM_Notification|"
+msgid "View"
+msgstr "Görünüm"
+
+#: fcm_plugin.cpp:59
+msgctxt "FCM_Button|"
+msgid "Flash Cookie Manager button"
+msgstr "Flash Çerezi Yönetici düğmesi"
+
+#: fcm_plugin.cpp:129 fcm_plugin.cpp:359
+msgctxt "FCM_Plugin|"
+msgid "Flash Cookie Manager"
+msgstr "Flash Çerezi Yöneticisi"
+
+#: fcm_plugin.cpp:360
+msgctxt "FCM_Plugin|"
+msgid "Show Flash Cookie Manager"
+msgstr "Flash Çerezi Yöneticisini Göster"
+
+#: fcm_plugin.cpp:441
+msgctxt "FCM_Plugin|"
+msgid "!default"
+msgstr "!varsayılan"
+
+#: fcm_plugin.cpp:453
+msgctxt "FCM_Plugin|"
+msgid "!other"
+msgstr "!diğer"

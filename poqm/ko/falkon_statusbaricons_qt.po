@@ -1,0 +1,255 @@
+# Shinjo Park <kde@peremen.name>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2019-05-27 00:31+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 18.12.3\n"
+"X-Qt-Contexts: true\n"
+
+#: sbi_imagesicon.cpp:34
+msgctxt "SBI_ImagesIcon|"
+msgid "Modify images loading settings per-site and globally"
+msgstr "사이트별 및 전역 그림 불러오기 설정 편집"
+
+#: sbi_imagesicon.cpp:58
+msgctxt "SBI_ImagesIcon|"
+msgid "Current Page Settings"
+msgstr "현재 페이지 설정"
+
+#: sbi_imagesicon.cpp:61
+msgctxt "SBI_ImagesIcon|"
+msgid "Disable loading images (temporarily)"
+msgstr "그림 불러오기 비활성화(임시적)"
+
+#: sbi_imagesicon.cpp:64
+msgctxt "SBI_ImagesIcon|"
+msgid "Enable loading images (temporarily)"
+msgstr "그림 불러오기 활성화(임시적)"
+
+#: sbi_imagesicon.cpp:68
+msgctxt "SBI_ImagesIcon|"
+msgid "Global Settings"
+msgstr "전역 설정"
+
+#: sbi_imagesicon.cpp:70
+msgctxt "SBI_ImagesIcon|"
+msgid "Automatically load images"
+msgstr "자동으로 그림 불러오기"
+
+#: sbi_javascripticon.cpp:34
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Modify JavaScript settings per-site and globally"
+msgstr "사이트별 및 전역 자바스크립트 설정 편집"
+
+#: sbi_javascripticon.cpp:51
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Current Page Settings"
+msgstr "현재 페이지 설정"
+
+#: sbi_javascripticon.cpp:54
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Disable JavaScript (temporarily)"
+msgstr "자바스크립트 비활성화(임시적)"
+
+#: sbi_javascripticon.cpp:57
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Enable JavaScript (temporarily)"
+msgstr "자바스크립트 활성화(임시적)"
+
+#: sbi_javascripticon.cpp:66
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Global Settings"
+msgstr "전역 설정"
+
+#: sbi_javascripticon.cpp:67
+msgctxt "SBI_JavaScriptIcon|"
+msgid "Manage JavaScript settings"
+msgstr "자바스크립트 설정 관리"
+
+#: sbi_networkicon.cpp:65
+msgctxt "SBI_NetworkIcon|"
+msgid "Proxy Configuration"
+msgstr "프록시 설정"
+
+#: sbi_networkicon.cpp:67
+msgctxt "SBI_NetworkIcon|"
+msgid "Select proxy"
+msgstr "프록시 선택"
+
+#: sbi_networkicon.cpp:81
+msgctxt "SBI_NetworkIcon|"
+msgid "Empty"
+msgstr "비어 있음"
+
+#: sbi_networkicon.cpp:85
+msgctxt "SBI_NetworkIcon|"
+msgid "Manage proxies"
+msgstr "프록시 관리"
+
+#: sbi_networkicon.cpp:98
+#, qt-format
+msgctxt "SBI_NetworkIcon|"
+msgid ""
+"Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
+"><br/><b>Proxy:</b><br/>%2"
+msgstr ""
+"네트워크 상태를 표시하고 프록시를 관리합니다<br/><br/><b>네트워크:</b><br/>"
+"%1<br/><br/><b>프록시:</b><br/>%2"
+
+#: sbi_networkicon.cpp:101
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected"
+msgstr "연결됨"
+
+#: sbi_networkicon.cpp:104
+msgctxt "SBI_NetworkIcon|"
+msgid "Offline"
+msgstr "오프라인"
+
+#: sbi_networkicon.cpp:109
+msgctxt "SBI_NetworkIcon|"
+msgid "System proxy"
+msgstr "시스템 프록시"
+
+#: sbi_networkicon.cpp:113
+msgctxt "SBI_NetworkIcon|"
+msgid "No proxy"
+msgstr "프록시 없음"
+
+#: sbi_networkicon.cpp:117
+msgctxt "SBI_NetworkIcon|"
+msgid "User defined"
+msgstr "사용자 정의"
+
+#: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Add proxy"
+msgstr "프록시 추가"
+
+#: sbi_networkicondialog.cpp:57
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Name of proxy:"
+msgstr "프록시 이름:"
+
+#: sbi_networkicondialog.cpp:70
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Remove current proxy"
+msgstr "현재 프록시 삭제"
+
+#: sbi_networkicondialog.cpp:70
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Are you sure you want to remove current proxy?"
+msgstr "현재 프록시를 삭제하시겠습니까?"
+
+#: sbi_networkicondialog.ui:14
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Proxy Manager"
+msgstr "프록시 관리자"
+
+#: sbi_networkicondialog.ui:28
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Select proxy: "
+msgstr "프록시 선택: "
+
+#: sbi_networkicondialog.ui:45
+msgctxt "SBI_NetworkIconDialog|"
+msgid "Remove proxy"
+msgstr "프록시 삭제"
+
+#: sbi_networkicondialog.ui:69
+msgctxt "SBI_NetworkIconDialog|"
+msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
+msgstr "프록시가 없습니다. <b>추가</b> 단추를 클릭해서 프록시를 추가하십시오."
+
+#: sbi_networkicondialog.ui:104
+msgctxt "SBI_NetworkIconDialog|"
+msgid "All changes must be saved with <b>Save</b> button."
+msgstr "모든 변경 사항은 <b>저장</b> 단추를 눌러서 저장해야 합니다."
+
+#: sbi_proxywidget.ui:14
+msgctxt "SBI_ProxyWidget|"
+msgid "Form"
+msgstr "폼"
+
+#: sbi_proxywidget.ui:23
+msgctxt "SBI_ProxyWidget|"
+msgid "HTTP"
+msgstr "HTTP"
+
+#: sbi_proxywidget.ui:28
+msgctxt "SBI_ProxyWidget|"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+#: sbi_proxywidget.ui:39
+msgctxt "SBI_ProxyWidget|"
+msgid "Port:"
+msgstr "포트:"
+
+#: sbi_proxywidget.ui:76
+msgctxt "SBI_ProxyWidget|"
+msgid "Username:"
+msgstr "사용자 이름:"
+
+#: sbi_proxywidget.ui:86
+msgctxt "SBI_ProxyWidget|"
+msgid "Password:"
+msgstr "암호:"
+
+#: sbi_proxywidget.ui:111
+msgctxt "SBI_ProxyWidget|"
+msgid "S&ystem proxy configuration"
+msgstr "시스템 프록시 설정(&Y)"
+
+#: sbi_proxywidget.ui:118
+msgctxt "SBI_ProxyWidget|"
+msgid "&Manual configuration"
+msgstr "수동 설정(&M)"
+
+#: sbi_settingsdialog.ui:14
+msgctxt "SBI_SettingsDialog|"
+msgid "StatusBar Icons"
+msgstr "상태 표시줄 아이콘"
+
+#: sbi_settingsdialog.ui:48
+msgctxt "SBI_SettingsDialog|"
+msgid "<h3>StatusBar Icons</h3>"
+msgstr "<h3>상태 표시줄 아이콘</h3>"
+
+#: sbi_settingsdialog.ui:70
+msgctxt "SBI_SettingsDialog|"
+msgid "These icons will be displayed in statusbar:"
+msgstr "상태 표시줄에 다음 아이콘을 표시합니다:"
+
+#: sbi_settingsdialog.ui:97
+msgctxt "SBI_SettingsDialog|"
+msgid "Images Icon"
+msgstr "그림 아이콘"
+
+#: sbi_settingsdialog.ui:104
+msgctxt "SBI_SettingsDialog|"
+msgid "JavaScript Icon"
+msgstr "자바스크립트 아이콘"
+
+#: sbi_settingsdialog.ui:111
+msgctxt "SBI_SettingsDialog|"
+msgid "Network Icon"
+msgstr "네트워크 아이콘"
+
+#: sbi_settingsdialog.ui:118
+msgctxt "SBI_SettingsDialog|"
+msgid "Zoom widget"
+msgstr "크기 조정 위젯"
+
+#: sbi_zoomwidget.cpp:48
+#, qt-format
+msgctxt "SBI_ZoomWidget|"
+msgid "Zoom: %1%"
+msgstr "크기 조정: %1%"

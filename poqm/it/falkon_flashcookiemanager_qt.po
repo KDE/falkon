@@ -1,0 +1,315 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+# Federico Fabiani <federico.fabiani85@gmail.com>, 2017.
+# Jorge Sevilla <jsevi@ozu.es>, 2017.
+# Paolo Zamponi <zapaolo@email.it>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2018-03-05 18:49+0100\n"
+"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: fcm_dialog.cpp:76
+msgctxt "FCM_Dialog|"
+msgid "Search"
+msgstr "Cerca"
+
+#: fcm_dialog.cpp:93
+msgctxt "FCM_Dialog|"
+msgid "Confirmation"
+msgstr "Conferma"
+
+#: fcm_dialog.cpp:94
+msgctxt "FCM_Dialog|"
+msgid "Are you sure you want to delete all flash cookies on your computer?"
+msgstr ""
+"Sei sicuro di voler cancellare tutti i cookie di Flash dal tuo computer?"
+
+#: fcm_dialog.cpp:151 fcm_dialog.cpp:152 fcm_dialog.cpp:153 fcm_dialog.cpp:154
+#: fcm_dialog.ui:73 fcm_dialog.ui:120 fcm_dialog.ui:130 fcm_dialog.ui:140
+#: fcm_dialog.ui:256
+msgctxt "FCM_Dialog|"
+msgid "<flash cookie not selected>"
+msgstr "<cookie di Flash non selezionato>"
+
+#: fcm_dialog.cpp:156 fcm_dialog.ui:283
+msgctxt "FCM_Dialog|"
+msgid "Remove flash cookies"
+msgstr "Elimina cookie di Flash"
+
+#: fcm_dialog.cpp:166 fcm_dialog.cpp:237
+msgctxt "FCM_Dialog|"
+msgid " (settings)"
+msgstr " (impostazioni)"
+
+#: fcm_dialog.cpp:169
+msgctxt "FCM_Dialog|"
+msgid " Byte"
+msgstr " Byte"
+
+#: fcm_dialog.cpp:175
+msgctxt "FCM_Dialog|"
+msgid "Remove flash cookie"
+msgstr "Elimina cookie di Flash"
+
+#: fcm_dialog.cpp:241
+msgctxt "FCM_Dialog|"
+msgid " [new]"
+msgstr " [nuovo]"
+
+#: fcm_dialog.cpp:277 fcm_dialog.cpp:305 fcm_dialog.ui:113
+msgctxt "FCM_Dialog|"
+msgid "Origin:"
+msgstr "Origine:"
+
+#: fcm_dialog.cpp:277 fcm_dialog.cpp:375
+msgctxt "FCM_Dialog|"
+msgid "Add to whitelist"
+msgstr "Aggiungi ai consentiti"
+
+#: fcm_dialog.cpp:289 fcm_dialog.cpp:317
+msgctxt "FCM_Dialog|"
+msgid "Already whitelisted!"
+msgstr "Già presente nei consentiti."
+
+#: fcm_dialog.cpp:289
+#, qt-format
+msgctxt "FCM_Dialog|"
+msgid "The server \"%1\" is already in blacklist, please remove it first."
+msgstr ""
+"Il server «%1» è già presente nei bloccati, prima è necessario rimuoverlo."
+
+#: fcm_dialog.cpp:305 fcm_dialog.cpp:374
+msgctxt "FCM_Dialog|"
+msgid "Add to blacklist"
+msgstr "Aggiungi ai bloccati"
+
+#: fcm_dialog.cpp:317
+#, qt-format
+msgctxt "FCM_Dialog|"
+msgid "The origin \"%1\" is already in whitelist, please remove it first."
+msgstr ""
+"L'origine «%1» è già presente nei consentiti, prima è necessario rimuoverla."
+
+#: fcm_dialog.ui:14
+msgctxt "FCM_Dialog|"
+msgid "Flash Cookies"
+msgstr "Cookie di Flash"
+
+#: fcm_dialog.ui:24
+msgctxt "FCM_Dialog|"
+msgid "Stored Flash Cookies"
+msgstr "Cookie di Flash salvati"
+
+#: fcm_dialog.ui:45
+msgctxt "FCM_Dialog|"
+msgid "Find: "
+msgstr "Trova: "
+
+#: fcm_dialog.ui:83
+msgctxt "FCM_Dialog|"
+msgid "Last Modified:"
+msgstr "Ultima modifica:"
+
+#: fcm_dialog.ui:96
+msgctxt "FCM_Dialog|"
+msgid "Name:"
+msgstr "Nome:"
+
+#: fcm_dialog.ui:106
+msgctxt "FCM_Dialog|"
+msgid "Size:"
+msgstr "Dimensione:"
+
+#: fcm_dialog.ui:152
+msgctxt "FCM_Dialog|"
+msgid "Extracted latin1 strings:"
+msgstr "Stringhe latin1 estratte:"
+
+#: fcm_dialog.ui:182
+msgctxt "FCM_Dialog|"
+msgid "These flash cookies are stored on your computer:"
+msgstr "Questi cookie di Flash sono archiviati sul tuo computer:"
+
+#: fcm_dialog.ui:202
+msgctxt "FCM_Dialog|"
+msgid "Origin"
+msgstr "Origine"
+
+#: fcm_dialog.ui:227
+msgctxt "FCM_Dialog|"
+msgid "Reload from disk"
+msgstr "Ricarica dal disco"
+
+#: fcm_dialog.ui:240
+msgctxt "FCM_Dialog|"
+msgid "Path:"
+msgstr "Percorso:"
+
+#: fcm_dialog.ui:253
+msgctxt "FCM_Dialog|"
+msgid "Click to open containing folder"
+msgstr "Fai clic per aprire la cartella contenitore"
+
+#: fcm_dialog.ui:276
+msgctxt "FCM_Dialog|"
+msgid "Remove all flash cookies"
+msgstr "Elimina tutti i cookie di Flash"
+
+#: fcm_dialog.ui:308
+msgctxt "FCM_Dialog|"
+msgid "Flash Cookies Filtering"
+msgstr "Filtraggio cookie di Flash"
+
+#: fcm_dialog.ui:316
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
+"whitelist</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Cookie di Flash "
+"consentiti</span></p></body></html>"
+
+#: fcm_dialog.ui:348 fcm_dialog.ui:416
+msgctxt "FCM_Dialog|"
+msgid "Remove"
+msgstr "Rimuovi"
+
+#: fcm_dialog.ui:355 fcm_dialog.ui:423
+msgctxt "FCM_Dialog|"
+msgid "Add"
+msgstr "Aggiungi"
+
+#: fcm_dialog.ui:364
+msgctxt "FCM_Dialog|"
+msgid ""
+"Flash cookies from these origins will not be deleted automatically. (Also "
+"detection of them will not be notified to user.)"
+msgstr ""
+"I cookie di Flash provenienti da queste origini non saranno eliminati "
+"automaticamente, inoltre la loro scoperta di questi cookie non verrà "
+"notificata all'utente."
+
+#: fcm_dialog.ui:374
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
+"blacklist</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Cookie di Flash "
+"bloccati</span></p></body></html>"
+
+#: fcm_dialog.ui:381
+msgctxt "FCM_Dialog|"
+msgid ""
+"Flash cookies from these origins will be deleted without any notification."
+msgstr ""
+"I cookie di Flash provenienti da queste origini verranno eliminati senza "
+"nessuna notifica."
+
+#: fcm_dialog.ui:442
+msgctxt "FCM_Dialog|"
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: fcm_dialog.ui:453
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash Cookie "
+"Settings</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Impostazioni per i "
+"cookie di Flash</span></p></body></html>"
+
+#: fcm_dialog.ui:475
+msgctxt "FCM_Dialog|"
+msgid ""
+"Auto mode: The flash data directory will be checked regularly. and flash "
+"cookies in blacklist will be deleted automatically."
+msgstr ""
+"Modalità automatica: la cartella dei dati di Flash verrà controllata "
+"regolarmente, e i cookie di Flash bloccati verranno eliminati "
+"automaticamente."
+
+#: fcm_dialog.ui:510
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> This "
+"settings are just applied to flash cookies, to manage HTTP cookies use <span "
+"style=\" font-weight:600;\">Cookies Manager</span>. </p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Nota:</span> Queste "
+"impostazioni saranno applicate ai cookie di Flash, per gestire i cookie HTTP "
+"usa il <span style=\" font-weight:600;\">Gestore dei cookie</span>. </p></"
+"body></html>"
+
+#: fcm_dialog.ui:538
+msgctxt "FCM_Dialog|"
+msgid ""
+"Notification: User will be notified for every new flash cookie that is not "
+"in blacklist and whitelist."
+msgstr ""
+"Notifiche: all'utente verrà notificato ogni cookie di Flash che non è tra i "
+"bloccati o tra i consentiti."
+
+#: fcm_dialog.ui:565
+msgctxt "FCM_Dialog|"
+msgid "Delete all flash cookies on exit/start. (except those are in whitelist)"
+msgstr ""
+"Cancella tutti i cookie di Flash alla chiusura/all'avvio (eccetto quelli "
+"consentiti)."
+
+#: fcm_notification.cpp:34
+msgctxt "FCM_Notification|"
+msgid "A new flash cookie was detected"
+msgstr "È stato individuato un nuovo cookie di Flash"
+
+#: fcm_notification.cpp:37
+#, qt-format
+msgctxt "FCM_Notification|"
+msgid "%1 new flash cookies were detected"
+msgstr "Sono stati individuati %1 nuovi cookie di Flash"
+
+#: fcm_notification.ui:45
+msgctxt "FCM_Notification|"
+msgid "New flash cookie was detected!"
+msgstr "Individuato un nuovo cookie di Flash."
+
+#: fcm_notification.ui:52
+msgctxt "FCM_Notification|"
+msgid "View"
+msgstr "Visualizza"
+
+#: fcm_plugin.cpp:59
+msgctxt "FCM_Button|"
+msgid "Flash Cookie Manager button"
+msgstr "Pulsante del gestore dei cookie di Flash"
+
+#: fcm_plugin.cpp:129 fcm_plugin.cpp:359
+msgctxt "FCM_Plugin|"
+msgid "Flash Cookie Manager"
+msgstr "Gestore dei cookie di Flash"
+
+#: fcm_plugin.cpp:360
+msgctxt "FCM_Plugin|"
+msgid "Show Flash Cookie Manager"
+msgstr "Mostra il gestore dei cookie di Flash"
+
+#: fcm_plugin.cpp:441
+msgctxt "FCM_Plugin|"
+msgid "!default"
+msgstr "!predefinito"
+
+#: fcm_plugin.cpp:453
+msgctxt "FCM_Plugin|"
+msgid "!other"
+msgstr "!altro"

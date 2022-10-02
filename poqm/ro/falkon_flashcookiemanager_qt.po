@@ -1,0 +1,287 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+# Florentina Musat <florentina.musat.28@gmail.com>, 2017
+# Ștefan Comănescu <sdfanq@gmail.com>, 2017
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Qt-Contexts: true\n"
+
+#: fcm_dialog.cpp:76
+msgctxt "FCM_Dialog|"
+msgid "Search"
+msgstr "Căutare"
+
+#: fcm_dialog.cpp:93
+msgctxt "FCM_Dialog|"
+msgid "Confirmation"
+msgstr "Confirmare"
+
+#: fcm_dialog.cpp:94
+msgctxt "FCM_Dialog|"
+msgid "Are you sure you want to delete all flash cookies on your computer?"
+msgstr "Sigur doriți să ștergeți toate cookies flash de pe calculator?"
+
+#: fcm_dialog.cpp:151 fcm_dialog.cpp:152 fcm_dialog.cpp:153 fcm_dialog.cpp:154
+#: fcm_dialog.ui:73 fcm_dialog.ui:120 fcm_dialog.ui:130 fcm_dialog.ui:140
+#: fcm_dialog.ui:256
+msgctxt "FCM_Dialog|"
+msgid "<flash cookie not selected>"
+msgstr "<nu a fost ales cookie flash>"
+
+#: fcm_dialog.cpp:156 fcm_dialog.ui:283
+msgctxt "FCM_Dialog|"
+msgid "Remove flash cookies"
+msgstr "Elimină cookies flash"
+
+#: fcm_dialog.cpp:166 fcm_dialog.cpp:237
+msgctxt "FCM_Dialog|"
+msgid " (settings)"
+msgstr "(configurări)"
+
+#: fcm_dialog.cpp:169
+msgctxt "FCM_Dialog|"
+msgid " Byte"
+msgstr "Octet"
+
+#: fcm_dialog.cpp:175
+msgctxt "FCM_Dialog|"
+msgid "Remove flash cookie"
+msgstr "Elimină cookie flash"
+
+#: fcm_dialog.cpp:241
+msgctxt "FCM_Dialog|"
+msgid " [new]"
+msgstr " [nou]"
+
+#: fcm_dialog.cpp:277 fcm_dialog.cpp:305 fcm_dialog.ui:113
+msgctxt "FCM_Dialog|"
+msgid "Origin:"
+msgstr "Origine:"
+
+#: fcm_dialog.cpp:277 fcm_dialog.cpp:375
+msgctxt "FCM_Dialog|"
+msgid "Add to whitelist"
+msgstr "Adaugă la listă permisiuni"
+
+#: fcm_dialog.cpp:289 fcm_dialog.cpp:317
+msgctxt "FCM_Dialog|"
+msgid "Already whitelisted!"
+msgstr "Deja permisă!"
+
+#: fcm_dialog.cpp:289
+#, qt-format
+msgctxt "FCM_Dialog|"
+msgid "The server \"%1\" is already in blacklist, please remove it first."
+msgstr ""
+
+#: fcm_dialog.cpp:305 fcm_dialog.cpp:374
+msgctxt "FCM_Dialog|"
+msgid "Add to blacklist"
+msgstr "Adaugă la listă interziceri"
+
+#: fcm_dialog.cpp:317
+#, qt-format
+msgctxt "FCM_Dialog|"
+msgid "The origin \"%1\" is already in whitelist, please remove it first."
+msgstr ""
+
+#: fcm_dialog.ui:14
+msgctxt "FCM_Dialog|"
+msgid "Flash Cookies"
+msgstr "Cookies Flash"
+
+#: fcm_dialog.ui:24
+msgctxt "FCM_Dialog|"
+msgid "Stored Flash Cookies"
+msgstr "Cookies Flash stocate"
+
+#: fcm_dialog.ui:45
+msgctxt "FCM_Dialog|"
+msgid "Find: "
+msgstr "Caută:"
+
+#: fcm_dialog.ui:83
+msgctxt "FCM_Dialog|"
+msgid "Last Modified:"
+msgstr "Modificat ultima dată:"
+
+#: fcm_dialog.ui:96
+msgctxt "FCM_Dialog|"
+msgid "Name:"
+msgstr "Nume:"
+
+#: fcm_dialog.ui:106
+msgctxt "FCM_Dialog|"
+msgid "Size:"
+msgstr "Dimensiune:"
+
+#: fcm_dialog.ui:152
+msgctxt "FCM_Dialog|"
+msgid "Extracted latin1 strings:"
+msgstr "Șiruri latin1 extrase:"
+
+#: fcm_dialog.ui:182
+msgctxt "FCM_Dialog|"
+msgid "These flash cookies are stored on your computer:"
+msgstr "Aceste cookies flash sunt stocate pe calculator."
+
+#: fcm_dialog.ui:202
+msgctxt "FCM_Dialog|"
+msgid "Origin"
+msgstr "Origine"
+
+#: fcm_dialog.ui:227
+msgctxt "FCM_Dialog|"
+msgid "Reload from disk"
+msgstr "Reîncarcă de pe disc"
+
+#: fcm_dialog.ui:240
+msgctxt "FCM_Dialog|"
+msgid "Path:"
+msgstr "Cale:"
+
+#: fcm_dialog.ui:253
+msgctxt "FCM_Dialog|"
+msgid "Click to open containing folder"
+msgstr "Clic pentru a deschide dosarul conținător"
+
+#: fcm_dialog.ui:276
+msgctxt "FCM_Dialog|"
+msgid "Remove all flash cookies"
+msgstr "Elimină toate cookies flash"
+
+#: fcm_dialog.ui:308
+msgctxt "FCM_Dialog|"
+msgid "Flash Cookies Filtering"
+msgstr "Filtrare Cookies Flash"
+
+#: fcm_dialog.ui:316
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
+"whitelist</span></p></body></html>"
+msgstr ""
+
+#: fcm_dialog.ui:348 fcm_dialog.ui:416
+msgctxt "FCM_Dialog|"
+msgid "Remove"
+msgstr "Elimină"
+
+#: fcm_dialog.ui:355 fcm_dialog.ui:423
+msgctxt "FCM_Dialog|"
+msgid "Add"
+msgstr "Adaugă"
+
+#: fcm_dialog.ui:364
+msgctxt "FCM_Dialog|"
+msgid ""
+"Flash cookies from these origins will not be deleted automatically. (Also "
+"detection of them will not be notified to user.)"
+msgstr ""
+"Cookies flash din aceste origini nu vor fi șterse automat. (De asemenea "
+"detecția acestora nu va fi trimisă ca notificare la utilizator.)"
+
+#: fcm_dialog.ui:374
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
+"blacklist</span></p></body></html>"
+msgstr ""
+
+#: fcm_dialog.ui:381
+msgctxt "FCM_Dialog|"
+msgid ""
+"Flash cookies from these origins will be deleted without any notification."
+msgstr ""
+"Cookies flash din aceste origini vor fi șterse fără niciun fel de notificare."
+
+#: fcm_dialog.ui:442
+msgctxt "FCM_Dialog|"
+msgid "Settings"
+msgstr "Configurări"
+
+#: fcm_dialog.ui:453
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash Cookie "
+"Settings</span></p></body></html>"
+msgstr ""
+
+#: fcm_dialog.ui:475
+msgctxt "FCM_Dialog|"
+msgid ""
+"Auto mode: The flash data directory will be checked regularly. and flash "
+"cookies in blacklist will be deleted automatically."
+msgstr ""
+
+#: fcm_dialog.ui:510
+msgctxt "FCM_Dialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> This "
+"settings are just applied to flash cookies, to manage HTTP cookies use <span "
+"style=\" font-weight:600;\">Cookies Manager</span>. </p></body></html>"
+msgstr ""
+
+#: fcm_dialog.ui:538
+msgctxt "FCM_Dialog|"
+msgid ""
+"Notification: User will be notified for every new flash cookie that is not "
+"in blacklist and whitelist."
+msgstr ""
+
+#: fcm_dialog.ui:565
+msgctxt "FCM_Dialog|"
+msgid "Delete all flash cookies on exit/start. (except those are in whitelist)"
+msgstr ""
+
+#: fcm_notification.cpp:34
+msgctxt "FCM_Notification|"
+msgid "A new flash cookie was detected"
+msgstr "O nouă cookie flash a fost detectată"
+
+#: fcm_notification.cpp:37
+#, qt-format
+msgctxt "FCM_Notification|"
+msgid "%1 new flash cookies were detected"
+msgstr "%1 cookies flash noi au fost detectate"
+
+#: fcm_notification.ui:45
+msgctxt "FCM_Notification|"
+msgid "New flash cookie was detected!"
+msgstr "O nouă cookie flash a fost detectată!"
+
+#: fcm_notification.ui:52
+msgctxt "FCM_Notification|"
+msgid "View"
+msgstr "Vizualizare"
+
+#: fcm_plugin.cpp:59
+msgctxt "FCM_Button|"
+msgid "Flash Cookie Manager button"
+msgstr ""
+
+#: fcm_plugin.cpp:129 fcm_plugin.cpp:359
+msgctxt "FCM_Plugin|"
+msgid "Flash Cookie Manager"
+msgstr "Manager cookie flash"
+
+#: fcm_plugin.cpp:360
+msgctxt "FCM_Plugin|"
+msgid "Show Flash Cookie Manager"
+msgstr "Afișează manager de cookie flash"
+
+#: fcm_plugin.cpp:441
+msgctxt "FCM_Plugin|"
+msgid "!default"
+msgstr "!implicit"
+
+#: fcm_plugin.cpp:453
+msgctxt "FCM_Plugin|"
+msgid "!other"
+msgstr "!altele"

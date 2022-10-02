@@ -1,0 +1,6257 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+# Seyyed Razi Alavizadeh <s.r.alavizadeh@gmail.com>, 2017
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Language: fa_IR\n"
+"X-Qt-Contexts: true\n"
+
+#: lib/3rdparty/lineedit.cpp:102
+msgctxt "LineEdit|"
+msgid "&Undo"
+msgstr ""
+
+#: lib/3rdparty/lineedit.cpp:107
+msgctxt "LineEdit|"
+msgid "&Redo"
+msgstr ""
+
+#: lib/3rdparty/lineedit.cpp:112
+msgctxt "LineEdit|"
+msgid "Cu&t"
+msgstr ""
+
+#: lib/3rdparty/lineedit.cpp:117
+msgctxt "LineEdit|"
+msgid "&Copy"
+msgstr ""
+
+#: lib/3rdparty/lineedit.cpp:122
+msgctxt "LineEdit|"
+msgid "&Paste"
+msgstr ""
+
+#: lib/3rdparty/lineedit.cpp:131
+msgctxt "LineEdit|"
+msgid "Delete"
+msgstr ""
+
+#: lib/3rdparty/lineedit.cpp:134
+msgctxt "LineEdit|"
+msgid "Clear All"
+msgstr ""
+
+#: lib/3rdparty/lineedit.cpp:137
+msgctxt "LineEdit|"
+msgid "Select All"
+msgstr ""
+
+#: lib/3rdparty/squeezelabelv2.cpp:64
+msgctxt "SqueezeLabelV2|"
+msgid "Copy"
+msgstr "رونگاشت"
+
+#: lib/adblock/adblockaddsubscriptiondialog.cpp:45
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Other..."
+msgstr ""
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:14
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Add Subscription"
+msgstr "افزودن اشتراک"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:23
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Title:"
+msgstr "سرنویس:"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:33
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Address:"
+msgstr "آدرس:"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:53
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Add new subscription to AdBlock:"
+msgstr "افزودن اشتراک تازه به AdBlock:"
+
+#: lib/adblock/adblockdialog.cpp:49
+msgctxt "AdBlockDialog|"
+msgid "Add Rule"
+msgstr "افزودن قاعده"
+
+#: lib/adblock/adblockdialog.cpp:50
+msgctxt "AdBlockDialog|"
+msgid "Remove Rule"
+msgstr "حذف قاعده"
+
+#: lib/adblock/adblockdialog.cpp:52
+msgctxt "AdBlockDialog|"
+msgid "Add Subscription"
+msgstr "افزودن اشتراک"
+
+#: lib/adblock/adblockdialog.cpp:53
+msgctxt "AdBlockDialog|"
+msgid "Remove Subscription"
+msgstr "حذف اشتراک"
+
+#: lib/adblock/adblockdialog.cpp:54
+msgctxt "AdBlockDialog|"
+msgid "Update Subscriptions"
+msgstr "بروزرسانی اشتراک"
+
+#: lib/adblock/adblockdialog.cpp:56
+msgctxt "AdBlockDialog|"
+msgid "Learn about writing rules..."
+msgstr "یادگیری شیوه نوشتن قاعده‌ها..."
+
+#: lib/adblock/adblockdialog.ui:14
+msgctxt "AdBlockDialog|"
+msgid "AdBlock Configuration"
+msgstr "پیکربندی AdBlock"
+
+#: lib/adblock/adblockdialog.ui:20
+msgctxt "AdBlockDialog|"
+msgid "Enable AdBlock"
+msgstr "فعال‌سازی AdBlock"
+
+#: lib/adblock/adblockdialog.ui:32
+msgctxt "AdBlockDialog|"
+msgid "Search..."
+msgstr "یافتن..."
+
+#: lib/adblock/adblockdialog.ui:77
+msgctxt "AdBlockDialog|"
+msgid "Options"
+msgstr "گزینه‌ها"
+
+#: lib/adblock/adblockdialog.ui:107
+msgctxt "AdBlockDialog|"
+msgid "AdBlock"
+msgstr "‏AdBlock"
+
+#: lib/adblock/adblockicon.cpp:34
+msgctxt "AdBlockIcon|"
+msgid "AdBlock"
+msgstr "‏AdBlock"
+
+#: lib/adblock/adblockicon.cpp:52
+msgctxt "AdBlockIcon|"
+msgid "AdBlock Icon"
+msgstr ""
+
+#: lib/adblock/adblockicon.cpp:86
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is disabled"
+msgstr ""
+
+#: lib/adblock/adblockicon.cpp:92
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is disabled on this site "
+msgstr ""
+
+#: lib/adblock/adblockicon.cpp:98
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is active"
+msgstr ""
+
+#: lib/adblock/adblockicon.cpp:145
+msgctxt "AdBlockIcon|"
+msgid "Show AdBlock &Settings"
+msgstr "نمایش &سامانش AdBlock"
+
+#: lib/adblock/adblockicon.cpp:153
+#, qt-format
+msgctxt "AdBlockIcon|"
+msgid "Disable on %1"
+msgstr "روی %1 غیرفعال شود"
+
+#: lib/adblock/adblockicon.cpp:159
+msgctxt "AdBlockIcon|"
+msgid "Disable only on this page"
+msgstr "فقط روی این صفحه غیرفعال شود"
+
+#: lib/adblock/adblockmanager.cpp:184
+#, qt-format
+msgctxt "AdBlockManager|"
+msgid "Do you want to add <b>%1</b> subscription?"
+msgstr "آیا می‌خواهید اشتراک <b>%1</b> را اضافه کنید؟"
+
+#: lib/adblock/adblockmanager.cpp:186
+msgctxt "AdBlockManager|"
+msgid "AdBlock Subscription"
+msgstr "اشتراک AdBlock"
+
+#: lib/adblock/adblockmanager.cpp:317
+msgctxt "AdBlockManager|"
+msgid "EasyList"
+msgstr "فهرست راحت"
+
+#: lib/adblock/adblockmanager.cpp:322
+msgctxt "AdBlockManager|"
+msgid "NoCoin List"
+msgstr ""
+
+#: lib/adblock/adblocksubscription.cpp:173
+msgctxt "AdBlockSubscription|"
+msgid "Cannot load subscription!"
+msgstr ""
+
+#: lib/adblock/adblocksubscription.cpp:286
+msgctxt "AdBlockCustomList|"
+msgid "Custom Rules"
+msgstr "قاعده‌های خودساخته"
+
+#: lib/adblock/adblocktreewidget.cpp:80
+msgctxt "AdBlockTreeWidget|"
+msgid "Add Rule"
+msgstr "افزودن قاعده"
+
+#: lib/adblock/adblocktreewidget.cpp:82
+msgctxt "AdBlockTreeWidget|"
+msgid "Remove Rule"
+msgstr "حذف قاعده"
+
+#: lib/adblock/adblocktreewidget.cpp:141
+msgctxt "AdBlockTreeWidget|"
+msgid "Add Custom Rule"
+msgstr "افزودن قاعده خودساخته"
+
+#: lib/adblock/adblocktreewidget.cpp:141
+msgctxt "AdBlockTreeWidget|"
+msgid "Please write your rule here:"
+msgstr "لطفا قاعده خودتان را اینجا بنویسید:"
+
+#: lib/adblock/adblocktreewidget.cpp:179
+#, qt-format
+msgctxt "AdBlockTreeWidget|"
+msgid "%1 (recently updated)"
+msgstr "%1 (اخیرا بروز شده)"
+
+#: lib/adblock/adblocktreewidget.cpp:188
+#, qt-format
+msgctxt "AdBlockTreeWidget|"
+msgid "%1 (Error: %2)"
+msgstr ""
+
+#: lib/adblock/adblockurlinterceptor.cpp:44
+msgctxt "AdBlockUrlInterceptor|"
+msgid "Blocked content"
+msgstr ""
+
+#: lib/adblock/adblockurlinterceptor.cpp:45
+#, qt-format
+msgctxt "AdBlockUrlInterceptor|"
+msgid "Blocked by <i>%1 (%2)</i>"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:204 lib/app/browserwindow.cpp:979
+msgctxt "BrowserWindow|"
+msgid "Falkon"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:394
+msgctxt "BrowserWindow|"
+msgid "IP Address of current page"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:734
+msgctxt "BrowserWindow|"
+msgid " (Private Browsing)"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:981
+#, qt-format
+msgctxt "BrowserWindow|"
+msgid "%1 - Falkon"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1047
+msgctxt "BrowserWindow|"
+msgid "&Menu Bar"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1052
+msgctxt "BrowserWindow|"
+msgid "&Navigation Toolbar"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1056
+msgctxt "BrowserWindow|"
+msgid "&Bookmarks Toolbar"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1062
+msgctxt "BrowserWindow|"
+msgid "&Tabs on Top"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1117
+msgctxt "BrowserWindow|"
+msgid "Other"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "HTML files"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "Image files"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "Text files"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "All files"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1161
+msgctxt "BrowserWindow|"
+msgid "Open file..."
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1503
+#, qt-format
+msgctxt "BrowserWindow|"
+msgid ""
+"There are still %n open tabs and your session won't be stored.\n"
+"Are you sure you want to close this window?"
+msgid_plural ""
+"There are still %n open tabs and your session won't be stored.\n"
+"Are you sure you want to close this window?"
+msgstr[0] ""
+
+#: lib/app/browserwindow.cpp:1504
+msgctxt "BrowserWindow|"
+msgid "Don't ask again"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1505
+msgctxt "BrowserWindow|"
+msgid "There are still open tabs"
+msgstr ""
+
+#: lib/app/mainapplication.cpp:1081
+#, fuzzy
+#| msgctxt "MainApplication|"
+#| msgid ""
+#| "QupZilla is not currently your default browser. Would you like to make it "
+#| "your default browser?"
+msgctxt "MainApplication|"
+msgid ""
+"Falkon is not currently your default browser. Would you like to make it your "
+"default browser?"
+msgstr ""
+"کوپزیلا مرورگر پیش‌فرض شما نیست. آیا علاقه دارید آن را مرورگر پیش‌فرض خود "
+"سازید؟"
+
+#: lib/app/mainapplication.cpp:1082
+#, fuzzy
+#| msgctxt "MainApplication|"
+#| msgid "Always perform this check when starting QupZilla."
+msgctxt "MainApplication|"
+msgid "Always perform this check when starting Falkon."
+msgstr "همیشه در هنگام شروع کوپزیلا این را بررسی کن."
+
+#: lib/app/mainapplication.cpp:1084
+msgctxt "MainApplication|"
+msgid "Default Browser"
+msgstr "مرورگر پیش‌فرض"
+
+#: lib/app/mainapplication.cpp:1205
+msgctxt "MainApplication|"
+msgid "Open new tab"
+msgstr ""
+
+#: lib/app/mainapplication.cpp:1206
+msgctxt "MainApplication|"
+msgid "Open new window"
+msgstr ""
+
+#: lib/app/mainapplication.cpp:1207
+msgctxt "MainApplication|"
+msgid "Open new private window"
+msgstr ""
+
+#: lib/app/mainapplication.cpp:1222
+#, fuzzy
+#| msgctxt "MainApplication|"
+#| msgid ""
+#| "QupZilla is a new, fast and secure open-source WWW browser. QupZilla is "
+#| "licensed under GPL version 3 or (at your option) any later version. It is "
+#| "based on WebKit core and Qt Framework."
+msgctxt "MainApplication|"
+msgid ""
+"Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
+"version 3 or (at your option) any later version. It is based on QtWebEngine "
+"and Qt Framework."
+msgstr ""
+"کوپزیلا مرورگر اینترنتی متن‌باز، جدید، سریع و ایمنی است. کوپزیلا تحت "
+"توافقنامه GPL نسخه ۳ یا هر نسخه جدیدتر آن است. کوپزیلا تحت هسته وب‌کیت و "
+"چارچوب کیوت می‌باشد."
+
+#: lib/app/mainmenu.cpp:84 lib/app/mainmenu.cpp:497
+msgctxt "MainMenu|"
+msgid "Sessions"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:467
+msgctxt "MainMenu|"
+msgid "&About Falkon"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:472
+msgctxt "MainMenu|"
+msgid "Pr&eferences"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:478
+msgctxt "MainMenu|"
+msgid "Quit"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:485
+msgctxt "MainMenu|"
+msgid "&File"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:488
+msgctxt "MainMenu|"
+msgid "New Tab"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:489
+msgctxt "MainMenu|"
+msgid "&New Window"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:490
+msgctxt "MainMenu|"
+msgid "New &Private Window"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:491
+msgctxt "MainMenu|"
+msgid "Open Location"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:492
+msgctxt "MainMenu|"
+msgid "Open &File..."
+msgstr ""
+
+#: lib/app/mainmenu.cpp:493
+msgctxt "MainMenu|"
+msgid "Close Window"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:500
+msgctxt "MainMenu|"
+msgid "Session Manager"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:507
+msgctxt "MainMenu|"
+msgid "&Save Page As..."
+msgstr ""
+
+#: lib/app/mainmenu.cpp:508
+msgctxt "MainMenu|"
+msgid "Send Link..."
+msgstr ""
+
+#: lib/app/mainmenu.cpp:509
+msgctxt "MainMenu|"
+msgid "&Print..."
+msgstr ""
+
+#: lib/app/mainmenu.cpp:514
+msgctxt "MainMenu|"
+msgid "&Edit"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:517
+msgctxt "MainMenu|"
+msgid "&Undo"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:519
+msgctxt "MainMenu|"
+msgid "&Redo"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:522
+msgctxt "MainMenu|"
+msgid "&Cut"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:524
+msgctxt "MainMenu|"
+msgid "C&opy"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:526
+msgctxt "MainMenu|"
+msgid "&Paste"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:529
+msgctxt "MainMenu|"
+msgid "Select &All"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:531
+msgctxt "MainMenu|"
+msgid "&Find"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:536
+msgctxt "MainMenu|"
+msgid "&View"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:539
+msgctxt "MainMenu|"
+msgid "Toolbars"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:541
+msgctxt "MainMenu|"
+msgid "Sidebar"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:543
+msgctxt "MainMenu|"
+msgid "Character &Encoding"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:552
+msgctxt "MainMenu|"
+msgid "Sta&tus Bar"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:554
+msgctxt "MainMenu|"
+msgid "&Stop"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:555
+msgctxt "MainMenu|"
+msgid "&Reload"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:557
+msgctxt "MainMenu|"
+msgid "Zoom &In"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:558
+msgctxt "MainMenu|"
+msgid "Zoom &Out"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:559
+msgctxt "MainMenu|"
+msgid "Reset"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:563
+msgctxt "MainMenu|"
+msgid "&Page Source"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:565
+msgctxt "MainMenu|"
+msgid "&FullScreen"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:568
+msgctxt "MainMenu|"
+msgid "&Tools"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:571
+msgctxt "MainMenu|"
+msgid "&Web Search"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:572
+msgctxt "MainMenu|"
+msgid "Site &Info"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:575
+msgctxt "MainMenu|"
+msgid "&Download Manager"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:576
+msgctxt "MainMenu|"
+msgid "&Cookies Manager"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:577
+msgctxt "MainMenu|"
+msgid "Web In&spector"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:578
+msgctxt "MainMenu|"
+msgid "Clear Recent &History"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:583
+msgctxt "MainMenu|"
+msgid "&Extensions"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:589
+msgctxt "MainMenu|"
+msgid "&Help"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:592
+msgctxt "MainMenu|"
+msgid "About &Qt"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:597
+msgctxt "MainMenu|"
+msgid "Information about application"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:598
+msgctxt "MainMenu|"
+msgid "Configuration Information"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:599
+msgctxt "MainMenu|"
+msgid "Report &Issue"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:612
+msgctxt "MainMenu|"
+msgid "Restore &Closed Tab"
+msgstr ""
+
+#: lib/autofill/autofillicon.cpp:29
+msgctxt "AutoFillWidget|"
+msgid "Choose username to login"
+msgstr "انتخاب نام‌کاربری برای ورود"
+
+#: lib/autofill/autofillnotification.cpp:39
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "on %1"
+msgstr "روی %1"
+
+#: lib/autofill/autofillnotification.cpp:43
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "for <b>%1</b>"
+msgstr "برای <b>%1</b>"
+
+#: lib/autofill/autofillnotification.cpp:47
+#, fuzzy, qt-format
+#| msgctxt "AutoFillNotification|"
+#| msgid "Do you want QupZilla to update saved password %1?"
+msgctxt "AutoFillNotification|"
+msgid "Do you want Falkon to update saved password %1?"
+msgstr "آیا می‌خواهید کوپزیلا کلمه‌عبور ذخیره شده %1 را بروز برساند؟"
+
+#: lib/autofill/autofillnotification.cpp:53
+#, fuzzy, qt-format
+#| msgctxt "AutoFillNotification|"
+#| msgid "Do you want QupZilla to remember the password %1 %2?"
+msgctxt "AutoFillNotification|"
+msgid "Do you want Falkon to remember the password %1 %2?"
+msgstr "آیا می‌خواهید کوپزیلا کلمه‌عبور %1 %2 را بخاطر بسپارد؟"
+
+#: lib/autofill/autofillnotification.ui:69
+msgctxt "AutoFillNotification|"
+msgid "Update"
+msgstr "بروزرسانی"
+
+#: lib/autofill/autofillnotification.ui:85
+msgctxt "AutoFillNotification|"
+msgid "Remember"
+msgstr "بخاطر سپردن"
+
+#: lib/autofill/autofillnotification.ui:101
+msgctxt "AutoFillNotification|"
+msgid "Never For This Site"
+msgstr "برای این تارنما هرگز"
+
+#: lib/autofill/autofillnotification.ui:117
+msgctxt "AutoFillNotification|"
+msgid "Not Now"
+msgstr "اکنون نه"
+
+#: lib/autofill/autofillwidget.ui:11
+msgctxt "AutoFillWidget|"
+msgid "Login as:"
+msgstr "ورود با عنوان:"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:257
+msgctxt "AutoFill|"
+msgid "Database (encrypted)"
+msgstr "پایگاه داده (رمزنگاری شده)"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
+msgctxt "MasterPasswordDialog|"
+msgid "Warning!"
+msgstr "هشدار!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
+msgctxt "MasterPasswordDialog|"
+msgid "You entered a wrong password!"
+msgstr "رمز اشتباه وارد کردید!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
+msgctxt "MasterPasswordDialog|"
+msgid "New/Confirm password fields do not match!"
+msgstr "رمز جدید و رمز تایید با هم مطابقت ندارند!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:578
+msgctxt "AutoFill|"
+msgid "Warning!"
+msgstr "هشدار!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:579
+#, fuzzy
+#| msgctxt "AutoFill|"
+#| msgid ""
+#| "This backend needs a master password to be set! QupZilla just switches to "
+#| "its default backend"
+msgctxt "AutoFill|"
+msgid ""
+"This backend needs a master password to be set! Falkon just switches to its "
+"default backend"
+msgstr ""
+"این هسته مدیریت رمز به شاه‌کلید نیاز دارد! کوپزیلا به هسته مدیریتی پیش‌فرضش "
+"برمی‌گردد"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
+msgctxt "MasterPasswordDialog|"
+msgid "Are you sure you want to clear master password and decrypt data?"
+msgstr ""
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
+msgctxt "MasterPasswordDialog|"
+msgid "Some data has not been decrypted. The master password was not cleared!"
+msgstr "برخی از داده‌ها از حالت رمزنگاری خارج نشدند. شاه‌کلید حذف نشد!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:669
+msgctxt "AutoFill|"
+msgid "Enter Master Password"
+msgstr "شاه‌کلید را وارد کنید"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:673
+msgctxt "AutoFill|"
+msgid "Permission is required, please enter Master Password:"
+msgstr "مجوز لازم است، لطفا شاه‌کلید را وارد کنید:"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:679
+msgctxt "AutoFill|"
+msgid "Entered password is wrong!"
+msgstr "رمز ورودی اشتباه است!"
+
+#: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
+msgctxt "AutoFill|"
+msgid "Database (plaintext)"
+msgstr "پایگاه‌داده (متنی)"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:20
+msgctxt "MasterPasswordDialog|"
+msgid "Encrypted DataBase Settings"
+msgstr "سامانش پایگاه‌داده رمزنگاری شده"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:33
+msgctxt "MasterPasswordDialog|"
+msgid "Set/Change Master Password..."
+msgstr "انتخاب/تغییر شاه‌کلید..."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:36
+msgctxt "MasterPasswordDialog|"
+msgid "This backend does not work without a master password."
+msgstr "این هسته مدیریت رمز بدون شاه‌کلید کار نمی‌کند."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:43
+msgctxt "MasterPasswordDialog|"
+msgid "Clear Master Password..."
+msgstr "حذف کردن شاه‌کلید..."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:46
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"This option clears the master password and moves all encrypted data to the "
+"\"DataBase (Plain Text)\" backend, and switches to it."
+msgstr ""
+"این گزینه شاه‌کلید را حذف می‌کند و همه داده‌های رمزنگاری شده را به پایگاه‌داده "
+"(متنی) منتقل می‌کند و به هسته مدیر رمز را به آن تعویض می‌کند."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:64
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"The Master Password is used to protect site passwords and form data. If you "
+"set a Master Password you will be asked to enter it once per session."
+msgstr ""
+"شاه‌کلید برای محافظت رمز تارنماها و داده فرم‌ها استفاده می‌شود. اگر شاه‌کلید را "
+"فعال کنید در هر نشست شاه‌کلید از شما پرسیده خواهد شد."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:76
+msgctxt "MasterPasswordDialog|"
+msgid "Current Password:"
+msgstr "رمز جاری:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:83
+msgctxt "MasterPasswordDialog|"
+msgid "New Password:"
+msgstr "رمز جدید:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:90
+msgctxt "MasterPasswordDialog|"
+msgid "Confirm Password:"
+msgstr "تایید رمز:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:120
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
+msgstr "<b>توجه:</b> شاه‌کلید قابل بازنشانی نیست. لطفا آن را فراموش نکنید."
+
+#: lib/bookmarks/bookmarks.cpp:207
+msgctxt "Bookmarks|"
+msgid "Bookmarks Toolbar"
+msgstr ""
+
+#: lib/bookmarks/bookmarks.cpp:208
+msgctxt "Bookmarks|"
+msgid "Bookmarks located in Bookmarks Toolbar"
+msgstr ""
+
+#: lib/bookmarks/bookmarks.cpp:211
+msgctxt "Bookmarks|"
+msgid "Bookmarks Menu"
+msgstr ""
+
+#: lib/bookmarks/bookmarks.cpp:212
+msgctxt "Bookmarks|"
+msgid "Bookmarks located in Bookmarks Menu"
+msgstr ""
+
+#: lib/bookmarks/bookmarks.cpp:215
+msgctxt "Bookmarks|"
+msgid "Unsorted Bookmarks"
+msgstr ""
+
+#: lib/bookmarks/bookmarks.cpp:216
+msgctxt "Bookmarks|"
+msgid "All other bookmarks"
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.cpp:64
+msgctxt "BookmarksExportDialog|"
+msgid "Error!"
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:14
+msgctxt "BookmarksExportDialog|"
+msgid "Export Bookmarks"
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:20
+msgctxt "BookmarksExportDialog|"
+msgid "<b>Export Bookmarks</b>"
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:27
+msgctxt "BookmarksExportDialog|"
+msgid "Export options"
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
+msgctxt "BookmarksExportDialog|"
+msgid "Choose..."
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
+msgctxt "BookmarksExportDialog|"
+msgid "Output File:"
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:89
+msgctxt "BookmarksExportDialog|"
+msgid "Format:"
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:31
+msgctxt "BookmarksExporter|"
+msgid "HTML File"
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:37
+msgctxt "BookmarksExporter|"
+msgid "HTML Bookmarks"
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:38
+msgctxt "BookmarksExporter|"
+msgid "Choose file..."
+msgstr ""
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:47
+msgctxt "BookmarksExporter|"
+msgid "Cannot open file for writing!"
+msgstr ""
+
+#: lib/bookmarks/bookmarksicon.cpp:37 lib/bookmarks/bookmarksicon.cpp:108
+msgctxt "BookmarksIcon|"
+msgid "Bookmark this Page"
+msgstr ""
+
+#: lib/bookmarks/bookmarksicon.cpp:100
+msgctxt "BookmarksIcon|"
+msgid "Edit this bookmark"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:113
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
+msgctxt "BookmarksImportDialog|"
+msgid "Error!"
+msgstr "خطا!"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
+msgctxt "BookmarksImportDialog|"
+msgid "No bookmarks were found."
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:125
+msgctxt "BookmarksImportDialog|"
+msgid "Finish"
+msgstr "پایان"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:157
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:270
+msgctxt "BookmarksImportDialog|"
+msgid "Next >"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:186
+#, qt-format
+msgctxt "BookmarksImportDialog|"
+msgid "<b>Importing from %1</b>"
+msgstr "<b>درون‌ریزی از %1</b>"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:20
+msgctxt "BookmarksImportDialog|"
+msgid "Import Bookmarks"
+msgstr "درون‌ریزی نشان‌ها"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:26
+msgctxt "BookmarksImportDialog|"
+msgid "<b>Import Bookmarks</b>"
+msgstr "<b>درون‌ریزی نشان‌ها</b>"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:74
+msgctxt "BookmarksImportDialog|"
+msgid "Internet Explorer"
+msgstr "اینترنت اکسپلورر"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:83
+msgctxt "BookmarksImportDialog|"
+msgid "Html File"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:95
+msgctxt "BookmarksImportDialog|"
+msgid "Choose from which you want to import bookmarks:"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:125
+msgctxt "BookmarksImportDialog|"
+msgid "Choose..."
+msgstr "انتخاب..."
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:257
+msgctxt "BookmarksImportDialog|"
+msgid "< Back"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:32
+msgctxt "BookmarksImporter|"
+msgid ""
+"Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
+"is usually located in"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
+msgctxt "BookmarksImporter|"
+msgid "Choose file..."
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
+msgctxt "BookmarksImporter|"
+msgid "Unable to open file."
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:75
+msgctxt "BookmarksImporter|"
+msgid "Cannot parse JSON file!"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:42
+msgctxt "BookmarksImporter|"
+msgid ""
+"Mozilla Firefox stores its bookmarks in <b>places.sqlite</b> SQLite "
+"database. This file is usually located in"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:70
+msgctxt "BookmarksImportDialog|"
+msgid "File does not exist."
+msgstr "پرونده وجود ندارد."
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:77
+msgctxt "BookmarksImportDialog|"
+msgid "Unable to open database. Is Firefox running?"
+msgstr "پایگاه‌داده را نمی‌تواند باز کند. آیا فایرفاکس درحال اجراست؟"
+
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:32
+msgctxt "BookmarksImporter|"
+msgid ""
+"You can import bookmarks from any browser that supports HTML exporting. This "
+"file has usually these suffixes"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:43
+msgctxt "BookmarksImporter|"
+msgid "HTML Bookmarks"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:33
+msgctxt "BookmarksImporter|"
+msgid ""
+"Internet Explorer stores its bookmarks in <b>Favorites</b> folder. This "
+"folder is usually located in"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
+msgctxt "BookmarksImporter|"
+msgid "Directory does not exist."
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
+msgctxt "BookmarksImporter|"
+msgid ""
+"Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
+"usually located in"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
+msgctxt "BookmarksImporter|"
+msgid "File is not valid Opera bookmarks file!"
+msgstr ""
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
+msgctxt "BookmarksImporter|"
+msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.cpp:105
+msgctxt "BookmarksManager|"
+msgid "Open in new tab"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.cpp:106
+msgctxt "BookmarksManager|"
+msgid "Open in new window"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.cpp:107
+msgctxt "BookmarksManager|"
+msgid "Open in new private window"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.cpp:110
+#: lib/bookmarks/bookmarksmanager.cpp:177
+msgctxt "BookmarksManager|"
+msgid "New Bookmark"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.cpp:111
+#: lib/bookmarks/bookmarksmanager.cpp:185
+msgctxt "BookmarksManager|"
+msgid "New Folder"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.cpp:112
+msgctxt "BookmarksManager|"
+msgid "New Separator"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.cpp:114
+msgctxt "BookmarksManager|"
+msgid "Delete"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.ui:14
+msgctxt "BookmarksManager|"
+msgid "Bookmarks"
+msgstr "نشان‌ها"
+
+#: lib/bookmarks/bookmarksmanager.ui:32
+msgctxt "BookmarksManager|"
+msgid "Title:"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.ui:42
+msgctxt "BookmarksManager|"
+msgid "Address:"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.ui:52
+msgctxt "BookmarksManager|"
+msgid "Keyword:"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmanager.ui:62
+msgctxt "BookmarksManager|"
+msgid "Description"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmenu.cpp:166
+msgctxt "BookmarksMenu|"
+msgid "&Bookmarks"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmenu.cpp:168
+msgctxt "BookmarksMenu|"
+msgid "Bookmark &This Page"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmenu.cpp:169
+msgctxt "BookmarksMenu|"
+msgid "Bookmark &All Tabs"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmenu.cpp:170
+msgctxt "BookmarksMenu|"
+msgid "Organize &Bookmarks"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmodel.cpp:147
+msgctxt "BookmarksModel|"
+msgid "Title"
+msgstr ""
+
+#: lib/bookmarks/bookmarksmodel.cpp:149
+msgctxt "BookmarksModel|"
+msgid "Address"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:73
+msgctxt "BookmarksToolbar|"
+msgid "Open in new tab"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:74
+msgctxt "BookmarksToolbar|"
+msgid "Open in new window"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:75
+msgctxt "BookmarksToolbar|"
+msgid "Open in new private window"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:185
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Open Folder"
+msgctxt "BookmarksToolbar|"
+msgid "New Folder"
+msgstr "بازکردن پوشه"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:78
+msgctxt "BookmarksToolbar|"
+msgid "Edit"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:79
+msgctxt "BookmarksToolbar|"
+msgid "Delete"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:81
+msgctxt "BookmarksToolbar|"
+msgid "Show Only Icons"
+msgstr "فقط آیکون‌ها را نمایش بده"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:85
+msgctxt "BookmarksToolbar|"
+msgid "Show Only Text"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:185
+#, fuzzy
+#| msgctxt "AutoFillManager|"
+#| msgid "Username"
+msgctxt "BookmarksToolbar|"
+msgid "Enter Folder Name:"
+msgstr "نام‌کاربری"
+
+#: lib/bookmarks/bookmarkstools.cpp:76
+#, qt-format
+msgctxt "BookmarksFoldersMenu|"
+msgid "Choose %1"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:153
+msgctxt "Bookmarks|"
+msgid "Choose name and location of this bookmark."
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:157
+msgctxt "Bookmarks|"
+msgid "Add New Bookmark"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:197
+msgctxt "Bookmarks|"
+msgid "Choose folder for bookmarks:"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:198
+msgctxt "Bookmarks|"
+msgid "Bookmark All Tabs"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:239
+msgctxt "Bookmarks|"
+msgid "Title:"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:242
+msgctxt "Bookmarks|"
+msgid "Address:"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:244
+msgctxt "Bookmarks|"
+msgid "Keyword:"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:247
+msgctxt "Bookmarks|"
+msgid "Description:"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:252
+msgctxt "Bookmarks|"
+msgid "Edit Bookmark"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:344
+msgctxt "Bookmarks|"
+msgid "Confirmation"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:345
+#, qt-format
+msgctxt "Bookmarks|"
+msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:440
+msgctxt "Bookmarks|"
+msgid "Empty"
+msgstr ""
+
+#: lib/bookmarks/bookmarkswidget.cpp:98
+msgctxt "BookmarksWidget|"
+msgid "Update Bookmark"
+msgstr ""
+
+#: lib/bookmarks/bookmarkswidget.cpp:112 lib/bookmarks/bookmarkswidget.ui:33
+msgctxt "BookmarksWidget|"
+msgid "Add to Speed Dial"
+msgstr "افزودن به شماره‌گیر سریع"
+
+#: lib/bookmarks/bookmarkswidget.cpp:116
+msgctxt "BookmarksWidget|"
+msgid "Remove from Speed Dial"
+msgstr "حذف از شماره‌گیر سریع"
+
+#: lib/bookmarks/bookmarkswidget.cpp:121
+msgctxt "BookmarksWidget|"
+msgid "Remove from Bookmarks"
+msgstr "حذف از نشان‌ها"
+
+#: lib/bookmarks/bookmarkswidget.ui:20
+msgctxt "BookmarksWidget|"
+msgid "Add to Bookmarks"
+msgstr ""
+
+#: lib/cookies/cookiemanager.cpp:78
+msgctxt "CookieManager|"
+msgid "Search"
+msgstr "یافتن"
+
+#: lib/cookies/cookiemanager.cpp:105
+msgctxt "CookieManager|"
+msgid "Confirmation"
+msgstr "تایید"
+
+#: lib/cookies/cookiemanager.cpp:106
+msgctxt "CookieManager|"
+msgid "Are you sure you want to delete all cookies on your computer?"
+msgstr ""
+
+#: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
+#: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
+#: lib/cookies/cookiemanager.cpp:155 lib/cookies/cookiemanager.cpp:156
+#: lib/cookies/cookiemanager.ui:154 lib/cookies/cookiemanager.ui:164
+#: lib/cookies/cookiemanager.ui:174 lib/cookies/cookiemanager.ui:184
+#: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
+msgctxt "CookieManager|"
+msgid "<cookie not selected>"
+msgstr "<کوکی انتخاب نشده است>"
+
+#: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
+#: lib/cookies/cookiemanager.ui:245
+msgctxt "CookieManager|"
+msgid "Remove cookies"
+msgstr "حذف کوکی‌ها"
+
+#: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
+#: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
+#: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "<cookie not selected>"
+msgctxt "CookieManager|"
+msgid "<multiple cookies selected>"
+msgstr "<کوکی انتخاب نشده است>"
+
+#: lib/cookies/cookiemanager.cpp:178
+msgctxt "CookieManager|"
+msgid "Secure only"
+msgstr "فقط امن"
+
+#: lib/cookies/cookiemanager.cpp:178
+msgctxt "CookieManager|"
+msgid "All connections"
+msgstr "همه ارتباط‌ها"
+
+#: lib/cookies/cookiemanager.cpp:179
+msgctxt "CookieManager|"
+msgid "Session cookie"
+msgstr "کوکی نشست"
+
+#: lib/cookies/cookiemanager.cpp:181
+msgctxt "CookieManager|"
+msgid "Remove cookie"
+msgstr "حذف کوکی"
+
+#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.ui:126
+msgctxt "CookieManager|"
+msgid "Server:"
+msgstr "خادم:"
+
+#: lib/cookies/cookiemanager.cpp:186
+msgctxt "CookieManager|"
+msgid "Add to whitelist"
+msgstr "افزودن به سپیدنامه"
+
+#: lib/cookies/cookiemanager.cpp:193
+msgctxt "CookieManager|"
+msgid "Already blacklisted!"
+msgstr ""
+
+#: lib/cookies/cookiemanager.cpp:193
+#, qt-format
+msgctxt "CookieManager|"
+msgid "The server \"%1\" is already in blacklist, please remove it first."
+msgstr ""
+
+#: lib/cookies/cookiemanager.cpp:209
+msgctxt "CookieManager|"
+msgid "Add to blacklist"
+msgstr "افزودن به سیاه‌نامه"
+
+#: lib/cookies/cookiemanager.cpp:220
+msgctxt "CookieManager|"
+msgid "Already whitelisted!"
+msgstr ""
+
+#: lib/cookies/cookiemanager.cpp:220
+#, qt-format
+msgctxt "CookieManager|"
+msgid "The server \"%1\" is already in whitelist, please remove it first."
+msgstr ""
+
+#: lib/cookies/cookiemanager.ui:14
+msgctxt "CookieManager|"
+msgid "Cookies"
+msgstr "کوکی‌ها"
+
+#: lib/cookies/cookiemanager.ui:36
+msgctxt "CookieManager|"
+msgid "Stored Cookies"
+msgstr "کوکی‌های رونوشت شده"
+
+#: lib/cookies/cookiemanager.ui:42
+msgctxt "CookieManager|"
+msgid "Find: "
+msgstr "یافتن:"
+
+#: lib/cookies/cookiemanager.ui:52
+msgctxt "CookieManager|"
+msgid "These cookies are stored on your computer:"
+msgstr "کوکی‌های رونوشت شده بر روی رایانه‌تان:"
+
+#: lib/cookies/cookiemanager.ui:66
+msgctxt "CookieManager|"
+msgid "Server"
+msgstr "خادم"
+
+#: lib/cookies/cookiemanager.ui:71
+msgctxt "CookieManager|"
+msgid "Cookie name"
+msgstr "نام کوکی"
+
+#: lib/cookies/cookiemanager.ui:109
+msgctxt "CookieManager|"
+msgid "Name:"
+msgstr "نام:"
+
+#: lib/cookies/cookiemanager.ui:119
+msgctxt "CookieManager|"
+msgid "Value:"
+msgstr "مقدار:"
+
+#: lib/cookies/cookiemanager.ui:133
+msgctxt "CookieManager|"
+msgid "Path:"
+msgstr "مسیر:"
+
+#: lib/cookies/cookiemanager.ui:140
+msgctxt "CookieManager|"
+msgid "Secure:"
+msgstr "امن:"
+
+#: lib/cookies/cookiemanager.ui:147
+msgctxt "CookieManager|"
+msgid "Expiration:"
+msgstr "انقضاء:"
+
+#: lib/cookies/cookiemanager.ui:238
+msgctxt "CookieManager|"
+msgid "Remove all cookies"
+msgstr "حذف همه کوکی‌ها"
+
+#: lib/cookies/cookiemanager.ui:269
+msgctxt "CookieManager|"
+msgid "Cookie Filtering"
+msgstr "پالایش کوکی‌ها"
+
+#: lib/cookies/cookiemanager.ui:275
+msgctxt "CookieManager|"
+msgid "<b>Cookie whitelist</b>"
+msgstr "<b>سپیدنامه کوکی‌ها</b>"
+
+#: lib/cookies/cookiemanager.ui:282
+msgctxt "CookieManager|"
+msgid ""
+"Cookies from these servers will ALWAYS be accepted (even if you have "
+"disabled saving cookies)"
+msgstr ""
+"کوکی‌های این خادم‌ها «همواره» پذیرفته خواهند شد (حتی اگر رونوشت‌بردای از کوکی‌ها "
+"را غیرفعال کنید)"
+
+#: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
+msgctxt "CookieManager|"
+msgid "Add"
+msgstr "افزودن"
+
+#: lib/cookies/cookiemanager.ui:314 lib/cookies/cookiemanager.ui:368
+msgctxt "CookieManager|"
+msgid "Remove"
+msgstr "حذف"
+
+#: lib/cookies/cookiemanager.ui:326
+msgctxt "CookieManager|"
+msgid "<b>Cookie blacklist</b>"
+msgstr "<b>سیاه‌نامه کوکی‌ها</b>"
+
+#: lib/cookies/cookiemanager.ui:333
+msgctxt "CookieManager|"
+msgid "Cookies from these servers will NEVER be accepted"
+msgstr "کوکی‌های این خادم‌ها «هرگز» پذیرفته نخواهند شد"
+
+#: lib/cookies/cookiemanager.ui:385
+msgctxt "CookieManager|"
+msgid "Settings"
+msgstr "سامانش"
+
+#: lib/cookies/cookiemanager.ui:407
+msgctxt "CookieManager|"
+msgid "Filter 3rd party cookies"
+msgstr ""
+
+#: lib/cookies/cookiemanager.ui:414
+msgctxt "CookieManager|"
+msgid "<b>Cookie Settings</b>"
+msgstr "<b>سامانش کوکی‌ها</b>"
+
+#: lib/cookies/cookiemanager.ui:421
+msgctxt "CookieManager|"
+msgid "Allow storing of cookies"
+msgstr "اجازه برای ذخیره کردن کوکی‌ها"
+
+#: lib/cookies/cookiemanager.ui:428
+msgctxt "CookieManager|"
+msgid "Filter tracking cookies"
+msgstr "پالایش کوکی‌های پیگرد"
+
+#: lib/cookies/cookiemanager.ui:435
+msgctxt "CookieManager|"
+msgid "Delete cookies on close"
+msgstr ""
+
+#: lib/downloads/downloaditem.cpp:73
+msgctxt "DownloadItem|"
+msgid "Remaining time unavailable"
+msgstr "زمان باقیمانده دردسترس نیست"
+
+#: lib/downloads/downloaditem.cpp:128
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Done - %1 (%2)"
+msgstr ""
+
+#: lib/downloads/downloaditem.cpp:132
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Error - %1"
+msgstr ""
+
+#: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:275
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Cancelled - %1"
+msgstr "لغو شد - ‏%1"
+
+#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:319
+msgctxt "DownloadItem|"
+msgid "Cancelled"
+msgstr "رد شد"
+
+#: lib/downloads/downloaditem.cpp:190
+msgctxt "DownloadItem|"
+msgid "few seconds"
+msgstr "چند ثانیه‌ای"
+
+#: lib/downloads/downloaditem.cpp:195
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n seconds"
+msgid_plural "%n seconds"
+msgstr[0] "%n ثانیه"
+
+#: lib/downloads/downloaditem.cpp:200
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n minutes"
+msgid_plural "%n minutes"
+msgstr[0] "%n دقیقه"
+
+#: lib/downloads/downloaditem.cpp:205
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n hours"
+msgid_plural "%n hours"
+msgstr[0] "%n ساعت"
+
+#: lib/downloads/downloaditem.cpp:212
+msgctxt "DownloadItem|"
+msgid "Unknown speed"
+msgstr "سرعت نامعلوم"
+
+#: lib/downloads/downloaditem.cpp:217
+msgctxt "DownloadItem|"
+msgid "kB/s"
+msgstr "کیلو‌بایت\\ثانیه"
+
+#: lib/downloads/downloaditem.cpp:222
+msgctxt "DownloadItem|"
+msgid "MB/s"
+msgstr "مگابایت\\ثانیه"
+
+#: lib/downloads/downloaditem.cpp:226
+msgctxt "DownloadItem|"
+msgid "GB/s"
+msgstr "گیگابایت\\ثانیه"
+
+#: lib/downloads/downloaditem.cpp:254
+msgctxt "DownloadItem|"
+msgid "Unknown size"
+msgstr "اندازه نامعلوم"
+
+#: lib/downloads/downloaditem.cpp:255
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%2 - unknown size (%3)"
+msgstr "‏%2 - اندازه نامعلوم ‏(%3)"
+
+#: lib/downloads/downloaditem.cpp:258
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Remaining %1 - %2 of %3 (%4)"
+msgstr "باقیمانده %1‏ -‏ ‏%2 از %3 ‏(%4)‏"
+
+#: lib/downloads/downloaditem.cpp:290
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "Cancelled - %1"
+msgctxt "DownloadItem|"
+msgid "Paused - %1"
+msgstr "لغو شد - ‏%1"
+
+#: lib/downloads/downloaditem.cpp:303
+msgctxt "DownloadItem|"
+msgid "Open File"
+msgstr "بازکردن پرونده"
+
+#: lib/downloads/downloaditem.cpp:305
+msgctxt "DownloadItem|"
+msgid "Open Folder"
+msgstr "بازکردن پوشه"
+
+#: lib/downloads/downloaditem.cpp:307
+msgctxt "DownloadItem|"
+msgid "Copy Download Link"
+msgstr "رونگاشت لینک دریافت"
+
+#: lib/downloads/downloaditem.cpp:309
+msgctxt "DownloadItem|"
+msgid "Cancel downloading"
+msgstr "لغو دریافت‌کردن"
+
+#: lib/downloads/downloaditem.cpp:312
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Cancel downloading"
+msgctxt "DownloadItem|"
+msgid "Resume downloading"
+msgstr "لغو دریافت‌کردن"
+
+#: lib/downloads/downloaditem.cpp:314
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Cancel downloading"
+msgctxt "DownloadItem|"
+msgid "Pause downloading"
+msgstr "لغو دریافت‌کردن"
+
+#: lib/downloads/downloaditem.cpp:317
+msgctxt "DownloadItem|"
+msgid "Remove From List"
+msgstr "حذف از فهرست"
+
+#: lib/downloads/downloaditem.cpp:319
+msgctxt "DownloadItem|"
+msgid "Error"
+msgstr "خطا"
+
+#: lib/downloads/downloaditem.cpp:345
+msgctxt "DownloadItem|"
+msgid "Not found"
+msgstr "پیدا نشد"
+
+#: lib/downloads/downloaditem.cpp:345
+#, qt-format
+msgctxt "DownloadItem|"
+msgid ""
+"Sorry, the file \n"
+" %1 \n"
+" was not found!"
+msgstr ""
+"متاسفانه، فایل\n"
+"%1\n"
+"پیدا نشد!"
+
+#: lib/downloads/downloadmanager.cpp:188 lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.ui:20
+msgctxt "DownloadManager|"
+msgid "Download Manager"
+msgstr "مدیر دریافت"
+
+#: lib/downloads/downloadmanager.cpp:226
+#, qt-format
+msgctxt "DownloadManager|"
+msgid "%1% of %2 files (%3) %4 remaining"
+msgstr "%1 از %2 پرونده (%3)‏‏ ‏%4 باقیمانده"
+
+#: lib/downloads/downloadmanager.cpp:230
+#, qt-format
+msgctxt "DownloadManager|"
+msgid "%1% - Download Manager"
+msgstr "%1%‏ - مدیر دریافت"
+
+#: lib/downloads/downloadmanager.cpp:300
+msgctxt "DownloadManager|"
+msgid "Save file as..."
+msgstr ""
+
+#: lib/downloads/downloadmanager.cpp:310
+msgctxt "DownloadManager|"
+msgid "MIME HTML Archive (*.mhtml)"
+msgstr ""
+
+#: lib/downloads/downloadmanager.cpp:311
+msgctxt "DownloadManager|"
+msgid "HTML Page, single (*.html)"
+msgstr ""
+
+#: lib/downloads/downloadmanager.cpp:312
+msgctxt "DownloadManager|"
+msgid "HTML Page, complete (*.html)"
+msgstr ""
+
+#: lib/downloads/downloadmanager.cpp:316
+msgctxt "DownloadManager|"
+msgid "Save page as..."
+msgstr ""
+
+#: lib/downloads/downloadmanager.cpp:410
+#, fuzzy
+#| msgctxt "DownloadOptionsDialog|"
+#| msgid "Download link copied."
+msgctxt "DownloadManager|"
+msgid "Falkon: Download Finished"
+msgstr "از لینک دریافت رونگاشت برداری شد."
+
+#: lib/downloads/downloadmanager.cpp:410
+msgctxt "DownloadManager|"
+msgid "All files have been successfully downloaded."
+msgstr "همه پرونده‌ها با موفقیت دریافت شدند."
+
+#: lib/downloads/downloadmanager.cpp:464
+msgctxt "DownloadManager|"
+msgid "Warning"
+msgstr "هشدار"
+
+#: lib/downloads/downloadmanager.cpp:465
+msgctxt "DownloadManager|"
+msgid ""
+"Are you sure you want to quit? All uncompleted downloads will be cancelled!"
+msgstr ""
+
+#: lib/downloads/downloadmanager.ui:69
+msgctxt "DownloadManager|"
+msgid "Clear"
+msgstr "پاک کردن"
+
+#: lib/downloads/downloadoptionsdialog.cpp:49
+#, qt-format
+msgctxt "DownloadOptionsDialog|"
+msgid "Opening %1"
+msgstr "در حال بازکردن %1"
+
+#: lib/downloads/downloadoptionsdialog.cpp:112
+msgctxt "DownloadOptionsDialog|"
+msgid "Download link copied."
+msgstr "از لینک دریافت رونگاشت برداری شد."
+
+#: lib/downloads/downloadoptionsdialog.ui:25
+#, fuzzy
+#| msgctxt "DownloadOptionsDialog|"
+#| msgid "What should QupZilla do with this file?"
+msgctxt "DownloadOptionsDialog|"
+msgid "What should Falkon do with this file?"
+msgstr "کوپزیلا چه کاری با این پرونده باید انجام دهد؟"
+
+#: lib/downloads/downloadoptionsdialog.ui:47
+msgctxt "DownloadOptionsDialog|"
+msgid "Open..."
+msgstr "باز کردن..."
+
+#: lib/downloads/downloadoptionsdialog.ui:54
+msgctxt "DownloadOptionsDialog|"
+msgid "Save File"
+msgstr "رونوشت پرونده"
+
+#: lib/downloads/downloadoptionsdialog.ui:64
+msgctxt "DownloadOptionsDialog|"
+msgid "Download with External Manager"
+msgstr "دریافت با استفاده از مدیر دریافت بیرونی"
+
+#: lib/downloads/downloadoptionsdialog.ui:165
+msgctxt "DownloadOptionsDialog|"
+msgid "which is:"
+msgstr ""
+
+#: lib/downloads/downloadoptionsdialog.ui:215
+msgctxt "DownloadOptionsDialog|"
+msgid "from:"
+msgstr "از:"
+
+#: lib/downloads/downloadoptionsdialog.ui:241
+msgctxt "DownloadOptionsDialog|"
+msgid "Copy download link"
+msgstr "رونگاشت لینک دریافت"
+
+#: lib/downloads/downloadoptionsdialog.ui:256
+msgctxt "DownloadOptionsDialog|"
+msgid "You have chosen to open"
+msgstr "برای باز کردن انتخاب کردید"
+
+#: lib/downloads/downloadsbutton.cpp:27 lib/downloads/downloadsbutton.cpp:43
+msgctxt "DownloadsButton|"
+msgid "Downloads"
+msgstr ""
+
+#: lib/downloads/downloadsbutton.cpp:28
+msgctxt "DownloadsButton|"
+msgid "Open Download Manager"
+msgstr ""
+
+#: lib/history/history.cpp:82
+msgctxt "History|"
+msgid "Empty Page"
+msgstr ""
+
+#: lib/history/history.cpp:272
+msgctxt "History|"
+msgid "January"
+msgstr "ژانویه"
+
+#: lib/history/history.cpp:274
+msgctxt "History|"
+msgid "February"
+msgstr "فوریه"
+
+#: lib/history/history.cpp:276
+msgctxt "History|"
+msgid "March"
+msgstr "مارس"
+
+#: lib/history/history.cpp:278
+msgctxt "History|"
+msgid "April"
+msgstr "آوریل"
+
+#: lib/history/history.cpp:280
+msgctxt "History|"
+msgid "May"
+msgstr "می"
+
+#: lib/history/history.cpp:282
+msgctxt "History|"
+msgid "June"
+msgstr "ژوئن"
+
+#: lib/history/history.cpp:284
+msgctxt "History|"
+msgid "July"
+msgstr "ژوئیه"
+
+#: lib/history/history.cpp:286
+msgctxt "History|"
+msgid "August"
+msgstr "اوت"
+
+#: lib/history/history.cpp:288
+msgctxt "History|"
+msgid "September"
+msgstr "سپتامبر"
+
+#: lib/history/history.cpp:290
+msgctxt "History|"
+msgid "October"
+msgstr "اکتبر"
+
+#: lib/history/history.cpp:292
+msgctxt "History|"
+msgid "November"
+msgstr "نوامبر"
+
+#: lib/history/history.cpp:294
+msgctxt "History|"
+msgid "December"
+msgstr "دسامبر"
+
+#: lib/history/historymanager.cpp:78
+msgctxt "HistoryManager|"
+msgid "Confirmation"
+msgstr "تایید"
+
+#: lib/history/historymanager.cpp:79
+msgctxt "HistoryManager|"
+msgid "Are you sure you want to delete all history?"
+msgstr ""
+
+#: lib/history/historymanager.cpp:145
+msgctxt "HistoryManager|"
+msgid "Open in new tab"
+msgstr ""
+
+#: lib/history/historymanager.cpp:146
+msgctxt "HistoryManager|"
+msgid "Open in new window"
+msgstr ""
+
+#: lib/history/historymanager.cpp:147
+msgctxt "HistoryManager|"
+msgid "Open in new private window"
+msgstr ""
+
+#: lib/history/historymanager.cpp:150
+msgctxt "HistoryManager|"
+msgid "Copy url"
+msgstr ""
+
+#: lib/history/historymanager.cpp:151
+msgctxt "HistoryManager|"
+msgid "Copy title"
+msgstr ""
+
+#: lib/history/historymanager.cpp:154 lib/history/historymanager.ui:20
+msgctxt "HistoryManager|"
+msgid "Delete"
+msgstr "حذف"
+
+#: lib/history/historymanager.ui:14
+msgctxt "HistoryManager|"
+msgid "History"
+msgstr "پیشینه"
+
+#: lib/history/historymanager.ui:27
+msgctxt "HistoryManager|"
+msgid "Clear All History"
+msgstr "حذف همه پیشینه"
+
+#: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
+#: lib/history/historymenu.cpp:186
+msgctxt "HistoryMenu|"
+msgid "Empty"
+msgstr ""
+
+#: lib/history/historymenu.cpp:161
+msgctxt "HistoryMenu|"
+msgid "Restore All Closed Tabs"
+msgstr ""
+
+#: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
+msgctxt "HistoryMenu|"
+msgid "Clear list"
+msgstr ""
+
+#: lib/history/historymenu.cpp:189
+msgctxt "HistoryMenu|"
+msgid "Restore All Closed Windows"
+msgstr ""
+
+#: lib/history/historymenu.cpp:236
+msgctxt "HistoryMenu|"
+msgid "Hi&story"
+msgstr ""
+
+#: lib/history/historymenu.cpp:238
+msgctxt "HistoryMenu|"
+msgid "&Back"
+msgstr ""
+
+#: lib/history/historymenu.cpp:241
+msgctxt "HistoryMenu|"
+msgid "&Forward"
+msgstr ""
+
+#: lib/history/historymenu.cpp:244
+msgctxt "HistoryMenu|"
+msgid "&Home"
+msgstr ""
+
+#: lib/history/historymenu.cpp:247
+msgctxt "HistoryMenu|"
+msgid "Show &All History"
+msgstr ""
+
+#: lib/history/historymenu.cpp:255
+msgctxt "HistoryMenu|"
+msgid "Most Visited"
+msgstr ""
+
+#: lib/history/historymenu.cpp:258
+msgctxt "HistoryMenu|"
+msgid "Closed Tabs"
+msgstr ""
+
+#: lib/history/historymenu.cpp:261
+msgctxt "HistoryMenu|"
+msgid "Closed Windows"
+msgstr ""
+
+#: lib/history/historymodel.cpp:56
+msgctxt "HistoryModel|"
+msgid "Title"
+msgstr "سرنویس"
+
+#: lib/history/historymodel.cpp:58
+msgctxt "HistoryModel|"
+msgid "Address"
+msgstr "آدرس"
+
+#: lib/history/historymodel.cpp:60
+msgctxt "HistoryModel|"
+msgid "Visit Date"
+msgstr "تاریخ بازدید"
+
+#: lib/history/historymodel.cpp:62
+msgctxt "HistoryModel|"
+msgid "Visit Count"
+msgstr "شمار بازدیدها"
+
+#: lib/history/historymodel.cpp:340 lib/history/historymodel.cpp:471
+msgctxt "HistoryModel|"
+msgid "Today"
+msgstr "امروز"
+
+#: lib/history/historymodel.cpp:476
+msgctxt "HistoryModel|"
+msgid "This Week"
+msgstr "این هفته"
+
+#: lib/history/historymodel.cpp:481
+msgctxt "HistoryModel|"
+msgid "This Month"
+msgstr "این ماه"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:158
+msgctxt "LocationCompleterDelegate|"
+msgid "Visit"
+msgstr ""
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:164
+#, qt-format
+msgctxt "LocationCompleterDelegate|"
+msgid "Search with %1"
+msgstr ""
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:198
+msgctxt "LocationCompleterDelegate|"
+msgid "Switch to tab"
+msgstr ""
+
+#: lib/navigation/completer/locationcompleterview.cpp:73
+msgctxt "LocationCompleterView|"
+msgid "Manage Search Engines"
+msgstr ""
+
+#: lib/navigation/completer/locationcompleterview.cpp:78
+msgctxt "LocationCompleterView|"
+msgid "Search with:"
+msgstr ""
+
+#: lib/navigation/locationbar.cpp:92
+msgctxt "LocationBar|"
+msgid "Paste And &Go"
+msgstr "چسباندن و &رفتن"
+
+#: lib/navigation/locationbar.cpp:159
+#, qt-format
+msgctxt "LocationBar|"
+msgid "Enter address or search with %1"
+msgstr ""
+
+#: lib/navigation/locationbar.cpp:161
+msgctxt "LocationBar|"
+msgid "Enter address"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:49
+msgctxt "NavigationBar|"
+msgid "Empty Page"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:76
+msgctxt "NavigationBar|"
+msgid "Back"
+msgstr "پیشین"
+
+#: lib/navigation/navigationbar.cpp:86
+msgctxt "NavigationBar|"
+msgid "Forward"
+msgstr "پسین"
+
+#: lib/navigation/navigationbar.cpp:106
+msgctxt "NavigationBar|"
+msgid "Home"
+msgstr "خانه"
+
+#: lib/navigation/navigationbar.cpp:114
+msgctxt "NavigationBar|"
+msgid "New Tab"
+msgstr "برگه تازه"
+
+#: lib/navigation/navigationbar.cpp:134
+msgctxt "NavigationBar|"
+msgid "Tools"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:147
+msgctxt "NavigationBar|"
+msgid "Main Menu"
+msgstr "منوی اصلی"
+
+#: lib/navigation/navigationbar.cpp:164
+msgctxt "NavigationBar|"
+msgid "Exit Fullscreen"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:190
+msgctxt "NavigationBar|"
+msgid "Back and Forward buttons"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:191
+msgctxt "NavigationBar|"
+msgid "Reload button"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:192
+msgctxt "NavigationBar|"
+msgid "Home button"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:193
+msgctxt "NavigationBar|"
+msgid "Add tab button"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:194
+msgctxt "NavigationBar|"
+msgid "Address and Search bar"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:195
+msgctxt "NavigationBar|"
+msgid "Tools button"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:196
+msgctxt "NavigationBar|"
+msgid "Exit Fullscreen button"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:393 lib/navigation/navigationbar.cpp:427
+msgctxt "NavigationBar|"
+msgid "Clear history"
+msgstr "حذف پیشینه"
+
+#: lib/navigation/navigationbar.cpp:434
+msgctxt "NavigationBar|"
+msgid "Toolbars"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:435
+msgctxt "NavigationBar|"
+msgid "Sidebar"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:450 lib/navigation/navigationbar.cpp:464
+msgctxt "NavigationBar|"
+msgid "Configure Toolbar"
+msgstr ""
+
+#: lib/navigation/navigationbarconfigdialog.ui:14
+msgctxt "NavigationBarConfigDialog|"
+msgid "Configure Toolbar"
+msgstr ""
+
+#: lib/navigation/navigationbarconfigdialog.ui:62
+msgctxt "NavigationBarConfigDialog|"
+msgid "Show search bar"
+msgstr ""
+
+#: lib/navigation/navigationbarconfigdialog.ui:82
+msgctxt "NavigationBarConfigDialog|"
+msgid "Available items:"
+msgstr ""
+
+#: lib/navigation/navigationbarconfigdialog.ui:89
+msgctxt "NavigationBarConfigDialog|"
+msgid "Current items:"
+msgstr ""
+
+#: lib/navigation/reloadstopbutton.cpp:57
+msgctxt "ReloadStopButton|"
+msgid "Stop"
+msgstr ""
+
+#: lib/navigation/reloadstopbutton.cpp:61
+msgctxt "ReloadStopButton|"
+msgid "Reload"
+msgstr ""
+
+#: lib/navigation/siteicon.cpp:40
+msgctxt "LocationBar|"
+msgid "Show information about this page"
+msgstr "نمایش اطلاعات درباره صفحه"
+
+#: lib/navigation/websearchbar.cpp:97
+msgctxt "WebSearchBar|"
+msgid "Paste And &Search"
+msgstr "چسباندن و &یافتن"
+
+#: lib/navigation/websearchbar.cpp:123
+#, qt-format
+msgctxt "WebSearchBar|"
+msgid "Add %1 ..."
+msgstr "افزودن %1 ..."
+
+#: lib/navigation/websearchbar.cpp:127
+msgctxt "WebSearchBar|"
+msgid "Manage Search Engines"
+msgstr "مدیریت موتورهای یابنده"
+
+#: lib/navigation/websearchbar.cpp:257
+msgctxt "WebSearchBar|"
+msgid "Show suggestions"
+msgstr "پیشنهادها را نشان بده"
+
+#: lib/navigation/websearchbar.cpp:262
+msgctxt "WebSearchBar|"
+msgid "Search when engine changed"
+msgstr "یافتن دوباره هنگامی که موتور یابنده تغییر یابد"
+
+#: lib/network/networkmanager.cpp:84
+msgctxt "NetworkManager|"
+msgid "SSL Certificate Error!"
+msgstr "خطا در گواهینامه اس‌اس‌ال!"
+
+#: lib/network/networkmanager.cpp:85
+msgctxt "NetworkManager|"
+msgid ""
+"The page you are trying to access has the following errors in the SSL "
+"certificate:"
+msgstr ""
+"صفحه‌ای که سعی دارید به آن دسترسی پیدا کنید خطاهای زیر را در گواهینامه اس‌اس‌ال "
+"دارد:"
+
+#: lib/network/networkmanager.cpp:86
+msgctxt "NetworkManager|"
+msgid "Would you like to make an exception for this certificate?"
+msgstr "آیا می‌خواهید برای این گواهینامه استثناء ایجاد کنید؟"
+
+#: lib/network/networkmanager.cpp:113
+#, fuzzy
+#| msgctxt "NetworkManager|"
+#| msgid "Authorisation required"
+msgctxt "NetworkManager|"
+msgid "Authorization required"
+msgstr "برای ورود اجازه لازم است"
+
+#: lib/network/networkmanager.cpp:120 lib/network/networkmanager.cpp:206
+msgctxt "NetworkManager|"
+msgid "Username: "
+msgstr "نام‌کاربری:"
+
+#: lib/network/networkmanager.cpp:121 lib/network/networkmanager.cpp:207
+msgctxt "NetworkManager|"
+msgid "Password: "
+msgstr "رمز:"
+
+#: lib/network/networkmanager.cpp:127
+msgctxt "NetworkManager|"
+msgid "Save username and password for this site"
+msgstr ""
+
+#: lib/network/networkmanager.cpp:135
+#, qt-format
+msgctxt "NetworkManager|"
+msgid ""
+"A username and password are being requested by %1. The site says: \"%2\""
+msgstr "بوسیله %1 نام کاربری و رمز درخواست شده است. تارنما می‌گوید: «%2»"
+
+#: lib/network/networkmanager.cpp:199
+#, fuzzy
+#| msgctxt "NetworkManager|"
+#| msgid "Proxy authorisation required"
+msgctxt "NetworkManager|"
+msgid "Proxy authorization required"
+msgstr "برای استفاده پروکسی اجازه لازم است"
+
+#: lib/network/networkmanager.cpp:219
+#, qt-format
+msgctxt "NetworkManager|"
+msgid "A username and password are being requested by proxy %1. "
+msgstr "بوسیله پروکسی %1 نام کاربری و رمز درخواست شده است. "
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:154
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Start Page"
+msgctxt "FalkonSchemeReply|"
+msgid "Start Page"
+msgstr "صفحه آغاز"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:155
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Search on Web"
+msgctxt "FalkonSchemeReply|"
+msgid "Search on Web"
+msgstr "یافتن در وب"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:156
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Search results provided by DuckDuckGo"
+msgctxt "FalkonSchemeReply|"
+msgid "Search results provided by DuckDuckGo"
+msgstr "یافتن نتیجه‌های فراهم شده توسط DuckDuckGo"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:158
+#: lib/network/schemehandlers/falkonschemehandler.cpp:174
+#: lib/network/schemehandlers/falkonschemehandler.cpp:175
+msgctxt "FalkonSchemeReply|"
+msgid "About Falkon"
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:159
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "<h1>Private Browsing</h1>"
+msgctxt "FalkonSchemeReply|"
+msgid "<h1>Private Browsing</h1>"
+msgstr "<h1>مرور خصوصی</h1>"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:176
+#: lib/network/schemehandlers/falkonschemehandler.cpp:284
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Information about version"
+msgctxt "FalkonSchemeReply|"
+msgid "Information about version"
+msgstr "اطلاعاتی درمورد نسخه"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:177
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Copyright"
+msgctxt "FalkonSchemeReply|"
+msgid "Copyright"
+msgstr "حق نشر"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Version"
+msgctxt "FalkonSchemeReply|"
+msgid "Version"
+msgstr "نسخه"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:187
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Main developer"
+msgctxt "FalkonSchemeReply|"
+msgid "Main developer"
+msgstr "توسعه‌دهنده اصلی"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:208
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Speed Dial"
+msgctxt "FalkonSchemeReply|"
+msgid "Speed Dial"
+msgstr "شماره‌گیر سریع"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:209
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Add New Page"
+msgctxt "FalkonSchemeReply|"
+msgid "Add New Page"
+msgstr "افزودن صفحه تازه"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:210
+#, fuzzy
+#| msgctxt "AutoFillManager|"
+#| msgid "Edit"
+msgctxt "FalkonSchemeReply|"
+msgid "Edit"
+msgstr "ویرایش"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:211
+#, fuzzy
+#| msgctxt "AcceptLanguage|"
+#| msgid "Remove"
+msgctxt "FalkonSchemeReply|"
+msgid "Remove"
+msgstr "حذف"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:212
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Reload"
+msgctxt "FalkonSchemeReply|"
+msgid "Reload"
+msgstr "تازه‌سازی"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:213
+#, fuzzy
+#| msgctxt "AutoFillManager|"
+#| msgid "Are you sure that you want to show all passwords?"
+msgctxt "FalkonSchemeReply|"
+msgid "Are you sure you want to remove this speed dial?"
+msgstr "آیا از نمایش همه رمز‌ها اطمینان دارید؟"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:214
+#, fuzzy
+#| msgctxt "AutoFillManager|"
+#| msgid "Are you sure that you want to show all passwords?"
+msgctxt "FalkonSchemeReply|"
+msgid "Are you sure you want to reload all speed dials?"
+msgstr "آیا از نمایش همه رمز‌ها اطمینان دارید؟"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:215
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Load title from page"
+msgctxt "FalkonSchemeReply|"
+msgid "Load title from page"
+msgstr "بارگذاری سرنویس از صفحه"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:216
+msgctxt "FalkonSchemeReply|"
+msgid "SpeedDial requires enabled JavaScript."
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:217
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Url"
+msgctxt "FalkonSchemeReply|"
+msgid "Url"
+msgstr "نشانی"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:218
+#, fuzzy
+#| msgctxt "HistoryModel|"
+#| msgid "Title"
+msgctxt "FalkonSchemeReply|"
+msgid "Title"
+msgstr "سرنویس"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:219
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Apply"
+msgctxt "FalkonSchemeReply|"
+msgid "Apply"
+msgstr "اعمال"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:220
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Cancelled"
+msgctxt "FalkonSchemeReply|"
+msgid "Cancel"
+msgstr "رد شد"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:221
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "New Page"
+msgctxt "FalkonSchemeReply|"
+msgid "New Page"
+msgstr "صفحه تازه"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:222
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Speed Dial settings"
+msgctxt "FalkonSchemeReply|"
+msgid "Speed Dial settings"
+msgstr "سامانش شماره‌گیر سریع"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:223
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Placement: "
+msgctxt "FalkonSchemeReply|"
+msgid "Placement: "
+msgstr "قرارگیری: "
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:224
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Auto"
+msgctxt "FalkonSchemeReply|"
+msgid "Auto"
+msgstr "خودکار"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:225
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Cover"
+msgctxt "FalkonSchemeReply|"
+msgid "Cover"
+msgstr "پوشاندن"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:226
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Fit"
+msgctxt "FalkonSchemeReply|"
+msgid "Fit"
+msgstr "گنجاندن"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:227
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Fit Width"
+msgctxt "FalkonSchemeReply|"
+msgid "Fit Width"
+msgstr "گنجاندن در پهنا"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:228
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Fit Height"
+msgctxt "FalkonSchemeReply|"
+msgid "Fit Height"
+msgstr "گنجاندن در ارتفاع"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:229
+msgctxt "FalkonSchemeReply|"
+msgid "Use custom wallpaper"
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:230
+msgctxt "FalkonSchemeReply|"
+msgid "Click to select image"
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:231
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Maximum pages in a row:"
+msgctxt "FalkonSchemeReply|"
+msgid "Maximum pages in a row:"
+msgstr "بیشینه صفحه‌ها در یک سطر:"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:232
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Change size of pages:"
+msgctxt "FalkonSchemeReply|"
+msgid "Change size of pages:"
+msgstr "تغییر اندازه صفحه‌ها:"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:233
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Center speed dials"
+msgctxt "FalkonSchemeReply|"
+msgid "Center speed dials"
+msgstr "شماره‌گیر سریع را در مرکز قرار بده"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:258
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Restore Session"
+msgctxt "FalkonSchemeReply|"
+msgid "Restore Session"
+msgstr "برگرداندن نشست"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:259
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Oops, QupZilla crashed."
+msgctxt "FalkonSchemeReply|"
+msgid "Oops, Falkon crashed."
+msgstr "اوه، کوپزیلا دچار خطا شد."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:260
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid ""
+#| "We apologize for this. Would you like to restore the last saved state?"
+msgctxt "FalkonSchemeReply|"
+msgid "We apologize for this. Would you like to restore the last saved state?"
+msgstr ""
+"به این خاطر از شما عذرخواهیم. آیا می‌خواهید آخرین حالت ذحیره شده، برگردانده "
+"شود؟"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:261
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Try removing one or more tabs that you think cause troubles"
+msgctxt "FalkonSchemeReply|"
+msgid "Try removing one or more tabs that you think cause troubles"
+msgstr ""
+"سعی کنید یک یا چند برگه‌ای را که فکر می‌کنید باعث بروز مشکل هستند را حذف کنید"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Or you can start completely new session"
+msgctxt "FalkonSchemeReply|"
+msgid "Or you can start completely new session"
+msgstr "یا می‌توانید به طور کامل نشست تازه‌ای را آغاز کنید"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Windows 7 API"
+msgctxt "FalkonSchemeReply|"
+msgid "Window"
+msgstr "رابط نرم‌افزاری ویندوز 7"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Windows 7 API"
+msgctxt "FalkonSchemeReply|"
+msgid "Windows and Tabs"
+msgstr "رابط نرم‌افزاری ویندوز 7"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Restore Session"
+msgctxt "FalkonSchemeReply|"
+msgid "Start New Session"
+msgstr "برگرداندن نشست"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Restore session"
+msgctxt "FalkonSchemeReply|"
+msgid "Restore"
+msgstr "برگرداندن نشست"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+msgctxt "FalkonSchemeReply|"
+msgid "Requires enabled JavaScript."
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:282
+#: lib/network/schemehandlers/falkonschemehandler.cpp:283
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Configuration Information"
+msgctxt "FalkonSchemeReply|"
+msgid "Configuration Information"
+msgstr "اطلاعات پیکربندی"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:285
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid ""
+#| "This page contains information about QupZilla's current configuration - "
+#| "relevant for troubleshooting. Please include this information when "
+#| "submitting bug reports."
+msgctxt "FalkonSchemeReply|"
+msgid ""
+"This page contains information about Falkon's current configuration - "
+"relevant for troubleshooting. Please include this information when "
+"submitting bug reports."
+msgstr ""
+"این صفحه اطلاعاتی را درباره پیکربندی فعلی کوپزیلا شامل می‌شود - که مناسب "
+"اشکال‌یابی است. لطفا این اطلاعات را هنگام ارایه کردن گزارش‌های باگ در آن "
+"بگنجانید."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:286
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Browser Identification"
+msgctxt "FalkonSchemeReply|"
+msgid "Browser Identification"
+msgstr "هویت مرورگر"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:287
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Paths"
+msgctxt "FalkonSchemeReply|"
+msgid "Paths"
+msgstr "مسیرها"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Build Configuration"
+msgctxt "FalkonSchemeReply|"
+msgid "Build Configuration"
+msgstr "پیکربندی ساخت"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Preferences"
+msgctxt "FalkonSchemeReply|"
+msgid "Preferences"
+msgstr "ترجیجات"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Option"
+msgctxt "FalkonSchemeReply|"
+msgid "Option"
+msgstr "گزینه‌ها"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Value"
+msgctxt "FalkonSchemeReply|"
+msgid "Value"
+msgstr "مقدار"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:327
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Extensions"
+msgctxt "FalkonSchemeReply|"
+msgid "Extensions"
+msgstr "توسیع‌ها"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Name"
+msgctxt "FalkonSchemeReply|"
+msgid "Name"
+msgstr "نام"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Author"
+msgctxt "FalkonSchemeReply|"
+msgid "Author"
+msgstr "نویسنده"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Description"
+msgctxt "FalkonSchemeReply|"
+msgid "Description"
+msgstr "توصیف"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:311
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Application version"
+msgctxt "FalkonSchemeReply|"
+msgid "Application version"
+msgstr "نسخه نرم‌افزار"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:318
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Qt version"
+msgctxt "FalkonSchemeReply|"
+msgid "Qt version"
+msgstr "نسخه کیوت"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:319
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Platform"
+msgctxt "FalkonSchemeReply|"
+msgid "Platform"
+msgstr "سکو"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:322
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Profile"
+msgctxt "FalkonSchemeReply|"
+msgid "Profile"
+msgstr "نمایه"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Settings"
+msgctxt "FalkonSchemeReply|"
+msgid "Settings"
+msgstr "سامانش"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Saved session"
+msgctxt "FalkonSchemeReply|"
+msgid "Saved session"
+msgstr "نشست رونوشت‌برداری شده"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Data"
+msgctxt "FalkonSchemeReply|"
+msgid "Data"
+msgstr "داده‌ها"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:326
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Themes"
+msgctxt "FalkonSchemeReply|"
+msgid "Themes"
+msgstr "فرهشت‌ها"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:337
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "<b>Enabled</b>"
+msgctxt "FalkonSchemeReply|"
+msgid "<b>Enabled</b>"
+msgstr "<b>فعال</b>"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:339
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Disabled"
+msgctxt "FalkonSchemeReply|"
+msgid "Disabled"
+msgstr "غیرفعال"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:346
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Debug build"
+msgctxt "FalkonSchemeReply|"
+msgid "Debug build"
+msgstr "ساخت دباگ"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Windows 7 API"
+msgctxt "FalkonSchemeReply|"
+msgid "Windows 7 API"
+msgstr "رابط نرم‌افزاری ویندوز 7"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:350
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Portable build"
+msgctxt "FalkonSchemeReply|"
+msgid "Portable build"
+msgstr "ساخته به‌صورت همراه"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:368
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "No available extensions."
+msgctxt "FalkonSchemeReply|"
+msgid "No available extensions."
+msgstr "توسیعی دردسترس نیست."
+
+#: lib/network/sslerrordialog.ui:14
+msgctxt "SslErrorDialog|"
+msgid "SSL Certificate Error!"
+msgstr "خطا در گواهینامه اس‌اس‌ال!"
+
+#: lib/notifications/desktopnotificationsfactory.cpp:119
+msgctxt "DesktopNotificationsFactory|"
+msgid "Preview"
+msgstr ""
+
+#: lib/notifications/desktopnotificationsfactory.cpp:119
+msgctxt "QObject|"
+msgid "Native System Notification"
+msgstr "آگاه‌ساز مورداستفاده سیستم"
+
+#: lib/opensearch/editsearchengine.ui:20
+msgctxt "EditSearchEngine|"
+msgid "Name:"
+msgstr "نام:"
+
+#: lib/opensearch/editsearchengine.ui:30
+msgctxt "EditSearchEngine|"
+msgid "Url:"
+msgstr "نشانی:"
+
+#: lib/opensearch/editsearchengine.ui:44
+msgctxt "EditSearchEngine|"
+msgid "Shortcut:"
+msgstr "میان‌بر:"
+
+#: lib/opensearch/editsearchengine.ui:54
+msgctxt "EditSearchEngine|"
+msgid "Icon:"
+msgstr "آیکون:"
+
+#: lib/opensearch/editsearchengine.ui:83
+msgctxt "EditSearchEngine|"
+msgid "Change..."
+msgstr "تغییر..."
+
+#: lib/opensearch/editsearchengine.ui:106
+msgctxt "EditSearchEngine|"
+msgid "<b>Note: </b>%s in url or post data represent searched string"
+msgstr "<b>توجه: </b>%s در آدرس یا داده‌های post نشاندهنده رشته مورد جستجو است"
+
+#: lib/opensearch/editsearchengine.ui:123
+msgctxt "EditSearchEngine|"
+msgid "Post Data:"
+msgstr "داده‌های Post:"
+
+#: lib/opensearch/opensearchreader.cpp:105
+msgctxt "QObject|"
+msgid "The file is not an OpenSearch 1.1 file."
+msgstr "این پرونده از نوع ‪OpenSearch 1.1‬ نیست."
+
+#: lib/opensearch/searchenginesdialog.cpp:52
+#: lib/opensearch/searchenginesmanager.cpp:315
+msgctxt "SearchEnginesDialog|"
+msgid "Add Search Engine"
+msgstr "افزودن موتور یابنده"
+
+#: lib/opensearch/searchenginesdialog.cpp:89
+msgctxt "SearchEnginesDialog|"
+msgid "Remove Engine"
+msgstr "حذف موتور یابنده"
+
+#: lib/opensearch/searchenginesdialog.cpp:90
+#, qt-format
+msgctxt "SearchEnginesDialog|"
+msgid ""
+"You can't remove the default search engine.<br>Set a different engine as "
+"default before removing %1."
+msgstr ""
+"شما نمی‌توانید موتور یابنده پیش‌فرض را حذف کنید.<br>قبل از حذف‌کردن %1 موتور "
+"دیگری را به عنوان پیش‌فرض انتخاب کنید."
+
+#: lib/opensearch/searchenginesdialog.cpp:107
+msgctxt "SearchEnginesDialog|"
+msgid "Edit Search Engine"
+msgstr "ویرایش موتور یابنده"
+
+#: lib/opensearch/searchenginesdialog.ui:14
+msgctxt "SearchEnginesDialog|"
+msgid "Manage Search Engines"
+msgstr "مدیریت موتورهای یابنده"
+
+#: lib/opensearch/searchenginesdialog.ui:22
+msgctxt "SearchEnginesDialog|"
+msgid "Add..."
+msgstr "افزودن..."
+
+#: lib/opensearch/searchenginesdialog.ui:29
+msgctxt "SearchEnginesDialog|"
+msgid "Remove"
+msgstr "حذف"
+
+#: lib/opensearch/searchenginesdialog.ui:36
+msgctxt "SearchEnginesDialog|"
+msgid "Edit"
+msgstr "ویرایش"
+
+#: lib/opensearch/searchenginesdialog.ui:56
+msgctxt "SearchEnginesDialog|"
+msgid "Set as default"
+msgstr "تنظیم به عنوان پیش‌فرض"
+
+#: lib/opensearch/searchenginesdialog.ui:63
+msgctxt "SearchEnginesDialog|"
+msgid "Up"
+msgstr "بالا"
+
+#: lib/opensearch/searchenginesdialog.ui:70
+msgctxt "SearchEnginesDialog|"
+msgid "Down"
+msgstr "پایین"
+
+#: lib/opensearch/searchenginesdialog.ui:89
+msgctxt "SearchEnginesDialog|"
+msgid "Search Engine"
+msgstr "موتور یابنده"
+
+#: lib/opensearch/searchenginesdialog.ui:94
+msgctxt "SearchEnginesDialog|"
+msgid "Shortcut"
+msgstr "میان‌بر"
+
+#: lib/opensearch/searchenginesdialog.ui:104
+msgctxt "SearchEnginesDialog|"
+msgid "Defaults"
+msgstr "پیش‌فرض‌ها"
+
+#: lib/opensearch/searchenginesmanager.cpp:401
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine Added"
+msgstr "موتور یابنده اضافه شد"
+
+#: lib/opensearch/searchenginesmanager.cpp:401
+#, qt-format
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine \"%1\" has been successfully added."
+msgstr "موتور یابنده «%1» با موفقیت اضافه شد."
+
+#: lib/opensearch/searchenginesmanager.cpp:408
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine is not valid!"
+msgstr "موتور یابنده معتبر نیست!"
+
+#: lib/opensearch/searchenginesmanager.cpp:409
+msgctxt "SearchEnginesManager|"
+msgid "Error"
+msgstr "خطا"
+
+#: lib/opensearch/searchenginesmanager.cpp:409
+#, qt-format
+msgctxt "SearchEnginesManager|"
+msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
+msgstr "خطا در هنگام افزودن موتور یابنده <br><b>خطا پیام: </b> %1"
+
+#: lib/other/aboutdialog.cpp:51
+#, qt-format
+msgctxt "AboutDialog|"
+msgid "<p><b>Application version %1</b><br/>"
+msgstr "<p><b>نسخه نرم‌افزار&rlm; %1</b><br/>"
+
+#: lib/other/aboutdialog.cpp:58
+#, qt-format
+msgctxt "AboutDialog|"
+msgid "<b>QtWebEngine version %1</b></p>"
+msgstr ""
+
+#: lib/other/aboutdialog.ui:14
+msgctxt "AboutDialog|"
+msgid "About Falkon"
+msgstr ""
+
+#: lib/other/browsinglibrary.cpp:55
+msgctxt "BrowsingLibrary|"
+msgid "History"
+msgstr "پیشینه"
+
+#: lib/other/browsinglibrary.cpp:56
+msgctxt "BrowsingLibrary|"
+msgid "Bookmarks"
+msgstr "نشان‌ها"
+
+#: lib/other/browsinglibrary.cpp:61
+msgctxt "BrowsingLibrary|"
+msgid "Import Bookmarks..."
+msgstr ""
+
+#: lib/other/browsinglibrary.cpp:62
+msgctxt "BrowsingLibrary|"
+msgid "Export Bookmarks..."
+msgstr ""
+
+#: lib/other/browsinglibrary.ui:14
+msgctxt "BrowsingLibrary|"
+msgid "Library"
+msgstr "کتابخانه"
+
+#: lib/other/browsinglibrary.ui:64
+msgctxt "BrowsingLibrary|"
+msgid "Import and Export"
+msgstr ""
+
+#: lib/other/browsinglibrary.ui:84
+msgctxt "BrowsingLibrary|"
+msgid "Search..."
+msgstr "یافتن..."
+
+#: lib/other/clearprivatedata.cpp:154
+msgctxt "ClearPrivateData|"
+msgid "Done"
+msgstr ""
+
+#: lib/other/clearprivatedata.cpp:172
+msgctxt "ClearPrivateData|"
+msgid "Database Optimized"
+msgstr "پایگاه‌داده بهینه‌سازی شد"
+
+#: lib/other/clearprivatedata.cpp:172
+#, qt-format
+msgctxt "ClearPrivateData|"
+msgid ""
+"Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/"
+"><b>Database Size After: </b>%2"
+msgstr ""
+"پایگاه‌داده با موفقیت بهینه‌سازی شد.<br/><br/><b>حجم قبلی پایگاه‌داده: </b>"
+"%1<br/><b>حجم جدید پایگاه‌دادهr: </b>%2"
+
+#: lib/other/clearprivatedata.ui:14
+msgctxt "ClearPrivateData|"
+msgid "Clear Recent History"
+msgstr "حذف پیشینه اخیر"
+
+#: lib/other/clearprivatedata.ui:20
+msgctxt "ClearPrivateData|"
+msgid "<b>Clear Recent History</b>"
+msgstr "<b>حذف پیشینه اخیر</b>"
+
+#: lib/other/clearprivatedata.ui:27
+msgctxt "ClearPrivateData|"
+msgid "Edit cookies"
+msgstr ""
+
+#: lib/other/clearprivatedata.ui:38
+msgctxt "ClearPrivateData|"
+msgid "Earlier Today"
+msgstr "اوایل امروز"
+
+#: lib/other/clearprivatedata.ui:43
+msgctxt "ClearPrivateData|"
+msgid "Week"
+msgstr "هفته"
+
+#: lib/other/clearprivatedata.ui:48
+msgctxt "ClearPrivateData|"
+msgid "Month"
+msgstr "ماه"
+
+#: lib/other/clearprivatedata.ui:53
+msgctxt "ClearPrivateData|"
+msgid "All"
+msgstr "همه"
+
+#: lib/other/clearprivatedata.ui:61
+msgctxt "ClearPrivateData|"
+msgid "Visited pages history from:"
+msgstr ""
+
+#: lib/other/clearprivatedata.ui:71
+msgctxt "ClearPrivateData|"
+msgid "Checked items will be cleared upon clicking the Clear button."
+msgstr ""
+
+#: lib/other/clearprivatedata.ui:78
+msgctxt "ClearPrivateData|"
+msgid "Local storage"
+msgstr ""
+
+#: lib/other/clearprivatedata.ui:94
+msgctxt "ClearPrivateData|"
+msgid "Clear"
+msgstr ""
+
+#: lib/other/clearprivatedata.ui:114
+msgctxt "ClearPrivateData|"
+msgid "Web databases"
+msgstr ""
+
+#: lib/other/clearprivatedata.ui:124
+msgctxt "ClearPrivateData|"
+msgid "Cache"
+msgstr ""
+
+#: lib/other/clearprivatedata.ui:134
+msgctxt "ClearPrivateData|"
+msgid "Optimize database"
+msgstr "بهینه سازی پایگاه‌داده"
+
+#: lib/other/clearprivatedata.ui:141
+msgctxt "ClearPrivateData|"
+msgid "Cookies"
+msgstr ""
+
+#: lib/other/clearprivatedata.ui:158
+msgctxt "ClearPrivateData|"
+msgid "Database"
+msgstr ""
+
+#: lib/other/iconchooser.cpp:41
+msgctxt "IconChooser|"
+msgid "Image files"
+msgstr "پرونده‌های تصویری"
+
+#: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
+msgctxt "IconChooser|"
+msgid "Choose icon..."
+msgstr "انتخاب آیکون..."
+
+#: lib/other/iconchooser.ui:20
+msgctxt "IconChooser|"
+msgid "From file"
+msgstr "از پرونده"
+
+#: lib/other/iconchooser.ui:29
+msgctxt "IconChooser|"
+msgid "Image (.png, .jpg, .jpeg, .gif)"
+msgstr "تصویرها (.png, .jpg, .jpeg, .gif)"
+
+#: lib/other/iconchooser.ui:42
+msgctxt "IconChooser|"
+msgid "Choose file..."
+msgstr "انتخاب پرونده..."
+
+#: lib/other/iconchooser.ui:52
+msgctxt "IconChooser|"
+msgid "From database"
+msgstr "از پایگاه‌داده"
+
+#: lib/other/iconchooser.ui:61
+msgctxt "IconChooser|"
+msgid "Site Url:"
+msgstr "نشانی تارنما:"
+
+#: lib/other/licenseviewer.cpp:30
+msgctxt "LicenseViewer|"
+msgid "License Viewer"
+msgstr "نمایش‌دهنده مجوز"
+
+#: lib/other/protocolhandlerdialog.ui:14
+msgctxt "ProtocolHandlerDialog|"
+msgid "Manage protocol handlers"
+msgstr ""
+
+#: lib/other/protocolhandlerdialog.ui:40
+msgctxt "ProtocolHandlerDialog|"
+msgid "Protocol"
+msgstr ""
+
+#: lib/other/protocolhandlerdialog.ui:45
+#, fuzzy
+#| msgctxt "UserAgentDialog|"
+#| msgid "Site"
+msgctxt "ProtocolHandlerDialog|"
+msgid "Site"
+msgstr "تارنما"
+
+#: lib/other/protocolhandlerdialog.ui:68
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "ProtocolHandlerDialog|"
+msgid "Remove"
+msgstr "حذف"
+
+#: lib/other/registerqappassociation.cpp:110
+msgctxt "RegisterQAppAssociation|"
+msgid "Warning!"
+msgstr "هشدار!"
+
+#: lib/other/registerqappassociation.cpp:111
+#, fuzzy
+#| msgctxt "RegisterQAppAssociation|"
+#| msgid ""
+#| "There are some problems. Please, reinstall QupZilla.\n"
+#| "Maybe relaunch with administrator right do a magic for you! ;)"
+msgctxt "RegisterQAppAssociation|"
+msgid ""
+"There are some problems. Please, reinstall Falkon.\n"
+"Maybe relaunch with administrator right do a magic for you! ;)"
+msgstr ""
+"اشکا‌ل‌هایی وجود دارد. لطفا کوپزیلا را مجدادا نصب کنید. ممکن است اجرای مجدد "
+"کوپزیلا با دسترسی مدیر برای‌تان جادو کند! ;)"
+
+#: lib/other/siteinfo.cpp:68
+msgctxt "SiteInfo|"
+msgid "<b>Connection is Encrypted.</b>"
+msgstr "<b>ارتباط رمزدار شده‌ است.</b>"
+
+#: lib/other/siteinfo.cpp:70
+msgctxt "SiteInfo|"
+msgid "<b>Connection Not Encrypted.</b>"
+msgstr "<b>ارتباط رمزدار شده‌ نیست.</b>"
+
+#: lib/other/siteinfo.cpp:175
+msgctxt "SiteInfo|"
+msgid "Copy Image Location"
+msgstr "رونگاشت مکان شکل"
+
+#: lib/other/siteinfo.cpp:176
+msgctxt "SiteInfo|"
+msgid "Copy Image Name"
+msgstr "رونگاشت نام شکل"
+
+#: lib/other/siteinfo.cpp:178
+msgctxt "SiteInfo|"
+msgid "Save Image to Disk"
+msgstr "رونوشت‌برداری شکل به دیسک"
+
+#: lib/other/siteinfo.cpp:190
+#, fuzzy
+#| msgctxt "SiteInfo|"
+#| msgid "Value"
+msgctxt "SiteInfo|"
+msgid "Copy Values"
+msgstr "مقدار"
+
+#: lib/other/siteinfo.cpp:191
+#, fuzzy
+#| msgctxt "WebView|"
+#| msgid "Copy image ad&dress"
+msgctxt "SiteInfo|"
+msgid "Copy Tags and Values"
+msgstr "رونگاشت &آدرس شکل"
+
+#: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
+msgctxt "SiteInfo|"
+msgid "Error!"
+msgstr "خطا!"
+
+#: lib/other/siteinfo.cpp:229
+msgctxt "SiteInfo|"
+msgid "This preview is not available!"
+msgstr "پیش‌نمایش در دسترس نیست!"
+
+#: lib/other/siteinfo.cpp:240
+msgctxt "SiteInfo|"
+msgid "Save image..."
+msgstr "رونوشت‌برداری شکل..."
+
+#: lib/other/siteinfo.cpp:248
+msgctxt "SiteInfo|"
+msgid "Cannot write to file!"
+msgstr "نمی‌تواند بر روی پرونده بنویسد!"
+
+#: lib/other/siteinfo.cpp:258
+msgctxt "SiteInfo|"
+msgid "Loading..."
+msgstr ""
+
+#: lib/other/siteinfo.cpp:271
+msgctxt "SiteInfo|"
+msgid "Preview not available"
+msgstr "پیش‌نمایش در دسترس نیست"
+
+#: lib/other/siteinfo.ui:14
+msgctxt "SiteInfo|"
+msgid "Site Info"
+msgstr "اطلاعات تارنما"
+
+#: lib/other/siteinfo.ui:47
+msgctxt "SiteInfo|"
+msgid "General"
+msgstr "عمومی"
+
+#: lib/other/siteinfo.ui:52
+msgctxt "SiteInfo|"
+msgid "Media"
+msgstr "رسانه"
+
+#: lib/other/siteinfo.ui:84
+msgctxt "SiteInfo|"
+msgid "Site address:"
+msgstr "آدرس تارنما:"
+
+#: lib/other/siteinfo.ui:113
+msgctxt "SiteInfo|"
+msgid "Encoding:"
+msgstr "رمزینه:"
+
+#: lib/other/siteinfo.ui:132
+msgctxt "SiteInfo|"
+msgid "Meta tags of site:"
+msgstr "متا برچسب‌های تارنما:"
+
+#: lib/other/siteinfo.ui:149
+msgctxt "SiteInfo|"
+msgid "Tag"
+msgstr "برچسب"
+
+#: lib/other/siteinfo.ui:154
+msgctxt "SiteInfo|"
+msgid "Value"
+msgstr "مقدار"
+
+#: lib/other/siteinfo.ui:168
+msgctxt "SiteInfo|"
+msgid "<b>Security information</b>"
+msgstr "<b>اطلاعات امنیتی</b>"
+
+#: lib/other/siteinfo.ui:241
+msgctxt "SiteInfo|"
+msgid "Image"
+msgstr "تصویرها"
+
+#: lib/other/siteinfo.ui:246
+msgctxt "SiteInfo|"
+msgid "Image address"
+msgstr "آدرس تصویر"
+
+#: lib/other/siteinfo.ui:271
+msgctxt "SiteInfo|"
+msgid "<b>Preview</b>"
+msgstr "<b>پیش‌نمایش</b>"
+
+#: lib/other/siteinfowidget.cpp:42
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "<b>Site %1<b/>"
+msgstr ""
+
+#: lib/other/siteinfowidget.cpp:45
+msgctxt "SiteInfoWidget|"
+msgid "Your connection to this site is <b>secured</b>."
+msgstr "ارتباط‌تان با این تارنما <b>امن</b> است."
+
+#: lib/other/siteinfowidget.cpp:49
+msgctxt "SiteInfoWidget|"
+msgid "Your connection to this site is <b>unsecured</b>."
+msgstr "ارتباط‌تان با این تارنما <b>نا امن</b> است."
+
+#: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "This is your <b>%1</b> visit of this site."
+msgstr "این بازدید <b>%1</b> شما از این تارنما است."
+
+#: lib/other/siteinfowidget.cpp:68
+msgctxt "SiteInfoWidget|"
+msgid "You have <b>never</b> visited this site before."
+msgstr "شما قبلا <b>هرگز</b> این تارنما را بازدید نکرده‌اید."
+
+#: lib/other/siteinfowidget.cpp:75
+msgctxt "SiteInfoWidget|"
+msgid "first"
+msgstr "اول"
+
+#: lib/other/siteinfowidget.cpp:78
+msgctxt "SiteInfoWidget|"
+msgid "second"
+msgstr "دوم"
+
+#: lib/other/siteinfowidget.cpp:81
+msgctxt "SiteInfoWidget|"
+msgid "third"
+msgstr "سوم"
+
+#: lib/other/siteinfowidget.cpp:106
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "Register as <b>%1</b> links handler"
+msgstr ""
+
+#: lib/other/siteinfowidget.cpp:107
+msgctxt "SiteInfoWidget|"
+msgid "Register"
+msgstr ""
+
+#: lib/other/siteinfowidget.ui:71
+msgctxt "SiteInfoWidget|"
+msgid "More..."
+msgstr "بیشتر..."
+
+#: lib/other/statusbar.cpp:248
+msgctxt "StatusBar|"
+msgid "Hide"
+msgstr ""
+
+#: lib/other/updater.cpp:151
+msgctxt "Updater|"
+msgid "Update available"
+msgstr "بروزرسانی در دسترس است"
+
+#: lib/other/updater.cpp:151
+#, fuzzy
+#| msgctxt "Updater|"
+#| msgid "New version of QupZilla is ready to download."
+msgctxt "Updater|"
+msgid "New version of Falkon is ready to download."
+msgstr "نسخه تازه کوپزیلا آماده برای دریافت است."
+
+#: lib/other/updater.cpp:160
+msgctxt "Updater|"
+msgid "Update"
+msgstr "بروزرسانی"
+
+#: lib/popupwindow/popupwebview.cpp:100
+msgctxt "PopupWebView|"
+msgid "Inspect Element"
+msgstr "بررسی عنصر"
+
+#: lib/popupwindow/popupwindow.cpp:83
+msgctxt "PopupWindow|"
+msgid "File"
+msgstr "پرونده"
+
+#: lib/popupwindow/popupwindow.cpp:84
+msgctxt "PopupWindow|"
+msgid "Send Link..."
+msgstr "فرستادن لینک..."
+
+#: lib/popupwindow/popupwindow.cpp:85
+msgctxt "PopupWindow|"
+msgid "&Print..."
+msgstr ""
+
+#: lib/popupwindow/popupwindow.cpp:87
+msgctxt "PopupWindow|"
+msgid "Close"
+msgstr "بستن"
+
+#: lib/popupwindow/popupwindow.cpp:90
+msgctxt "PopupWindow|"
+msgid "Edit"
+msgstr "ویرایش"
+
+#: lib/popupwindow/popupwindow.cpp:99
+msgctxt "PopupWindow|"
+msgid "Find"
+msgstr "یافتن"
+
+#: lib/popupwindow/popupwindow.cpp:102
+msgctxt "PopupWindow|"
+msgid "View"
+msgstr "نما"
+
+#: lib/popupwindow/popupwindow.cpp:103
+msgctxt "PopupWindow|"
+msgid "&Stop"
+msgstr "تو&قف"
+
+#: lib/popupwindow/popupwindow.cpp:105
+msgctxt "PopupWindow|"
+msgid "&Reload"
+msgstr "&تازه‌سازی"
+
+#: lib/popupwindow/popupwindow.cpp:108
+msgctxt "PopupWindow|"
+msgid "Zoom &In"
+msgstr "&بزرگ‌نمایی"
+
+#: lib/popupwindow/popupwindow.cpp:109
+msgctxt "PopupWindow|"
+msgid "Zoom &Out"
+msgstr "&کوچک‌نمایی"
+
+#: lib/popupwindow/popupwindow.cpp:110
+msgctxt "PopupWindow|"
+msgid "Reset"
+msgstr "بازنشاندن"
+
+#: lib/popupwindow/popupwindow.cpp:112
+msgctxt "PopupWindow|"
+msgid "&Page Source"
+msgstr "سورس &صفحه"
+
+#: lib/popupwindow/popupwindow.cpp:271
+#, qt-format
+msgctxt "PopupWindow|"
+msgid "%1 - Falkon"
+msgstr ""
+
+#: lib/preferences/acceptlanguage.cpp:99 lib/preferences/acceptlanguage.cpp:160
+#, qt-format
+msgctxt "AcceptLanguage|"
+msgid "Personal [%1]"
+msgstr "شخصی [%1]"
+
+#: lib/preferences/acceptlanguage.ui:14
+msgctxt "AcceptLanguage|"
+msgid "Preferred Languages"
+msgstr "زبان‌های ترجیحی"
+
+#: lib/preferences/acceptlanguage.ui:25
+msgctxt "AcceptLanguage|"
+msgid "Add..."
+msgstr "افزودن..."
+
+#: lib/preferences/acceptlanguage.ui:32
+msgctxt "AcceptLanguage|"
+msgid "Remove"
+msgstr "حذف"
+
+#: lib/preferences/acceptlanguage.ui:39
+msgctxt "AcceptLanguage|"
+msgid "Up"
+msgstr "بالا"
+
+#: lib/preferences/acceptlanguage.ui:46
+msgctxt "AcceptLanguage|"
+msgid "Down"
+msgstr "پایین"
+
+#: lib/preferences/addacceptlanguage.ui:14
+msgctxt "AddAcceptLanguage|"
+msgid "Add Language"
+msgstr "افزودن زبان"
+
+#: lib/preferences/addacceptlanguage.ui:20
+msgctxt "AddAcceptLanguage|"
+msgid "Choose preferred language for web sites"
+msgstr "انتخاب زبان ترجیحی برای تارنماها"
+
+#: lib/preferences/addacceptlanguage.ui:32
+msgctxt "AddAcceptLanguage|"
+msgid "Personal definition:"
+msgstr "تعریف‌های شخصی:"
+
+#: lib/preferences/autofillmanager.cpp:67
+msgctxt "AutoFillManager|"
+msgid "Import Passwords from File..."
+msgstr "درون‌ریزی رمزها از پرونده..."
+
+#: lib/preferences/autofillmanager.cpp:68
+msgctxt "AutoFillManager|"
+msgid "Export Passwords to File..."
+msgstr "برون‌ریزی رمزها به پرونده..."
+
+#: lib/preferences/autofillmanager.cpp:70
+msgctxt "AutoFillManager|"
+msgid "Search"
+msgstr "یافتن"
+
+#: lib/preferences/autofillmanager.cpp:82
+#: lib/preferences/autofillmanager.cpp:171
+#: lib/preferences/autofillmanager.cpp:179
+#: lib/preferences/autofillmanager.ui:140
+msgctxt "AutoFillManager|"
+msgid "Show Passwords"
+msgstr "نمایش رمز‌ها"
+
+#: lib/preferences/autofillmanager.cpp:130
+msgctxt "AutoFillManager|"
+msgid "Change backend..."
+msgstr "تعویض هسته مدیریت..."
+
+#: lib/preferences/autofillmanager.cpp:130
+msgctxt "AutoFillManager|"
+msgid "Change backend:"
+msgstr "تعویض هسته مدیریت:"
+
+#: lib/preferences/autofillmanager.cpp:179
+msgctxt "AutoFillManager|"
+msgid "Are you sure that you want to show all passwords?"
+msgstr "آیا از نمایش همه رمز‌ها اطمینان دارید؟"
+
+#: lib/preferences/autofillmanager.cpp:194
+msgctxt "AutoFillManager|"
+msgid "Hide Passwords"
+msgstr "مخفی کردن رمزها"
+
+#: lib/preferences/autofillmanager.cpp:232
+msgctxt "AutoFillManager|"
+msgid "Confirmation"
+msgstr "تایید"
+
+#: lib/preferences/autofillmanager.cpp:233
+msgctxt "AutoFillManager|"
+msgid "Are you sure you want to delete all passwords on your computer?"
+msgstr ""
+
+#: lib/preferences/autofillmanager.cpp:252
+msgctxt "AutoFillManager|"
+msgid "Edit password"
+msgstr "ویرایش رمز"
+
+#: lib/preferences/autofillmanager.cpp:252
+msgctxt "AutoFillManager|"
+msgid "Change password:"
+msgstr "تغییر رمز:"
+
+#: lib/preferences/autofillmanager.cpp:301
+#: lib/preferences/autofillmanager.cpp:312
+msgctxt "AutoFillManager|"
+msgid "Choose file..."
+msgstr "انتخاب پرونده..."
+
+#: lib/preferences/autofillmanager.cpp:326
+msgctxt "AutoFillManager|"
+msgid "Cannot read file!"
+msgstr "نمی‌تواند پرونده را بخواند!"
+
+#: lib/preferences/autofillmanager.cpp:335
+msgctxt "AutoFillManager|"
+msgid "Successfully imported"
+msgstr "درون‌ریزی با موفقیت به انجام رسید"
+
+#: lib/preferences/autofillmanager.cpp:335
+msgctxt "AutoFillManager|"
+msgid "Error while importing!"
+msgstr "خطا هنگام درون‌ریزی!"
+
+#: lib/preferences/autofillmanager.cpp:346
+msgctxt "AutoFillManager|"
+msgid "Cannot write to file!"
+msgstr "نمی‌تواند بر روی پرونده بنویسد!"
+
+#: lib/preferences/autofillmanager.cpp:355
+msgctxt "AutoFillManager|"
+msgid "Successfully exported"
+msgstr "برون‌ریزی با موفقیت به انجام رسید"
+
+#: lib/preferences/autofillmanager.cpp:372
+msgctxt "AutoFillManager|"
+msgid "Copy Username"
+msgstr ""
+
+#: lib/preferences/autofillmanager.cpp:373
+msgctxt "AutoFillManager|"
+msgid "Copy Password"
+msgstr ""
+
+#: lib/preferences/autofillmanager.cpp:375
+msgctxt "AutoFillManager|"
+msgid "Edit Password"
+msgstr ""
+
+#: lib/preferences/autofillmanager.ui:25
+msgctxt "AutoFillManager|"
+msgid "Passwords are stored in:"
+msgstr "رمزها ذخیره می‌شوند در:"
+
+#: lib/preferences/autofillmanager.ui:35
+msgctxt "AutoFillManager|"
+msgid "Change backend"
+msgstr "تعویض هسته مدیریت"
+
+#: lib/preferences/autofillmanager.ui:42
+msgctxt "AutoFillManager|"
+msgid "Backend options"
+msgstr "گزینه‌های هسته‌ مدیریت"
+
+#: lib/preferences/autofillmanager.ui:71
+msgctxt "AutoFillManager|"
+msgid "Passwords"
+msgstr "رمزها"
+
+#: lib/preferences/autofillmanager.ui:87 lib/preferences/autofillmanager.ui:201
+msgctxt "AutoFillManager|"
+msgid "Server"
+msgstr "خادم"
+
+#: lib/preferences/autofillmanager.ui:92
+msgctxt "AutoFillManager|"
+msgid "Username"
+msgstr "نام‌کاربری"
+
+#: lib/preferences/autofillmanager.ui:97
+msgctxt "AutoFillManager|"
+msgid "Password"
+msgstr "رمز"
+
+#: lib/preferences/autofillmanager.ui:113
+msgctxt "AutoFillManager|"
+msgid "Import and Export"
+msgstr ""
+
+#: lib/preferences/autofillmanager.ui:154
+msgctxt "AutoFillManager|"
+msgid "Edit"
+msgstr "ویرایش"
+
+#: lib/preferences/autofillmanager.ui:161
+#: lib/preferences/autofillmanager.ui:211
+msgctxt "AutoFillManager|"
+msgid "Remove"
+msgstr "حذف"
+
+#: lib/preferences/autofillmanager.ui:168
+#: lib/preferences/autofillmanager.ui:218
+msgctxt "AutoFillManager|"
+msgid "Remove All"
+msgstr "حذف همه"
+
+#: lib/preferences/autofillmanager.ui:191
+msgctxt "AutoFillManager|"
+msgid "Exceptions"
+msgstr "استثناها"
+
+#: lib/preferences/jsoptions.ui:14
+msgctxt "JsOptions|"
+msgid "JavaScript Options"
+msgstr "گزینه‌های اسکریپت‌های جاوا"
+
+#: lib/preferences/jsoptions.ui:20
+msgctxt "JsOptions|"
+msgid "Allow JavaScript to:"
+msgstr "اجازه داده شود به اسکریپت‌های جاوا برای:"
+
+#: lib/preferences/jsoptions.ui:29
+msgctxt "JsOptions|"
+msgid "Open popup windows"
+msgstr "باز کردن پنجره‌های popup"
+
+#: lib/preferences/jsoptions.ui:36
+msgctxt "JsOptions|"
+msgid "Activate windows"
+msgstr ""
+
+#: lib/preferences/jsoptions.ui:43
+msgctxt "JsOptions|"
+msgid "Access clipboard"
+msgstr "دسرسی به کلیپ‌بورد"
+
+#: lib/preferences/jsoptions.ui:50
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Access clipboard"
+msgctxt "JsOptions|"
+msgid "Paste from clipboard"
+msgstr "دسرسی به کلیپ‌بورد"
+
+#: lib/preferences/pluginslist.ui:17
+#, fuzzy
+#| msgctxt "AutoFillManager|"
+#| msgid "Username"
+msgctxt "PluginsList|"
+msgid "Enter name"
+msgstr "نام‌کاربری"
+
+#: lib/preferences/pluginslist.ui:51
+msgctxt "PluginsList|"
+msgid "Settings"
+msgstr "سامانش"
+
+#: lib/preferences/pluginslist.ui:61
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "PluginsList|"
+msgid "Remove"
+msgstr "حذف"
+
+#: lib/preferences/pluginslist.ui:81
+msgctxt "PluginsList|"
+msgid ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
+msgstr ""
+
+#: lib/preferences/pluginsmanager.cpp:198
+msgctxt "PluginsManager|"
+msgid "Error!"
+msgstr "خطا!"
+
+#: lib/preferences/pluginsmanager.cpp:198
+msgctxt "PluginsManager|"
+msgid "Cannot load extension!"
+msgstr "نمی‌تواند توسیع را بارگذاری کند!"
+
+#: lib/preferences/pluginsmanager.cpp:237
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Confirmation"
+msgctxt "PluginsManager|"
+msgid "Confirmation"
+msgstr "تایید"
+
+#: lib/preferences/pluginsmanager.cpp:238
+#, fuzzy, qt-format
+#| msgctxt "AutoFillManager|"
+#| msgid "Are you sure that you want to show all passwords?"
+msgctxt "PluginsManager|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "آیا از نمایش همه رمز‌ها اطمینان دارید؟"
+
+#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:602
+msgctxt "Preferences|"
+msgid "Default"
+msgstr "پیش‌فرض"
+
+#: lib/preferences/preferences.cpp:155
+msgctxt "Preferences|"
+msgid "Set as default"
+msgstr "تنظیم به عنوان پیش‌فرض"
+
+#: lib/preferences/preferences.cpp:545
+msgctxt "Preferences|"
+msgid "Choose executable location..."
+msgstr "انتخاب مکان پرونده‌اجرایی..."
+
+#: lib/preferences/preferences.cpp:588
+msgctxt "Preferences|"
+msgid "OSD Notification"
+msgstr "آگاه‌سازی بر صفحه‌نمایش"
+
+#: lib/preferences/preferences.cpp:589
+msgctxt "Preferences|"
+msgid "Drag it on the screen to place it where you want."
+msgstr "با موشواره آن را بکشید به مکانی که می‌خواهید."
+
+#: lib/preferences/preferences.cpp:638
+msgctxt "Preferences|"
+msgid "Choose download location..."
+msgstr "انتخاب مکان دانلود..."
+
+#: lib/preferences/preferences.cpp:652
+msgctxt "Preferences|"
+msgid "Choose stylesheet location..."
+msgstr "انتخاب مکان شیوه‌نامه..."
+
+#: lib/preferences/preferences.cpp:663
+msgctxt "Preferences|"
+msgid "Deleted"
+msgstr "حذف شد"
+
+#: lib/preferences/preferences.cpp:759
+msgctxt "Preferences|"
+msgid "Choose cache path..."
+msgstr "انتخاب مسیر نهان‌گاه..."
+
+#: lib/preferences/preferences.cpp:790
+msgctxt "Preferences|"
+msgid "New Profile"
+msgstr "نمایه تازه"
+
+#: lib/preferences/preferences.cpp:790
+msgctxt "Preferences|"
+msgid "Enter the new profile's name:"
+msgstr "نام نمایه تازه را وارد کنید:"
+
+#: lib/preferences/preferences.cpp:800 lib/preferences/preferences.cpp:805
+msgctxt "Preferences|"
+msgid "Error!"
+msgstr "خطا!"
+
+#: lib/preferences/preferences.cpp:800
+msgctxt "Preferences|"
+msgid "This profile already exists!"
+msgstr "این نمایه هم‌اکنون موجود است!"
+
+#: lib/preferences/preferences.cpp:805
+msgctxt "Preferences|"
+msgid "Cannot create profile directory!"
+msgstr "پوشه نمایه را نمی‌تواند ایجاد کند!"
+
+#: lib/preferences/preferences.cpp:816
+msgctxt "Preferences|"
+msgid "Confirmation"
+msgstr "تایید"
+
+#: lib/preferences/preferences.cpp:817
+#, qt-format
+msgctxt "Preferences|"
+msgid ""
+"Are you sure you want to permanently delete \"%1\" profile? This action "
+"cannot be undone!"
+msgstr ""
+
+#: lib/preferences/preferences.cpp:832 lib/preferences/preferences.ui:227
+msgctxt "Preferences|"
+msgid "Note: You cannot delete active profile."
+msgstr "توجه: نمایه فعال را نمی‌توانید حذف کنید."
+
+#: lib/preferences/preferences.cpp:1089
+msgctxt "Preferences|"
+msgid "Select Color"
+msgstr "انتخاب رنگ"
+
+#: lib/preferences/preferences.ui:14
+msgctxt "Preferences|"
+msgid "Preferences"
+msgstr "ترجیجات"
+
+#: lib/preferences/preferences.ui:60
+msgctxt "Preferences|"
+msgid "General"
+msgstr "عمومی"
+
+#: lib/preferences/preferences.ui:65
+msgctxt "Preferences|"
+msgid "Appearance"
+msgstr "ظاهر"
+
+#: lib/preferences/preferences.ui:70
+msgctxt "Preferences|"
+msgid "Tabs"
+msgstr "برگه‌ها"
+
+#: lib/preferences/preferences.ui:75
+msgctxt "Preferences|"
+msgid "Browsing"
+msgstr "مرور کردن"
+
+#: lib/preferences/preferences.ui:80
+msgctxt "Preferences|"
+msgid "Fonts"
+msgstr "قلم‌ها"
+
+#: lib/preferences/preferences.ui:85
+msgctxt "Preferences|"
+msgid "Keyboard Shortcuts"
+msgstr "میان‌برهای صفحه‌کلید"
+
+#: lib/preferences/preferences.ui:90
+msgctxt "Preferences|"
+msgid "Downloads"
+msgstr "دریافت‌ها"
+
+#: lib/preferences/preferences.ui:95
+msgctxt "Preferences|"
+msgid "Password Manager"
+msgstr "مدیر رمز"
+
+#: lib/preferences/preferences.ui:100
+msgctxt "Preferences|"
+msgid "Privacy"
+msgstr "حریم خصوصی"
+
+#: lib/preferences/preferences.ui:105
+msgctxt "Preferences|"
+msgid "Notifications"
+msgstr "آگاه‌سازی‌ها"
+
+#: lib/preferences/preferences.ui:110
+msgctxt "Preferences|"
+msgid "Extensions"
+msgstr "توسیع‌ها"
+
+#: lib/preferences/preferences.ui:115
+msgctxt "Preferences|"
+msgid "Spell Check"
+msgstr ""
+
+#: lib/preferences/preferences.ui:120
+msgctxt "Preferences|"
+msgid "Other"
+msgstr "دیگر"
+
+#: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
+msgctxt "Preferences|"
+msgid "Use current"
+msgstr "استفاده از صفحه فعلی"
+
+#: lib/preferences/preferences.ui:243
+msgctxt "Preferences|"
+msgid "Create New"
+msgstr "ایجاد تازه"
+
+#: lib/preferences/preferences.ui:259
+msgctxt "Preferences|"
+msgid "Delete"
+msgstr "حذف"
+
+#: lib/preferences/preferences.ui:285
+msgctxt "Preferences|"
+msgid "<b>Launching</b>"
+msgstr "<b>در حال آغازیدن</b>"
+
+#: lib/preferences/preferences.ui:295
+msgctxt "Preferences|"
+msgid "After launch: "
+msgstr "بعد از آغاز:"
+
+#: lib/preferences/preferences.ui:303
+msgctxt "Preferences|"
+msgid "Open blank page"
+msgstr "بازکردن صفحه خالی"
+
+#: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
+msgctxt "Preferences|"
+msgid "Open homepage"
+msgstr "بازکردن صفحه خانگی"
+
+#: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
+msgctxt "Preferences|"
+msgid "Open speed dial"
+msgstr "باز کردن شماره‌گیر سریع"
+
+#: lib/preferences/preferences.ui:318
+msgctxt "Preferences|"
+msgid "Restore session"
+msgstr "برگرداندن نشست"
+
+#: lib/preferences/preferences.ui:323
+msgctxt "Preferences|"
+msgid "Select session"
+msgstr ""
+
+#: lib/preferences/preferences.ui:331
+msgctxt "Preferences|"
+msgid "Homepage: "
+msgstr "صفحه خانگی: "
+
+#: lib/preferences/preferences.ui:352
+msgctxt "Preferences|"
+msgid "On new tab: "
+msgstr "برای برگه تازه: "
+
+#: lib/preferences/preferences.ui:360
+msgctxt "Preferences|"
+msgid "Open blank tab"
+msgstr "برگه را خالی بازکن"
+
+#: lib/preferences/preferences.ui:375
+msgctxt "Preferences|"
+msgid "Open other page..."
+msgstr "بازکردن صفحه‌ای دیگر..."
+
+#: lib/preferences/preferences.ui:383
+msgctxt "Preferences|"
+msgid "<b>Profiles</b>"
+msgstr "<b>نمایه‌ها</b>"
+
+#: lib/preferences/preferences.ui:390
+msgctxt "Preferences|"
+msgid "Startup profile:"
+msgstr "نمایه آغازین:"
+
+#: lib/preferences/preferences.ui:397
+msgctxt "Preferences|"
+msgid "Check for updates on start"
+msgstr "بررسی برای بروزرسانی هنگام آغاز"
+
+#: lib/preferences/preferences.ui:404
+msgctxt "Preferences|"
+msgid "Active profile:"
+msgstr "نمایه فعال:"
+
+#: lib/preferences/preferences.ui:418
+msgctxt "Preferences|"
+msgid "Don't load tabs until selected"
+msgstr "برگه‌ها را تا انتخاب نشوند بارگذاری نکن"
+
+#: lib/preferences/preferences.ui:440
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Check to see if QupZilla is the default browser on startup"
+msgctxt "Preferences|"
+msgid "Check to see if Falkon is the default browser on startup"
+msgstr "بررسی اینکه آیا کوپزیلا مرورگر پیش‌فرض است هنگام آغاز "
+
+#: lib/preferences/preferences.ui:450
+msgctxt "Preferences|"
+msgid "Check Now"
+msgstr "اکنون بررسی کن"
+
+#: lib/preferences/preferences.ui:480
+msgctxt "Preferences|"
+msgid "Themes"
+msgstr "فرهشت‌ها"
+
+#: lib/preferences/preferences.ui:502
+msgctxt "Preferences|"
+msgid "Advanced options"
+msgstr "گزینه‌های پیشرفته"
+
+#: lib/preferences/preferences.ui:510
+msgctxt "Preferences|"
+msgid "Show StatusBar on start"
+msgstr "نمایش نوار وضعیت هنگام آغاز"
+
+#: lib/preferences/preferences.ui:517
+msgctxt "Preferences|"
+msgid "Show Bookmarks ToolBar on start"
+msgstr "نمایش نوارابزار نشان‌ها هنگام آغاز"
+
+#: lib/preferences/preferences.ui:524
+msgctxt "Preferences|"
+msgid "Show Navigation ToolBar on start"
+msgstr "نمایش نوارابزار ناوبری هنگام آغاز"
+
+#: lib/preferences/preferences.ui:531
+msgctxt "Preferences|"
+msgid "Enable instant Bookmarks ToolBar"
+msgstr ""
+
+#: lib/preferences/preferences.ui:553
+msgctxt "Preferences|"
+msgid "<b>Browser Window</b>"
+msgstr "<b>پنجره مرورگر</b>"
+
+#: lib/preferences/preferences.ui:601
+msgctxt "Preferences|"
+msgid "Tabs behaviour"
+msgstr "رفتار برگه‌ها"
+
+#: lib/preferences/preferences.ui:607
+msgctxt "Preferences|"
+msgid "Hide tabs when there is only one tab"
+msgstr "پنهان‌کردن برگه‌ها وقتی فقط یک برگه موجود است"
+
+#: lib/preferences/preferences.ui:614
+msgctxt "Preferences|"
+msgid "Activate last tab when closing active tab"
+msgstr "فعال‌کردن آخرین برگه هنگام بستن برگه فعال"
+
+#: lib/preferences/preferences.ui:621
+msgctxt "Preferences|"
+msgid "Open new tabs after active tab"
+msgstr "برگه‌های تازه را بعد از برگه فعال باز کن"
+
+#: lib/preferences/preferences.ui:628
+msgctxt "Preferences|"
+msgid "Open new empty tabs after active tab"
+msgstr "بازکردن برگه خالی تازه بعد از برگه فعال"
+
+#: lib/preferences/preferences.ui:635
+msgctxt "Preferences|"
+msgid "Open popup windows in tabs"
+msgstr ""
+
+#: lib/preferences/preferences.ui:642
+msgctxt "Preferences|"
+msgid "Always switch between tabs with mouse wheel"
+msgstr "همواره برگه‌ها با چرخ موشواره تعویض شوند"
+
+#: lib/preferences/preferences.ui:649
+msgctxt "Preferences|"
+msgid "Automatically switch to newly opened tab"
+msgstr "به‌صورت خودکار به برگه تازه بازشده تعویض کن"
+
+#: lib/preferences/preferences.ui:656
+msgctxt "Preferences|"
+msgid "Don't close window upon closing last tab"
+msgstr ""
+
+#: lib/preferences/preferences.ui:663
+msgctxt "Preferences|"
+msgid "Ask when closing multiple tabs"
+msgstr "هنگام بستن چندین برگه بپرس"
+
+#: lib/preferences/preferences.ui:670
+msgctxt "Preferences|"
+msgid "Show closed tabs button"
+msgstr ""
+
+#: lib/preferences/preferences.ui:679
+msgctxt "Preferences|"
+msgid "Show close buttons on inactive tabs:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:687
+msgctxt "Preferences|"
+msgid "Automatic"
+msgstr ""
+
+#: lib/preferences/preferences.ui:692
+msgctxt "Preferences|"
+msgid "Always"
+msgstr ""
+
+#: lib/preferences/preferences.ui:697
+msgctxt "Preferences|"
+msgid "Never"
+msgstr ""
+
+#: lib/preferences/preferences.ui:737
+msgctxt "Preferences|"
+msgid "Address Bar behaviour"
+msgstr "رفتار نوار آدرس"
+
+#: lib/preferences/preferences.ui:745
+msgctxt "Preferences|"
+msgid "Suggest when typing into address bar:"
+msgstr "هنگام نوشتن در نوارآدرس پیشنهاد کن از:"
+
+#: lib/preferences/preferences.ui:759
+msgctxt "Preferences|"
+msgid "History and Bookmarks"
+msgstr "پیشینه و نشان‌ها"
+
+#: lib/preferences/preferences.ui:764
+msgctxt "Preferences|"
+msgid "History"
+msgstr "پیشینه"
+
+#: lib/preferences/preferences.ui:769
+msgctxt "Preferences|"
+msgid "Bookmarks"
+msgstr "نشان‌ها"
+
+#: lib/preferences/preferences.ui:774
+msgctxt "Preferences|"
+msgid "Nothing"
+msgstr "هیچی"
+
+#: lib/preferences/preferences.ui:800
+msgctxt "Preferences|"
+msgid "Enable inline suggestions"
+msgstr "فعال‌کردن پیشنهاد برخط"
+
+#: lib/preferences/preferences.ui:807
+msgctxt "Preferences|"
+msgid ""
+"Press \"Shift\" to not switch the tab but load the url in the current tab"
+msgstr ""
+"برای بارگذاری آدرس در برگه جاری در عوض تعویض برگه کلید «Shift» را بفشارید"
+
+#: lib/preferences/preferences.ui:810
+msgctxt "Preferences|"
+msgid "Propose to switch tab if completed url is already loaded"
+msgstr "اگر آدرس تکمیل‌شده هم‌اکنون بارگذاری شده تعویض برگه را پیشنهاد کن"
+
+#: lib/preferences/preferences.ui:817
+msgctxt "Preferences|"
+msgid "Always show go icon"
+msgstr "همیشه آیکون go را نمایش بده"
+
+#: lib/preferences/preferences.ui:824
+msgctxt "Preferences|"
+msgid "Select all text by double clicking in address bar"
+msgstr "انتخاب همه متن با جفت‌کلیک در نوارآدرس"
+
+#: lib/preferences/preferences.ui:831
+msgctxt "Preferences|"
+msgid "Select all text by clicking in address bar"
+msgstr "انتخاب همه متن با کلیک در نوارآدرس"
+
+#: lib/preferences/preferences.ui:838
+msgctxt "Preferences|"
+msgid "Enable automatic searching from the address bar"
+msgstr ""
+
+#: lib/preferences/preferences.ui:845
+msgctxt "Preferences|"
+msgid "Search with Default Engine"
+msgstr "یافتن با موتور یابنده پیش‌فرض"
+
+#: lib/preferences/preferences.ui:852
+msgctxt "Preferences|"
+msgid "Show search suggestions"
+msgstr ""
+
+#: lib/preferences/preferences.ui:875
+msgctxt "Preferences|"
+msgid "Show loading progress in address bar"
+msgstr "نمایش نوار پیشرفت بارگذاری در نوار آدرس"
+
+#: lib/preferences/preferences.ui:908
+msgctxt "Preferences|"
+msgid "Fill"
+msgstr "پر کردن"
+
+#: lib/preferences/preferences.ui:913
+msgctxt "Preferences|"
+msgid "Bottom"
+msgstr "پایین"
+
+#: lib/preferences/preferences.ui:918
+msgctxt "Preferences|"
+msgid "Top"
+msgstr "بالا"
+
+#: lib/preferences/preferences.ui:926
+msgctxt "Preferences|"
+msgid "Custom color:"
+msgstr "رنگ سفارشی:"
+
+#: lib/preferences/preferences.ui:942
+msgctxt "Preferences|"
+msgid "Select color"
+msgstr "انتخاب رنگ"
+
+#: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1258
+#: lib/preferences/preferences.ui:1792 lib/preferences/preferences.ui:1889
+#: lib/preferences/preferences.ui:2459
+msgctxt "Preferences|"
+msgid "..."
+msgstr "..."
+
+#: lib/preferences/preferences.ui:952
+msgctxt "Preferences|"
+msgid "Reset"
+msgstr "بازنشاندن"
+
+#: lib/preferences/preferences.ui:1003
+msgctxt "Preferences|"
+msgid "Web Configuration"
+msgstr "پیکربندی وب"
+
+#: lib/preferences/preferences.ui:1011
+msgctxt "Preferences|"
+msgid "Enable Pepper plugin API (PPAPI)"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1018
+msgctxt "Preferences|"
+msgid "Use built-in PDF viewer (requires PPAPI)"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1025
+msgctxt "Preferences|"
+msgid "Allow JavaScript"
+msgstr "پذیرفتن اسکریپت‌های جاوا"
+
+#: lib/preferences/preferences.ui:1032
+msgctxt "Preferences|"
+msgid "Include links in focus chain"
+msgstr "قراردادن لینک‌ها در زنجیره فوکوس"
+
+#. try to detect possible XSS attacks when executing javascript
+#: lib/preferences/preferences.ui:1039
+msgctxt "Preferences|"
+msgid "Enable XSS Auditing"
+msgstr "فعال‌کردن ممیزی XSS"
+
+#. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
+#: lib/preferences/preferences.ui:1046
+msgctxt "Preferences|"
+msgid "Print element background"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1053
+msgctxt "Preferences|"
+msgid "Animated scrolling"
+msgstr "پیمایش متحرک شده"
+
+#: lib/preferences/preferences.ui:1060
+msgctxt "Preferences|"
+msgid "Enable spatial navigation"
+msgstr "فعال‌کردن ناوبری فاصله‌ای"
+
+#: lib/preferences/preferences.ui:1067
+msgctxt "Preferences|"
+msgid "Use native scrollbars"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1074
+msgctxt "Preferences|"
+msgid "Disable automatic playing of videos"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1081
+msgctxt "Preferences|"
+msgid "Prevent WebRTC from leaking local IP address"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1088
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Enable XSS Auditing"
+msgctxt "Preferences|"
+msgid "Enable DNS prefetching"
+msgstr "فعال‌کردن ممیزی XSS"
+
+#: lib/preferences/preferences.ui:1095
+msgctxt "Preferences|"
+msgid "Enable screen capture"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1112
+msgctxt "Preferences|"
+msgid "Mouse wheel scrolls"
+msgstr "پیمایش چرخ موشواره"
+
+#: lib/preferences/preferences.ui:1132
+msgctxt "Preferences|"
+msgid "lines on page"
+msgstr "خط بر صفحه"
+
+#: lib/preferences/preferences.ui:1143
+msgctxt "Preferences|"
+msgid "Default zoom on pages: "
+msgstr "بزرگ‌نمایی پیش‌فرض برروی صفحه‌ها: "
+
+#: lib/preferences/preferences.ui:1182
+msgctxt "Preferences|"
+msgid "Local Storage"
+msgstr "انباره محلی"
+
+#: lib/preferences/preferences.ui:1190
+msgctxt "Preferences|"
+msgid "Allow storing network cache on disk"
+msgstr "اجازه برای ذخیره نهان‌گاه شبکه روی دیسک"
+
+#: lib/preferences/preferences.ui:1213
+msgctxt "Preferences|"
+msgid "Delete cache on close"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1220
+msgctxt "Preferences|"
+msgid "Maximum:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1227
+msgctxt "Preferences|"
+msgid " MB"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1243
+msgctxt "Preferences|"
+msgid "Store cache in:"
+msgstr "رونوشت نهان‌گاه در:"
+
+#: lib/preferences/preferences.ui:1271
+msgctxt "Preferences|"
+msgid "Allow saving history"
+msgstr "اجازه برای رونوشت‌برداری پیشینه"
+
+#: lib/preferences/preferences.ui:1278
+msgctxt "Preferences|"
+msgid "Delete history on close"
+msgstr "حذف پیشینه هنگام بستن"
+
+#: lib/preferences/preferences.ui:1301
+msgctxt "Preferences|"
+msgid "Allow local storage of HTML5 web content"
+msgstr "اجازه برای انباره محلی محتویات وب HTML5"
+
+#: lib/preferences/preferences.ui:1308
+msgctxt "Preferences|"
+msgid "Delete locally stored HTML5 web content on close"
+msgstr "حذف  محتویات وب دخیره‌شده HTML5 هنگام خروج"
+
+#: lib/preferences/preferences.ui:1334
+msgctxt "Preferences|"
+msgid "Delete now"
+msgstr "اکنون حذف شود"
+
+#: lib/preferences/preferences.ui:1373
+msgctxt "Preferences|"
+msgid "Proxy Configuration"
+msgstr "پیکربندی پروکسی"
+
+#: lib/preferences/preferences.ui:1392
+msgctxt "Preferences|"
+msgid "System proxy configuration"
+msgstr "پیکربندی پروکسی سیستم"
+
+#: lib/preferences/preferences.ui:1415
+msgctxt "Preferences|"
+msgid "Manual configuration"
+msgstr "پیکربندی دستی"
+
+#: lib/preferences/preferences.ui:1425
+msgctxt "Preferences|"
+msgid "HTTP"
+msgstr "HTTP"
+
+#: lib/preferences/preferences.ui:1430
+msgctxt "Preferences|"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+#: lib/preferences/preferences.ui:1441
+msgctxt "Preferences|"
+msgid "Port:"
+msgstr "دروازه:"
+
+#: lib/preferences/preferences.ui:1462
+msgctxt "Preferences|"
+msgid "Username:"
+msgstr "نام‌کاربری:"
+
+#: lib/preferences/preferences.ui:1472
+msgctxt "Preferences|"
+msgid "Password:"
+msgstr "رمز:"
+
+#: lib/preferences/preferences.ui:1501
+msgctxt "Preferences|"
+msgid "No proxy"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1516
+msgctxt "Preferences|"
+msgid "<b>Font Families</b>"
+msgstr "<b>خانواده قلم</b>"
+
+#: lib/preferences/preferences.ui:1529
+msgctxt "Preferences|"
+msgid "Standard"
+msgstr "استاندارد"
+
+#: lib/preferences/preferences.ui:1536
+msgctxt "Preferences|"
+msgid "Fixed"
+msgstr "ثابت"
+
+#: lib/preferences/preferences.ui:1546
+msgctxt "Preferences|"
+msgid "Serif"
+msgstr "سریف"
+
+#: lib/preferences/preferences.ui:1556
+msgctxt "Preferences|"
+msgid "Sans Serif"
+msgstr "سان سریف"
+
+#: lib/preferences/preferences.ui:1566
+msgctxt "Preferences|"
+msgid "Cursive"
+msgstr "خط شکسته"
+
+#: lib/preferences/preferences.ui:1618
+msgctxt "Preferences|"
+msgid "Fantasy"
+msgstr "فانتزی"
+
+#: lib/preferences/preferences.ui:1625
+msgctxt "Preferences|"
+msgid "<b>Font Sizes</b>"
+msgstr "<b>اندازه قلم</b>"
+
+#: lib/preferences/preferences.ui:1634
+msgctxt "Preferences|"
+msgid "Fixed Font Size"
+msgstr "اندازه قلم ثابت"
+
+#: lib/preferences/preferences.ui:1641
+msgctxt "Preferences|"
+msgid "Default Font Size"
+msgstr "اندازه قلم پیش‌فرض"
+
+#: lib/preferences/preferences.ui:1668
+msgctxt "Preferences|"
+msgid "Minimum Font Size"
+msgstr "اندازه کمینه قلم"
+
+#: lib/preferences/preferences.ui:1675
+msgctxt "Preferences|"
+msgid "Minimum Logical Font Size"
+msgstr "اندازه کمینه منطقی قلم"
+
+#: lib/preferences/preferences.ui:1708
+msgctxt "Preferences|"
+msgid "<b>Shortcuts</b>"
+msgstr "<b>میان‌برها</b>"
+
+#: lib/preferences/preferences.ui:1715
+msgctxt "Preferences|"
+msgid "Switch to tabs with Alt + number of tab"
+msgstr "تعویض به برگه‌ها با Alt + ردیف برگه"
+
+#: lib/preferences/preferences.ui:1722
+msgctxt "Preferences|"
+msgid "Load speed dials with Ctrl + number of speed dial"
+msgstr "بارگذاری شمارگیرهای سریع با زدن Ctrl + ردیف شمارگیر سریع"
+
+#: lib/preferences/preferences.ui:1729
+msgctxt "Preferences|"
+msgid ""
+"Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
+"><b>/</b> - search on page"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1732
+msgctxt "Preferences|"
+msgid "Use single key shortcuts"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1739
+msgctxt "Preferences|"
+msgid ""
+"If unchecked, prevents accidental exit from the application if the Ctrl-W "
+"shortcut was intended."
+msgstr ""
+
+#: lib/preferences/preferences.ui:1742
+msgctxt "Preferences|"
+msgid "Close application with Ctrl-Q"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1766
+msgctxt "Preferences|"
+msgid "<b>Download Location</b>"
+msgstr "<b>مکان دریافت</b>"
+
+#: lib/preferences/preferences.ui:1773
+msgctxt "Preferences|"
+msgid "Ask everytime for download location"
+msgstr "هربار برای مکان دریافت سوال کن"
+
+#: lib/preferences/preferences.ui:1780
+msgctxt "Preferences|"
+msgid "Use defined location: "
+msgstr "استفاده از مکان تعریف شده: "
+
+#: lib/preferences/preferences.ui:1830
+msgctxt "Preferences|"
+msgid "<b>Download Options</b>"
+msgstr "<b>گزینه‌های دریافت</b>"
+
+#: lib/preferences/preferences.ui:1837
+msgctxt "Preferences|"
+msgid "Close download manager when downloading finishes"
+msgstr "مدیر دریافت را هنگام پایان‌یافتن دریافت‌ها ببند"
+
+#: lib/preferences/preferences.ui:1844
+msgctxt "Preferences|"
+msgid "<b>External download manager</b>"
+msgstr "<b>مدیر دریافت بیرونی</b>"
+
+#: lib/preferences/preferences.ui:1851
+msgctxt "Preferences|"
+msgid "Use external download manager"
+msgstr "مدیر دریافت بیرونی را به‌کار ببر"
+
+#: lib/preferences/preferences.ui:1863
+msgctxt "Preferences|"
+msgid "Executable:"
+msgstr "نرم‌افزار اجرایی:"
+
+#: lib/preferences/preferences.ui:1870
+msgctxt "Preferences|"
+msgid "Arguments:"
+msgstr "نشانوندها:"
+
+#: lib/preferences/preferences.ui:1877
+msgctxt "Preferences|"
+msgid "Leave blank if unsure"
+msgstr "اگر اطمینان ندارید، خالی بگذارید "
+
+#: lib/preferences/preferences.ui:1898
+msgctxt "Preferences|"
+msgid "<b>%d</b> will be replaced with URL to be downloaded"
+msgstr "آدرسی که قرار است دریافت شود به جای <b>%d</b> جانشین خواهد شد"
+
+#: lib/preferences/preferences.ui:1924
+msgctxt "Preferences|"
+msgid "<b>AutoFill options</b>"
+msgstr "<b>گزینه‌های پرکن‌خودکار</b>"
+
+#: lib/preferences/preferences.ui:1931
+msgctxt "Preferences|"
+msgid "Allow saving passwords from sites"
+msgstr "اجازه برای رونوشت‌برداری رمزها از تارنماها"
+
+#: lib/preferences/preferences.ui:1982
+msgctxt "Preferences|"
+msgid "Automatically complete passwords on sites"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1993
+msgctxt "Preferences|"
+msgid "<b>Cookies</b>"
+msgstr "<b>کوکی‌ها</b>"
+
+#: lib/preferences/preferences.ui:2000
+msgctxt "Preferences|"
+msgid "<b>Other</b>"
+msgstr "<b>دیگر</b>"
+
+#: lib/preferences/preferences.ui:2026
+msgctxt "Preferences|"
+msgid "JavaScript options"
+msgstr "گزینه‌های اسکریپت جاوا"
+
+#: lib/preferences/preferences.ui:2036
+msgctxt "Preferences|"
+msgid "<b>JavaScript</b>"
+msgstr "<b>اسکریپت جاوا</b>"
+
+#: lib/preferences/preferences.ui:2049
+msgctxt "Preferences|"
+msgid "Cookies Manager"
+msgstr "مدیر کوکی‌ها"
+
+#: lib/preferences/preferences.ui:2059
+msgctxt "Preferences|"
+msgid "Manage JavaScript privacy options"
+msgstr "مدیریت گزینه‌های حریم خصوصی اسکریپت‌های جاوا"
+
+#: lib/preferences/preferences.ui:2082
+msgctxt "Preferences|"
+msgid "Manage HTML5 permissions"
+msgstr "مدیریت مجوزهای HTML5"
+
+#: lib/preferences/preferences.ui:2089
+msgctxt "Preferences|"
+msgid "Manage Cookies"
+msgstr "مدیریت کوکی‌ها"
+
+#: lib/preferences/preferences.ui:2109
+msgctxt "Preferences|"
+msgid "<b>HTML5 Permissions</b>"
+msgstr "<b>مجوزهای HTML5</b>"
+
+#: lib/preferences/preferences.ui:2122
+msgctxt "Preferences|"
+msgid "HTML5 Permissions"
+msgstr "مجوزهای HTML5"
+
+#: lib/preferences/preferences.ui:2129
+msgctxt "Preferences|"
+msgid "Send Do Not Track header to servers"
+msgstr "پیام پیگیری نکردن سربرگ را به خادم‌ها بفرست"
+
+#: lib/preferences/preferences.ui:2155
+msgctxt "Preferences|"
+msgid "Expiration timeout:"
+msgstr "سپری‌شدن زمان انقضاء: "
+
+#: lib/preferences/preferences.ui:2168
+msgctxt "Preferences|"
+msgid " seconds"
+msgstr "ثانیه"
+
+#: lib/preferences/preferences.ui:2190
+msgctxt "Preferences|"
+msgid "<b>Notifications</b>"
+msgstr "<b>آگاه‌سازی‌ها</b>"
+
+#: lib/preferences/preferences.ui:2213
+msgctxt "Preferences|"
+msgid "Use Native System Notifications (Linux only)"
+msgstr "آگاه‌سازی‌های سیستمی را به‌کار ببر (فقط لینوکس)"
+
+#: lib/preferences/preferences.ui:2220
+msgctxt "Preferences|"
+msgid "Do not use Notifications"
+msgstr "آگاه‌سازی‌ها را به‌کار نبر"
+
+#: lib/preferences/preferences.ui:2243
+msgctxt "Preferences|"
+msgid ""
+"<b>Note: </b>You can change position of OSD Notification by dragging it on "
+"the screen."
+msgstr ""
+"<b>توجه: </b>می‌توانید محل آگاه‌سازی بر صفحه‌نمایش را با کشیدن با موشواره روی "
+"صفحه نمایش تغییر دهید."
+
+#: lib/preferences/preferences.ui:2269
+msgctxt "Preferences|"
+msgid "Use OSD Notifications"
+msgstr "آگاه‌سازی‌های بر صفحه‌نمایش را به‌کار ببر"
+
+#: lib/preferences/preferences.ui:2276
+msgctxt "Preferences|"
+msgid "Preview"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2341
+msgctxt "Preferences|"
+msgid ""
+"For more information about Spell Check, please see <a href=\"https://"
+"userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
+msgstr ""
+
+#: lib/preferences/preferences.ui:2383
+msgctxt "Preferences|"
+msgid "<b>Spell Check options</b>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2390
+msgctxt "Preferences|"
+msgid "Enable Spell Check"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2397
+msgctxt "Preferences|"
+msgid "<b>Dictionary directories</b>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2448
+msgctxt "Preferences|"
+msgid "No languages found"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2466
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2473
+msgctxt "Preferences|"
+msgid "<b>User Style Sheet</b>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2498
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "زبان‌ها"
+
+#: lib/preferences/preferences.ui:2520
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>تغییر هویت مرورگر</b>"
+
+#: lib/preferences/preferences.ui:2545
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Cookies Manager"
+msgctxt "Preferences|"
+msgid "Protocol Handlers Manager"
+msgstr "مدیر کوکی‌ها"
+
+#: lib/preferences/preferences.ui:2585
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2633
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr ""
+
+#: lib/preferences/preferences.ui:2643
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>زبان ترجیحی برای تارنماها</b>"
+
+#: lib/preferences/preferences.ui:2668
+msgctxt "Preferences|"
+msgid "User Agent Manager"
+msgstr "مدیر پیشکار کاربر"
+
+#: lib/preferences/preferences.ui:2690
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
+msgstr ""
+
+#: lib/preferences/thememanager.cpp:100
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Confirmation"
+msgctxt "ThemeManager|"
+msgid "Confirmation"
+msgstr "تایید"
+
+#: lib/preferences/thememanager.cpp:101
+#, fuzzy, qt-format
+#| msgctxt "AutoFillManager|"
+#| msgid "Are you sure that you want to show all passwords?"
+msgctxt "ThemeManager|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "آیا از نمایش همه رمز‌ها اطمینان دارید؟"
+
+#: lib/preferences/thememanager.ui:51
+msgctxt "ThemeManager|"
+msgid "<b>Name:</b>"
+msgstr "<b>نام:</b>"
+
+#: lib/preferences/thememanager.ui:61
+msgctxt "ThemeManager|"
+msgid "<b>Author:</b>"
+msgstr "<b>نویسنده:</b>"
+
+#: lib/preferences/thememanager.ui:84
+msgctxt "ThemeManager|"
+msgid "<b>Description:</b>"
+msgstr "<b>شرح:</b>"
+
+#: lib/preferences/thememanager.ui:128
+msgctxt "ThemeManager|"
+msgid "License"
+msgstr "مجوز"
+
+#: lib/preferences/thememanager.ui:155
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "ThemeManager|"
+msgid "Remove"
+msgstr "حذف"
+
+#: lib/preferences/thememanager.ui:175
+msgctxt "ThemeManager|"
+msgid ""
+"<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
+msgstr ""
+
+#: lib/preferences/useragentdialog.cpp:99
+msgctxt "UserAgentDialog|"
+msgid "Add new site"
+msgstr "افزودن تارنمای تازه"
+
+#: lib/preferences/useragentdialog.cpp:137
+msgctxt "UserAgentDialog|"
+msgid "Edit site"
+msgstr "ویرایش تارنما"
+
+#: lib/preferences/useragentdialog.cpp:216
+msgctxt "UserAgentDialog|"
+msgid "Site domain: "
+msgstr "نام دامنه تارنما: "
+
+#: lib/preferences/useragentdialog.cpp:217
+msgctxt "UserAgentDialog|"
+msgid "User Agent: "
+msgstr "پیشکار کاربر: "
+
+#: lib/preferences/useragentdialog.ui:14
+msgctxt "UserAgentDialog|"
+msgid "User Agent Manager"
+msgstr "مدیر پیشکار کاربر"
+
+#: lib/preferences/useragentdialog.ui:20
+msgctxt "UserAgentDialog|"
+msgid "Change global User Agent"
+msgstr "تغییر پیشکار کاربر سراسری"
+
+#: lib/preferences/useragentdialog.ui:48
+msgctxt "UserAgentDialog|"
+msgid "Use different User Agents for specified sites"
+msgstr "استفاده از پیشکارهای کاربر متفاوت برای تارنماهای مشخص شده"
+
+#: lib/preferences/useragentdialog.ui:92
+msgctxt "UserAgentDialog|"
+msgid "Site"
+msgstr "تارنما"
+
+#: lib/preferences/useragentdialog.ui:97
+msgctxt "UserAgentDialog|"
+msgid "User Agent"
+msgstr "پیشکار کاربر"
+
+#: lib/preferences/useragentdialog.ui:107
+msgctxt "UserAgentDialog|"
+msgid "Add"
+msgstr "افزودن"
+
+#: lib/preferences/useragentdialog.ui:114
+msgctxt "UserAgentDialog|"
+msgid "Remove"
+msgstr "حذف"
+
+#: lib/preferences/useragentdialog.ui:134
+msgctxt "UserAgentDialog|"
+msgid "Edit"
+msgstr "ویرایش"
+
+#: lib/session/sessionmanager.cpp:126
+msgctxt "SessionManager|"
+msgid "_cloned"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:126
+msgctxt "SessionManager|"
+msgid "_renamed"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:127
+msgctxt "SessionManager|"
+msgid "Clone Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:127
+msgctxt "SessionManager|"
+msgid "Rename Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:128
+msgctxt "SessionManager|"
+msgid "Please enter a new name:"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:143
+#: lib/session/sessionmanager.cpp:148 lib/session/sessionmanager.cpp:170
+#: lib/session/sessionmanager.cpp:218
+msgctxt "SessionManager|"
+msgid "Error!"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:170
+#: lib/session/sessionmanager.cpp:218
+#, qt-format
+msgctxt "SessionManager|"
+msgid "The session file \"%1\" exists. Please enter another name."
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:143
+msgctxt "SessionManager|"
+msgid "An error occurred when cloning session file."
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:148
+msgctxt "SessionManager|"
+msgid "An error occurred when renaming session file."
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:161
+msgctxt "SessionManager|"
+msgid "Save Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:162
+msgctxt "SessionManager|"
+msgid "Please enter a name to save session:"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:163
+#, qt-format
+msgctxt "SessionManager|"
+msgid "Saved Session (%1)"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:180
+msgctxt "SessionManager|"
+msgid "Restore Backup"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:180
+msgctxt "SessionManager|"
+msgid "Are you sure you want to replace current session?"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:199
+msgctxt "SessionManager|"
+msgid "Delete Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:199
+#, qt-format
+msgctxt "SessionManager|"
+msgid "Are you sure you want to delete session '%1'?"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:209
+msgctxt "SessionManager|"
+msgid "New Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:210
+msgctxt "SessionManager|"
+msgid "Please enter a name to create new session:"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:211
+#, qt-format
+msgctxt "SessionManager|"
+msgid "New Session (%1)"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:243
+msgctxt "SessionManager|"
+msgid "Backup 1"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:250
+msgctxt "SessionManager|"
+msgid "Backup 2"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:290
+msgctxt "SessionManager|"
+msgid "Default Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:393
+msgctxt "SessionManager|"
+msgid "Please select the startup session:"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:412
+#, qt-format
+msgctxt "SessionManager|"
+msgid "%1 (last session)"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.cpp:140
+msgctxt "SessionManagerDialog|"
+msgid "Restore"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.cpp:140
+msgctxt "SessionManagerDialog|"
+msgid "Switch To"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:14
+msgctxt "SessionManagerDialog|"
+msgid "Session Manager"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:24
+msgctxt "SessionManagerDialog|"
+msgid "Session"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:29
+msgctxt "SessionManagerDialog|"
+msgid "Last Modified"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:39
+msgctxt "SessionManagerDialog|"
+msgid "New"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:46
+msgctxt "SessionManagerDialog|"
+msgid "Rename"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:53
+msgctxt "SessionManagerDialog|"
+msgid "Clone"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:60
+msgctxt "SessionManagerDialog|"
+msgid "Delete"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:67
+msgctxt "SessionManagerDialog|"
+msgid "Switch to"
+msgstr ""
+
+#: lib/sidebar/bookmarkssidebar.cpp:103
+msgctxt "BookmarksSidebar|"
+msgid "Open in new tab"
+msgstr ""
+
+#: lib/sidebar/bookmarkssidebar.cpp:104
+msgctxt "BookmarksSidebar|"
+msgid "Open in new window"
+msgstr ""
+
+#: lib/sidebar/bookmarkssidebar.cpp:105
+msgctxt "BookmarksSidebar|"
+msgid "Open in new private window"
+msgstr ""
+
+#: lib/sidebar/bookmarkssidebar.cpp:108
+msgctxt "BookmarksSidebar|"
+msgid "Delete"
+msgstr ""
+
+#: lib/sidebar/bookmarkssidebar.ui:41
+msgctxt "BookmarksSideBar|"
+msgid "Search..."
+msgstr "یافتن..."
+
+#: lib/sidebar/historysidebar.cpp:85
+msgctxt "HistorySideBar|"
+msgid "Open in new tab"
+msgstr ""
+
+#: lib/sidebar/historysidebar.cpp:86
+msgctxt "HistorySideBar|"
+msgid "Open in new window"
+msgstr ""
+
+#: lib/sidebar/historysidebar.cpp:87
+msgctxt "HistorySideBar|"
+msgid "Open in new private window"
+msgstr ""
+
+#: lib/sidebar/historysidebar.cpp:90
+msgctxt "HistorySideBar|"
+msgid "Delete"
+msgstr ""
+
+#: lib/sidebar/historysidebar.ui:32
+msgctxt "HistorySideBar|"
+msgid "Search..."
+msgstr "یافتن..."
+
+#: lib/sidebar/sidebar.cpp:65 lib/sidebar/sidebar.cpp:107
+msgctxt "SideBar|"
+msgid "Bookmarks"
+msgstr "نشان‌ها"
+
+#: lib/sidebar/sidebar.cpp:72 lib/sidebar/sidebar.cpp:114
+msgctxt "SideBar|"
+msgid "History"
+msgstr "پیشینه"
+
+#: lib/tabwidget/tabbar.cpp:111
+msgctxt "BrowserWindow|"
+msgid "Close Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:63
+msgctxt "TabBar|"
+msgid "Don't ask again"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:80 lib/tabwidget/tabcontextmenu.cpp:91
+#: lib/tabwidget/tabcontextmenu.cpp:102
+msgctxt "TabContextMenu|"
+msgid "Close Tabs"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:80
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close other tabs?"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:88
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the right?"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:89
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the bottom?"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:99
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the left?"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:100
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the top?"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:117
+msgctxt "TabContextMenu|"
+msgid "&Stop Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:120
+msgctxt "TabContextMenu|"
+msgid "&Reload Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:123
+msgctxt "TabContextMenu|"
+msgid "&Duplicate Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:126
+msgctxt "TabContextMenu|"
+msgid "D&etach Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:129
+msgctxt "TabContextMenu|"
+msgid "Un&pin Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:129
+msgctxt "TabContextMenu|"
+msgid "&Pin Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:130
+msgctxt "TabContextMenu|"
+msgid "Un&mute Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:130
+msgctxt "TabContextMenu|"
+msgid "&Mute Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:133
+msgctxt "TabContextMenu|"
+msgid "Load Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:135
+msgctxt "TabContextMenu|"
+msgid "Unload Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:139
+msgctxt "TabContextMenu|"
+msgid "Re&load All Tabs"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:140 lib/tabwidget/tabcontextmenu.cpp:156
+msgctxt "TabContextMenu|"
+msgid "Bookmark &All Tabs"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:144
+msgctxt "TabContextMenu|"
+msgid "Close Ot&her Tabs"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:145
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Right"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:145
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Bottom"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:146
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Left"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:146
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Top"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:151
+msgctxt "TabContextMenu|"
+msgid "Cl&ose Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:153
+msgctxt "TabContextMenu|"
+msgid "&New tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:155
+msgctxt "TabContextMenu|"
+msgid "Reloa&d All Tabs"
+msgstr ""
+
+#: lib/tabwidget/tabicon.cpp:168
+msgctxt "TabIcon|"
+msgid "Unmute Tab"
+msgstr ""
+
+#: lib/tabwidget/tabicon.cpp:168
+msgctxt "TabIcon|"
+msgid "Mute Tab"
+msgstr ""
+
+#: lib/tabwidget/tabwidget.cpp:51
+msgctxt "TabWidget|"
+msgid "New Tab"
+msgstr "برگه تازه"
+
+#: lib/tabwidget/tabwidget.cpp:126
+msgctxt "TabWidget|"
+msgid "Closed tabs"
+msgstr ""
+
+#: lib/tabwidget/tabwidget.cpp:137
+msgctxt "TabWidget|"
+msgid "List of tabs"
+msgstr "فهرست برگه‌ها"
+
+#: lib/tabwidget/tabwidget.cpp:294
+msgctxt "TabWidget|"
+msgid "Empty"
+msgstr "خالی"
+
+#: lib/tabwidget/tabwidget.cpp:298
+msgctxt "TabWidget|"
+msgid "Restore All Closed Tabs"
+msgstr "برگرداندن تمام برگه‌های بسته"
+
+#: lib/tabwidget/tabwidget.cpp:299
+msgctxt "TabWidget|"
+msgid "Clear list"
+msgstr "پاک کردن فهرست"
+
+#: lib/tabwidget/tabwidget.h:106
+msgctxt "TabWidget|"
+msgid "New tab"
+msgstr "برگه تازه"
+
+#: lib/tools/aesinterface.cpp:146
+msgctxt "AesInterface|"
+msgid "Warning!"
+msgstr "هشدار!"
+
+#: lib/tools/aesinterface.cpp:146
+#, fuzzy
+#| msgctxt "AesInterface|"
+#| msgid ""
+#| "Data has been encrypted with a newer version of QupZilla.\n"
+#| "Please install latest version of QupZilla."
+msgctxt "AesInterface|"
+msgid ""
+"Data has been encrypted with a newer version of Falkon.\n"
+"Please install latest version of Falkon."
+msgstr ""
+"داده‌ها با نسخه جدیدتری از کوپزیلا رمزنگاری شده است.\n"
+"لطفا آخرین نسخه کوپزیلا را نصب کنید."
+
+#: lib/tools/certificateinfowidget.cpp:300
+msgctxt "QObject|"
+msgid "<not set in certificate>"
+msgstr "<در گواهی‌نامه ذکر نشده است>"
+
+#: lib/tools/certificateinfowidget.ui:17
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Issued To</b>"
+msgstr "<b>Issued To</b>"
+
+#: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
+msgctxt "CertificateInfoWidget|"
+msgid "Common Name (CN):"
+msgstr "نام عمومی (CN):"
+
+#: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
+msgctxt "CertificateInfoWidget|"
+msgid "Organization (O):"
+msgstr "سازمان (O):"
+
+#: lib/tools/certificateinfowidget.ui:58 lib/tools/certificateinfowidget.ui:133
+msgctxt "CertificateInfoWidget|"
+msgid "Organizational Unit (OU):"
+msgstr "واحد سازمانی (OU):"
+
+#: lib/tools/certificateinfowidget.ui:75
+msgctxt "CertificateInfoWidget|"
+msgid "Serial Number:"
+msgstr "شماره پیاپی:"
+
+#: lib/tools/certificateinfowidget.ui:92
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Issued By</b>"
+msgstr "<b>صادر شده بوسیله</b>"
+
+#: lib/tools/certificateinfowidget.ui:150
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Validity</b>"
+msgstr "<b>اعتبار</b>"
+
+#: lib/tools/certificateinfowidget.ui:157
+msgctxt "CertificateInfoWidget|"
+msgid "Issued On:"
+msgstr "صادر شده در:"
+
+#: lib/tools/certificateinfowidget.ui:174
+msgctxt "CertificateInfoWidget|"
+msgid "Expires On:"
+msgstr "منقضی شدن در:"
+
+#: lib/tools/html5permissions/html5permissionsdialog.cpp:63
+msgctxt "HTML5PermissionsDialog|"
+msgid "Allow"
+msgstr "پذیرفتن"
+
+#: lib/tools/html5permissions/html5permissionsdialog.cpp:72
+msgctxt "HTML5PermissionsDialog|"
+msgid "Deny"
+msgstr "رد کردن"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:14
+msgctxt "HTML5PermissionsDialog|"
+msgid "HTML5 Permissions"
+msgstr "مجوزهای HTML5"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:35
+msgctxt "HTML5PermissionsDialog|"
+msgid "Remove"
+msgstr "حذف"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:64
+msgctxt "HTML5PermissionsDialog|"
+msgid "Site"
+msgstr "تارنما"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:69
+msgctxt "HTML5PermissionsDialog|"
+msgid "Behaviour"
+msgstr "رفتار"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:79
+msgctxt "HTML5PermissionsDialog|"
+msgid "Permission for:"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:87
+msgctxt "HTML5PermissionsDialog|"
+msgid "Notifications"
+msgstr "آگاه‌سازی‌ها"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:92
+msgctxt "HTML5PermissionsDialog|"
+msgid "Geolocation"
+msgstr "مکان جغرافیای"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:97
+msgctxt "HTML5PermissionsDialog|"
+msgid "Microphone"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:102
+msgctxt "HTML5PermissionsDialog|"
+msgid "Camera"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:107
+msgctxt "HTML5PermissionsDialog|"
+msgid "Microphone and Camera"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:112
+msgctxt "HTML5PermissionsDialog|"
+msgid "Hide Pointer"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:117
+msgctxt "HTML5PermissionsDialog|"
+msgid "Display Capture"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:122
+msgctxt "HTML5PermissionsDialog|"
+msgid "Display and Audio Capture"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:41
+msgctxt "HTML5PermissionsNotification|"
+msgid "this site"
+msgstr "این تارنما"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:45
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to show desktop notifications?"
+msgstr "آیا به %1 اجازه نمایش آگاه‌سازی‌ها روی میزکار داده شود؟"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:49
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to locate your position?"
+msgstr "آیا به %1 اجازه برای یافتن مکان شما داده شود؟"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:53
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your microphone?"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:57
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your camera?"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:61
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your microphone and camera?"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:65
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to hide your pointer?"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:69
+#, fuzzy, qt-format
+#| msgctxt "HTML5PermissionsNotification|"
+#| msgid "Allow %1 to locate your position?"
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to capture your screen?"
+msgstr "آیا به %1 اجازه برای یافتن مکان شما داده شود؟"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:73
+#, fuzzy, qt-format
+#| msgctxt "HTML5PermissionsNotification|"
+#| msgid "Allow %1 to locate your position?"
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to capture your screen and audio?"
+msgstr "آیا به %1 اجازه برای یافتن مکان شما داده شود؟"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:43
+msgctxt "HTML5PermissionsNotification|"
+msgid "Remember"
+msgstr "بخاطر سپردن"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:50
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow"
+msgstr "پذیرفتن"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:57
+msgctxt "HTML5PermissionsNotification|"
+msgid "Deny"
+msgstr "رد کردن"
+
+#: lib/tools/qztools.cpp:379
+msgctxt "QObject|"
+msgid "Unknown size"
+msgstr "اندازه نامعلوم"
+
+#: lib/tools/qztools.cpp:384
+msgctxt "QObject|"
+msgid "KB"
+msgstr "کیلو‌بایت"
+
+#: lib/tools/qztools.cpp:389
+msgctxt "QObject|"
+msgid "MB"
+msgstr "مگابایت"
+
+#: lib/tools/qztools.cpp:393
+msgctxt "QObject|"
+msgid "GB"
+msgstr "گیگابایت"
+
+#: lib/tools/qztools.cpp:852
+msgctxt "QObject|"
+msgid "Executable: "
+msgstr "نرم‌افزار اجرایی: "
+
+#: lib/tools/qztools.cpp:853
+msgctxt "QObject|"
+msgid "Arguments: "
+msgstr "نشانوندها: "
+
+#: lib/tools/qztools.cpp:855
+msgctxt "QObject|"
+msgid "Cannot start external program"
+msgstr "نرم‌افزار بیرونی را نمی‌تواند اجرا کند"
+
+#: lib/tools/qztools.cpp:856
+#, qt-format
+msgctxt "QObject|"
+msgid "Cannot start external program! %1"
+msgstr "نرم‌افزار بیرونی را نمی‌تواند اجرا کند! %1"
+
+#: lib/webengine/jsalert.ui:125
+msgctxt "jsAlert|"
+msgid "Prevent this page from creating additional dialogs"
+msgstr "از ایجاد پنجره پرس‌وجوی تازه توسط صفحه جلوگیری کن"
+
+#: lib/webengine/webpage.cpp:330
+#, fuzzy, qt-format
+#| msgctxt "WebPage|"
+#| msgid ""
+#| "QupZilla cannot handle <b>%1:</b> links. The requested link is <ul><li>"
+#| "%2</li></ul>Do you want QupZilla to try open this link in system "
+#| "application?"
+msgctxt "WebPage|"
+msgid ""
+"Falkon cannot handle <b>%1:</b> links. The requested link is <ul><li>%2</"
+"li></ul>Do you want Falkon to try open this link in system application?"
+msgstr ""
+"کوپزیلا نمی‌تواند لینک‌های <b>%1:</b> را به‌کار گیرد. این <ul><li>%2</li></ul> "
+"لینک درخواست شده است، آیا می‌خواهید کوپزیلا سعی کند این لینک را با نرم‌افزار "
+"معرفی شده در سیستم باز کند؟"
+
+#: lib/webengine/webpage.cpp:335
+msgctxt "WebPage|"
+msgid "Remember my choice for this protocol"
+msgstr "انتخابم را برای این پروتکل به‌خاطر بسپار"
+
+#: lib/webengine/webpage.cpp:336
+msgctxt "WebPage|"
+msgid "External Protocol Request"
+msgstr "درخواست پروتکل بیرونی"
+
+#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+msgctxt "WebPage|"
+msgid "Failed loading page"
+msgstr "خطا در بارگذاری صفحه"
+
+#: lib/webengine/webpage.cpp:418
+msgctxt "WebPage|"
+msgid "Something went wrong while loading this page."
+msgstr ""
+
+#: lib/webengine/webpage.cpp:419
+msgctxt "WebPage|"
+msgid ""
+"Try reloading the page or closing some tabs to make more memory available."
+msgstr ""
+
+#: lib/webengine/webpage.cpp:420
+msgctxt "WebPage|"
+msgid "Reload page"
+msgstr ""
+
+#: lib/webengine/webpage.cpp:482
+msgctxt "WebPage|"
+msgid "Choose file..."
+msgstr "انتخاب پرونده..."
+
+#: lib/webengine/webpage.cpp:486
+msgctxt "WebPage|"
+msgid "Choose files..."
+msgstr ""
+
+#: lib/webengine/webpage.cpp:622
+msgctxt "WebPage|"
+msgid "JavaScript alert"
+msgstr "اعلان اسکریپت‌های جاوا"
+
+#: lib/webengine/webpage.cpp:631
+msgctxt "WebPage|"
+msgid "Prevent this page from creating additional dialogs"
+msgstr "از ایجاد پنجره پرس‌وجوی تازه توسط صفحه جلوگیری کن"
+
+#: lib/webengine/webview.cpp:126
+msgctxt "WebView|"
+msgid "Empty Page"
+msgstr ""
+
+#: lib/webengine/webview.cpp:391
+#, qt-format
+msgctxt "WebView|"
+msgid "Falkon %1 (%2)"
+msgstr ""
+
+#: lib/webengine/webview.cpp:690
+msgctxt "WebView|"
+msgid "No suggestions"
+msgstr ""
+
+#: lib/webengine/webview.cpp:741
+msgctxt "WebView|"
+msgid "&Back"
+msgstr "&پیشین"
+
+#: lib/webengine/webview.cpp:745
+msgctxt "WebView|"
+msgid "&Forward"
+msgstr "&پسین"
+
+#: lib/webengine/webview.cpp:752
+msgctxt "WebView|"
+msgid "&Add New Page"
+msgstr "&افزودن برگه تازه"
+
+#: lib/webengine/webview.cpp:753
+msgctxt "WebView|"
+msgid "&Configure Speed Dial"
+msgstr "&پیکربندی شماره‌گیر سریع"
+
+#: lib/webengine/webview.cpp:755
+msgctxt "WebView|"
+msgid "Reload All Dials"
+msgstr ""
+
+#: lib/webengine/webview.cpp:774
+msgctxt "WebView|"
+msgid "Book&mark page"
+msgstr "صفحه &نشان‌دار کردن"
+
+#: lib/webengine/webview.cpp:775
+msgctxt "WebView|"
+msgid "&Save page as..."
+msgstr ""
+
+#: lib/webengine/webview.cpp:776
+msgctxt "WebView|"
+msgid "&Copy page link"
+msgstr "رونگاشت از &لینک صفحه"
+
+#: lib/webengine/webview.cpp:777
+msgctxt "WebView|"
+msgid "Send page link..."
+msgstr "فرستادن لینک صفحه..."
+
+#: lib/webengine/webview.cpp:779
+msgctxt "WebView|"
+msgid "Select &all"
+msgstr "انتخاب &همه"
+
+#: lib/webengine/webview.cpp:785
+msgctxt "WebView|"
+msgid "Show so&urce code"
+msgstr "نمایش &سورس‌کد"
+
+#: lib/webengine/webview.cpp:789
+msgctxt "WebView|"
+msgid "Show info ab&out site"
+msgstr "نمایش اطلاعاتی &درباره تارنما"
+
+#: lib/webengine/webview.cpp:795
+msgctxt "WebView|"
+msgid "Open link in new &tab"
+msgstr "بازکردن لینک در &برگه تازه"
+
+#: lib/webengine/webview.cpp:800
+msgctxt "WebView|"
+msgid "Open link in new &window"
+msgstr "بازکردن لینک در &پنجره تازه"
+
+#: lib/webengine/webview.cpp:801
+msgctxt "WebView|"
+msgid "Open link in &private window"
+msgstr ""
+
+#: lib/webengine/webview.cpp:806
+msgctxt "WebView|"
+msgid "B&ookmark link"
+msgstr "&نشان‌دار کردن لینک"
+
+#: lib/webengine/webview.cpp:808
+msgctxt "WebView|"
+msgid "&Save link as..."
+msgstr "&رونوشت‌برداری لینک به..."
+
+#: lib/webengine/webview.cpp:809
+msgctxt "WebView|"
+msgid "Send link..."
+msgstr "فرستادن لینک..."
+
+#: lib/webengine/webview.cpp:810
+msgctxt "WebView|"
+msgid "&Copy link address"
+msgstr "رونگاشت آدرس &لینک"
+
+#: lib/webengine/webview.cpp:823
+msgctxt "WebView|"
+msgid "Show i&mage"
+msgstr "نمایش &شکل"
+
+#: lib/webengine/webview.cpp:829
+msgctxt "WebView|"
+msgid "Copy image"
+msgstr ""
+
+#: lib/webengine/webview.cpp:830
+msgctxt "WebView|"
+msgid "Copy image ad&dress"
+msgstr "رونگاشت &آدرس شکل"
+
+#: lib/webengine/webview.cpp:832
+msgctxt "WebView|"
+msgid "&Save image as..."
+msgstr "رونو&شت‌برداری شکل به..."
+
+#: lib/webengine/webview.cpp:833
+msgctxt "WebView|"
+msgid "Send image..."
+msgstr "فرستادن شکل..."
+
+#: lib/webengine/webview.cpp:852
+msgctxt "WebView|"
+msgid "Send text..."
+msgstr "فرستادن متن..."
+
+#: lib/webengine/webview.cpp:864
+msgctxt "WebView|"
+msgid "Go to &web address"
+msgstr "به آدرس &وب برو"
+
+#: lib/webengine/webview.cpp:878
+#, qt-format
+msgctxt "WebView|"
+msgid "Search \"%1 ..\" with %2"
+msgstr "یافتن «%1 ..» بوسیله %2"
+
+#: lib/webengine/webview.cpp:884
+msgctxt "WebView|"
+msgid "Search with..."
+msgstr "یافتن بوسیله..."
+
+#: lib/webengine/webview.cpp:906
+msgctxt "WebView|"
+msgid "&Play"
+msgstr "&اجرا"
+
+#: lib/webengine/webview.cpp:906
+msgctxt "WebView|"
+msgid "&Pause"
+msgstr "&توقف"
+
+#: lib/webengine/webview.cpp:907
+msgctxt "WebView|"
+msgid "Un&mute"
+msgstr "با &صدا"
+
+#: lib/webengine/webview.cpp:907
+msgctxt "WebView|"
+msgid "&Mute"
+msgstr "&بی صدا"
+
+#: lib/webengine/webview.cpp:909
+msgctxt "WebView|"
+msgid "&Copy Media Address"
+msgstr "&رونگاشت آدرس رسانه"
+
+#: lib/webengine/webview.cpp:910
+msgctxt "WebView|"
+msgid "&Send Media Address"
+msgstr "&فرستادن آدرس رسانه"
+
+#: lib/webengine/webview.cpp:911
+msgctxt "WebView|"
+msgid "Save Media To &Disk"
+msgstr "رونوشت‌برداری رسانه به &دیسک"
+
+#: lib/webengine/webview.cpp:930
+msgctxt "WebView|"
+msgid "Create Search Engine"
+msgstr "ایجادِ موتور یابنده"
+
+#: lib/webengine/webview.cpp:971
+msgctxt "WebView|"
+msgid "&Undo"
+msgstr ""
+
+#: lib/webengine/webview.cpp:977
+msgctxt "WebView|"
+msgid "&Redo"
+msgstr ""
+
+#: lib/webengine/webview.cpp:983
+msgctxt "WebView|"
+msgid "&Cut"
+msgstr ""
+
+#: lib/webengine/webview.cpp:989
+msgctxt "WebView|"
+msgid "&Copy"
+msgstr ""
+
+#: lib/webengine/webview.cpp:995
+msgctxt "WebView|"
+msgid "&Paste"
+msgstr ""
+
+#: lib/webengine/webview.cpp:1001
+msgctxt "WebView|"
+msgid "Select All"
+msgstr "انتخاب همه"
+
+#: lib/webengine/webview.cpp:1007
+msgctxt "WebView|"
+msgid "&Reload"
+msgstr "&تازه‌سازی"
+
+#: lib/webengine/webview.cpp:1011
+msgctxt "WebView|"
+msgid "S&top"
+msgstr "تو&قف"
+
+#: lib/webtab/searchtoolbar.cpp:150
+#, qt-format
+msgctxt "SearchToolBar|"
+msgid "%1 of %2"
+msgstr ""
+
+#: lib/webtab/searchtoolbar.ui:48
+#, fuzzy
+#| msgctxt "PopupWindow|"
+#| msgid "Find"
+msgctxt "SearchToolbar|"
+msgid "Find..."
+msgstr "یافتن"
+
+#: lib/webtab/searchtoolbar.ui:58
+msgctxt "SearchToolbar|"
+msgid "Find the next match for the current search phrase"
+msgstr ""
+
+#: lib/webtab/searchtoolbar.ui:61
+msgctxt "SearchToolbar|"
+msgid "&Next"
+msgstr ""
+
+#: lib/webtab/searchtoolbar.ui:74
+msgctxt "SearchToolbar|"
+msgid "Find the previous match for the current search phrase"
+msgstr ""
+
+#: lib/webtab/searchtoolbar.ui:77
+msgctxt "SearchToolbar|"
+msgid "&Previous"
+msgstr ""
+
+#: lib/webtab/searchtoolbar.ui:90
+msgctxt "SearchToolbar|"
+msgid "&Match Case"
+msgstr ""
+
+#: lib/webtab/tabbedwebview.cpp:194
+msgctxt "TabbedWebView|"
+msgid "Inspect Element"
+msgstr "بررسی عنصر"
+
+#: lib/webtab/webtab.cpp:624
+#, qt-format
+msgctxt "WebTab|"
+msgid "%1 - Falkon"
+msgstr ""
+
+#~ msgctxt "SearchToolBar|"
+#~ msgid "No results found."
+#~ msgstr "نتیجه‌ای یافت نشد."
+
+#~ msgctxt "SearchToolbar|"
+#~ msgid "Search: "
+#~ msgstr "یافتن: "
+
+#~ msgctxt "SearchToolbar|"
+#~ msgid "Search..."
+#~ msgstr "یافتن..."
+
+#, fuzzy
+#~| msgctxt "PopupWindow|"
+#~| msgid "&Page Source"
+#~ msgctxt "PageScreen|"
+#~ msgid "Page Screen"
+#~ msgstr "سورس &صفحه"
+
+#, fuzzy
+#~| msgctxt "HTML5PermissionsDialog|"
+#~| msgid "Geolocation"
+#~ msgctxt "PageScreen|"
+#~ msgid "Location:"
+#~ msgstr "مکان جغرافیای"
+
+#, fuzzy
+#~| msgctxt "BookmarksImportDialog|"
+#~| msgid "Choose..."
+#~ msgctxt "PageScreen|"
+#~ msgid "Browse..."
+#~ msgstr "انتخاب..."
+
+#~ msgctxt "JsOptions|"
+#~ msgid "Change window size"
+#~ msgstr "تغییر اندازه پنجره"
+
+#~ msgctxt "WebView|"
+#~ msgid "Validate page"
+#~ msgstr "تایید اعتبار صفحه"
+
+#~ msgctxt "WebView|"
+#~ msgid "Translate page"
+#~ msgstr "صفحه را ترجمه کن"
+
+#~ msgctxt "WebView|"
+#~ msgid "Google Translate"
+#~ msgstr "مترجم گوگل"
+
+#~ msgctxt "WebView|"
+#~ msgid "Dictionary"
+#~ msgstr "لغت‌نامه"
+
+#, fuzzy
+#~| msgctxt "QupZillaSchemeReply|"
+#~| msgid "Translations"
+#~ msgctxt "FalkonSchemeReply|"
+#~ msgid "Translations"
+#~ msgstr "ترجمه‌ها"
+
+#~ msgctxt "Preferences|"
+#~ msgid "In order to change language, you must restart browser."
+#~ msgstr "برای تغییر زبان باید مرورگر را بازآغاز کنید."
+
+#~ msgctxt "Preferences|"
+#~ msgid "<b>Language</b>"
+#~ msgstr "<b>زبان</b>"
+
+#~ msgctxt "Preferences|"
+#~ msgid "Available translations: "
+#~ msgstr "برگردان‌های دردسترس: "
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "About QupZilla"
+#~ msgstr "درباره کوپزیلا"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "Authors"
+#~ msgstr "برنامه‌نویس‌ها"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "Authors and Contributors"
+#~ msgstr "برنامه‌نویس‌ها و هم‌کارها"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "< About QupZilla"
+#~ msgstr "< درباره کوپزیلا"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "<p><b>Main developer:</b><br/>%1 &lt;%2&gt;</p>"
+#~ msgstr "<p><b>توسعه‌دهنده اصلی:</b><br/>%1 &lt;%2&gt;&lrm;</p>"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "<p><b>Contributors:</b><br/>%1</p>"
+#~ msgstr "<p><b>هم‌کارها:</b><br/>%1</p>"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "<p><b>Translators:</b><br/>%1</p>"
+#~ msgstr "<p><b>ترجمه‌کنندگان:</b><br/>%1</p>"
+
+#~ msgctxt "PopupWindow|"
+#~ msgid "%1 - QupZilla"
+#~ msgstr "%1 - کوپزیلا"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Report Issue"
+#~ msgstr "گزارش برآمد"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid ""
+#~ "If you are experiencing problems with QupZilla, please try to disable all "
+#~ "extensions first. <br/>If this does not fix it, then please fill out this "
+#~ "form: "
+#~ msgstr ""
+#~ "اگر با کوپزیلا مشکل‌هایی دارید، لطفا در ابتدا همه توسیع‌ها را غیرفعال کنید. "
+#~ "<br/>اگر این کار مشکل را حل نکرد، آنگاه این فرم را پر کنید: "
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Your E-mail"
+#~ msgstr "رایانامه‌تان"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Issue type"
+#~ msgstr "گونه برآمد"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Issue description"
+#~ msgstr "تشریح برآمد"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Send"
+#~ msgstr "فرستادن"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid ""
+#~ "E-mail is optional<br/><b>Note: </b>Please read how to make a bug report "
+#~ "<a href=%1>here</a> first."
+#~ msgstr ""
+#~ "رایانامه اختیاری است<br/><b>توجه: </b>لطفا در ابتدا شیوه ساختن گزارش باگ "
+#~ "را <a href=%1>اینجا</a> بخوانید."
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Please fill out all required fields!"
+#~ msgstr "لطفا تمام مورد‌های لازم را پر کنید!"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "About QupZilla"
+#~ msgstr "درباره کوپزیلا"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Contributors"
+#~ msgstr "هم‌کارها"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Translators"
+#~ msgstr "مترجم‌ها"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Edit"
+#~ msgstr "ویرایش"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Remove"
+#~ msgstr "حذف"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Title"
+#~ msgstr "سرنویس"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Preferences"
+#~ msgstr "ترجیجات"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Extensions"
+#~ msgstr "توسیع‌ها"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Settings"
+#~ msgstr "سامانش"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Themes"
+#~ msgstr "فرهشت‌ها"
+
+#~ msgctxt "SpeedDial|"
+#~ msgid "Image files"
+#~ msgstr "پرونده‌های تصویری"
+
+#~ msgctxt "SpeedDial|"
+#~ msgid "Unable to load"
+#~ msgstr "توانایی بارگذاری ندارد"

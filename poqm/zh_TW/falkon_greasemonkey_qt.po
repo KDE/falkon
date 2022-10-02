@@ -1,0 +1,213 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Language: zh_TW\n"
+"X-Qt-Contexts: true\n"
+
+#: gm_addscriptdialog.cpp:50
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "<p>runs at<br/><i>%1</i></p>"
+msgstr "<p>執行於<br/><i>%1</i></p>"
+
+#: gm_addscriptdialog.cpp:54
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "<p>does not run at<br/><i>%1</i></p>"
+msgstr "<p>不要執行於<br/><i>%1</i></p>"
+
+#: gm_addscriptdialog.cpp:84
+msgctxt "GM_AddScriptDialog|"
+msgid "Cannot install script"
+msgstr "無法安裝此指令稿"
+
+#: gm_addscriptdialog.cpp:87
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "'%1' installed successfully"
+msgstr "「%1」安裝成功"
+
+#: gm_addscriptdialog.ui:14
+msgctxt "GM_AddScriptDialog|"
+msgid "GreaseMonkey Installation"
+msgstr "GreaseMonkey 安裝程式"
+
+#: gm_addscriptdialog.ui:45
+msgctxt "GM_AddScriptDialog|"
+msgid "<h3>GreaseMonkey Installation</h3>"
+msgstr "<h3>GreaseMonkey 安裝程式</h3>"
+
+#: gm_addscriptdialog.ui:67
+msgctxt "GM_AddScriptDialog|"
+msgid "You are about to install this userscript into GreaseMonkey:"
+msgstr "您將要把此使用者指令稿安裝至 GreaseMonkey："
+
+#: gm_addscriptdialog.ui:80
+msgctxt "GM_AddScriptDialog|"
+msgid "<b>You should only install scripts from sources you trust!</b>"
+msgstr "<b>您應該只從您信任的來源安裝指令稿！</b>"
+
+#: gm_addscriptdialog.ui:90
+msgctxt "GM_AddScriptDialog|"
+msgid "Are you sure you want to install it?"
+msgstr "您確定您想安裝它?"
+
+#: gm_addscriptdialog.ui:108
+msgctxt "GM_AddScriptDialog|"
+msgid "Show source code of script"
+msgstr "顯示此指令稿的原始碼"
+
+#: gm_icon.cpp:28
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey"
+msgstr "GreaseMonkey"
+
+#: gm_icon.cpp:29
+msgctxt "GM_Icon|"
+msgid "Open GreaseMonkey settings"
+msgstr "開啟 GreaseMonkey 設定"
+
+#: gm_icon.cpp:41
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey Icon"
+msgstr "GreaseMonkey 圖示"
+
+#: gm_manager.cpp:77
+#, qt-format
+msgctxt "GM_Manager|"
+msgid "'%1' is already installed"
+msgstr "「%1」已安裝"
+
+#: gm_manager.cpp:230
+msgctxt "GM_Manager|"
+msgid "GreaseMonkey"
+msgstr "GreaseMonkey"
+
+#: gm_notification.cpp:51
+msgctxt "GM_Notification|"
+msgid "Cannot install script"
+msgstr "無法安裝此指令稿"
+
+#: gm_notification.cpp:59
+#, qt-format
+msgctxt "GM_Notification|"
+msgid "'%1' installed successfully"
+msgstr "「%1」安裝成功"
+
+#: gm_notification.ui:39
+msgctxt "GM_Notification|"
+msgid "This script can be installed with the GreaseMonkey plugin."
+msgstr "此指令稿藉由 Greasemonkey 的外掛安裝。"
+
+#: gm_notification.ui:59
+msgctxt "GM_Notification|"
+msgid "Install"
+msgstr "安裝"
+
+#: settings/gm_settings.cpp:91
+msgctxt "GM_Settings|"
+msgid "Remove script"
+msgstr "移除此指令稿"
+
+#: settings/gm_settings.cpp:92
+#, qt-format
+msgctxt "GM_Settings|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "您確定您想要移除「%1」？"
+
+#: settings/gm_settings.cpp:122
+msgctxt "GM_Settings|"
+msgid "Add script"
+msgstr "新增指令稿"
+
+#: settings/gm_settings.cpp:122
+msgctxt "GM_Settings|"
+msgid "Choose name for script:"
+msgstr "選擇指令稿名稱："
+
+#: settings/gm_settings.ui:14
+msgctxt "GM_Settings|"
+msgid "GreaseMonkey Scripts"
+msgstr "GreaseMonkey 指令稿"
+
+#: settings/gm_settings.ui:48
+msgctxt "GM_Settings|"
+msgid "<h3>GreaseMonkey Scripts</h3>"
+msgstr "<h3>GreaseMonkey 指令稿</h3>"
+
+#: settings/gm_settings.ui:70
+msgctxt "GM_Settings|"
+msgid "Double clicking script will show additional information"
+msgstr "雙擊指令稿可檢視額外的資訊"
+
+#: settings/gm_settings.ui:150
+msgctxt "GM_Settings|"
+msgid "More scripts can be downloaded from"
+msgstr "更多指令稿可從此下載"
+
+#: settings/gm_settings.ui:193
+msgctxt "GM_Settings|"
+msgid "Open scripts directory"
+msgstr "開啟指令稿目錄"
+
+#: settings/gm_settings.ui:200
+msgctxt "GM_Settings|"
+msgid "New user script"
+msgstr "新使用者指令稿"
+
+#: settings/gm_settingsscriptinfo.cpp:45
+#, qt-format
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Script Details of %1"
+msgstr "%1的指令稿細節"
+
+#: settings/gm_settingsscriptinfo.ui:19
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Runs at:"
+msgstr "執行於："
+
+#: settings/gm_settingsscriptinfo.ui:45
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Description:"
+msgstr "描述："
+
+#: settings/gm_settingsscriptinfo.ui:55
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Version:"
+msgstr "版本："
+
+#: settings/gm_settingsscriptinfo.ui:65
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Start at:"
+msgstr "啟動於："
+
+#: settings/gm_settingsscriptinfo.ui:85
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Name:"
+msgstr "名稱："
+
+#: settings/gm_settingsscriptinfo.ui:115
+msgctxt "GM_SettingsScriptInfo|"
+msgid "URL:"
+msgstr "URL："
+
+#: settings/gm_settingsscriptinfo.ui:128
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Does not run at:"
+msgstr "不執行於："
+
+#: settings/gm_settingsscriptinfo.ui:138
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Namespace:"
+msgstr "命名空間："
+
+#: settings/gm_settingsscriptinfo.ui:155
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Edit in text editor"
+msgstr "以文字編輯器編輯"

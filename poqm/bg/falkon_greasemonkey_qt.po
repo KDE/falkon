@@ -1,0 +1,216 @@
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2022-06-20 23:45+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: gm_addscriptdialog.cpp:50
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "<p>runs at<br/><i>%1</i></p>"
+msgstr "<p>изпълнява се на<br/><i>%1</i></p>"
+
+#: gm_addscriptdialog.cpp:54
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "<p>does not run at<br/><i>%1</i></p>"
+msgstr ""
+
+#: gm_addscriptdialog.cpp:84
+msgctxt "GM_AddScriptDialog|"
+msgid "Cannot install script"
+msgstr ""
+
+#: gm_addscriptdialog.cpp:87
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "'%1' installed successfully"
+msgstr ""
+
+#: gm_addscriptdialog.ui:14
+msgctxt "GM_AddScriptDialog|"
+msgid "GreaseMonkey Installation"
+msgstr ""
+
+#: gm_addscriptdialog.ui:45
+msgctxt "GM_AddScriptDialog|"
+msgid "<h3>GreaseMonkey Installation</h3>"
+msgstr "<h3>Инсталация на GreaseMonkey</h3>"
+
+#: gm_addscriptdialog.ui:67
+msgctxt "GM_AddScriptDialog|"
+msgid "You are about to install this userscript into GreaseMonkey:"
+msgstr ""
+
+#: gm_addscriptdialog.ui:80
+msgctxt "GM_AddScriptDialog|"
+msgid "<b>You should only install scripts from sources you trust!</b>"
+msgstr ""
+
+#: gm_addscriptdialog.ui:90
+msgctxt "GM_AddScriptDialog|"
+msgid "Are you sure you want to install it?"
+msgstr ""
+
+#: gm_addscriptdialog.ui:108
+msgctxt "GM_AddScriptDialog|"
+msgid "Show source code of script"
+msgstr ""
+
+#: gm_icon.cpp:28
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey"
+msgstr ""
+
+#: gm_icon.cpp:29
+msgctxt "GM_Icon|"
+msgid "Open GreaseMonkey settings"
+msgstr ""
+
+#: gm_icon.cpp:41
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey Icon"
+msgstr ""
+
+#: gm_manager.cpp:77
+#, qt-format
+msgctxt "GM_Manager|"
+msgid "'%1' is already installed"
+msgstr ""
+
+#: gm_manager.cpp:230
+msgctxt "GM_Manager|"
+msgid "GreaseMonkey"
+msgstr ""
+
+#: gm_notification.cpp:51
+msgctxt "GM_Notification|"
+msgid "Cannot install script"
+msgstr ""
+
+#: gm_notification.cpp:59
+#, qt-format
+msgctxt "GM_Notification|"
+msgid "'%1' installed successfully"
+msgstr ""
+
+#: gm_notification.ui:39
+msgctxt "GM_Notification|"
+msgid "This script can be installed with the GreaseMonkey plugin."
+msgstr ""
+
+#: gm_notification.ui:59
+msgctxt "GM_Notification|"
+msgid "Install"
+msgstr "Инсталиране"
+
+#: settings/gm_settings.cpp:91
+msgctxt "GM_Settings|"
+msgid "Remove script"
+msgstr ""
+
+#: settings/gm_settings.cpp:92
+#, qt-format
+msgctxt "GM_Settings|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "Наистина ли искате да премахнете  '%1'?"
+
+#: settings/gm_settings.cpp:122
+msgctxt "GM_Settings|"
+msgid "Add script"
+msgstr ""
+
+#: settings/gm_settings.cpp:122
+msgctxt "GM_Settings|"
+msgid "Choose name for script:"
+msgstr ""
+
+#: settings/gm_settings.ui:14
+msgctxt "GM_Settings|"
+msgid "GreaseMonkey Scripts"
+msgstr ""
+
+#: settings/gm_settings.ui:48
+msgctxt "GM_Settings|"
+msgid "<h3>GreaseMonkey Scripts</h3>"
+msgstr ""
+
+#: settings/gm_settings.ui:70
+msgctxt "GM_Settings|"
+msgid "Double clicking script will show additional information"
+msgstr ""
+
+#: settings/gm_settings.ui:150
+msgctxt "GM_Settings|"
+msgid "More scripts can be downloaded from"
+msgstr ""
+
+#: settings/gm_settings.ui:193
+msgctxt "GM_Settings|"
+msgid "Open scripts directory"
+msgstr ""
+
+#: settings/gm_settings.ui:200
+msgctxt "GM_Settings|"
+msgid "New user script"
+msgstr ""
+
+#: settings/gm_settingsscriptinfo.cpp:45
+#, qt-format
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Script Details of %1"
+msgstr ""
+
+#: settings/gm_settingsscriptinfo.ui:19
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Runs at:"
+msgstr ""
+
+#: settings/gm_settingsscriptinfo.ui:45
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Description:"
+msgstr "Описание:"
+
+#: settings/gm_settingsscriptinfo.ui:55
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Version:"
+msgstr "Версия:"
+
+#: settings/gm_settingsscriptinfo.ui:65
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Start at:"
+msgstr ""
+
+#: settings/gm_settingsscriptinfo.ui:85
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Name:"
+msgstr "Име:"
+
+#: settings/gm_settingsscriptinfo.ui:115
+msgctxt "GM_SettingsScriptInfo|"
+msgid "URL:"
+msgstr "URL-адрес:"
+
+#: settings/gm_settingsscriptinfo.ui:128
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Does not run at:"
+msgstr ""
+
+#: settings/gm_settingsscriptinfo.ui:138
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Namespace:"
+msgstr "Пространство на имената:"
+
+#: settings/gm_settingsscriptinfo.ui:155
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Edit in text editor"
+msgstr ""

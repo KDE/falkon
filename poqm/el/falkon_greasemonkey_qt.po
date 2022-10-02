@@ -1,0 +1,225 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+#
+# Vasilis Tsivikis <vasitsiv.dev@gmail.com>, 2017.
+# Stelios <sstavra@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2021-09-09 16:10+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Language: el_GR\n"
+"X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: gm_addscriptdialog.cpp:50
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "<p>runs at<br/><i>%1</i></p>"
+msgstr "<p>τρέχει σε<br/><i>%1</i></p>"
+
+#: gm_addscriptdialog.cpp:54
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "<p>does not run at<br/><i>%1</i></p>"
+msgstr "<p>δεν τρέχει σε<br/><i>%1</i></p>"
+
+#: gm_addscriptdialog.cpp:84
+msgctxt "GM_AddScriptDialog|"
+msgid "Cannot install script"
+msgstr "Αδυναμία εγκατάστασης σεναρίου εντολής"
+
+#: gm_addscriptdialog.cpp:87
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "'%1' installed successfully"
+msgstr "'%1' εγκαταστάθηκε επιτυχώς"
+
+#: gm_addscriptdialog.ui:14
+msgctxt "GM_AddScriptDialog|"
+msgid "GreaseMonkey Installation"
+msgstr "Εγκατάσταση του GreaseMonkey"
+
+#: gm_addscriptdialog.ui:45
+msgctxt "GM_AddScriptDialog|"
+msgid "<h3>GreaseMonkey Installation</h3>"
+msgstr "<h3>Εγκατάσταση του GreaseMonkey</h3>"
+
+#: gm_addscriptdialog.ui:67
+msgctxt "GM_AddScriptDialog|"
+msgid "You are about to install this userscript into GreaseMonkey:"
+msgstr ""
+"Είστε έτοιμοι να εγκαταστήσετε αυτό το σενάριο εντολών χρηστη στο "
+"GreaseMonkey:"
+
+#: gm_addscriptdialog.ui:80
+msgctxt "GM_AddScriptDialog|"
+msgid "<b>You should only install scripts from sources you trust!</b>"
+msgstr ""
+"<b>Θα πρέπει να εγκαθιστάτε σενάρια εντολών από πηγές που εμπιστεύεστε!</b>"
+
+#: gm_addscriptdialog.ui:90
+msgctxt "GM_AddScriptDialog|"
+msgid "Are you sure you want to install it?"
+msgstr "Είστε σιγουροι ότι θέλετε να το εγκαταστήσετε;"
+
+#: gm_addscriptdialog.ui:108
+msgctxt "GM_AddScriptDialog|"
+msgid "Show source code of script"
+msgstr "Εμφάνιση πηγαίου κώδικα για το σενάριο εντολών"
+
+#: gm_icon.cpp:28
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey"
+msgstr "GreaseMonkey"
+
+#: gm_icon.cpp:29
+msgctxt "GM_Icon|"
+msgid "Open GreaseMonkey settings"
+msgstr "Άνοιγμα ρυθμίσεων του GreaseMonkey"
+
+#: gm_icon.cpp:41
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey Icon"
+msgstr "Εικονίδιο GreaseMonkey"
+
+#: gm_manager.cpp:77
+#, qt-format
+msgctxt "GM_Manager|"
+msgid "'%1' is already installed"
+msgstr "Το «%1» είναι ήδη εγκατεστημένο"
+
+#: gm_manager.cpp:230
+msgctxt "GM_Manager|"
+msgid "GreaseMonkey"
+msgstr "GreaseMonkey"
+
+#: gm_notification.cpp:51
+msgctxt "GM_Notification|"
+msgid "Cannot install script"
+msgstr "Αδυναμία εγκατάστασης σεναρίου"
+
+#: gm_notification.cpp:59
+#, qt-format
+msgctxt "GM_Notification|"
+msgid "'%1' installed successfully"
+msgstr "'%1' εγκαταστάθηκε επιτυχώς"
+
+#: gm_notification.ui:39
+msgctxt "GM_Notification|"
+msgid "This script can be installed with the GreaseMonkey plugin."
+msgstr ""
+"Αυτό το σενάριο χρήστη μπορεί να εγκατασταθεί με το πρόσθετο GreaseMonkey."
+
+#: gm_notification.ui:59
+msgctxt "GM_Notification|"
+msgid "Install"
+msgstr "Εγκατάσταση"
+
+#: settings/gm_settings.cpp:91
+msgctxt "GM_Settings|"
+msgid "Remove script"
+msgstr "Αφαίρεση σεναρίου"
+
+#: settings/gm_settings.cpp:92
+#, qt-format
+msgctxt "GM_Settings|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "Είστε σίγουροι ότι θέλετε να αφαιρέσετε το '%1';"
+
+#: settings/gm_settings.cpp:122
+msgctxt "GM_Settings|"
+msgid "Add script"
+msgstr "Προσθήκη μακροεντολής"
+
+#: settings/gm_settings.cpp:122
+msgctxt "GM_Settings|"
+msgid "Choose name for script:"
+msgstr "Επιλέξτε όνομα για την μακροεντολή:"
+
+#: settings/gm_settings.ui:14
+msgctxt "GM_Settings|"
+msgid "GreaseMonkey Scripts"
+msgstr "Σενάρια εντολών χρήστη GreaseMonkey"
+
+#: settings/gm_settings.ui:48
+msgctxt "GM_Settings|"
+msgid "<h3>GreaseMonkey Scripts</h3>"
+msgstr "<h3>Σενάρια εντολών χρήστη GreaseMonkey</h3>"
+
+#: settings/gm_settings.ui:70
+msgctxt "GM_Settings|"
+msgid "Double clicking script will show additional information"
+msgstr "Με διπλό κλικ στο σενάριο θα εμφανιστούν επιπλέον πληροφορίες"
+
+#: settings/gm_settings.ui:150
+msgctxt "GM_Settings|"
+msgid "More scripts can be downloaded from"
+msgstr "Μπορεί να γίνει λήψη περισσότερων σεναρίων από"
+
+#: settings/gm_settings.ui:193
+msgctxt "GM_Settings|"
+msgid "Open scripts directory"
+msgstr "Άνοιγμα φακέλου σεναρίων"
+
+#: settings/gm_settings.ui:200
+msgctxt "GM_Settings|"
+msgid "New user script"
+msgstr "Νέα μακροεντολή χρήστη"
+
+#: settings/gm_settingsscriptinfo.cpp:45
+#, qt-format
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Script Details of %1"
+msgstr "Πληροφορίες σεναρίου %1"
+
+#: settings/gm_settingsscriptinfo.ui:19
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Runs at:"
+msgstr "Τρέχει σε:"
+
+#: settings/gm_settingsscriptinfo.ui:45
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Description:"
+msgstr "Περιγραφή:"
+
+#: settings/gm_settingsscriptinfo.ui:55
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Version:"
+msgstr "Έκδοση:"
+
+#: settings/gm_settingsscriptinfo.ui:65
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Start at:"
+msgstr "Έναρξη σε:"
+
+#: settings/gm_settingsscriptinfo.ui:85
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Name:"
+msgstr "Όνομα:"
+
+#: settings/gm_settingsscriptinfo.ui:115
+msgctxt "GM_SettingsScriptInfo|"
+msgid "URL:"
+msgstr "URL:"
+
+#: settings/gm_settingsscriptinfo.ui:128
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Does not run at:"
+msgstr "Δεν τρέχει σε:"
+
+#: settings/gm_settingsscriptinfo.ui:138
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Namespace:"
+msgstr "Namespace:"
+
+#: settings/gm_settingsscriptinfo.ui:155
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Edit in text editor"
+msgstr "Επεξεργασία στο κειμενογράφο"

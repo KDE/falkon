@@ -1,0 +1,5799 @@
+# Translation of falkon_qt.po to Brazilian Portuguese
+# Copyright (C) 2017-2020 This file is copyright:
+# This file is distributed under the same license as the falkon package.
+#
+# Eugenio Oliveira <eugeniosaulo@gmail.com>, 2017.
+# Alexandre Carvalho <alexandre05@live.com>, 2017.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2018, 2019, 2020, 2021, 2022.
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: falkon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"PO-Revision-Date: 2022-04-07 11:22-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: pt_BR\n"
+"X-Generator: Lokalize 20.04.2\n"
+"X-Qt-Contexts: true\n"
+
+#: lib/3rdparty/lineedit.cpp:102
+msgctxt "LineEdit|"
+msgid "&Undo"
+msgstr "&Desfazer"
+
+#: lib/3rdparty/lineedit.cpp:107
+msgctxt "LineEdit|"
+msgid "&Redo"
+msgstr "&Refazer"
+
+#: lib/3rdparty/lineedit.cpp:112
+msgctxt "LineEdit|"
+msgid "Cu&t"
+msgstr "Recortar"
+
+#: lib/3rdparty/lineedit.cpp:117
+msgctxt "LineEdit|"
+msgid "&Copy"
+msgstr "&Copiar"
+
+#: lib/3rdparty/lineedit.cpp:122
+msgctxt "LineEdit|"
+msgid "&Paste"
+msgstr "&Colar"
+
+#: lib/3rdparty/lineedit.cpp:131
+msgctxt "LineEdit|"
+msgid "Delete"
+msgstr "Apagar"
+
+#: lib/3rdparty/lineedit.cpp:134
+msgctxt "LineEdit|"
+msgid "Clear All"
+msgstr "Apagar tudo"
+
+#: lib/3rdparty/lineedit.cpp:137
+msgctxt "LineEdit|"
+msgid "Select All"
+msgstr "Selecionar tudo"
+
+#: lib/3rdparty/squeezelabelv2.cpp:64
+msgctxt "SqueezeLabelV2|"
+msgid "Copy"
+msgstr "Copiar"
+
+#: lib/adblock/adblockaddsubscriptiondialog.cpp:45
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Other..."
+msgstr "Outro..."
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:14
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Add Subscription"
+msgstr "Adicionar inscrição"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:23
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Title:"
+msgstr "Título: "
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:33
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Address:"
+msgstr "Endereço:"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:53
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Add new subscription to AdBlock:"
+msgstr "Adicionar nova inscrição:"
+
+#: lib/adblock/adblockdialog.cpp:49
+msgctxt "AdBlockDialog|"
+msgid "Add Rule"
+msgstr "Adicionar filtro"
+
+#: lib/adblock/adblockdialog.cpp:50
+msgctxt "AdBlockDialog|"
+msgid "Remove Rule"
+msgstr "Remover filtro"
+
+#: lib/adblock/adblockdialog.cpp:52
+msgctxt "AdBlockDialog|"
+msgid "Add Subscription"
+msgstr "Adicionar inscrição"
+
+#: lib/adblock/adblockdialog.cpp:53
+msgctxt "AdBlockDialog|"
+msgid "Remove Subscription"
+msgstr "Remover inscrição"
+
+#: lib/adblock/adblockdialog.cpp:54
+msgctxt "AdBlockDialog|"
+msgid "Update Subscriptions"
+msgstr "Atualizar inscrições"
+
+#: lib/adblock/adblockdialog.cpp:56
+msgctxt "AdBlockDialog|"
+msgid "Learn about writing rules..."
+msgstr "Aprenda mais sobre como escrever filtros..."
+
+#: lib/adblock/adblockdialog.ui:14
+msgctxt "AdBlockDialog|"
+msgid "AdBlock Configuration"
+msgstr "Configuração do AdBlock"
+
+#: lib/adblock/adblockdialog.ui:20
+msgctxt "AdBlockDialog|"
+msgid "Enable AdBlock"
+msgstr "Ativar AdBlock"
+
+#: lib/adblock/adblockdialog.ui:32
+msgctxt "AdBlockDialog|"
+msgid "Search..."
+msgstr "Pesquisar..."
+
+#: lib/adblock/adblockdialog.ui:77
+msgctxt "AdBlockDialog|"
+msgid "Options"
+msgstr "Opções"
+
+#: lib/adblock/adblockdialog.ui:107
+msgctxt "AdBlockDialog|"
+msgid "AdBlock"
+msgstr "AdBlock"
+
+#: lib/adblock/adblockicon.cpp:34
+msgctxt "AdBlockIcon|"
+msgid "AdBlock"
+msgstr "AdBlock"
+
+#: lib/adblock/adblockicon.cpp:52
+msgctxt "AdBlockIcon|"
+msgid "AdBlock Icon"
+msgstr "Ícone do AdBlock"
+
+#: lib/adblock/adblockicon.cpp:86
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is disabled"
+msgstr "O AdBlock está desabilitado"
+
+#: lib/adblock/adblockicon.cpp:92
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is disabled on this site "
+msgstr "O AdBlock está desabilitado neste site"
+
+#: lib/adblock/adblockicon.cpp:98
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is active"
+msgstr "O AdBlock está ativo"
+
+#: lib/adblock/adblockicon.cpp:145
+msgctxt "AdBlockIcon|"
+msgid "Show AdBlock &Settings"
+msgstr "Mostrar configuraçõe&s do AdBlock"
+
+#: lib/adblock/adblockicon.cpp:153
+#, qt-format
+msgctxt "AdBlockIcon|"
+msgid "Disable on %1"
+msgstr "Desabilitar em %1"
+
+#: lib/adblock/adblockicon.cpp:159
+msgctxt "AdBlockIcon|"
+msgid "Disable only on this page"
+msgstr "Desabilitar só nessa página"
+
+#: lib/adblock/adblockmanager.cpp:184
+#, qt-format
+msgctxt "AdBlockManager|"
+msgid "Do you want to add <b>%1</b> subscription?"
+msgstr "Deseja adicionar <b>%1</b> às inscrições?"
+
+#: lib/adblock/adblockmanager.cpp:186
+msgctxt "AdBlockManager|"
+msgid "AdBlock Subscription"
+msgstr "Inscrições do AdBlock"
+
+#: lib/adblock/adblockmanager.cpp:317
+msgctxt "AdBlockManager|"
+msgid "EasyList"
+msgstr "EasyList"
+
+#: lib/adblock/adblockmanager.cpp:322
+msgctxt "AdBlockManager|"
+msgid "NoCoin List"
+msgstr "Lista NoCoin"
+
+#: lib/adblock/adblocksubscription.cpp:173
+msgctxt "AdBlockSubscription|"
+msgid "Cannot load subscription!"
+msgstr "Não foi possível carregar a inscrição!"
+
+#: lib/adblock/adblocksubscription.cpp:286
+msgctxt "AdBlockCustomList|"
+msgid "Custom Rules"
+msgstr "Filtros personalizados"
+
+#: lib/adblock/adblocktreewidget.cpp:80
+msgctxt "AdBlockTreeWidget|"
+msgid "Add Rule"
+msgstr "Adicionar filtro"
+
+#: lib/adblock/adblocktreewidget.cpp:82
+msgctxt "AdBlockTreeWidget|"
+msgid "Remove Rule"
+msgstr "Remover filtro"
+
+#: lib/adblock/adblocktreewidget.cpp:141
+msgctxt "AdBlockTreeWidget|"
+msgid "Add Custom Rule"
+msgstr "Adicionar filtro personalizado"
+
+#: lib/adblock/adblocktreewidget.cpp:141
+msgctxt "AdBlockTreeWidget|"
+msgid "Please write your rule here:"
+msgstr "Escreva aqui o seu filtro:"
+
+#: lib/adblock/adblocktreewidget.cpp:179
+#, qt-format
+msgctxt "AdBlockTreeWidget|"
+msgid "%1 (recently updated)"
+msgstr "%1 (atualizado recentemente)"
+
+#: lib/adblock/adblocktreewidget.cpp:188
+#, qt-format
+msgctxt "AdBlockTreeWidget|"
+msgid "%1 (Error: %2)"
+msgstr "%1 (erro: %2)"
+
+#: lib/adblock/adblockurlinterceptor.cpp:44
+msgctxt "AdBlockUrlInterceptor|"
+msgid "Blocked content"
+msgstr "Conteúdo bloqueado"
+
+#: lib/adblock/adblockurlinterceptor.cpp:45
+#, qt-format
+msgctxt "AdBlockUrlInterceptor|"
+msgid "Blocked by <i>%1 (%2)</i>"
+msgstr "Bloqueado por <i>%1 (%2)</i>"
+
+#: lib/app/browserwindow.cpp:204 lib/app/browserwindow.cpp:979
+msgctxt "BrowserWindow|"
+msgid "Falkon"
+msgstr "Falkon"
+
+#: lib/app/browserwindow.cpp:394
+msgctxt "BrowserWindow|"
+msgid "IP Address of current page"
+msgstr "Endereço IP da página atual"
+
+#: lib/app/browserwindow.cpp:734
+msgctxt "BrowserWindow|"
+msgid " (Private Browsing)"
+msgstr "(Navegação privada)"
+
+#: lib/app/browserwindow.cpp:981
+#, qt-format
+msgctxt "BrowserWindow|"
+msgid "%1 - Falkon"
+msgstr "%1 - Falkon"
+
+#: lib/app/browserwindow.cpp:1047
+msgctxt "BrowserWindow|"
+msgid "&Menu Bar"
+msgstr "&Barra de menu"
+
+#: lib/app/browserwindow.cpp:1052
+msgctxt "BrowserWindow|"
+msgid "&Navigation Toolbar"
+msgstr "&Barra de navegação"
+
+#: lib/app/browserwindow.cpp:1056
+msgctxt "BrowserWindow|"
+msgid "&Bookmarks Toolbar"
+msgstr "&Barra de favoritos"
+
+#: lib/app/browserwindow.cpp:1062
+msgctxt "BrowserWindow|"
+msgid "&Tabs on Top"
+msgstr "&Abas no topo"
+
+#: lib/app/browserwindow.cpp:1117
+msgctxt "BrowserWindow|"
+msgid "Other"
+msgstr "Outro"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "HTML files"
+msgstr "Arquivos HTML"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "Image files"
+msgstr "Imagens"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "Text files"
+msgstr "Arquivos de texto"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "All files"
+msgstr "Todos os arquivos"
+
+#: lib/app/browserwindow.cpp:1161
+msgctxt "BrowserWindow|"
+msgid "Open file..."
+msgstr "Abrir arquivo..."
+
+#: lib/app/browserwindow.cpp:1503
+#, qt-format
+msgctxt "BrowserWindow|"
+msgid ""
+"There are still %n open tabs and your session won't be stored.\n"
+"Are you sure you want to close this window?"
+msgid_plural ""
+"There are still %n open tabs and your session won't be stored.\n"
+"Are you sure you want to close this window?"
+msgstr[0] ""
+"Ainda existe %n aba aberta e sua sessão não será salva.\n"
+"Deseja fechar esta janela?"
+msgstr[1] ""
+"Ainda existe %n abas abertas e sua sessão não será salva.\n"
+"Deseja fechar esta janela?"
+
+#: lib/app/browserwindow.cpp:1504
+msgctxt "BrowserWindow|"
+msgid "Don't ask again"
+msgstr "Não perguntar novamente"
+
+#: lib/app/browserwindow.cpp:1505
+msgctxt "BrowserWindow|"
+msgid "There are still open tabs"
+msgstr "Ainda existem abas abertas"
+
+#: lib/app/mainapplication.cpp:1081
+msgctxt "MainApplication|"
+msgid ""
+"Falkon is not currently your default browser. Would you like to make it your "
+"default browser?"
+msgstr ""
+"O Falkon não é seu navegador padrão. Deseja fazê-lo seu navegador padrão?"
+
+#: lib/app/mainapplication.cpp:1082
+msgctxt "MainApplication|"
+msgid "Always perform this check when starting Falkon."
+msgstr "Sempre realizar esta verificação ao iniciar o Falkon."
+
+#: lib/app/mainapplication.cpp:1084
+msgctxt "MainApplication|"
+msgid "Default Browser"
+msgstr "Navegador padrão"
+
+#: lib/app/mainapplication.cpp:1205
+msgctxt "MainApplication|"
+msgid "Open new tab"
+msgstr "Abrir nova aba"
+
+#: lib/app/mainapplication.cpp:1206
+msgctxt "MainApplication|"
+msgid "Open new window"
+msgstr "Abrir nova janela"
+
+#: lib/app/mainapplication.cpp:1207
+msgctxt "MainApplication|"
+msgid "Open new private window"
+msgstr "Abrir nova janela privativa"
+
+#: lib/app/mainapplication.cpp:1222
+msgctxt "MainApplication|"
+msgid ""
+"Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
+"version 3 or (at your option) any later version. It is based on QtWebEngine "
+"and Qt Framework."
+msgstr ""
+"O Falkon é um navegador Qt novo e muito rápido. Falkon é licenciado sob a "
+"GPL versão 3 ou (à sua opção) qualquer versão posterior. Ele é baseado no "
+"QtWebEngine e no Framework Qt."
+
+#: lib/app/mainmenu.cpp:84 lib/app/mainmenu.cpp:497
+msgctxt "MainMenu|"
+msgid "Sessions"
+msgstr "Sessões"
+
+#: lib/app/mainmenu.cpp:467
+msgctxt "MainMenu|"
+msgid "&About Falkon"
+msgstr "&Sobre o Falkon"
+
+#: lib/app/mainmenu.cpp:472
+msgctxt "MainMenu|"
+msgid "Pr&eferences"
+msgstr "Preferências"
+
+#: lib/app/mainmenu.cpp:478
+msgctxt "MainMenu|"
+msgid "Quit"
+msgstr "Sair"
+
+#: lib/app/mainmenu.cpp:485
+msgctxt "MainMenu|"
+msgid "&File"
+msgstr "&Arquivo"
+
+#: lib/app/mainmenu.cpp:488
+msgctxt "MainMenu|"
+msgid "New Tab"
+msgstr "Nova aba"
+
+#: lib/app/mainmenu.cpp:489
+msgctxt "MainMenu|"
+msgid "&New Window"
+msgstr "&Nova janela"
+
+#: lib/app/mainmenu.cpp:490
+msgctxt "MainMenu|"
+msgid "New &Private Window"
+msgstr "Nova &janela privativa"
+
+#: lib/app/mainmenu.cpp:491
+msgctxt "MainMenu|"
+msgid "Open Location"
+msgstr "Abrir localização"
+
+#: lib/app/mainmenu.cpp:492
+msgctxt "MainMenu|"
+msgid "Open &File..."
+msgstr "Abrir &arquivo..."
+
+#: lib/app/mainmenu.cpp:493
+msgctxt "MainMenu|"
+msgid "Close Window"
+msgstr "Fechar janela"
+
+#: lib/app/mainmenu.cpp:500
+msgctxt "MainMenu|"
+msgid "Session Manager"
+msgstr "Gerenciador de sessão"
+
+#: lib/app/mainmenu.cpp:507
+msgctxt "MainMenu|"
+msgid "&Save Page As..."
+msgstr "&Salvar página como..."
+
+#: lib/app/mainmenu.cpp:508
+msgctxt "MainMenu|"
+msgid "Send Link..."
+msgstr "Enviar link..."
+
+#: lib/app/mainmenu.cpp:509
+msgctxt "MainMenu|"
+msgid "&Print..."
+msgstr "&Imprimir..."
+
+#: lib/app/mainmenu.cpp:514
+msgctxt "MainMenu|"
+msgid "&Edit"
+msgstr "&Editar"
+
+#: lib/app/mainmenu.cpp:517
+msgctxt "MainMenu|"
+msgid "&Undo"
+msgstr "&Desfazer"
+
+#: lib/app/mainmenu.cpp:519
+msgctxt "MainMenu|"
+msgid "&Redo"
+msgstr "&Refazer"
+
+#: lib/app/mainmenu.cpp:522
+msgctxt "MainMenu|"
+msgid "&Cut"
+msgstr "&Recortar"
+
+#: lib/app/mainmenu.cpp:524
+msgctxt "MainMenu|"
+msgid "C&opy"
+msgstr "&Copiar"
+
+#: lib/app/mainmenu.cpp:526
+msgctxt "MainMenu|"
+msgid "&Paste"
+msgstr "&Colar"
+
+#: lib/app/mainmenu.cpp:529
+msgctxt "MainMenu|"
+msgid "Select &All"
+msgstr "&Selecionar tudo"
+
+#: lib/app/mainmenu.cpp:531
+msgctxt "MainMenu|"
+msgid "&Find"
+msgstr "&Encontrar"
+
+#: lib/app/mainmenu.cpp:536
+msgctxt "MainMenu|"
+msgid "&View"
+msgstr "&Ver"
+
+#: lib/app/mainmenu.cpp:539
+msgctxt "MainMenu|"
+msgid "Toolbars"
+msgstr "Barras de ferramentas"
+
+#: lib/app/mainmenu.cpp:541
+msgctxt "MainMenu|"
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: lib/app/mainmenu.cpp:543
+msgctxt "MainMenu|"
+msgid "Character &Encoding"
+msgstr "Codificação de &caracteres"
+
+#: lib/app/mainmenu.cpp:552
+msgctxt "MainMenu|"
+msgid "Sta&tus Bar"
+msgstr "Barra de &status"
+
+#: lib/app/mainmenu.cpp:554
+msgctxt "MainMenu|"
+msgid "&Stop"
+msgstr "&Parar"
+
+#: lib/app/mainmenu.cpp:555
+msgctxt "MainMenu|"
+msgid "&Reload"
+msgstr "&Recarregar"
+
+#: lib/app/mainmenu.cpp:557
+msgctxt "MainMenu|"
+msgid "Zoom &In"
+msgstr "&Aumentar"
+
+#: lib/app/mainmenu.cpp:558
+msgctxt "MainMenu|"
+msgid "Zoom &Out"
+msgstr "&Diminuir"
+
+#: lib/app/mainmenu.cpp:559
+msgctxt "MainMenu|"
+msgid "Reset"
+msgstr "Redefinir"
+
+#: lib/app/mainmenu.cpp:563
+msgctxt "MainMenu|"
+msgid "&Page Source"
+msgstr "Código-&fonte da página"
+
+#: lib/app/mainmenu.cpp:565
+msgctxt "MainMenu|"
+msgid "&FullScreen"
+msgstr "Tela &cheia"
+
+#: lib/app/mainmenu.cpp:568
+msgctxt "MainMenu|"
+msgid "&Tools"
+msgstr "&Ferramentas"
+
+#: lib/app/mainmenu.cpp:571
+msgctxt "MainMenu|"
+msgid "&Web Search"
+msgstr "Pesquisar na &Web"
+
+#: lib/app/mainmenu.cpp:572
+msgctxt "MainMenu|"
+msgid "Site &Info"
+msgstr "&Informações do site"
+
+#: lib/app/mainmenu.cpp:575
+msgctxt "MainMenu|"
+msgid "&Download Manager"
+msgstr "Gerenciador de &downloads"
+
+#: lib/app/mainmenu.cpp:576
+msgctxt "MainMenu|"
+msgid "&Cookies Manager"
+msgstr "Gerenciador de &cookies"
+
+#: lib/app/mainmenu.cpp:577
+msgctxt "MainMenu|"
+msgid "Web In&spector"
+msgstr "In&spetor Web"
+
+#: lib/app/mainmenu.cpp:578
+msgctxt "MainMenu|"
+msgid "Clear Recent &History"
+msgstr "Limpar histórico &recente"
+
+#: lib/app/mainmenu.cpp:583
+msgctxt "MainMenu|"
+msgid "&Extensions"
+msgstr "Extensões"
+
+#: lib/app/mainmenu.cpp:589
+msgctxt "MainMenu|"
+msgid "&Help"
+msgstr "Ajuda"
+
+#: lib/app/mainmenu.cpp:592
+msgctxt "MainMenu|"
+msgid "About &Qt"
+msgstr "Sobre o Qt"
+
+#: lib/app/mainmenu.cpp:597
+msgctxt "MainMenu|"
+msgid "Information about application"
+msgstr "Informações do aplicativo"
+
+#: lib/app/mainmenu.cpp:598
+msgctxt "MainMenu|"
+msgid "Configuration Information"
+msgstr "Informações de configurações"
+
+#: lib/app/mainmenu.cpp:599
+msgctxt "MainMenu|"
+msgid "Report &Issue"
+msgstr "Relatar &problema"
+
+#: lib/app/mainmenu.cpp:612
+msgctxt "MainMenu|"
+msgid "Restore &Closed Tab"
+msgstr "Restaurar aba &fechada"
+
+#: lib/autofill/autofillicon.cpp:29
+msgctxt "AutoFillWidget|"
+msgid "Choose username to login"
+msgstr "Escolha nome de usuário para fazer login"
+
+#: lib/autofill/autofillnotification.cpp:39
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "on %1"
+msgstr "em %1"
+
+#: lib/autofill/autofillnotification.cpp:43
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "for <b>%1</b>"
+msgstr "para <b>%1</b>"
+
+#: lib/autofill/autofillnotification.cpp:47
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "Do you want Falkon to update saved password %1?"
+msgstr "Deseja que o Falkon atualize as senhas salvas %1?"
+
+#: lib/autofill/autofillnotification.cpp:53
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "Do you want Falkon to remember the password %1 %2?"
+msgstr "Deseja que o Falkon lembre a senha %1 %2?"
+
+#: lib/autofill/autofillnotification.ui:69
+msgctxt "AutoFillNotification|"
+msgid "Update"
+msgstr "Atualizar"
+
+#: lib/autofill/autofillnotification.ui:85
+msgctxt "AutoFillNotification|"
+msgid "Remember"
+msgstr "Lembrar"
+
+#: lib/autofill/autofillnotification.ui:101
+msgctxt "AutoFillNotification|"
+msgid "Never For This Site"
+msgstr "Nunca para esse site"
+
+#: lib/autofill/autofillnotification.ui:117
+msgctxt "AutoFillNotification|"
+msgid "Not Now"
+msgstr "Agora não"
+
+#: lib/autofill/autofillwidget.ui:11
+msgctxt "AutoFillWidget|"
+msgid "Login as:"
+msgstr "Logar como:"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:257
+msgctxt "AutoFill|"
+msgid "Database (encrypted)"
+msgstr "Banco de dados (criptografado)"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
+msgctxt "MasterPasswordDialog|"
+msgid "Warning!"
+msgstr "Atenção!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
+msgctxt "MasterPasswordDialog|"
+msgid "You entered a wrong password!"
+msgstr "Você inseriu uma senha errada!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
+msgctxt "MasterPasswordDialog|"
+msgid "New/Confirm password fields do not match!"
+msgstr "Senhas não combinam!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:578
+msgctxt "AutoFill|"
+msgid "Warning!"
+msgstr "Atenção!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:579
+msgctxt "AutoFill|"
+msgid ""
+"This backend needs a master password to be set! Falkon just switches to its "
+"default backend"
+msgstr ""
+"Esta infraestrutura precisa de uma senha mestre a ser definida!  O Falkon "
+"vai trocar para a infraestrutura padrão."
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
+msgctxt "MasterPasswordDialog|"
+msgid "Are you sure you want to clear master password and decrypt data?"
+msgstr ""
+"Tem certeza que deseja limpar a senha mestre e descriptografar os dados?"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
+msgctxt "MasterPasswordDialog|"
+msgid "Some data has not been decrypted. The master password was not cleared!"
+msgstr ""
+"Alguns dados não foram descriptografados.  A senha mestre não foi limpa!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:669
+msgctxt "AutoFill|"
+msgid "Enter Master Password"
+msgstr "Digite a senha mestra"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:673
+msgctxt "AutoFill|"
+msgid "Permission is required, please enter Master Password:"
+msgstr "É necessária permissão, insira a senha mestre:"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:679
+msgctxt "AutoFill|"
+msgid "Entered password is wrong!"
+msgstr "A senha inserida está errada!"
+
+#: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
+msgctxt "AutoFill|"
+msgid "Database (plaintext)"
+msgstr "Banco de dados (texto simples)"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:20
+msgctxt "MasterPasswordDialog|"
+msgid "Encrypted DataBase Settings"
+msgstr "Configurações do banco de dados criptografado"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:33
+msgctxt "MasterPasswordDialog|"
+msgid "Set/Change Master Password..."
+msgstr "Criar/mudar senha mestre"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:36
+msgctxt "MasterPasswordDialog|"
+msgid "This backend does not work without a master password."
+msgstr "Esta infraestrutura não funciona sem uma senha mestre."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:43
+msgctxt "MasterPasswordDialog|"
+msgid "Clear Master Password..."
+msgstr "Limpar senha mestre..."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:46
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"This option clears the master password and moves all encrypted data to the "
+"\"DataBase (Plain Text)\" backend, and switches to it."
+msgstr ""
+"Essa opção redefine a senha mestre e move o conteúdo criptografado para a "
+"infraestrutura \"Banco de dados (texto simples)\" e troca para ele."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:64
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"The Master Password is used to protect site passwords and form data. If you "
+"set a Master Password you will be asked to enter it once per session."
+msgstr ""
+"A senha mestre é usada para proteger senhas e dados de formulário. Se você "
+"definir uma senha mestre você será indagado a inseri-la a cada vez que abrir "
+"uma nova sessão."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:76
+msgctxt "MasterPasswordDialog|"
+msgid "Current Password:"
+msgstr "Senha atual:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:83
+msgctxt "MasterPasswordDialog|"
+msgid "New Password:"
+msgstr "Nova senha:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:90
+msgctxt "MasterPasswordDialog|"
+msgid "Confirm Password:"
+msgstr "Confirmar senha:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:120
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
+msgstr "<b>Nota:</b> Esta senha mestre não é modificável. Não a esqueça."
+
+#: lib/bookmarks/bookmarks.cpp:207
+msgctxt "Bookmarks|"
+msgid "Bookmarks Toolbar"
+msgstr "Barra de favoritos"
+
+#: lib/bookmarks/bookmarks.cpp:208
+msgctxt "Bookmarks|"
+msgid "Bookmarks located in Bookmarks Toolbar"
+msgstr "Favoritos localizados na barra de favoritos"
+
+#: lib/bookmarks/bookmarks.cpp:211
+msgctxt "Bookmarks|"
+msgid "Bookmarks Menu"
+msgstr "Menu favoritos"
+
+#: lib/bookmarks/bookmarks.cpp:212
+msgctxt "Bookmarks|"
+msgid "Bookmarks located in Bookmarks Menu"
+msgstr "Favoritos localizados no menu favoritos"
+
+#: lib/bookmarks/bookmarks.cpp:215
+msgctxt "Bookmarks|"
+msgid "Unsorted Bookmarks"
+msgstr "Favoritos não organizados"
+
+#: lib/bookmarks/bookmarks.cpp:216
+msgctxt "Bookmarks|"
+msgid "All other bookmarks"
+msgstr "Todos os outros favoritos"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.cpp:64
+msgctxt "BookmarksExportDialog|"
+msgid "Error!"
+msgstr "Erro!"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:14
+msgctxt "BookmarksExportDialog|"
+msgid "Export Bookmarks"
+msgstr "Exportar favoritos"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:20
+msgctxt "BookmarksExportDialog|"
+msgid "<b>Export Bookmarks</b>"
+msgstr "<b>Exportar favoritos</b>"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:27
+msgctxt "BookmarksExportDialog|"
+msgid "Export options"
+msgstr "Opções de exportação"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
+msgctxt "BookmarksExportDialog|"
+msgid "Choose..."
+msgstr "Escolher..."
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
+msgctxt "BookmarksExportDialog|"
+msgid "Output File:"
+msgstr "Arquivo de saída:"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:89
+msgctxt "BookmarksExportDialog|"
+msgid "Format:"
+msgstr "Formato:"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:31
+msgctxt "BookmarksExporter|"
+msgid "HTML File"
+msgstr "Arquivo HTML"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:37
+msgctxt "BookmarksExporter|"
+msgid "HTML Bookmarks"
+msgstr "Favoritos em HTML"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:38
+msgctxt "BookmarksExporter|"
+msgid "Choose file..."
+msgstr "Escolher arquivo..."
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:47
+msgctxt "BookmarksExporter|"
+msgid "Cannot open file for writing!"
+msgstr "Não foi possível abrir o arquivo para escrita!"
+
+#: lib/bookmarks/bookmarksicon.cpp:37 lib/bookmarks/bookmarksicon.cpp:108
+msgctxt "BookmarksIcon|"
+msgid "Bookmark this Page"
+msgstr "Adicionar essa página aos favoritos"
+
+#: lib/bookmarks/bookmarksicon.cpp:100
+msgctxt "BookmarksIcon|"
+msgid "Edit this bookmark"
+msgstr "Editar este favorito"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:113
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
+msgctxt "BookmarksImportDialog|"
+msgid "Error!"
+msgstr "Erro!"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
+msgctxt "BookmarksImportDialog|"
+msgid "No bookmarks were found."
+msgstr "Nenhum favorito encontrado."
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:125
+msgctxt "BookmarksImportDialog|"
+msgid "Finish"
+msgstr "Terminar"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:157
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:270
+msgctxt "BookmarksImportDialog|"
+msgid "Next >"
+msgstr "Avançar >"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:186
+#, qt-format
+msgctxt "BookmarksImportDialog|"
+msgid "<b>Importing from %1</b>"
+msgstr "<b>Importando de %1</b>"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:20
+msgctxt "BookmarksImportDialog|"
+msgid "Import Bookmarks"
+msgstr "Importar favoritos"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:26
+msgctxt "BookmarksImportDialog|"
+msgid "<b>Import Bookmarks</b>"
+msgstr "<b>Importar favoritos</b>"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:74
+msgctxt "BookmarksImportDialog|"
+msgid "Internet Explorer"
+msgstr "Internet Explorer"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:83
+msgctxt "BookmarksImportDialog|"
+msgid "Html File"
+msgstr "Arquivo HTML"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:95
+msgctxt "BookmarksImportDialog|"
+msgid "Choose from which you want to import bookmarks:"
+msgstr "Escolha o navegador do que você deseja importar os favoritos:"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:125
+msgctxt "BookmarksImportDialog|"
+msgid "Choose..."
+msgstr "Escolha..."
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:257
+msgctxt "BookmarksImportDialog|"
+msgid "< Back"
+msgstr "< Voltar"
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:32
+msgctxt "BookmarksImporter|"
+msgid ""
+"Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
+"is usually located in"
+msgstr ""
+"Google Chrome armazena seus favoritos em um arquivo de texto chamado "
+"<b>Bookmarks</b>. Este arquivo normalmente pode ser encontrado em"
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
+msgctxt "BookmarksImporter|"
+msgid "Choose file..."
+msgstr "Escolher arquivo..."
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
+msgctxt "BookmarksImporter|"
+msgid "Unable to open file."
+msgstr "Não foi possível abrir o arquivo."
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:75
+msgctxt "BookmarksImporter|"
+msgid "Cannot parse JSON file!"
+msgstr "Não foi possível analisar o arquivo JSON!"
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:42
+msgctxt "BookmarksImporter|"
+msgid ""
+"Mozilla Firefox stores its bookmarks in <b>places.sqlite</b> SQLite "
+"database. This file is usually located in"
+msgstr ""
+"O Mozilla Firefox salva os favoritos em um banco de dados SQLite chamado "
+"<b>places.sqlite</b>, que geralmente fica em"
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:70
+msgctxt "BookmarksImportDialog|"
+msgid "File does not exist."
+msgstr "O arquivo não existe."
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:77
+msgctxt "BookmarksImportDialog|"
+msgid "Unable to open database. Is Firefox running?"
+msgstr "Não foi possível abrir o banco de dados. O Firefox está aberto?"
+
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:32
+msgctxt "BookmarksImporter|"
+msgid ""
+"You can import bookmarks from any browser that supports HTML exporting. This "
+"file has usually these suffixes"
+msgstr ""
+"Pode importar os favoritos de qualquer navegador com suporte a exportação em "
+"HTML. Esses arquivos geralmente terminam com"
+
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:43
+msgctxt "BookmarksImporter|"
+msgid "HTML Bookmarks"
+msgstr "Favoritos em HTML"
+
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:33
+msgctxt "BookmarksImporter|"
+msgid ""
+"Internet Explorer stores its bookmarks in <b>Favorites</b> folder. This "
+"folder is usually located in"
+msgstr ""
+"O Internet Explorer salva os favoritos na pasta <b>Favoritos</b>, que "
+"geralmente fica em"
+
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
+msgctxt "BookmarksImporter|"
+msgid "Directory does not exist."
+msgstr "A pasta não existe."
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
+msgctxt "BookmarksImporter|"
+msgid ""
+"Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
+"usually located in"
+msgstr ""
+"O Opera salva os favoritos no arquivo <b>bookmarks.adr</b>, que geralmente "
+"fica em"
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
+msgctxt "BookmarksImporter|"
+msgid "File is not valid Opera bookmarks file!"
+msgstr "O arquivo de favoritos do Opera está num formato inválido!"
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
+msgctxt "BookmarksImporter|"
+msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
+msgstr "Apenas arquivos codificados em UTF-8 são suportados!"
+
+#: lib/bookmarks/bookmarksmanager.cpp:105
+msgctxt "BookmarksManager|"
+msgid "Open in new tab"
+msgstr "Abrir em uma nova aba"
+
+#: lib/bookmarks/bookmarksmanager.cpp:106
+msgctxt "BookmarksManager|"
+msgid "Open in new window"
+msgstr "Abrir em uma nova janela"
+
+#: lib/bookmarks/bookmarksmanager.cpp:107
+msgctxt "BookmarksManager|"
+msgid "Open in new private window"
+msgstr "Abrir em uma nova janela privativa"
+
+#: lib/bookmarks/bookmarksmanager.cpp:110
+#: lib/bookmarks/bookmarksmanager.cpp:177
+msgctxt "BookmarksManager|"
+msgid "New Bookmark"
+msgstr "Novo favorito"
+
+#: lib/bookmarks/bookmarksmanager.cpp:111
+#: lib/bookmarks/bookmarksmanager.cpp:185
+msgctxt "BookmarksManager|"
+msgid "New Folder"
+msgstr "Nova pasta"
+
+#: lib/bookmarks/bookmarksmanager.cpp:112
+msgctxt "BookmarksManager|"
+msgid "New Separator"
+msgstr "Novo separador"
+
+#: lib/bookmarks/bookmarksmanager.cpp:114
+msgctxt "BookmarksManager|"
+msgid "Delete"
+msgstr "Apagar"
+
+#: lib/bookmarks/bookmarksmanager.ui:14
+msgctxt "BookmarksManager|"
+msgid "Bookmarks"
+msgstr "Favoritos"
+
+#: lib/bookmarks/bookmarksmanager.ui:32
+msgctxt "BookmarksManager|"
+msgid "Title:"
+msgstr "Título: "
+
+#: lib/bookmarks/bookmarksmanager.ui:42
+msgctxt "BookmarksManager|"
+msgid "Address:"
+msgstr "Endereço:"
+
+#: lib/bookmarks/bookmarksmanager.ui:52
+msgctxt "BookmarksManager|"
+msgid "Keyword:"
+msgstr "Palavra chave:"
+
+#: lib/bookmarks/bookmarksmanager.ui:62
+msgctxt "BookmarksManager|"
+msgid "Description"
+msgstr "Descrição"
+
+#: lib/bookmarks/bookmarksmenu.cpp:166
+msgctxt "BookmarksMenu|"
+msgid "&Bookmarks"
+msgstr "&Favoritos"
+
+#: lib/bookmarks/bookmarksmenu.cpp:168
+msgctxt "BookmarksMenu|"
+msgid "Bookmark &This Page"
+msgstr "Favoritar &esta página"
+
+#: lib/bookmarks/bookmarksmenu.cpp:169
+msgctxt "BookmarksMenu|"
+msgid "Bookmark &All Tabs"
+msgstr "Favoritar &todas as abas"
+
+#: lib/bookmarks/bookmarksmenu.cpp:170
+msgctxt "BookmarksMenu|"
+msgid "Organize &Bookmarks"
+msgstr "Organizar &favoritos"
+
+#: lib/bookmarks/bookmarksmodel.cpp:147
+msgctxt "BookmarksModel|"
+msgid "Title"
+msgstr "Título"
+
+#: lib/bookmarks/bookmarksmodel.cpp:149
+msgctxt "BookmarksModel|"
+msgid "Address"
+msgstr "Endereço"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:73
+msgctxt "BookmarksToolbar|"
+msgid "Open in new tab"
+msgstr "Abrir em uma nova aba"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:74
+msgctxt "BookmarksToolbar|"
+msgid "Open in new window"
+msgstr "Abrir em uma nova janela"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:75
+msgctxt "BookmarksToolbar|"
+msgid "Open in new private window"
+msgstr "Abrir em uma nova janela privativa"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:185
+msgctxt "BookmarksToolbar|"
+msgid "New Folder"
+msgstr "Nova pasta"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:78
+msgctxt "BookmarksToolbar|"
+msgid "Edit"
+msgstr "Editar"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:79
+msgctxt "BookmarksToolbar|"
+msgid "Delete"
+msgstr "Apagar"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:81
+msgctxt "BookmarksToolbar|"
+msgid "Show Only Icons"
+msgstr "Mostrar somente ícones"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:85
+msgctxt "BookmarksToolbar|"
+msgid "Show Only Text"
+msgstr "Mostrar somente texto"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:185
+msgctxt "BookmarksToolbar|"
+msgid "Enter Folder Name:"
+msgstr "Digitar nome da pasta:"
+
+#: lib/bookmarks/bookmarkstools.cpp:76
+#, qt-format
+msgctxt "BookmarksFoldersMenu|"
+msgid "Choose %1"
+msgstr "Escolher %1"
+
+#: lib/bookmarks/bookmarkstools.cpp:153
+msgctxt "Bookmarks|"
+msgid "Choose name and location of this bookmark."
+msgstr "Escolha o nome e lugar desse favorito."
+
+#: lib/bookmarks/bookmarkstools.cpp:157
+msgctxt "Bookmarks|"
+msgid "Add New Bookmark"
+msgstr "Adicionar novo favorito"
+
+#: lib/bookmarks/bookmarkstools.cpp:197
+msgctxt "Bookmarks|"
+msgid "Choose folder for bookmarks:"
+msgstr "Escolha a pasta dos favoritos:"
+
+#: lib/bookmarks/bookmarkstools.cpp:198
+msgctxt "Bookmarks|"
+msgid "Bookmark All Tabs"
+msgstr "Adicionar todas as abas aos favoritos"
+
+#: lib/bookmarks/bookmarkstools.cpp:239
+msgctxt "Bookmarks|"
+msgid "Title:"
+msgstr "Título: "
+
+#: lib/bookmarks/bookmarkstools.cpp:242
+msgctxt "Bookmarks|"
+msgid "Address:"
+msgstr "Endereço:"
+
+#: lib/bookmarks/bookmarkstools.cpp:244
+msgctxt "Bookmarks|"
+msgid "Keyword:"
+msgstr "Palavra chave:"
+
+#: lib/bookmarks/bookmarkstools.cpp:247
+msgctxt "Bookmarks|"
+msgid "Description:"
+msgstr "Descrição:"
+
+#: lib/bookmarks/bookmarkstools.cpp:252
+msgctxt "Bookmarks|"
+msgid "Edit Bookmark"
+msgstr "Editar favorito"
+
+#: lib/bookmarks/bookmarkstools.cpp:344
+msgctxt "Bookmarks|"
+msgid "Confirmation"
+msgstr "Confirmação"
+
+#: lib/bookmarks/bookmarkstools.cpp:345
+#, qt-format
+msgctxt "Bookmarks|"
+msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
+msgstr "Deseja abrir todos os favoritos da pasta '%1' em abas?"
+
+#: lib/bookmarks/bookmarkstools.cpp:440
+msgctxt "Bookmarks|"
+msgid "Empty"
+msgstr "Vazio"
+
+#: lib/bookmarks/bookmarkswidget.cpp:98
+msgctxt "BookmarksWidget|"
+msgid "Update Bookmark"
+msgstr "Atualizar favorito"
+
+#: lib/bookmarks/bookmarkswidget.cpp:112 lib/bookmarks/bookmarkswidget.ui:33
+msgctxt "BookmarksWidget|"
+msgid "Add to Speed Dial"
+msgstr "Adicionar ao acesso rápido"
+
+#: lib/bookmarks/bookmarkswidget.cpp:116
+msgctxt "BookmarksWidget|"
+msgid "Remove from Speed Dial"
+msgstr "Remover do acesso rápido"
+
+#: lib/bookmarks/bookmarkswidget.cpp:121
+msgctxt "BookmarksWidget|"
+msgid "Remove from Bookmarks"
+msgstr "Remover dos favoritos"
+
+#: lib/bookmarks/bookmarkswidget.ui:20
+msgctxt "BookmarksWidget|"
+msgid "Add to Bookmarks"
+msgstr "Adicionar aos favoritos"
+
+#: lib/cookies/cookiemanager.cpp:78
+msgctxt "CookieManager|"
+msgid "Search"
+msgstr "Pesquisar"
+
+#: lib/cookies/cookiemanager.cpp:105
+msgctxt "CookieManager|"
+msgid "Confirmation"
+msgstr "Confirmação"
+
+#: lib/cookies/cookiemanager.cpp:106
+msgctxt "CookieManager|"
+msgid "Are you sure you want to delete all cookies on your computer?"
+msgstr "Tem certeza que deseja remover todos os cookies em seu computador?"
+
+#: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
+#: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
+#: lib/cookies/cookiemanager.cpp:155 lib/cookies/cookiemanager.cpp:156
+#: lib/cookies/cookiemanager.ui:154 lib/cookies/cookiemanager.ui:164
+#: lib/cookies/cookiemanager.ui:174 lib/cookies/cookiemanager.ui:184
+#: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
+msgctxt "CookieManager|"
+msgid "<cookie not selected>"
+msgstr "<cookie não selecionado>"
+
+#: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
+#: lib/cookies/cookiemanager.ui:245
+msgctxt "CookieManager|"
+msgid "Remove cookies"
+msgstr "Remover cookies"
+
+#: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
+#: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
+#: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
+msgctxt "CookieManager|"
+msgid "<multiple cookies selected>"
+msgstr "<vários cookies selecionados>"
+
+#: lib/cookies/cookiemanager.cpp:178
+msgctxt "CookieManager|"
+msgid "Secure only"
+msgstr "Só os seguros"
+
+#: lib/cookies/cookiemanager.cpp:178
+msgctxt "CookieManager|"
+msgid "All connections"
+msgstr "Todas as ligações"
+
+#: lib/cookies/cookiemanager.cpp:179
+msgctxt "CookieManager|"
+msgid "Session cookie"
+msgstr "Cookie da sessão"
+
+#: lib/cookies/cookiemanager.cpp:181
+msgctxt "CookieManager|"
+msgid "Remove cookie"
+msgstr "Remover cookie"
+
+#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.ui:126
+msgctxt "CookieManager|"
+msgid "Server:"
+msgstr "Servidor:"
+
+#: lib/cookies/cookiemanager.cpp:186
+msgctxt "CookieManager|"
+msgid "Add to whitelist"
+msgstr "Adicionar à lista de permissões"
+
+#: lib/cookies/cookiemanager.cpp:193
+msgctxt "CookieManager|"
+msgid "Already blacklisted!"
+msgstr "Já está na lista de proibições!"
+
+#: lib/cookies/cookiemanager.cpp:193
+#, qt-format
+msgctxt "CookieManager|"
+msgid "The server \"%1\" is already in blacklist, please remove it first."
+msgstr ""
+"O servidor \"%1\" já está na lista de proibições, por favor remova-o "
+"primeiro."
+
+#: lib/cookies/cookiemanager.cpp:209
+msgctxt "CookieManager|"
+msgid "Add to blacklist"
+msgstr "Adicionar à lista de proibições"
+
+#: lib/cookies/cookiemanager.cpp:220
+msgctxt "CookieManager|"
+msgid "Already whitelisted!"
+msgstr "Já está na lista de permissões!"
+
+#: lib/cookies/cookiemanager.cpp:220
+#, qt-format
+msgctxt "CookieManager|"
+msgid "The server \"%1\" is already in whitelist, please remove it first."
+msgstr "O servidor \"%1\" já está na lista de permissões, remova-o primeiro."
+
+#: lib/cookies/cookiemanager.ui:14
+msgctxt "CookieManager|"
+msgid "Cookies"
+msgstr "Cookies"
+
+#: lib/cookies/cookiemanager.ui:36
+msgctxt "CookieManager|"
+msgid "Stored Cookies"
+msgstr "Cookies salvos"
+
+#: lib/cookies/cookiemanager.ui:42
+msgctxt "CookieManager|"
+msgid "Find: "
+msgstr "Localizar: "
+
+#: lib/cookies/cookiemanager.ui:52
+msgctxt "CookieManager|"
+msgid "These cookies are stored on your computer:"
+msgstr "Estes cookies estão guardados no computador:"
+
+#: lib/cookies/cookiemanager.ui:66
+msgctxt "CookieManager|"
+msgid "Server"
+msgstr "Servidor"
+
+#: lib/cookies/cookiemanager.ui:71
+msgctxt "CookieManager|"
+msgid "Cookie name"
+msgstr "Nome do cookie"
+
+#: lib/cookies/cookiemanager.ui:109
+msgctxt "CookieManager|"
+msgid "Name:"
+msgstr "Nome:"
+
+#: lib/cookies/cookiemanager.ui:119
+msgctxt "CookieManager|"
+msgid "Value:"
+msgstr "Valor:"
+
+#: lib/cookies/cookiemanager.ui:133
+msgctxt "CookieManager|"
+msgid "Path:"
+msgstr "Caminho:"
+
+#: lib/cookies/cookiemanager.ui:140
+msgctxt "CookieManager|"
+msgid "Secure:"
+msgstr "Seguro:"
+
+#: lib/cookies/cookiemanager.ui:147
+msgctxt "CookieManager|"
+msgid "Expiration:"
+msgstr "Termina em:"
+
+#: lib/cookies/cookiemanager.ui:238
+msgctxt "CookieManager|"
+msgid "Remove all cookies"
+msgstr "Remover todos os cookies"
+
+#: lib/cookies/cookiemanager.ui:269
+msgctxt "CookieManager|"
+msgid "Cookie Filtering"
+msgstr "Filtrar cookie"
+
+#: lib/cookies/cookiemanager.ui:275
+msgctxt "CookieManager|"
+msgid "<b>Cookie whitelist</b>"
+msgstr "<b>Lista de permissões de cookies</b>"
+
+#: lib/cookies/cookiemanager.ui:282
+msgctxt "CookieManager|"
+msgid ""
+"Cookies from these servers will ALWAYS be accepted (even if you have "
+"disabled saving cookies)"
+msgstr ""
+"Cookies desses servidores SEMPRE serão aceitos (mesmo que você desabilite a "
+"função cookies)"
+
+#: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
+msgctxt "CookieManager|"
+msgid "Add"
+msgstr "Adicionar"
+
+#: lib/cookies/cookiemanager.ui:314 lib/cookies/cookiemanager.ui:368
+msgctxt "CookieManager|"
+msgid "Remove"
+msgstr "Remover"
+
+#: lib/cookies/cookiemanager.ui:326
+msgctxt "CookieManager|"
+msgid "<b>Cookie blacklist</b>"
+msgstr "<b>Lista de proibições de cookies</b>"
+
+#: lib/cookies/cookiemanager.ui:333
+msgctxt "CookieManager|"
+msgid "Cookies from these servers will NEVER be accepted"
+msgstr ""
+"Cookies desses servidores NUNCA serão aceitos (mesmo que você habilite a "
+"função cookies)"
+
+#: lib/cookies/cookiemanager.ui:385
+msgctxt "CookieManager|"
+msgid "Settings"
+msgstr "Configurações"
+
+#: lib/cookies/cookiemanager.ui:407
+msgctxt "CookieManager|"
+msgid "Filter 3rd party cookies"
+msgstr "Filtrar cookies de terceiros"
+
+#: lib/cookies/cookiemanager.ui:414
+msgctxt "CookieManager|"
+msgid "<b>Cookie Settings</b>"
+msgstr "<b>Configurações de cookies</b>"
+
+#: lib/cookies/cookiemanager.ui:421
+msgctxt "CookieManager|"
+msgid "Allow storing of cookies"
+msgstr "Permitir o armazenamento de cookies"
+
+#: lib/cookies/cookiemanager.ui:428
+msgctxt "CookieManager|"
+msgid "Filter tracking cookies"
+msgstr "Filtrar cookies de rastreamento"
+
+#: lib/cookies/cookiemanager.ui:435
+msgctxt "CookieManager|"
+msgid "Delete cookies on close"
+msgstr "Excluir cookies ao fechar"
+
+#: lib/downloads/downloaditem.cpp:73
+msgctxt "DownloadItem|"
+msgid "Remaining time unavailable"
+msgstr "Tempo restante não disponível"
+
+#: lib/downloads/downloaditem.cpp:128
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Done - %1 (%2)"
+msgstr "Concluído - %1 (%2)"
+
+#: lib/downloads/downloaditem.cpp:132
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Error - %1"
+msgstr "Erro - %1"
+
+#: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:275
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Cancelled - %1"
+msgstr "Cancelado - %1"
+
+#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:319
+msgctxt "DownloadItem|"
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#: lib/downloads/downloaditem.cpp:190
+msgctxt "DownloadItem|"
+msgid "few seconds"
+msgstr "poucos segundos"
+
+#: lib/downloads/downloaditem.cpp:195
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n seconds"
+msgid_plural "%n seconds"
+msgstr[0] "%n segundos"
+msgstr[1] "%n segundos"
+
+#: lib/downloads/downloaditem.cpp:200
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n minutes"
+msgid_plural "%n minutes"
+msgstr[0] "%n minutos"
+msgstr[1] "%n minutos"
+
+#: lib/downloads/downloaditem.cpp:205
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n hours"
+msgid_plural "%n hours"
+msgstr[0] "%n horas"
+msgstr[1] "%n horas"
+
+#: lib/downloads/downloaditem.cpp:212
+msgctxt "DownloadItem|"
+msgid "Unknown speed"
+msgstr "Velocidade desconhecida"
+
+#: lib/downloads/downloaditem.cpp:217
+msgctxt "DownloadItem|"
+msgid "kB/s"
+msgstr "kB/s"
+
+#: lib/downloads/downloaditem.cpp:222
+msgctxt "DownloadItem|"
+msgid "MB/s"
+msgstr "MB/s"
+
+#: lib/downloads/downloaditem.cpp:226
+msgctxt "DownloadItem|"
+msgid "GB/s"
+msgstr "GB/s"
+
+#: lib/downloads/downloaditem.cpp:254
+msgctxt "DownloadItem|"
+msgid "Unknown size"
+msgstr "Tamanho desconhecido"
+
+#: lib/downloads/downloaditem.cpp:255
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%2 - unknown size (%3)"
+msgstr "%2 - tamanho desconhecido (%3)"
+
+#: lib/downloads/downloaditem.cpp:258
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Remaining %1 - %2 of %3 (%4)"
+msgstr "Falta(m) %1 - %2 de %3 (%4)"
+
+#: lib/downloads/downloaditem.cpp:290
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Paused - %1"
+msgstr "Pausado - %1"
+
+#: lib/downloads/downloaditem.cpp:303
+msgctxt "DownloadItem|"
+msgid "Open File"
+msgstr "Abrir arquivo"
+
+#: lib/downloads/downloaditem.cpp:305
+msgctxt "DownloadItem|"
+msgid "Open Folder"
+msgstr "Abrir pasta"
+
+#: lib/downloads/downloaditem.cpp:307
+msgctxt "DownloadItem|"
+msgid "Copy Download Link"
+msgstr "Copiar link do download"
+
+#: lib/downloads/downloaditem.cpp:309
+msgctxt "DownloadItem|"
+msgid "Cancel downloading"
+msgstr "Cancelar"
+
+#: lib/downloads/downloaditem.cpp:312
+msgctxt "DownloadItem|"
+msgid "Resume downloading"
+msgstr "Continuar o download"
+
+#: lib/downloads/downloaditem.cpp:314
+msgctxt "DownloadItem|"
+msgid "Pause downloading"
+msgstr "Pausar o download"
+
+#: lib/downloads/downloaditem.cpp:317
+msgctxt "DownloadItem|"
+msgid "Remove From List"
+msgstr "Remover da lista"
+
+#: lib/downloads/downloaditem.cpp:319
+msgctxt "DownloadItem|"
+msgid "Error"
+msgstr "Erro"
+
+#: lib/downloads/downloaditem.cpp:345
+msgctxt "DownloadItem|"
+msgid "Not found"
+msgstr "Não encontrado"
+
+#: lib/downloads/downloaditem.cpp:345
+#, qt-format
+msgctxt "DownloadItem|"
+msgid ""
+"Sorry, the file \n"
+" %1 \n"
+" was not found!"
+msgstr ""
+"Desculpe, o arquivo \n"
+" %1 \n"
+"não foi encontrado!"
+
+#: lib/downloads/downloadmanager.cpp:188 lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.ui:20
+msgctxt "DownloadManager|"
+msgid "Download Manager"
+msgstr "Gerenciador de downloads"
+
+#: lib/downloads/downloadmanager.cpp:226
+#, qt-format
+msgctxt "DownloadManager|"
+msgid "%1% of %2 files (%3) %4 remaining"
+msgstr "%1% de %2 arquivos - restam (%3) %4"
+
+#: lib/downloads/downloadmanager.cpp:230
+#, qt-format
+msgctxt "DownloadManager|"
+msgid "%1% - Download Manager"
+msgstr "%1% - Gerenciador de downloads"
+
+#: lib/downloads/downloadmanager.cpp:300
+msgctxt "DownloadManager|"
+msgid "Save file as..."
+msgstr "Salvar arquivo como..."
+
+#: lib/downloads/downloadmanager.cpp:310
+msgctxt "DownloadManager|"
+msgid "MIME HTML Archive (*.mhtml)"
+msgstr "Arquivo MIME HTML (*.mhtml)"
+
+#: lib/downloads/downloadmanager.cpp:311
+msgctxt "DownloadManager|"
+msgid "HTML Page, single (*.html)"
+msgstr "Página HTML, única (*.html)"
+
+#: lib/downloads/downloadmanager.cpp:312
+msgctxt "DownloadManager|"
+msgid "HTML Page, complete (*.html)"
+msgstr "Página HTML, completa (*.html)"
+
+#: lib/downloads/downloadmanager.cpp:316
+msgctxt "DownloadManager|"
+msgid "Save page as..."
+msgstr "Salvar página como..."
+
+#: lib/downloads/downloadmanager.cpp:410
+msgctxt "DownloadManager|"
+msgid "Falkon: Download Finished"
+msgstr "Falkon: Download concluído"
+
+#: lib/downloads/downloadmanager.cpp:410
+msgctxt "DownloadManager|"
+msgid "All files have been successfully downloaded."
+msgstr "Todos os arquivos foram recebidos com sucesso."
+
+#: lib/downloads/downloadmanager.cpp:464
+msgctxt "DownloadManager|"
+msgid "Warning"
+msgstr "Aviso"
+
+#: lib/downloads/downloadmanager.cpp:465
+msgctxt "DownloadManager|"
+msgid ""
+"Are you sure you want to quit? All uncompleted downloads will be cancelled!"
+msgstr ""
+"Tem a certeza que deseja sair? Todos os downloads não finalizados serão "
+"cancelados!"
+
+#: lib/downloads/downloadmanager.ui:69
+msgctxt "DownloadManager|"
+msgid "Clear"
+msgstr "Limpar"
+
+#: lib/downloads/downloadoptionsdialog.cpp:49
+#, qt-format
+msgctxt "DownloadOptionsDialog|"
+msgid "Opening %1"
+msgstr "Abrir %1"
+
+#: lib/downloads/downloadoptionsdialog.cpp:112
+msgctxt "DownloadOptionsDialog|"
+msgid "Download link copied."
+msgstr "Link de download copiado."
+
+#: lib/downloads/downloadoptionsdialog.ui:25
+msgctxt "DownloadOptionsDialog|"
+msgid "What should Falkon do with this file?"
+msgstr "O que o Falkon deve fazer com esse arquivo?"
+
+#: lib/downloads/downloadoptionsdialog.ui:47
+msgctxt "DownloadOptionsDialog|"
+msgid "Open..."
+msgstr "Abrir..."
+
+#: lib/downloads/downloadoptionsdialog.ui:54
+msgctxt "DownloadOptionsDialog|"
+msgid "Save File"
+msgstr "Salvar arquivo"
+
+#: lib/downloads/downloadoptionsdialog.ui:64
+msgctxt "DownloadOptionsDialog|"
+msgid "Download with External Manager"
+msgstr "Salvar arquivo com gerenciador externo"
+
+#: lib/downloads/downloadoptionsdialog.ui:165
+msgctxt "DownloadOptionsDialog|"
+msgid "which is:"
+msgstr "que é:"
+
+#: lib/downloads/downloadoptionsdialog.ui:215
+msgctxt "DownloadOptionsDialog|"
+msgid "from:"
+msgstr "de:"
+
+#: lib/downloads/downloadoptionsdialog.ui:241
+msgctxt "DownloadOptionsDialog|"
+msgid "Copy download link"
+msgstr "Copiar link de download"
+
+#: lib/downloads/downloadoptionsdialog.ui:256
+msgctxt "DownloadOptionsDialog|"
+msgid "You have chosen to open"
+msgstr "Você escolheu abrir"
+
+#: lib/downloads/downloadsbutton.cpp:27 lib/downloads/downloadsbutton.cpp:43
+msgctxt "DownloadsButton|"
+msgid "Downloads"
+msgstr "Downloads"
+
+#: lib/downloads/downloadsbutton.cpp:28
+msgctxt "DownloadsButton|"
+msgid "Open Download Manager"
+msgstr "Abrir gerenciador de downloads"
+
+#: lib/history/history.cpp:82
+msgctxt "History|"
+msgid "Empty Page"
+msgstr "Página em branco"
+
+#: lib/history/history.cpp:272
+msgctxt "History|"
+msgid "January"
+msgstr "Janeiro"
+
+#: lib/history/history.cpp:274
+msgctxt "History|"
+msgid "February"
+msgstr "Fevereiro"
+
+#: lib/history/history.cpp:276
+msgctxt "History|"
+msgid "March"
+msgstr "Março"
+
+#: lib/history/history.cpp:278
+msgctxt "History|"
+msgid "April"
+msgstr "Abril"
+
+#: lib/history/history.cpp:280
+msgctxt "History|"
+msgid "May"
+msgstr "Maio"
+
+#: lib/history/history.cpp:282
+msgctxt "History|"
+msgid "June"
+msgstr "Junho"
+
+#: lib/history/history.cpp:284
+msgctxt "History|"
+msgid "July"
+msgstr "Julho"
+
+#: lib/history/history.cpp:286
+msgctxt "History|"
+msgid "August"
+msgstr "Agosto"
+
+#: lib/history/history.cpp:288
+msgctxt "History|"
+msgid "September"
+msgstr "Setembro"
+
+#: lib/history/history.cpp:290
+msgctxt "History|"
+msgid "October"
+msgstr "Outubro"
+
+#: lib/history/history.cpp:292
+msgctxt "History|"
+msgid "November"
+msgstr "Novembro"
+
+#: lib/history/history.cpp:294
+msgctxt "History|"
+msgid "December"
+msgstr "Dezembro"
+
+#: lib/history/historymanager.cpp:78
+msgctxt "HistoryManager|"
+msgid "Confirmation"
+msgstr "Confirmação"
+
+#: lib/history/historymanager.cpp:79
+msgctxt "HistoryManager|"
+msgid "Are you sure you want to delete all history?"
+msgstr "Tem certeza que deseja limpar todo o histórico?"
+
+#: lib/history/historymanager.cpp:145
+msgctxt "HistoryManager|"
+msgid "Open in new tab"
+msgstr "Abrir em uma nova aba"
+
+#: lib/history/historymanager.cpp:146
+msgctxt "HistoryManager|"
+msgid "Open in new window"
+msgstr "Abrir em uma nova janela"
+
+#: lib/history/historymanager.cpp:147
+msgctxt "HistoryManager|"
+msgid "Open in new private window"
+msgstr "Abrir em uma nova janela privada"
+
+#: lib/history/historymanager.cpp:150
+msgctxt "HistoryManager|"
+msgid "Copy url"
+msgstr "Copiar URL"
+
+#: lib/history/historymanager.cpp:151
+msgctxt "HistoryManager|"
+msgid "Copy title"
+msgstr "Copiar título"
+
+#: lib/history/historymanager.cpp:154 lib/history/historymanager.ui:20
+msgctxt "HistoryManager|"
+msgid "Delete"
+msgstr "Apagar"
+
+#: lib/history/historymanager.ui:14
+msgctxt "HistoryManager|"
+msgid "History"
+msgstr "Histórico"
+
+#: lib/history/historymanager.ui:27
+msgctxt "HistoryManager|"
+msgid "Clear All History"
+msgstr "Limpar histórico"
+
+#: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
+#: lib/history/historymenu.cpp:186
+msgctxt "HistoryMenu|"
+msgid "Empty"
+msgstr "Vazio"
+
+#: lib/history/historymenu.cpp:161
+msgctxt "HistoryMenu|"
+msgid "Restore All Closed Tabs"
+msgstr "Restaurar todas as abas fechadas"
+
+#: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
+msgctxt "HistoryMenu|"
+msgid "Clear list"
+msgstr "Limpar lista"
+
+#: lib/history/historymenu.cpp:189
+msgctxt "HistoryMenu|"
+msgid "Restore All Closed Windows"
+msgstr "Restaurar todas as janelas fechadas"
+
+#: lib/history/historymenu.cpp:236
+msgctxt "HistoryMenu|"
+msgid "Hi&story"
+msgstr "Histórico"
+
+#: lib/history/historymenu.cpp:238
+msgctxt "HistoryMenu|"
+msgid "&Back"
+msgstr "&Voltar"
+
+#: lib/history/historymenu.cpp:241
+msgctxt "HistoryMenu|"
+msgid "&Forward"
+msgstr "&Avançar"
+
+#: lib/history/historymenu.cpp:244
+msgctxt "HistoryMenu|"
+msgid "&Home"
+msgstr "&Início"
+
+#: lib/history/historymenu.cpp:247
+msgctxt "HistoryMenu|"
+msgid "Show &All History"
+msgstr "Mostrar todo o &histórico"
+
+#: lib/history/historymenu.cpp:255
+msgctxt "HistoryMenu|"
+msgid "Most Visited"
+msgstr "Mais visitados"
+
+#: lib/history/historymenu.cpp:258
+msgctxt "HistoryMenu|"
+msgid "Closed Tabs"
+msgstr "Abas fechadas"
+
+#: lib/history/historymenu.cpp:261
+msgctxt "HistoryMenu|"
+msgid "Closed Windows"
+msgstr "Janelas fechadas"
+
+#: lib/history/historymodel.cpp:56
+msgctxt "HistoryModel|"
+msgid "Title"
+msgstr "Título"
+
+#: lib/history/historymodel.cpp:58
+msgctxt "HistoryModel|"
+msgid "Address"
+msgstr "Endereço"
+
+#: lib/history/historymodel.cpp:60
+msgctxt "HistoryModel|"
+msgid "Visit Date"
+msgstr "Data de visita"
+
+#: lib/history/historymodel.cpp:62
+msgctxt "HistoryModel|"
+msgid "Visit Count"
+msgstr "Contador de visitas"
+
+#: lib/history/historymodel.cpp:340 lib/history/historymodel.cpp:471
+msgctxt "HistoryModel|"
+msgid "Today"
+msgstr "Hoje"
+
+#: lib/history/historymodel.cpp:476
+msgctxt "HistoryModel|"
+msgid "This Week"
+msgstr "Esta semana"
+
+#: lib/history/historymodel.cpp:481
+msgctxt "HistoryModel|"
+msgid "This Month"
+msgstr "Este mês"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:158
+msgctxt "LocationCompleterDelegate|"
+msgid "Visit"
+msgstr "Visitar"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:164
+#, qt-format
+msgctxt "LocationCompleterDelegate|"
+msgid "Search with %1"
+msgstr "Pesquisar com %1"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:198
+msgctxt "LocationCompleterDelegate|"
+msgid "Switch to tab"
+msgstr "Mudar para aba"
+
+#: lib/navigation/completer/locationcompleterview.cpp:73
+msgctxt "LocationCompleterView|"
+msgid "Manage Search Engines"
+msgstr "Gerenciar sites de pesquisa"
+
+#: lib/navigation/completer/locationcompleterview.cpp:78
+msgctxt "LocationCompleterView|"
+msgid "Search with:"
+msgstr "Pesquisar com:"
+
+#: lib/navigation/locationbar.cpp:92
+msgctxt "LocationBar|"
+msgid "Paste And &Go"
+msgstr "Colar e &ir"
+
+#: lib/navigation/locationbar.cpp:159
+#, qt-format
+msgctxt "LocationBar|"
+msgid "Enter address or search with %1"
+msgstr "Digite o endereço ou pesquise com %1"
+
+#: lib/navigation/locationbar.cpp:161
+msgctxt "LocationBar|"
+msgid "Enter address"
+msgstr "Digitar endereço"
+
+#: lib/navigation/navigationbar.cpp:49
+msgctxt "NavigationBar|"
+msgid "Empty Page"
+msgstr "Página em branco"
+
+#: lib/navigation/navigationbar.cpp:76
+msgctxt "NavigationBar|"
+msgid "Back"
+msgstr "Voltar"
+
+#: lib/navigation/navigationbar.cpp:86
+msgctxt "NavigationBar|"
+msgid "Forward"
+msgstr "Avançar"
+
+#: lib/navigation/navigationbar.cpp:106
+msgctxt "NavigationBar|"
+msgid "Home"
+msgstr "Página inicial"
+
+#: lib/navigation/navigationbar.cpp:114
+msgctxt "NavigationBar|"
+msgid "New Tab"
+msgstr "Nova aba"
+
+#: lib/navigation/navigationbar.cpp:134
+msgctxt "NavigationBar|"
+msgid "Tools"
+msgstr "Ferramentas"
+
+#: lib/navigation/navigationbar.cpp:147
+msgctxt "NavigationBar|"
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: lib/navigation/navigationbar.cpp:164
+msgctxt "NavigationBar|"
+msgid "Exit Fullscreen"
+msgstr "Sair da tela cheia"
+
+#: lib/navigation/navigationbar.cpp:190
+msgctxt "NavigationBar|"
+msgid "Back and Forward buttons"
+msgstr "Botões avançar e voltar"
+
+#: lib/navigation/navigationbar.cpp:191
+msgctxt "NavigationBar|"
+msgid "Reload button"
+msgstr "Botão de recarregar"
+
+#: lib/navigation/navigationbar.cpp:192
+msgctxt "NavigationBar|"
+msgid "Home button"
+msgstr "Botão início"
+
+#: lib/navigation/navigationbar.cpp:193
+msgctxt "NavigationBar|"
+msgid "Add tab button"
+msgstr "Botão de adicionar aba"
+
+#: lib/navigation/navigationbar.cpp:194
+msgctxt "NavigationBar|"
+msgid "Address and Search bar"
+msgstr "Barra de endereços e pesquisa"
+
+#: lib/navigation/navigationbar.cpp:195
+msgctxt "NavigationBar|"
+msgid "Tools button"
+msgstr "Botão de ferramentas"
+
+#: lib/navigation/navigationbar.cpp:196
+msgctxt "NavigationBar|"
+msgid "Exit Fullscreen button"
+msgstr "Botão de saída de tela cheia"
+
+#: lib/navigation/navigationbar.cpp:393 lib/navigation/navigationbar.cpp:427
+msgctxt "NavigationBar|"
+msgid "Clear history"
+msgstr "Limpar histórico"
+
+#: lib/navigation/navigationbar.cpp:434
+msgctxt "NavigationBar|"
+msgid "Toolbars"
+msgstr "Barras de ferramentas"
+
+#: lib/navigation/navigationbar.cpp:435
+msgctxt "NavigationBar|"
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: lib/navigation/navigationbar.cpp:450 lib/navigation/navigationbar.cpp:464
+msgctxt "NavigationBar|"
+msgid "Configure Toolbar"
+msgstr "Configurar barra de ferramentas"
+
+#: lib/navigation/navigationbarconfigdialog.ui:14
+msgctxt "NavigationBarConfigDialog|"
+msgid "Configure Toolbar"
+msgstr "Configurar barra de ferramentas"
+
+#: lib/navigation/navigationbarconfigdialog.ui:62
+msgctxt "NavigationBarConfigDialog|"
+msgid "Show search bar"
+msgstr "Mostrar barra de pesquisa"
+
+#: lib/navigation/navigationbarconfigdialog.ui:82
+msgctxt "NavigationBarConfigDialog|"
+msgid "Available items:"
+msgstr "Itens disponíveis:"
+
+#: lib/navigation/navigationbarconfigdialog.ui:89
+msgctxt "NavigationBarConfigDialog|"
+msgid "Current items:"
+msgstr "Itens atuais:"
+
+#: lib/navigation/reloadstopbutton.cpp:57
+msgctxt "ReloadStopButton|"
+msgid "Stop"
+msgstr "Parar"
+
+#: lib/navigation/reloadstopbutton.cpp:61
+msgctxt "ReloadStopButton|"
+msgid "Reload"
+msgstr "Recarregar"
+
+#: lib/navigation/siteicon.cpp:40
+msgctxt "LocationBar|"
+msgid "Show information about this page"
+msgstr "Mostrar informações desta página"
+
+#: lib/navigation/websearchbar.cpp:97
+msgctxt "WebSearchBar|"
+msgid "Paste And &Search"
+msgstr "Colar e pes&quisar"
+
+#: lib/navigation/websearchbar.cpp:123
+#, qt-format
+msgctxt "WebSearchBar|"
+msgid "Add %1 ..."
+msgstr "Adicionar %1..."
+
+#: lib/navigation/websearchbar.cpp:127
+msgctxt "WebSearchBar|"
+msgid "Manage Search Engines"
+msgstr "Gerenciar sites de pesquisa"
+
+#: lib/navigation/websearchbar.cpp:257
+msgctxt "WebSearchBar|"
+msgid "Show suggestions"
+msgstr "Mostrar sugestões"
+
+#: lib/navigation/websearchbar.cpp:262
+msgctxt "WebSearchBar|"
+msgid "Search when engine changed"
+msgstr "Pesquisar quando alterar o site de pesquisa"
+
+#: lib/network/networkmanager.cpp:84
+msgctxt "NetworkManager|"
+msgid "SSL Certificate Error!"
+msgstr "Erro de certificado SSL!"
+
+#: lib/network/networkmanager.cpp:85
+msgctxt "NetworkManager|"
+msgid ""
+"The page you are trying to access has the following errors in the SSL "
+"certificate:"
+msgstr ""
+"A página que está a tentar acessar apresenta os seguintes erros no "
+"certificado SSL:"
+
+#: lib/network/networkmanager.cpp:86
+msgctxt "NetworkManager|"
+msgid "Would you like to make an exception for this certificate?"
+msgstr "Deseja criar uma exceção para este certificado?"
+
+#: lib/network/networkmanager.cpp:113
+msgctxt "NetworkManager|"
+msgid "Authorization required"
+msgstr "Autorização necessária"
+
+#: lib/network/networkmanager.cpp:120 lib/network/networkmanager.cpp:206
+msgctxt "NetworkManager|"
+msgid "Username: "
+msgstr "Usuário: "
+
+#: lib/network/networkmanager.cpp:121 lib/network/networkmanager.cpp:207
+msgctxt "NetworkManager|"
+msgid "Password: "
+msgstr "Senha: "
+
+#: lib/network/networkmanager.cpp:127
+msgctxt "NetworkManager|"
+msgid "Save username and password for this site"
+msgstr "Salvar usuário e senha para esta página"
+
+#: lib/network/networkmanager.cpp:135
+#, qt-format
+msgctxt "NetworkManager|"
+msgid ""
+"A username and password are being requested by %1. The site says: \"%2\""
+msgstr "%1 está solicitando usuário e senha. A página diz: \"%2\""
+
+#: lib/network/networkmanager.cpp:199
+msgctxt "NetworkManager|"
+msgid "Proxy authorization required"
+msgstr "Autorização de proxy necessária"
+
+#: lib/network/networkmanager.cpp:219
+#, qt-format
+msgctxt "NetworkManager|"
+msgid "A username and password are being requested by proxy %1. "
+msgstr "O proxy %1 esta pedindo um usuário e uma senha."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:154
+msgctxt "FalkonSchemeReply|"
+msgid "Start Page"
+msgstr "Página inicial"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:155
+msgctxt "FalkonSchemeReply|"
+msgid "Search on Web"
+msgstr "Pesquisar na Web"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:156
+msgctxt "FalkonSchemeReply|"
+msgid "Search results provided by DuckDuckGo"
+msgstr "Resultados de pesquisa fornecidos pelo DuckDuckGo"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:158
+#: lib/network/schemehandlers/falkonschemehandler.cpp:174
+#: lib/network/schemehandlers/falkonschemehandler.cpp:175
+msgctxt "FalkonSchemeReply|"
+msgid "About Falkon"
+msgstr "Sobre o Falkon"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:159
+msgctxt "FalkonSchemeReply|"
+msgid "<h1>Private Browsing</h1>"
+msgstr "<h1>Navegação privada</h1>"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:176
+#: lib/network/schemehandlers/falkonschemehandler.cpp:284
+msgctxt "FalkonSchemeReply|"
+msgid "Information about version"
+msgstr "Informações da versão"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:177
+msgctxt "FalkonSchemeReply|"
+msgid "Copyright"
+msgstr "Direitos autorais"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+msgctxt "FalkonSchemeReply|"
+msgid "Version"
+msgstr "Versão"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:187
+msgctxt "FalkonSchemeReply|"
+msgid "Main developer"
+msgstr "Desenvolvedor principal"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:208
+msgctxt "FalkonSchemeReply|"
+msgid "Speed Dial"
+msgstr "Acesso rápido"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:209
+msgctxt "FalkonSchemeReply|"
+msgid "Add New Page"
+msgstr "Adicionar nova página"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:210
+msgctxt "FalkonSchemeReply|"
+msgid "Edit"
+msgstr "Editar"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:211
+msgctxt "FalkonSchemeReply|"
+msgid "Remove"
+msgstr "Remover"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:212
+msgctxt "FalkonSchemeReply|"
+msgid "Reload"
+msgstr "Recarregar"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:213
+msgctxt "FalkonSchemeReply|"
+msgid "Are you sure you want to remove this speed dial?"
+msgstr "Tem certeza que deseja remover este acesso rápido?"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:214
+msgctxt "FalkonSchemeReply|"
+msgid "Are you sure you want to reload all speed dials?"
+msgstr "Tem certeza que deseja recarregar todos os acessos rápidos?"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:215
+msgctxt "FalkonSchemeReply|"
+msgid "Load title from page"
+msgstr "Carregar título da página"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:216
+msgctxt "FalkonSchemeReply|"
+msgid "SpeedDial requires enabled JavaScript."
+msgstr "O acesso rápido necessita do JavaScript habilitado."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:217
+msgctxt "FalkonSchemeReply|"
+msgid "Url"
+msgstr "URL"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:218
+msgctxt "FalkonSchemeReply|"
+msgid "Title"
+msgstr "Título"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:219
+msgctxt "FalkonSchemeReply|"
+msgid "Apply"
+msgstr "Aplicar"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:220
+msgctxt "FalkonSchemeReply|"
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:221
+msgctxt "FalkonSchemeReply|"
+msgid "New Page"
+msgstr "Nova página"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:222
+msgctxt "FalkonSchemeReply|"
+msgid "Speed Dial settings"
+msgstr "Configurações do acesso rápido"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:223
+msgctxt "FalkonSchemeReply|"
+msgid "Placement: "
+msgstr "Posicionamento: "
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:224
+msgctxt "FalkonSchemeReply|"
+msgid "Auto"
+msgstr "Automático"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:225
+msgctxt "FalkonSchemeReply|"
+msgid "Cover"
+msgstr "Capa"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:226
+msgctxt "FalkonSchemeReply|"
+msgid "Fit"
+msgstr "Ajustar"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:227
+msgctxt "FalkonSchemeReply|"
+msgid "Fit Width"
+msgstr "Ajustar à largura"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:228
+msgctxt "FalkonSchemeReply|"
+msgid "Fit Height"
+msgstr "Ajustar à altura"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:229
+msgctxt "FalkonSchemeReply|"
+msgid "Use custom wallpaper"
+msgstr "Usar papel de parede personalizado"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:230
+msgctxt "FalkonSchemeReply|"
+msgid "Click to select image"
+msgstr "Clique para selecionar a imagem"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:231
+msgctxt "FalkonSchemeReply|"
+msgid "Maximum pages in a row:"
+msgstr "Máximo de páginas por linha:"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:232
+msgctxt "FalkonSchemeReply|"
+msgid "Change size of pages:"
+msgstr "Alterar tamanho das páginas:"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:233
+msgctxt "FalkonSchemeReply|"
+msgid "Center speed dials"
+msgstr "Centralizar acesso rápido"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:258
+msgctxt "FalkonSchemeReply|"
+msgid "Restore Session"
+msgstr "Restaurar sessão"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:259
+msgctxt "FalkonSchemeReply|"
+msgid "Oops, Falkon crashed."
+msgstr "Ops, o Falkon travou."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:260
+msgctxt "FalkonSchemeReply|"
+msgid "We apologize for this. Would you like to restore the last saved state?"
+msgstr ""
+"Pedimos desculpas pelo transtorno. Deseja restaurar as últimas abas abertas?"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:261
+msgctxt "FalkonSchemeReply|"
+msgid "Try removing one or more tabs that you think cause troubles"
+msgstr ""
+"Caso acredite que alguma aba tenha causado o problema, tente desativá-la"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+msgctxt "FalkonSchemeReply|"
+msgid "Or you can start completely new session"
+msgstr "Ou você pode criar uma nova sessão"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+msgctxt "FalkonSchemeReply|"
+msgid "Window"
+msgstr "Janela"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+msgctxt "FalkonSchemeReply|"
+msgid "Windows and Tabs"
+msgstr "Janelas e abas:"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+msgctxt "FalkonSchemeReply|"
+msgid "Start New Session"
+msgstr "Iniciar nova sessão"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+msgctxt "FalkonSchemeReply|"
+msgid "Restore"
+msgstr "Restaurar"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+msgctxt "FalkonSchemeReply|"
+msgid "Requires enabled JavaScript."
+msgstr "Necessita do JavaScript habilitado."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:282
+#: lib/network/schemehandlers/falkonschemehandler.cpp:283
+msgctxt "FalkonSchemeReply|"
+msgid "Configuration Information"
+msgstr "Informações das configurações"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:285
+msgctxt "FalkonSchemeReply|"
+msgid ""
+"This page contains information about Falkon's current configuration - "
+"relevant for troubleshooting. Please include this information when "
+"submitting bug reports."
+msgstr ""
+"Essa página contém informações sobre as configurações atuais do Falkon - que "
+"são importantes para sabermos a causa do problema. Inclua essas informações "
+"quanto for reportar um bug (por favor, escreva em inglês)."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:286
+msgctxt "FalkonSchemeReply|"
+msgid "Browser Identification"
+msgstr "Identificação do navegador"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:287
+msgctxt "FalkonSchemeReply|"
+msgid "Paths"
+msgstr "Caminhos"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+msgctxt "FalkonSchemeReply|"
+msgid "Build Configuration"
+msgstr "Configuração da compilação"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+msgctxt "FalkonSchemeReply|"
+msgid "Preferences"
+msgstr "Preferências"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+msgctxt "FalkonSchemeReply|"
+msgid "Option"
+msgstr "Opção"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+msgctxt "FalkonSchemeReply|"
+msgid "Value"
+msgstr "Valor"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:327
+msgctxt "FalkonSchemeReply|"
+msgid "Extensions"
+msgstr "Extensões"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+msgctxt "FalkonSchemeReply|"
+msgid "Name"
+msgstr "Nome"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+msgctxt "FalkonSchemeReply|"
+msgid "Author"
+msgstr "Autor"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
+msgctxt "FalkonSchemeReply|"
+msgid "Description"
+msgstr "Descrição"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:311
+msgctxt "FalkonSchemeReply|"
+msgid "Application version"
+msgstr "Versão do aplicativo"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:318
+msgctxt "FalkonSchemeReply|"
+msgid "Qt version"
+msgstr "Versão do Qt"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:319
+msgctxt "FalkonSchemeReply|"
+msgid "Platform"
+msgstr "Plataforma"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:322
+msgctxt "FalkonSchemeReply|"
+msgid "Profile"
+msgstr "Perfil"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+msgctxt "FalkonSchemeReply|"
+msgid "Settings"
+msgstr "Configurações"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+msgctxt "FalkonSchemeReply|"
+msgid "Saved session"
+msgstr "Sessão salva"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
+msgctxt "FalkonSchemeReply|"
+msgid "Data"
+msgstr "Dados"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:326
+msgctxt "FalkonSchemeReply|"
+msgid "Themes"
+msgstr "Temas"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:337
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+msgctxt "FalkonSchemeReply|"
+msgid "<b>Enabled</b>"
+msgstr "<b>Habilitado</b>"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:339
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+msgctxt "FalkonSchemeReply|"
+msgid "Disabled"
+msgstr "Desabilitado"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:346
+msgctxt "FalkonSchemeReply|"
+msgid "Debug build"
+msgstr "Compilação de depuração"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+msgctxt "FalkonSchemeReply|"
+msgid "Windows 7 API"
+msgstr "Windows 7 API"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:350
+msgctxt "FalkonSchemeReply|"
+msgid "Portable build"
+msgstr "Compilação portátil"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:368
+msgctxt "FalkonSchemeReply|"
+msgid "No available extensions."
+msgstr "Não há extensões disponíveis."
+
+#: lib/network/sslerrordialog.ui:14
+msgctxt "SslErrorDialog|"
+msgid "SSL Certificate Error!"
+msgstr "Erro de certificado SSL!"
+
+#: lib/notifications/desktopnotificationsfactory.cpp:119
+msgctxt "DesktopNotificationsFactory|"
+msgid "Preview"
+msgstr "Visualização"
+
+#: lib/notifications/desktopnotificationsfactory.cpp:119
+msgctxt "QObject|"
+msgid "Native System Notification"
+msgstr "Notificações do sistema"
+
+#: lib/opensearch/editsearchengine.ui:20
+msgctxt "EditSearchEngine|"
+msgid "Name:"
+msgstr "Nome:"
+
+#: lib/opensearch/editsearchengine.ui:30
+msgctxt "EditSearchEngine|"
+msgid "Url:"
+msgstr "URL:"
+
+#: lib/opensearch/editsearchengine.ui:44
+msgctxt "EditSearchEngine|"
+msgid "Shortcut:"
+msgstr "Atalho:"
+
+#: lib/opensearch/editsearchengine.ui:54
+msgctxt "EditSearchEngine|"
+msgid "Icon:"
+msgstr "Icon:"
+
+#: lib/opensearch/editsearchengine.ui:83
+msgctxt "EditSearchEngine|"
+msgid "Change..."
+msgstr "Alterar..."
+
+#: lib/opensearch/editsearchengine.ui:106
+msgctxt "EditSearchEngine|"
+msgid "<b>Note: </b>%s in url or post data represent searched string"
+msgstr ""
+"<b>Observação: </b>%s na URL ou dados da postagem representa o texto "
+"pesquisado"
+
+#: lib/opensearch/editsearchengine.ui:123
+msgctxt "EditSearchEngine|"
+msgid "Post Data:"
+msgstr "Dados da postagem:"
+
+#: lib/opensearch/opensearchreader.cpp:105
+msgctxt "QObject|"
+msgid "The file is not an OpenSearch 1.1 file."
+msgstr "Este não é um arquivo OpenSearch 1.1."
+
+#: lib/opensearch/searchenginesdialog.cpp:52
+#: lib/opensearch/searchenginesmanager.cpp:315
+msgctxt "SearchEnginesDialog|"
+msgid "Add Search Engine"
+msgstr "Adicionar site de pesquisa"
+
+#: lib/opensearch/searchenginesdialog.cpp:89
+msgctxt "SearchEnginesDialog|"
+msgid "Remove Engine"
+msgstr "Remover site de pesquisa"
+
+#: lib/opensearch/searchenginesdialog.cpp:90
+#, qt-format
+msgctxt "SearchEnginesDialog|"
+msgid ""
+"You can't remove the default search engine.<br>Set a different engine as "
+"default before removing %1."
+msgstr ""
+"Você não pode remover o site de pesquisa padrão. <br>Escolha um novo site de "
+"pesquisa padrão antes de remover %1."
+
+#: lib/opensearch/searchenginesdialog.cpp:107
+msgctxt "SearchEnginesDialog|"
+msgid "Edit Search Engine"
+msgstr "Editar site de pesquisa"
+
+#: lib/opensearch/searchenginesdialog.ui:14
+msgctxt "SearchEnginesDialog|"
+msgid "Manage Search Engines"
+msgstr "Gerenciador dos site de pesquisa"
+
+#: lib/opensearch/searchenginesdialog.ui:22
+msgctxt "SearchEnginesDialog|"
+msgid "Add..."
+msgstr "Adicionar..."
+
+#: lib/opensearch/searchenginesdialog.ui:29
+msgctxt "SearchEnginesDialog|"
+msgid "Remove"
+msgstr "Remover"
+
+#: lib/opensearch/searchenginesdialog.ui:36
+msgctxt "SearchEnginesDialog|"
+msgid "Edit"
+msgstr "Editar"
+
+#: lib/opensearch/searchenginesdialog.ui:56
+msgctxt "SearchEnginesDialog|"
+msgid "Set as default"
+msgstr "Definir padrão"
+
+#: lib/opensearch/searchenginesdialog.ui:63
+msgctxt "SearchEnginesDialog|"
+msgid "Up"
+msgstr "Para cima"
+
+#: lib/opensearch/searchenginesdialog.ui:70
+msgctxt "SearchEnginesDialog|"
+msgid "Down"
+msgstr "Para baixo"
+
+#: lib/opensearch/searchenginesdialog.ui:89
+msgctxt "SearchEnginesDialog|"
+msgid "Search Engine"
+msgstr "Site de pesquisa"
+
+#: lib/opensearch/searchenginesdialog.ui:94
+msgctxt "SearchEnginesDialog|"
+msgid "Shortcut"
+msgstr "Atalho"
+
+#: lib/opensearch/searchenginesdialog.ui:104
+msgctxt "SearchEnginesDialog|"
+msgid "Defaults"
+msgstr "Padrão"
+
+#: lib/opensearch/searchenginesmanager.cpp:401
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine Added"
+msgstr "Site de pesquisa adicionado"
+
+#: lib/opensearch/searchenginesmanager.cpp:401
+#, qt-format
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine \"%1\" has been successfully added."
+msgstr "O site de pesquisa \"%1\" foi adicionado com sucesso."
+
+#: lib/opensearch/searchenginesmanager.cpp:408
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine is not valid!"
+msgstr "O site de pesquisa digitado não é valido!"
+
+#: lib/opensearch/searchenginesmanager.cpp:409
+msgctxt "SearchEnginesManager|"
+msgid "Error"
+msgstr "Erro"
+
+#: lib/opensearch/searchenginesmanager.cpp:409
+#, qt-format
+msgctxt "SearchEnginesManager|"
+msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
+msgstr ""
+"Ocorreu um erro ao adicionar o site de pequisa. <br><b>Mensagem de erro: </"
+"b> %1"
+
+#: lib/other/aboutdialog.cpp:51
+#, qt-format
+msgctxt "AboutDialog|"
+msgid "<p><b>Application version %1</b><br/>"
+msgstr "<p><b>Versão do aplicativo: %1</b><br/>"
+
+#: lib/other/aboutdialog.cpp:58
+#, qt-format
+msgctxt "AboutDialog|"
+msgid "<b>QtWebEngine version %1</b></p>"
+msgstr "<b>Versão do QtWebEngine %1</b></p>"
+
+#: lib/other/aboutdialog.ui:14
+msgctxt "AboutDialog|"
+msgid "About Falkon"
+msgstr "Sobre o Falkon"
+
+#: lib/other/browsinglibrary.cpp:55
+msgctxt "BrowsingLibrary|"
+msgid "History"
+msgstr "Histórico"
+
+#: lib/other/browsinglibrary.cpp:56
+msgctxt "BrowsingLibrary|"
+msgid "Bookmarks"
+msgstr "Favoritos"
+
+#: lib/other/browsinglibrary.cpp:61
+msgctxt "BrowsingLibrary|"
+msgid "Import Bookmarks..."
+msgstr "Importar favoritos..."
+
+#: lib/other/browsinglibrary.cpp:62
+msgctxt "BrowsingLibrary|"
+msgid "Export Bookmarks..."
+msgstr "Exportar favoritos..."
+
+#: lib/other/browsinglibrary.ui:14
+msgctxt "BrowsingLibrary|"
+msgid "Library"
+msgstr "Biblioteca"
+
+#: lib/other/browsinglibrary.ui:64
+msgctxt "BrowsingLibrary|"
+msgid "Import and Export"
+msgstr "Importar e exportar"
+
+#: lib/other/browsinglibrary.ui:84
+msgctxt "BrowsingLibrary|"
+msgid "Search..."
+msgstr "Pesquisar..."
+
+#: lib/other/clearprivatedata.cpp:154
+msgctxt "ClearPrivateData|"
+msgid "Done"
+msgstr "Concluído"
+
+#: lib/other/clearprivatedata.cpp:172
+msgctxt "ClearPrivateData|"
+msgid "Database Optimized"
+msgstr "Banco de dados otimizado"
+
+#: lib/other/clearprivatedata.cpp:172
+#, qt-format
+msgctxt "ClearPrivateData|"
+msgid ""
+"Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/"
+"><b>Database Size After: </b>%2"
+msgstr ""
+"Banco de dados otimizado com sucesso.<br/><br/><b>Tamanho do banco de dados "
+"antes: </b>%1<br/><b>Tamanho do banco de dados depois: </b>%2"
+
+#: lib/other/clearprivatedata.ui:14
+msgctxt "ClearPrivateData|"
+msgid "Clear Recent History"
+msgstr "Limpar histórico recente"
+
+#: lib/other/clearprivatedata.ui:20
+msgctxt "ClearPrivateData|"
+msgid "<b>Clear Recent History</b>"
+msgstr "<b>Limpar histórico recente</b>"
+
+#: lib/other/clearprivatedata.ui:27
+msgctxt "ClearPrivateData|"
+msgid "Edit cookies"
+msgstr "Editar cookies"
+
+#: lib/other/clearprivatedata.ui:38
+msgctxt "ClearPrivateData|"
+msgid "Earlier Today"
+msgstr "Hoje"
+
+#: lib/other/clearprivatedata.ui:43
+msgctxt "ClearPrivateData|"
+msgid "Week"
+msgstr "Semana"
+
+#: lib/other/clearprivatedata.ui:48
+msgctxt "ClearPrivateData|"
+msgid "Month"
+msgstr "Mês"
+
+#: lib/other/clearprivatedata.ui:53
+msgctxt "ClearPrivateData|"
+msgid "All"
+msgstr "Todos"
+
+#: lib/other/clearprivatedata.ui:61
+msgctxt "ClearPrivateData|"
+msgid "Visited pages history from:"
+msgstr "Histórico de páginas visitadas de:"
+
+#: lib/other/clearprivatedata.ui:71
+msgctxt "ClearPrivateData|"
+msgid "Checked items will be cleared upon clicking the Clear button."
+msgstr "Os itens marcados serão limpos ao clicar no botão \"Limpar\"."
+
+#: lib/other/clearprivatedata.ui:78
+msgctxt "ClearPrivateData|"
+msgid "Local storage"
+msgstr "Armazenamento local"
+
+#: lib/other/clearprivatedata.ui:94
+msgctxt "ClearPrivateData|"
+msgid "Clear"
+msgstr "Limpar"
+
+#: lib/other/clearprivatedata.ui:114
+msgctxt "ClearPrivateData|"
+msgid "Web databases"
+msgstr "Banco de dados da Web"
+
+#: lib/other/clearprivatedata.ui:124
+msgctxt "ClearPrivateData|"
+msgid "Cache"
+msgstr "Cache"
+
+#: lib/other/clearprivatedata.ui:134
+msgctxt "ClearPrivateData|"
+msgid "Optimize database"
+msgstr "Otimizar banco de dados"
+
+#: lib/other/clearprivatedata.ui:141
+msgctxt "ClearPrivateData|"
+msgid "Cookies"
+msgstr "Cookies"
+
+#: lib/other/clearprivatedata.ui:158
+msgctxt "ClearPrivateData|"
+msgid "Database"
+msgstr "Banco de dados"
+
+#: lib/other/iconchooser.cpp:41
+msgctxt "IconChooser|"
+msgid "Image files"
+msgstr "Imagens"
+
+#: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
+msgctxt "IconChooser|"
+msgid "Choose icon..."
+msgstr "Escolher ícone..."
+
+#: lib/other/iconchooser.ui:20
+msgctxt "IconChooser|"
+msgid "From file"
+msgstr "Escolher do seu computador"
+
+#: lib/other/iconchooser.ui:29
+msgctxt "IconChooser|"
+msgid "Image (.png, .jpg, .jpeg, .gif)"
+msgstr "Imagem (.png, .jpg, .jpeg, .gif)"
+
+#: lib/other/iconchooser.ui:42
+msgctxt "IconChooser|"
+msgid "Choose file..."
+msgstr "Escolher arquivo..."
+
+#: lib/other/iconchooser.ui:52
+msgctxt "IconChooser|"
+msgid "From database"
+msgstr "Escolher do banco de dados"
+
+#: lib/other/iconchooser.ui:61
+msgctxt "IconChooser|"
+msgid "Site Url:"
+msgstr "URL:"
+
+#: lib/other/licenseviewer.cpp:30
+msgctxt "LicenseViewer|"
+msgid "License Viewer"
+msgstr "Visualizador de licença"
+
+#: lib/other/protocolhandlerdialog.ui:14
+msgctxt "ProtocolHandlerDialog|"
+msgid "Manage protocol handlers"
+msgstr "Gerenciar manipuladores de protocolo"
+
+#: lib/other/protocolhandlerdialog.ui:40
+msgctxt "ProtocolHandlerDialog|"
+msgid "Protocol"
+msgstr "Protocolo"
+
+#: lib/other/protocolhandlerdialog.ui:45
+msgctxt "ProtocolHandlerDialog|"
+msgid "Site"
+msgstr "Site"
+
+#: lib/other/protocolhandlerdialog.ui:68
+msgctxt "ProtocolHandlerDialog|"
+msgid "Remove"
+msgstr "Remover"
+
+#: lib/other/registerqappassociation.cpp:110
+msgctxt "RegisterQAppAssociation|"
+msgid "Warning!"
+msgstr "Atenção!"
+
+#: lib/other/registerqappassociation.cpp:111
+msgctxt "RegisterQAppAssociation|"
+msgid ""
+"There are some problems. Please, reinstall Falkon.\n"
+"Maybe relaunch with administrator right do a magic for you! ;)"
+msgstr ""
+"Há alguns problemas. Reinstale o Falkon.\n"
+"Talvez reiniciar com privilégios de administrador faça a mágica para você! :)"
+
+#: lib/other/siteinfo.cpp:68
+msgctxt "SiteInfo|"
+msgid "<b>Connection is Encrypted.</b>"
+msgstr "<b>Conexão criptografada.</b>"
+
+#: lib/other/siteinfo.cpp:70
+msgctxt "SiteInfo|"
+msgid "<b>Connection Not Encrypted.</b>"
+msgstr "<b>Conexão não criptografada.</b>"
+
+#: lib/other/siteinfo.cpp:175
+msgctxt "SiteInfo|"
+msgid "Copy Image Location"
+msgstr "Copiar link da Imagem"
+
+#: lib/other/siteinfo.cpp:176
+msgctxt "SiteInfo|"
+msgid "Copy Image Name"
+msgstr "Copiar nome da imagem"
+
+#: lib/other/siteinfo.cpp:178
+msgctxt "SiteInfo|"
+msgid "Save Image to Disk"
+msgstr "Salvar imagem no disco"
+
+#: lib/other/siteinfo.cpp:190
+msgctxt "SiteInfo|"
+msgid "Copy Values"
+msgstr "Copiar valores"
+
+#: lib/other/siteinfo.cpp:191
+msgctxt "SiteInfo|"
+msgid "Copy Tags and Values"
+msgstr "Copiar etiquetas e valores"
+
+#: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
+msgctxt "SiteInfo|"
+msgid "Error!"
+msgstr "Erro!"
+
+#: lib/other/siteinfo.cpp:229
+msgctxt "SiteInfo|"
+msgid "This preview is not available!"
+msgstr "Essa preview não está disponível!"
+
+#: lib/other/siteinfo.cpp:240
+msgctxt "SiteInfo|"
+msgid "Save image..."
+msgstr "Salvar imagem..."
+
+#: lib/other/siteinfo.cpp:248
+msgctxt "SiteInfo|"
+msgid "Cannot write to file!"
+msgstr "Não foi possível escrever no arquivo!"
+
+#: lib/other/siteinfo.cpp:258
+msgctxt "SiteInfo|"
+msgid "Loading..."
+msgstr "Carregando..."
+
+#: lib/other/siteinfo.cpp:271
+msgctxt "SiteInfo|"
+msgid "Preview not available"
+msgstr "Preview não disponível"
+
+#: lib/other/siteinfo.ui:14
+msgctxt "SiteInfo|"
+msgid "Site Info"
+msgstr "Informações do site"
+
+#: lib/other/siteinfo.ui:47
+msgctxt "SiteInfo|"
+msgid "General"
+msgstr "Geral"
+
+#: lib/other/siteinfo.ui:52
+msgctxt "SiteInfo|"
+msgid "Media"
+msgstr "Média"
+
+#: lib/other/siteinfo.ui:84
+msgctxt "SiteInfo|"
+msgid "Site address:"
+msgstr "Endereço:"
+
+#: lib/other/siteinfo.ui:113
+msgctxt "SiteInfo|"
+msgid "Encoding:"
+msgstr "Codificação:"
+
+#: lib/other/siteinfo.ui:132
+msgctxt "SiteInfo|"
+msgid "Meta tags of site:"
+msgstr "Meta-etiquetas da página:"
+
+#: lib/other/siteinfo.ui:149
+msgctxt "SiteInfo|"
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: lib/other/siteinfo.ui:154
+msgctxt "SiteInfo|"
+msgid "Value"
+msgstr "Valor"
+
+#: lib/other/siteinfo.ui:168
+msgctxt "SiteInfo|"
+msgid "<b>Security information</b>"
+msgstr "<b>Informações de segurança</b>"
+
+#: lib/other/siteinfo.ui:241
+msgctxt "SiteInfo|"
+msgid "Image"
+msgstr "Imagem"
+
+#: lib/other/siteinfo.ui:246
+msgctxt "SiteInfo|"
+msgid "Image address"
+msgstr "Endereço da imagem"
+
+#: lib/other/siteinfo.ui:271
+msgctxt "SiteInfo|"
+msgid "<b>Preview</b>"
+msgstr "<b>Visualização</b>"
+
+#: lib/other/siteinfowidget.cpp:42
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "<b>Site %1<b/>"
+msgstr "<b>Site %1<b/>"
+
+#: lib/other/siteinfowidget.cpp:45
+msgctxt "SiteInfoWidget|"
+msgid "Your connection to this site is <b>secured</b>."
+msgstr "A conexão para essa página é <b>segura</b>."
+
+#: lib/other/siteinfowidget.cpp:49
+msgctxt "SiteInfoWidget|"
+msgid "Your connection to this site is <b>unsecured</b>."
+msgstr "A conexão para essa página <b>não é segura</b>."
+
+#: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "This is your <b>%1</b> visit of this site."
+msgstr "Esta é a sua <b>%1</b> visita nesse site."
+
+#: lib/other/siteinfowidget.cpp:68
+msgctxt "SiteInfoWidget|"
+msgid "You have <b>never</b> visited this site before."
+msgstr "Você <b>nunca</b> visitou esse site antes."
+
+#: lib/other/siteinfowidget.cpp:75
+msgctxt "SiteInfoWidget|"
+msgid "first"
+msgstr "primeira"
+
+#: lib/other/siteinfowidget.cpp:78
+msgctxt "SiteInfoWidget|"
+msgid "second"
+msgstr "segunda"
+
+#: lib/other/siteinfowidget.cpp:81
+msgctxt "SiteInfoWidget|"
+msgid "third"
+msgstr "terceira"
+
+#: lib/other/siteinfowidget.cpp:106
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "Register as <b>%1</b> links handler"
+msgstr "Registrado como manejador de links <b>%1</b>"
+
+#: lib/other/siteinfowidget.cpp:107
+msgctxt "SiteInfoWidget|"
+msgid "Register"
+msgstr "Registrar"
+
+#: lib/other/siteinfowidget.ui:71
+msgctxt "SiteInfoWidget|"
+msgid "More..."
+msgstr "Mais..."
+
+#: lib/other/statusbar.cpp:248
+msgctxt "StatusBar|"
+msgid "Hide"
+msgstr "Ocultar"
+
+#: lib/other/updater.cpp:151
+msgctxt "Updater|"
+msgid "Update available"
+msgstr "Atualização disponível"
+
+#: lib/other/updater.cpp:151
+msgctxt "Updater|"
+msgid "New version of Falkon is ready to download."
+msgstr "Existe uma nova versão do Falkon disponível."
+
+#: lib/other/updater.cpp:160
+msgctxt "Updater|"
+msgid "Update"
+msgstr "Atualizar"
+
+#: lib/popupwindow/popupwebview.cpp:100
+msgctxt "PopupWebView|"
+msgid "Inspect Element"
+msgstr "Inspecionar elemento"
+
+#: lib/popupwindow/popupwindow.cpp:83
+msgctxt "PopupWindow|"
+msgid "File"
+msgstr "Arquivo"
+
+#: lib/popupwindow/popupwindow.cpp:84
+msgctxt "PopupWindow|"
+msgid "Send Link..."
+msgstr "Enviar link..."
+
+#: lib/popupwindow/popupwindow.cpp:85
+msgctxt "PopupWindow|"
+msgid "&Print..."
+msgstr "&Imprimir..."
+
+#: lib/popupwindow/popupwindow.cpp:87
+msgctxt "PopupWindow|"
+msgid "Close"
+msgstr "Fechar"
+
+#: lib/popupwindow/popupwindow.cpp:90
+msgctxt "PopupWindow|"
+msgid "Edit"
+msgstr "Editar"
+
+#: lib/popupwindow/popupwindow.cpp:99
+msgctxt "PopupWindow|"
+msgid "Find"
+msgstr "Localizar"
+
+#: lib/popupwindow/popupwindow.cpp:102
+msgctxt "PopupWindow|"
+msgid "View"
+msgstr "Ver"
+
+#: lib/popupwindow/popupwindow.cpp:103
+msgctxt "PopupWindow|"
+msgid "&Stop"
+msgstr "Parar"
+
+#: lib/popupwindow/popupwindow.cpp:105
+msgctxt "PopupWindow|"
+msgid "&Reload"
+msgstr "Recarregar"
+
+#: lib/popupwindow/popupwindow.cpp:108
+msgctxt "PopupWindow|"
+msgid "Zoom &In"
+msgstr "Aumentar"
+
+#: lib/popupwindow/popupwindow.cpp:109
+msgctxt "PopupWindow|"
+msgid "Zoom &Out"
+msgstr "Diminuir"
+
+#: lib/popupwindow/popupwindow.cpp:110
+msgctxt "PopupWindow|"
+msgid "Reset"
+msgstr "Redefinir"
+
+#: lib/popupwindow/popupwindow.cpp:112
+msgctxt "PopupWindow|"
+msgid "&Page Source"
+msgstr "Código-fonte"
+
+#: lib/popupwindow/popupwindow.cpp:271
+#, qt-format
+msgctxt "PopupWindow|"
+msgid "%1 - Falkon"
+msgstr "%1 - Falkon"
+
+#: lib/preferences/acceptlanguage.cpp:99 lib/preferences/acceptlanguage.cpp:160
+#, qt-format
+msgctxt "AcceptLanguage|"
+msgid "Personal [%1]"
+msgstr "Personalizado [%1]"
+
+#: lib/preferences/acceptlanguage.ui:14
+msgctxt "AcceptLanguage|"
+msgid "Preferred Languages"
+msgstr "Idiomas preferenciais"
+
+#: lib/preferences/acceptlanguage.ui:25
+msgctxt "AcceptLanguage|"
+msgid "Add..."
+msgstr "Adicionar..."
+
+#: lib/preferences/acceptlanguage.ui:32
+msgctxt "AcceptLanguage|"
+msgid "Remove"
+msgstr "Remover"
+
+#: lib/preferences/acceptlanguage.ui:39
+msgctxt "AcceptLanguage|"
+msgid "Up"
+msgstr "Para cima"
+
+#: lib/preferences/acceptlanguage.ui:46
+msgctxt "AcceptLanguage|"
+msgid "Down"
+msgstr "Para baixo"
+
+#: lib/preferences/addacceptlanguage.ui:14
+msgctxt "AddAcceptLanguage|"
+msgid "Add Language"
+msgstr "Adicionar idioma"
+
+#: lib/preferences/addacceptlanguage.ui:20
+msgctxt "AddAcceptLanguage|"
+msgid "Choose preferred language for web sites"
+msgstr "Escolha o idioma preferencial para as páginas web"
+
+#: lib/preferences/addacceptlanguage.ui:32
+msgctxt "AddAcceptLanguage|"
+msgid "Personal definition:"
+msgstr "Personalizado:"
+
+#: lib/preferences/autofillmanager.cpp:67
+msgctxt "AutoFillManager|"
+msgid "Import Passwords from File..."
+msgstr "Importar senhas de arquivo..."
+
+#: lib/preferences/autofillmanager.cpp:68
+msgctxt "AutoFillManager|"
+msgid "Export Passwords to File..."
+msgstr "Exportar senhas para arquivo..."
+
+#: lib/preferences/autofillmanager.cpp:70
+msgctxt "AutoFillManager|"
+msgid "Search"
+msgstr "Pesquisar"
+
+#: lib/preferences/autofillmanager.cpp:82
+#: lib/preferences/autofillmanager.cpp:171
+#: lib/preferences/autofillmanager.cpp:179
+#: lib/preferences/autofillmanager.ui:140
+msgctxt "AutoFillManager|"
+msgid "Show Passwords"
+msgstr "Mostrar senhas"
+
+#: lib/preferences/autofillmanager.cpp:130
+msgctxt "AutoFillManager|"
+msgid "Change backend..."
+msgstr "Mudar infraestrutura..."
+
+#: lib/preferences/autofillmanager.cpp:130
+msgctxt "AutoFillManager|"
+msgid "Change backend:"
+msgstr "Mudar infraestrutura:"
+
+#: lib/preferences/autofillmanager.cpp:179
+msgctxt "AutoFillManager|"
+msgid "Are you sure that you want to show all passwords?"
+msgstr "Tem a certeza que deseja mostrar todas as senhas?"
+
+#: lib/preferences/autofillmanager.cpp:194
+msgctxt "AutoFillManager|"
+msgid "Hide Passwords"
+msgstr "Ocultar senhas"
+
+#: lib/preferences/autofillmanager.cpp:232
+msgctxt "AutoFillManager|"
+msgid "Confirmation"
+msgstr "Confirmação"
+
+#: lib/preferences/autofillmanager.cpp:233
+msgctxt "AutoFillManager|"
+msgid "Are you sure you want to delete all passwords on your computer?"
+msgstr ""
+"Você tem certeza que deseja apagar todas as senhas salvas em seu computador?"
+
+#: lib/preferences/autofillmanager.cpp:252
+msgctxt "AutoFillManager|"
+msgid "Edit password"
+msgstr "Editar senha"
+
+#: lib/preferences/autofillmanager.cpp:252
+msgctxt "AutoFillManager|"
+msgid "Change password:"
+msgstr "Alterar senha:"
+
+#: lib/preferences/autofillmanager.cpp:301
+#: lib/preferences/autofillmanager.cpp:312
+msgctxt "AutoFillManager|"
+msgid "Choose file..."
+msgstr "Escolha o arquivo..."
+
+#: lib/preferences/autofillmanager.cpp:326
+msgctxt "AutoFillManager|"
+msgid "Cannot read file!"
+msgstr "Não foi possível ler o arquivo!"
+
+#: lib/preferences/autofillmanager.cpp:335
+msgctxt "AutoFillManager|"
+msgid "Successfully imported"
+msgstr "Importado com sucesso"
+
+#: lib/preferences/autofillmanager.cpp:335
+msgctxt "AutoFillManager|"
+msgid "Error while importing!"
+msgstr "Ocorreu um erro ao importar!"
+
+#: lib/preferences/autofillmanager.cpp:346
+msgctxt "AutoFillManager|"
+msgid "Cannot write to file!"
+msgstr "Não foi possível escrever no arquivo!"
+
+#: lib/preferences/autofillmanager.cpp:355
+msgctxt "AutoFillManager|"
+msgid "Successfully exported"
+msgstr "Exportado com sucesso"
+
+#: lib/preferences/autofillmanager.cpp:372
+msgctxt "AutoFillManager|"
+msgid "Copy Username"
+msgstr "Copiar usuário"
+
+#: lib/preferences/autofillmanager.cpp:373
+msgctxt "AutoFillManager|"
+msgid "Copy Password"
+msgstr "Copiar senha"
+
+#: lib/preferences/autofillmanager.cpp:375
+msgctxt "AutoFillManager|"
+msgid "Edit Password"
+msgstr "Editar senha"
+
+#: lib/preferences/autofillmanager.ui:25
+msgctxt "AutoFillManager|"
+msgid "Passwords are stored in:"
+msgstr "Senhas estão guardadas em:"
+
+#: lib/preferences/autofillmanager.ui:35
+msgctxt "AutoFillManager|"
+msgid "Change backend"
+msgstr "Mudar infraestrutura"
+
+#: lib/preferences/autofillmanager.ui:42
+msgctxt "AutoFillManager|"
+msgid "Backend options"
+msgstr "Opções da infraestrutura"
+
+#: lib/preferences/autofillmanager.ui:71
+msgctxt "AutoFillManager|"
+msgid "Passwords"
+msgstr "Senhas"
+
+#: lib/preferences/autofillmanager.ui:87 lib/preferences/autofillmanager.ui:201
+msgctxt "AutoFillManager|"
+msgid "Server"
+msgstr "Servidor"
+
+#: lib/preferences/autofillmanager.ui:92
+msgctxt "AutoFillManager|"
+msgid "Username"
+msgstr "Usuário"
+
+#: lib/preferences/autofillmanager.ui:97
+msgctxt "AutoFillManager|"
+msgid "Password"
+msgstr "Senha"
+
+#: lib/preferences/autofillmanager.ui:113
+msgctxt "AutoFillManager|"
+msgid "Import and Export"
+msgstr "Importar e exportar"
+
+#: lib/preferences/autofillmanager.ui:154
+msgctxt "AutoFillManager|"
+msgid "Edit"
+msgstr "Editar"
+
+#: lib/preferences/autofillmanager.ui:161
+#: lib/preferences/autofillmanager.ui:211
+msgctxt "AutoFillManager|"
+msgid "Remove"
+msgstr "Remover"
+
+#: lib/preferences/autofillmanager.ui:168
+#: lib/preferences/autofillmanager.ui:218
+msgctxt "AutoFillManager|"
+msgid "Remove All"
+msgstr "Remover todas"
+
+#: lib/preferences/autofillmanager.ui:191
+msgctxt "AutoFillManager|"
+msgid "Exceptions"
+msgstr "Exceções"
+
+#: lib/preferences/jsoptions.ui:14
+msgctxt "JsOptions|"
+msgid "JavaScript Options"
+msgstr "Opções JavaScript"
+
+#: lib/preferences/jsoptions.ui:20
+msgctxt "JsOptions|"
+msgid "Allow JavaScript to:"
+msgstr "Permitir que o JavaScript:"
+
+#: lib/preferences/jsoptions.ui:29
+msgctxt "JsOptions|"
+msgid "Open popup windows"
+msgstr "Abra janelas popup"
+
+#: lib/preferences/jsoptions.ui:36
+msgctxt "JsOptions|"
+msgid "Activate windows"
+msgstr "Ativar janelas"
+
+#: lib/preferences/jsoptions.ui:43
+msgctxt "JsOptions|"
+msgid "Access clipboard"
+msgstr "acesse a área de transferência"
+
+#: lib/preferences/jsoptions.ui:50
+msgctxt "JsOptions|"
+msgid "Paste from clipboard"
+msgstr "Colar da área de transferência"
+
+#: lib/preferences/pluginslist.ui:17
+msgctxt "PluginsList|"
+msgid "Enter name"
+msgstr "Digitar nome"
+
+#: lib/preferences/pluginslist.ui:51
+msgctxt "PluginsList|"
+msgid "Settings"
+msgstr "Configurações"
+
+#: lib/preferences/pluginslist.ui:61
+msgctxt "PluginsList|"
+msgid "Remove"
+msgstr "Remover"
+
+#: lib/preferences/pluginslist.ui:81
+msgctxt "PluginsList|"
+msgid ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
+msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">Baixar mais extensões...</"
+"a>"
+
+#: lib/preferences/pluginsmanager.cpp:198
+msgctxt "PluginsManager|"
+msgid "Error!"
+msgstr "Erro!"
+
+#: lib/preferences/pluginsmanager.cpp:198
+msgctxt "PluginsManager|"
+msgid "Cannot load extension!"
+msgstr "Não foi possível carregar essa extensão!"
+
+#: lib/preferences/pluginsmanager.cpp:237
+msgctxt "PluginsManager|"
+msgid "Confirmation"
+msgstr "Confirmação"
+
+#: lib/preferences/pluginsmanager.cpp:238
+#, qt-format
+msgctxt "PluginsManager|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "Deseja realmente remover '%1'?"
+
+#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:602
+msgctxt "Preferences|"
+msgid "Default"
+msgstr "Padrão"
+
+#: lib/preferences/preferences.cpp:155
+msgctxt "Preferences|"
+msgid "Set as default"
+msgstr "Definir como padrão"
+
+#: lib/preferences/preferences.cpp:545
+msgctxt "Preferences|"
+msgid "Choose executable location..."
+msgstr "Escolha a localização do executável..."
+
+#: lib/preferences/preferences.cpp:588
+msgctxt "Preferences|"
+msgid "OSD Notification"
+msgstr "Notificação"
+
+#: lib/preferences/preferences.cpp:589
+msgctxt "Preferences|"
+msgid "Drag it on the screen to place it where you want."
+msgstr "Arraste a notificação para a teça para a posicionar."
+
+#: lib/preferences/preferences.cpp:638
+msgctxt "Preferences|"
+msgid "Choose download location..."
+msgstr "Escolha o local dos downloads..."
+
+#: lib/preferences/preferences.cpp:652
+msgctxt "Preferences|"
+msgid "Choose stylesheet location..."
+msgstr "Escolha a localização da folha de estilo..."
+
+#: lib/preferences/preferences.cpp:663
+msgctxt "Preferences|"
+msgid "Deleted"
+msgstr "Eliminado"
+
+#: lib/preferences/preferences.cpp:759
+msgctxt "Preferences|"
+msgid "Choose cache path..."
+msgstr "Escolher caminho do cache..."
+
+#: lib/preferences/preferences.cpp:790
+msgctxt "Preferences|"
+msgid "New Profile"
+msgstr "Novo perfil"
+
+#: lib/preferences/preferences.cpp:790
+msgctxt "Preferences|"
+msgid "Enter the new profile's name:"
+msgstr "Digite o nome do novo perfil:"
+
+#: lib/preferences/preferences.cpp:800 lib/preferences/preferences.cpp:805
+msgctxt "Preferences|"
+msgid "Error!"
+msgstr "Erro!"
+
+#: lib/preferences/preferences.cpp:800
+msgctxt "Preferences|"
+msgid "This profile already exists!"
+msgstr "Esse perfil já existe!"
+
+#: lib/preferences/preferences.cpp:805
+msgctxt "Preferences|"
+msgid "Cannot create profile directory!"
+msgstr "Não foi possível criar a pasta para o seu perfil!"
+
+#: lib/preferences/preferences.cpp:816
+msgctxt "Preferences|"
+msgid "Confirmation"
+msgstr "Confirmação"
+
+#: lib/preferences/preferences.cpp:817
+#, qt-format
+msgctxt "Preferences|"
+msgid ""
+"Are you sure you want to permanently delete \"%1\" profile? This action "
+"cannot be undone!"
+msgstr ""
+"Deseja remover permanentemente o perfil \"%1\"? Esta ação não pode ser "
+"desfeita!"
+
+#: lib/preferences/preferences.cpp:832 lib/preferences/preferences.ui:227
+msgctxt "Preferences|"
+msgid "Note: You cannot delete active profile."
+msgstr "Observação: Você não pode apagar o perfil que está ativo no momento."
+
+#: lib/preferences/preferences.cpp:1089
+msgctxt "Preferences|"
+msgid "Select Color"
+msgstr "Escolher cor"
+
+#: lib/preferences/preferences.ui:14
+msgctxt "Preferences|"
+msgid "Preferences"
+msgstr "Preferências"
+
+#: lib/preferences/preferences.ui:60
+msgctxt "Preferences|"
+msgid "General"
+msgstr "Geral"
+
+#: lib/preferences/preferences.ui:65
+msgctxt "Preferences|"
+msgid "Appearance"
+msgstr "Aparência"
+
+#: lib/preferences/preferences.ui:70
+msgctxt "Preferences|"
+msgid "Tabs"
+msgstr "Abas"
+
+#: lib/preferences/preferences.ui:75
+msgctxt "Preferences|"
+msgid "Browsing"
+msgstr "Navegação"
+
+#: lib/preferences/preferences.ui:80
+msgctxt "Preferences|"
+msgid "Fonts"
+msgstr "Fontes"
+
+#: lib/preferences/preferences.ui:85
+msgctxt "Preferences|"
+msgid "Keyboard Shortcuts"
+msgstr "Atalhos"
+
+#: lib/preferences/preferences.ui:90
+msgctxt "Preferences|"
+msgid "Downloads"
+msgstr "Downloads"
+
+#: lib/preferences/preferences.ui:95
+msgctxt "Preferences|"
+msgid "Password Manager"
+msgstr "Gerenciador de senhas"
+
+#: lib/preferences/preferences.ui:100
+msgctxt "Preferences|"
+msgid "Privacy"
+msgstr "Privacidade"
+
+#: lib/preferences/preferences.ui:105
+msgctxt "Preferences|"
+msgid "Notifications"
+msgstr "Notificações"
+
+#: lib/preferences/preferences.ui:110
+msgctxt "Preferences|"
+msgid "Extensions"
+msgstr "Extensões"
+
+#: lib/preferences/preferences.ui:115
+msgctxt "Preferences|"
+msgid "Spell Check"
+msgstr "Verificação ortográfica"
+
+#: lib/preferences/preferences.ui:120
+msgctxt "Preferences|"
+msgid "Other"
+msgstr "Outras"
+
+#: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
+msgctxt "Preferences|"
+msgid "Use current"
+msgstr "Utilizar atual"
+
+#: lib/preferences/preferences.ui:243
+msgctxt "Preferences|"
+msgid "Create New"
+msgstr "Criar novo"
+
+#: lib/preferences/preferences.ui:259
+msgctxt "Preferences|"
+msgid "Delete"
+msgstr "Eliminar"
+
+#: lib/preferences/preferences.ui:285
+msgctxt "Preferences|"
+msgid "<b>Launching</b>"
+msgstr "<b>Iniciar</b>"
+
+#: lib/preferences/preferences.ui:295
+msgctxt "Preferences|"
+msgid "After launch: "
+msgstr "Ao iniciar: "
+
+#: lib/preferences/preferences.ui:303
+msgctxt "Preferences|"
+msgid "Open blank page"
+msgstr "Abrir página em branco"
+
+#: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
+msgctxt "Preferences|"
+msgid "Open homepage"
+msgstr "Abrir página inicial"
+
+#: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
+msgctxt "Preferences|"
+msgid "Open speed dial"
+msgstr "Abrir acesso rápido"
+
+#: lib/preferences/preferences.ui:318
+msgctxt "Preferences|"
+msgid "Restore session"
+msgstr "Restaurar sessão"
+
+#: lib/preferences/preferences.ui:323
+msgctxt "Preferences|"
+msgid "Select session"
+msgstr "Selecionar sessão"
+
+#: lib/preferences/preferences.ui:331
+msgctxt "Preferences|"
+msgid "Homepage: "
+msgstr "Página inicial: "
+
+#: lib/preferences/preferences.ui:352
+msgctxt "Preferences|"
+msgid "On new tab: "
+msgstr "Nova aba:"
+
+#: lib/preferences/preferences.ui:360
+msgctxt "Preferences|"
+msgid "Open blank tab"
+msgstr "Abrir aba em branco"
+
+#: lib/preferences/preferences.ui:375
+msgctxt "Preferences|"
+msgid "Open other page..."
+msgstr "Abrir outra página..."
+
+#: lib/preferences/preferences.ui:383
+msgctxt "Preferences|"
+msgid "<b>Profiles</b>"
+msgstr "<b>Perfis</b>"
+
+#: lib/preferences/preferences.ui:390
+msgctxt "Preferences|"
+msgid "Startup profile:"
+msgstr "Perfil ao iniciar:"
+
+#: lib/preferences/preferences.ui:397
+msgctxt "Preferences|"
+msgid "Check for updates on start"
+msgstr "Procurar atualizações ao iniciar"
+
+#: lib/preferences/preferences.ui:404
+msgctxt "Preferences|"
+msgid "Active profile:"
+msgstr "Perfil ativo:"
+
+#: lib/preferences/preferences.ui:418
+msgctxt "Preferences|"
+msgid "Don't load tabs until selected"
+msgstr "Não carregar abas até ser selecionada"
+
+#: lib/preferences/preferences.ui:440
+msgctxt "Preferences|"
+msgid "Check to see if Falkon is the default browser on startup"
+msgstr "Verificar se o Falkon é o navegador padrão ao iniciar"
+
+#: lib/preferences/preferences.ui:450
+msgctxt "Preferences|"
+msgid "Check Now"
+msgstr "Verificar agora"
+
+#: lib/preferences/preferences.ui:480
+msgctxt "Preferences|"
+msgid "Themes"
+msgstr "Temas"
+
+#: lib/preferences/preferences.ui:502
+msgctxt "Preferences|"
+msgid "Advanced options"
+msgstr "Opções avançadas"
+
+#: lib/preferences/preferences.ui:510
+msgctxt "Preferences|"
+msgid "Show StatusBar on start"
+msgstr "Mostrar barra de status ao iniciar"
+
+#: lib/preferences/preferences.ui:517
+msgctxt "Preferences|"
+msgid "Show Bookmarks ToolBar on start"
+msgstr "Mostrar barra de favoritos ao iniciar"
+
+#: lib/preferences/preferences.ui:524
+msgctxt "Preferences|"
+msgid "Show Navigation ToolBar on start"
+msgstr "Mostrar barra de navegação ao iniciar"
+
+#: lib/preferences/preferences.ui:531
+msgctxt "Preferences|"
+msgid "Enable instant Bookmarks ToolBar"
+msgstr "Habilita a barra de ferramentas de favoritos instantâneos"
+
+#: lib/preferences/preferences.ui:553
+msgctxt "Preferences|"
+msgid "<b>Browser Window</b>"
+msgstr "<b>Janela do navegador</b>"
+
+#: lib/preferences/preferences.ui:601
+msgctxt "Preferences|"
+msgid "Tabs behaviour"
+msgstr "Comportamento das abas"
+
+#: lib/preferences/preferences.ui:607
+msgctxt "Preferences|"
+msgid "Hide tabs when there is only one tab"
+msgstr "Ocultar abas caso exista apenas uma"
+
+#: lib/preferences/preferences.ui:614
+msgctxt "Preferences|"
+msgid "Activate last tab when closing active tab"
+msgstr "Ativar a última aba quando fechar aba atual"
+
+#: lib/preferences/preferences.ui:621
+msgctxt "Preferences|"
+msgid "Open new tabs after active tab"
+msgstr "Abrir aba após a atual"
+
+#: lib/preferences/preferences.ui:628
+msgctxt "Preferences|"
+msgid "Open new empty tabs after active tab"
+msgstr "Abrir novas abas após aba ativa"
+
+#: lib/preferences/preferences.ui:635
+msgctxt "Preferences|"
+msgid "Open popup windows in tabs"
+msgstr "Abrir popups em abas"
+
+#: lib/preferences/preferences.ui:642
+msgctxt "Preferences|"
+msgid "Always switch between tabs with mouse wheel"
+msgstr "Mudar páginas com o scroll do mouse"
+
+#: lib/preferences/preferences.ui:649
+msgctxt "Preferences|"
+msgid "Automatically switch to newly opened tab"
+msgstr "Alterar automaticamente para a mais nova aba aberta"
+
+#: lib/preferences/preferences.ui:656
+msgctxt "Preferences|"
+msgid "Don't close window upon closing last tab"
+msgstr "Não sair ao fechar a última aba"
+
+#: lib/preferences/preferences.ui:663
+msgctxt "Preferences|"
+msgid "Ask when closing multiple tabs"
+msgstr "Perguntar ao fechar várias abas"
+
+#: lib/preferences/preferences.ui:670
+msgctxt "Preferences|"
+msgid "Show closed tabs button"
+msgstr "Mostrar botão de abas fechadas"
+
+#: lib/preferences/preferences.ui:679
+msgctxt "Preferences|"
+msgid "Show close buttons on inactive tabs:"
+msgstr "Mostrar botões de \"Fechar\" em abas inativas"
+
+#: lib/preferences/preferences.ui:687
+msgctxt "Preferences|"
+msgid "Automatic"
+msgstr "Automático"
+
+#: lib/preferences/preferences.ui:692
+msgctxt "Preferences|"
+msgid "Always"
+msgstr "Sempre"
+
+#: lib/preferences/preferences.ui:697
+msgctxt "Preferences|"
+msgid "Never"
+msgstr "Nunca"
+
+#: lib/preferences/preferences.ui:737
+msgctxt "Preferences|"
+msgid "Address Bar behaviour"
+msgstr "Comportamento da barra de endereços"
+
+#: lib/preferences/preferences.ui:745
+msgctxt "Preferences|"
+msgid "Suggest when typing into address bar:"
+msgstr "Sugerir enquanto estiver digitando na barra de endereço:"
+
+#: lib/preferences/preferences.ui:759
+msgctxt "Preferences|"
+msgid "History and Bookmarks"
+msgstr "Histórico e favoritos"
+
+#: lib/preferences/preferences.ui:764
+msgctxt "Preferences|"
+msgid "History"
+msgstr "Histórico"
+
+#: lib/preferences/preferences.ui:769
+msgctxt "Preferences|"
+msgid "Bookmarks"
+msgstr "Favoritos"
+
+#: lib/preferences/preferences.ui:774
+msgctxt "Preferences|"
+msgid "Nothing"
+msgstr "Nada"
+
+#: lib/preferences/preferences.ui:800
+msgctxt "Preferences|"
+msgid "Enable inline suggestions"
+msgstr "Ativar sugestões em linha"
+
+#: lib/preferences/preferences.ui:807
+msgctxt "Preferences|"
+msgid ""
+"Press \"Shift\" to not switch the tab but load the url in the current tab"
+msgstr "Pressione \"Shift\" para não mudar de abas mas carregar a URL na atual"
+
+#: lib/preferences/preferences.ui:810
+msgctxt "Preferences|"
+msgid "Propose to switch tab if completed url is already loaded"
+msgstr "Propor mudar de aba se a URL completa já está carregada"
+
+#: lib/preferences/preferences.ui:817
+msgctxt "Preferences|"
+msgid "Always show go icon"
+msgstr "Sempre mostrar botão de \"Ir\""
+
+#: lib/preferences/preferences.ui:824
+msgctxt "Preferences|"
+msgid "Select all text by double clicking in address bar"
+msgstr "Selecionar todo o texto ao clicar duas vezes na barra de endereço"
+
+#: lib/preferences/preferences.ui:831
+msgctxt "Preferences|"
+msgid "Select all text by clicking in address bar"
+msgstr "Selecionar todo o texto ao clicar na barra de endereço"
+
+#: lib/preferences/preferences.ui:838
+msgctxt "Preferences|"
+msgid "Enable automatic searching from the address bar"
+msgstr "Habilitar pesquisa automática na barra de endereços"
+
+#: lib/preferences/preferences.ui:845
+msgctxt "Preferences|"
+msgid "Search with Default Engine"
+msgstr "Pesquisar com o site de pesquisa padrão"
+
+#: lib/preferences/preferences.ui:852
+msgctxt "Preferences|"
+msgid "Show search suggestions"
+msgstr "Mostrar sugestões de pesquisa"
+
+#: lib/preferences/preferences.ui:875
+msgctxt "Preferences|"
+msgid "Show loading progress in address bar"
+msgstr "Mostrar o progresso do carregamento da página na barra de endereços"
+
+#: lib/preferences/preferences.ui:908
+msgctxt "Preferences|"
+msgid "Fill"
+msgstr "Preencher"
+
+#: lib/preferences/preferences.ui:913
+msgctxt "Preferences|"
+msgid "Bottom"
+msgstr "Em baixo"
+
+#: lib/preferences/preferences.ui:918
+msgctxt "Preferences|"
+msgid "Top"
+msgstr "Em cima"
+
+#: lib/preferences/preferences.ui:926
+msgctxt "Preferences|"
+msgid "Custom color:"
+msgstr "Cor personalizada:"
+
+#: lib/preferences/preferences.ui:942
+msgctxt "Preferences|"
+msgid "Select color"
+msgstr "Escolher cor"
+
+#: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1258
+#: lib/preferences/preferences.ui:1792 lib/preferences/preferences.ui:1889
+#: lib/preferences/preferences.ui:2459
+msgctxt "Preferences|"
+msgid "..."
+msgstr "..."
+
+#: lib/preferences/preferences.ui:952
+msgctxt "Preferences|"
+msgid "Reset"
+msgstr "Restaurar"
+
+#: lib/preferences/preferences.ui:1003
+msgctxt "Preferences|"
+msgid "Web Configuration"
+msgstr "Configuração web"
+
+#: lib/preferences/preferences.ui:1011
+msgctxt "Preferences|"
+msgid "Enable Pepper plugin API (PPAPI)"
+msgstr "Ativar a API de plugins do Pepper (PPAPI)"
+
+#: lib/preferences/preferences.ui:1018
+msgctxt "Preferences|"
+msgid "Use built-in PDF viewer (requires PPAPI)"
+msgstr "Usar o visualizador de PDFs incorporado (necessita da PPAPI)"
+
+#: lib/preferences/preferences.ui:1025
+msgctxt "Preferences|"
+msgid "Allow JavaScript"
+msgstr "Permitir JavaScript"
+
+#: lib/preferences/preferences.ui:1032
+msgctxt "Preferences|"
+msgid "Include links in focus chain"
+msgstr "Incluir ligações na cadeia de foco"
+
+#. try to detect possible XSS attacks when executing javascript
+#: lib/preferences/preferences.ui:1039
+msgctxt "Preferences|"
+msgid "Enable XSS Auditing"
+msgstr "Ativar auditoria XSS"
+
+#. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
+#: lib/preferences/preferences.ui:1046
+msgctxt "Preferences|"
+msgid "Print element background"
+msgstr "Imprimir os elementos de fundo"
+
+#: lib/preferences/preferences.ui:1053
+msgctxt "Preferences|"
+msgid "Animated scrolling"
+msgstr "Rolagem suave"
+
+#: lib/preferences/preferences.ui:1060
+msgctxt "Preferences|"
+msgid "Enable spatial navigation"
+msgstr "Habilitar navegação espacial"
+
+#: lib/preferences/preferences.ui:1067
+msgctxt "Preferences|"
+msgid "Use native scrollbars"
+msgstr "Usar barras de rolagem do sistema"
+
+#: lib/preferences/preferences.ui:1074
+msgctxt "Preferences|"
+msgid "Disable automatic playing of videos"
+msgstr "Desabilitar a reprodução automática de vídeos"
+
+#: lib/preferences/preferences.ui:1081
+msgctxt "Preferences|"
+msgid "Prevent WebRTC from leaking local IP address"
+msgstr "Prevenir o WebRTC de expor o endereço IP local"
+
+#: lib/preferences/preferences.ui:1088
+msgctxt "Preferences|"
+msgid "Enable DNS prefetching"
+msgstr "Ativar a pré-leitura do DNS"
+
+#: lib/preferences/preferences.ui:1095
+msgctxt "Preferences|"
+msgid "Enable screen capture"
+msgstr "Habilitar captura de tela"
+
+#: lib/preferences/preferences.ui:1112
+msgctxt "Preferences|"
+msgid "Mouse wheel scrolls"
+msgstr "Roda do mouse move"
+
+#: lib/preferences/preferences.ui:1132
+msgctxt "Preferences|"
+msgid "lines on page"
+msgstr "linhas na página"
+
+#: lib/preferences/preferences.ui:1143
+msgctxt "Preferences|"
+msgid "Default zoom on pages: "
+msgstr "Tamanho padrão das páginas: "
+
+#: lib/preferences/preferences.ui:1182
+msgctxt "Preferences|"
+msgid "Local Storage"
+msgstr "Armazenamento local"
+
+#: lib/preferences/preferences.ui:1190
+msgctxt "Preferences|"
+msgid "Allow storing network cache on disk"
+msgstr "Permitir armazenamento do cache de rede no disco"
+
+#: lib/preferences/preferences.ui:1213
+msgctxt "Preferences|"
+msgid "Delete cache on close"
+msgstr "Excluir cache ao fechar"
+
+#: lib/preferences/preferences.ui:1220
+msgctxt "Preferences|"
+msgid "Maximum:"
+msgstr "Máximo:"
+
+#: lib/preferences/preferences.ui:1227
+msgctxt "Preferences|"
+msgid " MB"
+msgstr "MB"
+
+#: lib/preferences/preferences.ui:1243
+msgctxt "Preferences|"
+msgid "Store cache in:"
+msgstr "Armazenar cache em:"
+
+#: lib/preferences/preferences.ui:1271
+msgctxt "Preferences|"
+msgid "Allow saving history"
+msgstr "Permitir salvar histórico"
+
+#: lib/preferences/preferences.ui:1278
+msgctxt "Preferences|"
+msgid "Delete history on close"
+msgstr "Limpar histórico ao fechar"
+
+#: lib/preferences/preferences.ui:1301
+msgctxt "Preferences|"
+msgid "Allow local storage of HTML5 web content"
+msgstr "Permitir armazenamento local de conteúdo HTML5"
+
+#: lib/preferences/preferences.ui:1308
+msgctxt "Preferences|"
+msgid "Delete locally stored HTML5 web content on close"
+msgstr "Eliminar conteúdo HTML5 ao fechar o navegador"
+
+#: lib/preferences/preferences.ui:1334
+msgctxt "Preferences|"
+msgid "Delete now"
+msgstr "Apagar agora"
+
+#: lib/preferences/preferences.ui:1373
+msgctxt "Preferences|"
+msgid "Proxy Configuration"
+msgstr "Configuração de proxy"
+
+#: lib/preferences/preferences.ui:1392
+msgctxt "Preferences|"
+msgid "System proxy configuration"
+msgstr "Proxy do sistema"
+
+#: lib/preferences/preferences.ui:1415
+msgctxt "Preferences|"
+msgid "Manual configuration"
+msgstr "Configuração manual"
+
+#: lib/preferences/preferences.ui:1425
+msgctxt "Preferences|"
+msgid "HTTP"
+msgstr "HTTP"
+
+#: lib/preferences/preferences.ui:1430
+msgctxt "Preferences|"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+#: lib/preferences/preferences.ui:1441
+msgctxt "Preferences|"
+msgid "Port:"
+msgstr "Porta:"
+
+#: lib/preferences/preferences.ui:1462
+msgctxt "Preferences|"
+msgid "Username:"
+msgstr "Usuário:"
+
+#: lib/preferences/preferences.ui:1472
+msgctxt "Preferences|"
+msgid "Password:"
+msgstr "Senha:"
+
+#: lib/preferences/preferences.ui:1501
+msgctxt "Preferences|"
+msgid "No proxy"
+msgstr "Sem proxy"
+
+#: lib/preferences/preferences.ui:1516
+msgctxt "Preferences|"
+msgid "<b>Font Families</b>"
+msgstr "<b>Famílias da fonte</b>"
+
+#: lib/preferences/preferences.ui:1529
+msgctxt "Preferences|"
+msgid "Standard"
+msgstr "Padrão"
+
+#: lib/preferences/preferences.ui:1536
+msgctxt "Preferences|"
+msgid "Fixed"
+msgstr "Fixa"
+
+#: lib/preferences/preferences.ui:1546
+msgctxt "Preferences|"
+msgid "Serif"
+msgstr "Serif"
+
+#: lib/preferences/preferences.ui:1556
+msgctxt "Preferences|"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#: lib/preferences/preferences.ui:1566
+msgctxt "Preferences|"
+msgid "Cursive"
+msgstr "Cursiva"
+
+#: lib/preferences/preferences.ui:1618
+msgctxt "Preferences|"
+msgid "Fantasy"
+msgstr "Fantasia"
+
+#: lib/preferences/preferences.ui:1625
+msgctxt "Preferences|"
+msgid "<b>Font Sizes</b>"
+msgstr "<b>Tamanho da fonte</b>"
+
+#: lib/preferences/preferences.ui:1634
+msgctxt "Preferences|"
+msgid "Fixed Font Size"
+msgstr "Tamanho fixo da fonte"
+
+#: lib/preferences/preferences.ui:1641
+msgctxt "Preferences|"
+msgid "Default Font Size"
+msgstr "Tamanho padrão da fonte"
+
+#: lib/preferences/preferences.ui:1668
+msgctxt "Preferences|"
+msgid "Minimum Font Size"
+msgstr "Tamanho mínimo da fonte"
+
+#: lib/preferences/preferences.ui:1675
+msgctxt "Preferences|"
+msgid "Minimum Logical Font Size"
+msgstr "Tamanho mínimo da fonte"
+
+#: lib/preferences/preferences.ui:1708
+msgctxt "Preferences|"
+msgid "<b>Shortcuts</b>"
+msgstr "<b>Atalhos</b>"
+
+#: lib/preferences/preferences.ui:1715
+msgctxt "Preferences|"
+msgid "Switch to tabs with Alt + number of tab"
+msgstr "Mudar abas com Alt + número da aba"
+
+#: lib/preferences/preferences.ui:1722
+msgctxt "Preferences|"
+msgid "Load speed dials with Ctrl + number of speed dial"
+msgstr "Carregar acesso rápido com Ctrl + número do acesso rápido"
+
+#: lib/preferences/preferences.ui:1729
+msgctxt "Preferences|"
+msgid ""
+"Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
+"><b>/</b> - search on page"
+msgstr ""
+"Atalhos existentes:<br/><b>1</b> - aba anterior<br/><b>2</b> - próxima "
+"aba<br/><b>/</b> - pesquisar na página"
+
+#: lib/preferences/preferences.ui:1732
+msgctxt "Preferences|"
+msgid "Use single key shortcuts"
+msgstr "Usar atalhos de tecla única"
+
+#: lib/preferences/preferences.ui:1739
+msgctxt "Preferences|"
+msgid ""
+"If unchecked, prevents accidental exit from the application if the Ctrl-W "
+"shortcut was intended."
+msgstr ""
+"Se desmarcado, previne a saída acidental do aplicativo se o atalho Ctrl-W "
+"foi planejado."
+
+#: lib/preferences/preferences.ui:1742
+msgctxt "Preferences|"
+msgid "Close application with Ctrl-Q"
+msgstr "Fechar aplicativo com Ctrl-Q"
+
+#: lib/preferences/preferences.ui:1766
+msgctxt "Preferences|"
+msgid "<b>Download Location</b>"
+msgstr "<b>Localização de downloads</b>"
+
+#: lib/preferences/preferences.ui:1773
+msgctxt "Preferences|"
+msgid "Ask everytime for download location"
+msgstr "Sempre perguntar aonde salvar os arquivos"
+
+#: lib/preferences/preferences.ui:1780
+msgctxt "Preferences|"
+msgid "Use defined location: "
+msgstr "Usar esta localização: "
+
+#: lib/preferences/preferences.ui:1830
+msgctxt "Preferences|"
+msgid "<b>Download Options</b>"
+msgstr "<b>Opções de downloads</b>"
+
+#: lib/preferences/preferences.ui:1837
+msgctxt "Preferences|"
+msgid "Close download manager when downloading finishes"
+msgstr "Fechar gerenciador de download após finalizar todos os downloads"
+
+#: lib/preferences/preferences.ui:1844
+msgctxt "Preferences|"
+msgid "<b>External download manager</b>"
+msgstr "<b>Gerenciador de downloads externo</b>"
+
+#: lib/preferences/preferences.ui:1851
+msgctxt "Preferences|"
+msgid "Use external download manager"
+msgstr "Usar gerenciador de downloads externos"
+
+#: lib/preferences/preferences.ui:1863
+msgctxt "Preferences|"
+msgid "Executable:"
+msgstr "Executável:"
+
+#: lib/preferences/preferences.ui:1870
+msgctxt "Preferences|"
+msgid "Arguments:"
+msgstr "Argumentos:"
+
+#: lib/preferences/preferences.ui:1877
+msgctxt "Preferences|"
+msgid "Leave blank if unsure"
+msgstr "Deixe em branco caso não saiba o que colocar"
+
+#: lib/preferences/preferences.ui:1898
+msgctxt "Preferences|"
+msgid "<b>%d</b> will be replaced with URL to be downloaded"
+msgstr "<b>%d</b> será substituído com a URL a ser baixada"
+
+#: lib/preferences/preferences.ui:1924
+msgctxt "Preferences|"
+msgid "<b>AutoFill options</b>"
+msgstr "<b>Preenchimento automático</b>"
+
+#: lib/preferences/preferences.ui:1931
+msgctxt "Preferences|"
+msgid "Allow saving passwords from sites"
+msgstr "Permitir salvar senha das páginas"
+
+#: lib/preferences/preferences.ui:1982
+msgctxt "Preferences|"
+msgid "Automatically complete passwords on sites"
+msgstr "Completar automaticamente senhas nos sites"
+
+#: lib/preferences/preferences.ui:1993
+msgctxt "Preferences|"
+msgid "<b>Cookies</b>"
+msgstr "<b>Cookies</b>"
+
+#: lib/preferences/preferences.ui:2000
+msgctxt "Preferences|"
+msgid "<b>Other</b>"
+msgstr "<b>Outros</b>"
+
+#: lib/preferences/preferences.ui:2026
+msgctxt "Preferences|"
+msgid "JavaScript options"
+msgstr "Opções do JavaScript"
+
+#: lib/preferences/preferences.ui:2036
+msgctxt "Preferences|"
+msgid "<b>JavaScript</b>"
+msgstr "<b>JavaScript</b>"
+
+#: lib/preferences/preferences.ui:2049
+msgctxt "Preferences|"
+msgid "Cookies Manager"
+msgstr "Gerenciador de cookies"
+
+#: lib/preferences/preferences.ui:2059
+msgctxt "Preferences|"
+msgid "Manage JavaScript privacy options"
+msgstr "Gerenciar as opções de privacidade do JavaScript"
+
+#: lib/preferences/preferences.ui:2082
+msgctxt "Preferences|"
+msgid "Manage HTML5 permissions"
+msgstr "Configurar permissões HTML5"
+
+#: lib/preferences/preferences.ui:2089
+msgctxt "Preferences|"
+msgid "Manage Cookies"
+msgstr "Gerenciar cookies"
+
+#: lib/preferences/preferences.ui:2109
+msgctxt "Preferences|"
+msgid "<b>HTML5 Permissions</b>"
+msgstr "<b>Permissões HTML5</b>"
+
+#: lib/preferences/preferences.ui:2122
+msgctxt "Preferences|"
+msgid "HTML5 Permissions"
+msgstr "Permissões do HTML5"
+
+#: lib/preferences/preferences.ui:2129
+msgctxt "Preferences|"
+msgid "Send Do Not Track header to servers"
+msgstr ""
+"Enviar aos servidores uma notificação que o monitoramento não está "
+"funcionando"
+
+#: lib/preferences/preferences.ui:2155
+msgctxt "Preferences|"
+msgid "Expiration timeout:"
+msgstr "Terminam em:"
+
+#: lib/preferences/preferences.ui:2168
+msgctxt "Preferences|"
+msgid " seconds"
+msgstr "segundos"
+
+#: lib/preferences/preferences.ui:2190
+msgctxt "Preferences|"
+msgid "<b>Notifications</b>"
+msgstr "<b>Notificações</b>"
+
+#: lib/preferences/preferences.ui:2213
+msgctxt "Preferences|"
+msgid "Use Native System Notifications (Linux only)"
+msgstr "Utilizar notificações do sistema (somente para Linux)"
+
+#: lib/preferences/preferences.ui:2220
+msgctxt "Preferences|"
+msgid "Do not use Notifications"
+msgstr "Não utilizar notificações"
+
+#: lib/preferences/preferences.ui:2243
+msgctxt "Preferences|"
+msgid ""
+"<b>Note: </b>You can change position of OSD Notification by dragging it on "
+"the screen."
+msgstr ""
+"<b>Observação: </b> Você pode alterar a posição da notificação arrastando-a "
+"para o local desejado."
+
+#: lib/preferences/preferences.ui:2269
+msgctxt "Preferences|"
+msgid "Use OSD Notifications"
+msgstr "Utilizar notificações"
+
+#: lib/preferences/preferences.ui:2276
+msgctxt "Preferences|"
+msgid "Preview"
+msgstr "Visualização"
+
+#: lib/preferences/preferences.ui:2341
+msgctxt "Preferences|"
+msgid ""
+"For more information about Spell Check, please see <a href=\"https://"
+"userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
+msgstr ""
+"Para mais informações sobre a verificação ortográfica, veja a <a href="
+"\"https://userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
+
+#: lib/preferences/preferences.ui:2383
+msgctxt "Preferences|"
+msgid "<b>Spell Check options</b>"
+msgstr "<b>Opções da verificação ortográfica</b>"
+
+#: lib/preferences/preferences.ui:2390
+msgctxt "Preferences|"
+msgid "Enable Spell Check"
+msgstr "Habilitar verificação ortográfica"
+
+#: lib/preferences/preferences.ui:2397
+msgctxt "Preferences|"
+msgid "<b>Dictionary directories</b>"
+msgstr "<b>Pastas do dicionário</b>"
+
+#: lib/preferences/preferences.ui:2448
+msgctxt "Preferences|"
+msgid "No languages found"
+msgstr "Nenhum idioma encontrado"
+
+#: lib/preferences/preferences.ui:2466
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>Gerenciar sites de pesquisa</b>"
+
+#: lib/preferences/preferences.ui:2473
+msgctxt "Preferences|"
+msgid "<b>User Style Sheet</b>"
+msgstr "<b>Estilo do usuário</b>"
+
+#: lib/preferences/preferences.ui:2498
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "Idiomas"
+
+#: lib/preferences/preferences.ui:2520
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>Alterar a identificação do navegador</b>"
+
+#: lib/preferences/preferences.ui:2545
+msgctxt "Preferences|"
+msgid "Protocol Handlers Manager"
+msgstr "Gerenciador de manipuladores de protocolo"
+
+#: lib/preferences/preferences.ui:2585
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "Gerenciador de sites de pesquisa"
+
+#: lib/preferences/preferences.ui:2633
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr "Folha de estilos carregada automaticamente em todos os sites:"
+
+#: lib/preferences/preferences.ui:2643
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>Idioma preferido para páginas web</b>"
+
+#: lib/preferences/preferences.ui:2668
+msgctxt "Preferences|"
+msgid "User Agent Manager"
+msgstr "Gerenciar identificação do navegador"
+
+#: lib/preferences/preferences.ui:2690
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>Gerenciar manipuladores de protocolo</b>"
+
+#: lib/preferences/thememanager.cpp:100
+msgctxt "ThemeManager|"
+msgid "Confirmation"
+msgstr "Confirmação"
+
+#: lib/preferences/thememanager.cpp:101
+#, qt-format
+msgctxt "ThemeManager|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "Deseja realmente remover '%1'?"
+
+#: lib/preferences/thememanager.ui:51
+msgctxt "ThemeManager|"
+msgid "<b>Name:</b>"
+msgstr "<b>Nome:</b>"
+
+#: lib/preferences/thememanager.ui:61
+msgctxt "ThemeManager|"
+msgid "<b>Author:</b>"
+msgstr "<b>Autor:</b>"
+
+#: lib/preferences/thememanager.ui:84
+msgctxt "ThemeManager|"
+msgid "<b>Description:</b>"
+msgstr "<b>Descrição:</b>"
+
+#: lib/preferences/thememanager.ui:128
+msgctxt "ThemeManager|"
+msgid "License"
+msgstr "Licença"
+
+#: lib/preferences/thememanager.ui:155
+msgctxt "ThemeManager|"
+msgid "Remove"
+msgstr "Remover"
+
+#: lib/preferences/thememanager.ui:175
+msgctxt "ThemeManager|"
+msgid ""
+"<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
+msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/572/\">Baixar mais temas...</a>"
+
+#: lib/preferences/useragentdialog.cpp:99
+msgctxt "UserAgentDialog|"
+msgid "Add new site"
+msgstr "Adicionar um novo site"
+
+#: lib/preferences/useragentdialog.cpp:137
+msgctxt "UserAgentDialog|"
+msgid "Edit site"
+msgstr "Editar site"
+
+#: lib/preferences/useragentdialog.cpp:216
+msgctxt "UserAgentDialog|"
+msgid "Site domain: "
+msgstr "Domínio: "
+
+#: lib/preferences/useragentdialog.cpp:217
+msgctxt "UserAgentDialog|"
+msgid "User Agent: "
+msgstr "Identificação do navegador: "
+
+#: lib/preferences/useragentdialog.ui:14
+msgctxt "UserAgentDialog|"
+msgid "User Agent Manager"
+msgstr "Gerenciar identificação do navegador"
+
+#: lib/preferences/useragentdialog.ui:20
+msgctxt "UserAgentDialog|"
+msgid "Change global User Agent"
+msgstr "Alterar a identificação do navegador global"
+
+#: lib/preferences/useragentdialog.ui:48
+msgctxt "UserAgentDialog|"
+msgid "Use different User Agents for specified sites"
+msgstr ""
+"Usar uma identificação do navegador diferente para os sites especificados "
+"abaixo"
+
+#: lib/preferences/useragentdialog.ui:92
+msgctxt "UserAgentDialog|"
+msgid "Site"
+msgstr "Site"
+
+#: lib/preferences/useragentdialog.ui:97
+msgctxt "UserAgentDialog|"
+msgid "User Agent"
+msgstr "Identificação do navegador"
+
+#: lib/preferences/useragentdialog.ui:107
+msgctxt "UserAgentDialog|"
+msgid "Add"
+msgstr "Adicionar"
+
+#: lib/preferences/useragentdialog.ui:114
+msgctxt "UserAgentDialog|"
+msgid "Remove"
+msgstr "Remover"
+
+#: lib/preferences/useragentdialog.ui:134
+msgctxt "UserAgentDialog|"
+msgid "Edit"
+msgstr "Editar"
+
+#: lib/session/sessionmanager.cpp:126
+msgctxt "SessionManager|"
+msgid "_cloned"
+msgstr "_clonado"
+
+#: lib/session/sessionmanager.cpp:126
+msgctxt "SessionManager|"
+msgid "_renamed"
+msgstr "_renomeado"
+
+#: lib/session/sessionmanager.cpp:127
+msgctxt "SessionManager|"
+msgid "Clone Session"
+msgstr "Clonar sessão"
+
+#: lib/session/sessionmanager.cpp:127
+msgctxt "SessionManager|"
+msgid "Rename Session"
+msgstr "Renomear sessão"
+
+#: lib/session/sessionmanager.cpp:128
+msgctxt "SessionManager|"
+msgid "Please enter a new name:"
+msgstr "Digite um novo nome:"
+
+#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:143
+#: lib/session/sessionmanager.cpp:148 lib/session/sessionmanager.cpp:170
+#: lib/session/sessionmanager.cpp:218
+msgctxt "SessionManager|"
+msgid "Error!"
+msgstr "Erro!"
+
+#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:170
+#: lib/session/sessionmanager.cpp:218
+#, qt-format
+msgctxt "SessionManager|"
+msgid "The session file \"%1\" exists. Please enter another name."
+msgstr "O arquivo de sessão \"%1\" já existe. Digite outro nome."
+
+#: lib/session/sessionmanager.cpp:143
+msgctxt "SessionManager|"
+msgid "An error occurred when cloning session file."
+msgstr "Ocorreu um erro ao clonar o arquivo de sessão."
+
+#: lib/session/sessionmanager.cpp:148
+msgctxt "SessionManager|"
+msgid "An error occurred when renaming session file."
+msgstr "Ocorreu um erro ao renomear o arquivo de sessão."
+
+#: lib/session/sessionmanager.cpp:161
+msgctxt "SessionManager|"
+msgid "Save Session"
+msgstr "Salvar sessão"
+
+#: lib/session/sessionmanager.cpp:162
+msgctxt "SessionManager|"
+msgid "Please enter a name to save session:"
+msgstr "Digite um nome para salvar a sessão:"
+
+#: lib/session/sessionmanager.cpp:163
+#, qt-format
+msgctxt "SessionManager|"
+msgid "Saved Session (%1)"
+msgstr "Sessão salva (%1)"
+
+#: lib/session/sessionmanager.cpp:180
+msgctxt "SessionManager|"
+msgid "Restore Backup"
+msgstr "Restaurar backup"
+
+#: lib/session/sessionmanager.cpp:180
+msgctxt "SessionManager|"
+msgid "Are you sure you want to replace current session?"
+msgstr "Deseja realmente substituir a sessão atual?"
+
+#: lib/session/sessionmanager.cpp:199
+msgctxt "SessionManager|"
+msgid "Delete Session"
+msgstr "Remover sessão"
+
+#: lib/session/sessionmanager.cpp:199
+#, qt-format
+msgctxt "SessionManager|"
+msgid "Are you sure you want to delete session '%1'?"
+msgstr "Deseja realmente excluir a sessão '%1'?"
+
+#: lib/session/sessionmanager.cpp:209
+msgctxt "SessionManager|"
+msgid "New Session"
+msgstr "Nova sessão"
+
+#: lib/session/sessionmanager.cpp:210
+msgctxt "SessionManager|"
+msgid "Please enter a name to create new session:"
+msgstr "Digite um nome para criar uma nova sessão:"
+
+#: lib/session/sessionmanager.cpp:211
+#, qt-format
+msgctxt "SessionManager|"
+msgid "New Session (%1)"
+msgstr "Nova sessão (%1)"
+
+#: lib/session/sessionmanager.cpp:243
+msgctxt "SessionManager|"
+msgid "Backup 1"
+msgstr "Backup 1"
+
+#: lib/session/sessionmanager.cpp:250
+msgctxt "SessionManager|"
+msgid "Backup 2"
+msgstr "Backup 2"
+
+#: lib/session/sessionmanager.cpp:290
+msgctxt "SessionManager|"
+msgid "Default Session"
+msgstr "Sessão padrão"
+
+#: lib/session/sessionmanager.cpp:393
+msgctxt "SessionManager|"
+msgid "Please select the startup session:"
+msgstr "Selecione a sessão ao iniciar:"
+
+#: lib/session/sessionmanager.cpp:412
+#, qt-format
+msgctxt "SessionManager|"
+msgid "%1 (last session)"
+msgstr "%1 (última sessão)"
+
+#: lib/session/sessionmanagerdialog.cpp:140
+msgctxt "SessionManagerDialog|"
+msgid "Restore"
+msgstr "Restaurar"
+
+#: lib/session/sessionmanagerdialog.cpp:140
+msgctxt "SessionManagerDialog|"
+msgid "Switch To"
+msgstr "Mudar para"
+
+#: lib/session/sessionmanagerdialog.ui:14
+msgctxt "SessionManagerDialog|"
+msgid "Session Manager"
+msgstr "Gerenciador de sessão"
+
+#: lib/session/sessionmanagerdialog.ui:24
+msgctxt "SessionManagerDialog|"
+msgid "Session"
+msgstr "Sessão"
+
+#: lib/session/sessionmanagerdialog.ui:29
+msgctxt "SessionManagerDialog|"
+msgid "Last Modified"
+msgstr "Última modificação"
+
+#: lib/session/sessionmanagerdialog.ui:39
+msgctxt "SessionManagerDialog|"
+msgid "New"
+msgstr "Nova"
+
+#: lib/session/sessionmanagerdialog.ui:46
+msgctxt "SessionManagerDialog|"
+msgid "Rename"
+msgstr "Renomear"
+
+#: lib/session/sessionmanagerdialog.ui:53
+msgctxt "SessionManagerDialog|"
+msgid "Clone"
+msgstr "Clonar"
+
+#: lib/session/sessionmanagerdialog.ui:60
+msgctxt "SessionManagerDialog|"
+msgid "Delete"
+msgstr "Excluir"
+
+#: lib/session/sessionmanagerdialog.ui:67
+msgctxt "SessionManagerDialog|"
+msgid "Switch to"
+msgstr "Mudar para"
+
+#: lib/sidebar/bookmarkssidebar.cpp:103
+msgctxt "BookmarksSidebar|"
+msgid "Open in new tab"
+msgstr "Abrir em uma nova aba"
+
+#: lib/sidebar/bookmarkssidebar.cpp:104
+msgctxt "BookmarksSidebar|"
+msgid "Open in new window"
+msgstr "Abrir em uma nova janela"
+
+#: lib/sidebar/bookmarkssidebar.cpp:105
+msgctxt "BookmarksSidebar|"
+msgid "Open in new private window"
+msgstr "Abrir em uma nova janela privativa"
+
+#: lib/sidebar/bookmarkssidebar.cpp:108
+msgctxt "BookmarksSidebar|"
+msgid "Delete"
+msgstr "Apagar"
+
+#: lib/sidebar/bookmarkssidebar.ui:41
+msgctxt "BookmarksSideBar|"
+msgid "Search..."
+msgstr "Pesquisar..."
+
+#: lib/sidebar/historysidebar.cpp:85
+msgctxt "HistorySideBar|"
+msgid "Open in new tab"
+msgstr "Abrir em uma nova aba"
+
+#: lib/sidebar/historysidebar.cpp:86
+msgctxt "HistorySideBar|"
+msgid "Open in new window"
+msgstr "Abrir em uma nova janela"
+
+#: lib/sidebar/historysidebar.cpp:87
+msgctxt "HistorySideBar|"
+msgid "Open in new private window"
+msgstr "Abrir em uma nova janela privada"
+
+#: lib/sidebar/historysidebar.cpp:90
+msgctxt "HistorySideBar|"
+msgid "Delete"
+msgstr "Apagar"
+
+#: lib/sidebar/historysidebar.ui:32
+msgctxt "HistorySideBar|"
+msgid "Search..."
+msgstr "Pesquisar..."
+
+#: lib/sidebar/sidebar.cpp:65 lib/sidebar/sidebar.cpp:107
+msgctxt "SideBar|"
+msgid "Bookmarks"
+msgstr "Favoritos"
+
+#: lib/sidebar/sidebar.cpp:72 lib/sidebar/sidebar.cpp:114
+msgctxt "SideBar|"
+msgid "History"
+msgstr "Histórico"
+
+#: lib/tabwidget/tabbar.cpp:111
+msgctxt "BrowserWindow|"
+msgid "Close Tab"
+msgstr "Fechar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:63
+msgctxt "TabBar|"
+msgid "Don't ask again"
+msgstr "Não perguntar novamente"
+
+#: lib/tabwidget/tabcontextmenu.cpp:80 lib/tabwidget/tabcontextmenu.cpp:91
+#: lib/tabwidget/tabcontextmenu.cpp:102
+msgctxt "TabContextMenu|"
+msgid "Close Tabs"
+msgstr "Fechar abas"
+
+#: lib/tabwidget/tabcontextmenu.cpp:80
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close other tabs?"
+msgstr "Deseja realmente fechar as outras abas?"
+
+#: lib/tabwidget/tabcontextmenu.cpp:88
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the right?"
+msgstr "Deseja realmente fechar todas as abas para a direita?"
+
+#: lib/tabwidget/tabcontextmenu.cpp:89
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the bottom?"
+msgstr "Deseja realmente fechar todas as abas para baixo?"
+
+#: lib/tabwidget/tabcontextmenu.cpp:99
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the left?"
+msgstr "Deseja realmente fechar todas as abas para a esquerda?"
+
+#: lib/tabwidget/tabcontextmenu.cpp:100
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the top?"
+msgstr "Deseja realmente fechar todas as abas para cima?"
+
+#: lib/tabwidget/tabcontextmenu.cpp:117
+msgctxt "TabContextMenu|"
+msgid "&Stop Tab"
+msgstr "&Parar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:120
+msgctxt "TabContextMenu|"
+msgid "&Reload Tab"
+msgstr "&Recarregar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:123
+msgctxt "TabContextMenu|"
+msgid "&Duplicate Tab"
+msgstr "&Duplicar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:126
+msgctxt "TabContextMenu|"
+msgid "D&etach Tab"
+msgstr "Desane&xar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:129
+msgctxt "TabContextMenu|"
+msgid "Un&pin Tab"
+msgstr "&Soltar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:129
+msgctxt "TabContextMenu|"
+msgid "&Pin Tab"
+msgstr "&Fixar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:130
+msgctxt "TabContextMenu|"
+msgid "Un&mute Tab"
+msgstr "Ati&var som da aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:130
+msgctxt "TabContextMenu|"
+msgid "&Mute Tab"
+msgstr "Si&lenciar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:133
+msgctxt "TabContextMenu|"
+msgid "Load Tab"
+msgstr "Carregar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:135
+msgctxt "TabContextMenu|"
+msgid "Unload Tab"
+msgstr "Descarregar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:139
+msgctxt "TabContextMenu|"
+msgid "Re&load All Tabs"
+msgstr "Recarregar t&odas as abas"
+
+#: lib/tabwidget/tabcontextmenu.cpp:140 lib/tabwidget/tabcontextmenu.cpp:156
+msgctxt "TabContextMenu|"
+msgid "Bookmark &All Tabs"
+msgstr "Favoritar &todas as abas"
+
+#: lib/tabwidget/tabcontextmenu.cpp:144
+msgctxt "TabContextMenu|"
+msgid "Close Ot&her Tabs"
+msgstr "Fechar o&utras abas"
+
+#: lib/tabwidget/tabcontextmenu.cpp:145
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Right"
+msgstr "Fechar abas a direita"
+
+#: lib/tabwidget/tabcontextmenu.cpp:145
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Bottom"
+msgstr "Fechar abas para baixo"
+
+#: lib/tabwidget/tabcontextmenu.cpp:146
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Left"
+msgstr "Fechar abas a esquerda"
+
+#: lib/tabwidget/tabcontextmenu.cpp:146
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Top"
+msgstr "Fechar abas para cima"
+
+#: lib/tabwidget/tabcontextmenu.cpp:151
+msgctxt "TabContextMenu|"
+msgid "Cl&ose Tab"
+msgstr "&Fechar aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:153
+msgctxt "TabContextMenu|"
+msgid "&New tab"
+msgstr "&Nova aba"
+
+#: lib/tabwidget/tabcontextmenu.cpp:155
+msgctxt "TabContextMenu|"
+msgid "Reloa&d All Tabs"
+msgstr "Recarre&gar todas as abas"
+
+#: lib/tabwidget/tabicon.cpp:168
+msgctxt "TabIcon|"
+msgid "Unmute Tab"
+msgstr "Ativar som da aba"
+
+#: lib/tabwidget/tabicon.cpp:168
+msgctxt "TabIcon|"
+msgid "Mute Tab"
+msgstr "Silenciar aba"
+
+#: lib/tabwidget/tabwidget.cpp:51
+msgctxt "TabWidget|"
+msgid "New Tab"
+msgstr "Nova aba"
+
+#: lib/tabwidget/tabwidget.cpp:126
+msgctxt "TabWidget|"
+msgid "Closed tabs"
+msgstr "Abas fechadas"
+
+#: lib/tabwidget/tabwidget.cpp:137
+msgctxt "TabWidget|"
+msgid "List of tabs"
+msgstr "Lista de abas"
+
+#: lib/tabwidget/tabwidget.cpp:294
+msgctxt "TabWidget|"
+msgid "Empty"
+msgstr "Vazio"
+
+#: lib/tabwidget/tabwidget.cpp:298
+msgctxt "TabWidget|"
+msgid "Restore All Closed Tabs"
+msgstr "Restaurar todas as abas fechadas"
+
+#: lib/tabwidget/tabwidget.cpp:299
+msgctxt "TabWidget|"
+msgid "Clear list"
+msgstr "Limpar a lista"
+
+#: lib/tabwidget/tabwidget.h:106
+msgctxt "TabWidget|"
+msgid "New tab"
+msgstr "Nova aba"
+
+#: lib/tools/aesinterface.cpp:146
+msgctxt "AesInterface|"
+msgid "Warning!"
+msgstr "Atenção!"
+
+#: lib/tools/aesinterface.cpp:146
+msgctxt "AesInterface|"
+msgid ""
+"Data has been encrypted with a newer version of Falkon.\n"
+"Please install latest version of Falkon."
+msgstr ""
+"Os dados foram criptografados por uma versão mais recente do Falkon.\n"
+"Instale a última versão do Falkon."
+
+#: lib/tools/certificateinfowidget.cpp:300
+msgctxt "QObject|"
+msgid "<not set in certificate>"
+msgstr "<não definido no certificado>"
+
+#: lib/tools/certificateinfowidget.ui:17
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Issued To</b>"
+msgstr "<b>Emitido para</b>"
+
+#: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
+msgctxt "CertificateInfoWidget|"
+msgid "Common Name (CN):"
+msgstr "Nome comum (NC):"
+
+#: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
+msgctxt "CertificateInfoWidget|"
+msgid "Organization (O):"
+msgstr "Organização (O):"
+
+#: lib/tools/certificateinfowidget.ui:58 lib/tools/certificateinfowidget.ui:133
+msgctxt "CertificateInfoWidget|"
+msgid "Organizational Unit (OU):"
+msgstr "Unidade organizacional (UO):"
+
+#: lib/tools/certificateinfowidget.ui:75
+msgctxt "CertificateInfoWidget|"
+msgid "Serial Number:"
+msgstr "Número de série:"
+
+#: lib/tools/certificateinfowidget.ui:92
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Issued By</b>"
+msgstr "<b>Emitido por</b>"
+
+#: lib/tools/certificateinfowidget.ui:150
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Validity</b>"
+msgstr "<b>Validade</b>"
+
+#: lib/tools/certificateinfowidget.ui:157
+msgctxt "CertificateInfoWidget|"
+msgid "Issued On:"
+msgstr "Emitido em:"
+
+#: lib/tools/certificateinfowidget.ui:174
+msgctxt "CertificateInfoWidget|"
+msgid "Expires On:"
+msgstr "Expira em:"
+
+#: lib/tools/html5permissions/html5permissionsdialog.cpp:63
+msgctxt "HTML5PermissionsDialog|"
+msgid "Allow"
+msgstr "Permitir"
+
+#: lib/tools/html5permissions/html5permissionsdialog.cpp:72
+msgctxt "HTML5PermissionsDialog|"
+msgid "Deny"
+msgstr "Proibir"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:14
+msgctxt "HTML5PermissionsDialog|"
+msgid "HTML5 Permissions"
+msgstr "Permissões HTML5"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:35
+msgctxt "HTML5PermissionsDialog|"
+msgid "Remove"
+msgstr "Remover"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:64
+msgctxt "HTML5PermissionsDialog|"
+msgid "Site"
+msgstr "Site"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:69
+msgctxt "HTML5PermissionsDialog|"
+msgid "Behaviour"
+msgstr "Comportamento"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:79
+msgctxt "HTML5PermissionsDialog|"
+msgid "Permission for:"
+msgstr "Permissão para:"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:87
+msgctxt "HTML5PermissionsDialog|"
+msgid "Notifications"
+msgstr "Notificações"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:92
+msgctxt "HTML5PermissionsDialog|"
+msgid "Geolocation"
+msgstr "Geolocalização"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:97
+msgctxt "HTML5PermissionsDialog|"
+msgid "Microphone"
+msgstr "Microfone"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:102
+msgctxt "HTML5PermissionsDialog|"
+msgid "Camera"
+msgstr "Câmera"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:107
+msgctxt "HTML5PermissionsDialog|"
+msgid "Microphone and Camera"
+msgstr "Microfone e câmera"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:112
+msgctxt "HTML5PermissionsDialog|"
+msgid "Hide Pointer"
+msgstr "Esconder cursor"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:117
+msgctxt "HTML5PermissionsDialog|"
+msgid "Display Capture"
+msgstr "Captura da tela"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:122
+msgctxt "HTML5PermissionsDialog|"
+msgid "Display and Audio Capture"
+msgstr "Captura da tela e do áudio"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:41
+msgctxt "HTML5PermissionsNotification|"
+msgid "this site"
+msgstr "este site"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:45
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to show desktop notifications?"
+msgstr "Permitir que %1 mostre notificações na área de trabalho?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:49
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to locate your position?"
+msgstr "Permitir que %1 acesse sua posição?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:53
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your microphone?"
+msgstr "Permitir que %1 use seu microfone?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:57
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your camera?"
+msgstr "Permitir que %1 use sua câmera?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:61
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your microphone and camera?"
+msgstr "Permitir que %1 use seu microfone e câmera?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:65
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to hide your pointer?"
+msgstr "Permitir %1 que esconda seu cursor?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:69
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to capture your screen?"
+msgstr "Permitir que %1 capture sua tela?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:73
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to capture your screen and audio?"
+msgstr "Permitir que %1 capture sua tela e áudio?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:43
+msgctxt "HTML5PermissionsNotification|"
+msgid "Remember"
+msgstr "Lembrar"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:50
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow"
+msgstr "Permitir"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:57
+msgctxt "HTML5PermissionsNotification|"
+msgid "Deny"
+msgstr "Proibir"
+
+#: lib/tools/qztools.cpp:379
+msgctxt "QObject|"
+msgid "Unknown size"
+msgstr "Tamanho desconhecido"
+
+#: lib/tools/qztools.cpp:384
+msgctxt "QObject|"
+msgid "KB"
+msgstr "KB"
+
+#: lib/tools/qztools.cpp:389
+msgctxt "QObject|"
+msgid "MB"
+msgstr "MB"
+
+#: lib/tools/qztools.cpp:393
+msgctxt "QObject|"
+msgid "GB"
+msgstr "GB"
+
+#: lib/tools/qztools.cpp:852
+msgctxt "QObject|"
+msgid "Executable: "
+msgstr "Executável:"
+
+#: lib/tools/qztools.cpp:853
+msgctxt "QObject|"
+msgid "Arguments: "
+msgstr "Argumentos:"
+
+#: lib/tools/qztools.cpp:855
+msgctxt "QObject|"
+msgid "Cannot start external program"
+msgstr "Não foi possível iniciar o programa externo"
+
+#: lib/tools/qztools.cpp:856
+#, qt-format
+msgctxt "QObject|"
+msgid "Cannot start external program! %1"
+msgstr "Não foi possível iniciar o programa externo! %1"
+
+#: lib/webengine/jsalert.ui:125
+msgctxt "jsAlert|"
+msgid "Prevent this page from creating additional dialogs"
+msgstr "Impedir que esta página crie mais caixas de diálogo"
+
+#: lib/webengine/webpage.cpp:330
+#, qt-format
+msgctxt "WebPage|"
+msgid ""
+"Falkon cannot handle <b>%1:</b> links. The requested link is <ul><li>%2</"
+"li></ul>Do you want Falkon to try open this link in system application?"
+msgstr ""
+"O Falkon não consegue entender <b>%1</b> links. Quem está pedindo é: <ul><li>"
+"%2</li></ul>. Deseja que o Falkon tente abrir esses links nos aplicativos do "
+"sistema? "
+
+#: lib/webengine/webpage.cpp:335
+msgctxt "WebPage|"
+msgid "Remember my choice for this protocol"
+msgstr "Memorizar minha escolha para esse protocolo"
+
+#: lib/webengine/webpage.cpp:336
+msgctxt "WebPage|"
+msgid "External Protocol Request"
+msgstr "Pedido de protocolo adicional"
+
+#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+msgctxt "WebPage|"
+msgid "Failed loading page"
+msgstr "Falha ao carregar a página"
+
+#: lib/webengine/webpage.cpp:418
+msgctxt "WebPage|"
+msgid "Something went wrong while loading this page."
+msgstr "Algo deu errado enquanto a página estava carregando."
+
+#: lib/webengine/webpage.cpp:419
+msgctxt "WebPage|"
+msgid ""
+"Try reloading the page or closing some tabs to make more memory available."
+msgstr ""
+"Tente recarregar a página ou fechar algumas abas para liberar mais memória "
+"disponível."
+
+#: lib/webengine/webpage.cpp:420
+msgctxt "WebPage|"
+msgid "Reload page"
+msgstr "Recarregar página"
+
+#: lib/webengine/webpage.cpp:482
+msgctxt "WebPage|"
+msgid "Choose file..."
+msgstr "Escolher arquivo..."
+
+#: lib/webengine/webpage.cpp:486
+msgctxt "WebPage|"
+msgid "Choose files..."
+msgstr "Escolher arquivos..."
+
+#: lib/webengine/webpage.cpp:622
+msgctxt "WebPage|"
+msgid "JavaScript alert"
+msgstr "Alerta JavaScript"
+
+#: lib/webengine/webpage.cpp:631
+msgctxt "WebPage|"
+msgid "Prevent this page from creating additional dialogs"
+msgstr "Impedir que esta página crie mais caixas de diálogo"
+
+#: lib/webengine/webview.cpp:126
+msgctxt "WebView|"
+msgid "Empty Page"
+msgstr "Página em branco"
+
+#: lib/webengine/webview.cpp:391
+#, qt-format
+msgctxt "WebView|"
+msgid "Falkon %1 (%2)"
+msgstr "Falkon %1 (%2)"
+
+#: lib/webengine/webview.cpp:690
+msgctxt "WebView|"
+msgid "No suggestions"
+msgstr "Sem sugestões"
+
+#: lib/webengine/webview.cpp:741
+msgctxt "WebView|"
+msgid "&Back"
+msgstr "Volta&r"
+
+#: lib/webengine/webview.cpp:745
+msgctxt "WebView|"
+msgid "&Forward"
+msgstr "&Avançar"
+
+#: lib/webengine/webview.cpp:752
+msgctxt "WebView|"
+msgid "&Add New Page"
+msgstr "Adicionar nova página"
+
+#: lib/webengine/webview.cpp:753
+msgctxt "WebView|"
+msgid "&Configure Speed Dial"
+msgstr "Configurar acesso rápido"
+
+#: lib/webengine/webview.cpp:755
+msgctxt "WebView|"
+msgid "Reload All Dials"
+msgstr "Recarregar todos os acessos rápidos"
+
+#: lib/webengine/webview.cpp:774
+msgctxt "WebView|"
+msgid "Book&mark page"
+msgstr "Adicionar essa página aos &favoritos"
+
+#: lib/webengine/webview.cpp:775
+msgctxt "WebView|"
+msgid "&Save page as..."
+msgstr "Salvar página como..."
+
+#: lib/webengine/webview.cpp:776
+msgctxt "WebView|"
+msgid "&Copy page link"
+msgstr "&Copiar link da página"
+
+#: lib/webengine/webview.cpp:777
+msgctxt "WebView|"
+msgid "Send page link..."
+msgstr "Enviar link da página..."
+
+#: lib/webengine/webview.cpp:779
+msgctxt "WebView|"
+msgid "Select &all"
+msgstr "Selecion&ar tudo"
+
+#: lib/webengine/webview.cpp:785
+msgctxt "WebView|"
+msgid "Show so&urce code"
+msgstr "Mostrar código-fon&te"
+
+#: lib/webengine/webview.cpp:789
+msgctxt "WebView|"
+msgid "Show info ab&out site"
+msgstr "Mostrar inf&ormações da página"
+
+#: lib/webengine/webview.cpp:795
+msgctxt "WebView|"
+msgid "Open link in new &tab"
+msgstr "Abrir link em uma nova &aba"
+
+#: lib/webengine/webview.cpp:800
+msgctxt "WebView|"
+msgid "Open link in new &window"
+msgstr "Abrir link em nova &janela"
+
+#: lib/webengine/webview.cpp:801
+msgctxt "WebView|"
+msgid "Open link in &private window"
+msgstr "Abrir link em uma janela privativa"
+
+#: lib/webengine/webview.cpp:806
+msgctxt "WebView|"
+msgid "B&ookmark link"
+msgstr "Salvar link nos fav&oritos"
+
+#: lib/webengine/webview.cpp:808
+msgctxt "WebView|"
+msgid "&Save link as..."
+msgstr "&Salvar link como..."
+
+#: lib/webengine/webview.cpp:809
+msgctxt "WebView|"
+msgid "Send link..."
+msgstr "Enviar link..."
+
+#: lib/webengine/webview.cpp:810
+msgctxt "WebView|"
+msgid "&Copy link address"
+msgstr "&Copiar link"
+
+#: lib/webengine/webview.cpp:823
+msgctxt "WebView|"
+msgid "Show i&mage"
+msgstr "Abrir i&magem"
+
+#: lib/webengine/webview.cpp:829
+msgctxt "WebView|"
+msgid "Copy image"
+msgstr "Copiar imagem"
+
+#: lib/webengine/webview.cpp:830
+msgctxt "WebView|"
+msgid "Copy image ad&dress"
+msgstr "Copiar link &da imagem"
+
+#: lib/webengine/webview.cpp:832
+msgctxt "WebView|"
+msgid "&Save image as..."
+msgstr "Sa&lvar imagem como..."
+
+#: lib/webengine/webview.cpp:833
+msgctxt "WebView|"
+msgid "Send image..."
+msgstr "Enviar imagem..."
+
+#: lib/webengine/webview.cpp:852
+msgctxt "WebView|"
+msgid "Send text..."
+msgstr "Enviar texto..."
+
+#: lib/webengine/webview.cpp:864
+msgctxt "WebView|"
+msgid "Go to &web address"
+msgstr "Ir para endereço &web"
+
+#: lib/webengine/webview.cpp:878
+#, qt-format
+msgctxt "WebView|"
+msgid "Search \"%1 ..\" with %2"
+msgstr "Pesquisar \"%1 ...\" com %2"
+
+#: lib/webengine/webview.cpp:884
+msgctxt "WebView|"
+msgid "Search with..."
+msgstr "Pesquisar com..."
+
+#: lib/webengine/webview.cpp:906
+msgctxt "WebView|"
+msgid "&Play"
+msgstr "Re&produzir"
+
+#: lib/webengine/webview.cpp:906
+msgctxt "WebView|"
+msgid "&Pause"
+msgstr "&Pausa"
+
+#: lib/webengine/webview.cpp:907
+msgctxt "WebView|"
+msgid "Un&mute"
+msgstr "A&tivar som"
+
+#: lib/webengine/webview.cpp:907
+msgctxt "WebView|"
+msgid "&Mute"
+msgstr "&Silenciar"
+
+#: lib/webengine/webview.cpp:909
+msgctxt "WebView|"
+msgid "&Copy Media Address"
+msgstr "&Copiar endereço multimídia"
+
+#: lib/webengine/webview.cpp:910
+msgctxt "WebView|"
+msgid "&Send Media Address"
+msgstr "&Enviar endereço multimídia"
+
+#: lib/webengine/webview.cpp:911
+msgctxt "WebView|"
+msgid "Save Media To &Disk"
+msgstr "Gravar arquivo no &disco"
+
+#: lib/webengine/webview.cpp:930
+msgctxt "WebView|"
+msgid "Create Search Engine"
+msgstr "Criar site de pesquisa"
+
+#: lib/webengine/webview.cpp:971
+msgctxt "WebView|"
+msgid "&Undo"
+msgstr "Desfazer"
+
+#: lib/webengine/webview.cpp:977
+msgctxt "WebView|"
+msgid "&Redo"
+msgstr "Refazer"
+
+#: lib/webengine/webview.cpp:983
+msgctxt "WebView|"
+msgid "&Cut"
+msgstr "Recortar"
+
+#: lib/webengine/webview.cpp:989
+msgctxt "WebView|"
+msgid "&Copy"
+msgstr "Copiar"
+
+#: lib/webengine/webview.cpp:995
+msgctxt "WebView|"
+msgid "&Paste"
+msgstr "Colar"
+
+#: lib/webengine/webview.cpp:1001
+msgctxt "WebView|"
+msgid "Select All"
+msgstr "Selecionar tudo"
+
+#: lib/webengine/webview.cpp:1007
+msgctxt "WebView|"
+msgid "&Reload"
+msgstr "Recarregar"
+
+#: lib/webengine/webview.cpp:1011
+msgctxt "WebView|"
+msgid "S&top"
+msgstr "Pa&rar"
+
+#: lib/webtab/searchtoolbar.cpp:150
+#, qt-format
+msgctxt "SearchToolBar|"
+msgid "%1 of %2"
+msgstr "%1 de %2"
+
+#: lib/webtab/searchtoolbar.ui:48
+msgctxt "SearchToolbar|"
+msgid "Find..."
+msgstr "Localizar..."
+
+#: lib/webtab/searchtoolbar.ui:58
+msgctxt "SearchToolbar|"
+msgid "Find the next match for the current search phrase"
+msgstr "Localiza a próxima coincidência para a expressão de pesquisa atual"
+
+#: lib/webtab/searchtoolbar.ui:61
+msgctxt "SearchToolbar|"
+msgid "&Next"
+msgstr "&Próximo"
+
+#: lib/webtab/searchtoolbar.ui:74
+msgctxt "SearchToolbar|"
+msgid "Find the previous match for the current search phrase"
+msgstr "Localiza a coincidência anterior para a expressão de pesquisa atual"
+
+#: lib/webtab/searchtoolbar.ui:77
+msgctxt "SearchToolbar|"
+msgid "&Previous"
+msgstr "&Anterior"
+
+#: lib/webtab/searchtoolbar.ui:90
+msgctxt "SearchToolbar|"
+msgid "&Match Case"
+msgstr "Diferenciar &maiúsculas de minúsculas"
+
+#: lib/webtab/tabbedwebview.cpp:194
+msgctxt "TabbedWebView|"
+msgid "Inspect Element"
+msgstr "Inspecionar elemento"
+
+#: lib/webtab/webtab.cpp:624
+#, qt-format
+msgctxt "WebTab|"
+msgid "%1 - Falkon"
+msgstr "%1 - Falkon"

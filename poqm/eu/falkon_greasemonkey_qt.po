@@ -1,0 +1,224 @@
+# Translation of falkon_greasemonkey_qt.po to Euskara/Basque (eu).
+# Copyright (C) 2020, This file is copyright:
+# This file is distributed under the same license as the original file.
+# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Xabier Aramendi <azpidatziak@gmail.com>, 2017.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2020-04-25 18:25+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: eu_ES\n"
+"X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 20.04.0\n"
+
+#: gm_addscriptdialog.cpp:50
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "<p>runs at<br/><i>%1</i></p>"
+msgstr "<p>ekiten du<br/><i>%1</i></p>"
+
+#: gm_addscriptdialog.cpp:54
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "<p>does not run at<br/><i>%1</i></p>"
+msgstr "<p>ez du ekiten<br/><i>%1</i></p>"
+
+#: gm_addscriptdialog.cpp:84
+msgctxt "GM_AddScriptDialog|"
+msgid "Cannot install script"
+msgstr "Ezinezkoa eskripta ezartzea"
+
+#: gm_addscriptdialog.cpp:87
+#, qt-format
+msgctxt "GM_AddScriptDialog|"
+msgid "'%1' installed successfully"
+msgstr "'%1' ongi ezarri da"
+
+#: gm_addscriptdialog.ui:14
+msgctxt "GM_AddScriptDialog|"
+msgid "GreaseMonkey Installation"
+msgstr "GreaseMonkey Ezarpena"
+
+#: gm_addscriptdialog.ui:45
+msgctxt "GM_AddScriptDialog|"
+msgid "<h3>GreaseMonkey Installation</h3>"
+msgstr "<h3>GreaseMonkey Ezarpena</h3>"
+
+#: gm_addscriptdialog.ui:67
+msgctxt "GM_AddScriptDialog|"
+msgid "You are about to install this userscript into GreaseMonkey:"
+msgstr "Erabiltzaile-eskript hau GreaseMonkeyn ezartzear zaude:"
+
+#: gm_addscriptdialog.ui:80
+msgctxt "GM_AddScriptDialog|"
+msgid "<b>You should only install scripts from sources you trust!</b>"
+msgstr "<b>Iturburu fidagarrietako eskriptak bakarrik ezarri behar dituzu!</b>"
+
+#: gm_addscriptdialog.ui:90
+msgctxt "GM_AddScriptDialog|"
+msgid "Are you sure you want to install it?"
+msgstr "Zihur zaude ezartzea nahi duzula?"
+
+#: gm_addscriptdialog.ui:108
+msgctxt "GM_AddScriptDialog|"
+msgid "Show source code of script"
+msgstr "Erakutsi eskriptaren iturburu kodea"
+
+#: gm_icon.cpp:28
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey"
+msgstr "GreaseMonkey"
+
+#: gm_icon.cpp:29
+msgctxt "GM_Icon|"
+msgid "Open GreaseMonkey settings"
+msgstr "Ireki GreaseMonkey ezarpenak"
+
+#: gm_icon.cpp:41
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey Icon"
+msgstr "GreaseMonkey ikonoa"
+
+#: gm_manager.cpp:77
+#, qt-format
+msgctxt "GM_Manager|"
+msgid "'%1' is already installed"
+msgstr "'%1' jadanik ezarrita dago"
+
+#: gm_manager.cpp:230
+msgctxt "GM_Manager|"
+msgid "GreaseMonkey"
+msgstr "GreaseMonkey"
+
+#: gm_notification.cpp:51
+msgctxt "GM_Notification|"
+msgid "Cannot install script"
+msgstr "Ezinezkoa eskripta ezartzea"
+
+#: gm_notification.cpp:59
+#, qt-format
+msgctxt "GM_Notification|"
+msgid "'%1' installed successfully"
+msgstr "'%1' ongi ezarri da"
+
+#: gm_notification.ui:39
+msgctxt "GM_Notification|"
+msgid "This script can be installed with the GreaseMonkey plugin."
+msgstr "Eskript hau GreaseMonkey pluginarekin ezarri daiteke."
+
+#: gm_notification.ui:59
+msgctxt "GM_Notification|"
+msgid "Install"
+msgstr "Ezarri"
+
+#: settings/gm_settings.cpp:91
+msgctxt "GM_Settings|"
+msgid "Remove script"
+msgstr "Kendu eskripta"
+
+#: settings/gm_settings.cpp:92
+#, qt-format
+msgctxt "GM_Settings|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "Zihur zaude '%1' kentzea nahi duzula?"
+
+#: settings/gm_settings.cpp:122
+msgctxt "GM_Settings|"
+msgid "Add script"
+msgstr "Gehitu eskripta"
+
+#: settings/gm_settings.cpp:122
+msgctxt "GM_Settings|"
+msgid "Choose name for script:"
+msgstr "Hautatu eskriptarentzako izena: "
+
+#: settings/gm_settings.ui:14
+msgctxt "GM_Settings|"
+msgid "GreaseMonkey Scripts"
+msgstr "GreaseMonkey Eskriptak"
+
+#: settings/gm_settings.ui:48
+msgctxt "GM_Settings|"
+msgid "<h3>GreaseMonkey Scripts</h3>"
+msgstr "<h3>GreaseMonkey Eskriptak</h3>"
+
+#: settings/gm_settings.ui:70
+msgctxt "GM_Settings|"
+msgid "Double clicking script will show additional information"
+msgstr "Klik bikoitzak eskriptean argibide gehigarriak erakutsiko ditu"
+
+#: settings/gm_settings.ui:150
+msgctxt "GM_Settings|"
+msgid "More scripts can be downloaded from"
+msgstr "Eskript gehiago jeitsi daitezke hemendik"
+
+#: settings/gm_settings.ui:193
+msgctxt "GM_Settings|"
+msgid "Open scripts directory"
+msgstr "Ireki eskripten zuzenbidea"
+
+#: settings/gm_settings.ui:200
+msgctxt "GM_Settings|"
+msgid "New user script"
+msgstr "Erabiltzaile berri eskripta"
+
+#: settings/gm_settingsscriptinfo.cpp:45
+#, qt-format
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Script Details of %1"
+msgstr "%1-ren Eskript Xehetasunak"
+
+#: settings/gm_settingsscriptinfo.ui:19
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Runs at:"
+msgstr "Ekiten du:"
+
+#: settings/gm_settingsscriptinfo.ui:45
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Description:"
+msgstr "Azalpena:"
+
+#: settings/gm_settingsscriptinfo.ui:55
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Version:"
+msgstr "Bertsioa:"
+
+#: settings/gm_settingsscriptinfo.ui:65
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Start at:"
+msgstr "Hasiera:"
+
+#: settings/gm_settingsscriptinfo.ui:85
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Name:"
+msgstr "Izena:"
+
+#: settings/gm_settingsscriptinfo.ui:115
+msgctxt "GM_SettingsScriptInfo|"
+msgid "URL:"
+msgstr "URL-a:"
+
+#: settings/gm_settingsscriptinfo.ui:128
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Does not run at:"
+msgstr "Ez du ekiten:"
+
+#: settings/gm_settingsscriptinfo.ui:138
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Namespace:"
+msgstr "Izentartea:"
+
+#: settings/gm_settingsscriptinfo.ui:155
+msgctxt "GM_SettingsScriptInfo|"
+msgid "Edit in text editor"
+msgstr "Editatu idazki editatzailean"

@@ -1,0 +1,6359 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the falkon package.
+# Toms Trasūns <ttomst@gmail.com>, 2017
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Language: lv_LV\n"
+"X-Qt-Contexts: true\n"
+
+#: lib/3rdparty/lineedit.cpp:102
+msgctxt "LineEdit|"
+msgid "&Undo"
+msgstr "A&tsaukt"
+
+#: lib/3rdparty/lineedit.cpp:107
+msgctxt "LineEdit|"
+msgid "&Redo"
+msgstr "Atatsa&ukt"
+
+#: lib/3rdparty/lineedit.cpp:112
+msgctxt "LineEdit|"
+msgid "Cu&t"
+msgstr "Izgrie&zt"
+
+#: lib/3rdparty/lineedit.cpp:117
+msgctxt "LineEdit|"
+msgid "&Copy"
+msgstr "&Kopēt"
+
+#: lib/3rdparty/lineedit.cpp:122
+msgctxt "LineEdit|"
+msgid "&Paste"
+msgstr "Ie&līmēt"
+
+#: lib/3rdparty/lineedit.cpp:131
+msgctxt "LineEdit|"
+msgid "Delete"
+msgstr "Dzēst"
+
+#: lib/3rdparty/lineedit.cpp:134
+msgctxt "LineEdit|"
+msgid "Clear All"
+msgstr "Notīrīt visu"
+
+#: lib/3rdparty/lineedit.cpp:137
+msgctxt "LineEdit|"
+msgid "Select All"
+msgstr "Iezīmēt visu"
+
+#: lib/3rdparty/squeezelabelv2.cpp:64
+msgctxt "SqueezeLabelV2|"
+msgid "Copy"
+msgstr "Kopēt"
+
+#: lib/adblock/adblockaddsubscriptiondialog.cpp:45
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Other..."
+msgstr "Citi..."
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:14
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Add Subscription"
+msgstr "Pievienot abonementu"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:23
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Title:"
+msgstr "Nosaukums:"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:33
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Address:"
+msgstr "Adrese:"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:53
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Add new subscription to AdBlock:"
+msgstr "Pievienot „AdBlock“ jaunu abonementu:"
+
+#: lib/adblock/adblockdialog.cpp:49
+msgctxt "AdBlockDialog|"
+msgid "Add Rule"
+msgstr "Pievienot noteikumu"
+
+#: lib/adblock/adblockdialog.cpp:50
+msgctxt "AdBlockDialog|"
+msgid "Remove Rule"
+msgstr "Noņemt noteikumu"
+
+#: lib/adblock/adblockdialog.cpp:52
+msgctxt "AdBlockDialog|"
+msgid "Add Subscription"
+msgstr "Pievienot abonementu"
+
+#: lib/adblock/adblockdialog.cpp:53
+msgctxt "AdBlockDialog|"
+msgid "Remove Subscription"
+msgstr "Noņemt abonementu"
+
+#: lib/adblock/adblockdialog.cpp:54
+msgctxt "AdBlockDialog|"
+msgid "Update Subscriptions"
+msgstr "Atjaunināt abonementus"
+
+#: lib/adblock/adblockdialog.cpp:56
+msgctxt "AdBlockDialog|"
+msgid "Learn about writing rules..."
+msgstr "Mācīties veidot noteikumus..."
+
+#: lib/adblock/adblockdialog.ui:14
+msgctxt "AdBlockDialog|"
+msgid "AdBlock Configuration"
+msgstr "„AdBlock“ konfigurācija"
+
+#: lib/adblock/adblockdialog.ui:20
+msgctxt "AdBlockDialog|"
+msgid "Enable AdBlock"
+msgstr "Ieslēgt „AdBlock“"
+
+#: lib/adblock/adblockdialog.ui:32
+msgctxt "AdBlockDialog|"
+msgid "Search..."
+msgstr "Meklēt..."
+
+#: lib/adblock/adblockdialog.ui:77
+msgctxt "AdBlockDialog|"
+msgid "Options"
+msgstr "Iestatījumi"
+
+#: lib/adblock/adblockdialog.ui:107
+msgctxt "AdBlockDialog|"
+msgid "AdBlock"
+msgstr "„AdBlock“"
+
+#: lib/adblock/adblockicon.cpp:34
+msgctxt "AdBlockIcon|"
+msgid "AdBlock"
+msgstr "„AdBlock“"
+
+#: lib/adblock/adblockicon.cpp:52
+msgctxt "AdBlockIcon|"
+msgid "AdBlock Icon"
+msgstr ""
+
+#: lib/adblock/adblockicon.cpp:86
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is disabled"
+msgstr ""
+
+#: lib/adblock/adblockicon.cpp:92
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is disabled on this site "
+msgstr ""
+
+#: lib/adblock/adblockicon.cpp:98
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is active"
+msgstr ""
+
+#: lib/adblock/adblockicon.cpp:145
+msgctxt "AdBlockIcon|"
+msgid "Show AdBlock &Settings"
+msgstr "Parādīt „AdBlock“ &Iestatījumus"
+
+#: lib/adblock/adblockicon.cpp:153
+#, qt-format
+msgctxt "AdBlockIcon|"
+msgid "Disable on %1"
+msgstr "Atspējot vietnē %1"
+
+#: lib/adblock/adblockicon.cpp:159
+msgctxt "AdBlockIcon|"
+msgid "Disable only on this page"
+msgstr "Atspējot tikai šajā lapā"
+
+#: lib/adblock/adblockmanager.cpp:184
+#, qt-format
+msgctxt "AdBlockManager|"
+msgid "Do you want to add <b>%1</b> subscription?"
+msgstr "Vai vēlaties pievienot abonementu <b>%1</b>?"
+
+#: lib/adblock/adblockmanager.cpp:186
+msgctxt "AdBlockManager|"
+msgid "AdBlock Subscription"
+msgstr "„AdBlock“ abonements"
+
+#: lib/adblock/adblockmanager.cpp:317
+msgctxt "AdBlockManager|"
+msgid "EasyList"
+msgstr "„EasyList“"
+
+#: lib/adblock/adblockmanager.cpp:322
+msgctxt "AdBlockManager|"
+msgid "NoCoin List"
+msgstr ""
+
+#: lib/adblock/adblocksubscription.cpp:173
+msgctxt "AdBlockSubscription|"
+msgid "Cannot load subscription!"
+msgstr "Neizdodas ielādēt abonementu!"
+
+#: lib/adblock/adblocksubscription.cpp:286
+msgctxt "AdBlockCustomList|"
+msgid "Custom Rules"
+msgstr "Pielāgoti noteikumi"
+
+#: lib/adblock/adblocktreewidget.cpp:80
+msgctxt "AdBlockTreeWidget|"
+msgid "Add Rule"
+msgstr "Pievienot noteikumu"
+
+#: lib/adblock/adblocktreewidget.cpp:82
+msgctxt "AdBlockTreeWidget|"
+msgid "Remove Rule"
+msgstr "Noņemt noteikumu"
+
+#: lib/adblock/adblocktreewidget.cpp:141
+msgctxt "AdBlockTreeWidget|"
+msgid "Add Custom Rule"
+msgstr "Pievienot pielāgotu noteikumu"
+
+#: lib/adblock/adblocktreewidget.cpp:141
+msgctxt "AdBlockTreeWidget|"
+msgid "Please write your rule here:"
+msgstr "Lūdzu, ierakstiet te savu noteikumu:"
+
+#: lib/adblock/adblocktreewidget.cpp:179
+#, qt-format
+msgctxt "AdBlockTreeWidget|"
+msgid "%1 (recently updated)"
+msgstr "%1 (nesen atjaunināts)"
+
+#: lib/adblock/adblocktreewidget.cpp:188
+#, qt-format
+msgctxt "AdBlockTreeWidget|"
+msgid "%1 (Error: %2)"
+msgstr "%1 (Kļūda: %2)"
+
+#: lib/adblock/adblockurlinterceptor.cpp:44
+msgctxt "AdBlockUrlInterceptor|"
+msgid "Blocked content"
+msgstr ""
+
+#: lib/adblock/adblockurlinterceptor.cpp:45
+#, qt-format
+msgctxt "AdBlockUrlInterceptor|"
+msgid "Blocked by <i>%1 (%2)</i>"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:204 lib/app/browserwindow.cpp:979
+msgctxt "BrowserWindow|"
+msgid "Falkon"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:394
+msgctxt "BrowserWindow|"
+msgid "IP Address of current page"
+msgstr "Atvērtās lapas IP adrese"
+
+#: lib/app/browserwindow.cpp:734
+msgctxt "BrowserWindow|"
+msgid " (Private Browsing)"
+msgstr "(Privātā pārlūkošana)"
+
+#: lib/app/browserwindow.cpp:981
+#, qt-format
+msgctxt "BrowserWindow|"
+msgid "%1 - Falkon"
+msgstr ""
+
+#: lib/app/browserwindow.cpp:1047
+msgctxt "BrowserWindow|"
+msgid "&Menu Bar"
+msgstr "&Izvēļņu josla"
+
+#: lib/app/browserwindow.cpp:1052
+msgctxt "BrowserWindow|"
+msgid "&Navigation Toolbar"
+msgstr "&Navigācijas josla"
+
+#: lib/app/browserwindow.cpp:1056
+msgctxt "BrowserWindow|"
+msgid "&Bookmarks Toolbar"
+msgstr "&Grāmatzīmju josla"
+
+#: lib/app/browserwindow.cpp:1062
+msgctxt "BrowserWindow|"
+msgid "&Tabs on Top"
+msgstr "&Cilnes augšpusē"
+
+#: lib/app/browserwindow.cpp:1117
+msgctxt "BrowserWindow|"
+msgid "Other"
+msgstr "Citi"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "HTML files"
+msgstr "HTML datnes"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "Image files"
+msgstr "Attēlu datnes"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "Text files"
+msgstr "Teksta datnes"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "All files"
+msgstr "Visas datnes"
+
+#: lib/app/browserwindow.cpp:1161
+msgctxt "BrowserWindow|"
+msgid "Open file..."
+msgstr "Atvērt datni..."
+
+#: lib/app/browserwindow.cpp:1503
+#, fuzzy, qt-format
+#| msgctxt "BrowserWindow|"
+#| msgid ""
+#| "There are still %n open tabs and your session won't be stored. \n"
+#| "Are you sure you want to close this window?"
+#| msgid_plural ""
+#| "There are still %n open tabs and your session won't be stored. \n"
+#| "Are you sure you want to close this window?"
+msgctxt "BrowserWindow|"
+msgid ""
+"There are still %n open tabs and your session won't be stored.\n"
+"Are you sure you want to close this window?"
+msgid_plural ""
+"There are still %n open tabs and your session won't be stored.\n"
+"Are you sure you want to close this window?"
+msgstr[0] ""
+"Joprojām ir atvērtas %n cilnes. Šī sesija netiks saglabāta.\n"
+"Vai tiešām vēlaties aizvērt šo logu?"
+msgstr[1] ""
+"Joprojām ir atvērta %n cilne. Šī sesija netiks saglabāta.\n"
+"Vai tiešām vēlaties aizvērt šo logu?"
+msgstr[2] ""
+"Joprojām ir atvērtas %n cilnes. Šī sesija netiks saglabāta.\n"
+"Vai tiešām vēlaties aizvērt šo logu?"
+
+#: lib/app/browserwindow.cpp:1504
+msgctxt "BrowserWindow|"
+msgid "Don't ask again"
+msgstr "Vairāk nejautāt"
+
+#: lib/app/browserwindow.cpp:1505
+msgctxt "BrowserWindow|"
+msgid "There are still open tabs"
+msgstr "Dažas cilnes ir joprojām atvērtas"
+
+#: lib/app/mainapplication.cpp:1081
+#, fuzzy
+#| msgctxt "MainApplication|"
+#| msgid ""
+#| "QupZilla is not currently your default browser. Would you like to make it "
+#| "your default browser?"
+msgctxt "MainApplication|"
+msgid ""
+"Falkon is not currently your default browser. Would you like to make it your "
+"default browser?"
+msgstr ""
+"„QupZilla“ pašreiz nav Jūsu noklusētā pārlūkprogramma. Vai vēlaties, lai tā "
+"kļūtu par noklusēto pārlūkprogrammu?"
+
+#: lib/app/mainapplication.cpp:1082
+#, fuzzy
+#| msgctxt "MainApplication|"
+#| msgid "Always perform this check when starting QupZilla."
+msgctxt "MainApplication|"
+msgid "Always perform this check when starting Falkon."
+msgstr "Vienmēr veikt šo pārbaudi, kad tiek ieslēgta „QupZilla“."
+
+#: lib/app/mainapplication.cpp:1084
+msgctxt "MainApplication|"
+msgid "Default Browser"
+msgstr "Noklusētā pārlūkprogramma"
+
+#: lib/app/mainapplication.cpp:1205
+msgctxt "MainApplication|"
+msgid "Open new tab"
+msgstr ""
+
+#: lib/app/mainapplication.cpp:1206
+msgctxt "MainApplication|"
+msgid "Open new window"
+msgstr ""
+
+#: lib/app/mainapplication.cpp:1207
+msgctxt "MainApplication|"
+msgid "Open new private window"
+msgstr ""
+
+#: lib/app/mainapplication.cpp:1222
+#, fuzzy
+#| msgctxt "MainApplication|"
+#| msgid ""
+#| "QupZilla is a new, fast and secure open-source WWW browser. QupZilla is "
+#| "licensed under GPL version 3 or (at your option) any later version. It is "
+#| "based on WebKit core and Qt Framework."
+msgctxt "MainApplication|"
+msgid ""
+"Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
+"version 3 or (at your option) any later version. It is based on QtWebEngine "
+"and Qt Framework."
+msgstr ""
+"„QupZilla“ ir jauna, ātra un droša atvērtā koda interneta pārlūkprogramma. "
+"„QupZilla“ ir licencēta ar GPL 3. versiju vai (pēc Jūsu vēlēšanās) jebkuru "
+"vēlāku versiju. Tā balstās uz „WebKit“ kodolu un Qt struktūru."
+
+#: lib/app/mainmenu.cpp:84 lib/app/mainmenu.cpp:497
+msgctxt "MainMenu|"
+msgid "Sessions"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:467
+msgctxt "MainMenu|"
+msgid "&About Falkon"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:472
+msgctxt "MainMenu|"
+msgid "Pr&eferences"
+msgstr "&Iestatījumi"
+
+#: lib/app/mainmenu.cpp:478
+msgctxt "MainMenu|"
+msgid "Quit"
+msgstr "Iziet"
+
+#: lib/app/mainmenu.cpp:485
+msgctxt "MainMenu|"
+msgid "&File"
+msgstr "&Datne"
+
+#: lib/app/mainmenu.cpp:488
+msgctxt "MainMenu|"
+msgid "New Tab"
+msgstr "Jauna cilne"
+
+#: lib/app/mainmenu.cpp:489
+msgctxt "MainMenu|"
+msgid "&New Window"
+msgstr "&Jauns logs"
+
+#: lib/app/mainmenu.cpp:490
+msgctxt "MainMenu|"
+msgid "New &Private Window"
+msgstr "Atvērt jaunu privāto logu"
+
+#: lib/app/mainmenu.cpp:491
+msgctxt "MainMenu|"
+msgid "Open Location"
+msgstr "Atvērt vietu"
+
+#: lib/app/mainmenu.cpp:492
+msgctxt "MainMenu|"
+msgid "Open &File..."
+msgstr "&Atvērt datni..."
+
+#: lib/app/mainmenu.cpp:493
+msgctxt "MainMenu|"
+msgid "Close Window"
+msgstr "Aizvērt logu"
+
+#: lib/app/mainmenu.cpp:500
+msgctxt "MainMenu|"
+msgid "Session Manager"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:507
+msgctxt "MainMenu|"
+msgid "&Save Page As..."
+msgstr ""
+
+#: lib/app/mainmenu.cpp:508
+msgctxt "MainMenu|"
+msgid "Send Link..."
+msgstr "Sūtīt adresi..."
+
+#: lib/app/mainmenu.cpp:509
+msgctxt "MainMenu|"
+msgid "&Print..."
+msgstr "&Drukāt..."
+
+#: lib/app/mainmenu.cpp:514
+msgctxt "MainMenu|"
+msgid "&Edit"
+msgstr "R&ediģēt"
+
+#: lib/app/mainmenu.cpp:517
+msgctxt "MainMenu|"
+msgid "&Undo"
+msgstr "A&tsaukt"
+
+#: lib/app/mainmenu.cpp:519
+msgctxt "MainMenu|"
+msgid "&Redo"
+msgstr "Atatsa&ukt"
+
+#: lib/app/mainmenu.cpp:522
+msgctxt "MainMenu|"
+msgid "&Cut"
+msgstr "I&zgriezt"
+
+#: lib/app/mainmenu.cpp:524
+msgctxt "MainMenu|"
+msgid "C&opy"
+msgstr "K&opēt"
+
+#: lib/app/mainmenu.cpp:526
+msgctxt "MainMenu|"
+msgid "&Paste"
+msgstr "Ie&līmēt"
+
+#: lib/app/mainmenu.cpp:529
+msgctxt "MainMenu|"
+msgid "Select &All"
+msgstr "Iezīmēt vis&u"
+
+#: lib/app/mainmenu.cpp:531
+msgctxt "MainMenu|"
+msgid "&Find"
+msgstr "&Meklēt"
+
+#: lib/app/mainmenu.cpp:536
+msgctxt "MainMenu|"
+msgid "&View"
+msgstr "S&kats"
+
+#: lib/app/mainmenu.cpp:539
+msgctxt "MainMenu|"
+msgid "Toolbars"
+msgstr "Rīkjoslas"
+
+#: lib/app/mainmenu.cpp:541
+msgctxt "MainMenu|"
+msgid "Sidebar"
+msgstr ""
+
+#: lib/app/mainmenu.cpp:543
+msgctxt "MainMenu|"
+msgid "Character &Encoding"
+msgstr "&Rakstzīmju kodējums"
+
+#: lib/app/mainmenu.cpp:552
+msgctxt "MainMenu|"
+msgid "Sta&tus Bar"
+msgstr "Statusa &josla"
+
+#: lib/app/mainmenu.cpp:554
+msgctxt "MainMenu|"
+msgid "&Stop"
+msgstr "&Apturēt"
+
+#: lib/app/mainmenu.cpp:555
+msgctxt "MainMenu|"
+msgid "&Reload"
+msgstr "&Pārlādēt"
+
+#: lib/app/mainmenu.cpp:557
+msgctxt "MainMenu|"
+msgid "Zoom &In"
+msgstr "Pie&tuvināt"
+
+#: lib/app/mainmenu.cpp:558
+msgctxt "MainMenu|"
+msgid "Zoom &Out"
+msgstr "&Attālināt"
+
+#: lib/app/mainmenu.cpp:559
+msgctxt "MainMenu|"
+msgid "Reset"
+msgstr "Atstatīt"
+
+#: lib/app/mainmenu.cpp:563
+msgctxt "MainMenu|"
+msgid "&Page Source"
+msgstr "&Lapas pirmkods"
+
+#: lib/app/mainmenu.cpp:565
+msgctxt "MainMenu|"
+msgid "&FullScreen"
+msgstr "Piln&ekrāna režīms"
+
+#: lib/app/mainmenu.cpp:568
+msgctxt "MainMenu|"
+msgid "&Tools"
+msgstr "&Rīki"
+
+#: lib/app/mainmenu.cpp:571
+msgctxt "MainMenu|"
+msgid "&Web Search"
+msgstr "&Meklēšana internetā"
+
+#: lib/app/mainmenu.cpp:572
+msgctxt "MainMenu|"
+msgid "Site &Info"
+msgstr "Vietnes informācija"
+
+#: lib/app/mainmenu.cpp:575
+msgctxt "MainMenu|"
+msgid "&Download Manager"
+msgstr "&Lejupielāžu pārvaldnieks"
+
+#: lib/app/mainmenu.cpp:576
+msgctxt "MainMenu|"
+msgid "&Cookies Manager"
+msgstr "&Sīkdatņu pārvaldnieks"
+
+#: lib/app/mainmenu.cpp:577
+msgctxt "MainMenu|"
+msgid "Web In&spector"
+msgstr "&Tīmekļa inspektors"
+
+#: lib/app/mainmenu.cpp:578
+msgctxt "MainMenu|"
+msgid "Clear Recent &History"
+msgstr "Notīrīt neseno &vēsturi"
+
+#: lib/app/mainmenu.cpp:583
+msgctxt "MainMenu|"
+msgid "&Extensions"
+msgstr "Paplašinājumi"
+
+#: lib/app/mainmenu.cpp:589
+msgctxt "MainMenu|"
+msgid "&Help"
+msgstr "P&alīdzība"
+
+#: lib/app/mainmenu.cpp:592
+msgctxt "MainMenu|"
+msgid "About &Qt"
+msgstr "Par Q&t"
+
+#: lib/app/mainmenu.cpp:597
+msgctxt "MainMenu|"
+msgid "Information about application"
+msgstr "Informācija par lietotni"
+
+#: lib/app/mainmenu.cpp:598
+msgctxt "MainMenu|"
+msgid "Configuration Information"
+msgstr "Konfigurācijas informācija"
+
+#: lib/app/mainmenu.cpp:599
+msgctxt "MainMenu|"
+msgid "Report &Issue"
+msgstr "&Ziņot par problēmu"
+
+#: lib/app/mainmenu.cpp:612
+msgctxt "MainMenu|"
+msgid "Restore &Closed Tab"
+msgstr "&Atjaunot pēdējo aizvērto cilni"
+
+#: lib/autofill/autofillicon.cpp:29
+msgctxt "AutoFillWidget|"
+msgid "Choose username to login"
+msgstr "Lai pieslēgtos, izvēlieties lietotājvārdu"
+
+#: lib/autofill/autofillnotification.cpp:39
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "on %1"
+msgstr "lapā %1"
+
+#: lib/autofill/autofillnotification.cpp:43
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "for <b>%1</b>"
+msgstr "priekš <b>%1</b>"
+
+#: lib/autofill/autofillnotification.cpp:47
+#, fuzzy, qt-format
+#| msgctxt "AutoFillNotification|"
+#| msgid "Do you want QupZilla to update saved password %1?"
+msgctxt "AutoFillNotification|"
+msgid "Do you want Falkon to update saved password %1?"
+msgstr "Vai vēlaties, lai „QupZilla“ atjaunina saglabāto paroli %1?"
+
+#: lib/autofill/autofillnotification.cpp:53
+#, fuzzy, qt-format
+#| msgctxt "AutoFillNotification|"
+#| msgid "Do you want QupZilla to remember the password %1 %2?"
+msgctxt "AutoFillNotification|"
+msgid "Do you want Falkon to remember the password %1 %2?"
+msgstr "Vai vēlaties, lai „QupZilla“ atceras paroli %1 %2?"
+
+#: lib/autofill/autofillnotification.ui:69
+msgctxt "AutoFillNotification|"
+msgid "Update"
+msgstr "Atjaunināt"
+
+#: lib/autofill/autofillnotification.ui:85
+msgctxt "AutoFillNotification|"
+msgid "Remember"
+msgstr "Atcerēties"
+
+#: lib/autofill/autofillnotification.ui:101
+msgctxt "AutoFillNotification|"
+msgid "Never For This Site"
+msgstr "Nekad šai vietnei"
+
+#: lib/autofill/autofillnotification.ui:117
+msgctxt "AutoFillNotification|"
+msgid "Not Now"
+msgstr "Ne šoreiz"
+
+#: lib/autofill/autofillwidget.ui:11
+msgctxt "AutoFillWidget|"
+msgid "Login as:"
+msgstr "Pieslēgties kā:"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:257
+msgctxt "AutoFill|"
+msgid "Database (encrypted)"
+msgstr "Datubāze (šifrēta)"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
+msgctxt "MasterPasswordDialog|"
+msgid "Warning!"
+msgstr "Uzmanību!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
+msgctxt "MasterPasswordDialog|"
+msgid "You entered a wrong password!"
+msgstr "Jūs ievadījāt nepareizu paroli!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
+msgctxt "MasterPasswordDialog|"
+msgid "New/Confirm password fields do not match!"
+msgstr "Jaunā parole nesakrīt ar apstiprinājuma paroli!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:578
+msgctxt "AutoFill|"
+msgid "Warning!"
+msgstr "Uzmanību!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:579
+#, fuzzy
+#| msgctxt "AutoFill|"
+#| msgid ""
+#| "This backend needs a master password to be set! QupZilla just switches to "
+#| "its default backend"
+msgctxt "AutoFill|"
+msgid ""
+"This backend needs a master password to be set! Falkon just switches to its "
+"default backend"
+msgstr ""
+"Šai aizmugursistēmai nepieciešama galvenā parole! „QupZilla“ pārslēdzas uz "
+"tās noklusēto aizmugursistēmu"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
+msgctxt "MasterPasswordDialog|"
+msgid "Are you sure you want to clear master password and decrypt data?"
+msgstr "Vai tiešām vēlaties dzēst galveno paroli un atšifrēt datus?"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
+msgctxt "MasterPasswordDialog|"
+msgid "Some data has not been decrypted. The master password was not cleared!"
+msgstr "Daži dati netika atšifrēti. Galvenā parole netika dzēsta!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:669
+msgctxt "AutoFill|"
+msgid "Enter Master Password"
+msgstr "Ievadiet galveno paroli"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:673
+msgctxt "AutoFill|"
+msgid "Permission is required, please enter Master Password:"
+msgstr "Ir nepieciešama atļauja. Lūdzu, ievadiet galveno paroli:"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:679
+msgctxt "AutoFill|"
+msgid "Entered password is wrong!"
+msgstr "Ievadītā parole ir nepareiza!"
+
+#: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
+msgctxt "AutoFill|"
+msgid "Database (plaintext)"
+msgstr "Datubāze (atklāts teksts)"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:20
+msgctxt "MasterPasswordDialog|"
+msgid "Encrypted DataBase Settings"
+msgstr "Šifrētās datubāzes iestatījumi"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:33
+msgctxt "MasterPasswordDialog|"
+msgid "Set/Change Master Password..."
+msgstr "Uzstādīt/mainīt galveno paroli..."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:36
+msgctxt "MasterPasswordDialog|"
+msgid "This backend does not work without a master password."
+msgstr "Šī aizmugursistēma nedarbojas bez galvenās paroles."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:43
+msgctxt "MasterPasswordDialog|"
+msgid "Clear Master Password..."
+msgstr "Dzēst galveno paroli..."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:46
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"This option clears the master password and moves all encrypted data to the "
+"\"DataBase (Plain Text)\" backend, and switches to it."
+msgstr ""
+"Šī iespēja dzēš galveno paroli un visus šifrētos datus pārvieto uz „DatuBāze "
+"(vienkāršs teksts)“ aizmugursistēmu, kā arī pārslēdzas uz to."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:64
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"The Master Password is used to protect site passwords and form data. If you "
+"set a Master Password you will be asked to enter it once per session."
+msgstr ""
+"Galvenā parole tiek izmantota, lai aizsargātu vietņu paroles un formu datus. "
+"Ja Jūs iestatāt galveno paroli, tad Jums tā ik sesiju būs vienreiz jāievada."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:76
+msgctxt "MasterPasswordDialog|"
+msgid "Current Password:"
+msgstr "Pašreizējā parole:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:83
+msgctxt "MasterPasswordDialog|"
+msgid "New Password:"
+msgstr "Jauna parole:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:90
+msgctxt "MasterPasswordDialog|"
+msgid "Confirm Password:"
+msgstr "Apstiprināt paroli:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:120
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
+msgstr ""
+"<b>Piezīme:</b> Galvenā parole nav no jauna atstatāma. Lūdzu, neaizmirstiet "
+"to."
+
+#: lib/bookmarks/bookmarks.cpp:207
+msgctxt "Bookmarks|"
+msgid "Bookmarks Toolbar"
+msgstr "Grāmatzīmju josla"
+
+#: lib/bookmarks/bookmarks.cpp:208
+msgctxt "Bookmarks|"
+msgid "Bookmarks located in Bookmarks Toolbar"
+msgstr "Grāmatzīmes, kas atrodas Grāmatzīmju joslā"
+
+#: lib/bookmarks/bookmarks.cpp:211
+msgctxt "Bookmarks|"
+msgid "Bookmarks Menu"
+msgstr "Grāmatzīmju izvēlne"
+
+#: lib/bookmarks/bookmarks.cpp:212
+msgctxt "Bookmarks|"
+msgid "Bookmarks located in Bookmarks Menu"
+msgstr "Grāmatzīmes, kas atrodas grāmatzīmju izvēļņu joslā"
+
+#: lib/bookmarks/bookmarks.cpp:215
+msgctxt "Bookmarks|"
+msgid "Unsorted Bookmarks"
+msgstr "Nesakārtotās grāmatzīmes"
+
+#: lib/bookmarks/bookmarks.cpp:216
+msgctxt "Bookmarks|"
+msgid "All other bookmarks"
+msgstr "Visas pārējās grāmatzīmes"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.cpp:64
+msgctxt "BookmarksExportDialog|"
+msgid "Error!"
+msgstr "Kļūda!"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:14
+msgctxt "BookmarksExportDialog|"
+msgid "Export Bookmarks"
+msgstr "Eksportēt grāmatzīmes"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:20
+msgctxt "BookmarksExportDialog|"
+msgid "<b>Export Bookmarks</b>"
+msgstr "<b>Eksportēt grāmatzīmes</b>"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:27
+msgctxt "BookmarksExportDialog|"
+msgid "Export options"
+msgstr "Eksportēšanas iestatījumi"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
+msgctxt "BookmarksExportDialog|"
+msgid "Choose..."
+msgstr "Izvēlēties..."
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
+msgctxt "BookmarksExportDialog|"
+msgid "Output File:"
+msgstr "Izvaddatne:"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:89
+msgctxt "BookmarksExportDialog|"
+msgid "Format:"
+msgstr "Formāts:"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:31
+msgctxt "BookmarksExporter|"
+msgid "HTML File"
+msgstr "HTML datnes"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:37
+msgctxt "BookmarksExporter|"
+msgid "HTML Bookmarks"
+msgstr "HTML grāmatzīmes"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:38
+msgctxt "BookmarksExporter|"
+msgid "Choose file..."
+msgstr "Izvēlieties datni..."
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:47
+msgctxt "BookmarksExporter|"
+msgid "Cannot open file for writing!"
+msgstr "Neizdodas atvērt datni lasīšanai!"
+
+#: lib/bookmarks/bookmarksicon.cpp:37 lib/bookmarks/bookmarksicon.cpp:108
+msgctxt "BookmarksIcon|"
+msgid "Bookmark this Page"
+msgstr "Saglabāt šo lapu grāmatzīmēs"
+
+#: lib/bookmarks/bookmarksicon.cpp:100
+msgctxt "BookmarksIcon|"
+msgid "Edit this bookmark"
+msgstr "Rediģēt šo grāmatzīmi"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:113
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
+msgctxt "BookmarksImportDialog|"
+msgid "Error!"
+msgstr "Kļūda!"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
+msgctxt "BookmarksImportDialog|"
+msgid "No bookmarks were found."
+msgstr "Grāmatzīmes netika atrastas."
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:125
+msgctxt "BookmarksImportDialog|"
+msgid "Finish"
+msgstr "Pabeigt"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:157
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:270
+msgctxt "BookmarksImportDialog|"
+msgid "Next >"
+msgstr "Uz priekšu >"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:186
+#, qt-format
+msgctxt "BookmarksImportDialog|"
+msgid "<b>Importing from %1</b>"
+msgstr "<b>Tiek importēts no %1</b>"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:20
+msgctxt "BookmarksImportDialog|"
+msgid "Import Bookmarks"
+msgstr "Importēt grāmatzīmes"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:26
+msgctxt "BookmarksImportDialog|"
+msgid "<b>Import Bookmarks</b>"
+msgstr "<b>Importēt grāmatzīmes</b>"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:74
+msgctxt "BookmarksImportDialog|"
+msgid "Internet Explorer"
+msgstr "„Internet Exporer“"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:83
+msgctxt "BookmarksImportDialog|"
+msgid "Html File"
+msgstr "HTML datne"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:95
+msgctxt "BookmarksImportDialog|"
+msgid "Choose from which you want to import bookmarks:"
+msgstr "Izvēlieties, no kuras Jūs vēlaties grāmatzīmes importēt:"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:125
+msgctxt "BookmarksImportDialog|"
+msgid "Choose..."
+msgstr "Izvēlieties..."
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:257
+msgctxt "BookmarksImportDialog|"
+msgid "< Back"
+msgstr "< Atpakaļ"
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:32
+msgctxt "BookmarksImporter|"
+msgid ""
+"Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
+"is usually located in"
+msgstr ""
+"<i>Google Chrome</i> savas grāmatzīmes saglabā teksta datnē <b>Bookmarks</"
+"b>. Šī datne parasti atrodas"
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
+msgctxt "BookmarksImporter|"
+msgid "Choose file..."
+msgstr "Izvēlieties datni..."
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
+msgctxt "BookmarksImporter|"
+msgid "Unable to open file."
+msgstr "Neizdodas atvērt datni."
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:75
+msgctxt "BookmarksImporter|"
+msgid "Cannot parse JSON file!"
+msgstr "Neizdodas parsēt JSON datni!"
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:42
+msgctxt "BookmarksImporter|"
+msgid ""
+"Mozilla Firefox stores its bookmarks in <b>places.sqlite</b> SQLite "
+"database. This file is usually located in"
+msgstr ""
+"„Mozilla Firefox“ savas grāmatzīmes saglabā <b>places.sqlite</b> „SQLite“ "
+"datubāzē. Šī datne parasti atrodas"
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:70
+msgctxt "BookmarksImportDialog|"
+msgid "File does not exist."
+msgstr "Datne neeksistē."
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:77
+msgctxt "BookmarksImportDialog|"
+msgid "Unable to open database. Is Firefox running?"
+msgstr "Neizdodas atvērt datubāzi. Vai gadījumā nav ieslēgts pālūks „Firefox“?"
+
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:32
+msgctxt "BookmarksImporter|"
+msgid ""
+"You can import bookmarks from any browser that supports HTML exporting. This "
+"file has usually these suffixes"
+msgstr ""
+"Grāmatzīmes varat importēt no jebkuras pārlūkprogrammas, kas atbalsta HTML "
+"eksportēšanu. Šīm datnēm parasti ir šādi paplašinājumi"
+
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:43
+msgctxt "BookmarksImporter|"
+msgid "HTML Bookmarks"
+msgstr "HTML grāmatzīmes"
+
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:33
+msgctxt "BookmarksImporter|"
+msgid ""
+"Internet Explorer stores its bookmarks in <b>Favorites</b> folder. This "
+"folder is usually located in"
+msgstr ""
+"<i>Internet Explorer</i> savas grāmatzīmes saglabā mapē <b>Favorites</b>. Šī "
+"mape parasti atrodas"
+
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
+msgctxt "BookmarksImporter|"
+msgid "Directory does not exist."
+msgstr "Mape neeksistē."
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
+msgctxt "BookmarksImporter|"
+msgid ""
+"Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
+"usually located in"
+msgstr ""
+"<i>Opera</i> savas grāmatzīmes saglabā teksta datnē <b>bookmarks.adr</b>. Šī "
+"datne parasti atrodas"
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
+msgctxt "BookmarksImporter|"
+msgid "File is not valid Opera bookmarks file!"
+msgstr "Datne nav īsta pārlūka „Opera“ grāmatzīmju datne!"
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
+msgctxt "BookmarksImporter|"
+msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
+msgstr "Tiek atbalstīta tikai „Opera“ grāmatzīmju datne UTF-8 kodējumā!"
+
+#: lib/bookmarks/bookmarksmanager.cpp:105
+msgctxt "BookmarksManager|"
+msgid "Open in new tab"
+msgstr "Atvērt jaunā cilnē"
+
+#: lib/bookmarks/bookmarksmanager.cpp:106
+msgctxt "BookmarksManager|"
+msgid "Open in new window"
+msgstr "Atvērt jaunā logā"
+
+#: lib/bookmarks/bookmarksmanager.cpp:107
+msgctxt "BookmarksManager|"
+msgid "Open in new private window"
+msgstr "Atvērt jaunā privātajā logā"
+
+#: lib/bookmarks/bookmarksmanager.cpp:110
+#: lib/bookmarks/bookmarksmanager.cpp:177
+msgctxt "BookmarksManager|"
+msgid "New Bookmark"
+msgstr "Jauna grāmatzīme"
+
+#: lib/bookmarks/bookmarksmanager.cpp:111
+#: lib/bookmarks/bookmarksmanager.cpp:185
+msgctxt "BookmarksManager|"
+msgid "New Folder"
+msgstr "Jauna mape"
+
+#: lib/bookmarks/bookmarksmanager.cpp:112
+msgctxt "BookmarksManager|"
+msgid "New Separator"
+msgstr "Jauns atdalītājs"
+
+#: lib/bookmarks/bookmarksmanager.cpp:114
+msgctxt "BookmarksManager|"
+msgid "Delete"
+msgstr "Dzēst"
+
+#: lib/bookmarks/bookmarksmanager.ui:14
+msgctxt "BookmarksManager|"
+msgid "Bookmarks"
+msgstr "Grāmatzīmes"
+
+#: lib/bookmarks/bookmarksmanager.ui:32
+msgctxt "BookmarksManager|"
+msgid "Title:"
+msgstr "Nosaukums:"
+
+#: lib/bookmarks/bookmarksmanager.ui:42
+msgctxt "BookmarksManager|"
+msgid "Address:"
+msgstr "Adrese:"
+
+#: lib/bookmarks/bookmarksmanager.ui:52
+msgctxt "BookmarksManager|"
+msgid "Keyword:"
+msgstr "Atslēgas vārds:"
+
+#: lib/bookmarks/bookmarksmanager.ui:62
+msgctxt "BookmarksManager|"
+msgid "Description"
+msgstr "Apraksts"
+
+#: lib/bookmarks/bookmarksmenu.cpp:166
+msgctxt "BookmarksMenu|"
+msgid "&Bookmarks"
+msgstr "&Grāmatzīmes"
+
+#: lib/bookmarks/bookmarksmenu.cpp:168
+msgctxt "BookmarksMenu|"
+msgid "Bookmark &This Page"
+msgstr "&Pievienot grāmatzīmēm šobrīd atvērto lapu"
+
+#: lib/bookmarks/bookmarksmenu.cpp:169
+msgctxt "BookmarksMenu|"
+msgid "Bookmark &All Tabs"
+msgstr "Pievienot grāmatzīmēm &visas cilnes"
+
+#: lib/bookmarks/bookmarksmenu.cpp:170
+msgctxt "BookmarksMenu|"
+msgid "Organize &Bookmarks"
+msgstr "Kārt&ot grāmatzīmes"
+
+#: lib/bookmarks/bookmarksmodel.cpp:147
+msgctxt "BookmarksModel|"
+msgid "Title"
+msgstr "Nosaukums"
+
+#: lib/bookmarks/bookmarksmodel.cpp:149
+msgctxt "BookmarksModel|"
+msgid "Address"
+msgstr "Adrese"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:73
+msgctxt "BookmarksToolbar|"
+msgid "Open in new tab"
+msgstr "Atvērt jaunā cilnē"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:74
+msgctxt "BookmarksToolbar|"
+msgid "Open in new window"
+msgstr "Atvērt jaunā logā"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:75
+msgctxt "BookmarksToolbar|"
+msgid "Open in new private window"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:185
+#, fuzzy
+#| msgctxt "BookmarksManager|"
+#| msgid "New Folder"
+msgctxt "BookmarksToolbar|"
+msgid "New Folder"
+msgstr "Jauna mape"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:78
+msgctxt "BookmarksToolbar|"
+msgid "Edit"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:79
+msgctxt "BookmarksToolbar|"
+msgid "Delete"
+msgstr "Dzēst"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:81
+msgctxt "BookmarksToolbar|"
+msgid "Show Only Icons"
+msgstr "Rādīt tikai ikonas"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:85
+msgctxt "BookmarksToolbar|"
+msgid "Show Only Text"
+msgstr "Rādīt tikai tekstu"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:185
+#, fuzzy
+#| msgctxt "AutoFillManager|"
+#| msgid "Username"
+msgctxt "BookmarksToolbar|"
+msgid "Enter Folder Name:"
+msgstr "Lietotājvārds"
+
+#: lib/bookmarks/bookmarkstools.cpp:76
+#, qt-format
+msgctxt "BookmarksFoldersMenu|"
+msgid "Choose %1"
+msgstr "Izvēlieties %1"
+
+#: lib/bookmarks/bookmarkstools.cpp:153
+msgctxt "Bookmarks|"
+msgid "Choose name and location of this bookmark."
+msgstr "Izvēlieties šīs grāmatzīmes nosaukumu un vietu."
+
+#: lib/bookmarks/bookmarkstools.cpp:157
+msgctxt "Bookmarks|"
+msgid "Add New Bookmark"
+msgstr "Pievienot jaunu grāmatzīmi"
+
+#: lib/bookmarks/bookmarkstools.cpp:197
+msgctxt "Bookmarks|"
+msgid "Choose folder for bookmarks:"
+msgstr "Izvēlieties mapi grāmatzīmēm:"
+
+#: lib/bookmarks/bookmarkstools.cpp:198
+msgctxt "Bookmarks|"
+msgid "Bookmark All Tabs"
+msgstr "Pievienot grāmatzīmēm visas cilnes"
+
+#: lib/bookmarks/bookmarkstools.cpp:239
+msgctxt "Bookmarks|"
+msgid "Title:"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:242
+msgctxt "Bookmarks|"
+msgid "Address:"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:244
+msgctxt "Bookmarks|"
+msgid "Keyword:"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:247
+msgctxt "Bookmarks|"
+msgid "Description:"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:252
+msgctxt "Bookmarks|"
+msgid "Edit Bookmark"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:344
+msgctxt "Bookmarks|"
+msgid "Confirmation"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:345
+#, qt-format
+msgctxt "Bookmarks|"
+msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
+msgstr ""
+
+#: lib/bookmarks/bookmarkstools.cpp:440
+msgctxt "Bookmarks|"
+msgid "Empty"
+msgstr "Tukšs"
+
+#: lib/bookmarks/bookmarkswidget.cpp:98
+msgctxt "BookmarksWidget|"
+msgid "Update Bookmark"
+msgstr "Atjaunināt grāmatzīmi"
+
+#: lib/bookmarks/bookmarkswidget.cpp:112 lib/bookmarks/bookmarkswidget.ui:33
+msgctxt "BookmarksWidget|"
+msgid "Add to Speed Dial"
+msgstr "Pievienot ātrajam zvanam"
+
+#: lib/bookmarks/bookmarkswidget.cpp:116
+msgctxt "BookmarksWidget|"
+msgid "Remove from Speed Dial"
+msgstr "Izņemt no ātrā zvana"
+
+#: lib/bookmarks/bookmarkswidget.cpp:121
+msgctxt "BookmarksWidget|"
+msgid "Remove from Bookmarks"
+msgstr "Izņemt no grāmatzīmēm"
+
+#: lib/bookmarks/bookmarkswidget.ui:20
+msgctxt "BookmarksWidget|"
+msgid "Add to Bookmarks"
+msgstr ""
+
+#: lib/cookies/cookiemanager.cpp:78
+msgctxt "CookieManager|"
+msgid "Search"
+msgstr "Meklēt"
+
+#: lib/cookies/cookiemanager.cpp:105
+msgctxt "CookieManager|"
+msgid "Confirmation"
+msgstr "Apstiprinājums"
+
+#: lib/cookies/cookiemanager.cpp:106
+msgctxt "CookieManager|"
+msgid "Are you sure you want to delete all cookies on your computer?"
+msgstr "Vai tiešām vēlaties dzēst visas uz Jūsu datora esošās sīkdatnes?"
+
+#: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
+#: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
+#: lib/cookies/cookiemanager.cpp:155 lib/cookies/cookiemanager.cpp:156
+#: lib/cookies/cookiemanager.ui:154 lib/cookies/cookiemanager.ui:164
+#: lib/cookies/cookiemanager.ui:174 lib/cookies/cookiemanager.ui:184
+#: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
+msgctxt "CookieManager|"
+msgid "<cookie not selected>"
+msgstr "<sīkdatne nav izvēlēta>"
+
+#: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
+#: lib/cookies/cookiemanager.ui:245
+msgctxt "CookieManager|"
+msgid "Remove cookies"
+msgstr "Dzēst sīkdatnes"
+
+#: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
+#: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
+#: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "<cookie not selected>"
+msgctxt "CookieManager|"
+msgid "<multiple cookies selected>"
+msgstr "<sīkdatne nav izvēlēta>"
+
+#: lib/cookies/cookiemanager.cpp:178
+msgctxt "CookieManager|"
+msgid "Secure only"
+msgstr "Tikai droši"
+
+#: lib/cookies/cookiemanager.cpp:178
+msgctxt "CookieManager|"
+msgid "All connections"
+msgstr "Visi savienojumi"
+
+#: lib/cookies/cookiemanager.cpp:179
+msgctxt "CookieManager|"
+msgid "Session cookie"
+msgstr "Sesijas sīkdatne"
+
+#: lib/cookies/cookiemanager.cpp:181
+msgctxt "CookieManager|"
+msgid "Remove cookie"
+msgstr "Dzēst sīkdatni"
+
+#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.ui:126
+msgctxt "CookieManager|"
+msgid "Server:"
+msgstr "Serveris:"
+
+#: lib/cookies/cookiemanager.cpp:186
+msgctxt "CookieManager|"
+msgid "Add to whitelist"
+msgstr "Pievienot baltajam sarakstam"
+
+#: lib/cookies/cookiemanager.cpp:193
+msgctxt "CookieManager|"
+msgid "Already blacklisted!"
+msgstr "Jau atrodas melnajā sarakstā!"
+
+#: lib/cookies/cookiemanager.cpp:193
+#, qt-format
+msgctxt "CookieManager|"
+msgid "The server \"%1\" is already in blacklist, please remove it first."
+msgstr ""
+"Serveris „%1“ jau atrodas melnajā sarakstā. Lūdzu, vispirms to no tā "
+"izņemiet."
+
+#: lib/cookies/cookiemanager.cpp:209
+msgctxt "CookieManager|"
+msgid "Add to blacklist"
+msgstr "Pievienot melnajam sarakstam"
+
+#: lib/cookies/cookiemanager.cpp:220
+msgctxt "CookieManager|"
+msgid "Already whitelisted!"
+msgstr "Jau atrodas baltajā sarakstā!"
+
+#: lib/cookies/cookiemanager.cpp:220
+#, qt-format
+msgctxt "CookieManager|"
+msgid "The server \"%1\" is already in whitelist, please remove it first."
+msgstr ""
+"Serveris „%1“ jau atrodas baltajā sarakstā. Lūdzu, vispirms to no tā "
+"izņemiet!"
+
+#: lib/cookies/cookiemanager.ui:14
+msgctxt "CookieManager|"
+msgid "Cookies"
+msgstr "Sīkdatnes"
+
+#: lib/cookies/cookiemanager.ui:36
+msgctxt "CookieManager|"
+msgid "Stored Cookies"
+msgstr "Saglabātās sīkdatnes"
+
+#: lib/cookies/cookiemanager.ui:42
+msgctxt "CookieManager|"
+msgid "Find: "
+msgstr "Meklēt:"
+
+#: lib/cookies/cookiemanager.ui:52
+msgctxt "CookieManager|"
+msgid "These cookies are stored on your computer:"
+msgstr "Šīs sīkdatnes ir saglabātas Jūsu datorā:"
+
+#: lib/cookies/cookiemanager.ui:66
+msgctxt "CookieManager|"
+msgid "Server"
+msgstr "Serveris"
+
+#: lib/cookies/cookiemanager.ui:71
+msgctxt "CookieManager|"
+msgid "Cookie name"
+msgstr "Sīkdatnes nosaukums"
+
+#: lib/cookies/cookiemanager.ui:109
+msgctxt "CookieManager|"
+msgid "Name:"
+msgstr "Nosaukums:"
+
+#: lib/cookies/cookiemanager.ui:119
+msgctxt "CookieManager|"
+msgid "Value:"
+msgstr "Vērtība:"
+
+#: lib/cookies/cookiemanager.ui:133
+msgctxt "CookieManager|"
+msgid "Path:"
+msgstr "Ceļš:"
+
+#: lib/cookies/cookiemanager.ui:140
+msgctxt "CookieManager|"
+msgid "Secure:"
+msgstr "Drošība:"
+
+#: lib/cookies/cookiemanager.ui:147
+msgctxt "CookieManager|"
+msgid "Expiration:"
+msgstr "Beigu termiņš:"
+
+#: lib/cookies/cookiemanager.ui:238
+msgctxt "CookieManager|"
+msgid "Remove all cookies"
+msgstr "Dzēst visas sīkdatnes"
+
+#: lib/cookies/cookiemanager.ui:269
+msgctxt "CookieManager|"
+msgid "Cookie Filtering"
+msgstr "Sīkdatņu filtrs"
+
+#: lib/cookies/cookiemanager.ui:275
+msgctxt "CookieManager|"
+msgid "<b>Cookie whitelist</b>"
+msgstr "<b>Sīkdatņu baltais saraksts</b>"
+
+#: lib/cookies/cookiemanager.ui:282
+msgctxt "CookieManager|"
+msgid ""
+"Cookies from these servers will ALWAYS be accepted (even if you have "
+"disabled saving cookies)"
+msgstr ""
+"Sīkdatnes no šiem serveriem tiks pieņemtas VIENMĒR (pat tad, ja Jūs "
+"atspējosiet sīkdatņu saglabāšanu)"
+
+#: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
+msgctxt "CookieManager|"
+msgid "Add"
+msgstr "Pievienot"
+
+#: lib/cookies/cookiemanager.ui:314 lib/cookies/cookiemanager.ui:368
+msgctxt "CookieManager|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: lib/cookies/cookiemanager.ui:326
+msgctxt "CookieManager|"
+msgid "<b>Cookie blacklist</b>"
+msgstr "<b>Sīkdatņu melnais saraksts</b>"
+
+#: lib/cookies/cookiemanager.ui:333
+msgctxt "CookieManager|"
+msgid "Cookies from these servers will NEVER be accepted"
+msgstr "Sīkdatnes no šiem serveriem NEKAD netiks pieņemtas"
+
+#: lib/cookies/cookiemanager.ui:385
+msgctxt "CookieManager|"
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: lib/cookies/cookiemanager.ui:407
+msgctxt "CookieManager|"
+msgid "Filter 3rd party cookies"
+msgstr "Filtrēt 3. pušu sīkdatnes"
+
+#: lib/cookies/cookiemanager.ui:414
+msgctxt "CookieManager|"
+msgid "<b>Cookie Settings</b>"
+msgstr "<b>Sīkdatņu iestatījumi</b>"
+
+#: lib/cookies/cookiemanager.ui:421
+msgctxt "CookieManager|"
+msgid "Allow storing of cookies"
+msgstr "Ļaut uzglabāt sīkdatnes"
+
+#: lib/cookies/cookiemanager.ui:428
+msgctxt "CookieManager|"
+msgid "Filter tracking cookies"
+msgstr "Filtrēt izsekošanas sīkdatnes"
+
+#: lib/cookies/cookiemanager.ui:435
+msgctxt "CookieManager|"
+msgid "Delete cookies on close"
+msgstr ""
+
+#: lib/downloads/downloaditem.cpp:73
+msgctxt "DownloadItem|"
+msgid "Remaining time unavailable"
+msgstr "Dati par atlikušo laiku nav pieejami"
+
+#: lib/downloads/downloaditem.cpp:128
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Done - %1 (%2)"
+msgstr "Pabeigts — %1 (%2)"
+
+#: lib/downloads/downloaditem.cpp:132
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Error - %1"
+msgstr "Kļūda — %1"
+
+#: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:275
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Cancelled - %1"
+msgstr "Atcelts — %1"
+
+#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:319
+msgctxt "DownloadItem|"
+msgid "Cancelled"
+msgstr "Atcelts"
+
+#: lib/downloads/downloaditem.cpp:190
+msgctxt "DownloadItem|"
+msgid "few seconds"
+msgstr "dažas sekundes"
+
+#: lib/downloads/downloaditem.cpp:195
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n seconds"
+msgid_plural "%n seconds"
+msgstr[0] "%n sekunde"
+msgstr[1] "%n sekundes"
+msgstr[2] "%n sekundžu"
+
+#: lib/downloads/downloaditem.cpp:200
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n minutes"
+msgid_plural "%n minutes"
+msgstr[0] "%n minūte"
+msgstr[1] "%n minūtes"
+msgstr[2] "%n minūšu"
+
+#: lib/downloads/downloaditem.cpp:205
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n hours"
+msgid_plural "%n hours"
+msgstr[0] "%n stunda"
+msgstr[1] "%n stundas"
+msgstr[2] "%n stundu"
+
+#: lib/downloads/downloaditem.cpp:212
+msgctxt "DownloadItem|"
+msgid "Unknown speed"
+msgstr "Nezināms ātrums"
+
+#: lib/downloads/downloaditem.cpp:217
+msgctxt "DownloadItem|"
+msgid "kB/s"
+msgstr "kB/s"
+
+#: lib/downloads/downloaditem.cpp:222
+msgctxt "DownloadItem|"
+msgid "MB/s"
+msgstr "MB/s"
+
+#: lib/downloads/downloaditem.cpp:226
+msgctxt "DownloadItem|"
+msgid "GB/s"
+msgstr "GB/s"
+
+#: lib/downloads/downloaditem.cpp:254
+msgctxt "DownloadItem|"
+msgid "Unknown size"
+msgstr "Nezināms izmērs"
+
+#: lib/downloads/downloaditem.cpp:255
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%2 - unknown size (%3)"
+msgstr "%2 — nezināms izmērs (%3)"
+
+#: lib/downloads/downloaditem.cpp:258
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Remaining %1 - %2 of %3 (%4)"
+msgstr "Atlikušas %1 — %2 no %3 (%4)"
+
+#: lib/downloads/downloaditem.cpp:290
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "Cancelled - %1"
+msgctxt "DownloadItem|"
+msgid "Paused - %1"
+msgstr "Atcelts — %1"
+
+#: lib/downloads/downloaditem.cpp:303
+msgctxt "DownloadItem|"
+msgid "Open File"
+msgstr "Atvērt datni"
+
+#: lib/downloads/downloaditem.cpp:305
+msgctxt "DownloadItem|"
+msgid "Open Folder"
+msgstr "Atvērt mapi"
+
+#: lib/downloads/downloaditem.cpp:307
+msgctxt "DownloadItem|"
+msgid "Copy Download Link"
+msgstr "Kopēt lejupielādes adresi"
+
+#: lib/downloads/downloaditem.cpp:309
+msgctxt "DownloadItem|"
+msgid "Cancel downloading"
+msgstr "Atcelt lejupielādi"
+
+#: lib/downloads/downloaditem.cpp:312
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Cancel downloading"
+msgctxt "DownloadItem|"
+msgid "Resume downloading"
+msgstr "Atcelt lejupielādi"
+
+#: lib/downloads/downloaditem.cpp:314
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Cancel downloading"
+msgctxt "DownloadItem|"
+msgid "Pause downloading"
+msgstr "Atcelt lejupielādi"
+
+#: lib/downloads/downloaditem.cpp:317
+msgctxt "DownloadItem|"
+msgid "Remove From List"
+msgstr "Noņemt no saraksta"
+
+#: lib/downloads/downloaditem.cpp:319
+msgctxt "DownloadItem|"
+msgid "Error"
+msgstr "Kļūda"
+
+#: lib/downloads/downloaditem.cpp:345
+msgctxt "DownloadItem|"
+msgid "Not found"
+msgstr "Nav atrasts"
+
+#: lib/downloads/downloaditem.cpp:345
+#, qt-format
+msgctxt "DownloadItem|"
+msgid ""
+"Sorry, the file \n"
+" %1 \n"
+" was not found!"
+msgstr ""
+"Atvainojiet, datne\n"
+"%1\n"
+"netika atrasta!"
+
+#: lib/downloads/downloadmanager.cpp:188 lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.ui:20
+msgctxt "DownloadManager|"
+msgid "Download Manager"
+msgstr "Lejupielāžu pārvaldnieks"
+
+#: lib/downloads/downloadmanager.cpp:226
+#, qt-format
+msgctxt "DownloadManager|"
+msgid "%1% of %2 files (%3) %4 remaining"
+msgstr "atlikušas %1% no %2 datnēm (%3) %4"
+
+#: lib/downloads/downloadmanager.cpp:230
+#, qt-format
+msgctxt "DownloadManager|"
+msgid "%1% - Download Manager"
+msgstr "%1% — Lejupielāžu pārvaldnieks"
+
+#: lib/downloads/downloadmanager.cpp:300
+msgctxt "DownloadManager|"
+msgid "Save file as..."
+msgstr "Saglabāt datni kā..."
+
+#: lib/downloads/downloadmanager.cpp:310
+msgctxt "DownloadManager|"
+msgid "MIME HTML Archive (*.mhtml)"
+msgstr ""
+
+#: lib/downloads/downloadmanager.cpp:311
+msgctxt "DownloadManager|"
+msgid "HTML Page, single (*.html)"
+msgstr ""
+
+#: lib/downloads/downloadmanager.cpp:312
+msgctxt "DownloadManager|"
+msgid "HTML Page, complete (*.html)"
+msgstr ""
+
+#: lib/downloads/downloadmanager.cpp:316
+msgctxt "DownloadManager|"
+msgid "Save page as..."
+msgstr ""
+
+#: lib/downloads/downloadmanager.cpp:410
+#, fuzzy
+#| msgctxt "DownloadOptionsDialog|"
+#| msgid "Download link copied."
+msgctxt "DownloadManager|"
+msgid "Falkon: Download Finished"
+msgstr "Lejupielādes adrese nokopēta."
+
+#: lib/downloads/downloadmanager.cpp:410
+msgctxt "DownloadManager|"
+msgid "All files have been successfully downloaded."
+msgstr "Visas datnes ir sekmīgi lejupielādētas."
+
+#: lib/downloads/downloadmanager.cpp:464
+msgctxt "DownloadManager|"
+msgid "Warning"
+msgstr "Uzmanību"
+
+#: lib/downloads/downloadmanager.cpp:465
+msgctxt "DownloadManager|"
+msgid ""
+"Are you sure you want to quit? All uncompleted downloads will be cancelled!"
+msgstr ""
+"Vai tiešām vēlaties iziet? Visas nepabeigtās lejupielādes tiks atceltas!"
+
+#: lib/downloads/downloadmanager.ui:69
+msgctxt "DownloadManager|"
+msgid "Clear"
+msgstr "Attīrīt"
+
+#: lib/downloads/downloadoptionsdialog.cpp:49
+#, qt-format
+msgctxt "DownloadOptionsDialog|"
+msgid "Opening %1"
+msgstr "Atver %1"
+
+#: lib/downloads/downloadoptionsdialog.cpp:112
+msgctxt "DownloadOptionsDialog|"
+msgid "Download link copied."
+msgstr "Lejupielādes adrese nokopēta."
+
+#: lib/downloads/downloadoptionsdialog.ui:25
+#, fuzzy
+#| msgctxt "DownloadOptionsDialog|"
+#| msgid "What should QupZilla do with this file?"
+msgctxt "DownloadOptionsDialog|"
+msgid "What should Falkon do with this file?"
+msgstr "Ko pārlūkam „QupZilla“ darīt ar šo datni?"
+
+#: lib/downloads/downloadoptionsdialog.ui:47
+msgctxt "DownloadOptionsDialog|"
+msgid "Open..."
+msgstr "Atvērt..."
+
+#: lib/downloads/downloadoptionsdialog.ui:54
+msgctxt "DownloadOptionsDialog|"
+msgid "Save File"
+msgstr "Saglabāt datni"
+
+#: lib/downloads/downloadoptionsdialog.ui:64
+msgctxt "DownloadOptionsDialog|"
+msgid "Download with External Manager"
+msgstr "Lejupielādēt, izmantojot ārēju pārvaldnieku"
+
+#: lib/downloads/downloadoptionsdialog.ui:165
+msgctxt "DownloadOptionsDialog|"
+msgid "which is:"
+msgstr ""
+
+#: lib/downloads/downloadoptionsdialog.ui:215
+msgctxt "DownloadOptionsDialog|"
+msgid "from:"
+msgstr "no:"
+
+#: lib/downloads/downloadoptionsdialog.ui:241
+msgctxt "DownloadOptionsDialog|"
+msgid "Copy download link"
+msgstr "Kopēt lejupielādes adresi"
+
+#: lib/downloads/downloadoptionsdialog.ui:256
+msgctxt "DownloadOptionsDialog|"
+msgid "You have chosen to open"
+msgstr "Jūs esat izvēlējies atvērt"
+
+#: lib/downloads/downloadsbutton.cpp:27 lib/downloads/downloadsbutton.cpp:43
+msgctxt "DownloadsButton|"
+msgid "Downloads"
+msgstr ""
+
+#: lib/downloads/downloadsbutton.cpp:28
+msgctxt "DownloadsButton|"
+msgid "Open Download Manager"
+msgstr ""
+
+#: lib/history/history.cpp:82
+msgctxt "History|"
+msgid "Empty Page"
+msgstr "Tukša lapa"
+
+#: lib/history/history.cpp:272
+msgctxt "History|"
+msgid "January"
+msgstr "Janvāris"
+
+#: lib/history/history.cpp:274
+msgctxt "History|"
+msgid "February"
+msgstr "Februāris"
+
+#: lib/history/history.cpp:276
+msgctxt "History|"
+msgid "March"
+msgstr "Marts"
+
+#: lib/history/history.cpp:278
+msgctxt "History|"
+msgid "April"
+msgstr "Aprīlis"
+
+#: lib/history/history.cpp:280
+msgctxt "History|"
+msgid "May"
+msgstr "Maijs"
+
+#: lib/history/history.cpp:282
+msgctxt "History|"
+msgid "June"
+msgstr "Jūnijs"
+
+#: lib/history/history.cpp:284
+msgctxt "History|"
+msgid "July"
+msgstr "Jūlijs"
+
+#: lib/history/history.cpp:286
+msgctxt "History|"
+msgid "August"
+msgstr "Augusts"
+
+#: lib/history/history.cpp:288
+msgctxt "History|"
+msgid "September"
+msgstr "Septembris"
+
+#: lib/history/history.cpp:290
+msgctxt "History|"
+msgid "October"
+msgstr "Oktobris"
+
+#: lib/history/history.cpp:292
+msgctxt "History|"
+msgid "November"
+msgstr "Novembris"
+
+#: lib/history/history.cpp:294
+msgctxt "History|"
+msgid "December"
+msgstr "Decembris"
+
+#: lib/history/historymanager.cpp:78
+msgctxt "HistoryManager|"
+msgid "Confirmation"
+msgstr "Apstiprinājums"
+
+#: lib/history/historymanager.cpp:79
+msgctxt "HistoryManager|"
+msgid "Are you sure you want to delete all history?"
+msgstr "Vai tiešām vēlaties dzēst visu vēsturi?"
+
+#: lib/history/historymanager.cpp:145
+msgctxt "HistoryManager|"
+msgid "Open in new tab"
+msgstr "Atvērt jaunā cilnē"
+
+#: lib/history/historymanager.cpp:146
+msgctxt "HistoryManager|"
+msgid "Open in new window"
+msgstr "Atvērt jaunā logā"
+
+#: lib/history/historymanager.cpp:147
+msgctxt "HistoryManager|"
+msgid "Open in new private window"
+msgstr "Atvērt jaunā privātajā logā"
+
+#: lib/history/historymanager.cpp:150
+msgctxt "HistoryManager|"
+msgid "Copy url"
+msgstr "Kopēt adresi"
+
+#: lib/history/historymanager.cpp:151
+msgctxt "HistoryManager|"
+msgid "Copy title"
+msgstr "Kopēt nosaukumu"
+
+#: lib/history/historymanager.cpp:154 lib/history/historymanager.ui:20
+msgctxt "HistoryManager|"
+msgid "Delete"
+msgstr "Dzēst"
+
+#: lib/history/historymanager.ui:14
+msgctxt "HistoryManager|"
+msgid "History"
+msgstr "Vēsture"
+
+#: lib/history/historymanager.ui:27
+msgctxt "HistoryManager|"
+msgid "Clear All History"
+msgstr "Dzēst visu vēsturi"
+
+#: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
+#: lib/history/historymenu.cpp:186
+msgctxt "HistoryMenu|"
+msgid "Empty"
+msgstr "Tukšs"
+
+#: lib/history/historymenu.cpp:161
+msgctxt "HistoryMenu|"
+msgid "Restore All Closed Tabs"
+msgstr "Atjaunot visas aizvērtās cilnes"
+
+#: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
+msgctxt "HistoryMenu|"
+msgid "Clear list"
+msgstr "Attīrīt sarakstu"
+
+#: lib/history/historymenu.cpp:189
+msgctxt "HistoryMenu|"
+msgid "Restore All Closed Windows"
+msgstr ""
+
+#: lib/history/historymenu.cpp:236
+msgctxt "HistoryMenu|"
+msgid "Hi&story"
+msgstr "&Vēsture"
+
+#: lib/history/historymenu.cpp:238
+msgctxt "HistoryMenu|"
+msgid "&Back"
+msgstr "&Atpakaļ"
+
+#: lib/history/historymenu.cpp:241
+msgctxt "HistoryMenu|"
+msgid "&Forward"
+msgstr "&Uz priekšu"
+
+#: lib/history/historymenu.cpp:244
+msgctxt "HistoryMenu|"
+msgid "&Home"
+msgstr "&Mājas"
+
+#: lib/history/historymenu.cpp:247
+msgctxt "HistoryMenu|"
+msgid "Show &All History"
+msgstr "Parā&dīt visu vēsturi"
+
+#: lib/history/historymenu.cpp:255
+msgctxt "HistoryMenu|"
+msgid "Most Visited"
+msgstr "Visvairāk apmeklētās"
+
+#: lib/history/historymenu.cpp:258
+msgctxt "HistoryMenu|"
+msgid "Closed Tabs"
+msgstr "Aizvērtās cilnes"
+
+#: lib/history/historymenu.cpp:261
+msgctxt "HistoryMenu|"
+msgid "Closed Windows"
+msgstr ""
+
+#: lib/history/historymodel.cpp:56
+msgctxt "HistoryModel|"
+msgid "Title"
+msgstr "Nosaukums"
+
+#: lib/history/historymodel.cpp:58
+msgctxt "HistoryModel|"
+msgid "Address"
+msgstr "Adrese"
+
+#: lib/history/historymodel.cpp:60
+msgctxt "HistoryModel|"
+msgid "Visit Date"
+msgstr "Apmeklējuma datums"
+
+#: lib/history/historymodel.cpp:62
+msgctxt "HistoryModel|"
+msgid "Visit Count"
+msgstr "Apmeklējumu skaits"
+
+#: lib/history/historymodel.cpp:340 lib/history/historymodel.cpp:471
+msgctxt "HistoryModel|"
+msgid "Today"
+msgstr "Šodien"
+
+#: lib/history/historymodel.cpp:476
+msgctxt "HistoryModel|"
+msgid "This Week"
+msgstr "Šonedēļ"
+
+#: lib/history/historymodel.cpp:481
+msgctxt "HistoryModel|"
+msgid "This Month"
+msgstr "Šomēnes"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:158
+msgctxt "LocationCompleterDelegate|"
+msgid "Visit"
+msgstr ""
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:164
+#, qt-format
+msgctxt "LocationCompleterDelegate|"
+msgid "Search with %1"
+msgstr ""
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:198
+msgctxt "LocationCompleterDelegate|"
+msgid "Switch to tab"
+msgstr ""
+
+#: lib/navigation/completer/locationcompleterview.cpp:73
+msgctxt "LocationCompleterView|"
+msgid "Manage Search Engines"
+msgstr ""
+
+#: lib/navigation/completer/locationcompleterview.cpp:78
+msgctxt "LocationCompleterView|"
+msgid "Search with:"
+msgstr ""
+
+#: lib/navigation/locationbar.cpp:92
+msgctxt "LocationBar|"
+msgid "Paste And &Go"
+msgstr "&Ielīmēt un iet"
+
+#: lib/navigation/locationbar.cpp:159
+#, qt-format
+msgctxt "LocationBar|"
+msgid "Enter address or search with %1"
+msgstr ""
+
+#: lib/navigation/locationbar.cpp:161
+msgctxt "LocationBar|"
+msgid "Enter address"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:49
+msgctxt "NavigationBar|"
+msgid "Empty Page"
+msgstr "Tukša lapa"
+
+#: lib/navigation/navigationbar.cpp:76
+msgctxt "NavigationBar|"
+msgid "Back"
+msgstr "Atpakaļ"
+
+#: lib/navigation/navigationbar.cpp:86
+msgctxt "NavigationBar|"
+msgid "Forward"
+msgstr "Uz priekšu"
+
+#: lib/navigation/navigationbar.cpp:106
+msgctxt "NavigationBar|"
+msgid "Home"
+msgstr "Mājas"
+
+#: lib/navigation/navigationbar.cpp:114
+msgctxt "NavigationBar|"
+msgid "New Tab"
+msgstr "Jauna cilne"
+
+#: lib/navigation/navigationbar.cpp:134
+msgctxt "NavigationBar|"
+msgid "Tools"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:147
+msgctxt "NavigationBar|"
+msgid "Main Menu"
+msgstr "Galvenā izvēlne"
+
+#: lib/navigation/navigationbar.cpp:164
+msgctxt "NavigationBar|"
+msgid "Exit Fullscreen"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:190
+msgctxt "NavigationBar|"
+msgid "Back and Forward buttons"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:191
+msgctxt "NavigationBar|"
+msgid "Reload button"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:192
+msgctxt "NavigationBar|"
+msgid "Home button"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:193
+msgctxt "NavigationBar|"
+msgid "Add tab button"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:194
+msgctxt "NavigationBar|"
+msgid "Address and Search bar"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:195
+msgctxt "NavigationBar|"
+msgid "Tools button"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:196
+msgctxt "NavigationBar|"
+msgid "Exit Fullscreen button"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:393 lib/navigation/navigationbar.cpp:427
+msgctxt "NavigationBar|"
+msgid "Clear history"
+msgstr "Dzēst vēsturi"
+
+#: lib/navigation/navigationbar.cpp:434
+msgctxt "NavigationBar|"
+msgid "Toolbars"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:435
+msgctxt "NavigationBar|"
+msgid "Sidebar"
+msgstr ""
+
+#: lib/navigation/navigationbar.cpp:450 lib/navigation/navigationbar.cpp:464
+msgctxt "NavigationBar|"
+msgid "Configure Toolbar"
+msgstr ""
+
+#: lib/navigation/navigationbarconfigdialog.ui:14
+msgctxt "NavigationBarConfigDialog|"
+msgid "Configure Toolbar"
+msgstr ""
+
+#: lib/navigation/navigationbarconfigdialog.ui:62
+msgctxt "NavigationBarConfigDialog|"
+msgid "Show search bar"
+msgstr ""
+
+#: lib/navigation/navigationbarconfigdialog.ui:82
+msgctxt "NavigationBarConfigDialog|"
+msgid "Available items:"
+msgstr ""
+
+#: lib/navigation/navigationbarconfigdialog.ui:89
+msgctxt "NavigationBarConfigDialog|"
+msgid "Current items:"
+msgstr ""
+
+#: lib/navigation/reloadstopbutton.cpp:57
+msgctxt "ReloadStopButton|"
+msgid "Stop"
+msgstr "Apturēt"
+
+#: lib/navigation/reloadstopbutton.cpp:61
+msgctxt "ReloadStopButton|"
+msgid "Reload"
+msgstr "Pārlādēt"
+
+#: lib/navigation/siteicon.cpp:40
+msgctxt "LocationBar|"
+msgid "Show information about this page"
+msgstr "Parādīt informāciju par šo lapu"
+
+#: lib/navigation/websearchbar.cpp:97
+msgctxt "WebSearchBar|"
+msgid "Paste And &Search"
+msgstr "Ielīmēt un &meklēt"
+
+#: lib/navigation/websearchbar.cpp:123
+#, qt-format
+msgctxt "WebSearchBar|"
+msgid "Add %1 ..."
+msgstr "Pievienot %1..."
+
+#: lib/navigation/websearchbar.cpp:127
+msgctxt "WebSearchBar|"
+msgid "Manage Search Engines"
+msgstr "Pārvaldīt meklētājus"
+
+#: lib/navigation/websearchbar.cpp:257
+msgctxt "WebSearchBar|"
+msgid "Show suggestions"
+msgstr "Parādīt ieteikumus"
+
+#: lib/navigation/websearchbar.cpp:262
+msgctxt "WebSearchBar|"
+msgid "Search when engine changed"
+msgstr "Meklēt, kad tiek nomainīts meklētājs"
+
+#: lib/network/networkmanager.cpp:84
+msgctxt "NetworkManager|"
+msgid "SSL Certificate Error!"
+msgstr "SSL sertifikāta kļūda!"
+
+#: lib/network/networkmanager.cpp:85
+msgctxt "NetworkManager|"
+msgid ""
+"The page you are trying to access has the following errors in the SSL "
+"certificate:"
+msgstr "Lapai, kurai Jūs mēģināt piekļūt, ir sekojošās kļūdas SSL sertifikātā:"
+
+#: lib/network/networkmanager.cpp:86
+msgctxt "NetworkManager|"
+msgid "Would you like to make an exception for this certificate?"
+msgstr "Vai vēlaties izveidot izņēmumu attiecībā uz šo sertifikātu?"
+
+#: lib/network/networkmanager.cpp:113
+#, fuzzy
+#| msgctxt "NetworkManager|"
+#| msgid "Authorisation required"
+msgctxt "NetworkManager|"
+msgid "Authorization required"
+msgstr "Nepieciešama autorizācija"
+
+#: lib/network/networkmanager.cpp:120 lib/network/networkmanager.cpp:206
+msgctxt "NetworkManager|"
+msgid "Username: "
+msgstr "Lietotājvārds:"
+
+#: lib/network/networkmanager.cpp:121 lib/network/networkmanager.cpp:207
+msgctxt "NetworkManager|"
+msgid "Password: "
+msgstr "Parole:"
+
+#: lib/network/networkmanager.cpp:127
+msgctxt "NetworkManager|"
+msgid "Save username and password for this site"
+msgstr "Saglabāt Jūsu šīs vietnes lietotājvārdu un paroli"
+
+#: lib/network/networkmanager.cpp:135
+#, qt-format
+msgctxt "NetworkManager|"
+msgid ""
+"A username and password are being requested by %1. The site says: \"%2\""
+msgstr "%1 pieprasa lietotājvārdu un paroli. Vietne saka: „%2“"
+
+#: lib/network/networkmanager.cpp:199
+#, fuzzy
+#| msgctxt "NetworkManager|"
+#| msgid "Proxy authorisation required"
+msgctxt "NetworkManager|"
+msgid "Proxy authorization required"
+msgstr "Nepieciešama starpniekservera autorizācija"
+
+#: lib/network/networkmanager.cpp:219
+#, qt-format
+msgctxt "NetworkManager|"
+msgid "A username and password are being requested by proxy %1. "
+msgstr "Starpniekserveris %1 pieprasa lietotājvārdu un paroli. "
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:154
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Start Page"
+msgctxt "FalkonSchemeReply|"
+msgid "Start Page"
+msgstr "Sākumlapa"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:155
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Search on Web"
+msgctxt "FalkonSchemeReply|"
+msgid "Search on Web"
+msgstr "Meklēt tīmeklī"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:156
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Search results provided by DuckDuckGo"
+msgctxt "FalkonSchemeReply|"
+msgid "Search results provided by DuckDuckGo"
+msgstr "Meklēt, izmantojot „DuckDuckGo“"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:158
+#: lib/network/schemehandlers/falkonschemehandler.cpp:174
+#: lib/network/schemehandlers/falkonschemehandler.cpp:175
+msgctxt "FalkonSchemeReply|"
+msgid "About Falkon"
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:159
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "<h1>Private Browsing</h1>"
+msgctxt "FalkonSchemeReply|"
+msgid "<h1>Private Browsing</h1>"
+msgstr "<h1>Privātā pārlūkošana</h1>"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:176
+#: lib/network/schemehandlers/falkonschemehandler.cpp:284
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Information about version"
+msgctxt "FalkonSchemeReply|"
+msgid "Information about version"
+msgstr "Informācija par versiju"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:177
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Copyright"
+msgctxt "FalkonSchemeReply|"
+msgid "Copyright"
+msgstr "Autortiesības"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Version"
+msgctxt "FalkonSchemeReply|"
+msgid "Version"
+msgstr "Versija"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:187
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Main developer"
+msgctxt "FalkonSchemeReply|"
+msgid "Main developer"
+msgstr "Galvenais izstrādātājs"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:208
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Speed Dial"
+msgctxt "FalkonSchemeReply|"
+msgid "Speed Dial"
+msgstr "Ātrais zvans"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:209
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Add New Page"
+msgctxt "FalkonSchemeReply|"
+msgid "Add New Page"
+msgstr "Pievienot jaunu lapu"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:210
+#, fuzzy
+#| msgctxt "AutoFillManager|"
+#| msgid "Edit"
+msgctxt "FalkonSchemeReply|"
+msgid "Edit"
+msgstr "Rediģēt"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:211
+#, fuzzy
+#| msgctxt "AcceptLanguage|"
+#| msgid "Remove"
+msgctxt "FalkonSchemeReply|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:212
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Reload"
+msgctxt "FalkonSchemeReply|"
+msgid "Reload"
+msgstr "Pārlādēt"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:213
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Are you sure you want to remove this speed dial?"
+msgctxt "FalkonSchemeReply|"
+msgid "Are you sure you want to remove this speed dial?"
+msgstr "Vai tiešām vēlaties noņemt ātro zvanu?"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:214
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Are you sure you want to reload all speed dials?"
+msgctxt "FalkonSchemeReply|"
+msgid "Are you sure you want to reload all speed dials?"
+msgstr "Vai tiešām vēlaties pārlādēt visus ātros zvanus?"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:215
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Load title from page"
+msgctxt "FalkonSchemeReply|"
+msgid "Load title from page"
+msgstr "Ielādēt nosaukumu no lapas"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:216
+msgctxt "FalkonSchemeReply|"
+msgid "SpeedDial requires enabled JavaScript."
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:217
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Url"
+msgctxt "FalkonSchemeReply|"
+msgid "Url"
+msgstr "Adrese"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:218
+#, fuzzy
+#| msgctxt "BookmarksModel|"
+#| msgid "Title"
+msgctxt "FalkonSchemeReply|"
+msgid "Title"
+msgstr "Nosaukums"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:219
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Apply"
+msgctxt "FalkonSchemeReply|"
+msgid "Apply"
+msgstr "Pielietot"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:220
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Cancelled"
+msgctxt "FalkonSchemeReply|"
+msgid "Cancel"
+msgstr "Atcelts"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:221
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "New Page"
+msgctxt "FalkonSchemeReply|"
+msgid "New Page"
+msgstr "Jauna lapa"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:222
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Speed Dial settings"
+msgctxt "FalkonSchemeReply|"
+msgid "Speed Dial settings"
+msgstr "Ātrā zvana iestatījumi"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:223
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Placement: "
+msgctxt "FalkonSchemeReply|"
+msgid "Placement: "
+msgstr "Novietojums:"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:224
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Auto"
+msgctxt "FalkonSchemeReply|"
+msgid "Auto"
+msgstr "Automātiski"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:225
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Cover"
+msgctxt "FalkonSchemeReply|"
+msgid "Cover"
+msgstr "Nosegt"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:226
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Fit"
+msgctxt "FalkonSchemeReply|"
+msgid "Fit"
+msgstr "Aizpildīt"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:227
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Fit Width"
+msgctxt "FalkonSchemeReply|"
+msgid "Fit Width"
+msgstr "Aizpildīt platumu"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:228
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Fit Height"
+msgctxt "FalkonSchemeReply|"
+msgid "Fit Height"
+msgstr "Aizpildīt augstumu"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:229
+msgctxt "FalkonSchemeReply|"
+msgid "Use custom wallpaper"
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:230
+msgctxt "FalkonSchemeReply|"
+msgid "Click to select image"
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:231
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Maximum pages in a row:"
+msgctxt "FalkonSchemeReply|"
+msgid "Maximum pages in a row:"
+msgstr "Maksimālais lapu skaits rindā:"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:232
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Change size of pages:"
+msgctxt "FalkonSchemeReply|"
+msgid "Change size of pages:"
+msgstr "Mainīt lapu izmēru:"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:233
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Center speed dials"
+msgctxt "FalkonSchemeReply|"
+msgid "Center speed dials"
+msgstr "Centrēt ātros zvanus"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:258
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Restore Session"
+msgctxt "FalkonSchemeReply|"
+msgid "Restore Session"
+msgstr "Atjaunot sesiju"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:259
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Oops, QupZilla crashed."
+msgctxt "FalkonSchemeReply|"
+msgid "Oops, Falkon crashed."
+msgstr "Vai, „QupZilla“ avarēja."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:260
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid ""
+#| "We apologize for this. Would you like to restore the last saved state?"
+msgctxt "FalkonSchemeReply|"
+msgid "We apologize for this. Would you like to restore the last saved state?"
+msgstr ""
+"Mēs atvainojamies, ka tā gadījās. Vai Jūs vēlētos atjaunot pēdējo saglabāto "
+"stāvokli?"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:261
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Try removing one or more tabs that you think cause troubles"
+msgctxt "FalkonSchemeReply|"
+msgid "Try removing one or more tabs that you think cause troubles"
+msgstr ""
+"Mēģiniet izslēgt vienu vai vairākas cilnes, kas, Jūsuprāt, varēja radīt "
+"problēmas"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Or you can start completely new session"
+msgctxt "FalkonSchemeReply|"
+msgid "Or you can start completely new session"
+msgstr "Vai arī Jūs varat sākt pilnīgi jaunu sesiju"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Window"
+msgctxt "FalkonSchemeReply|"
+msgid "Window"
+msgstr "Logs"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Windows and Tabs"
+msgctxt "FalkonSchemeReply|"
+msgid "Windows and Tabs"
+msgstr "Logi un cilnes"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Start New Session"
+msgctxt "FalkonSchemeReply|"
+msgid "Start New Session"
+msgstr "Sākt jaunu sesiju"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Restore"
+msgctxt "FalkonSchemeReply|"
+msgid "Restore"
+msgstr "Atjaunot"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+msgctxt "FalkonSchemeReply|"
+msgid "Requires enabled JavaScript."
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:282
+#: lib/network/schemehandlers/falkonschemehandler.cpp:283
+#, fuzzy
+#| msgctxt "MainMenu|"
+#| msgid "Configuration Information"
+msgctxt "FalkonSchemeReply|"
+msgid "Configuration Information"
+msgstr "Konfigurācijas informācija"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:285
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid ""
+#| "This page contains information about QupZilla's current configuration - "
+#| "relevant for troubleshooting. Please include this information when "
+#| "submitting bug reports."
+msgctxt "FalkonSchemeReply|"
+msgid ""
+"This page contains information about Falkon's current configuration - "
+"relevant for troubleshooting. Please include this information when "
+"submitting bug reports."
+msgstr ""
+"Šī lapa satur informāciju par pārlūka „QupZilla“ esošo konfigurāciju, kas ir "
+"svarīga problēmu novēršanai. Lūdzu, sūtot kļūdu ziņojumus, iekļaujiet šo "
+"informāciju."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:286
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Browser Identification"
+msgctxt "FalkonSchemeReply|"
+msgid "Browser Identification"
+msgstr "Pārlūka identifikācija"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:287
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Paths"
+msgctxt "FalkonSchemeReply|"
+msgid "Paths"
+msgstr "Ceļi"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Build Configuration"
+msgctxt "FalkonSchemeReply|"
+msgid "Build Configuration"
+msgstr "Būvējuma konfigurācija"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Preferences"
+msgctxt "FalkonSchemeReply|"
+msgid "Preferences"
+msgstr "Iestatījumi"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Option"
+msgctxt "FalkonSchemeReply|"
+msgid "Option"
+msgstr "Opcija"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Value"
+msgctxt "FalkonSchemeReply|"
+msgid "Value"
+msgstr "Vērtība"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:327
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Extensions"
+msgctxt "FalkonSchemeReply|"
+msgid "Extensions"
+msgstr "Paplašinājumi"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Name"
+msgctxt "FalkonSchemeReply|"
+msgid "Name"
+msgstr "Nosaukums"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Author"
+msgctxt "FalkonSchemeReply|"
+msgid "Author"
+msgstr "Autors"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
+#, fuzzy
+#| msgctxt "BookmarksManager|"
+#| msgid "Description"
+msgctxt "FalkonSchemeReply|"
+msgid "Description"
+msgstr "Apraksts"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:311
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Application version"
+msgctxt "FalkonSchemeReply|"
+msgid "Application version"
+msgstr "Galvenais izstrādātājs"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:318
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Qt version"
+msgctxt "FalkonSchemeReply|"
+msgid "Qt version"
+msgstr "Qt versija"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:319
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Platform"
+msgctxt "FalkonSchemeReply|"
+msgid "Platform"
+msgstr "Platforma"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:322
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Profile"
+msgctxt "FalkonSchemeReply|"
+msgid "Profile"
+msgstr "Profils"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Settings"
+msgctxt "FalkonSchemeReply|"
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Saved session"
+msgctxt "FalkonSchemeReply|"
+msgid "Saved session"
+msgstr "Saglabātā sesija"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Data"
+msgctxt "FalkonSchemeReply|"
+msgid "Data"
+msgstr "Dati"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:326
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Themes"
+msgctxt "FalkonSchemeReply|"
+msgid "Themes"
+msgstr "Tēmas"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:337
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "<b>Enabled</b>"
+msgctxt "FalkonSchemeReply|"
+msgid "<b>Enabled</b>"
+msgstr "<b>Ieslēgts</b>"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:339
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Disabled"
+msgctxt "FalkonSchemeReply|"
+msgid "Disabled"
+msgstr "Izslēgts"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:346
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Debug build"
+msgctxt "FalkonSchemeReply|"
+msgid "Debug build"
+msgstr "Atkļūdošanas būvējums"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Windows 7 API"
+msgctxt "FalkonSchemeReply|"
+msgid "Windows 7 API"
+msgstr "<i>Windows 7</i> API"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:350
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Portable build"
+msgctxt "FalkonSchemeReply|"
+msgid "Portable build"
+msgstr "Portatīvais būvējums"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:368
+#, fuzzy
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "No available extensions."
+msgctxt "FalkonSchemeReply|"
+msgid "No available extensions."
+msgstr "Nav pieejamu paplašinājumu."
+
+#: lib/network/sslerrordialog.ui:14
+msgctxt "SslErrorDialog|"
+msgid "SSL Certificate Error!"
+msgstr "SSL sertifikāta kļūda!"
+
+#: lib/notifications/desktopnotificationsfactory.cpp:119
+msgctxt "DesktopNotificationsFactory|"
+msgid "Preview"
+msgstr ""
+
+#: lib/notifications/desktopnotificationsfactory.cpp:119
+msgctxt "QObject|"
+msgid "Native System Notification"
+msgstr "Sistēmā iebūvētie paziņojumi"
+
+#: lib/opensearch/editsearchengine.ui:20
+msgctxt "EditSearchEngine|"
+msgid "Name:"
+msgstr "Nosaukums:"
+
+#: lib/opensearch/editsearchengine.ui:30
+msgctxt "EditSearchEngine|"
+msgid "Url:"
+msgstr "Adrese:"
+
+#: lib/opensearch/editsearchengine.ui:44
+msgctxt "EditSearchEngine|"
+msgid "Shortcut:"
+msgstr "Īsceļš:"
+
+#: lib/opensearch/editsearchengine.ui:54
+msgctxt "EditSearchEngine|"
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: lib/opensearch/editsearchengine.ui:83
+msgctxt "EditSearchEngine|"
+msgid "Change..."
+msgstr "Mainīt..."
+
+#: lib/opensearch/editsearchengine.ui:106
+msgctxt "EditSearchEngine|"
+msgid "<b>Note: </b>%s in url or post data represent searched string"
+msgstr ""
+"<b>Piezīme: </b>simbols „%s“ adresē vai POST datos norāda uz meklēto simbolu "
+"virkni"
+
+#: lib/opensearch/editsearchengine.ui:123
+msgctxt "EditSearchEngine|"
+msgid "Post Data:"
+msgstr "POST dati:"
+
+#: lib/opensearch/opensearchreader.cpp:105
+msgctxt "QObject|"
+msgid "The file is not an OpenSearch 1.1 file."
+msgstr "Šī datne nav „OpenSearch 1.1“  datne."
+
+#: lib/opensearch/searchenginesdialog.cpp:52
+#: lib/opensearch/searchenginesmanager.cpp:315
+msgctxt "SearchEnginesDialog|"
+msgid "Add Search Engine"
+msgstr "Pievienot meklētāju"
+
+#: lib/opensearch/searchenginesdialog.cpp:89
+msgctxt "SearchEnginesDialog|"
+msgid "Remove Engine"
+msgstr "Noņemt meklētāju"
+
+#: lib/opensearch/searchenginesdialog.cpp:90
+#, qt-format
+msgctxt "SearchEnginesDialog|"
+msgid ""
+"You can't remove the default search engine.<br>Set a different engine as "
+"default before removing %1."
+msgstr ""
+"Nevar noņemt noklusēto meklētāju.<br>Uzstādiet citu servisu kā noklusēto, "
+"pirms noņemat „%1“."
+
+#: lib/opensearch/searchenginesdialog.cpp:107
+msgctxt "SearchEnginesDialog|"
+msgid "Edit Search Engine"
+msgstr "Rediģēt meklētāju"
+
+#: lib/opensearch/searchenginesdialog.ui:14
+msgctxt "SearchEnginesDialog|"
+msgid "Manage Search Engines"
+msgstr "Pārvaldīt meklētājus"
+
+#: lib/opensearch/searchenginesdialog.ui:22
+msgctxt "SearchEnginesDialog|"
+msgid "Add..."
+msgstr "Pievienot..."
+
+#: lib/opensearch/searchenginesdialog.ui:29
+msgctxt "SearchEnginesDialog|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: lib/opensearch/searchenginesdialog.ui:36
+msgctxt "SearchEnginesDialog|"
+msgid "Edit"
+msgstr "Rediģēt"
+
+#: lib/opensearch/searchenginesdialog.ui:56
+msgctxt "SearchEnginesDialog|"
+msgid "Set as default"
+msgstr "Padarīt par noklusēto"
+
+#: lib/opensearch/searchenginesdialog.ui:63
+msgctxt "SearchEnginesDialog|"
+msgid "Up"
+msgstr "Augstāk"
+
+#: lib/opensearch/searchenginesdialog.ui:70
+msgctxt "SearchEnginesDialog|"
+msgid "Down"
+msgstr "Zemāk"
+
+#: lib/opensearch/searchenginesdialog.ui:89
+msgctxt "SearchEnginesDialog|"
+msgid "Search Engine"
+msgstr "Meklētājs"
+
+#: lib/opensearch/searchenginesdialog.ui:94
+msgctxt "SearchEnginesDialog|"
+msgid "Shortcut"
+msgstr "Saīsne"
+
+#: lib/opensearch/searchenginesdialog.ui:104
+msgctxt "SearchEnginesDialog|"
+msgid "Defaults"
+msgstr "Noklusējumi"
+
+#: lib/opensearch/searchenginesmanager.cpp:401
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine Added"
+msgstr "Meklētājs pievienots"
+
+#: lib/opensearch/searchenginesmanager.cpp:401
+#, qt-format
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine \"%1\" has been successfully added."
+msgstr "Meklētājs „%1“ ir veiksmīgi pievienots."
+
+#: lib/opensearch/searchenginesmanager.cpp:408
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine is not valid!"
+msgstr "Meklētājs nav derīgs!"
+
+#: lib/opensearch/searchenginesmanager.cpp:409
+msgctxt "SearchEnginesManager|"
+msgid "Error"
+msgstr "Kļūda"
+
+#: lib/opensearch/searchenginesmanager.cpp:409
+#, qt-format
+msgctxt "SearchEnginesManager|"
+msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
+msgstr "Kļūda, pievienojot meklētāju <br><b>Kļūdas ziņojums: </b> %1"
+
+#: lib/other/aboutdialog.cpp:51
+#, qt-format
+msgctxt "AboutDialog|"
+msgid "<p><b>Application version %1</b><br/>"
+msgstr "<p><b>Lietotnes versija %1</b><br/>"
+
+#: lib/other/aboutdialog.cpp:58
+#, qt-format
+msgctxt "AboutDialog|"
+msgid "<b>QtWebEngine version %1</b></p>"
+msgstr "<b>QtWebEngine versija %1</b></p>"
+
+#: lib/other/aboutdialog.ui:14
+msgctxt "AboutDialog|"
+msgid "About Falkon"
+msgstr ""
+
+#: lib/other/browsinglibrary.cpp:55
+msgctxt "BrowsingLibrary|"
+msgid "History"
+msgstr "Vēsture"
+
+#: lib/other/browsinglibrary.cpp:56
+msgctxt "BrowsingLibrary|"
+msgid "Bookmarks"
+msgstr "Grāmatzīmes"
+
+#: lib/other/browsinglibrary.cpp:61
+msgctxt "BrowsingLibrary|"
+msgid "Import Bookmarks..."
+msgstr "Importēt grāmatzīmes..."
+
+#: lib/other/browsinglibrary.cpp:62
+msgctxt "BrowsingLibrary|"
+msgid "Export Bookmarks..."
+msgstr "Eksportēt grāmatzīmes"
+
+#: lib/other/browsinglibrary.ui:14
+msgctxt "BrowsingLibrary|"
+msgid "Library"
+msgstr "Bibliotēka"
+
+#: lib/other/browsinglibrary.ui:64
+msgctxt "BrowsingLibrary|"
+msgid "Import and Export"
+msgstr "Importēt un eksportēt"
+
+#: lib/other/browsinglibrary.ui:84
+msgctxt "BrowsingLibrary|"
+msgid "Search..."
+msgstr "Meklēt..."
+
+#: lib/other/clearprivatedata.cpp:154
+msgctxt "ClearPrivateData|"
+msgid "Done"
+msgstr "Pabeigts"
+
+#: lib/other/clearprivatedata.cpp:172
+msgctxt "ClearPrivateData|"
+msgid "Database Optimized"
+msgstr "Datubāze ir optimizēta"
+
+#: lib/other/clearprivatedata.cpp:172
+#, qt-format
+msgctxt "ClearPrivateData|"
+msgid ""
+"Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/"
+"><b>Database Size After: </b>%2"
+msgstr ""
+"Datubāza ir veiksmīgi optimizēta.<br/><br/><b>Datubāzes izmērs pirms: </b>"
+"%1<br/><b>Datubāzes izmērs pēc: </b>%2"
+
+#: lib/other/clearprivatedata.ui:14
+msgctxt "ClearPrivateData|"
+msgid "Clear Recent History"
+msgstr "Dzēst neseno vēsturi"
+
+#: lib/other/clearprivatedata.ui:20
+msgctxt "ClearPrivateData|"
+msgid "<b>Clear Recent History</b>"
+msgstr "<b>Dzēst neseno vēsturi</b>"
+
+#: lib/other/clearprivatedata.ui:27
+msgctxt "ClearPrivateData|"
+msgid "Edit cookies"
+msgstr "Rediģēt sīkdatnes"
+
+#: lib/other/clearprivatedata.ui:38
+msgctxt "ClearPrivateData|"
+msgid "Earlier Today"
+msgstr "Šodiena"
+
+#: lib/other/clearprivatedata.ui:43
+msgctxt "ClearPrivateData|"
+msgid "Week"
+msgstr "Nedēļa"
+
+#: lib/other/clearprivatedata.ui:48
+msgctxt "ClearPrivateData|"
+msgid "Month"
+msgstr "Mēnesis"
+
+#: lib/other/clearprivatedata.ui:53
+msgctxt "ClearPrivateData|"
+msgid "All"
+msgstr "Visa"
+
+#: lib/other/clearprivatedata.ui:61
+msgctxt "ClearPrivateData|"
+msgid "Visited pages history from:"
+msgstr "Apmeklētās lapas vēstures forma:"
+
+#: lib/other/clearprivatedata.ui:71
+msgctxt "ClearPrivateData|"
+msgid "Checked items will be cleared upon clicking the Clear button."
+msgstr "Atzīmētie vienumi pēc pogas Notīrīt nospiešanas tiks noņemti."
+
+#: lib/other/clearprivatedata.ui:78
+msgctxt "ClearPrivateData|"
+msgid "Local storage"
+msgstr "Datora atmiņa"
+
+#: lib/other/clearprivatedata.ui:94
+msgctxt "ClearPrivateData|"
+msgid "Clear"
+msgstr "Notīrīt"
+
+#: lib/other/clearprivatedata.ui:114
+msgctxt "ClearPrivateData|"
+msgid "Web databases"
+msgstr "Tīmekļa datubāzes"
+
+#: lib/other/clearprivatedata.ui:124
+msgctxt "ClearPrivateData|"
+msgid "Cache"
+msgstr "Kešatmiņa"
+
+#: lib/other/clearprivatedata.ui:134
+msgctxt "ClearPrivateData|"
+msgid "Optimize database"
+msgstr "Optimizēt datubāzi"
+
+#: lib/other/clearprivatedata.ui:141
+msgctxt "ClearPrivateData|"
+msgid "Cookies"
+msgstr "Sīkdatnes"
+
+#: lib/other/clearprivatedata.ui:158
+msgctxt "ClearPrivateData|"
+msgid "Database"
+msgstr "Datubāze"
+
+#: lib/other/iconchooser.cpp:41
+msgctxt "IconChooser|"
+msgid "Image files"
+msgstr "Attēlu datnes"
+
+#: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
+msgctxt "IconChooser|"
+msgid "Choose icon..."
+msgstr "Izvēlēties ikonu..."
+
+#: lib/other/iconchooser.ui:20
+msgctxt "IconChooser|"
+msgid "From file"
+msgstr "No datnes"
+
+#: lib/other/iconchooser.ui:29
+msgctxt "IconChooser|"
+msgid "Image (.png, .jpg, .jpeg, .gif)"
+msgstr "Attēls (.png, .jpg, .jpeg, .gif)"
+
+#: lib/other/iconchooser.ui:42
+msgctxt "IconChooser|"
+msgid "Choose file..."
+msgstr "Izvēlēties datni..."
+
+#: lib/other/iconchooser.ui:52
+msgctxt "IconChooser|"
+msgid "From database"
+msgstr "No datubāzes"
+
+#: lib/other/iconchooser.ui:61
+msgctxt "IconChooser|"
+msgid "Site Url:"
+msgstr "Vietnes adrese:"
+
+#: lib/other/licenseviewer.cpp:30
+msgctxt "LicenseViewer|"
+msgid "License Viewer"
+msgstr "Licences skatītājs"
+
+#: lib/other/protocolhandlerdialog.ui:14
+msgctxt "ProtocolHandlerDialog|"
+msgid "Manage protocol handlers"
+msgstr ""
+
+#: lib/other/protocolhandlerdialog.ui:40
+msgctxt "ProtocolHandlerDialog|"
+msgid "Protocol"
+msgstr ""
+
+#: lib/other/protocolhandlerdialog.ui:45
+#, fuzzy
+#| msgctxt "UserAgentDialog|"
+#| msgid "Site"
+msgctxt "ProtocolHandlerDialog|"
+msgid "Site"
+msgstr "Vietne"
+
+#: lib/other/protocolhandlerdialog.ui:68
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "ProtocolHandlerDialog|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: lib/other/registerqappassociation.cpp:110
+msgctxt "RegisterQAppAssociation|"
+msgid "Warning!"
+msgstr "Uzmanību!"
+
+#: lib/other/registerqappassociation.cpp:111
+#, fuzzy
+#| msgctxt "RegisterQAppAssociation|"
+#| msgid ""
+#| "There are some problems. Please, reinstall QupZilla.\n"
+#| "Maybe relaunch with administrator right do a magic for you! ;)"
+msgctxt "RegisterQAppAssociation|"
+msgid ""
+"There are some problems. Please, reinstall Falkon.\n"
+"Maybe relaunch with administrator right do a magic for you! ;)"
+msgstr ""
+"Ir radušās dažas problēmas. Lūdzu, pārinstalējiet „QupZilla“.\n"
+"Varbūt palaišana no jauna ar administratora tiesībām darīs brīnumu! ;)"
+
+#: lib/other/siteinfo.cpp:68
+msgctxt "SiteInfo|"
+msgid "<b>Connection is Encrypted.</b>"
+msgstr "<b>Savienojums ir šifrēts.<b>"
+
+#: lib/other/siteinfo.cpp:70
+msgctxt "SiteInfo|"
+msgid "<b>Connection Not Encrypted.</b>"
+msgstr "<b>Savienojums nav šifrēts.</b>"
+
+#: lib/other/siteinfo.cpp:175
+msgctxt "SiteInfo|"
+msgid "Copy Image Location"
+msgstr "Kopēt attēla adresi"
+
+#: lib/other/siteinfo.cpp:176
+msgctxt "SiteInfo|"
+msgid "Copy Image Name"
+msgstr "Kopēt attēla nosaukumu"
+
+#: lib/other/siteinfo.cpp:178
+msgctxt "SiteInfo|"
+msgid "Save Image to Disk"
+msgstr "Saglabāt attēlu datorā"
+
+#: lib/other/siteinfo.cpp:190
+#, fuzzy
+#| msgctxt "HistoryManager|"
+#| msgid "Copy title"
+msgctxt "SiteInfo|"
+msgid "Copy Values"
+msgstr "Kopēt nosaukumu"
+
+#: lib/other/siteinfo.cpp:191
+#, fuzzy
+#| msgctxt "WebView|"
+#| msgid "Copy image ad&dress"
+msgctxt "SiteInfo|"
+msgid "Copy Tags and Values"
+msgstr "Kopēt attēla a&dresi"
+
+#: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
+msgctxt "SiteInfo|"
+msgid "Error!"
+msgstr "Kļūda!"
+
+#: lib/other/siteinfo.cpp:229
+msgctxt "SiteInfo|"
+msgid "This preview is not available!"
+msgstr "Šis priekšskats nav pieejams!"
+
+#: lib/other/siteinfo.cpp:240
+msgctxt "SiteInfo|"
+msgid "Save image..."
+msgstr "Saglabāt attēlu..."
+
+#: lib/other/siteinfo.cpp:248
+msgctxt "SiteInfo|"
+msgid "Cannot write to file!"
+msgstr "Neizdevās ierakstīt datnē!"
+
+#: lib/other/siteinfo.cpp:258
+msgctxt "SiteInfo|"
+msgid "Loading..."
+msgstr "Ielādē..."
+
+#: lib/other/siteinfo.cpp:271
+msgctxt "SiteInfo|"
+msgid "Preview not available"
+msgstr "Priekšskatījums nav pieejams"
+
+#: lib/other/siteinfo.ui:14
+msgctxt "SiteInfo|"
+msgid "Site Info"
+msgstr "Vietnes informācija"
+
+#: lib/other/siteinfo.ui:47
+msgctxt "SiteInfo|"
+msgid "General"
+msgstr "Vispārīgi"
+
+#: lib/other/siteinfo.ui:52
+msgctxt "SiteInfo|"
+msgid "Media"
+msgstr "Multivide"
+
+#: lib/other/siteinfo.ui:84
+msgctxt "SiteInfo|"
+msgid "Site address:"
+msgstr "Vietnes adrese:"
+
+#: lib/other/siteinfo.ui:113
+msgctxt "SiteInfo|"
+msgid "Encoding:"
+msgstr "Kodējums:"
+
+#: lib/other/siteinfo.ui:132
+msgctxt "SiteInfo|"
+msgid "Meta tags of site:"
+msgstr "Vietnes metatagi:"
+
+#: lib/other/siteinfo.ui:149
+msgctxt "SiteInfo|"
+msgid "Tag"
+msgstr "Tagi"
+
+#: lib/other/siteinfo.ui:154
+msgctxt "SiteInfo|"
+msgid "Value"
+msgstr "Vērtība"
+
+#: lib/other/siteinfo.ui:168
+msgctxt "SiteInfo|"
+msgid "<b>Security information</b>"
+msgstr "<b>Drošības informācija</b>"
+
+#: lib/other/siteinfo.ui:241
+msgctxt "SiteInfo|"
+msgid "Image"
+msgstr "Attēls"
+
+#: lib/other/siteinfo.ui:246
+msgctxt "SiteInfo|"
+msgid "Image address"
+msgstr "Attēla adrese"
+
+#: lib/other/siteinfo.ui:271
+msgctxt "SiteInfo|"
+msgid "<b>Preview</b>"
+msgstr "<b>Priekšskats<b>"
+
+#: lib/other/siteinfowidget.cpp:42
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "<b>Site %1<b/>"
+msgstr ""
+
+#: lib/other/siteinfowidget.cpp:45
+msgctxt "SiteInfoWidget|"
+msgid "Your connection to this site is <b>secured</b>."
+msgstr "Savienojums ar šo vietni ir <b>drošs</b>."
+
+#: lib/other/siteinfowidget.cpp:49
+msgctxt "SiteInfoWidget|"
+msgid "Your connection to this site is <b>unsecured</b>."
+msgstr "Savienojums ar šo vietni ir <b>nedrošs</b>."
+
+#: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "This is your <b>%1</b> visit of this site."
+msgstr "Jūs šo vietni esat apmeklējis <b>%1</b> reizes(-i)."
+
+#: lib/other/siteinfowidget.cpp:68
+msgctxt "SiteInfoWidget|"
+msgid "You have <b>never</b> visited this site before."
+msgstr "Jūs šo vietni iepriekš <b>nekad</b> neesat apmeklējis."
+
+#: lib/other/siteinfowidget.cpp:75
+msgctxt "SiteInfoWidget|"
+msgid "first"
+msgstr "vienu"
+
+#: lib/other/siteinfowidget.cpp:78
+msgctxt "SiteInfoWidget|"
+msgid "second"
+msgstr "sekunde"
+
+#: lib/other/siteinfowidget.cpp:81
+msgctxt "SiteInfoWidget|"
+msgid "third"
+msgstr "trīs"
+
+#: lib/other/siteinfowidget.cpp:106
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "Register as <b>%1</b> links handler"
+msgstr ""
+
+#: lib/other/siteinfowidget.cpp:107
+msgctxt "SiteInfoWidget|"
+msgid "Register"
+msgstr ""
+
+#: lib/other/siteinfowidget.ui:71
+msgctxt "SiteInfoWidget|"
+msgid "More..."
+msgstr "Vairāk..."
+
+#: lib/other/statusbar.cpp:248
+msgctxt "StatusBar|"
+msgid "Hide"
+msgstr ""
+
+#: lib/other/updater.cpp:151
+msgctxt "Updater|"
+msgid "Update available"
+msgstr "Pieejams atjauninājums"
+
+#: lib/other/updater.cpp:151
+#, fuzzy
+#| msgctxt "Updater|"
+#| msgid "New version of QupZilla is ready to download."
+msgctxt "Updater|"
+msgid "New version of Falkon is ready to download."
+msgstr "Lejupielādei pieejama jauna lietotnes „QupZilla“ versija."
+
+#: lib/other/updater.cpp:160
+msgctxt "Updater|"
+msgid "Update"
+msgstr "Atjauninājums"
+
+#: lib/popupwindow/popupwebview.cpp:100
+msgctxt "PopupWebView|"
+msgid "Inspect Element"
+msgstr "Pārbaudīt elementu"
+
+#: lib/popupwindow/popupwindow.cpp:83
+msgctxt "PopupWindow|"
+msgid "File"
+msgstr "Datne"
+
+#: lib/popupwindow/popupwindow.cpp:84
+msgctxt "PopupWindow|"
+msgid "Send Link..."
+msgstr "Sūtīt saiti..."
+
+#: lib/popupwindow/popupwindow.cpp:85
+msgctxt "PopupWindow|"
+msgid "&Print..."
+msgstr ""
+
+#: lib/popupwindow/popupwindow.cpp:87
+msgctxt "PopupWindow|"
+msgid "Close"
+msgstr "Aizvērt"
+
+#: lib/popupwindow/popupwindow.cpp:90
+msgctxt "PopupWindow|"
+msgid "Edit"
+msgstr "Rediģēt"
+
+#: lib/popupwindow/popupwindow.cpp:99
+msgctxt "PopupWindow|"
+msgid "Find"
+msgstr "Meklēt"
+
+#: lib/popupwindow/popupwindow.cpp:102
+msgctxt "PopupWindow|"
+msgid "View"
+msgstr "Skatīt"
+
+#: lib/popupwindow/popupwindow.cpp:103
+msgctxt "PopupWindow|"
+msgid "&Stop"
+msgstr "Aptu&rēt"
+
+#: lib/popupwindow/popupwindow.cpp:105
+msgctxt "PopupWindow|"
+msgid "&Reload"
+msgstr "Pār&lādēt"
+
+#: lib/popupwindow/popupwindow.cpp:108
+msgctxt "PopupWindow|"
+msgid "Zoom &In"
+msgstr "P&ietuvināt"
+
+#: lib/popupwindow/popupwindow.cpp:109
+msgctxt "PopupWindow|"
+msgid "Zoom &Out"
+msgstr "Tāli&nāt"
+
+#: lib/popupwindow/popupwindow.cpp:110
+msgctxt "PopupWindow|"
+msgid "Reset"
+msgstr "Atstatīt"
+
+#: lib/popupwindow/popupwindow.cpp:112
+msgctxt "PopupWindow|"
+msgid "&Page Source"
+msgstr "Lapas pir&mkods"
+
+#: lib/popupwindow/popupwindow.cpp:271
+#, qt-format
+msgctxt "PopupWindow|"
+msgid "%1 - Falkon"
+msgstr ""
+
+#: lib/preferences/acceptlanguage.cpp:99 lib/preferences/acceptlanguage.cpp:160
+#, qt-format
+msgctxt "AcceptLanguage|"
+msgid "Personal [%1]"
+msgstr "Personīgi [%1]"
+
+#: lib/preferences/acceptlanguage.ui:14
+msgctxt "AcceptLanguage|"
+msgid "Preferred Languages"
+msgstr "Vēlamās valodas"
+
+#: lib/preferences/acceptlanguage.ui:25
+msgctxt "AcceptLanguage|"
+msgid "Add..."
+msgstr "Pievienot..."
+
+#: lib/preferences/acceptlanguage.ui:32
+msgctxt "AcceptLanguage|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: lib/preferences/acceptlanguage.ui:39
+msgctxt "AcceptLanguage|"
+msgid "Up"
+msgstr "Augstāk"
+
+#: lib/preferences/acceptlanguage.ui:46
+msgctxt "AcceptLanguage|"
+msgid "Down"
+msgstr "Zemāk"
+
+#: lib/preferences/addacceptlanguage.ui:14
+msgctxt "AddAcceptLanguage|"
+msgid "Add Language"
+msgstr "Pievienot valodu"
+
+#: lib/preferences/addacceptlanguage.ui:20
+msgctxt "AddAcceptLanguage|"
+msgid "Choose preferred language for web sites"
+msgstr "Izvēlieties vēlamo valodu tīmekļa vietnēm"
+
+#: lib/preferences/addacceptlanguage.ui:32
+msgctxt "AddAcceptLanguage|"
+msgid "Personal definition:"
+msgstr "Personīga definīcija:"
+
+#: lib/preferences/autofillmanager.cpp:67
+msgctxt "AutoFillManager|"
+msgid "Import Passwords from File..."
+msgstr "Importēt paroles no datnes..."
+
+#: lib/preferences/autofillmanager.cpp:68
+msgctxt "AutoFillManager|"
+msgid "Export Passwords to File..."
+msgstr "Eksportēt paroles uz datni..."
+
+#: lib/preferences/autofillmanager.cpp:70
+msgctxt "AutoFillManager|"
+msgid "Search"
+msgstr "Meklēt"
+
+#: lib/preferences/autofillmanager.cpp:82
+#: lib/preferences/autofillmanager.cpp:171
+#: lib/preferences/autofillmanager.cpp:179
+#: lib/preferences/autofillmanager.ui:140
+msgctxt "AutoFillManager|"
+msgid "Show Passwords"
+msgstr "Parādīt paroles"
+
+#: lib/preferences/autofillmanager.cpp:130
+msgctxt "AutoFillManager|"
+msgid "Change backend..."
+msgstr "Mainīt aizmugursistēmu..."
+
+#: lib/preferences/autofillmanager.cpp:130
+msgctxt "AutoFillManager|"
+msgid "Change backend:"
+msgstr "Mainīt aizmugursistēmu:"
+
+#: lib/preferences/autofillmanager.cpp:179
+msgctxt "AutoFillManager|"
+msgid "Are you sure that you want to show all passwords?"
+msgstr "Vai droši zināt, ka vēlaties parādīt visas paroles?"
+
+#: lib/preferences/autofillmanager.cpp:194
+msgctxt "AutoFillManager|"
+msgid "Hide Passwords"
+msgstr "Paslēpt paroles"
+
+#: lib/preferences/autofillmanager.cpp:232
+msgctxt "AutoFillManager|"
+msgid "Confirmation"
+msgstr "Apstiprinājums"
+
+#: lib/preferences/autofillmanager.cpp:233
+msgctxt "AutoFillManager|"
+msgid "Are you sure you want to delete all passwords on your computer?"
+msgstr "Vai tiešām vēlaties dzēst visas savā datorā saglabātās paroles?"
+
+#: lib/preferences/autofillmanager.cpp:252
+msgctxt "AutoFillManager|"
+msgid "Edit password"
+msgstr "Rediģēt paroli"
+
+#: lib/preferences/autofillmanager.cpp:252
+msgctxt "AutoFillManager|"
+msgid "Change password:"
+msgstr "Mainīt paroli:"
+
+#: lib/preferences/autofillmanager.cpp:301
+#: lib/preferences/autofillmanager.cpp:312
+msgctxt "AutoFillManager|"
+msgid "Choose file..."
+msgstr "Izvēlieties datni..."
+
+#: lib/preferences/autofillmanager.cpp:326
+msgctxt "AutoFillManager|"
+msgid "Cannot read file!"
+msgstr "Neizdevās datni nolasīt!"
+
+#: lib/preferences/autofillmanager.cpp:335
+msgctxt "AutoFillManager|"
+msgid "Successfully imported"
+msgstr "Veiksmīgi importēta"
+
+#: lib/preferences/autofillmanager.cpp:335
+msgctxt "AutoFillManager|"
+msgid "Error while importing!"
+msgstr "Kļūda importēšanas laikā!"
+
+#: lib/preferences/autofillmanager.cpp:346
+msgctxt "AutoFillManager|"
+msgid "Cannot write to file!"
+msgstr "Neizdevās ierakstīt datnē!"
+
+#: lib/preferences/autofillmanager.cpp:355
+msgctxt "AutoFillManager|"
+msgid "Successfully exported"
+msgstr "Veiksmīgi eksportēta"
+
+#: lib/preferences/autofillmanager.cpp:372
+msgctxt "AutoFillManager|"
+msgid "Copy Username"
+msgstr "Kopēt lietotājvārdu"
+
+#: lib/preferences/autofillmanager.cpp:373
+msgctxt "AutoFillManager|"
+msgid "Copy Password"
+msgstr "Kopēt paroli"
+
+#: lib/preferences/autofillmanager.cpp:375
+msgctxt "AutoFillManager|"
+msgid "Edit Password"
+msgstr "Rediģēt paroli"
+
+#: lib/preferences/autofillmanager.ui:25
+msgctxt "AutoFillManager|"
+msgid "Passwords are stored in:"
+msgstr "Paroles tiek saglabātas te:"
+
+#: lib/preferences/autofillmanager.ui:35
+msgctxt "AutoFillManager|"
+msgid "Change backend"
+msgstr "Mainīt aizmugursistēmu"
+
+#: lib/preferences/autofillmanager.ui:42
+msgctxt "AutoFillManager|"
+msgid "Backend options"
+msgstr "Aizmugursistēmas iestatījumi"
+
+#: lib/preferences/autofillmanager.ui:71
+msgctxt "AutoFillManager|"
+msgid "Passwords"
+msgstr "Paroles"
+
+#: lib/preferences/autofillmanager.ui:87 lib/preferences/autofillmanager.ui:201
+msgctxt "AutoFillManager|"
+msgid "Server"
+msgstr "Serveris"
+
+#: lib/preferences/autofillmanager.ui:92
+msgctxt "AutoFillManager|"
+msgid "Username"
+msgstr "Lietotājvārds"
+
+#: lib/preferences/autofillmanager.ui:97
+msgctxt "AutoFillManager|"
+msgid "Password"
+msgstr "Parole"
+
+#: lib/preferences/autofillmanager.ui:113
+msgctxt "AutoFillManager|"
+msgid "Import and Export"
+msgstr "Importēt un eksportēt"
+
+#: lib/preferences/autofillmanager.ui:154
+msgctxt "AutoFillManager|"
+msgid "Edit"
+msgstr "Rediģēt"
+
+#: lib/preferences/autofillmanager.ui:161
+#: lib/preferences/autofillmanager.ui:211
+msgctxt "AutoFillManager|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: lib/preferences/autofillmanager.ui:168
+#: lib/preferences/autofillmanager.ui:218
+msgctxt "AutoFillManager|"
+msgid "Remove All"
+msgstr "Noņemt visu"
+
+#: lib/preferences/autofillmanager.ui:191
+msgctxt "AutoFillManager|"
+msgid "Exceptions"
+msgstr "Izņēmumi"
+
+#: lib/preferences/jsoptions.ui:14
+msgctxt "JsOptions|"
+msgid "JavaScript Options"
+msgstr "„JavaScript“ iestatījumi"
+
+#: lib/preferences/jsoptions.ui:20
+msgctxt "JsOptions|"
+msgid "Allow JavaScript to:"
+msgstr "Atļaut „JavaScript“:"
+
+#: lib/preferences/jsoptions.ui:29
+msgctxt "JsOptions|"
+msgid "Open popup windows"
+msgstr "Atvērt uznirstošos logus"
+
+#: lib/preferences/jsoptions.ui:36
+#, fuzzy
+#| msgctxt "MainMenu|"
+#| msgid "New &Private Window"
+msgctxt "JsOptions|"
+msgid "Activate windows"
+msgstr "Atvērt jaunu privāto logu"
+
+#: lib/preferences/jsoptions.ui:43
+msgctxt "JsOptions|"
+msgid "Access clipboard"
+msgstr "Piekļūt starpliktuvei"
+
+#: lib/preferences/jsoptions.ui:50
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Access clipboard"
+msgctxt "JsOptions|"
+msgid "Paste from clipboard"
+msgstr "Piekļūt starpliktuvei"
+
+#: lib/preferences/pluginslist.ui:17
+#, fuzzy
+#| msgctxt "AutoFillManager|"
+#| msgid "Username"
+msgctxt "PluginsList|"
+msgid "Enter name"
+msgstr "Lietotājvārds"
+
+#: lib/preferences/pluginslist.ui:51
+msgctxt "PluginsList|"
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: lib/preferences/pluginslist.ui:61
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "PluginsList|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: lib/preferences/pluginslist.ui:81
+msgctxt "PluginsList|"
+msgid ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
+msgstr ""
+
+#: lib/preferences/pluginsmanager.cpp:198
+msgctxt "PluginsManager|"
+msgid "Error!"
+msgstr "Kļūda!"
+
+#: lib/preferences/pluginsmanager.cpp:198
+msgctxt "PluginsManager|"
+msgid "Cannot load extension!"
+msgstr "Paplašinājumu neizdodas ielādēt!"
+
+#: lib/preferences/pluginsmanager.cpp:237
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Confirmation"
+msgctxt "PluginsManager|"
+msgid "Confirmation"
+msgstr "Apstiprinājums"
+
+#: lib/preferences/pluginsmanager.cpp:238
+#, fuzzy, qt-format
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Are you sure you want to remove this speed dial?"
+msgctxt "PluginsManager|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "Vai tiešām vēlaties noņemt ātro zvanu?"
+
+#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:602
+msgctxt "Preferences|"
+msgid "Default"
+msgstr "Noklusētā"
+
+#: lib/preferences/preferences.cpp:155
+msgctxt "Preferences|"
+msgid "Set as default"
+msgstr "Padarīt par noklusēto"
+
+#: lib/preferences/preferences.cpp:545
+msgctxt "Preferences|"
+msgid "Choose executable location..."
+msgstr "Izvēlieties izpildāmās programmas vietu..."
+
+#: lib/preferences/preferences.cpp:588
+msgctxt "Preferences|"
+msgid "OSD Notification"
+msgstr "OSD paziņojums"
+
+#: lib/preferences/preferences.cpp:589
+msgctxt "Preferences|"
+msgid "Drag it on the screen to place it where you want."
+msgstr "Velciet to pa ekrānu un novietojiet, kur vēlaties."
+
+#: lib/preferences/preferences.cpp:638
+msgctxt "Preferences|"
+msgid "Choose download location..."
+msgstr "Izvēlieties lejupielāžu vietu..."
+
+#: lib/preferences/preferences.cpp:652
+msgctxt "Preferences|"
+msgid "Choose stylesheet location..."
+msgstr "Izvēlieties stila lapas atrašanās vietu..."
+
+#: lib/preferences/preferences.cpp:663
+msgctxt "Preferences|"
+msgid "Deleted"
+msgstr "Izdzēsts"
+
+#: lib/preferences/preferences.cpp:759
+msgctxt "Preferences|"
+msgid "Choose cache path..."
+msgstr "Izvēlēties kešatmiņas ceļu..."
+
+#: lib/preferences/preferences.cpp:790
+msgctxt "Preferences|"
+msgid "New Profile"
+msgstr "Jauns profils"
+
+#: lib/preferences/preferences.cpp:790
+msgctxt "Preferences|"
+msgid "Enter the new profile's name:"
+msgstr "Ievadiet jaunā profila nosaukumu:"
+
+#: lib/preferences/preferences.cpp:800 lib/preferences/preferences.cpp:805
+msgctxt "Preferences|"
+msgid "Error!"
+msgstr "Kļūda!"
+
+#: lib/preferences/preferences.cpp:800
+msgctxt "Preferences|"
+msgid "This profile already exists!"
+msgstr "Šis profils jau eksistē!"
+
+#: lib/preferences/preferences.cpp:805
+msgctxt "Preferences|"
+msgid "Cannot create profile directory!"
+msgstr "Neizdodas izveidot mapi profilam!"
+
+#: lib/preferences/preferences.cpp:816
+msgctxt "Preferences|"
+msgid "Confirmation"
+msgstr "Apstiprinājums"
+
+#: lib/preferences/preferences.cpp:817
+#, qt-format
+msgctxt "Preferences|"
+msgid ""
+"Are you sure you want to permanently delete \"%1\" profile? This action "
+"cannot be undone!"
+msgstr ""
+"Vai tiešām vēlaties neatgriezeniski dzēst profilu „%1“? Šo darbību atsaukt "
+"nevarēs!"
+
+#: lib/preferences/preferences.cpp:832 lib/preferences/preferences.ui:227
+msgctxt "Preferences|"
+msgid "Note: You cannot delete active profile."
+msgstr "Piezīme: Nevar izdzēst aktivizētu profilu."
+
+#: lib/preferences/preferences.cpp:1089
+msgctxt "Preferences|"
+msgid "Select Color"
+msgstr "Izvēlieties krāsu"
+
+#: lib/preferences/preferences.ui:14
+msgctxt "Preferences|"
+msgid "Preferences"
+msgstr "Iestatījumi"
+
+#: lib/preferences/preferences.ui:60
+msgctxt "Preferences|"
+msgid "General"
+msgstr "Vispārīgi"
+
+#: lib/preferences/preferences.ui:65
+msgctxt "Preferences|"
+msgid "Appearance"
+msgstr "Izskats"
+
+#: lib/preferences/preferences.ui:70
+msgctxt "Preferences|"
+msgid "Tabs"
+msgstr "Cilnes"
+
+#: lib/preferences/preferences.ui:75
+msgctxt "Preferences|"
+msgid "Browsing"
+msgstr "Pārlūkošana"
+
+#: lib/preferences/preferences.ui:80
+msgctxt "Preferences|"
+msgid "Fonts"
+msgstr "Fonti"
+
+#: lib/preferences/preferences.ui:85
+msgctxt "Preferences|"
+msgid "Keyboard Shortcuts"
+msgstr "Tastatūras saīsnes"
+
+#: lib/preferences/preferences.ui:90
+msgctxt "Preferences|"
+msgid "Downloads"
+msgstr "Lejupielādes"
+
+#: lib/preferences/preferences.ui:95
+msgctxt "Preferences|"
+msgid "Password Manager"
+msgstr "Paroļu pārvaldnieks"
+
+#: lib/preferences/preferences.ui:100
+msgctxt "Preferences|"
+msgid "Privacy"
+msgstr "Privātums"
+
+#: lib/preferences/preferences.ui:105
+msgctxt "Preferences|"
+msgid "Notifications"
+msgstr "Paziņojumi"
+
+#: lib/preferences/preferences.ui:110
+msgctxt "Preferences|"
+msgid "Extensions"
+msgstr "Paplašinājumi"
+
+#: lib/preferences/preferences.ui:115
+msgctxt "Preferences|"
+msgid "Spell Check"
+msgstr ""
+
+#: lib/preferences/preferences.ui:120
+msgctxt "Preferences|"
+msgid "Other"
+msgstr "Citi"
+
+#: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
+msgctxt "Preferences|"
+msgid "Use current"
+msgstr "Izmantot pašreizējo"
+
+#: lib/preferences/preferences.ui:243
+msgctxt "Preferences|"
+msgid "Create New"
+msgstr "Izveidot jaunu"
+
+#: lib/preferences/preferences.ui:259
+msgctxt "Preferences|"
+msgid "Delete"
+msgstr "Dzēst"
+
+#: lib/preferences/preferences.ui:285
+msgctxt "Preferences|"
+msgid "<b>Launching</b>"
+msgstr "<b>Palaišana</b>"
+
+#: lib/preferences/preferences.ui:295
+msgctxt "Preferences|"
+msgid "After launch: "
+msgstr "Pēc palaišanas:"
+
+#: lib/preferences/preferences.ui:303
+msgctxt "Preferences|"
+msgid "Open blank page"
+msgstr "Atvērt tukšu lapu"
+
+#: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
+msgctxt "Preferences|"
+msgid "Open homepage"
+msgstr "Atvērt mājaslapu"
+
+#: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
+msgctxt "Preferences|"
+msgid "Open speed dial"
+msgstr "Atvērt ātro zvanu"
+
+#: lib/preferences/preferences.ui:318
+msgctxt "Preferences|"
+msgid "Restore session"
+msgstr "Atjaunot iepriekšējo sesiju"
+
+#: lib/preferences/preferences.ui:323
+msgctxt "Preferences|"
+msgid "Select session"
+msgstr ""
+
+#: lib/preferences/preferences.ui:331
+msgctxt "Preferences|"
+msgid "Homepage: "
+msgstr "Mājaslapa:"
+
+#: lib/preferences/preferences.ui:352
+msgctxt "Preferences|"
+msgid "On new tab: "
+msgstr "Jaunā cilnē:"
+
+#: lib/preferences/preferences.ui:360
+msgctxt "Preferences|"
+msgid "Open blank tab"
+msgstr "Atvērt tukšu cilni"
+
+#: lib/preferences/preferences.ui:375
+msgctxt "Preferences|"
+msgid "Open other page..."
+msgstr "Atvērt citu lapu..."
+
+#: lib/preferences/preferences.ui:383
+msgctxt "Preferences|"
+msgid "<b>Profiles</b>"
+msgstr "<b>Profili</b>"
+
+#: lib/preferences/preferences.ui:390
+msgctxt "Preferences|"
+msgid "Startup profile:"
+msgstr "Starta profils:"
+
+#: lib/preferences/preferences.ui:397
+msgctxt "Preferences|"
+msgid "Check for updates on start"
+msgstr "Palaižot programmu, pārbaudīt atjauninājumus"
+
+#: lib/preferences/preferences.ui:404
+msgctxt "Preferences|"
+msgid "Active profile:"
+msgstr "Aktīvais profils:"
+
+#: lib/preferences/preferences.ui:418
+msgctxt "Preferences|"
+msgid "Don't load tabs until selected"
+msgstr "Neielādēt cilnes pirms tās nav izvēlētas"
+
+#: lib/preferences/preferences.ui:440
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Check to see if QupZilla is the default browser on startup"
+msgctxt "Preferences|"
+msgid "Check to see if Falkon is the default browser on startup"
+msgstr "Ieslēdzot „QupZilla“, pārbaudīt, vai tā ir noklusētā pārlūkprogramma"
+
+#: lib/preferences/preferences.ui:450
+msgctxt "Preferences|"
+msgid "Check Now"
+msgstr "Pārbaudīt tagad"
+
+#: lib/preferences/preferences.ui:480
+msgctxt "Preferences|"
+msgid "Themes"
+msgstr "Tēmas"
+
+#: lib/preferences/preferences.ui:502
+msgctxt "Preferences|"
+msgid "Advanced options"
+msgstr "Paplašināti iestatījumi"
+
+#: lib/preferences/preferences.ui:510
+msgctxt "Preferences|"
+msgid "Show StatusBar on start"
+msgstr "Ieslēdzoties rādīt statusa joslu"
+
+#: lib/preferences/preferences.ui:517
+msgctxt "Preferences|"
+msgid "Show Bookmarks ToolBar on start"
+msgstr "Ieslēdzoties rādīt grāmatzīmju joslu"
+
+#: lib/preferences/preferences.ui:524
+msgctxt "Preferences|"
+msgid "Show Navigation ToolBar on start"
+msgstr "Ieslēdzoties rādīt navigācijas joslu"
+
+#: lib/preferences/preferences.ui:531
+msgctxt "Preferences|"
+msgid "Enable instant Bookmarks ToolBar"
+msgstr ""
+
+#: lib/preferences/preferences.ui:553
+msgctxt "Preferences|"
+msgid "<b>Browser Window</b>"
+msgstr "<b>Pārlūka logs</b>"
+
+#: lib/preferences/preferences.ui:601
+msgctxt "Preferences|"
+msgid "Tabs behaviour"
+msgstr "Ciļņu uzvedība"
+
+#: lib/preferences/preferences.ui:607
+msgctxt "Preferences|"
+msgid "Hide tabs when there is only one tab"
+msgstr "Paslēpt cilnes, kad ir atvērta tikai viena cilne"
+
+#: lib/preferences/preferences.ui:614
+msgctxt "Preferences|"
+msgid "Activate last tab when closing active tab"
+msgstr "Pāriet uz pēdējo cilni, kad tiek aizvērta aktīva cilne"
+
+#: lib/preferences/preferences.ui:621
+msgctxt "Preferences|"
+msgid "Open new tabs after active tab"
+msgstr "Jaunas cilnes atvērt pēc aktīvās cilnes"
+
+#: lib/preferences/preferences.ui:628
+msgctxt "Preferences|"
+msgid "Open new empty tabs after active tab"
+msgstr "Jaunas tukšas cilnes atvērt pēc aktīvās cilnes"
+
+#: lib/preferences/preferences.ui:635
+msgctxt "Preferences|"
+msgid "Open popup windows in tabs"
+msgstr "Uznirstošos logus atvērt cilnēs"
+
+#: lib/preferences/preferences.ui:642
+msgctxt "Preferences|"
+msgid "Always switch between tabs with mouse wheel"
+msgstr "Izmantojot peles ritentiņu, vienmēr pārslēgties starp cilnēm"
+
+#: lib/preferences/preferences.ui:649
+msgctxt "Preferences|"
+msgid "Automatically switch to newly opened tab"
+msgstr "Automātiski pārslēgties uz tikko atvērtu cilni"
+
+#: lib/preferences/preferences.ui:656
+msgctxt "Preferences|"
+msgid "Don't close window upon closing last tab"
+msgstr "Neiziet no programmas, aizverot pēdējo cilni"
+
+#: lib/preferences/preferences.ui:663
+msgctxt "Preferences|"
+msgid "Ask when closing multiple tabs"
+msgstr "Jautāt, kad tiek aizvērtas vairākas cilnes"
+
+#: lib/preferences/preferences.ui:670
+msgctxt "Preferences|"
+msgid "Show closed tabs button"
+msgstr "Parādīt aizvērto ciļņu pogu"
+
+#: lib/preferences/preferences.ui:679
+msgctxt "Preferences|"
+msgid "Show close buttons on inactive tabs:"
+msgstr "Parādīt aizvēršanas pogu uz neatktīvajām cilnēm"
+
+#: lib/preferences/preferences.ui:687
+msgctxt "Preferences|"
+msgid "Automatic"
+msgstr "Automātiski"
+
+#: lib/preferences/preferences.ui:692
+msgctxt "Preferences|"
+msgid "Always"
+msgstr "Vienmēr"
+
+#: lib/preferences/preferences.ui:697
+msgctxt "Preferences|"
+msgid "Never"
+msgstr "Nekad"
+
+#: lib/preferences/preferences.ui:737
+msgctxt "Preferences|"
+msgid "Address Bar behaviour"
+msgstr "Adreses joslas uzvedība"
+
+#: lib/preferences/preferences.ui:745
+msgctxt "Preferences|"
+msgid "Suggest when typing into address bar:"
+msgstr "Dot padomus, kad adreses joslā tiek ievadīta informācija:"
+
+#: lib/preferences/preferences.ui:759
+msgctxt "Preferences|"
+msgid "History and Bookmarks"
+msgstr "Vēsture un grāmatzīmes"
+
+#: lib/preferences/preferences.ui:764
+msgctxt "Preferences|"
+msgid "History"
+msgstr "Vēsture"
+
+#: lib/preferences/preferences.ui:769
+msgctxt "Preferences|"
+msgid "Bookmarks"
+msgstr "Grāmatzīmes"
+
+#: lib/preferences/preferences.ui:774
+msgctxt "Preferences|"
+msgid "Nothing"
+msgstr "Nekas"
+
+#: lib/preferences/preferences.ui:800
+msgctxt "Preferences|"
+msgid "Enable inline suggestions"
+msgstr "Ieslēgt iekļautos padomus"
+
+#: lib/preferences/preferences.ui:807
+msgctxt "Preferences|"
+msgid ""
+"Press \"Shift\" to not switch the tab but load the url in the current tab"
+msgstr ""
+"Nospiest „Shift“ taustiņu, lai nepārslēgtos starp cilnēm un lapu ielādētu "
+"atvērtajā cilnē"
+
+#: lib/preferences/preferences.ui:810
+msgctxt "Preferences|"
+msgid "Propose to switch tab if completed url is already loaded"
+msgstr "Ierosināt pārslēgt cilni, ja ievadītā adrese ir jau atvērta"
+
+#: lib/preferences/preferences.ui:817
+msgctxt "Preferences|"
+msgid "Always show go icon"
+msgstr "Vienmēr rādīt „iet“ ikonu"
+
+#: lib/preferences/preferences.ui:824
+msgctxt "Preferences|"
+msgid "Select all text by double clicking in address bar"
+msgstr "Iezīmēt visu tekstu ar dubultklikšķi adreses joslā"
+
+#: lib/preferences/preferences.ui:831
+msgctxt "Preferences|"
+msgid "Select all text by clicking in address bar"
+msgstr "Iezīmēt visu tekstu, noklikšķinot adreses joslā"
+
+#: lib/preferences/preferences.ui:838
+msgctxt "Preferences|"
+msgid "Enable automatic searching from the address bar"
+msgstr "Ieslēgt automātisko meklēšanu adreses joslā"
+
+#: lib/preferences/preferences.ui:845
+msgctxt "Preferences|"
+msgid "Search with Default Engine"
+msgstr "Meklēt, izmantojot noklusēto meklētāju"
+
+#: lib/preferences/preferences.ui:852
+msgctxt "Preferences|"
+msgid "Show search suggestions"
+msgstr ""
+
+#: lib/preferences/preferences.ui:875
+msgctxt "Preferences|"
+msgid "Show loading progress in address bar"
+msgstr "Adreses joslā rādīt ielādes progresu"
+
+#: lib/preferences/preferences.ui:908
+msgctxt "Preferences|"
+msgid "Fill"
+msgstr "Aizpildīt"
+
+#: lib/preferences/preferences.ui:913
+msgctxt "Preferences|"
+msgid "Bottom"
+msgstr "Apakšā"
+
+#: lib/preferences/preferences.ui:918
+msgctxt "Preferences|"
+msgid "Top"
+msgstr "Augšā"
+
+#: lib/preferences/preferences.ui:926
+msgctxt "Preferences|"
+msgid "Custom color:"
+msgstr "Pielāgota krāsa:"
+
+#: lib/preferences/preferences.ui:942
+msgctxt "Preferences|"
+msgid "Select color"
+msgstr "Izvēlēties krāsu"
+
+#: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1258
+#: lib/preferences/preferences.ui:1792 lib/preferences/preferences.ui:1889
+#: lib/preferences/preferences.ui:2459
+msgctxt "Preferences|"
+msgid "..."
+msgstr "..."
+
+#: lib/preferences/preferences.ui:952
+msgctxt "Preferences|"
+msgid "Reset"
+msgstr "Atstatīt"
+
+#: lib/preferences/preferences.ui:1003
+msgctxt "Preferences|"
+msgid "Web Configuration"
+msgstr "Tīkla konfigurācija"
+
+#: lib/preferences/preferences.ui:1011
+msgctxt "Preferences|"
+msgid "Enable Pepper plugin API (PPAPI)"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1018
+msgctxt "Preferences|"
+msgid "Use built-in PDF viewer (requires PPAPI)"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1025
+msgctxt "Preferences|"
+msgid "Allow JavaScript"
+msgstr "Atļaut „JavaScript“"
+
+#: lib/preferences/preferences.ui:1032
+msgctxt "Preferences|"
+msgid "Include links in focus chain"
+msgstr "Fokusa ķēdē iekļaut saites"
+
+#. try to detect possible XSS attacks when executing javascript
+#: lib/preferences/preferences.ui:1039
+msgctxt "Preferences|"
+msgid "Enable XSS Auditing"
+msgstr "Atļaut XSS pārbaudīšanu"
+
+#. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
+#: lib/preferences/preferences.ui:1046
+msgctxt "Preferences|"
+msgid "Print element background"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1053
+msgctxt "Preferences|"
+msgid "Animated scrolling"
+msgstr "Animēta ritināšana"
+
+#: lib/preferences/preferences.ui:1060
+msgctxt "Preferences|"
+msgid "Enable spatial navigation"
+msgstr "Ieslēgt telpisko navigāciju"
+
+#: lib/preferences/preferences.ui:1067
+msgctxt "Preferences|"
+msgid "Use native scrollbars"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1074
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Enable automatic searching from the address bar"
+msgctxt "Preferences|"
+msgid "Disable automatic playing of videos"
+msgstr "Ieslēgt automātisko meklēšanu adreses joslā"
+
+#: lib/preferences/preferences.ui:1081
+msgctxt "Preferences|"
+msgid "Prevent WebRTC from leaking local IP address"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1088
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Enable XSS Auditing"
+msgctxt "Preferences|"
+msgid "Enable DNS prefetching"
+msgstr "Atļaut XSS pārbaudīšanu"
+
+#: lib/preferences/preferences.ui:1095
+msgctxt "Preferences|"
+msgid "Enable screen capture"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1112
+msgctxt "Preferences|"
+msgid "Mouse wheel scrolls"
+msgstr "Ritināt ar peles ritentiņu"
+
+#: lib/preferences/preferences.ui:1132
+msgctxt "Preferences|"
+msgid "lines on page"
+msgstr "rindas lapā"
+
+#: lib/preferences/preferences.ui:1143
+msgctxt "Preferences|"
+msgid "Default zoom on pages: "
+msgstr "Noklusētā lapas tuvināšana:"
+
+#: lib/preferences/preferences.ui:1182
+msgctxt "Preferences|"
+msgid "Local Storage"
+msgstr "Datora atmiņa"
+
+#: lib/preferences/preferences.ui:1190
+msgctxt "Preferences|"
+msgid "Allow storing network cache on disk"
+msgstr "Ļaut diskā saglabāt tīkla kešatmiņu"
+
+#: lib/preferences/preferences.ui:1213
+msgctxt "Preferences|"
+msgid "Delete cache on close"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1220
+msgctxt "Preferences|"
+msgid "Maximum:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1227
+msgctxt "Preferences|"
+msgid " MB"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1243
+msgctxt "Preferences|"
+msgid "Store cache in:"
+msgstr "Kešatmiņu saglabāt:"
+
+#: lib/preferences/preferences.ui:1271
+msgctxt "Preferences|"
+msgid "Allow saving history"
+msgstr "Ļaut saglabāt vēsturi"
+
+#: lib/preferences/preferences.ui:1278
+msgctxt "Preferences|"
+msgid "Delete history on close"
+msgstr "Aizverot programmu, iztīrīt vēsturi"
+
+#: lib/preferences/preferences.ui:1301
+msgctxt "Preferences|"
+msgid "Allow local storage of HTML5 web content"
+msgstr "Ļaut saglabāt HTML5 tīkla saturu uz datora"
+
+#: lib/preferences/preferences.ui:1308
+msgctxt "Preferences|"
+msgid "Delete locally stored HTML5 web content on close"
+msgstr "Aizverot programmu, dzēst datorā sagabāto HTML5 saturu"
+
+#: lib/preferences/preferences.ui:1334
+msgctxt "Preferences|"
+msgid "Delete now"
+msgstr "Dzēst tagad"
+
+#: lib/preferences/preferences.ui:1373
+msgctxt "Preferences|"
+msgid "Proxy Configuration"
+msgstr "Starpniekservera konfigurācija"
+
+#: lib/preferences/preferences.ui:1392
+msgctxt "Preferences|"
+msgid "System proxy configuration"
+msgstr "Sistēmas starpniekservera konfigurācija"
+
+#: lib/preferences/preferences.ui:1415
+msgctxt "Preferences|"
+msgid "Manual configuration"
+msgstr "Manuāla konfigurācija"
+
+#: lib/preferences/preferences.ui:1425
+msgctxt "Preferences|"
+msgid "HTTP"
+msgstr "HTTP"
+
+#: lib/preferences/preferences.ui:1430
+msgctxt "Preferences|"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+#: lib/preferences/preferences.ui:1441
+msgctxt "Preferences|"
+msgid "Port:"
+msgstr "Ports:"
+
+#: lib/preferences/preferences.ui:1462
+msgctxt "Preferences|"
+msgid "Username:"
+msgstr "Lietotājvārds:"
+
+#: lib/preferences/preferences.ui:1472
+msgctxt "Preferences|"
+msgid "Password:"
+msgstr "Parole:"
+
+#: lib/preferences/preferences.ui:1501
+msgctxt "Preferences|"
+msgid "No proxy"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1516
+msgctxt "Preferences|"
+msgid "<b>Font Families</b>"
+msgstr "<b>Fontu saimes</b>"
+
+#: lib/preferences/preferences.ui:1529
+msgctxt "Preferences|"
+msgid "Standard"
+msgstr "Standarta"
+
+#: lib/preferences/preferences.ui:1536
+msgctxt "Preferences|"
+msgid "Fixed"
+msgstr "Fiksētais"
+
+#: lib/preferences/preferences.ui:1546
+msgctxt "Preferences|"
+msgid "Serif"
+msgstr "Serif"
+
+#: lib/preferences/preferences.ui:1556
+msgctxt "Preferences|"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#: lib/preferences/preferences.ui:1566
+msgctxt "Preferences|"
+msgid "Cursive"
+msgstr "Kursīvs"
+
+#: lib/preferences/preferences.ui:1618
+msgctxt "Preferences|"
+msgid "Fantasy"
+msgstr "Fantasy"
+
+#: lib/preferences/preferences.ui:1625
+msgctxt "Preferences|"
+msgid "<b>Font Sizes</b>"
+msgstr "<b>Fontu izmēri</b>"
+
+#: lib/preferences/preferences.ui:1634
+msgctxt "Preferences|"
+msgid "Fixed Font Size"
+msgstr "Fiksētais izmērs"
+
+#: lib/preferences/preferences.ui:1641
+msgctxt "Preferences|"
+msgid "Default Font Size"
+msgstr "Noklusētais izmērs"
+
+#: lib/preferences/preferences.ui:1668
+msgctxt "Preferences|"
+msgid "Minimum Font Size"
+msgstr "Minimālais izmērs"
+
+#: lib/preferences/preferences.ui:1675
+msgctxt "Preferences|"
+msgid "Minimum Logical Font Size"
+msgstr "Minimālais loģiskais izmērs"
+
+#: lib/preferences/preferences.ui:1708
+msgctxt "Preferences|"
+msgid "<b>Shortcuts</b>"
+msgstr "<b>Saīsnes</b>"
+
+#: lib/preferences/preferences.ui:1715
+msgctxt "Preferences|"
+msgid "Switch to tabs with Alt + number of tab"
+msgstr "Pārslēgties starp cilnēm ar „ALT + cilnes numurs“"
+
+#: lib/preferences/preferences.ui:1722
+msgctxt "Preferences|"
+msgid "Load speed dials with Ctrl + number of speed dial"
+msgstr "Ielādēt ātros zvanus ar „Ctrl + ātrā zvana numurs“"
+
+#: lib/preferences/preferences.ui:1729
+msgctxt "Preferences|"
+msgid ""
+"Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
+"><b>/</b> - search on page"
+msgstr ""
+"Pašreizējās saīsnes:<br/><b>1</b> — iepriekšējā cilne<br/><b>2</b> — jauna "
+"cilne<br/><b>/</b> ˘ meklēt lapā"
+
+#: lib/preferences/preferences.ui:1732
+msgctxt "Preferences|"
+msgid "Use single key shortcuts"
+msgstr "Izmantot viena taustiņa saīsnes"
+
+#: lib/preferences/preferences.ui:1739
+msgctxt "Preferences|"
+msgid ""
+"If unchecked, prevents accidental exit from the application if the Ctrl-W "
+"shortcut was intended."
+msgstr ""
+"Šīs iespējas neieslēgšana pasargā no nejaušas lietotnes izslēgšanas, spiežot "
+"saīsni Ctrl-W."
+
+#: lib/preferences/preferences.ui:1742
+msgctxt "Preferences|"
+msgid "Close application with Ctrl-Q"
+msgstr "Aizvērt lietotni, spiežot Ctrl-Q"
+
+#: lib/preferences/preferences.ui:1766
+msgctxt "Preferences|"
+msgid "<b>Download Location</b>"
+msgstr "<b>Lejupielāžu atrašanās vieta</b>"
+
+#: lib/preferences/preferences.ui:1773
+msgctxt "Preferences|"
+msgid "Ask everytime for download location"
+msgstr "Katru reizi jautāt lejupielādes vietu"
+
+#: lib/preferences/preferences.ui:1780
+msgctxt "Preferences|"
+msgid "Use defined location: "
+msgstr "Izmantot noteiktu vietu:"
+
+#: lib/preferences/preferences.ui:1830
+msgctxt "Preferences|"
+msgid "<b>Download Options</b>"
+msgstr "<b>Lejupielādes iestatījumi</b>"
+
+#: lib/preferences/preferences.ui:1837
+msgctxt "Preferences|"
+msgid "Close download manager when downloading finishes"
+msgstr "Aizvērt lejupielāžu pārvaldnieku, kad visas datnes ir lejupielādētas"
+
+#: lib/preferences/preferences.ui:1844
+msgctxt "Preferences|"
+msgid "<b>External download manager</b>"
+msgstr "<b>Ārējs lejupielāžu pārvaldnieks</b>"
+
+#: lib/preferences/preferences.ui:1851
+msgctxt "Preferences|"
+msgid "Use external download manager"
+msgstr "Izmantot ārēju lejupielāžu pārvaldnieku"
+
+#: lib/preferences/preferences.ui:1863
+msgctxt "Preferences|"
+msgid "Executable:"
+msgstr "Izpildāmā datne:"
+
+#: lib/preferences/preferences.ui:1870
+msgctxt "Preferences|"
+msgid "Arguments:"
+msgstr "Argumenti:"
+
+#: lib/preferences/preferences.ui:1877
+msgctxt "Preferences|"
+msgid "Leave blank if unsure"
+msgstr "Atstājiet tukšu, ja neesat drošs"
+
+#: lib/preferences/preferences.ui:1898
+msgctxt "Preferences|"
+msgid "<b>%d</b> will be replaced with URL to be downloaded"
+msgstr "<b>%d</b> tiks aizstāts ar lejupielādējamo adresi"
+
+#: lib/preferences/preferences.ui:1924
+msgctxt "Preferences|"
+msgid "<b>AutoFill options</b>"
+msgstr "<b>Autoaizpildītāja iestatījumi</b>"
+
+#: lib/preferences/preferences.ui:1931
+msgctxt "Preferences|"
+msgid "Allow saving passwords from sites"
+msgstr "Atļaut saglabāt vietņu paroles"
+
+#: lib/preferences/preferences.ui:1982
+msgctxt "Preferences|"
+msgid "Automatically complete passwords on sites"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1993
+msgctxt "Preferences|"
+msgid "<b>Cookies</b>"
+msgstr "<b>Sīkdatnes</b>"
+
+#: lib/preferences/preferences.ui:2000
+msgctxt "Preferences|"
+msgid "<b>Other</b>"
+msgstr "<b>Citi</b>"
+
+#: lib/preferences/preferences.ui:2026
+msgctxt "Preferences|"
+msgid "JavaScript options"
+msgstr "„JavaScript“ iestatījumi"
+
+#: lib/preferences/preferences.ui:2036
+msgctxt "Preferences|"
+msgid "<b>JavaScript</b>"
+msgstr "<b>„JavaScript“</b>"
+
+#: lib/preferences/preferences.ui:2049
+msgctxt "Preferences|"
+msgid "Cookies Manager"
+msgstr "Sīkdatņu pārvaldnieks"
+
+#: lib/preferences/preferences.ui:2059
+msgctxt "Preferences|"
+msgid "Manage JavaScript privacy options"
+msgstr "Pārvaldīt „JavaScript“ privātuma iestatījumus"
+
+#: lib/preferences/preferences.ui:2082
+msgctxt "Preferences|"
+msgid "Manage HTML5 permissions"
+msgstr "Pārvaldīt HTML5 atļaujas"
+
+#: lib/preferences/preferences.ui:2089
+msgctxt "Preferences|"
+msgid "Manage Cookies"
+msgstr "Pārvaldīt sīkdatnes"
+
+#: lib/preferences/preferences.ui:2109
+msgctxt "Preferences|"
+msgid "<b>HTML5 Permissions</b>"
+msgstr "<b>HTML5 atļaujas</b>"
+
+#: lib/preferences/preferences.ui:2122
+msgctxt "Preferences|"
+msgid "HTML5 Permissions"
+msgstr "HTML5 atļaujas"
+
+#: lib/preferences/preferences.ui:2129
+msgctxt "Preferences|"
+msgid "Send Do Not Track header to servers"
+msgstr "Lūgt serveriem, lai mani neuzskaita un neizseko"
+
+#: lib/preferences/preferences.ui:2155
+msgctxt "Preferences|"
+msgid "Expiration timeout:"
+msgstr "Pazušanas laiks:"
+
+#: lib/preferences/preferences.ui:2168
+msgctxt "Preferences|"
+msgid " seconds"
+msgstr " sekundes"
+
+#: lib/preferences/preferences.ui:2190
+msgctxt "Preferences|"
+msgid "<b>Notifications</b>"
+msgstr "<b>Paziņojumi</b>"
+
+#: lib/preferences/preferences.ui:2213
+msgctxt "Preferences|"
+msgid "Use Native System Notifications (Linux only)"
+msgstr "Izmantot sistēmā iebūvētos paziņojumus (tikai „Linux“)"
+
+#: lib/preferences/preferences.ui:2220
+msgctxt "Preferences|"
+msgid "Do not use Notifications"
+msgstr "Neizmantot paziņojumus"
+
+#: lib/preferences/preferences.ui:2243
+msgctxt "Preferences|"
+msgid ""
+"<b>Note: </b>You can change position of OSD Notification by dragging it on "
+"the screen."
+msgstr ""
+"<b>Piezīme: </b>Jūs varat mainīt OSD paziņojumu atrašanās vietu, to ekrānā "
+"pārvietojot."
+
+#: lib/preferences/preferences.ui:2269
+msgctxt "Preferences|"
+msgid "Use OSD Notifications"
+msgstr "Izmantot OSD paziņojumus"
+
+#: lib/preferences/preferences.ui:2276
+msgctxt "Preferences|"
+msgid "Preview"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2341
+msgctxt "Preferences|"
+msgid ""
+"For more information about Spell Check, please see <a href=\"https://"
+"userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
+msgstr ""
+
+#: lib/preferences/preferences.ui:2383
+msgctxt "Preferences|"
+msgid "<b>Spell Check options</b>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2390
+msgctxt "Preferences|"
+msgid "Enable Spell Check"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2397
+msgctxt "Preferences|"
+msgid "<b>Dictionary directories</b>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2448
+msgctxt "Preferences|"
+msgid "No languages found"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2466
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>Pārvaldīt meklētājprogrammas</b>"
+
+#: lib/preferences/preferences.ui:2473
+msgctxt "Preferences|"
+msgid "<b>User Style Sheet</b>"
+msgstr "<b>Izmantot Stila lapu</b>"
+
+#: lib/preferences/preferences.ui:2498
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "Valodas"
+
+#: lib/preferences/preferences.ui:2520
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>Mainīt pārlūkprogrammas identifikāciju</b>"
+
+#: lib/preferences/preferences.ui:2545
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Cookies Manager"
+msgctxt "Preferences|"
+msgid "Protocol Handlers Manager"
+msgstr "Sīkdatņu pārvaldnieks"
+
+#: lib/preferences/preferences.ui:2585
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "Meklētājprogrammu pārvaldnieks"
+
+#: lib/preferences/preferences.ui:2633
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr "Stila lapa, kas tiks automātiski ielādēta visām tīmekļa lapām: "
+
+#: lib/preferences/preferences.ui:2643
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>Tīmekļa vietņu vēlamā valoda</b>"
+
+#: lib/preferences/preferences.ui:2668
+msgctxt "Preferences|"
+msgid "User Agent Manager"
+msgstr "Lietotāja aģenta pārvaldnieks"
+
+#: lib/preferences/preferences.ui:2690
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "<b>Manage search engines</b>"
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>Pārvaldīt meklētājprogrammas</b>"
+
+#: lib/preferences/thememanager.cpp:100
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Confirmation"
+msgctxt "ThemeManager|"
+msgid "Confirmation"
+msgstr "Apstiprinājums"
+
+#: lib/preferences/thememanager.cpp:101
+#, fuzzy, qt-format
+#| msgctxt "QupZillaSchemeReply|"
+#| msgid "Are you sure you want to remove this speed dial?"
+msgctxt "ThemeManager|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "Vai tiešām vēlaties noņemt ātro zvanu?"
+
+#: lib/preferences/thememanager.ui:51
+msgctxt "ThemeManager|"
+msgid "<b>Name:</b>"
+msgstr "<b>Nosaukums:</b>"
+
+#: lib/preferences/thememanager.ui:61
+msgctxt "ThemeManager|"
+msgid "<b>Author:</b>"
+msgstr "<b>Autors:</b>"
+
+#: lib/preferences/thememanager.ui:84
+msgctxt "ThemeManager|"
+msgid "<b>Description:</b>"
+msgstr "<b>Apraksts:</b>"
+
+#: lib/preferences/thememanager.ui:128
+msgctxt "ThemeManager|"
+msgid "License"
+msgstr "Licence"
+
+#: lib/preferences/thememanager.ui:155
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "ThemeManager|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: lib/preferences/thememanager.ui:175
+msgctxt "ThemeManager|"
+msgid ""
+"<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
+msgstr ""
+
+#: lib/preferences/useragentdialog.cpp:99
+msgctxt "UserAgentDialog|"
+msgid "Add new site"
+msgstr "Pievienot jaunu vietni"
+
+#: lib/preferences/useragentdialog.cpp:137
+msgctxt "UserAgentDialog|"
+msgid "Edit site"
+msgstr "Rediģēt vietni"
+
+#: lib/preferences/useragentdialog.cpp:216
+msgctxt "UserAgentDialog|"
+msgid "Site domain: "
+msgstr "Vietnes domēns:"
+
+#: lib/preferences/useragentdialog.cpp:217
+msgctxt "UserAgentDialog|"
+msgid "User Agent: "
+msgstr "Lietotāja aģents:"
+
+#: lib/preferences/useragentdialog.ui:14
+msgctxt "UserAgentDialog|"
+msgid "User Agent Manager"
+msgstr "Lietotāja aģenta pārvaldnieks"
+
+#: lib/preferences/useragentdialog.ui:20
+msgctxt "UserAgentDialog|"
+msgid "Change global User Agent"
+msgstr "Mainīt globālo lietotāja aģentu"
+
+#: lib/preferences/useragentdialog.ui:48
+msgctxt "UserAgentDialog|"
+msgid "Use different User Agents for specified sites"
+msgstr "Izmantot atšķirīgus lietotāja aģentus norādītām vietnēm"
+
+#: lib/preferences/useragentdialog.ui:92
+msgctxt "UserAgentDialog|"
+msgid "Site"
+msgstr "Vietne"
+
+#: lib/preferences/useragentdialog.ui:97
+msgctxt "UserAgentDialog|"
+msgid "User Agent"
+msgstr "Lietotāja aģents"
+
+#: lib/preferences/useragentdialog.ui:107
+msgctxt "UserAgentDialog|"
+msgid "Add"
+msgstr "Pievienot"
+
+#: lib/preferences/useragentdialog.ui:114
+msgctxt "UserAgentDialog|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: lib/preferences/useragentdialog.ui:134
+msgctxt "UserAgentDialog|"
+msgid "Edit"
+msgstr "Rediģēt"
+
+#: lib/session/sessionmanager.cpp:126
+msgctxt "SessionManager|"
+msgid "_cloned"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:126
+msgctxt "SessionManager|"
+msgid "_renamed"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:127
+msgctxt "SessionManager|"
+msgid "Clone Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:127
+msgctxt "SessionManager|"
+msgid "Rename Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:128
+msgctxt "SessionManager|"
+msgid "Please enter a new name:"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:143
+#: lib/session/sessionmanager.cpp:148 lib/session/sessionmanager.cpp:170
+#: lib/session/sessionmanager.cpp:218
+msgctxt "SessionManager|"
+msgid "Error!"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:170
+#: lib/session/sessionmanager.cpp:218
+#, qt-format
+msgctxt "SessionManager|"
+msgid "The session file \"%1\" exists. Please enter another name."
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:143
+msgctxt "SessionManager|"
+msgid "An error occurred when cloning session file."
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:148
+msgctxt "SessionManager|"
+msgid "An error occurred when renaming session file."
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:161
+msgctxt "SessionManager|"
+msgid "Save Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:162
+msgctxt "SessionManager|"
+msgid "Please enter a name to save session:"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:163
+#, qt-format
+msgctxt "SessionManager|"
+msgid "Saved Session (%1)"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:180
+msgctxt "SessionManager|"
+msgid "Restore Backup"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:180
+msgctxt "SessionManager|"
+msgid "Are you sure you want to replace current session?"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:199
+msgctxt "SessionManager|"
+msgid "Delete Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:199
+#, qt-format
+msgctxt "SessionManager|"
+msgid "Are you sure you want to delete session '%1'?"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:209
+msgctxt "SessionManager|"
+msgid "New Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:210
+msgctxt "SessionManager|"
+msgid "Please enter a name to create new session:"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:211
+#, qt-format
+msgctxt "SessionManager|"
+msgid "New Session (%1)"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:243
+msgctxt "SessionManager|"
+msgid "Backup 1"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:250
+msgctxt "SessionManager|"
+msgid "Backup 2"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:290
+msgctxt "SessionManager|"
+msgid "Default Session"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:393
+msgctxt "SessionManager|"
+msgid "Please select the startup session:"
+msgstr ""
+
+#: lib/session/sessionmanager.cpp:412
+#, qt-format
+msgctxt "SessionManager|"
+msgid "%1 (last session)"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.cpp:140
+msgctxt "SessionManagerDialog|"
+msgid "Restore"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.cpp:140
+msgctxt "SessionManagerDialog|"
+msgid "Switch To"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:14
+msgctxt "SessionManagerDialog|"
+msgid "Session Manager"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:24
+msgctxt "SessionManagerDialog|"
+msgid "Session"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:29
+msgctxt "SessionManagerDialog|"
+msgid "Last Modified"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:39
+msgctxt "SessionManagerDialog|"
+msgid "New"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:46
+msgctxt "SessionManagerDialog|"
+msgid "Rename"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:53
+msgctxt "SessionManagerDialog|"
+msgid "Clone"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:60
+msgctxt "SessionManagerDialog|"
+msgid "Delete"
+msgstr ""
+
+#: lib/session/sessionmanagerdialog.ui:67
+msgctxt "SessionManagerDialog|"
+msgid "Switch to"
+msgstr ""
+
+#: lib/sidebar/bookmarkssidebar.cpp:103
+msgctxt "BookmarksSidebar|"
+msgid "Open in new tab"
+msgstr "Atvērt jaunu cilni"
+
+#: lib/sidebar/bookmarkssidebar.cpp:104
+msgctxt "BookmarksSidebar|"
+msgid "Open in new window"
+msgstr "Atvērt jaunā logā"
+
+#: lib/sidebar/bookmarkssidebar.cpp:105
+msgctxt "BookmarksSidebar|"
+msgid "Open in new private window"
+msgstr "Atvērt jaunā privātajā logā"
+
+#: lib/sidebar/bookmarkssidebar.cpp:108
+msgctxt "BookmarksSidebar|"
+msgid "Delete"
+msgstr "Dzēst"
+
+#: lib/sidebar/bookmarkssidebar.ui:41
+msgctxt "BookmarksSideBar|"
+msgid "Search..."
+msgstr "Meklēt..."
+
+#: lib/sidebar/historysidebar.cpp:85
+msgctxt "HistorySideBar|"
+msgid "Open in new tab"
+msgstr "Atvērt jaunā cilnē"
+
+#: lib/sidebar/historysidebar.cpp:86
+msgctxt "HistorySideBar|"
+msgid "Open in new window"
+msgstr "Atvērt jaunā logā"
+
+#: lib/sidebar/historysidebar.cpp:87
+msgctxt "HistorySideBar|"
+msgid "Open in new private window"
+msgstr "Atvērt jaunā privātajā logā"
+
+#: lib/sidebar/historysidebar.cpp:90
+msgctxt "HistorySideBar|"
+msgid "Delete"
+msgstr "Dzēst"
+
+#: lib/sidebar/historysidebar.ui:32
+msgctxt "HistorySideBar|"
+msgid "Search..."
+msgstr "Meklēt..."
+
+#: lib/sidebar/sidebar.cpp:65 lib/sidebar/sidebar.cpp:107
+msgctxt "SideBar|"
+msgid "Bookmarks"
+msgstr "Grāmatzīmes"
+
+#: lib/sidebar/sidebar.cpp:72 lib/sidebar/sidebar.cpp:114
+msgctxt "SideBar|"
+msgid "History"
+msgstr "Vēsture"
+
+#: lib/tabwidget/tabbar.cpp:111
+msgctxt "BrowserWindow|"
+msgid "Close Tab"
+msgstr "Aizvērt cilni"
+
+#: lib/tabwidget/tabcontextmenu.cpp:63
+msgctxt "TabBar|"
+msgid "Don't ask again"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:80 lib/tabwidget/tabcontextmenu.cpp:91
+#: lib/tabwidget/tabcontextmenu.cpp:102
+msgctxt "TabContextMenu|"
+msgid "Close Tabs"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:80
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close other tabs?"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:88
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the right?"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:89
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the bottom?"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:99
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the left?"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:100
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the top?"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:117
+msgctxt "TabContextMenu|"
+msgid "&Stop Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:120
+msgctxt "TabContextMenu|"
+msgid "&Reload Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:123
+msgctxt "TabContextMenu|"
+msgid "&Duplicate Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:126
+msgctxt "TabContextMenu|"
+msgid "D&etach Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:129
+msgctxt "TabContextMenu|"
+msgid "Un&pin Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:129
+msgctxt "TabContextMenu|"
+msgid "&Pin Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:130
+msgctxt "TabContextMenu|"
+msgid "Un&mute Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:130
+msgctxt "TabContextMenu|"
+msgid "&Mute Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:133
+#, fuzzy
+#| msgctxt "HistoryMenu|"
+#| msgid "Closed Tabs"
+msgctxt "TabContextMenu|"
+msgid "Load Tab"
+msgstr "Aizvērtās cilnes"
+
+#: lib/tabwidget/tabcontextmenu.cpp:135
+msgctxt "TabContextMenu|"
+msgid "Unload Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:139
+msgctxt "TabContextMenu|"
+msgid "Re&load All Tabs"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:140 lib/tabwidget/tabcontextmenu.cpp:156
+msgctxt "TabContextMenu|"
+msgid "Bookmark &All Tabs"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:144
+msgctxt "TabContextMenu|"
+msgid "Close Ot&her Tabs"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:145
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Right"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:145
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Bottom"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:146
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Left"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:146
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Top"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:151
+msgctxt "TabContextMenu|"
+msgid "Cl&ose Tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:153
+msgctxt "TabContextMenu|"
+msgid "&New tab"
+msgstr ""
+
+#: lib/tabwidget/tabcontextmenu.cpp:155
+msgctxt "TabContextMenu|"
+msgid "Reloa&d All Tabs"
+msgstr ""
+
+#: lib/tabwidget/tabicon.cpp:168
+msgctxt "TabIcon|"
+msgid "Unmute Tab"
+msgstr ""
+
+#: lib/tabwidget/tabicon.cpp:168
+msgctxt "TabIcon|"
+msgid "Mute Tab"
+msgstr ""
+
+#: lib/tabwidget/tabwidget.cpp:51
+msgctxt "TabWidget|"
+msgid "New Tab"
+msgstr "Jauna cilne"
+
+#: lib/tabwidget/tabwidget.cpp:126
+msgctxt "TabWidget|"
+msgid "Closed tabs"
+msgstr "Aizvērtās cilnes"
+
+#: lib/tabwidget/tabwidget.cpp:137
+msgctxt "TabWidget|"
+msgid "List of tabs"
+msgstr "Ciļņu saraksts"
+
+#: lib/tabwidget/tabwidget.cpp:294
+msgctxt "TabWidget|"
+msgid "Empty"
+msgstr "Tukšs"
+
+#: lib/tabwidget/tabwidget.cpp:298
+msgctxt "TabWidget|"
+msgid "Restore All Closed Tabs"
+msgstr "Atjaunot visas aizvērtās cilnes"
+
+#: lib/tabwidget/tabwidget.cpp:299
+msgctxt "TabWidget|"
+msgid "Clear list"
+msgstr "Notīrīt sarakstu"
+
+#: lib/tabwidget/tabwidget.h:106
+msgctxt "TabWidget|"
+msgid "New tab"
+msgstr "Jauna cilne"
+
+#: lib/tools/aesinterface.cpp:146
+msgctxt "AesInterface|"
+msgid "Warning!"
+msgstr "Uzmanību!"
+
+#: lib/tools/aesinterface.cpp:146
+#, fuzzy
+#| msgctxt "AesInterface|"
+#| msgid ""
+#| "Data has been encrypted with a newer version of QupZilla.\n"
+#| "Please install latest version of QupZilla."
+msgctxt "AesInterface|"
+msgid ""
+"Data has been encrypted with a newer version of Falkon.\n"
+"Please install latest version of Falkon."
+msgstr ""
+"Dati ir jaunākas „QupZilla“ versijas šifrēti.\n"
+"Lūdzu, uzstādiet jaunāko „QupZilla“ versiju."
+
+#: lib/tools/certificateinfowidget.cpp:300
+msgctxt "QObject|"
+msgid "<not set in certificate>"
+msgstr "<nav noteikts sertifikātā>"
+
+#: lib/tools/certificateinfowidget.ui:17
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Issued To</b>"
+msgstr "<b>Kam izdots</b>"
+
+#: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
+msgctxt "CertificateInfoWidget|"
+msgid "Common Name (CN):"
+msgstr "Kopējais nosaukums (CN):"
+
+#: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
+msgctxt "CertificateInfoWidget|"
+msgid "Organization (O):"
+msgstr "Organizācija (O):"
+
+#: lib/tools/certificateinfowidget.ui:58 lib/tools/certificateinfowidget.ui:133
+msgctxt "CertificateInfoWidget|"
+msgid "Organizational Unit (OU):"
+msgstr "Organizatoriskā vienība (OU):"
+
+#: lib/tools/certificateinfowidget.ui:75
+msgctxt "CertificateInfoWidget|"
+msgid "Serial Number:"
+msgstr "Sērijas numurs:"
+
+#: lib/tools/certificateinfowidget.ui:92
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Issued By</b>"
+msgstr "<b>Izdevējs</b>"
+
+#: lib/tools/certificateinfowidget.ui:150
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Validity</b>"
+msgstr "<b>Derīguma termiņš</b>"
+
+#: lib/tools/certificateinfowidget.ui:157
+msgctxt "CertificateInfoWidget|"
+msgid "Issued On:"
+msgstr "Izdošanas datums:"
+
+#: lib/tools/certificateinfowidget.ui:174
+msgctxt "CertificateInfoWidget|"
+msgid "Expires On:"
+msgstr "Derīgs līdz:"
+
+#: lib/tools/html5permissions/html5permissionsdialog.cpp:63
+msgctxt "HTML5PermissionsDialog|"
+msgid "Allow"
+msgstr "Atļaut"
+
+#: lib/tools/html5permissions/html5permissionsdialog.cpp:72
+msgctxt "HTML5PermissionsDialog|"
+msgid "Deny"
+msgstr "Aizliegt"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:14
+msgctxt "HTML5PermissionsDialog|"
+msgid "HTML5 Permissions"
+msgstr "HTML5 atļaujas"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:35
+msgctxt "HTML5PermissionsDialog|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:64
+msgctxt "HTML5PermissionsDialog|"
+msgid "Site"
+msgstr "Vietne"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:69
+msgctxt "HTML5PermissionsDialog|"
+msgid "Behaviour"
+msgstr "Uzvedība"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:79
+msgctxt "HTML5PermissionsDialog|"
+msgid "Permission for:"
+msgstr "Atļauja priekš:"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:87
+msgctxt "HTML5PermissionsDialog|"
+msgid "Notifications"
+msgstr "Ziņojumi"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:92
+msgctxt "HTML5PermissionsDialog|"
+msgid "Geolocation"
+msgstr "Ģeolokācija"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:97
+msgctxt "HTML5PermissionsDialog|"
+msgid "Microphone"
+msgstr "Mikrofons"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:102
+msgctxt "HTML5PermissionsDialog|"
+msgid "Camera"
+msgstr "Kamera"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:107
+msgctxt "HTML5PermissionsDialog|"
+msgid "Microphone and Camera"
+msgstr "Mikrofons un kamera"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:112
+msgctxt "HTML5PermissionsDialog|"
+msgid "Hide Pointer"
+msgstr "Paslēpt peles rādītāju"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:117
+msgctxt "HTML5PermissionsDialog|"
+msgid "Display Capture"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:122
+msgctxt "HTML5PermissionsDialog|"
+msgid "Display and Audio Capture"
+msgstr ""
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:41
+msgctxt "HTML5PermissionsNotification|"
+msgid "this site"
+msgstr "šai vietnei"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:45
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to show desktop notifications?"
+msgstr "Vai atļaut, lai %1 parāda darbvirsmas ziņojumus?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:49
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to locate your position?"
+msgstr "Vai atļaut, lai %1 nosaka Jūsu atrašanās vietu?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:53
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your microphone?"
+msgstr "Vai atļaut %1 izmantot Jūsu mikrofonu?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:57
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your camera?"
+msgstr "Vai atļaut %1 izmantot Jūsu kameru?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:61
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your microphone and camera?"
+msgstr "Vai atļaujt %1 izmantot Jūsu mikrofonu un kameru?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:65
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to hide your pointer?"
+msgstr "Vai atļaut %1 paslēpt peles rādītāju?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:69
+#, fuzzy, qt-format
+#| msgctxt "HTML5PermissionsNotification|"
+#| msgid "Allow %1 to locate your position?"
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to capture your screen?"
+msgstr "Vai atļaut, lai %1 nosaka Jūsu atrašanās vietu?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:73
+#, fuzzy, qt-format
+#| msgctxt "HTML5PermissionsNotification|"
+#| msgid "Allow %1 to use your microphone and camera?"
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to capture your screen and audio?"
+msgstr "Vai atļaujt %1 izmantot Jūsu mikrofonu un kameru?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:43
+msgctxt "HTML5PermissionsNotification|"
+msgid "Remember"
+msgstr "Atcerēties"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:50
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow"
+msgstr "Atļaut"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:57
+msgctxt "HTML5PermissionsNotification|"
+msgid "Deny"
+msgstr "Aizliegt"
+
+#: lib/tools/qztools.cpp:379
+msgctxt "QObject|"
+msgid "Unknown size"
+msgstr "Nezināms izmērs"
+
+#: lib/tools/qztools.cpp:384
+msgctxt "QObject|"
+msgid "KB"
+msgstr "KB"
+
+#: lib/tools/qztools.cpp:389
+msgctxt "QObject|"
+msgid "MB"
+msgstr "MB"
+
+#: lib/tools/qztools.cpp:393
+msgctxt "QObject|"
+msgid "GB"
+msgstr "GB"
+
+#: lib/tools/qztools.cpp:852
+msgctxt "QObject|"
+msgid "Executable: "
+msgstr "Izpildāmā datne:"
+
+#: lib/tools/qztools.cpp:853
+msgctxt "QObject|"
+msgid "Arguments: "
+msgstr "Argumenti:"
+
+#: lib/tools/qztools.cpp:855
+msgctxt "QObject|"
+msgid "Cannot start external program"
+msgstr "Neizdodas palaist ārējo programmu"
+
+#: lib/tools/qztools.cpp:856
+#, qt-format
+msgctxt "QObject|"
+msgid "Cannot start external program! %1"
+msgstr "Neizdodas palaist ārējo programmu! %1"
+
+#: lib/webengine/jsalert.ui:125
+msgctxt "jsAlert|"
+msgid "Prevent this page from creating additional dialogs"
+msgstr "Neļaut šai lapai veidot papildus dialoglodziņus"
+
+#: lib/webengine/webpage.cpp:330
+#, fuzzy, qt-format
+#| msgctxt "WebPage|"
+#| msgid ""
+#| "QupZilla cannot handle <b>%1:</b> links. The requested link is <ul><li>"
+#| "%2</li></ul>Do you want QupZilla to try open this link in system "
+#| "application?"
+msgctxt "WebPage|"
+msgid ""
+"Falkon cannot handle <b>%1:</b> links. The requested link is <ul><li>%2</"
+"li></ul>Do you want Falkon to try open this link in system application?"
+msgstr ""
+"„QupZilla“ neprot atvērt <b>%1:</b> veida adreses. Pieprasītā adrese ir "
+"<ul><li>%2</li></ul> Vai vēlaties, lai „QupZilla“ to mēģina atvērt sistēmas "
+"lietotnē?"
+
+#: lib/webengine/webpage.cpp:335
+msgctxt "WebPage|"
+msgid "Remember my choice for this protocol"
+msgstr "Atcerēties manu izvēli šim protokolam"
+
+#: lib/webengine/webpage.cpp:336
+msgctxt "WebPage|"
+msgid "External Protocol Request"
+msgstr "Ārējs protokola pieprasījums"
+
+#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+msgctxt "WebPage|"
+msgid "Failed loading page"
+msgstr "Kļūme lapas ielādē"
+
+#: lib/webengine/webpage.cpp:418
+msgctxt "WebPage|"
+msgid "Something went wrong while loading this page."
+msgstr "Notika kļūda, ielādējot šo lapu."
+
+#: lib/webengine/webpage.cpp:419
+msgctxt "WebPage|"
+msgid ""
+"Try reloading the page or closing some tabs to make more memory available."
+msgstr ""
+"Mēģiniet lapu ielādēt atkārtoti vai aizveriet dažas cilnes, atbrīvojot "
+"vairāk atmiņas."
+
+#: lib/webengine/webpage.cpp:420
+msgctxt "WebPage|"
+msgid "Reload page"
+msgstr "Pārlādēt lapu"
+
+#: lib/webengine/webpage.cpp:482
+msgctxt "WebPage|"
+msgid "Choose file..."
+msgstr "Izvēlēties datni..."
+
+#: lib/webengine/webpage.cpp:486
+msgctxt "WebPage|"
+msgid "Choose files..."
+msgstr "Izvēlēties datnes..."
+
+#: lib/webengine/webpage.cpp:622
+msgctxt "WebPage|"
+msgid "JavaScript alert"
+msgstr "Trauksme no „JavaScript“"
+
+#: lib/webengine/webpage.cpp:631
+msgctxt "WebPage|"
+msgid "Prevent this page from creating additional dialogs"
+msgstr "Neļaut šai lapai veidot papildus dialoglodziņus"
+
+#: lib/webengine/webview.cpp:126
+msgctxt "WebView|"
+msgid "Empty Page"
+msgstr "Tukša lapa"
+
+#: lib/webengine/webview.cpp:391
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "Done - %1 (%2)"
+msgctxt "WebView|"
+msgid "Falkon %1 (%2)"
+msgstr "Pabeigts — %1 (%2)"
+
+#: lib/webengine/webview.cpp:690
+msgctxt "WebView|"
+msgid "No suggestions"
+msgstr ""
+
+#: lib/webengine/webview.cpp:741
+msgctxt "WebView|"
+msgid "&Back"
+msgstr "A&tpakaļ"
+
+#: lib/webengine/webview.cpp:745
+msgctxt "WebView|"
+msgid "&Forward"
+msgstr "&Uz priekšu"
+
+#: lib/webengine/webview.cpp:752
+msgctxt "WebView|"
+msgid "&Add New Page"
+msgstr "Pievienot &jaunu lapu"
+
+#: lib/webengine/webview.cpp:753
+msgctxt "WebView|"
+msgid "&Configure Speed Dial"
+msgstr "&Konfigurēt ātro zvanu"
+
+#: lib/webengine/webview.cpp:755
+msgctxt "WebView|"
+msgid "Reload All Dials"
+msgstr "Pārlādēt visus zvanus"
+
+#: lib/webengine/webview.cpp:774
+msgctxt "WebView|"
+msgid "Book&mark page"
+msgstr "Ie&grāmatot šo lapu"
+
+#: lib/webengine/webview.cpp:775
+msgctxt "WebView|"
+msgid "&Save page as..."
+msgstr ""
+
+#: lib/webengine/webview.cpp:776
+msgctxt "WebView|"
+msgid "&Copy page link"
+msgstr "&Kopēt lapas adresi"
+
+#: lib/webengine/webview.cpp:777
+msgctxt "WebView|"
+msgid "Send page link..."
+msgstr "Sūtīt lapas adresi..."
+
+#: lib/webengine/webview.cpp:779
+msgctxt "WebView|"
+msgid "Select &all"
+msgstr "Iezīmēt &visu"
+
+#: lib/webengine/webview.cpp:785
+msgctxt "WebView|"
+msgid "Show so&urce code"
+msgstr "Parādīt pir&mkodu"
+
+#: lib/webengine/webview.cpp:789
+msgctxt "WebView|"
+msgid "Show info ab&out site"
+msgstr "Pa&rādīt informāciju par lapu"
+
+#: lib/webengine/webview.cpp:795
+msgctxt "WebView|"
+msgid "Open link in new &tab"
+msgstr "Atvērt saiti jaunā &cilnē"
+
+#: lib/webengine/webview.cpp:800
+msgctxt "WebView|"
+msgid "Open link in new &window"
+msgstr "Atvērt saiti jaunā &logā"
+
+#: lib/webengine/webview.cpp:801
+msgctxt "WebView|"
+msgid "Open link in &private window"
+msgstr "Atvērt jaunā privātajā logā"
+
+#: lib/webengine/webview.cpp:806
+msgctxt "WebView|"
+msgid "B&ookmark link"
+msgstr "Ie&grāmatot adresi"
+
+#: lib/webengine/webview.cpp:808
+msgctxt "WebView|"
+msgid "&Save link as..."
+msgstr "&Saglabāt adresi kā..."
+
+#: lib/webengine/webview.cpp:809
+msgctxt "WebView|"
+msgid "Send link..."
+msgstr "Sūtīt saiti..."
+
+#: lib/webengine/webview.cpp:810
+msgctxt "WebView|"
+msgid "&Copy link address"
+msgstr "&Kopēt saites adresi"
+
+#: lib/webengine/webview.cpp:823
+msgctxt "WebView|"
+msgid "Show i&mage"
+msgstr "Rādīt &attēlu"
+
+#: lib/webengine/webview.cpp:829
+msgctxt "WebView|"
+msgid "Copy image"
+msgstr ""
+
+#: lib/webengine/webview.cpp:830
+msgctxt "WebView|"
+msgid "Copy image ad&dress"
+msgstr "Kopēt attēla a&dresi"
+
+#: lib/webengine/webview.cpp:832
+msgctxt "WebView|"
+msgid "&Save image as..."
+msgstr "&Saglabāt attēlu kā..."
+
+#: lib/webengine/webview.cpp:833
+msgctxt "WebView|"
+msgid "Send image..."
+msgstr "Sūtīt attēlu..."
+
+#: lib/webengine/webview.cpp:852
+msgctxt "WebView|"
+msgid "Send text..."
+msgstr "Sūtīt tekstu..."
+
+#: lib/webengine/webview.cpp:864
+msgctxt "WebView|"
+msgid "Go to &web address"
+msgstr "Iet uz &tīmekļa adresi"
+
+#: lib/webengine/webview.cpp:878
+#, qt-format
+msgctxt "WebView|"
+msgid "Search \"%1 ..\" with %2"
+msgstr "Meklēt „%1 ..“, izmantojot „%2“"
+
+#: lib/webengine/webview.cpp:884
+msgctxt "WebView|"
+msgid "Search with..."
+msgstr "Meklēt ar..."
+
+#: lib/webengine/webview.cpp:906
+msgctxt "WebView|"
+msgid "&Play"
+msgstr "&Atskaņot"
+
+#: lib/webengine/webview.cpp:906
+msgctxt "WebView|"
+msgid "&Pause"
+msgstr "&Pauze"
+
+#: lib/webengine/webview.cpp:907
+msgctxt "WebView|"
+msgid "Un&mute"
+msgstr "Ne&apklusināt"
+
+#: lib/webengine/webview.cpp:907
+msgctxt "WebView|"
+msgid "&Mute"
+msgstr "&Apklusināt"
+
+#: lib/webengine/webview.cpp:909
+msgctxt "WebView|"
+msgid "&Copy Media Address"
+msgstr "&Kopēt multivides elementa adresi"
+
+#: lib/webengine/webview.cpp:910
+msgctxt "WebView|"
+msgid "&Send Media Address"
+msgstr "&Sūtīt multivides elementa adresi"
+
+#: lib/webengine/webview.cpp:911
+msgctxt "WebView|"
+msgid "Save Media To &Disk"
+msgstr "Saglabāt multivides elementu &datorā"
+
+#: lib/webengine/webview.cpp:930
+msgctxt "WebView|"
+msgid "Create Search Engine"
+msgstr "Izveidot meklētāju"
+
+#: lib/webengine/webview.cpp:971
+msgctxt "WebView|"
+msgid "&Undo"
+msgstr "A&tsaukt"
+
+#: lib/webengine/webview.cpp:977
+msgctxt "WebView|"
+msgid "&Redo"
+msgstr "Atatsa&ukt"
+
+#: lib/webengine/webview.cpp:983
+msgctxt "WebView|"
+msgid "&Cut"
+msgstr "I&zgriezt"
+
+#: lib/webengine/webview.cpp:989
+msgctxt "WebView|"
+msgid "&Copy"
+msgstr "&Kopēt"
+
+#: lib/webengine/webview.cpp:995
+msgctxt "WebView|"
+msgid "&Paste"
+msgstr "Ie&līmēt"
+
+#: lib/webengine/webview.cpp:1001
+msgctxt "WebView|"
+msgid "Select All"
+msgstr "Iezīmēt visu"
+
+#: lib/webengine/webview.cpp:1007
+msgctxt "WebView|"
+msgid "&Reload"
+msgstr "&Pārlādēt"
+
+#: lib/webengine/webview.cpp:1011
+msgctxt "WebView|"
+msgid "S&top"
+msgstr "&Apturēt"
+
+#: lib/webtab/searchtoolbar.cpp:150
+#, qt-format
+msgctxt "SearchToolBar|"
+msgid "%1 of %2"
+msgstr ""
+
+#: lib/webtab/searchtoolbar.ui:48
+#, fuzzy
+#| msgctxt "PopupWindow|"
+#| msgid "Find"
+msgctxt "SearchToolbar|"
+msgid "Find..."
+msgstr "Meklēt"
+
+#: lib/webtab/searchtoolbar.ui:58
+msgctxt "SearchToolbar|"
+msgid "Find the next match for the current search phrase"
+msgstr ""
+
+#: lib/webtab/searchtoolbar.ui:61
+#, fuzzy
+#| msgctxt "BookmarksImportDialog|"
+#| msgid "Next >"
+msgctxt "SearchToolbar|"
+msgid "&Next"
+msgstr "Uz priekšu >"
+
+#: lib/webtab/searchtoolbar.ui:74
+msgctxt "SearchToolbar|"
+msgid "Find the previous match for the current search phrase"
+msgstr ""
+
+#: lib/webtab/searchtoolbar.ui:77
+msgctxt "SearchToolbar|"
+msgid "&Previous"
+msgstr ""
+
+#: lib/webtab/searchtoolbar.ui:90
+msgctxt "SearchToolbar|"
+msgid "&Match Case"
+msgstr "Lielo, mazo burtu atbilstība"
+
+#: lib/webtab/tabbedwebview.cpp:194
+msgctxt "TabbedWebView|"
+msgid "Inspect Element"
+msgstr "Pārbaudīt elementu"
+
+#: lib/webtab/webtab.cpp:624
+#, qt-format
+msgctxt "WebTab|"
+msgid "%1 - Falkon"
+msgstr ""
+
+#~ msgctxt "SearchToolBar|"
+#~ msgid "No results found."
+#~ msgstr "Nekas nav atrasts."
+
+#~ msgctxt "SearchToolbar|"
+#~ msgid "Search: "
+#~ msgstr "Meklēt:"
+
+#~ msgctxt "SearchToolbar|"
+#~ msgid "Search..."
+#~ msgstr "Meklēt..."
+
+#, fuzzy
+#~| msgctxt "MainMenu|"
+#~| msgid "&Page Source"
+#~ msgctxt "PageScreen|"
+#~ msgid "Page Screen"
+#~ msgstr "&Lapas pirmkods"
+
+#, fuzzy
+#~| msgctxt "BookmarksExportDialog|"
+#~| msgid "Format:"
+#~ msgctxt "PageScreen|"
+#~ msgid "Format:"
+#~ msgstr "Formāts:"
+
+#, fuzzy
+#~| msgctxt "MainMenu|"
+#~| msgid "Open Location"
+#~ msgctxt "PageScreen|"
+#~ msgid "Location:"
+#~ msgstr "Atvērt vietu"
+
+#, fuzzy
+#~| msgctxt "BookmarksExportDialog|"
+#~| msgid "Choose..."
+#~ msgctxt "PageScreen|"
+#~ msgid "Browse..."
+#~ msgstr "Izvēlēties..."
+
+#~ msgctxt "JsOptions|"
+#~ msgid "Change window size"
+#~ msgstr "Mainīt loga izmēru"
+
+#~ msgctxt "WebView|"
+#~ msgid "Validate page"
+#~ msgstr "Pārbaudīt lapu"
+
+#~ msgctxt "WebView|"
+#~ msgid "Translate page"
+#~ msgstr "Tulkot lapu"
+
+#~ msgctxt "WebView|"
+#~ msgid "Google Translate"
+#~ msgstr "„Google tulkotājs“"
+
+#~ msgctxt "WebView|"
+#~ msgid "Dictionary"
+#~ msgstr "Vārdnīca"
+
+#, fuzzy
+#~| msgctxt "QupZillaSchemeReply|"
+#~| msgid "Translations"
+#~ msgctxt "FalkonSchemeReply|"
+#~ msgid "Translations"
+#~ msgstr "Tulkojumi"
+
+#~ msgctxt "Preferences|"
+#~ msgid "In order to change language, you must restart browser."
+#~ msgstr "Lai mainītu valodu, lietotne ir jāpārstartē."
+
+#~ msgctxt "Preferences|"
+#~ msgid "<b>Language</b>"
+#~ msgstr "<b>Valoda</b>"
+
+#~ msgctxt "Preferences|"
+#~ msgid "Available translations: "
+#~ msgstr "Pieejamie tulkojumi:"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "About QupZilla"
+#~ msgstr "Par QupZilla"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "Authors"
+#~ msgstr "Autori"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "Authors and Contributors"
+#~ msgstr "Autori un atbalstītāji"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "< About QupZilla"
+#~ msgstr "< Par QupZilla"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "<p><b>Main developer:</b><br/>%1 &lt;%2&gt;</p>"
+#~ msgstr "<p><b>Galvenais izstrādātājs:</b><br/>%1 &lt;%2&gt;</p>"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "<p><b>Contributors:</b><br/>%1</p>"
+#~ msgstr "<p><b>Atbalstītāji:</b><br/>%1</p>"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "<p><b>Translators:</b><br/>%1</p>"
+#~ msgstr "<p><b>Tulkotāji:</b><br/>%1</p>"
+
+#~ msgctxt "BrowserWindow|"
+#~ msgid "QupZilla"
+#~ msgstr "QupZilla"
+
+#~ msgctxt "BrowserWindow|"
+#~ msgid "%1 - QupZilla"
+#~ msgstr "%1 — QupZilla"
+
+#~ msgctxt "MainMenu|"
+#~ msgid "&About QupZilla"
+#~ msgstr "Par &QupZilla"
+
+#~ msgctxt "PopupWindow|"
+#~ msgid "%1 - QupZilla"
+#~ msgstr "%1 — QupZilla"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Report Issue"
+#~ msgstr "Ziņot par problēmu"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid ""
+#~ "If you are experiencing problems with QupZilla, please try to disable all "
+#~ "extensions first. <br/>If this does not fix it, then please fill out this "
+#~ "form: "
+#~ msgstr ""
+#~ "Ja Jums, darbojoties ar „QupZilla“, rodas problēmas, lūdzu, mēģiniet no "
+#~ "sākuma izslēgt visus paplašinājumus. <br/>Jas tas nepalīdz, tad, lūdzu, "
+#~ "aizpildiet šo formu:"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Your E-mail"
+#~ msgstr "Jūsu e-pasta adrese"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Issue type"
+#~ msgstr "Problēmas tips"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Issue description"
+#~ msgstr "Problēmas apraksts"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Send"
+#~ msgstr "Sūtīt"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid ""
+#~ "E-mail is optional<br/><b>Note: </b>Please read how to make a bug report "
+#~ "<a href=%1>here</a> first."
+#~ msgstr ""
+#~ "E-pasts nav obligāts<br/><b>Piezīme: </b>Lūdzu, no sākuma <a href=%1>te</"
+#~ "a> izlasiet, kā veidot kļūdas paziņojumu."
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Please fill out all required fields!"
+#~ msgstr "Lūdzu, aizpildiet visus pieprasītos lauciņus!"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "About QupZilla"
+#~ msgstr "Par „QupZilla“"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Contributors"
+#~ msgstr "Atbalstītāji"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Translators"
+#~ msgstr "Tulkotāji"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Edit"
+#~ msgstr "Rediģēt"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Remove"
+#~ msgstr "Noņemt"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Title"
+#~ msgstr "Nosaukums"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Configuration Information"
+#~ msgstr "Konfigurācijas informācija"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Preferences"
+#~ msgstr "Iestatījumi"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Extensions"
+#~ msgstr "Paplašinājumi"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Description"
+#~ msgstr "Apraksts"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Settings"
+#~ msgstr "Iestatījumi"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Themes"
+#~ msgstr "Tēmas"
+
+#~ msgctxt "SpeedDial|"
+#~ msgid "Image files"
+#~ msgstr "Attēlu datnes"
+
+#~ msgctxt "SpeedDial|"
+#~ msgid "Unable to load"
+#~ msgstr "Neizdodas ielādēt"
+
+#~ msgctxt "WebTab|"
+#~ msgid "Loading..."
+#~ msgstr "Ielādējas..."
+
+#~ msgctxt "WebTab|"
+#~ msgid "%1 - QupZilla"
+#~ msgstr "%1 — QupZilla"

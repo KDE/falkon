@@ -1,0 +1,5730 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"PO-Revision-Date: 2022-09-20 01:55\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/falkon/falkon_qt.pot\n"
+"X-Crowdin-File-ID: 7082\n"
+
+#: lib/3rdparty/lineedit.cpp:102
+msgctxt "LineEdit|"
+msgid "&Undo"
+msgstr "撤销(&U)"
+
+#: lib/3rdparty/lineedit.cpp:107
+msgctxt "LineEdit|"
+msgid "&Redo"
+msgstr "重做(&R)"
+
+#: lib/3rdparty/lineedit.cpp:112
+msgctxt "LineEdit|"
+msgid "Cu&t"
+msgstr "剪切(&T)"
+
+#: lib/3rdparty/lineedit.cpp:117
+msgctxt "LineEdit|"
+msgid "&Copy"
+msgstr "复制(&C)"
+
+#: lib/3rdparty/lineedit.cpp:122
+msgctxt "LineEdit|"
+msgid "&Paste"
+msgstr "粘贴(&P)"
+
+#: lib/3rdparty/lineedit.cpp:131
+msgctxt "LineEdit|"
+msgid "Delete"
+msgstr "删除"
+
+#: lib/3rdparty/lineedit.cpp:134
+msgctxt "LineEdit|"
+msgid "Clear All"
+msgstr "清除全部"
+
+#: lib/3rdparty/lineedit.cpp:137
+msgctxt "LineEdit|"
+msgid "Select All"
+msgstr "选择全部"
+
+#: lib/3rdparty/squeezelabelv2.cpp:64
+msgctxt "SqueezeLabelV2|"
+msgid "Copy"
+msgstr "复制"
+
+#: lib/adblock/adblockaddsubscriptiondialog.cpp:45
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Other..."
+msgstr "其他..."
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:14
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Add Subscription"
+msgstr "添加订阅"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:23
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Title:"
+msgstr "标题："
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:33
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Address:"
+msgstr "地址："
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:53
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Add new subscription to AdBlock:"
+msgstr "向广告屏蔽添加新订阅："
+
+#: lib/adblock/adblockdialog.cpp:49
+msgctxt "AdBlockDialog|"
+msgid "Add Rule"
+msgstr "添加规则"
+
+#: lib/adblock/adblockdialog.cpp:50
+msgctxt "AdBlockDialog|"
+msgid "Remove Rule"
+msgstr "移除规则"
+
+#: lib/adblock/adblockdialog.cpp:52
+msgctxt "AdBlockDialog|"
+msgid "Add Subscription"
+msgstr "添加订阅"
+
+#: lib/adblock/adblockdialog.cpp:53
+msgctxt "AdBlockDialog|"
+msgid "Remove Subscription"
+msgstr "移除订阅"
+
+#: lib/adblock/adblockdialog.cpp:54
+msgctxt "AdBlockDialog|"
+msgid "Update Subscriptions"
+msgstr "更新订阅"
+
+#: lib/adblock/adblockdialog.cpp:56
+msgctxt "AdBlockDialog|"
+msgid "Learn about writing rules..."
+msgstr "了解如何编写规则..."
+
+#: lib/adblock/adblockdialog.ui:14
+msgctxt "AdBlockDialog|"
+msgid "AdBlock Configuration"
+msgstr "广告屏蔽配置"
+
+#: lib/adblock/adblockdialog.ui:20
+msgctxt "AdBlockDialog|"
+msgid "Enable AdBlock"
+msgstr "启用广告屏蔽"
+
+#: lib/adblock/adblockdialog.ui:32
+msgctxt "AdBlockDialog|"
+msgid "Search..."
+msgstr "搜索..."
+
+#: lib/adblock/adblockdialog.ui:77
+msgctxt "AdBlockDialog|"
+msgid "Options"
+msgstr "选项"
+
+#: lib/adblock/adblockdialog.ui:107
+msgctxt "AdBlockDialog|"
+msgid "AdBlock"
+msgstr "AdBlock"
+
+#: lib/adblock/adblockicon.cpp:34
+msgctxt "AdBlockIcon|"
+msgid "AdBlock"
+msgstr "AdBlock"
+
+#: lib/adblock/adblockicon.cpp:52
+msgctxt "AdBlockIcon|"
+msgid "AdBlock Icon"
+msgstr "广告屏蔽图标"
+
+#: lib/adblock/adblockicon.cpp:86
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is disabled"
+msgstr "广告屏蔽已禁用"
+
+#: lib/adblock/adblockicon.cpp:92
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is disabled on this site "
+msgstr "广告屏蔽已在此站点禁用"
+
+#: lib/adblock/adblockicon.cpp:98
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is active"
+msgstr "广告屏蔽正在活动"
+
+#: lib/adblock/adblockicon.cpp:145
+msgctxt "AdBlockIcon|"
+msgid "Show AdBlock &Settings"
+msgstr "显示广告屏蔽设置(&S)"
+
+#: lib/adblock/adblockicon.cpp:153
+#, qt-format
+msgctxt "AdBlockIcon|"
+msgid "Disable on %1"
+msgstr "在 %1 上禁用"
+
+#: lib/adblock/adblockicon.cpp:159
+msgctxt "AdBlockIcon|"
+msgid "Disable only on this page"
+msgstr "只在此页面禁用"
+
+#: lib/adblock/adblockmanager.cpp:184
+#, qt-format
+msgctxt "AdBlockManager|"
+msgid "Do you want to add <b>%1</b> subscription?"
+msgstr "您想要添加 <b>%1</b> 订阅吗？"
+
+#: lib/adblock/adblockmanager.cpp:186
+msgctxt "AdBlockManager|"
+msgid "AdBlock Subscription"
+msgstr "广告屏蔽订阅"
+
+#: lib/adblock/adblockmanager.cpp:317
+msgctxt "AdBlockManager|"
+msgid "EasyList"
+msgstr "EasyList 简易列表"
+
+#: lib/adblock/adblockmanager.cpp:322
+msgctxt "AdBlockManager|"
+msgid "NoCoin List"
+msgstr "NoCoin List 阻止挖矿列表"
+
+#: lib/adblock/adblocksubscription.cpp:173
+msgctxt "AdBlockSubscription|"
+msgid "Cannot load subscription!"
+msgstr "无法加载订阅！"
+
+#: lib/adblock/adblocksubscription.cpp:286
+msgctxt "AdBlockCustomList|"
+msgid "Custom Rules"
+msgstr "自定义规则"
+
+#: lib/adblock/adblocktreewidget.cpp:80
+msgctxt "AdBlockTreeWidget|"
+msgid "Add Rule"
+msgstr "添加规则"
+
+#: lib/adblock/adblocktreewidget.cpp:82
+msgctxt "AdBlockTreeWidget|"
+msgid "Remove Rule"
+msgstr "移除规则"
+
+#: lib/adblock/adblocktreewidget.cpp:141
+msgctxt "AdBlockTreeWidget|"
+msgid "Add Custom Rule"
+msgstr "添加自定义规则"
+
+#: lib/adblock/adblocktreewidget.cpp:141
+msgctxt "AdBlockTreeWidget|"
+msgid "Please write your rule here:"
+msgstr "请在这里写下您的规则："
+
+#: lib/adblock/adblocktreewidget.cpp:179
+#, qt-format
+msgctxt "AdBlockTreeWidget|"
+msgid "%1 (recently updated)"
+msgstr "%1 (最近更新)"
+
+#: lib/adblock/adblocktreewidget.cpp:188
+#, qt-format
+msgctxt "AdBlockTreeWidget|"
+msgid "%1 (Error: %2)"
+msgstr "%1 (错误：%2)"
+
+#: lib/adblock/adblockurlinterceptor.cpp:44
+msgctxt "AdBlockUrlInterceptor|"
+msgid "Blocked content"
+msgstr "屏蔽的内容"
+
+#: lib/adblock/adblockurlinterceptor.cpp:45
+#, qt-format
+msgctxt "AdBlockUrlInterceptor|"
+msgid "Blocked by <i>%1 (%2)</i>"
+msgstr "被 <i>%1 (%2)</i> 屏蔽"
+
+#: lib/app/browserwindow.cpp:204 lib/app/browserwindow.cpp:979
+msgctxt "BrowserWindow|"
+msgid "Falkon"
+msgstr "Falkon"
+
+#: lib/app/browserwindow.cpp:394
+msgctxt "BrowserWindow|"
+msgid "IP Address of current page"
+msgstr "当前页面的 IP 地址"
+
+#: lib/app/browserwindow.cpp:734
+msgctxt "BrowserWindow|"
+msgid " (Private Browsing)"
+msgstr " (隐私浏览)"
+
+#: lib/app/browserwindow.cpp:981
+#, qt-format
+msgctxt "BrowserWindow|"
+msgid "%1 - Falkon"
+msgstr "%1 - Falkon"
+
+#: lib/app/browserwindow.cpp:1047
+msgctxt "BrowserWindow|"
+msgid "&Menu Bar"
+msgstr "菜单栏(&M)"
+
+#: lib/app/browserwindow.cpp:1052
+msgctxt "BrowserWindow|"
+msgid "&Navigation Toolbar"
+msgstr "导航工具栏(&N)"
+
+#: lib/app/browserwindow.cpp:1056
+msgctxt "BrowserWindow|"
+msgid "&Bookmarks Toolbar"
+msgstr "书签工具栏(&B)"
+
+#: lib/app/browserwindow.cpp:1062
+msgctxt "BrowserWindow|"
+msgid "&Tabs on Top"
+msgstr "标签在顶部(&T)"
+
+#: lib/app/browserwindow.cpp:1117
+msgctxt "BrowserWindow|"
+msgid "Other"
+msgstr "其他"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "HTML files"
+msgstr "HTML 文件"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "Image files"
+msgstr "图像文件"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "Text files"
+msgstr "文本文件"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "All files"
+msgstr "所有文件"
+
+#: lib/app/browserwindow.cpp:1161
+msgctxt "BrowserWindow|"
+msgid "Open file..."
+msgstr "打开文件..."
+
+#: lib/app/browserwindow.cpp:1503
+#, qt-format
+msgctxt "BrowserWindow|"
+msgid ""
+"There are still %n open tabs and your session won't be stored.\n"
+"Are you sure you want to close this window?"
+msgid_plural ""
+"There are still %n open tabs and your session won't be stored.\n"
+"Are you sure you want to close this window?"
+msgstr[0] "仍有 %n 个打开的标签页且您的会话不会保存。您确定要关闭此窗口吗？"
+
+#: lib/app/browserwindow.cpp:1504
+msgctxt "BrowserWindow|"
+msgid "Don't ask again"
+msgstr "不再询问"
+
+#: lib/app/browserwindow.cpp:1505
+msgctxt "BrowserWindow|"
+msgid "There are still open tabs"
+msgstr "仍有打开的标签页"
+
+#: lib/app/mainapplication.cpp:1081
+msgctxt "MainApplication|"
+msgid ""
+"Falkon is not currently your default browser. Would you like to make it your "
+"default browser?"
+msgstr "Falkon 目前不是您的默认浏览器。是否要将其设置为默认浏览器？"
+
+#: lib/app/mainapplication.cpp:1082
+msgctxt "MainApplication|"
+msgid "Always perform this check when starting Falkon."
+msgstr "启动 Falkon 时，始终执行此检查。"
+
+#: lib/app/mainapplication.cpp:1084
+msgctxt "MainApplication|"
+msgid "Default Browser"
+msgstr "默认浏览器"
+
+#: lib/app/mainapplication.cpp:1205
+msgctxt "MainApplication|"
+msgid "Open new tab"
+msgstr "打开新标签"
+
+#: lib/app/mainapplication.cpp:1206
+msgctxt "MainApplication|"
+msgid "Open new window"
+msgstr "打开新窗口"
+
+#: lib/app/mainapplication.cpp:1207
+msgctxt "MainApplication|"
+msgid "Open new private window"
+msgstr "打开新的隐私窗口"
+
+#: lib/app/mainapplication.cpp:1222
+msgctxt "MainApplication|"
+msgid ""
+"Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
+"version 3 or (at your option) any later version. It is based on QtWebEngine "
+"and Qt Framework."
+msgstr ""
+"Falkon 是一个全新的快速的 Qt 网页浏览器。Falkon 以 GPL 协议第 3 版 (或更新) "
+"授权。它基于 QtWebEngine 和 Qt 框架。"
+
+#: lib/app/mainmenu.cpp:84 lib/app/mainmenu.cpp:497
+msgctxt "MainMenu|"
+msgid "Sessions"
+msgstr "会话"
+
+#: lib/app/mainmenu.cpp:467
+msgctxt "MainMenu|"
+msgid "&About Falkon"
+msgstr "关于 F&alkon"
+
+#: lib/app/mainmenu.cpp:472
+msgctxt "MainMenu|"
+msgid "Pr&eferences"
+msgstr "首选项(&E)"
+
+#: lib/app/mainmenu.cpp:478
+msgctxt "MainMenu|"
+msgid "Quit"
+msgstr "退出"
+
+#: lib/app/mainmenu.cpp:485
+msgctxt "MainMenu|"
+msgid "&File"
+msgstr "文件(&F)"
+
+#: lib/app/mainmenu.cpp:488
+msgctxt "MainMenu|"
+msgid "New Tab"
+msgstr "新建标签页"
+
+#: lib/app/mainmenu.cpp:489
+msgctxt "MainMenu|"
+msgid "&New Window"
+msgstr "新建窗口(&N)"
+
+#: lib/app/mainmenu.cpp:490
+msgctxt "MainMenu|"
+msgid "New &Private Window"
+msgstr "新建隐私窗口(&P)"
+
+#: lib/app/mainmenu.cpp:491
+msgctxt "MainMenu|"
+msgid "Open Location"
+msgstr "打开位置"
+
+#: lib/app/mainmenu.cpp:492
+msgctxt "MainMenu|"
+msgid "Open &File..."
+msgstr "打开文件(&F)..."
+
+#: lib/app/mainmenu.cpp:493
+msgctxt "MainMenu|"
+msgid "Close Window"
+msgstr "关闭窗口"
+
+#: lib/app/mainmenu.cpp:500
+msgctxt "MainMenu|"
+msgid "Session Manager"
+msgstr "会话管理器"
+
+#: lib/app/mainmenu.cpp:507
+msgctxt "MainMenu|"
+msgid "&Save Page As..."
+msgstr "页面另存为(&S)..."
+
+#: lib/app/mainmenu.cpp:508
+msgctxt "MainMenu|"
+msgid "Send Link..."
+msgstr "发送链接..."
+
+#: lib/app/mainmenu.cpp:509
+msgctxt "MainMenu|"
+msgid "&Print..."
+msgstr "打印(&P)..."
+
+#: lib/app/mainmenu.cpp:514
+msgctxt "MainMenu|"
+msgid "&Edit"
+msgstr "编辑(&E)"
+
+#: lib/app/mainmenu.cpp:517
+msgctxt "MainMenu|"
+msgid "&Undo"
+msgstr "撤销(&U)"
+
+#: lib/app/mainmenu.cpp:519
+msgctxt "MainMenu|"
+msgid "&Redo"
+msgstr "重做(&R)"
+
+#: lib/app/mainmenu.cpp:522
+msgctxt "MainMenu|"
+msgid "&Cut"
+msgstr "&剪切"
+
+#: lib/app/mainmenu.cpp:524
+msgctxt "MainMenu|"
+msgid "C&opy"
+msgstr "复制(&O)"
+
+#: lib/app/mainmenu.cpp:526
+msgctxt "MainMenu|"
+msgid "&Paste"
+msgstr "粘贴(&P)"
+
+#: lib/app/mainmenu.cpp:529
+msgctxt "MainMenu|"
+msgid "Select &All"
+msgstr "全选(&A)"
+
+#: lib/app/mainmenu.cpp:531
+msgctxt "MainMenu|"
+msgid "&Find"
+msgstr "查找(&F)"
+
+#: lib/app/mainmenu.cpp:536
+msgctxt "MainMenu|"
+msgid "&View"
+msgstr "视图(&V)"
+
+#: lib/app/mainmenu.cpp:539
+msgctxt "MainMenu|"
+msgid "Toolbars"
+msgstr "工具栏"
+
+#: lib/app/mainmenu.cpp:541
+msgctxt "MainMenu|"
+msgid "Sidebar"
+msgstr "侧边栏"
+
+#: lib/app/mainmenu.cpp:543
+msgctxt "MainMenu|"
+msgid "Character &Encoding"
+msgstr "字符编码(&E)"
+
+#: lib/app/mainmenu.cpp:552
+msgctxt "MainMenu|"
+msgid "Sta&tus Bar"
+msgstr "状态栏(&T)"
+
+#: lib/app/mainmenu.cpp:554
+msgctxt "MainMenu|"
+msgid "&Stop"
+msgstr "停止(&S)"
+
+#: lib/app/mainmenu.cpp:555
+msgctxt "MainMenu|"
+msgid "&Reload"
+msgstr "重新加载(&R)"
+
+#: lib/app/mainmenu.cpp:557
+msgctxt "MainMenu|"
+msgid "Zoom &In"
+msgstr "放大(&I)"
+
+#: lib/app/mainmenu.cpp:558
+msgctxt "MainMenu|"
+msgid "Zoom &Out"
+msgstr "缩小(&O)"
+
+#: lib/app/mainmenu.cpp:559
+msgctxt "MainMenu|"
+msgid "Reset"
+msgstr "重置"
+
+#: lib/app/mainmenu.cpp:563
+msgctxt "MainMenu|"
+msgid "&Page Source"
+msgstr "页面源码(&P)"
+
+#: lib/app/mainmenu.cpp:565
+msgctxt "MainMenu|"
+msgid "&FullScreen"
+msgstr "全屏(&F)"
+
+#: lib/app/mainmenu.cpp:568
+msgctxt "MainMenu|"
+msgid "&Tools"
+msgstr "工具(&T)"
+
+#: lib/app/mainmenu.cpp:571
+msgctxt "MainMenu|"
+msgid "&Web Search"
+msgstr "&网页搜索"
+
+#: lib/app/mainmenu.cpp:572
+msgctxt "MainMenu|"
+msgid "Site &Info"
+msgstr "站点信息(&I)"
+
+#: lib/app/mainmenu.cpp:575
+msgctxt "MainMenu|"
+msgid "&Download Manager"
+msgstr "&下载管理器"
+
+#: lib/app/mainmenu.cpp:576
+msgctxt "MainMenu|"
+msgid "&Cookies Manager"
+msgstr "&Cookie 管理器"
+
+#: lib/app/mainmenu.cpp:577
+msgctxt "MainMenu|"
+msgid "Web In&spector"
+msgstr "Web 探查器"
+
+#: lib/app/mainmenu.cpp:578
+msgctxt "MainMenu|"
+msgid "Clear Recent &History"
+msgstr "清除近期历史(&H)"
+
+#: lib/app/mainmenu.cpp:583
+msgctxt "MainMenu|"
+msgid "&Extensions"
+msgstr "扩展(&E)"
+
+#: lib/app/mainmenu.cpp:589
+msgctxt "MainMenu|"
+msgid "&Help"
+msgstr "帮助(&H)"
+
+#: lib/app/mainmenu.cpp:592
+msgctxt "MainMenu|"
+msgid "About &Qt"
+msgstr "关于 &Qt"
+
+#: lib/app/mainmenu.cpp:597
+msgctxt "MainMenu|"
+msgid "Information about application"
+msgstr "有关应用的信息"
+
+#: lib/app/mainmenu.cpp:598
+msgctxt "MainMenu|"
+msgid "Configuration Information"
+msgstr "配置信息"
+
+#: lib/app/mainmenu.cpp:599
+msgctxt "MainMenu|"
+msgid "Report &Issue"
+msgstr "报告问题(&I)"
+
+#: lib/app/mainmenu.cpp:612
+msgctxt "MainMenu|"
+msgid "Restore &Closed Tab"
+msgstr "恢复关闭的标签页(&C)"
+
+#: lib/autofill/autofillicon.cpp:29
+msgctxt "AutoFillWidget|"
+msgid "Choose username to login"
+msgstr "选择登录用户名"
+
+#: lib/autofill/autofillnotification.cpp:39
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "on %1"
+msgstr "于 %1"
+
+#: lib/autofill/autofillnotification.cpp:43
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "for <b>%1</b>"
+msgstr "为 <b>%1</b>"
+
+#: lib/autofill/autofillnotification.cpp:47
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "Do you want Falkon to update saved password %1?"
+msgstr "您想让 Falkon 更新已保存的密码 %1 吗？"
+
+#: lib/autofill/autofillnotification.cpp:53
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "Do you want Falkon to remember the password %1 %2?"
+msgstr "您想让 Falkon 记住密码 %1 %2 吗？"
+
+#: lib/autofill/autofillnotification.ui:69
+msgctxt "AutoFillNotification|"
+msgid "Update"
+msgstr "更新"
+
+#: lib/autofill/autofillnotification.ui:85
+msgctxt "AutoFillNotification|"
+msgid "Remember"
+msgstr "记住"
+
+#: lib/autofill/autofillnotification.ui:101
+msgctxt "AutoFillNotification|"
+msgid "Never For This Site"
+msgstr "此网站不再提示"
+
+#: lib/autofill/autofillnotification.ui:117
+msgctxt "AutoFillNotification|"
+msgid "Not Now"
+msgstr "现在不要"
+
+#: lib/autofill/autofillwidget.ui:11
+msgctxt "AutoFillWidget|"
+msgid "Login as:"
+msgstr "登录为："
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:257
+msgctxt "AutoFill|"
+msgid "Database (encrypted)"
+msgstr "数据库 (加密)"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
+msgctxt "MasterPasswordDialog|"
+msgid "Warning!"
+msgstr "警告！"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
+msgctxt "MasterPasswordDialog|"
+msgid "You entered a wrong password!"
+msgstr "您输入了错误的密码！"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
+msgctxt "MasterPasswordDialog|"
+msgid "New/Confirm password fields do not match!"
+msgstr "新密码和确认密码不匹配！"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:578
+msgctxt "AutoFill|"
+msgid "Warning!"
+msgstr "警告！"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:579
+msgctxt "AutoFill|"
+msgid ""
+"This backend needs a master password to be set! Falkon just switches to its "
+"default backend"
+msgstr "此后端需要设置主密码！Falkon 刚切换到了默认后端"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
+msgctxt "MasterPasswordDialog|"
+msgid "Are you sure you want to clear master password and decrypt data?"
+msgstr "您确定要清除主密码并解密数据吗？"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
+msgctxt "MasterPasswordDialog|"
+msgid "Some data has not been decrypted. The master password was not cleared!"
+msgstr "一些数据未被解密。主密码没有被清除！"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:669
+msgctxt "AutoFill|"
+msgid "Enter Master Password"
+msgstr "输入主密码"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:673
+msgctxt "AutoFill|"
+msgid "Permission is required, please enter Master Password:"
+msgstr "需要权限，请输入主密码："
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:679
+msgctxt "AutoFill|"
+msgid "Entered password is wrong!"
+msgstr "密码错误！"
+
+#: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
+msgctxt "AutoFill|"
+msgid "Database (plaintext)"
+msgstr "数据库 (明文)"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:20
+msgctxt "MasterPasswordDialog|"
+msgid "Encrypted DataBase Settings"
+msgstr "加密数据库设置"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:33
+msgctxt "MasterPasswordDialog|"
+msgid "Set/Change Master Password..."
+msgstr "设置/更改主密码..."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:36
+msgctxt "MasterPasswordDialog|"
+msgid "This backend does not work without a master password."
+msgstr "此后端无法在没有主密码的情况下运行。"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:43
+msgctxt "MasterPasswordDialog|"
+msgid "Clear Master Password..."
+msgstr "清除主密码..."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:46
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"This option clears the master password and moves all encrypted data to the "
+"\"DataBase (Plain Text)\" backend, and switches to it."
+msgstr ""
+"此选项清除主密码并将所有加密数据移动到“数据库 (明文)”后端，并切换过去。"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:64
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"The Master Password is used to protect site passwords and form data. If you "
+"set a Master Password you will be asked to enter it once per session."
+msgstr ""
+"主密码用来保护网站密码和表单数据。如果您设置了主密码，每次会话您都会被要求输"
+"入它。"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:76
+msgctxt "MasterPasswordDialog|"
+msgid "Current Password:"
+msgstr "当前密码："
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:83
+msgctxt "MasterPasswordDialog|"
+msgid "New Password:"
+msgstr "新密码:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:90
+msgctxt "MasterPasswordDialog|"
+msgid "Confirm Password:"
+msgstr "确认密码："
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:120
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
+msgstr "<b>注意：</b>主密码无法重置。请千万不要忘记。"
+
+#: lib/bookmarks/bookmarks.cpp:207
+msgctxt "Bookmarks|"
+msgid "Bookmarks Toolbar"
+msgstr "书签工具栏"
+
+#: lib/bookmarks/bookmarks.cpp:208
+msgctxt "Bookmarks|"
+msgid "Bookmarks located in Bookmarks Toolbar"
+msgstr "位于书签工具栏中的书签"
+
+#: lib/bookmarks/bookmarks.cpp:211
+msgctxt "Bookmarks|"
+msgid "Bookmarks Menu"
+msgstr "书签菜单"
+
+#: lib/bookmarks/bookmarks.cpp:212
+msgctxt "Bookmarks|"
+msgid "Bookmarks located in Bookmarks Menu"
+msgstr "书签在书签菜单中的位置"
+
+#: lib/bookmarks/bookmarks.cpp:215
+msgctxt "Bookmarks|"
+msgid "Unsorted Bookmarks"
+msgstr "未排序书签"
+
+#: lib/bookmarks/bookmarks.cpp:216
+msgctxt "Bookmarks|"
+msgid "All other bookmarks"
+msgstr "所有其他书签"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.cpp:64
+msgctxt "BookmarksExportDialog|"
+msgid "Error!"
+msgstr "错误！"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:14
+msgctxt "BookmarksExportDialog|"
+msgid "Export Bookmarks"
+msgstr "导出书签"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:20
+msgctxt "BookmarksExportDialog|"
+msgid "<b>Export Bookmarks</b>"
+msgstr "<b>导出书签</b>"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:27
+msgctxt "BookmarksExportDialog|"
+msgid "Export options"
+msgstr "导出选项"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
+msgctxt "BookmarksExportDialog|"
+msgid "Choose..."
+msgstr "选择..."
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
+msgctxt "BookmarksExportDialog|"
+msgid "Output File:"
+msgstr "输出文件："
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:89
+msgctxt "BookmarksExportDialog|"
+msgid "Format:"
+msgstr "格式："
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:31
+msgctxt "BookmarksExporter|"
+msgid "HTML File"
+msgstr "HTML 文件"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:37
+msgctxt "BookmarksExporter|"
+msgid "HTML Bookmarks"
+msgstr "HTML 书签"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:38
+msgctxt "BookmarksExporter|"
+msgid "Choose file..."
+msgstr "选择文件..."
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:47
+msgctxt "BookmarksExporter|"
+msgid "Cannot open file for writing!"
+msgstr "无法打开要写入的文件！"
+
+#: lib/bookmarks/bookmarksicon.cpp:37 lib/bookmarks/bookmarksicon.cpp:108
+msgctxt "BookmarksIcon|"
+msgid "Bookmark this Page"
+msgstr "将此页加为书签"
+
+#: lib/bookmarks/bookmarksicon.cpp:100
+msgctxt "BookmarksIcon|"
+msgid "Edit this bookmark"
+msgstr "编辑此书签"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:113
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
+msgctxt "BookmarksImportDialog|"
+msgid "Error!"
+msgstr "错误！"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
+msgctxt "BookmarksImportDialog|"
+msgid "No bookmarks were found."
+msgstr "找不到书签。"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:125
+msgctxt "BookmarksImportDialog|"
+msgid "Finish"
+msgstr "完成"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:157
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:270
+msgctxt "BookmarksImportDialog|"
+msgid "Next >"
+msgstr "下一步 >"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:186
+#, qt-format
+msgctxt "BookmarksImportDialog|"
+msgid "<b>Importing from %1</b>"
+msgstr "<b>从 %1 导入</b>"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:20
+msgctxt "BookmarksImportDialog|"
+msgid "Import Bookmarks"
+msgstr "导入书签"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:26
+msgctxt "BookmarksImportDialog|"
+msgid "<b>Import Bookmarks</b>"
+msgstr "<b>导入书签</b>"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:74
+msgctxt "BookmarksImportDialog|"
+msgid "Internet Explorer"
+msgstr "Internet Explorer"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:83
+msgctxt "BookmarksImportDialog|"
+msgid "Html File"
+msgstr "HTML 文件"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:95
+msgctxt "BookmarksImportDialog|"
+msgid "Choose from which you want to import bookmarks:"
+msgstr "选择要从中导入书签的来源："
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:125
+msgctxt "BookmarksImportDialog|"
+msgid "Choose..."
+msgstr "选择..."
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:257
+msgctxt "BookmarksImportDialog|"
+msgid "< Back"
+msgstr "< 后退"
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:32
+msgctxt "BookmarksImporter|"
+msgid ""
+"Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
+"is usually located in"
+msgstr "谷歌 Chrome 将其书签存储在 <b>Bookmarks</b> 文本文件中。此文件通常位于"
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
+msgctxt "BookmarksImporter|"
+msgid "Choose file..."
+msgstr "选择文件..."
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
+msgctxt "BookmarksImporter|"
+msgid "Unable to open file."
+msgstr "无法打开文件."
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:75
+msgctxt "BookmarksImporter|"
+msgid "Cannot parse JSON file!"
+msgstr "无法解析 JSON 文件！"
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:42
+msgctxt "BookmarksImporter|"
+msgid ""
+"Mozilla Firefox stores its bookmarks in <b>places.sqlite</b> SQLite "
+"database. This file is usually located in"
+msgstr ""
+"Mozilla Firefox 将其书签存储在 <b>places. sqlite</b> SQLite 数据库中。此文件"
+"通常位于"
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:70
+msgctxt "BookmarksImportDialog|"
+msgid "File does not exist."
+msgstr "文件不存在。"
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:77
+msgctxt "BookmarksImportDialog|"
+msgid "Unable to open database. Is Firefox running?"
+msgstr "无法打开数据库。Firefox 是否在运行？"
+
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:32
+msgctxt "BookmarksImporter|"
+msgid ""
+"You can import bookmarks from any browser that supports HTML exporting. This "
+"file has usually these suffixes"
+msgstr "您可以从支持 HTML 导出的任何浏览器中导入书签。这个文件通常有这些后缀"
+
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:43
+msgctxt "BookmarksImporter|"
+msgid "HTML Bookmarks"
+msgstr "HTML 书签"
+
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:33
+msgctxt "BookmarksImporter|"
+msgid ""
+"Internet Explorer stores its bookmarks in <b>Favorites</b> folder. This "
+"folder is usually located in"
+msgstr ""
+"Internet Explorer 将其书签存储在<b>收藏夹</b>文件夹中。此文件夹通常位于"
+
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
+msgctxt "BookmarksImporter|"
+msgid "Directory does not exist."
+msgstr "目录不存在."
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
+msgctxt "BookmarksImporter|"
+msgid ""
+"Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
+"usually located in"
+msgstr "Opera 将其书签存储在 <b>bookmarks. adr</b> 文本文件中。此文件通常位于"
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
+msgctxt "BookmarksImporter|"
+msgid "File is not valid Opera bookmarks file!"
+msgstr "文件不是有效的 Opera 书签文件！"
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
+msgctxt "BookmarksImporter|"
+msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
+msgstr "仅支持 UTF-8 编码的 Opera 书签文件！"
+
+#: lib/bookmarks/bookmarksmanager.cpp:105
+msgctxt "BookmarksManager|"
+msgid "Open in new tab"
+msgstr "在新标签页中打开"
+
+#: lib/bookmarks/bookmarksmanager.cpp:106
+msgctxt "BookmarksManager|"
+msgid "Open in new window"
+msgstr "在新窗口中打开"
+
+#: lib/bookmarks/bookmarksmanager.cpp:107
+msgctxt "BookmarksManager|"
+msgid "Open in new private window"
+msgstr "在新隐私窗口中打开"
+
+#: lib/bookmarks/bookmarksmanager.cpp:110
+#: lib/bookmarks/bookmarksmanager.cpp:177
+msgctxt "BookmarksManager|"
+msgid "New Bookmark"
+msgstr "新建书签"
+
+#: lib/bookmarks/bookmarksmanager.cpp:111
+#: lib/bookmarks/bookmarksmanager.cpp:185
+msgctxt "BookmarksManager|"
+msgid "New Folder"
+msgstr "新建文件夹"
+
+#: lib/bookmarks/bookmarksmanager.cpp:112
+msgctxt "BookmarksManager|"
+msgid "New Separator"
+msgstr "新建分隔符"
+
+#: lib/bookmarks/bookmarksmanager.cpp:114
+msgctxt "BookmarksManager|"
+msgid "Delete"
+msgstr "删除"
+
+#: lib/bookmarks/bookmarksmanager.ui:14
+msgctxt "BookmarksManager|"
+msgid "Bookmarks"
+msgstr "书签"
+
+#: lib/bookmarks/bookmarksmanager.ui:32
+msgctxt "BookmarksManager|"
+msgid "Title:"
+msgstr "标题："
+
+#: lib/bookmarks/bookmarksmanager.ui:42
+msgctxt "BookmarksManager|"
+msgid "Address:"
+msgstr "地址："
+
+#: lib/bookmarks/bookmarksmanager.ui:52
+msgctxt "BookmarksManager|"
+msgid "Keyword:"
+msgstr "关键字:"
+
+#: lib/bookmarks/bookmarksmanager.ui:62
+msgctxt "BookmarksManager|"
+msgid "Description"
+msgstr "描述"
+
+#: lib/bookmarks/bookmarksmenu.cpp:166
+msgctxt "BookmarksMenu|"
+msgid "&Bookmarks"
+msgstr "书签(&B)"
+
+#: lib/bookmarks/bookmarksmenu.cpp:168
+msgctxt "BookmarksMenu|"
+msgid "Bookmark &This Page"
+msgstr "将此页加入书签(&T)"
+
+#: lib/bookmarks/bookmarksmenu.cpp:169
+msgctxt "BookmarksMenu|"
+msgid "Bookmark &All Tabs"
+msgstr "将所有标签页加为书签(&A)"
+
+#: lib/bookmarks/bookmarksmenu.cpp:170
+msgctxt "BookmarksMenu|"
+msgid "Organize &Bookmarks"
+msgstr "组织书签(&B)"
+
+#: lib/bookmarks/bookmarksmodel.cpp:147
+msgctxt "BookmarksModel|"
+msgid "Title"
+msgstr "标题"
+
+#: lib/bookmarks/bookmarksmodel.cpp:149
+msgctxt "BookmarksModel|"
+msgid "Address"
+msgstr "地址"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:73
+msgctxt "BookmarksToolbar|"
+msgid "Open in new tab"
+msgstr "在新标签页中打开"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:74
+msgctxt "BookmarksToolbar|"
+msgid "Open in new window"
+msgstr "在新窗口中打开"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:75
+msgctxt "BookmarksToolbar|"
+msgid "Open in new private window"
+msgstr "在新隐私窗口中打开"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:185
+msgctxt "BookmarksToolbar|"
+msgid "New Folder"
+msgstr "新建文件夹"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:78
+msgctxt "BookmarksToolbar|"
+msgid "Edit"
+msgstr "编辑"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:79
+msgctxt "BookmarksToolbar|"
+msgid "Delete"
+msgstr "删除"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:81
+msgctxt "BookmarksToolbar|"
+msgid "Show Only Icons"
+msgstr "仅显示图标"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:85
+msgctxt "BookmarksToolbar|"
+msgid "Show Only Text"
+msgstr "仅显示文本"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:185
+msgctxt "BookmarksToolbar|"
+msgid "Enter Folder Name:"
+msgstr "输入文件夹名称："
+
+#: lib/bookmarks/bookmarkstools.cpp:76
+#, qt-format
+msgctxt "BookmarksFoldersMenu|"
+msgid "Choose %1"
+msgstr "选择 %1"
+
+#: lib/bookmarks/bookmarkstools.cpp:153
+msgctxt "Bookmarks|"
+msgid "Choose name and location of this bookmark."
+msgstr "选择此书签的名称和位置。"
+
+#: lib/bookmarks/bookmarkstools.cpp:157
+msgctxt "Bookmarks|"
+msgid "Add New Bookmark"
+msgstr "添加新书签"
+
+#: lib/bookmarks/bookmarkstools.cpp:197
+msgctxt "Bookmarks|"
+msgid "Choose folder for bookmarks:"
+msgstr "选择书签文件夹："
+
+#: lib/bookmarks/bookmarkstools.cpp:198
+msgctxt "Bookmarks|"
+msgid "Bookmark All Tabs"
+msgstr "为全部标签页添加书签…"
+
+#: lib/bookmarks/bookmarkstools.cpp:239
+msgctxt "Bookmarks|"
+msgid "Title:"
+msgstr "标题："
+
+#: lib/bookmarks/bookmarkstools.cpp:242
+msgctxt "Bookmarks|"
+msgid "Address:"
+msgstr "地址："
+
+#: lib/bookmarks/bookmarkstools.cpp:244
+msgctxt "Bookmarks|"
+msgid "Keyword:"
+msgstr "关键字:"
+
+#: lib/bookmarks/bookmarkstools.cpp:247
+msgctxt "Bookmarks|"
+msgid "Description:"
+msgstr "描述："
+
+#: lib/bookmarks/bookmarkstools.cpp:252
+msgctxt "Bookmarks|"
+msgid "Edit Bookmark"
+msgstr "编辑书签"
+
+#: lib/bookmarks/bookmarkstools.cpp:344
+msgctxt "Bookmarks|"
+msgid "Confirmation"
+msgstr "确认"
+
+#: lib/bookmarks/bookmarkstools.cpp:345
+#, qt-format
+msgctxt "Bookmarks|"
+msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
+msgstr "您确定要在标签页中打开“%1”文件夹中的所有书签吗？"
+
+#: lib/bookmarks/bookmarkstools.cpp:440
+msgctxt "Bookmarks|"
+msgid "Empty"
+msgstr "清空"
+
+#: lib/bookmarks/bookmarkswidget.cpp:98
+msgctxt "BookmarksWidget|"
+msgid "Update Bookmark"
+msgstr "更新书签"
+
+#: lib/bookmarks/bookmarkswidget.cpp:112 lib/bookmarks/bookmarkswidget.ui:33
+msgctxt "BookmarksWidget|"
+msgid "Add to Speed Dial"
+msgstr "添加到快速拨号"
+
+#: lib/bookmarks/bookmarkswidget.cpp:116
+msgctxt "BookmarksWidget|"
+msgid "Remove from Speed Dial"
+msgstr "从快速拨号中删除"
+
+#: lib/bookmarks/bookmarkswidget.cpp:121
+msgctxt "BookmarksWidget|"
+msgid "Remove from Bookmarks"
+msgstr "从书签中移除"
+
+#: lib/bookmarks/bookmarkswidget.ui:20
+msgctxt "BookmarksWidget|"
+msgid "Add to Bookmarks"
+msgstr "添加到书签"
+
+#: lib/cookies/cookiemanager.cpp:78
+msgctxt "CookieManager|"
+msgid "Search"
+msgstr "搜索"
+
+#: lib/cookies/cookiemanager.cpp:105
+msgctxt "CookieManager|"
+msgid "Confirmation"
+msgstr "确认"
+
+#: lib/cookies/cookiemanager.cpp:106
+msgctxt "CookieManager|"
+msgid "Are you sure you want to delete all cookies on your computer?"
+msgstr "确实要删除计算机上的所有 Cookie 吗？"
+
+#: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
+#: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
+#: lib/cookies/cookiemanager.cpp:155 lib/cookies/cookiemanager.cpp:156
+#: lib/cookies/cookiemanager.ui:154 lib/cookies/cookiemanager.ui:164
+#: lib/cookies/cookiemanager.ui:174 lib/cookies/cookiemanager.ui:184
+#: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
+msgctxt "CookieManager|"
+msgid "<cookie not selected>"
+msgstr "<未选中 Cookie>"
+
+#: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
+#: lib/cookies/cookiemanager.ui:245
+msgctxt "CookieManager|"
+msgid "Remove cookies"
+msgstr "删除 Cookie"
+
+#: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
+#: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
+#: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
+msgctxt "CookieManager|"
+msgid "<multiple cookies selected>"
+msgstr "<选中了多个 cookie>"
+
+#: lib/cookies/cookiemanager.cpp:178
+msgctxt "CookieManager|"
+msgid "Secure only"
+msgstr "仅安全连接"
+
+#: lib/cookies/cookiemanager.cpp:178
+msgctxt "CookieManager|"
+msgid "All connections"
+msgstr "所有连接"
+
+#: lib/cookies/cookiemanager.cpp:179
+msgctxt "CookieManager|"
+msgid "Session cookie"
+msgstr "会话 Cookie"
+
+#: lib/cookies/cookiemanager.cpp:181
+msgctxt "CookieManager|"
+msgid "Remove cookie"
+msgstr "删除 Cookie"
+
+#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.ui:126
+msgctxt "CookieManager|"
+msgid "Server:"
+msgstr "服务器："
+
+#: lib/cookies/cookiemanager.cpp:186
+msgctxt "CookieManager|"
+msgid "Add to whitelist"
+msgstr "添加到白名单"
+
+#: lib/cookies/cookiemanager.cpp:193
+msgctxt "CookieManager|"
+msgid "Already blacklisted!"
+msgstr "已经被列入黑名单！"
+
+#: lib/cookies/cookiemanager.cpp:193
+#, qt-format
+msgctxt "CookieManager|"
+msgid "The server \"%1\" is already in blacklist, please remove it first."
+msgstr "服务器“%1”已在黑名单中, 请先将其删除。"
+
+#: lib/cookies/cookiemanager.cpp:209
+msgctxt "CookieManager|"
+msgid "Add to blacklist"
+msgstr "添加到黑名单"
+
+#: lib/cookies/cookiemanager.cpp:220
+msgctxt "CookieManager|"
+msgid "Already whitelisted!"
+msgstr "已经被列入白名单！"
+
+#: lib/cookies/cookiemanager.cpp:220
+#, qt-format
+msgctxt "CookieManager|"
+msgid "The server \"%1\" is already in whitelist, please remove it first."
+msgstr "服务器“%1”已在白名单中, 请先将其删除。"
+
+#: lib/cookies/cookiemanager.ui:14
+msgctxt "CookieManager|"
+msgid "Cookies"
+msgstr "Cookie"
+
+#: lib/cookies/cookiemanager.ui:36
+msgctxt "CookieManager|"
+msgid "Stored Cookies"
+msgstr "存储的 Cookie"
+
+#: lib/cookies/cookiemanager.ui:42
+msgctxt "CookieManager|"
+msgid "Find: "
+msgstr "查找: "
+
+#: lib/cookies/cookiemanager.ui:52
+msgctxt "CookieManager|"
+msgid "These cookies are stored on your computer:"
+msgstr "这些 Cookie 存储在您的计算机上："
+
+#: lib/cookies/cookiemanager.ui:66
+msgctxt "CookieManager|"
+msgid "Server"
+msgstr "服务器"
+
+#: lib/cookies/cookiemanager.ui:71
+msgctxt "CookieManager|"
+msgid "Cookie name"
+msgstr "Cookie 名称"
+
+#: lib/cookies/cookiemanager.ui:109
+msgctxt "CookieManager|"
+msgid "Name:"
+msgstr "名称："
+
+#: lib/cookies/cookiemanager.ui:119
+msgctxt "CookieManager|"
+msgid "Value:"
+msgstr "数值："
+
+#: lib/cookies/cookiemanager.ui:133
+msgctxt "CookieManager|"
+msgid "Path:"
+msgstr "路径："
+
+#: lib/cookies/cookiemanager.ui:140
+msgctxt "CookieManager|"
+msgid "Secure:"
+msgstr "安全："
+
+#: lib/cookies/cookiemanager.ui:147
+msgctxt "CookieManager|"
+msgid "Expiration:"
+msgstr "过期时间："
+
+#: lib/cookies/cookiemanager.ui:238
+msgctxt "CookieManager|"
+msgid "Remove all cookies"
+msgstr "删除全部 Cookie"
+
+#: lib/cookies/cookiemanager.ui:269
+msgctxt "CookieManager|"
+msgid "Cookie Filtering"
+msgstr "过滤 Cookie"
+
+#: lib/cookies/cookiemanager.ui:275
+msgctxt "CookieManager|"
+msgid "<b>Cookie whitelist</b>"
+msgstr "<b>Cookie 白名单</b>"
+
+#: lib/cookies/cookiemanager.ui:282
+msgctxt "CookieManager|"
+msgid ""
+"Cookies from these servers will ALWAYS be accepted (even if you have "
+"disabled saving cookies)"
+msgstr "总是接受这些服务器的 Cookie (即使您已经禁用了 Cookie 保存)"
+
+#: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
+msgctxt "CookieManager|"
+msgid "Add"
+msgstr "添加"
+
+#: lib/cookies/cookiemanager.ui:314 lib/cookies/cookiemanager.ui:368
+msgctxt "CookieManager|"
+msgid "Remove"
+msgstr "删除"
+
+#: lib/cookies/cookiemanager.ui:326
+msgctxt "CookieManager|"
+msgid "<b>Cookie blacklist</b>"
+msgstr "<b>Cookie 黑名单</b>"
+
+#: lib/cookies/cookiemanager.ui:333
+msgctxt "CookieManager|"
+msgid "Cookies from these servers will NEVER be accepted"
+msgstr "用不接受这些服务器的 Cookie"
+
+#: lib/cookies/cookiemanager.ui:385
+msgctxt "CookieManager|"
+msgid "Settings"
+msgstr "设置"
+
+#: lib/cookies/cookiemanager.ui:407
+msgctxt "CookieManager|"
+msgid "Filter 3rd party cookies"
+msgstr "过滤第三方 Cookie"
+
+#: lib/cookies/cookiemanager.ui:414
+msgctxt "CookieManager|"
+msgid "<b>Cookie Settings</b>"
+msgstr "<b>Cookie 设置</b>"
+
+#: lib/cookies/cookiemanager.ui:421
+msgctxt "CookieManager|"
+msgid "Allow storing of cookies"
+msgstr "允许储存 Cookie"
+
+#: lib/cookies/cookiemanager.ui:428
+msgctxt "CookieManager|"
+msgid "Filter tracking cookies"
+msgstr "过滤追踪 Cookie"
+
+#: lib/cookies/cookiemanager.ui:435
+msgctxt "CookieManager|"
+msgid "Delete cookies on close"
+msgstr "关闭时删除 Cookie"
+
+#: lib/downloads/downloaditem.cpp:73
+msgctxt "DownloadItem|"
+msgid "Remaining time unavailable"
+msgstr "剩余时间不可用"
+
+#: lib/downloads/downloaditem.cpp:128
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Done - %1 (%2)"
+msgstr "完成 - %1 (%2)"
+
+#: lib/downloads/downloaditem.cpp:132
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Error - %1"
+msgstr "错误 - %1"
+
+#: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:275
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Cancelled - %1"
+msgstr "已取消 - %1"
+
+#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:319
+msgctxt "DownloadItem|"
+msgid "Cancelled"
+msgstr "已取消"
+
+#: lib/downloads/downloaditem.cpp:190
+msgctxt "DownloadItem|"
+msgid "few seconds"
+msgstr "几秒钟"
+
+#: lib/downloads/downloaditem.cpp:195
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n seconds"
+msgid_plural "%n seconds"
+msgstr[0] "%n 秒"
+
+#: lib/downloads/downloaditem.cpp:200
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n minutes"
+msgid_plural "%n minutes"
+msgstr[0] "%n 分钟"
+
+#: lib/downloads/downloaditem.cpp:205
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n hours"
+msgid_plural "%n hours"
+msgstr[0] "%n 小时"
+
+#: lib/downloads/downloaditem.cpp:212
+msgctxt "DownloadItem|"
+msgid "Unknown speed"
+msgstr "未知速度"
+
+#: lib/downloads/downloaditem.cpp:217
+msgctxt "DownloadItem|"
+msgid "kB/s"
+msgstr "kB/s"
+
+#: lib/downloads/downloaditem.cpp:222
+msgctxt "DownloadItem|"
+msgid "MB/s"
+msgstr "MB/s"
+
+#: lib/downloads/downloaditem.cpp:226
+msgctxt "DownloadItem|"
+msgid "GB/s"
+msgstr "GB/s"
+
+#: lib/downloads/downloaditem.cpp:254
+msgctxt "DownloadItem|"
+msgid "Unknown size"
+msgstr "未知尺寸"
+
+#: lib/downloads/downloaditem.cpp:255
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%2 - unknown size (%3)"
+msgstr "%2 - 未知大小 (%3)"
+
+#: lib/downloads/downloaditem.cpp:258
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Remaining %1 - %2 of %3 (%4)"
+msgstr "剩余 %1 - %2 / %3 (%4)"
+
+#: lib/downloads/downloaditem.cpp:290
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Paused - %1"
+msgstr "已暂停 - %1"
+
+#: lib/downloads/downloaditem.cpp:303
+msgctxt "DownloadItem|"
+msgid "Open File"
+msgstr "打开文件"
+
+#: lib/downloads/downloaditem.cpp:305
+msgctxt "DownloadItem|"
+msgid "Open Folder"
+msgstr "打开文件夹"
+
+#: lib/downloads/downloaditem.cpp:307
+msgctxt "DownloadItem|"
+msgid "Copy Download Link"
+msgstr "复制下载链接"
+
+#: lib/downloads/downloaditem.cpp:309
+msgctxt "DownloadItem|"
+msgid "Cancel downloading"
+msgstr "取消下载"
+
+#: lib/downloads/downloaditem.cpp:312
+msgctxt "DownloadItem|"
+msgid "Resume downloading"
+msgstr "继续下载"
+
+#: lib/downloads/downloaditem.cpp:314
+msgctxt "DownloadItem|"
+msgid "Pause downloading"
+msgstr "暂停下载"
+
+#: lib/downloads/downloaditem.cpp:317
+msgctxt "DownloadItem|"
+msgid "Remove From List"
+msgstr "从列表中移除"
+
+#: lib/downloads/downloaditem.cpp:319
+msgctxt "DownloadItem|"
+msgid "Error"
+msgstr "错误"
+
+#: lib/downloads/downloaditem.cpp:345
+msgctxt "DownloadItem|"
+msgid "Not found"
+msgstr "未找到"
+
+#: lib/downloads/downloaditem.cpp:345
+#, qt-format
+msgctxt "DownloadItem|"
+msgid ""
+"Sorry, the file \n"
+" %1 \n"
+" was not found!"
+msgstr "抱歉，文件 %1 未找到！"
+
+#: lib/downloads/downloadmanager.cpp:188 lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.ui:20
+msgctxt "DownloadManager|"
+msgid "Download Manager"
+msgstr "下载管理器"
+
+#: lib/downloads/downloadmanager.cpp:226
+#, qt-format
+msgctxt "DownloadManager|"
+msgid "%1% of %2 files (%3) %4 remaining"
+msgstr "%2 个文件 (%3) 的 %1% ，剩余 %4"
+
+#: lib/downloads/downloadmanager.cpp:230
+#, qt-format
+msgctxt "DownloadManager|"
+msgid "%1% - Download Manager"
+msgstr "%1% - 下载管理器"
+
+#: lib/downloads/downloadmanager.cpp:300
+msgctxt "DownloadManager|"
+msgid "Save file as..."
+msgstr "文件另存为..."
+
+#: lib/downloads/downloadmanager.cpp:310
+msgctxt "DownloadManager|"
+msgid "MIME HTML Archive (*.mhtml)"
+msgstr "网页归档 (*.mhtml)"
+
+#: lib/downloads/downloadmanager.cpp:311
+msgctxt "DownloadManager|"
+msgid "HTML Page, single (*.html)"
+msgstr "单个 HTML 页面 (*.html)"
+
+#: lib/downloads/downloadmanager.cpp:312
+msgctxt "DownloadManager|"
+msgid "HTML Page, complete (*.html)"
+msgstr "完整 HTML 页面 (*.html)"
+
+#: lib/downloads/downloadmanager.cpp:316
+msgctxt "DownloadManager|"
+msgid "Save page as..."
+msgstr "页面另存为..."
+
+#: lib/downloads/downloadmanager.cpp:410
+msgctxt "DownloadManager|"
+msgid "Falkon: Download Finished"
+msgstr "Falkon：下载已完成"
+
+#: lib/downloads/downloadmanager.cpp:410
+msgctxt "DownloadManager|"
+msgid "All files have been successfully downloaded."
+msgstr "所有文件都已经成功下载"
+
+#: lib/downloads/downloadmanager.cpp:464
+msgctxt "DownloadManager|"
+msgid "Warning"
+msgstr "警告"
+
+#: lib/downloads/downloadmanager.cpp:465
+msgctxt "DownloadManager|"
+msgid ""
+"Are you sure you want to quit? All uncompleted downloads will be cancelled!"
+msgstr "您确定要退出吗？未完成的下载将被取消！"
+
+#: lib/downloads/downloadmanager.ui:69
+msgctxt "DownloadManager|"
+msgid "Clear"
+msgstr "清除"
+
+#: lib/downloads/downloadoptionsdialog.cpp:49
+#, qt-format
+msgctxt "DownloadOptionsDialog|"
+msgid "Opening %1"
+msgstr "正在打开 %1"
+
+#: lib/downloads/downloadoptionsdialog.cpp:112
+msgctxt "DownloadOptionsDialog|"
+msgid "Download link copied."
+msgstr "下载链接已复制。"
+
+#: lib/downloads/downloadoptionsdialog.ui:25
+msgctxt "DownloadOptionsDialog|"
+msgid "What should Falkon do with this file?"
+msgstr "Falkon 应该如何处理此文件？"
+
+#: lib/downloads/downloadoptionsdialog.ui:47
+msgctxt "DownloadOptionsDialog|"
+msgid "Open..."
+msgstr "打开..."
+
+#: lib/downloads/downloadoptionsdialog.ui:54
+msgctxt "DownloadOptionsDialog|"
+msgid "Save File"
+msgstr "保存文件"
+
+#: lib/downloads/downloadoptionsdialog.ui:64
+msgctxt "DownloadOptionsDialog|"
+msgid "Download with External Manager"
+msgstr "使用外部管理器下载"
+
+#: lib/downloads/downloadoptionsdialog.ui:165
+msgctxt "DownloadOptionsDialog|"
+msgid "which is:"
+msgstr "即："
+
+#: lib/downloads/downloadoptionsdialog.ui:215
+msgctxt "DownloadOptionsDialog|"
+msgid "from:"
+msgstr "发件人："
+
+#: lib/downloads/downloadoptionsdialog.ui:241
+msgctxt "DownloadOptionsDialog|"
+msgid "Copy download link"
+msgstr "复制下载链接"
+
+#: lib/downloads/downloadoptionsdialog.ui:256
+msgctxt "DownloadOptionsDialog|"
+msgid "You have chosen to open"
+msgstr "您已选择打开"
+
+#: lib/downloads/downloadsbutton.cpp:27 lib/downloads/downloadsbutton.cpp:43
+msgctxt "DownloadsButton|"
+msgid "Downloads"
+msgstr "下载"
+
+#: lib/downloads/downloadsbutton.cpp:28
+msgctxt "DownloadsButton|"
+msgid "Open Download Manager"
+msgstr "打开下载管理器"
+
+#: lib/history/history.cpp:82
+msgctxt "History|"
+msgid "Empty Page"
+msgstr "空白页"
+
+#: lib/history/history.cpp:272
+msgctxt "History|"
+msgid "January"
+msgstr "一月"
+
+#: lib/history/history.cpp:274
+msgctxt "History|"
+msgid "February"
+msgstr "二月"
+
+#: lib/history/history.cpp:276
+msgctxt "History|"
+msgid "March"
+msgstr "三月"
+
+#: lib/history/history.cpp:278
+msgctxt "History|"
+msgid "April"
+msgstr "四月"
+
+#: lib/history/history.cpp:280
+msgctxt "History|"
+msgid "May"
+msgstr "5月"
+
+#: lib/history/history.cpp:282
+msgctxt "History|"
+msgid "June"
+msgstr "六月"
+
+#: lib/history/history.cpp:284
+msgctxt "History|"
+msgid "July"
+msgstr "七月"
+
+#: lib/history/history.cpp:286
+msgctxt "History|"
+msgid "August"
+msgstr "八月"
+
+#: lib/history/history.cpp:288
+msgctxt "History|"
+msgid "September"
+msgstr "九月"
+
+#: lib/history/history.cpp:290
+msgctxt "History|"
+msgid "October"
+msgstr "十月"
+
+#: lib/history/history.cpp:292
+msgctxt "History|"
+msgid "November"
+msgstr "十一月"
+
+#: lib/history/history.cpp:294
+msgctxt "History|"
+msgid "December"
+msgstr "十二月"
+
+#: lib/history/historymanager.cpp:78
+msgctxt "HistoryManager|"
+msgid "Confirmation"
+msgstr "确认"
+
+#: lib/history/historymanager.cpp:79
+msgctxt "HistoryManager|"
+msgid "Are you sure you want to delete all history?"
+msgstr "您确定要删除全部历史吗?"
+
+#: lib/history/historymanager.cpp:145
+msgctxt "HistoryManager|"
+msgid "Open in new tab"
+msgstr "在新标签页中打开"
+
+#: lib/history/historymanager.cpp:146
+msgctxt "HistoryManager|"
+msgid "Open in new window"
+msgstr "在新窗口中打开"
+
+#: lib/history/historymanager.cpp:147
+msgctxt "HistoryManager|"
+msgid "Open in new private window"
+msgstr "在新隐私窗口中打开"
+
+#: lib/history/historymanager.cpp:150
+msgctxt "HistoryManager|"
+msgid "Copy url"
+msgstr "复制 URL"
+
+#: lib/history/historymanager.cpp:151
+msgctxt "HistoryManager|"
+msgid "Copy title"
+msgstr "复制标题"
+
+#: lib/history/historymanager.cpp:154 lib/history/historymanager.ui:20
+msgctxt "HistoryManager|"
+msgid "Delete"
+msgstr "删除"
+
+#: lib/history/historymanager.ui:14
+msgctxt "HistoryManager|"
+msgid "History"
+msgstr "历史记录"
+
+#: lib/history/historymanager.ui:27
+msgctxt "HistoryManager|"
+msgid "Clear All History"
+msgstr "清除所有历史记录"
+
+#: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
+#: lib/history/historymenu.cpp:186
+msgctxt "HistoryMenu|"
+msgid "Empty"
+msgstr "清空"
+
+#: lib/history/historymenu.cpp:161
+msgctxt "HistoryMenu|"
+msgid "Restore All Closed Tabs"
+msgstr "还原所有已关闭的标签页"
+
+#: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
+msgctxt "HistoryMenu|"
+msgid "Clear list"
+msgstr "清除列表"
+
+#: lib/history/historymenu.cpp:189
+msgctxt "HistoryMenu|"
+msgid "Restore All Closed Windows"
+msgstr "还原所有已关闭的窗口"
+
+#: lib/history/historymenu.cpp:236
+msgctxt "HistoryMenu|"
+msgid "Hi&story"
+msgstr "历史(&S)"
+
+#: lib/history/historymenu.cpp:238
+msgctxt "HistoryMenu|"
+msgid "&Back"
+msgstr "上一步(&B)"
+
+#: lib/history/historymenu.cpp:241
+msgctxt "HistoryMenu|"
+msgid "&Forward"
+msgstr "下一步(&F)"
+
+#: lib/history/historymenu.cpp:244
+msgctxt "HistoryMenu|"
+msgid "&Home"
+msgstr "主页(&H)"
+
+#: lib/history/historymenu.cpp:247
+msgctxt "HistoryMenu|"
+msgid "Show &All History"
+msgstr "显示所有历史记录(&A)"
+
+#: lib/history/historymenu.cpp:255
+msgctxt "HistoryMenu|"
+msgid "Most Visited"
+msgstr "访问最多"
+
+#: lib/history/historymenu.cpp:258
+msgctxt "HistoryMenu|"
+msgid "Closed Tabs"
+msgstr "已关闭的标签"
+
+#: lib/history/historymenu.cpp:261
+msgctxt "HistoryMenu|"
+msgid "Closed Windows"
+msgstr "已关闭的窗口"
+
+#: lib/history/historymodel.cpp:56
+msgctxt "HistoryModel|"
+msgid "Title"
+msgstr "名称"
+
+#: lib/history/historymodel.cpp:58
+msgctxt "HistoryModel|"
+msgid "Address"
+msgstr "地址"
+
+#: lib/history/historymodel.cpp:60
+msgctxt "HistoryModel|"
+msgid "Visit Date"
+msgstr "访问日期"
+
+#: lib/history/historymodel.cpp:62
+msgctxt "HistoryModel|"
+msgid "Visit Count"
+msgstr "访问次数"
+
+#: lib/history/historymodel.cpp:340 lib/history/historymodel.cpp:471
+msgctxt "HistoryModel|"
+msgid "Today"
+msgstr "今天"
+
+#: lib/history/historymodel.cpp:476
+msgctxt "HistoryModel|"
+msgid "This Week"
+msgstr "本周"
+
+#: lib/history/historymodel.cpp:481
+msgctxt "HistoryModel|"
+msgid "This Month"
+msgstr "本月"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:158
+msgctxt "LocationCompleterDelegate|"
+msgid "Visit"
+msgstr "访问"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:164
+#, qt-format
+msgctxt "LocationCompleterDelegate|"
+msgid "Search with %1"
+msgstr "使用 %1 进行搜索"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:198
+msgctxt "LocationCompleterDelegate|"
+msgid "Switch to tab"
+msgstr "切换到标签页"
+
+#: lib/navigation/completer/locationcompleterview.cpp:73
+msgctxt "LocationCompleterView|"
+msgid "Manage Search Engines"
+msgstr "管理搜索引擎"
+
+#: lib/navigation/completer/locationcompleterview.cpp:78
+msgctxt "LocationCompleterView|"
+msgid "Search with:"
+msgstr "搜索引擎："
+
+#: lib/navigation/locationbar.cpp:92
+msgctxt "LocationBar|"
+msgid "Paste And &Go"
+msgstr "粘贴并转到(&G)"
+
+#: lib/navigation/locationbar.cpp:159
+#, qt-format
+msgctxt "LocationBar|"
+msgid "Enter address or search with %1"
+msgstr "输入地址或使用 %1 搜索"
+
+#: lib/navigation/locationbar.cpp:161
+msgctxt "LocationBar|"
+msgid "Enter address"
+msgstr "请输入地址"
+
+#: lib/navigation/navigationbar.cpp:49
+msgctxt "NavigationBar|"
+msgid "Empty Page"
+msgstr "空白页"
+
+#: lib/navigation/navigationbar.cpp:76
+msgctxt "NavigationBar|"
+msgid "Back"
+msgstr "背面"
+
+#: lib/navigation/navigationbar.cpp:86
+msgctxt "NavigationBar|"
+msgid "Forward"
+msgstr "转发"
+
+#: lib/navigation/navigationbar.cpp:106
+msgctxt "NavigationBar|"
+msgid "Home"
+msgstr "Home"
+
+#: lib/navigation/navigationbar.cpp:114
+msgctxt "NavigationBar|"
+msgid "New Tab"
+msgstr "新建标签页"
+
+#: lib/navigation/navigationbar.cpp:134
+msgctxt "NavigationBar|"
+msgid "Tools"
+msgstr "工具"
+
+#: lib/navigation/navigationbar.cpp:147
+msgctxt "NavigationBar|"
+msgid "Main Menu"
+msgstr "主菜单"
+
+#: lib/navigation/navigationbar.cpp:164
+msgctxt "NavigationBar|"
+msgid "Exit Fullscreen"
+msgstr "退出全屏"
+
+#: lib/navigation/navigationbar.cpp:190
+msgctxt "NavigationBar|"
+msgid "Back and Forward buttons"
+msgstr "后退和前进按钮"
+
+#: lib/navigation/navigationbar.cpp:191
+msgctxt "NavigationBar|"
+msgid "Reload button"
+msgstr "重新加载按钮"
+
+#: lib/navigation/navigationbar.cpp:192
+msgctxt "NavigationBar|"
+msgid "Home button"
+msgstr "主文件夹按钮"
+
+#: lib/navigation/navigationbar.cpp:193
+msgctxt "NavigationBar|"
+msgid "Add tab button"
+msgstr "添加标签页按钮"
+
+#: lib/navigation/navigationbar.cpp:194
+msgctxt "NavigationBar|"
+msgid "Address and Search bar"
+msgstr "地址和搜索栏"
+
+#: lib/navigation/navigationbar.cpp:195
+msgctxt "NavigationBar|"
+msgid "Tools button"
+msgstr "工具按钮"
+
+#: lib/navigation/navigationbar.cpp:196
+msgctxt "NavigationBar|"
+msgid "Exit Fullscreen button"
+msgstr "退出全屏按钮"
+
+#: lib/navigation/navigationbar.cpp:393 lib/navigation/navigationbar.cpp:427
+msgctxt "NavigationBar|"
+msgid "Clear history"
+msgstr "清除历史"
+
+#: lib/navigation/navigationbar.cpp:434
+msgctxt "NavigationBar|"
+msgid "Toolbars"
+msgstr "工具栏"
+
+#: lib/navigation/navigationbar.cpp:435
+msgctxt "NavigationBar|"
+msgid "Sidebar"
+msgstr "侧边栏"
+
+#: lib/navigation/navigationbar.cpp:450 lib/navigation/navigationbar.cpp:464
+msgctxt "NavigationBar|"
+msgid "Configure Toolbar"
+msgstr "配置工具栏"
+
+#: lib/navigation/navigationbarconfigdialog.ui:14
+msgctxt "NavigationBarConfigDialog|"
+msgid "Configure Toolbar"
+msgstr "配置工具栏"
+
+#: lib/navigation/navigationbarconfigdialog.ui:62
+msgctxt "NavigationBarConfigDialog|"
+msgid "Show search bar"
+msgstr "显示搜索栏"
+
+#: lib/navigation/navigationbarconfigdialog.ui:82
+msgctxt "NavigationBarConfigDialog|"
+msgid "Available items:"
+msgstr "可用项目："
+
+#: lib/navigation/navigationbarconfigdialog.ui:89
+msgctxt "NavigationBarConfigDialog|"
+msgid "Current items:"
+msgstr "当前项目："
+
+#: lib/navigation/reloadstopbutton.cpp:57
+msgctxt "ReloadStopButton|"
+msgid "Stop"
+msgstr "停止"
+
+#: lib/navigation/reloadstopbutton.cpp:61
+msgctxt "ReloadStopButton|"
+msgid "Reload"
+msgstr "重新加载"
+
+#: lib/navigation/siteicon.cpp:40
+msgctxt "LocationBar|"
+msgid "Show information about this page"
+msgstr "显示有关此页的信息"
+
+#: lib/navigation/websearchbar.cpp:97
+msgctxt "WebSearchBar|"
+msgid "Paste And &Search"
+msgstr "粘贴并搜索(&S)"
+
+#: lib/navigation/websearchbar.cpp:123
+#, qt-format
+msgctxt "WebSearchBar|"
+msgid "Add %1 ..."
+msgstr "添加 %1 ..."
+
+#: lib/navigation/websearchbar.cpp:127
+msgctxt "WebSearchBar|"
+msgid "Manage Search Engines"
+msgstr "管理搜索引擎"
+
+#: lib/navigation/websearchbar.cpp:257
+msgctxt "WebSearchBar|"
+msgid "Show suggestions"
+msgstr "显示建议"
+
+#: lib/navigation/websearchbar.cpp:262
+msgctxt "WebSearchBar|"
+msgid "Search when engine changed"
+msgstr "更改搜索引擎时搜索"
+
+#: lib/network/networkmanager.cpp:84
+msgctxt "NetworkManager|"
+msgid "SSL Certificate Error!"
+msgstr "SSL证书错误！"
+
+#: lib/network/networkmanager.cpp:85
+msgctxt "NetworkManager|"
+msgid ""
+"The page you are trying to access has the following errors in the SSL "
+"certificate:"
+msgstr "您试图访问的页面的 SSL 证书中有以下错误："
+
+#: lib/network/networkmanager.cpp:86
+msgctxt "NetworkManager|"
+msgid "Would you like to make an exception for this certificate?"
+msgstr "是否对此证书进行例外处理？"
+
+#: lib/network/networkmanager.cpp:113
+msgctxt "NetworkManager|"
+msgid "Authorization required"
+msgstr "需要授权"
+
+#: lib/network/networkmanager.cpp:120 lib/network/networkmanager.cpp:206
+msgctxt "NetworkManager|"
+msgid "Username: "
+msgstr "用户名: "
+
+#: lib/network/networkmanager.cpp:121 lib/network/networkmanager.cpp:207
+msgctxt "NetworkManager|"
+msgid "Password: "
+msgstr "密码："
+
+#: lib/network/networkmanager.cpp:127
+msgctxt "NetworkManager|"
+msgid "Save username and password for this site"
+msgstr "保存此网站的用户名和密码"
+
+#: lib/network/networkmanager.cpp:135
+#, qt-format
+msgctxt "NetworkManager|"
+msgid ""
+"A username and password are being requested by %1. The site says: \"%2\""
+msgstr "%1 请求用户名和密码。该网站说：“%2”"
+
+#: lib/network/networkmanager.cpp:199
+msgctxt "NetworkManager|"
+msgid "Proxy authorization required"
+msgstr "需要代理授权"
+
+#: lib/network/networkmanager.cpp:219
+#, qt-format
+msgctxt "NetworkManager|"
+msgid "A username and password are being requested by proxy %1. "
+msgstr "代理 %1 请求用户名和密码。"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:154
+msgctxt "FalkonSchemeReply|"
+msgid "Start Page"
+msgstr "起始页面"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:155
+msgctxt "FalkonSchemeReply|"
+msgid "Search on Web"
+msgstr "搜索网页"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:156
+msgctxt "FalkonSchemeReply|"
+msgid "Search results provided by DuckDuckGo"
+msgstr "DuckDuckGo 提供的搜索结果"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:158
+#: lib/network/schemehandlers/falkonschemehandler.cpp:174
+#: lib/network/schemehandlers/falkonschemehandler.cpp:175
+msgctxt "FalkonSchemeReply|"
+msgid "About Falkon"
+msgstr "关于 Falkon"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:159
+msgctxt "FalkonSchemeReply|"
+msgid "<h1>Private Browsing</h1>"
+msgstr "<h1>隐私浏览</h1>"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:176
+#: lib/network/schemehandlers/falkonschemehandler.cpp:284
+msgctxt "FalkonSchemeReply|"
+msgid "Information about version"
+msgstr "版本信息"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:177
+msgctxt "FalkonSchemeReply|"
+msgid "Copyright"
+msgstr "版权"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+msgctxt "FalkonSchemeReply|"
+msgid "Version"
+msgstr "版本"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:187
+msgctxt "FalkonSchemeReply|"
+msgid "Main developer"
+msgstr "主要开发者"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:208
+msgctxt "FalkonSchemeReply|"
+msgid "Speed Dial"
+msgstr "快速拨号"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:209
+msgctxt "FalkonSchemeReply|"
+msgid "Add New Page"
+msgstr "添加新页面"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:210
+msgctxt "FalkonSchemeReply|"
+msgid "Edit"
+msgstr "编辑"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:211
+msgctxt "FalkonSchemeReply|"
+msgid "Remove"
+msgstr "删除"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:212
+msgctxt "FalkonSchemeReply|"
+msgid "Reload"
+msgstr "重新加载"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:213
+msgctxt "FalkonSchemeReply|"
+msgid "Are you sure you want to remove this speed dial?"
+msgstr "您确定要移除此快速拨号吗？"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:214
+msgctxt "FalkonSchemeReply|"
+msgid "Are you sure you want to reload all speed dials?"
+msgstr "您确定要重新加载所有快速拨号吗？"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:215
+msgctxt "FalkonSchemeReply|"
+msgid "Load title from page"
+msgstr "从页面加载标题"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:216
+msgctxt "FalkonSchemeReply|"
+msgid "SpeedDial requires enabled JavaScript."
+msgstr "快速拨号需要启用 JavaScript。"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:217
+msgctxt "FalkonSchemeReply|"
+msgid "Url"
+msgstr "Url"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:218
+msgctxt "FalkonSchemeReply|"
+msgid "Title"
+msgstr "名称"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:219
+msgctxt "FalkonSchemeReply|"
+msgid "Apply"
+msgstr "执行"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:220
+msgctxt "FalkonSchemeReply|"
+msgid "Cancel"
+msgstr "取消"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:221
+msgctxt "FalkonSchemeReply|"
+msgid "New Page"
+msgstr "新建页面"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:222
+msgctxt "FalkonSchemeReply|"
+msgid "Speed Dial settings"
+msgstr "快速拨号设置"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:223
+msgctxt "FalkonSchemeReply|"
+msgid "Placement: "
+msgstr "位置: "
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:224
+msgctxt "FalkonSchemeReply|"
+msgid "Auto"
+msgstr "自动"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:225
+msgctxt "FalkonSchemeReply|"
+msgid "Cover"
+msgstr "封面"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:226
+msgctxt "FalkonSchemeReply|"
+msgid "Fit"
+msgstr "自适应"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:227
+msgctxt "FalkonSchemeReply|"
+msgid "Fit Width"
+msgstr "适合宽度"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:228
+msgctxt "FalkonSchemeReply|"
+msgid "Fit Height"
+msgstr "适合高度"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:229
+msgctxt "FalkonSchemeReply|"
+msgid "Use custom wallpaper"
+msgstr "使用自定义壁纸"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:230
+msgctxt "FalkonSchemeReply|"
+msgid "Click to select image"
+msgstr "点击选择图像"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:231
+msgctxt "FalkonSchemeReply|"
+msgid "Maximum pages in a row:"
+msgstr "一行的最大页数："
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:232
+msgctxt "FalkonSchemeReply|"
+msgid "Change size of pages:"
+msgstr "更改页面尺寸"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:233
+msgctxt "FalkonSchemeReply|"
+msgid "Center speed dials"
+msgstr "居中快速拨号"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:258
+msgctxt "FalkonSchemeReply|"
+msgid "Restore Session"
+msgstr "恢复会话"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:259
+msgctxt "FalkonSchemeReply|"
+msgid "Oops, Falkon crashed."
+msgstr "哎呀，Falkon 崩溃了。"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:260
+msgctxt "FalkonSchemeReply|"
+msgid "We apologize for this. Would you like to restore the last saved state?"
+msgstr "我们为此道歉。是否要还原上次保存的状态？"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:261
+msgctxt "FalkonSchemeReply|"
+msgid "Try removing one or more tabs that you think cause troubles"
+msgstr "请尝试移除一或多个您认为可能导致问题的标签页"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+msgctxt "FalkonSchemeReply|"
+msgid "Or you can start completely new session"
+msgstr "或者您可以开始一个全新的会话"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+msgctxt "FalkonSchemeReply|"
+msgid "Window"
+msgstr "窗口"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+msgctxt "FalkonSchemeReply|"
+msgid "Windows and Tabs"
+msgstr "窗口和标签页"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+msgctxt "FalkonSchemeReply|"
+msgid "Start New Session"
+msgstr "启动新会话"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+msgctxt "FalkonSchemeReply|"
+msgid "Restore"
+msgstr "还原"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+msgctxt "FalkonSchemeReply|"
+msgid "Requires enabled JavaScript."
+msgstr "需要启用 JavaScript。"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:282
+#: lib/network/schemehandlers/falkonschemehandler.cpp:283
+msgctxt "FalkonSchemeReply|"
+msgid "Configuration Information"
+msgstr "配置信息"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:285
+msgctxt "FalkonSchemeReply|"
+msgid ""
+"This page contains information about Falkon's current configuration - "
+"relevant for troubleshooting. Please include this information when "
+"submitting bug reports."
+msgstr ""
+"此页面包含 Falkon 当前的配置信息，它们与故障排除有关。请在报告程序缺陷时附加"
+"此信息。"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:286
+msgctxt "FalkonSchemeReply|"
+msgid "Browser Identification"
+msgstr "浏览器识别"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:287
+msgctxt "FalkonSchemeReply|"
+msgid "Paths"
+msgstr "路径"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+msgctxt "FalkonSchemeReply|"
+msgid "Build Configuration"
+msgstr "构建配置"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+msgctxt "FalkonSchemeReply|"
+msgid "Preferences"
+msgstr "首选项"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+msgctxt "FalkonSchemeReply|"
+msgid "Option"
+msgstr "选项"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+msgctxt "FalkonSchemeReply|"
+msgid "Value"
+msgstr "值"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:327
+msgctxt "FalkonSchemeReply|"
+msgid "Extensions"
+msgstr "扩展程序"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+msgctxt "FalkonSchemeReply|"
+msgid "Name"
+msgstr "名称"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+msgctxt "FalkonSchemeReply|"
+msgid "Author"
+msgstr "作者"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
+msgctxt "FalkonSchemeReply|"
+msgid "Description"
+msgstr "说明"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:311
+msgctxt "FalkonSchemeReply|"
+msgid "Application version"
+msgstr "应用版本"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:318
+msgctxt "FalkonSchemeReply|"
+msgid "Qt version"
+msgstr "Qt 版本"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:319
+msgctxt "FalkonSchemeReply|"
+msgid "Platform"
+msgstr "设备平台"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:322
+msgctxt "FalkonSchemeReply|"
+msgid "Profile"
+msgstr "项目"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+msgctxt "FalkonSchemeReply|"
+msgid "Settings"
+msgstr "设置"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+msgctxt "FalkonSchemeReply|"
+msgid "Saved session"
+msgstr "保存会话"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
+msgctxt "FalkonSchemeReply|"
+msgid "Data"
+msgstr "数据 "
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:326
+msgctxt "FalkonSchemeReply|"
+msgid "Themes"
+msgstr "主题"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:337
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+msgctxt "FalkonSchemeReply|"
+msgid "<b>Enabled</b>"
+msgstr "<b>已启用</b>"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:339
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+msgctxt "FalkonSchemeReply|"
+msgid "Disabled"
+msgstr "禁止"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:346
+msgctxt "FalkonSchemeReply|"
+msgid "Debug build"
+msgstr "调试构建"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+msgctxt "FalkonSchemeReply|"
+msgid "Windows 7 API"
+msgstr "Windows 7 API"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:350
+msgctxt "FalkonSchemeReply|"
+msgid "Portable build"
+msgstr "便携构建"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:368
+msgctxt "FalkonSchemeReply|"
+msgid "No available extensions."
+msgstr "无可用扩展程序。"
+
+#: lib/network/sslerrordialog.ui:14
+msgctxt "SslErrorDialog|"
+msgid "SSL Certificate Error!"
+msgstr "SSL 证书错误！"
+
+#: lib/notifications/desktopnotificationsfactory.cpp:119
+msgctxt "DesktopNotificationsFactory|"
+msgid "Preview"
+msgstr "预览"
+
+#: lib/notifications/desktopnotificationsfactory.cpp:119
+msgctxt "QObject|"
+msgid "Native System Notification"
+msgstr "原生系统通知"
+
+#: lib/opensearch/editsearchengine.ui:20
+msgctxt "EditSearchEngine|"
+msgid "Name:"
+msgstr "名称："
+
+#: lib/opensearch/editsearchengine.ui:30
+msgctxt "EditSearchEngine|"
+msgid "Url:"
+msgstr "Url："
+
+#: lib/opensearch/editsearchengine.ui:44
+msgctxt "EditSearchEngine|"
+msgid "Shortcut:"
+msgstr "快捷键："
+
+#: lib/opensearch/editsearchengine.ui:54
+msgctxt "EditSearchEngine|"
+msgid "Icon:"
+msgstr "图标："
+
+#: lib/opensearch/editsearchengine.ui:83
+msgctxt "EditSearchEngine|"
+msgid "Change..."
+msgstr "更改..."
+
+#: lib/opensearch/editsearchengine.ui:106
+msgctxt "EditSearchEngine|"
+msgid "<b>Note: </b>%s in url or post data represent searched string"
+msgstr "<b>注意：</b>链接或发送数据中的 %s 表示搜索字符串"
+
+#: lib/opensearch/editsearchengine.ui:123
+msgctxt "EditSearchEngine|"
+msgid "Post Data:"
+msgstr "发送数据："
+
+#: lib/opensearch/opensearchreader.cpp:105
+msgctxt "QObject|"
+msgid "The file is not an OpenSearch 1.1 file."
+msgstr "此文件不是 OpenSearch 1.1 文件。"
+
+#: lib/opensearch/searchenginesdialog.cpp:52
+#: lib/opensearch/searchenginesmanager.cpp:315
+msgctxt "SearchEnginesDialog|"
+msgid "Add Search Engine"
+msgstr "添加搜索引擎"
+
+#: lib/opensearch/searchenginesdialog.cpp:89
+msgctxt "SearchEnginesDialog|"
+msgid "Remove Engine"
+msgstr "删除引擎"
+
+#: lib/opensearch/searchenginesdialog.cpp:90
+#, qt-format
+msgctxt "SearchEnginesDialog|"
+msgid ""
+"You can't remove the default search engine.<br>Set a different engine as "
+"default before removing %1."
+msgstr "您无法移除默认搜索引擎。<br>请在移除 %1 之前设置其他引擎为默认。"
+
+#: lib/opensearch/searchenginesdialog.cpp:107
+msgctxt "SearchEnginesDialog|"
+msgid "Edit Search Engine"
+msgstr "编辑搜索引擎"
+
+#: lib/opensearch/searchenginesdialog.ui:14
+msgctxt "SearchEnginesDialog|"
+msgid "Manage Search Engines"
+msgstr "管理搜索引擎"
+
+#: lib/opensearch/searchenginesdialog.ui:22
+msgctxt "SearchEnginesDialog|"
+msgid "Add..."
+msgstr "添加..."
+
+#: lib/opensearch/searchenginesdialog.ui:29
+msgctxt "SearchEnginesDialog|"
+msgid "Remove"
+msgstr "删除"
+
+#: lib/opensearch/searchenginesdialog.ui:36
+msgctxt "SearchEnginesDialog|"
+msgid "Edit"
+msgstr "编辑"
+
+#: lib/opensearch/searchenginesdialog.ui:56
+msgctxt "SearchEnginesDialog|"
+msgid "Set as default"
+msgstr "设为默认"
+
+#: lib/opensearch/searchenginesdialog.ui:63
+msgctxt "SearchEnginesDialog|"
+msgid "Up"
+msgstr "上移"
+
+#: lib/opensearch/searchenginesdialog.ui:70
+msgctxt "SearchEnginesDialog|"
+msgid "Down"
+msgstr "下移"
+
+#: lib/opensearch/searchenginesdialog.ui:89
+msgctxt "SearchEnginesDialog|"
+msgid "Search Engine"
+msgstr "搜索引擎"
+
+#: lib/opensearch/searchenginesdialog.ui:94
+msgctxt "SearchEnginesDialog|"
+msgid "Shortcut"
+msgstr "快捷键"
+
+#: lib/opensearch/searchenginesdialog.ui:104
+msgctxt "SearchEnginesDialog|"
+msgid "Defaults"
+msgstr "默认"
+
+#: lib/opensearch/searchenginesmanager.cpp:401
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine Added"
+msgstr "已添加搜索引擎"
+
+#: lib/opensearch/searchenginesmanager.cpp:401
+#, qt-format
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine \"%1\" has been successfully added."
+msgstr "已成功添加搜索引擎 \"%1\"。"
+
+#: lib/opensearch/searchenginesmanager.cpp:408
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine is not valid!"
+msgstr "搜索引擎无效！"
+
+#: lib/opensearch/searchenginesmanager.cpp:409
+msgctxt "SearchEnginesManager|"
+msgid "Error"
+msgstr "误差"
+
+#: lib/opensearch/searchenginesmanager.cpp:409
+#, qt-format
+msgctxt "SearchEnginesManager|"
+msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
+msgstr "添加搜索引擎时出错<br><b>错误消息：</b>%1"
+
+#: lib/other/aboutdialog.cpp:51
+#, qt-format
+msgctxt "AboutDialog|"
+msgid "<p><b>Application version %1</b><br/>"
+msgstr "<p><b>应用程序版本 %1</b><br/>"
+
+#: lib/other/aboutdialog.cpp:58
+#, qt-format
+msgctxt "AboutDialog|"
+msgid "<b>QtWebEngine version %1</b></p>"
+msgstr "<b>QtWebEngine 版本 %1</b></p>"
+
+#: lib/other/aboutdialog.ui:14
+msgctxt "AboutDialog|"
+msgid "About Falkon"
+msgstr "关于 Falkon"
+
+#: lib/other/browsinglibrary.cpp:55
+msgctxt "BrowsingLibrary|"
+msgid "History"
+msgstr "历史记录"
+
+#: lib/other/browsinglibrary.cpp:56
+msgctxt "BrowsingLibrary|"
+msgid "Bookmarks"
+msgstr "书签"
+
+#: lib/other/browsinglibrary.cpp:61
+msgctxt "BrowsingLibrary|"
+msgid "Import Bookmarks..."
+msgstr "导入书签..."
+
+#: lib/other/browsinglibrary.cpp:62
+msgctxt "BrowsingLibrary|"
+msgid "Export Bookmarks..."
+msgstr "导出书签..."
+
+#: lib/other/browsinglibrary.ui:14
+msgctxt "BrowsingLibrary|"
+msgid "Library"
+msgstr "库"
+
+#: lib/other/browsinglibrary.ui:64
+msgctxt "BrowsingLibrary|"
+msgid "Import and Export"
+msgstr "导入导出"
+
+#: lib/other/browsinglibrary.ui:84
+msgctxt "BrowsingLibrary|"
+msgid "Search..."
+msgstr "搜索..."
+
+#: lib/other/clearprivatedata.cpp:154
+msgctxt "ClearPrivateData|"
+msgid "Done"
+msgstr "完成"
+
+#: lib/other/clearprivatedata.cpp:172
+msgctxt "ClearPrivateData|"
+msgid "Database Optimized"
+msgstr "优化数据库"
+
+#: lib/other/clearprivatedata.cpp:172
+#, qt-format
+msgctxt "ClearPrivateData|"
+msgid ""
+"Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/"
+"><b>Database Size After: </b>%2"
+msgstr ""
+"数据库优化成功。<br/><br/><b>以前的数据库尺寸：</b>%1<br/><b>现在的数据库尺"
+"寸：</b>%2"
+
+#: lib/other/clearprivatedata.ui:14
+msgctxt "ClearPrivateData|"
+msgid "Clear Recent History"
+msgstr "清除近期历史"
+
+#: lib/other/clearprivatedata.ui:20
+msgctxt "ClearPrivateData|"
+msgid "<b>Clear Recent History</b>"
+msgstr "<b>清除近期历史</b>"
+
+#: lib/other/clearprivatedata.ui:27
+msgctxt "ClearPrivateData|"
+msgid "Edit cookies"
+msgstr "编辑 Cookie"
+
+#: lib/other/clearprivatedata.ui:38
+msgctxt "ClearPrivateData|"
+msgid "Earlier Today"
+msgstr "今天早些时候"
+
+#: lib/other/clearprivatedata.ui:43
+msgctxt "ClearPrivateData|"
+msgid "Week"
+msgstr "周"
+
+#: lib/other/clearprivatedata.ui:48
+msgctxt "ClearPrivateData|"
+msgid "Month"
+msgstr "月份"
+
+#: lib/other/clearprivatedata.ui:53
+msgctxt "ClearPrivateData|"
+msgid "All"
+msgstr "全部"
+
+#: lib/other/clearprivatedata.ui:61
+msgctxt "ClearPrivateData|"
+msgid "Visited pages history from:"
+msgstr "此日期之后的访问的页面历史记录："
+
+#: lib/other/clearprivatedata.ui:71
+msgctxt "ClearPrivateData|"
+msgid "Checked items will be cleared upon clicking the Clear button."
+msgstr "点击“清理”按钮之后，勾选的项目会被清理掉。"
+
+#: lib/other/clearprivatedata.ui:78
+msgctxt "ClearPrivateData|"
+msgid "Local storage"
+msgstr "本地存储"
+
+#: lib/other/clearprivatedata.ui:94
+msgctxt "ClearPrivateData|"
+msgid "Clear"
+msgstr "清除"
+
+#: lib/other/clearprivatedata.ui:114
+msgctxt "ClearPrivateData|"
+msgid "Web databases"
+msgstr "Web 数据库"
+
+#: lib/other/clearprivatedata.ui:124
+msgctxt "ClearPrivateData|"
+msgid "Cache"
+msgstr "缓存"
+
+#: lib/other/clearprivatedata.ui:134
+msgctxt "ClearPrivateData|"
+msgid "Optimize database"
+msgstr "优化数据库"
+
+#: lib/other/clearprivatedata.ui:141
+msgctxt "ClearPrivateData|"
+msgid "Cookies"
+msgstr "Cookie"
+
+#: lib/other/clearprivatedata.ui:158
+msgctxt "ClearPrivateData|"
+msgid "Database"
+msgstr "数据库"
+
+#: lib/other/iconchooser.cpp:41
+msgctxt "IconChooser|"
+msgid "Image files"
+msgstr "图像文件"
+
+#: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
+msgctxt "IconChooser|"
+msgid "Choose icon..."
+msgstr "选择图标..."
+
+#: lib/other/iconchooser.ui:20
+msgctxt "IconChooser|"
+msgid "From file"
+msgstr "从文件"
+
+#: lib/other/iconchooser.ui:29
+msgctxt "IconChooser|"
+msgid "Image (.png, .jpg, .jpeg, .gif)"
+msgstr "图像 (.png, .jpg, .jpeg, .gif)"
+
+#: lib/other/iconchooser.ui:42
+msgctxt "IconChooser|"
+msgid "Choose file..."
+msgstr "选择文件..."
+
+#: lib/other/iconchooser.ui:52
+msgctxt "IconChooser|"
+msgid "From database"
+msgstr "从数据库"
+
+#: lib/other/iconchooser.ui:61
+msgctxt "IconChooser|"
+msgid "Site Url:"
+msgstr "网址："
+
+#: lib/other/licenseviewer.cpp:30
+msgctxt "LicenseViewer|"
+msgid "License Viewer"
+msgstr "许可证查看器"
+
+#: lib/other/protocolhandlerdialog.ui:14
+msgctxt "ProtocolHandlerDialog|"
+msgid "Manage protocol handlers"
+msgstr "管理协议处理程序"
+
+#: lib/other/protocolhandlerdialog.ui:40
+msgctxt "ProtocolHandlerDialog|"
+msgid "Protocol"
+msgstr "协议"
+
+#: lib/other/protocolhandlerdialog.ui:45
+msgctxt "ProtocolHandlerDialog|"
+msgid "Site"
+msgstr "站点"
+
+#: lib/other/protocolhandlerdialog.ui:68
+msgctxt "ProtocolHandlerDialog|"
+msgid "Remove"
+msgstr "移除"
+
+#: lib/other/registerqappassociation.cpp:110
+msgctxt "RegisterQAppAssociation|"
+msgid "Warning!"
+msgstr "警告！"
+
+#: lib/other/registerqappassociation.cpp:111
+msgctxt "RegisterQAppAssociation|"
+msgid ""
+"There are some problems. Please, reinstall Falkon.\n"
+"Maybe relaunch with administrator right do a magic for you! ;)"
+msgstr ""
+"有些问题。请重新安装 Falkon。\n"
+"也许以管理员身份重新启动会有意想不到的效果！;)"
+
+#: lib/other/siteinfo.cpp:68
+msgctxt "SiteInfo|"
+msgid "<b>Connection is Encrypted.</b>"
+msgstr "<b>连接已加密。</b>"
+
+#: lib/other/siteinfo.cpp:70
+msgctxt "SiteInfo|"
+msgid "<b>Connection Not Encrypted.</b>"
+msgstr "<b>连接未加密。</b>"
+
+#: lib/other/siteinfo.cpp:175
+msgctxt "SiteInfo|"
+msgid "Copy Image Location"
+msgstr "复制图像位置"
+
+#: lib/other/siteinfo.cpp:176
+msgctxt "SiteInfo|"
+msgid "Copy Image Name"
+msgstr "复制图像名称"
+
+#: lib/other/siteinfo.cpp:178
+msgctxt "SiteInfo|"
+msgid "Save Image to Disk"
+msgstr "保存图像到磁盘"
+
+#: lib/other/siteinfo.cpp:190
+msgctxt "SiteInfo|"
+msgid "Copy Values"
+msgstr "复制值"
+
+#: lib/other/siteinfo.cpp:191
+msgctxt "SiteInfo|"
+msgid "Copy Tags and Values"
+msgstr "复制标签和值"
+
+#: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
+msgctxt "SiteInfo|"
+msgid "Error!"
+msgstr "错误！"
+
+#: lib/other/siteinfo.cpp:229
+msgctxt "SiteInfo|"
+msgid "This preview is not available!"
+msgstr "预览不可用！"
+
+#: lib/other/siteinfo.cpp:240
+msgctxt "SiteInfo|"
+msgid "Save image..."
+msgstr "保存图像..."
+
+#: lib/other/siteinfo.cpp:248
+msgctxt "SiteInfo|"
+msgid "Cannot write to file!"
+msgstr "无法写入文件!"
+
+#: lib/other/siteinfo.cpp:258
+msgctxt "SiteInfo|"
+msgid "Loading..."
+msgstr "正在加载..."
+
+#: lib/other/siteinfo.cpp:271
+msgctxt "SiteInfo|"
+msgid "Preview not available"
+msgstr "预览不可用"
+
+#: lib/other/siteinfo.ui:14
+msgctxt "SiteInfo|"
+msgid "Site Info"
+msgstr "站点信息"
+
+#: lib/other/siteinfo.ui:47
+msgctxt "SiteInfo|"
+msgid "General"
+msgstr "常规"
+
+#: lib/other/siteinfo.ui:52
+msgctxt "SiteInfo|"
+msgid "Media"
+msgstr "媒体"
+
+#: lib/other/siteinfo.ui:84
+msgctxt "SiteInfo|"
+msgid "Site address:"
+msgstr "站点地址："
+
+#: lib/other/siteinfo.ui:113
+msgctxt "SiteInfo|"
+msgid "Encoding:"
+msgstr "编码："
+
+#: lib/other/siteinfo.ui:132
+msgctxt "SiteInfo|"
+msgid "Meta tags of site:"
+msgstr "网站元标签："
+
+#: lib/other/siteinfo.ui:149
+msgctxt "SiteInfo|"
+msgid "Tag"
+msgstr "标签"
+
+#: lib/other/siteinfo.ui:154
+msgctxt "SiteInfo|"
+msgid "Value"
+msgstr "值"
+
+#: lib/other/siteinfo.ui:168
+msgctxt "SiteInfo|"
+msgid "<b>Security information</b>"
+msgstr "<b>安全信息</b>"
+
+#: lib/other/siteinfo.ui:241
+msgctxt "SiteInfo|"
+msgid "Image"
+msgstr "图片"
+
+#: lib/other/siteinfo.ui:246
+msgctxt "SiteInfo|"
+msgid "Image address"
+msgstr "图像地址"
+
+#: lib/other/siteinfo.ui:271
+msgctxt "SiteInfo|"
+msgid "<b>Preview</b>"
+msgstr "<b>预览</b>"
+
+#: lib/other/siteinfowidget.cpp:42
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "<b>Site %1<b/>"
+msgstr "<b>站点 %1<b/>"
+
+#: lib/other/siteinfowidget.cpp:45
+msgctxt "SiteInfoWidget|"
+msgid "Your connection to this site is <b>secured</b>."
+msgstr "您与此站点的连接是<b>安全的</b>。"
+
+#: lib/other/siteinfowidget.cpp:49
+msgctxt "SiteInfoWidget|"
+msgid "Your connection to this site is <b>unsecured</b>."
+msgstr "您与此站点的连接是<b>不安全的</b>。"
+
+#: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "This is your <b>%1</b> visit of this site."
+msgstr "这是您第 <b>%1</b> 次访问此网站。"
+
+#: lib/other/siteinfowidget.cpp:68
+msgctxt "SiteInfoWidget|"
+msgid "You have <b>never</b> visited this site before."
+msgstr "您有<b>从未</b>访问过此网站。"
+
+#: lib/other/siteinfowidget.cpp:75
+msgctxt "SiteInfoWidget|"
+msgid "first"
+msgstr "第一"
+
+#: lib/other/siteinfowidget.cpp:78
+msgctxt "SiteInfoWidget|"
+msgid "second"
+msgstr "第二"
+
+#: lib/other/siteinfowidget.cpp:81
+msgctxt "SiteInfoWidget|"
+msgid "third"
+msgstr "第三"
+
+#: lib/other/siteinfowidget.cpp:106
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "Register as <b>%1</b> links handler"
+msgstr "注册为 <b>%1</b> 链接处理程序"
+
+#: lib/other/siteinfowidget.cpp:107
+msgctxt "SiteInfoWidget|"
+msgid "Register"
+msgstr "注册"
+
+#: lib/other/siteinfowidget.ui:71
+msgctxt "SiteInfoWidget|"
+msgid "More..."
+msgstr "更多..."
+
+#: lib/other/statusbar.cpp:248
+msgctxt "StatusBar|"
+msgid "Hide"
+msgstr "隐藏"
+
+#: lib/other/updater.cpp:151
+msgctxt "Updater|"
+msgid "Update available"
+msgstr "有可用更新"
+
+#: lib/other/updater.cpp:151
+msgctxt "Updater|"
+msgid "New version of Falkon is ready to download."
+msgstr "新版本的 Falkon 已经可供下载。"
+
+#: lib/other/updater.cpp:160
+msgctxt "Updater|"
+msgid "Update"
+msgstr "更新"
+
+#: lib/popupwindow/popupwebview.cpp:100
+msgctxt "PopupWebView|"
+msgid "Inspect Element"
+msgstr "检查元素"
+
+#: lib/popupwindow/popupwindow.cpp:83
+msgctxt "PopupWindow|"
+msgid "File"
+msgstr "文件"
+
+#: lib/popupwindow/popupwindow.cpp:84
+msgctxt "PopupWindow|"
+msgid "Send Link..."
+msgstr "发送链接..."
+
+#: lib/popupwindow/popupwindow.cpp:85
+msgctxt "PopupWindow|"
+msgid "&Print..."
+msgstr "打印(&P)..."
+
+#: lib/popupwindow/popupwindow.cpp:87
+msgctxt "PopupWindow|"
+msgid "Close"
+msgstr "关闭"
+
+#: lib/popupwindow/popupwindow.cpp:90
+msgctxt "PopupWindow|"
+msgid "Edit"
+msgstr "编辑"
+
+#: lib/popupwindow/popupwindow.cpp:99
+msgctxt "PopupWindow|"
+msgid "Find"
+msgstr "查找"
+
+#: lib/popupwindow/popupwindow.cpp:102
+msgctxt "PopupWindow|"
+msgid "View"
+msgstr "查看"
+
+#: lib/popupwindow/popupwindow.cpp:103
+msgctxt "PopupWindow|"
+msgid "&Stop"
+msgstr "停止(&S)"
+
+#: lib/popupwindow/popupwindow.cpp:105
+msgctxt "PopupWindow|"
+msgid "&Reload"
+msgstr "重新加载(&R)"
+
+#: lib/popupwindow/popupwindow.cpp:108
+msgctxt "PopupWindow|"
+msgid "Zoom &In"
+msgstr "放大(&I)"
+
+#: lib/popupwindow/popupwindow.cpp:109
+msgctxt "PopupWindow|"
+msgid "Zoom &Out"
+msgstr "缩小(&O)"
+
+#: lib/popupwindow/popupwindow.cpp:110
+msgctxt "PopupWindow|"
+msgid "Reset"
+msgstr "复位"
+
+#: lib/popupwindow/popupwindow.cpp:112
+msgctxt "PopupWindow|"
+msgid "&Page Source"
+msgstr "页面源码(&P)"
+
+#: lib/popupwindow/popupwindow.cpp:271
+#, qt-format
+msgctxt "PopupWindow|"
+msgid "%1 - Falkon"
+msgstr "%1 - Falkon"
+
+#: lib/preferences/acceptlanguage.cpp:99 lib/preferences/acceptlanguage.cpp:160
+#, qt-format
+msgctxt "AcceptLanguage|"
+msgid "Personal [%1]"
+msgstr "个人 [%1]"
+
+#: lib/preferences/acceptlanguage.ui:14
+msgctxt "AcceptLanguage|"
+msgid "Preferred Languages"
+msgstr "首选语言"
+
+#: lib/preferences/acceptlanguage.ui:25
+msgctxt "AcceptLanguage|"
+msgid "Add..."
+msgstr "添加..."
+
+#: lib/preferences/acceptlanguage.ui:32
+msgctxt "AcceptLanguage|"
+msgid "Remove"
+msgstr "移除"
+
+#: lib/preferences/acceptlanguage.ui:39
+msgctxt "AcceptLanguage|"
+msgid "Up"
+msgstr "上移"
+
+#: lib/preferences/acceptlanguage.ui:46
+msgctxt "AcceptLanguage|"
+msgid "Down"
+msgstr "下移"
+
+#: lib/preferences/addacceptlanguage.ui:14
+msgctxt "AddAcceptLanguage|"
+msgid "Add Language"
+msgstr "添加语言"
+
+#: lib/preferences/addacceptlanguage.ui:20
+msgctxt "AddAcceptLanguage|"
+msgid "Choose preferred language for web sites"
+msgstr "选择偏好的网站语言"
+
+#: lib/preferences/addacceptlanguage.ui:32
+msgctxt "AddAcceptLanguage|"
+msgid "Personal definition:"
+msgstr "个人定义："
+
+#: lib/preferences/autofillmanager.cpp:67
+msgctxt "AutoFillManager|"
+msgid "Import Passwords from File..."
+msgstr "从文件导入密码..."
+
+#: lib/preferences/autofillmanager.cpp:68
+msgctxt "AutoFillManager|"
+msgid "Export Passwords to File..."
+msgstr "导出密码文件..."
+
+#: lib/preferences/autofillmanager.cpp:70
+msgctxt "AutoFillManager|"
+msgid "Search"
+msgstr "搜索"
+
+#: lib/preferences/autofillmanager.cpp:82
+#: lib/preferences/autofillmanager.cpp:171
+#: lib/preferences/autofillmanager.cpp:179
+#: lib/preferences/autofillmanager.ui:140
+msgctxt "AutoFillManager|"
+msgid "Show Passwords"
+msgstr "显示密码"
+
+#: lib/preferences/autofillmanager.cpp:130
+msgctxt "AutoFillManager|"
+msgid "Change backend..."
+msgstr "更改后端..."
+
+#: lib/preferences/autofillmanager.cpp:130
+msgctxt "AutoFillManager|"
+msgid "Change backend:"
+msgstr "更改后端："
+
+#: lib/preferences/autofillmanager.cpp:179
+msgctxt "AutoFillManager|"
+msgid "Are you sure that you want to show all passwords?"
+msgstr "您确定要显示所有密码吗？"
+
+#: lib/preferences/autofillmanager.cpp:194
+msgctxt "AutoFillManager|"
+msgid "Hide Passwords"
+msgstr "隐藏密码"
+
+#: lib/preferences/autofillmanager.cpp:232
+msgctxt "AutoFillManager|"
+msgid "Confirmation"
+msgstr "确认"
+
+#: lib/preferences/autofillmanager.cpp:233
+msgctxt "AutoFillManager|"
+msgid "Are you sure you want to delete all passwords on your computer?"
+msgstr "确实要删除计算机上的所有密码吗？"
+
+#: lib/preferences/autofillmanager.cpp:252
+msgctxt "AutoFillManager|"
+msgid "Edit password"
+msgstr "编辑密码"
+
+#: lib/preferences/autofillmanager.cpp:252
+msgctxt "AutoFillManager|"
+msgid "Change password:"
+msgstr "更改密码:"
+
+#: lib/preferences/autofillmanager.cpp:301
+#: lib/preferences/autofillmanager.cpp:312
+msgctxt "AutoFillManager|"
+msgid "Choose file..."
+msgstr "选择文件..."
+
+#: lib/preferences/autofillmanager.cpp:326
+msgctxt "AutoFillManager|"
+msgid "Cannot read file!"
+msgstr "无法读取文件！"
+
+#: lib/preferences/autofillmanager.cpp:335
+msgctxt "AutoFillManager|"
+msgid "Successfully imported"
+msgstr "成功导入"
+
+#: lib/preferences/autofillmanager.cpp:335
+msgctxt "AutoFillManager|"
+msgid "Error while importing!"
+msgstr "导入时出错！"
+
+#: lib/preferences/autofillmanager.cpp:346
+msgctxt "AutoFillManager|"
+msgid "Cannot write to file!"
+msgstr "无法写入文件!"
+
+#: lib/preferences/autofillmanager.cpp:355
+msgctxt "AutoFillManager|"
+msgid "Successfully exported"
+msgstr "成功导出"
+
+#: lib/preferences/autofillmanager.cpp:372
+msgctxt "AutoFillManager|"
+msgid "Copy Username"
+msgstr "复制用户名"
+
+#: lib/preferences/autofillmanager.cpp:373
+msgctxt "AutoFillManager|"
+msgid "Copy Password"
+msgstr "复制密码"
+
+#: lib/preferences/autofillmanager.cpp:375
+msgctxt "AutoFillManager|"
+msgid "Edit Password"
+msgstr "修改密码"
+
+#: lib/preferences/autofillmanager.ui:25
+msgctxt "AutoFillManager|"
+msgid "Passwords are stored in:"
+msgstr "密码存储在："
+
+#: lib/preferences/autofillmanager.ui:35
+msgctxt "AutoFillManager|"
+msgid "Change backend"
+msgstr "更改后端"
+
+#: lib/preferences/autofillmanager.ui:42
+msgctxt "AutoFillManager|"
+msgid "Backend options"
+msgstr "后端选项"
+
+#: lib/preferences/autofillmanager.ui:71
+msgctxt "AutoFillManager|"
+msgid "Passwords"
+msgstr "密码"
+
+#: lib/preferences/autofillmanager.ui:87 lib/preferences/autofillmanager.ui:201
+msgctxt "AutoFillManager|"
+msgid "Server"
+msgstr "服务器"
+
+#: lib/preferences/autofillmanager.ui:92
+msgctxt "AutoFillManager|"
+msgid "Username"
+msgstr "用户名"
+
+#: lib/preferences/autofillmanager.ui:97
+msgctxt "AutoFillManager|"
+msgid "Password"
+msgstr "密码"
+
+#: lib/preferences/autofillmanager.ui:113
+msgctxt "AutoFillManager|"
+msgid "Import and Export"
+msgstr "导入导出"
+
+#: lib/preferences/autofillmanager.ui:154
+msgctxt "AutoFillManager|"
+msgid "Edit"
+msgstr "编辑"
+
+#: lib/preferences/autofillmanager.ui:161
+#: lib/preferences/autofillmanager.ui:211
+msgctxt "AutoFillManager|"
+msgid "Remove"
+msgstr "删除"
+
+#: lib/preferences/autofillmanager.ui:168
+#: lib/preferences/autofillmanager.ui:218
+msgctxt "AutoFillManager|"
+msgid "Remove All"
+msgstr "移除全部"
+
+#: lib/preferences/autofillmanager.ui:191
+msgctxt "AutoFillManager|"
+msgid "Exceptions"
+msgstr "例外"
+
+#: lib/preferences/jsoptions.ui:14
+msgctxt "JsOptions|"
+msgid "JavaScript Options"
+msgstr "JavaScript 选项"
+
+#: lib/preferences/jsoptions.ui:20
+msgctxt "JsOptions|"
+msgid "Allow JavaScript to:"
+msgstr "允许 JavaScript："
+
+#: lib/preferences/jsoptions.ui:29
+msgctxt "JsOptions|"
+msgid "Open popup windows"
+msgstr "打开弹出窗口"
+
+#: lib/preferences/jsoptions.ui:36
+msgctxt "JsOptions|"
+msgid "Activate windows"
+msgstr "激活窗口"
+
+#: lib/preferences/jsoptions.ui:43
+msgctxt "JsOptions|"
+msgid "Access clipboard"
+msgstr "访问剪贴板"
+
+#: lib/preferences/jsoptions.ui:50
+msgctxt "JsOptions|"
+msgid "Paste from clipboard"
+msgstr "从剪贴板粘贴"
+
+#: lib/preferences/pluginslist.ui:17
+msgctxt "PluginsList|"
+msgid "Enter name"
+msgstr "输入名称"
+
+#: lib/preferences/pluginslist.ui:51
+msgctxt "PluginsList|"
+msgid "Settings"
+msgstr "设置"
+
+#: lib/preferences/pluginslist.ui:61
+msgctxt "PluginsList|"
+msgid "Remove"
+msgstr "移除"
+
+#: lib/preferences/pluginslist.ui:81
+msgctxt "PluginsList|"
+msgid ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
+msgstr "<a href=\"https://store.kde.org/browse/cat/571/\">获取更多扩展...</a>"
+
+#: lib/preferences/pluginsmanager.cpp:198
+msgctxt "PluginsManager|"
+msgid "Error!"
+msgstr "错误！"
+
+#: lib/preferences/pluginsmanager.cpp:198
+msgctxt "PluginsManager|"
+msgid "Cannot load extension!"
+msgstr "无法加载扩展"
+
+#: lib/preferences/pluginsmanager.cpp:237
+msgctxt "PluginsManager|"
+msgid "Confirmation"
+msgstr "确认"
+
+#: lib/preferences/pluginsmanager.cpp:238
+#, qt-format
+msgctxt "PluginsManager|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "您确定要移除“%1”吗？"
+
+#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:602
+msgctxt "Preferences|"
+msgid "Default"
+msgstr "默认"
+
+#: lib/preferences/preferences.cpp:155
+msgctxt "Preferences|"
+msgid "Set as default"
+msgstr "设为默认"
+
+#: lib/preferences/preferences.cpp:545
+msgctxt "Preferences|"
+msgid "Choose executable location..."
+msgstr "选择可执行程序位置..."
+
+#: lib/preferences/preferences.cpp:588
+msgctxt "Preferences|"
+msgid "OSD Notification"
+msgstr "OSD 通知"
+
+#: lib/preferences/preferences.cpp:589
+msgctxt "Preferences|"
+msgid "Drag it on the screen to place it where you want."
+msgstr "在屏幕上拖动它，放置到您喜欢的位置。"
+
+#: lib/preferences/preferences.cpp:638
+msgctxt "Preferences|"
+msgid "Choose download location..."
+msgstr "选择下载位置..."
+
+#: lib/preferences/preferences.cpp:652
+msgctxt "Preferences|"
+msgid "Choose stylesheet location..."
+msgstr "选择样式表位置..."
+
+#: lib/preferences/preferences.cpp:663
+msgctxt "Preferences|"
+msgid "Deleted"
+msgstr "已删除"
+
+#: lib/preferences/preferences.cpp:759
+msgctxt "Preferences|"
+msgid "Choose cache path..."
+msgstr "选择换从路径..."
+
+#: lib/preferences/preferences.cpp:790
+msgctxt "Preferences|"
+msgid "New Profile"
+msgstr "新建配置方案"
+
+#: lib/preferences/preferences.cpp:790
+msgctxt "Preferences|"
+msgid "Enter the new profile's name:"
+msgstr "输入新配置的名称："
+
+#: lib/preferences/preferences.cpp:800 lib/preferences/preferences.cpp:805
+msgctxt "Preferences|"
+msgid "Error!"
+msgstr "错误！"
+
+#: lib/preferences/preferences.cpp:800
+msgctxt "Preferences|"
+msgid "This profile already exists!"
+msgstr "配置文件已存在！"
+
+#: lib/preferences/preferences.cpp:805
+msgctxt "Preferences|"
+msgid "Cannot create profile directory!"
+msgstr "无法创建配置文件目录！"
+
+#: lib/preferences/preferences.cpp:816
+msgctxt "Preferences|"
+msgid "Confirmation"
+msgstr "确认"
+
+#: lib/preferences/preferences.cpp:817
+#, qt-format
+msgctxt "Preferences|"
+msgid ""
+"Are you sure you want to permanently delete \"%1\" profile? This action "
+"cannot be undone!"
+msgstr "您确定要永久删除“%1”配置文件吗？此操作无法撤销！"
+
+#: lib/preferences/preferences.cpp:832 lib/preferences/preferences.ui:227
+msgctxt "Preferences|"
+msgid "Note: You cannot delete active profile."
+msgstr "注意：您无法删除活动的配置文件。"
+
+#: lib/preferences/preferences.cpp:1089
+msgctxt "Preferences|"
+msgid "Select Color"
+msgstr "选择颜色"
+
+#: lib/preferences/preferences.ui:14
+msgctxt "Preferences|"
+msgid "Preferences"
+msgstr "首选项"
+
+#: lib/preferences/preferences.ui:60
+msgctxt "Preferences|"
+msgid "General"
+msgstr "常规"
+
+#: lib/preferences/preferences.ui:65
+msgctxt "Preferences|"
+msgid "Appearance"
+msgstr "外观"
+
+#: lib/preferences/preferences.ui:70
+msgctxt "Preferences|"
+msgid "Tabs"
+msgstr "标签页"
+
+#: lib/preferences/preferences.ui:75
+msgctxt "Preferences|"
+msgid "Browsing"
+msgstr "浏览"
+
+#: lib/preferences/preferences.ui:80
+msgctxt "Preferences|"
+msgid "Fonts"
+msgstr "字体"
+
+#: lib/preferences/preferences.ui:85
+msgctxt "Preferences|"
+msgid "Keyboard Shortcuts"
+msgstr "键盘快捷键"
+
+#: lib/preferences/preferences.ui:90
+msgctxt "Preferences|"
+msgid "Downloads"
+msgstr "下载"
+
+#: lib/preferences/preferences.ui:95
+msgctxt "Preferences|"
+msgid "Password Manager"
+msgstr "密码管理器"
+
+#: lib/preferences/preferences.ui:100
+msgctxt "Preferences|"
+msgid "Privacy"
+msgstr "隐私"
+
+#: lib/preferences/preferences.ui:105
+msgctxt "Preferences|"
+msgid "Notifications"
+msgstr "通知"
+
+#: lib/preferences/preferences.ui:110
+msgctxt "Preferences|"
+msgid "Extensions"
+msgstr "扩展程序"
+
+#: lib/preferences/preferences.ui:115
+msgctxt "Preferences|"
+msgid "Spell Check"
+msgstr "拼写检查"
+
+#: lib/preferences/preferences.ui:120
+msgctxt "Preferences|"
+msgid "Other"
+msgstr "其他"
+
+#: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
+msgctxt "Preferences|"
+msgid "Use current"
+msgstr "使用当前设定"
+
+#: lib/preferences/preferences.ui:243
+msgctxt "Preferences|"
+msgid "Create New"
+msgstr "新建"
+
+#: lib/preferences/preferences.ui:259
+msgctxt "Preferences|"
+msgid "Delete"
+msgstr "删除"
+
+#: lib/preferences/preferences.ui:285
+msgctxt "Preferences|"
+msgid "<b>Launching</b>"
+msgstr "<b>加载</b>"
+
+#: lib/preferences/preferences.ui:295
+msgctxt "Preferences|"
+msgid "After launch: "
+msgstr "加载后："
+
+#: lib/preferences/preferences.ui:303
+msgctxt "Preferences|"
+msgid "Open blank page"
+msgstr "打开空白页"
+
+#: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
+msgctxt "Preferences|"
+msgid "Open homepage"
+msgstr "打开主页"
+
+#: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
+msgctxt "Preferences|"
+msgid "Open speed dial"
+msgstr "打开快速拨号"
+
+#: lib/preferences/preferences.ui:318
+msgctxt "Preferences|"
+msgid "Restore session"
+msgstr "恢复会话"
+
+#: lib/preferences/preferences.ui:323
+msgctxt "Preferences|"
+msgid "Select session"
+msgstr "选择会话"
+
+#: lib/preferences/preferences.ui:331
+msgctxt "Preferences|"
+msgid "Homepage: "
+msgstr "主页："
+
+#: lib/preferences/preferences.ui:352
+msgctxt "Preferences|"
+msgid "On new tab: "
+msgstr "在新标签页："
+
+#: lib/preferences/preferences.ui:360
+msgctxt "Preferences|"
+msgid "Open blank tab"
+msgstr "打开空白标签页"
+
+#: lib/preferences/preferences.ui:375
+msgctxt "Preferences|"
+msgid "Open other page..."
+msgstr "打开其他页面..."
+
+#: lib/preferences/preferences.ui:383
+msgctxt "Preferences|"
+msgid "<b>Profiles</b>"
+msgstr "<b>配置方案</b>"
+
+#: lib/preferences/preferences.ui:390
+msgctxt "Preferences|"
+msgid "Startup profile:"
+msgstr "启动时的配置文件："
+
+#: lib/preferences/preferences.ui:397
+msgctxt "Preferences|"
+msgid "Check for updates on start"
+msgstr "启动时检查更新"
+
+#: lib/preferences/preferences.ui:404
+msgctxt "Preferences|"
+msgid "Active profile:"
+msgstr "激活配置:"
+
+#: lib/preferences/preferences.ui:418
+msgctxt "Preferences|"
+msgid "Don't load tabs until selected"
+msgstr "选中前不要加载标签页"
+
+#: lib/preferences/preferences.ui:440
+msgctxt "Preferences|"
+msgid "Check to see if Falkon is the default browser on startup"
+msgstr "选中此项在每次启动时检查 Falkon 是否是默认浏览器"
+
+#: lib/preferences/preferences.ui:450
+msgctxt "Preferences|"
+msgid "Check Now"
+msgstr "立即检查"
+
+#: lib/preferences/preferences.ui:480
+msgctxt "Preferences|"
+msgid "Themes"
+msgstr "主题"
+
+#: lib/preferences/preferences.ui:502
+msgctxt "Preferences|"
+msgid "Advanced options"
+msgstr "高级选项"
+
+#: lib/preferences/preferences.ui:510
+msgctxt "Preferences|"
+msgid "Show StatusBar on start"
+msgstr "启动时显示状态栏"
+
+#: lib/preferences/preferences.ui:517
+msgctxt "Preferences|"
+msgid "Show Bookmarks ToolBar on start"
+msgstr "启动时显示书签工具栏"
+
+#: lib/preferences/preferences.ui:524
+msgctxt "Preferences|"
+msgid "Show Navigation ToolBar on start"
+msgstr "启动时显示导航工具栏"
+
+#: lib/preferences/preferences.ui:531
+msgctxt "Preferences|"
+msgid "Enable instant Bookmarks ToolBar"
+msgstr "启用即时书签工具栏"
+
+#: lib/preferences/preferences.ui:553
+msgctxt "Preferences|"
+msgid "<b>Browser Window</b>"
+msgstr "<b>浏览器窗口</b>"
+
+#: lib/preferences/preferences.ui:601
+msgctxt "Preferences|"
+msgid "Tabs behaviour"
+msgstr "标签页行为"
+
+#: lib/preferences/preferences.ui:607
+msgctxt "Preferences|"
+msgid "Hide tabs when there is only one tab"
+msgstr "仅有一个标签页时隐藏标签"
+
+#: lib/preferences/preferences.ui:614
+msgctxt "Preferences|"
+msgid "Activate last tab when closing active tab"
+msgstr "关闭活动标签页时，激活上一个标签页"
+
+#: lib/preferences/preferences.ui:621
+msgctxt "Preferences|"
+msgid "Open new tabs after active tab"
+msgstr "在活动标签页之后打开新标签页"
+
+#: lib/preferences/preferences.ui:628
+msgctxt "Preferences|"
+msgid "Open new empty tabs after active tab"
+msgstr "在活动标签页之后打开新空白标签页"
+
+#: lib/preferences/preferences.ui:635
+msgctxt "Preferences|"
+msgid "Open popup windows in tabs"
+msgstr "在标签页中打开弹出窗口"
+
+#: lib/preferences/preferences.ui:642
+msgctxt "Preferences|"
+msgid "Always switch between tabs with mouse wheel"
+msgstr "总是使用鼠标滚轮切换标签页"
+
+#: lib/preferences/preferences.ui:649
+msgctxt "Preferences|"
+msgid "Automatically switch to newly opened tab"
+msgstr "自动切换到新打开的标签页"
+
+#: lib/preferences/preferences.ui:656
+msgctxt "Preferences|"
+msgid "Don't close window upon closing last tab"
+msgstr "关闭最后一个标签页后不要关闭窗口"
+
+#: lib/preferences/preferences.ui:663
+msgctxt "Preferences|"
+msgid "Ask when closing multiple tabs"
+msgstr "关闭多个标签页时询问"
+
+#: lib/preferences/preferences.ui:670
+msgctxt "Preferences|"
+msgid "Show closed tabs button"
+msgstr "显示已关闭标签页按钮"
+
+#: lib/preferences/preferences.ui:679
+msgctxt "Preferences|"
+msgid "Show close buttons on inactive tabs:"
+msgstr "在非活动标签页上显示关闭按钮"
+
+#: lib/preferences/preferences.ui:687
+msgctxt "Preferences|"
+msgid "Automatic"
+msgstr "自动"
+
+#: lib/preferences/preferences.ui:692
+msgctxt "Preferences|"
+msgid "Always"
+msgstr "总是显示"
+
+#: lib/preferences/preferences.ui:697
+msgctxt "Preferences|"
+msgid "Never"
+msgstr "从不显示"
+
+#: lib/preferences/preferences.ui:737
+msgctxt "Preferences|"
+msgid "Address Bar behaviour"
+msgstr "地址栏行为"
+
+#: lib/preferences/preferences.ui:745
+msgctxt "Preferences|"
+msgid "Suggest when typing into address bar:"
+msgstr "在地址栏输入时显示建议："
+
+#: lib/preferences/preferences.ui:759
+msgctxt "Preferences|"
+msgid "History and Bookmarks"
+msgstr "历史和书签"
+
+#: lib/preferences/preferences.ui:764
+msgctxt "Preferences|"
+msgid "History"
+msgstr "历史记录"
+
+#: lib/preferences/preferences.ui:769
+msgctxt "Preferences|"
+msgid "Bookmarks"
+msgstr "书签"
+
+#: lib/preferences/preferences.ui:774
+msgctxt "Preferences|"
+msgid "Nothing"
+msgstr "无操作"
+
+#: lib/preferences/preferences.ui:800
+msgctxt "Preferences|"
+msgid "Enable inline suggestions"
+msgstr "启用行内建议"
+
+#: lib/preferences/preferences.ui:807
+msgctxt "Preferences|"
+msgid ""
+"Press \"Shift\" to not switch the tab but load the url in the current tab"
+msgstr "按 Shift 键不切换标签页，而是在当前标签页中加载链接"
+
+#: lib/preferences/preferences.ui:810
+msgctxt "Preferences|"
+msgid "Propose to switch tab if completed url is already loaded"
+msgstr "当 URL 已经加载完成，提示切换标签页"
+
+#: lib/preferences/preferences.ui:817
+msgctxt "Preferences|"
+msgid "Always show go icon"
+msgstr "总是显示前往图标"
+
+#: lib/preferences/preferences.ui:824
+msgctxt "Preferences|"
+msgid "Select all text by double clicking in address bar"
+msgstr "双击地址栏选择全部文本"
+
+#: lib/preferences/preferences.ui:831
+msgctxt "Preferences|"
+msgid "Select all text by clicking in address bar"
+msgstr "单击地址栏选择全部文本"
+
+#: lib/preferences/preferences.ui:838
+msgctxt "Preferences|"
+msgid "Enable automatic searching from the address bar"
+msgstr "启用地址栏自动搜索"
+
+#: lib/preferences/preferences.ui:845
+msgctxt "Preferences|"
+msgid "Search with Default Engine"
+msgstr "使用默认引擎搜索"
+
+#: lib/preferences/preferences.ui:852
+msgctxt "Preferences|"
+msgid "Show search suggestions"
+msgstr "显示搜索建议"
+
+#: lib/preferences/preferences.ui:875
+msgctxt "Preferences|"
+msgid "Show loading progress in address bar"
+msgstr "在地址栏显示加载进度"
+
+#: lib/preferences/preferences.ui:908
+msgctxt "Preferences|"
+msgid "Fill"
+msgstr "填充"
+
+#: lib/preferences/preferences.ui:913
+msgctxt "Preferences|"
+msgid "Bottom"
+msgstr "置底"
+
+#: lib/preferences/preferences.ui:918
+msgctxt "Preferences|"
+msgid "Top"
+msgstr "上移"
+
+#: lib/preferences/preferences.ui:926
+msgctxt "Preferences|"
+msgid "Custom color:"
+msgstr "自定义颜色:"
+
+#: lib/preferences/preferences.ui:942
+msgctxt "Preferences|"
+msgid "Select color"
+msgstr "选择颜色"
+
+#: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1258
+#: lib/preferences/preferences.ui:1792 lib/preferences/preferences.ui:1889
+#: lib/preferences/preferences.ui:2459
+msgctxt "Preferences|"
+msgid "..."
+msgstr "..."
+
+#: lib/preferences/preferences.ui:952
+msgctxt "Preferences|"
+msgid "Reset"
+msgstr "复位"
+
+#: lib/preferences/preferences.ui:1003
+msgctxt "Preferences|"
+msgid "Web Configuration"
+msgstr "Web 配置"
+
+#: lib/preferences/preferences.ui:1011
+msgctxt "Preferences|"
+msgid "Enable Pepper plugin API (PPAPI)"
+msgstr "启用 Pepper 插件 API (PPAPI)"
+
+#: lib/preferences/preferences.ui:1018
+msgctxt "Preferences|"
+msgid "Use built-in PDF viewer (requires PPAPI)"
+msgstr "使用内置 PDF 查看器 (需要 PPAPI)"
+
+#: lib/preferences/preferences.ui:1025
+msgctxt "Preferences|"
+msgid "Allow JavaScript"
+msgstr "允许 JavaScript"
+
+#: lib/preferences/preferences.ui:1032
+msgctxt "Preferences|"
+msgid "Include links in focus chain"
+msgstr "焦点链包含链接"
+
+#. try to detect possible XSS attacks when executing javascript
+#: lib/preferences/preferences.ui:1039
+msgctxt "Preferences|"
+msgid "Enable XSS Auditing"
+msgstr "启用 XSS 审核"
+
+#. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
+#: lib/preferences/preferences.ui:1046
+msgctxt "Preferences|"
+msgid "Print element background"
+msgstr "打印元素背景"
+
+#: lib/preferences/preferences.ui:1053
+msgctxt "Preferences|"
+msgid "Animated scrolling"
+msgstr "动画滚动"
+
+#: lib/preferences/preferences.ui:1060
+msgctxt "Preferences|"
+msgid "Enable spatial navigation"
+msgstr "启用空间导航"
+
+#: lib/preferences/preferences.ui:1067
+msgctxt "Preferences|"
+msgid "Use native scrollbars"
+msgstr "使用原生滚动条"
+
+#: lib/preferences/preferences.ui:1074
+msgctxt "Preferences|"
+msgid "Disable automatic playing of videos"
+msgstr "禁用自动播放视频"
+
+#: lib/preferences/preferences.ui:1081
+msgctxt "Preferences|"
+msgid "Prevent WebRTC from leaking local IP address"
+msgstr "阻止 WebRTC 泄露本地 IP 地址"
+
+#: lib/preferences/preferences.ui:1088
+msgctxt "Preferences|"
+msgid "Enable DNS prefetching"
+msgstr "启用 DNS 预抓取"
+
+#: lib/preferences/preferences.ui:1095
+msgctxt "Preferences|"
+msgid "Enable screen capture"
+msgstr "启用屏幕捕捉"
+
+#: lib/preferences/preferences.ui:1112
+msgctxt "Preferences|"
+msgid "Mouse wheel scrolls"
+msgstr "鼠标滚轮滚动"
+
+#: lib/preferences/preferences.ui:1132
+msgctxt "Preferences|"
+msgid "lines on page"
+msgstr "行"
+
+#: lib/preferences/preferences.ui:1143
+msgctxt "Preferences|"
+msgid "Default zoom on pages: "
+msgstr "页面默认缩放："
+
+#: lib/preferences/preferences.ui:1182
+msgctxt "Preferences|"
+msgid "Local Storage"
+msgstr "本地存储"
+
+#: lib/preferences/preferences.ui:1190
+msgctxt "Preferences|"
+msgid "Allow storing network cache on disk"
+msgstr "允许在磁盘上存储网络缓存"
+
+#: lib/preferences/preferences.ui:1213
+msgctxt "Preferences|"
+msgid "Delete cache on close"
+msgstr "关闭时删除缓存"
+
+#: lib/preferences/preferences.ui:1220
+msgctxt "Preferences|"
+msgid "Maximum:"
+msgstr "最大值："
+
+#: lib/preferences/preferences.ui:1227
+msgctxt "Preferences|"
+msgid " MB"
+msgstr " MB"
+
+#: lib/preferences/preferences.ui:1243
+msgctxt "Preferences|"
+msgid "Store cache in:"
+msgstr "缓存存储于："
+
+#: lib/preferences/preferences.ui:1271
+msgctxt "Preferences|"
+msgid "Allow saving history"
+msgstr "允许保存历史"
+
+#: lib/preferences/preferences.ui:1278
+msgctxt "Preferences|"
+msgid "Delete history on close"
+msgstr "关闭时删除历史"
+
+#: lib/preferences/preferences.ui:1301
+msgctxt "Preferences|"
+msgid "Allow local storage of HTML5 web content"
+msgstr "允许本地存储 HTML 网页内容"
+
+#: lib/preferences/preferences.ui:1308
+msgctxt "Preferences|"
+msgid "Delete locally stored HTML5 web content on close"
+msgstr "关闭时删除所有本地存储的 HTML5 网页内容"
+
+#: lib/preferences/preferences.ui:1334
+msgctxt "Preferences|"
+msgid "Delete now"
+msgstr "立即删除"
+
+#: lib/preferences/preferences.ui:1373
+msgctxt "Preferences|"
+msgid "Proxy Configuration"
+msgstr "代理配置"
+
+#: lib/preferences/preferences.ui:1392
+msgctxt "Preferences|"
+msgid "System proxy configuration"
+msgstr "系统代理设置"
+
+#: lib/preferences/preferences.ui:1415
+msgctxt "Preferences|"
+msgid "Manual configuration"
+msgstr "手动配置"
+
+#: lib/preferences/preferences.ui:1425
+msgctxt "Preferences|"
+msgid "HTTP"
+msgstr "HTTP"
+
+#: lib/preferences/preferences.ui:1430
+msgctxt "Preferences|"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+#: lib/preferences/preferences.ui:1441
+msgctxt "Preferences|"
+msgid "Port:"
+msgstr "端口："
+
+#: lib/preferences/preferences.ui:1462
+msgctxt "Preferences|"
+msgid "Username:"
+msgstr "用户名："
+
+#: lib/preferences/preferences.ui:1472
+msgctxt "Preferences|"
+msgid "Password:"
+msgstr "密码："
+
+#: lib/preferences/preferences.ui:1501
+msgctxt "Preferences|"
+msgid "No proxy"
+msgstr "无代理"
+
+#: lib/preferences/preferences.ui:1516
+msgctxt "Preferences|"
+msgid "<b>Font Families</b>"
+msgstr "<b>字体系列</b>"
+
+#: lib/preferences/preferences.ui:1529
+msgctxt "Preferences|"
+msgid "Standard"
+msgstr "标准"
+
+#: lib/preferences/preferences.ui:1536
+msgctxt "Preferences|"
+msgid "Fixed"
+msgstr "固定"
+
+#: lib/preferences/preferences.ui:1546
+msgctxt "Preferences|"
+msgid "Serif"
+msgstr "衬线"
+
+#: lib/preferences/preferences.ui:1556
+msgctxt "Preferences|"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#: lib/preferences/preferences.ui:1566
+msgctxt "Preferences|"
+msgid "Cursive"
+msgstr "草书"
+
+#: lib/preferences/preferences.ui:1618
+msgctxt "Preferences|"
+msgid "Fantasy"
+msgstr "幻想"
+
+#: lib/preferences/preferences.ui:1625
+msgctxt "Preferences|"
+msgid "<b>Font Sizes</b>"
+msgstr "<b>字体大小</b>"
+
+#: lib/preferences/preferences.ui:1634
+msgctxt "Preferences|"
+msgid "Fixed Font Size"
+msgstr "固定字体大小"
+
+#: lib/preferences/preferences.ui:1641
+msgctxt "Preferences|"
+msgid "Default Font Size"
+msgstr "默认字体大小"
+
+#: lib/preferences/preferences.ui:1668
+msgctxt "Preferences|"
+msgid "Minimum Font Size"
+msgstr "最小字体大小"
+
+#: lib/preferences/preferences.ui:1675
+msgctxt "Preferences|"
+msgid "Minimum Logical Font Size"
+msgstr "最小逻辑字体大小"
+
+#: lib/preferences/preferences.ui:1708
+msgctxt "Preferences|"
+msgid "<b>Shortcuts</b>"
+msgstr "<b>快捷键</b>"
+
+#: lib/preferences/preferences.ui:1715
+msgctxt "Preferences|"
+msgid "Switch to tabs with Alt + number of tab"
+msgstr "使用 Alt + 数字切换到相应编号的标签页"
+
+#: lib/preferences/preferences.ui:1722
+msgctxt "Preferences|"
+msgid "Load speed dials with Ctrl + number of speed dial"
+msgstr "使用 Ctrl + 数字加载相应编号的快速拨号"
+
+#: lib/preferences/preferences.ui:1729
+msgctxt "Preferences|"
+msgid ""
+"Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
+"><b>/</b> - search on page"
+msgstr ""
+"已有快捷键：<br/><b>1</b> - 上一个标签页<br/><b>2</b> - 下一个标签页<br/><b>/"
+"</b> - 在页面中搜索"
+
+#: lib/preferences/preferences.ui:1732
+msgctxt "Preferences|"
+msgid "Use single key shortcuts"
+msgstr "使用单键快捷键"
+
+#: lib/preferences/preferences.ui:1739
+msgctxt "Preferences|"
+msgid ""
+"If unchecked, prevents accidental exit from the application if the Ctrl-W "
+"shortcut was intended."
+msgstr "如果取消勾选，按下 Ctrl + W 快捷键时阻止意外退出。"
+
+#: lib/preferences/preferences.ui:1742
+msgctxt "Preferences|"
+msgid "Close application with Ctrl-Q"
+msgstr "Ctrl + Q 关闭应用程序"
+
+#: lib/preferences/preferences.ui:1766
+msgctxt "Preferences|"
+msgid "<b>Download Location</b>"
+msgstr "<b>下载位置</b>"
+
+#: lib/preferences/preferences.ui:1773
+msgctxt "Preferences|"
+msgid "Ask everytime for download location"
+msgstr "每次都询问下载位置"
+
+#: lib/preferences/preferences.ui:1780
+msgctxt "Preferences|"
+msgid "Use defined location: "
+msgstr "使用定义的位置："
+
+#: lib/preferences/preferences.ui:1830
+msgctxt "Preferences|"
+msgid "<b>Download Options</b>"
+msgstr "<b>下载选项</b>"
+
+#: lib/preferences/preferences.ui:1837
+msgctxt "Preferences|"
+msgid "Close download manager when downloading finishes"
+msgstr "下载完成后关闭下载管理器"
+
+#: lib/preferences/preferences.ui:1844
+msgctxt "Preferences|"
+msgid "<b>External download manager</b>"
+msgstr "<b>外部下载管理器</b>"
+
+#: lib/preferences/preferences.ui:1851
+msgctxt "Preferences|"
+msgid "Use external download manager"
+msgstr "使用外部下载管理器"
+
+#: lib/preferences/preferences.ui:1863
+msgctxt "Preferences|"
+msgid "Executable:"
+msgstr "可执行程序："
+
+#: lib/preferences/preferences.ui:1870
+msgctxt "Preferences|"
+msgid "Arguments:"
+msgstr "参数："
+
+#: lib/preferences/preferences.ui:1877
+msgctxt "Preferences|"
+msgid "Leave blank if unsure"
+msgstr "如果不确定请留空"
+
+#: lib/preferences/preferences.ui:1898
+msgctxt "Preferences|"
+msgid "<b>%d</b> will be replaced with URL to be downloaded"
+msgstr "<b>%d</b>将被替换成将要下载的 URL"
+
+#: lib/preferences/preferences.ui:1924
+msgctxt "Preferences|"
+msgid "<b>AutoFill options</b>"
+msgstr "<b>自动填充选项</b>"
+
+#: lib/preferences/preferences.ui:1931
+msgctxt "Preferences|"
+msgid "Allow saving passwords from sites"
+msgstr "允许保存网站密码"
+
+#: lib/preferences/preferences.ui:1982
+msgctxt "Preferences|"
+msgid "Automatically complete passwords on sites"
+msgstr "自动完成网站密码"
+
+#: lib/preferences/preferences.ui:1993
+msgctxt "Preferences|"
+msgid "<b>Cookies</b>"
+msgstr "<b>Cookie</b>"
+
+#: lib/preferences/preferences.ui:2000
+msgctxt "Preferences|"
+msgid "<b>Other</b>"
+msgstr "<b>其他</b>"
+
+#: lib/preferences/preferences.ui:2026
+msgctxt "Preferences|"
+msgid "JavaScript options"
+msgstr "JavaScript 选项"
+
+#: lib/preferences/preferences.ui:2036
+msgctxt "Preferences|"
+msgid "<b>JavaScript</b>"
+msgstr "<b>JavaScript</b>"
+
+#: lib/preferences/preferences.ui:2049
+msgctxt "Preferences|"
+msgid "Cookies Manager"
+msgstr "Cookie 管理器"
+
+#: lib/preferences/preferences.ui:2059
+msgctxt "Preferences|"
+msgid "Manage JavaScript privacy options"
+msgstr "管理 JavaScript 隐私选项"
+
+#: lib/preferences/preferences.ui:2082
+msgctxt "Preferences|"
+msgid "Manage HTML5 permissions"
+msgstr "管理 HTML5 权限"
+
+#: lib/preferences/preferences.ui:2089
+msgctxt "Preferences|"
+msgid "Manage Cookies"
+msgstr "管理 Cookie"
+
+#: lib/preferences/preferences.ui:2109
+msgctxt "Preferences|"
+msgid "<b>HTML5 Permissions</b>"
+msgstr "<b>HTML5 权限</b>"
+
+#: lib/preferences/preferences.ui:2122
+msgctxt "Preferences|"
+msgid "HTML5 Permissions"
+msgstr "HTML5 权限"
+
+#: lib/preferences/preferences.ui:2129
+msgctxt "Preferences|"
+msgid "Send Do Not Track header to servers"
+msgstr "发送请勿跟踪报头给服务器"
+
+#: lib/preferences/preferences.ui:2155
+msgctxt "Preferences|"
+msgid "Expiration timeout:"
+msgstr "过期超时："
+
+#: lib/preferences/preferences.ui:2168
+msgctxt "Preferences|"
+msgid " seconds"
+msgstr "秒钟"
+
+#: lib/preferences/preferences.ui:2190
+msgctxt "Preferences|"
+msgid "<b>Notifications</b>"
+msgstr "<b>通知</b>"
+
+#: lib/preferences/preferences.ui:2213
+msgctxt "Preferences|"
+msgid "Use Native System Notifications (Linux only)"
+msgstr "使用原生系统通知 (仅限 Linux)"
+
+#: lib/preferences/preferences.ui:2220
+msgctxt "Preferences|"
+msgid "Do not use Notifications"
+msgstr "不使用通知"
+
+#: lib/preferences/preferences.ui:2243
+msgctxt "Preferences|"
+msgid ""
+"<b>Note: </b>You can change position of OSD Notification by dragging it on "
+"the screen."
+msgstr "<b>注意：</b>您可以在屏幕上拖动更改 OSD 通知的位置。"
+
+#: lib/preferences/preferences.ui:2269
+msgctxt "Preferences|"
+msgid "Use OSD Notifications"
+msgstr "使用 OSD 通知"
+
+#: lib/preferences/preferences.ui:2276
+msgctxt "Preferences|"
+msgid "Preview"
+msgstr "预览"
+
+#: lib/preferences/preferences.ui:2341
+msgctxt "Preferences|"
+msgid ""
+"For more information about Spell Check, please see <a href=\"https://"
+"userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
+msgstr ""
+"更多关于拼写检查的信息，请参见<a href=\"https://userbase.kde.org/"
+"Falkon#Spell_Check\">维基</a>。"
+
+#: lib/preferences/preferences.ui:2383
+msgctxt "Preferences|"
+msgid "<b>Spell Check options</b>"
+msgstr "<b>拼写检查选项</b>"
+
+#: lib/preferences/preferences.ui:2390
+msgctxt "Preferences|"
+msgid "Enable Spell Check"
+msgstr "启用拼写检查"
+
+#: lib/preferences/preferences.ui:2397
+msgctxt "Preferences|"
+msgid "<b>Dictionary directories</b>"
+msgstr "<b>字典目录</b>"
+
+#: lib/preferences/preferences.ui:2448
+msgctxt "Preferences|"
+msgid "No languages found"
+msgstr "未找到语言"
+
+#: lib/preferences/preferences.ui:2466
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>管理搜索引擎</b>"
+
+#: lib/preferences/preferences.ui:2473
+msgctxt "Preferences|"
+msgid "<b>User Style Sheet</b>"
+msgstr "<b>用户样式表</b>"
+
+#: lib/preferences/preferences.ui:2498
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "语言"
+
+#: lib/preferences/preferences.ui:2520
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>更改浏览器标识</b>"
+
+#: lib/preferences/preferences.ui:2545
+msgctxt "Preferences|"
+msgid "Protocol Handlers Manager"
+msgstr "协议处理程序管理器"
+
+#: lib/preferences/preferences.ui:2585
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "搜索引擎管理器"
+
+#: lib/preferences/preferences.ui:2633
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr "自动加载到所有网站的样式表："
+
+#: lib/preferences/preferences.ui:2643
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>网站的首选语言</b>"
+
+#: lib/preferences/preferences.ui:2668
+msgctxt "Preferences|"
+msgid "User Agent Manager"
+msgstr "User Agent 管理器"
+
+#: lib/preferences/preferences.ui:2690
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>管理协议处理程序</b>"
+
+#: lib/preferences/thememanager.cpp:100
+msgctxt "ThemeManager|"
+msgid "Confirmation"
+msgstr "确认"
+
+#: lib/preferences/thememanager.cpp:101
+#, qt-format
+msgctxt "ThemeManager|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "您确定要移除“%1”吗？"
+
+#: lib/preferences/thememanager.ui:51
+msgctxt "ThemeManager|"
+msgid "<b>Name:</b>"
+msgstr "<b>名称：</b>"
+
+#: lib/preferences/thememanager.ui:61
+msgctxt "ThemeManager|"
+msgid "<b>Author:</b>"
+msgstr "<b>作者：</b>"
+
+#: lib/preferences/thememanager.ui:84
+msgctxt "ThemeManager|"
+msgid "<b>Description:</b>"
+msgstr "<b>描述︰</b>"
+
+#: lib/preferences/thememanager.ui:128
+msgctxt "ThemeManager|"
+msgid "License"
+msgstr "许可协议"
+
+#: lib/preferences/thememanager.ui:155
+msgctxt "ThemeManager|"
+msgid "Remove"
+msgstr "移除"
+
+#: lib/preferences/thememanager.ui:175
+msgctxt "ThemeManager|"
+msgid ""
+"<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
+msgstr "<a href=\"https://store.kde.org/browse/cat/572/\">获取更多主题...</a>"
+
+#: lib/preferences/useragentdialog.cpp:99
+msgctxt "UserAgentDialog|"
+msgid "Add new site"
+msgstr "添加新的网站"
+
+#: lib/preferences/useragentdialog.cpp:137
+msgctxt "UserAgentDialog|"
+msgid "Edit site"
+msgstr "编辑网站"
+
+#: lib/preferences/useragentdialog.cpp:216
+msgctxt "UserAgentDialog|"
+msgid "Site domain: "
+msgstr "网站域名："
+
+#: lib/preferences/useragentdialog.cpp:217
+msgctxt "UserAgentDialog|"
+msgid "User Agent: "
+msgstr "用户代理: "
+
+#: lib/preferences/useragentdialog.ui:14
+msgctxt "UserAgentDialog|"
+msgid "User Agent Manager"
+msgstr "User Agent 管理器"
+
+#: lib/preferences/useragentdialog.ui:20
+msgctxt "UserAgentDialog|"
+msgid "Change global User Agent"
+msgstr "更改全局 User Agent"
+
+#: lib/preferences/useragentdialog.ui:48
+msgctxt "UserAgentDialog|"
+msgid "Use different User Agents for specified sites"
+msgstr "为指定网站使用不同的 User Agent"
+
+#: lib/preferences/useragentdialog.ui:92
+msgctxt "UserAgentDialog|"
+msgid "Site"
+msgstr "站点"
+
+#: lib/preferences/useragentdialog.ui:97
+msgctxt "UserAgentDialog|"
+msgid "User Agent"
+msgstr "用户代理"
+
+#: lib/preferences/useragentdialog.ui:107
+msgctxt "UserAgentDialog|"
+msgid "Add"
+msgstr "添加"
+
+#: lib/preferences/useragentdialog.ui:114
+msgctxt "UserAgentDialog|"
+msgid "Remove"
+msgstr "删除"
+
+#: lib/preferences/useragentdialog.ui:134
+msgctxt "UserAgentDialog|"
+msgid "Edit"
+msgstr "编辑"
+
+#: lib/session/sessionmanager.cpp:126
+msgctxt "SessionManager|"
+msgid "_cloned"
+msgstr "_克隆"
+
+#: lib/session/sessionmanager.cpp:126
+msgctxt "SessionManager|"
+msgid "_renamed"
+msgstr "_重命名"
+
+#: lib/session/sessionmanager.cpp:127
+msgctxt "SessionManager|"
+msgid "Clone Session"
+msgstr "克隆会话"
+
+#: lib/session/sessionmanager.cpp:127
+msgctxt "SessionManager|"
+msgid "Rename Session"
+msgstr "重命名会话"
+
+#: lib/session/sessionmanager.cpp:128
+msgctxt "SessionManager|"
+msgid "Please enter a new name:"
+msgstr "请输入一个新的名称："
+
+#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:143
+#: lib/session/sessionmanager.cpp:148 lib/session/sessionmanager.cpp:170
+#: lib/session/sessionmanager.cpp:218
+msgctxt "SessionManager|"
+msgid "Error!"
+msgstr "错误！"
+
+#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:170
+#: lib/session/sessionmanager.cpp:218
+#, qt-format
+msgctxt "SessionManager|"
+msgid "The session file \"%1\" exists. Please enter another name."
+msgstr "会话文件“%1”已存在。请输入别的名称。"
+
+#: lib/session/sessionmanager.cpp:143
+msgctxt "SessionManager|"
+msgid "An error occurred when cloning session file."
+msgstr "克隆会话文件时发生了错误。"
+
+#: lib/session/sessionmanager.cpp:148
+msgctxt "SessionManager|"
+msgid "An error occurred when renaming session file."
+msgstr "重命名会话文件时发生了错误。"
+
+#: lib/session/sessionmanager.cpp:161
+msgctxt "SessionManager|"
+msgid "Save Session"
+msgstr "保存会话"
+
+#: lib/session/sessionmanager.cpp:162
+msgctxt "SessionManager|"
+msgid "Please enter a name to save session:"
+msgstr "请输入名称来保存新会话："
+
+#: lib/session/sessionmanager.cpp:163
+#, qt-format
+msgctxt "SessionManager|"
+msgid "Saved Session (%1)"
+msgstr "保存会话 (%1)"
+
+#: lib/session/sessionmanager.cpp:180
+msgctxt "SessionManager|"
+msgid "Restore Backup"
+msgstr "还原备份"
+
+#: lib/session/sessionmanager.cpp:180
+msgctxt "SessionManager|"
+msgid "Are you sure you want to replace current session?"
+msgstr "您确定要替换当前会话吗？"
+
+#: lib/session/sessionmanager.cpp:199
+msgctxt "SessionManager|"
+msgid "Delete Session"
+msgstr "删除会话"
+
+#: lib/session/sessionmanager.cpp:199
+#, qt-format
+msgctxt "SessionManager|"
+msgid "Are you sure you want to delete session '%1'?"
+msgstr "您确定要删除会话“%1”吗？"
+
+#: lib/session/sessionmanager.cpp:209
+msgctxt "SessionManager|"
+msgid "New Session"
+msgstr "新建会话"
+
+#: lib/session/sessionmanager.cpp:210
+msgctxt "SessionManager|"
+msgid "Please enter a name to create new session:"
+msgstr "请输入名称以创建新会话："
+
+#: lib/session/sessionmanager.cpp:211
+#, qt-format
+msgctxt "SessionManager|"
+msgid "New Session (%1)"
+msgstr "新建会话 (&%1)"
+
+#: lib/session/sessionmanager.cpp:243
+msgctxt "SessionManager|"
+msgid "Backup 1"
+msgstr "备份 1"
+
+#: lib/session/sessionmanager.cpp:250
+msgctxt "SessionManager|"
+msgid "Backup 2"
+msgstr "备份 2"
+
+#: lib/session/sessionmanager.cpp:290
+msgctxt "SessionManager|"
+msgid "Default Session"
+msgstr "默认会话"
+
+#: lib/session/sessionmanager.cpp:393
+msgctxt "SessionManager|"
+msgid "Please select the startup session:"
+msgstr "请选择启动会话："
+
+#: lib/session/sessionmanager.cpp:412
+#, qt-format
+msgctxt "SessionManager|"
+msgid "%1 (last session)"
+msgstr "%1 (最后一个会话)"
+
+#: lib/session/sessionmanagerdialog.cpp:140
+msgctxt "SessionManagerDialog|"
+msgid "Restore"
+msgstr "还原"
+
+#: lib/session/sessionmanagerdialog.cpp:140
+msgctxt "SessionManagerDialog|"
+msgid "Switch To"
+msgstr "切换至"
+
+#: lib/session/sessionmanagerdialog.ui:14
+msgctxt "SessionManagerDialog|"
+msgid "Session Manager"
+msgstr "会话管理器"
+
+#: lib/session/sessionmanagerdialog.ui:24
+msgctxt "SessionManagerDialog|"
+msgid "Session"
+msgstr "会话"
+
+#: lib/session/sessionmanagerdialog.ui:29
+msgctxt "SessionManagerDialog|"
+msgid "Last Modified"
+msgstr "最后更新"
+
+#: lib/session/sessionmanagerdialog.ui:39
+msgctxt "SessionManagerDialog|"
+msgid "New"
+msgstr "新"
+
+#: lib/session/sessionmanagerdialog.ui:46
+msgctxt "SessionManagerDialog|"
+msgid "Rename"
+msgstr "重命名"
+
+#: lib/session/sessionmanagerdialog.ui:53
+msgctxt "SessionManagerDialog|"
+msgid "Clone"
+msgstr "克隆"
+
+#: lib/session/sessionmanagerdialog.ui:60
+msgctxt "SessionManagerDialog|"
+msgid "Delete"
+msgstr "删除"
+
+#: lib/session/sessionmanagerdialog.ui:67
+msgctxt "SessionManagerDialog|"
+msgid "Switch to"
+msgstr "切换到"
+
+#: lib/sidebar/bookmarkssidebar.cpp:103
+msgctxt "BookmarksSidebar|"
+msgid "Open in new tab"
+msgstr "在新标签页中打开"
+
+#: lib/sidebar/bookmarkssidebar.cpp:104
+msgctxt "BookmarksSidebar|"
+msgid "Open in new window"
+msgstr "在新窗口中打开"
+
+#: lib/sidebar/bookmarkssidebar.cpp:105
+msgctxt "BookmarksSidebar|"
+msgid "Open in new private window"
+msgstr "在新隐私窗口中打开"
+
+#: lib/sidebar/bookmarkssidebar.cpp:108
+msgctxt "BookmarksSidebar|"
+msgid "Delete"
+msgstr "删除"
+
+#: lib/sidebar/bookmarkssidebar.ui:41
+msgctxt "BookmarksSideBar|"
+msgid "Search..."
+msgstr "搜索..."
+
+#: lib/sidebar/historysidebar.cpp:85
+msgctxt "HistorySideBar|"
+msgid "Open in new tab"
+msgstr "在新标签页中打开"
+
+#: lib/sidebar/historysidebar.cpp:86
+msgctxt "HistorySideBar|"
+msgid "Open in new window"
+msgstr "在新窗口中打开"
+
+#: lib/sidebar/historysidebar.cpp:87
+msgctxt "HistorySideBar|"
+msgid "Open in new private window"
+msgstr "在新隐私窗口中打开"
+
+#: lib/sidebar/historysidebar.cpp:90
+msgctxt "HistorySideBar|"
+msgid "Delete"
+msgstr "删除"
+
+#: lib/sidebar/historysidebar.ui:32
+msgctxt "HistorySideBar|"
+msgid "Search..."
+msgstr "搜索..."
+
+#: lib/sidebar/sidebar.cpp:65 lib/sidebar/sidebar.cpp:107
+msgctxt "SideBar|"
+msgid "Bookmarks"
+msgstr "书签"
+
+#: lib/sidebar/sidebar.cpp:72 lib/sidebar/sidebar.cpp:114
+msgctxt "SideBar|"
+msgid "History"
+msgstr "历史记录"
+
+#: lib/tabwidget/tabbar.cpp:111
+msgctxt "BrowserWindow|"
+msgid "Close Tab"
+msgstr "关闭标签页"
+
+#: lib/tabwidget/tabcontextmenu.cpp:63
+msgctxt "TabBar|"
+msgid "Don't ask again"
+msgstr "不再询问"
+
+#: lib/tabwidget/tabcontextmenu.cpp:80 lib/tabwidget/tabcontextmenu.cpp:91
+#: lib/tabwidget/tabcontextmenu.cpp:102
+msgctxt "TabContextMenu|"
+msgid "Close Tabs"
+msgstr "关闭标签"
+
+#: lib/tabwidget/tabcontextmenu.cpp:80
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close other tabs?"
+msgstr "您确定要关闭其他标签页吗？"
+
+#: lib/tabwidget/tabcontextmenu.cpp:88
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the right?"
+msgstr "您确定想要关闭右侧的全部标签页吗？"
+
+#: lib/tabwidget/tabcontextmenu.cpp:89
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the bottom?"
+msgstr "您确定想要关闭底部的全部标签页吗？"
+
+#: lib/tabwidget/tabcontextmenu.cpp:99
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the left?"
+msgstr "您确定想要关闭左侧的全部标签页吗？"
+
+#: lib/tabwidget/tabcontextmenu.cpp:100
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the top?"
+msgstr "您确定想要关闭顶部的全部标签页吗？"
+
+#: lib/tabwidget/tabcontextmenu.cpp:117
+msgctxt "TabContextMenu|"
+msgid "&Stop Tab"
+msgstr "停止标签页(&S)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:120
+msgctxt "TabContextMenu|"
+msgid "&Reload Tab"
+msgstr "重新加载标签(&R)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:123
+msgctxt "TabContextMenu|"
+msgid "&Duplicate Tab"
+msgstr "复制标签页(&D)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:126
+msgctxt "TabContextMenu|"
+msgid "D&etach Tab"
+msgstr "漂移标签(&E)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:129
+msgctxt "TabContextMenu|"
+msgid "Un&pin Tab"
+msgstr "取消固定标签页(&P)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:129
+msgctxt "TabContextMenu|"
+msgid "&Pin Tab"
+msgstr "固定标签页(&P)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:130
+msgctxt "TabContextMenu|"
+msgid "Un&mute Tab"
+msgstr "取消静音标签页(&M)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:130
+msgctxt "TabContextMenu|"
+msgid "&Mute Tab"
+msgstr "&静音标签"
+
+#: lib/tabwidget/tabcontextmenu.cpp:133
+msgctxt "TabContextMenu|"
+msgid "Load Tab"
+msgstr "加载标签页"
+
+#: lib/tabwidget/tabcontextmenu.cpp:135
+msgctxt "TabContextMenu|"
+msgid "Unload Tab"
+msgstr "取消加载标签页"
+
+#: lib/tabwidget/tabcontextmenu.cpp:139
+msgctxt "TabContextMenu|"
+msgid "Re&load All Tabs"
+msgstr "重新加载全部标签页(&L)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:140 lib/tabwidget/tabcontextmenu.cpp:156
+msgctxt "TabContextMenu|"
+msgid "Bookmark &All Tabs"
+msgstr "将所有标签页加为书签(&A)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:144
+msgctxt "TabContextMenu|"
+msgid "Close Ot&her Tabs"
+msgstr "关闭其他标签页(&H)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:145
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Right"
+msgstr "关闭右侧标签页"
+
+#: lib/tabwidget/tabcontextmenu.cpp:145
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Bottom"
+msgstr "关闭底部标签页"
+
+#: lib/tabwidget/tabcontextmenu.cpp:146
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Left"
+msgstr "关闭左侧标签页"
+
+#: lib/tabwidget/tabcontextmenu.cpp:146
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Top"
+msgstr "关闭右侧标签页"
+
+#: lib/tabwidget/tabcontextmenu.cpp:151
+msgctxt "TabContextMenu|"
+msgid "Cl&ose Tab"
+msgstr "关闭标签页(&O)"
+
+#: lib/tabwidget/tabcontextmenu.cpp:153
+msgctxt "TabContextMenu|"
+msgid "&New tab"
+msgstr "&新建标签"
+
+#: lib/tabwidget/tabcontextmenu.cpp:155
+msgctxt "TabContextMenu|"
+msgid "Reloa&d All Tabs"
+msgstr "重新加载全部标签(&D)"
+
+#: lib/tabwidget/tabicon.cpp:168
+msgctxt "TabIcon|"
+msgid "Unmute Tab"
+msgstr "取消静音标签"
+
+#: lib/tabwidget/tabicon.cpp:168
+msgctxt "TabIcon|"
+msgid "Mute Tab"
+msgstr "静音标签"
+
+#: lib/tabwidget/tabwidget.cpp:51
+msgctxt "TabWidget|"
+msgid "New Tab"
+msgstr "新建标签页"
+
+#: lib/tabwidget/tabwidget.cpp:126
+msgctxt "TabWidget|"
+msgid "Closed tabs"
+msgstr "关闭标签页"
+
+#: lib/tabwidget/tabwidget.cpp:137
+msgctxt "TabWidget|"
+msgid "List of tabs"
+msgstr "标签页列表"
+
+#: lib/tabwidget/tabwidget.cpp:294
+msgctxt "TabWidget|"
+msgid "Empty"
+msgstr "清空"
+
+#: lib/tabwidget/tabwidget.cpp:298
+msgctxt "TabWidget|"
+msgid "Restore All Closed Tabs"
+msgstr "还原所有已关闭的标签页"
+
+#: lib/tabwidget/tabwidget.cpp:299
+msgctxt "TabWidget|"
+msgid "Clear list"
+msgstr "清除列表"
+
+#: lib/tabwidget/tabwidget.h:106
+msgctxt "TabWidget|"
+msgid "New tab"
+msgstr "新建标签"
+
+#: lib/tools/aesinterface.cpp:146
+msgctxt "AesInterface|"
+msgid "Warning!"
+msgstr "警告！"
+
+#: lib/tools/aesinterface.cpp:146
+msgctxt "AesInterface|"
+msgid ""
+"Data has been encrypted with a newer version of Falkon.\n"
+"Please install latest version of Falkon."
+msgstr ""
+"数据已被更新版本的 Falkon 加密。\n"
+"请安装最新版本的 Falkon。"
+
+#: lib/tools/certificateinfowidget.cpp:300
+msgctxt "QObject|"
+msgid "<not set in certificate>"
+msgstr "<未在证书中设置>"
+
+#: lib/tools/certificateinfowidget.ui:17
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Issued To</b>"
+msgstr "<b>颁发给</b>"
+
+#: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
+msgctxt "CertificateInfoWidget|"
+msgid "Common Name (CN):"
+msgstr "通用名称 (CN)："
+
+#: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
+msgctxt "CertificateInfoWidget|"
+msgid "Organization (O):"
+msgstr "组织 (O)："
+
+#: lib/tools/certificateinfowidget.ui:58 lib/tools/certificateinfowidget.ui:133
+msgctxt "CertificateInfoWidget|"
+msgid "Organizational Unit (OU):"
+msgstr "组织单位 (OU)："
+
+#: lib/tools/certificateinfowidget.ui:75
+msgctxt "CertificateInfoWidget|"
+msgid "Serial Number:"
+msgstr "序列号:"
+
+#: lib/tools/certificateinfowidget.ui:92
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Issued By</b>"
+msgstr "<b>颁发者</b>"
+
+#: lib/tools/certificateinfowidget.ui:150
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Validity</b>"
+msgstr "<b>有效期</b>"
+
+#: lib/tools/certificateinfowidget.ui:157
+msgctxt "CertificateInfoWidget|"
+msgid "Issued On:"
+msgstr "颁发时间："
+
+#: lib/tools/certificateinfowidget.ui:174
+msgctxt "CertificateInfoWidget|"
+msgid "Expires On:"
+msgstr "有效期至："
+
+#: lib/tools/html5permissions/html5permissionsdialog.cpp:63
+msgctxt "HTML5PermissionsDialog|"
+msgid "Allow"
+msgstr "允许"
+
+#: lib/tools/html5permissions/html5permissionsdialog.cpp:72
+msgctxt "HTML5PermissionsDialog|"
+msgid "Deny"
+msgstr "拒绝"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:14
+msgctxt "HTML5PermissionsDialog|"
+msgid "HTML5 Permissions"
+msgstr "HTML5 权限"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:35
+msgctxt "HTML5PermissionsDialog|"
+msgid "Remove"
+msgstr "移除"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:64
+msgctxt "HTML5PermissionsDialog|"
+msgid "Site"
+msgstr "站点"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:69
+msgctxt "HTML5PermissionsDialog|"
+msgid "Behaviour"
+msgstr "行为"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:79
+msgctxt "HTML5PermissionsDialog|"
+msgid "Permission for:"
+msgstr "权限："
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:87
+msgctxt "HTML5PermissionsDialog|"
+msgid "Notifications"
+msgstr "通知"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:92
+msgctxt "HTML5PermissionsDialog|"
+msgid "Geolocation"
+msgstr "定位"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:97
+msgctxt "HTML5PermissionsDialog|"
+msgid "Microphone"
+msgstr "麦克风"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:102
+msgctxt "HTML5PermissionsDialog|"
+msgid "Camera"
+msgstr "相机"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:107
+msgctxt "HTML5PermissionsDialog|"
+msgid "Microphone and Camera"
+msgstr "麦克风和摄像头"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:112
+msgctxt "HTML5PermissionsDialog|"
+msgid "Hide Pointer"
+msgstr "隐藏指针"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:117
+msgctxt "HTML5PermissionsDialog|"
+msgid "Display Capture"
+msgstr "屏幕捕获"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:122
+msgctxt "HTML5PermissionsDialog|"
+msgid "Display and Audio Capture"
+msgstr "显示和音频捕获"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:41
+msgctxt "HTML5PermissionsNotification|"
+msgid "this site"
+msgstr "此站点"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:45
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to show desktop notifications?"
+msgstr "允许 %1 显示桌面通知吗？"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:49
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to locate your position?"
+msgstr "允许 %1 定位您的位置吗？"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:53
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your microphone?"
+msgstr "允许 %1 使用您的麦克风吗？"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:57
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your camera?"
+msgstr "允许 %1 使用您的摄像头吗？"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:61
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your microphone and camera?"
+msgstr "允许 %1 使用您的麦克风和摄像头吗？"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:65
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to hide your pointer?"
+msgstr "允许 %1 隐藏您的指针吗？"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:69
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to capture your screen?"
+msgstr "允许 %1 录制您的屏幕？"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:73
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to capture your screen and audio?"
+msgstr "允许 %1 录制您的屏幕并录音？"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:43
+msgctxt "HTML5PermissionsNotification|"
+msgid "Remember"
+msgstr "记住"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:50
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow"
+msgstr "允许"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:57
+msgctxt "HTML5PermissionsNotification|"
+msgid "Deny"
+msgstr "拒绝"
+
+#: lib/tools/qztools.cpp:379
+msgctxt "QObject|"
+msgid "Unknown size"
+msgstr "未知尺寸"
+
+#: lib/tools/qztools.cpp:384
+msgctxt "QObject|"
+msgid "KB"
+msgstr "KB"
+
+#: lib/tools/qztools.cpp:389
+msgctxt "QObject|"
+msgid "MB"
+msgstr "MB"
+
+#: lib/tools/qztools.cpp:393
+msgctxt "QObject|"
+msgid "GB"
+msgstr "GB"
+
+#: lib/tools/qztools.cpp:852
+msgctxt "QObject|"
+msgid "Executable: "
+msgstr "可执行文件: "
+
+#: lib/tools/qztools.cpp:853
+msgctxt "QObject|"
+msgid "Arguments: "
+msgstr "参数: "
+
+#: lib/tools/qztools.cpp:855
+msgctxt "QObject|"
+msgid "Cannot start external program"
+msgstr "无法启动外部程序"
+
+#: lib/tools/qztools.cpp:856
+#, qt-format
+msgctxt "QObject|"
+msgid "Cannot start external program! %1"
+msgstr "无法启动外部程序！%1"
+
+#: lib/webengine/jsalert.ui:125
+msgctxt "jsAlert|"
+msgid "Prevent this page from creating additional dialogs"
+msgstr "阻止页面创建更多对话框"
+
+#: lib/webengine/webpage.cpp:330
+#, qt-format
+msgctxt "WebPage|"
+msgid ""
+"Falkon cannot handle <b>%1:</b> links. The requested link is <ul><li>%2</"
+"li></ul>Do you want Falkon to try open this link in system application?"
+msgstr ""
+"Falkon 无法处理 <b>%1:</b> 链接。请求的链接是 <ul><li>%2</li></ul> 您想要 "
+"Falkon 尝试用系统应用打开此链接吗？"
+
+#: lib/webengine/webpage.cpp:335
+msgctxt "WebPage|"
+msgid "Remember my choice for this protocol"
+msgstr "为此协议记住我的选择"
+
+#: lib/webengine/webpage.cpp:336
+msgctxt "WebPage|"
+msgid "External Protocol Request"
+msgstr "外部协议请求"
+
+#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+msgctxt "WebPage|"
+msgid "Failed loading page"
+msgstr "加载页面失败"
+
+#: lib/webengine/webpage.cpp:418
+msgctxt "WebPage|"
+msgid "Something went wrong while loading this page."
+msgstr "加载页面时出错。"
+
+#: lib/webengine/webpage.cpp:419
+msgctxt "WebPage|"
+msgid ""
+"Try reloading the page or closing some tabs to make more memory available."
+msgstr "请尝试重新加载页面或者关闭一些标签页已节约内存。"
+
+#: lib/webengine/webpage.cpp:420
+msgctxt "WebPage|"
+msgid "Reload page"
+msgstr "重新加载页面"
+
+#: lib/webengine/webpage.cpp:482
+msgctxt "WebPage|"
+msgid "Choose file..."
+msgstr "选择文件..."
+
+#: lib/webengine/webpage.cpp:486
+msgctxt "WebPage|"
+msgid "Choose files..."
+msgstr "选择文件..."
+
+#: lib/webengine/webpage.cpp:622
+msgctxt "WebPage|"
+msgid "JavaScript alert"
+msgstr "JavaScript alert"
+
+#: lib/webengine/webpage.cpp:631
+msgctxt "WebPage|"
+msgid "Prevent this page from creating additional dialogs"
+msgstr "阻止页面创建更多对话框"
+
+#: lib/webengine/webview.cpp:126
+msgctxt "WebView|"
+msgid "Empty Page"
+msgstr "空白页"
+
+#: lib/webengine/webview.cpp:391
+#, qt-format
+msgctxt "WebView|"
+msgid "Falkon %1 (%2)"
+msgstr "Falkon %1 (%2)"
+
+#: lib/webengine/webview.cpp:690
+msgctxt "WebView|"
+msgid "No suggestions"
+msgstr "无建议"
+
+#: lib/webengine/webview.cpp:741
+msgctxt "WebView|"
+msgid "&Back"
+msgstr "上一步(&B)"
+
+#: lib/webengine/webview.cpp:745
+msgctxt "WebView|"
+msgid "&Forward"
+msgstr "下一步(&F)"
+
+#: lib/webengine/webview.cpp:752
+msgctxt "WebView|"
+msgid "&Add New Page"
+msgstr "添加新页面(&A)"
+
+#: lib/webengine/webview.cpp:753
+msgctxt "WebView|"
+msgid "&Configure Speed Dial"
+msgstr "配置快速拨号(&C)"
+
+#: lib/webengine/webview.cpp:755
+msgctxt "WebView|"
+msgid "Reload All Dials"
+msgstr "重新加载全部快速拨号"
+
+#: lib/webengine/webview.cpp:774
+msgctxt "WebView|"
+msgid "Book&mark page"
+msgstr "将页面加入书签(&M)"
+
+#: lib/webengine/webview.cpp:775
+msgctxt "WebView|"
+msgid "&Save page as..."
+msgstr "页面另存为(&S)..."
+
+#: lib/webengine/webview.cpp:776
+msgctxt "WebView|"
+msgid "&Copy page link"
+msgstr "复制页面链接(&C)"
+
+#: lib/webengine/webview.cpp:777
+msgctxt "WebView|"
+msgid "Send page link..."
+msgstr "发送页面链接..."
+
+#: lib/webengine/webview.cpp:779
+msgctxt "WebView|"
+msgid "Select &all"
+msgstr "选择全部(&A)"
+
+#: lib/webengine/webview.cpp:785
+msgctxt "WebView|"
+msgid "Show so&urce code"
+msgstr "显示源代码(&U)"
+
+#: lib/webengine/webview.cpp:789
+msgctxt "WebView|"
+msgid "Show info ab&out site"
+msgstr "显示网站信息(&O)"
+
+#: lib/webengine/webview.cpp:795
+msgctxt "WebView|"
+msgid "Open link in new &tab"
+msgstr "在新标签页中打开链接(&T)"
+
+#: lib/webengine/webview.cpp:800
+msgctxt "WebView|"
+msgid "Open link in new &window"
+msgstr "在新窗口中打开链接(&W)"
+
+#: lib/webengine/webview.cpp:801
+msgctxt "WebView|"
+msgid "Open link in &private window"
+msgstr "在新隐私窗口中打开链接(&P)"
+
+#: lib/webengine/webview.cpp:806
+msgctxt "WebView|"
+msgid "B&ookmark link"
+msgstr "将链接加为书签"
+
+#: lib/webengine/webview.cpp:808
+msgctxt "WebView|"
+msgid "&Save link as..."
+msgstr "链接另存为(&S)..."
+
+#: lib/webengine/webview.cpp:809
+msgctxt "WebView|"
+msgid "Send link..."
+msgstr "发送链接..."
+
+#: lib/webengine/webview.cpp:810
+msgctxt "WebView|"
+msgid "&Copy link address"
+msgstr "复制链接地址(&C)"
+
+#: lib/webengine/webview.cpp:823
+msgctxt "WebView|"
+msgid "Show i&mage"
+msgstr "显示图像(&M)"
+
+#: lib/webengine/webview.cpp:829
+msgctxt "WebView|"
+msgid "Copy image"
+msgstr "复制图像"
+
+#: lib/webengine/webview.cpp:830
+msgctxt "WebView|"
+msgid "Copy image ad&dress"
+msgstr "复制图像地址(&D)"
+
+#: lib/webengine/webview.cpp:832
+msgctxt "WebView|"
+msgid "&Save image as..."
+msgstr "图形另存为(&S)..."
+
+#: lib/webengine/webview.cpp:833
+msgctxt "WebView|"
+msgid "Send image..."
+msgstr "发送图像..."
+
+#: lib/webengine/webview.cpp:852
+msgctxt "WebView|"
+msgid "Send text..."
+msgstr "发送文本..."
+
+#: lib/webengine/webview.cpp:864
+msgctxt "WebView|"
+msgid "Go to &web address"
+msgstr "转到网址(&W)"
+
+#: lib/webengine/webview.cpp:878
+#, qt-format
+msgctxt "WebView|"
+msgid "Search \"%1 ..\" with %2"
+msgstr "在 %2 中搜索“%1 ..”"
+
+#: lib/webengine/webview.cpp:884
+msgctxt "WebView|"
+msgid "Search with..."
+msgstr "使用搜索引擎搜索..."
+
+#: lib/webengine/webview.cpp:906
+msgctxt "WebView|"
+msgid "&Play"
+msgstr "播放(&P)"
+
+#: lib/webengine/webview.cpp:906
+msgctxt "WebView|"
+msgid "&Pause"
+msgstr "暂停(&P)"
+
+#: lib/webengine/webview.cpp:907
+msgctxt "WebView|"
+msgid "Un&mute"
+msgstr "取消静音(&M)"
+
+#: lib/webengine/webview.cpp:907
+msgctxt "WebView|"
+msgid "&Mute"
+msgstr "静音(&M)"
+
+#: lib/webengine/webview.cpp:909
+msgctxt "WebView|"
+msgid "&Copy Media Address"
+msgstr "复制媒体地址(&C)"
+
+#: lib/webengine/webview.cpp:910
+msgctxt "WebView|"
+msgid "&Send Media Address"
+msgstr "发送媒体地址(&S)"
+
+#: lib/webengine/webview.cpp:911
+msgctxt "WebView|"
+msgid "Save Media To &Disk"
+msgstr "保存媒体到磁盘(&D)"
+
+#: lib/webengine/webview.cpp:930
+msgctxt "WebView|"
+msgid "Create Search Engine"
+msgstr "创建搜索引擎"
+
+#: lib/webengine/webview.cpp:971
+msgctxt "WebView|"
+msgid "&Undo"
+msgstr "撤销(&U)"
+
+#: lib/webengine/webview.cpp:977
+msgctxt "WebView|"
+msgid "&Redo"
+msgstr "重做(&R)"
+
+#: lib/webengine/webview.cpp:983
+msgctxt "WebView|"
+msgid "&Cut"
+msgstr "&剪切"
+
+#: lib/webengine/webview.cpp:989
+msgctxt "WebView|"
+msgid "&Copy"
+msgstr "复制(&C)"
+
+#: lib/webengine/webview.cpp:995
+msgctxt "WebView|"
+msgid "&Paste"
+msgstr "粘贴(&P)"
+
+#: lib/webengine/webview.cpp:1001
+msgctxt "WebView|"
+msgid "Select All"
+msgstr "全部选择"
+
+#: lib/webengine/webview.cpp:1007
+msgctxt "WebView|"
+msgid "&Reload"
+msgstr "重新加载(&R)"
+
+#: lib/webengine/webview.cpp:1011
+msgctxt "WebView|"
+msgid "S&top"
+msgstr "停止(&T)"
+
+#: lib/webtab/searchtoolbar.cpp:150
+#, qt-format
+msgctxt "SearchToolBar|"
+msgid "%1 of %2"
+msgstr "%2 个中的第 %1 个"
+
+#: lib/webtab/searchtoolbar.ui:48
+msgctxt "SearchToolbar|"
+msgid "Find..."
+msgstr "查找..."
+
+#: lib/webtab/searchtoolbar.ui:58
+msgctxt "SearchToolbar|"
+msgid "Find the next match for the current search phrase"
+msgstr "查找下一个和当前搜索字串匹配的文本"
+
+#: lib/webtab/searchtoolbar.ui:61
+msgctxt "SearchToolbar|"
+msgid "&Next"
+msgstr "下一个(&N)"
+
+#: lib/webtab/searchtoolbar.ui:74
+msgctxt "SearchToolbar|"
+msgid "Find the previous match for the current search phrase"
+msgstr "查找上一个和当前搜索字串匹配的文本"
+
+#: lib/webtab/searchtoolbar.ui:77
+msgctxt "SearchToolbar|"
+msgid "&Previous"
+msgstr "上一个(&P)"
+
+#: lib/webtab/searchtoolbar.ui:90
+msgctxt "SearchToolbar|"
+msgid "&Match Case"
+msgstr "区分大小写(&M)"
+
+#: lib/webtab/tabbedwebview.cpp:194
+msgctxt "TabbedWebView|"
+msgid "Inspect Element"
+msgstr "检查元素"
+
+#: lib/webtab/webtab.cpp:624
+#, qt-format
+msgctxt "WebTab|"
+msgid "%1 - Falkon"
+msgstr "%1 - Falkon"

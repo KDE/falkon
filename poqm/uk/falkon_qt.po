@@ -1,0 +1,6036 @@
+# Translation of falkon_qt.po to Ukrainian
+# Copyright (C) 2017-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Микола Крачковський (Mykola Krachkovsky) <w01dnick@gmail.com>, 2017.
+# Stanislav Kuznietsov <stanislav_kuznetsov@ukr.net>, 2017.
+# Yuri Chornoivan <yurchor@ukr.net>, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: falkon_qt\n"
+"PO-Revision-Date: 2022-04-03 08:45+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Language: uk_UA\n"
+"X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: lib/3rdparty/lineedit.cpp:102
+msgctxt "LineEdit|"
+msgid "&Undo"
+msgstr "&Скасувати"
+
+#: lib/3rdparty/lineedit.cpp:107
+msgctxt "LineEdit|"
+msgid "&Redo"
+msgstr "Пов&торити"
+
+#: lib/3rdparty/lineedit.cpp:112
+msgctxt "LineEdit|"
+msgid "Cu&t"
+msgstr "&Вирізати"
+
+#: lib/3rdparty/lineedit.cpp:117
+msgctxt "LineEdit|"
+msgid "&Copy"
+msgstr "&Копіювати"
+
+#: lib/3rdparty/lineedit.cpp:122
+msgctxt "LineEdit|"
+msgid "&Paste"
+msgstr "Вс&тавити"
+
+#: lib/3rdparty/lineedit.cpp:131
+msgctxt "LineEdit|"
+msgid "Delete"
+msgstr "Вилучити"
+
+#: lib/3rdparty/lineedit.cpp:134
+msgctxt "LineEdit|"
+msgid "Clear All"
+msgstr "Очистити все"
+
+#: lib/3rdparty/lineedit.cpp:137
+msgctxt "LineEdit|"
+msgid "Select All"
+msgstr "Виділити &все"
+
+#: lib/3rdparty/squeezelabelv2.cpp:64
+msgctxt "SqueezeLabelV2|"
+msgid "Copy"
+msgstr "Копіювати"
+
+#: lib/adblock/adblockaddsubscriptiondialog.cpp:45
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Other..."
+msgstr "Інше…"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:14
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Add Subscription"
+msgstr "Додати підписку"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:23
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Title:"
+msgstr "Назва:"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:33
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Address:"
+msgstr "Url-адреса:"
+
+#: lib/adblock/adblockaddsubscriptiondialog.ui:53
+msgctxt "AdBlockAddSubscriptionDialog|"
+msgid "Add new subscription to AdBlock:"
+msgstr "Додати нову підписку до AdBlock'у:"
+
+#: lib/adblock/adblockdialog.cpp:49
+msgctxt "AdBlockDialog|"
+msgid "Add Rule"
+msgstr "Додати правило"
+
+#: lib/adblock/adblockdialog.cpp:50
+msgctxt "AdBlockDialog|"
+msgid "Remove Rule"
+msgstr "Вилучити правило"
+
+#: lib/adblock/adblockdialog.cpp:52
+msgctxt "AdBlockDialog|"
+msgid "Add Subscription"
+msgstr "Додати підписку"
+
+#: lib/adblock/adblockdialog.cpp:53
+msgctxt "AdBlockDialog|"
+msgid "Remove Subscription"
+msgstr "Вилучити підписку"
+
+#: lib/adblock/adblockdialog.cpp:54
+msgctxt "AdBlockDialog|"
+msgid "Update Subscriptions"
+msgstr "Оновити підписки"
+
+#: lib/adblock/adblockdialog.cpp:56
+msgctxt "AdBlockDialog|"
+msgid "Learn about writing rules..."
+msgstr "Дізнатись про написання правил…"
+
+#: lib/adblock/adblockdialog.ui:14
+msgctxt "AdBlockDialog|"
+msgid "AdBlock Configuration"
+msgstr "Конфігурація AdBlock"
+
+#: lib/adblock/adblockdialog.ui:20
+msgctxt "AdBlockDialog|"
+msgid "Enable AdBlock"
+msgstr "Використовувати AdBlock"
+
+#: lib/adblock/adblockdialog.ui:32
+msgctxt "AdBlockDialog|"
+msgid "Search..."
+msgstr "Пошук…"
+
+#: lib/adblock/adblockdialog.ui:77
+msgctxt "AdBlockDialog|"
+msgid "Options"
+msgstr "Параметри"
+
+#: lib/adblock/adblockdialog.ui:107
+msgctxt "AdBlockDialog|"
+msgid "AdBlock"
+msgstr "AdBlock"
+
+#: lib/adblock/adblockicon.cpp:34
+msgctxt "AdBlockIcon|"
+msgid "AdBlock"
+msgstr "AdBlock"
+
+#: lib/adblock/adblockicon.cpp:52
+msgctxt "AdBlockIcon|"
+msgid "AdBlock Icon"
+msgstr "Піктограма AdBlock"
+
+#: lib/adblock/adblockicon.cpp:86
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is disabled"
+msgstr "AdBlock вимкнено"
+
+#: lib/adblock/adblockicon.cpp:92
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is disabled on this site "
+msgstr "AdBlock вимкнено на цьому сайті"
+
+#: lib/adblock/adblockicon.cpp:98
+msgctxt "AdBlockIcon|"
+msgid "AdBlock is active"
+msgstr "AdBlock активний"
+
+#: lib/adblock/adblockicon.cpp:145
+msgctxt "AdBlockIcon|"
+msgid "Show AdBlock &Settings"
+msgstr "Показати &налаштування AdBlock"
+
+#: lib/adblock/adblockicon.cpp:153
+#, qt-format
+msgctxt "AdBlockIcon|"
+msgid "Disable on %1"
+msgstr "Відключити на %1"
+
+#: lib/adblock/adblockicon.cpp:159
+msgctxt "AdBlockIcon|"
+msgid "Disable only on this page"
+msgstr "Відключити лише на цій сторінці"
+
+#: lib/adblock/adblockmanager.cpp:184
+#, qt-format
+msgctxt "AdBlockManager|"
+msgid "Do you want to add <b>%1</b> subscription?"
+msgstr "Ви хочете додати підписку <b>%1</b>?"
+
+#: lib/adblock/adblockmanager.cpp:186
+msgctxt "AdBlockManager|"
+msgid "AdBlock Subscription"
+msgstr "Підписка AdBlock"
+
+#: lib/adblock/adblockmanager.cpp:317
+msgctxt "AdBlockManager|"
+msgid "EasyList"
+msgstr "EasyList"
+
+#: lib/adblock/adblockmanager.cpp:322
+msgctxt "AdBlockManager|"
+msgid "NoCoin List"
+msgstr "Список NoCoin"
+
+#: lib/adblock/adblocksubscription.cpp:173
+msgctxt "AdBlockSubscription|"
+msgid "Cannot load subscription!"
+msgstr "Неможливо завантажити підписку!"
+
+#: lib/adblock/adblocksubscription.cpp:286
+msgctxt "AdBlockCustomList|"
+msgid "Custom Rules"
+msgstr "Правила користувача"
+
+#: lib/adblock/adblocktreewidget.cpp:80
+msgctxt "AdBlockTreeWidget|"
+msgid "Add Rule"
+msgstr "Додати правило"
+
+#: lib/adblock/adblocktreewidget.cpp:82
+msgctxt "AdBlockTreeWidget|"
+msgid "Remove Rule"
+msgstr "Вилучити правило"
+
+#: lib/adblock/adblocktreewidget.cpp:141
+msgctxt "AdBlockTreeWidget|"
+msgid "Add Custom Rule"
+msgstr "Додати правило користувача"
+
+#: lib/adblock/adblocktreewidget.cpp:141
+msgctxt "AdBlockTreeWidget|"
+msgid "Please write your rule here:"
+msgstr "Будь ласка, напишіть Ваше правило тут:"
+
+#: lib/adblock/adblocktreewidget.cpp:179
+#, qt-format
+msgctxt "AdBlockTreeWidget|"
+msgid "%1 (recently updated)"
+msgstr "%1 (нещодавно оновлено)"
+
+#: lib/adblock/adblocktreewidget.cpp:188
+#, qt-format
+msgctxt "AdBlockTreeWidget|"
+msgid "%1 (Error: %2)"
+msgstr "%1 (Помилка: %2)"
+
+#: lib/adblock/adblockurlinterceptor.cpp:44
+msgctxt "AdBlockUrlInterceptor|"
+msgid "Blocked content"
+msgstr "Блокований зміст"
+
+#: lib/adblock/adblockurlinterceptor.cpp:45
+#, qt-format
+msgctxt "AdBlockUrlInterceptor|"
+msgid "Blocked by <i>%1 (%2)</i>"
+msgstr "Заблоковано <i>%1 (%2)</i>"
+
+#: lib/app/browserwindow.cpp:204 lib/app/browserwindow.cpp:979
+msgctxt "BrowserWindow|"
+msgid "Falkon"
+msgstr "Falkon"
+
+#: lib/app/browserwindow.cpp:394
+msgctxt "BrowserWindow|"
+msgid "IP Address of current page"
+msgstr "IP адреса поточної сторінки"
+
+#: lib/app/browserwindow.cpp:734
+msgctxt "BrowserWindow|"
+msgid " (Private Browsing)"
+msgstr " (Анонімний перегляд)"
+
+#: lib/app/browserwindow.cpp:981
+#, qt-format
+msgctxt "BrowserWindow|"
+msgid "%1 - Falkon"
+msgstr "%1 — Falkon"
+
+#: lib/app/browserwindow.cpp:1047
+msgctxt "BrowserWindow|"
+msgid "&Menu Bar"
+msgstr "Панель &меню"
+
+#: lib/app/browserwindow.cpp:1052
+msgctxt "BrowserWindow|"
+msgid "&Navigation Toolbar"
+msgstr "Панель &навігації"
+
+#: lib/app/browserwindow.cpp:1056
+msgctxt "BrowserWindow|"
+msgid "&Bookmarks Toolbar"
+msgstr "Панель &закладок"
+
+#: lib/app/browserwindow.cpp:1062
+msgctxt "BrowserWindow|"
+msgid "&Tabs on Top"
+msgstr "&Вкладки згори"
+
+#: lib/app/browserwindow.cpp:1117
+msgctxt "BrowserWindow|"
+msgid "Other"
+msgstr "Інше"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "HTML files"
+msgstr "HTML-файли"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "Image files"
+msgstr "Файли зображень"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "Text files"
+msgstr "Текстові файли"
+
+#: lib/app/browserwindow.cpp:1159
+msgctxt "BrowserWindow|"
+msgid "All files"
+msgstr "Всі файли"
+
+#: lib/app/browserwindow.cpp:1161
+msgctxt "BrowserWindow|"
+msgid "Open file..."
+msgstr "Відкрити файл…"
+
+#: lib/app/browserwindow.cpp:1503
+#, qt-format
+msgctxt "BrowserWindow|"
+msgid ""
+"There are still %n open tabs and your session won't be stored.\n"
+"Are you sure you want to close this window?"
+msgid_plural ""
+"There are still %n open tabs and your session won't be stored.\n"
+"Are you sure you want to close this window?"
+msgstr[0] ""
+"Все ще маємо %n відкриту вкладку і ваш сеанс не буде збережено. \n"
+"Ви впевнені, що хочете закрити це вікно?"
+msgstr[1] ""
+"Все ще маємо %n відкриті вкладки і ваш сеанс не буде збережено. \n"
+"Ви впевнені, що хочете закрити це вікно?"
+msgstr[2] ""
+"Все ще маємо %n відкритих вкладок і ваш сеанс не буде збережено. \n"
+"Ви впевнені, що хочете закрити це вікно?"
+msgstr[3] ""
+"Все ще маємо %n відкриту вкладку і ваш сеанс не буде збережено. \n"
+"Ви впевнені, що хочете закрити це вікно?"
+
+#: lib/app/browserwindow.cpp:1504
+msgctxt "BrowserWindow|"
+msgid "Don't ask again"
+msgstr "Не питати знову"
+
+#: lib/app/browserwindow.cpp:1505
+msgctxt "BrowserWindow|"
+msgid "There are still open tabs"
+msgstr "Все ще маємо відкриті вкладки"
+
+#: lib/app/mainapplication.cpp:1081
+msgctxt "MainApplication|"
+msgid ""
+"Falkon is not currently your default browser. Would you like to make it your "
+"default browser?"
+msgstr ""
+"Falkon не є вашим типовим переглядачем. Чи хочете ви зробити його таким?"
+
+#: lib/app/mainapplication.cpp:1082
+msgctxt "MainApplication|"
+msgid "Always perform this check when starting Falkon."
+msgstr "Завжди виконувати перевірку під час запуску Falkon."
+
+#: lib/app/mainapplication.cpp:1084
+msgctxt "MainApplication|"
+msgid "Default Browser"
+msgstr "Типовий переглядач"
+
+#: lib/app/mainapplication.cpp:1205
+msgctxt "MainApplication|"
+msgid "Open new tab"
+msgstr "Відкрити нову вкладку"
+
+#: lib/app/mainapplication.cpp:1206
+msgctxt "MainApplication|"
+msgid "Open new window"
+msgstr "Відкрити нове вікно"
+
+#: lib/app/mainapplication.cpp:1207
+msgctxt "MainApplication|"
+msgid "Open new private window"
+msgstr "Відкрити нове приватне вікно"
+
+#: lib/app/mainapplication.cpp:1222
+msgctxt "MainApplication|"
+msgid ""
+"Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
+"version 3 or (at your option) any later version. It is based on QtWebEngine "
+"and Qt Framework."
+msgstr ""
+"Falkon — це новий і дуже швидкий вебпереглядач з відкритим кодом. Falkon "
+"поширюється за ліцензією GPL 3-ї версії  або (за вашим бажанням) будь-якої "
+"пізнішої версії. Засновано на ядрі QtWebEngine і наборі бібліотек Qt."
+
+#: lib/app/mainmenu.cpp:84 lib/app/mainmenu.cpp:497
+msgctxt "MainMenu|"
+msgid "Sessions"
+msgstr "Сеанси"
+
+#: lib/app/mainmenu.cpp:467
+msgctxt "MainMenu|"
+msgid "&About Falkon"
+msgstr "&Про Falkon"
+
+#: lib/app/mainmenu.cpp:472
+msgctxt "MainMenu|"
+msgid "Pr&eferences"
+msgstr "На&лаштування"
+
+#: lib/app/mainmenu.cpp:478
+msgctxt "MainMenu|"
+msgid "Quit"
+msgstr "Вихід"
+
+#: lib/app/mainmenu.cpp:485
+msgctxt "MainMenu|"
+msgid "&File"
+msgstr "&Файл"
+
+#: lib/app/mainmenu.cpp:488
+msgctxt "MainMenu|"
+msgid "New Tab"
+msgstr "Нова вкладка"
+
+#: lib/app/mainmenu.cpp:489
+msgctxt "MainMenu|"
+msgid "&New Window"
+msgstr "&Нове вікно"
+
+#: lib/app/mainmenu.cpp:490
+msgctxt "MainMenu|"
+msgid "New &Private Window"
+msgstr "Нове &анонімне вікно "
+
+#: lib/app/mainmenu.cpp:491
+msgctxt "MainMenu|"
+msgid "Open Location"
+msgstr "Відкрити адресу"
+
+#: lib/app/mainmenu.cpp:492
+msgctxt "MainMenu|"
+msgid "Open &File..."
+msgstr "Відкрити &файл"
+
+#: lib/app/mainmenu.cpp:493
+msgctxt "MainMenu|"
+msgid "Close Window"
+msgstr "Закрити вікно"
+
+#: lib/app/mainmenu.cpp:500
+msgctxt "MainMenu|"
+msgid "Session Manager"
+msgstr "Менеджер сеансів"
+
+#: lib/app/mainmenu.cpp:507
+msgctxt "MainMenu|"
+msgid "&Save Page As..."
+msgstr "&Зберегти сторінку як…"
+
+#: lib/app/mainmenu.cpp:508
+msgctxt "MainMenu|"
+msgid "Send Link..."
+msgstr "Відіслати посилання…"
+
+#: lib/app/mainmenu.cpp:509
+msgctxt "MainMenu|"
+msgid "&Print..."
+msgstr "&Надрукувати…"
+
+#: lib/app/mainmenu.cpp:514
+msgctxt "MainMenu|"
+msgid "&Edit"
+msgstr "З&міни"
+
+#: lib/app/mainmenu.cpp:517
+msgctxt "MainMenu|"
+msgid "&Undo"
+msgstr "Від&мінити дію"
+
+#: lib/app/mainmenu.cpp:519
+msgctxt "MainMenu|"
+msgid "&Redo"
+msgstr "Пов&торити дію"
+
+#: lib/app/mainmenu.cpp:522
+msgctxt "MainMenu|"
+msgid "&Cut"
+msgstr "&Вирізати"
+
+#: lib/app/mainmenu.cpp:524
+msgctxt "MainMenu|"
+msgid "C&opy"
+msgstr "К&опіювати"
+
+#: lib/app/mainmenu.cpp:526
+msgctxt "MainMenu|"
+msgid "&Paste"
+msgstr "Вс&тавити"
+
+#: lib/app/mainmenu.cpp:529
+msgctxt "MainMenu|"
+msgid "Select &All"
+msgstr "Виділити &все"
+
+#: lib/app/mainmenu.cpp:531
+msgctxt "MainMenu|"
+msgid "&Find"
+msgstr "&Знайти"
+
+#: lib/app/mainmenu.cpp:536
+msgctxt "MainMenu|"
+msgid "&View"
+msgstr "&Вигляд"
+
+#: lib/app/mainmenu.cpp:539
+msgctxt "MainMenu|"
+msgid "Toolbars"
+msgstr "Панелі інструментів"
+
+#: lib/app/mainmenu.cpp:541
+msgctxt "MainMenu|"
+msgid "Sidebar"
+msgstr "Бічна панель"
+
+#: lib/app/mainmenu.cpp:543
+msgctxt "MainMenu|"
+msgid "Character &Encoding"
+msgstr "&Кодування символів"
+
+#: lib/app/mainmenu.cpp:552
+msgctxt "MainMenu|"
+msgid "Sta&tus Bar"
+msgstr "Панель ста&тусу"
+
+#: lib/app/mainmenu.cpp:554
+msgctxt "MainMenu|"
+msgid "&Stop"
+msgstr "&Зупинити"
+
+#: lib/app/mainmenu.cpp:555
+msgctxt "MainMenu|"
+msgid "&Reload"
+msgstr "&Перезавантажити"
+
+#: lib/app/mainmenu.cpp:557
+msgctxt "MainMenu|"
+msgid "Zoom &In"
+msgstr "З&більшити"
+
+#: lib/app/mainmenu.cpp:558
+msgctxt "MainMenu|"
+msgid "Zoom &Out"
+msgstr "З&меншити"
+
+#: lib/app/mainmenu.cpp:559
+msgctxt "MainMenu|"
+msgid "Reset"
+msgstr "Звичайно"
+
+#: lib/app/mainmenu.cpp:563
+msgctxt "MainMenu|"
+msgid "&Page Source"
+msgstr "Вихідний код &сторінки"
+
+#: lib/app/mainmenu.cpp:565
+msgctxt "MainMenu|"
+msgid "&FullScreen"
+msgstr "&Повноекранний режим"
+
+#: lib/app/mainmenu.cpp:568
+msgctxt "MainMenu|"
+msgid "&Tools"
+msgstr "Ін&струменти"
+
+#: lib/app/mainmenu.cpp:571
+msgctxt "MainMenu|"
+msgid "&Web Search"
+msgstr "&Веб-пошук"
+
+#: lib/app/mainmenu.cpp:572
+msgctxt "MainMenu|"
+msgid "Site &Info"
+msgstr "&Інформація про сайт"
+
+#: lib/app/mainmenu.cpp:575
+msgctxt "MainMenu|"
+msgid "&Download Manager"
+msgstr "Менеджер &завантаження"
+
+#: lib/app/mainmenu.cpp:576
+msgctxt "MainMenu|"
+msgid "&Cookies Manager"
+msgstr "Менеджер &кук"
+
+#: lib/app/mainmenu.cpp:577
+msgctxt "MainMenu|"
+msgid "Web In&spector"
+msgstr "Веб ін&спектор"
+
+#: lib/app/mainmenu.cpp:578
+msgctxt "MainMenu|"
+msgid "Clear Recent &History"
+msgstr "Очистити &недавню історію"
+
+#: lib/app/mainmenu.cpp:583
+msgctxt "MainMenu|"
+msgid "&Extensions"
+msgstr "&Розширення"
+
+#: lib/app/mainmenu.cpp:589
+msgctxt "MainMenu|"
+msgid "&Help"
+msgstr "&Довідка"
+
+#: lib/app/mainmenu.cpp:592
+msgctxt "MainMenu|"
+msgid "About &Qt"
+msgstr "Про &Qt"
+
+#: lib/app/mainmenu.cpp:597
+msgctxt "MainMenu|"
+msgid "Information about application"
+msgstr "Інформація про програму"
+
+#: lib/app/mainmenu.cpp:598
+msgctxt "MainMenu|"
+msgid "Configuration Information"
+msgstr "Інформація про конфігурацію"
+
+#: lib/app/mainmenu.cpp:599
+msgctxt "MainMenu|"
+msgid "Report &Issue"
+msgstr "Повідомити про &помилку"
+
+#: lib/app/mainmenu.cpp:612
+msgctxt "MainMenu|"
+msgid "Restore &Closed Tab"
+msgstr "Відновити &закриту вкладку"
+
+#: lib/autofill/autofillicon.cpp:29
+msgctxt "AutoFillWidget|"
+msgid "Choose username to login"
+msgstr "Оберіть ім'я користувача, щоб увійти"
+
+#: lib/autofill/autofillnotification.cpp:39
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "on %1"
+msgstr "на %1"
+
+#: lib/autofill/autofillnotification.cpp:43
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "for <b>%1</b>"
+msgstr "для <b>%1</b>"
+
+#: lib/autofill/autofillnotification.cpp:47
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "Do you want Falkon to update saved password %1?"
+msgstr "Чи хочете ви, щоб Falkon оновила збережений пароль %1?"
+
+#: lib/autofill/autofillnotification.cpp:53
+#, qt-format
+msgctxt "AutoFillNotification|"
+msgid "Do you want Falkon to remember the password %1 %2?"
+msgstr "Чи хочете ви, щоб Falkon запам'ятала пароль %1 %2?"
+
+#: lib/autofill/autofillnotification.ui:69
+msgctxt "AutoFillNotification|"
+msgid "Update"
+msgstr "Оновити"
+
+#: lib/autofill/autofillnotification.ui:85
+msgctxt "AutoFillNotification|"
+msgid "Remember"
+msgstr "Запам’ятати"
+
+#: lib/autofill/autofillnotification.ui:101
+msgctxt "AutoFillNotification|"
+msgid "Never For This Site"
+msgstr "Ніколи для цього сайту"
+
+#: lib/autofill/autofillnotification.ui:117
+msgctxt "AutoFillNotification|"
+msgid "Not Now"
+msgstr "Не зараз"
+
+#: lib/autofill/autofillwidget.ui:11
+msgctxt "AutoFillWidget|"
+msgid "Login as:"
+msgstr "Увійти як:"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:257
+msgctxt "AutoFill|"
+msgid "Database (encrypted)"
+msgstr "База даних (зашифровано)"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
+msgctxt "MasterPasswordDialog|"
+msgid "Warning!"
+msgstr "Попередження!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
+msgctxt "MasterPasswordDialog|"
+msgid "You entered a wrong password!"
+msgstr "Ви ввели неправильний пароль!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
+msgctxt "MasterPasswordDialog|"
+msgid "New/Confirm password fields do not match!"
+msgstr "Новий пароль та підтвердження не збігаються!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:578
+msgctxt "AutoFill|"
+msgid "Warning!"
+msgstr "Попередження!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:579
+msgctxt "AutoFill|"
+msgid ""
+"This backend needs a master password to be set! Falkon just switches to its "
+"default backend"
+msgstr ""
+"Цей backend потребує встановлений майстер-пароль! Falkon повернеться до "
+"звичайного модуля обробки"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
+msgctxt "MasterPasswordDialog|"
+msgid "Are you sure you want to clear master password and decrypt data?"
+msgstr "Ви впевнені, що бажаєте очистити майстер-пароль і дешифрувати дані?"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
+msgctxt "MasterPasswordDialog|"
+msgid "Some data has not been decrypted. The master password was not cleared!"
+msgstr "Деякі дані не були розшифровані. Майстер-пароль не був очищений!"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:669
+msgctxt "AutoFill|"
+msgid "Enter Master Password"
+msgstr "Введіть майстер-пароль"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:673
+msgctxt "AutoFill|"
+msgid "Permission is required, please enter Master Password:"
+msgstr "Потрібен дозвіл, будь ласка, введіть майстер-пароль:"
+
+#: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:679
+msgctxt "AutoFill|"
+msgid "Entered password is wrong!"
+msgstr "Пароль неправильний!"
+
+#: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
+msgctxt "AutoFill|"
+msgid "Database (plaintext)"
+msgstr "База даних (відкритий текст)"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:20
+msgctxt "MasterPasswordDialog|"
+msgid "Encrypted DataBase Settings"
+msgstr "Налаштування зашифрованої бази даних"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:33
+msgctxt "MasterPasswordDialog|"
+msgid "Set/Change Master Password..."
+msgstr "Вибрати/Змінити головний пароль…"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:36
+msgctxt "MasterPasswordDialog|"
+msgid "This backend does not work without a master password."
+msgstr "Цей backend не працює без майстер-пароля."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:43
+msgctxt "MasterPasswordDialog|"
+msgid "Clear Master Password..."
+msgstr "Очистити головний пароль…"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:46
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"This option clears the master password and moves all encrypted data to the "
+"\"DataBase (Plain Text)\" backend, and switches to it."
+msgstr ""
+"Ця опція очищує майстер-пароль, переносить усі зашифровані дані до модуля "
+"обробки \"База даних (відкритий текст)\" і перемикається на нього."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:64
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"The Master Password is used to protect site passwords and form data. If you "
+"set a Master Password you will be asked to enter it once per session."
+msgstr ""
+"Майстер-пароль використовується для захисту паролів сайту і даних форм. Якщо "
+"ви встановите майстер-пароль, вам доведеться вводити його не частіше за один "
+"раз за сеанс."
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:76
+msgctxt "MasterPasswordDialog|"
+msgid "Current Password:"
+msgstr "Поточний пароль:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:83
+msgctxt "MasterPasswordDialog|"
+msgid "New Password:"
+msgstr "Новий пароль:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:90
+msgctxt "MasterPasswordDialog|"
+msgid "Confirm Password:"
+msgstr "Підтвердження пароля:"
+
+#: lib/autofill/passwordbackends/masterpassworddialog.ui:120
+msgctxt "MasterPasswordDialog|"
+msgid ""
+"<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
+msgstr ""
+"<b>Примітка:</b> майстер-пароль не можна скинути. Не забувайте його, будь "
+"ласка."
+
+#: lib/bookmarks/bookmarks.cpp:207
+msgctxt "Bookmarks|"
+msgid "Bookmarks Toolbar"
+msgstr "Панель закладок"
+
+#: lib/bookmarks/bookmarks.cpp:208
+msgctxt "Bookmarks|"
+msgid "Bookmarks located in Bookmarks Toolbar"
+msgstr "Закладки, розташовані на панелі інструментів"
+
+#: lib/bookmarks/bookmarks.cpp:211
+msgctxt "Bookmarks|"
+msgid "Bookmarks Menu"
+msgstr "Меню закладок"
+
+#: lib/bookmarks/bookmarks.cpp:212
+msgctxt "Bookmarks|"
+msgid "Bookmarks located in Bookmarks Menu"
+msgstr "Закладки, розташовані в меню \"Закладки\""
+
+#: lib/bookmarks/bookmarks.cpp:215
+msgctxt "Bookmarks|"
+msgid "Unsorted Bookmarks"
+msgstr "Невідсортовані закладки"
+
+#: lib/bookmarks/bookmarks.cpp:216
+msgctxt "Bookmarks|"
+msgid "All other bookmarks"
+msgstr "Всі інші закладки"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.cpp:64
+msgctxt "BookmarksExportDialog|"
+msgid "Error!"
+msgstr "Помилка!"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:14
+msgctxt "BookmarksExportDialog|"
+msgid "Export Bookmarks"
+msgstr "Експорт закладок"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:20
+msgctxt "BookmarksExportDialog|"
+msgid "<b>Export Bookmarks</b>"
+msgstr "<b>Експорт закладок</b>"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:27
+msgctxt "BookmarksExportDialog|"
+msgid "Export options"
+msgstr "Експорт налаштувань"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
+msgctxt "BookmarksExportDialog|"
+msgid "Choose..."
+msgstr "Виберіть…"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
+msgctxt "BookmarksExportDialog|"
+msgid "Output File:"
+msgstr "Вихідний файл:"
+
+#: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:89
+msgctxt "BookmarksExportDialog|"
+msgid "Format:"
+msgstr "Формат:"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:31
+msgctxt "BookmarksExporter|"
+msgid "HTML File"
+msgstr "HTML-файл"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:37
+msgctxt "BookmarksExporter|"
+msgid "HTML Bookmarks"
+msgstr "HTML закладки"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:38
+msgctxt "BookmarksExporter|"
+msgid "Choose file..."
+msgstr "Оберіть файл…"
+
+#: lib/bookmarks/bookmarksexport/htmlexporter.cpp:47
+msgctxt "BookmarksExporter|"
+msgid "Cannot open file for writing!"
+msgstr "Неможливо відкрити файл для запису!"
+
+#: lib/bookmarks/bookmarksicon.cpp:37 lib/bookmarks/bookmarksicon.cpp:108
+msgctxt "BookmarksIcon|"
+msgid "Bookmark this Page"
+msgstr "Додати до закладок цю сторінку"
+
+#: lib/bookmarks/bookmarksicon.cpp:100
+msgctxt "BookmarksIcon|"
+msgid "Edit this bookmark"
+msgstr "Редагувати цю закладку"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:113
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
+msgctxt "BookmarksImportDialog|"
+msgid "Error!"
+msgstr "Помилка!"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
+msgctxt "BookmarksImportDialog|"
+msgid "No bookmarks were found."
+msgstr "Закладки не були знайдені."
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:125
+msgctxt "BookmarksImportDialog|"
+msgid "Finish"
+msgstr "Завершити"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:157
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:270
+msgctxt "BookmarksImportDialog|"
+msgid "Next >"
+msgstr "Далі >"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:186
+#, qt-format
+msgctxt "BookmarksImportDialog|"
+msgid "<b>Importing from %1</b>"
+msgstr "<b>Імпортувати з %1</b>"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:20
+msgctxt "BookmarksImportDialog|"
+msgid "Import Bookmarks"
+msgstr "Імпорт закладок"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:26
+msgctxt "BookmarksImportDialog|"
+msgid "<b>Import Bookmarks</b>"
+msgstr "<b>Імпорт закладок</b>"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:74
+msgctxt "BookmarksImportDialog|"
+msgid "Internet Explorer"
+msgstr "Internet Explorer"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:83
+msgctxt "BookmarksImportDialog|"
+msgid "Html File"
+msgstr "Html файл"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:95
+msgctxt "BookmarksImportDialog|"
+msgid "Choose from which you want to import bookmarks:"
+msgstr "Оберіть звідки ви хочете імпортувати закладки:"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:125
+msgctxt "BookmarksImportDialog|"
+msgid "Choose..."
+msgstr "Виберіть…"
+
+#: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:257
+msgctxt "BookmarksImportDialog|"
+msgid "< Back"
+msgstr "< Назад"
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:32
+msgctxt "BookmarksImporter|"
+msgid ""
+"Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
+"is usually located in"
+msgstr ""
+"Google Chrome зберігає свої закладки в текстовому файлі <b>Bookmarks</b>. "
+"Цей файл зазвичай розташований в"
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
+msgctxt "BookmarksImporter|"
+msgid "Choose file..."
+msgstr "Оберіть файл…"
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
+msgctxt "BookmarksImporter|"
+msgid "Unable to open file."
+msgstr "Не вдається відкрити файл."
+
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:75
+msgctxt "BookmarksImporter|"
+msgid "Cannot parse JSON file!"
+msgstr "Не вдалося обробити файл JSON!"
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:42
+msgctxt "BookmarksImporter|"
+msgid ""
+"Mozilla Firefox stores its bookmarks in <b>places.sqlite</b> SQLite "
+"database. This file is usually located in"
+msgstr ""
+"Mozilla Firefox зберігає свої закладки в базі даних <b>places.sqlite</b> "
+"SQLite. Цей файл зазвичай розташований в "
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:70
+msgctxt "BookmarksImportDialog|"
+msgid "File does not exist."
+msgstr "Файл не існує."
+
+#: lib/bookmarks/bookmarksimport/firefoximporter.cpp:77
+msgctxt "BookmarksImportDialog|"
+msgid "Unable to open database. Is Firefox running?"
+msgstr "Не вдається відкрити базу даних. Firefox працює?"
+
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:32
+msgctxt "BookmarksImporter|"
+msgid ""
+"You can import bookmarks from any browser that supports HTML exporting. This "
+"file has usually these suffixes"
+msgstr ""
+"Ви можете імпортувати закладки з будь-якого браузера, що підтримує експорт у "
+"HTML. Файл має, зазвичай, таке розширення"
+
+#: lib/bookmarks/bookmarksimport/htmlimporter.cpp:43
+msgctxt "BookmarksImporter|"
+msgid "HTML Bookmarks"
+msgstr "HTML закладки"
+
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:33
+msgctxt "BookmarksImporter|"
+msgid ""
+"Internet Explorer stores its bookmarks in <b>Favorites</b> folder. This "
+"folder is usually located in"
+msgstr ""
+"Internet Explorer зберігає свої закладки у теці <b>Favorites</b>. Цей файл, "
+"зазвичай, зберігається у "
+
+#: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
+msgctxt "BookmarksImporter|"
+msgid "Directory does not exist."
+msgstr "Каталогу не існує."
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
+msgctxt "BookmarksImporter|"
+msgid ""
+"Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
+"usually located in"
+msgstr ""
+"Opera зберігає свої закладки в <b>bookmarks.adr</b> текстовому файлі. Цей "
+"файл зазвичай розташований в "
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
+msgctxt "BookmarksImporter|"
+msgid "File is not valid Opera bookmarks file!"
+msgstr "Файл не є допустимим файлом закладок Opera!"
+
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
+msgctxt "BookmarksImporter|"
+msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
+msgstr "Підтримується лише файл закладок Opera з кодуванням UTF-8!"
+
+#: lib/bookmarks/bookmarksmanager.cpp:105
+msgctxt "BookmarksManager|"
+msgid "Open in new tab"
+msgstr "Відкрити в новій вкладці"
+
+#: lib/bookmarks/bookmarksmanager.cpp:106
+msgctxt "BookmarksManager|"
+msgid "Open in new window"
+msgstr "Відкрити в новому вікні"
+
+#: lib/bookmarks/bookmarksmanager.cpp:107
+msgctxt "BookmarksManager|"
+msgid "Open in new private window"
+msgstr "Відкрити в новому анонімному вікні"
+
+#: lib/bookmarks/bookmarksmanager.cpp:110
+#: lib/bookmarks/bookmarksmanager.cpp:177
+msgctxt "BookmarksManager|"
+msgid "New Bookmark"
+msgstr "Нова закладка"
+
+#: lib/bookmarks/bookmarksmanager.cpp:111
+#: lib/bookmarks/bookmarksmanager.cpp:185
+msgctxt "BookmarksManager|"
+msgid "New Folder"
+msgstr "Нова тека"
+
+#: lib/bookmarks/bookmarksmanager.cpp:112
+msgctxt "BookmarksManager|"
+msgid "New Separator"
+msgstr "Новий розділювач"
+
+#: lib/bookmarks/bookmarksmanager.cpp:114
+msgctxt "BookmarksManager|"
+msgid "Delete"
+msgstr "Вилучити"
+
+#: lib/bookmarks/bookmarksmanager.ui:14
+msgctxt "BookmarksManager|"
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: lib/bookmarks/bookmarksmanager.ui:32
+msgctxt "BookmarksManager|"
+msgid "Title:"
+msgstr "Назва:"
+
+#: lib/bookmarks/bookmarksmanager.ui:42
+msgctxt "BookmarksManager|"
+msgid "Address:"
+msgstr "Адреса:"
+
+#: lib/bookmarks/bookmarksmanager.ui:52
+msgctxt "BookmarksManager|"
+msgid "Keyword:"
+msgstr "Ключове слово:"
+
+#: lib/bookmarks/bookmarksmanager.ui:62
+msgctxt "BookmarksManager|"
+msgid "Description"
+msgstr "Опис"
+
+#: lib/bookmarks/bookmarksmenu.cpp:166
+msgctxt "BookmarksMenu|"
+msgid "&Bookmarks"
+msgstr "&Закладки"
+
+#: lib/bookmarks/bookmarksmenu.cpp:168
+msgctxt "BookmarksMenu|"
+msgid "Bookmark &This Page"
+msgstr "Додати &цю сторінку до закладок"
+
+#: lib/bookmarks/bookmarksmenu.cpp:169
+msgctxt "BookmarksMenu|"
+msgid "Bookmark &All Tabs"
+msgstr "Додати до закладок &всі вкладки"
+
+#: lib/bookmarks/bookmarksmenu.cpp:170
+msgctxt "BookmarksMenu|"
+msgid "Organize &Bookmarks"
+msgstr "Навести лад в &закладках"
+
+#: lib/bookmarks/bookmarksmodel.cpp:147
+msgctxt "BookmarksModel|"
+msgid "Title"
+msgstr "Назва"
+
+#: lib/bookmarks/bookmarksmodel.cpp:149
+msgctxt "BookmarksModel|"
+msgid "Address"
+msgstr "Адреса"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:73
+msgctxt "BookmarksToolbar|"
+msgid "Open in new tab"
+msgstr "Відкрити в новій вкладці"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:74
+msgctxt "BookmarksToolbar|"
+msgid "Open in new window"
+msgstr "Відкрити в новому вікні"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:75
+msgctxt "BookmarksToolbar|"
+msgid "Open in new private window"
+msgstr "Відкрити в новому анонімному вікні"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:185
+msgctxt "BookmarksToolbar|"
+msgid "New Folder"
+msgstr "Нова тека"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:78
+msgctxt "BookmarksToolbar|"
+msgid "Edit"
+msgstr "Редагувати"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:79
+msgctxt "BookmarksToolbar|"
+msgid "Delete"
+msgstr "Вилучити"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:81
+msgctxt "BookmarksToolbar|"
+msgid "Show Only Icons"
+msgstr "Показати лише піктограми"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:85
+msgctxt "BookmarksToolbar|"
+msgid "Show Only Text"
+msgstr "Показувати лише текст"
+
+#: lib/bookmarks/bookmarkstoolbar.cpp:185
+msgctxt "BookmarksToolbar|"
+msgid "Enter Folder Name:"
+msgstr "Введіть назву теки:"
+
+#: lib/bookmarks/bookmarkstools.cpp:76
+#, qt-format
+msgctxt "BookmarksFoldersMenu|"
+msgid "Choose %1"
+msgstr "Виберіть %1"
+
+#: lib/bookmarks/bookmarkstools.cpp:153
+msgctxt "Bookmarks|"
+msgid "Choose name and location of this bookmark."
+msgstr "Оберіть назву і розташування для цієї закладки."
+
+#: lib/bookmarks/bookmarkstools.cpp:157
+msgctxt "Bookmarks|"
+msgid "Add New Bookmark"
+msgstr "Додати нову закладку"
+
+#: lib/bookmarks/bookmarkstools.cpp:197
+msgctxt "Bookmarks|"
+msgid "Choose folder for bookmarks:"
+msgstr "Виберіть теку для закладок:"
+
+#: lib/bookmarks/bookmarkstools.cpp:198
+msgctxt "Bookmarks|"
+msgid "Bookmark All Tabs"
+msgstr "Додати до закладок всі вкладки"
+
+#: lib/bookmarks/bookmarkstools.cpp:239
+msgctxt "Bookmarks|"
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: lib/bookmarks/bookmarkstools.cpp:242
+msgctxt "Bookmarks|"
+msgid "Address:"
+msgstr "Адреса:"
+
+#: lib/bookmarks/bookmarkstools.cpp:244
+msgctxt "Bookmarks|"
+msgid "Keyword:"
+msgstr "Ключове слово:"
+
+#: lib/bookmarks/bookmarkstools.cpp:247
+msgctxt "Bookmarks|"
+msgid "Description:"
+msgstr "Опис:"
+
+#: lib/bookmarks/bookmarkstools.cpp:252
+msgctxt "Bookmarks|"
+msgid "Edit Bookmark"
+msgstr "Редагувати закладку"
+
+#: lib/bookmarks/bookmarkstools.cpp:344
+msgctxt "Bookmarks|"
+msgid "Confirmation"
+msgstr "Підтвердження"
+
+#: lib/bookmarks/bookmarkstools.cpp:345
+#, qt-format
+msgctxt "Bookmarks|"
+msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
+msgstr "Ви справді хочете відкрити усі закладки з теки '%1' у вкладках?"
+
+#: lib/bookmarks/bookmarkstools.cpp:440
+msgctxt "Bookmarks|"
+msgid "Empty"
+msgstr "Порожньо"
+
+#: lib/bookmarks/bookmarkswidget.cpp:98
+msgctxt "BookmarksWidget|"
+msgid "Update Bookmark"
+msgstr "Оновити закладку"
+
+#: lib/bookmarks/bookmarkswidget.cpp:112 lib/bookmarks/bookmarkswidget.ui:33
+msgctxt "BookmarksWidget|"
+msgid "Add to Speed Dial"
+msgstr "Додати до сторінки «Швидкий набір»"
+
+#: lib/bookmarks/bookmarkswidget.cpp:116
+msgctxt "BookmarksWidget|"
+msgid "Remove from Speed Dial"
+msgstr "Вилучити зі сторінки «Швидкий набір»"
+
+#: lib/bookmarks/bookmarkswidget.cpp:121
+msgctxt "BookmarksWidget|"
+msgid "Remove from Bookmarks"
+msgstr "Вилучити із закладок"
+
+#: lib/bookmarks/bookmarkswidget.ui:20
+msgctxt "BookmarksWidget|"
+msgid "Add to Bookmarks"
+msgstr "Додати закладку"
+
+#: lib/cookies/cookiemanager.cpp:78
+msgctxt "CookieManager|"
+msgid "Search"
+msgstr "Пошук"
+
+#: lib/cookies/cookiemanager.cpp:105
+msgctxt "CookieManager|"
+msgid "Confirmation"
+msgstr "Підтвердження"
+
+#: lib/cookies/cookiemanager.cpp:106
+msgctxt "CookieManager|"
+msgid "Are you sure you want to delete all cookies on your computer?"
+msgstr "Ви впевнені, що хочете вилучити усі cookies з Вашого комп’ютера?"
+
+#: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
+#: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
+#: lib/cookies/cookiemanager.cpp:155 lib/cookies/cookiemanager.cpp:156
+#: lib/cookies/cookiemanager.ui:154 lib/cookies/cookiemanager.ui:164
+#: lib/cookies/cookiemanager.ui:174 lib/cookies/cookiemanager.ui:184
+#: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
+msgctxt "CookieManager|"
+msgid "<cookie not selected>"
+msgstr "<не вибрано куку>"
+
+#: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
+#: lib/cookies/cookiemanager.ui:245
+msgctxt "CookieManager|"
+msgid "Remove cookies"
+msgstr "Вилучити куки"
+
+#: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
+#: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
+#: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
+msgctxt "CookieManager|"
+msgid "<multiple cookies selected>"
+msgstr "<вибрано декілька кук>"
+
+#: lib/cookies/cookiemanager.cpp:178
+msgctxt "CookieManager|"
+msgid "Secure only"
+msgstr "Безпечні тільки на"
+
+#: lib/cookies/cookiemanager.cpp:178
+msgctxt "CookieManager|"
+msgid "All connections"
+msgstr "Всі з’єднання"
+
+#: lib/cookies/cookiemanager.cpp:179
+msgctxt "CookieManager|"
+msgid "Session cookie"
+msgstr "Кука сеансу"
+
+#: lib/cookies/cookiemanager.cpp:181
+msgctxt "CookieManager|"
+msgid "Remove cookie"
+msgstr "Вилучити куку"
+
+#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.ui:126
+msgctxt "CookieManager|"
+msgid "Server:"
+msgstr "Сервер:"
+
+#: lib/cookies/cookiemanager.cpp:186
+msgctxt "CookieManager|"
+msgid "Add to whitelist"
+msgstr "Додати до білого переліку"
+
+#: lib/cookies/cookiemanager.cpp:193
+msgctxt "CookieManager|"
+msgid "Already blacklisted!"
+msgstr "Вже в чорному списку!"
+
+#: lib/cookies/cookiemanager.cpp:193
+#, qt-format
+msgctxt "CookieManager|"
+msgid "The server \"%1\" is already in blacklist, please remove it first."
+msgstr "Сервер «%1» вже в чорному списку, спочатку вилучіть його, будь ласка."
+
+#: lib/cookies/cookiemanager.cpp:209
+msgctxt "CookieManager|"
+msgid "Add to blacklist"
+msgstr "Додати до чорного переліку"
+
+#: lib/cookies/cookiemanager.cpp:220
+msgctxt "CookieManager|"
+msgid "Already whitelisted!"
+msgstr "Вже в білому списку!"
+
+#: lib/cookies/cookiemanager.cpp:220
+#, qt-format
+msgctxt "CookieManager|"
+msgid "The server \"%1\" is already in whitelist, please remove it first."
+msgstr "Сервер «%1» вже в білому списку, спочатку вилучіть його, будь ласка."
+
+#: lib/cookies/cookiemanager.ui:14
+msgctxt "CookieManager|"
+msgid "Cookies"
+msgstr "Куки"
+
+#: lib/cookies/cookiemanager.ui:36
+msgctxt "CookieManager|"
+msgid "Stored Cookies"
+msgstr "Збережені куки"
+
+#: lib/cookies/cookiemanager.ui:42
+msgctxt "CookieManager|"
+msgid "Find: "
+msgstr "Знайти:"
+
+#: lib/cookies/cookiemanager.ui:52
+msgctxt "CookieManager|"
+msgid "These cookies are stored on your computer:"
+msgstr "Ці куки зберігаються на вашому комп’ютері:"
+
+#: lib/cookies/cookiemanager.ui:66
+msgctxt "CookieManager|"
+msgid "Server"
+msgstr "Сервер"
+
+#: lib/cookies/cookiemanager.ui:71
+msgctxt "CookieManager|"
+msgid "Cookie name"
+msgstr "Назва куки"
+
+#: lib/cookies/cookiemanager.ui:109
+msgctxt "CookieManager|"
+msgid "Name:"
+msgstr "Назва:"
+
+#: lib/cookies/cookiemanager.ui:119
+msgctxt "CookieManager|"
+msgid "Value:"
+msgstr "Значення:"
+
+#: lib/cookies/cookiemanager.ui:133
+msgctxt "CookieManager|"
+msgid "Path:"
+msgstr "Шлях:"
+
+#: lib/cookies/cookiemanager.ui:140
+msgctxt "CookieManager|"
+msgid "Secure:"
+msgstr "Безпечність:"
+
+#: lib/cookies/cookiemanager.ui:147
+msgctxt "CookieManager|"
+msgid "Expiration:"
+msgstr "Закінчення дії:"
+
+#: lib/cookies/cookiemanager.ui:238
+msgctxt "CookieManager|"
+msgid "Remove all cookies"
+msgstr "Вилучити всі куки"
+
+#: lib/cookies/cookiemanager.ui:269
+msgctxt "CookieManager|"
+msgid "Cookie Filtering"
+msgstr "Фільтрація кук"
+
+#: lib/cookies/cookiemanager.ui:275
+msgctxt "CookieManager|"
+msgid "<b>Cookie whitelist</b>"
+msgstr "<b>Білий перелік кук</b>"
+
+#: lib/cookies/cookiemanager.ui:282
+msgctxt "CookieManager|"
+msgid ""
+"Cookies from these servers will ALWAYS be accepted (even if you have "
+"disabled saving cookies)"
+msgstr ""
+"Куки з цих серверів будуть ЗАВЖДИ прийматися (навіть, якщо ви вимкнули їх "
+"збереження)"
+
+#: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
+msgctxt "CookieManager|"
+msgid "Add"
+msgstr "Додати"
+
+#: lib/cookies/cookiemanager.ui:314 lib/cookies/cookiemanager.ui:368
+msgctxt "CookieManager|"
+msgid "Remove"
+msgstr "Вилучити"
+
+#: lib/cookies/cookiemanager.ui:326
+msgctxt "CookieManager|"
+msgid "<b>Cookie blacklist</b>"
+msgstr "<b>Чорний перелік кук</b>"
+
+#: lib/cookies/cookiemanager.ui:333
+msgctxt "CookieManager|"
+msgid "Cookies from these servers will NEVER be accepted"
+msgstr "Куки з цих серверів НІКОЛИ не будуть прийматися"
+
+#: lib/cookies/cookiemanager.ui:385
+msgctxt "CookieManager|"
+msgid "Settings"
+msgstr "Налаштування"
+
+#: lib/cookies/cookiemanager.ui:407
+msgctxt "CookieManager|"
+msgid "Filter 3rd party cookies"
+msgstr "Фільтрувати куки 3-х сторін"
+
+#: lib/cookies/cookiemanager.ui:414
+msgctxt "CookieManager|"
+msgid "<b>Cookie Settings</b>"
+msgstr "<b>Налаштування кук</b>"
+
+#: lib/cookies/cookiemanager.ui:421
+msgctxt "CookieManager|"
+msgid "Allow storing of cookies"
+msgstr "Дозволити зберігання кук"
+
+#: lib/cookies/cookiemanager.ui:428
+msgctxt "CookieManager|"
+msgid "Filter tracking cookies"
+msgstr "Фільтрувати шпигунські кук"
+
+#: lib/cookies/cookiemanager.ui:435
+msgctxt "CookieManager|"
+msgid "Delete cookies on close"
+msgstr "Вилучати куки під час закриття"
+
+#: lib/downloads/downloaditem.cpp:73
+msgctxt "DownloadItem|"
+msgid "Remaining time unavailable"
+msgstr "Час, що залишився недоступний"
+
+#: lib/downloads/downloaditem.cpp:128
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Done - %1 (%2)"
+msgstr "Виконано - %1(%2)"
+
+#: lib/downloads/downloaditem.cpp:132
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Error - %1"
+msgstr "Помилка — %1"
+
+#: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:275
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Cancelled - %1"
+msgstr "Скасовано - %1"
+
+#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:319
+msgctxt "DownloadItem|"
+msgid "Cancelled"
+msgstr "Скасовано"
+
+#: lib/downloads/downloaditem.cpp:190
+msgctxt "DownloadItem|"
+msgid "few seconds"
+msgstr "кілька секунд"
+
+#: lib/downloads/downloaditem.cpp:195
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n seconds"
+msgid_plural "%n seconds"
+msgstr[0] "%n секунда"
+msgstr[1] "%n секунд"
+msgstr[2] "%n секунди"
+msgstr[3] "%n секунда"
+
+#: lib/downloads/downloaditem.cpp:200
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n minutes"
+msgid_plural "%n minutes"
+msgstr[0] "%n хвилина"
+msgstr[1] "%n хвилин"
+msgstr[2] "%n хвилини"
+msgstr[3] "%n хвилина"
+
+#: lib/downloads/downloaditem.cpp:205
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%n hours"
+msgid_plural "%n hours"
+msgstr[0] "%n година"
+msgstr[1] "%n годин"
+msgstr[2] "%n годин"
+msgstr[3] "%n година"
+
+#: lib/downloads/downloaditem.cpp:212
+msgctxt "DownloadItem|"
+msgid "Unknown speed"
+msgstr "Швидкість невідома"
+
+#: lib/downloads/downloaditem.cpp:217
+msgctxt "DownloadItem|"
+msgid "kB/s"
+msgstr "КБ/с"
+
+#: lib/downloads/downloaditem.cpp:222
+msgctxt "DownloadItem|"
+msgid "MB/s"
+msgstr "МБ/с"
+
+#: lib/downloads/downloaditem.cpp:226
+msgctxt "DownloadItem|"
+msgid "GB/s"
+msgstr "ГБ/с"
+
+#: lib/downloads/downloaditem.cpp:254
+msgctxt "DownloadItem|"
+msgid "Unknown size"
+msgstr "Розмір невідомий"
+
+#: lib/downloads/downloaditem.cpp:255
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "%2 - unknown size (%3)"
+msgstr "%2 - розмір невідомий (%3)"
+
+#: lib/downloads/downloaditem.cpp:258
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Remaining %1 - %2 of %3 (%4)"
+msgstr "Залишилось %1 - %2 з %3 (%4)"
+
+#: lib/downloads/downloaditem.cpp:290
+#, qt-format
+msgctxt "DownloadItem|"
+msgid "Paused - %1"
+msgstr "Призупинено — %1"
+
+#: lib/downloads/downloaditem.cpp:303
+msgctxt "DownloadItem|"
+msgid "Open File"
+msgstr "Відкрити файл"
+
+#: lib/downloads/downloaditem.cpp:305
+msgctxt "DownloadItem|"
+msgid "Open Folder"
+msgstr "Відкрити теку"
+
+#: lib/downloads/downloaditem.cpp:307
+msgctxt "DownloadItem|"
+msgid "Copy Download Link"
+msgstr "Копіювати посилання завантаження"
+
+#: lib/downloads/downloaditem.cpp:309
+msgctxt "DownloadItem|"
+msgid "Cancel downloading"
+msgstr "Скасувати завантаження"
+
+#: lib/downloads/downloaditem.cpp:312
+msgctxt "DownloadItem|"
+msgid "Resume downloading"
+msgstr "Поновити отримання даних"
+
+#: lib/downloads/downloaditem.cpp:314
+msgctxt "DownloadItem|"
+msgid "Pause downloading"
+msgstr "Призупинити отримання даних"
+
+#: lib/downloads/downloaditem.cpp:317
+msgctxt "DownloadItem|"
+msgid "Remove From List"
+msgstr "Вилучити зі списку"
+
+#: lib/downloads/downloaditem.cpp:319
+msgctxt "DownloadItem|"
+msgid "Error"
+msgstr "Помилка"
+
+#: lib/downloads/downloaditem.cpp:345
+msgctxt "DownloadItem|"
+msgid "Not found"
+msgstr "Не знайдено"
+
+#: lib/downloads/downloaditem.cpp:345
+#, qt-format
+msgctxt "DownloadItem|"
+msgid ""
+"Sorry, the file \n"
+" %1 \n"
+" was not found!"
+msgstr ""
+"Вибачте, файл \n"
+" %1 \n"
+" не було знайдено!"
+
+#: lib/downloads/downloadmanager.cpp:188 lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.ui:20
+msgctxt "DownloadManager|"
+msgid "Download Manager"
+msgstr "Менеджер завантаження"
+
+#: lib/downloads/downloadmanager.cpp:226
+#, qt-format
+msgctxt "DownloadManager|"
+msgid "%1% of %2 files (%3) %4 remaining"
+msgstr "%1% з %2 файлів (%3) %4 залишилось"
+
+#: lib/downloads/downloadmanager.cpp:230
+#, qt-format
+msgctxt "DownloadManager|"
+msgid "%1% - Download Manager"
+msgstr "%1% - Менеджер завантаження"
+
+#: lib/downloads/downloadmanager.cpp:300
+msgctxt "DownloadManager|"
+msgid "Save file as..."
+msgstr "Зберегти файл як…"
+
+#: lib/downloads/downloadmanager.cpp:310
+msgctxt "DownloadManager|"
+msgid "MIME HTML Archive (*.mhtml)"
+msgstr "Архів MIME HTML (*.mhtml)"
+
+#: lib/downloads/downloadmanager.cpp:311
+msgctxt "DownloadManager|"
+msgid "HTML Page, single (*.html)"
+msgstr "Лише HTML-сторінка (*.html)"
+
+#: lib/downloads/downloadmanager.cpp:312
+msgctxt "DownloadManager|"
+msgid "HTML Page, complete (*.html)"
+msgstr "Повна HTML-сторінка (*.html)"
+
+#: lib/downloads/downloadmanager.cpp:316
+msgctxt "DownloadManager|"
+msgid "Save page as..."
+msgstr "Зберегти сторінку як…"
+
+#: lib/downloads/downloadmanager.cpp:410
+msgctxt "DownloadManager|"
+msgid "Falkon: Download Finished"
+msgstr "Falkon: Завантаження завершено"
+
+#: lib/downloads/downloadmanager.cpp:410
+msgctxt "DownloadManager|"
+msgid "All files have been successfully downloaded."
+msgstr "Всі файли було успішно завантажено."
+
+#: lib/downloads/downloadmanager.cpp:464
+msgctxt "DownloadManager|"
+msgid "Warning"
+msgstr "Попередження"
+
+#: lib/downloads/downloadmanager.cpp:465
+msgctxt "DownloadManager|"
+msgid ""
+"Are you sure you want to quit? All uncompleted downloads will be cancelled!"
+msgstr ""
+"Ви впевнені, що хочете вийти? Всі незавершені завантаження буде скасовано!"
+
+#: lib/downloads/downloadmanager.ui:69
+msgctxt "DownloadManager|"
+msgid "Clear"
+msgstr "Очистити"
+
+#: lib/downloads/downloadoptionsdialog.cpp:49
+#, qt-format
+msgctxt "DownloadOptionsDialog|"
+msgid "Opening %1"
+msgstr "Відкриваю %1"
+
+#: lib/downloads/downloadoptionsdialog.cpp:112
+msgctxt "DownloadOptionsDialog|"
+msgid "Download link copied."
+msgstr "Посилання на завантаження скопійовано"
+
+#: lib/downloads/downloadoptionsdialog.ui:25
+msgctxt "DownloadOptionsDialog|"
+msgid "What should Falkon do with this file?"
+msgstr "Що має Falkon зробити з цим файлом?"
+
+#: lib/downloads/downloadoptionsdialog.ui:47
+msgctxt "DownloadOptionsDialog|"
+msgid "Open..."
+msgstr "Відкрити…"
+
+#: lib/downloads/downloadoptionsdialog.ui:54
+msgctxt "DownloadOptionsDialog|"
+msgid "Save File"
+msgstr "Зберегти файл"
+
+#: lib/downloads/downloadoptionsdialog.ui:64
+msgctxt "DownloadOptionsDialog|"
+msgid "Download with External Manager"
+msgstr "Завантажити зовнішнім менеджером завантаження"
+
+#: lib/downloads/downloadoptionsdialog.ui:165
+msgctxt "DownloadOptionsDialog|"
+msgid "which is:"
+msgstr "що є:"
+
+#: lib/downloads/downloadoptionsdialog.ui:215
+msgctxt "DownloadOptionsDialog|"
+msgid "from:"
+msgstr "з:"
+
+#: lib/downloads/downloadoptionsdialog.ui:241
+msgctxt "DownloadOptionsDialog|"
+msgid "Copy download link"
+msgstr "Копіювати посилання на завантаження"
+
+#: lib/downloads/downloadoptionsdialog.ui:256
+msgctxt "DownloadOptionsDialog|"
+msgid "You have chosen to open"
+msgstr "Ви обрали відкрити"
+
+#: lib/downloads/downloadsbutton.cpp:27 lib/downloads/downloadsbutton.cpp:43
+msgctxt "DownloadsButton|"
+msgid "Downloads"
+msgstr "Завантаження"
+
+#: lib/downloads/downloadsbutton.cpp:28
+msgctxt "DownloadsButton|"
+msgid "Open Download Manager"
+msgstr "Відкрити менеджер завантаження"
+
+#: lib/history/history.cpp:82
+msgctxt "History|"
+msgid "Empty Page"
+msgstr "Порожня сторінка"
+
+#: lib/history/history.cpp:272
+msgctxt "History|"
+msgid "January"
+msgstr "Січень"
+
+#: lib/history/history.cpp:274
+msgctxt "History|"
+msgid "February"
+msgstr "Лютий"
+
+#: lib/history/history.cpp:276
+msgctxt "History|"
+msgid "March"
+msgstr "Березень"
+
+#: lib/history/history.cpp:278
+msgctxt "History|"
+msgid "April"
+msgstr "Квітень"
+
+#: lib/history/history.cpp:280
+msgctxt "History|"
+msgid "May"
+msgstr "Травень"
+
+#: lib/history/history.cpp:282
+msgctxt "History|"
+msgid "June"
+msgstr "Червень"
+
+#: lib/history/history.cpp:284
+msgctxt "History|"
+msgid "July"
+msgstr "Липень"
+
+#: lib/history/history.cpp:286
+msgctxt "History|"
+msgid "August"
+msgstr "Серпень"
+
+#: lib/history/history.cpp:288
+msgctxt "History|"
+msgid "September"
+msgstr "Вересень"
+
+#: lib/history/history.cpp:290
+msgctxt "History|"
+msgid "October"
+msgstr "Жовтень"
+
+#: lib/history/history.cpp:292
+msgctxt "History|"
+msgid "November"
+msgstr "Листопад"
+
+#: lib/history/history.cpp:294
+msgctxt "History|"
+msgid "December"
+msgstr "Грудень"
+
+#: lib/history/historymanager.cpp:78
+msgctxt "HistoryManager|"
+msgid "Confirmation"
+msgstr "Підтвердження"
+
+#: lib/history/historymanager.cpp:79
+msgctxt "HistoryManager|"
+msgid "Are you sure you want to delete all history?"
+msgstr "Ви впевнені, що хочете вилучити усю історію?"
+
+#: lib/history/historymanager.cpp:145
+msgctxt "HistoryManager|"
+msgid "Open in new tab"
+msgstr "Відкрити в новій вкладці"
+
+#: lib/history/historymanager.cpp:146
+msgctxt "HistoryManager|"
+msgid "Open in new window"
+msgstr "Відкрити в новому вікні"
+
+#: lib/history/historymanager.cpp:147
+msgctxt "HistoryManager|"
+msgid "Open in new private window"
+msgstr "Відкрити в новому анонімному вікні"
+
+#: lib/history/historymanager.cpp:150
+msgctxt "HistoryManager|"
+msgid "Copy url"
+msgstr "Копіювати посилання"
+
+#: lib/history/historymanager.cpp:151
+msgctxt "HistoryManager|"
+msgid "Copy title"
+msgstr "Копіювати назву"
+
+#: lib/history/historymanager.cpp:154 lib/history/historymanager.ui:20
+msgctxt "HistoryManager|"
+msgid "Delete"
+msgstr "Вилучити"
+
+#: lib/history/historymanager.ui:14
+msgctxt "HistoryManager|"
+msgid "History"
+msgstr "Історія"
+
+#: lib/history/historymanager.ui:27
+msgctxt "HistoryManager|"
+msgid "Clear All History"
+msgstr "Очистити всю історію"
+
+#: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
+#: lib/history/historymenu.cpp:186
+msgctxt "HistoryMenu|"
+msgid "Empty"
+msgstr "Порожньо"
+
+#: lib/history/historymenu.cpp:161
+msgctxt "HistoryMenu|"
+msgid "Restore All Closed Tabs"
+msgstr "Відновити всі закриті вкладки"
+
+#: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
+msgctxt "HistoryMenu|"
+msgid "Clear list"
+msgstr "Очистити список"
+
+#: lib/history/historymenu.cpp:189
+msgctxt "HistoryMenu|"
+msgid "Restore All Closed Windows"
+msgstr "Відновити всі закриті вікна"
+
+#: lib/history/historymenu.cpp:236
+msgctxt "HistoryMenu|"
+msgid "Hi&story"
+msgstr "&Історія"
+
+#: lib/history/historymenu.cpp:238
+msgctxt "HistoryMenu|"
+msgid "&Back"
+msgstr "&Назад"
+
+#: lib/history/historymenu.cpp:241
+msgctxt "HistoryMenu|"
+msgid "&Forward"
+msgstr "&Вперед"
+
+#: lib/history/historymenu.cpp:244
+msgctxt "HistoryMenu|"
+msgid "&Home"
+msgstr "На &домашню сторінку"
+
+#: lib/history/historymenu.cpp:247
+msgctxt "HistoryMenu|"
+msgid "Show &All History"
+msgstr "Показати в&сю історію"
+
+#: lib/history/historymenu.cpp:255
+msgctxt "HistoryMenu|"
+msgid "Most Visited"
+msgstr "Найчайстіше відвідувані"
+
+#: lib/history/historymenu.cpp:258
+msgctxt "HistoryMenu|"
+msgid "Closed Tabs"
+msgstr "Закриті вкладки"
+
+#: lib/history/historymenu.cpp:261
+msgctxt "HistoryMenu|"
+msgid "Closed Windows"
+msgstr "Закриті вікна"
+
+#: lib/history/historymodel.cpp:56
+msgctxt "HistoryModel|"
+msgid "Title"
+msgstr "Назва"
+
+#: lib/history/historymodel.cpp:58
+msgctxt "HistoryModel|"
+msgid "Address"
+msgstr "Url-адреса"
+
+#: lib/history/historymodel.cpp:60
+msgctxt "HistoryModel|"
+msgid "Visit Date"
+msgstr "Дата відвідування"
+
+#: lib/history/historymodel.cpp:62
+msgctxt "HistoryModel|"
+msgid "Visit Count"
+msgstr "Кількість відвідувань"
+
+#: lib/history/historymodel.cpp:340 lib/history/historymodel.cpp:471
+msgctxt "HistoryModel|"
+msgid "Today"
+msgstr "Сьогодні"
+
+#: lib/history/historymodel.cpp:476
+msgctxt "HistoryModel|"
+msgid "This Week"
+msgstr "Цього тижня"
+
+#: lib/history/historymodel.cpp:481
+msgctxt "HistoryModel|"
+msgid "This Month"
+msgstr "Цього місяця"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:158
+msgctxt "LocationCompleterDelegate|"
+msgid "Visit"
+msgstr "Відвідування"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:164
+#, qt-format
+msgctxt "LocationCompleterDelegate|"
+msgid "Search with %1"
+msgstr "Шукати за допомогою %1"
+
+#: lib/navigation/completer/locationcompleterdelegate.cpp:198
+msgctxt "LocationCompleterDelegate|"
+msgid "Switch to tab"
+msgstr "Перемкнутися на вкладку"
+
+#: lib/navigation/completer/locationcompleterview.cpp:73
+msgctxt "LocationCompleterView|"
+msgid "Manage Search Engines"
+msgstr "Керування пошуковими двигунами"
+
+#: lib/navigation/completer/locationcompleterview.cpp:78
+msgctxt "LocationCompleterView|"
+msgid "Search with:"
+msgstr "Шукати за допомогою:"
+
+#: lib/navigation/locationbar.cpp:92
+msgctxt "LocationBar|"
+msgid "Paste And &Go"
+msgstr "Вставити і &запустити"
+
+#: lib/navigation/locationbar.cpp:159
+#, qt-format
+msgctxt "LocationBar|"
+msgid "Enter address or search with %1"
+msgstr "Введіть адресу або шукайте за допомогою %1"
+
+#: lib/navigation/locationbar.cpp:161
+msgctxt "LocationBar|"
+msgid "Enter address"
+msgstr "Введіть адресу"
+
+#: lib/navigation/navigationbar.cpp:49
+msgctxt "NavigationBar|"
+msgid "Empty Page"
+msgstr "Порожня сторінка"
+
+#: lib/navigation/navigationbar.cpp:76
+msgctxt "NavigationBar|"
+msgid "Back"
+msgstr "Назад"
+
+#: lib/navigation/navigationbar.cpp:86
+msgctxt "NavigationBar|"
+msgid "Forward"
+msgstr "Вперед"
+
+#: lib/navigation/navigationbar.cpp:106
+msgctxt "NavigationBar|"
+msgid "Home"
+msgstr "Домашня сторінка"
+
+#: lib/navigation/navigationbar.cpp:114
+msgctxt "NavigationBar|"
+msgid "New Tab"
+msgstr "Нова вкладка"
+
+#: lib/navigation/navigationbar.cpp:134
+msgctxt "NavigationBar|"
+msgid "Tools"
+msgstr "Інструменти"
+
+#: lib/navigation/navigationbar.cpp:147
+msgctxt "NavigationBar|"
+msgid "Main Menu"
+msgstr "Головне меню"
+
+#: lib/navigation/navigationbar.cpp:164
+msgctxt "NavigationBar|"
+msgid "Exit Fullscreen"
+msgstr "Вийти з повноекранного режиму"
+
+#: lib/navigation/navigationbar.cpp:190
+msgctxt "NavigationBar|"
+msgid "Back and Forward buttons"
+msgstr "Кнопки Вперед і Назад"
+
+#: lib/navigation/navigationbar.cpp:191
+msgctxt "NavigationBar|"
+msgid "Reload button"
+msgstr "Кнопка Перезавантажити"
+
+#: lib/navigation/navigationbar.cpp:192
+msgctxt "NavigationBar|"
+msgid "Home button"
+msgstr "Кнопка Домівка"
+
+#: lib/navigation/navigationbar.cpp:193
+msgctxt "NavigationBar|"
+msgid "Add tab button"
+msgstr "Кнопка Додати вкладку"
+
+#: lib/navigation/navigationbar.cpp:194
+msgctxt "NavigationBar|"
+msgid "Address and Search bar"
+msgstr "Адреса та рядок пошуку"
+
+#: lib/navigation/navigationbar.cpp:195
+msgctxt "NavigationBar|"
+msgid "Tools button"
+msgstr "Кнопка інструментів"
+
+#: lib/navigation/navigationbar.cpp:196
+msgctxt "NavigationBar|"
+msgid "Exit Fullscreen button"
+msgstr "Кнопка Вийти з повноекранного режиму"
+
+#: lib/navigation/navigationbar.cpp:393 lib/navigation/navigationbar.cpp:427
+msgctxt "NavigationBar|"
+msgid "Clear history"
+msgstr "Очистити історію"
+
+#: lib/navigation/navigationbar.cpp:434
+msgctxt "NavigationBar|"
+msgid "Toolbars"
+msgstr "Панелі інструментів"
+
+#: lib/navigation/navigationbar.cpp:435
+msgctxt "NavigationBar|"
+msgid "Sidebar"
+msgstr "Бічна панель"
+
+#: lib/navigation/navigationbar.cpp:450 lib/navigation/navigationbar.cpp:464
+msgctxt "NavigationBar|"
+msgid "Configure Toolbar"
+msgstr "Налаштувати панель інструментів"
+
+#: lib/navigation/navigationbarconfigdialog.ui:14
+msgctxt "NavigationBarConfigDialog|"
+msgid "Configure Toolbar"
+msgstr "Налаштувати панель інструментів"
+
+#: lib/navigation/navigationbarconfigdialog.ui:62
+msgctxt "NavigationBarConfigDialog|"
+msgid "Show search bar"
+msgstr "Показати рядок пошуку"
+
+#: lib/navigation/navigationbarconfigdialog.ui:82
+msgctxt "NavigationBarConfigDialog|"
+msgid "Available items:"
+msgstr "Наявні елементи:"
+
+#: lib/navigation/navigationbarconfigdialog.ui:89
+msgctxt "NavigationBarConfigDialog|"
+msgid "Current items:"
+msgstr "Поточні елементи:"
+
+#: lib/navigation/reloadstopbutton.cpp:57
+msgctxt "ReloadStopButton|"
+msgid "Stop"
+msgstr "Зупинити"
+
+#: lib/navigation/reloadstopbutton.cpp:61
+msgctxt "ReloadStopButton|"
+msgid "Reload"
+msgstr "Перезавантажити"
+
+#: lib/navigation/siteicon.cpp:40
+msgctxt "LocationBar|"
+msgid "Show information about this page"
+msgstr "Показати інформацію про цю сторінку"
+
+#: lib/navigation/websearchbar.cpp:97
+msgctxt "WebSearchBar|"
+msgid "Paste And &Search"
+msgstr "Вставити і &Шукати"
+
+#: lib/navigation/websearchbar.cpp:123
+#, qt-format
+msgctxt "WebSearchBar|"
+msgid "Add %1 ..."
+msgstr "Додати %1 …"
+
+#: lib/navigation/websearchbar.cpp:127
+msgctxt "WebSearchBar|"
+msgid "Manage Search Engines"
+msgstr "Керування пошуковими двигунами"
+
+#: lib/navigation/websearchbar.cpp:257
+msgctxt "WebSearchBar|"
+msgid "Show suggestions"
+msgstr "Показувати підказки"
+
+#: lib/navigation/websearchbar.cpp:262
+msgctxt "WebSearchBar|"
+msgid "Search when engine changed"
+msgstr "Перешукати коли двигун змінюється"
+
+#: lib/network/networkmanager.cpp:84
+msgctxt "NetworkManager|"
+msgid "SSL Certificate Error!"
+msgstr "Помилка сертифікату SSL!"
+
+#: lib/network/networkmanager.cpp:85
+msgctxt "NetworkManager|"
+msgid ""
+"The page you are trying to access has the following errors in the SSL "
+"certificate:"
+msgstr ""
+"Сторінка, на яку Ви намагаєтесь зайти має наступні помилки в сертифікаті SSL:"
+
+#: lib/network/networkmanager.cpp:86
+msgctxt "NetworkManager|"
+msgid "Would you like to make an exception for this certificate?"
+msgstr "Чи хочете Ви зробити виняток для цього сертифікату?"
+
+#: lib/network/networkmanager.cpp:113
+msgctxt "NetworkManager|"
+msgid "Authorization required"
+msgstr "Слід пройти розпізнавання"
+
+#: lib/network/networkmanager.cpp:120 lib/network/networkmanager.cpp:206
+msgctxt "NetworkManager|"
+msgid "Username: "
+msgstr "Ім’я користувача: "
+
+#: lib/network/networkmanager.cpp:121 lib/network/networkmanager.cpp:207
+msgctxt "NetworkManager|"
+msgid "Password: "
+msgstr "Пароль:"
+
+#: lib/network/networkmanager.cpp:127
+msgctxt "NetworkManager|"
+msgid "Save username and password for this site"
+msgstr "Зберегти ім’я користувача і пароль для цього сайту"
+
+#: lib/network/networkmanager.cpp:135
+#, qt-format
+msgctxt "NetworkManager|"
+msgid ""
+"A username and password are being requested by %1. The site says: \"%2\""
+msgstr "%1 вимагає ім’я користувача і пароль. Сайт каже: \"%2\""
+
+#: lib/network/networkmanager.cpp:199
+msgctxt "NetworkManager|"
+msgid "Proxy authorization required"
+msgstr "Слід пройти розпізнавання на проксі"
+
+#: lib/network/networkmanager.cpp:219
+#, qt-format
+msgctxt "NetworkManager|"
+msgid "A username and password are being requested by proxy %1. "
+msgstr "Проксі %1 вимагає ім’я користувача і пароль. "
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:154
+msgctxt "FalkonSchemeReply|"
+msgid "Start Page"
+msgstr "Початкова сторінка"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:155
+msgctxt "FalkonSchemeReply|"
+msgid "Search on Web"
+msgstr "Шукати у мережі"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:156
+msgctxt "FalkonSchemeReply|"
+msgid "Search results provided by DuckDuckGo"
+msgstr "Результати пошуку надані DuckDuckGo"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:158
+#: lib/network/schemehandlers/falkonschemehandler.cpp:174
+#: lib/network/schemehandlers/falkonschemehandler.cpp:175
+msgctxt "FalkonSchemeReply|"
+msgid "About Falkon"
+msgstr "Про Falkon"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:159
+msgctxt "FalkonSchemeReply|"
+msgid "<h1>Private Browsing</h1>"
+msgstr "<h1>Анонімний перегляд</h1>"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:176
+#: lib/network/schemehandlers/falkonschemehandler.cpp:284
+msgctxt "FalkonSchemeReply|"
+msgid "Information about version"
+msgstr "Інформація про версію"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:177
+msgctxt "FalkonSchemeReply|"
+msgid "Copyright"
+msgstr "Авторські права"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+msgctxt "FalkonSchemeReply|"
+msgid "Version"
+msgstr "Версія"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:187
+msgctxt "FalkonSchemeReply|"
+msgid "Main developer"
+msgstr "Головний розробник"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:208
+msgctxt "FalkonSchemeReply|"
+msgid "Speed Dial"
+msgstr "Швидкий набір"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:209
+msgctxt "FalkonSchemeReply|"
+msgid "Add New Page"
+msgstr "Додати нову сторінку"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:210
+msgctxt "FalkonSchemeReply|"
+msgid "Edit"
+msgstr "Редагувати"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:211
+msgctxt "FalkonSchemeReply|"
+msgid "Remove"
+msgstr "Вилучити"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:212
+msgctxt "FalkonSchemeReply|"
+msgid "Reload"
+msgstr "Перезавантажити"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:213
+msgctxt "FalkonSchemeReply|"
+msgid "Are you sure you want to remove this speed dial?"
+msgstr "Ви впевнені, що бажаєте вилучити цю сторінку зі «Швидкого набору»?"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:214
+msgctxt "FalkonSchemeReply|"
+msgid "Are you sure you want to reload all speed dials?"
+msgstr "Ви впевнені, що бажаєте перезавантажити весь «Швидкий набір»?"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:215
+msgctxt "FalkonSchemeReply|"
+msgid "Load title from page"
+msgstr "Завантажити назву зі сторінки"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:216
+msgctxt "FalkonSchemeReply|"
+msgid "SpeedDial requires enabled JavaScript."
+msgstr "«Швидкий набір» вимагає увімкненого JavaScript."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:217
+msgctxt "FalkonSchemeReply|"
+msgid "Url"
+msgstr "Адреса"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:218
+msgctxt "FalkonSchemeReply|"
+msgid "Title"
+msgstr "Назва"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:219
+msgctxt "FalkonSchemeReply|"
+msgid "Apply"
+msgstr "Застосувати"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:220
+msgctxt "FalkonSchemeReply|"
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:221
+msgctxt "FalkonSchemeReply|"
+msgid "New Page"
+msgstr "Нова сторінка"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:222
+msgctxt "FalkonSchemeReply|"
+msgid "Speed Dial settings"
+msgstr "Налаштування «Швидкого набору»"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:223
+msgctxt "FalkonSchemeReply|"
+msgid "Placement: "
+msgstr "Розташування: "
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:224
+msgctxt "FalkonSchemeReply|"
+msgid "Auto"
+msgstr "Авто"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:225
+msgctxt "FalkonSchemeReply|"
+msgid "Cover"
+msgstr "Накласти"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:226
+msgctxt "FalkonSchemeReply|"
+msgid "Fit"
+msgstr "Вмістити"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:227
+msgctxt "FalkonSchemeReply|"
+msgid "Fit Width"
+msgstr "Вмістити за шириною"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:228
+msgctxt "FalkonSchemeReply|"
+msgid "Fit Height"
+msgstr "Підібрати за висотою"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:229
+msgctxt "FalkonSchemeReply|"
+msgid "Use custom wallpaper"
+msgstr "Використовувати власні шпалери"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:230
+msgctxt "FalkonSchemeReply|"
+msgid "Click to select image"
+msgstr "Клацніть, щоб вибрати зображення"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:231
+msgctxt "FalkonSchemeReply|"
+msgid "Maximum pages in a row:"
+msgstr "Максимальна кількість сторінок у рядку:"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:232
+msgctxt "FalkonSchemeReply|"
+msgid "Change size of pages:"
+msgstr "Змінити розмір сторінок:"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:233
+msgctxt "FalkonSchemeReply|"
+msgid "Center speed dials"
+msgstr "Центрувати \"Швидкий набір\""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:258
+msgctxt "FalkonSchemeReply|"
+msgid "Restore Session"
+msgstr "Відновити сеанс"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:259
+msgctxt "FalkonSchemeReply|"
+msgid "Oops, Falkon crashed."
+msgstr "Ой, аварія у Falkon."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:260
+msgctxt "FalkonSchemeReply|"
+msgid "We apologize for this. Would you like to restore the last saved state?"
+msgstr ""
+"Вибачте за цю проблему. Чи хочете ви відновити останній збережений стан?"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:261
+msgctxt "FalkonSchemeReply|"
+msgid "Try removing one or more tabs that you think cause troubles"
+msgstr ""
+"Спробуйте вимкнути одну або декілька вкладок, які, на вашу думку, "
+"спричиняють проблеми."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+msgctxt "FalkonSchemeReply|"
+msgid "Or you can start completely new session"
+msgstr "Крім того, ви можете розпочати новий сеанс"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+msgctxt "FalkonSchemeReply|"
+msgid "Window"
+msgstr "Вікно"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+msgctxt "FalkonSchemeReply|"
+msgid "Windows and Tabs"
+msgstr "Вікна та вкладки"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+msgctxt "FalkonSchemeReply|"
+msgid "Start New Session"
+msgstr "Почати новий сеанс"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+msgctxt "FalkonSchemeReply|"
+msgid "Restore"
+msgstr "Відновити"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+msgctxt "FalkonSchemeReply|"
+msgid "Requires enabled JavaScript."
+msgstr "Вимагає увімкненого JavaScript."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:282
+#: lib/network/schemehandlers/falkonschemehandler.cpp:283
+msgctxt "FalkonSchemeReply|"
+msgid "Configuration Information"
+msgstr "Інформація про конфігурацію"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:285
+msgctxt "FalkonSchemeReply|"
+msgid ""
+"This page contains information about Falkon's current configuration - "
+"relevant for troubleshooting. Please include this information when "
+"submitting bug reports."
+msgstr ""
+"Ця сторінка містить інформацію про поточні налаштування Falkon — актуальна "
+"для усунення несправностей. Будь ласка, додайте цю інформацію, коли "
+"заповнюватимете звіти про помилки."
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:286
+msgctxt "FalkonSchemeReply|"
+msgid "Browser Identification"
+msgstr "Ідентифікація навігатора"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:287
+msgctxt "FalkonSchemeReply|"
+msgid "Paths"
+msgstr "Шляхи"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+msgctxt "FalkonSchemeReply|"
+msgid "Build Configuration"
+msgstr "Налаштування збирання"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+msgctxt "FalkonSchemeReply|"
+msgid "Preferences"
+msgstr "Налаштування"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+msgctxt "FalkonSchemeReply|"
+msgid "Option"
+msgstr "Параметр"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+msgctxt "FalkonSchemeReply|"
+msgid "Value"
+msgstr "Значення"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:327
+msgctxt "FalkonSchemeReply|"
+msgid "Extensions"
+msgstr "Розширення"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+msgctxt "FalkonSchemeReply|"
+msgid "Name"
+msgstr "Назва"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+msgctxt "FalkonSchemeReply|"
+msgid "Author"
+msgstr "Автор"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
+msgctxt "FalkonSchemeReply|"
+msgid "Description"
+msgstr "Опис"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:311
+msgctxt "FalkonSchemeReply|"
+msgid "Application version"
+msgstr "Версія програми"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:318
+msgctxt "FalkonSchemeReply|"
+msgid "Qt version"
+msgstr "Версія Qt"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:319
+msgctxt "FalkonSchemeReply|"
+msgid "Platform"
+msgstr "Платформа"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:322
+msgctxt "FalkonSchemeReply|"
+msgid "Profile"
+msgstr "Профіль"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+msgctxt "FalkonSchemeReply|"
+msgid "Settings"
+msgstr "Параметри"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+msgctxt "FalkonSchemeReply|"
+msgid "Saved session"
+msgstr "Збережений сеанс"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
+msgctxt "FalkonSchemeReply|"
+msgid "Data"
+msgstr "Дані"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:326
+msgctxt "FalkonSchemeReply|"
+msgid "Themes"
+msgstr "Теми"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:337
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+msgctxt "FalkonSchemeReply|"
+msgid "<b>Enabled</b>"
+msgstr "<b>Увімкнено</b>"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:339
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+msgctxt "FalkonSchemeReply|"
+msgid "Disabled"
+msgstr "Вимкнено"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:346
+msgctxt "FalkonSchemeReply|"
+msgid "Debug build"
+msgstr "Випуск для перевірки"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+msgctxt "FalkonSchemeReply|"
+msgid "Windows 7 API"
+msgstr "Windows 7 API"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:350
+msgctxt "FalkonSchemeReply|"
+msgid "Portable build"
+msgstr "Портативна збірка"
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:368
+msgctxt "FalkonSchemeReply|"
+msgid "No available extensions."
+msgstr "Немає доступних розширень."
+
+#: lib/network/sslerrordialog.ui:14
+msgctxt "SslErrorDialog|"
+msgid "SSL Certificate Error!"
+msgstr "Помилка SSL-сертифіката!"
+
+#: lib/notifications/desktopnotificationsfactory.cpp:119
+msgctxt "DesktopNotificationsFactory|"
+msgid "Preview"
+msgstr "Перегляд"
+
+#: lib/notifications/desktopnotificationsfactory.cpp:119
+msgctxt "QObject|"
+msgid "Native System Notification"
+msgstr "Рідна система сповіщення"
+
+#: lib/opensearch/editsearchengine.ui:20
+msgctxt "EditSearchEngine|"
+msgid "Name:"
+msgstr "Назва:"
+
+#: lib/opensearch/editsearchengine.ui:30
+msgctxt "EditSearchEngine|"
+msgid "Url:"
+msgstr "Url-адреса:"
+
+#: lib/opensearch/editsearchengine.ui:44
+msgctxt "EditSearchEngine|"
+msgid "Shortcut:"
+msgstr "Гарячі клавіші:"
+
+#: lib/opensearch/editsearchengine.ui:54
+msgctxt "EditSearchEngine|"
+msgid "Icon:"
+msgstr "Піктограма:"
+
+#: lib/opensearch/editsearchengine.ui:83
+msgctxt "EditSearchEngine|"
+msgid "Change..."
+msgstr "Змінити…"
+
+#: lib/opensearch/editsearchengine.ui:106
+msgctxt "EditSearchEngine|"
+msgid "<b>Note: </b>%s in url or post data represent searched string"
+msgstr "<b>Примітка: </b>%s в url-адресі або post-даних означає шуканий рядок"
+
+#: lib/opensearch/editsearchengine.ui:123
+msgctxt "EditSearchEngine|"
+msgid "Post Data:"
+msgstr "Розміщення даних:"
+
+#: lib/opensearch/opensearchreader.cpp:105
+msgctxt "QObject|"
+msgid "The file is not an OpenSearch 1.1 file."
+msgstr "Цей файл не є файлом OpenSearch 1.1."
+
+#: lib/opensearch/searchenginesdialog.cpp:52
+#: lib/opensearch/searchenginesmanager.cpp:315
+msgctxt "SearchEnginesDialog|"
+msgid "Add Search Engine"
+msgstr "Додати пошуковий двигун"
+
+#: lib/opensearch/searchenginesdialog.cpp:89
+msgctxt "SearchEnginesDialog|"
+msgid "Remove Engine"
+msgstr "Вилучити двигун"
+
+#: lib/opensearch/searchenginesdialog.cpp:90
+#, qt-format
+msgctxt "SearchEnginesDialog|"
+msgid ""
+"You can't remove the default search engine.<br>Set a different engine as "
+"default before removing %1."
+msgstr ""
+"Ви не можете типово вилучити пошуковий двигун.<br>До вилучення %1 встановіть "
+"інакший двигун."
+
+#: lib/opensearch/searchenginesdialog.cpp:107
+msgctxt "SearchEnginesDialog|"
+msgid "Edit Search Engine"
+msgstr "Редагувати пошуковий двигун"
+
+#: lib/opensearch/searchenginesdialog.ui:14
+msgctxt "SearchEnginesDialog|"
+msgid "Manage Search Engines"
+msgstr "Керування пошуковими двигунами"
+
+#: lib/opensearch/searchenginesdialog.ui:22
+msgctxt "SearchEnginesDialog|"
+msgid "Add..."
+msgstr "Додати…"
+
+#: lib/opensearch/searchenginesdialog.ui:29
+msgctxt "SearchEnginesDialog|"
+msgid "Remove"
+msgstr "Вилучити"
+
+#: lib/opensearch/searchenginesdialog.ui:36
+msgctxt "SearchEnginesDialog|"
+msgid "Edit"
+msgstr "Редагувати"
+
+#: lib/opensearch/searchenginesdialog.ui:56
+msgctxt "SearchEnginesDialog|"
+msgid "Set as default"
+msgstr "Встановити типово"
+
+#: lib/opensearch/searchenginesdialog.ui:63
+msgctxt "SearchEnginesDialog|"
+msgid "Up"
+msgstr "Вгору"
+
+#: lib/opensearch/searchenginesdialog.ui:70
+msgctxt "SearchEnginesDialog|"
+msgid "Down"
+msgstr "Вниз"
+
+#: lib/opensearch/searchenginesdialog.ui:89
+msgctxt "SearchEnginesDialog|"
+msgid "Search Engine"
+msgstr "Пошуковий двигун"
+
+#: lib/opensearch/searchenginesdialog.ui:94
+msgctxt "SearchEnginesDialog|"
+msgid "Shortcut"
+msgstr "Скорочення"
+
+#: lib/opensearch/searchenginesdialog.ui:104
+msgctxt "SearchEnginesDialog|"
+msgid "Defaults"
+msgstr "Типово"
+
+#: lib/opensearch/searchenginesmanager.cpp:401
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine Added"
+msgstr "Пошуковий двигун додано"
+
+#: lib/opensearch/searchenginesmanager.cpp:401
+#, qt-format
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine \"%1\" has been successfully added."
+msgstr "Пошуковий двигун «%1» було успішно додано."
+
+#: lib/opensearch/searchenginesmanager.cpp:408
+msgctxt "SearchEnginesManager|"
+msgid "Search Engine is not valid!"
+msgstr "Пошуковий двигун не діє!"
+
+#: lib/opensearch/searchenginesmanager.cpp:409
+msgctxt "SearchEnginesManager|"
+msgid "Error"
+msgstr "Помилка"
+
+#: lib/opensearch/searchenginesmanager.cpp:409
+#, qt-format
+msgctxt "SearchEnginesManager|"
+msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
+msgstr ""
+"Помилка під час додавання пошукового двигуна<br><b>Повідомлення про помилку: "
+"</b> %1"
+
+#: lib/other/aboutdialog.cpp:51
+#, qt-format
+msgctxt "AboutDialog|"
+msgid "<p><b>Application version %1</b><br/>"
+msgstr "<p><b>Версія додатку %1</b><br/>"
+
+#: lib/other/aboutdialog.cpp:58
+#, qt-format
+msgctxt "AboutDialog|"
+msgid "<b>QtWebEngine version %1</b></p>"
+msgstr "<b>Версія QtWebEngine %1</b></p>"
+
+#: lib/other/aboutdialog.ui:14
+msgctxt "AboutDialog|"
+msgid "About Falkon"
+msgstr "Про Falkon"
+
+#: lib/other/browsinglibrary.cpp:55
+msgctxt "BrowsingLibrary|"
+msgid "History"
+msgstr "Історія"
+
+#: lib/other/browsinglibrary.cpp:56
+msgctxt "BrowsingLibrary|"
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: lib/other/browsinglibrary.cpp:61
+msgctxt "BrowsingLibrary|"
+msgid "Import Bookmarks..."
+msgstr "Імпорт закладок…"
+
+#: lib/other/browsinglibrary.cpp:62
+msgctxt "BrowsingLibrary|"
+msgid "Export Bookmarks..."
+msgstr "Експорт закладок в HTML…"
+
+#: lib/other/browsinglibrary.ui:14
+msgctxt "BrowsingLibrary|"
+msgid "Library"
+msgstr "Бібліотека"
+
+#: lib/other/browsinglibrary.ui:64
+msgctxt "BrowsingLibrary|"
+msgid "Import and Export"
+msgstr "Імпорт і експорт"
+
+#: lib/other/browsinglibrary.ui:84
+msgctxt "BrowsingLibrary|"
+msgid "Search..."
+msgstr "Пошук…"
+
+#: lib/other/clearprivatedata.cpp:154
+msgctxt "ClearPrivateData|"
+msgid "Done"
+msgstr "Готово"
+
+#: lib/other/clearprivatedata.cpp:172
+msgctxt "ClearPrivateData|"
+msgid "Database Optimized"
+msgstr "Базу даних оптимізовано"
+
+#: lib/other/clearprivatedata.cpp:172
+#, qt-format
+msgctxt "ClearPrivateData|"
+msgid ""
+"Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/"
+"><b>Database Size After: </b>%2"
+msgstr ""
+"Базу даних успішно оптимізовано.<br/><br/><b>Розмір бази даних до: </b>%1<br/"
+"><b>Розмір бази даних після: </b>%2"
+
+#: lib/other/clearprivatedata.ui:14
+msgctxt "ClearPrivateData|"
+msgid "Clear Recent History"
+msgstr "Очистити недавню історію"
+
+#: lib/other/clearprivatedata.ui:20
+msgctxt "ClearPrivateData|"
+msgid "<b>Clear Recent History</b>"
+msgstr "<b>Очистити недавню історію</b>"
+
+#: lib/other/clearprivatedata.ui:27
+msgctxt "ClearPrivateData|"
+msgid "Edit cookies"
+msgstr "Редагувати куки"
+
+#: lib/other/clearprivatedata.ui:38
+msgctxt "ClearPrivateData|"
+msgid "Earlier Today"
+msgstr "За сьогодні"
+
+#: lib/other/clearprivatedata.ui:43
+msgctxt "ClearPrivateData|"
+msgid "Week"
+msgstr "За тиждень"
+
+#: lib/other/clearprivatedata.ui:48
+msgctxt "ClearPrivateData|"
+msgid "Month"
+msgstr "За місяць"
+
+#: lib/other/clearprivatedata.ui:53
+msgctxt "ClearPrivateData|"
+msgid "All"
+msgstr "Всю"
+
+#: lib/other/clearprivatedata.ui:61
+msgctxt "ClearPrivateData|"
+msgid "Visited pages history from:"
+msgstr "Відвідані сторінки історії"
+
+#: lib/other/clearprivatedata.ui:71
+msgctxt "ClearPrivateData|"
+msgid "Checked items will be cleared upon clicking the Clear button."
+msgstr "Позначені елементи буде очищено при натисканні кнопки Очистити."
+
+#: lib/other/clearprivatedata.ui:78
+msgctxt "ClearPrivateData|"
+msgid "Local storage"
+msgstr "Локальне сховище"
+
+#: lib/other/clearprivatedata.ui:94
+msgctxt "ClearPrivateData|"
+msgid "Clear"
+msgstr "Очистити"
+
+#: lib/other/clearprivatedata.ui:114
+msgctxt "ClearPrivateData|"
+msgid "Web databases"
+msgstr "Бази даних мережі"
+
+#: lib/other/clearprivatedata.ui:124
+msgctxt "ClearPrivateData|"
+msgid "Cache"
+msgstr "Кеш"
+
+#: lib/other/clearprivatedata.ui:134
+msgctxt "ClearPrivateData|"
+msgid "Optimize database"
+msgstr "Оптимізувати базу даних"
+
+#: lib/other/clearprivatedata.ui:141
+msgctxt "ClearPrivateData|"
+msgid "Cookies"
+msgstr "Куки"
+
+#: lib/other/clearprivatedata.ui:158
+msgctxt "ClearPrivateData|"
+msgid "Database"
+msgstr "База даних"
+
+#: lib/other/iconchooser.cpp:41
+msgctxt "IconChooser|"
+msgid "Image files"
+msgstr "Файли зображень"
+
+#: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
+msgctxt "IconChooser|"
+msgid "Choose icon..."
+msgstr "Оберіть піктограму…"
+
+#: lib/other/iconchooser.ui:20
+msgctxt "IconChooser|"
+msgid "From file"
+msgstr "З файла"
+
+#: lib/other/iconchooser.ui:29
+msgctxt "IconChooser|"
+msgid "Image (.png, .jpg, .jpeg, .gif)"
+msgstr "Зображення (.png, .jpg, .jpeg, .gif)"
+
+#: lib/other/iconchooser.ui:42
+msgctxt "IconChooser|"
+msgid "Choose file..."
+msgstr "Оберіть файл…"
+
+#: lib/other/iconchooser.ui:52
+msgctxt "IconChooser|"
+msgid "From database"
+msgstr "З бази даних"
+
+#: lib/other/iconchooser.ui:61
+msgctxt "IconChooser|"
+msgid "Site Url:"
+msgstr "Url-адреса сайту:"
+
+#: lib/other/licenseviewer.cpp:30
+msgctxt "LicenseViewer|"
+msgid "License Viewer"
+msgstr "Переглядач ліцензій"
+
+#: lib/other/protocolhandlerdialog.ui:14
+msgctxt "ProtocolHandlerDialog|"
+msgid "Manage protocol handlers"
+msgstr "Керування обробниками протоколів"
+
+#: lib/other/protocolhandlerdialog.ui:40
+msgctxt "ProtocolHandlerDialog|"
+msgid "Protocol"
+msgstr "Протокол"
+
+#: lib/other/protocolhandlerdialog.ui:45
+msgctxt "ProtocolHandlerDialog|"
+msgid "Site"
+msgstr "Сайт"
+
+#: lib/other/protocolhandlerdialog.ui:68
+msgctxt "ProtocolHandlerDialog|"
+msgid "Remove"
+msgstr "Вилучити"
+
+#: lib/other/registerqappassociation.cpp:110
+msgctxt "RegisterQAppAssociation|"
+msgid "Warning!"
+msgstr "Попередження!"
+
+#: lib/other/registerqappassociation.cpp:111
+msgctxt "RegisterQAppAssociation|"
+msgid ""
+"There are some problems. Please, reinstall Falkon.\n"
+"Maybe relaunch with administrator right do a magic for you! ;)"
+msgstr ""
+"Є проблеми. Будь ласка, перевстановіть Falkon.\n"
+"Можливо, перезапуск з правами адміністратора створить диво! ;)"
+
+#: lib/other/siteinfo.cpp:68
+msgctxt "SiteInfo|"
+msgid "<b>Connection is Encrypted.</b>"
+msgstr "<b>З'єднання зашифровано.</b>"
+
+#: lib/other/siteinfo.cpp:70
+msgctxt "SiteInfo|"
+msgid "<b>Connection Not Encrypted.</b>"
+msgstr "<b>З'єднання не зашифровано.</b>"
+
+#: lib/other/siteinfo.cpp:175
+msgctxt "SiteInfo|"
+msgid "Copy Image Location"
+msgstr "Копіювати розташування зображення"
+
+#: lib/other/siteinfo.cpp:176
+msgctxt "SiteInfo|"
+msgid "Copy Image Name"
+msgstr "Копіювати назву зображення"
+
+#: lib/other/siteinfo.cpp:178
+msgctxt "SiteInfo|"
+msgid "Save Image to Disk"
+msgstr "Зберегти зображення на диск"
+
+#: lib/other/siteinfo.cpp:190
+msgctxt "SiteInfo|"
+msgid "Copy Values"
+msgstr "Копіювати значення"
+
+#: lib/other/siteinfo.cpp:191
+msgctxt "SiteInfo|"
+msgid "Copy Tags and Values"
+msgstr "Копіювати мітки і значення"
+
+#: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
+msgctxt "SiteInfo|"
+msgid "Error!"
+msgstr "Помилка!"
+
+#: lib/other/siteinfo.cpp:229
+msgctxt "SiteInfo|"
+msgid "This preview is not available!"
+msgstr "Попередній перегляд недоступний!"
+
+#: lib/other/siteinfo.cpp:240
+msgctxt "SiteInfo|"
+msgid "Save image..."
+msgstr "Зберегти зображення…"
+
+#: lib/other/siteinfo.cpp:248
+msgctxt "SiteInfo|"
+msgid "Cannot write to file!"
+msgstr "Не вдалося виконати запис до файла!"
+
+#: lib/other/siteinfo.cpp:258
+msgctxt "SiteInfo|"
+msgid "Loading..."
+msgstr "Завантажується…"
+
+#: lib/other/siteinfo.cpp:271
+msgctxt "SiteInfo|"
+msgid "Preview not available"
+msgstr "Попередній перегляд недоступний"
+
+#: lib/other/siteinfo.ui:14
+msgctxt "SiteInfo|"
+msgid "Site Info"
+msgstr "Інформація про сайт"
+
+#: lib/other/siteinfo.ui:47
+msgctxt "SiteInfo|"
+msgid "General"
+msgstr "Загальне"
+
+#: lib/other/siteinfo.ui:52
+msgctxt "SiteInfo|"
+msgid "Media"
+msgstr "Медіа"
+
+#: lib/other/siteinfo.ui:84
+msgctxt "SiteInfo|"
+msgid "Site address:"
+msgstr "Адреса сайту:"
+
+#: lib/other/siteinfo.ui:113
+msgctxt "SiteInfo|"
+msgid "Encoding:"
+msgstr "Кодування:"
+
+#: lib/other/siteinfo.ui:132
+msgctxt "SiteInfo|"
+msgid "Meta tags of site:"
+msgstr "Мета-теґи сайту:"
+
+#: lib/other/siteinfo.ui:149
+msgctxt "SiteInfo|"
+msgid "Tag"
+msgstr "Теґ"
+
+#: lib/other/siteinfo.ui:154
+msgctxt "SiteInfo|"
+msgid "Value"
+msgstr "Значення"
+
+#: lib/other/siteinfo.ui:168
+msgctxt "SiteInfo|"
+msgid "<b>Security information</b>"
+msgstr "<b>Інформація про захист</b>"
+
+#: lib/other/siteinfo.ui:241
+msgctxt "SiteInfo|"
+msgid "Image"
+msgstr "Зображення"
+
+#: lib/other/siteinfo.ui:246
+msgctxt "SiteInfo|"
+msgid "Image address"
+msgstr "Адреса зображення"
+
+#: lib/other/siteinfo.ui:271
+msgctxt "SiteInfo|"
+msgid "<b>Preview</b>"
+msgstr "<b>Попередній перегляд</b>"
+
+#: lib/other/siteinfowidget.cpp:42
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "<b>Site %1<b/>"
+msgstr "<b>Сайт %1<b/>"
+
+#: lib/other/siteinfowidget.cpp:45
+msgctxt "SiteInfoWidget|"
+msgid "Your connection to this site is <b>secured</b>."
+msgstr "Ваше з'єднання з цим сайтом <b>захищено</b>."
+
+#: lib/other/siteinfowidget.cpp:49
+msgctxt "SiteInfoWidget|"
+msgid "Your connection to this site is <b>unsecured</b>."
+msgstr "Ваше з'єднання з цим сайтом <b>не захищено</b>."
+
+#: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "This is your <b>%1</b> visit of this site."
+msgstr "Це Ваш <b>%1</b> візит до цього сайту."
+
+#: lib/other/siteinfowidget.cpp:68
+msgctxt "SiteInfoWidget|"
+msgid "You have <b>never</b> visited this site before."
+msgstr "Ви <b>ніколи</b>раніше не відвідували цей сайт."
+
+#: lib/other/siteinfowidget.cpp:75
+msgctxt "SiteInfoWidget|"
+msgid "first"
+msgstr "перший"
+
+#: lib/other/siteinfowidget.cpp:78
+msgctxt "SiteInfoWidget|"
+msgid "second"
+msgstr "другий"
+
+#: lib/other/siteinfowidget.cpp:81
+msgctxt "SiteInfoWidget|"
+msgid "third"
+msgstr "третій"
+
+#: lib/other/siteinfowidget.cpp:106
+#, qt-format
+msgctxt "SiteInfoWidget|"
+msgid "Register as <b>%1</b> links handler"
+msgstr "Зареєструвати як обробник посилань <b>%1</b>"
+
+#: lib/other/siteinfowidget.cpp:107
+msgctxt "SiteInfoWidget|"
+msgid "Register"
+msgstr "Зареєструвати"
+
+#: lib/other/siteinfowidget.ui:71
+msgctxt "SiteInfoWidget|"
+msgid "More..."
+msgstr "Детальніше…"
+
+#: lib/other/statusbar.cpp:248
+msgctxt "StatusBar|"
+msgid "Hide"
+msgstr "Приховати"
+
+#: lib/other/updater.cpp:151
+msgctxt "Updater|"
+msgid "Update available"
+msgstr "Оновлення доступно"
+
+#: lib/other/updater.cpp:151
+msgctxt "Updater|"
+msgid "New version of Falkon is ready to download."
+msgstr "Нова версія Falkon готова до завантаження."
+
+#: lib/other/updater.cpp:160
+msgctxt "Updater|"
+msgid "Update"
+msgstr "Оновлення"
+
+#: lib/popupwindow/popupwebview.cpp:100
+msgctxt "PopupWebView|"
+msgid "Inspect Element"
+msgstr "Перевірити елемент"
+
+#: lib/popupwindow/popupwindow.cpp:83
+msgctxt "PopupWindow|"
+msgid "File"
+msgstr "Файл"
+
+#: lib/popupwindow/popupwindow.cpp:84
+msgctxt "PopupWindow|"
+msgid "Send Link..."
+msgstr "Відправити посилання…"
+
+#: lib/popupwindow/popupwindow.cpp:85
+msgctxt "PopupWindow|"
+msgid "&Print..."
+msgstr "&Надрукувати…"
+
+#: lib/popupwindow/popupwindow.cpp:87
+msgctxt "PopupWindow|"
+msgid "Close"
+msgstr "Закрити"
+
+#: lib/popupwindow/popupwindow.cpp:90
+msgctxt "PopupWindow|"
+msgid "Edit"
+msgstr "Редагувати"
+
+#: lib/popupwindow/popupwindow.cpp:99
+msgctxt "PopupWindow|"
+msgid "Find"
+msgstr "Знайти"
+
+#: lib/popupwindow/popupwindow.cpp:102
+msgctxt "PopupWindow|"
+msgid "View"
+msgstr "Вигляд"
+
+#: lib/popupwindow/popupwindow.cpp:103
+msgctxt "PopupWindow|"
+msgid "&Stop"
+msgstr "&Зупинити"
+
+#: lib/popupwindow/popupwindow.cpp:105
+msgctxt "PopupWindow|"
+msgid "&Reload"
+msgstr "&Перезавантажити"
+
+#: lib/popupwindow/popupwindow.cpp:108
+msgctxt "PopupWindow|"
+msgid "Zoom &In"
+msgstr "З&більшити"
+
+#: lib/popupwindow/popupwindow.cpp:109
+msgctxt "PopupWindow|"
+msgid "Zoom &Out"
+msgstr "З&меншити"
+
+#: lib/popupwindow/popupwindow.cpp:110
+msgctxt "PopupWindow|"
+msgid "Reset"
+msgstr "Відновити"
+
+#: lib/popupwindow/popupwindow.cpp:112
+msgctxt "PopupWindow|"
+msgid "&Page Source"
+msgstr "Вихідний код &сторінки"
+
+#: lib/popupwindow/popupwindow.cpp:271
+#, qt-format
+msgctxt "PopupWindow|"
+msgid "%1 - Falkon"
+msgstr "%1 — Falkon"
+
+#: lib/preferences/acceptlanguage.cpp:99 lib/preferences/acceptlanguage.cpp:160
+#, qt-format
+msgctxt "AcceptLanguage|"
+msgid "Personal [%1]"
+msgstr "Власна [%1]"
+
+#: lib/preferences/acceptlanguage.ui:14
+msgctxt "AcceptLanguage|"
+msgid "Preferred Languages"
+msgstr "Пріоритетні мови"
+
+#: lib/preferences/acceptlanguage.ui:25
+msgctxt "AcceptLanguage|"
+msgid "Add..."
+msgstr "Додати…"
+
+#: lib/preferences/acceptlanguage.ui:32
+msgctxt "AcceptLanguage|"
+msgid "Remove"
+msgstr "Вилучити"
+
+#: lib/preferences/acceptlanguage.ui:39
+msgctxt "AcceptLanguage|"
+msgid "Up"
+msgstr "Вгору"
+
+#: lib/preferences/acceptlanguage.ui:46
+msgctxt "AcceptLanguage|"
+msgid "Down"
+msgstr "Вниз"
+
+#: lib/preferences/addacceptlanguage.ui:14
+msgctxt "AddAcceptLanguage|"
+msgid "Add Language"
+msgstr "Додати мову"
+
+#: lib/preferences/addacceptlanguage.ui:20
+msgctxt "AddAcceptLanguage|"
+msgid "Choose preferred language for web sites"
+msgstr "Оберіть пріоритетну мову для вебсайтів"
+
+#: lib/preferences/addacceptlanguage.ui:32
+msgctxt "AddAcceptLanguage|"
+msgid "Personal definition:"
+msgstr "Власне визначення:"
+
+#: lib/preferences/autofillmanager.cpp:67
+msgctxt "AutoFillManager|"
+msgid "Import Passwords from File..."
+msgstr "Імпортувати паролі з файла…"
+
+#: lib/preferences/autofillmanager.cpp:68
+msgctxt "AutoFillManager|"
+msgid "Export Passwords to File..."
+msgstr "Експортувати паролі до файла…"
+
+#: lib/preferences/autofillmanager.cpp:70
+msgctxt "AutoFillManager|"
+msgid "Search"
+msgstr "Пошук"
+
+#: lib/preferences/autofillmanager.cpp:82
+#: lib/preferences/autofillmanager.cpp:171
+#: lib/preferences/autofillmanager.cpp:179
+#: lib/preferences/autofillmanager.ui:140
+msgctxt "AutoFillManager|"
+msgid "Show Passwords"
+msgstr "Показати паролі"
+
+#: lib/preferences/autofillmanager.cpp:130
+msgctxt "AutoFillManager|"
+msgid "Change backend..."
+msgstr "Змінити backend…"
+
+#: lib/preferences/autofillmanager.cpp:130
+msgctxt "AutoFillManager|"
+msgid "Change backend:"
+msgstr "Змінити backend"
+
+#: lib/preferences/autofillmanager.cpp:179
+msgctxt "AutoFillManager|"
+msgid "Are you sure that you want to show all passwords?"
+msgstr "Ви впевнені, що хочете показати усі паролі?"
+
+#: lib/preferences/autofillmanager.cpp:194
+msgctxt "AutoFillManager|"
+msgid "Hide Passwords"
+msgstr "Приховати паролі"
+
+#: lib/preferences/autofillmanager.cpp:232
+msgctxt "AutoFillManager|"
+msgid "Confirmation"
+msgstr "Підтвердження"
+
+#: lib/preferences/autofillmanager.cpp:233
+msgctxt "AutoFillManager|"
+msgid "Are you sure you want to delete all passwords on your computer?"
+msgstr "Ви впевнені, що хочете вилучити усі паролі з комп’ютера?"
+
+#: lib/preferences/autofillmanager.cpp:252
+msgctxt "AutoFillManager|"
+msgid "Edit password"
+msgstr "Редагувати пароль"
+
+#: lib/preferences/autofillmanager.cpp:252
+msgctxt "AutoFillManager|"
+msgid "Change password:"
+msgstr "Змінити пароль:"
+
+#: lib/preferences/autofillmanager.cpp:301
+#: lib/preferences/autofillmanager.cpp:312
+msgctxt "AutoFillManager|"
+msgid "Choose file..."
+msgstr "Виберіть файл…"
+
+#: lib/preferences/autofillmanager.cpp:326
+msgctxt "AutoFillManager|"
+msgid "Cannot read file!"
+msgstr "Неможливо прочитати файл!"
+
+#: lib/preferences/autofillmanager.cpp:335
+msgctxt "AutoFillManager|"
+msgid "Successfully imported"
+msgstr "Успішно імпортовано"
+
+#: lib/preferences/autofillmanager.cpp:335
+msgctxt "AutoFillManager|"
+msgid "Error while importing!"
+msgstr "Помилка під час імпорту!"
+
+#: lib/preferences/autofillmanager.cpp:346
+msgctxt "AutoFillManager|"
+msgid "Cannot write to file!"
+msgstr "Не вдалося виконати запис до файла!"
+
+#: lib/preferences/autofillmanager.cpp:355
+msgctxt "AutoFillManager|"
+msgid "Successfully exported"
+msgstr "Успішно експортовано"
+
+#: lib/preferences/autofillmanager.cpp:372
+msgctxt "AutoFillManager|"
+msgid "Copy Username"
+msgstr "Копіювати ім'я користувача"
+
+#: lib/preferences/autofillmanager.cpp:373
+msgctxt "AutoFillManager|"
+msgid "Copy Password"
+msgstr "Копіювати пароль"
+
+#: lib/preferences/autofillmanager.cpp:375
+msgctxt "AutoFillManager|"
+msgid "Edit Password"
+msgstr "Редагувати пароль"
+
+#: lib/preferences/autofillmanager.ui:25
+msgctxt "AutoFillManager|"
+msgid "Passwords are stored in:"
+msgstr "Паролі зберігаються в:"
+
+#: lib/preferences/autofillmanager.ui:35
+msgctxt "AutoFillManager|"
+msgid "Change backend"
+msgstr "Змінити модуль обробки"
+
+#: lib/preferences/autofillmanager.ui:42
+msgctxt "AutoFillManager|"
+msgid "Backend options"
+msgstr "Параметри модулів обробки"
+
+#: lib/preferences/autofillmanager.ui:71
+msgctxt "AutoFillManager|"
+msgid "Passwords"
+msgstr "Паролі"
+
+#: lib/preferences/autofillmanager.ui:87 lib/preferences/autofillmanager.ui:201
+msgctxt "AutoFillManager|"
+msgid "Server"
+msgstr "Сервер"
+
+#: lib/preferences/autofillmanager.ui:92
+msgctxt "AutoFillManager|"
+msgid "Username"
+msgstr "Ім’я користувача"
+
+#: lib/preferences/autofillmanager.ui:97
+msgctxt "AutoFillManager|"
+msgid "Password"
+msgstr "Пароль"
+
+#: lib/preferences/autofillmanager.ui:113
+msgctxt "AutoFillManager|"
+msgid "Import and Export"
+msgstr "Імпорт і експорт"
+
+#: lib/preferences/autofillmanager.ui:154
+msgctxt "AutoFillManager|"
+msgid "Edit"
+msgstr "Редагувати"
+
+#: lib/preferences/autofillmanager.ui:161
+#: lib/preferences/autofillmanager.ui:211
+msgctxt "AutoFillManager|"
+msgid "Remove"
+msgstr "Вилучити"
+
+#: lib/preferences/autofillmanager.ui:168
+#: lib/preferences/autofillmanager.ui:218
+msgctxt "AutoFillManager|"
+msgid "Remove All"
+msgstr "Вилучити все"
+
+#: lib/preferences/autofillmanager.ui:191
+msgctxt "AutoFillManager|"
+msgid "Exceptions"
+msgstr "Винятки"
+
+#: lib/preferences/jsoptions.ui:14
+msgctxt "JsOptions|"
+msgid "JavaScript Options"
+msgstr "Налаштування JavaScript"
+
+#: lib/preferences/jsoptions.ui:20
+msgctxt "JsOptions|"
+msgid "Allow JavaScript to:"
+msgstr "Дозволити JavaScript'у:"
+
+#: lib/preferences/jsoptions.ui:29
+msgctxt "JsOptions|"
+msgid "Open popup windows"
+msgstr "Відкривати контекстні вікна"
+
+#: lib/preferences/jsoptions.ui:36
+msgctxt "JsOptions|"
+msgid "Activate windows"
+msgstr "Активувати вікна"
+
+#: lib/preferences/jsoptions.ui:43
+msgctxt "JsOptions|"
+msgid "Access clipboard"
+msgstr "Мати доступ до буферу обміну"
+
+#: lib/preferences/jsoptions.ui:50
+msgctxt "JsOptions|"
+msgid "Paste from clipboard"
+msgstr "Вставити з буфера обміну"
+
+#: lib/preferences/pluginslist.ui:17
+msgctxt "PluginsList|"
+msgid "Enter name"
+msgstr "Введіть назву"
+
+#: lib/preferences/pluginslist.ui:51
+msgctxt "PluginsList|"
+msgid "Settings"
+msgstr "Налаштування"
+
+#: lib/preferences/pluginslist.ui:61
+msgctxt "PluginsList|"
+msgid "Remove"
+msgstr "Вилучити"
+
+#: lib/preferences/pluginslist.ui:81
+msgctxt "PluginsList|"
+msgid ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
+msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">Отримати інші розширення…</"
+"a>"
+
+#: lib/preferences/pluginsmanager.cpp:198
+msgctxt "PluginsManager|"
+msgid "Error!"
+msgstr "Помилка!"
+
+#: lib/preferences/pluginsmanager.cpp:198
+msgctxt "PluginsManager|"
+msgid "Cannot load extension!"
+msgstr "Неможливо завантажити розширення!"
+
+#: lib/preferences/pluginsmanager.cpp:237
+msgctxt "PluginsManager|"
+msgid "Confirmation"
+msgstr "Підтвердження"
+
+#: lib/preferences/pluginsmanager.cpp:238
+#, qt-format
+msgctxt "PluginsManager|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "Ви впевнені, що хочете вилучити «%1»?"
+
+#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:602
+msgctxt "Preferences|"
+msgid "Default"
+msgstr "Типовий"
+
+#: lib/preferences/preferences.cpp:155
+msgctxt "Preferences|"
+msgid "Set as default"
+msgstr "Зробити типовим"
+
+#: lib/preferences/preferences.cpp:545
+msgctxt "Preferences|"
+msgid "Choose executable location..."
+msgstr "Виберіть розташування виконуваного файла…"
+
+#: lib/preferences/preferences.cpp:588
+msgctxt "Preferences|"
+msgid "OSD Notification"
+msgstr "OSD сповіщення"
+
+#: lib/preferences/preferences.cpp:589
+msgctxt "Preferences|"
+msgid "Drag it on the screen to place it where you want."
+msgstr ""
+"Перетягніть по екрану в місце, де Ви хочете щоб розміщувалося сповіщення."
+
+#: lib/preferences/preferences.cpp:638
+msgctxt "Preferences|"
+msgid "Choose download location..."
+msgstr "Виберіть розташування завантаження…"
+
+#: lib/preferences/preferences.cpp:652
+msgctxt "Preferences|"
+msgid "Choose stylesheet location..."
+msgstr "Виберіть розташування таблиці стилів…"
+
+#: lib/preferences/preferences.cpp:663
+msgctxt "Preferences|"
+msgid "Deleted"
+msgstr "Вилучено"
+
+#: lib/preferences/preferences.cpp:759
+msgctxt "Preferences|"
+msgid "Choose cache path..."
+msgstr "Виберіть шлях для кешу…"
+
+#: lib/preferences/preferences.cpp:790
+msgctxt "Preferences|"
+msgid "New Profile"
+msgstr "Новий профіль"
+
+#: lib/preferences/preferences.cpp:790
+msgctxt "Preferences|"
+msgid "Enter the new profile's name:"
+msgstr "Введіть ім'я нового профілю:"
+
+#: lib/preferences/preferences.cpp:800 lib/preferences/preferences.cpp:805
+msgctxt "Preferences|"
+msgid "Error!"
+msgstr "Помилка!"
+
+#: lib/preferences/preferences.cpp:800
+msgctxt "Preferences|"
+msgid "This profile already exists!"
+msgstr "Такий профіль вже існує!"
+
+#: lib/preferences/preferences.cpp:805
+msgctxt "Preferences|"
+msgid "Cannot create profile directory!"
+msgstr "Неможливо створити теку профілю!"
+
+#: lib/preferences/preferences.cpp:816
+msgctxt "Preferences|"
+msgid "Confirmation"
+msgstr "Підтвердження"
+
+#: lib/preferences/preferences.cpp:817
+#, qt-format
+msgctxt "Preferences|"
+msgid ""
+"Are you sure you want to permanently delete \"%1\" profile? This action "
+"cannot be undone!"
+msgstr ""
+"Ви дійсно хочете остаточно вилучити профіль «%1»? Цю дію не можна скасувати!"
+
+#: lib/preferences/preferences.cpp:832 lib/preferences/preferences.ui:227
+msgctxt "Preferences|"
+msgid "Note: You cannot delete active profile."
+msgstr "Примітка: Ви не можете вилучити активний профіль."
+
+#: lib/preferences/preferences.cpp:1089
+msgctxt "Preferences|"
+msgid "Select Color"
+msgstr "Оберіть колір"
+
+#: lib/preferences/preferences.ui:14
+msgctxt "Preferences|"
+msgid "Preferences"
+msgstr "Налаштування"
+
+#: lib/preferences/preferences.ui:60
+msgctxt "Preferences|"
+msgid "General"
+msgstr "Загальне"
+
+#: lib/preferences/preferences.ui:65
+msgctxt "Preferences|"
+msgid "Appearance"
+msgstr "Вигляд"
+
+#: lib/preferences/preferences.ui:70
+msgctxt "Preferences|"
+msgid "Tabs"
+msgstr "Вкладки"
+
+#: lib/preferences/preferences.ui:75
+msgctxt "Preferences|"
+msgid "Browsing"
+msgstr "Перегляд інтернету"
+
+#: lib/preferences/preferences.ui:80
+msgctxt "Preferences|"
+msgid "Fonts"
+msgstr "Шрифти"
+
+#: lib/preferences/preferences.ui:85
+msgctxt "Preferences|"
+msgid "Keyboard Shortcuts"
+msgstr "Клавіатурні скорочення"
+
+#: lib/preferences/preferences.ui:90
+msgctxt "Preferences|"
+msgid "Downloads"
+msgstr "Завантаження"
+
+#: lib/preferences/preferences.ui:95
+msgctxt "Preferences|"
+msgid "Password Manager"
+msgstr "Менеджер паролів"
+
+#: lib/preferences/preferences.ui:100
+msgctxt "Preferences|"
+msgid "Privacy"
+msgstr "Приватність"
+
+#: lib/preferences/preferences.ui:105
+msgctxt "Preferences|"
+msgid "Notifications"
+msgstr "Сповіщення"
+
+#: lib/preferences/preferences.ui:110
+msgctxt "Preferences|"
+msgid "Extensions"
+msgstr "Розширення"
+
+#: lib/preferences/preferences.ui:115
+msgctxt "Preferences|"
+msgid "Spell Check"
+msgstr "Перевірка правопису"
+
+#: lib/preferences/preferences.ui:120
+msgctxt "Preferences|"
+msgid "Other"
+msgstr "Інше"
+
+#: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
+msgctxt "Preferences|"
+msgid "Use current"
+msgstr "Використовувати поточну"
+
+#: lib/preferences/preferences.ui:243
+msgctxt "Preferences|"
+msgid "Create New"
+msgstr "Створити новий"
+
+#: lib/preferences/preferences.ui:259
+msgctxt "Preferences|"
+msgid "Delete"
+msgstr "Вилучити"
+
+#: lib/preferences/preferences.ui:285
+msgctxt "Preferences|"
+msgid "<b>Launching</b>"
+msgstr "<b>Запуск</b>"
+
+#: lib/preferences/preferences.ui:295
+msgctxt "Preferences|"
+msgid "After launch: "
+msgstr "Після запуску:"
+
+#: lib/preferences/preferences.ui:303
+msgctxt "Preferences|"
+msgid "Open blank page"
+msgstr "Відкрити порожню сторінку"
+
+#: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
+msgctxt "Preferences|"
+msgid "Open homepage"
+msgstr "Відкрити домашню сторінку"
+
+#: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
+msgctxt "Preferences|"
+msgid "Open speed dial"
+msgstr "Відкрити сторінку «Швидкий набір»"
+
+#: lib/preferences/preferences.ui:318
+msgctxt "Preferences|"
+msgid "Restore session"
+msgstr "Відновити сеанс"
+
+#: lib/preferences/preferences.ui:323
+msgctxt "Preferences|"
+msgid "Select session"
+msgstr "Виберіть сеанс"
+
+#: lib/preferences/preferences.ui:331
+msgctxt "Preferences|"
+msgid "Homepage: "
+msgstr "Домашня сторінка: "
+
+#: lib/preferences/preferences.ui:352
+msgctxt "Preferences|"
+msgid "On new tab: "
+msgstr "В новій вкладці: "
+
+#: lib/preferences/preferences.ui:360
+msgctxt "Preferences|"
+msgid "Open blank tab"
+msgstr "Відкрити порожню вкладку"
+
+#: lib/preferences/preferences.ui:375
+msgctxt "Preferences|"
+msgid "Open other page..."
+msgstr "Відкрити іншу сторінку…"
+
+#: lib/preferences/preferences.ui:383
+msgctxt "Preferences|"
+msgid "<b>Profiles</b>"
+msgstr "<b>Профілі</b>"
+
+#: lib/preferences/preferences.ui:390
+msgctxt "Preferences|"
+msgid "Startup profile:"
+msgstr "Стартовий профіль:"
+
+#: lib/preferences/preferences.ui:397
+msgctxt "Preferences|"
+msgid "Check for updates on start"
+msgstr "Перевіряти наявність оновлень під час запуску"
+
+#: lib/preferences/preferences.ui:404
+msgctxt "Preferences|"
+msgid "Active profile:"
+msgstr "Активний профіль:"
+
+#: lib/preferences/preferences.ui:418
+msgctxt "Preferences|"
+msgid "Don't load tabs until selected"
+msgstr "Не завантажувати вкладки до їх вибору"
+
+#: lib/preferences/preferences.ui:440
+msgctxt "Preferences|"
+msgid "Check to see if Falkon is the default browser on startup"
+msgstr ""
+"Відмітьте, для перевірки під час запуску чи є Falkon типовим переглядачем"
+
+#: lib/preferences/preferences.ui:450
+msgctxt "Preferences|"
+msgid "Check Now"
+msgstr "Перевірити зараз"
+
+#: lib/preferences/preferences.ui:480
+msgctxt "Preferences|"
+msgid "Themes"
+msgstr "Теми"
+
+#: lib/preferences/preferences.ui:502
+msgctxt "Preferences|"
+msgid "Advanced options"
+msgstr "Додаткові налаштування"
+
+#: lib/preferences/preferences.ui:510
+msgctxt "Preferences|"
+msgid "Show StatusBar on start"
+msgstr "Показувати панель статусу під час запуску"
+
+#: lib/preferences/preferences.ui:517
+msgctxt "Preferences|"
+msgid "Show Bookmarks ToolBar on start"
+msgstr "Показувати панель закладок під час запуску"
+
+#: lib/preferences/preferences.ui:524
+msgctxt "Preferences|"
+msgid "Show Navigation ToolBar on start"
+msgstr "Показувати панель навігації під час запуску"
+
+#: lib/preferences/preferences.ui:531
+msgctxt "Preferences|"
+msgid "Enable instant Bookmarks ToolBar"
+msgstr "Увімкнути миттєву панель закладок"
+
+#: lib/preferences/preferences.ui:553
+msgctxt "Preferences|"
+msgid "<b>Browser Window</b>"
+msgstr "<b>Вікно переглядача</b>"
+
+#: lib/preferences/preferences.ui:601
+msgctxt "Preferences|"
+msgid "Tabs behaviour"
+msgstr "Поведінка вкладок"
+
+#: lib/preferences/preferences.ui:607
+msgctxt "Preferences|"
+msgid "Hide tabs when there is only one tab"
+msgstr "Ховати панель вкладок, коли відкрита лише одна вкладка"
+
+#: lib/preferences/preferences.ui:614
+msgctxt "Preferences|"
+msgid "Activate last tab when closing active tab"
+msgstr "Активувати останню вкладку, коли закривається активна вкладка"
+
+#: lib/preferences/preferences.ui:621
+msgctxt "Preferences|"
+msgid "Open new tabs after active tab"
+msgstr "Відкривати нові вкладки після поточної вкладки"
+
+#: lib/preferences/preferences.ui:628
+msgctxt "Preferences|"
+msgid "Open new empty tabs after active tab"
+msgstr "Відкривати нову порожню вкладку після активної вкладки"
+
+#: lib/preferences/preferences.ui:635
+msgctxt "Preferences|"
+msgid "Open popup windows in tabs"
+msgstr "Відкривати контекстні вікна у вкладках"
+
+#: lib/preferences/preferences.ui:642
+msgctxt "Preferences|"
+msgid "Always switch between tabs with mouse wheel"
+msgstr "Завжди перемикатися між вкладками за допомогою колеса миші"
+
+#: lib/preferences/preferences.ui:649
+msgctxt "Preferences|"
+msgid "Automatically switch to newly opened tab"
+msgstr "Автоматично перемикатись на нову вкладку"
+
+#: lib/preferences/preferences.ui:656
+msgctxt "Preferences|"
+msgid "Don't close window upon closing last tab"
+msgstr "Не закривати вікно після закриття останньої вкладки"
+
+#: lib/preferences/preferences.ui:663
+msgctxt "Preferences|"
+msgid "Ask when closing multiple tabs"
+msgstr "Питати, коли закриваються багато вкладок"
+
+#: lib/preferences/preferences.ui:670
+msgctxt "Preferences|"
+msgid "Show closed tabs button"
+msgstr "Показувати кнопку закриття вкладок"
+
+#: lib/preferences/preferences.ui:679
+msgctxt "Preferences|"
+msgid "Show close buttons on inactive tabs:"
+msgstr "Показувати кнопку закриття на неактивних вкладках:"
+
+#: lib/preferences/preferences.ui:687
+msgctxt "Preferences|"
+msgid "Automatic"
+msgstr "Автоматично"
+
+#: lib/preferences/preferences.ui:692
+msgctxt "Preferences|"
+msgid "Always"
+msgstr "Завжди"
+
+#: lib/preferences/preferences.ui:697
+msgctxt "Preferences|"
+msgid "Never"
+msgstr "Ніколи"
+
+#: lib/preferences/preferences.ui:737
+msgctxt "Preferences|"
+msgid "Address Bar behaviour"
+msgstr "Поведінка рядку адреси"
+
+#: lib/preferences/preferences.ui:745
+msgctxt "Preferences|"
+msgid "Suggest when typing into address bar:"
+msgstr "Робити підказки під час набирання адреси:"
+
+#: lib/preferences/preferences.ui:759
+msgctxt "Preferences|"
+msgid "History and Bookmarks"
+msgstr "Історія і Закладки"
+
+#: lib/preferences/preferences.ui:764
+msgctxt "Preferences|"
+msgid "History"
+msgstr "Історія"
+
+#: lib/preferences/preferences.ui:769
+msgctxt "Preferences|"
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: lib/preferences/preferences.ui:774
+msgctxt "Preferences|"
+msgid "Nothing"
+msgstr "Нічого"
+
+#: lib/preferences/preferences.ui:800
+msgctxt "Preferences|"
+msgid "Enable inline suggestions"
+msgstr "Увімкнути вбудовані пропозиції"
+
+#: lib/preferences/preferences.ui:807
+msgctxt "Preferences|"
+msgid ""
+"Press \"Shift\" to not switch the tab but load the url in the current tab"
+msgstr ""
+"Натискати \"Shift\" щоб не перемикатись на іншу вкладку, а завантажити url-"
+"адресу в поточній вкладці"
+
+#: lib/preferences/preferences.ui:810
+msgctxt "Preferences|"
+msgid "Propose to switch tab if completed url is already loaded"
+msgstr "Пропонувати перемкнути вкладку, якщо повна url-адреса вже завантажена"
+
+#: lib/preferences/preferences.ui:817
+msgctxt "Preferences|"
+msgid "Always show go icon"
+msgstr "Завжди показувати піктограму переходу"
+
+#: lib/preferences/preferences.ui:824
+msgctxt "Preferences|"
+msgid "Select all text by double clicking in address bar"
+msgstr "Позначати весь текст подвійним клацанням в адресному рядку"
+
+#: lib/preferences/preferences.ui:831
+msgctxt "Preferences|"
+msgid "Select all text by clicking in address bar"
+msgstr "Позначати весь текст одинарним клацанням в адресному рядку"
+
+#: lib/preferences/preferences.ui:838
+msgctxt "Preferences|"
+msgid "Enable automatic searching from the address bar"
+msgstr "Увімкнути автоматичний пошук з рядка адреси"
+
+#: lib/preferences/preferences.ui:845
+msgctxt "Preferences|"
+msgid "Search with Default Engine"
+msgstr "Шукати за допомогою типового пошукового рушія"
+
+#: lib/preferences/preferences.ui:852
+msgctxt "Preferences|"
+msgid "Show search suggestions"
+msgstr "Показувати підказки пошуку"
+
+#: lib/preferences/preferences.ui:875
+msgctxt "Preferences|"
+msgid "Show loading progress in address bar"
+msgstr "Показувати поступ завантаження в адресному рядку"
+
+#: lib/preferences/preferences.ui:908
+msgctxt "Preferences|"
+msgid "Fill"
+msgstr "Заповнювати"
+
+#: lib/preferences/preferences.ui:913
+msgctxt "Preferences|"
+msgid "Bottom"
+msgstr "Низ"
+
+#: lib/preferences/preferences.ui:918
+msgctxt "Preferences|"
+msgid "Top"
+msgstr "Верх"
+
+#: lib/preferences/preferences.ui:926
+msgctxt "Preferences|"
+msgid "Custom color:"
+msgstr "Колір користувача:"
+
+#: lib/preferences/preferences.ui:942
+msgctxt "Preferences|"
+msgid "Select color"
+msgstr "Оберіть колір"
+
+#: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1258
+#: lib/preferences/preferences.ui:1792 lib/preferences/preferences.ui:1889
+#: lib/preferences/preferences.ui:2459
+msgctxt "Preferences|"
+msgid "..."
+msgstr "…"
+
+#: lib/preferences/preferences.ui:952
+msgctxt "Preferences|"
+msgid "Reset"
+msgstr "Відновити"
+
+#: lib/preferences/preferences.ui:1003
+msgctxt "Preferences|"
+msgid "Web Configuration"
+msgstr "Налаштування мережі"
+
+#: lib/preferences/preferences.ui:1011
+msgctxt "Preferences|"
+msgid "Enable Pepper plugin API (PPAPI)"
+msgstr "Увімкнути програмний інтерфейс додатків Pepper (PPAPI)"
+
+#: lib/preferences/preferences.ui:1018
+msgctxt "Preferences|"
+msgid "Use built-in PDF viewer (requires PPAPI)"
+msgstr "Використовувати вбудований засіб перегляду PDF (потребує PPAPI)"
+
+#: lib/preferences/preferences.ui:1025
+msgctxt "Preferences|"
+msgid "Allow JavaScript"
+msgstr "Дозволити JavaScript"
+
+#: lib/preferences/preferences.ui:1032
+msgctxt "Preferences|"
+msgid "Include links in focus chain"
+msgstr "Включати посилання до послідовності перемикання фокусу"
+
+#. try to detect possible XSS attacks when executing javascript
+#: lib/preferences/preferences.ui:1039
+msgctxt "Preferences|"
+msgid "Enable XSS Auditing"
+msgstr "Дозволити аудит XSS"
+
+#. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
+#: lib/preferences/preferences.ui:1046
+msgctxt "Preferences|"
+msgid "Print element background"
+msgstr "Друкувати фон елементу"
+
+#: lib/preferences/preferences.ui:1053
+msgctxt "Preferences|"
+msgid "Animated scrolling"
+msgstr "Анімоване прокручування"
+
+#: lib/preferences/preferences.ui:1060
+msgctxt "Preferences|"
+msgid "Enable spatial navigation"
+msgstr "Дозволити просторову навігацію"
+
+#: lib/preferences/preferences.ui:1067
+msgctxt "Preferences|"
+msgid "Use native scrollbars"
+msgstr "Використовувати системні смужки прокрутки"
+
+#: lib/preferences/preferences.ui:1074
+msgctxt "Preferences|"
+msgid "Disable automatic playing of videos"
+msgstr "Вимкнути автоматичне відтворення відео"
+
+#: lib/preferences/preferences.ui:1081
+msgctxt "Preferences|"
+msgid "Prevent WebRTC from leaking local IP address"
+msgstr "Запобігати у WebRTC наданню локальних IP-адрес"
+
+#: lib/preferences/preferences.ui:1088
+msgctxt "Preferences|"
+msgid "Enable DNS prefetching"
+msgstr "Дозволити попереднє отримання DNS"
+
+#: lib/preferences/preferences.ui:1095
+msgctxt "Preferences|"
+msgid "Enable screen capture"
+msgstr "Увімкнути захоплення екрана"
+
+#: lib/preferences/preferences.ui:1112
+msgctxt "Preferences|"
+msgid "Mouse wheel scrolls"
+msgstr "Колесо миші прокручує"
+
+#: lib/preferences/preferences.ui:1132
+msgctxt "Preferences|"
+msgid "lines on page"
+msgstr "рядків на сторінку"
+
+#: lib/preferences/preferences.ui:1143
+msgctxt "Preferences|"
+msgid "Default zoom on pages: "
+msgstr "Типове масштабування сторінок:"
+
+#: lib/preferences/preferences.ui:1182
+msgctxt "Preferences|"
+msgid "Local Storage"
+msgstr "Локальне сховище"
+
+#: lib/preferences/preferences.ui:1190
+msgctxt "Preferences|"
+msgid "Allow storing network cache on disk"
+msgstr "Дозволити зберігання кешу мережі на диску"
+
+#: lib/preferences/preferences.ui:1213
+msgctxt "Preferences|"
+msgid "Delete cache on close"
+msgstr "Вилучати кеш під час закриття"
+
+#: lib/preferences/preferences.ui:1220
+msgctxt "Preferences|"
+msgid "Maximum:"
+msgstr "Максимум:"
+
+#: lib/preferences/preferences.ui:1227
+msgctxt "Preferences|"
+msgid " MB"
+msgstr "МБ"
+
+#: lib/preferences/preferences.ui:1243
+msgctxt "Preferences|"
+msgid "Store cache in:"
+msgstr "Зберігати кеш в:"
+
+#: lib/preferences/preferences.ui:1271
+msgctxt "Preferences|"
+msgid "Allow saving history"
+msgstr "Дозволити зберігання історії"
+
+#: lib/preferences/preferences.ui:1278
+msgctxt "Preferences|"
+msgid "Delete history on close"
+msgstr "Вилучати журнал під час закриття"
+
+#: lib/preferences/preferences.ui:1301
+msgctxt "Preferences|"
+msgid "Allow local storage of HTML5 web content"
+msgstr "Дозволити локальне зберігання даних HTML5"
+
+#: lib/preferences/preferences.ui:1308
+msgctxt "Preferences|"
+msgid "Delete locally stored HTML5 web content on close"
+msgstr "Вилучати локально збережені дані HTML5 під час закриття"
+
+#: lib/preferences/preferences.ui:1334
+msgctxt "Preferences|"
+msgid "Delete now"
+msgstr "Вилучити зараз"
+
+#: lib/preferences/preferences.ui:1373
+msgctxt "Preferences|"
+msgid "Proxy Configuration"
+msgstr "Конфігурація проксі"
+
+#: lib/preferences/preferences.ui:1392
+msgctxt "Preferences|"
+msgid "System proxy configuration"
+msgstr "Системні налаштування проксі"
+
+#: lib/preferences/preferences.ui:1415
+msgctxt "Preferences|"
+msgid "Manual configuration"
+msgstr "Ручні налаштування"
+
+#: lib/preferences/preferences.ui:1425
+msgctxt "Preferences|"
+msgid "HTTP"
+msgstr "HTTP"
+
+#: lib/preferences/preferences.ui:1430
+msgctxt "Preferences|"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+#: lib/preferences/preferences.ui:1441
+msgctxt "Preferences|"
+msgid "Port:"
+msgstr "Порт:"
+
+#: lib/preferences/preferences.ui:1462
+msgctxt "Preferences|"
+msgid "Username:"
+msgstr "Ім'я користувача:"
+
+#: lib/preferences/preferences.ui:1472
+msgctxt "Preferences|"
+msgid "Password:"
+msgstr "Пароль:"
+
+#: lib/preferences/preferences.ui:1501
+msgctxt "Preferences|"
+msgid "No proxy"
+msgstr "Без проксі"
+
+#: lib/preferences/preferences.ui:1516
+msgctxt "Preferences|"
+msgid "<b>Font Families</b>"
+msgstr "<b>Сімейства шрифтів</b>"
+
+#: lib/preferences/preferences.ui:1529
+msgctxt "Preferences|"
+msgid "Standard"
+msgstr "Стандарт"
+
+#: lib/preferences/preferences.ui:1536
+msgctxt "Preferences|"
+msgid "Fixed"
+msgstr "Фіксований"
+
+#: lib/preferences/preferences.ui:1546
+msgctxt "Preferences|"
+msgid "Serif"
+msgstr "Serif"
+
+#: lib/preferences/preferences.ui:1556
+msgctxt "Preferences|"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#: lib/preferences/preferences.ui:1566
+msgctxt "Preferences|"
+msgid "Cursive"
+msgstr "Cursive"
+
+#: lib/preferences/preferences.ui:1618
+msgctxt "Preferences|"
+msgid "Fantasy"
+msgstr "Fantasy"
+
+#: lib/preferences/preferences.ui:1625
+msgctxt "Preferences|"
+msgid "<b>Font Sizes</b>"
+msgstr "<b>Розміри шрифту</b>"
+
+#: lib/preferences/preferences.ui:1634
+msgctxt "Preferences|"
+msgid "Fixed Font Size"
+msgstr "Фіксований розмір шрифту"
+
+#: lib/preferences/preferences.ui:1641
+msgctxt "Preferences|"
+msgid "Default Font Size"
+msgstr "Типовий розмір шрифту"
+
+#: lib/preferences/preferences.ui:1668
+msgctxt "Preferences|"
+msgid "Minimum Font Size"
+msgstr "Мінімальний розмір шрифту"
+
+#: lib/preferences/preferences.ui:1675
+msgctxt "Preferences|"
+msgid "Minimum Logical Font Size"
+msgstr "Мінімальний логічний розмір шрифту"
+
+#: lib/preferences/preferences.ui:1708
+msgctxt "Preferences|"
+msgid "<b>Shortcuts</b>"
+msgstr "<b>Гарячі клавіші</b>"
+
+#: lib/preferences/preferences.ui:1715
+msgctxt "Preferences|"
+msgid "Switch to tabs with Alt + number of tab"
+msgstr "Перемикатись між вкладками за допомогою \"Alt\" і цифрових клавіш"
+
+#: lib/preferences/preferences.ui:1722
+msgctxt "Preferences|"
+msgid "Load speed dials with Ctrl + number of speed dial"
+msgstr ""
+"Завантажувати сторінки зі «Швидкого набору» за допомогою «Ctrl» і цифрових "
+"клавіш"
+
+#: lib/preferences/preferences.ui:1729
+msgctxt "Preferences|"
+msgid ""
+"Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
+"><b>/</b> - search on page"
+msgstr ""
+"Існуюче скорочення:<br/><b>1</b> — попередня вкладка<br/><b>2</b> — наступна "
+"вкладка<br/><b>/</b> — пошук на сторінці"
+
+#: lib/preferences/preferences.ui:1732
+msgctxt "Preferences|"
+msgid "Use single key shortcuts"
+msgstr "Використовувати єдині скорочення клавіш"
+
+#: lib/preferences/preferences.ui:1739
+msgctxt "Preferences|"
+msgid ""
+"If unchecked, prevents accidental exit from the application if the Ctrl-W "
+"shortcut was intended."
+msgstr ""
+"Якщо не позначено, запобігає випадковому виходу із програми при навмисному "
+"натисненні скорочення Ctrl-W."
+
+#: lib/preferences/preferences.ui:1742
+msgctxt "Preferences|"
+msgid "Close application with Ctrl-Q"
+msgstr "Закрити програму через Ctrl-Q"
+
+#: lib/preferences/preferences.ui:1766
+msgctxt "Preferences|"
+msgid "<b>Download Location</b>"
+msgstr "<b>Розташування завантажень</b>"
+
+#: lib/preferences/preferences.ui:1773
+msgctxt "Preferences|"
+msgid "Ask everytime for download location"
+msgstr "Щоразу питати про розташування завантаження"
+
+#: lib/preferences/preferences.ui:1780
+msgctxt "Preferences|"
+msgid "Use defined location: "
+msgstr "Використовувати визначене місце: "
+
+#: lib/preferences/preferences.ui:1830
+msgctxt "Preferences|"
+msgid "<b>Download Options</b>"
+msgstr "<b>Параметри завантаження</b>"
+
+#: lib/preferences/preferences.ui:1837
+msgctxt "Preferences|"
+msgid "Close download manager when downloading finishes"
+msgstr "Закрити менеджер завантаження коли завантаження закінчиться"
+
+#: lib/preferences/preferences.ui:1844
+msgctxt "Preferences|"
+msgid "<b>External download manager</b>"
+msgstr "<b>Зовнішній менеджер завантаження</b>"
+
+#: lib/preferences/preferences.ui:1851
+msgctxt "Preferences|"
+msgid "Use external download manager"
+msgstr "Використовувати зовнішній менеджер завантаження"
+
+#: lib/preferences/preferences.ui:1863
+msgctxt "Preferences|"
+msgid "Executable:"
+msgstr "Виконуваний файл:"
+
+#: lib/preferences/preferences.ui:1870
+msgctxt "Preferences|"
+msgid "Arguments:"
+msgstr "Параметри запуску:"
+
+#: lib/preferences/preferences.ui:1877
+msgctxt "Preferences|"
+msgid "Leave blank if unsure"
+msgstr "Лишити порожнім якщо немає впевненості"
+
+#: lib/preferences/preferences.ui:1898
+msgctxt "Preferences|"
+msgid "<b>%d</b> will be replaced with URL to be downloaded"
+msgstr "<b>%d</b> буде замінено URL-адресою завантаження"
+
+#: lib/preferences/preferences.ui:1924
+msgctxt "Preferences|"
+msgid "<b>AutoFill options</b>"
+msgstr "<b>Параметри автозаповнення</b>"
+
+#: lib/preferences/preferences.ui:1931
+msgctxt "Preferences|"
+msgid "Allow saving passwords from sites"
+msgstr "Дозволити зберігання паролів з сайтів"
+
+#: lib/preferences/preferences.ui:1982
+msgctxt "Preferences|"
+msgid "Automatically complete passwords on sites"
+msgstr "Автоматично завершувати паролі на сайтах"
+
+#: lib/preferences/preferences.ui:1993
+msgctxt "Preferences|"
+msgid "<b>Cookies</b>"
+msgstr "<b>Куки</b>"
+
+#: lib/preferences/preferences.ui:2000
+msgctxt "Preferences|"
+msgid "<b>Other</b>"
+msgstr "<b>Інше</b>"
+
+#: lib/preferences/preferences.ui:2026
+msgctxt "Preferences|"
+msgid "JavaScript options"
+msgstr "Налаштування JavaScript"
+
+#: lib/preferences/preferences.ui:2036
+msgctxt "Preferences|"
+msgid "<b>JavaScript</b>"
+msgstr "<b>JavaScript</b>"
+
+#: lib/preferences/preferences.ui:2049
+msgctxt "Preferences|"
+msgid "Cookies Manager"
+msgstr "Менеджер кук"
+
+#: lib/preferences/preferences.ui:2059
+msgctxt "Preferences|"
+msgid "Manage JavaScript privacy options"
+msgstr "Керувати налаштуваннями приватності JavaScript"
+
+#: lib/preferences/preferences.ui:2082
+msgctxt "Preferences|"
+msgid "Manage HTML5 permissions"
+msgstr "Керування дозволами HTML5"
+
+#: lib/preferences/preferences.ui:2089
+msgctxt "Preferences|"
+msgid "Manage Cookies"
+msgstr "Керування куками"
+
+#: lib/preferences/preferences.ui:2109
+msgctxt "Preferences|"
+msgid "<b>HTML5 Permissions</b>"
+msgstr "<b>Дозволи HTML5</b>"
+
+#: lib/preferences/preferences.ui:2122
+msgctxt "Preferences|"
+msgid "HTML5 Permissions"
+msgstr "Дозволи HTML5"
+
+#: lib/preferences/preferences.ui:2129
+msgctxt "Preferences|"
+msgid "Send Do Not Track header to servers"
+msgstr "Відсилати серверам заголовок \"Не відстежувати\""
+
+#: lib/preferences/preferences.ui:2155
+msgctxt "Preferences|"
+msgid "Expiration timeout:"
+msgstr "Час відображення:"
+
+#: lib/preferences/preferences.ui:2168
+msgctxt "Preferences|"
+msgid " seconds"
+msgstr " секунд"
+
+#: lib/preferences/preferences.ui:2190
+msgctxt "Preferences|"
+msgid "<b>Notifications</b>"
+msgstr "<b>Сповіщення</b>"
+
+#: lib/preferences/preferences.ui:2213
+msgctxt "Preferences|"
+msgid "Use Native System Notifications (Linux only)"
+msgstr "Використовувати рідні системні сповіщення (тільки для Linux)"
+
+#: lib/preferences/preferences.ui:2220
+msgctxt "Preferences|"
+msgid "Do not use Notifications"
+msgstr "Не використовувати сповіщення"
+
+#: lib/preferences/preferences.ui:2243
+msgctxt "Preferences|"
+msgid ""
+"<b>Note: </b>You can change position of OSD Notification by dragging it on "
+"the screen."
+msgstr ""
+"<b>Примітка: </b>Ви можете змінити розташування екранних сповіщень, "
+"перетягуючи їх екраном."
+
+#: lib/preferences/preferences.ui:2269
+msgctxt "Preferences|"
+msgid "Use OSD Notifications"
+msgstr "Використовувати OSD-сповіщення"
+
+#: lib/preferences/preferences.ui:2276
+msgctxt "Preferences|"
+msgid "Preview"
+msgstr "Перегляд"
+
+#: lib/preferences/preferences.ui:2341
+msgctxt "Preferences|"
+msgid ""
+"For more information about Spell Check, please see <a href=\"https://"
+"userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
+msgstr ""
+"Щоб отримати більше інформації про перевірку правопису, дивіться <a href="
+"\"https://userbase.kde.org/Falkon#Spell_Check\">вікі</a>."
+
+#: lib/preferences/preferences.ui:2383
+msgctxt "Preferences|"
+msgid "<b>Spell Check options</b>"
+msgstr "<b>Налаштування перевірки правопису</b>"
+
+#: lib/preferences/preferences.ui:2390
+msgctxt "Preferences|"
+msgid "Enable Spell Check"
+msgstr "Увімкнути перевірку правопису"
+
+#: lib/preferences/preferences.ui:2397
+msgctxt "Preferences|"
+msgid "<b>Dictionary directories</b>"
+msgstr "<b>Теки словників</b>"
+
+#: lib/preferences/preferences.ui:2448
+msgctxt "Preferences|"
+msgid "No languages found"
+msgstr "Не знайдено мов"
+
+#: lib/preferences/preferences.ui:2466
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>Управління пошуковими системами</b>"
+
+#: lib/preferences/preferences.ui:2473
+msgctxt "Preferences|"
+msgid "<b>User Style Sheet</b>"
+msgstr "<b>Використовувати стилі користувачів</b>"
+
+#: lib/preferences/preferences.ui:2498
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "Мови"
+
+#: lib/preferences/preferences.ui:2520
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>Змінити ідентифікацію переглядача</b>"
+
+#: lib/preferences/preferences.ui:2545
+msgctxt "Preferences|"
+msgid "Protocol Handlers Manager"
+msgstr "Керування обробниками протоколів"
+
+#: lib/preferences/preferences.ui:2585
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "Менеджер пошукових систем"
+
+#: lib/preferences/preferences.ui:2633
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr "Автоматично завантажувати стилі разом з усіма вебсайтами: "
+
+#: lib/preferences/preferences.ui:2643
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>Пріоритетна мова для вебсайтів</b>"
+
+#: lib/preferences/preferences.ui:2668
+msgctxt "Preferences|"
+msgid "User Agent Manager"
+msgstr "Менеджер User-Agent’ів"
+
+#: lib/preferences/preferences.ui:2690
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>Керування обробниками протоколів</b>"
+
+#: lib/preferences/thememanager.cpp:100
+msgctxt "ThemeManager|"
+msgid "Confirmation"
+msgstr "Підтвердження"
+
+#: lib/preferences/thememanager.cpp:101
+#, qt-format
+msgctxt "ThemeManager|"
+msgid "Are you sure you want to remove '%1'?"
+msgstr "Ви впевнені, що хочете вилучити «%1»?"
+
+#: lib/preferences/thememanager.ui:51
+msgctxt "ThemeManager|"
+msgid "<b>Name:</b>"
+msgstr "<b>Назва:</b>"
+
+#: lib/preferences/thememanager.ui:61
+msgctxt "ThemeManager|"
+msgid "<b>Author:</b>"
+msgstr "<b>Автор:</b>"
+
+#: lib/preferences/thememanager.ui:84
+msgctxt "ThemeManager|"
+msgid "<b>Description:</b>"
+msgstr "<b>Опис:</b>"
+
+#: lib/preferences/thememanager.ui:128
+msgctxt "ThemeManager|"
+msgid "License"
+msgstr "Ліцензія"
+
+#: lib/preferences/thememanager.ui:155
+msgctxt "ThemeManager|"
+msgid "Remove"
+msgstr "Вилучити"
+
+#: lib/preferences/thememanager.ui:175
+msgctxt "ThemeManager|"
+msgid ""
+"<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
+msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/572/\">Отримати інші теми…</a>"
+
+#: lib/preferences/useragentdialog.cpp:99
+msgctxt "UserAgentDialog|"
+msgid "Add new site"
+msgstr "Додати новий сайт"
+
+#: lib/preferences/useragentdialog.cpp:137
+msgctxt "UserAgentDialog|"
+msgid "Edit site"
+msgstr "Редагувати сайт"
+
+#: lib/preferences/useragentdialog.cpp:216
+msgctxt "UserAgentDialog|"
+msgid "Site domain: "
+msgstr "Домен сайту: "
+
+#: lib/preferences/useragentdialog.cpp:217
+msgctxt "UserAgentDialog|"
+msgid "User Agent: "
+msgstr "User Agent: "
+
+#: lib/preferences/useragentdialog.ui:14
+msgctxt "UserAgentDialog|"
+msgid "User Agent Manager"
+msgstr "Менеджер User-Agent’ів"
+
+#: lib/preferences/useragentdialog.ui:20
+msgctxt "UserAgentDialog|"
+msgid "Change global User Agent"
+msgstr "Змінити глобального User-Agent’а"
+
+#: lib/preferences/useragentdialog.ui:48
+msgctxt "UserAgentDialog|"
+msgid "Use different User Agents for specified sites"
+msgstr "Використовувати інакшого User-Agent’а для окремих сайтів"
+
+#: lib/preferences/useragentdialog.ui:92
+msgctxt "UserAgentDialog|"
+msgid "Site"
+msgstr "Сайт"
+
+#: lib/preferences/useragentdialog.ui:97
+msgctxt "UserAgentDialog|"
+msgid "User Agent"
+msgstr "User-Agent"
+
+#: lib/preferences/useragentdialog.ui:107
+msgctxt "UserAgentDialog|"
+msgid "Add"
+msgstr "Додати"
+
+#: lib/preferences/useragentdialog.ui:114
+msgctxt "UserAgentDialog|"
+msgid "Remove"
+msgstr "Вилучити"
+
+#: lib/preferences/useragentdialog.ui:134
+msgctxt "UserAgentDialog|"
+msgid "Edit"
+msgstr "Редагувати"
+
+#: lib/session/sessionmanager.cpp:126
+msgctxt "SessionManager|"
+msgid "_cloned"
+msgstr "_дубльовано"
+
+#: lib/session/sessionmanager.cpp:126
+msgctxt "SessionManager|"
+msgid "_renamed"
+msgstr "_перейменовано"
+
+#: lib/session/sessionmanager.cpp:127
+msgctxt "SessionManager|"
+msgid "Clone Session"
+msgstr "Дублювати сеанс"
+
+#: lib/session/sessionmanager.cpp:127
+msgctxt "SessionManager|"
+msgid "Rename Session"
+msgstr "Перейменувати сеанс"
+
+#: lib/session/sessionmanager.cpp:128
+msgctxt "SessionManager|"
+msgid "Please enter a new name:"
+msgstr "Будь ласка, вкажіть нове ім'я:"
+
+#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:143
+#: lib/session/sessionmanager.cpp:148 lib/session/sessionmanager.cpp:170
+#: lib/session/sessionmanager.cpp:218
+msgctxt "SessionManager|"
+msgid "Error!"
+msgstr "Помилка!"
+
+#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:170
+#: lib/session/sessionmanager.cpp:218
+#, qt-format
+msgctxt "SessionManager|"
+msgid "The session file \"%1\" exists. Please enter another name."
+msgstr "Файл сеансу «%1» вже існує. Будь ласка, вкажіть інше ім'я."
+
+#: lib/session/sessionmanager.cpp:143
+msgctxt "SessionManager|"
+msgid "An error occurred when cloning session file."
+msgstr "Сталася помилка під час дублювання файла сеансу."
+
+#: lib/session/sessionmanager.cpp:148
+msgctxt "SessionManager|"
+msgid "An error occurred when renaming session file."
+msgstr "Сталася помилка під час перейменування файла сеансу."
+
+#: lib/session/sessionmanager.cpp:161
+msgctxt "SessionManager|"
+msgid "Save Session"
+msgstr "Зберегти сеанс"
+
+#: lib/session/sessionmanager.cpp:162
+msgctxt "SessionManager|"
+msgid "Please enter a name to save session:"
+msgstr "Будь ласка, вкажіть ім'я, щоб зберегти сеанс:"
+
+#: lib/session/sessionmanager.cpp:163
+#, qt-format
+msgctxt "SessionManager|"
+msgid "Saved Session (%1)"
+msgstr "Збережений сеанс (%1)"
+
+#: lib/session/sessionmanager.cpp:180
+msgctxt "SessionManager|"
+msgid "Restore Backup"
+msgstr "Відновити з резервної копії"
+
+#: lib/session/sessionmanager.cpp:180
+msgctxt "SessionManager|"
+msgid "Are you sure you want to replace current session?"
+msgstr "Ви справді хочете замінити поточну сеанс?"
+
+#: lib/session/sessionmanager.cpp:199
+msgctxt "SessionManager|"
+msgid "Delete Session"
+msgstr "Вилучити сеанс"
+
+#: lib/session/sessionmanager.cpp:199
+#, qt-format
+msgctxt "SessionManager|"
+msgid "Are you sure you want to delete session '%1'?"
+msgstr "Ви справді хочете вилучити сеанс '%1'?"
+
+#: lib/session/sessionmanager.cpp:209
+msgctxt "SessionManager|"
+msgid "New Session"
+msgstr "Новий сеанс"
+
+#: lib/session/sessionmanager.cpp:210
+msgctxt "SessionManager|"
+msgid "Please enter a name to create new session:"
+msgstr "Будь ласка, вкажіть назву нового сеансу:"
+
+#: lib/session/sessionmanager.cpp:211
+#, qt-format
+msgctxt "SessionManager|"
+msgid "New Session (%1)"
+msgstr "Новий сеанс (%1)"
+
+#: lib/session/sessionmanager.cpp:243
+msgctxt "SessionManager|"
+msgid "Backup 1"
+msgstr "Резервна копія 1"
+
+#: lib/session/sessionmanager.cpp:250
+msgctxt "SessionManager|"
+msgid "Backup 2"
+msgstr "Резервна копія 2"
+
+#: lib/session/sessionmanager.cpp:290
+msgctxt "SessionManager|"
+msgid "Default Session"
+msgstr "Типовий сеанс"
+
+#: lib/session/sessionmanager.cpp:393
+msgctxt "SessionManager|"
+msgid "Please select the startup session:"
+msgstr "Будь ласка, виберіть початковий сеанс:"
+
+#: lib/session/sessionmanager.cpp:412
+#, qt-format
+msgctxt "SessionManager|"
+msgid "%1 (last session)"
+msgstr "%1 (остання сеанс)"
+
+#: lib/session/sessionmanagerdialog.cpp:140
+msgctxt "SessionManagerDialog|"
+msgid "Restore"
+msgstr "Відновити"
+
+#: lib/session/sessionmanagerdialog.cpp:140
+msgctxt "SessionManagerDialog|"
+msgid "Switch To"
+msgstr "Перемкнутися"
+
+#: lib/session/sessionmanagerdialog.ui:14
+msgctxt "SessionManagerDialog|"
+msgid "Session Manager"
+msgstr "Менеджер сеансів"
+
+#: lib/session/sessionmanagerdialog.ui:24
+msgctxt "SessionManagerDialog|"
+msgid "Session"
+msgstr "Сеанс"
+
+#: lib/session/sessionmanagerdialog.ui:29
+msgctxt "SessionManagerDialog|"
+msgid "Last Modified"
+msgstr "Востаннє змінено"
+
+#: lib/session/sessionmanagerdialog.ui:39
+msgctxt "SessionManagerDialog|"
+msgid "New"
+msgstr "Нова"
+
+#: lib/session/sessionmanagerdialog.ui:46
+msgctxt "SessionManagerDialog|"
+msgid "Rename"
+msgstr "Перейменувати"
+
+#: lib/session/sessionmanagerdialog.ui:53
+msgctxt "SessionManagerDialog|"
+msgid "Clone"
+msgstr "Дублювати"
+
+#: lib/session/sessionmanagerdialog.ui:60
+msgctxt "SessionManagerDialog|"
+msgid "Delete"
+msgstr "Вилучити"
+
+#: lib/session/sessionmanagerdialog.ui:67
+msgctxt "SessionManagerDialog|"
+msgid "Switch to"
+msgstr "Перемкнутися"
+
+#: lib/sidebar/bookmarkssidebar.cpp:103
+msgctxt "BookmarksSidebar|"
+msgid "Open in new tab"
+msgstr "Відкрити в новій вкладці"
+
+#: lib/sidebar/bookmarkssidebar.cpp:104
+msgctxt "BookmarksSidebar|"
+msgid "Open in new window"
+msgstr "Відкрити в новому вікні"
+
+#: lib/sidebar/bookmarkssidebar.cpp:105
+msgctxt "BookmarksSidebar|"
+msgid "Open in new private window"
+msgstr "Відкрити в новому анонімному вікні"
+
+#: lib/sidebar/bookmarkssidebar.cpp:108
+msgctxt "BookmarksSidebar|"
+msgid "Delete"
+msgstr "Вилучити"
+
+#: lib/sidebar/bookmarkssidebar.ui:41
+msgctxt "BookmarksSideBar|"
+msgid "Search..."
+msgstr "Пошук…"
+
+#: lib/sidebar/historysidebar.cpp:85
+msgctxt "HistorySideBar|"
+msgid "Open in new tab"
+msgstr "Відкрити в новій вкладці"
+
+#: lib/sidebar/historysidebar.cpp:86
+msgctxt "HistorySideBar|"
+msgid "Open in new window"
+msgstr "Відкрити в новому вікні"
+
+#: lib/sidebar/historysidebar.cpp:87
+msgctxt "HistorySideBar|"
+msgid "Open in new private window"
+msgstr "Відкрити в новому анонімному вікні"
+
+#: lib/sidebar/historysidebar.cpp:90
+msgctxt "HistorySideBar|"
+msgid "Delete"
+msgstr "Вилучити"
+
+#: lib/sidebar/historysidebar.ui:32
+msgctxt "HistorySideBar|"
+msgid "Search..."
+msgstr "Пошук…"
+
+#: lib/sidebar/sidebar.cpp:65 lib/sidebar/sidebar.cpp:107
+msgctxt "SideBar|"
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: lib/sidebar/sidebar.cpp:72 lib/sidebar/sidebar.cpp:114
+msgctxt "SideBar|"
+msgid "History"
+msgstr "Історія"
+
+#: lib/tabwidget/tabbar.cpp:111
+msgctxt "BrowserWindow|"
+msgid "Close Tab"
+msgstr "Закрити вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:63
+msgctxt "TabBar|"
+msgid "Don't ask again"
+msgstr "Не питати повторно"
+
+#: lib/tabwidget/tabcontextmenu.cpp:80 lib/tabwidget/tabcontextmenu.cpp:91
+#: lib/tabwidget/tabcontextmenu.cpp:102
+msgctxt "TabContextMenu|"
+msgid "Close Tabs"
+msgstr "Закрити вкладки"
+
+#: lib/tabwidget/tabcontextmenu.cpp:80
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close other tabs?"
+msgstr "Справді бажаєте закрити інші вкладки?"
+
+#: lib/tabwidget/tabcontextmenu.cpp:88
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the right?"
+msgstr "Справді бажаєте закрити всі вкладки праворуч?"
+
+#: lib/tabwidget/tabcontextmenu.cpp:89
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the bottom?"
+msgstr "Справді бажаєте закрити всі вкладки нижче?"
+
+#: lib/tabwidget/tabcontextmenu.cpp:99
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the left?"
+msgstr "Справді бажаєте закрити всі вкладки ліворуч?"
+
+#: lib/tabwidget/tabcontextmenu.cpp:100
+msgctxt "TabContextMenu|"
+msgid "Do you really want to close all tabs to the top?"
+msgstr "Справді бажаєте закрити всі вкладки вище?"
+
+#: lib/tabwidget/tabcontextmenu.cpp:117
+msgctxt "TabContextMenu|"
+msgid "&Stop Tab"
+msgstr "&Зупинити вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:120
+msgctxt "TabContextMenu|"
+msgid "&Reload Tab"
+msgstr "&Перезавантажити вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:123
+msgctxt "TabContextMenu|"
+msgid "&Duplicate Tab"
+msgstr "&Дублювати вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:126
+msgctxt "TabContextMenu|"
+msgid "D&etach Tab"
+msgstr "В&ідокремити вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:129
+msgctxt "TabContextMenu|"
+msgid "Un&pin Tab"
+msgstr "&Відкріпити вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:129
+msgctxt "TabContextMenu|"
+msgid "&Pin Tab"
+msgstr "За&кріпити вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:130
+msgctxt "TabContextMenu|"
+msgid "Un&mute Tab"
+msgstr "&Увімкнути звук вкладки"
+
+#: lib/tabwidget/tabcontextmenu.cpp:130
+msgctxt "TabContextMenu|"
+msgid "&Mute Tab"
+msgstr "При&тишити вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:133
+msgctxt "TabContextMenu|"
+msgid "Load Tab"
+msgstr "Завантажити вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:135
+msgctxt "TabContextMenu|"
+msgid "Unload Tab"
+msgstr "Вивантажити вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:139
+msgctxt "TabContextMenu|"
+msgid "Re&load All Tabs"
+msgstr "Переза&вантажити всі вкладки"
+
+#: lib/tabwidget/tabcontextmenu.cpp:140 lib/tabwidget/tabcontextmenu.cpp:156
+msgctxt "TabContextMenu|"
+msgid "Bookmark &All Tabs"
+msgstr "Додати до закладок &всі вкладки"
+
+#: lib/tabwidget/tabcontextmenu.cpp:144
+msgctxt "TabContextMenu|"
+msgid "Close Ot&her Tabs"
+msgstr "Закрити &інші вкладки"
+
+#: lib/tabwidget/tabcontextmenu.cpp:145
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Right"
+msgstr "Закрити вкладки праворуч"
+
+#: lib/tabwidget/tabcontextmenu.cpp:145
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Bottom"
+msgstr "Закрити вкладки нижче"
+
+#: lib/tabwidget/tabcontextmenu.cpp:146
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Left"
+msgstr "Закрити вкладки ліворуч"
+
+#: lib/tabwidget/tabcontextmenu.cpp:146
+msgctxt "TabContextMenu|"
+msgid "Close Tabs To The Top"
+msgstr "Закрити вкладки вище"
+
+#: lib/tabwidget/tabcontextmenu.cpp:151
+msgctxt "TabContextMenu|"
+msgid "Cl&ose Tab"
+msgstr "&Закрити вкладку"
+
+#: lib/tabwidget/tabcontextmenu.cpp:153
+msgctxt "TabContextMenu|"
+msgid "&New tab"
+msgstr "&Нова вкладка"
+
+#: lib/tabwidget/tabcontextmenu.cpp:155
+msgctxt "TabContextMenu|"
+msgid "Reloa&d All Tabs"
+msgstr "Перезаванта&жити всі вкладки"
+
+#: lib/tabwidget/tabicon.cpp:168
+msgctxt "TabIcon|"
+msgid "Unmute Tab"
+msgstr "Увімкнути звук вкладки"
+
+#: lib/tabwidget/tabicon.cpp:168
+msgctxt "TabIcon|"
+msgid "Mute Tab"
+msgstr "Притишити вкладку"
+
+#: lib/tabwidget/tabwidget.cpp:51
+msgctxt "TabWidget|"
+msgid "New Tab"
+msgstr "Нова вкладка"
+
+#: lib/tabwidget/tabwidget.cpp:126
+msgctxt "TabWidget|"
+msgid "Closed tabs"
+msgstr "Закриті вкладки"
+
+#: lib/tabwidget/tabwidget.cpp:137
+msgctxt "TabWidget|"
+msgid "List of tabs"
+msgstr "Перелік вкладок"
+
+#: lib/tabwidget/tabwidget.cpp:294
+msgctxt "TabWidget|"
+msgid "Empty"
+msgstr "Порожня"
+
+#: lib/tabwidget/tabwidget.cpp:298
+msgctxt "TabWidget|"
+msgid "Restore All Closed Tabs"
+msgstr "Відновити всі закриті вкладки"
+
+#: lib/tabwidget/tabwidget.cpp:299
+msgctxt "TabWidget|"
+msgid "Clear list"
+msgstr "Очистити перелік"
+
+#: lib/tabwidget/tabwidget.h:106
+msgctxt "TabWidget|"
+msgid "New tab"
+msgstr "Нова вкладка"
+
+#: lib/tools/aesinterface.cpp:146
+msgctxt "AesInterface|"
+msgid "Warning!"
+msgstr "Попередження!"
+
+#: lib/tools/aesinterface.cpp:146
+msgctxt "AesInterface|"
+msgid ""
+"Data has been encrypted with a newer version of Falkon.\n"
+"Please install latest version of Falkon."
+msgstr ""
+"Дані зашифровані за допомогою новішої версії Falkon.\n"
+"Будь ласка, встановіть найновішу версію Falkon."
+
+#: lib/tools/certificateinfowidget.cpp:300
+msgctxt "QObject|"
+msgid "<not set in certificate>"
+msgstr "<не встановлено в сертифікаті>"
+
+#: lib/tools/certificateinfowidget.ui:17
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Issued To</b>"
+msgstr "<b>Видано для</b>"
+
+#: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
+msgctxt "CertificateInfoWidget|"
+msgid "Common Name (CN):"
+msgstr "Спільне ім’я (CN):"
+
+#: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
+msgctxt "CertificateInfoWidget|"
+msgid "Organization (O):"
+msgstr "Організація (О):"
+
+#: lib/tools/certificateinfowidget.ui:58 lib/tools/certificateinfowidget.ui:133
+msgctxt "CertificateInfoWidget|"
+msgid "Organizational Unit (OU):"
+msgstr "Підрозділ організації (OU):"
+
+#: lib/tools/certificateinfowidget.ui:75
+msgctxt "CertificateInfoWidget|"
+msgid "Serial Number:"
+msgstr "Серійний номер:"
+
+#: lib/tools/certificateinfowidget.ui:92
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Issued By</b>"
+msgstr "<b>Видано</b>"
+
+#: lib/tools/certificateinfowidget.ui:150
+msgctxt "CertificateInfoWidget|"
+msgid "<b>Validity</b>"
+msgstr "<b>Чинність</b>"
+
+#: lib/tools/certificateinfowidget.ui:157
+msgctxt "CertificateInfoWidget|"
+msgid "Issued On:"
+msgstr "Видано:"
+
+#: lib/tools/certificateinfowidget.ui:174
+msgctxt "CertificateInfoWidget|"
+msgid "Expires On:"
+msgstr "Спливає:"
+
+#: lib/tools/html5permissions/html5permissionsdialog.cpp:63
+msgctxt "HTML5PermissionsDialog|"
+msgid "Allow"
+msgstr "Дозволити"
+
+#: lib/tools/html5permissions/html5permissionsdialog.cpp:72
+msgctxt "HTML5PermissionsDialog|"
+msgid "Deny"
+msgstr "Заборонити"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:14
+msgctxt "HTML5PermissionsDialog|"
+msgid "HTML5 Permissions"
+msgstr "Дозволи HTML5"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:35
+msgctxt "HTML5PermissionsDialog|"
+msgid "Remove"
+msgstr "Вилучити"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:64
+msgctxt "HTML5PermissionsDialog|"
+msgid "Site"
+msgstr "Сайт"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:69
+msgctxt "HTML5PermissionsDialog|"
+msgid "Behaviour"
+msgstr "Поведінка"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:79
+msgctxt "HTML5PermissionsDialog|"
+msgid "Permission for:"
+msgstr "Дозвіл на:"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:87
+msgctxt "HTML5PermissionsDialog|"
+msgid "Notifications"
+msgstr "Сповіщення"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:92
+msgctxt "HTML5PermissionsDialog|"
+msgid "Geolocation"
+msgstr "Геопозиціювання"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:97
+msgctxt "HTML5PermissionsDialog|"
+msgid "Microphone"
+msgstr "Мікрофон"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:102
+msgctxt "HTML5PermissionsDialog|"
+msgid "Camera"
+msgstr "Камера"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:107
+msgctxt "HTML5PermissionsDialog|"
+msgid "Microphone and Camera"
+msgstr "Мікрофон і камера"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:112
+msgctxt "HTML5PermissionsDialog|"
+msgid "Hide Pointer"
+msgstr "Приховати вказівник"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:117
+msgctxt "HTML5PermissionsDialog|"
+msgid "Display Capture"
+msgstr "Захоплення екрана"
+
+#: lib/tools/html5permissions/html5permissionsdialog.ui:122
+msgctxt "HTML5PermissionsDialog|"
+msgid "Display and Audio Capture"
+msgstr "Захоплення екрана і звуку"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:41
+msgctxt "HTML5PermissionsNotification|"
+msgid "this site"
+msgstr "цей сайт"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:45
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to show desktop notifications?"
+msgstr "Дозволити %1 показувати сповіщення на робочому столі?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:49
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to locate your position?"
+msgstr "Дозволити %1 визначати ваше розташування?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:53
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your microphone?"
+msgstr "Дозволити %1 використовувати ваш мікрофон?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:57
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your camera?"
+msgstr "Дозволити %1 використовувати вашу камеру?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:61
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to use your microphone and camera?"
+msgstr "Дозволити %1 використовувати ваші мікрофон і камеру?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:65
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to hide your pointer?"
+msgstr "Дозволити %1 приховати вказівник миші?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:69
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to capture your screen?"
+msgstr "Дозволити %1 захоплювати зображення з екрана?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:73
+#, qt-format
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow %1 to capture your screen and audio?"
+msgstr "Дозволити %1 захоплювати зображення з екрана і звук?"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:43
+msgctxt "HTML5PermissionsNotification|"
+msgid "Remember"
+msgstr "Запам’ятати"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:50
+msgctxt "HTML5PermissionsNotification|"
+msgid "Allow"
+msgstr "Дозволити"
+
+#: lib/tools/html5permissions/html5permissionsnotification.ui:57
+msgctxt "HTML5PermissionsNotification|"
+msgid "Deny"
+msgstr "Заборонити"
+
+#: lib/tools/qztools.cpp:379
+msgctxt "QObject|"
+msgid "Unknown size"
+msgstr "Розмір невідомий"
+
+#: lib/tools/qztools.cpp:384
+msgctxt "QObject|"
+msgid "KB"
+msgstr "КБ"
+
+#: lib/tools/qztools.cpp:389
+msgctxt "QObject|"
+msgid "MB"
+msgstr "МБ"
+
+#: lib/tools/qztools.cpp:393
+msgctxt "QObject|"
+msgid "GB"
+msgstr "ГБ"
+
+#: lib/tools/qztools.cpp:852
+msgctxt "QObject|"
+msgid "Executable: "
+msgstr "Виконуваний файл: "
+
+#: lib/tools/qztools.cpp:853
+msgctxt "QObject|"
+msgid "Arguments: "
+msgstr "Параметри запуску: "
+
+#: lib/tools/qztools.cpp:855
+msgctxt "QObject|"
+msgid "Cannot start external program"
+msgstr "Неможливо запустити зовнішню програму"
+
+#: lib/tools/qztools.cpp:856
+#, qt-format
+msgctxt "QObject|"
+msgid "Cannot start external program! %1"
+msgstr "Неможливо запустити зовнішню програму! %1"
+
+#: lib/webengine/jsalert.ui:125
+msgctxt "jsAlert|"
+msgid "Prevent this page from creating additional dialogs"
+msgstr "Перешкоджати створенню додаткових діалогів на цій сторінці"
+
+#: lib/webengine/webpage.cpp:330
+#, qt-format
+msgctxt "WebPage|"
+msgid ""
+"Falkon cannot handle <b>%1:</b> links. The requested link is <ul><li>%2</"
+"li></ul>Do you want Falkon to try open this link in system application?"
+msgstr ""
+"Falkon не може обробляти посилання <b>%1:</b>. Потрібне вам посилання — "
+"<ul><li>%2</li></ul>. Чи хочете ви, аби Falkon спробував відкрити це "
+"посилання за допомогою системної програми?"
+
+#: lib/webengine/webpage.cpp:335
+msgctxt "WebPage|"
+msgid "Remember my choice for this protocol"
+msgstr "Запам'ятати мій вибір для цього протоколу"
+
+#: lib/webengine/webpage.cpp:336
+msgctxt "WebPage|"
+msgid "External Protocol Request"
+msgstr "Запит зовнішнього протоколу"
+
+#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+msgctxt "WebPage|"
+msgid "Failed loading page"
+msgstr "Не вдалося завантажити сторінку"
+
+#: lib/webengine/webpage.cpp:418
+msgctxt "WebPage|"
+msgid "Something went wrong while loading this page."
+msgstr "Під час завантаження цієї сторінки щось пішло не так."
+
+#: lib/webengine/webpage.cpp:419
+msgctxt "WebPage|"
+msgid ""
+"Try reloading the page or closing some tabs to make more memory available."
+msgstr ""
+"Спробуйте перезавантажити сторінку або закрити деякі вкладки, щоб звільнити "
+"пам'ять."
+
+#: lib/webengine/webpage.cpp:420
+msgctxt "WebPage|"
+msgid "Reload page"
+msgstr "Перезавантажити сторінку"
+
+#: lib/webengine/webpage.cpp:482
+msgctxt "WebPage|"
+msgid "Choose file..."
+msgstr "Оберіть файл…"
+
+#: lib/webengine/webpage.cpp:486
+msgctxt "WebPage|"
+msgid "Choose files..."
+msgstr "Оберіть файли…"
+
+#: lib/webengine/webpage.cpp:622
+msgctxt "WebPage|"
+msgid "JavaScript alert"
+msgstr "Тривога JavaScript"
+
+#: lib/webengine/webpage.cpp:631
+msgctxt "WebPage|"
+msgid "Prevent this page from creating additional dialogs"
+msgstr "Перешкоджати створенню додаткових діалогів на цій сторінці"
+
+#: lib/webengine/webview.cpp:126
+msgctxt "WebView|"
+msgid "Empty Page"
+msgstr "Порожня сторінка"
+
+#: lib/webengine/webview.cpp:391
+#, qt-format
+msgctxt "WebView|"
+msgid "Falkon %1 (%2)"
+msgstr "Falkon %1 (%2)"
+
+#: lib/webengine/webview.cpp:690
+msgctxt "WebView|"
+msgid "No suggestions"
+msgstr "Немає пропозицій"
+
+#: lib/webengine/webview.cpp:741
+msgctxt "WebView|"
+msgid "&Back"
+msgstr "&Назад"
+
+#: lib/webengine/webview.cpp:745
+msgctxt "WebView|"
+msgid "&Forward"
+msgstr "&Вперед"
+
+#: lib/webengine/webview.cpp:752
+msgctxt "WebView|"
+msgid "&Add New Page"
+msgstr "&Додати нову сторінку"
+
+#: lib/webengine/webview.cpp:753
+msgctxt "WebView|"
+msgid "&Configure Speed Dial"
+msgstr "&Налаштування швидкого набору"
+
+#: lib/webengine/webview.cpp:755
+msgctxt "WebView|"
+msgid "Reload All Dials"
+msgstr " Перезавантажити весь набір?"
+
+#: lib/webengine/webview.cpp:774
+msgctxt "WebView|"
+msgid "Book&mark page"
+msgstr "Додати &закладку на сторінку"
+
+#: lib/webengine/webview.cpp:775
+msgctxt "WebView|"
+msgid "&Save page as..."
+msgstr "&Зберегти сторінку як…"
+
+#: lib/webengine/webview.cpp:776
+msgctxt "WebView|"
+msgid "&Copy page link"
+msgstr "&Копіювати посилання на сторінку"
+
+#: lib/webengine/webview.cpp:777
+msgctxt "WebView|"
+msgid "Send page link..."
+msgstr "Відправити посилання на сторінку…"
+
+#: lib/webengine/webview.cpp:779
+msgctxt "WebView|"
+msgid "Select &all"
+msgstr "Виділити &все"
+
+#: lib/webengine/webview.cpp:785
+msgctxt "WebView|"
+msgid "Show so&urce code"
+msgstr "Показати &вихідний код"
+
+#: lib/webengine/webview.cpp:789
+msgctxt "WebView|"
+msgid "Show info ab&out site"
+msgstr "Показати інформацію &про сайт"
+
+#: lib/webengine/webview.cpp:795
+msgctxt "WebView|"
+msgid "Open link in new &tab"
+msgstr "Відкрити посилання в новій &вкладці"
+
+#: lib/webengine/webview.cpp:800
+msgctxt "WebView|"
+msgid "Open link in new &window"
+msgstr "Відкрити посилання в новому &вікні"
+
+#: lib/webengine/webview.cpp:801
+msgctxt "WebView|"
+msgid "Open link in &private window"
+msgstr "Відкрити посилання в &анонімному вікні"
+
+#: lib/webengine/webview.cpp:806
+msgctxt "WebView|"
+msgid "B&ookmark link"
+msgstr "Додати &закладку на посилання"
+
+#: lib/webengine/webview.cpp:808
+msgctxt "WebView|"
+msgid "&Save link as..."
+msgstr "&Зберегти посилання як…"
+
+#: lib/webengine/webview.cpp:809
+msgctxt "WebView|"
+msgid "Send link..."
+msgstr "Відправити посилання…"
+
+#: lib/webengine/webview.cpp:810
+msgctxt "WebView|"
+msgid "&Copy link address"
+msgstr "&Копіювати адресу посилання"
+
+#: lib/webengine/webview.cpp:823
+msgctxt "WebView|"
+msgid "Show i&mage"
+msgstr "Показати &зображення"
+
+#: lib/webengine/webview.cpp:829
+msgctxt "WebView|"
+msgid "Copy image"
+msgstr "Копіювати зображення"
+
+#: lib/webengine/webview.cpp:830
+msgctxt "WebView|"
+msgid "Copy image ad&dress"
+msgstr "Копіювати &адресу зображення"
+
+#: lib/webengine/webview.cpp:832
+msgctxt "WebView|"
+msgid "&Save image as..."
+msgstr "&Зберегти зображення як…"
+
+#: lib/webengine/webview.cpp:833
+msgctxt "WebView|"
+msgid "Send image..."
+msgstr "Відправити зображення…"
+
+#: lib/webengine/webview.cpp:852
+msgctxt "WebView|"
+msgid "Send text..."
+msgstr "Відправити текст…"
+
+#: lib/webengine/webview.cpp:864
+msgctxt "WebView|"
+msgid "Go to &web address"
+msgstr "Перейти до &вебадреси"
+
+#: lib/webengine/webview.cpp:878
+#, qt-format
+msgctxt "WebView|"
+msgid "Search \"%1 ..\" with %2"
+msgstr "Шукати \"%1 ..\" в %2"
+
+#: lib/webengine/webview.cpp:884
+msgctxt "WebView|"
+msgid "Search with..."
+msgstr "Шукати з…"
+
+#: lib/webengine/webview.cpp:906
+msgctxt "WebView|"
+msgid "&Play"
+msgstr "&Грати"
+
+#: lib/webengine/webview.cpp:906
+msgctxt "WebView|"
+msgid "&Pause"
+msgstr "&Пауза"
+
+#: lib/webengine/webview.cpp:907
+msgctxt "WebView|"
+msgid "Un&mute"
+msgstr "&Увімкнути звук"
+
+#: lib/webengine/webview.cpp:907
+msgctxt "WebView|"
+msgid "&Mute"
+msgstr "&Вимкнути звук"
+
+#: lib/webengine/webview.cpp:909
+msgctxt "WebView|"
+msgid "&Copy Media Address"
+msgstr "&Копіювати адресу медіа"
+
+#: lib/webengine/webview.cpp:910
+msgctxt "WebView|"
+msgid "&Send Media Address"
+msgstr "&Відіслати адресу медіа"
+
+#: lib/webengine/webview.cpp:911
+msgctxt "WebView|"
+msgid "Save Media To &Disk"
+msgstr "Зберегти медіаконтент на &диск"
+
+#: lib/webengine/webview.cpp:930
+msgctxt "WebView|"
+msgid "Create Search Engine"
+msgstr "Створити пошуковий двигун"
+
+#: lib/webengine/webview.cpp:971
+msgctxt "WebView|"
+msgid "&Undo"
+msgstr "Від&мінити дію"
+
+#: lib/webengine/webview.cpp:977
+msgctxt "WebView|"
+msgid "&Redo"
+msgstr "Пов&торити дію"
+
+#: lib/webengine/webview.cpp:983
+msgctxt "WebView|"
+msgid "&Cut"
+msgstr "&Вирізати"
+
+#: lib/webengine/webview.cpp:989
+msgctxt "WebView|"
+msgid "&Copy"
+msgstr "&Копіювати"
+
+#: lib/webengine/webview.cpp:995
+msgctxt "WebView|"
+msgid "&Paste"
+msgstr "Вс&тавити"
+
+#: lib/webengine/webview.cpp:1001
+msgctxt "WebView|"
+msgid "Select All"
+msgstr "Вибрати все"
+
+#: lib/webengine/webview.cpp:1007
+msgctxt "WebView|"
+msgid "&Reload"
+msgstr "&Перезавантажити"
+
+#: lib/webengine/webview.cpp:1011
+msgctxt "WebView|"
+msgid "S&top"
+msgstr "&Зупинити"
+
+#: lib/webtab/searchtoolbar.cpp:150
+#, qt-format
+msgctxt "SearchToolBar|"
+msgid "%1 of %2"
+msgstr "%1 з %2"
+
+#: lib/webtab/searchtoolbar.ui:48
+msgctxt "SearchToolbar|"
+msgid "Find..."
+msgstr "Знайти…"
+
+#: lib/webtab/searchtoolbar.ui:58
+msgctxt "SearchToolbar|"
+msgid "Find the next match for the current search phrase"
+msgstr "Знайти наступний відповідник поточної фрази для пошуку"
+
+#: lib/webtab/searchtoolbar.ui:61
+msgctxt "SearchToolbar|"
+msgid "&Next"
+msgstr "&Далі"
+
+#: lib/webtab/searchtoolbar.ui:74
+msgctxt "SearchToolbar|"
+msgid "Find the previous match for the current search phrase"
+msgstr "Знайти попередній відповідник поточної фрази для пошуку"
+
+#: lib/webtab/searchtoolbar.ui:77
+msgctxt "SearchToolbar|"
+msgid "&Previous"
+msgstr "&Назад"
+
+#: lib/webtab/searchtoolbar.ui:90
+msgctxt "SearchToolbar|"
+msgid "&Match Case"
+msgstr "Враховувати &регістр"
+
+#: lib/webtab/tabbedwebview.cpp:194
+msgctxt "TabbedWebView|"
+msgid "Inspect Element"
+msgstr "Перевірити елемент"
+
+#: lib/webtab/webtab.cpp:624
+#, qt-format
+msgctxt "WebTab|"
+msgid "%1 - Falkon"
+msgstr "%1 — Falkon"
+
+#~ msgctxt "Preferences|"
+#~ msgid "Allow Pepper Plugins (Flash plugin)"
+#~ msgstr "Дозволити додатки Pepper (Flash-додаток)"
+
+#~ msgctxt "SearchToolBar|"
+#~ msgid "No results found."
+#~ msgstr "Нічого не знайдено."
+
+#~ msgctxt "SearchToolbar|"
+#~ msgid "Search: "
+#~ msgstr "Пошук: "
+
+#~ msgctxt "SearchToolbar|"
+#~ msgid "Search..."
+#~ msgstr "Пошук..."
+
+#~ msgctxt "PageScreen|"
+#~ msgid "Page Screen"
+#~ msgstr "Екран сторінок"
+
+#~ msgctxt "PageScreen|"
+#~ msgid "Format:"
+#~ msgstr "Формат:"
+
+#~ msgctxt "PageScreen|"
+#~ msgid "Location:"
+#~ msgstr "Місце:"
+
+#~ msgctxt "PageScreen|"
+#~ msgid "Browse..."
+#~ msgstr "Вибрати…"
+
+#~ msgctxt "RunActionSettings|"
+#~ msgid "Dialog"
+#~ msgstr "Вікно"
+
+#~ msgctxt "JsOptions|"
+#~ msgid "Change window size"
+#~ msgstr "Змінювати розмір вікна"
+
+#~ msgctxt "WebView|"
+#~ msgid "Validate page"
+#~ msgstr "Перевірити достовірність сторінки"
+
+#~ msgctxt "WebView|"
+#~ msgid "Translate page"
+#~ msgstr "Перекласти сторінку"
+
+#~ msgctxt "WebView|"
+#~ msgid "Google Translate"
+#~ msgstr "Google-переклад"
+
+#~ msgctxt "WebView|"
+#~ msgid "Dictionary"
+#~ msgstr "Словник"
+
+#~ msgctxt "FalkonSchemeReply|"
+#~ msgid "Translations"
+#~ msgstr "Переклади"
+
+#~ msgctxt "Preferences|"
+#~ msgid "In order to change language, you must restart browser."
+#~ msgstr "Щоб мова змінилась, Ви маєте перезапустити переглядач."
+
+#~ msgctxt "Preferences|"
+#~ msgid "<b>Language</b>"
+#~ msgstr "<b>Мова</b>"
+
+#~ msgctxt "Preferences|"
+#~ msgid "Available translations: "
+#~ msgstr "Наявні переклади:"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "About QupZilla"
+#~ msgstr "Про QupZilla"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "Authors"
+#~ msgstr "Автори"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "Authors and Contributors"
+#~ msgstr "Автори та учасники"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "< About QupZilla"
+#~ msgstr "< Про QupZilla"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "<p><b>Main developer:</b><br/>%1 &lt;%2&gt;</p>"
+#~ msgstr "<p><b>Головний розробник:</b><br/>%1 &lt;%2&gt;</p>"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "<p><b>Contributors:</b><br/>%1</p>"
+#~ msgstr "<p><b>Учасники:</b><br/>%1</p>"
+
+#~ msgctxt "AboutDialog|"
+#~ msgid "<p><b>Translators:</b><br/>%1</p>"
+#~ msgstr "<p><b>Перекладачі:</b><br/>%1</p>"
+
+#~ msgctxt "BrowserWindow|"
+#~ msgid "QupZilla"
+#~ msgstr "QupZilla"
+
+#~ msgctxt "BrowserWindow|"
+#~ msgid "%1 - QupZilla"
+#~ msgstr "%1 - QupZilla"
+
+#~ msgctxt "MainMenu|"
+#~ msgid "&About QupZilla"
+#~ msgstr "&Про QupZilla"
+
+#~ msgctxt "PopupWindow|"
+#~ msgid "%1 - QupZilla"
+#~ msgstr "%1 - QupZilla"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Report Issue"
+#~ msgstr "Повідомлення про проблему"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid ""
+#~ "If you are experiencing problems with QupZilla, please try to disable all "
+#~ "extensions first. <br/>If this does not fix it, then please fill out this "
+#~ "form: "
+#~ msgstr ""
+#~ "Якщо у Вас виникли проблеми з QupZilla, будь ласка, спробуйте, спочатку, "
+#~ "відключити всі розширення. <br/>Якщо це не змінить ситуацію, тоді, будь "
+#~ "ласка, заповніть цю форму: "
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Your E-mail"
+#~ msgstr "Ваш E-mail"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Issue type"
+#~ msgstr "Тип проблеми"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Issue description"
+#~ msgstr "Опис проблеми"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Send"
+#~ msgstr "Відіслати"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid ""
+#~ "E-mail is optional<br/><b>Note: </b>Please read how to make a bug report "
+#~ "<a href=%1>here</a> first."
+#~ msgstr ""
+#~ "Вказувати E-mail не обов’язково <br/><b>Примітка: </b>Будь ласка, "
+#~ "спочатку прочитайте про те, як створювати звіт про помилку <a href="
+#~ "%1>тут</a>."
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Please fill out all required fields!"
+#~ msgstr "Будь ласка, заповніть всі обов'язкові поля!"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "About QupZilla"
+#~ msgstr "Про QupZill’у"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Contributors"
+#~ msgstr "Учасники"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Translators"
+#~ msgstr "Перекладачі"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Edit"
+#~ msgstr "Редагувати"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Remove"
+#~ msgstr "Видалити"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Title"
+#~ msgstr "Назва"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Configuration Information"
+#~ msgstr "Інформація про конфігурацію"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Preferences"
+#~ msgstr "Налаштування"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Extensions"
+#~ msgstr "Розширення"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Description"
+#~ msgstr "Опис"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Settings"
+#~ msgstr "Налаштування"
+
+#~ msgctxt "QupZillaSchemeReply|"
+#~ msgid "Themes"
+#~ msgstr "Теми"
+
+#~ msgctxt "SpeedDial|"
+#~ msgid "Image files"
+#~ msgstr "Файли зображень"
+
+#~ msgctxt "SpeedDial|"
+#~ msgid "Click to select image..."
+#~ msgstr "Клацніть, щоб обрати зображення…"
+
+#~ msgctxt "SpeedDial|"
+#~ msgid "Unable to load"
+#~ msgstr "Не вдається завантажити"
+
+#~ msgctxt "WebTab|"
+#~ msgid "Loading..."
+#~ msgstr "Завантажується..."
+
+#~ msgctxt "WebTab|"
+#~ msgid "%1 - QupZilla"
+#~ msgstr "%1 - QupZilla"
+
+#~ msgctxt "WebView|"
+#~ msgid "QupZilla %1 (%2)"
+#~ msgstr "QupZilla %1 (%2)"
