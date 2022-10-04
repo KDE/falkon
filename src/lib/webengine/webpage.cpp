@@ -454,11 +454,25 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
             const bool isWeb = url.scheme() == QL1S("http") || url.scheme() == QL1S("https") || url.scheme() == QL1S("file");
 
             if (isWeb) {
-                auto webAttributes = mApp->siteSettingsManager()->getWebAttributes(url);
-                if (!webAttributes.empty()) {
-                    QHash<QWebEngineSettings::WebAttribute, bool>::iterator it;
-                    for (it = webAttributes.begin(); it != webAttributes.end(); ++it) {
-                        settings()->setAttribute(it.key(), it.value());
+                if (!mApp->isPrivate()) {
+                    auto webAttributes = mApp->siteSettingsManager()->getWebAttributes(url);
+                    if (!webAttributes.empty()) {
+                        QHash<QWebEngineSettings::WebAttribute, bool>::iterator it;
+                        for (it = webAttributes.begin(); it != webAttributes.end(); ++it) {
+                            settings()->setAttribute(it.key(), it.value());
+                        }
+                    }
+                    else {
+                        auto webAttributes = mApp->siteSettingsManager()->getSupportedAttribute();
+                        for (auto &attribute : qAsConst(webAttributes)) {
+                            settings()->setAttribute(attribute, mApp->webSettings()->testAttribute(attribute));
+                        }
+                    }
+                }
+                else {
+                    auto webAttributes = mApp->siteSettingsManager()->getSupportedAttribute();
+                    for (auto &attribute : qAsConst(webAttributes)) {
+                        settings()->setAttribute(attribute, mApp->webSettings()->testAttribute(attribute));
                     }
                 }
             }

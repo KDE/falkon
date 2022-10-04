@@ -240,7 +240,7 @@ void SiteSettingsManager::setImages(const QUrl& url, const int value)
 
 void SiteSettingsManager::setOption(const QString& column, const QUrl& url, const int value)
 {
-    if (column.isEmpty()) {
+    if (column.isEmpty() || mApp->isPrivate()) {
         return;
     }
 
@@ -277,6 +277,9 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString
 {
     if (column.isEmpty()) {
         return Deny;
+    }
+    if (mApp->isPrivate()) {
+        return Default;
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
@@ -640,6 +643,10 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
 
 void SiteSettingsManager::setSiteSettings(SiteSettingsManager::SiteSettings& siteSettings)
 {
+    if (mApp->isPrivate()) {
+        return;
+    }
+
     auto job = new SqlQueryJob(everythingUpdateSql.arg(sqlTable()), this);
 
     for (int i = 0; i < supportedAttribute.size(); ++i) {
