@@ -30,6 +30,13 @@ SiteInfoPermissionItem::SiteInfoPermissionItem(const SiteSettingsManager::Permis
 {
     m_ui->setupUi(this);
     setPermission(a_permission);
+
+    if (mApp->isPrivate()) {
+        m_ui->radioAllow->setEnabled(false);
+        m_ui->radioAsk->setEnabled(false);
+        m_ui->radioDeny->setEnabled(false);
+        m_ui->radioDefault->setEnabled(false);
+    }
 }
 
 SiteInfoPermissionItem::~SiteInfoPermissionItem()
