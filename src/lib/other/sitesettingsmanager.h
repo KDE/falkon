@@ -119,9 +119,8 @@ public:
     QList<QWebEngineSettings::WebAttribute> getSupportedAttribute() const;
     QList<QWebEnginePage::Feature> getSupportedFeatures() const;
 
-    SiteSettings getSiteSettings(QUrl &url, bool privateMode);
+    SiteSettings getSiteSettings(QUrl &url);
     void setSiteSettings(SiteSettings &siteSettings);
-    QString sqlTable(bool privateMode);
     QString sqlTable();
 
 private:

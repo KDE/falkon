@@ -342,7 +342,7 @@ SiteInfoPermissionItem* SiteInfo::addPermissionOption(SiteSettingsManager::Permi
 
 void SiteInfo::addSiteSettings()
 {
-    auto siteSettings = mApp->siteSettingsManager()->getSiteSettings(m_baseUrl, mApp->isPrivate());
+    auto siteSettings = mApp->siteSettingsManager()->getSiteSettings(m_baseUrl);
     const auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
     for (const auto &attribute : supportedAttribute) {
         SiteInfoPermissionItem *item = addPermissionOption(siteSettings.attributes[attribute]);
@@ -359,6 +359,10 @@ void SiteInfo::addSiteSettings()
 
 void SiteInfo::saveSiteSettings()
 {
+    if (mApp->isPrivate()) {
+        return;
+    }
+
     SiteSettings siteSettings;
     int index = 0;
     auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
@@ -378,7 +382,7 @@ void SiteInfo::saveSiteSettings()
 
     siteSettings.server = m_baseUrl.host();
 
-    if (!(siteSettings == mApp->siteSettingsManager()->getSiteSettings(m_baseUrl, mApp->isPrivate()))) {
+    if (!(siteSettings == mApp->siteSettingsManager()->getSiteSettings(m_baseUrl))) {
         mApp->siteSettingsManager()->setSiteSettings(siteSettings);
     }
 }

@@ -605,13 +605,19 @@ QList<QWebEnginePage::Feature> SiteSettingsManager::getSupportedFeatures() const
     return supportedFeatures;
 }
 
-SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url, bool privateMode)
+SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url)
 {
     SiteSettings siteSettings;
+    siteSettings.server = url.host();
+
+    if (mApp->isPrivate()) {
+        return siteSettings;
+    }
+
     int index = 0;
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare(everythingSql.arg(sqlTable(privateMode)));
+    query.prepare(everythingSql.arg(sqlTable()));
     query.addBindValue(url.host());
     query.exec();
 
@@ -628,7 +634,6 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
         siteSettings.AllowCookies = intToPermission(query.value(index++).toInt());
         siteSettings.ZoomLevel = query.value(index++).toInt();
     }
-    siteSettings.server = url.host();
 
     return siteSettings;
 }
@@ -667,17 +672,7 @@ void SiteSettingsManager::setSiteSettings(SiteSettingsManager::SiteSettings& sit
     job->start();
 }
 
-QString SiteSettingsManager::sqlTable(bool privateMode)
-{
-    if (privateMode) {
-        return QSL("site_settings_private");
-    }
-    else {
-        return QSL("site_settings");
-    }
-}
-
 QString SiteSettingsManager::sqlTable()
 {
-    return sqlTable(mApp->isPrivate());
+    return QSL("site_settings");
 }
