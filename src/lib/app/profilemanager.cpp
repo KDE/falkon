@@ -377,7 +377,7 @@ void ProfileManager::updateDatabase()
         }
 
         query.prepare(QStringLiteral(
-            "CREATE UNIQUE INDEX IF NOT EXISTS site_settings_domainuniqueindex ON site_settings (domain);"
+            "CREATE UNIQUE INDEX IF NOT EXISTS site_settings_server_uniqueindex ON site_settings (server);"
         ));
 
         if (!query.exec()) {
