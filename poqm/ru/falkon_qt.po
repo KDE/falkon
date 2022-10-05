@@ -4,12 +4,13 @@
 # Rustam Salakhutdinov <salahutd@gmail.com>, 2017.
 # Oleg Brezhnev <oleg-423@yandex.ru>, 2017.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2020.
+# Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2020-10-28 20:36+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2022-10-04 15:32+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +19,7 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 20.08.2\n"
+"X-Generator: Lokalize 22.04.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -1195,9 +1196,6 @@ msgid "Open in new private window"
 msgstr "Открыть в новом окне конфиденциального просмотра"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:185
-#, fuzzy
-#| msgctxt "BookmarksManager|"
-#| msgid "New Folder"
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
 msgstr "Новая папка"
@@ -1223,12 +1221,9 @@ msgid "Show Only Text"
 msgstr "Показывать только текст"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:185
-#, fuzzy
-#| msgctxt "LocationBar|"
-#| msgid "Enter address"
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
-msgstr "Введите адрес"
+msgstr "Укажите имя папки:"
 
 #: lib/bookmarks/bookmarkstools.cpp:76
 #, qt-format
@@ -3090,20 +3085,14 @@ msgid "Save Image to Disk"
 msgstr "Сохранить изображение на диск"
 
 #: lib/other/siteinfo.cpp:190
-#, fuzzy
-#| msgctxt "HistoryManager|"
-#| msgid "Copy title"
 msgctxt "SiteInfo|"
 msgid "Copy Values"
-msgstr "Копировать заголовок"
+msgstr "Копировать значения"
 
 #: lib/other/siteinfo.cpp:191
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Copy image ad&dress"
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
-msgstr "Ко&пировать ссылку на изображение"
+msgstr "Копировать метки и значения"
 
 #: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
@@ -3597,12 +3586,9 @@ msgid "Paste from clipboard"
 msgstr "Выполнять вставку из буфера обмена"
 
 #: lib/preferences/pluginslist.ui:17
-#, fuzzy
-#| msgctxt "LocationBar|"
-#| msgid "Enter address"
 msgctxt "PluginsList|"
 msgid "Enter name"
-msgstr "Введите адрес"
+msgstr "Введите название"
 
 #: lib/preferences/pluginslist.ui:51
 msgctxt "PluginsList|"
@@ -4210,7 +4196,7 @@ msgstr "Включить упреждающее преобразование д�
 #: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Enable screen capture"
-msgstr ""
+msgstr "Включить захват экрана"
 
 #: lib/preferences/preferences.ui:1112
 msgctxt "Preferences|"
@@ -4221,7 +4207,7 @@ msgstr "Количество строк для прокрутки с помощ�
 #: lib/preferences/preferences.ui:1132
 msgctxt "Preferences|"
 msgid "lines on page"
-msgstr ""
+msgstr " "
 
 #: lib/preferences/preferences.ui:1143
 msgctxt "Preferences|"
@@ -5342,12 +5328,12 @@ msgstr "Скрыть указатель"
 #: lib/tools/html5permissions/html5permissionsdialog.ui:117
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display Capture"
-msgstr ""
+msgstr "Захват изображения"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:122
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display and Audio Capture"
-msgstr ""
+msgstr "Захват изображения и звука"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:41
 msgctxt "HTML5PermissionsNotification|"
@@ -5391,20 +5377,16 @@ msgid "Allow %1 to hide your pointer?"
 msgstr "Разрешить %1 скрыть указатель?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:69
-#, fuzzy, qt-format
-#| msgctxt "HTML5PermissionsNotification|"
-#| msgid "Allow %1 to locate your position?"
+#, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen?"
-msgstr "Разрешить %1 определять местоположение пользователя?"
+msgstr "Разрешить %1 захват экрана?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:73
-#, fuzzy, qt-format
-#| msgctxt "HTML5PermissionsNotification|"
-#| msgid "Allow %1 to use your microphone and camera?"
+#, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen and audio?"
-msgstr "Разрешить %1 использовать микрофон и камеру?"
+msgstr "Разрешить %1 захват экрана и звука?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:43
 msgctxt "HTML5PermissionsNotification|"
@@ -5832,29 +5814,21 @@ msgstr "%1 — Falkon"
 #~ msgstr "Поиск..."
 
 #, fuzzy
-#~| msgctxt "MainMenu|"
-#~| msgid "&Page Source"
 #~ msgctxt "PageScreen|"
 #~ msgid "Page Screen"
 #~ msgstr "Исх&одный код страницы"
 
 #, fuzzy
-#~| msgctxt "BookmarksExportDialog|"
-#~| msgid "Format:"
 #~ msgctxt "PageScreen|"
 #~ msgid "Format:"
 #~ msgstr "Формат:"
 
 #, fuzzy
-#~| msgctxt "MainMenu|"
-#~| msgid "Open Location"
 #~ msgctxt "PageScreen|"
 #~ msgid "Location:"
 #~ msgstr "Открыть расположение"
 
 #, fuzzy
-#~| msgctxt "BookmarksExportDialog|"
-#~| msgid "Choose..."
 #~ msgctxt "PageScreen|"
 #~ msgid "Browse..."
 #~ msgstr "Выберите..."
@@ -5880,8 +5854,6 @@ msgstr "%1 — Falkon"
 #~ msgstr "Словарь"
 
 #, fuzzy
-#~| msgctxt "QupZillaSchemeReply|"
-#~| msgid "Translations"
 #~ msgctxt "FalkonSchemeReply|"
 #~ msgid "Translations"
 #~ msgstr "Переводы"
