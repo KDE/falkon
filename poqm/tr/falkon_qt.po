@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-05 00:16+0000\n"
-"PO-Revision-Date: 2022-04-15 14:34+0300\n"
+"PO-Revision-Date: 2022-10-20 12:13+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -361,7 +361,7 @@ msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
 msgstr ""
-"Falkon varsayılan web tarayıcınız değil. Varsayılan web tarayıcınız yapmak "
+"Falkon öntanımlı web tarayıcınız değil. Öntanımlı web tarayıcınız yapmak "
 "ister misiniz?"
 
 #: lib/app/mainapplication.cpp:1082
@@ -372,7 +372,7 @@ msgstr "Falkon başlarken bu denetimi her zaman gerçekleştir."
 #: lib/app/mainapplication.cpp:1084
 msgctxt "MainApplication|"
 msgid "Default Browser"
-msgstr "Varsayılan Web Tarayıcısı"
+msgstr "Öntanımlı Web Tarayıcısı"
 
 #: lib/app/mainapplication.cpp:1205
 msgctxt "MainApplication|"
@@ -733,7 +733,7 @@ msgid ""
 "This backend needs a master password to be set! Falkon just switches to its "
 "default backend"
 msgstr ""
-"Bu arka uç, ayarlanabilmesi için bir ana parola gerektiriyor! Falkon "
+"Bu arka ucun ayarlanabilmesi için bir ana parola gerektiriyor! Falkon "
 "şimdilik kendi öntanımlı arka ucuna geçiş yapacak."
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
@@ -2733,8 +2733,8 @@ msgid ""
 "You can't remove the default search engine.<br>Set a different engine as "
 "default before removing %1."
 msgstr ""
-"Varsayılan arama motorunu kaldıramazsınız. <br>Kaldırma işleminden önce "
-"farklı bir arama motorunu varsayılan yapın.%1."
+"Öntanımlı arama motorunu kaldıramazsınız. <br>Kaldırma işleminden önce "
+"farklı bir arama motorunu öntanımlı yapın.%1."
 
 #: lib/opensearch/searchenginesdialog.cpp:107
 msgctxt "SearchEnginesDialog|"
@@ -2764,7 +2764,7 @@ msgstr "Düzenle"
 #: lib/opensearch/searchenginesdialog.ui:56
 msgctxt "SearchEnginesDialog|"
 msgid "Set as default"
-msgstr "Varsayılan olarak ayarla"
+msgstr "Öntanımlı olarak ayarla"
 
 #: lib/opensearch/searchenginesdialog.ui:63
 msgctxt "SearchEnginesDialog|"
@@ -2789,7 +2789,7 @@ msgstr "Kısayol"
 #: lib/opensearch/searchenginesdialog.ui:104
 msgctxt "SearchEnginesDialog|"
 msgid "Defaults"
-msgstr "Varsayılanlar"
+msgstr "Öntanımlılar"
 
 #: lib/opensearch/searchenginesmanager.cpp:401
 msgctxt "SearchEnginesManager|"
@@ -3617,17 +3617,17 @@ msgstr "'%1' ögesini kaldırmak istediğinize emin misiniz?"
 #: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:602
 msgctxt "Preferences|"
 msgid "Default"
-msgstr "Varsayılan"
+msgstr "Öntanımlı"
 
 #: lib/preferences/preferences.cpp:155
 msgctxt "Preferences|"
 msgid "Set as default"
-msgstr "Varsayılan olarak ayarla"
+msgstr "Öntanımlı olarak ayarla"
 
 #: lib/preferences/preferences.cpp:545
 msgctxt "Preferences|"
 msgid "Choose executable location..."
-msgstr "Çalıştırılabilir dosya konumunu seçin..."
+msgstr "Yürütülebilir konumunu seçin..."
 
 #: lib/preferences/preferences.cpp:588
 msgctxt "Preferences|"
@@ -3877,7 +3877,7 @@ msgstr "Seçilene kadar sekmeleri yükleme"
 #: lib/preferences/preferences.ui:440
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
-msgstr "Başlangıçta Falkon'un varsayılan tarayıcı olup olmadığını denetle"
+msgstr "Başlangıçta Falkon'un öntanımlı tarayıcı olup olmadığını denetle"
 
 #: lib/preferences/preferences.ui:450
 msgctxt "Preferences|"
@@ -4065,7 +4065,7 @@ msgstr "Adres çubuğundan otomatik aramayı etkinleştir"
 #: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
-msgstr "Varsayılan arama sayfasında ara"
+msgstr "Öntanımlı arama sayfasında ara"
 
 #: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
@@ -4199,7 +4199,7 @@ msgstr "sayfada satır"
 #: lib/preferences/preferences.ui:1143
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
-msgstr "Sayfalarda varsayılan yakınlaştırma ayarı: "
+msgstr "Sayfalarda öntanımlı yakınlaştırma ayarı: "
 
 #: lib/preferences/preferences.ui:1182
 msgctxt "Preferences|"
@@ -4349,7 +4349,7 @@ msgstr "Yazıtipi Boyutu Düzeltildi"
 #: lib/preferences/preferences.ui:1641
 msgctxt "Preferences|"
 msgid "Default Font Size"
-msgstr "Varsayılan Yazıtipi Boyutu"
+msgstr "Öntanımlı Yazıtipi Boyutu"
 
 #: lib/preferences/preferences.ui:1668
 msgctxt "Preferences|"
@@ -4442,7 +4442,7 @@ msgstr "Harici indirme yöneticisi kullan"
 #: lib/preferences/preferences.ui:1863
 msgctxt "Preferences|"
 msgid "Executable:"
-msgstr "Çalıştırılabilir dosya:"
+msgstr "Yürütülebilir:"
 
 #: lib/preferences/preferences.ui:1870
 msgctxt "Preferences|"
@@ -5412,7 +5412,7 @@ msgstr "GB"
 #: lib/tools/qztools.cpp:852
 msgctxt "QObject|"
 msgid "Executable: "
-msgstr "Çalıştırılabilir:"
+msgstr "Yürütülebilir:"
 
 #: lib/tools/qztools.cpp:853
 msgctxt "QObject|"
