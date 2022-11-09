@@ -291,6 +291,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->intPDFViewer->setChecked(settings.value("intPDFViewer", false).toBool());
     ui->intPDFViewer->setEnabled(ui->allowPlugins->isChecked());
     ui->screenCaptureEnabled->setChecked(settings.value("screenCaptureEnabled", false).toBool());
+    ui->hardwareAccel->setChecked(settings.value("hardwareAccel", false).toBool());
 
     const auto levels = WebView::zoomLevels();
     for (int level : levels) {
@@ -967,7 +968,7 @@ void Preferences::saveSettings()
     settings.setValue("DNSPrefetch", ui->dnsPrefetch->isChecked());
     settings.setValue("intPDFViewer", ui->intPDFViewer->isChecked());
     settings.setValue("screenCaptureEnabled", ui->screenCaptureEnabled->isChecked());
-
+    settings.setValue("hardwareAccel", ui->hardwareAccel->isChecked());
 #ifdef Q_OS_WIN
     settings.setValue("CheckDefaultBrowser", ui->checkDefaultBrowser->isChecked());
 #endif

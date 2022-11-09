@@ -148,9 +148,9 @@ MainApplication::MainApplication(int &argc, char** argv)
     }
 #endif
 
-    QByteArray flags = qgetenv("QTWEBENGINE_CHROMIUM_FLAGS");
-    flags.append(" --enable-features=WebRTCPipeWireCapturer");
-    qputenv("QTWEBENGINE_CHROMIUM_FLAGS", flags);
+    QByteArray chromium_flags = qgetenv("QTWEBENGINE_CHROMIUM_FLAGS");
+    chromium_flags.append(" --enable-features=WebRTCPipeWireCapturer");
+    qputenv("QTWEBENGINE_CHROMIUM_FLAGS", chromium_flags);
 
     QUrl startUrl;
     QString startProfile;
@@ -287,6 +287,10 @@ MainApplication::MainApplication(int &argc, char** argv)
     profileManager.initCurrentProfile(startProfile);
 
     Settings::createSettings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"));
+    if (Settings::globalSettings()->value("Web-Browser-Settings/hardwareAccel", false).toBool()) {
+	    chromium_flags.append(" --enable-oop-rasterization --enable-gpu-rasterization --enable-native-gpu-memory-buffers --use-gl=desktop");
+	    qputenv("QTWEBENGINE_CHROMIUM_FLAGS", chromium_flags);
+    }
 
     NetworkManager::registerSchemes();
 

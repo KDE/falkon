@@ -1096,6 +1096,13 @@
                    </property>
                   </widget>
                  </item>
+                 <item>
+                  <widget class="QCheckBox" name="hardwareAccel">
+                   <property name="text">
+                    <string>Use hardware acceleration (requires restart)</string>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </item>
                <item row="2" column="0">
