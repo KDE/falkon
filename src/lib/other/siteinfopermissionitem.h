@@ -40,7 +40,6 @@ public:
     ~SiteInfoPermissionItem();
 
     bool hasOptionAsk() const;
-    bool hasOptionDefault() const;
 
     SiteSettingsManager::Permission permission() const;
     QString sqlColumn();
@@ -50,14 +49,12 @@ public:
     void setOption(const SiteSettingsManager::PageOptions &option);
 
     void setHasOptionAsk(bool hasAsk);
-    void setHasOptionDefault(bool hasDefault);
 
 private:
     void setPermission(const SiteSettingsManager::Permission permission);
     void setDefaultPermission(SiteSettingsManager::Permission permission);
 
     bool m_hasOptionAsk;
-    bool m_hasOptionDefault;
     QString m_sqlColumn;
 
 private:

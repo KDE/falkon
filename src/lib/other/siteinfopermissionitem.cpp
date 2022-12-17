@@ -26,7 +26,6 @@ SiteInfoPermissionItem::SiteInfoPermissionItem(const SiteSettingsManager::Permis
 : QWidget(parent)
 , m_ui(new Ui::SiteInfoPermissionItem())
 , m_hasOptionAsk(true)
-, m_hasOptionDefault(true)
 {
     m_ui->setupUi(this);
     setPermission(a_permission);
@@ -56,21 +55,6 @@ void SiteInfoPermissionItem::setHasOptionAsk(bool hasOptionAsk)
 
     m_hasOptionAsk = hasOptionAsk;
     m_ui->radioAsk->setVisible(hasOptionAsk);
-}
-
-bool SiteInfoPermissionItem::hasOptionDefault() const
-{
-    return m_hasOptionDefault;
-}
-
-void SiteInfoPermissionItem::setHasOptionDefault(bool hasOptionDefault)
-{
-    if (m_hasOptionDefault == hasOptionDefault) {
-        return;
-    }
-
-    m_hasOptionDefault = hasOptionDefault;
-    m_ui->radioDefault->setVisible(hasOptionDefault);
 }
 
 void SiteInfoPermissionItem::setPermission(const SiteSettingsManager::Permission permission)
