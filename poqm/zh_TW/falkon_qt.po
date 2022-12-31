@@ -3,12 +3,13 @@
 #
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Jeff Huang <s8321414@gmail.com>, 2018.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2020-02-28 01:50+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2022-12-30 18:09+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: zh_TW\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 19.12.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -1176,9 +1177,6 @@ msgid "Open in new private window"
 msgstr "在新的隱私瀏覽視窗中開啟"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:185
-#, fuzzy
-#| msgctxt "BookmarksManager|"
-#| msgid "New Folder"
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
 msgstr "新資料夾"
@@ -1204,12 +1202,9 @@ msgid "Show Only Text"
 msgstr "只顯示文字"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:185
-#, fuzzy
-#| msgctxt "LocationBar|"
-#| msgid "Enter address"
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
-msgstr "輸入地址"
+msgstr "輸入資料夾名稱："
 
 #: lib/bookmarks/bookmarkstools.cpp:76
 #, qt-format
@@ -3107,20 +3102,14 @@ msgid "Save Image to Disk"
 msgstr "儲存影像至硬碟中"
 
 #: lib/other/siteinfo.cpp:190
-#, fuzzy
-#| msgctxt "HistoryManager|"
-#| msgid "Copy title"
 msgctxt "SiteInfo|"
 msgid "Copy Values"
-msgstr "複製標題"
+msgstr "複製值"
 
 #: lib/other/siteinfo.cpp:191
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Copy image ad&dress"
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
-msgstr "複製圖片位址 (&D)"
+msgstr "複製標籤與值"
 
 #: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
@@ -3190,7 +3179,7 @@ msgstr "標籤"
 #: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
 msgid "Value"
-msgstr "數值"
+msgstr "值"
 
 #: lib/other/siteinfo.ui:168
 msgctxt "SiteInfo|"
@@ -3615,12 +3604,9 @@ msgid "Paste from clipboard"
 msgstr "從剪貼板上複製"
 
 #: lib/preferences/pluginslist.ui:17
-#, fuzzy
-#| msgctxt "LocationBar|"
-#| msgid "Enter address"
 msgctxt "PluginsList|"
 msgid "Enter name"
-msgstr "輸入地址"
+msgstr "輸入名稱"
 
 #: lib/preferences/pluginslist.ui:51
 msgctxt "PluginsList|"
@@ -4227,7 +4213,7 @@ msgstr "啟用 DNS 預先擷取 (Prefetching)"
 #: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Enable screen capture"
-msgstr ""
+msgstr "啟用螢幕擷取"
 
 #: lib/preferences/preferences.ui:1112
 msgctxt "Preferences|"
@@ -5350,12 +5336,12 @@ msgstr "隱藏游標"
 #: lib/tools/html5permissions/html5permissionsdialog.ui:117
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display Capture"
-msgstr ""
+msgstr "螢幕擷取"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:122
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display and Audio Capture"
-msgstr ""
+msgstr "螢幕與音效擷取"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:41
 msgctxt "HTML5PermissionsNotification|"
@@ -5399,20 +5385,16 @@ msgid "Allow %1 to hide your pointer?"
 msgstr "允許 %1 隱藏您的游標嗎？"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:69
-#, fuzzy, qt-format
-#| msgctxt "HTML5PermissionsNotification|"
-#| msgid "Allow %1 to locate your position?"
+#, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen?"
-msgstr "允許 %1 標記您的位置嗎？"
+msgstr "允許 %1 擷取您的螢幕嗎？"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:73
-#, fuzzy, qt-format
-#| msgctxt "HTML5PermissionsNotification|"
-#| msgid "Allow %1 to use your microphone and camera?"
+#, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen and audio?"
-msgstr "允許 %1 使用您的麥克風與攝影機嗎？"
+msgstr "允許 %1 擷取您的螢幕與音效嗎？"
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:43
 msgctxt "HTML5PermissionsNotification|"
