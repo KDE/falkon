@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the falkon package.
 #
 # Vasilis Tsivikis <vasitsiv.dev@gmail.com>, 2017.
-# Stelios <sstavra@gmail.com>, 2021.
+# Stelios <sstavra@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2021-06-03 13:38+0300\n"
+"PO-Revision-Date: 2023-01-04 12:29+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: el_GR\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -86,7 +86,7 @@ msgstr "Διεύθυνση:"
 #: lib/adblock/adblockaddsubscriptiondialog.ui:53
 msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Add new subscription to AdBlock:"
-msgstr "Προσθήκη νεάς συνδρομής στο AdBlock:"
+msgstr "Προσθήκη νέας συνδρομής στο AdBlock:"
 
 #: lib/adblock/adblockdialog.cpp:49
 msgctxt "AdBlockDialog|"
@@ -121,7 +121,7 @@ msgstr "Μάθετε για την εγγραφή κανόνων..."
 #: lib/adblock/adblockdialog.ui:14
 msgctxt "AdBlockDialog|"
 msgid "AdBlock Configuration"
-msgstr "Ρυθμίσεις AdBlock"
+msgstr "Διαμόρφωση AdBlock"
 
 #: lib/adblock/adblockdialog.ui:20
 msgctxt "AdBlockDialog|"
@@ -339,10 +339,10 @@ msgid_plural ""
 "There are still %n open tabs and your session won't be stored.\n"
 "Are you sure you want to close this window?"
 msgstr[0] ""
-"Υπάρχουν ακόμα %n ανοιχτές καρτέλες και η συνεδρία σας δεν θα αποθηκευθεί.\n"
+"Υπάρχουν ακόμα %n ανοιχτές καρτέλες και η συνεδρία σας δεν θα αποθηκευτεί.\n"
 "Θέλετε πράγματι να κλείσετε το παράθυρο;"
 msgstr[1] ""
-"Υπάρχουν ακόμα %n ανοιχτές καρτέλες και η συνεδρία σας δεν θα αποθηκευθεί.\n"
+"Υπάρχουν ακόμα %n ανοιχτές καρτέλες και η συνεδρία σας δεν θα αποθηκευτεί.\n"
 "Θέλετε πράγματι να κλείσετε το παράθυρο;"
 
 #: lib/app/browserwindow.cpp:1504
@@ -747,7 +747,7 @@ msgstr ""
 msgctxt "MasterPasswordDialog|"
 msgid "Some data has not been decrypted. The master password was not cleared!"
 msgstr ""
-"Κάποια δεδομένα δεν αποκρυπτογραφήθηκαν. Ο κύριος κωδικός δεν εκαθαρίστηκε!"
+"Κάποια δεδομένα δεν αποκρυπτογραφήθηκαν. Ο κύριος κωδικός δεν εκκαθαρίστηκε!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:669
 msgctxt "AutoFill|"
@@ -1037,7 +1037,7 @@ msgstr "Το αρχείο δεν υπάρχει."
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:77
 msgctxt "BookmarksImportDialog|"
 msgid "Unable to open database. Is Firefox running?"
-msgstr "Αδυναμία ανοίγματος βάσης δεδομένων. Τρέχει ο Firefox;"
+msgstr "Αδυναμία ανοίγματος βάσης δεδομένων. Εκτελείται ο Firefox;"
 
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:32
 msgctxt "BookmarksImporter|"
@@ -1305,7 +1305,7 @@ msgstr "Προσθήκη στη γρήγορη κλήση"
 #: lib/bookmarks/bookmarkswidget.cpp:116
 msgctxt "BookmarksWidget|"
 msgid "Remove from Speed Dial"
-msgstr "Αφαίρεση απο τη γρήγορη κλήση"
+msgstr "Αφαίρεση από τη γρήγορη κλήση"
 
 #: lib/bookmarks/bookmarkswidget.cpp:121
 msgctxt "BookmarksWidget|"
@@ -1675,7 +1675,7 @@ msgstr "Συνέχεια λήψης"
 #: lib/downloads/downloaditem.cpp:314
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
-msgstr "Πάυση λήψης"
+msgstr "Παύση λήψης"
 
 #: lib/downloads/downloaditem.cpp:317
 msgctxt "DownloadItem|"
@@ -1864,7 +1864,7 @@ msgstr "Απρίλιος"
 #: lib/history/history.cpp:280
 msgctxt "History|"
 msgid "May"
-msgstr "Μάϊος"
+msgstr "Μάιος"
 
 #: lib/history/history.cpp:282
 msgctxt "History|"
@@ -2142,7 +2142,7 @@ msgstr "Κουμπί επαναφόρτωσης"
 #: lib/navigation/navigationbar.cpp:192
 msgctxt "NavigationBar|"
 msgid "Home button"
-msgstr "Κουμπί οικοσελίδας"
+msgstr "Κουμπί αρχικής σελίδας"
 
 #: lib/navigation/navigationbar.cpp:193
 msgctxt "NavigationBar|"
@@ -2228,7 +2228,7 @@ msgstr "Επικόλληση και &αναζήτηση"
 #, qt-format
 msgctxt "WebSearchBar|"
 msgid "Add %1 ..."
-msgstr "Προσθηκη %1..."
+msgstr "Προσθήκη %1..."
 
 #: lib/navigation/websearchbar.cpp:127
 msgctxt "WebSearchBar|"
@@ -2550,9 +2550,9 @@ msgid ""
 "relevant for troubleshooting. Please include this information when "
 "submitting bug reports."
 msgstr ""
-"Η σελίδα αυτή περιέχει πληροφορίες για τη ρύθμιση του τρέχων QupZilla - "
-"σχετική για την επίλυση προβλημάτων. Παρακαλώ συμπεριλάβετε τις πληροφορίες "
-"αυτές όταν αποστέλλετε αναφορές σφαλμάτων."
+"Η σελίδα αυτή περιέχει πληροφορίες για τη τρέχουσα διαμόρφωση του Falkon - "
+"σχετική με την επίλυση προβλημάτων. Συμπεριλάβετε τις πληροφορίες αυτές όταν "
+"αποστέλλετε αναφορές σφαλμάτων."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:286
 msgctxt "FalkonSchemeReply|"
@@ -2707,7 +2707,7 @@ msgstr "Url:"
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
 msgid "Shortcut:"
-msgstr "Συντόμεση:"
+msgstr "Συντόμευση:"
 
 #: lib/opensearch/editsearchengine.ui:54
 msgctxt "EditSearchEngine|"
@@ -2805,7 +2805,7 @@ msgstr "Μηχανή αναζήτησης"
 #: lib/opensearch/searchenginesdialog.ui:94
 msgctxt "SearchEnginesDialog|"
 msgid "Shortcut"
-msgstr "Συντόμεση"
+msgstr "Συντόμευση"
 
 #: lib/opensearch/searchenginesdialog.ui:104
 msgctxt "SearchEnginesDialog|"
@@ -3094,20 +3094,14 @@ msgid "Save Image to Disk"
 msgstr "Αποθήκευση εικόνας στο δίσκο"
 
 #: lib/other/siteinfo.cpp:190
-#, fuzzy
-#| msgctxt "HistoryManager|"
-#| msgid "Copy title"
 msgctxt "SiteInfo|"
 msgid "Copy Values"
-msgstr "Αντιγραφή τίτλου"
+msgstr "Αντιγραφή τιμών"
 
 #: lib/other/siteinfo.cpp:191
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Copy image ad&dress"
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
-msgstr "Αντιγραφή διεύ&θυνσης εικόνας"
+msgstr "Αντιγραφή ετικετών και τιμών"
 
 #: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
@@ -3208,12 +3202,12 @@ msgstr "<b>Ιστότοπος %1<b/>"
 #: lib/other/siteinfowidget.cpp:45
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>secured</b>."
-msgstr "H σύνδεση σας σε αυτή τη σελίδα <b>είναι ασφαλής</b>."
+msgstr "Η σύνδεση σας σε αυτή τη σελίδα <b>είναι ασφαλής</b>."
 
 #: lib/other/siteinfowidget.cpp:49
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>unsecured</b>."
-msgstr "H σύνδεση σας σε αυτή τη σελίδα <b>δεν είναι ασφαλής</b>."
+msgstr "Η σύνδεση σας σε αυτή τη σελίδα <b>δεν είναι ασφαλής</b>."
 
 #: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
 #, qt-format
@@ -3402,7 +3396,7 @@ msgstr "Προσωπικός ορισμός:"
 #: lib/preferences/autofillmanager.cpp:67
 msgctxt "AutoFillManager|"
 msgid "Import Passwords from File..."
-msgstr "Εισαγωγή κωδικών από αρχειο..."
+msgstr "Εισαγωγή κωδικών από αρχείο..."
 
 #: lib/preferences/autofillmanager.cpp:68
 msgctxt "AutoFillManager|"
@@ -3600,7 +3594,7 @@ msgstr "Έχει πρόσβαση στο πρόχειρο"
 #: lib/preferences/jsoptions.ui:50
 msgctxt "JsOptions|"
 msgid "Paste from clipboard"
-msgstr "Έπικόλληση από το πρόχειρο"
+msgstr "Επικόλληση από το πρόχειρο"
 
 #: lib/preferences/pluginslist.ui:17
 msgctxt "PluginsList|"
@@ -3644,7 +3638,7 @@ msgstr "Επιβεβαίωση"
 #, qt-format
 msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
-msgstr "Θέλετε πράγματινα διαγράψετε την συνεδρία '%1;"
+msgstr "Θέλετε πράγματι να διαγράψετε τη συνεδρία '%1;"
 
 #: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:602
 msgctxt "Preferences|"
@@ -3990,7 +3984,7 @@ msgstr "Πάντα να γίνετε η εναλλαγή μεταξύ καρτε
 #: lib/preferences/preferences.ui:649
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
-msgstr "Αυτόματη μετάβαση στη νεα ανοιγμένη καρτέλα"
+msgstr "Αυτόματη μετάβαση στη νέα ανοιγμένη καρτέλα"
 
 #: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
@@ -4041,7 +4035,7 @@ msgstr "Προτάσεις όταν πληκτρολογείτε στην μπά
 #: lib/preferences/preferences.ui:759
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
-msgstr "Ιστορικό και Σελιδοδεικτες"
+msgstr "Ιστορικό και Σελιδοδείκτες"
 
 #: lib/preferences/preferences.ui:764
 msgctxt "Preferences|"
@@ -4122,7 +4116,7 @@ msgstr "Γέμισμα"
 #: lib/preferences/preferences.ui:913
 msgctxt "Preferences|"
 msgid "Bottom"
-msgstr "Πάτος"
+msgstr "Βάση"
 
 #: lib/preferences/preferences.ui:918
 msgctxt "Preferences|"
@@ -4154,7 +4148,7 @@ msgstr "Επαναφορά"
 #: lib/preferences/preferences.ui:1003
 msgctxt "Preferences|"
 msgid "Web Configuration"
-msgstr "Ρυθμίσεις διαδικτύου"
+msgstr "Διαμόρφωση Ιστού"
 
 #: lib/preferences/preferences.ui:1011
 msgctxt "Preferences|"
@@ -4206,7 +4200,7 @@ msgstr "Χρήση των εγγενών γραμμών κύλισης"
 #: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
-msgstr "Απενεργοποίηση της αυτόματης αναπαραγωγήε των βίντεο"
+msgstr "Απενεργοποίηση της αυτόματης αναπαραγωγής των βίντεο"
 
 #: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
@@ -4296,17 +4290,17 @@ msgstr "Διαγραφή τώρα"
 #: lib/preferences/preferences.ui:1373
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
-msgstr "Ρυθμίσεις proxy"
+msgstr "Διαμόρφωση proxy"
 
 #: lib/preferences/preferences.ui:1392
 msgctxt "Preferences|"
 msgid "System proxy configuration"
-msgstr "Ρύθμιση proxy συστήματος"
+msgstr "Διαμόρφωση proxy συστήματος"
 
 #: lib/preferences/preferences.ui:1415
 msgctxt "Preferences|"
 msgid "Manual configuration"
-msgstr "Χειροκίνητη ρύθμιση"
+msgstr "Χειροκίνητη Διαμόρφωση"
 
 #: lib/preferences/preferences.ui:1425
 msgctxt "Preferences|"
@@ -4381,7 +4375,7 @@ msgstr "<b>Μεγέθη γραμματοσειρών</b>"
 #: lib/preferences/preferences.ui:1634
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
-msgstr "Σταθερο μέγεθος γραμματοσειράς"
+msgstr "Σταθερό μέγεθος γραμματοσειράς"
 
 #: lib/preferences/preferences.ui:1641
 msgctxt "Preferences|"
@@ -4564,7 +4558,7 @@ msgstr "Δικαιώματα HTML5"
 #: lib/preferences/preferences.ui:2129
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
-msgstr "Αποστολή κεφαλίδας Do Not Track (Μην εντοπίζεις) στους διακομηστές"
+msgstr "Αποστολή κεφαλίδας Do Not Track (Μην εντοπίζεις) στους διακομιστές"
 
 #: lib/preferences/preferences.ui:2155
 msgctxt "Preferences|"
@@ -4597,8 +4591,8 @@ msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
 "the screen."
 msgstr ""
-"<b>Σημείωση: </b> Μπορείτε να αλλάξετε τη θέση των OSD ενημερώσεων σέρνοντας "
-"τo στην οθόνη."
+"<b>Σημείωση: </b> Μπορείτε να αλλάξετε τη θέση μιας OSD ειδοποίησης με "
+"έλκυση στην οθόνη."
 
 #: lib/preferences/preferences.ui:2269
 msgctxt "Preferences|"
@@ -4741,12 +4735,12 @@ msgstr "Προσθήκη νέας σελίδας"
 #: lib/preferences/useragentdialog.cpp:137
 msgctxt "UserAgentDialog|"
 msgid "Edit site"
-msgstr "Επεξεργασια σελίδας"
+msgstr "Επεξεργασία ιστοτόπου"
 
 #: lib/preferences/useragentdialog.cpp:216
 msgctxt "UserAgentDialog|"
 msgid "Site domain: "
-msgstr "Διεύθυνση σελίδας: "
+msgstr "Τομέας ιστοτόπου: "
 
 #: lib/preferences/useragentdialog.cpp:217
 msgctxt "UserAgentDialog|"
@@ -4766,12 +4760,12 @@ msgstr "Αλλαγή καθολικού πράκτορα χρήστη"
 #: lib/preferences/useragentdialog.ui:48
 msgctxt "UserAgentDialog|"
 msgid "Use different User Agents for specified sites"
-msgstr "Χρήση διαφορετικών πρακτόρων χρήστη για συγκεκριμένες σελίδες"
+msgstr "Χρήση διαφορετικών πρακτόρων χρήστη για συγκεκριμένους ιστοτόπους"
 
 #: lib/preferences/useragentdialog.ui:92
 msgctxt "UserAgentDialog|"
 msgid "Site"
-msgstr "Σελίδα"
+msgstr "Ιστότοπος"
 
 #: lib/preferences/useragentdialog.ui:97
 msgctxt "UserAgentDialog|"
@@ -5305,7 +5299,7 @@ msgstr "Αφαίρεση"
 #: lib/tools/html5permissions/html5permissionsdialog.ui:64
 msgctxt "HTML5PermissionsDialog|"
 msgid "Site"
-msgstr "Σελίδα"
+msgstr "Ιστότοπος"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:69
 msgctxt "HTML5PermissionsDialog|"
@@ -5315,7 +5309,7 @@ msgstr "Συμπεριφορά"
 #: lib/tools/html5permissions/html5permissionsdialog.ui:79
 msgctxt "HTML5PermissionsDialog|"
 msgid "Permission for:"
-msgstr "Άδειες για:"
+msgstr "Δικαίωμα για:"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:87
 msgctxt "HTML5PermissionsDialog|"
@@ -5481,8 +5475,8 @@ msgid ""
 "li></ul>Do you want Falkon to try open this link in system application?"
 msgstr ""
 "Το Falkon δεν μπορεί να χειριστεί <b>%1:</b> συνδέσμους. Ο αιτούμενος "
-"σύνδεσμος  ειναι <ul><li>%2</li></ul>Θέλετε το Falkon να δοκιμάσει να "
-"ανοίξει το συνδεσμο αυτόν στην εφαρμογή συστήματος;"
+"σύνδεσμος  είναι <ul><li>%2</li></ul>Θέλετε το Falkon να δοκιμάσει να "
+"ανοίξει το σύνδεσμο αυτόν στην εφαρμογή συστήματος;"
 
 #: lib/webengine/webpage.cpp:335
 msgctxt "WebPage|"
@@ -5492,7 +5486,7 @@ msgstr "Απομνημόνευση επιλογής για το πρωτόκολ
 #: lib/webengine/webpage.cpp:336
 msgctxt "WebPage|"
 msgid "External Protocol Request"
-msgstr "Αίτημα εξωτερικού πρωτόκολλου"
+msgstr "Αίτημα εξωτερικού πρωτοκόλλου"
 
 #: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
@@ -5571,7 +5565,7 @@ msgstr "&Προσθήκη νέας σελίδας"
 #: lib/webengine/webview.cpp:753
 msgctxt "WebView|"
 msgid "&Configure Speed Dial"
-msgstr "&Ρύθμιση γρήγορης κλήσης"
+msgstr "&Διαμόρφωση γρήγορης κλήσης"
 
 #: lib/webengine/webview.cpp:755
 msgctxt "WebView|"
@@ -5702,7 +5696,7 @@ msgstr "&Αναπαραγωγή"
 #: lib/webengine/webview.cpp:906
 msgctxt "WebView|"
 msgid "&Pause"
-msgstr "&Πάυση"
+msgstr "&Παύση"
 
 #: lib/webengine/webview.cpp:907
 msgctxt "WebView|"
