@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-01-02 22:00+0100\n"
+"PO-Revision-Date: 2023-01-12 18:35+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: fr_FR\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -154,27 +154,27 @@ msgstr "AdBlock"
 #: lib/adblock/adblockicon.cpp:52
 msgctxt "AdBlockIcon|"
 msgid "AdBlock Icon"
-msgstr "Icône de « Adblock »"
+msgstr "Icône de « AdBlock »"
 
 #: lib/adblock/adblockicon.cpp:86
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled"
-msgstr "Adblock est désactivé"
+msgstr "AdBlock est désactivé"
 
 #: lib/adblock/adblockicon.cpp:92
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled on this site "
-msgstr "Adblock est désactivé sur ce site"
+msgstr "AdBlock est désactivé sur ce site"
 
 #: lib/adblock/adblockicon.cpp:98
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is active"
-msgstr "Adblock est actif"
+msgstr "AdBlock est actif"
 
 #: lib/adblock/adblockicon.cpp:145
 msgctxt "AdBlockIcon|"
 msgid "Show AdBlock &Settings"
-msgstr "Afficher les paramètre&s d'AdBlock"
+msgstr "Afficher les paramètre&s pour AdBlock"
 
 #: lib/adblock/adblockicon.cpp:153
 #, qt-format
@@ -201,12 +201,12 @@ msgstr "Liste AdBlock"
 #: lib/adblock/adblockmanager.cpp:317
 msgctxt "AdBlockManager|"
 msgid "EasyList"
-msgstr "EasyList"
+msgstr "Liste simple"
 
 #: lib/adblock/adblockmanager.cpp:322
 msgctxt "AdBlockManager|"
 msgid "NoCoin List"
-msgstr "Liste NoCoin"
+msgstr "Liste « NoCoin »"
 
 #: lib/adblock/adblocksubscription.cpp:173
 msgctxt "AdBlockSubscription|"
@@ -542,7 +542,7 @@ msgstr "Enc&odage"
 #: lib/app/mainmenu.cpp:552
 msgctxt "MainMenu|"
 msgid "Sta&tus Bar"
-msgstr "Barre d'é&tat"
+msgstr "Barre d'éta&t"
 
 #: lib/app/mainmenu.cpp:554
 msgctxt "MainMenu|"
@@ -1001,7 +1001,7 @@ msgid ""
 "Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
 "is usually located in"
 msgstr ""
-"Google Chrome stocke ses signets dans un fichier texte <b>Bookmarks</b>. Ce "
+"Google Chrome stocke ses signets dans un fichier texte <b>Signets</b>. Ce "
 "fichier est généralement situé dans"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
@@ -1064,8 +1064,8 @@ msgid ""
 "Internet Explorer stores its bookmarks in <b>Favorites</b> folder. This "
 "folder is usually located in"
 msgstr ""
-"Internet Exploreur stocke ses marque-pages dans le dossier <b>Favoris</b>. "
-"Ce fichier est généralement situé dans "
+"Internet Explorer stocke ses marque-pages dans le dossier <b>Favoris</b>. Ce "
+"fichier est généralement situé dans "
 
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
 msgctxt "BookmarksImporter|"
@@ -1306,12 +1306,12 @@ msgstr "Mettre à jour le marque-page"
 #: lib/bookmarks/bookmarkswidget.cpp:112 lib/bookmarks/bookmarkswidget.ui:33
 msgctxt "BookmarksWidget|"
 msgid "Add to Speed Dial"
-msgstr "Ajouter à Speed Dial"
+msgstr "Ajouter à SpeedDial"
 
 #: lib/bookmarks/bookmarkswidget.cpp:116
 msgctxt "BookmarksWidget|"
 msgid "Remove from Speed Dial"
-msgstr "Supprimer de Speed Dial"
+msgstr "Supprimer de SpeedDial"
 
 #: lib/bookmarks/bookmarkswidget.cpp:121
 msgctxt "BookmarksWidget|"
@@ -4181,7 +4181,7 @@ msgstr "Naviguer de lien en lien via la touche tabulation"
 #: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
-msgstr "Activer l'audit XSS"
+msgstr "Activer l'audit « XSS »"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
 #: lib/preferences/preferences.ui:1046
@@ -4684,7 +4684,7 @@ msgstr "<b>Langue préférée pour les sites web</b>"
 #: lib/preferences/preferences.ui:2668
 msgctxt "Preferences|"
 msgid "User Agent Manager"
-msgstr "Gestionnaire d'User-Agent"
+msgstr "Gestionnaire pour « User-Agent »"
 
 #: lib/preferences/preferences.ui:2690
 msgctxt "Preferences|"
@@ -4757,7 +4757,7 @@ msgstr "User-Agent :"
 #: lib/preferences/useragentdialog.ui:14
 msgctxt "UserAgentDialog|"
 msgid "User Agent Manager"
-msgstr "Gestionnaire d'User-Agent"
+msgstr "Gestionnaire pour « User-Agent »"
 
 #: lib/preferences/useragentdialog.ui:20
 msgctxt "UserAgentDialog|"
