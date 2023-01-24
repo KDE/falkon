@@ -3,11 +3,11 @@
 #
 # Muhammad Fawwaz Orabi <mfawwaz93@gmail.com>, 2017.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-09-05 19:53+0400\n"
+"PO-Revision-Date: 2023-01-23 23:03+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -198,15 +198,14 @@ msgid "AdBlock Subscription"
 msgstr "اشتراك آدبلوك"
 
 #: lib/adblock/adblockmanager.cpp:317
-#, fuzzy
 msgctxt "AdBlockManager|"
 msgid "EasyList"
-msgstr "قائمة الاشتراكات السريعة"
+msgstr "EasyList"
 
 #: lib/adblock/adblockmanager.cpp:322
 msgctxt "AdBlockManager|"
 msgid "NoCoin List"
-msgstr ""
+msgstr "NoCoin List"
 
 #: lib/adblock/adblocksubscription.cpp:173
 msgctxt "AdBlockSubscription|"
@@ -239,16 +238,16 @@ msgid "Please write your rule here:"
 msgstr "رجاءً اكتب القاعدة هنا:"
 
 #: lib/adblock/adblocktreewidget.cpp:179
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "AdBlockTreeWidget|"
 msgid "%1 (recently updated)"
 msgstr "%1 (حُدّثت حديثًا)"
 
 #: lib/adblock/adblocktreewidget.cpp:188
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "AdBlockTreeWidget|"
 msgid "%1 (Error: %2)"
-msgstr "خطأ"
+msgstr "%1 (خطأ: %2)"
 
 #: lib/adblock/adblockurlinterceptor.cpp:44
 msgctxt "AdBlockUrlInterceptor|"
@@ -256,7 +255,7 @@ msgid "Blocked content"
 msgstr "محتوى محجوب"
 
 #: lib/adblock/adblockurlinterceptor.cpp:45
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
 msgstr "حجبه <i>%1 (%2)</i>"
@@ -391,21 +390,15 @@ msgid "Open new private window"
 msgstr "افتح نافذة خفيّة جديدة"
 
 #: lib/app/mainapplication.cpp:1222
-#, fuzzy
-#| msgctxt "MainApplication|"
-#| msgid ""
-#| "QupZilla is a new, fast and secure open-source WWW browser. QupZilla is "
-#| "licensed under GPL version 3 or (at your option) any later version. It is "
-#| "based on WebKit core and Qt Framework."
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
 "version 3 or (at your option) any later version. It is based on QtWebEngine "
 "and Qt Framework."
 msgstr ""
-"كَبزيلا متصفح للوب جديد سريع وآمن ومفتوح المصدر. يُرخّص استخدامه وفق الإصدار "
-"الثالث من رخصة جنو العمومية (GPL) أو أي إصدار أحدث من ذلك (اختر كما تشاء). "
-"يُبنى كَبزيلا على محرك العرض WebKitوإطار العمل Qt."
+"فالكون متصفح للوب جديد سريع وآمن ومفتوح المصدر. يُرخّص استخدامه وفق الإصدار "
+"الثالث من رخصة جنو العمومية (GPL) أو أي إصدار أحدث من ذلك. يُبنى فالكون على "
+"محرك العرض QtWebEngine وإطار العمل Qt."
 
 #: lib/app/mainmenu.cpp:84 lib/app/mainmenu.cpp:497
 msgctxt "MainMenu|"
@@ -523,10 +516,9 @@ msgid "&Find"
 msgstr "ا&بحث"
 
 #: lib/app/mainmenu.cpp:536
-#, fuzzy
 msgctxt "MainMenu|"
 msgid "&View"
-msgstr "من&ظور"
+msgstr "&عرض"
 
 #: lib/app/mainmenu.cpp:539
 msgctxt "MainMenu|"
@@ -838,10 +830,9 @@ msgid "Bookmarks Toolbar"
 msgstr "شريط أدوات العلامات"
 
 #: lib/bookmarks/bookmarks.cpp:208
-#, fuzzy
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Toolbar"
-msgstr "العلامات في شريطها"
+msgstr "توجد العلامات في شريط أدوات العلامات"
 
 #: lib/bookmarks/bookmarks.cpp:211
 msgctxt "Bookmarks|"
@@ -849,10 +840,9 @@ msgid "Bookmarks Menu"
 msgstr "قائمة العلامات"
 
 #: lib/bookmarks/bookmarks.cpp:212
-#, fuzzy
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Menu"
-msgstr "العلامات في القائمة"
+msgstr "توجد العلامات في قائمة العلامات"
 
 #: lib/bookmarks/bookmarks.cpp:215
 msgctxt "Bookmarks|"
@@ -1171,13 +1161,11 @@ msgid "Organize &Bookmarks"
 msgstr "ن&ظّم العلامات"
 
 #: lib/bookmarks/bookmarksmodel.cpp:147
-#, fuzzy
 msgctxt "BookmarksModel|"
 msgid "Title"
 msgstr "العنوان"
 
 #: lib/bookmarks/bookmarksmodel.cpp:149
-#, fuzzy
 msgctxt "BookmarksModel|"
 msgid "Address"
 msgstr "الموقع"
@@ -1198,12 +1186,9 @@ msgid "Open in new private window"
 msgstr "افتح في نافذة خفيّة جديدة"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:185
-#, fuzzy
-#| msgctxt "BookmarksManager|"
-#| msgid "New Folder"
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
-msgstr "مجلّد جديد"
+msgstr "مجلّداً جديداً"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:78
 msgctxt "BookmarksToolbar|"
@@ -1226,9 +1211,6 @@ msgid "Show Only Text"
 msgstr "أظهر فقط النصوص"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:185
-#, fuzzy
-#| msgctxt "LocationBar|"
-#| msgid "Enter address"
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
 msgstr "أدخل اسم المجلّد:"
@@ -1285,7 +1267,6 @@ msgid "Edit Bookmark"
 msgstr "تعديل العلامة"
 
 #: lib/bookmarks/bookmarkstools.cpp:344
-#, fuzzy
 msgctxt "Bookmarks|"
 msgid "Confirmation"
 msgstr "تأكيد"
@@ -1360,12 +1341,9 @@ msgstr "احذف كعكات"
 #: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
 #: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
 #: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "<cookie not selected>"
 msgctxt "CookieManager|"
 msgid "<multiple cookies selected>"
-msgstr "لم تحدد كعكة"
+msgstr "<عدة كعكات محددة>"
 
 #: lib/cookies/cookiemanager.cpp:178
 msgctxt "CookieManager|"
@@ -1659,12 +1637,10 @@ msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "تبقى %1 - %2 من %3 (%4)"
 
 #: lib/downloads/downloaditem.cpp:290
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "Cancelled - %1"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
-msgstr "أوقِفَ مؤقتا"
+msgstr "مُلبثة - %1"
 
 #: lib/downloads/downloaditem.cpp:303
 msgctxt "DownloadItem|"
@@ -1687,20 +1663,14 @@ msgid "Cancel downloading"
 msgstr "ألغِ التنزيل"
 
 #: lib/downloads/downloaditem.cpp:312
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Cancel downloading"
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
-msgstr "ألغِ التنزيل"
+msgstr "عاود التنزيل"
 
 #: lib/downloads/downloaditem.cpp:314
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Cancel downloading"
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
-msgstr "ألغِ التنزيل"
+msgstr "ألبث التنزيل"
 
 #: lib/downloads/downloaditem.cpp:317
 msgctxt "DownloadItem|"
@@ -1752,7 +1722,7 @@ msgstr "احفظ الملف كـ..."
 #: lib/downloads/downloadmanager.cpp:310
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
-msgstr ""
+msgstr "أرشيف MIME HTML ‏(*.mhtml)"
 
 #: lib/downloads/downloadmanager.cpp:311
 msgctxt "DownloadManager|"
@@ -1770,12 +1740,9 @@ msgid "Save page as..."
 msgstr "احفظ الصفحة ك‍..."
 
 #: lib/downloads/downloadmanager.cpp:410
-#, fuzzy
-#| msgctxt "DownloadOptionsDialog|"
-#| msgid "Download link copied."
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
-msgstr "نُسخَ رابط التنزيل."
+msgstr "فالكون: التنزيل انتهى"
 
 #: lib/downloads/downloadmanager.cpp:410
 msgctxt "DownloadManager|"
@@ -1810,12 +1777,9 @@ msgid "Download link copied."
 msgstr "نُسخَ رابط التنزيل."
 
 #: lib/downloads/downloadoptionsdialog.ui:25
-#, fuzzy
-#| msgctxt "DownloadOptionsDialog|"
-#| msgid "What should QupZilla do with this file?"
 msgctxt "DownloadOptionsDialog|"
 msgid "What should Falkon do with this file?"
-msgstr "ماذا تريد من كبزيلا أن يفعل بهذا الملف؟"
+msgstr "ماذا تريد من فالكون أن يفعل بهذا الملف؟"
 
 #: lib/downloads/downloadoptionsdialog.ui:47
 msgctxt "DownloadOptionsDialog|"
@@ -1853,7 +1817,6 @@ msgid "You have chosen to open"
 msgstr "اخترت أن تفتح"
 
 #: lib/downloads/downloadsbutton.cpp:27 lib/downloads/downloadsbutton.cpp:43
-#, fuzzy
 msgctxt "DownloadsButton|"
 msgid "Downloads"
 msgstr "التنزيلات"
@@ -1861,7 +1824,7 @@ msgstr "التنزيلات"
 #: lib/downloads/downloadsbutton.cpp:28
 msgctxt "DownloadsButton|"
 msgid "Open Download Manager"
-msgstr ""
+msgstr "افتح مدير التنزيل"
 
 #: lib/history/history.cpp:82
 msgctxt "History|"
@@ -1997,7 +1960,7 @@ msgstr "امسح القائمة"
 #: lib/history/historymenu.cpp:189
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Windows"
-msgstr ""
+msgstr "استعد كلّ النّوافذ المغلقة"
 
 #: lib/history/historymenu.cpp:236
 msgctxt "HistoryMenu|"
@@ -2037,7 +2000,7 @@ msgstr "الألسنة المغلقة"
 #: lib/history/historymenu.cpp:261
 msgctxt "HistoryMenu|"
 msgid "Closed Windows"
-msgstr ""
+msgstr "النوافذ المغلقة"
 
 #: lib/history/historymodel.cpp:56
 msgctxt "HistoryModel|"
@@ -2077,7 +2040,7 @@ msgstr "هذا الشهر"
 #: lib/navigation/completer/locationcompleterdelegate.cpp:158
 msgctxt "LocationCompleterDelegate|"
 msgid "Visit"
-msgstr ""
+msgstr "الزيارة"
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:164
 #, qt-format
@@ -2091,16 +2054,14 @@ msgid "Switch to tab"
 msgstr "انتقل إلى اللسان"
 
 #: lib/navigation/completer/locationcompleterview.cpp:73
-#, fuzzy
 msgctxt "LocationCompleterView|"
 msgid "Manage Search Engines"
 msgstr "أدر مُحركات البحث"
 
 #: lib/navigation/completer/locationcompleterview.cpp:78
-#, fuzzy
 msgctxt "LocationCompleterView|"
 msgid "Search with:"
-msgstr "ابحث باستخدام..."
+msgstr "ابحث باستخدام:"
 
 #: lib/navigation/locationbar.cpp:92
 msgctxt "LocationBar|"
@@ -2144,7 +2105,6 @@ msgid "New Tab"
 msgstr "لسان جديد"
 
 #: lib/navigation/navigationbar.cpp:134
-#, fuzzy
 msgctxt "NavigationBar|"
 msgid "Tools"
 msgstr "أدوات"
@@ -2157,7 +2117,7 @@ msgstr "القائمة الرئيسة"
 #: lib/navigation/navigationbar.cpp:164
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen"
-msgstr ""
+msgstr "أخرج من ملء الشّاشة"
 
 #: lib/navigation/navigationbar.cpp:190
 msgctxt "NavigationBar|"
@@ -2200,13 +2160,11 @@ msgid "Clear history"
 msgstr "امسح التأريخ"
 
 #: lib/navigation/navigationbar.cpp:434
-#, fuzzy
 msgctxt "NavigationBar|"
 msgid "Toolbars"
 msgstr "أشرطة الأدوات"
 
 #: lib/navigation/navigationbar.cpp:435
-#, fuzzy
 msgctxt "NavigationBar|"
 msgid "Sidebar"
 msgstr "الشريط الجانبيّ"
@@ -2222,10 +2180,9 @@ msgid "Configure Toolbar"
 msgstr ""
 
 #: lib/navigation/navigationbarconfigdialog.ui:62
-#, fuzzy
 msgctxt "NavigationBarConfigDialog|"
 msgid "Show search bar"
-msgstr "اعرض شريط الب&حث"
+msgstr "اعرض شريط البحث"
 
 #: lib/navigation/navigationbarconfigdialog.ui:82
 msgctxt "NavigationBarConfigDialog|"
@@ -2296,12 +2253,9 @@ msgid "Would you like to make an exception for this certificate?"
 msgstr "أتريد أن تستثني هذه الشهادة متجاوزاً تلك الأخطاء؟"
 
 #: lib/network/networkmanager.cpp:113
-#, fuzzy
-#| msgctxt "NetworkManager|"
-#| msgid "Authorisation required"
 msgctxt "NetworkManager|"
 msgid "Authorization required"
-msgstr "يُشترط التفويض "
+msgstr "يُشترط استيثاق "
 
 #: lib/network/networkmanager.cpp:120 lib/network/networkmanager.cpp:206
 msgctxt "NetworkManager|"
@@ -2326,12 +2280,9 @@ msgid ""
 msgstr "يطلب %1 اسم مستخدم وكلمة مرور. يقول الموقع: \"%2\""
 
 #: lib/network/networkmanager.cpp:199
-#, fuzzy
-#| msgctxt "NetworkManager|"
-#| msgid "Proxy authorisation required"
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
-msgstr "يشترط استثياق الخادوم الوكيل"
+msgstr "يشترط استيثاق الوكيل"
 
 #: lib/network/networkmanager.cpp:219
 #, qt-format
@@ -2345,75 +2296,50 @@ msgid "Start Page"
 msgstr "صفحة البداية"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:155
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Search on Web"
 msgctxt "FalkonSchemeReply|"
 msgid "Search on Web"
 msgstr "ابحث في الوِب"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:156
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Search results provided by DuckDuckGo"
 msgctxt "FalkonSchemeReply|"
 msgid "Search results provided by DuckDuckGo"
-msgstr "يوفر DuckDuckGo نتائج البحث"
+msgstr "يوفر دك داك غو نتائج البحث"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:158
 #: lib/network/schemehandlers/falkonschemehandler.cpp:174
 #: lib/network/schemehandlers/falkonschemehandler.cpp:175
-#, fuzzy
 msgctxt "FalkonSchemeReply|"
 msgid "About Falkon"
-msgstr "&عن فالكون"
+msgstr "عن فالكون"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:159
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "<h1>Private Browsing</h1>"
 msgctxt "FalkonSchemeReply|"
 msgid "<h1>Private Browsing</h1>"
-msgstr " (التصفح خِفية)"
+msgstr "<h1>التصفح خِفية</h1>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:176
 #: lib/network/schemehandlers/falkonschemehandler.cpp:284
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Information about version"
 msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
 msgstr "معلومات عن الإصدار"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:177
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Copyright"
 msgctxt "FalkonSchemeReply|"
 msgid "Copyright"
 msgstr "حقوق النسخ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:180
 #: lib/network/schemehandlers/falkonschemehandler.cpp:294
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Version"
 msgctxt "FalkonSchemeReply|"
 msgid "Version"
 msgstr "الإصدارة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:187
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Main developer"
 msgctxt "FalkonSchemeReply|"
 msgid "Main developer"
 msgstr "المطوّر الأساسي"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:208
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Speed Dial"
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial"
 msgstr "الوصول السريع"
@@ -2424,25 +2350,16 @@ msgid "Add New Page"
 msgstr "أضف صفحة جديدة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:210
-#, fuzzy
-#| msgctxt "AutoFillManager|"
-#| msgid "Edit"
 msgctxt "FalkonSchemeReply|"
 msgid "Edit"
-msgstr "عدّل"
+msgstr "حرّر"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:211
-#, fuzzy
-#| msgctxt "AcceptLanguage|"
-#| msgid "Remove"
 msgctxt "FalkonSchemeReply|"
 msgid "Remove"
 msgstr "احذف"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:212
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Reload"
 msgctxt "FalkonSchemeReply|"
 msgid "Reload"
 msgstr "أعد التحميل"
@@ -2477,33 +2394,21 @@ msgid "SpeedDial requires enabled JavaScript."
 msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:217
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Url"
 msgctxt "FalkonSchemeReply|"
 msgid "Url"
-msgstr "العنوان"
+msgstr "الرابط"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:218
-#, fuzzy
-#| msgctxt "BookmarksModel|"
-#| msgid "Title"
 msgctxt "FalkonSchemeReply|"
 msgid "Title"
 msgstr "العنوان"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:219
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Apply"
 msgctxt "FalkonSchemeReply|"
 msgid "Apply"
 msgstr "طبّق"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:220
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Cancelled"
 msgctxt "FalkonSchemeReply|"
 msgid "Cancel"
 msgstr "ألغِ"
@@ -2514,25 +2419,16 @@ msgid "New Page"
 msgstr "صفحة جديدة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:222
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Speed Dial settings"
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial settings"
 msgstr "إعدادات الوصول السريع"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:223
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Placement: "
 msgctxt "FalkonSchemeReply|"
 msgid "Placement: "
-msgstr "الموضع:"
+msgstr "الموضع: "
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:224
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Auto"
 msgctxt "FalkonSchemeReply|"
 msgid "Auto"
 msgstr "آليّ"
@@ -2548,20 +2444,14 @@ msgid "Fit"
 msgstr "ناسب"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:227
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Fit Width"
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Width"
 msgstr "لائم العرض"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:228
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Fit Height"
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Height"
-msgstr "مناسب الارتفاع"
+msgstr "ملائمة الارتفاع"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:229
 msgctxt "FalkonSchemeReply|"
@@ -2574,33 +2464,21 @@ msgid "Click to select image"
 msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:231
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Maximum pages in a row:"
 msgctxt "FalkonSchemeReply|"
 msgid "Maximum pages in a row:"
 msgstr "أقصى عدد للصفحات في سطر:"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:232
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Change size of pages:"
 msgctxt "FalkonSchemeReply|"
 msgid "Change size of pages:"
 msgstr "غير حجم الصفحات:"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:233
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Center speed dials"
 msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
 msgstr "وسط مُدخلات الوصول السريع"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:258
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Restore Session"
 msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
 msgstr "استعد الجلسة"
@@ -2639,17 +2517,11 @@ msgid "Or you can start completely new session"
 msgstr "أو ابدأ جلسة جديدة إن شئت"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:263
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Window"
 msgctxt "FalkonSchemeReply|"
 msgid "Window"
 msgstr "النافذة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:264
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Windows and Tabs"
 msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
 msgstr "النوافذ والألسنة"
@@ -2660,9 +2532,6 @@ msgid "Start New Session"
 msgstr "ابدأ جلسة جديدة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:266
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Restore"
 msgctxt "FalkonSchemeReply|"
 msgid "Restore"
 msgstr "استعد"
@@ -2670,7 +2539,7 @@ msgstr "استعد"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:267
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
-msgstr ""
+msgstr "يتطلب تمكين جافاسكربت."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:282
 #: lib/network/schemehandlers/falkonschemehandler.cpp:283
@@ -2679,162 +2548,102 @@ msgid "Configuration Information"
 msgstr "معلومات الضبط"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:285
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid ""
-#| "This page contains information about QupZilla's current configuration - "
-#| "relevant for troubleshooting. Please include this information when "
-#| "submitting bug reports."
 msgctxt "FalkonSchemeReply|"
 msgid ""
 "This page contains information about Falkon's current configuration - "
 "relevant for troubleshooting. Please include this information when "
 "submitting bug reports."
 msgstr ""
-"تحتوي هذه الصفحة معلومات عن ضبط كبزيلا الحالي - معلوماتٍ مفيدة لحل المشكلات. "
+"تحتوي هذه الصفحة معلومات عن ضبط فالكون الحالي - معلوماتٍ مفيدة لحل المشكلات. "
 "رجاءً أرفق هذه المعلومات عندما ترسل تقريراً بعلة."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:286
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Browser Identification"
 msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
 msgstr "هوية المتصفح"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:287
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Paths"
 msgctxt "FalkonSchemeReply|"
 msgid "Paths"
 msgstr "المسارات"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:288
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Build Configuration"
 msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
 msgstr "ضبط البناء"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:289
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preferences"
 msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
 msgstr "التفضيلات"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:290
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Option"
 msgctxt "FalkonSchemeReply|"
 msgid "Option"
-msgstr "خيار"
+msgstr "الخيار"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:291
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Value"
 msgctxt "FalkonSchemeReply|"
 msgid "Value"
-msgstr "قيمته"
+msgstr "القيمة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:292
 #: lib/network/schemehandlers/falkonschemehandler.cpp:327
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Extensions"
 msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
 msgstr "المُلحقات"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:293
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Name"
 msgctxt "FalkonSchemeReply|"
 msgid "Name"
 msgstr "الاسم"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:295
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Author"
 msgctxt "FalkonSchemeReply|"
 msgid "Author"
 msgstr "المؤلف"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:296
-#, fuzzy
-#| msgctxt "BookmarksManager|"
-#| msgid "Description"
 msgctxt "FalkonSchemeReply|"
 msgid "Description"
 msgstr "الوصف"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:311
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Application version"
 msgctxt "FalkonSchemeReply|"
 msgid "Application version"
-msgstr "<p>إصدار البرنامج %1</p><br/>"
+msgstr "إصدار البرنامج"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:318
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Qt version"
 msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
 msgstr "إصدار كيوت:"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:319
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Platform"
 msgctxt "FalkonSchemeReply|"
 msgid "Platform"
 msgstr "المنصّة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:322
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Profile"
 msgctxt "FalkonSchemeReply|"
 msgid "Profile"
-msgstr "اللاحة"
+msgstr "التشكيلة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "FalkonSchemeReply|"
 msgid "Settings"
 msgstr "الإعدادات"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Saved session"
 msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
 msgstr "الجلسة المحفوظة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:325
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Data"
 msgctxt "FalkonSchemeReply|"
 msgid "Data"
 msgstr "البيانات"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:326
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Themes"
 msgctxt "FalkonSchemeReply|"
 msgid "Themes"
 msgstr "السّمات"
@@ -2842,51 +2651,33 @@ msgstr "السّمات"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:330
 #: lib/network/schemehandlers/falkonschemehandler.cpp:337
 #: lib/network/schemehandlers/falkonschemehandler.cpp:343
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "<b>Enabled</b>"
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
-msgstr "ممكّن"
+msgstr "<b>ممكّن</b>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:332
 #: lib/network/schemehandlers/falkonschemehandler.cpp:339
 #: lib/network/schemehandlers/falkonschemehandler.cpp:343
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Disabled"
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
 msgstr "معطّل"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:346
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Debug build"
 msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
-msgstr "بناء إصلاح العلل"
+msgstr "بناء التنقيح"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:348
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Windows 7 API"
 msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
-msgstr "واجهة برمجة تطبيقات ويندوز"
+msgstr "واجهة برمجة تطبيقات ويندوز ٧"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:350
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Portable build"
 msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
 msgstr "بناء محمول"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:368
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "No available extensions."
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "لا ملحقات متوفرة."
@@ -2897,7 +2688,6 @@ msgid "SSL Certificate Error!"
 msgstr "خطأ في شهادة SSL!"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
-#, fuzzy
 msgctxt "DesktopNotificationsFactory|"
 msgid "Preview"
 msgstr "معاينة"
@@ -3063,10 +2853,9 @@ msgid "<b>QtWebEngine version %1</b></p>"
 msgstr "<b>QtWebEngine إصدار %1</b></p>"
 
 #: lib/other/aboutdialog.ui:14
-#, fuzzy
 msgctxt "AboutDialog|"
 msgid "About Falkon"
-msgstr "&عن فالكون"
+msgstr "عن فالكون"
 
 #: lib/other/browsinglibrary.cpp:55
 msgctxt "BrowsingLibrary|"
@@ -3246,10 +3035,9 @@ msgstr "عارض الرُخَص"
 #: lib/other/protocolhandlerdialog.ui:14
 msgctxt "ProtocolHandlerDialog|"
 msgid "Manage protocol handlers"
-msgstr ""
+msgstr "أدر معالجات الموافيق"
 
 #: lib/other/protocolhandlerdialog.ui:40
-#, fuzzy
 msgctxt "ProtocolHandlerDialog|"
 msgid "Protocol"
 msgstr "الميفاق"
@@ -3260,9 +3048,6 @@ msgid "Site"
 msgstr "الموقع"
 
 #: lib/other/protocolhandlerdialog.ui:68
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
 msgstr "احذف"
@@ -3273,18 +3058,13 @@ msgid "Warning!"
 msgstr "تحذير!"
 
 #: lib/other/registerqappassociation.cpp:111
-#, fuzzy
-#| msgctxt "RegisterQAppAssociation|"
-#| msgid ""
-#| "There are some problems. Please, reinstall QupZilla.\n"
-#| "Maybe relaunch with administrator right do a magic for you! ;)"
 msgctxt "RegisterQAppAssociation|"
 msgid ""
 "There are some problems. Please, reinstall Falkon.\n"
 "Maybe relaunch with administrator right do a magic for you! ;)"
 msgstr ""
-"وقعت بعض المشكلات. أعد تثبيت كَبزيلا.\n"
-"قد يحل المشكلةَ تشغيل كَبزيلا ثانية بصلاحيات المدير! ;)"
+"وقعت بعض المشكلات. أعد تثبيت فالكون.\n"
+"قد يحل المشكلةَ تشغيل فالكون ثانية بصلاحيات المدير! ;)"
 
 #: lib/other/siteinfo.cpp:68
 msgctxt "SiteInfo|"
@@ -3312,20 +3092,14 @@ msgid "Save Image to Disk"
 msgstr "احفظ الصورة في القرص"
 
 #: lib/other/siteinfo.cpp:190
-#, fuzzy
-#| msgctxt "HistoryManager|"
-#| msgid "Copy title"
 msgctxt "SiteInfo|"
 msgid "Copy Values"
-msgstr "انسخ العنوان"
+msgstr "انسخ القيم"
 
 #: lib/other/siteinfo.cpp:191
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Copy image ad&dress"
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
-msgstr "انسخ رابط الصور&ة"
+msgstr "انسخ الوسوم والقيم"
 
 #: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
@@ -3418,10 +3192,10 @@ msgid "<b>Preview</b>"
 msgstr "<b>معاينة</b>"
 
 #: lib/other/siteinfowidget.cpp:42
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "<b>Site %1<b/>"
-msgstr "الموقع"
+msgstr "<b>الموقع %1<b/>"
 
 #: lib/other/siteinfowidget.cpp:45
 msgctxt "SiteInfoWidget|"
@@ -3486,12 +3260,9 @@ msgid "Update available"
 msgstr "يتوفر تحديث"
 
 #: lib/other/updater.cpp:151
-#, fuzzy
-#| msgctxt "Updater|"
-#| msgid "New version of QupZilla is ready to download."
 msgctxt "Updater|"
 msgid "New version of Falkon is ready to download."
-msgstr "صدر إصدار جديد من كَبزيلا وهو جاهز للتحميل. "
+msgstr "صدر إصدار جديد من فالكون وهو جاهز للتحميل."
 
 #: lib/other/updater.cpp:160
 msgctxt "Updater|"
@@ -3807,12 +3578,9 @@ msgid "Open popup windows"
 msgstr "تفتح نوافذ منبثقة"
 
 #: lib/preferences/jsoptions.ui:36
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "New &Private Window"
 msgctxt "JsOptions|"
 msgid "Activate windows"
-msgstr "نافذة &خفيّة جديدة"
+msgstr "النوافذ النشطة"
 
 #: lib/preferences/jsoptions.ui:43
 msgctxt "JsOptions|"
@@ -3820,17 +3588,11 @@ msgid "Access clipboard"
 msgstr "تصل إلى الحافظة"
 
 #: lib/preferences/jsoptions.ui:50
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "JsOptions|"
 msgid "Paste from clipboard"
-msgstr "تصل إلى الحافظة"
+msgstr "الصق من الحافظة"
 
 #: lib/preferences/pluginslist.ui:17
-#, fuzzy
-#| msgctxt "LocationBar|"
-#| msgid "Enter address"
 msgctxt "PluginsList|"
 msgid "Enter name"
 msgstr "أدخل الاسم:"
@@ -3841,9 +3603,6 @@ msgid "Settings"
 msgstr "الإعدادات"
 
 #: lib/preferences/pluginslist.ui:61
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "PluginsList|"
 msgid "Remove"
 msgstr "احذف"
@@ -3853,6 +3612,7 @@ msgctxt "PluginsList|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
 msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">احصل على امتدادات...</a>"
 
 #: lib/preferences/pluginsmanager.cpp:198
 msgctxt "PluginsManager|"
@@ -3865,9 +3625,6 @@ msgid "Cannot load extension!"
 msgstr "لا يمكن تحميل المُلحقة!"
 
 #: lib/preferences/pluginsmanager.cpp:237
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Confirmation"
 msgctxt "PluginsManager|"
 msgid "Confirmation"
 msgstr "تأكيد"
@@ -4138,12 +3895,9 @@ msgid "Don't load tabs until selected"
 msgstr "لا تبدأ تحميل محتوى اللسان حتى يُحدّد"
 
 #: lib/preferences/preferences.ui:440
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Check to see if QupZilla is the default browser on startup"
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
-msgstr "عند البدء، التمس إن كان كبزيلا المتصفح المبدئي"
+msgstr "عند البدء، التمس إن كان فالكون المتصفح المبدئي"
 
 #: lib/preferences/preferences.ui:450
 msgctxt "Preferences|"
@@ -4843,7 +4597,6 @@ msgid "Use OSD Notifications"
 msgstr "استخدم تنبيهات OSD"
 
 #: lib/preferences/preferences.ui:2276
-#, fuzzy
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "معاينة"
@@ -4939,9 +4692,6 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>أدر محركات البحث</b>"
 
 #: lib/preferences/thememanager.cpp:100
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Confirmation"
 msgctxt "ThemeManager|"
 msgid "Confirmation"
 msgstr "تأكيد"
@@ -5109,7 +4859,6 @@ msgid "Saved Session (%1)"
 msgstr ""
 
 #: lib/session/sessionmanager.cpp:180
-#, fuzzy
 msgctxt "SessionManager|"
 msgid "Restore Backup"
 msgstr "استعد النّسخة الاحتياطيّة"
@@ -5120,7 +4869,6 @@ msgid "Are you sure you want to replace current session?"
 msgstr ""
 
 #: lib/session/sessionmanager.cpp:199
-#, fuzzy
 msgctxt "SessionManager|"
 msgid "Delete Session"
 msgstr "احذف الجلسة"
@@ -5142,22 +4890,20 @@ msgid "Please enter a name to create new session:"
 msgstr ""
 
 #: lib/session/sessionmanager.cpp:211
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "SessionManager|"
 msgid "New Session (%1)"
-msgstr "جلسة جديدة"
+msgstr "جلسة جديدة (%1)"
 
 #: lib/session/sessionmanager.cpp:243
-#, fuzzy
 msgctxt "SessionManager|"
 msgid "Backup 1"
-msgstr "انسخ احتياطيًّا"
+msgstr "النسخة الاحتياطيّة ١"
 
 #: lib/session/sessionmanager.cpp:250
-#, fuzzy
 msgctxt "SessionManager|"
 msgid "Backup 2"
-msgstr "انسخ احتياطيًّا"
+msgstr "النسخة الاحتياطيّة ٢"
 
 #: lib/session/sessionmanager.cpp:290
 msgctxt "SessionManager|"
@@ -5655,20 +5401,16 @@ msgid "Allow %1 to hide your pointer?"
 msgstr "أتسمح لـ%1 بإخفاء المؤشر؟"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:69
-#, fuzzy, qt-format
-#| msgctxt "HTML5PermissionsNotification|"
-#| msgid "Allow %1 to locate your position?"
+#, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen?"
-msgstr "أتسمح لـ%1 أن يطلع على موقعك الجغرافي؟"
+msgstr "أتسمح لـ%1 أن يلتقط شاشتك؟"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:73
-#, fuzzy, qt-format
-#| msgctxt "HTML5PermissionsNotification|"
-#| msgid "Allow %1 to use your microphone and camera?"
+#, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen and audio?"
-msgstr "أتسمح لـ%1 باستخدام الميكرفون والكمرة؟"
+msgstr "أتسمح لـ%1 بالتقاط شاشتك والصوت؟"
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:43
 msgctxt "HTML5PermissionsNotification|"
@@ -5732,19 +5474,14 @@ msgid "Prevent this page from creating additional dialogs"
 msgstr "امنع هذه الصفحة من إنشاء حوارات بعد هذا"
 
 #: lib/webengine/webpage.cpp:330
-#, fuzzy, qt-format
-#| msgctxt "WebPage|"
-#| msgid ""
-#| "QupZilla cannot handle <b>%1:</b> links. The requested link is <ul><li>"
-#| "%2</li></ul>Do you want QupZilla to try open this link in system "
-#| "application?"
+#, qt-format
 msgctxt "WebPage|"
 msgid ""
 "Falkon cannot handle <b>%1:</b> links. The requested link is <ul><li>%2</"
 "li></ul>Do you want Falkon to try open this link in system application?"
 msgstr ""
-"يتعذر على كبزيلا تولي التعامل مع روابط <b>%1:</b>. نوع الرابط الذي طلبته "
-"<ul><li>%2</li></ul>فهل تريد من كَبزيلا محاولة فتح هذا الرابط ببرنامج في "
+"يتعذر على فالكون تولي التعامل مع روابط <b>%1:</b>. نوع الرابط الذي طلبته "
+"<ul><li>%2</li></ul>فهل تريد من فالكون محاولة فتح هذا الرابط ببرنامج في "
 "النظام؟  "
 
 #: lib/webengine/webpage.cpp:335
