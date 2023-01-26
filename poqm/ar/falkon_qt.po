@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-01-23 23:03+0400\n"
+"PO-Revision-Date: 2023-01-25 20:29+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -341,11 +341,23 @@ msgid_plural ""
 "There are still %n open tabs and your session won't be stored.\n"
 "Are you sure you want to close this window?"
 msgstr[0] ""
+"ما زال %n لساناً مفتوحاً وجلستك لن تحفظ.\n"
+"هل تريد إغلاق هذه النافذة؟"
 msgstr[1] ""
+"ما زال هناك لساناً مفتوحاً وجلستك لن تحفظ.\n"
+"هل تريد إغلاق هذه النافذة؟"
 msgstr[2] ""
+"ما زال هناك لسانين مفتوحين وجلستك لن تحفظ.\n"
+"هل تريد إغلاق هذه النافذة؟"
 msgstr[3] ""
+"ما زال %n ألسنة مفتوحة وجلستك لن تحفظ.\n"
+"هل تريد إغلاق هذه النافذة؟"
 msgstr[4] ""
+"ما زال %n لساناً مفتوحاً وجلستك لن تحفظ.\n"
+"هل تريد إغلاق هذه النافذة؟"
 msgstr[5] ""
+"ما زال %n لساناً مفتوحاً وجلستك لن تحفظ.\n"
+"هل تريد إغلاق هذه النافذة؟"
 
 #: lib/app/browserwindow.cpp:1504
 msgctxt "BrowserWindow|"
@@ -2122,37 +2134,37 @@ msgstr "أخرج من ملء الشّاشة"
 #: lib/navigation/navigationbar.cpp:190
 msgctxt "NavigationBar|"
 msgid "Back and Forward buttons"
-msgstr ""
+msgstr "أزرار الأمام و للخلف"
 
 #: lib/navigation/navigationbar.cpp:191
 msgctxt "NavigationBar|"
 msgid "Reload button"
-msgstr ""
+msgstr "زر إعادة التحميل"
 
 #: lib/navigation/navigationbar.cpp:192
 msgctxt "NavigationBar|"
 msgid "Home button"
-msgstr ""
+msgstr "زر المنزل"
 
 #: lib/navigation/navigationbar.cpp:193
 msgctxt "NavigationBar|"
 msgid "Add tab button"
-msgstr ""
+msgstr "أضف زر اللسان"
 
 #: lib/navigation/navigationbar.cpp:194
 msgctxt "NavigationBar|"
 msgid "Address and Search bar"
-msgstr ""
+msgstr "شريط العنوان والبحث"
 
 #: lib/navigation/navigationbar.cpp:195
 msgctxt "NavigationBar|"
 msgid "Tools button"
-msgstr ""
+msgstr "زر الأدوات"
 
 #: lib/navigation/navigationbar.cpp:196
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen button"
-msgstr ""
+msgstr "زر الخروج من ملء الشاشة"
 
 #: lib/navigation/navigationbar.cpp:393 lib/navigation/navigationbar.cpp:427
 msgctxt "NavigationBar|"
@@ -2172,12 +2184,12 @@ msgstr "الشريط الجانبيّ"
 #: lib/navigation/navigationbar.cpp:450 lib/navigation/navigationbar.cpp:464
 msgctxt "NavigationBar|"
 msgid "Configure Toolbar"
-msgstr ""
+msgstr "اضبط شريط الأدوات"
 
 #: lib/navigation/navigationbarconfigdialog.ui:14
 msgctxt "NavigationBarConfigDialog|"
 msgid "Configure Toolbar"
-msgstr ""
+msgstr "اضبط شريط الأدوات"
 
 #: lib/navigation/navigationbarconfigdialog.ui:62
 msgctxt "NavigationBarConfigDialog|"
@@ -2187,12 +2199,12 @@ msgstr "اعرض شريط البحث"
 #: lib/navigation/navigationbarconfigdialog.ui:82
 msgctxt "NavigationBarConfigDialog|"
 msgid "Available items:"
-msgstr ""
+msgstr "العناصر المتوفرة:"
 
 #: lib/navigation/navigationbarconfigdialog.ui:89
 msgctxt "NavigationBarConfigDialog|"
 msgid "Current items:"
-msgstr ""
+msgstr "العناصر الحالية:"
 
 #: lib/navigation/reloadstopbutton.cpp:57
 msgctxt "ReloadStopButton|"
@@ -2365,25 +2377,16 @@ msgid "Reload"
 msgstr "أعد التحميل"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:213
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Are you sure you want to remove this speed dial?"
 msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to remove this speed dial?"
 msgstr "أتريد حقّا أن تحذف هذه المُدخلة من الوصول السريع؟"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:214
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Are you sure you want to reload all speed dials?"
 msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to reload all speed dials?"
 msgstr "أتريد حقّا أن تعيد تحميل كل مُدخلات الوصول السريع؟"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:215
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Load title from page"
 msgctxt "FalkonSchemeReply|"
 msgid "Load title from page"
 msgstr "حمل العنوان من الصفحة"
@@ -2391,7 +2394,7 @@ msgstr "حمل العنوان من الصفحة"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:216
 msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
-msgstr ""
+msgstr "يحتاج الوصول السريع تمكين جافاسكربت"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:217
 msgctxt "FalkonSchemeReply|"
@@ -2456,12 +2459,12 @@ msgstr "ملائمة الارتفاع"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:229
 msgctxt "FalkonSchemeReply|"
 msgid "Use custom wallpaper"
-msgstr ""
+msgstr "استخدم خلفية مخصصة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:230
 msgctxt "FalkonSchemeReply|"
 msgid "Click to select image"
-msgstr ""
+msgstr "انقر لتختار صورة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:231
 msgctxt "FalkonSchemeReply|"
@@ -2484,34 +2487,21 @@ msgid "Restore Session"
 msgstr "استعد الجلسة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:259
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Oops, QupZilla crashed."
 msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
-msgstr "آسف، توقف كَبزيلا عن العمل."
+msgstr "آسف، توقف فالكون عن العمل."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:260
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid ""
-#| "We apologize for this. Would you like to restore the last saved state?"
 msgctxt "FalkonSchemeReply|"
 msgid "We apologize for this. Would you like to restore the last saved state?"
 msgstr "نعتذر إليك عن هذا. أتريد أن تستعيد آخر حالة حُفظت؟"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:261
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Try removing one or more tabs that you think cause troubles"
 msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
 msgstr "جرب أن تحذف لساناً أو أكثر تعتقد أنها قد سببت المشكلة"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:262
-#, fuzzy
-#| msgctxt "QupZillaSchemeReply|"
-#| msgid "Or you can start completely new session"
 msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
 msgstr "أو ابدأ جلسة جديدة إن شئت"
@@ -3237,7 +3227,7 @@ msgstr "ثالثة"
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "Register as <b>%1</b> links handler"
-msgstr ""
+msgstr "سجّل كمُباشِر لروابط<b>%1</b>"
 
 #: lib/other/siteinfowidget.cpp:107
 msgctxt "SiteInfoWidget|"
@@ -4092,7 +4082,7 @@ msgstr "ابحث بمحرك البحث المبدئي"
 #: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Show search suggestions"
-msgstr ""
+msgstr "اعرض اقتراحات البحث"
 
 #: lib/preferences/preferences.ui:875
 msgctxt "Preferences|"
@@ -4144,12 +4134,12 @@ msgstr "ضبط الوِب"
 #: lib/preferences/preferences.ui:1011
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
-msgstr ""
+msgstr "مكن واجهة برمجيات ملحقات Pepper‏ (PPAPI)"
 
 #: lib/preferences/preferences.ui:1018
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
-msgstr ""
+msgstr "استخدم مستعرض بي دي اف المدمج (يحتاج PPAPI)"
 
 #: lib/preferences/preferences.ui:1025
 msgctxt "Preferences|"
@@ -4190,30 +4180,24 @@ msgid "Use native scrollbars"
 msgstr "استخدم أشرطة التمرير الأصيلة"
 
 #: lib/preferences/preferences.ui:1074
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable automatic searching from the address bar"
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
-msgstr "فعل البحث الآلي من شريط العنوان"
+msgstr "عطل التشغيل آلي للفيديوهات"
 
 #: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
-msgstr ""
+msgstr "امنع WebRTC من تسريب عنوان IP المحلي"
 
 #: lib/preferences/preferences.ui:1088
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable XSS Auditing"
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
-msgstr "فعل فحص النصوص البرمجية العابرة للمواقع (XSS)"
+msgstr "مكن الجلب المسبق لـDNS"
 
 #: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Enable screen capture"
-msgstr ""
+msgstr "مكن التقاط الشّاشة"
 
 #: lib/preferences/preferences.ui:1112
 msgctxt "Preferences|"
@@ -4427,6 +4411,7 @@ msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
 "shortcut was intended."
 msgstr ""
+"إذا لم يفعل، سيمنع الخروج العرضي من التطبيق إذا كان اختصار CTRL-W المقصود."
 
 #: lib/preferences/preferences.ui:1742
 msgctxt "Preferences|"
@@ -4501,7 +4486,7 @@ msgstr "اسمح بحفظ كلمات المرور من المواقع"
 #: lib/preferences/preferences.ui:1982
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
-msgstr ""
+msgstr "يكمل كلمات السر في المواقع آليا"
 
 #: lib/preferences/preferences.ui:1993
 msgctxt "Preferences|"
@@ -4602,18 +4587,13 @@ msgid "Preview"
 msgstr "معاينة"
 
 #: lib/preferences/preferences.ui:2341
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "For more information about Spell Check, please see <a href=\"https://"
-#| "github.com/QupZilla/qupzilla/wiki/Spell-Check\">wiki</a>."
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
 "userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 msgstr ""
-"لمعلومات أكثر عن التدقيق الإملائي رجاء طالع <a href=\"https://github.com/"
-"QupZilla/qupzilla/wiki/Spell-Check\">الويكي</a>."
+"لمعلومات أكثر عن التدقيق الإملائي رجاء طالع <a href=\"https://userbase.kde."
+"org/Falkon#Spell_Check\">ويكي</a>."
 
 #: lib/preferences/preferences.ui:2383
 msgctxt "Preferences|"
@@ -4656,12 +4636,9 @@ msgid "<b>Change browser identification</b>"
 msgstr "<b>غير هوية المتصفح</b>"
 
 #: lib/preferences/preferences.ui:2545
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
-msgstr "مُدير الكعكات"
+msgstr "مُدير مباشرات الموافيق"
 
 #: lib/preferences/preferences.ui:2585
 msgctxt "Preferences|"
@@ -4684,12 +4661,9 @@ msgid "User Agent Manager"
 msgstr "مُدير وكيل المستخدم"
 
 #: lib/preferences/preferences.ui:2690
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Manage search engines</b>"
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>أدر محركات البحث</b>"
+msgstr "<b>أدر مباشرات الموافيق</b>"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -4732,6 +4706,8 @@ msgctxt "ThemeManager|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
 msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/572/\">احصل على المزيد من "
+"السمات...</a>"
 
 #: lib/preferences/useragentdialog.cpp:99
 msgctxt "UserAgentDialog|"
@@ -4796,17 +4772,17 @@ msgstr "عدّل"
 #: lib/session/sessionmanager.cpp:126
 msgctxt "SessionManager|"
 msgid "_cloned"
-msgstr ""
+msgstr "_مستنسخ"
 
 #: lib/session/sessionmanager.cpp:126
 msgctxt "SessionManager|"
 msgid "_renamed"
-msgstr ""
+msgstr "_معاد تسميته"
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
 msgid "Clone Session"
-msgstr ""
+msgstr "استنسخ الجلسة"
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
@@ -4835,12 +4811,12 @@ msgstr "ملف الجلسة ”%1“ موجود. رجاء أدخل اسما آخ
 #: lib/session/sessionmanager.cpp:143
 msgctxt "SessionManager|"
 msgid "An error occurred when cloning session file."
-msgstr ""
+msgstr "حدث خطأ عند استنساخ ملف الجلسة"
 
 #: lib/session/sessionmanager.cpp:148
 msgctxt "SessionManager|"
 msgid "An error occurred when renaming session file."
-msgstr ""
+msgstr "حدث خطأ عند إعادة تسمية ملف الجلسة"
 
 #: lib/session/sessionmanager.cpp:161
 msgctxt "SessionManager|"
@@ -4850,13 +4826,13 @@ msgstr "احفظ الجلسة"
 #: lib/session/sessionmanager.cpp:162
 msgctxt "SessionManager|"
 msgid "Please enter a name to save session:"
-msgstr ""
+msgstr "فضلًا أدخِل اسماً لحفظ الجلسة:"
 
 #: lib/session/sessionmanager.cpp:163
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Saved Session (%1)"
-msgstr ""
+msgstr "الجلسة المحفوظة (%1)"
 
 #: lib/session/sessionmanager.cpp:180
 msgctxt "SessionManager|"
@@ -4866,7 +4842,7 @@ msgstr "استعد النّسخة الاحتياطيّة"
 #: lib/session/sessionmanager.cpp:180
 msgctxt "SessionManager|"
 msgid "Are you sure you want to replace current session?"
-msgstr ""
+msgstr "هل أنت متيقِّن أنك تريد استبدال الجلسة الحالية ؟"
 
 #: lib/session/sessionmanager.cpp:199
 msgctxt "SessionManager|"
@@ -4877,7 +4853,7 @@ msgstr "احذف الجلسة"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Are you sure you want to delete session '%1'?"
-msgstr ""
+msgstr "هل ترغب بحذف جلسة '%1'؟"
 
 #: lib/session/sessionmanager.cpp:209
 msgctxt "SessionManager|"
@@ -4887,7 +4863,7 @@ msgstr "جلسة جديدة"
 #: lib/session/sessionmanager.cpp:210
 msgctxt "SessionManager|"
 msgid "Please enter a name to create new session:"
-msgstr ""
+msgstr "فضلًا أدخِل اسماً لإنشاء جلسة جديدة:"
 
 #: lib/session/sessionmanager.cpp:211
 #, qt-format
@@ -4908,18 +4884,18 @@ msgstr "النسخة الاحتياطيّة ٢"
 #: lib/session/sessionmanager.cpp:290
 msgctxt "SessionManager|"
 msgid "Default Session"
-msgstr ""
+msgstr "الجلسة المبدئية"
 
 #: lib/session/sessionmanager.cpp:393
 msgctxt "SessionManager|"
 msgid "Please select the startup session:"
-msgstr ""
+msgstr "فضلاً اختر جلسة البدء:"
 
 #: lib/session/sessionmanager.cpp:412
 #, qt-format
 msgctxt "SessionManager|"
 msgid "%1 (last session)"
-msgstr ""
+msgstr "%1 (أخر جلسة)"
 
 #: lib/session/sessionmanagerdialog.cpp:140
 msgctxt "SessionManagerDialog|"
@@ -5050,32 +5026,32 @@ msgstr "أغلق الألسنة"
 #: lib/tabwidget/tabcontextmenu.cpp:80
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close other tabs?"
-msgstr ""
+msgstr "أتريد حقًا إغلاق الألسنة الأخرى؟"
 
 #: lib/tabwidget/tabcontextmenu.cpp:88
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the right?"
-msgstr ""
+msgstr "أتريد حقًا إغلاق كلّ الألسنة التي في اليمين؟"
 
 #: lib/tabwidget/tabcontextmenu.cpp:89
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the bottom?"
-msgstr ""
+msgstr "أتريد حقًا إغلاق كلّ الألسنة التي في جهة السفلى؟"
 
 #: lib/tabwidget/tabcontextmenu.cpp:99
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the left?"
-msgstr ""
+msgstr "أتريد حقًا إغلاق كلّ الألسنة التي في اليسار؟"
 
 #: lib/tabwidget/tabcontextmenu.cpp:100
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the top?"
-msgstr ""
+msgstr "أتريد حقًا إغلاق كلّ الألسنة التي في جهة العليا؟"
 
 #: lib/tabwidget/tabcontextmenu.cpp:117
 msgctxt "TabContextMenu|"
 msgid "&Stop Tab"
-msgstr ""
+msgstr "أ&وقف اللسان"
 
 #: lib/tabwidget/tabcontextmenu.cpp:120
 msgctxt "TabContextMenu|"
@@ -5095,12 +5071,12 @@ msgstr "اف&صل اللسان"
 #: lib/tabwidget/tabcontextmenu.cpp:129
 msgctxt "TabContextMenu|"
 msgid "Un&pin Tab"
-msgstr ""
+msgstr "أل&غ التثبيت اللسان"
 
 #: lib/tabwidget/tabcontextmenu.cpp:129
 msgctxt "TabContextMenu|"
 msgid "&Pin Tab"
-msgstr ""
+msgstr "&ثبت اللسان"
 
 #: lib/tabwidget/tabcontextmenu.cpp:130
 msgctxt "TabContextMenu|"
@@ -5113,17 +5089,14 @@ msgid "&Mute Tab"
 msgstr "ا&كتم اللسان"
 
 #: lib/tabwidget/tabcontextmenu.cpp:133
-#, fuzzy
-#| msgctxt "HistoryMenu|"
-#| msgid "Closed Tabs"
 msgctxt "TabContextMenu|"
 msgid "Load Tab"
-msgstr "الألسنة المغلقة"
+msgstr "حمّل اللسان"
 
 #: lib/tabwidget/tabcontextmenu.cpp:135
 msgctxt "TabContextMenu|"
 msgid "Unload Tab"
-msgstr ""
+msgstr "أفرغ اللسان"
 
 #: lib/tabwidget/tabcontextmenu.cpp:139
 msgctxt "TabContextMenu|"
@@ -5143,22 +5116,22 @@ msgstr "أغلق الألسنة الأ&خرى"
 #: lib/tabwidget/tabcontextmenu.cpp:145
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Right"
-msgstr ""
+msgstr "أغلق الألسنة التي في اليمين"
 
 #: lib/tabwidget/tabcontextmenu.cpp:145
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Bottom"
-msgstr ""
+msgstr "أغلق الألسنة التي في  الأسفل"
 
 #: lib/tabwidget/tabcontextmenu.cpp:146
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Left"
-msgstr ""
+msgstr "أغلق الألسنة التي في اليسار"
 
 #: lib/tabwidget/tabcontextmenu.cpp:146
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Top"
-msgstr ""
+msgstr "أغلق الألسنة التي في الأعلى"
 
 #: lib/tabwidget/tabcontextmenu.cpp:151
 msgctxt "TabContextMenu|"
@@ -5347,17 +5320,17 @@ msgstr "الميكرفون والكمر"
 #: lib/tools/html5permissions/html5permissionsdialog.ui:112
 msgctxt "HTML5PermissionsDialog|"
 msgid "Hide Pointer"
-msgstr "إخفاء المؤشر"
+msgstr "أخف المؤشر"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:117
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display Capture"
-msgstr ""
+msgstr "التقاط الشاشة"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:122
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display and Audio Capture"
-msgstr ""
+msgstr "التقاط الشاشة والصوت"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:41
 msgctxt "HTML5PermissionsNotification|"
