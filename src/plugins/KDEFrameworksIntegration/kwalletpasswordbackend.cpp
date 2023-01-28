@@ -279,8 +279,6 @@ void KWalletPasswordBackend::initialize()
             ++j;
         }
     }
-
-    return;
 }
 
 KWalletPasswordBackend::~KWalletPasswordBackend()
