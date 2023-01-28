@@ -34,11 +34,14 @@ static PasswordEntry decodeEntry(const QByteArray &data)
     return entry;
 }
 
-static QByteArray encodeEntry(const PasswordEntry &entry)
+static QMap<QString, QString> encodeEntry(const PasswordEntry &entry)
 {
-    QByteArray data;
-    QDataStream stream(&data, QIODevice::WriteOnly);
-    stream << entry;
+    QMap<QString, QString> data = {
+        {"host", entry.host},
+        {"username", entry.username},
+        {"password", entry.password},
+        {"data", QString::fromUtf8(entry.data)}
+    };
     return data;
 }
 
@@ -93,7 +96,7 @@ void KWalletPasswordBackend::addEntry(const PasswordEntry &entry)
     stored.id = QString("%1/%2").arg(entry.host, entry.username);
     stored.updated = QDateTime::currentDateTime().toTime_t();
 
-    m_wallet->writeEntry(stored.id.toString(), encodeEntry(stored));
+    m_wallet->writeMap(stored.id.toString(), encodeEntry(stored));
     m_allEntries.append(stored);
 }
 
@@ -107,7 +110,7 @@ bool KWalletPasswordBackend::updateEntry(const PasswordEntry &entry)
     }
 
     m_wallet->removeEntry(entry.id.toString());
-    m_wallet->writeEntry(entry.id.toString(), encodeEntry(entry));
+    m_wallet->writeMap(entry.id.toString(), encodeEntry(entry));
 
     int index = m_allEntries.indexOf(entry);
 
@@ -131,7 +134,7 @@ void KWalletPasswordBackend::updateLastUsed(PasswordEntry &entry)
 
     entry.updated = QDateTime::currentDateTime().toTime_t();
 
-    m_wallet->writeEntry(entry.id.toString(), encodeEntry(entry));
+    m_wallet->writeMap(entry.id.toString(), encodeEntry(entry));
 
     int index = m_allEntries.indexOf(entry);
 
@@ -169,14 +172,14 @@ void KWalletPasswordBackend::removeAll()
 
     m_allEntries.clear();
 
-    m_wallet->removeFolder("Falkon");
-    m_wallet->createFolder("Falkon");
+    m_wallet->removeFolder("FalkonPasswords");
+    m_wallet->createFolder("FalkonPasswords");
 }
 
 void KWalletPasswordBackend::showErrorNotification()
 {
     static bool initialized;
-    
+
     if (!initialized) {
         initialized = true;
         mApp->desktopNotifications()->showNotification(KDEFrameworksIntegrationPlugin::tr("KWallet disabled"), KDEFrameworksIntegrationPlugin::tr("Please enable KWallet to save password."));
@@ -201,56 +204,83 @@ void KWalletPasswordBackend::initialize()
         return;
     }
 
-    bool migrate = !m_wallet->hasFolder("Falkon") && m_wallet->hasFolder("QupZilla");
+    bool migrationFalkon = !m_wallet->hasFolder("FalkonPasswords") && m_wallet->hasFolder("Falkon");
+    bool migrateQupzilla = !m_wallet->hasFolder("FalkonPasswords") && !m_wallet->hasFolder("Falkon") && m_wallet->hasFolder("QupZilla");
+    bool migration = false;
 
-    if (!m_wallet->hasFolder("Falkon") && !m_wallet->createFolder("Falkon")) {
-        qWarning() << "KWalletPasswordBackend::initialize Cannot create folder \"Falkon\"!";
+    if (!m_wallet->hasFolder("FalkonPasswords") && !m_wallet->createFolder("FalkonPasswords")) {
+        qWarning() << "KWalletPasswordBackend::initialize Cannot create folder \"FalkonPasswords\"!";
         return;
     }
 
-    if (migrate) {
+    if (migrationFalkon) {
+        if (!m_wallet->setFolder("Falkon")) {
+            qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"Falkon\"!";
+            return;
+        }
+        migration = true;
+    }
+    else if (migrateQupzilla) {
         if (!m_wallet->setFolder("QupZilla")) {
             qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"QupZilla\"!";
             return;
         }
-    } else {
-        if (!m_wallet->setFolder("Falkon")) {
-            qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"Falkon\"!";
+        migration = true;
+    }
+    else {
+        if (!m_wallet->setFolder("FalkonPasswords")) {
+            qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"FalkonPasswords\"!";
             return;
         }
     }
 
-    QMap<QString, QByteArray> entries;
-    bool ok = false;
-#if KWALLET_VERSION < QT_VERSION_CHECK(5, 72, 0)
-    ok = m_wallet->readEntryList("*", entries) == 0;
-#else
-    entries = m_wallet->entriesList(&ok);
-#endif
-    if (!ok) {
-        qWarning() << "KWalletPasswordBackend::initialize Cannot read entries!";
-        return;
-    }
-
-    QMap<QString, QByteArray>::const_iterator i = entries.constBegin();
-    while (i != entries.constEnd()) {
-        PasswordEntry entry = decodeEntry(i.value());
-        if (entry.isValid()) {
-            m_allEntries.append(entry);
+    if (migration) {
+        QMap<QString, QByteArray> entries;
+        bool ok = false;
+        entries = m_wallet->entriesList(&ok);
+        if (!ok) {
+            qWarning() << "KWalletPasswordBackend::initialize Cannot read entries!";
+            return;
         }
-        ++i;
-    }
 
-    if (migrate) {
-        if (!m_wallet->setFolder("Falkon")) {
-            qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"Falkon\"!";
+        QMap<QString, QByteArray>::const_iterator i = entries.constBegin();
+        while (i != entries.constEnd()) {
+            PasswordEntry entry = decodeEntry(i.value());
+            if (entry.isValid()) {
+                m_allEntries.append(entry);
+            }
+            ++i;
+        }
+
+        if (!m_wallet->setFolder("FalkonPasswords")) {
+            qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"FalkonPasswords\"!";
             return;
         }
 
         for (const PasswordEntry &entry : qAsConst(m_allEntries)) {
-            m_wallet->writeEntry(entry.id.toString(), encodeEntry(entry));
+            m_wallet->writeMap(entry.id.toString(), encodeEntry(entry));
         }
     }
+    else {
+        QMap<QString, QMap<QString, QString>> entriesMap;
+        bool ok = false;
+        entriesMap = m_wallet->mapList(&ok);
+        QMap<QString, QMap<QString, QString>>::const_iterator j = entriesMap.constBegin();
+        while (j != entriesMap.constEnd()) {
+            PasswordEntry entry;
+            entry.id = j.key();
+            entry.host = j.value()["host"];
+            entry.username = j.value()["username"];
+            entry.password = j.value()["password"];
+            entry.data = j.value()["data"].toUtf8();
+            if (entry.isValid()) {
+                m_allEntries.append(entry);
+            }
+            ++j;
+        }
+    }
+
+    return;
 }
 
 KWalletPasswordBackend::~KWalletPasswordBackend()
