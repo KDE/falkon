@@ -2,23 +2,52 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>%TITLE%</title>
 <style>
-html {background: #dddddd;font-family: sans-serif;color: #525c66;}
+html {font-family: sans-serif;}
 html * {font-size: 100%;line-height: 1.6;}
-#box {background: #ffffff; max-width:700px;min-width:400px;overflow:auto;margin: 25px auto 10px auto;padding: 10px 40px;text-align: %LEFT_STR%;direction: %DIRECTION%;}
-h1 {color: #1a4ba4;font-size: 160%;margin-bottom: 0px;}
-h2 {margin: 5px 0px;font-size: 100%;color: #525c66;font-weight: bold;}
+#box {max-width:700px;min-width:400px;overflow:auto;margin: 25px auto 10px auto;padding: 10px 40px;text-align: %LEFT_STR%;direction: %DIRECTION%;}
+h1 {font-size: 160%;margin-bottom: 0px;}
+h2 {margin: 5px 0px;font-size: 100%;font-weight: bold;}
 dl {margin-top: 0px;}
 dt {display: block;float: %LEFT_STR%;min-width: 24%;margin: 0 0 0.3em 1%}
-dd {color: black;margin: 0 0 0.3em 28%;word-wrap:break-word;}
+dd {margin: 0 0 0.3em 28%;word-wrap:break-word;}
 p {margin-%LEFT_STR%: 1%;}
 .about-img {float: %RIGHT_STR%;margin-top:10px;width:300px;}
-table.tbl {width: 100%;margin: 15px 0;border-radius: 4px;padding: 0px;border: 2px solid #aaa;border-collapse: separate;}
-.tbl th{border-radius: 2px;border: 1px solid #aaa;padding: 1px 3px;background: #eee;font-style:italic;}
-.tbl th[colspan="2"] {text-align: center;background: #ddd;font-style:normal;}
-.tbl td{border-radius: 2px;border: 1px solid #aaa;text-align: center;padding:1px 3px;}
-.tbl td:first-child{background: #eee;text-align: %LEFT_STR%;padding:1px 3px 1px 5px;}
-.no-available-plugins{background: white !important; text-align: center !important;}
-.tbl td:nth-of-type(2){color: black;max-width: 400px;max-height: 50px;overflow:auto;}
+table.tbl {width: 100%;margin: 15px 0;border-radius: 4px;padding: 0px;border: 2px solid;border-collapse: separate;}
+.tbl th{border-radius: 2px;border: 1px solid;padding: 1px 3px;font-style:italic;}
+.tbl th[colspan="2"] {text-align: center;font-style:normal;}
+.tbl td{border-radius: 2px;border: 1px solid;text-align: center;padding:1px 3px;}
+.tbl td:first-child{text-align: %LEFT_STR%;padding:1px 3px 1px 5px;}
+.no-available-plugins{text-align: center !important;}
+.tbl td:nth-of-type(2){max-width: 400px;max-height: 50px;overflow:auto;}
+
+@media (prefers-color-scheme: light) {
+  html {background: #dddddd;color: #525c66;}
+  #box {background: #ffffff;}
+  h1 {color: #1a4ba4;}
+  dd {color: black;}
+  table.tbl {border-color: #aaa;}
+  .tbl th[colspan="2"] {background: #ddd;}
+  .tbl th {background: #eee;border-color: #aaa;}
+  .tbl td {border-color: #aaa;}
+  .tbl td:first-child {background: #eee;}
+  .no-available-plugins {background: white !important;}
+  .tbl td:nth-of-type(2) {color: black;}
+  .dark {display: none;}
+}
+@media (prefers-color-scheme: dark) {
+  html {background: #070709;color: #dddddd;}
+  #box {background: #171717;}
+  h1 {color: #0078d7;}
+  dd {color: white;}
+  table.tbl {border-color: #555;}
+  .tbl th[colspan="2"] {background: #353535;}
+  .tbl th {background: #252525;border-color: #555;}
+  .tbl td {border-color: #555;}
+  .tbl td:first-child {background: #252525;}
+  .no-available-plugins {background: black !important;}
+  .tbl td:nth-of-type(2) {color: white;}
+  .light {display: none;}
+}
 </style>
 <script type="text/javascript">
 function addPlugins() {
@@ -39,7 +68,8 @@ window.addEventListener("load", addPlugins, false);
 </head>
 <body>
   <div id="box">
-  <img src="%ABOUT-IMG%" class="about-img">
+  <img src="%ABOUT-IMG%" class="about-img light">
+  <img src="%ABOUT-IMG-DARK%" class="about-img dark">
 <h1>%CONFIG%</h1>
 <h2>%INFORMATIONS-ABOUT-VERSION%</h2>
  <dl>

@@ -2,15 +2,28 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>%TITLE%</title>
 <style>
-html {background: #dddddd;font-family: sans-serif;color: #525c66;}
+html {font-family: sans-serif;}
 html * {font-size: 100%;line-height: 1.6;}
-#box {background: #ffffff;max-width:650px;min-width:400px;overflow:auto;margin: 25px auto 10px auto;padding: 10px 40px;text-align: %LEFT_STR%;direction: %DIRECTION%;}
-hr {color: lightgray;width: 100%;}
+#box {max-width:650px;min-width:400px;overflow:auto;margin: 25px auto 10px auto;padding: 10px 40px;text-align: %LEFT_STR%;direction: %DIRECTION%;}
+hr {width: 100%;}
 img {float: %LEFT_STR%;margin-%LEFT_STR%: -20px;margin-top: 15px;}
-h1 {font-size: 150%;font-weight: bold;border-bottom: 1px solid #f4f4f4;margin-%LEFT_STR%: 48px;margin-%RIGHT_STR%: 50px;}
+h1 {font-size: 150%;font-weight: bold;border-bottom: 1px solid;margin-%LEFT_STR%: 48px;margin-%RIGHT_STR%: 50px;}
 ul {font-size: 90%;padding-%LEFT_STR%: 48px;margin: 20px 0;max-width:600px;}
 li {padding: 5px;}
 #reloadButton {margin-top: 20px;min-width: 100px;}
+
+@media (prefers-color-scheme: light) {
+  html {background: #dddddd;color: #525c66;}
+  #box {background: #ffffff;}
+  h1, h2 {border-color: #f4f4f4;;}
+  hr {color: lightgray;}
+}
+@media (prefers-color-scheme: dark) {
+  html {background: #070709;color: #dddddd;}
+  #box {background: #171717;}
+  h1, h2 {border-color: #555;}
+  hr {color: darkgray;}
+}
 </style>
 </head>
 <body>

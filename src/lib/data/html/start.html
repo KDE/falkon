@@ -2,22 +2,39 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>%TITLE%</title>
 <style>
-html {background: #dddddd;font-family: sans-serif;color: #525c66;}
-#box {background: #ffffff; max-width: 500px;min-width:450px;margin: 25px auto 0px auto;padding: 15px 40px 15px 40px;direction: %DIRECTION%;}
-h1 {color: #1a4ba4;font-size: 160%;margin-top: 0px;}
-.line {width: 400px;height: 25px;text-align: center;border: 1px solid #babcb8;}
-.line:focus {border-color: #579eea;}
+html {font-family: sans-serif;}
+#box {max-width: 500px;min-width:450px;margin: 25px auto 0px auto;padding: 15px 40px 15px 40px;direction: %DIRECTION%;}
+h1 {font-size: 160%;margin-top: 0px;}
+.line {width: 400px;height: 25px;text-align: center;border: 1px solid;}
 .submit {margin-top: 5px;}
-a {color: #1a4ba4;text-decoration: none;font-weight: bold;}
+a {text-decoration: none;font-weight: bold;}
 .bottom {margin-top: 20px;margin-bottom: 3px;}
 img {margin-bottom:15px;}
+
+@media (prefers-color-scheme: light) {
+  html {background: #dddddd;color: #525c66;}
+  #box {background: #ffffff;}
+  h1, a {color: #1a4ba4;}
+  .line {border-color: #babcb8;}
+  .line:focus {border-color: #579eea;}
+  .dark {display: none;}
+}
+@media (prefers-color-scheme: dark) {
+  html {background: #070709;color: #dddddd;}
+  #box {background: #171717;}
+  h1, a {color: #0078d7;}
+  .line {background-color: #070709;color: white;border-color: #555;}
+  .line:focus {border-color: #1a4ba4;}
+  .light {display: none;}
+}
 </style>
 </head>
 <body onload="document.getElementById('inp').focus()">
   <div id="box">
 <center>
 
-<img src="%ABOUT-IMG%" width="250">
+<img class="light" src="%ABOUT-IMG%" width="250">
+<img class="dark" src="%ABOUT-IMG-DARK%" width="250">
 %PRIVATE-BROWSING%
 <form action="https://duckduckgo.com/" method="GET">
     <input type="hidden" name="t" value="qupzilla" />
