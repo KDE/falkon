@@ -169,7 +169,7 @@ void FCM_Dialog::currentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem* p
     ui->size->setText(QString::number(flashCookie.size) + tr(" Byte"));
     ui->textEdit->setPlainText(flashCookie.contents);
     ui->server->setText(flashCookie.origin);
-    ui->path->setText(QString("<a href=\"%1\">%2</a>").arg(QUrl::fromLocalFile(flashCookie.path).toString()).arg(QDir::toNativeSeparators(flashCookie.path)));
+    ui->path->setText(QString("<a href=\"%1\">%2</a>").arg(QUrl::fromLocalFile(flashCookie.path).toString(), QDir::toNativeSeparators(flashCookie.path)));
     ui->lastModified->setText(flashCookie.lastModification.toString());
 
     ui->removeOne->setText(tr("Remove flash cookie"));

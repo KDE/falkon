@@ -175,7 +175,7 @@ QString TLDExtractor::registrableDomainHelper(const QString &domainPart, const Q
         return {};
     }
     else {
-        return QString("%1.%2").arg(domainPart).arg(tldPart);
+        return QString("%1.%2").arg(domainPart, tldPart);
     }
 }
 
@@ -260,7 +260,7 @@ void TLDExtractor::loadData()
         QMessageBox::information(0, tr("File not found!"),
                                  tr("File \'effective_tld_names.dat\' was not found!\n"
                                     "You can download it from \'<a href=\"%1\"><b>here</b></a>\' to one of the following paths:\n%2")
-                                 .arg(tldDataFileDownloadLink).arg(m_dataSearchPaths.join("\n")));
+                                 .arg(tldDataFileDownloadLink, m_dataSearchPaths.join("\n")));
 
         return;
     }
@@ -363,7 +363,7 @@ bool TLDExtractor::test()
         QMessageBox::information(0, tr("File not found!"),
                                  tr("File \'test_psl.txt\' was not found!\n"
                                     "You can download it from \'<a href=\"%1\"><b>here</b></a>\' to one of the following paths:\n%2")
-                                 .arg(testFileDownloadLink).arg(m_dataSearchPaths.join("\n")));
+                                 .arg(testFileDownloadLink, m_dataSearchPaths.join("\n")));
 
         return false;
     }

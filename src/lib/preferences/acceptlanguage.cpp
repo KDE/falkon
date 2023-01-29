@@ -118,15 +118,17 @@ QStringList AcceptLanguage::expand(const QLocale::Language &language)
     for (int j = 0; j < countries.size(); ++j) {
         QString languageString;
         if (countries.count() == 1) {
-            languageString = QString(QLatin1String("%1 [%2]"))
-                             .arg(QLocale::languageToString(language))
-                             .arg(QLocale(language).name().split(QLatin1Char('_')).at(0));
+            languageString = QString(QLatin1String("%1 [%2]")).arg(
+                    QLocale::languageToString(language),
+                    QLocale(language).name().split(QLatin1Char('_')).at(0)
+            );
         }
         else {
-            languageString = QString(QLatin1String("%1/%2 [%3]"))
-                             .arg(QLocale::languageToString(language))
-                             .arg(QLocale::countryToString(countries.at(j)))
-                             .arg(QLocale(language, countries.at(j)).name().split(QLatin1Char('_')).join(QLatin1Char('-')).toLower());
+            languageString = QString(QLatin1String("%1/%2 [%3]")).arg (
+                    QLocale::languageToString(language),
+                    QLocale::countryToString(countries.at(j)),
+                    QLocale(language, countries.at(j)).name().split(QLatin1Char('_')).join(QLatin1Char('-')).toLower()
+            );
 
         }
         if (!allLanguages.contains(languageString)) {

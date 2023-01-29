@@ -131,7 +131,7 @@ void SessionManager::renameSession(QString sessionFilePath, SessionManager::Sess
     if (!ok)
         return;
 
-    const QString newSessionPath = QString("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions)).arg(newName);
+    const QString newSessionPath = QString("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions), newName);
     if (QFile::exists(newSessionPath)) {
         QMessageBox::information(mApp->activeWindow(), tr("Error!"), tr("The session file \"%1\" exists. Please enter another name.").arg(newName));
         renameSession(sessionFilePath, flags);
@@ -165,7 +165,7 @@ void SessionManager::saveSession()
     if (!ok)
         return;
 
-    const QString filePath = QString("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions)).arg(sessionName);
+    const QString filePath = QString("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions), sessionName);
     if (QFile::exists(filePath)) {
         QMessageBox::information(mApp->activeWindow(), tr("Error!"), tr("The session file \"%1\" exists. Please enter another name.").arg(sessionName));
         saveSession();
@@ -213,7 +213,7 @@ void SessionManager::newSession()
     if (!ok)
         return;
 
-    const QString filePath = QStringLiteral("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions)).arg(sessionName);
+    const QString filePath = QStringLiteral("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions), sessionName);
     if (QFile::exists(filePath)) {
         QMessageBox::information(mApp->activeWindow(), tr("Error!"), tr("The session file \"%1\" exists. Please enter another name.").arg(sessionName));
         newSession();
