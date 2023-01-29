@@ -34,6 +34,7 @@
 #include <QUrlQuery>
 #include <QWebEngineProfile>
 #include <QWebEngineUrlRequestJob>
+#include <QtWebEngineCoreVersion>
 
 static QString authorString(const char* name, const QString &mail)
 {
@@ -319,6 +320,7 @@ QString FalkonSchemeReply::configPage()
 #endif
                                                           ) +
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Qt version"), qVersion()) +
+                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("QtWebEngine version"), QSL(QTWEBENGINECORE_VERSION_STR)) +
                       QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Platform"), QzTools::operatingSystemLong()));
 
         cPage.replace(QLatin1String("%PATHS-TEXT%"),
