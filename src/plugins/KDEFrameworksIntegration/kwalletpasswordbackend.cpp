@@ -40,6 +40,7 @@ static QMap<QString, QString> encodeEntry(const PasswordEntry &entry)
         {"host", entry.host},
         {"username", entry.username},
         {"password", entry.password},
+        {"updated", QString::number(entry.updated)},
         {"data", QString::fromUtf8(entry.data)}
     };
     return data;
@@ -272,6 +273,7 @@ void KWalletPasswordBackend::initialize()
             entry.host = j.value()["host"];
             entry.username = j.value()["username"];
             entry.password = j.value()["password"];
+            entry.updated = j.value()["updated"].toInt();
             entry.data = j.value()["data"].toUtf8();
             if (entry.isValid()) {
                 m_allEntries.append(entry);
