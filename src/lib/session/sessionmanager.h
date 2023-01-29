@@ -66,8 +66,8 @@ public Q_SLOTS:
 private Q_SLOTS:
     void aboutToShowSessionsMenu();
     void sessionsDirectoryChanged();
-    void openSession(QString sessionFilePath = QString(), SessionFlags flags = {});
-    void renameSession(QString sessionFilePath = QString(), SessionFlags flags = {});
+    void openSession(QString sessionFilePath = QString(), SessionManager::SessionFlags flags = {});
+    void renameSession(QString sessionFilePath = QString(), SessionManager::SessionFlags flags = {});
     void saveSession();
 
     void replaceSession(const QString &filePath);
@@ -76,7 +76,7 @@ private Q_SLOTS:
     void deleteSession(const QString &filePath);
     void newSession();
 
-    QList<SessionMetaData> sessionMetaData(bool withBackups = true);
+    QList<SessionManager::SessionMetaData> sessionMetaData(bool withBackups = true);
 
 private:
     bool isActive(const QString &filePath) const;

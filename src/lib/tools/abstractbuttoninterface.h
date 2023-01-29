@@ -82,7 +82,7 @@ Q_SIGNALS:
     void iconChanged(const QIcon &icon);
     void badgeTextChanged(const QString &badgeText);
     void webViewChanged(WebView *view);
-    void clicked(ClickController *controller);
+    void clicked(AbstractButtonInterface::ClickController *controller);
 
 private:
     bool m_active = true;

@@ -598,7 +598,7 @@ void FancyTabWidget::AddBottomWidget(QWidget* widget)
     top_layout_->addWidget(widget);
 }
 
-void FancyTabWidget::SetMode(Mode mode)
+void FancyTabWidget::SetMode(FancyTabWidget::Mode mode)
 {
     // Remove previous tab bar
     delete tab_bar_;

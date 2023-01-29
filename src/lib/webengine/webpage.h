@@ -79,7 +79,7 @@ public:
 Q_SIGNALS:
     void privacyChanged(bool status);
     void printRequested();
-    void navigationRequestAccepted(const QUrl &url, NavigationType type, bool isMainFrame);
+    void navigationRequestAccepted(const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame);
 
 protected Q_SLOTS:
     void progress(int prog);
@@ -91,10 +91,10 @@ private Q_SLOTS:
     void windowCloseRequested();
     void fullScreenRequested(QWebEngineFullScreenRequest fullScreenRequest);
     void featurePermissionRequested(const QUrl &origin, const QWebEnginePage::Feature &feature);
-    void renderProcessTerminated(RenderProcessTerminationStatus terminationStatus, int exitCode);
+    void renderProcessTerminated(QWebEnginePage::RenderProcessTerminationStatus terminationStatus, int exitCode);
 
 private:
-    bool acceptNavigationRequest(const QUrl &url, NavigationType type, bool isMainFrame) override;
+    bool acceptNavigationRequest(const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;
     bool certificateError(const QWebEngineCertificateError &error) override;
     QStringList chooseFiles(FileSelectionMode mode, const QStringList &oldFiles, const QStringList &acceptedMimeTypes) override;
     QWebEnginePage* createWindow(QWebEnginePage::WebWindowType type) override;

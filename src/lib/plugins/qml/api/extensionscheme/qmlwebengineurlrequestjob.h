@@ -55,7 +55,7 @@ public:
      * @brief Fails the request with the error
      * @param error
      */
-    Q_INVOKABLE void fail(Error error);
+    Q_INVOKABLE void fail(QmlWebEngineUrlRequestJob::Error error);
     /**
      * @brief Redirects the request to the url
      * @param urlString, represents the url to which the request is to be redirected

@@ -192,7 +192,7 @@ public:
 
 public Q_SLOTS:
     void SetCurrentIndex(int index);
-    void SetMode(Mode mode);
+    void SetMode(FancyTabWidget::Mode mode);
     void SetMode(int mode) { SetMode(Mode(mode)); }
 
 Q_SIGNALS:

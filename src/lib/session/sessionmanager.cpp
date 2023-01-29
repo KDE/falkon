@@ -73,7 +73,7 @@ void SessionManager::sessionsDirectoryChanged()
     m_sessionsMetaDataList.clear();
 }
 
-void SessionManager::openSession(QString sessionFilePath, SessionFlags flags)
+void SessionManager::openSession(QString sessionFilePath, SessionManager::SessionFlags flags)
 {
     if (sessionFilePath.isEmpty()) {
         auto* action = qobject_cast<QAction*>(sender());
@@ -112,7 +112,7 @@ void SessionManager::openSession(QString sessionFilePath, SessionFlags flags)
     mApp->openSession(window, sessionData);
 }
 
-void SessionManager::renameSession(QString sessionFilePath, SessionFlags flags)
+void SessionManager::renameSession(QString sessionFilePath, SessionManager::SessionFlags flags)
 {
     if (sessionFilePath.isEmpty()) {
         auto* action = qobject_cast<QAction*>(sender());

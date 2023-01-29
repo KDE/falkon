@@ -64,7 +64,7 @@ public:
     QString styleSheet() const;
 
 Q_SIGNALS:
-    void viewTypeChanged(ViewType type);
+    void viewTypeChanged(VerticalTabsPlugin::ViewType type);
     void styleSheetChanged(const QString &styleSheet);
 
 private:
