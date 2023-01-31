@@ -2604,12 +2604,9 @@ msgid "Qt version"
 msgstr "Qt-ის ვერსია"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
-#, fuzzy
-#| msgctxt "AboutDialog|"
-#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "<b>QtWebEngine-ის ვერსია %1</b></p>"
+msgstr "QtWebEngine-ის ვერსია"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
@@ -2944,7 +2941,7 @@ msgstr "ყველა"
 #: lib/other/clearprivatedata.ui:61
 msgctxt "ClearPrivateData|"
 msgid "Visited pages history from:"
-msgstr ""
+msgstr "საიდან შემოვიტანო შესული გვერდების ისტორია:"
 
 #: lib/other/clearprivatedata.ui:71
 msgctxt "ClearPrivateData|"
@@ -4039,7 +4036,7 @@ msgstr "არაფერი"
 #: lib/preferences/preferences.ui:800
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
-msgstr ""
+msgstr "ხაზში რჩევების ჩართვა"
 
 #: lib/preferences/preferences.ui:807
 msgctxt "Preferences|"
@@ -4153,13 +4150,13 @@ msgstr ""
 #: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
-msgstr ""
+msgstr "XSS აუდიტის ჩართვა"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
 #: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Print element background"
-msgstr ""
+msgstr "ელემენტის ფონის დაბეჭდვა"
 
 #: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
@@ -4169,12 +4166,12 @@ msgstr "ანიმირებული აწევ/დაწევა"
 #: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
-msgstr ""
+msgstr "სივრცითი ნავიგაციის ჩართვა"
 
 #: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
-msgstr ""
+msgstr "საკუთარი ჩოჩიების გამოყენება"
 
 #: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
@@ -4396,7 +4393,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:1732
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
-msgstr ""
+msgstr "ერთღილაკიანი მალსახმობების გამოყენება"
 
 #: lib/preferences/preferences.ui:1739
 msgctxt "Preferences|"
@@ -4760,12 +4757,12 @@ msgstr "ჩასწორება"
 #: lib/session/sessionmanager.cpp:126
 msgctxt "SessionManager|"
 msgid "_cloned"
-msgstr ""
+msgstr "_კლონირებულია"
 
 #: lib/session/sessionmanager.cpp:126
 msgctxt "SessionManager|"
 msgid "_renamed"
-msgstr ""
+msgstr "_გადარქმეულია"
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
@@ -4780,7 +4777,7 @@ msgstr "სესიის სახელის გადარქმევა"
 #: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Please enter a new name:"
-msgstr ""
+msgstr "შეიყვანეთ ახალი სახელი:"
 
 #: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:143
 #: lib/session/sessionmanager.cpp:148 lib/session/sessionmanager.cpp:170
@@ -4825,7 +4822,7 @@ msgstr ""
 #: lib/session/sessionmanager.cpp:180
 msgctxt "SessionManager|"
 msgid "Restore Backup"
-msgstr ""
+msgstr "მარქაფის აღდგენა"
 
 #: lib/session/sessionmanager.cpp:180
 msgctxt "SessionManager|"
@@ -5196,7 +5193,7 @@ msgstr ""
 #: lib/tools/certificateinfowidget.cpp:300
 msgctxt "QObject|"
 msgid "<not set in certificate>"
-msgstr ""
+msgstr "<სერტიფიკატში დაყენებული არაა>"
 
 #: lib/tools/certificateinfowidget.ui:17
 msgctxt "CertificateInfoWidget|"
@@ -5425,12 +5422,12 @@ msgstr "გარე პროგრამის გაშვების შე
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
-msgstr ""
+msgstr "გარე პროგრამის გაშვების შეცდომა! %1"
 
 #: lib/webengine/jsalert.ui:125
 msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
-msgstr ""
+msgstr "ამ გვერდისთვის დამატებითი ფანჯრების ჩვენების აკრძალვა"
 
 #: lib/webengine/webpage.cpp:330
 #, qt-format
@@ -5443,12 +5440,12 @@ msgstr ""
 #: lib/webengine/webpage.cpp:335
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
-msgstr ""
+msgstr "არჩევანის &დამახსოვრება ამ პროტოკოლისთვის"
 
 #: lib/webengine/webpage.cpp:336
 msgctxt "WebPage|"
 msgid "External Protocol Request"
-msgstr ""
+msgstr "გარე პროტოკოლის მოთხოვნა"
 
 #: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
@@ -5530,7 +5527,7 @@ msgstr "სწრაფი &პანელის მორგება"
 #: lib/webengine/webview.cpp:755
 msgctxt "WebView|"
 msgid "Reload All Dials"
-msgstr ""
+msgstr "ყველა სწრაფი გამოძახების პანელის თავიდან ჩატვირთვა"
 
 #: lib/webengine/webview.cpp:774
 msgctxt "WebView|"
