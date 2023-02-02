@@ -429,15 +429,20 @@ Preferences::Preferences(BrowserWindow* window)
     updateSpellCheckEnabled();
     connect(ui->spellcheckEnabled, &QCheckBox::toggled, this, updateSpellCheckEnabled);
 
-    QStringList dictionariesDirs = {
+    QStringList dictionariesDirs = {};
+    const QByteArray qtWeDictionariesDirs = qgetenv("QTWEBENGINE_DICTIONARIES_PATH");
+    if (!qtWeDictionariesDirs.isNull()) {
+        dictionariesDirs.append(QDir::cleanPath(QString::fromLocal8Bit(qtWeDictionariesDirs)));
+    }
+    else {
 #ifdef Q_OS_OSX
-        QDir::cleanPath(QCoreApplication::applicationDirPath() + QL1S("/../Resources/qtwebengine_dictionaries")),
-        QDir::cleanPath(QCoreApplication::applicationDirPath() + QL1S("/../Frameworks/QtWebEngineCore.framework/Resources/qtwebengine_dictionaries"))
+        dictionariesDirs.append(QDir::cleanPath(QCoreApplication::applicationDirPath() + QL1S("/../Resources/qtwebengine_dictionaries")));
+        dictionariesDirs.append(QDir::cleanPath(QCoreApplication::applicationDirPath() + QL1S("/../Frameworks/QtWebEngineCore.framework/Resources/qtwebengine_dictionaries")));
 #else
-        QDir::cleanPath(QCoreApplication::applicationDirPath() + QL1S("/qtwebengine_dictionaries")),
-        QDir::cleanPath(QLibraryInfo::location(QLibraryInfo::DataPath) + QL1S("/qtwebengine_dictionaries"))
+        dictionariesDirs.append(QDir::cleanPath(QCoreApplication::applicationDirPath() + QL1S("/qtwebengine_dictionaries")));
+        dictionariesDirs.append(QDir::cleanPath(QLibraryInfo::location(QLibraryInfo::DataPath) + QL1S("/qtwebengine_dictionaries")));
 #endif
-    };
+    }
     dictionariesDirs.removeDuplicates();
 
     ui->spellcheckDirectories->setText(dictionariesDirs.join(QL1C('\n')));
