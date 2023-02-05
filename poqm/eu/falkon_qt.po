@@ -1,15 +1,15 @@
 # Translation for falkon_qt.po to Euskara/Basque (eu).
-# Copyright (C) 2017-2022, This file is copyright:
+# Copyright (C) 2017-2023 This file is copyright:
 # This file is distributed under the same license as the falkon package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
 # Xabier Aramendi <azpidatziak@gmail.com>, 2017.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-09-10 13:22+0200\n"
+"PO-Revision-Date: 2023-02-04 08:07+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Language: eu_ES\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2608,12 +2608,9 @@ msgid "Qt version"
 msgstr "Qt bertsioa"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
-#, fuzzy
-#| msgctxt "AboutDialog|"
-#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "<b>QtWebEngine bertsioa %1</b></p>"
+msgstr "«QtWebEngine» bertsioa"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
@@ -3634,7 +3631,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Ziur zaude «%1» kendu nahi duzula?"
 
-#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:602
+#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:607
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Berezkoa"
@@ -3644,72 +3641,72 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Ezarri berezko bezala"
 
-#: lib/preferences/preferences.cpp:545
+#: lib/preferences/preferences.cpp:550
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Hautatu exekutagarri kokalekua..."
 
-#: lib/preferences/preferences.cpp:588
+#: lib/preferences/preferences.cpp:593
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "IGE Jakinarazpena"
 
-#: lib/preferences/preferences.cpp:589
+#: lib/preferences/preferences.cpp:594
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Arrastatu ikusleihoan nahi duzun tokian jartzeko."
 
-#: lib/preferences/preferences.cpp:638
+#: lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Hautatu jeisketa kokalekua..."
 
-#: lib/preferences/preferences.cpp:652
+#: lib/preferences/preferences.cpp:657
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Hautatu estilo-orriaren kokalekua..."
 
-#: lib/preferences/preferences.cpp:663
+#: lib/preferences/preferences.cpp:668
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Ezabatuta"
 
-#: lib/preferences/preferences.cpp:759
+#: lib/preferences/preferences.cpp:764
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Hautatu cachearen bide-izena..."
 
-#: lib/preferences/preferences.cpp:790
+#: lib/preferences/preferences.cpp:795
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Profil Berria"
 
-#: lib/preferences/preferences.cpp:790
+#: lib/preferences/preferences.cpp:795
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Sartu profil berriaren izena:"
 
-#: lib/preferences/preferences.cpp:800 lib/preferences/preferences.cpp:805
+#: lib/preferences/preferences.cpp:805 lib/preferences/preferences.cpp:810
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Akatsa!"
 
-#: lib/preferences/preferences.cpp:800
+#: lib/preferences/preferences.cpp:805
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Profil hau jadanik badago!"
 
-#: lib/preferences/preferences.cpp:805
+#: lib/preferences/preferences.cpp:810
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Ezinezkoa profil zuzenbidea sortzea!"
 
-#: lib/preferences/preferences.cpp:816
+#: lib/preferences/preferences.cpp:821
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Baieztapena"
 
-#: lib/preferences/preferences.cpp:817
+#: lib/preferences/preferences.cpp:822
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3719,12 +3716,12 @@ msgstr ""
 "Zihur zaude \"%1\" profila betirako ezabatzea nahi duzula? Ekintza hau ezin "
 "da desegin!"
 
-#: lib/preferences/preferences.cpp:832 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:837 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Oharra: Ezin duzu gaituriko profila ezabatu."
 
-#: lib/preferences/preferences.cpp:1089
+#: lib/preferences/preferences.cpp:1094
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Hautatu Margoa"
