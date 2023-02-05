@@ -78,9 +78,9 @@ public:
 
     // QFileDialog static functions that remembers last used directory
     static QString getExistingDirectory(const QString &name, QWidget* parent = nullptr, const QString &caption = QString(), const QString &dir = QString(), QFileDialog::Options options = QFileDialog::ShowDirsOnly);
-    static QString getOpenFileName(const QString &name, QWidget* parent = nullptr, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString* selectedFilter = nullptr, QFileDialog::Options options = {});
-    static QStringList getOpenFileNames(const QString &name, QWidget* parent = nullptr, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString* selectedFilter = nullptr, QFileDialog::Options options = {});
-    static QString getSaveFileName(const QString &name, QWidget* parent = nullptr, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString* selectedFilter = nullptr, QFileDialog::Options options = {});
+    static QString getOpenFileName(const QString &name, QWidget* parent = nullptr, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString* selectedFilter = nullptr, QFileDialog::Options options = QFileDialog::Options());
+    static QStringList getOpenFileNames(const QString &name, QWidget* parent = nullptr, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString* selectedFilter = nullptr, QFileDialog::Options options = QFileDialog::Options());
+    static QString getSaveFileName(const QString &name, QWidget* parent = nullptr, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString* selectedFilter = nullptr, QFileDialog::Options options = QFileDialog::Options());
 
     static bool matchDomain(const QString &pattern, const QString &domain);
     static QKeySequence actionShortcut(const QKeySequence &shortcut, const QKeySequence &fallBack, const QKeySequence &shortcutRtl = QKeySequence(), const QKeySequence &fallbackRtl = QKeySequence());
