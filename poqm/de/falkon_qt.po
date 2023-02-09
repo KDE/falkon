@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the falkon package.
 # Markus Slopianka <kamikazow@web.de>, 2017.
 # Jonathan Hooverman <jonathan.hooverman@gmail.com>, 2017.
-# Frederik Schwarzer <schwarzer@kde.org>, 2018, 2020, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2018, 2020, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2018, 2019, 2020, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-07-14 00:38+0200\n"
+"PO-Revision-Date: 2023-02-09 00:42+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -2614,12 +2614,9 @@ msgid "Qt version"
 msgstr "Qt-Version"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
-#, fuzzy
-#| msgctxt "AboutDialog|"
-#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "<b>QtWebEngine-Version %1</b></p>"
+msgstr "QtWebEngine-Version"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
