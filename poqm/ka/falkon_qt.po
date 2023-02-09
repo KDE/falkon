@@ -1088,7 +1088,7 @@ msgstr "ახალ ჩანართში გახსნა"
 #: lib/bookmarks/bookmarksmanager.cpp:106
 msgctxt "BookmarksManager|"
 msgid "Open in new window"
-msgstr "ახალ ფან_ჯარაში გახსნა"
+msgstr "ახალ ფანჯარაში გახსნა"
 
 #: lib/bookmarks/bookmarksmanager.cpp:107
 msgctxt "BookmarksManager|"
@@ -1180,7 +1180,7 @@ msgstr "ახალ ჩანართში გახსნა"
 #: lib/bookmarks/bookmarkstoolbar.cpp:74
 msgctxt "BookmarksToolbar|"
 msgid "Open in new window"
-msgstr "ახალ ფან_ჯარაში გახსნა"
+msgstr "ახალ ფანჯარაში გახსნა"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:75
 msgctxt "BookmarksToolbar|"
@@ -1910,7 +1910,7 @@ msgstr "ახალ ჩანართში გახსნა"
 #: lib/history/historymanager.cpp:146
 msgctxt "HistoryManager|"
 msgid "Open in new window"
-msgstr "ახალ ფან_ჯარაში გახსნა"
+msgstr "ახალ ფანჯარაში გახსნა"
 
 #: lib/history/historymanager.cpp:147
 msgctxt "HistoryManager|"
@@ -2700,7 +2700,7 @@ msgstr "მალსახმობი:"
 #: lib/opensearch/editsearchengine.ui:54
 msgctxt "EditSearchEngine|"
 msgid "Icon:"
-msgstr "_ხატულა:"
+msgstr "ხატულა:"
 
 #: lib/opensearch/editsearchengine.ui:83
 msgctxt "EditSearchEngine|"
@@ -2936,7 +2936,7 @@ msgstr "ყველა"
 #: lib/other/clearprivatedata.ui:61
 msgctxt "ClearPrivateData|"
 msgid "Visited pages history from:"
-msgstr ""
+msgstr "საიდან შემოვიტანო შესული გვერდების ისტორია:"
 
 #: lib/other/clearprivatedata.ui:71
 msgctxt "ClearPrivateData|"
@@ -3596,6 +3596,8 @@ msgctxt "PluginsList|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
 msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">მეტი გაფარტოების მიღება..."
+"</a>"
 
 #: lib/preferences/pluginsmanager.cpp:198
 msgctxt "PluginsManager|"
@@ -3929,12 +3931,12 @@ msgstr "ჩანართების ქცევა"
 #: lib/preferences/preferences.ui:607
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
-msgstr ""
+msgstr "ჩანართების დამალვა, როცა მხოლოდ ერთი ჩანართი არსებობს"
 
 #: lib/preferences/preferences.ui:614
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
-msgstr ""
+msgstr "აქტიური ჩანარტის დახურვისას ბოლო ჩანართის გააქტიურება"
 
 #: lib/preferences/preferences.ui:621
 msgctxt "Preferences|"
@@ -3964,7 +3966,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
-msgstr ""
+msgstr "ბოლო ჩანართის დახურვისას ფანჯარა არ დაიხურება"
 
 #: lib/preferences/preferences.ui:663
 msgctxt "Preferences|"
@@ -3979,7 +3981,7 @@ msgstr "ჩანართის დახურვის ღილაკის 
 #: lib/preferences/preferences.ui:679
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
-msgstr ""
+msgstr "არააქტიურ ჩანართებზე დახურვის ღილაკის ჩვენება:"
 
 #: lib/preferences/preferences.ui:687
 msgctxt "Preferences|"
@@ -4029,7 +4031,7 @@ msgstr "არაფერი"
 #: lib/preferences/preferences.ui:800
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
-msgstr ""
+msgstr "ხაზში რჩევების ჩართვა"
 
 #: lib/preferences/preferences.ui:807
 msgctxt "Preferences|"
@@ -4143,13 +4145,13 @@ msgstr ""
 #: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
-msgstr ""
+msgstr "XSS აუდიტის ჩართვა"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
 #: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Print element background"
-msgstr ""
+msgstr "ელემენტის ფონის დაბეჭდვა"
 
 #: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
@@ -4159,12 +4161,12 @@ msgstr "ანიმირებული აწევ/დაწევა"
 #: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
-msgstr ""
+msgstr "სივრცითი ნავიგაციის ჩართვა"
 
 #: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
-msgstr ""
+msgstr "საკუთარი ჩოჩიების გამოყენება"
 
 #: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
@@ -4386,7 +4388,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:1732
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
-msgstr ""
+msgstr "ერთღილაკიანი მალსახმობების გამოყენება"
 
 #: lib/preferences/preferences.ui:1739
 msgctxt "Preferences|"
@@ -4750,12 +4752,12 @@ msgstr "ჩასწორება"
 #: lib/session/sessionmanager.cpp:126
 msgctxt "SessionManager|"
 msgid "_cloned"
-msgstr ""
+msgstr "_კლონირებულია"
 
 #: lib/session/sessionmanager.cpp:126
 msgctxt "SessionManager|"
 msgid "_renamed"
-msgstr ""
+msgstr "_გადარქმეულია"
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
@@ -4770,7 +4772,7 @@ msgstr "სესიის სახელის გადარქმევა"
 #: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Please enter a new name:"
-msgstr ""
+msgstr "შეიყვანეთ ახალი სახელი:"
 
 #: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:143
 #: lib/session/sessionmanager.cpp:148 lib/session/sessionmanager.cpp:170
@@ -4815,7 +4817,7 @@ msgstr ""
 #: lib/session/sessionmanager.cpp:180
 msgctxt "SessionManager|"
 msgid "Restore Backup"
-msgstr ""
+msgstr "მარქაფის აღდგენა"
 
 #: lib/session/sessionmanager.cpp:180
 msgctxt "SessionManager|"
@@ -4933,7 +4935,7 @@ msgstr "ახალ ჩანართში გახსნა"
 #: lib/sidebar/bookmarkssidebar.cpp:104
 msgctxt "BookmarksSidebar|"
 msgid "Open in new window"
-msgstr "ახალ ფან_ჯარაში გახსნა"
+msgstr "ახალ ფანჯარაში გახსნა"
 
 #: lib/sidebar/bookmarkssidebar.cpp:105
 msgctxt "BookmarksSidebar|"
@@ -4958,7 +4960,7 @@ msgstr "ახალ ჩანართში გახსნა"
 #: lib/sidebar/historysidebar.cpp:86
 msgctxt "HistorySideBar|"
 msgid "Open in new window"
-msgstr "ახალ ფან_ჯარაში გახსნა"
+msgstr "ახალ ფანჯარაში გახსნა"
 
 #: lib/sidebar/historysidebar.cpp:87
 msgctxt "HistorySideBar|"
@@ -5169,7 +5171,7 @@ msgstr "სიის გასუფთავება"
 #: lib/tabwidget/tabwidget.h:106
 msgctxt "TabWidget|"
 msgid "New tab"
-msgstr "ახალი _დაფა"
+msgstr "ახალი ჩანართი"
 
 #: lib/tools/aesinterface.cpp:146
 msgctxt "AesInterface|"
@@ -5186,7 +5188,7 @@ msgstr ""
 #: lib/tools/certificateinfowidget.cpp:300
 msgctxt "QObject|"
 msgid "<not set in certificate>"
-msgstr ""
+msgstr "<სერტიფიკატში დაყენებული არაა>"
 
 #: lib/tools/certificateinfowidget.ui:17
 msgctxt "CertificateInfoWidget|"
@@ -5301,12 +5303,12 @@ msgstr "კურსორის დამალვა"
 #: lib/tools/html5permissions/html5permissionsdialog.ui:117
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display Capture"
-msgstr ""
+msgstr "ეკრანის ჩაჭერა"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:122
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display and Audio Capture"
-msgstr ""
+msgstr "ეკრანისა და აუდიოს ჩაჭერა"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:41
 msgctxt "HTML5PermissionsNotification|"
@@ -5415,12 +5417,12 @@ msgstr "გარე პროგრამის გაშვების შე
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
-msgstr ""
+msgstr "გარე პროგრამის გაშვების შეცდომა! %1"
 
 #: lib/webengine/jsalert.ui:125
 msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
-msgstr ""
+msgstr "ამ გვერდისთვის დამატებითი ფანჯრების ჩვენების აკრძალვა"
 
 #: lib/webengine/webpage.cpp:330
 #, qt-format
@@ -5433,12 +5435,12 @@ msgstr ""
 #: lib/webengine/webpage.cpp:335
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
-msgstr ""
+msgstr "არჩევანის &დამახსოვრება ამ პროტოკოლისთვის"
 
 #: lib/webengine/webpage.cpp:336
 msgctxt "WebPage|"
 msgid "External Protocol Request"
-msgstr ""
+msgstr "გარე პროტოკოლის მოთხოვნა"
 
 #: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
@@ -5479,7 +5481,7 @@ msgstr "JavaScript -ის განგაში"
 #: lib/webengine/webpage.cpp:631
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
-msgstr ""
+msgstr "ამ გვერდისთვის დამატებითი ფანჯრების ჩვენების აკრძალვა"
 
 #: lib/webengine/webview.cpp:126
 msgctxt "WebView|"
@@ -5520,7 +5522,7 @@ msgstr "სწრაფი &პანელის მორგება"
 #: lib/webengine/webview.cpp:755
 msgctxt "WebView|"
 msgid "Reload All Dials"
-msgstr ""
+msgstr "ყველა სწრაფი გამოძახების პანელის თავიდან ჩატვირთვა"
 
 #: lib/webengine/webview.cpp:774
 msgctxt "WebView|"
