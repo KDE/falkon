@@ -1,11 +1,11 @@
 # Translation of falkon_qt to Norwegian Nynorsk
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018, 2019.
-# Karl Ove Hufthammer <karl@huftis.org>, 2018, 2020, 2021, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2018, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-07-27 20:15+0200\n"
+"PO-Revision-Date: 2023-02-09 21:44+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: qtrich\n"
@@ -2607,7 +2607,7 @@ msgstr "Qt-versjon"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr ""
+msgstr "QtWebEngine-versjon"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
@@ -3631,7 +3631,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Er du sikker på at du vil fjerna «%1»?"
 
-#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:602
+#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:607
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Standard"
@@ -3641,72 +3641,72 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Bruk som standard"
 
-#: lib/preferences/preferences.cpp:545
+#: lib/preferences/preferences.cpp:550
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Vel plassering for programfil …"
 
-#: lib/preferences/preferences.cpp:588
+#: lib/preferences/preferences.cpp:593
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Skjermvarsling"
 
-#: lib/preferences/preferences.cpp:589
+#: lib/preferences/preferences.cpp:594
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Dra varslinga til der du vil ha ho på skjermen."
 
-#: lib/preferences/preferences.cpp:638
+#: lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Vel nedlastingsmappe …"
 
-#: lib/preferences/preferences.cpp:652
+#: lib/preferences/preferences.cpp:657
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Vel plassering for stilsett …"
 
-#: lib/preferences/preferences.cpp:663
+#: lib/preferences/preferences.cpp:668
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Sletta"
 
-#: lib/preferences/preferences.cpp:759
+#: lib/preferences/preferences.cpp:764
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Vel mappe for mellomlager …"
 
-#: lib/preferences/preferences.cpp:790
+#: lib/preferences/preferences.cpp:795
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Ny profil"
 
-#: lib/preferences/preferences.cpp:790
+#: lib/preferences/preferences.cpp:795
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Skriv inn namn på den nye profilen:"
 
-#: lib/preferences/preferences.cpp:800 lib/preferences/preferences.cpp:805
+#: lib/preferences/preferences.cpp:805 lib/preferences/preferences.cpp:810
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Feil."
 
-#: lib/preferences/preferences.cpp:800
+#: lib/preferences/preferences.cpp:805
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Profilen finst frå før."
 
-#: lib/preferences/preferences.cpp:805
+#: lib/preferences/preferences.cpp:810
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Klarte ikkje oppretta profilmappa."
 
-#: lib/preferences/preferences.cpp:816
+#: lib/preferences/preferences.cpp:821
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Stadfesting"
 
-#: lib/preferences/preferences.cpp:817
+#: lib/preferences/preferences.cpp:822
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3716,12 +3716,12 @@ msgstr ""
 "Er du sikker på at du vil sletta profilen «%1»? Du kan ikkje angra denne "
 "slettinga."
 
-#: lib/preferences/preferences.cpp:832 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:837 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Merk: Du kan ikkje sletta profilen som du brukar."
 
-#: lib/preferences/preferences.cpp:1089
+#: lib/preferences/preferences.cpp:1094
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Vel farge"
