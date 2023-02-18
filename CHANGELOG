@@ -2,6 +2,7 @@ Version 23.04.0
     * Look for spellchecking dictionaries at location specified by QTWEBENGINE_DICTIONARIES_PATH environment variable
     * Show QtWebEngine version on Falkon Config page
     * Implement prefers-color-scheme (dark mode) for internal pages
+    * Add option to enable GPU acceleration (by Hao Chi Kiang)
 
 Version 22.08.2
     * Fix: Typing text in the search bar sends data although suggestions are disabled (by Juraj Oravec) (BUG: 439268)
@@ -15,6 +16,8 @@ Version 22.08.0
 Version 22.04.0
     * Various improvements for AdBlock (by Allan Sandfeld Jensen)
     * Enable WebRTC screen capturer in WebEngine / Screen sharing on Wayland (by Antonio Rojas) (BUG: 450839)
+
+--------------------------------------------------------------------------------
 
 Version 3.2.0
     * Add support for Screen Capture (Qt 5.13.2+)
