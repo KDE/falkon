@@ -819,6 +819,13 @@
                 </widget>
                </item>
                <item>
+                <widget class="QCheckBox" name="showZoomLabel">
+                 <property name="text">
+                  <string>Show zoom label</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <widget class="QCheckBox" name="selectAllOnFocus">
                  <property name="text">
                   <string>Select all text by double clicking in address bar</string>

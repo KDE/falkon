@@ -34,6 +34,7 @@ class SiteIcon;
 class GoIcon;
 class AutoFillIcon;
 class BookmarkItem;
+class ZoomLabel;
 
 class FALKON_EXPORT LocationBar : public LineEdit
 {
@@ -117,6 +118,7 @@ private:
     GoIcon* m_goIcon;
     SiteIcon* m_siteIcon;
     AutoFillIcon* m_autofillIcon;
+    ZoomLabel* m_zoomlabel;
 
     BrowserWindow* m_window;
     TabbedWebView* m_webView;

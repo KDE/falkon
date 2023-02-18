@@ -39,6 +39,7 @@ public:
     bool showSwitchTab;
     bool alwaysShowGoIcon;
     bool useInlineCompletion;
+    bool showZoomLabel;
 
     // SearchEngines
     bool searchOnEngineChange;

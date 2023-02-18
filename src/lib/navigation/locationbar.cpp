@@ -34,6 +34,7 @@
 #include "colors.h"
 #include "autofillicon.h"
 #include "completer/locationcompleter.h"
+#include "zoomlabel.h"
 
 #include <QTimer>
 #include <QMimeData>
@@ -63,8 +64,10 @@ LocationBar::LocationBar(QWidget *parent)
     m_siteIcon = new SiteIcon(this);
     m_autofillIcon = new AutoFillIcon(this);
     auto* down = new DownIcon(this);
+    m_zoomlabel = new ZoomLabel(this);
 
     addWidget(m_siteIcon, LineEdit::LeftSide);
+    addWidget(m_zoomlabel, LineEdit::RightSide);
     addWidget(m_autofillIcon, LineEdit::RightSide);
     addWidget(m_bookmarkIcon, LineEdit::RightSide);
     addWidget(m_goIcon, LineEdit::RightSide);
@@ -134,6 +137,7 @@ void LocationBar::setWebView(TabbedWebView* view)
 
     m_bookmarkIcon->setWebView(m_webView);
     m_siteIcon->setWebView(m_webView);
+    m_zoomlabel->setWebView(m_webView);
     m_autofillIcon->setWebView(m_webView);
 
     connect(m_webView, &QWebEngineView::loadStarted, this, &LocationBar::loadStarted);
@@ -364,10 +368,12 @@ void LocationBar::setGoIconVisible(bool state)
 {
     if (state) {
         m_bookmarkIcon->hide();
+        m_zoomlabel->hide();
         m_goIcon->show();
     }
     else {
         m_bookmarkIcon->show();
+        m_zoomlabel->show();
 
         if (!qzSettings->alwaysShowGoIcon) {
             m_goIcon->hide();

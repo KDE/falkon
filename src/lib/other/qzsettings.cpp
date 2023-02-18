@@ -34,6 +34,7 @@ void QzSettings::loadSettings()
     showSwitchTab = settings.value("showSwitchTab", true).toBool();
     alwaysShowGoIcon = settings.value("alwaysShowGoIcon", false).toBool();
     useInlineCompletion = settings.value("useInlineCompletion", true).toBool();
+    showZoomLabel = settings.value("showZoomLabel", true).toBool();
     settings.endGroup();
 
     settings.beginGroup("SearchEngines");

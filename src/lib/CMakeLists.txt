@@ -127,6 +127,7 @@ set(SRCS ${SRCS}
     navigation/reloadstopbutton.cpp
     navigation/siteicon.cpp
     navigation/websearchbar.cpp
+    navigation/zoomlabel.cpp
     network/networkmanager.cpp
     network/networkurlinterceptor.cpp
     network/schemehandlers/extensionschemehandler.cpp
@@ -355,6 +356,7 @@ set(SRCS ${SRCS}
     navigation/reloadstopbutton.h
     navigation/siteicon.h
     navigation/websearchbar.h
+    navigation/zoomlabel.h
     network/networkmanager.h
     network/networkurlinterceptor.h
     network/schemehandlers/extensionschemehandler.h

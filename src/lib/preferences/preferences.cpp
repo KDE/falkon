@@ -249,6 +249,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->useInlineCompletion->setChecked(settings.value("useInlineCompletion", true).toBool());
     ui->completionShowSwitchTab->setChecked(settings.value("showSwitchTab", true).toBool());
     ui->alwaysShowGoIcon->setChecked(settings.value("alwaysShowGoIcon", false).toBool());
+    ui->showZoomLabel->setChecked(settings.value("showZoomLabel", true).toBool());
     ui->selectAllOnFocus->setChecked(settings.value("SelectAllTextOnDoubleClick", true).toBool());
     ui->selectAllOnClick->setChecked(settings.value("SelectAllTextOnClick", false).toBool());
     bool showPBinAB = settings.value("ShowLoadingProgress", false).toBool();
@@ -1027,6 +1028,7 @@ void Preferences::saveSettings()
     settings.setValue("showSuggestions", ui->addressbarCompletion->currentIndex());
     settings.setValue("useInlineCompletion", ui->useInlineCompletion->isChecked());
     settings.setValue("alwaysShowGoIcon", ui->alwaysShowGoIcon->isChecked());
+    settings.setValue("showZoomLabel", ui->showZoomLabel->isChecked());
     settings.setValue("showSwitchTab", ui->completionShowSwitchTab->isChecked());
     settings.setValue("SelectAllTextOnDoubleClick", ui->selectAllOnFocus->isChecked());
     settings.setValue("SelectAllTextOnClick", ui->selectAllOnClick->isChecked());
