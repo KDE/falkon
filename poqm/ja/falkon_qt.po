@@ -362,7 +362,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "まだ開いているタブがあります"
 
-#: lib/app/mainapplication.cpp:1081
+#: lib/app/mainapplication.cpp:1085
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -376,7 +376,7 @@ msgstr ""
 "QupZilla は現在既定のブラウザに設定されていません。既定のブラウザに設定します"
 "か？"
 
-#: lib/app/mainapplication.cpp:1082
+#: lib/app/mainapplication.cpp:1086
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid "Always perform this check when starting QupZilla."
@@ -384,27 +384,27 @@ msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "QupZilla の起動時に毎回既定のブラウザか確認する。"
 
-#: lib/app/mainapplication.cpp:1084
+#: lib/app/mainapplication.cpp:1088
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "既定のブラウザ"
 
-#: lib/app/mainapplication.cpp:1205
+#: lib/app/mainapplication.cpp:1209
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "新しいタブ"
 
-#: lib/app/mainapplication.cpp:1206
+#: lib/app/mainapplication.cpp:1210
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "新しいウィンドウ"
 
-#: lib/app/mainapplication.cpp:1207
+#: lib/app/mainapplication.cpp:1211
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "新しいプライベートウィンドウ"
 
-#: lib/app/mainapplication.cpp:1222
+#: lib/app/mainapplication.cpp:1226
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -3937,7 +3937,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "本当にセッション '%1' を削除しますか?"
 
-#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:607
+#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:608
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "既定"
@@ -3947,72 +3947,72 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "既定に設定"
 
-#: lib/preferences/preferences.cpp:550
+#: lib/preferences/preferences.cpp:551
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "外部ダウンローダの指定..."
 
-#: lib/preferences/preferences.cpp:593
+#: lib/preferences/preferences.cpp:594
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD 通知"
 
-#: lib/preferences/preferences.cpp:594
+#: lib/preferences/preferences.cpp:595
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "好きな場所にドラッグしてください。"
 
-#: lib/preferences/preferences.cpp:643
+#: lib/preferences/preferences.cpp:644
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "ダウンロード先の指定..."
 
-#: lib/preferences/preferences.cpp:657
+#: lib/preferences/preferences.cpp:658
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "スタイルシートの指定..."
 
-#: lib/preferences/preferences.cpp:668
+#: lib/preferences/preferences.cpp:669
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "削除されました"
 
-#: lib/preferences/preferences.cpp:764
+#: lib/preferences/preferences.cpp:765
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "キャッシュの保存場所の選択..."
 
-#: lib/preferences/preferences.cpp:795
+#: lib/preferences/preferences.cpp:796
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "新しいプロファイル"
 
-#: lib/preferences/preferences.cpp:795
+#: lib/preferences/preferences.cpp:796
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "新しいプロファイルの名前を入力してください:"
 
-#: lib/preferences/preferences.cpp:805 lib/preferences/preferences.cpp:810
+#: lib/preferences/preferences.cpp:806 lib/preferences/preferences.cpp:811
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "エラーが発生しました!"
 
-#: lib/preferences/preferences.cpp:805
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "このプロファイルはすでに存在しています!"
 
-#: lib/preferences/preferences.cpp:810
+#: lib/preferences/preferences.cpp:811
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "プロファイルフォルダを作成できません!"
 
-#: lib/preferences/preferences.cpp:821
+#: lib/preferences/preferences.cpp:822
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "確認"
 
-#: lib/preferences/preferences.cpp:822
+#: lib/preferences/preferences.cpp:823
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4021,12 +4021,12 @@ msgid ""
 msgstr ""
 "本当に \"%1\" プロファイルを永久に削除しますか? この操作は取り消せません!"
 
-#: lib/preferences/preferences.cpp:837 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:838 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "注意:現在使用中のプロファイルは削除できません。"
 
-#: lib/preferences/preferences.cpp:1094
+#: lib/preferences/preferences.cpp:1095
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "色の選択"
@@ -4425,9 +4425,9 @@ msgctxt "Preferences|"
 msgid "Select color"
 msgstr "色の選択"
 
-#: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1258
-#: lib/preferences/preferences.ui:1792 lib/preferences/preferences.ui:1889
-#: lib/preferences/preferences.ui:2459
+#: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1265
+#: lib/preferences/preferences.ui:1799 lib/preferences/preferences.ui:1896
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -4515,197 +4515,202 @@ msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1112
+#: lib/preferences/preferences.ui:1102
+msgctxt "Preferences|"
+msgid "Use hardware acceleration (requires restart)"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1119
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "マウスホイールスクロール量"
 
-#: lib/preferences/preferences.ui:1132
+#: lib/preferences/preferences.ui:1139
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "行"
 
-#: lib/preferences/preferences.ui:1143
+#: lib/preferences/preferences.ui:1150
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "既定のズーム率:"
 
-#: lib/preferences/preferences.ui:1182
+#: lib/preferences/preferences.ui:1189
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "ローカルストレージ"
 
-#: lib/preferences/preferences.ui:1190
+#: lib/preferences/preferences.ui:1197
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "ネットワークをディスク上に保存する"
 
-#: lib/preferences/preferences.ui:1213
+#: lib/preferences/preferences.ui:1220
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "終了時にキャッシュを削除する"
 
-#: lib/preferences/preferences.ui:1220
+#: lib/preferences/preferences.ui:1227
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "最大サイズ:"
 
-#: lib/preferences/preferences.ui:1227
+#: lib/preferences/preferences.ui:1234
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1243
+#: lib/preferences/preferences.ui:1250
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "キャッシュの保存:"
 
-#: lib/preferences/preferences.ui:1271
+#: lib/preferences/preferences.ui:1278
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "履歴の保存を有効にする"
 
-#: lib/preferences/preferences.ui:1278
+#: lib/preferences/preferences.ui:1285
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "終了時に履歴を削除する"
 
-#: lib/preferences/preferences.ui:1301
+#: lib/preferences/preferences.ui:1308
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "HTML5 コンテンツの local storage を許可する"
 
-#: lib/preferences/preferences.ui:1308
+#: lib/preferences/preferences.ui:1315
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "終了時にローカルに保存された HTML5 コンテンツを削除する"
 
-#: lib/preferences/preferences.ui:1334
+#: lib/preferences/preferences.ui:1341
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "削除"
 
-#: lib/preferences/preferences.ui:1373
+#: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "プロキシ設定"
 
-#: lib/preferences/preferences.ui:1392
+#: lib/preferences/preferences.ui:1399
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "システムの設定を使う"
 
-#: lib/preferences/preferences.ui:1415
+#: lib/preferences/preferences.ui:1422
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "手動設定"
 
-#: lib/preferences/preferences.ui:1425
+#: lib/preferences/preferences.ui:1432
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1430
+#: lib/preferences/preferences.ui:1437
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1441
+#: lib/preferences/preferences.ui:1448
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "ポート番号:"
 
-#: lib/preferences/preferences.ui:1462
+#: lib/preferences/preferences.ui:1469
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "ユーザー名:"
 
-#: lib/preferences/preferences.ui:1472
+#: lib/preferences/preferences.ui:1479
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "パスワード:"
 
-#: lib/preferences/preferences.ui:1501
+#: lib/preferences/preferences.ui:1508
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "プロキシを使用しない"
 
-#: lib/preferences/preferences.ui:1516
+#: lib/preferences/preferences.ui:1523
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>フォント設定</b>"
 
-#: lib/preferences/preferences.ui:1529
+#: lib/preferences/preferences.ui:1536
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "既定のフォント"
 
-#: lib/preferences/preferences.ui:1536
+#: lib/preferences/preferences.ui:1543
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "等幅フォント"
 
-#: lib/preferences/preferences.ui:1546
+#: lib/preferences/preferences.ui:1553
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "明朝体(Serif)"
 
-#: lib/preferences/preferences.ui:1556
+#: lib/preferences/preferences.ui:1563
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "ゴシック体(Sans Serif)"
 
-#: lib/preferences/preferences.ui:1566
+#: lib/preferences/preferences.ui:1573
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "手書き風(cursive)"
 
-#: lib/preferences/preferences.ui:1618
+#: lib/preferences/preferences.ui:1625
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "装飾(Fantasy)"
 
-#: lib/preferences/preferences.ui:1625
+#: lib/preferences/preferences.ui:1632
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>フォントサイズ</b>"
 
-#: lib/preferences/preferences.ui:1634
+#: lib/preferences/preferences.ui:1641
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "等幅フォントのサイズ"
 
-#: lib/preferences/preferences.ui:1641
+#: lib/preferences/preferences.ui:1648
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "既定のフォントのサイズ"
 
-#: lib/preferences/preferences.ui:1668
+#: lib/preferences/preferences.ui:1675
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "最小フォントサイズ"
 
-#: lib/preferences/preferences.ui:1675
+#: lib/preferences/preferences.ui:1682
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "最小論理フォントサイズ"
 
-#: lib/preferences/preferences.ui:1708
+#: lib/preferences/preferences.ui:1715
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>ショートカット</b>"
 
-#: lib/preferences/preferences.ui:1715
+#: lib/preferences/preferences.ui:1722
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "タブを Alt キーと数字キーで切り替え"
 
-#: lib/preferences/preferences.ui:1722
+#: lib/preferences/preferences.ui:1729
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Ctrl キーと数字キーでスピードダイアルの項目を読み込む"
 
-#: lib/preferences/preferences.ui:1729
+#: lib/preferences/preferences.ui:1736
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4714,12 +4719,12 @@ msgstr ""
 "利用可能なショートカット:<br/><b>1</b> - previous tab<br/><b>2</b> - next "
 "tab<br/><b>/</b> - search on page"
 
-#: lib/preferences/preferences.ui:1732
+#: lib/preferences/preferences.ui:1739
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "シングルキーボード・ショートカットを使う"
 
-#: lib/preferences/preferences.ui:1739
+#: lib/preferences/preferences.ui:1746
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4728,179 +4733,179 @@ msgstr ""
 "チェックしない場合、Ctrl-W のショートカットのつもりで意図せずにアプリケーショ"
 "ンを終了するのを防ぎます。"
 
-#: lib/preferences/preferences.ui:1742
+#: lib/preferences/preferences.ui:1749
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Ctrl-Q でアプリケーションを終了する"
 
-#: lib/preferences/preferences.ui:1766
+#: lib/preferences/preferences.ui:1773
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>ダウンロードの場所</b>"
 
-#: lib/preferences/preferences.ui:1773
+#: lib/preferences/preferences.ui:1780
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "毎回尋ねる"
 
-#: lib/preferences/preferences.ui:1780
+#: lib/preferences/preferences.ui:1787
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "既定のダウンロード場所:"
 
-#: lib/preferences/preferences.ui:1830
+#: lib/preferences/preferences.ui:1837
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>ダウンロードのオプション</b>"
 
-#: lib/preferences/preferences.ui:1837
+#: lib/preferences/preferences.ui:1844
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "ダウンロード終了時にダウンロードマネージャを閉じる"
 
-#: lib/preferences/preferences.ui:1844
+#: lib/preferences/preferences.ui:1851
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>外部ダウンローダマネージャ</b>"
 
-#: lib/preferences/preferences.ui:1851
+#: lib/preferences/preferences.ui:1858
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "外部ダウンローダを使う"
 
-#: lib/preferences/preferences.ui:1863
+#: lib/preferences/preferences.ui:1870
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "実行するダウンローダを指定:"
 
-#: lib/preferences/preferences.ui:1870
+#: lib/preferences/preferences.ui:1877
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "引数:"
 
-#: lib/preferences/preferences.ui:1877
+#: lib/preferences/preferences.ui:1884
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "よくわからない場合は空白のままにしてください"
 
-#: lib/preferences/preferences.ui:1898
+#: lib/preferences/preferences.ui:1905
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> はダウンロードされる URL に置換されます。"
 
-#: lib/preferences/preferences.ui:1924
+#: lib/preferences/preferences.ui:1931
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>オートフィルの設定</b>"
 
-#: lib/preferences/preferences.ui:1931
+#: lib/preferences/preferences.ui:1938
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "パスワードの保存を有効にする"
 
-#: lib/preferences/preferences.ui:1982
+#: lib/preferences/preferences.ui:1989
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "サイトのパスワードを自動入力する"
 
-#: lib/preferences/preferences.ui:1993
+#: lib/preferences/preferences.ui:2000
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Cookie</b>"
 
-#: lib/preferences/preferences.ui:2000
+#: lib/preferences/preferences.ui:2007
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>その他</b>"
 
-#: lib/preferences/preferences.ui:2026
+#: lib/preferences/preferences.ui:2033
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "JavaScript オプション"
 
-#: lib/preferences/preferences.ui:2036
+#: lib/preferences/preferences.ui:2043
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2049
+#: lib/preferences/preferences.ui:2056
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Cookie マネージャ"
 
-#: lib/preferences/preferences.ui:2059
+#: lib/preferences/preferences.ui:2066
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "JavaScript プライバシーオプションの管理"
 
-#: lib/preferences/preferences.ui:2082
+#: lib/preferences/preferences.ui:2089
 msgctxt "Preferences|"
 msgid "Manage HTML5 permissions"
 msgstr "HTML5 パーミッションの管理"
 
-#: lib/preferences/preferences.ui:2089
+#: lib/preferences/preferences.ui:2096
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Cookie の管理"
 
-#: lib/preferences/preferences.ui:2109
+#: lib/preferences/preferences.ui:2116
 msgctxt "Preferences|"
 msgid "<b>HTML5 Permissions</b>"
 msgstr "<b>HTML5 パーミッション</b>"
 
-#: lib/preferences/preferences.ui:2122
+#: lib/preferences/preferences.ui:2129
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "HTML5 パーミッション"
 
-#: lib/preferences/preferences.ui:2129
+#: lib/preferences/preferences.ui:2136
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Do Not Track ヘッダをサーバーに送る"
 
-#: lib/preferences/preferences.ui:2155
+#: lib/preferences/preferences.ui:2162
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "通知の表示時間:"
 
-#: lib/preferences/preferences.ui:2168
+#: lib/preferences/preferences.ui:2175
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr "秒"
 
-#: lib/preferences/preferences.ui:2190
+#: lib/preferences/preferences.ui:2197
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>通知</b>"
 
-#: lib/preferences/preferences.ui:2213
+#: lib/preferences/preferences.ui:2220
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "ネイティブの通知を使う(Linux OS のみ可)"
 
-#: lib/preferences/preferences.ui:2220
+#: lib/preferences/preferences.ui:2227
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "通知を表示しない"
 
-#: lib/preferences/preferences.ui:2243
+#: lib/preferences/preferences.ui:2250
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
 "the screen."
 msgstr "<b>注意:</b>OSD 通知の表示位置はドラッグで変更できます。"
 
-#: lib/preferences/preferences.ui:2269
+#: lib/preferences/preferences.ui:2276
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "OSD 通知を使う"
 
-#: lib/preferences/preferences.ui:2276
+#: lib/preferences/preferences.ui:2283
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "プレビュー"
 
-#: lib/preferences/preferences.ui:2341
+#: lib/preferences/preferences.ui:2348
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid ""
@@ -4914,47 +4919,47 @@ msgstr ""
 "スペルチェックについての詳しい情報は <a href=\"https://github.com/QupZilla/"
 "qupzilla/wiki/Spell-Check\">wiki</a> を参照してください。"
 
-#: lib/preferences/preferences.ui:2383
+#: lib/preferences/preferences.ui:2390
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>スペルチェックの設定</b>"
 
-#: lib/preferences/preferences.ui:2390
+#: lib/preferences/preferences.ui:2397
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "スペルチェックを有効にする"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2404
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>辞書のディレクトリ</b>"
 
-#: lib/preferences/preferences.ui:2448
+#: lib/preferences/preferences.ui:2455
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "言語が見付かりません"
 
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2473
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>検索エンジンを管理する</b>"
 
-#: lib/preferences/preferences.ui:2473
+#: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>ユーザースタイルシート</b>"
 
-#: lib/preferences/preferences.ui:2498
+#: lib/preferences/preferences.ui:2505
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "言語"
 
-#: lib/preferences/preferences.ui:2520
+#: lib/preferences/preferences.ui:2527
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b> ブラウザの UA を変更する </b>"
 
-#: lib/preferences/preferences.ui:2545
+#: lib/preferences/preferences.ui:2552
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Cookies Manager"
@@ -4962,27 +4967,27 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Cookie マネージャ"
 
-#: lib/preferences/preferences.ui:2585
+#: lib/preferences/preferences.ui:2592
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "検索エンジンマネージャ"
 
-#: lib/preferences/preferences.ui:2633
+#: lib/preferences/preferences.ui:2640
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "すべてのページに適用するスタイルシート:"
 
-#: lib/preferences/preferences.ui:2643
+#: lib/preferences/preferences.ui:2650
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>言語設定</b>"
 
-#: lib/preferences/preferences.ui:2668
+#: lib/preferences/preferences.ui:2675
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "User Agent マネージャ"
 
-#: lib/preferences/preferences.ui:2690
+#: lib/preferences/preferences.ui:2697
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "<b>Manage search engines</b>"
