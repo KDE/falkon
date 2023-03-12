@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-03-11 04:55\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -12,8 +12,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/falkon/falkon_qt.pot\n"
-"X-Crowdin-File-ID: 7082\n"
+"X-Crowdin-File: /kf5-stable/messages/falkon/falkon_qt.pot\n"
+"X-Crowdin-File-ID: 7105\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2562,9 +2562,12 @@ msgid "Qt version"
 msgstr "Qt 版本"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#, fuzzy
+#| msgctxt "AboutDialog|"
+#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "QtWebEngine 版本"
+msgstr "<b>QtWebEngine 版本 %1</b></p>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
@@ -4151,7 +4154,7 @@ msgstr "启用屏幕捕捉"
 #: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr "使用硬件加速(需要重启)"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1119
 msgctxt "Preferences|"
