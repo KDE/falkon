@@ -84,7 +84,16 @@
     <object-type name="BookmarkItem">
       <enum-type name="Type"/>
     </object-type>
-    <object-type name="Bookmarks"/>
+    <object-type name="Bookmarks">
+      <modify-function signature="addBookmark(BookmarkItem*, BookmarkItem*)">
+        <modify-argument index="1">
+          <define-ownership class="target" owner="c++"/>
+        </modify-argument>
+        <modify-argument index="2">
+          <define-ownership class="target" owner="c++"/>
+        </modify-argument>
+      </modify-function>
+    </object-type>
     <object-type name="BookmarksModel">
       <enum-type name="Roles"/>
     </object-type>
