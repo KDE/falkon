@@ -111,7 +111,7 @@ void HistoryTreeView::removeSelectedItems()
             continue;
         }
 
-        if (index.data(HistoryModel::IsTopLevelRole).toBool()) {
+        if ((index.data(HistoryModel::IsTopLevelRole).toBool()) && (m_filter->isPatternEmpty())) {
             qint64 start = index.data(HistoryModel::TimestampStartRole).toLongLong();
             qint64 end = index.data(HistoryModel::TimestampEndRole).toLongLong();
 
