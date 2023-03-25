@@ -89,6 +89,7 @@ class FALKON_EXPORT HistoryFilterModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit HistoryFilterModel(QAbstractItemModel* parent);
+    bool isPatternEmpty() const;
 
 public Q_SLOTS:
     void setFilterFixedString(const QString &pattern);
