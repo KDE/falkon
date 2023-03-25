@@ -3,6 +3,9 @@ Version 23.04.0
     * Show QtWebEngine version on Falkon Config page
     * Implement prefers-color-scheme (dark mode) for internal pages
     * Add option to enable GPU acceleration (by Hao Chi Kiang)
+    * PyFalkon: addBookmark - make C++ own parameters (fixes potential crash)
+    * KWallet: Store passwords in a map format
+    * History: Don't delete all items under dates when filtering
 
 Version 22.08.2
     * Fix: Typing text in the search bar sends data although suggestions are disabled (by Juraj Oravec) (BUG: 439268)
