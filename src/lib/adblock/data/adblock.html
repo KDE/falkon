@@ -1,18 +1,36 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>%TITLE%</title>
-<link rel="icon" href="%FAVICON%" type="image/x-icon" />
+<title>Blocked content</title>
+<link rel="icon" href="adblock_big.png" type="image/x-icon" />
 <style>
-html {background: #dddddd;}
-body {background: #dddddd;}
-#box {background: #ffffff;max-width: 300px;height: 80%;overflow:auto;padding: 25px;padding-bottom: 10px;text-align: center;vertical-align: middle;margin: auto;direction: %DIRECTION%;}
+#box {max-width: 300px;height: 80%;overflow:auto;padding: 25px;padding-bottom: 10px;text-align: center;vertical-align: middle;margin: auto;}
 h2 {font-size: 100%;font-weight: bold; border-bottom: 1px solid #f4f4f4; margin-bottom: 0px;}
+
+@media (prefers-color-scheme: light) {
+  html, body {background: #dddddd;color: #525c66;}
+  #box {background: #ffffff;}
+  h2 {border-bottom-color: #aaa;}
+  .dark {display: none;}
+}
+@media (prefers-color-scheme: dark) {
+  html, body {background: #070709;color: #dddddd;}
+  #box {background: #171717;}
+  h2 {border-bottom-color: #555;}
+  .light {display: none;}
+}
 </style>
 </head>
 <body>
   <div id="box">
-    <img src="%IMAGE%" >
+    <img src="adblock_big.png" >
     <h2>AdBlock</h2>
-    %RULE%
+    <span id="rule"></span>
   </div>
+
+<script>
+let params = (new URL(document.location)).searchParams;
+document.title = params.get("title");
+document.getElementById("rule").innerHTML = params.get("rule");
+document.getElementById("box").style.direction = params.get("direction");
+</script>
 </body></html>
