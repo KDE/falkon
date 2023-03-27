@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
-"PO-Revision-Date: 2023-03-11 04:55\n"
+"PO-Revision-Date: 2023-03-26 02:20\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -244,12 +244,12 @@ msgctxt "AdBlockTreeWidget|"
 msgid "%1 (Error: %2)"
 msgstr "%1 (错误：%2)"
 
-#: lib/adblock/adblockurlinterceptor.cpp:44
+#: lib/adblock/adblockurlinterceptor.cpp:41
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked content"
 msgstr "屏蔽的内容"
 
-#: lib/adblock/adblockurlinterceptor.cpp:45
+#: lib/adblock/adblockurlinterceptor.cpp:42
 #, qt-format
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
@@ -2562,12 +2562,9 @@ msgid "Qt version"
 msgstr "Qt 版本"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
-#, fuzzy
-#| msgctxt "AboutDialog|"
-#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "<b>QtWebEngine 版本 %1</b></p>"
+msgstr "QtWebEngine 版本"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
@@ -4154,7 +4151,7 @@ msgstr "启用屏幕捕捉"
 #: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr ""
+msgstr "使用硬件加速(需要重启)"
 
 #: lib/preferences/preferences.ui:1119
 msgctxt "Preferences|"
