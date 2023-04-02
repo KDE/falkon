@@ -2,7 +2,18 @@
 <head>
 <link rel="shortcut icon" href="%FAVICON%">
 <style>
-input { margin: 15% 25%; min-width: 50%; }
+input { margin: 15% 25%; min-width: 50%; border: 1px solid; }
+
+@media (prefers-color-scheme: light) {
+  html, body {background: #dddddd;color: #525c66;}
+  input {border-color: #babcb8;}
+  input:focus {border-color: #579eea;}
+}
+@media (prefers-color-scheme: dark) {
+  html, body {background: #070709;color: #dddddd;}
+  input {background-color: #070709;color: white;border-color: #555;}
+  input:focus {border-color: #1a4ba4;}
+}
 </style>
 </head>
 <body>
