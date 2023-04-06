@@ -164,6 +164,8 @@ private:
     void checkDefaultWebBrowser();
     void checkOptimizeDatabase();
 
+    void registerAllowedSchemes();
+
     bool m_isPrivate;
     bool m_isPortable;
     bool m_isClosing;

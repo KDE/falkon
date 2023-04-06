@@ -48,6 +48,7 @@
 #include "searchenginesdialog.h"
 #include "webscrollbarmanager.h"
 #include "protocolhandlerdialog.h"
+#include "schememanager.h"
 #include "../config.h"
 
 #include <QSettings>
@@ -522,6 +523,7 @@ Preferences::Preferences(BrowserWindow* window)
     connect(ui->searchEngines, &QAbstractButton::clicked, this, &Preferences::openSearchEnginesManager);
     connect(ui->certificateManager, &QAbstractButton::clicked, this, &Preferences::openCertificateManager);
     connect(ui->protocolHandlers, &QAbstractButton::clicked, this, &Preferences::openProtocolHandlersManager);
+    connect(ui->customSchemes, &QAbstractButton::clicked, this, &Preferences::openSchemesManager);
 
     connect(ui->listWidget, &QListWidget::currentItemChanged, this, &Preferences::showStackedPage);
     ui->listWidget->itemAt(5, 5)->setSelected(true);
@@ -751,6 +753,12 @@ void Preferences::openCertificateManager()
 void Preferences::openProtocolHandlersManager()
 {
     auto *dialog = new ProtocolHandlerDialog(this);
+    dialog->open();
+}
+
+void Preferences::openSchemesManager()
+{
+    auto *dialog = new SchemeManager(this);
     dialog->open();
 }
 

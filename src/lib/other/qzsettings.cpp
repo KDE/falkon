@@ -51,6 +51,8 @@ void QzSettings::loadSettings()
     loadTabsOnActivation = settings.value("LoadTabsOnActivation", true).toBool();
     autoOpenProtocols = settings.value("AutomaticallyOpenProtocols", QStringList()).toStringList();
     blockedProtocols = settings.value("BlockOpeningProtocols", QStringList()).toStringList();
+    allowedSchemes = settings.value("AllowedSchemes", QStringList()).toStringList();
+    blockedSchemes = settings.value("BlockedSchemes", QStringList()).toStringList();
     settings.endGroup();
 
     settings.beginGroup("Browser-Tabs-Settings");

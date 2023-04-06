@@ -69,6 +69,7 @@
 #include <QtWebEngineCoreVersion>
 
 #include <QWebEngineNotification>
+#include <QWebEngineUrlScheme>
 
 #ifdef Q_OS_WIN
 #include <QtWin>
@@ -293,6 +294,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     }
 
     NetworkManager::registerSchemes();
+    registerAllowedSchemes();
 
     m_webProfile = isPrivate() ? new QWebEngineProfile() : QWebEngineProfile::defaultProfile();
     connect(m_webProfile, &QWebEngineProfile::downloadRequested, this, &MainApplication::downloadRequested);
@@ -1114,6 +1116,19 @@ void MainApplication::checkOptimizeDatabase()
     }
 
     settings.endGroup();
+}
+
+void MainApplication::registerAllowedSchemes()
+{
+    for (const QString &schemeName : qAsConst(qzSettings->allowedSchemes)) {
+        if (qzSettings->blockedSchemes.contains(schemeName)) {
+            continue;
+        }
+        QWebEngineUrlScheme scheme(schemeName.toUtf8());
+        scheme.setFlags(QWebEngineUrlScheme::SecureScheme | QWebEngineUrlScheme::ContentSecurityPolicyIgnored);
+        scheme.setSyntax(QWebEngineUrlScheme::Syntax::Path);
+        QWebEngineUrlScheme::registerScheme(scheme);
+    }
 }
 
 void MainApplication::setupUserScripts()
