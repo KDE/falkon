@@ -56,6 +56,9 @@ public:
     QStringList autoOpenProtocols;
     QStringList blockedProtocols;
 
+    QStringList allowedSchemes;
+    QStringList blockedSchemes;
+
     // Browser-Tabs-Settings
     Qz::NewTabPositionFlags newTabPosition;
     bool tabsOnTop;

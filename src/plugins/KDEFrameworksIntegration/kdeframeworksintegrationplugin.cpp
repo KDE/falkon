@@ -29,6 +29,7 @@
 #include "webview.h"
 #include "downloadkjob.h"
 #include "downloaditem.h"
+#include "settings.h"
 
 #include <KCrash>
 #include <KAboutData>
@@ -37,6 +38,7 @@
 #include <KUiServerJobTracker>
 
 #include <QWebEngineProfile>
+#include <QWebEngineUrlScheme>
 #include <QMenu>
 #include <QJsonArray>
 
@@ -74,15 +76,34 @@ void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settin
     });
 
 
+    QStringList newSchemes;
     const auto protocols = KProtocolInfo::protocols();
     for (const QString &protocol : protocols) {
         if (WebPage::internalSchemes().contains(protocol)) {
             continue;
         }
-        auto *handler = new KIOSchemeHandler(protocol, this);
-        m_kioSchemeHandlers.append(handler);
-        mApp->webProfile()->installUrlSchemeHandler(protocol.toUtf8(), handler);
-        WebPage::addSupportedScheme(protocol);
+        if (!QWebEngineUrlScheme::schemeByName(protocol.toUtf8()).name().isEmpty()) {
+            auto *handler = new KIOSchemeHandler(protocol, this);
+            m_kioSchemeHandlers.append(handler);
+            mApp->webProfile()->installUrlSchemeHandler(protocol.toUtf8(), handler);
+            WebPage::addSupportedScheme(protocol);
+        }
+        else {
+            newSchemes.append(protocol);
+            qInfo() << QSL("KDEFrameworksIntegration: Custom scheme '%1' will be available after browser restart.").arg(protocol);
+        }
+    }
+
+    if (!newSchemes.isEmpty()) {
+        Settings settings;
+        settings.beginGroup(QSL("Web-Browser-Settings"));
+
+        QStringList allowedSchemes = settings.value(QSL("AllowedSchemes"), QStringList()).toStringList();
+        allowedSchemes.append(newSchemes);
+        allowedSchemes.removeDuplicates();
+        settings.setValue(QSL("AllowedSchemes"), allowedSchemes);
+
+        settings.endGroup();
     }
 
     m_sharePageMenu = new Purpose::Menu();

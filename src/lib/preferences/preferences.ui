@@ -2474,120 +2474,6 @@
          </widget>
          <widget class="QWidget" name="otherPage">
           <layout class="QGridLayout" name="gridLayout_13">
-           <item row="4" column="0" colspan="6">
-            <widget class="QLabel" name="label_36">
-             <property name="text">
-              <string>&lt;b&gt;Preferred language for web sites&lt;/b&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="16" column="0" colspan="6">
-            <widget class="QLabel" name="label_7">
-             <property name="text">
-              <string>&lt;b&gt;Manage protocol handlers&lt;/b&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="0">
-            <widget class="QLabel" name="label_8">
-             <property name="text">
-              <string>&lt;b&gt;Certificate manager&lt;/b&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="12" column="0" colspan="4">
-            <layout class="QHBoxLayout" name="horizontalLayout_6">
-             <item>
-              <spacer name="horizontalSpacer_35">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeType">
-                <enum>QSizePolicy::Fixed</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QPushButton" name="certificateManager">
-               <property name="text">
-                <string>Certificate Exception Manager</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_36">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-            </layout>
-           </item>
-           <item row="8" column="0" colspan="4">
-            <layout class="QHBoxLayout" name="horizontalLayout_17">
-             <item>
-              <spacer name="horizontalSpacer_26">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeType">
-                <enum>QSizePolicy::Fixed</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QPushButton" name="uaManager">
-               <property name="text">
-                <string>User Agent Manager</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_25">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-            </layout>
-           </item>
-           <item row="26" column="0">
-            <spacer name="verticalSpacer_15">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
            <item row="17" column="0" colspan="4">
             <layout class="QHBoxLayout" name="horizontalLayout_5">
              <item>
@@ -2627,20 +2513,6 @@
               </spacer>
              </item>
             </layout>
-           </item>
-           <item row="9" column="0" colspan="6">
-            <widget class="QLabel" name="label_66">
-             <property name="text">
-              <string>&lt;b&gt;Manage search engines&lt;/b&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="19" column="0" colspan="6">
-            <widget class="QLabel" name="label_15">
-             <property name="text">
-              <string>Style Sheet automatically loaded with all websites: </string>
-             </property>
-            </widget>
            </item>
            <item row="10" column="0" colspan="4">
             <layout class="QHBoxLayout" name="horizontalLayout_25">
@@ -2682,23 +2554,30 @@
              </item>
             </layout>
            </item>
-           <item row="5" column="5">
-            <spacer name="horizontalSpacer_6">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="18" column="0" colspan="6">
+           <item row="20" column="0" colspan="6">
             <widget class="QLabel" name="label_9">
              <property name="text">
               <string>&lt;b&gt;User Style Sheet&lt;/b&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0" colspan="6">
+            <widget class="QLabel" name="label_66">
+             <property name="text">
+              <string>&lt;b&gt;Manage search engines&lt;/b&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="18" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Manage custom schemes</string>
              </property>
             </widget>
            </item>
@@ -2742,6 +2621,53 @@
              </item>
             </layout>
            </item>
+           <item row="4" column="0" colspan="6">
+            <widget class="QLabel" name="label_36">
+             <property name="text">
+              <string>&lt;b&gt;Preferred language for web sites&lt;/b&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0" colspan="4">
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <spacer name="horizontalSpacer_35">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="certificateManager">
+               <property name="text">
+                <string>Certificate Exception Manager</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_36">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
            <item row="7" column="0" colspan="6">
             <widget class="QLabel" name="label_60">
              <property name="text">
@@ -2749,7 +2675,54 @@
              </property>
             </widget>
            </item>
-           <item row="21" column="0">
+           <item row="8" column="0" colspan="4">
+            <layout class="QHBoxLayout" name="horizontalLayout_17">
+             <item>
+              <spacer name="horizontalSpacer_26">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="uaManager">
+               <property name="text">
+                <string>User Agent Manager</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_25">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item row="21" column="0" colspan="6">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>Style Sheet automatically loaded with all websites: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="23" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_13">
              <item>
               <spacer name="horizontalSpacer_37">
@@ -2776,6 +2749,86 @@
                 <string>...</string>
                </property>
               </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="16" column="0" colspan="6">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>&lt;b&gt;Manage protocol handlers&lt;/b&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>&lt;b&gt;Certificate manager&lt;/b&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="28" column="0">
+            <spacer name="verticalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="5" column="5">
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="19" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_15">
+             <item>
+              <spacer name="horizontalSpacer_38">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="customSchemes">
+               <property name="text">
+                <string>Custom Scheme Manager</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_39">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>
