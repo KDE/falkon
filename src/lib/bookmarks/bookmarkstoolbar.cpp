@@ -187,7 +187,7 @@ void BookmarksToolbar::createNewFolder()
     if (!name.isEmpty()) {
         BookmarkItem* parent;
         
-        if (m_clickedBookmark) {
+        if (m_clickedBookmark && m_clickedBookmark->isFolder()) {
             parent = m_clickedBookmark;
         } else {
             parent = m_bookmarks->toolbarFolder();
