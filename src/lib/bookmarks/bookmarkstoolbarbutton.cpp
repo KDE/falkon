@@ -428,6 +428,10 @@ void BookmarksToolbarButton::dropEvent(QDropEvent *event)
     if (mime->hasFormat(BookmarksButtonMimeData::mimeType())) {
         const auto* bookmarkMime = static_cast<const BookmarksButtonMimeData*>(mime);
         bookmark = bookmarkMime->item();
+
+        if (m_bookmark == bookmark) {
+            return;
+        }
     } else {
         const QUrl url = mime->urls().at(0);
         const QString title = mime->hasText() ? mime->text() : url.toEncoded(QUrl::RemoveScheme);
