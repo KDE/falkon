@@ -79,7 +79,7 @@ static QString getTopLevelDomain(const QUrl &url)
     }
 
     //return qt_ACE_do(tld, ToAceOnly, AllowLeadingDot, {});
-    // TODO - QUrl::toAce() uses ForbidLeadingDot, while the old QUrl::topLevelDomain() used AllowLeadingDot. Does this matter?
+    // TODO QT6 - QUrl::toAce() uses ForbidLeadingDot, while the old QUrl::topLevelDomain() used AllowLeadingDot. Does this matter?
     return QString(QUrl::toAce(tld));
 #endif
 }

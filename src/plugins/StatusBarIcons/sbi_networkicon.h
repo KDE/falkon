@@ -47,7 +47,7 @@ private:
 #endif
 
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    // TODO - should we try to replace the online status detection using Qt 6?
+    // TODO QT6 - should we try to replace the online status detection using Qt 6?
     QNetworkConfigurationManager* m_networkConfiguration;
 #endif
 };

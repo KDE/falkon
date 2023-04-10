@@ -35,8 +35,7 @@ if (UNIX AND NOT APPLE)
     if (KF${KF_MAJOR_VERSION}I18n_FOUND)
         ki18n_install(${CMAKE_SOURCE_DIR}/po)
     endif()
-    # TODO Qt6 port ?
-    #ecm_install_po_files_as_qm(${CMAKE_SOURCE_DIR}/poqm)
+    ecm_install_po_files_as_qm(${CMAKE_SOURCE_DIR}/poqm)
 
     install(PROGRAMS ../../linux/applications/org.kde.falkon.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 

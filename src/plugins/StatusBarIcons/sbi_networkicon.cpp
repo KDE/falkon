@@ -113,6 +113,8 @@ void SBI_NetworkIcon::updateToolTip()
         tooltip = tooltip.arg(tr("Offline"));
     }
 #else
+    // TODO QT6 - in Qt6 we're always reporting as online, should we just remove this functionality instead?
+    // Or is there a way to detect network status in Qt6?
     tooltip = tooltip.arg(tr("Connected"));
 #endif
 

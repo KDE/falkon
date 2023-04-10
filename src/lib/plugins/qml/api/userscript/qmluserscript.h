@@ -123,7 +123,7 @@ private:
     void setNotNull()
     {
 #if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-        // TODO: This is a really hacky way of keeping track of whether the script has been initialized - and is it even necessary?
+        // TODO QT6: This is a really hacky way of keeping track of whether the script has been initialized - and is it even necessary?
         m_isNull = false;
 #endif
     }
