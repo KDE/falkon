@@ -42,7 +42,7 @@ public:
             return !url.isEmpty();
         }
 
-        bool operator==(const Page &other) {
+        bool operator==(const Page &other) const {
             return (this->title == other.title &&
                     this->url == other.url);
         }

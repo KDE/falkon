@@ -44,8 +44,9 @@ BookmarksToolbar::BookmarksToolbar(BrowserWindow* window, QWidget* parent)
     setContextMenuPolicy(Qt::CustomContextMenu);
 
     m_layout = new QHBoxLayout(this);
-    m_layout->setMargin(style()->pixelMetric(QStyle::PM_ToolBarItemMargin, 0, this)
-                          + style()->pixelMetric(QStyle::PM_ToolBarFrameWidth, 0, this));
+    auto contentsMargin = style()->pixelMetric(QStyle::PM_ToolBarItemMargin, 0, this)
+                        + style()->pixelMetric(QStyle::PM_ToolBarFrameWidth, 0, this);
+    m_layout->setContentsMargins(contentsMargin, contentsMargin, contentsMargin, contentsMargin);
     m_layout->setSpacing(style()->pixelMetric(QStyle::PM_ToolBarItemSpacing, 0, this));
     setLayout(m_layout);
 

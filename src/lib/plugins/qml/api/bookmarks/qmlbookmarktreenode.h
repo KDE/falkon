@@ -18,6 +18,8 @@
 #pragma once
 #include "bookmarkitem.h"
 
+#include <QObject>
+
 /**
  * @brief The class exposing the bookmark item to QML
  */

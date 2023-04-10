@@ -256,7 +256,11 @@ QString BookmarksToolbarButton::createTooltip() const
     return m_bookmark->urlString();
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 void BookmarksToolbarButton::enterEvent(QEvent* event)
+#else
+void BookmarksToolbarButton::enterEvent(QEnterEvent* event)
+#endif
 {
     QPushButton::enterEvent(event);
 

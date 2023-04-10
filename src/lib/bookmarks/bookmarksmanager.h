@@ -23,6 +23,8 @@
 
 #include "qzcommon.h"
 
+#include "bookmarkitem.h"
+
 namespace Ui
 {
 class BookmarksManager;
@@ -32,7 +34,6 @@ class QUrl;
 
 class BrowserWindow;
 class Bookmarks;
-class BookmarkItem;
 
 class FALKON_EXPORT BookmarksManager : public QWidget
 {

@@ -37,7 +37,7 @@ struct FlashCookie {
     QString contents;
     QDateTime lastModification;
 
-    bool operator ==(const FlashCookie &other) {
+    bool operator ==(const FlashCookie &other) const {
         return (this->name == other.name && this->path == other.path);
     }
 };

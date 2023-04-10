@@ -20,6 +20,9 @@
 
 QmlUserScript::QmlUserScript(QObject *parent)
     : QObject(parent)
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+    , m_isNull(true)
+#endif
 {
 }
 
@@ -35,12 +38,17 @@ QWebEngineScript QmlUserScript::webEngineScript() const
 
 void QmlUserScript::setWebEngineScript(const QWebEngineScript &script)
 {
+    setNotNull();
     m_webEngineScript = script;
 }
 
 bool QmlUserScript::null() const
 {
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     return m_webEngineScript.isNull();
+#else
+    return m_isNull;
+#endif
 }
 
 QString QmlUserScript::name() const
@@ -50,6 +58,7 @@ QString QmlUserScript::name() const
 
 void QmlUserScript::setName(const QString &name)
 {
+    setNotNull();
     m_webEngineScript.setName(name);
     Q_EMIT nameChanged(name);
     aboutToUpdateUnderlyingScript();
@@ -62,6 +71,7 @@ bool QmlUserScript::runsOnSubFrames() const
 
 void QmlUserScript::setRunsOnSubFrames(bool runsOnSubFrames)
 {
+    setNotNull();
     m_webEngineScript.setRunsOnSubFrames(runsOnSubFrames);
     Q_EMIT runsOnSubFramesChanged(runsOnSubFrames);
     aboutToUpdateUnderlyingScript();
@@ -74,6 +84,7 @@ int QmlUserScript::worldId() const
 
 void QmlUserScript::setWorldId(int worldId)
 {
+    setNotNull();
     switch (worldId) {
     case QWebEngineScript::MainWorld:
         m_webEngineScript.setWorldId(QWebEngineScript::MainWorld);
@@ -98,6 +109,7 @@ QString QmlUserScript::sourceCode() const
 
 void QmlUserScript::setSourceCode(const QString &sourceCode)
 {
+    setNotNull();
     m_webEngineScript.setSourceCode(sourceCode);
     Q_EMIT sourceCodeChanged(sourceCode);
     aboutToUpdateUnderlyingScript();
@@ -110,6 +122,7 @@ QmlUserScript::InjectionPoint QmlUserScript::injectionPoint() const
 
 void QmlUserScript::setInjectionPoint(InjectionPoint injectionPoint)
 {
+    setNotNull();
     switch (static_cast<QWebEngineScript::InjectionPoint>(injectionPoint)) {
     case QWebEngineScript::DocumentCreation:
         m_webEngineScript.setInjectionPoint(QWebEngineScript::DocumentCreation);

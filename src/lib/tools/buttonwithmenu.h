@@ -38,7 +38,7 @@ public:
             icon = b;
         }
 
-        bool operator==(const Item &a) {
+        bool operator==(const Item &a) const {
             return (a.text == text) && (a.icon.pixmap(16).toImage() == icon.pixmap(16).toImage());
         }
 

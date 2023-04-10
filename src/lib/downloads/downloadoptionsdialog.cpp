@@ -21,9 +21,13 @@
 
 #include <QClipboard>
 #include <QMimeDatabase>
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 #include <QWebEngineDownloadItem>
+#else
+#include <QWebEngineDownloadRequest>
+#endif
 
-DownloadOptionsDialog::DownloadOptionsDialog(const QString &fileName, QWebEngineDownloadItem *downloadItem, QWidget *parent)
+DownloadOptionsDialog::DownloadOptionsDialog(const QString &fileName, Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS *downloadItem, QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::DownloadOptionsDialog)
     , m_downloadItem(downloadItem)

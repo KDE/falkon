@@ -6,7 +6,7 @@ macro(pyfalkon_tests)
 endmacro()
 
 add_executable(pyfalkontestrunner pyfalkontestrunner.cpp)
-target_link_libraries(pyfalkontestrunner FalkonPrivate Qt5::Test)
+target_link_libraries(pyfalkontestrunner FalkonPrivate Qt${QT_MAJOR_VERSION}::Test)
 
 pyfalkon_tests(
     basictest

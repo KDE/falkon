@@ -21,6 +21,7 @@
 #include <QObject>
 #include <QVariant>
 #include <QPointer>
+#include <QPixmap>
 
 #include "qzcommon.h"
 #include "plugininterface.h"

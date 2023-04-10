@@ -66,8 +66,9 @@ NavigationBar::NavigationBar(BrowserWindow* window)
     setObjectName(QSL("navigationbar"));
 
     m_layout = new QHBoxLayout(this);
-    m_layout->setMargin(style()->pixelMetric(QStyle::PM_ToolBarItemMargin, 0, this)
-                          + style()->pixelMetric(QStyle::PM_ToolBarFrameWidth, 0, this));
+    auto contentsMargin = style()->pixelMetric(QStyle::PM_ToolBarItemMargin, 0, this)
+                        + style()->pixelMetric(QStyle::PM_ToolBarFrameWidth, 0, this);
+    m_layout->setContentsMargins(contentsMargin, contentsMargin, contentsMargin, contentsMargin);
     m_layout->setSpacing(style()->pixelMetric(QStyle::PM_ToolBarItemSpacing, 0, this));
     setLayout(m_layout);
 
@@ -281,12 +282,13 @@ void NavigationBar::setSuperMenuVisible(bool visible)
 
 int NavigationBar::layoutMargin() const
 {
-    return m_layout->margin();
+    // NOTE: This assumes margins are always the same.
+    return m_layout->contentsMargins().left();
 }
 
 void NavigationBar::setLayoutMargin(int margin)
 {
-    m_layout->setMargin(margin);
+    m_layout->setContentsMargins(margin, margin, margin, margin);
 }
 
 int NavigationBar::layoutSpacing() const

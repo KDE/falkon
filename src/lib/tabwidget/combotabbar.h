@@ -350,7 +350,7 @@ private:
     ToolButton* m_rightScrollButton;
     ToolButton* m_leftScrollButton;
     bool m_usesScrollButtons;
-    int m_totalDeltas;
+    int m_totalVerticalDeltas;
 };
 
 // Class for close button on tabs
@@ -364,7 +364,11 @@ public:
 
     QSize sizeHint() const override;
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     void enterEvent(QEvent *event) override;
+#else
+    void enterEvent(QEnterEvent *event) override;
+#endif
     void leaveEvent(QEvent *event) override;
     void paintEvent(QPaintEvent *event) override;
 };

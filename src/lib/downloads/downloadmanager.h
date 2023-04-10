@@ -32,7 +32,11 @@ class DownloadManager;
 class QUrl;
 class QNetworkAccessManager;
 class QListWidgetItem;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 class QWebEngineDownloadItem;
+#else
+class QWebEngineDownloadRequest;
+#endif
 class QWinTaskbarButton;
 
 class DownloadItem;
@@ -65,7 +69,11 @@ public:
 
     void loadSettings();
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     void download(QWebEngineDownloadItem *downloadItem);
+#else
+    void download(QWebEngineDownloadRequest *downloadItem);
+#endif
 
     int downloadsCount() const;
     int activeDownloadsCount() const;
@@ -98,7 +106,11 @@ private:
     void resizeEvent(QResizeEvent* e) override;
     void keyPressEvent(QKeyEvent* e) override;
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     void closeDownloadTab(QWebEngineDownloadItem *item) const;
+#else
+    void closeDownloadTab(QWebEngineDownloadRequest *item) const;
+#endif
     QWinTaskbarButton *taskbarButton();
 
     Ui::DownloadManager* ui;

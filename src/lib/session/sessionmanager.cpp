@@ -25,6 +25,7 @@
 #include "settings.h"
 
 #include <QAction>
+#include <QActionGroup>
 #include <QComboBox>
 #include <QDateTime>
 #include <QDialogButtonBox>

@@ -33,7 +33,7 @@ int QmlUserScripts::count() const
 
 int QmlUserScripts::size() const
 {
-    return mApp->webProfile()->scripts()->size();
+    return mApp->webProfile()->scripts()->count();
 }
 
 bool QmlUserScripts::empty() const
@@ -65,15 +65,28 @@ bool QmlUserScripts::contains(QObject *object) const
 
 QObject *QmlUserScripts::findScript(const QString &name) const
 {
-    QWebEngineScript webEngineScript = mApp->webProfile()->scripts()->findScript(name);
     auto *qmlUserScript = new QmlUserScript();
+
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    QWebEngineScript webEngineScript = mApp->webProfile()->scripts()->findScript(name);
     qmlUserScript->setWebEngineScript(webEngineScript);
+#else
+    auto scripts = mApp->webProfile()->scripts()->find(name);
+    if (!scripts.empty()) {
+        qmlUserScript->setWebEngineScript(scripts.first());
+    }
+#endif
+
     return qmlUserScript;
 }
 
 QList<QObject*> QmlUserScripts::findScripts(const QString &name) const
 {
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     QList<QWebEngineScript> list = mApp->webProfile()->scripts()->findScripts(name);
+#else
+    QList<QWebEngineScript> list = mApp->webProfile()->scripts()->find(name);
+#endif
     return toQObjectList(list);
 }
 

@@ -296,7 +296,11 @@ void AdBlockManager::load()
         }
 
         QTextStream textStream(&file);
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
         textStream.setCodec("UTF-8");
+#else
+        textStream.setEncoding(QStringConverter::Utf8);
+#endif
         QString title = textStream.readLine(1024).remove(QLatin1String("Title: "));
         QUrl url = QUrl(textStream.readLine(1024).remove(QLatin1String("Url: ")));
 

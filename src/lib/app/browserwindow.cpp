@@ -72,11 +72,14 @@
 #include <QWebEngineHistory>
 #include <QWebEngineSettings>
 #include <QMessageBox>
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 #include <QDesktopWidget>
+#endif
 #include <QToolTip>
 #include <QScrollArea>
 #include <QCollator>
 #include <QTemporaryFile>
+#include <QActionGroup>
 
 #ifdef QZ_WS_X11
 #include <QX11Info>
@@ -400,7 +403,11 @@ void BrowserWindow::setupUi()
     m_statusBar->addButton(downloadsButton);
     m_navigationToolbar->addToolButton(downloadsButton);
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     QDesktopWidget* desktop = mApp->desktop();
+#else
+    auto desktop = QGuiApplication::primaryScreen();
+#endif
     int windowWidth = desktop->availableGeometry().width() / 1.3;
     int windowHeight = desktop->availableGeometry().height() / 1.3;
 
@@ -1341,7 +1348,7 @@ void BrowserWindow::keyPressEvent(QKeyEvent* event)
         break;
 
     case Qt::Key_Backtab:
-        if (event->modifiers() == (Qt::ControlModifier + Qt::ShiftModifier)) {
+        if (event->modifiers() == (Qt::ControlModifier | Qt::ShiftModifier)) {
             static_cast<QObject*>(m_tabWidget)->event(event);
         }
         break;

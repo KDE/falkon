@@ -53,9 +53,40 @@
 #include <QWebEnginePage>
 #include <QWebEngineUrlRequestInfo>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+#include <QtCore/private/qurl_p.h>
+#include <QtNetwork/private/qtldurl_p.h>
+#endif
+
+static QString getTopLevelDomain(const QUrl &url)
+{
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    return url.topLevelDomain();
+#else
+    // QUrl::topLevelDomain() was removed in Qt6.
+    // The following is copied from the old "qTopLevelDomain" code in Qt6::Network.
+    // It was removed in this commit: https://github.com/qt/qtbase/commit/50b30976837be0969efdccced68cfb584d99981a
+    const QString domainLower = url.host().toLower();
+    QVector<QStringView> sections = QStringView{domainLower}.split(QLatin1Char('.'), Qt::SkipEmptyParts);
+    if (sections.isEmpty())
+        return QString();
+
+    QString level, tld;
+    for (int j = sections.count() - 1; j >= 0; --j) {
+        level.prepend(QLatin1Char('.') + sections.at(j));
+        if (qIsEffectiveTLD(QStringView{level}.right(level.size() - 1)))
+            tld = level;
+    }
+
+    //return qt_ACE_do(tld, ToAceOnly, AllowLeadingDot, {});
+    // TODO - QUrl::toAce() uses ForbidLeadingDot, while the old QUrl::topLevelDomain() used AllowLeadingDot. Does this matter?
+    return QString(QUrl::toAce(tld));
+#endif
+}
+
 static QString toSecondLevelDomain(const QUrl &url)
 {
-    const QString topLevelDomain = url.topLevelDomain();
+    const QString topLevelDomain = getTopLevelDomain(url);
     const QString urlHost = url.host();
 
     if (topLevelDomain.isEmpty() || urlHost.isEmpty()) {

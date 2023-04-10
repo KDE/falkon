@@ -342,7 +342,7 @@ Plugins::Plugin Plugins::loadPlugin(const QString &id)
 
     const int colon = id.indexOf(QL1C(':'));
     if (colon > -1) {
-        const auto t = id.leftRef(colon);
+        const auto t = QStringView{id}.left(colon);
         if (t == QL1S("internal")) {
             type = Plugin::InternalPlugin;
         } else if (t == QL1S("lib")) {

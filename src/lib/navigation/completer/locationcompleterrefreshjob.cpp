@@ -40,7 +40,11 @@ LocationCompleterRefreshJob::LocationCompleterRefreshJob(const QString &searchSt
     m_watcher = new QFutureWatcher<void>(this);
     connect(m_watcher, &QFutureWatcherBase::finished, this, &LocationCompleterRefreshJob::slotFinished);
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     QFuture<void> future = QtConcurrent::run(this, &LocationCompleterRefreshJob::runJob);
+#else
+    QFuture<void> future = QtConcurrent::run(&LocationCompleterRefreshJob::runJob, this);
+#endif
     m_watcher->setFuture(future);
 }
 

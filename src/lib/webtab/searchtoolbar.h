@@ -18,6 +18,7 @@
 #ifndef SEARCHTOOLBAR_H
 #define SEARCHTOOLBAR_H
 
+#include <QWidget>
 #include <QWebEnginePage>
 #include <QtWebEngineCoreVersion>
 

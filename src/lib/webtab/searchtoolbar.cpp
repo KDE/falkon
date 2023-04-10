@@ -121,7 +121,12 @@ void SearchToolBar::searchText(const QString &text)
 {
     m_searchRequests++;
     QPointer<SearchToolBar> guard = this;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     m_view->findText(text, m_findFlags, [=](bool found) {
+#else
+    m_view->findText(text, m_findFlags, [=](QWebEngineFindTextResult result) {
+        bool found = result.numberOfMatches() > 0;
+#endif
         if (!guard) {
             return;
         }

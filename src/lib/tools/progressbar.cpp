@@ -18,7 +18,7 @@
 #include "progressbar.h"
 
 #include <QStylePainter>
-#include <QStyleOptionProgressBarV2>
+#include <QStyleOptionProgressBar>
 
 ProgressBar::ProgressBar(QWidget* parent)
     : QWidget(parent)

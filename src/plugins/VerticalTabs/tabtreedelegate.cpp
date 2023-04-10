@@ -213,7 +213,7 @@ void TabTreeDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     // Draw close button
     if (m_closeButton->isVisible(hovered, selected)) {
         QStyleOptionButton o;
-        o.init(m_closeButton);
+        o.initFrom(m_closeButton);
 
         const bool hovered = closeButtonRect(index).contains(m_view->viewport()->mapFromGlobal(QCursor::pos()));
         const bool pressed = hovered && QApplication::mouseButtons() == Qt::LeftButton;

@@ -22,6 +22,7 @@
 #include <QApplication>
 #include <QTimer>
 #include <QStyle>
+#include <QIODevice>
 
 //#define BOOKMARKSMODEL_DEBUG
 

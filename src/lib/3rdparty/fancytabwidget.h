@@ -86,7 +86,11 @@ public:
     QString text;
 
 protected:
-    void enterEvent(QEvent*) override;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    void enterEvent(QEvent *event) override;
+#else
+    void enterEvent(QEnterEvent *event) override;
+#endif
     void leaveEvent(QEvent*) override;
 
 private:

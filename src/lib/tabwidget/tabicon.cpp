@@ -24,6 +24,7 @@
 #include <QTimer>
 #include <QToolTip>
 #include <QMouseEvent>
+#include <QPainter>
 
 TabIcon::TabIcon(QWidget* parent)
     : QWidget(parent)

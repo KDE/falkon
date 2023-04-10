@@ -25,7 +25,11 @@
 OperaImporter::OperaImporter(QObject* parent)
     : BookmarksImporter(parent)
 {
-    m_stream.setCodec("UTF-8");
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+        m_stream.setCodec("UTF-8");
+#else
+        m_stream.setEncoding(QStringConverter::Utf8);
+#endif
 }
 
 QString OperaImporter::description() const

@@ -25,6 +25,7 @@
 #include "settings.h"
 
 #include <QMenu>
+#include <QActionGroup>
 
 QHash<QString, QPointer<SideBarInterface> > s_sidebars;
 

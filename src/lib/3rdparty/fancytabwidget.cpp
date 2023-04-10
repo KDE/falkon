@@ -39,10 +39,11 @@
 #include <QSignalMapper>
 #include <QSplitter>
 #include <QStackedLayout>
-#include <QStyleOptionTabV3>
+#include <QStyleOptionTab>
 #include <QToolButton>
 #include <QToolTip>
 #include <QVBoxLayout>
+#include <QActionGroup>
 //#include <QWindowsStyle>
 
 using namespace Core;
@@ -306,7 +307,11 @@ void FancyTabBar::paintEvent(QPaintEvent* event)
     }
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 void FancyTab::enterEvent(QEvent*)
+#else
+void FancyTab::enterEvent(QEnterEvent*)
+#endif
 {
     fadeIn();
 }

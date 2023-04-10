@@ -23,6 +23,7 @@
 
 #include <QTimer>
 #include <QWebEnginePage>
+#include <QWebEngineView>
 #include <QtWebEngineWidgetsVersion>
 
 
@@ -100,7 +101,11 @@ void HTML5PermissionsNotification::grantPermissions()
     QTimer::singleShot(0, this, [this]() {
         // We need to have cursor inside view to correctly grab mouse
         if (m_feature == QWebEnginePage::MouseLock) {
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
             QWidget *view = m_page->view();
+#else
+            QWidget *view = QWebEngineView::forPage(m_page);
+#endif
             QCursor::setPos(view->mapToGlobal(view->rect().center()));
         }
 

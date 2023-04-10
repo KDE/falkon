@@ -89,6 +89,9 @@ WebPage::WebPage(QObject* parent)
     connect(this, &QWebEnginePage::windowCloseRequested, this, &WebPage::windowCloseRequested);
     connect(this, &QWebEnginePage::fullScreenRequested, this, &WebPage::fullScreenRequested);
     connect(this, &QWebEnginePage::renderProcessTerminated, this, &WebPage::renderProcessTerminated);
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+    connect(this, &QWebEnginePage::certificateError, this, &WebPage::onCertificateError);
+#endif
 
     connect(this, &QWebEnginePage::authenticationRequired, this, [this](const QUrl &url, QAuthenticator *auth) {
         mApp->networkManager()->authentication(url, auth, view());
@@ -137,7 +140,11 @@ WebPage::~WebPage()
 
 WebView *WebPage::view() const
 {
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     return static_cast<WebView*>(QWebEnginePage::view());
+#else
+    return static_cast<WebView*>(QWebEngineView::forPage(this));
+#endif
 }
 
 bool WebPage::execPrintPage(QPrinter *printer, int timeout)
@@ -146,12 +153,22 @@ bool WebPage::execPrintPage(QPrinter *printer, int timeout)
     bool result = false;
     QTimer::singleShot(timeout, loop.data(), &QEventLoop::quit);
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     print(printer, [loop, &result](bool res) {
         if (loop && loop->isRunning()) {
             result = res;
             loop->quit();
         }
     });
+#else
+    connect(view(), &QWebEngineView::printFinished, this, [loop, &result](bool res) {
+        if (loop && loop->isRunning()) {
+            result = res;
+            loop->quit();
+        }
+    });
+    view()->print(printer);
+#endif
 
     loop->exec();
     delete loop;
@@ -463,10 +480,21 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
     return result;
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 bool WebPage::certificateError(const QWebEngineCertificateError &error)
 {
     return mApp->networkManager()->certificateError(error, view());
 }
+#else
+void WebPage::onCertificateError(QWebEngineCertificateError error)
+{
+    auto mutableError = const_cast<QWebEngineCertificateError&>(error);
+    if (mApp->networkManager()->certificateError(mutableError, view()))
+        mutableError.acceptCertificate();
+    else
+        mutableError.rejectCertificate();
+}
+#endif
 
 QStringList WebPage::chooseFiles(QWebEnginePage::FileSelectionMode mode, const QStringList &oldFiles, const QStringList &acceptedMimeTypes)
 {

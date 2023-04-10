@@ -35,7 +35,11 @@
 #include <QMessageBox>
 #include <QFileIconProvider>
 #include <QDesktopServices>
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 #include <QWebEngineDownloadItem>
+#else
+#include <QWebEngineDownloadRequest>
+#endif
 #include <QtWebEngineWidgetsVersion>
 
 #ifdef Q_OS_WIN
@@ -45,7 +49,7 @@
 
 //#define DOWNMANAGER_DEBUG
 
-DownloadItem::DownloadItem(QListWidgetItem *item, QWebEngineDownloadItem* downloadItem, const QString &path, const QString &fileName, bool openFile, DownloadManager* manager)
+DownloadItem::DownloadItem(QListWidgetItem *item, Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS* downloadItem, const QString &path, const QString &fileName, bool openFile, DownloadManager* manager)
     : QWidget()
     , ui(new Ui::DownloadItem)
     , m_item(item)
@@ -81,11 +85,17 @@ DownloadItem::DownloadItem(QListWidgetItem *item, QWebEngineDownloadItem* downlo
 
 void DownloadItem::startDownloading()
 {
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     connect(m_download, &QWebEngineDownloadItem::finished, this, &DownloadItem::finished);
     connect(m_download, &QWebEngineDownloadItem::downloadProgress, this, &DownloadItem::downloadProgress);
+#else
+    connect(m_download, &QWebEngineDownloadRequest::isFinishedChanged, this, &DownloadItem::finished);
+    connect(m_download, &QWebEngineDownloadRequest::receivedBytesChanged, this, &DownloadItem::receivedOrTotalBytesChanged);
+    connect(m_download, &QWebEngineDownloadRequest::totalBytesChanged, this, &DownloadItem::receivedOrTotalBytesChanged);
+#endif
 
     m_downloading = true;
-    if (m_downTimer.elapsed() < 1) {
+    if (!m_downTimer.isValid()) {
         m_downTimer.start();
     }
 
@@ -123,16 +133,16 @@ void DownloadItem::finished()
     QString host = m_download->url().host();
 
     switch (m_download->state()) {
-    case QWebEngineDownloadItem::DownloadCompleted:
+    case Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::DownloadCompleted:
         success = true;
-        ui->downloadInfo->setText(tr("Done - %1 (%2)").arg(host, QDateTime::currentDateTime().toString(Qt::DefaultLocaleShortDate)));
+        ui->downloadInfo->setText(tr("Done - %1 (%2)").arg(host, QLocale().toString(QDateTime::currentDateTime(), QLocale::ShortFormat)));
         break;
 
-    case QWebEngineDownloadItem::DownloadInterrupted:
+    case Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::DownloadInterrupted:
         ui->downloadInfo->setText(tr("Error - %1").arg(host));
         break;
 
-    case QWebEngineDownloadItem::DownloadCancelled:
+    case Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::DownloadCancelled:
         ui->downloadInfo->setText(tr("Cancelled - %1").arg(host));
         break;
 
@@ -154,8 +164,15 @@ void DownloadItem::finished()
     Q_EMIT downloadFinished(true);
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 void DownloadItem::downloadProgress(qint64 received, qint64 total)
 {
+#else
+void DownloadItem::receivedOrTotalBytesChanged()
+{
+    qint64 received = m_download->receivedBytes();
+    qint64 total = m_download->totalBytes();
+#endif
 #ifdef DOWNMANAGER_DEBUG
     qDebug() << __FUNCTION__ << received << total;
 #endif

@@ -92,7 +92,11 @@ void AutoFillManager::loadPasswords()
         item->setText(2, "*****");
 
         QVariant v;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
         v.setValue<PasswordEntry>(entry);
+#else
+        v.setValue(entry);
+#endif
         item->setData(0, Qt::UserRole + 10, v);
         ui->treePass->addTopLevelItem(item);
     }
@@ -253,12 +257,17 @@ void AutoFillManager::editPass()
 
     if (ok && !text.isEmpty() && text != entry.password) {
         QByteArray oldPass = "=" + PasswordManager::urlEncodePassword(entry.password);
-        entry.data.replace(oldPass, "=" + PasswordManager::urlEncodePassword(text));
+        QByteArray newPass = "=" + PasswordManager::urlEncodePassword(text);
+        entry.data.replace(oldPass, newPass);
         entry.password = text;
 
         if (mApp->autoFill()->updateEntry(entry)) {
             QVariant v;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
             v.setValue<PasswordEntry>(entry);
+#else
+            v.setValue(entry);
+#endif
             curItem->setData(0, Qt::UserRole + 10, v);
 
             if (m_passwordsShown) {

@@ -44,7 +44,11 @@ public:
 
     Qt::DropActions supportedDropActions() const override;
     QStringList mimeTypes() const override;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     QMimeData* mimeData(const QList<QTreeWidgetItem*> items) const override;
+#else
+    QMimeData* mimeData(const QList<QTreeWidgetItem*> &items) const override;
+#endif
     bool dropMimeData(QTreeWidgetItem *parent, int index, const QMimeData *data, Qt::DropAction action) override;
 
     void setEnableDragTabs(bool enable);

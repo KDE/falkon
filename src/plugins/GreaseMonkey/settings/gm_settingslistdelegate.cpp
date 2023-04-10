@@ -90,9 +90,9 @@ void GM_SettingsListDelegate::paint(QPainter* painter, const QStyleOptionViewIte
     const int checkboxYPos = center - (checkboxSize / 2);
     QStyleOptionViewItem opt2 = opt;
     opt2.checkState == Qt::Checked ? opt2.state |= QStyle::State_On : opt2.state |= QStyle::State_Off;
-    QRect styleCheckBoxRect = style->subElementRect(QStyle::SE_ViewItemCheckIndicator, &opt2, w);
+    QRect styleCheckBoxRect = style->subElementRect(QStyle::SE_ItemViewItemCheckIndicator, &opt2, w);
     opt2.rect = QRect(leftPosition, checkboxYPos, styleCheckBoxRect.width(), styleCheckBoxRect.height());
-    style->drawPrimitive(QStyle::PE_IndicatorViewItemCheck, &opt2, painter, w);
+    style->drawPrimitive(QStyle::PE_IndicatorItemViewItemCheck, &opt2, painter, w);
     leftPosition = opt2.rect.right() + m_padding;
 
     // Draw icon

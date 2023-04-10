@@ -34,7 +34,9 @@
 #include "tabcontextmenu.h"
 #include "tabbar.h"
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 #include <QDesktopWidget>
+#endif
 #include <QDialogButtonBox>
 #include <QStackedWidget>
 #include <QDialog>
@@ -561,7 +563,12 @@ void TabManagerWidget::detachSelectedTabs(const QMultiHash<BrowserWindow*, WebTa
     }
 
     BrowserWindow* newWindow = mApp->createWindow(Qz::BW_OtherRestoredWindow);
-    newWindow->move(mApp->desktop()->availableGeometry(this).topLeft() + QPoint(30, 30));
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    const QRect &availableGeometryForScreen = mApp->desktop()->availableGeometry(this);
+#else
+    const QRect &availableGeometryForScreen = screen()->availableGeometry();
+#endif
+    newWindow->move(availableGeometryForScreen.topLeft() + QPoint(30, 30));
 
     detachTabsTo(newWindow, tabsHash);
 }
@@ -880,7 +887,11 @@ QStringList TabTreeWidget::mimeTypes() const
     return types;
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 QMimeData *TabTreeWidget::mimeData(const QList<QTreeWidgetItem*> items) const
+#else
+QMimeData *TabTreeWidget::mimeData(const QList<QTreeWidgetItem*> &items) const
+#endif
 {
     auto* mimeData = new QMimeData();
     QByteArray encodedData;

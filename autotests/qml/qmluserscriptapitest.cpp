@@ -41,7 +41,7 @@ void QmlUserScriptApiTest::testCount()
 void QmlUserScriptApiTest::testSize()
 {
     int size = m_testHelper.evaluate("Falkon.UserScripts.size").toInt();
-    QCOMPARE(size, mApp->webProfile()->scripts()->size());
+    QCOMPARE(size, mApp->webProfile()->scripts()->count());
 }
 
 void QmlUserScriptApiTest::testEmpty()

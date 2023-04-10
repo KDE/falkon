@@ -25,6 +25,7 @@
 #include <QNetworkReply>
 #include <QElapsedTimer>
 #include <QTime>
+#include <QElapsedTimer>
 
 #include "qzcommon.h"
 
@@ -34,7 +35,13 @@ class DownloadItem;
 }
 
 class QListWidgetItem;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 class QWebEngineDownloadItem;
+#define Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS QWebEngineDownloadItem
+#else
+class QWebEngineDownloadRequest;
+#define Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS QWebEngineDownloadRequest
+#endif
 
 class DownloadManager;
 
@@ -43,7 +50,7 @@ class FALKON_EXPORT DownloadItem : public QWidget
     Q_OBJECT
 
 public:
-    explicit DownloadItem(QListWidgetItem* item, QWebEngineDownloadItem* downloadItem, const QString &path, const QString &fileName, bool openFile, DownloadManager* manager);
+    explicit DownloadItem(QListWidgetItem* item, Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS* downloadItem, const QString &path, const QString &fileName, bool openFile, DownloadManager* manager);
     bool isDownloading() const { return m_downloading; }
     bool isCancelled();
     QTime remainingTime() const { return m_remTime; }
@@ -68,7 +75,11 @@ Q_SIGNALS:
 private Q_SLOTS:
     void parentResized(const QSize &size);
     void finished();
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     void downloadProgress(qint64 received, qint64 total);
+#else
+    void receivedOrTotalBytesChanged();
+#endif
     void stop();
     void pauseResume();
     void openFile();
@@ -85,7 +96,7 @@ private:
     Ui::DownloadItem* ui;
 
     QListWidgetItem* m_item;
-    QWebEngineDownloadItem* m_download;
+    Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS* m_download;
     QString m_path;
     QString m_fileName;
     QElapsedTimer m_downTimer;

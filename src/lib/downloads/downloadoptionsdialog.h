@@ -23,20 +23,25 @@
 
 #include "qzcommon.h"
 #include "downloadmanager.h"
+#include "downloaditem.h"
 
 namespace Ui
 {
 class DownloadOptionsDialog;
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 class QWebEngineDownloadItem;
+#else
+class QWebEngineDownloadRequest;
+#endif
 
 class FALKON_EXPORT DownloadOptionsDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit DownloadOptionsDialog(const QString &fileName, QWebEngineDownloadItem *downloadItem, QWidget* parent = nullptr);
+    explicit DownloadOptionsDialog(const QString &fileName, Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS *downloadItem, QWidget* parent = nullptr);
     ~DownloadOptionsDialog() override;
 
     void showExternalManagerOption(bool show);
@@ -56,7 +61,7 @@ Q_SIGNALS:
 private:
     Ui::DownloadOptionsDialog* ui;
 
-    QWebEngineDownloadItem *m_downloadItem;
+    Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS *m_downloadItem;
     bool m_signalEmited;
 };
 

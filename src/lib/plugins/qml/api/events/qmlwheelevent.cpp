@@ -69,7 +69,7 @@ int QmlWheelEvent::globalY() const
     if (!m_wheelEvent) {
         return -1;
     }
-    return m_wheelEvent->globalPosition().toPoint().x();
+    return m_wheelEvent->globalPosition().toPoint().y();
 }
 
 bool QmlWheelEvent::inverted() const

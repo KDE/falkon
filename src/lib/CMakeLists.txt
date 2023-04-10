@@ -577,20 +577,41 @@ qt_add_resources(SRCS
 
 add_library(FalkonPrivate SHARED ${SRCS} ${LOGGING_SRCS})
 
-get_property(QT_WEBENGINE_INCLUDE_DIRS TARGET Qt::WebEngine PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
+if (QT_MAJOR_VERSION STREQUAL "6")
+    get_property(QT_WEBENGINE_INCLUDE_DIRS TARGET Qt6::WebEngineCore PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
+else()
+    get_property(QT_WEBENGINE_INCLUDE_DIRS TARGET Qt::WebEngine PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
+endif()
+
 target_include_directories(FalkonPrivate SYSTEM PUBLIC ${QT_WEBENGINE_INCLUDE_DIRS})
 
-target_link_libraries(FalkonPrivate
-    Qt::Widgets
-    Qt::WebEngineWidgets
-    Qt::Network
-    Qt::Sql
-    Qt::PrintSupport
-    Qt::QuickWidgets
-    Qt::WebChannel
-    KF5::Archive
-    ${OPENSSL_CRYPTO_LIBRARY}
-)
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(FalkonPrivate
+        Qt6::Widgets
+        Qt6::WebEngineWidgets
+        Qt6::Network
+        Qt6::NetworkPrivate
+        Qt6::Sql
+        Qt6::PrintSupport
+        Qt6::QuickWidgets
+        Qt6::WebChannel
+        Qt6::Core5Compat
+        KF6::Archive
+        ${OPENSSL_CRYPTO_LIBRARY}
+    )
+else()
+    target_link_libraries(FalkonPrivate
+        Qt::Widgets
+        Qt::WebEngineWidgets
+        Qt::Network
+        Qt::Sql
+        Qt::PrintSupport
+        Qt::QuickWidgets
+        Qt::WebChannel
+        KF5::Archive
+        ${OPENSSL_CRYPTO_LIBRARY}
+    )
+endif()
 
 if (HAVE_LIBINTL)
     target_include_directories(FalkonPrivate SYSTEM PUBLIC ${Intl_INCLUDE_DIRS})

@@ -173,7 +173,11 @@ SearchEngine SearchEnginesDialog::getEngine(QTreeWidgetItem* item)
 void SearchEnginesDialog::setEngine(QTreeWidgetItem* item, const SearchEngine &engine)
 {
     QVariant v;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     v.setValue<SearchEngine>(engine);
+#else
+    v.setValue(engine);
+#endif
     item->setData(0, EngineRole, v);
     item->setText(0, engine.name);
 }

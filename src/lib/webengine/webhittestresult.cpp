@@ -18,7 +18,11 @@
 #include "webhittestresult.h"
 #include "webpage.h"
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 #include <QWebEngineContextMenuData>
+#else
+#include <QWebEngineContextMenuRequest>
+#endif
 
 WebHitTestResult::WebHitTestResult(const WebPage *page, const QPoint &pos)
     : m_isNull(true)
@@ -92,9 +96,14 @@ WebHitTestResult::WebHitTestResult(const WebPage *page, const QPoint &pos)
     init(p->url(), p->execJavaScript(js, WebPage::SafeJsWorld).toMap());
 }
 
-void WebHitTestResult::updateWithContextMenuData(const QWebEngineContextMenuData &data)
+void WebHitTestResult::updateWithContextMenuData(const Q_WEB_ENGINE_CONTEXT_MENU_DATA_CLASS &data)
 {
-    if (!data.isValid() || data.position() != m_pos) {
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    if (!data.isValid()) {
+        return;
+    }
+#endif
+    if (data.position() != m_pos) {
         return;
     }
 
@@ -104,12 +113,12 @@ void WebHitTestResult::updateWithContextMenuData(const QWebEngineContextMenuData
     m_isContentSelected = !data.selectedText().isEmpty();
 
     switch (data.mediaType()) {
-    case QWebEngineContextMenuData::MediaTypeImage:
+    case Q_WEB_ENGINE_CONTEXT_MENU_DATA_CLASS::MediaTypeImage:
         m_imageUrl = data.mediaUrl();
         break;
 
-    case QWebEngineContextMenuData::MediaTypeVideo:
-    case QWebEngineContextMenuData::MediaTypeAudio:
+    case Q_WEB_ENGINE_CONTEXT_MENU_DATA_CLASS::MediaTypeVideo:
+    case Q_WEB_ENGINE_CONTEXT_MENU_DATA_CLASS::MediaTypeAudio:
         m_mediaUrl = data.mediaUrl();
         break;
 

@@ -32,7 +32,11 @@
 #include <QWidget>
 #include <QApplication>
 #include <QSslCertificate>
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 #include <QDesktopWidget>
+#else
+#include <QScreen>
+#endif
 #include <QUrl>
 #include <QIcon>
 #include <QFileIconProvider>
@@ -115,7 +119,11 @@ QByteArray QzTools::readAllFileByteContents(const QString &filename)
 
 void QzTools::centerWidgetOnScreen(QWidget* w)
 {
-    const QRect screen = QApplication::desktop()->screenGeometry(w);
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    QRect screen = QApplication::desktop()->screenGeometry(w);
+#else
+    QRect screen = w->screen()->geometry();
+#endif
     const QRect size = w->geometry();
     w->move((screen.width() - size.width()) / 2, (screen.height() - size.height()) / 2);
 }

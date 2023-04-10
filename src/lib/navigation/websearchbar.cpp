@@ -178,7 +178,11 @@ void WebSearchBar::setupEngines()
         item.icon = en.icon;
         item.text = en.name;
         QVariant v;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
         v.setValue<SearchEngine>(en);
+#else
+        v.setValue(en);
+#endif
         item.userData = v;
 
         m_boxSearchType->addItem(item);

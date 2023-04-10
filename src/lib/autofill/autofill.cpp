@@ -249,7 +249,11 @@ QByteArray AutoFill::exportPasswords()
     QByteArray output;
 
     QXmlStreamWriter stream(&output);
-    stream.setCodec("UTF-8");
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+        stream.setCodec("UTF-8");
+#else
+        stream.setEncoding(QStringConverter::Utf8);
+#endif
     stream.setAutoFormatting(true);
 
     stream.writeStartDocument();

@@ -70,24 +70,45 @@ NetworkManager::NetworkManager(QObject *parent)
     });
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 bool NetworkManager::certificateError(const QWebEngineCertificateError &error, QWidget *parent)
+#else
+bool NetworkManager::certificateError(QWebEngineCertificateError &error, QWidget *parent)
+#endif
 {
     const QString &host = error.url().host();
 
-    if (m_rejectedSslErrors.contains(host) && m_rejectedSslErrors.value(host) == error.error()) {
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    const auto errorType = error.error();
+#else
+    const auto errorType = error.type();
+#endif
+
+    if (m_rejectedSslErrors.contains(host) && m_rejectedSslErrors.value(host) == errorType) {
         return false;
     }
 
-    if ((m_ignoredSslErrors.contains(host) && m_ignoredSslErrors.value(host) == error.error())
+    if ((m_ignoredSslErrors.contains(host) && m_ignoredSslErrors.value(host) == errorType)
             || m_ignoredSslHosts.contains(host)) {
         return true;
     }
+
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+    // Defer loading the URL until the user prompt has completed.
+    if (error.isOverridable())
+        error.defer();
+#endif
 
     QString title = tr("SSL Certificate Error!");
     QString text1 = tr("The page you are trying to access has the following errors in the SSL certificate:");
     QString text2 = tr("Would you like to make an exception for this certificate?");
 
-    QString message = QSL("<b>%1</b><p>%2</p><ul><li>%3</li></ul><p>%4</p>").arg(title, text1, error.errorDescription(), text2);
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    const auto errorDescription = error.errorDescription();
+#else
+    const auto errorDescription = error.description();
+#endif
+    QString message = QSL("<b>%1</b><p>%2</p><ul><li>%3</li></ul><p>%4</p>").arg(title, text1, errorDescription, text2);
 
     SslErrorDialog dialog(parent);
     dialog.setText(message);
@@ -100,11 +121,11 @@ bool NetworkManager::certificateError(const QWebEngineCertificateError &error, Q
         return true;
 
     case SslErrorDialog::OnlyForThisSession:
-        m_ignoredSslErrors[host] = error.error();
+        m_ignoredSslErrors[host] = errorType;
         return true;
 
     case SslErrorDialog::NoForThisSession:
-        m_rejectedSslErrors[host] = error.error();
+        m_rejectedSslErrors[host] = errorType;
         return false;
 
     default:
@@ -329,8 +350,11 @@ void NetworkManager::registerSchemes()
 QNetworkReply *NetworkManager::createRequest(QNetworkAccessManager::Operation op, const QNetworkRequest &request, QIODevice *outgoingData)
 {
     QNetworkRequest req = request;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    // These have either been removed or changed to the default in Qt 6.
     req.setAttribute(QNetworkRequest::SpdyAllowedAttribute, true);
     req.setAttribute(QNetworkRequest::FollowRedirectsAttribute, true);
+#endif
 
     return QNetworkAccessManager::createRequest(op, req, outgoingData);
 }

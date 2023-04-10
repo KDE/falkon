@@ -160,7 +160,11 @@ void ButtonWithMenu::generateMenu()
 
     for (const Item &item : qAsConst(m_items)) {
         QVariant variant;
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
         variant.setValue<Item>(item);
+#else
+        variant.setValue(item);
+#endif
         m_menu->addAction(item.icon, item.text, this, SLOT(setCurrentItem()))->setData(variant);
     }
 }

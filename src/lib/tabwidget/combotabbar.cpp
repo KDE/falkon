@@ -27,8 +27,8 @@
 #include <QIcon>
 #include <QHBoxLayout>
 #include <QStylePainter>
-#include <QStyleOptionTabV3>
-#include <QStyleOptionTabBarBaseV2>
+#include <QStyleOptionTab>
+#include <QStyleOptionTabBarBase>
 #include <QPropertyAnimation>
 #include <QScrollArea>
 #include <QTimer>
@@ -682,7 +682,7 @@ void ComboTabBar::paintEvent(QPaintEvent* ev)
 
     // This is needed to apply style sheets
     QStyleOption option;
-    option.init(this);
+    option.initFrom(this);
     QPainter p(this);
     style()->drawPrimitive(QStyle::PE_Widget, &option, &p, this);
 
@@ -1230,7 +1230,7 @@ void TabBarHelper::initStyleBaseOption(QStyleOptionTabBarBase *optTabBase, QTabB
     tabOverlap.shape = tabbar->shape();
     int overlap = tabbar->style()->pixelMetric(QStyle::PM_TabBarBaseOverlap, &tabOverlap, tabbar);
     QWidget* theParent = tabbar->parentWidget();
-    optTabBase->init(tabbar);
+    optTabBase->initFrom(tabbar);
     optTabBase->shape = tabbar->shape();
     optTabBase->documentMode = tabbar->documentMode();
     if (theParent && overlap > 0) {
@@ -1359,7 +1359,9 @@ void TabBarHelper::paintEvent(QPaintEvent *)
             grabImage.setDevicePixelRatio(devicePixelRatioF());
             grabImage.fill(Qt::transparent);
             QStylePainter p(&grabImage, this);
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
             p.initFrom(this);
+#endif
             if (tabDragOffset != 0) {
                 tab.position = QStyleOptionTab::OnlyOneTab;
             }
@@ -1537,7 +1539,7 @@ TabBarScrollWidget::TabBarScrollWidget(QTabBar* tabBar, QWidget* parent)
     : QWidget(parent)
     , m_tabBar(tabBar)
     , m_usesScrollButtons(false)
-    , m_totalDeltas(0)
+    , m_totalVerticalDeltas(0)
 {
     m_scrollArea = new QScrollArea(this);
     m_scrollArea->setFocusPolicy(Qt::NoFocus);
@@ -1696,30 +1698,33 @@ void TabBarScrollWidget::scrollByWheel(QWheelEvent* event)
 {
     event->accept();
 
-    // Check if direction has changed from last time
-    if (m_totalDeltas * event->delta() < 0) {
-        m_totalDeltas = 0;
+    // Process horizontal wheel scrolling first
+    // Slower scrolling for horizontal wheel scrolling
+    if (event->angleDelta().x() > 0) {
+        scrollToLeft();
+    }
+    else if (event->angleDelta().x() < 0) {
+        scrollToRight();
     }
 
-    m_totalDeltas += event->delta();
-
-    // Slower scrolling for horizontal wheel scrolling
-    if (event->orientation() == Qt::Horizontal) {
-        if (event->delta() > 0) {
-            scrollToLeft();
-        }
-        else if (event->delta() < 0) {
-            scrollToRight();
-        }
+    auto verticalDelta = event->angleDelta().y();
+    if (verticalDelta == 0) {
         return;
     }
 
+    // Check if vertical direction has changed from last time
+    if (m_totalVerticalDeltas * verticalDelta < 0) {
+        m_totalVerticalDeltas = 0;
+    }
+
+    m_totalVerticalDeltas += verticalDelta;
+
     // Faster scrolling with control modifier
-    if (event->orientation() == Qt::Vertical && event->modifiers() == Qt::ControlModifier) {
-        if (event->delta() > 0) {
+    if (event->modifiers() == Qt::ControlModifier) {
+        if (verticalDelta > 0) {
             scrollToLeft(10);
         }
-        else if (event->delta() < 0) {
+        else if (verticalDelta < 0) {
             scrollToRight(10);
         }
         return;
@@ -1731,7 +1736,7 @@ void TabBarScrollWidget::scrollByWheel(QWheelEvent* event)
         factor = m_scrollBar->pageStep();
     }
 
-    int offset = (m_totalDeltas / 120) * factor;
+    int offset = (m_totalVerticalDeltas / 120) * factor;
     if (offset != 0) {
         if (isRightToLeft()) {
             m_scrollBar->animateToValue(m_scrollBar->value() + offset);
@@ -1740,7 +1745,7 @@ void TabBarScrollWidget::scrollByWheel(QWheelEvent* event)
             m_scrollBar->animateToValue(m_scrollBar->value() - offset);
         }
 
-        m_totalDeltas -= (offset / factor) * 120;
+        m_totalVerticalDeltas -= (offset / factor) * 120;
     }
 }
 
@@ -1809,7 +1814,11 @@ QSize CloseButton::sizeHint() const
     return QSize(width, height);
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 void CloseButton::enterEvent(QEvent* event)
+#else
+void CloseButton::enterEvent(QEnterEvent* event)
+#endif
 {
     if (isEnabled()) {
         update();
@@ -1831,7 +1840,7 @@ void CloseButton::paintEvent(QPaintEvent*)
 {
     QPainter p(this);
     QStyleOption opt;
-    opt.init(this);
+    opt.initFrom(this);
     opt.state |= QStyle::State_AutoRaise;
 
     // update raised state on scrolling

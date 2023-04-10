@@ -40,7 +40,11 @@
 #include <QShortcut>
 #include <QStandardPaths>
 #include <QWebEngineHistory>
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 #include <QWebEngineDownloadItem>
+#else
+#include <QWebEngineDownloadRequest>
+#endif
 #include <QtWebEngineWidgetsVersion>
 
 #ifdef Q_OS_WIN
@@ -123,7 +127,11 @@ void DownloadManager::keyPressEvent(QKeyEvent* e)
     QWidget::keyPressEvent(e);
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 void DownloadManager::closeDownloadTab(QWebEngineDownloadItem *item) const
+#else
+void DownloadManager::closeDownloadTab(QWebEngineDownloadRequest *item) const
+#endif
 {
     // Attempt to close empty tab that was opened only for loading the download url
     auto testWebView = [](TabbedWebView *view, const QUrl &url) {
@@ -258,7 +266,7 @@ void DownloadManager::clearList()
     Q_EMIT downloadsCountChanged();
 }
 
-void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
+void DownloadManager::download(Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS *downloadItem)
 {
     QElapsedTimer downloadTimer;
     downloadTimer.start();
@@ -268,10 +276,14 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
     QString downloadPath;
     bool openFile = false;
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     const QString fileName = QFileInfo(downloadItem->path()).fileName();
+#else
+    const QString fileName = downloadItem->downloadFileName();
+#endif
 
-    const bool forceAsk = downloadItem->savePageFormat() != QWebEngineDownloadItem::UnknownSaveFormat
-            || downloadItem->type() == QWebEngineDownloadItem::UserRequested;
+    const bool forceAsk = downloadItem->savePageFormat() != Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::UnknownSaveFormat
+            || downloadItem->isSavePageDownload();
 
     if (m_useExternalManager) {
         startExternalManager(downloadItem->url());
@@ -279,10 +291,10 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
         enum Result { Open = 1, Save = 2, ExternalManager = 3, SavePage = 4, Unknown = 0 };
         Result result = Unknown;
 
-        if (downloadItem->savePageFormat() != QWebEngineDownloadItem::UnknownSaveFormat) {
+        if (downloadItem->savePageFormat() != Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::UnknownSaveFormat) {
             // Save Page requested
             result = SavePage;
-        } else if (downloadItem->type() == QWebEngineDownloadItem::UserRequested) {
+        } else if (downloadItem->isSavePageDownload()) {
             // Save x as... requested
             result = Save;
         } else {
@@ -326,17 +338,17 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
                 Settings().setValue(QSL("DownloadManager/lastDownloadPath"), m_lastDownloadPath);
                 m_lastDownloadOption = SaveFile;
 
-                QWebEngineDownloadItem::SavePageFormat format = QWebEngineDownloadItem::UnknownSaveFormat;
+                Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::SavePageFormat format = Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::UnknownSaveFormat;
 
                 if (selectedFilter == mhtml) {
-                    format = QWebEngineDownloadItem::MimeHtmlSaveFormat;
+                    format = Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::MimeHtmlSaveFormat;
                 } else if (selectedFilter == htmlSingle) {
-                    format = QWebEngineDownloadItem::SingleHtmlSaveFormat;
+                    format = Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::SingleHtmlSaveFormat;
                 } else if (selectedFilter == htmlComplete) {
-                    format = QWebEngineDownloadItem::CompleteHtmlSaveFormat;
+                    format = Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::CompleteHtmlSaveFormat;
                 }
 
-                if (format != QWebEngineDownloadItem::UnknownSaveFormat) {
+                if (format != Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::UnknownSaveFormat) {
                     downloadItem->setSavePageFormat(format);
                 }
             }
@@ -361,7 +373,12 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
     }
 
     // Set download path and accept
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     downloadItem->setPath(downloadPath);
+#else
+    downloadItem->setDownloadDirectory(QFileInfo(downloadPath).absoluteDir().absolutePath());
+    downloadItem->setDownloadFileName(QFileInfo(downloadPath).fileName());
+#endif
     downloadItem->accept();
 
     // Create download item

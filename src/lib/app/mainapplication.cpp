@@ -62,7 +62,9 @@
 #include <QDir>
 #include <QStandardPaths>
 #include <QWebEngineProfile>
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 #include <QWebEngineDownloadItem>
+#endif
 #include <QWebEngineScriptCollection>
 #include <QRegularExpression>
 #include <QtWebEngineWidgetsVersion>
@@ -930,7 +932,11 @@ void MainApplication::runDeferredPostLaunchActions()
     checkOptimizeDatabase();
 }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 void MainApplication::downloadRequested(QWebEngineDownloadItem *download)
+#else
+void MainApplication::downloadRequested(QWebEngineDownloadRequest *download)
+#endif
 {
     downloadManager()->download(download);
 }
@@ -1187,10 +1193,16 @@ void MainApplication::setUserStyleSheet(const QString &filePath)
 
     const QString name = QStringLiteral("_falkon_userstylesheet");
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     QWebEngineScript oldScript = m_webProfile->scripts()->findScript(name);
     if (!oldScript.isNull()) {
         m_webProfile->scripts()->remove(oldScript);
     }
+#else
+    for (const QWebEngineScript &oldScript : m_webProfile->scripts()->find(name)) {
+        m_webProfile->scripts()->remove(oldScript);
+    }
+#endif
 
     if (userCss.isEmpty())
         return;
