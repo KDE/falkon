@@ -125,7 +125,9 @@
     </object-type>
     <object-type name="NavigationBar"/>
 
-    <object-type name="NetworkManager"/>
+    <object-type name="NetworkManager">
+      <modify-function signature="certificateError(QWebEngineCertificateError&amp;, QWidget*)" remove="all"/>
+    </object-type>
     <object-type name="UrlInterceptor"/>
     <object-type name="ExtensionSchemeHandler">
       <include file-name="schemehandlers/extensionschemehandler.h" location="global"/>
@@ -256,7 +258,7 @@
     QList&lt;QByteArray&gt; version = QByteArray(Qz::VERSION).split('.');
     PyObject *pyFalkonVersion = PyTuple_New(3);
     for (int i = 0; i &lt; 3; ++i)
-        PyTuple_SET_ITEM(pyFalkonVersion, i, PyInt_FromLong(version[i].toInt()));
+        PyTuple_SET_ITEM(pyFalkonVersion, i, PyLong_FromLong(version[i].toInt()));
     PyModule_AddObject(module, "__version_info__", pyFalkonVersion);
     PyModule_AddStringConstant(module, "__version__", Qz::VERSION);
     </inject-code>

@@ -21,7 +21,11 @@
 
 // PYSIDE-711
 #include <QHstsPolicy>
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 #include <QWebEngineContextMenuData>
+#else
+#include <QWebEngineContextMenuRequest>
+#endif
 
 // 3rdparty
 #include "lineedit.h"
