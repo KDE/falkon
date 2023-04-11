@@ -44,6 +44,10 @@
 #include <QLabel>
 #include <QMimeData>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+#include <QRegExp>
+#endif
+
 
 TLDExtractor* TabManagerWidget::s_tldExtractor = 0;
 
@@ -124,7 +128,11 @@ QString TabManagerWidget::domainFromUrl(const QUrl &url, bool useHostName)
         return urlString.append(appendString);
     }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     if (useHostName || host.contains(QRegExp(R"(^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$)"))) {
+#else
+    if (useHostName || QRegExp(R"(^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$)").indexIn(host) >= 0) {
+#endif
         if (host.startsWith("www.", Qt::CaseInsensitive)) {
             host.remove(0, 4);
         }
@@ -758,7 +766,7 @@ TabItem::TabItem(QTreeWidget* treeWidget, bool supportDrag, bool isTab, QTreeWid
     , m_webTab(0)
     , m_isTab(isTab)
 {
-    Qt::ItemFlags flgs = flags() | (parent ? Qt::ItemIsUserCheckable : Qt::ItemIsUserCheckable | Qt::ItemIsTristate);
+    Qt::ItemFlags flgs = flags() | (parent ? Qt::ItemIsUserCheckable : Qt::ItemIsUserCheckable | Qt::ItemIsAutoTristate);
 
     if (supportDrag) {
         if (isTab) {

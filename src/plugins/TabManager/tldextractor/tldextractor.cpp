@@ -23,6 +23,10 @@
 #include <QMessageBox>
 #include <QUrl>
 
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+#include <QRegExp>
+#endif
+
 TLDExtractor* TLDExtractor::s_instance = 0;
 
 TLDExtractor::TLDExtractor(QObject* parent)
@@ -384,7 +388,11 @@ bool TLDExtractor::test()
             continue;
         }
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
         line.indexOf(testRegExp);
+#else
+        testRegExp.indexIn(line);
+#endif
 
         const QString hostName = testRegExp.cap(2);
         const QString registrableName = testRegExp.cap(4);
