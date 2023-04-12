@@ -50,6 +50,7 @@
 #include "protocolhandlerdialog.h"
 #include "schememanager.h"
 #include "../config.h"
+#include "siteinfopermissiondefaultitem.h"
 
 #include <QSettings>
 #include <QInputDialog>
@@ -302,6 +303,34 @@ Preferences::Preferences(BrowserWindow* window)
     }
     ui->defaultZoomLevel->setCurrentIndex(settings.value(QSL("DefaultZoomLevel"), WebView::zoomLevels().indexOf(100)).toInt());
     ui->closeAppWithCtrlQ->setChecked(settings.value(QSL("closeAppWithCtrlQ"), true).toBool());
+
+    auto* siteSettings = mApp->siteSettingsManager();
+    const auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
+    for (const auto &attribute : supportedAttribute) {
+        auto* listItem = new QListWidgetItem(ui->siteSettingsList);
+        auto* optionItem = new SiteInfoPermissionDefaultItem(siteSettings->getDefaultPermission(attribute), this);
+
+        ui->siteSettingsList->setItemWidget(listItem, optionItem);
+        listItem->setSizeHint(optionItem->sizeHint());
+        optionItem->setAttribute(attribute);
+    }
+    const auto supportedFeatures = mApp->siteSettingsManager()->getSupportedFeatures();
+    for (const auto &feature : supportedFeatures) {
+        auto* listItem = new QListWidgetItem(ui->siteSettingsList);
+        auto* optionItem = new SiteInfoPermissionDefaultItem(siteSettings->getDefaultPermission(feature), this);
+
+        ui->siteSettingsList->setItemWidget(listItem, optionItem);
+        listItem->setSizeHint(optionItem->sizeHint());
+        optionItem->setFeature(feature);
+    }
+    {
+        auto* listItem = new QListWidgetItem(ui->siteSettingsList);
+        auto* optionItem = new SiteInfoPermissionDefaultItem(siteSettings->getDefaultPermission(SiteSettingsManager::poAllowCookies), this);
+
+        ui->siteSettingsList->setItemWidget(listItem, optionItem);
+        listItem->setSizeHint(optionItem->sizeHint());
+        optionItem->setOption(SiteSettingsManager::poAllowCookies);
+    }
 
     //Cache
     ui->allowCache->setChecked(settings.value(QSL("AllowLocalCache"), true).toBool());

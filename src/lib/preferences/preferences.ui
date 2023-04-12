@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>840</width>
-    <height>550</height>
+    <width>932</width>
+    <height>560</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -145,8 +145,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>582</width>
-        <height>476</height>
+        <width>680</width>
+        <height>583</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -1525,6 +1525,16 @@
                </item>
               </layout>
              </widget>
+             <widget class="QWidget" name="tab_6">
+              <attribute name="title">
+               <string>Site Settings</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <widget class="QListWidget" name="siteSettingsList"/>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -2435,8 +2445,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>560</width>
-                <height>80</height>
+                <width>98</width>
+                <height>29</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_14">
