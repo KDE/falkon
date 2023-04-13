@@ -48,15 +48,13 @@ public:
     void setFeature(const QWebEnginePage::Feature &feature);
     void setOption(const SiteSettingsManager::PageOptions &option);
 
-    void setHasOptionAsk(bool hasAsk);
-
 private:
     void setPermission(const SiteSettingsManager::Permission permission);
+    void setHasOptionAsk(bool hasAsk);
 
     bool m_hasOptionAsk;
     QString m_sqlColumn;
 
-private:
     QScopedPointer<Ui::SiteInfoPermissionDefaultItem> m_ui;
 };
 
