@@ -84,6 +84,17 @@ QVector<PasswordEntry> KWalletPasswordBackend::getAllEntries()
     return m_allEntries;
 }
 
+// TODO QT6 - should we just start storing timestamps as 64-bit instead?
+static uint Q_DATETIME_TOTIME_T(const QDateTime &dateTime)
+{
+    if (!dateTime.isValid())
+        return uint(-1);
+    qint64 retval = dateTime.toMSecsSinceEpoch() / 1000;
+    if (quint64(retval) >= Q_UINT64_C(0xFFFFFFFF))
+        return uint(-1);
+    return uint(retval);
+}
+
 void KWalletPasswordBackend::addEntry(const PasswordEntry &entry)
 {
     initialize();
@@ -95,7 +106,7 @@ void KWalletPasswordBackend::addEntry(const PasswordEntry &entry)
 
     PasswordEntry stored = entry;
     stored.id = QString("%1/%2").arg(entry.host, entry.username);
-    stored.updated = QDateTime::currentDateTime().toTime_t();
+    stored.updated = Q_DATETIME_TOTIME_T(QDateTime::currentDateTime());
 
     m_wallet->writeMap(stored.id.toString(), encodeEntry(stored));
     m_allEntries.append(stored);
@@ -133,7 +144,7 @@ void KWalletPasswordBackend::updateLastUsed(PasswordEntry &entry)
 
     m_wallet->removeEntry(entry.id.toString());
 
-    entry.updated = QDateTime::currentDateTime().toTime_t();
+    entry.updated = Q_DATETIME_TOTIME_T(QDateTime::currentDateTime());
 
     m_wallet->writeMap(entry.id.toString(), encodeEntry(entry));
 

@@ -20,11 +20,11 @@ add_library(KDEFrameworksIntegration MODULE ${KDEFrameworksIntegration_SRCS} ${R
 install(TARGETS KDEFrameworksIntegration DESTINATION ${FALKON_INSTALL_PLUGINDIR})
 target_link_libraries(KDEFrameworksIntegration
     FalkonPrivate
-    KF5::Wallet
-    KF5::KIOCore
-    KF5::KIOWidgets
-    KF5::Crash
-    KF5::CoreAddons
-    KF5::PurposeWidgets
+    KF${KF_MAJOR_VERSION}::Wallet
+    KF${KF_MAJOR_VERSION}::KIOCore
+    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KF${KF_MAJOR_VERSION}::Crash
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::PurposeWidgets
     KF5::JobWidgets
 )
