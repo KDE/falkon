@@ -124,14 +124,17 @@ public:
     QString sqlTable();
 
 private:
+    void prepareSqls();
 
     Permission testAttribute(const QWebEngineSettings::WebAttribute attribute) const;
     Permission intToPermission(const int permission) const;
 
-    QMap<PageOptions, Permission> m_defaults;
     QList<QWebEngineSettings::WebAttribute> supportedAttribute;
     QList<QWebEnginePage::Feature> supportedFeatures;
+
     QMap<QWebEnginePage::Feature, Permission> defaultFeatures;
+    QMap<QWebEngineSettings::WebAttribute, Permission> defaultAttributes;
+    QMap<PageOptions, Permission> defaultOptions;
 
     QString attributesSql;
     QString everythingSql;

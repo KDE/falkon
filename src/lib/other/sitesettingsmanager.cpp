@@ -25,9 +25,6 @@
 SiteSettingsManager::SiteSettingsManager ( QObject* parent )
 : QObject(parent)
 {
-    loadSettings();
-
-
     supportedAttribute.append(QWebEngineSettings::AutoLoadImages);
     supportedAttribute.append(QWebEngineSettings::JavascriptEnabled);
     supportedAttribute.append(QWebEngineSettings::JavascriptCanOpenWindows);
@@ -42,19 +39,6 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     supportedAttribute.append(QWebEngineSettings::PlaybackRequiresUserGesture);
     supportedAttribute.append(QWebEngineSettings::WebRTCPublicInterfacesOnly);
 
-    /* Select SQL for QtWE Attributes */
-    attributesSql = QSL("SELECT ");
-
-    for (int i = 0; i < supportedAttribute.size(); ++i) {
-        if (i > 0) {
-            attributesSql.append(QSL(", "));
-        }
-        attributesSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
-    }
-
-    attributesSql.append(QSL(" FROM %1 WHERE server=?").arg(sqlTable()));
-
-
     supportedFeatures.append(QWebEnginePage::Notifications);
     supportedFeatures.append(QWebEnginePage::Geolocation);
     supportedFeatures.append(QWebEnginePage::MediaAudioCapture);
@@ -65,78 +49,8 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     supportedFeatures.append(QWebEnginePage::DesktopAudioVideoCapture);
 
 
-    /* Select SQL for SiteSettings */
-    everythingSql = QSL("SELECT ");
-
-    for (int i = 0; i < supportedAttribute.size(); ++i) {
-        if (i > 0) {
-            everythingSql.append(QSL(", "));
-        }
-        everythingSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
-    }
-
-    for (int i = 0; i < supportedFeatures.size(); ++i) {
-        everythingSql.append(QSL(", "));
-        everythingSql.append(featureToSqlColumn(supportedFeatures[i]));
-    }
-
-    everythingSql.append(QSL(", "));
-    everythingSql.append(optionToSqlColumn(poAllowCookies));
-
-    everythingSql.append(QSL(", "));
-    everythingSql.append(optionToSqlColumn(poZoomLevel));
-
-    everythingSql.append(QSL(" FROM %1 WHERE server=?"));
-
-
-    /* Insert SQL for SiteSettings */
-    everythingInsertSql = QSL("INSERT INTO %1 (");
-    for (int i = 0; i < supportedAttribute.size(); ++i) {
-        everythingInsertSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
-        everythingInsertSql.append(QSL(", "));
-    }
-    for (int i = 0; i < supportedFeatures.size(); ++i) {
-        everythingInsertSql.append(featureToSqlColumn(supportedFeatures[i]));
-        everythingInsertSql.append(QSL(", "));
-    }
-
-    everythingInsertSql.append(optionToSqlColumn(poAllowCookies));
-    everythingInsertSql.append(QSL(", "));
-
-    everythingInsertSql.append(optionToSqlColumn(poZoomLevel));
-
-    everythingInsertSql.append(QSL(", server"));
-
-    everythingInsertSql.append(QSL(") Values ("));
-    /* Index = sum(server, numberOfAttributes, numberOfFeatures, cookies, zoom) */
-    int index = 1 + supportedAttribute.size() + supportedFeatures.size() + 2;
-    for (int i = 0; i < index; ++i) {
-        if (i > 0) {
-            everythingInsertSql.append(QSL(", "));
-        }
-        everythingInsertSql.append(QSL("?"));
-    }
-    everythingInsertSql.append(QSL(")"));
-
-
-    /* Update SQL for SiteSettings */
-    everythingUpdateSql = QSL("UPDATE %1 SET ");
-    for (int i = 0; i < supportedAttribute.size(); ++i) {
-        everythingUpdateSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
-        everythingUpdateSql.append(QSL("=?, "));
-    }
-    for (int i = 0; i < supportedFeatures.size(); ++i) {
-        everythingUpdateSql.append(featureToSqlColumn(supportedFeatures[i]));
-        everythingUpdateSql.append(QSL("=?, "));
-    }
-
-    everythingUpdateSql.append(optionToSqlColumn(poAllowCookies));
-    everythingUpdateSql.append(QSL("=?, "));
-
-    everythingUpdateSql.append(optionToSqlColumn(poZoomLevel));
-    everythingUpdateSql.append(QSL("=? "));
-
-    everythingUpdateSql.append(QSL(" WHERE server=?"));
+    prepareSqls();
+    loadSettings();
 }
 
 SiteSettingsManager::~SiteSettingsManager() noexcept
@@ -151,32 +65,33 @@ void SiteSettingsManager::loadSettings()
 //    settings.endGroup();
 
     settings.beginGroup("Site-Settings");
-/* These are handled by already existing parts of Falkon */
-//     m_defaults[poAllowCookies]                  = settings.value("allowCookies", Default).toInt();
-//     m_defaults[poZoomLevel]                     = settings.value("defaultZoomLevel", Default).toInt(); // fail
-//
-//     m_defaults[poAutoloadImages]                         = intToPermission(settings.value("AllowImages",                         Ask).toInt());
-//
-//     m_defaults[poJavascriptEnabled]                   = intToPermission(settings.value("JavascriptEnabled",                   Ask).toInt());
-//     m_defaults[poJavascriptCanOpenWindows]            = intToPermission(settings.value("JavascriptCanOpenWindows",            Ask).toInt());
-//     m_defaults[poJavascriptCanAccessClipboard]        = intToPermission(settings.value("JavascriptCanAccessClipboard",        Ask).toInt());
-//     m_defaults[poJavascriptCanPaste]                  = intToPermission(settings.value("JavascriptCanPaste",                  Ask).toInt());
-//     m_defaults[poAllowWindowActivationFromJavaScript] = intToPermission(settings.value("AllowWindowActivationFromJavaScript", Ask).toInt());
-//
-//     m_defaults[poLocalStorageEnabled]                 = intToPermission(settings.value("LocalStorageEnabled",                 Ask).toInt());
-//     m_defaults[poScrollAnimatorEnabled]               = intToPermission(settings.value("ScrollAnimatorEnabled",               Ask).toInt());
-//     m_defaults[poFullScreenSupportEnabled]            = intToPermission(settings.value("FullScreenSupportEnabled",            Ask).toInt());
-//     m_defaults[poAllowRunningInsecureContent]         = intToPermission(settings.value("AllowRunningInsecureContent",         Ask).toInt());
-//     m_defaults[poAllowGeolocationOnInsecureOrigins]   = intToPermission(settings.value("AllowGeolocationOnInsecureOrigins",   Ask).toInt());
-//     m_defaults[poPlaybackRequiresUserGesture]         = intToPermission(settings.value("PlaybackRequiresUserGesture",         Ask).toInt());
-//     m_defaults[poWebRTCPublicInterfacesOnly]          = intToPermission(settings.value("WebRTCPublicInterfacesOnly",          Ask).toInt());
-    settings.endGroup();
-
-
-    settings.beginGroup("Site-Settings-Default-Features");
+    /* HTML5 Feature */
     for (const auto &feature : qAsConst(supportedFeatures)) {
         defaultFeatures[feature] = intToPermission(settings.value(featureToSqlColumn(feature), Ask).toInt());
     }
+
+    /* WebAttributes */
+    defaultAttributes[QWebEngineSettings::AutoLoadImages                     ] = Allow;
+    defaultAttributes[QWebEngineSettings::JavascriptEnabled                  ] = Allow;
+    defaultAttributes[QWebEngineSettings::JavascriptCanOpenWindows           ] = Deny;
+    defaultAttributes[QWebEngineSettings::JavascriptCanAccessClipboard       ] = Allow;
+    defaultAttributes[QWebEngineSettings::JavascriptCanPaste                 ] = Allow;
+    defaultAttributes[QWebEngineSettings::AllowWindowActivationFromJavaScript] = Deny;
+    defaultAttributes[QWebEngineSettings::LocalStorageEnabled                ] = Allow;
+    defaultAttributes[QWebEngineSettings::ScrollAnimatorEnabled              ] = Allow;
+    defaultAttributes[QWebEngineSettings::FullScreenSupportEnabled           ] = Allow;
+    defaultAttributes[QWebEngineSettings::AllowRunningInsecureContent        ] = Deny;
+    defaultAttributes[QWebEngineSettings::AllowGeolocationOnInsecureOrigins  ] = Deny;
+    defaultAttributes[QWebEngineSettings::PlaybackRequiresUserGesture        ] = Deny;
+    defaultAttributes[QWebEngineSettings::WebRTCPublicInterfacesOnly         ] = Allow;
+
+    for (const auto &attribute : qAsConst(supportedAttribute)) {
+        defaultAttributes[attribute] = intToPermission(settings.value(webAttributeToSqlColumn(attribute), defaultAttributes[attribute]).toInt());
+    }
+
+    /* General Options */
+    defaultOptions[poAllowCookies] = intToPermission(settings.value(optionToSqlColumn(poAllowCookies), Allow).toInt());
+
     settings.endGroup();
 }
 
@@ -184,18 +99,13 @@ void SiteSettingsManager::saveSettings()
 {
     Settings settings;
     settings.beginGroup("Site-Settings");
-/* These are handled by already existing parts of Falkon */
-//     settings.setValue("allowJavascript", m_defaults[poJavascriptEnabled]);
-//     settings.setValue("allowIbutmages", m_defaults[poAutoloadImages]);
-//     settings.setValue("allowCookies", m_defaults[poAllowCookies]);
-//     settings.setValue("defaultZoomLevel", m_defaults[poZoomLevel]);
-    settings.endGroup();
-
-
-    settings.beginGroup("Site-Settings-Default-Features");
     for (auto it = defaultFeatures.begin(); it != defaultFeatures.end(); ++it) {
         settings.setValue(featureToSqlColumn(it.key()), it.value());
     }
+    for (auto it = defaultAttributes.begin(); it != defaultAttributes.end(); ++it) {
+        settings.setValue(webAttributeToSqlColumn(it.key()), it.value());
+    }
+    settings.setValue(optionToSqlColumn(poAllowCookies), defaultOptions[poAllowCookies]);
     settings.endGroup();
 }
 
@@ -329,19 +239,6 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEng
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEngineSettings::WebAttribute& attribute, const QUrl& url)
 {
     return getPermission(webAttributeToSqlColumn(attribute), url.host());
-}
-
-QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOptions &option)
-{
-    switch (option) {
-        case poAllowCookies:
-            return QSL("allow_cookies");
-        case poZoomLevel:
-            return QSL("zoom_level");
-        default:
-            qWarning() << "Unknown option:" << option;
-            return QLatin1String("");
-    }
 }
 
 SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const SiteSettingsManager::PageOptions& option)
@@ -535,6 +432,19 @@ QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permis
     }
 }
 
+QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOptions &option)
+{
+    switch (option) {
+        case poAllowCookies:
+            return QSL("allow_cookies");
+        case poZoomLevel:
+            return QSL("zoom_level");
+        default:
+            qWarning() << "Unknown option:" << option;
+            return QLatin1String("");
+    }
+}
+
 QString SiteSettingsManager::featureToSqlColumn(const QWebEnginePage::Feature& feature)
 {
     switch (feature) {
@@ -682,4 +592,92 @@ void SiteSettingsManager::setSiteSettings(SiteSettingsManager::SiteSettings& sit
 QString SiteSettingsManager::sqlTable()
 {
     return QSL("site_settings");
+}
+
+void SiteSettingsManager::prepareSqls() {
+    /* Select SQL for QtWE Attributes */
+    attributesSql = QSL("SELECT ");
+
+    for (int i = 0; i < supportedAttribute.size(); ++i) {
+        if (i > 0) {
+            attributesSql.append(QSL(", "));
+        }
+        attributesSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
+    }
+
+    attributesSql.append(QSL(" FROM %1 WHERE server=?").arg(sqlTable()));
+
+
+    /* Select SQL for SiteSettings */
+    everythingSql = QSL("SELECT ");
+
+    for (int i = 0; i < supportedAttribute.size(); ++i) {
+        if (i > 0) {
+            everythingSql.append(QSL(", "));
+        }
+        everythingSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
+    }
+
+    for (int i = 0; i < supportedFeatures.size(); ++i) {
+        everythingSql.append(QSL(", "));
+        everythingSql.append(featureToSqlColumn(supportedFeatures[i]));
+    }
+
+    everythingSql.append(QSL(", "));
+    everythingSql.append(optionToSqlColumn(poAllowCookies));
+
+    everythingSql.append(QSL(", "));
+    everythingSql.append(optionToSqlColumn(poZoomLevel));
+
+    everythingSql.append(QSL(" FROM %1 WHERE server=?"));
+
+
+    /* Insert SQL for SiteSettings */
+    everythingInsertSql = QSL("INSERT INTO %1 (");
+    for (int i = 0; i < supportedAttribute.size(); ++i) {
+        everythingInsertSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
+        everythingInsertSql.append(QSL(", "));
+    }
+    for (int i = 0; i < supportedFeatures.size(); ++i) {
+        everythingInsertSql.append(featureToSqlColumn(supportedFeatures[i]));
+        everythingInsertSql.append(QSL(", "));
+    }
+
+    everythingInsertSql.append(optionToSqlColumn(poAllowCookies));
+    everythingInsertSql.append(QSL(", "));
+
+    everythingInsertSql.append(optionToSqlColumn(poZoomLevel));
+
+    everythingInsertSql.append(QSL(", server"));
+
+    everythingInsertSql.append(QSL(") Values ("));
+    /* Index = sum(server, numberOfAttributes, numberOfFeatures, cookies, zoom) */
+    int index = 1 + supportedAttribute.size() + supportedFeatures.size() + 2;
+    for (int i = 0; i < index; ++i) {
+        if (i > 0) {
+            everythingInsertSql.append(QSL(", "));
+        }
+        everythingInsertSql.append(QSL("?"));
+    }
+    everythingInsertSql.append(QSL(")"));
+
+
+    /* Update SQL for SiteSettings */
+    everythingUpdateSql = QSL("UPDATE %1 SET ");
+    for (int i = 0; i < supportedAttribute.size(); ++i) {
+        everythingUpdateSql.append(webAttributeToSqlColumn(supportedAttribute[i]));
+        everythingUpdateSql.append(QSL("=?, "));
+    }
+    for (int i = 0; i < supportedFeatures.size(); ++i) {
+        everythingUpdateSql.append(featureToSqlColumn(supportedFeatures[i]));
+        everythingUpdateSql.append(QSL("=?, "));
+    }
+
+    everythingUpdateSql.append(optionToSqlColumn(poAllowCookies));
+    everythingUpdateSql.append(QSL("=?, "));
+
+    everythingUpdateSql.append(optionToSqlColumn(poZoomLevel));
+    everythingUpdateSql.append(QSL("=? "));
+
+    everythingUpdateSql.append(QSL(" WHERE server=?"));
 }
