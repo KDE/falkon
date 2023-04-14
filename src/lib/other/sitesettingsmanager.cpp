@@ -343,12 +343,12 @@ QString SiteSettingsManager::getOptionName(const SiteSettingsManager::PageOption
 {
     switch (option) {
         case poZoomLevel:
-            return QSL("Zoom level");
+            return tr("Zoom level");
         case poAllowCookies:
-            return QSL("Cookies");
+            return tr("Cookies");
         default:
             qWarning() << "Unknown option:" << option;
-            return QSL("Unknown");;
+            return tr("Unknown");;
     }
 }
 
@@ -356,24 +356,24 @@ QString SiteSettingsManager::getOptionName(const QWebEnginePage::Feature& featur
 {
     switch (feature) {
         case QWebEnginePage::Notifications:
-            return QSL("Notifications");
+            return tr("Notifications");
         case QWebEnginePage::Geolocation:
-            return QSL("Geolocation");
+            return tr("Geolocation");
         case QWebEnginePage::MediaAudioCapture:
-            return QSL("Microphone");
+            return tr("Microphone");
         case QWebEnginePage::MediaVideoCapture:
-            return QSL("Camera");
+            return tr("Camera");
         case QWebEnginePage::MediaAudioVideoCapture:
-            return QSL("Microphone and Camera");
+            return tr("Microphone and Camera");
         case QWebEnginePage::MouseLock:
-            return QSL("Hide mouse pointer");
+            return tr("Hide mouse pointer");
         case QWebEnginePage::DesktopVideoCapture:
-            return QSL("Screen capture");
+            return tr("Screen capture");
         case QWebEnginePage::DesktopAudioVideoCapture:
-            return QSL("Screen capture with audio");
+            return tr("Screen capture with audio");
         default:
             qWarning() << "Unknown feature:" << feature;
-            return QSL("Unknown");
+            return tr("Unknown");
     }
 }
 
@@ -381,37 +381,37 @@ QString SiteSettingsManager::getOptionName(const QWebEngineSettings::WebAttribut
 {
     switch (attribute) {
         case QWebEngineSettings::AutoLoadImages:
-            return QSL("Autoload images");
+            return tr("Autoload images");
 
         case QWebEngineSettings::JavascriptEnabled:
-            return QSL("Enable JavaScript");
+            return tr("Enable JavaScript");
         case QWebEngineSettings::JavascriptCanOpenWindows:
-            return QSL("JavaScript: Open popup windows");
+            return tr("JavaScript: Open popup windows");
         case QWebEngineSettings::JavascriptCanAccessClipboard:
-            return QSL("JavaScript: Access clipboard");
+            return tr("JavaScript: Access clipboard");
         case QWebEngineSettings::JavascriptCanPaste:
-            return QSL("JavaScript: Paste from clipboard");
+            return tr("JavaScript: Paste from clipboard");
         case QWebEngineSettings::AllowWindowActivationFromJavaScript:
-            return QSL("JavaScript: Activate windows");
+            return tr("JavaScript: Activate windows");
 
         case QWebEngineSettings::LocalStorageEnabled:
-            return QSL("Local storage");
+            return tr("Local storage");
         case QWebEngineSettings::ScrollAnimatorEnabled:
-            return QSL("Animated scrolling");
+            return tr("Animated scrolling");
         case QWebEngineSettings::FullScreenSupportEnabled:
-            return QSL("FullScreen support");
+            return tr("FullScreen support");
         case QWebEngineSettings::AllowRunningInsecureContent:
-            return QSL("Run insecure content");
+            return tr("Run insecure content");
         case QWebEngineSettings::AllowGeolocationOnInsecureOrigins:
-            return QSL("Geolocation on insecure origin");
+            return tr("Geolocation on insecure origin");
         case QWebEngineSettings::PlaybackRequiresUserGesture:
-            return QSL("Automatic playing of videos");
+            return tr("Automatic playing of videos");
         case QWebEngineSettings::WebRTCPublicInterfacesOnly:
-            return QSL("Prevent WebRTC from leaking private IP address");
+            return tr("Prevent WebRTC from leaking private IP address");
 
         default:
             qWarning() << "Unknown attribute:" << attribute;
-            return QSL("Unknown");
+            return tr("Unknown");
     }
 }
 
@@ -419,16 +419,16 @@ QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permis
 {
     switch (permission) {
         case Allow:
-            return QSL("Allow");
+            return tr("Allow");
         case Ask:
-            return QSL("Ask");
+            return tr("Ask");
         case Deny:
-            return QSL("Deny");
+            return tr("Deny");
         case Default:
-            return QSL("Default");
+            return tr("Default");
         default:
             qWarning() << "Uknown permission:" << permission;
-            return QSL("Unknown");
+            return tr("Unknown");
     }
 }
 
