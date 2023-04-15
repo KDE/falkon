@@ -102,6 +102,7 @@ set(SRCS ${SRCS}
     cookies/cookiemanager.cpp
     downloads/downloaditem.cpp
     downloads/downloadmanager.cpp
+    downloads/downloadmanagermodel.cpp
     downloads/downloadoptionsdialog.cpp
     downloads/downloadsbutton.cpp
     history/history.cpp
@@ -328,6 +329,7 @@ set(SRCS ${SRCS}
     cookies/cookiemanager.h
     downloads/downloaditem.h
     downloads/downloadmanager.h
+    downloads/downloadmanagermodel.h
     downloads/downloadoptionsdialog.h
     downloads/downloadsbutton.h
     history/history.h

@@ -2,9 +2,11 @@ set(KDEFrameworksIntegration_SRCS
     kdeframeworksintegrationplugin.cpp
     kwalletpasswordbackend.cpp
     kioschemehandler.cpp
+    downloadkjob.cpp
     kdeframeworksintegrationplugin.h
     kwalletpasswordbackend.h
     kioschemehandler.h
+    downloadkjob.h
 )
 
 ecm_create_qm_loader(KDEFrameworksIntegration_SRCS falkon_kdeframeworksintegration_qt)
@@ -24,4 +26,5 @@ target_link_libraries(KDEFrameworksIntegration
     KF5::Crash
     KF5::CoreAddons
     KF5::PurposeWidgets
+    KF5::JobWidgets
 )

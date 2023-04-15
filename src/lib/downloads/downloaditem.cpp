@@ -172,6 +172,7 @@ void DownloadItem::downloadProgress(qint64 received, qint64 total)
     m_total = total;
 
     updateDownloadInfo(m_currSpeed, m_received, m_total);
+    progressChanged(m_currSpeed, m_received, m_total);
 }
 
 int DownloadItem::progress()
@@ -361,6 +362,21 @@ void DownloadItem::openFolder()
 #else
     QDesktopServices::openUrl(QUrl::fromLocalFile(m_path));
 #endif
+}
+
+QUrl DownloadItem::url() const
+{
+    return m_downUrl;
+}
+
+QString DownloadItem::path() const
+{
+    return m_path;
+}
+
+QString DownloadItem::fileName() const
+{
+    return m_fileName;
 }
 
 DownloadItem::~DownloadItem()

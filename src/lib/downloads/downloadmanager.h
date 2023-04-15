@@ -36,6 +36,10 @@ class QWebEngineDownloadItem;
 class QWinTaskbarButton;
 
 class DownloadItem;
+class DownloadManagerModel;
+#ifdef PLASMA_DOWNLOADS
+class DownloadKJob;
+#endif
 class WebPage;
 
 class FALKON_EXPORT DownloadManager : public QWidget
@@ -82,12 +86,14 @@ public Q_SLOTS:
 
 private Q_SLOTS:
     void clearList();
-    void deleteItem(DownloadItem* item);
     void downloadFinished(bool success);
 
 Q_SIGNALS:
     void resized(QSize);
     void downloadsCountChanged();
+    void downloadAdded(DownloadItem *item);
+    void downloadRemoved(DownloadItem *item);
+    void downloadFinished();
 
 private:
     void timerEvent(QTimerEvent* e) override;
@@ -99,6 +105,7 @@ private:
     QWinTaskbarButton *taskbarButton();
 
     Ui::DownloadManager* ui;
+    DownloadManagerModel *m_model;
     QBasicTimer m_timer;
 
     QString m_lastDownloadPath;

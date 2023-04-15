@@ -48,6 +48,9 @@ public:
     QTime remainingTime() const { return m_remTime; }
     double currentSpeed() const { return m_currSpeed; }
     int progress();
+    QUrl url() const;
+    QString path() const;
+    QString fileName() const;
     ~DownloadItem() override;
     void setDownTimer(const QTime &timer) { m_downTimer = timer; }
 
@@ -59,6 +62,7 @@ public:
 Q_SIGNALS:
     void deleteItem(DownloadItem*);
     void downloadFinished(bool success);
+    void progressChanged(double currSpeed, qint64 received, qint64 total);
 
 private Q_SLOTS:
     void parentResized(const QSize &size);

@@ -21,6 +21,10 @@
 #include "mainapplication.h"
 #include "downloadoptionsdialog.h"
 #include "downloaditem.h"
+#include "downloadmanagermodel.h"
+#ifdef PLASMA_DOWNLOADS
+#include "downloadkjob.h"
+#endif
 #include "networkmanager.h"
 #include "desktopnotificationsfactory.h"
 #include "qztools.h"
@@ -52,6 +56,7 @@
 DownloadManager::DownloadManager(QWidget* parent)
     : QWidget(parent)
     , ui(new Ui::DownloadManager)
+    , m_model(new DownloadManagerModel(this))
     , m_isClosing(false)
     , m_lastDownloadOption(NoOption)
 {
@@ -73,6 +78,8 @@ DownloadManager::DownloadManager(QWidget* parent)
     loadSettings();
 
     QzTools::setWmClass("Download Manager", this);
+
+    connect(m_model, &DownloadManagerModel::downloadAdded, this, &DownloadManager::downloadAdded);
 }
 
 void DownloadManager::loadSettings()
@@ -365,8 +372,10 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
     auto* downItem = new DownloadItem(listItem, downloadItem, QFileInfo(downloadPath).absolutePath(), QFileInfo(downloadPath).fileName(), openFile, this);
     downItem->setDownTimer(downloadTimer);
     downItem->startDownloading();
-    connect(downItem, &DownloadItem::deleteItem, this, &DownloadManager::deleteItem);
-    connect(downItem, &DownloadItem::downloadFinished, this, &DownloadManager::downloadFinished);
+    connect(downItem, &DownloadItem::deleteItem, m_model, &DownloadManagerModel::removeDownload);
+    connect(downItem, &DownloadItem::downloadFinished, this, QOverload<bool>::of(&DownloadManager::downloadFinished));
+    connect(downItem, &DownloadItem::downloadFinished, this, QOverload<>::of(&DownloadManager::downloadFinished));
+    m_model->addDownload(downItem);
     ui->list->setItemWidget(listItem, downItem);
     listItem->setSizeHint(downItem->sizeHint());
     downItem->show();
@@ -377,7 +386,7 @@ void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
 
 int DownloadManager::downloadsCount() const
 {
-    return ui->list->count();
+    return m_model->count();
 }
 
 int DownloadManager::activeDownloadsCount() const
@@ -421,13 +430,6 @@ void DownloadManager::downloadFinished(bool success)
         if (m_closeOnFinish) {
             close();
         }
-    }
-}
-
-void DownloadManager::deleteItem(DownloadItem* item)
-{
-    if (item && !item->isDownloading()) {
-        delete item;
     }
 }
 

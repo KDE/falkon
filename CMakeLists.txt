@@ -124,8 +124,10 @@ set_package_properties(KF5Crash PROPERTIES DESCRIPTION "KDE Frameworks Integrati
 find_package(KF5CoreAddons ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5CoreAddons PROPERTIES DESCRIPTION "KDE Frameworks Integration plugin" TYPE OPTIONAL)
 find_package(KF5Purpose ${KF5_MIN_VERSION} CONFIG)
+find_package(KF5JobWidgets ${KF5_MIN_VERSION} CONFIG)
+set_package_properties(KF5JobWidgets PROPERTIES DESCRIPTION "KDE Frameworks Integration plugin" TYPE OPTIONAL)
 set_package_properties(KF5Purpose PROPERTIES DESCRIPTION "KDE Frameworks Integration plugin" TYPE OPTIONAL)
-if (KF5Wallet_FOUND AND KF5KIO_FOUND AND KF5Crash_FOUND AND KF5CoreAddons_FOUND AND KF5Purpose_FOUND)
+if (KF5Wallet_FOUND AND KF5KIO_FOUND AND KF5Crash_FOUND AND KF5CoreAddons_FOUND AND KF5Purpose_FOUND AND KF5JobWidgets_FOUND)
     set(ENABLE_KDE_FRAMEWORKS_INTEGRATION_PLUGIN TRUE)
 endif()
 

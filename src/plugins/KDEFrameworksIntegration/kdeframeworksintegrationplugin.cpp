@@ -23,14 +23,18 @@
 #include "mainapplication.h"
 #include "autofill.h"
 #include "passwordmanager.h"
+#include "downloadmanager.h"
 #include "kioschemehandler.h"
 #include "webpage.h"
 #include "webview.h"
+#include "downloadkjob.h"
+#include "downloaditem.h"
 
 #include <KCrash>
 #include <KAboutData>
 #include <KProtocolInfo>
 #include <Purpose/AlternativesModel>
+#include <KUiServerJobTracker>
 
 #include <QWebEngineProfile>
 #include <QMenu>
@@ -53,6 +57,22 @@ void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settin
     if (qgetenv("KDE_FULL_SESSION") == QByteArray("true")) {
         mApp->autoFill()->passwordManager()->switchBackend(QSL("KWallet"));
     }
+    
+    m_jobTracker = new KUiServerJobTracker(this);
+    
+    auto manager = mApp->downloadManager();
+    connect(manager, &DownloadManager::downloadAdded, [=](DownloadItem *item) {
+        auto job = new DownloadKJob(item->url(), item->path(), item->fileName(), this);
+        m_jobTracker->registerJob(job);
+        job->start();
+        job->updateDescription();
+
+        connect(item, &DownloadItem::progressChanged, job, &DownloadKJob::progress);
+        connect(manager, QOverload<>::of(&DownloadManager::downloadFinished), m_jobTracker, [=]() {
+            m_jobTracker->unregisterJob(job);
+        });
+    });
+
 
     const auto protocols = KProtocolInfo::protocols();
     for (const QString &protocol : protocols) {
