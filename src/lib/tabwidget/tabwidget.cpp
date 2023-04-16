@@ -849,6 +849,8 @@ bool TabWidget::restoreState(const QVector<WebTab::SavedTab> &tabs, int currentT
         return false;
     }
 
+    m_tabBar->setIsRestoring(true);
+
     QVector<QPair<WebTab*, QVector<int>>> childTabs;
 
     for (int i = 0; i < tabs.size(); ++i) {
@@ -869,6 +871,8 @@ bool TabWidget::restoreState(const QVector<WebTab::SavedTab> &tabs, int currentT
             }
         }
     }
+
+    m_tabBar->setIsRestoring(false);
 
     setCurrentIndex(currentTab);
     QTimer::singleShot(0, m_tabBar, SLOT(ensureVisible(int,int)));

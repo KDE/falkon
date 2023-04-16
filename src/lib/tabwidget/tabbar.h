@@ -43,6 +43,8 @@ public:
 
     void wheelEvent(QWheelEvent* event) override;
 
+    void setIsRestoring(bool restoring);
+
 Q_SIGNALS:
     void moveAddTabButton(int posX);
 
@@ -90,6 +92,8 @@ private:
 
     bool m_forceHidden;
     QPointer<WebTab> m_lastTab;
+
+    bool m_isRestoring = false;
 };
 
 #endif // TABBAR_H

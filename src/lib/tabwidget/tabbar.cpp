@@ -326,7 +326,7 @@ WebTab* TabBar::webTab(int index) const
 
 void TabBar::showCloseButton(int index)
 {
-    if (!validIndex(index)) {
+    if (!validIndex(index) || m_isRestoring) {
         return;
     }
 
@@ -358,7 +358,7 @@ void TabBar::contextMenuEvent(QContextMenuEvent* event)
 
 void TabBar::hideCloseButton(int index)
 {
-    if (!validIndex(index) || tabsClosable()) {
+    if (!validIndex(index) || tabsClosable() || m_isRestoring) {
         return;
     }
 
@@ -728,6 +728,11 @@ void TabBar::dropEvent(QDropEvent* event)
             }
         }
     }
+}
+
+void TabBar::setIsRestoring(bool restoring)
+{
+    m_isRestoring = restoring;
 }
 
 #include "tabbar.moc"
