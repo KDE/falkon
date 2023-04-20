@@ -78,8 +78,10 @@ bool NetworkManager::certificateError(const QWebEngineCertificateError &error, Q
         return false;
     }
 
-    if (m_ignoredSslErrors.contains(host) && m_ignoredSslErrors.value(host) == error.error())
+    if ((m_ignoredSslErrors.contains(host) && m_ignoredSslErrors.value(host) == error.error())
+            || m_ignoredSslHosts.contains(host)) {
         return true;
+    }
 
     QString title = tr("SSL Certificate Error!");
     QString text1 = tr("The page you are trying to access has the following errors in the SSL certificate:");
@@ -93,7 +95,9 @@ bool NetworkManager::certificateError(const QWebEngineCertificateError &error, Q
 
     switch (dialog.result()) {
     case SslErrorDialog::Yes:
-        // TODO: Permanent exceptions
+        m_ignoredSslHosts.append(host);
+        return true;
+
     case SslErrorDialog::OnlyForThisSession:
         m_ignoredSslErrors[host] = error.error();
         return true;
@@ -288,10 +292,19 @@ void NetworkManager::loadSettings()
     }
 
     m_urlInterceptor->loadSettings();
+
+    settings.beginGroup("Web-Browser-Settings");
+    m_ignoredSslHosts = settings.value("IgnoredSslHosts", QStringList()).toStringList();
+    settings.endGroup();
 }
 
 void NetworkManager::shutdown()
 {
+    Settings settings;
+    settings.beginGroup("Web-Browser-Settings");
+    settings.setValue("IgnoredSslHosts", m_ignoredSslHosts);
+    settings.endGroup();
+
     mApp->webProfile()->setUrlRequestInterceptor(nullptr);
 }
 

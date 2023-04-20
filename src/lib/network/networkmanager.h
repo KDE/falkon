@@ -58,6 +58,7 @@ private:
     ExtensionSchemeManager *m_extensionScheme;
     QHash<QString, QWebEngineCertificateError::Error> m_ignoredSslErrors;
     QHash<QString, QWebEngineCertificateError::Error> m_rejectedSslErrors;
+    QStringList m_ignoredSslHosts;
 };
 
 #endif // NETWORKMANAGER_H
