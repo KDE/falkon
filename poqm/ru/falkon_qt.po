@@ -4,11 +4,11 @@
 # Rustam Salakhutdinov <salahutd@gmail.com>, 2017.
 # Oleg Brezhnev <oleg-423@yandex.ru>, 2017.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2020.
-# Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
+# Olesya Gerasimenko <translation-team@basealt.ru>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-10-04 15:32+0300\n"
+"PO-Revision-Date: 2023-04-21 14:54+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2607,12 +2607,9 @@ msgid "Qt version"
 msgstr "Версия Qt"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
-#, fuzzy
-#| msgctxt "AboutDialog|"
-#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "<b>Версия QtWebEngine %1</b></p>"
+msgstr "Версия QtWebEngine"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
@@ -4209,7 +4206,7 @@ msgstr "Включить захват экрана"
 #: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr ""
+msgstr "Использовать аппаратное ускорение (требуется перезапуск)"
 
 #: lib/preferences/preferences.ui:1119
 msgctxt "Preferences|"
