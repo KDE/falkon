@@ -1288,7 +1288,11 @@ bool WebView::eventFilter(QObject *obj, QEvent *event)
     if (obj == this && event->type() == QEvent::ChildAdded) {
         QPointer<QWidget> child = qobject_cast<QWidget*>(static_cast<QChildEvent*>(event)->child());
         QTimer::singleShot(0, this, [=]() {
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
             if (child && child->inherits("QtWebEngineCore::RenderWidgetHostViewQtDelegateWidget")) {
+#else
+            if (child) {
+#endif
                 m_rwhvqt = child;
                 m_rwhvqt->installEventFilter(this);
                 if (auto *w = qobject_cast<QQuickWidget*>(m_rwhvqt)) {
