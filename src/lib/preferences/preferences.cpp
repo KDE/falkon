@@ -310,7 +310,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->allowCache->setChecked(settings.value("AllowLocalCache", true).toBool());
     ui->removeCache->setChecked(settings.value("deleteCacheOnClose", false).toBool());
     ui->cacheMB->setValue(settings.value("LocalCacheSize", 50).toInt());
-    ui->cachePath->setText(settings.value("CachePath", QWebEngineProfile::defaultProfile()->cachePath()).toString());
+    ui->cachePath->setText(settings.value("CachePath", mApp->webProfile()->cachePath()).toString());
     connect(ui->allowCache, &QAbstractButton::clicked, this, &Preferences::allowCacheChanged);
     connect(ui->changeCachePath, &QAbstractButton::clicked, this, &Preferences::changeCachePathClicked);
     allowCacheChanged(ui->allowCache->isChecked());

@@ -298,7 +298,11 @@ MainApplication::MainApplication(int &argc, char** argv)
     NetworkManager::registerSchemes();
     registerAllowedSchemes();
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     m_webProfile = isPrivate() ? new QWebEngineProfile() : QWebEngineProfile::defaultProfile();
+#else
+    m_webProfile = isPrivate() ? new QWebEngineProfile() : new QWebEngineProfile(QSL("Default"));
+#endif
     connect(m_webProfile, &QWebEngineProfile::downloadRequested, this, &MainApplication::downloadRequested);
 
     m_webProfile->setNotificationPresenter([&] (std::unique_ptr<QWebEngineNotification> notification) {
@@ -403,6 +407,12 @@ MainApplication::~MainApplication()
     m_bookmarks = nullptr;
     delete m_cookieJar;
     m_cookieJar = nullptr;
+
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+    // On Qt 6, deleting the web profile is necessary in order to make sure cache, cookies, etc. are flushed to disk.
+    delete m_webProfile;
+    m_webProfile = nullptr;
+#endif
 
     Settings::syncSettings();
 }
@@ -1006,7 +1016,11 @@ void MainApplication::loadSettings()
     webSettings->setFontSize(QWebEngineSettings::MinimumLogicalFontSize, settings.value(QSL("MinimumLogicalFontSize"), 5).toInt());
     settings.endGroup();
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     QWebEngineProfile* profile = QWebEngineProfile::defaultProfile();
+#else
+    QWebEngineProfile* profile = m_webProfile;
+#endif
     profile->setPersistentCookiesPolicy(QWebEngineProfile::AllowPersistentCookies);
     profile->setPersistentStoragePath(DataPaths::currentProfilePath());
 

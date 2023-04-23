@@ -19,6 +19,7 @@
 #include "browserwindow.h"
 #include "qztools.h"
 #include "settings.h"
+#include "mainapplication.h"
 
 #include <QWebEngineProfile>
 #include <QRegularExpression>
@@ -27,7 +28,7 @@ UserAgentManager::UserAgentManager(QObject* parent)
     : QObject(parent)
     , m_usePerDomainUserAgent(false)
 {
-    m_defaultUserAgent = QWebEngineProfile::defaultProfile()->httpUserAgent();
+    m_defaultUserAgent = mApp->webProfile()->httpUserAgent();
     m_defaultUserAgent.replace(QRegularExpression(QSL("(QtWebEngine/[^\\s]+)")), QSL("Falkon/%1 \\1").arg(Qz::VERSION));
 }
 
@@ -53,7 +54,7 @@ void UserAgentManager::loadSettings()
     }
 
     const QString userAgent = m_globalUserAgent.isEmpty() ? m_defaultUserAgent : m_globalUserAgent;
-    QWebEngineProfile::defaultProfile()->setHttpUserAgent(userAgent);
+    mApp->webProfile()->setHttpUserAgent(userAgent);
 }
 
 QString UserAgentManager::globalUserAgent() const
