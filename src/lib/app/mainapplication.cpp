@@ -389,6 +389,10 @@ MainApplication::~MainApplication()
 {
     m_isClosing = true;
 
+    QDesktopServices::unsetUrlHandler(QSL("http"));
+    QDesktopServices::unsetUrlHandler(QSL("https"));
+    QDesktopServices::unsetUrlHandler(QSL("ftp"));
+
     IconProvider::instance()->saveIconsToDatabase();
 
     // Wait for all QtConcurrent jobs to finish
