@@ -64,6 +64,7 @@ private Q_SLOTS:
     void openUserAgentManager();
     void openJsOptions();
     void openSearchEnginesManager();
+    void openCertificateManager();
     void openProtocolHandlersManager();
 
     void searchFromAddressBarChanged(bool state);

@@ -44,6 +44,7 @@
 #include "registerqappassociation.h"
 #include "profilemanager.h"
 #include "html5permissions/html5permissionsdialog.h"
+#include "certificatemanager.h"
 #include "searchenginesdialog.h"
 #include "webscrollbarmanager.h"
 #include "protocolhandlerdialog.h"
@@ -517,6 +518,7 @@ Preferences::Preferences(BrowserWindow* window)
     connect(ui->uaManager, &QAbstractButton::clicked, this, &Preferences::openUserAgentManager);
     connect(ui->jsOptionsButton, &QAbstractButton::clicked, this, &Preferences::openJsOptions);
     connect(ui->searchEngines, &QAbstractButton::clicked, this, &Preferences::openSearchEnginesManager);
+    connect(ui->certificateManager, &QAbstractButton::clicked, this, &Preferences::openCertificateManager);
     connect(ui->protocolHandlers, &QAbstractButton::clicked, this, &Preferences::openProtocolHandlersManager);
 
     connect(ui->listWidget, &QListWidget::currentItemChanged, this, &Preferences::showStackedPage);
@@ -735,6 +737,12 @@ void Preferences::useExternalDownManagerChanged(bool state)
 void Preferences::openSearchEnginesManager()
 {
     auto* dialog = new SearchEnginesDialog(this);
+    dialog->open();
+}
+
+void Preferences::openCertificateManager()
+{
+    auto *dialog = new CertificateManager(this);
     dialog->open();
 }
 
