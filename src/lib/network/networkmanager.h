@@ -54,6 +54,8 @@ protected:
     QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData) override;
 
 private:
+    void saveIgnoredSslHosts();
+
     NetworkUrlInterceptor *m_urlInterceptor;
     ExtensionSchemeManager *m_extensionScheme;
     QHash<QString, QWebEngineCertificateError::Error> m_ignoredSslErrors;

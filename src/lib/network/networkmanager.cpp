@@ -96,6 +96,7 @@ bool NetworkManager::certificateError(const QWebEngineCertificateError &error, Q
     switch (dialog.result()) {
     case SslErrorDialog::Yes:
         m_ignoredSslHosts.append(host);
+        saveIgnoredSslHosts();
         return true;
 
     case SslErrorDialog::OnlyForThisSession:
@@ -298,14 +299,18 @@ void NetworkManager::loadSettings()
     settings.endGroup();
 }
 
-void NetworkManager::shutdown()
+void NetworkManager::saveIgnoredSslHosts()
 {
     Settings settings;
     settings.beginGroup("Web-Browser-Settings");
     settings.setValue("IgnoredSslHosts", m_ignoredSslHosts);
     settings.endGroup();
+}
 
+void NetworkManager::shutdown()
+{
     mApp->webProfile()->setUrlRequestInterceptor(nullptr);
+    saveIgnoredSslHosts();
 }
 
 // static
