@@ -201,6 +201,7 @@ set(SRCS ${SRCS}
     popupwindow/popupwindow.cpp
     preferences/acceptlanguage.cpp
     preferences/autofillmanager.cpp
+    preferences/certificatemanager.cpp
     preferences/jsoptions.cpp
     preferences/pluginlistdelegate.cpp
     preferences/pluginsmanager.cpp
@@ -428,6 +429,7 @@ set(SRCS ${SRCS}
     popupwindow/popupwindow.h
     preferences/acceptlanguage.h
     preferences/autofillmanager.h
+    preferences/certificatemanager.h
     preferences/jsoptions.h
     preferences/pluginlistdelegate.h
     preferences/pluginsmanager.h
@@ -541,6 +543,7 @@ qt_wrap_ui(SRCS
     preferences/acceptlanguage.ui
     preferences/addacceptlanguage.ui
     preferences/autofillmanager.ui
+    preferences/certificatemanager.ui
     preferences/jsoptions.ui
     preferences/pluginslist.ui
     preferences/preferences.ui
