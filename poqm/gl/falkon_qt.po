@@ -1,8 +1,8 @@
-# Adrian Chaves <adrian@chaves.io>, 2018, 2019, 2020.
+# Adrian Chaves <adrian@chaves.io>, 2018, 2019, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2020-01-12 11:58+0100\n"
+"PO-Revision-Date: 2023-04-30 16:12+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.0\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -1184,9 +1184,6 @@ msgid "Open in new private window"
 msgstr "Abrir nunha nova xanela privada"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:185
-#, fuzzy
-#| msgctxt "BookmarksManager|"
-#| msgid "New Folder"
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
 msgstr "Novo cartafol"
@@ -1212,12 +1209,9 @@ msgid "Show Only Text"
 msgstr "Mostrar só texto"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:185
-#, fuzzy
-#| msgctxt "LocationBar|"
-#| msgid "Enter address"
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
-msgstr "Escriba un enderezo"
+msgstr "Escriba o nome do cartafol:"
 
 #: lib/bookmarks/bookmarkstools.cpp:76
 #, qt-format
@@ -2601,12 +2595,9 @@ msgid "Qt version"
 msgstr "Versión de Qt"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
-#, fuzzy
-#| msgctxt "AboutDialog|"
-#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "<b>Versión %1 de QtWebEngine</b></p>"
+msgstr "Versión de QtWebEngine"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
@@ -2665,7 +2656,7 @@ msgstr "API de Windows 7"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:355
 msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
-msgstr "Construción portábel"
+msgstr "Construción portátil"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:373
 msgctxt "FalkonSchemeReply|"
@@ -3082,20 +3073,14 @@ msgid "Save Image to Disk"
 msgstr "Gardar a imaxe no disco"
 
 #: lib/other/siteinfo.cpp:190
-#, fuzzy
-#| msgctxt "HistoryManager|"
-#| msgid "Copy title"
 msgctxt "SiteInfo|"
 msgid "Copy Values"
-msgstr "Copiar o título"
+msgstr "Copiar os valores"
 
 #: lib/other/siteinfo.cpp:191
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Copy image ad&dress"
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
-msgstr "Copiar o en&derezo da imaxe"
+msgstr "Copiar as etiquetas e os valores"
 
 #: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
@@ -3589,12 +3574,9 @@ msgid "Paste from clipboard"
 msgstr "Pegar desde o portapapeis"
 
 #: lib/preferences/pluginslist.ui:17
-#, fuzzy
-#| msgctxt "LocationBar|"
-#| msgid "Enter address"
 msgctxt "PluginsList|"
 msgid "Enter name"
-msgstr "Escriba un enderezo"
+msgstr "Escriba o nome"
 
 #: lib/preferences/pluginslist.ui:51
 msgctxt "PluginsList|"
@@ -4142,12 +4124,12 @@ msgstr "Configuración web"
 #: lib/preferences/preferences.ui:1011
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
-msgstr ""
+msgstr "Activar a API do complemento Pepper (PPAPI)"
 
 #: lib/preferences/preferences.ui:1018
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
-msgstr ""
+msgstr "Usar o visor de PDF incluído (require PPAPI)"
 
 #: lib/preferences/preferences.ui:1025
 msgctxt "Preferences|"
@@ -4204,12 +4186,12 @@ msgstr "Activar a obtención previa de DNS"
 #: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Enable screen capture"
-msgstr ""
+msgstr "Activar a captura de pantalla"
 
 #: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr ""
+msgstr "Usar aceleración por hardware (require reiniciar)"
 
 #: lib/preferences/preferences.ui:1119
 msgctxt "Preferences|"
@@ -4487,7 +4469,7 @@ msgstr "<b>%d</b> substituirase polo URL para descargar"
 #: lib/preferences/preferences.ui:1931
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
-msgstr "<b>Opcións de completamento automático</b>"
+msgstr "<b>Opcións de completar automaticamente</b>"
 
 #: lib/preferences/preferences.ui:1938
 msgctxt "Preferences|"
@@ -4552,7 +4534,7 @@ msgstr "Permisos de HTML5"
 #: lib/preferences/preferences.ui:2136
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
-msgstr "Enviar cabeceiras anti-seguimento aos servidores"
+msgstr "Enviar a cabeceira de non seguimento aos servidores"
 
 #: lib/preferences/preferences.ui:2162
 msgctxt "Preferences|"
@@ -5336,12 +5318,12 @@ msgstr "Agochar o punteiro"
 #: lib/tools/html5permissions/html5permissionsdialog.ui:117
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display Capture"
-msgstr ""
+msgstr "Captura de pantalla"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:122
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display and Audio Capture"
-msgstr ""
+msgstr "Captura de pantalla e son"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:41
 msgctxt "HTML5PermissionsNotification|"
@@ -5385,20 +5367,16 @@ msgid "Allow %1 to hide your pointer?"
 msgstr "Permitir a %1 ocultar o cursor?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:69
-#, fuzzy, qt-format
-#| msgctxt "HTML5PermissionsNotification|"
-#| msgid "Allow %1 to locate your position?"
+#, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen?"
-msgstr "Permitir a %1 atopar a súa xeolocalización?"
+msgstr "Permitir a %1 capturar a pantalla?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:73
-#, fuzzy, qt-format
-#| msgctxt "HTML5PermissionsNotification|"
-#| msgid "Allow %1 to use your microphone and camera?"
+#, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen and audio?"
-msgstr "Permitir a %1 usar o micrófono e a cámara?"
+msgstr "Permitir a %1 capturar a pantalla e o son?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:43
 msgctxt "HTML5PermissionsNotification|"
@@ -5766,7 +5744,7 @@ msgstr "&Deter"
 #, qt-format
 msgctxt "SearchToolBar|"
 msgid "%1 of %2"
-msgstr ""
+msgstr "%1 de %2"
 
 #: lib/webtab/searchtoolbar.ui:48
 msgctxt "SearchToolbar|"
