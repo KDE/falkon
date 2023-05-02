@@ -172,7 +172,7 @@ void DownloadItem::downloadProgress(qint64 received, qint64 total)
     m_total = total;
 
     updateDownloadInfo(m_currSpeed, m_received, m_total);
-    progressChanged(m_currSpeed, m_received, m_total);
+    emit progressChanged(m_currSpeed, m_received, m_total);
 }
 
 int DownloadItem::progress()
