@@ -61,7 +61,7 @@ void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settin
     m_jobTracker = new KUiServerJobTracker(this);
     
     auto manager = mApp->downloadManager();
-    connect(manager, &DownloadManager::downloadAdded, [=](DownloadItem *item) {
+    connect(manager, &DownloadManager::downloadAdded, this, [=](DownloadItem *item) {
         auto job = new DownloadKJob(item->url(), item->path(), item->fileName(), this);
         m_jobTracker->registerJob(job);
         job->start();
