@@ -37,9 +37,6 @@ class QWinTaskbarButton;
 
 class DownloadItem;
 class DownloadManagerModel;
-#ifdef PLASMA_DOWNLOADS
-class DownloadKJob;
-#endif
 class WebPage;
 
 class FALKON_EXPORT DownloadManager : public QWidget

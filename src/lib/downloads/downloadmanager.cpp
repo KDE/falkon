@@ -22,9 +22,6 @@
 #include "downloadoptionsdialog.h"
 #include "downloaditem.h"
 #include "downloadmanagermodel.h"
-#ifdef PLASMA_DOWNLOADS
-#include "downloadkjob.h"
-#endif
 #include "networkmanager.h"
 #include "desktopnotificationsfactory.h"
 #include "qztools.h"
