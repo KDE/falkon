@@ -295,7 +295,7 @@ Preferences::Preferences(BrowserWindow* window)
 
     const auto levels = WebView::zoomLevels();
     for (int level : levels) {
-        ui->defaultZoomLevel->addItem(QString("%1%").arg(level));
+        ui->defaultZoomLevel->addItem(tr("%1%").arg(QString::number(level)));
     }
     ui->defaultZoomLevel->setCurrentIndex(settings.value("DefaultZoomLevel", WebView::zoomLevels().indexOf(100)).toInt());
     ui->closeAppWithCtrlQ->setChecked(settings.value("closeAppWithCtrlQ", true).toBool());
