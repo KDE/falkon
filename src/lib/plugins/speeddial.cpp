@@ -64,7 +64,9 @@ void SpeedDial::loadSettings()
 
     if (allPages.isEmpty()) {
         allPages = "url:\"https://www.falkon.org\"|title:\"Falkon\";"
-                   "url:\"https://www.kde.org\"|title:\"KDE Community\";";
+                   "url:\"https://store.falkon.org\"|title:\"Falkon Store\";"
+                   "url:\"https://www.kde.org\"|title:\"KDE Planet\";"
+                   "url:\"https://planet.kde.org\"|title:\"KDE Community\";";
     }
     changed(allPages);
 
