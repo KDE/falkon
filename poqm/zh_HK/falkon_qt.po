@@ -1568,81 +1568,81 @@ msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "錯誤 - %1"
 
-#: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:275
+#: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:276
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "已取消 - %1"
 
-#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:319
+#: lib/downloads/downloaditem.cpp:185 lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "已取消"
 
-#: lib/downloads/downloaditem.cpp:190
+#: lib/downloads/downloaditem.cpp:191
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "幾秒"
 
-#: lib/downloads/downloaditem.cpp:195
+#: lib/downloads/downloaditem.cpp:196
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
 msgstr[0] "%n秒"
 
-#: lib/downloads/downloaditem.cpp:200
+#: lib/downloads/downloaditem.cpp:201
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
 msgstr[0] "%n分鐘"
 
-#: lib/downloads/downloaditem.cpp:205
+#: lib/downloads/downloaditem.cpp:206
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
 msgstr[0] "%n小時"
 
-#: lib/downloads/downloaditem.cpp:212
+#: lib/downloads/downloaditem.cpp:213
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "未知速度"
 
-#: lib/downloads/downloaditem.cpp:217
+#: lib/downloads/downloaditem.cpp:218
 msgctxt "DownloadItem|"
 msgid "kB/s"
 msgstr "kB/s"
 
-#: lib/downloads/downloaditem.cpp:222
+#: lib/downloads/downloaditem.cpp:223
 msgctxt "DownloadItem|"
 msgid "MB/s"
 msgstr "MB/s"
 
-#: lib/downloads/downloaditem.cpp:226
+#: lib/downloads/downloaditem.cpp:227
 msgctxt "DownloadItem|"
 msgid "GB/s"
 msgstr "GB/s"
 
-#: lib/downloads/downloaditem.cpp:254
+#: lib/downloads/downloaditem.cpp:255
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "未知大小"
 
-#: lib/downloads/downloaditem.cpp:255
+#: lib/downloads/downloaditem.cpp:256
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - 未知大小（目前速度%3）"
 
-#: lib/downloads/downloaditem.cpp:258
+#: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "剩餘%1 - 已下載%3中的%2（目前速度%4）"
 
-#: lib/downloads/downloaditem.cpp:290
+#: lib/downloads/downloaditem.cpp:291
 #, fuzzy, qt-format
 #| msgctxt "DownloadItem|"
 #| msgid "Cancelled - %1"
@@ -1650,27 +1650,27 @@ msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "已取消 - %1"
 
-#: lib/downloads/downloaditem.cpp:303
+#: lib/downloads/downloaditem.cpp:304
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "開啟檔案"
 
-#: lib/downloads/downloaditem.cpp:305
+#: lib/downloads/downloaditem.cpp:306
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "開啟資料夾"
 
-#: lib/downloads/downloaditem.cpp:307
+#: lib/downloads/downloaditem.cpp:308
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "複製下載連結"
 
-#: lib/downloads/downloaditem.cpp:309
+#: lib/downloads/downloaditem.cpp:310
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "取消下載"
 
-#: lib/downloads/downloaditem.cpp:312
+#: lib/downloads/downloaditem.cpp:313
 #, fuzzy
 #| msgctxt "DownloadItem|"
 #| msgid "Cancel downloading"
@@ -1678,7 +1678,7 @@ msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "取消下載"
 
-#: lib/downloads/downloaditem.cpp:314
+#: lib/downloads/downloaditem.cpp:315
 #, fuzzy
 #| msgctxt "DownloadItem|"
 #| msgid "Cancel downloading"
@@ -1686,22 +1686,22 @@ msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "取消下載"
 
-#: lib/downloads/downloaditem.cpp:317
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "從清單中移除"
 
-#: lib/downloads/downloaditem.cpp:319
+#: lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "錯誤"
 
-#: lib/downloads/downloaditem.cpp:345
+#: lib/downloads/downloaditem.cpp:346
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "未找到"
 
-#: lib/downloads/downloaditem.cpp:345
+#: lib/downloads/downloaditem.cpp:346
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -1713,50 +1713,50 @@ msgstr ""
 "%1\n"
 "檔案。"
 
-#: lib/downloads/downloadmanager.cpp:188 lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:423
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "下載管理員"
 
-#: lib/downloads/downloadmanager.cpp:226
+#: lib/downloads/downloadmanager.cpp:230
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%2個檔案的%1%（目前速度%3）剩餘%4"
 
-#: lib/downloads/downloadmanager.cpp:230
+#: lib/downloads/downloadmanager.cpp:234
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1% - 下載管理員"
 
-#: lib/downloads/downloadmanager.cpp:300
+#: lib/downloads/downloadmanager.cpp:304
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "另存新檔…"
 
-#: lib/downloads/downloadmanager.cpp:310
+#: lib/downloads/downloadmanager.cpp:314
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:311
+#: lib/downloads/downloadmanager.cpp:315
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:312
+#: lib/downloads/downloadmanager.cpp:316
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:320
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:410
+#: lib/downloads/downloadmanager.cpp:416
 #, fuzzy
 #| msgctxt "DownloadOptionsDialog|"
 #| msgid "Download link copied."
@@ -1764,17 +1764,17 @@ msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "已複製下載連結。"
 
-#: lib/downloads/downloadmanager.cpp:410
+#: lib/downloads/downloadmanager.cpp:416
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "成功下載全部檔案。"
 
-#: lib/downloads/downloadmanager.cpp:464
+#: lib/downloads/downloadmanager.cpp:463
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "警告"
 
-#: lib/downloads/downloadmanager.cpp:465
+#: lib/downloads/downloadmanager.cpp:464
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -3894,6 +3894,12 @@ msgstr "預設"
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "設定為預設"
+
+#: lib/preferences/preferences.cpp:298
+#, qt-format
+msgctxt "Preferences|"
+msgid "%1%"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:551
 msgctxt "Preferences|"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-05 00:16+0000\n"
-"PO-Revision-Date: 2023-05-03 12:28+0300\n"
+"PO-Revision-Date: 2023-05-05 12:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -97,7 +97,7 @@ msgstr "Kural Ekle"
 #: lib/adblock/adblockdialog.cpp:50
 msgctxt "AdBlockDialog|"
 msgid "Remove Rule"
-msgstr "Kural Çıkar"
+msgstr "Kuralı Kaldır"
 
 #: lib/adblock/adblockdialog.cpp:52
 msgctxt "AdBlockDialog|"
@@ -107,7 +107,7 @@ msgstr "Abonelik Ekle"
 #: lib/adblock/adblockdialog.cpp:53
 msgctxt "AdBlockDialog|"
 msgid "Remove Subscription"
-msgstr "Abonelik Kaldır"
+msgstr "Aboneliği Kaldır"
 
 #: lib/adblock/adblockdialog.cpp:54
 msgctxt "AdBlockDialog|"
@@ -224,7 +224,7 @@ msgstr "Kural Ekle"
 #: lib/adblock/adblocktreewidget.cpp:82
 msgctxt "AdBlockTreeWidget|"
 msgid "Remove Rule"
-msgstr "Kural Kaldır"
+msgstr "Kuralı Kaldır"
 
 #: lib/adblock/adblocktreewidget.cpp:141
 msgctxt "AdBlockTreeWidget|"
@@ -298,7 +298,7 @@ msgstr "Yer İmleri Çu&buğu"
 #: lib/app/browserwindow.cpp:1062
 msgctxt "BrowserWindow|"
 msgid "&Tabs on Top"
-msgstr "Üs&tteki Sekmeler"
+msgstr "&Sekmeler Üstte"
 
 #: lib/app/browserwindow.cpp:1117
 msgctxt "BrowserWindow|"
@@ -313,7 +313,7 @@ msgstr "HTML dosyaları"
 #: lib/app/browserwindow.cpp:1159
 msgctxt "BrowserWindow|"
 msgid "Image files"
-msgstr "Resim dosyaları"
+msgstr "Görsel dosyaları"
 
 #: lib/app/browserwindow.cpp:1159
 msgctxt "BrowserWindow|"
@@ -509,7 +509,7 @@ msgstr "&Yapıştır"
 #: lib/app/mainmenu.cpp:529
 msgctxt "MainMenu|"
 msgid "Select &All"
-msgstr "T&ümünü Seç"
+msgstr "&Tümünü Seç"
 
 #: lib/app/mainmenu.cpp:531
 msgctxt "MainMenu|"
@@ -544,7 +544,7 @@ msgstr "Durum Çub&uğu"
 #: lib/app/mainmenu.cpp:554
 msgctxt "MainMenu|"
 msgid "&Stop"
-msgstr "Du&r"
+msgstr "&Durdur"
 
 #: lib/app/mainmenu.cpp:555
 msgctxt "MainMenu|"
@@ -629,7 +629,7 @@ msgstr "&Qt Hakkında"
 #: lib/app/mainmenu.cpp:597
 msgctxt "MainMenu|"
 msgid "Information about application"
-msgstr "Uygulama hakkında bilgi"
+msgstr "Uygulama Bilgisi"
 
 #: lib/app/mainmenu.cpp:598
 msgctxt "MainMenu|"
@@ -639,7 +639,7 @@ msgstr "Yapılandırma Bilgisi"
 #: lib/app/mainmenu.cpp:599
 msgctxt "MainMenu|"
 msgid "Report &Issue"
-msgstr "Hata Rapor&la"
+msgstr "Hata &Bildir"
 
 #: lib/app/mainmenu.cpp:612
 msgctxt "MainMenu|"
@@ -849,7 +849,7 @@ msgstr "Yer imleri menüye kaydedildi"
 #: lib/bookmarks/bookmarks.cpp:215
 msgctxt "Bookmarks|"
 msgid "Unsorted Bookmarks"
-msgstr "Sıralanmamış Yerimleri"
+msgstr "Sıralanmamış Yer İmleri"
 
 #: lib/bookmarks/bookmarks.cpp:216
 msgctxt "Bookmarks|"
@@ -1140,7 +1140,7 @@ msgstr "Anahtar Sözcük:"
 #: lib/bookmarks/bookmarksmanager.ui:62
 msgctxt "BookmarksManager|"
 msgid "Description"
-msgstr "Tanımlama"
+msgstr "Açıklama"
 
 #: lib/bookmarks/bookmarksmenu.cpp:166
 msgctxt "BookmarksMenu|"
@@ -1160,7 +1160,7 @@ msgstr "Tüm S&ayfaları Yer İmlerine Ekle"
 #: lib/bookmarks/bookmarksmenu.cpp:170
 msgctxt "BookmarksMenu|"
 msgid "Organize &Bookmarks"
-msgstr "Yer İmlerini &Organize Et"
+msgstr "Yer İmlerini &Düzenle"
 
 #: lib/bookmarks/bookmarksmodel.cpp:147
 msgctxt "BookmarksModel|"
@@ -1340,7 +1340,7 @@ msgstr "<çerez seçili değil>"
 #: lib/cookies/cookiemanager.ui:245
 msgctxt "CookieManager|"
 msgid "Remove cookies"
-msgstr "Çerezleri sil"
+msgstr "Çerezleri Kaldır"
 
 #: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
 #: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
@@ -1367,7 +1367,7 @@ msgstr "Oturum çerezi"
 #: lib/cookies/cookiemanager.cpp:181
 msgctxt "CookieManager|"
 msgid "Remove cookie"
-msgstr "Çerezi sil"
+msgstr "Çerezi Kaldır"
 
 #: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
 #: lib/cookies/cookiemanager.ui:126
@@ -1465,7 +1465,7 @@ msgstr "Dolma Süresi:"
 #: lib/cookies/cookiemanager.ui:238
 msgctxt "CookieManager|"
 msgid "Remove all cookies"
-msgstr "Tüm çerezleri sil"
+msgstr "Tüm Çerezleri Kaldır"
 
 #: lib/cookies/cookiemanager.ui:269
 msgctxt "CookieManager|"
@@ -1475,7 +1475,7 @@ msgstr "Çerez Süzme"
 #: lib/cookies/cookiemanager.ui:275
 msgctxt "CookieManager|"
 msgid "<b>Cookie whitelist</b>"
-msgstr "<b>Çerez beyaz listesi</b>"
+msgstr "<b>Çerez Beyaz Listesi</b>"
 
 #: lib/cookies/cookiemanager.ui:282
 msgctxt "CookieManager|"
@@ -1494,12 +1494,12 @@ msgstr "Ekle"
 #: lib/cookies/cookiemanager.ui:314 lib/cookies/cookiemanager.ui:368
 msgctxt "CookieManager|"
 msgid "Remove"
-msgstr "Çıkar"
+msgstr "Kaldır"
 
 #: lib/cookies/cookiemanager.ui:326
 msgctxt "CookieManager|"
 msgid "<b>Cookie blacklist</b>"
-msgstr "<b>Çerez kara listesi</b>"
+msgstr "<b>Çerez Kara Listesi</b>"
 
 #: lib/cookies/cookiemanager.ui:333
 msgctxt "CookieManager|"
@@ -1553,23 +1553,23 @@ msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "Hata - %1"
 
-#: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:275
+#: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:276
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "İptal edildi - %1"
 
-#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:319
+#: lib/downloads/downloaditem.cpp:185 lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "İptal Edildi"
 
-#: lib/downloads/downloaditem.cpp:190
+#: lib/downloads/downloaditem.cpp:191
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "birkaç saniye"
 
-#: lib/downloads/downloaditem.cpp:195
+#: lib/downloads/downloaditem.cpp:196
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1577,7 +1577,7 @@ msgid_plural "%n seconds"
 msgstr[0] "%n saniye"
 msgstr[1] "%n saniye"
 
-#: lib/downloads/downloaditem.cpp:200
+#: lib/downloads/downloaditem.cpp:201
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1585,7 +1585,7 @@ msgid_plural "%n minutes"
 msgstr[0] "%n dakika"
 msgstr[1] "%n dakika"
 
-#: lib/downloads/downloaditem.cpp:205
+#: lib/downloads/downloaditem.cpp:206
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1593,95 +1593,95 @@ msgid_plural "%n hours"
 msgstr[0] "%n saat"
 msgstr[1] "%n saat"
 
-#: lib/downloads/downloaditem.cpp:212
+#: lib/downloads/downloaditem.cpp:213
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "Bilinmeyen hız"
 
-#: lib/downloads/downloaditem.cpp:217
+#: lib/downloads/downloaditem.cpp:218
 msgctxt "DownloadItem|"
 msgid "kB/s"
 msgstr "kB/sn"
 
-#: lib/downloads/downloaditem.cpp:222
+#: lib/downloads/downloaditem.cpp:223
 msgctxt "DownloadItem|"
 msgid "MB/s"
 msgstr "MB/sn"
 
-#: lib/downloads/downloaditem.cpp:226
+#: lib/downloads/downloaditem.cpp:227
 msgctxt "DownloadItem|"
 msgid "GB/s"
 msgstr "GB/sn"
 
-#: lib/downloads/downloaditem.cpp:254
+#: lib/downloads/downloaditem.cpp:255
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "Bilinmeyen boyut"
 
-#: lib/downloads/downloaditem.cpp:255
+#: lib/downloads/downloaditem.cpp:256
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - bilinmeyen boyut (%3)"
 
-#: lib/downloads/downloaditem.cpp:258
+#: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
-msgstr "Kalan Süre %1 - %2/%3 (%4)"
+msgstr "Kalan süre %1 - %2/%3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:290
+#: lib/downloads/downloaditem.cpp:291
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "Duraklatıldı - %1"
 
-#: lib/downloads/downloaditem.cpp:303
+#: lib/downloads/downloaditem.cpp:304
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "Dosyayı Aç"
 
-#: lib/downloads/downloaditem.cpp:305
+#: lib/downloads/downloaditem.cpp:306
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "Klasörü Aç"
 
-#: lib/downloads/downloaditem.cpp:307
+#: lib/downloads/downloaditem.cpp:308
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "İndirme Bağlantısını Kopyala"
 
-#: lib/downloads/downloaditem.cpp:309
+#: lib/downloads/downloaditem.cpp:310
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "İndirmeyi iptal et"
 
-#: lib/downloads/downloaditem.cpp:312
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "İndirmeyi sürdür"
 
-#: lib/downloads/downloaditem.cpp:314
+#: lib/downloads/downloaditem.cpp:315
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "İndirmeyi duraklat"
 
-#: lib/downloads/downloaditem.cpp:317
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Remove From List"
-msgstr "Listeden Sil"
+msgstr "Listeden Kaldır"
 
-#: lib/downloads/downloaditem.cpp:319
+#: lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "Hata"
 
-#: lib/downloads/downloaditem.cpp:345
+#: lib/downloads/downloaditem.cpp:346
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "Bulunamadı"
 
-#: lib/downloads/downloaditem.cpp:345
+#: lib/downloads/downloaditem.cpp:346
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -1693,65 +1693,65 @@ msgstr ""
 " %1 \n"
 " dosyası bulunamadı!"
 
-#: lib/downloads/downloadmanager.cpp:188 lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:423
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "İndirme Yöneticisi"
 
-#: lib/downloads/downloadmanager.cpp:226
+#: lib/downloads/downloadmanager.cpp:230
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%​%1/%​%2 dosya (%3) %4 kalan"
 
-#: lib/downloads/downloadmanager.cpp:230
+#: lib/downloads/downloadmanager.cpp:234
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%​%1 -İndirme Yöneticisi"
 
-#: lib/downloads/downloadmanager.cpp:300
+#: lib/downloads/downloadmanager.cpp:304
 msgctxt "DownloadManager|"
 msgid "Save file as..."
-msgstr "Dosyayı farklı kaydet..."
+msgstr "Dosyayı Farklı Kaydet..."
 
-#: lib/downloads/downloadmanager.cpp:310
+#: lib/downloads/downloadmanager.cpp:314
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr "MIME HTML Arşivi (*.mhtml)"
 
-#: lib/downloads/downloadmanager.cpp:311
+#: lib/downloads/downloadmanager.cpp:315
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr "HTML Sayfası, tek (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:312
+#: lib/downloads/downloadmanager.cpp:316
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr "HTML Sayfası, tamamı (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:320
 msgctxt "DownloadManager|"
 msgid "Save page as..."
-msgstr "Sayfayı farklı kaydet..."
+msgstr "Sayfayı Farklı Kaydet..."
 
-#: lib/downloads/downloadmanager.cpp:410
+#: lib/downloads/downloadmanager.cpp:416
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "Falkon: İndirme Tamamlandı"
 
-#: lib/downloads/downloadmanager.cpp:410
+#: lib/downloads/downloadmanager.cpp:416
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "Tüm dosyalar başarıyla indirildi."
 
-#: lib/downloads/downloadmanager.cpp:464
+#: lib/downloads/downloadmanager.cpp:463
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "Uyarı"
 
-#: lib/downloads/downloadmanager.cpp:465
+#: lib/downloads/downloadmanager.cpp:464
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -1979,7 +1979,7 @@ msgstr "&İleri"
 #: lib/history/historymenu.cpp:244
 msgctxt "HistoryMenu|"
 msgid "&Home"
-msgstr "&Anasayfa"
+msgstr "&Ana Sayfa"
 
 #: lib/history/historymenu.cpp:247
 msgctxt "HistoryMenu|"
@@ -1999,7 +1999,7 @@ msgstr "Kapatılmış Sekmeler"
 #: lib/history/historymenu.cpp:261
 msgctxt "HistoryMenu|"
 msgid "Closed Windows"
-msgstr "Kapatılan Pencereler"
+msgstr "Kapatılmış Pencereler"
 
 #: lib/history/historymodel.cpp:56
 msgctxt "HistoryModel|"
@@ -2131,7 +2131,7 @@ msgstr "Yenile düğmesi"
 #: lib/navigation/navigationbar.cpp:192
 msgctxt "NavigationBar|"
 msgid "Home button"
-msgstr "Anasayfa düğmesi"
+msgstr "Ana sayfa düğmesi"
 
 #: lib/navigation/navigationbar.cpp:193
 msgctxt "NavigationBar|"
@@ -2196,7 +2196,7 @@ msgstr "Geçerli ögeler:"
 #: lib/navigation/reloadstopbutton.cpp:57
 msgctxt "ReloadStopButton|"
 msgid "Stop"
-msgstr "Dur"
+msgstr "Durdur"
 
 #: lib/navigation/reloadstopbutton.cpp:61
 msgctxt "ReloadStopButton|"
@@ -2357,7 +2357,7 @@ msgstr "Düzenle"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:214
 msgctxt "FalkonSchemeReply|"
 msgid "Remove"
-msgstr "Çıkar"
+msgstr "Kaldır"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:215
 msgctxt "FalkonSchemeReply|"
@@ -2452,7 +2452,7 @@ msgstr "Özel duvar kağıdı kullan"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:233
 msgctxt "FalkonSchemeReply|"
 msgid "Click to select image"
-msgstr "Resim seçmek için tıklayın"
+msgstr "Görsel seçmek için tıkla"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:234
 msgctxt "FalkonSchemeReply|"
@@ -2669,7 +2669,7 @@ msgstr "Kullanılabilir genişletme yok."
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
 msgid "SSL Certificate Error!"
-msgstr "SSL sertifika hatası!"
+msgstr "SSL Sertifika Hatası!"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -2730,7 +2730,7 @@ msgstr "Arama Motoru Ekle"
 #: lib/opensearch/searchenginesdialog.cpp:89
 msgctxt "SearchEnginesDialog|"
 msgid "Remove Engine"
-msgstr "Arama Motoru Sil"
+msgstr "Arama Motoru Kaldır"
 
 #: lib/opensearch/searchenginesdialog.cpp:90
 #, qt-format
@@ -2739,8 +2739,8 @@ msgid ""
 "You can't remove the default search engine.<br>Set a different engine as "
 "default before removing %1."
 msgstr ""
-"Öntanımlı arama motorunu kaldıramazsınız. <br>Kaldırma işleminden önce "
-"farklı bir arama motorunu öntanımlı yapın.%1."
+"Öntanımlı arama motorunu kaldıramazsınız.<br>%1 motorunu maldırmadan önce "
+"farklı bir arama motorunu öntanımlı yapın."
 
 #: lib/opensearch/searchenginesdialog.cpp:107
 msgctxt "SearchEnginesDialog|"
@@ -2979,7 +2979,7 @@ msgstr "Veritabanı"
 #: lib/other/iconchooser.cpp:41
 msgctxt "IconChooser|"
 msgid "Image files"
-msgstr "Resim dosyaları"
+msgstr "Gösel dosyaları"
 
 #: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
 msgctxt "IconChooser|"
@@ -2994,7 +2994,7 @@ msgstr "Dosyadan"
 #: lib/other/iconchooser.ui:29
 msgctxt "IconChooser|"
 msgid "Image (.png, .jpg, .jpeg, .gif)"
-msgstr "Resim (.png, .jpg, jpeg, gif)"
+msgstr "Görsel (.png, .jpg, jpeg, gif)"
 
 #: lib/other/iconchooser.ui:42
 msgctxt "IconChooser|"
@@ -3034,7 +3034,7 @@ msgstr "Site"
 #: lib/other/protocolhandlerdialog.ui:68
 msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
-msgstr "Çıkar"
+msgstr "Kaldır"
 
 #: lib/other/registerqappassociation.cpp:110
 msgctxt "RegisterQAppAssociation|"
@@ -3063,17 +3063,17 @@ msgstr "<b>Bağlantınız şifreli değil.</b>"
 #: lib/other/siteinfo.cpp:175
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
-msgstr "Resim Konumunu Kopyala"
+msgstr "Görsel Konumunu Kopyala"
 
 #: lib/other/siteinfo.cpp:176
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
-msgstr "Resim Adını Kopyala"
+msgstr "Görsel Adını Kopyala"
 
 #: lib/other/siteinfo.cpp:178
 msgctxt "SiteInfo|"
 msgid "Save Image to Disk"
-msgstr "Resmi Diske Kaydet"
+msgstr "Görseli Diske Kaydet"
 
 #: lib/other/siteinfo.cpp:190
 msgctxt "SiteInfo|"
@@ -3098,7 +3098,7 @@ msgstr "Bu önizleme kullanılamaz!"
 #: lib/other/siteinfo.cpp:240
 msgctxt "SiteInfo|"
 msgid "Save image..."
-msgstr "Resmi kaydet..."
+msgstr "Görseli Kaydet..."
 
 #: lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
@@ -3163,12 +3163,12 @@ msgstr "<b>Güvenlik Bilgisi</b>"
 #: lib/other/siteinfo.ui:241
 msgctxt "SiteInfo|"
 msgid "Image"
-msgstr "Resim"
+msgstr "Görsel"
 
 #: lib/other/siteinfo.ui:246
 msgctxt "SiteInfo|"
 msgid "Image address"
-msgstr "Resim adresi"
+msgstr "Görsel adresi"
 
 #: lib/other/siteinfo.ui:271
 msgctxt "SiteInfo|"
@@ -3296,7 +3296,7 @@ msgstr "Görünüm"
 #: lib/popupwindow/popupwindow.cpp:103
 msgctxt "PopupWindow|"
 msgid "&Stop"
-msgstr "&Dur"
+msgstr "&Durdur"
 
 #: lib/popupwindow/popupwindow.cpp:105
 msgctxt "PopupWindow|"
@@ -3348,7 +3348,7 @@ msgstr "Ekle..."
 #: lib/preferences/acceptlanguage.ui:32
 msgctxt "AcceptLanguage|"
 msgid "Remove"
-msgstr "Çıkar"
+msgstr "Kaldır"
 
 #: lib/preferences/acceptlanguage.ui:39
 msgctxt "AcceptLanguage|"
@@ -3487,12 +3487,12 @@ msgstr "Parolayı Düzenle"
 #: lib/preferences/autofillmanager.ui:25
 msgctxt "AutoFillManager|"
 msgid "Passwords are stored in:"
-msgstr "Parolalar şurada kaydedildi:"
+msgstr "Parolalar şurada depolanıyor:"
 
 #: lib/preferences/autofillmanager.ui:35
 msgctxt "AutoFillManager|"
 msgid "Change backend"
-msgstr "Arka ucu değiştir"
+msgstr "Arka Ucu Değiştir"
 
 #: lib/preferences/autofillmanager.ui:42
 msgctxt "AutoFillManager|"
@@ -3544,7 +3544,7 @@ msgstr "Tümünü Kaldır"
 #: lib/preferences/autofillmanager.ui:191
 msgctxt "AutoFillManager|"
 msgid "Exceptions"
-msgstr "Hariç Tutulanlar"
+msgstr "Dışarıda Tutulanlar"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -3589,7 +3589,7 @@ msgstr "Ayarlar"
 #: lib/preferences/pluginslist.ui:61
 msgctxt "PluginsList|"
 msgid "Remove"
-msgstr "Çıkar"
+msgstr "Kaldır"
 
 #: lib/preferences/pluginslist.ui:81
 msgctxt "PluginsList|"
@@ -3630,6 +3630,12 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Öntanımlı olarak ayarla"
 
+#: lib/preferences/preferences.cpp:298
+#, qt-format
+msgctxt "Preferences|"
+msgid "%1%"
+msgstr ""
+
 #: lib/preferences/preferences.cpp:551
 msgctxt "Preferences|"
 msgid "Choose executable location..."
@@ -3653,7 +3659,7 @@ msgstr "İndirme konumunu seçin..."
 #: lib/preferences/preferences.cpp:658
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
-msgstr "Stil konumunu seçin..."
+msgstr "Biçem sayfası konumunu seçin..."
 
 #: lib/preferences/preferences.cpp:669
 msgctxt "Preferences|"
@@ -3738,7 +3744,7 @@ msgstr "Sekmeler"
 #: lib/preferences/preferences.ui:75
 msgctxt "Preferences|"
 msgid "Browsing"
-msgstr "Gezinme"
+msgstr "Dolaşım"
 
 #: lib/preferences/preferences.ui:80
 msgctxt "Preferences|"
@@ -3788,7 +3794,7 @@ msgstr "Diğer"
 #: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
 msgctxt "Preferences|"
 msgid "Use current"
-msgstr "Geçerli olan kullan"
+msgstr "Geçerliyi Kullan"
 
 #: lib/preferences/preferences.ui:243
 msgctxt "Preferences|"
@@ -3803,7 +3809,7 @@ msgstr "Sil"
 #: lib/preferences/preferences.ui:285
 msgctxt "Preferences|"
 msgid "<b>Launching</b>"
-msgstr "<b>Başlatılıyor</b>"
+msgstr "<b>Başlatma</b>"
 
 #: lib/preferences/preferences.ui:295
 msgctxt "Preferences|"
@@ -3818,7 +3824,7 @@ msgstr "Boş sayfa aç"
 #: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
 msgctxt "Preferences|"
 msgid "Open homepage"
-msgstr "Anasayfayı aç"
+msgstr "Ana sayfayı aç"
 
 #: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
 msgctxt "Preferences|"
@@ -3838,7 +3844,7 @@ msgstr "Oturumu seçin"
 #: lib/preferences/preferences.ui:331
 msgctxt "Preferences|"
 msgid "Homepage: "
-msgstr "Anasayfa: "
+msgstr "Ana sayfa: "
 
 #: lib/preferences/preferences.ui:352
 msgctxt "Preferences|"
@@ -3888,7 +3894,7 @@ msgstr "Başlangıçta Falkon'un öntanımlı tarayıcı olup olmadığını den
 #: lib/preferences/preferences.ui:450
 msgctxt "Preferences|"
 msgid "Check Now"
-msgstr "Şimdi denetle"
+msgstr "Şimdi Denetle"
 
 #: lib/preferences/preferences.ui:480
 msgctxt "Preferences|"
@@ -3898,22 +3904,22 @@ msgstr "Arayüzler"
 #: lib/preferences/preferences.ui:502
 msgctxt "Preferences|"
 msgid "Advanced options"
-msgstr "Gelişmiş ayarlar"
+msgstr "Gelişmiş Ayarlar"
 
 #: lib/preferences/preferences.ui:510
 msgctxt "Preferences|"
 msgid "Show StatusBar on start"
-msgstr "Başlangıçta durum çubuğunu görüntüle"
+msgstr "Başlangıçta durum çubuğunu göster"
 
 #: lib/preferences/preferences.ui:517
 msgctxt "Preferences|"
 msgid "Show Bookmarks ToolBar on start"
-msgstr "Başlangıçta yer imleri çubuğunu görüntüle"
+msgstr "Başlangıçta yer imleri çubuğunu göster"
 
 #: lib/preferences/preferences.ui:524
 msgctxt "Preferences|"
 msgid "Show Navigation ToolBar on start"
-msgstr "Başlangıçta gezinme çubuğunu görüntüle"
+msgstr "Başlangıçta dolaşım araç çubuğunu göster"
 
 #: lib/preferences/preferences.ui:531
 msgctxt "Preferences|"
@@ -3928,7 +3934,7 @@ msgstr "<b>Tarayıcı Penceresi</b>"
 #: lib/preferences/preferences.ui:601
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
-msgstr "Sekme davranışı"
+msgstr "Sekme Davranışı"
 
 #: lib/preferences/preferences.ui:607
 msgctxt "Preferences|"
@@ -3973,7 +3979,7 @@ msgstr "Son sekme kapatılınca pencereyi kapatma"
 #: lib/preferences/preferences.ui:663
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
-msgstr "Çoklu sekmeler kapanırken sor"
+msgstr "Çoklu sekmeler kapatılırken sor"
 
 #: lib/preferences/preferences.ui:670
 msgctxt "Preferences|"
@@ -3983,7 +3989,7 @@ msgstr "Kapalı sekmeler düğmesini göster"
 #: lib/preferences/preferences.ui:679
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
-msgstr "Etkin olmayan sekmelerde kapat düğmesini görüntüle:"
+msgstr "Etkin olmayan sekmelerde kapat düğmesini göster:"
 
 #: lib/preferences/preferences.ui:687
 msgctxt "Preferences|"
@@ -4003,7 +4009,7 @@ msgstr "Asla"
 #: lib/preferences/preferences.ui:737
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
-msgstr "Adres çubuğu davranışı"
+msgstr "Adres Çubuğu Davranışı"
 
 #: lib/preferences/preferences.ui:745
 msgctxt "Preferences|"
@@ -4028,7 +4034,7 @@ msgstr "Yer İmleri"
 #: lib/preferences/preferences.ui:774
 msgctxt "Preferences|"
 msgid "Nothing"
-msgstr "Hiçbir şey"
+msgstr "Hiçbir Şey"
 
 #: lib/preferences/preferences.ui:800
 msgctxt "Preferences|"
@@ -4040,8 +4046,8 @@ msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
 msgstr ""
-"Sekmeyi değiştirmemek için \"Shift\" düğmesine bas fakat geçerli sekmede "
-"sayfayı aç"
+"Sekmeyi değiştirmemek için \"Üst Karakter\" düğmesine bas; ancak geçerli "
+"sekmede sayfayı aç"
 
 #: lib/preferences/preferences.ui:810
 msgctxt "Preferences|"
@@ -4265,7 +4271,7 @@ msgstr "HTML5 web içeriğini yerel kayıtlarını kapanışta sil"
 #: lib/preferences/preferences.ui:1341
 msgctxt "Preferences|"
 msgid "Delete now"
-msgstr "Şimdi sil"
+msgstr "Şimdi Sil"
 
 #: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
@@ -4280,7 +4286,7 @@ msgstr "Sistem vekil sunucu ayarı"
 #: lib/preferences/preferences.ui:1422
 msgctxt "Preferences|"
 msgid "Manual configuration"
-msgstr "El ile yapılandırma"
+msgstr "Elle yapılandırma"
 
 #: lib/preferences/preferences.ui:1432
 msgctxt "Preferences|"
@@ -4325,7 +4331,7 @@ msgstr "Standart"
 #: lib/preferences/preferences.ui:1543
 msgctxt "Preferences|"
 msgid "Fixed"
-msgstr "Sabit"
+msgstr "Eş aralıklı"
 
 #: lib/preferences/preferences.ui:1553
 msgctxt "Preferences|"
@@ -4355,7 +4361,7 @@ msgstr "<b>Yazıtipi Boyutları</b>"
 #: lib/preferences/preferences.ui:1641
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
-msgstr "Yazıtipi Boyutu Düzeltildi"
+msgstr "Eş Aralıklı Yazıtipi Boyutu"
 
 #: lib/preferences/preferences.ui:1648
 msgctxt "Preferences|"
@@ -4365,12 +4371,12 @@ msgstr "Öntanımlı Yazıtipi Boyutu"
 #: lib/preferences/preferences.ui:1675
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
-msgstr "En Düşük Yazıtipi Boyutu"
+msgstr "En Küçük Yazıtipi Boyutu"
 
 #: lib/preferences/preferences.ui:1682
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
-msgstr "En Düşük Tutarlı Yazıtipi Boyutu"
+msgstr "En Küçük Tutarlı Yazıtipi Boyutu"
 
 #: lib/preferences/preferences.ui:1715
 msgctxt "Preferences|"
@@ -4380,12 +4386,12 @@ msgstr "<b>Kısayollar</b>"
 #: lib/preferences/preferences.ui:1722
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
-msgstr "Alt+SekmeNo ile sekmeleri değiştir"
+msgstr "Seçenek+Sekme Numarası ile sekmelere geç"
 
 #: lib/preferences/preferences.ui:1729
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
-msgstr "Ctrl+HızlıErişimNo ile hızlı erişimleri yükle"
+msgstr "Kontrol+Hızlı Erişim Numarası ile hızlı erişimleri yükle"
 
 #: lib/preferences/preferences.ui:1736
 msgctxt "Preferences|"
@@ -4407,13 +4413,13 @@ msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
 "shortcut was intended."
 msgstr ""
-"Eğer seçili değilse uygulamadan yanlışlıkla Ctrl-W kısayolu ile çıkmayı "
+"Eğer seçili değilse uygulamadan yanlışlıkla Kontrol-W kısayolu ile çıkmayı "
 "önler."
 
 #: lib/preferences/preferences.ui:1749
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
-msgstr "Ctrl-Q ile uygulamayı kapat"
+msgstr "Kontrol-Q ile uygulamayı kapat"
 
 #: lib/preferences/preferences.ui:1773
 msgctxt "Preferences|"
@@ -4443,12 +4449,12 @@ msgstr "İndirmeler bitince İndirme Yöneticisini kapat"
 #: lib/preferences/preferences.ui:1851
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
-msgstr "<b>Harici indirme yöneticisi</b>"
+msgstr "<b>Dış indirme yöneticisi</b>"
 
 #: lib/preferences/preferences.ui:1858
 msgctxt "Preferences|"
 msgid "Use external download manager"
-msgstr "Harici indirme yöneticisi kullan"
+msgstr "Dış indirme yöneticisi kullan"
 
 #: lib/preferences/preferences.ui:1870
 msgctxt "Preferences|"
@@ -4498,7 +4504,7 @@ msgstr "<b>Diğer</b>"
 #: lib/preferences/preferences.ui:2033
 msgctxt "Preferences|"
 msgid "JavaScript options"
-msgstr "JavaScript seçenekleri"
+msgstr "JavaScript Seçenekleri"
 
 #: lib/preferences/preferences.ui:2043
 msgctxt "Preferences|"
@@ -4558,7 +4564,7 @@ msgstr "<b>Bildirimler</b>"
 #: lib/preferences/preferences.ui:2220
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
-msgstr "Yerel Sistem Bildirimlerini kullan (yalnızca Linux için)"
+msgstr "Yerel sistem bildirimlerini kullan (yalnızca Linux için)"
 
 #: lib/preferences/preferences.ui:2227
 msgctxt "Preferences|"
@@ -4571,13 +4577,13 @@ msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
 "the screen."
 msgstr ""
-"<b>Not: </b>Ekran Üstü bildirim kutusunu ekranda sürükleyerek konumunu "
+"<b>Not: </b>Ekran üzeri bildirim kutusunu ekranda sürükleyerek konumunu "
 "değiştirebilirsiniz."
 
 #: lib/preferences/preferences.ui:2276
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
-msgstr "Ekran Üstü Bildirimlerini Kullan"
+msgstr "Ekran üzeri bildirimleri kullan"
 
 #: lib/preferences/preferences.ui:2283
 msgctxt "Preferences|"
@@ -4590,8 +4596,8 @@ msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
 "userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 msgstr ""
-"Yazım Denetimi hakkında daha fazla bilgi için, bkz. <a href=\"https://"
-"userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
+"Yazım Denetimi hakkında daha fazla bilgi için <a href=\"https://userbase.kde."
+"org/Falkon#Spell_Check\">vikiye</a> bakın."
 
 #: lib/preferences/preferences.ui:2390
 msgctxt "Preferences|"
@@ -4606,7 +4612,7 @@ msgstr "Yazım Denetimini Etkinleştir"
 #: lib/preferences/preferences.ui:2404
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
-msgstr "<b>Sözlük yöneticileri</b>"
+msgstr "<b>Sözlük Dizinleri</b>"
 
 #: lib/preferences/preferences.ui:2455
 msgctxt "Preferences|"
@@ -4621,7 +4627,7 @@ msgstr "<b>Arama motorlarını yönet</b>"
 #: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
-msgstr "<b>Kullanıcı Stil Sayfası</b>"
+msgstr "<b>Kullanıcı Biçem Sayfası</b>"
 
 #: lib/preferences/preferences.ui:2505
 msgctxt "Preferences|"
@@ -4646,7 +4652,7 @@ msgstr "Arama Motorları Yöneticisi"
 #: lib/preferences/preferences.ui:2640
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
-msgstr "Stil Sayfası tüm web siteleriyle otomatik olarak yüklendi: "
+msgstr "Tüm web siteleriyle otomatik olarak yüklenen biçem sayfası: "
 
 #: lib/preferences/preferences.ui:2650
 msgctxt "Preferences|"
@@ -5033,7 +5039,7 @@ msgstr "Sağa tüm sekmeleri kapatmak istediğinize emin misiniz?"
 #: lib/tabwidget/tabcontextmenu.cpp:89
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the bottom?"
-msgstr "Alta tüm sekmeleri kapatmak istediğinize emin misiniz?"
+msgstr "Tüm sekmeleri alta kapatmak istediğinize emin misiniz?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:99
 msgctxt "TabContextMenu|"
@@ -5272,7 +5278,7 @@ msgstr "HTML5 İzinleri"
 #: lib/tools/html5permissions/html5permissionsdialog.ui:35
 msgctxt "HTML5PermissionsDialog|"
 msgid "Remove"
-msgstr "Sil"
+msgstr "Kaldır"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:64
 msgctxt "HTML5PermissionsDialog|"
@@ -5464,7 +5470,7 @@ msgstr "Bu protokol için seçimimi hatırla"
 #: lib/webengine/webpage.cpp:336
 msgctxt "WebPage|"
 msgid "External Protocol Request"
-msgstr "Harici Protokol Başvurusu"
+msgstr "Dış Protokol Başvurusu"
 
 #: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
@@ -5487,7 +5493,7 @@ msgstr ""
 #: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Reload page"
-msgstr "Sayfayı yeniden yükle"
+msgstr "Sayfayı Yeniden Yükle"
 
 #: lib/webengine/webpage.cpp:482
 msgctxt "WebPage|"
@@ -5558,62 +5564,62 @@ msgstr "Sayfayı Yer İmlerine Ekl&e"
 #: lib/webengine/webview.cpp:775
 msgctxt "WebView|"
 msgid "&Save page as..."
-msgstr "&Sayfayı farklı kaydet..."
+msgstr "&Sayfayı Farklı Kaydet..."
 
 #: lib/webengine/webview.cpp:776
 msgctxt "WebView|"
 msgid "&Copy page link"
-msgstr "Sayfa bağlantısını ko&pyala"
+msgstr "Sayfa Bağlantısını Ko&pyala"
 
 #: lib/webengine/webview.cpp:777
 msgctxt "WebView|"
 msgid "Send page link..."
-msgstr "Sayfa bağlantısını gönder..."
+msgstr "Sayfa Bağlantısını Gönder..."
 
 #: lib/webengine/webview.cpp:779
 msgctxt "WebView|"
 msgid "Select &all"
-msgstr "Tümün&ü seç"
+msgstr "&Tümünü Seç"
 
 #: lib/webengine/webview.cpp:785
 msgctxt "WebView|"
 msgid "Show so&urce code"
-msgstr "Sayfanın kaynak kod&unu görüntüle"
+msgstr "Sayfanın kaynak kod&unu göster"
 
 #: lib/webengine/webview.cpp:789
 msgctxt "WebView|"
 msgid "Show info ab&out site"
-msgstr "Sayfa hakkında bil&gileri görüntüle"
+msgstr "Sayfa hakkında bil&gileri göster"
 
 #: lib/webengine/webview.cpp:795
 msgctxt "WebView|"
 msgid "Open link in new &tab"
-msgstr "Bağlantıyı ye&ni sekmede aç"
+msgstr "Bağlantıyı Yeni &Sekmede Aç"
 
 #: lib/webengine/webview.cpp:800
 msgctxt "WebView|"
 msgid "Open link in new &window"
-msgstr "Bağlantıyı yeni &pencerede aç"
+msgstr "Bağlantıyı Yeni &Pencerede Aç"
 
 #: lib/webengine/webview.cpp:801
 msgctxt "WebView|"
 msgid "Open link in &private window"
-msgstr "Bağlantıyı gizli tarama &penceresinde aç"
+msgstr "Bağlantıyı &Gizli Tarama Penceresinde Aç"
 
 #: lib/webengine/webview.cpp:806
 msgctxt "WebView|"
 msgid "B&ookmark link"
-msgstr "Bağlantıyı &yer imlerine ekle"
+msgstr "Bağlantıyı &Yer İmlerine Ekle"
 
 #: lib/webengine/webview.cpp:808
 msgctxt "WebView|"
 msgid "&Save link as..."
-msgstr "Bağlantıyı &farklı kaydet..."
+msgstr "Bağlantıyı &Farklı Kaydet..."
 
 #: lib/webengine/webview.cpp:809
 msgctxt "WebView|"
 msgid "Send link..."
-msgstr "Bağlantıyı gönder..."
+msgstr "Bağlantıyı Gönder..."
 
 #: lib/webengine/webview.cpp:810
 msgctxt "WebView|"
@@ -5623,27 +5629,27 @@ msgstr "Bağlantı adresini ko&pyala"
 #: lib/webengine/webview.cpp:823
 msgctxt "WebView|"
 msgid "Show i&mage"
-msgstr "Res&mi göster"
+msgstr "&Görsel göster"
 
 #: lib/webengine/webview.cpp:829
 msgctxt "WebView|"
 msgid "Copy image"
-msgstr "Resmi Kopyala"
+msgstr "Görseli Kopyala"
 
 #: lib/webengine/webview.cpp:830
 msgctxt "WebView|"
 msgid "Copy image ad&dress"
-msgstr "Resim a&dresini kopyala"
+msgstr "Görsel A&dresini Kopyala"
 
 #: lib/webengine/webview.cpp:832
 msgctxt "WebView|"
 msgid "&Save image as..."
-msgstr "Re&smi farklı kaydet..."
+msgstr "&Görseli Farklı Kaydet..."
 
 #: lib/webengine/webview.cpp:833
 msgctxt "WebView|"
 msgid "Send image..."
-msgstr "Resmi gönder..."
+msgstr "Görseli Gönder..."
 
 #: lib/webengine/webview.cpp:852
 msgctxt "WebView|"
@@ -5744,7 +5750,7 @@ msgstr "Yenide&n Yükle"
 #: lib/webengine/webview.cpp:1011
 msgctxt "WebView|"
 msgid "S&top"
-msgstr "D&ur"
+msgstr "&Durdur"
 
 #: lib/webtab/searchtoolbar.cpp:150
 #, qt-format
