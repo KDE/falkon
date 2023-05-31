@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: ja_JP\n"
 "X-Qt-Contexts: true\n"
 "X-Accelerator-Marker: &\n"
@@ -346,9 +346,6 @@ msgid_plural ""
 "There are still %n open tabs and your session won't be stored.\n"
 "Are you sure you want to close this window?"
 msgstr[0] ""
-"%n 個のタブが開かれており、セッションは保存されません。 \n"
-"本当にこのウィンドウを閉じますか?"
-msgstr[1] ""
 "%n 個のタブが開かれており、セッションは保存されません。 \n"
 "本当にこのウィンドウを閉じますか?"
 
@@ -1620,7 +1617,6 @@ msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
 msgstr[0] "%n 秒"
-msgstr[1] "%n 秒"
 
 #: lib/downloads/downloaditem.cpp:201
 #, qt-format
@@ -1628,7 +1624,6 @@ msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
 msgstr[0] "%n 分"
-msgstr[1] "%n 分"
 
 #: lib/downloads/downloaditem.cpp:206
 #, qt-format
@@ -1636,7 +1631,6 @@ msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
 msgstr[0] "%n 時間"
-msgstr[1] "%n 時間"
 
 #: lib/downloads/downloaditem.cpp:213
 msgctxt "DownloadItem|"
