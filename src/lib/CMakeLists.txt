@@ -620,7 +620,10 @@ endif()
 
 if (UNIX AND NOT APPLE)
     if (NOT NO_X11)
-        target_link_libraries(FalkonPrivate XCB::XCB Qt::X11Extras)
+        target_link_libraries(FalkonPrivate XCB::XCB)
+        if (NOT (QT_MAJOR_VERSION STREQUAL "6"))
+            target_link_libraries(FalkonPrivate Qt::X11Extras)
+        endif()
     endif()
 
     set_target_properties(FalkonPrivate PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION "3")

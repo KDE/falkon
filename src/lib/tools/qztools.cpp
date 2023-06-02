@@ -49,7 +49,9 @@
 #include <QtGuiVersion>
 
 #ifdef QZ_WS_X11
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 #include <QX11Info>
+#endif
 #include <xcb/xcb.h>
 #endif
 
@@ -867,10 +869,28 @@ bool QzTools::startExternalProcess(const QString &executable, const QString &arg
     return success;
 }
 
+#ifdef QZ_WS_X11
+static xcb_connection_t *getXcbConnection()
+{
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    return QX11Info::connection();
+#else
+    const QNativeInterface::QX11Application *x11App = qApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (x11App == nullptr)
+        return 0;
+    return x11App->connection();
+#endif
+}
+#endif
+
 void QzTools::setWmClass(const QString &name, const QWidget* widget)
 {
 #ifdef QZ_WS_X11
     if (QGuiApplication::platformName() != QL1S("xcb"))
+        return;
+
+    xcb_connection_t *connection = getXcbConnection();
+    if (connection == 0)
         return;
 
     const QByteArray nameData = name.toUtf8();
@@ -882,7 +902,7 @@ void QzTools::setWmClass(const QString &name, const QWidget* widget)
     qstrcpy(class_hint, nameData.constData());
     qstrcpy(class_hint + nameData.length() + 1, classData.constData());
 
-    xcb_change_property(QX11Info::connection(), XCB_PROP_MODE_REPLACE, widget->winId(),
+    xcb_change_property(connection, XCB_PROP_MODE_REPLACE, widget->winId(),
                         XCB_ATOM_WM_CLASS, XCB_ATOM_STRING, 8, class_len, class_hint);
 
     free(class_hint);
