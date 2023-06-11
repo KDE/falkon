@@ -267,7 +267,7 @@ Preferences::Preferences(BrowserWindow* window)
     bool searchFromAB = settings.value("SearchFromAddressBar", true).toBool();
     ui->searchFromAddressBar->setChecked(searchFromAB);
     ui->searchWithDefaultEngine->setEnabled(searchFromAB);
-    ui->searchWithDefaultEngine->setChecked(settings.value("SearchWithDefaultEngine", false).toBool());
+    ui->searchWithDefaultEngine->setChecked(settings.value("SearchWithDefaultEngine", true).toBool());
     ui->showABSearchSuggestions->setEnabled(searchFromAB);
     ui->showABSearchSuggestions->setChecked(settings.value("showSearchSuggestions", true).toBool());
     connect(ui->searchFromAddressBar, &QAbstractButton::toggled, this, &Preferences::searchFromAddressBarChanged);
