@@ -861,6 +861,13 @@
                 </widget>
                </item>
                <item>
+                <widget class="QCheckBox" name="completionPopupExpandToWindow">
+                 <property name="text">
+                  <string>Expand suggestion popup to window width</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <spacer name="verticalSpacer_16">
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>

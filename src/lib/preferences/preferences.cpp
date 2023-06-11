@@ -252,6 +252,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->showZoomLabel->setChecked(settings.value("showZoomLabel", true).toBool());
     ui->selectAllOnFocus->setChecked(settings.value("SelectAllTextOnDoubleClick", true).toBool());
     ui->selectAllOnClick->setChecked(settings.value("SelectAllTextOnClick", false).toBool());
+    ui->completionPopupExpandToWindow->setChecked(settings.value("CompletionPopupExpandToWindow", false).toBool());
     bool showPBinAB = settings.value("ShowLoadingProgress", false).toBool();
     ui->showLoadingInAddressBar->setChecked(showPBinAB);
     ui->adressProgressSettings->setEnabled(showPBinAB);
@@ -1032,6 +1033,7 @@ void Preferences::saveSettings()
     settings.setValue("showSwitchTab", ui->completionShowSwitchTab->isChecked());
     settings.setValue("SelectAllTextOnDoubleClick", ui->selectAllOnFocus->isChecked());
     settings.setValue("SelectAllTextOnClick", ui->selectAllOnClick->isChecked());
+    settings.setValue("CompletionPopupExpandToWindow", ui->completionPopupExpandToWindow->isChecked());
     settings.setValue("ShowLoadingProgress", ui->showLoadingInAddressBar->isChecked());
     settings.setValue("ProgressStyle", ui->progressStyleSelector->currentIndex());
     settings.setValue("UseCustomProgressColor", ui->checkBoxCustomProgressColor->isChecked());

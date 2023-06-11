@@ -400,6 +400,11 @@ void LocationCompleter::showPopup()
     QRect popupRect(m_locationBar->mapToGlobal(m_locationBar->pos()), m_locationBar->size());
     popupRect.setY(popupRect.bottom());
 
+    if (qzSettings->completionPopupExpandToWindow) {
+        popupRect.setX(m_window->mapToGlobal(QPoint(0,0)).x());
+        popupRect.setWidth(m_window->size().width());
+    }
+
     s_view->setGeometry(popupRect);
     s_view->setFocusProxy(m_locationBar);
     s_view->setCurrentIndex(QModelIndex());

@@ -40,6 +40,7 @@ public:
     bool alwaysShowGoIcon;
     bool useInlineCompletion;
     bool showZoomLabel;
+    bool completionPopupExpandToWindow;
 
     // SearchEngines
     bool searchOnEngineChange;

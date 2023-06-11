@@ -35,6 +35,7 @@ void QzSettings::loadSettings()
     alwaysShowGoIcon = settings.value("alwaysShowGoIcon", false).toBool();
     useInlineCompletion = settings.value("useInlineCompletion", true).toBool();
     showZoomLabel = settings.value("showZoomLabel", true).toBool();
+    completionPopupExpandToWindow = settings.value("CompletionPopupExpandToWindow", false).toBool();
     settings.endGroup();
 
     settings.beginGroup("SearchEngines");
