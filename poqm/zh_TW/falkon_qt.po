@@ -3,13 +3,13 @@
 #
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Jeff Huang <s8321414@gmail.com>, 2018.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-12-30 18:09+0900\n"
+"PO-Revision-Date: 2023-06-15 04:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: zh_TW\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2620,12 +2620,9 @@ msgid "Qt version"
 msgstr "Qt 版本"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
-#, fuzzy
-#| msgctxt "AboutDialog|"
-#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "<b>QtWebEngine 版本 %1</b></p>"
+msgstr "QtWebEngine 版本"
 
 #
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
@@ -4226,7 +4223,7 @@ msgstr "啟用螢幕擷取"
 #: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr ""
+msgstr "使用硬體加速（需要重新啟動）"
 
 #: lib/preferences/preferences.ui:1119
 msgctxt "Preferences|"
