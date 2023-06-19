@@ -2215,56 +2215,56 @@ msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr "當搜尋引擎變更時進行搜尋"
 
-#: lib/network/networkmanager.cpp:84
+#: lib/network/networkmanager.cpp:86
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
 msgstr "SSL 憑證錯誤！"
 
-#: lib/network/networkmanager.cpp:85
+#: lib/network/networkmanager.cpp:87
 msgctxt "NetworkManager|"
 msgid ""
 "The page you are trying to access has the following errors in the SSL "
 "certificate:"
 msgstr "您試圖存取的頁面有下列 SSL 憑證錯誤："
 
-#: lib/network/networkmanager.cpp:86
+#: lib/network/networkmanager.cpp:88
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
 msgstr "您想讓這個憑證作為例外嗎？"
 
-#: lib/network/networkmanager.cpp:113
+#: lib/network/networkmanager.cpp:118
 msgctxt "NetworkManager|"
 msgid "Authorization required"
 msgstr "需要授權"
 
-#: lib/network/networkmanager.cpp:120 lib/network/networkmanager.cpp:206
+#: lib/network/networkmanager.cpp:125 lib/network/networkmanager.cpp:211
 msgctxt "NetworkManager|"
 msgid "Username: "
 msgstr "使用者名稱："
 
-#: lib/network/networkmanager.cpp:121 lib/network/networkmanager.cpp:207
+#: lib/network/networkmanager.cpp:126 lib/network/networkmanager.cpp:212
 msgctxt "NetworkManager|"
 msgid "Password: "
 msgstr "密碼："
 
-#: lib/network/networkmanager.cpp:127
+#: lib/network/networkmanager.cpp:132
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
 msgstr "為此頁面儲存使用者名稱與密碼"
 
-#: lib/network/networkmanager.cpp:135
+#: lib/network/networkmanager.cpp:140
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
 msgstr "%1 要求使用者名稱及密碼。該網站說：「%2」"
 
-#: lib/network/networkmanager.cpp:199
+#: lib/network/networkmanager.cpp:204
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
 msgstr "需要代理伺服器的授權"
 
-#: lib/network/networkmanager.cpp:219
+#: lib/network/networkmanager.cpp:224
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
@@ -2698,6 +2698,11 @@ msgstr "可攜版組建"
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "無可用擴充功能。"
+
+#: lib/network/sslerrordialog.cpp:31
+msgctxt "SslErrorDialog|"
+msgid "Only for this session"
+msgstr ""
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3578,6 +3583,56 @@ msgctxt "AutoFillManager|"
 msgid "Exceptions"
 msgstr "例外"
 
+#: lib/preferences/certificatemanager.cpp:61
+msgctxt "CertificateManager|"
+msgid "Host: "
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:65
+msgctxt "CertificateManager|"
+msgid "Add certificate exception"
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:74
+#, qt-format
+msgctxt "CertificateManager|"
+msgid "Host %1 already in the list"
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:83
+#, fuzzy
+#| msgctxt "Bookmarks|"
+#| msgid "Empty"
+msgctxt "CertificateManager|"
+msgid "Empty host"
+msgstr "空"
+
+#: lib/preferences/certificatemanager.ui:14
+msgctxt "CertificateManager|"
+msgid "Certificate exception manager"
+msgstr ""
+
+#: lib/preferences/certificatemanager.ui:22
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "CertificateManager|"
+msgid "Add"
+msgstr "新增"
+
+#: lib/preferences/certificatemanager.ui:29
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "CertificateManager|"
+msgid "Remove"
+msgstr "移除"
+
+#: lib/preferences/certificatemanager.ui:69
+msgctxt "CertificateManager|"
+msgid "Removing an entry requires a restart"
+msgstr ""
+
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
 msgid "JavaScript Options"
@@ -3651,88 +3706,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "確定移除「%1」？"
 
-#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:608
+#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:610
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "預設"
 
-#: lib/preferences/preferences.cpp:155
+#: lib/preferences/preferences.cpp:156
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "設定為預設"
 
-#: lib/preferences/preferences.cpp:298
+#: lib/preferences/preferences.cpp:299
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:551
+#: lib/preferences/preferences.cpp:553
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "選擇可執行檔位置…"
 
-#: lib/preferences/preferences.cpp:594
+#: lib/preferences/preferences.cpp:596
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD 通知"
 
-#: lib/preferences/preferences.cpp:595
+#: lib/preferences/preferences.cpp:597
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "在螢幕上拖曳它到您想要的位置。"
 
-#: lib/preferences/preferences.cpp:644
+#: lib/preferences/preferences.cpp:646
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "選擇下載位置…"
 
-#: lib/preferences/preferences.cpp:658
+#: lib/preferences/preferences.cpp:660
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "選擇樣式表位置…"
 
-#: lib/preferences/preferences.cpp:669
+#: lib/preferences/preferences.cpp:671
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "已刪除"
 
-#: lib/preferences/preferences.cpp:765
+#: lib/preferences/preferences.cpp:773
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "選擇快取路徑…"
 
-#: lib/preferences/preferences.cpp:796
+#: lib/preferences/preferences.cpp:804
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "新增個人設定"
 
-#: lib/preferences/preferences.cpp:796
+#: lib/preferences/preferences.cpp:804
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "輸入新的個人設定名稱："
 
-#: lib/preferences/preferences.cpp:806 lib/preferences/preferences.cpp:811
+#: lib/preferences/preferences.cpp:814 lib/preferences/preferences.cpp:819
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "錯誤！"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "此個人設定已存在！"
 
-#: lib/preferences/preferences.cpp:811
+#: lib/preferences/preferences.cpp:819
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "無法建立個人設定目錄！"
 
-#: lib/preferences/preferences.cpp:822
+#: lib/preferences/preferences.cpp:830
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "確認"
 
-#: lib/preferences/preferences.cpp:823
+#: lib/preferences/preferences.cpp:831
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3740,12 +3795,12 @@ msgid ""
 "cannot be undone!"
 msgstr "您確定要永久刪除「%1」設定檔嗎？這個動作無法還原！"
 
-#: lib/preferences/preferences.cpp:838 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:846 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "注意：您不能刪除正在運行的個人設定。"
 
-#: lib/preferences/preferences.cpp:1095
+#: lib/preferences/preferences.cpp:1103
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "選擇顏色"
@@ -4144,7 +4199,7 @@ msgstr "選擇顏色"
 
 #: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1265
 #: lib/preferences/preferences.ui:1799 lib/preferences/preferences.ui:1896
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2762
 msgctxt "Preferences|"
 msgid "..."
 msgstr "…"
@@ -4643,55 +4698,68 @@ msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "未找到語言"
 
-#: lib/preferences/preferences.ui:2473
-msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "<b>管理搜尋引擎</b>"
-
-#: lib/preferences/preferences.ui:2480
-msgctxt "Preferences|"
-msgid "<b>User Style Sheet</b>"
-msgstr "<b>使用者樣式表</b>"
-
-#: lib/preferences/preferences.ui:2505
-msgctxt "Preferences|"
-msgid "Languages"
-msgstr "語言"
-
-#: lib/preferences/preferences.ui:2527
-msgctxt "Preferences|"
-msgid "<b>Change browser identification</b>"
-msgstr "<b>更換瀏覽器識別名稱</b>"
-
-#: lib/preferences/preferences.ui:2552
-msgctxt "Preferences|"
-msgid "Protocol Handlers Manager"
-msgstr "通訊協定處理程序管理員"
-
-#: lib/preferences/preferences.ui:2592
-msgctxt "Preferences|"
-msgid "Search Engines Manager"
-msgstr "搜尋引擎管理員"
-
-#: lib/preferences/preferences.ui:2640
-msgctxt "Preferences|"
-msgid "Style Sheet automatically loaded with all websites: "
-msgstr "樣式表會自動在所有網頁中載入："
-
-#: lib/preferences/preferences.ui:2650
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>進入網站時偏好的語言</b>"
 
-#: lib/preferences/preferences.ui:2675
+#: lib/preferences/preferences.ui:2473
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>管理通訊協定處理程序</b>"
+
+#: lib/preferences/preferences.ui:2480
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "<b>Notifications</b>"
+msgctxt "Preferences|"
+msgid "<b>Certificate manager</b>"
+msgstr "<b>通知</b>"
+
+#: lib/preferences/preferences.ui:2505
+msgctxt "Preferences|"
+msgid "Certificate Exception Manager"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2545
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "使用者代理程式管理員"
 
-#: lib/preferences/preferences.ui:2697
+#: lib/preferences/preferences.ui:2598
 msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>管理通訊協定處理程序</b>"
+msgid "Protocol Handlers Manager"
+msgstr "通訊協定處理程序管理員"
+
+#: lib/preferences/preferences.ui:2620
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>管理搜尋引擎</b>"
+
+#: lib/preferences/preferences.ui:2627
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr "樣式表會自動在所有網頁中載入："
+
+#: lib/preferences/preferences.ui:2652
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "搜尋引擎管理員"
+
+#: lib/preferences/preferences.ui:2687
+msgctxt "Preferences|"
+msgid "<b>User Style Sheet</b>"
+msgstr "<b>使用者樣式表</b>"
+
+#: lib/preferences/preferences.ui:2712
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "語言"
+
+#: lib/preferences/preferences.ui:2734
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>更換瀏覽器識別名稱</b>"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"

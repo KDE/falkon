@@ -2785,12 +2785,12 @@ msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr ""
 
-#: lib/network/networkmanager.cpp:84
+#: lib/network/networkmanager.cpp:86
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
 msgstr "Eroare certificat SSL!"
 
-#: lib/network/networkmanager.cpp:85
+#: lib/network/networkmanager.cpp:87
 msgctxt "NetworkManager|"
 msgid ""
 "The page you are trying to access has the following errors in the SSL "
@@ -2799,12 +2799,12 @@ msgstr ""
 "Pagina pe care doriți să o accesați are următoarele erori in certificiatul "
 "SSL:"
 
-#: lib/network/networkmanager.cpp:86
+#: lib/network/networkmanager.cpp:88
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
 msgstr "Doriți să faceți o excepție pentru acest certificat?"
 
-#: lib/network/networkmanager.cpp:113
+#: lib/network/networkmanager.cpp:118
 #, fuzzy
 #| msgctxt "WebPage|"
 #| msgid "Proxy authentication required"
@@ -2812,17 +2812,17 @@ msgctxt "NetworkManager|"
 msgid "Authorization required"
 msgstr "Autentificare proxy necesară"
 
-#: lib/network/networkmanager.cpp:120 lib/network/networkmanager.cpp:206
+#: lib/network/networkmanager.cpp:125 lib/network/networkmanager.cpp:211
 msgctxt "NetworkManager|"
 msgid "Username: "
 msgstr "Nume utilizator: "
 
-#: lib/network/networkmanager.cpp:121 lib/network/networkmanager.cpp:207
+#: lib/network/networkmanager.cpp:126 lib/network/networkmanager.cpp:212
 msgctxt "NetworkManager|"
 msgid "Password: "
 msgstr "Parola: "
 
-#: lib/network/networkmanager.cpp:127
+#: lib/network/networkmanager.cpp:132
 #, fuzzy
 #| msgctxt "NetworkManager|"
 #| msgid "Save username and password on this site"
@@ -2830,7 +2830,7 @@ msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
 msgstr "Salvează nume utilizator si parola pe acest site"
 
-#: lib/network/networkmanager.cpp:135
+#: lib/network/networkmanager.cpp:140
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
@@ -2838,7 +2838,7 @@ msgid ""
 msgstr ""
 "Un nume de utilizator și o parolă sunt cerute de %1. Site-ul spune: \"%2\""
 
-#: lib/network/networkmanager.cpp:199
+#: lib/network/networkmanager.cpp:204
 #, fuzzy
 #| msgctxt "WebPage|"
 #| msgid "Proxy authentication required"
@@ -2846,7 +2846,7 @@ msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
 msgstr "Autentificare proxy necesară"
 
-#: lib/network/networkmanager.cpp:219
+#: lib/network/networkmanager.cpp:224
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
@@ -3416,6 +3416,11 @@ msgstr "Configurare portabilă"
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "Nu sunt extensii disponibile."
+
+#: lib/network/sslerrordialog.cpp:31
+msgctxt "SslErrorDialog|"
+msgid "Only for this session"
+msgstr ""
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -4363,6 +4368,62 @@ msgctxt "AutoFillManager|"
 msgid "Exceptions"
 msgstr "Excepții"
 
+#: lib/preferences/certificatemanager.cpp:61
+msgctxt "CertificateManager|"
+msgid "Host: "
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:65
+#, fuzzy
+#| msgctxt "SSLManager|"
+#| msgid "Certificate Informations"
+msgctxt "CertificateManager|"
+msgid "Add certificate exception"
+msgstr "Informatii despre certificat"
+
+#: lib/preferences/certificatemanager.cpp:74
+#, qt-format
+msgctxt "CertificateManager|"
+msgid "Host %1 already in the list"
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:83
+#, fuzzy
+#| msgctxt "Bookmarks|"
+#| msgid "Empty"
+msgctxt "CertificateManager|"
+msgid "Empty host"
+msgstr "Gol"
+
+#: lib/preferences/certificatemanager.ui:14
+#, fuzzy
+#| msgctxt "SSLManager|"
+#| msgid "Certificate Informations"
+msgctxt "CertificateManager|"
+msgid "Certificate exception manager"
+msgstr "Informatii despre certificat"
+
+#: lib/preferences/certificatemanager.ui:22
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "CertificateManager|"
+msgid "Add"
+msgstr "Adaugă"
+
+#: lib/preferences/certificatemanager.ui:29
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "CertificateManager|"
+msgid "Remove"
+msgstr "Șterge"
+
+#: lib/preferences/certificatemanager.ui:69
+msgctxt "CertificateManager|"
+msgid "Removing an entry requires a restart"
+msgstr ""
+
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
 msgid "JavaScript Options"
@@ -4443,88 +4504,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Sunteți sigur că doriți să afișați toate parolele?"
 
-#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:608
+#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:610
 msgctxt "Preferences|"
 msgid "Default"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:155
+#: lib/preferences/preferences.cpp:156
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:298
+#: lib/preferences/preferences.cpp:299
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:551
+#: lib/preferences/preferences.cpp:553
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Alegeți locația executabilului..."
 
-#: lib/preferences/preferences.cpp:594
+#: lib/preferences/preferences.cpp:596
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Notificări OSD"
 
-#: lib/preferences/preferences.cpp:595
+#: lib/preferences/preferences.cpp:597
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Trageți-o pe ecran pentru a o plasa unde doriți."
 
-#: lib/preferences/preferences.cpp:644
+#: lib/preferences/preferences.cpp:646
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Alege locul de descărcare..."
 
-#: lib/preferences/preferences.cpp:658
+#: lib/preferences/preferences.cpp:660
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Alege locul foilor de stil..."
 
-#: lib/preferences/preferences.cpp:669
+#: lib/preferences/preferences.cpp:671
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Șterse"
 
-#: lib/preferences/preferences.cpp:765
+#: lib/preferences/preferences.cpp:773
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr ""
 
-#: lib/preferences/preferences.cpp:796
+#: lib/preferences/preferences.cpp:804
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Profil nou"
 
-#: lib/preferences/preferences.cpp:796
+#: lib/preferences/preferences.cpp:804
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Introduceți denumirea noului profil:"
 
-#: lib/preferences/preferences.cpp:806 lib/preferences/preferences.cpp:811
+#: lib/preferences/preferences.cpp:814 lib/preferences/preferences.cpp:819
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Eroare!"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Acest profil deja există!"
 
-#: lib/preferences/preferences.cpp:811
+#: lib/preferences/preferences.cpp:819
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Nu se poate crea dosarul profilului!"
 
-#: lib/preferences/preferences.cpp:822
+#: lib/preferences/preferences.cpp:830
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Confirmare"
 
-#: lib/preferences/preferences.cpp:823
+#: lib/preferences/preferences.cpp:831
 #, fuzzy, qt-format
 #| msgctxt "Preferences|"
 #| msgid ""
@@ -4538,12 +4599,12 @@ msgstr ""
 "Sunteți sigur că doriți să ștergeți profilul  \"%1\"? Aceacstă acțiune nu "
 "poate fi anulată!"
 
-#: lib/preferences/preferences.cpp:838 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:846 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Notă: Nu puteți șterge profilul activ."
 
-#: lib/preferences/preferences.cpp:1095
+#: lib/preferences/preferences.cpp:1103
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Alege culoarea"
@@ -4959,7 +5020,7 @@ msgstr ""
 
 #: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1265
 #: lib/preferences/preferences.ui:1799 lib/preferences/preferences.ui:1896
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2762
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -5485,30 +5546,41 @@ msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Nu exista rezultate."
 
+#: lib/preferences/preferences.ui:2466
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>Limbi preferate pentru site-uri</b>"
+
 #: lib/preferences/preferences.ui:2473
 #, fuzzy
 #| msgctxt "SearchEnginesDialog|"
 #| msgid "Manage Search Engines"
 msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
+msgid "<b>Manage protocol handlers</b>"
 msgstr "Configurează motoare de căutare"
 
 #: lib/preferences/preferences.ui:2480
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "<b>SSL Certificates</b>"
 msgctxt "Preferences|"
-msgid "<b>User Style Sheet</b>"
-msgstr ""
+msgid "<b>Certificate manager</b>"
+msgstr "<b>Certificate SSL</b>"
 
 #: lib/preferences/preferences.ui:2505
+#, fuzzy
+#| msgctxt "SSLManager|"
+#| msgid "Certificate Informations"
 msgctxt "Preferences|"
-msgid "Languages"
-msgstr "Limbi"
+msgid "Certificate Exception Manager"
+msgstr "Informatii despre certificat"
 
-#: lib/preferences/preferences.ui:2527
+#: lib/preferences/preferences.ui:2545
 msgctxt "Preferences|"
-msgid "<b>Change browser identification</b>"
+msgid "User Agent Manager"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2552
+#: lib/preferences/preferences.ui:2598
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Cookies Manager"
@@ -5516,15 +5588,15 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Manager de cookie-uri"
 
-#: lib/preferences/preferences.ui:2592
+#: lib/preferences/preferences.ui:2620
 #, fuzzy
 #| msgctxt "SearchEnginesDialog|"
-#| msgid "Search Engine"
+#| msgid "Manage Search Engines"
 msgctxt "Preferences|"
-msgid "Search Engines Manager"
-msgstr "Motor de cautare"
+msgid "<b>Manage search engines</b>"
+msgstr "Configurează motoare de căutare"
 
-#: lib/preferences/preferences.ui:2640
+#: lib/preferences/preferences.ui:2627
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "StyleSheet automatically loaded with all websites: "
@@ -5532,23 +5604,28 @@ msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Foi de stil încărcate automat pe toate site-urile:"
 
-#: lib/preferences/preferences.ui:2650
-msgctxt "Preferences|"
-msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>Limbi preferate pentru site-uri</b>"
-
-#: lib/preferences/preferences.ui:2675
-msgctxt "Preferences|"
-msgid "User Agent Manager"
-msgstr ""
-
-#: lib/preferences/preferences.ui:2697
+#: lib/preferences/preferences.ui:2652
 #, fuzzy
 #| msgctxt "SearchEnginesDialog|"
-#| msgid "Manage Search Engines"
+#| msgid "Search Engine"
 msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "Configurează motoare de căutare"
+msgid "Search Engines Manager"
+msgstr "Motor de cautare"
+
+#: lib/preferences/preferences.ui:2687
+msgctxt "Preferences|"
+msgid "<b>User Style Sheet</b>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2712
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "Limbi"
+
+#: lib/preferences/preferences.ui:2734
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr ""
 
 #: lib/preferences/thememanager.cpp:100
 #, fuzzy
@@ -7310,10 +7387,6 @@ msgstr ""
 #~ msgstr "Trimite antetul referer-ului server-ului"
 
 #~ msgctxt "Preferences|"
-#~ msgid "<b>SSL Certificates</b>"
-#~ msgstr "<b>Certificate SSL</b>"
-
-#~ msgctxt "Preferences|"
 #~ msgid "QupZilla"
 #~ msgstr "QupZilla"
 
@@ -7661,10 +7734,6 @@ msgstr ""
 #~ msgctxt "SSLManager|"
 #~ msgid "Choose path..."
 #~ msgstr "Alege cale..."
-
-#~ msgctxt "SSLManager|"
-#~ msgid "Certificate Informations"
-#~ msgstr "Informatii despre certificat"
 
 #~ msgctxt "SearchToolbar|"
 #~ msgid "Case sensitive"

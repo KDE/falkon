@@ -2285,12 +2285,12 @@ msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr "検索エンジンの変更時に検索する"
 
-#: lib/network/networkmanager.cpp:84
+#: lib/network/networkmanager.cpp:86
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
 msgstr "SSL サーバ証明書にエラーがあります!"
 
-#: lib/network/networkmanager.cpp:85
+#: lib/network/networkmanager.cpp:87
 msgctxt "NetworkManager|"
 msgid ""
 "The page you are trying to access has the following errors in the SSL "
@@ -2299,12 +2299,12 @@ msgstr ""
 "あなたが接続しようとしているページの SSL サーバ証明書には以下の問題点がありま"
 "す:"
 
-#: lib/network/networkmanager.cpp:86
+#: lib/network/networkmanager.cpp:88
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
 msgstr "この証明書に対して例外を作成しますか?"
 
-#: lib/network/networkmanager.cpp:113
+#: lib/network/networkmanager.cpp:118
 #, fuzzy
 #| msgctxt "NetworkManager|"
 #| msgid "Authorisation required"
@@ -2312,29 +2312,29 @@ msgctxt "NetworkManager|"
 msgid "Authorization required"
 msgstr "認証が必要です"
 
-#: lib/network/networkmanager.cpp:120 lib/network/networkmanager.cpp:206
+#: lib/network/networkmanager.cpp:125 lib/network/networkmanager.cpp:211
 msgctxt "NetworkManager|"
 msgid "Username: "
 msgstr "ユーザー名:"
 
-#: lib/network/networkmanager.cpp:121 lib/network/networkmanager.cpp:207
+#: lib/network/networkmanager.cpp:126 lib/network/networkmanager.cpp:212
 msgctxt "NetworkManager|"
 msgid "Password: "
 msgstr "パスワード:"
 
-#: lib/network/networkmanager.cpp:127
+#: lib/network/networkmanager.cpp:132
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
 msgstr "このサイトでユーザー名とパスワードを保存する"
 
-#: lib/network/networkmanager.cpp:135
+#: lib/network/networkmanager.cpp:140
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
 msgstr "%1 がユーザー名とパスワードを要求しています。\"%2\""
 
-#: lib/network/networkmanager.cpp:199
+#: lib/network/networkmanager.cpp:204
 #, fuzzy
 #| msgctxt "NetworkManager|"
 #| msgid "Proxy authorisation required"
@@ -2342,7 +2342,7 @@ msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
 msgstr "プロキシ認証が必要です"
 
-#: lib/network/networkmanager.cpp:219
+#: lib/network/networkmanager.cpp:224
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
@@ -2940,6 +2940,11 @@ msgstr "Portable build"
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "エクステンションが見つかりません。"
+
+#: lib/network/sslerrordialog.cpp:31
+msgctxt "SslErrorDialog|"
+msgid "Only for this session"
+msgstr ""
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3842,6 +3847,56 @@ msgctxt "AutoFillManager|"
 msgid "Exceptions"
 msgstr "例外"
 
+#: lib/preferences/certificatemanager.cpp:61
+msgctxt "CertificateManager|"
+msgid "Host: "
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:65
+msgctxt "CertificateManager|"
+msgid "Add certificate exception"
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:74
+#, qt-format
+msgctxt "CertificateManager|"
+msgid "Host %1 already in the list"
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:83
+#, fuzzy
+#| msgctxt "Bookmarks|"
+#| msgid "Empty"
+msgctxt "CertificateManager|"
+msgid "Empty host"
+msgstr "空"
+
+#: lib/preferences/certificatemanager.ui:14
+msgctxt "CertificateManager|"
+msgid "Certificate exception manager"
+msgstr ""
+
+#: lib/preferences/certificatemanager.ui:22
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "CertificateManager|"
+msgid "Add"
+msgstr "追加"
+
+#: lib/preferences/certificatemanager.ui:29
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "CertificateManager|"
+msgid "Remove"
+msgstr "削除"
+
+#: lib/preferences/certificatemanager.ui:69
+msgctxt "CertificateManager|"
+msgid "Removing an entry requires a restart"
+msgstr ""
+
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
 msgid "JavaScript Options"
@@ -3931,88 +3986,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "本当にセッション '%1' を削除しますか?"
 
-#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:608
+#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:610
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "既定"
 
-#: lib/preferences/preferences.cpp:155
+#: lib/preferences/preferences.cpp:156
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "既定に設定"
 
-#: lib/preferences/preferences.cpp:298
+#: lib/preferences/preferences.cpp:299
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:551
+#: lib/preferences/preferences.cpp:553
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "外部ダウンローダの指定..."
 
-#: lib/preferences/preferences.cpp:594
+#: lib/preferences/preferences.cpp:596
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD 通知"
 
-#: lib/preferences/preferences.cpp:595
+#: lib/preferences/preferences.cpp:597
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "好きな場所にドラッグしてください。"
 
-#: lib/preferences/preferences.cpp:644
+#: lib/preferences/preferences.cpp:646
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "ダウンロード先の指定..."
 
-#: lib/preferences/preferences.cpp:658
+#: lib/preferences/preferences.cpp:660
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "スタイルシートの指定..."
 
-#: lib/preferences/preferences.cpp:669
+#: lib/preferences/preferences.cpp:671
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "削除されました"
 
-#: lib/preferences/preferences.cpp:765
+#: lib/preferences/preferences.cpp:773
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "キャッシュの保存場所の選択..."
 
-#: lib/preferences/preferences.cpp:796
+#: lib/preferences/preferences.cpp:804
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "新しいプロファイル"
 
-#: lib/preferences/preferences.cpp:796
+#: lib/preferences/preferences.cpp:804
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "新しいプロファイルの名前を入力してください:"
 
-#: lib/preferences/preferences.cpp:806 lib/preferences/preferences.cpp:811
+#: lib/preferences/preferences.cpp:814 lib/preferences/preferences.cpp:819
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "エラーが発生しました!"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "このプロファイルはすでに存在しています!"
 
-#: lib/preferences/preferences.cpp:811
+#: lib/preferences/preferences.cpp:819
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "プロファイルフォルダを作成できません!"
 
-#: lib/preferences/preferences.cpp:822
+#: lib/preferences/preferences.cpp:830
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "確認"
 
-#: lib/preferences/preferences.cpp:823
+#: lib/preferences/preferences.cpp:831
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4021,12 +4076,12 @@ msgid ""
 msgstr ""
 "本当に \"%1\" プロファイルを永久に削除しますか? この操作は取り消せません!"
 
-#: lib/preferences/preferences.cpp:838 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:846 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "注意:現在使用中のプロファイルは削除できません。"
 
-#: lib/preferences/preferences.cpp:1095
+#: lib/preferences/preferences.cpp:1103
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "色の選択"
@@ -4427,7 +4482,7 @@ msgstr "色の選択"
 
 #: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1265
 #: lib/preferences/preferences.ui:1799 lib/preferences/preferences.ui:1896
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2762
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -4939,27 +4994,38 @@ msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "言語が見付かりません"
 
-#: lib/preferences/preferences.ui:2473
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>言語設定</b>"
+
+#: lib/preferences/preferences.ui:2473
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "<b>Manage search engines</b>"
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>検索エンジンを管理する</b>"
 
 #: lib/preferences/preferences.ui:2480
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
-msgid "<b>User Style Sheet</b>"
-msgstr "<b>ユーザースタイルシート</b>"
+msgid "<b>Certificate manager</b>"
+msgstr "<b>通知</b>"
 
 #: lib/preferences/preferences.ui:2505
 msgctxt "Preferences|"
-msgid "Languages"
-msgstr "言語"
+msgid "Certificate Exception Manager"
+msgstr ""
 
-#: lib/preferences/preferences.ui:2527
+#: lib/preferences/preferences.ui:2545
 msgctxt "Preferences|"
-msgid "<b>Change browser identification</b>"
-msgstr "<b> ブラウザの UA を変更する </b>"
+msgid "User Agent Manager"
+msgstr "User Agent マネージャ"
 
-#: lib/preferences/preferences.ui:2552
+#: lib/preferences/preferences.ui:2598
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Cookies Manager"
@@ -4967,33 +5033,35 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Cookie マネージャ"
 
-#: lib/preferences/preferences.ui:2592
+#: lib/preferences/preferences.ui:2620
 msgctxt "Preferences|"
-msgid "Search Engines Manager"
-msgstr "検索エンジンマネージャ"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>検索エンジンを管理する</b>"
 
-#: lib/preferences/preferences.ui:2640
+#: lib/preferences/preferences.ui:2627
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "すべてのページに適用するスタイルシート:"
 
-#: lib/preferences/preferences.ui:2650
+#: lib/preferences/preferences.ui:2652
 msgctxt "Preferences|"
-msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>言語設定</b>"
+msgid "Search Engines Manager"
+msgstr "検索エンジンマネージャ"
 
-#: lib/preferences/preferences.ui:2675
+#: lib/preferences/preferences.ui:2687
 msgctxt "Preferences|"
-msgid "User Agent Manager"
-msgstr "User Agent マネージャ"
+msgid "<b>User Style Sheet</b>"
+msgstr "<b>ユーザースタイルシート</b>"
 
-#: lib/preferences/preferences.ui:2697
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Manage search engines</b>"
+#: lib/preferences/preferences.ui:2712
 msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>検索エンジンを管理する</b>"
+msgid "Languages"
+msgstr "言語"
+
+#: lib/preferences/preferences.ui:2734
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b> ブラウザの UA を変更する </b>"
 
 #: lib/preferences/thememanager.cpp:100
 #, fuzzy

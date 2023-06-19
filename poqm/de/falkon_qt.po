@@ -2246,12 +2246,12 @@ msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr "Suche nach Änderung der Suchmaschine starten"
 
-#: lib/network/networkmanager.cpp:84
+#: lib/network/networkmanager.cpp:86
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
 msgstr "SSL-Zertifikatsfehler"
 
-#: lib/network/networkmanager.cpp:85
+#: lib/network/networkmanager.cpp:87
 msgctxt "NetworkManager|"
 msgid ""
 "The page you are trying to access has the following errors in the SSL "
@@ -2259,32 +2259,32 @@ msgid ""
 msgstr ""
 "Beim Laden dieser Seite sind folgende SSL-Zertifikatsfehler aufgetreten:"
 
-#: lib/network/networkmanager.cpp:86
+#: lib/network/networkmanager.cpp:88
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
 msgstr "Möchten Sie eine Ausnahme für dieses Zertifikat zulassen?"
 
-#: lib/network/networkmanager.cpp:113
+#: lib/network/networkmanager.cpp:118
 msgctxt "NetworkManager|"
 msgid "Authorization required"
 msgstr "Authentifizierung erforderlich"
 
-#: lib/network/networkmanager.cpp:120 lib/network/networkmanager.cpp:206
+#: lib/network/networkmanager.cpp:125 lib/network/networkmanager.cpp:211
 msgctxt "NetworkManager|"
 msgid "Username: "
 msgstr "Benutzername:"
 
-#: lib/network/networkmanager.cpp:121 lib/network/networkmanager.cpp:207
+#: lib/network/networkmanager.cpp:126 lib/network/networkmanager.cpp:212
 msgctxt "NetworkManager|"
 msgid "Password: "
 msgstr "Passwort: "
 
-#: lib/network/networkmanager.cpp:127
+#: lib/network/networkmanager.cpp:132
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
 msgstr "Benutzername und Passwort für diese Seite speichern"
 
-#: lib/network/networkmanager.cpp:135
+#: lib/network/networkmanager.cpp:140
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
@@ -2293,12 +2293,12 @@ msgstr ""
 "Bitte Benutzername und Passwort zur Anmeldung an Server %1 angeben. "
 "Statusmeldung: \"%2\""
 
-#: lib/network/networkmanager.cpp:199
+#: lib/network/networkmanager.cpp:204
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
 msgstr "Authentifizierung am Proxy-Server erforderlich"
 
-#: lib/network/networkmanager.cpp:219
+#: lib/network/networkmanager.cpp:224
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
@@ -2681,6 +2681,11 @@ msgstr "Portable-Version"
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "Keine Erweiterungen verfügbar."
+
+#: lib/network/sslerrordialog.cpp:31
+msgctxt "SslErrorDialog|"
+msgid "Only for this session"
+msgstr ""
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3569,6 +3574,56 @@ msgctxt "AutoFillManager|"
 msgid "Exceptions"
 msgstr "Ausnahmen"
 
+#: lib/preferences/certificatemanager.cpp:61
+msgctxt "CertificateManager|"
+msgid "Host: "
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:65
+msgctxt "CertificateManager|"
+msgid "Add certificate exception"
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:74
+#, qt-format
+msgctxt "CertificateManager|"
+msgid "Host %1 already in the list"
+msgstr ""
+
+#: lib/preferences/certificatemanager.cpp:83
+#, fuzzy
+#| msgctxt "Bookmarks|"
+#| msgid "Empty"
+msgctxt "CertificateManager|"
+msgid "Empty host"
+msgstr "Leer"
+
+#: lib/preferences/certificatemanager.ui:14
+msgctxt "CertificateManager|"
+msgid "Certificate exception manager"
+msgstr ""
+
+#: lib/preferences/certificatemanager.ui:22
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "CertificateManager|"
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: lib/preferences/certificatemanager.ui:29
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "CertificateManager|"
+msgid "Remove"
+msgstr "Entfernen"
+
+#: lib/preferences/certificatemanager.ui:69
+msgctxt "CertificateManager|"
+msgid "Removing an entry requires a restart"
+msgstr ""
+
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
 msgid "JavaScript Options"
@@ -3643,88 +3698,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Möchten Sie „%1“ wirklich entfernen?"
 
-#: lib/preferences/preferences.cpp:151 lib/preferences/preferences.cpp:608
+#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:610
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Standard"
 
-#: lib/preferences/preferences.cpp:155
+#: lib/preferences/preferences.cpp:156
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Als Standard verwenden"
 
-#: lib/preferences/preferences.cpp:298
+#: lib/preferences/preferences.cpp:299
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1 %"
 
-#: lib/preferences/preferences.cpp:551
+#: lib/preferences/preferences.cpp:553
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Ausführbare Datei auswählen ..."
 
-#: lib/preferences/preferences.cpp:594
+#: lib/preferences/preferences.cpp:596
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD-Benachrichtigung"
 
-#: lib/preferences/preferences.cpp:595
+#: lib/preferences/preferences.cpp:597
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Verschieben Sie es auf dem Bildschirm nach Belieben."
 
-#: lib/preferences/preferences.cpp:644
+#: lib/preferences/preferences.cpp:646
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Download-Verzeichnis auswählen ..."
 
-#: lib/preferences/preferences.cpp:658
+#: lib/preferences/preferences.cpp:660
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Stilvorlagen-Verzeichnis wählen ..."
 
-#: lib/preferences/preferences.cpp:669
+#: lib/preferences/preferences.cpp:671
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Gelöscht"
 
-#: lib/preferences/preferences.cpp:765
+#: lib/preferences/preferences.cpp:773
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Zwischenspeicherordner auswählen ..."
 
-#: lib/preferences/preferences.cpp:796
+#: lib/preferences/preferences.cpp:804
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Neues Profil"
 
-#: lib/preferences/preferences.cpp:796
+#: lib/preferences/preferences.cpp:804
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Bitte geben Sie den Namen des neuen Profils ein:"
 
-#: lib/preferences/preferences.cpp:806 lib/preferences/preferences.cpp:811
+#: lib/preferences/preferences.cpp:814 lib/preferences/preferences.cpp:819
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Fehler"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Dieses Profil existiert bereits"
 
-#: lib/preferences/preferences.cpp:811
+#: lib/preferences/preferences.cpp:819
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Profil-Ordner kann nicht erstellt werden"
 
-#: lib/preferences/preferences.cpp:822
+#: lib/preferences/preferences.cpp:830
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Bestätigung"
 
-#: lib/preferences/preferences.cpp:823
+#: lib/preferences/preferences.cpp:831
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3734,12 +3789,12 @@ msgstr ""
 "Möchten Sie das Profil „%1” wirklich dauerhaft entfernen? Diese Aktion kann "
 "nicht rückgängig gemacht werden."
 
-#: lib/preferences/preferences.cpp:838 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:846 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Hinweis: Ein aktives Profil kann nicht gelöscht werden."
 
-#: lib/preferences/preferences.cpp:1095
+#: lib/preferences/preferences.cpp:1103
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Farbe auswählen"
@@ -4143,7 +4198,7 @@ msgstr "Farbe auswählen"
 
 #: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1265
 #: lib/preferences/preferences.ui:1799 lib/preferences/preferences.ui:1896
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2762
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -4646,55 +4701,68 @@ msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Keine Sprachen gefunden"
 
-#: lib/preferences/preferences.ui:2473
-msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "<b>Suchmaschinen verwalten</b>"
-
-#: lib/preferences/preferences.ui:2480
-msgctxt "Preferences|"
-msgid "<b>User Style Sheet</b>"
-msgstr "<b>Eigene Stilvorlage</b>"
-
-#: lib/preferences/preferences.ui:2505
-msgctxt "Preferences|"
-msgid "Languages"
-msgstr "Sprachen"
-
-#: lib/preferences/preferences.ui:2527
-msgctxt "Preferences|"
-msgid "<b>Change browser identification</b>"
-msgstr "<b>Browserkennung ändern</b>"
-
-#: lib/preferences/preferences.ui:2552
-msgctxt "Preferences|"
-msgid "Protocol Handlers Manager"
-msgstr "Protokoll-Handler-Verwaltung"
-
-#: lib/preferences/preferences.ui:2592
-msgctxt "Preferences|"
-msgid "Search Engines Manager"
-msgstr "Suchmaschinen-Verwaltung"
-
-#: lib/preferences/preferences.ui:2640
-msgctxt "Preferences|"
-msgid "Style Sheet automatically loaded with all websites: "
-msgstr "Stilvorlage automatisch mit allen Webseiten laden: "
-
-#: lib/preferences/preferences.ui:2650
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Bevorzugte Sprache für Webseiten</b>"
 
-#: lib/preferences/preferences.ui:2675
+#: lib/preferences/preferences.ui:2473
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>Protokoll-Handler-Verwaltung</b>"
+
+#: lib/preferences/preferences.ui:2480
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "<b>Notifications</b>"
+msgctxt "Preferences|"
+msgid "<b>Certificate manager</b>"
+msgstr "<b>Benachrichtigungen</b>"
+
+#: lib/preferences/preferences.ui:2505
+msgctxt "Preferences|"
+msgid "Certificate Exception Manager"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2545
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Browserkennung"
 
-#: lib/preferences/preferences.ui:2697
+#: lib/preferences/preferences.ui:2598
 msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>Protokoll-Handler-Verwaltung</b>"
+msgid "Protocol Handlers Manager"
+msgstr "Protokoll-Handler-Verwaltung"
+
+#: lib/preferences/preferences.ui:2620
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>Suchmaschinen verwalten</b>"
+
+#: lib/preferences/preferences.ui:2627
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr "Stilvorlage automatisch mit allen Webseiten laden: "
+
+#: lib/preferences/preferences.ui:2652
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "Suchmaschinen-Verwaltung"
+
+#: lib/preferences/preferences.ui:2687
+msgctxt "Preferences|"
+msgid "<b>User Style Sheet</b>"
+msgstr "<b>Eigene Stilvorlage</b>"
+
+#: lib/preferences/preferences.ui:2712
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "Sprachen"
+
+#: lib/preferences/preferences.ui:2734
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>Browserkennung ändern</b>"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
