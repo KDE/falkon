@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-05-08 08:11+0200\n"
+"PO-Revision-Date: 2023-06-19 09:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
 "%100<=4 ? 2 : 3);\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2680,7 +2680,7 @@ msgstr "Razširitev ni na voljo."
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Samo za to sejo"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3566,44 +3566,35 @@ msgstr "Izjeme"
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "Gostitelj: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "Dodaj izjemo potrdila"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "Gostitelj %1 je že na seznamu"
 
 #: lib/preferences/certificatemanager.cpp:83
-#, fuzzy
-#| msgctxt "Bookmarks|"
-#| msgid "Empty"
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "Prazno"
+msgstr "Prazen gostitelj"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Skrbnik izjem potrdil"
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "Dodaj"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
 msgstr "Odstrani"
@@ -3611,7 +3602,7 @@ msgstr "Odstrani"
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "Odstranjevanje vnosa zahteva ponovni zagon"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -4697,17 +4688,14 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Upravljanje upravljalnikov protokolov</b>"
 
 #: lib/preferences/preferences.ui:2480
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>Obvestila</b>"
+msgstr "<b>Skrbnik potrdil</b>"
 
 #: lib/preferences/preferences.ui:2505
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Skrbnik izjem potrdil"
 
 #: lib/preferences/preferences.ui:2545
 msgctxt "Preferences|"
