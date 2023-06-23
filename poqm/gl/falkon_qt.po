@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-06-17 10:54+0200\n"
+"PO-Revision-Date: 2023-06-22 06:39+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -166,7 +166,7 @@ msgstr "AdBlock está activo"
 #: lib/adblock/adblockicon.cpp:145
 msgctxt "AdBlockIcon|"
 msgid "Show AdBlock &Settings"
-msgstr "Mo&strar a configuración de AdBlock"
+msgstr "Amo&sar a configuración de AdBlock"
 
 #: lib/adblock/adblockicon.cpp:153
 #, qt-format
@@ -1106,7 +1106,7 @@ msgstr "Novo cartafol"
 #: lib/bookmarks/bookmarksmanager.cpp:112
 msgctxt "BookmarksManager|"
 msgid "New Separator"
-msgstr "Novo separador"
+msgstr "Nova divisoria"
 
 #: lib/bookmarks/bookmarksmanager.cpp:114
 msgctxt "BookmarksManager|"
@@ -2199,7 +2199,7 @@ msgstr "Cargar de novo"
 #: lib/navigation/siteicon.cpp:40
 msgctxt "LocationBar|"
 msgid "Show information about this page"
-msgstr "Mostra información sobre esta páxina"
+msgstr "Amosar información da páxina"
 
 #: lib/navigation/websearchbar.cpp:97
 msgctxt "WebSearchBar|"
@@ -2220,7 +2220,7 @@ msgstr "Xestionar os motores de busca"
 #: lib/navigation/websearchbar.cpp:257
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
-msgstr "Mostras as suxestións"
+msgstr "Amosar suxestións"
 
 #: lib/navigation/websearchbar.cpp:262
 msgctxt "WebSearchBar|"
@@ -2277,13 +2277,13 @@ msgstr ""
 #: lib/network/networkmanager.cpp:199
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
-msgstr "Requírese autorización de proxy"
+msgstr "Requírese autorización do mandatario"
 
 #: lib/network/networkmanager.cpp:219
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
-msgstr "O proxy %1 está a solicitar un nome de usuario e un contrasinal."
+msgstr "O mandatario %1 está a solicitar un nome de usuaria e un contrasinal."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:156
 msgctxt "FalkonSchemeReply|"
@@ -3804,7 +3804,7 @@ msgstr "<b>Iniciando</b>"
 #: lib/preferences/preferences.ui:295
 msgctxt "Preferences|"
 msgid "After launch: "
-msgstr "Tras iniciar:"
+msgstr "Tras iniciar: "
 
 #: lib/preferences/preferences.ui:303
 msgctxt "Preferences|"
@@ -3839,7 +3839,7 @@ msgstr "Páxina web: "
 #: lib/preferences/preferences.ui:352
 msgctxt "Preferences|"
 msgid "On new tab: "
-msgstr "Nun novo separador:"
+msgstr "Nun novo separador: "
 
 #: lib/preferences/preferences.ui:360
 msgctxt "Preferences|"
@@ -4129,7 +4129,7 @@ msgstr "Activar a API do complemento Pepper (PPAPI)"
 #: lib/preferences/preferences.ui:1018
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
-msgstr "Usar o visor de PDF incluído (require PPAPI)"
+msgstr "Usar o visor de PDF de serie (require PPAPI)"
 
 #: lib/preferences/preferences.ui:1025
 msgctxt "Preferences|"
@@ -4266,12 +4266,12 @@ msgstr "Eliminar agora"
 #: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
-msgstr "Configuración do proxy"
+msgstr "Configuración do mandatario"
 
 #: lib/preferences/preferences.ui:1399
 msgctxt "Preferences|"
 msgid "System proxy configuration"
-msgstr "Configuración de proxy do sistema"
+msgstr "Configuración do mandatario do sistema"
 
 #: lib/preferences/preferences.ui:1422
 msgctxt "Preferences|"
@@ -4306,7 +4306,7 @@ msgstr "Contrasinal:"
 #: lib/preferences/preferences.ui:1508
 msgctxt "Preferences|"
 msgid "No proxy"
-msgstr "Sen proxy"
+msgstr "Sen mandatario"
 
 #: lib/preferences/preferences.ui:1523
 msgctxt "Preferences|"
@@ -4424,7 +4424,7 @@ msgstr "Preguntar sempre onde descargar"
 #: lib/preferences/preferences.ui:1787
 msgctxt "Preferences|"
 msgid "Use defined location: "
-msgstr "Usar o lugar definido:"
+msgstr "Usar o lugar definido: "
 
 #: lib/preferences/preferences.ui:1837
 msgctxt "Preferences|"
@@ -4642,7 +4642,7 @@ msgstr "Xestor de motores de busca"
 #: lib/preferences/preferences.ui:2640
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
-msgstr "Folla de estilos cargada automaticamente con todos os sitios web:"
+msgstr "Folla de estilos cargada automaticamente con todos os sitios web: "
 
 #: lib/preferences/preferences.ui:2650
 msgctxt "Preferences|"
@@ -4715,7 +4715,7 @@ msgstr "Editar o sitio"
 #: lib/preferences/useragentdialog.cpp:216
 msgctxt "UserAgentDialog|"
 msgid "Site domain: "
-msgstr "Dominio do sitio:"
+msgstr "Dominio do sitio: "
 
 #: lib/preferences/useragentdialog.cpp:217
 msgctxt "UserAgentDialog|"
@@ -4770,7 +4770,7 @@ msgstr "_clonado"
 #: lib/session/sessionmanager.cpp:126
 msgctxt "SessionManager|"
 msgid "_renamed"
-msgstr "_cambiado_de_nome"
+msgstr "_renomeado"
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
@@ -4809,7 +4809,7 @@ msgstr "Produciuse un erro ao clonar o ficheiro de sesión."
 #: lib/session/sessionmanager.cpp:148
 msgctxt "SessionManager|"
 msgid "An error occurred when renaming session file."
-msgstr "Produciuse un erro ao cambiar o nome do ficheiro e sesión."
+msgstr "Produciuse un erro ao renomear o ficheiro da sesión."
 
 #: lib/session/sessionmanager.cpp:161
 msgctxt "SessionManager|"
@@ -4923,7 +4923,7 @@ msgstr "Nova"
 #: lib/session/sessionmanagerdialog.ui:46
 msgctxt "SessionManagerDialog|"
 msgid "Rename"
-msgstr "Cambiar de nome"
+msgstr "Renomear"
 
 #: lib/session/sessionmanagerdialog.ui:53
 msgctxt "SessionManagerDialog|"
