@@ -1,15 +1,16 @@
-# Adrian Chaves <adrian@chaves.io>, 2018.
+# Adrian Chaves <adrian@chaves.io>, 2018, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2018-05-13 18:58+0100\n"
+"PO-Revision-Date: 2023-06-23 22:21+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.2\n"
 "X-Qt-Contexts: true\n"
 
 #: sbi_imagesicon.cpp:34
@@ -76,12 +77,12 @@ msgstr "Xestionar a configuración de JavaScript"
 #: sbi_networkicon.cpp:65
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
-msgstr "Configuración do proxy"
+msgstr "Configuración do mandatario"
 
 #: sbi_networkicon.cpp:67
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
-msgstr "Seleccionar un proxy"
+msgstr "Seleccionar un mandatario"
 
 #: sbi_networkicon.cpp:81
 msgctxt "SBI_NetworkIcon|"
@@ -91,7 +92,7 @@ msgstr "Baleiro"
 #: sbi_networkicon.cpp:85
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
-msgstr "Xestionar os proxys"
+msgstr "Xestionar os mandatarios"
 
 #: sbi_networkicon.cpp:98
 #, qt-format
@@ -100,8 +101,8 @@ msgid ""
 "Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
 "><br/><b>Proxy:</b><br/>%2"
 msgstr ""
-"Mostra o estado da rede e xestiona proxys.<br/><br/><b>Rede:</b><br/>%1<br/"
-"><br/><b>Proxy:</b><br/>%2"
+"Amosa o estado da rede e xestiona o mandatario.<br/><br/><b>Rede:</b><br/>"
+"%1<br/><br/><b>Mandatario:</b><br/>%2"
 
 #: sbi_networkicon.cpp:101
 msgctxt "SBI_NetworkIcon|"
@@ -116,12 +117,12 @@ msgstr "Desconectado"
 #: sbi_networkicon.cpp:109
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
-msgstr "Proxy do sistema"
+msgstr "Mandatario do sistema"
 
 #: sbi_networkicon.cpp:113
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
-msgstr "Sen proxy"
+msgstr "Sen mandatario"
 
 #: sbi_networkicon.cpp:117
 msgctxt "SBI_NetworkIcon|"
@@ -131,42 +132,43 @@ msgstr "Definido polo usuario"
 #: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Add proxy"
-msgstr "Engadir un proxy"
+msgstr "Engadir un mandatario"
 
 #: sbi_networkicondialog.cpp:57
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Name of proxy:"
-msgstr "Nome do proxy:"
+msgstr "Nome do mandatario:"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove current proxy"
-msgstr "Retirar o proxy actual"
+msgstr "Retirar o mandatario actual"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Are you sure you want to remove current proxy?"
-msgstr "Seguro que quere retirar o proxy actual?"
+msgstr "Seguro que quere retirar o mandatario actual?"
 
 #: sbi_networkicondialog.ui:14
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Proxy Manager"
-msgstr "Xestor de proxys"
+msgstr "Xestor de mandatarios"
 
 #: sbi_networkicondialog.ui:28
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Select proxy: "
-msgstr "Seleccionar un proxy: "
+msgstr "Seleccionar un mandatario: "
 
 #: sbi_networkicondialog.ui:45
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove proxy"
-msgstr "Retirar o proxy"
+msgstr "Retirar o mandatario"
 
 #: sbi_networkicondialog.ui:69
 msgctxt "SBI_NetworkIconDialog|"
 msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
-msgstr "Sen proxies. Pode engadir proxys premendo o botón de <b>Engadir</b>."
+msgstr ""
+"Sen mandatarios. Pode engadir mandatarios premendo o botón de <b>Engadir</b>."
 
 #: sbi_networkicondialog.ui:104
 msgctxt "SBI_NetworkIconDialog|"
@@ -206,7 +208,7 @@ msgstr "Contrasinal:"
 #: sbi_proxywidget.ui:111
 msgctxt "SBI_ProxyWidget|"
 msgid "S&ystem proxy configuration"
-msgstr "Configuración de prox&y fornecida polo sistema"
+msgstr "Configuración de &mandatario fornecida polo sistema"
 
 #: sbi_proxywidget.ui:118
 msgctxt "SBI_ProxyWidget|"
@@ -226,7 +228,7 @@ msgstr "<h3>Iconas da barra de estado</h3>"
 #: sbi_settingsdialog.ui:70
 msgctxt "SBI_SettingsDialog|"
 msgid "These icons will be displayed in statusbar:"
-msgstr "Esta iconas mostraranse na barra de estado:"
+msgstr "Esta iconas amosaranse na barra de estado:"
 
 #: sbi_settingsdialog.ui:97
 msgctxt "SBI_SettingsDialog|"

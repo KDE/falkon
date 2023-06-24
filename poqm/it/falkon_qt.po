@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-05-08 17:57+0200\n"
+"PO-Revision-Date: 2023-06-22 16:50+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2675,7 +2675,7 @@ msgstr "Nessuna estensione disponibile."
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Solo per questa sessione"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3565,44 +3565,35 @@ msgstr "Eccezioni"
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "Host: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "Aggiungi eccezione al certificato"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "L'host %1 è già nell'elenco"
 
 #: lib/preferences/certificatemanager.cpp:83
-#, fuzzy
-#| msgctxt "Bookmarks|"
-#| msgid "Empty"
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "Vuoto"
+msgstr "Host vuoto"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Gestore delle eccezioni ai certificati"
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "Aggiungi"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
 msgstr "Rimuovi"
@@ -3610,7 +3601,7 @@ msgstr "Rimuovi"
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "La rimozione di una voce richiede un riavvio"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -4700,17 +4691,14 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Gestisci i gestori di protocollo</b>"
 
 #: lib/preferences/preferences.ui:2480
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>Notifiche</b>"
+msgstr "<b>Gestore certificati</b>"
 
 #: lib/preferences/preferences.ui:2505
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Gestore delle eccezioni dei certificati"
 
 #: lib/preferences/preferences.ui:2545
 msgctxt "Preferences|"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-06-05 11:11+0200\n"
+"PO-Revision-Date: 2023-06-23 12:38+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Language: cs_CZ\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2223,7 +2223,7 @@ msgstr "Přidat %1 ..."
 #: lib/navigation/websearchbar.cpp:127
 msgctxt "WebSearchBar|"
 msgid "Manage Search Engines"
-msgstr "Spravovat vyhledáváče"
+msgstr "Spravovat vyhledávače"
 
 #: lib/navigation/websearchbar.cpp:257
 msgctxt "WebSearchBar|"
@@ -2671,7 +2671,7 @@ msgstr "Žádné dostupné doplňky."
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Pouze pro toto sezení"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -2759,7 +2759,7 @@ msgstr "Upravit vyhledávač"
 #: lib/opensearch/searchenginesdialog.ui:14
 msgctxt "SearchEnginesDialog|"
 msgid "Manage Search Engines"
-msgstr "Spravovat vyhledáváče"
+msgstr "Spravovat vyhledávače"
 
 #: lib/opensearch/searchenginesdialog.ui:22
 msgctxt "SearchEnginesDialog|"
@@ -2831,7 +2831,7 @@ msgstr "Chyba"
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
-msgstr "Chyba při přidávání vyhledáváče <br><b>Chybová zpráva: </b> %1"
+msgstr "Chyba při přidávání vyhledávače <br><b>Chybová zpráva: </b> %1"
 
 #: lib/other/aboutdialog.cpp:51
 #, qt-format
@@ -3558,43 +3558,43 @@ msgstr "Výjimky"
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "Hostitel: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "Přidat výjimku certifikátu"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "Hostitel %1 je již na seznamu"
 
 #: lib/preferences/certificatemanager.cpp:83
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr ""
+msgstr "Prázdný hostitel"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Správce výjimek certifikátů"
 
 #: lib/preferences/certificatemanager.ui:22
 msgctxt "CertificateManager|"
 msgid "Add"
-msgstr ""
+msgstr "Přidat"
 
 #: lib/preferences/certificatemanager.ui:29
 msgctxt "CertificateManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Odstranit"
 
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "Odebrání záznamu vyžaduje restart"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -4225,7 +4225,7 @@ msgstr "Povolit prostorovou navigaci"
 #: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
-msgstr "Použít vychozí posuvníky"
+msgstr "Použít výchozí posuvníky"
 
 #: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
@@ -4681,12 +4681,12 @@ msgstr ""
 #: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr ""
+msgstr "<b>Správce certifikátů</b>"
 
 #: lib/preferences/preferences.ui:2505
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Správce výjimek certifikátů"
 
 #: lib/preferences/preferences.ui:2545
 msgctxt "Preferences|"
