@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-06-22 06:39+0200\n"
+"PO-Revision-Date: 2023-06-24 11:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -726,8 +726,8 @@ msgid ""
 "This backend needs a master password to be set! Falkon just switches to its "
 "default backend"
 msgstr ""
-"Esta infraestrutura necesita que se defina un contrasinal mestre! Falkon "
-"cambia á infraestrutura predeterminada"
+"Este motor necesita que se defina un contrasinal mestre! Falkon cambia ao "
+"motor predeterminado."
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
 msgctxt "MasterPasswordDialog|"
@@ -773,7 +773,7 @@ msgstr "Definir ou cambiar o contrasinal mestre…"
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:36
 msgctxt "MasterPasswordDialog|"
 msgid "This backend does not work without a master password."
-msgstr "Esta infraestrutura non funciona sen un contrasinal mestre."
+msgstr "Este motor non funciona sen un contrasinal mestre."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:43
 msgctxt "MasterPasswordDialog|"
@@ -786,8 +786,8 @@ msgid ""
 "This option clears the master password and moves all encrypted data to the "
 "\"DataBase (Plain Text)\" backend, and switches to it."
 msgstr ""
-"Esta opción borra o contrasinal mestre e move todos os datos cifrados á "
-"infraestrutura de «Base de datos (texto simple)», e cambia a ela."
+"Esta opción borra o contrasinal mestre e move todos os datos cifrados ao "
+"motor de «base de datos (texto simple)», e cambia a el."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:64
 msgctxt "MasterPasswordDialog|"
@@ -2442,7 +2442,7 @@ msgstr "Axustar á altura"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:232
 msgctxt "FalkonSchemeReply|"
 msgid "Use custom wallpaper"
-msgstr "Usar un fondo personalizado"
+msgstr "Usar un fondo de pantalla personalizado"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:233
 msgctxt "FalkonSchemeReply|"
@@ -3398,12 +3398,12 @@ msgstr "Amosar os contrasinais"
 #: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend..."
-msgstr "Cambiar de infraestrutura…"
+msgstr "Cambiar de motor…"
 
 #: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend:"
-msgstr "Cambiar de infraestrutura:"
+msgstr "Cambiar de motor:"
 
 #: lib/preferences/autofillmanager.cpp:179
 msgctxt "AutoFillManager|"
@@ -3489,12 +3489,12 @@ msgstr "Os contrasinais almacénanse en:"
 #: lib/preferences/autofillmanager.ui:35
 msgctxt "AutoFillManager|"
 msgid "Change backend"
-msgstr "Cambiar de infraestrutura"
+msgstr "Cambiar de motor"
 
 #: lib/preferences/autofillmanager.ui:42
 msgctxt "AutoFillManager|"
 msgid "Backend options"
-msgstr "Opcións da infraestrutura"
+msgstr "Opcións do motor"
 
 #: lib/preferences/autofillmanager.ui:71
 msgctxt "AutoFillManager|"
@@ -3684,7 +3684,7 @@ msgstr "Ese perfil xa existe!"
 #: lib/preferences/preferences.cpp:811
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
-msgstr "Non se pode crear o directorio do perfil!"
+msgstr "Non se pode crear o cartafol do perfil!"
 
 #: lib/preferences/preferences.cpp:822
 msgctxt "Preferences|"
@@ -4602,7 +4602,7 @@ msgstr "Activar a comprobación da ortografía"
 #: lib/preferences/preferences.ui:2404
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
-msgstr "<b>Directorios de dicionarios</b>"
+msgstr "<b>Cartafoles de dicionarios</b>"
 
 #: lib/preferences/preferences.ui:2455
 msgctxt "Preferences|"
