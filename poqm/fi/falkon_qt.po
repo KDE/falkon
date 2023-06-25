@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-03-22 15:15+0200\n"
+"PO-Revision-Date: 2023-06-06 19:44+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -644,17 +644,19 @@ msgctxt "AutoFillWidget|"
 msgid "Choose username to login"
 msgstr "Valitse kirjautumistunnus"
 
+# *** TARKISTA: puhdas arvaus
 #: lib/autofill/autofillnotification.cpp:39
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "on %1"
-msgstr ""
+msgstr "sivustolla %1"
 
+# *** TARKISTA: puhdas arvaus
 #: lib/autofill/autofillnotification.cpp:43
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "for <b>%1</b>"
-msgstr ""
+msgstr "kohteelle <b>%1</b>"
 
 #: lib/autofill/autofillnotification.cpp:47
 #, qt-format
@@ -3684,7 +3686,7 @@ msgstr "Aseta oletukseksi"
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: lib/preferences/preferences.cpp:553
 msgctxt "Preferences|"
