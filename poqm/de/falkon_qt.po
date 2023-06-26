@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-05-08 23:47+0200\n"
+"PO-Revision-Date: 2023-06-25 17:02+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 23.07.70\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -2685,7 +2685,7 @@ msgstr "Keine Erweiterungen verfügbar."
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Nur in dieser Sitzung"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3577,7 +3577,7 @@ msgstr "Ausnahmen"
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "Rechner: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
@@ -3604,17 +3604,11 @@ msgid "Certificate exception manager"
 msgstr ""
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "Hinzufügen"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
 msgstr "Entfernen"
@@ -4712,12 +4706,9 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Protokoll-Handler-Verwaltung</b>"
 
 #: lib/preferences/preferences.ui:2480
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>Benachrichtigungen</b>"
+msgstr "<b>Zertifikatsverwaltung</b>"
 
 #: lib/preferences/preferences.ui:2505
 msgctxt "Preferences|"
