@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
-"PO-Revision-Date: 2023-06-17 04:11\n"
+"PO-Revision-Date: 2023-07-03 11:38\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -2633,7 +2633,7 @@ msgstr "无可用扩展程序。"
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "仅此会话"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3516,52 +3516,43 @@ msgstr "例外"
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "主机："
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "添加证书例外"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "主机 %1 已经在列表中"
 
 #: lib/preferences/certificatemanager.cpp:83
-#, fuzzy
-#| msgctxt "Bookmarks|"
-#| msgid "Empty"
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "清空"
+msgstr "主机名为空"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "证书例外管理器"
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "添加"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
-msgstr "删除"
+msgstr "移除"
 
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "移除条目后需要重启"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -4637,17 +4628,14 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>管理协议处理程序</b>"
 
 #: lib/preferences/preferences.ui:2480
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>通知</b>"
+msgstr "<b>证书管理器</b>"
 
 #: lib/preferences/preferences.ui:2505
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "证书例外管理器"
 
 #: lib/preferences/preferences.ui:2545
 msgctxt "Preferences|"
