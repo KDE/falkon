@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: fa_IR\n"
 "X-Qt-Contexts: true\n"
 
@@ -332,6 +332,7 @@ msgid_plural ""
 "There are still %n open tabs and your session won't be stored.\n"
 "Are you sure you want to close this window?"
 msgstr[0] ""
+msgstr[1] ""
 
 #: lib/app/browserwindow.cpp:1504
 msgctxt "BrowserWindow|"
@@ -1577,25 +1578,28 @@ msgid "few seconds"
 msgstr "چند ثانیه‌ای"
 
 #: lib/downloads/downloaditem.cpp:196
-#, qt-format
+#, fuzzy, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
 msgstr[0] "%n ثانیه"
+msgstr[1] ""
 
 #: lib/downloads/downloaditem.cpp:201
-#, qt-format
+#, fuzzy, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
 msgstr[0] "%n دقیقه"
+msgstr[1] ""
 
 #: lib/downloads/downloaditem.cpp:206
-#, qt-format
+#, fuzzy, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
 msgstr[0] "%n ساعت"
+msgstr[1] ""
 
 #: lib/downloads/downloaditem.cpp:213
 msgctxt "DownloadItem|"
