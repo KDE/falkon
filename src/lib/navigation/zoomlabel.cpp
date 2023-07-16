@@ -57,7 +57,7 @@ void ZoomLabel::requestShow()
 void ZoomLabel::valueChanged(int value)
 {
     if ((m_view) && (value != qzSettings->defaultZoomLevel) && (qzSettings->showZoomLabel)) {
-        setText(QSL("%1%").arg(m_view->zoomFactor() * 100));
+        setText(tr("%1%").arg(m_view->zoomFactor() * 100));
         show();
     }
     else {
