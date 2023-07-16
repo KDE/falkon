@@ -32,6 +32,7 @@ public:
     explicit ZoomLabel(LocationBar* parent);
 
     void setWebView(WebView* view);
+    void requestShow();
 
 protected:
     void paintEvent(QPaintEvent* e) override;

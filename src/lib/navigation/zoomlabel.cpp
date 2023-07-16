@@ -49,6 +49,11 @@ void ZoomLabel::setWebView(WebView* view)
     valueChanged(m_view->zoomLevel());
 }
 
+void ZoomLabel::requestShow()
+{
+    valueChanged(m_view->zoomLevel());
+}
+
 void ZoomLabel::valueChanged(int value)
 {
     if ((m_view) && (value != qzSettings->defaultZoomLevel) && (qzSettings->showZoomLabel)) {

@@ -373,7 +373,7 @@ void LocationBar::setGoIconVisible(bool state)
     }
     else {
         m_bookmarkIcon->show();
-        m_zoomlabel->show();
+        m_zoomlabel->requestShow();
 
         if (!qzSettings->alwaysShowGoIcon) {
             m_goIcon->hide();
