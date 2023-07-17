@@ -2061,18 +2061,18 @@ msgctxt "LocationCompleterView|"
 msgid "Search with:"
 msgstr "Търсене с:"
 
-#: lib/navigation/locationbar.cpp:92
+#: lib/navigation/locationbar.cpp:95
 msgctxt "LocationBar|"
 msgid "Paste And &Go"
 msgstr "Поставяне и &отиване"
 
-#: lib/navigation/locationbar.cpp:159
+#: lib/navigation/locationbar.cpp:163
 #, qt-format
 msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
 msgstr "Въведете адрес или използвайте търсене c %1"
 
-#: lib/navigation/locationbar.cpp:161
+#: lib/navigation/locationbar.cpp:165
 msgctxt "LocationBar|"
 msgid "Enter address"
 msgstr "Въведете адрес"
@@ -2232,6 +2232,19 @@ msgstr "Показване подсказки"
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr "Започване на търсене, когато търсачката е сменена"
+
+#: lib/navigation/zoomlabel.cpp:35
+msgctxt "ZoomLabel|"
+msgid "Reset zoom level"
+msgstr ""
+
+#: lib/navigation/zoomlabel.cpp:60
+#, fuzzy, qt-format
+#| msgctxt "Preferences|"
+#| msgid "%1%"
+msgctxt "ZoomLabel|"
+msgid "%1%"
+msgstr "%1%"
 
 #: lib/network/networkmanager.cpp:86
 msgctxt "NetworkManager|"
@@ -3672,7 +3685,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Наистина ли искате да премахнете  '%1'?"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:610
+#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:612
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "По подразбиране"
@@ -3682,78 +3695,78 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Задаване по подразбиране"
 
-#: lib/preferences/preferences.cpp:299
+#: lib/preferences/preferences.cpp:301
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:553
+#: lib/preferences/preferences.cpp:555
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Избиране на път до изпълним файл..."
 
-#: lib/preferences/preferences.cpp:596
+#: lib/preferences/preferences.cpp:598
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Екранни известия"
 
-#: lib/preferences/preferences.cpp:597
+#: lib/preferences/preferences.cpp:599
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Завлечете известието до мястото, където искате да го поставите."
 
-#: lib/preferences/preferences.cpp:646
+#: lib/preferences/preferences.cpp:648
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Избиране на папка за изтегляния..."
 
-#: lib/preferences/preferences.cpp:660
+#: lib/preferences/preferences.cpp:662
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Избиране на местоположение на таблица със стилове..."
 
-#: lib/preferences/preferences.cpp:671
+#: lib/preferences/preferences.cpp:673
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Премахнато"
 
-#: lib/preferences/preferences.cpp:773
+#: lib/preferences/preferences.cpp:775
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Избиране на път за кеша..."
 
-#: lib/preferences/preferences.cpp:804
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Нов профил"
 
-#: lib/preferences/preferences.cpp:804
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Въведете име на новия профил:"
 
-#: lib/preferences/preferences.cpp:814 lib/preferences/preferences.cpp:819
+#: lib/preferences/preferences.cpp:816 lib/preferences/preferences.cpp:821
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Грешка!"
 
-#: lib/preferences/preferences.cpp:814
+#: lib/preferences/preferences.cpp:816
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Такъв профил вече съществува!"
 
-#: lib/preferences/preferences.cpp:819
+#: lib/preferences/preferences.cpp:821
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Невъзможно създаване папка за профил!"
 
-#: lib/preferences/preferences.cpp:830
+#: lib/preferences/preferences.cpp:832
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Потвърждение"
 
-#: lib/preferences/preferences.cpp:831
+#: lib/preferences/preferences.cpp:833
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3762,12 +3775,12 @@ msgid ""
 msgstr ""
 "Наистина ли искате да премахнете профил \"%1\"? Това действие е необратимо!"
 
-#: lib/preferences/preferences.cpp:846 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:848 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Забележка: Не може да премахнете активен профил."
 
-#: lib/preferences/preferences.cpp:1103
+#: lib/preferences/preferences.cpp:1107
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Избиране на цвят"
@@ -4111,342 +4124,355 @@ msgid "Always show go icon"
 msgstr "Винаги показване на икона Отиди"
 
 #: lib/preferences/preferences.ui:824
+#, fuzzy
+#| msgctxt "WebView|"
+#| msgid "Show i&mage"
+msgctxt "Preferences|"
+msgid "Show zoom label"
+msgstr "Показване на изображение"
+
+#: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Избиране на целия текст при двойно щракване в адресната лента"
 
-#: lib/preferences/preferences.ui:831
+#: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Избиране на целия текст при щракване в адресната лента"
 
-#: lib/preferences/preferences.ui:838
+#: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Активиране на автоматично търсене от адресната лента"
 
-#: lib/preferences/preferences.ui:845
+#: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Търсене с търсачка по подразбиране"
 
-#: lib/preferences/preferences.ui:852
+#: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Показване на подсказки при търсене"
 
-#: lib/preferences/preferences.ui:875
+#: lib/preferences/preferences.ui:866
+msgctxt "Preferences|"
+msgid "Expand suggestion popup to window width"
+msgstr ""
+
+#: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Показване на прогрес на изтеглянията в адресната лента"
 
-#: lib/preferences/preferences.ui:908
+#: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Запълване"
 
-#: lib/preferences/preferences.ui:913
+#: lib/preferences/preferences.ui:927
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Отдолу"
 
-#: lib/preferences/preferences.ui:918
+#: lib/preferences/preferences.ui:932
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Отгоре"
 
-#: lib/preferences/preferences.ui:926
+#: lib/preferences/preferences.ui:940
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Потребителски цветове:"
 
-#: lib/preferences/preferences.ui:942
+#: lib/preferences/preferences.ui:956
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Избиране на цвят"
 
-#: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1265
-#: lib/preferences/preferences.ui:1799 lib/preferences/preferences.ui:1896
-#: lib/preferences/preferences.ui:2762
+#: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
+#: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
+#: lib/preferences/preferences.ui:2776
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:952
+#: lib/preferences/preferences.ui:966
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Възстановяване"
 
-#: lib/preferences/preferences.ui:1003
+#: lib/preferences/preferences.ui:1017
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Уеб настройки"
 
-#: lib/preferences/preferences.ui:1011
+#: lib/preferences/preferences.ui:1025
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "Активиране на Pepper плъгин API (PPAPI)"
 
-#: lib/preferences/preferences.ui:1018
+#: lib/preferences/preferences.ui:1032
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Използване на вграден PDF четец (изисква PPAPI)"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Използване на JavaScript"
 
-#: lib/preferences/preferences.ui:1032
+#: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Включване на връзки в последователност на фокуса"
 
 # try to detect possible XSS attacks when executing javascript
 #. try to detect possible XSS attacks when executing javascript
-#: lib/preferences/preferences.ui:1039
+#: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
 msgstr "Активиране на XSS аудит"
 
 # when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Отпечатване на елемент на фона"
 
-#: lib/preferences/preferences.ui:1053
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Анимирано превъртане"
 
-#: lib/preferences/preferences.ui:1060
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Активиране на пространствена навигация"
 
-#: lib/preferences/preferences.ui:1067
+#: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Използване на нативни ленти за превъртане"
 
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Деактивиране на автоматичното възпроизвеждане на видео"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Предотвратява WebRTC да издава локалния IP адрес"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Активиране на предварително извличане на DNS"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Активиране на заснемането на екрана"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Използване на хардуерно ускорение (изисква рестартиране)"
 
-#: lib/preferences/preferences.ui:1119
+#: lib/preferences/preferences.ui:1133
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Превъртане с колелцето на мишката"
 
-#: lib/preferences/preferences.ui:1139
+#: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "реда на страница"
 
-#: lib/preferences/preferences.ui:1150
+#: lib/preferences/preferences.ui:1164
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Мащаб на страница по подразбиране: "
 
-#: lib/preferences/preferences.ui:1189
+#: lib/preferences/preferences.ui:1203
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Локално хранилище"
 
-#: lib/preferences/preferences.ui:1197
+#: lib/preferences/preferences.ui:1211
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Разрешаване на запазване на кеша на диска"
 
-#: lib/preferences/preferences.ui:1220
+#: lib/preferences/preferences.ui:1234
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Изчистване на кеша при затваряне"
 
-#: lib/preferences/preferences.ui:1227
+#: lib/preferences/preferences.ui:1241
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Максимум:"
 
-#: lib/preferences/preferences.ui:1234
+#: lib/preferences/preferences.ui:1248
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1250
+#: lib/preferences/preferences.ui:1264
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Съхраняване на кеша в:"
 
-#: lib/preferences/preferences.ui:1278
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Разрешаване на запазване на  историята"
 
-#: lib/preferences/preferences.ui:1285
+#: lib/preferences/preferences.ui:1299
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Изчистване на историята при затваряне"
 
-#: lib/preferences/preferences.ui:1308
+#: lib/preferences/preferences.ui:1322
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Разрешаване на локално съхранение на HTML5 контента"
 
-#: lib/preferences/preferences.ui:1315
+#: lib/preferences/preferences.ui:1329
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Изтриване на локално съхранено HTML5 съдържание при затваряне"
 
-#: lib/preferences/preferences.ui:1341
+#: lib/preferences/preferences.ui:1355
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Премахване сега"
 
-#: lib/preferences/preferences.ui:1380
+#: lib/preferences/preferences.ui:1394
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Прокси"
 
-#: lib/preferences/preferences.ui:1399
+#: lib/preferences/preferences.ui:1413
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Системни настройки на прокси"
 
-#: lib/preferences/preferences.ui:1422
+#: lib/preferences/preferences.ui:1436
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Ръчни настройки"
 
-#: lib/preferences/preferences.ui:1432
+#: lib/preferences/preferences.ui:1446
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1437
+#: lib/preferences/preferences.ui:1451
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1448
+#: lib/preferences/preferences.ui:1462
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Порт:"
 
-#: lib/preferences/preferences.ui:1469
+#: lib/preferences/preferences.ui:1483
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Име потребител:"
 
-#: lib/preferences/preferences.ui:1479
+#: lib/preferences/preferences.ui:1493
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Парола:"
 
-#: lib/preferences/preferences.ui:1508
+#: lib/preferences/preferences.ui:1522
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Без прокси"
 
-#: lib/preferences/preferences.ui:1523
+#: lib/preferences/preferences.ui:1537
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Семейство шрифтове</b>"
 
-#: lib/preferences/preferences.ui:1536
+#: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Стандартен"
 
-#: lib/preferences/preferences.ui:1543
+#: lib/preferences/preferences.ui:1557
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Фиксиран"
 
-#: lib/preferences/preferences.ui:1553
+#: lib/preferences/preferences.ui:1567
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Серифен"
 
-#: lib/preferences/preferences.ui:1563
+#: lib/preferences/preferences.ui:1577
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Безсерифен"
 
-#: lib/preferences/preferences.ui:1573
+#: lib/preferences/preferences.ui:1587
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Курсивен"
 
-#: lib/preferences/preferences.ui:1625
+#: lib/preferences/preferences.ui:1639
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Фантазия"
 
-#: lib/preferences/preferences.ui:1632
+#: lib/preferences/preferences.ui:1646
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Размер на шрифта</b>"
 
-#: lib/preferences/preferences.ui:1641
+#: lib/preferences/preferences.ui:1655
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Фиксиран размер на шрифта"
 
-#: lib/preferences/preferences.ui:1648
+#: lib/preferences/preferences.ui:1662
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Размер на шрифта по подразбиране"
 
-#: lib/preferences/preferences.ui:1675
+#: lib/preferences/preferences.ui:1689
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Минимален размер на шрифта"
 
-#: lib/preferences/preferences.ui:1682
+#: lib/preferences/preferences.ui:1696
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Минимален логически размер шрифта"
 
-#: lib/preferences/preferences.ui:1715
+#: lib/preferences/preferences.ui:1729
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Комбинации</b>"
 
-#: lib/preferences/preferences.ui:1722
+#: lib/preferences/preferences.ui:1736
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Превключване на раздел с Alt + номер раздел"
 
-#: lib/preferences/preferences.ui:1729
+#: lib/preferences/preferences.ui:1743
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Зареждане на страница от бърз достъп с Ctrl + номер страницата"
 
-#: lib/preferences/preferences.ui:1736
+#: lib/preferences/preferences.ui:1750
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4455,12 +4481,12 @@ msgstr ""
 "Клавишни комбинации:<br/><b>1</b> - предишен раздел<br/><b>2</b> - следващ "
 "раздел<br/><b>/</b> -Търсене по страница"
 
-#: lib/preferences/preferences.ui:1739
+#: lib/preferences/preferences.ui:1753
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Използване единична клавишна комбинация"
 
-#: lib/preferences/preferences.ui:1746
+#: lib/preferences/preferences.ui:1760
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4469,162 +4495,162 @@ msgstr ""
 "Ако не е отметнато, предотвратява случайно излизане от приложението, ако е "
 "зададена комбинация Ctrl-W."
 
-#: lib/preferences/preferences.ui:1749
+#: lib/preferences/preferences.ui:1763
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Затваряне на приложение с Ctrl-Q"
 
-#: lib/preferences/preferences.ui:1773
+#: lib/preferences/preferences.ui:1787
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Местоположение на свалените файлове</b>"
 
-#: lib/preferences/preferences.ui:1780
+#: lib/preferences/preferences.ui:1794
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Винаги запитване за местоположение на свалянията"
 
-#: lib/preferences/preferences.ui:1787
+#: lib/preferences/preferences.ui:1801
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Път за съхраняване на файловете: "
 
-#: lib/preferences/preferences.ui:1837
+#: lib/preferences/preferences.ui:1851
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Параметри на изтегляния</b>"
 
-#: lib/preferences/preferences.ui:1844
+#: lib/preferences/preferences.ui:1858
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Затваряне на прозореца за управление, когато изтеглянето завърши"
 
-#: lib/preferences/preferences.ui:1851
+#: lib/preferences/preferences.ui:1865
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Външна програма за изтегляния</b>"
 
-#: lib/preferences/preferences.ui:1858
+#: lib/preferences/preferences.ui:1872
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Използване на външна програма за изтегляния"
 
-#: lib/preferences/preferences.ui:1870
+#: lib/preferences/preferences.ui:1884
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Изпълним файл:"
 
-#: lib/preferences/preferences.ui:1877
+#: lib/preferences/preferences.ui:1891
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Аргументи:"
 
-#: lib/preferences/preferences.ui:1884
+#: lib/preferences/preferences.ui:1898
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Оставете празно, ако не сте сигурни"
 
-#: lib/preferences/preferences.ui:1905
+#: lib/preferences/preferences.ui:1919
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> ще бъде заменен с URL адрес за свалянe"
 
-#: lib/preferences/preferences.ui:1931
+#: lib/preferences/preferences.ui:1945
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Опции на автоматично попълване на формуляри</b>"
 
-#: lib/preferences/preferences.ui:1938
+#: lib/preferences/preferences.ui:1952
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Разрешаване на запазване пароли от сайтовете"
 
-#: lib/preferences/preferences.ui:1989
+#: lib/preferences/preferences.ui:2003
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Автоматично попълване на паролите на сайтовете"
 
-#: lib/preferences/preferences.ui:2000
+#: lib/preferences/preferences.ui:2014
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Бисквитки</b>"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2021
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Други</b>"
 
-#: lib/preferences/preferences.ui:2033
+#: lib/preferences/preferences.ui:2047
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "Параметри на JavaScript"
 
-#: lib/preferences/preferences.ui:2043
+#: lib/preferences/preferences.ui:2057
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2056
+#: lib/preferences/preferences.ui:2070
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Управление на бисквитки"
 
-#: lib/preferences/preferences.ui:2066
+#: lib/preferences/preferences.ui:2080
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "Управление на параметрите за конфиденциалност на JavaScript"
 
-#: lib/preferences/preferences.ui:2089
+#: lib/preferences/preferences.ui:2103
 msgctxt "Preferences|"
 msgid "Manage HTML5 permissions"
 msgstr "Управление на HTML5 разрешения"
 
-#: lib/preferences/preferences.ui:2096
+#: lib/preferences/preferences.ui:2110
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Управление на бискитки"
 
-#: lib/preferences/preferences.ui:2116
+#: lib/preferences/preferences.ui:2130
 msgctxt "Preferences|"
 msgid "<b>HTML5 Permissions</b>"
 msgstr "<b>HTML5</b>"
 
-#: lib/preferences/preferences.ui:2129
+#: lib/preferences/preferences.ui:2143
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "HTML5 разрешения"
 
-#: lib/preferences/preferences.ui:2136
+#: lib/preferences/preferences.ui:2150
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Изпращане на заглавка \"Не проследявай\" до сървърите"
 
-#: lib/preferences/preferences.ui:2162
+#: lib/preferences/preferences.ui:2176
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Скриване след:"
 
-#: lib/preferences/preferences.ui:2175
+#: lib/preferences/preferences.ui:2189
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " секунди"
 
-#: lib/preferences/preferences.ui:2197
+#: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Известия</b>"
 
-#: lib/preferences/preferences.ui:2220
+#: lib/preferences/preferences.ui:2234
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Използване на системни известия (само за Linux)"
 
-#: lib/preferences/preferences.ui:2227
+#: lib/preferences/preferences.ui:2241
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Без известия"
 
-#: lib/preferences/preferences.ui:2250
+#: lib/preferences/preferences.ui:2264
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -4633,17 +4659,17 @@ msgstr ""
 "<b>Забележка: </b>Вие можете да промените местоположението на екранните "
 "известия, като ги влачите по екрана."
 
-#: lib/preferences/preferences.ui:2276
+#: lib/preferences/preferences.ui:2290
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Използване на екранни известия"
 
-#: lib/preferences/preferences.ui:2283
+#: lib/preferences/preferences.ui:2297
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Предварителен изглед"
 
-#: lib/preferences/preferences.ui:2348
+#: lib/preferences/preferences.ui:2362
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4652,82 +4678,82 @@ msgstr ""
 "За повече информация относно проверка на правописа, моля посетете  <a href="
 "\"https://userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 
-#: lib/preferences/preferences.ui:2390
+#: lib/preferences/preferences.ui:2404
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Настройки за проверка на правописа</b>"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2411
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Активиране на проверката на правописа"
 
-#: lib/preferences/preferences.ui:2404
+#: lib/preferences/preferences.ui:2418
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Папки на речниците</b>"
 
-#: lib/preferences/preferences.ui:2455
+#: lib/preferences/preferences.ui:2469
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Не са намерени езици"
 
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Предпочитан език за сайтовете</b>"
 
-#: lib/preferences/preferences.ui:2473
+#: lib/preferences/preferences.ui:2487
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Управление на обработването на протоколи</b>"
 
-#: lib/preferences/preferences.ui:2480
+#: lib/preferences/preferences.ui:2494
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Упрвление на сертификати</b>"
 
-#: lib/preferences/preferences.ui:2505
+#: lib/preferences/preferences.ui:2519
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Управление на изключенията за сертификати"
 
-#: lib/preferences/preferences.ui:2545
+#: lib/preferences/preferences.ui:2559
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Управление на потребител"
 
-#: lib/preferences/preferences.ui:2598
+#: lib/preferences/preferences.ui:2612
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Управление на манипулатори на протокол"
 
-#: lib/preferences/preferences.ui:2620
+#: lib/preferences/preferences.ui:2634
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Управление на търсачките</b>"
 
-#: lib/preferences/preferences.ui:2627
+#: lib/preferences/preferences.ui:2641
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Таблица със стилове автоматично се зарежда с всички сайтове: "
 
-#: lib/preferences/preferences.ui:2652
+#: lib/preferences/preferences.ui:2666
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Управление на търсачките"
 
-#: lib/preferences/preferences.ui:2687
+#: lib/preferences/preferences.ui:2701
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Потребителски таблици на стилове</b>"
 
-#: lib/preferences/preferences.ui:2712
+#: lib/preferences/preferences.ui:2726
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Езици"
 
-#: lib/preferences/preferences.ui:2734
+#: lib/preferences/preferences.ui:2748
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Настройки на идентификация на браузера</b>"

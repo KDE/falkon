@@ -2560,12 +2560,12 @@ msgctxt "LocationCompleterView|"
 msgid "Search with:"
 msgstr "Caută cu..."
 
-#: lib/navigation/locationbar.cpp:92
+#: lib/navigation/locationbar.cpp:95
 msgctxt "LocationBar|"
 msgid "Paste And &Go"
 msgstr "Lipește si &du-te"
 
-#: lib/navigation/locationbar.cpp:159
+#: lib/navigation/locationbar.cpp:163
 #, fuzzy, qt-format
 #| msgctxt "LocationBar|"
 #| msgid "Enter URL address or search on %1"
@@ -2573,7 +2573,7 @@ msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
 msgstr "Introdu adresă sau caută pe %1"
 
-#: lib/navigation/locationbar.cpp:161
+#: lib/navigation/locationbar.cpp:165
 #, fuzzy
 #| msgctxt "SiteInfo|"
 #| msgid "Site address:"
@@ -2783,6 +2783,17 @@ msgstr ""
 #: lib/navigation/websearchbar.cpp:262
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
+msgstr ""
+
+#: lib/navigation/zoomlabel.cpp:35
+msgctxt "ZoomLabel|"
+msgid "Reset zoom level"
+msgstr ""
+
+#: lib/navigation/zoomlabel.cpp:60
+#, qt-format
+msgctxt "ZoomLabel|"
+msgid "%1%"
 msgstr ""
 
 #: lib/network/networkmanager.cpp:86
@@ -4504,7 +4515,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Sunteți sigur că doriți să afișați toate parolele?"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:610
+#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:612
 msgctxt "Preferences|"
 msgid "Default"
 msgstr ""
@@ -4514,78 +4525,78 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:299
+#: lib/preferences/preferences.cpp:301
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:553
+#: lib/preferences/preferences.cpp:555
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Alegeți locația executabilului..."
 
-#: lib/preferences/preferences.cpp:596
+#: lib/preferences/preferences.cpp:598
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Notificări OSD"
 
-#: lib/preferences/preferences.cpp:597
+#: lib/preferences/preferences.cpp:599
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Trageți-o pe ecran pentru a o plasa unde doriți."
 
-#: lib/preferences/preferences.cpp:646
+#: lib/preferences/preferences.cpp:648
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Alege locul de descărcare..."
 
-#: lib/preferences/preferences.cpp:660
+#: lib/preferences/preferences.cpp:662
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Alege locul foilor de stil..."
 
-#: lib/preferences/preferences.cpp:671
+#: lib/preferences/preferences.cpp:673
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Șterse"
 
-#: lib/preferences/preferences.cpp:773
+#: lib/preferences/preferences.cpp:775
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr ""
 
-#: lib/preferences/preferences.cpp:804
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Profil nou"
 
-#: lib/preferences/preferences.cpp:804
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Introduceți denumirea noului profil:"
 
-#: lib/preferences/preferences.cpp:814 lib/preferences/preferences.cpp:819
+#: lib/preferences/preferences.cpp:816 lib/preferences/preferences.cpp:821
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Eroare!"
 
-#: lib/preferences/preferences.cpp:814
+#: lib/preferences/preferences.cpp:816
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Acest profil deja există!"
 
-#: lib/preferences/preferences.cpp:819
+#: lib/preferences/preferences.cpp:821
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Nu se poate crea dosarul profilului!"
 
-#: lib/preferences/preferences.cpp:830
+#: lib/preferences/preferences.cpp:832
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Confirmare"
 
-#: lib/preferences/preferences.cpp:831
+#: lib/preferences/preferences.cpp:833
 #, fuzzy, qt-format
 #| msgctxt "Preferences|"
 #| msgid ""
@@ -4599,12 +4610,12 @@ msgstr ""
 "Sunteți sigur că doriți să ștergeți profilul  \"%1\"? Aceacstă acțiune nu "
 "poate fi anulată!"
 
-#: lib/preferences/preferences.cpp:846 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:848 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Notă: Nu puteți șterge profilul activ."
 
-#: lib/preferences/preferences.cpp:1103
+#: lib/preferences/preferences.cpp:1107
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Alege culoarea"
@@ -4964,120 +4975,133 @@ msgid "Always show go icon"
 msgstr ""
 
 #: lib/preferences/preferences.ui:824
+#, fuzzy
+#| msgctxt "WebView|"
+#| msgid "Show i&mage"
+msgctxt "Preferences|"
+msgid "Show zoom label"
+msgstr "Afișează i&magine"
+
+#: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Selectează tot textul prin dublu-click pe bara de adrese"
 
-#: lib/preferences/preferences.ui:831
+#: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Selectează tot textul dând click pe bara de adrese"
 
-#: lib/preferences/preferences.ui:838
+#: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr ""
 
-#: lib/preferences/preferences.ui:845
+#: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr ""
 
-#: lib/preferences/preferences.ui:852
+#: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr ""
 
-#: lib/preferences/preferences.ui:875
+#: lib/preferences/preferences.ui:866
+msgctxt "Preferences|"
+msgid "Expand suggestion popup to window width"
+msgstr ""
+
+#: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr ""
 
-#: lib/preferences/preferences.ui:908
+#: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr ""
 
-#: lib/preferences/preferences.ui:913
+#: lib/preferences/preferences.ui:927
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr ""
 
-#: lib/preferences/preferences.ui:918
+#: lib/preferences/preferences.ui:932
 msgctxt "Preferences|"
 msgid "Top"
 msgstr ""
 
-#: lib/preferences/preferences.ui:926
+#: lib/preferences/preferences.ui:940
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr ""
 
-#: lib/preferences/preferences.ui:942
+#: lib/preferences/preferences.ui:956
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr ""
 
-#: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1265
-#: lib/preferences/preferences.ui:1799 lib/preferences/preferences.ui:1896
-#: lib/preferences/preferences.ui:2762
+#: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
+#: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
+#: lib/preferences/preferences.ui:2776
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:952
+#: lib/preferences/preferences.ui:966
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1003
+#: lib/preferences/preferences.ui:1017
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Configurare web"
 
-#: lib/preferences/preferences.ui:1011
+#: lib/preferences/preferences.ui:1025
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1018
+#: lib/preferences/preferences.ui:1032
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Permite JavaScript"
 
-#: lib/preferences/preferences.ui:1032
+#: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Adaugă legături la lanțul de focalizare"
 
 #. try to detect possible XSS attacks when executing javascript
-#: lib/preferences/preferences.ui:1039
+#: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
 msgstr "Activează audit XSS"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Tipărește fundalul elementului"
 
-#: lib/preferences/preferences.ui:1053
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1060
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1067
+#: lib/preferences/preferences.ui:1081
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Mouse wheel scrolls"
@@ -5085,17 +5109,17 @@ msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Scrool cu rotița mose-ului"
 
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1102
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Allow DNS Prefetch"
@@ -5103,42 +5127,42 @@ msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Permite DNS Prefetch"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1119
+#: lib/preferences/preferences.ui:1133
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Scrool cu rotița mose-ului"
 
-#: lib/preferences/preferences.ui:1139
+#: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "linii pe pagină"
 
-#: lib/preferences/preferences.ui:1150
+#: lib/preferences/preferences.ui:1164
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Apropierea predefinită pe pagini:"
 
-#: lib/preferences/preferences.ui:1189
+#: lib/preferences/preferences.ui:1203
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Stocare locală"
 
-#: lib/preferences/preferences.ui:1197
+#: lib/preferences/preferences.ui:1211
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Permite stocarea de date temporare de pe rețea pe disk"
 
-#: lib/preferences/preferences.ui:1220
+#: lib/preferences/preferences.ui:1234
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Delete history on close"
@@ -5146,7 +5170,7 @@ msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Șterge istoria la ieșire"
 
-#: lib/preferences/preferences.ui:1227
+#: lib/preferences/preferences.ui:1241
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Maximum "
@@ -5154,7 +5178,7 @@ msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Maxim"
 
-#: lib/preferences/preferences.ui:1234
+#: lib/preferences/preferences.ui:1248
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "50 MB"
@@ -5162,331 +5186,331 @@ msgctxt "Preferences|"
 msgid " MB"
 msgstr "50 MB"
 
-#: lib/preferences/preferences.ui:1250
+#: lib/preferences/preferences.ui:1264
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1278
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Permite stocarea istoricului"
 
-#: lib/preferences/preferences.ui:1285
+#: lib/preferences/preferences.ui:1299
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Șterge istoria la ieșire"
 
-#: lib/preferences/preferences.ui:1308
+#: lib/preferences/preferences.ui:1322
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Permite stocare locală de conținut web HTML5"
 
-#: lib/preferences/preferences.ui:1315
+#: lib/preferences/preferences.ui:1329
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Șterge conținut web HTML5 stocat local la închidere"
 
-#: lib/preferences/preferences.ui:1341
+#: lib/preferences/preferences.ui:1355
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Șterge acum"
 
-#: lib/preferences/preferences.ui:1380
+#: lib/preferences/preferences.ui:1394
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Configurare proxy"
 
-#: lib/preferences/preferences.ui:1399
+#: lib/preferences/preferences.ui:1413
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Configurare proxy sistem"
 
-#: lib/preferences/preferences.ui:1422
+#: lib/preferences/preferences.ui:1436
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Configurare manuală"
 
-#: lib/preferences/preferences.ui:1432
+#: lib/preferences/preferences.ui:1446
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1437
+#: lib/preferences/preferences.ui:1451
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1448
+#: lib/preferences/preferences.ui:1462
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Port:"
 
-#: lib/preferences/preferences.ui:1469
+#: lib/preferences/preferences.ui:1483
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Nume utilizator:"
 
-#: lib/preferences/preferences.ui:1479
+#: lib/preferences/preferences.ui:1493
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Parola:"
 
-#: lib/preferences/preferences.ui:1508
+#: lib/preferences/preferences.ui:1522
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1523
+#: lib/preferences/preferences.ui:1537
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Familii de fonturi</b>"
 
-#: lib/preferences/preferences.ui:1536
+#: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Standard"
 
-#: lib/preferences/preferences.ui:1543
+#: lib/preferences/preferences.ui:1557
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Fixat"
 
-#: lib/preferences/preferences.ui:1553
+#: lib/preferences/preferences.ui:1567
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1563
+#: lib/preferences/preferences.ui:1577
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: lib/preferences/preferences.ui:1573
+#: lib/preferences/preferences.ui:1587
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Cursiv"
 
-#: lib/preferences/preferences.ui:1625
+#: lib/preferences/preferences.ui:1639
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasy"
 
-#: lib/preferences/preferences.ui:1632
+#: lib/preferences/preferences.ui:1646
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Dimensiuni font</b>"
 
-#: lib/preferences/preferences.ui:1641
+#: lib/preferences/preferences.ui:1655
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Dimensiune font fixă"
 
-#: lib/preferences/preferences.ui:1648
+#: lib/preferences/preferences.ui:1662
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Dimensiune font implicită"
 
-#: lib/preferences/preferences.ui:1675
+#: lib/preferences/preferences.ui:1689
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Dimensiune font minimă"
 
-#: lib/preferences/preferences.ui:1682
+#: lib/preferences/preferences.ui:1696
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Dimensiunea logică minimă a font-ului"
 
-#: lib/preferences/preferences.ui:1715
+#: lib/preferences/preferences.ui:1729
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1722
+#: lib/preferences/preferences.ui:1736
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1729
+#: lib/preferences/preferences.ui:1743
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1736
+#: lib/preferences/preferences.ui:1750
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
 "><b>/</b> - search on page"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1739
+#: lib/preferences/preferences.ui:1753
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1746
+#: lib/preferences/preferences.ui:1760
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
 "shortcut was intended."
 msgstr ""
 
-#: lib/preferences/preferences.ui:1749
+#: lib/preferences/preferences.ui:1763
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1773
+#: lib/preferences/preferences.ui:1787
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Locație de descărcare</b>"
 
-#: lib/preferences/preferences.ui:1780
+#: lib/preferences/preferences.ui:1794
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Întreabă de fiecare dată locația de descărcare"
 
-#: lib/preferences/preferences.ui:1787
+#: lib/preferences/preferences.ui:1801
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Folosește locația definită:"
 
-#: lib/preferences/preferences.ui:1837
+#: lib/preferences/preferences.ui:1851
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Opțiuni de descărcare</b>"
 
-#: lib/preferences/preferences.ui:1844
+#: lib/preferences/preferences.ui:1858
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Închide managerul de descărcări când descărcările iau sfârșit"
 
-#: lib/preferences/preferences.ui:1851
+#: lib/preferences/preferences.ui:1865
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Manager de descărcări extern</b>"
 
-#: lib/preferences/preferences.ui:1858
+#: lib/preferences/preferences.ui:1872
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Folosește manager de descărcări extern"
 
-#: lib/preferences/preferences.ui:1870
+#: lib/preferences/preferences.ui:1884
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Executabil:"
 
-#: lib/preferences/preferences.ui:1877
+#: lib/preferences/preferences.ui:1891
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Argumente:"
 
-#: lib/preferences/preferences.ui:1884
+#: lib/preferences/preferences.ui:1898
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1905
+#: lib/preferences/preferences.ui:1919
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1931
+#: lib/preferences/preferences.ui:1945
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Optiuni de auto-umplere</b>"
 
-#: lib/preferences/preferences.ui:1938
+#: lib/preferences/preferences.ui:1952
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Permite salvarea parolelor de pe site-uri"
 
-#: lib/preferences/preferences.ui:1989
+#: lib/preferences/preferences.ui:2003
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2000
+#: lib/preferences/preferences.ui:2014
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Cookie-uri</b>"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2021
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Altele</b>"
 
-#: lib/preferences/preferences.ui:2033
+#: lib/preferences/preferences.ui:2047
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2043
+#: lib/preferences/preferences.ui:2057
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2056
+#: lib/preferences/preferences.ui:2070
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Manager de cookie-uri"
 
-#: lib/preferences/preferences.ui:2066
+#: lib/preferences/preferences.ui:2080
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2089
+#: lib/preferences/preferences.ui:2103
 msgctxt "Preferences|"
 msgid "Manage HTML5 permissions"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2096
+#: lib/preferences/preferences.ui:2110
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2116
+#: lib/preferences/preferences.ui:2130
 msgctxt "Preferences|"
 msgid "<b>HTML5 Permissions</b>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2129
+#: lib/preferences/preferences.ui:2143
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2136
+#: lib/preferences/preferences.ui:2150
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Trimite anteturi Do Not Track la servere"
 
-#: lib/preferences/preferences.ui:2162
+#: lib/preferences/preferences.ui:2176
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Timp limită de expirare:"
 
-#: lib/preferences/preferences.ui:2175
+#: lib/preferences/preferences.ui:2189
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr "secunde"
 
-#: lib/preferences/preferences.ui:2197
+#: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Notificari</b>"
 
-#: lib/preferences/preferences.ui:2220
+#: lib/preferences/preferences.ui:2234
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Folosește notificări native de sistem (doar pentru Linux)"
 
-#: lib/preferences/preferences.ui:2227
+#: lib/preferences/preferences.ui:2241
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Nu folosi notificări"
 
-#: lib/preferences/preferences.ui:2250
+#: lib/preferences/preferences.ui:2264
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -5494,12 +5518,12 @@ msgid ""
 msgstr ""
 "<b>Notă: </b>Puteți schimba locația notificărilor OSD mutându-le pe ecran."
 
-#: lib/preferences/preferences.ui:2276
+#: lib/preferences/preferences.ui:2290
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Folosește notificări OSD"
 
-#: lib/preferences/preferences.ui:2283
+#: lib/preferences/preferences.ui:2297
 #, fuzzy
 #| msgctxt "SiteInfo|"
 #| msgid "<b>Preview</b>"
@@ -5507,14 +5531,14 @@ msgctxt "Preferences|"
 msgid "Preview"
 msgstr "<b>Previzualizare</b>"
 
-#: lib/preferences/preferences.ui:2348
+#: lib/preferences/preferences.ui:2362
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
 "userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 msgstr ""
 
-#: lib/preferences/preferences.ui:2390
+#: lib/preferences/preferences.ui:2404
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "<b>AutoFill options</b>"
@@ -5522,7 +5546,7 @@ msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Optiuni de auto-umplere</b>"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2411
 #, fuzzy
 #| msgctxt "AdBlockDialog|"
 #| msgid "Enable AdBlock"
@@ -5530,7 +5554,7 @@ msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Activează AdBlock"
 
-#: lib/preferences/preferences.ui:2404
+#: lib/preferences/preferences.ui:2418
 #, fuzzy
 #| msgctxt "SiteInfo|"
 #| msgid "<b>Database details</b>"
@@ -5538,7 +5562,7 @@ msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Detalii bază de date</b>"
 
-#: lib/preferences/preferences.ui:2455
+#: lib/preferences/preferences.ui:2469
 #, fuzzy
 #| msgctxt "SearchToolBar|"
 #| msgid "No results found."
@@ -5546,12 +5570,12 @@ msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Nu exista rezultate."
 
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Limbi preferate pentru site-uri</b>"
 
-#: lib/preferences/preferences.ui:2473
+#: lib/preferences/preferences.ui:2487
 #, fuzzy
 #| msgctxt "SearchEnginesDialog|"
 #| msgid "Manage Search Engines"
@@ -5559,7 +5583,7 @@ msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "Configurează motoare de căutare"
 
-#: lib/preferences/preferences.ui:2480
+#: lib/preferences/preferences.ui:2494
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "<b>SSL Certificates</b>"
@@ -5567,7 +5591,7 @@ msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Certificate SSL</b>"
 
-#: lib/preferences/preferences.ui:2505
+#: lib/preferences/preferences.ui:2519
 #, fuzzy
 #| msgctxt "SSLManager|"
 #| msgid "Certificate Informations"
@@ -5575,12 +5599,12 @@ msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Informatii despre certificat"
 
-#: lib/preferences/preferences.ui:2545
+#: lib/preferences/preferences.ui:2559
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2598
+#: lib/preferences/preferences.ui:2612
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Cookies Manager"
@@ -5588,7 +5612,7 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Manager de cookie-uri"
 
-#: lib/preferences/preferences.ui:2620
+#: lib/preferences/preferences.ui:2634
 #, fuzzy
 #| msgctxt "SearchEnginesDialog|"
 #| msgid "Manage Search Engines"
@@ -5596,7 +5620,7 @@ msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "Configurează motoare de căutare"
 
-#: lib/preferences/preferences.ui:2627
+#: lib/preferences/preferences.ui:2641
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "StyleSheet automatically loaded with all websites: "
@@ -5604,7 +5628,7 @@ msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Foi de stil încărcate automat pe toate site-urile:"
 
-#: lib/preferences/preferences.ui:2652
+#: lib/preferences/preferences.ui:2666
 #, fuzzy
 #| msgctxt "SearchEnginesDialog|"
 #| msgid "Search Engine"
@@ -5612,17 +5636,17 @@ msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Motor de cautare"
 
-#: lib/preferences/preferences.ui:2687
+#: lib/preferences/preferences.ui:2701
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2712
+#: lib/preferences/preferences.ui:2726
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Limbi"
 
-#: lib/preferences/preferences.ui:2734
+#: lib/preferences/preferences.ui:2748
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr ""
