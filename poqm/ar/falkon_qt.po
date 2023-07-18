@@ -2075,18 +2075,18 @@ msgctxt "LocationCompleterView|"
 msgid "Search with:"
 msgstr "ابحث باستخدام:"
 
-#: lib/navigation/locationbar.cpp:92
+#: lib/navigation/locationbar.cpp:95
 msgctxt "LocationBar|"
 msgid "Paste And &Go"
 msgstr "ألصِق وا&ذهب"
 
-#: lib/navigation/locationbar.cpp:159
+#: lib/navigation/locationbar.cpp:163
 #, qt-format
 msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
 msgstr "أدخل عنوانا أو ابحث باستخدام %1"
 
-#: lib/navigation/locationbar.cpp:161
+#: lib/navigation/locationbar.cpp:165
 msgctxt "LocationBar|"
 msgid "Enter address"
 msgstr "أدخل عنوانا"
@@ -2246,6 +2246,19 @@ msgstr "أظهر الاقتراحات"
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr "ابحث عندما أُغير المحرك"
+
+#: lib/navigation/zoomlabel.cpp:35
+msgctxt "ZoomLabel|"
+msgid "Reset zoom level"
+msgstr ""
+
+#: lib/navigation/zoomlabel.cpp:60
+#, fuzzy, qt-format
+#| msgctxt "Preferences|"
+#| msgid "%1%"
+msgctxt "ZoomLabel|"
+msgid "%1%"
+msgstr "%1٪"
 
 #: lib/network/networkmanager.cpp:86
 msgctxt "NetworkManager|"
@@ -3676,7 +3689,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "أمتأكّد من إزالة ”%1“؟"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:610
+#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:612
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "المبدئي"
@@ -3686,78 +3699,78 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "اجعله المبدئي"
 
-#: lib/preferences/preferences.cpp:299
+#: lib/preferences/preferences.cpp:301
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1٪"
 
-#: lib/preferences/preferences.cpp:553
+#: lib/preferences/preferences.cpp:555
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "اختر موقع البرنامج..."
 
-#: lib/preferences/preferences.cpp:596
+#: lib/preferences/preferences.cpp:598
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "تنبيه OSD"
 
-#: lib/preferences/preferences.cpp:597
+#: lib/preferences/preferences.cpp:599
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "اسحبه ضمن الشاشة لتجعله أين شئت."
 
-#: lib/preferences/preferences.cpp:646
+#: lib/preferences/preferences.cpp:648
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "اختر موقع التنزيل..."
 
-#: lib/preferences/preferences.cpp:660
+#: lib/preferences/preferences.cpp:662
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "اختر موقع ورقة الأنماط..."
 
-#: lib/preferences/preferences.cpp:671
+#: lib/preferences/preferences.cpp:673
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "حُذف"
 
-#: lib/preferences/preferences.cpp:773
+#: lib/preferences/preferences.cpp:775
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "اختر مسار الخبيئة..."
 
-#: lib/preferences/preferences.cpp:804
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "حساب جديد"
 
-#: lib/preferences/preferences.cpp:804
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "اكتب اسم الحساب الجديد:"
 
-#: lib/preferences/preferences.cpp:814 lib/preferences/preferences.cpp:819
+#: lib/preferences/preferences.cpp:816 lib/preferences/preferences.cpp:821
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "خطأ!"
 
-#: lib/preferences/preferences.cpp:814
+#: lib/preferences/preferences.cpp:816
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "يحمل حساب أنشئ سابقاً الاسم عينه!"
 
-#: lib/preferences/preferences.cpp:819
+#: lib/preferences/preferences.cpp:821
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "تعذر إنشاء مجلد الحساب!"
 
-#: lib/preferences/preferences.cpp:830
+#: lib/preferences/preferences.cpp:832
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "تأكيد"
 
-#: lib/preferences/preferences.cpp:831
+#: lib/preferences/preferences.cpp:833
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3766,12 +3779,12 @@ msgid ""
 msgstr ""
 "أتريد حقّا أن تحذف الحساب \"%1\" للأبد؟ لا يمكنك التراجع عن هذا فيما بعد!"
 
-#: lib/preferences/preferences.cpp:846 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:848 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "ملاحظة: لا يمكنك حذف الحساب الحالي."
 
-#: lib/preferences/preferences.cpp:1103
+#: lib/preferences/preferences.cpp:1107
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "اختر لوناً"
@@ -4117,343 +4130,356 @@ msgid "Always show go icon"
 msgstr "أظهر رمز الذهاب دوماً"
 
 #: lib/preferences/preferences.ui:824
+#, fuzzy
+#| msgctxt "WebView|"
+#| msgid "Show i&mage"
+msgctxt "Preferences|"
+msgid "Show zoom label"
+msgstr "أظهر ال&صورة"
+
+#: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "اختر كل النص بالنقر المزدوج ضمن شريط العناوين"
 
-#: lib/preferences/preferences.ui:831
+#: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "اختر كل النص بالنقر المُفرد ضمن شريط العناوين"
 
-#: lib/preferences/preferences.ui:838
+#: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "فعل البحث الآلي من شريط العنوان"
 
-#: lib/preferences/preferences.ui:845
+#: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "ابحث بمحرك البحث المبدئي"
 
-#: lib/preferences/preferences.ui:852
+#: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "اعرض اقتراحات البحث"
 
-#: lib/preferences/preferences.ui:875
+#: lib/preferences/preferences.ui:866
+msgctxt "Preferences|"
+msgid "Expand suggestion popup to window width"
+msgstr ""
+
+#: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "أظهر مقدار التقدم في تحميل الصفحة ضمن شريط العناوين"
 
-#: lib/preferences/preferences.ui:908
+#: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "املأ"
 
-#: lib/preferences/preferences.ui:913
+#: lib/preferences/preferences.ui:927
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "أسفل"
 
-#: lib/preferences/preferences.ui:918
+#: lib/preferences/preferences.ui:932
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "أعلى"
 
-#: lib/preferences/preferences.ui:926
+#: lib/preferences/preferences.ui:940
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "لون مُخصّص:"
 
-#: lib/preferences/preferences.ui:942
+#: lib/preferences/preferences.ui:956
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "اختر لوناً"
 
-#: lib/preferences/preferences.ui:945 lib/preferences/preferences.ui:1265
-#: lib/preferences/preferences.ui:1799 lib/preferences/preferences.ui:1896
-#: lib/preferences/preferences.ui:2762
+#: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
+#: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
+#: lib/preferences/preferences.ui:2776
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:952
+#: lib/preferences/preferences.ui:966
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "صفر"
 
-#: lib/preferences/preferences.ui:1003
+#: lib/preferences/preferences.ui:1017
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "ضبط الوِب"
 
-#: lib/preferences/preferences.ui:1011
+#: lib/preferences/preferences.ui:1025
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "مكن واجهة برمجيات ملحقات Pepper‏ (PPAPI)"
 
-#: lib/preferences/preferences.ui:1018
+#: lib/preferences/preferences.ui:1032
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "استخدم مستعرض بي دي اف المدمج (يحتاج PPAPI)"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "اسمح بجافاسكربت"
 
-#: lib/preferences/preferences.ui:1032
+#: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr ""
 "ضمن الروابط في سلسلة الانتقالات لدى الانتقال بين العناصر باستخدام مفتاح Tab"
 
 #. try to detect possible XSS attacks when executing javascript
-#: lib/preferences/preferences.ui:1039
+#: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
 msgstr "فعل فحص النصوص البرمجية العابرة للمواقع (XSS)"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "اطبع خلفية العنصر"
 
-#: lib/preferences/preferences.ui:1053
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "تمرير مُتحرك"
 
-#: lib/preferences/preferences.ui:1060
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "فعل التنقل المكاني"
 
-#: lib/preferences/preferences.ui:1067
+#: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "استخدم أشرطة التمرير الأصيلة"
 
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "عطل التشغيل آلي للفيديوهات"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "امنع WebRTC من تسريب عنوان IP المحلي"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "مكن الجلب المسبق لـDNS"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "مكن التقاط الشّاشة"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "استخدم تسريع العتاد (بحاجة لإعادة تشغيل)"
 
-#: lib/preferences/preferences.ui:1119
+#: lib/preferences/preferences.ui:1133
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "مرر بعجلة الفأرة"
 
-#: lib/preferences/preferences.ui:1139
+#: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "الأسطر في الصفحة"
 
-#: lib/preferences/preferences.ui:1150
+#: lib/preferences/preferences.ui:1164
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "التقريب المبدئي في الصفحات: "
 
-#: lib/preferences/preferences.ui:1189
+#: lib/preferences/preferences.ui:1203
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "التخزين المحلي"
 
-#: lib/preferences/preferences.ui:1197
+#: lib/preferences/preferences.ui:1211
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "اسمح بتخزين خبيئة الشبكة على القرص"
 
-#: lib/preferences/preferences.ui:1220
+#: lib/preferences/preferences.ui:1234
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "احذف الخبيئة عند الإغلاق"
 
-#: lib/preferences/preferences.ui:1227
+#: lib/preferences/preferences.ui:1241
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "الأقصى:"
 
-#: lib/preferences/preferences.ui:1234
+#: lib/preferences/preferences.ui:1248
 msgctxt "Preferences|"
 msgid " MB"
 msgstr "م.بايت"
 
-#: lib/preferences/preferences.ui:1250
+#: lib/preferences/preferences.ui:1264
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "احفظ الخبيئة في:"
 
-#: lib/preferences/preferences.ui:1278
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "اسمح بحفظ التأريخ"
 
-#: lib/preferences/preferences.ui:1285
+#: lib/preferences/preferences.ui:1299
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "امسح التأريخ عند إنهاء البرنامج"
 
-#: lib/preferences/preferences.ui:1308
+#: lib/preferences/preferences.ui:1322
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "اسمح بالتخزين المحلي لمحتوى HTML5"
 
-#: lib/preferences/preferences.ui:1315
+#: lib/preferences/preferences.ui:1329
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "امسح محتويات تخزين HTML5 المحلي عند إنهاء البرنامج"
 
-#: lib/preferences/preferences.ui:1341
+#: lib/preferences/preferences.ui:1355
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "امسح الآن"
 
-#: lib/preferences/preferences.ui:1380
+#: lib/preferences/preferences.ui:1394
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "ضبط الخادوم الوكيل"
 
-#: lib/preferences/preferences.ui:1399
+#: lib/preferences/preferences.ui:1413
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "ضبط الخادوم الوكيل الذي يستخدمه النظام"
 
-#: lib/preferences/preferences.ui:1422
+#: lib/preferences/preferences.ui:1436
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "ضبط يدوي"
 
-#: lib/preferences/preferences.ui:1432
+#: lib/preferences/preferences.ui:1446
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1437
+#: lib/preferences/preferences.ui:1451
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1448
+#: lib/preferences/preferences.ui:1462
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "المنفذ:"
 
-#: lib/preferences/preferences.ui:1469
+#: lib/preferences/preferences.ui:1483
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "اسم المستخدم:"
 
-#: lib/preferences/preferences.ui:1479
+#: lib/preferences/preferences.ui:1493
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "كلمة المرور:"
 
-#: lib/preferences/preferences.ui:1508
+#: lib/preferences/preferences.ui:1522
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "بلا خادوم وكيل"
 
-#: lib/preferences/preferences.ui:1523
+#: lib/preferences/preferences.ui:1537
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>مجموعات الخطوط</b>"
 
-#: lib/preferences/preferences.ui:1536
+#: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "قياسي"
 
-#: lib/preferences/preferences.ui:1543
+#: lib/preferences/preferences.ui:1557
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "ثابت العرض"
 
-#: lib/preferences/preferences.ui:1553
+#: lib/preferences/preferences.ui:1567
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "مُذيل"
 
-#: lib/preferences/preferences.ui:1563
+#: lib/preferences/preferences.ui:1577
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "غير مُذيل"
 
-#: lib/preferences/preferences.ui:1573
+#: lib/preferences/preferences.ui:1587
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "مخطوطات"
 
-#: lib/preferences/preferences.ui:1625
+#: lib/preferences/preferences.ui:1639
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "خيالي"
 
-#: lib/preferences/preferences.ui:1632
+#: lib/preferences/preferences.ui:1646
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>حجوم الخطوط</b>"
 
-#: lib/preferences/preferences.ui:1641
+#: lib/preferences/preferences.ui:1655
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "حجم الخط الثابت العرض"
 
-#: lib/preferences/preferences.ui:1648
+#: lib/preferences/preferences.ui:1662
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "حجم الخط المبدئي"
 
-#: lib/preferences/preferences.ui:1675
+#: lib/preferences/preferences.ui:1689
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "أدنى حجم للخط"
 
-#: lib/preferences/preferences.ui:1682
+#: lib/preferences/preferences.ui:1696
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "أدنى حجم منطقي للخط"
 
-#: lib/preferences/preferences.ui:1715
+#: lib/preferences/preferences.ui:1729
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>الاختصارات</b>"
 
-#: lib/preferences/preferences.ui:1722
+#: lib/preferences/preferences.ui:1736
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "انتقل إلى الألسنة باستخدام مفتاح Alt + مفتاح الرقم الموافق لرقم اللسان"
 
-#: lib/preferences/preferences.ui:1729
+#: lib/preferences/preferences.ui:1743
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr ""
 "افتح مُدخلات الوصول السريع باستخدام مفتاح التحكم (Ctrl) + مفتاح الرقم الموافق "
 "لرقم المُدخلة"
 
-#: lib/preferences/preferences.ui:1736
+#: lib/preferences/preferences.ui:1750
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4462,12 +4488,12 @@ msgstr ""
 "الاختصارات الحالية:<br/><b>1</b> - اللسان السابق<br/><b>2</b> - اللسان "
 "التالي<br/><b>/</b> - ابحث في الصفحة"
 
-#: lib/preferences/preferences.ui:1739
+#: lib/preferences/preferences.ui:1753
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "استخدم اختصارات بمفتاح واحد"
 
-#: lib/preferences/preferences.ui:1746
+#: lib/preferences/preferences.ui:1760
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4475,180 +4501,180 @@ msgid ""
 msgstr ""
 "إذا لم يفعل، سيمنع الخروج العرضي من التطبيق إذا كان اختصار CTRL-W المقصود."
 
-#: lib/preferences/preferences.ui:1749
+#: lib/preferences/preferences.ui:1763
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "أغلق الطبيق باستخدام Ctrl-Q"
 
-#: lib/preferences/preferences.ui:1773
+#: lib/preferences/preferences.ui:1787
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>مجلد التنزيل</b>"
 
-#: lib/preferences/preferences.ui:1780
+#: lib/preferences/preferences.ui:1794
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "اسألني كل مرة أين يُحفظ التنزيل"
 
-#: lib/preferences/preferences.ui:1787
+#: lib/preferences/preferences.ui:1801
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "استخدم الموقع المحدد:  "
 
-#: lib/preferences/preferences.ui:1837
+#: lib/preferences/preferences.ui:1851
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>خيارات التنزيل</b>"
 
-#: lib/preferences/preferences.ui:1844
+#: lib/preferences/preferences.ui:1858
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "أغلق مدير التنزيل عند إتمام التنزيل"
 
-#: lib/preferences/preferences.ui:1851
+#: lib/preferences/preferences.ui:1865
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>مدير التنزيل الخارجي</b>"
 
-#: lib/preferences/preferences.ui:1858
+#: lib/preferences/preferences.ui:1872
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "استخدم برنامجاً خارجيّا للتنزيل"
 
-#: lib/preferences/preferences.ui:1870
+#: lib/preferences/preferences.ui:1884
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "البرنامج:"
 
-#: lib/preferences/preferences.ui:1877
+#: lib/preferences/preferences.ui:1891
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "المُبادلات:"
 
-#: lib/preferences/preferences.ui:1884
+#: lib/preferences/preferences.ui:1898
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "اتركه فارغاً إن لم تكن متأكداً"
 
-#: lib/preferences/preferences.ui:1905
+#: lib/preferences/preferences.ui:1919
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "سيحل رابط التنزيل محل <b>%d</b>"
 
-#: lib/preferences/preferences.ui:1931
+#: lib/preferences/preferences.ui:1945
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>خيارات الملء التلقائي</b>"
 
-#: lib/preferences/preferences.ui:1938
+#: lib/preferences/preferences.ui:1952
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "اسمح بحفظ كلمات المرور من المواقع"
 
-#: lib/preferences/preferences.ui:1989
+#: lib/preferences/preferences.ui:2003
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "يكمل كلمات السر في المواقع آليا"
 
-#: lib/preferences/preferences.ui:2000
+#: lib/preferences/preferences.ui:2014
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>الكعكات</b>"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2021
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>غيرها</b>"
 
-#: lib/preferences/preferences.ui:2033
+#: lib/preferences/preferences.ui:2047
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "خيارات جافاسكربت"
 
-#: lib/preferences/preferences.ui:2043
+#: lib/preferences/preferences.ui:2057
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>جافاسكربت</b>"
 
-#: lib/preferences/preferences.ui:2056
+#: lib/preferences/preferences.ui:2070
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "مُدير الكعكات"
 
-#: lib/preferences/preferences.ui:2066
+#: lib/preferences/preferences.ui:2080
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "أدر خيارات خصوصية جافاسكربت"
 
-#: lib/preferences/preferences.ui:2089
+#: lib/preferences/preferences.ui:2103
 msgctxt "Preferences|"
 msgid "Manage HTML5 permissions"
 msgstr "أدر أذونات HTML5"
 
-#: lib/preferences/preferences.ui:2096
+#: lib/preferences/preferences.ui:2110
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "أدر الكعكات"
 
-#: lib/preferences/preferences.ui:2116
+#: lib/preferences/preferences.ui:2130
 msgctxt "Preferences|"
 msgid "<b>HTML5 Permissions</b>"
 msgstr "<b>أذونات HTML5</b>"
 
-#: lib/preferences/preferences.ui:2129
+#: lib/preferences/preferences.ui:2143
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "أذونات HTML5"
 
-#: lib/preferences/preferences.ui:2136
+#: lib/preferences/preferences.ui:2150
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr ""
 "أرسل ترويسة \"Do Not Track\" للخواديم لإبلاغها أني لا أريدها أن تُتابعني  "
 
-#: lib/preferences/preferences.ui:2162
+#: lib/preferences/preferences.ui:2176
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "وقت انتهاء العرض:"
 
-#: lib/preferences/preferences.ui:2175
+#: lib/preferences/preferences.ui:2189
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " ثا"
 
-#: lib/preferences/preferences.ui:2197
+#: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>التنبيهات</b>"
 
-#: lib/preferences/preferences.ui:2220
+#: lib/preferences/preferences.ui:2234
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "استخدم تنبيهات النظام الأصلية (في لينكس فقط)"
 
-#: lib/preferences/preferences.ui:2227
+#: lib/preferences/preferences.ui:2241
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "لا تعرض التنبيهات"
 
-#: lib/preferences/preferences.ui:2250
+#: lib/preferences/preferences.ui:2264
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
 "the screen."
 msgstr "<b>ملاحظة: </b>بإمكانك تغيير موقع تنبيه OSD بتحريكه ضمن الشاشة."
 
-#: lib/preferences/preferences.ui:2276
+#: lib/preferences/preferences.ui:2290
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "استخدم تنبيهات OSD"
 
-#: lib/preferences/preferences.ui:2283
+#: lib/preferences/preferences.ui:2297
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "معاينة"
 
-#: lib/preferences/preferences.ui:2348
+#: lib/preferences/preferences.ui:2362
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4657,82 +4683,82 @@ msgstr ""
 "لمعلومات أكثر عن التدقيق الإملائي رجاء طالع <a href=\"https://userbase.kde."
 "org/Falkon#Spell_Check\">ويكي</a>."
 
-#: lib/preferences/preferences.ui:2390
+#: lib/preferences/preferences.ui:2404
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>خيارات التدقيق الإملائي</b>"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2411
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "فعّل التدقيق الإملائي"
 
-#: lib/preferences/preferences.ui:2404
+#: lib/preferences/preferences.ui:2418
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>أدلة القواميس</b>"
 
-#: lib/preferences/preferences.ui:2455
+#: lib/preferences/preferences.ui:2469
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "لم يُعثر على لغات"
 
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>اللغات المفضلة للمواقع</b>"
 
-#: lib/preferences/preferences.ui:2473
+#: lib/preferences/preferences.ui:2487
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>أدر مباشرات الموافيق</b>"
 
-#: lib/preferences/preferences.ui:2480
+#: lib/preferences/preferences.ui:2494
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>مدير الشّهادات</b>"
 
-#: lib/preferences/preferences.ui:2505
+#: lib/preferences/preferences.ui:2519
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "مدير استثناءات الشهادات"
 
-#: lib/preferences/preferences.ui:2545
+#: lib/preferences/preferences.ui:2559
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "مُدير وكيل المستخدم"
 
-#: lib/preferences/preferences.ui:2598
+#: lib/preferences/preferences.ui:2612
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "مُدير مباشرات الموافيق"
 
-#: lib/preferences/preferences.ui:2620
+#: lib/preferences/preferences.ui:2634
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>أدر محركات البحث</b>"
 
-#: lib/preferences/preferences.ui:2627
+#: lib/preferences/preferences.ui:2641
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "ورقة أنماط تُحمل تلقائيّا لكل المواقع:"
 
-#: lib/preferences/preferences.ui:2652
+#: lib/preferences/preferences.ui:2666
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "مدير محركات البحث"
 
-#: lib/preferences/preferences.ui:2687
+#: lib/preferences/preferences.ui:2701
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>ورقة أنماط المستخدم</b>"
 
-#: lib/preferences/preferences.ui:2712
+#: lib/preferences/preferences.ui:2726
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "اللغات"
 
-#: lib/preferences/preferences.ui:2734
+#: lib/preferences/preferences.ui:2748
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>غير هوية المتصفح</b>"
