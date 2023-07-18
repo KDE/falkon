@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-06-19 10:50+0200\n"
+"PO-Revision-Date: 2023-07-17 11:00+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: nl_NL\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2246,12 +2246,10 @@ msgstr "Zoeken wanneer de zoekmachine wordt gewijzigd"
 #: lib/navigation/zoomlabel.cpp:35
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Zoomniveau resetten"
 
 #: lib/navigation/zoomlabel.cpp:60
-#, fuzzy, qt-format
-#| msgctxt "Preferences|"
-#| msgid "%1%"
+#, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr "%1%"
@@ -4140,12 +4138,9 @@ msgid "Always show go icon"
 msgstr "'Ga'-pictogram altijd weergeven"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "Af&beelding weergeven"
+msgstr "Zoomlabel tonen"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4175,7 +4170,7 @@ msgstr "Zoeksuggesties weergeven"
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "Pop-up met suggestie uitbreiden tot de vensterbreedte"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"

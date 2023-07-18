@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_qt\n"
-"PO-Revision-Date: 2023-06-19 07:12+0300\n"
+"PO-Revision-Date: 2023-07-17 09:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -2252,12 +2252,10 @@ msgstr "Перешукати коли двигун змінюється"
 #: lib/navigation/zoomlabel.cpp:35
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Відновити типовий масштаб"
 
 #: lib/navigation/zoomlabel.cpp:60
-#, fuzzy, qt-format
-#| msgctxt "Preferences|"
-#| msgid "%1%"
+#, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr "%1%"
@@ -4140,12 +4138,9 @@ msgid "Always show go icon"
 msgstr "Завжди показувати піктограму переходу"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "Показати &зображення"
+msgstr "Показувати мітку масштабу"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4175,7 +4170,7 @@ msgstr "Показувати підказки пошуку"
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "Розгорнути контекстну панель пропозицій до ширини екрана"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"

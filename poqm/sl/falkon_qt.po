@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-19 09:40+0200\n"
+"PO-Revision-Date: 2023-07-17 06:59+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
 "%100<=4 ? 2 : 3);\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2247,12 +2247,10 @@ msgstr "Išči, ko je zamenjan iskalnik"
 #: lib/navigation/zoomlabel.cpp:35
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Ponastavi povečavo"
 
 #: lib/navigation/zoomlabel.cpp:60
-#, fuzzy, qt-format
-#| msgctxt "Preferences|"
-#| msgid "%1%"
+#, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr "%1%"
@@ -4131,12 +4129,9 @@ msgid "Always show go icon"
 msgstr "Vedno prikazuj ikono pojdi"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "Prikaži sliko"
+msgstr "Prikaži oznako povečave"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4166,7 +4161,7 @@ msgstr "Pokaži predloge za iskanje"
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "Razširi pojavno okno s predlogom na širino okna"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
