@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2023-06-19 11:43+0200\n"
+"PO-Revision-Date: 2023-07-18 15:10+0300\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -2249,12 +2249,10 @@ msgstr "Busca quan es canvie el motor"
 #: lib/navigation/zoomlabel.cpp:35
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Reinici del nivell de zoom"
 
 #: lib/navigation/zoomlabel.cpp:60
-#, fuzzy, qt-format
-#| msgctxt "Preferences|"
-#| msgid "%1%"
+#, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr "%1%"
@@ -4132,12 +4130,9 @@ msgid "Always show go icon"
 msgstr "Mostra sempre la icona «ves-hi»"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "Visualitza la &imatge"
+msgstr "Mostra l'etiqueta de zoom"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4168,6 +4163,8 @@ msgstr "Mostra suggeriments de busca"
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr ""
+"Expandix les finestres emergents de suggeriments a l'amplària de les "
+"finestres"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
