@@ -44,6 +44,7 @@ public:
     void wheelEvent(QWheelEvent* event) override;
 
     void setIsRestoring(bool restoring);
+    bool isRestoring();
 
 Q_SIGNALS:
     void moveAddTabButton(int posX);
