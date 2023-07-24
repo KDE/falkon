@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-03-01 01:16+0100\n"
+"PO-Revision-Date: 2023-07-23 20:26+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -619,7 +619,7 @@ msgstr "Qt 정보(&Q)"
 #: lib/app/mainmenu.cpp:597
 msgctxt "MainMenu|"
 msgid "Information about application"
-msgstr "프로그램 정보"
+msgstr "앱 정보"
 
 #: lib/app/mainmenu.cpp:598
 msgctxt "MainMenu|"
@@ -2219,13 +2219,13 @@ msgstr "엔진을 변경했을 때 검색"
 #: lib/navigation/zoomlabel.cpp:35
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "확대/축소 수준 초기화"
 
 #: lib/navigation/zoomlabel.cpp:60
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/network/networkmanager.cpp:86
 msgctxt "NetworkManager|"
@@ -2581,7 +2581,7 @@ msgstr "설명"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:315
 msgctxt "FalkonSchemeReply|"
 msgid "Application version"
-msgstr "프로그램 버전"
+msgstr "앱 버전"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:322
 msgctxt "FalkonSchemeReply|"
@@ -2660,7 +2660,7 @@ msgstr "사용 가능한 확장 기능이 없습니다."
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "이 세션만"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -2824,7 +2824,7 @@ msgstr "검색 엔진을 추가하는 중 오류 발생<br><b>오류 메시지:<
 #, qt-format
 msgctxt "AboutDialog|"
 msgid "<p><b>Application version %1</b><br/>"
-msgstr "<p><b>프로그램 버전 %1</b><br/>"
+msgstr "<p><b>앱 버전 %1</b><br/>"
 
 #: lib/other/aboutdialog.cpp:58
 #, qt-format
@@ -3546,44 +3546,35 @@ msgstr "예외"
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "호스트: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "인증서 예외 추가"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "%1 호스트가 목록에 이미 있음"
 
 #: lib/preferences/certificatemanager.cpp:83
-#, fuzzy
-#| msgctxt "Bookmarks|"
-#| msgid "Empty"
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "비어 있음"
+msgstr "빈 호스트"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "인증서 예외 관리자"
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "추가"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
 msgstr "삭제"
@@ -3591,7 +3582,7 @@ msgstr "삭제"
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "항목을 삭제한 후에는 다시 시작해야 함"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -3681,7 +3672,7 @@ msgstr "기본값으로 설정"
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/preferences/preferences.cpp:555
 msgctxt "Preferences|"
@@ -4104,12 +4095,9 @@ msgid "Always show go icon"
 msgstr "항상 이동 아이콘 표시"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "그림 표시(&M)"
+msgstr "확대/축소 레이블 표시"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4139,7 +4127,7 @@ msgstr "검색 제안 표시"
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "제안 팝업을 창 너비로 확장"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
@@ -4206,7 +4194,7 @@ msgstr "자바스크립트 허용"
 #: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
-msgstr "초점 체인에 링크 포함"
+msgstr "포커스 체인에 링크 포함"
 
 #. try to detect possible XSS attacks when executing javascript
 #: lib/preferences/preferences.ui:1053
@@ -4471,13 +4459,13 @@ msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
 "shortcut was intended."
 msgstr ""
-"이 옵션을 사용하지 않으면 Ctrl+W 단축키를 누르려고 했을 때 프로그램을 실수로 "
-"끝내는 것을 방지합니다."
+"이 옵션을 사용하지 않으면 Ctrl+W 단축키를 누르려고 했을 때 앱을 실수로 끝내"
+"는 것을 방지합니다."
 
 #: lib/preferences/preferences.ui:1763
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
-msgstr "Ctrl+Q로 프로그램 끝내기"
+msgstr "Ctrl+Q로 앱 끝내기"
 
 #: lib/preferences/preferences.ui:1787
 msgctxt "Preferences|"
@@ -4686,17 +4674,14 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>프로토콜 핸들러 관리</b>"
 
 #: lib/preferences/preferences.ui:2494
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>알림</b>"
+msgstr "<b>인증서 관리자</b>"
 
 #: lib/preferences/preferences.ui:2519
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "인증서 예외 관리자"
 
 #: lib/preferences/preferences.ui:2559
 msgctxt "Preferences|"
@@ -5526,8 +5511,7 @@ msgid ""
 "li></ul>Do you want Falkon to try open this link in system application?"
 msgstr ""
 "Falkon에서 <b>%1:</b> 링크를 처리할 수 없습니다. 요청한 링크: <ul><li>%2</"
-"li></ul>Falkon에서 시스템에 설치된 프로그램으로 이 링크를 불러오도록 하시겠습"
-"니까?"
+"li></ul>Falkon에서 시스템에 설치된 앱으로 이 링크를 불러오도록 하시겠습니까?"
 
 #: lib/webengine/webpage.cpp:335
 msgctxt "WebPage|"
