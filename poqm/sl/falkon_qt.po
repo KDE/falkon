@@ -358,7 +358,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "So še vedno odprti zavihki"
 
-#: lib/app/mainapplication.cpp:1085
+#: lib/app/mainapplication.cpp:1087
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -367,32 +367,32 @@ msgstr ""
 "Falkon trenutno ni vaš privzeti brskalnik. Bi ga radi postavili kot svojega "
 "privzetega brskalnika?"
 
-#: lib/app/mainapplication.cpp:1086
+#: lib/app/mainapplication.cpp:1088
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Vedno izvedi to preverjanje, kadar zaženeš Falkon."
 
-#: lib/app/mainapplication.cpp:1088
+#: lib/app/mainapplication.cpp:1090
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Privzeti brskalnik"
 
-#: lib/app/mainapplication.cpp:1209
+#: lib/app/mainapplication.cpp:1224
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Odpri nov zavihek"
 
-#: lib/app/mainapplication.cpp:1210
+#: lib/app/mainapplication.cpp:1225
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Odpri novo okno"
 
-#: lib/app/mainapplication.cpp:1211
+#: lib/app/mainapplication.cpp:1226
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Odpri novo zasebno okno"
 
-#: lib/app/mainapplication.cpp:1226
+#: lib/app/mainapplication.cpp:1241
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -3689,88 +3689,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Ali ste prepričani, da želite odstraniti '%1'?"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:612
+#: lib/preferences/preferences.cpp:153 lib/preferences/preferences.cpp:614
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Privzeto"
 
-#: lib/preferences/preferences.cpp:156
+#: lib/preferences/preferences.cpp:157
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Nastavi kot privzeto"
 
-#: lib/preferences/preferences.cpp:301
+#: lib/preferences/preferences.cpp:302
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:555
+#: lib/preferences/preferences.cpp:557
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Izberite lokacijo izvedljivih programov..."
 
-#: lib/preferences/preferences.cpp:598
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Obvestilo OSD"
 
-#: lib/preferences/preferences.cpp:599
+#: lib/preferences/preferences.cpp:601
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Povlecite ga na zaslon, da ga postavite kamor želite."
 
-#: lib/preferences/preferences.cpp:648
+#: lib/preferences/preferences.cpp:650
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Izberite lokacijo prenosov..."
 
-#: lib/preferences/preferences.cpp:662
+#: lib/preferences/preferences.cpp:664
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Izberite lokacijo slogovnega lista..."
 
-#: lib/preferences/preferences.cpp:673
+#: lib/preferences/preferences.cpp:675
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Zbrisano"
 
-#: lib/preferences/preferences.cpp:775
+#: lib/preferences/preferences.cpp:783
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Izberite pot predpomnilnika..."
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Novi profil"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Vnesite ime novega profila:"
 
-#: lib/preferences/preferences.cpp:816 lib/preferences/preferences.cpp:821
+#: lib/preferences/preferences.cpp:824 lib/preferences/preferences.cpp:829
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Napaka!"
 
-#: lib/preferences/preferences.cpp:816
+#: lib/preferences/preferences.cpp:824
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Ta profil že obstaja!"
 
-#: lib/preferences/preferences.cpp:821
+#: lib/preferences/preferences.cpp:829
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Ni mogoče ustvariti direktorij profila!"
 
-#: lib/preferences/preferences.cpp:832
+#: lib/preferences/preferences.cpp:840
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Potrjevanje"
 
-#: lib/preferences/preferences.cpp:833
+#: lib/preferences/preferences.cpp:841
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3780,12 +3780,12 @@ msgstr ""
 "Ali ste prepričani, da želite trajno izbrisati profil \"%1\"? Te akcije ni "
 "mogoče razveljaviti!"
 
-#: lib/preferences/preferences.cpp:848 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:856 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Opomba: Aktivnega profila ni mogoče izbrisati."
 
-#: lib/preferences/preferences.cpp:1107
+#: lib/preferences/preferences.cpp:1115
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Izberite barvo"
@@ -4195,7 +4195,7 @@ msgstr "Izberi barvo"
 
 #: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
 #: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
-#: lib/preferences/preferences.ui:2776
+#: lib/preferences/preferences.ui:2749
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -4698,65 +4698,148 @@ msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Ni najdenih jezikov"
 
-#: lib/preferences/preferences.ui:2480
-msgctxt "Preferences|"
-msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>Prednostni jezik za spletna mesta</b>"
-
-#: lib/preferences/preferences.ui:2487
-msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>Upravljanje upravljalnikov protokolov</b>"
-
-#: lib/preferences/preferences.ui:2494
-msgctxt "Preferences|"
-msgid "<b>Certificate manager</b>"
-msgstr "<b>Skrbnik potrdil</b>"
-
-#: lib/preferences/preferences.ui:2519
-msgctxt "Preferences|"
-msgid "Certificate Exception Manager"
-msgstr "Skrbnik izjem potrdil"
-
-#: lib/preferences/preferences.ui:2559
-msgctxt "Preferences|"
-msgid "User Agent Manager"
-msgstr "Upravljalnik uporabniških agentov"
-
-#: lib/preferences/preferences.ui:2612
+#: lib/preferences/preferences.ui:2498
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Upravljalnik obdelave protokolov"
 
-#: lib/preferences/preferences.ui:2634
-msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "<b>Upravljaj iskalnike</b>"
-
-#: lib/preferences/preferences.ui:2641
-msgctxt "Preferences|"
-msgid "Style Sheet automatically loaded with all websites: "
-msgstr "Slogovni list je samodejno naložen z vsemi spletnimi mesti: "
-
-#: lib/preferences/preferences.ui:2666
+#: lib/preferences/preferences.ui:2538
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Upravljalnik iskalnikov"
 
-#: lib/preferences/preferences.ui:2701
+#: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Uporabniški slogovni list</b>"
 
-#: lib/preferences/preferences.ui:2726
+#: lib/preferences/preferences.ui:2567
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>Upravljaj iskalnike</b>"
+
+#: lib/preferences/preferences.ui:2580
+msgctxt "Preferences|"
+msgid "Manage custom schemes"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Jeziki"
 
-#: lib/preferences/preferences.ui:2748
+#: lib/preferences/preferences.ui:2627
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>Prednostni jezik za spletna mesta</b>"
+
+#: lib/preferences/preferences.ui:2652
+msgctxt "Preferences|"
+msgid "Certificate Exception Manager"
+msgstr "Skrbnik izjem potrdil"
+
+#: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Spremeni identifikacijo brskalnika</b>"
+
+#: lib/preferences/preferences.ui:2699
+msgctxt "Preferences|"
+msgid "User Agent Manager"
+msgstr "Upravljalnik uporabniških agentov"
+
+#: lib/preferences/preferences.ui:2721
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr "Slogovni list je samodejno naložen z vsemi spletnimi mesti: "
+
+#: lib/preferences/preferences.ui:2758
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>Upravljanje upravljalnikov protokolov</b>"
+
+#: lib/preferences/preferences.ui:2765
+msgctxt "Preferences|"
+msgid "<b>Certificate manager</b>"
+msgstr "<b>Skrbnik potrdil</b>"
+
+#: lib/preferences/preferences.ui:2816
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Cookies Manager"
+msgctxt "Preferences|"
+msgid "Custom Scheme Manager"
+msgstr "Upravljalnik piškotkov"
+
+#: lib/preferences/schememanager.cpp:84
+msgctxt "SchemeManager|"
+msgid "Add allowed scheme"
+msgstr ""
+
+#: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
+#, fuzzy
+#| msgctxt "FalkonSchemeReply|"
+#| msgid "Themes"
+msgctxt "SchemeManager|"
+msgid "Scheme:"
+msgstr "Teme"
+
+#: lib/preferences/schememanager.cpp:119
+msgctxt "SchemeManager|"
+msgid "Add blocked scheme"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:14
+msgctxt "SchemeManager|"
+msgid "Custom scheme manager"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:26
+msgctxt "SchemeManager|"
+msgid "Allowed schemes"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:33
+msgctxt "SchemeManager|"
+msgid "**Note:** Allowed schemes can be added by extensions."
+msgstr ""
+
+#: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "SchemeManager|"
+msgid "Add"
+msgstr "Dodaj"
+
+#: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "SchemeManager|"
+msgid "Remove"
+msgstr "Odstrani"
+
+#: lib/preferences/schememanager.ui:68
+#, fuzzy
+#| msgctxt "AdBlockDialog|"
+#| msgid "AdBlock"
+msgctxt "SchemeManager|"
+msgid "Block"
+msgstr "AdBlock"
+
+#: lib/preferences/schememanager.ui:98
+#, fuzzy
+#| msgctxt "AdBlockUrlInterceptor|"
+#| msgid "Blocked content"
+msgctxt "SchemeManager|"
+msgid "Blocked schemes"
+msgstr "Blokirana vsebina"
+
+#: lib/preferences/schememanager.ui:147
+msgctxt "SchemeManager|"
+msgid "Changes will take effect after Falkon restart."
+msgstr ""
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"

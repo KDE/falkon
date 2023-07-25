@@ -427,24 +427,24 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Încă sunt taburi deschise"
 
-#: lib/app/mainapplication.cpp:1085
+#: lib/app/mainapplication.cpp:1087
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1086
+#: lib/app/mainapplication.cpp:1088
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1088
+#: lib/app/mainapplication.cpp:1090
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1209
+#: lib/app/mainapplication.cpp:1224
 #, fuzzy
 #| msgctxt "QtWin|"
 #| msgid "Open new tab"
@@ -452,7 +452,7 @@ msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Deschide tab nou"
 
-#: lib/app/mainapplication.cpp:1210
+#: lib/app/mainapplication.cpp:1225
 #, fuzzy
 #| msgctxt "QtWin|"
 #| msgid "Open new window"
@@ -460,7 +460,7 @@ msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Deschide fereastră noua"
 
-#: lib/app/mainapplication.cpp:1211
+#: lib/app/mainapplication.cpp:1226
 #, fuzzy
 #| msgctxt "QtWin|"
 #| msgid "Open new window"
@@ -468,7 +468,7 @@ msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Deschide fereastră noua"
 
-#: lib/app/mainapplication.cpp:1226
+#: lib/app/mainapplication.cpp:1241
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -4515,88 +4515,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Sunteți sigur că doriți să afișați toate parolele?"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:612
+#: lib/preferences/preferences.cpp:153 lib/preferences/preferences.cpp:614
 msgctxt "Preferences|"
 msgid "Default"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:156
+#: lib/preferences/preferences.cpp:157
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:301
+#: lib/preferences/preferences.cpp:302
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:555
+#: lib/preferences/preferences.cpp:557
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Alegeți locația executabilului..."
 
-#: lib/preferences/preferences.cpp:598
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Notificări OSD"
 
-#: lib/preferences/preferences.cpp:599
+#: lib/preferences/preferences.cpp:601
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Trageți-o pe ecran pentru a o plasa unde doriți."
 
-#: lib/preferences/preferences.cpp:648
+#: lib/preferences/preferences.cpp:650
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Alege locul de descărcare..."
 
-#: lib/preferences/preferences.cpp:662
+#: lib/preferences/preferences.cpp:664
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Alege locul foilor de stil..."
 
-#: lib/preferences/preferences.cpp:673
+#: lib/preferences/preferences.cpp:675
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Șterse"
 
-#: lib/preferences/preferences.cpp:775
+#: lib/preferences/preferences.cpp:783
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr ""
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Profil nou"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Introduceți denumirea noului profil:"
 
-#: lib/preferences/preferences.cpp:816 lib/preferences/preferences.cpp:821
+#: lib/preferences/preferences.cpp:824 lib/preferences/preferences.cpp:829
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Eroare!"
 
-#: lib/preferences/preferences.cpp:816
+#: lib/preferences/preferences.cpp:824
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Acest profil deja există!"
 
-#: lib/preferences/preferences.cpp:821
+#: lib/preferences/preferences.cpp:829
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Nu se poate crea dosarul profilului!"
 
-#: lib/preferences/preferences.cpp:832
+#: lib/preferences/preferences.cpp:840
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Confirmare"
 
-#: lib/preferences/preferences.cpp:833
+#: lib/preferences/preferences.cpp:841
 #, fuzzy, qt-format
 #| msgctxt "Preferences|"
 #| msgid ""
@@ -4610,12 +4610,12 @@ msgstr ""
 "Sunteți sigur că doriți să ștergeți profilul  \"%1\"? Aceacstă acțiune nu "
 "poate fi anulată!"
 
-#: lib/preferences/preferences.cpp:848 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:856 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Notă: Nu puteți șterge profilul activ."
 
-#: lib/preferences/preferences.cpp:1107
+#: lib/preferences/preferences.cpp:1115
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Alege culoarea"
@@ -5044,7 +5044,7 @@ msgstr ""
 
 #: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
 #: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
-#: lib/preferences/preferences.ui:2776
+#: lib/preferences/preferences.ui:2749
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -5570,41 +5570,7 @@ msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Nu exista rezultate."
 
-#: lib/preferences/preferences.ui:2480
-msgctxt "Preferences|"
-msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>Limbi preferate pentru site-uri</b>"
-
-#: lib/preferences/preferences.ui:2487
-#, fuzzy
-#| msgctxt "SearchEnginesDialog|"
-#| msgid "Manage Search Engines"
-msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "Configurează motoare de căutare"
-
-#: lib/preferences/preferences.ui:2494
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>SSL Certificates</b>"
-msgctxt "Preferences|"
-msgid "<b>Certificate manager</b>"
-msgstr "<b>Certificate SSL</b>"
-
-#: lib/preferences/preferences.ui:2519
-#, fuzzy
-#| msgctxt "SSLManager|"
-#| msgid "Certificate Informations"
-msgctxt "Preferences|"
-msgid "Certificate Exception Manager"
-msgstr "Informatii despre certificat"
-
-#: lib/preferences/preferences.ui:2559
-msgctxt "Preferences|"
-msgid "User Agent Manager"
-msgstr ""
-
-#: lib/preferences/preferences.ui:2612
+#: lib/preferences/preferences.ui:2498
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Cookies Manager"
@@ -5612,23 +5578,7 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Manager de cookie-uri"
 
-#: lib/preferences/preferences.ui:2634
-#, fuzzy
-#| msgctxt "SearchEnginesDialog|"
-#| msgid "Manage Search Engines"
-msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "Configurează motoare de căutare"
-
-#: lib/preferences/preferences.ui:2641
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "StyleSheet automatically loaded with all websites: "
-msgctxt "Preferences|"
-msgid "Style Sheet automatically loaded with all websites: "
-msgstr "Foi de stil încărcate automat pe toate site-urile:"
-
-#: lib/preferences/preferences.ui:2666
+#: lib/preferences/preferences.ui:2538
 #, fuzzy
 #| msgctxt "SearchEnginesDialog|"
 #| msgid "Search Engine"
@@ -5636,19 +5586,152 @@ msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Motor de cautare"
 
-#: lib/preferences/preferences.ui:2701
+#: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2726
+#: lib/preferences/preferences.ui:2567
+#, fuzzy
+#| msgctxt "SearchEnginesDialog|"
+#| msgid "Manage Search Engines"
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "Configurează motoare de căutare"
+
+#: lib/preferences/preferences.ui:2580
+msgctxt "Preferences|"
+msgid "Manage custom schemes"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Limbi"
 
-#: lib/preferences/preferences.ui:2748
+#: lib/preferences/preferences.ui:2627
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>Limbi preferate pentru site-uri</b>"
+
+#: lib/preferences/preferences.ui:2652
+#, fuzzy
+#| msgctxt "SSLManager|"
+#| msgid "Certificate Informations"
+msgctxt "Preferences|"
+msgid "Certificate Exception Manager"
+msgstr "Informatii despre certificat"
+
+#: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2699
+msgctxt "Preferences|"
+msgid "User Agent Manager"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2721
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "StyleSheet automatically loaded with all websites: "
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr "Foi de stil încărcate automat pe toate site-urile:"
+
+#: lib/preferences/preferences.ui:2758
+#, fuzzy
+#| msgctxt "SearchEnginesDialog|"
+#| msgid "Manage Search Engines"
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "Configurează motoare de căutare"
+
+#: lib/preferences/preferences.ui:2765
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "<b>SSL Certificates</b>"
+msgctxt "Preferences|"
+msgid "<b>Certificate manager</b>"
+msgstr "<b>Certificate SSL</b>"
+
+#: lib/preferences/preferences.ui:2816
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Cookies Manager"
+msgctxt "Preferences|"
+msgid "Custom Scheme Manager"
+msgstr "Manager de cookie-uri"
+
+#: lib/preferences/schememanager.cpp:84
+msgctxt "SchemeManager|"
+msgid "Add allowed scheme"
+msgstr ""
+
+#: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Themes"
+msgctxt "SchemeManager|"
+msgid "Scheme:"
+msgstr "Teme"
+
+#: lib/preferences/schememanager.cpp:119
+msgctxt "SchemeManager|"
+msgid "Add blocked scheme"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:14
+msgctxt "SchemeManager|"
+msgid "Custom scheme manager"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:26
+msgctxt "SchemeManager|"
+msgid "Allowed schemes"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:33
+msgctxt "SchemeManager|"
+msgid "**Note:** Allowed schemes can be added by extensions."
+msgstr ""
+
+#: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "SchemeManager|"
+msgid "Add"
+msgstr "Adaugă"
+
+#: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "SchemeManager|"
+msgid "Remove"
+msgstr "Șterge"
+
+#: lib/preferences/schememanager.ui:68
+#, fuzzy
+#| msgctxt "AdBlockDialog|"
+#| msgid "AdBlock"
+msgctxt "SchemeManager|"
+msgid "Block"
+msgstr "AdBlock"
+
+#: lib/preferences/schememanager.ui:98
+#, fuzzy
+#| msgctxt "WebPage|"
+#| msgid "AdBlocked Content"
+msgctxt "SchemeManager|"
+msgid "Blocked schemes"
+msgstr "Conținut blocat de AdBlock"
+
+#: lib/preferences/schememanager.ui:147
+msgctxt "SchemeManager|"
+msgid "Changes will take effect after Falkon restart."
 msgstr ""
 
 #: lib/preferences/thememanager.cpp:100
