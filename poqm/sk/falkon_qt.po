@@ -361,7 +361,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Stále sú otvorené karty"
 
-#: lib/app/mainapplication.cpp:1085
+#: lib/app/mainapplication.cpp:1087
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -370,32 +370,32 @@ msgstr ""
 "Falkon nie je momentálne predvoleným prehliadačom. Chcete nastaviť Falkon "
 "ako predvolený prehliadač?"
 
-#: lib/app/mainapplication.cpp:1086
+#: lib/app/mainapplication.cpp:1088
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Kontrolovať pri každom spustení aplikácie Falkon."
 
-#: lib/app/mainapplication.cpp:1088
+#: lib/app/mainapplication.cpp:1090
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Predvolený prehliadač"
 
-#: lib/app/mainapplication.cpp:1209
+#: lib/app/mainapplication.cpp:1224
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Otvoriť novú kratu"
 
-#: lib/app/mainapplication.cpp:1210
+#: lib/app/mainapplication.cpp:1225
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Otvoriť nové okno"
 
-#: lib/app/mainapplication.cpp:1211
+#: lib/app/mainapplication.cpp:1226
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Otvoriť nové súkromné okno"
 
-#: lib/app/mainapplication.cpp:1226
+#: lib/app/mainapplication.cpp:1241
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -3706,88 +3706,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Ste si istý že chcete odstrániť '%1'?"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:612
+#: lib/preferences/preferences.cpp:153 lib/preferences/preferences.cpp:614
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Predvolené"
 
-#: lib/preferences/preferences.cpp:156
+#: lib/preferences/preferences.cpp:157
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Nastaviť ako predvolené"
 
-#: lib/preferences/preferences.cpp:301
+#: lib/preferences/preferences.cpp:302
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:555
+#: lib/preferences/preferences.cpp:557
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Vyberte cestu k programu..."
 
-#: lib/preferences/preferences.cpp:598
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD oznámenia"
 
-#: lib/preferences/preferences.cpp:599
+#: lib/preferences/preferences.cpp:601
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Pretiahnete ho na obrazovke na miesto, kde ho chcete mať."
 
-#: lib/preferences/preferences.cpp:648
+#: lib/preferences/preferences.cpp:650
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Vyberte umiestnenie pre sťahovanie..."
 
-#: lib/preferences/preferences.cpp:662
+#: lib/preferences/preferences.cpp:664
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Vyberte umiestnenie štýlu..."
 
-#: lib/preferences/preferences.cpp:673
+#: lib/preferences/preferences.cpp:675
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Vymazaný"
 
-#: lib/preferences/preferences.cpp:775
+#: lib/preferences/preferences.cpp:783
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Vyberte cestu ku cache..."
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Nový profil"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Zadajte názov nového profilu:"
 
-#: lib/preferences/preferences.cpp:816 lib/preferences/preferences.cpp:821
+#: lib/preferences/preferences.cpp:824 lib/preferences/preferences.cpp:829
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Chyba!"
 
-#: lib/preferences/preferences.cpp:816
+#: lib/preferences/preferences.cpp:824
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Tento profil už existuje!"
 
-#: lib/preferences/preferences.cpp:821
+#: lib/preferences/preferences.cpp:829
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Nedá sa vytvoriť priečinok profilu!"
 
-#: lib/preferences/preferences.cpp:832
+#: lib/preferences/preferences.cpp:840
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Potvrdenie"
 
-#: lib/preferences/preferences.cpp:833
+#: lib/preferences/preferences.cpp:841
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3797,12 +3797,12 @@ msgstr ""
 "Ste si istý, že chcete trvalo vymazať profil \"%1\"? Táto akcia sa nebude "
 "dať vrátiť späť!"
 
-#: lib/preferences/preferences.cpp:848 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:856 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Poznámka: Nie je možné vymazať aktívny profil."
 
-#: lib/preferences/preferences.cpp:1107
+#: lib/preferences/preferences.cpp:1115
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Vyberte farbu"
@@ -4215,7 +4215,7 @@ msgstr "Vyberte farbu"
 
 #: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
 #: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
-#: lib/preferences/preferences.ui:2776
+#: lib/preferences/preferences.ui:2749
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -4718,17 +4718,67 @@ msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Nenájdené žiadne jazyky"
 
-#: lib/preferences/preferences.ui:2480
+#: lib/preferences/preferences.ui:2498
+msgctxt "Preferences|"
+msgid "Protocol Handlers Manager"
+msgstr "Správca spracovačov protokolu"
+
+#: lib/preferences/preferences.ui:2538
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "Správca vyhľadávačov"
+
+#: lib/preferences/preferences.ui:2560
+msgctxt "Preferences|"
+msgid "<b>User Style Sheet</b>"
+msgstr "<b>Zošit štýlu používateľa</b>"
+
+#: lib/preferences/preferences.ui:2567
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>Spravovať vyhľadávače</b>"
+
+#: lib/preferences/preferences.ui:2580
+msgctxt "Preferences|"
+msgid "Manage custom schemes"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2605
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "Jazyky"
+
+#: lib/preferences/preferences.ui:2627
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Preferovaný jazyk pre webové stránky</b>"
 
-#: lib/preferences/preferences.ui:2487
+#: lib/preferences/preferences.ui:2652
+msgctxt "Preferences|"
+msgid "Certificate Exception Manager"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2674
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>Zmeniť identifikáciu prehliadača</b>"
+
+#: lib/preferences/preferences.ui:2699
+msgctxt "Preferences|"
+msgid "User Agent Manager"
+msgstr "User Agent Správca"
+
+#: lib/preferences/preferences.ui:2721
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr "Štýl automaticky načítať so všetkými stránkami: "
+
+#: lib/preferences/preferences.ui:2758
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Spravovať spracovače protokolov</b>"
 
-#: lib/preferences/preferences.ui:2494
+#: lib/preferences/preferences.ui:2765
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "<b>Notifications</b>"
@@ -4736,50 +4786,83 @@ msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Oznámenia</b>"
 
-#: lib/preferences/preferences.ui:2519
+#: lib/preferences/preferences.ui:2816
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Cookies Manager"
 msgctxt "Preferences|"
-msgid "Certificate Exception Manager"
+msgid "Custom Scheme Manager"
+msgstr "Správca cookies"
+
+#: lib/preferences/schememanager.cpp:84
+msgctxt "SchemeManager|"
+msgid "Add allowed scheme"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2559
-msgctxt "Preferences|"
-msgid "User Agent Manager"
-msgstr "User Agent Správca"
+#: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
+#, fuzzy
+#| msgctxt "FalkonSchemeReply|"
+#| msgid "Themes"
+msgctxt "SchemeManager|"
+msgid "Scheme:"
+msgstr "Témy"
 
-#: lib/preferences/preferences.ui:2612
-msgctxt "Preferences|"
-msgid "Protocol Handlers Manager"
-msgstr "Správca spracovačov protokolu"
+#: lib/preferences/schememanager.cpp:119
+msgctxt "SchemeManager|"
+msgid "Add blocked scheme"
+msgstr ""
 
-#: lib/preferences/preferences.ui:2634
-msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "<b>Spravovať vyhľadávače</b>"
+#: lib/preferences/schememanager.ui:14
+msgctxt "SchemeManager|"
+msgid "Custom scheme manager"
+msgstr ""
 
-#: lib/preferences/preferences.ui:2641
-msgctxt "Preferences|"
-msgid "Style Sheet automatically loaded with all websites: "
-msgstr "Štýl automaticky načítať so všetkými stránkami: "
+#: lib/preferences/schememanager.ui:26
+msgctxt "SchemeManager|"
+msgid "Allowed schemes"
+msgstr ""
 
-#: lib/preferences/preferences.ui:2666
-msgctxt "Preferences|"
-msgid "Search Engines Manager"
-msgstr "Správca vyhľadávačov"
+#: lib/preferences/schememanager.ui:33
+msgctxt "SchemeManager|"
+msgid "**Note:** Allowed schemes can be added by extensions."
+msgstr ""
 
-#: lib/preferences/preferences.ui:2701
-msgctxt "Preferences|"
-msgid "<b>User Style Sheet</b>"
-msgstr "<b>Zošit štýlu používateľa</b>"
+#: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "SchemeManager|"
+msgid "Add"
+msgstr "Pridať"
 
-#: lib/preferences/preferences.ui:2726
-msgctxt "Preferences|"
-msgid "Languages"
-msgstr "Jazyky"
+#: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "SchemeManager|"
+msgid "Remove"
+msgstr "Odstrániť"
 
-#: lib/preferences/preferences.ui:2748
-msgctxt "Preferences|"
-msgid "<b>Change browser identification</b>"
-msgstr "<b>Zmeniť identifikáciu prehliadača</b>"
+#: lib/preferences/schememanager.ui:68
+#, fuzzy
+#| msgctxt "AdBlockDialog|"
+#| msgid "AdBlock"
+msgctxt "SchemeManager|"
+msgid "Block"
+msgstr "AdBlock"
+
+#: lib/preferences/schememanager.ui:98
+#, fuzzy
+#| msgctxt "AdBlockUrlInterceptor|"
+#| msgid "Blocked content"
+msgctxt "SchemeManager|"
+msgid "Blocked schemes"
+msgstr "Zablokovaný obsah"
+
+#: lib/preferences/schememanager.ui:147
+msgctxt "SchemeManager|"
+msgid "Changes will take effect after Falkon restart."
+msgstr ""
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
