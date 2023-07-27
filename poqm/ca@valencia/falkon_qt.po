@@ -8,15 +8,15 @@
 # Clara Villalba <cvilmon@gmail.com>, 2012, 2013, 2014.
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016, 2017.
 # David Medina <rbndavid@gmail.com>, 2017.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019, 2020, 2021.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019, 2020, 2021, 2023.
 # Josep M. Ferrer <txemaq@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2023-07-17 12:24+0300\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"PO-Revision-Date: 2023-07-26 15:33+0200\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr ""
 "X-Language: ca-valencia\n"
 "X-Qt-Contexts: true\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -4724,7 +4724,7 @@ msgstr "<b>Gestiona els motors de busca</b>"
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "Gestiona els esquemes personalitzats"
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
@@ -4767,82 +4767,65 @@ msgid "<b>Certificate manager</b>"
 msgstr "<b>Gestor de certificats</b>"
 
 #: lib/preferences/preferences.ui:2816
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "Gestor de galetes"
+msgstr "Gestor d'esquemes personalitzats"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "Afig un esquema de permesos"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Themes"
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "Temes"
+msgstr "Esquema:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "Afig un esquema de bloquejos"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "Gestor d'esquemes personalitzats"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "Esquemes de permesos"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
 msgstr ""
+"**Nota:** Els esquemes de permesos poden ser afegits per les extensions."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "Afig"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "Elimina"
 
 #: lib/preferences/schememanager.ui:68
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "AdBlock"
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "AdBlock"
+msgstr "Bloqueja"
 
 #: lib/preferences/schememanager.ui:98
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "Contingut bloquejat"
+msgstr "Esquemes de bloquejos"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Els canvis s'efectuaran després de reiniciar Falkon."
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"

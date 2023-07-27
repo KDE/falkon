@@ -4113,11 +4113,13 @@ msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
 msgstr ""
+"ბმულის ჩანართის გადართვის მაგიერ მიმდინარე ჩანართში ჩასატვირთად \"Shift\"-ს "
+"დააწექით"
 
 #: lib/preferences/preferences.ui:810
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
-msgstr ""
+msgstr "ჩანართზე გადართვის შეთავაზება, თუ დასრულებული ბმულები უკვე ჩატვირთულია"
 
 #: lib/preferences/preferences.ui:817
 msgctxt "Preferences|"
@@ -4158,7 +4160,7 @@ msgstr "ძებნის მინიშნებების ჩვენე�
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "მინიშნების მხტუნარას ფანჯრის სიგანემდე გაწევა"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
@@ -4467,7 +4469,7 @@ msgstr "ჩანართებს შორის Alt+ჩანართის
 #: lib/preferences/preferences.ui:1743
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
-msgstr ""
+msgstr "სწრაფი ჩატვირთვები Ctrl + სწრაფი ჩატვირთვის ნომერ"
 
 #: lib/preferences/preferences.ui:1750
 msgctxt "Preferences|"
@@ -4475,6 +4477,8 @@ msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
 "><b>/</b> - search on page"
 msgstr ""
+"არსებული მალსახმობები:<br/><b>1</b> - წინა ჩანართი<br/><b>2</b> - შემდეგი "
+"ჩანართი<br/><b>/</b> - გვერდზე ძებნა"
 
 #: lib/preferences/preferences.ui:1753
 msgctxt "Preferences|"
@@ -4487,6 +4491,8 @@ msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
 "shortcut was intended."
 msgstr ""
+"თუ ჩართული არაა, Ctrl-W მალსახმობით აპლიკაციიდან შემთხვევით გამორთვას ხელს "
+"შეუშლის."
 
 #: lib/preferences/preferences.ui:1763
 msgctxt "Preferences|"
@@ -4546,7 +4552,7 @@ msgstr "დატოვეთ ცარიელი, თუ დარწმუ�
 #: lib/preferences/preferences.ui:1919
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
-msgstr ""
+msgstr "<b>%d</b> გადმოსაწერი ბმულით შეიცვლება"
 
 #: lib/preferences/preferences.ui:1945
 msgctxt "Preferences|"
@@ -4616,7 +4622,7 @@ msgstr "HTML5 -ის წვდომები"
 #: lib/preferences/preferences.ui:2150
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
-msgstr ""
+msgstr "სერვერებზე Do Not Track თავსართების გაგზავნა"
 
 #: lib/preferences/preferences.ui:2176
 msgctxt "Preferences|"
@@ -4636,7 +4642,7 @@ msgstr "<b>გაფრთხილებები</b>"
 #: lib/preferences/preferences.ui:2234
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
-msgstr ""
+msgstr "საკუთარი სისტემური შეტყობინებების გამოყენება (მხოლოდ Linux-ზე)"
 
 #: lib/preferences/preferences.ui:2241
 msgctxt "Preferences|"
@@ -4710,7 +4716,7 @@ msgstr "<b>ძებნის ძრავების მართვა</b>"
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "მომხმარებლის სქემების მართვა"
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
@@ -4753,82 +4759,64 @@ msgid "<b>Certificate manager</b>"
 msgstr "<b>სერტიფიკატების მმართველი</b>"
 
 #: lib/preferences/preferences.ui:2816
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "მქუქიების მართველი"
+msgstr "მომხმარებლის სქემების მმართველი"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "დაშვებული სქემის დამატება"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Themes"
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "თემები"
+msgstr "სქემა:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "დაბლოკილი სქემის დამატება"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "მომხმარებლის სქემების მმართველი"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "დაშვებული სქემები"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
-msgstr ""
+msgstr "** შენიშვნა: ** დაშვებული სქემების დამატება დამატებებსაც შეუძლიათ."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "დამატება"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "წაშლა"
 
 #: lib/preferences/schememanager.ui:68
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "AdBlock"
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "AdBlock"
+msgstr "დაბლოკვა"
 
 #: lib/preferences/schememanager.ui:98
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "დაბლოკილი შემცველობა"
+msgstr "დაბლოკილი სქემები"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "ცვლილებები ძალაში Falkon-ის გადატვირთვის შემდეგ შევა."
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -4906,7 +4894,7 @@ msgstr "გლობალური მომხმარებლის აგ�
 #: lib/preferences/useragentdialog.ui:48
 msgctxt "UserAgentDialog|"
 msgid "Use different User Agents for specified sites"
-msgstr ""
+msgstr "მითითებული საიტებისთვის განსხვავებული User-Agent-ის გამოყენება"
 
 #: lib/preferences/useragentdialog.ui:92
 msgctxt "UserAgentDialog|"
@@ -5368,6 +5356,8 @@ msgid ""
 "Data has been encrypted with a newer version of Falkon.\n"
 "Please install latest version of Falkon."
 msgstr ""
+"მონაცემები Falkon-ის უფრო ახალი ვერსიითაა დაშიფრული.\n"
+"დააყენეთ Falkon-ს უკანასკნელი ვერსია."
 
 #: lib/tools/certificateinfowidget.cpp:300
 msgctxt "QObject|"
