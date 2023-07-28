@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: falkon bulgarian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-15 09:59+0200\n"
-"PO-Revision-Date: 2023-07-18 15:30+0200\n"
+"PO-Revision-Date: 2023-07-27 15:57+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -4717,7 +4717,7 @@ msgstr "<b>Управление на търсачките</b>"
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "Управление на персонализирани схеми"
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
@@ -4760,82 +4760,65 @@ msgid "<b>Certificate manager</b>"
 msgstr "<b>Упрвление на сертификати</b>"
 
 #: lib/preferences/preferences.ui:2816
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "Управление на бисквитки"
+msgstr "Управление на персонални схеми"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "Добавяне на разрешена схема"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Themes"
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "Теми"
+msgstr "Схема:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "Добавяне на забранена схема"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "Управление на персонални схеми"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "Разрешени схеми"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
 msgstr ""
+"**Забележка:**Разрешените схеми може да бъдат добавяни по разширението."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "Добавяне"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
-msgstr "Премахване"
+msgstr "Изтриване"
 
 #: lib/preferences/schememanager.ui:68
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "AdBlock"
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "AdBlock"
+msgstr "Блокиране"
 
 #: lib/preferences/schememanager.ui:98
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "Блокирано съдържание"
+msgstr "Блокирани схеми"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Промените ви ще влязат в сила при следващото стартиране на Falkon."
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"

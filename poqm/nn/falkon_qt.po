@@ -360,7 +360,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Det finst opne faner"
 
-#: lib/app/mainapplication.cpp:1085
+#: lib/app/mainapplication.cpp:1087
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -369,32 +369,32 @@ msgstr ""
 "Falkon er ikkje standardnettlesar. Ønskjer du å bruka han som "
 "standardnettlesar?"
 
-#: lib/app/mainapplication.cpp:1086
+#: lib/app/mainapplication.cpp:1088
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Kontroller dette kvar gong Falkon startar."
 
-#: lib/app/mainapplication.cpp:1088
+#: lib/app/mainapplication.cpp:1090
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Standardnettlesar"
 
-#: lib/app/mainapplication.cpp:1209
+#: lib/app/mainapplication.cpp:1224
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Opna ny fane"
 
-#: lib/app/mainapplication.cpp:1210
+#: lib/app/mainapplication.cpp:1225
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Opna nytt vindauge"
 
-#: lib/app/mainapplication.cpp:1211
+#: lib/app/mainapplication.cpp:1226
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Opna nytt privat vindauge"
 
-#: lib/app/mainapplication.cpp:1226
+#: lib/app/mainapplication.cpp:1241
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -3688,88 +3688,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Er du sikker på at du vil fjerna «%1»?"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:612
+#: lib/preferences/preferences.cpp:153 lib/preferences/preferences.cpp:614
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Standard"
 
-#: lib/preferences/preferences.cpp:156
+#: lib/preferences/preferences.cpp:157
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Bruk som standard"
 
-#: lib/preferences/preferences.cpp:301
+#: lib/preferences/preferences.cpp:302
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:555
+#: lib/preferences/preferences.cpp:557
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Vel plassering for programfil …"
 
-#: lib/preferences/preferences.cpp:598
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Skjermvarsling"
 
-#: lib/preferences/preferences.cpp:599
+#: lib/preferences/preferences.cpp:601
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Dra varslinga til der du vil ha ho på skjermen."
 
-#: lib/preferences/preferences.cpp:648
+#: lib/preferences/preferences.cpp:650
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Vel nedlastingsmappe …"
 
-#: lib/preferences/preferences.cpp:662
+#: lib/preferences/preferences.cpp:664
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Vel plassering for stilsett …"
 
-#: lib/preferences/preferences.cpp:673
+#: lib/preferences/preferences.cpp:675
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Sletta"
 
-#: lib/preferences/preferences.cpp:775
+#: lib/preferences/preferences.cpp:783
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Vel mappe for mellomlager …"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Ny profil"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:814
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Skriv inn namn på den nye profilen:"
 
-#: lib/preferences/preferences.cpp:816 lib/preferences/preferences.cpp:821
+#: lib/preferences/preferences.cpp:824 lib/preferences/preferences.cpp:829
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Feil."
 
-#: lib/preferences/preferences.cpp:816
+#: lib/preferences/preferences.cpp:824
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Profilen finst frå før."
 
-#: lib/preferences/preferences.cpp:821
+#: lib/preferences/preferences.cpp:829
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Klarte ikkje oppretta profilmappa."
 
-#: lib/preferences/preferences.cpp:832
+#: lib/preferences/preferences.cpp:840
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Stadfesting"
 
-#: lib/preferences/preferences.cpp:833
+#: lib/preferences/preferences.cpp:841
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3779,12 +3779,12 @@ msgstr ""
 "Er du sikker på at du vil sletta profilen «%1»? Du kan ikkje angra denne "
 "slettinga."
 
-#: lib/preferences/preferences.cpp:848 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:856 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Merk: Du kan ikkje sletta profilen som du brukar."
 
-#: lib/preferences/preferences.cpp:1107
+#: lib/preferences/preferences.cpp:1115
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Vel farge"
@@ -4194,7 +4194,7 @@ msgstr "Vel farge"
 
 #: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
 #: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
-#: lib/preferences/preferences.ui:2776
+#: lib/preferences/preferences.ui:2749
 msgctxt "Preferences|"
 msgid "..."
 msgstr "…"
@@ -4702,65 +4702,130 @@ msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Fann ingen språk"
 
-#: lib/preferences/preferences.ui:2480
-msgctxt "Preferences|"
-msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>Føretrekt språk for nettstadar</b>"
-
-#: lib/preferences/preferences.ui:2487
-msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>Handsam protokollhandsaming</b>"
-
-#: lib/preferences/preferences.ui:2494
-msgctxt "Preferences|"
-msgid "<b>Certificate manager</b>"
-msgstr ""
-
-#: lib/preferences/preferences.ui:2519
-msgctxt "Preferences|"
-msgid "Certificate Exception Manager"
-msgstr ""
-
-#: lib/preferences/preferences.ui:2559
-msgctxt "Preferences|"
-msgid "User Agent Manager"
-msgstr "Brukaragent-handsamar"
-
-#: lib/preferences/preferences.ui:2612
+#: lib/preferences/preferences.ui:2498
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Protokollhandsaming"
 
-#: lib/preferences/preferences.ui:2634
-msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "<b>Handsam søkjemotorar</b>"
-
-#: lib/preferences/preferences.ui:2641
-msgctxt "Preferences|"
-msgid "Style Sheet automatically loaded with all websites: "
-msgstr "Stilsett som skal brukast på nettstadar:"
-
-#: lib/preferences/preferences.ui:2666
+#: lib/preferences/preferences.ui:2538
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Søkjemotor-handsamar"
 
-#: lib/preferences/preferences.ui:2701
+#: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Brukartilpassa stilsett</b>"
 
-#: lib/preferences/preferences.ui:2726
+#: lib/preferences/preferences.ui:2567
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>Handsam søkjemotorar</b>"
+
+#: lib/preferences/preferences.ui:2580
+msgctxt "Preferences|"
+msgid "Manage custom schemes"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Språk"
 
-#: lib/preferences/preferences.ui:2748
+#: lib/preferences/preferences.ui:2627
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>Føretrekt språk for nettstadar</b>"
+
+#: lib/preferences/preferences.ui:2652
+msgctxt "Preferences|"
+msgid "Certificate Exception Manager"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Endra nettlesaridentifikasjon</b>"
+
+#: lib/preferences/preferences.ui:2699
+msgctxt "Preferences|"
+msgid "User Agent Manager"
+msgstr "Brukaragent-handsamar"
+
+#: lib/preferences/preferences.ui:2721
+msgctxt "Preferences|"
+msgid "Style Sheet automatically loaded with all websites: "
+msgstr "Stilsett som skal brukast på nettstadar:"
+
+#: lib/preferences/preferences.ui:2758
+msgctxt "Preferences|"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>Handsam protokollhandsaming</b>"
+
+#: lib/preferences/preferences.ui:2765
+msgctxt "Preferences|"
+msgid "<b>Certificate manager</b>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2816
+msgctxt "Preferences|"
+msgid "Custom Scheme Manager"
+msgstr ""
+
+#: lib/preferences/schememanager.cpp:84
+msgctxt "SchemeManager|"
+msgid "Add allowed scheme"
+msgstr ""
+
+#: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
+msgctxt "SchemeManager|"
+msgid "Scheme:"
+msgstr ""
+
+#: lib/preferences/schememanager.cpp:119
+msgctxt "SchemeManager|"
+msgid "Add blocked scheme"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:14
+msgctxt "SchemeManager|"
+msgid "Custom scheme manager"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:26
+msgctxt "SchemeManager|"
+msgid "Allowed schemes"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:33
+msgctxt "SchemeManager|"
+msgid "**Note:** Allowed schemes can be added by extensions."
+msgstr ""
+
+#: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
+msgctxt "SchemeManager|"
+msgid "Add"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
+msgctxt "SchemeManager|"
+msgid "Remove"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:68
+msgctxt "SchemeManager|"
+msgid "Block"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:98
+msgctxt "SchemeManager|"
+msgid "Blocked schemes"
+msgstr ""
+
+#: lib/preferences/schememanager.ui:147
+msgctxt "SchemeManager|"
+msgid "Changes will take effect after Falkon restart."
+msgstr ""
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
