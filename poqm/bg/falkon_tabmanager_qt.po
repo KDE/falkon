@@ -1,39 +1,42 @@
+# Mincho Kondarev <mkondarev@yahoo.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_tabmanager_qt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-07-28 11:45+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: tabmanagersettings.ui:14
 msgctxt "TabManagerSettings|"
 msgid "Tab Manager Settings"
-msgstr ""
+msgstr "Настройки на подпрозорците"
 
 #: tabmanagersettings.ui:20
 msgctxt "TabManagerSettings|"
 msgid "View"
-msgstr ""
+msgstr "Изглед"
 
 #: tabmanagersettings.ui:26
 msgctxt "TabManagerSettings|"
 msgid "Please select view type:"
-msgstr ""
+msgstr "Изберете типа на изгледа:"
 
 #: tabmanagersettings.ui:33
 msgctxt "TabManagerSettings|"
 msgid "SideBar"
-msgstr ""
+msgstr "Страничен панел"
 
 #: tabmanagersettings.ui:40
 msgctxt "TabManagerSettings|"
 msgid "Window"
-msgstr ""
+msgstr "Прозорец"
 
 #: tabmanagersettings.ui:47
 msgctxt "TabManagerSettings|"
@@ -42,118 +45,122 @@ msgid ""
 "&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
 "p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> "
+"Тип&quot;Прозорец&quot;  е препоръчително за управление на много прозорци/"
+"раздели.</p></body></html>"
 
 #: tabmanagersettings.ui:60
 msgctxt "TabManagerSettings|"
 msgid "Use TabManager plugin as replacement for main TabBar."
 msgstr ""
+"Използване на приставката за подрозорци вместо основната лента с раздели"
 
 #: tabmanagerwidget.cpp:111
 msgctxt "TabManagerWidget|"
 msgid "Local File System:"
-msgstr ""
+msgstr "Локална файлова система:"
 
 #: tabmanagerwidget.cpp:114
 msgctxt "TabManagerWidget|"
 msgid "Falkon:"
-msgstr ""
+msgstr "Falkon:"
 
 #: tabmanagerwidget.cpp:117
 msgctxt "TabManagerWidget|"
 msgid " [FTP]"
-msgstr ""
+msgstr " [FTP]"
 
 #: tabmanagerwidget.cpp:306
 msgctxt "TabManagerWidget|"
 msgid "Group by"
-msgstr ""
+msgstr "Групиране по"
 
 #: tabmanagerwidget.cpp:307
 msgctxt "TabManagerWidget|"
 msgid "&Window"
-msgstr ""
+msgstr "&Прозорец"
 
 #: tabmanagerwidget.cpp:312
 msgctxt "TabManagerWidget|"
 msgid "&Domain"
-msgstr ""
+msgstr "&Домейн"
 
 #: tabmanagerwidget.cpp:317
 msgctxt "TabManagerWidget|"
 msgid "&Host"
-msgstr ""
+msgstr "&Хост"
 
 #: tabmanagerwidget.cpp:325
 msgctxt "TabManagerWidget|"
 msgid "&Show side by side"
-msgstr ""
+msgstr "&Показване един до друг"
 
 #: tabmanagerwidget.cpp:331
 msgctxt "TabManagerWidget|"
 msgid "&Detach checked tabs"
-msgstr ""
+msgstr "&Откачване на маркираните подпрозорци"
 
 #: tabmanagerwidget.cpp:332
 msgctxt "TabManagerWidget|"
 msgid "Book&mark checked tabs"
-msgstr ""
+msgstr "&Добавяне в отметки на маркираните подпрозорци"
 
 #: tabmanagerwidget.cpp:333
 msgctxt "TabManagerWidget|"
 msgid "&Close checked tabs"
-msgstr ""
+msgstr "&Затваряне на маркираните подпрозорци"
 
 #: tabmanagerwidget.cpp:334
 msgctxt "TabManagerWidget|"
 msgid "&Unload checked tabs"
-msgstr ""
+msgstr "&Разтоварване на маркираните подпрозорци"
 
 #: tabmanagerwidget.cpp:586
 msgctxt "TabManagerWidget|"
 msgid "Choose folder for bookmarks:"
-msgstr ""
+msgstr "Избиране папка за отметки:"
 
 #: tabmanagerwidget.cpp:587
 msgctxt "TabManagerWidget|"
 msgid "Bookmark Selected Tabs"
-msgstr ""
+msgstr "Добавяне в отметки на маркираните подпрозорци"
 
 #: tabmanagerwidget.cpp:705
 #, qt-format
 msgctxt "TabManagerWidget|"
 msgid "Window %1"
-msgstr ""
+msgstr "Прозорец %1"
 
 #: tabmanagerwidget.cpp:706
 msgctxt "TabManagerWidget|"
 msgid "Double click to switch"
-msgstr ""
+msgstr "Двойно кликване за превключване"
 
 #: tabmanagerwidget.ui:14
 msgctxt "TabManagerWidget|"
 msgid "Tab Manager"
-msgstr ""
+msgstr "Управление на подпрозорците"
 
 #: tabmanagerwidgetcontroller.cpp:50
 msgctxt "TabManagerButton|"
 msgid "Tab Manager button"
-msgstr ""
+msgstr "Бутон за управление на подпрозорци"
 
 #: tabmanagerwidgetcontroller.cpp:67 tabmanagerwidgetcontroller.cpp:72
 #: tabmanagerwidgetcontroller.cpp:98
 msgctxt "TabManagerWidgetController|"
 msgid "Tab Manager"
-msgstr ""
+msgstr "Управление на подпрозорците"
 
 #: tabmanagerwidgetcontroller.cpp:99
 msgctxt "TabManagerWidgetController|"
 msgid "Show Tab Manager"
-msgstr ""
+msgstr "Управление на подпрозорците"
 
 #: tldextractor/tldextractor.cpp:260 tldextractor/tldextractor.cpp:363
 msgctxt "TLDExtractor|"
 msgid "File not found!"
-msgstr ""
+msgstr "Файлът не е намерен!"
 
 #: tldextractor/tldextractor.cpp:261
 #, qt-format
@@ -164,6 +171,10 @@ msgid ""
 "following paths:\n"
 "%2"
 msgstr ""
+"Файлът 'effective_tld_names.dat' не е намерен!\n"
+"можете да го изтеглите от '<a href=\"%1\"><b>тук</b></a>' в една от следните "
+"директории:\n"
+"%2"
 
 #: tldextractor/tldextractor.cpp:364
 #, qt-format
@@ -174,3 +185,7 @@ msgid ""
 "following paths:\n"
 "%2"
 msgstr ""
+"Файлът 'test_psl.txt'  не е намерен!\n"
+"можете да го изтеглите от '<a href=\"%1\"><b>тук</b></a>' в една от следните "
+"директории:\n"
+"%2"
