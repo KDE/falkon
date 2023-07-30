@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-06-24 11:38+0200\n"
+"PO-Revision-Date: 2023-07-29 08:47+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -272,7 +272,7 @@ msgstr " (navegación privada)"
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid "%1 - Falkon"
-msgstr "%1 - Falkon"
+msgstr "%1 — Falkon"
 
 #: lib/app/browserwindow.cpp:1047
 msgctxt "BrowserWindow|"
@@ -641,7 +641,7 @@ msgstr "Restaurar o separador pe&chado"
 #: lib/autofill/autofillicon.cpp:29
 msgctxt "AutoFillWidget|"
 msgid "Choose username to login"
-msgstr "Seleccionar o nome de usuario para acceder"
+msgstr "Seleccionar o nome de persoa usuaria para acceder."
 
 #: lib/autofill/autofillnotification.cpp:39
 #, qt-format
@@ -1054,7 +1054,7 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
 msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
-msgstr "O directorio non existe."
+msgstr "O cartafol non existe."
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -1540,19 +1540,19 @@ msgstr "Tempo restante dispoñíbel"
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
-msgstr "Feito - %1 (%2)"
+msgstr "Feito — %1 (%2)"
 
 #: lib/downloads/downloaditem.cpp:132
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
-msgstr "Erro - %1"
+msgstr "Erro — %1"
 
 #: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:276
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
-msgstr "Cancelado - %1"
+msgstr "Cancelado — %1"
 
 #: lib/downloads/downloaditem.cpp:185 lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
@@ -1617,19 +1617,19 @@ msgstr "Tamaño descoñecido"
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
-msgstr "%2 - tamaño descoñecido (%3)"
+msgstr "%2 — tamaño descoñecido (%3)"
 
 #: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
-msgstr "Faltan %1 - %2 de %3 (%4)"
+msgstr "Faltan %1 — %2 de %3 (%4)"
 
 #: lib/downloads/downloaditem.cpp:291
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
-msgstr "En pausa - %1"
+msgstr "En pausa — %1"
 
 #: lib/downloads/downloaditem.cpp:304
 msgctxt "DownloadItem|"
@@ -1704,7 +1704,7 @@ msgstr "%1% de %2 ficheiros (%3) %4 restantes"
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
-msgstr "%1% - Xestor de descargas"
+msgstr "%1% — Xestor de descargas"
 
 #: lib/downloads/downloadmanager.cpp:304
 msgctxt "DownloadManager|"
@@ -2230,12 +2230,10 @@ msgstr "Buscar cando cambie o motor"
 #: lib/navigation/zoomlabel.cpp:35
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Restablecer o nivel de ampliación"
 
 #: lib/navigation/zoomlabel.cpp:60
-#, fuzzy, qt-format
-#| msgctxt "Preferences|"
-#| msgid "%1%"
+#, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr "%1%"
@@ -2267,7 +2265,7 @@ msgstr "Requírese autorización"
 #: lib/network/networkmanager.cpp:125 lib/network/networkmanager.cpp:211
 msgctxt "NetworkManager|"
 msgid "Username: "
-msgstr "Nome de usuario: "
+msgstr "Nome de usuaria: "
 
 #: lib/network/networkmanager.cpp:126 lib/network/networkmanager.cpp:212
 msgctxt "NetworkManager|"
@@ -2277,7 +2275,7 @@ msgstr "Contrasinal: "
 #: lib/network/networkmanager.cpp:132
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
-msgstr "Gardar o nome de usuario e o contrasinal para este sitio"
+msgstr "Gardar o nome de persoa usuaria e o contrasinal para este sitio."
 
 #: lib/network/networkmanager.cpp:140
 #, qt-format
@@ -2285,7 +2283,8 @@ msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
 msgstr ""
-"%1 está a solicitar un nome de usuario e un contrasinal. O sitio di: «%2»"
+"%1 está a solicitar un nome de persoa usuaria e un contrasinal. O sitio di: "
+"«%2»."
 
 #: lib/network/networkmanager.cpp:204
 msgctxt "NetworkManager|"
@@ -2345,7 +2344,7 @@ msgstr "Versión"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:190
 msgctxt "FalkonSchemeReply|"
 msgid "Main developer"
-msgstr "Desenvolvedor principal"
+msgstr "Desenvolvemento principal."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:211
 msgctxt "FalkonSchemeReply|"
@@ -2455,7 +2454,7 @@ msgstr "Axustar á altura"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:232
 msgctxt "FalkonSchemeReply|"
 msgid "Use custom wallpaper"
-msgstr "Usar un fondo de pantalla personalizado"
+msgstr "Usar un fondo personalizado"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:233
 msgctxt "FalkonSchemeReply|"
@@ -2542,7 +2541,7 @@ msgid ""
 "relevant for troubleshooting. Please include this information when "
 "submitting bug reports."
 msgstr ""
-"Esta páxina contén información sobre a configuración actual de Falkon - "
+"Esta páxina contén información sobre a configuración actual de Falkon, "
 "relevante para solucionar problemas. Inclúa esta información ao enviar "
 "informes de fallo."
 
@@ -2590,7 +2589,7 @@ msgstr "Nome"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:299
 msgctxt "FalkonSchemeReply|"
 msgid "Author"
-msgstr "Autor"
+msgstr "Autoría"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:300
 msgctxt "FalkonSchemeReply|"
@@ -3063,7 +3062,7 @@ msgid ""
 "Maybe relaunch with administrator right do a magic for you! ;)"
 msgstr ""
 "Hai algúns problemas. Reinstale Falkon.\n"
-"Pode que inicialo de novo como administrador o solucione!"
+"Pode que inicialo de novo con permisos de administración o solucione! ;)"
 
 #: lib/other/siteinfo.cpp:68
 msgctxt "SiteInfo|"
@@ -3342,7 +3341,7 @@ msgstr "Fonte da &páxina"
 #, qt-format
 msgctxt "PopupWindow|"
 msgid "%1 - Falkon"
-msgstr "%1 - Falkon"
+msgstr "%1 — Falkon"
 
 #: lib/preferences/acceptlanguage.cpp:99 lib/preferences/acceptlanguage.cpp:162
 #, qt-format
@@ -3487,7 +3486,7 @@ msgstr "Exportouse correctamente"
 #: lib/preferences/autofillmanager.cpp:372
 msgctxt "AutoFillManager|"
 msgid "Copy Username"
-msgstr "Copiar o nome de usuario"
+msgstr "Copiar o nome de usuaria"
 
 #: lib/preferences/autofillmanager.cpp:373
 msgctxt "AutoFillManager|"
@@ -3527,7 +3526,7 @@ msgstr "Servidor"
 #: lib/preferences/autofillmanager.ui:92
 msgctxt "AutoFillManager|"
 msgid "Username"
-msgstr "Nome de usuario"
+msgstr "Nome de usuaria"
 
 #: lib/preferences/autofillmanager.ui:97
 msgctxt "AutoFillManager|"
@@ -3824,7 +3823,7 @@ msgstr "Xestor de contrasinais"
 #: lib/preferences/preferences.ui:100
 msgctxt "Preferences|"
 msgid "Privacy"
-msgstr "Intimidade"
+msgstr "Privacidade"
 
 #: lib/preferences/preferences.ui:105
 msgctxt "Preferences|"
@@ -4115,12 +4114,9 @@ msgid "Always show go icon"
 msgstr "Amosar sempre a icona de ir"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "Amosar a i&maxe"
+msgstr "Amosar a etiqueta de ampliación"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4150,7 +4146,7 @@ msgstr "Amosar suxestións de busca"
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "Expandir a suxestión emerxente á anchura da xanela."
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
@@ -4374,7 +4370,7 @@ msgstr "Porto:"
 #: lib/preferences/preferences.ui:1483
 msgctxt "Preferences|"
 msgid "Username:"
-msgstr "Nome de usuario:"
+msgstr "Nome de usuaria:"
 
 #: lib/preferences/preferences.ui:1493
 msgctxt "Preferences|"
@@ -4467,8 +4463,8 @@ msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
 "><b>/</b> - search on page"
 msgstr ""
-"Atallos existentes:<br/><b>1</b> - separador anterior<br/><b>2</b> - "
-"seguinte separador<br/><b>/</b> - buscar na páxina"
+"Atallos existentes:<br/><b>1</b>: separador anterior<br/><b>2</b>: seguinte "
+"separador<br/><b>/</b>: buscar na páxina"
 
 #: lib/preferences/preferences.ui:1753
 msgctxt "Preferences|"
@@ -4587,7 +4583,7 @@ msgstr "Xestor de cookies"
 #: lib/preferences/preferences.ui:2080
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
-msgstr "Xestionar as opcións de protección da intimidade de JavaScript"
+msgstr "Xestionar as opcións de protección da privacidade de JavaScript"
 
 #: lib/preferences/preferences.ui:2103
 msgctxt "Preferences|"
@@ -4700,7 +4696,7 @@ msgstr "Xestor de motores de busca"
 #: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
-msgstr "<b>Folla de estilos do usuario</b>"
+msgstr "<b>Folla de estilos da usuaria</b>"
 
 #: lib/preferences/preferences.ui:2567
 msgctxt "Preferences|"
@@ -4710,7 +4706,7 @@ msgstr "<b>Xestionar os motores de busca</b>"
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "Xestionar os esquemas personalizados"
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
@@ -4735,7 +4731,7 @@ msgstr "<b>Cambiar a identificación do navegador</b>"
 #: lib/preferences/preferences.ui:2699
 msgctxt "Preferences|"
 msgid "User Agent Manager"
-msgstr "Xestor de axentes de usuario"
+msgstr "Xestor de axentes de usuaria"
 
 #: lib/preferences/preferences.ui:2721
 msgctxt "Preferences|"
@@ -4753,82 +4749,64 @@ msgid "<b>Certificate manager</b>"
 msgstr "<b>Xestor de certificados</b>"
 
 #: lib/preferences/preferences.ui:2816
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "Xestor de cookies"
+msgstr "Xestor de esquemas personalizados"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "Engadir un esquema permitido"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Themes"
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "Temas"
+msgstr "Esquema:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "Engadir un esquema bloqueado"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "Xestor de esquemas personalizados"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "Esquemas permitidos"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
-msgstr ""
+msgstr "**Nota:** as extensións poden engadir esquemas permitidos."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "Engadir"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "Retirar"
 
 #: lib/preferences/schememanager.ui:68
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "AdBlock"
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "Bloqueador de publicidade"
+msgstr "Bloquear"
 
 #: lib/preferences/schememanager.ui:98
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "Contido bloqueado"
+msgstr "Esquemas bloqueados"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Os cambios xurdirán efecto tras reiniciar Falkon."
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -4849,7 +4827,7 @@ msgstr "<b>Nome:</b>"
 #: lib/preferences/thememanager.ui:61
 msgctxt "ThemeManager|"
 msgid "<b>Author:</b>"
-msgstr "<b>Autor:</b>"
+msgstr "<b>Autoría:</b>"
 
 #: lib/preferences/thememanager.ui:84
 msgctxt "ThemeManager|"
@@ -4891,22 +4869,22 @@ msgstr "Dominio do sitio: "
 #: lib/preferences/useragentdialog.cpp:217
 msgctxt "UserAgentDialog|"
 msgid "User Agent: "
-msgstr "Axente de usuario: "
+msgstr "Axente de usuaria: "
 
 #: lib/preferences/useragentdialog.ui:14
 msgctxt "UserAgentDialog|"
 msgid "User Agent Manager"
-msgstr "Xestor de axentes de usuario"
+msgstr "Xestor de axentes de usuaria"
 
 #: lib/preferences/useragentdialog.ui:20
 msgctxt "UserAgentDialog|"
 msgid "Change global User Agent"
-msgstr "Cambiar o axente de usuario global"
+msgstr "Cambiar o axente de usuaria global"
 
 #: lib/preferences/useragentdialog.ui:48
 msgctxt "UserAgentDialog|"
 msgid "Use different User Agents for specified sites"
-msgstr "Usar axentes de usuario distintos para sitios indicados"
+msgstr "Usar axentes de usuaria distintos para sitios indicados"
 
 #: lib/preferences/useragentdialog.ui:92
 msgctxt "UserAgentDialog|"
@@ -4916,7 +4894,7 @@ msgstr "Sitio"
 #: lib/preferences/useragentdialog.ui:97
 msgctxt "UserAgentDialog|"
 msgid "User Agent"
-msgstr "Axente de usuario"
+msgstr "Axente de usuaria"
 
 #: lib/preferences/useragentdialog.ui:107
 msgctxt "UserAgentDialog|"
@@ -5956,7 +5934,7 @@ msgstr "Inspeccionar o elemento"
 #, qt-format
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
-msgstr "%1 - Falkon"
+msgstr "%1 — Falkon"
 
 #~ msgctxt "Preferences|"
 #~ msgid "Allow Pepper Plugins (Flash plugin)"
