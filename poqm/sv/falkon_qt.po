@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the falkon package.
 #
 # Magnus Johansson <johanssongreppet@yahoo.se>, 2017.
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2018, 2019, 2020, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-04-03 11:27+0200\n"
+"PO-Revision-Date: 2023-07-25 18:59+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -2242,13 +2242,13 @@ msgstr "Sök när söktjänst ändras"
 #: lib/navigation/zoomlabel.cpp:35
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Nollställ zoomnivå"
 
 #: lib/navigation/zoomlabel.cpp:60
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: lib/network/networkmanager.cpp:86
 msgctxt "NetworkManager|"
@@ -2614,12 +2614,9 @@ msgid "Qt version"
 msgstr "Qt-version"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
-#, fuzzy
-#| msgctxt "AboutDialog|"
-#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "<b>QtWebEngine version %1</b></p>"
+msgstr "QtWebEngine version"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
@@ -2688,7 +2685,7 @@ msgstr "Inga tillgängliga utökningar."
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Bara för den här sessionen"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3576,44 +3573,35 @@ msgstr "Undantag"
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "Värddator: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "Lägg till certifikatundantag"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "Värddatorn %1 finns redan i listan"
 
 #: lib/preferences/certificatemanager.cpp:83
-#, fuzzy
-#| msgctxt "Bookmarks|"
-#| msgid "Empty"
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "Tom"
+msgstr "Tom värddator"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Certifikatundantagshanterare"
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "Lägg till"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
 msgstr "Ta bort"
@@ -3621,7 +3609,7 @@ msgstr "Ta bort"
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "Omstart krävs för att ta bort en post"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -3711,7 +3699,7 @@ msgstr "Använd som standardvärde"
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: lib/preferences/preferences.cpp:557
 msgctxt "Preferences|"
@@ -4137,12 +4125,9 @@ msgid "Always show go icon"
 msgstr "Visa alltid gå-ikon"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "Visa &bild"
+msgstr "Visa zoombeteckning"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4172,7 +4157,7 @@ msgstr "Visa sökförslag"
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "Expandera förslagsruta till fönsterbredd"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
@@ -4292,7 +4277,7 @@ msgstr "Aktivera skärmbild"
 #: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr ""
+msgstr "Använd maskinvaruacceleration (kräver omstart)"
 
 #: lib/preferences/preferences.ui:1133
 msgctxt "Preferences|"
@@ -4733,7 +4718,7 @@ msgstr "<b>Hantera söktjänster</b>"
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "Hantera egna scheman"
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
@@ -4748,7 +4733,7 @@ msgstr "<b>Föredraget språk för hemsidor</b>"
 #: lib/preferences/preferences.ui:2652
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Certifikatundantagshanterare"
 
 #: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
@@ -4771,90 +4756,69 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Hantera protokollhanterare</b>"
 
 #: lib/preferences/preferences.ui:2765
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>Underrättelser</b>"
+msgstr "<b>Certifikathanterare</b>"
 
 #: lib/preferences/preferences.ui:2816
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "Kakhanterare"
+msgstr "Egen schemahanterare"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "Lägg till tillåtet schema"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Themes"
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "Teman"
+msgstr "Schema:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "Lägg till blockerat schema"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "Egen schemahanterare"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "Tillåtna scheman"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
-msgstr ""
+msgstr "**Observera:** Tillåtna scheman kan läggas till med ändelser."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "Lägg till"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "Ta bort"
 
 #: lib/preferences/schememanager.ui:68
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "AdBlock"
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "Reklamblockering"
+msgstr "Blockera"
 
 #: lib/preferences/schememanager.ui:98
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "Blockerat innehåll"
+msgstr "Blockerade scheman"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Ändringar får effekt efter Falkon har startats om."
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
