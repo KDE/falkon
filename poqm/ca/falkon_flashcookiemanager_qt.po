@@ -1,5 +1,5 @@
 # Translation of falkon_flashcookiemanager_qt.po to Catalan
-# Copyright (C) 2018-2020 This_file_is_part_of_KDE
+# Copyright (C) 2018-2023 This_file_is_part_of_KDE
 # Copyright (C) 2012-2017 Free Software Foundation, Inc.
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
@@ -9,13 +9,13 @@
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016, 2017.
 # David Medina <rbndavid@gmail.com>, 2017.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2020.
+# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2020-11-27 20:42+0100\n"
+"PO-Revision-Date: 2023-08-08 17:38+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: ca\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: fcm_dialog.cpp:76
 msgctxt "FCM_Dialog|"
@@ -198,6 +198,7 @@ msgctxt "FCM_Dialog|"
 msgid "Add"
 msgstr "Afegeix"
 
+# skip-rule: punctuation-period-no
 #: fcm_dialog.ui:364
 msgctxt "FCM_Dialog|"
 msgid ""
@@ -267,6 +268,7 @@ msgstr ""
 "Nota: l'usuari rebrà una notificació per a cada galeta Flash nova que no es "
 "trobi a les llistes negra o blanca."
 
+# skip-rule: punctuation-period-no
 #: fcm_dialog.ui:565
 msgctxt "FCM_Dialog|"
 msgid "Delete all flash cookies on exit/start. (except those are in whitelist)"
