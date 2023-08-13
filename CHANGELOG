@@ -1,3 +1,13 @@
+Version 23.08.0
+    * A bit faster restoring of session with a lot of tabs
+    * Add support for custom URI schemes (BUG: 434099)
+    * Add CMake option "BUILD_PYTHON_SUPPORT" to enable/disable Python support
+    * Add zoom indicator to the addressbar (BUG: 399001)
+    * Add an option to expand addresbBar suggestion popup to the window width
+    * Implement a GUI for managing ignored SSL hosts (by Javier Llorente)
+    * Add KDE branding bookmarks and speeddial entries (By Javier Llorente)
+    * Implement download integration with Plasma (By Javier Llorente)
+
 Version 23.04.0
     * Look for spellchecking dictionaries at location specified by QTWEBENGINE_DICTIONARIES_PATH environment variable
     * Show QtWebEngine version on Falkon Config page
