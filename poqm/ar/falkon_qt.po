@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-06-22 09:35+0400\n"
+"PO-Revision-Date: 2023-08-19 22:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -2250,12 +2250,10 @@ msgstr "ابحث عندما أُغير المحرك"
 #: lib/navigation/zoomlabel.cpp:35
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "صفر مستوى التكبير"
 
 #: lib/navigation/zoomlabel.cpp:60
-#, fuzzy, qt-format
-#| msgctxt "Preferences|"
-#| msgid "%1%"
+#, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr "%1٪"
@@ -4130,12 +4128,9 @@ msgid "Always show go icon"
 msgstr "أظهر رمز الذهاب دوماً"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "أظهر ال&صورة"
+msgstr "أظهر لصيقة التكبير"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4165,7 +4160,7 @@ msgstr "اعرض اقتراحات البحث"
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "وسع منبثقة الاقتراحات إلى عرض النافذة"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
@@ -4726,7 +4721,7 @@ msgstr "<b>أدر محركات البحث</b>"
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "أدر المخططات المخصصة"
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
@@ -4769,82 +4764,64 @@ msgid "<b>Certificate manager</b>"
 msgstr "<b>مدير الشّهادات</b>"
 
 #: lib/preferences/preferences.ui:2816
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "مُدير الكعكات"
+msgstr "مدير المخططات المخصصة"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "أضف مخطط سماح"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Themes"
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "السّمات"
+msgstr "المخطّط:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "أضف مخطط منع"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "مدير مخطط مخصص"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "مخططات السماح"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
-msgstr ""
+msgstr "**ملاحظة:** مخططات السماح يمكن أن تضاف عن طريق الامتدادات."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "أضف"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "احذف"
 
 #: lib/preferences/schememanager.ui:68
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "AdBlock"
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "آدبلوك"
+msgstr "احظر"
 
 #: lib/preferences/schememanager.ui:98
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "محتوى محجوب"
+msgstr "مخططات الحظر"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "ستأخذ التغييرات مفعولها بعد إعادة تشغيل فالكون."
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
