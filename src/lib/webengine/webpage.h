@@ -22,6 +22,7 @@
 #include <QWebEngineScript>
 #include <QWebEngineFullScreenRequest>
 #include <QVector>
+#include <QElapsedTimer>
 
 #include "qzcommon.h"
 
@@ -104,7 +105,7 @@ private:
 
     static QString s_lastUploadLocation;
     static QUrl s_lastUnsupportedUrl;
-    static QTime s_lastUnsupportedUrlTime;
+    static QElapsedTimer s_lastUnsupportedUrlTime;
 
     DelayedFileWatcher* m_fileWatcher;
     QEventLoop* m_runningLoop;

@@ -155,9 +155,9 @@ void StyleHelper::verticalGradient(QPainter* painter, const QRect &spanRect, con
     if (StyleHelper::usePixmapCache()) {
         QString key;
         QColor keyColor = baseColor(lightColored);
-        key.sprintf("mh_vertical %d %d %d %d %d",
-                    spanRect.width(), spanRect.height(), clipRect.width(),
-                    clipRect.height(), keyColor.rgb());
+        key.asprintf("mh_vertical %d %d %d %d %d",
+                     spanRect.width(), spanRect.height(), clipRect.width(),
+                     clipRect.height(), keyColor.rgb());
 
         QPixmap pixmap;
         if (!QPixmapCache::find(key, pixmap)) {

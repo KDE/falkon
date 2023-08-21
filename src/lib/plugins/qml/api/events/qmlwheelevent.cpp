@@ -45,7 +45,7 @@ QPoint QmlWheelEvent::globalPos() const
     if (!m_wheelEvent) {
         return QPoint(-1, -1);
     }
-    return m_wheelEvent->globalPos();
+    return m_wheelEvent->globalPosition().toPoint();
 }
 
 QPointF QmlWheelEvent::globalPosF() const
@@ -53,7 +53,7 @@ QPointF QmlWheelEvent::globalPosF() const
     if (!m_wheelEvent) {
         return QPointF(-1, -1);
     }
-    return m_wheelEvent->globalPosF();
+    return m_wheelEvent->globalPosition();
 }
 
 int QmlWheelEvent::globalX() const
@@ -61,7 +61,7 @@ int QmlWheelEvent::globalX() const
     if (!m_wheelEvent) {
         return -1;
     }
-    return m_wheelEvent->globalX();
+    return m_wheelEvent->globalPosition().toPoint().x();
 }
 
 int QmlWheelEvent::globalY() const
@@ -69,7 +69,7 @@ int QmlWheelEvent::globalY() const
     if (!m_wheelEvent) {
         return -1;
     }
-    return m_wheelEvent->globalY();
+    return m_wheelEvent->globalPosition().toPoint().x();
 }
 
 bool QmlWheelEvent::inverted() const
@@ -101,7 +101,7 @@ QPoint QmlWheelEvent::pos() const
     if (!m_wheelEvent) {
         return QPoint(-1, -1);
     }
-    return m_wheelEvent->pos();
+    return m_wheelEvent->position().toPoint();
 }
 
 QPointF QmlWheelEvent::posF() const
@@ -109,7 +109,7 @@ QPointF QmlWheelEvent::posF() const
     if (!m_wheelEvent) {
         return QPointF(-1, -1);
     }
-    return m_wheelEvent->posF();
+    return m_wheelEvent->position();
 }
 
 int QmlWheelEvent::source() const
@@ -125,7 +125,7 @@ int QmlWheelEvent::x() const
     if (!m_wheelEvent) {
         return -1;
     }
-    return m_wheelEvent->x();
+    return m_wheelEvent->position().toPoint().x();
 }
 
 int QmlWheelEvent::y() const
@@ -133,7 +133,7 @@ int QmlWheelEvent::y() const
     if (!m_wheelEvent) {
         return -1;
     }
-    return m_wheelEvent->y();
+    return m_wheelEvent->position().toPoint().y();
 }
 
 void QmlWheelEvent::clear()

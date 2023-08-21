@@ -51,13 +51,13 @@ bool HtmlExporter::exportBookmarks(BookmarkItem* root)
     QTextStream stream(&file);
     stream.setCodec("UTF-8");
 
-    stream << "<!DOCTYPE NETSCAPE-Bookmark-file-1>" << endl;
-    stream << "<!-- This is an automatically generated file." << endl;
-    stream << "     It will be read and overwritten." << endl;
-    stream << "     DO NOT EDIT! -->" << endl;
-    stream << R"(<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">)" << endl;
-    stream << "<TITLE>Bookmarks</TITLE>" << endl;
-    stream << "<H1>Bookmarks</H1>" << endl;
+    stream << "<!DOCTYPE NETSCAPE-Bookmark-file-1>" << Qt::endl;
+    stream << "<!-- This is an automatically generated file." << Qt::endl;
+    stream << "     It will be read and overwritten." << Qt::endl;
+    stream << "     DO NOT EDIT! -->" << Qt::endl;
+    stream << R"(<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">)" << Qt::endl;
+    stream << "<TITLE>Bookmarks</TITLE>" << Qt::endl;
+    stream << "<H1>Bookmarks</H1>" << Qt::endl;
 
     writeBookmark(root, stream, 0);
     return true;
@@ -72,35 +72,35 @@ void HtmlExporter::writeBookmark(BookmarkItem* item, QTextStream &stream, int le
 
     switch (item->type()) {
     case BookmarkItem::Url:
-        stream << indent << "<DT><A HREF=\"" << item->urlString() << "\">" << item->title() << "</A>" << endl;
+        stream << indent << "<DT><A HREF=\"" << item->urlString() << "\">" << item->title() << "</A>" << Qt::endl;
         break;
 
     case BookmarkItem::Separator:
-        stream << indent << "<HR>" << endl;
+        stream << indent << "<HR>" << Qt::endl;
         break;
 
     case BookmarkItem::Folder: {
-        stream << indent << "<DT><H3>" << item->title() << "</H3>" << endl;
-        stream << indent << "<DL><p>" << endl;
+        stream << indent << "<DT><H3>" << item->title() << "</H3>" << Qt::endl;
+        stream << indent << "<DL><p>" << Qt::endl;
 
         const auto children = item->children();
         for (BookmarkItem* child : children) {
             writeBookmark(child, stream, level + 1);
         }
 
-        stream << indent << "</DL><p>" << endl;
+        stream << indent << "</DL><p>" << Qt::endl;
         break;
     }
 
     case BookmarkItem::Root: {
-        stream << indent << "<DL><p>" << endl;
+        stream << indent << "<DL><p>" << Qt::endl;
 
         const auto children = item->children();
         for (BookmarkItem* child : children) {
             writeBookmark(child, stream, level + 1);
         }
 
-        stream << indent << "</DL><p>" << endl;
+        stream << indent << "</DL><p>" << Qt::endl;
         break;
     }
 

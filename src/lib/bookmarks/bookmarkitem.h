@@ -21,7 +21,7 @@
 #include <QString>
 #include <QList>
 #include <QIcon>
-#include <QTime>
+#include <QElapsedTimer>
 #include <QUrl>
 
 #include "qzcommon.h"
@@ -97,7 +97,7 @@ private:
     QString m_description;
     QString m_keyword;
     QIcon m_icon;
-    QTime m_iconTime;
+    QElapsedTimer m_iconTime;
     int m_visitCount;
     bool m_expanded;
     bool m_sidebarExpanded;

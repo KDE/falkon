@@ -72,7 +72,7 @@ QVector<PasswordEntry> KWalletPasswordBackend::getEntries(const QUrl &url)
     }
 
     // Sort to prefer last updated entries
-    qSort(list.begin(), list.end());
+    std::sort(list.begin(), list.end());
 
     return list;
 }

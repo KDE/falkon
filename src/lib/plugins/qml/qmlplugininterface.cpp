@@ -386,5 +386,5 @@ void QmlPluginInterface::setAcceptNavigationRequest(const QJSValue &acceptNaviga
 
 QQmlListProperty<QObject> QmlPluginInterface::childItems()
 {
-    return QQmlListProperty<QObject>(this, m_childItems);
+    return QQmlListProperty<QObject>(this, &m_childItems);
 }

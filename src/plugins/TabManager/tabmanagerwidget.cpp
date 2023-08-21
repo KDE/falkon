@@ -452,7 +452,7 @@ void TabManagerWidget::processActions()
 
     m_refreshBlocked = true;
 
-    QHash<BrowserWindow*, WebTab*> selectedTabs;
+    QMultiHash<BrowserWindow*, WebTab*> selectedTabs;
 
     const QString &command = sender()->objectName();
 
@@ -477,7 +477,7 @@ void TabManagerWidget::processActions()
                 continue;
             }
 
-            selectedTabs.insertMulti(mainWindow, webTab);
+            selectedTabs.insert(mainWindow, webTab);
         }
         winItem->setCheckState(0, Qt::Unchecked);
     }
@@ -518,7 +518,7 @@ void TabManagerWidget::changeGroupType()
     }
 }
 
-void TabManagerWidget::closeSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash)
+void TabManagerWidget::closeSelectedTabs(const QMultiHash<BrowserWindow*, WebTab*> &tabsHash)
 {
     if (tabsHash.isEmpty()) {
         return;
@@ -534,7 +534,7 @@ void TabManagerWidget::closeSelectedTabs(const QHash<BrowserWindow*, WebTab*> &t
     }
 }
 
-static void detachTabsTo(BrowserWindow* targetWindow, const QHash<BrowserWindow*, WebTab*> &tabsHash)
+static void detachTabsTo(BrowserWindow* targetWindow, const QMultiHash<BrowserWindow*, WebTab*> &tabsHash)
 {
     const QList<BrowserWindow*> &windows = tabsHash.uniqueKeys();
     for (BrowserWindow* mainWindow : windows) {
@@ -552,7 +552,7 @@ static void detachTabsTo(BrowserWindow* targetWindow, const QHash<BrowserWindow*
     }
 }
 
-void TabManagerWidget::detachSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash)
+void TabManagerWidget::detachSelectedTabs(const QMultiHash<BrowserWindow*, WebTab*> &tabsHash)
 {
     if (tabsHash.isEmpty() ||
             (tabsHash.uniqueKeys().size() == 1 &&
@@ -566,7 +566,7 @@ void TabManagerWidget::detachSelectedTabs(const QHash<BrowserWindow*, WebTab*> &
     detachTabsTo(newWindow, tabsHash);
 }
 
-bool TabManagerWidget::bookmarkSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash)
+bool TabManagerWidget::bookmarkSelectedTabs(const QMultiHash<BrowserWindow*, WebTab*> &tabsHash)
 {
     auto* dialog = new QDialog(getWindow(), Qt::WindowStaysOnTopHint | Qt::MSWindowsFixedSizeDialogHint);
     auto* layout = new QBoxLayout(QBoxLayout::TopToBottom, dialog);
@@ -608,7 +608,7 @@ bool TabManagerWidget::bookmarkSelectedTabs(const QHash<BrowserWindow*, WebTab*>
     return true;
 }
 
-void TabManagerWidget::unloadSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash)
+void TabManagerWidget::unloadSelectedTabs(const QMultiHash<BrowserWindow*, WebTab*> &tabsHash)
 {
     if (tabsHash.isEmpty()) {
         return;
@@ -951,7 +951,7 @@ bool TabTreeWidget::dropMimeData(QTreeWidgetItem *parent, int index, const QMime
             }
         }
         else if (!webTab->isPinned()) {
-            QHash<BrowserWindow*, WebTab*> tabsHash;
+            QMultiHash<BrowserWindow*, WebTab*> tabsHash;
             tabsHash.insert(window, webTab);
 
             detachTabsTo(targetWindow, tabsHash);

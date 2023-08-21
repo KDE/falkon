@@ -23,6 +23,7 @@
 #include <QBasicTimer>
 #include <QUrl>
 #include <QNetworkReply>
+#include <QElapsedTimer>
 #include <QTime>
 
 #include "qzcommon.h"
@@ -52,7 +53,7 @@ public:
     QString path() const;
     QString fileName() const;
     ~DownloadItem() override;
-    void setDownTimer(const QTime &timer) { m_downTimer = timer; }
+    void setDownTimer(const QElapsedTimer &timer) { m_downTimer = timer; }
 
     void startDownloading();
 
@@ -87,7 +88,7 @@ private:
     QWebEngineDownloadItem* m_download;
     QString m_path;
     QString m_fileName;
-    QTime m_downTimer;
+    QElapsedTimer m_downTimer;
     QTime m_remTime;
     QUrl m_downUrl;
     bool m_openFile;

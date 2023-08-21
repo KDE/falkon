@@ -20,7 +20,7 @@
 
 #include <QWidget>
 #include <QPointer>
-#include <QHash>
+#include <QMultiHash>
 #include <QTreeWidgetItem>
 
 namespace Ui
@@ -68,10 +68,10 @@ public:
     explicit TabManagerWidget(BrowserWindow* mainClass, QWidget* parent = 0, bool defaultWidget = false);
     ~TabManagerWidget() override;
 
-    void closeSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash);
-    void detachSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash);
-    bool bookmarkSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash);
-    void unloadSelectedTabs(const QHash<BrowserWindow*, WebTab*> &tabsHash);
+    void closeSelectedTabs(const QMultiHash<BrowserWindow*, WebTab*> &tabsHash);
+    void detachSelectedTabs(const QMultiHash<BrowserWindow*, WebTab*> &tabsHash);
+    bool bookmarkSelectedTabs(const QMultiHash<BrowserWindow*, WebTab*> &tabsHash);
+    void unloadSelectedTabs(const QMultiHash<BrowserWindow*, WebTab*> &tabsHash);
 
     void setGroupType(GroupType type);
 

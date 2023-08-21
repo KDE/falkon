@@ -321,12 +321,12 @@ bool TLDExtractor::parseData(const QString &dataFile, bool loadPrivateDomains)
         line = line.left(line.indexOf(QLatin1Char(' ')));
 
         if (!line.contains(QLatin1Char('.'))) {
-            m_tldHash.insertMulti(line, line);
+            m_tldHash.insert(line, line);
         }
         else {
             QString key = line.mid(line.lastIndexOf(QLatin1Char('.')) + 1);
 
-            m_tldHash.insertMulti(key, line);
+            m_tldHash.insert(key, line);
         }
     }
 

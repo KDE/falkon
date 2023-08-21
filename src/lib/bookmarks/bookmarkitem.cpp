@@ -77,7 +77,7 @@ QIcon BookmarkItem::icon()
 
     switch (m_type) {
     case Url:
-        if (m_iconTime.isNull() || m_iconTime.elapsed() > iconCacheTime) {
+        if ((!m_iconTime.isValid()) || (m_iconTime.elapsed() > iconCacheTime)) {
             m_icon = IconProvider::iconForUrl(m_url);
             m_iconTime.restart();
         }

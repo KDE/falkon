@@ -64,7 +64,7 @@
 
 QString WebPage::s_lastUploadLocation = QDir::homePath();
 QUrl WebPage::s_lastUnsupportedUrl;
-QTime WebPage::s_lastUnsupportedUrlTime;
+QElapsedTimer WebPage::s_lastUnsupportedUrlTime;
 QStringList s_supportedSchemes;
 
 static const bool kEnableJsOutput = qEnvironmentVariableIsSet("FALKON_ENABLE_JS_OUTPUT");
@@ -365,7 +365,7 @@ void WebPage::desktopServicesOpen(const QUrl &url)
     // Open same url only once in 2 secs
     const int sameUrlTimeout = 2 * 1000;
 
-    if (s_lastUnsupportedUrl != url || s_lastUnsupportedUrlTime.isNull() || s_lastUnsupportedUrlTime.elapsed() > sameUrlTimeout) {
+    if ((s_lastUnsupportedUrl != url) || (!s_lastUnsupportedUrlTime.isValid()) || (s_lastUnsupportedUrlTime.elapsed() > sameUrlTimeout)) {
         s_lastUnsupportedUrl = url;
         s_lastUnsupportedUrlTime.restart();
         QDesktopServices::openUrl(url);

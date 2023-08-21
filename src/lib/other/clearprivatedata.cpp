@@ -35,6 +35,7 @@
 #include <QWebEngineSettings>
 #include <QNetworkDiskCache>
 #include <QDateTime>
+#include <QTimeZone>
 #include <QCloseEvent>
 #include <QFileInfo>
 #include <QWebEngineProfile>
@@ -111,13 +112,13 @@ void ClearPrivateData::dialogAccepted()
 
         switch (ui->historyLength->currentIndex()) {
         case 0: //Later Today
-            end = QDateTime(today).toMSecsSinceEpoch();
+            end = QDateTime(today, QTime(), QTimeZone::systemTimeZone()).toMSecsSinceEpoch();
             break;
         case 1: //Week
-            end = QDateTime(week).toMSecsSinceEpoch();
+            end = QDateTime(week, QTime(), QTimeZone::systemTimeZone()).toMSecsSinceEpoch();
             break;
         case 2: //Month
-            end = QDateTime(month).toMSecsSinceEpoch();
+            end = QDateTime(month, QTime(), QTimeZone::systemTimeZone()).toMSecsSinceEpoch();
             break;
         case 3: //All
             break;

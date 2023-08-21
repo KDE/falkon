@@ -260,7 +260,7 @@ void DownloadManager::clearList()
 
 void DownloadManager::download(QWebEngineDownloadItem *downloadItem)
 {
-    QTime downloadTimer;
+    QElapsedTimer downloadTimer;
     downloadTimer.start();
 
     closeDownloadTab(downloadItem);
