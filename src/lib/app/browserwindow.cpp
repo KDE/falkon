@@ -1329,11 +1329,6 @@ void BrowserWindow::keyPressEvent(QKeyEvent* event)
         event->accept();
         break;
 
-    case Qt::Key_News:
-        action(QSL("Tools/RssReader"))->trigger();
-        event->accept();
-        break;
-
     case Qt::Key_Tools:
         action(QSL("Standard/Preferences"))->trigger();
         event->accept();
