@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-05-13 08:58+0200\n"
+"PO-Revision-Date: 2023-09-17 12:23+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Language: pl_PL\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -343,7 +343,7 @@ msgid_plural ""
 "There are still %n open tabs and your session won't be stored.\n"
 "Are you sure you want to close this window?"
 msgstr[0] ""
-"Masz jeszcze %n otwartą kartę, a twoja sesja nie zostanie zapisana.\n"
+"Masz jeszcze %n otwartą kartę, a twoje posiedzenie nie zostanie zapisane.\n"
 "Czy na pewno chcesz zamknąć to okno?"
 msgstr[1] ""
 "Masz jeszcze %n otwarte karty, a twoja sesja nie zostanie zapisana.\n"
@@ -2253,12 +2253,10 @@ msgstr "Wyszukuj podczas zmiany wyszukiwarki"
 #: lib/navigation/zoomlabel.cpp:35
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Wyzeruj stopień powiększenia"
 
 #: lib/navigation/zoomlabel.cpp:60
-#, fuzzy, qt-format
-#| msgctxt "Preferences|"
-#| msgid "%1%"
+#, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr "%1%"
@@ -2652,7 +2650,7 @@ msgstr "Ustawienia"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:329
 msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
-msgstr "Zapisana sesja"
+msgstr "Zapisane posiedzenie"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:330
 msgctxt "FalkonSchemeReply|"
@@ -2701,7 +2699,7 @@ msgstr "Brak dostępnych rozszerzeń."
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Tylko dla tego posiedzenia"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3586,44 +3584,35 @@ msgstr "Wyjątki"
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "Gospodarz: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "Dodaj certyfikat drogą wyjątku"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "Gospodarz %1 już jest na liście"
 
 #: lib/preferences/certificatemanager.cpp:83
-#, fuzzy
-#| msgctxt "Bookmarks|"
-#| msgid "Empty"
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "Pusty"
+msgstr "Pusty gospodarz"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Zarządzanie wyjątkami w certyfikatach"
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "Dodaj"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
 msgstr "Usuń"
@@ -3631,7 +3620,7 @@ msgstr "Usuń"
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "Usuniecie wpisu wymaga ponownego uruchomienia"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -4145,12 +4134,9 @@ msgid "Always show go icon"
 msgstr "Zawsze pokazuj ikonę „Przejdź do”"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "Pokaż o&braz"
+msgstr "Pokaż etykietę powiększenia"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4180,7 +4166,7 @@ msgstr "Podpowiadaj przy wyszukiwaniu"
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "Rozwiń okno podpowiedzi do szerokości okna"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
@@ -4740,7 +4726,7 @@ msgstr "<b></b>"
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "Zarządzaj własnymi schematami"
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
@@ -4755,7 +4741,7 @@ msgstr "<b>Preferowany język stron internetowych</b>"
 #: lib/preferences/preferences.ui:2652
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Zarządzanie wyjątkami w certyfikatach"
 
 #: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
@@ -4778,90 +4764,69 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Zarządzaj obsługą protokołów</b>"
 
 #: lib/preferences/preferences.ui:2765
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>Powiadomienia</b>"
+msgstr "<b>Zarządzanie certyfikatami</b>"
 
 #: lib/preferences/preferences.ui:2816
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "Zarządzanie ciasteczkami"
+msgstr "Zarządzanie własnymi schematami"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "Dodaj dozwolony schemat"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Themes"
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "Wyglądy"
+msgstr "Schemat:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "Dodaj zablokowany schemat"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "Zarządzanie własnymi schematami"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "Dozwolone schematy"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
-msgstr ""
+msgstr "**Uwaga:** Dozwolone schematy mogą zostać dodane przez rozszerzenia."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "Dodaj"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "Usuń"
 
 #: lib/preferences/schememanager.ui:68
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "AdBlock"
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "AdBlock"
+msgstr "Zablokuj"
 
 #: lib/preferences/schememanager.ui:98
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "Zablokowana treść"
+msgstr "Zablokowane schematy"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Zmiany odniosą skutek po ponownym uruchomieniu Falkona."
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -5030,7 +4995,7 @@ msgstr "Podaj nową nazwę do zapisania sesji:"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Saved Session (%1)"
-msgstr "Zapisana sesja (%1)"
+msgstr "Zapisane posiedzenie (%1)"
 
 #: lib/session/sessionmanager.cpp:180
 msgctxt "SessionManager|"
@@ -5056,7 +5021,7 @@ msgstr "Czy na pewno chcesz usunąć sesję „%1”?"
 #: lib/session/sessionmanager.cpp:209
 msgctxt "SessionManager|"
 msgid "New Session"
-msgstr "Nowa sesja"
+msgstr "Nowe posiedzenie"
 
 #: lib/session/sessionmanager.cpp:210
 msgctxt "SessionManager|"
@@ -5067,7 +5032,7 @@ msgstr "Podaj nazwę do utworzenia nowej sesji:"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "New Session (%1)"
-msgstr "Nowa sesja (%1)"
+msgstr "Nowe posiedzenie (%1)"
 
 #: lib/session/sessionmanager.cpp:243
 msgctxt "SessionManager|"
@@ -5082,7 +5047,7 @@ msgstr "Kopia zapasowa 2"
 #: lib/session/sessionmanager.cpp:290
 msgctxt "SessionManager|"
 msgid "Default Session"
-msgstr "Domyślna sesja"
+msgstr "Domyślne posiedzenie"
 
 #: lib/session/sessionmanager.cpp:393
 msgctxt "SessionManager|"
@@ -5093,7 +5058,7 @@ msgstr "Wybierz sesję początkową:"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "%1 (last session)"
-msgstr "%1 (ostatnia sesja)"
+msgstr "%1 (ostatnie posiedzenie)"
 
 #: lib/session/sessionmanagerdialog.cpp:140
 msgctxt "SessionManagerDialog|"
@@ -5108,12 +5073,12 @@ msgstr "Przełącz na"
 #: lib/session/sessionmanagerdialog.ui:14
 msgctxt "SessionManagerDialog|"
 msgid "Session Manager"
-msgstr "Zarządzanie sesją"
+msgstr "Zarządzanie posiedzeniem"
 
 #: lib/session/sessionmanagerdialog.ui:24
 msgctxt "SessionManagerDialog|"
 msgid "Session"
-msgstr "Sesja"
+msgstr "Posiedzenie"
 
 #: lib/session/sessionmanagerdialog.ui:29
 msgctxt "SessionManagerDialog|"
