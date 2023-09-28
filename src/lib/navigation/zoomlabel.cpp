@@ -22,6 +22,7 @@
 #include "qzsettings.h"
 
 #include <QApplication>
+#include <QPainter>
 
 ZoomLabel::ZoomLabel(LocationBar* parent)
     : ClickableLabel(parent)

@@ -22,9 +22,15 @@
 #include <QNetworkReply>
 #include <QWebEngineUrlRequestJob>
 
-#include <KIO/AccessManager>
+#include <kio_version.h>
 
-Q_GLOBAL_STATIC_WITH_ARGS(KIO::Integration::AccessManager, s_knam, (nullptr))
+#if KIO_VERSION < QT_VERSION_CHECK(5, 240, 0)
+    #include <KIO/AccessManager>
+    Q_GLOBAL_STATIC_WITH_ARGS(KIO::Integration::AccessManager, s_knam, (nullptr))
+#else
+    #include <QNetworkAccessManager>
+    Q_GLOBAL_STATIC_WITH_ARGS(QNetworkAccessManager, s_knam, (nullptr))
+#endif
 
 KIOSchemeHandler::KIOSchemeHandler(const QString &protocol, QObject *parent)
     : QWebEngineUrlSchemeHandler(parent)
