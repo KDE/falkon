@@ -33,7 +33,11 @@ PageThumbnailer::PageThumbnailer(QObject* parent)
     , m_loadTitle(false)
 {
     m_view->setAttribute(Qt::WA_DontShowOnScreen);
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    m_view->setSource(QUrl(QSL("qrc:data/thumbnailer-qt5.qml")));
+#else
     m_view->setSource(QUrl(QSL("qrc:data/thumbnailer.qml")));
+#endif
     m_view->rootContext()->setContextProperty(QSL("thumbnailer"), this);
     m_view->show();
 }

@@ -6,11 +6,11 @@ WebEngineView {
     width: 1280
     height: 720
 
-    onLoadingChanged: function(loadingInfo) {
-        if (loadingInfo.status == WebEngineView.LoadStartedStatus)
+    onLoadingChanged: {
+        if (loadRequest.status == WebEngineView.LoadStartedStatus)
             return;
 
-        var ok = loadingInfo.status == WebEngineView.LoadSucceededStatus;
+        var ok = loadRequest.status == WebEngineView.LoadSucceededStatus;
         view.runJavaScript(thumbnailer.afterLoadScript(), function() {
             thumbnailer.createThumbnail(ok);
         });
