@@ -190,22 +190,22 @@ msgctxt "AdBlockManager|"
 msgid "AdBlock Subscription"
 msgstr "AdBlock訂閱"
 
-#: lib/adblock/adblockmanager.cpp:317
+#: lib/adblock/adblockmanager.cpp:321
 msgctxt "AdBlockManager|"
 msgid "EasyList"
 msgstr "EasyList"
 
-#: lib/adblock/adblockmanager.cpp:322
+#: lib/adblock/adblockmanager.cpp:326
 msgctxt "AdBlockManager|"
 msgid "NoCoin List"
 msgstr ""
 
-#: lib/adblock/adblocksubscription.cpp:173
+#: lib/adblock/adblocksubscription.cpp:177
 msgctxt "AdBlockSubscription|"
 msgid "Cannot load subscription!"
 msgstr "無法載入訂閱。"
 
-#: lib/adblock/adblocksubscription.cpp:286
+#: lib/adblock/adblocksubscription.cpp:290
 msgctxt "AdBlockCustomList|"
 msgid "Custom Rules"
 msgstr "自訂規則"
@@ -253,78 +253,78 @@ msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
 msgstr ""
 
-#: lib/app/browserwindow.cpp:204 lib/app/browserwindow.cpp:979
+#: lib/app/browserwindow.cpp:209 lib/app/browserwindow.cpp:988
 msgctxt "BrowserWindow|"
 msgid "Falkon"
 msgstr ""
 
-#: lib/app/browserwindow.cpp:394
+#: lib/app/browserwindow.cpp:399
 msgctxt "BrowserWindow|"
 msgid "IP Address of current page"
 msgstr "目前頁面的IP位址"
 
-#: lib/app/browserwindow.cpp:734
+#: lib/app/browserwindow.cpp:743
 msgctxt "BrowserWindow|"
 msgid " (Private Browsing)"
 msgstr "（私密瀏覽）"
 
-#: lib/app/browserwindow.cpp:981
+#: lib/app/browserwindow.cpp:990
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid "%1 - Falkon"
 msgstr ""
 
-#: lib/app/browserwindow.cpp:1047
+#: lib/app/browserwindow.cpp:1056
 msgctxt "BrowserWindow|"
 msgid "&Menu Bar"
 msgstr "選單列（&M）"
 
-#: lib/app/browserwindow.cpp:1052
+#: lib/app/browserwindow.cpp:1061
 msgctxt "BrowserWindow|"
 msgid "&Navigation Toolbar"
 msgstr "導航列（&N）"
 
-#: lib/app/browserwindow.cpp:1056
+#: lib/app/browserwindow.cpp:1065
 msgctxt "BrowserWindow|"
 msgid "&Bookmarks Toolbar"
 msgstr "書籤列（&B）"
 
-#: lib/app/browserwindow.cpp:1062
+#: lib/app/browserwindow.cpp:1071
 msgctxt "BrowserWindow|"
 msgid "&Tabs on Top"
 msgstr "分頁移往最上層（&T）"
 
-#: lib/app/browserwindow.cpp:1117
+#: lib/app/browserwindow.cpp:1126
 msgctxt "BrowserWindow|"
 msgid "Other"
 msgstr "其他"
 
-#: lib/app/browserwindow.cpp:1159
+#: lib/app/browserwindow.cpp:1168
 msgctxt "BrowserWindow|"
 msgid "HTML files"
 msgstr "HTML檔案"
 
-#: lib/app/browserwindow.cpp:1159
+#: lib/app/browserwindow.cpp:1168
 msgctxt "BrowserWindow|"
 msgid "Image files"
 msgstr "圖像檔案"
 
-#: lib/app/browserwindow.cpp:1159
+#: lib/app/browserwindow.cpp:1168
 msgctxt "BrowserWindow|"
 msgid "Text files"
 msgstr "文字檔案"
 
-#: lib/app/browserwindow.cpp:1159
+#: lib/app/browserwindow.cpp:1168
 msgctxt "BrowserWindow|"
 msgid "All files"
 msgstr "全部檔案"
 
-#: lib/app/browserwindow.cpp:1161
+#: lib/app/browserwindow.cpp:1170
 msgctxt "BrowserWindow|"
 msgid "Open file..."
 msgstr "開啟檔案…"
 
-#: lib/app/browserwindow.cpp:1498
+#: lib/app/browserwindow.cpp:1507
 #, fuzzy, qt-format
 #| msgctxt "BrowserWindow|"
 #| msgid ""
@@ -344,17 +344,17 @@ msgstr[0] ""
 "仍有%n個開啟的分頁。工作階段不會被儲存。\n"
 "確定關閉這個視窗？"
 
-#: lib/app/browserwindow.cpp:1499
+#: lib/app/browserwindow.cpp:1508
 msgctxt "BrowserWindow|"
 msgid "Don't ask again"
 msgstr "不要再詢問"
 
-#: lib/app/browserwindow.cpp:1500
+#: lib/app/browserwindow.cpp:1509
 msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "仍有開啟的分頁"
 
-#: lib/app/mainapplication.cpp:1087
+#: lib/app/mainapplication.cpp:1111
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -366,7 +366,7 @@ msgid ""
 "default browser?"
 msgstr "QupZilla並非你的預設瀏覽器。是否要QupZilla成為預設瀏覽器？"
 
-#: lib/app/mainapplication.cpp:1088
+#: lib/app/mainapplication.cpp:1112
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid "Always perform this check when starting QupZilla."
@@ -374,27 +374,27 @@ msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "每次啟動QupZilla均進行確認"
 
-#: lib/app/mainapplication.cpp:1090
+#: lib/app/mainapplication.cpp:1114
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "預設瀏覽器"
 
-#: lib/app/mainapplication.cpp:1224
+#: lib/app/mainapplication.cpp:1254
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1225
+#: lib/app/mainapplication.cpp:1255
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1226
+#: lib/app/mainapplication.cpp:1256
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1241
+#: lib/app/mainapplication.cpp:1271
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -1012,14 +1012,14 @@ msgstr "Google Chrome將書籤儲存於<b>Bookmarks</b>文字檔案。這個檔�
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:52
 msgctxt "BookmarksImporter|"
 msgid "Choose file..."
 msgstr "選取檔案…"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:61
 msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
 msgstr "無法開啟檔案。"
@@ -1073,19 +1073,19 @@ msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
 msgstr "目錄不存在。"
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:37
 msgctxt "BookmarksImporter|"
 msgid ""
 "Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
 "usually located in"
 msgstr "Opera將書籤儲存於<b>bookmarks.adr</b>文字檔案。這個檔案通常位於"
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:68
 msgctxt "BookmarksImporter|"
 msgid "File is not valid Opera bookmarks file!"
 msgstr "無效Opera書籤檔。"
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:73
 msgctxt "BookmarksImporter|"
 msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
 msgstr "僅支援UTF-8編碼的Opera書籤檔。"
@@ -1172,32 +1172,32 @@ msgctxt "BookmarksMenu|"
 msgid "Organize &Bookmarks"
 msgstr "整理書籤（&B）"
 
-#: lib/bookmarks/bookmarksmodel.cpp:147
+#: lib/bookmarks/bookmarksmodel.cpp:148
 msgctxt "BookmarksModel|"
 msgid "Title"
 msgstr "標題"
 
-#: lib/bookmarks/bookmarksmodel.cpp:149
+#: lib/bookmarks/bookmarksmodel.cpp:150
 msgctxt "BookmarksModel|"
 msgid "Address"
 msgstr "網址"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:73
+#: lib/bookmarks/bookmarkstoolbar.cpp:74
 msgctxt "BookmarksToolbar|"
 msgid "Open in new tab"
 msgstr "新分頁中開啟"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:74
+#: lib/bookmarks/bookmarkstoolbar.cpp:75
 msgctxt "BookmarksToolbar|"
 msgid "Open in new window"
 msgstr "新視窗中開啟"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:75
+#: lib/bookmarks/bookmarkstoolbar.cpp:76
 msgctxt "BookmarksToolbar|"
 msgid "Open in new private window"
 msgstr "新私密視窗中開啟"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:185
+#: lib/bookmarks/bookmarkstoolbar.cpp:78 lib/bookmarks/bookmarkstoolbar.cpp:186
 #, fuzzy
 #| msgctxt "BookmarksManager|"
 #| msgid "New Folder"
@@ -1205,27 +1205,27 @@ msgctxt "BookmarksToolbar|"
 msgid "New Folder"
 msgstr "新資料夾"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:78
+#: lib/bookmarks/bookmarkstoolbar.cpp:79
 msgctxt "BookmarksToolbar|"
 msgid "Edit"
 msgstr "編輯"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:79
+#: lib/bookmarks/bookmarkstoolbar.cpp:80
 msgctxt "BookmarksToolbar|"
 msgid "Delete"
 msgstr "刪除"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:81
+#: lib/bookmarks/bookmarkstoolbar.cpp:82
 msgctxt "BookmarksToolbar|"
 msgid "Show Only Icons"
 msgstr "僅顯示圖示"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:85
+#: lib/bookmarks/bookmarkstoolbar.cpp:86
 msgctxt "BookmarksToolbar|"
 msgid "Show Only Text"
 msgstr "僅顯示文字"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:185
+#: lib/bookmarks/bookmarkstoolbar.cpp:186
 #, fuzzy
 #| msgctxt "AutoFillManager|"
 #| msgid "Username"
@@ -1551,98 +1551,98 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr ""
 
-#: lib/downloads/downloaditem.cpp:73
+#: lib/downloads/downloaditem.cpp:77
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "未知剩餘時間"
 
-#: lib/downloads/downloaditem.cpp:128
+#: lib/downloads/downloaditem.cpp:138
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "完成 - %1（%2）"
 
-#: lib/downloads/downloaditem.cpp:132
+#: lib/downloads/downloaditem.cpp:142
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "錯誤 - %1"
 
-#: lib/downloads/downloaditem.cpp:136 lib/downloads/downloaditem.cpp:276
+#: lib/downloads/downloaditem.cpp:146 lib/downloads/downloaditem.cpp:293
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "已取消 - %1"
 
-#: lib/downloads/downloaditem.cpp:185 lib/downloads/downloaditem.cpp:320
+#: lib/downloads/downloaditem.cpp:202 lib/downloads/downloaditem.cpp:337
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "已取消"
 
-#: lib/downloads/downloaditem.cpp:191
+#: lib/downloads/downloaditem.cpp:208
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "幾秒"
 
-#: lib/downloads/downloaditem.cpp:196
+#: lib/downloads/downloaditem.cpp:213
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
 msgstr[0] "%n秒"
 
-#: lib/downloads/downloaditem.cpp:201
+#: lib/downloads/downloaditem.cpp:218
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
 msgstr[0] "%n分鐘"
 
-#: lib/downloads/downloaditem.cpp:206
+#: lib/downloads/downloaditem.cpp:223
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
 msgstr[0] "%n小時"
 
-#: lib/downloads/downloaditem.cpp:213
+#: lib/downloads/downloaditem.cpp:230
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "未知速度"
 
-#: lib/downloads/downloaditem.cpp:218
+#: lib/downloads/downloaditem.cpp:235
 msgctxt "DownloadItem|"
 msgid "kB/s"
 msgstr "kB/s"
 
-#: lib/downloads/downloaditem.cpp:223
+#: lib/downloads/downloaditem.cpp:240
 msgctxt "DownloadItem|"
 msgid "MB/s"
 msgstr "MB/s"
 
-#: lib/downloads/downloaditem.cpp:227
+#: lib/downloads/downloaditem.cpp:244
 msgctxt "DownloadItem|"
 msgid "GB/s"
 msgstr "GB/s"
 
-#: lib/downloads/downloaditem.cpp:255
+#: lib/downloads/downloaditem.cpp:272
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "未知大小"
 
-#: lib/downloads/downloaditem.cpp:256
+#: lib/downloads/downloaditem.cpp:273
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - 未知大小（目前速度%3）"
 
-#: lib/downloads/downloaditem.cpp:259
+#: lib/downloads/downloaditem.cpp:276
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "剩餘%1 - 已下載%3中的%2（目前速度%4）"
 
-#: lib/downloads/downloaditem.cpp:291
+#: lib/downloads/downloaditem.cpp:308
 #, fuzzy, qt-format
 #| msgctxt "DownloadItem|"
 #| msgid "Cancelled - %1"
@@ -1650,27 +1650,27 @@ msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "已取消 - %1"
 
-#: lib/downloads/downloaditem.cpp:304
+#: lib/downloads/downloaditem.cpp:321
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "開啟檔案"
 
-#: lib/downloads/downloaditem.cpp:306
+#: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "開啟資料夾"
 
-#: lib/downloads/downloaditem.cpp:308
+#: lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "複製下載連結"
 
-#: lib/downloads/downloaditem.cpp:310
+#: lib/downloads/downloaditem.cpp:327
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "取消下載"
 
-#: lib/downloads/downloaditem.cpp:313
+#: lib/downloads/downloaditem.cpp:330
 #, fuzzy
 #| msgctxt "DownloadItem|"
 #| msgid "Cancel downloading"
@@ -1678,7 +1678,7 @@ msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "取消下載"
 
-#: lib/downloads/downloaditem.cpp:315
+#: lib/downloads/downloaditem.cpp:332
 #, fuzzy
 #| msgctxt "DownloadItem|"
 #| msgid "Cancel downloading"
@@ -1686,22 +1686,22 @@ msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "取消下載"
 
-#: lib/downloads/downloaditem.cpp:318
+#: lib/downloads/downloaditem.cpp:335
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "從清單中移除"
 
-#: lib/downloads/downloaditem.cpp:320
+#: lib/downloads/downloaditem.cpp:337
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "錯誤"
 
-#: lib/downloads/downloaditem.cpp:346
+#: lib/downloads/downloaditem.cpp:363
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "未找到"
 
-#: lib/downloads/downloaditem.cpp:346
+#: lib/downloads/downloaditem.cpp:363
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -1713,50 +1713,50 @@ msgstr ""
 "%1\n"
 "檔案。"
 
-#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:423
+#: lib/downloads/downloadmanager.cpp:200 lib/downloads/downloadmanager.cpp:440
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "下載管理員"
 
-#: lib/downloads/downloadmanager.cpp:230
+#: lib/downloads/downloadmanager.cpp:238
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%2個檔案的%1%（目前速度%3）剩餘%4"
 
-#: lib/downloads/downloadmanager.cpp:234
+#: lib/downloads/downloadmanager.cpp:242
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1% - 下載管理員"
 
-#: lib/downloads/downloadmanager.cpp:304
+#: lib/downloads/downloadmanager.cpp:316
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "另存新檔…"
 
-#: lib/downloads/downloadmanager.cpp:314
+#: lib/downloads/downloadmanager.cpp:326
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:315
+#: lib/downloads/downloadmanager.cpp:327
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:328
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:320
+#: lib/downloads/downloadmanager.cpp:332
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:416
+#: lib/downloads/downloadmanager.cpp:433
 #, fuzzy
 #| msgctxt "DownloadOptionsDialog|"
 #| msgid "Download link copied."
@@ -1764,17 +1764,17 @@ msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "已複製下載連結。"
 
-#: lib/downloads/downloadmanager.cpp:416
+#: lib/downloads/downloadmanager.cpp:433
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "成功下載全部檔案。"
 
-#: lib/downloads/downloadmanager.cpp:463
+#: lib/downloads/downloadmanager.cpp:480
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "警告"
 
-#: lib/downloads/downloadmanager.cpp:464
+#: lib/downloads/downloadmanager.cpp:481
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -1785,13 +1785,13 @@ msgctxt "DownloadManager|"
 msgid "Clear"
 msgstr "清除"
 
-#: lib/downloads/downloadoptionsdialog.cpp:49
+#: lib/downloads/downloadoptionsdialog.cpp:53
 #, qt-format
 msgctxt "DownloadOptionsDialog|"
 msgid "Opening %1"
 msgstr "現正開啟%1"
 
-#: lib/downloads/downloadoptionsdialog.cpp:112
+#: lib/downloads/downloadoptionsdialog.cpp:116
 msgctxt "DownloadOptionsDialog|"
 msgid "Download link copied."
 msgstr "已複製下載連結。"
@@ -2107,92 +2107,92 @@ msgctxt "NavigationBar|"
 msgid "Empty Page"
 msgstr "空白頁面"
 
-#: lib/navigation/navigationbar.cpp:76
+#: lib/navigation/navigationbar.cpp:77
 msgctxt "NavigationBar|"
 msgid "Back"
 msgstr "上一頁"
 
-#: lib/navigation/navigationbar.cpp:86
+#: lib/navigation/navigationbar.cpp:87
 msgctxt "NavigationBar|"
 msgid "Forward"
 msgstr "下一頁"
 
-#: lib/navigation/navigationbar.cpp:106
+#: lib/navigation/navigationbar.cpp:107
 msgctxt "NavigationBar|"
 msgid "Home"
 msgstr "首頁"
 
-#: lib/navigation/navigationbar.cpp:114
+#: lib/navigation/navigationbar.cpp:115
 msgctxt "NavigationBar|"
 msgid "New Tab"
 msgstr "新分頁"
 
-#: lib/navigation/navigationbar.cpp:134
+#: lib/navigation/navigationbar.cpp:135
 msgctxt "NavigationBar|"
 msgid "Tools"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:147
+#: lib/navigation/navigationbar.cpp:148
 msgctxt "NavigationBar|"
 msgid "Main Menu"
 msgstr "主選單"
 
-#: lib/navigation/navigationbar.cpp:164
+#: lib/navigation/navigationbar.cpp:165
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:190
+#: lib/navigation/navigationbar.cpp:191
 msgctxt "NavigationBar|"
 msgid "Back and Forward buttons"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:191
+#: lib/navigation/navigationbar.cpp:192
 msgctxt "NavigationBar|"
 msgid "Reload button"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:192
+#: lib/navigation/navigationbar.cpp:193
 msgctxt "NavigationBar|"
 msgid "Home button"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:193
+#: lib/navigation/navigationbar.cpp:194
 msgctxt "NavigationBar|"
 msgid "Add tab button"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:194
+#: lib/navigation/navigationbar.cpp:195
 msgctxt "NavigationBar|"
 msgid "Address and Search bar"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:195
+#: lib/navigation/navigationbar.cpp:196
 msgctxt "NavigationBar|"
 msgid "Tools button"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:196
+#: lib/navigation/navigationbar.cpp:197
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen button"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:393 lib/navigation/navigationbar.cpp:427
+#: lib/navigation/navigationbar.cpp:395 lib/navigation/navigationbar.cpp:429
 msgctxt "NavigationBar|"
 msgid "Clear history"
 msgstr "清除歷史"
 
-#: lib/navigation/navigationbar.cpp:434
+#: lib/navigation/navigationbar.cpp:436
 msgctxt "NavigationBar|"
 msgid "Toolbars"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:435
+#: lib/navigation/navigationbar.cpp:437
 msgctxt "NavigationBar|"
 msgid "Sidebar"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:450 lib/navigation/navigationbar.cpp:464
+#: lib/navigation/navigationbar.cpp:452 lib/navigation/navigationbar.cpp:466
 msgctxt "NavigationBar|"
 msgid "Configure Toolbar"
 msgstr ""
@@ -2248,45 +2248,45 @@ msgctxt "WebSearchBar|"
 msgid "Manage Search Engines"
 msgstr "管理搜尋器"
 
-#: lib/navigation/websearchbar.cpp:257
+#: lib/navigation/websearchbar.cpp:261
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
 msgstr "顯示建議"
 
-#: lib/navigation/websearchbar.cpp:262
+#: lib/navigation/websearchbar.cpp:266
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr "切換搜尋器時進行搜尋"
 
-#: lib/navigation/zoomlabel.cpp:35
+#: lib/navigation/zoomlabel.cpp:36
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
 msgstr ""
 
-#: lib/navigation/zoomlabel.cpp:60
+#: lib/navigation/zoomlabel.cpp:61
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr ""
 
-#: lib/network/networkmanager.cpp:86
+#: lib/network/networkmanager.cpp:102
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
 msgstr "SSL憑證錯誤"
 
-#: lib/network/networkmanager.cpp:87
+#: lib/network/networkmanager.cpp:103
 msgctxt "NetworkManager|"
 msgid ""
 "The page you are trying to access has the following errors in the SSL "
 "certificate:"
 msgstr "存取的頁面有以下SSL憑證錯誤："
 
-#: lib/network/networkmanager.cpp:88
+#: lib/network/networkmanager.cpp:104
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
 msgstr "是否給予這個憑證例外待遇？"
 
-#: lib/network/networkmanager.cpp:118
+#: lib/network/networkmanager.cpp:139
 #, fuzzy
 #| msgctxt "NetworkManager|"
 #| msgid "Authorisation required"
@@ -2294,29 +2294,29 @@ msgctxt "NetworkManager|"
 msgid "Authorization required"
 msgstr "須認證"
 
-#: lib/network/networkmanager.cpp:125 lib/network/networkmanager.cpp:211
+#: lib/network/networkmanager.cpp:146 lib/network/networkmanager.cpp:232
 msgctxt "NetworkManager|"
 msgid "Username: "
 msgstr "用戶名："
 
-#: lib/network/networkmanager.cpp:126 lib/network/networkmanager.cpp:212
+#: lib/network/networkmanager.cpp:147 lib/network/networkmanager.cpp:233
 msgctxt "NetworkManager|"
 msgid "Password: "
 msgstr "密碼："
 
-#: lib/network/networkmanager.cpp:132
+#: lib/network/networkmanager.cpp:153
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
 msgstr "儲存這頁面填寫的用戶名和密碼"
 
-#: lib/network/networkmanager.cpp:140
+#: lib/network/networkmanager.cpp:161
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
 msgstr "網站%1要求用戶名和密碼。訊息：%2"
 
-#: lib/network/networkmanager.cpp:204
+#: lib/network/networkmanager.cpp:225
 #, fuzzy
 #| msgctxt "NetworkManager|"
 #| msgid "Proxy authorisation required"
@@ -2324,7 +2324,7 @@ msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
 msgstr "代理伺服器要求認證"
 
-#: lib/network/networkmanager.cpp:224
+#: lib/network/networkmanager.cpp:245
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
@@ -3657,95 +3657,95 @@ msgid "Search"
 msgstr "搜尋"
 
 #: lib/preferences/autofillmanager.cpp:82
-#: lib/preferences/autofillmanager.cpp:171
-#: lib/preferences/autofillmanager.cpp:179
+#: lib/preferences/autofillmanager.cpp:175
+#: lib/preferences/autofillmanager.cpp:183
 #: lib/preferences/autofillmanager.ui:140
 msgctxt "AutoFillManager|"
 msgid "Show Passwords"
 msgstr "顯示密碼"
 
-#: lib/preferences/autofillmanager.cpp:130
+#: lib/preferences/autofillmanager.cpp:134
 msgctxt "AutoFillManager|"
 msgid "Change backend..."
 msgstr "更改後端…"
 
-#: lib/preferences/autofillmanager.cpp:130
+#: lib/preferences/autofillmanager.cpp:134
 msgctxt "AutoFillManager|"
 msgid "Change backend:"
 msgstr "更改後端："
 
-#: lib/preferences/autofillmanager.cpp:179
+#: lib/preferences/autofillmanager.cpp:183
 msgctxt "AutoFillManager|"
 msgid "Are you sure that you want to show all passwords?"
 msgstr "顯示全部密碼，確定？"
 
-#: lib/preferences/autofillmanager.cpp:194
+#: lib/preferences/autofillmanager.cpp:198
 msgctxt "AutoFillManager|"
 msgid "Hide Passwords"
 msgstr "隱藏密碼"
 
-#: lib/preferences/autofillmanager.cpp:232
+#: lib/preferences/autofillmanager.cpp:236
 msgctxt "AutoFillManager|"
 msgid "Confirmation"
 msgstr "確認"
 
-#: lib/preferences/autofillmanager.cpp:233
+#: lib/preferences/autofillmanager.cpp:237
 msgctxt "AutoFillManager|"
 msgid "Are you sure you want to delete all passwords on your computer?"
 msgstr "刪除電腦上全部密碼，確定？"
 
-#: lib/preferences/autofillmanager.cpp:252
+#: lib/preferences/autofillmanager.cpp:256
 msgctxt "AutoFillManager|"
 msgid "Edit password"
 msgstr "編輯密碼"
 
-#: lib/preferences/autofillmanager.cpp:252
+#: lib/preferences/autofillmanager.cpp:256
 msgctxt "AutoFillManager|"
 msgid "Change password:"
 msgstr "更改密碼："
 
-#: lib/preferences/autofillmanager.cpp:301
-#: lib/preferences/autofillmanager.cpp:312
+#: lib/preferences/autofillmanager.cpp:310
+#: lib/preferences/autofillmanager.cpp:321
 msgctxt "AutoFillManager|"
 msgid "Choose file..."
 msgstr "選取檔案…"
 
-#: lib/preferences/autofillmanager.cpp:326
+#: lib/preferences/autofillmanager.cpp:335
 msgctxt "AutoFillManager|"
 msgid "Cannot read file!"
 msgstr "無法讀取檔案。"
 
-#: lib/preferences/autofillmanager.cpp:335
+#: lib/preferences/autofillmanager.cpp:344
 msgctxt "AutoFillManager|"
 msgid "Successfully imported"
 msgstr "成功匯入"
 
-#: lib/preferences/autofillmanager.cpp:335
+#: lib/preferences/autofillmanager.cpp:344
 msgctxt "AutoFillManager|"
 msgid "Error while importing!"
 msgstr "匯入時發生錯誤。"
 
-#: lib/preferences/autofillmanager.cpp:346
+#: lib/preferences/autofillmanager.cpp:355
 msgctxt "AutoFillManager|"
 msgid "Cannot write to file!"
 msgstr "無法寫入檔案。"
 
-#: lib/preferences/autofillmanager.cpp:355
+#: lib/preferences/autofillmanager.cpp:364
 msgctxt "AutoFillManager|"
 msgid "Successfully exported"
 msgstr "成功匯出"
 
-#: lib/preferences/autofillmanager.cpp:372
+#: lib/preferences/autofillmanager.cpp:381
 msgctxt "AutoFillManager|"
 msgid "Copy Username"
 msgstr "複製用戶名"
 
-#: lib/preferences/autofillmanager.cpp:373
+#: lib/preferences/autofillmanager.cpp:382
 msgctxt "AutoFillManager|"
 msgid "Copy Password"
 msgstr "複製密碼"
 
-#: lib/preferences/autofillmanager.cpp:375
+#: lib/preferences/autofillmanager.cpp:384
 msgctxt "AutoFillManager|"
 msgid "Edit Password"
 msgstr "編輯密碼"
@@ -3951,88 +3951,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "移除這個快速連接，確定？"
 
-#: lib/preferences/preferences.cpp:153 lib/preferences/preferences.cpp:614
+#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:620
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "預設"
 
-#: lib/preferences/preferences.cpp:157
+#: lib/preferences/preferences.cpp:159
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "設定為預設"
 
-#: lib/preferences/preferences.cpp:302
+#: lib/preferences/preferences.cpp:304
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:557
+#: lib/preferences/preferences.cpp:563
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "選取執行程式位置…"
 
-#: lib/preferences/preferences.cpp:600
+#: lib/preferences/preferences.cpp:606
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "畫面顯示通知"
 
-#: lib/preferences/preferences.cpp:601
+#: lib/preferences/preferences.cpp:607
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "可拖放更改「畫面顯示通知」於螢幕上的位置。"
 
-#: lib/preferences/preferences.cpp:650
+#: lib/preferences/preferences.cpp:656
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "選取下載位置…"
 
-#: lib/preferences/preferences.cpp:664
+#: lib/preferences/preferences.cpp:670
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "選取樣式表位置…"
 
-#: lib/preferences/preferences.cpp:675
+#: lib/preferences/preferences.cpp:681
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "已刪除"
 
-#: lib/preferences/preferences.cpp:783
+#: lib/preferences/preferences.cpp:789
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "選取網頁留駐路徑…"
 
-#: lib/preferences/preferences.cpp:814
+#: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "新設定檔"
 
-#: lib/preferences/preferences.cpp:814
+#: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "新設定檔名稱："
 
-#: lib/preferences/preferences.cpp:824 lib/preferences/preferences.cpp:829
+#: lib/preferences/preferences.cpp:830 lib/preferences/preferences.cpp:835
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "錯誤"
 
-#: lib/preferences/preferences.cpp:824
+#: lib/preferences/preferences.cpp:830
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "存在同名設定檔。"
 
-#: lib/preferences/preferences.cpp:829
+#: lib/preferences/preferences.cpp:835
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "無法建立設定檔目錄。"
 
-#: lib/preferences/preferences.cpp:840
+#: lib/preferences/preferences.cpp:846
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "確認"
 
-#: lib/preferences/preferences.cpp:841
+#: lib/preferences/preferences.cpp:847
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4040,12 +4040,12 @@ msgid ""
 "cannot be undone!"
 msgstr "永遠刪除設定檔「%1」，確定？（動作無法逆轉）"
 
-#: lib/preferences/preferences.cpp:856 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:862 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "注意：無法刪除使用中設定檔。"
 
-#: lib/preferences/preferences.cpp:1115
+#: lib/preferences/preferences.cpp:1121
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "選取色彩"
@@ -5221,129 +5221,129 @@ msgctxt "UserAgentDialog|"
 msgid "Edit"
 msgstr "編輯"
 
-#: lib/session/sessionmanager.cpp:126
+#: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
 msgid "_cloned"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:126
+#: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
 msgid "_renamed"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:127
+#: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Clone Session"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:127
+#: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Rename Session"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:128
+#: lib/session/sessionmanager.cpp:129
 msgctxt "SessionManager|"
 msgid "Please enter a new name:"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:143
-#: lib/session/sessionmanager.cpp:148 lib/session/sessionmanager.cpp:170
-#: lib/session/sessionmanager.cpp:218
+#: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:144
+#: lib/session/sessionmanager.cpp:149 lib/session/sessionmanager.cpp:171
+#: lib/session/sessionmanager.cpp:219
 msgctxt "SessionManager|"
 msgid "Error!"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:136 lib/session/sessionmanager.cpp:170
-#: lib/session/sessionmanager.cpp:218
+#: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:171
+#: lib/session/sessionmanager.cpp:219
 #, qt-format
 msgctxt "SessionManager|"
 msgid "The session file \"%1\" exists. Please enter another name."
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:143
+#: lib/session/sessionmanager.cpp:144
 msgctxt "SessionManager|"
 msgid "An error occurred when cloning session file."
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:148
+#: lib/session/sessionmanager.cpp:149
 msgctxt "SessionManager|"
 msgid "An error occurred when renaming session file."
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:161
+#: lib/session/sessionmanager.cpp:162
 msgctxt "SessionManager|"
 msgid "Save Session"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:162
+#: lib/session/sessionmanager.cpp:163
 msgctxt "SessionManager|"
 msgid "Please enter a name to save session:"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:163
+#: lib/session/sessionmanager.cpp:164
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Saved Session (%1)"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:180
+#: lib/session/sessionmanager.cpp:181
 msgctxt "SessionManager|"
 msgid "Restore Backup"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:180
+#: lib/session/sessionmanager.cpp:181
 msgctxt "SessionManager|"
 msgid "Are you sure you want to replace current session?"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:199
+#: lib/session/sessionmanager.cpp:200
 msgctxt "SessionManager|"
 msgid "Delete Session"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:199
+#: lib/session/sessionmanager.cpp:200
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Are you sure you want to delete session '%1'?"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:209
+#: lib/session/sessionmanager.cpp:210
 msgctxt "SessionManager|"
 msgid "New Session"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:210
+#: lib/session/sessionmanager.cpp:211
 msgctxt "SessionManager|"
 msgid "Please enter a name to create new session:"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:211
+#: lib/session/sessionmanager.cpp:212
 #, qt-format
 msgctxt "SessionManager|"
 msgid "New Session (%1)"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:243
+#: lib/session/sessionmanager.cpp:244
 msgctxt "SessionManager|"
 msgid "Backup 1"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:250
+#: lib/session/sessionmanager.cpp:251
 msgctxt "SessionManager|"
 msgid "Backup 2"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:290
+#: lib/session/sessionmanager.cpp:291
 msgctxt "SessionManager|"
 msgid "Default Session"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:393
+#: lib/session/sessionmanager.cpp:394
 msgctxt "SessionManager|"
 msgid "Please select the startup session:"
 msgstr ""
 
-#: lib/session/sessionmanager.cpp:412
+#: lib/session/sessionmanager.cpp:413
 #, qt-format
 msgctxt "SessionManager|"
 msgid "%1 (last session)"
@@ -5449,12 +5449,12 @@ msgctxt "HistorySideBar|"
 msgid "Search..."
 msgstr "搜尋…"
 
-#: lib/sidebar/sidebar.cpp:65 lib/sidebar/sidebar.cpp:107
+#: lib/sidebar/sidebar.cpp:66 lib/sidebar/sidebar.cpp:108
 msgctxt "SideBar|"
 msgid "Bookmarks"
 msgstr "書籤"
 
-#: lib/sidebar/sidebar.cpp:72 lib/sidebar/sidebar.cpp:114
+#: lib/sidebar/sidebar.cpp:73 lib/sidebar/sidebar.cpp:115
 msgctxt "SideBar|"
 msgid "History"
 msgstr "歷史"
@@ -5603,12 +5603,12 @@ msgctxt "TabContextMenu|"
 msgid "Reloa&d All Tabs"
 msgstr ""
 
-#: lib/tabwidget/tabicon.cpp:168
+#: lib/tabwidget/tabicon.cpp:169
 msgctxt "TabIcon|"
 msgid "Unmute Tab"
 msgstr ""
 
-#: lib/tabwidget/tabicon.cpp:168
+#: lib/tabwidget/tabicon.cpp:169
 msgctxt "TabIcon|"
 msgid "Mute Tab"
 msgstr ""
@@ -5792,48 +5792,48 @@ msgctxt "HTML5PermissionsDialog|"
 msgid "Display and Audio Capture"
 msgstr ""
 
-#: lib/tools/html5permissions/html5permissionsnotification.cpp:41
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
 msgid "this site"
 msgstr "這個網站"
 
-#: lib/tools/html5permissions/html5permissionsnotification.cpp:45
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:46
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to show desktop notifications?"
 msgstr "容許%1顯示桌面通知？"
 
-#: lib/tools/html5permissions/html5permissionsnotification.cpp:49
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:50
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to locate your position?"
 msgstr "容許%1查詢你的位置？"
 
-#: lib/tools/html5permissions/html5permissionsnotification.cpp:53
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:54
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to use your microphone?"
 msgstr "容許%1使用你支咪？"
 
-#: lib/tools/html5permissions/html5permissionsnotification.cpp:57
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:58
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to use your camera?"
 msgstr "容許%1使用你的鏡頭？"
 
-#: lib/tools/html5permissions/html5permissionsnotification.cpp:61
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:62
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to use your microphone and camera?"
 msgstr "容許%1使用你的咪和鏡頭？"
 
-#: lib/tools/html5permissions/html5permissionsnotification.cpp:65
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:66
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to hide your pointer?"
 msgstr "容許%1隱藏滑鼠游標？"
 
-#: lib/tools/html5permissions/html5permissionsnotification.cpp:69
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:70
 #, fuzzy, qt-format
 #| msgctxt "HTML5PermissionsNotification|"
 #| msgid "Allow %1 to locate your position?"
@@ -5841,7 +5841,7 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen?"
 msgstr "容許%1查詢你的位置？"
 
-#: lib/tools/html5permissions/html5permissionsnotification.cpp:73
+#: lib/tools/html5permissions/html5permissionsnotification.cpp:74
 #, fuzzy, qt-format
 #| msgctxt "HTML5PermissionsNotification|"
 #| msgid "Allow %1 to use your microphone and camera?"
@@ -5864,42 +5864,42 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "拒絕"
 
-#: lib/tools/qztools.cpp:379
+#: lib/tools/qztools.cpp:389
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "未知大小"
 
-#: lib/tools/qztools.cpp:384
+#: lib/tools/qztools.cpp:394
 msgctxt "QObject|"
 msgid "KB"
 msgstr "KB"
 
-#: lib/tools/qztools.cpp:389
+#: lib/tools/qztools.cpp:399
 msgctxt "QObject|"
 msgid "MB"
 msgstr "MB"
 
-#: lib/tools/qztools.cpp:393
+#: lib/tools/qztools.cpp:403
 msgctxt "QObject|"
 msgid "GB"
 msgstr "GB"
 
-#: lib/tools/qztools.cpp:852
+#: lib/tools/qztools.cpp:862
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "執行程式："
 
-#: lib/tools/qztools.cpp:853
+#: lib/tools/qztools.cpp:863
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "參數值："
 
-#: lib/tools/qztools.cpp:855
+#: lib/tools/qztools.cpp:865
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "無法啟動外部程式"
 
-#: lib/tools/qztools.cpp:856
+#: lib/tools/qztools.cpp:866
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -5910,7 +5910,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "防止這個頁面建立更多話匣"
 
-#: lib/webengine/webpage.cpp:330
+#: lib/webengine/webpage.cpp:347
 #, fuzzy, qt-format
 #| msgctxt "WebPage|"
 #| msgid ""
@@ -5925,63 +5925,63 @@ msgstr ""
 "QupZilla無法處理<b>%1:</b>連結。是否要QupZilla使用系統程式嘗試開啟以下連結？"
 "<ul><li>%2</li></ul>"
 
-#: lib/webengine/webpage.cpp:335
+#: lib/webengine/webpage.cpp:352
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "記住我對這個協定的選擇"
 
-#: lib/webengine/webpage.cpp:336
+#: lib/webengine/webpage.cpp:353
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "外部協定請求"
 
-#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+#: lib/webengine/webpage.cpp:433 lib/webengine/webpage.cpp:434
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "載入頁面失敗"
 
-#: lib/webengine/webpage.cpp:418
+#: lib/webengine/webpage.cpp:435
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "載入頁面時發生錯誤"
 
-#: lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:436
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr "重新載入頁面或關閉部份分頁以釋放更多記億體。"
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:437
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "重新載入頁面"
 
-#: lib/webengine/webpage.cpp:482
+#: lib/webengine/webpage.cpp:510
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "選取檔案…"
 
-#: lib/webengine/webpage.cpp:486
+#: lib/webengine/webpage.cpp:514
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "選取檔案…"
 
-#: lib/webengine/webpage.cpp:622
+#: lib/webengine/webpage.cpp:650
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript警告"
 
-#: lib/webengine/webpage.cpp:631
+#: lib/webengine/webpage.cpp:659
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "防止這個頁面建立更多話匣"
 
-#: lib/webengine/webview.cpp:126
+#: lib/webengine/webview.cpp:130
 msgctxt "WebView|"
 msgid "Empty Page"
 msgstr "空白頁面"
 
-#: lib/webengine/webview.cpp:391
+#: lib/webengine/webview.cpp:397
 #, fuzzy, qt-format
 #| msgctxt "DownloadItem|"
 #| msgid "Done - %1 (%2)"
@@ -5989,233 +5989,233 @@ msgctxt "WebView|"
 msgid "Falkon %1 (%2)"
 msgstr "完成 - %1（%2）"
 
-#: lib/webengine/webview.cpp:690
+#: lib/webengine/webview.cpp:711
 msgctxt "WebView|"
 msgid "No suggestions"
 msgstr ""
 
-#: lib/webengine/webview.cpp:741
+#: lib/webengine/webview.cpp:762
 msgctxt "WebView|"
 msgid "&Back"
 msgstr "上一頁（&B）"
 
-#: lib/webengine/webview.cpp:745
+#: lib/webengine/webview.cpp:766
 msgctxt "WebView|"
 msgid "&Forward"
 msgstr "下一頁（&F）"
 
-#: lib/webengine/webview.cpp:752
+#: lib/webengine/webview.cpp:773
 msgctxt "WebView|"
 msgid "&Add New Page"
 msgstr "加入新頁面（&A）"
 
-#: lib/webengine/webview.cpp:753
+#: lib/webengine/webview.cpp:774
 msgctxt "WebView|"
 msgid "&Configure Speed Dial"
 msgstr "設定快速連接（&C）"
 
-#: lib/webengine/webview.cpp:755
+#: lib/webengine/webview.cpp:776
 msgctxt "WebView|"
 msgid "Reload All Dials"
 msgstr "重新載入全部快速連接"
 
-#: lib/webengine/webview.cpp:774
+#: lib/webengine/webview.cpp:795
 msgctxt "WebView|"
 msgid "Book&mark page"
 msgstr "頁面加入到書籤（&M）"
 
-#: lib/webengine/webview.cpp:775
+#: lib/webengine/webview.cpp:796
 msgctxt "WebView|"
 msgid "&Save page as..."
 msgstr "頁面另存新檔（&S）…"
 
-#: lib/webengine/webview.cpp:776
+#: lib/webengine/webview.cpp:797
 msgctxt "WebView|"
 msgid "&Copy page link"
 msgstr "複製頁面連結（&C）"
 
-#: lib/webengine/webview.cpp:777
+#: lib/webengine/webview.cpp:798
 msgctxt "WebView|"
 msgid "Send page link..."
 msgstr "傳送頁面連結…"
 
-#: lib/webengine/webview.cpp:779
+#: lib/webengine/webview.cpp:800
 msgctxt "WebView|"
 msgid "Select &all"
 msgstr "選取全部（&A）"
 
-#: lib/webengine/webview.cpp:785
+#: lib/webengine/webview.cpp:806
 msgctxt "WebView|"
 msgid "Show so&urce code"
 msgstr "顯示原始碼（&U）"
 
-#: lib/webengine/webview.cpp:789
+#: lib/webengine/webview.cpp:810
 msgctxt "WebView|"
 msgid "Show info ab&out site"
 msgstr "顯示網站資訊（&O）"
 
-#: lib/webengine/webview.cpp:795
+#: lib/webengine/webview.cpp:816
 msgctxt "WebView|"
 msgid "Open link in new &tab"
 msgstr "新分頁中開啟連結（&T）"
 
-#: lib/webengine/webview.cpp:800
+#: lib/webengine/webview.cpp:821
 msgctxt "WebView|"
 msgid "Open link in new &window"
 msgstr "新視窗中開啟連結（&W）"
 
-#: lib/webengine/webview.cpp:801
+#: lib/webengine/webview.cpp:822
 msgctxt "WebView|"
 msgid "Open link in &private window"
 msgstr "私密視窗中開啟連結（&P）"
 
-#: lib/webengine/webview.cpp:806
+#: lib/webengine/webview.cpp:827
 msgctxt "WebView|"
 msgid "B&ookmark link"
 msgstr "連結加入到書籤（&O）"
 
-#: lib/webengine/webview.cpp:808
+#: lib/webengine/webview.cpp:829
 msgctxt "WebView|"
 msgid "&Save link as..."
 msgstr "連結另存新檔（&S）…"
 
-#: lib/webengine/webview.cpp:809
+#: lib/webengine/webview.cpp:830
 msgctxt "WebView|"
 msgid "Send link..."
 msgstr "傳送連結…"
 
-#: lib/webengine/webview.cpp:810
+#: lib/webengine/webview.cpp:831
 msgctxt "WebView|"
 msgid "&Copy link address"
 msgstr "複製網址（&C）"
 
-#: lib/webengine/webview.cpp:823
+#: lib/webengine/webview.cpp:844
 msgctxt "WebView|"
 msgid "Show i&mage"
 msgstr "顯示圖像（&M）"
 
-#: lib/webengine/webview.cpp:829
+#: lib/webengine/webview.cpp:850
 msgctxt "WebView|"
 msgid "Copy image"
 msgstr "複製圖像"
 
-#: lib/webengine/webview.cpp:830
+#: lib/webengine/webview.cpp:851
 msgctxt "WebView|"
 msgid "Copy image ad&dress"
 msgstr "複製圖像網址（&D）"
 
-#: lib/webengine/webview.cpp:832
+#: lib/webengine/webview.cpp:853
 msgctxt "WebView|"
 msgid "&Save image as..."
 msgstr "圖像另存新檔（&S）…"
 
-#: lib/webengine/webview.cpp:833
+#: lib/webengine/webview.cpp:854
 msgctxt "WebView|"
 msgid "Send image..."
 msgstr "傳送圖像…"
 
-#: lib/webengine/webview.cpp:852
+#: lib/webengine/webview.cpp:873
 msgctxt "WebView|"
 msgid "Send text..."
 msgstr "傳送文字…"
 
-#: lib/webengine/webview.cpp:864
+#: lib/webengine/webview.cpp:885
 msgctxt "WebView|"
 msgid "Go to &web address"
 msgstr "前往網址（&W）"
 
-#: lib/webengine/webview.cpp:878
+#: lib/webengine/webview.cpp:899
 #, qt-format
 msgctxt "WebView|"
 msgid "Search \"%1 ..\" with %2"
 msgstr "使用%2搜尋「%1…」"
 
-#: lib/webengine/webview.cpp:884
+#: lib/webengine/webview.cpp:905
 msgctxt "WebView|"
 msgid "Search with..."
 msgstr "搜尋…"
 
-#: lib/webengine/webview.cpp:906
+#: lib/webengine/webview.cpp:927
 msgctxt "WebView|"
 msgid "&Play"
 msgstr "播放（&P）"
 
-#: lib/webengine/webview.cpp:906
+#: lib/webengine/webview.cpp:927
 msgctxt "WebView|"
 msgid "&Pause"
 msgstr "暫停（&P）"
 
-#: lib/webengine/webview.cpp:907
+#: lib/webengine/webview.cpp:928
 msgctxt "WebView|"
 msgid "Un&mute"
 msgstr "取消靜音（&M）"
 
-#: lib/webengine/webview.cpp:907
+#: lib/webengine/webview.cpp:928
 msgctxt "WebView|"
 msgid "&Mute"
 msgstr "靜音（&M）"
 
-#: lib/webengine/webview.cpp:909
+#: lib/webengine/webview.cpp:930
 msgctxt "WebView|"
 msgid "&Copy Media Address"
 msgstr "複製影音網址（&C）"
 
-#: lib/webengine/webview.cpp:910
+#: lib/webengine/webview.cpp:931
 msgctxt "WebView|"
 msgid "&Send Media Address"
 msgstr "傳送影音網址（&S）"
 
-#: lib/webengine/webview.cpp:911
+#: lib/webengine/webview.cpp:932
 msgctxt "WebView|"
 msgid "Save Media To &Disk"
 msgstr "儲存影音到磁碟（&D）"
 
-#: lib/webengine/webview.cpp:930
+#: lib/webengine/webview.cpp:951
 msgctxt "WebView|"
 msgid "Create Search Engine"
 msgstr "建立搜尋器"
 
-#: lib/webengine/webview.cpp:971
+#: lib/webengine/webview.cpp:992
 msgctxt "WebView|"
 msgid "&Undo"
 msgstr "取消動作（&U）"
 
-#: lib/webengine/webview.cpp:977
+#: lib/webengine/webview.cpp:998
 msgctxt "WebView|"
 msgid "&Redo"
 msgstr "重做動作（&R）"
 
-#: lib/webengine/webview.cpp:983
+#: lib/webengine/webview.cpp:1004
 msgctxt "WebView|"
 msgid "&Cut"
 msgstr "剪下（&C）"
 
-#: lib/webengine/webview.cpp:989
+#: lib/webengine/webview.cpp:1010
 msgctxt "WebView|"
 msgid "&Copy"
 msgstr "複製（&C）"
 
-#: lib/webengine/webview.cpp:995
+#: lib/webengine/webview.cpp:1016
 msgctxt "WebView|"
 msgid "&Paste"
 msgstr "貼上（&P）"
 
-#: lib/webengine/webview.cpp:1001
+#: lib/webengine/webview.cpp:1022
 msgctxt "WebView|"
 msgid "Select All"
 msgstr "選取全部"
 
-#: lib/webengine/webview.cpp:1007
+#: lib/webengine/webview.cpp:1028
 msgctxt "WebView|"
 msgid "&Reload"
 msgstr "重新載入（&R）"
 
-#: lib/webengine/webview.cpp:1011
+#: lib/webengine/webview.cpp:1032
 msgctxt "WebView|"
 msgid "S&top"
 msgstr "停止（&T）"
 
-#: lib/webtab/searchtoolbar.cpp:150
+#: lib/webtab/searchtoolbar.cpp:155
 #, qt-format
 msgctxt "SearchToolBar|"
 msgid "%1 of %2"
