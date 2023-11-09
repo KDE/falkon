@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2023 Scarlett Moore <sgmoore@kde.org>
+#
+# SPDX-License-Identifier: CC0-1.0
 ---
 name: falkon
 confinement: strict
@@ -116,6 +119,8 @@ parts:
         - libpyside2-dev
         stage-packages:
         - cups-client
+        stage-snaps:
+        - khelpcenter
         cmake-parameters:
         - -DCMAKE_INSTALL_PREFIX=/usr
         - -DCMAKE_BUILD_TYPE=Release
@@ -132,7 +137,6 @@ parts:
         - "-usr/lib/*/cmake/*"
         - "-usr/include/*"
         - "-usr/share/ECM/*"
-        - "-usr/share/doc/*"
         - "-usr/share/man/*"
         - "-usr/share/icons/breeze-dark*"
         - "-usr/bin/X11"
