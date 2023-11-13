@@ -126,7 +126,7 @@ endif()
 # Optional: GnomeKeyring
 find_package(PkgConfig)
 if (PKG_CONFIG_FOUND)
-    option(BUILD_KEYRING "Gnome keyring password plugin" OFF)
+    option(BUILD_KEYRING "Gnome keyring password plugin" ON)
     if (BUILD_KEYRING)
         pkg_check_modules(GNOME_KEYRING IMPORTED_TARGET gnome-keyring-1 )
     endif()
