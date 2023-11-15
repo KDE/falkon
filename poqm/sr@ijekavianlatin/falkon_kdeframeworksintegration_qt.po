@@ -16,12 +16,27 @@ msgstr ""
 "X-Text-Markup: qtrich\n"
 "X-Environment: kde\n"
 
-#: kdeframeworksintegrationplugin.cpp:69
+#: downloadkjob.cpp:34
+msgctxt "DownloadKJob|"
+msgid "Downloading"
+msgstr ""
+
+#: downloadkjob.cpp:35
+msgctxt "DownloadKJob|"
+msgid "Source"
+msgstr ""
+
+#: downloadkjob.cpp:36
+msgctxt "DownloadKJob|"
+msgid "Destination"
+msgstr ""
+
+#: kdeframeworksintegrationplugin.cpp:110
 msgctxt "KDEFrameworksIntegrationPlugin|"
 msgid "Share page"
 msgstr ""
 
-#: kwalletpasswordbackend.cpp:52
+#: kwalletpasswordbackend.cpp:57
 #, fuzzy
 #| msgctxt "KWalletPlugin|"
 #| msgid "KWallet"
@@ -29,7 +44,7 @@ msgctxt "KDEFrameworksIntegrationPlugin|"
 msgid "KWallet"
 msgstr "K-novčanik"
 
-#: kwalletpasswordbackend.cpp:181
+#: kwalletpasswordbackend.cpp:197
 #, fuzzy
 #| msgctxt "KWalletPlugin|"
 #| msgid "KWallet"
@@ -37,7 +52,7 @@ msgctxt "KDEFrameworksIntegrationPlugin|"
 msgid "KWallet disabled"
 msgstr "K-novčanik"
 
-#: kwalletpasswordbackend.cpp:181
+#: kwalletpasswordbackend.cpp:197
 msgctxt "KDEFrameworksIntegrationPlugin|"
 msgid "Please enable KWallet to save password."
 msgstr ""
