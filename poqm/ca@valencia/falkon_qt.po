@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2023-08-08 17:39+0200\n"
+"PO-Revision-Date: 2023-11-15 09:50+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -26,7 +26,7 @@ msgstr ""
 "X-Language: ca-valencia\n"
 "X-Qt-Contexts: true\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -1402,7 +1402,7 @@ msgstr "Ja es troba en la llista negra!"
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
-msgstr "El servidor «%1» ja es troba en la llista negra; Primer elimineu-lo."
+msgstr "El servidor «%1» ja es troba en la llista negra. Primer elimineu-lo."
 
 #: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
@@ -1418,7 +1418,7 @@ msgstr "Ja es troba en la llista blanca!"
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
-msgstr "El servidor «%1» ja es troba en la llista blanca; Primer elimineu-lo."
+msgstr "El servidor «%1» ja es troba en la llista blanca. Primer elimineu-lo."
 
 #: lib/cookies/cookiemanager.ui:14
 msgctxt "CookieManager|"
@@ -3820,7 +3820,7 @@ msgstr "Navegació"
 #: lib/preferences/preferences.ui:80
 msgctxt "Preferences|"
 msgid "Fonts"
-msgstr "Tipus de lletra"
+msgstr "Lletres"
 
 #: lib/preferences/preferences.ui:85
 msgctxt "Preferences|"
@@ -4404,7 +4404,7 @@ msgstr "Sense servidor intermediari"
 #: lib/preferences/preferences.ui:1537
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
-msgstr "<b>Famílies dels tipus de lletra</b>"
+msgstr "<b>Famílies de les lletres</b>"
 
 #: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
@@ -4439,27 +4439,27 @@ msgstr "Fantasia"
 #: lib/preferences/preferences.ui:1646
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
-msgstr "<b>Mides del tipus de lletra</b>"
+msgstr "<b>Mides de la lletra</b>"
 
 #: lib/preferences/preferences.ui:1655
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
-msgstr "Mida del tipus de lletra fixa"
+msgstr "Mida de la lletra fixa"
 
 #: lib/preferences/preferences.ui:1662
 msgctxt "Preferences|"
 msgid "Default Font Size"
-msgstr "Mida predeterminada del tipus de lletra"
+msgstr "Mida predeterminada de la lletra"
 
 #: lib/preferences/preferences.ui:1689
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
-msgstr "Mida mínima del tipus de lletra"
+msgstr "Mida mínima de la lletra"
 
 #: lib/preferences/preferences.ui:1696
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
-msgstr "Mida mínima lògica del tipus de lletra"
+msgstr "Mida mínima lògica de la lletra"
 
 #: lib/preferences/preferences.ui:1729
 msgctxt "Preferences|"
@@ -4496,8 +4496,8 @@ msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
 "shortcut was intended."
 msgstr ""
-"Si no està marcada, evita l'eixida de l'aplicació si la drecera «Ctrl+W» "
-"estava prevista."
+"Si no se selecciona, s'evitarà l'eixida accidental de l'aplicació si es "
+"pretén la drecera «Ctrl+W»."
 
 #: lib/preferences/preferences.ui:1763
 msgctxt "Preferences|"

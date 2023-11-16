@@ -1,152 +1,143 @@
-# Translation of falkon_qt.po to Catalan
-# Copyright (C) 2018-2023 This_file_is_part_of_KDE
-# Copyright (C) 2012-2017 Free Software Foundation, Inc.
-# This file is distributed under the license LGPL version 2.1 or
-# version 3 or later versions approved by the membership of KDE e.V.
+# translation of falkon_qt.pot to esperanto
+# Copyright (C) 2023, Free Software Foundation, Inc.
+# This file is distributed under the same license as the falkon package.
+# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
 #
-# Guillem Prats <guprej@gmail.com>, 2012, 2013, 2014.
-# Clara Villalba <cvilmon@gmail.com>, 2012, 2013, 2014.
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016, 2017.
-# David Medina <rbndavid@gmail.com>, 2017.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019, 2020, 2021, 2023.
-# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2023-11-15 09:50+0100\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
-"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca\n"
+"POT-Creation-Date: 2023-11-05 13:43+0100\n"
+"PO-Revision-Date: 2023-11-15 22:01+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Language: ca\n"
 "X-Qt-Contexts: true\n"
-"X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
 msgid "&Undo"
-msgstr "&Desfés"
+msgstr "&Malfari"
 
 #: lib/3rdparty/lineedit.cpp:107
 msgctxt "LineEdit|"
 msgid "&Redo"
-msgstr "&Refés"
+msgstr "&Refari"
 
 #: lib/3rdparty/lineedit.cpp:112
 msgctxt "LineEdit|"
 msgid "Cu&t"
-msgstr "&Retalla"
+msgstr "&Tondi"
 
 #: lib/3rdparty/lineedit.cpp:117
 msgctxt "LineEdit|"
 msgid "&Copy"
-msgstr "&Copia"
+msgstr "&Kopii"
 
 #: lib/3rdparty/lineedit.cpp:122
 msgctxt "LineEdit|"
 msgid "&Paste"
-msgstr "&Enganxa"
+msgstr "&Alglui"
 
 #: lib/3rdparty/lineedit.cpp:131
 msgctxt "LineEdit|"
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr "Forigi"
 
 #: lib/3rdparty/lineedit.cpp:134
 msgctxt "LineEdit|"
 msgid "Clear All"
-msgstr "Neteja-ho tot"
+msgstr "Forigi Ĉion"
 
 #: lib/3rdparty/lineedit.cpp:137
 msgctxt "LineEdit|"
 msgid "Select All"
-msgstr "Selecciona-ho tot"
+msgstr "Elekti ĉiujn"
 
 #: lib/3rdparty/squeezelabelv2.cpp:64
 msgctxt "SqueezeLabelV2|"
 msgid "Copy"
-msgstr "Copia"
+msgstr "Kopii"
 
 #: lib/adblock/adblockaddsubscriptiondialog.cpp:40
 msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Other..."
-msgstr "Altres..."
+msgstr "Alia..."
 
 #: lib/adblock/adblockaddsubscriptiondialog.ui:14
 msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Add Subscription"
-msgstr "Afegeix una subscripció"
+msgstr "Aldoni Abono"
 
 #: lib/adblock/adblockaddsubscriptiondialog.ui:23
 msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Title:"
-msgstr "Títol:"
+msgstr "Titolo:"
 
 #: lib/adblock/adblockaddsubscriptiondialog.ui:33
 msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Address:"
-msgstr "Adreça:"
+msgstr "Adreso:"
 
 #: lib/adblock/adblockaddsubscriptiondialog.ui:53
 msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Add new subscription to AdBlock:"
-msgstr "Afegeix una subscripció nova a l'AdBlock:"
+msgstr "Aldoni novan abonon al AdBlock:"
 
 #: lib/adblock/adblockdialog.cpp:49
 msgctxt "AdBlockDialog|"
 msgid "Add Rule"
-msgstr "Afegeix una regla"
+msgstr "Aldoni Regulon"
 
 #: lib/adblock/adblockdialog.cpp:50
 msgctxt "AdBlockDialog|"
 msgid "Remove Rule"
-msgstr "Elimina la regla"
+msgstr "Forigi Regulon"
 
 #: lib/adblock/adblockdialog.cpp:52
 msgctxt "AdBlockDialog|"
 msgid "Add Subscription"
-msgstr "Afegeix una subscripció"
+msgstr "Aldoni Abonon"
 
 #: lib/adblock/adblockdialog.cpp:53
 msgctxt "AdBlockDialog|"
 msgid "Remove Subscription"
-msgstr "Elimina la subscripció"
+msgstr "Forigi Abono"
 
 #: lib/adblock/adblockdialog.cpp:54
 msgctxt "AdBlockDialog|"
 msgid "Update Subscriptions"
-msgstr "Actualitza les subscripcions"
+msgstr "Ĝisdatigi Abonojn"
 
 #: lib/adblock/adblockdialog.cpp:56
 msgctxt "AdBlockDialog|"
 msgid "Learn about writing rules..."
-msgstr "Apreneu sobre l'escriptura de les regles..."
+msgstr "Lerni pri skribaj reguloj..."
 
 #: lib/adblock/adblockdialog.ui:14
 msgctxt "AdBlockDialog|"
 msgid "AdBlock Configuration"
-msgstr "Configuració de l'AdBlock"
+msgstr "AdBlock Agordo"
 
 #: lib/adblock/adblockdialog.ui:20
 msgctxt "AdBlockDialog|"
 msgid "Enable AdBlock"
-msgstr "Habilita l'AdBlock"
+msgstr "Ebligi AdBlock"
 
 #: lib/adblock/adblockdialog.ui:32
 msgctxt "AdBlockDialog|"
 msgid "Search..."
-msgstr "Cerca..."
+msgstr "Serĉi..."
 
 #: lib/adblock/adblockdialog.ui:77
 msgctxt "AdBlockDialog|"
 msgid "Options"
-msgstr "Opcions"
+msgstr "Opcioj"
 
 #: lib/adblock/adblockdialog.ui:107
 msgctxt "AdBlockDialog|"
@@ -161,49 +152,49 @@ msgstr "AdBlock"
 #: lib/adblock/adblockicon.cpp:52
 msgctxt "AdBlockIcon|"
 msgid "AdBlock Icon"
-msgstr "Icona d'AdBlock"
+msgstr "Piktogramo de AdBlock"
 
 #: lib/adblock/adblockicon.cpp:86
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled"
-msgstr "AdBlock està inhabilitat"
+msgstr "AdBlock estas malŝaltita"
 
 #: lib/adblock/adblockicon.cpp:92
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled on this site "
-msgstr "AdBlock està inhabilitat en aquest lloc web"
+msgstr "AdBlock estas malŝaltita en ĉi tiu retejo"
 
 #: lib/adblock/adblockicon.cpp:98
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is active"
-msgstr "AdBlock està actiu"
+msgstr "AdBlock estas aktiva"
 
 #: lib/adblock/adblockicon.cpp:145
 msgctxt "AdBlockIcon|"
 msgid "Show AdBlock &Settings"
-msgstr "Mostra la &configuració de l'AdBlock"
+msgstr "Montri AdBlock-&Agordojn"
 
 #: lib/adblock/adblockicon.cpp:153
 #, qt-format
 msgctxt "AdBlockIcon|"
 msgid "Disable on %1"
-msgstr "Inhabilita a %1"
+msgstr "Malebligi ĉe %1"
 
 #: lib/adblock/adblockicon.cpp:159
 msgctxt "AdBlockIcon|"
 msgid "Disable only on this page"
-msgstr "Inhabilita només en aquesta pàgina"
+msgstr "Malebligi nur sur ĉi tiu paĝo"
 
 #: lib/adblock/adblockmanager.cpp:184
 #, qt-format
 msgctxt "AdBlockManager|"
 msgid "Do you want to add <b>%1</b> subscription?"
-msgstr "Voleu afegir la subscripció <b>%1</b>?"
+msgstr "Ĉu vi volas aldoni abonon <b>%1</b>?"
 
 #: lib/adblock/adblockmanager.cpp:186
 msgctxt "AdBlockManager|"
 msgid "AdBlock Subscription"
-msgstr "Subscripció de l'AdBlock"
+msgstr "Abono de AdBlock"
 
 #: lib/adblock/adblockmanager.cpp:321
 msgctxt "AdBlockManager|"
@@ -213,60 +204,60 @@ msgstr "EasyList"
 #: lib/adblock/adblockmanager.cpp:326
 msgctxt "AdBlockManager|"
 msgid "NoCoin List"
-msgstr "Llista NoCoin"
+msgstr "Listo de NoCoin"
 
 #: lib/adblock/adblocksubscription.cpp:177
 msgctxt "AdBlockSubscription|"
 msgid "Cannot load subscription!"
-msgstr "No s'ha pogut carregar la subscripció!"
+msgstr "Ne povas ŝargi abonon!"
 
 #: lib/adblock/adblocksubscription.cpp:290
 msgctxt "AdBlockCustomList|"
 msgid "Custom Rules"
-msgstr "Regles personalitzades"
+msgstr "Propraj Reguloj"
 
 #: lib/adblock/adblocktreewidget.cpp:80
 msgctxt "AdBlockTreeWidget|"
 msgid "Add Rule"
-msgstr "Afegeix una regla"
+msgstr "Aldoni Regulon"
 
 #: lib/adblock/adblocktreewidget.cpp:82
 msgctxt "AdBlockTreeWidget|"
 msgid "Remove Rule"
-msgstr "Elimina la regla"
+msgstr "Forigi Regulon"
 
 #: lib/adblock/adblocktreewidget.cpp:141
 msgctxt "AdBlockTreeWidget|"
 msgid "Add Custom Rule"
-msgstr "Afegeix una regla personalitzada"
+msgstr "Aldoni Propran Regulon"
 
 #: lib/adblock/adblocktreewidget.cpp:141
 msgctxt "AdBlockTreeWidget|"
 msgid "Please write your rule here:"
-msgstr "Escriviu la vostra regla aquí:"
+msgstr "Bonvolu skribi vian regulon ĉi tie:"
 
 #: lib/adblock/adblocktreewidget.cpp:179
 #, qt-format
 msgctxt "AdBlockTreeWidget|"
 msgid "%1 (recently updated)"
-msgstr "%1 (actualitzada recentment)"
+msgstr "%1 (lastatempe ĝisdatigita)"
 
 #: lib/adblock/adblocktreewidget.cpp:188
 #, qt-format
 msgctxt "AdBlockTreeWidget|"
 msgid "%1 (Error: %2)"
-msgstr "%1 (Error: %2)"
+msgstr "%1 (Eraro: %2)"
 
 #: lib/adblock/adblockurlinterceptor.cpp:41
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked content"
-msgstr "Contingut bloquejat"
+msgstr "Enhavo blokita"
 
 #: lib/adblock/adblockurlinterceptor.cpp:42
 #, qt-format
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
-msgstr "Bloquejat per <i>%1 (%2)</i>"
+msgstr "Blokita de <i>%1 (%2)</i>"
 
 #: lib/app/browserwindow.cpp:209 lib/app/browserwindow.cpp:988
 msgctxt "BrowserWindow|"
@@ -276,12 +267,12 @@ msgstr "Falkon"
 #: lib/app/browserwindow.cpp:399
 msgctxt "BrowserWindow|"
 msgid "IP Address of current page"
-msgstr "IP de la pàgina actual"
+msgstr "IP-adreso de aktuala paĝo"
 
 #: lib/app/browserwindow.cpp:743
 msgctxt "BrowserWindow|"
 msgid " (Private Browsing)"
-msgstr " (Navegació privada)"
+msgstr "(Privata Retumado)"
 
 #: lib/app/browserwindow.cpp:990
 #, qt-format
@@ -292,52 +283,52 @@ msgstr "%1 - Falkon"
 #: lib/app/browserwindow.cpp:1056
 msgctxt "BrowserWindow|"
 msgid "&Menu Bar"
-msgstr "Barra de &menús"
+msgstr "&Menubreto"
 
 #: lib/app/browserwindow.cpp:1061
 msgctxt "BrowserWindow|"
 msgid "&Navigation Toolbar"
-msgstr "Barra d'eines de &navegació"
+msgstr "&Naviga Ilobreto"
 
 #: lib/app/browserwindow.cpp:1065
 msgctxt "BrowserWindow|"
 msgid "&Bookmarks Toolbar"
-msgstr "Barra d'eines de les ad&reces d'interès"
+msgstr "&Legosignoj Ilobreto"
 
 #: lib/app/browserwindow.cpp:1071
 msgctxt "BrowserWindow|"
 msgid "&Tabs on Top"
-msgstr "Pestan&yes a dalt"
+msgstr "&Lapetoj supre"
 
 #: lib/app/browserwindow.cpp:1126
 msgctxt "BrowserWindow|"
 msgid "Other"
-msgstr "Altres"
+msgstr "Alia"
 
 #: lib/app/browserwindow.cpp:1168
 msgctxt "BrowserWindow|"
 msgid "HTML files"
-msgstr "Fitxers HTML"
+msgstr "HTML-dosieroj"
 
 #: lib/app/browserwindow.cpp:1168
 msgctxt "BrowserWindow|"
 msgid "Image files"
-msgstr "Fitxers d'imatge"
+msgstr "Bildaj dosieroj"
 
 #: lib/app/browserwindow.cpp:1168
 msgctxt "BrowserWindow|"
 msgid "Text files"
-msgstr "Fitxers de text"
+msgstr "Tekstaj dosieroj"
 
 #: lib/app/browserwindow.cpp:1168
 msgctxt "BrowserWindow|"
 msgid "All files"
-msgstr "Tots els fitxers"
+msgstr "Ĉiuj dosieroj"
 
 #: lib/app/browserwindow.cpp:1170
 msgctxt "BrowserWindow|"
 msgid "Open file..."
-msgstr "Obre un fitxer..."
+msgstr "Malfermi dosieron..."
 
 #: lib/app/browserwindow.cpp:1507
 #, qt-format
@@ -349,53 +340,51 @@ msgid_plural ""
 "There are still %n open tabs and your session won't be stored.\n"
 "Are you sure you want to close this window?"
 msgstr[0] ""
-"Encara hi ha %n pestanya oberta i no es desarà la vostra sessió.\n"
-"Esteu segur que voleu tancar aquesta finestra?"
 msgstr[1] ""
-"Encara hi ha %n pestanyes obertes i no es desarà la vostra sessió.\n"
-"Esteu segur que voleu tancar aquesta finestra?"
 
 #: lib/app/browserwindow.cpp:1508
 msgctxt "BrowserWindow|"
 msgid "Don't ask again"
-msgstr "No m'ho tornis a preguntar"
+msgstr "Ne demandi denove"
 
 #: lib/app/browserwindow.cpp:1509
 msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
-msgstr "Encara hi ha pestanyes obertes"
+msgstr "Estas ankoraŭ malfermitaj langetoj"
 
 #: lib/app/mainapplication.cpp:1111
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
-msgstr "El Falkon no és el navegador predeterminat. Voleu fer que ho sigui?"
+msgstr ""
+"Falkon ne estas nuntempe via defaŭlta retumilo. Ĉu vi ŝatus fari ĝin via "
+"defaŭlta retumilo?"
 
 #: lib/app/mainapplication.cpp:1112
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
-msgstr "Fes aquesta comprovació sempre que s'iniciï el Falkon."
+msgstr "Ĉiam fari ĉi tiun kontrolon dum lanĉado de Falkon."
 
 #: lib/app/mainapplication.cpp:1114
 msgctxt "MainApplication|"
 msgid "Default Browser"
-msgstr "Navegador per defecte"
+msgstr "Defaŭlta retumilo"
 
 #: lib/app/mainapplication.cpp:1254
 msgctxt "MainApplication|"
 msgid "Open new tab"
-msgstr "Obre una pestanya nova"
+msgstr "Malfermi novan langeton"
 
 #: lib/app/mainapplication.cpp:1255
 msgctxt "MainApplication|"
 msgid "Open new window"
-msgstr "Obre una finestra nova"
+msgstr "Malfermi novan fenestron"
 
 #: lib/app/mainapplication.cpp:1256
 msgctxt "MainApplication|"
 msgid "Open new private window"
-msgstr "Obre una finestra privada nova"
+msgstr "Malfermi novan privatan fenestron"
 
 #: lib/app/mainapplication.cpp:1271
 msgctxt "MainApplication|"
@@ -404,313 +393,313 @@ msgid ""
 "version 3 or (at your option) any later version. It is based on QtWebEngine "
 "and Qt Framework."
 msgstr ""
-"El Falkon és un navegador web Qt nou i ràpid. El Falkon està llicenciat sota "
-"GPL versió 3 o (si ho preferiu) qualsevol versió posterior. Està basat en el "
-"motor QtWebEngine i el Qt Framework."
+"Falkon estas nova kaj tre rapida Qt-retumilo. Falkon estas licencita laŭ GPL-"
+"versio 3 aŭ (laŭ via elekto) ajna posta versio. Ĝi estas bazita sur "
+"QtWebEngine kaj Qt Framework."
 
 #: lib/app/mainmenu.cpp:84 lib/app/mainmenu.cpp:497
 msgctxt "MainMenu|"
 msgid "Sessions"
-msgstr "Sessions"
+msgstr "Seancoj"
 
 #: lib/app/mainmenu.cpp:467
 msgctxt "MainMenu|"
 msgid "&About Falkon"
-msgstr "Qu&ant al Falkon"
+msgstr "Pri F&alkon"
 
 #: lib/app/mainmenu.cpp:472
 msgctxt "MainMenu|"
 msgid "Pr&eferences"
-msgstr "&Preferències"
+msgstr "Pr&eferoj"
 
 #: lib/app/mainmenu.cpp:478
 msgctxt "MainMenu|"
 msgid "Quit"
-msgstr "Surt"
+msgstr "Forlasi"
 
 #: lib/app/mainmenu.cpp:485
 msgctxt "MainMenu|"
 msgid "&File"
-msgstr "&Fitxer"
+msgstr "&Dosiero"
 
 #: lib/app/mainmenu.cpp:488
 msgctxt "MainMenu|"
 msgid "New Tab"
-msgstr "Pestanya nova"
+msgstr "Nova Langeto"
 
 #: lib/app/mainmenu.cpp:489
 msgctxt "MainMenu|"
 msgid "&New Window"
-msgstr "Finestra &nova"
+msgstr "&Nova Fenestro"
 
 #: lib/app/mainmenu.cpp:490
 msgctxt "MainMenu|"
 msgid "New &Private Window"
-msgstr "Finestra &privada nova"
+msgstr "Nova &Privata Fenestro"
 
 #: lib/app/mainmenu.cpp:491
 msgctxt "MainMenu|"
 msgid "Open Location"
-msgstr "Obre la ubicació"
+msgstr "Malfermi Lokon"
 
 #: lib/app/mainmenu.cpp:492
 msgctxt "MainMenu|"
 msgid "Open &File..."
-msgstr "Obre un &fitxer..."
+msgstr "Malfermi &Dosieron..."
 
 #: lib/app/mainmenu.cpp:493
 msgctxt "MainMenu|"
 msgid "Close Window"
-msgstr "Tanca la finestra"
+msgstr "Fermi Fenestron"
 
 #: lib/app/mainmenu.cpp:500
 msgctxt "MainMenu|"
 msgid "Session Manager"
-msgstr "Gestor de sessions"
+msgstr "Seanca Administranto"
 
 #: lib/app/mainmenu.cpp:507
 msgctxt "MainMenu|"
 msgid "&Save Page As..."
-msgstr "Anomena i de&sa la pàgina..."
+msgstr "Kon&servi Paĝon Kiel..."
 
 #: lib/app/mainmenu.cpp:508
 msgctxt "MainMenu|"
 msgid "Send Link..."
-msgstr "Envia un enllaç..."
+msgstr "Sendi ligilon..."
 
 #: lib/app/mainmenu.cpp:509
 msgctxt "MainMenu|"
 msgid "&Print..."
-msgstr "&Imprimeix..."
+msgstr "&Presi..."
 
 #: lib/app/mainmenu.cpp:514
 msgctxt "MainMenu|"
 msgid "&Edit"
-msgstr "&Edita"
+msgstr "R&edakti"
 
 #: lib/app/mainmenu.cpp:517
 msgctxt "MainMenu|"
 msgid "&Undo"
-msgstr "&Desfés"
+msgstr "&Malfari"
 
 #: lib/app/mainmenu.cpp:519
 msgctxt "MainMenu|"
 msgid "&Redo"
-msgstr "&Refés"
+msgstr "&Refari"
 
 #: lib/app/mainmenu.cpp:522
 msgctxt "MainMenu|"
 msgid "&Cut"
-msgstr "&Retalla"
+msgstr "Ton&di"
 
 #: lib/app/mainmenu.cpp:524
 msgctxt "MainMenu|"
 msgid "C&opy"
-msgstr "&Copia"
+msgstr "K&opii"
 
 #: lib/app/mainmenu.cpp:526
 msgctxt "MainMenu|"
 msgid "&Paste"
-msgstr "&Enganxa"
+msgstr "&Alglui"
 
 #: lib/app/mainmenu.cpp:529
 msgctxt "MainMenu|"
 msgid "Select &All"
-msgstr "&Selecciona-ho tot"
+msgstr "Elekti Ĉi&ujn"
 
 #: lib/app/mainmenu.cpp:531
 msgctxt "MainMenu|"
 msgid "&Find"
-msgstr "&Cerca"
+msgstr "&Trovi"
 
 #: lib/app/mainmenu.cpp:536
 msgctxt "MainMenu|"
 msgid "&View"
-msgstr "&Visualitza"
+msgstr "&Vidi"
 
 #: lib/app/mainmenu.cpp:539
 msgctxt "MainMenu|"
 msgid "Toolbars"
-msgstr "Barres d'eines"
+msgstr "Ilobretoj"
 
 #: lib/app/mainmenu.cpp:541
 msgctxt "MainMenu|"
 msgid "Sidebar"
-msgstr "Barra lateral"
+msgstr "Flankmenuo"
 
 #: lib/app/mainmenu.cpp:543
 msgctxt "MainMenu|"
 msgid "Character &Encoding"
-msgstr "&Codificació de caràcters"
+msgstr "Signa Ko&digo"
 
 #: lib/app/mainmenu.cpp:552
 msgctxt "MainMenu|"
 msgid "Sta&tus Bar"
-msgstr "&Barra d'estat"
+msgstr "Sta&tusbreto"
 
 #: lib/app/mainmenu.cpp:554
 msgctxt "MainMenu|"
 msgid "&Stop"
-msgstr "&Atura"
+msgstr "&Halti"
 
 #: lib/app/mainmenu.cpp:555
 msgctxt "MainMenu|"
 msgid "&Reload"
-msgstr "&Actualitza"
+msgstr "&Reŝargi"
 
 #: lib/app/mainmenu.cpp:557
 msgctxt "MainMenu|"
 msgid "Zoom &In"
-msgstr "&Augmenta"
+msgstr "Zom&i"
 
 #: lib/app/mainmenu.cpp:558
 msgctxt "MainMenu|"
 msgid "Zoom &Out"
-msgstr "&Redueix"
+msgstr "Malz&omi"
 
 #: lib/app/mainmenu.cpp:559
 msgctxt "MainMenu|"
 msgid "Reset"
-msgstr "Reinicia"
+msgstr "Restarigi"
 
 #: lib/app/mainmenu.cpp:563
 msgctxt "MainMenu|"
 msgid "&Page Source"
-msgstr "Codi &font de la pàgina"
+msgstr "&Paĝa Fonto"
 
 #: lib/app/mainmenu.cpp:565
 msgctxt "MainMenu|"
 msgid "&FullScreen"
-msgstr "&Pantalla completa"
+msgstr "&Plenekrane"
 
 #: lib/app/mainmenu.cpp:568
 msgctxt "MainMenu|"
 msgid "&Tools"
-msgstr "&Eines"
+msgstr "&Iloj"
 
 #: lib/app/mainmenu.cpp:571
 msgctxt "MainMenu|"
 msgid "&Web Search"
-msgstr "&Barra de cerca"
+msgstr "&Reta Serĉo"
 
 #: lib/app/mainmenu.cpp:572
 msgctxt "MainMenu|"
 msgid "Site &Info"
-msgstr "&Informació del lloc"
+msgstr "Reteja &Informo"
 
 #: lib/app/mainmenu.cpp:575
 msgctxt "MainMenu|"
 msgid "&Download Manager"
-msgstr "Baixa&des"
+msgstr "Elŝuta A&dministranto"
 
 #: lib/app/mainmenu.cpp:576
 msgctxt "MainMenu|"
 msgid "&Cookies Manager"
-msgstr "Mostra les &galetes"
+msgstr "Administranto de &Kuketoj"
 
 #: lib/app/mainmenu.cpp:577
 msgctxt "MainMenu|"
 msgid "Web In&spector"
-msgstr "&Inspecciona l'element"
+msgstr "Web-In&spektilo"
 
 #: lib/app/mainmenu.cpp:578
 msgctxt "MainMenu|"
 msgid "Clear Recent &History"
-msgstr "&Neteja l'historial recent"
+msgstr "Forigi Lastatempan &Historion"
 
 #: lib/app/mainmenu.cpp:583
 msgctxt "MainMenu|"
 msgid "&Extensions"
-msgstr "&Extensions"
+msgstr "&Etendoj"
 
 #: lib/app/mainmenu.cpp:589
 msgctxt "MainMenu|"
 msgid "&Help"
-msgstr "A&juda"
+msgstr "&Helpo"
 
 #: lib/app/mainmenu.cpp:592
 msgctxt "MainMenu|"
 msgid "About &Qt"
-msgstr "&Quant a les Qt"
+msgstr "Pri &Qt"
 
 #: lib/app/mainmenu.cpp:597
 msgctxt "MainMenu|"
 msgid "Information about application"
-msgstr "Informació sobre l'aplicació"
+msgstr "Informoj pri aplikaĵo"
 
 #: lib/app/mainmenu.cpp:598
 msgctxt "MainMenu|"
 msgid "Configuration Information"
-msgstr "Informació de la configuració"
+msgstr "Agordaj Informoj"
 
 #: lib/app/mainmenu.cpp:599
 msgctxt "MainMenu|"
 msgid "Report &Issue"
-msgstr "&Informa d'un problema"
+msgstr "Raporti &Temon"
 
 #: lib/app/mainmenu.cpp:612
 msgctxt "MainMenu|"
 msgid "Restore &Closed Tab"
-msgstr "Restaura la &pestanya tancada"
+msgstr "Restarigi &Fermitan Langeton"
 
 #: lib/autofill/autofillicon.cpp:29
 msgctxt "AutoFillWidget|"
 msgid "Choose username to login"
-msgstr "Trieu un nom d'usuari per a iniciar la sessió"
+msgstr "Elekti uzantnomon por ensaluti"
 
 #: lib/autofill/autofillnotification.cpp:39
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "on %1"
-msgstr "a %1"
+msgstr "sur %1"
 
 #: lib/autofill/autofillnotification.cpp:43
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "for <b>%1</b>"
-msgstr "per a <b>%1</b>"
+msgstr "por <b>%1</b>"
 
 #: lib/autofill/autofillnotification.cpp:47
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "Do you want Falkon to update saved password %1?"
-msgstr "Voleu que el Falkon actualitzi la contrasenya desada %1?"
+msgstr "Ĉu vi volas, ke Falkon ĝisdatigu konservitan pasvorton %1?"
 
 #: lib/autofill/autofillnotification.cpp:53
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "Do you want Falkon to remember the password %1 %2?"
-msgstr "Voleu que el Falkon recordi la contrasenya %1 %2?"
+msgstr "Ĉu vi volas, ke Falkon memoru la pasvorton %1 %2?"
 
 #: lib/autofill/autofillnotification.ui:69
 msgctxt "AutoFillNotification|"
 msgid "Update"
-msgstr "Actualització"
+msgstr "Ĝisdatigi"
 
 #: lib/autofill/autofillnotification.ui:85
 msgctxt "AutoFillNotification|"
 msgid "Remember"
-msgstr "Recorda-ho"
+msgstr "Memori"
 
 #: lib/autofill/autofillnotification.ui:101
 msgctxt "AutoFillNotification|"
 msgid "Never For This Site"
-msgstr "Mai per a aquest lloc"
+msgstr "Neniam Por Ĉi tiu Retejo"
 
 #: lib/autofill/autofillnotification.ui:117
 msgctxt "AutoFillNotification|"
 msgid "Not Now"
-msgstr "Ara no"
+msgstr "Ne nun"
 
 #: lib/autofill/autofillwidget.ui:11
 msgctxt "AutoFillWidget|"
 msgid "Login as:"
-msgstr "Inicia la sessió com a:"
+msgstr "Ensaluti kiel:"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:257
 msgctxt "AutoFill|"
 msgid "Database (encrypted)"
-msgstr "Base de dades (encriptada)"
+msgstr "Datumbazo (ĉifrita)"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
@@ -718,22 +707,22 @@ msgstr "Base de dades (encriptada)"
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
 msgctxt "MasterPasswordDialog|"
 msgid "Warning!"
-msgstr "Alerta!"
+msgstr "Averto!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
 msgctxt "MasterPasswordDialog|"
 msgid "You entered a wrong password!"
-msgstr "La contrasenya és incorrecta!"
+msgstr "Vi enigis malĝustan pasvorton!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
 msgctxt "MasterPasswordDialog|"
 msgid "New/Confirm password fields do not match!"
-msgstr "La contrasenya nova no coincideix amb la confirmació!"
+msgstr "Novaj/Konfirmi pasvortajn kampojn ne kongruas!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:578
 msgctxt "AutoFill|"
 msgid "Warning!"
-msgstr "Alerta!"
+msgstr "Averto!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:579
 msgctxt "AutoFill|"
@@ -741,61 +730,59 @@ msgid ""
 "This backend needs a master password to be set! Falkon just switches to its "
 "default backend"
 msgstr ""
-"Aquest dorsal necessita que es defineixi una contrasenya mestra. El Falkon "
-"torna al dorsal predefinit"
+"Ĉi tiu backend bezonas ĉefan pasvorton por esti agordita! Falkon nur ŝanĝas "
+"al sia defaŭlta backend"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
 msgctxt "MasterPasswordDialog|"
 msgid "Are you sure you want to clear master password and decrypt data?"
 msgstr ""
-"Esteu segur que voleu esborrar la contrasenya mestra i desencriptar les "
-"dades?"
+"Ĉu vi certas, ke vi volas forigi majstran pasvorton kaj malĉifri datumojn?"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
 msgctxt "MasterPasswordDialog|"
 msgid "Some data has not been decrypted. The master password was not cleared!"
-msgstr ""
-"Algunes dades no s'han desencriptat. La contrasenya mestra no s'ha esborrat!"
+msgstr "Iuj datumoj ne estis deĉifritaj. La ĉefa pasvorto ne estis forigita!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:669
 msgctxt "AutoFill|"
 msgid "Enter Master Password"
-msgstr "Introduïu una contrasenya mestra"
+msgstr "Enigi Ĉefpasvorton"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:673
 msgctxt "AutoFill|"
 msgid "Permission is required, please enter Master Password:"
-msgstr "Es necessita permís, introduïu la contrasenya mestra:"
+msgstr "Permeso estas bezonata, bonvolu enigi Ĉefpasvorton:"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:679
 msgctxt "AutoFill|"
 msgid "Entered password is wrong!"
-msgstr "La contrasenya és incorrecta!"
+msgstr "Enigita pasvorto estas malĝusta!"
 
 #: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
 msgctxt "AutoFill|"
 msgid "Database (plaintext)"
-msgstr "Base de dades (text pla)"
+msgstr "Datumbazo (klarteksto)"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:20
 msgctxt "MasterPasswordDialog|"
 msgid "Encrypted DataBase Settings"
-msgstr "Configuració de la base de dades encriptada"
+msgstr "Ĉifrita datumbazo-agordoj"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:33
 msgctxt "MasterPasswordDialog|"
 msgid "Set/Change Master Password..."
-msgstr "Canvia la contrasenya mestra..."
+msgstr "Meti/Ŝanĝi ĉefpasvorton..."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:36
 msgctxt "MasterPasswordDialog|"
 msgid "This backend does not work without a master password."
-msgstr "Aquest dorsal no funciona sense contrasenya mestra."
+msgstr "Ĉi tiu backend ne funkcias sen ĉefa pasvorto."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:43
 msgctxt "MasterPasswordDialog|"
 msgid "Clear Master Password..."
-msgstr "Esborra la contrasenya mestra..."
+msgstr "Forigi ĉefan pasvorton..."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:46
 msgctxt "MasterPasswordDialog|"
@@ -803,8 +790,8 @@ msgid ""
 "This option clears the master password and moves all encrypted data to the "
 "\"DataBase (Plain Text)\" backend, and switches to it."
 msgstr ""
-"Aquesta opció esborra la contrasenya mestra, mou totes les dades encriptades "
-"al dorsal «Base de dades (text pla)» i l'activa."
+"Ĉi tiu opcio forigas la ĉefan pasvorton kaj movas ĉiujn ĉifritajn datumojn "
+"al la backend \"DatumBazo (Plain Text)\", kaj ŝanĝas al ĝi."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:64
 msgctxt "MasterPasswordDialog|"
@@ -812,190 +799,190 @@ msgid ""
 "The Master Password is used to protect site passwords and form data. If you "
 "set a Master Password you will be asked to enter it once per session."
 msgstr ""
-"La contrasenya mestra s'usa per a protegir les contrasenyes dels llocs i "
-"dades dels formularis. Si definiu una contrasenya mestra, caldrà que la "
-"introduïu cada sessió."
+"La Ĉefa Pasvorto estas uzata por protekti retejajn pasvortojn kaj formi "
+"datumojn. Se vi fiksas Ĉefan Pasvorton, oni petos vin enigi ĝin unufoje por "
+"seanco."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:76
 msgctxt "MasterPasswordDialog|"
 msgid "Current Password:"
-msgstr "Contrasenya actual:"
+msgstr "Aktuala Pasvorto:"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:83
 msgctxt "MasterPasswordDialog|"
 msgid "New Password:"
-msgstr "Contrasenya nova:"
+msgstr "Nova pasvorto:"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:90
 msgctxt "MasterPasswordDialog|"
 msgid "Confirm Password:"
-msgstr "Confirma la contrasenya:"
+msgstr "Konfirmu pasvorton:"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:120
 msgctxt "MasterPasswordDialog|"
 msgid ""
 "<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
 msgstr ""
-"<b>Nota:</b> La contrasenya mestra no es pot tornar a definir, és important "
-"que la recordeu."
+"<b>Noto:</b> La Ĉefa Pasvorto ne estas rekomencebla. Ne forgesu ĝin, mi "
+"petas."
 
 #: lib/bookmarks/bookmarks.cpp:207
 msgctxt "Bookmarks|"
 msgid "Bookmarks Toolbar"
-msgstr "Barra d'eines de les adreces d'interès"
+msgstr "Legosignoj Ilobreto"
 
 #: lib/bookmarks/bookmarks.cpp:208
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Toolbar"
-msgstr "Adreces d'interès a la barra d'eines"
+msgstr "Legosignoj situantaj en Legosignoj Ilobreto"
 
 #: lib/bookmarks/bookmarks.cpp:211
 msgctxt "Bookmarks|"
 msgid "Bookmarks Menu"
-msgstr "Menú de les adreces d'interès"
+msgstr "Legosignoj-Menuo"
 
 #: lib/bookmarks/bookmarks.cpp:212
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Menu"
-msgstr "Adreces d'interès que es troben al menú"
+msgstr "Legosignoj situantaj en Legosignoj-Menuo"
 
 #: lib/bookmarks/bookmarks.cpp:215
 msgctxt "Bookmarks|"
 msgid "Unsorted Bookmarks"
-msgstr "Adreces d'interès desordenades"
+msgstr "Neordigitaj Legosignoj"
 
 #: lib/bookmarks/bookmarks.cpp:216
 msgctxt "Bookmarks|"
 msgid "All other bookmarks"
-msgstr "Totes les altres adreces d'interès"
+msgstr "Ĉiuj aliaj legosignoj"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.cpp:64
 msgctxt "BookmarksExportDialog|"
 msgid "Error!"
-msgstr "Hi ha hagut un error!"
+msgstr "Eraro!"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:14
 msgctxt "BookmarksExportDialog|"
 msgid "Export Bookmarks"
-msgstr "Exporta les adreces d'interès"
+msgstr "Eksporti Legosignojn"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:20
 msgctxt "BookmarksExportDialog|"
 msgid "<b>Export Bookmarks</b>"
-msgstr "<b>Exporta les adreces d'interès</b>"
+msgstr "<b>Eksporti Legosignojn</b>"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:27
 msgctxt "BookmarksExportDialog|"
 msgid "Export options"
-msgstr "Exporta les opcions"
+msgstr "Eksporto-opcioj"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
 msgctxt "BookmarksExportDialog|"
 msgid "Choose..."
-msgstr "Tria..."
+msgstr "Elekti..."
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
 msgctxt "BookmarksExportDialog|"
 msgid "Output File:"
-msgstr "Fitxer de sortida:"
+msgstr "Eliga Dosiero:"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:89
 msgctxt "BookmarksExportDialog|"
 msgid "Format:"
-msgstr "Format:"
+msgstr "Formato:"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:31
 msgctxt "BookmarksExporter|"
 msgid "HTML File"
-msgstr "Fitxer HTML"
+msgstr "HTML-dosiero"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:37
 msgctxt "BookmarksExporter|"
 msgid "HTML Bookmarks"
-msgstr "Marcadors HTML"
+msgstr "HTML-Legosignoj"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:38
 msgctxt "BookmarksExporter|"
 msgid "Choose file..."
-msgstr "Tria un fitxer..."
+msgstr "Elekti dosieron..."
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:47
 msgctxt "BookmarksExporter|"
 msgid "Cannot open file for writing!"
-msgstr "No s'ha pogut obrir el fitxer per a escriptura!"
+msgstr "Ne povas malfermi dosieron por skribi!"
 
 #: lib/bookmarks/bookmarksicon.cpp:37 lib/bookmarks/bookmarksicon.cpp:108
 msgctxt "BookmarksIcon|"
 msgid "Bookmark this Page"
-msgstr "Afegeix aquesta pàgina a les adreces d'interès"
+msgstr "Legomarki ĉi tiun Paĝon"
 
 #: lib/bookmarks/bookmarksicon.cpp:100
 msgctxt "BookmarksIcon|"
 msgid "Edit this bookmark"
-msgstr "Edita aquesta adreça d'interès"
+msgstr "Redakti ĉi tiun legosignon"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:113
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
 msgctxt "BookmarksImportDialog|"
 msgid "Error!"
-msgstr "Hi ha hagut un error!"
+msgstr "Eraro!"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
 msgctxt "BookmarksImportDialog|"
 msgid "No bookmarks were found."
-msgstr "No s'han trobat adreces d'interès."
+msgstr "Neniuj legosignoj estis trovitaj."
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:125
 msgctxt "BookmarksImportDialog|"
 msgid "Finish"
-msgstr "Finalitza"
+msgstr "Fini"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:157
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:270
 msgctxt "BookmarksImportDialog|"
 msgid "Next >"
-msgstr "Endavant >"
+msgstr "Sekva >"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:186
 #, qt-format
 msgctxt "BookmarksImportDialog|"
 msgid "<b>Importing from %1</b>"
-msgstr "<b>S'està important des de %1</b>"
+msgstr "<b>Importado de %1</b>"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:20
 msgctxt "BookmarksImportDialog|"
 msgid "Import Bookmarks"
-msgstr "Importa les adreces d'interès"
+msgstr "Importi legosignojn"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:26
 msgctxt "BookmarksImportDialog|"
 msgid "<b>Import Bookmarks</b>"
-msgstr "<b>Importa les adreces d'interès</b>"
+msgstr "<b>Importi legosignojn</b>"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:74
 msgctxt "BookmarksImportDialog|"
 msgid "Internet Explorer"
-msgstr "Internet Explorer"
+msgstr "Interreta Esploristo"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:83
 msgctxt "BookmarksImportDialog|"
 msgid "Html File"
-msgstr "Fitxer Html"
+msgstr "Html-Dosiero"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:95
 msgctxt "BookmarksImportDialog|"
 msgid "Choose from which you want to import bookmarks:"
-msgstr "Trieu des d'on voleu importar les adreces d'interès:"
+msgstr "Elektu el kiu vi volas importi legosignojn:"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:125
 msgctxt "BookmarksImportDialog|"
 msgid "Choose..."
-msgstr "Tria..."
+msgstr "Elekti..."
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:257
 msgctxt "BookmarksImportDialog|"
 msgid "< Back"
-msgstr "< Enrere"
+msgstr "< Reen"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:32
 msgctxt "BookmarksImporter|"
@@ -1003,8 +990,8 @@ msgid ""
 "Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
 "is usually located in"
 msgstr ""
-"El Google Chrome emmagatzema les seves adreces d'interès en el document de "
-"text <b>Bookmarks</b>. Aquest fitxer se sol trobar a"
+"Google Chrome konservas siajn legosignojn en <b>Legosignoj</b> tekstdosiero. "
+"Ĉi tiu dosiero kutime troviĝas en"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
@@ -1013,19 +1000,19 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:52
 msgctxt "BookmarksImporter|"
 msgid "Choose file..."
-msgstr "Tria un fitxer..."
+msgstr "Elekti dosieron..."
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:61
 msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
-msgstr "No es pot obrir el fitxer."
+msgstr "Ne eblas malfermi dosieron."
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:75
 msgctxt "BookmarksImporter|"
 msgid "Cannot parse JSON file!"
-msgstr "No s'ha pogut analitzar el fitxer JSON!"
+msgstr "Ne povas analizi JSON-dosieron!"
 
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:42
 msgctxt "BookmarksImporter|"
@@ -1033,18 +1020,18 @@ msgid ""
 "Mozilla Firefox stores its bookmarks in <b>places.sqlite</b> SQLite "
 "database. This file is usually located in"
 msgstr ""
-"El Mozilla Firefox emmagatzema les seves adreces d'interès a la base de "
-"dades SQLite <b>places.sqlite</b>. Aquest fitxer se sol trobar a"
+"Mozilla Firefox konservas siajn legosignojn en <b>places.sqlite</b> SQLite-"
+"datumbazo. Ĉi tiu dosiero kutime troviĝas en"
 
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:70
 msgctxt "BookmarksImportDialog|"
 msgid "File does not exist."
-msgstr "El fitxer no existeix."
+msgstr "Dosiero ne ekzistas."
 
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:77
 msgctxt "BookmarksImportDialog|"
 msgid "Unable to open database. Is Firefox running?"
-msgstr "No es pot obrir la base de dades. S'està executant el Firefox?"
+msgstr "Ne eblas malfermi datumbazon. Ĉu Firefox funkcias?"
 
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:32
 msgctxt "BookmarksImporter|"
@@ -1052,13 +1039,11 @@ msgid ""
 "You can import bookmarks from any browser that supports HTML exporting. This "
 "file has usually these suffixes"
 msgstr ""
-"Podeu importar adreces d'interès des de qualsevol navegador que suporti "
-"l'exportació en HTML. El fitxer sol tenir aquests sufixos"
 
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:43
 msgctxt "BookmarksImporter|"
 msgid "HTML Bookmarks"
-msgstr "Marcadors HTML"
+msgstr ""
 
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -1066,13 +1051,11 @@ msgid ""
 "Internet Explorer stores its bookmarks in <b>Favorites</b> folder. This "
 "folder is usually located in"
 msgstr ""
-"L'Internet Explorer emmagatzema les seves adreces d'interès a la carpeta "
-"<b>Preferits</b>. Aquesta carpeta se sol trobar a"
 
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
 msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
-msgstr "El directori no existeix."
+msgstr ""
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:37
 msgctxt "BookmarksImporter|"
@@ -1080,266 +1063,260 @@ msgid ""
 "Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
 "usually located in"
 msgstr ""
-"L'Opera emmagatzema les seves adreces d'interès en el document de text "
-"<b>bookmarks.adr</b>. Aquest fitxer se sol trobar a"
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:68
 msgctxt "BookmarksImporter|"
 msgid "File is not valid Opera bookmarks file!"
-msgstr "Aquest no és un fitxer d'adreces d'interès de l'Opera vàlid!"
+msgstr ""
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:73
 msgctxt "BookmarksImporter|"
 msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
 msgstr ""
-"Només són vàlids els fitxers d'adreces d'interès de l'Opera codificats en "
-"UTF-8!"
 
 #: lib/bookmarks/bookmarksmanager.cpp:105
 msgctxt "BookmarksManager|"
 msgid "Open in new tab"
-msgstr "Obre en una pestanya nova"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.cpp:106
 msgctxt "BookmarksManager|"
 msgid "Open in new window"
-msgstr "Obre en una finestra nova"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.cpp:107
 msgctxt "BookmarksManager|"
 msgid "Open in new private window"
-msgstr "Obre en una finestra privada nova"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.cpp:110
 #: lib/bookmarks/bookmarksmanager.cpp:177
 msgctxt "BookmarksManager|"
 msgid "New Bookmark"
-msgstr "Crea una adreça d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.cpp:111
 #: lib/bookmarks/bookmarksmanager.cpp:185
 msgctxt "BookmarksManager|"
 msgid "New Folder"
-msgstr "Crea una carpeta"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.cpp:112
 msgctxt "BookmarksManager|"
 msgid "New Separator"
-msgstr "Crea un separador"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.cpp:114
 msgctxt "BookmarksManager|"
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.ui:14
 msgctxt "BookmarksManager|"
 msgid "Bookmarks"
-msgstr "Adreces d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.ui:32
 msgctxt "BookmarksManager|"
 msgid "Title:"
-msgstr "Títol:"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.ui:42
 msgctxt "BookmarksManager|"
 msgid "Address:"
-msgstr "Adreça:"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.ui:52
 msgctxt "BookmarksManager|"
 msgid "Keyword:"
-msgstr "Paraula clau:"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmanager.ui:62
 msgctxt "BookmarksManager|"
 msgid "Description"
-msgstr "Descripció"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmenu.cpp:166
 msgctxt "BookmarksMenu|"
 msgid "&Bookmarks"
-msgstr "Ad&reces d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmenu.cpp:168
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &This Page"
-msgstr "&Afegeix a les adreces d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmenu.cpp:169
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &All Tabs"
-msgstr "Afegeix &totes les pestanyes a les adreces d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmenu.cpp:170
 msgctxt "BookmarksMenu|"
 msgid "Organize &Bookmarks"
-msgstr "&Organitza les adreces d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmodel.cpp:148
 msgctxt "BookmarksModel|"
 msgid "Title"
-msgstr "Nom"
+msgstr ""
 
 #: lib/bookmarks/bookmarksmodel.cpp:150
 msgctxt "BookmarksModel|"
 msgid "Address"
-msgstr "Adreça"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:74
 msgctxt "BookmarksToolbar|"
 msgid "Open in new tab"
-msgstr "Obre en una pestanya nova"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:75
 msgctxt "BookmarksToolbar|"
 msgid "Open in new window"
-msgstr "Obre en una finestra nova"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:76
 msgctxt "BookmarksToolbar|"
 msgid "Open in new private window"
-msgstr "Obre en una finestra privada nova"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:78 lib/bookmarks/bookmarkstoolbar.cpp:186
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
-msgstr "Carpeta nova"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:79
 msgctxt "BookmarksToolbar|"
 msgid "Edit"
-msgstr "Edita"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:80
 msgctxt "BookmarksToolbar|"
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:82
 msgctxt "BookmarksToolbar|"
 msgid "Show Only Icons"
-msgstr "Mostra només les icones"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:86
 msgctxt "BookmarksToolbar|"
 msgid "Show Only Text"
-msgstr "Mostra només el text"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:186
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
-msgstr "Introduïu el nom de la carpeta:"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:76
 #, qt-format
 msgctxt "BookmarksFoldersMenu|"
 msgid "Choose %1"
-msgstr "Tria %1"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:153
 msgctxt "Bookmarks|"
 msgid "Choose name and location of this bookmark."
-msgstr "Trieu el nom i la ubicació d'aquesta adreça d'interès."
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:157
 msgctxt "Bookmarks|"
 msgid "Add New Bookmark"
-msgstr "Afegeix una adreça d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:197
 msgctxt "Bookmarks|"
 msgid "Choose folder for bookmarks:"
-msgstr "Trieu una carpeta per a les adreces d'interès:"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:198
 msgctxt "Bookmarks|"
 msgid "Bookmark All Tabs"
-msgstr "Afegeix totes les pestanyes a les adreces d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:239
 msgctxt "Bookmarks|"
 msgid "Title:"
-msgstr "Títol:"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:242
 msgctxt "Bookmarks|"
 msgid "Address:"
-msgstr "Adreça:"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:244
 msgctxt "Bookmarks|"
 msgid "Keyword:"
-msgstr "Paraula clau:"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:247
 msgctxt "Bookmarks|"
 msgid "Description:"
-msgstr "Descripció:"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:252
 msgctxt "Bookmarks|"
 msgid "Edit Bookmark"
-msgstr "Edita l'adreça d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:344
 msgctxt "Bookmarks|"
 msgid "Confirmation"
-msgstr "Confirmació"
+msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:345
 #, qt-format
 msgctxt "Bookmarks|"
 msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
 msgstr ""
-"Segur que voleu obrir totes les dreceres d'interès de la carpeta «%1» en "
-"pestanyes?"
 
 #: lib/bookmarks/bookmarkstools.cpp:440
 msgctxt "Bookmarks|"
 msgid "Empty"
-msgstr "Buit"
+msgstr ""
 
 #: lib/bookmarks/bookmarkswidget.cpp:98
 msgctxt "BookmarksWidget|"
 msgid "Update Bookmark"
-msgstr "Actualitza l'adreça d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarkswidget.cpp:112 lib/bookmarks/bookmarkswidget.ui:33
 msgctxt "BookmarksWidget|"
 msgid "Add to Speed Dial"
-msgstr "Afegeix al marcador ràpid"
+msgstr ""
 
 #: lib/bookmarks/bookmarkswidget.cpp:116
 msgctxt "BookmarksWidget|"
 msgid "Remove from Speed Dial"
-msgstr "Elimina del marcador ràpid"
+msgstr ""
 
 #: lib/bookmarks/bookmarkswidget.cpp:121
 msgctxt "BookmarksWidget|"
 msgid "Remove from Bookmarks"
-msgstr "Elimina de les adreces d'interès"
+msgstr ""
 
 #: lib/bookmarks/bookmarkswidget.ui:20
 msgctxt "BookmarksWidget|"
 msgid "Add to Bookmarks"
-msgstr "Afegeix a les adreces d'interès"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:78
 msgctxt "CookieManager|"
 msgid "Search"
-msgstr "Cerca"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:105
 msgctxt "CookieManager|"
 msgid "Confirmation"
-msgstr "Confirmació"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:106
 msgctxt "CookieManager|"
 msgid "Are you sure you want to delete all cookies on your computer?"
-msgstr "Esteu segur que voleu suprimir totes les galetes de l'ordinador?"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
 #: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
@@ -1349,152 +1326,148 @@ msgstr "Esteu segur que voleu suprimir totes les galetes de l'ordinador?"
 #: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
 msgctxt "CookieManager|"
 msgid "<cookie not selected>"
-msgstr "<galeta sense seleccionar>"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
 #: lib/cookies/cookiemanager.ui:245
 msgctxt "CookieManager|"
 msgid "Remove cookies"
-msgstr "Elimina les galetes"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
 #: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
 #: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
 msgctxt "CookieManager|"
 msgid "<multiple cookies selected>"
-msgstr "<diverses galetes seleccionades>"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:178
 msgctxt "CookieManager|"
 msgid "Secure only"
-msgstr "Només les segures"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:178
 msgctxt "CookieManager|"
 msgid "All connections"
-msgstr "Totes les connexions"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:179
 msgctxt "CookieManager|"
 msgid "Session cookie"
-msgstr "Galeta de la sessió"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:181
 msgctxt "CookieManager|"
 msgid "Remove cookie"
-msgstr "Elimina la galeta"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
-msgstr "Servidor:"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:186
 msgctxt "CookieManager|"
 msgid "Add to whitelist"
-msgstr "Afegeix a la llista blanca"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:193
 msgctxt "CookieManager|"
 msgid "Already blacklisted!"
-msgstr "Ja es troba a la llista negra!"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:193
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
 msgstr ""
-"El servidor «%1» ja es troba a la llista negra; si us plau, primer elimineu-"
-"lo."
 
 #: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
-msgstr "Afegeix a la llista negra"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:220
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
-msgstr "Ja es troba a la llista blanca!"
+msgstr ""
 
 #: lib/cookies/cookiemanager.cpp:220
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
 msgstr ""
-"El servidor «%1» ja es troba a la llista blanca; si us plau, primer elimineu-"
-"lo."
 
 #: lib/cookies/cookiemanager.ui:14
 msgctxt "CookieManager|"
 msgid "Cookies"
-msgstr "Galetes"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:36
 msgctxt "CookieManager|"
 msgid "Stored Cookies"
-msgstr "Galetes emmagatzemades"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:42
 msgctxt "CookieManager|"
 msgid "Find: "
-msgstr "Cerca: "
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:52
 msgctxt "CookieManager|"
 msgid "These cookies are stored on your computer:"
-msgstr "Les galetes següents estan emmagatzemades a l'ordinador:"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:66
 msgctxt "CookieManager|"
 msgid "Server"
-msgstr "Servidor"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:71
 msgctxt "CookieManager|"
 msgid "Cookie name"
-msgstr "Nom de la galeta"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:109
 msgctxt "CookieManager|"
 msgid "Name:"
-msgstr "Nom:"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:119
 msgctxt "CookieManager|"
 msgid "Value:"
-msgstr "Valor:"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:133
 msgctxt "CookieManager|"
 msgid "Path:"
-msgstr "Camí:"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:140
 msgctxt "CookieManager|"
 msgid "Secure:"
-msgstr "Seguretat:"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:147
 msgctxt "CookieManager|"
 msgid "Expiration:"
-msgstr "Caducitat:"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:238
 msgctxt "CookieManager|"
 msgid "Remove all cookies"
-msgstr "Elimina totes les galetes"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:269
 msgctxt "CookieManager|"
 msgid "Cookie Filtering"
-msgstr "Filtre de galetes"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:275
 msgctxt "CookieManager|"
 msgid "<b>Cookie whitelist</b>"
-msgstr "<b>Llista blanca</b>"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:282
 msgctxt "CookieManager|"
@@ -1502,203 +1475,201 @@ msgid ""
 "Cookies from these servers will ALWAYS be accepted (even if you have "
 "disabled saving cookies)"
 msgstr ""
-"Les galetes d'aquests servidors s'acceptaran SEMPRE (encara que s'hagi "
-"inhabilitat l'emmagatzematge de galetes)"
 
 #: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
 msgctxt "CookieManager|"
 msgid "Add"
-msgstr "Afegeix"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:314 lib/cookies/cookiemanager.ui:368
 msgctxt "CookieManager|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:326
 msgctxt "CookieManager|"
 msgid "<b>Cookie blacklist</b>"
-msgstr "<b>Llista negra</b>"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:333
 msgctxt "CookieManager|"
 msgid "Cookies from these servers will NEVER be accepted"
-msgstr "Les galetes d'aquests servidors no s'acceptaran MAI"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:385
 msgctxt "CookieManager|"
 msgid "Settings"
-msgstr "Configuració"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:407
 msgctxt "CookieManager|"
 msgid "Filter 3rd party cookies"
-msgstr "Filtra les galetes de tercers"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:414
 msgctxt "CookieManager|"
 msgid "<b>Cookie Settings</b>"
-msgstr "<b>Configuració de les galetes</b>"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:421
 msgctxt "CookieManager|"
 msgid "Allow storing of cookies"
-msgstr "Permet emmagatzemar les galetes"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:428
 msgctxt "CookieManager|"
 msgid "Filter tracking cookies"
-msgstr "Filtra les galetes de rastreig"
+msgstr ""
 
 #: lib/cookies/cookiemanager.ui:435
 msgctxt "CookieManager|"
 msgid "Delete cookies on close"
-msgstr "Suprimeix les galetes amb el tancament"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:77
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
-msgstr "Temps restant desconegut"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:138
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
-msgstr "Fet - %1 (%2)"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:142
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
-msgstr "Error - %1"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:146 lib/downloads/downloaditem.cpp:293
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
-msgstr "Cancel·lat - %1"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:202 lib/downloads/downloaditem.cpp:337
 msgctxt "DownloadItem|"
 msgid "Cancelled"
-msgstr "Cancel·lat"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:208
 msgctxt "DownloadItem|"
 msgid "few seconds"
-msgstr "pocs segons"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:213
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
-msgstr[0] "%n segon"
-msgstr[1] "%n segons"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lib/downloads/downloaditem.cpp:218
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
-msgstr[0] "%n minut"
-msgstr[1] "%n minuts"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lib/downloads/downloaditem.cpp:223
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
-msgstr[0] "%n hora"
-msgstr[1] "%n hores"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lib/downloads/downloaditem.cpp:230
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
-msgstr "Velocitat desconeguda"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:235
 msgctxt "DownloadItem|"
 msgid "kB/s"
-msgstr "kB/s"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:240
 msgctxt "DownloadItem|"
 msgid "MB/s"
-msgstr "MB/s"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:244
 msgctxt "DownloadItem|"
 msgid "GB/s"
-msgstr "GB/s"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:272
 msgctxt "DownloadItem|"
 msgid "Unknown size"
-msgstr "Mida desconeguda"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:273
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
-msgstr "%2 - mida desconeguda (%3)"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:276
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
-msgstr "Restant %1 - %2 de %3 (%4)"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:308
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
-msgstr "En pausa - %1"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:321
 msgctxt "DownloadItem|"
 msgid "Open File"
-msgstr "Obre el fitxer"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Open Folder"
-msgstr "Obre la carpeta on es troba"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
-msgstr "Copia l'enllaç de baixada"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:327
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
-msgstr "Cancel·la"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:330
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
-msgstr "Reprèn la baixada"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:332
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
-msgstr "Fa pausa de la baixada"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:335
 msgctxt "DownloadItem|"
 msgid "Remove From List"
-msgstr "Elimina de la llista"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:337
 msgctxt "DownloadItem|"
 msgid "Error"
-msgstr "Hi ha hagut un error"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:363
 msgctxt "DownloadItem|"
 msgid "Not found"
-msgstr "No s'ha trobat"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:363
 #, qt-format
@@ -1708,851 +1679,846 @@ msgid ""
 " %1 \n"
 " was not found!"
 msgstr ""
-"El fitxer \n"
-"%1 \n"
-"no s'ha trobat!"
 
 #: lib/downloads/downloadmanager.cpp:200 lib/downloads/downloadmanager.cpp:440
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
-msgstr "Gestor de baixades"
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:238
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
-msgstr "%1% de %2 fitxers (%3) %4 restants"
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:242
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
-msgstr "%1% - Gestor de baixades"
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:316
 msgctxt "DownloadManager|"
 msgid "Save file as..."
-msgstr "Anomena i desa el fitxer..."
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:326
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
-msgstr "Arxiu HTML MIME (*.mhtml)"
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:327
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
-msgstr "Pàgina HTML, única (*.html)"
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:328
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
-msgstr "Pàgina HTML, completa (*.html)"
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:332
 msgctxt "DownloadManager|"
 msgid "Save page as..."
-msgstr "Anomena i desa la pàgina..."
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:433
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
-msgstr "Falkon: ha acabat la baixada"
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:433
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
-msgstr "S'han acabat de baixar tots els fitxers."
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:480
 msgctxt "DownloadManager|"
 msgid "Warning"
-msgstr "Avís"
+msgstr ""
 
 #: lib/downloads/downloadmanager.cpp:481
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
 msgstr ""
-"Esteu segur que voleu sortir? Es cancel·laran totes les baixades no "
-"completades!"
 
 #: lib/downloads/downloadmanager.ui:69
 msgctxt "DownloadManager|"
 msgid "Clear"
-msgstr "Neteja"
+msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.cpp:53
 #, qt-format
 msgctxt "DownloadOptionsDialog|"
 msgid "Opening %1"
-msgstr "S'està obrint %1"
+msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.cpp:116
 msgctxt "DownloadOptionsDialog|"
 msgid "Download link copied."
-msgstr "S'ha copiat l'enllaç de baixada."
+msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.ui:25
 msgctxt "DownloadOptionsDialog|"
 msgid "What should Falkon do with this file?"
-msgstr "Què voleu que faci el Falkon amb aquest fitxer?"
+msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.ui:47
 msgctxt "DownloadOptionsDialog|"
 msgid "Open..."
-msgstr "Obre..."
+msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.ui:54
 msgctxt "DownloadOptionsDialog|"
 msgid "Save File"
-msgstr "Desa el fitxer"
+msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.ui:64
 msgctxt "DownloadOptionsDialog|"
 msgid "Download with External Manager"
-msgstr "Baixa amb un gestor de baixades extern"
+msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.ui:165
 msgctxt "DownloadOptionsDialog|"
 msgid "which is:"
-msgstr "que és:"
+msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.ui:215
 msgctxt "DownloadOptionsDialog|"
 msgid "from:"
-msgstr "de:"
+msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.ui:241
 msgctxt "DownloadOptionsDialog|"
 msgid "Copy download link"
-msgstr "Copia l'enllaç de baixada"
+msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.ui:256
 msgctxt "DownloadOptionsDialog|"
 msgid "You have chosen to open"
-msgstr "Heu triat el fitxer"
+msgstr ""
 
 #: lib/downloads/downloadsbutton.cpp:27 lib/downloads/downloadsbutton.cpp:43
 msgctxt "DownloadsButton|"
 msgid "Downloads"
-msgstr "Baixades"
+msgstr ""
 
 #: lib/downloads/downloadsbutton.cpp:28
 msgctxt "DownloadsButton|"
 msgid "Open Download Manager"
-msgstr "Obre el gestor de baixades"
+msgstr ""
 
 #: lib/history/history.cpp:82
 msgctxt "History|"
 msgid "Empty Page"
-msgstr "Pàgina buida"
+msgstr ""
 
 #: lib/history/history.cpp:272
 msgctxt "History|"
 msgid "January"
-msgstr "Gener"
+msgstr ""
 
 #: lib/history/history.cpp:274
 msgctxt "History|"
 msgid "February"
-msgstr "Febrer"
+msgstr ""
 
 #: lib/history/history.cpp:276
 msgctxt "History|"
 msgid "March"
-msgstr "Març"
+msgstr ""
 
 #: lib/history/history.cpp:278
 msgctxt "History|"
 msgid "April"
-msgstr "Abril"
+msgstr ""
 
 #: lib/history/history.cpp:280
 msgctxt "History|"
 msgid "May"
-msgstr "Maig"
+msgstr ""
 
 #: lib/history/history.cpp:282
 msgctxt "History|"
 msgid "June"
-msgstr "Juny"
+msgstr ""
 
 #: lib/history/history.cpp:284
 msgctxt "History|"
 msgid "July"
-msgstr "Juliol"
+msgstr ""
 
 #: lib/history/history.cpp:286
 msgctxt "History|"
 msgid "August"
-msgstr "Agost"
+msgstr ""
 
 #: lib/history/history.cpp:288
 msgctxt "History|"
 msgid "September"
-msgstr "Setembre"
+msgstr ""
 
 #: lib/history/history.cpp:290
 msgctxt "History|"
 msgid "October"
-msgstr "Octubre"
+msgstr ""
 
 #: lib/history/history.cpp:292
 msgctxt "History|"
 msgid "November"
-msgstr "Novembre"
+msgstr ""
 
 #: lib/history/history.cpp:294
 msgctxt "History|"
 msgid "December"
-msgstr "Desembre"
+msgstr ""
 
 #: lib/history/historymanager.cpp:78
 msgctxt "HistoryManager|"
 msgid "Confirmation"
-msgstr "Confirmació"
+msgstr ""
 
 #: lib/history/historymanager.cpp:79
 msgctxt "HistoryManager|"
 msgid "Are you sure you want to delete all history?"
-msgstr "Esteu segur que voleu suprimir tot l'historial?"
+msgstr ""
 
 #: lib/history/historymanager.cpp:145
 msgctxt "HistoryManager|"
 msgid "Open in new tab"
-msgstr "Obre en una pestanya nova"
+msgstr ""
 
 #: lib/history/historymanager.cpp:146
 msgctxt "HistoryManager|"
 msgid "Open in new window"
-msgstr "Obre en una finestra nova"
+msgstr ""
 
 #: lib/history/historymanager.cpp:147
 msgctxt "HistoryManager|"
 msgid "Open in new private window"
-msgstr "Obre en una finestra privada nova"
+msgstr ""
 
 #: lib/history/historymanager.cpp:150
 msgctxt "HistoryManager|"
 msgid "Copy url"
-msgstr "Copia l'adreça"
+msgstr ""
 
 #: lib/history/historymanager.cpp:151
 msgctxt "HistoryManager|"
 msgid "Copy title"
-msgstr "Copia el títol"
+msgstr ""
 
 #: lib/history/historymanager.cpp:154 lib/history/historymanager.ui:20
 msgctxt "HistoryManager|"
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr ""
 
 #: lib/history/historymanager.ui:14
 msgctxt "HistoryManager|"
 msgid "History"
-msgstr "Historial"
+msgstr ""
 
 #: lib/history/historymanager.ui:27
 msgctxt "HistoryManager|"
 msgid "Clear All History"
-msgstr "Neteja tot l'historial"
+msgstr ""
 
 #: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
 #: lib/history/historymenu.cpp:186
 msgctxt "HistoryMenu|"
 msgid "Empty"
-msgstr "Buit"
+msgstr ""
 
 #: lib/history/historymenu.cpp:161
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Tabs"
-msgstr "Restaura totes les pestanyes tancades"
+msgstr ""
 
 #: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
 msgctxt "HistoryMenu|"
 msgid "Clear list"
-msgstr "Neteja la llista"
+msgstr ""
 
 #: lib/history/historymenu.cpp:189
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Windows"
-msgstr "Restaura totes les finestres tancades"
+msgstr ""
 
 #: lib/history/historymenu.cpp:236
 msgctxt "HistoryMenu|"
 msgid "Hi&story"
-msgstr "&Historial"
+msgstr ""
 
 #: lib/history/historymenu.cpp:238
 msgctxt "HistoryMenu|"
 msgid "&Back"
-msgstr "&Enrere"
+msgstr ""
 
 #: lib/history/historymenu.cpp:241
 msgctxt "HistoryMenu|"
 msgid "&Forward"
-msgstr "En&davant"
+msgstr ""
 
 #: lib/history/historymenu.cpp:244
 msgctxt "HistoryMenu|"
 msgid "&Home"
-msgstr "Pàgina d'&inici"
+msgstr ""
 
 #: lib/history/historymenu.cpp:247
 msgctxt "HistoryMenu|"
 msgid "Show &All History"
-msgstr "&Mostra tot l'historial"
+msgstr ""
 
 #: lib/history/historymenu.cpp:255
 msgctxt "HistoryMenu|"
 msgid "Most Visited"
-msgstr "Més visitades"
+msgstr ""
 
 #: lib/history/historymenu.cpp:258
 msgctxt "HistoryMenu|"
 msgid "Closed Tabs"
-msgstr "Pestanyes tancades"
+msgstr ""
 
 #: lib/history/historymenu.cpp:261
 msgctxt "HistoryMenu|"
 msgid "Closed Windows"
-msgstr "Finestres tancades"
+msgstr ""
 
 #: lib/history/historymodel.cpp:57
 msgctxt "HistoryModel|"
 msgid "Title"
-msgstr "Títol"
+msgstr ""
 
 #: lib/history/historymodel.cpp:59
 msgctxt "HistoryModel|"
 msgid "Address"
-msgstr "Adreça"
+msgstr ""
 
 #: lib/history/historymodel.cpp:61
 msgctxt "HistoryModel|"
 msgid "Visit Date"
-msgstr "Data de visita"
+msgstr ""
 
 #: lib/history/historymodel.cpp:63
 msgctxt "HistoryModel|"
 msgid "Visit Count"
-msgstr "Recompte de visites"
+msgstr ""
 
 #: lib/history/historymodel.cpp:341 lib/history/historymodel.cpp:472
 msgctxt "HistoryModel|"
 msgid "Today"
-msgstr "Avui"
+msgstr ""
 
 #: lib/history/historymodel.cpp:477
 msgctxt "HistoryModel|"
 msgid "This Week"
-msgstr "Aquesta setmana"
+msgstr ""
 
 #: lib/history/historymodel.cpp:482
 msgctxt "HistoryModel|"
 msgid "This Month"
-msgstr "Aquest mes"
+msgstr ""
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:158
 msgctxt "LocationCompleterDelegate|"
 msgid "Visit"
-msgstr "Visiteu"
+msgstr ""
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:164
 #, qt-format
 msgctxt "LocationCompleterDelegate|"
 msgid "Search with %1"
-msgstr "Cerqueu amb %1"
+msgstr ""
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:198
 msgctxt "LocationCompleterDelegate|"
 msgid "Switch to tab"
-msgstr "Canvieu a la pestanya"
+msgstr ""
 
 #: lib/navigation/completer/locationcompleterview.cpp:73
 msgctxt "LocationCompleterView|"
 msgid "Manage Search Engines"
-msgstr "Gestiona els motors de cerca"
+msgstr ""
 
 #: lib/navigation/completer/locationcompleterview.cpp:78
 msgctxt "LocationCompleterView|"
 msgid "Search with:"
-msgstr "Cerca amb:"
+msgstr ""
 
 #: lib/navigation/locationbar.cpp:95
 msgctxt "LocationBar|"
 msgid "Paste And &Go"
-msgstr "Enganxa i &ves-hi"
+msgstr ""
 
 #: lib/navigation/locationbar.cpp:163
 #, qt-format
 msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
-msgstr "Escriviu l'adreça o feu una cerca amb %1"
+msgstr ""
 
 #: lib/navigation/locationbar.cpp:165
 msgctxt "LocationBar|"
 msgid "Enter address"
-msgstr "Escriviu l'adreça"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:49
 msgctxt "NavigationBar|"
 msgid "Empty Page"
-msgstr "Pàgina buida"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:77
 msgctxt "NavigationBar|"
 msgid "Back"
-msgstr "Enrere"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:87
 msgctxt "NavigationBar|"
 msgid "Forward"
-msgstr "Endavant"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:107
 msgctxt "NavigationBar|"
 msgid "Home"
-msgstr "Pàgina d'inici"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:115
 msgctxt "NavigationBar|"
 msgid "New Tab"
-msgstr "Obre una pestanya"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:135
 msgctxt "NavigationBar|"
 msgid "Tools"
-msgstr "Eines"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:148
 msgctxt "NavigationBar|"
 msgid "Main Menu"
-msgstr "Menú principal"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:165
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen"
-msgstr "Surt de la pantalla completa"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:191
 msgctxt "NavigationBar|"
 msgid "Back and Forward buttons"
-msgstr "Botons d'avançar i retrocedir"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:192
 msgctxt "NavigationBar|"
 msgid "Reload button"
-msgstr "Botó de recàrrega"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:193
 msgctxt "NavigationBar|"
 msgid "Home button"
-msgstr "Botó d'inici"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:194
 msgctxt "NavigationBar|"
 msgid "Add tab button"
-msgstr "Afegeix un botó de pestanya"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:195
 msgctxt "NavigationBar|"
 msgid "Address and Search bar"
-msgstr "Barra de cerca i d'adreces"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:196
 msgctxt "NavigationBar|"
 msgid "Tools button"
-msgstr "Botó d'eines"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:197
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen button"
-msgstr "Botó de sortir de la pantalla completa"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:395 lib/navigation/navigationbar.cpp:429
 msgctxt "NavigationBar|"
 msgid "Clear history"
-msgstr "Neteja l'historial"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:436
 msgctxt "NavigationBar|"
 msgid "Toolbars"
-msgstr "Barres d'eines"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:437
 msgctxt "NavigationBar|"
 msgid "Sidebar"
-msgstr "Barra lateral"
+msgstr ""
 
 #: lib/navigation/navigationbar.cpp:452 lib/navigation/navigationbar.cpp:466
 msgctxt "NavigationBar|"
 msgid "Configure Toolbar"
-msgstr "Configura la barra d'eines"
+msgstr ""
 
 #: lib/navigation/navigationbarconfigdialog.ui:14
 msgctxt "NavigationBarConfigDialog|"
 msgid "Configure Toolbar"
-msgstr "Configura la barra d'eines"
+msgstr ""
 
 #: lib/navigation/navigationbarconfigdialog.ui:62
 msgctxt "NavigationBarConfigDialog|"
 msgid "Show search bar"
-msgstr "Mostra la barra de cerca"
+msgstr ""
 
 #: lib/navigation/navigationbarconfigdialog.ui:82
 msgctxt "NavigationBarConfigDialog|"
 msgid "Available items:"
-msgstr "Elements disponibles:"
+msgstr ""
 
 #: lib/navigation/navigationbarconfigdialog.ui:89
 msgctxt "NavigationBarConfigDialog|"
 msgid "Current items:"
-msgstr "Elements actuals:"
+msgstr ""
 
 #: lib/navigation/reloadstopbutton.cpp:57
 msgctxt "ReloadStopButton|"
 msgid "Stop"
-msgstr "Atura"
+msgstr ""
 
 #: lib/navigation/reloadstopbutton.cpp:61
 msgctxt "ReloadStopButton|"
 msgid "Reload"
-msgstr "Torna a carregar"
+msgstr ""
 
 #: lib/navigation/siteicon.cpp:40
 msgctxt "LocationBar|"
 msgid "Show information about this page"
-msgstr "Mostra informació sobre aquesta pàgina"
+msgstr ""
 
 #: lib/navigation/websearchbar.cpp:97
 msgctxt "WebSearchBar|"
 msgid "Paste And &Search"
-msgstr "Enganxa i &cerca"
+msgstr ""
 
 #: lib/navigation/websearchbar.cpp:123
 #, qt-format
 msgctxt "WebSearchBar|"
 msgid "Add %1 ..."
-msgstr "Afegeix %1..."
+msgstr ""
 
 #: lib/navigation/websearchbar.cpp:127
 msgctxt "WebSearchBar|"
 msgid "Manage Search Engines"
-msgstr "Gestiona els motors de cerca"
+msgstr ""
 
 #: lib/navigation/websearchbar.cpp:261
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
-msgstr "Mostra els suggeriments"
+msgstr ""
 
 #: lib/navigation/websearchbar.cpp:266
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
-msgstr "Cerca quan es canviï el motor"
+msgstr ""
 
 #: lib/navigation/zoomlabel.cpp:36
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr "Reinici del nivell de zoom"
+msgstr ""
 
 #: lib/navigation/zoomlabel.cpp:61
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
 
 #: lib/network/networkmanager.cpp:102
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
-msgstr "Error del certificat SSL!"
+msgstr ""
 
 #: lib/network/networkmanager.cpp:103
 msgctxt "NetworkManager|"
 msgid ""
 "The page you are trying to access has the following errors in the SSL "
 "certificate:"
-msgstr "La pàgina on voleu accedir té aquests errors en el certificat SSL:"
+msgstr ""
 
 #: lib/network/networkmanager.cpp:104
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
-msgstr "Voleu fer una excepció per a aquest certificat?"
+msgstr ""
 
 #: lib/network/networkmanager.cpp:139
 msgctxt "NetworkManager|"
 msgid "Authorization required"
-msgstr "Cal una autorització"
+msgstr ""
 
 #: lib/network/networkmanager.cpp:146 lib/network/networkmanager.cpp:232
 msgctxt "NetworkManager|"
 msgid "Username: "
-msgstr "Nom d'usuari: "
+msgstr ""
 
 #: lib/network/networkmanager.cpp:147 lib/network/networkmanager.cpp:233
 msgctxt "NetworkManager|"
 msgid "Password: "
-msgstr "Contrasenya: "
+msgstr ""
 
 #: lib/network/networkmanager.cpp:153
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
-msgstr "Desa el nom d'usuari i la contrasenya per a aquest lloc"
+msgstr ""
 
 #: lib/network/networkmanager.cpp:161
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
-msgstr "%1 demana un nom d'usuari i una contrasenya. El lloc diu «%2»"
+msgstr ""
 
 #: lib/network/networkmanager.cpp:225
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
-msgstr "Cal una autorització del servidor intermediari"
+msgstr ""
 
 #: lib/network/networkmanager.cpp:245
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
-msgstr "El servidor intermediari %1 demana un nom d'usuari i una contrasenya."
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:156
 msgctxt "FalkonSchemeReply|"
 msgid "Start Page"
-msgstr "Pàgina d'inici"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
 msgid "Search on Web"
-msgstr "Cerca al web"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:158
 msgctxt "FalkonSchemeReply|"
 msgid "Search results provided by DuckDuckGo"
-msgstr "Resultats de cerca proporcionats pel DuckDuckGo"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:160
 #: lib/network/schemehandlers/falkonschemehandler.cpp:177
 #: lib/network/schemehandlers/falkonschemehandler.cpp:178
 msgctxt "FalkonSchemeReply|"
 msgid "About Falkon"
-msgstr "Quant al Falkon"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:161
 msgctxt "FalkonSchemeReply|"
 msgid "<h1>Private Browsing</h1>"
-msgstr "<h1>Navegació privada</h1>"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:179
 #: lib/network/schemehandlers/falkonschemehandler.cpp:288
 msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
-msgstr "Informació de la versió"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:180
 msgctxt "FalkonSchemeReply|"
 msgid "Copyright"
-msgstr "Drets d'autor"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:183
 #: lib/network/schemehandlers/falkonschemehandler.cpp:298
 msgctxt "FalkonSchemeReply|"
 msgid "Version"
-msgstr "Versió"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:190
 msgctxt "FalkonSchemeReply|"
 msgid "Main developer"
-msgstr "Desenvolupador principal"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:211
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial"
-msgstr "Marcador ràpid"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:212
 msgctxt "FalkonSchemeReply|"
 msgid "Add New Page"
-msgstr "Afegeix una pàgina nova"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:213
 msgctxt "FalkonSchemeReply|"
 msgid "Edit"
-msgstr "Edita"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:214
 msgctxt "FalkonSchemeReply|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:215
 msgctxt "FalkonSchemeReply|"
 msgid "Reload"
-msgstr "Torna a carregar"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:216
 msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to remove this speed dial?"
-msgstr "Esteu segur que voleu eliminar aquest marcador ràpid?"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:217
 msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to reload all speed dials?"
-msgstr "Esteu segur que voleu tornar a carregar tots els marcadors ràpids?"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:218
 msgctxt "FalkonSchemeReply|"
 msgid "Load title from page"
-msgstr "Carrega el títol des de la pàgina"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:219
 msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
-msgstr "SpeedDial necessita el JavaScript habilitat."
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:220
 msgctxt "FalkonSchemeReply|"
 msgid "Url"
-msgstr "URL"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:221
 msgctxt "FalkonSchemeReply|"
 msgid "Title"
-msgstr "Títol"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:222
 msgctxt "FalkonSchemeReply|"
 msgid "Apply"
-msgstr "Aplica"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:223
 msgctxt "FalkonSchemeReply|"
 msgid "Cancel"
-msgstr "Cancel·la"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:224
 msgctxt "FalkonSchemeReply|"
 msgid "New Page"
-msgstr "Pàgina nova"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:225
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial settings"
-msgstr "Configuració del marcador ràpid"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:226
 msgctxt "FalkonSchemeReply|"
 msgid "Placement: "
-msgstr "Ubicació: "
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:227
 msgctxt "FalkonSchemeReply|"
 msgid "Auto"
-msgstr "Auto"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:228
 msgctxt "FalkonSchemeReply|"
 msgid "Cover"
-msgstr "Coberta"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:229
 msgctxt "FalkonSchemeReply|"
 msgid "Fit"
-msgstr "Ajusta"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:230
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Width"
-msgstr "Ajusta a l'amplada"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:231
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Height"
-msgstr "Ajusta a l'alçada"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:232
 msgctxt "FalkonSchemeReply|"
 msgid "Use custom wallpaper"
-msgstr "Usa un fons de pantalla personalitzat"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:233
 msgctxt "FalkonSchemeReply|"
 msgid "Click to select image"
-msgstr "Feu clic per a seleccionar la imatge"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:234
 msgctxt "FalkonSchemeReply|"
 msgid "Maximum pages in a row:"
-msgstr "Màxim de pàgines per fila:"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:235
 msgctxt "FalkonSchemeReply|"
 msgid "Change size of pages:"
-msgstr "Canvia la mida de les pàgines:"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:236
 msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
-msgstr "Centra els marcadors ràpids"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:261
 msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
-msgstr "Restaura la sessió"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:262
 msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
-msgstr "El Falkon ha fallat."
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:263
 msgctxt "FalkonSchemeReply|"
 msgid "We apologize for this. Would you like to restore the last saved state?"
-msgstr "Ens disculpem per això. Voleu restaurar l'últim estat desat?"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
-msgstr "Proveu d'eliminar les pestanyes que puguin causar problemes"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:265
 msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
-msgstr "O podeu començar una nova sessió"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:266
 msgctxt "FalkonSchemeReply|"
 msgid "Window"
-msgstr "Finestra"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:267
 msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
-msgstr "Finestres i pestanyes"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:268
 msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
-msgstr "Inicia una sessió nova"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:269
 msgctxt "FalkonSchemeReply|"
 msgid "Restore"
-msgstr "Restaura"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:270
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
-msgstr "Necessita el JavaScript habilitat."
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:286
 #: lib/network/schemehandlers/falkonschemehandler.cpp:287
 msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
-msgstr "Informació de la configuració"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:289
 msgctxt "FalkonSchemeReply|"
@@ -2561,211 +2527,207 @@ msgid ""
 "relevant for troubleshooting. Please include this information when "
 "submitting bug reports."
 msgstr ""
-"Aquesta pàgina conté informació sobre la configuració actual del Falkon, "
-"rellevant per a resoldre problemes. Incloeu aquesta informació en enviar els "
-"informes d'error."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:290
 msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
-msgstr "Identificació del navegador"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:291
 msgctxt "FalkonSchemeReply|"
 msgid "Paths"
-msgstr "Camins"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:292
 msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
-msgstr "Configuració de la construcció"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:293
 msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
-msgstr "Preferències"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:294
 msgctxt "FalkonSchemeReply|"
 msgid "Option"
-msgstr "Opció"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:295
 msgctxt "FalkonSchemeReply|"
 msgid "Value"
-msgstr "Valor"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:296
 #: lib/network/schemehandlers/falkonschemehandler.cpp:332
 msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
-msgstr "Extensions"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:297
 msgctxt "FalkonSchemeReply|"
 msgid "Name"
-msgstr "Nom"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:299
 msgctxt "FalkonSchemeReply|"
 msgid "Author"
-msgstr "Autor"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:300
 msgctxt "FalkonSchemeReply|"
 msgid "Description"
-msgstr "Descripció"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:315
 msgctxt "FalkonSchemeReply|"
 msgid "Application version"
-msgstr "Versió de l'aplicació"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:322
 msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
-msgstr "Versió de les Qt"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "Versió del QtWebEngine"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
 msgid "Platform"
-msgstr "Plataforma"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:327
 msgctxt "FalkonSchemeReply|"
 msgid "Profile"
-msgstr "Perfil"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:328
 msgctxt "FalkonSchemeReply|"
 msgid "Settings"
-msgstr "Configuració"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:329
 msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
-msgstr "Sessió desada"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:330
 msgctxt "FalkonSchemeReply|"
 msgid "Data"
-msgstr "Dades"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:331
 msgctxt "FalkonSchemeReply|"
 msgid "Themes"
-msgstr "Temes"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:335
 #: lib/network/schemehandlers/falkonschemehandler.cpp:342
 #: lib/network/schemehandlers/falkonschemehandler.cpp:348
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
-msgstr "<b>Habilitat</b>"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:337
 #: lib/network/schemehandlers/falkonschemehandler.cpp:344
 #: lib/network/schemehandlers/falkonschemehandler.cpp:348
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
-msgstr "Inhabilitat"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
-msgstr "Compilació de depuració"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:353
 msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
-msgstr "API de Windows 7"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:355
 msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
-msgstr "Versió portàtil"
+msgstr ""
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:373
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
-msgstr "No hi ha cap extensió disponible."
+msgstr ""
 
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr "Només per a aquesta sessió"
+msgstr ""
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
 msgid "SSL Certificate Error!"
-msgstr "Error del certificat SSL!"
+msgstr ""
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
 msgid "Preview"
-msgstr "Vista prèvia"
+msgstr ""
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "QObject|"
 msgid "Native System Notification"
-msgstr "Sistema de notificació natiu"
+msgstr ""
 
 #: lib/opensearch/editsearchengine.ui:20
 msgctxt "EditSearchEngine|"
 msgid "Name:"
-msgstr "Nom:"
+msgstr ""
 
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "Url:"
-msgstr "URL:"
+msgstr ""
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
 msgid "Shortcut:"
-msgstr "Drecera:"
+msgstr ""
 
 #: lib/opensearch/editsearchengine.ui:54
 msgctxt "EditSearchEngine|"
 msgid "Icon:"
-msgstr "Icona:"
+msgstr ""
 
 #: lib/opensearch/editsearchengine.ui:83
 msgctxt "EditSearchEngine|"
 msgid "Change..."
-msgstr "Canvia..."
+msgstr ""
 
 #: lib/opensearch/editsearchengine.ui:106
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgstr ""
-"<b>Nota: </b>%s a l'adreça o en dades POST representen una cadena de cerca"
 
 #: lib/opensearch/editsearchengine.ui:123
 msgctxt "EditSearchEngine|"
 msgid "Post Data:"
-msgstr "Dades POST:"
+msgstr ""
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
 msgid "The file is not an OpenSearch 1.1 file."
-msgstr "Aquest fitxer no és un fitxer OpenSearch 1.1."
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.cpp:52
 #: lib/opensearch/searchenginesmanager.cpp:315
 msgctxt "SearchEnginesDialog|"
 msgid "Add Search Engine"
-msgstr "Afegeix un motor de cerca"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.cpp:89
 msgctxt "SearchEnginesDialog|"
 msgid "Remove Engine"
-msgstr "Elimina el motor de cerca"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.cpp:90
 #, qt-format
@@ -2774,154 +2736,150 @@ msgid ""
 "You can't remove the default search engine.<br>Set a different engine as "
 "default before removing %1."
 msgstr ""
-"No es pot eliminar el motor de cerca per defecte.<br>Establiu-ne un altre "
-"com a predeterminat abans d'eliminar %1."
 
 #: lib/opensearch/searchenginesdialog.cpp:107
 msgctxt "SearchEnginesDialog|"
 msgid "Edit Search Engine"
-msgstr "Edita el motor de cerca"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:14
 msgctxt "SearchEnginesDialog|"
 msgid "Manage Search Engines"
-msgstr "Gestiona els motors de cerca"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:22
 msgctxt "SearchEnginesDialog|"
 msgid "Add..."
-msgstr "Afegeix..."
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:29
 msgctxt "SearchEnginesDialog|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:36
 msgctxt "SearchEnginesDialog|"
 msgid "Edit"
-msgstr "Edita"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:56
 msgctxt "SearchEnginesDialog|"
 msgid "Set as default"
-msgstr "Estableix com a predeterminat"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:63
 msgctxt "SearchEnginesDialog|"
 msgid "Up"
-msgstr "Amunt"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:70
 msgctxt "SearchEnginesDialog|"
 msgid "Down"
-msgstr "Avall"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:89
 msgctxt "SearchEnginesDialog|"
 msgid "Search Engine"
-msgstr "Motor de cerca"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:94
 msgctxt "SearchEnginesDialog|"
 msgid "Shortcut"
-msgstr "Drecera"
+msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:104
 msgctxt "SearchEnginesDialog|"
 msgid "Defaults"
-msgstr "Per defecte"
+msgstr ""
 
 #: lib/opensearch/searchenginesmanager.cpp:401
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine Added"
-msgstr "S'ha afegit el motor de cerca"
+msgstr ""
 
 #: lib/opensearch/searchenginesmanager.cpp:401
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine \"%1\" has been successfully added."
-msgstr "El motor de cerca «%1» s'ha afegit correctament."
+msgstr ""
 
 #: lib/opensearch/searchenginesmanager.cpp:408
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine is not valid!"
-msgstr "El motor de cerca no és vàlid!"
+msgstr ""
 
 #: lib/opensearch/searchenginesmanager.cpp:409
 msgctxt "SearchEnginesManager|"
 msgid "Error"
-msgstr "Hi ha hagut un error"
+msgstr ""
 
 #: lib/opensearch/searchenginesmanager.cpp:409
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
 msgstr ""
-"Hi ha hagut un error en afegir el motor de cerca <br><b>Missatge d'error:</"
-"b> %1"
 
 #: lib/other/aboutdialog.cpp:51
 #, qt-format
 msgctxt "AboutDialog|"
 msgid "<p><b>Application version %1</b><br/>"
-msgstr "<p><b>Versió de l'aplicació %1</b><br/>"
+msgstr ""
 
 #: lib/other/aboutdialog.cpp:58
 #, qt-format
 msgctxt "AboutDialog|"
 msgid "<b>QtWebEngine version %1</b></p>"
-msgstr "<b>Versió del QtWebEngine %1</b></p>"
+msgstr ""
 
 #: lib/other/aboutdialog.ui:14
 msgctxt "AboutDialog|"
 msgid "About Falkon"
-msgstr "Quant al Falkon"
+msgstr ""
 
 #: lib/other/browsinglibrary.cpp:55
 msgctxt "BrowsingLibrary|"
 msgid "History"
-msgstr "Historial"
+msgstr ""
 
 #: lib/other/browsinglibrary.cpp:56
 msgctxt "BrowsingLibrary|"
 msgid "Bookmarks"
-msgstr "Adreces d'interès"
+msgstr ""
 
 #: lib/other/browsinglibrary.cpp:61
 msgctxt "BrowsingLibrary|"
 msgid "Import Bookmarks..."
-msgstr "Importa les adreces d'interès..."
+msgstr ""
 
 #: lib/other/browsinglibrary.cpp:62
 msgctxt "BrowsingLibrary|"
 msgid "Export Bookmarks..."
-msgstr "Exporta les adreces d'interès..."
+msgstr ""
 
 #: lib/other/browsinglibrary.ui:14
 msgctxt "BrowsingLibrary|"
 msgid "Library"
-msgstr "Biblioteca"
+msgstr ""
 
 #: lib/other/browsinglibrary.ui:64
 msgctxt "BrowsingLibrary|"
 msgid "Import and Export"
-msgstr "Importa i exporta"
+msgstr ""
 
 #: lib/other/browsinglibrary.ui:84
 msgctxt "BrowsingLibrary|"
 msgid "Search..."
-msgstr "Cerca..."
+msgstr ""
 
 #: lib/other/clearprivatedata.cpp:155
 msgctxt "ClearPrivateData|"
 msgid "Done"
-msgstr "Fet"
+msgstr ""
 
 #: lib/other/clearprivatedata.cpp:173
 msgctxt "ClearPrivateData|"
 msgid "Database Optimized"
-msgstr "La base de dades s'ha optimitzat"
+msgstr ""
 
 #: lib/other/clearprivatedata.cpp:173
 #, qt-format
@@ -2930,503 +2888,498 @@ msgid ""
 "Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/"
 "><b>Database Size After: </b>%2"
 msgstr ""
-"La base de dades s'ha optimitzat correctament.<br/><br/><b>Mida de la base "
-"de dades abans: </b>%1<br/><b>Mida de la base de dades després: </b>%2"
 
 #: lib/other/clearprivatedata.ui:14
 msgctxt "ClearPrivateData|"
 msgid "Clear Recent History"
-msgstr "Neteja l'historial recent"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:20
 msgctxt "ClearPrivateData|"
 msgid "<b>Clear Recent History</b>"
-msgstr "<b>Neteja l'historial recent</b>"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:27
 msgctxt "ClearPrivateData|"
 msgid "Edit cookies"
-msgstr "Edita les galetes"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:38
 msgctxt "ClearPrivateData|"
 msgid "Earlier Today"
-msgstr "Avui"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:43
 msgctxt "ClearPrivateData|"
 msgid "Week"
-msgstr "Aquesta setmana"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:48
 msgctxt "ClearPrivateData|"
 msgid "Month"
-msgstr "Aquest mes"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:53
 msgctxt "ClearPrivateData|"
 msgid "All"
-msgstr "Tot"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:61
 msgctxt "ClearPrivateData|"
 msgid "Visited pages history from:"
-msgstr "Historial de pàgines visitades des de:"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:71
 msgctxt "ClearPrivateData|"
 msgid "Checked items will be cleared upon clicking the Clear button."
-msgstr "Els elements marcats es netejaran quan es faci clic al botó Neteja."
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:78
 msgctxt "ClearPrivateData|"
 msgid "Local storage"
-msgstr "Emmagatzematge local"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:94
 msgctxt "ClearPrivateData|"
 msgid "Clear"
-msgstr "Neteja"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:114
 msgctxt "ClearPrivateData|"
 msgid "Web databases"
-msgstr "Bases de dades web"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:124
 msgctxt "ClearPrivateData|"
 msgid "Cache"
-msgstr "Memòria cau"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:134
 msgctxt "ClearPrivateData|"
 msgid "Optimize database"
-msgstr "Optimitza la base de dades"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:141
 msgctxt "ClearPrivateData|"
 msgid "Cookies"
-msgstr "Galetes"
+msgstr ""
 
 #: lib/other/clearprivatedata.ui:158
 msgctxt "ClearPrivateData|"
 msgid "Database"
-msgstr "Base de dades"
+msgstr ""
 
 #: lib/other/iconchooser.cpp:41
 msgctxt "IconChooser|"
 msgid "Image files"
-msgstr "Fitxers d'imatge"
+msgstr ""
 
 #: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
 msgctxt "IconChooser|"
 msgid "Choose icon..."
-msgstr "Tria una icona..."
+msgstr ""
 
 #: lib/other/iconchooser.ui:20
 msgctxt "IconChooser|"
 msgid "From file"
-msgstr "Des d'un fitxer"
+msgstr ""
 
 #: lib/other/iconchooser.ui:29
 msgctxt "IconChooser|"
 msgid "Image (.png, .jpg, .jpeg, .gif)"
-msgstr "Imatge (.png, .jpg, .jpeg, .gif)"
+msgstr ""
 
 #: lib/other/iconchooser.ui:42
 msgctxt "IconChooser|"
 msgid "Choose file..."
-msgstr "Tria un fitxer..."
+msgstr ""
 
 #: lib/other/iconchooser.ui:52
 msgctxt "IconChooser|"
 msgid "From database"
-msgstr "Des d'una base de dades"
+msgstr ""
 
 #: lib/other/iconchooser.ui:61
 msgctxt "IconChooser|"
 msgid "Site Url:"
-msgstr "Adreça del lloc:"
+msgstr ""
 
 #: lib/other/licenseviewer.cpp:30
 msgctxt "LicenseViewer|"
 msgid "License Viewer"
-msgstr "Visualitzador de la llicència"
+msgstr ""
 
 #: lib/other/protocolhandlerdialog.ui:14
 msgctxt "ProtocolHandlerDialog|"
 msgid "Manage protocol handlers"
-msgstr "Gestió dels controladors de protocol"
+msgstr ""
 
 #: lib/other/protocolhandlerdialog.ui:40
 msgctxt "ProtocolHandlerDialog|"
 msgid "Protocol"
-msgstr "Protocol"
+msgstr ""
 
 #: lib/other/protocolhandlerdialog.ui:45
 msgctxt "ProtocolHandlerDialog|"
 msgid "Site"
-msgstr "Lloc"
+msgstr ""
 
 #: lib/other/protocolhandlerdialog.ui:68
 msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/other/registerqappassociation.cpp:110
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
-msgstr "Alerta!"
+msgstr ""
 
-# skip-rule: punctuation-period-no
 #: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
 msgid ""
 "There are some problems. Please, reinstall Falkon.\n"
 "Maybe relaunch with administrator right do a magic for you! ;)"
 msgstr ""
-"Hi ha hagut problemes. Reinstal·leu el Falkon.\n"
-"També podeu provar d'executar-lo amb permisos d'administrador."
 
 #: lib/other/siteinfo.cpp:68
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
-msgstr "<b>La connexió està encriptada.</b>"
+msgstr ""
 
 #: lib/other/siteinfo.cpp:70
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
-msgstr "<b>La connexió no està encriptada.</b>"
+msgstr ""
 
 #: lib/other/siteinfo.cpp:175
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
-msgstr "Copia la ubicació de la imatge"
+msgstr ""
 
 #: lib/other/siteinfo.cpp:176
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
-msgstr "Copia el nom de la imatge"
+msgstr ""
 
 #: lib/other/siteinfo.cpp:178
 msgctxt "SiteInfo|"
 msgid "Save Image to Disk"
-msgstr "Anomena i desa la imatge"
+msgstr ""
 
 #: lib/other/siteinfo.cpp:190
 msgctxt "SiteInfo|"
 msgid "Copy Values"
-msgstr "Copia els valors"
+msgstr ""
 
 #: lib/other/siteinfo.cpp:191
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
-msgstr "Copia les etiquetes i els valors"
+msgstr ""
 
 #: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
 msgid "Error!"
-msgstr "Hi ha hagut un error!"
+msgstr ""
 
 #: lib/other/siteinfo.cpp:229
 msgctxt "SiteInfo|"
 msgid "This preview is not available!"
-msgstr "La previsualització no està disponible!"
+msgstr ""
 
 #: lib/other/siteinfo.cpp:240
 msgctxt "SiteInfo|"
 msgid "Save image..."
-msgstr "Desa la imatge..."
+msgstr ""
 
 #: lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
 msgid "Cannot write to file!"
-msgstr "No es pot escriure el fitxer!"
+msgstr ""
 
 #: lib/other/siteinfo.cpp:258
 msgctxt "SiteInfo|"
 msgid "Loading..."
-msgstr "S'està carregant..."
+msgstr ""
 
 #: lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
 msgid "Preview not available"
-msgstr "La previsualització no està disponible"
+msgstr ""
 
 #: lib/other/siteinfo.ui:14
 msgctxt "SiteInfo|"
 msgid "Site Info"
-msgstr "Informació del lloc"
+msgstr ""
 
 #: lib/other/siteinfo.ui:47
 msgctxt "SiteInfo|"
 msgid "General"
-msgstr "General"
+msgstr ""
 
 #: lib/other/siteinfo.ui:52
 msgctxt "SiteInfo|"
 msgid "Media"
-msgstr "Multimèdia"
+msgstr ""
 
 #: lib/other/siteinfo.ui:84
 msgctxt "SiteInfo|"
 msgid "Site address:"
-msgstr "Adreça del lloc:"
+msgstr ""
 
 #: lib/other/siteinfo.ui:113
 msgctxt "SiteInfo|"
 msgid "Encoding:"
-msgstr "Codificació:"
+msgstr ""
 
 #: lib/other/siteinfo.ui:132
 msgctxt "SiteInfo|"
 msgid "Meta tags of site:"
-msgstr "Metaetiquetes del lloc:"
+msgstr ""
 
 #: lib/other/siteinfo.ui:149
 msgctxt "SiteInfo|"
 msgid "Tag"
-msgstr "Etiqueta"
+msgstr ""
 
 #: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
 msgid "Value"
-msgstr "Valor"
+msgstr ""
 
 #: lib/other/siteinfo.ui:168
 msgctxt "SiteInfo|"
 msgid "<b>Security information</b>"
-msgstr "<b>Informació de seguretat</b>"
+msgstr ""
 
 #: lib/other/siteinfo.ui:241
 msgctxt "SiteInfo|"
 msgid "Image"
-msgstr "Imatge"
+msgstr ""
 
 #: lib/other/siteinfo.ui:246
 msgctxt "SiteInfo|"
 msgid "Image address"
-msgstr "Adreça de la imatge"
+msgstr ""
 
 #: lib/other/siteinfo.ui:271
 msgctxt "SiteInfo|"
 msgid "<b>Preview</b>"
-msgstr "<b>Previsualització</b>"
+msgstr ""
 
 #: lib/other/siteinfowidget.cpp:42
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "<b>Site %1<b/>"
-msgstr "<b>Lloc web %1<b/>"
+msgstr ""
 
 #: lib/other/siteinfowidget.cpp:45
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>secured</b>."
-msgstr "La connexió en aquesta ubicació és <b>segura</b>."
+msgstr ""
 
 #: lib/other/siteinfowidget.cpp:49
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>unsecured</b>."
-msgstr "La connexió en aquesta ubicació és <b>insegura</b>."
+msgstr ""
 
 #: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "This is your <b>%1</b> visit of this site."
-msgstr "Aquesta és la <b>%1</b> vegada que visiteu aquest lloc."
+msgstr ""
 
 #: lib/other/siteinfowidget.cpp:68
 msgctxt "SiteInfoWidget|"
 msgid "You have <b>never</b> visited this site before."
-msgstr "No heu visitat <b>mai</b> aquest lloc."
+msgstr ""
 
 #: lib/other/siteinfowidget.cpp:75
 msgctxt "SiteInfoWidget|"
 msgid "first"
-msgstr "primera"
+msgstr ""
 
 #: lib/other/siteinfowidget.cpp:78
 msgctxt "SiteInfoWidget|"
 msgid "second"
-msgstr "segona"
+msgstr ""
 
 #: lib/other/siteinfowidget.cpp:81
 msgctxt "SiteInfoWidget|"
 msgid "third"
-msgstr "tercera"
+msgstr ""
 
 #: lib/other/siteinfowidget.cpp:106
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "Register as <b>%1</b> links handler"
-msgstr "Registra com a gestor d'enllaços <b>%1</b>"
+msgstr ""
 
 #: lib/other/siteinfowidget.cpp:107
 msgctxt "SiteInfoWidget|"
 msgid "Register"
-msgstr "Registra"
+msgstr ""
 
 #: lib/other/siteinfowidget.ui:71
 msgctxt "SiteInfoWidget|"
 msgid "More..."
-msgstr "Més..."
+msgstr ""
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
 msgid "Hide"
-msgstr "Oculta"
+msgstr ""
 
 #: lib/other/updater.cpp:151
 msgctxt "Updater|"
 msgid "Update available"
-msgstr "Hi ha una actualització disponible"
+msgstr ""
 
 #: lib/other/updater.cpp:151
 msgctxt "Updater|"
 msgid "New version of Falkon is ready to download."
-msgstr "Hi ha una nova versió del Falkon disponible."
+msgstr ""
 
 #: lib/other/updater.cpp:160
 msgctxt "Updater|"
 msgid "Update"
-msgstr "Actualitza"
+msgstr ""
 
 #: lib/popupwindow/popupwebview.cpp:100
 msgctxt "PopupWebView|"
 msgid "Inspect Element"
-msgstr "Inspecciona l'element"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:83
 msgctxt "PopupWindow|"
 msgid "File"
-msgstr "Fitxer"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:84
 msgctxt "PopupWindow|"
 msgid "Send Link..."
-msgstr "Envia un enllaç..."
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:85
 msgctxt "PopupWindow|"
 msgid "&Print..."
-msgstr "Im&primeix..."
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:87
 msgctxt "PopupWindow|"
 msgid "Close"
-msgstr "Tanca"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:90
 msgctxt "PopupWindow|"
 msgid "Edit"
-msgstr "Edita"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:99
 msgctxt "PopupWindow|"
 msgid "Find"
-msgstr "Cerca"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:102
 msgctxt "PopupWindow|"
 msgid "View"
-msgstr "Visualitza"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:103
 msgctxt "PopupWindow|"
 msgid "&Stop"
-msgstr "&Atura"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:105
 msgctxt "PopupWindow|"
 msgid "&Reload"
-msgstr "&Torna a carregar"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:108
 msgctxt "PopupWindow|"
 msgid "Zoom &In"
-msgstr "A&mplia"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:109
 msgctxt "PopupWindow|"
 msgid "Zoom &Out"
-msgstr "&Redueix"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:110
 msgctxt "PopupWindow|"
 msgid "Reset"
-msgstr "Reinicialitza"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:112
 msgctxt "PopupWindow|"
 msgid "&Page Source"
-msgstr "Codi &font de la pàgina"
+msgstr ""
 
 #: lib/popupwindow/popupwindow.cpp:271
 #, qt-format
 msgctxt "PopupWindow|"
 msgid "%1 - Falkon"
-msgstr "%1 - Falkon"
+msgstr ""
 
 #: lib/preferences/acceptlanguage.cpp:99 lib/preferences/acceptlanguage.cpp:162
 #, qt-format
 msgctxt "AcceptLanguage|"
 msgid "Personal [%1]"
-msgstr "Personal [%1]"
+msgstr ""
 
 #: lib/preferences/acceptlanguage.ui:14
 msgctxt "AcceptLanguage|"
 msgid "Preferred Languages"
-msgstr "Idiomes preferits"
+msgstr ""
 
 #: lib/preferences/acceptlanguage.ui:25
 msgctxt "AcceptLanguage|"
 msgid "Add..."
-msgstr "Afegeix..."
+msgstr ""
 
 #: lib/preferences/acceptlanguage.ui:32
 msgctxt "AcceptLanguage|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/preferences/acceptlanguage.ui:39
 msgctxt "AcceptLanguage|"
 msgid "Up"
-msgstr "Amunt"
+msgstr ""
 
 #: lib/preferences/acceptlanguage.ui:46
 msgctxt "AcceptLanguage|"
 msgid "Down"
-msgstr "Avall"
+msgstr ""
 
 #: lib/preferences/addacceptlanguage.ui:14
 msgctxt "AddAcceptLanguage|"
 msgid "Add Language"
-msgstr "Afegeix un idioma"
+msgstr ""
 
 #: lib/preferences/addacceptlanguage.ui:20
 msgctxt "AddAcceptLanguage|"
 msgid "Choose preferred language for web sites"
-msgstr "Trieu l'idioma que preferiu per a mostrar les pàgines"
+msgstr ""
 
 #: lib/preferences/addacceptlanguage.ui:32
 msgctxt "AddAcceptLanguage|"
 msgid "Personal definition:"
-msgstr "Definició personal:"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:67
 msgctxt "AutoFillManager|"
 msgid "Import Passwords from File..."
-msgstr "Importa les contrasenyes des d'un fitxer..."
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:68
 msgctxt "AutoFillManager|"
 msgid "Export Passwords to File..."
-msgstr "Exporta les contrasenyes a un fitxer..."
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:70
 msgctxt "AutoFillManager|"
 msgid "Search"
-msgstr "Cerca"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:82
 #: lib/preferences/autofillmanager.cpp:175
@@ -3434,350 +3387,349 @@ msgstr "Cerca"
 #: lib/preferences/autofillmanager.ui:140
 msgctxt "AutoFillManager|"
 msgid "Show Passwords"
-msgstr "Mostra les contrasenyes"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:134
 msgctxt "AutoFillManager|"
 msgid "Change backend..."
-msgstr "Canvia el dorsal..."
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:134
 msgctxt "AutoFillManager|"
 msgid "Change backend:"
-msgstr "Canvia el dorsal:"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:183
 msgctxt "AutoFillManager|"
 msgid "Are you sure that you want to show all passwords?"
-msgstr "Segur que voleu mostrar totes les contrasenyes?"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:198
 msgctxt "AutoFillManager|"
 msgid "Hide Passwords"
-msgstr "Amaga les contrasenyes"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:236
 msgctxt "AutoFillManager|"
 msgid "Confirmation"
-msgstr "Confirmació"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:237
 msgctxt "AutoFillManager|"
 msgid "Are you sure you want to delete all passwords on your computer?"
-msgstr "Esteu segur que voleu suprimir totes les contrasenyes a l'ordinador?"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:256
 msgctxt "AutoFillManager|"
 msgid "Edit password"
-msgstr "Edita la contrasenya"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:256
 msgctxt "AutoFillManager|"
 msgid "Change password:"
-msgstr "Canvia la contrasenya:"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:310
 #: lib/preferences/autofillmanager.cpp:321
 msgctxt "AutoFillManager|"
 msgid "Choose file..."
-msgstr "Tria un fitxer..."
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:335
 msgctxt "AutoFillManager|"
 msgid "Cannot read file!"
-msgstr "No es pot llegir el fitxer!"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:344
 msgctxt "AutoFillManager|"
 msgid "Successfully imported"
-msgstr "S'ha importat correctament"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:344
 msgctxt "AutoFillManager|"
 msgid "Error while importing!"
-msgstr "Hi ha hagut un error en importar!"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:355
 msgctxt "AutoFillManager|"
 msgid "Cannot write to file!"
-msgstr "No es pot escriure el fitxer!"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:364
 msgctxt "AutoFillManager|"
 msgid "Successfully exported"
-msgstr "S'ha exportat correctament"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:381
 msgctxt "AutoFillManager|"
 msgid "Copy Username"
-msgstr "Copia el nom d'usuari"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:382
 msgctxt "AutoFillManager|"
 msgid "Copy Password"
-msgstr "Copia la contrasenya"
+msgstr ""
 
 #: lib/preferences/autofillmanager.cpp:384
 msgctxt "AutoFillManager|"
 msgid "Edit Password"
-msgstr "Edita la contrasenya"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:25
 msgctxt "AutoFillManager|"
 msgid "Passwords are stored in:"
-msgstr "Les contrasenyes es guarden a:"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:35
 msgctxt "AutoFillManager|"
 msgid "Change backend"
-msgstr "Canvia el dorsal"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:42
 msgctxt "AutoFillManager|"
 msgid "Backend options"
-msgstr "Opcions del dorsal"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:71
 msgctxt "AutoFillManager|"
 msgid "Passwords"
-msgstr "Contrasenyes"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:87 lib/preferences/autofillmanager.ui:201
 msgctxt "AutoFillManager|"
 msgid "Server"
-msgstr "Servidor"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:92
 msgctxt "AutoFillManager|"
 msgid "Username"
-msgstr "Nom d'usuari"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:97
 msgctxt "AutoFillManager|"
 msgid "Password"
-msgstr "Contrasenya"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:113
 msgctxt "AutoFillManager|"
 msgid "Import and Export"
-msgstr "Importa i exporta"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:154
 msgctxt "AutoFillManager|"
 msgid "Edit"
-msgstr "Edita"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:161
 #: lib/preferences/autofillmanager.ui:211
 msgctxt "AutoFillManager|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:168
 #: lib/preferences/autofillmanager.ui:218
 msgctxt "AutoFillManager|"
 msgid "Remove All"
-msgstr "Elimina-ho tot"
+msgstr ""
 
 #: lib/preferences/autofillmanager.ui:191
 msgctxt "AutoFillManager|"
 msgid "Exceptions"
-msgstr "Excepcions"
+msgstr ""
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr "Servidor: "
+msgstr ""
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr "Afegeix una excepció de certificat"
+msgstr ""
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr "El servidor %1 ja està a la llista"
+msgstr ""
 
 #: lib/preferences/certificatemanager.cpp:83
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "Servidor buit"
+msgstr ""
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr "Gestor d'excepcions de certificats"
+msgstr ""
 
 #: lib/preferences/certificatemanager.ui:22
 msgctxt "CertificateManager|"
 msgid "Add"
-msgstr "Afegeix"
+msgstr ""
 
 #: lib/preferences/certificatemanager.ui:29
 msgctxt "CertificateManager|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr "Eliminar una entrada requereix reiniciar"
+msgstr ""
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
 msgid "JavaScript Options"
-msgstr "Opcions de JavaScript"
+msgstr ""
 
 #: lib/preferences/jsoptions.ui:20
 msgctxt "JsOptions|"
 msgid "Allow JavaScript to:"
-msgstr "Permet que el JavaScript:"
+msgstr ""
 
 #: lib/preferences/jsoptions.ui:29
 msgctxt "JsOptions|"
 msgid "Open popup windows"
-msgstr "Obre les finestres emergents"
+msgstr ""
 
 #: lib/preferences/jsoptions.ui:36
 msgctxt "JsOptions|"
 msgid "Activate windows"
-msgstr "Finestres actives"
+msgstr ""
 
 #: lib/preferences/jsoptions.ui:43
 msgctxt "JsOptions|"
 msgid "Access clipboard"
-msgstr "Accedeix al porta-retalls"
+msgstr ""
 
 #: lib/preferences/jsoptions.ui:50
 msgctxt "JsOptions|"
 msgid "Paste from clipboard"
-msgstr "Enganxa des del porta-retalls"
+msgstr ""
 
 #: lib/preferences/pluginslist.ui:17
 msgctxt "PluginsList|"
 msgid "Enter name"
-msgstr "Introdueix el nom"
+msgstr ""
 
 #: lib/preferences/pluginslist.ui:51
 msgctxt "PluginsList|"
 msgid "Settings"
-msgstr "Configuració"
+msgstr ""
 
 #: lib/preferences/pluginslist.ui:61
 msgctxt "PluginsList|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/preferences/pluginslist.ui:81
 msgctxt "PluginsList|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
 msgstr ""
-"<a href=\"https://store.kde.org/browse/cat/571/\">Obtén més extensions...</a>"
 
 #: lib/preferences/pluginsmanager.cpp:198
 msgctxt "PluginsManager|"
 msgid "Error!"
-msgstr "Hi ha hagut un error!"
+msgstr ""
 
 #: lib/preferences/pluginsmanager.cpp:198
 msgctxt "PluginsManager|"
 msgid "Cannot load extension!"
-msgstr "No s'ha pogut carregar l'extensió!"
+msgstr ""
 
 #: lib/preferences/pluginsmanager.cpp:237
 msgctxt "PluginsManager|"
 msgid "Confirmation"
-msgstr "Confirmació"
+msgstr ""
 
 #: lib/preferences/pluginsmanager.cpp:238
 #, qt-format
 msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
-msgstr "Esteu segur que voleu eliminar «%1»?"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:620
 msgctxt "Preferences|"
 msgid "Default"
-msgstr "Per defecte"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:159
 msgctxt "Preferences|"
 msgid "Set as default"
-msgstr "Estableix com a predeterminat"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:304
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:563
 msgctxt "Preferences|"
 msgid "Choose executable location..."
-msgstr "Tria la ubicació de l'executable..."
+msgstr ""
 
 #: lib/preferences/preferences.cpp:606
 msgctxt "Preferences|"
 msgid "OSD Notification"
-msgstr "Notificació OSD"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:607
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
-msgstr "Arrossegueu-la per la pantalla per a col·locar-la on vulgueu."
+msgstr ""
 
 #: lib/preferences/preferences.cpp:656
 msgctxt "Preferences|"
 msgid "Choose download location..."
-msgstr "Tria la carpeta de baixades..."
+msgstr ""
 
 #: lib/preferences/preferences.cpp:670
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
-msgstr "Tria la ubicació del full d'estils..."
+msgstr ""
 
 #: lib/preferences/preferences.cpp:681
 msgctxt "Preferences|"
 msgid "Deleted"
-msgstr "Suprimit"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:789
 msgctxt "Preferences|"
 msgid "Choose cache path..."
-msgstr "Tria el camí de la memòria cau..."
+msgstr ""
 
 #: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "New Profile"
-msgstr "Perfil nou"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
-msgstr "Introduïu el nom del nou perfil:"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:830 lib/preferences/preferences.cpp:835
 msgctxt "Preferences|"
 msgid "Error!"
-msgstr "Hi ha hagut un error!"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:830
 msgctxt "Preferences|"
 msgid "This profile already exists!"
-msgstr "Aquest perfil ja existeix!"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:835
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
-msgstr "No s'ha pogut crear el directori del perfil!"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:846
 msgctxt "Preferences|"
 msgid "Confirmation"
-msgstr "Confirmació"
+msgstr ""
 
 #: lib/preferences/preferences.cpp:847
 #, qt-format
@@ -3786,702 +3738,696 @@ msgid ""
 "Are you sure you want to permanently delete \"%1\" profile? This action "
 "cannot be undone!"
 msgstr ""
-"Esteu segur que voleu suprimir permanentment el perfil «%1»? Aquesta acció "
-"no es pot desfer!"
 
 #: lib/preferences/preferences.cpp:862 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
-msgstr "Nota: No podeu suprimir el perfil actiu."
+msgstr ""
 
 #: lib/preferences/preferences.cpp:1121
 msgctxt "Preferences|"
 msgid "Select Color"
-msgstr "Selecciona un color"
+msgstr ""
 
 #: lib/preferences/preferences.ui:14
 msgctxt "Preferences|"
 msgid "Preferences"
-msgstr "Preferències"
+msgstr ""
 
 #: lib/preferences/preferences.ui:60
 msgctxt "Preferences|"
 msgid "General"
-msgstr "General"
+msgstr ""
 
 #: lib/preferences/preferences.ui:65
 msgctxt "Preferences|"
 msgid "Appearance"
-msgstr "Aparença"
+msgstr ""
 
 #: lib/preferences/preferences.ui:70
 msgctxt "Preferences|"
 msgid "Tabs"
-msgstr "Pestanyes"
+msgstr ""
 
 #: lib/preferences/preferences.ui:75
 msgctxt "Preferences|"
 msgid "Browsing"
-msgstr "Navegació"
+msgstr ""
 
 #: lib/preferences/preferences.ui:80
 msgctxt "Preferences|"
 msgid "Fonts"
-msgstr "Lletres"
+msgstr ""
 
 #: lib/preferences/preferences.ui:85
 msgctxt "Preferences|"
 msgid "Keyboard Shortcuts"
-msgstr "Dreceres del teclat"
+msgstr ""
 
 #: lib/preferences/preferences.ui:90
 msgctxt "Preferences|"
 msgid "Downloads"
-msgstr "Baixades"
+msgstr ""
 
 #: lib/preferences/preferences.ui:95
 msgctxt "Preferences|"
 msgid "Password Manager"
-msgstr "Gestor de contrasenyes"
+msgstr ""
 
 #: lib/preferences/preferences.ui:100
 msgctxt "Preferences|"
 msgid "Privacy"
-msgstr "Privadesa"
+msgstr ""
 
 #: lib/preferences/preferences.ui:105
 msgctxt "Preferences|"
 msgid "Notifications"
-msgstr "Notificacions"
+msgstr ""
 
 #: lib/preferences/preferences.ui:110
 msgctxt "Preferences|"
 msgid "Extensions"
-msgstr "Extensions"
+msgstr ""
 
 #: lib/preferences/preferences.ui:115
 msgctxt "Preferences|"
 msgid "Spell Check"
-msgstr "Corrector ortogràfic"
+msgstr ""
 
 #: lib/preferences/preferences.ui:120
 msgctxt "Preferences|"
 msgid "Other"
-msgstr "Altres"
+msgstr ""
 
 #: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
 msgctxt "Preferences|"
 msgid "Use current"
-msgstr "Fes servir la pàgina actual"
+msgstr ""
 
 #: lib/preferences/preferences.ui:243
 msgctxt "Preferences|"
 msgid "Create New"
-msgstr "Crea un perfil nou"
+msgstr ""
 
 #: lib/preferences/preferences.ui:259
 msgctxt "Preferences|"
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr ""
 
 #: lib/preferences/preferences.ui:285
 msgctxt "Preferences|"
 msgid "<b>Launching</b>"
-msgstr "<b>Inici</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:295
 msgctxt "Preferences|"
 msgid "After launch: "
-msgstr "Quan s'iniciï:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:303
 msgctxt "Preferences|"
 msgid "Open blank page"
-msgstr "Obre una pàgina en blanc"
+msgstr ""
 
 #: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
 msgctxt "Preferences|"
 msgid "Open homepage"
-msgstr "Obre la pàgina d'inici"
+msgstr ""
 
 #: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
 msgctxt "Preferences|"
 msgid "Open speed dial"
-msgstr "Obre el marcador ràpid"
+msgstr ""
 
 #: lib/preferences/preferences.ui:318
 msgctxt "Preferences|"
 msgid "Restore session"
-msgstr "Restaura la sessió"
+msgstr ""
 
 #: lib/preferences/preferences.ui:323
 msgctxt "Preferences|"
 msgid "Select session"
-msgstr "Seleccioneu una sessió"
+msgstr ""
 
 #: lib/preferences/preferences.ui:331
 msgctxt "Preferences|"
 msgid "Homepage: "
-msgstr "Pàgina d'inici: "
+msgstr ""
 
 #: lib/preferences/preferences.ui:352
 msgctxt "Preferences|"
 msgid "On new tab: "
-msgstr "Sobre la pestanya nova: "
+msgstr ""
 
 #: lib/preferences/preferences.ui:360
 msgctxt "Preferences|"
 msgid "Open blank tab"
-msgstr "Obre una pestanya en blanc"
+msgstr ""
 
 #: lib/preferences/preferences.ui:375
 msgctxt "Preferences|"
 msgid "Open other page..."
-msgstr "Obre una altra pàgina..."
+msgstr ""
 
 #: lib/preferences/preferences.ui:383
 msgctxt "Preferences|"
 msgid "<b>Profiles</b>"
-msgstr "<b>Perfils</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:390
 msgctxt "Preferences|"
 msgid "Startup profile:"
-msgstr "Perfil d'inici:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:397
 msgctxt "Preferences|"
 msgid "Check for updates on start"
-msgstr "Comprova les actualitzacions a l'inici"
+msgstr ""
 
 #: lib/preferences/preferences.ui:404
 msgctxt "Preferences|"
 msgid "Active profile:"
-msgstr "Perfil actiu:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:418
 msgctxt "Preferences|"
 msgid "Don't load tabs until selected"
-msgstr "Carrega les pestanyes un cop seleccionades"
+msgstr ""
 
 #: lib/preferences/preferences.ui:440
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
-msgstr "Comprova si el Falkon és el navegador predeterminat a l'inici"
+msgstr ""
 
 #: lib/preferences/preferences.ui:450
 msgctxt "Preferences|"
 msgid "Check Now"
-msgstr "Comprova-ho ara"
+msgstr ""
 
 #: lib/preferences/preferences.ui:480
 msgctxt "Preferences|"
 msgid "Themes"
-msgstr "Temes"
+msgstr ""
 
 #: lib/preferences/preferences.ui:502
 msgctxt "Preferences|"
 msgid "Advanced options"
-msgstr "Opcions avançades"
+msgstr ""
 
 #: lib/preferences/preferences.ui:510
 msgctxt "Preferences|"
 msgid "Show StatusBar on start"
-msgstr "Mostra la barra d'estat"
+msgstr ""
 
 #: lib/preferences/preferences.ui:517
 msgctxt "Preferences|"
 msgid "Show Bookmarks ToolBar on start"
-msgstr "Mostra la barra d'eines d'adreces d'interès"
+msgstr ""
 
 #: lib/preferences/preferences.ui:524
 msgctxt "Preferences|"
 msgid "Show Navigation ToolBar on start"
-msgstr "Mostra la barra d'eines de navegació"
+msgstr ""
 
 #: lib/preferences/preferences.ui:531
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
-msgstr "Habilita la barra d'eines de les adreces d'interès instantània"
+msgstr ""
 
 #: lib/preferences/preferences.ui:553
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
-msgstr "<b>Finestra del navegador</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:601
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
-msgstr "Comportament de les pestanyes"
+msgstr ""
 
 #: lib/preferences/preferences.ui:607
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
-msgstr "Oculta les pestanyes quan només n'hi hagi una"
+msgstr ""
 
 #: lib/preferences/preferences.ui:614
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
-msgstr "Activa l'última pestanya en tancar la pestanya activa"
+msgstr ""
 
 #: lib/preferences/preferences.ui:621
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
-msgstr "Obre les pestanyes noves al costat de la pestanya activa"
+msgstr ""
 
 #: lib/preferences/preferences.ui:628
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
-msgstr "Obre pestanyes buides després de la pestanya activa"
+msgstr ""
 
 #: lib/preferences/preferences.ui:635
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
-msgstr "Obre les finestres emergents a les pestanyes"
+msgstr ""
 
 #: lib/preferences/preferences.ui:642
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
-msgstr "Canvia sempre de pestanya amb la roda del ratolí"
+msgstr ""
 
 #: lib/preferences/preferences.ui:649
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
-msgstr "Canvia automàticament a la pestanya nova oberta"
+msgstr ""
 
 #: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
-msgstr "No tanquis la finestra en tancar l'última pestanya"
+msgstr ""
 
 #: lib/preferences/preferences.ui:663
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
-msgstr "Pregunta en tancar moltes pestanyes"
+msgstr ""
 
 #: lib/preferences/preferences.ui:670
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
-msgstr "Mostra el botó de pestanyes tancades"
+msgstr ""
 
 #: lib/preferences/preferences.ui:679
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
-msgstr "Mostra els botons de tancar en les pestanyes inactives:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:687
 msgctxt "Preferences|"
 msgid "Automatic"
-msgstr "Automàtic"
+msgstr ""
 
 #: lib/preferences/preferences.ui:692
 msgctxt "Preferences|"
 msgid "Always"
-msgstr "Sempre"
+msgstr ""
 
 #: lib/preferences/preferences.ui:697
 msgctxt "Preferences|"
 msgid "Never"
-msgstr "Mai"
+msgstr ""
 
 #: lib/preferences/preferences.ui:737
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
-msgstr "Comportament de la barra d'adreces"
+msgstr ""
 
 #: lib/preferences/preferences.ui:745
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
-msgstr "Fes suggeriments en escriure a la barra d'adreces:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:759
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
-msgstr "Historial i adreces d'interès"
+msgstr ""
 
 #: lib/preferences/preferences.ui:764
 msgctxt "Preferences|"
 msgid "History"
-msgstr "Historial"
+msgstr ""
 
 #: lib/preferences/preferences.ui:769
 msgctxt "Preferences|"
 msgid "Bookmarks"
-msgstr "Adreces d'interès"
+msgstr ""
 
 #: lib/preferences/preferences.ui:774
 msgctxt "Preferences|"
 msgid "Nothing"
-msgstr "Res"
+msgstr ""
 
 #: lib/preferences/preferences.ui:800
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
-msgstr "Habilita els suggeriments"
+msgstr ""
 
 #: lib/preferences/preferences.ui:807
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
 msgstr ""
-"Premeu «Maj» per a carregar l'adreça a la pestanya activa en lloc de canviar "
-"de pestanya"
 
 #: lib/preferences/preferences.ui:810
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
-msgstr "Proposa canviar de pestanya si ja s'ha carregat l'enllaç"
+msgstr ""
 
 #: lib/preferences/preferences.ui:817
 msgctxt "Preferences|"
 msgid "Always show go icon"
-msgstr "Mostra sempre la icona «ves-hi»"
+msgstr ""
 
 #: lib/preferences/preferences.ui:824
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "Mostra l'etiqueta de zoom"
+msgstr ""
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
-msgstr "Selecciona tot el text en fer doble clic a la barra d'adreces"
+msgstr ""
 
 #: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
-msgstr "Selecciona tot el text en fer clic a la barra d'adreces"
+msgstr ""
 
 #: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
-msgstr "Habilita la cerca automàtica des de la barra d'adreces"
+msgstr ""
 
 #: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
-msgstr "Cerca amb el motor predeterminat"
+msgstr ""
 
 #: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Show search suggestions"
-msgstr "Mostra suggeriments de cerca"
+msgstr ""
 
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr ""
-"Expandeix les finestres emergents de suggeriments a l'amplada de les "
-"finestres"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
-msgstr "Mostra el progrés de càrrega a la barra d'adreces"
+msgstr ""
 
 #: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Fill"
-msgstr "Omple"
+msgstr ""
 
 #: lib/preferences/preferences.ui:927
 msgctxt "Preferences|"
 msgid "Bottom"
-msgstr "Baix"
+msgstr ""
 
 #: lib/preferences/preferences.ui:932
 msgctxt "Preferences|"
 msgid "Top"
-msgstr "Dalt"
+msgstr ""
 
 #: lib/preferences/preferences.ui:940
 msgctxt "Preferences|"
 msgid "Custom color:"
-msgstr "Color personalitzat:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:956
 msgctxt "Preferences|"
 msgid "Select color"
-msgstr "Selecciona un color"
+msgstr ""
 
 #: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
 #: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
 #: lib/preferences/preferences.ui:2749
 msgctxt "Preferences|"
 msgid "..."
-msgstr "..."
+msgstr ""
 
 #: lib/preferences/preferences.ui:966
 msgctxt "Preferences|"
 msgid "Reset"
-msgstr "Reinicialitza"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1017
 msgctxt "Preferences|"
 msgid "Web Configuration"
-msgstr "Configuració web"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1025
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
-msgstr "Activa l'API del connector Pepper (PPAPI)"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1032
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
-msgstr "Usa el visualitzador de PDF integrat (requereix la PPAPI)"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
-msgstr "Permet el JavaScript"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
-msgstr "Inclou enllaços a la cadena del focus"
+msgstr ""
 
 #. try to detect possible XSS attacks when executing javascript
 #: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
-msgstr "Habilita auditories XSS"
+msgstr ""
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
 #: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Print element background"
-msgstr "Imprimeix l'element de fons"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Animated scrolling"
-msgstr "Desplaçament animat"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
-msgstr "Habilita la navegació espacial"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
-msgstr "Usa les barres de desplaçament natives"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
-msgstr "Inhabilita la reproducció automàtica dels vídeos"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
-msgstr "Evita que el WebRTC fracassi amb l'adreça IP local"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
-msgstr "Habilita la precàrrega dels DNS"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Enable screen capture"
-msgstr "Activa la captura de la pantalla"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr "Usa l'acceleració de maquinari (requereix reiniciar)"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1133
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
-msgstr "La roda del ratolí desplaça"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "lines on page"
-msgstr "línies a la pàgina"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1164
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
-msgstr "Ampliació predeterminada de les pàgines: "
+msgstr ""
 
 #: lib/preferences/preferences.ui:1203
 msgctxt "Preferences|"
 msgid "Local Storage"
-msgstr "Emmagatzematge local"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1211
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
-msgstr "Emmagatzema a la memòria cau"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1234
 msgctxt "Preferences|"
 msgid "Delete cache on close"
-msgstr "Suprimeix la memòria cau amb el tancament"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1241
 msgctxt "Preferences|"
 msgid "Maximum:"
-msgstr "Màxim:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1248
 msgctxt "Preferences|"
 msgid " MB"
-msgstr " MB"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1264
 msgctxt "Preferences|"
 msgid "Store cache in:"
-msgstr "Emmagatzema la memòria cau a:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "Allow saving history"
-msgstr "Desa l'historial"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1299
 msgctxt "Preferences|"
 msgid "Delete history on close"
-msgstr "Suprimeix l'historial amb el tancament"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1322
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
-msgstr "Permet l'emmagatzematge local de contingut web HTML5"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1329
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
-msgstr "Suprimeix el contingut HTML5 emmagatzemat localment amb el tancament"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1355
 msgctxt "Preferences|"
 msgid "Delete now"
-msgstr "Suprimeix-ho ara"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1394
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
-msgstr "Configuració del servidor intermediari"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1413
 msgctxt "Preferences|"
 msgid "System proxy configuration"
-msgstr "Configuració del servidor intermediari del sistema"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1436
 msgctxt "Preferences|"
 msgid "Manual configuration"
-msgstr "Configuració manual"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1446
 msgctxt "Preferences|"
 msgid "HTTP"
-msgstr "HTTP"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1451
 msgctxt "Preferences|"
 msgid "SOCKS5"
-msgstr "SOCKS5"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1462
 msgctxt "Preferences|"
 msgid "Port:"
-msgstr "Port:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1483
 msgctxt "Preferences|"
 msgid "Username:"
-msgstr "Nom d'usuari:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1493
 msgctxt "Preferences|"
 msgid "Password:"
-msgstr "Contrasenya:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1522
 msgctxt "Preferences|"
 msgid "No proxy"
-msgstr "Sense servidor intermediari"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1537
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
-msgstr "<b>Famílies de les lletres</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
 msgid "Standard"
-msgstr "Estàndard"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1557
 msgctxt "Preferences|"
 msgid "Fixed"
-msgstr "Fixa"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1567
 msgctxt "Preferences|"
 msgid "Serif"
-msgstr "Serif"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1577
 msgctxt "Preferences|"
 msgid "Sans Serif"
-msgstr "Sans Serif"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1587
 msgctxt "Preferences|"
 msgid "Cursive"
-msgstr "Cursiva"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1639
 msgctxt "Preferences|"
 msgid "Fantasy"
-msgstr "Fantasia"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1646
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
-msgstr "<b>Mides de la lletra</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1655
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
-msgstr "Mida de la lletra fixa"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1662
 msgctxt "Preferences|"
 msgid "Default Font Size"
-msgstr "Mida predeterminada de la lletra"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1689
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
-msgstr "Mida mínima de la lletra"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1696
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
-msgstr "Mida mínima lògica de la lletra"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1729
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
-msgstr "<b>Dreceres</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1736
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
-msgstr "Canvia de pestanya amb Alt + número de la pestanya"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1743
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
-msgstr "Carrega els marcatges ràpids amb Ctrl + número del marcatge ràpid"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1750
 msgctxt "Preferences|"
@@ -4489,13 +4435,11 @@ msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
 "><b>/</b> - search on page"
 msgstr ""
-"Dreceres existents:<br/><b>1</b> - pestanya anterior<br/><b>2</b> - pestanya "
-"següent<br/><b>/</b> - cerca a la pàgina"
 
 #: lib/preferences/preferences.ui:1753
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
-msgstr "Usa dreceres d'una sola tecla"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1760
 msgctxt "Preferences|"
@@ -4503,163 +4447,161 @@ msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
 "shortcut was intended."
 msgstr ""
-"Si no està marcat, evita la sortida de l'aplicació si la drecera Ctrl-W "
-"estava prevista."
 
 #: lib/preferences/preferences.ui:1763
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
-msgstr "Tanca l'aplicació amb Ctrl-Q"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1787
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
-msgstr "<b>Ubicació de la baixada</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1794
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
-msgstr "Demana'm sempre on desar els fitxers"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1801
 msgctxt "Preferences|"
 msgid "Use defined location: "
-msgstr "Fes servir una ubicació predefinida: "
+msgstr ""
 
 #: lib/preferences/preferences.ui:1851
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
-msgstr "<b>Opcions de baixada</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1858
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
-msgstr "Tanca el gestor de baixades quan acabin"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1865
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
-msgstr "<b>Gestor de baixades extern</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1872
 msgctxt "Preferences|"
 msgid "Use external download manager"
-msgstr "Fes servir un gestor de baixades extern"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1884
 msgctxt "Preferences|"
 msgid "Executable:"
-msgstr "Executable:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1891
 msgctxt "Preferences|"
 msgid "Arguments:"
-msgstr "Arguments:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1898
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
-msgstr "Deixeu-ho en blanc si no n'esteu segur"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1919
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
-msgstr "<b>%d</b> serà substituït per l'URL que voleu baixar"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1945
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
-msgstr "<b>Opcions de l'autocompletat</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:1952
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
-msgstr "Recorda les contrasenyes dels llocs web"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2003
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
-msgstr "Completa automàticament les contrasenyes als llocs web"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2014
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
-msgstr "<b>Galetes</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2021
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
-msgstr "<b>Altres</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2047
 msgctxt "Preferences|"
 msgid "JavaScript options"
-msgstr "Opcions de JavaScript"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2057
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
-msgstr "<b>JavaScript</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2070
 msgctxt "Preferences|"
 msgid "Cookies Manager"
-msgstr "Gestor de galetes"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2080
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
-msgstr "Gestiona les opcions de privacitat de JavaScript"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2103
 msgctxt "Preferences|"
 msgid "Manage HTML5 permissions"
-msgstr "Gestiona els permisos d'HTML5"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2110
 msgctxt "Preferences|"
 msgid "Manage Cookies"
-msgstr "Gestiona les galetes"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2130
 msgctxt "Preferences|"
 msgid "<b>HTML5 Permissions</b>"
-msgstr "<b>Permisos d'HTML5</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2143
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
-msgstr "Permisos d'HTML5"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2150
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
-msgstr "Fes saber als llocs web que no vull que se'm segueixi"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2176
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
-msgstr "Durada:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2189
 msgctxt "Preferences|"
 msgid " seconds"
-msgstr " segons"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
-msgstr "<b>Notificacions</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2234
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
-msgstr "Fes servir el sistema de notificacions natiu (només Linux)"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2241
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
-msgstr "No facis servir les notificacions"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2264
 msgctxt "Preferences|"
@@ -4667,18 +4609,16 @@ msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
 "the screen."
 msgstr ""
-"<b>Nota: </b>Es pot canviar la posició de la notificació OSD arrossegant-la "
-"per la pantalla."
 
 #: lib/preferences/preferences.ui:2290
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
-msgstr "Utilitza notificacions OSD"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2297
 msgctxt "Preferences|"
 msgid "Preview"
-msgstr "Vista prèvia"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2362
 msgctxt "Preferences|"
@@ -4686,288 +4626,285 @@ msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
 "userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 msgstr ""
-"Per a més informació sobre la Comprovació ortogràfica, vegeu el <a href="
-"\"https://userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 
 #: lib/preferences/preferences.ui:2404
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
-msgstr "<b>Opcions del corrector ortogràfic</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2411
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
-msgstr "Habilita el corrector ortogràfic"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2418
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
-msgstr "<b>Directoris dels diccionaris</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2469
 msgctxt "Preferences|"
 msgid "No languages found"
-msgstr "No s'ha trobat cap idioma"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2498
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
-msgstr "Gestor dels controladors de protocol"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2538
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
-msgstr "Gestor dels motors de cerca"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
-msgstr "<b>Full d'estil de l'usuari</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2567
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
-msgstr "<b>Gestiona els motors de cerca</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr "Gestiona els esquemes personalitzats"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
 msgid "Languages"
-msgstr "Idiomes"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2627
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>Idioma en què es mostraran preferentment les pàgines</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2652
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr "Gestor d'excepcions de certificats"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
-msgstr "<b>Canvia la identificació del navegador</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2699
 msgctxt "Preferences|"
 msgid "User Agent Manager"
-msgstr "Agent d'usuari"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2721
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
-msgstr "El full d'estil que es carrega automàticament amb tots els llocs web:"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2758
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>Gestiona els controladors de protocol</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2765
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>Gestor de certificats</b>"
+msgstr ""
 
 #: lib/preferences/preferences.ui:2816
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "Gestor d'esquemes personalitzats"
+msgstr ""
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr "Afegeix un esquema de permesos"
+msgstr ""
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "Esquema:"
+msgstr ""
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr "Afegeix un esquema de bloquejos"
+msgstr ""
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr "Gestor d'esquemes personalitzats"
+msgstr ""
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr "Esquemes de permesos"
+msgstr ""
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
-msgstr "**Nota:** Els esquemes de permesos es poden afegir per extensions."
+msgstr ""
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
 msgctxt "SchemeManager|"
 msgid "Add"
-msgstr "Afegeix"
+msgstr ""
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
 msgctxt "SchemeManager|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/preferences/schememanager.ui:68
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "Bloqueja"
+msgstr ""
 
 #: lib/preferences/schememanager.ui:98
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "Esquemes de bloquejos"
+msgstr ""
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr "Els canvis tindran efecte després de reiniciar el Falkon."
+msgstr ""
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
 msgid "Confirmation"
-msgstr "Confirmació"
+msgstr ""
 
 #: lib/preferences/thememanager.cpp:101
 #, qt-format
 msgctxt "ThemeManager|"
 msgid "Are you sure you want to remove '%1'?"
-msgstr "Esteu segur que voleu eliminar «%1»?"
+msgstr ""
 
 #: lib/preferences/thememanager.ui:51
 msgctxt "ThemeManager|"
 msgid "<b>Name:</b>"
-msgstr "<b>Nom:</b>"
+msgstr ""
 
 #: lib/preferences/thememanager.ui:61
 msgctxt "ThemeManager|"
 msgid "<b>Author:</b>"
-msgstr "<b>Autor:</b>"
+msgstr ""
 
 #: lib/preferences/thememanager.ui:84
 msgctxt "ThemeManager|"
 msgid "<b>Description:</b>"
-msgstr "<b>Descripció:</b>"
+msgstr ""
 
 #: lib/preferences/thememanager.ui:128
 msgctxt "ThemeManager|"
 msgid "License"
-msgstr "Llicència"
+msgstr ""
 
 #: lib/preferences/thememanager.ui:155
 msgctxt "ThemeManager|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/preferences/thememanager.ui:175
 msgctxt "ThemeManager|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
 msgstr ""
-"<a href=\"https://store.kde.org/browse/cat/572/\">Obtén més temes...</a>"
 
 #: lib/preferences/useragentdialog.cpp:99
 msgctxt "UserAgentDialog|"
 msgid "Add new site"
-msgstr "Afegeix un lloc web"
+msgstr ""
 
 #: lib/preferences/useragentdialog.cpp:137
 msgctxt "UserAgentDialog|"
 msgid "Edit site"
-msgstr "Edita el lloc web"
+msgstr ""
 
 #: lib/preferences/useragentdialog.cpp:216
 msgctxt "UserAgentDialog|"
 msgid "Site domain: "
-msgstr "Domini del lloc: "
+msgstr ""
 
 #: lib/preferences/useragentdialog.cpp:217
 msgctxt "UserAgentDialog|"
 msgid "User Agent: "
-msgstr "Agent d'usuari: "
+msgstr ""
 
 #: lib/preferences/useragentdialog.ui:14
 msgctxt "UserAgentDialog|"
 msgid "User Agent Manager"
-msgstr "Gestor de l'agent d'usuari"
+msgstr ""
 
 #: lib/preferences/useragentdialog.ui:20
 msgctxt "UserAgentDialog|"
 msgid "Change global User Agent"
-msgstr "Canvia l'agent d'usuari global"
+msgstr ""
 
 #: lib/preferences/useragentdialog.ui:48
 msgctxt "UserAgentDialog|"
 msgid "Use different User Agents for specified sites"
-msgstr "Usa un agent d'usuari diferent per a certs llocs"
+msgstr ""
 
 #: lib/preferences/useragentdialog.ui:92
 msgctxt "UserAgentDialog|"
 msgid "Site"
-msgstr "Lloc web"
+msgstr ""
 
 #: lib/preferences/useragentdialog.ui:97
 msgctxt "UserAgentDialog|"
 msgid "User Agent"
-msgstr "Agent d'usuari"
+msgstr ""
 
 #: lib/preferences/useragentdialog.ui:107
 msgctxt "UserAgentDialog|"
 msgid "Add"
-msgstr "Afegeix"
+msgstr ""
 
 #: lib/preferences/useragentdialog.ui:114
 msgctxt "UserAgentDialog|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/preferences/useragentdialog.ui:134
 msgctxt "UserAgentDialog|"
 msgid "Edit"
-msgstr "Edita"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
 msgid "_cloned"
-msgstr "_clonat"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
 msgid "_renamed"
-msgstr "_canviat de nom"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Clone Session"
-msgstr "Clona la sessió"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Rename Session"
-msgstr "Canvia de nom la sessió"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:129
 msgctxt "SessionManager|"
 msgid "Please enter a new name:"
-msgstr "Si us plau, escriviu un nom nou:"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:144
 #: lib/session/sessionmanager.cpp:149 lib/session/sessionmanager.cpp:171
 #: lib/session/sessionmanager.cpp:219
 msgctxt "SessionManager|"
 msgid "Error!"
-msgstr "Error!"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:171
 #: lib/session/sessionmanager.cpp:219
@@ -4975,397 +4912,396 @@ msgstr "Error!"
 msgctxt "SessionManager|"
 msgid "The session file \"%1\" exists. Please enter another name."
 msgstr ""
-"El fitxer de sessió «%1» ja existeix. Si us plau, escriviu-ne un altre."
 
 #: lib/session/sessionmanager.cpp:144
 msgctxt "SessionManager|"
 msgid "An error occurred when cloning session file."
-msgstr "Hi ha hagut un error quan es clonava el fitxer de sessió."
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:149
 msgctxt "SessionManager|"
 msgid "An error occurred when renaming session file."
-msgstr "Hi ha hagut un error quan es canviava de nom el fitxer de sessió."
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:162
 msgctxt "SessionManager|"
 msgid "Save Session"
-msgstr "Desa la sessió"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:163
 msgctxt "SessionManager|"
 msgid "Please enter a name to save session:"
-msgstr "Si us plau, escriviu un nom per a desar la sessió:"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:164
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Saved Session (%1)"
-msgstr "Sessió desada (%1)"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:181
 msgctxt "SessionManager|"
 msgid "Restore Backup"
-msgstr "Restaura la còpia de seguretat"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:181
 msgctxt "SessionManager|"
 msgid "Are you sure you want to replace current session?"
-msgstr "Segur que voleu substituir la sessió actual?"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:200
 msgctxt "SessionManager|"
 msgid "Delete Session"
-msgstr "Suprimeix la sessió"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:200
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Are you sure you want to delete session '%1'?"
-msgstr "Segur que voleu suprimir la sessió «%1»?"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:210
 msgctxt "SessionManager|"
 msgid "New Session"
-msgstr "Sessió nova"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:211
 msgctxt "SessionManager|"
 msgid "Please enter a name to create new session:"
-msgstr "Si us plau, escriviu un nom per a crear la sessió nova:"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:212
 #, qt-format
 msgctxt "SessionManager|"
 msgid "New Session (%1)"
-msgstr "Sessió nova (%1)"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:244
 msgctxt "SessionManager|"
 msgid "Backup 1"
-msgstr "Còpia de seguretat 1"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:251
 msgctxt "SessionManager|"
 msgid "Backup 2"
-msgstr "Còpia de seguretat 2"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:291
 msgctxt "SessionManager|"
 msgid "Default Session"
-msgstr "Sessió per defecte"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:394
 msgctxt "SessionManager|"
 msgid "Please select the startup session:"
-msgstr "Si us plau, seleccioneu una sessió d'inici:"
+msgstr ""
 
 #: lib/session/sessionmanager.cpp:413
 #, qt-format
 msgctxt "SessionManager|"
 msgid "%1 (last session)"
-msgstr "%1 (última sessió)"
+msgstr ""
 
 #: lib/session/sessionmanagerdialog.cpp:140
 msgctxt "SessionManagerDialog|"
 msgid "Restore"
-msgstr "Restaura"
+msgstr ""
 
 #: lib/session/sessionmanagerdialog.cpp:140
 msgctxt "SessionManagerDialog|"
 msgid "Switch To"
-msgstr "Canvia a"
+msgstr ""
 
 #: lib/session/sessionmanagerdialog.ui:14
 msgctxt "SessionManagerDialog|"
 msgid "Session Manager"
-msgstr "Gestor de sessions"
+msgstr ""
 
 #: lib/session/sessionmanagerdialog.ui:24
 msgctxt "SessionManagerDialog|"
 msgid "Session"
-msgstr "Sessió"
+msgstr ""
 
 #: lib/session/sessionmanagerdialog.ui:29
 msgctxt "SessionManagerDialog|"
 msgid "Last Modified"
-msgstr "Última modificació"
+msgstr ""
 
 #: lib/session/sessionmanagerdialog.ui:39
 msgctxt "SessionManagerDialog|"
 msgid "New"
-msgstr "Nova"
+msgstr ""
 
 #: lib/session/sessionmanagerdialog.ui:46
 msgctxt "SessionManagerDialog|"
 msgid "Rename"
-msgstr "Canvia'n el nom"
+msgstr ""
 
 #: lib/session/sessionmanagerdialog.ui:53
 msgctxt "SessionManagerDialog|"
 msgid "Clone"
-msgstr "Clona"
+msgstr ""
 
 #: lib/session/sessionmanagerdialog.ui:60
 msgctxt "SessionManagerDialog|"
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr ""
 
 #: lib/session/sessionmanagerdialog.ui:67
 msgctxt "SessionManagerDialog|"
 msgid "Switch to"
-msgstr "Canvia a"
+msgstr ""
 
 #: lib/sidebar/bookmarkssidebar.cpp:103
 msgctxt "BookmarksSidebar|"
 msgid "Open in new tab"
-msgstr "Obre en una pestanya nova"
+msgstr ""
 
 #: lib/sidebar/bookmarkssidebar.cpp:104
 msgctxt "BookmarksSidebar|"
 msgid "Open in new window"
-msgstr "Obre en una finestra nova"
+msgstr ""
 
 #: lib/sidebar/bookmarkssidebar.cpp:105
 msgctxt "BookmarksSidebar|"
 msgid "Open in new private window"
-msgstr "Obre en una finestra privada nova"
+msgstr ""
 
 #: lib/sidebar/bookmarkssidebar.cpp:108
 msgctxt "BookmarksSidebar|"
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr ""
 
 #: lib/sidebar/bookmarkssidebar.ui:41
 msgctxt "BookmarksSideBar|"
 msgid "Search..."
-msgstr "Cerca..."
+msgstr ""
 
 #: lib/sidebar/historysidebar.cpp:85
 msgctxt "HistorySideBar|"
 msgid "Open in new tab"
-msgstr "Obre en una pestanya nova"
+msgstr ""
 
 #: lib/sidebar/historysidebar.cpp:86
 msgctxt "HistorySideBar|"
 msgid "Open in new window"
-msgstr "Obre en una finestra nova"
+msgstr ""
 
 #: lib/sidebar/historysidebar.cpp:87
 msgctxt "HistorySideBar|"
 msgid "Open in new private window"
-msgstr "Obre en una finestra privada nova"
+msgstr ""
 
 #: lib/sidebar/historysidebar.cpp:90
 msgctxt "HistorySideBar|"
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr ""
 
 #: lib/sidebar/historysidebar.ui:32
 msgctxt "HistorySideBar|"
 msgid "Search..."
-msgstr "Cerca..."
+msgstr ""
 
 #: lib/sidebar/sidebar.cpp:66 lib/sidebar/sidebar.cpp:108
 msgctxt "SideBar|"
 msgid "Bookmarks"
-msgstr "Adreces d'interès"
+msgstr ""
 
 #: lib/sidebar/sidebar.cpp:73 lib/sidebar/sidebar.cpp:115
 msgctxt "SideBar|"
 msgid "History"
-msgstr "Historial"
+msgstr ""
 
 #: lib/tabwidget/tabbar.cpp:111
 msgctxt "BrowserWindow|"
 msgid "Close Tab"
-msgstr "Tanca la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:63
 msgctxt "TabBar|"
 msgid "Don't ask again"
-msgstr "No ho tornis a preguntar"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:80 lib/tabwidget/tabcontextmenu.cpp:91
 #: lib/tabwidget/tabcontextmenu.cpp:102
 msgctxt "TabContextMenu|"
 msgid "Close Tabs"
-msgstr "Tanca les pestanyes"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:80
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close other tabs?"
-msgstr "Segur que voleu tancar altres pestanyes?"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:88
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the right?"
-msgstr "Segur que voleu tancar totes les pestanyes de la dreta?"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:89
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the bottom?"
-msgstr "Segur que voleu tancar totes les pestanyes de baix?"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:99
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the left?"
-msgstr "Segur que voleu tancar totes les pestanyes de l'esquerra?"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:100
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the top?"
-msgstr "Segur que voleu tancar totes les pestanyes de dalt?"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:117
 msgctxt "TabContextMenu|"
 msgid "&Stop Tab"
-msgstr "&Atura la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:120
 msgctxt "TabContextMenu|"
 msgid "&Reload Tab"
-msgstr "&Torna a carregar la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:123
 msgctxt "TabContextMenu|"
 msgid "&Duplicate Tab"
-msgstr "&Duplica la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:126
 msgctxt "TabContextMenu|"
 msgid "D&etach Tab"
-msgstr "S&epara la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:129
 msgctxt "TabContextMenu|"
 msgid "Un&pin Tab"
-msgstr "Deixa de fixar la &pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:129
 msgctxt "TabContextMenu|"
 msgid "&Pin Tab"
-msgstr "&Fixa la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:130
 msgctxt "TabContextMenu|"
 msgid "Un&mute Tab"
-msgstr "&No silenciïs la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:130
 msgctxt "TabContextMenu|"
 msgid "&Mute Tab"
-msgstr "&Silencia la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:133
 msgctxt "TabContextMenu|"
 msgid "Load Tab"
-msgstr "Carrega la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:135
 msgctxt "TabContextMenu|"
 msgid "Unload Tab"
-msgstr "Descarrega la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:139
 msgctxt "TabContextMenu|"
 msgid "Re&load All Tabs"
-msgstr "&Torna a carregar totes les pestanyes"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:140 lib/tabwidget/tabcontextmenu.cpp:156
 msgctxt "TabContextMenu|"
 msgid "Bookmark &All Tabs"
-msgstr "Afegeix &totes les pestanyes a les adreces d'interès"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:144
 msgctxt "TabContextMenu|"
 msgid "Close Ot&her Tabs"
-msgstr "Tanca les &altres pestanyes"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:145
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Right"
-msgstr "Tanca les pestanyes de la dreta"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:145
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Bottom"
-msgstr "Tanca les pestanyes de baix"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:146
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Left"
-msgstr "Tanca les pestanyes de l'esquerra"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:146
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Top"
-msgstr "Tanca les pestanyes de dalt"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:151
 msgctxt "TabContextMenu|"
 msgid "Cl&ose Tab"
-msgstr "Tanca la pestan&ya"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:153
 msgctxt "TabContextMenu|"
 msgid "&New tab"
-msgstr "Pestanya &nova"
+msgstr ""
 
 #: lib/tabwidget/tabcontextmenu.cpp:155
 msgctxt "TabContextMenu|"
 msgid "Reloa&d All Tabs"
-msgstr "Torna a carre&gar totes les pestanyes"
+msgstr ""
 
 #: lib/tabwidget/tabicon.cpp:169
 msgctxt "TabIcon|"
 msgid "Unmute Tab"
-msgstr "Activa el so de la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabicon.cpp:169
 msgctxt "TabIcon|"
 msgid "Mute Tab"
-msgstr "Silencia la pestanya"
+msgstr ""
 
 #: lib/tabwidget/tabwidget.cpp:51
 msgctxt "TabWidget|"
 msgid "New Tab"
-msgstr "Pestanya nova"
+msgstr ""
 
 #: lib/tabwidget/tabwidget.cpp:126
 msgctxt "TabWidget|"
 msgid "Closed tabs"
-msgstr "Pestanyes tancades"
+msgstr ""
 
 #: lib/tabwidget/tabwidget.cpp:137
 msgctxt "TabWidget|"
 msgid "List of tabs"
-msgstr "Llista de pestanyes"
+msgstr ""
 
 #: lib/tabwidget/tabwidget.cpp:294
 msgctxt "TabWidget|"
 msgid "Empty"
-msgstr "Buit"
+msgstr ""
 
 #: lib/tabwidget/tabwidget.cpp:298
 msgctxt "TabWidget|"
 msgid "Restore All Closed Tabs"
-msgstr "Restaura totes les pestanyes tancades"
+msgstr ""
 
 #: lib/tabwidget/tabwidget.cpp:299
 msgctxt "TabWidget|"
 msgid "Clear list"
-msgstr "Neteja la llista"
+msgstr ""
 
 #: lib/tabwidget/tabwidget.h:106
 msgctxt "TabWidget|"
 msgid "New tab"
-msgstr "Pestanya nova"
+msgstr ""
 
 #: lib/tools/aesinterface.cpp:146
 msgctxt "AesInterface|"
 msgid "Warning!"
-msgstr "Alerta!"
+msgstr ""
 
 #: lib/tools/aesinterface.cpp:146
 msgctxt "AesInterface|"
@@ -5373,247 +5309,245 @@ msgid ""
 "Data has been encrypted with a newer version of Falkon.\n"
 "Please install latest version of Falkon."
 msgstr ""
-"Les dades han estat encriptades amb la nova versió del Falkon.\n"
-"Si us plau, instal·leu l'última versió del Falkon."
 
 #: lib/tools/certificateinfowidget.cpp:300
 msgctxt "QObject|"
 msgid "<not set in certificate>"
-msgstr "<no establert al certificat>"
+msgstr ""
 
 #: lib/tools/certificateinfowidget.ui:17
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Issued To</b>"
-msgstr "<b>Emès a</b>"
+msgstr ""
 
 #: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
 msgctxt "CertificateInfoWidget|"
 msgid "Common Name (CN):"
-msgstr "Nom comú (CN):"
+msgstr ""
 
 #: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
 msgctxt "CertificateInfoWidget|"
 msgid "Organization (O):"
-msgstr "Organització (O):"
+msgstr ""
 
 #: lib/tools/certificateinfowidget.ui:58 lib/tools/certificateinfowidget.ui:133
 msgctxt "CertificateInfoWidget|"
 msgid "Organizational Unit (OU):"
-msgstr "Unitat organitzativa (OU):"
+msgstr ""
 
 #: lib/tools/certificateinfowidget.ui:75
 msgctxt "CertificateInfoWidget|"
 msgid "Serial Number:"
-msgstr "Número de sèrie:"
+msgstr ""
 
 #: lib/tools/certificateinfowidget.ui:92
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Issued By</b>"
-msgstr "<b>Emès per</b>"
+msgstr ""
 
 #: lib/tools/certificateinfowidget.ui:150
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Validity</b>"
-msgstr "<b>Validesa</b>"
+msgstr ""
 
 #: lib/tools/certificateinfowidget.ui:157
 msgctxt "CertificateInfoWidget|"
 msgid "Issued On:"
-msgstr "Emès el:"
+msgstr ""
 
 #: lib/tools/certificateinfowidget.ui:174
 msgctxt "CertificateInfoWidget|"
 msgid "Expires On:"
-msgstr "Expira el:"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.cpp:63
 msgctxt "HTML5PermissionsDialog|"
 msgid "Allow"
-msgstr "Permet"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.cpp:72
 msgctxt "HTML5PermissionsDialog|"
 msgid "Deny"
-msgstr "Denega"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:14
 msgctxt "HTML5PermissionsDialog|"
 msgid "HTML5 Permissions"
-msgstr "Permisos d'HTML5"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:35
 msgctxt "HTML5PermissionsDialog|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:64
 msgctxt "HTML5PermissionsDialog|"
 msgid "Site"
-msgstr "Lloc"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:69
 msgctxt "HTML5PermissionsDialog|"
 msgid "Behaviour"
-msgstr "Comportament"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:79
 msgctxt "HTML5PermissionsDialog|"
 msgid "Permission for:"
-msgstr "Permisos per a:"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:87
 msgctxt "HTML5PermissionsDialog|"
 msgid "Notifications"
-msgstr "Notificacions"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:92
 msgctxt "HTML5PermissionsDialog|"
 msgid "Geolocation"
-msgstr "Geolocalització"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:97
 msgctxt "HTML5PermissionsDialog|"
 msgid "Microphone"
-msgstr "Micròfon"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:102
 msgctxt "HTML5PermissionsDialog|"
 msgid "Camera"
-msgstr "Càmera"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:107
 msgctxt "HTML5PermissionsDialog|"
 msgid "Microphone and Camera"
-msgstr "Micròfon i càmera"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:112
 msgctxt "HTML5PermissionsDialog|"
 msgid "Hide Pointer"
-msgstr "Oculta el punter"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:117
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display Capture"
-msgstr "Mostra la captura"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:122
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display and Audio Capture"
-msgstr "Mostra la captura i l'àudio"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
 msgid "this site"
-msgstr "aquest lloc"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:46
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to show desktop notifications?"
-msgstr "Voleu permetre que %1 mostri notificacions a l'escriptori?"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:50
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to locate your position?"
-msgstr "Voleu permetre que %1 localitzi la vostra posició?"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:54
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to use your microphone?"
-msgstr "Voleu permetre que %1 usi el vostre micròfon?"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:58
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to use your camera?"
-msgstr "Voleu permetre que %1 usi la vostra càmera?"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:62
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to use your microphone and camera?"
-msgstr "Voleu permetre que %1 usi el vostre micròfon i la càmera?"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:66
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to hide your pointer?"
-msgstr "Voleu permetre que %1 oculti el vostre punter?"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:70
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen?"
-msgstr "Voleu permetre que %1 capturi la vostra pantalla?"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:74
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen and audio?"
-msgstr "Voleu permetre que %1 capturi la vostra pantalla i l'àudio?"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:43
 msgctxt "HTML5PermissionsNotification|"
 msgid "Remember"
-msgstr "Recorda"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:50
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow"
-msgstr "Permet"
+msgstr ""
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:57
 msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
-msgstr "Denega"
+msgstr ""
 
 #: lib/tools/qztools.cpp:389
 msgctxt "QObject|"
 msgid "Unknown size"
-msgstr "Mida desconeguda"
+msgstr ""
 
 #: lib/tools/qztools.cpp:394
 msgctxt "QObject|"
 msgid "KB"
-msgstr "kB"
+msgstr ""
 
 #: lib/tools/qztools.cpp:399
 msgctxt "QObject|"
 msgid "MB"
-msgstr "MB"
+msgstr ""
 
 #: lib/tools/qztools.cpp:403
 msgctxt "QObject|"
 msgid "GB"
-msgstr "GB"
+msgstr ""
 
 #: lib/tools/qztools.cpp:862
 msgctxt "QObject|"
 msgid "Executable: "
-msgstr "Executable:"
+msgstr ""
 
 #: lib/tools/qztools.cpp:863
 msgctxt "QObject|"
 msgid "Arguments: "
-msgstr "Arguments:"
+msgstr ""
 
 #: lib/tools/qztools.cpp:865
 msgctxt "QObject|"
 msgid "Cannot start external program"
-msgstr "No es pot iniciar el programa extern"
+msgstr ""
 
 #: lib/tools/qztools.cpp:866
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
-msgstr "No es pot iniciar el programa extern. %1"
+msgstr ""
 
 #: lib/webengine/jsalert.ui:125
 msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
-msgstr "Evita que aquesta pàgina creï diàlegs addicionals"
+msgstr ""
 
 #: lib/webengine/webpage.cpp:347
 #, qt-format
@@ -5622,343 +5556,338 @@ msgid ""
 "Falkon cannot handle <b>%1:</b> links. The requested link is <ul><li>%2</"
 "li></ul>Do you want Falkon to try open this link in system application?"
 msgstr ""
-"El Falkon no pot gestionar enllaços <b>%1:</b>. L'enllaç requerit és <ul><li>"
-"%2</li></ul>. Voleu que el Falkon intenti obrir aquest enllaç amb una altra "
-"aplicació del sistema?"
 
 #: lib/webengine/webpage.cpp:352
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
-msgstr "Recorda la meva elecció per a aquest protocol"
+msgstr ""
 
 #: lib/webengine/webpage.cpp:353
 msgctxt "WebPage|"
 msgid "External Protocol Request"
-msgstr "Sol·licitud de protocol extern"
+msgstr ""
 
 #: lib/webengine/webpage.cpp:433 lib/webengine/webpage.cpp:434
 msgctxt "WebPage|"
 msgid "Failed loading page"
-msgstr "No s'ha pogut carregar la pàgina"
+msgstr ""
 
 #: lib/webengine/webpage.cpp:435
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
-msgstr "Alguna cosa ha anat malament mentre es carregava aquesta pàgina."
+msgstr ""
 
 #: lib/webengine/webpage.cpp:436
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr ""
-"Intenteu tornar a carregar la pàgina o tancar algunes pestanyes per a tenir "
-"més memòria disponible."
 
 #: lib/webengine/webpage.cpp:437
 msgctxt "WebPage|"
 msgid "Reload page"
-msgstr "Torna a carregar la pàgina"
+msgstr ""
 
 #: lib/webengine/webpage.cpp:510
 msgctxt "WebPage|"
 msgid "Choose file..."
-msgstr "Tria un fitxer..."
+msgstr ""
 
 #: lib/webengine/webpage.cpp:514
 msgctxt "WebPage|"
 msgid "Choose files..."
-msgstr "Tria els fitxers..."
+msgstr ""
 
 #: lib/webengine/webpage.cpp:650
 msgctxt "WebPage|"
 msgid "JavaScript alert"
-msgstr "Alerta de JavaScript"
+msgstr ""
 
 #: lib/webengine/webpage.cpp:659
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
-msgstr "Evita que aquesta pàgina creï diàlegs addicionals"
+msgstr ""
 
 #: lib/webengine/webview.cpp:130
 msgctxt "WebView|"
 msgid "Empty Page"
-msgstr "Pàgina buida"
+msgstr ""
 
 #: lib/webengine/webview.cpp:397
 #, qt-format
 msgctxt "WebView|"
 msgid "Falkon %1 (%2)"
-msgstr "Falkon %1 (%2)"
+msgstr ""
 
 #: lib/webengine/webview.cpp:711
 msgctxt "WebView|"
 msgid "No suggestions"
-msgstr "No hi ha cap suggeriment"
+msgstr ""
 
 #: lib/webengine/webview.cpp:762
 msgctxt "WebView|"
 msgid "&Back"
-msgstr "&Enrere"
+msgstr ""
 
 #: lib/webengine/webview.cpp:766
 msgctxt "WebView|"
 msgid "&Forward"
-msgstr "En&davant"
+msgstr ""
 
 #: lib/webengine/webview.cpp:773
 msgctxt "WebView|"
 msgid "&Add New Page"
-msgstr "&Afegeix una pàgina nova"
+msgstr ""
 
 #: lib/webengine/webview.cpp:774
 msgctxt "WebView|"
 msgid "&Configure Speed Dial"
-msgstr "Configura el marcador ràpid"
+msgstr ""
 
 #: lib/webengine/webview.cpp:776
 msgctxt "WebView|"
 msgid "Reload All Dials"
-msgstr "Torna a carregar tots els marcadors"
+msgstr ""
 
 #: lib/webengine/webview.cpp:795
 msgctxt "WebView|"
 msgid "Book&mark page"
-msgstr "Afegeix aquesta pàgina a les adreces d'&interès"
+msgstr ""
 
 #: lib/webengine/webview.cpp:796
 msgctxt "WebView|"
 msgid "&Save page as..."
-msgstr "Anomena i de&sa la pàgina..."
+msgstr ""
 
 #: lib/webengine/webview.cpp:797
 msgctxt "WebView|"
 msgid "&Copy page link"
-msgstr "Cop&ia l'enllaç de la pàgina"
+msgstr ""
 
 #: lib/webengine/webview.cpp:798
 msgctxt "WebView|"
 msgid "Send page link..."
-msgstr "Envia l'enllaç de la pàgina..."
+msgstr ""
 
 #: lib/webengine/webview.cpp:800
 msgctxt "WebView|"
 msgid "Select &all"
-msgstr "Selecciona-ho &tot"
+msgstr ""
 
 #: lib/webengine/webview.cpp:806
 msgctxt "WebView|"
 msgid "Show so&urce code"
-msgstr "Mostra el codi &font de la pàgina"
+msgstr ""
 
 #: lib/webengine/webview.cpp:810
 msgctxt "WebView|"
 msgid "Show info ab&out site"
-msgstr "Mostra la &informació sobre la pàgina"
+msgstr ""
 
 #: lib/webengine/webview.cpp:816
 msgctxt "WebView|"
 msgid "Open link in new &tab"
-msgstr "Obre l'enllaç en una pestan&ya nova"
+msgstr ""
 
 #: lib/webengine/webview.cpp:821
 msgctxt "WebView|"
 msgid "Open link in new &window"
-msgstr "Obre l'enllaç en una &finestra nova"
+msgstr ""
 
 #: lib/webengine/webview.cpp:822
 msgctxt "WebView|"
 msgid "Open link in &private window"
-msgstr "Obre l'enllaç en una finestra &privada"
+msgstr ""
 
 #: lib/webengine/webview.cpp:827
 msgctxt "WebView|"
 msgid "B&ookmark link"
-msgstr "Afegeix l'enllaç a les adreces d'&interès"
+msgstr ""
 
 #: lib/webengine/webview.cpp:829
 msgctxt "WebView|"
 msgid "&Save link as..."
-msgstr "&Anomena i desa l'enllaç..."
+msgstr ""
 
 #: lib/webengine/webview.cpp:830
 msgctxt "WebView|"
 msgid "Send link..."
-msgstr "Envia l'enllaç..."
+msgstr ""
 
 #: lib/webengine/webview.cpp:831
 msgctxt "WebView|"
 msgid "&Copy link address"
-msgstr "&Copia l'adreça de l'enllaç"
+msgstr ""
 
 #: lib/webengine/webview.cpp:844
 msgctxt "WebView|"
 msgid "Show i&mage"
-msgstr "Visualitza la &imatge"
+msgstr ""
 
 #: lib/webengine/webview.cpp:850
 msgctxt "WebView|"
 msgid "Copy image"
-msgstr "Copia la imatge"
+msgstr ""
 
 #: lib/webengine/webview.cpp:851
 msgctxt "WebView|"
 msgid "Copy image ad&dress"
-msgstr "C&opia l'adreça de la imatge"
+msgstr ""
 
 #: lib/webengine/webview.cpp:853
 msgctxt "WebView|"
 msgid "&Save image as..."
-msgstr "&Anomena i desa la imatge..."
+msgstr ""
 
 #: lib/webengine/webview.cpp:854
 msgctxt "WebView|"
 msgid "Send image..."
-msgstr "Envia la imatge..."
+msgstr ""
 
 #: lib/webengine/webview.cpp:873
 msgctxt "WebView|"
 msgid "Send text..."
-msgstr "Envia el text..."
+msgstr ""
 
 #: lib/webengine/webview.cpp:885
 msgctxt "WebView|"
 msgid "Go to &web address"
-msgstr "Ves a l'&adreça"
+msgstr ""
 
 #: lib/webengine/webview.cpp:899
 #, qt-format
 msgctxt "WebView|"
 msgid "Search \"%1 ..\" with %2"
-msgstr "Cerca «%1...» amb %2"
+msgstr ""
 
 #: lib/webengine/webview.cpp:905
 msgctxt "WebView|"
 msgid "Search with..."
-msgstr "Cerca amb..."
+msgstr ""
 
 #: lib/webengine/webview.cpp:927
 msgctxt "WebView|"
 msgid "&Play"
-msgstr "&Reprodueix"
+msgstr ""
 
 #: lib/webengine/webview.cpp:927
 msgctxt "WebView|"
 msgid "&Pause"
-msgstr "&Pausa"
+msgstr ""
 
 #: lib/webengine/webview.cpp:928
 msgctxt "WebView|"
 msgid "Un&mute"
-msgstr "&Treu el silenci"
+msgstr ""
 
 #: lib/webengine/webview.cpp:928
 msgctxt "WebView|"
 msgid "&Mute"
-msgstr "&Silencia"
+msgstr ""
 
 #: lib/webengine/webview.cpp:930
 msgctxt "WebView|"
 msgid "&Copy Media Address"
-msgstr "Copi&a l'adreça del contingut multimèdia"
+msgstr ""
 
 #: lib/webengine/webview.cpp:931
 msgctxt "WebView|"
 msgid "&Send Media Address"
-msgstr "&Envia l'adreça del contingut multimèdia"
+msgstr ""
 
 #: lib/webengine/webview.cpp:932
 msgctxt "WebView|"
 msgid "Save Media To &Disk"
-msgstr "Desa el contingut multimèdia al &disc"
+msgstr ""
 
 #: lib/webengine/webview.cpp:951
 msgctxt "WebView|"
 msgid "Create Search Engine"
-msgstr "Crea un motor de cerca"
+msgstr ""
 
 #: lib/webengine/webview.cpp:992
 msgctxt "WebView|"
 msgid "&Undo"
-msgstr "&Desfés"
+msgstr ""
 
 #: lib/webengine/webview.cpp:998
 msgctxt "WebView|"
 msgid "&Redo"
-msgstr "&Refés"
+msgstr ""
 
 #: lib/webengine/webview.cpp:1004
 msgctxt "WebView|"
 msgid "&Cut"
-msgstr "&Retalla"
+msgstr ""
 
 #: lib/webengine/webview.cpp:1010
 msgctxt "WebView|"
 msgid "&Copy"
-msgstr "&Copia"
+msgstr ""
 
 #: lib/webengine/webview.cpp:1016
 msgctxt "WebView|"
 msgid "&Paste"
-msgstr "&Enganxa"
+msgstr ""
 
 #: lib/webengine/webview.cpp:1022
 msgctxt "WebView|"
 msgid "Select All"
-msgstr "Selecciona-ho tot"
+msgstr ""
 
 #: lib/webengine/webview.cpp:1028
 msgctxt "WebView|"
 msgid "&Reload"
-msgstr "&Actualitza"
+msgstr ""
 
 #: lib/webengine/webview.cpp:1032
 msgctxt "WebView|"
 msgid "S&top"
-msgstr "&Atura"
+msgstr ""
 
 #: lib/webtab/searchtoolbar.cpp:155
 #, qt-format
 msgctxt "SearchToolBar|"
 msgid "%1 of %2"
-msgstr "%1 de %2"
+msgstr ""
 
 #: lib/webtab/searchtoolbar.ui:48
 msgctxt "SearchToolbar|"
 msgid "Find..."
-msgstr "Cerca..."
+msgstr ""
 
 #: lib/webtab/searchtoolbar.ui:58
 msgctxt "SearchToolbar|"
 msgid "Find the next match for the current search phrase"
-msgstr "Cerca la coincidència següent per a la frase de cerca actual"
+msgstr ""
 
 #: lib/webtab/searchtoolbar.ui:61
 msgctxt "SearchToolbar|"
 msgid "&Next"
-msgstr "&Següent"
+msgstr ""
 
 #: lib/webtab/searchtoolbar.ui:74
 msgctxt "SearchToolbar|"
 msgid "Find the previous match for the current search phrase"
-msgstr "Cerca la coincidència anterior per a la frase de cerca actual"
+msgstr ""
 
 #: lib/webtab/searchtoolbar.ui:77
 msgctxt "SearchToolbar|"
 msgid "&Previous"
-msgstr "&Anterior"
+msgstr ""
 
 #: lib/webtab/searchtoolbar.ui:90
 msgctxt "SearchToolbar|"
 msgid "&Match Case"
-msgstr "Coincidència de &majúscules"
+msgstr ""
 
 #: lib/webtab/tabbedwebview.cpp:194
 msgctxt "TabbedWebView|"
 msgid "Inspect Element"
-msgstr "Inspecciona l'element"
+msgstr ""
 
 #: lib/webtab/webtab.cpp:624
 #, qt-format
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
-msgstr "%1 - Falkon"
+msgstr ""

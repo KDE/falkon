@@ -1,89 +1,97 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# translation of falkon_greasemonkey_qt.pot to esperanto
+# Copyright (C) 2023, Free Software Foundation, Inc.
 # This file is distributed under the same license as the falkon package.
-# Seyyed Razi Alavizadeh <s.r.alavizadeh@gmail.com>, 2017
+# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
 #
 msgid ""
 msgstr ""
+"Project-Id-Version: falkon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-05 13:43+0100\n"
+"PO-Revision-Date: 2023-11-15 22:01+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
-"X-Language: fa_IR\n"
 "X-Qt-Contexts: true\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: gm_addscriptdialog.cpp:50
 #, qt-format
 msgctxt "GM_AddScriptDialog|"
 msgid "<p>runs at<br/><i>%1</i></p>"
-msgstr "<p>در<br/><i>%1</i> اجرا می‌شود</p>"
+msgstr "<p>rulas je<br/><i>%1</i></p>"
 
 #: gm_addscriptdialog.cpp:54
 #, qt-format
 msgctxt "GM_AddScriptDialog|"
 msgid "<p>does not run at<br/><i>%1</i></p>"
-msgstr "<p>در<br/><i>%1</i> اجرا نمی‌شود</p>"
+msgstr "<p>ne rulas je<br/><i>%1</i></p>"
 
 #: gm_addscriptdialog.cpp:84
 msgctxt "GM_AddScriptDialog|"
 msgid "Cannot install script"
-msgstr "نمی‌تواند اسکریپت را نصب کند"
+msgstr "Ne povas instali skripton"
 
 #: gm_addscriptdialog.cpp:87
 #, qt-format
 msgctxt "GM_AddScriptDialog|"
 msgid "'%1' installed successfully"
-msgstr "‏«%1» با موفقیت نصب شد"
+msgstr "'%1' instalita sukcese"
 
 #: gm_addscriptdialog.ui:14
 msgctxt "GM_AddScriptDialog|"
 msgid "GreaseMonkey Installation"
-msgstr "نصب GreaseMonkey "
+msgstr "Instalado de GreaseMonkey"
 
 #: gm_addscriptdialog.ui:45
 msgctxt "GM_AddScriptDialog|"
 msgid "<h3>GreaseMonkey Installation</h3>"
-msgstr "<h3>نصب GreaseMonkey</h3>"
+msgstr "<h3>Instalado de GreaseMonkey</h3>"
 
 #: gm_addscriptdialog.ui:67
 msgctxt "GM_AddScriptDialog|"
 msgid "You are about to install this userscript into GreaseMonkey:"
-msgstr "شما در حال نصب این اسکریپت‌کاربر در GreaseMonkey هستید:"
+msgstr "Vi estas instalonta ĉi tiun uzantskripton en GreaseMonkey:"
 
 #: gm_addscriptdialog.ui:80
 msgctxt "GM_AddScriptDialog|"
 msgid "<b>You should only install scripts from sources you trust!</b>"
-msgstr "<b>اسکریپت را فقط از منبع‌هایی نصب کنید که به آن اعتماد دارید!</b>"
+msgstr "<b>Vi devus instali nur skriptojn de fontoj, kiujn vi fidas!</b>"
 
 #: gm_addscriptdialog.ui:90
 msgctxt "GM_AddScriptDialog|"
 msgid "Are you sure you want to install it?"
-msgstr "آیا از اینکه می‌خواهید آن را نصب کنید اطمینان دارید؟"
+msgstr "Ĉu vi certas, ke vi volas instali ĝin?"
 
 #: gm_addscriptdialog.ui:108
 msgctxt "GM_AddScriptDialog|"
 msgid "Show source code of script"
-msgstr "نمایش سورس‌کد اسکریپت"
+msgstr "Montri fontkodon de skripto"
 
 #: gm_icon.cpp:28
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey"
-msgstr ""
+msgstr "GreaseMonkey"
 
 #: gm_icon.cpp:29
 msgctxt "GM_Icon|"
 msgid "Open GreaseMonkey settings"
-msgstr "بازکردن سامانش GreaseMonkey"
+msgstr "Malfermu la agordojn de GreaseMonkey"
 
 #: gm_icon.cpp:41
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey Icon"
-msgstr ""
+msgstr "Piktogramo de GreaseMonkey"
 
 #: gm_manager.cpp:77
 #, qt-format
 msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
-msgstr ""
+msgstr "'%1' jam estas instalita"
 
 #: gm_manager.cpp:242
 msgctxt "GM_Manager|"
@@ -93,122 +101,122 @@ msgstr "GreaseMonkey"
 #: gm_notification.cpp:51
 msgctxt "GM_Notification|"
 msgid "Cannot install script"
-msgstr "نمی‌تواند اسکریپت را نصب کند"
+msgstr "Ne povas instali skripton"
 
 #: gm_notification.cpp:59
 #, qt-format
 msgctxt "GM_Notification|"
 msgid "'%1' installed successfully"
-msgstr "‏«%1» با موفقیت نصب شد"
+msgstr "'%1' instalita sukcese"
 
 #: gm_notification.ui:39
 msgctxt "GM_Notification|"
 msgid "This script can be installed with the GreaseMonkey plugin."
-msgstr "اسکریپت می‌تواند با استفاده از افزونه GreaseMonkey نصب شود."
+msgstr "Ĉi tiu skripto povas esti instalita per la kromaĵo GreaseMonkey."
 
 #: gm_notification.ui:59
 msgctxt "GM_Notification|"
 msgid "Install"
-msgstr "نصب"
+msgstr "Instali"
 
 #: settings/gm_settings.cpp:91
 msgctxt "GM_Settings|"
 msgid "Remove script"
-msgstr "حذف اسکریپت"
+msgstr "Forigi skripton"
 
 #: settings/gm_settings.cpp:92
 #, qt-format
 msgctxt "GM_Settings|"
 msgid "Are you sure you want to remove '%1'?"
-msgstr "آیا از اینکه می‌خواهید «%1» را حذف کنید اطمینان دارید؟"
+msgstr "Ĉu vi certas, ke vi volas forigi '%1'?"
 
 #: settings/gm_settings.cpp:122
 msgctxt "GM_Settings|"
 msgid "Add script"
-msgstr ""
+msgstr "Aldoni skripton"
 
 #: settings/gm_settings.cpp:122
 msgctxt "GM_Settings|"
 msgid "Choose name for script:"
-msgstr ""
+msgstr "Elektu nomon por skripto:"
 
 #: settings/gm_settings.ui:14
 msgctxt "GM_Settings|"
 msgid "GreaseMonkey Scripts"
-msgstr "اسکریپت‌های GreaseMonkey"
+msgstr "GreaseMonkey-Skriptoj"
 
 #: settings/gm_settings.ui:48
 msgctxt "GM_Settings|"
 msgid "<h3>GreaseMonkey Scripts</h3>"
-msgstr "<h3>اسکریپت‌های GreaseMonkey</h3>"
+msgstr "<h3>Skriptoj de GreaseMonkey</h3>"
 
 #: settings/gm_settings.ui:70
 msgctxt "GM_Settings|"
 msgid "Double clicking script will show additional information"
-msgstr "جفت‌کلیک بر روی اسکریپت اطلاعات اضافی را نمایش خواهد داد"
+msgstr "Duobla klakado de skripto montros pliajn informojn"
 
 #: settings/gm_settings.ui:150
 msgctxt "GM_Settings|"
 msgid "More scripts can be downloaded from"
-msgstr "اسکریپت‌های بیشتری می‌توانند دریافت شوند از"
+msgstr "Pli da skriptoj estas elŝuteblaj de"
 
 #: settings/gm_settings.ui:193
 msgctxt "GM_Settings|"
 msgid "Open scripts directory"
-msgstr "بازکردن پوشه اسکریپت‌ها"
+msgstr "Malfermi scripts-dosierujon"
 
 #: settings/gm_settings.ui:200
 msgctxt "GM_Settings|"
 msgid "New user script"
-msgstr ""
+msgstr "Nova uzanta skripto"
 
 #: settings/gm_settingsscriptinfo.cpp:45
 #, qt-format
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Script Details of %1"
-msgstr "جزییات اسکریپت %1"
+msgstr "Skriptodetaloj de %1"
 
 #: settings/gm_settingsscriptinfo.ui:19
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Runs at:"
-msgstr "اجرا می‌شود در:"
+msgstr "Kuras ĉe:"
 
 #: settings/gm_settingsscriptinfo.ui:45
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Description:"
-msgstr "شرح:"
+msgstr "Priskribo:"
 
 #: settings/gm_settingsscriptinfo.ui:55
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Version:"
-msgstr "نسخه:"
+msgstr "Versio:"
 
 #: settings/gm_settingsscriptinfo.ui:65
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Start at:"
-msgstr "آغاز در:"
+msgstr "Komenci je:"
 
 #: settings/gm_settingsscriptinfo.ui:85
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Name:"
-msgstr "نام:"
+msgstr "Nomo:"
 
 #: settings/gm_settingsscriptinfo.ui:115
 msgctxt "GM_SettingsScriptInfo|"
 msgid "URL:"
-msgstr "نشانی:"
+msgstr "URL:"
 
 #: settings/gm_settingsscriptinfo.ui:128
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Does not run at:"
-msgstr "اجرا نمی‌شود در:"
+msgstr "Ne rulas je:"
 
 #: settings/gm_settingsscriptinfo.ui:138
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Namespace:"
-msgstr "Namespace:"
+msgstr "Nomspaco:"
 
 #: settings/gm_settingsscriptinfo.ui:155
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Edit in text editor"
-msgstr "ویرایش در ویرایش‌گر متن"
+msgstr "Redakti en tekstredaktilo"

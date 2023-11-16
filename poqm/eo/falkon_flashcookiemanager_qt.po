@@ -1,182 +1,173 @@
-# Translation of falkon_flashcookiemanager_qt.po to Catalan (Valencian)
-# Copyright (C) 2018-2023 This_file_is_part_of_KDE
-# Copyright (C) 2012-2017 Free Software Foundation, Inc.
-# This file is distributed under the license LGPL version 2.1 or
-# version 3 or later versions approved by the membership of KDE e.V.
+# translation of falkon_flashcookiemanager_qt.pot to esperanto
+# Copyright (C) 2023, Free Software Foundation, Inc.
+# This file is distributed under the same license as the falkon package.
+# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
 #
-# Guillem Prats <guprej@gmail.com>, 2012, 2013, 2014.
-# Clara Villalba <cvilmon@gmail.com>, 2012, 2013, 2014.
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016, 2017.
-# David Medina <rbndavid@gmail.com>, 2017.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2023-08-08 17:38+0200\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
-"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca@valencia\n"
+"POT-Creation-Date: 2023-11-05 13:43+0100\n"
+"PO-Revision-Date: 2023-11-15 22:01+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Language: ca-valencia\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: fcm_dialog.cpp:76
 msgctxt "FCM_Dialog|"
 msgid "Search"
-msgstr "Busca"
+msgstr "Serĉi"
 
 #: fcm_dialog.cpp:93
 msgctxt "FCM_Dialog|"
 msgid "Confirmation"
-msgstr "Confirmació"
+msgstr "Konfirmo"
 
 #: fcm_dialog.cpp:94
 msgctxt "FCM_Dialog|"
 msgid "Are you sure you want to delete all flash cookies on your computer?"
-msgstr "Segur que voleu suprimir totes les galetes Flash de l'ordinador?"
+msgstr ""
+"Ĉu vi certas, ke vi volas forigi ĉiujn fulmajn kuketojn en via komputilo?"
 
 #: fcm_dialog.cpp:151 fcm_dialog.cpp:152 fcm_dialog.cpp:153 fcm_dialog.cpp:154
 #: fcm_dialog.ui:73 fcm_dialog.ui:120 fcm_dialog.ui:130 fcm_dialog.ui:140
 #: fcm_dialog.ui:256
 msgctxt "FCM_Dialog|"
 msgid "<flash cookie not selected>"
-msgstr "<No s'ha seleccionat cap galeta Flash>"
+msgstr "<flash-kuketo ne elektita>"
 
 #: fcm_dialog.cpp:156 fcm_dialog.ui:283
 msgctxt "FCM_Dialog|"
 msgid "Remove flash cookies"
-msgstr "Elimina les galetes Flash"
+msgstr "Forigi fulmajn kuketojn"
 
 #: fcm_dialog.cpp:166 fcm_dialog.cpp:237
 msgctxt "FCM_Dialog|"
 msgid " (settings)"
-msgstr " (configuració)"
+msgstr "(agordoj)"
 
 #: fcm_dialog.cpp:169
 msgctxt "FCM_Dialog|"
 msgid " Byte"
-msgstr " Byte"
+msgstr "Byte"
 
 #: fcm_dialog.cpp:175
 msgctxt "FCM_Dialog|"
 msgid "Remove flash cookie"
-msgstr "Elimina la galeta Flash"
+msgstr "Forigi fulmkuketon"
 
 #: fcm_dialog.cpp:241
 msgctxt "FCM_Dialog|"
 msgid " [new]"
-msgstr " [nou]"
+msgstr "[nova]"
 
 #: fcm_dialog.cpp:277 fcm_dialog.cpp:305 fcm_dialog.ui:113
 msgctxt "FCM_Dialog|"
 msgid "Origin:"
-msgstr "Origen:"
+msgstr "Origino:"
 
 #: fcm_dialog.cpp:277 fcm_dialog.cpp:375
 msgctxt "FCM_Dialog|"
 msgid "Add to whitelist"
-msgstr "Afig a la llista blanca"
+msgstr "Aldoni al blanka listo"
 
 #: fcm_dialog.cpp:289 fcm_dialog.cpp:317
 msgctxt "FCM_Dialog|"
 msgid "Already whitelisted!"
-msgstr "Ja es troba en la llista blanca!"
+msgstr "Jam blanklisto!"
 
 #: fcm_dialog.cpp:289
 #, qt-format
 msgctxt "FCM_Dialog|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
-msgstr ""
-"El servidor «%1» ja es troba en la llista negra; per favor, elimineu-lo "
-"abans."
+msgstr "La servilo \"%1\" jam estas en nigra listo, bonvolu forigi ĝin unue."
 
 #: fcm_dialog.cpp:305 fcm_dialog.cpp:374
 msgctxt "FCM_Dialog|"
 msgid "Add to blacklist"
-msgstr "Afig a la llista negra"
+msgstr "Aldoni al nigra listo"
 
 #: fcm_dialog.cpp:317
 #, qt-format
 msgctxt "FCM_Dialog|"
 msgid "The origin \"%1\" is already in whitelist, please remove it first."
-msgstr "L'origen «%1» ja es troba en la llista blanca. Primer elimineu-lo."
+msgstr "La origino \"%1\" jam estas en blanka listo, bonvolu forigi ĝin unue."
 
 #: fcm_dialog.ui:14
 msgctxt "FCM_Dialog|"
 msgid "Flash Cookies"
-msgstr "Galetes Flash"
+msgstr "Fulm-Kuketoj"
 
 #: fcm_dialog.ui:24
 msgctxt "FCM_Dialog|"
 msgid "Stored Flash Cookies"
-msgstr "Galetes emmagatzemades"
+msgstr "Konservitaj Fulmkuketoj"
 
 #: fcm_dialog.ui:45
 msgctxt "FCM_Dialog|"
 msgid "Find: "
-msgstr "Busca: "
+msgstr "Trovi:"
 
 #: fcm_dialog.ui:83
 msgctxt "FCM_Dialog|"
 msgid "Last Modified:"
-msgstr "Última modificació:"
+msgstr "Laste Modifita:"
 
 #: fcm_dialog.ui:96
 msgctxt "FCM_Dialog|"
 msgid "Name:"
-msgstr "Nom:"
+msgstr "Nomo:"
 
 #: fcm_dialog.ui:106
 msgctxt "FCM_Dialog|"
 msgid "Size:"
-msgstr "Mida:"
+msgstr "Grandeco:"
 
 #: fcm_dialog.ui:152
 msgctxt "FCM_Dialog|"
 msgid "Extracted latin1 strings:"
-msgstr "Cadenes latin1 extretes:"
+msgstr "Eltiritaj latin1-ĉenoj:"
 
 #: fcm_dialog.ui:182
 msgctxt "FCM_Dialog|"
 msgid "These flash cookies are stored on your computer:"
-msgstr "Les galetes Flash següents estan emmagatzemades en l'ordinador:"
+msgstr "Ĉi tiuj fulmkuketoj estas konservitaj en via komputilo:"
 
 #: fcm_dialog.ui:202
 msgctxt "FCM_Dialog|"
 msgid "Origin"
-msgstr "Origen"
+msgstr "Origino"
 
 #: fcm_dialog.ui:227
 msgctxt "FCM_Dialog|"
 msgid "Reload from disk"
-msgstr "Torna a carregar des del disc"
+msgstr "Reŝargi de disko"
 
 #: fcm_dialog.ui:240
 msgctxt "FCM_Dialog|"
 msgid "Path:"
-msgstr "Camí:"
+msgstr "Vojo:"
 
 #: fcm_dialog.ui:253
 msgctxt "FCM_Dialog|"
 msgid "Click to open containing folder"
-msgstr "Feu clic per a obrir la carpeta contenidora"
+msgstr "Klaku por malfermi enhavantan dosierujon"
 
 #: fcm_dialog.ui:276
 msgctxt "FCM_Dialog|"
 msgid "Remove all flash cookies"
-msgstr "Elimina totes les galetes Flash"
+msgstr "Forigi ĉiujn fulmkuketojn"
 
 #: fcm_dialog.ui:308
 msgctxt "FCM_Dialog|"
 msgid "Flash Cookies Filtering"
-msgstr "Filtratge"
+msgstr "Flash-Kuketa Filtrado"
 
 #: fcm_dialog.ui:316
 msgctxt "FCM_Dialog|"
@@ -184,28 +175,27 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
 "whitelist</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">Llista blanca de les "
-"galetes Flash</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:600;\">Blanklisto de Flash-"
+"kuketoj</span></p></body></html>"
 
 #: fcm_dialog.ui:348 fcm_dialog.ui:416
 msgctxt "FCM_Dialog|"
 msgid "Remove"
-msgstr "Elimina"
+msgstr "Forigi"
 
 #: fcm_dialog.ui:355 fcm_dialog.ui:423
 msgctxt "FCM_Dialog|"
 msgid "Add"
-msgstr "Afig"
+msgstr "Aldoni"
 
-# skip-rule: punctuation-period-no
 #: fcm_dialog.ui:364
 msgctxt "FCM_Dialog|"
 msgid ""
 "Flash cookies from these origins will not be deleted automatically. (Also "
 "detection of them will not be notified to user.)"
 msgstr ""
-"Les galetes Flash d'estos orígens no se suprimiran automàticament. (Tampoc "
-"no se'n notificarà la detecció a l'usuari)."
+"Fulmkuketoj de ĉi tiuj originoj ne estos aŭtomate forigitaj. (Ankaŭ detekto "
+"de ili ne estos sciigita al uzanto.)"
 
 #: fcm_dialog.ui:374
 msgctxt "FCM_Dialog|"
@@ -213,19 +203,19 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
 "blacklist</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">Llista negra de les "
-"galetes Flash</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:600;\">Nigra listo de Flash-"
+"kuketoj</span></p></body></html>"
 
 #: fcm_dialog.ui:381
 msgctxt "FCM_Dialog|"
 msgid ""
 "Flash cookies from these origins will be deleted without any notification."
-msgstr "Les galetes Flash d'estos orígens se suprimiran sense cap notificació."
+msgstr "Fulmkuketoj de ĉi tiuj originoj estos forigitaj sen iu ajn sciigo."
 
 #: fcm_dialog.ui:442
 msgctxt "FCM_Dialog|"
 msgid "Settings"
-msgstr "Configuració"
+msgstr "Agordoj"
 
 #: fcm_dialog.ui:453
 msgctxt "FCM_Dialog|"
@@ -233,8 +223,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:600;\">Flash Cookie "
 "Settings</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">Configureu les "
-"galetes Flash</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:600;\">Agordoj de Flash "
+"Kuketoj</span></p></body></html>"
 
 #: fcm_dialog.ui:475
 msgctxt "FCM_Dialog|"
@@ -242,8 +232,8 @@ msgid ""
 "Auto mode: The flash data directory will be checked regularly. and flash "
 "cookies in blacklist will be deleted automatically."
 msgstr ""
-"Mode automàtic: el directori de dades Flash es comprovarà regularment i les "
-"galetes Flash de la llista negra se suprimiran automàticament."
+"Aŭtomata reĝimo: La dosierujo de fulmodatumoj estos kontrolita regule kaj "
+"fulmkuketoj en nigra listo estos aŭtomate forigitaj."
 
 #: fcm_dialog.ui:510
 msgctxt "FCM_Dialog|"
@@ -252,10 +242,9 @@ msgid ""
 "settings are just applied to flash cookies, to manage HTTP cookies use <span "
 "style=\" font-weight:600;\">Cookies Manager</span>. </p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">Nota:</span> esta "
-"configuració només s'aplica a les galetes Flash, per a gestionar les galetes "
-"HTTP utilitzeu el <span style=\" font-weight:600;\">Gestor de galetes</"
-"span>. </p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:600;\">Noto:</span> Ĉi tiu "
+"agordo estas nur aplikata al fulmaj kuketoj, por administri HTTP-kuketojn "
+"uzu <span style=\" font-weight:600;\">Kuketestro</span>. </p></body></html>"
 
 #: fcm_dialog.ui:538
 msgctxt "FCM_Dialog|"
@@ -263,59 +252,57 @@ msgid ""
 "Notification: User will be notified for every new flash cookie that is not "
 "in blacklist and whitelist."
 msgstr ""
-"Nota: l'usuari rebrà una notificació per a cada galeta Flash nova que no es "
-"trobe en les llistes negra o blanca."
+"Sciigo: Uzanto estos sciigita pri ĉiu nova fulmkuketo kiu ne estas en nigra "
+"listo kaj blanklisto."
 
-# skip-rule: punctuation-period-no
 #: fcm_dialog.ui:565
 msgctxt "FCM_Dialog|"
 msgid "Delete all flash cookies on exit/start. (except those are in whitelist)"
 msgstr ""
-"Suprimix totes les galetes Flash en eixir/iniciar. (Excepte les que es "
-"troben en la llista blanca)."
+"Forigi ĉiujn fulmkuketojn ĉe eliro/komenco. (krom tiuj estas en blanka listo)"
 
 #: fcm_notification.cpp:34
 msgctxt "FCM_Notification|"
 msgid "A new flash cookie was detected"
-msgstr "S'ha detectat una galeta Flash nova"
+msgstr "Nova fulmkuketo estis detektita"
 
 #: fcm_notification.cpp:37
 #, qt-format
 msgctxt "FCM_Notification|"
 msgid "%1 new flash cookies were detected"
-msgstr "S'han detectat %1 galetes Flash noves"
+msgstr "%1 novaj fulmaj kuketoj estis detektitaj"
 
 #: fcm_notification.ui:45
 msgctxt "FCM_Notification|"
 msgid "New flash cookie was detected!"
-msgstr "S'ha detectat una galeta Flash nova!"
+msgstr "Nova fulmkuketo estis detektita!"
 
 #: fcm_notification.ui:52
 msgctxt "FCM_Notification|"
 msgid "View"
-msgstr "Visualitza"
+msgstr "Vido"
 
 #: fcm_plugin.cpp:59
 msgctxt "FCM_Button|"
 msgid "Flash Cookie Manager button"
-msgstr "Botó del gestor de galetes Flash"
+msgstr "Butono de Fulmkuketestro"
 
 #: fcm_plugin.cpp:129 fcm_plugin.cpp:359
 msgctxt "FCM_Plugin|"
 msgid "Flash Cookie Manager"
-msgstr "Gestor de galetes Flash"
+msgstr "Flash Cookie Manager"
 
 #: fcm_plugin.cpp:360
 msgctxt "FCM_Plugin|"
 msgid "Show Flash Cookie Manager"
-msgstr "Mostra el gestor de galetes Flash"
+msgstr "Montri Fulmkuketestron"
 
 #: fcm_plugin.cpp:441
 msgctxt "FCM_Plugin|"
 msgid "!default"
-msgstr "!predeterminat"
+msgstr "!defaŭlto"
 
 #: fcm_plugin.cpp:453
 msgctxt "FCM_Plugin|"
 msgid "!other"
-msgstr "!altres"
+msgstr "!alia"

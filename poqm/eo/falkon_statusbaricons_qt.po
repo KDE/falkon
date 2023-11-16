@@ -1,95 +1,103 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# translation of falkon_statusbaricons_qt.pot to esperanto
+# Copyright (C) 2023, Free Software Foundation, Inc.
 # This file is distributed under the same license as the falkon package.
-# Seyyed Razi Alavizadeh <s.r.alavizadeh@gmail.com>, 2017
+# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
 #
 msgid ""
 msgstr ""
+"Project-Id-Version: falkon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-05 13:43+0100\n"
+"PO-Revision-Date: 2023-11-15 22:01+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
-"X-Language: fa_IR\n"
 "X-Qt-Contexts: true\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: sbi_imagesicon.cpp:34
 msgctxt "SBI_ImagesIcon|"
 msgid "Modify images loading settings per-site and globally"
-msgstr "ویرایش تنظیمات بارگذاری نگاره‌ها "
+msgstr "Modifi ŝargajn agordojn de bildoj per retejo kaj ĉiee"
 
 #: sbi_imagesicon.cpp:58
 msgctxt "SBI_ImagesIcon|"
 msgid "Current Page Settings"
-msgstr ""
+msgstr "Aktualaj Paĝ-Agordoj"
 
 #: sbi_imagesicon.cpp:61
 msgctxt "SBI_ImagesIcon|"
 msgid "Disable loading images (temporarily)"
-msgstr "غیرفعال کردن بارگذاری نگاره‌ها (موقتی)"
+msgstr "Malebligi ŝargi bildojn (provizore)"
 
 #: sbi_imagesicon.cpp:64
 msgctxt "SBI_ImagesIcon|"
 msgid "Enable loading images (temporarily)"
-msgstr "فعال کردن بارگذاری نگاره‌ها (موقتی)"
+msgstr "Ebligi ŝargi bildojn (provizore)"
 
 #: sbi_imagesicon.cpp:68
 msgctxt "SBI_ImagesIcon|"
 msgid "Global Settings"
-msgstr ""
+msgstr "Ĉieaj Agordoj"
 
 #: sbi_imagesicon.cpp:70
 msgctxt "SBI_ImagesIcon|"
 msgid "Automatically load images"
-msgstr "بارگذاری خودکار نگاره‌ها"
+msgstr "Aŭtomate ŝargi bildojn"
 
 #: sbi_javascripticon.cpp:34
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Modify JavaScript settings per-site and globally"
-msgstr "ویرایش تنظیمات جاوا-اسکریپت بر-تارنما و سراسری"
+msgstr "Modifi JavaScript-agordojn po-rete kaj ĉiee"
 
 #: sbi_javascripticon.cpp:51
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Current Page Settings"
-msgstr ""
+msgstr "Nunaj Paĝaj Agordoj"
 
 #: sbi_javascripticon.cpp:54
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Disable JavaScript (temporarily)"
-msgstr "غیرفعال کردن جاوا-اسکریپت (موقتی)"
+msgstr "Malebligi JavaScript (provizore)"
 
 #: sbi_javascripticon.cpp:57
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Enable JavaScript (temporarily)"
-msgstr "فعال کردن جاوا-اسکریپت (موقتی)"
+msgstr "Ebligi JavaScript (provizore)"
 
 #: sbi_javascripticon.cpp:66
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Global Settings"
-msgstr ""
+msgstr "Ĉieaj Agordoj"
 
 #: sbi_javascripticon.cpp:67
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
-msgstr "مدیریت تنظیمات جاوا اسکریپت"
+msgstr "Administri JavaScript-agordojn"
 
 #: sbi_networkicon.cpp:73
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
-msgstr ""
+msgstr "Prokura Agordo"
 
 #: sbi_networkicon.cpp:75
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
-msgstr "انتخاب پروکسی"
+msgstr "Elekti prokurilon"
 
 #: sbi_networkicon.cpp:89
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
-msgstr "خالی"
+msgstr "Malplena"
 
 #: sbi_networkicon.cpp:93
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
-msgstr "مدیریت پروکسی‌ها"
+msgstr "Administri prokurilojn"
 
 #: sbi_networkicon.cpp:106
 #, qt-format
@@ -98,85 +106,85 @@ msgid ""
 "Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
 "><br/><b>Proxy:</b><br/>%2"
 msgstr ""
-"وضعیت شبکه را نشان می‌دهد و پروکسی‌ها را مدیریت می‌کند<br/><br/><b>شبکه:</b><br/"
-">%1<br/><br/><b>پروکسی:</b><br/>%2"
+"Montras retan staton kaj administras prokurilon<br/><br/><b>Reto:</b><br/>"
+"%1<br/><br/><b>Prokurilo:</b><br/>%2"
 
 #: sbi_networkicon.cpp:110 sbi_networkicon.cpp:118
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected"
-msgstr "متصل"
+msgstr "Konektita"
 
 #: sbi_networkicon.cpp:113
 msgctxt "SBI_NetworkIcon|"
 msgid "Offline"
-msgstr "برون‌خط"
+msgstr "Senreta"
 
 #: sbi_networkicon.cpp:123
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
-msgstr "پروکسی سیستم"
+msgstr "Sistema prokurilo"
 
 #: sbi_networkicon.cpp:127
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
-msgstr "بدون پروکسی"
+msgstr "Neniu prokurilo"
 
 #: sbi_networkicon.cpp:131
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
-msgstr "تعریف شده توسط کاربر"
+msgstr "Uzantodifinita"
 
 #: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Add proxy"
-msgstr "اضافه کردن پروکسی"
+msgstr "Aldoni prokurilon"
 
 #: sbi_networkicondialog.cpp:57
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Name of proxy:"
-msgstr "نام پروکسی:"
+msgstr "Nomo de prokurilo:"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove current proxy"
-msgstr "حذف پروکسی جاری"
+msgstr "Forigi nunan prokurilon"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Are you sure you want to remove current proxy?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas forigi aktualan prokurilon?"
 
 #: sbi_networkicondialog.ui:14
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Proxy Manager"
-msgstr "مدیر پروکسی"
+msgstr "Prokura Administranto"
 
 #: sbi_networkicondialog.ui:28
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Select proxy: "
-msgstr "انتخاب پروکسی: "
+msgstr "Elektu prokurilon:"
 
 #: sbi_networkicondialog.ui:45
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove proxy"
-msgstr "حذف پروکسی"
+msgstr "Forigi prokurilon"
 
 #: sbi_networkicondialog.ui:69
 msgctxt "SBI_NetworkIconDialog|"
 msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
 msgstr ""
-"بدون پروکسی. می‌توانید با کلیک کردن روی دکمه <b>اضافه‌ کردن</b> پروکسی اضافه "
-"کنید."
+"Neniuj prokuriloj. Vi povas aldoni prokurilon alklakante la butonon "
+"<b>Aldoni</b>."
 
 #: sbi_networkicondialog.ui:104
 msgctxt "SBI_NetworkIconDialog|"
 msgid "All changes must be saved with <b>Save</b> button."
-msgstr "همه تغییرات باید بوسیله دکمه <b>ذخیره کردن</b> ذخیره شوند."
+msgstr "Ĉiuj ŝanĝoj devas esti konservitaj per la butono <b>Konservi</b>."
 
 #: sbi_proxywidget.ui:14
 msgctxt "SBI_ProxyWidget|"
 msgid "Form"
-msgstr "فرم"
+msgstr "Formo"
 
 #: sbi_proxywidget.ui:23
 msgctxt "SBI_ProxyWidget|"
@@ -186,70 +194,70 @@ msgstr "HTTP"
 #: sbi_proxywidget.ui:28
 msgctxt "SBI_ProxyWidget|"
 msgid "SOCKS5"
-msgstr "SOCKS5"
+msgstr "Ŝtrumpetoj5"
 
 #: sbi_proxywidget.ui:39
 msgctxt "SBI_ProxyWidget|"
 msgid "Port:"
-msgstr "درگاه:"
+msgstr "Pordo:"
 
 #: sbi_proxywidget.ui:76
 msgctxt "SBI_ProxyWidget|"
 msgid "Username:"
-msgstr "نام کاربری:"
+msgstr "Uzantnomo:"
 
 #: sbi_proxywidget.ui:86
 msgctxt "SBI_ProxyWidget|"
 msgid "Password:"
-msgstr "رمز عبور:"
+msgstr "Pasvorto:"
 
 #: sbi_proxywidget.ui:111
 msgctxt "SBI_ProxyWidget|"
 msgid "S&ystem proxy configuration"
-msgstr ""
+msgstr "S&istema prokuril-agordo"
 
 #: sbi_proxywidget.ui:118
 msgctxt "SBI_ProxyWidget|"
 msgid "&Manual configuration"
-msgstr ""
+msgstr "&Mana agordo"
 
 #: sbi_settingsdialog.ui:14
 msgctxt "SBI_SettingsDialog|"
 msgid "StatusBar Icons"
-msgstr "آیکون‌های StatusBar"
+msgstr "StatusBar Piktogramoj"
 
 #: sbi_settingsdialog.ui:48
 msgctxt "SBI_SettingsDialog|"
 msgid "<h3>StatusBar Icons</h3>"
-msgstr "<h3>آیکون‌های StatusBar</h3>"
+msgstr "<h3>Piktogramoj pri Statusbreto</h3>"
 
 #: sbi_settingsdialog.ui:70
 msgctxt "SBI_SettingsDialog|"
 msgid "These icons will be displayed in statusbar:"
-msgstr "این آیکون‌ها در نوار وضعیت نمایش داده خواهند شد:"
+msgstr "Ĉi tiuj piktogramoj estos montrataj en statusbreto:"
 
 #: sbi_settingsdialog.ui:97
 msgctxt "SBI_SettingsDialog|"
 msgid "Images Icon"
-msgstr "آیکون نگاره‌ها"
+msgstr "Bildoj Piktogramo"
 
 #: sbi_settingsdialog.ui:104
 msgctxt "SBI_SettingsDialog|"
 msgid "JavaScript Icon"
-msgstr "آیکون جاوا-اسکریپت"
+msgstr "JavaScript Piktogramo"
 
 #: sbi_settingsdialog.ui:111
 msgctxt "SBI_SettingsDialog|"
 msgid "Network Icon"
-msgstr "آیکون شبکه"
+msgstr "Reta Piktogramo"
 
 #: sbi_settingsdialog.ui:118
 msgctxt "SBI_SettingsDialog|"
 msgid "Zoom widget"
-msgstr ""
+msgstr "Zomi fenestraĵo"
 
 #: sbi_zoomwidget.cpp:48
 #, qt-format
 msgctxt "SBI_ZoomWidget|"
 msgid "Zoom: %1%"
-msgstr ""
+msgstr "Zomo: %1%"
