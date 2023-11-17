@@ -40,16 +40,7 @@ private Q_SLOTS:
 
 private:
     void updateToolTip();
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    void enterEvent(QEvent* event) override;
-#else
     void enterEvent(QEnterEvent* event) override;
-#endif
-
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    // TODO QT6 - should we try to replace the online status detection using Qt 6?
-    QNetworkConfigurationManager* m_networkConfiguration;
-#endif
 };
 
 #endif // SBI_NETWORKICON_H

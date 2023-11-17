@@ -81,11 +81,7 @@ void EditSearchEngine::setShortcut(const QString &shortcut)
 
 QIcon EditSearchEngine::icon()
 {
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    return QIcon(*ui->icon->pixmap());
-#else
     return QIcon(ui->icon->pixmap());
-#endif
 }
 
 void EditSearchEngine::setIcon(const QIcon &icon)

@@ -57,9 +57,6 @@
 #include <QMessageBox>
 #include <QCloseEvent>
 #include <QColorDialog>
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-#include <QDesktopWidget>
-#endif
 #include <QWebEngineProfile>
 #include <QWebEngineSettings>
 #include <QLibraryInfo>
@@ -533,11 +530,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->listWidget->setCurrentRow(currentSettingsPage);
 
     QSize s = size();
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    const QRect &availableGeometryForScreen = QApplication::desktop()->availableGeometry(this);
-#else
     const QRect &availableGeometryForScreen = screen()->availableGeometry();
-#endif
     if (availableGeometryForScreen.size().width() < s.width()) {
         s.setWidth(availableGeometryForScreen.size().width() - 50);
     }

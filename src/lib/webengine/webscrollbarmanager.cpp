@@ -211,14 +211,9 @@ void WebScrollBarManager::createUserScript(int thickness)
 
 void WebScrollBarManager::removeUserScript()
 {
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    QWebEngineScript script = mApp->webProfile()->scripts()->findScript(QSL("_falkon_scrollbar"));
-    mApp->webProfile()->scripts()->remove(script);
-#else
     for (const QWebEngineScript &script : mApp->webProfile()->scripts()->find(QSL("_falkon_scrollbar"))) {
         mApp->webProfile()->scripts()->remove(script);
     }
-#endif
 }
 
 QSize WebScrollBarManager::viewportSize(WebView *view, int thickness) const

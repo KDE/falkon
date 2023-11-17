@@ -28,11 +28,7 @@
 #include <QUrlQuery>
 #include <QNetworkReply>
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-#include <KArchive/KZip>
-#else
 #include <KZip>
-#endif
 
 Q_GLOBAL_STATIC(OcsSupport, qz_ocs_support)
 

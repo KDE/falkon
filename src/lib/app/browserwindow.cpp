@@ -72,9 +72,6 @@
 #include <QWebEngineHistory>
 #include <QWebEngineSettings>
 #include <QMessageBox>
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-#include <QDesktopWidget>
-#endif
 #include <QToolTip>
 #include <QScrollArea>
 #include <QCollator>
@@ -82,9 +79,6 @@
 #include <QActionGroup>
 
 #ifdef QZ_WS_X11
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-#include <QX11Info>
-#endif
 #include <xcb/xcb.h>
 #include <xcb/xcb_atom.h>
 #endif
@@ -405,11 +399,7 @@ void BrowserWindow::setupUi()
     m_statusBar->addButton(downloadsButton);
     m_navigationToolbar->addToolButton(downloadsButton);
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    QDesktopWidget* desktop = mApp->desktop();
-#else
     auto desktop = QGuiApplication::primaryScreen();
-#endif
     int windowWidth = desktop->availableGeometry().width() / 1.3;
     int windowHeight = desktop->availableGeometry().height() / 1.3;
 
@@ -1573,14 +1563,10 @@ void BrowserWindow::closeTab()
 #ifdef QZ_WS_X11
 static xcb_connection_t *getXcbConnection()
 {
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    return QX11Info::connection();
-#else
     const QNativeInterface::QX11Application *x11App = qApp->nativeInterface<QNativeInterface::QX11Application>();
     if (x11App == nullptr)
         return 0;
     return x11App->connection();
-#endif
 }
 
 int BrowserWindow::getCurrentVirtualDesktop() const

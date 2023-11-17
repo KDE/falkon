@@ -100,10 +100,8 @@ Q_SIGNALS:
     void injectionPointChanged(int injectionPoint);
 private:
     QWebEngineScript m_webEngineScript;
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-    bool m_isNull;
-#endif
     QBasicTimer m_basicTimer;
+    bool m_isNull;
 
     bool null() const;
     QString name() const;
@@ -122,9 +120,7 @@ private:
 
     void setNotNull()
     {
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
         // TODO QT6: This is a really hacky way of keeping track of whether the script has been initialized - and is it even necessary?
         m_isNull = false;
-#endif
     }
 };

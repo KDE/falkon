@@ -21,9 +21,7 @@
 #include <QWebEnginePage>
 #include <QWebEngineScript>
 #include <QWebEngineFullScreenRequest>
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
 #include <QPrinter>
-#endif
 #include <QVector>
 #include <QElapsedTimer>
 
@@ -96,15 +94,11 @@ private Q_SLOTS:
     void fullScreenRequested(QWebEngineFullScreenRequest fullScreenRequest);
     void featurePermissionRequested(const QUrl &origin, const QWebEnginePage::Feature &feature);
     void renderProcessTerminated(QWebEnginePage::RenderProcessTerminationStatus terminationStatus, int exitCode);
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
     void onCertificateError(QWebEngineCertificateError error);
-#endif
 
 private:
     bool acceptNavigationRequest(const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    bool certificateError(const QWebEngineCertificateError &error) override;
-#endif
+
     QStringList chooseFiles(FileSelectionMode mode, const QStringList &oldFiles, const QStringList &acceptedMimeTypes) override;
     QWebEnginePage* createWindow(QWebEnginePage::WebWindowType type) override;
 

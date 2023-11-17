@@ -267,12 +267,8 @@
     %RETURN_TYPE retval_ = %CPPSELF.%FUNCTION_NAME(%1, %2, %3, %4, %5, &amp;%6, %7);
     %PYARG_0 = PyTuple_New(2);
     PyTuple_SET_ITEM(%PYARG_0, 0, %CONVERTTOPYTHON[%RETURN_TYPE](retval_));
-#if (QT_VERSION &lt; QT_VERSION_CHECK(6, 0, 0))
-    PyTuple_SET_ITEM(%PYARG_0, 1, %CONVERTTOPYTHON[%ARG6_TYPE](%6));
-#else
     auto ARG6_PTR = &amp;%6;
     PyTuple_SET_ITEM(%PYARG_0, 1, %CONVERTTOPYTHON[%ARG6_TYPE](ARG6_PTR));
-#endif
     </template>
 
     <suppress-warning text="Unable to translate type &quot;std::function&lt;QPoint (QSize)&gt;&quot;:*"/>

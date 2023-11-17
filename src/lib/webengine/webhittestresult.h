@@ -25,13 +25,7 @@
 
 #include "qzcommon.h"
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-class QWebEngineContextMenuData;
-#define Q_WEB_ENGINE_CONTEXT_MENU_DATA_CLASS QWebEngineContextMenuData
-#else
 class QWebEngineContextMenuRequest;
-#define Q_WEB_ENGINE_CONTEXT_MENU_DATA_CLASS QWebEngineContextMenuRequest
-#endif
 
 class WebPage;
 
@@ -40,7 +34,7 @@ class FALKON_EXPORT WebHitTestResult
 public:
     explicit WebHitTestResult(const WebPage *page, const QPoint &pos);
 
-    void updateWithContextMenuData(const Q_WEB_ENGINE_CONTEXT_MENU_DATA_CLASS &data);
+    void updateWithContextMenuData(const QWebEngineContextMenuRequest &data);
 
     QUrl baseUrl() const;
     QString alternateText() const;

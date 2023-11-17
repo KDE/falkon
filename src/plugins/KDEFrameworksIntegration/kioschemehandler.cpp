@@ -24,13 +24,8 @@
 
 #include <kio_version.h>
 
-#if KIO_VERSION < QT_VERSION_CHECK(5, 240, 0)
-    #include <KIO/AccessManager>
-    Q_GLOBAL_STATIC_WITH_ARGS(KIO::Integration::AccessManager, s_knam, (nullptr))
-#else
-    #include <QNetworkAccessManager>
-    Q_GLOBAL_STATIC_WITH_ARGS(QNetworkAccessManager, s_knam, (nullptr))
-#endif
+#include <QNetworkAccessManager>
+Q_GLOBAL_STATIC_WITH_ARGS(QNetworkAccessManager, s_knam, (nullptr))
 
 KIOSchemeHandler::KIOSchemeHandler(const QString &protocol, QObject *parent)
     : QWebEngineUrlSchemeHandler(parent)

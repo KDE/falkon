@@ -27,9 +27,6 @@ DesktopFile::DesktopFile()
 DesktopFile::DesktopFile(const QString &fileName)
 {
     m_settings.reset(new QSettings(fileName, QSettings::IniFormat));
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    m_settings->setIniCodec("UTF-8");
-#endif
     m_settings->beginGroup(QSL("Desktop Entry"));
 }
 

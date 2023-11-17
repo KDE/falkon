@@ -25,11 +25,7 @@
 #include "statusbar.h"
 #include "navigationbar.h"
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-#include <QDesktopWidget>
-#else
 #include <QScreen>
-#endif
 #include <QAction>
 #include <QStyle>
 
@@ -217,11 +213,7 @@ void TabManagerWidgetController::showSideBySide()
         return;
     }
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    const QRect &availableGeometry = mApp->desktop()->availableGeometry(defaultTabManager());
-#else
     const QRect &availableGeometry = defaultTabManager()->screen()->availableGeometry();
-#endif
     static int frameWidth = (defaultTabManager()->frameGeometry().width() - defaultTabManager()->geometry().width()) / 2;
     static int titleBarHeight = defaultTabManager()->style()->pixelMetric(QStyle::PM_TitleBarHeight);
 

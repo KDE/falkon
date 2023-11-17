@@ -182,13 +182,9 @@ void GM_Manager::disableScript(GM_Script* script)
     m_disabledScripts.append(script->fullName());
 
     QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    collection->remove(collection->findScript(script->fullName()));
-#else
     for (const auto &script : collection->find(script->fullName())) {
         collection->remove(script);
     }
-#endif
 }
 
 bool GM_Manager::addScript(GM_Script* script)
@@ -216,13 +212,9 @@ bool GM_Manager::removeScript(GM_Script* script, bool removeFile)
     m_scripts.removeOne(script);
 
     QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    collection->remove(collection->findScript(script->fullName()));
-#else
     for (const auto &script : collection->find(script->fullName())) {
         collection->remove(script);
     }
-#endif
 
     m_disabledScripts.removeOne(script->fullName());
 
@@ -291,13 +283,9 @@ void GM_Manager::scriptChanged()
         return;
 
     QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    collection->remove(collection->findScript(script->fullName()));
-#else
     for (const auto &script : collection->find(script->fullName())) {
         collection->remove(script);
     }
-#endif
     collection->insert(script->webScript());
 }
 

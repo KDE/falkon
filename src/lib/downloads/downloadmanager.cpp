@@ -40,11 +40,7 @@
 #include <QShortcut>
 #include <QStandardPaths>
 #include <QWebEngineHistory>
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-#include <QWebEngineDownloadItem>
-#else
 #include <QWebEngineDownloadRequest>
-#endif
 #include <QtWebEngineWidgetsVersion>
 
 #ifdef Q_OS_WIN
@@ -127,11 +123,7 @@ void DownloadManager::keyPressEvent(QKeyEvent* e)
     QWidget::keyPressEvent(e);
 }
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-void DownloadManager::closeDownloadTab(QWebEngineDownloadItem *item) const
-#else
 void DownloadManager::closeDownloadTab(QWebEngineDownloadRequest *item) const
-#endif
 {
     // Attempt to close empty tab that was opened only for loading the download url
     auto testWebView = [](TabbedWebView *view, const QUrl &url) {
@@ -266,7 +258,7 @@ void DownloadManager::clearList()
     Q_EMIT downloadsCountChanged();
 }
 
-void DownloadManager::download(Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS *downloadItem)
+void DownloadManager::download(QWebEngineDownloadRequest *downloadItem)
 {
     QElapsedTimer downloadTimer;
     downloadTimer.start();
@@ -276,13 +268,9 @@ void DownloadManager::download(Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS *downloadItem)
     QString downloadPath;
     bool openFile = false;
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    const QString fileName = QFileInfo(downloadItem->path()).fileName();
-#else
     const QString fileName = downloadItem->downloadFileName();
-#endif
 
-    const bool forceAsk = downloadItem->savePageFormat() != Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::UnknownSaveFormat
+    const bool forceAsk = downloadItem->savePageFormat() != QWebEngineDownloadRequest::UnknownSaveFormat
             || downloadItem->isSavePageDownload();
 
     if (m_useExternalManager) {
@@ -291,7 +279,7 @@ void DownloadManager::download(Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS *downloadItem)
         enum Result { Open = 1, Save = 2, ExternalManager = 3, SavePage = 4, Unknown = 0 };
         Result result = Unknown;
 
-        if (downloadItem->savePageFormat() != Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::UnknownSaveFormat) {
+        if (downloadItem->savePageFormat() != QWebEngineDownloadRequest::UnknownSaveFormat) {
             // Save Page requested
             result = SavePage;
         } else if (downloadItem->isSavePageDownload()) {
@@ -338,17 +326,17 @@ void DownloadManager::download(Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS *downloadItem)
                 Settings().setValue(QSL("DownloadManager/lastDownloadPath"), m_lastDownloadPath);
                 m_lastDownloadOption = SaveFile;
 
-                Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::SavePageFormat format = Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::UnknownSaveFormat;
+                QWebEngineDownloadRequest::SavePageFormat format = QWebEngineDownloadRequest::UnknownSaveFormat;
 
                 if (selectedFilter == mhtml) {
-                    format = Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::MimeHtmlSaveFormat;
+                    format = QWebEngineDownloadRequest::MimeHtmlSaveFormat;
                 } else if (selectedFilter == htmlSingle) {
-                    format = Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::SingleHtmlSaveFormat;
+                    format = QWebEngineDownloadRequest::SingleHtmlSaveFormat;
                 } else if (selectedFilter == htmlComplete) {
-                    format = Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::CompleteHtmlSaveFormat;
+                    format = QWebEngineDownloadRequest::CompleteHtmlSaveFormat;
                 }
 
-                if (format != Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS::UnknownSaveFormat) {
+                if (format != QWebEngineDownloadRequest::UnknownSaveFormat) {
                     downloadItem->setSavePageFormat(format);
                 }
             }
@@ -373,12 +361,8 @@ void DownloadManager::download(Q_WEB_ENGINE_DOWNLOAD_ITEM_CLASS *downloadItem)
     }
 
     // Set download path and accept
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    downloadItem->setPath(downloadPath);
-#else
     downloadItem->setDownloadDirectory(QFileInfo(downloadPath).absoluteDir().absolutePath());
     downloadItem->setDownloadFileName(QFileInfo(downloadPath).fileName());
-#endif
     downloadItem->accept();
 
     // Create download item

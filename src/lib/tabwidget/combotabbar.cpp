@@ -1359,9 +1359,6 @@ void TabBarHelper::paintEvent(QPaintEvent *)
             grabImage.setDevicePixelRatio(devicePixelRatioF());
             grabImage.fill(Qt::transparent);
             QStylePainter p(&grabImage, this);
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-            p.initFrom(this);
-#endif
             if (tabDragOffset != 0) {
                 tab.position = QStyleOptionTab::OnlyOneTab;
             }
@@ -1814,11 +1811,7 @@ QSize CloseButton::sizeHint() const
     return QSize(width, height);
 }
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-void CloseButton::enterEvent(QEvent* event)
-#else
 void CloseButton::enterEvent(QEnterEvent* event)
-#endif
 {
     if (isEnabled()) {
         update();

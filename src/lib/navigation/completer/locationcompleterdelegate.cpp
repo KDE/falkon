@@ -324,11 +324,7 @@ int LocationCompleterDelegate::viewItemDrawText(QPainter *p, const QStyleOptionV
                 highlightParts << highlightedPart;
             }
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-            textLayout.setFormats(QVector<QTextLayout::FormatRange>::fromList(highlightParts));
-#else
             textLayout.setFormats(highlightParts);
-#endif
         }
     }
 

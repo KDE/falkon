@@ -35,11 +35,7 @@ class FALKON_EXPORT NetworkManager : public QNetworkAccessManager
 public:
     explicit NetworkManager(QObject *parent = nullptr);
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    bool certificateError(const QWebEngineCertificateError &error, QWidget *parent = nullptr);
-#else
     bool certificateError(QWebEngineCertificateError &error, QWidget *parent = nullptr);
-#endif
     void authentication(const QUrl &url, QAuthenticator *auth, QWidget *parent = nullptr);
     void proxyAuthentication(const QString &proxyHost, QAuthenticator *auth, QWidget *parent = nullptr);
 
@@ -62,13 +58,8 @@ private:
 
     NetworkUrlInterceptor *m_urlInterceptor;
     ExtensionSchemeManager *m_extensionScheme;
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    QHash<QString, QWebEngineCertificateError::Error> m_ignoredSslErrors;
-    QHash<QString, QWebEngineCertificateError::Error> m_rejectedSslErrors;
-#else
     QHash<QString, QWebEngineCertificateError::Type> m_ignoredSslErrors;
     QHash<QString, QWebEngineCertificateError::Type> m_rejectedSslErrors;
-#endif
     QStringList m_ignoredSslHosts;
 };
 

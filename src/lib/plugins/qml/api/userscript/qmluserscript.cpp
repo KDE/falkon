@@ -20,9 +20,7 @@
 
 QmlUserScript::QmlUserScript(QObject *parent)
     : QObject(parent)
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
     , m_isNull(true)
-#endif
 {
 }
 
@@ -44,11 +42,7 @@ void QmlUserScript::setWebEngineScript(const QWebEngineScript &script)
 
 bool QmlUserScript::null() const
 {
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    return m_webEngineScript.isNull();
-#else
     return m_isNull;
-#endif
 }
 
 QString QmlUserScript::name() const

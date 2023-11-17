@@ -20,10 +20,8 @@ set(QT_INCLUDE_DIRS
     ${QT_WEBENGINECORE_INCLUDE_DIRS}
     ${QT_WEBENGINEWIDGETS_INCLUDE_DIRS}
 )
-if (QT_MAJOR_VERSION STREQUAL "6")
-    get_property(QT_PRINTSUPPORT_INCLUDE_DIRS TARGET Qt${QT_MAJOR_VERSION}::PrintSupport PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
-    list(APPEND QT_INCLUDE_DIRS ${QT_PRINTSUPPORT_INCLUDE_DIRS})
-endif()
+get_property(QT_PRINTSUPPORT_INCLUDE_DIRS TARGET Qt${QT_MAJOR_VERSION}::PrintSupport PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
+list(APPEND QT_INCLUDE_DIRS ${QT_PRINTSUPPORT_INCLUDE_DIRS})
 set(INCLUDES "")
 foreach(INCLUDE_DIR ${QT_INCLUDE_DIRS})
     list(APPEND INCLUDES "-I${INCLUDE_DIR}")
@@ -37,11 +35,7 @@ endforeach()
 set(GLOBAL_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/pyfalkon_global.h)
 set(TYPESYSTEM_FILE ${CMAKE_CURRENT_SOURCE_DIR}/typesystem_pyfalkon.xml)
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(API_VERSION "${Qt6_VERSION_MAJOR}.${Qt6_VERSION_MINOR}")
-else()
-    set(API_VERSION "${Qt5_VERSION_MAJOR}.${Qt5_VERSION_MINOR}")
-endif()
+set(API_VERSION "${Qt6_VERSION_MAJOR}.${Qt6_VERSION_MINOR}")
 
 set(SHIBOKEN_OPTIONS --generator-set=shiboken --enable-parent-ctor-heuristic
     --enable-pyside-extensions --enable-return-value-heuristic --use-isnull-as-nb_nonzero
@@ -144,11 +138,7 @@ set(GENERATED_SOURCES_DEPENDENCIES
     ${TYPESYSTEM_FILE}
 )
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(PYSIDE_VERSION "6")
-else()
-    set(PYSIDE_VERSION "2")
-endif()
+set(PYSIDE_VERSION "6")
 
 # Add custom target to run shiboken.
 add_custom_command(OUTPUT ${GENERATED_SOURCES}

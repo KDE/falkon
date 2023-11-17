@@ -31,11 +31,7 @@ class QMenu;
 class QWebEngineProfile;
 class QWebEngineSettings;
 class QNetworkAccessManager;
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-class QWebEngineDownloadItem;
-#else
 class QWebEngineDownloadRequest;
-#endif
 
 class History;
 class AutoFill;
@@ -150,11 +146,7 @@ private Q_SLOTS:
     void onFocusChanged();
     void runDeferredPostLaunchActions();
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    void downloadRequested(QWebEngineDownloadItem *download);
-#else
     void downloadRequested(QWebEngineDownloadRequest *download);
-#endif
 
 private:
     enum PostLaunchAction {

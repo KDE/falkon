@@ -43,10 +43,7 @@
 #include <QCoreApplication>
 #include <QDataStream>
 #include <QTime>
-
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
 #include <QRegExp>
-#endif
 
 #include "../config.h"
 #if defined(Q_OS_LINUX) && !defined(DISABLE_DBUS)
@@ -114,11 +111,7 @@ QtLocalPeer::QtLocalPeer(QObject* parent, const QString &appId)
 #endif
         prefix = id.section(QLatin1Char('/'), -1);
     }
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    prefix.remove(QRegExp("[^a-zA-Z]"));
-#else
     prefix = QRegExp("[^a-zA-Z]").removeIn(prefix);
-#endif
     prefix.truncate(6);
 
     QByteArray idc = id.toUtf8();

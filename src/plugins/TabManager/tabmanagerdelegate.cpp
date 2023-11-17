@@ -244,11 +244,7 @@ void TabManagerDelegate::viewItemDrawText(QPainter *p, const QStyleOptionViewIte
                 highlightParts << highlightedPart;
             }
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-            textLayout.setAdditionalFormats(highlightParts);
-#else
             textLayout.setFormats(highlightParts);
-#endif
         }
     }
 
