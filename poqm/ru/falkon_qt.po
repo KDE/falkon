@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-04-21 14:54+0300\n"
+"PO-Revision-Date: 2023-11-16 11:45+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2244,13 +2244,13 @@ msgstr "Начать поиск, когда поисковая система и
 #: lib/navigation/zoomlabel.cpp:35
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Сбросить уровень масштабирования"
 
 #: lib/navigation/zoomlabel.cpp:60
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/network/networkmanager.cpp:86
 msgctxt "NetworkManager|"
@@ -2689,7 +2689,7 @@ msgstr "Нет доступных расширений."
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Только для этого сеанса"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3579,44 +3579,35 @@ msgstr "Исключения"
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "Узел: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "Добавить исключение для сертификата"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "Узел %1 уже присутствует в списке"
 
 #: lib/preferences/certificatemanager.cpp:83
-#, fuzzy
-#| msgctxt "Bookmarks|"
-#| msgid "Empty"
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "Пусто"
+msgstr "Пустой узел"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Диспетчер исключений для сертификатов"
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "Добавить"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
 msgstr "Удалить"
@@ -3624,7 +3615,7 @@ msgstr "Удалить"
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "Для удаления записи необходим перезапуск"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -3714,7 +3705,7 @@ msgstr "Установить по умолчанию"
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/preferences/preferences.cpp:557
 msgctxt "Preferences|"
@@ -4124,7 +4115,7 @@ msgstr "Включить встроенные предложения"
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
-msgstr "Нажмите клавишу Shift, чтобы открыть ссылку в текущей вкладке"
+msgstr "Открывать ссылки в текущей вкладке по нажатию клавиши Shift"
 
 #: lib/preferences/preferences.ui:810
 msgctxt "Preferences|"
@@ -4137,12 +4128,9 @@ msgid "Always show go icon"
 msgstr "Всегда показывать значок перехода"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "О&ткрыть изображение"
+msgstr "Показывать отметку масштаба"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4172,7 +4160,7 @@ msgstr "Показывать предложения поиска"
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "Развернуть всплывающую панель предложений до ширины окна"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
@@ -4720,7 +4708,7 @@ msgstr "Диспетчер обработчиков протоколов"
 #: lib/preferences/preferences.ui:2538
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
-msgstr "Управление поисковыми системами"
+msgstr "Диспетчер поисковых систем"
 
 #: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
@@ -4735,7 +4723,7 @@ msgstr "<b>Управление поисковыми системами</b>"
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "Управление пользовательскими схемами"
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
@@ -4750,7 +4738,7 @@ msgstr "<b>Предпочитаемый язык для веб-сайтов</b>"
 #: lib/preferences/preferences.ui:2652
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Диспетчер исключений для сертификатов"
 
 #: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
@@ -4760,7 +4748,7 @@ msgstr "<b>Параметры идентификации</b>"
 #: lib/preferences/preferences.ui:2699
 msgctxt "Preferences|"
 msgid "User Agent Manager"
-msgstr "Управление агентами пользователя"
+msgstr "Диспетчер агентов пользователя"
 
 #: lib/preferences/preferences.ui:2721
 msgctxt "Preferences|"
@@ -4774,90 +4762,69 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Управление обработчиками протоколов</b>"
 
 #: lib/preferences/preferences.ui:2765
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>Уведомления</b>"
+msgstr "<b>Диспетчер сертификатов</b>"
 
 #: lib/preferences/preferences.ui:2816
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "Диспетчер файлов cookie"
+msgstr "Диспетчер пользовательских схем"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "Добавить допустимую схему"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Themes"
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "Темы"
+msgstr "Схема:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "Добавить заблокированную схему"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "Диспетчер пользовательских схем"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "Допустимые схемы"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
-msgstr ""
+msgstr "**Примечание:** допустимые схемы могут добавляться расширениями."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "Добавить"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "Удалить"
 
 #: lib/preferences/schememanager.ui:68
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "AdBlock"
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "AdBlock"
+msgstr "Заблокировать"
 
 #: lib/preferences/schememanager.ui:98
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "Заблокированное содержимое"
+msgstr "Заблокированные схемы"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Изменения вступят в силу после перезапуска Falkon."
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -4926,7 +4893,7 @@ msgstr "Агент пользователя: "
 #: lib/preferences/useragentdialog.ui:14
 msgctxt "UserAgentDialog|"
 msgid "User Agent Manager"
-msgstr "Управление агентами пользователя"
+msgstr "Диспетчер агентов пользователя"
 
 #: lib/preferences/useragentdialog.ui:20
 msgctxt "UserAgentDialog|"
