@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 13:43+0100\n"
-"PO-Revision-Date: 2023-11-15 22:01+0100\n"
+"PO-Revision-Date: 2023-11-17 21:22+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -340,7 +340,11 @@ msgid_plural ""
 "There are still %n open tabs and your session won't be stored.\n"
 "Are you sure you want to close this window?"
 msgstr[0] ""
+"Estas ankoraŭ %n malfermitaj langetoj kaj via sesio ne estos konservita.\n"
+"Ĉu vi certas, ke vi volas fermi ĉi tiun fenestron?"
 msgstr[1] ""
+"Estas ankoraŭ %n malfermitaj langetoj kaj via sesio ne estos konservita.\n"
+"Ĉu vi certas, ke vi volas fermi ĉi tiun fenestron?"
 
 #: lib/app/browserwindow.cpp:1508
 msgctxt "BrowserWindow|"
@@ -1039,11 +1043,13 @@ msgid ""
 "You can import bookmarks from any browser that supports HTML exporting. This "
 "file has usually these suffixes"
 msgstr ""
+"Vi povas importi legosignojn de iu ajn retumilo, kiu subtenas HTML-"
+"eksportadon. Ĉi tiu dosiero kutime havas ĉi tiujn sufiksojn"
 
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:43
 msgctxt "BookmarksImporter|"
 msgid "HTML Bookmarks"
-msgstr ""
+msgstr "HTML-Legosignoj"
 
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -1051,11 +1057,13 @@ msgid ""
 "Internet Explorer stores its bookmarks in <b>Favorites</b> folder. This "
 "folder is usually located in"
 msgstr ""
+"Internet Explorer konservas siajn legosignojn en la dosierujo <b>Favoritaj</"
+"b>. Ĉi tiu dosierujo kutime troviĝas en"
 
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
 msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
-msgstr ""
+msgstr "Dosierujo ne ekzistas."
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:37
 msgctxt "BookmarksImporter|"
@@ -1063,260 +1071,264 @@ msgid ""
 "Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
 "usually located in"
 msgstr ""
+"Opera konservas siajn legosignojn en <b>bookmarks.adr</b> tekstdosiero. Ĉi "
+"tiu dosiero kutime troviĝas en"
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:68
 msgctxt "BookmarksImporter|"
 msgid "File is not valid Opera bookmarks file!"
-msgstr ""
+msgstr "Dosiero ne validas Opera legosigndosiero!"
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:73
 msgctxt "BookmarksImporter|"
 msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
-msgstr ""
+msgstr "Nur UTF-8 kodita Opera legosignoj dosiero estas subtenata!"
 
 #: lib/bookmarks/bookmarksmanager.cpp:105
 msgctxt "BookmarksManager|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "Malfermi en nova langeto"
 
 #: lib/bookmarks/bookmarksmanager.cpp:106
 msgctxt "BookmarksManager|"
 msgid "Open in new window"
-msgstr ""
+msgstr "Malfermi en nova fenestro"
 
 #: lib/bookmarks/bookmarksmanager.cpp:107
 msgctxt "BookmarksManager|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Malfermi en nova privata fenestro"
 
 #: lib/bookmarks/bookmarksmanager.cpp:110
 #: lib/bookmarks/bookmarksmanager.cpp:177
 msgctxt "BookmarksManager|"
 msgid "New Bookmark"
-msgstr ""
+msgstr "Nova Legomarko"
 
 #: lib/bookmarks/bookmarksmanager.cpp:111
 #: lib/bookmarks/bookmarksmanager.cpp:185
 msgctxt "BookmarksManager|"
 msgid "New Folder"
-msgstr ""
+msgstr "Nova Dosierujo"
 
 #: lib/bookmarks/bookmarksmanager.cpp:112
 msgctxt "BookmarksManager|"
 msgid "New Separator"
-msgstr ""
+msgstr "Nova Apartigilo"
 
 #: lib/bookmarks/bookmarksmanager.cpp:114
 msgctxt "BookmarksManager|"
 msgid "Delete"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/bookmarks/bookmarksmanager.ui:14
 msgctxt "BookmarksManager|"
 msgid "Bookmarks"
-msgstr ""
+msgstr "Legosignoj"
 
 #: lib/bookmarks/bookmarksmanager.ui:32
 msgctxt "BookmarksManager|"
 msgid "Title:"
-msgstr ""
+msgstr "Titolo:"
 
 #: lib/bookmarks/bookmarksmanager.ui:42
 msgctxt "BookmarksManager|"
 msgid "Address:"
-msgstr ""
+msgstr "Adreso:"
 
 #: lib/bookmarks/bookmarksmanager.ui:52
 msgctxt "BookmarksManager|"
 msgid "Keyword:"
-msgstr ""
+msgstr "Ŝlosilvorto:"
 
 #: lib/bookmarks/bookmarksmanager.ui:62
 msgctxt "BookmarksManager|"
 msgid "Description"
-msgstr ""
+msgstr "Priskribo"
 
 #: lib/bookmarks/bookmarksmenu.cpp:166
 msgctxt "BookmarksMenu|"
 msgid "&Bookmarks"
-msgstr ""
+msgstr "&Legosignoj"
 
 #: lib/bookmarks/bookmarksmenu.cpp:168
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &This Page"
-msgstr ""
+msgstr "Legomarki Ĉi &Tiun Paĝon"
 
 #: lib/bookmarks/bookmarksmenu.cpp:169
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &All Tabs"
-msgstr ""
+msgstr "Legom&arki Ĉiujn Langetojn"
 
 #: lib/bookmarks/bookmarksmenu.cpp:170
 msgctxt "BookmarksMenu|"
 msgid "Organize &Bookmarks"
-msgstr ""
+msgstr "Organizi &Legosignojn"
 
 #: lib/bookmarks/bookmarksmodel.cpp:148
 msgctxt "BookmarksModel|"
 msgid "Title"
-msgstr ""
+msgstr "Titolo"
 
 #: lib/bookmarks/bookmarksmodel.cpp:150
 msgctxt "BookmarksModel|"
 msgid "Address"
-msgstr ""
+msgstr "Adreso"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:74
 msgctxt "BookmarksToolbar|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "Malfermi en nova langeto"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:75
 msgctxt "BookmarksToolbar|"
 msgid "Open in new window"
-msgstr ""
+msgstr "Malfermi en nova fenestro"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:76
 msgctxt "BookmarksToolbar|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Malfermi en nova privata fenestro"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:78 lib/bookmarks/bookmarkstoolbar.cpp:186
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
-msgstr ""
+msgstr "Nova Dosierujo"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:79
 msgctxt "BookmarksToolbar|"
 msgid "Edit"
-msgstr ""
+msgstr "Redakti"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:80
 msgctxt "BookmarksToolbar|"
 msgid "Delete"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:82
 msgctxt "BookmarksToolbar|"
 msgid "Show Only Icons"
-msgstr ""
+msgstr "Montri Nur Piktogramojn"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:86
 msgctxt "BookmarksToolbar|"
 msgid "Show Only Text"
-msgstr ""
+msgstr "Montri Nur Tekston"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:186
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
-msgstr ""
+msgstr "Enigu la Nomon de Dosierujo:"
 
 #: lib/bookmarks/bookmarkstools.cpp:76
 #, qt-format
 msgctxt "BookmarksFoldersMenu|"
 msgid "Choose %1"
-msgstr ""
+msgstr "Elekti %1"
 
 #: lib/bookmarks/bookmarkstools.cpp:153
 msgctxt "Bookmarks|"
 msgid "Choose name and location of this bookmark."
-msgstr ""
+msgstr "Elekti nomon kaj lokon de ĉi tiu legosigno."
 
 #: lib/bookmarks/bookmarkstools.cpp:157
 msgctxt "Bookmarks|"
 msgid "Add New Bookmark"
-msgstr ""
+msgstr "Aldoni Novan Legomarkon"
 
 #: lib/bookmarks/bookmarkstools.cpp:197
 msgctxt "Bookmarks|"
 msgid "Choose folder for bookmarks:"
-msgstr ""
+msgstr "Elektu dosierujon por legosignoj:"
 
 #: lib/bookmarks/bookmarkstools.cpp:198
 msgctxt "Bookmarks|"
 msgid "Bookmark All Tabs"
-msgstr ""
+msgstr "Legomarki Ĉiujn Langetojn"
 
 #: lib/bookmarks/bookmarkstools.cpp:239
 msgctxt "Bookmarks|"
 msgid "Title:"
-msgstr ""
+msgstr "Titolo:"
 
 #: lib/bookmarks/bookmarkstools.cpp:242
 msgctxt "Bookmarks|"
 msgid "Address:"
-msgstr ""
+msgstr "Adreso:"
 
 #: lib/bookmarks/bookmarkstools.cpp:244
 msgctxt "Bookmarks|"
 msgid "Keyword:"
-msgstr ""
+msgstr "Ŝlosilvorto:"
 
 #: lib/bookmarks/bookmarkstools.cpp:247
 msgctxt "Bookmarks|"
 msgid "Description:"
-msgstr ""
+msgstr "Priskribo:"
 
 #: lib/bookmarks/bookmarkstools.cpp:252
 msgctxt "Bookmarks|"
 msgid "Edit Bookmark"
-msgstr ""
+msgstr "Redakti Legomarkon"
 
 #: lib/bookmarks/bookmarkstools.cpp:344
 msgctxt "Bookmarks|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Konfirmo"
 
 #: lib/bookmarks/bookmarkstools.cpp:345
 #, qt-format
 msgctxt "Bookmarks|"
 msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
 msgstr ""
+"Ĉu vi certas, ke vi volas malfermi ĉiujn legosignojn de '%1' dosierujo en "
+"langetoj?"
 
 #: lib/bookmarks/bookmarkstools.cpp:440
 msgctxt "Bookmarks|"
 msgid "Empty"
-msgstr ""
+msgstr "Malplena"
 
 #: lib/bookmarks/bookmarkswidget.cpp:98
 msgctxt "BookmarksWidget|"
 msgid "Update Bookmark"
-msgstr ""
+msgstr "Ĝisdatigi Legomarkon"
 
 #: lib/bookmarks/bookmarkswidget.cpp:112 lib/bookmarks/bookmarkswidget.ui:33
 msgctxt "BookmarksWidget|"
 msgid "Add to Speed Dial"
-msgstr ""
+msgstr "Aldoni al Rapida Dial"
 
 #: lib/bookmarks/bookmarkswidget.cpp:116
 msgctxt "BookmarksWidget|"
 msgid "Remove from Speed Dial"
-msgstr ""
+msgstr "Forigi el Rapida Dial"
 
 #: lib/bookmarks/bookmarkswidget.cpp:121
 msgctxt "BookmarksWidget|"
 msgid "Remove from Bookmarks"
-msgstr ""
+msgstr "Forigi el legosignoj"
 
 #: lib/bookmarks/bookmarkswidget.ui:20
 msgctxt "BookmarksWidget|"
 msgid "Add to Bookmarks"
-msgstr ""
+msgstr "Aldoni al Legosignoj"
 
 #: lib/cookies/cookiemanager.cpp:78
 msgctxt "CookieManager|"
 msgid "Search"
-msgstr ""
+msgstr "Serĉi"
 
 #: lib/cookies/cookiemanager.cpp:105
 msgctxt "CookieManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Konfirmo"
 
 #: lib/cookies/cookiemanager.cpp:106
 msgctxt "CookieManager|"
 msgid "Are you sure you want to delete all cookies on your computer?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas forigi ĉiujn kuketojn en via komputilo?"
 
 #: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
 #: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
@@ -1326,148 +1338,148 @@ msgstr ""
 #: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
 msgctxt "CookieManager|"
 msgid "<cookie not selected>"
-msgstr ""
+msgstr "<kuketo ne elektita>"
 
 #: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
 #: lib/cookies/cookiemanager.ui:245
 msgctxt "CookieManager|"
 msgid "Remove cookies"
-msgstr ""
+msgstr "Forigi kuketojn"
 
 #: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
 #: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
 #: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
 msgctxt "CookieManager|"
 msgid "<multiple cookies selected>"
-msgstr ""
+msgstr "<pluraj kuketoj elektitaj>"
 
 #: lib/cookies/cookiemanager.cpp:178
 msgctxt "CookieManager|"
 msgid "Secure only"
-msgstr ""
+msgstr "Nur sekuraj"
 
 #: lib/cookies/cookiemanager.cpp:178
 msgctxt "CookieManager|"
 msgid "All connections"
-msgstr ""
+msgstr "Ĉiuj rilatoj"
 
 #: lib/cookies/cookiemanager.cpp:179
 msgctxt "CookieManager|"
 msgid "Session cookie"
-msgstr ""
+msgstr "Seanca kuketo"
 
 #: lib/cookies/cookiemanager.cpp:181
 msgctxt "CookieManager|"
 msgid "Remove cookie"
-msgstr ""
+msgstr "Forigi kuketon"
 
 #: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
-msgstr ""
+msgstr "Servilo:"
 
 #: lib/cookies/cookiemanager.cpp:186
 msgctxt "CookieManager|"
 msgid "Add to whitelist"
-msgstr ""
+msgstr "Aldoni al blanka listo"
 
 #: lib/cookies/cookiemanager.cpp:193
 msgctxt "CookieManager|"
 msgid "Already blacklisted!"
-msgstr ""
+msgstr "Jam en nigra listo!"
 
 #: lib/cookies/cookiemanager.cpp:193
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
-msgstr ""
+msgstr "La servilo \"%1\" jam estas en nigra listo, bonvolu forigi ĝin unue."
 
 #: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
-msgstr ""
+msgstr "Aldoni al nigra listo"
 
 #: lib/cookies/cookiemanager.cpp:220
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
-msgstr ""
+msgstr "Jam blanklisto!"
 
 #: lib/cookies/cookiemanager.cpp:220
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
-msgstr ""
+msgstr "La servilo \"%1\" jam estas en blanka listo, bonvolu forigi ĝin unue."
 
 #: lib/cookies/cookiemanager.ui:14
 msgctxt "CookieManager|"
 msgid "Cookies"
-msgstr ""
+msgstr "Kuketoj"
 
 #: lib/cookies/cookiemanager.ui:36
 msgctxt "CookieManager|"
 msgid "Stored Cookies"
-msgstr ""
+msgstr "Konservitaj Kuketoj"
 
 #: lib/cookies/cookiemanager.ui:42
 msgctxt "CookieManager|"
 msgid "Find: "
-msgstr ""
+msgstr "Trovi:"
 
 #: lib/cookies/cookiemanager.ui:52
 msgctxt "CookieManager|"
 msgid "These cookies are stored on your computer:"
-msgstr ""
+msgstr "Ĉi tiuj kuketoj estas konservitaj en via komputilo:"
 
 #: lib/cookies/cookiemanager.ui:66
 msgctxt "CookieManager|"
 msgid "Server"
-msgstr ""
+msgstr "Servilo"
 
 #: lib/cookies/cookiemanager.ui:71
 msgctxt "CookieManager|"
 msgid "Cookie name"
-msgstr ""
+msgstr "Nomo de kuketo"
 
 #: lib/cookies/cookiemanager.ui:109
 msgctxt "CookieManager|"
 msgid "Name:"
-msgstr ""
+msgstr "Nomo:"
 
 #: lib/cookies/cookiemanager.ui:119
 msgctxt "CookieManager|"
 msgid "Value:"
-msgstr ""
+msgstr "Valoro:"
 
 #: lib/cookies/cookiemanager.ui:133
 msgctxt "CookieManager|"
 msgid "Path:"
-msgstr ""
+msgstr "Vojo:"
 
 #: lib/cookies/cookiemanager.ui:140
 msgctxt "CookieManager|"
 msgid "Secure:"
-msgstr ""
+msgstr "Sekura:"
 
 #: lib/cookies/cookiemanager.ui:147
 msgctxt "CookieManager|"
 msgid "Expiration:"
-msgstr ""
+msgstr "Eksvalidiĝo:"
 
 #: lib/cookies/cookiemanager.ui:238
 msgctxt "CookieManager|"
 msgid "Remove all cookies"
-msgstr ""
+msgstr "Forigi ĉiujn kuketojn"
 
 #: lib/cookies/cookiemanager.ui:269
 msgctxt "CookieManager|"
 msgid "Cookie Filtering"
-msgstr ""
+msgstr "Kuketo Filtrado"
 
 #: lib/cookies/cookiemanager.ui:275
 msgctxt "CookieManager|"
 msgid "<b>Cookie whitelist</b>"
-msgstr ""
+msgstr "<b>Blanlisto de kuketoj</b>"
 
 #: lib/cookies/cookiemanager.ui:282
 msgctxt "CookieManager|"
@@ -1475,201 +1487,203 @@ msgid ""
 "Cookies from these servers will ALWAYS be accepted (even if you have "
 "disabled saving cookies)"
 msgstr ""
+"Kuketoj de ĉi tiuj serviloj ĈIAM estos akceptitaj (eĉ se vi malŝaltis "
+"konservadon de kuketoj)"
 
 #: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
 msgctxt "CookieManager|"
 msgid "Add"
-msgstr ""
+msgstr "Aldoni"
 
 #: lib/cookies/cookiemanager.ui:314 lib/cookies/cookiemanager.ui:368
 msgctxt "CookieManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/cookies/cookiemanager.ui:326
 msgctxt "CookieManager|"
 msgid "<b>Cookie blacklist</b>"
-msgstr ""
+msgstr "<b>Nigra listo de kuketoj</b>"
 
 #: lib/cookies/cookiemanager.ui:333
 msgctxt "CookieManager|"
 msgid "Cookies from these servers will NEVER be accepted"
-msgstr ""
+msgstr "Kuketoj de ĉi tiuj serviloj NENIAM estos akceptitaj"
 
 #: lib/cookies/cookiemanager.ui:385
 msgctxt "CookieManager|"
 msgid "Settings"
-msgstr ""
+msgstr "Agordoj"
 
 #: lib/cookies/cookiemanager.ui:407
 msgctxt "CookieManager|"
 msgid "Filter 3rd party cookies"
-msgstr ""
+msgstr "Filtri triajn kuketojn"
 
 #: lib/cookies/cookiemanager.ui:414
 msgctxt "CookieManager|"
 msgid "<b>Cookie Settings</b>"
-msgstr ""
+msgstr "<b>Agordoj de Kuketoj</b>"
 
 #: lib/cookies/cookiemanager.ui:421
 msgctxt "CookieManager|"
 msgid "Allow storing of cookies"
-msgstr ""
+msgstr "Permesi konservadon de kuketoj"
 
 #: lib/cookies/cookiemanager.ui:428
 msgctxt "CookieManager|"
 msgid "Filter tracking cookies"
-msgstr ""
+msgstr "Filtri spurantajn kuketojn"
 
 #: lib/cookies/cookiemanager.ui:435
 msgctxt "CookieManager|"
 msgid "Delete cookies on close"
-msgstr ""
+msgstr "Forigi kuketojn ĉe fermo"
 
 #: lib/downloads/downloaditem.cpp:77
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
-msgstr ""
+msgstr "Resta tempo nedisponebla"
 
 #: lib/downloads/downloaditem.cpp:138
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
-msgstr ""
+msgstr "Farita - %1 (%2)"
 
 #: lib/downloads/downloaditem.cpp:142
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
-msgstr ""
+msgstr "Eraro - %1"
 
 #: lib/downloads/downloaditem.cpp:146 lib/downloads/downloaditem.cpp:293
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
-msgstr ""
+msgstr "Nuligite - %1"
 
 #: lib/downloads/downloaditem.cpp:202 lib/downloads/downloaditem.cpp:337
 msgctxt "DownloadItem|"
 msgid "Cancelled"
-msgstr ""
+msgstr "Nuligite"
 
 #: lib/downloads/downloaditem.cpp:208
 msgctxt "DownloadItem|"
 msgid "few seconds"
-msgstr ""
+msgstr "kelkajn sekundojn"
 
 #: lib/downloads/downloaditem.cpp:213
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%n sekundoj"
+msgstr[1] "%n sekundoj"
 
 #: lib/downloads/downloaditem.cpp:218
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%n minutoj"
+msgstr[1] "%n minutoj"
 
 #: lib/downloads/downloaditem.cpp:223
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%n horoj"
+msgstr[1] "%n horoj"
 
 #: lib/downloads/downloaditem.cpp:230
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
-msgstr ""
+msgstr "Nekonata rapideco"
 
 #: lib/downloads/downloaditem.cpp:235
 msgctxt "DownloadItem|"
 msgid "kB/s"
-msgstr ""
+msgstr "kB/s"
 
 #: lib/downloads/downloaditem.cpp:240
 msgctxt "DownloadItem|"
 msgid "MB/s"
-msgstr ""
+msgstr "MB/s"
 
 #: lib/downloads/downloaditem.cpp:244
 msgctxt "DownloadItem|"
 msgid "GB/s"
-msgstr ""
+msgstr "GB/s"
 
 #: lib/downloads/downloaditem.cpp:272
 msgctxt "DownloadItem|"
 msgid "Unknown size"
-msgstr ""
+msgstr "Nekonata grandeco"
 
 #: lib/downloads/downloaditem.cpp:273
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
-msgstr ""
+msgstr "%2 - nekonata grandeco (%3)"
 
 #: lib/downloads/downloaditem.cpp:276
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
-msgstr ""
+msgstr "Restanta %1 - %2 el %3 (%4)"
 
 #: lib/downloads/downloaditem.cpp:308
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
-msgstr ""
+msgstr "Paŭzita - %1"
 
 #: lib/downloads/downloaditem.cpp:321
 msgctxt "DownloadItem|"
 msgid "Open File"
-msgstr ""
+msgstr "Malfermi Dosieron"
 
 #: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Open Folder"
-msgstr ""
+msgstr "Malfermi Dosierujon"
 
 #: lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
-msgstr ""
+msgstr "Kopii Elŝutan Ligilon"
 
 #: lib/downloads/downloaditem.cpp:327
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
-msgstr ""
+msgstr "Nuligi elŝuton"
 
 #: lib/downloads/downloaditem.cpp:330
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
-msgstr ""
+msgstr "Rekomenci elŝutadon"
 
 #: lib/downloads/downloaditem.cpp:332
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
-msgstr ""
+msgstr "Paŭzi elŝuton"
 
 #: lib/downloads/downloaditem.cpp:335
 msgctxt "DownloadItem|"
 msgid "Remove From List"
-msgstr ""
+msgstr "Forigi el Listo"
 
 #: lib/downloads/downloaditem.cpp:337
 msgctxt "DownloadItem|"
 msgid "Error"
-msgstr ""
+msgstr "Eraro"
 
 #: lib/downloads/downloaditem.cpp:363
 msgctxt "DownloadItem|"
 msgid "Not found"
-msgstr ""
+msgstr "Ne trovita"
 
 #: lib/downloads/downloaditem.cpp:363
 #, qt-format
@@ -1679,561 +1693,565 @@ msgid ""
 " %1 \n"
 " was not found!"
 msgstr ""
+"Pardonu, la dosiero \n"
+" %1 \n"
+" ne estis trovita!"
 
 #: lib/downloads/downloadmanager.cpp:200 lib/downloads/downloadmanager.cpp:440
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
-msgstr ""
+msgstr "Elŝuta Administranto"
 
 #: lib/downloads/downloadmanager.cpp:238
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
-msgstr ""
+msgstr "%1% de %2 dosieroj (%3) %4 ceteraj"
 
 #: lib/downloads/downloadmanager.cpp:242
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
-msgstr ""
+msgstr "%1% - Elŝuta Administranto"
 
 #: lib/downloads/downloadmanager.cpp:316
 msgctxt "DownloadManager|"
 msgid "Save file as..."
-msgstr ""
+msgstr "Konservi dosieron kiel..."
 
 #: lib/downloads/downloadmanager.cpp:326
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
-msgstr ""
+msgstr "MIME HTML-Arkivo (*.mhtml)"
 
 #: lib/downloads/downloadmanager.cpp:327
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
-msgstr ""
+msgstr "HTML-paĝo, unuopa (*.html)"
 
 #: lib/downloads/downloadmanager.cpp:328
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
-msgstr ""
+msgstr "HTML Paĝo, kompleta (*.html)"
 
 #: lib/downloads/downloadmanager.cpp:332
 msgctxt "DownloadManager|"
 msgid "Save page as..."
-msgstr ""
+msgstr "Konservi paĝon kiel..."
 
 #: lib/downloads/downloadmanager.cpp:433
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
-msgstr ""
+msgstr "Falkon: Elŝuto Finita"
 
 #: lib/downloads/downloadmanager.cpp:433
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
-msgstr ""
+msgstr "Ĉiuj dosieroj estis sukcese elŝutitaj."
 
 #: lib/downloads/downloadmanager.cpp:480
 msgctxt "DownloadManager|"
 msgid "Warning"
-msgstr ""
+msgstr "Averto"
 
 #: lib/downloads/downloadmanager.cpp:481
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
 msgstr ""
+"Ĉu vi certas, ke vi volas ĉesi? Ĉiuj nekompletigitaj elŝutoj estos nuligitaj!"
 
 #: lib/downloads/downloadmanager.ui:69
 msgctxt "DownloadManager|"
 msgid "Clear"
-msgstr ""
+msgstr "Klara"
 
 #: lib/downloads/downloadoptionsdialog.cpp:53
 #, qt-format
 msgctxt "DownloadOptionsDialog|"
 msgid "Opening %1"
-msgstr ""
+msgstr "Malfermante %1"
 
 #: lib/downloads/downloadoptionsdialog.cpp:116
 msgctxt "DownloadOptionsDialog|"
 msgid "Download link copied."
-msgstr ""
+msgstr "Elŝuta ligilo kopiita."
 
 #: lib/downloads/downloadoptionsdialog.ui:25
 msgctxt "DownloadOptionsDialog|"
 msgid "What should Falkon do with this file?"
-msgstr ""
+msgstr "Kion Falkon faru kun ĉi tiu dosiero?"
 
 #: lib/downloads/downloadoptionsdialog.ui:47
 msgctxt "DownloadOptionsDialog|"
 msgid "Open..."
-msgstr ""
+msgstr "Malfermi..."
 
 #: lib/downloads/downloadoptionsdialog.ui:54
 msgctxt "DownloadOptionsDialog|"
 msgid "Save File"
-msgstr ""
+msgstr "Konservi Dosieron"
 
 #: lib/downloads/downloadoptionsdialog.ui:64
 msgctxt "DownloadOptionsDialog|"
 msgid "Download with External Manager"
-msgstr ""
+msgstr "Elŝuti per Ekstera Administranto"
 
 #: lib/downloads/downloadoptionsdialog.ui:165
 msgctxt "DownloadOptionsDialog|"
 msgid "which is:"
-msgstr ""
+msgstr "kiu estas:"
 
 #: lib/downloads/downloadoptionsdialog.ui:215
 msgctxt "DownloadOptionsDialog|"
 msgid "from:"
-msgstr ""
+msgstr "de:"
 
 #: lib/downloads/downloadoptionsdialog.ui:241
 msgctxt "DownloadOptionsDialog|"
 msgid "Copy download link"
-msgstr ""
+msgstr "Kopii elŝutan ligilon"
 
 #: lib/downloads/downloadoptionsdialog.ui:256
 msgctxt "DownloadOptionsDialog|"
 msgid "You have chosen to open"
-msgstr ""
+msgstr "Vi elektis malfermi"
 
 #: lib/downloads/downloadsbutton.cpp:27 lib/downloads/downloadsbutton.cpp:43
 msgctxt "DownloadsButton|"
 msgid "Downloads"
-msgstr ""
+msgstr "Elŝutoj"
 
 #: lib/downloads/downloadsbutton.cpp:28
 msgctxt "DownloadsButton|"
 msgid "Open Download Manager"
-msgstr ""
+msgstr "Malfermi Elŝutan Administranton"
 
 #: lib/history/history.cpp:82
 msgctxt "History|"
 msgid "Empty Page"
-msgstr ""
+msgstr "Malplena Paĝo"
 
 #: lib/history/history.cpp:272
 msgctxt "History|"
 msgid "January"
-msgstr ""
+msgstr "Januaro"
 
 #: lib/history/history.cpp:274
 msgctxt "History|"
 msgid "February"
-msgstr ""
+msgstr "Februaro"
 
 #: lib/history/history.cpp:276
 msgctxt "History|"
 msgid "March"
-msgstr ""
+msgstr "Marto"
 
 #: lib/history/history.cpp:278
 msgctxt "History|"
 msgid "April"
-msgstr ""
+msgstr "Aprilo"
 
 #: lib/history/history.cpp:280
 msgctxt "History|"
 msgid "May"
-msgstr ""
+msgstr "Majo"
 
 #: lib/history/history.cpp:282
 msgctxt "History|"
 msgid "June"
-msgstr ""
+msgstr "Junio"
 
 #: lib/history/history.cpp:284
 msgctxt "History|"
 msgid "July"
-msgstr ""
+msgstr "Julio"
 
 #: lib/history/history.cpp:286
 msgctxt "History|"
 msgid "August"
-msgstr ""
+msgstr "Aŭgusto"
 
 #: lib/history/history.cpp:288
 msgctxt "History|"
 msgid "September"
-msgstr ""
+msgstr "Septembro"
 
 #: lib/history/history.cpp:290
 msgctxt "History|"
 msgid "October"
-msgstr ""
+msgstr "Oktobro"
 
 #: lib/history/history.cpp:292
 msgctxt "History|"
 msgid "November"
-msgstr ""
+msgstr "Novembro"
 
 #: lib/history/history.cpp:294
 msgctxt "History|"
 msgid "December"
-msgstr ""
+msgstr "Decembro"
 
 #: lib/history/historymanager.cpp:78
 msgctxt "HistoryManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Konfirmo"
 
 #: lib/history/historymanager.cpp:79
 msgctxt "HistoryManager|"
 msgid "Are you sure you want to delete all history?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas forigi la tutan historion?"
 
 #: lib/history/historymanager.cpp:145
 msgctxt "HistoryManager|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "Malfermi en nova langeto"
 
 #: lib/history/historymanager.cpp:146
 msgctxt "HistoryManager|"
 msgid "Open in new window"
-msgstr ""
+msgstr "Malfermi en nova fenestro"
 
 #: lib/history/historymanager.cpp:147
 msgctxt "HistoryManager|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Malfermi en nova privata fenestro"
 
 #: lib/history/historymanager.cpp:150
 msgctxt "HistoryManager|"
 msgid "Copy url"
-msgstr ""
+msgstr "Kopii URL"
 
 #: lib/history/historymanager.cpp:151
 msgctxt "HistoryManager|"
 msgid "Copy title"
-msgstr ""
+msgstr "Kopii titolon"
 
 #: lib/history/historymanager.cpp:154 lib/history/historymanager.ui:20
 msgctxt "HistoryManager|"
 msgid "Delete"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/history/historymanager.ui:14
 msgctxt "HistoryManager|"
 msgid "History"
-msgstr ""
+msgstr "Historio"
 
 #: lib/history/historymanager.ui:27
 msgctxt "HistoryManager|"
 msgid "Clear All History"
-msgstr ""
+msgstr "Forigi Ĉian Historion"
 
 #: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
 #: lib/history/historymenu.cpp:186
 msgctxt "HistoryMenu|"
 msgid "Empty"
-msgstr ""
+msgstr "Malplena"
 
 #: lib/history/historymenu.cpp:161
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Tabs"
-msgstr ""
+msgstr "Restaŭri Ĉiujn Fermitajn Langetojn"
 
 #: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
 msgctxt "HistoryMenu|"
 msgid "Clear list"
-msgstr ""
+msgstr "Viŝi liston"
 
 #: lib/history/historymenu.cpp:189
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Windows"
-msgstr ""
+msgstr "Restaŭri Ĉiujn Fermitajn Fenestrojn"
 
 #: lib/history/historymenu.cpp:236
 msgctxt "HistoryMenu|"
 msgid "Hi&story"
-msgstr ""
+msgstr "Hi&storio"
 
 #: lib/history/historymenu.cpp:238
 msgctxt "HistoryMenu|"
 msgid "&Back"
-msgstr ""
+msgstr "&Reen"
 
 #: lib/history/historymenu.cpp:241
 msgctxt "HistoryMenu|"
 msgid "&Forward"
-msgstr ""
+msgstr "&Antaŭen"
 
 #: lib/history/historymenu.cpp:244
 msgctxt "HistoryMenu|"
 msgid "&Home"
-msgstr ""
+msgstr "&Hejmo"
 
 #: lib/history/historymenu.cpp:247
 msgctxt "HistoryMenu|"
 msgid "Show &All History"
-msgstr ""
+msgstr "Montri Tut&an Historion"
 
 #: lib/history/historymenu.cpp:255
 msgctxt "HistoryMenu|"
 msgid "Most Visited"
-msgstr ""
+msgstr "Plej Vizitita"
 
 #: lib/history/historymenu.cpp:258
 msgctxt "HistoryMenu|"
 msgid "Closed Tabs"
-msgstr ""
+msgstr "Fermitaj Langetoj"
 
 #: lib/history/historymenu.cpp:261
 msgctxt "HistoryMenu|"
 msgid "Closed Windows"
-msgstr ""
+msgstr "Fermitaj Fenestroj"
 
 #: lib/history/historymodel.cpp:57
 msgctxt "HistoryModel|"
 msgid "Title"
-msgstr ""
+msgstr "Titolo"
 
 #: lib/history/historymodel.cpp:59
 msgctxt "HistoryModel|"
 msgid "Address"
-msgstr ""
+msgstr "Adreso"
 
 #: lib/history/historymodel.cpp:61
 msgctxt "HistoryModel|"
 msgid "Visit Date"
-msgstr ""
+msgstr "Vizita Dato"
 
 #: lib/history/historymodel.cpp:63
 msgctxt "HistoryModel|"
 msgid "Visit Count"
-msgstr ""
+msgstr "Vizita Nombro"
 
 #: lib/history/historymodel.cpp:341 lib/history/historymodel.cpp:472
 msgctxt "HistoryModel|"
 msgid "Today"
-msgstr ""
+msgstr "Hodiaŭ"
 
 #: lib/history/historymodel.cpp:477
 msgctxt "HistoryModel|"
 msgid "This Week"
-msgstr ""
+msgstr "Ĉi-semajne"
 
 #: lib/history/historymodel.cpp:482
 msgctxt "HistoryModel|"
 msgid "This Month"
-msgstr ""
+msgstr "Ĉi tiu monato"
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:158
 msgctxt "LocationCompleterDelegate|"
 msgid "Visit"
-msgstr ""
+msgstr "Viziti"
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:164
 #, qt-format
 msgctxt "LocationCompleterDelegate|"
 msgid "Search with %1"
-msgstr ""
+msgstr "Serĉi kun %1"
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:198
 msgctxt "LocationCompleterDelegate|"
 msgid "Switch to tab"
-msgstr ""
+msgstr "Ŝanĝi al langeto"
 
 #: lib/navigation/completer/locationcompleterview.cpp:73
 msgctxt "LocationCompleterView|"
 msgid "Manage Search Engines"
-msgstr ""
+msgstr "Administri Serĉmotorojn"
 
 #: lib/navigation/completer/locationcompleterview.cpp:78
 msgctxt "LocationCompleterView|"
 msgid "Search with:"
-msgstr ""
+msgstr "Serĉi kun:"
 
 #: lib/navigation/locationbar.cpp:95
 msgctxt "LocationBar|"
 msgid "Paste And &Go"
-msgstr ""
+msgstr "Al&glui Kaj Iri"
 
 #: lib/navigation/locationbar.cpp:163
 #, qt-format
 msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
-msgstr ""
+msgstr "Enigi adreson aŭ serĉi per %1"
 
 #: lib/navigation/locationbar.cpp:165
 msgctxt "LocationBar|"
 msgid "Enter address"
-msgstr ""
+msgstr "Enigi adreson"
 
 #: lib/navigation/navigationbar.cpp:49
 msgctxt "NavigationBar|"
 msgid "Empty Page"
-msgstr ""
+msgstr "Malplena Paĝo"
 
 #: lib/navigation/navigationbar.cpp:77
 msgctxt "NavigationBar|"
 msgid "Back"
-msgstr ""
+msgstr "Reen"
 
 #: lib/navigation/navigationbar.cpp:87
 msgctxt "NavigationBar|"
 msgid "Forward"
-msgstr ""
+msgstr "Antaŭen"
 
 #: lib/navigation/navigationbar.cpp:107
 msgctxt "NavigationBar|"
 msgid "Home"
-msgstr ""
+msgstr "Hejmo"
 
 #: lib/navigation/navigationbar.cpp:115
 msgctxt "NavigationBar|"
 msgid "New Tab"
-msgstr ""
+msgstr "Nova Langeto"
 
 #: lib/navigation/navigationbar.cpp:135
 msgctxt "NavigationBar|"
 msgid "Tools"
-msgstr ""
+msgstr "Iloj"
 
 #: lib/navigation/navigationbar.cpp:148
 msgctxt "NavigationBar|"
 msgid "Main Menu"
-msgstr ""
+msgstr "Ĉefa Menuo"
 
 #: lib/navigation/navigationbar.cpp:165
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen"
-msgstr ""
+msgstr "Eliri Plenekranon"
 
 #: lib/navigation/navigationbar.cpp:191
 msgctxt "NavigationBar|"
 msgid "Back and Forward buttons"
-msgstr ""
+msgstr "Butonoj Malantaŭen kaj Antaŭen"
 
 #: lib/navigation/navigationbar.cpp:192
 msgctxt "NavigationBar|"
 msgid "Reload button"
-msgstr ""
+msgstr "Reŝargi butonon"
 
 #: lib/navigation/navigationbar.cpp:193
 msgctxt "NavigationBar|"
 msgid "Home button"
-msgstr ""
+msgstr "Hejma butono"
 
 #: lib/navigation/navigationbar.cpp:194
 msgctxt "NavigationBar|"
 msgid "Add tab button"
-msgstr ""
+msgstr "Aldoni langeton butonon"
 
 #: lib/navigation/navigationbar.cpp:195
 msgctxt "NavigationBar|"
 msgid "Address and Search bar"
-msgstr ""
+msgstr "Adreso kaj Serĉilo"
 
 #: lib/navigation/navigationbar.cpp:196
 msgctxt "NavigationBar|"
 msgid "Tools button"
-msgstr ""
+msgstr "Butono Iloj"
 
 #: lib/navigation/navigationbar.cpp:197
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen button"
-msgstr ""
+msgstr "Eliri Plenekranan butonon"
 
 #: lib/navigation/navigationbar.cpp:395 lib/navigation/navigationbar.cpp:429
 msgctxt "NavigationBar|"
 msgid "Clear history"
-msgstr ""
+msgstr "Viŝi historion"
 
 #: lib/navigation/navigationbar.cpp:436
 msgctxt "NavigationBar|"
 msgid "Toolbars"
-msgstr ""
+msgstr "Ilobretoj"
 
 #: lib/navigation/navigationbar.cpp:437
 msgctxt "NavigationBar|"
 msgid "Sidebar"
-msgstr ""
+msgstr "Flankmenuo"
 
 #: lib/navigation/navigationbar.cpp:452 lib/navigation/navigationbar.cpp:466
 msgctxt "NavigationBar|"
 msgid "Configure Toolbar"
-msgstr ""
+msgstr "Agordi Ilobreton"
 
 #: lib/navigation/navigationbarconfigdialog.ui:14
 msgctxt "NavigationBarConfigDialog|"
 msgid "Configure Toolbar"
-msgstr ""
+msgstr "Agordi Ilobreton"
 
 #: lib/navigation/navigationbarconfigdialog.ui:62
 msgctxt "NavigationBarConfigDialog|"
 msgid "Show search bar"
-msgstr ""
+msgstr "Montri serĉbreton"
 
 #: lib/navigation/navigationbarconfigdialog.ui:82
 msgctxt "NavigationBarConfigDialog|"
 msgid "Available items:"
-msgstr ""
+msgstr "Disponeblaj eroj:"
 
 #: lib/navigation/navigationbarconfigdialog.ui:89
 msgctxt "NavigationBarConfigDialog|"
 msgid "Current items:"
-msgstr ""
+msgstr "Nunaj eroj:"
 
 #: lib/navigation/reloadstopbutton.cpp:57
 msgctxt "ReloadStopButton|"
 msgid "Stop"
-msgstr ""
+msgstr "Halti"
 
 #: lib/navigation/reloadstopbutton.cpp:61
 msgctxt "ReloadStopButton|"
 msgid "Reload"
-msgstr ""
+msgstr "Reŝargi"
 
 #: lib/navigation/siteicon.cpp:40
 msgctxt "LocationBar|"
 msgid "Show information about this page"
-msgstr ""
+msgstr "Montri informojn pri ĉi tiu paĝo"
 
 #: lib/navigation/websearchbar.cpp:97
 msgctxt "WebSearchBar|"
 msgid "Paste And &Search"
-msgstr ""
+msgstr "Alglui Kaj &Serĉi"
 
 #: lib/navigation/websearchbar.cpp:123
 #, qt-format
 msgctxt "WebSearchBar|"
 msgid "Add %1 ..."
-msgstr ""
+msgstr "Aldoni %1..."
 
 #: lib/navigation/websearchbar.cpp:127
 msgctxt "WebSearchBar|"
 msgid "Manage Search Engines"
-msgstr ""
+msgstr "Administri Serĉmotorojn"
 
 #: lib/navigation/websearchbar.cpp:261
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
-msgstr ""
+msgstr "Montri sugestojn"
 
 #: lib/navigation/websearchbar.cpp:266
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
-msgstr ""
+msgstr "Serĉi kiam motoro ŝanĝiĝis"
 
 #: lib/navigation/zoomlabel.cpp:36
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Restarigi zomnivelon"
 
 #: lib/navigation/zoomlabel.cpp:61
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/network/networkmanager.cpp:102
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
-msgstr ""
+msgstr "Eraro pri SSL-Atestilo!"
 
 #: lib/network/networkmanager.cpp:103
 msgctxt "NetworkManager|"
@@ -2241,284 +2259,286 @@ msgid ""
 "The page you are trying to access has the following errors in the SSL "
 "certificate:"
 msgstr ""
+"La paĝo, kiun vi provas aliri, havas la jenajn erarojn en la SSL-atestilo:"
 
 #: lib/network/networkmanager.cpp:104
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
-msgstr ""
+msgstr "Ĉu vi ŝatus fari escepton por ĉi tiu atestilo?"
 
 #: lib/network/networkmanager.cpp:139
 msgctxt "NetworkManager|"
 msgid "Authorization required"
-msgstr ""
+msgstr "Rajtigo bezonata"
 
 #: lib/network/networkmanager.cpp:146 lib/network/networkmanager.cpp:232
 msgctxt "NetworkManager|"
 msgid "Username: "
-msgstr ""
+msgstr "Uzantnomo:"
 
 #: lib/network/networkmanager.cpp:147 lib/network/networkmanager.cpp:233
 msgctxt "NetworkManager|"
 msgid "Password: "
-msgstr ""
+msgstr "Pasvorto:"
 
 #: lib/network/networkmanager.cpp:153
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
-msgstr ""
+msgstr "Konservi uzantnomon kaj pasvorton por ĉi tiu retejo"
 
 #: lib/network/networkmanager.cpp:161
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
-msgstr ""
+msgstr "Uzantnomo kaj pasvorto estas petataj de %1. La retejo diras: \"%2\""
 
 #: lib/network/networkmanager.cpp:225
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
-msgstr ""
+msgstr "Prokura rajtigo bezonata"
 
 #: lib/network/networkmanager.cpp:245
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
-msgstr ""
+msgstr "Uzantnomo kaj pasvorto estas petataj de prokurilo %1."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:156
 msgctxt "FalkonSchemeReply|"
 msgid "Start Page"
-msgstr ""
+msgstr "Komenca Paĝo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
 msgid "Search on Web"
-msgstr ""
+msgstr "Serĉi en Retejo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:158
 msgctxt "FalkonSchemeReply|"
 msgid "Search results provided by DuckDuckGo"
-msgstr ""
+msgstr "Serĉrezultoj provizitaj de DuckDuckGo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:160
 #: lib/network/schemehandlers/falkonschemehandler.cpp:177
 #: lib/network/schemehandlers/falkonschemehandler.cpp:178
 msgctxt "FalkonSchemeReply|"
 msgid "About Falkon"
-msgstr ""
+msgstr "Pri Falkon"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:161
 msgctxt "FalkonSchemeReply|"
 msgid "<h1>Private Browsing</h1>"
-msgstr ""
+msgstr "<h1>Privata Folumado</h1>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:179
 #: lib/network/schemehandlers/falkonschemehandler.cpp:288
 msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
-msgstr ""
+msgstr "Informoj pri versio"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:180
 msgctxt "FalkonSchemeReply|"
 msgid "Copyright"
-msgstr ""
+msgstr "Kopirajto"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:183
 #: lib/network/schemehandlers/falkonschemehandler.cpp:298
 msgctxt "FalkonSchemeReply|"
 msgid "Version"
-msgstr ""
+msgstr "Versio"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:190
 msgctxt "FalkonSchemeReply|"
 msgid "Main developer"
-msgstr ""
+msgstr "Ĉefa programisto"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:211
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial"
-msgstr ""
+msgstr "Rapida Tajpo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:212
 msgctxt "FalkonSchemeReply|"
 msgid "Add New Page"
-msgstr ""
+msgstr "Aldoni Novan Paĝon"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:213
 msgctxt "FalkonSchemeReply|"
 msgid "Edit"
-msgstr ""
+msgstr "Redakti"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:214
 msgctxt "FalkonSchemeReply|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:215
 msgctxt "FalkonSchemeReply|"
 msgid "Reload"
-msgstr ""
+msgstr "Reŝargi"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:216
 msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to remove this speed dial?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas forigi ĉi tiun rapidan ciferdiskon?"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:217
 msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to reload all speed dials?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas reŝargi ĉiujn rapidajn ciferdiskojn?"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:218
 msgctxt "FalkonSchemeReply|"
 msgid "Load title from page"
-msgstr ""
+msgstr "Ŝargi titolon el paĝo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:219
 msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
-msgstr ""
+msgstr "SpeedDial postulas ebligitan JavaScript."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:220
 msgctxt "FalkonSchemeReply|"
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:221
 msgctxt "FalkonSchemeReply|"
 msgid "Title"
-msgstr ""
+msgstr "Titolo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:222
 msgctxt "FalkonSchemeReply|"
 msgid "Apply"
-msgstr ""
+msgstr "Apliki"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:223
 msgctxt "FalkonSchemeReply|"
 msgid "Cancel"
-msgstr ""
+msgstr "Nuligi"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:224
 msgctxt "FalkonSchemeReply|"
 msgid "New Page"
-msgstr ""
+msgstr "Nova Paĝo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:225
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial settings"
-msgstr ""
+msgstr "Rapida Dial-agordoj"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:226
 msgctxt "FalkonSchemeReply|"
 msgid "Placement: "
-msgstr ""
+msgstr "Lokigo:"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:227
 msgctxt "FalkonSchemeReply|"
 msgid "Auto"
-msgstr ""
+msgstr "Aŭtomate"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:228
 msgctxt "FalkonSchemeReply|"
 msgid "Cover"
-msgstr ""
+msgstr "Kovrilo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:229
 msgctxt "FalkonSchemeReply|"
 msgid "Fit"
-msgstr ""
+msgstr "Fit"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:230
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Width"
-msgstr ""
+msgstr "Fit Larĝo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:231
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Height"
-msgstr ""
+msgstr "Fit Alteco"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:232
 msgctxt "FalkonSchemeReply|"
 msgid "Use custom wallpaper"
-msgstr ""
+msgstr "Uzi propran tapeton"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:233
 msgctxt "FalkonSchemeReply|"
 msgid "Click to select image"
-msgstr ""
+msgstr "Klaku por elekti bildon"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:234
 msgctxt "FalkonSchemeReply|"
 msgid "Maximum pages in a row:"
-msgstr ""
+msgstr "Maksimumaj paĝoj en vico:"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:235
 msgctxt "FalkonSchemeReply|"
 msgid "Change size of pages:"
-msgstr ""
+msgstr "Ŝanĝi grandecon de paĝoj:"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:236
 msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
-msgstr ""
+msgstr "Centraj rapidaj ciferdiskoj"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:261
 msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
-msgstr ""
+msgstr "Restarigi Seancon"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:262
 msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
-msgstr ""
+msgstr "Ho, Falkon paneis."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:263
 msgctxt "FalkonSchemeReply|"
 msgid "We apologize for this. Would you like to restore the last saved state?"
 msgstr ""
+"Ni pardonpetas pro tio. Ĉu vi ŝatus restarigi la lastan konservitan staton?"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
-msgstr ""
+msgstr "Provu forigi unu aŭ plurajn langetojn, kiuj laŭ vi kaŭzas problemojn"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:265
 msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
-msgstr ""
+msgstr "Aŭ vi povas komenci tute novan seancon"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:266
 msgctxt "FalkonSchemeReply|"
 msgid "Window"
-msgstr ""
+msgstr "Fenestro"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:267
 msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
-msgstr ""
+msgstr "Fenestroj kaj Tabs"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:268
 msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
-msgstr ""
+msgstr "Komenci Novan Seancon"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:269
 msgctxt "FalkonSchemeReply|"
 msgid "Restore"
-msgstr ""
+msgstr "Restaŭri"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:270
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
-msgstr ""
+msgstr "Postulas ŝaltitan JavaScript."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:286
 #: lib/network/schemehandlers/falkonschemehandler.cpp:287
 msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
-msgstr ""
+msgstr "Agordaj Informoj"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:289
 msgctxt "FalkonSchemeReply|"
@@ -2527,207 +2547,209 @@ msgid ""
 "relevant for troubleshooting. Please include this information when "
 "submitting bug reports."
 msgstr ""
+"Ĉi tiu paĝo enhavas informojn pri la nuna agordo de Falkon - grava por solvi "
+"problemojn. Bonvolu inkluzivi ĉi tiujn informojn dum sendado de cimraportoj."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:290
 msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
-msgstr ""
+msgstr "Retumila Identigo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:291
 msgctxt "FalkonSchemeReply|"
 msgid "Paths"
-msgstr ""
+msgstr "Vojetoj"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:292
 msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
-msgstr ""
+msgstr "Konstrua Agordo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:293
 msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
-msgstr ""
+msgstr "Preferoj"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:294
 msgctxt "FalkonSchemeReply|"
 msgid "Option"
-msgstr ""
+msgstr "Opcio"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:295
 msgctxt "FalkonSchemeReply|"
 msgid "Value"
-msgstr ""
+msgstr "Valoro"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:296
 #: lib/network/schemehandlers/falkonschemehandler.cpp:332
 msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
-msgstr ""
+msgstr "Etendaĵoj"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:297
 msgctxt "FalkonSchemeReply|"
 msgid "Name"
-msgstr ""
+msgstr "Nomo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:299
 msgctxt "FalkonSchemeReply|"
 msgid "Author"
-msgstr ""
+msgstr "Aŭtoro"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:300
 msgctxt "FalkonSchemeReply|"
 msgid "Description"
-msgstr ""
+msgstr "Priskribo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:315
 msgctxt "FalkonSchemeReply|"
 msgid "Application version"
-msgstr ""
+msgstr "Aplika versio"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:322
 msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
-msgstr ""
+msgstr "Qt-versio"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr ""
+msgstr "QtWebEngine-versio"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
 msgid "Platform"
-msgstr ""
+msgstr "Platformo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:327
 msgctxt "FalkonSchemeReply|"
 msgid "Profile"
-msgstr ""
+msgstr "Profilo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:328
 msgctxt "FalkonSchemeReply|"
 msgid "Settings"
-msgstr ""
+msgstr "Agordoj"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:329
 msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
-msgstr ""
+msgstr "Konservita seanco"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:330
 msgctxt "FalkonSchemeReply|"
 msgid "Data"
-msgstr ""
+msgstr "Datumoj"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:331
 msgctxt "FalkonSchemeReply|"
 msgid "Themes"
-msgstr ""
+msgstr "Etosoj"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:335
 #: lib/network/schemehandlers/falkonschemehandler.cpp:342
 #: lib/network/schemehandlers/falkonschemehandler.cpp:348
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
-msgstr ""
+msgstr "<b>Ebligita</b>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:337
 #: lib/network/schemehandlers/falkonschemehandler.cpp:344
 #: lib/network/schemehandlers/falkonschemehandler.cpp:348
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
-msgstr ""
+msgstr "Malebligita"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
-msgstr ""
+msgstr "Sencimigi konstruon"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:353
 msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
-msgstr ""
+msgstr "Vindozo-7 API"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:355
 msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
-msgstr ""
+msgstr "Portebla konstruo"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:373
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
-msgstr ""
+msgstr "Neniuj disponeblaj etendaĵoj."
 
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Nur por ĉi tiu kunsido"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
 msgid "SSL Certificate Error!"
-msgstr ""
+msgstr "Eraro pri SSL-Atestilo!"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
 msgid "Preview"
-msgstr ""
+msgstr "Antaŭrigardo"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "QObject|"
 msgid "Native System Notification"
-msgstr ""
+msgstr "Denaska Sistemsciigo"
 
 #: lib/opensearch/editsearchengine.ui:20
 msgctxt "EditSearchEngine|"
 msgid "Name:"
-msgstr ""
+msgstr "Nomo:"
 
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "Url:"
-msgstr ""
+msgstr "Url:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Ŝparvojo:"
 
 #: lib/opensearch/editsearchengine.ui:54
 msgctxt "EditSearchEngine|"
 msgid "Icon:"
-msgstr ""
+msgstr "Piktogramo:"
 
 #: lib/opensearch/editsearchengine.ui:83
 msgctxt "EditSearchEngine|"
 msgid "Change..."
-msgstr ""
+msgstr "Ŝanĝi..."
 
 #: lib/opensearch/editsearchengine.ui:106
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in url or post data represent searched string"
-msgstr ""
+msgstr "<b>Noto: </b>%s en url aŭ afiŝo-datumoj reprezentas serĉitan ĉenon"
 
 #: lib/opensearch/editsearchengine.ui:123
 msgctxt "EditSearchEngine|"
 msgid "Post Data:"
-msgstr ""
+msgstr "Afiŝi Datumojn:"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
 msgid "The file is not an OpenSearch 1.1 file."
-msgstr ""
+msgstr "La dosiero ne estas OpenSearch 1.1 dosiero."
 
 #: lib/opensearch/searchenginesdialog.cpp:52
 #: lib/opensearch/searchenginesmanager.cpp:315
 msgctxt "SearchEnginesDialog|"
 msgid "Add Search Engine"
-msgstr ""
+msgstr "Aldoni Serĉilon"
 
 #: lib/opensearch/searchenginesdialog.cpp:89
 msgctxt "SearchEnginesDialog|"
 msgid "Remove Engine"
-msgstr ""
+msgstr "Forigi Motoron"
 
 #: lib/opensearch/searchenginesdialog.cpp:90
 #, qt-format
@@ -2736,150 +2758,152 @@ msgid ""
 "You can't remove the default search engine.<br>Set a different engine as "
 "default before removing %1."
 msgstr ""
+"Vi ne povas forigi la defaŭltan serĉilon.<br>Agordu alian motoron kiel "
+"defaŭltan antaŭ ol forigi %1."
 
 #: lib/opensearch/searchenginesdialog.cpp:107
 msgctxt "SearchEnginesDialog|"
 msgid "Edit Search Engine"
-msgstr ""
+msgstr "Redakti Serĉilon"
 
 #: lib/opensearch/searchenginesdialog.ui:14
 msgctxt "SearchEnginesDialog|"
 msgid "Manage Search Engines"
-msgstr ""
+msgstr "Administri Serĉmotorojn"
 
 #: lib/opensearch/searchenginesdialog.ui:22
 msgctxt "SearchEnginesDialog|"
 msgid "Add..."
-msgstr ""
+msgstr "Aldoni..."
 
 #: lib/opensearch/searchenginesdialog.ui:29
 msgctxt "SearchEnginesDialog|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/opensearch/searchenginesdialog.ui:36
 msgctxt "SearchEnginesDialog|"
 msgid "Edit"
-msgstr ""
+msgstr "Redakti"
 
 #: lib/opensearch/searchenginesdialog.ui:56
 msgctxt "SearchEnginesDialog|"
 msgid "Set as default"
-msgstr ""
+msgstr "Agordi kiel defaŭlto"
 
 #: lib/opensearch/searchenginesdialog.ui:63
 msgctxt "SearchEnginesDialog|"
 msgid "Up"
-msgstr ""
+msgstr "Supren"
 
 #: lib/opensearch/searchenginesdialog.ui:70
 msgctxt "SearchEnginesDialog|"
 msgid "Down"
-msgstr ""
+msgstr "Malsupren"
 
 #: lib/opensearch/searchenginesdialog.ui:89
 msgctxt "SearchEnginesDialog|"
 msgid "Search Engine"
-msgstr ""
+msgstr "Serĉilo"
 
 #: lib/opensearch/searchenginesdialog.ui:94
 msgctxt "SearchEnginesDialog|"
 msgid "Shortcut"
-msgstr ""
+msgstr "Ŝparvojo"
 
 #: lib/opensearch/searchenginesdialog.ui:104
 msgctxt "SearchEnginesDialog|"
 msgid "Defaults"
-msgstr ""
+msgstr "Defaŭltoj"
 
 #: lib/opensearch/searchenginesmanager.cpp:401
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine Added"
-msgstr ""
+msgstr "Serĉilo Aldonita"
 
 #: lib/opensearch/searchenginesmanager.cpp:401
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine \"%1\" has been successfully added."
-msgstr ""
+msgstr "Serĉilo \"%1\" estis sukcese aldonita."
 
 #: lib/opensearch/searchenginesmanager.cpp:408
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine is not valid!"
-msgstr ""
+msgstr "Serĉilo ne validas!"
 
 #: lib/opensearch/searchenginesmanager.cpp:409
 msgctxt "SearchEnginesManager|"
 msgid "Error"
-msgstr ""
+msgstr "Eraro"
 
 #: lib/opensearch/searchenginesmanager.cpp:409
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
-msgstr ""
+msgstr "Eraro dum aldono de Serĉilo <br><b>Erara Mesaĝo: </b> %1"
 
 #: lib/other/aboutdialog.cpp:51
 #, qt-format
 msgctxt "AboutDialog|"
 msgid "<p><b>Application version %1</b><br/>"
-msgstr ""
+msgstr "<p><b>Aplika versio %1</b><br/>"
 
 #: lib/other/aboutdialog.cpp:58
 #, qt-format
 msgctxt "AboutDialog|"
 msgid "<b>QtWebEngine version %1</b></p>"
-msgstr ""
+msgstr "<b>QtWebEngine versio %1</b></p>"
 
 #: lib/other/aboutdialog.ui:14
 msgctxt "AboutDialog|"
 msgid "About Falkon"
-msgstr ""
+msgstr "Pri Falkon"
 
 #: lib/other/browsinglibrary.cpp:55
 msgctxt "BrowsingLibrary|"
 msgid "History"
-msgstr ""
+msgstr "Historio"
 
 #: lib/other/browsinglibrary.cpp:56
 msgctxt "BrowsingLibrary|"
 msgid "Bookmarks"
-msgstr ""
+msgstr "Legosignoj"
 
 #: lib/other/browsinglibrary.cpp:61
 msgctxt "BrowsingLibrary|"
 msgid "Import Bookmarks..."
-msgstr ""
+msgstr "Importi legosignojn..."
 
 #: lib/other/browsinglibrary.cpp:62
 msgctxt "BrowsingLibrary|"
 msgid "Export Bookmarks..."
-msgstr ""
+msgstr "Eksporti legosignojn..."
 
 #: lib/other/browsinglibrary.ui:14
 msgctxt "BrowsingLibrary|"
 msgid "Library"
-msgstr ""
+msgstr "Biblioteko"
 
 #: lib/other/browsinglibrary.ui:64
 msgctxt "BrowsingLibrary|"
 msgid "Import and Export"
-msgstr ""
+msgstr "Importi kaj Eksporti"
 
 #: lib/other/browsinglibrary.ui:84
 msgctxt "BrowsingLibrary|"
 msgid "Search..."
-msgstr ""
+msgstr "Serĉi..."
 
 #: lib/other/clearprivatedata.cpp:155
 msgctxt "ClearPrivateData|"
 msgid "Done"
-msgstr ""
+msgstr "Farita"
 
 #: lib/other/clearprivatedata.cpp:173
 msgctxt "ClearPrivateData|"
 msgid "Database Optimized"
-msgstr ""
+msgstr "Datumbazo Optimumigita"
 
 #: lib/other/clearprivatedata.cpp:173
 #, qt-format
@@ -2888,151 +2912,153 @@ msgid ""
 "Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/"
 "><b>Database Size After: </b>%2"
 msgstr ""
+"Sukcese optimumigita datumbazo.<br/><br/><b>Grandeco de la datumbazo Antaŭe: "
+"</b>%1<br/><b>Grandeco de la datumbazo Post: </b>%2"
 
 #: lib/other/clearprivatedata.ui:14
 msgctxt "ClearPrivateData|"
 msgid "Clear Recent History"
-msgstr ""
+msgstr "Klarigi Lastatempan Historion"
 
 #: lib/other/clearprivatedata.ui:20
 msgctxt "ClearPrivateData|"
 msgid "<b>Clear Recent History</b>"
-msgstr ""
+msgstr "<b>Malplenigi Lastatempan Historion</b>"
 
 #: lib/other/clearprivatedata.ui:27
 msgctxt "ClearPrivateData|"
 msgid "Edit cookies"
-msgstr ""
+msgstr "Redakti kuketojn"
 
 #: lib/other/clearprivatedata.ui:38
 msgctxt "ClearPrivateData|"
 msgid "Earlier Today"
-msgstr ""
+msgstr "Antaŭe Hodiaŭ"
 
 #: lib/other/clearprivatedata.ui:43
 msgctxt "ClearPrivateData|"
 msgid "Week"
-msgstr ""
+msgstr "Semajno"
 
 #: lib/other/clearprivatedata.ui:48
 msgctxt "ClearPrivateData|"
 msgid "Month"
-msgstr ""
+msgstr "Monato"
 
 #: lib/other/clearprivatedata.ui:53
 msgctxt "ClearPrivateData|"
 msgid "All"
-msgstr ""
+msgstr "Ĉiuj"
 
 #: lib/other/clearprivatedata.ui:61
 msgctxt "ClearPrivateData|"
 msgid "Visited pages history from:"
-msgstr ""
+msgstr "Historio de vizititaj paĝoj de:"
 
 #: lib/other/clearprivatedata.ui:71
 msgctxt "ClearPrivateData|"
 msgid "Checked items will be cleared upon clicking the Clear button."
-msgstr ""
+msgstr "Markitaj eroj estos forigitaj post klako de la butono Purigi."
 
 #: lib/other/clearprivatedata.ui:78
 msgctxt "ClearPrivateData|"
 msgid "Local storage"
-msgstr ""
+msgstr "Loka konservado"
 
 #: lib/other/clearprivatedata.ui:94
 msgctxt "ClearPrivateData|"
 msgid "Clear"
-msgstr ""
+msgstr "Klara"
 
 #: lib/other/clearprivatedata.ui:114
 msgctxt "ClearPrivateData|"
 msgid "Web databases"
-msgstr ""
+msgstr "Retaj datumbazoj"
 
 #: lib/other/clearprivatedata.ui:124
 msgctxt "ClearPrivateData|"
 msgid "Cache"
-msgstr ""
+msgstr "Kaŝaĵo"
 
 #: lib/other/clearprivatedata.ui:134
 msgctxt "ClearPrivateData|"
 msgid "Optimize database"
-msgstr ""
+msgstr "Optimumigi datumbazon"
 
 #: lib/other/clearprivatedata.ui:141
 msgctxt "ClearPrivateData|"
 msgid "Cookies"
-msgstr ""
+msgstr "Kuketoj"
 
 #: lib/other/clearprivatedata.ui:158
 msgctxt "ClearPrivateData|"
 msgid "Database"
-msgstr ""
+msgstr "Datumbazo"
 
 #: lib/other/iconchooser.cpp:41
 msgctxt "IconChooser|"
 msgid "Image files"
-msgstr ""
+msgstr "Bildaj dosieroj"
 
 #: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
 msgctxt "IconChooser|"
 msgid "Choose icon..."
-msgstr ""
+msgstr "Elekti piktogramon..."
 
 #: lib/other/iconchooser.ui:20
 msgctxt "IconChooser|"
 msgid "From file"
-msgstr ""
+msgstr "El dosiero"
 
 #: lib/other/iconchooser.ui:29
 msgctxt "IconChooser|"
 msgid "Image (.png, .jpg, .jpeg, .gif)"
-msgstr ""
+msgstr "Bildo (.png, .jpg, .jpeg, .gif)"
 
 #: lib/other/iconchooser.ui:42
 msgctxt "IconChooser|"
 msgid "Choose file..."
-msgstr ""
+msgstr "Elekti dosieron..."
 
 #: lib/other/iconchooser.ui:52
 msgctxt "IconChooser|"
 msgid "From database"
-msgstr ""
+msgstr "El datumbazo"
 
 #: lib/other/iconchooser.ui:61
 msgctxt "IconChooser|"
 msgid "Site Url:"
-msgstr ""
+msgstr "Reteja URL:"
 
 #: lib/other/licenseviewer.cpp:30
 msgctxt "LicenseViewer|"
 msgid "License Viewer"
-msgstr ""
+msgstr "Licenca Vidilo"
 
 #: lib/other/protocolhandlerdialog.ui:14
 msgctxt "ProtocolHandlerDialog|"
 msgid "Manage protocol handlers"
-msgstr ""
+msgstr "Administri protokoltraktantojn"
 
 #: lib/other/protocolhandlerdialog.ui:40
 msgctxt "ProtocolHandlerDialog|"
 msgid "Protocol"
-msgstr ""
+msgstr "Protokolo"
 
 #: lib/other/protocolhandlerdialog.ui:45
 msgctxt "ProtocolHandlerDialog|"
 msgid "Site"
-msgstr ""
+msgstr "Retejo"
 
 #: lib/other/protocolhandlerdialog.ui:68
 msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/other/registerqappassociation.cpp:110
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
-msgstr ""
+msgstr "Averto!"
 
 #: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
@@ -3040,346 +3066,348 @@ msgid ""
 "There are some problems. Please, reinstall Falkon.\n"
 "Maybe relaunch with administrator right do a magic for you! ;)"
 msgstr ""
+"Estas iuj problemoj. Bonvolu reinstali Falkon.\n"
+"Eble relanĉi kun administranto rajton fari magion por vi! ;)"
 
 #: lib/other/siteinfo.cpp:68
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
-msgstr ""
+msgstr "<b>Konekto estas Ĉifrita.</b>"
 
 #: lib/other/siteinfo.cpp:70
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
-msgstr ""
+msgstr "<b>Konekto Ne Ĉifrita.</b>"
 
 #: lib/other/siteinfo.cpp:175
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
-msgstr ""
+msgstr "Kopii Bildlokon"
 
 #: lib/other/siteinfo.cpp:176
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
-msgstr ""
+msgstr "Kopii Bildnomon"
 
 #: lib/other/siteinfo.cpp:178
 msgctxt "SiteInfo|"
 msgid "Save Image to Disk"
-msgstr ""
+msgstr "Konservi Bildon al Disko"
 
 #: lib/other/siteinfo.cpp:190
 msgctxt "SiteInfo|"
 msgid "Copy Values"
-msgstr ""
+msgstr "Kopii Valorojn"
 
 #: lib/other/siteinfo.cpp:191
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
-msgstr ""
+msgstr "Kopii Etikedojn kaj Valorojn"
 
 #: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
 msgid "Error!"
-msgstr ""
+msgstr "Eraro!"
 
 #: lib/other/siteinfo.cpp:229
 msgctxt "SiteInfo|"
 msgid "This preview is not available!"
-msgstr ""
+msgstr "Ĉi tiu antaŭrigardo ne disponeblas!"
 
 #: lib/other/siteinfo.cpp:240
 msgctxt "SiteInfo|"
 msgid "Save image..."
-msgstr ""
+msgstr "Konservi bildon..."
 
 #: lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
 msgid "Cannot write to file!"
-msgstr ""
+msgstr "Ne povas skribi al dosiero!"
 
 #: lib/other/siteinfo.cpp:258
 msgctxt "SiteInfo|"
 msgid "Loading..."
-msgstr ""
+msgstr "Ŝargante..."
 
 #: lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
 msgid "Preview not available"
-msgstr ""
+msgstr "Antaŭrigardo ne havebla"
 
 #: lib/other/siteinfo.ui:14
 msgctxt "SiteInfo|"
 msgid "Site Info"
-msgstr ""
+msgstr "Reteja Informo"
 
 #: lib/other/siteinfo.ui:47
 msgctxt "SiteInfo|"
 msgid "General"
-msgstr ""
+msgstr "Ĝenerala"
 
 #: lib/other/siteinfo.ui:52
 msgctxt "SiteInfo|"
 msgid "Media"
-msgstr ""
+msgstr "Aŭdvidaĵoj"
 
 #: lib/other/siteinfo.ui:84
 msgctxt "SiteInfo|"
 msgid "Site address:"
-msgstr ""
+msgstr "Reteja adreso:"
 
 #: lib/other/siteinfo.ui:113
 msgctxt "SiteInfo|"
 msgid "Encoding:"
-msgstr ""
+msgstr "Kodigado:"
 
 #: lib/other/siteinfo.ui:132
 msgctxt "SiteInfo|"
 msgid "Meta tags of site:"
-msgstr ""
+msgstr "Meta-etikedoj de retejo:"
 
 #: lib/other/siteinfo.ui:149
 msgctxt "SiteInfo|"
 msgid "Tag"
-msgstr ""
+msgstr "Etikedo"
 
 #: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
 msgid "Value"
-msgstr ""
+msgstr "Valoro"
 
 #: lib/other/siteinfo.ui:168
 msgctxt "SiteInfo|"
 msgid "<b>Security information</b>"
-msgstr ""
+msgstr "<b>Informoj pri sekureco</b>"
 
 #: lib/other/siteinfo.ui:241
 msgctxt "SiteInfo|"
 msgid "Image"
-msgstr ""
+msgstr "Bildo"
 
 #: lib/other/siteinfo.ui:246
 msgctxt "SiteInfo|"
 msgid "Image address"
-msgstr ""
+msgstr "Bildadreso"
 
 #: lib/other/siteinfo.ui:271
 msgctxt "SiteInfo|"
 msgid "<b>Preview</b>"
-msgstr ""
+msgstr "<b>Antaŭrigardo</b>"
 
 #: lib/other/siteinfowidget.cpp:42
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "<b>Site %1<b/>"
-msgstr ""
+msgstr "<b>Retejo %1<b/>"
 
 #: lib/other/siteinfowidget.cpp:45
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>secured</b>."
-msgstr ""
+msgstr "Via konekto al ĉi tiu retejo estas <b>sekurigita</b>."
 
 #: lib/other/siteinfowidget.cpp:49
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>unsecured</b>."
-msgstr ""
+msgstr "Via konekto al ĉi tiu retejo estas <b>nesekurigita</b>."
 
 #: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "This is your <b>%1</b> visit of this site."
-msgstr ""
+msgstr "Jen via <b>%1</b> vizito de ĉi tiu retejo."
 
 #: lib/other/siteinfowidget.cpp:68
 msgctxt "SiteInfoWidget|"
 msgid "You have <b>never</b> visited this site before."
-msgstr ""
+msgstr "Vi <b>neniam</b> vizitis ĉi tiun retejon antaŭe."
 
 #: lib/other/siteinfowidget.cpp:75
 msgctxt "SiteInfoWidget|"
 msgid "first"
-msgstr ""
+msgstr "unue"
 
 #: lib/other/siteinfowidget.cpp:78
 msgctxt "SiteInfoWidget|"
 msgid "second"
-msgstr ""
+msgstr "dua"
 
 #: lib/other/siteinfowidget.cpp:81
 msgctxt "SiteInfoWidget|"
 msgid "third"
-msgstr ""
+msgstr "tria"
 
 #: lib/other/siteinfowidget.cpp:106
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "Register as <b>%1</b> links handler"
-msgstr ""
+msgstr "Registri kiel <b>%1</b> ligilo-traktilo"
 
 #: lib/other/siteinfowidget.cpp:107
 msgctxt "SiteInfoWidget|"
 msgid "Register"
-msgstr ""
+msgstr "Registri"
 
 #: lib/other/siteinfowidget.ui:71
 msgctxt "SiteInfoWidget|"
 msgid "More..."
-msgstr ""
+msgstr "Pli..."
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
 msgid "Hide"
-msgstr ""
+msgstr "Kaŝi"
 
 #: lib/other/updater.cpp:151
 msgctxt "Updater|"
 msgid "Update available"
-msgstr ""
+msgstr "Ĝisdatigo disponebla"
 
 #: lib/other/updater.cpp:151
 msgctxt "Updater|"
 msgid "New version of Falkon is ready to download."
-msgstr ""
+msgstr "Nova versio de Falkon estas preta por elŝuti."
 
 #: lib/other/updater.cpp:160
 msgctxt "Updater|"
 msgid "Update"
-msgstr ""
+msgstr "Ĝisdatigo"
 
 #: lib/popupwindow/popupwebview.cpp:100
 msgctxt "PopupWebView|"
 msgid "Inspect Element"
-msgstr ""
+msgstr "Inspekti Elementon"
 
 #: lib/popupwindow/popupwindow.cpp:83
 msgctxt "PopupWindow|"
 msgid "File"
-msgstr ""
+msgstr "Dosiero"
 
 #: lib/popupwindow/popupwindow.cpp:84
 msgctxt "PopupWindow|"
 msgid "Send Link..."
-msgstr ""
+msgstr "Sendi ligilon..."
 
 #: lib/popupwindow/popupwindow.cpp:85
 msgctxt "PopupWindow|"
 msgid "&Print..."
-msgstr ""
+msgstr "&Presi..."
 
 #: lib/popupwindow/popupwindow.cpp:87
 msgctxt "PopupWindow|"
 msgid "Close"
-msgstr ""
+msgstr "Fermi"
 
 #: lib/popupwindow/popupwindow.cpp:90
 msgctxt "PopupWindow|"
 msgid "Edit"
-msgstr ""
+msgstr "Redakti"
 
 #: lib/popupwindow/popupwindow.cpp:99
 msgctxt "PopupWindow|"
 msgid "Find"
-msgstr ""
+msgstr "Trovi"
 
 #: lib/popupwindow/popupwindow.cpp:102
 msgctxt "PopupWindow|"
 msgid "View"
-msgstr ""
+msgstr "Vido"
 
 #: lib/popupwindow/popupwindow.cpp:103
 msgctxt "PopupWindow|"
 msgid "&Stop"
-msgstr ""
+msgstr "&Halti"
 
 #: lib/popupwindow/popupwindow.cpp:105
 msgctxt "PopupWindow|"
 msgid "&Reload"
-msgstr ""
+msgstr "&Reŝargi"
 
 #: lib/popupwindow/popupwindow.cpp:108
 msgctxt "PopupWindow|"
 msgid "Zoom &In"
-msgstr ""
+msgstr "Zom&i"
 
 #: lib/popupwindow/popupwindow.cpp:109
 msgctxt "PopupWindow|"
 msgid "Zoom &Out"
-msgstr ""
+msgstr "Malz&omi"
 
 #: lib/popupwindow/popupwindow.cpp:110
 msgctxt "PopupWindow|"
 msgid "Reset"
-msgstr ""
+msgstr "Restarigi"
 
 #: lib/popupwindow/popupwindow.cpp:112
 msgctxt "PopupWindow|"
 msgid "&Page Source"
-msgstr ""
+msgstr "&Paĝa Fonto"
 
 #: lib/popupwindow/popupwindow.cpp:271
 #, qt-format
 msgctxt "PopupWindow|"
 msgid "%1 - Falkon"
-msgstr ""
+msgstr "%1 - Falkon"
 
 #: lib/preferences/acceptlanguage.cpp:99 lib/preferences/acceptlanguage.cpp:162
 #, qt-format
 msgctxt "AcceptLanguage|"
 msgid "Personal [%1]"
-msgstr ""
+msgstr "Persona [%1]"
 
 #: lib/preferences/acceptlanguage.ui:14
 msgctxt "AcceptLanguage|"
 msgid "Preferred Languages"
-msgstr ""
+msgstr "Preferataj Lingvoj"
 
 #: lib/preferences/acceptlanguage.ui:25
 msgctxt "AcceptLanguage|"
 msgid "Add..."
-msgstr ""
+msgstr "Aldoni..."
 
 #: lib/preferences/acceptlanguage.ui:32
 msgctxt "AcceptLanguage|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/preferences/acceptlanguage.ui:39
 msgctxt "AcceptLanguage|"
 msgid "Up"
-msgstr ""
+msgstr "Supren"
 
 #: lib/preferences/acceptlanguage.ui:46
 msgctxt "AcceptLanguage|"
 msgid "Down"
-msgstr ""
+msgstr "Malsupren"
 
 #: lib/preferences/addacceptlanguage.ui:14
 msgctxt "AddAcceptLanguage|"
 msgid "Add Language"
-msgstr ""
+msgstr "Aldoni Lingvon"
 
 #: lib/preferences/addacceptlanguage.ui:20
 msgctxt "AddAcceptLanguage|"
 msgid "Choose preferred language for web sites"
-msgstr ""
+msgstr "Elekti preferatan lingvon por retejoj"
 
 #: lib/preferences/addacceptlanguage.ui:32
 msgctxt "AddAcceptLanguage|"
 msgid "Personal definition:"
-msgstr ""
+msgstr "Persona difino:"
 
 #: lib/preferences/autofillmanager.cpp:67
 msgctxt "AutoFillManager|"
 msgid "Import Passwords from File..."
-msgstr ""
+msgstr "Importi Pasvortojn el Dosiero..."
 
 #: lib/preferences/autofillmanager.cpp:68
 msgctxt "AutoFillManager|"
 msgid "Export Passwords to File..."
-msgstr ""
+msgstr "Eksporti Pasvortojn al Dosiero..."
 
 #: lib/preferences/autofillmanager.cpp:70
 msgctxt "AutoFillManager|"
 msgid "Search"
-msgstr ""
+msgstr "Serĉi"
 
 #: lib/preferences/autofillmanager.cpp:82
 #: lib/preferences/autofillmanager.cpp:175
@@ -3387,349 +3415,351 @@ msgstr ""
 #: lib/preferences/autofillmanager.ui:140
 msgctxt "AutoFillManager|"
 msgid "Show Passwords"
-msgstr ""
+msgstr "Montri Pasvortojn"
 
 #: lib/preferences/autofillmanager.cpp:134
 msgctxt "AutoFillManager|"
 msgid "Change backend..."
-msgstr ""
+msgstr "Ŝanĝi backend..."
 
 #: lib/preferences/autofillmanager.cpp:134
 msgctxt "AutoFillManager|"
 msgid "Change backend:"
-msgstr ""
+msgstr "Ŝanĝi backend:"
 
 #: lib/preferences/autofillmanager.cpp:183
 msgctxt "AutoFillManager|"
 msgid "Are you sure that you want to show all passwords?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas montri ĉiujn pasvortojn?"
 
 #: lib/preferences/autofillmanager.cpp:198
 msgctxt "AutoFillManager|"
 msgid "Hide Passwords"
-msgstr ""
+msgstr "Kaŝi Pasvortojn"
 
 #: lib/preferences/autofillmanager.cpp:236
 msgctxt "AutoFillManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Konfirmo"
 
 #: lib/preferences/autofillmanager.cpp:237
 msgctxt "AutoFillManager|"
 msgid "Are you sure you want to delete all passwords on your computer?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas forigi ĉiujn pasvortojn en via komputilo?"
 
 #: lib/preferences/autofillmanager.cpp:256
 msgctxt "AutoFillManager|"
 msgid "Edit password"
-msgstr ""
+msgstr "Redakti pasvorton"
 
 #: lib/preferences/autofillmanager.cpp:256
 msgctxt "AutoFillManager|"
 msgid "Change password:"
-msgstr ""
+msgstr "Ŝanĝi pasvorton:"
 
 #: lib/preferences/autofillmanager.cpp:310
 #: lib/preferences/autofillmanager.cpp:321
 msgctxt "AutoFillManager|"
 msgid "Choose file..."
-msgstr ""
+msgstr "Elekti dosieron..."
 
 #: lib/preferences/autofillmanager.cpp:335
 msgctxt "AutoFillManager|"
 msgid "Cannot read file!"
-msgstr ""
+msgstr "Ne povas legi dosieron!"
 
 #: lib/preferences/autofillmanager.cpp:344
 msgctxt "AutoFillManager|"
 msgid "Successfully imported"
-msgstr ""
+msgstr "Sukcese importita"
 
 #: lib/preferences/autofillmanager.cpp:344
 msgctxt "AutoFillManager|"
 msgid "Error while importing!"
-msgstr ""
+msgstr "Eraro dum importado!"
 
 #: lib/preferences/autofillmanager.cpp:355
 msgctxt "AutoFillManager|"
 msgid "Cannot write to file!"
-msgstr ""
+msgstr "Ne povas skribi al dosiero!"
 
 #: lib/preferences/autofillmanager.cpp:364
 msgctxt "AutoFillManager|"
 msgid "Successfully exported"
-msgstr ""
+msgstr "Sukcese eksportita"
 
 #: lib/preferences/autofillmanager.cpp:381
 msgctxt "AutoFillManager|"
 msgid "Copy Username"
-msgstr ""
+msgstr "Kopii uzantnomon"
 
 #: lib/preferences/autofillmanager.cpp:382
 msgctxt "AutoFillManager|"
 msgid "Copy Password"
-msgstr ""
+msgstr "Kopii Pasvorton"
 
 #: lib/preferences/autofillmanager.cpp:384
 msgctxt "AutoFillManager|"
 msgid "Edit Password"
-msgstr ""
+msgstr "Redakti Pasvorton"
 
 #: lib/preferences/autofillmanager.ui:25
 msgctxt "AutoFillManager|"
 msgid "Passwords are stored in:"
-msgstr ""
+msgstr "Pasvortoj estas konservitaj en:"
 
 #: lib/preferences/autofillmanager.ui:35
 msgctxt "AutoFillManager|"
 msgid "Change backend"
-msgstr ""
+msgstr "Ŝanĝi backend"
 
 #: lib/preferences/autofillmanager.ui:42
 msgctxt "AutoFillManager|"
 msgid "Backend options"
-msgstr ""
+msgstr "Backend opcioj"
 
 #: lib/preferences/autofillmanager.ui:71
 msgctxt "AutoFillManager|"
 msgid "Passwords"
-msgstr ""
+msgstr "Pasvortoj"
 
 #: lib/preferences/autofillmanager.ui:87 lib/preferences/autofillmanager.ui:201
 msgctxt "AutoFillManager|"
 msgid "Server"
-msgstr ""
+msgstr "Servilo"
 
 #: lib/preferences/autofillmanager.ui:92
 msgctxt "AutoFillManager|"
 msgid "Username"
-msgstr ""
+msgstr "Uzantnomo"
 
 #: lib/preferences/autofillmanager.ui:97
 msgctxt "AutoFillManager|"
 msgid "Password"
-msgstr ""
+msgstr "Pasvorto"
 
 #: lib/preferences/autofillmanager.ui:113
 msgctxt "AutoFillManager|"
 msgid "Import and Export"
-msgstr ""
+msgstr "Importi kaj Eksporti"
 
 #: lib/preferences/autofillmanager.ui:154
 msgctxt "AutoFillManager|"
 msgid "Edit"
-msgstr ""
+msgstr "Redakti"
 
 #: lib/preferences/autofillmanager.ui:161
 #: lib/preferences/autofillmanager.ui:211
 msgctxt "AutoFillManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/preferences/autofillmanager.ui:168
 #: lib/preferences/autofillmanager.ui:218
 msgctxt "AutoFillManager|"
 msgid "Remove All"
-msgstr ""
+msgstr "Forigi Ĉion"
 
 #: lib/preferences/autofillmanager.ui:191
 msgctxt "AutoFillManager|"
 msgid "Exceptions"
-msgstr ""
+msgstr "Esceptoj"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "Gastiganto:"
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "Aldoni atestilan escepton"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "Gastiganto %1 jam en la listo"
 
 #: lib/preferences/certificatemanager.cpp:83
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr ""
+msgstr "Malplena gastiganto"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Administranto pri escepto de atestilo"
 
 #: lib/preferences/certificatemanager.ui:22
 msgctxt "CertificateManager|"
 msgid "Add"
-msgstr ""
+msgstr "Aldoni"
 
 #: lib/preferences/certificatemanager.ui:29
 msgctxt "CertificateManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "Forigi eniron postulas rekomencon"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
 msgid "JavaScript Options"
-msgstr ""
+msgstr "JavaScript Opcioj"
 
 #: lib/preferences/jsoptions.ui:20
 msgctxt "JsOptions|"
 msgid "Allow JavaScript to:"
-msgstr ""
+msgstr "Permesi JavaScript al:"
 
 #: lib/preferences/jsoptions.ui:29
 msgctxt "JsOptions|"
 msgid "Open popup windows"
-msgstr ""
+msgstr "Malfermi ŝprucfenestrojn"
 
 #: lib/preferences/jsoptions.ui:36
 msgctxt "JsOptions|"
 msgid "Activate windows"
-msgstr ""
+msgstr "Aktivigi fenestrojn"
 
 #: lib/preferences/jsoptions.ui:43
 msgctxt "JsOptions|"
 msgid "Access clipboard"
-msgstr ""
+msgstr "Aliri tondujon"
 
 #: lib/preferences/jsoptions.ui:50
 msgctxt "JsOptions|"
 msgid "Paste from clipboard"
-msgstr ""
+msgstr "Alglui el tondujo"
 
 #: lib/preferences/pluginslist.ui:17
 msgctxt "PluginsList|"
 msgid "Enter name"
-msgstr ""
+msgstr "Enigi nomon"
 
 #: lib/preferences/pluginslist.ui:51
 msgctxt "PluginsList|"
 msgid "Settings"
-msgstr ""
+msgstr "Agordoj"
 
 #: lib/preferences/pluginslist.ui:61
 msgctxt "PluginsList|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/preferences/pluginslist.ui:81
 msgctxt "PluginsList|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
 msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">Akiru pliajn etendaĵojn..."
+"</a>"
 
 #: lib/preferences/pluginsmanager.cpp:198
 msgctxt "PluginsManager|"
 msgid "Error!"
-msgstr ""
+msgstr "Eraro!"
 
 #: lib/preferences/pluginsmanager.cpp:198
 msgctxt "PluginsManager|"
 msgid "Cannot load extension!"
-msgstr ""
+msgstr "Ne povas ŝargi etendon!"
 
 #: lib/preferences/pluginsmanager.cpp:237
 msgctxt "PluginsManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Konfirmo"
 
 #: lib/preferences/pluginsmanager.cpp:238
 #, qt-format
 msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas forigi '%1'?"
 
 #: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:620
 msgctxt "Preferences|"
 msgid "Default"
-msgstr ""
+msgstr "Defaŭlte"
 
 #: lib/preferences/preferences.cpp:159
 msgctxt "Preferences|"
 msgid "Set as default"
-msgstr ""
+msgstr "Agordi kiel defaŭlto"
 
 #: lib/preferences/preferences.cpp:304
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/preferences/preferences.cpp:563
 msgctxt "Preferences|"
 msgid "Choose executable location..."
-msgstr ""
+msgstr "Elektu plenumeblan lokon..."
 
 #: lib/preferences/preferences.cpp:606
 msgctxt "Preferences|"
 msgid "OSD Notification"
-msgstr ""
+msgstr "OSD-Signo"
 
 #: lib/preferences/preferences.cpp:607
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
-msgstr ""
+msgstr "Trenu ĝin sur la ekranon por meti ĝin kie vi volas."
 
 #: lib/preferences/preferences.cpp:656
 msgctxt "Preferences|"
 msgid "Choose download location..."
-msgstr ""
+msgstr "Elekti elŝutan lokon..."
 
 #: lib/preferences/preferences.cpp:670
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
-msgstr ""
+msgstr "Elekti lokon de stilfolio..."
 
 #: lib/preferences/preferences.cpp:681
 msgctxt "Preferences|"
 msgid "Deleted"
-msgstr ""
+msgstr "Forigita"
 
 #: lib/preferences/preferences.cpp:789
 msgctxt "Preferences|"
 msgid "Choose cache path..."
-msgstr ""
+msgstr "Elekti kaŝmemorvojon..."
 
 #: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "New Profile"
-msgstr ""
+msgstr "Nova Profilo"
 
 #: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
-msgstr ""
+msgstr "Enigu la nomon de la nova profilo:"
 
 #: lib/preferences/preferences.cpp:830 lib/preferences/preferences.cpp:835
 msgctxt "Preferences|"
 msgid "Error!"
-msgstr ""
+msgstr "Eraro!"
 
 #: lib/preferences/preferences.cpp:830
 msgctxt "Preferences|"
 msgid "This profile already exists!"
-msgstr ""
+msgstr "Ĉi tiu profilo jam ekzistas!"
 
 #: lib/preferences/preferences.cpp:835
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
-msgstr ""
+msgstr "Ne povas krei profildosierujon!"
 
 #: lib/preferences/preferences.cpp:846
 msgctxt "Preferences|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Konfirmo"
 
 #: lib/preferences/preferences.cpp:847
 #, qt-format
@@ -3738,696 +3768,700 @@ msgid ""
 "Are you sure you want to permanently delete \"%1\" profile? This action "
 "cannot be undone!"
 msgstr ""
+"Ĉu vi certas, ke vi volas konstante forigi \"%1\" profilon? Ĉi tiu ago ne "
+"povas esti malfarita!"
 
 #: lib/preferences/preferences.cpp:862 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
-msgstr ""
+msgstr "Noto: Vi ne povas forigi aktivan profilon."
 
 #: lib/preferences/preferences.cpp:1121
 msgctxt "Preferences|"
 msgid "Select Color"
-msgstr ""
+msgstr "Elekti Koloron"
 
 #: lib/preferences/preferences.ui:14
 msgctxt "Preferences|"
 msgid "Preferences"
-msgstr ""
+msgstr "Preferoj"
 
 #: lib/preferences/preferences.ui:60
 msgctxt "Preferences|"
 msgid "General"
-msgstr ""
+msgstr "Ĝenerala"
 
 #: lib/preferences/preferences.ui:65
 msgctxt "Preferences|"
 msgid "Appearance"
-msgstr ""
+msgstr "Aspekto"
 
 #: lib/preferences/preferences.ui:70
 msgctxt "Preferences|"
 msgid "Tabs"
-msgstr ""
+msgstr "Langetoj"
 
 #: lib/preferences/preferences.ui:75
 msgctxt "Preferences|"
 msgid "Browsing"
-msgstr ""
+msgstr "Foliumado"
 
 #: lib/preferences/preferences.ui:80
 msgctxt "Preferences|"
 msgid "Fonts"
-msgstr ""
+msgstr "Tiparoj"
 
 #: lib/preferences/preferences.ui:85
 msgctxt "Preferences|"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Klavaraj ŝparvojoj"
 
 #: lib/preferences/preferences.ui:90
 msgctxt "Preferences|"
 msgid "Downloads"
-msgstr ""
+msgstr "Elŝutoj"
 
 #: lib/preferences/preferences.ui:95
 msgctxt "Preferences|"
 msgid "Password Manager"
-msgstr ""
+msgstr "Pasvortmanaĝero"
 
 #: lib/preferences/preferences.ui:100
 msgctxt "Preferences|"
 msgid "Privacy"
-msgstr ""
+msgstr "Privateco"
 
 #: lib/preferences/preferences.ui:105
 msgctxt "Preferences|"
 msgid "Notifications"
-msgstr ""
+msgstr "Sciigoj"
 
 #: lib/preferences/preferences.ui:110
 msgctxt "Preferences|"
 msgid "Extensions"
-msgstr ""
+msgstr "Etendaĵoj"
 
 #: lib/preferences/preferences.ui:115
 msgctxt "Preferences|"
 msgid "Spell Check"
-msgstr ""
+msgstr "Literuma Kontrolo"
 
 #: lib/preferences/preferences.ui:120
 msgctxt "Preferences|"
 msgid "Other"
-msgstr ""
+msgstr "Alia"
 
 #: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
 msgctxt "Preferences|"
 msgid "Use current"
-msgstr ""
+msgstr "Uzi aktualan"
 
 #: lib/preferences/preferences.ui:243
 msgctxt "Preferences|"
 msgid "Create New"
-msgstr ""
+msgstr "Krei Novan"
 
 #: lib/preferences/preferences.ui:259
 msgctxt "Preferences|"
 msgid "Delete"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/preferences/preferences.ui:285
 msgctxt "Preferences|"
 msgid "<b>Launching</b>"
-msgstr ""
+msgstr "<b>Lanĉo</b>"
 
 #: lib/preferences/preferences.ui:295
 msgctxt "Preferences|"
 msgid "After launch: "
-msgstr ""
+msgstr "Post lanĉo:"
 
 #: lib/preferences/preferences.ui:303
 msgctxt "Preferences|"
 msgid "Open blank page"
-msgstr ""
+msgstr "Malfermi malplenan paĝon"
 
 #: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
 msgctxt "Preferences|"
 msgid "Open homepage"
-msgstr ""
+msgstr "Malfermi hejmpaĝon"
 
 #: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
 msgctxt "Preferences|"
 msgid "Open speed dial"
-msgstr ""
+msgstr "Malfermi rapidan tajpon"
 
 #: lib/preferences/preferences.ui:318
 msgctxt "Preferences|"
 msgid "Restore session"
-msgstr ""
+msgstr "Restarigi seancon"
 
 #: lib/preferences/preferences.ui:323
 msgctxt "Preferences|"
 msgid "Select session"
-msgstr ""
+msgstr "Elekti seancon"
 
 #: lib/preferences/preferences.ui:331
 msgctxt "Preferences|"
 msgid "Homepage: "
-msgstr ""
+msgstr "Hejmpaĝo:"
 
 #: lib/preferences/preferences.ui:352
 msgctxt "Preferences|"
 msgid "On new tab: "
-msgstr ""
+msgstr "Sur nova langeto:"
 
 #: lib/preferences/preferences.ui:360
 msgctxt "Preferences|"
 msgid "Open blank tab"
-msgstr ""
+msgstr "Malfermi malplenan langeton"
 
 #: lib/preferences/preferences.ui:375
 msgctxt "Preferences|"
 msgid "Open other page..."
-msgstr ""
+msgstr "Malfermi alian paĝon..."
 
 #: lib/preferences/preferences.ui:383
 msgctxt "Preferences|"
 msgid "<b>Profiles</b>"
-msgstr ""
+msgstr "<b>Profiloj</b>"
 
 #: lib/preferences/preferences.ui:390
 msgctxt "Preferences|"
 msgid "Startup profile:"
-msgstr ""
+msgstr "Komenca profilo:"
 
 #: lib/preferences/preferences.ui:397
 msgctxt "Preferences|"
 msgid "Check for updates on start"
-msgstr ""
+msgstr "Kontroli pri ĝisdatigoj ĉe la komenco"
 
 #: lib/preferences/preferences.ui:404
 msgctxt "Preferences|"
 msgid "Active profile:"
-msgstr ""
+msgstr "Aktiva profilo:"
 
 #: lib/preferences/preferences.ui:418
 msgctxt "Preferences|"
 msgid "Don't load tabs until selected"
-msgstr ""
+msgstr "Ne ŝargi langetojn ĝis elekto"
 
 #: lib/preferences/preferences.ui:440
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
-msgstr ""
+msgstr "Kontroli ĉu Falkon estas la defaŭlta retumilo ĉe ekfunkciigo"
 
 #: lib/preferences/preferences.ui:450
 msgctxt "Preferences|"
 msgid "Check Now"
-msgstr ""
+msgstr "Kontroli Nun"
 
 #: lib/preferences/preferences.ui:480
 msgctxt "Preferences|"
 msgid "Themes"
-msgstr ""
+msgstr "Etosoj"
 
 #: lib/preferences/preferences.ui:502
 msgctxt "Preferences|"
 msgid "Advanced options"
-msgstr ""
+msgstr "Altnivelaj opcioj"
 
 #: lib/preferences/preferences.ui:510
 msgctxt "Preferences|"
 msgid "Show StatusBar on start"
-msgstr ""
+msgstr "Montri StatusBar ĉe komenco"
 
 #: lib/preferences/preferences.ui:517
 msgctxt "Preferences|"
 msgid "Show Bookmarks ToolBar on start"
-msgstr ""
+msgstr "Montri Legosignojn Ilobreton ĉe la komenco"
 
 #: lib/preferences/preferences.ui:524
 msgctxt "Preferences|"
 msgid "Show Navigation ToolBar on start"
-msgstr ""
+msgstr "Montri Navigadan Ilobreton ĉe la komenco"
 
 #: lib/preferences/preferences.ui:531
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
-msgstr ""
+msgstr "Ebligi tujan Ilobreton de Legosignoj"
 
 #: lib/preferences/preferences.ui:553
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
-msgstr ""
+msgstr "<b>Fenestro de la foliumilo</b>"
 
 #: lib/preferences/preferences.ui:601
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
-msgstr ""
+msgstr "Tabs konduto"
 
 #: lib/preferences/preferences.ui:607
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
-msgstr ""
+msgstr "Kaŝi langetojn kiam estas nur unu langeto"
 
 #: lib/preferences/preferences.ui:614
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
-msgstr ""
+msgstr "Aktivigi lastan langeton kiam vi fermas aktivan langeton"
 
 #: lib/preferences/preferences.ui:621
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
-msgstr ""
+msgstr "Malfermi novajn langetojn post aktiva langeto"
 
 #: lib/preferences/preferences.ui:628
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
-msgstr ""
+msgstr "Malfermi novajn malplenajn langetojn post aktiva langeto"
 
 #: lib/preferences/preferences.ui:635
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
-msgstr ""
+msgstr "Malfermi ŝprucfenestrojn en langetoj"
 
 #: lib/preferences/preferences.ui:642
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
-msgstr ""
+msgstr "Ĉiam ŝanĝi inter langetoj per musrado"
 
 #: lib/preferences/preferences.ui:649
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
-msgstr ""
+msgstr "Aŭtomate ŝanĝi al lastatempe malfermita langeto"
 
 #: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
-msgstr ""
+msgstr "Ne fermi fenestron post fermo de la lasta langeto"
 
 #: lib/preferences/preferences.ui:663
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
-msgstr ""
+msgstr "Demandi kiam vi fermas plurajn langetojn"
 
 #: lib/preferences/preferences.ui:670
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
-msgstr ""
+msgstr "Montri fermitajn langetojn butonon"
 
 #: lib/preferences/preferences.ui:679
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
-msgstr ""
+msgstr "Montri fermbutonojn sur neaktivaj langetoj:"
 
 #: lib/preferences/preferences.ui:687
 msgctxt "Preferences|"
 msgid "Automatic"
-msgstr ""
+msgstr "Aŭtomata"
 
 #: lib/preferences/preferences.ui:692
 msgctxt "Preferences|"
 msgid "Always"
-msgstr ""
+msgstr "Ĉiam"
 
 #: lib/preferences/preferences.ui:697
 msgctxt "Preferences|"
 msgid "Never"
-msgstr ""
+msgstr "Neniam"
 
 #: lib/preferences/preferences.ui:737
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
-msgstr ""
+msgstr "Konduto de Adresbreto"
 
 #: lib/preferences/preferences.ui:745
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
-msgstr ""
+msgstr "Sugesti dum tajpado en adresbreton:"
 
 #: lib/preferences/preferences.ui:759
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
-msgstr ""
+msgstr "Historio kaj Legosignoj"
 
 #: lib/preferences/preferences.ui:764
 msgctxt "Preferences|"
 msgid "History"
-msgstr ""
+msgstr "Historio"
 
 #: lib/preferences/preferences.ui:769
 msgctxt "Preferences|"
 msgid "Bookmarks"
-msgstr ""
+msgstr "Legosignoj"
 
 #: lib/preferences/preferences.ui:774
 msgctxt "Preferences|"
 msgid "Nothing"
-msgstr ""
+msgstr "Nenio"
 
 #: lib/preferences/preferences.ui:800
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
-msgstr ""
+msgstr "Ebligi enliniajn sugestojn"
 
 #: lib/preferences/preferences.ui:807
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
 msgstr ""
+"Premu \"Shift\" por ne ŝanĝi la langeton sed ŝargi la url en la aktuala "
+"langeto"
 
 #: lib/preferences/preferences.ui:810
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
-msgstr ""
+msgstr "Proponi ŝanĝi langeton se la kompleta url jam estas ŝargita"
 
 #: lib/preferences/preferences.ui:817
 msgctxt "Preferences|"
 msgid "Always show go icon"
-msgstr ""
+msgstr "Ĉiam montri iri-piktogramon"
 
 #: lib/preferences/preferences.ui:824
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr ""
+msgstr "Montri zoman etikedon"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
-msgstr ""
+msgstr "Elekti la tutan tekston per duobla klako en adresbreto"
 
 #: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
-msgstr ""
+msgstr "Elekti la tutan tekston alklakante en adresbreto"
 
 #: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
-msgstr ""
+msgstr "Ebligi aŭtomatan serĉadon de la adresbreto"
 
 #: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
-msgstr ""
+msgstr "Serĉi per Defaŭlta Motoro"
 
 #: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Show search suggestions"
-msgstr ""
+msgstr "Montri serĉsugestojn"
 
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "Vastigi sugesta ŝprucfenestron al fenestrolarĝo"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
-msgstr ""
+msgstr "Montri ŝargan progreson en adresbreto"
 
 #: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Fill"
-msgstr ""
+msgstr "Plenigi"
 
 #: lib/preferences/preferences.ui:927
 msgctxt "Preferences|"
 msgid "Bottom"
-msgstr ""
+msgstr "Fundo"
 
 #: lib/preferences/preferences.ui:932
 msgctxt "Preferences|"
 msgid "Top"
-msgstr ""
+msgstr "Supre"
 
 #: lib/preferences/preferences.ui:940
 msgctxt "Preferences|"
 msgid "Custom color:"
-msgstr ""
+msgstr "Propra koloro:"
 
 #: lib/preferences/preferences.ui:956
 msgctxt "Preferences|"
 msgid "Select color"
-msgstr ""
+msgstr "Elekti koloron"
 
 #: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
 #: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
 #: lib/preferences/preferences.ui:2749
 msgctxt "Preferences|"
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: lib/preferences/preferences.ui:966
 msgctxt "Preferences|"
 msgid "Reset"
-msgstr ""
+msgstr "Restarigi"
 
 #: lib/preferences/preferences.ui:1017
 msgctxt "Preferences|"
 msgid "Web Configuration"
-msgstr ""
+msgstr "Reta Agordo"
 
 #: lib/preferences/preferences.ui:1025
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
-msgstr ""
+msgstr "Ebligi Pepper-kromaĵon API (PPAPI)"
 
 #: lib/preferences/preferences.ui:1032
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
-msgstr ""
+msgstr "Uzi enkonstruitan PDF-rigardilon (postulas PPAPI)"
 
 #: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
-msgstr ""
+msgstr "Permesi JavaScript"
 
 #: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
-msgstr ""
+msgstr "Inkluzivi ligilojn en fokusa ĉeno"
 
 #. try to detect possible XSS attacks when executing javascript
 #: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
-msgstr ""
+msgstr "Ebligi XSS-Reviziadon"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
 #: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Print element background"
-msgstr ""
+msgstr "Presi elemento fonon"
 
 #: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Animated scrolling"
-msgstr ""
+msgstr "Vigla movo"
 
 #: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
-msgstr ""
+msgstr "Ebligi spacan navigadon"
 
 #: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
-msgstr ""
+msgstr "Uzi denaskajn rulumbretojn"
 
 #: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
-msgstr ""
+msgstr "Malebligi aŭtomatan ludadon de videoj"
 
 #: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
-msgstr ""
+msgstr "Malhelpi WebRTC liki lokan IP-adreson"
 
 #: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
-msgstr ""
+msgstr "Ebligi DNS-antaŭporton"
 
 #: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Enable screen capture"
-msgstr ""
+msgstr "Ebligi ekrankapton"
 
 #: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr ""
+msgstr "Uzi aparatan akcelon (postulas rekomencon)"
 
 #: lib/preferences/preferences.ui:1133
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
-msgstr ""
+msgstr "Musrado ruliĝas"
 
 #: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "lines on page"
-msgstr ""
+msgstr "linioj sur paĝo"
 
 #: lib/preferences/preferences.ui:1164
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
-msgstr ""
+msgstr "Defaŭlta zomo sur paĝoj:"
 
 #: lib/preferences/preferences.ui:1203
 msgctxt "Preferences|"
 msgid "Local Storage"
-msgstr ""
+msgstr "Loka Konservado"
 
 #: lib/preferences/preferences.ui:1211
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
-msgstr ""
+msgstr "Permesi konservi retan kaŝmemoron sur disko"
 
 #: lib/preferences/preferences.ui:1234
 msgctxt "Preferences|"
 msgid "Delete cache on close"
-msgstr ""
+msgstr "Forigi kaŝmemoron ĉe fermo"
 
 #: lib/preferences/preferences.ui:1241
 msgctxt "Preferences|"
 msgid "Maximum:"
-msgstr ""
+msgstr "Maksimumo:"
 
 #: lib/preferences/preferences.ui:1248
 msgctxt "Preferences|"
 msgid " MB"
-msgstr ""
+msgstr "MB"
 
 #: lib/preferences/preferences.ui:1264
 msgctxt "Preferences|"
 msgid "Store cache in:"
-msgstr ""
+msgstr "Konservi kaŝmemoron en:"
 
 #: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "Allow saving history"
-msgstr ""
+msgstr "Permesi konservi historion"
 
 #: lib/preferences/preferences.ui:1299
 msgctxt "Preferences|"
 msgid "Delete history on close"
-msgstr ""
+msgstr "Forigi historion ĉe fermo"
 
 #: lib/preferences/preferences.ui:1322
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
-msgstr ""
+msgstr "Permesi lokan konservadon de HTML5-retenhavo"
 
 #: lib/preferences/preferences.ui:1329
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
-msgstr ""
+msgstr "Forigi loke konservitan HTML5-retejan enhavon ĉe fermo"
 
 #: lib/preferences/preferences.ui:1355
 msgctxt "Preferences|"
 msgid "Delete now"
-msgstr ""
+msgstr "Forigi nun"
 
 #: lib/preferences/preferences.ui:1394
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
-msgstr ""
+msgstr "Prokura Agordo"
 
 #: lib/preferences/preferences.ui:1413
 msgctxt "Preferences|"
 msgid "System proxy configuration"
-msgstr ""
+msgstr "Sistema prokuril-agordo"
 
 #: lib/preferences/preferences.ui:1436
 msgctxt "Preferences|"
 msgid "Manual configuration"
-msgstr ""
+msgstr "Mana agordo"
 
 #: lib/preferences/preferences.ui:1446
 msgctxt "Preferences|"
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #: lib/preferences/preferences.ui:1451
 msgctxt "Preferences|"
 msgid "SOCKS5"
-msgstr ""
+msgstr "SOCKS5"
 
 #: lib/preferences/preferences.ui:1462
 msgctxt "Preferences|"
 msgid "Port:"
-msgstr ""
+msgstr "Pordo:"
 
 #: lib/preferences/preferences.ui:1483
 msgctxt "Preferences|"
 msgid "Username:"
-msgstr ""
+msgstr "Uzantnomo:"
 
 #: lib/preferences/preferences.ui:1493
 msgctxt "Preferences|"
 msgid "Password:"
-msgstr ""
+msgstr "Pasvorto:"
 
 #: lib/preferences/preferences.ui:1522
 msgctxt "Preferences|"
 msgid "No proxy"
-msgstr ""
+msgstr "Neniu prokurilo"
 
 #: lib/preferences/preferences.ui:1537
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
-msgstr ""
+msgstr "<b>Tiparaj Familioj</b>"
 
 #: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
 msgid "Standard"
-msgstr ""
+msgstr "Normo"
 
 #: lib/preferences/preferences.ui:1557
 msgctxt "Preferences|"
 msgid "Fixed"
-msgstr ""
+msgstr "Fiksita"
 
 #: lib/preferences/preferences.ui:1567
 msgctxt "Preferences|"
 msgid "Serif"
-msgstr ""
+msgstr "Serif"
 
 #: lib/preferences/preferences.ui:1577
 msgctxt "Preferences|"
 msgid "Sans Serif"
-msgstr ""
+msgstr "Sans Serif"
 
 #: lib/preferences/preferences.ui:1587
 msgctxt "Preferences|"
 msgid "Cursive"
-msgstr ""
+msgstr "Kursiva"
 
 #: lib/preferences/preferences.ui:1639
 msgctxt "Preferences|"
 msgid "Fantasy"
-msgstr ""
+msgstr "Fantazio"
 
 #: lib/preferences/preferences.ui:1646
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
-msgstr ""
+msgstr "<b>Tiparagrandoj</b>"
 
 #: lib/preferences/preferences.ui:1655
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
-msgstr ""
+msgstr "Fiksa Tiparo Grandeco"
 
 #: lib/preferences/preferences.ui:1662
 msgctxt "Preferences|"
 msgid "Default Font Size"
-msgstr ""
+msgstr "Defaŭlta Tiparo Grandeco"
 
 #: lib/preferences/preferences.ui:1689
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
-msgstr ""
+msgstr "Minimuma Tiparo Grandeco"
 
 #: lib/preferences/preferences.ui:1696
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
-msgstr ""
+msgstr "Minimuma Logika Tiparo Grandeco"
 
 #: lib/preferences/preferences.ui:1729
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
-msgstr ""
+msgstr "<b>Ŝparvojoj</b>"
 
 #: lib/preferences/preferences.ui:1736
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
-msgstr ""
+msgstr "Ŝanĝi al langetoj per Alt + nombro da langetoj"
 
 #: lib/preferences/preferences.ui:1743
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
-msgstr ""
+msgstr "Ŝargi rapidajn ciferdiskojn per Ctrl + nombro da rapida ciferdisko"
 
 #: lib/preferences/preferences.ui:1750
 msgctxt "Preferences|"
@@ -4435,11 +4469,13 @@ msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
 "><b>/</b> - search on page"
 msgstr ""
+"Ekzistantaj ŝparvojoj:<br/><b>1</b> - antaŭa langeto<br/><b>2</b> - sekva "
+"langeto<br/><b>/</b> - serĉo sur paĝo"
 
 #: lib/preferences/preferences.ui:1753
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
-msgstr ""
+msgstr "Uzi unuklavajn ŝparvojojn"
 
 #: lib/preferences/preferences.ui:1760
 msgctxt "Preferences|"
@@ -4447,161 +4483,163 @@ msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
 "shortcut was intended."
 msgstr ""
+"Se nemarkite, malhelpas hazardan eliron el la aplikaĵo se la ŝparvojo Ctrl-W "
+"estis celita."
 
 #: lib/preferences/preferences.ui:1763
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
-msgstr ""
+msgstr "Fermi la aplikaĵon per Ctrl-Q"
 
 #: lib/preferences/preferences.ui:1787
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
-msgstr ""
+msgstr "<b>Elŝuta Loko</b>"
 
 #: lib/preferences/preferences.ui:1794
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
-msgstr ""
+msgstr "Demandi ĉiufoje pri elŝuta loko"
 
 #: lib/preferences/preferences.ui:1801
 msgctxt "Preferences|"
 msgid "Use defined location: "
-msgstr ""
+msgstr "Uzi difinitan lokon:"
 
 #: lib/preferences/preferences.ui:1851
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
-msgstr ""
+msgstr "<b>Elŝut-Opcioj</b>"
 
 #: lib/preferences/preferences.ui:1858
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
-msgstr ""
+msgstr "Fermi elŝutadministrilon kiam elŝutado finiĝas"
 
 #: lib/preferences/preferences.ui:1865
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
-msgstr ""
+msgstr "<b>Ekstera elŝuta administranto</b>"
 
 #: lib/preferences/preferences.ui:1872
 msgctxt "Preferences|"
 msgid "Use external download manager"
-msgstr ""
+msgstr "Uzi eksteran elŝutadministrilon"
 
 #: lib/preferences/preferences.ui:1884
 msgctxt "Preferences|"
 msgid "Executable:"
-msgstr ""
+msgstr "Efektivigebla:"
 
 #: lib/preferences/preferences.ui:1891
 msgctxt "Preferences|"
 msgid "Arguments:"
-msgstr ""
+msgstr "Argumentoj:"
 
 #: lib/preferences/preferences.ui:1898
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
-msgstr ""
+msgstr "Lasi malplena se necerta"
 
 #: lib/preferences/preferences.ui:1919
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
-msgstr ""
+msgstr "<b>%d</b> estos anstataŭigita per URL elŝutota"
 
 #: lib/preferences/preferences.ui:1945
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
-msgstr ""
+msgstr "<b>Ebloj de Aŭtomata plenigo</b>"
 
 #: lib/preferences/preferences.ui:1952
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
-msgstr ""
+msgstr "Permesi konservi pasvortojn de retejoj"
 
 #: lib/preferences/preferences.ui:2003
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
-msgstr ""
+msgstr "Aŭtomate kompletigu pasvortojn en retejoj"
 
 #: lib/preferences/preferences.ui:2014
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
-msgstr ""
+msgstr "<b>Kuketoj</b>"
 
 #: lib/preferences/preferences.ui:2021
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
-msgstr ""
+msgstr "<b>Aliaj</b>"
 
 #: lib/preferences/preferences.ui:2047
 msgctxt "Preferences|"
 msgid "JavaScript options"
-msgstr ""
+msgstr "Ebloj de JavaScript"
 
 #: lib/preferences/preferences.ui:2057
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
-msgstr ""
+msgstr "<b>JavaScript</b>"
 
 #: lib/preferences/preferences.ui:2070
 msgctxt "Preferences|"
 msgid "Cookies Manager"
-msgstr ""
+msgstr "Kuketoj Administranto"
 
 #: lib/preferences/preferences.ui:2080
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
-msgstr ""
+msgstr "Administri JavaScript-privatecajn opciojn"
 
 #: lib/preferences/preferences.ui:2103
 msgctxt "Preferences|"
 msgid "Manage HTML5 permissions"
-msgstr ""
+msgstr "Administri HTML5-permesojn"
 
 #: lib/preferences/preferences.ui:2110
 msgctxt "Preferences|"
 msgid "Manage Cookies"
-msgstr ""
+msgstr "Administri Kuketojn"
 
 #: lib/preferences/preferences.ui:2130
 msgctxt "Preferences|"
 msgid "<b>HTML5 Permissions</b>"
-msgstr ""
+msgstr "<b>HTML5-Permesoj</b>"
 
 #: lib/preferences/preferences.ui:2143
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
-msgstr ""
+msgstr "HTML5 Permesoj"
 
 #: lib/preferences/preferences.ui:2150
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
-msgstr ""
+msgstr "Sendi Ne Spuru kaplinion al serviloj"
 
 #: lib/preferences/preferences.ui:2176
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
-msgstr ""
+msgstr "Eksvalidiĝotempo:"
 
 #: lib/preferences/preferences.ui:2189
 msgctxt "Preferences|"
 msgid " seconds"
-msgstr ""
+msgstr " sekundoj"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
-msgstr ""
+msgstr "<b>Sciigoj</b>"
 
 #: lib/preferences/preferences.ui:2234
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
-msgstr ""
+msgstr "Uzu Denaskajn Sistemajn Sciigojn (nur Linukso)"
 
 #: lib/preferences/preferences.ui:2241
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
-msgstr ""
+msgstr "Ne uzi Sciigojn"
 
 #: lib/preferences/preferences.ui:2264
 msgctxt "Preferences|"
@@ -4609,16 +4647,18 @@ msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
 "the screen."
 msgstr ""
+"<b>Noto: </b>Vi povas ŝanĝi pozicion de OSD-Signo trenante ĝin sur la "
+"ekranon."
 
 #: lib/preferences/preferences.ui:2290
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
-msgstr ""
+msgstr "Uzi OSD-Sciojn"
 
 #: lib/preferences/preferences.ui:2297
 msgctxt "Preferences|"
 msgid "Preview"
-msgstr ""
+msgstr "Antaŭrigardo"
 
 #: lib/preferences/preferences.ui:2362
 msgctxt "Preferences|"
@@ -4626,682 +4666,685 @@ msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
 "userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 msgstr ""
+"Por pliaj informoj pri Literuma Kontrolo, bonvolu vidi <a href=\"https://"
+"userbase.kde.org/Falkon#Spell_Check\">vikio</a>."
 
 #: lib/preferences/preferences.ui:2404
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
-msgstr ""
+msgstr "<b>Literumaj opcioj</b>"
 
 #: lib/preferences/preferences.ui:2411
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
-msgstr ""
+msgstr "Ebligi Literumkontrolon"
 
 #: lib/preferences/preferences.ui:2418
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
-msgstr ""
+msgstr "<b>Vortaraj dosierujoj</b>"
 
 #: lib/preferences/preferences.ui:2469
 msgctxt "Preferences|"
 msgid "No languages found"
-msgstr ""
+msgstr "Neniuj lingvoj trovitaj"
 
 #: lib/preferences/preferences.ui:2498
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
-msgstr ""
+msgstr "Manaĝero pri Protokolo Pritraktantoj"
 
 #: lib/preferences/preferences.ui:2538
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
-msgstr ""
+msgstr "Administranto pri serĉiloj"
 
 #: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
-msgstr ""
+msgstr "<b>Uzanta Stilofolio</b>"
 
 #: lib/preferences/preferences.ui:2567
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
-msgstr ""
+msgstr "<b>Administri serĉilojn</b>"
 
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "Administri proprajn skemojn"
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
 msgid "Languages"
-msgstr ""
+msgstr "Lingvoj"
 
 #: lib/preferences/preferences.ui:2627
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
-msgstr ""
+msgstr "<b>Preferata lingvo por retejoj</b>"
 
 #: lib/preferences/preferences.ui:2652
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Atestila Escepto-Manaĝero"
 
 #: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
-msgstr ""
+msgstr "<b>Ŝanĝi retumilon-identigon</b>"
 
 #: lib/preferences/preferences.ui:2699
 msgctxt "Preferences|"
 msgid "User Agent Manager"
-msgstr ""
+msgstr "Administranto de Uzanto Agento"
 
 #: lib/preferences/preferences.ui:2721
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
-msgstr ""
+msgstr "Stilfolio aŭtomate ŝargita kun ĉiuj retejoj:"
 
 #: lib/preferences/preferences.ui:2758
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
-msgstr ""
+msgstr "<b>Administri protokoltraktantojn</b>"
 
 #: lib/preferences/preferences.ui:2765
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr ""
+msgstr "<b>Atestila administranto</b>"
 
 #: lib/preferences/preferences.ui:2816
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr ""
+msgstr "Propra Skema Administranto"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "Aldoni permesitan skemon"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr ""
+msgstr "Skemo:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "Aldoni blokitan skemon"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "Propra skemo-administranto"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "Permesitaj skemoj"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
-msgstr ""
+msgstr "**Noto:** Permesitaj skemoj povas esti aldonitaj per etendoj."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
 msgctxt "SchemeManager|"
 msgid "Add"
-msgstr ""
+msgstr "Aldoni"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
 msgctxt "SchemeManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/preferences/schememanager.ui:68
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr ""
+msgstr "Bloko"
 
 #: lib/preferences/schememanager.ui:98
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr ""
+msgstr "Blokitaj skemoj"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Ŝanĝoj efektiviĝos post la rekomenco de Falkon."
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Konfirmo"
 
 #: lib/preferences/thememanager.cpp:101
 #, qt-format
 msgctxt "ThemeManager|"
 msgid "Are you sure you want to remove '%1'?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas forigi '%1'?"
 
 #: lib/preferences/thememanager.ui:51
 msgctxt "ThemeManager|"
 msgid "<b>Name:</b>"
-msgstr ""
+msgstr "<b>Nomo:</b>"
 
 #: lib/preferences/thememanager.ui:61
 msgctxt "ThemeManager|"
 msgid "<b>Author:</b>"
-msgstr ""
+msgstr "<b>Aŭtoro:</b>"
 
 #: lib/preferences/thememanager.ui:84
 msgctxt "ThemeManager|"
 msgid "<b>Description:</b>"
-msgstr ""
+msgstr "<b>Priskribo:</b>"
 
 #: lib/preferences/thememanager.ui:128
 msgctxt "ThemeManager|"
 msgid "License"
-msgstr ""
+msgstr "Permesilo"
 
 #: lib/preferences/thememanager.ui:155
 msgctxt "ThemeManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/preferences/thememanager.ui:175
 msgctxt "ThemeManager|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
 msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/572/\">Akiri pliajn etosojn...</a>"
 
 #: lib/preferences/useragentdialog.cpp:99
 msgctxt "UserAgentDialog|"
 msgid "Add new site"
-msgstr ""
+msgstr "Aldoni novan retejon"
 
 #: lib/preferences/useragentdialog.cpp:137
 msgctxt "UserAgentDialog|"
 msgid "Edit site"
-msgstr ""
+msgstr "Redakti retejon"
 
 #: lib/preferences/useragentdialog.cpp:216
 msgctxt "UserAgentDialog|"
 msgid "Site domain: "
-msgstr ""
+msgstr "Reteja domajno:"
 
 #: lib/preferences/useragentdialog.cpp:217
 msgctxt "UserAgentDialog|"
 msgid "User Agent: "
-msgstr ""
+msgstr "Uzanto Agento:"
 
 #: lib/preferences/useragentdialog.ui:14
 msgctxt "UserAgentDialog|"
 msgid "User Agent Manager"
-msgstr ""
+msgstr "Administranto de Uzanto Agento"
 
 #: lib/preferences/useragentdialog.ui:20
 msgctxt "UserAgentDialog|"
 msgid "Change global User Agent"
-msgstr ""
+msgstr "Ŝanĝi ĉiean Uzantan Agenton"
 
 #: lib/preferences/useragentdialog.ui:48
 msgctxt "UserAgentDialog|"
 msgid "Use different User Agents for specified sites"
-msgstr ""
+msgstr "Uzi malsamajn Uzantajn Agentojn por specifitaj retejoj"
 
 #: lib/preferences/useragentdialog.ui:92
 msgctxt "UserAgentDialog|"
 msgid "Site"
-msgstr ""
+msgstr "Retejo"
 
 #: lib/preferences/useragentdialog.ui:97
 msgctxt "UserAgentDialog|"
 msgid "User Agent"
-msgstr ""
+msgstr "Uzanto Agento"
 
 #: lib/preferences/useragentdialog.ui:107
 msgctxt "UserAgentDialog|"
 msgid "Add"
-msgstr ""
+msgstr "Aldoni"
 
 #: lib/preferences/useragentdialog.ui:114
 msgctxt "UserAgentDialog|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/preferences/useragentdialog.ui:134
 msgctxt "UserAgentDialog|"
 msgid "Edit"
-msgstr ""
+msgstr "Redakti"
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
 msgid "_cloned"
-msgstr ""
+msgstr "_klonis"
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
 msgid "_renamed"
-msgstr ""
+msgstr "_renomita"
 
 #: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Clone Session"
-msgstr ""
+msgstr "Klona Seanco"
 
 #: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Rename Session"
-msgstr ""
+msgstr "Alinomi Seancon"
 
 #: lib/session/sessionmanager.cpp:129
 msgctxt "SessionManager|"
 msgid "Please enter a new name:"
-msgstr ""
+msgstr "Bonvolu enigi novan nomon:"
 
 #: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:144
 #: lib/session/sessionmanager.cpp:149 lib/session/sessionmanager.cpp:171
 #: lib/session/sessionmanager.cpp:219
 msgctxt "SessionManager|"
 msgid "Error!"
-msgstr ""
+msgstr "Eraro!"
 
 #: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:171
 #: lib/session/sessionmanager.cpp:219
 #, qt-format
 msgctxt "SessionManager|"
 msgid "The session file \"%1\" exists. Please enter another name."
-msgstr ""
+msgstr "La seanca dosiero \"%1\" ekzistas. Bonvolu enigi alian nomon."
 
 #: lib/session/sessionmanager.cpp:144
 msgctxt "SessionManager|"
 msgid "An error occurred when cloning session file."
-msgstr ""
+msgstr "Eraro okazis dum klonado de seancodosiero."
 
 #: lib/session/sessionmanager.cpp:149
 msgctxt "SessionManager|"
 msgid "An error occurred when renaming session file."
-msgstr ""
+msgstr "Eraro okazis dum renomado de seancodosiero."
 
 #: lib/session/sessionmanager.cpp:162
 msgctxt "SessionManager|"
 msgid "Save Session"
-msgstr ""
+msgstr "Konservi Seancon"
 
 #: lib/session/sessionmanager.cpp:163
 msgctxt "SessionManager|"
 msgid "Please enter a name to save session:"
-msgstr ""
+msgstr "Bonvolu enigi nomon por konservi seancon:"
 
 #: lib/session/sessionmanager.cpp:164
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Saved Session (%1)"
-msgstr ""
+msgstr "Konservita Seanco (%1)"
 
 #: lib/session/sessionmanager.cpp:181
 msgctxt "SessionManager|"
 msgid "Restore Backup"
-msgstr ""
+msgstr "Restarigi Rezervon"
 
 #: lib/session/sessionmanager.cpp:181
 msgctxt "SessionManager|"
 msgid "Are you sure you want to replace current session?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas anstataŭigi la nunan seancon?"
 
 #: lib/session/sessionmanager.cpp:200
 msgctxt "SessionManager|"
 msgid "Delete Session"
-msgstr ""
+msgstr "Forigi Seancon"
 
 #: lib/session/sessionmanager.cpp:200
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Are you sure you want to delete session '%1'?"
-msgstr ""
+msgstr "Ĉu vi certas, ke vi volas forigi la seancon '%1'?"
 
 #: lib/session/sessionmanager.cpp:210
 msgctxt "SessionManager|"
 msgid "New Session"
-msgstr ""
+msgstr "Nova Seanco"
 
 #: lib/session/sessionmanager.cpp:211
 msgctxt "SessionManager|"
 msgid "Please enter a name to create new session:"
-msgstr ""
+msgstr "Bonvolu enigi nomon por krei novan seancon:"
 
 #: lib/session/sessionmanager.cpp:212
 #, qt-format
 msgctxt "SessionManager|"
 msgid "New Session (%1)"
-msgstr ""
+msgstr "Nova Seanco (%1)"
 
 #: lib/session/sessionmanager.cpp:244
 msgctxt "SessionManager|"
 msgid "Backup 1"
-msgstr ""
+msgstr "Rezervo 1"
 
 #: lib/session/sessionmanager.cpp:251
 msgctxt "SessionManager|"
 msgid "Backup 2"
-msgstr ""
+msgstr "Rezervo 2"
 
 #: lib/session/sessionmanager.cpp:291
 msgctxt "SessionManager|"
 msgid "Default Session"
-msgstr ""
+msgstr "Defaŭlta Seanco"
 
 #: lib/session/sessionmanager.cpp:394
 msgctxt "SessionManager|"
 msgid "Please select the startup session:"
-msgstr ""
+msgstr "Bonvolu elekti la startseancon:"
 
 #: lib/session/sessionmanager.cpp:413
 #, qt-format
 msgctxt "SessionManager|"
 msgid "%1 (last session)"
-msgstr ""
+msgstr "%1 (lasta seanco)"
 
 #: lib/session/sessionmanagerdialog.cpp:140
 msgctxt "SessionManagerDialog|"
 msgid "Restore"
-msgstr ""
+msgstr "Restaŭri"
 
 #: lib/session/sessionmanagerdialog.cpp:140
 msgctxt "SessionManagerDialog|"
 msgid "Switch To"
-msgstr ""
+msgstr "Ŝanĝi Al"
 
 #: lib/session/sessionmanagerdialog.ui:14
 msgctxt "SessionManagerDialog|"
 msgid "Session Manager"
-msgstr ""
+msgstr "Seanca Administranto"
 
 #: lib/session/sessionmanagerdialog.ui:24
 msgctxt "SessionManagerDialog|"
 msgid "Session"
-msgstr ""
+msgstr "Seanco"
 
 #: lib/session/sessionmanagerdialog.ui:29
 msgctxt "SessionManagerDialog|"
 msgid "Last Modified"
-msgstr ""
+msgstr "Laste Modifita"
 
 #: lib/session/sessionmanagerdialog.ui:39
 msgctxt "SessionManagerDialog|"
 msgid "New"
-msgstr ""
+msgstr "Nova"
 
 #: lib/session/sessionmanagerdialog.ui:46
 msgctxt "SessionManagerDialog|"
 msgid "Rename"
-msgstr ""
+msgstr "Alinomi"
 
 #: lib/session/sessionmanagerdialog.ui:53
 msgctxt "SessionManagerDialog|"
 msgid "Clone"
-msgstr ""
+msgstr "Klono"
 
 #: lib/session/sessionmanagerdialog.ui:60
 msgctxt "SessionManagerDialog|"
 msgid "Delete"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/session/sessionmanagerdialog.ui:67
 msgctxt "SessionManagerDialog|"
 msgid "Switch to"
-msgstr ""
+msgstr "Ŝanĝi al"
 
 #: lib/sidebar/bookmarkssidebar.cpp:103
 msgctxt "BookmarksSidebar|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "Malfermi en nova langeto"
 
 #: lib/sidebar/bookmarkssidebar.cpp:104
 msgctxt "BookmarksSidebar|"
 msgid "Open in new window"
-msgstr ""
+msgstr "Malfermi en nova fenestro"
 
 #: lib/sidebar/bookmarkssidebar.cpp:105
 msgctxt "BookmarksSidebar|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Malfermi en nova privata fenestro"
 
 #: lib/sidebar/bookmarkssidebar.cpp:108
 msgctxt "BookmarksSidebar|"
 msgid "Delete"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/sidebar/bookmarkssidebar.ui:41
 msgctxt "BookmarksSideBar|"
 msgid "Search..."
-msgstr ""
+msgstr "Serĉi..."
 
 #: lib/sidebar/historysidebar.cpp:85
 msgctxt "HistorySideBar|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "Malfermi en nova langeto"
 
 #: lib/sidebar/historysidebar.cpp:86
 msgctxt "HistorySideBar|"
 msgid "Open in new window"
-msgstr ""
+msgstr "Malfermi en nova fenestro"
 
 #: lib/sidebar/historysidebar.cpp:87
 msgctxt "HistorySideBar|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Malfermi en nova privata fenestro"
 
 #: lib/sidebar/historysidebar.cpp:90
 msgctxt "HistorySideBar|"
 msgid "Delete"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/sidebar/historysidebar.ui:32
 msgctxt "HistorySideBar|"
 msgid "Search..."
-msgstr ""
+msgstr "Serĉi..."
 
 #: lib/sidebar/sidebar.cpp:66 lib/sidebar/sidebar.cpp:108
 msgctxt "SideBar|"
 msgid "Bookmarks"
-msgstr ""
+msgstr "Legosignoj"
 
 #: lib/sidebar/sidebar.cpp:73 lib/sidebar/sidebar.cpp:115
 msgctxt "SideBar|"
 msgid "History"
-msgstr ""
+msgstr "Historio"
 
 #: lib/tabwidget/tabbar.cpp:111
 msgctxt "BrowserWindow|"
 msgid "Close Tab"
-msgstr ""
+msgstr "Fermi Tab"
 
 #: lib/tabwidget/tabcontextmenu.cpp:63
 msgctxt "TabBar|"
 msgid "Don't ask again"
-msgstr ""
+msgstr "Ne demandi denove"
 
 #: lib/tabwidget/tabcontextmenu.cpp:80 lib/tabwidget/tabcontextmenu.cpp:91
 #: lib/tabwidget/tabcontextmenu.cpp:102
 msgctxt "TabContextMenu|"
 msgid "Close Tabs"
-msgstr ""
+msgstr "Fermi Langetojn"
 
 #: lib/tabwidget/tabcontextmenu.cpp:80
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close other tabs?"
-msgstr ""
+msgstr "Ĉu vi vere volas fermi aliajn langetojn?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:88
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the right?"
-msgstr ""
+msgstr "Ĉu vi vere volas fermi ĉiujn langetojn dekstren?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:89
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the bottom?"
-msgstr ""
+msgstr "Ĉu vi vere volas fermi ĉiujn langetojn malsupre?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:99
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the left?"
-msgstr ""
+msgstr "Ĉu vi vere volas fermi ĉiujn langetojn maldekstre?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:100
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the top?"
-msgstr ""
+msgstr "Ĉu vi vere volas fermi ĉiujn langetojn supre?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:117
 msgctxt "TabContextMenu|"
 msgid "&Stop Tab"
-msgstr ""
+msgstr "&Haltigi Langeton"
 
 #: lib/tabwidget/tabcontextmenu.cpp:120
 msgctxt "TabContextMenu|"
 msgid "&Reload Tab"
-msgstr ""
+msgstr "&Reŝargi langeton"
 
 #: lib/tabwidget/tabcontextmenu.cpp:123
 msgctxt "TabContextMenu|"
 msgid "&Duplicate Tab"
-msgstr ""
+msgstr "&Dupliki Langeton"
 
 #: lib/tabwidget/tabcontextmenu.cpp:126
 msgctxt "TabContextMenu|"
 msgid "D&etach Tab"
-msgstr ""
+msgstr "Malkroĉi Lang&eton"
 
 #: lib/tabwidget/tabcontextmenu.cpp:129
 msgctxt "TabContextMenu|"
 msgid "Un&pin Tab"
-msgstr ""
+msgstr "Mal&pingli Langeton"
 
 #: lib/tabwidget/tabcontextmenu.cpp:129
 msgctxt "TabContextMenu|"
 msgid "&Pin Tab"
-msgstr ""
+msgstr "Al&pingli Langeton"
 
 #: lib/tabwidget/tabcontextmenu.cpp:130
 msgctxt "TabContextMenu|"
 msgid "Un&mute Tab"
-msgstr ""
+msgstr "Mal&silentigi Langeton"
 
 #: lib/tabwidget/tabcontextmenu.cpp:130
 msgctxt "TabContextMenu|"
 msgid "&Mute Tab"
-msgstr ""
+msgstr "&Silentigi Langeton"
 
 #: lib/tabwidget/tabcontextmenu.cpp:133
 msgctxt "TabContextMenu|"
 msgid "Load Tab"
-msgstr ""
+msgstr "Ŝargi Langeton"
 
 #: lib/tabwidget/tabcontextmenu.cpp:135
 msgctxt "TabContextMenu|"
 msgid "Unload Tab"
-msgstr ""
+msgstr "Malŝargi Langeton"
 
 #: lib/tabwidget/tabcontextmenu.cpp:139
 msgctxt "TabContextMenu|"
 msgid "Re&load All Tabs"
-msgstr ""
+msgstr "Reŝargi Ĉiujn &Langetojn"
 
 #: lib/tabwidget/tabcontextmenu.cpp:140 lib/tabwidget/tabcontextmenu.cpp:156
 msgctxt "TabContextMenu|"
 msgid "Bookmark &All Tabs"
-msgstr ""
+msgstr "Legomarki &Ĉiujn Langetojn"
 
 #: lib/tabwidget/tabcontextmenu.cpp:144
 msgctxt "TabContextMenu|"
 msgid "Close Ot&her Tabs"
-msgstr ""
+msgstr "Fermi Alia&jn Langetojn"
 
 #: lib/tabwidget/tabcontextmenu.cpp:145
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Right"
-msgstr ""
+msgstr "Fermi Langetojn Dekstrajn"
 
 #: lib/tabwidget/tabcontextmenu.cpp:145
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Bottom"
-msgstr ""
+msgstr "Fermi Langetojn Malsuprajn"
 
 #: lib/tabwidget/tabcontextmenu.cpp:146
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Left"
-msgstr ""
+msgstr "Fermi Langetojn Maldekstrajn"
 
 #: lib/tabwidget/tabcontextmenu.cpp:146
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Top"
-msgstr ""
+msgstr "Fermi Langetojn Suprajn"
 
 #: lib/tabwidget/tabcontextmenu.cpp:151
 msgctxt "TabContextMenu|"
 msgid "Cl&ose Tab"
-msgstr ""
+msgstr "Fermi Langet&on"
 
 #: lib/tabwidget/tabcontextmenu.cpp:153
 msgctxt "TabContextMenu|"
 msgid "&New tab"
-msgstr ""
+msgstr "&Nova langeto"
 
 #: lib/tabwidget/tabcontextmenu.cpp:155
 msgctxt "TabContextMenu|"
 msgid "Reloa&d All Tabs"
-msgstr ""
+msgstr "Reŝargi Ĉiujn Lange&tojn"
 
 #: lib/tabwidget/tabicon.cpp:169
 msgctxt "TabIcon|"
 msgid "Unmute Tab"
-msgstr ""
+msgstr "Malsilentigi Langeton"
 
 #: lib/tabwidget/tabicon.cpp:169
 msgctxt "TabIcon|"
 msgid "Mute Tab"
-msgstr ""
+msgstr "Silentigi Langeton"
 
 #: lib/tabwidget/tabwidget.cpp:51
 msgctxt "TabWidget|"
 msgid "New Tab"
-msgstr ""
+msgstr "Nova Langeto"
 
 #: lib/tabwidget/tabwidget.cpp:126
 msgctxt "TabWidget|"
 msgid "Closed tabs"
-msgstr ""
+msgstr "Fermitaj langetoj"
 
 #: lib/tabwidget/tabwidget.cpp:137
 msgctxt "TabWidget|"
 msgid "List of tabs"
-msgstr ""
+msgstr "Listo de langetoj"
 
 #: lib/tabwidget/tabwidget.cpp:294
 msgctxt "TabWidget|"
 msgid "Empty"
-msgstr ""
+msgstr "Malplena"
 
 #: lib/tabwidget/tabwidget.cpp:298
 msgctxt "TabWidget|"
 msgid "Restore All Closed Tabs"
-msgstr ""
+msgstr "Restarigi Ĉiujn Fermitajn Langetojn"
 
 #: lib/tabwidget/tabwidget.cpp:299
 msgctxt "TabWidget|"
 msgid "Clear list"
-msgstr ""
+msgstr "Visŝi liston"
 
 #: lib/tabwidget/tabwidget.h:106
 msgctxt "TabWidget|"
 msgid "New tab"
-msgstr ""
+msgstr "Nova langeto"
 
 #: lib/tools/aesinterface.cpp:146
 msgctxt "AesInterface|"
 msgid "Warning!"
-msgstr ""
+msgstr "Averto!"
 
 #: lib/tools/aesinterface.cpp:146
 msgctxt "AesInterface|"
@@ -5309,245 +5352,247 @@ msgid ""
 "Data has been encrypted with a newer version of Falkon.\n"
 "Please install latest version of Falkon."
 msgstr ""
+"Datumoj estis ĉifritaj per pli nova versio de Falkon.\n"
+"Bonvolu instali la plej novan version de Falkon."
 
 #: lib/tools/certificateinfowidget.cpp:300
 msgctxt "QObject|"
 msgid "<not set in certificate>"
-msgstr ""
+msgstr "<ne fiksita en atestilo>"
 
 #: lib/tools/certificateinfowidget.ui:17
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Issued To</b>"
-msgstr ""
+msgstr "<b>Eldonita Al</b>"
 
 #: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
 msgctxt "CertificateInfoWidget|"
 msgid "Common Name (CN):"
-msgstr ""
+msgstr "Komuna Nomo (CN):"
 
 #: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
 msgctxt "CertificateInfoWidget|"
 msgid "Organization (O):"
-msgstr ""
+msgstr "Organizo (O):"
 
 #: lib/tools/certificateinfowidget.ui:58 lib/tools/certificateinfowidget.ui:133
 msgctxt "CertificateInfoWidget|"
 msgid "Organizational Unit (OU):"
-msgstr ""
+msgstr "Organiza Unuo (OU):"
 
 #: lib/tools/certificateinfowidget.ui:75
 msgctxt "CertificateInfoWidget|"
 msgid "Serial Number:"
-msgstr ""
+msgstr "Seria Numero:"
 
 #: lib/tools/certificateinfowidget.ui:92
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Issued By</b>"
-msgstr ""
+msgstr "<b>Eldonita de</b>"
 
 #: lib/tools/certificateinfowidget.ui:150
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Validity</b>"
-msgstr ""
+msgstr "<b>Valideco</b>"
 
 #: lib/tools/certificateinfowidget.ui:157
 msgctxt "CertificateInfoWidget|"
 msgid "Issued On:"
-msgstr ""
+msgstr "Eldonita Je:"
 
 #: lib/tools/certificateinfowidget.ui:174
 msgctxt "CertificateInfoWidget|"
 msgid "Expires On:"
-msgstr ""
+msgstr "Eksvalidiĝas je:"
 
 #: lib/tools/html5permissions/html5permissionsdialog.cpp:63
 msgctxt "HTML5PermissionsDialog|"
 msgid "Allow"
-msgstr ""
+msgstr "Permesi"
 
 #: lib/tools/html5permissions/html5permissionsdialog.cpp:72
 msgctxt "HTML5PermissionsDialog|"
 msgid "Deny"
-msgstr ""
+msgstr "Nei"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:14
 msgctxt "HTML5PermissionsDialog|"
 msgid "HTML5 Permissions"
-msgstr ""
+msgstr "HTML5 Permesoj"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:35
 msgctxt "HTML5PermissionsDialog|"
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:64
 msgctxt "HTML5PermissionsDialog|"
 msgid "Site"
-msgstr ""
+msgstr "Retejo"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:69
 msgctxt "HTML5PermissionsDialog|"
 msgid "Behaviour"
-msgstr ""
+msgstr "Konduto"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:79
 msgctxt "HTML5PermissionsDialog|"
 msgid "Permission for:"
-msgstr ""
+msgstr "Permeso por:"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:87
 msgctxt "HTML5PermissionsDialog|"
 msgid "Notifications"
-msgstr ""
+msgstr "Sciigoj"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:92
 msgctxt "HTML5PermissionsDialog|"
 msgid "Geolocation"
-msgstr ""
+msgstr "Geolokigo"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:97
 msgctxt "HTML5PermissionsDialog|"
 msgid "Microphone"
-msgstr ""
+msgstr "Mikrofono"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:102
 msgctxt "HTML5PermissionsDialog|"
 msgid "Camera"
-msgstr ""
+msgstr "Fotilo"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:107
 msgctxt "HTML5PermissionsDialog|"
 msgid "Microphone and Camera"
-msgstr ""
+msgstr "Mikrofono kaj Fotilo"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:112
 msgctxt "HTML5PermissionsDialog|"
 msgid "Hide Pointer"
-msgstr ""
+msgstr "Kaŝi Montrilon"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:117
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display Capture"
-msgstr ""
+msgstr "Montra Kapto"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:122
 msgctxt "HTML5PermissionsDialog|"
 msgid "Display and Audio Capture"
-msgstr ""
+msgstr "Montriĝo kaj Audio-Kaptado"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
 msgid "this site"
-msgstr ""
+msgstr "ĉi tiu retejo"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:46
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to show desktop notifications?"
-msgstr ""
+msgstr "Ĉu permesi %1 montri labortablajn sciigojn?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:50
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to locate your position?"
-msgstr ""
+msgstr "Ĉu permesi %1 lokalizi vian pozicion?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:54
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to use your microphone?"
-msgstr ""
+msgstr "Ĉu permesi %1 uzi vian mikrofonon?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:58
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to use your camera?"
-msgstr ""
+msgstr "Ĉu permesi %1 uzi vian fotilon?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:62
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to use your microphone and camera?"
-msgstr ""
+msgstr "Ĉu permesi %1 uzi vian mikrofonon kaj fotilon?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:66
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to hide your pointer?"
-msgstr ""
+msgstr "Ĉu permesi %1 kaŝi vian montrilon?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:70
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen?"
-msgstr ""
+msgstr "Ĉu permesi %1 kapti vian ekranon?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:74
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to capture your screen and audio?"
-msgstr ""
+msgstr "Ĉu permesi %1 kapti vian ekranon kaj audio?"
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:43
 msgctxt "HTML5PermissionsNotification|"
 msgid "Remember"
-msgstr ""
+msgstr "Memori"
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:50
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow"
-msgstr ""
+msgstr "Permesi"
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:57
 msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
-msgstr ""
+msgstr "Nei"
 
 #: lib/tools/qztools.cpp:389
 msgctxt "QObject|"
 msgid "Unknown size"
-msgstr ""
+msgstr "Nekonata grandeco"
 
 #: lib/tools/qztools.cpp:394
 msgctxt "QObject|"
 msgid "KB"
-msgstr ""
+msgstr "KB"
 
 #: lib/tools/qztools.cpp:399
 msgctxt "QObject|"
 msgid "MB"
-msgstr ""
+msgstr "MB"
 
 #: lib/tools/qztools.cpp:403
 msgctxt "QObject|"
 msgid "GB"
-msgstr ""
+msgstr "GB"
 
 #: lib/tools/qztools.cpp:862
 msgctxt "QObject|"
 msgid "Executable: "
-msgstr ""
+msgstr "Efektivigebla:"
 
 #: lib/tools/qztools.cpp:863
 msgctxt "QObject|"
 msgid "Arguments: "
-msgstr ""
+msgstr "Argumentoj:"
 
 #: lib/tools/qztools.cpp:865
 msgctxt "QObject|"
 msgid "Cannot start external program"
-msgstr ""
+msgstr "Ne povas komenci eksteran programon"
 
 #: lib/tools/qztools.cpp:866
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
-msgstr ""
+msgstr "Ne povas komenci eksteran programon! %1"
 
 #: lib/webengine/jsalert.ui:125
 msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
-msgstr ""
+msgstr "Malhelpi ĉi tiun paĝon krei kromajn dialogojn"
 
 #: lib/webengine/webpage.cpp:347
 #, qt-format
@@ -5556,338 +5601,343 @@ msgid ""
 "Falkon cannot handle <b>%1:</b> links. The requested link is <ul><li>%2</"
 "li></ul>Do you want Falkon to try open this link in system application?"
 msgstr ""
+"Falkon ne povas trakti <b>%1:</b> ligilojn. La petita ligilo estas <ul><li>"
+"%2</li></ul>Ĉu vi volas, ke Falkon provu malfermi ĉi tiun ligilon en sistema "
+"aplikaĵo?"
 
 #: lib/webengine/webpage.cpp:352
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
-msgstr ""
+msgstr "Memori mian elekton por ĉi tiu protokolo"
 
 #: lib/webengine/webpage.cpp:353
 msgctxt "WebPage|"
 msgid "External Protocol Request"
-msgstr ""
+msgstr "Ekstera Protokolo-Peto"
 
 #: lib/webengine/webpage.cpp:433 lib/webengine/webpage.cpp:434
 msgctxt "WebPage|"
 msgid "Failed loading page"
-msgstr ""
+msgstr "Malsukcesa ŝargo de paĝo"
 
 #: lib/webengine/webpage.cpp:435
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
-msgstr ""
+msgstr "Io misfunkciis dum ŝargo de ĉi tiu paĝo."
 
 #: lib/webengine/webpage.cpp:436
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr ""
+"Provu reŝargi la paĝon aŭ fermi kelkajn langetojn por disponigi pli da "
+"memoro."
 
 #: lib/webengine/webpage.cpp:437
 msgctxt "WebPage|"
 msgid "Reload page"
-msgstr ""
+msgstr "Reŝargi paĝon"
 
 #: lib/webengine/webpage.cpp:510
 msgctxt "WebPage|"
 msgid "Choose file..."
-msgstr ""
+msgstr "Elekti dosieron..."
 
 #: lib/webengine/webpage.cpp:514
 msgctxt "WebPage|"
 msgid "Choose files..."
-msgstr ""
+msgstr "Elekti dosierojn..."
 
 #: lib/webengine/webpage.cpp:650
 msgctxt "WebPage|"
 msgid "JavaScript alert"
-msgstr ""
+msgstr "JavaScript-alarmo"
 
 #: lib/webengine/webpage.cpp:659
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
-msgstr ""
+msgstr "Malhelpi ĉi tiun paĝon krei kromajn dialogojn"
 
 #: lib/webengine/webview.cpp:130
 msgctxt "WebView|"
 msgid "Empty Page"
-msgstr ""
+msgstr "Malplena Paĝo"
 
 #: lib/webengine/webview.cpp:397
 #, qt-format
 msgctxt "WebView|"
 msgid "Falkon %1 (%2)"
-msgstr ""
+msgstr "Falkon %1 (%2)"
 
 #: lib/webengine/webview.cpp:711
 msgctxt "WebView|"
 msgid "No suggestions"
-msgstr ""
+msgstr "Neniuj sugestoj"
 
 #: lib/webengine/webview.cpp:762
 msgctxt "WebView|"
 msgid "&Back"
-msgstr ""
+msgstr "&Reen"
 
 #: lib/webengine/webview.cpp:766
 msgctxt "WebView|"
 msgid "&Forward"
-msgstr ""
+msgstr "An&taŭen"
 
 #: lib/webengine/webview.cpp:773
 msgctxt "WebView|"
 msgid "&Add New Page"
-msgstr ""
+msgstr "&Aldoni Novan Paĝon"
 
 #: lib/webengine/webview.cpp:774
 msgctxt "WebView|"
 msgid "&Configure Speed Dial"
-msgstr ""
+msgstr "Agordi Rapi&dan Tajpon"
 
 #: lib/webengine/webview.cpp:776
 msgctxt "WebView|"
 msgid "Reload All Dials"
-msgstr ""
+msgstr "Reŝargi Ĉiujn Ciferdiskojn"
 
 #: lib/webengine/webview.cpp:795
 msgctxt "WebView|"
 msgid "Book&mark page"
-msgstr ""
+msgstr "Libro&marki paĝon"
 
 #: lib/webengine/webview.cpp:796
 msgctxt "WebView|"
 msgid "&Save page as..."
-msgstr ""
+msgstr "Kon&servi paĝon kiel..."
 
 #: lib/webengine/webview.cpp:797
 msgctxt "WebView|"
 msgid "&Copy page link"
-msgstr ""
+msgstr "&Kopii paĝan ligilon"
 
 #: lib/webengine/webview.cpp:798
 msgctxt "WebView|"
 msgid "Send page link..."
-msgstr ""
+msgstr "Sendi paĝan ligilon..."
 
 #: lib/webengine/webview.cpp:800
 msgctxt "WebView|"
 msgid "Select &all"
-msgstr ""
+msgstr "Elekti ĉiujn"
 
 #: lib/webengine/webview.cpp:806
 msgctxt "WebView|"
 msgid "Show so&urce code"
-msgstr ""
+msgstr "Montr&i fontkodon"
 
 #: lib/webengine/webview.cpp:810
 msgctxt "WebView|"
 msgid "Show info ab&out site"
-msgstr ""
+msgstr "Montri inf&ormojn pri retejo"
 
 #: lib/webengine/webview.cpp:816
 msgctxt "WebView|"
 msgid "Open link in new &tab"
-msgstr ""
+msgstr "Malfermi ligilon en nova langeto"
 
 #: lib/webengine/webview.cpp:821
 msgctxt "WebView|"
 msgid "Open link in new &window"
-msgstr ""
+msgstr "Malfermi ligilon en nova fenestro"
 
 #: lib/webengine/webview.cpp:822
 msgctxt "WebView|"
 msgid "Open link in &private window"
-msgstr ""
+msgstr "Malfermi ligilon en &privata fenestro"
 
 #: lib/webengine/webview.cpp:827
 msgctxt "WebView|"
 msgid "B&ookmark link"
-msgstr ""
+msgstr "B&ookmark-ligilo"
 
 #: lib/webengine/webview.cpp:829
 msgctxt "WebView|"
 msgid "&Save link as..."
-msgstr ""
+msgstr "Kon&servi ligilon kiel..."
 
 #: lib/webengine/webview.cpp:830
 msgctxt "WebView|"
 msgid "Send link..."
-msgstr ""
+msgstr "Sendi ligilon..."
 
 #: lib/webengine/webview.cpp:831
 msgctxt "WebView|"
 msgid "&Copy link address"
-msgstr ""
+msgstr "&Kopii ligilan adreson"
 
 #: lib/webengine/webview.cpp:844
 msgctxt "WebView|"
 msgid "Show i&mage"
-msgstr ""
+msgstr "&Montri bildon"
 
 #: lib/webengine/webview.cpp:850
 msgctxt "WebView|"
 msgid "Copy image"
-msgstr ""
+msgstr "Kopii bildon"
 
 #: lib/webengine/webview.cpp:851
 msgctxt "WebView|"
 msgid "Copy image ad&dress"
-msgstr ""
+msgstr "Kopii bilda&dreson"
 
 #: lib/webengine/webview.cpp:853
 msgctxt "WebView|"
 msgid "&Save image as..."
-msgstr ""
+msgstr "Kon&servi bildon kiel..."
 
 #: lib/webengine/webview.cpp:854
 msgctxt "WebView|"
 msgid "Send image..."
-msgstr ""
+msgstr "Sendi bildon..."
 
 #: lib/webengine/webview.cpp:873
 msgctxt "WebView|"
 msgid "Send text..."
-msgstr ""
+msgstr "Sendi tekston..."
 
 #: lib/webengine/webview.cpp:885
 msgctxt "WebView|"
 msgid "Go to &web address"
-msgstr ""
+msgstr "Iri al &ret-adreso"
 
 #: lib/webengine/webview.cpp:899
 #, qt-format
 msgctxt "WebView|"
 msgid "Search \"%1 ..\" with %2"
-msgstr ""
+msgstr "Serĉi \"%1 ..\" kun %2"
 
 #: lib/webengine/webview.cpp:905
 msgctxt "WebView|"
 msgid "Search with..."
-msgstr ""
+msgstr "Serĉi kun..."
 
 #: lib/webengine/webview.cpp:927
 msgctxt "WebView|"
 msgid "&Play"
-msgstr ""
+msgstr "&Ludi"
 
 #: lib/webengine/webview.cpp:927
 msgctxt "WebView|"
 msgid "&Pause"
-msgstr ""
+msgstr "&Paŭzo"
 
 #: lib/webengine/webview.cpp:928
 msgctxt "WebView|"
 msgid "Un&mute"
-msgstr ""
+msgstr "Mal&silentigi"
 
 #: lib/webengine/webview.cpp:928
 msgctxt "WebView|"
 msgid "&Mute"
-msgstr ""
+msgstr "&Silentigi"
 
 #: lib/webengine/webview.cpp:930
 msgctxt "WebView|"
 msgid "&Copy Media Address"
-msgstr ""
+msgstr "&Kopii Aŭdvidaĵ-Adreson"
 
 #: lib/webengine/webview.cpp:931
 msgctxt "WebView|"
 msgid "&Send Media Address"
-msgstr ""
+msgstr "&Sendi Aŭdvidaĵan Adreson"
 
 #: lib/webengine/webview.cpp:932
 msgctxt "WebView|"
 msgid "Save Media To &Disk"
-msgstr ""
+msgstr "Konservi Aŭdvidaĵon Al &Disko"
 
 #: lib/webengine/webview.cpp:951
 msgctxt "WebView|"
 msgid "Create Search Engine"
-msgstr ""
+msgstr "Krei Serĉilon"
 
 #: lib/webengine/webview.cpp:992
 msgctxt "WebView|"
 msgid "&Undo"
-msgstr ""
+msgstr "&Malfari"
 
 #: lib/webengine/webview.cpp:998
 msgctxt "WebView|"
 msgid "&Redo"
-msgstr ""
+msgstr "&Refari"
 
 #: lib/webengine/webview.cpp:1004
 msgctxt "WebView|"
 msgid "&Cut"
-msgstr ""
+msgstr "&Tondi"
 
 #: lib/webengine/webview.cpp:1010
 msgctxt "WebView|"
 msgid "&Copy"
-msgstr ""
+msgstr "&Kopii"
 
 #: lib/webengine/webview.cpp:1016
 msgctxt "WebView|"
 msgid "&Paste"
-msgstr ""
+msgstr "&Alglui"
 
 #: lib/webengine/webview.cpp:1022
 msgctxt "WebView|"
 msgid "Select All"
-msgstr ""
+msgstr "Elekti ĉiujn"
 
 #: lib/webengine/webview.cpp:1028
 msgctxt "WebView|"
 msgid "&Reload"
-msgstr ""
+msgstr "&Reŝargi"
 
 #: lib/webengine/webview.cpp:1032
 msgctxt "WebView|"
 msgid "S&top"
-msgstr ""
+msgstr "Hal&ti"
 
 #: lib/webtab/searchtoolbar.cpp:155
 #, qt-format
 msgctxt "SearchToolBar|"
 msgid "%1 of %2"
-msgstr ""
+msgstr "%1 el %2"
 
 #: lib/webtab/searchtoolbar.ui:48
 msgctxt "SearchToolbar|"
 msgid "Find..."
-msgstr ""
+msgstr "Trovi..."
 
 #: lib/webtab/searchtoolbar.ui:58
 msgctxt "SearchToolbar|"
 msgid "Find the next match for the current search phrase"
-msgstr ""
+msgstr "Trovi la sekvan kongruon por la nuna serĉfrazo"
 
 #: lib/webtab/searchtoolbar.ui:61
 msgctxt "SearchToolbar|"
 msgid "&Next"
-msgstr ""
+msgstr "&Sekva"
 
 #: lib/webtab/searchtoolbar.ui:74
 msgctxt "SearchToolbar|"
 msgid "Find the previous match for the current search phrase"
-msgstr ""
+msgstr "Trovi la antaŭan kongruon por la nuna serĉfrazo"
 
 #: lib/webtab/searchtoolbar.ui:77
 msgctxt "SearchToolbar|"
 msgid "&Previous"
-msgstr ""
+msgstr "&Antaŭa"
 
 #: lib/webtab/searchtoolbar.ui:90
 msgctxt "SearchToolbar|"
 msgid "&Match Case"
-msgstr ""
+msgstr "Kongrui &Majusklecon"
 
 #: lib/webtab/tabbedwebview.cpp:194
 msgctxt "TabbedWebView|"
 msgid "Inspect Element"
-msgstr ""
+msgstr "Inspekti Elementon"
 
 #: lib/webtab/webtab.cpp:624
 #, qt-format
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
-msgstr ""
+msgstr "%1 - Falkon"
