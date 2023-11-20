@@ -1,4 +1,21 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+
 include:
-  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/linux.yml
-  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/freebsd.yml
-  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/flatpak.yml
+  - project: sysadmin/ci-utilities
+    file:
+      - /gitlab-templates/linux-qt6.yml
+      - /gitlab-templates/freebsd-qt6.yml
+
+      # Blocked - copied from tokodon
+      # - /gitlab-templates/reuse-lint.yml
+      # - /gitlab-templates/android-qt6.yml
+      # - /gitlab-templates/craft-android-qt6-apks.yml
+
+      # Blocked on libass (a MPV dependency) not compatible with MSVC at the moment (tokodon comment)
+      # Blocked - Nobody takes care of it
+      # - /gitlab-templates/windows.yml
+      # - /gitlab-templates/windows-qt6.yml
+
+      # Blocked on KF6 runtime not available (tokodon comment)
+      # - /gitlab-templates/flatpak.yml
