@@ -48,10 +48,10 @@ void GM_SettingsScriptInfo::loadScript()
     ui->nspace->setText(m_script->nameSpace());
     ui->version->setText(m_script->version());
     ui->url->setText(m_script->downloadUrl().toString());
-    ui->startAt->setText(m_script->startAt() == GM_Script::DocumentStart ? "document-start" : "document-end");
+    ui->startAt->setText(m_script->startAt() == GM_Script::DocumentStart ? QSL("document-start") : QSL("document-end"));
     ui->description->setText(m_script->description());
-    ui->include->setText(m_script->include().join("<br/>"));
-    ui->exclude->setText(m_script->exclude().join("<br/>"));
+    ui->include->setText(m_script->include().join(QSL("<br/>")));
+    ui->exclude->setText(m_script->exclude().join(QSL("<br/>")));
 
     ui->version->setVisible(!m_script->version().isEmpty());
     ui->labelVersion->setVisible(!m_script->version().isEmpty());

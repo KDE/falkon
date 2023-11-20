@@ -246,7 +246,7 @@ void BookmarksManager::updateEditBox(BookmarkItem* item)
     }
     else {
         ui->title->setText(item->title());
-        ui->address->setText(item->url().toEncoded());
+        ui->address->setText(QString::fromUtf8(item->url().toEncoded()));
         ui->keyword->setText(item->keyword());
         ui->description->setPlainText(item->description());
 

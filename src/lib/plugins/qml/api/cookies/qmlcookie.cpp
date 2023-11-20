@@ -46,7 +46,7 @@ QString QmlCookie::name() const
     if (!m_cookie) {
         return {};
     }
-    return QString(m_cookie->name());
+    return QString(QString::fromUtf8(m_cookie->name()));
 }
 
 QString QmlCookie::path() const
@@ -78,5 +78,5 @@ QString QmlCookie::value() const
     if (!m_cookie) {
         return {};
     }
-    return QString(m_cookie->value());
+    return QString(QString::fromUtf8(m_cookie->value()));
 }

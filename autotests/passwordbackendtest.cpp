@@ -72,7 +72,7 @@ void PasswordBackendTest::cleanupTestCase()
     cleanup();
 
     reloadBackend();
-    foreach (const PasswordEntry &entry, m_entries) {
+    for (const PasswordEntry &entry : std::as_const(m_entries)) {
         m_backend->addEntry(entry);
     }
 }

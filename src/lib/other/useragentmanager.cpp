@@ -29,20 +29,20 @@ UserAgentManager::UserAgentManager(QObject* parent)
     , m_usePerDomainUserAgent(false)
 {
     m_defaultUserAgent = mApp->webProfile()->httpUserAgent();
-    m_defaultUserAgent.replace(QRegularExpression(QSL("(QtWebEngine/[^\\s]+)")), QSL("Falkon/%1 \\1").arg(Qz::VERSION));
+    m_defaultUserAgent.replace(QRegularExpression(QSL("(QtWebEngine/[^\\s]+)")), QSL("Falkon/%1 \\1").arg(QString::fromLatin1(Qz::VERSION)));
 }
 
 void UserAgentManager::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    m_globalUserAgent = settings.value("UserAgent", QString()).toString();
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    m_globalUserAgent = settings.value(QSL("UserAgent"), QString()).toString();
     settings.endGroup();
 
-    settings.beginGroup("User-Agent-Settings");
-    m_usePerDomainUserAgent = settings.value("UsePerDomainUA", false).toBool();
-    QStringList domainList = settings.value("DomainList", QStringList()).toStringList();
-    QStringList userAgentsList = settings.value("UserAgentsList", QStringList()).toStringList();
+    settings.beginGroup(QSL("User-Agent-Settings"));
+    m_usePerDomainUserAgent = settings.value(QSL("UsePerDomainUA"), false).toBool();
+    QStringList domainList = settings.value(QSL("DomainList"), QStringList()).toStringList();
+    QStringList userAgentsList = settings.value(QSL("UserAgentsList"), QStringList()).toStringList();
     settings.endGroup();
 
     m_usePerDomainUserAgent = (m_usePerDomainUserAgent && domainList.count() == userAgentsList.count());

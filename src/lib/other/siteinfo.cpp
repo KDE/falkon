@@ -56,12 +56,12 @@ SiteInfo::SiteInfo(WebView *view)
     delegate->setUniformItemSizes(true);
     ui->listWidget->setItemDelegate(delegate);
 
-    ui->listWidget->item(0)->setIcon(QIcon::fromTheme("document-properties", QIcon(":/icons/preferences/document-properties.png")));
-    ui->listWidget->item(1)->setIcon(QIcon::fromTheme("applications-graphics", QIcon(":/icons/preferences/applications-graphics.png")));
+    ui->listWidget->item(0)->setIcon(QIcon::fromTheme(QSL("document-properties"), QIcon(QSL(":/icons/preferences/document-properties.png"))));
+    ui->listWidget->item(1)->setIcon(QIcon::fromTheme(QSL("applications-graphics"), QIcon(QSL(":/icons/preferences/applications-graphics.png"))));
     ui->listWidget->item(0)->setSelected(true);
 
     // General
-    ui->heading->setText(QString("<b>%1</b>:").arg(m_view->title()));
+    ui->heading->setText(QSL("<b>%1</b>:").arg(m_view->title()));
     ui->siteAddress->setText(m_view->url().toString());
 
     if (m_view->url().scheme() == QL1S("https"))
@@ -128,19 +128,19 @@ SiteInfo::SiteInfo(WebView *view)
     connect(ui->treeImages, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(imagesCustomContextMenuRequested(QPoint)));
     connect(ui->treeTags, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(tagsCustomContextMenuRequested(QPoint)));
 
-    auto *shortcutTagsCopyAll = new QShortcut(QKeySequence("Ctrl+C"), ui->treeTags);
+    auto *shortcutTagsCopyAll = new QShortcut(QKeySequence(QSL("Ctrl+C")), ui->treeTags);
     shortcutTagsCopyAll->setContext(Qt::WidgetShortcut);
     connect(shortcutTagsCopyAll, &QShortcut::activated, [=]{copySelectedItems(ui->treeTags, false);});
 
-    auto *shortcutTagsCopyValues = new QShortcut(QKeySequence("Ctrl+Shift+C"), ui->treeTags);
+    auto *shortcutTagsCopyValues = new QShortcut(QKeySequence(QSL("Ctrl+Shift+C")), ui->treeTags);
     shortcutTagsCopyValues->setContext(Qt::WidgetShortcut);
     connect(shortcutTagsCopyValues, &QShortcut::activated, [=]{copySelectedItems(ui->treeTags, true);});
 
-    auto *shortcutImagesCopyAll = new QShortcut(QKeySequence("Ctrl+C"), ui->treeImages);
+    auto *shortcutImagesCopyAll = new QShortcut(QKeySequence(QSL("Ctrl+C")), ui->treeImages);
     shortcutImagesCopyAll->setContext(Qt::WidgetShortcut);
     connect(shortcutImagesCopyAll, &QShortcut::activated, [=]{copySelectedItems(ui->treeImages, false);});
 
-    auto *shortcutImagesCopyValues = new QShortcut(QKeySequence("Ctrl+Shift+C"), ui->treeImages);
+    auto *shortcutImagesCopyValues = new QShortcut(QKeySequence(QSL("Ctrl+Shift+C")), ui->treeImages);
     shortcutImagesCopyValues->setContext(Qt::WidgetShortcut);
     connect(shortcutImagesCopyValues, &QShortcut::activated, [=]{copySelectedItems(ui->treeImages, true);});
 
@@ -150,7 +150,7 @@ SiteInfo::SiteInfo(WebView *view)
     ui->treeTags->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->treeTags->sortByColumn(-1, Qt::AscendingOrder);
 
-    QzTools::setWmClass("Site Info", this);
+    QzTools::setWmClass(QSL("Site Info"), this);
 }
 
 bool SiteInfo::canShowSiteInfo(const QUrl &url)
@@ -172,10 +172,10 @@ void SiteInfo::imagesCustomContextMenuRequested(const QPoint &p)
     }
 
     QMenu menu;
-    menu.addAction(QIcon::fromTheme("edit-copy"), tr("Copy Image Location"), this, [=]{copySelectedItems(ui->treeImages, false);}, QKeySequence("Ctrl+C"));
-    menu.addAction(tr("Copy Image Name"), this, [=]{copySelectedItems(ui->treeImages, true);}, QKeySequence("Ctrl+Shift+C"));
+    menu.addAction(QIcon::fromTheme(QSL("edit-copy")), tr("Copy Image Location"), this, [=]{copySelectedItems(ui->treeImages, false);}, QKeySequence(QSL("Ctrl+C")));
+    menu.addAction(tr("Copy Image Name"), this, [=]{copySelectedItems(ui->treeImages, true);}, QKeySequence(QSL("Ctrl+Shift+C")));
     menu.addSeparator();
-    menu.addAction(QIcon::fromTheme("document-save"), tr("Save Image to Disk"), this, SLOT(saveImage()));
+    menu.addAction(QIcon::fromTheme(QSL("document-save")), tr("Save Image to Disk"), this, SLOT(saveImage()));
     menu.exec(ui->treeImages->viewport()->mapToGlobal(p));
 }
 
@@ -187,8 +187,8 @@ void SiteInfo::tagsCustomContextMenuRequested(const QPoint &p)
     }
 
     QMenu menu;
-    menu.addAction(tr("Copy Values"), this, [=]{copySelectedItems(ui->treeTags, false);}, QKeySequence("Ctrl+C"));
-    menu.addAction(tr("Copy Tags and Values"), this, [=]{copySelectedItems(ui->treeTags, true);}, QKeySequence("Ctrl+Shift+C"));
+    menu.addAction(tr("Copy Values"), this, [=]{copySelectedItems(ui->treeTags, false);}, QKeySequence(QSL("Ctrl+C")));
+    menu.addAction(tr("Copy Tags and Values"), this, [=]{copySelectedItems(ui->treeTags, true);}, QKeySequence(QSL("Ctrl+Shift+C")));
     menu.exec(ui->treeTags->viewport()->mapToGlobal(p));
 }
 
@@ -237,7 +237,7 @@ void SiteInfo::saveImage()
         imageFileName.append(QL1S(".png"));
     }
 
-    QString filePath = QzTools::getSaveFileName("SiteInfo-DownloadImage", this, tr("Save image..."),
+    QString filePath = QzTools::getSaveFileName(QSL("SiteInfo-DownloadImage"), this, tr("Save image..."),
                                                 QDir::homePath() + QDir::separator() + imageFileName,
                                                 QSL("*.png"));
     if (filePath.isEmpty()) {

@@ -81,10 +81,10 @@ PopupWindow::PopupWindow(PopupWebView* view)
     m_menuBar = new QMenuBar(this);
 
     auto* menuFile = new QMenu(tr("File"));
-    menuFile->addAction(QIcon::fromTheme("mail-message-new"), tr("Send Link..."), m_view, &WebView::sendPageByMail);
-    menuFile->addAction(QIcon::fromTheme("document-print"), tr("&Print..."), m_view, &WebView::printPage)->setShortcut(QKeySequence("Ctrl+P"));
+    menuFile->addAction(QIcon::fromTheme(QSL("mail-message-new")), tr("Send Link..."), m_view, &WebView::sendPageByMail);
+    menuFile->addAction(QIcon::fromTheme(QSL("document-print")), tr("&Print..."), m_view, &WebView::printPage)->setShortcut(QKeySequence(QSL("Ctrl+P")));
     menuFile->addSeparator();
-    menuFile->addAction(QIcon::fromTheme("window-close"), tr("Close"), this, &QWidget::close)->setShortcut(QKeySequence("Ctrl+W"));
+    menuFile->addAction(QIcon::fromTheme(QSL("window-close")), tr("Close"), this, &QWidget::close)->setShortcut(QKeySequence(QSL("Ctrl+W")));
     m_menuBar->addMenu(menuFile);
 
     m_menuEdit = new QMenu(tr("Edit"));
@@ -96,25 +96,25 @@ PopupWindow::PopupWindow(PopupWebView* view)
     m_menuEdit->addAction(m_view->pageAction(QWebEnginePage::Paste));
     m_menuEdit->addSeparator();
     m_menuEdit->addAction(m_view->pageAction(QWebEnginePage::SelectAll));
-    m_menuEdit->addAction(QIcon::fromTheme("edit-find"), tr("Find"), this, &PopupWindow::searchOnPage)->setShortcut(QKeySequence("Ctrl+F"));
+    m_menuEdit->addAction(QIcon::fromTheme(QSL("edit-find")), tr("Find"), this, &PopupWindow::searchOnPage)->setShortcut(QKeySequence(QSL("Ctrl+F")));
     m_menuBar->addMenu(m_menuEdit);
 
     m_menuView = new QMenu(tr("View"));
     m_actionStop = m_menuView->addAction(QIcon::fromTheme(QSL("process-stop")), tr("&Stop"), m_view, &QWebEngineView::stop);
-    m_actionStop->setShortcut(QKeySequence("Esc"));
+    m_actionStop->setShortcut(QKeySequence(QSL("Esc")));
     m_actionReload = m_menuView->addAction(QIcon::fromTheme(QSL("view-refresh")), tr("&Reload"), m_view, &QWebEngineView::reload);
-    m_actionReload->setShortcut(QKeySequence("F5"));
+    m_actionReload->setShortcut(QKeySequence(QSL("F5")));
     m_menuView->addSeparator();
-    m_menuView->addAction(QIcon::fromTheme("zoom-in"), tr("Zoom &In"), m_view, &WebView::zoomIn)->setShortcut(QKeySequence("Ctrl++"));
-    m_menuView->addAction(QIcon::fromTheme("zoom-out"), tr("Zoom &Out"), m_view, &WebView::zoomOut)->setShortcut(QKeySequence("Ctrl+-"));
-    m_menuView->addAction(QIcon::fromTheme("zoom-original"), tr("Reset"), m_view, &WebView::zoomReset)->setShortcut(QKeySequence("Ctrl+0"));
+    m_menuView->addAction(QIcon::fromTheme(QSL("zoom-in")), tr("Zoom &In"), m_view, &WebView::zoomIn)->setShortcut(QKeySequence(QSL("Ctrl++")));
+    m_menuView->addAction(QIcon::fromTheme(QSL("zoom-out")), tr("Zoom &Out"), m_view, &WebView::zoomOut)->setShortcut(QKeySequence(QSL("Ctrl+-")));
+    m_menuView->addAction(QIcon::fromTheme(QSL("zoom-original")), tr("Reset"), m_view, &WebView::zoomReset)->setShortcut(QKeySequence(QSL("Ctrl+0")));
     m_menuView->addSeparator();
-    m_menuView->addAction(QIcon::fromTheme("text-html"), tr("&Page Source"), m_view, &WebView::showSource)->setShortcut(QKeySequence("Ctrl+U"));
+    m_menuView->addAction(QIcon::fromTheme(QSL("text-html")), tr("&Page Source"), m_view, &WebView::showSource)->setShortcut(QKeySequence(QSL("Ctrl+U")));
     m_menuBar->addMenu(m_menuView);
 
     // Make shortcuts available even with hidden menubar
     QList<QAction*> actions = m_menuBar->actions();
-    foreach (QAction* action, actions) {
+    for (QAction* action : std::as_const(actions)) {
         if (action->menu()) {
             actions += action->menu()->actions();
         }
@@ -273,7 +273,7 @@ void PopupWindow::titleChanged()
 
 void PopupWindow::setWindowGeometry(QRect newRect)
 {
-    if (!Settings().value("allowJavaScriptGeometryChange", true).toBool())
+    if (!Settings().value(QSL("allowJavaScriptGeometryChange"), true).toBool())
         return;
 
     // left/top was set while width/height not

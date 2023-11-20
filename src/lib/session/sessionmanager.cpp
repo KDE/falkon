@@ -132,7 +132,7 @@ void SessionManager::renameSession(QString sessionFilePath, SessionManager::Sess
     if (!ok)
         return;
 
-    const QString newSessionPath = QString("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions), newName);
+    const QString newSessionPath = QSL("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions), newName);
     if (QFile::exists(newSessionPath)) {
         QMessageBox::information(mApp->activeWindow(), tr("Error!"), tr("The session file \"%1\" exists. Please enter another name.").arg(newName));
         renameSession(sessionFilePath, flags);
@@ -161,12 +161,12 @@ void SessionManager::saveSession()
     bool ok;
     QString sessionName = QInputDialog::getText(mApp->activeWindow(), tr("Save Session"),
                                          tr("Please enter a name to save session:"), QLineEdit::Normal,
-                                         tr("Saved Session (%1)").arg(QDateTime::currentDateTime().toString("dd MMM yyyy HH-mm-ss")), &ok);
+                                         tr("Saved Session (%1)").arg(QDateTime::currentDateTime().toString(QSL("dd MMM yyyy HH-mm-ss"))), &ok);
 
     if (!ok)
         return;
 
-    const QString filePath = QString("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions), sessionName);
+    const QString filePath = QSL("%1/%2.dat").arg(DataPaths::path(DataPaths::Sessions), sessionName);
     if (QFile::exists(filePath)) {
         QMessageBox::information(mApp->activeWindow(), tr("Error!"), tr("The session file \"%1\" exists. Please enter another name.").arg(sessionName));
         saveSession();
@@ -209,7 +209,7 @@ void SessionManager::newSession()
     bool ok;
     QString sessionName = QInputDialog::getText(mApp->activeWindow(), tr("New Session"),
                                          tr("Please enter a name to create new session:"), QLineEdit::Normal,
-                                         tr("New Session (%1)").arg(QDateTime::currentDateTime().toString("dd MMM yyyy HH-mm-ss")), &ok);
+                                         tr("New Session (%1)").arg(QDateTime::currentDateTime().toString(QSL("dd MMM yyyy HH-mm-ss"))), &ok);
 
     if (!ok)
         return;
@@ -312,8 +312,8 @@ void SessionManager::loadSettings()
     QDir sessionsDir(DataPaths::path(DataPaths::Sessions));
 
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    m_lastActiveSessionPath = settings.value("lastActiveSessionPath", defaultSessionPath()).toString();
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    m_lastActiveSessionPath = settings.value(QSL("lastActiveSessionPath"), defaultSessionPath()).toString();
     settings.endGroup();
 
     if (QDir::isRelativePath(m_lastActiveSessionPath)) {
@@ -330,8 +330,8 @@ void SessionManager::saveSettings()
     QDir sessionsDir(DataPaths::path(DataPaths::Sessions));
 
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    settings.setValue("lastActiveSessionPath", sessionsDir.relativeFilePath(m_lastActiveSessionPath));
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    settings.setValue(QSL("lastActiveSessionPath"), sessionsDir.relativeFilePath(m_lastActiveSessionPath));
     settings.endGroup();
 }
 

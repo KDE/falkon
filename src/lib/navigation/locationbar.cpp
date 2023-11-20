@@ -489,7 +489,7 @@ void LocationBar::focusInEvent(QFocusEvent* event)
     clearTextFormat();
     LineEdit::focusInEvent(event);
 
-    if (m_window && Settings().value("Browser-View-Settings/instantBookmarksToolbar").toBool()) {
+    if (m_window && Settings().value(QSL("Browser-View-Settings/instantBookmarksToolbar")).toBool()) {
         m_window->bookmarksToolbar()->show();
     }
 }
@@ -512,7 +512,7 @@ void LocationBar::focusOutEvent(QFocusEvent* event)
 
     refreshTextFormat();
 
-    if (m_window && Settings().value("Browser-View-Settings/instantBookmarksToolbar").toBool()) {
+    if (m_window && Settings().value(QSL("Browser-View-Settings/instantBookmarksToolbar")).toBool()) {
         m_window->bookmarksToolbar()->hide();
     }
 }
@@ -660,10 +660,10 @@ void LocationBar::loadFinished()
 void LocationBar::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("AddressBar");
-    m_progressStyle = static_cast<ProgressStyle>(settings.value("ProgressStyle", 0).toInt());
-    bool customColor = settings.value("UseCustomProgressColor", false).toBool();
-    m_progressColor = customColor ? settings.value("CustomProgressColor", palette().color(QPalette::Highlight)).value<QColor>() : QColor();
+    settings.beginGroup(QSL("AddressBar"));
+    m_progressStyle = static_cast<ProgressStyle>(settings.value(QSL("ProgressStyle"), 0).toInt());
+    bool customColor = settings.value(QSL("UseCustomProgressColor"), false).toBool();
+    m_progressColor = customColor ? settings.value(QSL("CustomProgressColor"), palette().color(QPalette::Highlight)).value<QColor>() : QColor();
     settings.endGroup();
 }
 

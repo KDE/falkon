@@ -64,7 +64,7 @@ QByteArray AcceptLanguage::generateHeader(const QStringList &langs)
 
     int counter = 8;
     for (int i = 1; i < langs.count(); i++) {
-        QString s = "," + langs.at(i) + ";q=0.";
+        QString s = QSL(",") + langs.at(i) + QSL(";q=0.");
         s.append(QString::number(counter));
         if (counter != 2) {
             counter -= 2;
@@ -86,8 +86,8 @@ AcceptLanguage::AcceptLanguage(QWidget* parent)
     ui->listWidget->setLayoutDirection(Qt::LeftToRight);
 
     Settings settings;
-    settings.beginGroup("Language");
-    const QStringList langs = settings.value("acceptLanguage", defaultLanguage()).toStringList();
+    settings.beginGroup(QSL("Language"));
+    const QStringList langs = settings.value(QSL("acceptLanguage"), defaultLanguage()).toStringList();
     settings.endGroup();
 
     for (const QString &code : langs) {
@@ -99,7 +99,7 @@ AcceptLanguage::AcceptLanguage(QWidget* parent)
             label = tr("Personal [%1]").arg(code);
         }
         else {
-            label = QString("%1/%2 [%3]").arg(loc.languageToString(loc.language()), loc.countryToString(loc.country()), code);
+            label = QSL("%1/%2 [%3]").arg(loc.languageToString(loc.language()), loc.countryToString(loc.country()), code);
         }
 
         ui->listWidget->addItem(label);
@@ -216,8 +216,8 @@ void AcceptLanguage::accept()
     }
 
     Settings settings;
-    settings.beginGroup("Language");
-    settings.setValue("acceptLanguage", langs);
+    settings.beginGroup(QSL("Language"));
+    settings.setValue(QSL("acceptLanguage"), langs);
 
     mApp->networkManager()->loadSettings();
 

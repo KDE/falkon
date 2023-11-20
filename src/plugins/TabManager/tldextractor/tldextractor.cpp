@@ -84,7 +84,7 @@ QString TLDExtractor::TLD(const QString &host)
     bool isExceptionTLD = false;
     bool isWildcardTLD = false;
 
-    foreach(QString rule, tldRules) {
+    for (QString rule : std::as_const(tldRules)) {
         const int labelCount = rule.count(QLatin1Char('.')) + 1;
 
         if (rule.startsWith(QLatin1Char('!'))) {
@@ -176,7 +176,7 @@ QString TLDExtractor::registrableDomainHelper(const QString &domainPart, const Q
         return {};
     }
     else {
-        return QString("%1.%2").arg(domainPart, tldPart);
+        return QStringLiteral("%1.%2").arg(domainPart, tldPart);
     }
 }
 
@@ -246,7 +246,7 @@ void TLDExtractor::loadData()
     QString dataFileName;
     bool parsedDataFileExist = false;
 
-    foreach(const QString &path, m_dataSearchPaths) {
+    for (const QString &path : std::as_const(m_dataSearchPaths)) {
         dataFileName = QFileInfo(path + QLatin1String("/effective_tld_names.dat")).absoluteFilePath();
 
         if (QFileInfo(dataFileName).exists()) {
@@ -261,7 +261,7 @@ void TLDExtractor::loadData()
         QMessageBox::information(0, tr("File not found!"),
                                  tr("File \'effective_tld_names.dat\' was not found!\n"
                                     "You can download it from \'<a href=\"%1\"><b>here</b></a>\' to one of the following paths:\n%2")
-                                 .arg(tldDataFileDownloadLink, m_dataSearchPaths.join("\n")));
+                                 .arg(tldDataFileDownloadLink, m_dataSearchPaths.join(QStringLiteral("\n"))));
 
         return;
     }
@@ -349,7 +349,7 @@ bool TLDExtractor::test()
     QString testDataFileName;
     bool testDataFileExist = false;
 
-    foreach(const QString &path, m_dataSearchPaths) {
+    for (const QString &path : std::as_const(m_dataSearchPaths)) {
         testDataFileName = QFileInfo(path + QLatin1String("/test_psl.txt")).absoluteFilePath();
 
         if (QFileInfo(testDataFileName).exists()) {
@@ -364,7 +364,7 @@ bool TLDExtractor::test()
         QMessageBox::information(0, tr("File not found!"),
                                  tr("File \'test_psl.txt\' was not found!\n"
                                     "You can download it from \'<a href=\"%1\"><b>here</b></a>\' to one of the following paths:\n%2")
-                                 .arg(testFileDownloadLink, m_dataSearchPaths.join("\n")));
+                                 .arg(testFileDownloadLink, m_dataSearchPaths.join(QStringLiteral("\n"))));
 
         return false;
     }
@@ -375,7 +375,7 @@ bool TLDExtractor::test()
         return false;
     }
 
-    QRegExp testRegExp("checkPublicSuffix\\(('([^']+)'|null), ('([^']+)'|null)\\);");
+    QRegExp testRegExp(QStringLiteral("checkPublicSuffix\\(('([^']+)'|null), ('([^']+)'|null)\\);"));
     bool allTestSuccess = true;
 
     while (!file.atEnd()) {

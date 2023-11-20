@@ -37,11 +37,11 @@ static PasswordEntry decodeEntry(const QByteArray &data)
 static QMap<QString, QString> encodeEntry(const PasswordEntry &entry)
 {
     QMap<QString, QString> data = {
-        {"host", entry.host},
-        {"username", entry.username},
-        {"password", entry.password},
-        {"updated", QString::number(entry.updated)},
-        {"data", QString::fromUtf8(entry.data)}
+        {QSL("host"), entry.host},
+        {QSL("username"), entry.username},
+        {QSL("password"), entry.password},
+        {QSL("updated"), QString::number(entry.updated)},
+        {QSL("data"), QString::fromUtf8(entry.data)}
     };
     return data;
 }
@@ -105,7 +105,7 @@ void KWalletPasswordBackend::addEntry(const PasswordEntry &entry)
     }
 
     PasswordEntry stored = entry;
-    stored.id = QString("%1/%2").arg(entry.host, entry.username);
+    stored.id = QSL("%1/%2").arg(entry.host, entry.username);
     stored.updated = Q_DATETIME_TOTIME_T(QDateTime::currentDateTime());
 
     m_wallet->writeMap(stored.id.toString(), encodeEntry(stored));
@@ -184,8 +184,8 @@ void KWalletPasswordBackend::removeAll()
 
     m_allEntries.clear();
 
-    m_wallet->removeFolder("FalkonPasswords");
-    m_wallet->createFolder("FalkonPasswords");
+    m_wallet->removeFolder(QSL("FalkonPasswords"));
+    m_wallet->createFolder(QSL("FalkonPasswords"));
 }
 
 void KWalletPasswordBackend::showErrorNotification()
@@ -216,31 +216,31 @@ void KWalletPasswordBackend::initialize()
         return;
     }
 
-    bool migrationFalkon = !m_wallet->hasFolder("FalkonPasswords") && m_wallet->hasFolder("Falkon");
-    bool migrateQupzilla = !m_wallet->hasFolder("FalkonPasswords") && !m_wallet->hasFolder("Falkon") && m_wallet->hasFolder("QupZilla");
+    bool migrationFalkon = !m_wallet->hasFolder(QSL("FalkonPasswords")) && m_wallet->hasFolder(QSL("Falkon"));
+    bool migrateQupzilla = !m_wallet->hasFolder(QSL("FalkonPasswords")) && !m_wallet->hasFolder(QSL("Falkon")) && m_wallet->hasFolder(QSL("QupZilla"));
     bool migration = false;
 
-    if (!m_wallet->hasFolder("FalkonPasswords") && !m_wallet->createFolder("FalkonPasswords")) {
+    if (!m_wallet->hasFolder(QSL("FalkonPasswords")) && !m_wallet->createFolder(QSL("FalkonPasswords"))) {
         qWarning() << "KWalletPasswordBackend::initialize Cannot create folder \"FalkonPasswords\"!";
         return;
     }
 
     if (migrationFalkon) {
-        if (!m_wallet->setFolder("Falkon")) {
+        if (!m_wallet->setFolder(QSL("Falkon"))) {
             qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"Falkon\"!";
             return;
         }
         migration = true;
     }
     else if (migrateQupzilla) {
-        if (!m_wallet->setFolder("QupZilla")) {
+        if (!m_wallet->setFolder(QSL("QupZilla"))) {
             qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"QupZilla\"!";
             return;
         }
         migration = true;
     }
     else {
-        if (!m_wallet->setFolder("FalkonPasswords")) {
+        if (!m_wallet->setFolder(QSL("FalkonPasswords"))) {
             qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"FalkonPasswords\"!";
             return;
         }
@@ -264,7 +264,7 @@ void KWalletPasswordBackend::initialize()
             ++i;
         }
 
-        if (!m_wallet->setFolder("FalkonPasswords")) {
+        if (!m_wallet->setFolder(QSL("FalkonPasswords"))) {
             qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"FalkonPasswords\"!";
             return;
         }
@@ -281,11 +281,11 @@ void KWalletPasswordBackend::initialize()
         while (j != entriesMap.constEnd()) {
             PasswordEntry entry;
             entry.id = j.key();
-            entry.host = j.value()["host"];
-            entry.username = j.value()["username"];
-            entry.password = j.value()["password"];
-            entry.updated = j.value()["updated"].toInt();
-            entry.data = j.value()["data"].toUtf8();
+            entry.host = j.value()[QSL("host")];
+            entry.username = j.value()[QSL("username")];
+            entry.password = j.value()[QSL("password")];
+            entry.updated = j.value()[QSL("updated")].toInt();
+            entry.data = j.value()[QSL("data")].toUtf8();
             if (entry.isValid()) {
                 m_allEntries.append(entry);
             }

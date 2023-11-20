@@ -67,7 +67,7 @@ QSqlQuery LocationCompleterModel::createDomainQuery(const QString &text)
     }
 
     bool withoutWww = text.startsWith(QLatin1Char('w')) && !text.startsWith(QLatin1String("www."));
-    QString query = "SELECT url FROM history WHERE ";
+    QString query = QSL("SELECT url FROM history WHERE ");
 
     if (withoutWww) {
         query.append(QLatin1String("url NOT LIKE ? AND url NOT LIKE ? AND "));
@@ -82,16 +82,16 @@ QSqlQuery LocationCompleterModel::createDomainQuery(const QString &text)
     sqlQuery.prepare(query);
 
     if (withoutWww) {
-        sqlQuery.addBindValue(QString("http://www.%"));
-        sqlQuery.addBindValue(QString("https://www.%"));
-        sqlQuery.addBindValue(QString("http://%1%").arg(text));
-        sqlQuery.addBindValue(QString("https://%1%").arg(text));
+        sqlQuery.addBindValue(QSL("http://www.%"));
+        sqlQuery.addBindValue(QSL("https://www.%"));
+        sqlQuery.addBindValue(QSL("http://%1%").arg(text));
+        sqlQuery.addBindValue(QSL("https://%1%").arg(text));
     }
     else {
-        sqlQuery.addBindValue(QString("http://%1%").arg(text));
-        sqlQuery.addBindValue(QString("https://%1%").arg(text));
-        sqlQuery.addBindValue(QString("http://www.%1%").arg(text));
-        sqlQuery.addBindValue(QString("https://www.%1%").arg(text));
+        sqlQuery.addBindValue(QSL("http://%1%").arg(text));
+        sqlQuery.addBindValue(QSL("https://%1%").arg(text));
+        sqlQuery.addBindValue(QSL("http://www.%1%").arg(text));
+        sqlQuery.addBindValue(QSL("https://www.%1%").arg(text));
     }
 
     return sqlQuery;
@@ -122,13 +122,13 @@ QSqlQuery LocationCompleterModel::createHistoryQuery(const QString &searchString
     sqlQuery.prepare(query);
 
     if (exactMatch) {
-        sqlQuery.addBindValue(QString("%%1%").arg(searchString));
-        sqlQuery.addBindValue(QString("%%1%").arg(searchString));
+        sqlQuery.addBindValue(QSL("%%1%").arg(searchString));
+        sqlQuery.addBindValue(QSL("%%1%").arg(searchString));
     }
     else {
         for (const QString &str : qAsConst(searchList)) {
-            sqlQuery.addBindValue(QString("%%1%").arg(str));
-            sqlQuery.addBindValue(QString("%%1%").arg(str));
+            sqlQuery.addBindValue(QSL("%%1%").arg(str));
+            sqlQuery.addBindValue(QSL("%%1%").arg(str));
         }
     }
 

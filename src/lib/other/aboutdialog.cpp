@@ -47,17 +47,17 @@ AboutDialog::~AboutDialog()
 void AboutDialog::showAbout()
 {
     QString aboutHtml;
-    aboutHtml += "<div style='margin:0px 20px;'>";
+    aboutHtml += QSL("<div style='margin:0px 20px;'>");
     aboutHtml += tr("<p><b>Application version %1</b><br/>").arg(
 #ifdef FALKON_GIT_REVISION
-                       QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)
+                       QString(QSL("%1 (%2)")).arg(QString::fromLatin1(Qz::VERSION), QL1S(FALKON_GIT_REVISION))
 #else
-                       Qz::VERSION
+                       QString::fromLatin1(Qz::VERSION)
 #endif
                    );
     aboutHtml += tr("<b>QtWebEngine version %1</b></p>").arg(QStringLiteral(QTWEBENGINECORE_VERSION_STR));
-    aboutHtml += QStringLiteral("<p>&copy; %1 %2<br/>").arg(Qz::COPYRIGHT, Qz::AUTHOR);
-    aboutHtml += QStringLiteral("<a href=%1>%1</a></p>").arg(Qz::WWWADDRESS);
+    aboutHtml += QStringLiteral("<p>&copy; %1 %2<br/>").arg(QString::fromLatin1(Qz::COPYRIGHT), QString::fromLatin1(Qz::AUTHOR));
+    aboutHtml += QStringLiteral("<a href=%1>%1</a></p>").arg(QString::fromLatin1(Qz::WWWADDRESS));
     aboutHtml += QStringLiteral("<p>") + mApp->userAgentManager()->defaultUserAgent() + QStringLiteral("</p>");
     aboutHtml += QStringLiteral("</div>");
     ui->textLabel->setText(aboutHtml);

@@ -232,7 +232,7 @@ QString Scripts::sendPostData(const QUrl &url, const QByteArray &data)
                                "form.appendChild(val);");
 
     QString values;
-    QUrlQuery query(data);
+    QUrlQuery query(QString::fromUtf8(data));
 
     const auto &queryItems = query.queryItems(QUrl::FullyDecoded);
     for (int i = 0; i < queryItems.size(); ++i) {
@@ -273,7 +273,7 @@ QString Scripts::completeFormData(const QByteArray &data)
                           ""
                           "})()");
 
-    QString d = data;
+    QString d = QString::fromUtf8(data);
     d.replace(QL1S("'"), QL1S("\\'"));
     return source.arg(d);
 }

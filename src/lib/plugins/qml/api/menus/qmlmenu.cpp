@@ -61,7 +61,7 @@ QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
             newMenu->setIcon(icon);
             continue;
         }
-        newMenu->setProperty(key.toUtf8(), map.value(key));
+        newMenu->setProperty(key.toUtf8().constData(), map.value(key));
     }
     m_menu->addMenu(newMenu);
     auto *newQmlMenu = new QmlMenu(newMenu, m_engine, this);

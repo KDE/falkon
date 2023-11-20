@@ -40,15 +40,15 @@ DesktopNotificationsFactory::DesktopNotificationsFactory(QObject* parent)
 void DesktopNotificationsFactory::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("Notifications");
-    m_enabled = settings.value("Enabled", true).toBool();
-    m_timeout = settings.value("Timeout", 6000).toInt();
+    settings.beginGroup(QSL("Notifications"));
+    m_enabled = settings.value(QSL("Enabled"), true).toBool();
+    m_timeout = settings.value(QSL("Timeout"), 6000).toInt();
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
-    m_notifType = settings.value("UseNativeDesktop", true).toBool() ? DesktopNative : PopupWidget;
+    m_notifType = settings.value(QSL("UseNativeDesktop"), true).toBool() ? DesktopNative : PopupWidget;
 #else
     m_notifType = PopupWidget;
 #endif
-    m_position = settings.value("Position", QPoint(10, 10)).toPoint();
+    m_position = settings.value(QSL("Position"), QPoint(10, 10)).toPoint();
     settings.endGroup();
 }
 
@@ -94,7 +94,7 @@ void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QS
             {QStringLiteral("desktop-entry"), QGuiApplication::desktopFileName()}
         };
 
-        QDBusInterface dbus("org.freedesktop.Notifications", "/org/freedesktop/Notifications", "org.freedesktop.Notifications", QDBusConnection::sessionBus());
+        QDBusInterface dbus(QSL("org.freedesktop.Notifications"), QSL("/org/freedesktop/Notifications"), QSL("org.freedesktop.Notifications"), QDBusConnection::sessionBus());
         QVariantList args;
         args.append(QLatin1String("Falkon"));
         args.append(m_uint);
@@ -104,7 +104,7 @@ void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QS
         args.append(QStringList());
         args.append(hints);
         args.append(m_timeout);
-        dbus.callWithCallback("Notify", args, this, SLOT(updateLastId(QDBusMessage)), SLOT(error(QDBusError)));
+        dbus.callWithCallback(QSL("Notify"), args, this, SLOT(updateLastId(QDBusMessage)), SLOT(error(QDBusError)));
 #endif
         break;
     }

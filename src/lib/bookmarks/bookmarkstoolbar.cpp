@@ -75,9 +75,9 @@ void BookmarksToolbar::contextMenuRequested(const QPoint &pos)
     QAction* actNewWindow = menu.addAction(IconProvider::newWindowIcon(), tr("Open in new window"));
     QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), tr("Open in new private window"));
     menu.addSeparator();
-    QAction* actNewFolder = menu.addAction(QIcon::fromTheme("folder-new"), tr("New Folder"));
+    QAction* actNewFolder = menu.addAction(QIcon::fromTheme(QSL("folder-new")), tr("New Folder"));
     QAction* actEdit = menu.addAction(tr("Edit"));
-    QAction* actDelete = menu.addAction(QIcon::fromTheme("edit-delete"), tr("Delete"));
+    QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"));
     menu.addSeparator();
     m_actShowOnlyIcons = menu.addAction(tr("Show Only Icons"));
     m_actShowOnlyIcons->setCheckable(true);
@@ -276,7 +276,7 @@ void BookmarksToolbar::dropEvent(QDropEvent* e)
         }
     } else {
         const QUrl url = mime->urls().at(0);
-        const QString title = mime->hasText() ? mime->text() : url.toEncoded(QUrl::RemoveScheme);
+        const QString title = mime->hasText() ? mime->text() : QString::fromUtf8(url.toEncoded(QUrl::RemoveScheme));
 
         bookmark = new BookmarkItem(BookmarkItem::Url);
         bookmark->setTitle(title);

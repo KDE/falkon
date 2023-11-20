@@ -257,27 +257,27 @@ void WebTabTest::loadNotRestoredTabTest()
 {
     WebTab tab;
 
-    tab.load(QUrl("qrc:autotests/data/basic_page.html"));
+    tab.load(QUrl(QSL("qrc:autotests/data/basic_page.html")));
     QVERIFY(waitForLoadfinished(&tab));
     QTRY_COMPARE(tab.webView()->history()->count(), 1);
 
     tab.unload();
     QVERIFY(!tab.isRestored());
 
-    tab.load(QUrl("qrc:autotests/data/basic_page2.html"));
+    tab.load(QUrl(QSL("qrc:autotests/data/basic_page2.html")));
     QVERIFY(waitForLoadfinished(&tab));
     QTRY_COMPARE(tab.webView()->history()->count(), 2);
 
-    QCOMPARE(tab.url(), QUrl("qrc:autotests/data/basic_page2.html"));
-    QCOMPARE(tab.webView()->history()->currentItem().url(), QUrl("qrc:autotests/data/basic_page2.html"));
-    QCOMPARE(tab.webView()->history()->backItem().url(), QUrl("qrc:autotests/data/basic_page.html"));
+    QCOMPARE(tab.url(), QUrl(QSL("qrc:autotests/data/basic_page2.html")));
+    QCOMPARE(tab.webView()->history()->currentItem().url(), QUrl(QSL("qrc:autotests/data/basic_page2.html")));
+    QCOMPARE(tab.webView()->history()->backItem().url(), QUrl(QSL("qrc:autotests/data/basic_page.html")));
 }
 
 void WebTabTest::saveNotRestoredTabTest()
 {
     WebTab tab;
 
-    tab.load(QUrl("qrc:autotests/data/basic_page.html"));
+    tab.load(QUrl(QSL("qrc:autotests/data/basic_page.html")));
     QVERIFY(waitForLoadfinished(&tab));
     QTRY_COMPARE(tab.webView()->history()->count(), 1);
 
@@ -286,7 +286,7 @@ void WebTabTest::saveNotRestoredTabTest()
 
     WebTab::SavedTab saved(&tab);
     QVERIFY(saved.isValid());
-    QCOMPARE(saved.url, QUrl("qrc:autotests/data/basic_page.html"));
+    QCOMPARE(saved.url, QUrl(QSL("qrc:autotests/data/basic_page.html")));
 }
 
 FALKONTEST_MAIN(WebTabTest)

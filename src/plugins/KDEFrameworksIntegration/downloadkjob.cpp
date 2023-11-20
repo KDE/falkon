@@ -31,14 +31,14 @@ void DownloadKJob::start()
 
 void DownloadKJob::updateDescription()
 {
-    emit description(this, tr("Downloading"),
+    Q_EMIT description(this, tr("Downloading"),
                      qMakePair<QString, QString>(tr("Source"), m_url.toDisplayString()),
-                     qMakePair<QString, QString>(tr("Destination"), QString("%1/%2").arg(m_path, m_fileName)));
+                     qMakePair<QString, QString>(tr("Destination"), QSL("%1/%2").arg(m_path, m_fileName)));
 }
 
 void DownloadKJob::progress(double currSpeed, qint64 received, qint64 total)
 {
     setProcessedAmount(Bytes, received);
     setTotalAmount(Bytes, total);
-    emit speed(this, currSpeed);
+    Q_EMIT speed(this, currSpeed);
 }

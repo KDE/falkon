@@ -204,7 +204,7 @@ QImage IconProvider::imageForUrl(const QUrl &url, bool allowNull)
 
     QSqlQuery query(SqlDatabase::instance()->database());
     query.prepare(QSL("SELECT icon FROM icons WHERE url GLOB ? LIMIT 1"));
-    query.addBindValue(QString("%1*").arg(QzTools::escapeSqlGlobString(QString::fromUtf8(encodedUrl))));
+    query.addBindValue(QSL("%1*").arg(QzTools::escapeSqlGlobString(QString::fromUtf8(encodedUrl))));
     query.exec();
 
     auto *img = new QImage;
@@ -238,7 +238,7 @@ QImage IconProvider::imageForDomain(const QUrl &url, bool allowNull)
 
     QSqlQuery query(SqlDatabase::instance()->database());
     query.prepare(QSL("SELECT icon FROM icons WHERE url GLOB ? LIMIT 1"));
-    query.addBindValue(QString("*%1*").arg(QzTools::escapeSqlGlobString(url.host())));
+    query.addBindValue(QSL("*%1*").arg(QzTools::escapeSqlGlobString(url.host())));
     query.exec();
 
     if (query.next()) {

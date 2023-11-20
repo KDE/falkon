@@ -77,7 +77,7 @@ static QString createLanguageItem(const QString &lang)
         return QString::fromUtf8("Castellano");
     }
     if (lang == QLatin1String("nqo")) {
-        return {"N'ko (nqo)"};
+        return QSL("N'ko (nqo)");
     }
     if (lang == QLatin1String("sr")) {
         return QString::fromUtf8("српски екавски");
@@ -134,19 +134,19 @@ Preferences::Preferences(BrowserWindow* window)
 
     Settings settings;
     //GENERAL URLs
-    settings.beginGroup("Web-URL-Settings");
-    m_homepage = settings.value("homepage", QUrl(QSL("falkon:start"))).toUrl();
-    m_newTabUrl = settings.value("newTabUrl", QUrl(QSL("falkon:speeddial"))).toUrl();
-    ui->homepage->setText(m_homepage.toEncoded());
-    ui->newTabUrl->setText(m_newTabUrl.toEncoded());
+    settings.beginGroup(QSL("Web-URL-Settings"));
+    m_homepage = settings.value(QSL("homepage"), QUrl(QSL("falkon:start"))).toUrl();
+    m_newTabUrl = settings.value(QSL("newTabUrl"), QUrl(QSL("falkon:speeddial"))).toUrl();
+    ui->homepage->setText(QString::fromUtf8(m_homepage.toEncoded()));
+    ui->newTabUrl->setText(QString::fromUtf8(m_newTabUrl.toEncoded()));
     settings.endGroup();
     ui->afterLaunch->setCurrentIndex(mApp->afterLaunch());
-    ui->checkUpdates->setChecked(settings.value("Web-Browser-Settings/CheckUpdates", true).toBool());
-    ui->dontLoadTabsUntilSelected->setChecked(settings.value("Web-Browser-Settings/LoadTabsOnActivation", true).toBool());
+    ui->checkUpdates->setChecked(settings.value(QSL("Web-Browser-Settings/CheckUpdates"), true).toBool());
+    ui->dontLoadTabsUntilSelected->setChecked(settings.value(QSL("Web-Browser-Settings/LoadTabsOnActivation"), true).toBool());
 
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
     if (!mApp->isPortable()) {
-        ui->checkDefaultBrowser->setChecked(settings.value("Web-Browser-Settings/CheckDefaultBrowser",
+        ui->checkDefaultBrowser->setChecked(settings.value(QSL("Web-Browser-Settings/CheckDefaultBrowser"),
                                                            DEFAULT_CHECK_DEFAULTBROWSER).toBool());
         if (mApp->associationManager()->isDefaultForAllCapabilities()) {
             ui->checkNowDefaultBrowser->setText(tr("Default"));
@@ -215,141 +215,141 @@ Preferences::Preferences(BrowserWindow* window)
     startProfileIndexChanged(ui->startProfile->currentIndex());
 
     //APPEREANCE
-    settings.beginGroup("Browser-View-Settings");
-    ui->showStatusbar->setChecked(settings.value("showStatusBar", false).toBool());
+    settings.beginGroup(QSL("Browser-View-Settings"));
+    ui->showStatusbar->setChecked(settings.value(QSL("showStatusBar"), false).toBool());
     // NOTE: instantBookmarksToolbar and showBookmarksToolbar cannot be both enabled at the same time
-    ui->instantBookmarksToolbar->setChecked(settings.value("instantBookmarksToolbar", false).toBool());
-    ui->showBookmarksToolbar->setChecked(settings.value("showBookmarksToolbar", false).toBool());
-    ui->instantBookmarksToolbar->setDisabled(settings.value("showBookmarksToolbar", false).toBool());
-    ui->showBookmarksToolbar->setDisabled(settings.value("instantBookmarksToolbar").toBool());
+    ui->instantBookmarksToolbar->setChecked(settings.value(QSL("instantBookmarksToolbar"), false).toBool());
+    ui->showBookmarksToolbar->setChecked(settings.value(QSL("showBookmarksToolbar"), false).toBool());
+    ui->instantBookmarksToolbar->setDisabled(settings.value(QSL("showBookmarksToolbar"), false).toBool());
+    ui->showBookmarksToolbar->setDisabled(settings.value(QSL("instantBookmarksToolbar")).toBool());
     connect(ui->instantBookmarksToolbar, &QAbstractButton::toggled, ui->showBookmarksToolbar, &QWidget::setDisabled);
     connect(ui->showBookmarksToolbar, &QAbstractButton::toggled, ui->instantBookmarksToolbar, &QWidget::setDisabled);
-    ui->showNavigationToolbar->setChecked(settings.value("showNavigationToolbar", true).toBool());
-    int currentSettingsPage = settings.value("settingsDialogPage", 0).toInt(0);
+    ui->showNavigationToolbar->setChecked(settings.value(QSL("showNavigationToolbar"), true).toBool());
+    int currentSettingsPage = settings.value(QSL("settingsDialogPage"), 0).toInt(0);
     settings.endGroup();
 
     //TABS
-    settings.beginGroup("Browser-Tabs-Settings");
-    ui->hideTabsOnTab->setChecked(settings.value("hideTabsWithOneTab", false).toBool());
-    ui->activateLastTab->setChecked(settings.value("ActivateLastTabWhenClosingActual", false).toBool());
-    ui->openNewTabAfterActive->setChecked(settings.value("newTabAfterActive", true).toBool());
-    ui->openNewEmptyTabAfterActive->setChecked(settings.value("newEmptyTabAfterActive", false).toBool());
-    ui->openPopupsInTabs->setChecked(settings.value("OpenPopupsInTabs", false).toBool());
-    ui->alwaysSwitchTabsWithWheel->setChecked(settings.value("AlwaysSwitchTabsWithWheel", false).toBool());
-    ui->switchToNewTabs->setChecked(settings.value("OpenNewTabsSelected", false).toBool());
-    ui->dontCloseOnLastTab->setChecked(settings.value("dontCloseWithOneTab", false).toBool());
-    ui->askWhenClosingMultipleTabs->setChecked(settings.value("AskOnClosing", false).toBool());
-    ui->showClosedTabsButton->setChecked(settings.value("showClosedTabsButton", false).toBool());
-    ui->showCloseOnInactive->setCurrentIndex(settings.value("showCloseOnInactiveTabs", 0).toInt());
+    settings.beginGroup(QSL("Browser-Tabs-Settings"));
+    ui->hideTabsOnTab->setChecked(settings.value(QSL("hideTabsWithOneTab"), false).toBool());
+    ui->activateLastTab->setChecked(settings.value(QSL("ActivateLastTabWhenClosingActual"), false).toBool());
+    ui->openNewTabAfterActive->setChecked(settings.value(QSL("newTabAfterActive"), true).toBool());
+    ui->openNewEmptyTabAfterActive->setChecked(settings.value(QSL("newEmptyTabAfterActive"), false).toBool());
+    ui->openPopupsInTabs->setChecked(settings.value(QSL("OpenPopupsInTabs"), false).toBool());
+    ui->alwaysSwitchTabsWithWheel->setChecked(settings.value(QSL("AlwaysSwitchTabsWithWheel"), false).toBool());
+    ui->switchToNewTabs->setChecked(settings.value(QSL("OpenNewTabsSelected"), false).toBool());
+    ui->dontCloseOnLastTab->setChecked(settings.value(QSL("dontCloseWithOneTab"), false).toBool());
+    ui->askWhenClosingMultipleTabs->setChecked(settings.value(QSL("AskOnClosing"), false).toBool());
+    ui->showClosedTabsButton->setChecked(settings.value(QSL("showClosedTabsButton"), false).toBool());
+    ui->showCloseOnInactive->setCurrentIndex(settings.value(QSL("showCloseOnInactiveTabs"), 0).toInt());
     settings.endGroup();
 
     //AddressBar
-    settings.beginGroup("AddressBar");
-    ui->addressbarCompletion->setCurrentIndex(settings.value("showSuggestions", 0).toInt());
-    ui->useInlineCompletion->setChecked(settings.value("useInlineCompletion", true).toBool());
-    ui->completionShowSwitchTab->setChecked(settings.value("showSwitchTab", true).toBool());
-    ui->alwaysShowGoIcon->setChecked(settings.value("alwaysShowGoIcon", false).toBool());
-    ui->showZoomLabel->setChecked(settings.value("showZoomLabel", true).toBool());
-    ui->selectAllOnFocus->setChecked(settings.value("SelectAllTextOnDoubleClick", true).toBool());
-    ui->selectAllOnClick->setChecked(settings.value("SelectAllTextOnClick", false).toBool());
-    ui->completionPopupExpandToWindow->setChecked(settings.value("CompletionPopupExpandToWindow", false).toBool());
-    bool showPBinAB = settings.value("ShowLoadingProgress", false).toBool();
+    settings.beginGroup(QSL("AddressBar"));
+    ui->addressbarCompletion->setCurrentIndex(settings.value(QSL("showSuggestions"), 0).toInt());
+    ui->useInlineCompletion->setChecked(settings.value(QSL("useInlineCompletion"), true).toBool());
+    ui->completionShowSwitchTab->setChecked(settings.value(QSL("showSwitchTab"), true).toBool());
+    ui->alwaysShowGoIcon->setChecked(settings.value(QSL("alwaysShowGoIcon"), false).toBool());
+    ui->showZoomLabel->setChecked(settings.value(QSL("showZoomLabel"), true).toBool());
+    ui->selectAllOnFocus->setChecked(settings.value(QSL("SelectAllTextOnDoubleClick"), true).toBool());
+    ui->selectAllOnClick->setChecked(settings.value(QSL("SelectAllTextOnClick"), false).toBool());
+    ui->completionPopupExpandToWindow->setChecked(settings.value(QSL("CompletionPopupExpandToWindow"), false).toBool());
+    bool showPBinAB = settings.value(QSL("ShowLoadingProgress"), false).toBool();
     ui->showLoadingInAddressBar->setChecked(showPBinAB);
     ui->adressProgressSettings->setEnabled(showPBinAB);
-    ui->progressStyleSelector->setCurrentIndex(settings.value("ProgressStyle", 0).toInt());
-    bool pbInABuseCC = settings.value("UseCustomProgressColor", false).toBool();
+    ui->progressStyleSelector->setCurrentIndex(settings.value(QSL("ProgressStyle"), 0).toInt());
+    bool pbInABuseCC = settings.value(QSL("UseCustomProgressColor"), false).toBool();
     ui->checkBoxCustomProgressColor->setChecked(pbInABuseCC);
     ui->progressBarColorSelector->setEnabled(pbInABuseCC);
-    QColor pbColor = settings.value("CustomProgressColor", palette().color(QPalette::Highlight)).value<QColor>();
+    QColor pbColor = settings.value(QSL("CustomProgressColor"), palette().color(QPalette::Highlight)).value<QColor>();
     setProgressBarColorIcon(pbColor);
     connect(ui->customColorToolButton, &QAbstractButton::clicked, this, &Preferences::selectCustomProgressBarColor);
     connect(ui->resetProgressBarcolor, SIGNAL(clicked()), SLOT(setProgressBarColorIcon()));
     settings.endGroup();
 
-    settings.beginGroup("SearchEngines");
-    bool searchFromAB = settings.value("SearchFromAddressBar", true).toBool();
+    settings.beginGroup(QSL("SearchEngines"));
+    bool searchFromAB = settings.value(QSL("SearchFromAddressBar"), true).toBool();
     ui->searchFromAddressBar->setChecked(searchFromAB);
     ui->searchWithDefaultEngine->setEnabled(searchFromAB);
-    ui->searchWithDefaultEngine->setChecked(settings.value("SearchWithDefaultEngine", true).toBool());
+    ui->searchWithDefaultEngine->setChecked(settings.value(QSL("SearchWithDefaultEngine"), true).toBool());
     ui->showABSearchSuggestions->setEnabled(searchFromAB);
-    ui->showABSearchSuggestions->setChecked(settings.value("showSearchSuggestions", true).toBool());
+    ui->showABSearchSuggestions->setChecked(settings.value(QSL("showSearchSuggestions"), true).toBool());
     connect(ui->searchFromAddressBar, &QAbstractButton::toggled, this, &Preferences::searchFromAddressBarChanged);
     settings.endGroup();
 
     // BROWSING
-    settings.beginGroup("Web-Browser-Settings");
-    ui->allowPlugins->setChecked(settings.value("allowPlugins", true).toBool());
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    ui->allowPlugins->setChecked(settings.value(QSL("allowPlugins"), true).toBool());
     connect(ui->allowPlugins, &QAbstractButton::toggled, this, &Preferences::allowPluginsToggled);
-    ui->allowJavaScript->setChecked(settings.value("allowJavaScript", true).toBool());
-    ui->linksInFocusChain->setChecked(settings.value("IncludeLinkInFocusChain", false).toBool());
-    ui->spatialNavigation->setChecked(settings.value("SpatialNavigation", false).toBool());
-    ui->animateScrolling->setChecked(settings.value("AnimateScrolling", true).toBool());
-    ui->wheelScroll->setValue(settings.value("wheelScrollLines", qApp->wheelScrollLines()).toInt());
-    ui->xssAuditing->setChecked(settings.value("XSSAuditing", false).toBool());
-    ui->printEBackground->setChecked(settings.value("PrintElementBackground", true).toBool());
-    ui->useNativeScrollbars->setChecked(settings.value("UseNativeScrollbars", false).toBool());
-    ui->disableVideoAutoPlay->setChecked(settings.value("DisableVideoAutoPlay", false).toBool());
-    ui->webRTCPublicIpOnly->setChecked(settings.value("WebRTCPublicIpOnly", true).toBool());
-    ui->dnsPrefetch->setChecked(settings.value("DNSPrefetch", true).toBool());
-    ui->intPDFViewer->setChecked(settings.value("intPDFViewer", false).toBool());
+    ui->allowJavaScript->setChecked(settings.value(QSL("allowJavaScript"), true).toBool());
+    ui->linksInFocusChain->setChecked(settings.value(QSL("IncludeLinkInFocusChain"), false).toBool());
+    ui->spatialNavigation->setChecked(settings.value(QSL("SpatialNavigation"), false).toBool());
+    ui->animateScrolling->setChecked(settings.value(QSL("AnimateScrolling"), true).toBool());
+    ui->wheelScroll->setValue(settings.value(QSL("wheelScrollLines"), qApp->wheelScrollLines()).toInt());
+    ui->xssAuditing->setChecked(settings.value(QSL("XSSAuditing"), false).toBool());
+    ui->printEBackground->setChecked(settings.value(QSL("PrintElementBackground"), true).toBool());
+    ui->useNativeScrollbars->setChecked(settings.value(QSL("UseNativeScrollbars"), false).toBool());
+    ui->disableVideoAutoPlay->setChecked(settings.value(QSL("DisableVideoAutoPlay"), false).toBool());
+    ui->webRTCPublicIpOnly->setChecked(settings.value(QSL("WebRTCPublicIpOnly"), true).toBool());
+    ui->dnsPrefetch->setChecked(settings.value(QSL("DNSPrefetch"), true).toBool());
+    ui->intPDFViewer->setChecked(settings.value(QSL("intPDFViewer"), false).toBool());
     ui->intPDFViewer->setEnabled(ui->allowPlugins->isChecked());
-    ui->screenCaptureEnabled->setChecked(settings.value("screenCaptureEnabled", false).toBool());
-    ui->hardwareAccel->setChecked(settings.value("hardwareAccel", false).toBool());
+    ui->screenCaptureEnabled->setChecked(settings.value(QSL("screenCaptureEnabled"), false).toBool());
+    ui->hardwareAccel->setChecked(settings.value(QSL("hardwareAccel"), false).toBool());
 
     const auto levels = WebView::zoomLevels();
     for (int level : levels) {
         ui->defaultZoomLevel->addItem(tr("%1%").arg(QString::number(level)));
     }
-    ui->defaultZoomLevel->setCurrentIndex(settings.value("DefaultZoomLevel", WebView::zoomLevels().indexOf(100)).toInt());
-    ui->closeAppWithCtrlQ->setChecked(settings.value("closeAppWithCtrlQ", true).toBool());
+    ui->defaultZoomLevel->setCurrentIndex(settings.value(QSL("DefaultZoomLevel"), WebView::zoomLevels().indexOf(100)).toInt());
+    ui->closeAppWithCtrlQ->setChecked(settings.value(QSL("closeAppWithCtrlQ"), true).toBool());
 
     //Cache
-    ui->allowCache->setChecked(settings.value("AllowLocalCache", true).toBool());
-    ui->removeCache->setChecked(settings.value("deleteCacheOnClose", false).toBool());
-    ui->cacheMB->setValue(settings.value("LocalCacheSize", 50).toInt());
-    ui->cachePath->setText(settings.value("CachePath", mApp->webProfile()->cachePath()).toString());
+    ui->allowCache->setChecked(settings.value(QSL("AllowLocalCache"), true).toBool());
+    ui->removeCache->setChecked(settings.value(QSL("deleteCacheOnClose"), false).toBool());
+    ui->cacheMB->setValue(settings.value(QSL("LocalCacheSize"), 50).toInt());
+    ui->cachePath->setText(settings.value(QSL("CachePath"), mApp->webProfile()->cachePath()).toString());
     connect(ui->allowCache, &QAbstractButton::clicked, this, &Preferences::allowCacheChanged);
     connect(ui->changeCachePath, &QAbstractButton::clicked, this, &Preferences::changeCachePathClicked);
     allowCacheChanged(ui->allowCache->isChecked());
 
     //PASSWORD MANAGER
-    ui->allowPassManager->setChecked(settings.value("SavePasswordsOnSites", true).toBool());
-    ui->autoCompletePasswords->setChecked(settings.value("AutoCompletePasswords", true).toBool());
+    ui->allowPassManager->setChecked(settings.value(QSL("SavePasswordsOnSites"), true).toBool());
+    ui->autoCompletePasswords->setChecked(settings.value(QSL("AutoCompletePasswords"), true).toBool());
 
     //PRIVACY
     //Web storage
-    ui->saveHistory->setChecked(settings.value("allowHistory", true).toBool());
-    ui->deleteHistoryOnClose->setChecked(settings.value("deleteHistoryOnClose", false).toBool());
+    ui->saveHistory->setChecked(settings.value(QSL("allowHistory"), true).toBool());
+    ui->deleteHistoryOnClose->setChecked(settings.value(QSL("deleteHistoryOnClose"), false).toBool());
     if (!ui->saveHistory->isChecked()) {
         ui->deleteHistoryOnClose->setEnabled(false);
     }
     connect(ui->saveHistory, &QAbstractButton::toggled, this, &Preferences::saveHistoryChanged);
 
     // Html5Storage
-    ui->html5storage->setChecked(settings.value("HTML5StorageEnabled", true).toBool());
-    ui->deleteHtml5storageOnClose->setChecked(settings.value("deleteHTML5StorageOnClose", false).toBool());
+    ui->html5storage->setChecked(settings.value(QSL("HTML5StorageEnabled"), true).toBool());
+    ui->deleteHtml5storageOnClose->setChecked(settings.value(QSL("deleteHTML5StorageOnClose"), false).toBool());
     connect(ui->html5storage, &QAbstractButton::toggled, this, &Preferences::allowHtml5storageChanged);
     // Other
-    ui->doNotTrack->setChecked(settings.value("DoNotTrack", false).toBool());
+    ui->doNotTrack->setChecked(settings.value(QSL("DoNotTrack"), false).toBool());
 
     //CSS Style
-    ui->userStyleSheet->setText(settings.value("userStyleSheet", "").toString());
+    ui->userStyleSheet->setText(settings.value(QSL("userStyleSheet"), QSL("")).toString());
     connect(ui->chooseUserStylesheet, &QAbstractButton::clicked, this, &Preferences::chooseUserStyleClicked);
     settings.endGroup();
 
     //DOWNLOADS
-    settings.beginGroup("DownloadManager");
-    ui->downLoc->setText(settings.value("defaultDownloadPath", "").toString());
-    ui->closeDownManOnFinish->setChecked(settings.value("CloseManagerOnFinish", false).toBool());
+    settings.beginGroup(QSL("DownloadManager"));
+    ui->downLoc->setText(settings.value(QSL("defaultDownloadPath"), QSL("")).toString());
+    ui->closeDownManOnFinish->setChecked(settings.value(QSL("CloseManagerOnFinish"), false).toBool());
     if (ui->downLoc->text().isEmpty()) {
         ui->askEverytime->setChecked(true);
     }
     else {
         ui->useDefined->setChecked(true);
     }
-    ui->useExternalDownManager->setChecked(settings.value("UseExternalManager", false).toBool());
-    ui->externalDownExecutable->setText(settings.value("ExternalManagerExecutable", "").toString());
-    ui->externalDownArguments->setText(settings.value("ExternalManagerArguments", "").toString());
+    ui->useExternalDownManager->setChecked(settings.value(QSL("UseExternalManager"), false).toBool());
+    ui->externalDownExecutable->setText(settings.value(QSL("ExternalManagerExecutable"), QSL("")).toString());
+    ui->externalDownArguments->setText(settings.value(QSL("ExternalManagerArguments"), QSL("")).toString());
 
     connect(ui->useExternalDownManager, &QAbstractButton::toggled, this, &Preferences::useExternalDownManagerChanged);
 
@@ -362,7 +362,7 @@ Preferences::Preferences(BrowserWindow* window)
     settings.endGroup();
 
     //FONTS
-    settings.beginGroup("Browser-Fonts");
+    settings.beginGroup(QSL("Browser-Fonts"));
     QWebEngineSettings* webSettings = mApp->webSettings();
     auto defaultFont = [&](QWebEngineSettings::FontFamily font) -> const QString {
         const QString family = webSettings->fontFamily(font);
@@ -377,33 +377,33 @@ Preferences::Preferences(BrowserWindow* window)
             return QFontDatabase::systemFont(QFontDatabase::GeneralFont).family();
         }
     };
-    ui->fontStandard->setCurrentFont(QFont(settings.value("StandardFont", defaultFont(QWebEngineSettings::StandardFont)).toString()));
-    ui->fontCursive->setCurrentFont(QFont(settings.value("CursiveFont", defaultFont(QWebEngineSettings::CursiveFont)).toString()));
-    ui->fontFantasy->setCurrentFont(QFont(settings.value("FantasyFont", defaultFont(QWebEngineSettings::FantasyFont)).toString()));
-    ui->fontFixed->setCurrentFont(QFont(settings.value("FixedFont", defaultFont(QWebEngineSettings::FixedFont)).toString()));
-    ui->fontSansSerif->setCurrentFont(QFont(settings.value("SansSerifFont", defaultFont(QWebEngineSettings::SansSerifFont)).toString()));
-    ui->fontSerif->setCurrentFont(QFont(settings.value("SerifFont", defaultFont(QWebEngineSettings::SerifFont)).toString()));
-    ui->sizeDefault->setValue(settings.value("DefaultFontSize", webSettings->fontSize(QWebEngineSettings::DefaultFontSize)).toInt());
-    ui->sizeFixed->setValue(settings.value("FixedFontSize", webSettings->fontSize(QWebEngineSettings::DefaultFixedFontSize)).toInt());
-    ui->sizeMinimum->setValue(settings.value("MinimumFontSize", webSettings->fontSize(QWebEngineSettings::MinimumFontSize)).toInt());
-    ui->sizeMinimumLogical->setValue(settings.value("MinimumLogicalFontSize", webSettings->fontSize(QWebEngineSettings::MinimumLogicalFontSize)).toInt());
+    ui->fontStandard->setCurrentFont(QFont(settings.value(QSL("StandardFont"), defaultFont(QWebEngineSettings::StandardFont)).toString()));
+    ui->fontCursive->setCurrentFont(QFont(settings.value(QSL("CursiveFont"), defaultFont(QWebEngineSettings::CursiveFont)).toString()));
+    ui->fontFantasy->setCurrentFont(QFont(settings.value(QSL("FantasyFont"), defaultFont(QWebEngineSettings::FantasyFont)).toString()));
+    ui->fontFixed->setCurrentFont(QFont(settings.value(QSL("FixedFont"), defaultFont(QWebEngineSettings::FixedFont)).toString()));
+    ui->fontSansSerif->setCurrentFont(QFont(settings.value(QSL("SansSerifFont"), defaultFont(QWebEngineSettings::SansSerifFont)).toString()));
+    ui->fontSerif->setCurrentFont(QFont(settings.value(QSL("SerifFont"), defaultFont(QWebEngineSettings::SerifFont)).toString()));
+    ui->sizeDefault->setValue(settings.value(QSL("DefaultFontSize"), webSettings->fontSize(QWebEngineSettings::DefaultFontSize)).toInt());
+    ui->sizeFixed->setValue(settings.value(QSL("FixedFontSize"), webSettings->fontSize(QWebEngineSettings::DefaultFixedFontSize)).toInt());
+    ui->sizeMinimum->setValue(settings.value(QSL("MinimumFontSize"), webSettings->fontSize(QWebEngineSettings::MinimumFontSize)).toInt());
+    ui->sizeMinimumLogical->setValue(settings.value(QSL("MinimumLogicalFontSize"), webSettings->fontSize(QWebEngineSettings::MinimumLogicalFontSize)).toInt());
     settings.endGroup();
 
     //KEYBOARD SHORTCUTS
-    settings.beginGroup("Shortcuts");
-    ui->switchTabsAlt->setChecked(settings.value("useTabNumberShortcuts", true).toBool());
-    ui->loadSpeedDialsCtrl->setChecked(settings.value("useSpeedDialNumberShortcuts", true).toBool());
-    ui->singleKeyShortcuts->setChecked(settings.value("useSingleKeyShortcuts", false).toBool());
+    settings.beginGroup(QSL("Shortcuts"));
+    ui->switchTabsAlt->setChecked(settings.value(QSL("useTabNumberShortcuts"), true).toBool());
+    ui->loadSpeedDialsCtrl->setChecked(settings.value(QSL("useSpeedDialNumberShortcuts"), true).toBool());
+    ui->singleKeyShortcuts->setChecked(settings.value(QSL("useSingleKeyShortcuts"), false).toBool());
     settings.endGroup();
 
     //NOTIFICATIONS
     ui->useNativeSystemNotifications->setEnabled(mApp->desktopNotifications()->supportsNativeNotifications());
 
     DesktopNotificationsFactory::Type notifyType;
-    settings.beginGroup("Notifications");
-    ui->notificationTimeout->setValue(settings.value("Timeout", 6000).toInt() / 1000);
+    settings.beginGroup(QSL("Notifications"));
+    ui->notificationTimeout->setValue(settings.value(QSL("Timeout"), 6000).toInt() / 1000);
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
-    notifyType = settings.value("UseNativeDesktop", true).toBool() ? DesktopNotificationsFactory::DesktopNative : DesktopNotificationsFactory::PopupWidget;
+    notifyType = settings.value(QSL("UseNativeDesktop"), true).toBool() ? DesktopNotificationsFactory::DesktopNative : DesktopNotificationsFactory::PopupWidget;
 #else
     notifyType = DesktopNotificationsFactory::PopupWidget;
 #endif
@@ -416,8 +416,8 @@ Preferences::Preferences(BrowserWindow* window)
 
     connect(ui->notificationPreview, &QPushButton::clicked, this, &Preferences::showNotificationPreview);
 
-    ui->doNotUseNotifications->setChecked(!settings.value("Enabled", true).toBool());
-    m_notifPosition = settings.value("Position", QPoint(10, 10)).toPoint();
+    ui->doNotUseNotifications->setChecked(!settings.value(QSL("Enabled"), true).toBool());
+    m_notifPosition = settings.value(QSL("Position"), QPoint(10, 10)).toPoint();
     settings.endGroup();
 
     //SPELLCHECK
@@ -488,8 +488,8 @@ Preferences::Preferences(BrowserWindow* window)
     }
 
     // Proxy Configuration
-    settings.beginGroup("Web-Proxy");
-    int proxyType = settings.value("ProxyType", 2).toInt();
+    settings.beginGroup(QSL("Web-Proxy"));
+    int proxyType = settings.value(QSL("ProxyType"), 2).toInt();
     if (proxyType == 0) {
         ui->noProxy->setChecked(true);
     } else if (proxyType == 2) {
@@ -502,10 +502,10 @@ Preferences::Preferences(BrowserWindow* window)
         ui->proxyType->setCurrentIndex(1);
     }
 
-    ui->proxyServer->setText(settings.value("HostName", "").toString());
-    ui->proxyPort->setText(settings.value("Port", 8080).toString());
-    ui->proxyUsername->setText(settings.value("Username", "").toString());
-    ui->proxyPassword->setText(settings.value("Password", "").toString());
+    ui->proxyServer->setText(settings.value(QSL("HostName"), QSL("")).toString());
+    ui->proxyPort->setText(settings.value(QSL("Port"), 8080).toString());
+    ui->proxyUsername->setText(settings.value(QSL("Username"), QSL("")).toString());
+    ui->proxyPassword->setText(settings.value(QSL("Password"), QSL("")).toString());
     settings.endGroup();
 
     setManualProxyConfigurationEnabled(ui->manualProxy->isChecked());
@@ -543,7 +543,7 @@ Preferences::Preferences(BrowserWindow* window)
     restoreGeometry(settings.value(QSL("Geometry")).toByteArray());
     settings.endGroup();
 
-    QzTools::setWmClass("Preferences", this);
+    QzTools::setWmClass(QSL("Preferences"), this);
 }
 
 void Preferences::allowPluginsToggled(bool checked)
@@ -553,7 +553,7 @@ void Preferences::allowPluginsToggled(bool checked)
 
 void Preferences::chooseExternalDownloadManager()
 {
-    QString path = QzTools::getOpenFileName("Preferences-ExternalDownloadManager", this, tr("Choose executable location..."), QDir::homePath());
+    QString path = QzTools::getOpenFileName(QSL("Preferences-ExternalDownloadManager"), this, tr("Choose executable location..."), QDir::homePath());
     if (path.isEmpty()) {
         return;
     }
@@ -569,7 +569,7 @@ void Preferences::showStackedPage(QListWidgetItem* item)
 
     int index = ui->listWidget->currentRow();
 
-    ui->caption->setText("<b>" + item->text() + "</b>");
+    ui->caption->setText(QSL("<b>") + item->text() + QSL("</b>"));
     ui->stackedWidget->setCurrentIndex(index);
 
     if (m_notification) {
@@ -646,7 +646,7 @@ void Preferences::useActualNewTab()
 
 void Preferences::chooseDownPath()
 {
-    QString userFileName = QzTools::getExistingDirectory("Preferences-ChooseDownPath", this, tr("Choose download location..."), QDir::homePath());
+    QString userFileName = QzTools::getExistingDirectory(QSL("Preferences-ChooseDownPath"), this, tr("Choose download location..."), QDir::homePath());
     if (userFileName.isEmpty()) {
         return;
     }
@@ -660,7 +660,7 @@ void Preferences::chooseDownPath()
 
 void Preferences::chooseUserStyleClicked()
 {
-    QString file = QzTools::getOpenFileName("Preferences-UserStyle", this, tr("Choose stylesheet location..."), QDir::homePath(), "*.css");
+    QString file = QzTools::getOpenFileName(QSL("Preferences-UserStyle"), this, tr("Choose stylesheet location..."), QDir::homePath(), QSL("*.css"));
     if (file.isEmpty()) {
         return;
     }
@@ -779,7 +779,7 @@ void Preferences::afterLaunchChanged(int value)
 
 void Preferences::changeCachePathClicked()
 {
-    QString path = QzTools::getExistingDirectory("Preferences-CachePath", this, tr("Choose cache path..."), ui->cachePath->text());
+    QString path = QzTools::getExistingDirectory(QSL("Preferences-CachePath"), this, tr("Choose cache path..."), ui->cachePath->text());
     if (path.isEmpty()) {
         return;
     }
@@ -858,8 +858,8 @@ void Preferences::startProfileIndexChanged(int index)
 void Preferences::closeEvent(QCloseEvent* event)
 {
     Settings settings;
-    settings.beginGroup("Browser-View-Settings");
-    settings.setValue("settingsDialogPage", ui->stackedWidget->currentIndex());
+    settings.beginGroup(QSL("Browser-View-Settings"));
+    settings.setValue(QSL("settingsDialogPage"), ui->stackedWidget->currentIndex());
     settings.endGroup();
 
     event->accept();
@@ -871,25 +871,25 @@ void Preferences::saveSettings()
     //GENERAL URLs
     QUrl homepage = QUrl::fromUserInput(ui->homepage->text());
 
-    settings.beginGroup("Web-URL-Settings");
-    settings.setValue("homepage", homepage);
-    settings.setValue("afterLaunch", ui->afterLaunch->currentIndex());
+    settings.beginGroup(QSL("Web-URL-Settings"));
+    settings.setValue(QSL("homepage"), homepage);
+    settings.setValue(QSL("afterLaunch"), ui->afterLaunch->currentIndex());
 
     switch (ui->newTab->currentIndex()) {
     case 0:
-        settings.setValue("newTabUrl", QUrl());
+        settings.setValue(QSL("newTabUrl"), QUrl());
         break;
 
     case 1:
-        settings.setValue("newTabUrl", homepage);
+        settings.setValue(QSL("newTabUrl"), homepage);
         break;
 
     case 2:
-        settings.setValue("newTabUrl", QUrl(QSL("falkon:speeddial")));
+        settings.setValue(QSL("newTabUrl"), QUrl(QSL("falkon:speeddial")));
         break;
 
     case 3:
-        settings.setValue("newTabUrl", QUrl::fromUserInput(ui->newTabUrl->text()));
+        settings.setValue(QSL("newTabUrl"), QUrl::fromUserInput(ui->newTabUrl->text()));
         break;
 
     default:
@@ -905,121 +905,121 @@ void Preferences::saveSettings()
      */
 
     //WINDOW
-    settings.beginGroup("Browser-View-Settings");
-    settings.setValue("showStatusBar", ui->showStatusbar->isChecked());
-    settings.setValue("instantBookmarksToolbar", ui->instantBookmarksToolbar->isChecked());
-    settings.setValue("showBookmarksToolbar", ui->showBookmarksToolbar->isChecked());
-    settings.setValue("showNavigationToolbar", ui->showNavigationToolbar->isChecked());
+    settings.beginGroup(QSL("Browser-View-Settings"));
+    settings.setValue(QSL("showStatusBar"), ui->showStatusbar->isChecked());
+    settings.setValue(QSL("instantBookmarksToolbar"), ui->instantBookmarksToolbar->isChecked());
+    settings.setValue(QSL("showBookmarksToolbar"), ui->showBookmarksToolbar->isChecked());
+    settings.setValue(QSL("showNavigationToolbar"), ui->showNavigationToolbar->isChecked());
     settings.endGroup();
 
     //TABS
-    settings.beginGroup("Browser-Tabs-Settings");
-    settings.setValue("hideTabsWithOneTab", ui->hideTabsOnTab->isChecked());
-    settings.setValue("ActivateLastTabWhenClosingActual", ui->activateLastTab->isChecked());
-    settings.setValue("newTabAfterActive", ui->openNewTabAfterActive->isChecked());
-    settings.setValue("newEmptyTabAfterActive", ui->openNewEmptyTabAfterActive->isChecked());
-    settings.setValue("OpenPopupsInTabs", ui->openPopupsInTabs->isChecked());
-    settings.setValue("AlwaysSwitchTabsWithWheel", ui->alwaysSwitchTabsWithWheel->isChecked());
-    settings.setValue("OpenNewTabsSelected", ui->switchToNewTabs->isChecked());
-    settings.setValue("dontCloseWithOneTab", ui->dontCloseOnLastTab->isChecked());
-    settings.setValue("AskOnClosing", ui->askWhenClosingMultipleTabs->isChecked());
-    settings.setValue("showClosedTabsButton", ui->showClosedTabsButton->isChecked());
-    settings.setValue("showCloseOnInactiveTabs", ui->showCloseOnInactive->currentIndex());
+    settings.beginGroup(QSL("Browser-Tabs-Settings"));
+    settings.setValue(QSL("hideTabsWithOneTab"), ui->hideTabsOnTab->isChecked());
+    settings.setValue(QSL("ActivateLastTabWhenClosingActual"), ui->activateLastTab->isChecked());
+    settings.setValue(QSL("newTabAfterActive"), ui->openNewTabAfterActive->isChecked());
+    settings.setValue(QSL("newEmptyTabAfterActive"), ui->openNewEmptyTabAfterActive->isChecked());
+    settings.setValue(QSL("OpenPopupsInTabs"), ui->openPopupsInTabs->isChecked());
+    settings.setValue(QSL("AlwaysSwitchTabsWithWheel"), ui->alwaysSwitchTabsWithWheel->isChecked());
+    settings.setValue(QSL("OpenNewTabsSelected"), ui->switchToNewTabs->isChecked());
+    settings.setValue(QSL("dontCloseWithOneTab"), ui->dontCloseOnLastTab->isChecked());
+    settings.setValue(QSL("AskOnClosing"), ui->askWhenClosingMultipleTabs->isChecked());
+    settings.setValue(QSL("showClosedTabsButton"), ui->showClosedTabsButton->isChecked());
+    settings.setValue(QSL("showCloseOnInactiveTabs"), ui->showCloseOnInactive->currentIndex());
     settings.endGroup();
 
     //DOWNLOADS
-    settings.beginGroup("DownloadManager");
+    settings.beginGroup(QSL("DownloadManager"));
     if (ui->askEverytime->isChecked()) {
-        settings.setValue("defaultDownloadPath", "");
+        settings.setValue(QSL("defaultDownloadPath"), QSL(""));
     }
     else {
-        settings.setValue("defaultDownloadPath", ui->downLoc->text());
+        settings.setValue(QSL("defaultDownloadPath"), ui->downLoc->text());
     }
-    settings.setValue("CloseManagerOnFinish", ui->closeDownManOnFinish->isChecked());
-    settings.setValue("UseExternalManager", ui->useExternalDownManager->isChecked());
-    settings.setValue("ExternalManagerExecutable", ui->externalDownExecutable->text());
-    settings.setValue("ExternalManagerArguments", ui->externalDownArguments->text());
+    settings.setValue(QSL("CloseManagerOnFinish"), ui->closeDownManOnFinish->isChecked());
+    settings.setValue(QSL("UseExternalManager"), ui->useExternalDownManager->isChecked());
+    settings.setValue(QSL("ExternalManagerExecutable"), ui->externalDownExecutable->text());
+    settings.setValue(QSL("ExternalManagerArguments"), ui->externalDownArguments->text());
 
     settings.endGroup();
 
     //FONTS
-    settings.beginGroup("Browser-Fonts");
-    settings.setValue("StandardFont", ui->fontStandard->currentFont().family());
-    settings.setValue("CursiveFont", ui->fontCursive->currentFont().family());
-    settings.setValue("FantasyFont", ui->fontFantasy->currentFont().family());
-    settings.setValue("FixedFont", ui->fontFixed->currentFont().family());
-    settings.setValue("SansSerifFont", ui->fontSansSerif->currentFont().family());
-    settings.setValue("SerifFont", ui->fontSerif->currentFont().family());
+    settings.beginGroup(QSL("Browser-Fonts"));
+    settings.setValue(QSL("StandardFont"), ui->fontStandard->currentFont().family());
+    settings.setValue(QSL("CursiveFont"), ui->fontCursive->currentFont().family());
+    settings.setValue(QSL("FantasyFont"), ui->fontFantasy->currentFont().family());
+    settings.setValue(QSL("FixedFont"), ui->fontFixed->currentFont().family());
+    settings.setValue(QSL("SansSerifFont"), ui->fontSansSerif->currentFont().family());
+    settings.setValue(QSL("SerifFont"), ui->fontSerif->currentFont().family());
 
-    settings.setValue("DefaultFontSize", ui->sizeDefault->value());
-    settings.setValue("FixedFontSize", ui->sizeFixed->value());
-    settings.setValue("MinimumFontSize", ui->sizeMinimum->value());
-    settings.setValue("MinimumLogicalFontSize", ui->sizeMinimumLogical->value());
+    settings.setValue(QSL("DefaultFontSize"), ui->sizeDefault->value());
+    settings.setValue(QSL("FixedFontSize"), ui->sizeFixed->value());
+    settings.setValue(QSL("MinimumFontSize"), ui->sizeMinimum->value());
+    settings.setValue(QSL("MinimumLogicalFontSize"), ui->sizeMinimumLogical->value());
     settings.endGroup();
 
     //KEYBOARD SHORTCUTS
-    settings.beginGroup("Shortcuts");
-    settings.setValue("useTabNumberShortcuts", ui->switchTabsAlt->isChecked());
-    settings.setValue("useSpeedDialNumberShortcuts", ui->loadSpeedDialsCtrl->isChecked());
-    settings.setValue("useSingleKeyShortcuts", ui->singleKeyShortcuts->isChecked());
+    settings.beginGroup(QSL("Shortcuts"));
+    settings.setValue(QSL("useTabNumberShortcuts"), ui->switchTabsAlt->isChecked());
+    settings.setValue(QSL("useSpeedDialNumberShortcuts"), ui->loadSpeedDialsCtrl->isChecked());
+    settings.setValue(QSL("useSingleKeyShortcuts"), ui->singleKeyShortcuts->isChecked());
     settings.endGroup();
 
     //BROWSING
-    settings.beginGroup("Web-Browser-Settings");
-    settings.setValue("allowPlugins", ui->allowPlugins->isChecked());
-    settings.setValue("allowJavaScript", ui->allowJavaScript->isChecked());
-    settings.setValue("IncludeLinkInFocusChain", ui->linksInFocusChain->isChecked());
-    settings.setValue("SpatialNavigation", ui->spatialNavigation->isChecked());
-    settings.setValue("AnimateScrolling", ui->animateScrolling->isChecked());
-    settings.setValue("wheelScrollLines", ui->wheelScroll->value());
-    settings.setValue("DoNotTrack", ui->doNotTrack->isChecked());
-    settings.setValue("CheckUpdates", ui->checkUpdates->isChecked());
-    settings.setValue("LoadTabsOnActivation", ui->dontLoadTabsUntilSelected->isChecked());
-    settings.setValue("DefaultZoomLevel", ui->defaultZoomLevel->currentIndex());
-    settings.setValue("XSSAuditing", ui->xssAuditing->isChecked());
-    settings.setValue("PrintElementBackground", ui->printEBackground->isChecked());
-    settings.setValue("closeAppWithCtrlQ", ui->closeAppWithCtrlQ->isChecked());
-    settings.setValue("UseNativeScrollbars", ui->useNativeScrollbars->isChecked());
-    settings.setValue("DisableVideoAutoPlay", ui->disableVideoAutoPlay->isChecked());
-    settings.setValue("WebRTCPublicIpOnly", ui->webRTCPublicIpOnly->isChecked());
-    settings.setValue("DNSPrefetch", ui->dnsPrefetch->isChecked());
-    settings.setValue("intPDFViewer", ui->intPDFViewer->isChecked());
-    settings.setValue("screenCaptureEnabled", ui->screenCaptureEnabled->isChecked());
-    settings.setValue("hardwareAccel", ui->hardwareAccel->isChecked());
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    settings.setValue(QSL("allowPlugins"), ui->allowPlugins->isChecked());
+    settings.setValue(QSL("allowJavaScript"), ui->allowJavaScript->isChecked());
+    settings.setValue(QSL("IncludeLinkInFocusChain"), ui->linksInFocusChain->isChecked());
+    settings.setValue(QSL("SpatialNavigation"), ui->spatialNavigation->isChecked());
+    settings.setValue(QSL("AnimateScrolling"), ui->animateScrolling->isChecked());
+    settings.setValue(QSL("wheelScrollLines"), ui->wheelScroll->value());
+    settings.setValue(QSL("DoNotTrack"), ui->doNotTrack->isChecked());
+    settings.setValue(QSL("CheckUpdates"), ui->checkUpdates->isChecked());
+    settings.setValue(QSL("LoadTabsOnActivation"), ui->dontLoadTabsUntilSelected->isChecked());
+    settings.setValue(QSL("DefaultZoomLevel"), ui->defaultZoomLevel->currentIndex());
+    settings.setValue(QSL("XSSAuditing"), ui->xssAuditing->isChecked());
+    settings.setValue(QSL("PrintElementBackground"), ui->printEBackground->isChecked());
+    settings.setValue(QSL("closeAppWithCtrlQ"), ui->closeAppWithCtrlQ->isChecked());
+    settings.setValue(QSL("UseNativeScrollbars"), ui->useNativeScrollbars->isChecked());
+    settings.setValue(QSL("DisableVideoAutoPlay"), ui->disableVideoAutoPlay->isChecked());
+    settings.setValue(QSL("WebRTCPublicIpOnly"), ui->webRTCPublicIpOnly->isChecked());
+    settings.setValue(QSL("DNSPrefetch"), ui->dnsPrefetch->isChecked());
+    settings.setValue(QSL("intPDFViewer"), ui->intPDFViewer->isChecked());
+    settings.setValue(QSL("screenCaptureEnabled"), ui->screenCaptureEnabled->isChecked());
+    settings.setValue(QSL("hardwareAccel"), ui->hardwareAccel->isChecked());
 #ifdef Q_OS_WIN
-    settings.setValue("CheckDefaultBrowser", ui->checkDefaultBrowser->isChecked());
+    settings.setValue(QSL("CheckDefaultBrowser"), ui->checkDefaultBrowser->isChecked());
 #endif
     //Cache
-    settings.setValue("AllowLocalCache", ui->allowCache->isChecked());
-    settings.setValue("deleteCacheOnClose", ui->removeCache->isChecked());
-    settings.setValue("LocalCacheSize", ui->cacheMB->value());
-    settings.setValue("CachePath", ui->cachePath->text());
+    settings.setValue(QSL("AllowLocalCache"), ui->allowCache->isChecked());
+    settings.setValue(QSL("deleteCacheOnClose"), ui->removeCache->isChecked());
+    settings.setValue(QSL("LocalCacheSize"), ui->cacheMB->value());
+    settings.setValue(QSL("CachePath"), ui->cachePath->text());
     //CSS Style
-    settings.setValue("userStyleSheet", ui->userStyleSheet->text());
+    settings.setValue(QSL("userStyleSheet"), ui->userStyleSheet->text());
 
     //PASSWORD MANAGER
-    settings.setValue("SavePasswordsOnSites", ui->allowPassManager->isChecked());
-    settings.setValue("AutoCompletePasswords", ui->autoCompletePasswords->isChecked());
+    settings.setValue(QSL("SavePasswordsOnSites"), ui->allowPassManager->isChecked());
+    settings.setValue(QSL("AutoCompletePasswords"), ui->autoCompletePasswords->isChecked());
 
     //PRIVACY
     //Web storage
-    settings.setValue("allowHistory", ui->saveHistory->isChecked());
-    settings.setValue("deleteHistoryOnClose", ui->deleteHistoryOnClose->isChecked());
-    settings.setValue("HTML5StorageEnabled", ui->html5storage->isChecked());
-    settings.setValue("deleteHTML5StorageOnClose", ui->deleteHtml5storageOnClose->isChecked());
+    settings.setValue(QSL("allowHistory"), ui->saveHistory->isChecked());
+    settings.setValue(QSL("deleteHistoryOnClose"), ui->deleteHistoryOnClose->isChecked());
+    settings.setValue(QSL("HTML5StorageEnabled"), ui->html5storage->isChecked());
+    settings.setValue(QSL("deleteHTML5StorageOnClose"), ui->deleteHtml5storageOnClose->isChecked());
     settings.endGroup();
 
     //NOTIFICATIONS
-    settings.beginGroup("Notifications");
-    settings.setValue("Timeout", ui->notificationTimeout->value() * 1000);
-    settings.setValue("Enabled", !ui->doNotUseNotifications->isChecked());
-    settings.setValue("UseNativeDesktop", ui->useNativeSystemNotifications->isChecked());
-    settings.setValue("Position", m_notification.data() ? m_notification.data()->pos() : m_notifPosition);
+    settings.beginGroup(QSL("Notifications"));
+    settings.setValue(QSL("Timeout"), ui->notificationTimeout->value() * 1000);
+    settings.setValue(QSL("Enabled"), !ui->doNotUseNotifications->isChecked());
+    settings.setValue(QSL("UseNativeDesktop"), ui->useNativeSystemNotifications->isChecked());
+    settings.setValue(QSL("Position"), m_notification.data() ? m_notification.data()->pos() : m_notifPosition);
     settings.endGroup();
 
     //SPELLCHECK
     settings.beginGroup(QSL("SpellCheck"));
-    settings.setValue("Enabled", ui->spellcheckEnabled->isChecked());
+    settings.setValue(QSL("Enabled"), ui->spellcheckEnabled->isChecked());
     QStringList languages;
     for (int i = 0; i < ui->spellcheckLanguages->count(); ++i) {
         QListWidgetItem *item = ui->spellcheckLanguages->item(i);
@@ -1027,30 +1027,30 @@ void Preferences::saveSettings()
             languages.append(item->data(Qt::UserRole).toString());
         }
     }
-    settings.setValue("Languages", languages);
+    settings.setValue(QSL("Languages"), languages);
     settings.endGroup();
 
     //OTHER
     //AddressBar
-    settings.beginGroup("AddressBar");
-    settings.setValue("showSuggestions", ui->addressbarCompletion->currentIndex());
-    settings.setValue("useInlineCompletion", ui->useInlineCompletion->isChecked());
-    settings.setValue("alwaysShowGoIcon", ui->alwaysShowGoIcon->isChecked());
-    settings.setValue("showZoomLabel", ui->showZoomLabel->isChecked());
-    settings.setValue("showSwitchTab", ui->completionShowSwitchTab->isChecked());
-    settings.setValue("SelectAllTextOnDoubleClick", ui->selectAllOnFocus->isChecked());
-    settings.setValue("SelectAllTextOnClick", ui->selectAllOnClick->isChecked());
-    settings.setValue("CompletionPopupExpandToWindow", ui->completionPopupExpandToWindow->isChecked());
-    settings.setValue("ShowLoadingProgress", ui->showLoadingInAddressBar->isChecked());
-    settings.setValue("ProgressStyle", ui->progressStyleSelector->currentIndex());
-    settings.setValue("UseCustomProgressColor", ui->checkBoxCustomProgressColor->isChecked());
-    settings.setValue("CustomProgressColor", ui->customColorToolButton->property("ProgressColor").value<QColor>());
+    settings.beginGroup(QSL("AddressBar"));
+    settings.setValue(QSL("showSuggestions"), ui->addressbarCompletion->currentIndex());
+    settings.setValue(QSL("useInlineCompletion"), ui->useInlineCompletion->isChecked());
+    settings.setValue(QSL("alwaysShowGoIcon"), ui->alwaysShowGoIcon->isChecked());
+    settings.setValue(QSL("showZoomLabel"), ui->showZoomLabel->isChecked());
+    settings.setValue(QSL("showSwitchTab"), ui->completionShowSwitchTab->isChecked());
+    settings.setValue(QSL("SelectAllTextOnDoubleClick"), ui->selectAllOnFocus->isChecked());
+    settings.setValue(QSL("SelectAllTextOnClick"), ui->selectAllOnClick->isChecked());
+    settings.setValue(QSL("CompletionPopupExpandToWindow"), ui->completionPopupExpandToWindow->isChecked());
+    settings.setValue(QSL("ShowLoadingProgress"), ui->showLoadingInAddressBar->isChecked());
+    settings.setValue(QSL("ProgressStyle"), ui->progressStyleSelector->currentIndex());
+    settings.setValue(QSL("UseCustomProgressColor"), ui->checkBoxCustomProgressColor->isChecked());
+    settings.setValue(QSL("CustomProgressColor"), ui->customColorToolButton->property("ProgressColor").value<QColor>());
     settings.endGroup();
 
-    settings.beginGroup("SearchEngines");
-    settings.setValue("SearchFromAddressBar", ui->searchFromAddressBar->isChecked());
-    settings.setValue("SearchWithDefaultEngine", ui->searchWithDefaultEngine->isChecked());
-    settings.setValue("showSearchSuggestions", ui->showABSearchSuggestions->isChecked());
+    settings.beginGroup(QSL("SearchEngines"));
+    settings.setValue(QSL("SearchFromAddressBar"), ui->searchFromAddressBar->isChecked());
+    settings.setValue(QSL("SearchWithDefaultEngine"), ui->searchWithDefaultEngine->isChecked());
+    settings.setValue(QSL("showSearchSuggestions"), ui->showABSearchSuggestions->isChecked());
     settings.endGroup();
 
     //Proxy Configuration
@@ -1065,12 +1065,12 @@ void Preferences::saveSettings()
         proxyType = 4;
     }
 
-    settings.beginGroup("Web-Proxy");
-    settings.setValue("ProxyType", proxyType);
-    settings.setValue("HostName", ui->proxyServer->text());
-    settings.setValue("Port", ui->proxyPort->text().toInt());
-    settings.setValue("Username", ui->proxyUsername->text());
-    settings.setValue("Password", ui->proxyPassword->text());
+    settings.beginGroup(QSL("Web-Proxy"));
+    settings.setValue(QSL("ProxyType"), proxyType);
+    settings.setValue(QSL("HostName"), ui->proxyServer->text());
+    settings.setValue(QSL("Port"), ui->proxyPort->text().toInt());
+    settings.setValue(QSL("Username"), ui->proxyUsername->text());
+    settings.setValue(QSL("Password"), ui->proxyPassword->text());
     settings.endGroup();
 
     ProfileManager::setStartingProfile(ui->startProfile->currentText());

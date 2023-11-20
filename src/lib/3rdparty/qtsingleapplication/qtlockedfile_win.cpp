@@ -190,7 +190,7 @@ bool QtLockedFile::unlock()
         rmutex = 0;
     }
     else {
-        foreach(Qt::HANDLE mutex, rmutexes) {
+        for (Qt::HANDLE mutex : std::as_const(rmutexes)) {
             ReleaseMutex(mutex);
             CloseHandle(mutex);
         }

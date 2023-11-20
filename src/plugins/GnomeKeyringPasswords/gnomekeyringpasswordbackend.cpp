@@ -128,7 +128,7 @@ QVector<PasswordEntry> GnomeKeyringPasswordBackend::getEntries(const QUrl &url)
 
     QVector<PasswordEntry> list;
 
-    foreach (const PasswordEntry &entry, m_allEntries) {
+    for (const PasswordEntry &entry : std::as_const(m_allEntries)) {
         if (entry.host == host) {
             list.append(entry);
         }
@@ -256,7 +256,7 @@ void GnomeKeyringPasswordBackend::removeAll()
 {
     initialize();
 
-    foreach (const PasswordEntry &entry, m_allEntries) {
+    for (const PasswordEntry &entry : std::as_const(m_allEntries)) {
         removeEntry(entry);
     }
 

@@ -33,7 +33,7 @@ void QmlI18n::initTranslations()
     const bool isLanguageSet = qEnvironmentVariableIsSet("LANGUAGE");
     const QByteArray language = qgetenv("LANGUAGE");
     qputenv("LANGUAGE", QLocale::system().name().toUtf8());
-    bindtextdomain(m_domain.toUtf8(), localeDir.toUtf8());
+    bindtextdomain(m_domain.toUtf8().constData(), localeDir.toUtf8().constData());
     if (!isLanguageSet) {
         qunsetenv("LANGUAGE");
     } else {
@@ -43,10 +43,10 @@ void QmlI18n::initTranslations()
 
 QString QmlI18n::i18n(const QString &string)
 {
-    return QString::fromUtf8(dgettext(m_domain.toUtf8(), string.toUtf8()));
+    return QString::fromUtf8(dgettext(m_domain.toUtf8().constData(), string.toUtf8().constData()));
 }
 
 QString QmlI18n::i18np(const QString &string1, const QString &string2, int count)
 {
-    return QString::fromUtf8(dngettext(m_domain.toUtf8(), string1.toUtf8(), string2.toUtf8(), count));
+    return QString::fromUtf8(dngettext(m_domain.toUtf8().constData(), string1.toUtf8().constData(), string2.toUtf8().constData(), count));
 }

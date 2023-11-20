@@ -240,13 +240,13 @@ QString BookmarksToolbarButton::createTooltip() const
 {
     if (!m_bookmark->description().isEmpty()) {
         if (!m_bookmark->urlString().isEmpty()) {
-            return QString("%1\n%2").arg(m_bookmark->description(), m_bookmark->urlString());
+            return QSL("%1\n%2").arg(m_bookmark->description(), m_bookmark->urlString());
         }
         return m_bookmark->description();
     }
 
     if (!m_bookmark->title().isEmpty() && !m_bookmark->url().isEmpty()) {
-        return QString("%1\n%2").arg(m_bookmark->title(), m_bookmark->urlString());
+        return QSL("%1\n%2").arg(m_bookmark->title(), m_bookmark->urlString());
     }
 
     if (!m_bookmark->title().isEmpty()) {
@@ -434,7 +434,7 @@ void BookmarksToolbarButton::dropEvent(QDropEvent *event)
         }
     } else {
         const QUrl url = mime->urls().at(0);
-        const QString title = mime->hasText() ? mime->text() : url.toEncoded(QUrl::RemoveScheme);
+        const QString title = mime->hasText() ? mime->text() : QString::fromUtf8(url.toEncoded(QUrl::RemoveScheme));
 
         bookmark = new BookmarkItem(BookmarkItem::Url);
         bookmark->setTitle(title);

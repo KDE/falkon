@@ -36,8 +36,8 @@ CertificateManager::CertificateManager(QWidget* parent)
     ui->listWidget->setLayoutDirection(Qt::LeftToRight);
 
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    m_ignoredSslHosts = settings.value("IgnoredSslHosts", QStringList()).toStringList();
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    m_ignoredSslHosts = settings.value(QSL("IgnoredSslHosts"), QStringList()).toStringList();
     settings.endGroup();
     ui->listWidget->addItems(m_ignoredSslHosts);
 
@@ -101,8 +101,8 @@ void CertificateManager::removeException()
 void CertificateManager::accept()
 {
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    settings.setValue("IgnoredSslHosts", m_ignoredSslHosts);
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    settings.setValue(QSL("IgnoredSslHosts"), m_ignoredSslHosts);
     settings.endGroup();
 
     mApp->networkManager()->loadSettings();

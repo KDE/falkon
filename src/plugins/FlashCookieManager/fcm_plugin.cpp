@@ -113,7 +113,7 @@ void FCM_Plugin::unload()
 
 bool FCM_Plugin::testPlugin()
 {
-    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
+    return (QString::fromLatin1(Qz::VERSION) == QLatin1String(FALKON_VERSION));
 }
 
 void FCM_Plugin::showSettings(QWidget* parent)
@@ -126,7 +126,7 @@ void FCM_Plugin::showSettings(QWidget* parent)
 
 void FCM_Plugin::populateExtensionsMenu(QMenu* menu)
 {
-    auto* showFCM = new QAction(QIcon(":/flashcookiemanager/data/flash-cookie-manager.png"), tr("Flash Cookie Manager"), menu);
+    auto* showFCM = new QAction(QIcon(QSL(":/flashcookiemanager/data/flash-cookie-manager.png")), tr("Flash Cookie Manager"), menu);
     connect(showFCM, &QAction::triggered, this, &FCM_Plugin::showFlashCookieManager);
     menu->addAction(showFCM);
 }
@@ -410,7 +410,7 @@ void FCM_Plugin::insertFlashCookie(const QString &path)
         }
     }
 
-    QString fileStr = QString(file);
+    QString fileStr = QString(QString::fromUtf8(file));
     fileStr = fileStr.split(QL1C('.'), Qt::SkipEmptyParts).join(QL1S("\n"));
 
     QFileInfo solFileInfo(solFile);

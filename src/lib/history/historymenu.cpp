@@ -241,10 +241,10 @@ void HistoryMenu::init()
     act = addAction(IconProvider::standardIcon(QStyle::SP_ArrowForward), tr("&Forward"), this, &HistoryMenu::goForward);
     act->setShortcut(QzTools::actionShortcut(QKeySequence::Forward, Qt::ALT + Qt::Key_Right, QKeySequence::Back, Qt::ALT + Qt::Key_Left));
 
-    act = addAction(QIcon::fromTheme("go-home"), tr("&Home"), this, &HistoryMenu::goHome);
+    act = addAction(QIcon::fromTheme(QSL("go-home")), tr("&Home"), this, &HistoryMenu::goHome);
     act->setShortcut(QKeySequence(Qt::ALT | Qt::Key_Home));
 
-    act = addAction(QIcon::fromTheme("deep-history", QIcon(":/icons/menu/history.svg")), tr("Show &All History"), this, &HistoryMenu::showHistoryManager);
+    act = addAction(QIcon::fromTheme(QSL("deep-history"), QIcon(QSL(":/icons/menu/history.svg"))), tr("Show &All History"), this, &HistoryMenu::showHistoryManager);
     act->setShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_H));
 
     addSeparator();

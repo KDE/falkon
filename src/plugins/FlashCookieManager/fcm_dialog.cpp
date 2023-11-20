@@ -82,10 +82,10 @@ FCM_Dialog::FCM_Dialog(FCM_Plugin* manager, QWidget* parent)
     ui->flashCookieTree->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->flashCookieTree, &QWidget::customContextMenuRequested, this, &FCM_Dialog::cookieTreeContextMenuRequested);
 
-    auto* removeShortcut = new QShortcut(QKeySequence("Del"), this);
+    auto* removeShortcut = new QShortcut(QKeySequence(QSL("Del")), this);
     connect(removeShortcut, &QShortcut::activated, this, &FCM_Dialog::deletePressed);
 
-    QzTools::setWmClass("FlashCookies", this);
+    QzTools::setWmClass(QSL("FlashCookies"), this);
 }
 
 void FCM_Dialog::removeAll()
@@ -169,7 +169,7 @@ void FCM_Dialog::currentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem* p
     ui->size->setText(QString::number(flashCookie.size) + tr(" Byte"));
     ui->textEdit->setPlainText(flashCookie.contents);
     ui->server->setText(flashCookie.origin);
-    ui->path->setText(QString("<a href=\"%1\">%2</a>").arg(QUrl::fromLocalFile(flashCookie.path).toString(), QDir::toNativeSeparators(flashCookie.path)));
+    ui->path->setText(QSL("<a href=\"%1\">%2</a>").arg(QUrl::fromLocalFile(flashCookie.path).toString(), QDir::toNativeSeparators(flashCookie.path)));
     ui->lastModified->setText(flashCookie.lastModification.toString());
 
     ui->removeOne->setText(tr("Remove flash cookie"));

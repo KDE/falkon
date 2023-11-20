@@ -17,6 +17,8 @@
 * ============================================================ */
 #include "gm_jsobject.h"
 
+#include "qzcommon.h"
+
 #include <QApplication>
 #include <QClipboard>
 
@@ -38,7 +40,7 @@ void GM_JSObject::setSettingsFile(const QString &name)
 
 QString GM_JSObject::getValue(const QString &nspace, const QString &name, const QString &dValue)
 {
-    QString valueName = QString("GreaseMonkey-%1/%2").arg(nspace, name);
+    QString valueName = QSL("GreaseMonkey-%1/%2").arg(nspace, name);
     QString savedValue = m_settings->value(valueName, dValue).toString();
 
     if (savedValue.isEmpty()) {
@@ -50,21 +52,21 @@ QString GM_JSObject::getValue(const QString &nspace, const QString &name, const 
 
 bool GM_JSObject::setValue(const QString &nspace, const QString &name, const QString &value)
 {
-    QString valueName = QString("GreaseMonkey-%1/%2").arg(nspace, name);
+    QString valueName = QSL("GreaseMonkey-%1/%2").arg(nspace, name);
     m_settings->setValue(valueName, value);
     return true;
 }
 
 bool GM_JSObject::deleteValue(const QString &nspace, const QString &name)
 {
-    QString valueName = QString("GreaseMonkey-%1/%2").arg(nspace, name);
+    QString valueName = QSL("GreaseMonkey-%1/%2").arg(nspace, name);
     m_settings->remove(valueName);
     return true;
 }
 
 QStringList GM_JSObject::listValues(const QString &nspace)
 {
-    QString nspaceName = QString("GreaseMonkey-%1").arg(nspace);
+    QString nspaceName = QSL("GreaseMonkey-%1").arg(nspace);
 
     m_settings->beginGroup(nspaceName);
     QStringList keys = m_settings->allKeys();

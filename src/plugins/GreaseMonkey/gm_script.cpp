@@ -36,7 +36,7 @@ GM_Script::GM_Script(GM_Manager* manager, const QString &filePath)
     : QObject(manager)
     , m_manager(manager)
     , m_fileWatcher(new DelayedFileWatcher(this))
-    , m_namespace("GreaseMonkeyNS")
+    , m_namespace(QSL("GreaseMonkeyNS"))
     , m_startAt(DocumentEnd)
     , m_noframes(false)
     , m_fileName(filePath)
@@ -66,7 +66,7 @@ QString GM_Script::nameSpace() const
 
 QString GM_Script::fullName() const
 {
-    return QString("%1/%2").arg(m_namespace, m_name);
+    return QSL("%1/%2").arg(m_namespace, m_name);
 }
 
 QString GM_Script::description() const
@@ -299,9 +299,9 @@ void GM_Script::parseScript()
         m_include.append(QSL("*"));
     }
 
-    const QString nspace = QCryptographicHash::hash(fullName().toUtf8(), QCryptographicHash::Md4).toHex();
+    const QString nspace = QString::fromLatin1(QCryptographicHash::hash(fullName().toUtf8(), QCryptographicHash::Md4).toHex());
     const QString gmValues = m_manager->valuesScript().arg(nspace);
-    m_script = QSL("(function(){%1\n%2\n%3\n})();").arg(gmValues, m_manager->requireScripts(m_require), fileData);
+    m_script = QSL("(function(){%1\n%2\n%3\n})();").arg(gmValues, m_manager->requireScripts(m_require), QString::fromUtf8(fileData));
     m_valid = true;
 
     downloadIcon();

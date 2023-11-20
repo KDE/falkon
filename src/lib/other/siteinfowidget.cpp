@@ -43,33 +43,33 @@ SiteInfoWidget::SiteInfoWidget(BrowserWindow* window, QWidget* parent)
 
     if (view->url().scheme() == QL1S("https")) {
         ui->secureLabel->setText(tr("Your connection to this site is <b>secured</b>."));
-        ui->secureIcon->setPixmap(QPixmap(":/icons/locationbar/safe.png"));
+        ui->secureIcon->setPixmap(QPixmap(QSL(":/icons/locationbar/safe.png")));
     }
     else {
         ui->secureLabel->setText(tr("Your connection to this site is <b>unsecured</b>."));
-        ui->secureIcon->setPixmap(QPixmap(":/icons/locationbar/unsafe.png"));
+        ui->secureIcon->setPixmap(QPixmap(QSL(":/icons/locationbar/unsafe.png")));
     }
 
     QString scheme = view->url().scheme();
     QString host = view->url().host();
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT sum(count) FROM history WHERE url LIKE ?");
-    query.addBindValue(QString("%1://%2%").arg(scheme, host));
+    query.prepare(QSL("SELECT sum(count) FROM history WHERE url LIKE ?"));
+    query.addBindValue(QSL("%1://%2%").arg(scheme, host));
     query.exec();
 
     if (query.next()) {
         int count = query.value(0).toInt();
         if (count > 3) {
             ui->historyLabel->setText(tr("This is your <b>%1</b> visit of this site.").arg(QString::number(count) + QLatin1Char('.')));
-            ui->historyIcon->setPixmap(QPixmap(":/icons/locationbar/visit3.png"));
+            ui->historyIcon->setPixmap(QPixmap(QSL(":/icons/locationbar/visit3.png")));
         }
         else if (count == 0) {
             ui->historyLabel->setText(tr("You have <b>never</b> visited this site before."));
-            ui->historyIcon->setPixmap(QPixmap(":/icons/locationbar/visit1.png"));
+            ui->historyIcon->setPixmap(QPixmap(QSL(":/icons/locationbar/visit1.png")));
         }
         else {
-            ui->historyIcon->setPixmap(QPixmap(":/icons/locationbar/visit2.png"));
+            ui->historyIcon->setPixmap(QPixmap(QSL(":/icons/locationbar/visit2.png")));
             QString text;
             if (count == 1) {
                 text = tr("first");

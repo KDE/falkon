@@ -31,22 +31,22 @@ JsOptions::JsOptions(QWidget* parent)
     ui->setupUi(this);
 
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    ui->jscanOpenWindow->setChecked(settings.value("allowJavaScriptOpenWindow", false).toBool());
-    ui->jscanActivateWindow->setChecked(settings.value("allowJavaScriptActivateWindow", false).toBool());
-    ui->jscanAccessClipboard->setChecked(settings.value("allowJavaScriptAccessClipboard", true).toBool());
-    ui->jscanPaste->setChecked(settings.value("allowJavaScriptPaste", true).toBool());
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    ui->jscanOpenWindow->setChecked(settings.value(QSL("allowJavaScriptOpenWindow"), false).toBool());
+    ui->jscanActivateWindow->setChecked(settings.value(QSL("allowJavaScriptActivateWindow"), false).toBool());
+    ui->jscanAccessClipboard->setChecked(settings.value(QSL("allowJavaScriptAccessClipboard"), true).toBool());
+    ui->jscanPaste->setChecked(settings.value(QSL("allowJavaScriptPaste"), true).toBool());
     settings.endGroup();
 }
 
 void JsOptions::accept()
 {
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    settings.setValue("allowJavaScriptOpenWindow", ui->jscanOpenWindow->isChecked());
-    settings.setValue("allowJavaScriptActivateWindow", ui->jscanActivateWindow->isChecked());
-    settings.setValue("allowJavaScriptAccessClipboard", ui->jscanAccessClipboard->isChecked());
-    settings.setValue("allowJavaScriptPaste", ui->jscanPaste->isChecked());
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    settings.setValue(QSL("allowJavaScriptOpenWindow"), ui->jscanOpenWindow->isChecked());
+    settings.setValue(QSL("allowJavaScriptActivateWindow"), ui->jscanActivateWindow->isChecked());
+    settings.setValue(QSL("allowJavaScriptAccessClipboard"), ui->jscanAccessClipboard->isChecked());
+    settings.setValue(QSL("allowJavaScriptPaste"), ui->jscanPaste->isChecked());
     settings.endGroup();
 
     QDialog::close();

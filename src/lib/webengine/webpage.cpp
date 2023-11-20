@@ -328,7 +328,7 @@ void WebPage::handleUnknownProtocol(const QUrl &url)
     CheckBoxDialog dialog(QMessageBox::Yes | QMessageBox::No, view());
     dialog.setDefaultButton(QMessageBox::Yes);
 
-    const QString wrappedUrl = QzTools::alignTextToWidth(url.toString(), "<br/>", dialog.fontMetrics(), 450);
+    const QString wrappedUrl = QzTools::alignTextToWidth(url.toString(), QSL("<br/>"), dialog.fontMetrics(), 450);
     const QString text = tr("Falkon cannot handle <b>%1:</b> links. The requested link "
                             "is <ul><li>%2</li></ul>Do you want Falkon to try "
                             "open this link in system application?").arg(protocol, wrappedUrl);
@@ -413,7 +413,7 @@ void WebPage::renderProcessTerminated(QWebEnginePage::RenderProcessTerminationSt
         return;
 
     QTimer::singleShot(0, this, [this]() {
-        QString page = QzTools::readAllFileContents(":html/tabcrash.html");
+        QString page = QzTools::readAllFileContents(QSL(":html/tabcrash.html"));
         page.replace(QL1S("%IMAGE%"), QzTools::pixmapToDataUrl(IconProvider::standardIcon(QStyle::SP_MessageBoxWarning).pixmap(45)).toString());
         page.replace(QL1S("%TITLE%"), tr("Failed loading page"));
         page.replace(QL1S("%HEADING%"), tr("Failed loading page"));
@@ -421,7 +421,7 @@ void WebPage::renderProcessTerminated(QWebEnginePage::RenderProcessTerminationSt
         page.replace(QL1S("%LI-2%"), tr("Try reloading the page or closing some tabs to make more memory available."));
         page.replace(QL1S("%RELOAD-PAGE%"), tr("Reload page"));
         page = QzTools::applyDirectionToPage(page);
-        setHtml(page.toUtf8(), url());
+        setHtml(page, url());
     });
 }
 
@@ -480,11 +480,11 @@ QStringList WebPage::chooseFiles(QWebEnginePage::FileSelectionMode mode, const Q
 
     switch (mode) {
     case FileSelectOpen:
-        files = QStringList(QzTools::getOpenFileName("WebPage-ChooseFile", view(), tr("Choose file..."), suggestedFileName));
+        files = QStringList(QzTools::getOpenFileName(QSL("WebPage-ChooseFile"), view(), tr("Choose file..."), suggestedFileName));
         break;
 
     case FileSelectOpenMultiple:
-        files = QzTools::getOpenFileNames("WebPage-ChooseFile", view(), tr("Choose files..."), suggestedFileName);
+        files = QzTools::getOpenFileNames(QSL("WebPage-ChooseFile"), view(), tr("Choose files..."), suggestedFileName);
         break;
 
     default:
@@ -622,7 +622,7 @@ void WebPage::javaScriptAlert(const QUrl &securityOrigin, const QString &msg)
     if (!kEnableJsNonBlockDialogs) {
         QString title = tr("JavaScript alert");
         if (!url().host().isEmpty()) {
-            title.append(QString(" - %1").arg(url().host()));
+            title.append(QSL(" - %1").arg(url().host()));
         }
 
         CheckBoxDialog dialog(QMessageBox::Ok, view());

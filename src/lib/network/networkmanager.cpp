@@ -268,18 +268,18 @@ void NetworkManager::unregisterExtensionSchemeHandler(ExtensionSchemeHandler *ha
 void NetworkManager::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("Language");
-    QStringList langs = settings.value("acceptLanguage", AcceptLanguage::defaultLanguage()).toStringList();
+    settings.beginGroup(QSL("Language"));
+    QStringList langs = settings.value(QSL("acceptLanguage"), AcceptLanguage::defaultLanguage()).toStringList();
     settings.endGroup();
-    mApp->webProfile()->setHttpAcceptLanguage(AcceptLanguage::generateHeader(langs));
+    mApp->webProfile()->setHttpAcceptLanguage(QString::fromLatin1(AcceptLanguage::generateHeader(langs)));
 
     QNetworkProxy proxy;
-    settings.beginGroup("Web-Proxy");
-    const int proxyType = settings.value("ProxyType", 2).toInt();
-    proxy.setHostName(settings.value("HostName", QString()).toString());
-    proxy.setPort(settings.value("Port", 8080).toInt());
-    proxy.setUser(settings.value("Username", QString()).toString());
-    proxy.setPassword(settings.value("Password", QString()).toString());
+    settings.beginGroup(QSL("Web-Proxy"));
+    const int proxyType = settings.value(QSL("ProxyType"), 2).toInt();
+    proxy.setHostName(settings.value(QSL("HostName"), QString()).toString());
+    proxy.setPort(settings.value(QSL("Port"), 8080).toInt());
+    proxy.setUser(settings.value(QSL("Username"), QString()).toString());
+    proxy.setPassword(settings.value(QSL("Password"), QString()).toString());
     settings.endGroup();
 
     if (proxyType == 0) {
@@ -300,16 +300,16 @@ void NetworkManager::loadSettings()
 
     m_urlInterceptor->loadSettings();
 
-    settings.beginGroup("Web-Browser-Settings");
-    m_ignoredSslHosts = settings.value("IgnoredSslHosts", QStringList()).toStringList();
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    m_ignoredSslHosts = settings.value(QSL("IgnoredSslHosts"), QStringList()).toStringList();
     settings.endGroup();
 }
 
 void NetworkManager::saveIgnoredSslHosts()
 {
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    settings.setValue("IgnoredSslHosts", m_ignoredSslHosts);
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    settings.setValue(QSL("IgnoredSslHosts"), m_ignoredSslHosts);
     settings.endGroup();
 }
 

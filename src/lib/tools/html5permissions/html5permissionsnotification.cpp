@@ -39,7 +39,7 @@ HTML5PermissionsNotification::HTML5PermissionsNotification(const QUrl &origin, Q
 
     ui->close->setIcon(IconProvider::standardIcon(QStyle::SP_DialogCloseButton));
 
-    const QString site = m_origin.host().isEmpty() ? tr("this site") : QString("<b>%1</b>").arg(m_origin.host());
+    const QString site = m_origin.host().isEmpty() ? tr("this site") : QSL("<b>%1</b>").arg(m_origin.host());
 
     switch (feature) {
     case QWebEnginePage::Notifications:

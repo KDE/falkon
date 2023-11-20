@@ -118,7 +118,7 @@ QVariant BookmarksModel::data(const QModelIndex &index, int role) const
         return itm->isSidebarExpanded();
     case Qt::ToolTipRole:
         if (index.column() == 0 && itm->isUrl()) {
-            return QString("%1\n%2").arg(itm->title(), QString::fromUtf8(itm->url().toEncoded()));
+            return QSL("%1\n%2").arg(itm->title(), QString::fromUtf8(itm->url().toEncoded()));
         }
         // fallthrough
     case Qt::DisplayRole:
@@ -126,7 +126,7 @@ QVariant BookmarksModel::data(const QModelIndex &index, int role) const
         case 0:
             return itm->title();
         case 1:
-            return itm->url().toEncoded();
+            return QString::fromUtf8(itm->url().toEncoded());
         default:
             return {};
         }

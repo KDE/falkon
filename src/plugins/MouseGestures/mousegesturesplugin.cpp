@@ -47,7 +47,7 @@ void MouseGesturesPlugin::unload()
 bool MouseGesturesPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
-    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
+    return (QString::fromLatin1(Qz::VERSION) == QLatin1String(FALKON_VERSION));
 }
 
 void MouseGesturesPlugin::showSettings(QWidget* parent)

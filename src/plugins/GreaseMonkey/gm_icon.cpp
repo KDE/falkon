@@ -24,7 +24,7 @@ GM_Icon::GM_Icon(GM_Manager *manager)
     : AbstractButtonInterface(manager)
     , m_manager(manager)
 {
-    setIcon(QIcon(":gm/data/icon.svg"));
+    setIcon(QIcon(QSL(":gm/data/icon.svg")));
     setTitle(tr("GreaseMonkey"));
     setToolTip(tr("Open GreaseMonkey settings"));
 

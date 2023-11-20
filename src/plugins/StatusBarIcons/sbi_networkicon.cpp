@@ -38,10 +38,10 @@ SBI_NetworkIcon::SBI_NetworkIcon(BrowserWindow* window)
 void SBI_NetworkIcon::onlineStateChanged(bool online)
 {
     if (online) {
-        setPixmap(QIcon(":sbi/data/network-online.png").pixmap(16));
+        setPixmap(QIcon(QSL(":sbi/data/network-online.png")).pixmap(16));
     }
     else {
-        setPixmap(QIcon(":sbi/data/network-offline.png").pixmap(16));
+        setPixmap(QIcon(QSL(":sbi/data/network-offline.png")).pixmap(16));
     }
 
     updateToolTip();
@@ -59,7 +59,7 @@ void SBI_NetworkIcon::showMenu(const QPoint &pos)
     boldFont.setBold(true);
 
     QMenu menu;
-    menu.addAction(QIcon::fromTheme("preferences-system-network", QIcon(":sbi/data/preferences-network.png")), tr("Proxy Configuration"))->setFont(boldFont);
+    menu.addAction(QIcon::fromTheme(QSL("preferences-system-network"), QIcon(QSL(":sbi/data/preferences-network.png"))), tr("Proxy Configuration"))->setFont(boldFont);
 
     QMenu* proxyMenu = menu.addMenu(tr("Select proxy"));
 
@@ -113,7 +113,7 @@ void SBI_NetworkIcon::updateToolTip()
     }
 
     if (SBINetManager->currentProxy()) {
-        tooltip.append(QString(" (%1)").arg(SBINetManager->currentProxyName()));
+        tooltip.append(QSL(" (%1)").arg(SBINetManager->currentProxyName()));
     }
 
     setToolTip(tooltip);

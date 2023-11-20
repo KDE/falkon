@@ -65,15 +65,15 @@ void QzToolsTest::getFileNameFromUrl_data()
     QTest::addColumn<QUrl>("url");
     QTest::addColumn<QString>("result");
 
-    QTest::newRow("Basic") << QUrl("http://www.google.com/filename.html") << "filename.html";
-    QTest::newRow("OnlyHost") << QUrl("http://www.google.com/") << "www.google.com";
-    QTest::newRow("OnlyHostWithoutSlash") << QUrl("http://www.google.com") << "www.google.com";
-    QTest::newRow("EndingDirectory") << QUrl("http://www.google.com/filename/") << "filename";
-    QTest::newRow("EmptyUrl") << QUrl("") << "";
-    QTest::newRow("OnlyScheme") << QUrl("http:") << "";
-    QTest::newRow("FileSchemeUrl") << QUrl("file:///usr/share/test/file.tx") << "file.tx";
-    QTest::newRow("FileSchemeUrlDirectory") << QUrl("file:///usr/share/test/") << "test";
-    QTest::newRow("FileSchemeUrlRoot") << QUrl("file:///") << "";
+    QTest::newRow("Basic") << QUrl(QSL("http://www.google.com/filename.html")) << QSL("filename.html");
+    QTest::newRow("OnlyHost") << QUrl(QSL("http://www.google.com/")) << QSL("www.google.com");
+    QTest::newRow("OnlyHostWithoutSlash") << QUrl(QSL("http://www.google.com")) << QSL("www.google.com");
+    QTest::newRow("EndingDirectory") << QUrl(QSL("http://www.google.com/filename/")) << QSL("filename");
+    QTest::newRow("EmptyUrl") << QUrl(QSL("")) << QSL("");
+    QTest::newRow("OnlyScheme") << QUrl(QSL("http:")) << QSL("");
+    QTest::newRow("FileSchemeUrl") << QUrl(QSL("file:///usr/share/test/file.tx")) << QSL("file.tx");
+    QTest::newRow("FileSchemeUrlDirectory") << QUrl(QSL("file:///usr/share/test/")) << QSL("test");
+    QTest::newRow("FileSchemeUrlRoot") << QUrl(QSL("file:///")) << QSL("");
 }
 
 void QzToolsTest::getFileNameFromUrl()
@@ -90,37 +90,37 @@ void QzToolsTest::splitCommandArguments_data()
     QTest::addColumn<QStringList>("result");
 
     QTest::newRow("Basic") << "/usr/bin/foo -o foo.out"
-                           << (QStringList() << "/usr/bin/foo" << "-o" << "foo.out");
+                           << (QStringList() << QSL("/usr/bin/foo") << QSL("-o") << QSL("foo.out"));
     QTest::newRow("Empty") << QString()
                            << QStringList();
-    QTest::newRow("OnlySpaces") << QString("                   ")
+    QTest::newRow("OnlySpaces") << QSL("                   ")
                            << QStringList();
-    QTest::newRow("OnlyQuotes") << QString(R"("" "")")
+    QTest::newRow("OnlyQuotes") << QSL(R"("" "")")
                            << QStringList();
-    QTest::newRow("EmptyQuotesAndSpace") << QString(R"("" "" " ")")
-                           << QStringList(" ");
+    QTest::newRow("EmptyQuotesAndSpace") << QSL(R"("" "" " ")")
+                           << QStringList(QSL(" "));
     QTest::newRow("MultipleSpaces") << "    /usr/foo   -o    foo.out    "
-                           << (QStringList() << "/usr/foo" << "-o" << "foo.out");
+                           << (QStringList() << QSL("/usr/foo") << QSL("-o") << QSL("foo.out"));
     QTest::newRow("Quotes") << R"("/usr/foo" "-o" "foo.out")"
-                           << (QStringList() << "/usr/foo" << "-o" << "foo.out");
+                           << (QStringList() << QSL("/usr/foo") << QSL("-o") << QSL("foo.out"));
     QTest::newRow("SingleQuotes") << "'/usr/foo' '-o' 'foo.out'"
-                           << (QStringList() << "/usr/foo" << "-o" << "foo.out");
+                           << (QStringList() << QSL("/usr/foo") << QSL("-o") << QSL("foo.out"));
     QTest::newRow("SingleAndDoubleQuotes") << " '/usr/foo' \"-o\" 'foo.out' "
-                           << (QStringList() << "/usr/foo" << "-o" << "foo.out");
+                           << (QStringList() << QSL("/usr/foo") << QSL("-o") << QSL("foo.out"));
     QTest::newRow("SingleInDoubleQuotes") << "/usr/foo \"-o 'ds' \" 'foo.out' "
-                           << (QStringList() << "/usr/foo" << "-o 'ds' " << "foo.out");
+                           << (QStringList() << QSL("/usr/foo") << QSL("-o 'ds' ") << QSL("foo.out"));
     QTest::newRow("DoubleInSingleQuotes") << "/usr/foo -o 'foo\" d \".out' "
-                           << (QStringList() << "/usr/foo" << "-o" << "foo\" d \".out");
-    QTest::newRow("SpacesWithQuotes") << QString(R"(  "   "     "   "     )")
-                           << (QStringList() << "   " << "   ");
+                           << (QStringList() << QSL("/usr/foo") << QSL("-o") << QSL("foo\" d \".out"));
+    QTest::newRow("SpacesWithQuotes") << QSL(R"(  "   "     "   "     )")
+                           << (QStringList() << QSL("   ") << QSL("   "));
     QTest::newRow("QuotesAndSpaces") << "/usr/foo -o \"foo - out\""
-                           << (QStringList() << "/usr/foo" << "-o" << "foo - out");
+                           << (QStringList() << QSL("/usr/foo") << QSL("-o") << QSL("foo - out"));
     QTest::newRow("EqualAndQuotes") << "/usr/foo -o=\"foo - out\""
-                           << (QStringList() << "/usr/foo" << "-o=foo - out");
+                           << (QStringList() << QSL("/usr/foo") << QSL("-o=foo - out"));
     QTest::newRow("EqualWithSpaces") << "/usr/foo -o = \"foo - out\""
-                           << (QStringList() << "/usr/foo" << "-o" << "=" << "foo - out");
+                           << (QStringList() << QSL("/usr/foo") << QSL("-o") << QSL("=") << QSL("foo - out"));
     QTest::newRow("MultipleSpacesAndQuotes") << "    /usr/foo   -o=\"    foo.out   \" "
-                           << (QStringList() << "/usr/foo" << "-o=    foo.out   ");
+                           << (QStringList() << QSL("/usr/foo") << QSL("-o=    foo.out   "));
     // Unmatched quotes should be treated as an error
     QTest::newRow("UnmatchedQuote") << "/usr/bin/foo -o \"bar"
                            << QStringList();
@@ -275,17 +275,17 @@ static void createTestDirectoryStructure(const QString &path)
 {
     QDir().mkdir(path);
     QDir dir(path);
-    dir.mkdir("dir1");
-    dir.mkdir("dir2");
-    dir.mkdir("dir3");
-    dir.cd("dir1");
-    dir.mkdir("dir1_1");
-    dir.mkdir("dir1_2");
-    dir.mkdir("dir1_3");
+    dir.mkdir(QSL("dir1"));
+    dir.mkdir(QSL("dir2"));
+    dir.mkdir(QSL("dir3"));
+    dir.cd(QSL("dir1"));
+    dir.mkdir(QSL("dir1_1"));
+    dir.mkdir(QSL("dir1_2"));
+    dir.mkdir(QSL("dir1_3"));
     dir.cdUp();
-    dir.cd("dir3");
-    dir.mkdir("dir3_1");
-    QFile file(path + "/dir1/dir1_2/file1.txt");
+    dir.cd(QSL("dir3"));
+    dir.mkdir(QSL("dir3_1"));
+    QFile file(path + QSL("/dir1/dir1_2/file1.txt"));
     file.open(QFile::WriteOnly);
     file.write("test");
     file.close();
@@ -296,32 +296,32 @@ void QzToolsTest::copyRecursivelyTest()
     const QString testDir = createPath("copyRecursivelyTest");
     createTestDirectoryStructure(testDir);
 
-    QVERIFY(!QFileInfo(testDir + "-copy").exists());
+    QVERIFY(!QFileInfo(testDir + QSL("-copy")).exists());
 
     // Copy to non-existent target
-    QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy"), true);
+    QCOMPARE(QzTools::copyRecursively(testDir, testDir + QSL("-copy")), true);
 
-    QCOMPARE(QFileInfo(testDir + "-copy").isDir(), true);
-    QCOMPARE(QFileInfo(testDir + "-copy/dir1").isDir(), true);
-    QCOMPARE(QFileInfo(testDir + "-copy/dir2").isDir(), true);
-    QCOMPARE(QFileInfo(testDir + "-copy/dir3").isDir(), true);
-    QCOMPARE(QFileInfo(testDir + "-copy/dir1/dir1_1").isDir(), true);
-    QCOMPARE(QFileInfo(testDir + "-copy/dir1/dir1_2").isDir(), true);
-    QCOMPARE(QFileInfo(testDir + "-copy/dir1/dir1_3").isDir(), true);
-    QCOMPARE(QFileInfo(testDir + "-copy/dir3/dir3_1").isDir(), true);
-    QCOMPARE(QFileInfo(testDir + "-copy/dir1/dir1_2/file1.txt").isFile(), true);
+    QCOMPARE(QFileInfo(testDir + QSL("-copy")).isDir(), true);
+    QCOMPARE(QFileInfo(testDir + QSL("-copy/dir1")).isDir(), true);
+    QCOMPARE(QFileInfo(testDir + QSL("-copy/dir2")).isDir(), true);
+    QCOMPARE(QFileInfo(testDir + QSL("-copy/dir3")).isDir(), true);
+    QCOMPARE(QFileInfo(testDir + QSL("-copy/dir1/dir1_1")).isDir(), true);
+    QCOMPARE(QFileInfo(testDir + QSL("-copy/dir1/dir1_2")).isDir(), true);
+    QCOMPARE(QFileInfo(testDir + QSL("-copy/dir1/dir1_3")).isDir(), true);
+    QCOMPARE(QFileInfo(testDir + QSL("-copy/dir3/dir3_1")).isDir(), true);
+    QCOMPARE(QFileInfo(testDir + QSL("-copy/dir1/dir1_2/file1.txt")).isFile(), true);
 
-    QFile file(testDir + "-copy/dir1/dir1_2/file1.txt");
+    QFile file(testDir + QSL("-copy/dir1/dir1_2/file1.txt"));
     file.open(QFile::ReadOnly);
     QCOMPARE(file.readAll(), QByteArray("test"));
     file.close();
 
     // Copy to target that already exists
-    QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy"), false);
+    QCOMPARE(QzTools::copyRecursively(testDir, testDir + QSL("-copy")), false);
 
     // Cleanup
     QCOMPARE(QzTools::removeRecursively(testDir), true);
-    QCOMPARE(QzTools::removeRecursively(testDir + "-copy"), true);
+    QCOMPARE(QzTools::removeRecursively(testDir + QSL("-copy")), true);
 }
 
 void QzToolsTest::removeRecursivelyTest()
@@ -329,23 +329,23 @@ void QzToolsTest::removeRecursivelyTest()
     const QString testDir = createPath("removeRecursivelyTest");
     createTestDirectoryStructure(testDir);
 
-    QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy"), true);
-    QCOMPARE(QzTools::removeRecursively(testDir + "-copy"), true);
-    QCOMPARE(QFileInfo(testDir + "-copy").exists(), false);
+    QCOMPARE(QzTools::copyRecursively(testDir, testDir + QSL("-copy")), true);
+    QCOMPARE(QzTools::removeRecursively(testDir + QSL("-copy")), true);
+    QCOMPARE(QFileInfo(testDir + QSL("-copy")).exists(), false);
 
     // Remove non-existent path returns success
-    QCOMPARE(QzTools::removeRecursively(testDir + "-copy"), true);
+    QCOMPARE(QzTools::removeRecursively(testDir + QSL("-copy")), true);
 
-    QCOMPARE(QzTools::copyRecursively(testDir, testDir + "-copy2"), true);
+    QCOMPARE(QzTools::copyRecursively(testDir, testDir + QSL("-copy2")), true);
 
-    QFile dir(testDir + "-copy2");
+    QFile dir(testDir + QSL("-copy2"));
     dir.setPermissions(dir.permissions() & ~(QFile::WriteOwner | QFile::WriteUser | QFile::WriteGroup | QFile::WriteOther));
 
-    QCOMPARE(QzTools::removeRecursively(testDir + "-copy2"), false);
+    QCOMPARE(QzTools::removeRecursively(testDir + QSL("-copy2")), false);
 
     dir.setPermissions(dir.permissions() | QFile::WriteOwner);
 
-    QCOMPARE(QzTools::removeRecursively(testDir + "-copy2"), true);
+    QCOMPARE(QzTools::removeRecursively(testDir + QSL("-copy2")), true);
 
     // Cleanup
     QCOMPARE(QzTools::removeRecursively(testDir), true);
@@ -356,21 +356,21 @@ void QzToolsTest::dontFollowSymlinksTest()
     const QString testDir = createPath("removeRecursivelyTest");
     createTestDirectoryStructure(testDir);
 
-    QDir().mkpath(testDir + "/subdir");
-    QFile::link(testDir, testDir + "/subdir/link");
+    QDir().mkpath(testDir + QSL("/subdir"));
+    QFile::link(testDir, testDir + QSL("/subdir/link"));
 
-    QVERIFY(QzTools::removeRecursively(testDir + "/subdir"));
+    QVERIFY(QzTools::removeRecursively(testDir + QSL("/subdir")));
 
-    QVERIFY(!QFile::exists(testDir + "/subdir"));
+    QVERIFY(!QFile::exists(testDir + QSL("/subdir")));
     QVERIFY(QFile::exists(testDir));
 
-    QDir().mkpath(testDir + "/subdir/normalfolder");
-    QFile::link("..", testDir + "/subdir/link");
+    QDir().mkpath(testDir + QSL("/subdir/normalfolder"));
+    QFile::link(QSL(".."), testDir + QSL("/subdir/link"));
 
-    QVERIFY(QzTools::copyRecursively(testDir + "/subdir", testDir + "/subdir2"));
+    QVERIFY(QzTools::copyRecursively(testDir + QSL("/subdir"), testDir + QSL("/subdir2")));
 
-    QCOMPARE(QFile::exists(testDir + "/subdir2/link"), true);
-    QCOMPARE(QFile::exists(testDir + "/subdir2/normalfolder"), true);
+    QCOMPARE(QFile::exists(testDir + QSL("/subdir2/link")), true);
+    QCOMPARE(QFile::exists(testDir + QSL("/subdir2/normalfolder")), true);
 
     // Cleanup
     QCOMPARE(QzTools::removeRecursively(testDir), true);
@@ -378,7 +378,7 @@ void QzToolsTest::dontFollowSymlinksTest()
 
 QString QzToolsTest::createPath(const char *file) const
 {
-    return m_tmpPath + QL1S("/") + file;
+    return m_tmpPath + QL1S("/") + QString::fromUtf8(file);
 }
 
 QTEST_GUILESS_MAIN(QzToolsTest)

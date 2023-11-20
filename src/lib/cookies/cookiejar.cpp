@@ -50,12 +50,12 @@ CookieJar::~CookieJar()
 void CookieJar::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("Cookie-Settings");
-    m_allowCookies = settings.value("allowCookies", true).toBool();
-    m_filterThirdParty = settings.value("filterThirdPartyCookies", false).toBool();
-    m_filterTrackingCookie = settings.value("filterTrackingCookie", false).toBool();
-    m_whitelist = settings.value("whitelist", QStringList()).toStringList();
-    m_blacklist = settings.value("blacklist", QStringList()).toStringList();
+    settings.beginGroup(QSL("Cookie-Settings"));
+    m_allowCookies = settings.value(QSL("allowCookies"), true).toBool();
+    m_filterThirdParty = settings.value(QSL("filterThirdPartyCookies"), false).toBool();
+    m_filterTrackingCookie = settings.value(QSL("filterTrackingCookie"), false).toBool();
+    m_whitelist = settings.value(QSL("whitelist"), QStringList()).toStringList();
+    m_blacklist = settings.value(QSL("blacklist"), QStringList()).toStringList();
     settings.endGroup();
 }
 

@@ -67,7 +67,7 @@ void GM_Downloader::scriptDownloaded()
     }
 
     if (m_fileName.isEmpty()) {
-        const QString filePath = QString("%1/%2").arg(m_manager->scriptsDirectory(), QzTools::getFileNameFromUrl(m_reply->url()));
+        const QString filePath = QSL("%1/%2").arg(m_manager->scriptsDirectory(), QzTools::getFileNameFromUrl(m_reply->url()));
         m_fileName = QzTools::ensureUniqueFilename(filePath);
     }
 
@@ -124,7 +124,7 @@ void GM_Downloader::requireDownloaded()
                 name.append(QSL(".js"));
             }
             const QString filePath = m_manager->settingsPath() + QL1S("/greasemonkey/requires/") + name;
-            m_fileName = QzTools::ensureUniqueFilename(filePath, "%1");
+            m_fileName = QzTools::ensureUniqueFilename(filePath, QSL("%1"));
         }
         if (!QFileInfo(m_fileName).isAbsolute()) {
             m_fileName.prepend(m_manager->settingsPath() + QL1S("/greasemonkey/requires/"));

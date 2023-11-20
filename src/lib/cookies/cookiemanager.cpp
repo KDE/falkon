@@ -66,13 +66,13 @@ CookieManager::CookieManager(QWidget *parent)
 
     // Cookie Settings
     Settings settings;
-    settings.beginGroup("Cookie-Settings");
-    ui->saveCookies->setChecked(settings.value("allowCookies", true).toBool());
-    ui->filter3rdParty->setChecked(settings.value("filterThirdPartyCookies", false).toBool());
-    ui->filterTracking->setChecked(settings.value("filterTrackingCookie", false).toBool());
-    ui->deleteCookiesOnClose->setChecked(settings.value("deleteCookiesOnClose", false).toBool());
-    ui->whiteList->addItems(settings.value("whitelist", QStringList()).toStringList());
-    ui->blackList->addItems(settings.value("blacklist", QStringList()).toStringList());
+    settings.beginGroup(QSL("Cookie-Settings"));
+    ui->saveCookies->setChecked(settings.value(QSL("allowCookies"), true).toBool());
+    ui->filter3rdParty->setChecked(settings.value(QSL("filterThirdPartyCookies"), false).toBool());
+    ui->filterTracking->setChecked(settings.value(QSL("filterTrackingCookie"), false).toBool());
+    ui->deleteCookiesOnClose->setChecked(settings.value(QSL("deleteCookiesOnClose"), false).toBool());
+    ui->whiteList->addItems(settings.value(QSL("whitelist"), QStringList()).toStringList());
+    ui->blackList->addItems(settings.value(QSL("blacklist"), QStringList()).toStringList());
     settings.endGroup();
 
     ui->search->setPlaceholderText(tr("Search"));
@@ -84,7 +84,7 @@ CookieManager::CookieManager(QWidget *parent)
     ui->whiteList->sortItems(Qt::AscendingOrder);
     ui->blackList->sortItems(Qt::AscendingOrder);
 
-    auto* removeShortcut = new QShortcut(QKeySequence("Del"), this);
+    auto* removeShortcut = new QShortcut(QKeySequence(QSL("Del")), this);
     connect(removeShortcut, &QShortcut::activated, this, &CookieManager::deletePressed);
 
     connect(ui->search, &QLineEdit::textChanged, this, &CookieManager::filterString);
@@ -97,7 +97,7 @@ CookieManager::CookieManager(QWidget *parent)
         addCookie(cookie);
     }
 
-    QzTools::setWmClass("Cookies", this);
+    QzTools::setWmClass(QSL("Cookies"), this);
 }
 
 void CookieManager::removeAll()
@@ -171,12 +171,12 @@ void CookieManager::currentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem
 
     const QNetworkCookie cookie = qvariant_cast<QNetworkCookie>(current->data(0, Qt::UserRole + 10));
 
-    ui->name->setText(cookie.name());
-    ui->value->setText(cookie.value());
+    ui->name->setText(QString::fromUtf8(cookie.name()));
+    ui->value->setText(QString::fromUtf8(cookie.value()));
     ui->server->setText(cookie.domain());
     ui->path->setText(cookie.path());
     cookie.isSecure() ? ui->secure->setText(tr("Secure only")) : ui->secure->setText(tr("All connections"));
-    cookie.isSessionCookie() ? ui->expiration->setText(tr("Session cookie")) : ui->expiration->setText(QDateTime(cookie.expirationDate()).toString("hh:mm:ss dddd d. MMMM yyyy"));
+    cookie.isSessionCookie() ? ui->expiration->setText(tr("Session cookie")) : ui->expiration->setText(QDateTime(cookie.expirationDate()).toString(QSL("hh:mm:ss dddd d. MMMM yyyy")));
 
     ui->removeOne->setText(tr("Remove cookie"));
 }
@@ -274,7 +274,7 @@ void CookieManager::filterString(const QString &string)
     }
     else {
         for (int i = 0; i < ui->cookieTree->topLevelItemCount(); ++i) {
-            QString text = "." + ui->cookieTree->topLevelItem(i)->text(0);
+            QString text = QSL(".") + ui->cookieTree->topLevelItem(i)->text(0);
             ui->cookieTree->topLevelItem(i)->setHidden(!text.contains(string, Qt::CaseInsensitive));
             ui->cookieTree->topLevelItem(i)->setExpanded(true);
         }
@@ -301,8 +301,8 @@ void CookieManager::addCookie(const QNetworkCookie &cookie)
         item = new QTreeWidgetItem(newParent);
     }
 
-    item->setText(0, "." + domain);
-    item->setText(1, cookie.name());
+    item->setText(0, QSL(".") + domain);
+    item->setText(1, QString::fromUtf8(cookie.name()));
     item->setData(0, Qt::UserRole + 10, QVariant::fromValue(cookie));
     ui->cookieTree->addTopLevelItem(item);
 
@@ -340,13 +340,13 @@ void CookieManager::closeEvent(QCloseEvent* e)
     }
 
     Settings settings;
-    settings.beginGroup("Cookie-Settings");
-    settings.setValue("allowCookies", ui->saveCookies->isChecked());
-    settings.setValue("filterThirdPartyCookies", ui->filter3rdParty->isChecked());
-    settings.setValue("filterTrackingCookie", ui->filterTracking->isChecked());
-    settings.setValue("deleteCookiesOnClose", ui->deleteCookiesOnClose->isChecked());
-    settings.setValue("whitelist", whitelist);
-    settings.setValue("blacklist", blacklist);
+    settings.beginGroup(QSL("Cookie-Settings"));
+    settings.setValue(QSL("allowCookies"), ui->saveCookies->isChecked());
+    settings.setValue(QSL("filterThirdPartyCookies"), ui->filter3rdParty->isChecked());
+    settings.setValue(QSL("filterTrackingCookie"), ui->filterTracking->isChecked());
+    settings.setValue(QSL("deleteCookiesOnClose"), ui->deleteCookiesOnClose->isChecked());
+    settings.setValue(QSL("whitelist"), whitelist);
+    settings.setValue(QSL("blacklist"), blacklist);
     settings.endGroup();
 
     mApp->cookieJar()->loadSettings();

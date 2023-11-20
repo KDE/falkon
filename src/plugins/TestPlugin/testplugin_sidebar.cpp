@@ -48,9 +48,9 @@ QWidget* TestPlugin_Sidebar::createSideBarWidget(BrowserWindow* mainWindow)
     Q_UNUSED(mainWindow)
 
     auto* w = new QWidget;
-    auto* b = new QPushButton("Example Plugin v0.0.1");
+    auto* b = new QPushButton(QSL("Example Plugin v0.0.1"));
     auto* label = new QLabel();
-    label->setPixmap(QPixmap(":icons/other/about.svg"));
+    label->setPixmap(QPixmap(QSL(":icons/other/about.svg")));
 
     auto* l = new QVBoxLayout(w);
     l->addWidget(label);

@@ -107,13 +107,13 @@ QString TabManagerWidget::domainFromUrl(const QUrl &url, bool useHostName)
     QString appendString = QL1S(":");
     QString urlString = url.toString();
 
-    if (url.scheme() == "file") {
+    if (url.scheme() == QSL("file")) {
         return tr("Local File System:");
     }
-    else if (url.scheme() == "falkon" || urlString.isEmpty()) {
+    else if (url.scheme() == QSL("falkon") || urlString.isEmpty()) {
         return tr("Falkon:");
     }
-    else if (url.scheme() == "ftp") {
+    else if (url.scheme() == QSL("ftp")) {
         appendString.prepend(tr(" [FTP]"));
     }
 
@@ -122,8 +122,8 @@ QString TabManagerWidget::domainFromUrl(const QUrl &url, bool useHostName)
         return urlString.append(appendString);
     }
 
-    if (useHostName || QRegExp(R"(^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$)").indexIn(host) >= 0) {
-        if (host.startsWith("www.", Qt::CaseInsensitive)) {
+    if (useHostName || QRegExp(QSL(R"(^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$)")).indexIn(host) >= 0) {
+        if (host.startsWith(QSL("www."), Qt::CaseInsensitive)) {
             host.remove(0, 4);
         }
 
@@ -322,15 +322,15 @@ void TabManagerWidget::customContextMenuRequested(const QPoint &pos)
     menu->addMenu(&groupTypeSubmenu);
 
     if (m_isDefaultWidget) {
-        menu->addAction(QIcon(":/tabmanager/data/side-by-side.png"), tr("&Show side by side"), this, &TabManagerWidget::showSideBySide)->setObjectName("sideBySide");
+        menu->addAction(QIcon(QSL(":/tabmanager/data/side-by-side.png")), tr("&Show side by side"), this, &TabManagerWidget::showSideBySide)->setObjectName("sideBySide");
     }
 
     menu->addSeparator();
 
     if (isTabSelected()) {
-        menu->addAction(QIcon(":/tabmanager/data/tab-detach.png"), tr("&Detach checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("detachSelection");
-        menu->addAction(QIcon(":/tabmanager/data/tab-bookmark.png"), tr("Book&mark checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("bookmarkSelection");
-        menu->addAction(QIcon(":/tabmanager/data/tab-close.png"), tr("&Close checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("closeSelection");
+        menu->addAction(QIcon(QSL(":/tabmanager/data/tab-detach.png")), tr("&Detach checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("detachSelection");
+        menu->addAction(QIcon(QSL(":/tabmanager/data/tab-bookmark.png")), tr("Book&mark checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("bookmarkSelection");
+        menu->addAction(QIcon(QSL(":/tabmanager/data/tab-close.png")), tr("&Close checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("closeSelection");
         menu->addAction(tr("&Unload checked tabs"), this, &TabManagerWidget::processActions)->setObjectName("unloadSelection");
     }
 
@@ -356,7 +356,7 @@ void TabManagerWidget::filterChanged(const QString &filter, bool force)
             return;
         }
 
-        const QRegularExpression filterRegExp(filter.simplified().replace(QChar(' '), QLatin1String(".*"))
+        const QRegularExpression filterRegExp(filter.simplified().replace(QL1C(' '), QLatin1String(".*"))
                                               .append(QLatin1String(".*")).prepend(QLatin1String(".*")),
                                               QRegularExpression::CaseInsensitiveOption);
 
@@ -483,16 +483,16 @@ void TabManagerWidget::processActions()
     }
 
     if (!selectedTabs.isEmpty()) {
-        if (command == "closeSelection") {
+        if (command == QSL("closeSelection")) {
             closeSelectedTabs(selectedTabs);
         }
-        else if (command == "detachSelection") {
+        else if (command == QSL("detachSelection")) {
             detachSelectedTabs(selectedTabs);
         }
-        else if (command == "bookmarkSelection") {
+        else if (command == QSL("bookmarkSelection")) {
             bookmarkSelectedTabs(selectedTabs);
         }
-        else if (command == "unloadSelection") {
+        else if (command == QSL("unloadSelection")) {
             unloadSelectedTabs(selectedTabs);
         }
     }
@@ -824,7 +824,7 @@ void TabItem::updateIcon()
             }
         }
         else {
-            setIcon(0, QIcon(":tabmanager/data/tab-pinned.png"));
+            setIcon(0, QIcon(QSL(":tabmanager/data/tab-pinned.png")));
         }
 
         if (m_webTab->isRestored())
@@ -833,7 +833,7 @@ void TabItem::updateIcon()
             setIsSavedTab(true);
     }
     else {
-        setIcon(0, QIcon(":tabmanager/data/tab-loading.png"));
+        setIcon(0, QIcon(QSL(":tabmanager/data/tab-loading.png")));
         setIsActiveOrCaption(m_webTab->isCurrentTab());
     }
 }

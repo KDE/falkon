@@ -58,7 +58,7 @@ void TabModelTest::basicTest()
 
     rowsInsertedSpy.clear();
 
-    w->tabWidget()->addView(QUrl("http://test.com"));
+    w->tabWidget()->addView(QUrl(QSL("http://test.com")));
 
     QCOMPARE(rowsInsertedSpy.count(), 1);
     WebTab *tab1 = w->tabWidget()->webTab(1);
@@ -114,7 +114,7 @@ void TabModelTest::dataTest()
     QCOMPARE(model.index(0, 0).data(TabModel::RestoredRole).toBool(), tab0->isRestored());
     QCOMPARE(model.index(0, 0).data(TabModel::CurrentTabRole).toBool(), true);
 
-    w->tabWidget()->addView(QUrl("http://test.com"));
+    w->tabWidget()->addView(QUrl(QSL("http://test.com")));
 
     delete w;
 }
@@ -125,7 +125,7 @@ void TabModelTest::pinTabTest()
     TabModel model(w);
     ModelTest modelTest(&model);
 
-    w->tabWidget()->addView(QUrl("http://test.com"));
+    w->tabWidget()->addView(QUrl(QSL("http://test.com")));
 
     QTRY_COMPARE(model.rowCount(), 2);
 

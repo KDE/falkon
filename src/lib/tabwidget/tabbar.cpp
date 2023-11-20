@@ -94,7 +94,7 @@ TabBar::TabBar(BrowserWindow* window, TabWidget* tabWidget)
     , m_activeTabWidth(0)
     , m_forceHidden(false)
 {
-    setObjectName("tabbar");
+    setObjectName(QSL("tabbar"));
     setElideMode(Qt::ElideRight);
     setFocusPolicy(Qt::NoFocus);
     setTabsClosable(false);
@@ -126,10 +126,10 @@ TabBar::TabBar(BrowserWindow* window, TabWidget* tabWidget)
 void TabBar::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("Browser-Tabs-Settings");
-    m_hideTabBarWithOneTab = settings.value("hideTabsWithOneTab", false).toBool();
-    bool activateLastTab = settings.value("ActivateLastTabWhenClosingActual", false).toBool();
-    m_showCloseOnInactive = settings.value("showCloseOnInactiveTabs", 0).toInt(0);
+    settings.beginGroup(QSL("Browser-Tabs-Settings"));
+    m_hideTabBarWithOneTab = settings.value(QSL("hideTabsWithOneTab"), false).toBool();
+    bool activateLastTab = settings.value(QSL("ActivateLastTabWhenClosingActual"), false).toBool();
+    m_showCloseOnInactive = settings.value(QSL("showCloseOnInactiveTabs"), 0).toInt(0);
     settings.endGroup();
 
     setSelectionBehaviorOnRemove(activateLastTab ? QTabBar::SelectPreviousTab : QTabBar::SelectRightTab);

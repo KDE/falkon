@@ -157,8 +157,8 @@ void Plugins::loadSettings()
     }
 
     Settings settings;
-    settings.beginGroup("Plugin-Settings");
-    m_allowedPlugins = settings.value("AllowedPlugins", defaultAllowedPlugins).toStringList();
+    settings.beginGroup(QSL("Plugin-Settings"));
+    m_allowedPlugins = settings.value(QSL("AllowedPlugins"), defaultAllowedPlugins).toStringList();
     settings.endGroup();
 }
 

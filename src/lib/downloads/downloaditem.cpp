@@ -175,7 +175,7 @@ void DownloadItem::receivedOrTotalBytesChanged()
     m_total = total;
 
     updateDownloadInfo(m_currSpeed, m_received, m_total);
-    emit progressChanged(m_currSpeed, m_received, m_total);
+    Q_EMIT progressChanged(m_currSpeed, m_received, m_total);
 }
 
 int DownloadItem::progress()
@@ -304,21 +304,21 @@ void DownloadItem::mouseDoubleClickEvent(QMouseEvent* e)
 void DownloadItem::customContextMenuRequested(const QPoint &pos)
 {
     QMenu menu;
-    menu.addAction(QIcon::fromTheme("document-open"), tr("Open File"), this, &DownloadItem::openFile);
+    menu.addAction(QIcon::fromTheme(QSL("document-open")), tr("Open File"), this, &DownloadItem::openFile);
 
     menu.addAction(tr("Open Folder"), this, &DownloadItem::openFolder);
     menu.addSeparator();
-    menu.addAction(QIcon::fromTheme("edit-copy"), tr("Copy Download Link"), this, &DownloadItem::copyDownloadLink);
+    menu.addAction(QIcon::fromTheme(QSL("edit-copy")), tr("Copy Download Link"), this, &DownloadItem::copyDownloadLink);
     menu.addSeparator();
-    menu.addAction(QIcon::fromTheme("process-stop"), tr("Cancel downloading"), this, &DownloadItem::stop)->setEnabled(m_downloading);
+    menu.addAction(QIcon::fromTheme(QSL("process-stop")), tr("Cancel downloading"), this, &DownloadItem::stop)->setEnabled(m_downloading);
 
     if (m_download->isPaused()) {
-        menu.addAction(QIcon::fromTheme("media-playback-start"), tr("Resume downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
+        menu.addAction(QIcon::fromTheme(QSL("media-playback-start")), tr("Resume downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
     } else {
-        menu.addAction(QIcon::fromTheme("media-playback-pause"), tr("Pause downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
+        menu.addAction(QIcon::fromTheme(QSL("media-playback-pause")), tr("Pause downloading"), this, &DownloadItem::pauseResume)->setEnabled(m_downloading);
     }
 
-    menu.addAction(QIcon::fromTheme("list-remove"), tr("Remove From List"), this, &DownloadItem::clear)->setEnabled(!m_downloading);
+    menu.addAction(QIcon::fromTheme(QSL("list-remove")), tr("Remove From List"), this, &DownloadItem::clear)->setEnabled(!m_downloading);
 
     if (m_downloading || ui->downloadInfo->text().startsWith(tr("Cancelled")) || ui->downloadInfo->text().startsWith(tr("Error"))) {
         menu.actions().at(0)->setEnabled(false);
@@ -359,8 +359,8 @@ void DownloadItem::openFolder()
         winFileName.append(QSL(".download"));
     }
 
-    winFileName.replace(QLatin1Char('/'), "\\");
-    QString shExArg = "/e,/select,\"" + winFileName + "\"";
+    winFileName.replace(QLatin1Char('/'), QSL("\\"));
+    QString shExArg = QSL("/e,/select,\"") + winFileName + QSL("\"");
     ShellExecute(NULL, NULL, TEXT("explorer.exe"), shExArg.toStdWString().c_str(), NULL, SW_SHOW);
 #else
     QDesktopServices::openUrl(QUrl::fromLocalFile(m_path));

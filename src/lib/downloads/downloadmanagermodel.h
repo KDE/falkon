@@ -37,7 +37,7 @@ public:
 private:
     QList<DownloadItem *> m_downloads;
 
-signals:
+Q_SIGNALS:
     void downloadAdded(DownloadItem *item);
     void downloadRemoved(DownloadItem *item);
 };

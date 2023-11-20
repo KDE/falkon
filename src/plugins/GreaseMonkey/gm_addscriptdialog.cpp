@@ -47,14 +47,14 @@ GM_AddScriptDialog::GM_AddScriptDialog(GM_Manager* manager, GM_Script* script, Q
     const QStringList exclude = script->exclude();
 
     if (!include.isEmpty()) {
-        runsAt = tr("<p>runs at<br/><i>%1</i></p>").arg(include.join("<br/>"));
+        runsAt = tr("<p>runs at<br/><i>%1</i></p>").arg(include.join(QSL("<br/>")));
     }
 
     if (!exclude.isEmpty()) {
-        dontRunsAt = tr("<p>does not run at<br/><i>%1</i></p>").arg(exclude.join("<br/>"));
+        dontRunsAt = tr("<p>does not run at<br/><i>%1</i></p>").arg(exclude.join(QSL("<br/>")));
     }
 
-    QString scriptInfo = QString("<b>%1</b> %2<br/>%3 %4 %5").arg(script->name(), script->version(), script->description(), runsAt, dontRunsAt);
+    QString scriptInfo = QSL("<b>%1</b> %2<br/>%3 %4 %5").arg(script->name(), script->version(), script->description(), runsAt, dontRunsAt);
     ui->textBrowser->setText(scriptInfo);
 
     connect(ui->showSource, &QAbstractButton::clicked, this, &GM_AddScriptDialog::showSource);
@@ -68,7 +68,7 @@ void GM_AddScriptDialog::showSource()
         return;
     }
 
-    const QString tmpFileName = QzTools::ensureUniqueFilename(DataPaths::path(DataPaths::Temp) + "/tmp-userscript.js");
+    const QString tmpFileName = QzTools::ensureUniqueFilename(DataPaths::path(DataPaths::Temp) + QSL("/tmp-userscript.js"));
 
     if (QFile::copy(m_script->fileName(), tmpFileName)) {
         int index = qz->tabWidget()->addView(QUrl::fromLocalFile(tmpFileName), Qz::NT_SelectedTabAtTheEnd);

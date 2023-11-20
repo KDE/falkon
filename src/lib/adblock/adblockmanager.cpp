@@ -111,7 +111,7 @@ bool AdBlockManager::block(QWebEngineUrlRequestInfo &request, QString &ruleFilte
     QElapsedTimer timer;
     timer.start();
 #endif
-    const QString urlString = request.requestUrl().toEncoded().toLower();
+    const QString urlString = QString::fromUtf8(request.requestUrl().toEncoded().toLower());
     const QString urlDomain = request.requestUrl().host().toLower();
     const QString urlScheme = request.requestUrl().scheme().toLower();
 

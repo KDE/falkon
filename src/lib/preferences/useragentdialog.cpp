@@ -49,10 +49,10 @@ UserAgentDialog::UserAgentDialog(QWidget* parent)
     QRegularExpression chromeRx(QSL("Chrome/([^\\s]+)"));
     const QString chromeVersion = chromeRx.match(m_manager->defaultUserAgent()).captured(1);
 
-    m_knownUserAgents << QString("Opera/9.80 (%1) Presto/2.12.388 Version/12.16").arg(os)
-                      << QString("Mozilla/5.0 (%1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/%2 Safari/537.36").arg(os, chromeVersion)
-                      << QString("Mozilla/5.0 (%1) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12").arg(os)
-                      << QString("Mozilla/5.0 (%1; rv:102.0) Gecko/20100101 Firefox/102.0").arg(os);
+    m_knownUserAgents << QSL("Opera/9.80 (%1) Presto/2.12.388 Version/12.16").arg(os)
+                      << QSL("Mozilla/5.0 (%1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/%2 Safari/537.36").arg(os, chromeVersion)
+                      << QSL("Mozilla/5.0 (%1) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12").arg(os)
+                      << QSL("Mozilla/5.0 (%1; rv:102.0) Gecko/20100101 Firefox/102.0").arg(os);
 
     ui->globalComboBox->addItems(m_knownUserAgents);
 
@@ -167,14 +167,14 @@ void UserAgentDialog::accept()
     }
 
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    settings.setValue("UserAgent", globalUserAgent);
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    settings.setValue(QSL("UserAgent"), globalUserAgent);
     settings.endGroup();
 
-    settings.beginGroup("User-Agent-Settings");
-    settings.setValue("UsePerDomainUA", ui->changePerSite->isChecked());
-    settings.setValue("DomainList", domainList);
-    settings.setValue("UserAgentsList", userAgentsList);
+    settings.beginGroup(QSL("User-Agent-Settings"));
+    settings.setValue(QSL("UsePerDomainUA"), ui->changePerSite->isChecked());
+    settings.setValue(QSL("DomainList"), domainList);
+    settings.setValue(QSL("UserAgentsList"), userAgentsList);
     settings.endGroup();
 
     m_manager->loadSettings();

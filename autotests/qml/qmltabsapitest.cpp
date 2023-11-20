@@ -37,12 +37,12 @@ void QmlTabsApiTest::testInitWindowCount()
 void QmlTabsApiTest::testTabsAPI()
 {
     // Tab Insertion
-    QObject *qmlTabsObject = m_testHelper.evaluateQObject("Falkon.Tabs");
+    QObject *qmlTabsObject = m_testHelper.evaluateQObject(QSL("Falkon.Tabs"));
     QVERIFY(qmlTabsObject);
     QSignalSpy qmlTabsInsertedSpy(qmlTabsObject, SIGNAL(tabInserted(QVariantMap)));
-    m_testHelper.evaluate("Falkon.Tabs.addTab({"
+    m_testHelper.evaluate(QL1S("Falkon.Tabs.addTab({"
                      "    url: 'https://example.com/'"
-                     "})");
+                     "})"));
     QCOMPARE(qmlTabsInsertedSpy.count(), 1);
     QVariantMap retMap1 = QVariant(qmlTabsInsertedSpy.at(0).at(0)).toMap();
     int index1 = retMap1.value(QSL("index"), -1).toInt();
@@ -50,15 +50,15 @@ void QmlTabsApiTest::testTabsAPI()
     QCOMPARE(index1, 0);
     QCOMPARE(windowId1, 0);
 
-    QObject *qmlTabObject1 = m_testHelper.evaluateQObject("Falkon.Tabs.get({index: 0})");
+    QObject *qmlTabObject1 = m_testHelper.evaluateQObject(QSL("Falkon.Tabs.get({index: 0})"));
     QVERIFY(qmlTabObject1);
     QCOMPARE(qmlTabObject1->property("index").toInt(), 0);
     QCOMPARE(qmlTabObject1->property("pinned").toBool(), false);
     QTRY_COMPARE(qmlTabObject1->property("url").toString(), QSL("https://example.com/"));
 
-    m_testHelper.evaluate("Falkon.Tabs.addTab({"
+    m_testHelper.evaluate(QL1S("Falkon.Tabs.addTab({"
                      "    url: 'https://another-example.com/',"
-                     "})");
+                     "})"));
     QCOMPARE(qmlTabsInsertedSpy.count(), 2);
     QVariantMap retMap2 = QVariant(qmlTabsInsertedSpy.at(1).at(0)).toMap();
     int index2 = retMap2.value(QSL("index"), -1).toInt();
@@ -66,17 +66,17 @@ void QmlTabsApiTest::testTabsAPI()
     QCOMPARE(index2, 1);
     QCOMPARE(windowId2, 0);
 
-    bool pinnedTab = m_testHelper.evaluate("Falkon.Tabs.pinTab({index: 1})").toBool();
+    bool pinnedTab = m_testHelper.evaluate(QSL("Falkon.Tabs.pinTab({index: 1})")).toBool();
     QVERIFY(pinnedTab);
-    QObject *qmlTabObject2 = m_testHelper.evaluateQObject("Falkon.Tabs.get({index: 0})");
+    QObject *qmlTabObject2 = m_testHelper.evaluateQObject(QSL("Falkon.Tabs.get({index: 0})"));
     QVERIFY(qmlTabObject2);
     QCOMPARE(qmlTabObject2->property("index").toInt(), 0);
     QCOMPARE(qmlTabObject2->property("pinned").toBool(), true);
     QTRY_COMPARE(qmlTabObject2->property("url").toString(), QSL("https://another-example.com/"));
 
-    bool unpinnedTab = m_testHelper.evaluate("Falkon.Tabs.unpinTab({index: 0})").toBool();
+    bool unpinnedTab = m_testHelper.evaluate(QSL("Falkon.Tabs.unpinTab({index: 0})")).toBool();
     QVERIFY(unpinnedTab);
-    QObject *qmlTabObject3 = m_testHelper.evaluateQObject("Falkon.Tabs.get({index: 0})");
+    QObject *qmlTabObject3 = m_testHelper.evaluateQObject(QSL("Falkon.Tabs.get({index: 0})"));
     QVERIFY(qmlTabObject3);
     QCOMPARE(qmlTabObject3->property("url").toString(), QSL("https://another-example.com/"));
     QCOMPARE(qmlTabObject3->property("index").toInt(), 0);
@@ -84,28 +84,28 @@ void QmlTabsApiTest::testTabsAPI()
 
     // Next-Previous-Current
     QCOMPARE(mApp->getWindow()->tabWidget()->currentIndex(), 0);
-    m_testHelper.evaluate("Falkon.Tabs.nextTab()");
+    m_testHelper.evaluate(QSL("Falkon.Tabs.nextTab()"));
     QCOMPARE(mApp->getWindow()->tabWidget()->currentIndex(), 1);
-    m_testHelper.evaluate("Falkon.Tabs.nextTab()");
+    m_testHelper.evaluate(QSL("Falkon.Tabs.nextTab()"));
     QCOMPARE(mApp->getWindow()->tabWidget()->currentIndex(), 0);
-    m_testHelper.evaluate("Falkon.Tabs.previousTab()");
+    m_testHelper.evaluate(QSL("Falkon.Tabs.previousTab()"));
     QCOMPARE(mApp->getWindow()->tabWidget()->currentIndex(), 1);
-    m_testHelper.evaluate("Falkon.Tabs.previousTab()");
+    m_testHelper.evaluate(QSL("Falkon.Tabs.previousTab()"));
     QCOMPARE(mApp->getWindow()->tabWidget()->currentIndex(), 0);
-    m_testHelper.evaluate("Falkon.Tabs.setCurrentIndex({index: 1})");
+    m_testHelper.evaluate(QSL("Falkon.Tabs.setCurrentIndex({index: 1})"));
     QCOMPARE(mApp->getWindow()->tabWidget()->currentIndex(), 1);
-    m_testHelper.evaluate("Falkon.Tabs.setCurrentIndex({index: 0})");
+    m_testHelper.evaluate(QSL("Falkon.Tabs.setCurrentIndex({index: 0})"));
     QCOMPARE(mApp->getWindow()->tabWidget()->currentIndex(), 0);
 
     // Move Tab
     QSignalSpy qmlTabsMovedSpy(qmlTabsObject, SIGNAL(tabMoved(QVariantMap)));
-    m_testHelper.evaluate("Falkon.Tabs.moveTab({from: 0, to:1, windowId: 0})");
+    m_testHelper.evaluate(QSL("Falkon.Tabs.moveTab({from: 0, to:1, windowId: 0})"));
     QCOMPARE(qmlTabsMovedSpy.count(), 1);
 
     // Tab Removal
     QCOMPARE(mApp->getWindow()->tabCount(), 2);
     QSignalSpy qmlTabsRemovedSpy(qmlTabsObject, SIGNAL(tabRemoved(QVariantMap)));
-    m_testHelper.evaluate("Falkon.Tabs.closeTab({index: 0})");
+    m_testHelper.evaluate(QSL("Falkon.Tabs.closeTab({index: 0})"));
     QCOMPARE(qmlTabsRemovedSpy.count(), 1);
     QCOMPARE(mApp->getWindow()->tabCount(), 1);
 }

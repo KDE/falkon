@@ -79,16 +79,16 @@ void RegisterQAppAssociation::setAppInfo(const QString &appRegisteredName, const
 
 bool RegisterQAppAssociation::isPerMachineRegisteration()
 {
-    return (_UserRootKey == "HKEY_LOCAL_MACHINE");
+    return (_UserRootKey == QSL("HKEY_LOCAL_MACHINE"));
 }
 
 void RegisterQAppAssociation::setPerMachineRegisteration(bool enable)
 {
     if (enable) {
-        _UserRootKey = "HKEY_LOCAL_MACHINE";
+        _UserRootKey = QSL("HKEY_LOCAL_MACHINE");
     }
     else {
-        _UserRootKey = "HKEY_CURRENT_USER";
+        _UserRootKey = QSL("HKEY_CURRENT_USER");
     }
 }
 
@@ -98,13 +98,13 @@ bool RegisterQAppAssociation::registerAppCapabilities()
         return true;
     }
     // Vista and newer
-    QSettings regLocalMachine("HKEY_LOCAL_MACHINE", QSettings::NativeFormat);
-    QString capabilitiesKey = regLocalMachine.value("Software/RegisteredApplications/" + _appRegisteredName).toString();
+    QSettings regLocalMachine(QSL("HKEY_LOCAL_MACHINE"), QSettings::NativeFormat);
+    QString capabilitiesKey = regLocalMachine.value(QSL("Software/RegisteredApplications/") + _appRegisteredName).toString();
 
     if (capabilitiesKey.isEmpty()) {
-        regLocalMachine.setValue("Software/RegisteredApplications/" + _appRegisteredName,
-                                 QString("Software\\" + _appRegisteredName + "\\Capabilities"));
-        capabilitiesKey = regLocalMachine.value("Software/RegisteredApplications/" + _appRegisteredName).toString();
+        regLocalMachine.setValue(QSL("Software/RegisteredApplications/") + _appRegisteredName,
+                                 QString(QSL("Software\\") + _appRegisteredName + QSL("\\Capabilities")));
+        capabilitiesKey = regLocalMachine.value(QSL("Software/RegisteredApplications/") + _appRegisteredName).toString();
 
         if (capabilitiesKey.isEmpty()) {
             QMessageBox::warning(mApp->getWindow(), tr("Warning!"),
@@ -114,7 +114,7 @@ bool RegisterQAppAssociation::registerAppCapabilities()
         }
     }
 
-    capabilitiesKey.replace("\\", "/");
+    capabilitiesKey.replace(QSL("\\"), QSL("/"));
 
     QHash<QString, QPair<QString, QString> >::const_iterator it = _assocDescHash.constBegin();
     while (it != _assocDescHash.constEnd()) {
@@ -122,22 +122,22 @@ bool RegisterQAppAssociation::registerAppCapabilities()
         ++it;
     }
 
-    regLocalMachine.setValue(capabilitiesKey + "/ApplicationDescription", _appDesc);
-    regLocalMachine.setValue(capabilitiesKey + "/ApplicationIcon", _appIcon);
-    regLocalMachine.setValue(capabilitiesKey + "/ApplicationName", _appRegisteredName);
+    regLocalMachine.setValue(capabilitiesKey + QSL("/ApplicationDescription"), _appDesc);
+    regLocalMachine.setValue(capabilitiesKey + QSL("/ApplicationIcon"), _appIcon);
+    regLocalMachine.setValue(capabilitiesKey + QSL("/ApplicationName"), _appRegisteredName);
 
     QHash<QString, QString>::const_iterator i = _fileAssocHash.constBegin();
     while (i != _fileAssocHash.constEnd()) {
-        regLocalMachine.setValue(capabilitiesKey + "/FileAssociations/" + i.key(), i.value());
+        regLocalMachine.setValue(capabilitiesKey + QSL("/FileAssociations/") + i.key(), i.value());
         ++i;
     }
 
     i = _urlAssocHash.constBegin();
     while (i != _urlAssocHash.constEnd()) {
-        regLocalMachine.setValue(capabilitiesKey + "/URLAssociations/" + i.key(), i.value());
+        regLocalMachine.setValue(capabilitiesKey + QSL("/URLAssociations/") + i.key(), i.value());
         ++i;
     }
-    regLocalMachine.setValue(capabilitiesKey + "/Startmenu/StartMenuInternet", _appPath);
+    regLocalMachine.setValue(capabilitiesKey + QSL("/Startmenu/StartMenuInternet"), _appPath);
 
     return true;
 }
@@ -173,10 +173,10 @@ void RegisterQAppAssociation::registerAssociation(const QString &assocName, Asso
                                            AT_FILEEXTENSION);
                 break;
             case UrlAssociation: {
-                QSettings regCurrentUserRoot("HKEY_CURRENT_USER", QSettings::NativeFormat);
+                QSettings regCurrentUserRoot(QSL("HKEY_CURRENT_USER"), QSettings::NativeFormat);
                 QString currentUrlDefault =
-                    regCurrentUserRoot.value("Software/Microsoft/Windows/Shell/Associations/UrlAssociations/"
-                                             + assocName + "/UserChoice/Progid").toString();
+                    regCurrentUserRoot.value(QSL("Software/Microsoft/Windows/Shell/Associations/UrlAssociations/")
+                                             + assocName + QSL("/UserChoice/Progid")).toString();
                 hr = pAAR->SetAppAsDefault(_appRegisteredName.toStdWString().c_str(),
                                            assocName.toStdWString().c_str(),
                                            AT_URLPROTOCOL);
@@ -184,9 +184,9 @@ void RegisterQAppAssociation::registerAssociation(const QString &assocName, Asso
                     !currentUrlDefault.isEmpty() &&
                     currentUrlDefault != _urlAssocHash.value(assocName)
                    ) {
-                    regCurrentUserRoot.setValue("Software/Classes"
+                    regCurrentUserRoot.setValue(QSL("Software/Classes")
                                                 + assocName
-                                                + "/shell/open/command/backup_progid", currentUrlDefault);
+                                                + QSL("/shell/open/command/backup_progid"), currentUrlDefault);
                 }
             }
             break;
@@ -201,36 +201,36 @@ void RegisterQAppAssociation::registerAssociation(const QString &assocName, Asso
     }
     else { // Older than Vista
         QSettings regUserRoot(_UserRootKey, QSettings::NativeFormat);
-        regUserRoot.beginGroup("Software/Classes");
-        QSettings regClassesRoot("HKEY_CLASSES_ROOT", QSettings::NativeFormat);
+        regUserRoot.beginGroup(QSL("Software/Classes"));
+        QSettings regClassesRoot(QSL("HKEY_CLASSES_ROOT"), QSettings::NativeFormat);
         switch (type) {
         case FileAssociation: {
             QString progId = _fileAssocHash.value(assocName);
             createProgId(progId);
-            QString currentDefault = regClassesRoot.value(assocName + "/Default").toString();
+            QString currentDefault = regClassesRoot.value(assocName + QSL("/Default")).toString();
             if (!currentDefault.isEmpty() &&
                 currentDefault != progId &&
-                regUserRoot.value(assocName + "/backup_val").toString() != progId
+                regUserRoot.value(assocName + QSL("/backup_val")).toString() != progId
                ) {
-                regUserRoot.setValue(assocName + "/backup_val", currentDefault);
+                regUserRoot.setValue(assocName + QSL("/backup_val"), currentDefault);
             }
-            regUserRoot.setValue(assocName + "/.", progId);
+            regUserRoot.setValue(assocName + QSL("/."), progId);
         }
         break;
         case UrlAssociation: {
             QString progId = _urlAssocHash.value(assocName);
             createProgId(progId);
-            QString currentDefault = regClassesRoot.value(assocName + "/shell/open/command/Default").toString();
-            QString command = "\"" + _appPath + "\" \"%1\"";
+            QString currentDefault = regClassesRoot.value(assocName + QSL("/shell/open/command/Default")).toString();
+            QString command = QSL("\"") + _appPath + QSL("\" \"%1\"");
             if (!currentDefault.isEmpty() &&
                 currentDefault != command &&
-                regUserRoot.value(assocName + "/shell/open/command/backup_val").toString() != command
+                regUserRoot.value(assocName + QSL("/shell/open/command/backup_val")).toString() != command
                ) {
-                regUserRoot.setValue(assocName + "/shell/open/command/backup_val", currentDefault);
+                regUserRoot.setValue(assocName + QSL("/shell/open/command/backup_val"), currentDefault);
             }
 
-            regUserRoot.setValue(assocName + "/shell/open/command/.", command);
-            regUserRoot.setValue(assocName + "/URL Protocol", "");
+            regUserRoot.setValue(assocName + QSL("/shell/open/command/."), command);
+            regUserRoot.setValue(assocName + QSL("/URL Protocol"), QSL(""));
             break;
         }
         default:
@@ -325,25 +325,25 @@ bool RegisterQAppAssociation::showNativeDefaultAppSettingsUi()
 void RegisterQAppAssociation::createProgId(const QString &progId)
 {
     QSettings regUserRoot(_UserRootKey, QSettings::NativeFormat);
-    regUserRoot.beginGroup("Software/Classes");
+    regUserRoot.beginGroup(QSL("Software/Classes"));
     QPair<QString, QString> pair = _assocDescHash.value(progId);
-    regUserRoot.setValue(progId + "/.", pair.first);
-    regUserRoot.setValue(progId + "/shell/.", "open");
-    regUserRoot.setValue(progId + "/DefaultIcon/.", pair.second);
-    regUserRoot.setValue(progId + "/shell/open/command/.", QString("\"" + _appPath + "\" \"%1\""));
+    regUserRoot.setValue(progId + QSL("/."), pair.first);
+    regUserRoot.setValue(progId + QSL("/shell/."), QSL("open"));
+    regUserRoot.setValue(progId + QSL("/DefaultIcon/."), pair.second);
+    regUserRoot.setValue(progId + QSL("/shell/open/command/."), QString(QSL("\"") + _appPath + QSL("\" \"%1\"")));
     regUserRoot.endGroup();
 }
 
 bool RegisterQAppAssociation::isDefaultApp(const QString &assocName, AssociationType type)
 {
     if (isVistaOrNewer()) {
-        QSettings regCurrentUserRoot("HKEY_CURRENT_USER", QSettings::NativeFormat);
+        QSettings regCurrentUserRoot(QSL("HKEY_CURRENT_USER"), QSettings::NativeFormat);
         switch (type) {
         case FileAssociation: {
-            regCurrentUserRoot.beginGroup("Software/Microsoft/Windows/CurrentVersion/Explorer/FileExts");
+            regCurrentUserRoot.beginGroup(QSL("Software/Microsoft/Windows/CurrentVersion/Explorer/FileExts"));
             if (regCurrentUserRoot.childGroups().contains(assocName, Qt::CaseInsensitive)) {
                 return (_fileAssocHash.value(assocName)
-                        == regCurrentUserRoot.value(assocName + "/UserChoice/Progid"));
+                        == regCurrentUserRoot.value(assocName + QSL("/UserChoice/Progid")));
             }
             else {
                 regCurrentUserRoot.endGroup();
@@ -352,10 +352,10 @@ bool RegisterQAppAssociation::isDefaultApp(const QString &assocName, Association
             break;
         }
         case UrlAssociation: {
-            regCurrentUserRoot.beginGroup("Software/Microsoft/Windows/Shell/Associations/UrlAssociations");
+            regCurrentUserRoot.beginGroup(QSL("Software/Microsoft/Windows/Shell/Associations/UrlAssociations"));
             if (regCurrentUserRoot.childGroups().contains(assocName, Qt::CaseInsensitive)) {
                 return (_urlAssocHash.value(assocName)
-                        == regCurrentUserRoot.value(assocName + "/UserChoice/Progid"));
+                        == regCurrentUserRoot.value(assocName + QSL("/UserChoice/Progid")));
             }
             else {
                 regCurrentUserRoot.endGroup();
@@ -369,7 +369,7 @@ bool RegisterQAppAssociation::isDefaultApp(const QString &assocName, Association
         }
     }
     else {
-        QSettings regClassesRoot("HKEY_CLASSES_ROOT", QSettings::NativeFormat);
+        QSettings regClassesRoot(QSL("HKEY_CLASSES_ROOT"), QSettings::NativeFormat);
         {
             if (!regClassesRoot.childGroups().contains(assocName, Qt::CaseInsensitive)) {
                 return false;
@@ -378,13 +378,13 @@ bool RegisterQAppAssociation::isDefaultApp(const QString &assocName, Association
         switch (type) {
         case FileAssociation: {
             return (_fileAssocHash.value(assocName)
-                    == regClassesRoot.value(assocName + "/Default"));
+                    == regClassesRoot.value(assocName + QSL("/Default")));
         }
         break;
         case UrlAssociation: {
-            QString currentDefault = regClassesRoot.value(assocName + "/shell/open/command/Default").toString();
-            currentDefault.remove("\"");
-            currentDefault.remove("%1");
+            QString currentDefault = regClassesRoot.value(assocName + QSL("/shell/open/command/Default")).toString();
+            currentDefault.remove(QSL("\""));
+            currentDefault.remove(QSL("%1"));
             currentDefault = currentDefault.trimmed();
             return (_appPath == currentDefault);
         }

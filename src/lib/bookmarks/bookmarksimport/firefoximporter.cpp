@@ -25,7 +25,7 @@
 #include <QSqlQuery>
 #include <QSqlDatabase>
 
-#define CONNECTION "firefox-places-import"
+#define CONNECTION QSL("firefox-places-import")
 
 FirefoxImporter::FirefoxImporter(QObject* parent)
     : BookmarksImporter(parent)

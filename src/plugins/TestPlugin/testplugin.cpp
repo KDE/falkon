@@ -60,7 +60,7 @@ void TestPlugin::init(InitState state, const QString &settingsPath)
 
     // Adding new sidebar into application
     m_sideBar = new TestPlugin_Sidebar(this);
-    SideBarManager::addSidebar("testplugin-sidebar", m_sideBar);
+    SideBarManager::addSidebar(QSL("testplugin-sidebar"), m_sideBar);
 }
 
 void TestPlugin::unload()
@@ -84,7 +84,7 @@ bool TestPlugin::testPlugin()
     // There should be some testing if plugin is loaded correctly
     // If this function returns false, plugin is automatically unloaded
 
-    return (Qz::VERSION == QLatin1String(FALKON_VERSION));
+    return (QString::fromLatin1(Qz::VERSION) == QLatin1String(FALKON_VERSION));
 }
 
 void TestPlugin::showSettings(QWidget* parent)
@@ -94,10 +94,10 @@ void TestPlugin::showSettings(QWidget* parent)
 
     if (!m_settings) {
         m_settings = new QDialog(parent);
-        auto* b = new QPushButton("Example Plugin v0.0.1");
+        auto* b = new QPushButton(QSL("Example Plugin v0.0.1"));
         auto* closeButton = new QPushButton(tr("Close"));
         auto* label = new QLabel();
-        label->setPixmap(QPixmap(":icons/other/about.svg"));
+        label->setPixmap(QPixmap(QSL(":icons/other/about.svg")));
 
         auto* l = new QVBoxLayout(m_settings.data());
         l->addWidget(label);
@@ -107,7 +107,7 @@ void TestPlugin::showSettings(QWidget* parent)
 
         m_settings.data()->setAttribute(Qt::WA_DeleteOnClose);
         m_settings.data()->setWindowTitle(tr("Example Plugin Settings"));
-        m_settings.data()->setWindowIcon(QIcon(":icons/falkon.svg"));
+        m_settings.data()->setWindowIcon(QIcon(QSL(":icons/falkon.svg")));
         connect(closeButton, SIGNAL(clicked()), m_settings.data(), SLOT(close()));
     }
 
@@ -125,15 +125,15 @@ void TestPlugin::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTes
 
     QString title;
     if (!r.imageUrl().isEmpty()) {
-        title += " on image";
+        title += QSL(" on image");
     }
 
     if (!r.linkUrl().isEmpty()) {
-        title += " on link";
+        title += QSL(" on link");
     }
 
     if (r.isContentEditable()) {
-        title += " on input";
+        title += QSL(" on input");
     }
 
     menu->addAction(tr("My first plugin action") + title, this, SLOT(actionSlot()));

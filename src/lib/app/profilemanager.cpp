@@ -166,10 +166,10 @@ void ProfileManager::updateCurrentProfile()
     // If file exists, just update the profile to current version
     if (versionFile.exists()) {
         versionFile.open(QFile::ReadOnly);
-        QString profileVersion = versionFile.readAll();
+        QString profileVersion = QString::fromUtf8(versionFile.readAll());
         versionFile.close();
 
-        updateProfile(Qz::VERSION, profileVersion.trimmed());
+        updateProfile(QString::fromLatin1(Qz::VERSION), profileVersion.trimmed());
     }
     else {
         copyDataToProfile();
@@ -189,7 +189,7 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
     Updater::Version prof(profile);
 
     // Profile is from newer version than running application
-    if (prof > Updater::Version(Qz::VERSION)) {
+    if (prof > Updater::Version(QString::fromLatin1(Qz::VERSION))) {
         // Only copy data when profile is not from development version
         if (prof.revisionNumber != 99) {
             copyDataToProfile();
@@ -247,8 +247,8 @@ void ProfileManager::copyDataToProfile()
             sessionFile.remove();
         }
 
-        const QString text = "Incompatible profile version has been detected. To avoid losing your profile data, they were "
-                             "backed up in following file:<br/><br/><b>" + browseDataBackup + "<br/></b>";
+        const QString text = QSL("Incompatible profile version has been detected. To avoid losing your profile data, they were "
+                             "backed up in following file:<br/><br/><b>") + browseDataBackup + QSL("<br/></b>");
         QMessageBox::warning(0, QStringLiteral("Falkon: Incompatible profile version"), text);
     }
 }

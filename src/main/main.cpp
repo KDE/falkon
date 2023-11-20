@@ -59,7 +59,7 @@ int main(int argc, char* argv[])
         for (int i = 0; i < argc; ++i)
             args[i] = argv[i];
 
-        QString stylecmd = QL1S("-style=") + style;
+        QString stylecmd = QL1S("-style=") + QString::fromUtf8(style);
         args[argc++] = qstrdup(stylecmd.toUtf8().constData());
         argv = args;
     }

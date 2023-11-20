@@ -245,7 +245,7 @@ QByteArray OpenSearchEngine::getPostData(const QString &searchTerm) const
         return {};
     }
 
-    QUrl retVal = QUrl("http://foo.bar");
+    QUrl retVal = QUrl(QSL("http://foo.bar"));
 
     QUrlQuery query(retVal);
     Parameters::const_iterator end = m_searchParameters.constEnd();
@@ -530,7 +530,7 @@ void OpenSearchEngine::setSuggestionsUrl(const QString &string)
 
 QString OpenSearchEngine::getSuggestionsUrl()
 {
-    return suggestionsUrl("searchstring").toString().replace(QLatin1String("searchstring"), QLatin1String("%s"));
+    return suggestionsUrl(QSL("searchstring")).toString().replace(QLatin1String("searchstring"), QLatin1String("%s"));
 }
 
 QByteArray OpenSearchEngine::getSuggestionsParameters()

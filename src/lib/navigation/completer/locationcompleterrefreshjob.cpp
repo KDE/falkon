@@ -162,7 +162,7 @@ void LocationCompleterRefreshJob::completeFromHistory()
             }
 
             auto* item = new QStandardItem();
-            item->setText(bookmark->url().toEncoded());
+            item->setText(QString::fromUtf8(bookmark->url().toEncoded()));
             item->setData(-1, LocationCompleterModel::IdRole);
             item->setData(bookmark->title(), LocationCompleterModel::TitleRole);
             item->setData(bookmark->url(), LocationCompleterModel::UrlRole);
@@ -193,7 +193,7 @@ void LocationCompleterRefreshJob::completeFromHistory()
             }
 
             auto* item = new QStandardItem();
-            item->setText(url.toEncoded());
+            item->setText(QString::fromUtf8(url.toEncoded()));
             item->setData(query.value(0), LocationCompleterModel::IdRole);
             item->setData(query.value(2), LocationCompleterModel::TitleRole);
             item->setData(url, LocationCompleterModel::UrlRole);
@@ -215,7 +215,7 @@ void LocationCompleterRefreshJob::completeMostVisited()
         auto* item = new QStandardItem();
         const QUrl url = query.value(1).toUrl();
 
-        item->setText(url.toEncoded());
+        item->setText(QString::fromUtf8(url.toEncoded()));
         item->setData(query.value(0), LocationCompleterModel::IdRole);
         item->setData(query.value(2), LocationCompleterModel::TitleRole);
         item->setData(url, LocationCompleterModel::UrlRole);

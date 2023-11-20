@@ -31,16 +31,16 @@ void QmlBookmarksApiTest::cleanupTestCase()
 
 void QmlBookmarksApiTest::testBookmarkTreeNodeType()
 {
-    auto type = BookmarkItem::Type(m_testHelper.evaluate("Falkon.Bookmarks.rootItem().type").toInt());
+    auto type = BookmarkItem::Type(m_testHelper.evaluate(QSL("Falkon.Bookmarks.rootItem().type")).toInt());
     QCOMPARE(mApp->bookmarks()->rootItem()->type(), type);
 
-    type = BookmarkItem::Type(m_testHelper.evaluate("Falkon.Bookmarks.toolbarFolder().type").toInt());
+    type = BookmarkItem::Type(m_testHelper.evaluate(QSL("Falkon.Bookmarks.toolbarFolder().type")).toInt());
     QCOMPARE(mApp->bookmarks()->toolbarFolder()->type(), type);
 }
 
 void QmlBookmarksApiTest::testBookmarkTreeNode()
 {
-    QObject *bookmark = m_testHelper.evaluateQObject("Falkon.Bookmarks.toolbarFolder()");
+    QObject *bookmark = m_testHelper.evaluateQObject(QSL("Falkon.Bookmarks.toolbarFolder()"));
     QVERIFY(bookmark);
     auto toolbarFolder = mApp->bookmarks()->toolbarFolder();
 
@@ -56,11 +56,11 @@ void QmlBookmarksApiTest::testBookmarkTreeNode()
 void QmlBookmarksApiTest::testBookmarksCreation()
 {
     auto item = new BookmarkItem(BookmarkItem::Url);
-    item->setTitle("Example Domain");
-    item->setUrl(QUrl("https://example.com/"));
-    item->setDescription("Testing bookmark description");
+    item->setTitle(QSL("Example Domain"));
+    item->setUrl(QUrl(QSL("https://example.com/")));
+    item->setDescription(QSL("Testing bookmark description"));
 
-    QObject *qmlBookmarks = m_testHelper.evaluateQObject("Falkon.Bookmarks");
+    QObject *qmlBookmarks = m_testHelper.evaluateQObject(QSL("Falkon.Bookmarks"));
     QVERIFY(qmlBookmarks);
 
     QSignalSpy qmlBookmarksSpy(qmlBookmarks, SIGNAL(created(QmlBookmarkTreeNode*)));
@@ -75,87 +75,87 @@ void QmlBookmarksApiTest::testBookmarksCreation()
     qRegisterMetaType<BookmarkItem*>();
     QSignalSpy bookmarksSpy(mApp->bookmarks(), &Bookmarks::bookmarkAdded);
 
-    auto out = m_testHelper.evaluate("Falkon.Bookmarks.create({"
+    auto out = m_testHelper.evaluate(QL1S("Falkon.Bookmarks.create({"
                                 "    parent: Falkon.Bookmarks.toolbarFolder(),"
                                 "    title: 'Example Plugin',"
                                 "    url: 'https://another-example.com'"
-                                "});");
+                                "});"));
     QVERIFY(out.toBool());
 
     QCOMPARE(bookmarksSpy.count(), 1);
     auto* createdItem = qvariant_cast<BookmarkItem*>(bookmarksSpy.at(0).at(0));
     QVERIFY(createdItem);
-    QCOMPARE(createdItem->title(), QString("Example Plugin"));
+    QCOMPARE(createdItem->title(), QSL("Example Plugin"));
 }
 
 void QmlBookmarksApiTest::testBookmarksExistence()
 {
     // in continuation from testBookmarksCreation
 
-    auto result = m_testHelper.evaluate("Falkon.Bookmarks.isBookmarked('https://example.com/')").toBool();
+    auto result = m_testHelper.evaluate(QSL("Falkon.Bookmarks.isBookmarked('https://example.com/')")).toBool();
     QVERIFY(result);
-    QCOMPARE(mApp->bookmarks()->isBookmarked(QUrl("https://example.com/")), result);
+    QCOMPARE(mApp->bookmarks()->isBookmarked(QUrl(QSL("https://example.com/"))), result);
 }
 
 void QmlBookmarksApiTest::testBookmarksModification()
 {
     // in continuation from testBookmarksExistence
 
-    QObject *qmlBookmarks = m_testHelper.evaluateQObject("Falkon.Bookmarks");
+    QObject *qmlBookmarks = m_testHelper.evaluateQObject(QSL("Falkon.Bookmarks"));
     QVERIFY(qmlBookmarks);
 
     QSignalSpy qmlBookmarksSpy(qmlBookmarks, SIGNAL(changed(QmlBookmarkTreeNode*)));
-    BookmarkItem* item = mApp->bookmarks()->searchBookmarks("https://example.com/").at(0);
-    item->setTitle("Modified Example Domain");
+    BookmarkItem* item = mApp->bookmarks()->searchBookmarks(QSL("https://example.com/")).at(0);
+    item->setTitle(QSL("Modified Example Domain"));
     mApp->bookmarks()->changeBookmark(item);
 
     QCOMPARE(qmlBookmarksSpy.count(), 1);
 
     auto *modified = qvariant_cast<QObject*>(qmlBookmarksSpy.at(0).at(0));
     QVERIFY(modified);
-    QCOMPARE(modified->property("title").toString(), QString("Modified Example Domain"));
+    QCOMPARE(modified->property("title").toString(), QSL("Modified Example Domain"));
 
     qRegisterMetaType<BookmarkItem*>();
     QSignalSpy bookmarksSpy(mApp->bookmarks(), &Bookmarks::bookmarkChanged);
 
-    auto out = m_testHelper.evaluate("Falkon.Bookmarks.update(Falkon.Bookmarks.get('https://another-example.com'),{"
+    auto out = m_testHelper.evaluate(QL1S("Falkon.Bookmarks.update(Falkon.Bookmarks.get('https://another-example.com'),{"
                                 "    title: 'Modified Example Plugin'"
-                                "})");
+                                "})"));
     QVERIFY(out.toBool());
 
     QCOMPARE(bookmarksSpy.count(), 1);
     auto* modifiedItem = qvariant_cast<BookmarkItem*>(bookmarksSpy.at(0).at(0));
     QVERIFY(modifiedItem);
-    QCOMPARE(modifiedItem->title(), QString("Modified Example Plugin"));
+    QCOMPARE(modifiedItem->title(), QSL("Modified Example Plugin"));
 }
 
 void QmlBookmarksApiTest::testBookmarksRemoval()
 {
     // in continuation from testBookmarksModification
 
-    QObject *qmlBookmarks = m_testHelper.evaluateQObject("Falkon.Bookmarks");
+    QObject *qmlBookmarks = m_testHelper.evaluateQObject(QSL("Falkon.Bookmarks"));
     QVERIFY(qmlBookmarks);
 
     QSignalSpy qmlBookmarksSpy(qmlBookmarks, SIGNAL(removed(QmlBookmarkTreeNode*)));
-    BookmarkItem* item = mApp->bookmarks()->searchBookmarks("https://example.com/").at(0);
+    BookmarkItem* item = mApp->bookmarks()->searchBookmarks(QSL("https://example.com/")).at(0);
     mApp->bookmarks()->removeBookmark(item);
 
     QCOMPARE(qmlBookmarksSpy.count(), 1);
 
     auto *removed = qvariant_cast<QObject*>(qmlBookmarksSpy.at(0).at(0));
     QVERIFY(removed);
-    QCOMPARE(removed->property("title").toString(), QString("Modified Example Domain"));
+    QCOMPARE(removed->property("title").toString(), QSL("Modified Example Domain"));
 
     qRegisterMetaType<BookmarkItem*>();
     QSignalSpy bookmarksSpy(mApp->bookmarks(), &Bookmarks::bookmarkRemoved);
 
-    auto out = m_testHelper.evaluate("Falkon.Bookmarks.remove(Falkon.Bookmarks.get('https://another-example.com'))");
+    auto out = m_testHelper.evaluate(QSL("Falkon.Bookmarks.remove(Falkon.Bookmarks.get('https://another-example.com'))"));
     QVERIFY(out.toBool());
 
     QCOMPARE(bookmarksSpy.count(), 1);
     auto* removedItem = qvariant_cast<BookmarkItem*>(bookmarksSpy.at(0).at(0));
     QVERIFY(removedItem);
-    QCOMPARE(removedItem->title(), QString("Modified Example Plugin"));
+    QCOMPARE(removedItem->title(), QSL("Modified Example Plugin"));
 }
 
 FALKONTEST_MAIN(QmlBookmarksApiTest)

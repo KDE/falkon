@@ -323,15 +323,15 @@ CertificateInfoWidget::CertificateInfoWidget(const QSslCertificate &cert, QWidge
     ui->issuedToCN->setText(showCertInfo(cert.subjectInfo(QSslCertificate::CommonName)));
     ui->issuedToO->setText(showCertInfo(cert.subjectInfo(QSslCertificate::Organization)));
     ui->issuedToOU->setText(showCertInfo(cert.subjectInfo(QSslCertificate::OrganizationalUnitName)));
-    ui->issuedToSN->setText(showCertInfo(cert.serialNumber()));
+    ui->issuedToSN->setText(showCertInfo(QString::fromLatin1(cert.serialNumber())));
     //Issued By
     ui->issuedByCN->setText(showCertInfo(cert.issuerInfo(QSslCertificate::CommonName)));
     ui->issuedByO->setText(showCertInfo(cert.issuerInfo(QSslCertificate::Organization)));
     ui->issuedByOU->setText(showCertInfo(cert.issuerInfo(QSslCertificate::OrganizationalUnitName)));
     //Validity
     QLocale locale = QLocale::system();
-    ui->validityIssuedOn->setText(locale.toString(cert.effectiveDate(), "dddd d. MMMM yyyy"));
-    ui->validityExpiresOn->setText(locale.toString(cert.expiryDate(), "dddd d. MMMM yyyy"));
+    ui->validityIssuedOn->setText(locale.toString(cert.effectiveDate(), QSL("dddd d. MMMM yyyy")));
+    ui->validityExpiresOn->setText(locale.toString(cert.expiryDate(), QSL("dddd d. MMMM yyyy")));
 }
 
 CertificateInfoWidget::~CertificateInfoWidget()

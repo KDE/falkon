@@ -33,7 +33,7 @@ SBI_ImagesIcon::SBI_ImagesIcon(BrowserWindow* window, const QString &settingsPat
     setCursor(Qt::PointingHandCursor);
     setToolTip(tr("Modify images loading settings per-site and globally"));
 
-    m_icon = QIcon::fromTheme("image-x-generic", QIcon(":sbi/data/images.png"));
+    m_icon = QIcon::fromTheme(QSL("image-x-generic"), QIcon(QSL(":sbi/data/images.png")));
     setPixmap(m_icon.pixmap(16));
 
     QSettings settings(m_settingsFile, QSettings::IniFormat);

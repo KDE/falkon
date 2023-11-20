@@ -30,7 +30,7 @@ void QmlClipboardApiTest::cleanupTestCase()
 
 void QmlClipboardApiTest::testClipboard()
 {
-    m_testHelper.evaluate("Falkon.Clipboard.copy('this text is copied')");
+    m_testHelper.evaluate(QSL("Falkon.Clipboard.copy('this text is copied')"));
     QCOMPARE(mApp->clipboard()->text(), QSL("this text is copied"));
 }
 

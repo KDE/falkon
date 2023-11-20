@@ -93,7 +93,7 @@ void QmlPlugins::registerQmlTypes()
     });
 
     // Cookies
-    qmlRegisterUncreatableType<QmlCookie>(url, majorVersion, minorVersion, "Cookie", "Unable to register type: Cookie");
+    qmlRegisterUncreatableType<QmlCookie>(url, majorVersion, minorVersion, "Cookie", QSL("Unable to register type: Cookie"));
 
     qmlRegisterSingletonType<QmlCookies>(url, majorVersion, minorVersion, "Cookies", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)

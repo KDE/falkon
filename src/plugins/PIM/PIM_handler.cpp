@@ -39,21 +39,21 @@ void PIM_Handler::loadSettings()
 {
     QSettings settings(m_settingsFile, QSettings::IniFormat);
 
-    settings.beginGroup("PIM");
-    m_allInfo[PI_LastName] = settings.value("LastName", QString()).toString();
-    m_allInfo[PI_FirstName] = settings.value("FirstName", QString()).toString();
-    m_allInfo[PI_Email] = settings.value("Email", QString()).toString();
-    m_allInfo[PI_Mobile] = settings.value("Mobile", QString()).toString();
-    m_allInfo[PI_Phone] = settings.value("Phone", QString()).toString();
-    m_allInfo[PI_Address] = settings.value("Address", QString()).toString();
-    m_allInfo[PI_City] = settings.value("City", QString()).toString();
-    m_allInfo[PI_Zip] = settings.value("Zip", QString()).toString();
-    m_allInfo[PI_State] = settings.value("State", QString()).toString();
-    m_allInfo[PI_Country] = settings.value("Country", QString()).toString();
-    m_allInfo[PI_HomePage] = settings.value("HomePage", QString()).toString();
-    m_allInfo[PI_Special1] = settings.value("Special1", QString()).toString();
-    m_allInfo[PI_Special2] = settings.value("Special2", QString()).toString();
-    m_allInfo[PI_Special3] = settings.value("Special3", QString()).toString();
+    settings.beginGroup(QSL("PIM"));
+    m_allInfo[PI_LastName] = settings.value(QSL("LastName"), QString()).toString();
+    m_allInfo[PI_FirstName] = settings.value(QSL("FirstName"), QString()).toString();
+    m_allInfo[PI_Email] = settings.value(QSL("Email"), QString()).toString();
+    m_allInfo[PI_Mobile] = settings.value(QSL("Mobile"), QString()).toString();
+    m_allInfo[PI_Phone] = settings.value(QSL("Phone"), QString()).toString();
+    m_allInfo[PI_Address] = settings.value(QSL("Address"), QString()).toString();
+    m_allInfo[PI_City] = settings.value(QSL("City"), QString()).toString();
+    m_allInfo[PI_Zip] = settings.value(QSL("Zip"), QString()).toString();
+    m_allInfo[PI_State] = settings.value(QSL("State"), QString()).toString();
+    m_allInfo[PI_Country] = settings.value(QSL("Country"), QString()).toString();
+    m_allInfo[PI_HomePage] = settings.value(QSL("HomePage"), QString()).toString();
+    m_allInfo[PI_Special1] = settings.value(QSL("Special1"), QString()).toString();
+    m_allInfo[PI_Special2] = settings.value(QSL("Special2"), QString()).toString();
+    m_allInfo[PI_Special3] = settings.value(QSL("Special3"), QString()).toString();
     settings.endGroup();
 
     m_translations[PI_LastName] = tr("Last Name");
@@ -71,17 +71,17 @@ void PIM_Handler::loadSettings()
     m_translations[PI_Special2] = tr("Custom 2");
     m_translations[PI_Special3] = tr("Custom 3");
 
-    m_infoMatches[PI_LastName] << "lastname" << "surname";
-    m_infoMatches[PI_FirstName] << "firstname" << "name";
-    m_infoMatches[PI_Email] << "email" << "e-mail" << "mail";
-    m_infoMatches[PI_Mobile] << "mobile" << "mobilephone";
-    m_infoMatches[PI_Phone] << "phone" << "telephone";
-    m_infoMatches[PI_Address] << "address";
-    m_infoMatches[PI_City] << "city";
-    m_infoMatches[PI_Zip] << "zip";
-    m_infoMatches[PI_State] << "state" << "region";
-    m_infoMatches[PI_Country] << "country";
-    m_infoMatches[PI_HomePage] << "homepage" << "www";
+    m_infoMatches[PI_LastName] << QSL("lastname") << QSL("surname");
+    m_infoMatches[PI_FirstName] << QSL("firstname") << QSL("name");
+    m_infoMatches[PI_Email] << QSL("email") << QSL("e-mail") << QSL("mail");
+    m_infoMatches[PI_Mobile] << QSL("mobile") << QSL("mobilephone");
+    m_infoMatches[PI_Phone] << QSL("phone") << QSL("telephone");
+    m_infoMatches[PI_Address] << QSL("address");
+    m_infoMatches[PI_City] << QSL("city");
+    m_infoMatches[PI_Zip] << QSL("zip");
+    m_infoMatches[PI_State] << QSL("state") << QSL("region");
+    m_infoMatches[PI_Country] << QSL("country");
+    m_infoMatches[PI_HomePage] << QSL("homepage") << QSL("www");
 
     m_loaded = true;
 }

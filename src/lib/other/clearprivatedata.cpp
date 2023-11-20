@@ -54,8 +54,8 @@ ClearPrivateData::ClearPrivateData(QWidget* parent)
     connect(ui->editCookies, &QAbstractButton::clicked, this, &ClearPrivateData::showCookieManager);
 
     Settings settings;
-    settings.beginGroup("ClearPrivateData");
-    restoreState(settings.value("state", QByteArray()).toByteArray());
+    settings.beginGroup(QSL("ClearPrivateData"));
+    restoreState(settings.value(QSL("state"), QByteArray()).toByteArray());
     settings.endGroup();
 }
 
@@ -91,8 +91,8 @@ void ClearPrivateData::clearCache()
 void ClearPrivateData::closeEvent(QCloseEvent* e)
 {
     Settings settings;
-    settings.beginGroup("ClearPrivateData");
-    settings.setValue("state", saveState());
+    settings.beginGroup(QSL("ClearPrivateData"));
+    settings.setValue(QSL("state"), saveState());
     settings.endGroup();
 
     e->accept();

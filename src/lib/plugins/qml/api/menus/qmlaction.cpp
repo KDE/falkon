@@ -46,7 +46,7 @@ void QmlAction::setProperties(const QVariantMap &map)
         } else if (key == QSL("shortcut")) {
             m_action->setShortcut(QKeySequence(map.value(key).toString()));
         } else {
-            m_action->setProperty(key.toUtf8(), map.value(key));
+            m_action->setProperty(key.toUtf8().constData(), map.value(key));
         }
     }
 }

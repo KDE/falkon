@@ -64,17 +64,17 @@ DownloadManager::DownloadManager(QWidget* parent)
         QtWin::extendFrameIntoClientArea(this, -1, -1, -1, -1);
     }
 #endif
-    ui->clearButton->setIcon(QIcon::fromTheme("edit-clear"));
+    ui->clearButton->setIcon(QIcon::fromTheme(QSL("edit-clear")));
     QzTools::centerWidgetOnScreen(this);
 
     connect(ui->clearButton, &QAbstractButton::clicked, this, &DownloadManager::clearList);
 
-    auto* clearShortcut = new QShortcut(QKeySequence("CTRL+L"), this);
+    auto* clearShortcut = new QShortcut(QKeySequence(QSL("CTRL+L")), this);
     connect(clearShortcut, &QShortcut::activated, this, &DownloadManager::clearList);
 
     loadSettings();
 
-    QzTools::setWmClass("Download Manager", this);
+    QzTools::setWmClass(QSL("Download Manager"), this);
 
     connect(m_model, &DownloadManagerModel::downloadAdded, this, &DownloadManager::downloadAdded);
 }
@@ -82,15 +82,15 @@ DownloadManager::DownloadManager(QWidget* parent)
 void DownloadManager::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("DownloadManager");
-    m_downloadPath = settings.value("defaultDownloadPath", QString()).toString();
-    m_lastDownloadPath = settings.value("lastDownloadPath", QStandardPaths::writableLocation(QStandardPaths::DownloadLocation)).toString();
-    m_closeOnFinish = settings.value("CloseManagerOnFinish", false).toBool();
-    m_useNativeDialog = settings.value("useNativeDialog", DEFAULT_DOWNLOAD_USE_NATIVE_DIALOG).toBool();
+    settings.beginGroup(QSL("DownloadManager"));
+    m_downloadPath = settings.value(QSL("defaultDownloadPath"), QString()).toString();
+    m_lastDownloadPath = settings.value(QSL("lastDownloadPath"), QStandardPaths::writableLocation(QStandardPaths::DownloadLocation)).toString();
+    m_closeOnFinish = settings.value(QSL("CloseManagerOnFinish"), false).toBool();
+    m_useNativeDialog = settings.value(QSL("useNativeDialog"), DEFAULT_DOWNLOAD_USE_NATIVE_DIALOG).toBool();
 
-    m_useExternalManager = settings.value("UseExternalManager", false).toBool();
-    m_externalExecutable = settings.value("ExternalManagerExecutable", QString()).toString();
-    m_externalArguments = settings.value("ExternalManagerArguments", QString()).toString();
+    m_useExternalManager = settings.value(QSL("UseExternalManager"), false).toBool();
+    m_externalExecutable = settings.value(QSL("ExternalManagerExecutable"), QString()).toString();
+    m_externalArguments = settings.value(QSL("ExternalManagerArguments"), QString()).toString();
     settings.endGroup();
 
     if (!m_externalArguments.contains(QLatin1String("%d"))) {
@@ -174,7 +174,7 @@ QWinTaskbarButton *DownloadManager::taskbarButton()
 void DownloadManager::startExternalManager(const QUrl &url)
 {
     QString arguments = m_externalArguments;
-    arguments.replace(QLatin1String("%d"), url.toEncoded());
+    arguments.replace(QLatin1String("%d"), QString::fromUtf8(url.toEncoded()));
 
     QzTools::startExternalProcess(m_externalExecutable, arguments);
     m_lastDownloadOption = ExternalManager;

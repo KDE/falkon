@@ -40,8 +40,8 @@ ThemeManager::ThemeManager(QWidget* parent, Preferences* preferences)
     ui->remove->setIcon(QIcon::fromTheme(QSL("edit-delete")));
 
     Settings settings;
-    settings.beginGroup("Themes");
-    m_activeTheme = settings.value("activeTheme", DEFAULT_THEME_NAME).toString();
+    settings.beginGroup(QSL("Themes"));
+    m_activeTheme = settings.value(QSL("activeTheme"), DEFAULT_THEME_NAME).toString();
     settings.endGroup();
 
     const QStringList themePaths = DataPaths::allPaths(DataPaths::Themes);
@@ -129,7 +129,7 @@ ThemeManager::Theme ThemeManager::parseTheme(const QString &path, const QString 
     Theme info;
     info.isValid = false;
 
-    if (!QFile(path + QStringLiteral("main.css")).exists() || !QFile(path + "metadata.desktop").exists()) {
+    if (!QFile(path + QStringLiteral("main.css")).exists() || !QFile(path + QSL("metadata.desktop")).exists()) {
         info.isValid = false;
         return info;
     }
@@ -171,8 +171,8 @@ void ThemeManager::save()
     }
 
     Settings settings;
-    settings.beginGroup("Themes");
-    settings.setValue("activeTheme", currentItem->data(Qt::UserRole));
+    settings.beginGroup(QSL("Themes"));
+    settings.setValue(QSL("activeTheme"), currentItem->data(Qt::UserRole));
     settings.endGroup();
 }
 

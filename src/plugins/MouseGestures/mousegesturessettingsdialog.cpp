@@ -31,10 +31,10 @@ MouseGesturesSettingsDialog::MouseGesturesSettingsDialog(MouseGestures* gestures
     ui->setupUi(this);
 
     if (QApplication::isRightToLeft()) {
-        ui->label_5->setPixmap(QPixmap(":/mousegestures/data/right.gif"));
-        ui->label_6->setPixmap(QPixmap(":/mousegestures/data/left.gif"));
-        ui->label_18->setPixmap(QPixmap(":/mousegestures/data/up-right.gif"));
-        ui->label_20->setPixmap(QPixmap(":/mousegestures/data/up-left.gif"));
+        ui->label_5->setPixmap(QPixmap(QSL(":/mousegestures/data/right.gif")));
+        ui->label_6->setPixmap(QPixmap(QSL(":/mousegestures/data/left.gif")));
+        ui->label_18->setPixmap(QPixmap(QSL(":/mousegestures/data/up-right.gif")));
+        ui->label_20->setPixmap(QPixmap(QSL(":/mousegestures/data/up-left.gif")));
     }
 
     m_gestures->loadSettings();
@@ -56,7 +56,7 @@ MouseGesturesSettingsDialog::~MouseGesturesSettingsDialog()
 void MouseGesturesSettingsDialog::showLicense()
 {
     auto* v = new LicenseViewer(this);
-    v->setLicenseFile(":mousegestures/data/copyright");
+    v->setLicenseFile(QSL(":mousegestures/data/copyright"));
 
     v->show();
 }

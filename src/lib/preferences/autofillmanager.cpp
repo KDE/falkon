@@ -70,7 +70,7 @@ AutoFillManager::AutoFillManager(QWidget* parent)
     ui->search->setPlaceholderText(tr("Search"));
 
     // Password backends
-    ui->currentBackend->setText(QString("<b>%1</b>").arg(m_passwordManager->activeBackend()->name()));
+    ui->currentBackend->setText(QSL("<b>%1</b>").arg(m_passwordManager->activeBackend()->name()));
     ui->backendOptions->setVisible(m_passwordManager->activeBackend()->hasSettings());
 
     // Load passwords
@@ -89,7 +89,7 @@ void AutoFillManager::loadPasswords()
         auto* item = new QTreeWidgetItem(ui->treePass);
         item->setText(0, entry.host);
         item->setText(1, entry.username);
-        item->setText(2, "*****");
+        item->setText(2, QSL("*****"));
 
         QVariant v;
         v.setValue(entry);
@@ -98,7 +98,7 @@ void AutoFillManager::loadPasswords()
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.exec("SELECT server, id FROM autofill_exceptions");
+    query.exec(QSL("SELECT server, id FROM autofill_exceptions"));
     ui->treeExcept->clear();
     while (query.next()) {
         auto* item = new QTreeWidgetItem(ui->treeExcept);
@@ -165,7 +165,7 @@ void AutoFillManager::showPasswords()
             if (!item) {
                 continue;
             }
-            item->setText(2, "*****");
+            item->setText(2, QSL("*****"));
         }
 
         ui->showPasswords->setText(tr("Show Passwords"));
@@ -277,7 +277,7 @@ void AutoFillManager::removeExcept()
     }
     QString id = curItem->data(0, Qt::UserRole + 10).toString();
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("DELETE FROM autofill_exceptions WHERE id=?");
+    query.prepare(QSL("DELETE FROM autofill_exceptions WHERE id=?"));
     query.addBindValue(id);
     query.exec();
 
@@ -287,7 +287,7 @@ void AutoFillManager::removeExcept()
 void AutoFillManager::removeAllExcept()
 {
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.exec("DELETE FROM autofill_exceptions");
+    query.exec(QSL("DELETE FROM autofill_exceptions"));
 
     ui->treeExcept->clear();
 }
@@ -299,7 +299,7 @@ void AutoFillManager::showExceptions()
 
 void AutoFillManager::importPasswords()
 {
-    m_fileName = QzTools::getOpenFileName("AutoFill-ImportPasswords", this, tr("Choose file..."), QDir::homePath() + "/passwords.xml", "*.xml");
+    m_fileName = QzTools::getOpenFileName(QSL("AutoFill-ImportPasswords"), this, tr("Choose file..."), QDir::homePath() + QSL("/passwords.xml"), QSL("*.xml"));
 
     if (m_fileName.isEmpty()) {
         return;
@@ -310,7 +310,7 @@ void AutoFillManager::importPasswords()
 
 void AutoFillManager::exportPasswords()
 {
-    m_fileName = QzTools::getSaveFileName("AutoFill-ExportPasswords", this, tr("Choose file..."), QDir::homePath() + "/passwords.xml", "*.xml");
+    m_fileName = QzTools::getSaveFileName(QSL("AutoFill-ExportPasswords"), this, tr("Choose file..."), QDir::homePath() + QSL("/passwords.xml"), QSL("*.xml"));
 
     if (m_fileName.isEmpty()) {
         return;
@@ -360,7 +360,7 @@ void AutoFillManager::slotExportPasswords()
 
 void AutoFillManager::currentPasswordBackendChanged()
 {
-    ui->currentBackend->setText(QString("<b>%1</b>").arg(m_passwordManager->activeBackend()->name()));
+    ui->currentBackend->setText(QSL("<b>%1</b>").arg(m_passwordManager->activeBackend()->name()));
     ui->backendOptions->setVisible(m_passwordManager->activeBackend()->hasSettings());
 
     QTimer::singleShot(0, this, &AutoFillManager::loadPasswords);

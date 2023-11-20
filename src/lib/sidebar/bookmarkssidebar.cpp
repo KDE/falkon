@@ -105,7 +105,7 @@ void BookmarksSidebar::createContextMenu(const QPoint &pos)
     QAction* actNewPrivateWindow = menu.addAction(IconProvider::privateBrowsingIcon(), tr("Open in new private window"));
 
     menu.addSeparator();
-    QAction* actDelete = menu.addAction(QIcon::fromTheme("edit-delete"), tr("Delete"));
+    QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"));
 
     connect(actNewTab, SIGNAL(triggered()), this, SLOT(openBookmarkInNewTab()));
     connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewWindow()));

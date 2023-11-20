@@ -121,7 +121,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     setDesktopFileName(QSL("org.kde.falkon"));
 
 #ifdef GIT_REVISION
-    setApplicationVersion(QSL("%1 (%2)").arg(Qz::VERSION, GIT_REVISION));
+    setApplicationVersion(QSL("%1 (%2)").arg(QString::fromLatin1(Qz::VERSION), GIT_REVISION));
 #else
     setApplicationVersion(QString::fromLatin1(Qz::VERSION));
 #endif
@@ -196,15 +196,15 @@ MainApplication::MainApplication(int &argc, char** argv)
                 break;
             case Qz::CL_OpenUrlInCurrentTab:
                 startUrl = QUrl::fromUserInput(pair.text);
-                messages.append("ACTION:OpenUrlInCurrentTab" + pair.text);
+                messages.append(QSL("ACTION:OpenUrlInCurrentTab") + pair.text);
                 break;
             case Qz::CL_OpenUrlInNewWindow:
                 startUrl = QUrl::fromUserInput(pair.text);
-                messages.append("ACTION:OpenUrlInNewWindow" + pair.text);
+                messages.append(QSL("ACTION:OpenUrlInNewWindow") + pair.text);
                 break;
             case Qz::CL_OpenUrl:
                 startUrl = QUrl::fromUserInput(pair.text);
-                messages.append("URL:" + pair.text);
+                messages.append(QSL("URL:") + pair.text);
                 break;
             case Qz::CL_ExitAction:
                 m_isClosing = true;
@@ -703,7 +703,7 @@ void MainApplication::startPrivateBrowsing(const QUrl &startUrl)
     args.append(QSL("--profile=") + ProfileManager::currentProfile());
 
     if (!url.isEmpty()) {
-        args << url.toEncoded();
+        args << QString::fromUtf8(url.toEncoded());
     }
 
     if (!QProcess::startDetached(applicationFilePath(), args)) {
@@ -1220,7 +1220,7 @@ void MainApplication::createJumpList()
     frequent->setVisible(true);
     const QVector<HistoryEntry> mostList = m_history->mostVisited(7);
     for (const HistoryEntry &entry : mostList) {
-        frequent->addLink(IconProvider::iconForUrl(entry.url), entry.title, applicationFilePath(), QStringList{entry.url.toEncoded()});
+        frequent->addLink(IconProvider::iconForUrl(entry.url), entry.title, applicationFilePath(), QStringList{(QString::fromUtf8entry.url.toEncoded())});
     }
 
     // Tasks
@@ -1244,14 +1244,14 @@ RegisterQAppAssociation* MainApplication::associationManager()
 {
     if (!m_registerQAppAssociation) {
         QString desc = tr("Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL version 3 or (at your option) any later version. It is based on QtWebEngine and Qt Framework.");
-        QString fileIconPath = QApplication::applicationFilePath() + ",1";
-        QString appIconPath = QApplication::applicationFilePath() + ",0";
-        m_registerQAppAssociation = new RegisterQAppAssociation("Falkon", QApplication::applicationFilePath(), appIconPath, desc, this);
-        m_registerQAppAssociation->addCapability(".html", "FalkonHTML", "Falkon HTML Document", fileIconPath, RegisterQAppAssociation::FileAssociation);
-        m_registerQAppAssociation->addCapability(".htm", "FalkonHTML", "Falkon HTML Document", fileIconPath, RegisterQAppAssociation::FileAssociation);
-        m_registerQAppAssociation->addCapability("http", "FalkonURL", "Falkon URL", appIconPath, RegisterQAppAssociation::UrlAssociation);
-        m_registerQAppAssociation->addCapability("https", "FalkonURL", "Falkon URL", appIconPath, RegisterQAppAssociation::UrlAssociation);
-        m_registerQAppAssociation->addCapability("ftp", "FalkonURL", "Falkon URL", appIconPath, RegisterQAppAssociation::UrlAssociation);
+        QString fileIconPath = QApplication::applicationFilePath() + QSL(",1");
+        QString appIconPath = QApplication::applicationFilePath() + QSL(",0");
+        m_registerQAppAssociation = new RegisterQAppAssociation(QSL("Falkon"), QApplication::applicationFilePath(), appIconPath, desc, this);
+        m_registerQAppAssociation->addCapability(QSL(".html"), QSL("FalkonHTML"), QSL("Falkon HTML Document"), fileIconPath, RegisterQAppAssociation::FileAssociation);
+        m_registerQAppAssociation->addCapability(QSL(".htm"), QSL("FalkonHTML"), QSL("Falkon HTML Document"), fileIconPath, RegisterQAppAssociation::FileAssociation);
+        m_registerQAppAssociation->addCapability(QSL("http"), QSL("FalkonURL"), QSL("Falkon URL"), appIconPath, RegisterQAppAssociation::UrlAssociation);
+        m_registerQAppAssociation->addCapability(QSL("https"), QSL("FalkonURL"), QSL("Falkon URL"), appIconPath, RegisterQAppAssociation::UrlAssociation);
+        m_registerQAppAssociation->addCapability(QSL("ftp"), QSL("FalkonURL"), QSL("Falkon URL"), appIconPath, RegisterQAppAssociation::UrlAssociation);
     }
     return m_registerQAppAssociation;
 }

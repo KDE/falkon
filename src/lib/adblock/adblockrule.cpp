@@ -76,7 +76,7 @@ static QString getTopLevelDomain(const QUrl &url)
 
     //return qt_ACE_do(tld, ToAceOnly, AllowLeadingDot, {});
     // TODO QT6 - QUrl::toAce() uses ForbidLeadingDot, while the old QUrl::topLevelDomain() used AllowLeadingDot. Does this matter?
-    return QString(QUrl::toAce(tld));
+    return QString(QString::fromUtf8(QUrl::toAce(tld)));
 }
 
 static QString toSecondLevelDomain(const QUrl &url)
@@ -235,7 +235,7 @@ bool AdBlockRule::urlMatch(const QUrl &url) const
         return false;
     }
 
-    const QString encodedUrl = url.toEncoded();
+    const QString encodedUrl = QString::fromUtf8(url.toEncoded());
     const QString domain = url.host();
 
     return stringMatch(domain, encodedUrl);

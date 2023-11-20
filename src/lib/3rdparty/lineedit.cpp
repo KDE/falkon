@@ -302,7 +302,7 @@ void LineEdit::setTextFormat(const LineEdit::TextFormat &format)
 {
     QList<QInputMethodEvent::Attribute> attributes;
 
-    foreach (const QTextLayout::FormatRange &fr, format) {
+    for (const QTextLayout::FormatRange &fr : format) {
         QInputMethodEvent::AttributeType type = QInputMethodEvent::TextFormat;
         int start = fr.start - cursorPosition();
         int length = fr.length;

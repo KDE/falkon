@@ -84,8 +84,8 @@ void NetworkUrlInterceptor::loadSettings()
     QMutexLocker lock(&m_mutex);
 
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    m_sendDNT = settings.value("DoNotTrack", false).toBool();
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    m_sendDNT = settings.value(QSL("DoNotTrack"), false).toBool();
     settings.endGroup();
 
     m_usePerDomainUserAgent = mApp->userAgentManager()->usePerDomainUserAgents();

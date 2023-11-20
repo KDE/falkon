@@ -108,7 +108,7 @@ bool Updater::Version::operator <=(const Updater::Version &other) const
 
 QString Updater::Version::versionString() const
 {
-    return QString("%1.%2.%3").arg(majorVersion, minorVersion, revisionNumber);
+    return QSL("%1.%2.%3").arg(majorVersion, minorVersion, revisionNumber);
 }
 
 Updater::Updater(BrowserWindow* window, QObject* parent)
@@ -120,8 +120,8 @@ Updater::Updater(BrowserWindow* window, QObject* parent)
 
 void Updater::start()
 {
-    QUrl url = QUrl(QString("%1/update.php?v=%2&os=%3").arg(Qz::WWWADDRESS,
-                    Qz::VERSION,
+    QUrl url = QUrl(QSL("%1/update.php?v=%2&os=%3").arg(QString::fromLatin1(Qz::WWWADDRESS),
+                    QString::fromLatin1(Qz::VERSION),
                     QzTools::operatingSystem()));
 
     startDownloadingUpdateInfo(url);
@@ -140,15 +140,15 @@ void Updater::downCompleted()
     if (!reply)
         return;
 
-    QString html = reply->readAll();
+    QString html = QString::fromUtf8(reply->readAll());
 
     if (html.startsWith(QLatin1String("Version:"))) {
         html.remove(QLatin1String("Version:"));
-        Version current(Qz::VERSION);
+        Version current(QString::fromLatin1(Qz::VERSION));
         Version updated(html);
 
         if (current.isValid && updated.isValid && current < updated) {
-            mApp->desktopNotifications()->showNotification(QIcon(":icons/falkon.svg").pixmap(48), tr("Update available"), tr("New version of Falkon is ready to download."));
+            mApp->desktopNotifications()->showNotification(QIcon(QSL(":icons/falkon.svg")).pixmap(48), tr("Update available"), tr("New version of Falkon is ready to download."));
         }
     }
 

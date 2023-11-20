@@ -71,9 +71,9 @@ QAction* TabManagerWidgetController::createMenuAction()
 {
     auto* act = new QAction(tr("Tab Manager"), this);
     act->setCheckable(true);
-    act->setIcon(QIcon(":tabmanager/data/tabmanager.png"));
-    act->setShortcut(QKeySequence("Ctrl+Shift+M"));
-    act->setData("TabManager");
+    act->setIcon(QIcon(QSL(":tabmanager/data/tabmanager.png")));
+    act->setShortcut(QKeySequence(QSL("Ctrl+Shift+M")));
+    act->setData(QSL("TabManager"));
 
     return act;
 }
@@ -94,7 +94,7 @@ AbstractButtonInterface* TabManagerWidgetController::createStatusBarIcon(Browser
     }
 
     auto* icon = new TabManagerButton(this);
-    icon->setIcon(QPixmap(":tabmanager/data/tabmanager.png"));
+    icon->setIcon(QPixmap(QSL(":tabmanager/data/tabmanager.png")));
     icon->setTitle(tr("Tab Manager"));
     icon->setToolTip(tr("Show Tab Manager"));
     connect(icon, &AbstractButtonInterface::clicked, this, [=](AbstractButtonInterface::ClickController *c) {

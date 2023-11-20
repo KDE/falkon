@@ -49,82 +49,82 @@ void LocationBarTest::loadActionBasicTest()
 {
     LocationBar::LoadAction action;
 
-    action = LocationBar::loadAction("http://kde.org");
+    action = LocationBar::loadAction(QSL("http://kde.org"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://kde.org"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://kde.org")));
 
-    action = LocationBar::loadAction("kde.org");
+    action = LocationBar::loadAction(QSL("kde.org"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://kde.org"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://kde.org")));
 
-    action = LocationBar::loadAction("localhost");
+    action = LocationBar::loadAction(QSL("localhost"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://localhost"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://localhost")));
 
-    action = LocationBar::loadAction("localhost/test/path?x=2");
+    action = LocationBar::loadAction(QSL("localhost/test/path?x=2"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://localhost/test/path?x=2"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://localhost/test/path?x=2")));
 
-    action = LocationBar::loadAction("host.com/test/path?x=2");
+    action = LocationBar::loadAction(QSL("host.com/test/path?x=2"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://host.com/test/path?x=2"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://host.com/test/path?x=2")));
 
-    action = LocationBar::loadAction("not-url");
+    action = LocationBar::loadAction(QSL("not-url"));
     QCOMPARE(action.type, LocationBar::LoadAction::Search);
 
-    action = LocationBar::loadAction("not url with spaces");
+    action = LocationBar::loadAction(QSL("not url with spaces"));
     QCOMPARE(action.type, LocationBar::LoadAction::Search);
 
-    action = LocationBar::loadAction("falkon:about");
+    action = LocationBar::loadAction(QSL("falkon:about"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("falkon:about"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("falkon:about")));
 }
 
 void LocationBarTest::loadActionBookmarksTest()
 {
     auto* bookmark = new BookmarkItem(BookmarkItem::Url);
-    bookmark->setTitle("KDE Bookmark title");
-    bookmark->setUrl(QUrl("http://kde.org"));
-    bookmark->setKeyword("kde-bookmark");
+    bookmark->setTitle(QSL("KDE Bookmark title"));
+    bookmark->setUrl(QUrl(QSL("http://kde.org")));
+    bookmark->setKeyword(QSL("kde-bookmark"));
     mApp->bookmarks()->addBookmark(mApp->bookmarks()->unsortedFolder(), bookmark);
 
     LocationBar::LoadAction action;
 
-    action = LocationBar::loadAction("http://kde.org");
+    action = LocationBar::loadAction(QSL("http://kde.org"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://kde.org"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://kde.org")));
 
-    action = LocationBar::loadAction("kde-bookmark-notkeyword");
+    action = LocationBar::loadAction(QSL("kde-bookmark-notkeyword"));
     QCOMPARE(action.type, LocationBar::LoadAction::Search);
 
-    action = LocationBar::loadAction("kde-bookmark");
+    action = LocationBar::loadAction(QSL("kde-bookmark"));
     QCOMPARE(action.type, LocationBar::LoadAction::Bookmark);
     QCOMPARE(action.bookmark, bookmark);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://kde.org"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://kde.org")));
 }
 
 void LocationBarTest::loadActionSearchTest()
 {
     SearchEngine engine;
-    engine.name = "Test Engine";
-    engine.url = "http://test/%s";
-    engine.shortcut = "t";
+    engine.name = QSL("Test Engine");
+    engine.url = QSL("http://test/%s");
+    engine.shortcut = QSL("t");
     mApp->searchEnginesManager()->addEngine(engine);
     mApp->searchEnginesManager()->setActiveEngine(engine);
 
     LocationBar::LoadAction action;
 
-    action = LocationBar::loadAction("search term");
+    action = LocationBar::loadAction(QSL("search term"));
     QCOMPARE(action.type, LocationBar::LoadAction::Search);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://test/search%20term"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://test/search%20term")));
 
-    action = LocationBar::loadAction("t search term");
+    action = LocationBar::loadAction(QSL("t search term"));
     QCOMPARE(action.type, LocationBar::LoadAction::Search);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://test/search%20term"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://test/search%20term")));
 
-    action = LocationBar::loadAction(" ttt-notsearch");
+    action = LocationBar::loadAction(QSL(" ttt-notsearch"));
     QCOMPARE(action.type, LocationBar::LoadAction::Search);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://test/ttt-notsearch"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://test/ttt-notsearch")));
 }
 
 void LocationBarTest::loadAction_kdebug389491()
@@ -132,54 +132,54 @@ void LocationBarTest::loadAction_kdebug389491()
     // "site:website.com searchterm" and "link:website.com" are loaded instead of searched
 
     SearchEngine engine;
-    engine.name = "Test Engine";
-    engine.url = "http://test/%s";
-    engine.shortcut = "t";
+    engine.name = QSL("Test Engine");
+    engine.url = QSL("http://test/%s");
+    engine.shortcut = QSL("t");
     mApp->searchEnginesManager()->addEngine(engine);
     mApp->searchEnginesManager()->setActiveEngine(engine);
 
     LocationBar::LoadAction action;
 
-    action = LocationBar::loadAction("site:website.com searchterm");
+    action = LocationBar::loadAction(QSL("site:website.com searchterm"));
     QCOMPARE(action.type, LocationBar::LoadAction::Search);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://test/site%3Awebsite.com%20searchterm"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://test/site%3Awebsite.com%20searchterm")));
 
-    action = LocationBar::loadAction("link:website.com");
+    action = LocationBar::loadAction(QSL("link:website.com"));
     QCOMPARE(action.type, LocationBar::LoadAction::Search);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://test/link%3Awebsite.com"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://test/link%3Awebsite.com")));
 
-    action = LocationBar::loadAction("http://website.com?search=searchterm and another");
+    action = LocationBar::loadAction(QSL("http://website.com?search=searchterm and another"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://website.com?search=searchterm and another"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://website.com?search=searchterm and another")));
 }
 
 void LocationBarTest::loadActionSpecialSchemesTest()
 {
     LocationBar::LoadAction action;
 
-    action = LocationBar::loadAction("data:image/png;base64,xxxxx");
+    action = LocationBar::loadAction(QSL("data:image/png;base64,xxxxx"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("data:image/png;base64,xxxxx"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("data:image/png;base64,xxxxx")));
 
-    action = LocationBar::loadAction("falkon:about");
+    action = LocationBar::loadAction(QSL("falkon:about"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("falkon:about"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("falkon:about")));
 
-    action = LocationBar::loadAction("file:test.html");
+    action = LocationBar::loadAction(QSL("file:test.html"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("file:test.html"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("file:test.html")));
 
-    action = LocationBar::loadAction("about:blank");
+    action = LocationBar::loadAction(QSL("about:blank"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("about:blank"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("about:blank")));
 
-    action = LocationBar::loadAction("javascript:test");
+    action = LocationBar::loadAction(QSL("javascript:test"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("javascript:test"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("javascript:test")));
 
-    action = LocationBar::loadAction("javascript:alert(' test ');");
+    action = LocationBar::loadAction(QSL("javascript:alert(' test ');"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("javascript:alert('%20test%20');"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("javascript:alert('%20test%20');")));
 }
 
 void LocationBarTest::loadAction_issue2578()
@@ -190,27 +190,27 @@ void LocationBarTest::loadAction_issue2578()
 
     LocationBar::LoadAction action;
 
-    action = LocationBar::loadAction("github.com");
+    action = LocationBar::loadAction(QSL("github.com"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://github.com"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://github.com")));
 
-    action = LocationBar::loadAction("github");
+    action = LocationBar::loadAction(QSL("github"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://github"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://github")));
 
-    action = LocationBar::loadAction("github/test/path");
+    action = LocationBar::loadAction(QSL("github/test/path"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://github/test/path"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://github/test/path")));
 
-    action = LocationBar::loadAction("localhost");
+    action = LocationBar::loadAction(QSL("localhost"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://localhost"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://localhost")));
 
-    action = LocationBar::loadAction("localhost/test/path");
+    action = LocationBar::loadAction(QSL("localhost/test/path"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://localhost/test/path"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://localhost/test/path")));
 
-    action = LocationBar::loadAction("github.com foo bar");
+    action = LocationBar::loadAction(QSL("github.com foo bar"));
     QCOMPARE(action.type, LocationBar::LoadAction::Invalid);
 }
 
@@ -222,9 +222,9 @@ void LocationBarTest::loadAction_kdebug392445()
 
     LocationBar::LoadAction action;
 
-    action = LocationBar::loadAction("http://www.example.com/my%20beautiful%20page");
+    action = LocationBar::loadAction(QSL("http://www.example.com/my%20beautiful%20page"));
     QCOMPARE(action.type, LocationBar::LoadAction::Url);
-    QCOMPARE(action.loadRequest.url(), QUrl("http://www.example.com/my%20beautiful%20page"));
+    QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://www.example.com/my%20beautiful%20page")));
 }
 
 FALKONTEST_MAIN(LocationBarTest)

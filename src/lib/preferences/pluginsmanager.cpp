@@ -42,8 +42,8 @@ PluginsManager::PluginsManager(QWidget* parent)
 
     //Application Extensions
     Settings settings;
-    settings.beginGroup("Plugin-Settings");
-    bool appPluginsEnabled = settings.value("EnablePlugins", true).toBool();
+    settings.beginGroup(QSL("Plugin-Settings"));
+    bool appPluginsEnabled = settings.value(QSL("EnablePlugins"), true).toBool();
     settings.endGroup();
 
     ui->list->setEnabled(appPluginsEnabled);
@@ -83,8 +83,8 @@ void PluginsManager::save()
     }
 
     Settings settings;
-    settings.beginGroup("Plugin-Settings");
-    settings.setValue("AllowedPlugins", allowedPlugins);
+    settings.beginGroup(QSL("Plugin-Settings"));
+    settings.setValue(QSL("AllowedPlugins"), allowedPlugins);
     settings.endGroup();
 }
 

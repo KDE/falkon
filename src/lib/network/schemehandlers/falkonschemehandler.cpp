@@ -53,7 +53,7 @@ void FalkonSchemeHandler::requestStarted(QWebEngineUrlRequestJob *job)
     }
 
     QStringList knownPages;
-    knownPages << "about" << "start" << "speeddial" << "config" << "restore";
+    knownPages << QSL("about") << QSL("start") << QSL("speeddial") << QSL("config") << QSL("restore");
 
     if (knownPages.contains(job->requestUrl().path()))
         job->reply(QByteArrayLiteral("text/html"), new FalkonSchemeReply(job, job));
@@ -76,7 +76,7 @@ bool FalkonSchemeHandler::handleRequest(QWebEngineUrlRequestJob *job)
         job->redirect(QUrl(QSL("falkon:start")));
         return true;
     } else if (job->requestUrl().path() == QL1S("reportbug")) {
-        job->redirect(QUrl(Qz::BUGSADDRESS));
+        job->redirect(QUrl(QString::fromLatin1(Qz::BUGSADDRESS)));
         return true;
     }
 
@@ -149,14 +149,14 @@ QString FalkonSchemeReply::startPage()
         return sPage;
     }
 
-    sPage.append(QzTools::readAllFileContents(":html/start.html"));
+    sPage.append(QzTools::readAllFileContents(QSL(":html/start.html")));
     sPage.replace(QLatin1String("%ABOUT-IMG%"), QSL("qrc:icons/other/startpage.svg"));
     sPage.replace(QLatin1String("%ABOUT-IMG-DARK%"), QSL("qrc:icons/other/startpage-dark.svg"));
 
     sPage.replace(QLatin1String("%TITLE%"), tr("Start Page"));
     sPage.replace(QLatin1String("%BUTTON-LABEL%"), tr("Search on Web"));
     sPage.replace(QLatin1String("%SEARCH-BY%"), tr("Search results provided by DuckDuckGo"));
-    sPage.replace(QLatin1String("%WWW%"), Qz::WIKIADDRESS);
+    sPage.replace(QLatin1String("%WWW%"), QString::fromLatin1(Qz::WIKIADDRESS));
     sPage.replace(QLatin1String("%ABOUT-FALKON%"), tr("About Falkon"));
     sPage.replace(QLatin1String("%PRIVATE-BROWSING%"), mApp->isPrivate() ? tr("<h1>Private Browsing</h1>") : QString());
     sPage = QzTools::applyDirectionToPage(sPage);
@@ -169,10 +169,10 @@ QString FalkonSchemeReply::aboutPage()
     static QString aPage;
 
     if (aPage.isEmpty()) {
-        aPage.append(QzTools::readAllFileContents(":html/about.html"));
+        aPage.append(QzTools::readAllFileContents(QSL(":html/about.html")));
         aPage.replace(QLatin1String("%ABOUT-IMG%"), QSL("qrc:icons/other/about.svg"));
         aPage.replace(QLatin1String("%ABOUT-IMG-DARK%"), QSL("qrc:icons/other/about-dark.svg"));
-        aPage.replace(QLatin1String("%COPYRIGHT-INCLUDE%"), QzTools::readAllFileContents(":html/copyright").toHtmlEscaped());
+        aPage.replace(QLatin1String("%COPYRIGHT-INCLUDE%"), QzTools::readAllFileContents(QSL(":html/copyright")).toHtmlEscaped());
 
         aPage.replace(QLatin1String("%TITLE%"), tr("About Falkon"));
         aPage.replace(QLatin1String("%ABOUT-FALKON%"), tr("About Falkon"));
@@ -180,15 +180,15 @@ QString FalkonSchemeReply::aboutPage()
         aPage.replace(QLatin1String("%COPYRIGHT%"), tr("Copyright"));
 
         aPage.replace(QLatin1String("%VERSION-INFO%"),
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Version"),
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Version"),
 #ifdef FALKON_GIT_REVISION
-                              QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)));
+                              QSL("%1 (%2)").arg(QString::fromLatin1(Qz::VERSION), QL1S(FALKON_GIT_REVISION))));
 #else
-                              Qz::VERSION));
+                              QString::fromLatin1(Qz::VERSION)));
 #endif
 
         aPage.replace(QLatin1String("%MAIN-DEVELOPER%"), tr("Main developer"));
-        aPage.replace(QLatin1String("%MAIN-DEVELOPER-TEXT%"), authorString(Qz::AUTHOR, "nowrep@gmail.com"));
+        aPage.replace(QLatin1String("%MAIN-DEVELOPER-TEXT%"), authorString(Qz::AUTHOR, QSL("nowrep@gmail.com")));
         aPage = QzTools::applyDirectionToPage(aPage);
     }
 
@@ -200,7 +200,7 @@ QString FalkonSchemeReply::speeddialPage()
     static QString dPage;
 
     if (dPage.isEmpty()) {
-        dPage.append(QzTools::readAllFileContents(":html/speeddial.html"));
+        dPage.append(QzTools::readAllFileContents(QSL(":html/speeddial.html")));
         dPage.replace(QLatin1String("%IMG_PLUS%"), QLatin1String("qrc:html/plus.svg"));
         dPage.replace(QLatin1String("%IMG_CLOSE%"), QLatin1String("qrc:html/close.svg"));
         dPage.replace(QLatin1String("%IMG_EDIT%"), QLatin1String("qrc:html/edit.svg"));
@@ -240,7 +240,7 @@ QString FalkonSchemeReply::speeddialPage()
     QString page = dPage;
     SpeedDial* dial = mApp->plugins()->speedDial();
 
-    page.replace(QLatin1String("%INITIAL-SCRIPT%"), dial->initialScript().toUtf8().toBase64());
+    page.replace(QLatin1String("%INITIAL-SCRIPT%"), QString::fromLatin1(dial->initialScript().toUtf8().toBase64()));
     page.replace(QLatin1String("%IMG_BACKGROUND%"), dial->backgroundImage());
     page.replace(QLatin1String("%URL_BACKGROUND%"), dial->backgroundImageUrl());
     page.replace(QLatin1String("%B_SIZE%"), dial->backgroundImageSize());
@@ -256,7 +256,7 @@ QString FalkonSchemeReply::restorePage()
     static QString rPage;
 
     if (rPage.isEmpty()) {
-        rPage.append(QzTools::readAllFileContents(":html/restore.html"));
+        rPage.append(QzTools::readAllFileContents(QSL(":html/restore.html")));
         rPage.replace(QLatin1String("%IMAGE%"), QzTools::pixmapToDataUrl(IconProvider::standardIcon(QStyle::SP_MessageBoxWarning).pixmap(45)).toString());
         rPage.replace(QLatin1String("%TITLE%"), tr("Restore Session"));
         rPage.replace(QLatin1String("%OOPS%"), tr("Oops, Falkon crashed."));
@@ -279,7 +279,7 @@ QString FalkonSchemeReply::configPage()
     static QString cPage;
 
     if (cPage.isEmpty()) {
-        cPage.append(QzTools::readAllFileContents(":html/config.html"));
+        cPage.append(QzTools::readAllFileContents(QSL(":html/config.html")));
         cPage.replace(QLatin1String("%ABOUT-IMG%"), QSL("qrc:icons/other/about.svg"));
         cPage.replace(QLatin1String("%ABOUT-IMG-DARK%"), QSL("qrc:icons/other/about-dark.svg"));
 
@@ -312,24 +312,24 @@ QString FalkonSchemeReply::configPage()
         };
 
         cPage.replace(QLatin1String("%VERSION-INFO%"),
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Application version"),
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Application version"),
 #ifdef FALKON_GIT_REVISION
-                              QString("%1 (%2)").arg(Qz::VERSION, FALKON_GIT_REVISION)
+                              QSL("%1 (%2)").arg(QString::fromLatin1(Qz::VERSION), QL1S(FALKON_GIT_REVISION))
 #else
-                              Qz::VERSION
+                              QString::fromLatin1(Qz::VERSION)
 #endif
                                                           ) +
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Qt version"), qVersion()) +
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("QtWebEngine version"), QSL(QTWEBENGINECORE_VERSION_STR)) +
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Platform"), QzTools::operatingSystemLong()));
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Qt version"), QString::fromLatin1(qVersion())) +
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("QtWebEngine version"), QSL(QTWEBENGINECORE_VERSION_STR)) +
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Platform"), QzTools::operatingSystemLong()));
 
         cPage.replace(QLatin1String("%PATHS-TEXT%"),
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Profile"), DataPaths::currentProfilePath()) +
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Settings"), DataPaths::currentProfilePath() + "/settings.ini") +
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Saved session"), SessionManager::defaultSessionPath()) +
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Data"), allPaths(DataPaths::AppData)) +
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Themes"), allPaths(DataPaths::Themes)) +
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Extensions"), allPaths(DataPaths::Plugins)));
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Profile"), DataPaths::currentProfilePath()) +
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Settings"), DataPaths::currentProfilePath() + QSL("/settings.ini")) +
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Saved session"), SessionManager::defaultSessionPath()) +
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Data"), allPaths(DataPaths::AppData)) +
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Themes"), allPaths(DataPaths::Themes)) +
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Extensions"), allPaths(DataPaths::Plugins)));
 
 #ifdef QT_DEBUG
         QString debugBuild = tr("<b>Enabled</b>");
@@ -348,11 +348,11 @@ QString FalkonSchemeReply::configPage()
         QString portableBuild = mApp->isPortable() ? tr("<b>Enabled</b>") : tr("Disabled");
 
         cPage.replace(QLatin1String("%BUILD-CONFIG-TEXT%"),
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Debug build"), debugBuild) +
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Debug build"), debugBuild) +
 #ifdef Q_OS_WIN
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Windows 7 API"), w7APIEnabled) +
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Windows 7 API"), w7APIEnabled) +
 #endif
-                      QString("<dt>%1</dt><dd>%2<dd>").arg(tr("Portable build"), portableBuild));
+                      QSL("<dt>%1</dt><dd>%2<dd>").arg(tr("Portable build"), portableBuild));
 
         cPage = QzTools::applyDirectionToPage(cPage);
     }
@@ -365,12 +365,12 @@ QString FalkonSchemeReply::configPage()
 
     for (const Plugins::Plugin &plugin : availablePlugins) {
         PluginSpec spec = plugin.pluginSpec;
-        pluginsString.append(QString("<tr><td>%1</td><td>%2</td><td>%3</td><td>%4</td></tr>").arg(
+        pluginsString.append(QSL("<tr><td>%1</td><td>%2</td><td>%3</td><td>%4</td></tr>").arg(
                                  spec.name, spec.version, spec.author.toHtmlEscaped(), spec.description));
     }
 
     if (pluginsString.isEmpty()) {
-        pluginsString = QString("<tr><td colspan=4 class=\"no-available-plugins\">%1</td></tr>").arg(tr("No available extensions."));
+        pluginsString = QSL("<tr><td colspan=4 class=\"no-available-plugins\">%1</td></tr>").arg(tr("No available extensions."));
     }
 
     page.replace(QLatin1String("%PLUGINS-INFO%"), pluginsString);
@@ -379,7 +379,7 @@ QString FalkonSchemeReply::configPage()
     QSettings* settings = Settings::globalSettings();
     const auto groups = settings->childGroups();
     for (const QString &group : groups) {
-        QString groupString = QString("<tr><th colspan=\"2\">[%1]</th></tr>").arg(group);
+        QString groupString = QSL("<tr><th colspan=\"2\">[%1]</th></tr>").arg(group);
         settings->beginGroup(group);
 
         const auto keys = settings->childKeys();
@@ -394,12 +394,12 @@ QString FalkonSchemeReply::configPage()
 
             case QVariant::Point: {
                 const QPoint point = keyValue.toPoint();
-                keyString = QString("QPoint(%1, %2)").arg(point.x()).arg(point.y());
+                keyString = QSL("QPoint(%1, %2)").arg(point.x()).arg(point.y());
                 break;
             }
 
             case QVariant::StringList:
-                keyString = keyValue.toStringList().join(",");
+                keyString = keyValue.toStringList().join(QSL(","));
                 break;
 
             default:
@@ -410,7 +410,7 @@ QString FalkonSchemeReply::configPage()
                 keyString = QLatin1String("\"empty\"");
             }
 
-            groupString.append(QString("<tr><td>%1</td><td>%2</td></tr>").arg(key, keyString.toHtmlEscaped()));
+            groupString.append(QSL("<tr><td>%1</td><td>%2</td></tr>").arg(key, keyString.toHtmlEscaped()));
         }
 
         settings->endGroup();

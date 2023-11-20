@@ -150,8 +150,8 @@ void WebSearchBar::openSearchEnginesDialog()
 void WebSearchBar::enableSearchSuggestions(bool enable)
 {
     Settings settings;
-    settings.beginGroup("SearchEngines");
-    settings.setValue("showSuggestions", enable);
+    settings.beginGroup(QSL("SearchEngines"));
+    settings.setValue(QSL("showSuggestions"), enable);
     settings.endGroup();
 
     qzSettings->showWSBSearchSuggestions = enable;
@@ -213,8 +213,8 @@ void WebSearchBar::searchChanged(const ButtonWithMenu::Item &item)
 void WebSearchBar::instantSearchChanged(bool enable)
 {
     Settings settings;
-    settings.beginGroup("SearchEngines");
-    settings.setValue("SearchOnEngineChange", enable);
+    settings.beginGroup(QSL("SearchEngines"));
+    settings.setValue(QSL("SearchOnEngineChange"), enable);
     settings.endGroup();
     qzSettings->searchOnEngineChange = enable;
 }

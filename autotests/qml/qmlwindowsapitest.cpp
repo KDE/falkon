@@ -32,13 +32,13 @@ void QmlWindowsApiTest::cleanupTestCase()
 
 void QmlWindowsApiTest::testWindowsAPI()
 {
-    QObject *currentWindowObject = m_testHelper.evaluateQObject("Falkon.Windows.getCurrent()");
+    QObject *currentWindowObject = m_testHelper.evaluateQObject(QSL("Falkon.Windows.getCurrent()"));
     QVERIFY(currentWindowObject);
     QCOMPARE(currentWindowObject->property("title").toString(), mApp->getWindow()->windowTitle());
     QCOMPARE(currentWindowObject->property("type").toInt(), (int)mApp->getWindow()->windowType());
     QCOMPARE(currentWindowObject->property("tabs").toList().length(), mApp->getWindow()->tabCount());
 
-    QObject *windowObject = m_testHelper.evaluateQObject("Falkon.Windows");
+    QObject *windowObject = m_testHelper.evaluateQObject(QSL("Falkon.Windows"));
     QVERIFY(windowObject);
     QSignalSpy qmlWindowCreatedSignal(windowObject, SIGNAL(created(QmlWindow*)));
     qRegisterMetaType<BrowserWindow*>();
@@ -48,7 +48,7 @@ void QmlWindowsApiTest::testWindowsAPI()
     QTRY_COMPARE(qmlWindowCreatedSignal.count(), 1);
     QTRY_COMPARE(windowCreatedSingal.count(), 1);
 
-    QObject *newQmlWindow = m_testHelper.evaluateQObject("Falkon.Windows.create({})");
+    QObject *newQmlWindow = m_testHelper.evaluateQObject(QSL("Falkon.Windows.create({})"));
     QVERIFY(newQmlWindow);
     QCOMPARE(mApp->windowCount(), 2);
 
@@ -60,12 +60,12 @@ void QmlWindowsApiTest::testWindowsAPI()
     QVERIFY(newQmlSignalWindow);
     QCOMPARE(newQmlWindow->property("id").toInt(), newQmlSignalWindow->property("id").toInt());
 
-    int qmlWindowCount = m_testHelper.evaluate("Falkon.Windows.getAll().length").toInt();
+    int qmlWindowCount = m_testHelper.evaluate(QSL("Falkon.Windows.getAll().length")).toInt();
     QCOMPARE(qmlWindowCount, mApp->windowCount());
 
     QSignalSpy qmlWindowRemovedSignal(windowObject, SIGNAL(removed(QmlWindow*)));
     int newQmlWindowId = newQmlSignalWindow->property("id").toInt();
-    m_testHelper.evaluate(QString("Falkon.Windows.remove(%1)").arg(newQmlWindowId));
+    m_testHelper.evaluate(QString(QSL("Falkon.Windows.remove(%1)")).arg(newQmlWindowId));
     QTRY_COMPARE(qmlWindowRemovedSignal.count(), 1);
 }
 

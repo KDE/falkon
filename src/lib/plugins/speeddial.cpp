@@ -53,28 +53,28 @@ void SpeedDial::loadSettings()
     m_loaded = true;
 
     Settings settings;
-    settings.beginGroup("SpeedDial");
-    QString allPages = settings.value("pages", QString()).toString();
-    setBackgroundImage(settings.value("background", QString()).toString());
-    m_backgroundImageSize = settings.value("backsize", "auto").toString();
-    m_maxPagesInRow = settings.value("pagesrow", 4).toInt();
-    m_sizeOfSpeedDials = settings.value("sdsize", 231).toInt();
-    m_sdcentered = settings.value("sdcenter", false).toBool();
+    settings.beginGroup(QSL("SpeedDial"));
+    QString allPages = settings.value(QSL("pages"), QString()).toString();
+    setBackgroundImage(settings.value(QSL("background"), QString()).toString());
+    m_backgroundImageSize = settings.value(QSL("backsize"), QSL("auto")).toString();
+    m_maxPagesInRow = settings.value(QSL("pagesrow"), 4).toInt();
+    m_sizeOfSpeedDials = settings.value(QSL("sdsize"), 231).toInt();
+    m_sdcentered = settings.value(QSL("sdcenter"), false).toBool();
     settings.endGroup();
 
     if (allPages.isEmpty()) {
-        allPages = "url:\"https://www.falkon.org\"|title:\"Falkon\";"
-                   "url:\"https://store.falkon.org\"|title:\"Falkon Store\";"
-                   "url:\"https://www.kde.org\"|title:\"KDE Planet\";"
-                   "url:\"https://planet.kde.org\"|title:\"KDE Community\";";
+        allPages = QL1S("url:\"https://www.falkon.org\"|title:\"Falkon\";"
+                        "url:\"https://store.falkon.org\"|title:\"Falkon Store\";"
+                        "url:\"https://www.kde.org\"|title:\"KDE Planet\";"
+                        "url:\"https://planet.kde.org\"|title:\"KDE Community\";");
     }
     changed(allPages);
 
-    m_thumbnailsDir = DataPaths::currentProfilePath() + "/thumbnails/";
+    m_thumbnailsDir = DataPaths::currentProfilePath() + QSL("/thumbnails/");
 
     // If needed, create thumbnails directory
     if (!QDir(m_thumbnailsDir).exists()) {
-        QDir(DataPaths::currentProfilePath()).mkdir("thumbnails");
+        QDir(DataPaths::currentProfilePath()).mkdir(QSL("thumbnails"));
     }
 }
 
@@ -83,13 +83,13 @@ void SpeedDial::saveSettings()
     ENSURE_LOADED;
 
     Settings settings;
-    settings.beginGroup("SpeedDial");
-    settings.setValue("pages", generateAllPages());
-    settings.setValue("background", m_backgroundImageUrl);
-    settings.setValue("backsize", m_backgroundImageSize);
-    settings.setValue("pagesrow", m_maxPagesInRow);
-    settings.setValue("sdsize", m_sizeOfSpeedDials);
-    settings.setValue("sdcenter", m_sdcentered);
+    settings.beginGroup(QSL("SpeedDial"));
+    settings.setValue(QSL("pages"), generateAllPages());
+    settings.setValue(QSL("background"), m_backgroundImageUrl);
+    settings.setValue(QSL("backsize"), m_backgroundImageSize);
+    settings.setValue(QSL("pagesrow"), m_maxPagesInRow);
+    settings.setValue(QSL("sdsize"), m_sizeOfSpeedDials);
+    settings.setValue(QSL("sdcenter"), m_sdcentered);
     settings.endGroup();
 }
 
@@ -208,10 +208,10 @@ QString SpeedDial::initialScript()
     QVariantList pages;
 
     for (const Page &page : qAsConst(m_pages)) {
-        QString imgSource = m_thumbnailsDir + QCryptographicHash::hash(page.url.toUtf8(), QCryptographicHash::Md4).toHex() + ".png";
+        QString imgSource = m_thumbnailsDir + QString::fromLatin1(QCryptographicHash::hash(page.url.toUtf8(), QCryptographicHash::Md4).toHex()) + QSL(".png");
 
         if (!QFile(imgSource).exists()) {
-            imgSource = "qrc:html/loading.gif";
+            imgSource = QSL("qrc:html/loading.gif");
 
             if (!page.isValid()) {
                 imgSource.clear();
@@ -228,7 +228,7 @@ QString SpeedDial::initialScript()
         pages.append(map);
     }
 
-    m_initialScript = QJsonDocument::fromVariant(pages).toJson(QJsonDocument::Compact);
+    m_initialScript = QString::fromUtf8(QJsonDocument::fromVariant(pages).toJson(QJsonDocument::Compact));
     return m_initialScript;
 }
 
@@ -273,7 +273,7 @@ void SpeedDial::loadThumbnail(const QString &url, bool loadTitle)
 
 void SpeedDial::removeImageForUrl(const QString &url)
 {
-    QString fileName = m_thumbnailsDir + QCryptographicHash::hash(url.toUtf8(), QCryptographicHash::Md4).toHex() + ".png";
+    QString fileName = m_thumbnailsDir + QString::fromLatin1(QCryptographicHash::hash(url.toUtf8(), QCryptographicHash::Md4).toHex()) + QSL(".png");
 
     if (QFile(fileName).exists()) {
         QFile(fileName).remove();
@@ -282,13 +282,13 @@ void SpeedDial::removeImageForUrl(const QString &url)
 
 QStringList SpeedDial::getOpenFileName()
 {
-    const QString fileTypes = QString("%3(*.png *.jpg *.jpeg *.bmp *.gif *.svg *.tiff)").arg(tr("Image files"));
-    const QString image = QzTools::getOpenFileName("SpeedDial-GetOpenFileName", 0, tr("Click to select image..."), QDir::homePath(), fileTypes);
+    const QString fileTypes = QSL("%3(*.png *.jpg *.jpeg *.bmp *.gif *.svg *.tiff)").arg(tr("Image files"));
+    const QString image = QzTools::getOpenFileName(QSL("SpeedDial-GetOpenFileName"), 0, tr("Click to select image..."), QDir::homePath(), fileTypes);
 
     if (image.isEmpty())
         return {};
 
-    return {QzTools::pixmapToDataUrl(QPixmap(image)).toString(), QUrl::fromLocalFile(image).toEncoded()};
+    return {QzTools::pixmapToDataUrl(QPixmap(image)).toString(), QString::fromUtf8(QUrl::fromLocalFile(image).toEncoded())};
 }
 
 QString SpeedDial::urlFromUserInput(const QString &url)
@@ -334,10 +334,10 @@ void SpeedDial::thumbnailCreated(const QPixmap &pixmap)
     bool loadTitle = thumbnailer->loadTitle();
     QString title = thumbnailer->title();
     QString url = thumbnailer->url().toString();
-    QString fileName = m_thumbnailsDir + QCryptographicHash::hash(url.toUtf8(), QCryptographicHash::Md4).toHex() + ".png";
+    QString fileName = m_thumbnailsDir + QString::fromLatin1(QCryptographicHash::hash(url.toUtf8(), QCryptographicHash::Md4).toHex()) + QSL(".png");
 
     if (pixmap.isNull()) {
-        fileName = ":/html/broken-page.svg";
+        fileName = QSL(":/html/broken-page.svg");
         title = tr("Unable to load");
     }
     else {
@@ -375,7 +375,7 @@ QString SpeedDial::generateAllPages()
     QString allPages;
 
     for (const Page &page : qAsConst(m_pages)) {
-        const QString string = QString(R"(url:"%1"|title:"%2";)").arg(page.url, page.title);
+        const QString string = QSL(R"(url:"%1"|title:"%2";)").arg(page.url, page.title);
         allPages.append(string);
     }
 

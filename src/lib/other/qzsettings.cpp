@@ -26,52 +26,52 @@ QzSettings::QzSettings()
 void QzSettings::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("AddressBar");
-    selectAllOnDoubleClick = settings.value("SelectAllTextOnDoubleClick", true).toBool();
-    selectAllOnClick = settings.value("SelectAllTextOnClick", false).toBool();
-    showLoadingProgress = settings.value("ShowLoadingProgress", false).toBool();
-    showLocationSuggestions = settings.value("showSuggestions", 0).toInt();
-    showSwitchTab = settings.value("showSwitchTab", true).toBool();
-    alwaysShowGoIcon = settings.value("alwaysShowGoIcon", false).toBool();
-    useInlineCompletion = settings.value("useInlineCompletion", true).toBool();
-    showZoomLabel = settings.value("showZoomLabel", true).toBool();
-    completionPopupExpandToWindow = settings.value("CompletionPopupExpandToWindow", false).toBool();
+    settings.beginGroup(QSL("AddressBar"));
+    selectAllOnDoubleClick = settings.value(QSL("SelectAllTextOnDoubleClick"), true).toBool();
+    selectAllOnClick = settings.value(QSL("SelectAllTextOnClick"), false).toBool();
+    showLoadingProgress = settings.value(QSL("ShowLoadingProgress"), false).toBool();
+    showLocationSuggestions = settings.value(QSL("showSuggestions"), 0).toInt();
+    showSwitchTab = settings.value(QSL("showSwitchTab"), true).toBool();
+    alwaysShowGoIcon = settings.value(QSL("alwaysShowGoIcon"), false).toBool();
+    useInlineCompletion = settings.value(QSL("useInlineCompletion"), true).toBool();
+    showZoomLabel = settings.value(QSL("showZoomLabel"), true).toBool();
+    completionPopupExpandToWindow = settings.value(QSL("CompletionPopupExpandToWindow"), false).toBool();
     settings.endGroup();
 
-    settings.beginGroup("SearchEngines");
-    searchOnEngineChange = settings.value("SearchOnEngineChange", true).toBool();
-    searchFromAddressBar = settings.value("SearchFromAddressBar", true).toBool();
-    searchWithDefaultEngine = settings.value("SearchWithDefaultEngine", true).toBool();
-    showABSearchSuggestions = settings.value("showSearchSuggestions", true).toBool();
-    showWSBSearchSuggestions = settings.value("showSuggestions", true).toBool();
+    settings.beginGroup(QSL("SearchEngines"));
+    searchOnEngineChange = settings.value(QSL("SearchOnEngineChange"), true).toBool();
+    searchFromAddressBar = settings.value(QSL("SearchFromAddressBar"), true).toBool();
+    searchWithDefaultEngine = settings.value(QSL("SearchWithDefaultEngine"), true).toBool();
+    showABSearchSuggestions = settings.value(QSL("showSearchSuggestions"), true).toBool();
+    showWSBSearchSuggestions = settings.value(QSL("showSuggestions"), true).toBool();
     settings.endGroup();
 
-    settings.beginGroup("Web-Browser-Settings");
-    defaultZoomLevel = settings.value("DefaultZoomLevel", WebView::zoomLevels().indexOf(100)).toInt();
-    loadTabsOnActivation = settings.value("LoadTabsOnActivation", true).toBool();
-    autoOpenProtocols = settings.value("AutomaticallyOpenProtocols", QStringList()).toStringList();
-    blockedProtocols = settings.value("BlockOpeningProtocols", QStringList()).toStringList();
-    allowedSchemes = settings.value("AllowedSchemes", QStringList()).toStringList();
-    blockedSchemes = settings.value("BlockedSchemes", QStringList()).toStringList();
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    defaultZoomLevel = settings.value(QSL("DefaultZoomLevel"), WebView::zoomLevels().indexOf(100)).toInt();
+    loadTabsOnActivation = settings.value(QSL("LoadTabsOnActivation"), true).toBool();
+    autoOpenProtocols = settings.value(QSL("AutomaticallyOpenProtocols"), QStringList()).toStringList();
+    blockedProtocols = settings.value(QSL("BlockOpeningProtocols"), QStringList()).toStringList();
+    allowedSchemes = settings.value(QSL("AllowedSchemes"), QStringList()).toStringList();
+    blockedSchemes = settings.value(QSL("BlockedSchemes"), QStringList()).toStringList();
     settings.endGroup();
 
-    settings.beginGroup("Browser-Tabs-Settings");
-    newTabPosition = settings.value("OpenNewTabsSelected", false).toBool() ? Qz::NT_CleanSelectedTab : Qz::NT_CleanNotSelectedTab;
-    tabsOnTop = settings.value("TabsOnTop", true).toBool();
-    openPopupsInTabs = settings.value("OpenPopupsInTabs", false).toBool();
-    alwaysSwitchTabsWithWheel = settings.value("AlwaysSwitchTabsWithWheel", false).toBool();
+    settings.beginGroup(QSL("Browser-Tabs-Settings"));
+    newTabPosition = settings.value(QSL("OpenNewTabsSelected"), false).toBool() ? Qz::NT_CleanSelectedTab : Qz::NT_CleanNotSelectedTab;
+    tabsOnTop = settings.value(QSL("TabsOnTop"), true).toBool();
+    openPopupsInTabs = settings.value(QSL("OpenPopupsInTabs"), false).toBool();
+    alwaysSwitchTabsWithWheel = settings.value(QSL("AlwaysSwitchTabsWithWheel"), false).toBool();
     settings.endGroup();
 }
 
 void QzSettings::saveSettings()
 {
     Settings settings;
-    settings.beginGroup("Web-Browser-Settings");
-    settings.setValue("AutomaticallyOpenProtocols", autoOpenProtocols);
-    settings.setValue("BlockOpeningProtocols", blockedProtocols);
+    settings.beginGroup(QSL("Web-Browser-Settings"));
+    settings.setValue(QSL("AutomaticallyOpenProtocols"), autoOpenProtocols);
+    settings.setValue(QSL("BlockOpeningProtocols"), blockedProtocols);
     settings.endGroup();
 
-    settings.beginGroup("Browser-Tabs-Settings");
-    settings.setValue("TabsOnTop", tabsOnTop);
+    settings.beginGroup(QSL("Browser-Tabs-Settings"));
+    settings.setValue(QSL("TabsOnTop"), tabsOnTop);
     settings.endGroup();
 }

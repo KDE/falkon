@@ -37,9 +37,9 @@ BrowsingLibrary::BrowsingLibrary(BrowserWindow* window, QWidget* parent)
     ui->setupUi(this);
 
     Settings settings;
-    settings.beginGroup("BrowsingLibrary");
-    resize(settings.value("size", QSize(760, 470)).toSize());
-    m_historyManager->restoreState(settings.value("historyState", QByteArray()).toByteArray());
+    settings.beginGroup(QSL("BrowsingLibrary"));
+    resize(settings.value(QSL("size"), QSize(760, 470)).toSize());
+    m_historyManager->restoreState(settings.value(QSL("historyState"), QByteArray()).toByteArray());
     settings.endGroup();
 
     QzTools::centerWidgetOnScreen(this);
@@ -65,7 +65,7 @@ BrowsingLibrary::BrowsingLibrary(BrowserWindow* window, QWidget* parent)
     connect(ui->tabs, &FancyTabWidget::CurrentChanged, ui->searchLine, &QLineEdit::clear);
     connect(ui->searchLine, &QLineEdit::textChanged, this, &BrowsingLibrary::search);
 
-    QzTools::setWmClass("Browsing Library", this);
+    QzTools::setWmClass(QSL("Browsing Library"), this);
 }
 
 void BrowsingLibrary::search()
@@ -113,9 +113,9 @@ void BrowsingLibrary::showBookmarks(BrowserWindow* window)
 void BrowsingLibrary::closeEvent(QCloseEvent* e)
 {
     Settings settings;
-    settings.beginGroup("BrowsingLibrary");
-    settings.setValue("size", size());
-    settings.setValue("historyState", m_historyManager->saveState());
+    settings.beginGroup(QSL("BrowsingLibrary"));
+    settings.setValue(QSL("size"), size());
+    settings.setValue(QSL("historyState"), m_historyManager->saveState());
     settings.endGroup();
     e->accept();
 }

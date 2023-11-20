@@ -53,7 +53,7 @@ TabContextMenu::TabContextMenu(int index, BrowserWindow *window, Options options
 static bool canCloseTabs(const QString &settingsKey, const QString &title, const QString &description)
 {
     Settings settings;
-    bool ask = settings.value("Browser-Tabs-Settings/" + settingsKey, true).toBool();
+    bool ask = settings.value(QSL("Browser-Tabs-Settings/") + settingsKey, true).toBool();
 
     if (ask) {
         CheckBoxDialog dialog(QMessageBox::Yes | QMessageBox::No, mApp->activeWindow());
@@ -68,7 +68,7 @@ static bool canCloseTabs(const QString &settingsKey, const QString &title, const
         }
 
         if (dialog.isChecked()) {
-            settings.setValue("Browser-Tabs-Settings/" + settingsKey, false);
+            settings.setValue(QSL("Browser-Tabs-Settings/") + settingsKey, false);
         }
     }
 
@@ -120,10 +120,10 @@ void TabContextMenu::init()
             addAction(QIcon::fromTheme(QSL("view-refresh")), tr("&Reload Tab"), this, SLOT(reloadTab()));
         }
 
-        addAction(QIcon::fromTheme("tab-duplicate"), tr("&Duplicate Tab"), this, SLOT(duplicateTab()));
+        addAction(QIcon::fromTheme(QSL("tab-duplicate")), tr("&Duplicate Tab"), this, SLOT(duplicateTab()));
 
         if (m_options & ShowDetachTabAction && (mApp->windowCount() > 1 || tabWidget->count() > 1)) {
-            addAction(QIcon::fromTheme("tab-detach"), tr("D&etach Tab"), this, SLOT(detachTab()));
+            addAction(QIcon::fromTheme(QSL("tab-detach")), tr("D&etach Tab"), this, SLOT(detachTab()));
         }
 
         addAction(webTab->isPinned() ? tr("Un&pin Tab") : tr("&Pin Tab"), this, &TabContextMenu::pinTab);
@@ -148,7 +148,7 @@ void TabContextMenu::init()
         }
 
         addAction(m_window->action(QSL("Other/RestoreClosedTab")));
-        addAction(QIcon::fromTheme("window-close"), tr("Cl&ose Tab"), this, &TabContextMenu::closeTab);
+        addAction(QIcon::fromTheme(QSL("window-close")), tr("Cl&ose Tab"), this, &TabContextMenu::closeTab);
     } else {
         addAction(IconProvider::newTabIcon(), tr("&New tab"), m_window, &BrowserWindow::addTab);
         addSeparator();

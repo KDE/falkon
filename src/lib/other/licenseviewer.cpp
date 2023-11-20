@@ -32,7 +32,7 @@ LicenseViewer::LicenseViewer(QWidget* parent)
     m_textBrowser = new QTextBrowser(this);
 
     QFont serifFont = m_textBrowser->font();
-    serifFont.setFamily("Courier");
+    serifFont.setFamily(QSL("Courier"));
     m_textBrowser->setFont(serifFont);
 
     auto* buttonBox = new QDialogButtonBox(this);

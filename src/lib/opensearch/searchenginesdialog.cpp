@@ -108,7 +108,7 @@ void SearchEnginesDialog::editEngine()
 
     dialog.setName(engine.name);
     dialog.setUrl(engine.url);
-    dialog.setPostData(engine.postData);
+    dialog.setPostData(QString::fromUtf8(engine.postData));
     dialog.setShortcut(engine.shortcut);
     dialog.setIcon(engine.icon);
 

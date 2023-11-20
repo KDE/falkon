@@ -31,7 +31,7 @@ DownloadOptionsDialog::DownloadOptionsDialog(const QString &fileName, QWebEngine
 {
     ui->setupUi(this);
 
-    ui->fileName->setText("<b>" + fileName + "</b>");
+    ui->fileName->setText(QSL("<b>") + fileName + QSL("</b>"));
     ui->fromServer->setText(m_downloadItem->url().host());
 
     const QIcon fileIcon = IconProvider::instance()->standardIcon(QStyle::SP_FileIcon);

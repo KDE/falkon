@@ -69,9 +69,9 @@ SearchEnginesManager::SearchEnginesManager(QObject* parent)
     , m_saveScheduled(false)
 {
     Settings settings;
-    settings.beginGroup("SearchEngines");
-    m_startingEngineName = settings.value("activeEngine", "DuckDuckGo").toString();
-    m_defaultEngineName = settings.value("DefaultEngine", "DuckDuckGo").toString();
+    settings.beginGroup(QSL("SearchEngines"));
+    m_startingEngineName = settings.value(QSL("activeEngine"), QSL("DuckDuckGo")).toString();
+    m_defaultEngineName = settings.value(QSL("DefaultEngine"), QSL("DuckDuckGo")).toString();
     settings.endGroup();
 
     connect(this, &SearchEnginesManager::enginesChanged, this, &SearchEnginesManager::scheduleSave);
@@ -82,7 +82,7 @@ void SearchEnginesManager::loadSettings()
     m_settingsLoaded = true;
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.exec("SELECT name, icon, url, shortcut, suggestionsUrl, suggestionsParameters, postData FROM search_engines");
+    query.exec(QSL("SELECT name, icon, url, shortcut, suggestionsUrl, suggestionsParameters, postData FROM search_engines"));
 
     while (query.next()) {
         Engine en;
@@ -158,33 +158,33 @@ LoadRequest SearchEnginesManager::searchResult(const QString &string)
 void SearchEnginesManager::restoreDefaults()
 {
     Engine duck;
-    duck.name = "DuckDuckGo";
-    duck.icon = QIcon(":/icons/sites/duck.png");
-    duck.url = "https://duckduckgo.com/?q=%s&t=qupzilla";
-    duck.shortcut = "d";
-    duck.suggestionsUrl = "https://ac.duckduckgo.com/ac/?q=%s&type=list";
+    duck.name = QSL("DuckDuckGo");
+    duck.icon = QIcon(QSL(":/icons/sites/duck.png"));
+    duck.url = QSL("https://duckduckgo.com/?q=%s&t=qupzilla");
+    duck.shortcut = QSL("d");
+    duck.suggestionsUrl = QSL("https://ac.duckduckgo.com/ac/?q=%s&type=list");
 
     Engine sp;
-    sp.name = "StartPage";
-    sp.icon = QIcon(":/icons/sites/startpage.png");
-    sp.url = "https://startpage.com/do/search";
+    sp.name = QSL("StartPage");
+    sp.icon = QIcon(QSL(":/icons/sites/startpage.png"));
+    sp.url = QSL("https://startpage.com/do/search");
     sp.postData = "query=%s&cat=web&language=english";
-    sp.shortcut = "sp";
-    sp.suggestionsUrl = "https://startpage.com/cgi-bin/csuggest?output=json&lang=english&query=%s";
+    sp.shortcut = QSL("sp");
+    sp.suggestionsUrl = QSL("https://startpage.com/cgi-bin/csuggest?output=json&lang=english&query=%s");
 
     Engine wiki;
-    wiki.name = "Wikipedia (en)";
-    wiki.icon = QIcon(":/icons/sites/wikipedia.png");
-    wiki.url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&fulltext=Search";
-    wiki.shortcut = "w";
-    wiki.suggestionsUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search=%s&namespace=0";
+    wiki.name = QSL("Wikipedia (en)");
+    wiki.icon = QIcon(QSL(":/icons/sites/wikipedia.png"));
+    wiki.url = QSL("https://en.wikipedia.org/wiki/Special:Search?search=%s&fulltext=Search");
+    wiki.shortcut = QSL("w");
+    wiki.suggestionsUrl = QSL("https://en.wikipedia.org/w/api.php?action=opensearch&search=%s&namespace=0");
 
     Engine google;
-    google.name = "Google";
-    google.icon = QIcon(":icons/sites/google.png");
-    google.url = "https://www.google.com/search?client=falkon&q=%s";
-    google.shortcut = "g";
-    google.suggestionsUrl = "https://suggestqueries.google.com/complete/search?output=firefox&q=%s";
+    google.name = QSL("Google");
+    google.icon = QIcon(QSL(":icons/sites/google.png"));
+    google.url = QSL("https://www.google.com/search?client=falkon&q=%s");
+    google.shortcut = QSL("g");
+    google.suggestionsUrl = QSL("https://suggestqueries.google.com/complete/search?output=firefox&q=%s");
 
     addEngine(duck);
     addEngine(sp);
@@ -218,7 +218,7 @@ void SearchEnginesManager::engineChangedImage()
 
     for (Engine e : qAsConst(m_allEngines)) {
         if (e.name == engine->name() &&
-            e.url.contains(engine->searchUrl("%s").toString()) &&
+            e.url.contains(engine->searchUrl(QSL("%s")).toString()) &&
             !engine->image().isNull()
            ) {
             int index = m_allEngines.indexOf(e);
@@ -270,7 +270,7 @@ void SearchEnginesManager::addEngineFromForm(const QVariantMap &formData, WebVie
     QUrl parameterUrl = actionUrl;
 
     if (isPost) {
-        parameterUrl = QUrl("http://foo.bar");
+        parameterUrl = QUrl(QSL("http://foo.bar"));
     }
 
     const QString &inputName = formData.value(QSL("inputName")).toString();
@@ -302,7 +302,7 @@ void SearchEnginesManager::addEngineFromForm(const QVariantMap &formData, WebVie
     SearchEngine engine;
     engine.name = view->title();
     engine.icon = view->icon();
-    engine.url = actionUrl.toEncoded();
+    engine.url = QString::fromUtf8(actionUrl.toEncoded());
 
     if (isPost) {
         QByteArray data = parameterUrl.toEncoded(QUrl::RemoveScheme);
@@ -316,7 +316,7 @@ void SearchEnginesManager::addEngineFromForm(const QVariantMap &formData, WebVie
     dialog.setName(engine.name);
     dialog.setIcon(engine.icon);
     dialog.setUrl(engine.url);
-    dialog.setPostData(engine.postData);
+    dialog.setPostData(QString::fromUtf8(engine.postData));
 
     if (dialog.exec() != QDialog::Accepted) {
         return;
@@ -341,7 +341,7 @@ void SearchEnginesManager::addEngine(OpenSearchEngine* engine)
 
     Engine en;
     en.name = engine->name();
-    en.url = engine->searchUrl("searchstring").toString().replace(QLatin1String("searchstring"), QLatin1String("%s"));
+    en.url = engine->searchUrl(QSL("searchstring")).toString().replace(QLatin1String("searchstring"), QLatin1String("%s"));
 
     if (engine->image().isNull()) {
         en.icon = iconForSearchEngine(engine->searchUrl(QString()));
@@ -352,7 +352,7 @@ void SearchEnginesManager::addEngine(OpenSearchEngine* engine)
 
     en.suggestionsUrl = engine->getSuggestionsUrl();
     en.suggestionsParameters = engine->getSuggestionsParameters();
-    en.postData = engine->getPostData("searchstring").replace("searchstring", "%s");
+    en.postData = engine->getPostData(QSL("searchstring")).replace("searchstring", "%s");
 
     addEngine(en);
 
@@ -449,7 +449,7 @@ void SearchEnginesManager::removeEngine(const Engine &engine)
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("DELETE FROM search_engines WHERE name=? AND url=?");
+    query.prepare(QSL("DELETE FROM search_engines WHERE name=? AND url=?"));
     query.bindValue(0, engine.name);
     query.bindValue(1, engine.url);
     query.exec();
@@ -476,9 +476,9 @@ QVector<SearchEngine> SearchEnginesManager::allEngines()
 void SearchEnginesManager::saveSettings()
 {
     Settings settings;
-    settings.beginGroup("SearchEngines");
-    settings.setValue("activeEngine", m_activeEngine.name);
-    settings.setValue("DefaultEngine", m_defaultEngine.name);
+    settings.beginGroup(QSL("SearchEngines"));
+    settings.setValue(QSL("activeEngine"), m_activeEngine.name);
+    settings.setValue(QSL("DefaultEngine"), m_defaultEngine.name);
     settings.endGroup();
 
     if (!m_saveScheduled) {
@@ -493,10 +493,10 @@ void SearchEnginesManager::saveSettings()
     // But as long as user is not playing with search engines every run it is acceptable.
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.exec("DELETE FROM search_engines");
+    query.exec(QSL("DELETE FROM search_engines"));
 
     for (const Engine &en : qAsConst(m_allEngines)) {
-        query.prepare("INSERT INTO search_engines (name, icon, url, shortcut, suggestionsUrl, suggestionsParameters, postData) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        query.prepare(QSL("INSERT INTO search_engines (name, icon, url, shortcut, suggestionsUrl, suggestionsParameters, postData) VALUES (?, ?, ?, ?, ?, ?, ?)"));
         query.addBindValue(en.name);
         query.addBindValue(iconToBase64(en.icon));
         query.addBindValue(en.url);

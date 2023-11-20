@@ -157,15 +157,15 @@ BrowserWindow *TabWidget::browserWindow() const
 void TabWidget::loadSettings()
 {
     Settings settings;
-    settings.beginGroup("Browser-Tabs-Settings");
-    m_dontCloseWithOneTab = settings.value("dontCloseWithOneTab", false).toBool();
-    m_showClosedTabsButton = settings.value("showClosedTabsButton", false).toBool();
-    m_newTabAfterActive = settings.value("newTabAfterActive", true).toBool();
-    m_newEmptyTabAfterActive = settings.value("newEmptyTabAfterActive", false).toBool();
+    settings.beginGroup(QSL("Browser-Tabs-Settings"));
+    m_dontCloseWithOneTab = settings.value(QSL("dontCloseWithOneTab"), false).toBool();
+    m_showClosedTabsButton = settings.value(QSL("showClosedTabsButton"), false).toBool();
+    m_newTabAfterActive = settings.value(QSL("newTabAfterActive"), true).toBool();
+    m_newEmptyTabAfterActive = settings.value(QSL("newEmptyTabAfterActive"), false).toBool();
     settings.endGroup();
 
-    settings.beginGroup("Web-URL-Settings");
-    m_urlOnNewTab = settings.value("newTabUrl", "falkon:speeddial").toUrl();
+    settings.beginGroup(QSL("Web-URL-Settings"));
+    m_urlOnNewTab = settings.value(QSL("newTabUrl"), QSL("falkon:speeddial")).toUrl();
     settings.endGroup();
 
     m_tabBar->loadSettings();

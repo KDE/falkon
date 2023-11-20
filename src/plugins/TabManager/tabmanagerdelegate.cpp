@@ -69,8 +69,8 @@ void TabManagerDelegate::paint(QPainter* painter, const QStyleOptionViewItem &op
     if (index.column() == 1) {
         if (opt.state & QStyle::State_MouseOver) {
             static const int buttonSize = 16;
-            static const  QPixmap closeTabButton(":tabmanager/data/closetab.png");
-            static const  QPixmap addTabButton(":tabmanager/data/addtab.png");
+            static const  QPixmap closeTabButton(QStringLiteral(":tabmanager/data/closetab.png"));
+            static const  QPixmap addTabButton(QStringLiteral(":tabmanager/data/addtab.png"));
 
             const QRect rect(opt.rect.right() - buttonSize, (opt.rect.height() - buttonSize) / 2 + opt.rect.y(), buttonSize, buttonSize);
             painter->drawPixmap(style->visualRect(direction, opt.rect, rect), (index.parent().isValid() ? closeTabButton : addTabButton));

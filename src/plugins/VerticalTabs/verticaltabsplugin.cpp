@@ -86,7 +86,7 @@ void VerticalTabsPlugin::unload()
 
 bool VerticalTabsPlugin::testPlugin()
 {
-    return (Qz::VERSION == QSL(FALKON_VERSION));
+    return (QString::fromLatin1(Qz::VERSION) == QSL(FALKON_VERSION));
 }
 
 void VerticalTabsPlugin::showSettings(QWidget *parent)

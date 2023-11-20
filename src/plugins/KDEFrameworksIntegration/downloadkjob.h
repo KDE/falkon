@@ -31,7 +31,7 @@ public:
     void start();
     void updateDescription();
 
-public slots:
+public Q_SLOTS:
     void progress(double currSpeed, qint64 received, qint64 total);
     
 private:

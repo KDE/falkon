@@ -29,10 +29,10 @@ static QString dateTimeToString(const QDateTime &dateTime)
 {
     const QDateTime current = QDateTime::currentDateTime();
     if (current.date() == dateTime.date()) {
-        return dateTime.time().toString("h:mm");
+        return dateTime.time().toString(QSL("h:mm"));
     }
 
-    return dateTime.toString("d.M.yyyy h:mm");
+    return dateTime.toString(QSL("d.M.yyyy h:mm"));
 }
 
 HistoryModel::HistoryModel(History* history)
@@ -87,7 +87,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         case Qt::EditRole:
             return index.column() == 0 ? item->title : QVariant();
         case Qt::DecorationRole:
-            return index.column() == 0 ? QIcon::fromTheme(QSL("view-calendar"), QIcon(":/icons/menu/history_entry.svg")) : QVariant();
+            return index.column() == 0 ? QIcon::fromTheme(QSL("view-calendar"), QIcon(QSL(":/icons/menu/history_entry.svg"))) : QVariant();
         }
 
         return {};
@@ -114,7 +114,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return -1;
     case Qt::ToolTipRole:
         if (index.column() == 0) {
-            return QString("%1\n%2").arg(entry.title, entry.urlString);
+            return QSL("%1\n%2").arg(entry.title, entry.urlString);
         }
         // fallthrough
     case Qt::DisplayRole:
@@ -295,7 +295,7 @@ void HistoryModel::fetchMore(const QModelIndex &parent)
     }
 
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.prepare("SELECT id, count, title, url, date FROM history WHERE date BETWEEN ? AND ? ORDER BY date DESC");
+    query.prepare(QSL("SELECT id, count, title, url, date FROM history WHERE date BETWEEN ? AND ? ORDER BY date DESC"));
     query.addBindValue(parentItem->endTimestamp());
     query.addBindValue(parentItem->startTimestamp());
     query.exec();
@@ -309,7 +309,7 @@ void HistoryModel::fetchMore(const QModelIndex &parent)
         entry.title = query.value(2).toString();
         entry.url = query.value(3).toUrl();
         entry.date = QDateTime::fromMSecsSinceEpoch(query.value(4).toLongLong());
-        entry.urlString = entry.url.toEncoded();
+        entry.urlString = QString::fromUtf8(entry.url.toEncoded());
 
         if (!idList.contains(entry.id)) {
             list.append(entry);
@@ -445,7 +445,7 @@ void HistoryModel::checkEmptyParentItem(HistoryItem* item)
 void HistoryModel::init()
 {
     QSqlQuery query(SqlDatabase::instance()->database());
-    query.exec("SELECT MIN(date) FROM history");
+    query.exec(QSL("SELECT MIN(date) FROM history"));
     if (!query.next()) {
         return;
     }
@@ -487,11 +487,11 @@ void HistoryModel::init()
 
             timestamp = QDateTime(startDate, QTime(23, 59, 59), QTimeZone::systemTimeZone()).toMSecsSinceEpoch();
             endTimestamp = QDateTime(endDate, QTime(), QTimeZone::systemTimeZone()).toMSecsSinceEpoch();
-            itemName = QString("%1 %2").arg(History::titleCaseLocalizedMonth(timestampDate.month()), QString::number(timestampDate.year()));
+            itemName = QSL("%1 %2").arg(History::titleCaseLocalizedMonth(timestampDate.month()), QString::number(timestampDate.year()));
         }
 
         QSqlQuery query(SqlDatabase::instance()->database());
-        query.prepare("SELECT id FROM history WHERE date BETWEEN ? AND ? LIMIT 1");
+        query.prepare(QSL("SELECT id FROM history WHERE date BETWEEN ? AND ? LIMIT 1"));
         query.addBindValue(endTimestamp);
         query.addBindValue(timestamp);
         query.exec();

@@ -31,8 +31,8 @@ void QmlTopSitesApiTest::cleanupTestCase()
 
 void QmlTopSitesApiTest::testTopSites()
 {
-    mApp->plugins()->speedDial()->addPage(QUrl("https://example.com"), "Example Domain");
-    auto list = m_testHelper.evaluate("Falkon.TopSites.get()").toVariant().toList();
+    mApp->plugins()->speedDial()->addPage(QUrl(QSL("https://example.com")), QSL("Example Domain"));
+    auto list = m_testHelper.evaluate(QSL("Falkon.TopSites.get()")).toVariant().toList();
     qDebug() << "Top sites list size=" << list.length();
     for( const auto& site : list )
     {
