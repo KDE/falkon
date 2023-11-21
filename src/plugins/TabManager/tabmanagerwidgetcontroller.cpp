@@ -54,7 +54,7 @@ public:
 
 TabManagerWidgetController::TabManagerWidgetController(QObject* parent)
     : SideBarInterface(parent)
-    , m_defaultTabManager(0)
+    , m_defaultTabManager(nullptr)
     , m_groupType(TabManagerWidget::GroupByWindow)
 {
 }
@@ -86,7 +86,7 @@ QWidget* TabManagerWidgetController::createSideBarWidget(BrowserWindow* mainWind
 AbstractButtonInterface* TabManagerWidgetController::createStatusBarIcon(BrowserWindow* mainWindow)
 {
     if (!defaultTabManager()) {
-        return 0;
+        return nullptr;
     }
 
     if (m_statusBarIcons.contains(mainWindow)) {
@@ -152,7 +152,7 @@ TabManagerWidget* TabManagerWidgetController::createTabManagerWidget(BrowserWind
         connect(tabManagerWidget, SIGNAL(showSideBySide()), this, SLOT(showSideBySide()));
     }
     else {
-        m_defaultTabManager = 0;
+        m_defaultTabManager = nullptr;
     }
 
     connect(tabManagerWidget, SIGNAL(groupTypeChanged(TabManagerWidget::GroupType)), this, SLOT(setGroupType(TabManagerWidget::GroupType)));

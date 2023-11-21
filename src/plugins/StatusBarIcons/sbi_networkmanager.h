@@ -27,7 +27,7 @@ class SBI_NetworkManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit SBI_NetworkManager(const QString &settingsPath, QObject* parent = 0);
+    explicit SBI_NetworkManager(const QString &settingsPath, QObject* parent = nullptr);
     ~SBI_NetworkManager();
 
     static SBI_NetworkManager* instance();

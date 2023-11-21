@@ -32,7 +32,7 @@ class GM_SettingsScriptInfo : public QDialog
     Q_OBJECT
 
 public:
-    explicit GM_SettingsScriptInfo(GM_Script* script, QWidget* parent = 0);
+    explicit GM_SettingsScriptInfo(GM_Script* script, QWidget* parent = nullptr);
     ~GM_SettingsScriptInfo();
 
 private Q_SLOTS:

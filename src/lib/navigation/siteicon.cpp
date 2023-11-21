@@ -32,7 +32,7 @@ SiteIcon::SiteIcon(LocationBar *parent)
     : ToolButton(parent)
     , m_window(nullptr)
     , m_locationBar(parent)
-    , m_view(0)
+    , m_view(nullptr)
 {
     setObjectName("locationbar-siteicon");
     setToolButtonStyle(Qt::ToolButtonIconOnly);

@@ -42,7 +42,7 @@ void SBI_Icon::setCurrentPageWebAttribute(QWebEngineSettings::WebAttribute attr,
 QWebEngineSettings* SBI_Icon::currentPageSettings() const
 {
     if (!m_window->weView()) {
-        return 0;
+        return nullptr;
     }
 
     return m_window->weView()->page()->settings();
@@ -51,7 +51,7 @@ QWebEngineSettings* SBI_Icon::currentPageSettings() const
 WebPage* SBI_Icon::currentPage() const
 {
     if (!m_window->weView()) {
-        return 0;
+        return nullptr;
     }
 
     return m_window->weView()->page();

@@ -58,7 +58,7 @@ private:
     Q_DISABLE_COPY(TLDExtractor)
 
     static TLDExtractor* s_instance;
-    TLDExtractor(QObject* parent = 0);
+    TLDExtractor(QObject* parent = nullptr);
 
     static QStringList defaultDataSearchPaths();
 

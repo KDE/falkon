@@ -94,7 +94,7 @@ QList<QTreeWidgetItem*> TreeWidget::allItems()
 {
     if (m_refreshAllItemsNeeded) {
         m_allTreeItems.clear();
-        iterateAllItems(0);
+        iterateAllItems(nullptr);
         m_refreshAllItemsNeeded = false;
     }
 

@@ -37,7 +37,7 @@
 
 TabbedWebView::TabbedWebView(WebTab* webTab)
     : WebView(webTab)
-    , m_window(0)
+    , m_window(nullptr)
     , m_webTab(webTab)
     , m_menu(new Menu(this))
 {

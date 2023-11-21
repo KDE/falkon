@@ -31,7 +31,7 @@ class MouseGestures : public QObject
 {
     Q_OBJECT
 public:
-    explicit MouseGestures(const QString &settingsPath, QObject* parent = 0);
+    explicit MouseGestures(const QString &settingsPath, QObject* parent = nullptr);
     ~MouseGestures();
 
     bool mousePress(QObject* obj, QMouseEvent* event);

@@ -26,7 +26,7 @@
 
 ToolButton::ToolButton(QWidget* parent)
     : QToolButton(parent)
-    , m_menu(0)
+    , m_menu(nullptr)
 {
     setMinimumWidth(16);
 

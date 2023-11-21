@@ -29,7 +29,7 @@ class BrowserWindow;
 class FALKON_EXPORT SideBarInterface : public QObject
 {
 public:
-    explicit SideBarInterface(QObject* parent = 0) : QObject(parent) { }
+    explicit SideBarInterface(QObject* parent = nullptr) : QObject(parent) { }
 
     virtual QString title() const = 0;
 

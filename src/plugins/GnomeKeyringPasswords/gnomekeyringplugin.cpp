@@ -26,7 +26,7 @@
 
 GnomeKeyringPlugin::GnomeKeyringPlugin()
     : QObject()
-    , m_backend(0)
+    , m_backend(nullptr)
 {
 }
 

@@ -102,7 +102,7 @@ QSize ListItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QMode
 
         const QWidget* w = opt.widget;
         const QStyle* style = w ? w->style() : QApplication::style();
-        const int padding = style->pixelMetric(QStyle::PM_FocusFrameHMargin, 0) + 1;
+        const int padding = style->pixelMetric(QStyle::PM_FocusFrameHMargin, nullptr) + 1;
 
         m_padding = padding > 5 ? padding : 5;
 
@@ -111,7 +111,7 @@ QSize ListItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QMode
         // Update height of parent widget
         QWidget* p = qobject_cast<QWidget*>(parent());
         if (p && m_updateParentHeight) {
-            int frameWidth = p->style()->pixelMetric(QStyle::PM_DefaultFrameWidth, 0, p);
+            int frameWidth = p->style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, p);
             p->setFixedHeight(m_itemHeight + 2 * frameWidth);
         }
     }

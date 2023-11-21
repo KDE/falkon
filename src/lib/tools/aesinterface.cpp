@@ -71,7 +71,7 @@ bool AesInterface::init(int evpMode, const QByteArray &password, const QByteArra
     // Gen "key" for AES 256 CBC mode. A SHA1 digest is used to hash the supplied
     // key material. nrounds is the number of times that we hash the material.
     // More rounds are more secure but slower.
-    i = EVP_BytesToKey(EVP_aes_256_cbc(), EVP_sha256(), 0, (uchar*)password.data(), password.size(), nrounds, key, 0);
+    i = EVP_BytesToKey(EVP_aes_256_cbc(), EVP_sha256(), nullptr, (uchar*)password.data(), password.size(), nrounds, key, nullptr);
 
     if (i != 32) {
         qWarning("Key size is %d bits - should be 256 bits", i * 8);
@@ -143,7 +143,7 @@ QByteArray AesInterface::decrypt(const QByteArray &cipherData, const QByteArray 
     }
 
     if (cipherSections.at(0).toInt() > AesInterface::VERSION) {
-        QMessageBox::information(0, tr("Warning!"), tr("Data has been encrypted with a newer version of Falkon."
+        QMessageBox::information(nullptr, tr("Warning!"), tr("Data has been encrypted with a newer version of Falkon."
                                  "\nPlease install latest version of Falkon."));
         return {};
     }

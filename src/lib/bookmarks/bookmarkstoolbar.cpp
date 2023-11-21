@@ -36,7 +36,7 @@ BookmarksToolbar::BookmarksToolbar(BrowserWindow* window, QWidget* parent)
     : QWidget(parent)
     , m_window(window)
     , m_bookmarks(mApp->bookmarks())
-    , m_clickedBookmark(0)
+    , m_clickedBookmark(nullptr)
     , m_dropRow(-1)
 {
     setObjectName("bookmarksbar");
@@ -44,10 +44,10 @@ BookmarksToolbar::BookmarksToolbar(BrowserWindow* window, QWidget* parent)
     setContextMenuPolicy(Qt::CustomContextMenu);
 
     m_layout = new QHBoxLayout(this);
-    auto contentsMargin = style()->pixelMetric(QStyle::PM_ToolBarItemMargin, 0, this)
-                        + style()->pixelMetric(QStyle::PM_ToolBarFrameWidth, 0, this);
+    auto contentsMargin = style()->pixelMetric(QStyle::PM_ToolBarItemMargin, nullptr, this)
+                        + style()->pixelMetric(QStyle::PM_ToolBarFrameWidth, nullptr, this);
     m_layout->setContentsMargins(contentsMargin, contentsMargin, contentsMargin, contentsMargin);
-    m_layout->setSpacing(style()->pixelMetric(QStyle::PM_ToolBarItemSpacing, 0, this));
+    m_layout->setSpacing(style()->pixelMetric(QStyle::PM_ToolBarItemSpacing, nullptr, this));
     setLayout(m_layout);
 
     m_updateTimer = new QTimer(this);
@@ -68,7 +68,7 @@ BookmarksToolbar::BookmarksToolbar(BrowserWindow* window, QWidget* parent)
 void BookmarksToolbar::contextMenuRequested(const QPoint &pos)
 {
     BookmarksToolbarButton* button = buttonAt(pos);
-    m_clickedBookmark = button ? button->bookmark() : 0;
+    m_clickedBookmark = button ? button->bookmark() : nullptr;
 
     QMenu menu;
     QAction* actNewTab = menu.addAction(IconProvider::newTabIcon(), tr("Open in new tab"));

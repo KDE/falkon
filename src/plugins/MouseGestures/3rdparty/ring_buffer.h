@@ -51,7 +51,7 @@ public:
     typedef const T*       const_iterator;
 
     RingBuffer() {
-        array = 0;
+        array = nullptr;
         size = 0;
         read = 0;
         write = 0;

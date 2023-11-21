@@ -66,10 +66,10 @@ NavigationBar::NavigationBar(BrowserWindow* window)
     setObjectName(QSL("navigationbar"));
 
     m_layout = new QHBoxLayout(this);
-    auto contentsMargin = style()->pixelMetric(QStyle::PM_ToolBarItemMargin, 0, this)
-                        + style()->pixelMetric(QStyle::PM_ToolBarFrameWidth, 0, this);
+    auto contentsMargin = style()->pixelMetric(QStyle::PM_ToolBarItemMargin, nullptr, this)
+                        + style()->pixelMetric(QStyle::PM_ToolBarFrameWidth, nullptr, this);
     m_layout->setContentsMargins(contentsMargin, contentsMargin, contentsMargin, contentsMargin);
-    m_layout->setSpacing(style()->pixelMetric(QStyle::PM_ToolBarItemSpacing, 0, this));
+    m_layout->setSpacing(style()->pixelMetric(QStyle::PM_ToolBarItemSpacing, nullptr, this));
     setLayout(m_layout);
 
     m_buttonBack = new ToolButton(this);

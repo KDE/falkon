@@ -34,13 +34,13 @@
 
 #include <QWindow>
 
-LocationCompleterView* LocationCompleter::s_view = 0;
-LocationCompleterModel* LocationCompleter::s_model = 0;
+LocationCompleterView* LocationCompleter::s_view = nullptr;
+LocationCompleterModel* LocationCompleter::s_model = nullptr;
 
 LocationCompleter::LocationCompleter(QObject* parent)
     : QObject(parent)
-    , m_window(0)
-    , m_locationBar(0)
+    , m_window(nullptr)
+    , m_locationBar(nullptr)
     , m_lastRefreshTimestamp(0)
     , m_popupClosed(false)
 {

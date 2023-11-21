@@ -32,7 +32,7 @@ class SBI_ProxyWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit SBI_ProxyWidget(QWidget* parent = 0);
+    explicit SBI_ProxyWidget(QWidget* parent = nullptr);
     ~SBI_ProxyWidget();
 
     SBI_NetworkProxy* getProxy() const;

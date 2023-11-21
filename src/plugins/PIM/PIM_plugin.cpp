@@ -27,7 +27,7 @@
 
 PIM_Plugin::PIM_Plugin()
     : QObject()
-    , m_handler(0)
+    , m_handler(nullptr)
 {
 }
 

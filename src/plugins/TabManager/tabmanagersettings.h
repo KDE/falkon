@@ -13,7 +13,7 @@ class TabManagerSettings : public QDialog
     Q_OBJECT
 
 public:
-    explicit TabManagerSettings(TabManagerPlugin* plugin, QWidget *parent = 0);
+    explicit TabManagerSettings(TabManagerPlugin* plugin, QWidget *parent = nullptr);
     ~TabManagerSettings() override;
 
 public Q_SLOTS:

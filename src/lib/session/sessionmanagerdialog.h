@@ -31,7 +31,7 @@ class SessionManagerDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit SessionManagerDialog(QWidget *parent = 0);
+    explicit SessionManagerDialog(QWidget *parent = nullptr);
     ~SessionManagerDialog() override;
 
 private:

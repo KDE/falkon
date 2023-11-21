@@ -283,7 +283,7 @@ void SpeedDial::removeImageForUrl(const QString &url)
 QStringList SpeedDial::getOpenFileName()
 {
     const QString fileTypes = QSL("%3(*.png *.jpg *.jpeg *.bmp *.gif *.svg *.tiff)").arg(tr("Image files"));
-    const QString image = QzTools::getOpenFileName(QSL("SpeedDial-GetOpenFileName"), 0, tr("Click to select image..."), QDir::homePath(), fileTypes);
+    const QString image = QzTools::getOpenFileName(QSL("SpeedDial-GetOpenFileName"), nullptr, tr("Click to select image..."), QDir::homePath(), fileTypes);
 
     if (image.isEmpty())
         return {};

@@ -29,7 +29,7 @@ class TabManagerWidgetController : public SideBarInterface
 {
     Q_OBJECT
 public:
-    explicit TabManagerWidgetController(QObject* parent = 0);
+    explicit TabManagerWidgetController(QObject* parent = nullptr);
     ~TabManagerWidgetController() override;
 
     QString title() const override;
@@ -39,7 +39,7 @@ public:
     AbstractButtonInterface* createStatusBarIcon(BrowserWindow* mainWindow);
 
     TabManagerWidget::GroupType groupType();
-    TabManagerWidget* createTabManagerWidget(BrowserWindow* mainClass, QWidget* parent = 0, bool defaultWidget = false);
+    TabManagerWidget* createTabManagerWidget(BrowserWindow* mainClass, QWidget* parent = nullptr, bool defaultWidget = false);
 
     TabManagerWidget* defaultTabManager();
 
@@ -61,7 +61,7 @@ private:
     QHash<BrowserWindow*, QAction*> m_actions;
 
 Q_SIGNALS:
-    void requestRefreshTree(WebPage* p = 0);
+    void requestRefreshTree(WebPage* p = nullptr);
 };
 
 #endif // TABMANAGERWIDGETCONTROLLER_H

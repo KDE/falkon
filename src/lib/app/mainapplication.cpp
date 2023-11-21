@@ -448,7 +448,7 @@ BrowserWindow* MainApplication::getWindow() const
         return m_lastActiveWindow.data();
     }
 
-    return m_windows.isEmpty() ? 0 : m_windows.at(0);
+    return m_windows.isEmpty() ? nullptr : m_windows.at(0);
 }
 
 BrowserWindow* MainApplication::createWindow(Qz::BrowserWindowType type, const QUrl &startUrl)
@@ -516,7 +516,7 @@ void MainApplication::destroyRestoreManager()
     }
 
     delete m_restoreManager;
-    m_restoreManager = 0;
+    m_restoreManager = nullptr;
 }
 
 void MainApplication::reloadSettings()

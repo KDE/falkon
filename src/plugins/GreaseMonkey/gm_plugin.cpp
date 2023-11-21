@@ -29,7 +29,7 @@
 
 GM_Plugin::GM_Plugin()
     : QObject()
-    , m_manager(0)
+    , m_manager(nullptr)
 {
 }
 

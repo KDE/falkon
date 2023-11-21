@@ -23,7 +23,7 @@
 class TabManagerDelegate : public QStyledItemDelegate
 {
 public:
-    explicit TabManagerDelegate(QObject* parent = 0);
+    explicit TabManagerDelegate(QObject* parent = nullptr);
 
     void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 

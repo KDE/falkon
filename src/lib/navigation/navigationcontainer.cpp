@@ -24,7 +24,7 @@
 
 NavigationContainer::NavigationContainer(QWidget* parent)
     : QWidget(parent)
-    , m_tabBar(0)
+    , m_tabBar(nullptr)
 {
     m_layout = new QVBoxLayout(this);
     m_layout->setContentsMargins(0, 0, 0, 0);

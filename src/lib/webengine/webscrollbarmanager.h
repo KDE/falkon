@@ -31,7 +31,7 @@ class WebScrollBarManager : public QObject
     Q_OBJECT
 
 public:
-    explicit WebScrollBarManager(QObject *parent = 0);
+    explicit WebScrollBarManager(QObject *parent = nullptr);
 
     void loadSettings();
 

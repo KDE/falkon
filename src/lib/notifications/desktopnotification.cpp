@@ -22,7 +22,7 @@
 #include <QMouseEvent>
 
 DesktopNotification::DesktopNotification(bool setPosition)
-    : QWidget(0)
+    : QWidget(nullptr)
     , ui(new Ui::DesktopNotification)
     , m_settingPosition(setPosition)
     , m_timeout(6000)

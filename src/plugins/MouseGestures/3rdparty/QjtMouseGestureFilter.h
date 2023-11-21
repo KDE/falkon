@@ -62,7 +62,7 @@ public:
      *  Notice that this all events for this button are
      *  swallowed by the filter.
      */
-    QjtMouseGestureFilter(bool allowDiagonals = false, Qt::MouseButton gestureButton = Qt::RightButton, int minimumMovement = 5, double minimumMatch = 0.9, QObject* parent = 0);
+    QjtMouseGestureFilter(bool allowDiagonals = false, Qt::MouseButton gestureButton = Qt::RightButton, int minimumMovement = 5, double minimumMatch = 0.9, QObject* parent = nullptr);
     ~QjtMouseGestureFilter() override;
 
     /*
@@ -77,9 +77,9 @@ public:
      */
     void clearGestures(bool deleteGestures = false);
 
-    bool mouseButtonPressEvent(QMouseEvent* event, QObject* obj = 0);
-    bool mouseButtonReleaseEvent(QMouseEvent* event, QObject* obj = 0);
-    bool mouseMoveEvent(QMouseEvent* event, QObject* obj = 0);
+    bool mouseButtonPressEvent(QMouseEvent* event, QObject* obj = nullptr);
+    bool mouseButtonReleaseEvent(QMouseEvent* event, QObject* obj = nullptr);
+    bool mouseMoveEvent(QMouseEvent* event, QObject* obj = nullptr);
 
 protected:
     bool eventFilter(QObject* obj, QEvent* event) override;

@@ -36,8 +36,8 @@ QString TabManagerPlugin::s_settingsPath;
 
 TabManagerPlugin::TabManagerPlugin()
     : QObject()
-    , m_controller(0)
-    , m_tabManagerWidget(0)
+    , m_controller(nullptr)
+    , m_tabManagerWidget(nullptr)
     , m_viewType(Undefined)
     , m_initState(false)
     , m_asTabBarReplacement(false)
@@ -107,7 +107,7 @@ void TabManagerPlugin::insertManagerWidget()
     }
     else if (viewType() == ShowAsWindow) {
         if (!m_tabManagerWidget) {
-            m_tabManagerWidget = m_controller->createTabManagerWidget(mApp->getWindow(), 0, true);
+            m_tabManagerWidget = m_controller->createTabManagerWidget(mApp->getWindow(), nullptr, true);
             m_tabManagerWidget->setWindowFlags(Qt::Window);
         }
     }
@@ -161,7 +161,7 @@ void TabManagerPlugin::removeManagerWidget()
 
         m_tabManagerWidget->close();
         delete m_tabManagerWidget;
-        m_tabManagerWidget = 0;
+        m_tabManagerWidget = nullptr;
     }
 }
 

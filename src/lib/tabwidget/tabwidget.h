@@ -124,7 +124,7 @@ public Q_SLOTS:
     void detachTab(int index);
     void loadTab(int index);
     void unloadTab(int index);
-    void restoreClosedTab(QObject* obj = 0);
+    void restoreClosedTab(QObject* obj = nullptr);
     void restoreAllClosedTabs();
     void clearClosedTabsList();
 

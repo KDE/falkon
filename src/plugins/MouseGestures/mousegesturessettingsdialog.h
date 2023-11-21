@@ -33,7 +33,7 @@ class MouseGesturesSettingsDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit MouseGesturesSettingsDialog(MouseGestures* gestures, QWidget* parent = 0);
+    explicit MouseGesturesSettingsDialog(MouseGestures* gestures, QWidget* parent = nullptr);
     ~MouseGesturesSettingsDialog();
 
 private Q_SLOTS:

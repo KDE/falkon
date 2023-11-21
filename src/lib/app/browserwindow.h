@@ -155,8 +155,8 @@ public Q_SLOTS:
     void toggleFullScreen();
     void requestHtmlFullScreen(TabbedWebView *view, bool enable);
 
-    void loadActionUrl(QObject* obj = 0);
-    void loadActionUrlInNewTab(QObject* obj = 0);
+    void loadActionUrl(QObject* obj = nullptr);
+    void loadActionUrlInNewTab(QObject* obj = nullptr);
 
     void bookmarkPage();
     void bookmarkAllTabs();

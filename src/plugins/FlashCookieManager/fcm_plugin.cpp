@@ -322,7 +322,7 @@ void FCM_Plugin::mainWindowDeleted(BrowserWindow *window)
     }
 
     if (m_fcmDialog && m_fcmDialog->parent() == window) {
-        m_fcmDialog->setParent(0);
+        m_fcmDialog->setParent(nullptr);
     }
 
     window->statusBar()->removeButton(m_statusBarIcons.value(window));

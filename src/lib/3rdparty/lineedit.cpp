@@ -57,8 +57,8 @@ bool SideWidget::event(QEvent* event)
 
 LineEdit::LineEdit(QWidget* parent)
     : QLineEdit(parent)
-    , m_leftLayout(0)
-    , m_rightLayout(0)
+    , m_leftLayout(nullptr)
+    , m_rightLayout(nullptr)
     , m_minHeight(0)
     , m_leftMargin(-1)
     , m_ignoreMousePress(false)
@@ -219,7 +219,7 @@ QMenu* LineEdit::createContextMenu()
     QMenu* tmp = createStandardContextMenu();
     tmp->setParent(popup);
     tmp->hide();
-    QAction* lastAction = !tmp->actions().isEmpty() ? tmp->actions().constLast() : 0;
+    QAction* lastAction = !tmp->actions().isEmpty() ? tmp->actions().constLast() : nullptr;
 
     if (lastAction && lastAction->menu() && lastAction->menu()->inherits("QUnicodeControlCharacterMenu")) {
         popup->addAction(lastAction);

@@ -24,7 +24,7 @@
 
 GM_JSObject::GM_JSObject(QObject* parent)
     : QObject(parent)
-    , m_settings(0)
+    , m_settings(nullptr)
 {
 }
 

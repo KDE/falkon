@@ -29,9 +29,9 @@ class FALKON_EXPORT RegisterQAppAssociation : public QObject
 {
     Q_OBJECT
 public:
-    explicit RegisterQAppAssociation(QObject* parent = 0);
+    explicit RegisterQAppAssociation(QObject* parent = nullptr);
     explicit RegisterQAppAssociation(const QString &appRegisteredName, const QString &appPath,
-                                     const QString &appIcon = QString(), const QString &appDesc = QString(), QObject* parent = 0);
+                                     const QString &appIcon = QString(), const QString &appDesc = QString(), QObject* parent = nullptr);
     ~RegisterQAppAssociation();
 
     enum AssociationType {

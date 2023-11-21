@@ -72,8 +72,8 @@ static const bool kEnableJsNonBlockDialogs = qEnvironmentVariableIsSet("FALKON_E
 
 WebPage::WebPage(QObject* parent)
     : QWebEnginePage(mApp->webProfile(), parent)
-    , m_fileWatcher(0)
-    , m_runningLoop(0)
+    , m_fileWatcher(nullptr)
+    , m_runningLoop(nullptr)
     , m_loadProgress(100)
     , m_blockAlerts(false)
     , m_secureStatus(false)
@@ -132,7 +132,7 @@ WebPage::~WebPage()
 
     if (m_runningLoop) {
         m_runningLoop->exit(1);
-        m_runningLoop = 0;
+        m_runningLoop = nullptr;
     }
 }
 
@@ -555,7 +555,7 @@ bool WebPage::javaScriptPrompt(const QUrl &securityOrigin, const QString &msg, c
     if (eLoop.exec() == 1) {
         return result;
     }
-    m_runningLoop = 0;
+    m_runningLoop = nullptr;
 
     QString x = ui->lineEdit->text();
     bool _result = ui->buttonBox->buttonRole(clicked) == QDialogButtonBox::AcceptRole;
@@ -601,7 +601,7 @@ bool WebPage::javaScriptConfirm(const QUrl &securityOrigin, const QString &msg)
     if (eLoop.exec() == 1) {
         return false;
     }
-    m_runningLoop = 0;
+    m_runningLoop = nullptr;
 
     bool result = ui->buttonBox->buttonRole(clicked) == QDialogButtonBox::AcceptRole;
 
@@ -656,7 +656,7 @@ void WebPage::javaScriptAlert(const QUrl &securityOrigin, const QString &msg)
     if (eLoop.exec() == 1) {
         return;
     }
-    m_runningLoop = 0;
+    m_runningLoop = nullptr;
 
     m_blockAlerts = ui->preventAlerts->isChecked();
 

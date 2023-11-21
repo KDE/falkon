@@ -35,7 +35,7 @@ class GM_Settings : public QDialog
     Q_OBJECT
 
 public:
-    explicit GM_Settings(GM_Manager* manager, QWidget* parent = 0);
+    explicit GM_Settings(GM_Manager* manager, QWidget* parent = nullptr);
     ~GM_Settings();
 
 private Q_SLOTS:

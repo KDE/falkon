@@ -71,7 +71,7 @@ void SBI_JavaScriptIcon::showMenu(const QPoint &point)
 void SBI_JavaScriptIcon::updateIcon()
 {
     if (testCurrentPageWebAttribute(QWebEngineSettings::JavascriptEnabled)) {
-        setGraphicsEffect(0);
+        setGraphicsEffect(nullptr);
     }
     else {
         auto* effect = new QGraphicsColorizeEffect(this);

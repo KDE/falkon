@@ -167,7 +167,7 @@ void AdBlockSubscription::subscriptionDownloaded()
     }
 
     m_reply->deleteLater();
-    m_reply = 0;
+    m_reply = nullptr;
 
     if (error) {
         Q_EMIT subscriptionError(tr("Cannot load subscription!"));
@@ -412,7 +412,7 @@ bool AdBlockCustomList::removeRule(int offset)
 const AdBlockRule* AdBlockCustomList::replaceRule(AdBlockRule* rule, int offset)
 {
     if (!QzTools::containsIndex(m_rules, offset)) {
-        return 0;
+        return nullptr;
     }
 
     AdBlockRule* oldRule = m_rules.at(offset);

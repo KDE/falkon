@@ -33,7 +33,7 @@ SBI_IconsManager::SBI_IconsManager(const QString &settingsPath, QObject* parent)
     , m_showJavaScriptIcon(false)
     , m_showNetworkIcon(false)
     , m_showZoomWidget(false)
-    , m_networkManager(0)
+    , m_networkManager(nullptr)
 {
     loadSettings();
 }

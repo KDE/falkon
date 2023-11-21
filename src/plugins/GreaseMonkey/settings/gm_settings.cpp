@@ -195,7 +195,7 @@ void GM_Settings::loadScripts()
 GM_Script* GM_Settings::getScript(QListWidgetItem* item)
 {
     if (!item) {
-        return 0;
+        return nullptr;
     }
 
     GM_Script* script = static_cast<GM_Script*>(item->data(Qt::UserRole + 10).value<void*>());

@@ -26,7 +26,7 @@
 BookmarksExportDialog::BookmarksExportDialog(QWidget* parent)
     : QDialog(parent)
     , ui(new Ui::BookmarksExportDialog)
-    , m_currentExporter(0)
+    , m_currentExporter(nullptr)
 {
     setAttribute(Qt::WA_DeleteOnClose);
     ui->setupUi(this);

@@ -21,7 +21,7 @@
 #include "iconprovider.h"
 
 AutoFillNotification::AutoFillNotification(const QUrl &url, const PageFormData &formData, const PasswordEntry &updateData)
-    : AnimatedWidget(AnimatedWidget::Down, 300, 0)
+    : AnimatedWidget(AnimatedWidget::Down, 300, nullptr)
     , ui(new Ui::AutoFillNotification)
     , m_url(url)
     , m_formData(formData)

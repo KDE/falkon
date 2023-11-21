@@ -44,7 +44,7 @@ private:
         const AdBlockRule* rule;
         QHash<QChar, Node*> children;
 
-        Node() : c(0) , rule(0) { }
+        Node() : c(0) , rule(nullptr) { }
     };
 
     const AdBlockRule* prefixSearch(const QWebEngineUrlRequestInfo &request, const QString &domain,

@@ -28,7 +28,7 @@
 
 TabIcon::TabIcon(QWidget* parent)
     : QWidget(parent)
-    , m_tab(0)
+    , m_tab(nullptr)
     , m_currentFrame(0)
     , m_animationRunning(false)
     , m_audioIconDisplayed(false)

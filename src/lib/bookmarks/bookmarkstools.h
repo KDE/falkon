@@ -53,7 +53,7 @@ class FALKON_EXPORT BookmarksFoldersButton : public QPushButton
     Q_OBJECT
 
 public:
-    explicit BookmarksFoldersButton(QWidget* parent, BookmarkItem* folder = 0);
+    explicit BookmarksFoldersButton(QWidget* parent, BookmarkItem* folder = nullptr);
 
     BookmarkItem* selectedFolder() const;
 
@@ -79,8 +79,8 @@ class FALKON_EXPORT BookmarksTools
 {
 public:
     // Add Bookmark Dialogs
-    static bool addBookmarkDialog(QWidget* parent, const QUrl &url, const QString &title, BookmarkItem* folder = 0);
-    static bool bookmarkAllTabsDialog(QWidget* parent, TabWidget* tabWidget, BookmarkItem* folder = 0);
+    static bool addBookmarkDialog(QWidget* parent, const QUrl &url, const QString &title, BookmarkItem* folder = nullptr);
+    static bool bookmarkAllTabsDialog(QWidget* parent, TabWidget* tabWidget, BookmarkItem* folder = nullptr);
 
     // Edit Bookmark Dialog
     static bool editBookmarkDialog(QWidget* parent, BookmarkItem* item);

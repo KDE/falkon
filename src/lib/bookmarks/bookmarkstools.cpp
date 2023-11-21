@@ -40,7 +40,7 @@
 // BookmarksFoldersMenu
 BookmarksFoldersMenu::BookmarksFoldersMenu(QWidget* parent)
     : QMenu(parent)
-    , m_selectedFolder(0)
+    , m_selectedFolder(nullptr)
 {
     init();
 }

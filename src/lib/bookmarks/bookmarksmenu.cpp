@@ -28,7 +28,7 @@
 
 BookmarksMenu::BookmarksMenu(QWidget* parent)
     : Menu(parent)
-    , m_window(0)
+    , m_window(nullptr)
     , m_changed(true)
 {
     init();

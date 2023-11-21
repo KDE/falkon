@@ -23,7 +23,7 @@
 class GM_SettingsListDelegate : public QStyledItemDelegate
 {
 public:
-    explicit GM_SettingsListDelegate(QObject* parent = 0);
+    explicit GM_SettingsListDelegate(QObject* parent = nullptr);
 
     int padding() const;
 

@@ -30,7 +30,7 @@
 
 TestPlugin::TestPlugin()
     : QObject()
-    , m_view(0)
+    , m_view(nullptr)
 {
 }
 

@@ -29,7 +29,7 @@ class FrameScroller : public QObject
     Q_OBJECT
 
 public:
-    explicit FrameScroller(QObject* parent = 0);
+    explicit FrameScroller(QObject* parent = nullptr);
 
     void setPage(WebPage *page);
 

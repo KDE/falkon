@@ -398,7 +398,7 @@ void SearchEnginesManager::replyFinished()
 
     if (checkEngine(engine)) {
         addEngine(engine);
-        QMessageBox::information(0, tr("Search Engine Added"), tr("Search Engine \"%1\" has been successfully added.").arg(engine->name()));
+        QMessageBox::information(nullptr, tr("Search Engine Added"), tr("Search Engine \"%1\" has been successfully added.").arg(engine->name()));
     }
 }
 
@@ -406,7 +406,7 @@ bool SearchEnginesManager::checkEngine(OpenSearchEngine* engine)
 {
     if (!engine->isValid()) {
         QString errorString = tr("Search Engine is not valid!");
-        QMessageBox::warning(0, tr("Error"), tr("Error while adding Search Engine <br><b>Error Message: </b> %1").arg(errorString));
+        QMessageBox::warning(nullptr, tr("Error"), tr("Error while adding Search Engine <br><b>Error Message: </b> %1").arg(errorString));
 
         return false;
     }

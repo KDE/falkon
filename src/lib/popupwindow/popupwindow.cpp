@@ -35,7 +35,7 @@
 PopupWindow::PopupWindow(PopupWebView* view)
     : QWidget()
     , m_view(view)
-    , m_search(0)
+    , m_search(nullptr)
 {
     m_layout = new QVBoxLayout(this);
     m_layout->setContentsMargins(0, 0, 0, 0);

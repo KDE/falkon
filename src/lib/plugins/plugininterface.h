@@ -47,7 +47,7 @@ public:
     virtual void unload() = 0;
     virtual bool testPlugin() = 0;
 
-    virtual void showSettings(QWidget* parent = 0) { Q_UNUSED(parent) }
+    virtual void showSettings(QWidget* parent = nullptr) { Q_UNUSED(parent) }
 
     virtual void populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTestResult &r) { Q_UNUSED(menu) Q_UNUSED(view) Q_UNUSED(r) }
     virtual void populateExtensionsMenu(QMenu *menu) { Q_UNUSED(menu) }

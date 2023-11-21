@@ -29,7 +29,7 @@
 History::History(QObject* parent)
     : QObject(parent)
     , m_isSaving(true)
-    , m_model(0)
+    , m_model(nullptr)
 {
     loadSettings();
 }

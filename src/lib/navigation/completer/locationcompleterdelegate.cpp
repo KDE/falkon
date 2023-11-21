@@ -219,7 +219,7 @@ QSize LocationCompleterDelegate::sizeHint(const QStyleOptionViewItem &option, co
 
         const QWidget* w = opt.widget;
         const QStyle* style = w ? w->style() : QApplication::style();
-        const int padding = style->pixelMetric(QStyle::PM_FocusFrameHMargin, 0) + 1;
+        const int padding = style->pixelMetric(QStyle::PM_FocusFrameHMargin, nullptr) + 1;
 
         m_padding = padding > 3 ? padding : 3;
         m_rowHeight = 4 * m_padding + qMax(16, opt.fontMetrics.height());

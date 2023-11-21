@@ -24,7 +24,7 @@
 #include <QUrl>
 #include <QRegExp>
 
-TLDExtractor* TLDExtractor::s_instance = 0;
+TLDExtractor* TLDExtractor::s_instance = nullptr;
 
 TLDExtractor::TLDExtractor(QObject* parent)
     : QObject(parent)
@@ -39,7 +39,7 @@ QStringList TLDExtractor::defaultDataSearchPaths()
 
 TLDExtractor* TLDExtractor::instance()
 {
-    if(s_instance == 0)
+    if(s_instance == nullptr)
     {
         s_instance = new TLDExtractor(qApp);
     }
@@ -49,7 +49,7 @@ TLDExtractor* TLDExtractor::instance()
 
 TLDExtractor::~TLDExtractor()
 {
-    s_instance = 0;
+    s_instance = nullptr;
 }
 
 bool TLDExtractor::isDataLoaded()
@@ -258,7 +258,7 @@ void TLDExtractor::loadData()
 
     if (!parsedDataFileExist) {
         const QString tldDataFileDownloadLink = QLatin1String("http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1");
-        QMessageBox::information(0, tr("File not found!"),
+        QMessageBox::information(nullptr, tr("File not found!"),
                                  tr("File \'effective_tld_names.dat\' was not found!\n"
                                     "You can download it from \'<a href=\"%1\"><b>here</b></a>\' to one of the following paths:\n%2")
                                  .arg(tldDataFileDownloadLink, m_dataSearchPaths.join(QStringLiteral("\n"))));
@@ -361,7 +361,7 @@ bool TLDExtractor::test()
     if (!testDataFileExist) {
         const QString testFileDownloadLink = QLatin1String("http://mxr.mozilla.org/mozilla-central/source/netwerk/test/unit/data/test_psl.txt?raw=1");
 
-        QMessageBox::information(0, tr("File not found!"),
+        QMessageBox::information(nullptr, tr("File not found!"),
                                  tr("File \'test_psl.txt\' was not found!\n"
                                     "You can download it from \'<a href=\"%1\"><b>here</b></a>\' to one of the following paths:\n%2")
                                  .arg(testFileDownloadLink, m_dataSearchPaths.join(QStringLiteral("\n"))));

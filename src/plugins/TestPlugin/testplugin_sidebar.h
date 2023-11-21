@@ -24,7 +24,7 @@ class TestPlugin_Sidebar : public SideBarInterface
 {
     Q_OBJECT
 public:
-    explicit TestPlugin_Sidebar(QObject* parent = 0);
+    explicit TestPlugin_Sidebar(QObject* parent = nullptr);
 
     QString title() const override;
     QAction* createMenuAction() override;

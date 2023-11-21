@@ -50,9 +50,9 @@ private Q_SLOTS:
 
     void menuAboutToShow();
     void menuMiddleClicked(Menu* menu);
-    void bookmarkActivated(BookmarkItem* item = 0);
-    void bookmarkCtrlActivated(BookmarkItem* item = 0);
-    void bookmarkShiftActivated(BookmarkItem* item = 0);
+    void bookmarkActivated(BookmarkItem* item = nullptr);
+    void bookmarkCtrlActivated(BookmarkItem* item = nullptr);
+    void bookmarkShiftActivated(BookmarkItem* item = nullptr);
 
     void openFolder(BookmarkItem* item);
     void openBookmark(BookmarkItem* item);

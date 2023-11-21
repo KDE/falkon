@@ -21,7 +21,7 @@
 #include "fcm_plugin.h"
 
 FCM_Notification::FCM_Notification(FCM_Plugin* manager, int newOriginsCount)
-    : AnimatedWidget(AnimatedWidget::Down, 300, 0)
+    : AnimatedWidget(AnimatedWidget::Down, 300, nullptr)
     , ui(new Ui::FCM_Notification)
     , m_manager(manager)
 {

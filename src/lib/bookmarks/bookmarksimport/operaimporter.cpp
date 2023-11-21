@@ -81,7 +81,7 @@ BookmarkItem* OperaImporter::importBookmarks()
     QList<BookmarkItem*> folders;
     folders.append(root);
 
-    BookmarkItem* item = 0;
+    BookmarkItem* item = nullptr;
 
 #define PARENT folders.isEmpty() ? root : folders.last()
 

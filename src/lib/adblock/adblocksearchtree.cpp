@@ -73,7 +73,7 @@ const AdBlockRule* AdBlockSearchTree::find(const QWebEngineUrlRequestInfo &reque
     int len = urlString.size();
 
     if (len <= 0) {
-        return 0;
+        return nullptr;
     }
 
     const QChar* string = urlString.constData();
@@ -85,13 +85,13 @@ const AdBlockRule* AdBlockSearchTree::find(const QWebEngineUrlRequestInfo &reque
         }
     }
 
-    return 0;
+    return nullptr;
 }
 
 const AdBlockRule* AdBlockSearchTree::prefixSearch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &urlString, const QChar* string, int len) const
 {
     if (len <= 0) {
-        return 0;
+        return nullptr;
     }
 
     QChar c = string[0];

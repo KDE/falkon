@@ -27,7 +27,7 @@
 AdBlockTreeWidget::AdBlockTreeWidget(AdBlockSubscription* subscription, QWidget* parent)
     : TreeWidget(parent)
     , m_subscription(subscription)
-    , m_topItem(0)
+    , m_topItem(nullptr)
     , m_itemChangingBlock(false)
 {
     setContextMenuPolicy(Qt::CustomContextMenu);
@@ -266,6 +266,6 @@ void AdBlockTreeWidget::refresh()
         ++index;
     }
 
-    showRule(0);
+    showRule(nullptr);
     m_itemChangingBlock = false;
 }

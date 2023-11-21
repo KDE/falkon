@@ -33,7 +33,7 @@
 
 MouseGestures::MouseGestures(const QString &settingsPath, QObject* parent)
     : QObject(parent)
-    , m_filter(0)
+    , m_filter(nullptr)
     , m_settingsFile(settingsPath + QL1S("/extensions.ini"))
     , m_button(Qt::MiddleButton)
 {

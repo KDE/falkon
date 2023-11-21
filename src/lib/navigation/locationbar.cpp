@@ -46,7 +46,7 @@
 LocationBar::LocationBar(QWidget *parent)
     : LineEdit(parent)
     , m_window(nullptr)
-    , m_webView(0)
+    , m_webView(nullptr)
     , m_holdingAlt(false)
     , m_oldTextLength(0)
     , m_currentTextLength(0)

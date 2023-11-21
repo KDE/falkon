@@ -37,8 +37,8 @@ static QString dateTimeToString(const QDateTime &dateTime)
 
 HistoryModel::HistoryModel(History* history)
     : QAbstractItemModel(history)
-    , m_rootItem(new HistoryItem(0))
-    , m_todayItem(0)
+    , m_rootItem(new HistoryItem(nullptr))
+    , m_todayItem(nullptr)
     , m_history(history)
 {
     init();
@@ -254,7 +254,7 @@ void HistoryModel::removeTopLevelIndexes(const QList<QPersistentModelIndex> &ind
         endRemoveRows();
 
         if (item == m_todayItem) {
-            m_todayItem = 0;
+            m_todayItem = nullptr;
         }
     }
 }
@@ -264,8 +264,8 @@ void HistoryModel::resetHistory()
     beginResetModel();
 
     delete m_rootItem;
-    m_todayItem = 0;
-    m_rootItem = new HistoryItem(0);
+    m_todayItem = nullptr;
+    m_rootItem = new HistoryItem(nullptr);
 
     init();
 
@@ -335,7 +335,7 @@ void HistoryModel::historyEntryAdded(const HistoryEntry &entry)
     if (!m_todayItem) {
         beginInsertRows(QModelIndex(), 0, 0);
 
-        m_todayItem = new HistoryItem(0);
+        m_todayItem = new HistoryItem(nullptr);
         m_todayItem->setStartTimestamp(-1);
         m_todayItem->setEndTimestamp(QDateTime(QDate::currentDate(), QTime(), QTimeZone::systemTimeZone()).toMSecsSinceEpoch());
         m_todayItem->title = tr("Today");
@@ -401,7 +401,7 @@ void HistoryModel::historyEntryEdited(const HistoryEntry &before, const HistoryE
 
 HistoryItem* HistoryModel::findHistoryItem(const HistoryEntry &entry)
 {
-    HistoryItem* parentItem = 0;
+    HistoryItem* parentItem = nullptr;
     qint64 timestamp = entry.date.toMSecsSinceEpoch();
 
     for (int i = 0; i < m_rootItem->childCount(); ++i) {
@@ -414,7 +414,7 @@ HistoryItem* HistoryModel::findHistoryItem(const HistoryEntry &entry)
     }
 
     if (!parentItem) {
-        return 0;
+        return nullptr;
     }
 
     for (int i = 0; i < parentItem->childCount(); ++i) {
@@ -424,7 +424,7 @@ HistoryItem* HistoryModel::findHistoryItem(const HistoryEntry &entry)
         }
     }
 
-    return 0;
+    return nullptr;
 }
 
 void HistoryModel::checkEmptyParentItem(HistoryItem* item)
@@ -437,7 +437,7 @@ void HistoryModel::checkEmptyParentItem(HistoryItem* item)
         endRemoveRows();
 
         if (item == m_todayItem) {
-            m_todayItem = 0;
+            m_todayItem = nullptr;
         }
     }
 }

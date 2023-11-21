@@ -29,7 +29,7 @@ class ProtocolHandlerDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit ProtocolHandlerDialog(QWidget *parent = 0);
+    explicit ProtocolHandlerDialog(QWidget *parent = nullptr);
     ~ProtocolHandlerDialog();
 
 private:

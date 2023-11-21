@@ -55,10 +55,10 @@ private Q_SLOTS:
     void bookmarksSelected(const QList<BookmarkItem*> &items);
     void createContextMenu(const QPoint &pos);
 
-    void openBookmark(BookmarkItem* item = 0);
-    void openBookmarkInNewTab(BookmarkItem* item = 0);
-    void openBookmarkInNewWindow(BookmarkItem* item = 0);
-    void openBookmarkInNewPrivateWindow(BookmarkItem* item = 0);
+    void openBookmark(BookmarkItem* item = nullptr);
+    void openBookmarkInNewTab(BookmarkItem* item = nullptr);
+    void openBookmarkInNewWindow(BookmarkItem* item = nullptr);
+    void openBookmarkInNewPrivateWindow(BookmarkItem* item = nullptr);
 
     void addBookmark();
     void addFolder();

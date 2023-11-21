@@ -44,7 +44,7 @@ private:
 
 PopupLocationBar::PopupLocationBar(QWidget* parent)
     : LineEdit(parent)
-    , m_view(0)
+    , m_view(nullptr)
 {
     m_siteIcon = new PopupSiteIcon(this);
     m_siteIcon->setIcon(IconProvider::emptyWebIcon());

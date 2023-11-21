@@ -32,7 +32,7 @@ class SBI_SettingsDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit SBI_SettingsDialog(SBI_IconsManager* manager, QWidget* parent = 0);
+    explicit SBI_SettingsDialog(SBI_IconsManager* manager, QWidget* parent = nullptr);
     ~SBI_SettingsDialog();
 
 private Q_SLOTS:

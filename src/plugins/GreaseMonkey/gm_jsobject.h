@@ -27,7 +27,7 @@ class GM_JSObject : public QObject
 {
     Q_OBJECT
 public:
-    explicit GM_JSObject(QObject* parent = 0);
+    explicit GM_JSObject(QObject* parent = nullptr);
     ~GM_JSObject();
 
     void setSettingsFile(const QString &name);

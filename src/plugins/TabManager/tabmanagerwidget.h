@@ -40,7 +40,7 @@ class TabTreeWidget : public QTreeWidget
     Q_OBJECT
 
 public:
-    TabTreeWidget(QWidget* parent = 0);
+    TabTreeWidget(QWidget* parent = nullptr);
 
     Qt::DropActions supportedDropActions() const override;
     QStringList mimeTypes() const override;
@@ -65,7 +65,7 @@ public:
         GroupByHost = 2
     };
 
-    explicit TabManagerWidget(BrowserWindow* mainClass, QWidget* parent = 0, bool defaultWidget = false);
+    explicit TabManagerWidget(BrowserWindow* mainClass, QWidget* parent = nullptr, bool defaultWidget = false);
     ~TabManagerWidget() override;
 
     void closeSelectedTabs(const QMultiHash<BrowserWindow*, WebTab*> &tabsHash);
@@ -78,7 +78,7 @@ public:
     static QString domainFromUrl(const QUrl &url, bool useHostName = false);
 
 public Q_SLOTS:
-    void delayedRefreshTree(WebPage* p = 0);
+    void delayedRefreshTree(WebPage* p = nullptr);
     void changeGroupType();
 
 private:
@@ -127,7 +127,7 @@ public:
         SavedRole = Qt::UserRole + 2
     };
 
-    TabItem(QTreeWidget* treeWidget, bool supportDrag = true, bool isTab = true, QTreeWidgetItem* parent = 0, bool addToTree = true);
+    TabItem(QTreeWidget* treeWidget, bool supportDrag = true, bool isTab = true, QTreeWidgetItem* parent = nullptr, bool addToTree = true);
 
     BrowserWindow* window() const;
     void setBrowserWindow(BrowserWindow* window);

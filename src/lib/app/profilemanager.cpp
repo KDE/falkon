@@ -249,7 +249,7 @@ void ProfileManager::copyDataToProfile()
 
         const QString text = QSL("Incompatible profile version has been detected. To avoid losing your profile data, they were "
                              "backed up in following file:<br/><br/><b>") + browseDataBackup + QSL("<br/></b>");
-        QMessageBox::warning(0, QStringLiteral("Falkon: Incompatible profile version"), text);
+        QMessageBox::warning(nullptr, QStringLiteral("Falkon: Incompatible profile version"), text);
     }
 }
 

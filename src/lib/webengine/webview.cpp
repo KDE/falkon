@@ -58,7 +58,7 @@ WebView::WebView(QWidget* parent)
     : QWebEngineView(parent)
     , m_progress(100)
     , m_backgroundActivity(false)
-    , m_page(0)
+    , m_page(nullptr)
     , m_firstLoad(false)
 {
     connect(this, &QWebEngineView::loadStarted, this, &WebView::slotLoadStarted);

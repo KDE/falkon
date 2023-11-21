@@ -169,7 +169,7 @@ void TabManagerDelegate::viewItemDrawText(QPainter *p, const QStyleOptionViewIte
     const QWidget* widget = option->widget;
     const bool isRtlLayout = widget ? widget->isRightToLeft() : QApplication::isRightToLeft();
     const QStyle* proxyStyle = widget ? widget->style()->proxy() : QApplication::style()->proxy();
-    const int textMargin = proxyStyle->pixelMetric(QStyle::PM_FocusFrameHMargin, 0, widget) + 1;
+    const int textMargin = proxyStyle->pixelMetric(QStyle::PM_FocusFrameHMargin, nullptr, widget) + 1;
 
     QRect textRect = rect.adjusted(textMargin, 0, -textMargin, 0); // remove width padding
     const QFontMetrics fontMetrics(p->font());

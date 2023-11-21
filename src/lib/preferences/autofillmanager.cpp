@@ -131,7 +131,7 @@ void AutoFillManager::changePasswordBackend()
 
     // Switch backends
     if (!item.isEmpty()) {
-        PasswordBackend* backend = 0;
+        PasswordBackend* backend = nullptr;
 
         QHashIterator<QString, PasswordBackend*> i(backends);
         while (i.hasNext()) {

@@ -92,7 +92,7 @@ class QjtMouseGesture : public QObject
 {
     Q_OBJECT
 public:
-    QjtMouseGesture(const DirectionList &directions, QObject* parent = 0);
+    QjtMouseGesture(const DirectionList &directions, QObject* parent = nullptr);
     ~QjtMouseGesture();
 
     const DirectionList directions() const;

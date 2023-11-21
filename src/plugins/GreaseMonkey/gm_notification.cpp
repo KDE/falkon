@@ -25,7 +25,7 @@
 #include <QFile>
 
 GM_Notification::GM_Notification(GM_Manager* manager, const QString &tmpfileName, const QString &fileName)
-    : AnimatedWidget(AnimatedWidget::Down, 300, 0)
+    : AnimatedWidget(AnimatedWidget::Down, 300, nullptr)
     , ui(new Ui::GM_Notification)
     , m_manager(manager)
     , m_tmpFileName(tmpfileName)
@@ -47,7 +47,7 @@ void GM_Notification::installScript()
 {
     bool success = false;
 
-    GM_Script* script = 0;
+    GM_Script* script = nullptr;
     QString message = tr("Cannot install script");
 
     if (QFile::copy(m_tmpFileName, m_fileName)) {

@@ -851,7 +851,7 @@ bool QzTools::startExternalProcess(const QString &executable, const QString &arg
         info = info.arg(QObject::tr("Executable: "), executable,
                         QObject::tr("Arguments: "), arguments.join(QLatin1Char(' ')));
 
-        QMessageBox::critical(0, QObject::tr("Cannot start external program"),
+        QMessageBox::critical(nullptr, QObject::tr("Cannot start external program"),
                               QObject::tr("Cannot start external program! %1").arg(info));
     }
 
@@ -863,7 +863,7 @@ static xcb_connection_t *getXcbConnection()
 {
     const QNativeInterface::QX11Application *x11App = qApp->nativeInterface<QNativeInterface::QX11Application>();
     if (x11App == nullptr)
-        return 0;
+        return nullptr;
     return x11App->connection();
 }
 #endif
@@ -875,7 +875,7 @@ void QzTools::setWmClass(const QString &name, const QWidget* widget)
         return;
 
     xcb_connection_t *connection = getXcbConnection();
-    if (connection == 0)
+    if (connection == nullptr)
         return;
 
     const QByteArray nameData = name.toUtf8();

@@ -33,7 +33,7 @@ class PIM_Settings : public QDialog
     Q_OBJECT
 
 public:
-    explicit PIM_Settings(const QString &settingsFile, QWidget* parent = 0);
+    explicit PIM_Settings(const QString &settingsFile, QWidget* parent = nullptr);
     ~PIM_Settings();
 
 private Q_SLOTS:

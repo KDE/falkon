@@ -25,7 +25,7 @@
 
 StatusBarIconsPlugin::StatusBarIconsPlugin()
     : QObject()
-    , m_manager(0)
+    , m_manager(nullptr)
 {
 }
 

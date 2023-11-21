@@ -41,7 +41,7 @@
 SiteInfo::SiteInfo(WebView *view)
     : QDialog(view)
     , ui(new Ui::SiteInfo)
-    , m_certWidget(0)
+    , m_certWidget(nullptr)
     , m_view(view)
     , m_imageReply(nullptr)
     , m_baseUrl(view->url())

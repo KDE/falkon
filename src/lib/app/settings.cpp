@@ -20,8 +20,8 @@
 
 #include <QSettings>
 
-QSettings* Settings::s_settings = 0;
-QzSettings* Settings::s_qzSettings = 0;
+QSettings* Settings::s_settings = nullptr;
+QzSettings* Settings::s_qzSettings = nullptr;
 
 Settings::Settings()
 {

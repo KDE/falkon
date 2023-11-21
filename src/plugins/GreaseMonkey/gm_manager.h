@@ -36,7 +36,7 @@ class GM_Manager : public QObject
 {
     Q_OBJECT
 public:
-    explicit GM_Manager(const QString &sPath, QObject* parent = 0);
+    explicit GM_Manager(const QString &sPath, QObject* parent = nullptr);
     ~GM_Manager();
 
     void showSettings(QWidget* parent);

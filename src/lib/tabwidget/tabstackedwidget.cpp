@@ -31,8 +31,8 @@
 
 TabStackedWidget::TabStackedWidget(QWidget* parent)
     : QWidget(parent)
-    , m_stack(0)
-    , m_tabBar(0)
+    , m_stack(nullptr)
+    , m_tabBar(nullptr)
     , m_currentIndex(-1)
     , m_previousIndex(-1)
 {
@@ -265,7 +265,7 @@ int TabStackedWidget::pinUnPinTab(int index, const QString &title)
     QString toolTip =  tabToolTip(index);
 
     m_tabBar->m_blockCurrentChangedSignal = true;
-    m_tabBar->setTabButton(index, m_tabBar->iconButtonPosition(), 0);
+    m_tabBar->setTabButton(index, m_tabBar->iconButtonPosition(), nullptr);
 
     m_stack->removeWidget(widget);
     int newIndex = insertTab(makePinned ? 0 : m_tabBar->pinnedTabsCount(), widget, title, makePinned);

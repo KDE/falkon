@@ -110,7 +110,7 @@ void SBI_ImagesIcon::setGlobalLoadingImages(bool enable)
 void SBI_ImagesIcon::updateIcon()
 {
     if (testCurrentPageWebAttribute(QWebEngineSettings::AutoLoadImages)) {
-        setGraphicsEffect(0);
+        setGraphicsEffect(nullptr);
     }
     else {
         auto* effect = new QGraphicsColorizeEffect(this);

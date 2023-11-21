@@ -25,7 +25,7 @@
 
 AutoScrollPlugin::AutoScrollPlugin()
     : QObject()
-    , m_scroller(0)
+    , m_scroller(nullptr)
 {
 }
 

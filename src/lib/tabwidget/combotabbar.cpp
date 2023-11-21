@@ -45,8 +45,8 @@ public:
 
 ComboTabBar::ComboTabBar(QWidget* parent)
     : QWidget(parent)
-    , m_mainTabBar(0)
-    , m_pinnedTabBar(0)
+    , m_mainTabBar(nullptr)
+    , m_pinnedTabBar(nullptr)
     , m_mainBarOverFlowed(false)
     , m_lastAppliedOverflow(false)
     , m_usesScrollButtons(false)
@@ -755,7 +755,7 @@ QTabBar::ButtonPosition ComboTabBar::iconButtonPosition() const
 
 QTabBar::ButtonPosition ComboTabBar::closeButtonPosition() const
 {
-    return (QTabBar::ButtonPosition)style()->styleHint(QStyle::SH_TabBar_CloseButtonPosition, 0, m_mainTabBar);
+    return (QTabBar::ButtonPosition)style()->styleHint(QStyle::SH_TabBar_CloseButtonPosition, nullptr, m_mainTabBar);
 }
 
 QSize ComboTabBar::iconButtonSize() const
@@ -768,8 +768,8 @@ QSize ComboTabBar::iconButtonSize() const
 
 QSize ComboTabBar::closeButtonSize() const
 {
-    int width = style()->pixelMetric(QStyle::PM_TabCloseIndicatorWidth, 0, this);
-    int height = style()->pixelMetric(QStyle::PM_TabCloseIndicatorHeight, 0, this);
+    int width = style()->pixelMetric(QStyle::PM_TabCloseIndicatorWidth, nullptr, this);
+    int height = style()->pixelMetric(QStyle::PM_TabCloseIndicatorHeight, nullptr, this);
     return QSize(width, height);
 }
 
@@ -1000,7 +1000,7 @@ void ComboTabBar::setMinimumWidths()
 TabBarHelper::TabBarHelper(bool isPinnedTabBar, ComboTabBar* comboTabBar)
     : QTabBar(comboTabBar)
     , m_comboTabBar(comboTabBar)
-    , m_scrollArea(0)
+    , m_scrollArea(nullptr)
     , m_pressedIndex(-1)
     , m_dragInProgress(false)
     , m_activeTabBar(false)
@@ -1851,7 +1851,7 @@ void CloseButton::paintEvent(QPaintEvent*)
 
     if (auto* tb = qobject_cast<TabBarHelper*>(parent())) {
         int index = tb->currentIndex();
-        auto closeSide = (QTabBar::ButtonPosition)style()->styleHint(QStyle::SH_TabBar_CloseButtonPosition, 0, tb);
+        auto closeSide = (QTabBar::ButtonPosition)style()->styleHint(QStyle::SH_TabBar_CloseButtonPosition, nullptr, tb);
         if (tb->tabButton(index, closeSide) == this && tb->isActiveTabBar()) {
             opt.state |= QStyle::State_Selected;
         }

@@ -98,8 +98,8 @@ Preferences::Preferences(BrowserWindow* window)
     : QDialog(window)
     , ui(new Ui::Preferences)
     , m_window(window)
-    , m_autoFillManager(0)
-    , m_pluginsList(0)
+    , m_autoFillManager(nullptr)
+    , m_pluginsList(nullptr)
 {
     setAttribute(Qt::WA_DeleteOnClose);
     ui->setupUi(this);
@@ -225,7 +225,7 @@ Preferences::Preferences(BrowserWindow* window)
     connect(ui->instantBookmarksToolbar, &QAbstractButton::toggled, ui->showBookmarksToolbar, &QWidget::setDisabled);
     connect(ui->showBookmarksToolbar, &QAbstractButton::toggled, ui->instantBookmarksToolbar, &QWidget::setDisabled);
     ui->showNavigationToolbar->setChecked(settings.value(QSL("showNavigationToolbar"), true).toBool());
-    int currentSettingsPage = settings.value(QSL("settingsDialogPage"), 0).toInt(0);
+    int currentSettingsPage = settings.value(QSL("settingsDialogPage"), 0).toInt(nullptr);
     settings.endGroup();
 
     //TABS

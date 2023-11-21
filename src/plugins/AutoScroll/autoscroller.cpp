@@ -81,7 +81,7 @@ void ScrollIndicator::paintEvent(QPaintEvent *event)
 
 AutoScroller::AutoScroller(const QString &settingsFile, QObject* parent)
     : QObject(parent)
-    , m_view(0)
+    , m_view(nullptr)
     , m_settingsFile(settingsFile)
 {
     m_indicator = new ScrollIndicator;
@@ -272,7 +272,7 @@ void AutoScroller::stopScrolling()
     QApplication::restoreOverrideCursor();
 
     m_indicator->hide();
-    m_indicator->setParent(0);
+    m_indicator->setParent(nullptr);
     m_frameScroller->stopScrolling();
 }
 

@@ -32,7 +32,7 @@ class SBI_NetworkIconDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit SBI_NetworkIconDialog(QWidget* parent = 0);
+    explicit SBI_NetworkIconDialog(QWidget* parent = nullptr);
     ~SBI_NetworkIconDialog();
 
 private Q_SLOTS:

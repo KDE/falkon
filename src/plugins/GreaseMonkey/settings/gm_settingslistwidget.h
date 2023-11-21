@@ -26,7 +26,7 @@ class GM_SettingsListWidget : public QListWidget
 {
     Q_OBJECT
 public:
-    explicit GM_SettingsListWidget(QWidget* parent = 0);
+    explicit GM_SettingsListWidget(QWidget* parent = nullptr);
 
 Q_SIGNALS:
     void removeItemRequested(QListWidgetItem* item);

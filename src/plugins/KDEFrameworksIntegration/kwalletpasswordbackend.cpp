@@ -48,7 +48,7 @@ static QMap<QString, QString> encodeEntry(const PasswordEntry &entry)
 
 KWalletPasswordBackend::KWalletPasswordBackend()
     : PasswordBackend()
-    , m_wallet(0)
+    , m_wallet(nullptr)
 {
 }
 

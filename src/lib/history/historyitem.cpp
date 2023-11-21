@@ -97,7 +97,7 @@ HistoryItem* HistoryItem::child(int row) const
         return m_children.at(row);
     }
 
-    return 0;
+    return nullptr;
 }
 
 int HistoryItem::childCount() const

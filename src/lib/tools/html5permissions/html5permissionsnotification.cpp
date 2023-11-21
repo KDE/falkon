@@ -28,7 +28,7 @@
 
 
 HTML5PermissionsNotification::HTML5PermissionsNotification(const QUrl &origin, QWebEnginePage* page, const QWebEnginePage::Feature &feature)
-    : AnimatedWidget(AnimatedWidget::Down, 300, 0)
+    : AnimatedWidget(AnimatedWidget::Down, 300, nullptr)
     , ui(new Ui::HTML5PermissionsNotification)
     , m_origin(origin)
     , m_page(page)

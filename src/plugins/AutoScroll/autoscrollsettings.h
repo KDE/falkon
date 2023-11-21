@@ -32,7 +32,7 @@ class AutoScrollSettings : public QDialog
     Q_OBJECT
 
 public:
-    explicit AutoScrollSettings(AutoScroller* scroller, QWidget* parent = 0);
+    explicit AutoScrollSettings(AutoScroller* scroller, QWidget* parent = nullptr);
     ~AutoScrollSettings();
 
 private Q_SLOTS:

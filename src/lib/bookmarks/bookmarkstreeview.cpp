@@ -78,7 +78,7 @@ void BookmarksTreeView::setViewType(BookmarksTreeView::ViewType type)
 BookmarkItem* BookmarksTreeView::selectedBookmark() const
 {
     QList<BookmarkItem*> items = selectedBookmarks();
-    return items.count() == 1 ? items.at(0) : 0;
+    return items.count() == 1 ? items.at(0) : nullptr;
 }
 
 QList<BookmarkItem*> BookmarksTreeView::selectedBookmarks() const

@@ -26,7 +26,7 @@ class FALKON_EXPORT LocationCompleterDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    explicit LocationCompleterDelegate(QObject *parent = 0);
+    explicit LocationCompleterDelegate(QObject *parent = nullptr);
 
     void paint(QPainter* painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;

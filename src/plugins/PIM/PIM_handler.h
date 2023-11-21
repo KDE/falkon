@@ -35,7 +35,7 @@ class PIM_Handler : public QObject
 {
     Q_OBJECT
 public:
-    explicit PIM_Handler(const QString &sPath, QObject* parent = 0);
+    explicit PIM_Handler(const QString &sPath, QObject* parent = nullptr);
 
     void populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTestResult &hitTest);
     bool keyPress(WebView* view, QKeyEvent* event);
@@ -44,7 +44,7 @@ public:
 
 public Q_SLOTS:
     void webPageCreated(WebPage* page);
-    void showSettings(QWidget* parent = 0);
+    void showSettings(QWidget* parent = nullptr);
 
 private Q_SLOTS:
     void loadSettings();

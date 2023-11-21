@@ -23,7 +23,7 @@
 
 FrameScroller::FrameScroller(QObject* parent)
     : QObject(parent)
-    , m_page(0)
+    , m_page(nullptr)
     , m_lengthX(0)
     , m_lengthY(0)
     , m_divider(8.0)

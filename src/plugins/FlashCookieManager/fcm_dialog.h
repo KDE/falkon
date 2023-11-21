@@ -39,7 +39,7 @@ class FCM_Dialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit FCM_Dialog(FCM_Plugin* manager, QWidget* parent = 0);
+    explicit FCM_Dialog(FCM_Plugin* manager, QWidget* parent = nullptr);
     ~FCM_Dialog() override;
 
     void refreshView(bool forceReload = false);

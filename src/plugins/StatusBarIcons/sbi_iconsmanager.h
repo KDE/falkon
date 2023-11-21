@@ -28,7 +28,7 @@ class SBI_IconsManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit SBI_IconsManager(const QString &settingsPath, QObject* parent = 0);
+    explicit SBI_IconsManager(const QString &settingsPath, QObject* parent = nullptr);
     ~SBI_IconsManager();
 
     void loadSettings();
