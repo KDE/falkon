@@ -864,7 +864,7 @@ bool TabWidget::restoreState(const QVector<WebTab::SavedTab> &tabs, int currentT
         }
     }
 
-    for (const auto &p : qAsConst(childTabs)) {
+    for (const auto &p : std::as_const(childTabs)) {
         const auto indices = p.second;
         for (int index : indices) {
             WebTab *t = weTab(index);

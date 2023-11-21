@@ -322,7 +322,7 @@ void HistoryModel::fetchMore(const QModelIndex &parent)
 
     beginInsertRows(parent, 0, list.size() - 1);
 
-    for (const HistoryEntry &entry : qAsConst(list)) {
+    for (const HistoryEntry &entry : std::as_const(list)) {
         auto* newItem = new HistoryItem(parentItem);
         newItem->historyEntry = entry;
     }

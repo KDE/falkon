@@ -118,7 +118,7 @@ SearchEngine SearchEnginesManager::engineForShortcut(const QString &shortcut)
         return returnEngine;
     }
 
-    for (const Engine &en : qAsConst(m_allEngines)) {
+    for (const Engine &en : std::as_const(m_allEngines)) {
         if (en.shortcut == shortcut) {
             returnEngine = en;
             break;
@@ -216,7 +216,7 @@ void SearchEnginesManager::engineChangedImage()
         return;
     }
 
-    for (Engine e : qAsConst(m_allEngines)) {
+    for (Engine e : std::as_const(m_allEngines)) {
         if (e.name == engine->name() &&
             e.url.contains(engine->searchUrl(QSL("%s")).toString()) &&
             !engine->image().isNull()
@@ -495,7 +495,7 @@ void SearchEnginesManager::saveSettings()
     QSqlQuery query(SqlDatabase::instance()->database());
     query.exec(QSL("DELETE FROM search_engines"));
 
-    for (const Engine &en : qAsConst(m_allEngines)) {
+    for (const Engine &en : std::as_const(m_allEngines)) {
         query.prepare(QSL("INSERT INTO search_engines (name, icon, url, shortcut, suggestionsUrl, suggestionsParameters, postData) VALUES (?, ?, ?, ?, ?, ?, ?)"));
         query.addBindValue(en.name);
         query.addBindValue(iconToBase64(en.icon));

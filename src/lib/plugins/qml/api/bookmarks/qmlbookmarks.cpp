@@ -64,7 +64,7 @@ BookmarkItem *QmlBookmarks::getBookmarkItem(QmlBookmarkTreeNode *treeNode) const
         items = bookmarks->searchBookmarks(QUrl::fromEncoded(treeNode->url().toUtf8()));
     }
 
-    for (BookmarkItem *item : qAsConst(items)) {
+    for (BookmarkItem *item : std::as_const(items)) {
         if (treeNode->item() == item) {
             return item;
         }
@@ -182,7 +182,7 @@ QList<QObject*> QmlBookmarks::search(const QVariantMap &map) const
     }
     QList<QObject*> ret;
     ret.reserve(items.size());
-    for (auto item : qAsConst(items)) {
+    for (auto item : std::as_const(items)) {
         ret.append(QmlStaticData::instance().getBookmarkTreeNode(item));
     }
     return ret;

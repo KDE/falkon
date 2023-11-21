@@ -135,7 +135,7 @@ void CookieManager::remove()
         }
     }
 
-    for (const QNetworkCookie &cookie : qAsConst(cookies)) {
+    for (const QNetworkCookie &cookie : std::as_const(cookies)) {
         mApp->cookieJar()->deleteCookie(cookie);
     }
 }

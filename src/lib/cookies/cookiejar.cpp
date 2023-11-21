@@ -81,7 +81,7 @@ void CookieJar::deleteAllCookies(bool deleteAll)
         return;
     }
 
-    for (const QNetworkCookie &cookie : qAsConst(m_cookies)) {
+    for (const QNetworkCookie &cookie : std::as_const(m_cookies)) {
         if (!listMatchesDomain(m_whitelist, cookie.domain())) {
             m_client->deleteCookie(cookie);
         }

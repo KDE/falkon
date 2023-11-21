@@ -242,7 +242,7 @@ bool AdBlockManager::removeSubscription(AdBlockSubscription* subscription)
 
 AdBlockCustomList* AdBlockManager::customList() const
 {
-    for (AdBlockSubscription* subscription : qAsConst(m_subscriptions)) {
+    for (AdBlockSubscription* subscription : std::as_const(m_subscriptions)) {
         auto* list = qobject_cast<AdBlockCustomList*>(subscription);
 
         if (list) {
@@ -330,7 +330,7 @@ void AdBlockManager::load()
     m_subscriptions.append(customList);
 
     // Load all subscriptions
-    for (AdBlockSubscription* subscription : qAsConst(m_subscriptions)) {
+    for (AdBlockSubscription* subscription : std::as_const(m_subscriptions)) {
         subscription->loadSubscription(m_disabledRules);
 
         connect(subscription, &AdBlockSubscription::subscriptionUpdated, mApp, &MainApplication::reloadUserStyleSheet);
@@ -367,7 +367,7 @@ void AdBlockManager::updateMatcher()
 
 void AdBlockManager::updateAllSubscriptions()
 {
-    for (AdBlockSubscription* subscription : qAsConst(m_subscriptions)) {
+    for (AdBlockSubscription* subscription : std::as_const(m_subscriptions)) {
         subscription->updateSubscription();
     }
 
@@ -383,7 +383,7 @@ void AdBlockManager::save()
         return;
     }
 
-    for (AdBlockSubscription* subscription : qAsConst(m_subscriptions)) {
+    for (AdBlockSubscription* subscription : std::as_const(m_subscriptions)) {
         subscription->saveSubscription();
     }
 
@@ -428,7 +428,7 @@ QString AdBlockManager::elementHidingRulesForDomain(const QUrl &url) const
 
 AdBlockSubscription* AdBlockManager::subscriptionByName(const QString &name) const
 {
-    for (AdBlockSubscription* subscription : qAsConst(m_subscriptions)) {
+    for (AdBlockSubscription* subscription : std::as_const(m_subscriptions)) {
         if (subscription->title() == name) {
             return subscription;
         }

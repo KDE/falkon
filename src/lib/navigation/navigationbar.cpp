@@ -221,7 +221,7 @@ void NavigationBar::setSplitterSizes(int locationBar, int websearchBar)
 
 void NavigationBar::setCurrentView(TabbedWebView *view)
 {
-    for (const WidgetData &data : qAsConst(m_widgets)) {
+    for (const WidgetData &data : std::as_const(m_widgets)) {
         if (data.button) {
             data.button->setWebView(view);
         }
@@ -437,7 +437,7 @@ void NavigationBar::aboutToShowToolsMenu()
     m_window->createSidebarsMenu(m_menuTools->addMenu(tr("Sidebar")));
     m_menuTools->addSeparator();
 
-    for (const WidgetData &data : qAsConst(m_widgets)) {
+    for (const WidgetData &data : std::as_const(m_widgets)) {
         AbstractButtonInterface *button = data.button;
         if (button && (!button->isVisible() || !m_layoutIds.contains(data.id))) {
             QString title = button->title();
@@ -570,7 +570,7 @@ void NavigationBar::reloadLayout()
     }
 
     // Add widgets to layout
-    for (const QString &id : qAsConst(m_layoutIds)) {
+    for (const QString &id : std::as_const(m_layoutIds)) {
         const WidgetData data = m_widgets.value(id);
         if (data.widget) {
             m_layout->addWidget(data.widget);

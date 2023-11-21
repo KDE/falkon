@@ -164,7 +164,7 @@ void Plugins::loadSettings()
 
 void Plugins::shutdown()
 {
-    for (PluginInterface* iPlugin : qAsConst(m_loadedPlugins)) {
+    for (PluginInterface* iPlugin : std::as_const(m_loadedPlugins)) {
         iPlugin->unload();
     }
 }
@@ -226,7 +226,7 @@ void Plugins::loadPlugins()
         settingsDir.mkdir(settingsDir.absolutePath());
     }
 
-    for (const QString &pluginId : qAsConst(m_allowedPlugins)) {
+    for (const QString &pluginId : std::as_const(m_allowedPlugins)) {
         Plugin plugin = loadPlugin(pluginId);
         if (plugin.type == Plugin::Invalid) {
             continue;
@@ -306,7 +306,7 @@ void Plugins::refreshLoadedPlugins()
 {
     m_loadedPlugins.clear();
 
-    for (const Plugin &plugin : qAsConst(m_availablePlugins)) {
+    for (const Plugin &plugin : std::as_const(m_availablePlugins)) {
         if (plugin.isLoaded()) {
             m_loadedPlugins.append(plugin.instance);
         }

@@ -54,7 +54,7 @@ void NavigationBarConfigDialog::loadSettings()
     };
 
     ui->currentItems->clear();
-    for (const QString &id : qAsConst(m_navigationBar->m_layoutIds)) {
+    for (const QString &id : std::as_const(m_navigationBar->m_layoutIds)) {
         NavigationBar::WidgetData data = m_navigationBar->m_widgets.value(id);
         if (data.id.isEmpty()) {
             data.id = id;
@@ -64,7 +64,7 @@ void NavigationBarConfigDialog::loadSettings()
     }
 
     ui->availableItems->clear();
-    for (const NavigationBar::WidgetData &data : qAsConst(m_navigationBar->m_widgets)) {
+    for (const NavigationBar::WidgetData &data : std::as_const(m_navigationBar->m_widgets)) {
         if (!m_navigationBar->m_layoutIds.contains(data.id)) {
             ui->availableItems->addItem(createItem(data));
         }

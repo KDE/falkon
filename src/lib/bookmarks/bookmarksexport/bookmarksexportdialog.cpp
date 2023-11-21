@@ -72,7 +72,7 @@ void BookmarksExportDialog::init()
 {
     m_exporters.append(new HtmlExporter(this));
 
-    for (BookmarksExporter* exporter : qAsConst(m_exporters)) {
+    for (BookmarksExporter* exporter : std::as_const(m_exporters)) {
         ui->format->addItem(exporter->name());
     }
 

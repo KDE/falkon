@@ -105,7 +105,7 @@ void DataPaths::init()
     m_paths[Plugins].append(QStringLiteral(FALKON_PLUGIN_PATH));
 #endif
 
-    for (const QString &location : qAsConst(m_paths[AppData])) {
+    for (const QString &location : std::as_const(m_paths[AppData])) {
         initAssetsIn(location);
     }
 

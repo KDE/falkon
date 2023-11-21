@@ -121,7 +121,7 @@ BrowserWindow::SavedWindow::SavedWindow(BrowserWindow *window)
 
 bool BrowserWindow::SavedWindow::isValid() const
 {
-    for (const WebTab::SavedTab &tab : qAsConst(tabs)) {
+    for (const WebTab::SavedTab &tab : std::as_const(tabs)) {
         if (!tab.isValid()) {
             return false;
         }
@@ -227,7 +227,7 @@ BrowserWindow::~BrowserWindow()
 {
     mApp->plugins()->emitMainWindowDeleted(this);
 
-    for (const QPointer<QWidget> &pointer : qAsConst(m_deleteOnCloseWidgets)) {
+    for (const QPointer<QWidget> &pointer : std::as_const(m_deleteOnCloseWidgets)) {
         if (pointer) {
             pointer->deleteLater();
         }
@@ -525,7 +525,7 @@ void BrowserWindow::createEncodingSubMenu(const QString &name, QStringList &code
 
     auto *group = new QActionGroup(subMenu);
 
-    for (const QString &codecName : qAsConst(codecNames)) {
+    for (const QString &codecName : std::as_const(codecNames)) {
         QAction *act = createEncodingAction(codecName, activeCodecName, subMenu);
         group->addAction(act);
         subMenu->addAction(act);

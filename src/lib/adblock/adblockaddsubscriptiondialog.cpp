@@ -39,7 +39,7 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(QWidget* parent)
                          << Subscription(QSL("Anti-Adblock Killer"), QSL("https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt"))
                          << Subscription(tr("Other..."), QString());
 
-    for (const Subscription &subscription : qAsConst(m_knownSubscriptions)) {
+    for (const Subscription &subscription : std::as_const(m_knownSubscriptions)) {
         ui->comboBox->addItem(subscription.title);
     }
 

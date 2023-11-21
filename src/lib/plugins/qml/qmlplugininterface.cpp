@@ -69,7 +69,7 @@ void QmlPluginInterface::unload()
 
     m_unload.call();
 
-    for (QObject *childItem : qAsConst(m_childItems)) {
+    for (QObject *childItem : std::as_const(m_childItems)) {
         childItem->deleteLater();
     }
 

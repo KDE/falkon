@@ -26,7 +26,7 @@ QmlExternalJsObject::QmlExternalJsObject(QObject *parent)
 
 QmlExternalJsObject::~QmlExternalJsObject()
 {
-    for (QObject *object : qAsConst(m_objects)) {
+    for (QObject *object : std::as_const(m_objects)) {
         ExternalJsObject::unregisterExtraObject(object);
     }
 }

@@ -58,7 +58,7 @@ void NetworkUrlInterceptor::interceptRequest(QWebEngineUrlRequestInfo &info)
         }
     }
 
-    for (UrlInterceptor *interceptor : qAsConst(m_interceptors)) {
+    for (UrlInterceptor *interceptor : std::as_const(m_interceptors)) {
         interceptor->interceptRequest(info);
     }
 }

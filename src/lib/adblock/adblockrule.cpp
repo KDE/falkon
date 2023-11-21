@@ -279,14 +279,14 @@ bool AdBlockRule::matchDomain(const QString &domain) const
     }
 
     if (m_blockedDomains.isEmpty()) {
-        for (const QString &d : qAsConst(m_allowedDomains)) {
+        for (const QString &d : std::as_const(m_allowedDomains)) {
             if (isMatchingDomain(domain, d)) {
                 return true;
             }
         }
     }
     else if (m_allowedDomains.isEmpty()) {
-        for (const QString &d : qAsConst(m_blockedDomains)) {
+        for (const QString &d : std::as_const(m_blockedDomains)) {
             if (isMatchingDomain(domain, d)) {
                 return false;
             }
@@ -294,13 +294,13 @@ bool AdBlockRule::matchDomain(const QString &domain) const
         return true;
     }
     else {
-        for (const QString &d : qAsConst(m_blockedDomains)) {
+        for (const QString &d : std::as_const(m_blockedDomains)) {
             if (isMatchingDomain(domain, d)) {
                 return false;
             }
         }
 
-        for (const QString &d : qAsConst(m_allowedDomains)) {
+        for (const QString &d : std::as_const(m_allowedDomains)) {
             if (isMatchingDomain(domain, d)) {
                 return true;
             }

@@ -100,7 +100,7 @@ void LocationCompleterRefreshJob::runJob()
     }
 
     // Load all icons into QImage
-    for (QStandardItem* item : qAsConst(m_items)) {
+    for (QStandardItem* item : std::as_const(m_items)) {
         if (m_jobCancelled) {
             return;
         }

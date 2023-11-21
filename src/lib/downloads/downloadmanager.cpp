@@ -209,20 +209,20 @@ void DownloadManager::timerEvent(QTimerEvent* e)
         }
 
         QTime remaining;
-        for (const QTime &time : qAsConst(remTimes)) {
+        for (const QTime &time : std::as_const(remTimes)) {
             if (time > remaining) {
                 remaining = time;
             }
         }
 
         int progress = 0;
-        for (int prog : qAsConst(progresses)) {
+        for (int prog : std::as_const(progresses)) {
             progress += prog;
         }
         progress = progress / progresses.count();
 
         double speed = 0.00;
-        for (double spee : qAsConst(speeds)) {
+        for (double spee : std::as_const(speeds)) {
             speed += spee;
         }
 

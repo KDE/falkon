@@ -119,7 +119,7 @@ void SideBarManager::createMenu(QMenu* menu)
     act->setChecked(m_activeBar == QL1S("History"));
     group->addAction(act);
 
-    for (const QPointer<SideBarInterface> &sidebar : qAsConst(s_sidebars)) {
+    for (const QPointer<SideBarInterface> &sidebar : std::as_const(s_sidebars)) {
         if (sidebar) {
             QAction* act = sidebar.data()->createMenuAction();
             act->setData(s_sidebars.key(sidebar));

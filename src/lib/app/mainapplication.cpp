@@ -262,7 +262,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     if (isRunning()) {
         m_isClosing = true;
-        for (const QString &message : qAsConst(messages)) {
+        for (const QString &message : std::as_const(messages)) {
             sendMessage(message);
         }
         return;
@@ -735,7 +735,7 @@ void MainApplication::quitApplication()
         return;
     }
 
-    for (BrowserWindow *window : qAsConst(m_windows)) {
+    for (BrowserWindow *window : std::as_const(m_windows)) {
         Q_EMIT window->aboutToClose();
     }
 
@@ -745,7 +745,7 @@ void MainApplication::quitApplication()
 
     m_isClosing = true;
 
-    for (BrowserWindow *window : qAsConst(m_windows)) {
+    for (BrowserWindow *window : std::as_const(m_windows)) {
         window->close();
     }
 
@@ -785,7 +785,7 @@ QByteArray MainApplication::saveState() const
 {
     RestoreData restoreData;
     restoreData.windows.reserve(m_windows.count());
-    for (BrowserWindow *window : qAsConst(m_windows)) {
+    for (BrowserWindow *window : std::as_const(m_windows)) {
         restoreData.windows.append(BrowserWindow::SavedWindow(window));
     }
 
@@ -1127,7 +1127,7 @@ void MainApplication::checkOptimizeDatabase()
 
 void MainApplication::registerAllowedSchemes()
 {
-    for (const QString &schemeName : qAsConst(qzSettings->allowedSchemes)) {
+    for (const QString &schemeName : std::as_const(qzSettings->allowedSchemes)) {
         if (qzSettings->blockedSchemes.contains(schemeName)) {
             continue;
         }

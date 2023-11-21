@@ -158,7 +158,7 @@ QList<GM_Script*> GM_Manager::allScripts() const
 
 bool GM_Manager::containsScript(const QString &fullName) const
 {
-    for (GM_Script* script : qAsConst(m_scripts)) {
+    for (GM_Script* script : std::as_const(m_scripts)) {
         if (fullName == script->fullName()) {
             return true;
         }

@@ -126,7 +126,7 @@ QSqlQuery LocationCompleterModel::createHistoryQuery(const QString &searchString
         sqlQuery.addBindValue(QSL("%%1%").arg(searchString));
     }
     else {
-        for (const QString &str : qAsConst(searchList)) {
+        for (const QString &str : std::as_const(searchList)) {
             sqlQuery.addBindValue(QSL("%%1%").arg(str));
             sqlQuery.addBindValue(QSL("%%1%").arg(str));
         }

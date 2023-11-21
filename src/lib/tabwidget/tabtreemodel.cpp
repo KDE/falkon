@@ -47,7 +47,7 @@ TabTreeModelItem::TabTreeModelItem(WebTab *tab, const QModelIndex &index)
 
 TabTreeModelItem::~TabTreeModelItem()
 {
-    for (TabTreeModelItem *child : qAsConst(children)) {
+    for (TabTreeModelItem *child : std::as_const(children)) {
         delete child;
     }
 }
@@ -269,7 +269,7 @@ void TabTreeModel::init()
         }
     }
 
-    for (TabTreeModelItem *item : qAsConst(m_items)) {
+    for (TabTreeModelItem *item : std::as_const(m_items)) {
         connectTab(item->tab);
     }
 

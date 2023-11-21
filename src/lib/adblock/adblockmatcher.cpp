@@ -180,7 +180,7 @@ void AdBlockMatcher::update()
         }
     }
 
-    for (const AdBlockRule* rule : qAsConst(exceptionCssRules)) {
+    for (const AdBlockRule* rule : std::as_const(exceptionCssRules)) {
         const AdBlockRule* originalRule = cssRulesHash.value(rule->cssSelector());
 
         // If we don't have this selector, the exception does nothing

@@ -65,7 +65,7 @@ QVector<PasswordEntry> KWalletPasswordBackend::getEntries(const QUrl &url)
 
     QVector<PasswordEntry> list;
 
-    for (const PasswordEntry &entry : qAsConst(m_allEntries)) {
+    for (const PasswordEntry &entry : std::as_const(m_allEntries)) {
         if (entry.host == host) {
             list.append(entry);
         }
@@ -269,7 +269,7 @@ void KWalletPasswordBackend::initialize()
             return;
         }
 
-        for (const PasswordEntry &entry : qAsConst(m_allEntries)) {
+        for (const PasswordEntry &entry : std::as_const(m_allEntries)) {
             m_wallet->writeMap(entry.id.toString(), encodeEntry(entry));
         }
     }

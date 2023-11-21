@@ -257,7 +257,7 @@ void IconProvider::saveIconsToDatabase()
 {
     QMutexLocker locker(&instance()->m_iconCacheMutex);
 
-    for (const BufferedIcon &ic : qAsConst(m_iconBuffer)) {
+    for (const BufferedIcon &ic : std::as_const(m_iconBuffer)) {
         QByteArray ba;
         QBuffer buffer(&ba);
         buffer.open(QIODevice::WriteOnly);

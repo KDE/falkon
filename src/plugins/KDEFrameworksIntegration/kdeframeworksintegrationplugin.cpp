@@ -128,7 +128,7 @@ void KDEFrameworksIntegrationPlugin::unload()
     delete m_backend;
     delete m_sharePageMenu;
 
-    for (KIOSchemeHandler *handler : qAsConst(m_kioSchemeHandlers)) {
+    for (KIOSchemeHandler *handler : std::as_const(m_kioSchemeHandlers)) {
         mApp->webProfile()->removeUrlSchemeHandler(handler);
         WebPage::removeSupportedScheme(handler->protocol());
         delete handler;

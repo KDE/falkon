@@ -26,7 +26,7 @@ static const int restoreDataVersion = 2;
 
 bool RestoreData::isValid() const
 {
-    for (const BrowserWindow::SavedWindow &window : qAsConst(windows)) {
+    for (const BrowserWindow::SavedWindow &window : std::as_const(windows)) {
         if (!window.isValid()) {
             return false;
         }
@@ -44,7 +44,7 @@ void RestoreData::clear()
 QDataStream &operator<<(QDataStream &stream, const RestoreData &data)
 {
     stream << data.windows.count();
-    for (const BrowserWindow::SavedWindow &window : qAsConst(data.windows)) {
+    for (const BrowserWindow::SavedWindow &window : std::as_const(data.windows)) {
         stream << window;
     }
 

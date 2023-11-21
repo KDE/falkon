@@ -171,7 +171,7 @@ bool FCM_Plugin::isWhitelisted(const FlashCookie &flashCookie)
 
 void FCM_Plugin::removeAllButWhitelisted()
 {
-    for (const FlashCookie &flashCookie : qAsConst(m_flashCookies)) {
+    for (const FlashCookie &flashCookie : std::as_const(m_flashCookies)) {
         if (isWhitelisted(flashCookie)) {
             continue;
         }
@@ -257,7 +257,7 @@ void FCM_Plugin::autoRefresh()
     loadFlashCookies();
     QStringList newCookieList;
 
-    for (const FlashCookie &flashCookie : qAsConst(m_flashCookies)) {
+    for (const FlashCookie &flashCookie : std::as_const(m_flashCookies)) {
         if (isBlacklisted(flashCookie)) {
             removeCookie(flashCookie);
             continue;
@@ -268,7 +268,7 @@ void FCM_Plugin::autoRefresh()
         }
 
         bool newCookie = true;
-        for (const FlashCookie &oldFlashCookie : qAsConst(oldflashCookies)) {
+        for (const FlashCookie &oldFlashCookie : std::as_const(oldflashCookies)) {
             if (QString(oldFlashCookie.path + oldFlashCookie.name) ==
                     QString(flashCookie.path + flashCookie.name)) {
                 newCookie = false;
@@ -378,7 +378,7 @@ void FCM_Plugin::loadFlashCookies(QString path)
     entryList.removeAll(QL1S("."));
     entryList.removeAll(QL1S(".."));
 
-    for (QString entry : qAsConst(entryList)) {
+    for (QString entry : std::as_const(entryList)) {
         if (path.endsWith(QL1S("#SharedObjects")) && entry == QL1S("#AppContainer")) {
             // specific to IE and Windows
             continue;
