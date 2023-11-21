@@ -41,7 +41,7 @@ int main(int argc, char **argv)
     const QString suffix = QSL("dll");
 #endif
 
-    QLibrary library(QFINDTESTDATA("plugins/PyFalkon." + suffix));
+    QLibrary library(QFINDTESTDATA(QSL("plugins/PyFalkon.") + suffix));
     library.setLoadHints(QLibrary::ExportExternalSymbolsHint);
     if (!library.load()) {
         std::cerr << qPrintable(library.errorString()) << std::endl;
