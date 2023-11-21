@@ -75,27 +75,27 @@ msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
 msgstr "管理 JavaScript 设置"
 
-#: sbi_networkicon.cpp:73
+#: sbi_networkicon.cpp:62
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
 msgstr "代理服务器配置"
 
-#: sbi_networkicon.cpp:75
+#: sbi_networkicon.cpp:64
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
 msgstr "选择代理服务器"
 
-#: sbi_networkicon.cpp:89
+#: sbi_networkicon.cpp:78
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
 msgstr "空"
 
-#: sbi_networkicon.cpp:93
+#: sbi_networkicon.cpp:82
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
 msgstr "管理代理服务器"
 
-#: sbi_networkicon.cpp:106
+#: sbi_networkicon.cpp:95
 #, qt-format
 msgctxt "SBI_NetworkIcon|"
 msgid ""
@@ -105,27 +105,22 @@ msgstr ""
 "显示网络状态并管理代理服务器<br/><br/><b>网络：</b><br/>%1<br/><br/><b>代理服"
 "务器：</b><br/>%2"
 
-#: sbi_networkicon.cpp:110 sbi_networkicon.cpp:118
+#: sbi_networkicon.cpp:99
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected"
 msgstr "已连接"
 
-#: sbi_networkicon.cpp:113
-msgctxt "SBI_NetworkIcon|"
-msgid "Offline"
-msgstr "离线"
-
-#: sbi_networkicon.cpp:123
+#: sbi_networkicon.cpp:103
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
 msgstr "系统代理服务器"
 
-#: sbi_networkicon.cpp:127
+#: sbi_networkicon.cpp:107
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
 msgstr "无代理服务器"
 
-#: sbi_networkicon.cpp:131
+#: sbi_networkicon.cpp:111
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
 msgstr "用户自定义"
@@ -255,3 +250,7 @@ msgstr "缩放部件"
 msgctxt "SBI_ZoomWidget|"
 msgid "Zoom: %1%"
 msgstr "缩放：%1%"
+
+#~ msgctxt "SBI_NetworkIcon|"
+#~ msgid "Offline"
+#~ msgstr "离线"

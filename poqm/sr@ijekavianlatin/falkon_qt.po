@@ -193,22 +193,22 @@ msgctxt "AdBlockManager|"
 msgid "AdBlock Subscription"
 msgstr "AdBlok pretplata"
 
-#: lib/adblock/adblockmanager.cpp:321
+#: lib/adblock/adblockmanager.cpp:317
 msgctxt "AdBlockManager|"
 msgid "EasyList"
 msgstr "EasyList"
 
-#: lib/adblock/adblockmanager.cpp:326
+#: lib/adblock/adblockmanager.cpp:322
 msgctxt "AdBlockManager|"
 msgid "NoCoin List"
 msgstr ""
 
-#: lib/adblock/adblocksubscription.cpp:177
+#: lib/adblock/adblocksubscription.cpp:173
 msgctxt "AdBlockSubscription|"
 msgid "Cannot load subscription!"
 msgstr "Ne mogu da učitam pretplatu!"
 
-#: lib/adblock/adblocksubscription.cpp:290
+#: lib/adblock/adblocksubscription.cpp:286
 msgctxt "AdBlockCustomList|"
 msgid "Custom Rules"
 msgstr "Posebni filteri"
@@ -256,78 +256,78 @@ msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
 msgstr ""
 
-#: lib/app/browserwindow.cpp:209 lib/app/browserwindow.cpp:988
+#: lib/app/browserwindow.cpp:203 lib/app/browserwindow.cpp:978
 msgctxt "BrowserWindow|"
 msgid "Falkon"
 msgstr ""
 
-#: lib/app/browserwindow.cpp:399
+#: lib/app/browserwindow.cpp:393
 msgctxt "BrowserWindow|"
 msgid "IP Address of current page"
 msgstr "IP adresa tekuće stranice"
 
-#: lib/app/browserwindow.cpp:743
+#: lib/app/browserwindow.cpp:733
 msgctxt "BrowserWindow|"
 msgid " (Private Browsing)"
 msgstr " (privatno pregledanje)"
 
-#: lib/app/browserwindow.cpp:990
+#: lib/app/browserwindow.cpp:980
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid "%1 - Falkon"
 msgstr ""
 
-#: lib/app/browserwindow.cpp:1056
+#: lib/app/browserwindow.cpp:1046
 msgctxt "BrowserWindow|"
 msgid "&Menu Bar"
 msgstr "Traka &menija"
 
-#: lib/app/browserwindow.cpp:1061
+#: lib/app/browserwindow.cpp:1051
 msgctxt "BrowserWindow|"
 msgid "&Navigation Toolbar"
 msgstr "Traka &navigacije"
 
-#: lib/app/browserwindow.cpp:1065
+#: lib/app/browserwindow.cpp:1055
 msgctxt "BrowserWindow|"
 msgid "&Bookmarks Toolbar"
 msgstr "Traka &obilježivača"
 
-#: lib/app/browserwindow.cpp:1071
+#: lib/app/browserwindow.cpp:1061
 msgctxt "BrowserWindow|"
 msgid "&Tabs on Top"
 msgstr "&Jezičci na vrhu"
 
-#: lib/app/browserwindow.cpp:1126
+#: lib/app/browserwindow.cpp:1116
 msgctxt "BrowserWindow|"
 msgid "Other"
 msgstr "Ostalo"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "HTML files"
 msgstr "HTML fajlovi"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "Image files"
 msgstr "Fajlovi slika"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "Text files"
 msgstr "Fajlovi teksta"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "All files"
 msgstr "Svi fajlovi"
 
-#: lib/app/browserwindow.cpp:1170
+#: lib/app/browserwindow.cpp:1160
 msgctxt "BrowserWindow|"
 msgid "Open file..."
 msgstr "Otvori fajl..."
 
-#: lib/app/browserwindow.cpp:1507
+#: lib/app/browserwindow.cpp:1497
 #, fuzzy, qt-format
 #| msgctxt "BrowserWindow|"
 #| msgid ""
@@ -353,17 +353,17 @@ msgstr[2] ""
 "I dalje imate %n otvorenih jezičaka a vaša sesija neće biti sačuvana.\n"
 "Želite li zaista da zatvorite ovaj prozor?"
 
-#: lib/app/browserwindow.cpp:1508
+#: lib/app/browserwindow.cpp:1498
 msgctxt "BrowserWindow|"
 msgid "Don't ask again"
 msgstr "Ne pitaj ponovo"
 
-#: lib/app/browserwindow.cpp:1509
+#: lib/app/browserwindow.cpp:1499
 msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "I dalje imate otvorenih jezičaka"
 
-#: lib/app/mainapplication.cpp:1111
+#: lib/app/mainapplication.cpp:1094
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -377,7 +377,7 @@ msgstr ""
 "Kapzila trenutno nije vaš podrazumijevani pregledač veba. Da li želite da "
 "postavite za podrazumijevanog pregledača?"
 
-#: lib/app/mainapplication.cpp:1112
+#: lib/app/mainapplication.cpp:1095
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid "Always perform this check when starting QupZilla."
@@ -385,27 +385,27 @@ msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Uvijek izvrši ovu provjeru po pokretanju Kapzile."
 
-#: lib/app/mainapplication.cpp:1114
+#: lib/app/mainapplication.cpp:1097
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Podrazumijevani pregledač"
 
-#: lib/app/mainapplication.cpp:1254
+#: lib/app/mainapplication.cpp:1229
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1255
+#: lib/app/mainapplication.cpp:1230
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1256
+#: lib/app/mainapplication.cpp:1231
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1271
+#: lib/app/mainapplication.cpp:1246
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -1027,14 +1027,14 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:52
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
 msgctxt "BookmarksImporter|"
 msgid "Choose file..."
 msgstr "Izaberi fajl..."
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:61
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
 msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
 msgstr "Ne mogu da otvorim fajl."
@@ -1091,7 +1091,7 @@ msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
 msgstr "Direktorijum ne postoji."
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:37
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
 msgctxt "BookmarksImporter|"
 msgid ""
 "Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
@@ -1100,12 +1100,12 @@ msgstr ""
 "Opera usprema obilježivače u <b>bookmarks.adr</b> tekstualnom fajlu. Ovaj "
 "fajl se obično nalazi u"
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:68
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
 msgctxt "BookmarksImporter|"
 msgid "File is not valid Opera bookmarks file!"
 msgstr "Fajl nije ispravan fajl Operinih obilježivača!"
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:73
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
 msgctxt "BookmarksImporter|"
 msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
 msgstr "Podržan je samo UTF-8 kodiran fajl Operinih obilježivača!"
@@ -1570,40 +1570,40 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr ""
 
-#: lib/downloads/downloaditem.cpp:77
+#: lib/downloads/downloaditem.cpp:73
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "Preostalo vrijeme nije dostupno"
 
-#: lib/downloads/downloaditem.cpp:138
+#: lib/downloads/downloaditem.cpp:129
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "Gotovo - %1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:142
+#: lib/downloads/downloaditem.cpp:133
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "Greška - %1"
 
-#: lib/downloads/downloaditem.cpp:146 lib/downloads/downloaditem.cpp:293
+#: lib/downloads/downloaditem.cpp:137 lib/downloads/downloaditem.cpp:279
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "Otkazano - %1"
 
-#: lib/downloads/downloaditem.cpp:202 lib/downloads/downloaditem.cpp:337
+#: lib/downloads/downloaditem.cpp:188 lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "Otkazano"
 
-#: lib/downloads/downloaditem.cpp:208
+#: lib/downloads/downloaditem.cpp:194
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "nekoliko sekundi"
 
-#: lib/downloads/downloaditem.cpp:213
+#: lib/downloads/downloaditem.cpp:199
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1612,7 +1612,7 @@ msgstr[0] "%n sekunda"
 msgstr[1] "%n sekunde"
 msgstr[2] "%n sekundi"
 
-#: lib/downloads/downloaditem.cpp:218
+#: lib/downloads/downloaditem.cpp:204
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1621,7 +1621,7 @@ msgstr[0] "%n minuta"
 msgstr[1] "%n minute"
 msgstr[2] "%n minuta"
 
-#: lib/downloads/downloaditem.cpp:223
+#: lib/downloads/downloaditem.cpp:209
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1630,44 +1630,44 @@ msgstr[0] "%n sat"
 msgstr[1] "%n sata"
 msgstr[2] "%n sati"
 
-#: lib/downloads/downloaditem.cpp:230
+#: lib/downloads/downloaditem.cpp:216
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "Brzina nije poznata"
 
-#: lib/downloads/downloaditem.cpp:235
+#: lib/downloads/downloaditem.cpp:221
 msgctxt "DownloadItem|"
 msgid "kB/s"
 msgstr "kB/s"
 
-#: lib/downloads/downloaditem.cpp:240
+#: lib/downloads/downloaditem.cpp:226
 msgctxt "DownloadItem|"
 msgid "MB/s"
 msgstr "MB/s"
 
-#: lib/downloads/downloaditem.cpp:244
+#: lib/downloads/downloaditem.cpp:230
 msgctxt "DownloadItem|"
 msgid "GB/s"
 msgstr "GB/s"
 
-#: lib/downloads/downloaditem.cpp:272
+#: lib/downloads/downloaditem.cpp:258
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "Veličina nije poznata"
 
-#: lib/downloads/downloaditem.cpp:273
+#: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - nepoznate veličine (%3)"
 
-#: lib/downloads/downloaditem.cpp:276
+#: lib/downloads/downloaditem.cpp:262
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "Preostalo %1 - %2 od %3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:308
+#: lib/downloads/downloaditem.cpp:294
 #, fuzzy, qt-format
 #| msgctxt "DownloadItem|"
 #| msgid "Cancelled - %1"
@@ -1675,27 +1675,27 @@ msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "Otkazano - %1"
 
-#: lib/downloads/downloaditem.cpp:321
+#: lib/downloads/downloaditem.cpp:307
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "Otvori fajl"
 
-#: lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:309
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "Otvori fasciklu"
 
-#: lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:311
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "Kopiraj vezu preuzimanja"
 
-#: lib/downloads/downloaditem.cpp:327
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "Otkaži preuzimanje"
 
-#: lib/downloads/downloaditem.cpp:330
+#: lib/downloads/downloaditem.cpp:316
 #, fuzzy
 #| msgctxt "DownloadItem|"
 #| msgid "Cancel downloading"
@@ -1703,7 +1703,7 @@ msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "Otkaži preuzimanje"
 
-#: lib/downloads/downloaditem.cpp:332
+#: lib/downloads/downloaditem.cpp:318
 #, fuzzy
 #| msgctxt "DownloadItem|"
 #| msgid "Cancel downloading"
@@ -1711,22 +1711,22 @@ msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "Otkaži preuzimanje"
 
-#: lib/downloads/downloaditem.cpp:335
+#: lib/downloads/downloaditem.cpp:321
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "Ukloni sa spiska"
 
-#: lib/downloads/downloaditem.cpp:337
+#: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "Greška"
 
-#: lib/downloads/downloaditem.cpp:363
+#: lib/downloads/downloaditem.cpp:349
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "Nije nađeno"
 
-#: lib/downloads/downloaditem.cpp:363
+#: lib/downloads/downloaditem.cpp:349
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -1738,50 +1738,50 @@ msgstr ""
 " %1 \n"
 " nije nađen!"
 
-#: lib/downloads/downloadmanager.cpp:200 lib/downloads/downloadmanager.cpp:440
+#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:424
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "Menadžer preuzimanja"
 
-#: lib/downloads/downloadmanager.cpp:238
+#: lib/downloads/downloadmanager.cpp:230
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%1% od %2 fajlova (%3) %4 do završetka"
 
-#: lib/downloads/downloadmanager.cpp:242
+#: lib/downloads/downloadmanager.cpp:234
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1% - menadžer preuzimanja"
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:304
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "Sačuvaj fajl kao..."
 
-#: lib/downloads/downloadmanager.cpp:326
+#: lib/downloads/downloadmanager.cpp:314
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr "MIME HTML arhiva (*.mhtml)"
 
-#: lib/downloads/downloadmanager.cpp:327
+#: lib/downloads/downloadmanager.cpp:315
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr "HTML stranica, sama (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:328
+#: lib/downloads/downloadmanager.cpp:316
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr "HTML stranica, kompletna (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:332
+#: lib/downloads/downloadmanager.cpp:320
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr "Sačuvaj stranicu kao..."
 
-#: lib/downloads/downloadmanager.cpp:433
+#: lib/downloads/downloadmanager.cpp:417
 #, fuzzy
 #| msgctxt "DownloadOptionsDialog|"
 #| msgid "Download link copied."
@@ -1789,17 +1789,17 @@ msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "Veza je kopirana."
 
-#: lib/downloads/downloadmanager.cpp:433
+#: lib/downloads/downloadmanager.cpp:417
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "Svi fajlovi su uspješno preuzeti."
 
-#: lib/downloads/downloadmanager.cpp:480
+#: lib/downloads/downloadmanager.cpp:464
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "Upozorenje"
 
-#: lib/downloads/downloadmanager.cpp:481
+#: lib/downloads/downloadmanager.cpp:465
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -1811,13 +1811,13 @@ msgctxt "DownloadManager|"
 msgid "Clear"
 msgstr "Očisti"
 
-#: lib/downloads/downloadoptionsdialog.cpp:53
+#: lib/downloads/downloadoptionsdialog.cpp:49
 #, qt-format
 msgctxt "DownloadOptionsDialog|"
 msgid "Opening %1"
 msgstr "Otvaram %1"
 
-#: lib/downloads/downloadoptionsdialog.cpp:116
+#: lib/downloads/downloadoptionsdialog.cpp:112
 msgctxt "DownloadOptionsDialog|"
 msgid "Download link copied."
 msgstr "Veza je kopirana."
@@ -2274,12 +2274,12 @@ msgctxt "WebSearchBar|"
 msgid "Manage Search Engines"
 msgstr "Upravljaj motorima pretrage"
 
-#: lib/navigation/websearchbar.cpp:261
+#: lib/navigation/websearchbar.cpp:257
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
 msgstr "Prikazuj prijedloge"
 
-#: lib/navigation/websearchbar.cpp:266
+#: lib/navigation/websearchbar.cpp:262
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr "Pretražuj po promjeni motora"
@@ -2295,12 +2295,12 @@ msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr ""
 
-#: lib/network/networkmanager.cpp:102
+#: lib/network/networkmanager.cpp:91
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
 msgstr "Greška SSL sertifikata!"
 
-#: lib/network/networkmanager.cpp:103
+#: lib/network/networkmanager.cpp:92
 msgctxt "NetworkManager|"
 msgid ""
 "The page you are trying to access has the following errors in the SSL "
@@ -2309,12 +2309,12 @@ msgstr ""
 "Stranica kojoj pokušavate da pristupite ima sljedeće greške u SSL "
 "sertifikatu:"
 
-#: lib/network/networkmanager.cpp:104
+#: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
 msgstr "Želite li da napravite izuzetak za ovaj sertifikat?"
 
-#: lib/network/networkmanager.cpp:139
+#: lib/network/networkmanager.cpp:124
 #, fuzzy
 #| msgctxt "NetworkManager|"
 #| msgid "Authorisation required"
@@ -2322,29 +2322,29 @@ msgctxt "NetworkManager|"
 msgid "Authorization required"
 msgstr "Potrebno ovlašćenje"
 
-#: lib/network/networkmanager.cpp:146 lib/network/networkmanager.cpp:232
+#: lib/network/networkmanager.cpp:131 lib/network/networkmanager.cpp:217
 msgctxt "NetworkManager|"
 msgid "Username: "
 msgstr "Korisničko ime: "
 
-#: lib/network/networkmanager.cpp:147 lib/network/networkmanager.cpp:233
+#: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
 msgctxt "NetworkManager|"
 msgid "Password: "
 msgstr "Lozinka: "
 
-#: lib/network/networkmanager.cpp:153
+#: lib/network/networkmanager.cpp:138
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
 msgstr "Sačuvaj korisničko ime i lozinku za ovaj sajt"
 
-#: lib/network/networkmanager.cpp:161
+#: lib/network/networkmanager.cpp:146
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
 msgstr "%1 zahtijeva korisničko ime i lozinku. Sajt kaže: „%2“"
 
-#: lib/network/networkmanager.cpp:225
+#: lib/network/networkmanager.cpp:210
 #, fuzzy
 #| msgctxt "NetworkManager|"
 #| msgid "Proxy authorisation required"
@@ -2352,7 +2352,7 @@ msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
 msgstr "Potrebno je ovlašćenje za proksi"
 
-#: lib/network/networkmanager.cpp:245
+#: lib/network/networkmanager.cpp:230
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
@@ -3694,95 +3694,95 @@ msgid "Search"
 msgstr "Traži"
 
 #: lib/preferences/autofillmanager.cpp:82
-#: lib/preferences/autofillmanager.cpp:175
-#: lib/preferences/autofillmanager.cpp:183
+#: lib/preferences/autofillmanager.cpp:171
+#: lib/preferences/autofillmanager.cpp:179
 #: lib/preferences/autofillmanager.ui:140
 msgctxt "AutoFillManager|"
 msgid "Show Passwords"
 msgstr "Prikaži lozinke"
 
-#: lib/preferences/autofillmanager.cpp:134
+#: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend..."
 msgstr "Promjena pozadine..."
 
-#: lib/preferences/autofillmanager.cpp:134
+#: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend:"
 msgstr "Za pozadinu koristi:"
 
-#: lib/preferences/autofillmanager.cpp:183
+#: lib/preferences/autofillmanager.cpp:179
 msgctxt "AutoFillManager|"
 msgid "Are you sure that you want to show all passwords?"
 msgstr "Želite li zaista da prikažete sve lozinke?"
 
-#: lib/preferences/autofillmanager.cpp:198
+#: lib/preferences/autofillmanager.cpp:194
 msgctxt "AutoFillManager|"
 msgid "Hide Passwords"
 msgstr "Sakrij lozinke"
 
-#: lib/preferences/autofillmanager.cpp:236
+#: lib/preferences/autofillmanager.cpp:232
 msgctxt "AutoFillManager|"
 msgid "Confirmation"
 msgstr "Potvrda"
 
-#: lib/preferences/autofillmanager.cpp:237
+#: lib/preferences/autofillmanager.cpp:233
 msgctxt "AutoFillManager|"
 msgid "Are you sure you want to delete all passwords on your computer?"
 msgstr "Želite li zaista da obrišete sve lozinke sa vašeg računara?"
 
-#: lib/preferences/autofillmanager.cpp:256
+#: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Edit password"
 msgstr "Uredi lozinku"
 
-#: lib/preferences/autofillmanager.cpp:256
+#: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Change password:"
 msgstr "Izmijeni lozinku:"
 
-#: lib/preferences/autofillmanager.cpp:310
-#: lib/preferences/autofillmanager.cpp:321
+#: lib/preferences/autofillmanager.cpp:302
+#: lib/preferences/autofillmanager.cpp:313
 msgctxt "AutoFillManager|"
 msgid "Choose file..."
 msgstr "Izaberi fajl..."
 
-#: lib/preferences/autofillmanager.cpp:335
+#: lib/preferences/autofillmanager.cpp:327
 msgctxt "AutoFillManager|"
 msgid "Cannot read file!"
 msgstr "Ne mogu da očitam fajl!"
 
-#: lib/preferences/autofillmanager.cpp:344
+#: lib/preferences/autofillmanager.cpp:336
 msgctxt "AutoFillManager|"
 msgid "Successfully imported"
 msgstr "Uspješno uvezeno"
 
-#: lib/preferences/autofillmanager.cpp:344
+#: lib/preferences/autofillmanager.cpp:336
 msgctxt "AutoFillManager|"
 msgid "Error while importing!"
 msgstr "Greška prilikom uvoza!"
 
-#: lib/preferences/autofillmanager.cpp:355
+#: lib/preferences/autofillmanager.cpp:347
 msgctxt "AutoFillManager|"
 msgid "Cannot write to file!"
 msgstr "Ne mogu da upišem u fajl!"
 
-#: lib/preferences/autofillmanager.cpp:364
+#: lib/preferences/autofillmanager.cpp:356
 msgctxt "AutoFillManager|"
 msgid "Successfully exported"
 msgstr "Uspješno izvezeno"
 
-#: lib/preferences/autofillmanager.cpp:381
+#: lib/preferences/autofillmanager.cpp:373
 msgctxt "AutoFillManager|"
 msgid "Copy Username"
 msgstr "Kopiraj korisničko ime"
 
-#: lib/preferences/autofillmanager.cpp:382
+#: lib/preferences/autofillmanager.cpp:374
 msgctxt "AutoFillManager|"
 msgid "Copy Password"
 msgstr "Kopiraj lozinku"
 
-#: lib/preferences/autofillmanager.cpp:384
+#: lib/preferences/autofillmanager.cpp:376
 msgctxt "AutoFillManager|"
 msgid "Edit Password"
 msgstr "Uredi lozinku"
@@ -3988,88 +3988,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Želite li zaista da uklonite ovo brzo biranje?"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:620
+#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:613
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Podrazumijevan"
 
-#: lib/preferences/preferences.cpp:159
+#: lib/preferences/preferences.cpp:156
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Postavi za podrazumijevan"
 
-#: lib/preferences/preferences.cpp:304
+#: lib/preferences/preferences.cpp:301
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:563
+#: lib/preferences/preferences.cpp:556
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Odabir lokacije izvršnog fajla..."
 
-#: lib/preferences/preferences.cpp:606
+#: lib/preferences/preferences.cpp:599
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD obavještenje"
 
-#: lib/preferences/preferences.cpp:607
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Prevucite ga po ekranu na željeni položaj."
 
-#: lib/preferences/preferences.cpp:656
+#: lib/preferences/preferences.cpp:649
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Odabir odredišta za preuzimanje..."
 
-#: lib/preferences/preferences.cpp:670
+#: lib/preferences/preferences.cpp:663
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Odabir fajla opisa stila..."
 
-#: lib/preferences/preferences.cpp:681
+#: lib/preferences/preferences.cpp:674
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Obrisano"
 
-#: lib/preferences/preferences.cpp:789
+#: lib/preferences/preferences.cpp:782
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Odabir putanje za keš..."
 
-#: lib/preferences/preferences.cpp:820
+#: lib/preferences/preferences.cpp:813
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Novi profil"
 
-#: lib/preferences/preferences.cpp:820
+#: lib/preferences/preferences.cpp:813
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Unesite ime novog profila:"
 
-#: lib/preferences/preferences.cpp:830 lib/preferences/preferences.cpp:835
+#: lib/preferences/preferences.cpp:823 lib/preferences/preferences.cpp:828
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Greška!"
 
-#: lib/preferences/preferences.cpp:830
+#: lib/preferences/preferences.cpp:823
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Ovaj profil već postoji!"
 
-#: lib/preferences/preferences.cpp:835
+#: lib/preferences/preferences.cpp:828
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Ne mogu da napravim direktorijum profila!"
 
-#: lib/preferences/preferences.cpp:846
+#: lib/preferences/preferences.cpp:839
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Potvrda"
 
-#: lib/preferences/preferences.cpp:847
+#: lib/preferences/preferences.cpp:840
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4079,12 +4079,12 @@ msgstr ""
 "Želite li zaista trajno da obrišete profil „%1“? Ova radnja ne može da se "
 "poništi!"
 
-#: lib/preferences/preferences.cpp:862 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:855 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Napomena: Ne možete obrisati aktivni profil."
 
-#: lib/preferences/preferences.cpp:1121
+#: lib/preferences/preferences.cpp:1114
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Odabir boje"
@@ -5914,42 +5914,42 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "Odbij"
 
-#: lib/tools/qztools.cpp:389
+#: lib/tools/qztools.cpp:378
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "Veličina nije poznata"
 
-#: lib/tools/qztools.cpp:394
+#: lib/tools/qztools.cpp:383
 msgctxt "QObject|"
 msgid "KB"
 msgstr "KB"
 
-#: lib/tools/qztools.cpp:399
+#: lib/tools/qztools.cpp:388
 msgctxt "QObject|"
 msgid "MB"
 msgstr "MB"
 
-#: lib/tools/qztools.cpp:403
+#: lib/tools/qztools.cpp:392
 msgctxt "QObject|"
 msgid "GB"
 msgstr "GB"
 
-#: lib/tools/qztools.cpp:862
+#: lib/tools/qztools.cpp:851
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "Izvršna:"
 
-#: lib/tools/qztools.cpp:863
+#: lib/tools/qztools.cpp:852
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "Argumenti:"
 
-#: lib/tools/qztools.cpp:865
+#: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "Ne mogu da pokrenem spoljašnji program"
 
-#: lib/tools/qztools.cpp:866
+#: lib/tools/qztools.cpp:855
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -5960,7 +5960,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Ne dozvoli ovoj stranici da pravi još dijaloga"
 
-#: lib/webengine/webpage.cpp:347
+#: lib/webengine/webpage.cpp:332
 #, fuzzy, qt-format
 #| msgctxt "WebPage|"
 #| msgid ""
@@ -5976,27 +5976,27 @@ msgstr ""
 "li></ul>Želite li da Kapzila pokuša da otvori ovu vezu pomoću sistemskog "
 "programa?"
 
-#: lib/webengine/webpage.cpp:352
+#: lib/webengine/webpage.cpp:337
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Zapamti moj izbor za za ovaj protokol"
 
-#: lib/webengine/webpage.cpp:353
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Zahtjev za spoljašnji protokol"
 
-#: lib/webengine/webpage.cpp:433 lib/webengine/webpage.cpp:434
+#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Neuspjeh učitavanja stranice"
 
-#: lib/webengine/webpage.cpp:435
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Nešto je pošlo kako ne treba prilikom učitavanja ove stranice."
 
-#: lib/webengine/webpage.cpp:436
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -6004,37 +6004,37 @@ msgstr ""
 "Pokušajte ponovo da učitate stranicu ili da zatvorite neke jezičke da "
 "oslobodite memoriju."
 
-#: lib/webengine/webpage.cpp:437
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Ponovo učitaj stranicu"
 
-#: lib/webengine/webpage.cpp:510
+#: lib/webengine/webpage.cpp:483
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Izaberi fajl..."
 
-#: lib/webengine/webpage.cpp:514
+#: lib/webengine/webpage.cpp:487
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Izaberi fajlove..."
 
-#: lib/webengine/webpage.cpp:650
+#: lib/webengine/webpage.cpp:623
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Javaskript upozorenje"
 
-#: lib/webengine/webpage.cpp:659
+#: lib/webengine/webpage.cpp:632
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Ne dozvoli ovoj stranici da pravi još dijaloga"
 
-#: lib/webengine/webview.cpp:130
+#: lib/webengine/webview.cpp:126
 msgctxt "WebView|"
 msgid "Empty Page"
 msgstr "Prazna stranica"
 
-#: lib/webengine/webview.cpp:397
+#: lib/webengine/webview.cpp:390
 #, fuzzy, qt-format
 #| msgctxt "DownloadItem|"
 #| msgid "Done - %1 (%2)"
@@ -6042,233 +6042,233 @@ msgctxt "WebView|"
 msgid "Falkon %1 (%2)"
 msgstr "Gotovo - %1 (%2)"
 
-#: lib/webengine/webview.cpp:711
+#: lib/webengine/webview.cpp:694
 msgctxt "WebView|"
 msgid "No suggestions"
 msgstr "Nema prijedloga"
 
-#: lib/webengine/webview.cpp:762
+#: lib/webengine/webview.cpp:745
 msgctxt "WebView|"
 msgid "&Back"
 msgstr "Na&zad"
 
-#: lib/webengine/webview.cpp:766
+#: lib/webengine/webview.cpp:749
 msgctxt "WebView|"
 msgid "&Forward"
 msgstr "Na&prijed"
 
-#: lib/webengine/webview.cpp:773
+#: lib/webengine/webview.cpp:756
 msgctxt "WebView|"
 msgid "&Add New Page"
 msgstr "&Dodaj novu stranicu"
 
-#: lib/webengine/webview.cpp:774
+#: lib/webengine/webview.cpp:757
 msgctxt "WebView|"
 msgid "&Configure Speed Dial"
 msgstr "&Podesi brzo biranje"
 
-#: lib/webengine/webview.cpp:776
+#: lib/webengine/webview.cpp:759
 msgctxt "WebView|"
 msgid "Reload All Dials"
 msgstr "Ponovo učitaj sva brza biranja"
 
-#: lib/webengine/webview.cpp:795
+#: lib/webengine/webview.cpp:778
 msgctxt "WebView|"
 msgid "Book&mark page"
 msgstr "&Obilježi stranicu"
 
-#: lib/webengine/webview.cpp:796
+#: lib/webengine/webview.cpp:779
 msgctxt "WebView|"
 msgid "&Save page as..."
 msgstr "Sačuvaj s&liku kao..."
 
-#: lib/webengine/webview.cpp:797
+#: lib/webengine/webview.cpp:780
 msgctxt "WebView|"
 msgid "&Copy page link"
 msgstr "&Kopiraj vezu stranice"
 
-#: lib/webengine/webview.cpp:798
+#: lib/webengine/webview.cpp:781
 msgctxt "WebView|"
 msgid "Send page link..."
 msgstr "Pošalji vezu stranice..."
 
-#: lib/webengine/webview.cpp:800
+#: lib/webengine/webview.cpp:783
 msgctxt "WebView|"
 msgid "Select &all"
 msgstr "Iz&aberi sve"
 
-#: lib/webengine/webview.cpp:806
+#: lib/webengine/webview.cpp:789
 msgctxt "WebView|"
 msgid "Show so&urce code"
 msgstr "Prikaži &izvorni kôd"
 
-#: lib/webengine/webview.cpp:810
+#: lib/webengine/webview.cpp:793
 msgctxt "WebView|"
 msgid "Show info ab&out site"
 msgstr "Po&daci o sajtu"
 
-#: lib/webengine/webview.cpp:816
+#: lib/webengine/webview.cpp:799
 msgctxt "WebView|"
 msgid "Open link in new &tab"
 msgstr "Otvori vezu u novom &jezičku"
 
-#: lib/webengine/webview.cpp:821
+#: lib/webengine/webview.cpp:804
 msgctxt "WebView|"
 msgid "Open link in new &window"
 msgstr "Otvori vezu u &novom prozoru"
 
-#: lib/webengine/webview.cpp:822
+#: lib/webengine/webview.cpp:805
 msgctxt "WebView|"
 msgid "Open link in &private window"
 msgstr "Otvori vezu u &privatnom prozoru"
 
-#: lib/webengine/webview.cpp:827
+#: lib/webengine/webview.cpp:810
 msgctxt "WebView|"
 msgid "B&ookmark link"
 msgstr "&Obilježi vezu"
 
-#: lib/webengine/webview.cpp:829
+#: lib/webengine/webview.cpp:812
 msgctxt "WebView|"
 msgid "&Save link as..."
 msgstr "&Sačuvaj vezu kao..."
 
-#: lib/webengine/webview.cpp:830
+#: lib/webengine/webview.cpp:813
 msgctxt "WebView|"
 msgid "Send link..."
 msgstr "Pošalji vezu..."
 
-#: lib/webengine/webview.cpp:831
+#: lib/webengine/webview.cpp:814
 msgctxt "WebView|"
 msgid "&Copy link address"
 msgstr "&Kopiraj vezu"
 
-#: lib/webengine/webview.cpp:844
+#: lib/webengine/webview.cpp:827
 msgctxt "WebView|"
 msgid "Show i&mage"
 msgstr "P&rikaži sliku"
 
-#: lib/webengine/webview.cpp:850
+#: lib/webengine/webview.cpp:833
 msgctxt "WebView|"
 msgid "Copy image"
 msgstr "Kopiraj sliku"
 
-#: lib/webengine/webview.cpp:851
+#: lib/webengine/webview.cpp:834
 msgctxt "WebView|"
 msgid "Copy image ad&dress"
 msgstr "Kopiraj &adresu slike"
 
-#: lib/webengine/webview.cpp:853
+#: lib/webengine/webview.cpp:836
 msgctxt "WebView|"
 msgid "&Save image as..."
 msgstr "Sačuvaj s&liku kao..."
 
-#: lib/webengine/webview.cpp:854
+#: lib/webengine/webview.cpp:837
 msgctxt "WebView|"
 msgid "Send image..."
 msgstr "Pošalji sliku..."
 
-#: lib/webengine/webview.cpp:873
+#: lib/webengine/webview.cpp:856
 msgctxt "WebView|"
 msgid "Send text..."
 msgstr "Pošalji tekst..."
 
-#: lib/webengine/webview.cpp:885
+#: lib/webengine/webview.cpp:868
 msgctxt "WebView|"
 msgid "Go to &web address"
 msgstr "Idi na &veb adresu"
 
-#: lib/webengine/webview.cpp:899
+#: lib/webengine/webview.cpp:882
 #, qt-format
 msgctxt "WebView|"
 msgid "Search \"%1 ..\" with %2"
 msgstr "Traži „%1“ na %2"
 
-#: lib/webengine/webview.cpp:905
+#: lib/webengine/webview.cpp:888
 msgctxt "WebView|"
 msgid "Search with..."
 msgstr "Traži na..."
 
-#: lib/webengine/webview.cpp:927
+#: lib/webengine/webview.cpp:910
 msgctxt "WebView|"
 msgid "&Play"
 msgstr "&Pusti"
 
-#: lib/webengine/webview.cpp:927
+#: lib/webengine/webview.cpp:910
 msgctxt "WebView|"
 msgid "&Pause"
 msgstr "&Pauziraj"
 
-#: lib/webengine/webview.cpp:928
+#: lib/webengine/webview.cpp:911
 msgctxt "WebView|"
 msgid "Un&mute"
 msgstr "Vra&ti zvuk"
 
-#: lib/webengine/webview.cpp:928
+#: lib/webengine/webview.cpp:911
 msgctxt "WebView|"
 msgid "&Mute"
 msgstr "U&tišaj"
 
-#: lib/webengine/webview.cpp:930
+#: lib/webengine/webview.cpp:913
 msgctxt "WebView|"
 msgid "&Copy Media Address"
 msgstr "&Kopiraj adresu medija"
 
-#: lib/webengine/webview.cpp:931
+#: lib/webengine/webview.cpp:914
 msgctxt "WebView|"
 msgid "&Send Media Address"
 msgstr "P&ošalji adresu medija"
 
-#: lib/webengine/webview.cpp:932
+#: lib/webengine/webview.cpp:915
 msgctxt "WebView|"
 msgid "Save Media To &Disk"
 msgstr "&Sačuvaj medij na disk"
 
-#: lib/webengine/webview.cpp:951
+#: lib/webengine/webview.cpp:934
 msgctxt "WebView|"
 msgid "Create Search Engine"
 msgstr "Napravi motor pretrage"
 
-#: lib/webengine/webview.cpp:992
+#: lib/webengine/webview.cpp:975
 msgctxt "WebView|"
 msgid "&Undo"
 msgstr "&Opozovi"
 
-#: lib/webengine/webview.cpp:998
+#: lib/webengine/webview.cpp:981
 msgctxt "WebView|"
 msgid "&Redo"
 msgstr "&Ponovi"
 
-#: lib/webengine/webview.cpp:1004
+#: lib/webengine/webview.cpp:987
 msgctxt "WebView|"
 msgid "&Cut"
 msgstr "&Isijeci"
 
-#: lib/webengine/webview.cpp:1010
+#: lib/webengine/webview.cpp:993
 msgctxt "WebView|"
 msgid "&Copy"
 msgstr "&Kopiraj"
 
-#: lib/webengine/webview.cpp:1016
+#: lib/webengine/webview.cpp:999
 msgctxt "WebView|"
 msgid "&Paste"
 msgstr "&Nalijepi"
 
-#: lib/webengine/webview.cpp:1022
+#: lib/webengine/webview.cpp:1005
 msgctxt "WebView|"
 msgid "Select All"
 msgstr "Izaberi sve"
 
-#: lib/webengine/webview.cpp:1028
+#: lib/webengine/webview.cpp:1011
 msgctxt "WebView|"
 msgid "&Reload"
 msgstr "&Učitaj ponovo"
 
-#: lib/webengine/webview.cpp:1032
+#: lib/webengine/webview.cpp:1015
 msgctxt "WebView|"
 msgid "S&top"
 msgstr "Zaus&tavi"
 
-#: lib/webtab/searchtoolbar.cpp:155
+#: lib/webtab/searchtoolbar.cpp:151
 #, qt-format
 msgctxt "SearchToolBar|"
 msgid "%1 of %2"

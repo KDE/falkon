@@ -199,22 +199,22 @@ msgctxt "AdBlockManager|"
 msgid "AdBlock Subscription"
 msgstr "Abonnement på reklamefilter"
 
-#: lib/adblock/adblockmanager.cpp:321
+#: lib/adblock/adblockmanager.cpp:317
 msgctxt "AdBlockManager|"
 msgid "EasyList"
 msgstr "EasyList"
 
-#: lib/adblock/adblockmanager.cpp:326
+#: lib/adblock/adblockmanager.cpp:322
 msgctxt "AdBlockManager|"
 msgid "NoCoin List"
 msgstr "NoCoin-liste"
 
-#: lib/adblock/adblocksubscription.cpp:177
+#: lib/adblock/adblocksubscription.cpp:173
 msgctxt "AdBlockSubscription|"
 msgid "Cannot load subscription!"
 msgstr "Klarte ikkje lasta abonnement"
 
-#: lib/adblock/adblocksubscription.cpp:290
+#: lib/adblock/adblocksubscription.cpp:286
 msgctxt "AdBlockCustomList|"
 msgid "Custom Rules"
 msgstr "Tilpassa reglar"
@@ -263,78 +263,78 @@ msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
 msgstr "Blokkert av <i>%1 (%2)</i>"
 
-#: lib/app/browserwindow.cpp:209 lib/app/browserwindow.cpp:988
+#: lib/app/browserwindow.cpp:203 lib/app/browserwindow.cpp:978
 msgctxt "BrowserWindow|"
 msgid "Falkon"
 msgstr "Falkon"
 
-#: lib/app/browserwindow.cpp:399
+#: lib/app/browserwindow.cpp:393
 msgctxt "BrowserWindow|"
 msgid "IP Address of current page"
 msgstr "IP-adressa til denne sida"
 
-#: lib/app/browserwindow.cpp:743
+#: lib/app/browserwindow.cpp:733
 msgctxt "BrowserWindow|"
 msgid " (Private Browsing)"
 msgstr " (privat nettlesing)"
 
-#: lib/app/browserwindow.cpp:990
+#: lib/app/browserwindow.cpp:980
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid "%1 - Falkon"
 msgstr "%1 – Falkon"
 
-#: lib/app/browserwindow.cpp:1056
+#: lib/app/browserwindow.cpp:1046
 msgctxt "BrowserWindow|"
 msgid "&Menu Bar"
 msgstr "&Menylinje"
 
-#: lib/app/browserwindow.cpp:1061
+#: lib/app/browserwindow.cpp:1051
 msgctxt "BrowserWindow|"
 msgid "&Navigation Toolbar"
 msgstr "&Navigasjonslinje"
 
-#: lib/app/browserwindow.cpp:1065
+#: lib/app/browserwindow.cpp:1055
 msgctxt "BrowserWindow|"
 msgid "&Bookmarks Toolbar"
 msgstr "&Bokmerkelinje"
 
-#: lib/app/browserwindow.cpp:1071
+#: lib/app/browserwindow.cpp:1061
 msgctxt "BrowserWindow|"
 msgid "&Tabs on Top"
 msgstr "&Faner øvst"
 
-#: lib/app/browserwindow.cpp:1126
+#: lib/app/browserwindow.cpp:1116
 msgctxt "BrowserWindow|"
 msgid "Other"
 msgstr "Andre"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "HTML files"
 msgstr "HTML-filer"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "Image files"
 msgstr "Biletfiler"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "Text files"
 msgstr "Tekstfiler"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "All files"
 msgstr "Alle filer"
 
-#: lib/app/browserwindow.cpp:1170
+#: lib/app/browserwindow.cpp:1160
 msgctxt "BrowserWindow|"
 msgid "Open file..."
 msgstr "Opna fil …"
 
-#: lib/app/browserwindow.cpp:1507
+#: lib/app/browserwindow.cpp:1497
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid ""
@@ -350,17 +350,17 @@ msgstr[1] ""
 "Det finst %n opne faner, og økta vert ikkje lagra.\n"
 "Er du sikker på at du vil lukka vindauget?"
 
-#: lib/app/browserwindow.cpp:1508
+#: lib/app/browserwindow.cpp:1498
 msgctxt "BrowserWindow|"
 msgid "Don't ask again"
 msgstr "Ikkje spør igjen"
 
-#: lib/app/browserwindow.cpp:1509
+#: lib/app/browserwindow.cpp:1499
 msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Det finst opne faner"
 
-#: lib/app/mainapplication.cpp:1111
+#: lib/app/mainapplication.cpp:1094
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -369,32 +369,32 @@ msgstr ""
 "Falkon er ikkje standardnettlesar. Ønskjer du å bruka han som "
 "standardnettlesar?"
 
-#: lib/app/mainapplication.cpp:1112
+#: lib/app/mainapplication.cpp:1095
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Kontroller dette kvar gong Falkon startar."
 
-#: lib/app/mainapplication.cpp:1114
+#: lib/app/mainapplication.cpp:1097
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Standardnettlesar"
 
-#: lib/app/mainapplication.cpp:1254
+#: lib/app/mainapplication.cpp:1229
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Opna ny fane"
 
-#: lib/app/mainapplication.cpp:1255
+#: lib/app/mainapplication.cpp:1230
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Opna nytt vindauge"
 
-#: lib/app/mainapplication.cpp:1256
+#: lib/app/mainapplication.cpp:1231
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Opna nytt privat vindauge"
 
-#: lib/app/mainapplication.cpp:1271
+#: lib/app/mainapplication.cpp:1246
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1002,14 +1002,14 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:52
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
 msgctxt "BookmarksImporter|"
 msgid "Choose file..."
 msgstr "Vel fil …"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:61
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
 msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
 msgstr "Klarte ikkje opna fila."
@@ -1066,7 +1066,7 @@ msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
 msgstr "Mappa finst ikkje."
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:37
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
 msgctxt "BookmarksImporter|"
 msgid ""
 "Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
@@ -1075,12 +1075,12 @@ msgstr ""
 "Opera lagrar bokmerka sine i ei <b>bookmarks.adr</b>-tekstfil. Denne finst "
 "som regel i"
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:68
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
 msgctxt "BookmarksImporter|"
 msgid "File is not valid Opera bookmarks file!"
 msgstr "Fila er ikkje ei gyldig Opera-bokmerkefil."
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:73
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
 msgctxt "BookmarksImporter|"
 msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
 msgstr "Berre Opera-bokmerkefiler i teiknkodinga UTF-8 er støtta."
@@ -1542,40 +1542,40 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr "Slett infokapslar ved lukking"
 
-#: lib/downloads/downloaditem.cpp:77
+#: lib/downloads/downloaditem.cpp:73
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "Tid att er ikkje tilgjengeleg"
 
-#: lib/downloads/downloaditem.cpp:138
+#: lib/downloads/downloaditem.cpp:129
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "Ferdig – %1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:142
+#: lib/downloads/downloaditem.cpp:133
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "Feil – %1"
 
-#: lib/downloads/downloaditem.cpp:146 lib/downloads/downloaditem.cpp:293
+#: lib/downloads/downloaditem.cpp:137 lib/downloads/downloaditem.cpp:279
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "Avbroten – %1"
 
-#: lib/downloads/downloaditem.cpp:202 lib/downloads/downloaditem.cpp:337
+#: lib/downloads/downloaditem.cpp:188 lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "Avbroten"
 
-#: lib/downloads/downloaditem.cpp:208
+#: lib/downloads/downloaditem.cpp:194
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "nokre sekund"
 
-#: lib/downloads/downloaditem.cpp:213
+#: lib/downloads/downloaditem.cpp:199
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1583,7 +1583,7 @@ msgid_plural "%n seconds"
 msgstr[0] "%n sekund"
 msgstr[1] "%n sekund"
 
-#: lib/downloads/downloaditem.cpp:218
+#: lib/downloads/downloaditem.cpp:204
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1592,7 +1592,7 @@ msgstr[0] "%n minutt"
 msgstr[1] "%n minutt"
 
 # Feil i engelsk eintal?
-#: lib/downloads/downloaditem.cpp:223
+#: lib/downloads/downloaditem.cpp:209
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1600,98 +1600,98 @@ msgid_plural "%n hours"
 msgstr[0] "%n time"
 msgstr[1] "%n timar"
 
-#: lib/downloads/downloaditem.cpp:230
+#: lib/downloads/downloaditem.cpp:216
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "Ukjend fart"
 
 # Har sjekka at det er snakk om byte/1024.
-#: lib/downloads/downloaditem.cpp:235
+#: lib/downloads/downloaditem.cpp:221
 msgctxt "DownloadItem|"
 msgid "kB/s"
 msgstr "KiB/s"
 
 # Har sjekka at det er snakk om byte/1024².
-#: lib/downloads/downloaditem.cpp:240
+#: lib/downloads/downloaditem.cpp:226
 msgctxt "DownloadItem|"
 msgid "MB/s"
 msgstr "MiB/s"
 
 # Har sjekka at det er snakk om byte/1024³.
-#: lib/downloads/downloaditem.cpp:244
+#: lib/downloads/downloaditem.cpp:230
 msgctxt "DownloadItem|"
 msgid "GB/s"
 msgstr "GiB/s"
 
-#: lib/downloads/downloaditem.cpp:272
+#: lib/downloads/downloaditem.cpp:258
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "Ukjend storleik"
 
-#: lib/downloads/downloaditem.cpp:273
+#: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 – ukjend storleik (%3)"
 
-#: lib/downloads/downloaditem.cpp:276
+#: lib/downloads/downloaditem.cpp:262
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "Står att %1 – %2 av %3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:308
+#: lib/downloads/downloaditem.cpp:294
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "Pausa – %1"
 
-#: lib/downloads/downloaditem.cpp:321
+#: lib/downloads/downloaditem.cpp:307
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "Opna fil"
 
-#: lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:309
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "Opna mappe"
 
-#: lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:311
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "Kopier nedlastingslenkje"
 
-#: lib/downloads/downloaditem.cpp:327
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "Avbryt nedlasting"
 
-#: lib/downloads/downloaditem.cpp:330
+#: lib/downloads/downloaditem.cpp:316
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "Hald fram nedlasting"
 
-#: lib/downloads/downloaditem.cpp:332
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "Set nedlasting på pause"
 
-#: lib/downloads/downloaditem.cpp:335
+#: lib/downloads/downloaditem.cpp:321
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "Fjern frå liste"
 
-#: lib/downloads/downloaditem.cpp:337
+#: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "Feil"
 
-#: lib/downloads/downloaditem.cpp:363
+#: lib/downloads/downloaditem.cpp:349
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "Ikkje funnen"
 
-#: lib/downloads/downloaditem.cpp:363
+#: lib/downloads/downloaditem.cpp:349
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -1702,65 +1702,65 @@ msgstr ""
 "Fann ikkje fila\n"
 " «%1»."
 
-#: lib/downloads/downloadmanager.cpp:200 lib/downloads/downloadmanager.cpp:440
+#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:424
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "Nedlastingshandsamar"
 
-#: lib/downloads/downloadmanager.cpp:238
+#: lib/downloads/downloadmanager.cpp:230
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%1 % av %2 filer (%3) %4 att"
 
-#: lib/downloads/downloadmanager.cpp:242
+#: lib/downloads/downloadmanager.cpp:234
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1 % – nedlastingshandsamar"
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:304
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "Lagra fil som …"
 
-#: lib/downloads/downloadmanager.cpp:326
+#: lib/downloads/downloadmanager.cpp:314
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr "MIME-HTML-arkiv (*.mhtml)"
 
-#: lib/downloads/downloadmanager.cpp:327
+#: lib/downloads/downloadmanager.cpp:315
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr "HTML-side, enkel (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:328
+#: lib/downloads/downloadmanager.cpp:316
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr "HTML-side, fullstendig (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:332
+#: lib/downloads/downloadmanager.cpp:320
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr "Lagra side som …"
 
-#: lib/downloads/downloadmanager.cpp:433
+#: lib/downloads/downloadmanager.cpp:417
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "Falkon: Nedlastinga er ferdig"
 
-#: lib/downloads/downloadmanager.cpp:433
+#: lib/downloads/downloadmanager.cpp:417
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "Alle filene er ferdig nedlasta."
 
-#: lib/downloads/downloadmanager.cpp:480
+#: lib/downloads/downloadmanager.cpp:464
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "Åtvaring"
 
-#: lib/downloads/downloadmanager.cpp:481
+#: lib/downloads/downloadmanager.cpp:465
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -1772,13 +1772,13 @@ msgctxt "DownloadManager|"
 msgid "Clear"
 msgstr "Tøm"
 
-#: lib/downloads/downloadoptionsdialog.cpp:53
+#: lib/downloads/downloadoptionsdialog.cpp:49
 #, qt-format
 msgctxt "DownloadOptionsDialog|"
 msgid "Opening %1"
 msgstr "Opnar %1"
 
-#: lib/downloads/downloadoptionsdialog.cpp:116
+#: lib/downloads/downloadoptionsdialog.cpp:112
 msgctxt "DownloadOptionsDialog|"
 msgid "Download link copied."
 msgstr "Nedlastingslenkje kopiert."
@@ -2232,12 +2232,12 @@ msgctxt "WebSearchBar|"
 msgid "Manage Search Engines"
 msgstr "Handsam søkjemotorar"
 
-#: lib/navigation/websearchbar.cpp:261
+#: lib/navigation/websearchbar.cpp:257
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
 msgstr "Vis forslag"
 
-#: lib/navigation/websearchbar.cpp:266
+#: lib/navigation/websearchbar.cpp:262
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr "Søk ved endring av motor"
@@ -2253,56 +2253,56 @@ msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr "%1 %"
 
-#: lib/network/networkmanager.cpp:102
+#: lib/network/networkmanager.cpp:91
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
 msgstr "Feil i SSL-sertifikat."
 
-#: lib/network/networkmanager.cpp:103
+#: lib/network/networkmanager.cpp:92
 msgctxt "NetworkManager|"
 msgid ""
 "The page you are trying to access has the following errors in the SSL "
 "certificate:"
 msgstr "Nettsida du prøver å lasta har feil i SSL-sertifikatet:"
 
-#: lib/network/networkmanager.cpp:104
+#: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
 msgstr "Vil du leggja til eit unntak for sertifikatet?"
 
-#: lib/network/networkmanager.cpp:139
+#: lib/network/networkmanager.cpp:124
 msgctxt "NetworkManager|"
 msgid "Authorization required"
 msgstr "Treng løyve"
 
-#: lib/network/networkmanager.cpp:146 lib/network/networkmanager.cpp:232
+#: lib/network/networkmanager.cpp:131 lib/network/networkmanager.cpp:217
 msgctxt "NetworkManager|"
 msgid "Username: "
 msgstr "Brukarnamn: "
 
-#: lib/network/networkmanager.cpp:147 lib/network/networkmanager.cpp:233
+#: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
 msgctxt "NetworkManager|"
 msgid "Password: "
 msgstr "Passord: "
 
-#: lib/network/networkmanager.cpp:153
+#: lib/network/networkmanager.cpp:138
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
 msgstr "Lagra brukarnamn og passord for nettstaden"
 
-#: lib/network/networkmanager.cpp:161
+#: lib/network/networkmanager.cpp:146
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
 msgstr "%1 spør etter brukarnamn og passord. Nettstaden melder: «%2»"
 
-#: lib/network/networkmanager.cpp:225
+#: lib/network/networkmanager.cpp:210
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
 msgstr "Treng løyve for mellomtenar"
 
-#: lib/network/networkmanager.cpp:245
+#: lib/network/networkmanager.cpp:230
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
@@ -3418,95 +3418,95 @@ msgid "Search"
 msgstr "Søk"
 
 #: lib/preferences/autofillmanager.cpp:82
-#: lib/preferences/autofillmanager.cpp:175
-#: lib/preferences/autofillmanager.cpp:183
+#: lib/preferences/autofillmanager.cpp:171
+#: lib/preferences/autofillmanager.cpp:179
 #: lib/preferences/autofillmanager.ui:140
 msgctxt "AutoFillManager|"
 msgid "Show Passwords"
 msgstr "Vis passord"
 
-#: lib/preferences/autofillmanager.cpp:134
+#: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend..."
 msgstr "Byt motor …"
 
-#: lib/preferences/autofillmanager.cpp:134
+#: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend:"
 msgstr "Byt motor:"
 
-#: lib/preferences/autofillmanager.cpp:183
+#: lib/preferences/autofillmanager.cpp:179
 msgctxt "AutoFillManager|"
 msgid "Are you sure that you want to show all passwords?"
 msgstr "Er du sikker på at du vil visa alle passorda?"
 
-#: lib/preferences/autofillmanager.cpp:198
+#: lib/preferences/autofillmanager.cpp:194
 msgctxt "AutoFillManager|"
 msgid "Hide Passwords"
 msgstr "Gøym passord"
 
-#: lib/preferences/autofillmanager.cpp:236
+#: lib/preferences/autofillmanager.cpp:232
 msgctxt "AutoFillManager|"
 msgid "Confirmation"
 msgstr "Stadfesting"
 
-#: lib/preferences/autofillmanager.cpp:237
+#: lib/preferences/autofillmanager.cpp:233
 msgctxt "AutoFillManager|"
 msgid "Are you sure you want to delete all passwords on your computer?"
 msgstr "Er du sikker på at du vil sletta alle passorda?"
 
-#: lib/preferences/autofillmanager.cpp:256
+#: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Edit password"
 msgstr "Rediger passord"
 
-#: lib/preferences/autofillmanager.cpp:256
+#: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Change password:"
 msgstr "Byt passord:"
 
-#: lib/preferences/autofillmanager.cpp:310
-#: lib/preferences/autofillmanager.cpp:321
+#: lib/preferences/autofillmanager.cpp:302
+#: lib/preferences/autofillmanager.cpp:313
 msgctxt "AutoFillManager|"
 msgid "Choose file..."
 msgstr "Vel fil …"
 
-#: lib/preferences/autofillmanager.cpp:335
+#: lib/preferences/autofillmanager.cpp:327
 msgctxt "AutoFillManager|"
 msgid "Cannot read file!"
 msgstr "Klarte ikkje lesa fil."
 
-#: lib/preferences/autofillmanager.cpp:344
+#: lib/preferences/autofillmanager.cpp:336
 msgctxt "AutoFillManager|"
 msgid "Successfully imported"
 msgstr "Importering fullført"
 
-#: lib/preferences/autofillmanager.cpp:344
+#: lib/preferences/autofillmanager.cpp:336
 msgctxt "AutoFillManager|"
 msgid "Error while importing!"
 msgstr "Feil ved importering."
 
-#: lib/preferences/autofillmanager.cpp:355
+#: lib/preferences/autofillmanager.cpp:347
 msgctxt "AutoFillManager|"
 msgid "Cannot write to file!"
 msgstr "Klarte ikkje skriva til fila."
 
-#: lib/preferences/autofillmanager.cpp:364
+#: lib/preferences/autofillmanager.cpp:356
 msgctxt "AutoFillManager|"
 msgid "Successfully exported"
 msgstr "Eksportering fullført"
 
-#: lib/preferences/autofillmanager.cpp:381
+#: lib/preferences/autofillmanager.cpp:373
 msgctxt "AutoFillManager|"
 msgid "Copy Username"
 msgstr "Kopier brukarnamn"
 
-#: lib/preferences/autofillmanager.cpp:382
+#: lib/preferences/autofillmanager.cpp:374
 msgctxt "AutoFillManager|"
 msgid "Copy Password"
 msgstr "Kopier passord"
 
-#: lib/preferences/autofillmanager.cpp:384
+#: lib/preferences/autofillmanager.cpp:376
 msgctxt "AutoFillManager|"
 msgid "Edit Password"
 msgstr "Rediger passord"
@@ -3688,88 +3688,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Er du sikker på at du vil fjerna «%1»?"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:620
+#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:613
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Standard"
 
-#: lib/preferences/preferences.cpp:159
+#: lib/preferences/preferences.cpp:156
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Bruk som standard"
 
-#: lib/preferences/preferences.cpp:304
+#: lib/preferences/preferences.cpp:301
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1 %"
 
-#: lib/preferences/preferences.cpp:563
+#: lib/preferences/preferences.cpp:556
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Vel plassering for programfil …"
 
-#: lib/preferences/preferences.cpp:606
+#: lib/preferences/preferences.cpp:599
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Skjermvarsling"
 
-#: lib/preferences/preferences.cpp:607
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Dra varslinga til der du vil ha ho på skjermen."
 
-#: lib/preferences/preferences.cpp:656
+#: lib/preferences/preferences.cpp:649
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Vel nedlastingsmappe …"
 
-#: lib/preferences/preferences.cpp:670
+#: lib/preferences/preferences.cpp:663
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Vel plassering for stilsett …"
 
-#: lib/preferences/preferences.cpp:681
+#: lib/preferences/preferences.cpp:674
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Sletta"
 
-#: lib/preferences/preferences.cpp:789
+#: lib/preferences/preferences.cpp:782
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Vel mappe for mellomlager …"
 
-#: lib/preferences/preferences.cpp:820
+#: lib/preferences/preferences.cpp:813
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Ny profil"
 
-#: lib/preferences/preferences.cpp:820
+#: lib/preferences/preferences.cpp:813
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Skriv inn namn på den nye profilen:"
 
-#: lib/preferences/preferences.cpp:830 lib/preferences/preferences.cpp:835
+#: lib/preferences/preferences.cpp:823 lib/preferences/preferences.cpp:828
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Feil."
 
-#: lib/preferences/preferences.cpp:830
+#: lib/preferences/preferences.cpp:823
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Profilen finst frå før."
 
-#: lib/preferences/preferences.cpp:835
+#: lib/preferences/preferences.cpp:828
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Klarte ikkje oppretta profilmappa."
 
-#: lib/preferences/preferences.cpp:846
+#: lib/preferences/preferences.cpp:839
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Stadfesting"
 
-#: lib/preferences/preferences.cpp:847
+#: lib/preferences/preferences.cpp:840
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3779,12 +3779,12 @@ msgstr ""
 "Er du sikker på at du vil sletta profilen «%1»? Du kan ikkje angra denne "
 "slettinga."
 
-#: lib/preferences/preferences.cpp:862 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:855 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Merk: Du kan ikkje sletta profilen som du brukar."
 
-#: lib/preferences/preferences.cpp:1121
+#: lib/preferences/preferences.cpp:1114
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Vel farge"
@@ -5562,45 +5562,45 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "Avvis"
 
-#: lib/tools/qztools.cpp:389
+#: lib/tools/qztools.cpp:378
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "Ukjend storleik"
 
 # Har sjekka at det er snakk om 1024 byte.
-#: lib/tools/qztools.cpp:394
+#: lib/tools/qztools.cpp:383
 msgctxt "QObject|"
 msgid "KB"
 msgstr "KiB"
 
 # Har sjekka at det er snakk om 1024² byte.
-#: lib/tools/qztools.cpp:399
+#: lib/tools/qztools.cpp:388
 msgctxt "QObject|"
 msgid "MB"
 msgstr "MiB"
 
 # Har sjekka at det er snakk om 1024³ byte.
-#: lib/tools/qztools.cpp:403
+#: lib/tools/qztools.cpp:392
 msgctxt "QObject|"
 msgid "GB"
 msgstr "GiB"
 
-#: lib/tools/qztools.cpp:862
+#: lib/tools/qztools.cpp:851
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "Programfil:"
 
-#: lib/tools/qztools.cpp:863
+#: lib/tools/qztools.cpp:852
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "Argument:"
 
-#: lib/tools/qztools.cpp:865
+#: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "Klarte ikkje starta eksternt program"
 
-#: lib/tools/qztools.cpp:866
+#: lib/tools/qztools.cpp:855
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -5611,7 +5611,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Hindra sida i å oppretta fleire dialogvindauge"
 
-#: lib/webengine/webpage.cpp:347
+#: lib/webengine/webpage.cpp:332
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5621,297 +5621,297 @@ msgstr ""
 "Falkon støttar ikkje <b>%1:</b>-lenkjer. Den aktuelle lenkja er<ul><li>%2</"
 "li></ul>Ønskjer du å opna ho med eit systemprogram?"
 
-#: lib/webengine/webpage.cpp:352
+#: lib/webengine/webpage.cpp:337
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Hugs valet for denne protokollen"
 
-#: lib/webengine/webpage.cpp:353
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Førespurnad om ekstern protokoll"
 
-#: lib/webengine/webpage.cpp:433 lib/webengine/webpage.cpp:434
+#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Klarte ikkje lasta side"
 
-#: lib/webengine/webpage.cpp:435
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Noko gjekk gale ved lasting av sida."
 
-#: lib/webengine/webpage.cpp:436
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr "Prøv å lukka faner eller lasta inn sida på nytt for å frigjera minne."
 
-#: lib/webengine/webpage.cpp:437
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Last sida på nytt"
 
-#: lib/webengine/webpage.cpp:510
+#: lib/webengine/webpage.cpp:483
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Vel fil …"
 
-#: lib/webengine/webpage.cpp:514
+#: lib/webengine/webpage.cpp:487
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Vel filer …"
 
-#: lib/webengine/webpage.cpp:650
+#: lib/webengine/webpage.cpp:623
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript-åtvaring"
 
-#: lib/webengine/webpage.cpp:659
+#: lib/webengine/webpage.cpp:632
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Hindra sida i å oppretta fleire dialogvindauge"
 
-#: lib/webengine/webview.cpp:130
+#: lib/webengine/webview.cpp:126
 msgctxt "WebView|"
 msgid "Empty Page"
 msgstr "Tom side"
 
-#: lib/webengine/webview.cpp:397
+#: lib/webengine/webview.cpp:390
 #, qt-format
 msgctxt "WebView|"
 msgid "Falkon %1 (%2)"
 msgstr "Falkon %1 (%2)"
 
-#: lib/webengine/webview.cpp:711
+#: lib/webengine/webview.cpp:694
 msgctxt "WebView|"
 msgid "No suggestions"
 msgstr "Ingen forslag"
 
-#: lib/webengine/webview.cpp:762
+#: lib/webengine/webview.cpp:745
 msgctxt "WebView|"
 msgid "&Back"
 msgstr "&Tilbake"
 
-#: lib/webengine/webview.cpp:766
+#: lib/webengine/webview.cpp:749
 msgctxt "WebView|"
 msgid "&Forward"
 msgstr "&Framover"
 
-#: lib/webengine/webview.cpp:773
+#: lib/webengine/webview.cpp:756
 msgctxt "WebView|"
 msgid "&Add New Page"
 msgstr "&Legg til ny side"
 
-#: lib/webengine/webview.cpp:774
+#: lib/webengine/webview.cpp:757
 msgctxt "WebView|"
 msgid "&Configure Speed Dial"
 msgstr "&Set opp snøggval"
 
-#: lib/webengine/webview.cpp:776
+#: lib/webengine/webview.cpp:759
 msgctxt "WebView|"
 msgid "Reload All Dials"
 msgstr "Last inn snøggvala på nytt"
 
-#: lib/webengine/webview.cpp:795
+#: lib/webengine/webview.cpp:778
 msgctxt "WebView|"
 msgid "Book&mark page"
 msgstr "&Bokmerk side"
 
-#: lib/webengine/webview.cpp:796
+#: lib/webengine/webview.cpp:779
 msgctxt "WebView|"
 msgid "&Save page as..."
 msgstr "La&gra side som …"
 
-#: lib/webengine/webview.cpp:797
+#: lib/webengine/webview.cpp:780
 msgctxt "WebView|"
 msgid "&Copy page link"
 msgstr "&Kopier sidelenkje"
 
-#: lib/webengine/webview.cpp:798
+#: lib/webengine/webview.cpp:781
 msgctxt "WebView|"
 msgid "Send page link..."
 msgstr "Send sidelenkje …"
 
-#: lib/webengine/webview.cpp:800
+#: lib/webengine/webview.cpp:783
 msgctxt "WebView|"
 msgid "Select &all"
 msgstr "Merk &alt"
 
-#: lib/webengine/webview.cpp:806
+#: lib/webengine/webview.cpp:789
 msgctxt "WebView|"
 msgid "Show so&urce code"
 msgstr "Vis k&jeldekode"
 
-#: lib/webengine/webview.cpp:810
+#: lib/webengine/webview.cpp:793
 msgctxt "WebView|"
 msgid "Show info ab&out site"
 msgstr "Vis side&info"
 
-#: lib/webengine/webview.cpp:816
+#: lib/webengine/webview.cpp:799
 msgctxt "WebView|"
 msgid "Open link in new &tab"
 msgstr "Opna lenkje i ny &fane"
 
-#: lib/webengine/webview.cpp:821
+#: lib/webengine/webview.cpp:804
 msgctxt "WebView|"
 msgid "Open link in new &window"
 msgstr "Opna lenkje i nytt &vindauge"
 
-#: lib/webengine/webview.cpp:822
+#: lib/webengine/webview.cpp:805
 msgctxt "WebView|"
 msgid "Open link in &private window"
 msgstr "Opna lenkje i nytt &privat vindauge"
 
-#: lib/webengine/webview.cpp:827
+#: lib/webengine/webview.cpp:810
 msgctxt "WebView|"
 msgid "B&ookmark link"
 msgstr "B&okmerk lenkje"
 
-#: lib/webengine/webview.cpp:829
+#: lib/webengine/webview.cpp:812
 msgctxt "WebView|"
 msgid "&Save link as..."
 msgstr "&Lagra lenkje som …"
 
-#: lib/webengine/webview.cpp:830
+#: lib/webengine/webview.cpp:813
 msgctxt "WebView|"
 msgid "Send link..."
 msgstr "Send lenkje …"
 
-#: lib/webengine/webview.cpp:831
+#: lib/webengine/webview.cpp:814
 msgctxt "WebView|"
 msgid "&Copy link address"
 msgstr "&Kopier lenkjeadresse"
 
-#: lib/webengine/webview.cpp:844
+#: lib/webengine/webview.cpp:827
 msgctxt "WebView|"
 msgid "Show i&mage"
 msgstr "Vis &bilete"
 
-#: lib/webengine/webview.cpp:850
+#: lib/webengine/webview.cpp:833
 msgctxt "WebView|"
 msgid "Copy image"
 msgstr "Kopier bilete"
 
-#: lib/webengine/webview.cpp:851
+#: lib/webengine/webview.cpp:834
 msgctxt "WebView|"
 msgid "Copy image ad&dress"
 msgstr "Kopier bileta&dresse"
 
-#: lib/webengine/webview.cpp:853
+#: lib/webengine/webview.cpp:836
 msgctxt "WebView|"
 msgid "&Save image as..."
 msgstr "Lagra b&ilete som …"
 
-#: lib/webengine/webview.cpp:854
+#: lib/webengine/webview.cpp:837
 msgctxt "WebView|"
 msgid "Send image..."
 msgstr "Send bilete …"
 
-#: lib/webengine/webview.cpp:873
+#: lib/webengine/webview.cpp:856
 msgctxt "WebView|"
 msgid "Send text..."
 msgstr "Send tekst …"
 
-#: lib/webengine/webview.cpp:885
+#: lib/webengine/webview.cpp:868
 msgctxt "WebView|"
 msgid "Go to &web address"
 msgstr "Gå til &vevadresse"
 
 # I tydinga «Search for».
 # To punktum er unødvendig.
-#: lib/webengine/webview.cpp:899
+#: lib/webengine/webview.cpp:882
 #, qt-format
 msgctxt "WebView|"
 msgid "Search \"%1 ..\" with %2"
 msgstr "Søk etter «%1» med %2"
 
-#: lib/webengine/webview.cpp:905
+#: lib/webengine/webview.cpp:888
 msgctxt "WebView|"
 msgid "Search with..."
 msgstr "Søk med …"
 
-#: lib/webengine/webview.cpp:927
+#: lib/webengine/webview.cpp:910
 msgctxt "WebView|"
 msgid "&Play"
 msgstr "&Spel av"
 
-#: lib/webengine/webview.cpp:927
+#: lib/webengine/webview.cpp:910
 msgctxt "WebView|"
 msgid "&Pause"
 msgstr "&Pause"
 
-#: lib/webengine/webview.cpp:928
+#: lib/webengine/webview.cpp:911
 msgctxt "WebView|"
 msgid "Un&mute"
 msgstr "&Opphev lyddemping"
 
-#: lib/webengine/webview.cpp:928
+#: lib/webengine/webview.cpp:911
 msgctxt "WebView|"
 msgid "&Mute"
 msgstr "&Demp lyd"
 
-#: lib/webengine/webview.cpp:930
+#: lib/webengine/webview.cpp:913
 msgctxt "WebView|"
 msgid "&Copy Media Address"
 msgstr "&Kopier medieadresse"
 
-#: lib/webengine/webview.cpp:931
+#: lib/webengine/webview.cpp:914
 msgctxt "WebView|"
 msgid "&Send Media Address"
 msgstr "&Send medieadresse"
 
-#: lib/webengine/webview.cpp:932
+#: lib/webengine/webview.cpp:915
 msgctxt "WebView|"
 msgid "Save Media To &Disk"
 msgstr "Lagra medium til &disk"
 
-#: lib/webengine/webview.cpp:951
+#: lib/webengine/webview.cpp:934
 msgctxt "WebView|"
 msgid "Create Search Engine"
 msgstr "Legg til søkjemotor"
 
-#: lib/webengine/webview.cpp:992
+#: lib/webengine/webview.cpp:975
 msgctxt "WebView|"
 msgid "&Undo"
 msgstr "&Angra"
 
-#: lib/webengine/webview.cpp:998
+#: lib/webengine/webview.cpp:981
 msgctxt "WebView|"
 msgid "&Redo"
 msgstr "&Gjer om"
 
-#: lib/webengine/webview.cpp:1004
+#: lib/webengine/webview.cpp:987
 msgctxt "WebView|"
 msgid "&Cut"
 msgstr "Klipp &ut"
 
-#: lib/webengine/webview.cpp:1010
+#: lib/webengine/webview.cpp:993
 msgctxt "WebView|"
 msgid "&Copy"
 msgstr "&Kopier"
 
-#: lib/webengine/webview.cpp:1016
+#: lib/webengine/webview.cpp:999
 msgctxt "WebView|"
 msgid "&Paste"
 msgstr "&Lim inn"
 
-#: lib/webengine/webview.cpp:1022
+#: lib/webengine/webview.cpp:1005
 msgctxt "WebView|"
 msgid "Select All"
 msgstr "Merk alt"
 
-#: lib/webengine/webview.cpp:1028
+#: lib/webengine/webview.cpp:1011
 msgctxt "WebView|"
 msgid "&Reload"
 msgstr "&Last om att"
 
-#: lib/webengine/webview.cpp:1032
+#: lib/webengine/webview.cpp:1015
 msgctxt "WebView|"
 msgid "S&top"
 msgstr "S&topp"
 
-#: lib/webtab/searchtoolbar.cpp:155
+#: lib/webtab/searchtoolbar.cpp:151
 #, qt-format
 msgctxt "SearchToolBar|"
 msgid "%1 of %2"

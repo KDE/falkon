@@ -73,27 +73,27 @@ msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
 msgstr "Manage JavaScript settings"
 
-#: sbi_networkicon.cpp:73
+#: sbi_networkicon.cpp:62
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
 msgstr "Proxy Configuration"
 
-#: sbi_networkicon.cpp:75
+#: sbi_networkicon.cpp:64
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
 msgstr "Select proxy"
 
-#: sbi_networkicon.cpp:89
+#: sbi_networkicon.cpp:78
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
 msgstr "Empty"
 
-#: sbi_networkicon.cpp:93
+#: sbi_networkicon.cpp:82
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
 msgstr "Manage proxies"
 
-#: sbi_networkicon.cpp:106
+#: sbi_networkicon.cpp:95
 #, qt-format
 msgctxt "SBI_NetworkIcon|"
 msgid ""
@@ -103,27 +103,22 @@ msgstr ""
 "Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
 "><br/><b>Proxy:</b><br/>%2"
 
-#: sbi_networkicon.cpp:110 sbi_networkicon.cpp:118
+#: sbi_networkicon.cpp:99
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected"
 msgstr "Connected"
 
-#: sbi_networkicon.cpp:113
-msgctxt "SBI_NetworkIcon|"
-msgid "Offline"
-msgstr "Offline"
-
-#: sbi_networkicon.cpp:123
+#: sbi_networkicon.cpp:103
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
 msgstr "System proxy"
 
-#: sbi_networkicon.cpp:127
+#: sbi_networkicon.cpp:107
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
 msgstr "No proxy"
 
-#: sbi_networkicon.cpp:131
+#: sbi_networkicon.cpp:111
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
 msgstr "User defined"
@@ -253,3 +248,7 @@ msgstr "Zoom widget"
 msgctxt "SBI_ZoomWidget|"
 msgid "Zoom: %1%"
 msgstr "Zoom: %1%"
+
+#~ msgctxt "SBI_NetworkIcon|"
+#~ msgid "Offline"
+#~ msgstr "Offline"

@@ -71,27 +71,27 @@ msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
 msgstr "مدیریت تنظیمات جاوا اسکریپت"
 
-#: sbi_networkicon.cpp:73
+#: sbi_networkicon.cpp:62
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
 msgstr ""
 
-#: sbi_networkicon.cpp:75
+#: sbi_networkicon.cpp:64
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
 msgstr "انتخاب پروکسی"
 
-#: sbi_networkicon.cpp:89
+#: sbi_networkicon.cpp:78
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
 msgstr "خالی"
 
-#: sbi_networkicon.cpp:93
+#: sbi_networkicon.cpp:82
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
 msgstr "مدیریت پروکسی‌ها"
 
-#: sbi_networkicon.cpp:106
+#: sbi_networkicon.cpp:95
 #, qt-format
 msgctxt "SBI_NetworkIcon|"
 msgid ""
@@ -101,27 +101,22 @@ msgstr ""
 "وضعیت شبکه را نشان می‌دهد و پروکسی‌ها را مدیریت می‌کند<br/><br/><b>شبکه:</b><br/"
 ">%1<br/><br/><b>پروکسی:</b><br/>%2"
 
-#: sbi_networkicon.cpp:110 sbi_networkicon.cpp:118
+#: sbi_networkicon.cpp:99
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected"
 msgstr "متصل"
 
-#: sbi_networkicon.cpp:113
-msgctxt "SBI_NetworkIcon|"
-msgid "Offline"
-msgstr "برون‌خط"
-
-#: sbi_networkicon.cpp:123
+#: sbi_networkicon.cpp:103
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
 msgstr "پروکسی سیستم"
 
-#: sbi_networkicon.cpp:127
+#: sbi_networkicon.cpp:107
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
 msgstr "بدون پروکسی"
 
-#: sbi_networkicon.cpp:131
+#: sbi_networkicon.cpp:111
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
 msgstr "تعریف شده توسط کاربر"
@@ -253,3 +248,7 @@ msgstr ""
 msgctxt "SBI_ZoomWidget|"
 msgid "Zoom: %1%"
 msgstr ""
+
+#~ msgctxt "SBI_NetworkIcon|"
+#~ msgid "Offline"
+#~ msgstr "برون‌خط"

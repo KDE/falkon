@@ -200,22 +200,22 @@ msgctxt "AdBlockManager|"
 msgid "AdBlock Subscription"
 msgstr "Inscrições do AdBlock"
 
-#: lib/adblock/adblockmanager.cpp:321
+#: lib/adblock/adblockmanager.cpp:317
 msgctxt "AdBlockManager|"
 msgid "EasyList"
 msgstr "EasyList"
 
-#: lib/adblock/adblockmanager.cpp:326
+#: lib/adblock/adblockmanager.cpp:322
 msgctxt "AdBlockManager|"
 msgid "NoCoin List"
 msgstr "Lista NoCoin"
 
-#: lib/adblock/adblocksubscription.cpp:177
+#: lib/adblock/adblocksubscription.cpp:173
 msgctxt "AdBlockSubscription|"
 msgid "Cannot load subscription!"
 msgstr "Não foi possível carregar a inscrição!"
 
-#: lib/adblock/adblocksubscription.cpp:290
+#: lib/adblock/adblocksubscription.cpp:286
 msgctxt "AdBlockCustomList|"
 msgid "Custom Rules"
 msgstr "Filtros personalizados"
@@ -263,78 +263,78 @@ msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
 msgstr "Bloqueado por <i>%1 (%2)</i>"
 
-#: lib/app/browserwindow.cpp:209 lib/app/browserwindow.cpp:988
+#: lib/app/browserwindow.cpp:203 lib/app/browserwindow.cpp:978
 msgctxt "BrowserWindow|"
 msgid "Falkon"
 msgstr "Falkon"
 
-#: lib/app/browserwindow.cpp:399
+#: lib/app/browserwindow.cpp:393
 msgctxt "BrowserWindow|"
 msgid "IP Address of current page"
 msgstr "Endereço IP da página atual"
 
-#: lib/app/browserwindow.cpp:743
+#: lib/app/browserwindow.cpp:733
 msgctxt "BrowserWindow|"
 msgid " (Private Browsing)"
 msgstr "(Navegação privada)"
 
-#: lib/app/browserwindow.cpp:990
+#: lib/app/browserwindow.cpp:980
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
 
-#: lib/app/browserwindow.cpp:1056
+#: lib/app/browserwindow.cpp:1046
 msgctxt "BrowserWindow|"
 msgid "&Menu Bar"
 msgstr "&Barra de menu"
 
-#: lib/app/browserwindow.cpp:1061
+#: lib/app/browserwindow.cpp:1051
 msgctxt "BrowserWindow|"
 msgid "&Navigation Toolbar"
 msgstr "&Barra de navegação"
 
-#: lib/app/browserwindow.cpp:1065
+#: lib/app/browserwindow.cpp:1055
 msgctxt "BrowserWindow|"
 msgid "&Bookmarks Toolbar"
 msgstr "&Barra de favoritos"
 
-#: lib/app/browserwindow.cpp:1071
+#: lib/app/browserwindow.cpp:1061
 msgctxt "BrowserWindow|"
 msgid "&Tabs on Top"
 msgstr "&Abas no topo"
 
-#: lib/app/browserwindow.cpp:1126
+#: lib/app/browserwindow.cpp:1116
 msgctxt "BrowserWindow|"
 msgid "Other"
 msgstr "Outro"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "HTML files"
 msgstr "Arquivos HTML"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "Image files"
 msgstr "Imagens"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "Text files"
 msgstr "Arquivos de texto"
 
-#: lib/app/browserwindow.cpp:1168
+#: lib/app/browserwindow.cpp:1158
 msgctxt "BrowserWindow|"
 msgid "All files"
 msgstr "Todos os arquivos"
 
-#: lib/app/browserwindow.cpp:1170
+#: lib/app/browserwindow.cpp:1160
 msgctxt "BrowserWindow|"
 msgid "Open file..."
 msgstr "Abrir arquivo..."
 
-#: lib/app/browserwindow.cpp:1507
+#: lib/app/browserwindow.cpp:1497
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid ""
@@ -350,17 +350,17 @@ msgstr[1] ""
 "Ainda existe %n abas abertas e sua sessão não será salva.\n"
 "Deseja fechar esta janela?"
 
-#: lib/app/browserwindow.cpp:1508
+#: lib/app/browserwindow.cpp:1498
 msgctxt "BrowserWindow|"
 msgid "Don't ask again"
 msgstr "Não perguntar novamente"
 
-#: lib/app/browserwindow.cpp:1509
+#: lib/app/browserwindow.cpp:1499
 msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Ainda existem abas abertas"
 
-#: lib/app/mainapplication.cpp:1111
+#: lib/app/mainapplication.cpp:1094
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -368,32 +368,32 @@ msgid ""
 msgstr ""
 "O Falkon não é seu navegador padrão. Deseja fazê-lo seu navegador padrão?"
 
-#: lib/app/mainapplication.cpp:1112
+#: lib/app/mainapplication.cpp:1095
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Sempre realizar esta verificação ao iniciar o Falkon."
 
-#: lib/app/mainapplication.cpp:1114
+#: lib/app/mainapplication.cpp:1097
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Navegador padrão"
 
-#: lib/app/mainapplication.cpp:1254
+#: lib/app/mainapplication.cpp:1229
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Abrir nova aba"
 
-#: lib/app/mainapplication.cpp:1255
+#: lib/app/mainapplication.cpp:1230
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Abrir nova janela"
 
-#: lib/app/mainapplication.cpp:1256
+#: lib/app/mainapplication.cpp:1231
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Abrir nova janela privativa"
 
-#: lib/app/mainapplication.cpp:1271
+#: lib/app/mainapplication.cpp:1246
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1003,14 +1003,14 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:52
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
 msgctxt "BookmarksImporter|"
 msgid "Choose file..."
 msgstr "Escolher arquivo..."
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:61
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
 msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
 msgstr "Não foi possível abrir o arquivo."
@@ -1067,7 +1067,7 @@ msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
 msgstr "A pasta não existe."
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:37
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
 msgctxt "BookmarksImporter|"
 msgid ""
 "Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
@@ -1076,12 +1076,12 @@ msgstr ""
 "O Opera salva os favoritos no arquivo <b>bookmarks.adr</b>, que geralmente "
 "fica em"
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:68
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
 msgctxt "BookmarksImporter|"
 msgid "File is not valid Opera bookmarks file!"
 msgstr "O arquivo de favoritos do Opera está num formato inválido!"
 
-#: lib/bookmarks/bookmarksimport/operaimporter.cpp:73
+#: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
 msgctxt "BookmarksImporter|"
 msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
 msgstr "Apenas arquivos codificados em UTF-8 são suportados!"
@@ -1544,40 +1544,40 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr "Excluir cookies ao fechar"
 
-#: lib/downloads/downloaditem.cpp:77
+#: lib/downloads/downloaditem.cpp:73
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "Tempo restante não disponível"
 
-#: lib/downloads/downloaditem.cpp:138
+#: lib/downloads/downloaditem.cpp:129
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "Concluído - %1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:142
+#: lib/downloads/downloaditem.cpp:133
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "Erro - %1"
 
-#: lib/downloads/downloaditem.cpp:146 lib/downloads/downloaditem.cpp:293
+#: lib/downloads/downloaditem.cpp:137 lib/downloads/downloaditem.cpp:279
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "Cancelado - %1"
 
-#: lib/downloads/downloaditem.cpp:202 lib/downloads/downloaditem.cpp:337
+#: lib/downloads/downloaditem.cpp:188 lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "Cancelado"
 
-#: lib/downloads/downloaditem.cpp:208
+#: lib/downloads/downloaditem.cpp:194
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "poucos segundos"
 
-#: lib/downloads/downloaditem.cpp:213
+#: lib/downloads/downloaditem.cpp:199
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1585,7 +1585,7 @@ msgid_plural "%n seconds"
 msgstr[0] "%n segundos"
 msgstr[1] "%n segundos"
 
-#: lib/downloads/downloaditem.cpp:218
+#: lib/downloads/downloaditem.cpp:204
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1593,7 +1593,7 @@ msgid_plural "%n minutes"
 msgstr[0] "%n minutos"
 msgstr[1] "%n minutos"
 
-#: lib/downloads/downloaditem.cpp:223
+#: lib/downloads/downloaditem.cpp:209
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1601,95 +1601,95 @@ msgid_plural "%n hours"
 msgstr[0] "%n horas"
 msgstr[1] "%n horas"
 
-#: lib/downloads/downloaditem.cpp:230
+#: lib/downloads/downloaditem.cpp:216
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "Velocidade desconhecida"
 
-#: lib/downloads/downloaditem.cpp:235
+#: lib/downloads/downloaditem.cpp:221
 msgctxt "DownloadItem|"
 msgid "kB/s"
 msgstr "kB/s"
 
-#: lib/downloads/downloaditem.cpp:240
+#: lib/downloads/downloaditem.cpp:226
 msgctxt "DownloadItem|"
 msgid "MB/s"
 msgstr "MB/s"
 
-#: lib/downloads/downloaditem.cpp:244
+#: lib/downloads/downloaditem.cpp:230
 msgctxt "DownloadItem|"
 msgid "GB/s"
 msgstr "GB/s"
 
-#: lib/downloads/downloaditem.cpp:272
+#: lib/downloads/downloaditem.cpp:258
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "Tamanho desconhecido"
 
-#: lib/downloads/downloaditem.cpp:273
+#: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - tamanho desconhecido (%3)"
 
-#: lib/downloads/downloaditem.cpp:276
+#: lib/downloads/downloaditem.cpp:262
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "Falta(m) %1 - %2 de %3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:308
+#: lib/downloads/downloaditem.cpp:294
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "Pausado - %1"
 
-#: lib/downloads/downloaditem.cpp:321
+#: lib/downloads/downloaditem.cpp:307
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "Abrir arquivo"
 
-#: lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:309
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "Abrir pasta"
 
-#: lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:311
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "Copiar link do download"
 
-#: lib/downloads/downloaditem.cpp:327
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "Cancelar"
 
-#: lib/downloads/downloaditem.cpp:330
+#: lib/downloads/downloaditem.cpp:316
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "Continuar o download"
 
-#: lib/downloads/downloaditem.cpp:332
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "Pausar o download"
 
-#: lib/downloads/downloaditem.cpp:335
+#: lib/downloads/downloaditem.cpp:321
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "Remover da lista"
 
-#: lib/downloads/downloaditem.cpp:337
+#: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "Erro"
 
-#: lib/downloads/downloaditem.cpp:363
+#: lib/downloads/downloaditem.cpp:349
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "Não encontrado"
 
-#: lib/downloads/downloaditem.cpp:363
+#: lib/downloads/downloaditem.cpp:349
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -1701,65 +1701,65 @@ msgstr ""
 " %1 \n"
 "não foi encontrado!"
 
-#: lib/downloads/downloadmanager.cpp:200 lib/downloads/downloadmanager.cpp:440
+#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:424
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "Gerenciador de downloads"
 
-#: lib/downloads/downloadmanager.cpp:238
+#: lib/downloads/downloadmanager.cpp:230
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%1% de %2 arquivos - restam (%3) %4"
 
-#: lib/downloads/downloadmanager.cpp:242
+#: lib/downloads/downloadmanager.cpp:234
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1% - Gerenciador de downloads"
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:304
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "Salvar arquivo como..."
 
-#: lib/downloads/downloadmanager.cpp:326
+#: lib/downloads/downloadmanager.cpp:314
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr "Arquivo MIME HTML (*.mhtml)"
 
-#: lib/downloads/downloadmanager.cpp:327
+#: lib/downloads/downloadmanager.cpp:315
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr "Página HTML, única (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:328
+#: lib/downloads/downloadmanager.cpp:316
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr "Página HTML, completa (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:332
+#: lib/downloads/downloadmanager.cpp:320
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr "Salvar página como..."
 
-#: lib/downloads/downloadmanager.cpp:433
+#: lib/downloads/downloadmanager.cpp:417
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "Falkon: Download concluído"
 
-#: lib/downloads/downloadmanager.cpp:433
+#: lib/downloads/downloadmanager.cpp:417
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "Todos os arquivos foram recebidos com sucesso."
 
-#: lib/downloads/downloadmanager.cpp:480
+#: lib/downloads/downloadmanager.cpp:464
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "Aviso"
 
-#: lib/downloads/downloadmanager.cpp:481
+#: lib/downloads/downloadmanager.cpp:465
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -1772,13 +1772,13 @@ msgctxt "DownloadManager|"
 msgid "Clear"
 msgstr "Limpar"
 
-#: lib/downloads/downloadoptionsdialog.cpp:53
+#: lib/downloads/downloadoptionsdialog.cpp:49
 #, qt-format
 msgctxt "DownloadOptionsDialog|"
 msgid "Opening %1"
 msgstr "Abrir %1"
 
-#: lib/downloads/downloadoptionsdialog.cpp:116
+#: lib/downloads/downloadoptionsdialog.cpp:112
 msgctxt "DownloadOptionsDialog|"
 msgid "Download link copied."
 msgstr "Link de download copiado."
@@ -2232,12 +2232,12 @@ msgctxt "WebSearchBar|"
 msgid "Manage Search Engines"
 msgstr "Gerenciar sites de pesquisa"
 
-#: lib/navigation/websearchbar.cpp:261
+#: lib/navigation/websearchbar.cpp:257
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
 msgstr "Mostrar sugestões"
 
-#: lib/navigation/websearchbar.cpp:266
+#: lib/navigation/websearchbar.cpp:262
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr "Pesquisar quando alterar o site de pesquisa"
@@ -2253,12 +2253,12 @@ msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/network/networkmanager.cpp:102
+#: lib/network/networkmanager.cpp:91
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
 msgstr "Erro de certificado SSL!"
 
-#: lib/network/networkmanager.cpp:103
+#: lib/network/networkmanager.cpp:92
 msgctxt "NetworkManager|"
 msgid ""
 "The page you are trying to access has the following errors in the SSL "
@@ -2267,44 +2267,44 @@ msgstr ""
 "A página que está a tentar acessar apresenta os seguintes erros no "
 "certificado SSL:"
 
-#: lib/network/networkmanager.cpp:104
+#: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
 msgstr "Deseja criar uma exceção para este certificado?"
 
-#: lib/network/networkmanager.cpp:139
+#: lib/network/networkmanager.cpp:124
 msgctxt "NetworkManager|"
 msgid "Authorization required"
 msgstr "Autorização necessária"
 
-#: lib/network/networkmanager.cpp:146 lib/network/networkmanager.cpp:232
+#: lib/network/networkmanager.cpp:131 lib/network/networkmanager.cpp:217
 msgctxt "NetworkManager|"
 msgid "Username: "
 msgstr "Usuário: "
 
-#: lib/network/networkmanager.cpp:147 lib/network/networkmanager.cpp:233
+#: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
 msgctxt "NetworkManager|"
 msgid "Password: "
 msgstr "Senha: "
 
-#: lib/network/networkmanager.cpp:153
+#: lib/network/networkmanager.cpp:138
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
 msgstr "Salvar usuário e senha para esta página"
 
-#: lib/network/networkmanager.cpp:161
+#: lib/network/networkmanager.cpp:146
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
 msgstr "%1 está solicitando usuário e senha. A página diz: \"%2\""
 
-#: lib/network/networkmanager.cpp:225
+#: lib/network/networkmanager.cpp:210
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
 msgstr "Autorização de proxy necessária"
 
-#: lib/network/networkmanager.cpp:245
+#: lib/network/networkmanager.cpp:230
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
@@ -3422,96 +3422,96 @@ msgid "Search"
 msgstr "Pesquisar"
 
 #: lib/preferences/autofillmanager.cpp:82
-#: lib/preferences/autofillmanager.cpp:175
-#: lib/preferences/autofillmanager.cpp:183
+#: lib/preferences/autofillmanager.cpp:171
+#: lib/preferences/autofillmanager.cpp:179
 #: lib/preferences/autofillmanager.ui:140
 msgctxt "AutoFillManager|"
 msgid "Show Passwords"
 msgstr "Mostrar senhas"
 
-#: lib/preferences/autofillmanager.cpp:134
+#: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend..."
 msgstr "Mudar infraestrutura..."
 
-#: lib/preferences/autofillmanager.cpp:134
+#: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend:"
 msgstr "Mudar infraestrutura:"
 
-#: lib/preferences/autofillmanager.cpp:183
+#: lib/preferences/autofillmanager.cpp:179
 msgctxt "AutoFillManager|"
 msgid "Are you sure that you want to show all passwords?"
 msgstr "Tem a certeza que deseja mostrar todas as senhas?"
 
-#: lib/preferences/autofillmanager.cpp:198
+#: lib/preferences/autofillmanager.cpp:194
 msgctxt "AutoFillManager|"
 msgid "Hide Passwords"
 msgstr "Ocultar senhas"
 
-#: lib/preferences/autofillmanager.cpp:236
+#: lib/preferences/autofillmanager.cpp:232
 msgctxt "AutoFillManager|"
 msgid "Confirmation"
 msgstr "Confirmação"
 
-#: lib/preferences/autofillmanager.cpp:237
+#: lib/preferences/autofillmanager.cpp:233
 msgctxt "AutoFillManager|"
 msgid "Are you sure you want to delete all passwords on your computer?"
 msgstr ""
 "Você tem certeza que deseja apagar todas as senhas salvas em seu computador?"
 
-#: lib/preferences/autofillmanager.cpp:256
+#: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Edit password"
 msgstr "Editar senha"
 
-#: lib/preferences/autofillmanager.cpp:256
+#: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Change password:"
 msgstr "Alterar senha:"
 
-#: lib/preferences/autofillmanager.cpp:310
-#: lib/preferences/autofillmanager.cpp:321
+#: lib/preferences/autofillmanager.cpp:302
+#: lib/preferences/autofillmanager.cpp:313
 msgctxt "AutoFillManager|"
 msgid "Choose file..."
 msgstr "Escolha o arquivo..."
 
-#: lib/preferences/autofillmanager.cpp:335
+#: lib/preferences/autofillmanager.cpp:327
 msgctxt "AutoFillManager|"
 msgid "Cannot read file!"
 msgstr "Não foi possível ler o arquivo!"
 
-#: lib/preferences/autofillmanager.cpp:344
+#: lib/preferences/autofillmanager.cpp:336
 msgctxt "AutoFillManager|"
 msgid "Successfully imported"
 msgstr "Importado com sucesso"
 
-#: lib/preferences/autofillmanager.cpp:344
+#: lib/preferences/autofillmanager.cpp:336
 msgctxt "AutoFillManager|"
 msgid "Error while importing!"
 msgstr "Ocorreu um erro ao importar!"
 
-#: lib/preferences/autofillmanager.cpp:355
+#: lib/preferences/autofillmanager.cpp:347
 msgctxt "AutoFillManager|"
 msgid "Cannot write to file!"
 msgstr "Não foi possível escrever no arquivo!"
 
-#: lib/preferences/autofillmanager.cpp:364
+#: lib/preferences/autofillmanager.cpp:356
 msgctxt "AutoFillManager|"
 msgid "Successfully exported"
 msgstr "Exportado com sucesso"
 
-#: lib/preferences/autofillmanager.cpp:381
+#: lib/preferences/autofillmanager.cpp:373
 msgctxt "AutoFillManager|"
 msgid "Copy Username"
 msgstr "Copiar usuário"
 
-#: lib/preferences/autofillmanager.cpp:382
+#: lib/preferences/autofillmanager.cpp:374
 msgctxt "AutoFillManager|"
 msgid "Copy Password"
 msgstr "Copiar senha"
 
-#: lib/preferences/autofillmanager.cpp:384
+#: lib/preferences/autofillmanager.cpp:376
 msgctxt "AutoFillManager|"
 msgid "Edit Password"
 msgstr "Editar senha"
@@ -3693,88 +3693,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Deseja realmente remover '%1'?"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:620
+#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:613
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Padrão"
 
-#: lib/preferences/preferences.cpp:159
+#: lib/preferences/preferences.cpp:156
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Definir como padrão"
 
-#: lib/preferences/preferences.cpp:304
+#: lib/preferences/preferences.cpp:301
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:563
+#: lib/preferences/preferences.cpp:556
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Escolha a localização do executável..."
 
-#: lib/preferences/preferences.cpp:606
+#: lib/preferences/preferences.cpp:599
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Notificação"
 
-#: lib/preferences/preferences.cpp:607
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Arraste a notificação para a teça para a posicionar."
 
-#: lib/preferences/preferences.cpp:656
+#: lib/preferences/preferences.cpp:649
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Escolha o local dos downloads..."
 
-#: lib/preferences/preferences.cpp:670
+#: lib/preferences/preferences.cpp:663
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Escolha a localização da folha de estilo..."
 
-#: lib/preferences/preferences.cpp:681
+#: lib/preferences/preferences.cpp:674
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Eliminado"
 
-#: lib/preferences/preferences.cpp:789
+#: lib/preferences/preferences.cpp:782
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Escolher caminho do cache..."
 
-#: lib/preferences/preferences.cpp:820
+#: lib/preferences/preferences.cpp:813
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Novo perfil"
 
-#: lib/preferences/preferences.cpp:820
+#: lib/preferences/preferences.cpp:813
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Digite o nome do novo perfil:"
 
-#: lib/preferences/preferences.cpp:830 lib/preferences/preferences.cpp:835
+#: lib/preferences/preferences.cpp:823 lib/preferences/preferences.cpp:828
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Erro!"
 
-#: lib/preferences/preferences.cpp:830
+#: lib/preferences/preferences.cpp:823
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Esse perfil já existe!"
 
-#: lib/preferences/preferences.cpp:835
+#: lib/preferences/preferences.cpp:828
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Não foi possível criar a pasta para o seu perfil!"
 
-#: lib/preferences/preferences.cpp:846
+#: lib/preferences/preferences.cpp:839
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Confirmação"
 
-#: lib/preferences/preferences.cpp:847
+#: lib/preferences/preferences.cpp:840
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3784,12 +3784,12 @@ msgstr ""
 "Deseja remover permanentemente o perfil \"%1\"? Esta ação não pode ser "
 "desfeita!"
 
-#: lib/preferences/preferences.cpp:862 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:855 lib/preferences/preferences.ui:227
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Observação: Você não pode apagar o perfil que está ativo no momento."
 
-#: lib/preferences/preferences.cpp:1121
+#: lib/preferences/preferences.cpp:1114
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Escolher cor"
@@ -5563,42 +5563,42 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "Proibir"
 
-#: lib/tools/qztools.cpp:389
+#: lib/tools/qztools.cpp:378
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "Tamanho desconhecido"
 
-#: lib/tools/qztools.cpp:394
+#: lib/tools/qztools.cpp:383
 msgctxt "QObject|"
 msgid "KB"
 msgstr "KB"
 
-#: lib/tools/qztools.cpp:399
+#: lib/tools/qztools.cpp:388
 msgctxt "QObject|"
 msgid "MB"
 msgstr "MB"
 
-#: lib/tools/qztools.cpp:403
+#: lib/tools/qztools.cpp:392
 msgctxt "QObject|"
 msgid "GB"
 msgstr "GB"
 
-#: lib/tools/qztools.cpp:862
+#: lib/tools/qztools.cpp:851
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "Executável:"
 
-#: lib/tools/qztools.cpp:863
+#: lib/tools/qztools.cpp:852
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "Argumentos:"
 
-#: lib/tools/qztools.cpp:865
+#: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "Não foi possível iniciar o programa externo"
 
-#: lib/tools/qztools.cpp:866
+#: lib/tools/qztools.cpp:855
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -5609,7 +5609,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Impedir que esta página crie mais caixas de diálogo"
 
-#: lib/webengine/webpage.cpp:347
+#: lib/webengine/webpage.cpp:332
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5620,27 +5620,27 @@ msgstr ""
 "%2</li></ul>. Deseja que o Falkon tente abrir esses links nos aplicativos do "
 "sistema? "
 
-#: lib/webengine/webpage.cpp:352
+#: lib/webengine/webpage.cpp:337
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Memorizar minha escolha para esse protocolo"
 
-#: lib/webengine/webpage.cpp:353
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Pedido de protocolo adicional"
 
-#: lib/webengine/webpage.cpp:433 lib/webengine/webpage.cpp:434
+#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Falha ao carregar a página"
 
-#: lib/webengine/webpage.cpp:435
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Algo deu errado enquanto a página estava carregando."
 
-#: lib/webengine/webpage.cpp:436
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -5648,269 +5648,269 @@ msgstr ""
 "Tente recarregar a página ou fechar algumas abas para liberar mais memória "
 "disponível."
 
-#: lib/webengine/webpage.cpp:437
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Recarregar página"
 
-#: lib/webengine/webpage.cpp:510
+#: lib/webengine/webpage.cpp:483
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Escolher arquivo..."
 
-#: lib/webengine/webpage.cpp:514
+#: lib/webengine/webpage.cpp:487
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Escolher arquivos..."
 
-#: lib/webengine/webpage.cpp:650
+#: lib/webengine/webpage.cpp:623
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Alerta JavaScript"
 
-#: lib/webengine/webpage.cpp:659
+#: lib/webengine/webpage.cpp:632
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Impedir que esta página crie mais caixas de diálogo"
 
-#: lib/webengine/webview.cpp:130
+#: lib/webengine/webview.cpp:126
 msgctxt "WebView|"
 msgid "Empty Page"
 msgstr "Página em branco"
 
-#: lib/webengine/webview.cpp:397
+#: lib/webengine/webview.cpp:390
 #, qt-format
 msgctxt "WebView|"
 msgid "Falkon %1 (%2)"
 msgstr "Falkon %1 (%2)"
 
-#: lib/webengine/webview.cpp:711
+#: lib/webengine/webview.cpp:694
 msgctxt "WebView|"
 msgid "No suggestions"
 msgstr "Sem sugestões"
 
-#: lib/webengine/webview.cpp:762
+#: lib/webengine/webview.cpp:745
 msgctxt "WebView|"
 msgid "&Back"
 msgstr "Volta&r"
 
-#: lib/webengine/webview.cpp:766
+#: lib/webengine/webview.cpp:749
 msgctxt "WebView|"
 msgid "&Forward"
 msgstr "&Avançar"
 
-#: lib/webengine/webview.cpp:773
+#: lib/webengine/webview.cpp:756
 msgctxt "WebView|"
 msgid "&Add New Page"
 msgstr "Adicionar nova página"
 
-#: lib/webengine/webview.cpp:774
+#: lib/webengine/webview.cpp:757
 msgctxt "WebView|"
 msgid "&Configure Speed Dial"
 msgstr "Configurar acesso rápido"
 
-#: lib/webengine/webview.cpp:776
+#: lib/webengine/webview.cpp:759
 msgctxt "WebView|"
 msgid "Reload All Dials"
 msgstr "Recarregar todos os acessos rápidos"
 
-#: lib/webengine/webview.cpp:795
+#: lib/webengine/webview.cpp:778
 msgctxt "WebView|"
 msgid "Book&mark page"
 msgstr "Adicionar essa página aos &favoritos"
 
-#: lib/webengine/webview.cpp:796
+#: lib/webengine/webview.cpp:779
 msgctxt "WebView|"
 msgid "&Save page as..."
 msgstr "Salvar página como..."
 
-#: lib/webengine/webview.cpp:797
+#: lib/webengine/webview.cpp:780
 msgctxt "WebView|"
 msgid "&Copy page link"
 msgstr "&Copiar link da página"
 
-#: lib/webengine/webview.cpp:798
+#: lib/webengine/webview.cpp:781
 msgctxt "WebView|"
 msgid "Send page link..."
 msgstr "Enviar link da página..."
 
-#: lib/webengine/webview.cpp:800
+#: lib/webengine/webview.cpp:783
 msgctxt "WebView|"
 msgid "Select &all"
 msgstr "Selecion&ar tudo"
 
-#: lib/webengine/webview.cpp:806
+#: lib/webengine/webview.cpp:789
 msgctxt "WebView|"
 msgid "Show so&urce code"
 msgstr "Mostrar código-fon&te"
 
-#: lib/webengine/webview.cpp:810
+#: lib/webengine/webview.cpp:793
 msgctxt "WebView|"
 msgid "Show info ab&out site"
 msgstr "Mostrar inf&ormações da página"
 
-#: lib/webengine/webview.cpp:816
+#: lib/webengine/webview.cpp:799
 msgctxt "WebView|"
 msgid "Open link in new &tab"
 msgstr "Abrir link em uma nova &aba"
 
-#: lib/webengine/webview.cpp:821
+#: lib/webengine/webview.cpp:804
 msgctxt "WebView|"
 msgid "Open link in new &window"
 msgstr "Abrir link em nova &janela"
 
-#: lib/webengine/webview.cpp:822
+#: lib/webengine/webview.cpp:805
 msgctxt "WebView|"
 msgid "Open link in &private window"
 msgstr "Abrir link em uma janela privativa"
 
-#: lib/webengine/webview.cpp:827
+#: lib/webengine/webview.cpp:810
 msgctxt "WebView|"
 msgid "B&ookmark link"
 msgstr "Salvar link nos fav&oritos"
 
-#: lib/webengine/webview.cpp:829
+#: lib/webengine/webview.cpp:812
 msgctxt "WebView|"
 msgid "&Save link as..."
 msgstr "&Salvar link como..."
 
-#: lib/webengine/webview.cpp:830
+#: lib/webengine/webview.cpp:813
 msgctxt "WebView|"
 msgid "Send link..."
 msgstr "Enviar link..."
 
-#: lib/webengine/webview.cpp:831
+#: lib/webengine/webview.cpp:814
 msgctxt "WebView|"
 msgid "&Copy link address"
 msgstr "&Copiar link"
 
-#: lib/webengine/webview.cpp:844
+#: lib/webengine/webview.cpp:827
 msgctxt "WebView|"
 msgid "Show i&mage"
 msgstr "Abrir i&magem"
 
-#: lib/webengine/webview.cpp:850
+#: lib/webengine/webview.cpp:833
 msgctxt "WebView|"
 msgid "Copy image"
 msgstr "Copiar imagem"
 
-#: lib/webengine/webview.cpp:851
+#: lib/webengine/webview.cpp:834
 msgctxt "WebView|"
 msgid "Copy image ad&dress"
 msgstr "Copiar link &da imagem"
 
-#: lib/webengine/webview.cpp:853
+#: lib/webengine/webview.cpp:836
 msgctxt "WebView|"
 msgid "&Save image as..."
 msgstr "Sa&lvar imagem como..."
 
-#: lib/webengine/webview.cpp:854
+#: lib/webengine/webview.cpp:837
 msgctxt "WebView|"
 msgid "Send image..."
 msgstr "Enviar imagem..."
 
-#: lib/webengine/webview.cpp:873
+#: lib/webengine/webview.cpp:856
 msgctxt "WebView|"
 msgid "Send text..."
 msgstr "Enviar texto..."
 
-#: lib/webengine/webview.cpp:885
+#: lib/webengine/webview.cpp:868
 msgctxt "WebView|"
 msgid "Go to &web address"
 msgstr "Ir para endereço &web"
 
-#: lib/webengine/webview.cpp:899
+#: lib/webengine/webview.cpp:882
 #, qt-format
 msgctxt "WebView|"
 msgid "Search \"%1 ..\" with %2"
 msgstr "Pesquisar \"%1 ...\" com %2"
 
-#: lib/webengine/webview.cpp:905
+#: lib/webengine/webview.cpp:888
 msgctxt "WebView|"
 msgid "Search with..."
 msgstr "Pesquisar com..."
 
-#: lib/webengine/webview.cpp:927
+#: lib/webengine/webview.cpp:910
 msgctxt "WebView|"
 msgid "&Play"
 msgstr "Re&produzir"
 
-#: lib/webengine/webview.cpp:927
+#: lib/webengine/webview.cpp:910
 msgctxt "WebView|"
 msgid "&Pause"
 msgstr "&Pausa"
 
-#: lib/webengine/webview.cpp:928
+#: lib/webengine/webview.cpp:911
 msgctxt "WebView|"
 msgid "Un&mute"
 msgstr "A&tivar som"
 
-#: lib/webengine/webview.cpp:928
+#: lib/webengine/webview.cpp:911
 msgctxt "WebView|"
 msgid "&Mute"
 msgstr "&Silenciar"
 
-#: lib/webengine/webview.cpp:930
+#: lib/webengine/webview.cpp:913
 msgctxt "WebView|"
 msgid "&Copy Media Address"
 msgstr "&Copiar endereço multimídia"
 
-#: lib/webengine/webview.cpp:931
+#: lib/webengine/webview.cpp:914
 msgctxt "WebView|"
 msgid "&Send Media Address"
 msgstr "&Enviar endereço multimídia"
 
-#: lib/webengine/webview.cpp:932
+#: lib/webengine/webview.cpp:915
 msgctxt "WebView|"
 msgid "Save Media To &Disk"
 msgstr "Gravar arquivo no &disco"
 
-#: lib/webengine/webview.cpp:951
+#: lib/webengine/webview.cpp:934
 msgctxt "WebView|"
 msgid "Create Search Engine"
 msgstr "Criar site de pesquisa"
 
-#: lib/webengine/webview.cpp:992
+#: lib/webengine/webview.cpp:975
 msgctxt "WebView|"
 msgid "&Undo"
 msgstr "Desfazer"
 
-#: lib/webengine/webview.cpp:998
+#: lib/webengine/webview.cpp:981
 msgctxt "WebView|"
 msgid "&Redo"
 msgstr "Refazer"
 
-#: lib/webengine/webview.cpp:1004
+#: lib/webengine/webview.cpp:987
 msgctxt "WebView|"
 msgid "&Cut"
 msgstr "Recortar"
 
-#: lib/webengine/webview.cpp:1010
+#: lib/webengine/webview.cpp:993
 msgctxt "WebView|"
 msgid "&Copy"
 msgstr "Copiar"
 
-#: lib/webengine/webview.cpp:1016
+#: lib/webengine/webview.cpp:999
 msgctxt "WebView|"
 msgid "&Paste"
 msgstr "Colar"
 
-#: lib/webengine/webview.cpp:1022
+#: lib/webengine/webview.cpp:1005
 msgctxt "WebView|"
 msgid "Select All"
 msgstr "Selecionar tudo"
 
-#: lib/webengine/webview.cpp:1028
+#: lib/webengine/webview.cpp:1011
 msgctxt "WebView|"
 msgid "&Reload"
 msgstr "Recarregar"
 
-#: lib/webengine/webview.cpp:1032
+#: lib/webengine/webview.cpp:1015
 msgctxt "WebView|"
 msgid "S&top"
 msgstr "Pa&rar"
 
-#: lib/webtab/searchtoolbar.cpp:155
+#: lib/webtab/searchtoolbar.cpp:151
 #, qt-format
 msgctxt "SearchToolBar|"
 msgid "%1 of %2"
