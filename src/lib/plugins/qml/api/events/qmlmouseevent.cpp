@@ -45,7 +45,7 @@ QPoint QmlMouseEvent::globalPos() const
     if (!m_mouseEvent) {
         return QPoint(-1, -1);
     }
-    return m_mouseEvent->globalPos();
+    return m_mouseEvent->globalPosition().toPoint();
 }
 
 int QmlMouseEvent::globalX() const
@@ -53,7 +53,7 @@ int QmlMouseEvent::globalX() const
     if (!m_mouseEvent) {
         return -1;
     }
-    return m_mouseEvent->globalX();
+    return m_mouseEvent->globalPosition().x();
 }
 
 int QmlMouseEvent::globalY() const
@@ -61,7 +61,7 @@ int QmlMouseEvent::globalY() const
     if (!m_mouseEvent) {
         return -1;
     }
-    return m_mouseEvent->globalY();
+    return m_mouseEvent->globalPosition().y();
 }
 
 QPointF QmlMouseEvent::localPos() const
@@ -69,7 +69,7 @@ QPointF QmlMouseEvent::localPos() const
     if (!m_mouseEvent) {
         return QPointF(-1, -1);
     }
-    return m_mouseEvent->localPos();
+    return m_mouseEvent->position();
 }
 
 QPoint QmlMouseEvent::pos() const
@@ -85,7 +85,7 @@ QPointF QmlMouseEvent::screenPos() const
     if (!m_mouseEvent) {
         return QPointF(-1, -1);
     }
-    return m_mouseEvent->screenPos();
+    return m_mouseEvent->globalPosition();
 }
 
 int QmlMouseEvent::source() const
@@ -101,7 +101,7 @@ QPointF QmlMouseEvent::windowPos() const
     if (!m_mouseEvent) {
         return QPointF(-1, -1);
     }
-    return m_mouseEvent->windowPos();
+    return m_mouseEvent->scenePosition();
 }
 
 int QmlMouseEvent::x() const
@@ -109,7 +109,7 @@ int QmlMouseEvent::x() const
     if (!m_mouseEvent) {
         return -1;
     }
-    return m_mouseEvent->x();
+    return m_mouseEvent->position().x();
 }
 
 int QmlMouseEvent::y() const
@@ -117,7 +117,7 @@ int QmlMouseEvent::y() const
     if (!m_mouseEvent) {
         return -1;
     }
-    return m_mouseEvent->y();
+    return m_mouseEvent->position().y();
 }
 
 void QmlMouseEvent::clear()

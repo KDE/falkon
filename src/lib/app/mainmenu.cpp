@@ -45,6 +45,8 @@
 extern void qt_mac_set_dock_menu(QMenu* menu);
 #endif
 
+using namespace Qt::Literals::StringLiterals;
+
 MainMenu::MainMenu(BrowserWindow* window, QWidget* parent)
     : QMenu(parent)
     , m_window(window)
@@ -177,7 +179,7 @@ void MainMenu::savePageAs()
 
 void MainMenu::sendLink()
 {
-    const QUrl mailUrl = QUrl::fromEncoded("mailto:%20?body=" + QUrl::toPercentEncoding(QString::fromUtf8(m_window->weView()->url().toEncoded())) + "&subject=" + QUrl::toPercentEncoding(m_window->weView()->title()));
+    const QUrl mailUrl = QUrl::fromEncoded(QByteArray("mailto:%20?body="_ba + QUrl::toPercentEncoding(QString::fromUtf8(m_window->weView()->url().toEncoded())) + "&subject="_ba + QUrl::toPercentEncoding(m_window->weView()->title())));
     QDesktopServices::openUrl(mailUrl);
 }
 
