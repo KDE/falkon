@@ -74,7 +74,18 @@ QJsonArray RecoveryJsObject::restoreData() const
 
 void RecoveryJsObject::startNewSession()
 {
-    closeTab();
+    auto *view = qobject_cast<TabbedWebView*>(m_page->view());
+    if (!view) {
+        return;
+    }
+
+    if (view->browserWindow()->tabCount() > 1) {
+        view->closeView();
+    } else {
+        auto *oldWindow = view->browserWindow();
+        mApp->createWindow(Qz::BW_NewWindow);
+        oldWindow->close();
+    }
 
     mApp->restoreManager()->clearRestoreData();
     mApp->destroyRestoreManager();
