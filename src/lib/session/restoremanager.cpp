@@ -43,7 +43,7 @@ void RestoreData::clear()
 
 QDataStream &operator<<(QDataStream &stream, const RestoreData &data)
 {
-    stream << data.windows.count();
+    stream << static_cast<int>(data.windows.count());
     for (const BrowserWindow::SavedWindow &window : std::as_const(data.windows)) {
         stream << window;
     }

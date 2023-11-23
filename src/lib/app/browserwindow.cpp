@@ -145,7 +145,7 @@ QDataStream &operator<<(QDataStream &stream, const BrowserWindow::SavedWindow &w
     stream << window.windowGeometry;
     stream << window.virtualDesktop;
     stream << window.currentTab;
-    stream << window.tabs.count();
+    stream << static_cast<int>(window.tabs.count());
 
     for (int i = 0; i < window.tabs.count(); ++i) {
         stream << window.tabs.at(i);
