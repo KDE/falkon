@@ -165,12 +165,11 @@ void SearchEnginesManager::restoreDefaults()
     duck.suggestionsUrl = QSL("https://ac.duckduckgo.com/ac/?q=%s&type=list");
 
     Engine sp;
-    sp.name = QSL("StartPage");
+    sp.name = QSL("Startpage");
     sp.icon = QIcon(QSL(":/icons/sites/startpage.png"));
-    sp.url = QSL("https://startpage.com/do/search");
-    sp.postData = "query=%s&cat=web&language=english";
+    sp.url = QSL("https://www.startpage.com/sp/search?query=%s&cat=web&pl=opensearch");
     sp.shortcut = QSL("sp");
-    sp.suggestionsUrl = QSL("https://startpage.com/cgi-bin/csuggest?output=json&lang=english&query=%s");
+    sp.suggestionsUrl = QSL("https://www.startpage.com/osuggestions?q=%s");
 
     Engine wiki;
     wiki.name = QSL("Wikipedia (en)");
