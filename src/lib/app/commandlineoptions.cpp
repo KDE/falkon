@@ -106,6 +106,10 @@ void CommandLineOptions::parseActions()
         parser.showHelp();
     }
 
+    if (parser.isSet(QSL("help-all"))) {
+        parser.process({QSL("falkon"), QSL("--help-all")});
+    }
+
     if (parser.isSet(versionOption)) {
         parser.showVersion();
     }
