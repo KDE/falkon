@@ -3,13 +3,13 @@
 #
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Jeff Huang <s8321414@gmail.com>, 2018.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-06-15 04:08+0900\n"
+"PO-Revision-Date: 2023-11-29 18:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,32 +17,32 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: zh_TW\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
 msgid "&Undo"
-msgstr "還原 (&U)"
+msgstr "還原(&U)"
 
 #: lib/3rdparty/lineedit.cpp:107
 msgctxt "LineEdit|"
 msgid "&Redo"
-msgstr "重作 (&R)"
+msgstr "重作(&R)"
 
 #: lib/3rdparty/lineedit.cpp:112
 msgctxt "LineEdit|"
 msgid "Cu&t"
-msgstr "剪下 (&T)"
+msgstr "剪下(&T)"
 
 #: lib/3rdparty/lineedit.cpp:117
 msgctxt "LineEdit|"
 msgid "&Copy"
-msgstr "複製 (&C)"
+msgstr "複製(&C)"
 
 #: lib/3rdparty/lineedit.cpp:122
 msgctxt "LineEdit|"
 msgid "&Paste"
-msgstr "貼上 (&P)"
+msgstr "貼上(&P)"
 
 #: lib/3rdparty/lineedit.cpp:131
 msgctxt "LineEdit|"
@@ -172,7 +172,7 @@ msgstr "AdBlock 作用中"
 #: lib/adblock/adblockicon.cpp:145
 msgctxt "AdBlockIcon|"
 msgid "Show AdBlock &Settings"
-msgstr "顯示 AdBlock 設定 (&S)"
+msgstr "顯示 AdBlock 設定(&S)"
 
 #: lib/adblock/adblockicon.cpp:153
 #, qt-format
@@ -283,22 +283,22 @@ msgstr "%1 - Falkon"
 #: lib/app/browserwindow.cpp:1046
 msgctxt "BrowserWindow|"
 msgid "&Menu Bar"
-msgstr "選單列 (&M)"
+msgstr "選單列(&M)"
 
 #: lib/app/browserwindow.cpp:1051
 msgctxt "BrowserWindow|"
 msgid "&Navigation Toolbar"
-msgstr "導覽工具列 (&N)"
+msgstr "導覽工具列(&N)"
 
 #: lib/app/browserwindow.cpp:1055
 msgctxt "BrowserWindow|"
 msgid "&Bookmarks Toolbar"
-msgstr "書籤列 (&B)"
+msgstr "書籤列(&B)"
 
 #: lib/app/browserwindow.cpp:1061
 msgctxt "BrowserWindow|"
 msgid "&Tabs on Top"
-msgstr "將分頁置頂 (&T)"
+msgstr "將分頁置頂(&T)"
 
 #: lib/app/browserwindow.cpp:1116
 msgctxt "BrowserWindow|"
@@ -403,12 +403,12 @@ msgstr "工作階段"
 #: lib/app/mainmenu.cpp:467
 msgctxt "MainMenu|"
 msgid "&About Falkon"
-msgstr "關於 Falkon (&A)"
+msgstr "關於 Falkon(&A)"
 
 #: lib/app/mainmenu.cpp:472
 msgctxt "MainMenu|"
 msgid "Pr&eferences"
-msgstr "偏好設定 (&E)"
+msgstr "偏好設定(&E)"
 
 #: lib/app/mainmenu.cpp:478
 msgctxt "MainMenu|"
@@ -418,7 +418,7 @@ msgstr "離開"
 #: lib/app/mainmenu.cpp:485
 msgctxt "MainMenu|"
 msgid "&File"
-msgstr "檔案 (&F)"
+msgstr "檔案(&F)"
 
 #: lib/app/mainmenu.cpp:488
 msgctxt "MainMenu|"
@@ -428,12 +428,12 @@ msgstr "新分頁"
 #: lib/app/mainmenu.cpp:489
 msgctxt "MainMenu|"
 msgid "&New Window"
-msgstr "新增視窗 (&N)"
+msgstr "新增視窗(&N)"
 
 #: lib/app/mainmenu.cpp:490
 msgctxt "MainMenu|"
 msgid "New &Private Window"
-msgstr "新增隱私瀏覽視窗 (&P)"
+msgstr "新增隱私瀏覽視窗(&P)"
 
 #: lib/app/mainmenu.cpp:491
 msgctxt "MainMenu|"
@@ -473,47 +473,47 @@ msgstr "列印…(&P)"
 #: lib/app/mainmenu.cpp:514
 msgctxt "MainMenu|"
 msgid "&Edit"
-msgstr "編輯 (&E)"
+msgstr "編輯(&E)"
 
 #: lib/app/mainmenu.cpp:517
 msgctxt "MainMenu|"
 msgid "&Undo"
-msgstr "還原 (&U)"
+msgstr "還原(&U)"
 
 #: lib/app/mainmenu.cpp:519
 msgctxt "MainMenu|"
 msgid "&Redo"
-msgstr "重作 (&R)"
+msgstr "重作(&R)"
 
 #: lib/app/mainmenu.cpp:522
 msgctxt "MainMenu|"
 msgid "&Cut"
-msgstr "剪下 (&C)"
+msgstr "剪下(&C)"
 
 #: lib/app/mainmenu.cpp:524
 msgctxt "MainMenu|"
 msgid "C&opy"
-msgstr "複製 (&O)"
+msgstr "複製(&O)"
 
 #: lib/app/mainmenu.cpp:526
 msgctxt "MainMenu|"
 msgid "&Paste"
-msgstr "貼上 (&P)"
+msgstr "貼上(&P)"
 
 #: lib/app/mainmenu.cpp:529
 msgctxt "MainMenu|"
 msgid "Select &All"
-msgstr "選擇所有 (&A)"
+msgstr "選擇所有(&A)"
 
 #: lib/app/mainmenu.cpp:531
 msgctxt "MainMenu|"
 msgid "&Find"
-msgstr "尋找 (&F)"
+msgstr "尋找(&F)"
 
 #: lib/app/mainmenu.cpp:536
 msgctxt "MainMenu|"
 msgid "&View"
-msgstr "檢視 (&V)"
+msgstr "檢視(&V)"
 
 #: lib/app/mainmenu.cpp:539
 msgctxt "MainMenu|"
@@ -528,32 +528,32 @@ msgstr "側邊欄"
 #: lib/app/mainmenu.cpp:543
 msgctxt "MainMenu|"
 msgid "Character &Encoding"
-msgstr "字元編碼 (&E)"
+msgstr "字元編碼(&E)"
 
 #: lib/app/mainmenu.cpp:552
 msgctxt "MainMenu|"
 msgid "Sta&tus Bar"
-msgstr "狀態列 (&T)"
+msgstr "狀態列(&T)"
 
 #: lib/app/mainmenu.cpp:554
 msgctxt "MainMenu|"
 msgid "&Stop"
-msgstr "停止 (&S)"
+msgstr "停止(&S)"
 
 #: lib/app/mainmenu.cpp:555
 msgctxt "MainMenu|"
 msgid "&Reload"
-msgstr "重新整理 (&R)"
+msgstr "重新整理(&R)"
 
 #: lib/app/mainmenu.cpp:557
 msgctxt "MainMenu|"
 msgid "Zoom &In"
-msgstr "拉近 (&I)"
+msgstr "拉近(&I)"
 
 #: lib/app/mainmenu.cpp:558
 msgctxt "MainMenu|"
 msgid "Zoom &Out"
-msgstr "拉遠 (&O)"
+msgstr "拉遠(&O)"
 
 #: lib/app/mainmenu.cpp:559
 msgctxt "MainMenu|"
@@ -563,62 +563,62 @@ msgstr "重置"
 #: lib/app/mainmenu.cpp:563
 msgctxt "MainMenu|"
 msgid "&Page Source"
-msgstr "頁面原始碼 (&P)"
+msgstr "頁面原始碼(&P)"
 
 #: lib/app/mainmenu.cpp:565
 msgctxt "MainMenu|"
 msgid "&FullScreen"
-msgstr "全螢幕 (&F)"
+msgstr "全螢幕(&F)"
 
 #: lib/app/mainmenu.cpp:568
 msgctxt "MainMenu|"
 msgid "&Tools"
-msgstr "工具 (&T)"
+msgstr "工具(&T)"
 
 #: lib/app/mainmenu.cpp:571
 msgctxt "MainMenu|"
 msgid "&Web Search"
-msgstr "網頁搜尋 (&W)"
+msgstr "網頁搜尋(&W)"
 
 #: lib/app/mainmenu.cpp:572
 msgctxt "MainMenu|"
 msgid "Site &Info"
-msgstr "網站訊息 (&I)"
+msgstr "網站訊息(&I)"
 
 #: lib/app/mainmenu.cpp:575
 msgctxt "MainMenu|"
 msgid "&Download Manager"
-msgstr "下載管理員 (&D)"
+msgstr "下載管理員(&D)"
 
 #: lib/app/mainmenu.cpp:576
 msgctxt "MainMenu|"
 msgid "&Cookies Manager"
-msgstr "Cookie 管理員 (&C)"
+msgstr "Cookie 管理員(&C)"
 
 #: lib/app/mainmenu.cpp:577
 msgctxt "MainMenu|"
 msgid "Web In&spector"
-msgstr "網頁審視器 (&S)"
+msgstr "網頁審視器(&S)"
 
 #: lib/app/mainmenu.cpp:578
 msgctxt "MainMenu|"
 msgid "Clear Recent &History"
-msgstr "清除最近的歷史 (&H)"
+msgstr "清除最近的歷史(&H)"
 
 #: lib/app/mainmenu.cpp:583
 msgctxt "MainMenu|"
 msgid "&Extensions"
-msgstr "擴充功能 (&E)"
+msgstr "擴充功能(&E)"
 
 #: lib/app/mainmenu.cpp:589
 msgctxt "MainMenu|"
 msgid "&Help"
-msgstr "說明 (&H)"
+msgstr "說明(&H)"
 
 #: lib/app/mainmenu.cpp:592
 msgctxt "MainMenu|"
 msgid "About &Qt"
-msgstr "關於 Qt (&Q)"
+msgstr "關於 Qt(&Q)"
 
 #: lib/app/mainmenu.cpp:597
 msgctxt "MainMenu|"
@@ -633,12 +633,12 @@ msgstr "設定資訊"
 #: lib/app/mainmenu.cpp:599
 msgctxt "MainMenu|"
 msgid "Report &Issue"
-msgstr "回報問題 (&I)"
+msgstr "回報問題(&I)"
 
 #: lib/app/mainmenu.cpp:612
 msgctxt "MainMenu|"
 msgid "Restore &Closed Tab"
-msgstr "回復關閉分頁 (&C)"
+msgstr "回復關閉分頁(&C)"
 
 #: lib/autofill/autofillicon.cpp:29
 msgctxt "AutoFillWidget|"
@@ -1134,22 +1134,22 @@ msgstr "描述"
 #: lib/bookmarks/bookmarksmenu.cpp:166
 msgctxt "BookmarksMenu|"
 msgid "&Bookmarks"
-msgstr "書籤 (&B)"
+msgstr "書籤(&B)"
 
 #: lib/bookmarks/bookmarksmenu.cpp:168
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &This Page"
-msgstr "加入書籤 (&T)"
+msgstr "加入書籤(&T)"
 
 #: lib/bookmarks/bookmarksmenu.cpp:169
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &All Tabs"
-msgstr "將所有分頁加入書籤 (&A)"
+msgstr "將所有分頁加入書籤(&A)"
 
 #: lib/bookmarks/bookmarksmenu.cpp:170
 msgctxt "BookmarksMenu|"
 msgid "Organize &Bookmarks"
-msgstr "整理書籤 (&B)"
+msgstr "整理書籤(&B)"
 
 #: lib/bookmarks/bookmarksmodel.cpp:148
 msgctxt "BookmarksModel|"
@@ -1945,27 +1945,27 @@ msgstr "復原所有已關閉的視窗"
 #: lib/history/historymenu.cpp:236
 msgctxt "HistoryMenu|"
 msgid "Hi&story"
-msgstr "歷史 (&S)"
+msgstr "歷史(&S)"
 
 #: lib/history/historymenu.cpp:238
 msgctxt "HistoryMenu|"
 msgid "&Back"
-msgstr "上一頁 (&B)"
+msgstr "上一頁(&B)"
 
 #: lib/history/historymenu.cpp:241
 msgctxt "HistoryMenu|"
 msgid "&Forward"
-msgstr "下一頁 (&F)"
+msgstr "下一頁(&F)"
 
 #: lib/history/historymenu.cpp:244
 msgctxt "HistoryMenu|"
 msgid "&Home"
-msgstr "首頁 (&H)"
+msgstr "首頁(&H)"
 
 #: lib/history/historymenu.cpp:247
 msgctxt "HistoryMenu|"
 msgid "Show &All History"
-msgstr "顯示所有歷史 (&A)"
+msgstr "顯示所有歷史(&A)"
 
 #: lib/history/historymenu.cpp:255
 msgctxt "HistoryMenu|"
@@ -2192,7 +2192,7 @@ msgstr "顯示有關此頁的資訊"
 #: lib/navigation/websearchbar.cpp:97
 msgctxt "WebSearchBar|"
 msgid "Paste And &Search"
-msgstr "貼上並搜尋 (&S)"
+msgstr "貼上並搜尋(&S)"
 
 #: lib/navigation/websearchbar.cpp:123
 #, qt-format
@@ -2208,7 +2208,7 @@ msgstr "管理搜尋引擎"
 #: lib/navigation/websearchbar.cpp:257
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
-msgstr "顯示支援"
+msgstr "顯示建議"
 
 #: lib/navigation/websearchbar.cpp:262
 msgctxt "WebSearchBar|"
@@ -2218,12 +2218,10 @@ msgstr "當搜尋引擎變更時進行搜尋"
 #: lib/navigation/zoomlabel.cpp:36
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "重設縮放等級"
 
 #: lib/navigation/zoomlabel.cpp:61
-#, fuzzy, qt-format
-#| msgctxt "Preferences|"
-#| msgid "%1%"
+#, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
 msgstr "%1%"
@@ -2715,7 +2713,7 @@ msgstr "無可用擴充功能。"
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "僅此工作階段"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3346,22 +3344,22 @@ msgstr "檢視"
 #: lib/popupwindow/popupwindow.cpp:103
 msgctxt "PopupWindow|"
 msgid "&Stop"
-msgstr "停止 (&S)"
+msgstr "停止(&S)"
 
 #: lib/popupwindow/popupwindow.cpp:105
 msgctxt "PopupWindow|"
 msgid "&Reload"
-msgstr "重新整理 (&R)"
+msgstr "重新整理(&R)"
 
 #: lib/popupwindow/popupwindow.cpp:108
 msgctxt "PopupWindow|"
 msgid "Zoom &In"
-msgstr "拉近 (&I)"
+msgstr "拉近(&I)"
 
 #: lib/popupwindow/popupwindow.cpp:109
 msgctxt "PopupWindow|"
 msgid "Zoom &Out"
-msgstr "拉遠 (&O)"
+msgstr "拉遠(&O)"
 
 #: lib/popupwindow/popupwindow.cpp:110
 msgctxt "PopupWindow|"
@@ -3371,7 +3369,7 @@ msgstr "重置"
 #: lib/popupwindow/popupwindow.cpp:112
 msgctxt "PopupWindow|"
 msgid "&Page Source"
-msgstr "頁面原始碼 (&P)"
+msgstr "頁面原始碼(&P)"
 
 #: lib/popupwindow/popupwindow.cpp:271
 #, qt-format
@@ -3604,7 +3602,7 @@ msgstr ""
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "新增憑證例外"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
@@ -3623,20 +3621,14 @@ msgstr "空"
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "憑證例外管理員"
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "新增"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
 msgstr "移除"
@@ -3644,7 +3636,7 @@ msgstr "移除"
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "移除項目需要重新啟動"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -4112,7 +4104,7 @@ msgstr "位址欄行為"
 #: lib/preferences/preferences.ui:745
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
-msgstr "在輸入位址欄時顯示建議選項："
+msgstr "輸入至位址欄時的建議："
 
 #: lib/preferences/preferences.ui:759
 msgctxt "Preferences|"
@@ -4156,12 +4148,9 @@ msgid "Always show go icon"
 msgstr "永遠顯示前往按鈕"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "顯示影像 (&M)"
+msgstr "顯示縮放標籤"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4191,7 +4180,7 @@ msgstr "顯示搜尋建議"
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "將建議彈出視窗擴展到視窗寬度"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
@@ -4762,7 +4751,7 @@ msgstr "<b>進入網站時偏好的語言</b>"
 #: lib/preferences/preferences.ui:2652
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "憑證例外管理員"
 
 #: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
@@ -4785,12 +4774,9 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>管理通訊協定處理程序</b>"
 
 #: lib/preferences/preferences.ui:2765
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>通知</b>"
+msgstr "<b>憑證管理員</b>"
 
 #: lib/preferences/preferences.ui:2816
 #, fuzzy
@@ -4835,17 +4821,11 @@ msgid "**Note:** Allowed schemes can be added by extensions."
 msgstr ""
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "新增"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "移除"
@@ -4869,7 +4849,7 @@ msgstr "已阻擋內容"
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "變更會在 Falkon 重新啟動後生效。"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -5731,12 +5711,12 @@ msgstr "沒有建議單字"
 #: lib/webengine/webview.cpp:745
 msgctxt "WebView|"
 msgid "&Back"
-msgstr "上一頁 (&B)"
+msgstr "上一頁(&B)"
 
 #: lib/webengine/webview.cpp:749
 msgctxt "WebView|"
 msgid "&Forward"
-msgstr "下一頁 (&F)"
+msgstr "下一頁(&F)"
 
 #: lib/webengine/webview.cpp:756
 msgctxt "WebView|"
@@ -5746,7 +5726,7 @@ msgstr "新增頁面 (%A)"
 #: lib/webengine/webview.cpp:757
 msgctxt "WebView|"
 msgid "&Configure Speed Dial"
-msgstr "設定快速撥號 (&C)"
+msgstr "設定快速撥號(&C)"
 
 #: lib/webengine/webview.cpp:759
 msgctxt "WebView|"
@@ -5756,7 +5736,7 @@ msgstr "重新整理所有撥號"
 #: lib/webengine/webview.cpp:778
 msgctxt "WebView|"
 msgid "Book&mark page"
-msgstr "頁面加入書籤 (&M)"
+msgstr "頁面加入書籤(&M)"
 
 #: lib/webengine/webview.cpp:779
 msgctxt "WebView|"
@@ -5766,7 +5746,7 @@ msgstr "另存網頁為…(&S)"
 #: lib/webengine/webview.cpp:780
 msgctxt "WebView|"
 msgid "&Copy page link"
-msgstr "複製網頁連結 (&C)"
+msgstr "複製網頁連結(&C)"
 
 #: lib/webengine/webview.cpp:781
 msgctxt "WebView|"
@@ -5776,37 +5756,37 @@ msgstr "傳送網頁連結…"
 #: lib/webengine/webview.cpp:783
 msgctxt "WebView|"
 msgid "Select &all"
-msgstr "選擇所有 (&A)"
+msgstr "選擇所有(&A)"
 
 #: lib/webengine/webview.cpp:789
 msgctxt "WebView|"
 msgid "Show so&urce code"
-msgstr "顯示原始碼 (&U)"
+msgstr "顯示原始碼(&U)"
 
 #: lib/webengine/webview.cpp:793
 msgctxt "WebView|"
 msgid "Show info ab&out site"
-msgstr "顯示有關網站的資訊 (&O)"
+msgstr "顯示有關網站的資訊(&O)"
 
 #: lib/webengine/webview.cpp:799
 msgctxt "WebView|"
 msgid "Open link in new &tab"
-msgstr "在新分頁中開啟連結 (&T)"
+msgstr "在新分頁中開啟連結(&T)"
 
 #: lib/webengine/webview.cpp:804
 msgctxt "WebView|"
 msgid "Open link in new &window"
-msgstr "在新視窗中開啟連結 (&W)"
+msgstr "在新視窗中開啟連結(&W)"
 
 #: lib/webengine/webview.cpp:805
 msgctxt "WebView|"
 msgid "Open link in &private window"
-msgstr "在新的隱私瀏覽視窗中開啟連結 (&P)"
+msgstr "在新的隱私瀏覽視窗中開啟連結(&P)"
 
 #: lib/webengine/webview.cpp:810
 msgctxt "WebView|"
 msgid "B&ookmark link"
-msgstr "連結加到書籤 (&O)"
+msgstr "連結加到書籤(&O)"
 
 #: lib/webengine/webview.cpp:812
 msgctxt "WebView|"
@@ -5821,12 +5801,12 @@ msgstr "傳送連結…"
 #: lib/webengine/webview.cpp:814
 msgctxt "WebView|"
 msgid "&Copy link address"
-msgstr "複製連結位址 (&C)"
+msgstr "複製連結位址(&C)"
 
 #: lib/webengine/webview.cpp:827
 msgctxt "WebView|"
 msgid "Show i&mage"
-msgstr "顯示影像 (&M)"
+msgstr "顯示影像(&M)"
 
 #: lib/webengine/webview.cpp:833
 msgctxt "WebView|"
@@ -5836,7 +5816,7 @@ msgstr "複製影像"
 #: lib/webengine/webview.cpp:834
 msgctxt "WebView|"
 msgid "Copy image ad&dress"
-msgstr "複製圖片位址 (&D)"
+msgstr "複製圖片位址(&D)"
 
 #: lib/webengine/webview.cpp:836
 msgctxt "WebView|"
@@ -5856,7 +5836,7 @@ msgstr "傳送文字…"
 #: lib/webengine/webview.cpp:868
 msgctxt "WebView|"
 msgid "Go to &web address"
-msgstr "前往網址 (&W)"
+msgstr "前往網址(&W)"
 
 #: lib/webengine/webview.cpp:882
 #, qt-format
@@ -5872,37 +5852,37 @@ msgstr "以此搜尋…"
 #: lib/webengine/webview.cpp:910
 msgctxt "WebView|"
 msgid "&Play"
-msgstr "播放 (&P)"
+msgstr "播放(&P)"
 
 #: lib/webengine/webview.cpp:910
 msgctxt "WebView|"
 msgid "&Pause"
-msgstr "暫停 (&P)"
+msgstr "暫停(&P)"
 
 #: lib/webengine/webview.cpp:911
 msgctxt "WebView|"
 msgid "Un&mute"
-msgstr "取消靜音 (&M)"
+msgstr "取消靜音(&M)"
 
 #: lib/webengine/webview.cpp:911
 msgctxt "WebView|"
 msgid "&Mute"
-msgstr "靜音 (&M)"
+msgstr "靜音(&M)"
 
 #: lib/webengine/webview.cpp:913
 msgctxt "WebView|"
 msgid "&Copy Media Address"
-msgstr "複製媒體位址 (&C)"
+msgstr "複製媒體位址(&C)"
 
 #: lib/webengine/webview.cpp:914
 msgctxt "WebView|"
 msgid "&Send Media Address"
-msgstr "傳送媒體位址 (&S)"
+msgstr "傳送媒體位址(&S)"
 
 #: lib/webengine/webview.cpp:915
 msgctxt "WebView|"
 msgid "Save Media To &Disk"
-msgstr "儲存媒體至硬碟中 (&D)"
+msgstr "儲存媒體至硬碟中(&D)"
 
 #: lib/webengine/webview.cpp:934
 msgctxt "WebView|"
@@ -5912,27 +5892,27 @@ msgstr "建立搜尋引擎"
 #: lib/webengine/webview.cpp:975
 msgctxt "WebView|"
 msgid "&Undo"
-msgstr "還原 (&U)"
+msgstr "還原(&U)"
 
 #: lib/webengine/webview.cpp:981
 msgctxt "WebView|"
 msgid "&Redo"
-msgstr "重作 (&R)"
+msgstr "重作(&R)"
 
 #: lib/webengine/webview.cpp:987
 msgctxt "WebView|"
 msgid "&Cut"
-msgstr "剪下 (&C)"
+msgstr "剪下(&C)"
 
 #: lib/webengine/webview.cpp:993
 msgctxt "WebView|"
 msgid "&Copy"
-msgstr "複製 (&C)"
+msgstr "複製(&C)"
 
 #: lib/webengine/webview.cpp:999
 msgctxt "WebView|"
 msgid "&Paste"
-msgstr "貼上 (&P)"
+msgstr "貼上(&P)"
 
 #: lib/webengine/webview.cpp:1005
 msgctxt "WebView|"
@@ -5942,12 +5922,12 @@ msgstr "選擇所有"
 #: lib/webengine/webview.cpp:1011
 msgctxt "WebView|"
 msgid "&Reload"
-msgstr "重新整理 (&R)"
+msgstr "重新整理(&R)"
 
 #: lib/webengine/webview.cpp:1015
 msgctxt "WebView|"
 msgid "S&top"
-msgstr "停止 (&T)"
+msgstr "停止(&T)"
 
 #: lib/webtab/searchtoolbar.cpp:151
 #, qt-format
@@ -5983,7 +5963,7 @@ msgstr "上一個(&P)"
 #: lib/webtab/searchtoolbar.ui:90
 msgctxt "SearchToolbar|"
 msgid "&Match Case"
-msgstr "符合大小寫 (&M)"
+msgstr "符合大小寫(&M)"
 
 #: lib/webtab/tabbedwebview.cpp:194
 msgctxt "TabbedWebView|"
