@@ -212,7 +212,7 @@ function addBox(url, title, img_source) {
     };
     var span4 = document.createElement('span');
     span4.setAttribute('class', 'reload');
-    span4.setAttribute('title', scriptData.tileReload);
+    span4.setAttribute('title', scriptData.titleReload);
     span4.onclick = function() {
         onReloadClick(div);
     };
