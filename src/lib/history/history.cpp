@@ -23,6 +23,7 @@
 #include "mainapplication.h"
 #include "sqldatabase.h"
 #include "webview.h"
+#include "qzsettings.h"
 
 #include <QWebEngineProfile>
 
@@ -74,7 +75,7 @@ void History::addHistoryEntry(const QUrl &url, QString title)
         QSL("http"), QSL("https"), QSL("ftp"), QSL("file")
     };
 
-    if (!schemes.contains(url.scheme())) {
+    if (!schemes.contains(url.scheme()) && !qzSettings->allowedSchemes.contains(url.scheme())) {
         return;
     }
 
