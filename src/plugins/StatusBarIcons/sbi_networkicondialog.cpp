@@ -47,7 +47,7 @@ SBI_NetworkIconDialog::SBI_NetworkIconDialog(QWidget* parent)
 
     connect(ui->addButton, &QAbstractButton::clicked, this, &SBI_NetworkIconDialog::addProxy);
     connect(ui->removeButton, &QAbstractButton::clicked, this, &SBI_NetworkIconDialog::removeProxy);
-    connect(ui->comboBox, SIGNAL(currentIndexChanged(QString)), this, SLOT(showProxy(QString)));
+    connect(ui->comboBox, &QComboBox::currentTextChanged, this, &SBI_NetworkIconDialog::showProxy);
     connect(ui->proxyButtonBox, &QDialogButtonBox::accepted, this, &SBI_NetworkIconDialog::saveProxy);
     connect(ui->closeButton, &QDialogButtonBox::clicked, this, &QWidget::close);
 }
