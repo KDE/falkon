@@ -4,12 +4,12 @@
 # Ján Ďanovský <dagsoftware@yahoo.com>, 2017.
 # Peter Vacula <pvacula1989@gmail.com>, 2017.
 # Mthw <jari_45@hotmail.com>, 2019.
-# Roman Paholik <wizzardsk@gmail.com>, 2019, 2022.
+# SPDX-FileCopyrightText: 2019, 2022, 2023 Roman Paholik <wizzardsk@gmail.com>
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-04-08 18:43+0200\n"
+"PO-Revision-Date: 2023-12-05 17:28+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Language: sk_SK\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2621,12 +2621,9 @@ msgid "Qt version"
 msgstr "Verzia QT"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:323
-#, fuzzy
-#| msgctxt "AboutDialog|"
-#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "<b>QtWebEngine verzia %1</b></p>"
+msgstr "QtWebEngine verzia"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
@@ -3585,7 +3582,7 @@ msgstr "Výnimky"
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "Hostiteľ: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
@@ -3599,12 +3596,9 @@ msgid "Host %1 already in the list"
 msgstr ""
 
 #: lib/preferences/certificatemanager.cpp:83
-#, fuzzy
-#| msgctxt "Bookmarks|"
-#| msgid "Empty"
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "Prázdne"
+msgstr "Prázdny hostiteľ"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
@@ -3612,17 +3606,11 @@ msgid "Certificate exception manager"
 msgstr ""
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "Pridať"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
 msgstr "Odstrániť"
@@ -4779,12 +4767,9 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Spravovať spracovače protokolov</b>"
 
 #: lib/preferences/preferences.ui:2765
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>Oznámenia</b>"
+msgstr "<b>Správca certifikátov</b>"
 
 #: lib/preferences/preferences.ui:2816
 #, fuzzy
@@ -4800,12 +4785,9 @@ msgid "Add allowed scheme"
 msgstr ""
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Themes"
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "Témy"
+msgstr "Schéma:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
@@ -4828,28 +4810,19 @@ msgid "**Note:** Allowed schemes can be added by extensions."
 msgstr ""
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "Pridať"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "Odstrániť"
 
 #: lib/preferences/schememanager.ui:68
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "AdBlock"
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "AdBlock"
+msgstr "Blok"
 
 #: lib/preferences/schememanager.ui:98
 #, fuzzy
