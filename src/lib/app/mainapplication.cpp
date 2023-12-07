@@ -1024,7 +1024,7 @@ void MainApplication::loadSettings()
     settings.endGroup();
 
     if (isPrivate()) {
-        webSettings->setAttribute(QWebEngineSettings::LocalStorageEnabled, false);
+        profile->setPersistentStoragePath(DataPaths::path(DataPaths::Temp) + QLatin1String("/private-storage"));
         history()->setSaving(false);
     }
 
