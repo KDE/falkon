@@ -60,11 +60,11 @@ SiteSettingsManager::~SiteSettingsManager() noexcept
 void SiteSettingsManager::loadSettings()
 {
     Settings settings;
-//    settings.beginGroup("Web-Browser-Settings");
-//    m_isSaving = settings.value("allowPerDomainZoom", true).toBool();
+//    settings.beginGroup(QSL("Web-Browser-Settings"));
+//    m_isSaving = settings.value(QSL("allowPerDomainZoom"), true).toBool();
 //    settings.endGroup();
 
-    settings.beginGroup("Site-Settings");
+    settings.beginGroup(QSL("Site-Settings"));
     /* HTML5 Feature */
     for (const auto &feature : qAsConst(supportedFeatures)) {
         defaultFeatures[feature] = intToPermission(settings.value(featureToSqlColumn(feature), Ask).toInt());
@@ -98,7 +98,7 @@ void SiteSettingsManager::loadSettings()
 void SiteSettingsManager::saveSettings()
 {
     Settings settings;
-    settings.beginGroup("Site-Settings");
+    settings.beginGroup(QSL("Site-Settings"));
     for (auto it = defaultFeatures.begin(); it != defaultFeatures.end(); ++it) {
         settings.setValue(featureToSqlColumn(it.key()), it.value());
     }
@@ -246,8 +246,8 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
     switch (option) {
         case poAllowCookies: {
             Settings settings;
-            settings.beginGroup("Cookie-Settings");
-            auto defaultCookies = settings.value("allowCookies", true).toBool() ? Allow : Deny;
+            settings.beginGroup(QSL("Cookie-Settings"));
+            auto defaultCookies = settings.value(QSL("allowCookies"), true).toBool() ? Allow : Deny;
             settings.endGroup();
 
             return defaultCookies;

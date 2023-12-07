@@ -23,6 +23,7 @@
 #include "sitesettingsmanager.h"
 #include <QWebEnginePage>
 #include <QWebEngineSettings>
+#include <QWidget>
 
 namespace Ui
 {

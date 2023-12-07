@@ -315,14 +315,14 @@ void ProfileManager::connectDatabase()
 
 void ProfileManager::updateDatabase()
 {
-    if ((Qz::VERSION) == profileVersion) {
+    if (QString::fromLatin1(Qz::VERSION) == profileVersion) {
         return;
     }
 
     Updater::Version prof(profileVersion);
 
     /* Profile is from newer version than running application */
-    if (prof > Updater::Version(Qz::VERSION)) {
+    if (prof > Updater::Version(QString::fromLatin1(Qz::VERSION))) {
         // Ignore
         return;
     }
@@ -335,7 +335,7 @@ void ProfileManager::updateDatabase()
 
     /* Update in 22.12.00 */
     if (prof < Updater::Version(QStringLiteral("22.11.70"))) {
-        std::cout << "Falkon: Updating database to version " << qPrintable(Qz::VERSION) << std::endl;
+        std::cout << "Falkon: Updating database to version " << qPrintable(QString::fromLatin1(Qz::VERSION)) << std::endl;
 
         QSqlQuery query(SqlDatabase::instance()->database());
         query.prepare(QStringLiteral(
