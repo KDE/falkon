@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ============================================================
 import gettext
-from PySide2 import QtCore
+from PySide6 import QtCore
 
 locale = QtCore.QLocale.system()
 languages = [ locale.name(), locale.bcp47Name() ]

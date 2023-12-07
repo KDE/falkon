@@ -17,7 +17,7 @@
 # ============================================================
 import Falkon
 import os
-from PySide2 import QtGui, QtWidgets
+from PySide6 import QtGui, QtWidgets
 from runaction.i18n import i18n
 
 

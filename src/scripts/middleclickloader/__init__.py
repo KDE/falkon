@@ -17,7 +17,7 @@
 # ============================================================
 
 import Falkon
-from PySide2 import QtCore
+from PySide6 import QtCore
 from middleclickloader.mcl_handler import MCL_Handler
 
 

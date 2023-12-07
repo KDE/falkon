@@ -17,7 +17,7 @@
 # ============================================================
 
 import Falkon
-from PySide2 import QtCore, QtGui, QtWidgets
+from PySide6 import QtCore, QtGui, QtWidgets
 
 from middleclickloader.mcl_loadmode import MCL_LoadMode
 from middleclickloader.mcl_settings import MCL_Settings

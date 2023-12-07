@@ -17,7 +17,7 @@
 # ============================================================
 
 import os
-from PySide2 import QtCore, QtWidgets, QtUiTools
+from PySide6 import QtCore, QtWidgets, QtUiTools
 from middleclickloader.i18n import i18n
 from middleclickloader.mcl_loadmode import MCL_LoadMode
 

@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ============================================================
 import Falkon
-from PySide2 import QtGui, QtWidgets
+from PySide6 import QtGui, QtWidgets
 
 class HelloButton(Falkon.AbstractButtonInterface):
     def __init__(self):

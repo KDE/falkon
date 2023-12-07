@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ============================================================
 import Falkon
-from PySide2 import QtGui, QtWidgets
+from PySide6 import QtGui, QtWidgets
 from hellopython.i18n import i18n
 
 class HelloSidebar(Falkon.SideBarInterface):
@@ -24,7 +24,7 @@ class HelloSidebar(Falkon.SideBarInterface):
         return i18n("Hello Python Sidebar")
 
     def createMenuAction(self):
-        act = QtWidgets.QAction(i18n("Hello Python Sidebar"))
+        act = QtGui.QAction(i18n("Hello Python Sidebar"))
         act.setCheckable(True)
         return act
 

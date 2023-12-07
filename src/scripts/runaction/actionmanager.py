@@ -18,7 +18,7 @@
 import Falkon
 import os
 import subprocess
-from PySide2 import QtCore
+from PySide6 import QtCore
 from runaction.action import Action
 from runaction.settingsdialog import SettingsDialog
 

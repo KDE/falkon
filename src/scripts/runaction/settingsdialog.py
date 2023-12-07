@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ============================================================
 import os
-from PySide2 import QtCore, QtWidgets, QtUiTools
+from PySide6 import QtCore, QtWidgets, QtUiTools
 from runaction.i18n import i18n
 
 
