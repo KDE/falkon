@@ -37,6 +37,7 @@ function configureSpeedDial()
     $('#BgImgSelSiz').val(scriptData.bSize).attr('selected', 'selected');
     $('#BgImgToggle').prop('checked', scriptData.imgBackground != "");
     $('#SdCntrToggle').prop('checked', scriptData.sdCenter == "true");
+    $('#SdLockDials').prop('checked', scriptData.lockDials == "true");
     $('#BgImgToggle').is(':checked') ? $('#BgImgSel').removeAttr('disabled') : $('#BgImgSel').attr('disabled', 'disabled');
     $('#BgImgToggle').is(':checked') ? $('#BgImgSelSiz').removeAttr('disabled') : $('#BgImgSelSiz').attr('disabled', 'disabled');
     $('#SdSizeToggle').is(':checked') ? $('#SdSize').removeAttr('disabled') : $('#SdSize').attr('disabled', 'disabled');
@@ -343,11 +344,13 @@ function saveSettings() {
     scriptData.maxPagesRow = $('#PgInRow').val();
     scriptData.dialWidth = $('#SdSize').val();
     scriptData.sdCenter = $('#SdCntrToggle').prop('checked');
+    scriptData.lockDials = $('#SdLockDials').prop('checked');
     external.speedDial.setBackgroundImage($('#BgImgHoldUrl').val());
     external.speedDial.setBackgroundImageSize($('#BgImgSelSiz').val());
     external.speedDial.setPagesInRow(scriptData.maxPagesRow);
     external.speedDial.setSdSize(scriptData.dialWidth);
     external.speedDial.setSdCentered(scriptData.sdCenter == "true");
+    external.speedDial.setLockDials(scriptData.lockDials == "true");
     alignPage();
 }
 
@@ -479,6 +482,7 @@ function init() {
         containment: 'document',
         opacity: 0.8,
         distance: 40,
+        disabled: scriptData.lockDials == "true",
         start: function(event, ui) {
             disableCentering();
         },

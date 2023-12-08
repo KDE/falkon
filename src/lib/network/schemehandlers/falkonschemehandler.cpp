@@ -235,6 +235,7 @@ QString FalkonSchemeReply::speeddialPage()
         dPage.replace(QLatin1String("%TXT_NRROWS%"), tr("Maximum pages in a row:"));
         dPage.replace(QLatin1String("%TXT_SDSIZE%"), tr("Change size of pages:"));
         dPage.replace(QLatin1String("%TXT_CNTRDLS%"), tr("Center speed dials"));
+        dPage.replace(QLatin1String("%TXT_LOCKDIALS%"), tr("Lock the position of SpeedDial entries."));
         dPage = QzTools::applyDirectionToPage(dPage);
     }
 
@@ -248,6 +249,7 @@ QString FalkonSchemeReply::speeddialPage()
     page.replace(QLatin1String("%ROW-PAGES%"), QString::number(dial->pagesInRow()));
     page.replace(QLatin1String("%SD-SIZE%"), QString::number(dial->sdSize()));
     page.replace(QLatin1String("%SD-CENTER%"), dial->sdCenter() ? QSL("true") : QSL("false"));
+    page.replace(QLatin1String("%LOCK-DIALS%"), dial->lockDials() ? QSL("true") : QSL("false"));
 
     return page;
 }

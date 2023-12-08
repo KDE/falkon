@@ -62,6 +62,7 @@ public:
     int pagesInRow();
     int sdSize();
     bool sdCenter();
+    bool lockDials();
 
     QString backgroundImage();
     QString backgroundImageUrl();
@@ -86,6 +87,7 @@ public Q_SLOTS:
     void setPagesInRow(int count);
     void setSdSize(int count);
     void setSdCentered(bool centered);
+    void setLockDials(bool lockDials);
 
 private Q_SLOTS:
     void thumbnailCreated(const QPixmap &pixmap);
@@ -105,6 +107,7 @@ private:
     int m_maxPagesInRow;
     int m_sizeOfSpeedDials;
     bool m_sdcentered;
+    bool m_lockDials;
 
     QList<Page> m_pages;
     AutoSaver* m_autoSaver;

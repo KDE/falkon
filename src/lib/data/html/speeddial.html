@@ -527,7 +527,8 @@ input[type=checkbox] {
         data-max-pages-row="%ROW-PAGES%"
         data-dial-width="%SD-SIZE%"
         data-sd-center="%SD-CENTER%"
-        data-initial-script='%INITIAL-SCRIPT%'>
+        data-initial-script='%INITIAL-SCRIPT%'
+        data-lock-dials='%LOCK-DIALS%'>
     </p>
 
 <noscript>%JAVASCRIPT-DISABLED%</noscript>
@@ -543,6 +544,10 @@ input[type=checkbox] {
     <div class="checkbox">
         <input type="checkbox" id="SdCntrToggle" name="sdcntrt"/>
         <label for="SdCntrToggle"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%TXT_CNTRDLS%
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="SdLockDials"/>
+        <label for="SdLockDials"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%TXT_LOCKDIALS%
     </div>
     <div class="togop">
         <p align="center"><label for="PgInRow">%TXT_NRROWS%</label></p>

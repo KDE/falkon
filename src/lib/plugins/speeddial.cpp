@@ -60,6 +60,7 @@ void SpeedDial::loadSettings()
     m_maxPagesInRow = settings.value(QSL("pagesrow"), 4).toInt();
     m_sizeOfSpeedDials = settings.value(QSL("sdsize"), 231).toInt();
     m_sdcentered = settings.value(QSL("sdcenter"), false).toBool();
+    m_lockDials = settings.value(QSL("lock-dials"), false).toBool();
     settings.endGroup();
 
     if (allPages.isEmpty()) {
@@ -90,6 +91,7 @@ void SpeedDial::saveSettings()
     settings.setValue(QSL("pagesrow"), m_maxPagesInRow);
     settings.setValue(QSL("sdsize"), m_sizeOfSpeedDials);
     settings.setValue(QSL("sdcenter"), m_sdcentered);
+    settings.setValue(QSL("lock-dials"), m_lockDials);
     settings.endGroup();
 }
 
@@ -173,6 +175,13 @@ bool SpeedDial::sdCenter()
     ENSURE_LOADED;
 
     return m_sdcentered;
+}
+
+bool SpeedDial::lockDials()
+{
+    ENSURE_LOADED;
+
+    return m_lockDials;
 }
 
 QString SpeedDial::backgroundImage()
@@ -322,6 +331,11 @@ void SpeedDial::setSdCentered(bool centered)
     m_sdcentered = centered;
 
     m_autoSaver->changeOccurred();
+}
+
+void SpeedDial::setLockDials(bool lockDials)
+{
+    m_lockDials = lockDials;
 }
 
 void SpeedDial::thumbnailCreated(const QPixmap &pixmap)
