@@ -882,6 +882,7 @@ bool TabWidget::restoreState(const QVector<WebTab::SavedTab> &tabs, int currentT
     }
 
     setCurrentIndex(currentTab);
+    currentTabChanged(currentTab);
     QTimer::singleShot(0, m_tabBar, SLOT(ensureVisible(int,int)));
 
     weTab()->tabActivated();
