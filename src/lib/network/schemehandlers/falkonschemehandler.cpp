@@ -35,6 +35,7 @@
 #include <QWebEngineProfile>
 #include <QWebEngineUrlRequestJob>
 #include <QtWebEngineCoreVersion>
+#include <QMetaType>
 
 static QString authorString(const char* name, const QString &mail)
 {
@@ -387,18 +388,18 @@ QString FalkonSchemeReply::configPage()
             const QVariant keyValue = settings->value(key);
             QString keyString;
 
-            switch (keyValue.type()) {
-            case QVariant::ByteArray:
+            switch (keyValue.typeId()) {
+            case QMetaType::QByteArray:
                 keyString = QLatin1String("QByteArray");
                 break;
 
-            case QVariant::Point: {
+            case QMetaType::QPoint: {
                 const QPoint point = keyValue.toPoint();
                 keyString = QSL("QPoint(%1, %2)").arg(point.x()).arg(point.y());
                 break;
             }
 
-            case QVariant::StringList:
+            case QMetaType::QStringList:
                 keyString = keyValue.toStringList().join(QSL(","));
                 break;
 

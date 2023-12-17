@@ -26,6 +26,7 @@
 
 #include <QSaveFile>
 #include <QJsonDocument>
+#include <QMetaType>
 
 static const int bookmarksVersion = 1;
 
@@ -237,7 +238,7 @@ void Bookmarks::loadBookmarks()
     QJsonDocument json = QJsonDocument::fromJson(QzTools::readAllFileByteContents(bookmarksFile), &err);
     const QVariant res = json.toVariant();
 
-    if (err.error != QJsonParseError::NoError || res.type() != QVariant::Map) {
+    if (err.error != QJsonParseError::NoError || res.typeId() != QMetaType::QVariantMap) {
         if (QFile(bookmarksFile).exists()) {
             qWarning() << "Bookmarks::init() Error parsing bookmarks! Using default bookmarks!";
             qWarning() << "Bookmarks::init() Your bookmarks have been backed up in" << backupFile;
@@ -252,7 +253,7 @@ void Bookmarks::loadBookmarks()
         const QVariant data = json.toVariant();
 
         Q_ASSERT(err.error == QJsonParseError::NoError);
-        Q_ASSERT(data.type() == QVariant::Map);
+        Q_ASSERT(data.typeId() == QMetaType::QVariantMap);
 
         loadBookmarksFromMap(data.toMap().value(QSL("roots")).toMap());
 

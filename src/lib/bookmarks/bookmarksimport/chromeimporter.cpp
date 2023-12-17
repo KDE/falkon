@@ -21,6 +21,7 @@
 #include <QDir>
 #include <QFileDialog>
 #include <QJsonDocument>
+#include <QMetaType>
 
 ChromeImporter::ChromeImporter(QObject* parent)
     : BookmarksImporter(parent)
@@ -71,7 +72,7 @@ BookmarkItem* ChromeImporter::importBookmarks()
     QJsonDocument json = QJsonDocument::fromJson(data, &err);
     const QVariant res = json.toVariant();
 
-    if (err.error != QJsonParseError::NoError || res.type() != QVariant::Map) {
+    if (err.error != QJsonParseError::NoError || res.typeId() != QMetaType::QVariantMap) {
         setError(BookmarksImporter::tr("Cannot parse JSON file!"));
         return nullptr;
     }
