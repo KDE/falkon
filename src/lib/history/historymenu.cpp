@@ -236,10 +236,10 @@ void HistoryMenu::init()
     setTitle(tr("Hi&story"));
 
     QAction* act = addAction(IconProvider::standardIcon(QStyle::SP_ArrowBack), tr("&Back"), this, &HistoryMenu::goBack);
-    act->setShortcut(QzTools::actionShortcut(QKeySequence::Back, Qt::ALT + Qt::Key_Left, QKeySequence::Forward, Qt::ALT + Qt::Key_Right));
+    act->setShortcut(QzTools::actionShortcut(QKeySequence::Back, Qt::ALT | Qt::Key_Left, QKeySequence::Forward, Qt::ALT | Qt::Key_Right));
 
     act = addAction(IconProvider::standardIcon(QStyle::SP_ArrowForward), tr("&Forward"), this, &HistoryMenu::goForward);
-    act->setShortcut(QzTools::actionShortcut(QKeySequence::Forward, Qt::ALT + Qt::Key_Right, QKeySequence::Back, Qt::ALT + Qt::Key_Left));
+    act->setShortcut(QzTools::actionShortcut(QKeySequence::Forward, Qt::ALT | Qt::Key_Right, QKeySequence::Back, Qt::ALT | Qt::Key_Left));
 
     act = addAction(QIcon::fromTheme(QSL("go-home")), tr("&Home"), this, &HistoryMenu::goHome);
     act->setShortcut(QKeySequence(Qt::ALT | Qt::Key_Home));
