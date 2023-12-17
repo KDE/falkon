@@ -394,7 +394,7 @@ QString QzTools::fileSizeToString(qint64 size)
 
 QPixmap QzTools::createPixmapForSite(const QIcon &icon, const QString &title, const QString &url)
 {
-    const QFontMetrics fontMetrics = QApplication::fontMetrics();
+    const QFontMetricsF fontMetrics(QApplication::font());
     const int padding = 4;
     const int maxWidth = fontMetrics.horizontalAdvance(title.length() > url.length() ? title : url) + 3 * padding + 16;
     const int width = qMin(maxWidth, 150);
