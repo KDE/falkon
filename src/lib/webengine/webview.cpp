@@ -1242,10 +1242,11 @@ void WebView::contextMenuEvent(QContextMenuEvent *event)
         return;
 
     const QPoint pos = event->pos();
+    const QPoint globalPos = event->globalPos();
     const QContextMenuEvent::Reason reason = event->reason();
 
-    QTimer::singleShot(0, this, [this, pos, reason]() {
-        QContextMenuEvent ev(reason, pos);
+    QTimer::singleShot(0, this, [this, pos, globalPos, reason]() {
+        QContextMenuEvent ev(reason, pos, globalPos);
         _contextMenuEvent(&ev);
     });
 }
