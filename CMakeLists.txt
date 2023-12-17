@@ -134,18 +134,17 @@ if (KF6Wallet_FOUND AND KF6KIO_FOUND AND KF6Crash_FOUND AND KF6CoreAddons_FOUND 
     set(ENABLE_KDE_FRAMEWORKS_INTEGRATION_PLUGIN TRUE)
 endif()
 
-# Optional: PySide2
+# Optional: PySide6
 option(BUILD_PYTHON_SUPPORT "Support for Python plugins" ON)
 if (BUILD_PYTHON_SUPPORT)
-    # Optional: PySide6
+    find_package(Python3 COMPONENTS Development)
     find_package(PySide6 "6.4.0")
     find_package(Shiboken6 "6.4.0")
     find_package(Shiboken6Tools "6.4.0")
-    find_package(Python3 COMPONENTS Development)
+    set_package_properties(Python3 PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
     set_package_properties(PySide6 PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
     set_package_properties(Shiboken6 PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
     set_package_properties(Shiboken6Tools PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
-    set_package_properties(Python3 PROPERTIES DESCRIPTION "Python plugins" TYPE OPTIONAL)
     if (PySide6_FOUND AND Shiboken6_FOUND AND Shiboken6Tools_FOUND AND Python3_FOUND)
         set(ENABLE_PYTHON_PLUGINS TRUE)
     endif()
