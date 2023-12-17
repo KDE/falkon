@@ -77,7 +77,7 @@ QPoint QmlMouseEvent::pos() const
     if (!m_mouseEvent) {
         return QPoint(-1, -1);
     }
-    return m_mouseEvent->pos();
+    return m_mouseEvent->position().toPoint();
 }
 
 QPointF QmlMouseEvent::screenPos() const

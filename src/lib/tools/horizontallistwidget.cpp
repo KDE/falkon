@@ -39,7 +39,7 @@ void HorizontalListWidget::mousePressEvent(QMouseEvent* event)
 
 void HorizontalListWidget::mouseMoveEvent(QMouseEvent* event)
 {
-    if (!itemAt(event->pos())) {
+    if (!itemAt(event->position().toPoint())) {
         // Don't unselect item so it ends up with no item selected
         return;
     }

@@ -188,7 +188,7 @@ void BookmarksTreeView::mouseMoveEvent(QMouseEvent* event)
     if (m_type == BookmarksSidebarViewType) {
         QCursor cursor = Qt::ArrowCursor;
         if (event->buttons() == Qt::NoButton) {
-            QModelIndex index = indexAt(event->pos());
+            QModelIndex index = indexAt(event->position().toPoint());
             if (index.isValid() && index.data(BookmarksModel::TypeRole).toInt() == BookmarkItem::Url) {
                 cursor = Qt::PointingHandCursor;
             }
@@ -202,7 +202,7 @@ void BookmarksTreeView::mousePressEvent(QMouseEvent* event)
     QTreeView::mousePressEvent(event);
 
     if (selectionModel()->selectedRows().count() == 1) {
-        QModelIndex index = indexAt(event->pos());
+        QModelIndex index = indexAt(event->position().toPoint());
         Qt::MouseButtons buttons = event->buttons();
         Qt::KeyboardModifiers modifiers = event->modifiers();
 
@@ -224,7 +224,7 @@ void BookmarksTreeView::mouseReleaseEvent(QMouseEvent* event)
     QTreeView::mouseReleaseEvent(event);
 
     if (selectionModel()->selectedRows().count() == 1) {
-        QModelIndex index = indexAt(event->pos());
+        QModelIndex index = indexAt(event->position().toPoint());
 
         if (index.isValid()) {
             BookmarkItem* item = m_model->item(m_filter->mapToSource(index));
@@ -242,7 +242,7 @@ void BookmarksTreeView::mouseDoubleClickEvent(QMouseEvent* event)
     QTreeView::mouseDoubleClickEvent(event);
 
     if (selectionModel()->selectedRows().count() == 1) {
-        QModelIndex index = indexAt(event->pos());
+        QModelIndex index = indexAt(event->position().toPoint());
 
         if (index.isValid()) {
             BookmarkItem* item = m_model->item(m_filter->mapToSource(index));

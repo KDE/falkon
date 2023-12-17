@@ -137,10 +137,10 @@ bool AutoScroller::mousePress(QObject* obj, QMouseEvent* event)
 
     // Start?
     if (m_view != view && middleButton) {
-        return showIndicator(view, event->pos());
+        return showIndicator(view, event->position().toPoint());
     }
     else if (!m_indicator->isVisible() && middleButton) {
-        return showIndicator(view, event->pos());
+        return showIndicator(view, event->position().toPoint());
     }
 
     // Stop

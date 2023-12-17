@@ -279,14 +279,14 @@ void BookmarksToolbarButton::mousePressEvent(QMouseEvent* event)
         }
     }
 
-    m_dragStartPosition = event->pos();
+    m_dragStartPosition = event->position().toPoint();
 
     QPushButton::mousePressEvent(event);
 }
 
 void BookmarksToolbarButton::mouseReleaseEvent(QMouseEvent* event)
 {
-    if (m_bookmark && rect().contains(event->pos())) {
+    if (m_bookmark && rect().contains(event->position().toPoint())) {
         Qt::MouseButton button = event->button();
         Qt::KeyboardModifiers modifiers = event->modifiers();
 
@@ -311,7 +311,7 @@ void BookmarksToolbarButton::mouseReleaseEvent(QMouseEvent* event)
 
 void BookmarksToolbarButton::mouseMoveEvent(QMouseEvent *event)
 {
-    if ((event->pos() - m_dragStartPosition).manhattanLength() < QApplication::startDragDistance()) {
+    if ((event->position().toPoint() - m_dragStartPosition).manhattanLength() < QApplication::startDragDistance()) {
         QPushButton::mouseMoveEvent(event);
         return;
     }

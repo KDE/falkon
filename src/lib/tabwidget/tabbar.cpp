@@ -500,7 +500,7 @@ void TabBar::mouseDoubleClickEvent(QMouseEvent* event)
         return;
     }
 
-    if (event->buttons() == Qt::LeftButton && emptyArea(event->pos())) {
+    if (event->buttons() == Qt::LeftButton && emptyArea(event->position().toPoint())) {
         m_tabWidget->addView(QUrl(), Qz::NT_SelectedTabAtTheEnd, true);
         return;
     }
@@ -516,8 +516,8 @@ void TabBar::mousePressEvent(QMouseEvent* event)
         return;
     }
 
-    if (event->buttons() == Qt::LeftButton && !emptyArea(event->pos())) {
-        m_dragStartPosition = event->pos();
+    if (event->buttons() == Qt::LeftButton && !emptyArea(event->position().toPoint())) {
+        m_dragStartPosition = event->position().toPoint();
     } else {
         m_dragStartPosition = QPoint();
     }
@@ -537,7 +537,7 @@ void TabBar::mouseMoveEvent(QMouseEvent* event)
 
     if (!m_dragStartPosition.isNull()) {
         int offset = 0;
-        const int eventY = event->pos().y();
+        const int eventY = event->position().toPoint().y();
         if (eventY < 0) {
             offset = qAbs(eventY);
         } else if (eventY > height()) {
@@ -547,7 +547,7 @@ void TabBar::mouseMoveEvent(QMouseEvent* event)
             const QPoint global = mapToGlobal(m_dragStartPosition);
             QWidget *w = QApplication::widgetAt(global);
             if (w) {
-                QMouseEvent mouse(QEvent::MouseButtonRelease, w->mapFromGlobal(global), Qt::LeftButton, Qt::LeftButton, event->modifiers());
+                QMouseEvent mouse(QEvent::MouseButtonRelease, event->position(), w->mapFromGlobal(global), Qt::LeftButton, Qt::LeftButton, event->modifiers());
                 QApplication::sendEvent(w, &mouse);
             }
             auto *drag = new QDrag(this);
@@ -573,18 +573,18 @@ void TabBar::mouseReleaseEvent(QMouseEvent* event)
         return;
     }
 
-    if (!rect().contains(event->pos())) {
+    if (!rect().contains(event->position().toPoint())) {
         ComboTabBar::mouseReleaseEvent(event);
         return;
     }
 
     if (event->button() == Qt::MiddleButton) {
-        if (emptyArea(event->pos())) {
+        if (emptyArea(event->position().toPoint())) {
             m_tabWidget->addView(QUrl(), Qz::NT_SelectedTabAtTheEnd, true);
             return;
         }
 
-        int id = tabAt(event->pos());
+        int id = tabAt(event->position().toPoint());
         if (id != -1) {
             m_tabWidget->requestCloseTab(id);
             return;

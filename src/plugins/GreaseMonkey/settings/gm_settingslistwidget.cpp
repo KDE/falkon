@@ -32,13 +32,13 @@ GM_SettingsListWidget::GM_SettingsListWidget(QWidget* parent)
 
 void GM_SettingsListWidget::mousePressEvent(QMouseEvent* event)
 {
-    if (containsRemoveIcon(event->pos())) {
-        Q_EMIT removeItemRequested(itemAt(event->pos()));
+    if (containsRemoveIcon(event->position().toPoint())) {
+        Q_EMIT removeItemRequested(itemAt(event->position().toPoint()));
         return;
     }
 
-    if (containsUpdateIcon(event->pos())) {
-        Q_EMIT updateItemRequested(itemAt(event->pos()));
+    if (containsUpdateIcon(event->position().toPoint())) {
+        Q_EMIT updateItemRequested(itemAt(event->position().toPoint()));
         return;
     }
 
@@ -47,7 +47,7 @@ void GM_SettingsListWidget::mousePressEvent(QMouseEvent* event)
 
 void GM_SettingsListWidget::mouseDoubleClickEvent(QMouseEvent* event)
 {
-    if (containsRemoveIcon(event->pos()) || containsUpdateIcon(event->pos()))
+    if (containsRemoveIcon(event->position().toPoint()) || containsUpdateIcon(event->position().toPoint()))
         return;
 
     QListWidget::mouseDoubleClickEvent(event);

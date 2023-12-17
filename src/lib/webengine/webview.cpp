@@ -1090,13 +1090,13 @@ void WebView::_mousePressEvent(QMouseEvent *event)
         break;
 
     case Qt::MiddleButton:
-        m_clickedUrl = page()->hitTestContent(event->pos()).linkUrl();
+        m_clickedUrl = page()->hitTestContent(event->position().toPoint()).linkUrl();
         if (!m_clickedUrl.isEmpty())
             event->accept();
         break;
 
     case Qt::LeftButton:
-        m_clickedUrl = page()->hitTestContent(event->pos()).linkUrl();
+        m_clickedUrl = page()->hitTestContent(event->position().toPoint()).linkUrl();
         break;
 
     default:
@@ -1114,7 +1114,7 @@ void WebView::_mouseReleaseEvent(QMouseEvent *event)
     switch (event->button()) {
     case Qt::MiddleButton:
         if (!m_clickedUrl.isEmpty()) {
-            const QUrl link = page()->hitTestContent(event->pos()).linkUrl();
+            const QUrl link = page()->hitTestContent(event->position().toPoint()).linkUrl();
             if (m_clickedUrl == link && isUrlValid(link)) {
                 userDefinedOpenUrlInNewTab(link, event->modifiers() & Qt::ShiftModifier);
                 event->accept();
@@ -1124,7 +1124,7 @@ void WebView::_mouseReleaseEvent(QMouseEvent *event)
 
     case Qt::LeftButton:
         if (!m_clickedUrl.isEmpty()) {
-            const QUrl link = page()->hitTestContent(event->pos()).linkUrl();
+            const QUrl link = page()->hitTestContent(event->position().toPoint()).linkUrl();
             if (m_clickedUrl == link && isUrlValid(link)) {
                 if (event->modifiers() & Qt::ControlModifier) {
                     userDefinedOpenUrlInNewTab(link, event->modifiers() & Qt::ShiftModifier);
@@ -1136,7 +1136,7 @@ void WebView::_mouseReleaseEvent(QMouseEvent *event)
 
     case Qt::RightButton:
         if (s_forceContextMenuOnMouseRelease) {
-            QContextMenuEvent ev(QContextMenuEvent::Mouse, event->pos(), event->globalPosition().toPoint(), event->modifiers());
+            QContextMenuEvent ev(QContextMenuEvent::Mouse, event->position().toPoint(), event->globalPosition().toPoint(), event->modifiers());
             _contextMenuEvent(&ev);
             event->accept();
         }

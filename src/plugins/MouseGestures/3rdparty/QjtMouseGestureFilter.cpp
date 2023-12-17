@@ -171,7 +171,7 @@ bool QjtMouseGestureFilter::mouseButtonPressEvent(QMouseEvent* event, QObject* o
 
     if (event->button() == d->gestureButton) {
 //      d->px = QPixmap::grabWidget(static_cast<QWidget*>(obj));
-        d->mgr->startGesture(event->pos().x(), event->pos().y());
+        d->mgr->startGesture(event->position().toPoint().x(), event->position().toPoint().y());
         d->tracing = true;
     }
 
@@ -184,7 +184,7 @@ bool QjtMouseGestureFilter::mouseButtonReleaseEvent(QMouseEvent* event, QObject*
 
     if (d->tracing && event->button() == d->gestureButton) {
         d->tracing = false;
-        return d->mgr->endGesture(event->pos().x(), event->pos().y());
+        return d->mgr->endGesture(event->position().toPoint().x(), event->position().toPoint().y());
 //        d->px = QPixmap();
 //  static_cast<QWidget*>(obj)->update();
     }
@@ -197,7 +197,7 @@ bool QjtMouseGestureFilter::mouseMoveEvent(QMouseEvent* event, QObject* obj)
     Q_UNUSED(obj)
 
     if (d->tracing) {
-        d->mgr->addPoint(event->pos().x(), event->pos().y());
+        d->mgr->addPoint(event->position().toPoint().x(), event->position().toPoint().y());
 //  static_cast<QWidget*>(obj)->update();
     }
 

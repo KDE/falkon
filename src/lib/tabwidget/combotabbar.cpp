@@ -1387,9 +1387,9 @@ void TabBarHelper::mousePressEvent(QMouseEvent* event)
 {
     event->ignore();
     if (event->buttons() == Qt::LeftButton) {
-        m_pressedIndex = tabAt(event->pos());
+        m_pressedIndex = tabAt(event->position().toPoint());
         if (m_pressedIndex != -1) {
-            m_dragStartPosition = event->pos();
+            m_dragStartPosition = event->position().toPoint();
             // virtualize selecting tab by click
             if (m_pressedIndex == currentIndex() && !m_activeTabBar) {
                 Q_EMIT currentChanged(currentIndex());
@@ -1403,7 +1403,7 @@ void TabBarHelper::mousePressEvent(QMouseEvent* event)
 void TabBarHelper::mouseMoveEvent(QMouseEvent *event)
 {
     if (!m_dragInProgress && m_pressedIndex != -1) {
-        if ((event->pos() - m_dragStartPosition).manhattanLength() > QApplication::startDragDistance()) {
+        if ((event->position().toPoint() - m_dragStartPosition).manhattanLength() > QApplication::startDragDistance()) {
             m_dragInProgress = true;
         }
     }
@@ -1432,7 +1432,7 @@ void TabBarHelper::mouseMoveEvent(QMouseEvent *event)
             return;
         }
         QRect r = tabRect(m_pressedIndex);
-        r.moveLeft(r.x() + (event->pos().x() - m_dragStartPosition.x()));
+        r.moveLeft(r.x() + (event->position().toPoint().x() - m_dragStartPosition.x()));
         bool sendEvent = false;
         int diff = r.topRight().x() - tabRect(count() - 1).topRight().x();
         if (diff > 0) {
@@ -1444,9 +1444,9 @@ void TabBarHelper::mouseMoveEvent(QMouseEvent *event)
             }
         }
         if (sendEvent) {
-            QPoint pos = event->pos();
+            QPoint pos = event->position().toPoint();
             pos.setX(pos.x() - diff);
-            QMouseEvent ev(event->type(), pos, event->button(), event->buttons(), event->modifiers());
+            QMouseEvent ev(event->type(), pos, event->globalPosition(), event->button(), event->buttons(), event->modifiers());
             QTabBar::mouseMoveEvent(&ev);
         }
     }

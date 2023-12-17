@@ -58,7 +58,7 @@ void AddTabButton::wheelEvent(QWheelEvent* event)
 
 void AddTabButton::mouseReleaseEvent(QMouseEvent* event)
 {
-    if (event->button() == Qt::MiddleButton && rect().contains(event->pos())) {
+    if (event->button() == Qt::MiddleButton && rect().contains(event->position().toPoint())) {
         m_tabWidget->addTabFromClipboard();
     }
 
@@ -68,7 +68,7 @@ void AddTabButton::mouseReleaseEvent(QMouseEvent* event)
 void MenuTabs::mouseReleaseEvent(QMouseEvent* event)
 {
     if (event->button() == Qt::MiddleButton) {
-        QAction* action = actionAt(event->pos());
+        QAction* action = actionAt(event->position().toPoint());
         if (action && action->isEnabled()) {
             auto* tab = qobject_cast<WebTab*>(qvariant_cast<QWidget*>(action->data()));
             if (tab) {

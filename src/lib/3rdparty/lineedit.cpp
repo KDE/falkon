@@ -397,7 +397,7 @@ void LineEdit::mouseReleaseEvent(QMouseEvent* event)
     bool isSelectedText = !selectedText().isEmpty();
 
     if (wasSelectedText && !isSelectedText) {
-        QMouseEvent ev(QEvent::MouseButtonPress, event->pos(), event->button(),
+        QMouseEvent ev(QEvent::MouseButtonPress, event->position(), event->globalPosition(), event->button(),
                        event->buttons(), event->modifiers());
         mousePressEvent(&ev);
     }

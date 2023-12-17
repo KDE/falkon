@@ -145,7 +145,7 @@ void HistoryTreeView::mouseMoveEvent(QMouseEvent* event)
     if (m_type == HistorySidebarViewType) {
         QCursor cursor = Qt::ArrowCursor;
         if (event->buttons() == Qt::NoButton) {
-            QModelIndex index = indexAt(event->pos());
+            QModelIndex index = indexAt(event->position().toPoint());
             if (index.isValid() && !index.data(HistoryModel::IsTopLevelRole).toBool()) {
                 cursor = Qt::PointingHandCursor;
             }
@@ -159,7 +159,7 @@ void HistoryTreeView::mousePressEvent(QMouseEvent* event)
     QTreeView::mousePressEvent(event);
 
     if (selectionModel()->selectedRows().count() == 1) {
-        QModelIndex index = indexAt(event->pos());
+        QModelIndex index = indexAt(event->position().toPoint());
         Qt::MouseButtons buttons = event->buttons();
         Qt::KeyboardModifiers modifiers = event->modifiers();
 
@@ -181,7 +181,7 @@ void HistoryTreeView::mouseReleaseEvent(QMouseEvent* event)
     QTreeView::mouseReleaseEvent(event);
 
     if (selectionModel()->selectedRows().count() == 1) {
-        QModelIndex index = indexAt(event->pos());
+        QModelIndex index = indexAt(event->position().toPoint());
 
         if (index.isValid() && !index.data(HistoryModel::IsTopLevelRole).toBool()) {
             const QUrl url = index.data(HistoryModel::UrlRole).toUrl();
@@ -199,7 +199,7 @@ void HistoryTreeView::mouseDoubleClickEvent(QMouseEvent* event)
     QTreeView::mouseDoubleClickEvent(event);
 
     if (selectionModel()->selectedRows().count() == 1) {
-        QModelIndex index = indexAt(event->pos());
+        QModelIndex index = indexAt(event->position().toPoint());
 
         if (index.isValid() && !index.data(HistoryModel::IsTopLevelRole).toBool()) {
             const QUrl url = index.data(HistoryModel::UrlRole).toUrl();

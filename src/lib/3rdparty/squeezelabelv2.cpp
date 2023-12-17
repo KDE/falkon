@@ -91,7 +91,7 @@ void SqueezeLabelV2::resizeEvent(QResizeEvent* event)
 void SqueezeLabelV2::mousePressEvent(QMouseEvent* event)
 {
     if (event->buttons() & Qt::LeftButton) {
-        m_dragStart = event->pos();
+        m_dragStart = event->position().toPoint();
     }
 
     QLabel::mousePressEvent(event);
@@ -104,7 +104,7 @@ void SqueezeLabelV2::mouseMoveEvent(QMouseEvent* event)
         return;
     }
 
-    int manhattanLength = (event->pos() - m_dragStart).manhattanLength();
+    int manhattanLength = (event->position().toPoint() - m_dragStart).manhattanLength();
     if (manhattanLength <= QApplication::startDragDistance()) {
         return;
     }
