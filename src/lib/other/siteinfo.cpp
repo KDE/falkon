@@ -172,8 +172,8 @@ void SiteInfo::imagesCustomContextMenuRequested(const QPoint &p)
     }
 
     QMenu menu;
-    menu.addAction(QIcon::fromTheme(QSL("edit-copy")), tr("Copy Image Location"), this, [=]{copySelectedItems(ui->treeImages, false);}, QKeySequence(QSL("Ctrl+C")));
-    menu.addAction(tr("Copy Image Name"), this, [=]{copySelectedItems(ui->treeImages, true);}, QKeySequence(QSL("Ctrl+Shift+C")));
+    menu.addAction(QIcon::fromTheme(QSL("edit-copy")), tr("Copy Image Location"), QKeySequence(QSL("Ctrl+C")), this, [=]{copySelectedItems(ui->treeImages, false);});
+    menu.addAction(tr("Copy Image Name"), QKeySequence(QSL("Ctrl+Shift+C")), this, [=]{copySelectedItems(ui->treeImages, true);});
     menu.addSeparator();
     menu.addAction(QIcon::fromTheme(QSL("document-save")), tr("Save Image to Disk"), this, SLOT(saveImage()));
     menu.exec(ui->treeImages->viewport()->mapToGlobal(p));
@@ -187,8 +187,8 @@ void SiteInfo::tagsCustomContextMenuRequested(const QPoint &p)
     }
 
     QMenu menu;
-    menu.addAction(tr("Copy Values"), this, [=]{copySelectedItems(ui->treeTags, false);}, QKeySequence(QSL("Ctrl+C")));
-    menu.addAction(tr("Copy Tags and Values"), this, [=]{copySelectedItems(ui->treeTags, true);}, QKeySequence(QSL("Ctrl+Shift+C")));
+    menu.addAction(tr("Copy Values"), QKeySequence(QSL("Ctrl+C")), this, [=]{copySelectedItems(ui->treeTags, false);});
+    menu.addAction(tr("Copy Tags and Values"), QKeySequence(QSL("Ctrl+Shift+C")), this, [=]{copySelectedItems(ui->treeTags, true);});
     menu.exec(ui->treeTags->viewport()->mapToGlobal(p));
 }
 
