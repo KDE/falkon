@@ -294,7 +294,7 @@ bool TabTreeView::viewportEvent(QEvent *event)
     case QEvent::HoverMove: {
         auto *he = static_cast<QHoverEvent*>(event);
         updateIndex(m_hoveredIndex);
-        m_hoveredIndex = indexAt(he->pos());
+        m_hoveredIndex = indexAt(he->position().toPoint());
         updateIndex(m_hoveredIndex);
         break;
     }

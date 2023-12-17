@@ -641,7 +641,7 @@ void TabBar::dragEnterEvent(QDragEnterEvent* event)
 
 void TabBar::dragMoveEvent(QDragMoveEvent *event)
 {
-    const int index = tabAt(event->pos());
+    const int index = tabAt(event->position().toPoint());
     const QMimeData* mime = event->mimeData();
 
     if (index == -1) {
@@ -649,7 +649,7 @@ void TabBar::dragMoveEvent(QDragMoveEvent *event)
         return;
     }
 
-    switch (tabDropAction(event->pos(), tabRect(index), !mime->hasFormat(MIMETYPE))) {
+    switch (tabDropAction(event->position().toPoint(), tabRect(index), !mime->hasFormat(MIMETYPE))) {
     case PrependTab:
         showDropIndicator(index, BeforeTab);
         break;
@@ -684,7 +684,7 @@ void TabBar::dropEvent(QDropEvent* event)
 
     auto *sourceTabBar = qobject_cast<TabBar*>(event->source());
 
-    int index = tabAt(event->pos());
+    int index = tabAt(event->position().toPoint());
     if (index == -1) {
         if (mime->hasUrls()) {
             const auto urls = mime->urls();
@@ -704,7 +704,7 @@ void TabBar::dropEvent(QDropEvent* event)
     } else {
         LoadRequest req;
         WebTab* tab = m_tabWidget->webTab(index);
-        TabDropAction action = tabDropAction(event->pos(), tabRect(index), !mime->hasFormat(MIMETYPE));
+        TabDropAction action = tabDropAction(event->position().toPoint(), tabRect(index), !mime->hasFormat(MIMETYPE));
         if (mime->hasUrls()) {
             req = mime->urls().at(0);
         } else if (mime->hasText()) {

@@ -110,17 +110,17 @@ bool AutoScroller::mouseMove(QObject* obj, QMouseEvent* event)
         int xlength = 0;
         int ylength = 0;
 
-        if (rect.left() > event->globalPos().x()) {
-            xlength = event->globalPos().x() - rect.left();
+        if (rect.left() > event->globalPosition().toPoint().x()) {
+            xlength = event->globalPosition().toPoint().x() - rect.left();
         }
-        else if (rect.right() < event->globalPos().x()) {
-            xlength = event->globalPos().x() - rect.right();
+        else if (rect.right() < event->globalPosition().toPoint().x()) {
+            xlength = event->globalPosition().toPoint().x() - rect.right();
         }
-        if (rect.top() > event->globalPos().y()) {
-            ylength = event->globalPos().y() - rect.top();
+        if (rect.top() > event->globalPosition().toPoint().y()) {
+            ylength = event->globalPosition().toPoint().y() - rect.top();
         }
-        else if (rect.bottom() < event->globalPos().y()) {
-            ylength = event->globalPos().y() - rect.bottom();
+        else if (rect.bottom() < event->globalPosition().toPoint().y()) {
+            ylength = event->globalPosition().toPoint().y() - rect.bottom();
         }
 
         m_frameScroller->startScrolling(xlength, ylength);
@@ -157,7 +157,7 @@ bool AutoScroller::mouseRelease(QObject* obj, QMouseEvent* event)
     Q_UNUSED(obj)
 
     if (m_indicator->isVisible()) {
-        if (!indicatorGlobalRect().contains(event->globalPos())) {
+        if (!indicatorGlobalRect().contains(event->globalPosition().toPoint())) {
             stopScrolling();
         }
         return true;

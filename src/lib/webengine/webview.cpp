@@ -1136,7 +1136,7 @@ void WebView::_mouseReleaseEvent(QMouseEvent *event)
 
     case Qt::RightButton:
         if (s_forceContextMenuOnMouseRelease) {
-            QContextMenuEvent ev(QContextMenuEvent::Mouse, event->pos(), event->globalPos(), event->modifiers());
+            QContextMenuEvent ev(QContextMenuEvent::Mouse, event->pos(), event->globalPosition().toPoint(), event->modifiers());
             _contextMenuEvent(&ev);
             event->accept();
         }

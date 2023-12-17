@@ -63,7 +63,7 @@ void DesktopNotification::mousePressEvent(QMouseEvent* e)
     }
 
     if (e->buttons() == Qt::LeftButton) {
-        m_dragPosition = e->globalPos() - frameGeometry().topLeft();
+        m_dragPosition = e->globalPosition().toPoint() - frameGeometry().topLeft();
         e->accept();
     }
 }
@@ -71,7 +71,7 @@ void DesktopNotification::mousePressEvent(QMouseEvent* e)
 void DesktopNotification::mouseMoveEvent(QMouseEvent* e)
 {
     if (e->buttons() & Qt::LeftButton) {
-        move(e->globalPos() - m_dragPosition);
+        move(e->globalPosition().toPoint() - m_dragPosition);
         e->accept();
     }
 }

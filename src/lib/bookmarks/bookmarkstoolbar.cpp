@@ -304,9 +304,9 @@ void BookmarksToolbar::dragEnterEvent(QDragEnterEvent* e)
 
 void BookmarksToolbar::dragMoveEvent(QDragMoveEvent *e)
 {
-    int eventX = e->pos().x();
-    BookmarksToolbarButton* button = buttonAt(e->pos());
-    m_dropPos = e->pos();
+    int eventX = e->position().toPoint().x();
+    BookmarksToolbarButton* button = buttonAt(e->position().toPoint());
+    m_dropPos = e->position().toPoint();
     m_dropRow = m_layout->indexOf(button);
     if (button) {
         bool res = eventX - button->x() < button->x() + button->width() -eventX;
