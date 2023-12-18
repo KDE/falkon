@@ -856,32 +856,32 @@ msgid ""
 "<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
 msgstr "<b>Napomena:</b> Glavnu lozinku ne možete povratiti ako je zaboravite."
 
-#: lib/bookmarks/bookmarks.cpp:207
+#: lib/bookmarks/bookmarks.cpp:208
 msgctxt "Bookmarks|"
 msgid "Bookmarks Toolbar"
 msgstr "Traka obeleživača"
 
-#: lib/bookmarks/bookmarks.cpp:208
+#: lib/bookmarks/bookmarks.cpp:209
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Toolbar"
 msgstr "Obeleživači u traci obeleživača"
 
-#: lib/bookmarks/bookmarks.cpp:211
+#: lib/bookmarks/bookmarks.cpp:212
 msgctxt "Bookmarks|"
 msgid "Bookmarks Menu"
 msgstr "Meni obeleživača"
 
-#: lib/bookmarks/bookmarks.cpp:212
+#: lib/bookmarks/bookmarks.cpp:213
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Menu"
 msgstr "Obeleživači u meniju obeleživača"
 
-#: lib/bookmarks/bookmarks.cpp:215
+#: lib/bookmarks/bookmarks.cpp:216
 msgctxt "Bookmarks|"
 msgid "Unsorted Bookmarks"
 msgstr "Nerazvrstani obeleživači"
 
-#: lib/bookmarks/bookmarks.cpp:216
+#: lib/bookmarks/bookmarks.cpp:217
 msgctxt "Bookmarks|"
 msgid "All other bookmarks"
 msgstr "Svi ostali obeleživači"
@@ -1014,7 +1014,7 @@ msgctxt "BookmarksImportDialog|"
 msgid "< Back"
 msgstr "< Nazad"
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:32
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:33
 msgctxt "BookmarksImporter|"
 msgid ""
 "Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
@@ -1023,7 +1023,7 @@ msgstr ""
 "Guglov Hrom usprema obeleživače u <b>Bookmarks</b> tekstualnom fajlu. Ovaj "
 "fajl se obično nalazi u"
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:50
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
@@ -1032,14 +1032,14 @@ msgctxt "BookmarksImporter|"
 msgid "Choose file..."
 msgstr "Izaberi fajl..."
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:59
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
 msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
 msgstr "Ne mogu da otvorim fajl."
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:75
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:76
 msgctxt "BookmarksImporter|"
 msgid "Cannot parse JSON file!"
 msgstr "Ne mogu da raščlanim JSON fajl!"
@@ -2357,7 +2357,7 @@ msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
 msgstr "Proksi %1 zahteva korisničko ime i šifru. "
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:156
+#: lib/network/schemehandlers/falkonschemehandler.cpp:157
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Start Page"
@@ -2365,7 +2365,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Start Page"
 msgstr "Početna stranica"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:157
+#: lib/network/schemehandlers/falkonschemehandler.cpp:158
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Search on Web"
@@ -2373,7 +2373,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Search on Web"
 msgstr "Traži na vebu"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:158
+#: lib/network/schemehandlers/falkonschemehandler.cpp:159
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Search results provided by DuckDuckGo"
@@ -2381,14 +2381,14 @@ msgctxt "FalkonSchemeReply|"
 msgid "Search results provided by DuckDuckGo"
 msgstr "Rezultate pretrage obezbeđuje DakDakGo"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:160
-#: lib/network/schemehandlers/falkonschemehandler.cpp:177
+#: lib/network/schemehandlers/falkonschemehandler.cpp:161
 #: lib/network/schemehandlers/falkonschemehandler.cpp:178
+#: lib/network/schemehandlers/falkonschemehandler.cpp:179
 msgctxt "FalkonSchemeReply|"
 msgid "About Falkon"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:161
+#: lib/network/schemehandlers/falkonschemehandler.cpp:162
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "<h1>Private Browsing</h1>"
@@ -2396,8 +2396,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "<h1>Private Browsing</h1>"
 msgstr "<h1>Privatno pregledanje</h1>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:179
-#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Information about version"
@@ -2405,7 +2405,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
 msgstr "Podaci o izdanju"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:181
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Copyright"
@@ -2413,8 +2413,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "Copyright"
 msgstr "Autorska prava"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:183
-#: lib/network/schemehandlers/falkonschemehandler.cpp:298
+#: lib/network/schemehandlers/falkonschemehandler.cpp:184
+#: lib/network/schemehandlers/falkonschemehandler.cpp:299
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Version"
@@ -2422,7 +2422,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Version"
 msgstr "Izdanje"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:190
+#: lib/network/schemehandlers/falkonschemehandler.cpp:191
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Main developer"
@@ -2430,7 +2430,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Main developer"
 msgstr "Glavni programer"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:211
+#: lib/network/schemehandlers/falkonschemehandler.cpp:212
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Speed Dial"
@@ -2438,7 +2438,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial"
 msgstr "Brzo biranje"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:212
+#: lib/network/schemehandlers/falkonschemehandler.cpp:213
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Add New Page"
@@ -2446,7 +2446,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Add New Page"
 msgstr "Dodaj novu stranicu"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:213
+#: lib/network/schemehandlers/falkonschemehandler.cpp:214
 #, fuzzy
 #| msgctxt "AutoFillManager|"
 #| msgid "Edit"
@@ -2454,7 +2454,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Edit"
 msgstr "Uredi"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:214
+#: lib/network/schemehandlers/falkonschemehandler.cpp:215
 #, fuzzy
 #| msgctxt "AcceptLanguage|"
 #| msgid "Remove"
@@ -2462,7 +2462,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Remove"
 msgstr "Ukloni"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:215
+#: lib/network/schemehandlers/falkonschemehandler.cpp:216
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Reload"
@@ -2470,7 +2470,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Reload"
 msgstr "Učitaj ponovo"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:216
+#: lib/network/schemehandlers/falkonschemehandler.cpp:217
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Are you sure you want to remove this speed dial?"
@@ -2478,7 +2478,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to remove this speed dial?"
 msgstr "Želite li zaista da uklonite ovo brzo biranje?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:217
+#: lib/network/schemehandlers/falkonschemehandler.cpp:218
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Are you sure you want to reload all speed dials?"
@@ -2486,7 +2486,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to reload all speed dials?"
 msgstr "Želite li zaista ponovo da učitate sva brza biranja?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:218
+#: lib/network/schemehandlers/falkonschemehandler.cpp:219
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Load title from page"
@@ -2494,12 +2494,12 @@ msgctxt "FalkonSchemeReply|"
 msgid "Load title from page"
 msgstr "Učitaj naslov sa stranice"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:219
+#: lib/network/schemehandlers/falkonschemehandler.cpp:220
 msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:220
+#: lib/network/schemehandlers/falkonschemehandler.cpp:221
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Url"
@@ -2507,7 +2507,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Url"
 msgstr "Url"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:221
+#: lib/network/schemehandlers/falkonschemehandler.cpp:222
 #, fuzzy
 #| msgctxt "BookmarksModel|"
 #| msgid "Title"
@@ -2515,7 +2515,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Title"
 msgstr "ime"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:222
+#: lib/network/schemehandlers/falkonschemehandler.cpp:223
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Apply"
@@ -2523,7 +2523,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Apply"
 msgstr "Primeni"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:223
+#: lib/network/schemehandlers/falkonschemehandler.cpp:224
 #, fuzzy
 #| msgctxt "DownloadItem|"
 #| msgid "Cancelled"
@@ -2531,7 +2531,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Cancel"
 msgstr "Otkazano"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:224
+#: lib/network/schemehandlers/falkonschemehandler.cpp:225
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "New Page"
@@ -2539,7 +2539,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "New Page"
 msgstr "Nova stranica"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:225
+#: lib/network/schemehandlers/falkonschemehandler.cpp:226
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Speed Dial settings"
@@ -2547,7 +2547,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial settings"
 msgstr "Podesi brzo biranje"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:226
+#: lib/network/schemehandlers/falkonschemehandler.cpp:227
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Placement: "
@@ -2555,7 +2555,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Placement: "
 msgstr "Položaj: "
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:227
+#: lib/network/schemehandlers/falkonschemehandler.cpp:228
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Auto"
@@ -2563,7 +2563,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Auto"
 msgstr "Auto"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:228
+#: lib/network/schemehandlers/falkonschemehandler.cpp:229
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Cover"
@@ -2571,7 +2571,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Cover"
 msgstr "Prekrij"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:229
+#: lib/network/schemehandlers/falkonschemehandler.cpp:230
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Fit"
@@ -2579,7 +2579,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Fit"
 msgstr "Uklopi"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:230
+#: lib/network/schemehandlers/falkonschemehandler.cpp:231
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Fit Width"
@@ -2587,7 +2587,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Fit Width"
 msgstr "Uklopi širinu"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:231
+#: lib/network/schemehandlers/falkonschemehandler.cpp:232
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Fit Height"
@@ -2595,17 +2595,17 @@ msgctxt "FalkonSchemeReply|"
 msgid "Fit Height"
 msgstr "Uklopi visinu"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:232
+#: lib/network/schemehandlers/falkonschemehandler.cpp:233
 msgctxt "FalkonSchemeReply|"
 msgid "Use custom wallpaper"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:233
+#: lib/network/schemehandlers/falkonschemehandler.cpp:234
 msgctxt "FalkonSchemeReply|"
 msgid "Click to select image"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:234
+#: lib/network/schemehandlers/falkonschemehandler.cpp:235
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Maximum pages in a row:"
@@ -2613,7 +2613,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Maximum pages in a row:"
 msgstr "Najviše brzih biranja u redu:"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:235
+#: lib/network/schemehandlers/falkonschemehandler.cpp:236
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Change size of pages:"
@@ -2621,7 +2621,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Change size of pages:"
 msgstr "Promeni veličinu brzih biranja:"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:236
+#: lib/network/schemehandlers/falkonschemehandler.cpp:237
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Center speed dials"
@@ -2629,7 +2629,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
 msgstr "Centriraj brza biranja"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:261
+#: lib/network/schemehandlers/falkonschemehandler.cpp:262
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Restore Session"
@@ -2637,7 +2637,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
 msgstr "Obnovi sesiju"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+#: lib/network/schemehandlers/falkonschemehandler.cpp:263
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Oops, QupZilla crashed."
@@ -2645,7 +2645,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
 msgstr "Ups, Kapzila se srušila."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid ""
@@ -2655,7 +2655,7 @@ msgid "We apologize for this. Would you like to restore the last saved state?"
 msgstr ""
 "Izvinjavamo se zbog ovoga. Želite li da obnovite poslednje sačuvano stanje?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Try removing one or more tabs that you think cause troubles"
@@ -2665,7 +2665,7 @@ msgstr ""
 "Pokušajte da uklonite jedan ili više jezičaka za koje mislite da uzrokuju "
 "probleme"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Or you can start completely new session"
@@ -2673,7 +2673,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
 msgstr "Ili možete pokrenuti novu sesiju"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Window"
@@ -2681,7 +2681,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Window"
 msgstr "Prozor"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+#: lib/network/schemehandlers/falkonschemehandler.cpp:268
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Windows and Tabs"
@@ -2689,7 +2689,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
 msgstr "Prozori i jezičci"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:268
+#: lib/network/schemehandlers/falkonschemehandler.cpp:269
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Start New Session"
@@ -2697,7 +2697,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
 msgstr "Počni novu sesiju"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:269
+#: lib/network/schemehandlers/falkonschemehandler.cpp:270
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Restore"
@@ -2705,13 +2705,13 @@ msgctxt "FalkonSchemeReply|"
 msgid "Restore"
 msgstr "Obnovi"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:270
+#: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:286
 #: lib/network/schemehandlers/falkonschemehandler.cpp:287
+#: lib/network/schemehandlers/falkonschemehandler.cpp:288
 #, fuzzy
 #| msgctxt "MainMenu|"
 #| msgid "Configuration Information"
@@ -2719,7 +2719,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
 msgstr "Postavke programa"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid ""
@@ -2735,7 +2735,7 @@ msgstr ""
 "Ova stranica sadrži podatke o tekućim Kapzilinim postavkama bitnim za "
 "rešavanje problema. Uključite ove podatke prilikom slanja izveštaja o grešci."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Browser Identification"
@@ -2743,7 +2743,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
 msgstr "Identifikacija pregledača"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Paths"
@@ -2751,7 +2751,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Paths"
 msgstr "Putanje"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Build Configuration"
@@ -2759,7 +2759,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
 msgstr "Parametri kompajliranja"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Preferences"
@@ -2767,7 +2767,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
 msgstr "Postavke"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Option"
@@ -2775,7 +2775,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Option"
 msgstr "Postavka"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Value"
@@ -2783,8 +2783,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "Value"
 msgstr "Vrednost"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:296
-#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:297
+#: lib/network/schemehandlers/falkonschemehandler.cpp:333
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Extensions"
@@ -2792,7 +2792,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
 msgstr "Proširenja"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:297
+#: lib/network/schemehandlers/falkonschemehandler.cpp:298
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Name"
@@ -2800,7 +2800,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Name"
 msgstr "Ime"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:300
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Author"
@@ -2808,7 +2808,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Author"
 msgstr "Autor"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:300
+#: lib/network/schemehandlers/falkonschemehandler.cpp:301
 #, fuzzy
 #| msgctxt "BookmarksManager|"
 #| msgid "Description"
@@ -2816,7 +2816,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Description"
 msgstr "Opis"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:315
+#: lib/network/schemehandlers/falkonschemehandler.cpp:316
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Application version"
@@ -2824,7 +2824,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Application version"
 msgstr "Izdanje programa"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:322
+#: lib/network/schemehandlers/falkonschemehandler.cpp:323
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Qt version"
@@ -2832,7 +2832,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
 msgstr "Izdanje Kut-a"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#: lib/network/schemehandlers/falkonschemehandler.cpp:324
 #, fuzzy
 #| msgctxt "AboutDialog|"
 #| msgid "<b>QtWebEngine version %1</b></p>"
@@ -2840,7 +2840,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
 msgstr "<b>Kutov vebendžin, izdanje %1</b></p>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Platform"
@@ -2848,7 +2848,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Platform"
 msgstr "Platforma"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:327
+#: lib/network/schemehandlers/falkonschemehandler.cpp:328
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Profile"
@@ -2856,7 +2856,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Profile"
 msgstr "Profil"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:328
+#: lib/network/schemehandlers/falkonschemehandler.cpp:329
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Settings"
@@ -2864,7 +2864,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Settings"
 msgstr "Podešavanje"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:329
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Saved session"
@@ -2872,7 +2872,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
 msgstr "Sačuvane sesije"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:331
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Data"
@@ -2880,7 +2880,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Data"
 msgstr "Podaci"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:331
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Themes"
@@ -2888,9 +2888,9 @@ msgctxt "FalkonSchemeReply|"
 msgid "Themes"
 msgstr "Teme"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:335
-#: lib/network/schemehandlers/falkonschemehandler.cpp:342
-#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+#: lib/network/schemehandlers/falkonschemehandler.cpp:336
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+#: lib/network/schemehandlers/falkonschemehandler.cpp:349
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "<b>Enabled</b>"
@@ -2898,9 +2898,9 @@ msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
 msgstr "<b>uključeno</b>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:337
-#: lib/network/schemehandlers/falkonschemehandler.cpp:344
-#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+#: lib/network/schemehandlers/falkonschemehandler.cpp:338
+#: lib/network/schemehandlers/falkonschemehandler.cpp:345
+#: lib/network/schemehandlers/falkonschemehandler.cpp:349
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Disabled"
@@ -2908,7 +2908,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
 msgstr "isključeno"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:351
+#: lib/network/schemehandlers/falkonschemehandler.cpp:352
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Debug build"
@@ -2916,7 +2916,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
 msgstr "Pronalaženje grešaka"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:353
+#: lib/network/schemehandlers/falkonschemehandler.cpp:354
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Windows 7 API"
@@ -2924,7 +2924,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
 msgstr "Vindouz 7 API"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:355
+#: lib/network/schemehandlers/falkonschemehandler.cpp:356
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Portable build"
@@ -2932,7 +2932,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
 msgstr "Prenosno izdanje"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:373
+#: lib/network/schemehandlers/falkonschemehandler.cpp:374
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "No available extensions."

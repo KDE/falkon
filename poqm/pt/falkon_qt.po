@@ -836,32 +836,32 @@ msgid ""
 msgstr ""
 "<b>Nota:</b> Não pode repor a senha-mestra. Não se esqueça dela, por favor."
 
-#: lib/bookmarks/bookmarks.cpp:207
+#: lib/bookmarks/bookmarks.cpp:208
 msgctxt "Bookmarks|"
 msgid "Bookmarks Toolbar"
 msgstr "Barra de Favoritos"
 
-#: lib/bookmarks/bookmarks.cpp:208
+#: lib/bookmarks/bookmarks.cpp:209
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Toolbar"
 msgstr "Favoritos localizados na Barra de Favoritos"
 
-#: lib/bookmarks/bookmarks.cpp:211
+#: lib/bookmarks/bookmarks.cpp:212
 msgctxt "Bookmarks|"
 msgid "Bookmarks Menu"
 msgstr "Menu de Favoritos"
 
-#: lib/bookmarks/bookmarks.cpp:212
+#: lib/bookmarks/bookmarks.cpp:213
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Menu"
 msgstr "Favoritos localizados no Menu de Favoritos"
 
-#: lib/bookmarks/bookmarks.cpp:215
+#: lib/bookmarks/bookmarks.cpp:216
 msgctxt "Bookmarks|"
 msgid "Unsorted Bookmarks"
 msgstr "Favoritos não Organizados"
 
-#: lib/bookmarks/bookmarks.cpp:216
+#: lib/bookmarks/bookmarks.cpp:217
 msgctxt "Bookmarks|"
 msgid "All other bookmarks"
 msgstr "Todos os outros favoritos"
@@ -994,7 +994,7 @@ msgctxt "BookmarksImportDialog|"
 msgid "< Back"
 msgstr "< Anterior"
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:32
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:33
 msgctxt "BookmarksImporter|"
 msgid ""
 "Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
@@ -1003,7 +1003,7 @@ msgstr ""
 "O Google Chrome guarda os favoritos no ficheiro de texto <b>Bookmarks</b>. "
 "Este ficheiro localiza-se normalmente em"
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:50
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
@@ -1012,14 +1012,14 @@ msgctxt "BookmarksImporter|"
 msgid "Choose file..."
 msgstr "Escolher o ficheiro..."
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:59
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
 msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
 msgstr "Não foi possível abrir o ficheiro."
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:75
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:76
 msgctxt "BookmarksImporter|"
 msgid "Cannot parse JSON file!"
 msgstr "Não foi possível processar o ficheiro JSON!"
@@ -2319,244 +2319,244 @@ msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
 msgstr "O 'proxy' %1 está a solicitar um utilizador e uma senha. "
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:156
+#: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
 msgid "Start Page"
 msgstr "Página Inicial"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:157
+#: lib/network/schemehandlers/falkonschemehandler.cpp:158
 msgctxt "FalkonSchemeReply|"
 msgid "Search on Web"
 msgstr "Pesquisar na Web"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:158
+#: lib/network/schemehandlers/falkonschemehandler.cpp:159
 msgctxt "FalkonSchemeReply|"
 msgid "Search results provided by DuckDuckGo"
 msgstr "Resultados da pesquisa devolvidos pelo DuckDuckGo"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:160
-#: lib/network/schemehandlers/falkonschemehandler.cpp:177
+#: lib/network/schemehandlers/falkonschemehandler.cpp:161
 #: lib/network/schemehandlers/falkonschemehandler.cpp:178
+#: lib/network/schemehandlers/falkonschemehandler.cpp:179
 msgctxt "FalkonSchemeReply|"
 msgid "About Falkon"
 msgstr "Acerca do Falkon"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:161
+#: lib/network/schemehandlers/falkonschemehandler.cpp:162
 msgctxt "FalkonSchemeReply|"
 msgid "<h1>Private Browsing</h1>"
 msgstr "<h1>Navegação Privada</h1>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:179
-#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
 msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
 msgstr "Informação sobre a versão"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:181
 msgctxt "FalkonSchemeReply|"
 msgid "Copyright"
 msgstr "Direitos de autor"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:183
-#: lib/network/schemehandlers/falkonschemehandler.cpp:298
+#: lib/network/schemehandlers/falkonschemehandler.cpp:184
+#: lib/network/schemehandlers/falkonschemehandler.cpp:299
 msgctxt "FalkonSchemeReply|"
 msgid "Version"
 msgstr "Versão"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:190
+#: lib/network/schemehandlers/falkonschemehandler.cpp:191
 msgctxt "FalkonSchemeReply|"
 msgid "Main developer"
 msgstr "Programador principal"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:211
+#: lib/network/schemehandlers/falkonschemehandler.cpp:212
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial"
 msgstr "Acesso Rápido"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:212
+#: lib/network/schemehandlers/falkonschemehandler.cpp:213
 msgctxt "FalkonSchemeReply|"
 msgid "Add New Page"
 msgstr "Adicionar uma Nova Página"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:213
+#: lib/network/schemehandlers/falkonschemehandler.cpp:214
 msgctxt "FalkonSchemeReply|"
 msgid "Edit"
 msgstr "Editar"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:214
+#: lib/network/schemehandlers/falkonschemehandler.cpp:215
 msgctxt "FalkonSchemeReply|"
 msgid "Remove"
 msgstr "Remover"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:215
+#: lib/network/schemehandlers/falkonschemehandler.cpp:216
 msgctxt "FalkonSchemeReply|"
 msgid "Reload"
 msgstr "Recarregar"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:216
+#: lib/network/schemehandlers/falkonschemehandler.cpp:217
 msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to remove this speed dial?"
 msgstr "Tem a certeza de que deseja remover este item de acesso rápido?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:217
+#: lib/network/schemehandlers/falkonschemehandler.cpp:218
 msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to reload all speed dials?"
 msgstr ""
 "Tem a certeza de que deseja recarregar todos os itens de acesso rápido?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:218
+#: lib/network/schemehandlers/falkonschemehandler.cpp:219
 msgctxt "FalkonSchemeReply|"
 msgid "Load title from page"
 msgstr "Carregar o título da página"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:219
+#: lib/network/schemehandlers/falkonschemehandler.cpp:220
 msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
 msgstr "O acesso rápido precisa de ter o JavaScript activo."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:220
+#: lib/network/schemehandlers/falkonschemehandler.cpp:221
 msgctxt "FalkonSchemeReply|"
 msgid "Url"
 msgstr "URL"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:221
+#: lib/network/schemehandlers/falkonschemehandler.cpp:222
 msgctxt "FalkonSchemeReply|"
 msgid "Title"
 msgstr "Título"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:222
+#: lib/network/schemehandlers/falkonschemehandler.cpp:223
 msgctxt "FalkonSchemeReply|"
 msgid "Apply"
 msgstr "Aplicar"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:223
+#: lib/network/schemehandlers/falkonschemehandler.cpp:224
 msgctxt "FalkonSchemeReply|"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:224
+#: lib/network/schemehandlers/falkonschemehandler.cpp:225
 msgctxt "FalkonSchemeReply|"
 msgid "New Page"
 msgstr "Nova Página"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:225
+#: lib/network/schemehandlers/falkonschemehandler.cpp:226
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial settings"
 msgstr "Configuração do Acesso Rápido"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:226
+#: lib/network/schemehandlers/falkonschemehandler.cpp:227
 msgctxt "FalkonSchemeReply|"
 msgid "Placement: "
 msgstr "Posicionamento: "
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:227
+#: lib/network/schemehandlers/falkonschemehandler.cpp:228
 msgctxt "FalkonSchemeReply|"
 msgid "Auto"
 msgstr "Automático"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:228
+#: lib/network/schemehandlers/falkonschemehandler.cpp:229
 msgctxt "FalkonSchemeReply|"
 msgid "Cover"
 msgstr "Cobrir"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:229
+#: lib/network/schemehandlers/falkonschemehandler.cpp:230
 msgctxt "FalkonSchemeReply|"
 msgid "Fit"
 msgstr "Ajustar"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:230
+#: lib/network/schemehandlers/falkonschemehandler.cpp:231
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Width"
 msgstr "Ajustar à Largura"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:231
+#: lib/network/schemehandlers/falkonschemehandler.cpp:232
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Height"
 msgstr "Ajustar à Altura"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:232
+#: lib/network/schemehandlers/falkonschemehandler.cpp:233
 msgctxt "FalkonSchemeReply|"
 msgid "Use custom wallpaper"
 msgstr "Usar um papel de parede personalizado"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:233
+#: lib/network/schemehandlers/falkonschemehandler.cpp:234
 msgctxt "FalkonSchemeReply|"
 msgid "Click to select image"
 msgstr "Carregue para seleccionar a imagem"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:234
+#: lib/network/schemehandlers/falkonschemehandler.cpp:235
 msgctxt "FalkonSchemeReply|"
 msgid "Maximum pages in a row:"
 msgstr "Máximo de páginas por linha:"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:235
+#: lib/network/schemehandlers/falkonschemehandler.cpp:236
 msgctxt "FalkonSchemeReply|"
 msgid "Change size of pages:"
 msgstr "Modificar o tamanho das páginas:"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:236
+#: lib/network/schemehandlers/falkonschemehandler.cpp:237
 msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
 msgstr "Centrar os itens de acesso rápido"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:261
+#: lib/network/schemehandlers/falkonschemehandler.cpp:262
 msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
 msgstr "Repor a Sessão"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+#: lib/network/schemehandlers/falkonschemehandler.cpp:263
 msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
 msgstr "Oops, o Falkon estoirou."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
 msgid "We apologize for this. Would you like to restore the last saved state?"
 msgstr ""
 "Pedimos desculpa pelo sucedido. Pretende repor o último estado gravado?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
 msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
 msgstr "Tente remover uma ou mais páginas que acha que estão a originar o erro"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
 msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
 msgstr "Ou poderá iniciar uma nova sessão"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
 msgctxt "FalkonSchemeReply|"
 msgid "Window"
 msgstr "Janela"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+#: lib/network/schemehandlers/falkonschemehandler.cpp:268
 msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
 msgstr "Janelas e Páginas"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:268
+#: lib/network/schemehandlers/falkonschemehandler.cpp:269
 msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
 msgstr "Iniciar uma Nova Sessão"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:269
+#: lib/network/schemehandlers/falkonschemehandler.cpp:270
 msgctxt "FalkonSchemeReply|"
 msgid "Restore"
 msgstr "Repor"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:270
+#: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
 msgstr "Precisa de ter o JavaScript activo."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:286
 #: lib/network/schemehandlers/falkonschemehandler.cpp:287
+#: lib/network/schemehandlers/falkonschemehandler.cpp:288
 msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
 msgstr "Informação de Configuração"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
 msgctxt "FalkonSchemeReply|"
 msgid ""
 "This page contains information about Falkon's current configuration - "
@@ -2567,132 +2567,132 @@ msgstr ""
 "(útil para a resolução de problemas). Inclua por favor estas informações ao "
 "submeter os seus relatórios de erros."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
 msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
 msgstr "Identificação do Navegador"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
 msgctxt "FalkonSchemeReply|"
 msgid "Paths"
 msgstr "Localizações"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
 msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
 msgstr "Configuração da Compilação"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
 msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
 msgstr "Preferências"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
 msgctxt "FalkonSchemeReply|"
 msgid "Option"
 msgstr "Opção"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
 msgctxt "FalkonSchemeReply|"
 msgid "Value"
 msgstr "Valor"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:296
-#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:297
+#: lib/network/schemehandlers/falkonschemehandler.cpp:333
 msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
 msgstr "Extensões"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:297
+#: lib/network/schemehandlers/falkonschemehandler.cpp:298
 msgctxt "FalkonSchemeReply|"
 msgid "Name"
 msgstr "Nome"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:300
 msgctxt "FalkonSchemeReply|"
 msgid "Author"
 msgstr "Autor"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:300
+#: lib/network/schemehandlers/falkonschemehandler.cpp:301
 msgctxt "FalkonSchemeReply|"
 msgid "Description"
 msgstr "Descrição"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:315
+#: lib/network/schemehandlers/falkonschemehandler.cpp:316
 msgctxt "FalkonSchemeReply|"
 msgid "Application version"
 msgstr "Versão da aplicação"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:322
+#: lib/network/schemehandlers/falkonschemehandler.cpp:323
 msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
 msgstr "Versão do Qt"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#: lib/network/schemehandlers/falkonschemehandler.cpp:324
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
 msgstr "Versão do QtWebEngine"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
 msgctxt "FalkonSchemeReply|"
 msgid "Platform"
 msgstr "Plataforma"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:327
+#: lib/network/schemehandlers/falkonschemehandler.cpp:328
 msgctxt "FalkonSchemeReply|"
 msgid "Profile"
 msgstr "Perfil"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:328
+#: lib/network/schemehandlers/falkonschemehandler.cpp:329
 msgctxt "FalkonSchemeReply|"
 msgid "Settings"
 msgstr "Configuração"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:329
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
 msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
 msgstr "Sessão gravada"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:331
 msgctxt "FalkonSchemeReply|"
 msgid "Data"
 msgstr "Dados"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:331
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
 msgctxt "FalkonSchemeReply|"
 msgid "Themes"
 msgstr "Temas"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:335
-#: lib/network/schemehandlers/falkonschemehandler.cpp:342
-#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+#: lib/network/schemehandlers/falkonschemehandler.cpp:336
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+#: lib/network/schemehandlers/falkonschemehandler.cpp:349
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
 msgstr "<b>Activo</b>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:337
-#: lib/network/schemehandlers/falkonschemehandler.cpp:344
-#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+#: lib/network/schemehandlers/falkonschemehandler.cpp:338
+#: lib/network/schemehandlers/falkonschemehandler.cpp:345
+#: lib/network/schemehandlers/falkonschemehandler.cpp:349
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
 msgstr "Desactivado"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:351
+#: lib/network/schemehandlers/falkonschemehandler.cpp:352
 msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
 msgstr "Versão de depuração"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:353
+#: lib/network/schemehandlers/falkonschemehandler.cpp:354
 msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
 msgstr "API do Windows 7"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:355
+#: lib/network/schemehandlers/falkonschemehandler.cpp:356
 msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
 msgstr "Versão portátil"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:373
+#: lib/network/schemehandlers/falkonschemehandler.cpp:374
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "Sem extensões disponíveis."

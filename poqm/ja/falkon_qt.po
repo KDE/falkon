@@ -857,32 +857,32 @@ msgstr ""
 "<b>注意:</b> マスターパスワードはリセットできません。忘れないようにしてくださ"
 "い。"
 
-#: lib/bookmarks/bookmarks.cpp:207
+#: lib/bookmarks/bookmarks.cpp:208
 msgctxt "Bookmarks|"
 msgid "Bookmarks Toolbar"
 msgstr "ブックマークツールバー"
 
-#: lib/bookmarks/bookmarks.cpp:208
+#: lib/bookmarks/bookmarks.cpp:209
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Toolbar"
 msgstr "ブックマークツールバーに表示されるブックマーク"
 
-#: lib/bookmarks/bookmarks.cpp:211
+#: lib/bookmarks/bookmarks.cpp:212
 msgctxt "Bookmarks|"
 msgid "Bookmarks Menu"
 msgstr "ブックマークメニュー"
 
-#: lib/bookmarks/bookmarks.cpp:212
+#: lib/bookmarks/bookmarks.cpp:213
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Menu"
 msgstr "ブックマークメニューに表示されるブックマーク"
 
-#: lib/bookmarks/bookmarks.cpp:215
+#: lib/bookmarks/bookmarks.cpp:216
 msgctxt "Bookmarks|"
 msgid "Unsorted Bookmarks"
 msgstr "未整理のブックマーク"
 
-#: lib/bookmarks/bookmarks.cpp:216
+#: lib/bookmarks/bookmarks.cpp:217
 msgctxt "Bookmarks|"
 msgid "All other bookmarks"
 msgstr "その他のすべてのブックマーク"
@@ -1015,7 +1015,7 @@ msgctxt "BookmarksImportDialog|"
 msgid "< Back"
 msgstr "< 前"
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:32
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:33
 msgctxt "BookmarksImporter|"
 msgid ""
 "Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
@@ -1024,7 +1024,7 @@ msgstr ""
 "Google Chromeはブックマークを<b>Bookmarks</b>テキストファイルに保存します。こ"
 "のファイルは通常以下に保存されます。"
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:50
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
@@ -1033,14 +1033,14 @@ msgctxt "BookmarksImporter|"
 msgid "Choose file..."
 msgstr "ファイルの選択..."
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:59
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
 msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
 msgstr "ファイルを開けません。"
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:75
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:76
 msgctxt "BookmarksImporter|"
 msgid "Cannot parse JSON file!"
 msgstr "JSON ファイルをパース出来ません!"
@@ -2359,7 +2359,7 @@ msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
 msgstr "%1プロキシがユーザー名とパスワードを要求しています。"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:156
+#: lib/network/schemehandlers/falkonschemehandler.cpp:157
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Start Page"
@@ -2367,7 +2367,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Start Page"
 msgstr "スタートページ"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:157
+#: lib/network/schemehandlers/falkonschemehandler.cpp:158
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Search on Web"
@@ -2375,7 +2375,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Search on Web"
 msgstr "Web で検索する"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:158
+#: lib/network/schemehandlers/falkonschemehandler.cpp:159
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Search results provided by DuckDuckGo"
@@ -2383,14 +2383,14 @@ msgctxt "FalkonSchemeReply|"
 msgid "Search results provided by DuckDuckGo"
 msgstr "検索結果は DuckDuckGo から提供されます"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:160
-#: lib/network/schemehandlers/falkonschemehandler.cpp:177
+#: lib/network/schemehandlers/falkonschemehandler.cpp:161
 #: lib/network/schemehandlers/falkonschemehandler.cpp:178
+#: lib/network/schemehandlers/falkonschemehandler.cpp:179
 msgctxt "FalkonSchemeReply|"
 msgid "About Falkon"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:161
+#: lib/network/schemehandlers/falkonschemehandler.cpp:162
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "<h1>Private Browsing</h1>"
@@ -2398,8 +2398,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "<h1>Private Browsing</h1>"
 msgstr "<h1>プライベートブラウジング<h1/>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:179
-#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Information about version"
@@ -2407,7 +2407,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
 msgstr "バージョン情報"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:181
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Copyright"
@@ -2415,8 +2415,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "Copyright"
 msgstr "Copyright"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:183
-#: lib/network/schemehandlers/falkonschemehandler.cpp:298
+#: lib/network/schemehandlers/falkonschemehandler.cpp:184
+#: lib/network/schemehandlers/falkonschemehandler.cpp:299
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Version"
@@ -2424,7 +2424,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Version"
 msgstr "バージョン"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:190
+#: lib/network/schemehandlers/falkonschemehandler.cpp:191
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Main developer"
@@ -2432,7 +2432,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Main developer"
 msgstr "開発者"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:211
+#: lib/network/schemehandlers/falkonschemehandler.cpp:212
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Speed Dial"
@@ -2440,7 +2440,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial"
 msgstr "Speed Dial"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:212
+#: lib/network/schemehandlers/falkonschemehandler.cpp:213
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Add New Page"
@@ -2448,7 +2448,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Add New Page"
 msgstr "新しいページを追加する"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:213
+#: lib/network/schemehandlers/falkonschemehandler.cpp:214
 #, fuzzy
 #| msgctxt "AutoFillManager|"
 #| msgid "Edit"
@@ -2456,7 +2456,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Edit"
 msgstr "編集"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:214
+#: lib/network/schemehandlers/falkonschemehandler.cpp:215
 #, fuzzy
 #| msgctxt "AcceptLanguage|"
 #| msgid "Remove"
@@ -2464,7 +2464,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Remove"
 msgstr "削除"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:215
+#: lib/network/schemehandlers/falkonschemehandler.cpp:216
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Reload"
@@ -2472,7 +2472,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Reload"
 msgstr "更新"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:216
+#: lib/network/schemehandlers/falkonschemehandler.cpp:217
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Are you sure you want to remove this speed dial?"
@@ -2480,7 +2480,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to remove this speed dial?"
 msgstr "本当にこの Speed Dial を削除しますか?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:217
+#: lib/network/schemehandlers/falkonschemehandler.cpp:218
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Are you sure you want to reload all speed dials?"
@@ -2488,7 +2488,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to reload all speed dials?"
 msgstr "本当にすべての Speed Dial を再読み込みしますか?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:218
+#: lib/network/schemehandlers/falkonschemehandler.cpp:219
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Load title from page"
@@ -2496,7 +2496,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Load title from page"
 msgstr "ページ名を取得する"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:219
+#: lib/network/schemehandlers/falkonschemehandler.cpp:220
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "SpeedDial requires enabled JavaScript."
@@ -2504,7 +2504,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
 msgstr "SpeedDial を使用するには JavaScript を有効にする必要があります。"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:220
+#: lib/network/schemehandlers/falkonschemehandler.cpp:221
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Url"
@@ -2512,7 +2512,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Url"
 msgstr "URL"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:221
+#: lib/network/schemehandlers/falkonschemehandler.cpp:222
 #, fuzzy
 #| msgctxt "BookmarksModel|"
 #| msgid "Title"
@@ -2520,7 +2520,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Title"
 msgstr "ページ名"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:222
+#: lib/network/schemehandlers/falkonschemehandler.cpp:223
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Apply"
@@ -2528,7 +2528,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Apply"
 msgstr "適用"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:223
+#: lib/network/schemehandlers/falkonschemehandler.cpp:224
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Cancel"
@@ -2536,7 +2536,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:224
+#: lib/network/schemehandlers/falkonschemehandler.cpp:225
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "New Page"
@@ -2544,7 +2544,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "New Page"
 msgstr "新しいページ"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:225
+#: lib/network/schemehandlers/falkonschemehandler.cpp:226
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Speed Dial settings"
@@ -2552,7 +2552,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial settings"
 msgstr "Speed Dial の設定"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:226
+#: lib/network/schemehandlers/falkonschemehandler.cpp:227
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Placement: "
@@ -2560,7 +2560,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Placement: "
 msgstr "Speed Dial の配置:"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:227
+#: lib/network/schemehandlers/falkonschemehandler.cpp:228
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Auto"
@@ -2568,7 +2568,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Auto"
 msgstr "自動"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:228
+#: lib/network/schemehandlers/falkonschemehandler.cpp:229
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Cover"
@@ -2576,7 +2576,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Cover"
 msgstr "カバー"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:229
+#: lib/network/schemehandlers/falkonschemehandler.cpp:230
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Fit"
@@ -2584,7 +2584,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Fit"
 msgstr "調整"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:230
+#: lib/network/schemehandlers/falkonschemehandler.cpp:231
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Fit Width"
@@ -2592,7 +2592,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Fit Width"
 msgstr "横幅に合わせて調整"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:231
+#: lib/network/schemehandlers/falkonschemehandler.cpp:232
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Fit Height"
@@ -2600,7 +2600,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Fit Height"
 msgstr "縦幅に合わせて調整"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:232
+#: lib/network/schemehandlers/falkonschemehandler.cpp:233
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Use custom wallpaper"
@@ -2608,7 +2608,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Use custom wallpaper"
 msgstr "カスタム壁紙を使用"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:233
+#: lib/network/schemehandlers/falkonschemehandler.cpp:234
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Click to select image"
@@ -2616,7 +2616,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Click to select image"
 msgstr "クリックして画像を選択"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:234
+#: lib/network/schemehandlers/falkonschemehandler.cpp:235
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Maximum pages in a row:"
@@ -2624,7 +2624,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Maximum pages in a row:"
 msgstr "行数の指定:"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:235
+#: lib/network/schemehandlers/falkonschemehandler.cpp:236
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Change size of pages:"
@@ -2632,7 +2632,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Change size of pages:"
 msgstr "サムネイルのサイズを変更する:"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:236
+#: lib/network/schemehandlers/falkonschemehandler.cpp:237
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Center speed dials"
@@ -2640,7 +2640,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
 msgstr "Speed Dial を中央寄せで使う"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:261
+#: lib/network/schemehandlers/falkonschemehandler.cpp:262
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Restore Session"
@@ -2648,7 +2648,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
 msgstr "セッションの復元"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+#: lib/network/schemehandlers/falkonschemehandler.cpp:263
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Oops, QupZilla crashed."
@@ -2656,7 +2656,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
 msgstr "QupZilla がクラッシュしてしまいました。"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid ""
@@ -2665,7 +2665,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "We apologize for this. Would you like to restore the last saved state?"
 msgstr "申し訳ありません。以前のセッションを復元しますか？"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Try removing one or more tabs that you think cause troubles"
@@ -2673,7 +2673,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
 msgstr "トラブルの原因と思われるタブを削除してみてください"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Or you can start completely new session"
@@ -2681,7 +2681,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
 msgstr "新しいセッションで開始することもできます"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Window"
@@ -2689,7 +2689,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Window"
 msgstr "ウィンドウ"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+#: lib/network/schemehandlers/falkonschemehandler.cpp:268
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Windows and Tabs"
@@ -2697,7 +2697,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
 msgstr "ウィンドウとタブ"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:268
+#: lib/network/schemehandlers/falkonschemehandler.cpp:269
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Start New Session"
@@ -2705,7 +2705,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
 msgstr "新しいセッションを開始"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:269
+#: lib/network/schemehandlers/falkonschemehandler.cpp:270
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Restore"
@@ -2713,7 +2713,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Restore"
 msgstr "復元"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:270
+#: lib/network/schemehandlers/falkonschemehandler.cpp:271
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Requires enabled JavaScript."
@@ -2721,8 +2721,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
 msgstr "JavaScript を有効にする必要があります。"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:286
 #: lib/network/schemehandlers/falkonschemehandler.cpp:287
+#: lib/network/schemehandlers/falkonschemehandler.cpp:288
 #, fuzzy
 #| msgctxt "MainMenu|"
 #| msgid "Configuration Information"
@@ -2730,7 +2730,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
 msgstr "設定情報"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid ""
@@ -2747,7 +2747,7 @@ msgstr ""
 "情報はトラブルシューティングに非常に大切です。バグレポートの際は、これらの情"
 "報を含めて送信してください。"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Browser Identification"
@@ -2755,7 +2755,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
 msgstr "User Agent"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Paths"
@@ -2763,7 +2763,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Paths"
 msgstr "パス"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Build Configuration"
@@ -2771,7 +2771,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
 msgstr "Build Configuration"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Preferences"
@@ -2779,7 +2779,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
 msgstr "設定"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Option"
@@ -2787,7 +2787,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Option"
 msgstr "オプション"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Value"
@@ -2795,8 +2795,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "Value"
 msgstr "値"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:296
-#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:297
+#: lib/network/schemehandlers/falkonschemehandler.cpp:333
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Extensions"
@@ -2804,7 +2804,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
 msgstr "エクステンション"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:297
+#: lib/network/schemehandlers/falkonschemehandler.cpp:298
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Name"
@@ -2812,7 +2812,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Name"
 msgstr "名前"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:300
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Author"
@@ -2820,7 +2820,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Author"
 msgstr "作成者"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:300
+#: lib/network/schemehandlers/falkonschemehandler.cpp:301
 #, fuzzy
 #| msgctxt "BookmarksManager|"
 #| msgid "Description"
@@ -2828,7 +2828,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Description"
 msgstr "説明"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:315
+#: lib/network/schemehandlers/falkonschemehandler.cpp:316
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Application version"
@@ -2836,7 +2836,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Application version"
 msgstr "Application version"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:322
+#: lib/network/schemehandlers/falkonschemehandler.cpp:323
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Qt version"
@@ -2844,7 +2844,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
 msgstr "Qt version"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#: lib/network/schemehandlers/falkonschemehandler.cpp:324
 #, fuzzy
 #| msgctxt "AboutDialog|"
 #| msgid "<b>QtWebEngine version %1</b></p>"
@@ -2852,7 +2852,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
 msgstr "QtWebEngineのバージョン:%1"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Platform"
@@ -2860,7 +2860,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Platform"
 msgstr "プラットフォーム"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:327
+#: lib/network/schemehandlers/falkonschemehandler.cpp:328
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Profile"
@@ -2868,7 +2868,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Profile"
 msgstr "プロファイル"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:328
+#: lib/network/schemehandlers/falkonschemehandler.cpp:329
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Settings"
@@ -2876,7 +2876,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Settings"
 msgstr "設定"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:329
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Saved session"
@@ -2884,7 +2884,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
 msgstr "保存されたセッション"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:331
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Data"
@@ -2892,7 +2892,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Data"
 msgstr "データ"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:331
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Themes"
@@ -2900,9 +2900,9 @@ msgctxt "FalkonSchemeReply|"
 msgid "Themes"
 msgstr "テーマ"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:335
-#: lib/network/schemehandlers/falkonschemehandler.cpp:342
-#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+#: lib/network/schemehandlers/falkonschemehandler.cpp:336
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+#: lib/network/schemehandlers/falkonschemehandler.cpp:349
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "<b>Enabled</b>"
@@ -2910,9 +2910,9 @@ msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
 msgstr "<b>有効</b>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:337
-#: lib/network/schemehandlers/falkonschemehandler.cpp:344
-#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+#: lib/network/schemehandlers/falkonschemehandler.cpp:338
+#: lib/network/schemehandlers/falkonschemehandler.cpp:345
+#: lib/network/schemehandlers/falkonschemehandler.cpp:349
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Disabled"
@@ -2920,7 +2920,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
 msgstr "無効"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:351
+#: lib/network/schemehandlers/falkonschemehandler.cpp:352
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Debug build"
@@ -2928,7 +2928,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
 msgstr "デバッグビルド"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:353
+#: lib/network/schemehandlers/falkonschemehandler.cpp:354
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Windows 7 API"
@@ -2936,7 +2936,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
 msgstr "Windows 7 API"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:355
+#: lib/network/schemehandlers/falkonschemehandler.cpp:356
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Portable build"
@@ -2944,7 +2944,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
 msgstr "Portable build"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:373
+#: lib/network/schemehandlers/falkonschemehandler.cpp:374
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "No available extensions."

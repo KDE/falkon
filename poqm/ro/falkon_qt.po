@@ -1042,7 +1042,7 @@ msgid ""
 "<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
 msgstr ""
 
-#: lib/bookmarks/bookmarks.cpp:207
+#: lib/bookmarks/bookmarks.cpp:208
 #, fuzzy
 #| msgctxt "QupZilla|"
 #| msgid "&Bookmarks Toolbar"
@@ -1050,7 +1050,7 @@ msgctxt "Bookmarks|"
 msgid "Bookmarks Toolbar"
 msgstr "&Bară de semne de carte"
 
-#: lib/bookmarks/bookmarks.cpp:208
+#: lib/bookmarks/bookmarks.cpp:209
 #, fuzzy
 #| msgctxt "BookmarksModel|"
 #| msgid "Bookmarks In ToolBar"
@@ -1058,7 +1058,7 @@ msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Toolbar"
 msgstr "Semne de carte în bara de unelte"
 
-#: lib/bookmarks/bookmarks.cpp:211
+#: lib/bookmarks/bookmarks.cpp:212
 #, fuzzy
 #| msgctxt "BookmarksModel|"
 #| msgid "Bookmarks In Menu"
@@ -1066,7 +1066,7 @@ msgctxt "Bookmarks|"
 msgid "Bookmarks Menu"
 msgstr "Semne de carte în meniu"
 
-#: lib/bookmarks/bookmarks.cpp:212
+#: lib/bookmarks/bookmarks.cpp:213
 #, fuzzy
 #| msgctxt "BookmarksModel|"
 #| msgid "Bookmarks In Menu"
@@ -1074,7 +1074,7 @@ msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Menu"
 msgstr "Semne de carte în meniu"
 
-#: lib/bookmarks/bookmarks.cpp:215
+#: lib/bookmarks/bookmarks.cpp:216
 #, fuzzy
 #| msgctxt "BookmarksModel|"
 #| msgid "Unsorted Bookmarks"
@@ -1082,7 +1082,7 @@ msgctxt "Bookmarks|"
 msgid "Unsorted Bookmarks"
 msgstr "Semne de carte nesortate"
 
-#: lib/bookmarks/bookmarks.cpp:216
+#: lib/bookmarks/bookmarks.cpp:217
 #, fuzzy
 #| msgctxt "BookmarkIcon|"
 #| msgid "Edit this bookmark"
@@ -1269,7 +1269,7 @@ msgctxt "BookmarksImportDialog|"
 msgid "< Back"
 msgstr "Înapoi"
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:32
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:33
 #, fuzzy
 #| msgctxt "BookmarksImportDialog|"
 #| msgid ""
@@ -1283,7 +1283,7 @@ msgstr ""
 "Google Chrome stochează semnele de carte în fișierul text<b>Bookmarks</b>. "
 "Acest fișier este de obicei localzat în "
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:49
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:50
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:44
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:44
@@ -1295,7 +1295,7 @@ msgctxt "BookmarksImporter|"
 msgid "Choose file..."
 msgstr "Alege fișier..."
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:58
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:59
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
 #, fuzzy
@@ -1305,7 +1305,7 @@ msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
 msgstr "Fișierul nu poate fi deschis."
 
-#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:75
+#: lib/bookmarks/bookmarksimport/chromeimporter.cpp:76
 #, fuzzy
 #| msgctxt "AutoFillManager|"
 #| msgid "Cannot read file!"
@@ -2863,7 +2863,7 @@ msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
 msgstr "Un nume de utilizator și o parolă sunt cerute de proxy %1. "
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:156
+#: lib/network/schemehandlers/falkonschemehandler.cpp:157
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Start Page"
@@ -2871,7 +2871,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Start Page"
 msgstr "Pagina de start"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:157
+#: lib/network/schemehandlers/falkonschemehandler.cpp:158
 #, fuzzy
 #| msgctxt "SearchEnginesDialog|"
 #| msgid "Search Engine"
@@ -2879,19 +2879,19 @@ msgctxt "FalkonSchemeReply|"
 msgid "Search on Web"
 msgstr "Motor de cautare"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:158
+#: lib/network/schemehandlers/falkonschemehandler.cpp:159
 msgctxt "FalkonSchemeReply|"
 msgid "Search results provided by DuckDuckGo"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:160
-#: lib/network/schemehandlers/falkonschemehandler.cpp:177
+#: lib/network/schemehandlers/falkonschemehandler.cpp:161
 #: lib/network/schemehandlers/falkonschemehandler.cpp:178
+#: lib/network/schemehandlers/falkonschemehandler.cpp:179
 msgctxt "FalkonSchemeReply|"
 msgid "About Falkon"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:161
+#: lib/network/schemehandlers/falkonschemehandler.cpp:162
 #, fuzzy
 #| msgctxt "QupZilla|"
 #| msgid " (Private Browsing)"
@@ -2899,8 +2899,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "<h1>Private Browsing</h1>"
 msgstr " (Navigare privată)"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:179
-#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Information about version"
@@ -2908,7 +2908,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
 msgstr "Informații despre versiune"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:180
+#: lib/network/schemehandlers/falkonschemehandler.cpp:181
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Copyright"
@@ -2916,8 +2916,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "Copyright"
 msgstr "Drepturi de autor"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:183
-#: lib/network/schemehandlers/falkonschemehandler.cpp:298
+#: lib/network/schemehandlers/falkonschemehandler.cpp:184
+#: lib/network/schemehandlers/falkonschemehandler.cpp:299
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Version"
@@ -2925,7 +2925,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Version"
 msgstr "Versiune"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:190
+#: lib/network/schemehandlers/falkonschemehandler.cpp:191
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Main developer"
@@ -2933,7 +2933,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Main developer"
 msgstr "Dezvoltator principal"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:211
+#: lib/network/schemehandlers/falkonschemehandler.cpp:212
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Speed Dial"
@@ -2941,7 +2941,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial"
 msgstr "Speed Dial"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:212
+#: lib/network/schemehandlers/falkonschemehandler.cpp:213
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Add New Page"
@@ -2949,7 +2949,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Add New Page"
 msgstr "Adauga pagina noua"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:213
+#: lib/network/schemehandlers/falkonschemehandler.cpp:214
 #, fuzzy
 #| msgctxt "AutoFillManager|"
 #| msgid "Edit"
@@ -2957,7 +2957,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Edit"
 msgstr "Editare"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:214
+#: lib/network/schemehandlers/falkonschemehandler.cpp:215
 #, fuzzy
 #| msgctxt "AcceptLanguage|"
 #| msgid "Remove"
@@ -2965,7 +2965,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Remove"
 msgstr "Șterge"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:215
+#: lib/network/schemehandlers/falkonschemehandler.cpp:216
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Reload"
@@ -2973,7 +2973,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Reload"
 msgstr "Reîncarcă"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:216
+#: lib/network/schemehandlers/falkonschemehandler.cpp:217
 #, fuzzy
 #| msgctxt "AutoFillManager|"
 #| msgid "Are you sure that you want to show all passwords?"
@@ -2981,7 +2981,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to remove this speed dial?"
 msgstr "Sunteți sigur că doriți să afișați toate parolele?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:217
+#: lib/network/schemehandlers/falkonschemehandler.cpp:218
 #, fuzzy
 #| msgctxt "AutoFillManager|"
 #| msgid "Are you sure that you want to show all passwords?"
@@ -2989,17 +2989,17 @@ msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to reload all speed dials?"
 msgstr "Sunteți sigur că doriți să afișați toate parolele?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:218
+#: lib/network/schemehandlers/falkonschemehandler.cpp:219
 msgctxt "FalkonSchemeReply|"
 msgid "Load title from page"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:219
+#: lib/network/schemehandlers/falkonschemehandler.cpp:220
 msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:220
+#: lib/network/schemehandlers/falkonschemehandler.cpp:221
 #, fuzzy
 #| msgctxt "BookmarksImportDialog|"
 #| msgid "Url"
@@ -3007,7 +3007,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Url"
 msgstr "Url"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:221
+#: lib/network/schemehandlers/falkonschemehandler.cpp:222
 #, fuzzy
 #| msgctxt "BookmarksImportDialog|"
 #| msgid "Title"
@@ -3015,7 +3015,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Title"
 msgstr "Titlu"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:222
+#: lib/network/schemehandlers/falkonschemehandler.cpp:223
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Apply"
@@ -3023,7 +3023,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Apply"
 msgstr "Aplica"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:223
+#: lib/network/schemehandlers/falkonschemehandler.cpp:224
 #, fuzzy
 #| msgctxt "BookmarksImportDialog|"
 #| msgid "Cancel"
@@ -3031,7 +3031,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Cancel"
 msgstr "Renunță"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:224
+#: lib/network/schemehandlers/falkonschemehandler.cpp:225
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "New Page"
@@ -3039,7 +3039,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "New Page"
 msgstr "Pagina noua"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:225
+#: lib/network/schemehandlers/falkonschemehandler.cpp:226
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Speed Dial settings"
@@ -3047,7 +3047,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial settings"
 msgstr "Setari Speed Dial"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:226
+#: lib/network/schemehandlers/falkonschemehandler.cpp:227
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Placement: "
@@ -3055,7 +3055,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Placement: "
 msgstr "Amplasament:"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:227
+#: lib/network/schemehandlers/falkonschemehandler.cpp:228
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Auto"
@@ -3063,7 +3063,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Auto"
 msgstr "Auto"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:228
+#: lib/network/schemehandlers/falkonschemehandler.cpp:229
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Cover"
@@ -3071,7 +3071,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Cover"
 msgstr "Copertă"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:229
+#: lib/network/schemehandlers/falkonschemehandler.cpp:230
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Fit"
@@ -3079,7 +3079,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Fit"
 msgstr "Potrivește"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:230
+#: lib/network/schemehandlers/falkonschemehandler.cpp:231
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Fit Width"
@@ -3087,7 +3087,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Fit Width"
 msgstr "Potrivește pe lățime"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:231
+#: lib/network/schemehandlers/falkonschemehandler.cpp:232
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Fit Height"
@@ -3095,12 +3095,12 @@ msgctxt "FalkonSchemeReply|"
 msgid "Fit Height"
 msgstr "Potrivește pe înălțime"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:232
+#: lib/network/schemehandlers/falkonschemehandler.cpp:233
 msgctxt "FalkonSchemeReply|"
 msgid "Use custom wallpaper"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:233
+#: lib/network/schemehandlers/falkonschemehandler.cpp:234
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Select image"
@@ -3108,7 +3108,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Click to select image"
 msgstr "Selectează imagine"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:234
+#: lib/network/schemehandlers/falkonschemehandler.cpp:235
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Maximum pages in a row:"
@@ -3116,7 +3116,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Maximum pages in a row:"
 msgstr "Număr maxim de pagini pe un rând:"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:235
+#: lib/network/schemehandlers/falkonschemehandler.cpp:236
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Change size of pages:"
@@ -3124,7 +3124,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Change size of pages:"
 msgstr "Modifică dimensiunea paginilor:"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:236
+#: lib/network/schemehandlers/falkonschemehandler.cpp:237
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Open speed dial"
@@ -3132,7 +3132,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
 msgstr "Deschide Speed Dial"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:261
+#: lib/network/schemehandlers/falkonschemehandler.cpp:262
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Restore session"
@@ -3140,27 +3140,27 @@ msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
 msgstr "Restaurează sesiune"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+#: lib/network/schemehandlers/falkonschemehandler.cpp:263
 msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
 msgid "We apologize for this. Would you like to restore the last saved state?"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
 msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
 msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
 #, fuzzy
 #| msgctxt "QupZilla|"
 #| msgid "&New Window"
@@ -3168,7 +3168,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Window"
 msgstr "&Fereastră nouă"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+#: lib/network/schemehandlers/falkonschemehandler.cpp:268
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Windows 7 API"
@@ -3176,7 +3176,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
 msgstr "API Windows 7"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:268
+#: lib/network/schemehandlers/falkonschemehandler.cpp:269
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Saved session"
@@ -3184,7 +3184,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
 msgstr "Sesiuni salvate"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:269
+#: lib/network/schemehandlers/falkonschemehandler.cpp:270
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Restore session"
@@ -3192,13 +3192,13 @@ msgctxt "FalkonSchemeReply|"
 msgid "Restore"
 msgstr "Restaurează sesiune"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:270
+#: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:286
 #: lib/network/schemehandlers/falkonschemehandler.cpp:287
+#: lib/network/schemehandlers/falkonschemehandler.cpp:288
 #, fuzzy
 #| msgctxt "QupZilla|"
 #| msgid "Configuration Information"
@@ -3206,7 +3206,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
 msgstr "Informații despre configurare"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid ""
@@ -3223,7 +3223,7 @@ msgstr ""
 "relevante pentru remedierea problemelor. Vă rugăm să includeți aceste "
 "informații la trimiterea raport-urilor despre bug-uri."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Browser Identification"
@@ -3231,7 +3231,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
 msgstr "Identificarea browser-ului"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Paths"
@@ -3239,7 +3239,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Paths"
 msgstr "Căi"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Build Configuration"
@@ -3247,7 +3247,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
 msgstr "Configurarea compilării"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Preferences"
@@ -3255,7 +3255,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
 msgstr "Preferințe"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Option"
@@ -3263,7 +3263,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Option"
 msgstr "Opțiune"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Value"
@@ -3271,8 +3271,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "Value"
 msgstr "Valoare"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:296
-#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:297
+#: lib/network/schemehandlers/falkonschemehandler.cpp:333
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Extensions"
@@ -3280,7 +3280,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
 msgstr "Extensii"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:297
+#: lib/network/schemehandlers/falkonschemehandler.cpp:298
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Name"
@@ -3288,7 +3288,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Name"
 msgstr "Nume"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:300
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Author"
@@ -3296,7 +3296,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Author"
 msgstr "Autor"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:300
+#: lib/network/schemehandlers/falkonschemehandler.cpp:301
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Description"
@@ -3304,7 +3304,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Description"
 msgstr "Descriere"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:315
+#: lib/network/schemehandlers/falkonschemehandler.cpp:316
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Application version"
@@ -3312,7 +3312,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Application version"
 msgstr "Versiune aplicatie"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:322
+#: lib/network/schemehandlers/falkonschemehandler.cpp:323
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Qt version"
@@ -3320,7 +3320,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
 msgstr "Versiune Qt"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#: lib/network/schemehandlers/falkonschemehandler.cpp:324
 #, fuzzy
 #| msgctxt "AboutDialog|"
 #| msgid "<b>WebKit version %1</b></p>"
@@ -3328,7 +3328,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
 msgstr "<b>Versiune WebKit %1</b></p>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Platform"
@@ -3336,7 +3336,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Platform"
 msgstr "Platforma"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:327
+#: lib/network/schemehandlers/falkonschemehandler.cpp:328
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Profile"
@@ -3344,7 +3344,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Profile"
 msgstr "Profil"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:328
+#: lib/network/schemehandlers/falkonschemehandler.cpp:329
 #, fuzzy
 #| msgctxt "PluginsList|"
 #| msgid "Settings"
@@ -3352,7 +3352,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Settings"
 msgstr "Setări"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:329
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Saved session"
@@ -3360,7 +3360,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
 msgstr "Sesiuni salvate"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:331
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Data"
@@ -3368,7 +3368,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Data"
 msgstr "Data"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:331
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Themes"
@@ -3376,9 +3376,9 @@ msgctxt "FalkonSchemeReply|"
 msgid "Themes"
 msgstr "Teme"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:335
-#: lib/network/schemehandlers/falkonschemehandler.cpp:342
-#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+#: lib/network/schemehandlers/falkonschemehandler.cpp:336
+#: lib/network/schemehandlers/falkonschemehandler.cpp:343
+#: lib/network/schemehandlers/falkonschemehandler.cpp:349
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "<b>Enabled</b>"
@@ -3386,9 +3386,9 @@ msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
 msgstr "<b>Activat</b>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:337
-#: lib/network/schemehandlers/falkonschemehandler.cpp:344
-#: lib/network/schemehandlers/falkonschemehandler.cpp:348
+#: lib/network/schemehandlers/falkonschemehandler.cpp:338
+#: lib/network/schemehandlers/falkonschemehandler.cpp:345
+#: lib/network/schemehandlers/falkonschemehandler.cpp:349
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Disabled"
@@ -3396,7 +3396,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
 msgstr "Dezactivat"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:351
+#: lib/network/schemehandlers/falkonschemehandler.cpp:352
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Debug build"
@@ -3404,7 +3404,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
 msgstr "Compilare de debug"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:353
+#: lib/network/schemehandlers/falkonschemehandler.cpp:354
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Windows 7 API"
@@ -3412,7 +3412,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
 msgstr "API Windows 7"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:355
+#: lib/network/schemehandlers/falkonschemehandler.cpp:356
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Portable build"
@@ -3420,7 +3420,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
 msgstr "Configurare portabilă"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:373
+#: lib/network/schemehandlers/falkonschemehandler.cpp:374
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "No available extensions."
