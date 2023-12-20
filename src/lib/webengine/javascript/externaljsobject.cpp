@@ -63,8 +63,10 @@ void ExternalJsObject::unregisterExtraObject(QObject *object)
 
 QObject *ExternalJsObject::speedDial() const
 {
-    if (m_page->url().toString() != QL1S("falkon:speeddial"))
+    if (m_page->url().toString() != QL1S("falkon:speeddial")
+      && (m_page->requestedUrl().toString() != QL1S("falkon:speeddial") && !m_page->url().toString().isEmpty())) {
         return nullptr;
+    }
 
     return mApp->plugins()->speedDial();
 }
