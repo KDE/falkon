@@ -1,3 +1,9 @@
+Version 23.08.5
+    * SpeedDial: Fix tooltip text on the Realod button
+    * History: Store addresses with custom allowed schemes (BUG: 406375)
+    * TabBar: Fix the state of tab bar after window restore (BUG: 478823)
+    * Enable localStorage for private browsing (BUG: 393677, by Martin Rodriguez Reboredo)
+
 Version 23.08.4
     * Fix crash when starting new session after crash (BUG: 408701)
     * Fix Startpage search engine default configuration (BUG: 419530)
