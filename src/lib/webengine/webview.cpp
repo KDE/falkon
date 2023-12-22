@@ -475,14 +475,19 @@ void WebView::openUrlInNewWindow()
 void WebView::sendTextByMail()
 {
     if (auto* action = qobject_cast<QAction*>(sender())) {
-        const QUrl mailUrl = QUrl::fromEncoded(QByteArray("mailto:%20?body=" + QUrl::toPercentEncoding(action->data().toString())));
+        const QUrl mailUrl = QUrl::fromEncoded(
+            QByteArray("mailto:%20?body=" +
+                       QUrl::toPercentEncoding(action->data().toString())));
         QDesktopServices::openUrl(mailUrl);
     }
 }
 
 void WebView::sendPageByMail()
 {
-    const QUrl mailUrl = QUrl::fromEncoded(QByteArray("mailto:%20?body=" + QUrl::toPercentEncoding(QString::fromUtf8(url().toEncoded())) + "&subject=" + QUrl::toPercentEncoding(title())));
+    const QUrl mailUrl = QUrl::fromEncoded(QByteArray(
+        "mailto:%20?body=" +
+        QUrl::toPercentEncoding(QString::fromUtf8(url().toEncoded())) +
+        "&subject=" + QUrl::toPercentEncoding(title())));
     QDesktopServices::openUrl(mailUrl);
 }
 

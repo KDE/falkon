@@ -157,5 +157,8 @@ void Updater::downCompleted()
 
 void Updater::downloadNewVersion()
 {
-    m_window->tabWidget()->addView(QUrl::fromEncoded(QByteArray(QByteArray(Qz::WWWADDRESS) + QByteArray("/download"))), tr("Update"), Qz::NT_NotSelectedTab);
+    m_window->tabWidget()->addView(
+        QUrl::fromEncoded(
+            QByteArray(QByteArray(Qz::WWWADDRESS) + QByteArray("/download"))),
+        tr("Update"), Qz::NT_NotSelectedTab);
 }
