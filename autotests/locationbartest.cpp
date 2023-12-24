@@ -110,7 +110,7 @@ void LocationBarTest::loadActionSearchTest()
     engine.url = QSL("http://test/%s");
     engine.shortcut = QSL("t");
     mApp->searchEnginesManager()->addEngine(engine);
-    mApp->searchEnginesManager()->setActiveEngine(engine);
+    mApp->searchEnginesManager()->setDefaultEngine(engine);
 
     LocationBar::LoadAction action;
 
