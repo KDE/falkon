@@ -6,6 +6,7 @@ include:
     file:
       - /gitlab-templates/linux-qt6.yml
       - /gitlab-templates/freebsd-qt6.yml
+      - /gitlab-templates/flatpak.yml
 
       # Blocked - copied from tokodon
       # - /gitlab-templates/reuse-lint.yml
@@ -16,6 +17,3 @@ include:
       # Blocked - Nobody takes care of it
       # - /gitlab-templates/windows.yml
       # - /gitlab-templates/windows-qt6.yml
-
-      # Blocked on KF6 runtime not available (tokodon comment)
-      # - /gitlab-templates/flatpak.yml
