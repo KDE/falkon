@@ -4,19 +4,20 @@
 # Jonathan Hooverman <jonathan.hooverman@gmail.com>, 2017.
 # Frederik Schwarzer <schwarzer@kde.org>, 2018, 2020, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2018, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-07-24 21:31+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2023-12-28 12:08+0100\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.01.85\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -3602,17 +3603,14 @@ msgid "Host %1 already in the list"
 msgstr "Der Rechner %1 ist bereits in der Liste"
 
 #: lib/preferences/certificatemanager.cpp:83
-#, fuzzy
-#| msgctxt "Bookmarks|"
-#| msgid "Empty"
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "Leer"
+msgstr "Kein Rechner angegeben"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Zertifikatsausnahmen-Verwaltung"
 
 #: lib/preferences/certificatemanager.ui:22
 msgctxt "CertificateManager|"
@@ -3628,6 +3626,7 @@ msgstr "Entfernen"
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
 msgstr ""
+"Das Entfernen eines Eintrags erst nach dem Neustart von Falkon wirksam."
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -4144,15 +4143,12 @@ msgstr ""
 #: lib/preferences/preferences.ui:817
 msgctxt "Preferences|"
 msgid "Always show go icon"
-msgstr "Das \"Los\"-Symbol immer anzeigen"
+msgstr "Das „Los“-Symbol immer anzeigen"
 
 #: lib/preferences/preferences.ui:824
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "&Bild anzeigen"
+msgstr "Vergrößerung anzeigen"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4177,12 +4173,13 @@ msgstr "Mit Standard-Suchmaschine suchen"
 #: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Show search suggestions"
-msgstr "Such-Vorschlag anzeigen"
+msgstr "Suchvorschläge anzeigen"
 
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr ""
+"Breite des PopUp-Fensters für Suchvorschläge auf Fensterbreite erweitern"
 
 #: lib/preferences/preferences.ui:889
 msgctxt "Preferences|"
@@ -4742,7 +4739,7 @@ msgstr "<b>Suchmaschinen verwalten</b>"
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "Schemata v"
 
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
@@ -4757,7 +4754,7 @@ msgstr "<b>Bevorzugte Sprache für Webseiten</b>"
 #: lib/preferences/preferences.ui:2652
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Zertifikatsausnahmen-Verwaltung"
 
 #: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
@@ -4785,82 +4782,66 @@ msgid "<b>Certificate manager</b>"
 msgstr "<b>Zertifikatsverwaltung</b>"
 
 #: lib/preferences/preferences.ui:2816
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "Cookie-Verwaltung"
+msgstr "Schema-Verwaltung"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "Erlaubtes Schema hinzufügen"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Themes"
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "Designs"
+msgstr "Schema:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "Blockiertes Schema hinzufügen"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "Schema-Verwaltung"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "Erlaubte Schemata"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
 msgstr ""
+"**Achtung:** Die erlaubten Schemata können durch Erweiterungen ergänzt "
+"werden."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "Hinzufügen"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "Entfernen"
 
 #: lib/preferences/schememanager.ui:68
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "AdBlock"
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr "AdBlock"
+msgstr "Blockieren"
 
 #: lib/preferences/schememanager.ui:98
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "Blockierter Inhalt"
+msgstr "Blockierte Schemata"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Die Änderungen werden erst nach dem Neustart von Falkon wirksam."
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
