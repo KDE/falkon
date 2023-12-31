@@ -119,35 +119,10 @@ void LocationCompleterView::adjustSize()
     const int maxItemsCount = 12;
     const int newHeight = m_view->sizeHintForRow(0) * qMin(maxItemsCount, model()->rowCount()) + 2 * m_view->frameWidth();
 
-    if (!m_resizeTimer) {
-        m_resizeTimer = new QTimer(this);
-        m_resizeTimer->setInterval(200);
-        connect(m_resizeTimer, &QTimer::timeout, this, [this]() {
-            if (m_resizeHeight > 0) {
-                m_view->setFixedHeight(m_resizeHeight);
-                setFixedHeight(sizeHint().height());
-            }
-            m_resizeHeight = -1;
-        });
-    }
-
-    if (!m_forceResize) {
-        if (newHeight == m_resizeHeight) {
-            return;
-        } else if (newHeight == m_view->height()) {
-            m_resizeHeight = -1;
-            return;
-        } else if (newHeight < m_view->height()) {
-            m_resizeHeight = newHeight;
-            m_resizeTimer->start();
-            return;
-        }
-    }
-
-    m_resizeHeight = -1;
-    m_forceResize = false;
     m_view->setFixedHeight(newHeight);
+    setMaximumHeight(sizeHint().height());
     setFixedHeight(sizeHint().height());
+    resize(width(), sizeHint().height());
 }
 
 bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
@@ -370,7 +345,6 @@ void LocationCompleterView::close()
     hide();
     m_view->verticalScrollBar()->setValue(0);
     m_delegate->setForceVisitItem(false);
-    m_forceResize = true;
 
     Q_EMIT closed();
 }

@@ -66,9 +66,6 @@ private:
     QListView *m_view;
     LocationCompleterDelegate *m_delegate;
     QHBoxLayout *m_searchEnginesLayout;
-    int m_resizeHeight = -1;
-    QTimer *m_resizeTimer = nullptr;
-    bool m_forceResize = true;
 };
 
 #endif // LOCATIONCOMPLETERVIEW_H
