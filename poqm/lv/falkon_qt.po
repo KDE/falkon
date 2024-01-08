@@ -1,9 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the falkon package.
-# Toms Trasūns <ttomst@gmail.com>, 2017
 #
+# Toms Trasūns <ttomst@gmail.com>, 2017.
+# Māris Nartišs <maris.kde@gmail.com>, 2024.
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2024-01-07 17:09+0200\n"
+"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
+"Language-Team: \n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,6 +17,7 @@ msgstr ""
 "2);\n"
 "X-Language: lv_LV\n"
 "X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -1213,12 +1220,9 @@ msgstr "Atvērt jaunā logā"
 #: lib/bookmarks/bookmarkstoolbar.cpp:76
 msgctxt "BookmarksToolbar|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Atvērt jaunā privātajā logā"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:78 lib/bookmarks/bookmarkstoolbar.cpp:186
-#, fuzzy
-#| msgctxt "BookmarksManager|"
-#| msgid "New Folder"
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
 msgstr "Jauna mape"
@@ -1226,7 +1230,7 @@ msgstr "Jauna mape"
 #: lib/bookmarks/bookmarkstoolbar.cpp:79
 msgctxt "BookmarksToolbar|"
 msgid "Edit"
-msgstr ""
+msgstr "Rediģēt"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:80
 msgctxt "BookmarksToolbar|"
@@ -1244,12 +1248,9 @@ msgid "Show Only Text"
 msgstr "Rādīt tikai tekstu"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:186
-#, fuzzy
-#| msgctxt "AutoFillManager|"
-#| msgid "Username"
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
-msgstr "Lietotājvārds"
+msgstr "Ievadi mapes nosaukumu:"
 
 #: lib/bookmarks/bookmarkstools.cpp:76
 #, qt-format
@@ -3351,7 +3352,7 @@ msgstr ""
 #: lib/other/siteinfo.cpp:68
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
-msgstr "<b>Savienojums ir šifrēts.<b>"
+msgstr "<b>Savienojums ir šifrēts.</b>"
 
 #: lib/other/siteinfo.cpp:70
 msgctxt "SiteInfo|"
@@ -3477,13 +3478,13 @@ msgstr "Attēla adrese"
 #: lib/other/siteinfo.ui:271
 msgctxt "SiteInfo|"
 msgid "<b>Preview</b>"
-msgstr "<b>Priekšskats<b>"
+msgstr "<b>Priekšskats</b>"
 
 #: lib/other/siteinfowidget.cpp:42
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "<b>Site %1<b/>"
-msgstr ""
+msgstr "<b>Lapa %1</b>"
 
 #: lib/other/siteinfowidget.cpp:45
 msgctxt "SiteInfoWidget|"
@@ -5645,7 +5646,7 @@ msgstr ""
 #: lib/tabwidget/tabcontextmenu.cpp:153
 msgctxt "TabContextMenu|"
 msgid "&New tab"
-msgstr ""
+msgstr "Jau&na cilne"
 
 #: lib/tabwidget/tabcontextmenu.cpp:155
 msgctxt "TabContextMenu|"
@@ -6271,15 +6272,12 @@ msgstr "&Apturēt"
 #, qt-format
 msgctxt "SearchToolBar|"
 msgid "%1 of %2"
-msgstr ""
+msgstr "%1 no %2"
 
 #: lib/webtab/searchtoolbar.ui:48
-#, fuzzy
-#| msgctxt "PopupWindow|"
-#| msgid "Find"
 msgctxt "SearchToolbar|"
 msgid "Find..."
-msgstr "Meklēt"
+msgstr "Meklēt..."
 
 #: lib/webtab/searchtoolbar.ui:58
 msgctxt "SearchToolbar|"
@@ -6287,12 +6285,9 @@ msgid "Find the next match for the current search phrase"
 msgstr ""
 
 #: lib/webtab/searchtoolbar.ui:61
-#, fuzzy
-#| msgctxt "BookmarksImportDialog|"
-#| msgid "Next >"
 msgctxt "SearchToolbar|"
 msgid "&Next"
-msgstr "Uz priekšu >"
+msgstr "&Nākamais"
 
 #: lib/webtab/searchtoolbar.ui:74
 msgctxt "SearchToolbar|"
@@ -6302,7 +6297,7 @@ msgstr ""
 #: lib/webtab/searchtoolbar.ui:77
 msgctxt "SearchToolbar|"
 msgid "&Previous"
-msgstr ""
+msgstr "Ie&priekšējais"
 
 #: lib/webtab/searchtoolbar.ui:90
 msgctxt "SearchToolbar|"
@@ -6318,7 +6313,7 @@ msgstr "Pārbaudīt elementu"
 #, qt-format
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
-msgstr ""
+msgstr "%1 - Falkon"
 
 #~ msgctxt "SearchToolBar|"
 #~ msgid "No results found."
