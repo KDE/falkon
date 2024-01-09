@@ -1117,6 +1117,11 @@ void WebView::_mouseReleaseEvent(QMouseEvent *event)
     }
 
     switch (event->button()) {
+    case Qt::BackButton:
+    case Qt::ForwardButton:
+        event->accept();
+        break;
+
     case Qt::MiddleButton:
         if (!m_clickedUrl.isEmpty()) {
             const QUrl link = page()->hitTestContent(event->position().toPoint()).linkUrl();
