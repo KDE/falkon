@@ -2337,7 +2337,7 @@ msgid "<h1>Private Browsing</h1>"
 msgstr "<h1>Режим конфиденциального просмотра</h1>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:180
-#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
 msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
 msgstr "Сведения о версии программы"
@@ -2348,7 +2348,7 @@ msgid "Copyright"
 msgstr "Авторские права"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:184
-#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:301
 msgctxt "FalkonSchemeReply|"
 msgid "Version"
 msgstr "Версия"
@@ -2488,65 +2488,70 @@ msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
 msgstr "Выравнивать закладки быстрого доступа"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+#: lib/network/schemehandlers/falkonschemehandler.cpp:238
+msgctxt "FalkonSchemeReply|"
+msgid "Lock the position of SpeedDial entries."
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
 msgstr "Восстановление сеанса"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
 msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
 msgstr "Произошёл сбой Falkon."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
 msgctxt "FalkonSchemeReply|"
 msgid "We apologize for this. Would you like to restore the last saved state?"
 msgstr ""
 "Приносим извинения за неудобства. Следует ли восстановить последнее "
 "сохранённое состояние?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
 msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
 msgstr "Попробуйте закрыть вкладки, которые могут вызывать проблемы"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+#: lib/network/schemehandlers/falkonschemehandler.cpp:268
 msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
 msgstr "Также возможно начать новый сеанс"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+#: lib/network/schemehandlers/falkonschemehandler.cpp:269
 msgctxt "FalkonSchemeReply|"
 msgid "Window"
 msgstr "Окно"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:268
+#: lib/network/schemehandlers/falkonschemehandler.cpp:270
 msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
 msgstr "Окна и вкладки"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:269
+#: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
 msgstr "Начать новый сеанс"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:270
+#: lib/network/schemehandlers/falkonschemehandler.cpp:272
 msgctxt "FalkonSchemeReply|"
 msgid "Restore"
 msgstr "Восстановить"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:271
+#: lib/network/schemehandlers/falkonschemehandler.cpp:273
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
 msgstr "Необходимо включить JavaScript."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:287
-#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
 msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
 msgstr "Информация о конфигурации"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
 msgctxt "FalkonSchemeReply|"
 msgid ""
 "This page contains information about Falkon's current configuration - "
@@ -2556,132 +2561,132 @@ msgstr ""
 "Эта страница содержит сведения о конфигурации Falkon. Так как эта информация "
 "необходима для исправления ошибок, её следует включить в сообщение об ошибке."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
 msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
 msgstr "Идентификационная информация браузера"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
 msgctxt "FalkonSchemeReply|"
 msgid "Paths"
 msgstr "Пути"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
 msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
 msgstr "Конфигурация сборки"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
 msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
 msgstr "Параметры"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+#: lib/network/schemehandlers/falkonschemehandler.cpp:297
 msgctxt "FalkonSchemeReply|"
 msgid "Option"
 msgstr "Опция"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:296
+#: lib/network/schemehandlers/falkonschemehandler.cpp:298
 msgctxt "FalkonSchemeReply|"
 msgid "Value"
 msgstr "Значение"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:297
-#: lib/network/schemehandlers/falkonschemehandler.cpp:333
+#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:335
 msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
 msgstr "Расширения"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:298
+#: lib/network/schemehandlers/falkonschemehandler.cpp:300
 msgctxt "FalkonSchemeReply|"
 msgid "Name"
 msgstr "Название"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:300
+#: lib/network/schemehandlers/falkonschemehandler.cpp:302
 msgctxt "FalkonSchemeReply|"
 msgid "Author"
 msgstr "Автор"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:301
+#: lib/network/schemehandlers/falkonschemehandler.cpp:303
 msgctxt "FalkonSchemeReply|"
 msgid "Description"
 msgstr "Описание"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:316
+#: lib/network/schemehandlers/falkonschemehandler.cpp:318
 msgctxt "FalkonSchemeReply|"
 msgid "Application version"
 msgstr "Версия приложения"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
 msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
 msgstr "Версия Qt"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+#: lib/network/schemehandlers/falkonschemehandler.cpp:326
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
 msgstr "Версия QtWebEngine"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:325
+#: lib/network/schemehandlers/falkonschemehandler.cpp:327
 msgctxt "FalkonSchemeReply|"
 msgid "Platform"
 msgstr "Платформа"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:328
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
 msgctxt "FalkonSchemeReply|"
 msgid "Profile"
 msgstr "Профиль"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:329
+#: lib/network/schemehandlers/falkonschemehandler.cpp:331
 msgctxt "FalkonSchemeReply|"
 msgid "Settings"
 msgstr "Параметры"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
 msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
 msgstr "Сохранённый сеанс"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:331
+#: lib/network/schemehandlers/falkonschemehandler.cpp:333
 msgctxt "FalkonSchemeReply|"
 msgid "Data"
 msgstr "Данные"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:334
 msgctxt "FalkonSchemeReply|"
 msgid "Themes"
 msgstr "Темы"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:336
-#: lib/network/schemehandlers/falkonschemehandler.cpp:343
-#: lib/network/schemehandlers/falkonschemehandler.cpp:349
+#: lib/network/schemehandlers/falkonschemehandler.cpp:338
+#: lib/network/schemehandlers/falkonschemehandler.cpp:345
+#: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
 msgstr "<b>Включено</b>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:338
-#: lib/network/schemehandlers/falkonschemehandler.cpp:345
-#: lib/network/schemehandlers/falkonschemehandler.cpp:349
+#: lib/network/schemehandlers/falkonschemehandler.cpp:340
+#: lib/network/schemehandlers/falkonschemehandler.cpp:347
+#: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
 msgstr "Отключено"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:352
+#: lib/network/schemehandlers/falkonschemehandler.cpp:354
 msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
 msgstr "Сборка для отладки"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:354
+#: lib/network/schemehandlers/falkonschemehandler.cpp:356
 msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
 msgstr "API Windows 7"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:356
+#: lib/network/schemehandlers/falkonschemehandler.cpp:358
 msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
 msgstr "Портативная сборка"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:374
+#: lib/network/schemehandlers/falkonschemehandler.cpp:376
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "Нет доступных расширений."

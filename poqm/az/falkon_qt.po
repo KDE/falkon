@@ -2324,7 +2324,7 @@ msgid "<h1>Private Browsing</h1>"
 msgstr "<h1>Məxfi Səyahət</h1>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:180
-#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
 msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
 msgstr "Versiya Məlumatları"
@@ -2335,7 +2335,7 @@ msgid "Copyright"
 msgstr "Müəllif Hüquqları"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:184
-#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:301
 msgctxt "FalkonSchemeReply|"
 msgid "Version"
 msgstr "Versiya"
@@ -2475,66 +2475,71 @@ msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
 msgstr "Cəld Yığımlar mərkəzdə"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+#: lib/network/schemehandlers/falkonschemehandler.cpp:238
+msgctxt "FalkonSchemeReply|"
+msgid "Lock the position of SpeedDial entries."
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
 msgstr "Sesiyanı bərpa etmək"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
 msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
 msgstr "Təəsüf, Falkon çökdü."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
 msgctxt "FalkonSchemeReply|"
 msgid "We apologize for this. Would you like to restore the last saved state?"
 msgstr ""
 "Bunun üçün üzr istəyirik. Son saxlanılan vəziyyəti bərpa etmək istərdinizmi?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
 msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
 msgstr ""
 "Problem yaratdığını düşündüyünüz bir və ya bir neçə vərəqi bağlamağa cəhd "
 "edin"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+#: lib/network/schemehandlers/falkonschemehandler.cpp:268
 msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
 msgstr "Və ya tam olaraq yeni sesiya başladın"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+#: lib/network/schemehandlers/falkonschemehandler.cpp:269
 msgctxt "FalkonSchemeReply|"
 msgid "Window"
 msgstr "Pəncərə"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:268
+#: lib/network/schemehandlers/falkonschemehandler.cpp:270
 msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
 msgstr "Pəncərələr və Vərəqlər"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:269
+#: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
 msgstr "Yeni Sesiya başlatmaq"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:270
+#: lib/network/schemehandlers/falkonschemehandler.cpp:272
 msgctxt "FalkonSchemeReply|"
 msgid "Restore"
 msgstr "Bərpa etmək"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:271
+#: lib/network/schemehandlers/falkonschemehandler.cpp:273
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
 msgstr "Aktiv JavaScript tələb olunur."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:287
-#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
 msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
 msgstr "Tənzimləmə məlumatları"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
 msgctxt "FalkonSchemeReply|"
 msgid ""
 "This page contains information about Falkon's current configuration - "
@@ -2545,132 +2550,132 @@ msgstr ""
 "haqqında məlumatlardan ibarətdir. Lütfən, xəta hesabatı göndərərkən bu "
 "məlumatları da həmin hesabata daxil edin."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
 msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
 msgstr "Veb Bələdçi İdentifikasiyası"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
 msgctxt "FalkonSchemeReply|"
 msgid "Paths"
 msgstr "Yollar"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
 msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
 msgstr "Quraşdırma Tənzimləmələri"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
 msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
 msgstr "Ayarlar"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+#: lib/network/schemehandlers/falkonschemehandler.cpp:297
 msgctxt "FalkonSchemeReply|"
 msgid "Option"
 msgstr "Seçim"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:296
+#: lib/network/schemehandlers/falkonschemehandler.cpp:298
 msgctxt "FalkonSchemeReply|"
 msgid "Value"
 msgstr "Dəyər"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:297
-#: lib/network/schemehandlers/falkonschemehandler.cpp:333
+#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:335
 msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
 msgstr "Əlavələr"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:298
+#: lib/network/schemehandlers/falkonschemehandler.cpp:300
 msgctxt "FalkonSchemeReply|"
 msgid "Name"
 msgstr "Adı"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:300
+#: lib/network/schemehandlers/falkonschemehandler.cpp:302
 msgctxt "FalkonSchemeReply|"
 msgid "Author"
 msgstr "Müəllif"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:301
+#: lib/network/schemehandlers/falkonschemehandler.cpp:303
 msgctxt "FalkonSchemeReply|"
 msgid "Description"
 msgstr "Təsviri"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:316
+#: lib/network/schemehandlers/falkonschemehandler.cpp:318
 msgctxt "FalkonSchemeReply|"
 msgid "Application version"
 msgstr "Tətbiq versiyası"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
 msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
 msgstr "Qt Versiyası"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+#: lib/network/schemehandlers/falkonschemehandler.cpp:326
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
 msgstr "QtWebEngine versiyası"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:325
+#: lib/network/schemehandlers/falkonschemehandler.cpp:327
 msgctxt "FalkonSchemeReply|"
 msgid "Platform"
 msgstr "Platforma"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:328
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
 msgctxt "FalkonSchemeReply|"
 msgid "Profile"
 msgstr "Profil"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:329
+#: lib/network/schemehandlers/falkonschemehandler.cpp:331
 msgctxt "FalkonSchemeReply|"
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
 msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
 msgstr "Saxlanılmış sesiyalar"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:331
+#: lib/network/schemehandlers/falkonschemehandler.cpp:333
 msgctxt "FalkonSchemeReply|"
 msgid "Data"
 msgstr "Verilənlər"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:334
 msgctxt "FalkonSchemeReply|"
 msgid "Themes"
 msgstr "Mövzular"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:336
-#: lib/network/schemehandlers/falkonschemehandler.cpp:343
-#: lib/network/schemehandlers/falkonschemehandler.cpp:349
+#: lib/network/schemehandlers/falkonschemehandler.cpp:338
+#: lib/network/schemehandlers/falkonschemehandler.cpp:345
+#: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
 msgstr "<b>Aktivdir</b>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:338
-#: lib/network/schemehandlers/falkonschemehandler.cpp:345
-#: lib/network/schemehandlers/falkonschemehandler.cpp:349
+#: lib/network/schemehandlers/falkonschemehandler.cpp:340
+#: lib/network/schemehandlers/falkonschemehandler.cpp:347
+#: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
 msgstr "Söndürülüb"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:352
+#: lib/network/schemehandlers/falkonschemehandler.cpp:354
 msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
 msgstr "Sazlama yığımı"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:354
+#: lib/network/schemehandlers/falkonschemehandler.cpp:356
 msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
 msgstr "Windows 7 API"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:356
+#: lib/network/schemehandlers/falkonschemehandler.cpp:358
 msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
 msgstr "Portativ yığım"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:374
+#: lib/network/schemehandlers/falkonschemehandler.cpp:376
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "Əlavələr yoxdur."

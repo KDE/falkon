@@ -2344,7 +2344,7 @@ msgid "<h1>Private Browsing</h1>"
 msgstr "<h1>Ιδιωτική περιήγηση</h1>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:180
-#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
 msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
 msgstr "Πληροφορίες έκδοσης"
@@ -2355,7 +2355,7 @@ msgid "Copyright"
 msgstr "Πνευματικά δικαιώματα"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:184
-#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:301
 msgctxt "FalkonSchemeReply|"
 msgid "Version"
 msgstr "Έκδοση"
@@ -2495,67 +2495,72 @@ msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
 msgstr "Γρήγορες κλήσεις στο κέντρο"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+#: lib/network/schemehandlers/falkonschemehandler.cpp:238
+msgctxt "FalkonSchemeReply|"
+msgid "Lock the position of SpeedDial entries."
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
 msgstr "Επαναφορά συνεδρίας"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
 msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
 msgstr "Ουπς, το Falkon κατέρρευσε."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
 msgctxt "FalkonSchemeReply|"
 msgid "We apologize for this. Would you like to restore the last saved state?"
 msgstr ""
 "Ζητάμε συγνώμη. Θα θέλατε να επαναφέρετε την πιο πρόσφατα αποθηκευμένη "
 "κατάσταση;"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
 msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
 msgstr ""
 "Προσπαθήστε να αφαιρέσετε μία ή περισσότερες καρτέλες που νομίζετε ότι "
 "προκαλούν προβλήματα"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+#: lib/network/schemehandlers/falkonschemehandler.cpp:268
 msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
 msgstr "Ή μπορείτε να ξεκινήσετε μια εντελώς νέα συνεδρία"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+#: lib/network/schemehandlers/falkonschemehandler.cpp:269
 msgctxt "FalkonSchemeReply|"
 msgid "Window"
 msgstr "Παράθυρο"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:268
+#: lib/network/schemehandlers/falkonschemehandler.cpp:270
 msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
 msgstr "Παράθυρα και καρτέλες"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:269
+#: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
 msgstr "Έναρξη νέας συνεδρίας"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:270
+#: lib/network/schemehandlers/falkonschemehandler.cpp:272
 msgctxt "FalkonSchemeReply|"
 msgid "Restore"
 msgstr "Επαναφορά"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:271
+#: lib/network/schemehandlers/falkonschemehandler.cpp:273
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
 msgstr "Απαιτείται η ενεργοποίηση της JavaScript."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:287
-#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
 msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
 msgstr "Πληροφορίες διαμόρφωσης"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
 msgctxt "FalkonSchemeReply|"
 msgid ""
 "This page contains information about Falkon's current configuration - "
@@ -2566,132 +2571,132 @@ msgstr ""
 "σχετική με την επίλυση προβλημάτων. Συμπεριλάβετε τις πληροφορίες αυτές όταν "
 "αποστέλλετε αναφορές σφαλμάτων."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
 msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
 msgstr "Αναγνωριστικό περιηγητή"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
 msgctxt "FalkonSchemeReply|"
 msgid "Paths"
 msgstr "Διαδρομές"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
 msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
 msgstr "Διαμόρφωση κατασκευής"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
 msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+#: lib/network/schemehandlers/falkonschemehandler.cpp:297
 msgctxt "FalkonSchemeReply|"
 msgid "Option"
 msgstr "Επιλογή"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:296
+#: lib/network/schemehandlers/falkonschemehandler.cpp:298
 msgctxt "FalkonSchemeReply|"
 msgid "Value"
 msgstr "Τιμή"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:297
-#: lib/network/schemehandlers/falkonschemehandler.cpp:333
+#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:335
 msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
 msgstr "Επεκτάσεις"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:298
+#: lib/network/schemehandlers/falkonschemehandler.cpp:300
 msgctxt "FalkonSchemeReply|"
 msgid "Name"
 msgstr "Ονομασία"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:300
+#: lib/network/schemehandlers/falkonschemehandler.cpp:302
 msgctxt "FalkonSchemeReply|"
 msgid "Author"
 msgstr "Συγγραφέας"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:301
+#: lib/network/schemehandlers/falkonschemehandler.cpp:303
 msgctxt "FalkonSchemeReply|"
 msgid "Description"
 msgstr "Περιγραφή"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:316
+#: lib/network/schemehandlers/falkonschemehandler.cpp:318
 msgctxt "FalkonSchemeReply|"
 msgid "Application version"
 msgstr "Έκδοση εφαρμογής"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
 msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
 msgstr "Έκδοση Qt"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+#: lib/network/schemehandlers/falkonschemehandler.cpp:326
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
 msgstr "<b>QtWebEngine έκδοση %1</b></p>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:325
+#: lib/network/schemehandlers/falkonschemehandler.cpp:327
 msgctxt "FalkonSchemeReply|"
 msgid "Platform"
 msgstr "Πλατφόρμα"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:328
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
 msgctxt "FalkonSchemeReply|"
 msgid "Profile"
 msgstr "Προφίλ"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:329
+#: lib/network/schemehandlers/falkonschemehandler.cpp:331
 msgctxt "FalkonSchemeReply|"
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
 msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
 msgstr "Αποθηκευμένη συνεδρία"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:331
+#: lib/network/schemehandlers/falkonschemehandler.cpp:333
 msgctxt "FalkonSchemeReply|"
 msgid "Data"
 msgstr "Δεδομένα"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:334
 msgctxt "FalkonSchemeReply|"
 msgid "Themes"
 msgstr "Θέματα"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:336
-#: lib/network/schemehandlers/falkonschemehandler.cpp:343
-#: lib/network/schemehandlers/falkonschemehandler.cpp:349
+#: lib/network/schemehandlers/falkonschemehandler.cpp:338
+#: lib/network/schemehandlers/falkonschemehandler.cpp:345
+#: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
 msgstr "<b>Ενεργοποιημένο</b>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:338
-#: lib/network/schemehandlers/falkonschemehandler.cpp:345
-#: lib/network/schemehandlers/falkonschemehandler.cpp:349
+#: lib/network/schemehandlers/falkonschemehandler.cpp:340
+#: lib/network/schemehandlers/falkonschemehandler.cpp:347
+#: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
 msgstr "Απενεργοποιημένο"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:352
+#: lib/network/schemehandlers/falkonschemehandler.cpp:354
 msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
 msgstr "Build αποσφαλμάτωσης"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:354
+#: lib/network/schemehandlers/falkonschemehandler.cpp:356
 msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
 msgstr "Windows 7 API"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:356
+#: lib/network/schemehandlers/falkonschemehandler.cpp:358
 msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
 msgstr "Portable build"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:374
+#: lib/network/schemehandlers/falkonschemehandler.cpp:376
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "Δεν υπάρχουν διαθέσιμες επεκτάσεις."

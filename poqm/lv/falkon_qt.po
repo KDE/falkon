@@ -2402,7 +2402,7 @@ msgid "<h1>Private Browsing</h1>"
 msgstr "<h1>Privātā pārlūkošana</h1>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:180
-#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:291
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Information about version"
@@ -2419,7 +2419,7 @@ msgid "Copyright"
 msgstr "Autortiesības"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:184
-#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:301
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Version"
@@ -2634,7 +2634,12 @@ msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
 msgstr "Centrēt ātros zvanus"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:262
+#: lib/network/schemehandlers/falkonschemehandler.cpp:238
+msgctxt "FalkonSchemeReply|"
+msgid "Lock the position of SpeedDial entries."
+msgstr ""
+
+#: lib/network/schemehandlers/falkonschemehandler.cpp:264
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Restore Session"
@@ -2642,7 +2647,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
 msgstr "Atjaunot sesiju"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:263
+#: lib/network/schemehandlers/falkonschemehandler.cpp:265
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Oops, QupZilla crashed."
@@ -2650,7 +2655,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
 msgstr "Vai, „QupZilla“ avarēja."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:264
+#: lib/network/schemehandlers/falkonschemehandler.cpp:266
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid ""
@@ -2661,7 +2666,7 @@ msgstr ""
 "Mēs atvainojamies, ka tā gadījās. Vai Jūs vēlētos atjaunot pēdējo saglabāto "
 "stāvokli?"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:265
+#: lib/network/schemehandlers/falkonschemehandler.cpp:267
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Try removing one or more tabs that you think cause troubles"
@@ -2671,7 +2676,7 @@ msgstr ""
 "Mēģiniet izslēgt vienu vai vairākas cilnes, kas, Jūsuprāt, varēja radīt "
 "problēmas"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:266
+#: lib/network/schemehandlers/falkonschemehandler.cpp:268
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Or you can start completely new session"
@@ -2679,7 +2684,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
 msgstr "Vai arī Jūs varat sākt pilnīgi jaunu sesiju"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:267
+#: lib/network/schemehandlers/falkonschemehandler.cpp:269
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Window"
@@ -2687,7 +2692,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Window"
 msgstr "Logs"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:268
+#: lib/network/schemehandlers/falkonschemehandler.cpp:270
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Windows and Tabs"
@@ -2695,7 +2700,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
 msgstr "Logi un cilnes"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:269
+#: lib/network/schemehandlers/falkonschemehandler.cpp:271
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Start New Session"
@@ -2703,7 +2708,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
 msgstr "Sākt jaunu sesiju"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:270
+#: lib/network/schemehandlers/falkonschemehandler.cpp:272
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Restore"
@@ -2711,13 +2716,13 @@ msgctxt "FalkonSchemeReply|"
 msgid "Restore"
 msgstr "Atjaunot"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:271
+#: lib/network/schemehandlers/falkonschemehandler.cpp:273
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
 msgstr ""
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:287
-#: lib/network/schemehandlers/falkonschemehandler.cpp:288
+#: lib/network/schemehandlers/falkonschemehandler.cpp:289
+#: lib/network/schemehandlers/falkonschemehandler.cpp:290
 #, fuzzy
 #| msgctxt "MainMenu|"
 #| msgid "Configuration Information"
@@ -2725,7 +2730,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
 msgstr "Konfigurācijas informācija"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:290
+#: lib/network/schemehandlers/falkonschemehandler.cpp:292
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid ""
@@ -2742,7 +2747,7 @@ msgstr ""
 "svarīga problēmu novēršanai. Lūdzu, sūtot kļūdu ziņojumus, iekļaujiet šo "
 "informāciju."
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:291
+#: lib/network/schemehandlers/falkonschemehandler.cpp:293
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Browser Identification"
@@ -2750,7 +2755,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
 msgstr "Pārlūka identifikācija"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:292
+#: lib/network/schemehandlers/falkonschemehandler.cpp:294
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Paths"
@@ -2758,7 +2763,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Paths"
 msgstr "Ceļi"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:293
+#: lib/network/schemehandlers/falkonschemehandler.cpp:295
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Build Configuration"
@@ -2766,7 +2771,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
 msgstr "Būvējuma konfigurācija"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:294
+#: lib/network/schemehandlers/falkonschemehandler.cpp:296
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Preferences"
@@ -2774,7 +2779,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
 msgstr "Iestatījumi"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:295
+#: lib/network/schemehandlers/falkonschemehandler.cpp:297
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Option"
@@ -2782,7 +2787,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Option"
 msgstr "Opcija"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:296
+#: lib/network/schemehandlers/falkonschemehandler.cpp:298
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Value"
@@ -2790,8 +2795,8 @@ msgctxt "FalkonSchemeReply|"
 msgid "Value"
 msgstr "Vērtība"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:297
-#: lib/network/schemehandlers/falkonschemehandler.cpp:333
+#: lib/network/schemehandlers/falkonschemehandler.cpp:299
+#: lib/network/schemehandlers/falkonschemehandler.cpp:335
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Extensions"
@@ -2799,7 +2804,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
 msgstr "Paplašinājumi"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:298
+#: lib/network/schemehandlers/falkonschemehandler.cpp:300
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Name"
@@ -2807,7 +2812,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Name"
 msgstr "Nosaukums"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:300
+#: lib/network/schemehandlers/falkonschemehandler.cpp:302
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Author"
@@ -2815,7 +2820,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Author"
 msgstr "Autors"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:301
+#: lib/network/schemehandlers/falkonschemehandler.cpp:303
 #, fuzzy
 #| msgctxt "BookmarksManager|"
 #| msgid "Description"
@@ -2823,7 +2828,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Description"
 msgstr "Apraksts"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:316
+#: lib/network/schemehandlers/falkonschemehandler.cpp:318
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Application version"
@@ -2831,7 +2836,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Application version"
 msgstr "Galvenais izstrādātājs"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:323
+#: lib/network/schemehandlers/falkonschemehandler.cpp:325
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Qt version"
@@ -2839,7 +2844,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
 msgstr "Qt versija"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:324
+#: lib/network/schemehandlers/falkonschemehandler.cpp:326
 #, fuzzy
 #| msgctxt "AboutDialog|"
 #| msgid "<b>QtWebEngine version %1</b></p>"
@@ -2847,7 +2852,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
 msgstr "<b>QtWebEngine versija %1</b></p>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:325
+#: lib/network/schemehandlers/falkonschemehandler.cpp:327
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Platform"
@@ -2855,7 +2860,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Platform"
 msgstr "Platforma"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:328
+#: lib/network/schemehandlers/falkonschemehandler.cpp:330
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Profile"
@@ -2863,7 +2868,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Profile"
 msgstr "Profils"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:329
+#: lib/network/schemehandlers/falkonschemehandler.cpp:331
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Settings"
@@ -2871,7 +2876,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Settings"
 msgstr "Iestatījumi"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:330
+#: lib/network/schemehandlers/falkonschemehandler.cpp:332
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Saved session"
@@ -2879,7 +2884,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
 msgstr "Saglabātā sesija"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:331
+#: lib/network/schemehandlers/falkonschemehandler.cpp:333
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Data"
@@ -2887,7 +2892,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Data"
 msgstr "Dati"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:332
+#: lib/network/schemehandlers/falkonschemehandler.cpp:334
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Themes"
@@ -2895,9 +2900,9 @@ msgctxt "FalkonSchemeReply|"
 msgid "Themes"
 msgstr "Tēmas"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:336
-#: lib/network/schemehandlers/falkonschemehandler.cpp:343
-#: lib/network/schemehandlers/falkonschemehandler.cpp:349
+#: lib/network/schemehandlers/falkonschemehandler.cpp:338
+#: lib/network/schemehandlers/falkonschemehandler.cpp:345
+#: lib/network/schemehandlers/falkonschemehandler.cpp:351
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "<b>Enabled</b>"
@@ -2905,9 +2910,9 @@ msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
 msgstr "<b>Ieslēgts</b>"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:338
-#: lib/network/schemehandlers/falkonschemehandler.cpp:345
-#: lib/network/schemehandlers/falkonschemehandler.cpp:349
+#: lib/network/schemehandlers/falkonschemehandler.cpp:340
+#: lib/network/schemehandlers/falkonschemehandler.cpp:347
+#: lib/network/schemehandlers/falkonschemehandler.cpp:351
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Disabled"
@@ -2915,7 +2920,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
 msgstr "Izslēgts"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:352
+#: lib/network/schemehandlers/falkonschemehandler.cpp:354
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Debug build"
@@ -2923,7 +2928,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
 msgstr "Atkļūdošanas būvējums"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:354
+#: lib/network/schemehandlers/falkonschemehandler.cpp:356
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Windows 7 API"
@@ -2931,7 +2936,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
 msgstr "<i>Windows 7</i> API"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:356
+#: lib/network/schemehandlers/falkonschemehandler.cpp:358
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Portable build"
@@ -2939,7 +2944,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
 msgstr "Portatīvais būvējums"
 
-#: lib/network/schemehandlers/falkonschemehandler.cpp:374
+#: lib/network/schemehandlers/falkonschemehandler.cpp:376
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "No available extensions."
