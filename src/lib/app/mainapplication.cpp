@@ -854,7 +854,6 @@ void MainApplication::saveSettings()
     m_searchEnginesManager->saveSettings();
     m_plugins->shutdown();
     m_networkManager->shutdown();
-    m_siteSettingsManager->saveSettings();
 
     qzSettings->saveSettings();
     QFile::remove(DataPaths::currentProfilePath() + QLatin1String("/WebpageIcons.db"));
