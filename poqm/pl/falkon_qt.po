@@ -4,12 +4,12 @@
 # Przemysław Pierzga <przemyslawpierzga@gmail.com>, 2017.
 # Michał Szymanowski <tylkobuba@gmail.com>, 2017.
 # Mariusz Fik <fisiu@opensuse.org>, 2017.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Ignacy Kajdan <ignacy.kajdan@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-09-17 12:23+0200\n"
+"PO-Revision-Date: 2024-01-20 11:59+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Language: pl_PL\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -410,7 +410,7 @@ msgstr ""
 #: lib/app/mainmenu.cpp:84 lib/app/mainmenu.cpp:501
 msgctxt "MainMenu|"
 msgid "Sessions"
-msgstr "Sesje"
+msgstr "Posiedzenia"
 
 #: lib/app/mainmenu.cpp:471
 msgctxt "MainMenu|"
@@ -465,7 +465,7 @@ msgstr "Zamknij okno"
 #: lib/app/mainmenu.cpp:504
 msgctxt "MainMenu|"
 msgid "Session Manager"
-msgstr "Zarządzanie sesją"
+msgstr "Zarządzanie posiedzeniami"
 
 #: lib/app/mainmenu.cpp:511
 msgctxt "MainMenu|"
@@ -1373,7 +1373,7 @@ msgstr "Wszystkie połączenia"
 #: lib/cookies/cookiemanager.cpp:179
 msgctxt "CookieManager|"
 msgid "Session cookie"
-msgstr "Ciasteczko sesji"
+msgstr "Ciasteczko posiedzenia"
 
 #: lib/cookies/cookiemanager.cpp:181
 msgctxt "CookieManager|"
@@ -2500,12 +2500,12 @@ msgstr "Wyśrodkuj szybkie wybierania"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:238
 msgctxt "FalkonSchemeReply|"
 msgid "Lock the position of SpeedDial entries."
-msgstr ""
+msgstr "Zablokuj położenie wpisów szybkiego wybierania."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
-msgstr "Przywróć sesję"
+msgstr "Przywróć posiedzenie"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:265
 msgctxt "FalkonSchemeReply|"
@@ -2527,7 +2527,7 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:268
 msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
-msgstr "Możesz także uruchomić nową sesję"
+msgstr "Możesz także uruchomić nową posiedzenie"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:269
 msgctxt "FalkonSchemeReply|"
@@ -2542,7 +2542,7 @@ msgstr "Okna i karty"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
-msgstr "Rozpocznij nową sesję"
+msgstr "Rozpocznij nową posiedzenie"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:272
 msgctxt "FalkonSchemeReply|"
@@ -3913,12 +3913,12 @@ msgstr "Otwórz szybkie wybieranie"
 #: lib/preferences/preferences.ui:318
 msgctxt "Preferences|"
 msgid "Restore session"
-msgstr "Przywróć sesję"
+msgstr "Przywróć posiedzenie"
 
 #: lib/preferences/preferences.ui:323
 msgctxt "Preferences|"
 msgid "Select session"
-msgstr "Wybierz sesję"
+msgstr "Wybierz posiedzenie"
 
 #: lib/preferences/preferences.ui:331
 msgctxt "Preferences|"
@@ -4950,12 +4950,12 @@ msgstr "_zmieniona_nazwa"
 #: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Clone Session"
-msgstr "Powiel sesję"
+msgstr "Powiel posiedzenie"
 
 #: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Rename Session"
-msgstr "Zmiana nazwy sesji"
+msgstr "Zmiana nazwy posiedzenia"
 
 #: lib/session/sessionmanager.cpp:129
 msgctxt "SessionManager|"
@@ -4974,27 +4974,27 @@ msgstr "Błąd!"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "The session file \"%1\" exists. Please enter another name."
-msgstr "Plik sesji „%1” już istnieje. Podaj inną nazwę."
+msgstr "Plik posiedzenia „%1” już istnieje. Podaj inną nazwę."
 
 #: lib/session/sessionmanager.cpp:144
 msgctxt "SessionManager|"
 msgid "An error occurred when cloning session file."
-msgstr "Wystąpił błąd przy próbie powielenia pliku sesji."
+msgstr "Wystąpił błąd przy próbie powielenia pliku posiedzenia."
 
 #: lib/session/sessionmanager.cpp:149
 msgctxt "SessionManager|"
 msgid "An error occurred when renaming session file."
-msgstr "Wystąpił błąd przy próbie zmiany nazwy pliku sesji."
+msgstr "Wystąpił błąd przy próbie zmiany nazwy pliku posiedzenia."
 
 #: lib/session/sessionmanager.cpp:162
 msgctxt "SessionManager|"
 msgid "Save Session"
-msgstr "Zapisz sesję"
+msgstr "Zapisz posiedzenie"
 
 #: lib/session/sessionmanager.cpp:163
 msgctxt "SessionManager|"
 msgid "Please enter a name to save session:"
-msgstr "Podaj nową nazwę do zapisania sesji:"
+msgstr "Podaj nową nazwę do zapisania posiedzenia:"
 
 #: lib/session/sessionmanager.cpp:164
 #, qt-format
@@ -5010,18 +5010,18 @@ msgstr "Przywróć kopię zapasową"
 #: lib/session/sessionmanager.cpp:181
 msgctxt "SessionManager|"
 msgid "Are you sure you want to replace current session?"
-msgstr "Czy na pewno chcesz zastąpić bieżącą sesję?"
+msgstr "Czy na pewno chcesz zastąpić bieżące posiedzenie?"
 
 #: lib/session/sessionmanager.cpp:200
 msgctxt "SessionManager|"
 msgid "Delete Session"
-msgstr "Usuń sesję"
+msgstr "Usuń posiedzenie"
 
 #: lib/session/sessionmanager.cpp:200
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Are you sure you want to delete session '%1'?"
-msgstr "Czy na pewno chcesz usunąć sesję „%1”?"
+msgstr "Czy na pewno chcesz usunąć posiedzenie „%1”?"
 
 #: lib/session/sessionmanager.cpp:210
 msgctxt "SessionManager|"
@@ -5031,7 +5031,7 @@ msgstr "Nowe posiedzenie"
 #: lib/session/sessionmanager.cpp:211
 msgctxt "SessionManager|"
 msgid "Please enter a name to create new session:"
-msgstr "Podaj nazwę do utworzenia nowej sesji:"
+msgstr "Podaj nazwę do utworzenia nowego posiedzenia:"
 
 #: lib/session/sessionmanager.cpp:212
 #, qt-format
@@ -5057,7 +5057,7 @@ msgstr "Domyślne posiedzenie"
 #: lib/session/sessionmanager.cpp:394
 msgctxt "SessionManager|"
 msgid "Please select the startup session:"
-msgstr "Wybierz sesję początkową:"
+msgstr "Wybierz posiedzenie początkowe:"
 
 #: lib/session/sessionmanager.cpp:413
 #, qt-format
