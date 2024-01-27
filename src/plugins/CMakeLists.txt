@@ -23,4 +23,5 @@ endif()
 
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_subdirectory(TestPlugin)
+    add_subdirectory(SiteSettingsView)
 endif()
