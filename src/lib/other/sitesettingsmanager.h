@@ -38,7 +38,7 @@ public:
     };
     Q_ENUM(Permission);
 
-    /* Broser options */
+    /* Browser options */
     enum PageOptions {
         poAllowCookies,
         poZoomLevel,
@@ -73,7 +73,7 @@ public:
         }
     };
 
-    explicit SiteSettingsManager(QObject *parent = 0);
+    explicit SiteSettingsManager(QObject *parent = nullptr);
     ~SiteSettingsManager();
 
     void loadSettings();

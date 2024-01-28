@@ -66,7 +66,7 @@ void SiteSettingsManager::loadSettings()
 
     settings.beginGroup(QSL("Site-Settings"));
     /* HTML5 Feature */
-    for (const auto &feature : qAsConst(supportedFeatures)) {
+    for (const auto &feature : std::as_const(supportedFeatures)) {
         defaultFeatures[feature] = intToPermission(settings.value(featureToSqlColumn(feature), Ask).toInt());
     }
 
@@ -85,7 +85,7 @@ void SiteSettingsManager::loadSettings()
     defaultAttributes[QWebEngineSettings::PlaybackRequiresUserGesture        ] = Deny;
     defaultAttributes[QWebEngineSettings::WebRTCPublicInterfacesOnly         ] = Allow;
 
-    for (const auto &attribute : qAsConst(supportedAttribute)) {
+    for (const auto &attribute : std::as_const(supportedAttribute)) {
         defaultAttributes[attribute] = intToPermission(settings.value(webAttributeToSqlColumn(attribute), defaultAttributes[attribute]).toInt());
     }
 

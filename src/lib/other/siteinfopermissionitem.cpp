@@ -24,8 +24,8 @@
 
 SiteInfoPermissionItem::SiteInfoPermissionItem(const SiteSettingsManager::Permission& a_permission, QWidget* parent)
 : QWidget(parent)
-, m_ui(new Ui::SiteInfoPermissionItem())
 , m_hasOptionAsk(true)
+, m_ui(new Ui::SiteInfoPermissionItem())
 {
     m_ui->setupUi(this);
     setPermission(a_permission);
