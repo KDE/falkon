@@ -323,14 +323,6 @@ Preferences::Preferences(BrowserWindow* window)
         listItem->setSizeHint(optionItem->sizeHint());
         optionItem->setFeature(feature);
     }
-    {
-        auto* listItem = new QListWidgetItem(ui->siteSettingsList);
-        auto* optionItem = new SiteInfoPermissionDefaultItem(siteSettings->getDefaultPermission(SiteSettingsManager::poAllowCookies), this);
-
-        ui->siteSettingsList->setItemWidget(listItem, optionItem);
-        listItem->setSizeHint(optionItem->sizeHint());
-        optionItem->setOption(SiteSettingsManager::poAllowCookies);
-    }
 
     //Cache
     ui->allowCache->setChecked(settings.value(QSL("AllowLocalCache"), true).toBool());
