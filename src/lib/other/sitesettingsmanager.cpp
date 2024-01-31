@@ -277,7 +277,7 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
         return Deny;
     }
 
-    return testAttribute(attribute);
+    return defaultAttributes[attribute];
 }
 
 void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOptions& option, const int& value)

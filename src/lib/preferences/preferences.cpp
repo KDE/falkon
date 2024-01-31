@@ -1094,11 +1094,20 @@ void Preferences::saveSettings()
     settings.setValue(QSL("Password"), ui->proxyPassword->text());
     settings.endGroup();
 
+    //SiteSettings
+    settings.beginGroup(QSL("Site-Settings"));
+    for (int i = 0; i < ui->siteSettingsList->count(); ++i) {
+        auto *item = static_cast<SiteInfoPermissionDefaultItem*>(ui->siteSettingsList->itemWidget(ui->siteSettingsList->item(i)));
+        settings.setValue(item->sqlColumn(), item->permission());
+    }
+    settings.endGroup();
+
     ProfileManager::setStartingProfile(ui->startProfile->currentText());
 
     m_pluginsList->save();
     m_themesManager->save();
     mApp->cookieJar()->loadSettings();
+    mApp->siteSettingsManager()->loadSettings();
     mApp->history()->loadSettings();
     mApp->reloadSettings();
     mApp->desktopNotifications()->loadSettings();
