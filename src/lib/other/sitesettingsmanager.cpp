@@ -280,31 +280,6 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
     return defaultAttributes[attribute];
 }
 
-void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOptions& option, const int& value)
-{
-    switch (option) {
-        case poZoomLevel:
-        case poAllowCookies:
-        default:
-            qWarning() << "Unknown option:" << option;
-            break;
-    }
-}
-
-void SiteSettingsManager::setDefaultPermission(const SiteSettingsManager::PageOptions& option, const SiteSettingsManager::Permission& permission)
-{
-    switch (option) {
-        case poZoomLevel:
-        case poAllowCookies:
-            qWarning() << "So far not implemented:" << option;
-            break;
-
-        default:
-            qWarning() << "Unknown option:" << option;
-            break;
-    }
-}
-
 void SiteSettingsManager::setDefaultPermission(const QWebEnginePage::Feature& feature, const SiteSettingsManager::Permission& value)
 {
     if (!supportedFeatures.contains(feature)) {
