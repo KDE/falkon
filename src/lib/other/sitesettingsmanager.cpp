@@ -280,16 +280,6 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
     return defaultAttributes[attribute];
 }
 
-void SiteSettingsManager::setDefaultPermission(const QWebEnginePage::Feature& feature, const SiteSettingsManager::Permission& value)
-{
-    if (!supportedFeatures.contains(feature)) {
-        qWarning() << "Unknown feature:" << feature;
-        return;
-    }
-
-    defaultFeatures[feature] = value;
-}
-
 SiteSettingsManager::Permission SiteSettingsManager::testAttribute(const QWebEngineSettings::WebAttribute attribute) const
 {
     if (mApp->webSettings()->testAttribute(attribute)) {

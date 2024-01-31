@@ -102,7 +102,6 @@ public:
     Permission getDefaultPermission(const PageOptions &option);
     Permission getDefaultPermission(const QWebEnginePage::Feature &feature);
     Permission getDefaultPermission(const QWebEngineSettings::WebAttribute &attribute);
-    void setDefaultPermission(const QWebEnginePage::Feature &feature, const Permission &value);
 
     QString getOptionName(const SiteSettingsManager::PageOptions &option);
     QString getOptionName(const QWebEnginePage::Feature &feature);

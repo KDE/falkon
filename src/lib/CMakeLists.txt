@@ -245,8 +245,6 @@ set(SRCS ${SRCS}
     tools/focusselectlineedit.cpp
     tools/headerview.cpp
     tools/horizontallistwidget.cpp
-    tools/html5permissions/html5permissionsdialog.cpp
-    tools/html5permissions/html5permissionsitem.cpp
     tools/html5permissions/html5permissionsmanager.cpp
     tools/html5permissions/html5permissionsnotification.cpp
     tools/iconprovider.cpp
@@ -479,8 +477,6 @@ set(SRCS ${SRCS}
     tools/focusselectlineedit.h
     tools/headerview.h
     tools/horizontallistwidget.h
-    tools/html5permissions/html5permissionsdialog.h
-    tools/html5permissions/html5permissionsitem.h
     tools/html5permissions/html5permissionsmanager.h
     tools/html5permissions/html5permissionsnotification.h
     tools/iconprovider.h
@@ -569,8 +565,6 @@ qt_wrap_ui(SRCS
     sidebar/historysidebar.ui
     tools/certificateinfowidget.ui
     tools/docktitlebarwidget.ui
-    tools/html5permissions/html5permissionsdialog.ui
-    tools/html5permissions/html5permissionsitem.ui
     tools/html5permissions/html5permissionsnotification.ui
     webengine/jsalert.ui
     webengine/jsconfirm.ui

@@ -43,7 +43,6 @@
 #include "useragentdialog.h"
 #include "registerqappassociation.h"
 #include "profilemanager.h"
-#include "html5permissions/html5permissionsdialog.h"
 #include "certificatemanager.h"
 #include "searchenginesdialog.h"
 #include "webscrollbarmanager.h"
@@ -535,7 +534,6 @@ Preferences::Preferences(BrowserWindow* window)
     //CONNECTS
     connect(ui->buttonBox, &QDialogButtonBox::clicked, this, &Preferences::buttonClicked);
     connect(ui->cookieManagerBut, &QAbstractButton::clicked, this, &Preferences::showCookieManager);
-    connect(ui->html5permissions, &QAbstractButton::clicked, this, &Preferences::showHtml5Permissions);
     connect(ui->preferredLanguages, &QAbstractButton::clicked, this, &Preferences::showAcceptLanguage);
     connect(ui->deleteHtml5storage, &QAbstractButton::clicked, this, &Preferences::deleteHtml5storage);
     connect(ui->uaManager, &QAbstractButton::clicked, this, &Preferences::openUserAgentManager);
@@ -737,12 +735,6 @@ void Preferences::showCookieManager()
 {
     auto* dialog = new CookieManager(this);
     dialog->show();
-}
-
-void Preferences::showHtml5Permissions()
-{
-    auto* dialog = new HTML5PermissionsDialog(this);
-    dialog->open();
 }
 
 void Preferences::openJsOptions()

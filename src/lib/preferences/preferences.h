@@ -54,7 +54,6 @@ private Q_SLOTS:
 
     void chooseDownPath();
     void showCookieManager();
-    void showHtml5Permissions();
     void useActualHomepage();
     void useActualNewTab();
     void showAcceptLanguage();
