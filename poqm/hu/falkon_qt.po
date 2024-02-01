@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-01-30 10:16+0100\n"
+"PO-Revision-Date: 2024-01-31 14:02+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -628,46 +628,46 @@ msgstr "Információk az alkalmazásról"
 #: lib/app/mainmenu.cpp:602
 msgctxt "MainMenu|"
 msgid "Configuration Information"
-msgstr ""
+msgstr "Konfigurációs jellemzők"
 
 #: lib/app/mainmenu.cpp:603
 msgctxt "MainMenu|"
 msgid "Report &Issue"
-msgstr ""
+msgstr "H&iba jelentése"
 
 #: lib/app/mainmenu.cpp:616
 msgctxt "MainMenu|"
 msgid "Restore &Closed Tab"
-msgstr ""
+msgstr "&Bezárt lap visszaállítása"
 
 #: lib/autofill/autofillicon.cpp:29
 msgctxt "AutoFillWidget|"
 msgid "Choose username to login"
-msgstr ""
+msgstr "Válasszon felhasználónevet a bejelentkezéshez"
 
 #: lib/autofill/autofillnotification.cpp:39
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "on %1"
-msgstr ""
+msgstr "itt: %1"
 
 #: lib/autofill/autofillnotification.cpp:43
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "for <b>%1</b>"
-msgstr ""
+msgstr "ehhez: <b>%1</b>"
 
 #: lib/autofill/autofillnotification.cpp:47
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "Do you want Falkon to update saved password %1?"
-msgstr ""
+msgstr "Szeretné, hogy a Falkon frissítse a(z) %1 mentett jelszavát?"
 
 #: lib/autofill/autofillnotification.cpp:53
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "Do you want Falkon to remember the password %1 %2?"
-msgstr ""
+msgstr "Szeretné, hogy a Falkon megjegyezze a(z) %2 %1 jelszavát?"
 
 #: lib/autofill/autofillnotification.ui:69
 msgctxt "AutoFillNotification|"
@@ -715,7 +715,7 @@ msgstr "Rossz jelszót adott meg!"
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
 msgctxt "MasterPasswordDialog|"
 msgid "New/Confirm password fields do not match!"
-msgstr ""
+msgstr "A jelszavak nem egyeznek!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:578
 msgctxt "AutoFill|"
@@ -728,56 +728,59 @@ msgid ""
 "This backend needs a master password to be set! Falkon just switches to its "
 "default backend"
 msgstr ""
+"Ehhez a háttérprogramhoz mesterjelszó beállítása szükséges. A Falkon átvált "
+"az alapértelmezett háttérprogramra"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
 msgctxt "MasterPasswordDialog|"
 msgid "Are you sure you want to clear master password and decrypt data?"
 msgstr ""
+"Biztosan törölni szeretné a mesterjelszót, és visszafejteni az adatokat?"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
 msgctxt "MasterPasswordDialog|"
 msgid "Some data has not been decrypted. The master password was not cleared!"
-msgstr ""
+msgstr "Egyes adatok nem lettek visszafejtve. A mesterjelszó nem lett törölve."
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:669
 msgctxt "AutoFill|"
 msgid "Enter Master Password"
-msgstr ""
+msgstr "Adja meg a mesterjelszót"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:673
 msgctxt "AutoFill|"
 msgid "Permission is required, please enter Master Password:"
-msgstr ""
+msgstr "Engedély szükséges, kérjük, adja meg a mesterjelszót:"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:679
 msgctxt "AutoFill|"
 msgid "Entered password is wrong!"
-msgstr ""
+msgstr "A megadott jelszó hibás."
 
 #: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
 msgctxt "AutoFill|"
 msgid "Database (plaintext)"
-msgstr ""
+msgstr "Adatbázis (egyszerű szöveg)"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:20
 msgctxt "MasterPasswordDialog|"
 msgid "Encrypted DataBase Settings"
-msgstr ""
+msgstr "Titkosított adatbázis beállításai"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:33
 msgctxt "MasterPasswordDialog|"
 msgid "Set/Change Master Password..."
-msgstr ""
+msgstr "Mesterjelszó megadása/módosítása…"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:36
 msgctxt "MasterPasswordDialog|"
 msgid "This backend does not work without a master password."
-msgstr ""
+msgstr "Ez a háttérprogram nem működik mesterjelszó nélkül."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:43
 msgctxt "MasterPasswordDialog|"
 msgid "Clear Master Password..."
-msgstr ""
+msgstr "Mesterjelszó törlése…"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:46
 msgctxt "MasterPasswordDialog|"
@@ -785,6 +788,8 @@ msgid ""
 "This option clears the master password and moves all encrypted data to the "
 "\"DataBase (Plain Text)\" backend, and switches to it."
 msgstr ""
+"Ezzel a beállítás törli a mesterjelszót és áthelyezi az összes titkosított "
+"adatot az „Adatbázis (egyszerű szöveg)” háttérprogramba, és átvált arra."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:64
 msgctxt "MasterPasswordDialog|"
@@ -792,6 +797,8 @@ msgid ""
 "The Master Password is used to protect site passwords and form data. If you "
 "set a Master Password you will be asked to enter it once per session."
 msgstr ""
+"A mesterjelszó az oldalak jelszavainak és az űrlapok adatainak védelmére "
+"szolgál. Ha beállít egyet, munkamenetenként egyszer meg kell adnia."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:76
 msgctxt "MasterPasswordDialog|"
@@ -813,6 +820,7 @@ msgctxt "MasterPasswordDialog|"
 msgid ""
 "<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
 msgstr ""
+"<b>Megjegyzés:</b> A mesterjelszó nem állítható vissza. Ne felejtse el!"
 
 #: lib/bookmarks/bookmarks.cpp:208
 msgctxt "Bookmarks|"
@@ -822,7 +830,7 @@ msgstr "Könyvjelzők eszköztár"
 #: lib/bookmarks/bookmarks.cpp:209
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Toolbar"
-msgstr ""
+msgstr "Könyvjelzők a Könyvjelzők eszköztáron"
 
 #: lib/bookmarks/bookmarks.cpp:212
 msgctxt "Bookmarks|"
@@ -832,145 +840,145 @@ msgstr "Könyvjelzők menü"
 #: lib/bookmarks/bookmarks.cpp:213
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Menu"
-msgstr ""
+msgstr "Könyvjelzők a Könyvjelzők menüben"
 
 #: lib/bookmarks/bookmarks.cpp:216
 msgctxt "Bookmarks|"
 msgid "Unsorted Bookmarks"
-msgstr ""
+msgstr "Rendezetlen könyvjelzők"
 
 #: lib/bookmarks/bookmarks.cpp:217
 msgctxt "Bookmarks|"
 msgid "All other bookmarks"
-msgstr ""
+msgstr "Összes egyéb könyvjelző"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.cpp:64
 msgctxt "BookmarksExportDialog|"
 msgid "Error!"
-msgstr ""
+msgstr "Hiba!"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:14
 msgctxt "BookmarksExportDialog|"
 msgid "Export Bookmarks"
-msgstr ""
+msgstr "Könyvjelzők exportálása"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:20
 msgctxt "BookmarksExportDialog|"
 msgid "<b>Export Bookmarks</b>"
-msgstr ""
+msgstr "<b>Könyvjelzők exportálása</b>"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:27
 msgctxt "BookmarksExportDialog|"
 msgid "Export options"
-msgstr ""
+msgstr "Exportálási beállítások"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
 msgctxt "BookmarksExportDialog|"
 msgid "Choose..."
-msgstr ""
+msgstr "Választás…"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
 msgctxt "BookmarksExportDialog|"
 msgid "Output File:"
-msgstr ""
+msgstr "Kimeneti fájl:"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:89
 msgctxt "BookmarksExportDialog|"
 msgid "Format:"
-msgstr ""
+msgstr "Formátum:"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:31
 msgctxt "BookmarksExporter|"
 msgid "HTML File"
-msgstr ""
+msgstr "HTML-fájl"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:37
 msgctxt "BookmarksExporter|"
 msgid "HTML Bookmarks"
-msgstr ""
+msgstr "HTML könyvjelzők"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:38
 msgctxt "BookmarksExporter|"
 msgid "Choose file..."
-msgstr ""
+msgstr "Válasszon fájlt…"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:47
 msgctxt "BookmarksExporter|"
 msgid "Cannot open file for writing!"
-msgstr ""
+msgstr "Nem lehet megnyitni a fájlt írásra."
 
 #: lib/bookmarks/bookmarksicon.cpp:37 lib/bookmarks/bookmarksicon.cpp:108
 msgctxt "BookmarksIcon|"
 msgid "Bookmark this Page"
-msgstr ""
+msgstr "Oldal a könyvjelzők közé"
 
 #: lib/bookmarks/bookmarksicon.cpp:100
 msgctxt "BookmarksIcon|"
 msgid "Edit this bookmark"
-msgstr ""
+msgstr "Könyvjelző szerkesztése"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:113
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
 msgctxt "BookmarksImportDialog|"
 msgid "Error!"
-msgstr ""
+msgstr "Hiba!"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
 msgctxt "BookmarksImportDialog|"
 msgid "No bookmarks were found."
-msgstr ""
+msgstr "Nem találhatók könyvjelzők."
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:125
 msgctxt "BookmarksImportDialog|"
 msgid "Finish"
-msgstr ""
+msgstr "Befejezés"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:157
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:270
 msgctxt "BookmarksImportDialog|"
 msgid "Next >"
-msgstr ""
+msgstr "Következő >"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:186
 #, qt-format
 msgctxt "BookmarksImportDialog|"
 msgid "<b>Importing from %1</b>"
-msgstr ""
+msgstr "<b>Importálás innen: %1</b>"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:20
 msgctxt "BookmarksImportDialog|"
 msgid "Import Bookmarks"
-msgstr ""
+msgstr "Könyvjelzők importálása"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:26
 msgctxt "BookmarksImportDialog|"
 msgid "<b>Import Bookmarks</b>"
-msgstr ""
+msgstr "<b>Könyvjelzők importálása</b>"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:74
 msgctxt "BookmarksImportDialog|"
 msgid "Internet Explorer"
-msgstr ""
+msgstr "Internet Explorer"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:83
 msgctxt "BookmarksImportDialog|"
 msgid "Html File"
-msgstr ""
+msgstr "HTML-fájl"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:95
 msgctxt "BookmarksImportDialog|"
 msgid "Choose from which you want to import bookmarks:"
-msgstr ""
+msgstr "Válassza ki, honnan kívánja importálni a könyvjelzőket:"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:125
 msgctxt "BookmarksImportDialog|"
 msgid "Choose..."
-msgstr ""
+msgstr "Választás…"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:257
 msgctxt "BookmarksImportDialog|"
 msgid "< Back"
-msgstr ""
+msgstr "< Vissza"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -978,6 +986,8 @@ msgid ""
 "Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
 "is usually located in"
 msgstr ""
+"A Google Chrome a <b>Könyvjelzők</b> szövegfájlban tárolja a könyvjelzőit. "
+"Ez a fájl általában itt található:"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:50
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
@@ -986,19 +996,19 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
 msgctxt "BookmarksImporter|"
 msgid "Choose file..."
-msgstr ""
+msgstr "Válasszon fájlt…"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:59
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
 msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
-msgstr ""
+msgstr "Nem lehet megnyitni a fájlt."
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:76
 msgctxt "BookmarksImporter|"
 msgid "Cannot parse JSON file!"
-msgstr ""
+msgstr "Nem lehet feldolgozni a JSON-fájlt."
 
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:42
 msgctxt "BookmarksImporter|"
@@ -1006,16 +1016,18 @@ msgid ""
 "Mozilla Firefox stores its bookmarks in <b>places.sqlite</b> SQLite "
 "database. This file is usually located in"
 msgstr ""
+"A Mozilla Firefox a <b>places.sqlite</b> SQLite adatbázisban tárolja a "
+"könyvjelzőit. Ez a fájl általában itt található:"
 
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:70
 msgctxt "BookmarksImportDialog|"
 msgid "File does not exist."
-msgstr ""
+msgstr "A fájl nem létezik."
 
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:77
 msgctxt "BookmarksImportDialog|"
 msgid "Unable to open database. Is Firefox running?"
-msgstr ""
+msgstr "Nem lehet megnyitni az adatbázist. Fut a Firefox?"
 
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:32
 msgctxt "BookmarksImporter|"
@@ -1023,11 +1035,13 @@ msgid ""
 "You can import bookmarks from any browser that supports HTML exporting. This "
 "file has usually these suffixes"
 msgstr ""
+"Bármely böngészőből importálhat könyvjelzőket, amely támogatja a HTML-fájlba "
+"exportálást. Ez a fájl általában a következő utótagokkal rendelkezik:"
 
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:43
 msgctxt "BookmarksImporter|"
 msgid "HTML Bookmarks"
-msgstr ""
+msgstr "HTML könyvjelzők"
 
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -1035,11 +1049,13 @@ msgid ""
 "Internet Explorer stores its bookmarks in <b>Favorites</b> folder. This "
 "folder is usually located in"
 msgstr ""
+"Az Internet Explorer a <b>Kedvencek</b> mappában tárolja a könyvjelzőit. Ez "
+"a fájl általában itt található:"
 
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
 msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
-msgstr ""
+msgstr "A könyvtár nem létezik."
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -1047,260 +1063,263 @@ msgid ""
 "Opera stores its bookmarks in <b>bookmarks.adr</b> text file. This file is "
 "usually located in"
 msgstr ""
+"Az Opera a <b>bookmarks.adr</b> szövegfájlban tárolja a könyvjelzőit. Ez a "
+"fájl általában itt található:"
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
 msgctxt "BookmarksImporter|"
 msgid "File is not valid Opera bookmarks file!"
-msgstr ""
+msgstr "A fájl nem érvényes Opera könyvjelzőfájl."
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
 msgctxt "BookmarksImporter|"
 msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
-msgstr ""
+msgstr "Csak UTF-8 kódolású Opera könyvjelzőfájlok támogatottak."
 
 #: lib/bookmarks/bookmarksmanager.cpp:105
 msgctxt "BookmarksManager|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "Megnyitás új lapon"
 
 #: lib/bookmarks/bookmarksmanager.cpp:106
 msgctxt "BookmarksManager|"
 msgid "Open in new window"
-msgstr ""
+msgstr "Megnyitás új ablakban"
 
 #: lib/bookmarks/bookmarksmanager.cpp:107
 msgctxt "BookmarksManager|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Megnyitás új privát ablakban"
 
 #: lib/bookmarks/bookmarksmanager.cpp:110
 #: lib/bookmarks/bookmarksmanager.cpp:177
 msgctxt "BookmarksManager|"
 msgid "New Bookmark"
-msgstr ""
+msgstr "Új könyvjelző"
 
 #: lib/bookmarks/bookmarksmanager.cpp:111
 #: lib/bookmarks/bookmarksmanager.cpp:185
 msgctxt "BookmarksManager|"
 msgid "New Folder"
-msgstr ""
+msgstr "Új mappa"
 
 #: lib/bookmarks/bookmarksmanager.cpp:112
 msgctxt "BookmarksManager|"
 msgid "New Separator"
-msgstr ""
+msgstr "Új elválasztó"
 
 #: lib/bookmarks/bookmarksmanager.cpp:114
 msgctxt "BookmarksManager|"
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: lib/bookmarks/bookmarksmanager.ui:14
 msgctxt "BookmarksManager|"
 msgid "Bookmarks"
-msgstr ""
+msgstr "Könyvjelzők"
 
 #: lib/bookmarks/bookmarksmanager.ui:32
 msgctxt "BookmarksManager|"
 msgid "Title:"
-msgstr ""
+msgstr "Címsor:"
 
 #: lib/bookmarks/bookmarksmanager.ui:42
 msgctxt "BookmarksManager|"
 msgid "Address:"
-msgstr ""
+msgstr "Cím:"
 
 #: lib/bookmarks/bookmarksmanager.ui:52
 msgctxt "BookmarksManager|"
 msgid "Keyword:"
-msgstr ""
+msgstr "Kulcsszó:"
 
 #: lib/bookmarks/bookmarksmanager.ui:62
 msgctxt "BookmarksManager|"
 msgid "Description"
-msgstr ""
+msgstr "Leírás"
 
 #: lib/bookmarks/bookmarksmenu.cpp:166
 msgctxt "BookmarksMenu|"
 msgid "&Bookmarks"
-msgstr ""
+msgstr "&Könyvjelzők"
 
 #: lib/bookmarks/bookmarksmenu.cpp:168
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &This Page"
-msgstr ""
+msgstr "Oldal a könyvjelzők kö&zé"
 
 #: lib/bookmarks/bookmarksmenu.cpp:169
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &All Tabs"
-msgstr ""
+msgstr "Összes l&ap a könyvjelzők közé"
 
 #: lib/bookmarks/bookmarksmenu.cpp:170
 msgctxt "BookmarksMenu|"
 msgid "Organize &Bookmarks"
-msgstr ""
+msgstr "&Könyvjelzők kezelése"
 
 #: lib/bookmarks/bookmarksmodel.cpp:148
 msgctxt "BookmarksModel|"
 msgid "Title"
-msgstr ""
+msgstr "Címsor"
 
 #: lib/bookmarks/bookmarksmodel.cpp:150
 msgctxt "BookmarksModel|"
 msgid "Address"
-msgstr ""
+msgstr "Cím"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:74
 msgctxt "BookmarksToolbar|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "Megnyitás új lapon"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:75
 msgctxt "BookmarksToolbar|"
 msgid "Open in new window"
-msgstr ""
+msgstr "Megnyitás új ablakban"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:76
 msgctxt "BookmarksToolbar|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Megnyitás új privát ablakban"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:78 lib/bookmarks/bookmarkstoolbar.cpp:186
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
-msgstr ""
+msgstr "Új mappa"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:79
 msgctxt "BookmarksToolbar|"
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:80
 msgctxt "BookmarksToolbar|"
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:82
 msgctxt "BookmarksToolbar|"
 msgid "Show Only Icons"
-msgstr ""
+msgstr "Csak ikonok"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:86
 msgctxt "BookmarksToolbar|"
 msgid "Show Only Text"
-msgstr ""
+msgstr "Csak szöveg"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:186
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
-msgstr ""
+msgstr "Mappa neve:"
 
 #: lib/bookmarks/bookmarkstools.cpp:76
 #, qt-format
 msgctxt "BookmarksFoldersMenu|"
 msgid "Choose %1"
-msgstr ""
+msgstr "%1 választása"
 
 #: lib/bookmarks/bookmarkstools.cpp:153
 msgctxt "Bookmarks|"
 msgid "Choose name and location of this bookmark."
-msgstr ""
+msgstr "Válassza ki a könyvjelző nevét és helyét."
 
 #: lib/bookmarks/bookmarkstools.cpp:157
 msgctxt "Bookmarks|"
 msgid "Add New Bookmark"
-msgstr ""
+msgstr "Új könyvjelző hozzáadása"
 
 #: lib/bookmarks/bookmarkstools.cpp:197
 msgctxt "Bookmarks|"
 msgid "Choose folder for bookmarks:"
-msgstr ""
+msgstr "Mappa választása a könyvjelzőkhöz:"
 
 #: lib/bookmarks/bookmarkstools.cpp:198
 msgctxt "Bookmarks|"
 msgid "Bookmark All Tabs"
-msgstr ""
+msgstr "Összes lap a könyvjelzők közé"
 
 #: lib/bookmarks/bookmarkstools.cpp:239
 msgctxt "Bookmarks|"
 msgid "Title:"
-msgstr ""
+msgstr "Címsor:"
 
 #: lib/bookmarks/bookmarkstools.cpp:242
 msgctxt "Bookmarks|"
 msgid "Address:"
-msgstr ""
+msgstr "Cím:"
 
 #: lib/bookmarks/bookmarkstools.cpp:244
 msgctxt "Bookmarks|"
 msgid "Keyword:"
-msgstr ""
+msgstr "Kulcsszó:"
 
 #: lib/bookmarks/bookmarkstools.cpp:247
 msgctxt "Bookmarks|"
 msgid "Description:"
-msgstr ""
+msgstr "Leírás:"
 
 #: lib/bookmarks/bookmarkstools.cpp:252
 msgctxt "Bookmarks|"
 msgid "Edit Bookmark"
-msgstr ""
+msgstr "Könyvjelző szerkesztése"
 
 #: lib/bookmarks/bookmarkstools.cpp:344
 msgctxt "Bookmarks|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Megerősítés"
 
 #: lib/bookmarks/bookmarkstools.cpp:345
 #, qt-format
 msgctxt "Bookmarks|"
 msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
 msgstr ""
+"Biztosan szeretné megnyitni a(z) „%1” mappa összes könyvjelzőjét lapokon?"
 
 #: lib/bookmarks/bookmarkstools.cpp:440
 msgctxt "Bookmarks|"
 msgid "Empty"
-msgstr ""
+msgstr "Üres"
 
 #: lib/bookmarks/bookmarkswidget.cpp:98
 msgctxt "BookmarksWidget|"
 msgid "Update Bookmark"
-msgstr ""
+msgstr "Könyvjelző frissítése"
 
 #: lib/bookmarks/bookmarkswidget.cpp:112 lib/bookmarks/bookmarkswidget.ui:33
 msgctxt "BookmarksWidget|"
 msgid "Add to Speed Dial"
-msgstr ""
+msgstr "Hozzáadás a Gyorsindítóhoz"
 
 #: lib/bookmarks/bookmarkswidget.cpp:116
 msgctxt "BookmarksWidget|"
 msgid "Remove from Speed Dial"
-msgstr ""
+msgstr "Eltávolítás a Gyorsindítóból"
 
 #: lib/bookmarks/bookmarkswidget.cpp:121
 msgctxt "BookmarksWidget|"
 msgid "Remove from Bookmarks"
-msgstr ""
+msgstr "Eltávolítás a  könyvjelzők közül"
 
 #: lib/bookmarks/bookmarkswidget.ui:20
 msgctxt "BookmarksWidget|"
 msgid "Add to Bookmarks"
-msgstr ""
+msgstr "Hozzáadás a könyvjelzőkhöz"
 
 #: lib/cookies/cookiemanager.cpp:78
 msgctxt "CookieManager|"
 msgid "Search"
-msgstr ""
+msgstr "Keresés"
 
 #: lib/cookies/cookiemanager.cpp:105
 msgctxt "CookieManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Megerősítés"
 
 #: lib/cookies/cookiemanager.cpp:106
 msgctxt "CookieManager|"
 msgid "Are you sure you want to delete all cookies on your computer?"
-msgstr ""
+msgstr "Biztosan törölni szeretné az összes sütit a számítógépéről?"
 
 #: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
 #: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
@@ -1310,148 +1329,148 @@ msgstr ""
 #: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
 msgctxt "CookieManager|"
 msgid "<cookie not selected>"
-msgstr ""
+msgstr "<nincs kiválasztva süti>"
 
 #: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
 #: lib/cookies/cookiemanager.ui:245
 msgctxt "CookieManager|"
 msgid "Remove cookies"
-msgstr ""
+msgstr "Sütik eltávolítása"
 
 #: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
 #: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
 #: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
 msgctxt "CookieManager|"
 msgid "<multiple cookies selected>"
-msgstr ""
+msgstr "<több süti kiválasztva>"
 
 #: lib/cookies/cookiemanager.cpp:178
 msgctxt "CookieManager|"
 msgid "Secure only"
-msgstr ""
+msgstr "Csak biztonságos"
 
 #: lib/cookies/cookiemanager.cpp:178
 msgctxt "CookieManager|"
 msgid "All connections"
-msgstr ""
+msgstr "Összes kapcsolat"
 
 #: lib/cookies/cookiemanager.cpp:179
 msgctxt "CookieManager|"
 msgid "Session cookie"
-msgstr ""
+msgstr "Munkamenet süti"
 
 #: lib/cookies/cookiemanager.cpp:181
 msgctxt "CookieManager|"
 msgid "Remove cookie"
-msgstr ""
+msgstr "Süti eltávolítása"
 
 #: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
-msgstr ""
+msgstr "Kiszolgáló:"
 
 #: lib/cookies/cookiemanager.cpp:186
 msgctxt "CookieManager|"
 msgid "Add to whitelist"
-msgstr ""
+msgstr "Hozzáadás a fehérlistához"
 
 #: lib/cookies/cookiemanager.cpp:193
 msgctxt "CookieManager|"
 msgid "Already blacklisted!"
-msgstr ""
+msgstr "Már feketelistázott."
 
 #: lib/cookies/cookiemanager.cpp:193
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
-msgstr ""
+msgstr "A(z) „%1” kiszolgáló már a feketelistán van, távolítsa el előbb onnan."
 
 #: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
-msgstr ""
+msgstr "Hozzáadás a feketelistához"
 
 #: lib/cookies/cookiemanager.cpp:220
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
-msgstr ""
+msgstr "Már fehérlistázott."
 
 #: lib/cookies/cookiemanager.cpp:220
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
-msgstr ""
+msgstr "A(z) „%1” kiszolgáló már a fehérlistán van, távolítsa el előbb onnan."
 
 #: lib/cookies/cookiemanager.ui:14
 msgctxt "CookieManager|"
 msgid "Cookies"
-msgstr ""
+msgstr "Sütik"
 
 #: lib/cookies/cookiemanager.ui:36
 msgctxt "CookieManager|"
 msgid "Stored Cookies"
-msgstr ""
+msgstr "Tárolt sütik"
 
 #: lib/cookies/cookiemanager.ui:42
 msgctxt "CookieManager|"
 msgid "Find: "
-msgstr ""
+msgstr "Keresés: "
 
 #: lib/cookies/cookiemanager.ui:52
 msgctxt "CookieManager|"
 msgid "These cookies are stored on your computer:"
-msgstr ""
+msgstr "Ezek a sütik tárolódnak a számítógépén:"
 
 #: lib/cookies/cookiemanager.ui:66
 msgctxt "CookieManager|"
 msgid "Server"
-msgstr ""
+msgstr "Kiszolgáló"
 
 #: lib/cookies/cookiemanager.ui:71
 msgctxt "CookieManager|"
 msgid "Cookie name"
-msgstr ""
+msgstr "Süti neve"
 
 #: lib/cookies/cookiemanager.ui:109
 msgctxt "CookieManager|"
 msgid "Name:"
-msgstr ""
+msgstr "Név:"
 
 #: lib/cookies/cookiemanager.ui:119
 msgctxt "CookieManager|"
 msgid "Value:"
-msgstr ""
+msgstr "Érték:"
 
 #: lib/cookies/cookiemanager.ui:133
 msgctxt "CookieManager|"
 msgid "Path:"
-msgstr ""
+msgstr "Elérési út:"
 
 #: lib/cookies/cookiemanager.ui:140
 msgctxt "CookieManager|"
 msgid "Secure:"
-msgstr ""
+msgstr "Biztonságos:"
 
 #: lib/cookies/cookiemanager.ui:147
 msgctxt "CookieManager|"
 msgid "Expiration:"
-msgstr ""
+msgstr "Lejárat:"
 
 #: lib/cookies/cookiemanager.ui:238
 msgctxt "CookieManager|"
 msgid "Remove all cookies"
-msgstr ""
+msgstr "Összes süti eltávolítása"
 
 #: lib/cookies/cookiemanager.ui:269
 msgctxt "CookieManager|"
 msgid "Cookie Filtering"
-msgstr ""
+msgstr "Sütik szűrése"
 
 #: lib/cookies/cookiemanager.ui:275
 msgctxt "CookieManager|"
 msgid "<b>Cookie whitelist</b>"
-msgstr ""
+msgstr "<b>Süti fehérlista</b>"
 
 #: lib/cookies/cookiemanager.ui:282
 msgctxt "CookieManager|"
@@ -1459,201 +1478,203 @@ msgid ""
 "Cookies from these servers will ALWAYS be accepted (even if you have "
 "disabled saving cookies)"
 msgstr ""
+"Ezekről a kiszolgálókról a sütik MINDIG el lesznek fogadva (kivéve, ha ki "
+"van kapcsolva a sütik mentése)"
 
 #: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
 msgctxt "CookieManager|"
 msgid "Add"
-msgstr ""
+msgstr "Hozzáadás"
 
 #: lib/cookies/cookiemanager.ui:314 lib/cookies/cookiemanager.ui:368
 msgctxt "CookieManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/cookies/cookiemanager.ui:326
 msgctxt "CookieManager|"
 msgid "<b>Cookie blacklist</b>"
-msgstr ""
+msgstr "<b>Süti feketelista</b>"
 
 #: lib/cookies/cookiemanager.ui:333
 msgctxt "CookieManager|"
 msgid "Cookies from these servers will NEVER be accepted"
-msgstr ""
+msgstr "Ezekről a kiszolgálókról a sütik SOHASEM lesznek elfogadva"
 
 #: lib/cookies/cookiemanager.ui:385
 msgctxt "CookieManager|"
 msgid "Settings"
-msgstr ""
+msgstr "Beállítások"
 
 #: lib/cookies/cookiemanager.ui:407
 msgctxt "CookieManager|"
 msgid "Filter 3rd party cookies"
-msgstr ""
+msgstr "Harmadik féltől származó sütik szűrése"
 
 #: lib/cookies/cookiemanager.ui:414
 msgctxt "CookieManager|"
 msgid "<b>Cookie Settings</b>"
-msgstr ""
+msgstr "<b>Sütibeállítások</b>"
 
 #: lib/cookies/cookiemanager.ui:421
 msgctxt "CookieManager|"
 msgid "Allow storing of cookies"
-msgstr ""
+msgstr "Sütik tárolásának engedélyezése"
 
 #: lib/cookies/cookiemanager.ui:428
 msgctxt "CookieManager|"
 msgid "Filter tracking cookies"
-msgstr ""
+msgstr "Nyomkövető sütik szűrése"
 
 #: lib/cookies/cookiemanager.ui:435
 msgctxt "CookieManager|"
 msgid "Delete cookies on close"
-msgstr ""
+msgstr "Sütik törlése bezáráskor"
 
 #: lib/downloads/downloaditem.cpp:73
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
-msgstr ""
+msgstr "A hátralévő idő nem érhető el"
 
 #: lib/downloads/downloaditem.cpp:129
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
-msgstr ""
+msgstr "Kész - %1 (%2)"
 
 #: lib/downloads/downloaditem.cpp:133
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
-msgstr ""
+msgstr "Hiba - %1"
 
 #: lib/downloads/downloaditem.cpp:137 lib/downloads/downloaditem.cpp:279
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
-msgstr ""
+msgstr "Megszakítva - %1"
 
 #: lib/downloads/downloaditem.cpp:188 lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Cancelled"
-msgstr ""
+msgstr "Megszakítva"
 
 #: lib/downloads/downloaditem.cpp:194
 msgctxt "DownloadItem|"
 msgid "few seconds"
-msgstr ""
+msgstr "néhány másodperc"
 
 #: lib/downloads/downloaditem.cpp:199
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%n másodperc"
+msgstr[1] "%n másodperc"
 
 #: lib/downloads/downloaditem.cpp:204
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%n perc"
+msgstr[1] "%n perc"
 
 #: lib/downloads/downloaditem.cpp:209
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%n óra"
+msgstr[1] "%n óra"
 
 #: lib/downloads/downloaditem.cpp:216
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
-msgstr ""
+msgstr "Ismeretlen sebesség"
 
 #: lib/downloads/downloaditem.cpp:221
 msgctxt "DownloadItem|"
 msgid "kB/s"
-msgstr ""
+msgstr "kB/s"
 
 #: lib/downloads/downloaditem.cpp:226
 msgctxt "DownloadItem|"
 msgid "MB/s"
-msgstr ""
+msgstr "MB/s"
 
 #: lib/downloads/downloaditem.cpp:230
 msgctxt "DownloadItem|"
 msgid "GB/s"
-msgstr ""
+msgstr "GB/s"
 
 #: lib/downloads/downloaditem.cpp:258
 msgctxt "DownloadItem|"
 msgid "Unknown size"
-msgstr ""
+msgstr "ismeretlen méret"
 
 #: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
-msgstr ""
+msgstr "%2 - ismeretlen méret (%3)"
 
 #: lib/downloads/downloaditem.cpp:262
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
-msgstr ""
+msgstr "Hátralévő: %1 - %2 / %3 (%4)"
 
 #: lib/downloads/downloaditem.cpp:294
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
-msgstr ""
+msgstr "Szüneteltetve - %1"
 
 #: lib/downloads/downloaditem.cpp:307
 msgctxt "DownloadItem|"
 msgid "Open File"
-msgstr ""
+msgstr "Fájl megnyitása"
 
 #: lib/downloads/downloaditem.cpp:309
 msgctxt "DownloadItem|"
 msgid "Open Folder"
-msgstr ""
+msgstr "Mappa megnyitása"
 
 #: lib/downloads/downloaditem.cpp:311
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
-msgstr ""
+msgstr "Letöltési hivatkozás másolása"
 
 #: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
-msgstr ""
+msgstr "Letöltés megszakítása"
 
 #: lib/downloads/downloaditem.cpp:316
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
-msgstr ""
+msgstr "Letöltés folytatása"
 
 #: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
-msgstr ""
+msgstr "Letöltés szüneteltetése"
 
 #: lib/downloads/downloaditem.cpp:321
 msgctxt "DownloadItem|"
 msgid "Remove From List"
-msgstr ""
+msgstr "Eltávolítás a listából"
 
 #: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Error"
-msgstr ""
+msgstr "Hiba"
 
 #: lib/downloads/downloaditem.cpp:349
 msgctxt "DownloadItem|"
 msgid "Not found"
-msgstr ""
+msgstr "Nem található"
 
 #: lib/downloads/downloaditem.cpp:349
 #, qt-format
@@ -1663,561 +1684,566 @@ msgid ""
 " %1 \n"
 " was not found!"
 msgstr ""
+"Sajnáljuk, a(z)\n"
+"%1 fájl\n"
+"nem található."
 
 #: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:424
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
-msgstr ""
+msgstr "Letöltéskezelő"
 
 #: lib/downloads/downloadmanager.cpp:230
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
-msgstr ""
+msgstr "%1 / %2 fájl (%3), %4 van hátra"
 
 #: lib/downloads/downloadmanager.cpp:234
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
-msgstr ""
+msgstr "%1% - Letöltéskezelő"
 
 #: lib/downloads/downloadmanager.cpp:304
 msgctxt "DownloadManager|"
 msgid "Save file as..."
-msgstr ""
+msgstr "Fájl mentése másként…"
 
 #: lib/downloads/downloadmanager.cpp:314
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
-msgstr ""
+msgstr "MIME HTML-archívum (*.mhtml)"
 
 #: lib/downloads/downloadmanager.cpp:315
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
-msgstr ""
+msgstr "HTML oldal, egy (*.html)"
 
 #: lib/downloads/downloadmanager.cpp:316
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
-msgstr ""
+msgstr "HTML oldal, teljes (*.html)"
 
 #: lib/downloads/downloadmanager.cpp:320
 msgctxt "DownloadManager|"
 msgid "Save page as..."
-msgstr ""
+msgstr "Oldal mentése másként…"
 
 #: lib/downloads/downloadmanager.cpp:417
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
-msgstr ""
+msgstr "Falkon: a letöltés befejeződött"
 
 #: lib/downloads/downloadmanager.cpp:417
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
-msgstr ""
+msgstr "Az összes fájl sikeresen letöltődött."
 
 #: lib/downloads/downloadmanager.cpp:464
 msgctxt "DownloadManager|"
 msgid "Warning"
-msgstr ""
+msgstr "Figyelmeztetés"
 
 #: lib/downloads/downloadmanager.cpp:465
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
 msgstr ""
+"Biztosan ki szeretne lépni? Az összes befejezetlen letöltés megszakításra "
+"kerül!"
 
 #: lib/downloads/downloadmanager.ui:69
 msgctxt "DownloadManager|"
 msgid "Clear"
-msgstr ""
+msgstr "Törlés"
 
 #: lib/downloads/downloadoptionsdialog.cpp:49
 #, qt-format
 msgctxt "DownloadOptionsDialog|"
 msgid "Opening %1"
-msgstr ""
+msgstr "%1 megnyitása"
 
 #: lib/downloads/downloadoptionsdialog.cpp:112
 msgctxt "DownloadOptionsDialog|"
 msgid "Download link copied."
-msgstr ""
+msgstr "Letöltési hívatkozás másolva."
 
 #: lib/downloads/downloadoptionsdialog.ui:25
 msgctxt "DownloadOptionsDialog|"
 msgid "What should Falkon do with this file?"
-msgstr ""
+msgstr "Mit tegyen a Falkon ezzel a fájllal?"
 
 #: lib/downloads/downloadoptionsdialog.ui:47
 msgctxt "DownloadOptionsDialog|"
 msgid "Open..."
-msgstr ""
+msgstr "Megnyitás…"
 
 #: lib/downloads/downloadoptionsdialog.ui:54
 msgctxt "DownloadOptionsDialog|"
 msgid "Save File"
-msgstr ""
+msgstr "Fájl mentése"
 
 #: lib/downloads/downloadoptionsdialog.ui:64
 msgctxt "DownloadOptionsDialog|"
 msgid "Download with External Manager"
-msgstr ""
+msgstr "Letöltés külső letöltéskezelővel"
 
 #: lib/downloads/downloadoptionsdialog.ui:165
 msgctxt "DownloadOptionsDialog|"
 msgid "which is:"
-msgstr ""
+msgstr "amely:"
 
 #: lib/downloads/downloadoptionsdialog.ui:215
 msgctxt "DownloadOptionsDialog|"
 msgid "from:"
-msgstr ""
+msgstr "innen:"
 
 #: lib/downloads/downloadoptionsdialog.ui:241
 msgctxt "DownloadOptionsDialog|"
 msgid "Copy download link"
-msgstr ""
+msgstr "Letöltési hivatkozás másolása"
 
 #: lib/downloads/downloadoptionsdialog.ui:256
 msgctxt "DownloadOptionsDialog|"
 msgid "You have chosen to open"
-msgstr ""
+msgstr "Úgy döntött, hogy megnyitja ezt:"
 
 #: lib/downloads/downloadsbutton.cpp:27 lib/downloads/downloadsbutton.cpp:43
 msgctxt "DownloadsButton|"
 msgid "Downloads"
-msgstr ""
+msgstr "Letöltések"
 
 #: lib/downloads/downloadsbutton.cpp:28
 msgctxt "DownloadsButton|"
 msgid "Open Download Manager"
-msgstr ""
+msgstr "Letöltéskezelő megnyitása"
 
 #: lib/history/history.cpp:83
 msgctxt "History|"
 msgid "Empty Page"
-msgstr ""
+msgstr "Üres oldal"
 
 #: lib/history/history.cpp:273
 msgctxt "History|"
 msgid "January"
-msgstr ""
+msgstr "Január"
 
 #: lib/history/history.cpp:275
 msgctxt "History|"
 msgid "February"
-msgstr ""
+msgstr "Február"
 
 #: lib/history/history.cpp:277
 msgctxt "History|"
 msgid "March"
-msgstr ""
+msgstr "Március"
 
 #: lib/history/history.cpp:279
 msgctxt "History|"
 msgid "April"
-msgstr ""
+msgstr "Április"
 
 #: lib/history/history.cpp:281
 msgctxt "History|"
 msgid "May"
-msgstr ""
+msgstr "Május"
 
 #: lib/history/history.cpp:283
 msgctxt "History|"
 msgid "June"
-msgstr ""
+msgstr "Június"
 
 #: lib/history/history.cpp:285
 msgctxt "History|"
 msgid "July"
-msgstr ""
+msgstr "Július"
 
 #: lib/history/history.cpp:287
 msgctxt "History|"
 msgid "August"
-msgstr ""
+msgstr "Augusztus"
 
 #: lib/history/history.cpp:289
 msgctxt "History|"
 msgid "September"
-msgstr ""
+msgstr "Szeptember"
 
 #: lib/history/history.cpp:291
 msgctxt "History|"
 msgid "October"
-msgstr ""
+msgstr "Október"
 
 #: lib/history/history.cpp:293
 msgctxt "History|"
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: lib/history/history.cpp:295
 msgctxt "History|"
 msgid "December"
-msgstr ""
+msgstr "December"
 
 #: lib/history/historymanager.cpp:78
 msgctxt "HistoryManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Megerősítés"
 
 #: lib/history/historymanager.cpp:79
 msgctxt "HistoryManager|"
 msgid "Are you sure you want to delete all history?"
-msgstr ""
+msgstr "Biztosan törölni szeretné az összes előzményt?"
 
 #: lib/history/historymanager.cpp:145
 msgctxt "HistoryManager|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "Megnyitás új lapon"
 
 #: lib/history/historymanager.cpp:146
 msgctxt "HistoryManager|"
 msgid "Open in new window"
-msgstr ""
+msgstr "Megnyitás új ablakban"
 
 #: lib/history/historymanager.cpp:147
 msgctxt "HistoryManager|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Megnyitás új privát ablakban"
 
 #: lib/history/historymanager.cpp:150
 msgctxt "HistoryManager|"
 msgid "Copy url"
-msgstr ""
+msgstr "URL-cím másolása"
 
 #: lib/history/historymanager.cpp:151
 msgctxt "HistoryManager|"
 msgid "Copy title"
-msgstr ""
+msgstr "Cím másolása"
 
 #: lib/history/historymanager.cpp:154 lib/history/historymanager.ui:20
 msgctxt "HistoryManager|"
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: lib/history/historymanager.ui:14
 msgctxt "HistoryManager|"
 msgid "History"
-msgstr ""
+msgstr "Előzmények"
 
 #: lib/history/historymanager.ui:27
 msgctxt "HistoryManager|"
 msgid "Clear All History"
-msgstr ""
+msgstr "Minden előzmény törlése"
 
 #: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
 #: lib/history/historymenu.cpp:186
 msgctxt "HistoryMenu|"
 msgid "Empty"
-msgstr ""
+msgstr "Üres"
 
 #: lib/history/historymenu.cpp:161
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Tabs"
-msgstr ""
+msgstr "Összes bezárt lap visszaállítása"
 
 #: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
 msgctxt "HistoryMenu|"
 msgid "Clear list"
-msgstr ""
+msgstr "Lista törlése"
 
 #: lib/history/historymenu.cpp:189
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Windows"
-msgstr ""
+msgstr "Összes bezárt ablak visszaállítása"
 
 #: lib/history/historymenu.cpp:236
 msgctxt "HistoryMenu|"
 msgid "Hi&story"
-msgstr ""
+msgstr "Előz&mények"
 
 #: lib/history/historymenu.cpp:238
 msgctxt "HistoryMenu|"
 msgid "&Back"
-msgstr ""
+msgstr "&Vissza"
 
 #: lib/history/historymenu.cpp:241
 msgctxt "HistoryMenu|"
 msgid "&Forward"
-msgstr ""
+msgstr "&Előre"
 
 #: lib/history/historymenu.cpp:244
 msgctxt "HistoryMenu|"
 msgid "&Home"
-msgstr ""
+msgstr "&Kezdőlap"
 
 #: lib/history/historymenu.cpp:247
 msgctxt "HistoryMenu|"
 msgid "Show &All History"
-msgstr ""
+msgstr "Min&den előzmény megjelenítése"
 
 #: lib/history/historymenu.cpp:255
 msgctxt "HistoryMenu|"
 msgid "Most Visited"
-msgstr ""
+msgstr "Legtöbbet látogatott"
 
 #: lib/history/historymenu.cpp:258
 msgctxt "HistoryMenu|"
 msgid "Closed Tabs"
-msgstr ""
+msgstr "Bezárt lapok"
 
 #: lib/history/historymenu.cpp:261
 msgctxt "HistoryMenu|"
 msgid "Closed Windows"
-msgstr ""
+msgstr "Bezárt ablakok"
 
 #: lib/history/historymodel.cpp:57
 msgctxt "HistoryModel|"
 msgid "Title"
-msgstr ""
+msgstr "Címsor"
 
 #: lib/history/historymodel.cpp:59
 msgctxt "HistoryModel|"
 msgid "Address"
-msgstr ""
+msgstr "Cím"
 
 #: lib/history/historymodel.cpp:61
 msgctxt "HistoryModel|"
 msgid "Visit Date"
-msgstr ""
+msgstr "Látogatás ideje"
 
 #: lib/history/historymodel.cpp:63
 msgctxt "HistoryModel|"
 msgid "Visit Count"
-msgstr ""
+msgstr "Látogatásszám"
 
 #: lib/history/historymodel.cpp:341 lib/history/historymodel.cpp:472
 msgctxt "HistoryModel|"
 msgid "Today"
-msgstr ""
+msgstr "Ma"
 
 #: lib/history/historymodel.cpp:477
 msgctxt "HistoryModel|"
 msgid "This Week"
-msgstr ""
+msgstr "Ezen a héten"
 
 #: lib/history/historymodel.cpp:482
 msgctxt "HistoryModel|"
 msgid "This Month"
-msgstr ""
+msgstr "Ebben a hónapban"
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:158
 msgctxt "LocationCompleterDelegate|"
 msgid "Visit"
-msgstr ""
+msgstr "Látogatás"
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:164
 #, qt-format
 msgctxt "LocationCompleterDelegate|"
 msgid "Search with %1"
-msgstr ""
+msgstr "Keresés ezzel: %1"
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:198
 msgctxt "LocationCompleterDelegate|"
 msgid "Switch to tab"
-msgstr ""
+msgstr "Váltás a lapra"
 
 #: lib/navigation/completer/locationcompleterview.cpp:73
 msgctxt "LocationCompleterView|"
 msgid "Manage Search Engines"
-msgstr ""
+msgstr "Keresőmotorok kezelése"
 
 #: lib/navigation/completer/locationcompleterview.cpp:78
 msgctxt "LocationCompleterView|"
 msgid "Search with:"
-msgstr ""
+msgstr "Keresés ezzel:"
 
 #: lib/navigation/locationbar.cpp:95
 msgctxt "LocationBar|"
 msgid "Paste And &Go"
-msgstr ""
+msgstr "Beillesztés és &ugrás"
 
 #: lib/navigation/locationbar.cpp:163
 #, qt-format
 msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
-msgstr ""
+msgstr "Írja be a címet vagy keressen ezzel: %1"
 
 #: lib/navigation/locationbar.cpp:165
 msgctxt "LocationBar|"
 msgid "Enter address"
-msgstr ""
+msgstr "Írja be a címet"
 
 #: lib/navigation/navigationbar.cpp:49
 msgctxt "NavigationBar|"
 msgid "Empty Page"
-msgstr ""
+msgstr "Üres oldal"
 
 #: lib/navigation/navigationbar.cpp:77
 msgctxt "NavigationBar|"
 msgid "Back"
-msgstr ""
+msgstr "Vissza"
 
 #: lib/navigation/navigationbar.cpp:87
 msgctxt "NavigationBar|"
 msgid "Forward"
-msgstr ""
+msgstr "Előre"
 
 #: lib/navigation/navigationbar.cpp:107
 msgctxt "NavigationBar|"
 msgid "Home"
-msgstr ""
+msgstr "Kezdőlap"
 
 #: lib/navigation/navigationbar.cpp:115
 msgctxt "NavigationBar|"
 msgid "New Tab"
-msgstr ""
+msgstr "Új lap"
 
 #: lib/navigation/navigationbar.cpp:135
 msgctxt "NavigationBar|"
 msgid "Tools"
-msgstr ""
+msgstr "Eszközök"
 
 #: lib/navigation/navigationbar.cpp:148
 msgctxt "NavigationBar|"
 msgid "Main Menu"
-msgstr ""
+msgstr "Főmenü"
 
 #: lib/navigation/navigationbar.cpp:165
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen"
-msgstr ""
+msgstr "Kilépés a teljes képernyős módból"
 
 #: lib/navigation/navigationbar.cpp:191
 msgctxt "NavigationBar|"
 msgid "Back and Forward buttons"
-msgstr ""
+msgstr "Vissza és Előre gombok"
 
 #: lib/navigation/navigationbar.cpp:192
 msgctxt "NavigationBar|"
 msgid "Reload button"
-msgstr ""
+msgstr "Újratöltés gomb"
 
 #: lib/navigation/navigationbar.cpp:193
 msgctxt "NavigationBar|"
 msgid "Home button"
-msgstr ""
+msgstr "Kezdőlap gomb"
 
 #: lib/navigation/navigationbar.cpp:194
 msgctxt "NavigationBar|"
 msgid "Add tab button"
-msgstr ""
+msgstr "Lap hozzáadása gomb"
 
 #: lib/navigation/navigationbar.cpp:195
 msgctxt "NavigationBar|"
 msgid "Address and Search bar"
-msgstr ""
+msgstr "Cím- és keresősáv"
 
 #: lib/navigation/navigationbar.cpp:196
 msgctxt "NavigationBar|"
 msgid "Tools button"
-msgstr ""
+msgstr "Eszközök gomb"
 
 #: lib/navigation/navigationbar.cpp:197
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen button"
-msgstr ""
+msgstr "Kilépés a teljes képernyős módból gomb"
 
 #: lib/navigation/navigationbar.cpp:395 lib/navigation/navigationbar.cpp:429
 msgctxt "NavigationBar|"
 msgid "Clear history"
-msgstr ""
+msgstr "Előzmények törlése"
 
 #: lib/navigation/navigationbar.cpp:436
 msgctxt "NavigationBar|"
 msgid "Toolbars"
-msgstr ""
+msgstr "Eszköztárak"
 
 #: lib/navigation/navigationbar.cpp:437
 msgctxt "NavigationBar|"
 msgid "Sidebar"
-msgstr ""
+msgstr "Oldalsáv"
 
 #: lib/navigation/navigationbar.cpp:452 lib/navigation/navigationbar.cpp:466
 msgctxt "NavigationBar|"
 msgid "Configure Toolbar"
-msgstr ""
+msgstr "Eszköztár beállítása"
 
 #: lib/navigation/navigationbarconfigdialog.ui:14
 msgctxt "NavigationBarConfigDialog|"
 msgid "Configure Toolbar"
-msgstr ""
+msgstr "Eszköztár beállítása"
 
 #: lib/navigation/navigationbarconfigdialog.ui:62
 msgctxt "NavigationBarConfigDialog|"
 msgid "Show search bar"
-msgstr ""
+msgstr "Keresősáv megjelenítése"
 
 #: lib/navigation/navigationbarconfigdialog.ui:82
 msgctxt "NavigationBarConfigDialog|"
 msgid "Available items:"
-msgstr ""
+msgstr "Elérhető elemek:"
 
 #: lib/navigation/navigationbarconfigdialog.ui:89
 msgctxt "NavigationBarConfigDialog|"
 msgid "Current items:"
-msgstr ""
+msgstr "Jelenlegi elemek:"
 
 #: lib/navigation/reloadstopbutton.cpp:57
 msgctxt "ReloadStopButton|"
 msgid "Stop"
-msgstr ""
+msgstr "Leállítás"
 
 #: lib/navigation/reloadstopbutton.cpp:61
 msgctxt "ReloadStopButton|"
 msgid "Reload"
-msgstr ""
+msgstr "Újratöltés"
 
 #: lib/navigation/siteicon.cpp:40
 msgctxt "LocationBar|"
 msgid "Show information about this page"
-msgstr ""
+msgstr "Oldal jellemzőinek megjelenítése"
 
 #: lib/navigation/websearchbar.cpp:97
 msgctxt "WebSearchBar|"
 msgid "Paste And &Search"
-msgstr ""
+msgstr "Beillesztés és &keresés"
 
 #: lib/navigation/websearchbar.cpp:123
 #, qt-format
 msgctxt "WebSearchBar|"
 msgid "Add %1 ..."
-msgstr ""
+msgstr "%1 hozzáadása…"
 
 #: lib/navigation/websearchbar.cpp:127
 msgctxt "WebSearchBar|"
 msgid "Manage Search Engines"
-msgstr ""
+msgstr "Keresőmotorok kezelése"
 
 #: lib/navigation/websearchbar.cpp:257
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
-msgstr ""
+msgstr "Javaslatok megjelenítése"
 
 #: lib/navigation/websearchbar.cpp:262
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
-msgstr ""
+msgstr "Keresés a motor változtatásakor"
 
 #: lib/navigation/zoomlabel.cpp:36
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Nagyítás visszaállítása"
 
 #: lib/navigation/zoomlabel.cpp:61
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/network/networkmanager.cpp:91
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
-msgstr ""
+msgstr "SSL-tanúsítvány hiba."
 
 #: lib/network/networkmanager.cpp:92
 msgctxt "NetworkManager|"
@@ -2225,26 +2251,27 @@ msgid ""
 "The page you are trying to access has the following errors in the SSL "
 "certificate:"
 msgstr ""
+"A megnyitni kívánt oldal SSL-tanúsítványa a következő hibákat tartalmazza:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
-msgstr ""
+msgstr "Szeretne kivételt tenni ezzel a tanúsítvánnyal?"
 
 #: lib/network/networkmanager.cpp:124
 msgctxt "NetworkManager|"
 msgid "Authorization required"
-msgstr ""
+msgstr "Azonosítás szükséges"
 
 #: lib/network/networkmanager.cpp:131 lib/network/networkmanager.cpp:217
 msgctxt "NetworkManager|"
 msgid "Username: "
-msgstr ""
+msgstr "Felhasználónév: "
 
 #: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
 msgctxt "NetworkManager|"
 msgid "Password: "
-msgstr ""
+msgstr "Jelszó: "
 
 #: lib/network/networkmanager.cpp:138
 msgctxt "NetworkManager|"
@@ -2289,12 +2316,12 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:179
 msgctxt "FalkonSchemeReply|"
 msgid "About Falkon"
-msgstr ""
+msgstr "A Falkon névjegye"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:162
 msgctxt "FalkonSchemeReply|"
 msgid "<h1>Private Browsing</h1>"
-msgstr ""
+msgstr "<h1>Privát böngészés</h1>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:180
 #: lib/network/schemehandlers/falkonschemehandler.cpp:291
@@ -2305,43 +2332,43 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:181
 msgctxt "FalkonSchemeReply|"
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:184
 #: lib/network/schemehandlers/falkonschemehandler.cpp:301
 msgctxt "FalkonSchemeReply|"
 msgid "Version"
-msgstr ""
+msgstr "Verzió"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:191
 msgctxt "FalkonSchemeReply|"
 msgid "Main developer"
-msgstr ""
+msgstr "Fő fejlesztő"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:212
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial"
-msgstr ""
+msgstr "Gyorsindító"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:213
 msgctxt "FalkonSchemeReply|"
 msgid "Add New Page"
-msgstr ""
+msgstr "Új oldal hozzáadása"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:214
 msgctxt "FalkonSchemeReply|"
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:215
 msgctxt "FalkonSchemeReply|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:216
 msgctxt "FalkonSchemeReply|"
 msgid "Reload"
-msgstr ""
+msgstr "Újratöltés"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:217
 msgctxt "FalkonSchemeReply|"
@@ -2366,27 +2393,27 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:221
 msgctxt "FalkonSchemeReply|"
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:222
 msgctxt "FalkonSchemeReply|"
 msgid "Title"
-msgstr ""
+msgstr "Cím"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:223
 msgctxt "FalkonSchemeReply|"
 msgid "Apply"
-msgstr ""
+msgstr "Alkalmaz"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:224
 msgctxt "FalkonSchemeReply|"
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:225
 msgctxt "FalkonSchemeReply|"
 msgid "New Page"
-msgstr ""
+msgstr "Új oldal"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:226
 msgctxt "FalkonSchemeReply|"
@@ -2401,7 +2428,7 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:228
 msgctxt "FalkonSchemeReply|"
 msgid "Auto"
-msgstr ""
+msgstr "Automatikus"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:229
 msgctxt "FalkonSchemeReply|"
@@ -2481,22 +2508,22 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:269
 msgctxt "FalkonSchemeReply|"
 msgid "Window"
-msgstr ""
+msgstr "Ablak"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:270
 msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
-msgstr ""
+msgstr "Ablakok és lapok"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
-msgstr ""
+msgstr "Új munkamenet indítása"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:272
 msgctxt "FalkonSchemeReply|"
 msgid "Restore"
-msgstr ""
+msgstr "Visszaállítás"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:273
 msgctxt "FalkonSchemeReply|"
@@ -2535,7 +2562,7 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:296
 msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
-msgstr ""
+msgstr "Beállítások"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:297
 msgctxt "FalkonSchemeReply|"
@@ -2545,87 +2572,87 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:298
 msgctxt "FalkonSchemeReply|"
 msgid "Value"
-msgstr ""
+msgstr "Érték"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:299
 #: lib/network/schemehandlers/falkonschemehandler.cpp:335
 msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
-msgstr ""
+msgstr "Kiterjesztések"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:300
 msgctxt "FalkonSchemeReply|"
 msgid "Name"
-msgstr ""
+msgstr "Név"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:302
 msgctxt "FalkonSchemeReply|"
 msgid "Author"
-msgstr ""
+msgstr "Szerző"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:303
 msgctxt "FalkonSchemeReply|"
 msgid "Description"
-msgstr ""
+msgstr "Leírás"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:318
 msgctxt "FalkonSchemeReply|"
 msgid "Application version"
-msgstr ""
+msgstr "Alkalmazásverzió"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:325
 msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
-msgstr ""
+msgstr "Qt verzió"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:326
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr ""
+msgstr "QtWebEngine verzió"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:327
 msgctxt "FalkonSchemeReply|"
 msgid "Platform"
-msgstr ""
+msgstr "Platform"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:330
 msgctxt "FalkonSchemeReply|"
 msgid "Profile"
-msgstr ""
+msgstr "Profil"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:331
 msgctxt "FalkonSchemeReply|"
 msgid "Settings"
-msgstr ""
+msgstr "Beállítások"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:332
 msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
-msgstr ""
+msgstr "Mentett munkamenet"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:333
 msgctxt "FalkonSchemeReply|"
 msgid "Data"
-msgstr ""
+msgstr "Adatok"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:334
 msgctxt "FalkonSchemeReply|"
 msgid "Themes"
-msgstr ""
+msgstr "Témák"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:338
 #: lib/network/schemehandlers/falkonschemehandler.cpp:345
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
-msgstr ""
+msgstr "<b>Bekapcsolva</b>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:340
 #: lib/network/schemehandlers/falkonschemehandler.cpp:347
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
-msgstr ""
+msgstr "Kikapcsolva"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:354
 msgctxt "FalkonSchemeReply|"
@@ -2635,7 +2662,7 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:356
 msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
-msgstr ""
+msgstr "Windows 7 API"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:358
 msgctxt "FalkonSchemeReply|"
@@ -2660,7 +2687,7 @@ msgstr ""
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
 msgid "Preview"
-msgstr ""
+msgstr "Előnézet"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "QObject|"
@@ -2670,22 +2697,22 @@ msgstr ""
 #: lib/opensearch/editsearchengine.ui:20
 msgctxt "EditSearchEngine|"
 msgid "Name:"
-msgstr ""
+msgstr "Név:"
 
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "Url:"
-msgstr ""
+msgstr "URL:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
 msgid "Shortcut:"
-msgstr ""
+msgstr "Gyorsbillentyű:"
 
 #: lib/opensearch/editsearchengine.ui:54
 msgctxt "EditSearchEngine|"
 msgid "Icon:"
-msgstr ""
+msgstr "Ikon:"
 
 #: lib/opensearch/editsearchengine.ui:83
 msgctxt "EditSearchEngine|"
@@ -2711,12 +2738,12 @@ msgstr ""
 #: lib/opensearch/searchenginesmanager.cpp:314
 msgctxt "SearchEnginesDialog|"
 msgid "Add Search Engine"
-msgstr ""
+msgstr "Keresőmotor hozzáadása"
 
 #: lib/opensearch/searchenginesdialog.cpp:89
 msgctxt "SearchEnginesDialog|"
 msgid "Remove Engine"
-msgstr ""
+msgstr "Motor eltávolítása"
 
 #: lib/opensearch/searchenginesdialog.cpp:90
 #, qt-format
@@ -2729,62 +2756,62 @@ msgstr ""
 #: lib/opensearch/searchenginesdialog.cpp:107
 msgctxt "SearchEnginesDialog|"
 msgid "Edit Search Engine"
-msgstr ""
+msgstr "Keresőmotor szerkesztése"
 
 #: lib/opensearch/searchenginesdialog.ui:14
 msgctxt "SearchEnginesDialog|"
 msgid "Manage Search Engines"
-msgstr ""
+msgstr "Keresőmotorok kezelése"
 
 #: lib/opensearch/searchenginesdialog.ui:22
 msgctxt "SearchEnginesDialog|"
 msgid "Add..."
-msgstr ""
+msgstr "Hozzáadás…"
 
 #: lib/opensearch/searchenginesdialog.ui:29
 msgctxt "SearchEnginesDialog|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/opensearch/searchenginesdialog.ui:36
 msgctxt "SearchEnginesDialog|"
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 #: lib/opensearch/searchenginesdialog.ui:56
 msgctxt "SearchEnginesDialog|"
 msgid "Set as default"
-msgstr ""
+msgstr "Beállítás alapértelmezettként"
 
 #: lib/opensearch/searchenginesdialog.ui:63
 msgctxt "SearchEnginesDialog|"
 msgid "Up"
-msgstr ""
+msgstr "Fel"
 
 #: lib/opensearch/searchenginesdialog.ui:70
 msgctxt "SearchEnginesDialog|"
 msgid "Down"
-msgstr ""
+msgstr "Le"
 
 #: lib/opensearch/searchenginesdialog.ui:89
 msgctxt "SearchEnginesDialog|"
 msgid "Search Engine"
-msgstr ""
+msgstr "Keresőmotor"
 
 #: lib/opensearch/searchenginesdialog.ui:94
 msgctxt "SearchEnginesDialog|"
 msgid "Shortcut"
-msgstr ""
+msgstr "Gyorsbillentyű"
 
 #: lib/opensearch/searchenginesdialog.ui:104
 msgctxt "SearchEnginesDialog|"
 msgid "Defaults"
-msgstr ""
+msgstr "Alapértelmezések"
 
 #: lib/opensearch/searchenginesmanager.cpp:400
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine Added"
-msgstr ""
+msgstr "Keresőmotor hozzáadva"
 
 #: lib/opensearch/searchenginesmanager.cpp:400
 #, qt-format
@@ -2800,7 +2827,7 @@ msgstr ""
 #: lib/opensearch/searchenginesmanager.cpp:408
 msgctxt "SearchEnginesManager|"
 msgid "Error"
-msgstr ""
+msgstr "Hiba"
 
 #: lib/opensearch/searchenginesmanager.cpp:408
 #, qt-format
@@ -2812,63 +2839,63 @@ msgstr ""
 #, qt-format
 msgctxt "AboutDialog|"
 msgid "<p><b>Application version %1</b><br/>"
-msgstr ""
+msgstr "<p><b>Alkalmazásverzió: %1</b><br/>"
 
 #: lib/other/aboutdialog.cpp:58
 #, qt-format
 msgctxt "AboutDialog|"
 msgid "<b>QtWebEngine version %1</b></p>"
-msgstr ""
+msgstr "<b>QtWebEngine verzió: %1</b></p>"
 
 #: lib/other/aboutdialog.ui:14
 msgctxt "AboutDialog|"
 msgid "About Falkon"
-msgstr ""
+msgstr "A Falkon névjegye"
 
 #: lib/other/browsinglibrary.cpp:55
 msgctxt "BrowsingLibrary|"
 msgid "History"
-msgstr ""
+msgstr "Előzmények"
 
 #: lib/other/browsinglibrary.cpp:56
 msgctxt "BrowsingLibrary|"
 msgid "Bookmarks"
-msgstr ""
+msgstr "Könyvjelzők"
 
 #: lib/other/browsinglibrary.cpp:61
 msgctxt "BrowsingLibrary|"
 msgid "Import Bookmarks..."
-msgstr ""
+msgstr "Könyvjelzők importálása…"
 
 #: lib/other/browsinglibrary.cpp:62
 msgctxt "BrowsingLibrary|"
 msgid "Export Bookmarks..."
-msgstr ""
+msgstr "Könyvjelzők exportálása…"
 
 #: lib/other/browsinglibrary.ui:14
 msgctxt "BrowsingLibrary|"
 msgid "Library"
-msgstr ""
+msgstr "Könyvtár"
 
 #: lib/other/browsinglibrary.ui:64
 msgctxt "BrowsingLibrary|"
 msgid "Import and Export"
-msgstr ""
+msgstr "Importálás és exportálás"
 
 #: lib/other/browsinglibrary.ui:84
 msgctxt "BrowsingLibrary|"
 msgid "Search..."
-msgstr ""
+msgstr "Keresés…"
 
 #: lib/other/clearprivatedata.cpp:155
 msgctxt "ClearPrivateData|"
 msgid "Done"
-msgstr ""
+msgstr "Kész"
 
 #: lib/other/clearprivatedata.cpp:173
 msgctxt "ClearPrivateData|"
 msgid "Database Optimized"
-msgstr ""
+msgstr "Adatbázis optimalizálva"
 
 #: lib/other/clearprivatedata.cpp:173
 #, qt-format
@@ -2891,7 +2918,7 @@ msgstr ""
 #: lib/other/clearprivatedata.ui:27
 msgctxt "ClearPrivateData|"
 msgid "Edit cookies"
-msgstr ""
+msgstr "Sütik szerkesztése"
 
 #: lib/other/clearprivatedata.ui:38
 msgctxt "ClearPrivateData|"
@@ -2931,7 +2958,7 @@ msgstr ""
 #: lib/other/clearprivatedata.ui:94
 msgctxt "ClearPrivateData|"
 msgid "Clear"
-msgstr ""
+msgstr "Törlés"
 
 #: lib/other/clearprivatedata.ui:114
 msgctxt "ClearPrivateData|"
@@ -2951,32 +2978,32 @@ msgstr ""
 #: lib/other/clearprivatedata.ui:141
 msgctxt "ClearPrivateData|"
 msgid "Cookies"
-msgstr ""
+msgstr "Sütik"
 
 #: lib/other/clearprivatedata.ui:158
 msgctxt "ClearPrivateData|"
 msgid "Database"
-msgstr ""
+msgstr "Adatbázis"
 
 #: lib/other/iconchooser.cpp:41
 msgctxt "IconChooser|"
 msgid "Image files"
-msgstr ""
+msgstr "Képfájlok"
 
 #: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
 msgctxt "IconChooser|"
 msgid "Choose icon..."
-msgstr ""
+msgstr "Ikon kiválasztása…"
 
 #: lib/other/iconchooser.ui:20
 msgctxt "IconChooser|"
 msgid "From file"
-msgstr ""
+msgstr "Fájlból"
 
 #: lib/other/iconchooser.ui:29
 msgctxt "IconChooser|"
 msgid "Image (.png, .jpg, .jpeg, .gif)"
-msgstr ""
+msgstr "Képfájlok (.png, .jpg, .jpeg, .gif)"
 
 #: lib/other/iconchooser.ui:42
 msgctxt "IconChooser|"
@@ -3006,22 +3033,22 @@ msgstr ""
 #: lib/other/protocolhandlerdialog.ui:40
 msgctxt "ProtocolHandlerDialog|"
 msgid "Protocol"
-msgstr ""
+msgstr "Protokoll"
 
 #: lib/other/protocolhandlerdialog.ui:45
 msgctxt "ProtocolHandlerDialog|"
 msgid "Site"
-msgstr ""
+msgstr "Oldal"
 
 #: lib/other/protocolhandlerdialog.ui:68
 msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/other/registerqappassociation.cpp:110
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
-msgstr ""
+msgstr "Figyelmeztetés!"
 
 #: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
@@ -3033,67 +3060,67 @@ msgstr ""
 #: lib/other/siteinfo.cpp:68
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
-msgstr ""
+msgstr "<b>A kapcsolat titkosított.</b>"
 
 #: lib/other/siteinfo.cpp:70
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
-msgstr ""
+msgstr "<b>A kapcsolat nem titkosított.</b>"
 
 #: lib/other/siteinfo.cpp:175
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
-msgstr ""
+msgstr "Kép helyének másolása"
 
 #: lib/other/siteinfo.cpp:176
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
-msgstr ""
+msgstr "Kép nevének másolása"
 
 #: lib/other/siteinfo.cpp:178
 msgctxt "SiteInfo|"
 msgid "Save Image to Disk"
-msgstr ""
+msgstr "Kép mentése a lemezre"
 
 #: lib/other/siteinfo.cpp:190
 msgctxt "SiteInfo|"
 msgid "Copy Values"
-msgstr ""
+msgstr "Értékek másolása"
 
 #: lib/other/siteinfo.cpp:191
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
-msgstr ""
+msgstr "Címkék és értékek másolása"
 
 #: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
 msgid "Error!"
-msgstr ""
+msgstr "Hiba!"
 
 #: lib/other/siteinfo.cpp:229
 msgctxt "SiteInfo|"
 msgid "This preview is not available!"
-msgstr ""
+msgstr "Az előnézet nem érhető el!"
 
 #: lib/other/siteinfo.cpp:240
 msgctxt "SiteInfo|"
 msgid "Save image..."
-msgstr ""
+msgstr "Kép mentése…"
 
 #: lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
 msgid "Cannot write to file!"
-msgstr ""
+msgstr "Nem lehet írni a fájlba."
 
 #: lib/other/siteinfo.cpp:258
 msgctxt "SiteInfo|"
 msgid "Loading..."
-msgstr ""
+msgstr "Betöltés…"
 
 #: lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
 msgid "Preview not available"
-msgstr ""
+msgstr "Nem érhető el előnézet"
 
 #: lib/other/siteinfo.ui:14
 msgctxt "SiteInfo|"
@@ -3103,12 +3130,12 @@ msgstr ""
 #: lib/other/siteinfo.ui:47
 msgctxt "SiteInfo|"
 msgid "General"
-msgstr ""
+msgstr "Általános"
 
 #: lib/other/siteinfo.ui:52
 msgctxt "SiteInfo|"
 msgid "Media"
-msgstr ""
+msgstr "Média"
 
 #: lib/other/siteinfo.ui:84
 msgctxt "SiteInfo|"
@@ -3118,7 +3145,7 @@ msgstr ""
 #: lib/other/siteinfo.ui:113
 msgctxt "SiteInfo|"
 msgid "Encoding:"
-msgstr ""
+msgstr "Kódolás:"
 
 #: lib/other/siteinfo.ui:132
 msgctxt "SiteInfo|"
@@ -3133,7 +3160,7 @@ msgstr ""
 #: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
 msgid "Value"
-msgstr ""
+msgstr "Érték"
 
 #: lib/other/siteinfo.ui:168
 msgctxt "SiteInfo|"
@@ -3143,7 +3170,7 @@ msgstr ""
 #: lib/other/siteinfo.ui:241
 msgctxt "SiteInfo|"
 msgid "Image"
-msgstr ""
+msgstr "Kép"
 
 #: lib/other/siteinfo.ui:246
 msgctxt "SiteInfo|"
@@ -3153,7 +3180,7 @@ msgstr ""
 #: lib/other/siteinfo.ui:271
 msgctxt "SiteInfo|"
 msgid "<b>Preview</b>"
-msgstr ""
+msgstr "<b>Előnézet</b>"
 
 #: lib/other/siteinfowidget.cpp:42
 #, qt-format
@@ -3211,17 +3238,17 @@ msgstr ""
 #: lib/other/siteinfowidget.ui:71
 msgctxt "SiteInfoWidget|"
 msgid "More..."
-msgstr ""
+msgstr "Több…"
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
 msgid "Hide"
-msgstr ""
+msgstr "Elrejtés"
 
 #: lib/other/updater.cpp:151
 msgctxt "Updater|"
 msgid "Update available"
-msgstr ""
+msgstr "Frissítés érhető el"
 
 #: lib/other/updater.cpp:151
 msgctxt "Updater|"
@@ -3231,7 +3258,7 @@ msgstr ""
 #: lib/other/updater.cpp:163
 msgctxt "Updater|"
 msgid "Update"
-msgstr ""
+msgstr "Frissítés"
 
 #: lib/popupwindow/popupwebview.cpp:100
 msgctxt "PopupWebView|"
@@ -3241,7 +3268,7 @@ msgstr ""
 #: lib/popupwindow/popupwindow.cpp:83
 msgctxt "PopupWindow|"
 msgid "File"
-msgstr ""
+msgstr "Fájl"
 
 #: lib/popupwindow/popupwindow.cpp:84
 msgctxt "PopupWindow|"
