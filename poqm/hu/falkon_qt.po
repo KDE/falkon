@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-01-31 14:02+0100\n"
+"PO-Revision-Date: 2024-02-02 22:37+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.01.90\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2276,40 +2276,40 @@ msgstr "Jelszó: "
 #: lib/network/networkmanager.cpp:138
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
-msgstr ""
+msgstr "Felhasználónév és jelszó mentése ehhez az oldalhoz"
 
 #: lib/network/networkmanager.cpp:146
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
-msgstr ""
+msgstr "A(z) %1 felhasználónevet és jelszót kér. Az oldal válasza: „%2”"
 
 #: lib/network/networkmanager.cpp:210
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
-msgstr ""
+msgstr "Proxyazonosítás szükséges"
 
 #: lib/network/networkmanager.cpp:230
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
-msgstr ""
+msgstr "A(z) %1 proxy felhasználónevet és jelszót kér. "
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
 msgid "Start Page"
-msgstr ""
+msgstr "Kezdőlap"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:158
 msgctxt "FalkonSchemeReply|"
 msgid "Search on Web"
-msgstr ""
+msgstr "Keresés a weben"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:159
 msgctxt "FalkonSchemeReply|"
 msgid "Search results provided by DuckDuckGo"
-msgstr ""
+msgstr "A keresési eredményeket a DuckDuckGo biztosítja"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:161
 #: lib/network/schemehandlers/falkonschemehandler.cpp:178
@@ -2327,7 +2327,7 @@ msgstr "<h1>Privát böngészés</h1>"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:289
 msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
-msgstr ""
+msgstr "Verzióinformációk"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:181
 msgctxt "FalkonSchemeReply|"
@@ -2373,22 +2373,22 @@ msgstr "Újratöltés"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:217
 msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to remove this speed dial?"
-msgstr ""
+msgstr "Biztosan el szeretné távolítani ezt a gyorsindítót?"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:218
 msgctxt "FalkonSchemeReply|"
 msgid "Are you sure you want to reload all speed dials?"
-msgstr ""
+msgstr "Biztosan el szeretné távolítani az összes gyorsindítót?"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:219
 msgctxt "FalkonSchemeReply|"
 msgid "Load title from page"
-msgstr ""
+msgstr "Cím betöltése az oldalról"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:220
 msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
-msgstr ""
+msgstr "A gyorsindítóhoz a JavaScript engedélyezése szükséges."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:221
 msgctxt "FalkonSchemeReply|"
@@ -2418,12 +2418,12 @@ msgstr "Új oldal"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:226
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial settings"
-msgstr ""
+msgstr "Gyorsindító beállításai"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:227
 msgctxt "FalkonSchemeReply|"
 msgid "Placement: "
-msgstr ""
+msgstr "Elhelyezés: "
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:228
 msgctxt "FalkonSchemeReply|"
@@ -2433,72 +2433,75 @@ msgstr "Automatikus"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:229
 msgctxt "FalkonSchemeReply|"
 msgid "Cover"
-msgstr ""
+msgstr "Borító"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:230
 msgctxt "FalkonSchemeReply|"
 msgid "Fit"
-msgstr ""
+msgstr "Kitöltés"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:231
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Width"
-msgstr ""
+msgstr "Teljes szélességre"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:232
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Height"
-msgstr ""
+msgstr "Teljes magasságra"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:233
 msgctxt "FalkonSchemeReply|"
 msgid "Use custom wallpaper"
-msgstr ""
+msgstr "Egyéni háttérkép használata"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:234
 msgctxt "FalkonSchemeReply|"
 msgid "Click to select image"
-msgstr ""
+msgstr "Kattintson a kép kiválasztásához"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:235
 msgctxt "FalkonSchemeReply|"
 msgid "Maximum pages in a row:"
-msgstr ""
+msgstr "Maximális oldalszám egy sorban:"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:236
 msgctxt "FalkonSchemeReply|"
 msgid "Change size of pages:"
-msgstr ""
+msgstr "Oldalak méretének módosítása:"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:237
 msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
-msgstr ""
+msgstr "Gyorsindítók középre igazítása"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:262
 msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
-msgstr ""
+msgstr "Munkamenet visszaállítása"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:263
 msgctxt "FalkonSchemeReply|"
 msgid "Oops, Falkon crashed."
-msgstr ""
+msgstr "Hoppá, a Falkon összeomlott."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
 msgid "We apologize for this. Would you like to restore the last saved state?"
 msgstr ""
+"Elnézést kérünk ezért. Szeretné visszaállítani az utolsó mentett állapotot?"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:265
 msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
 msgstr ""
+"Próbáljon meg eltávolítani egy vagy több olyan lapot, amelyről úgy gondolja, "
+"hogy problémákat okoz"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:266
 msgctxt "FalkonSchemeReply|"
 msgid "Or you can start completely new session"
-msgstr ""
+msgstr "Vagy teljesen új munkamenetet is indíthat"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:267
 msgctxt "FalkonSchemeReply|"
@@ -2523,13 +2526,13 @@ msgstr "Visszaállítás"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
-msgstr ""
+msgstr "A JavaScript engedélyezése szükséges."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:287
 #: lib/network/schemehandlers/falkonschemehandler.cpp:288
 msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
-msgstr ""
+msgstr "Konfigurációs jellemzők"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:290
 msgctxt "FalkonSchemeReply|"
@@ -2538,21 +2541,24 @@ msgid ""
 "relevant for troubleshooting. Please include this information when "
 "submitting bug reports."
 msgstr ""
+"Ez az oldal információkat tartalmaz a Falkon jelenlegi konfigurációjáról - "
+"hibaelhárítás esetén hasznos. Kérjük, adja ezeket az információkat is, "
+"amikor hibajelentést küld."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:291
 msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
-msgstr ""
+msgstr "Böngészőazonosítás"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:292
 msgctxt "FalkonSchemeReply|"
 msgid "Paths"
-msgstr ""
+msgstr "Elérési utak"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:293
 msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
-msgstr ""
+msgstr "Összeállítás konfigurációja"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:294
 msgctxt "FalkonSchemeReply|"
@@ -2562,7 +2568,7 @@ msgstr "Beállítások"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:295
 msgctxt "FalkonSchemeReply|"
 msgid "Option"
-msgstr ""
+msgstr "Opció"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:296
 msgctxt "FalkonSchemeReply|"
@@ -2652,7 +2658,7 @@ msgstr "Kikapcsolva"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:352
 msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
-msgstr ""
+msgstr "Hibakeresési összeállítás"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:354
 msgctxt "FalkonSchemeReply|"
@@ -2662,22 +2668,22 @@ msgstr "Windows 7 API"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:356
 msgctxt "FalkonSchemeReply|"
 msgid "Portable build"
-msgstr ""
+msgstr "Hordozható összeállítás"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:374
 msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
-msgstr ""
+msgstr "Nincsenek elérhető kiterjesztések."
 
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Csak ebben a munkamenetben"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
 msgid "SSL Certificate Error!"
-msgstr ""
+msgstr "SSL-tanúsítvány hiba."
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -2687,7 +2693,7 @@ msgstr "Előnézet"
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "QObject|"
 msgid "Native System Notification"
-msgstr ""
+msgstr "Natív rendszerértesítés"
 
 #: lib/opensearch/editsearchengine.ui:20
 msgctxt "EditSearchEngine|"
@@ -2712,22 +2718,24 @@ msgstr "Ikon:"
 #: lib/opensearch/editsearchengine.ui:83
 msgctxt "EditSearchEngine|"
 msgid "Change..."
-msgstr ""
+msgstr "Módosítás…"
 
 #: lib/opensearch/editsearchengine.ui:106
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgstr ""
+"<b>Megjegyzés: </b>a(z) %s az URL-ben vagy a beküldött adatokban a keresett "
+"szöveget jelenti"
 
 #: lib/opensearch/editsearchengine.ui:123
 msgctxt "EditSearchEngine|"
 msgid "Post Data:"
-msgstr ""
+msgstr "Beküldött adatok:"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
 msgid "The file is not an OpenSearch 1.1 file."
-msgstr ""
+msgstr "A fájl nem egy OpenSearch 1.1 fájl."
 
 #: lib/opensearch/searchenginesdialog.cpp:52
 #: lib/opensearch/searchenginesmanager.cpp:314
@@ -2747,6 +2755,8 @@ msgid ""
 "You can't remove the default search engine.<br>Set a different engine as "
 "default before removing %1."
 msgstr ""
+"Az alapértelmezett keresőmotor nem távolítható el.<br>Állítson be egy másik "
+"motort alapértelmezettnek a(z) %1 eltávolítása előtt."
 
 #: lib/opensearch/searchenginesdialog.cpp:107
 msgctxt "SearchEnginesDialog|"
@@ -2812,12 +2822,12 @@ msgstr "Keresőmotor hozzáadva"
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine \"%1\" has been successfully added."
-msgstr ""
+msgstr "A(z) „%1” keresőmotor sikeresen hozzáadva."
 
 #: lib/opensearch/searchenginesmanager.cpp:407
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine is not valid!"
-msgstr ""
+msgstr "A keresőmotor érvénytelen."
 
 #: lib/opensearch/searchenginesmanager.cpp:408
 msgctxt "SearchEnginesManager|"
@@ -2828,7 +2838,7 @@ msgstr "Hiba"
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
-msgstr ""
+msgstr "Hiba a keresőmotor hozzáadásakor <br><b>Hibaüzenet: </b> %1"
 
 #: lib/other/aboutdialog.cpp:51
 #, qt-format
@@ -2899,16 +2909,18 @@ msgid ""
 "Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/"
 "><b>Database Size After: </b>%2"
 msgstr ""
+"Adatbázis sikeresen optimalizálva.<br/><br/><b>Korábbi méret: </b>%1<br/"
+"><b>Új méret: </b>%2"
 
 #: lib/other/clearprivatedata.ui:14
 msgctxt "ClearPrivateData|"
 msgid "Clear Recent History"
-msgstr ""
+msgstr "Előzmények törlése"
 
 #: lib/other/clearprivatedata.ui:20
 msgctxt "ClearPrivateData|"
 msgid "<b>Clear Recent History</b>"
-msgstr ""
+msgstr "<b>Előzmények törlése</b>"
 
 #: lib/other/clearprivatedata.ui:27
 msgctxt "ClearPrivateData|"
@@ -2918,37 +2930,37 @@ msgstr "Sütik szerkesztése"
 #: lib/other/clearprivatedata.ui:38
 msgctxt "ClearPrivateData|"
 msgid "Earlier Today"
-msgstr ""
+msgstr "Ma korábban"
 
 #: lib/other/clearprivatedata.ui:43
 msgctxt "ClearPrivateData|"
 msgid "Week"
-msgstr ""
+msgstr "A héten"
 
 #: lib/other/clearprivatedata.ui:48
 msgctxt "ClearPrivateData|"
 msgid "Month"
-msgstr ""
+msgstr "A hónapban"
 
 #: lib/other/clearprivatedata.ui:53
 msgctxt "ClearPrivateData|"
 msgid "All"
-msgstr ""
+msgstr "Mind"
 
 #: lib/other/clearprivatedata.ui:61
 msgctxt "ClearPrivateData|"
 msgid "Visited pages history from:"
-msgstr ""
+msgstr "Látogatott oldalak előzményei:"
 
 #: lib/other/clearprivatedata.ui:71
 msgctxt "ClearPrivateData|"
 msgid "Checked items will be cleared upon clicking the Clear button."
-msgstr ""
+msgstr "A bejelölt elemek a Törlés gombra kattintva törlődnek."
 
 #: lib/other/clearprivatedata.ui:78
 msgctxt "ClearPrivateData|"
 msgid "Local storage"
-msgstr ""
+msgstr "Helyi tároló"
 
 #: lib/other/clearprivatedata.ui:94
 msgctxt "ClearPrivateData|"
@@ -2958,17 +2970,17 @@ msgstr "Törlés"
 #: lib/other/clearprivatedata.ui:114
 msgctxt "ClearPrivateData|"
 msgid "Web databases"
-msgstr ""
+msgstr "Webes adatbázisok"
 
 #: lib/other/clearprivatedata.ui:124
 msgctxt "ClearPrivateData|"
 msgid "Cache"
-msgstr ""
+msgstr "Gyorsítótár"
 
 #: lib/other/clearprivatedata.ui:134
 msgctxt "ClearPrivateData|"
 msgid "Optimize database"
-msgstr ""
+msgstr "Adatbázis optimalizálása"
 
 #: lib/other/clearprivatedata.ui:141
 msgctxt "ClearPrivateData|"
@@ -3003,27 +3015,27 @@ msgstr "Képfájlok (.png, .jpg, .jpeg, .gif)"
 #: lib/other/iconchooser.ui:42
 msgctxt "IconChooser|"
 msgid "Choose file..."
-msgstr ""
+msgstr "Fájl kiválasztása…"
 
 #: lib/other/iconchooser.ui:52
 msgctxt "IconChooser|"
 msgid "From database"
-msgstr ""
+msgstr "Adatbázisból"
 
 #: lib/other/iconchooser.ui:61
 msgctxt "IconChooser|"
 msgid "Site Url:"
-msgstr ""
+msgstr "Oldal URL-címe:"
 
 #: lib/other/licenseviewer.cpp:30
 msgctxt "LicenseViewer|"
 msgid "License Viewer"
-msgstr ""
+msgstr "Licencmegjelenítő"
 
 #: lib/other/protocolhandlerdialog.ui:14
 msgctxt "ProtocolHandlerDialog|"
 msgid "Manage protocol handlers"
-msgstr ""
+msgstr "Protokollkezelők kezelése"
 
 #: lib/other/protocolhandlerdialog.ui:40
 msgctxt "ProtocolHandlerDialog|"
@@ -3051,6 +3063,8 @@ msgid ""
 "There are some problems. Please, reinstall Falkon.\n"
 "Maybe relaunch with administrator right do a magic for you! ;)"
 msgstr ""
+"Van néhány probléma. Kérjük, telepítse újra a Falkont.\n"
+"Talán a rendszergazdai joggal történő újraindítás csodát tesz! ;)"
 
 #: lib/other/siteinfo.cpp:68
 msgctxt "SiteInfo|"
@@ -3120,7 +3134,7 @@ msgstr "Nem érhető el előnézet"
 #: lib/other/siteinfo.ui:14
 msgctxt "SiteInfo|"
 msgid "Site Info"
-msgstr ""
+msgstr "Oldal jellemzői"
 
 #: lib/other/siteinfo.ui:47
 msgctxt "SiteInfo|"
@@ -3135,7 +3149,7 @@ msgstr "Média"
 #: lib/other/siteinfo.ui:84
 msgctxt "SiteInfo|"
 msgid "Site address:"
-msgstr ""
+msgstr "Oldal címe:"
 
 #: lib/other/siteinfo.ui:113
 msgctxt "SiteInfo|"
@@ -3145,12 +3159,12 @@ msgstr "Kódolás:"
 #: lib/other/siteinfo.ui:132
 msgctxt "SiteInfo|"
 msgid "Meta tags of site:"
-msgstr ""
+msgstr "Oldal metacímkéi:"
 
 #: lib/other/siteinfo.ui:149
 msgctxt "SiteInfo|"
 msgid "Tag"
-msgstr ""
+msgstr "Címke"
 
 #: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
@@ -3160,7 +3174,7 @@ msgstr "Érték"
 #: lib/other/siteinfo.ui:168
 msgctxt "SiteInfo|"
 msgid "<b>Security information</b>"
-msgstr ""
+msgstr "<b>Biztonsági jellemzők</b>"
 
 #: lib/other/siteinfo.ui:241
 msgctxt "SiteInfo|"
@@ -3170,7 +3184,7 @@ msgstr "Kép"
 #: lib/other/siteinfo.ui:246
 msgctxt "SiteInfo|"
 msgid "Image address"
-msgstr ""
+msgstr "Kép címe"
 
 #: lib/other/siteinfo.ui:271
 msgctxt "SiteInfo|"
@@ -3181,54 +3195,54 @@ msgstr "<b>Előnézet</b>"
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "<b>Site %1<b/>"
-msgstr ""
+msgstr "<b>%1 oldal<b/>"
 
 #: lib/other/siteinfowidget.cpp:45
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>secured</b>."
-msgstr ""
+msgstr "A kapcsolat ezzel az oldallal <b>biztonságos</b>."
 
 #: lib/other/siteinfowidget.cpp:49
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>unsecured</b>."
-msgstr ""
+msgstr "A kapcsolat ezzel az oldallal <b>nem biztonságos</b>."
 
 #: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "This is your <b>%1</b> visit of this site."
-msgstr ""
+msgstr "Ez az ön <b>%1</b> látogatása az oldalon."
 
 #: lib/other/siteinfowidget.cpp:68
 msgctxt "SiteInfoWidget|"
 msgid "You have <b>never</b> visited this site before."
-msgstr ""
+msgstr "Ön még <b>soha</b> nem kereste fel ezt az oldalt korábban."
 
 #: lib/other/siteinfowidget.cpp:75
 msgctxt "SiteInfoWidget|"
 msgid "first"
-msgstr ""
+msgstr "első"
 
 #: lib/other/siteinfowidget.cpp:78
 msgctxt "SiteInfoWidget|"
 msgid "second"
-msgstr ""
+msgstr "második"
 
 #: lib/other/siteinfowidget.cpp:81
 msgctxt "SiteInfoWidget|"
 msgid "third"
-msgstr ""
+msgstr "harmadik"
 
 #: lib/other/siteinfowidget.cpp:106
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "Register as <b>%1</b> links handler"
-msgstr ""
+msgstr "Regisztráció mint <b>%1</b> hivatkozáskezelő"
 
 #: lib/other/siteinfowidget.cpp:107
 msgctxt "SiteInfoWidget|"
 msgid "Register"
-msgstr ""
+msgstr "Regisztráció"
 
 #: lib/other/siteinfowidget.ui:71
 msgctxt "SiteInfoWidget|"
@@ -3248,7 +3262,7 @@ msgstr "Frissítés érhető el"
 #: lib/other/updater.cpp:151
 msgctxt "Updater|"
 msgid "New version of Falkon is ready to download."
-msgstr ""
+msgstr "A Falkon új verziója letölthető."
 
 #: lib/other/updater.cpp:163
 msgctxt "Updater|"
@@ -3258,7 +3272,7 @@ msgstr "Frissítés"
 #: lib/popupwindow/popupwebview.cpp:100
 msgctxt "PopupWebView|"
 msgid "Inspect Element"
-msgstr ""
+msgstr "Elem vizsgálata"
 
 #: lib/popupwindow/popupwindow.cpp:83
 msgctxt "PopupWindow|"
@@ -3268,129 +3282,129 @@ msgstr "Fájl"
 #: lib/popupwindow/popupwindow.cpp:84
 msgctxt "PopupWindow|"
 msgid "Send Link..."
-msgstr ""
+msgstr "Hivatkozás küldése…"
 
 #: lib/popupwindow/popupwindow.cpp:85
 msgctxt "PopupWindow|"
 msgid "&Print..."
-msgstr ""
+msgstr "&Nyomtatás…"
 
 #: lib/popupwindow/popupwindow.cpp:87
 msgctxt "PopupWindow|"
 msgid "Close"
-msgstr ""
+msgstr "Bezárás"
 
 #: lib/popupwindow/popupwindow.cpp:90
 msgctxt "PopupWindow|"
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 #: lib/popupwindow/popupwindow.cpp:99
 msgctxt "PopupWindow|"
 msgid "Find"
-msgstr ""
+msgstr "Keresés"
 
 #: lib/popupwindow/popupwindow.cpp:102
 msgctxt "PopupWindow|"
 msgid "View"
-msgstr ""
+msgstr "Nézet"
 
 #: lib/popupwindow/popupwindow.cpp:103
 msgctxt "PopupWindow|"
 msgid "&Stop"
-msgstr ""
+msgstr "Leállítá&s"
 
 #: lib/popupwindow/popupwindow.cpp:105
 msgctxt "PopupWindow|"
 msgid "&Reload"
-msgstr ""
+msgstr "Új&ratöltés"
 
 #: lib/popupwindow/popupwindow.cpp:108
 msgctxt "PopupWindow|"
 msgid "Zoom &In"
-msgstr ""
+msgstr "N&agyítás"
 
 #: lib/popupwindow/popupwindow.cpp:109
 msgctxt "PopupWindow|"
 msgid "Zoom &Out"
-msgstr ""
+msgstr "K&icsinyítés"
 
 #: lib/popupwindow/popupwindow.cpp:110
 msgctxt "PopupWindow|"
 msgid "Reset"
-msgstr ""
+msgstr "Visszaállítás"
 
 #: lib/popupwindow/popupwindow.cpp:112
 msgctxt "PopupWindow|"
 msgid "&Page Source"
-msgstr ""
+msgstr "Ol&dal forrása"
 
 #: lib/popupwindow/popupwindow.cpp:271
 #, qt-format
 msgctxt "PopupWindow|"
 msgid "%1 - Falkon"
-msgstr ""
+msgstr "%1 - Falkon"
 
 #: lib/preferences/acceptlanguage.cpp:99 lib/preferences/acceptlanguage.cpp:162
 #, qt-format
 msgctxt "AcceptLanguage|"
 msgid "Personal [%1]"
-msgstr ""
+msgstr "Személyes [%1]"
 
 #: lib/preferences/acceptlanguage.ui:14
 msgctxt "AcceptLanguage|"
 msgid "Preferred Languages"
-msgstr ""
+msgstr "Előnyben részesített nyelvek"
 
 #: lib/preferences/acceptlanguage.ui:25
 msgctxt "AcceptLanguage|"
 msgid "Add..."
-msgstr ""
+msgstr "Hozzáadás…"
 
 #: lib/preferences/acceptlanguage.ui:32
 msgctxt "AcceptLanguage|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/preferences/acceptlanguage.ui:39
 msgctxt "AcceptLanguage|"
 msgid "Up"
-msgstr ""
+msgstr "Fel"
 
 #: lib/preferences/acceptlanguage.ui:46
 msgctxt "AcceptLanguage|"
 msgid "Down"
-msgstr ""
+msgstr "Le"
 
 #: lib/preferences/addacceptlanguage.ui:14
 msgctxt "AddAcceptLanguage|"
 msgid "Add Language"
-msgstr ""
+msgstr "Nyelv hozzáadása"
 
 #: lib/preferences/addacceptlanguage.ui:20
 msgctxt "AddAcceptLanguage|"
 msgid "Choose preferred language for web sites"
-msgstr ""
+msgstr "Válassza ki a weboldalak alapértelmezett nyelvét"
 
 #: lib/preferences/addacceptlanguage.ui:32
 msgctxt "AddAcceptLanguage|"
 msgid "Personal definition:"
-msgstr ""
+msgstr "Egyéni beállítás:"
 
 #: lib/preferences/autofillmanager.cpp:67
 msgctxt "AutoFillManager|"
 msgid "Import Passwords from File..."
-msgstr ""
+msgstr "Jelszavak importálása fájlból…"
 
 #: lib/preferences/autofillmanager.cpp:68
 msgctxt "AutoFillManager|"
 msgid "Export Passwords to File..."
-msgstr ""
+msgstr "Jelszavak exportálása fájlba…"
 
 #: lib/preferences/autofillmanager.cpp:70
 msgctxt "AutoFillManager|"
 msgid "Search"
-msgstr ""
+msgstr "Keresés"
 
 #: lib/preferences/autofillmanager.cpp:82
 #: lib/preferences/autofillmanager.cpp:171
@@ -3398,349 +3412,351 @@ msgstr ""
 #: lib/preferences/autofillmanager.ui:140
 msgctxt "AutoFillManager|"
 msgid "Show Passwords"
-msgstr ""
+msgstr "Jelszavak megjelenítése"
 
 #: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend..."
-msgstr ""
+msgstr "Háttérprogram módosítása…"
 
 #: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend:"
-msgstr ""
+msgstr "Háttérprogram módosítása:"
 
 #: lib/preferences/autofillmanager.cpp:179
 msgctxt "AutoFillManager|"
 msgid "Are you sure that you want to show all passwords?"
-msgstr ""
+msgstr "Biztan meg szeretné jeleníteni az összes jelszót?"
 
 #: lib/preferences/autofillmanager.cpp:194
 msgctxt "AutoFillManager|"
 msgid "Hide Passwords"
-msgstr ""
+msgstr "Jelszavak elrejtése"
 
 #: lib/preferences/autofillmanager.cpp:232
 msgctxt "AutoFillManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Megerősítés"
 
 #: lib/preferences/autofillmanager.cpp:233
 msgctxt "AutoFillManager|"
 msgid "Are you sure you want to delete all passwords on your computer?"
-msgstr ""
+msgstr "Biztosan törölni szeretné az összes jelszót a számítógépéről?"
 
 #: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Edit password"
-msgstr ""
+msgstr "Jelszó szerkesztése"
 
 #: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Change password:"
-msgstr ""
+msgstr "Jelszó módosítása:"
 
 #: lib/preferences/autofillmanager.cpp:302
 #: lib/preferences/autofillmanager.cpp:313
 msgctxt "AutoFillManager|"
 msgid "Choose file..."
-msgstr ""
+msgstr "Fájl kiválasztása…"
 
 #: lib/preferences/autofillmanager.cpp:327
 msgctxt "AutoFillManager|"
 msgid "Cannot read file!"
-msgstr ""
+msgstr "Nem lehet olvasni a fájlt."
 
 #: lib/preferences/autofillmanager.cpp:336
 msgctxt "AutoFillManager|"
 msgid "Successfully imported"
-msgstr ""
+msgstr "Sikeresen importálva"
 
 #: lib/preferences/autofillmanager.cpp:336
 msgctxt "AutoFillManager|"
 msgid "Error while importing!"
-msgstr ""
+msgstr "Hiba az importáláskor."
 
 #: lib/preferences/autofillmanager.cpp:347
 msgctxt "AutoFillManager|"
 msgid "Cannot write to file!"
-msgstr ""
+msgstr "Nem lehet írni a fájlba."
 
 #: lib/preferences/autofillmanager.cpp:356
 msgctxt "AutoFillManager|"
 msgid "Successfully exported"
-msgstr ""
+msgstr "Sikeresen exportálva"
 
 #: lib/preferences/autofillmanager.cpp:373
 msgctxt "AutoFillManager|"
 msgid "Copy Username"
-msgstr ""
+msgstr "Felhasználónév másolása"
 
 #: lib/preferences/autofillmanager.cpp:374
 msgctxt "AutoFillManager|"
 msgid "Copy Password"
-msgstr ""
+msgstr "Jelszó másolása"
 
 #: lib/preferences/autofillmanager.cpp:376
 msgctxt "AutoFillManager|"
 msgid "Edit Password"
-msgstr ""
+msgstr "Jelszó szerkesztése"
 
 #: lib/preferences/autofillmanager.ui:25
 msgctxt "AutoFillManager|"
 msgid "Passwords are stored in:"
-msgstr ""
+msgstr "Jelszavak tárolási helye:"
 
 #: lib/preferences/autofillmanager.ui:35
 msgctxt "AutoFillManager|"
 msgid "Change backend"
-msgstr ""
+msgstr "Háttérprogram módosítása"
 
 #: lib/preferences/autofillmanager.ui:42
 msgctxt "AutoFillManager|"
 msgid "Backend options"
-msgstr ""
+msgstr "Háttérprogram beállításai"
 
 #: lib/preferences/autofillmanager.ui:71
 msgctxt "AutoFillManager|"
 msgid "Passwords"
-msgstr ""
+msgstr "Jelszavak"
 
 #: lib/preferences/autofillmanager.ui:87 lib/preferences/autofillmanager.ui:201
 msgctxt "AutoFillManager|"
 msgid "Server"
-msgstr ""
+msgstr "Kiszolgáló"
 
 #: lib/preferences/autofillmanager.ui:92
 msgctxt "AutoFillManager|"
 msgid "Username"
-msgstr ""
+msgstr "Felhasználónév"
 
 #: lib/preferences/autofillmanager.ui:97
 msgctxt "AutoFillManager|"
 msgid "Password"
-msgstr ""
+msgstr "Jelszó"
 
 #: lib/preferences/autofillmanager.ui:113
 msgctxt "AutoFillManager|"
 msgid "Import and Export"
-msgstr ""
+msgstr "Importálás és exportálás"
 
 #: lib/preferences/autofillmanager.ui:154
 msgctxt "AutoFillManager|"
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 #: lib/preferences/autofillmanager.ui:161
 #: lib/preferences/autofillmanager.ui:211
 msgctxt "AutoFillManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/preferences/autofillmanager.ui:168
 #: lib/preferences/autofillmanager.ui:218
 msgctxt "AutoFillManager|"
 msgid "Remove All"
-msgstr ""
+msgstr "Összes eltávolítása"
 
 #: lib/preferences/autofillmanager.ui:191
 msgctxt "AutoFillManager|"
 msgid "Exceptions"
-msgstr ""
+msgstr "Kivételek"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr ""
+msgstr "Kiszolgáló: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "Tanúsítványkivétel hozzáadása"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "A(z) %1 kiszolgáló már szerepel a listán"
 
 #: lib/preferences/certificatemanager.cpp:83
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr ""
+msgstr "Üres kiszolgáló"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Tanúsítványkivétel-kezelő"
 
 #: lib/preferences/certificatemanager.ui:22
 msgctxt "CertificateManager|"
 msgid "Add"
-msgstr ""
+msgstr "Hozzáadás"
 
 #: lib/preferences/certificatemanager.ui:29
 msgctxt "CertificateManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "Bejegyzés eltávolításához újraindítás szükséges"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
 msgid "JavaScript Options"
-msgstr ""
+msgstr "JavaScript beállítások"
 
 #: lib/preferences/jsoptions.ui:20
 msgctxt "JsOptions|"
 msgid "Allow JavaScript to:"
-msgstr ""
+msgstr "A JavaScript:"
 
 #: lib/preferences/jsoptions.ui:29
 msgctxt "JsOptions|"
 msgid "Open popup windows"
-msgstr ""
+msgstr "Megnyithat felugró ablakokat"
 
 #: lib/preferences/jsoptions.ui:36
 msgctxt "JsOptions|"
 msgid "Activate windows"
-msgstr ""
+msgstr "Aktiválhat ablakokat"
 
 #: lib/preferences/jsoptions.ui:43
 msgctxt "JsOptions|"
 msgid "Access clipboard"
-msgstr ""
+msgstr "Hozzáférhet a vágólaphoz"
 
 #: lib/preferences/jsoptions.ui:50
 msgctxt "JsOptions|"
 msgid "Paste from clipboard"
-msgstr ""
+msgstr "Beilleszthet a vágólapról"
 
 #: lib/preferences/pluginslist.ui:17
 msgctxt "PluginsList|"
 msgid "Enter name"
-msgstr ""
+msgstr "Név megadása"
 
 #: lib/preferences/pluginslist.ui:51
 msgctxt "PluginsList|"
 msgid "Settings"
-msgstr ""
+msgstr "Beállítások"
 
 #: lib/preferences/pluginslist.ui:61
 msgctxt "PluginsList|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/preferences/pluginslist.ui:81
 msgctxt "PluginsList|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
 msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/571/\">További kiterjesztések "
+"letöltése…</a>"
 
 #: lib/preferences/pluginsmanager.cpp:198
 msgctxt "PluginsManager|"
 msgid "Error!"
-msgstr ""
+msgstr "Hiba!"
 
 #: lib/preferences/pluginsmanager.cpp:198
 msgctxt "PluginsManager|"
 msgid "Cannot load extension!"
-msgstr ""
+msgstr "Nem lehet betölteni a kiterjesztést."
 
 #: lib/preferences/pluginsmanager.cpp:237
 msgctxt "PluginsManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Megerősítés"
 
 #: lib/preferences/pluginsmanager.cpp:238
 #, qt-format
 msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
-msgstr ""
+msgstr "Biztosan el szeretné távolítani ezt: „%1”?"
 
 #: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:613
 msgctxt "Preferences|"
 msgid "Default"
-msgstr ""
+msgstr "Alapértelmezés"
 
 #: lib/preferences/preferences.cpp:156
 msgctxt "Preferences|"
 msgid "Set as default"
-msgstr ""
+msgstr "Beállítás alapértelmezettként"
 
 #: lib/preferences/preferences.cpp:301
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/preferences/preferences.cpp:556
 msgctxt "Preferences|"
 msgid "Choose executable location..."
-msgstr ""
+msgstr "Végrehajtható fájl helyének megadása…"
 
 #: lib/preferences/preferences.cpp:599
 msgctxt "Preferences|"
 msgid "OSD Notification"
-msgstr ""
+msgstr "OSD értesítés"
 
 #: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
-msgstr ""
+msgstr "Húzza a képernyőn a kívánt helyre."
 
 #: lib/preferences/preferences.cpp:649
 msgctxt "Preferences|"
 msgid "Choose download location..."
-msgstr ""
+msgstr "Letöltés helyének megadása…"
 
 #: lib/preferences/preferences.cpp:663
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
-msgstr ""
+msgstr "Stíluslap helyének megadása…"
 
 #: lib/preferences/preferences.cpp:674
 msgctxt "Preferences|"
 msgid "Deleted"
-msgstr ""
+msgstr "Törölve"
 
 #: lib/preferences/preferences.cpp:782
 msgctxt "Preferences|"
 msgid "Choose cache path..."
-msgstr ""
+msgstr "Gyorsítótár elérési útjának megadása…"
 
 #: lib/preferences/preferences.cpp:813
 msgctxt "Preferences|"
 msgid "New Profile"
-msgstr ""
+msgstr "Új profil"
 
 #: lib/preferences/preferences.cpp:813
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
-msgstr ""
+msgstr "Adja meg az új profil nevét:"
 
 #: lib/preferences/preferences.cpp:823 lib/preferences/preferences.cpp:828
 msgctxt "Preferences|"
 msgid "Error!"
-msgstr ""
+msgstr "Hiba!"
 
 #: lib/preferences/preferences.cpp:823
 msgctxt "Preferences|"
 msgid "This profile already exists!"
-msgstr ""
+msgstr "Ez a profil már létezik."
 
 #: lib/preferences/preferences.cpp:828
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
-msgstr ""
+msgstr "Nem lehet létrehozni profilkönyvtárat."
 
 #: lib/preferences/preferences.cpp:839
 msgctxt "Preferences|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Megerősítés"
 
 #: lib/preferences/preferences.cpp:840
 #, qt-format
@@ -3758,132 +3774,132 @@ msgstr ""
 #: lib/preferences/preferences.cpp:1114
 msgctxt "Preferences|"
 msgid "Select Color"
-msgstr ""
+msgstr "Színválasztás"
 
 #: lib/preferences/preferences.ui:14
 msgctxt "Preferences|"
 msgid "Preferences"
-msgstr ""
+msgstr "Beállítások"
 
 #: lib/preferences/preferences.ui:60
 msgctxt "Preferences|"
 msgid "General"
-msgstr ""
+msgstr "Általános"
 
 #: lib/preferences/preferences.ui:65
 msgctxt "Preferences|"
 msgid "Appearance"
-msgstr ""
+msgstr "Megjelenés"
 
 #: lib/preferences/preferences.ui:70
 msgctxt "Preferences|"
 msgid "Tabs"
-msgstr ""
+msgstr "Lapok"
 
 #: lib/preferences/preferences.ui:75
 msgctxt "Preferences|"
 msgid "Browsing"
-msgstr ""
+msgstr "Böngészés"
 
 #: lib/preferences/preferences.ui:80
 msgctxt "Preferences|"
 msgid "Fonts"
-msgstr ""
+msgstr "Betűtípusok"
 
 #: lib/preferences/preferences.ui:85
 msgctxt "Preferences|"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Gyorsbillentyűk"
 
 #: lib/preferences/preferences.ui:90
 msgctxt "Preferences|"
 msgid "Downloads"
-msgstr ""
+msgstr "Letöltések"
 
 #: lib/preferences/preferences.ui:95
 msgctxt "Preferences|"
 msgid "Password Manager"
-msgstr ""
+msgstr "Jelszókezelő"
 
 #: lib/preferences/preferences.ui:100
 msgctxt "Preferences|"
 msgid "Privacy"
-msgstr ""
+msgstr "Adatvédelem"
 
 #: lib/preferences/preferences.ui:105
 msgctxt "Preferences|"
 msgid "Notifications"
-msgstr ""
+msgstr "Értesítések"
 
 #: lib/preferences/preferences.ui:110
 msgctxt "Preferences|"
 msgid "Extensions"
-msgstr ""
+msgstr "Kiterjesztések"
 
 #: lib/preferences/preferences.ui:115
 msgctxt "Preferences|"
 msgid "Spell Check"
-msgstr ""
+msgstr "Helyesírás-ellenőrzés"
 
 #: lib/preferences/preferences.ui:120
 msgctxt "Preferences|"
 msgid "Other"
-msgstr ""
+msgstr "Egyéb"
 
 #: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
 msgctxt "Preferences|"
 msgid "Use current"
-msgstr ""
+msgstr "Jelenlegi használata"
 
 #: lib/preferences/preferences.ui:243
 msgctxt "Preferences|"
 msgid "Create New"
-msgstr ""
+msgstr "Új létrehozása"
 
 #: lib/preferences/preferences.ui:259
 msgctxt "Preferences|"
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: lib/preferences/preferences.ui:285
 msgctxt "Preferences|"
 msgid "<b>Launching</b>"
-msgstr ""
+msgstr "<b>Indítás</b>"
 
 #: lib/preferences/preferences.ui:295
 msgctxt "Preferences|"
 msgid "After launch: "
-msgstr ""
+msgstr "Induláskor: "
 
 #: lib/preferences/preferences.ui:303
 msgctxt "Preferences|"
 msgid "Open blank page"
-msgstr ""
+msgstr "Üres oldal megnyitása"
 
 #: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
 msgctxt "Preferences|"
 msgid "Open homepage"
-msgstr ""
+msgstr "Kezdőlap megnyitása"
 
 #: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
 msgctxt "Preferences|"
 msgid "Open speed dial"
-msgstr ""
+msgstr "Gyorsindító megnyitása"
 
 #: lib/preferences/preferences.ui:318
 msgctxt "Preferences|"
 msgid "Restore session"
-msgstr ""
+msgstr "Munkamenet visszaállítása"
 
 #: lib/preferences/preferences.ui:323
 msgctxt "Preferences|"
 msgid "Select session"
-msgstr ""
+msgstr "Munkamenet kiválasztása"
 
 #: lib/preferences/preferences.ui:331
 msgctxt "Preferences|"
 msgid "Homepage: "
-msgstr ""
+msgstr "Kezdőlap: "
 
 #: lib/preferences/preferences.ui:352
 msgctxt "Preferences|"
@@ -3903,7 +3919,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:383
 msgctxt "Preferences|"
 msgid "<b>Profiles</b>"
-msgstr ""
+msgstr "<b>Profilok</b>"
 
 #: lib/preferences/preferences.ui:390
 msgctxt "Preferences|"
@@ -3918,7 +3934,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:404
 msgctxt "Preferences|"
 msgid "Active profile:"
-msgstr ""
+msgstr "Aktív profil:"
 
 #: lib/preferences/preferences.ui:418
 msgctxt "Preferences|"
@@ -3938,12 +3954,12 @@ msgstr ""
 #: lib/preferences/preferences.ui:480
 msgctxt "Preferences|"
 msgid "Themes"
-msgstr ""
+msgstr "Témák"
 
 #: lib/preferences/preferences.ui:502
 msgctxt "Preferences|"
 msgid "Advanced options"
-msgstr ""
+msgstr "Speciális beállítások"
 
 #: lib/preferences/preferences.ui:510
 msgctxt "Preferences|"
@@ -4033,17 +4049,17 @@ msgstr ""
 #: lib/preferences/preferences.ui:687
 msgctxt "Preferences|"
 msgid "Automatic"
-msgstr ""
+msgstr "Automatikus"
 
 #: lib/preferences/preferences.ui:692
 msgctxt "Preferences|"
 msgid "Always"
-msgstr ""
+msgstr "Mindig"
 
 #: lib/preferences/preferences.ui:697
 msgctxt "Preferences|"
 msgid "Never"
-msgstr ""
+msgstr "Soha"
 
 #: lib/preferences/preferences.ui:737
 msgctxt "Preferences|"
@@ -4058,22 +4074,22 @@ msgstr ""
 #: lib/preferences/preferences.ui:759
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
-msgstr ""
+msgstr "Előzmények és Könyvjelzők"
 
 #: lib/preferences/preferences.ui:764
 msgctxt "Preferences|"
 msgid "History"
-msgstr ""
+msgstr "Előzmények"
 
 #: lib/preferences/preferences.ui:769
 msgctxt "Preferences|"
 msgid "Bookmarks"
-msgstr ""
+msgstr "Könyvjelzők"
 
 #: lib/preferences/preferences.ui:774
 msgctxt "Preferences|"
 msgid "Nothing"
-msgstr ""
+msgstr "Semmi"
 
 #: lib/preferences/preferences.ui:800
 msgctxt "Preferences|"
@@ -4139,39 +4155,39 @@ msgstr ""
 #: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Fill"
-msgstr ""
+msgstr "Kitöltés"
 
 #: lib/preferences/preferences.ui:927
 msgctxt "Preferences|"
 msgid "Bottom"
-msgstr ""
+msgstr "Lent"
 
 #: lib/preferences/preferences.ui:932
 msgctxt "Preferences|"
 msgid "Top"
-msgstr ""
+msgstr "Fent"
 
 #: lib/preferences/preferences.ui:940
 msgctxt "Preferences|"
 msgid "Custom color:"
-msgstr ""
+msgstr "Egyéni szín:"
 
 #: lib/preferences/preferences.ui:956
 msgctxt "Preferences|"
 msgid "Select color"
-msgstr ""
+msgstr "Színválasztás"
 
 #: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
 #: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
 #: lib/preferences/preferences.ui:2749
 msgctxt "Preferences|"
 msgid "..."
-msgstr ""
+msgstr "…"
 
 #: lib/preferences/preferences.ui:966
 msgctxt "Preferences|"
 msgid "Reset"
-msgstr ""
+msgstr "Visszaállítás"
 
 #: lib/preferences/preferences.ui:1017
 msgctxt "Preferences|"
@@ -4283,12 +4299,12 @@ msgstr ""
 #: lib/preferences/preferences.ui:1241
 msgctxt "Preferences|"
 msgid "Maximum:"
-msgstr ""
+msgstr "Maximum:"
 
 #: lib/preferences/preferences.ui:1248
 msgctxt "Preferences|"
 msgid " MB"
-msgstr ""
+msgstr " MB"
 
 #: lib/preferences/preferences.ui:1264
 msgctxt "Preferences|"
@@ -4318,52 +4334,52 @@ msgstr ""
 #: lib/preferences/preferences.ui:1355
 msgctxt "Preferences|"
 msgid "Delete now"
-msgstr ""
+msgstr "Törlés most"
 
 #: lib/preferences/preferences.ui:1394
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
-msgstr ""
+msgstr "Proxybeállítás"
 
 #: lib/preferences/preferences.ui:1413
 msgctxt "Preferences|"
 msgid "System proxy configuration"
-msgstr ""
+msgstr "Rendszer proxybeállításainak használata"
 
 #: lib/preferences/preferences.ui:1436
 msgctxt "Preferences|"
 msgid "Manual configuration"
-msgstr ""
+msgstr "Kézi beállítás"
 
 #: lib/preferences/preferences.ui:1446
 msgctxt "Preferences|"
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #: lib/preferences/preferences.ui:1451
 msgctxt "Preferences|"
 msgid "SOCKS5"
-msgstr ""
+msgstr "SOCKS5"
 
 #: lib/preferences/preferences.ui:1462
 msgctxt "Preferences|"
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: lib/preferences/preferences.ui:1483
 msgctxt "Preferences|"
 msgid "Username:"
-msgstr ""
+msgstr "Felhasználónév:"
 
 #: lib/preferences/preferences.ui:1493
 msgctxt "Preferences|"
 msgid "Password:"
-msgstr ""
+msgstr "Jelszó:"
 
 #: lib/preferences/preferences.ui:1522
 msgctxt "Preferences|"
 msgid "No proxy"
-msgstr ""
+msgstr "Nincs proxy"
 
 #: lib/preferences/preferences.ui:1537
 msgctxt "Preferences|"
@@ -4428,7 +4444,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:1729
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
-msgstr ""
+msgstr "<b>Gyorsbillentyűk</b>"
 
 #: lib/preferences/preferences.ui:1736
 msgctxt "Preferences|"
@@ -4507,7 +4523,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:1891
 msgctxt "Preferences|"
 msgid "Arguments:"
-msgstr ""
+msgstr "Argumentumok:"
 
 #: lib/preferences/preferences.ui:1898
 msgctxt "Preferences|"
@@ -4537,27 +4553,27 @@ msgstr ""
 #: lib/preferences/preferences.ui:2014
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
-msgstr ""
+msgstr "<b>Sütik</b>"
 
 #: lib/preferences/preferences.ui:2021
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
-msgstr ""
+msgstr "<b>Egyéb</b>"
 
 #: lib/preferences/preferences.ui:2047
 msgctxt "Preferences|"
 msgid "JavaScript options"
-msgstr ""
+msgstr "JavaScript beállítások"
 
 #: lib/preferences/preferences.ui:2057
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
-msgstr ""
+msgstr "<b>JavaScript</b>"
 
 #: lib/preferences/preferences.ui:2070
 msgctxt "Preferences|"
 msgid "Cookies Manager"
-msgstr ""
+msgstr "Sütikezelő"
 
 #: lib/preferences/preferences.ui:2080
 msgctxt "Preferences|"
@@ -4572,7 +4588,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:2110
 msgctxt "Preferences|"
 msgid "Manage Cookies"
-msgstr ""
+msgstr "Sütik kezelése"
 
 #: lib/preferences/preferences.ui:2130
 msgctxt "Preferences|"
@@ -4597,12 +4613,12 @@ msgstr ""
 #: lib/preferences/preferences.ui:2189
 msgctxt "Preferences|"
 msgid " seconds"
-msgstr ""
+msgstr " másodperc"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
-msgstr ""
+msgstr "<b>Értesítések</b>"
 
 #: lib/preferences/preferences.ui:2234
 msgctxt "Preferences|"
@@ -4629,7 +4645,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:2297
 msgctxt "Preferences|"
 msgid "Preview"
-msgstr ""
+msgstr "Előnézet"
 
 #: lib/preferences/preferences.ui:2362
 msgctxt "Preferences|"
@@ -4676,7 +4692,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:2567
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
-msgstr ""
+msgstr "<b>Keresőmotorok kezelése</b>"
 
 #: lib/preferences/preferences.ui:2580
 msgctxt "Preferences|"
@@ -4686,7 +4702,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:2605
 msgctxt "Preferences|"
 msgid "Languages"
-msgstr ""
+msgstr "Nyelvek"
 
 #: lib/preferences/preferences.ui:2627
 msgctxt "Preferences|"
@@ -4696,7 +4712,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:2652
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Tanúsítványkivétel-kezelő"
 
 #: lib/preferences/preferences.ui:2674
 msgctxt "Preferences|"
@@ -4716,12 +4732,12 @@ msgstr ""
 #: lib/preferences/preferences.ui:2758
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
-msgstr ""
+msgstr "<b>Protokollkezelők kezelése</b>"
 
 #: lib/preferences/preferences.ui:2765
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr ""
+msgstr "<b>Tanúsítványkezelő</b>"
 
 #: lib/preferences/preferences.ui:2816
 msgctxt "Preferences|"
@@ -4731,17 +4747,17 @@ msgstr ""
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "Engedélyezett séma hozzáadása"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr ""
+msgstr "Séma:"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "Tiltott séma hozzáadása"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
@@ -4751,7 +4767,7 @@ msgstr ""
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "Engedélyezett sémák"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
@@ -4761,22 +4777,22 @@ msgstr ""
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
 msgctxt "SchemeManager|"
 msgid "Add"
-msgstr ""
+msgstr "Hozzáadás"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
 msgctxt "SchemeManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/preferences/schememanager.ui:68
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr ""
+msgstr "Tiltás"
 
 #: lib/preferences/schememanager.ui:98
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr ""
+msgstr "Tiltott sémák"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
@@ -4786,7 +4802,7 @@ msgstr ""
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "Megerősítés"
 
 #: lib/preferences/thememanager.cpp:101
 #, qt-format
@@ -4797,43 +4813,44 @@ msgstr ""
 #: lib/preferences/thememanager.ui:51
 msgctxt "ThemeManager|"
 msgid "<b>Name:</b>"
-msgstr ""
+msgstr "<b>Név:</b>"
 
 #: lib/preferences/thememanager.ui:61
 msgctxt "ThemeManager|"
 msgid "<b>Author:</b>"
-msgstr ""
+msgstr "<b>Szerző:</b>"
 
 #: lib/preferences/thememanager.ui:84
 msgctxt "ThemeManager|"
 msgid "<b>Description:</b>"
-msgstr ""
+msgstr "<b>Leírás:</b>"
 
 #: lib/preferences/thememanager.ui:128
 msgctxt "ThemeManager|"
 msgid "License"
-msgstr ""
+msgstr "Licenc"
 
 #: lib/preferences/thememanager.ui:155
 msgctxt "ThemeManager|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/preferences/thememanager.ui:175
 msgctxt "ThemeManager|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
 msgstr ""
+"<a href=\"https://store.kde.org/browse/cat/572/\">Új témák letöltése…</a>"
 
 #: lib/preferences/useragentdialog.cpp:99
 msgctxt "UserAgentDialog|"
 msgid "Add new site"
-msgstr ""
+msgstr "Új oldal hozzáadása"
 
 #: lib/preferences/useragentdialog.cpp:137
 msgctxt "UserAgentDialog|"
 msgid "Edit site"
-msgstr ""
+msgstr "Oldal szerkesztése"
 
 #: lib/preferences/useragentdialog.cpp:216
 msgctxt "UserAgentDialog|"
@@ -4863,7 +4880,7 @@ msgstr ""
 #: lib/preferences/useragentdialog.ui:92
 msgctxt "UserAgentDialog|"
 msgid "Site"
-msgstr ""
+msgstr "Oldal"
 
 #: lib/preferences/useragentdialog.ui:97
 msgctxt "UserAgentDialog|"
@@ -4873,37 +4890,37 @@ msgstr ""
 #: lib/preferences/useragentdialog.ui:107
 msgctxt "UserAgentDialog|"
 msgid "Add"
-msgstr ""
+msgstr "Hozzáadás"
 
 #: lib/preferences/useragentdialog.ui:114
 msgctxt "UserAgentDialog|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/preferences/useragentdialog.ui:134
 msgctxt "UserAgentDialog|"
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
 msgid "_cloned"
-msgstr ""
+msgstr "_klonozott"
 
 #: lib/session/sessionmanager.cpp:127
 msgctxt "SessionManager|"
 msgid "_renamed"
-msgstr ""
+msgstr "_atnevezett"
 
 #: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Clone Session"
-msgstr ""
+msgstr "Munkamenet klónozása"
 
 #: lib/session/sessionmanager.cpp:128
 msgctxt "SessionManager|"
 msgid "Rename Session"
-msgstr ""
+msgstr "Munkamenet átnevezése"
 
 #: lib/session/sessionmanager.cpp:129
 msgctxt "SessionManager|"
@@ -4915,7 +4932,7 @@ msgstr ""
 #: lib/session/sessionmanager.cpp:219
 msgctxt "SessionManager|"
 msgid "Error!"
-msgstr ""
+msgstr "Hiba!"
 
 #: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:171
 #: lib/session/sessionmanager.cpp:219
@@ -4937,7 +4954,7 @@ msgstr ""
 #: lib/session/sessionmanager.cpp:162
 msgctxt "SessionManager|"
 msgid "Save Session"
-msgstr ""
+msgstr "Munkamenet mentése"
 
 #: lib/session/sessionmanager.cpp:163
 msgctxt "SessionManager|"
@@ -4948,7 +4965,7 @@ msgstr ""
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Saved Session (%1)"
-msgstr ""
+msgstr "Mentett munkamenet (%1)"
 
 #: lib/session/sessionmanager.cpp:181
 msgctxt "SessionManager|"
@@ -4963,7 +4980,7 @@ msgstr ""
 #: lib/session/sessionmanager.cpp:200
 msgctxt "SessionManager|"
 msgid "Delete Session"
-msgstr ""
+msgstr "Munkamenet törlése"
 
 #: lib/session/sessionmanager.cpp:200
 #, qt-format
@@ -4974,7 +4991,7 @@ msgstr ""
 #: lib/session/sessionmanager.cpp:210
 msgctxt "SessionManager|"
 msgid "New Session"
-msgstr ""
+msgstr "Új munkamenet"
 
 #: lib/session/sessionmanager.cpp:211
 msgctxt "SessionManager|"
@@ -4985,7 +5002,7 @@ msgstr ""
 #, qt-format
 msgctxt "SessionManager|"
 msgid "New Session (%1)"
-msgstr ""
+msgstr "Új munkamenet (%1)"
 
 #: lib/session/sessionmanager.cpp:244
 msgctxt "SessionManager|"
@@ -5000,7 +5017,7 @@ msgstr ""
 #: lib/session/sessionmanager.cpp:291
 msgctxt "SessionManager|"
 msgid "Default Session"
-msgstr ""
+msgstr "Alapértelmezett munkamenet"
 
 #: lib/session/sessionmanager.cpp:394
 msgctxt "SessionManager|"
@@ -5011,12 +5028,12 @@ msgstr ""
 #, qt-format
 msgctxt "SessionManager|"
 msgid "%1 (last session)"
-msgstr ""
+msgstr "%1 (legutóbbi munkamenet)"
 
 #: lib/session/sessionmanagerdialog.cpp:140
 msgctxt "SessionManagerDialog|"
 msgid "Restore"
-msgstr ""
+msgstr "Visszaállítás"
 
 #: lib/session/sessionmanagerdialog.cpp:140
 msgctxt "SessionManagerDialog|"
@@ -5026,12 +5043,12 @@ msgstr ""
 #: lib/session/sessionmanagerdialog.ui:14
 msgctxt "SessionManagerDialog|"
 msgid "Session Manager"
-msgstr ""
+msgstr "Munkamenet-kezelő"
 
 #: lib/session/sessionmanagerdialog.ui:24
 msgctxt "SessionManagerDialog|"
 msgid "Session"
-msgstr ""
+msgstr "Munkamenet"
 
 #: lib/session/sessionmanagerdialog.ui:29
 msgctxt "SessionManagerDialog|"
@@ -5041,22 +5058,22 @@ msgstr ""
 #: lib/session/sessionmanagerdialog.ui:39
 msgctxt "SessionManagerDialog|"
 msgid "New"
-msgstr ""
+msgstr "Új"
 
 #: lib/session/sessionmanagerdialog.ui:46
 msgctxt "SessionManagerDialog|"
 msgid "Rename"
-msgstr ""
+msgstr "Átnevezés"
 
 #: lib/session/sessionmanagerdialog.ui:53
 msgctxt "SessionManagerDialog|"
 msgid "Clone"
-msgstr ""
+msgstr "Klónozás"
 
 #: lib/session/sessionmanagerdialog.ui:60
 msgctxt "SessionManagerDialog|"
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: lib/session/sessionmanagerdialog.ui:67
 msgctxt "SessionManagerDialog|"
@@ -5066,78 +5083,78 @@ msgstr ""
 #: lib/sidebar/bookmarkssidebar.cpp:103
 msgctxt "BookmarksSidebar|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "Megnyitás új lapon"
 
 #: lib/sidebar/bookmarkssidebar.cpp:104
 msgctxt "BookmarksSidebar|"
 msgid "Open in new window"
-msgstr ""
+msgstr "Megnyitás új ablakban"
 
 #: lib/sidebar/bookmarkssidebar.cpp:105
 msgctxt "BookmarksSidebar|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Megnyitás új privát ablakban"
 
 #: lib/sidebar/bookmarkssidebar.cpp:108
 msgctxt "BookmarksSidebar|"
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: lib/sidebar/bookmarkssidebar.ui:41
 msgctxt "BookmarksSideBar|"
 msgid "Search..."
-msgstr ""
+msgstr "Keresés…"
 
 #: lib/sidebar/historysidebar.cpp:85
 msgctxt "HistorySideBar|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "Megnyitás új lapon"
 
 #: lib/sidebar/historysidebar.cpp:86
 msgctxt "HistorySideBar|"
 msgid "Open in new window"
-msgstr ""
+msgstr "Megnyitás új ablakban"
 
 #: lib/sidebar/historysidebar.cpp:87
 msgctxt "HistorySideBar|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "Megnyitás új privát ablakban"
 
 #: lib/sidebar/historysidebar.cpp:90
 msgctxt "HistorySideBar|"
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: lib/sidebar/historysidebar.ui:32
 msgctxt "HistorySideBar|"
 msgid "Search..."
-msgstr ""
+msgstr "Keresés…"
 
 #: lib/sidebar/sidebar.cpp:66 lib/sidebar/sidebar.cpp:108
 msgctxt "SideBar|"
 msgid "Bookmarks"
-msgstr ""
+msgstr "Könyvjelzők"
 
 #: lib/sidebar/sidebar.cpp:73 lib/sidebar/sidebar.cpp:115
 msgctxt "SideBar|"
 msgid "History"
-msgstr ""
+msgstr "Előzmények"
 
 #: lib/tabwidget/tabbar.cpp:111
 msgctxt "BrowserWindow|"
 msgid "Close Tab"
-msgstr ""
+msgstr "Lap bezárása"
 
 #: lib/tabwidget/tabcontextmenu.cpp:63
 msgctxt "TabBar|"
 msgid "Don't ask again"
-msgstr ""
+msgstr "Ne kérdezze újra"
 
 #: lib/tabwidget/tabcontextmenu.cpp:80 lib/tabwidget/tabcontextmenu.cpp:91
 #: lib/tabwidget/tabcontextmenu.cpp:102
 msgctxt "TabContextMenu|"
 msgid "Close Tabs"
-msgstr ""
+msgstr "Lapok bezárása"
 
 #: lib/tabwidget/tabcontextmenu.cpp:80
 msgctxt "TabContextMenu|"
@@ -5267,52 +5284,52 @@ msgstr ""
 #: lib/tabwidget/tabicon.cpp:169
 msgctxt "TabIcon|"
 msgid "Unmute Tab"
-msgstr ""
+msgstr "Lap visszahangosítása"
 
 #: lib/tabwidget/tabicon.cpp:169
 msgctxt "TabIcon|"
 msgid "Mute Tab"
-msgstr ""
+msgstr "Lap némítása"
 
 #: lib/tabwidget/tabwidget.cpp:51
 msgctxt "TabWidget|"
 msgid "New Tab"
-msgstr ""
+msgstr "Új lap"
 
 #: lib/tabwidget/tabwidget.cpp:126
 msgctxt "TabWidget|"
 msgid "Closed tabs"
-msgstr ""
+msgstr "Bezárt lapok"
 
 #: lib/tabwidget/tabwidget.cpp:137
 msgctxt "TabWidget|"
 msgid "List of tabs"
-msgstr ""
+msgstr "Lapok listája"
 
 #: lib/tabwidget/tabwidget.cpp:294
 msgctxt "TabWidget|"
 msgid "Empty"
-msgstr ""
+msgstr "Üres"
 
 #: lib/tabwidget/tabwidget.cpp:298
 msgctxt "TabWidget|"
 msgid "Restore All Closed Tabs"
-msgstr ""
+msgstr "Összes bezárt lap visszaállítása"
 
 #: lib/tabwidget/tabwidget.cpp:299
 msgctxt "TabWidget|"
 msgid "Clear list"
-msgstr ""
+msgstr "Lista törlése"
 
 #: lib/tabwidget/tabwidget.h:106
 msgctxt "TabWidget|"
 msgid "New tab"
-msgstr ""
+msgstr "Új lap"
 
 #: lib/tools/aesinterface.cpp:146
 msgctxt "AesInterface|"
 msgid "Warning!"
-msgstr ""
+msgstr "Figyelmeztetés!"
 
 #: lib/tools/aesinterface.cpp:146
 msgctxt "AesInterface|"
@@ -5334,32 +5351,32 @@ msgstr ""
 #: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
 msgctxt "CertificateInfoWidget|"
 msgid "Common Name (CN):"
-msgstr ""
+msgstr "Köznapi név (CN):"
 
 #: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
 msgctxt "CertificateInfoWidget|"
 msgid "Organization (O):"
-msgstr ""
+msgstr "Szervezet (O):"
 
 #: lib/tools/certificateinfowidget.ui:58 lib/tools/certificateinfowidget.ui:133
 msgctxt "CertificateInfoWidget|"
 msgid "Organizational Unit (OU):"
-msgstr ""
+msgstr "Szervezeti egység (OU):"
 
 #: lib/tools/certificateinfowidget.ui:75
 msgctxt "CertificateInfoWidget|"
 msgid "Serial Number:"
-msgstr ""
+msgstr "Sorozatszám:"
 
 #: lib/tools/certificateinfowidget.ui:92
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Issued By</b>"
-msgstr ""
+msgstr "<b>Kibocsátó</b>"
 
 #: lib/tools/certificateinfowidget.ui:150
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Validity</b>"
-msgstr ""
+msgstr "<b>Érvényesség</b>"
 
 #: lib/tools/certificateinfowidget.ui:157
 msgctxt "CertificateInfoWidget|"
@@ -5369,37 +5386,37 @@ msgstr ""
 #: lib/tools/certificateinfowidget.ui:174
 msgctxt "CertificateInfoWidget|"
 msgid "Expires On:"
-msgstr ""
+msgstr "Lejárat:"
 
 #: lib/tools/html5permissions/html5permissionsdialog.cpp:63
 msgctxt "HTML5PermissionsDialog|"
 msgid "Allow"
-msgstr ""
+msgstr "Engedélyezés"
 
 #: lib/tools/html5permissions/html5permissionsdialog.cpp:72
 msgctxt "HTML5PermissionsDialog|"
 msgid "Deny"
-msgstr ""
+msgstr "Tiltás"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:14
 msgctxt "HTML5PermissionsDialog|"
 msgid "HTML5 Permissions"
-msgstr ""
+msgstr "HTML5 engedélyek"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:35
 msgctxt "HTML5PermissionsDialog|"
 msgid "Remove"
-msgstr ""
+msgstr "Eltávolítás"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:64
 msgctxt "HTML5PermissionsDialog|"
 msgid "Site"
-msgstr ""
+msgstr "Oldal"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:69
 msgctxt "HTML5PermissionsDialog|"
 msgid "Behaviour"
-msgstr ""
+msgstr "Működés"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:79
 msgctxt "HTML5PermissionsDialog|"
@@ -5409,22 +5426,22 @@ msgstr ""
 #: lib/tools/html5permissions/html5permissionsdialog.ui:87
 msgctxt "HTML5PermissionsDialog|"
 msgid "Notifications"
-msgstr ""
+msgstr "Értesítések"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:92
 msgctxt "HTML5PermissionsDialog|"
 msgid "Geolocation"
-msgstr ""
+msgstr "Földrajzi helyzet"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:97
 msgctxt "HTML5PermissionsDialog|"
 msgid "Microphone"
-msgstr ""
+msgstr "Mikrofon"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:102
 msgctxt "HTML5PermissionsDialog|"
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 #: lib/tools/html5permissions/html5permissionsdialog.ui:107
 msgctxt "HTML5PermissionsDialog|"
@@ -5502,37 +5519,37 @@ msgstr ""
 #: lib/tools/html5permissions/html5permissionsnotification.ui:43
 msgctxt "HTML5PermissionsNotification|"
 msgid "Remember"
-msgstr ""
+msgstr "Megjegyzés"
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:50
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow"
-msgstr ""
+msgstr "Engedélyezés"
 
 #: lib/tools/html5permissions/html5permissionsnotification.ui:57
 msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
-msgstr ""
+msgstr "Tiltás"
 
 #: lib/tools/qztools.cpp:378
 msgctxt "QObject|"
 msgid "Unknown size"
-msgstr ""
+msgstr "Ismeretlen méret"
 
 #: lib/tools/qztools.cpp:383
 msgctxt "QObject|"
 msgid "KB"
-msgstr ""
+msgstr "KB"
 
 #: lib/tools/qztools.cpp:388
 msgctxt "QObject|"
 msgid "MB"
-msgstr ""
+msgstr "MB"
 
 #: lib/tools/qztools.cpp:392
 msgctxt "QObject|"
 msgid "GB"
-msgstr ""
+msgstr "GB"
 
 #: lib/tools/qztools.cpp:851
 msgctxt "QObject|"
@@ -5542,7 +5559,7 @@ msgstr ""
 #: lib/tools/qztools.cpp:852
 msgctxt "QObject|"
 msgid "Arguments: "
-msgstr ""
+msgstr "Argumentumok: "
 
 #: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
@@ -5597,264 +5614,264 @@ msgstr ""
 #: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid "Reload page"
-msgstr ""
+msgstr "Oldal újratöltése"
 
 #: lib/webengine/webpage.cpp:483
 msgctxt "WebPage|"
 msgid "Choose file..."
-msgstr ""
+msgstr "Fájl kiválasztása…"
 
 #: lib/webengine/webpage.cpp:487
 msgctxt "WebPage|"
 msgid "Choose files..."
-msgstr ""
+msgstr "Fájlok kiválasztása…"
 
 #: lib/webengine/webpage.cpp:623
 msgctxt "WebPage|"
 msgid "JavaScript alert"
-msgstr ""
+msgstr "JavaScript figyelmeztetés"
 
 #: lib/webengine/webpage.cpp:632
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
-msgstr ""
+msgstr "Ne jelenjenek meg további párbeszédablakok ezen az oldalon"
 
 #: lib/webengine/webview.cpp:126
 msgctxt "WebView|"
 msgid "Empty Page"
-msgstr ""
+msgstr "Üres oldal"
 
 #: lib/webengine/webview.cpp:390
 #, qt-format
 msgctxt "WebView|"
 msgid "Falkon %1 (%2)"
-msgstr ""
+msgstr "Falkon %1 (%2)"
 
 #: lib/webengine/webview.cpp:699
 msgctxt "WebView|"
 msgid "No suggestions"
-msgstr ""
+msgstr "Nincsenek javaslatok"
 
 #: lib/webengine/webview.cpp:750
 msgctxt "WebView|"
 msgid "&Back"
-msgstr ""
+msgstr "&Vissza"
 
 #: lib/webengine/webview.cpp:754
 msgctxt "WebView|"
 msgid "&Forward"
-msgstr ""
+msgstr "&Előre"
 
 #: lib/webengine/webview.cpp:761
 msgctxt "WebView|"
 msgid "&Add New Page"
-msgstr ""
+msgstr "Új oldal hozzá&adása"
 
 #: lib/webengine/webview.cpp:762
 msgctxt "WebView|"
 msgid "&Configure Speed Dial"
-msgstr ""
+msgstr "Gyorsindító &beállítása"
 
 #: lib/webengine/webview.cpp:764
 msgctxt "WebView|"
 msgid "Reload All Dials"
-msgstr ""
+msgstr "Összes indító újratöltése"
 
 #: lib/webengine/webview.cpp:783
 msgctxt "WebView|"
 msgid "Book&mark page"
-msgstr ""
+msgstr "Oldal a kö&nyvjelzők közé"
 
 #: lib/webengine/webview.cpp:784
 msgctxt "WebView|"
 msgid "&Save page as..."
-msgstr ""
+msgstr "&Oldal mentése másként…"
 
 #: lib/webengine/webview.cpp:785
 msgctxt "WebView|"
 msgid "&Copy page link"
-msgstr ""
+msgstr "Oldal hivatkozásának &másolása"
 
 #: lib/webengine/webview.cpp:786
 msgctxt "WebView|"
 msgid "Send page link..."
-msgstr ""
+msgstr "Oldal hivatkozásának küldése…"
 
 #: lib/webengine/webview.cpp:788
 msgctxt "WebView|"
 msgid "Select &all"
-msgstr ""
+msgstr "Összes kij&elölése"
 
 #: lib/webengine/webview.cpp:794
 msgctxt "WebView|"
 msgid "Show so&urce code"
-msgstr ""
+msgstr "Fo&rráskód megjelenítése"
 
 #: lib/webengine/webview.cpp:798
 msgctxt "WebView|"
 msgid "Show info ab&out site"
-msgstr ""
+msgstr "&Oldal jellemzőinek megjelenítése"
 
 #: lib/webengine/webview.cpp:804
 msgctxt "WebView|"
 msgid "Open link in new &tab"
-msgstr ""
+msgstr "Hiva&tkozás megnyitása új lapon"
 
 #: lib/webengine/webview.cpp:809
 msgctxt "WebView|"
 msgid "Open link in new &window"
-msgstr ""
+msgstr "Hivatkozás megnyitása új a&blakban"
 
 #: lib/webengine/webview.cpp:810
 msgctxt "WebView|"
 msgid "Open link in &private window"
-msgstr ""
+msgstr "Hivatkozás megnyitása új &privát ablakban"
 
 #: lib/webengine/webview.cpp:815
 msgctxt "WebView|"
 msgid "B&ookmark link"
-msgstr ""
+msgstr "Könyvjelző a hivatk&ozásra"
 
 #: lib/webengine/webview.cpp:817
 msgctxt "WebView|"
 msgid "&Save link as..."
-msgstr ""
+msgstr "Hivatkozás menté&se másként…"
 
 #: lib/webengine/webview.cpp:818
 msgctxt "WebView|"
 msgid "Send link..."
-msgstr ""
+msgstr "Hivatkozás küldése…"
 
 #: lib/webengine/webview.cpp:819
 msgctxt "WebView|"
 msgid "&Copy link address"
-msgstr ""
+msgstr "&Hivatkozás címének másolása"
 
 #: lib/webengine/webview.cpp:832
 msgctxt "WebView|"
 msgid "Show i&mage"
-msgstr ""
+msgstr "Kép &megjelenítése"
 
 #: lib/webengine/webview.cpp:838
 msgctxt "WebView|"
 msgid "Copy image"
-msgstr ""
+msgstr "Kép másolása"
 
 #: lib/webengine/webview.cpp:839
 msgctxt "WebView|"
 msgid "Copy image ad&dress"
-msgstr ""
+msgstr "Ké&p címének másolása"
 
 #: lib/webengine/webview.cpp:841
 msgctxt "WebView|"
 msgid "&Save image as..."
-msgstr ""
+msgstr "Kép menté&se másként…"
 
 #: lib/webengine/webview.cpp:842
 msgctxt "WebView|"
 msgid "Send image..."
-msgstr ""
+msgstr "Kép küldése…"
 
 #: lib/webengine/webview.cpp:861
 msgctxt "WebView|"
 msgid "Send text..."
-msgstr ""
+msgstr "Szöveg küldése…"
 
 #: lib/webengine/webview.cpp:873
 msgctxt "WebView|"
 msgid "Go to &web address"
-msgstr ""
+msgstr "Ugrás a &weboldalra"
 
 #: lib/webengine/webview.cpp:887
 #, qt-format
 msgctxt "WebView|"
 msgid "Search \"%1 ..\" with %2"
-msgstr ""
+msgstr "„%1” keresése ezzel: %2"
 
 #: lib/webengine/webview.cpp:893
 msgctxt "WebView|"
 msgid "Search with..."
-msgstr ""
+msgstr "Keresés ezzel…"
 
 #: lib/webengine/webview.cpp:915
 msgctxt "WebView|"
 msgid "&Play"
-msgstr ""
+msgstr "&Lejátszás"
 
 #: lib/webengine/webview.cpp:915
 msgctxt "WebView|"
 msgid "&Pause"
-msgstr ""
+msgstr "&Szünet"
 
 #: lib/webengine/webview.cpp:916
 msgctxt "WebView|"
 msgid "Un&mute"
-msgstr ""
+msgstr "Visszaha&ngosítás"
 
 #: lib/webengine/webview.cpp:916
 msgctxt "WebView|"
 msgid "&Mute"
-msgstr ""
+msgstr "Né&mítás"
 
 #: lib/webengine/webview.cpp:918
 msgctxt "WebView|"
 msgid "&Copy Media Address"
-msgstr ""
+msgstr "Média &címének másolása"
 
 #: lib/webengine/webview.cpp:919
 msgctxt "WebView|"
 msgid "&Send Media Address"
-msgstr ""
+msgstr "Média címének küldé&se"
 
 #: lib/webengine/webview.cpp:920
 msgctxt "WebView|"
 msgid "Save Media To &Disk"
-msgstr ""
+msgstr "Média men&tése a lemezre"
 
 #: lib/webengine/webview.cpp:939
 msgctxt "WebView|"
 msgid "Create Search Engine"
-msgstr ""
+msgstr "Keresőmotor létrehozása"
 
 #: lib/webengine/webview.cpp:980
 msgctxt "WebView|"
 msgid "&Undo"
-msgstr ""
+msgstr "&Visszavonás"
 
 #: lib/webengine/webview.cpp:986
 msgctxt "WebView|"
 msgid "&Redo"
-msgstr ""
+msgstr "Új&ra"
 
 #: lib/webengine/webview.cpp:992
 msgctxt "WebView|"
 msgid "&Cut"
-msgstr ""
+msgstr "&Kivágás"
 
 #: lib/webengine/webview.cpp:998
 msgctxt "WebView|"
 msgid "&Copy"
-msgstr ""
+msgstr "&Másolás"
 
 #: lib/webengine/webview.cpp:1004
 msgctxt "WebView|"
 msgid "&Paste"
-msgstr ""
+msgstr "&Beillesztés"
 
 #: lib/webengine/webview.cpp:1010
 msgctxt "WebView|"
 msgid "Select All"
-msgstr ""
+msgstr "Összes kijelölése"
 
 #: lib/webengine/webview.cpp:1016
 msgctxt "WebView|"
 msgid "&Reload"
-msgstr ""
+msgstr "Új&ratöltés"
 
 #: lib/webengine/webview.cpp:1020
 msgctxt "WebView|"
 msgid "S&top"
-msgstr ""
+msgstr "Leállí&tás"
 
 #: lib/webtab/searchtoolbar.cpp:151
 #, qt-format
@@ -5865,37 +5882,37 @@ msgstr "%1 / %2"
 #: lib/webtab/searchtoolbar.ui:48
 msgctxt "SearchToolbar|"
 msgid "Find..."
-msgstr ""
+msgstr "Keresés…"
 
 #: lib/webtab/searchtoolbar.ui:58
 msgctxt "SearchToolbar|"
 msgid "Find the next match for the current search phrase"
-msgstr ""
+msgstr "A kifejezés következő előfordulásának keresése"
 
 #: lib/webtab/searchtoolbar.ui:61
 msgctxt "SearchToolbar|"
 msgid "&Next"
-msgstr ""
+msgstr "&Következő"
 
 #: lib/webtab/searchtoolbar.ui:74
 msgctxt "SearchToolbar|"
 msgid "Find the previous match for the current search phrase"
-msgstr ""
+msgstr "A kifejezés előző előfordulásának keresése"
 
 #: lib/webtab/searchtoolbar.ui:77
 msgctxt "SearchToolbar|"
 msgid "&Previous"
-msgstr ""
+msgstr "&Előző"
 
 #: lib/webtab/searchtoolbar.ui:90
 msgctxt "SearchToolbar|"
 msgid "&Match Case"
-msgstr ""
+msgstr "K&is– és nagybetűk egyeztetése"
 
 #: lib/webtab/tabbedwebview.cpp:194
 msgctxt "TabbedWebView|"
 msgid "Inspect Element"
-msgstr ""
+msgstr "Elem vizsgálata"
 
 #: lib/webtab/webtab.cpp:624
 #, qt-format
