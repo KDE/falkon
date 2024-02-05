@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-01-03 14:01-0600\n"
+"PO-Revision-Date: 2024-02-04 10:07-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -467,31 +467,26 @@ msgid "&Edit"
 msgstr ""
 
 #: lib/app/mainmenu.cpp:521
-#, fuzzy
 msgctxt "MainMenu|"
 msgid "&Undo"
 msgstr "ਵਾਪਸ ਲਵੋ(&U)"
 
 #: lib/app/mainmenu.cpp:523
-#, fuzzy
 msgctxt "MainMenu|"
 msgid "&Redo"
 msgstr "ਪਰਤਾਓ(&R)"
 
 #: lib/app/mainmenu.cpp:526
-#, fuzzy
 msgctxt "MainMenu|"
 msgid "&Cut"
 msgstr "ਕੱਟੋ(&t)"
 
 #: lib/app/mainmenu.cpp:528
-#, fuzzy
 msgctxt "MainMenu|"
 msgid "C&opy"
 msgstr "ਕਾਪੀ ਕਰੋ(&C)"
 
 #: lib/app/mainmenu.cpp:530
-#, fuzzy
 msgctxt "MainMenu|"
 msgid "&Paste"
 msgstr "ਚੇਪੋ(&P)"
@@ -507,10 +502,9 @@ msgid "&Find"
 msgstr ""
 
 #: lib/app/mainmenu.cpp:540
-#, fuzzy
 msgctxt "MainMenu|"
 msgid "&View"
-msgstr "ਵੇਖੋ"
+msgstr "ਵੇਖੋ(&V)"
 
 #: lib/app/mainmenu.cpp:543
 msgctxt "MainMenu|"
@@ -533,10 +527,9 @@ msgid "Sta&tus Bar"
 msgstr ""
 
 #: lib/app/mainmenu.cpp:558
-#, fuzzy
 msgctxt "MainMenu|"
 msgid "&Stop"
-msgstr "ਰੋਕੋ"
+msgstr "ਰੋਕੋ(&S)"
 
 #: lib/app/mainmenu.cpp:559
 msgctxt "MainMenu|"
@@ -609,10 +602,9 @@ msgid "&Extensions"
 msgstr ""
 
 #: lib/app/mainmenu.cpp:593
-#, fuzzy
 msgctxt "MainMenu|"
 msgid "&Help"
-msgstr "ਮਦਦ"
+msgstr "ਮਦਦ(&H)"
 
 #: lib/app/mainmenu.cpp:596
 msgctxt "MainMenu|"
@@ -645,58 +637,58 @@ msgid "Choose username to login"
 msgstr ""
 
 #: lib/autofill/autofillnotification.cpp:39
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "AutoFillNotification|"
 msgid "on %1"
-msgstr "ਚਾਲੂ"
+msgstr "%1 ਉੱਤੇ"
 
 #: lib/autofill/autofillnotification.cpp:43
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "for <b>%1</b>"
-msgstr ""
+msgstr "<b>%1</b> ਲਈ"
 
 #: lib/autofill/autofillnotification.cpp:47
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "Do you want Falkon to update saved password %1?"
-msgstr ""
+msgstr "ਕੀ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਕਿ ਫਾਲਕਨ %1 ਲਈ ਸੰਭਾਲੇ ਪਾਸਵਰਡ ਨੂੰ ਅੱਪਡੇਟ ਕਰੇ?"
 
 #: lib/autofill/autofillnotification.cpp:53
 #, qt-format
 msgctxt "AutoFillNotification|"
 msgid "Do you want Falkon to remember the password %1 %2?"
-msgstr ""
+msgstr "ਕੀ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਕਿ ਫਾਲਕਨ %1 %2 ਲਈ ਪਾਸਵਰਡ ਯਾਦ ਰੱਖੇ?"
 
 #: lib/autofill/autofillnotification.ui:69
 msgctxt "AutoFillNotification|"
 msgid "Update"
-msgstr ""
+msgstr "ਅੱਪਡੇਟ ਕਰੋ"
 
 #: lib/autofill/autofillnotification.ui:85
 msgctxt "AutoFillNotification|"
 msgid "Remember"
-msgstr ""
+msgstr "ਯਾਦ ਰੱਖੋ"
 
 #: lib/autofill/autofillnotification.ui:101
 msgctxt "AutoFillNotification|"
 msgid "Never For This Site"
-msgstr ""
+msgstr "ਇਹ ਸਾਈਟ ਲਈ ਕਦੇ ਨਹੀਂ"
 
 #: lib/autofill/autofillnotification.ui:117
 msgctxt "AutoFillNotification|"
 msgid "Not Now"
-msgstr ""
+msgstr "ਹੁਣ ਨਹੀਂ"
 
 #: lib/autofill/autofillwidget.ui:11
 msgctxt "AutoFillWidget|"
 msgid "Login as:"
-msgstr ""
+msgstr "ਇਸ ਵਜੋਂ ਲਾਗਇਨ:"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:257
 msgctxt "AutoFill|"
 msgid "Database (encrypted)"
-msgstr ""
+msgstr "ਡਾਟਾਬੇਸ (ਇੰਕ੍ਰਿਪਟ ਕੀਤਾ)"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
@@ -704,22 +696,22 @@ msgstr ""
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
 msgctxt "MasterPasswordDialog|"
 msgid "Warning!"
-msgstr ""
+msgstr "ਚੇਤਾਵਨੀ!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:546
 msgctxt "MasterPasswordDialog|"
 msgid "You entered a wrong password!"
-msgstr ""
+msgstr "ਤੁਸੀਂ ਗਲਤ ਪਾਸਵਰਡ ਦਿੱਤਾ ਸੀ!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
 msgctxt "MasterPasswordDialog|"
 msgid "New/Confirm password fields do not match!"
-msgstr ""
+msgstr "ਨਵਾਂ/ਤਸਦੀਕ ਪਾਸਵਰਡ ਖੇਤਰ ਮਿਲਦੇ ਨਹੀਂ ਹਨ!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:578
 msgctxt "AutoFill|"
 msgid "Warning!"
-msgstr ""
+msgstr "ਚੇਤਾਵਨੀ!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:579
 msgctxt "AutoFill|"
@@ -731,52 +723,53 @@ msgstr ""
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
 msgctxt "MasterPasswordDialog|"
 msgid "Are you sure you want to clear master password and decrypt data?"
-msgstr ""
+msgstr "ਕੀ ਤੁਸੀਂ ਮਾਸਟਰ ਪਾਸਵਰਡ ਨੂੰ ਮਿਟਾ ਕੇ ਡਾਟੇ ਨੂੰ ਡਿ-ਕ੍ਰਿਪਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
 msgctxt "MasterPasswordDialog|"
 msgid "Some data has not been decrypted. The master password was not cleared!"
 msgstr ""
+"ਕੁਝ ਡਾਟੇ ਨੂੰ ਡਿ-ਕ੍ਰਿਪਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ ਹੈ। ਮਾਸਟਰ ਪਾਸਵਰਡ ਨੂੰ ਮਿਟਾਇਆ ਨਹੀਂ ਗਿਆ ਸੀ!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:669
 msgctxt "AutoFill|"
 msgid "Enter Master Password"
-msgstr ""
+msgstr "ਮਾਸਟਰ ਪਾਸਵਰਡ ਦਿਓ"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:673
 msgctxt "AutoFill|"
 msgid "Permission is required, please enter Master Password:"
-msgstr ""
+msgstr "ਇਜਾਜ਼ਤ ਚਾਹੀਦੀ ਹੈ। ਆਪਣਾ ਮਾਸਟਰ ਪਾਸਵਰਡ ਦਿਓ:"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:679
 msgctxt "AutoFill|"
 msgid "Entered password is wrong!"
-msgstr ""
+msgstr "ਦਿੱਤਾ ਪਾਸਵਰਡ ਗਲਤ ਹੈ!"
 
 #: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
 msgctxt "AutoFill|"
 msgid "Database (plaintext)"
-msgstr ""
+msgstr "ਡਾਟਾਬੇਸ (ਸਰਲ-ਲਿਖਤ)"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:20
 msgctxt "MasterPasswordDialog|"
 msgid "Encrypted DataBase Settings"
-msgstr ""
+msgstr "ਇੰਕ੍ਰਿਪਟ ਕੀਤੇ ਡਾਟਾਬੇਸ ਦੀਆਂ ਸੈਟਿੰਗਾਂ"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:33
 msgctxt "MasterPasswordDialog|"
 msgid "Set/Change Master Password..."
-msgstr ""
+msgstr "ਮਾਸਟਰ ਪਾਸਵਰਡ ਲਾਓ/ਬਦਲੋ..."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:36
 msgctxt "MasterPasswordDialog|"
 msgid "This backend does not work without a master password."
-msgstr ""
+msgstr "ਇਹ ਬੈਕਐਂਡ ਬਿਨਾਂ ਮਾਸਟਰ ਪਾਸਵਰਡ ਦੇ ਕੰਮ ਨਹੀਂ ਕਰਦਾ ਹੈ।"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:43
 msgctxt "MasterPasswordDialog|"
 msgid "Clear Master Password..."
-msgstr ""
+msgstr "ਮਾਸਟਰ ਪਾਸਵਰਡ ਨੂੰ ਮਿਟਾਓ…"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:46
 msgctxt "MasterPasswordDialog|"
@@ -791,146 +784,146 @@ msgid ""
 "The Master Password is used to protect site passwords and form data. If you "
 "set a Master Password you will be asked to enter it once per session."
 msgstr ""
+"ਮਾਸਟਰ ਪਾਸਵਰਡ ਸਾਈਟ ਪਾਸਵਰਡਾਂ ਅਤੇ ਫਾਰਮ ਡਾਟੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਜੇ ਤੁਸੀਂ "
+"ਮਾਸਟਰ ਪਾਸਵਰਡ ਲਾਇਆ ਤਾਂ ਹਰ ਸ਼ੈਸ਼ਨ ਵਿੱਚ ਇੱਕ ਵਾਰ ਤੁਹਾਨੂੰ ਇਹ ਭਰਨ ਲਈ ਕਿਹਾ ਜਾਵੇਗਾ।"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:76
 msgctxt "MasterPasswordDialog|"
 msgid "Current Password:"
-msgstr ""
+msgstr "ਮੌਜੂਦਾ ਪਾਸਵਰਡ:"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:83
 msgctxt "MasterPasswordDialog|"
 msgid "New Password:"
-msgstr ""
+msgstr "ਨਵਾਂ ਪਾਸਵਰਡ:"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:90
-#, fuzzy
 msgctxt "MasterPasswordDialog|"
 msgid "Confirm Password:"
-msgstr "ਪਾਸਵਰਡ ਤਸਦੀਕ ਕਰੋ"
+msgstr "ਤਸਦੀਕੀ ਪਾਸਵਰਡ:"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:120
 msgctxt "MasterPasswordDialog|"
 msgid ""
 "<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
-msgstr ""
+msgstr "<b>ਸੂਚਨਾ:</b>ਮਾਸਟਰ ਪਾਸਵਰਡ ਮੁੜ-ਸੈੱਟ ਕਰਨ ਯੋਗ ਨਹੀਂ ਹੈ। ਇਸ ਨੂੰ ਨਾ ਭੁੱਲੋ ਜੀ।"
 
 #: lib/bookmarks/bookmarks.cpp:208
 msgctxt "Bookmarks|"
 msgid "Bookmarks Toolbar"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ ਟੂਲਬਾਰ"
 
 #: lib/bookmarks/bookmarks.cpp:209
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Toolbar"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ ਟੂਲਬਾਰ ਵਿੱਚ ਮੌਜੂਦ ਬੁੱਕਮਾਰਕ"
 
 #: lib/bookmarks/bookmarks.cpp:212
 msgctxt "Bookmarks|"
 msgid "Bookmarks Menu"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ ਮੇਨੂ"
 
 #: lib/bookmarks/bookmarks.cpp:213
 msgctxt "Bookmarks|"
 msgid "Bookmarks located in Bookmarks Menu"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ ਮੇਨੂ ਵਿੱਚ ਮੌਜੂਦ ਬੁੱਕਮਾਰਕ"
 
 #: lib/bookmarks/bookmarks.cpp:216
 msgctxt "Bookmarks|"
 msgid "Unsorted Bookmarks"
-msgstr ""
+msgstr "ਨਾ-ਲੜੀਬੱਧ ਕੀਤੇ ਬੁੱਕਮਾਰਕ"
 
 #: lib/bookmarks/bookmarks.cpp:217
 msgctxt "Bookmarks|"
 msgid "All other bookmarks"
-msgstr ""
+msgstr "ਸਭ ਹੋਰ ਬੁੱਕਮਾਰਕ"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.cpp:64
 msgctxt "BookmarksExportDialog|"
 msgid "Error!"
-msgstr ""
+msgstr "ਗਲਤੀ!"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:14
 msgctxt "BookmarksExportDialog|"
 msgid "Export Bookmarks"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ ਐਕਸਪੋਰਟ ਕਰੋ"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:20
 msgctxt "BookmarksExportDialog|"
 msgid "<b>Export Bookmarks</b>"
-msgstr ""
+msgstr "<b>ਬੁੱਕਮਾਰਕ ਐਕਸਪੋਰਟ ਕਰੋ</b>"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:27
 msgctxt "BookmarksExportDialog|"
 msgid "Export options"
-msgstr ""
+msgstr "ਐਕਸਪੋਰਟ ਚੋਣਾਂ"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
 msgctxt "BookmarksExportDialog|"
 msgid "Choose..."
-msgstr ""
+msgstr "...ਚੁਣੋ"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
 msgctxt "BookmarksExportDialog|"
 msgid "Output File:"
-msgstr ""
+msgstr "ਆਉਟਪੁ਼ੱਟ ਫਾਇਲ:"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:89
 msgctxt "BookmarksExportDialog|"
 msgid "Format:"
-msgstr ""
+msgstr "ਫਾਰਮੈਟ:"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:31
 msgctxt "BookmarksExporter|"
 msgid "HTML File"
-msgstr ""
+msgstr "HTML ਫਾਇਲ"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:37
 msgctxt "BookmarksExporter|"
 msgid "HTML Bookmarks"
-msgstr ""
+msgstr "HTML ਬੁੱਕਮਾਰਕ"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:38
 msgctxt "BookmarksExporter|"
 msgid "Choose file..."
-msgstr ""
+msgstr "…ਫਾਇਲ ਚੁਣੋ"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:47
 msgctxt "BookmarksExporter|"
 msgid "Cannot open file for writing!"
-msgstr ""
+msgstr "ਫਾਇਲ ਨੂੰ ਲਿਖਣ ਲਈ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ!"
 
 #: lib/bookmarks/bookmarksicon.cpp:37 lib/bookmarks/bookmarksicon.cpp:108
 msgctxt "BookmarksIcon|"
 msgid "Bookmark this Page"
-msgstr ""
+msgstr "ਇਸ ਸਫ਼ੇ ਨੂੰ ਬੁੱਕਮਾਰਕ ਕਰੋ"
 
 #: lib/bookmarks/bookmarksicon.cpp:100
 msgctxt "BookmarksIcon|"
 msgid "Edit this bookmark"
-msgstr ""
+msgstr "ਇਹ ਬੁੱਕਮਾਰਕ ਨੂੰ ਸੋਧੋ"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:113
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
 msgctxt "BookmarksImportDialog|"
 msgid "Error!"
-msgstr ""
+msgstr "ਗਲਤੀ!"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
 msgctxt "BookmarksImportDialog|"
 msgid "No bookmarks were found."
-msgstr ""
+msgstr "ਕੋਈ ਬੁੱਕਮਾਰਕ ਨਹੀਂ ਲੱਭਿਆ।"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:125
 msgctxt "BookmarksImportDialog|"
 msgid "Finish"
-msgstr ""
+msgstr "ਮੁਕੰਮਲ"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:157
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:270
-#, fuzzy
 msgctxt "BookmarksImportDialog|"
 msgid "Next >"
-msgstr "ਅੱਗੇ"
+msgstr "ਅੱਗੇ >"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:186
 #, qt-format
@@ -941,12 +934,12 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:20
 msgctxt "BookmarksImportDialog|"
 msgid "Import Bookmarks"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ ਇੰਪੋਰਟ ਕਰੋ"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:26
 msgctxt "BookmarksImportDialog|"
 msgid "<b>Import Bookmarks</b>"
-msgstr ""
+msgstr "<b>ਬੁੱਕਮਾਰਕ ਇੰਪੋਰਟ ਕਰੋ</b>"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:74
 msgctxt "BookmarksImportDialog|"
@@ -956,7 +949,7 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:83
 msgctxt "BookmarksImportDialog|"
 msgid "Html File"
-msgstr ""
+msgstr "HTML ਫਾਇਲ"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:95
 msgctxt "BookmarksImportDialog|"
@@ -966,13 +959,12 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:125
 msgctxt "BookmarksImportDialog|"
 msgid "Choose..."
-msgstr ""
+msgstr "...ਚੁਣੋ"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:257
-#, fuzzy
 msgctxt "BookmarksImportDialog|"
 msgid "< Back"
-msgstr "ਪਿੱਛੇ"
+msgstr "< ਪਿੱਛੇ"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -980,6 +972,8 @@ msgid ""
 "Google Chrome stores its bookmarks in <b>Bookmarks</b> text file. This file "
 "is usually located in"
 msgstr ""
+"ਗੂਗਲ ਕਰੋਮ ਇਸ ਦੇ ਬੁੱਕਮਾਰਕਾਂ ਨੂੰ <b>Bookmarks</b> ਲਿਖਤ ਫਾਇਲ ਵਿੱਚ ਸੰਭਾਲਦਾ ਹੈ। ਇਹ ਫਾਇਲ ਅਕਸਰ "
+"ਇੱਥੇ ਮੌਜੂਦ ਹੁੰਦੀ ਹੈ"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:50
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:57
@@ -988,14 +982,14 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
 msgctxt "BookmarksImporter|"
 msgid "Choose file..."
-msgstr ""
+msgstr "…ਫਾਇਲ ਨੂੰ ਚੁਣੋ"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:59
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:57
 msgctxt "BookmarksImporter|"
 msgid "Unable to open file."
-msgstr ""
+msgstr "ਫਾਇਲ ਖੋਲ੍ਹਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:76
 msgctxt "BookmarksImporter|"
@@ -1008,16 +1002,18 @@ msgid ""
 "Mozilla Firefox stores its bookmarks in <b>places.sqlite</b> SQLite "
 "database. This file is usually located in"
 msgstr ""
+"Mozilla Firefox ਇਸ ਦੇ ਬੁੱਕਮਾਰਕਾਂ ਨੂੰ <b>places.sqlite</b> SQLite ਡਾਟਾਬੇਸ ਵਿੱਚ ਸੰਭਾਲਦਾ "
+"ਹੈ। ਇਹ ਅਕਸਰ ਇੱਥੇ ਮੌਜੂਦ ਹੁੰਦੀ ਹੈ"
 
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:70
 msgctxt "BookmarksImportDialog|"
 msgid "File does not exist."
-msgstr ""
+msgstr "ਫਾਇਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:77
 msgctxt "BookmarksImportDialog|"
 msgid "Unable to open database. Is Firefox running?"
-msgstr ""
+msgstr "ਡਾਟਾਬੇਸ ਖੋਲ੍ਹਣ ਲਈ ਅਸਮਰੱਥ। ਕੀ ਫਾਇਰਫਾਕਸ ਚੱਲ ਰਿਹਾ ਹੈ?"
 
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:32
 msgctxt "BookmarksImporter|"
@@ -1029,7 +1025,7 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:43
 msgctxt "BookmarksImporter|"
 msgid "HTML Bookmarks"
-msgstr ""
+msgstr "HTML ਬੁੱਕਮਾਰਕ"
 
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -1041,7 +1037,7 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
 msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
-msgstr ""
+msgstr "ਡਾਇਰੈਕਟਰੀ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -1063,37 +1059,36 @@ msgstr ""
 #: lib/bookmarks/bookmarksmanager.cpp:105
 msgctxt "BookmarksManager|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "ਨਵੀਂ ਟੈਬ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
 #: lib/bookmarks/bookmarksmanager.cpp:106
 msgctxt "BookmarksManager|"
 msgid "Open in new window"
-msgstr ""
+msgstr "ਨਵੀਂ ਵਿੰਡੋ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
 #: lib/bookmarks/bookmarksmanager.cpp:107
 msgctxt "BookmarksManager|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "ਨਵੀਂ ਪ੍ਰਾਈਵੇਟ ਵਿੰਡੋ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
 #: lib/bookmarks/bookmarksmanager.cpp:110
 #: lib/bookmarks/bookmarksmanager.cpp:177
 msgctxt "BookmarksManager|"
 msgid "New Bookmark"
-msgstr ""
+msgstr "ਨਵਾਂ ਬੁੱਕਮਾਰਕ"
 
 #: lib/bookmarks/bookmarksmanager.cpp:111
 #: lib/bookmarks/bookmarksmanager.cpp:185
 msgctxt "BookmarksManager|"
 msgid "New Folder"
-msgstr ""
+msgstr "ਨਵਾਂ ਫੋਲਡਰ"
 
 #: lib/bookmarks/bookmarksmanager.cpp:112
 msgctxt "BookmarksManager|"
 msgid "New Separator"
-msgstr ""
+msgstr "ਨਵਾਂ ਵੱਖਰੇਵਾਂ"
 
 #: lib/bookmarks/bookmarksmanager.cpp:114
-#, fuzzy
 msgctxt "BookmarksManager|"
 msgid "Delete"
 msgstr "ਹਟਾਓ"
@@ -1101,51 +1096,49 @@ msgstr "ਹਟਾਓ"
 #: lib/bookmarks/bookmarksmanager.ui:14
 msgctxt "BookmarksManager|"
 msgid "Bookmarks"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ"
 
 #: lib/bookmarks/bookmarksmanager.ui:32
-#, fuzzy
 msgctxt "BookmarksManager|"
 msgid "Title:"
-msgstr "ਟਾਈਟਲ"
+msgstr "ਟਾਈਟਲ:"
 
 #: lib/bookmarks/bookmarksmanager.ui:42
 msgctxt "BookmarksManager|"
 msgid "Address:"
-msgstr ""
+msgstr "ਐਡਰੈਸ:"
 
 #: lib/bookmarks/bookmarksmanager.ui:52
 msgctxt "BookmarksManager|"
 msgid "Keyword:"
-msgstr ""
+msgstr "ਸ਼ਬਦ:"
 
 #: lib/bookmarks/bookmarksmanager.ui:62
 msgctxt "BookmarksManager|"
 msgid "Description"
-msgstr ""
+msgstr "ਵਰਣਨ"
 
 #: lib/bookmarks/bookmarksmenu.cpp:166
 msgctxt "BookmarksMenu|"
 msgid "&Bookmarks"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ(&B)"
 
 #: lib/bookmarks/bookmarksmenu.cpp:168
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &This Page"
-msgstr ""
+msgstr "ਇਸ ਸਫ਼ੇ ਨੂੰ ਬੁੱਕਮਾਰਕ ਕਰੋ(&T)"
 
 #: lib/bookmarks/bookmarksmenu.cpp:169
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &All Tabs"
-msgstr ""
+msgstr "ਸਭ ਟੈਬਾਂ ਨੂੰ ਬੁੱਕਮਾਰਕ ਕਰੋ(&A)"
 
 #: lib/bookmarks/bookmarksmenu.cpp:170
 msgctxt "BookmarksMenu|"
 msgid "Organize &Bookmarks"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕਾਂ ਦਾ ਇੰਤਜ਼ਾਮ ਕਰੋ(&B)"
 
 #: lib/bookmarks/bookmarksmodel.cpp:148
-#, fuzzy
 msgctxt "BookmarksModel|"
 msgid "Title"
 msgstr "ਟਾਈਟਲ"
@@ -1153,35 +1146,34 @@ msgstr "ਟਾਈਟਲ"
 #: lib/bookmarks/bookmarksmodel.cpp:150
 msgctxt "BookmarksModel|"
 msgid "Address"
-msgstr ""
+msgstr "ਐਡਰੈੱਸ"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:74
 msgctxt "BookmarksToolbar|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "ਨਵੀਂ ਟੈਬ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:75
 msgctxt "BookmarksToolbar|"
 msgid "Open in new window"
-msgstr ""
+msgstr "ਨਵੀਂ ਵਿੰਡੋ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:76
 msgctxt "BookmarksToolbar|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "ਨਵੀਂ ਪ੍ਰਾਈਵੇਟ ਵਿੰਡੋ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:78 lib/bookmarks/bookmarkstoolbar.cpp:186
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
-msgstr ""
+msgstr "ਨਵਾਂ ਫੋਲਡਰ"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:79
 msgctxt "BookmarksToolbar|"
 msgid "Edit"
-msgstr ""
+msgstr "ਸੋਧੋ"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:80
-#, fuzzy
 msgctxt "BookmarksToolbar|"
 msgid "Delete"
 msgstr "ਹਟਾਓ"
@@ -1197,16 +1189,15 @@ msgid "Show Only Text"
 msgstr ""
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:186
-#, fuzzy
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
-msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ:"
+msgstr "ਫੋਲਡਰ ਨਾਂ ਦਿਓ:"
 
 #: lib/bookmarks/bookmarkstools.cpp:76
 #, qt-format
 msgctxt "BookmarksFoldersMenu|"
 msgid "Choose %1"
-msgstr ""
+msgstr "%1 ਚੁਣੋ"
 
 #: lib/bookmarks/bookmarkstools.cpp:153
 msgctxt "Bookmarks|"
@@ -1229,35 +1220,34 @@ msgid "Bookmark All Tabs"
 msgstr ""
 
 #: lib/bookmarks/bookmarkstools.cpp:239
-#, fuzzy
 msgctxt "Bookmarks|"
 msgid "Title:"
-msgstr "ਟਾਈਟਲ"
+msgstr "ਟਾਈਟਲ:"
 
 #: lib/bookmarks/bookmarkstools.cpp:242
 msgctxt "Bookmarks|"
 msgid "Address:"
-msgstr ""
+msgstr "ਐਡਰੈਸ:"
 
 #: lib/bookmarks/bookmarkstools.cpp:244
 msgctxt "Bookmarks|"
 msgid "Keyword:"
-msgstr ""
+msgstr "ਸ਼ਬਦ:"
 
 #: lib/bookmarks/bookmarkstools.cpp:247
 msgctxt "Bookmarks|"
 msgid "Description:"
-msgstr ""
+msgstr "ਵਰਣਨ:"
 
 #: lib/bookmarks/bookmarkstools.cpp:252
 msgctxt "Bookmarks|"
 msgid "Edit Bookmark"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ ਨੂੰ ਸੋਧੋ"
 
 #: lib/bookmarks/bookmarkstools.cpp:344
 msgctxt "Bookmarks|"
 msgid "Confirmation"
-msgstr ""
+msgstr "ਪੁਸ਼ਟੀ"
 
 #: lib/bookmarks/bookmarkstools.cpp:345
 #, qt-format
@@ -1268,12 +1258,12 @@ msgstr ""
 #: lib/bookmarks/bookmarkstools.cpp:440
 msgctxt "Bookmarks|"
 msgid "Empty"
-msgstr ""
+msgstr "ਖਾਲੀ"
 
 #: lib/bookmarks/bookmarkswidget.cpp:98
 msgctxt "BookmarksWidget|"
 msgid "Update Bookmark"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ"
 
 #: lib/bookmarks/bookmarkswidget.cpp:112 lib/bookmarks/bookmarkswidget.ui:33
 msgctxt "BookmarksWidget|"
@@ -1293,23 +1283,22 @@ msgstr ""
 #: lib/bookmarks/bookmarkswidget.ui:20
 msgctxt "BookmarksWidget|"
 msgid "Add to Bookmarks"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ ਵਿੱਚ ਜੋੜੋ"
 
 #: lib/cookies/cookiemanager.cpp:78
-#, fuzzy
 msgctxt "CookieManager|"
 msgid "Search"
-msgstr "ਖੋਜੋ..."
+msgstr "ਖੋਜੋ"
 
 #: lib/cookies/cookiemanager.cpp:105
 msgctxt "CookieManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "ਪੁਸ਼ਟੀ"
 
 #: lib/cookies/cookiemanager.cpp:106
 msgctxt "CookieManager|"
 msgid "Are you sure you want to delete all cookies on your computer?"
-msgstr ""
+msgstr "ਕੀ ਤੁਸੀਂ ਆਪਣੇ ਕੰਪਿਊਟਰ ਤੋਂ ਸਾਰੇ ਕੂਕੀਜ਼ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
 #: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
 #: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
@@ -1319,111 +1308,110 @@ msgstr ""
 #: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
 msgctxt "CookieManager|"
 msgid "<cookie not selected>"
-msgstr ""
+msgstr "<ਕੂਕੀ ਨਹੀਂ ਚੁਣਿਆ>"
 
 #: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
 #: lib/cookies/cookiemanager.ui:245
 msgctxt "CookieManager|"
 msgid "Remove cookies"
-msgstr ""
+msgstr "ਕੂਕੀਜ਼ ਨੂੰ ਹਟਾਓ"
 
 #: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
 #: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
 #: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
 msgctxt "CookieManager|"
 msgid "<multiple cookies selected>"
-msgstr ""
+msgstr "<ਕਈ ਕੂਕੀਜ਼ ਚੁਣੇ>"
 
 #: lib/cookies/cookiemanager.cpp:178
 msgctxt "CookieManager|"
 msgid "Secure only"
-msgstr ""
+msgstr "ਸਿਰਫ਼ ਸੁਰੱਖਿਅਤ"
 
 #: lib/cookies/cookiemanager.cpp:178
 msgctxt "CookieManager|"
 msgid "All connections"
-msgstr ""
+msgstr "ਸਭ ਕਨੈਕਸ਼ਨ"
 
 #: lib/cookies/cookiemanager.cpp:179
 msgctxt "CookieManager|"
 msgid "Session cookie"
-msgstr ""
+msgstr "ਸ਼ੈਸ਼ਨ ਕੂਕੀ"
 
 #: lib/cookies/cookiemanager.cpp:181
 msgctxt "CookieManager|"
 msgid "Remove cookie"
-msgstr ""
+msgstr "ਕੂਕੀ ਨੂੰ ਹਟਾਓ"
 
 #: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
-msgstr ""
+msgstr "ਸਰਵਰ:"
 
 #: lib/cookies/cookiemanager.cpp:186
 msgctxt "CookieManager|"
 msgid "Add to whitelist"
-msgstr ""
+msgstr "ਮਨਜ਼ੂਰ-ਸੂਚੀ ਵਿੱਚ ਜੋੜੋ"
 
 #: lib/cookies/cookiemanager.cpp:193
 msgctxt "CookieManager|"
 msgid "Already blacklisted!"
-msgstr ""
+msgstr "ਪਹਿਲਾਂ ਹੀ ਪਾਬੰਦੀ-ਸੂਚੀ ਵਿੱਚ ਹੈ!"
 
 #: lib/cookies/cookiemanager.cpp:193
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
-msgstr ""
+msgstr "ਸਰਵਰ \"%1\" ਪਹਿਲਾਂ ਹੀ ਪਾਬੰਦੀ-ਸੂਚੀ ਵਿੱਚ ਹੈ, ਇਸ ਨੂੰ ਪਹਿਲਾਂ ਹਟਾਓ।"
 
 #: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
-msgstr ""
+msgstr "ਪਾਬੰਦੀ-ਸੂਚੀ ਵਿੱਚ ਜੋੜੋ"
 
 #: lib/cookies/cookiemanager.cpp:220
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
-msgstr ""
+msgstr "ਪਹਿਲਾਂ ਹੀ ਮਨਜ਼ੂਰ-ਸੂਚੀ ਵਿੱਚ ਹੈ"
 
 #: lib/cookies/cookiemanager.cpp:220
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
-msgstr ""
+msgstr "ਸਰਵਰ \"%1\" ਪਹਿਲਾਂ ਹੀ ਮਨਜ਼ੂਰ-ਸੂਚੀ ਵਿੱਚ ਹੈ, ਇਸ ਨੂੰ ਪਹਿਲਾਂ ਹਟਾਓ।"
 
 #: lib/cookies/cookiemanager.ui:14
 msgctxt "CookieManager|"
 msgid "Cookies"
-msgstr ""
+msgstr "ਕੂਕੀਜ਼"
 
 #: lib/cookies/cookiemanager.ui:36
 msgctxt "CookieManager|"
 msgid "Stored Cookies"
-msgstr ""
+msgstr "ਸੰਭਾਲੇ ਹੋਏ ਕੂਕੀਜ਼"
 
 #: lib/cookies/cookiemanager.ui:42
 msgctxt "CookieManager|"
 msgid "Find: "
-msgstr ""
+msgstr "ਲੱਭੋ: "
 
 #: lib/cookies/cookiemanager.ui:52
 msgctxt "CookieManager|"
 msgid "These cookies are stored on your computer:"
-msgstr ""
+msgstr "ਇਹ ਕੂਕੀਜ਼ ਤੁਹਾਡੇ ਕੰਪਿਊਟਰ ਉੱਤੇ ਸੰਭਾਲੇ ਹੋਏ ਹਨ:"
 
 #: lib/cookies/cookiemanager.ui:66
 msgctxt "CookieManager|"
 msgid "Server"
-msgstr ""
+msgstr "ਸਰਵਰ"
 
 #: lib/cookies/cookiemanager.ui:71
 msgctxt "CookieManager|"
 msgid "Cookie name"
-msgstr ""
+msgstr "ਕੂਕੀਜ਼ ਦਾ ਨਾਂ"
 
 #: lib/cookies/cookiemanager.ui:109
-#, fuzzy
 msgctxt "CookieManager|"
 msgid "Name:"
 msgstr "ਨਾਂ:"
@@ -1431,37 +1419,37 @@ msgstr "ਨਾਂ:"
 #: lib/cookies/cookiemanager.ui:119
 msgctxt "CookieManager|"
 msgid "Value:"
-msgstr ""
+msgstr "ਮੁੱਲ:"
 
 #: lib/cookies/cookiemanager.ui:133
 msgctxt "CookieManager|"
 msgid "Path:"
-msgstr ""
+msgstr "ਮਾਰਗ:"
 
 #: lib/cookies/cookiemanager.ui:140
 msgctxt "CookieManager|"
 msgid "Secure:"
-msgstr ""
+msgstr "ਸੁਰੱਖਿਅਤ:"
 
 #: lib/cookies/cookiemanager.ui:147
 msgctxt "CookieManager|"
 msgid "Expiration:"
-msgstr ""
+msgstr "ਮਿਆਦ:"
 
 #: lib/cookies/cookiemanager.ui:238
 msgctxt "CookieManager|"
 msgid "Remove all cookies"
-msgstr ""
+msgstr "ਸਭ ਕੂਕੀਜ਼ ਨੂੰ ਹਟਾਓ"
 
 #: lib/cookies/cookiemanager.ui:269
 msgctxt "CookieManager|"
 msgid "Cookie Filtering"
-msgstr ""
+msgstr "ਕੂਕੀ ਫਿਲਟਰ ਕਰਨੇ"
 
 #: lib/cookies/cookiemanager.ui:275
 msgctxt "CookieManager|"
 msgid "<b>Cookie whitelist</b>"
-msgstr ""
+msgstr "<b>ਕੂਕੀ ਮਨਜ਼ੂਰ-ਸੂਚੀ</b>"
 
 #: lib/cookies/cookiemanager.ui:282
 msgctxt "CookieManager|"
@@ -1471,13 +1459,11 @@ msgid ""
 msgstr ""
 
 #: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
-#, fuzzy
 msgctxt "CookieManager|"
 msgid "Add"
 msgstr "ਜੋੜੋ"
 
 #: lib/cookies/cookiemanager.ui:314 lib/cookies/cookiemanager.ui:368
-#, fuzzy
 msgctxt "CookieManager|"
 msgid "Remove"
 msgstr "ਹਟਾਓ"
@@ -1485,43 +1471,42 @@ msgstr "ਹਟਾਓ"
 #: lib/cookies/cookiemanager.ui:326
 msgctxt "CookieManager|"
 msgid "<b>Cookie blacklist</b>"
-msgstr ""
+msgstr "<b>ਕੂਕੀ ਪਾਬੰਦੀ-ਸੂਚੀ</b>"
 
 #: lib/cookies/cookiemanager.ui:333
 msgctxt "CookieManager|"
 msgid "Cookies from these servers will NEVER be accepted"
-msgstr ""
+msgstr "ਇਹਨਾਂ ਸਰਵਰਾਂ ਤੋਂ ਕੂਕੀਜ਼ ਨੂੰ ਕਦੇ ਵੀ ਮਨਜ਼ੂਰ ਨਹੀਂ ਕੀਤਾ ਜਾਵੇਗਾ"
 
 #: lib/cookies/cookiemanager.ui:385
-#, fuzzy
 msgctxt "CookieManager|"
 msgid "Settings"
-msgstr "ਸੈਟਿੰਗਾਂ(&S)"
+msgstr "ਸੈਟਿੰਗਾਂ"
 
 #: lib/cookies/cookiemanager.ui:407
 msgctxt "CookieManager|"
 msgid "Filter 3rd party cookies"
-msgstr ""
+msgstr "ਤੀਜੀ ਧਿਰ ਕੂਕੀਜ਼ ਫਿਲਟਰ ਕਰੋ"
 
 #: lib/cookies/cookiemanager.ui:414
 msgctxt "CookieManager|"
 msgid "<b>Cookie Settings</b>"
-msgstr ""
+msgstr "<b>ਕੂਕੀ ਸੈਟਿੰਗਾਂ</b>"
 
 #: lib/cookies/cookiemanager.ui:421
 msgctxt "CookieManager|"
 msgid "Allow storing of cookies"
-msgstr ""
+msgstr "ਕੂਕੀਜ਼ ਨੂੰ ਸੰਭਾਲਣ ਦੀ ਮਨਜ਼ੂਰੀ"
 
 #: lib/cookies/cookiemanager.ui:428
 msgctxt "CookieManager|"
 msgid "Filter tracking cookies"
-msgstr ""
+msgstr "ਟਰੈਕਿੰਗ ਕੂਕੀਜ਼ ਫਿਲਟਰ ਕਰੋ"
 
 #: lib/cookies/cookiemanager.ui:435
 msgctxt "CookieManager|"
 msgid "Delete cookies on close"
-msgstr ""
+msgstr "ਬੰਦ ਕਰਨ ਉੱਤੇ ਕੂਕੀਜ਼ ਨੂੰ ਹਟਾਓ"
 
 #: lib/downloads/downloaditem.cpp:73
 msgctxt "DownloadItem|"
@@ -1532,112 +1517,111 @@ msgstr ""
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
-msgstr ""
+msgstr "ਮੁਕੰਮਲ - %1 (%2)"
 
 #: lib/downloads/downloaditem.cpp:133
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
-msgstr ""
+msgstr "ਗਲਤੀ - %1"
 
 #: lib/downloads/downloaditem.cpp:137 lib/downloads/downloaditem.cpp:279
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
-msgstr ""
+msgstr "ਰੱਦ ਕੀਤਾ - %1"
 
 #: lib/downloads/downloaditem.cpp:188 lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Cancelled"
-msgstr ""
+msgstr "ਰੱਦ ਕੀਤਾ"
 
 #: lib/downloads/downloaditem.cpp:194
 msgctxt "DownloadItem|"
 msgid "few seconds"
-msgstr ""
+msgstr "ਕੁਝ ਸਕਿੰਟ"
 
 #: lib/downloads/downloaditem.cpp:199
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%n ਸਕਿੰਟ"
+msgstr[1] "%n ਸਕਿੰਟ"
 
 #: lib/downloads/downloaditem.cpp:204
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%n ਮਿੰਟ"
+msgstr[1] "%n ਮਿੰਟ"
 
 #: lib/downloads/downloaditem.cpp:209
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%n ਘੰਟੇ"
+msgstr[1] "%n ਘੰਟੇ"
 
 #: lib/downloads/downloaditem.cpp:216
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
-msgstr ""
+msgstr "ਅਣਪਛਾਤੀ ਗਤੀ"
 
 #: lib/downloads/downloaditem.cpp:221
 msgctxt "DownloadItem|"
 msgid "kB/s"
-msgstr ""
+msgstr "kB/s"
 
 #: lib/downloads/downloaditem.cpp:226
 msgctxt "DownloadItem|"
 msgid "MB/s"
-msgstr ""
+msgstr "MB/s"
 
 #: lib/downloads/downloaditem.cpp:230
 msgctxt "DownloadItem|"
 msgid "GB/s"
-msgstr ""
+msgstr "GB/s"
 
 #: lib/downloads/downloaditem.cpp:258
 msgctxt "DownloadItem|"
 msgid "Unknown size"
-msgstr ""
+msgstr "ਅਣਪਛਾਤਾ ਆਕਾਰ"
 
 #: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
-msgstr ""
+msgstr "%2 - ਅਣਪਛਾਤਾ ਆਕਾਰ (%3)"
 
 #: lib/downloads/downloaditem.cpp:262
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
-msgstr ""
+msgstr "ਬਾਕੀ %3 (%4) ਵਿੱਚੋਂ %1 - %2"
 
 #: lib/downloads/downloaditem.cpp:294
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
-msgstr "ਰੁਕਿਆ (%1)"
+msgstr "ਵਿਰਾਮ - %1"
 
 #: lib/downloads/downloaditem.cpp:307
-#, fuzzy
 msgctxt "DownloadItem|"
 msgid "Open File"
-msgstr "ਫ਼ਾਇਲ ਖੋਲ੍ਹੋ"
+msgstr "ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹੋ"
 
 #: lib/downloads/downloaditem.cpp:309
 msgctxt "DownloadItem|"
 msgid "Open Folder"
-msgstr ""
+msgstr "ਫੋਲਡਰ ਨੂੰ ਖੋਲ੍ਹੋ"
 
 #: lib/downloads/downloaditem.cpp:311
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
-msgstr ""
+msgstr "ਡਾਊਨਲੋਡ ਲਿੰਕ ਨੂੰ ਕਾਪੀ ਕਰੋ"
 
 #: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
@@ -1657,17 +1641,17 @@ msgstr ""
 #: lib/downloads/downloaditem.cpp:321
 msgctxt "DownloadItem|"
 msgid "Remove From List"
-msgstr ""
+msgstr "ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾਓ"
 
 #: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Error"
-msgstr ""
+msgstr "ਗਲਤੀ"
 
 #: lib/downloads/downloaditem.cpp:349
 msgctxt "DownloadItem|"
 msgid "Not found"
-msgstr ""
+msgstr "ਨਹੀਂ ਲੱਭਿਆ"
 
 #: lib/downloads/downloaditem.cpp:349
 #, qt-format
@@ -1682,24 +1666,24 @@ msgstr ""
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
-msgstr ""
+msgstr "ਡਾਊਨਲੋਡ ਮੈਨੇਜਰ"
 
 #: lib/downloads/downloadmanager.cpp:230
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
-msgstr ""
+msgstr "%2 ਫਾਇਲਾਂ ਵਿੱਚੋਂ %1 (%3) %4 ਬਾਕੀ"
 
 #: lib/downloads/downloadmanager.cpp:234
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
-msgstr ""
+msgstr "%1% - ਡਾਊਨਲੋਡ ਮੈਨੇਜਰ"
 
 #: lib/downloads/downloadmanager.cpp:304
 msgctxt "DownloadManager|"
 msgid "Save file as..."
-msgstr ""
+msgstr "...ਵਜੋਂ ਫਾਇਲ ਨੂੰ ਸੰਭਾਲੋ"
 
 #: lib/downloads/downloadmanager.cpp:314
 msgctxt "DownloadManager|"
@@ -1724,7 +1708,7 @@ msgstr ""
 #: lib/downloads/downloadmanager.cpp:417
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
-msgstr ""
+msgstr "ਫਾਲਕਨ: ਡਾਊਨਲੋਡ ਪੂਰਾ ਹੋਇਆ"
 
 #: lib/downloads/downloadmanager.cpp:417
 msgctxt "DownloadManager|"
@@ -1734,7 +1718,7 @@ msgstr ""
 #: lib/downloads/downloadmanager.cpp:464
 msgctxt "DownloadManager|"
 msgid "Warning"
-msgstr ""
+msgstr "ਚੇਤਾਵਨੀ"
 
 #: lib/downloads/downloadmanager.cpp:465
 msgctxt "DownloadManager|"
@@ -1743,16 +1727,15 @@ msgid ""
 msgstr ""
 
 #: lib/downloads/downloadmanager.ui:69
-#, fuzzy
 msgctxt "DownloadManager|"
 msgid "Clear"
-msgstr "ਸਾਫ਼"
+msgstr "ਸਾਫ਼ ਕਰੋ"
 
 #: lib/downloads/downloadoptionsdialog.cpp:49
 #, qt-format
 msgctxt "DownloadOptionsDialog|"
 msgid "Opening %1"
-msgstr ""
+msgstr "%1 ਨੂੰ ਖੋਲ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ"
 
 #: lib/downloads/downloadoptionsdialog.cpp:112
 msgctxt "DownloadOptionsDialog|"
@@ -1765,16 +1748,14 @@ msgid "What should Falkon do with this file?"
 msgstr ""
 
 #: lib/downloads/downloadoptionsdialog.ui:47
-#, fuzzy
 msgctxt "DownloadOptionsDialog|"
 msgid "Open..."
-msgstr "ਖੋਲ੍ਹੋ"
+msgstr "...ਖੋਲ੍ਹੋ"
 
 #: lib/downloads/downloadoptionsdialog.ui:54
-#, fuzzy
 msgctxt "DownloadOptionsDialog|"
 msgid "Save File"
-msgstr "ਫਾਇਲ ਸੰਭਾਲੋ"
+msgstr "ਫਾਇਲ ਨੂੰ ਸੰਭਾਲੋ"
 
 #: lib/downloads/downloadoptionsdialog.ui:64
 msgctxt "DownloadOptionsDialog|"
@@ -1789,12 +1770,12 @@ msgstr ""
 #: lib/downloads/downloadoptionsdialog.ui:215
 msgctxt "DownloadOptionsDialog|"
 msgid "from:"
-msgstr ""
+msgstr "ਤੋਂ:"
 
 #: lib/downloads/downloadoptionsdialog.ui:241
 msgctxt "DownloadOptionsDialog|"
 msgid "Copy download link"
-msgstr ""
+msgstr "ਡਾਊਨਲੋਡ ਲਿੰਕ ਨੂੰ ਕਾਪੀ ਕਰੋ"
 
 #: lib/downloads/downloadoptionsdialog.ui:256
 msgctxt "DownloadOptionsDialog|"
@@ -1804,82 +1785,82 @@ msgstr ""
 #: lib/downloads/downloadsbutton.cpp:27 lib/downloads/downloadsbutton.cpp:43
 msgctxt "DownloadsButton|"
 msgid "Downloads"
-msgstr ""
+msgstr "ਡਾਊਨਲੋਡ"
 
 #: lib/downloads/downloadsbutton.cpp:28
 msgctxt "DownloadsButton|"
 msgid "Open Download Manager"
-msgstr ""
+msgstr "ਡਾਊਨਲੋਡ ਮੈਨੇਜਰ ਖੋਲ੍ਹੋ"
 
 #: lib/history/history.cpp:83
 msgctxt "History|"
 msgid "Empty Page"
-msgstr ""
+msgstr "ਖਾਲੀ ਸਫ਼ਾ"
 
 #: lib/history/history.cpp:273
 msgctxt "History|"
 msgid "January"
-msgstr ""
+msgstr "ਜਨਵਰੀ"
 
 #: lib/history/history.cpp:275
 msgctxt "History|"
 msgid "February"
-msgstr ""
+msgstr "ਫਰਵਰੀ"
 
 #: lib/history/history.cpp:277
 msgctxt "History|"
 msgid "March"
-msgstr ""
+msgstr "ਮਾਰਚ"
 
 #: lib/history/history.cpp:279
 msgctxt "History|"
 msgid "April"
-msgstr ""
+msgstr "ਅਪਰੈਲ"
 
 #: lib/history/history.cpp:281
 msgctxt "History|"
 msgid "May"
-msgstr ""
+msgstr "ਮਈ"
 
 #: lib/history/history.cpp:283
 msgctxt "History|"
 msgid "June"
-msgstr ""
+msgstr "ਜੂਨ"
 
 #: lib/history/history.cpp:285
 msgctxt "History|"
 msgid "July"
-msgstr ""
+msgstr "ਜੁਲਾਈ"
 
 #: lib/history/history.cpp:287
 msgctxt "History|"
 msgid "August"
-msgstr ""
+msgstr "ਅਗਸਤ"
 
 #: lib/history/history.cpp:289
 msgctxt "History|"
 msgid "September"
-msgstr ""
+msgstr "ਸਤੰਬਰ"
 
 #: lib/history/history.cpp:291
 msgctxt "History|"
 msgid "October"
-msgstr ""
+msgstr "ਅਕਤੂਬਰ"
 
 #: lib/history/history.cpp:293
 msgctxt "History|"
 msgid "November"
-msgstr ""
+msgstr "ਨਵੰਬਰ"
 
 #: lib/history/history.cpp:295
 msgctxt "History|"
 msgid "December"
-msgstr ""
+msgstr "ਦਸਬੰਰ"
 
 #: lib/history/historymanager.cpp:78
 msgctxt "HistoryManager|"
 msgid "Confirmation"
-msgstr ""
+msgstr "ਪੁਸ਼ਟੀ"
 
 #: lib/history/historymanager.cpp:79
 msgctxt "HistoryManager|"
@@ -1889,22 +1870,22 @@ msgstr ""
 #: lib/history/historymanager.cpp:145
 msgctxt "HistoryManager|"
 msgid "Open in new tab"
-msgstr ""
+msgstr "ਨਵੀਂ ਟੈਬ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
 #: lib/history/historymanager.cpp:146
 msgctxt "HistoryManager|"
 msgid "Open in new window"
-msgstr ""
+msgstr "ਨਵੀਂ ਵਿੰਡੋ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
 #: lib/history/historymanager.cpp:147
 msgctxt "HistoryManager|"
 msgid "Open in new private window"
-msgstr ""
+msgstr "ਨਵੀਂ ਪ੍ਰਾਈਵੇਟ ਵਿੰਡੋ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
 #: lib/history/historymanager.cpp:150
 msgctxt "HistoryManager|"
 msgid "Copy url"
-msgstr ""
+msgstr "url ਕਾਪੀ ਕਰੋ"
 
 #: lib/history/historymanager.cpp:151
 msgctxt "HistoryManager|"
@@ -1912,7 +1893,6 @@ msgid "Copy title"
 msgstr ""
 
 #: lib/history/historymanager.cpp:154 lib/history/historymanager.ui:20
-#, fuzzy
 msgctxt "HistoryManager|"
 msgid "Delete"
 msgstr "ਹਟਾਓ"
@@ -1920,54 +1900,53 @@ msgstr "ਹਟਾਓ"
 #: lib/history/historymanager.ui:14
 msgctxt "HistoryManager|"
 msgid "History"
-msgstr ""
+msgstr "ਅਤੀਤ"
 
 #: lib/history/historymanager.ui:27
 msgctxt "HistoryManager|"
 msgid "Clear All History"
-msgstr ""
+msgstr "ਸਾਰੇ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
 #: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
 #: lib/history/historymenu.cpp:186
 msgctxt "HistoryMenu|"
 msgid "Empty"
-msgstr ""
+msgstr "ਖਾਲੀ"
 
 #: lib/history/historymenu.cpp:161
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Tabs"
-msgstr ""
+msgstr "ਸਭ ਬੰਦ ਕੀਤੀਆਂ ਟੈਬਾਂ ਨੂੰ ਬਹਾਲ ਕਰੋ"
 
 #: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
 msgctxt "HistoryMenu|"
 msgid "Clear list"
-msgstr ""
+msgstr "ਸੂਚੀ ਨੂੰ ਮਿਟਾਓ"
 
 #: lib/history/historymenu.cpp:189
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Windows"
-msgstr ""
+msgstr "ਸਭ ਬੰਦ ਕੀਤੀਆਂ ਵਿੰਡੋਆਂ ਨੂੰ ਬਹਾਲ ਕਰੋ"
 
 #: lib/history/historymenu.cpp:236
 msgctxt "HistoryMenu|"
 msgid "Hi&story"
-msgstr ""
+msgstr "ਅਤੀਤ(&s)"
 
 #: lib/history/historymenu.cpp:238
-#, fuzzy
 msgctxt "HistoryMenu|"
 msgid "&Back"
-msgstr "ਪਿੱਛੇ"
+msgstr "ਪਿੱਛੇ(&B)"
 
 #: lib/history/historymenu.cpp:241
 msgctxt "HistoryMenu|"
 msgid "&Forward"
-msgstr ""
+msgstr "ਅੱਗੇ(&F)"
 
 #: lib/history/historymenu.cpp:244
 msgctxt "HistoryMenu|"
 msgid "&Home"
-msgstr ""
+msgstr "ਮੁੱਖ-ਸਫ਼ਾ(&H)"
 
 #: lib/history/historymenu.cpp:247
 msgctxt "HistoryMenu|"
@@ -1982,15 +1961,14 @@ msgstr ""
 #: lib/history/historymenu.cpp:258
 msgctxt "HistoryMenu|"
 msgid "Closed Tabs"
-msgstr ""
+msgstr "ਬੰਦ ਕੀਤੀਆਂ ਟੈਬਾਂ"
 
 #: lib/history/historymenu.cpp:261
 msgctxt "HistoryMenu|"
 msgid "Closed Windows"
-msgstr ""
+msgstr "ਵਿੰਡੋਆਂ ਨੂੰ ਬੰਦ ਕਰੋ"
 
 #: lib/history/historymodel.cpp:57
-#, fuzzy
 msgctxt "HistoryModel|"
 msgid "Title"
 msgstr "ਟਾਈਟਲ"
@@ -1998,32 +1976,32 @@ msgstr "ਟਾਈਟਲ"
 #: lib/history/historymodel.cpp:59
 msgctxt "HistoryModel|"
 msgid "Address"
-msgstr ""
+msgstr "ਐਡਰੈੱਸ"
 
 #: lib/history/historymodel.cpp:61
 msgctxt "HistoryModel|"
 msgid "Visit Date"
-msgstr ""
+msgstr "ਖੋਲ੍ਹਣ ਦੀ ਤਾਰੀਖ"
 
 #: lib/history/historymodel.cpp:63
 msgctxt "HistoryModel|"
 msgid "Visit Count"
-msgstr ""
+msgstr "ਖੋਲ੍ਹਣ ਦੀ ਗਿਣਤੀ"
 
 #: lib/history/historymodel.cpp:341 lib/history/historymodel.cpp:472
 msgctxt "HistoryModel|"
 msgid "Today"
-msgstr ""
+msgstr "ਅੱਜ"
 
 #: lib/history/historymodel.cpp:477
 msgctxt "HistoryModel|"
 msgid "This Week"
-msgstr ""
+msgstr "ਇਸ ਹਫ਼ਤੇ"
 
 #: lib/history/historymodel.cpp:482
 msgctxt "HistoryModel|"
 msgid "This Month"
-msgstr ""
+msgstr "ਇਸ ਮਹੀਨੇ"
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:158
 msgctxt "LocationCompleterDelegate|"
@@ -2034,12 +2012,12 @@ msgstr ""
 #, qt-format
 msgctxt "LocationCompleterDelegate|"
 msgid "Search with %1"
-msgstr ""
+msgstr "%1 ਨਾਲ ਖੋਜ"
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:198
 msgctxt "LocationCompleterDelegate|"
 msgid "Switch to tab"
-msgstr ""
+msgstr "ਟੈਬ ਉੱਤੇ ਜਾਓ"
 
 #: lib/navigation/completer/locationcompleterview.cpp:73
 msgctxt "LocationCompleterView|"
@@ -2060,20 +2038,19 @@ msgstr ""
 #, qt-format
 msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
-msgstr ""
+msgstr "ਐਡਰੈਸ ਦਿਓ ਜਾਂ %1 ਨਾਲ ਖੋਜੋ"
 
 #: lib/navigation/locationbar.cpp:165
 msgctxt "LocationBar|"
 msgid "Enter address"
-msgstr ""
+msgstr "ਐਡਰੈਸ ਦਿਓ"
 
 #: lib/navigation/navigationbar.cpp:49
 msgctxt "NavigationBar|"
 msgid "Empty Page"
-msgstr ""
+msgstr "ਖਾਲੀ ਸਫ਼ਾ"
 
 #: lib/navigation/navigationbar.cpp:77
-#, fuzzy
 msgctxt "NavigationBar|"
 msgid "Back"
 msgstr "ਪਿੱਛੇ"
@@ -2081,47 +2058,47 @@ msgstr "ਪਿੱਛੇ"
 #: lib/navigation/navigationbar.cpp:87
 msgctxt "NavigationBar|"
 msgid "Forward"
-msgstr ""
+msgstr "ਅੱਗੇ"
 
 #: lib/navigation/navigationbar.cpp:107
 msgctxt "NavigationBar|"
 msgid "Home"
-msgstr ""
+msgstr "ਮੁੱਖ-ਸਫ਼ਾ"
 
 #: lib/navigation/navigationbar.cpp:115
 msgctxt "NavigationBar|"
 msgid "New Tab"
-msgstr ""
+msgstr "ਨਵੀਂ ਟੈਬ"
 
 #: lib/navigation/navigationbar.cpp:135
 msgctxt "NavigationBar|"
 msgid "Tools"
-msgstr ""
+msgstr "ਟੂਲ"
 
 #: lib/navigation/navigationbar.cpp:148
 msgctxt "NavigationBar|"
 msgid "Main Menu"
-msgstr ""
+msgstr "ਮੁੱਖ ਮੇਨੂ"
 
 #: lib/navigation/navigationbar.cpp:165
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen"
-msgstr ""
+msgstr "ਪੂਰੀ ਸਕਰੀਨ ਤੋਂ ਬਾਹਰ"
 
 #: lib/navigation/navigationbar.cpp:191
 msgctxt "NavigationBar|"
 msgid "Back and Forward buttons"
-msgstr ""
+msgstr "ਅੱਗੇ ਅਤੇ ਪਿੱਛੇ ਬਟਨ"
 
 #: lib/navigation/navigationbar.cpp:192
 msgctxt "NavigationBar|"
 msgid "Reload button"
-msgstr ""
+msgstr "ਮੁੜ-ਲੋਡ ਬਟਨ"
 
 #: lib/navigation/navigationbar.cpp:193
 msgctxt "NavigationBar|"
 msgid "Home button"
-msgstr ""
+msgstr "ਮੁੱਖ ਸਫ਼ਾ ਬਟਨ"
 
 #: lib/navigation/navigationbar.cpp:194
 msgctxt "NavigationBar|"
@@ -2131,60 +2108,59 @@ msgstr ""
 #: lib/navigation/navigationbar.cpp:195
 msgctxt "NavigationBar|"
 msgid "Address and Search bar"
-msgstr ""
+msgstr "ਐਡਰੈੱਸ ਅਤੇ ਖੋਜ ਬਟਨ"
 
 #: lib/navigation/navigationbar.cpp:196
 msgctxt "NavigationBar|"
 msgid "Tools button"
-msgstr ""
+msgstr "ਟੂਲ ਬਟਨ"
 
 #: lib/navigation/navigationbar.cpp:197
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen button"
-msgstr ""
+msgstr "ਪੂਰੀ ਸਕਰੀਨ ਤੋਂ ਬਾਹਰ"
 
 #: lib/navigation/navigationbar.cpp:395 lib/navigation/navigationbar.cpp:429
 msgctxt "NavigationBar|"
 msgid "Clear history"
-msgstr ""
+msgstr "ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
 #: lib/navigation/navigationbar.cpp:436
 msgctxt "NavigationBar|"
 msgid "Toolbars"
-msgstr ""
+msgstr "ਟੂਲਬਾਰ"
 
 #: lib/navigation/navigationbar.cpp:437
 msgctxt "NavigationBar|"
 msgid "Sidebar"
-msgstr ""
+msgstr "ਬਾਹੀ"
 
 #: lib/navigation/navigationbar.cpp:452 lib/navigation/navigationbar.cpp:466
 msgctxt "NavigationBar|"
 msgid "Configure Toolbar"
-msgstr ""
+msgstr "ਟੂਲਬਾਰ ਦੀ ਸੰਰਚਨਾ ਕਰੋ"
 
 #: lib/navigation/navigationbarconfigdialog.ui:14
 msgctxt "NavigationBarConfigDialog|"
 msgid "Configure Toolbar"
-msgstr ""
+msgstr "ਟੂਲਬਾਰ ਦੀ ਸੰਰਚਨਾ ਕਰੋ"
 
 #: lib/navigation/navigationbarconfigdialog.ui:62
 msgctxt "NavigationBarConfigDialog|"
 msgid "Show search bar"
-msgstr ""
+msgstr "ਖੋਜ ਪੱਟੀ ਵੇਖਾਓ"
 
 #: lib/navigation/navigationbarconfigdialog.ui:82
 msgctxt "NavigationBarConfigDialog|"
 msgid "Available items:"
-msgstr ""
+msgstr "ਮੌਜੂਦ ਚੀਜ਼ਾਂ:"
 
 #: lib/navigation/navigationbarconfigdialog.ui:89
 msgctxt "NavigationBarConfigDialog|"
 msgid "Current items:"
-msgstr ""
+msgstr "ਮੌਜੂਦਾ ਚੀਜ਼ਾਂ:"
 
 #: lib/navigation/reloadstopbutton.cpp:57
-#, fuzzy
 msgctxt "ReloadStopButton|"
 msgid "Stop"
 msgstr "ਰੋਕੋ"
@@ -2192,17 +2168,17 @@ msgstr "ਰੋਕੋ"
 #: lib/navigation/reloadstopbutton.cpp:61
 msgctxt "ReloadStopButton|"
 msgid "Reload"
-msgstr ""
+msgstr "ਮੁੜ-ਲੋਡ"
 
 #: lib/navigation/siteicon.cpp:40
 msgctxt "LocationBar|"
 msgid "Show information about this page"
-msgstr ""
+msgstr "ਇਸ ਸਫ਼ੇ ਬਾਰੇ ਜਾਣਕਾਰੀ ਵੇਖਾਓ"
 
 #: lib/navigation/websearchbar.cpp:97
 msgctxt "WebSearchBar|"
 msgid "Paste And &Search"
-msgstr ""
+msgstr "ਚੇਪੋ ਅਤੇ ਖੋਜੋ(&S)"
 
 #: lib/navigation/websearchbar.cpp:123
 #, fuzzy, qt-format
@@ -2218,7 +2194,7 @@ msgstr ""
 #: lib/navigation/websearchbar.cpp:257
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
-msgstr ""
+msgstr "ਸੁਝਾਅ ਵੇਖਾਓ"
 
 #: lib/navigation/websearchbar.cpp:262
 msgctxt "WebSearchBar|"
@@ -2234,12 +2210,12 @@ msgstr ""
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/network/networkmanager.cpp:91
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
-msgstr ""
+msgstr "SSL ਸਰਟੀਫਿਕੇਟ ਗਲਤੀ!"
 
 #: lib/network/networkmanager.cpp:92
 msgctxt "NetworkManager|"
@@ -2256,31 +2232,29 @@ msgstr ""
 #: lib/network/networkmanager.cpp:124
 msgctxt "NetworkManager|"
 msgid "Authorization required"
-msgstr ""
+msgstr "ਪਰਮਾਣੀਕਰਨ ਚਾਹੀਦਾ ਹੈ"
 
 #: lib/network/networkmanager.cpp:131 lib/network/networkmanager.cpp:217
-#, fuzzy
 msgctxt "NetworkManager|"
 msgid "Username: "
-msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ:"
+msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ: "
 
 #: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
-#, fuzzy
 msgctxt "NetworkManager|"
 msgid "Password: "
-msgstr "ਪਾਸਵਰਡ"
+msgstr "ਪਾਸਵਰਡ: "
 
 #: lib/network/networkmanager.cpp:138
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
-msgstr ""
+msgstr "ਇਸ ਸਾਈਟ ਲਈ ਵਰਤੋਂਕਾਰ-ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਨੂੰ ਸੰਭਾਲੋ"
 
 #: lib/network/networkmanager.cpp:146
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
-msgstr ""
+msgstr "%1 ਵਲੋਂ ਵਰਤੋਂਕਾਰ ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਦੀ ਮੰਗ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਸਾਈਟ: \"%2\""
 
 #: lib/network/networkmanager.cpp:210
 msgctxt "NetworkManager|"
@@ -2296,12 +2270,12 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
 msgid "Start Page"
-msgstr ""
+msgstr "ਸ਼ੁਰੂਆਤੀ ਸਫ਼ਾ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:158
 msgctxt "FalkonSchemeReply|"
 msgid "Search on Web"
-msgstr ""
+msgstr "ਵੈੱਬ ਉੱਤੇ ਖੋਜ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:159
 msgctxt "FalkonSchemeReply|"
@@ -2313,52 +2287,51 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:179
 msgctxt "FalkonSchemeReply|"
 msgid "About Falkon"
-msgstr ""
+msgstr "ਫਾਲਕਨ ਬਾਰੇ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:162
 msgctxt "FalkonSchemeReply|"
 msgid "<h1>Private Browsing</h1>"
-msgstr ""
+msgstr "<h1>ਪ੍ਰਾਈਵੇਟ ਬਾਊਰਜ਼ਿੰਗ</h1>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:180
 #: lib/network/schemehandlers/falkonschemehandler.cpp:291
 msgctxt "FalkonSchemeReply|"
 msgid "Information about version"
-msgstr ""
+msgstr "ਵਰਜ਼ਨ ਬਾਰੇ ਜਾਣਕਾਰੀ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:181
 msgctxt "FalkonSchemeReply|"
 msgid "Copyright"
-msgstr ""
+msgstr "ਕਾਪੀਰਾਈਟ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:184
 #: lib/network/schemehandlers/falkonschemehandler.cpp:301
 msgctxt "FalkonSchemeReply|"
 msgid "Version"
-msgstr ""
+msgstr "ਵਰਜ਼ਨ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:191
 msgctxt "FalkonSchemeReply|"
 msgid "Main developer"
-msgstr ""
+msgstr "ਮੁੱਖ ਡਿਵੈਲਪਰ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:212
 msgctxt "FalkonSchemeReply|"
 msgid "Speed Dial"
-msgstr ""
+msgstr "ਸਪੀਡ ਡਾਇਲ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:213
 msgctxt "FalkonSchemeReply|"
 msgid "Add New Page"
-msgstr ""
+msgstr "ਨਵਾਂ ਸਫ਼ਾ ਜੋੜੋ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:214
 msgctxt "FalkonSchemeReply|"
 msgid "Edit"
-msgstr ""
+msgstr "ਸੋਧੋ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:215
-#, fuzzy
 msgctxt "FalkonSchemeReply|"
 msgid "Remove"
 msgstr "ਹਟਾਓ"
@@ -2366,7 +2339,7 @@ msgstr "ਹਟਾਓ"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:216
 msgctxt "FalkonSchemeReply|"
 msgid "Reload"
-msgstr ""
+msgstr "ਮੁੜ-ਲੋਡ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:217
 msgctxt "FalkonSchemeReply|"
@@ -2391,22 +2364,19 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:221
 msgctxt "FalkonSchemeReply|"
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:222
-#, fuzzy
 msgctxt "FalkonSchemeReply|"
 msgid "Title"
 msgstr "ਟਾਈਟਲ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:223
-#, fuzzy
 msgctxt "FalkonSchemeReply|"
 msgid "Apply"
 msgstr "ਲਾਗੂ ਕਰੋ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:224
-#, fuzzy
 msgctxt "FalkonSchemeReply|"
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
@@ -2414,7 +2384,7 @@ msgstr "ਰੱਦ ਕਰੋ"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:225
 msgctxt "FalkonSchemeReply|"
 msgid "New Page"
-msgstr ""
+msgstr "ਨਵਾਂ ਸਫ਼ਾ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:226
 msgctxt "FalkonSchemeReply|"
@@ -2429,27 +2399,27 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:228
 msgctxt "FalkonSchemeReply|"
 msgid "Auto"
-msgstr ""
+msgstr "ਆਟੋ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:229
 msgctxt "FalkonSchemeReply|"
 msgid "Cover"
-msgstr ""
+msgstr "ਕਵਰ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:230
 msgctxt "FalkonSchemeReply|"
 msgid "Fit"
-msgstr ""
+msgstr "ਫਿੱਟ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:231
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Width"
-msgstr ""
+msgstr "ਚੌੜਾਈ ਲਈ ਫਿੱਟ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:232
 msgctxt "FalkonSchemeReply|"
 msgid "Fit Height"
-msgstr ""
+msgstr "ਉਚਾਈ ਲਈ ਫਿੱਟ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:233
 msgctxt "FalkonSchemeReply|"
@@ -2484,7 +2454,7 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
 msgid "Restore Session"
-msgstr ""
+msgstr "ਸ਼ੈਸ਼ਨ ਬਹਾਲ ਕਰੋ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:265
 msgctxt "FalkonSchemeReply|"
@@ -2509,33 +2479,33 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:269
 msgctxt "FalkonSchemeReply|"
 msgid "Window"
-msgstr ""
+msgstr "ਵਿੰਡੋ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:270
 msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
-msgstr ""
+msgstr "ਵਿੰਡੋ ਅਤੇ ਟੈਬਾਂ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
 msgid "Start New Session"
-msgstr ""
+msgstr "ਨਵਾਂ ਸ਼ੈਸ਼ਨ ਸ਼ੁਰੂ ਕਰੋ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:272
 msgctxt "FalkonSchemeReply|"
 msgid "Restore"
-msgstr ""
+msgstr "ਬਹਾਲ ਕਰੋ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:273
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
-msgstr ""
+msgstr "ਸਮਰੱਥ ਕੀਤੀ JavaScript ਚਾਹੀਦੀ ਹੈ।"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:289
 #: lib/network/schemehandlers/falkonschemehandler.cpp:290
 msgctxt "FalkonSchemeReply|"
 msgid "Configuration Information"
-msgstr ""
+msgstr "ਤਸਦੀਕ ਜਾਣਕਾਰੀ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:292
 msgctxt "FalkonSchemeReply|"
@@ -2548,47 +2518,45 @@ msgstr ""
 #: lib/network/schemehandlers/falkonschemehandler.cpp:293
 msgctxt "FalkonSchemeReply|"
 msgid "Browser Identification"
-msgstr ""
+msgstr "ਬਰਾਊਜ਼ਰ ਪਛਾਣ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:294
 msgctxt "FalkonSchemeReply|"
 msgid "Paths"
-msgstr ""
+msgstr "ਮਾਰਗ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:295
 msgctxt "FalkonSchemeReply|"
 msgid "Build Configuration"
-msgstr ""
+msgstr "ਬਿਲਡ ਸੰਰਚਨਾ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:296
 msgctxt "FalkonSchemeReply|"
 msgid "Preferences"
-msgstr ""
+msgstr "ਪਸੰਦਾਂ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:297
 msgctxt "FalkonSchemeReply|"
 msgid "Option"
-msgstr ""
+msgstr "ਚੋਣ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:298
 msgctxt "FalkonSchemeReply|"
 msgid "Value"
-msgstr ""
+msgstr "ਮੁੱਲ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:299
 #: lib/network/schemehandlers/falkonschemehandler.cpp:335
 msgctxt "FalkonSchemeReply|"
 msgid "Extensions"
-msgstr ""
+msgstr "ਇਕਸਟੈਨਸ਼ਨ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:300
-#, fuzzy
 msgctxt "FalkonSchemeReply|"
 msgid "Name"
-msgstr "ਨਾਂ:"
+msgstr "ਨਾਂ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:302
-#, fuzzy
 msgctxt "FalkonSchemeReply|"
 msgid "Author"
 msgstr "ਲੇਖਕ"
@@ -2596,79 +2564,76 @@ msgstr "ਲੇਖਕ"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:303
 msgctxt "FalkonSchemeReply|"
 msgid "Description"
-msgstr ""
+msgstr "ਵਰਣਨ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:318
 msgctxt "FalkonSchemeReply|"
 msgid "Application version"
-msgstr ""
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਵਰਜ਼ਨ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:325
 msgctxt "FalkonSchemeReply|"
 msgid "Qt version"
-msgstr ""
+msgstr "Qt ਵਰਜ਼ਨ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:326
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr ""
+msgstr "QtWebEngine ਵਰਜ਼ਨ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:327
 msgctxt "FalkonSchemeReply|"
 msgid "Platform"
-msgstr ""
+msgstr "ਪਲੇਟਫਾਰਮ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:330
 msgctxt "FalkonSchemeReply|"
 msgid "Profile"
-msgstr ""
+msgstr "ਪਰੋਫਾਇਲ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:331
-#, fuzzy
 msgctxt "FalkonSchemeReply|"
 msgid "Settings"
-msgstr "ਸੈਟਿੰਗਾਂ(&S)"
+msgstr "ਸੈਟਿੰਗਾਂ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:332
 msgctxt "FalkonSchemeReply|"
 msgid "Saved session"
-msgstr ""
+msgstr "ਸੰਭਾਲੇ ਸ਼ੈਸ਼ਨ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:333
 msgctxt "FalkonSchemeReply|"
 msgid "Data"
-msgstr ""
+msgstr "ਡਾਟਾ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:334
 msgctxt "FalkonSchemeReply|"
 msgid "Themes"
-msgstr ""
+msgstr "ਥੀਮ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:338
 #: lib/network/schemehandlers/falkonschemehandler.cpp:345
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
-#, fuzzy
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
-msgstr "ਸਮਰੱਥ ਹੈ"
+msgstr "<b>ਸਮਰੱਥ ਹੈ</b>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:340
 #: lib/network/schemehandlers/falkonschemehandler.cpp:347
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
-#, fuzzy
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
-msgstr "ਬੰਦ ਹੈ"
+msgstr "ਅਸਮਰੱਥ ਹੈ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:354
 msgctxt "FalkonSchemeReply|"
 msgid "Debug build"
-msgstr ""
+msgstr "ਬਿਲਡ ਨੂੰ ਡੀਬੱਗ ਕਰੋ"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:356
 msgctxt "FalkonSchemeReply|"
 msgid "Windows 7 API"
-msgstr ""
+msgstr "Windows 7 API"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:358
 msgctxt "FalkonSchemeReply|"
@@ -2683,26 +2648,24 @@ msgstr ""
 #: lib/network/sslerrordialog.cpp:31
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "ਸਿਰਫ਼ ਇਸ ਸ਼ੈਸ਼ਨ ਲਈ"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
 msgid "SSL Certificate Error!"
-msgstr ""
+msgstr "SSL ਸਰਟੀਫਿਕੇਟ ਗਲਤੀ!"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
-#, fuzzy
 msgctxt "DesktopNotificationsFactory|"
 msgid "Preview"
-msgstr "ਝਲਕ..."
+msgstr "ਝਲਕ"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "QObject|"
 msgid "Native System Notification"
-msgstr ""
+msgstr "ਨੇਟਿਵ ਸਿਸਟਮ ਨੋਟੀਫਿਕੇਸ਼ਨ"
 
 #: lib/opensearch/editsearchengine.ui:20
-#, fuzzy
 msgctxt "EditSearchEngine|"
 msgid "Name:"
 msgstr "ਨਾਂ:"
@@ -2710,22 +2673,22 @@ msgstr "ਨਾਂ:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "Url:"
-msgstr ""
+msgstr "Url:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
 msgid "Shortcut:"
-msgstr ""
+msgstr "ਸ਼ਾਰਟਕੱਟ:"
 
 #: lib/opensearch/editsearchengine.ui:54
 msgctxt "EditSearchEngine|"
 msgid "Icon:"
-msgstr ""
+msgstr "ਆਈਕਾਨ:"
 
 #: lib/opensearch/editsearchengine.ui:83
 msgctxt "EditSearchEngine|"
 msgid "Change..."
-msgstr ""
+msgstr "ਬਦਲੋ..."
 
 #: lib/opensearch/editsearchengine.ui:106
 msgctxt "EditSearchEngine|"
@@ -2772,13 +2735,11 @@ msgid "Manage Search Engines"
 msgstr ""
 
 #: lib/opensearch/searchenginesdialog.ui:22
-#, fuzzy
 msgctxt "SearchEnginesDialog|"
 msgid "Add..."
-msgstr "ਜੋੜੋ"
+msgstr "ਜੋੜੋ..."
 
 #: lib/opensearch/searchenginesdialog.ui:29
-#, fuzzy
 msgctxt "SearchEnginesDialog|"
 msgid "Remove"
 msgstr "ਹਟਾਓ"
@@ -2786,37 +2747,37 @@ msgstr "ਹਟਾਓ"
 #: lib/opensearch/searchenginesdialog.ui:36
 msgctxt "SearchEnginesDialog|"
 msgid "Edit"
-msgstr ""
+msgstr "ਸੋਧੋ"
 
 #: lib/opensearch/searchenginesdialog.ui:56
 msgctxt "SearchEnginesDialog|"
 msgid "Set as default"
-msgstr ""
+msgstr "ਡਿਫਾਲਟ ਸੈੱਟ ਕਰੋ"
 
 #: lib/opensearch/searchenginesdialog.ui:63
 msgctxt "SearchEnginesDialog|"
 msgid "Up"
-msgstr ""
+msgstr "ਉੱਤੇ"
 
 #: lib/opensearch/searchenginesdialog.ui:70
 msgctxt "SearchEnginesDialog|"
 msgid "Down"
-msgstr ""
+msgstr "ਹੇਠਾਂ"
 
 #: lib/opensearch/searchenginesdialog.ui:89
 msgctxt "SearchEnginesDialog|"
 msgid "Search Engine"
-msgstr ""
+msgstr "ਖੋਜ ਇੰਜਣ"
 
 #: lib/opensearch/searchenginesdialog.ui:94
 msgctxt "SearchEnginesDialog|"
 msgid "Shortcut"
-msgstr ""
+msgstr "ਸ਼ਾਰਟਕੱਟ"
 
 #: lib/opensearch/searchenginesdialog.ui:104
 msgctxt "SearchEnginesDialog|"
 msgid "Defaults"
-msgstr ""
+msgstr "ਡਿਫਾਲਟ"
 
 #: lib/opensearch/searchenginesmanager.cpp:400
 msgctxt "SearchEnginesManager|"
@@ -2855,22 +2816,22 @@ msgstr ""
 #, qt-format
 msgctxt "AboutDialog|"
 msgid "<b>QtWebEngine version %1</b></p>"
-msgstr ""
+msgstr "<b>QtWebEngine ਵਰਜ਼ਨ %1</b></p>"
 
 #: lib/other/aboutdialog.ui:14
 msgctxt "AboutDialog|"
 msgid "About Falkon"
-msgstr ""
+msgstr "ਫਾਲਕਨ ਬਾਰੇ"
 
 #: lib/other/browsinglibrary.cpp:55
 msgctxt "BrowsingLibrary|"
 msgid "History"
-msgstr ""
+msgstr "ਅਤੀਤ"
 
 #: lib/other/browsinglibrary.cpp:56
 msgctxt "BrowsingLibrary|"
 msgid "Bookmarks"
-msgstr ""
+msgstr "ਬੁੱਕਮਾਰਕ"
 
 #: lib/other/browsinglibrary.cpp:61
 msgctxt "BrowsingLibrary|"
@@ -2885,7 +2846,7 @@ msgstr ""
 #: lib/other/browsinglibrary.ui:14
 msgctxt "BrowsingLibrary|"
 msgid "Library"
-msgstr ""
+msgstr "ਲਾਇਬਰੇਰੀ"
 
 #: lib/other/browsinglibrary.ui:64
 msgctxt "BrowsingLibrary|"
@@ -2893,7 +2854,6 @@ msgid "Import and Export"
 msgstr ""
 
 #: lib/other/browsinglibrary.ui:84
-#, fuzzy
 msgctxt "BrowsingLibrary|"
 msgid "Search..."
 msgstr "ਖੋਜੋ..."
@@ -2901,12 +2861,12 @@ msgstr "ਖੋਜੋ..."
 #: lib/other/clearprivatedata.cpp:155
 msgctxt "ClearPrivateData|"
 msgid "Done"
-msgstr ""
+msgstr "ਮੁਕੰਮਲ"
 
 #: lib/other/clearprivatedata.cpp:173
 msgctxt "ClearPrivateData|"
 msgid "Database Optimized"
-msgstr ""
+msgstr "ਡਾਟਾਬੇਸ ਅਨੁਕੂਲ ਕੀਤਾ"
 
 #: lib/other/clearprivatedata.cpp:173
 #, qt-format
@@ -2919,17 +2879,17 @@ msgstr ""
 #: lib/other/clearprivatedata.ui:14
 msgctxt "ClearPrivateData|"
 msgid "Clear Recent History"
-msgstr ""
+msgstr "ਸੱਜਰੇ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
 #: lib/other/clearprivatedata.ui:20
 msgctxt "ClearPrivateData|"
 msgid "<b>Clear Recent History</b>"
-msgstr ""
+msgstr "<b>ਸੱਜਰੇ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ</b>"
 
 #: lib/other/clearprivatedata.ui:27
 msgctxt "ClearPrivateData|"
 msgid "Edit cookies"
-msgstr ""
+msgstr "ਕੂਕੀਜ਼ ਨੂੰ ਸੋਧੋ"
 
 #: lib/other/clearprivatedata.ui:38
 msgctxt "ClearPrivateData|"
@@ -2939,17 +2899,17 @@ msgstr ""
 #: lib/other/clearprivatedata.ui:43
 msgctxt "ClearPrivateData|"
 msgid "Week"
-msgstr ""
+msgstr "ਹਫ਼ਤਾ"
 
 #: lib/other/clearprivatedata.ui:48
 msgctxt "ClearPrivateData|"
 msgid "Month"
-msgstr ""
+msgstr "ਮਹੀਨਾ"
 
 #: lib/other/clearprivatedata.ui:53
 msgctxt "ClearPrivateData|"
 msgid "All"
-msgstr ""
+msgstr "ਸਭ"
 
 #: lib/other/clearprivatedata.ui:61
 msgctxt "ClearPrivateData|"
@@ -2964,43 +2924,42 @@ msgstr ""
 #: lib/other/clearprivatedata.ui:78
 msgctxt "ClearPrivateData|"
 msgid "Local storage"
-msgstr ""
+msgstr "ਲੋਕਲ ਸਟੋਰੇਜ਼"
 
 #: lib/other/clearprivatedata.ui:94
-#, fuzzy
 msgctxt "ClearPrivateData|"
 msgid "Clear"
-msgstr "ਸਾਫ਼"
+msgstr "ਮਿਟਾਓ"
 
 #: lib/other/clearprivatedata.ui:114
 msgctxt "ClearPrivateData|"
 msgid "Web databases"
-msgstr ""
+msgstr "ਵੈੱਬ ਡਾਟਾਬੇਸ"
 
 #: lib/other/clearprivatedata.ui:124
 msgctxt "ClearPrivateData|"
 msgid "Cache"
-msgstr ""
+msgstr "ਕੈਸ਼"
 
 #: lib/other/clearprivatedata.ui:134
 msgctxt "ClearPrivateData|"
 msgid "Optimize database"
-msgstr ""
+msgstr "ਡਾਟਾਬੇਸ ਅਨੁਕੂਲ ਕਰੋ"
 
 #: lib/other/clearprivatedata.ui:141
 msgctxt "ClearPrivateData|"
 msgid "Cookies"
-msgstr ""
+msgstr "ਕੂਕੀਜ਼"
 
 #: lib/other/clearprivatedata.ui:158
 msgctxt "ClearPrivateData|"
 msgid "Database"
-msgstr ""
+msgstr "ਡਾਟਾਬੇਸ"
 
 #: lib/other/iconchooser.cpp:41
 msgctxt "IconChooser|"
 msgid "Image files"
-msgstr ""
+msgstr "ਚਿੱਤਰ ਫਾਇਲਾਂ"
 
 #: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
 msgctxt "IconChooser|"
@@ -3010,22 +2969,22 @@ msgstr ""
 #: lib/other/iconchooser.ui:20
 msgctxt "IconChooser|"
 msgid "From file"
-msgstr ""
+msgstr "ਫਾਇਲ ਤੋਂ"
 
 #: lib/other/iconchooser.ui:29
 msgctxt "IconChooser|"
 msgid "Image (.png, .jpg, .jpeg, .gif)"
-msgstr ""
+msgstr "ਚਿੱਤਰ (.png, .jpg, .jpeg, .gif)"
 
 #: lib/other/iconchooser.ui:42
 msgctxt "IconChooser|"
 msgid "Choose file..."
-msgstr ""
+msgstr "...ਫਾਇਲ ਨੂੰ ਚੁਣੋ"
 
 #: lib/other/iconchooser.ui:52
 msgctxt "IconChooser|"
 msgid "From database"
-msgstr ""
+msgstr "ਡਾਟਾਬੇਸ ਤੋਂ"
 
 #: lib/other/iconchooser.ui:61
 msgctxt "IconChooser|"
@@ -3045,15 +3004,14 @@ msgstr ""
 #: lib/other/protocolhandlerdialog.ui:40
 msgctxt "ProtocolHandlerDialog|"
 msgid "Protocol"
-msgstr ""
+msgstr "ਪਰੋਟੋਕਾਲ"
 
 #: lib/other/protocolhandlerdialog.ui:45
 msgctxt "ProtocolHandlerDialog|"
 msgid "Site"
-msgstr ""
+msgstr "ਸਾਈਟ"
 
 #: lib/other/protocolhandlerdialog.ui:68
-#, fuzzy
 msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
 msgstr "ਹਟਾਓ"
@@ -3061,7 +3019,7 @@ msgstr "ਹਟਾਓ"
 #: lib/other/registerqappassociation.cpp:110
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
-msgstr ""
+msgstr "ਚੇਤਾਵਨੀ!"
 
 #: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
@@ -3073,22 +3031,22 @@ msgstr ""
 #: lib/other/siteinfo.cpp:68
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
-msgstr ""
+msgstr "<b>ਕਨੈਕਸ਼ਨ ਇੰਕ੍ਰਿਪਟ ਕੀਤਾ ਹੈ।</b>"
 
 #: lib/other/siteinfo.cpp:70
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
-msgstr ""
+msgstr "<b>ਕਨੈਕਸ਼ਨ ਇੰਕ੍ਰਿਪਟ ਨਹੀਂ ਕੀਤਾ ਹੈ।</b>"
 
 #: lib/other/siteinfo.cpp:175
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
-msgstr ""
+msgstr "ਚਿੱਤਰ ਟਿਕਾਣੇ ਨੂੰ ਕਾਪੀ ਕਰੋ"
 
 #: lib/other/siteinfo.cpp:176
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
-msgstr ""
+msgstr "ਚਿੱਤਰ ਨਾਂ ਨੂੰ ਕਾਪੀ ਕਰੋ"
 
 #: lib/other/siteinfo.cpp:178
 msgctxt "SiteInfo|"
@@ -3108,7 +3066,7 @@ msgstr ""
 #: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
 msgid "Error!"
-msgstr ""
+msgstr "ਗਲਤੀ!"
 
 #: lib/other/siteinfo.cpp:229
 msgctxt "SiteInfo|"
@@ -3118,7 +3076,7 @@ msgstr ""
 #: lib/other/siteinfo.cpp:240
 msgctxt "SiteInfo|"
 msgid "Save image..."
-msgstr ""
+msgstr "ਚਿੱਤਰ ਨੂੰ ਸੰਭਾਲੋ..."
 
 #: lib/other/siteinfo.cpp:248
 msgctxt "SiteInfo|"
@@ -3128,7 +3086,7 @@ msgstr ""
 #: lib/other/siteinfo.cpp:258
 msgctxt "SiteInfo|"
 msgid "Loading..."
-msgstr ""
+msgstr "ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
 
 #: lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
@@ -3138,10 +3096,9 @@ msgstr ""
 #: lib/other/siteinfo.ui:14
 msgctxt "SiteInfo|"
 msgid "Site Info"
-msgstr ""
+msgstr "ਸਾਈਟ ਦੀ ਜਾਣਕਾਰੀ"
 
 #: lib/other/siteinfo.ui:47
-#, fuzzy
 msgctxt "SiteInfo|"
 msgid "General"
 msgstr "ਆਮ"
@@ -3149,17 +3106,17 @@ msgstr "ਆਮ"
 #: lib/other/siteinfo.ui:52
 msgctxt "SiteInfo|"
 msgid "Media"
-msgstr ""
+msgstr "ਮੀਡੀਆ"
 
 #: lib/other/siteinfo.ui:84
 msgctxt "SiteInfo|"
 msgid "Site address:"
-msgstr ""
+msgstr "ਸਾਈਟ ਐਡਰੈਸ:"
 
 #: lib/other/siteinfo.ui:113
 msgctxt "SiteInfo|"
 msgid "Encoding:"
-msgstr ""
+msgstr "ਇੰਕੋਡਿੰਗ:"
 
 #: lib/other/siteinfo.ui:132
 msgctxt "SiteInfo|"
@@ -3169,50 +3126,48 @@ msgstr ""
 #: lib/other/siteinfo.ui:149
 msgctxt "SiteInfo|"
 msgid "Tag"
-msgstr ""
+msgstr "ਟੈਗ"
 
 #: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
 msgid "Value"
-msgstr ""
+msgstr "ਮੁੱਲ"
 
 #: lib/other/siteinfo.ui:168
 msgctxt "SiteInfo|"
 msgid "<b>Security information</b>"
-msgstr ""
+msgstr "<b>ਸੁਰੱਖਿਆ ਜਾਣਕਾਰੀ</b>"
 
 #: lib/other/siteinfo.ui:241
 msgctxt "SiteInfo|"
 msgid "Image"
-msgstr ""
+msgstr "ਚਿੱਤਰ"
 
 #: lib/other/siteinfo.ui:246
-#, fuzzy
 msgctxt "SiteInfo|"
 msgid "Image address"
 msgstr "ਚਿੱਤਰ ਦਾ ਐਡਰੈਸ"
 
 #: lib/other/siteinfo.ui:271
-#, fuzzy
 msgctxt "SiteInfo|"
 msgid "<b>Preview</b>"
-msgstr "ਝਲਕ..."
+msgstr "<b>ਝਲਕ</b>"
 
 #: lib/other/siteinfowidget.cpp:42
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "<b>Site %1<b/>"
-msgstr ""
+msgstr "<b>ਸਾਈਟ %1<b/>"
 
 #: lib/other/siteinfowidget.cpp:45
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>secured</b>."
-msgstr ""
+msgstr "ਇਸ ਸਾਈਟ ਲਈ ਤੁਹਾਡਾ ਕਨੈਕਸ਼ਨ <b>ਸੁਰੱਖਿਅਤ</b> ਹੈ।"
 
 #: lib/other/siteinfowidget.cpp:49
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>unsecured</b>."
-msgstr ""
+msgstr "ਇਸ ਸਾਈਟ ਲਈ ਤੁਹਾਡਾ ਕਨੈਕਸ਼ਨ <b>ਅਸੁਰੱਖਿਅਤ</b> ਹੈ।"
 
 #: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
 #, qt-format
@@ -3228,17 +3183,17 @@ msgstr ""
 #: lib/other/siteinfowidget.cpp:75
 msgctxt "SiteInfoWidget|"
 msgid "first"
-msgstr ""
+msgstr "ਪਹਿਲਾਂ"
 
 #: lib/other/siteinfowidget.cpp:78
 msgctxt "SiteInfoWidget|"
 msgid "second"
-msgstr ""
+msgstr "ਦੂਜਾ"
 
 #: lib/other/siteinfowidget.cpp:81
 msgctxt "SiteInfoWidget|"
 msgid "third"
-msgstr ""
+msgstr "ਤੀਜਾ"
 
 #: lib/other/siteinfowidget.cpp:106
 #, qt-format
