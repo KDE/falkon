@@ -36,7 +36,7 @@ void HTML5PermissionsManager::requestPermissions(WebPage* page, const QUrl &orig
         return;
     }
 
-    if (!checkFeature(feature)) {
+    if (!mApp->siteSettingsManager()->getSupportedFeatures().contains(feature)) {
         qWarning() << "HTML5PermissionsManager: Unknown feature" << feature;
         return;
     }
@@ -67,23 +67,5 @@ void HTML5PermissionsManager::rememberPermissions(const QUrl &origin, const QWeb
     }
     else {
         mApp->siteSettingsManager()->setOption(feature, origin, SiteSettingsManager::Deny);
-    }
-}
-
-bool HTML5PermissionsManager::checkFeature(const QWebEnginePage::Feature& feature)
-{
-    switch (feature) {
-        case QWebEnginePage::Notifications:
-        case QWebEnginePage::Geolocation:
-        case QWebEnginePage::MediaAudioCapture:
-        case QWebEnginePage::MediaVideoCapture:
-        case QWebEnginePage::MediaAudioVideoCapture:
-        case QWebEnginePage::MouseLock:
-        case QWebEnginePage::DesktopVideoCapture:
-        case QWebEnginePage::DesktopAudioVideoCapture:
-            return true;
-
-        default:
-            return false;
     }
 }

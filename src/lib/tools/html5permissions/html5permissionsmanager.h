@@ -35,9 +35,6 @@ public:
     void requestPermissions(WebPage* page, const QUrl &origin, const QWebEnginePage::Feature &feature);
     void rememberPermissions(const QUrl &origin, const QWebEnginePage::Feature &feature,
                              const QWebEnginePage::PermissionPolicy &policy);
-
-private:
-    bool checkFeature(const QWebEnginePage::Feature &feature);
 };
 
 #endif // HTML5PERMISSIONSMANAGER_H
