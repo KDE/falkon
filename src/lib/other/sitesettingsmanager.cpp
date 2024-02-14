@@ -32,7 +32,6 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     supportedAttribute.append(QWebEngineSettings::JavascriptCanPaste);
     supportedAttribute.append(QWebEngineSettings::AllowWindowActivationFromJavaScript);
     supportedAttribute.append(QWebEngineSettings::LocalStorageEnabled);
-    supportedAttribute.append(QWebEngineSettings::ScrollAnimatorEnabled);
     supportedAttribute.append(QWebEngineSettings::FullScreenSupportEnabled);
     supportedAttribute.append(QWebEngineSettings::AllowRunningInsecureContent);
     supportedAttribute.append(QWebEngineSettings::AllowGeolocationOnInsecureOrigins);
@@ -78,7 +77,6 @@ void SiteSettingsManager::loadSettings()
     defaultAttributes[QWebEngineSettings::JavascriptCanPaste                 ] = Allow;
     defaultAttributes[QWebEngineSettings::AllowWindowActivationFromJavaScript] = Deny;
     defaultAttributes[QWebEngineSettings::LocalStorageEnabled                ] = Allow;
-    defaultAttributes[QWebEngineSettings::ScrollAnimatorEnabled              ] = Allow;
     defaultAttributes[QWebEngineSettings::FullScreenSupportEnabled           ] = Allow;
     defaultAttributes[QWebEngineSettings::AllowRunningInsecureContent        ] = Deny;
     defaultAttributes[QWebEngineSettings::AllowGeolocationOnInsecureOrigins  ] = Deny;
@@ -361,8 +359,6 @@ QString SiteSettingsManager::getOptionName(const QWebEngineSettings::WebAttribut
 
         case QWebEngineSettings::LocalStorageEnabled:
             return tr("Local storage");
-        case QWebEngineSettings::ScrollAnimatorEnabled:
-            return tr("Animated scrolling");
         case QWebEngineSettings::FullScreenSupportEnabled:
             return tr("FullScreen support");
         case QWebEngineSettings::AllowRunningInsecureContent:
@@ -454,8 +450,6 @@ QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::W
 
         case QWebEngineSettings::LocalStorageEnabled:
             return QSL("wa_local_storage");
-        case QWebEngineSettings::ScrollAnimatorEnabled:
-            return QSL("wa_acroll_animator");
         case QWebEngineSettings::FullScreenSupportEnabled:
             return QSL("wa_fullscreen_support");
         case QWebEngineSettings::AllowRunningInsecureContent:

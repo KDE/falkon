@@ -484,7 +484,6 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
                 settings()->setAttribute(QWebEngineSettings::JavascriptCanPaste, false);
                 settings()->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, false);
                 settings()->setAttribute(QWebEngineSettings::LocalStorageEnabled, true);
-                settings()->setAttribute(QWebEngineSettings::ScrollAnimatorEnabled, mApp->webSettings()->testAttribute(QWebEngineSettings::ScrollAnimatorEnabled));
                 settings()->setAttribute(QWebEngineSettings::FullScreenSupportEnabled, mApp->webSettings()->testAttribute(QWebEngineSettings::FullScreenSupportEnabled));
                 settings()->setAttribute(QWebEngineSettings::AllowRunningInsecureContent, false);
                 settings()->setAttribute(QWebEngineSettings::AllowGeolocationOnInsecureOrigins, false);
