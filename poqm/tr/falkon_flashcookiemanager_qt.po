@@ -2,13 +2,14 @@
 # Translators:
 # Ferhat AYDIN <ferhataydin44@gmail.com>, 2017
 #
+# SPDX-FileCopyrightText: 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-05 00:16+0000\n"
-"PO-Revision-Date: 2022-01-22 13:00+0000\n"
-"Last-Translator: Ferhat AYDIN <ferhataydin44@gmail.com>\n"
+"PO-Revision-Date: 2024-02-29 17:26+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: fcm_dialog.cpp:76
 msgctxt "FCM_Dialog|"
@@ -85,7 +86,7 @@ msgstr "Zaten beyaz listede!"
 #, qt-format
 msgctxt "FCM_Dialog|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
-msgstr "\"%1\" sunucusu zaten kara listede, lütfen önce onu silin."
+msgstr "‘%1’ sunucusu halihazırda kara listede, lütfen önce onu silin."
 
 #: fcm_dialog.cpp:305 fcm_dialog.cpp:374
 msgctxt "FCM_Dialog|"
@@ -96,7 +97,7 @@ msgstr "Kara listeye ekle"
 #, qt-format
 msgctxt "FCM_Dialog|"
 msgid "The origin \"%1\" is already in whitelist, please remove it first."
-msgstr "\"%1\" sunucusu zaten beyaz listede, lütfen önce onu silin."
+msgstr "‘%1’ sunucusu zaten beyaz listede, lütfen önce onu silin."
 
 #: fcm_dialog.ui:14
 msgctxt "FCM_Dialog|"
@@ -202,8 +203,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:600;\">Flash cookie "
 "blacklist</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">Flash çerez kara "
-"listesi</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash Çerezleri Kara "
+"Listesi</span></p></body></html>"
 
 #: fcm_dialog.ui:381
 msgctxt "FCM_Dialog|"
@@ -224,7 +225,7 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:600;\">Flash Cookie "
 "Settings</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">Flash Çerez "
+"<html><head/><body><p><span style=\" font-weight:600;\">Flash Çerezleri "
 "Ayarları</span></p></body></html>"
 
 #: fcm_dialog.ui:475
@@ -245,7 +246,7 @@ msgid ""
 msgstr ""
 "<html><head/><body><p><span style=\" font-weight:600;\">Not:</span> Bu "
 "ayarlar yalnızca, flash çerezlerinden HTTP çerezler kullananları yönetmek "
-"için uygulanır <span style=\" font-weight:600;\">Cookies Manager</span>. </"
+"için uygulanır <span style=\" font-weight:600;\">Çerez Yöneticisi</span>. </"
 "p></body></html>"
 
 #: fcm_dialog.ui:538
