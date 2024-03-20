@@ -334,7 +334,7 @@ void ProfileManager::updateDatabase()
     }
 
     /* Update in 22.12.00 */
-    if (prof < Updater::Version(QStringLiteral("22.11.70"))) {
+    if (prof < Updater::Version(QStringLiteral("24.04.70"))) {
         std::cout << "Falkon: Updating database to version " << qPrintable(QString::fromLatin1(Qz::VERSION)) << std::endl;
 
         QSqlQuery query(SqlDatabase::instance()->database());
