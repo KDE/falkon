@@ -34,9 +34,7 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     supportedAttribute.append(QWebEngineSettings::LocalStorageEnabled);
     supportedAttribute.append(QWebEngineSettings::FullScreenSupportEnabled);
     supportedAttribute.append(QWebEngineSettings::AllowRunningInsecureContent);
-    supportedAttribute.append(QWebEngineSettings::AllowGeolocationOnInsecureOrigins);
     supportedAttribute.append(QWebEngineSettings::PlaybackRequiresUserGesture);
-    supportedAttribute.append(QWebEngineSettings::WebRTCPublicInterfacesOnly);
 
     supportedFeatures.append(QWebEnginePage::Notifications);
     supportedFeatures.append(QWebEnginePage::Geolocation);
@@ -79,9 +77,7 @@ void SiteSettingsManager::loadSettings()
     defaultAttributes[QWebEngineSettings::LocalStorageEnabled                ] = Allow;
     defaultAttributes[QWebEngineSettings::FullScreenSupportEnabled           ] = Allow;
     defaultAttributes[QWebEngineSettings::AllowRunningInsecureContent        ] = Deny;
-    defaultAttributes[QWebEngineSettings::AllowGeolocationOnInsecureOrigins  ] = Deny;
     defaultAttributes[QWebEngineSettings::PlaybackRequiresUserGesture        ] = Deny;
-    defaultAttributes[QWebEngineSettings::WebRTCPublicInterfacesOnly         ] = Allow;
 
     for (const auto &attribute : std::as_const(supportedAttribute)) {
         defaultAttributes[attribute] = intToPermission(settings.value(webAttributeToSqlColumn(attribute), defaultAttributes[attribute]).toInt());
@@ -363,12 +359,8 @@ QString SiteSettingsManager::getOptionName(const QWebEngineSettings::WebAttribut
             return tr("FullScreen support");
         case QWebEngineSettings::AllowRunningInsecureContent:
             return tr("Run insecure content");
-        case QWebEngineSettings::AllowGeolocationOnInsecureOrigins:
-            return tr("Geolocation on insecure origin");
         case QWebEngineSettings::PlaybackRequiresUserGesture:
             return tr("Automatic playing of videos");
-        case QWebEngineSettings::WebRTCPublicInterfacesOnly:
-            return tr("Prevent WebRTC from leaking private IP address");
 
         default:
             qWarning() << "Unknown attribute:" << attribute;
@@ -454,12 +446,8 @@ QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::W
             return QSL("wa_fullscreen_support");
         case QWebEngineSettings::AllowRunningInsecureContent:
             return QSL("wa_run_insecure_content");
-        case QWebEngineSettings::AllowGeolocationOnInsecureOrigins:
-            return QSL("wa_insecure_geolocation");
         case QWebEngineSettings::PlaybackRequiresUserGesture:
             return QSL("wa_playback_needs_gesture");
-        case QWebEngineSettings::WebRTCPublicInterfacesOnly:
-            return QSL("wa_webrtc_public_interface_only");
 
         default:
             qWarning() << "Unknown attribute:" << attribute;
