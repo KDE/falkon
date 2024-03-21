@@ -69,12 +69,9 @@ CREATE TABLE site_settings (
     wa_js_can_paste INTEGER DEFAULT 0,
     wa_js_window_activation INTEGER DEFAULT 0,
     wa_local_storage INTEGER DEFAULT 0,
-    wa_acroll_animator INTEGER DEFAULT 0,
     wa_fullscreen_support INTEGER DEFAULT 0,
     wa_run_insecure_content INTEGER DEFAULT 0,
-    wa_insecure_geolocation INTEGER DEFAULT 0,
     wa_playback_needs_gesture INTEGER DEFAULT 0,
-    wa_webrtc_public_interface_only INTEGER DEFAULT 0,
 
     f_notifications INTEGER DEFAULT 0,
     f_geolocation INTEGER DEFAULT 0,

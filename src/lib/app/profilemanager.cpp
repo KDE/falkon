@@ -167,10 +167,10 @@ void ProfileManager::updateCurrentProfile()
     // If file exists, just update the profile to current version
     if (versionFile.exists()) {
         versionFile.open(QFile::ReadOnly);
-        profileVersion = QString::fromUtf8(versionFile.readAll());
+        profileVersion = QString::fromUtf8(versionFile.readAll()).trimmed();
         versionFile.close();
 
-        updateProfile(QString::fromLatin1(Qz::VERSION), profileVersion.trimmed());
+        updateProfile(QString::fromLatin1(Qz::VERSION), profileVersion);
     }
     else {
         copyDataToProfile();
