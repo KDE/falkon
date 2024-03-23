@@ -20,7 +20,9 @@
 #include "mainapplication.h"
 #include "settings.h"
 #include "sqldatabase.h"
+
 #include <QUrl>
+#include <QtWebEngineCoreVersion>
 
 SiteSettingsManager::SiteSettingsManager ( QObject* parent )
 : QObject(parent)
@@ -35,6 +37,9 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     supportedAttribute.append(QWebEngineSettings::FullScreenSupportEnabled);
     supportedAttribute.append(QWebEngineSettings::AllowRunningInsecureContent);
     supportedAttribute.append(QWebEngineSettings::PlaybackRequiresUserGesture);
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    supportedAttribute.append(QWebEngineSettings::ReadingFromCanvasEnabled);
+#endif
 
     supportedFeatures.append(QWebEnginePage::Notifications);
     supportedFeatures.append(QWebEnginePage::Geolocation);
@@ -78,6 +83,9 @@ void SiteSettingsManager::loadSettings()
     defaultAttributes[QWebEngineSettings::FullScreenSupportEnabled           ] = Allow;
     defaultAttributes[QWebEngineSettings::AllowRunningInsecureContent        ] = Deny;
     defaultAttributes[QWebEngineSettings::PlaybackRequiresUserGesture        ] = Deny;
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    defaultAttributes[QWebEngineSettings::ReadingFromCanvasEnabled           ] = Deny;
+#endif
 
     for (const auto &attribute : std::as_const(supportedAttribute)) {
         defaultAttributes[attribute] = intToPermission(settings.value(webAttributeToSqlColumn(attribute), defaultAttributes[attribute]).toInt());
@@ -361,6 +369,10 @@ QString SiteSettingsManager::getOptionName(const QWebEngineSettings::WebAttribut
             return tr("Run insecure content");
         case QWebEngineSettings::PlaybackRequiresUserGesture:
             return tr("Automatic playing of videos");
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+        case QWebEngineSettings::ReadingFromCanvasEnabled:
+            return tr("Allow reading from canvas");
+#endif
 
         default:
             qWarning() << "Unknown attribute:" << attribute;
@@ -448,6 +460,10 @@ QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::W
             return QSL("wa_run_insecure_content");
         case QWebEngineSettings::PlaybackRequiresUserGesture:
             return QSL("wa_playback_needs_gesture");
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+        case QWebEngineSettings::ReadingFromCanvasEnabled:
+            return QSL("wa_reading_from_canvas");
+#endif
 
         default:
             qWarning() << "Unknown attribute:" << attribute;
