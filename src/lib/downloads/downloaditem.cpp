@@ -28,6 +28,7 @@
 
 #include <QMenu>
 #include <QClipboard>
+#include <QLocale>
 #include <QListWidgetItem>
 #include <QMouseEvent>
 #include <QTimer>
@@ -216,18 +217,19 @@ QString DownloadItem::currentSpeedToString(double speed)
         return tr("Unknown speed");
     }
 
+    QLocale locale;
     speed /= 1024; // kB
     if (speed < 1000) {
-        return QString::number(speed, 'f', 0) + QLatin1String(" ") + tr("kB/s");
+        return tr("%1 kB/s").arg(locale.toString(speed, 'f', 0));
     }
 
     speed /= 1024; //MB
     if (speed < 1000) {
-        return QString::number(speed, 'f', 2) + QLatin1String(" ") + tr("MB/s");
+        return tr("%1 MB/s").arg(locale.toString(speed, 'f', 2));
     }
 
     speed /= 1024; //GB
-    return QString::number(speed, 'f', 2) + QLatin1String(" ") + tr("GB/s");
+    return tr("%1 GB/s").arg(locale.toString(speed, 'f', 2));
 }
 
 void DownloadItem::updateDownloadInfo(double currSpeed, qint64 received, qint64 total)
