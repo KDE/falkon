@@ -1549,40 +1549,40 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr "Cookies beim Beenden löschen"
 
-#: lib/downloads/downloaditem.cpp:73
+#: lib/downloads/downloaditem.cpp:74
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "Verbleibende Zeit unbekannt"
 
-#: lib/downloads/downloaditem.cpp:129
+#: lib/downloads/downloaditem.cpp:130
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "Erledigt - %1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:133
+#: lib/downloads/downloaditem.cpp:134
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "Fehler - %1"
 
-#: lib/downloads/downloaditem.cpp:137 lib/downloads/downloaditem.cpp:279
+#: lib/downloads/downloaditem.cpp:138 lib/downloads/downloaditem.cpp:281
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "Abgebrochen - %1"
 
-#: lib/downloads/downloaditem.cpp:188 lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:189 lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "Abgebrochen"
 
-#: lib/downloads/downloaditem.cpp:194
+#: lib/downloads/downloaditem.cpp:195
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "Wenige Sekunden"
 
-#: lib/downloads/downloaditem.cpp:199
+#: lib/downloads/downloaditem.cpp:200
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1590,7 +1590,7 @@ msgid_plural "%n seconds"
 msgstr[0] "%n Sekunde"
 msgstr[1] "%n Sekunden"
 
-#: lib/downloads/downloaditem.cpp:204
+#: lib/downloads/downloaditem.cpp:205
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1598,7 +1598,7 @@ msgid_plural "%n minutes"
 msgstr[0] "%n Minute"
 msgstr[1] "%n Minuten"
 
-#: lib/downloads/downloaditem.cpp:209
+#: lib/downloads/downloaditem.cpp:210
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1606,95 +1606,104 @@ msgid_plural "%n hours"
 msgstr[0] "%n Stunde"
 msgstr[1] "%n Stunden"
 
-#: lib/downloads/downloaditem.cpp:216
+#: lib/downloads/downloaditem.cpp:217
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "Downloadgeschwindigkeit unbekannt"
 
-#: lib/downloads/downloaditem.cpp:221
+#: lib/downloads/downloaditem.cpp:223
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "kB/s"
 msgctxt "DownloadItem|"
-msgid "kB/s"
+msgid "%1 kB/s"
 msgstr "kB/s"
 
-#: lib/downloads/downloaditem.cpp:226
+#: lib/downloads/downloaditem.cpp:228
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "MB/s"
 msgctxt "DownloadItem|"
-msgid "MB/s"
+msgid "%1 MB/s"
 msgstr "MB/s"
 
-#: lib/downloads/downloaditem.cpp:230
+#: lib/downloads/downloaditem.cpp:232
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "GB/s"
 msgctxt "DownloadItem|"
-msgid "GB/s"
+msgid "%1 GB/s"
 msgstr "GB/s"
 
-#: lib/downloads/downloaditem.cpp:258
+#: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "Dateigröße unbekannt"
 
-#: lib/downloads/downloaditem.cpp:259
+#: lib/downloads/downloaditem.cpp:261
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - unbekannte Dateigröße (%3)"
 
-#: lib/downloads/downloaditem.cpp:262
+#: lib/downloads/downloaditem.cpp:264
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "Verbleibend %1 - %2 von %3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:294
+#: lib/downloads/downloaditem.cpp:296
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "Angehalten - %1"
 
-#: lib/downloads/downloaditem.cpp:307
+#: lib/downloads/downloaditem.cpp:309
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "Datei öffnen"
 
-#: lib/downloads/downloaditem.cpp:309
+#: lib/downloads/downloaditem.cpp:311
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "Ordner öffnen"
 
-#: lib/downloads/downloaditem.cpp:311
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "Verknüpfungs-Adresse kopieren"
 
-#: lib/downloads/downloaditem.cpp:313
+#: lib/downloads/downloaditem.cpp:315
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "Download abbrechen"
 
-#: lib/downloads/downloaditem.cpp:316
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "Herunterladen fortsetzen"
 
-#: lib/downloads/downloaditem.cpp:318
+#: lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "Herunterladen anhalten"
 
-#: lib/downloads/downloaditem.cpp:321
+#: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "Von der Liste entfernen"
 
-#: lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "Fehler"
 
-#: lib/downloads/downloaditem.cpp:349
+#: lib/downloads/downloaditem.cpp:351
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "Nicht gefunden"
 
-#: lib/downloads/downloaditem.cpp:349
+#: lib/downloads/downloaditem.cpp:351
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -5585,42 +5594,45 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "Abweisen"
 
-#: lib/tools/qztools.cpp:378
+#: lib/tools/qztools.cpp:379
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "Dateigröße unbekannt"
 
-#: lib/tools/qztools.cpp:383
+#: lib/tools/qztools.cpp:386
+#, qt-format
 msgctxt "QObject|"
-msgid "KB"
-msgstr "KB"
+msgid "%1 kB"
+msgstr ""
 
-#: lib/tools/qztools.cpp:388
+#: lib/tools/qztools.cpp:391
+#, qt-format
 msgctxt "QObject|"
-msgid "MB"
-msgstr "MB"
+msgid "%1 MB"
+msgstr ""
 
-#: lib/tools/qztools.cpp:392
+#: lib/tools/qztools.cpp:395
+#, qt-format
 msgctxt "QObject|"
-msgid "GB"
-msgstr "GB"
+msgid "%1 GB"
+msgstr ""
 
-#: lib/tools/qztools.cpp:851
+#: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "Ausführbare Datei: "
 
-#: lib/tools/qztools.cpp:852
+#: lib/tools/qztools.cpp:855
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "Parameter: "
 
-#: lib/tools/qztools.cpp:854
+#: lib/tools/qztools.cpp:857
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "Externes Programm kann nicht gestartet werden"
 
-#: lib/tools/qztools.cpp:855
+#: lib/tools/qztools.cpp:858
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -5978,6 +5990,18 @@ msgstr "Element untersuchen"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "QObject|"
+#~ msgid "KB"
+#~ msgstr "KB"
+
+#~ msgctxt "QObject|"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgctxt "QObject|"
+#~ msgid "GB"
+#~ msgstr "GB"
 
 #~ msgctxt "Preferences|"
 #~ msgid "Allow Pepper Plugins (Flash plugin)"

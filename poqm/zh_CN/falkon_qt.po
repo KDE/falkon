@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
-"PO-Revision-Date: 2024-03-30 19:37\n"
+"PO-Revision-Date: 2024-04-01 14:44\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -1510,149 +1510,158 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr "关闭时删除 Cookie"
 
-#: lib/downloads/downloaditem.cpp:73
+#: lib/downloads/downloaditem.cpp:74
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "剩余时间不可用"
 
-#: lib/downloads/downloaditem.cpp:129
+#: lib/downloads/downloaditem.cpp:130
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "完成 - %1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:133
+#: lib/downloads/downloaditem.cpp:134
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "错误 - %1"
 
-#: lib/downloads/downloaditem.cpp:137 lib/downloads/downloaditem.cpp:279
+#: lib/downloads/downloaditem.cpp:138 lib/downloads/downloaditem.cpp:281
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "已取消 - %1"
 
-#: lib/downloads/downloaditem.cpp:188 lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:189 lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "已取消"
 
-#: lib/downloads/downloaditem.cpp:194
+#: lib/downloads/downloaditem.cpp:195
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "几秒钟"
 
-#: lib/downloads/downloaditem.cpp:199
+#: lib/downloads/downloaditem.cpp:200
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
 msgstr[0] "%n 秒"
 
-#: lib/downloads/downloaditem.cpp:204
+#: lib/downloads/downloaditem.cpp:205
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
 msgstr[0] "%n 分钟"
 
-#: lib/downloads/downloaditem.cpp:209
+#: lib/downloads/downloaditem.cpp:210
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
 msgstr[0] "%n 小时"
 
-#: lib/downloads/downloaditem.cpp:216
+#: lib/downloads/downloaditem.cpp:217
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "未知速度"
 
-#: lib/downloads/downloaditem.cpp:221
+#: lib/downloads/downloaditem.cpp:223
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "kB/s"
 msgctxt "DownloadItem|"
-msgid "kB/s"
+msgid "%1 kB/s"
 msgstr "kB/s"
 
-#: lib/downloads/downloaditem.cpp:226
+#: lib/downloads/downloaditem.cpp:228
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "MB/s"
 msgctxt "DownloadItem|"
-msgid "MB/s"
+msgid "%1 MB/s"
 msgstr "MB/s"
 
-#: lib/downloads/downloaditem.cpp:230
+#: lib/downloads/downloaditem.cpp:232
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "GB/s"
 msgctxt "DownloadItem|"
-msgid "GB/s"
+msgid "%1 GB/s"
 msgstr "GB/s"
 
-#: lib/downloads/downloaditem.cpp:258
+#: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "未知尺寸"
 
-#: lib/downloads/downloaditem.cpp:259
+#: lib/downloads/downloaditem.cpp:261
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - 未知大小 (%3)"
 
-#: lib/downloads/downloaditem.cpp:262
+#: lib/downloads/downloaditem.cpp:264
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "剩余 %1 - %2 / %3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:294
+#: lib/downloads/downloaditem.cpp:296
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "已暂停 - %1"
 
-#: lib/downloads/downloaditem.cpp:307
+#: lib/downloads/downloaditem.cpp:309
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "打开文件"
 
-#: lib/downloads/downloaditem.cpp:309
+#: lib/downloads/downloaditem.cpp:311
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "打开文件夹"
 
-#: lib/downloads/downloaditem.cpp:311
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "复制下载链接"
 
-#: lib/downloads/downloaditem.cpp:313
+#: lib/downloads/downloaditem.cpp:315
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "取消下载"
 
-#: lib/downloads/downloaditem.cpp:316
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "继续下载"
 
-#: lib/downloads/downloaditem.cpp:318
+#: lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "暂停下载"
 
-#: lib/downloads/downloaditem.cpp:321
+#: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "从列表中移除"
 
-#: lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "错误"
 
-#: lib/downloads/downloaditem.cpp:349
+#: lib/downloads/downloaditem.cpp:351
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "未找到"
 
-#: lib/downloads/downloaditem.cpp:349
+#: lib/downloads/downloaditem.cpp:351
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -5501,42 +5510,45 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "拒绝"
 
-#: lib/tools/qztools.cpp:378
+#: lib/tools/qztools.cpp:379
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "未知尺寸"
 
-#: lib/tools/qztools.cpp:383
+#: lib/tools/qztools.cpp:386
+#, qt-format
 msgctxt "QObject|"
-msgid "KB"
-msgstr "KB"
+msgid "%1 kB"
+msgstr ""
 
-#: lib/tools/qztools.cpp:388
+#: lib/tools/qztools.cpp:391
+#, qt-format
 msgctxt "QObject|"
-msgid "MB"
-msgstr "MB"
+msgid "%1 MB"
+msgstr ""
 
-#: lib/tools/qztools.cpp:392
+#: lib/tools/qztools.cpp:395
+#, qt-format
 msgctxt "QObject|"
-msgid "GB"
-msgstr "GB"
+msgid "%1 GB"
+msgstr ""
 
-#: lib/tools/qztools.cpp:851
+#: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "可执行文件: "
 
-#: lib/tools/qztools.cpp:852
+#: lib/tools/qztools.cpp:855
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "参数: "
 
-#: lib/tools/qztools.cpp:854
+#: lib/tools/qztools.cpp:857
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "无法启动外部程序"
 
-#: lib/tools/qztools.cpp:855
+#: lib/tools/qztools.cpp:858
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -5891,3 +5903,15 @@ msgstr "检查元素"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "QObject|"
+#~ msgid "KB"
+#~ msgstr "KB"
+
+#~ msgctxt "QObject|"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgctxt "QObject|"
+#~ msgid "GB"
+#~ msgstr "GB"

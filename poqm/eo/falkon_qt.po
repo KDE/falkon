@@ -1540,40 +1540,40 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr "Forigi kuketojn ĉe fermo"
 
-#: lib/downloads/downloaditem.cpp:73
+#: lib/downloads/downloaditem.cpp:74
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "Resta tempo nedisponebla"
 
-#: lib/downloads/downloaditem.cpp:129
+#: lib/downloads/downloaditem.cpp:130
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "Farita - %1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:133
+#: lib/downloads/downloaditem.cpp:134
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "Eraro - %1"
 
-#: lib/downloads/downloaditem.cpp:137 lib/downloads/downloaditem.cpp:279
+#: lib/downloads/downloaditem.cpp:138 lib/downloads/downloaditem.cpp:281
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "Nuligite - %1"
 
-#: lib/downloads/downloaditem.cpp:188 lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:189 lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "Nuligite"
 
-#: lib/downloads/downloaditem.cpp:194
+#: lib/downloads/downloaditem.cpp:195
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "kelkajn sekundojn"
 
-#: lib/downloads/downloaditem.cpp:199
+#: lib/downloads/downloaditem.cpp:200
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1581,7 +1581,7 @@ msgid_plural "%n seconds"
 msgstr[0] "%n sekundoj"
 msgstr[1] "%n sekundoj"
 
-#: lib/downloads/downloaditem.cpp:204
+#: lib/downloads/downloaditem.cpp:205
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1589,7 +1589,7 @@ msgid_plural "%n minutes"
 msgstr[0] "%n minutoj"
 msgstr[1] "%n minutoj"
 
-#: lib/downloads/downloaditem.cpp:209
+#: lib/downloads/downloaditem.cpp:210
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1597,95 +1597,104 @@ msgid_plural "%n hours"
 msgstr[0] "%n horoj"
 msgstr[1] "%n horoj"
 
-#: lib/downloads/downloaditem.cpp:216
+#: lib/downloads/downloaditem.cpp:217
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "Nekonata rapideco"
 
-#: lib/downloads/downloaditem.cpp:221
+#: lib/downloads/downloaditem.cpp:223
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "kB/s"
 msgctxt "DownloadItem|"
-msgid "kB/s"
+msgid "%1 kB/s"
 msgstr "kB/s"
 
-#: lib/downloads/downloaditem.cpp:226
+#: lib/downloads/downloaditem.cpp:228
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "MB/s"
 msgctxt "DownloadItem|"
-msgid "MB/s"
+msgid "%1 MB/s"
 msgstr "MB/s"
 
-#: lib/downloads/downloaditem.cpp:230
+#: lib/downloads/downloaditem.cpp:232
+#, fuzzy, qt-format
+#| msgctxt "DownloadItem|"
+#| msgid "GB/s"
 msgctxt "DownloadItem|"
-msgid "GB/s"
+msgid "%1 GB/s"
 msgstr "GB/s"
 
-#: lib/downloads/downloaditem.cpp:258
+#: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "Nekonata grandeco"
 
-#: lib/downloads/downloaditem.cpp:259
+#: lib/downloads/downloaditem.cpp:261
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - nekonata grandeco (%3)"
 
-#: lib/downloads/downloaditem.cpp:262
+#: lib/downloads/downloaditem.cpp:264
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "Restanta %1 - %2 el %3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:294
+#: lib/downloads/downloaditem.cpp:296
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "Paŭzita - %1"
 
-#: lib/downloads/downloaditem.cpp:307
+#: lib/downloads/downloaditem.cpp:309
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "Malfermi Dosieron"
 
-#: lib/downloads/downloaditem.cpp:309
+#: lib/downloads/downloaditem.cpp:311
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "Malfermi Dosierujon"
 
-#: lib/downloads/downloaditem.cpp:311
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "Kopii Elŝutan Ligilon"
 
-#: lib/downloads/downloaditem.cpp:313
+#: lib/downloads/downloaditem.cpp:315
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "Nuligi elŝuton"
 
-#: lib/downloads/downloaditem.cpp:316
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "Rekomenci elŝutadon"
 
-#: lib/downloads/downloaditem.cpp:318
+#: lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "Paŭzi elŝuton"
 
-#: lib/downloads/downloaditem.cpp:321
+#: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "Forigi el Listo"
 
-#: lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "Eraro"
 
-#: lib/downloads/downloaditem.cpp:349
+#: lib/downloads/downloaditem.cpp:351
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "Ne trovita"
 
-#: lib/downloads/downloaditem.cpp:349
+#: lib/downloads/downloaditem.cpp:351
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -5553,42 +5562,45 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "Nei"
 
-#: lib/tools/qztools.cpp:378
+#: lib/tools/qztools.cpp:379
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "Nekonata grandeco"
 
-#: lib/tools/qztools.cpp:383
+#: lib/tools/qztools.cpp:386
+#, qt-format
 msgctxt "QObject|"
-msgid "KB"
-msgstr "KB"
+msgid "%1 kB"
+msgstr ""
 
-#: lib/tools/qztools.cpp:388
+#: lib/tools/qztools.cpp:391
+#, qt-format
 msgctxt "QObject|"
-msgid "MB"
-msgstr "MB"
+msgid "%1 MB"
+msgstr ""
 
-#: lib/tools/qztools.cpp:392
+#: lib/tools/qztools.cpp:395
+#, qt-format
 msgctxt "QObject|"
-msgid "GB"
-msgstr "GB"
+msgid "%1 GB"
+msgstr ""
 
-#: lib/tools/qztools.cpp:851
+#: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "Efektivigebla:"
 
-#: lib/tools/qztools.cpp:852
+#: lib/tools/qztools.cpp:855
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "Argumentoj:"
 
-#: lib/tools/qztools.cpp:854
+#: lib/tools/qztools.cpp:857
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "Ne povas komenci eksteran programon"
 
-#: lib/tools/qztools.cpp:855
+#: lib/tools/qztools.cpp:858
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -5946,3 +5958,15 @@ msgstr "Inspekti Elementon"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "QObject|"
+#~ msgid "KB"
+#~ msgstr "KB"
+
+#~ msgctxt "QObject|"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgctxt "QObject|"
+#~ msgid "GB"
+#~ msgstr "GB"
