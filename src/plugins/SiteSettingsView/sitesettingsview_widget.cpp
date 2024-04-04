@@ -23,6 +23,7 @@
 #include "sitesettingsmanager.h"
 #include "tabbedwebview.h"
 #include "webpage.h"
+#include "qzsettings.h"
 
 #include <QTreeWidget>
 #include <QHeaderView>
@@ -102,16 +103,16 @@ SiteSettingsView_Widget::SiteSettingsView_Widget(BrowserWindow* window)
 
     m_options = new QTreeWidget(this);
     m_options->setColumnCount(3);
-    m_options->setHeaderLabels({tr("Local"), tr("Default"), tr("Option")});
+    m_options->setHeaderLabels({tr("Real"), tr("Local"), tr("Default"), tr("Option")});
     m_options->setSortingEnabled(true);
-    m_options->sortByColumn(2, Qt::AscendingOrder);
+    m_options->sortByColumn(3, Qt::AscendingOrder);
     m_options->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     m_options->header()->setSectionsMovable(false);
     m_options->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
 
     for (auto &option : m_availableOptions) {
-        auto *item = new QTreeWidgetItem(m_options, {QSL(""), QSL(""), mApp->siteSettingsManager()->getOptionName(option)});
-        item->setToolTip(2, mApp->siteSettingsManager()->getOptionName(option));
+        auto *item = new QTreeWidgetItem(m_options, {QSL(""), QSL(""), QSL(""), mApp->siteSettingsManager()->getOptionName(option)});
+        item->setToolTip(3, mApp->siteSettingsManager()->getOptionName(option));
         m_optionsItems.insert(option, item);
     }
 
@@ -128,7 +129,7 @@ SiteSettingsView_Widget::SiteSettingsView_Widget(BrowserWindow* window)
     connect(m_window->tabWidget(), &TabWidget::currentChanged, this, &SiteSettingsView_Widget::updateData);
     connect(buttonRefresh, &QToolButton::clicked, this, &SiteSettingsView_Widget::updateData);
 
-    updateData(0);
+    updateData();
 }
 
 void SiteSettingsView_Widget::updateData(int index)
@@ -139,6 +140,7 @@ void SiteSettingsView_Widget::updateData(int index)
     if (tab == nullptr) {
         return;
     }
+
     auto url = tab->url();
     /* This condition is copied from webpage.cpp function acceptNavigationRequest()
      * Falkon has hardcoded properties / attributes for non Web pages*/
@@ -186,8 +188,8 @@ void SiteSettingsView_Widget::updateData(int index)
 
     QHash<SiteSettingsManager::PageOptions, QTreeWidgetItem*>::iterator it_opt;
     for (it_opt = m_optionsItems.begin(); it_opt != m_optionsItems.end(); ++it_opt) {
-        QString optLocalText, optDefaultText;
-        QBrush optLocalColor, optDefaultColor;
+        QString optRealText, optLocalText, optDefaultText;
+        QBrush optRealColor, optLocalColor, optDefaultColor;
         const auto option = it_opt.key();
         auto *item = it_opt.value();
 
@@ -206,13 +208,23 @@ void SiteSettingsView_Widget::updateData(int index)
 
             case SiteSettingsManager::poZoomLevel: {
                 auto zoomLevels = WebView::zoomLevels();
-                const int defaultZoomLevel = 6;
-                const int zoomLevel = (siteSettings.ZoomLevel == -1) ? defaultZoomLevel : siteSettings.ZoomLevel;
+                const int realZoomLevel = tab->webView()->zoomLevel();
+                const int defualZoomLevel = qzSettings->defaultZoomLevel;
+                const int storedZoomLevel = siteSettings.ZoomLevel;
 
-                optLocalText = tr("%1 (%2%)").arg(zoomLevel).arg(zoomLevels[zoomLevel]);
-                optLocalColor = m_brushGreen;
+                optRealText = tr("%1 (%2%)").arg(realZoomLevel).arg(zoomLevels[realZoomLevel]);
+                optRealColor = m_brushGreen;
 
-                optDefaultText = QSL("");
+                if (storedZoomLevel == -1) {
+                    optLocalText = tr("Default");
+                    optLocalColor = m_brushYellow;
+                }
+                else {
+                    optLocalText = tr("%1 (%2%)").arg(storedZoomLevel).arg(zoomLevels[storedZoomLevel]);
+                    optLocalColor = m_brushGreen;
+                }
+
+                optDefaultText = tr("%1 (%2%)").arg(defualZoomLevel).arg(zoomLevels[defualZoomLevel]);
                 optDefaultColor = m_brushGreen;
             }
                 break;
@@ -222,10 +234,12 @@ void SiteSettingsView_Widget::updateData(int index)
                 continue;
         }
 
-        item->setText(0, optLocalText);
-        item->setForeground(0, optLocalColor);
-        item->setText(1, optDefaultText);
-        item->setForeground(1, optDefaultColor);
+        item->setText(0, optRealText);
+        item->setForeground(0, optRealColor);
+        item->setText(1, optLocalText);
+        item->setForeground(1, optLocalColor);
+        item->setText(2, optDefaultText);
+        item->setForeground(2, optDefaultColor);
     }
 }
 
@@ -253,6 +267,6 @@ void SiteSettingsView_Widget::loadFinished(WebPage* page)
     }
 
     if (page == tab->webView()->page()) {
-        updateData(0);
+        updateData();
     }
 }

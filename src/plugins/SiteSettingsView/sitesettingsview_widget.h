@@ -38,7 +38,7 @@ public:
     void loadFinished(WebPage* page);
 
 private Q_SLOTS:
-    void updateData(int index);
+    void updateData(int index = 0);
 
 private:
     QTreeWidget *m_attributes;

@@ -21,6 +21,7 @@
 #include "sitesettingsmanager.h"
 #include "mainapplication.h"
 #include "webpage.h"
+#include "webview.h"
 
 #include <QAction>
 #include <QLabel>
@@ -59,6 +60,12 @@ QWidget* SiteSettingsView_Controller::createSideBarWidget(BrowserWindow* mainWin
 void SiteSettingsView_Controller::webPageCreated(WebPage* page)
 {
     connect(page, &WebPage::loadFinished, this, [=]() {
+        QHash<BrowserWindow*, QPointer<SiteSettingsView_Widget>>::iterator it;
+        for (it = m_widgets.begin(); it != m_widgets.end(); ++it) {
+            it.value()->loadFinished(page);
+        }
+    });
+    connect(page->view(), &WebView::zoomLevelChanged, this, [=](){
         QHash<BrowserWindow*, QPointer<SiteSettingsView_Widget>>::iterator it;
         for (it = m_widgets.begin(); it != m_widgets.end(); ++it) {
             it.value()->loadFinished(page);
