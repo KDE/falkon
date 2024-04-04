@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-01-14 13:51+0100\n"
+"PO-Revision-Date: 2024-04-03 10:25+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: nl_NL\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -1608,28 +1608,22 @@ msgid "Unknown speed"
 msgstr "Onbekende snelheid"
 
 #: lib/downloads/downloaditem.cpp:223
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "kB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
-msgstr "KB/s"
+msgstr "%1 kB/s"
 
 #: lib/downloads/downloaditem.cpp:228
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "MB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
-msgstr "MB/s"
+msgstr "%1 MB/s"
 
 #: lib/downloads/downloaditem.cpp:232
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "GB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
-msgstr "GB/s"
+msgstr "%1 GB/s"
 
 #: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
@@ -5593,19 +5587,19 @@ msgstr "Onbekende grootte"
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #: lib/tools/qztools.cpp:391
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #: lib/tools/qztools.cpp:395
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #: lib/tools/qztools.cpp:854
 msgctxt "QObject|"

@@ -9,9 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_qt\n"
-"PO-Revision-Date: 2024-01-14 09:07+0200\n"
+"PO-Revision-Date: 2024-04-03 12:39+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language-Team: Ukrainian\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1615,28 +1615,22 @@ msgid "Unknown speed"
 msgstr "Швидкість невідома"
 
 #: lib/downloads/downloaditem.cpp:223
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "kB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
-msgstr "КБ/с"
+msgstr "%1 кБ/с"
 
 #: lib/downloads/downloaditem.cpp:228
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "MB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
-msgstr "МБ/с"
+msgstr "%1 МБ/с"
 
 #: lib/downloads/downloaditem.cpp:232
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "GB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
-msgstr "ГБ/с"
+msgstr "%1 ГБ/с"
 
 #: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
@@ -5591,19 +5585,19 @@ msgstr "Розмір невідомий"
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 кБ"
 
 #: lib/tools/qztools.cpp:391
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 МБ"
 
 #: lib/tools/qztools.cpp:395
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 ГБ"
 
 #: lib/tools/qztools.cpp:854
 msgctxt "QObject|"

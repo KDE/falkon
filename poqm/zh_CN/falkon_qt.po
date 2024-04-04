@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
-"PO-Revision-Date: 2024-04-01 14:44\n"
+"PO-Revision-Date: 2024-04-03 19:14\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -1570,28 +1570,22 @@ msgid "Unknown speed"
 msgstr "未知速度"
 
 #: lib/downloads/downloaditem.cpp:223
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "kB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
-msgstr "kB/s"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:228
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "MB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
-msgstr "MB/s"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:232
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "GB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
-msgstr "GB/s"
+msgstr ""
 
 #: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
@@ -5903,15 +5897,3 @@ msgstr "检查元素"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "QObject|"
-#~ msgid "KB"
-#~ msgstr "KB"
-
-#~ msgctxt "QObject|"
-#~ msgid "MB"
-#~ msgstr "MB"
-
-#~ msgctxt "QObject|"
-#~ msgid "GB"
-#~ msgstr "GB"

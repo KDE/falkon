@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-05 00:16+0000\n"
-"PO-Revision-Date: 2024-03-17 02:44+0300\n"
+"PO-Revision-Date: 2024-04-03 06:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -1600,28 +1600,22 @@ msgid "Unknown speed"
 msgstr "Bilinmeyen hız"
 
 #: lib/downloads/downloaditem.cpp:223
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "kB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
-msgstr "kB/sn"
+msgstr "%1 kB/sn"
 
 #: lib/downloads/downloaditem.cpp:228
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "MB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
-msgstr "MB/sn"
+msgstr "%1 MB/sn"
 
 #: lib/downloads/downloaditem.cpp:232
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "GB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
-msgstr "GB/sn"
+msgstr "%1 GB/sn"
 
 #: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
@@ -5572,19 +5566,19 @@ msgstr "Bilinmeyen boyut"
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #: lib/tools/qztools.cpp:391
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #: lib/tools/qztools.cpp:395
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
