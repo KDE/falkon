@@ -77,6 +77,7 @@ SiteSettingsView_Widget::SiteSettingsView_Widget(BrowserWindow* window)
     m_attributes->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     m_attributes->header()->setSectionsMovable(false);
     m_attributes->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
+    m_attributes->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     auto attributes = mApp->siteSettingsManager()->getSupportedAttribute();
     for (auto &attr : attributes) {
@@ -93,6 +94,7 @@ SiteSettingsView_Widget::SiteSettingsView_Widget(BrowserWindow* window)
     m_features->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     m_features->header()->setSectionsMovable(false);
     m_features->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
+    m_features->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     auto features = mApp->siteSettingsManager()->getSupportedFeatures();
     for (auto &feature : features) {
@@ -109,6 +111,7 @@ SiteSettingsView_Widget::SiteSettingsView_Widget(BrowserWindow* window)
     m_options->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     m_options->header()->setSectionsMovable(false);
     m_options->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
+    m_options->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     for (auto &option : m_availableOptions) {
         auto *item = new QTreeWidgetItem(m_options, {QSL(""), QSL(""), QSL(""), mApp->siteSettingsManager()->getOptionName(option)});
