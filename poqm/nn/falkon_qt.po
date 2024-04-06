@@ -1608,8 +1608,6 @@ msgstr "Ukjend fart"
 # Har sjekka at det er snakk om byte/1024.
 #: lib/downloads/downloaditem.cpp:223
 #, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "kB/s"
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
 msgstr "KiB/s"
@@ -1617,8 +1615,6 @@ msgstr "KiB/s"
 # Har sjekka at det er snakk om byte/1024².
 #: lib/downloads/downloaditem.cpp:228
 #, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "MB/s"
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
 msgstr "MiB/s"
@@ -1626,8 +1622,6 @@ msgstr "MiB/s"
 # Har sjekka at det er snakk om byte/1024³.
 #: lib/downloads/downloaditem.cpp:232
 #, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "GB/s"
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
 msgstr "GiB/s"
@@ -5971,18 +5965,3 @@ msgstr "Gransk element"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 – Falkon"
-
-# Har sjekka at det er snakk om 1024 byte.
-#~ msgctxt "QObject|"
-#~ msgid "KB"
-#~ msgstr "KiB"
-
-# Har sjekka at det er snakk om 1024² byte.
-#~ msgctxt "QObject|"
-#~ msgid "MB"
-#~ msgstr "MiB"
-
-# Har sjekka at det er snakk om 1024³ byte.
-#~ msgctxt "QObject|"
-#~ msgid "GB"
-#~ msgstr "GiB"
