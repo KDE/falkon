@@ -86,32 +86,32 @@ public:
 
     Permission getPermission(const QString &column, const QString &host);
     Permission getPermission(const PageOptions option, const QString &host);
-    Permission getPermission(const QWebEnginePage::Feature &feature, const QString &host);
-    Permission getPermission(const QWebEngineSettings::WebAttribute &attribute, const QString &host);
+    Permission getPermission(const QWebEnginePage::Feature feature, const QString &host);
+    Permission getPermission(const QWebEngineSettings::WebAttribute attribute, const QString &host);
 
     Permission getPermission(const QString &column, const QUrl &url);
     Permission getPermission(const PageOptions option, const QUrl &url);
-    Permission getPermission(const QWebEnginePage::Feature &feature, const QUrl &url);
-    Permission getPermission(const QWebEngineSettings::WebAttribute &attribute, const QUrl &url);
+    Permission getPermission(const QWebEnginePage::Feature feature, const QUrl &url);
+    Permission getPermission(const QWebEngineSettings::WebAttribute attribute, const QUrl &url);
 
     void setOption(const QString &column, const QUrl &url, const int value);
     void setOption(const PageOptions option, const QUrl &url, const int value);
-    void setOption(const QWebEnginePage::Feature &feature, const QUrl &url, const Permission &value);
-    void setOption(const QWebEngineSettings::WebAttribute &attribute, const QUrl &url, const Permission &value);
+    void setOption(const QWebEnginePage::Feature &feature, const QUrl &url, const Permission value);
+    void setOption(const QWebEngineSettings::WebAttribute &attribute, const QUrl &url, const Permission value);
 
-    Permission getDefaultPermission(const PageOptions &option);
-    Permission getDefaultPermission(const QWebEnginePage::Feature &feature);
-    Permission getDefaultPermission(const QWebEngineSettings::WebAttribute &attribute);
+    Permission getDefaultPermission(const PageOptions option);
+    Permission getDefaultPermission(const QWebEnginePage::Feature feature) const;
+    Permission getDefaultPermission(const QWebEngineSettings::WebAttribute attribute) const;
 
-    QString getOptionName(const SiteSettingsManager::PageOptions &option);
-    QString getOptionName(const QWebEnginePage::Feature &feature);
-    QString getOptionName(const QWebEngineSettings::WebAttribute attribute);
+    QString getOptionName(const SiteSettingsManager::PageOptions option) const;
+    QString getOptionName(const QWebEnginePage::Feature feature) const;
+    QString getOptionName(const QWebEngineSettings::WebAttribute attribute) const;
 
-    QString getPermissionName(const Permission permission);
+    QString getPermissionName(const Permission permission) const;
 
-    QString webAttributeToSqlColumn(const QWebEngineSettings::WebAttribute &attribute);
-    QString featureToSqlColumn(const QWebEnginePage::Feature &feature);
-    QString optionToSqlColumn(const PageOptions &option);
+    QString webAttributeToSqlColumn(const QWebEngineSettings::WebAttribute attribute) const;
+    QString featureToSqlColumn(const QWebEnginePage::Feature feature) const;
+    QString optionToSqlColumn(const PageOptions option) const;
 
     QList<QWebEngineSettings::WebAttribute> getSupportedAttribute() const;
     QList<QWebEnginePage::Feature> getSupportedFeatures() const;
@@ -123,15 +123,9 @@ public:
 private:
     void prepareSqls();
 
-    Permission testAttribute(const QWebEngineSettings::WebAttribute attribute) const;
     Permission intToPermission(const int permission) const;
 
-    QList<QWebEngineSettings::WebAttribute> supportedAttribute;
-    QList<QWebEnginePage::Feature> supportedFeatures;
-
     QMap<QWebEnginePage::Feature, Permission> defaultFeatures;
-    QMap<QWebEngineSettings::WebAttribute, Permission> defaultAttributes;
-    QMap<PageOptions, Permission> defaultOptions;
 
     QString attributesSql;
     QString everythingSql;

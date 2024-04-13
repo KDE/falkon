@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SiteInfoPermissionDefaultItem</class>
- <widget class="QWidget" name="SiteInfoPermissionDefaultItem">
+ <class>SiteSettingsAttributesItem</class>
+ <widget class="QWidget" name="SiteSettingsAttributesItem">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -32,9 +32,6 @@
         </size>
        </property>
       </spacer>
-     </item>
-     <item>
-      <widget class="QComboBox" name="permissionCombo"/>
      </item>
      <item>
       <widget class="QPushButton" name="browseButton">

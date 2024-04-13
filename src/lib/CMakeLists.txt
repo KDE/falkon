@@ -210,7 +210,8 @@ set(SRCS ${SRCS}
     preferences/pluginsmanager.cpp
     preferences/preferences.cpp
     preferences/schememanager.cpp
-    preferences/siteinfopermissiondefaultitem.cpp
+    preferences/sitesettingsattributesitem.cpp
+    preferences/sitesettingshtml5item.cpp
     preferences/thememanager.cpp
     preferences/useragentdialog.cpp
     session/recoveryjsobject.cpp
@@ -442,7 +443,8 @@ set(SRCS ${SRCS}
     preferences/pluginsmanager.h
     preferences/preferences.h
     preferences/schememanager.h
-    preferences/siteinfopermissiondefaultitem.h
+    preferences/sitesettingsattributesitem.h
+    preferences/sitesettingshtml5item.h
     preferences/thememanager.h
     preferences/useragentdialog.h
     session/recoveryjsobject.h
@@ -557,7 +559,8 @@ qt_wrap_ui(SRCS
     preferences/pluginslist.ui
     preferences/preferences.ui
     preferences/schememanager.ui
-    preferences/siteinfopermissiondefaultitem.ui
+    preferences/sitesettingsattributesitem.ui
+    preferences/sitesettingshtml5item.ui
     preferences/thememanager.ui
     preferences/useragentdialog.ui
     session/sessionmanagerdialog.ui

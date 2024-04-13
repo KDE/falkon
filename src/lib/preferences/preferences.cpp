@@ -49,7 +49,9 @@
 #include "protocolhandlerdialog.h"
 #include "schememanager.h"
 #include "../config.h"
-#include "siteinfopermissiondefaultitem.h"
+#include "sitesettingsmanager.h"
+#include "sitesettingsattributesitem.h"
+#include "sitesettingshtml5item.h"
 
 #include <QSettings>
 #include <QInputDialog>
@@ -303,24 +305,21 @@ Preferences::Preferences(BrowserWindow* window)
     ui->defaultZoomLevel->setCurrentIndex(settings.value(QSL("DefaultZoomLevel"), WebView::zoomLevels().indexOf(100)).toInt());
     ui->closeAppWithCtrlQ->setChecked(settings.value(QSL("closeAppWithCtrlQ"), true).toBool());
 
-    auto* siteSettings = mApp->siteSettingsManager();
     const auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
     for (const auto &attribute : supportedAttribute) {
         auto* listItem = new QListWidgetItem(ui->siteSettingsList);
-        auto* optionItem = new SiteInfoPermissionDefaultItem(siteSettings->getDefaultPermission(attribute), this);
+        auto* optionItem = new SiteSettingsAttributesItem(attribute, this);
 
         ui->siteSettingsList->setItemWidget(listItem, optionItem);
         listItem->setSizeHint(optionItem->sizeHint());
-        optionItem->setAttribute(attribute);
     }
     const auto supportedFeatures = mApp->siteSettingsManager()->getSupportedFeatures();
     for (const auto &feature : supportedFeatures) {
-        auto* listItem = new QListWidgetItem(ui->siteSettingsList);
-        auto* optionItem = new SiteInfoPermissionDefaultItem(siteSettings->getDefaultPermission(feature), this);
+        auto* listItem = new QListWidgetItem(ui->siteSettingsHtml5List);
+        auto* optionItem = new SiteSettingsHtml5Item(feature, this);
 
-        ui->siteSettingsList->setItemWidget(listItem, optionItem);
+        ui->siteSettingsHtml5List->setItemWidget(listItem, optionItem);
         listItem->setSizeHint(optionItem->sizeHint());
-        optionItem->setFeature(feature);
     }
 
     //Cache
@@ -1086,11 +1085,11 @@ void Preferences::saveSettings()
     settings.setValue(QSL("Password"), ui->proxyPassword->text());
     settings.endGroup();
 
-    //SiteSettings
+    //SiteSettings TODO
     settings.beginGroup(QSL("Site-Settings"));
-    for (int i = 0; i < ui->siteSettingsList->count(); ++i) {
-        auto *item = static_cast<SiteInfoPermissionDefaultItem*>(ui->siteSettingsList->itemWidget(ui->siteSettingsList->item(i)));
-        settings.setValue(item->sqlColumn(), item->permission());
+    for (int i = 0; i < ui->siteSettingsHtml5List->count(); ++i) {
+        auto *item = static_cast<SiteSettingsHtml5Item*>(ui->siteSettingsHtml5List->itemWidget(ui->siteSettingsHtml5List->item(i)));
+        settings.setValue(mApp->siteSettingsManager()->featureToSqlColumn(item->feature()), item->permission());
     }
     settings.endGroup();
 

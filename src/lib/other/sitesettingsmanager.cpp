@@ -24,33 +24,37 @@
 #include <QUrl>
 #include <QtWebEngineCoreVersion>
 
+
+const QList<QWebEngineSettings::WebAttribute> supportedAttribute = {
+    QWebEngineSettings::AutoLoadImages
+    ,QWebEngineSettings::JavascriptEnabled
+    ,QWebEngineSettings::JavascriptCanOpenWindows
+    ,QWebEngineSettings::JavascriptCanAccessClipboard
+    ,QWebEngineSettings::JavascriptCanPaste
+    ,QWebEngineSettings::AllowWindowActivationFromJavaScript
+    ,QWebEngineSettings::LocalStorageEnabled
+    ,QWebEngineSettings::FullScreenSupportEnabled
+    ,QWebEngineSettings::AllowRunningInsecureContent
+    ,QWebEngineSettings::PlaybackRequiresUserGesture
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    ,QWebEngineSettings::ReadingFromCanvasEnabled
+#endif
+};
+const QList<QWebEnginePage::Feature> supportedFeatures = {
+    QWebEnginePage::Notifications
+    ,QWebEnginePage::Geolocation
+    ,QWebEnginePage::MediaAudioCapture
+    ,QWebEnginePage::MediaVideoCapture
+    ,QWebEnginePage::MediaAudioVideoCapture
+    ,QWebEnginePage::MouseLock
+    ,QWebEnginePage::DesktopVideoCapture
+    ,QWebEnginePage::DesktopAudioVideoCapture
+};
+
+
 SiteSettingsManager::SiteSettingsManager ( QObject* parent )
 : QObject(parent)
 {
-    supportedAttribute.append(QWebEngineSettings::AutoLoadImages);
-    supportedAttribute.append(QWebEngineSettings::JavascriptEnabled);
-    supportedAttribute.append(QWebEngineSettings::JavascriptCanOpenWindows);
-    supportedAttribute.append(QWebEngineSettings::JavascriptCanAccessClipboard);
-    supportedAttribute.append(QWebEngineSettings::JavascriptCanPaste);
-    supportedAttribute.append(QWebEngineSettings::AllowWindowActivationFromJavaScript);
-    supportedAttribute.append(QWebEngineSettings::LocalStorageEnabled);
-    supportedAttribute.append(QWebEngineSettings::FullScreenSupportEnabled);
-    supportedAttribute.append(QWebEngineSettings::AllowRunningInsecureContent);
-    supportedAttribute.append(QWebEngineSettings::PlaybackRequiresUserGesture);
-#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    supportedAttribute.append(QWebEngineSettings::ReadingFromCanvasEnabled);
-#endif
-
-    supportedFeatures.append(QWebEnginePage::Notifications);
-    supportedFeatures.append(QWebEnginePage::Geolocation);
-    supportedFeatures.append(QWebEnginePage::MediaAudioCapture);
-    supportedFeatures.append(QWebEnginePage::MediaVideoCapture);
-    supportedFeatures.append(QWebEnginePage::MediaAudioVideoCapture);
-    supportedFeatures.append(QWebEnginePage::MouseLock);
-    supportedFeatures.append(QWebEnginePage::DesktopVideoCapture);
-    supportedFeatures.append(QWebEnginePage::DesktopAudioVideoCapture);
-
-
     prepareSqls();
     loadSettings();
 }
@@ -71,29 +75,6 @@ void SiteSettingsManager::loadSettings()
     for (const auto &feature : std::as_const(supportedFeatures)) {
         defaultFeatures[feature] = intToPermission(settings.value(featureToSqlColumn(feature), Ask).toInt());
     }
-
-    /* WebAttributes */
-    defaultAttributes[QWebEngineSettings::AutoLoadImages                     ] = Allow;
-    defaultAttributes[QWebEngineSettings::JavascriptEnabled                  ] = Allow;
-    defaultAttributes[QWebEngineSettings::JavascriptCanOpenWindows           ] = Deny;
-    defaultAttributes[QWebEngineSettings::JavascriptCanAccessClipboard       ] = Allow;
-    defaultAttributes[QWebEngineSettings::JavascriptCanPaste                 ] = Allow;
-    defaultAttributes[QWebEngineSettings::AllowWindowActivationFromJavaScript] = Deny;
-    defaultAttributes[QWebEngineSettings::LocalStorageEnabled                ] = Allow;
-    defaultAttributes[QWebEngineSettings::FullScreenSupportEnabled           ] = Allow;
-    defaultAttributes[QWebEngineSettings::AllowRunningInsecureContent        ] = Deny;
-    defaultAttributes[QWebEngineSettings::PlaybackRequiresUserGesture        ] = Deny;
-#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    defaultAttributes[QWebEngineSettings::ReadingFromCanvasEnabled           ] = Deny;
-#endif
-
-    for (const auto &attribute : std::as_const(supportedAttribute)) {
-        defaultAttributes[attribute] = intToPermission(settings.value(webAttributeToSqlColumn(attribute), defaultAttributes[attribute]).toInt());
-    }
-
-    /* General Options */
-    defaultOptions[poAllowCookies] = intToPermission(settings.value(optionToSqlColumn(poAllowCookies), Allow).toInt());
-
     settings.endGroup();
 }
 
@@ -104,25 +85,31 @@ void SiteSettingsManager::saveSettings()
     for (auto it = defaultFeatures.begin(); it != defaultFeatures.end(); ++it) {
         settings.setValue(featureToSqlColumn(it.key()), it.value());
     }
-    for (auto it = defaultAttributes.begin(); it != defaultAttributes.end(); ++it) {
-        settings.setValue(webAttributeToSqlColumn(it.key()), it.value());
-    }
-    settings.setValue(optionToSqlColumn(poAllowCookies), defaultOptions[poAllowCookies]);
     settings.endGroup();
 }
 
 QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttributes(const QUrl& url)
 {
     QHash<QWebEngineSettings::WebAttribute, bool> attributes;
+    QString host = url.host();
+
+    if (host.isEmpty()) {
+        for (int i = 0; i < supportedAttribute.size(); ++i) {
+            QWebEngineSettings::WebAttribute attribute = supportedAttribute[i];
+            attributes[attribute] = mApp->webSettings()->testAttribute(attribute);
+        }
+
+        return attributes;
+    }
 
     QSqlQuery query(SqlDatabase::instance()->database());
     query.prepare(attributesSql);
-    query.addBindValue(url.host());
+    query.addBindValue(host);
     query.exec();
 
     if (query.next()) {
         for (int i = 0; i < query.record().count(); ++i) {
-            Permission perm = intToPermission(query.value(i).toInt());
+            SiteSettingsManager::Permission perm = intToPermission(query.value(i).toInt());
             QWebEngineSettings::WebAttribute attribute = supportedAttribute[i];
 
             if (perm == Allow) {
@@ -152,17 +139,19 @@ void SiteSettingsManager::setImages(const QUrl& url, const int value)
 
 void SiteSettingsManager::setOption(const QString& column, const QUrl& url, const int value)
 {
-    if (column.isEmpty() || mApp->isPrivate()) {
+    QString host = url.host();
+
+    if (column.isEmpty() || mApp->isPrivate() || host.isEmpty()) {
         return;
     }
 
     auto job = new SqlQueryJob(QSL("UPDATE %2 SET %1=? WHERE server=?").arg(column, sqlTable()), this);
     job->addBindValue(value);
-    job->addBindValue(url.host());
+    job->addBindValue(host);
     connect(job, &SqlQueryJob::finished, this, [=]() {
         if (job->numRowsAffected() == 0) {
             auto job = new SqlQueryJob(QSL("INSERT INTO %2 (server, %1) VALUES (?,?)").arg(column, sqlTable()), this);
-            job->addBindValue(url.host());
+            job->addBindValue(host);
             job->addBindValue(value);
             job->start();
         }
@@ -175,12 +164,12 @@ void SiteSettingsManager::setOption(const PageOptions option, const QUrl& url, c
     setOption(optionToSqlColumn(option), url, value);
 }
 
-void SiteSettingsManager::setOption(const QWebEnginePage::Feature& feature, const QUrl& url, const Permission &value)
+void SiteSettingsManager::setOption(const QWebEnginePage::Feature& feature, const QUrl& url, const SiteSettingsManager::Permission value)
 {
     setOption(featureToSqlColumn(feature), url, value);
 }
 
-void SiteSettingsManager::setOption(const QWebEngineSettings::WebAttribute& attribute, const QUrl& url, const SiteSettingsManager::Permission& value)
+void SiteSettingsManager::setOption(const QWebEngineSettings::WebAttribute& attribute, const QUrl& url, const SiteSettingsManager::Permission value)
 {
     setOption(webAttributeToSqlColumn(attribute), url, value);
 }
@@ -190,7 +179,9 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString
     if (column.isEmpty()) {
         return Deny;
     }
-    if (mApp->isPrivate()) {
+    if (mApp->isPrivate()
+        || host.isEmpty()
+    ) {
         return Default;
     }
 
@@ -213,12 +204,12 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSet
     return getPermission(optionToSqlColumn(option), host);
 }
 
-SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEnginePage::Feature& feature, const QString& host)
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEnginePage::Feature feature, const QString& host)
 {
     return getPermission(featureToSqlColumn(feature), host);
 }
 
-SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEngineSettings::WebAttribute& attribute, const QString& host)
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEngineSettings::WebAttribute attribute, const QString& host)
 {
     return getPermission(webAttributeToSqlColumn(attribute), host);
 }
@@ -233,17 +224,17 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSet
     return getPermission(optionToSqlColumn(option), url.host());
 }
 
-SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEnginePage::Feature& feature, const QUrl& url)
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEnginePage::Feature feature, const QUrl& url)
 {
     return getPermission(featureToSqlColumn(feature), url.host());
 }
 
-SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEngineSettings::WebAttribute& attribute, const QUrl& url)
+SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEngineSettings::WebAttribute attribute, const QUrl& url)
 {
     return getPermission(webAttributeToSqlColumn(attribute), url.host());
 }
 
-SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const SiteSettingsManager::PageOptions& option)
+SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const SiteSettingsManager::PageOptions option)
 {
     switch (option) {
         case poAllowCookies: {
@@ -262,7 +253,7 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
     }
 }
 
-SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const QWebEnginePage::Feature& feature)
+SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const QWebEnginePage::Feature feature) const
 {
     if (!supportedFeatures.contains(feature)) {
         qWarning() << "Unknown feature:" << feature;
@@ -272,18 +263,13 @@ SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const 
     return defaultFeatures[feature];
 }
 
-SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const QWebEngineSettings::WebAttribute& attribute)
+SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const QWebEngineSettings::WebAttribute attribute) const
 {
     if (!supportedAttribute.contains(attribute)) {
         qWarning() << "Unknown attribute:" << attribute;
         return Deny;
     }
 
-    return defaultAttributes[attribute];
-}
-
-SiteSettingsManager::Permission SiteSettingsManager::testAttribute(const QWebEngineSettings::WebAttribute attribute) const
-{
     if (mApp->webSettings()->testAttribute(attribute)) {
         return Allow;
     }
@@ -306,7 +292,7 @@ SiteSettingsManager::Permission SiteSettingsManager::intToPermission(const int p
     }
 }
 
-QString SiteSettingsManager::getOptionName(const SiteSettingsManager::PageOptions& option)
+QString SiteSettingsManager::getOptionName(const SiteSettingsManager::PageOptions option) const
 {
     switch (option) {
         case poZoomLevel:
@@ -319,7 +305,7 @@ QString SiteSettingsManager::getOptionName(const SiteSettingsManager::PageOption
     }
 }
 
-QString SiteSettingsManager::getOptionName(const QWebEnginePage::Feature& feature)
+QString SiteSettingsManager::getOptionName(const QWebEnginePage::Feature feature) const
 {
     switch (feature) {
         case QWebEnginePage::Notifications:
@@ -344,7 +330,7 @@ QString SiteSettingsManager::getOptionName(const QWebEnginePage::Feature& featur
     }
 }
 
-QString SiteSettingsManager::getOptionName(const QWebEngineSettings::WebAttribute attribute)
+QString SiteSettingsManager::getOptionName(const QWebEngineSettings::WebAttribute attribute) const
 {
     switch (attribute) {
         case QWebEngineSettings::AutoLoadImages:
@@ -380,7 +366,7 @@ QString SiteSettingsManager::getOptionName(const QWebEngineSettings::WebAttribut
     }
 }
 
-QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permission permission)
+QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permission permission) const
 {
     switch (permission) {
         case Allow:
@@ -397,7 +383,7 @@ QString SiteSettingsManager::getPermissionName(const SiteSettingsManager::Permis
     }
 }
 
-QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOptions &option)
+QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOptions option) const
 {
     switch (option) {
         case poAllowCookies:
@@ -410,7 +396,7 @@ QString SiteSettingsManager::optionToSqlColumn(const SiteSettingsManager::PageOp
     }
 }
 
-QString SiteSettingsManager::featureToSqlColumn(const QWebEnginePage::Feature& feature)
+QString SiteSettingsManager::featureToSqlColumn(const QWebEnginePage::Feature feature) const
 {
     switch (feature) {
         case QWebEnginePage::Notifications:
@@ -435,7 +421,7 @@ QString SiteSettingsManager::featureToSqlColumn(const QWebEnginePage::Feature& f
     }
 }
 
-QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::WebAttribute& attribute)
+QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::WebAttribute attribute) const
 {
     switch (attribute) {
         case QWebEngineSettings::AutoLoadImages:
@@ -486,7 +472,9 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
     SiteSettings siteSettings;
     siteSettings.server = url.host();
 
-    if (mApp->isPrivate()) {
+    if (mApp->isPrivate()
+        || url.isEmpty()
+    ) {
         return siteSettings;
     }
 
@@ -516,7 +504,9 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
 
 void SiteSettingsManager::setSiteSettings(SiteSettingsManager::SiteSettings& siteSettings)
 {
-    if (mApp->isPrivate()) {
+    if (mApp->isPrivate()
+        || siteSettings.server.isEmpty()
+    ) {
         return;
     }
 

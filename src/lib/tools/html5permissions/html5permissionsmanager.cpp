@@ -41,7 +41,10 @@ void HTML5PermissionsManager::requestPermissions(WebPage* page, const QUrl &orig
         return;
     }
 
-    const auto permission = mApp->siteSettingsManager()->getPermission(feature, origin);
+    auto permission = mApp->siteSettingsManager()->getPermission(feature, origin);
+    if (permission == SiteSettingsManager::Default) {
+        permission = mApp->siteSettingsManager()->getDefaultPermission(feature);
+    }
 
     if (permission == SiteSettingsManager::Allow) {
         page->setFeaturePermission(origin, feature, QWebEnginePage::PermissionGrantedByUser);
