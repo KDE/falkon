@@ -23,6 +23,8 @@
 #include "qztools.h"
 #include "settings.h"
 #include "iconprovider.h"
+#include "sqldatabase.h"
+#include "sitesettingsmanager.h"
 
 #include <QNetworkCookie>
 #include <QMessageBox>
@@ -71,8 +73,6 @@ CookieManager::CookieManager(QWidget *parent)
     ui->filter3rdParty->setChecked(settings.value(QSL("filterThirdPartyCookies"), false).toBool());
     ui->filterTracking->setChecked(settings.value(QSL("filterTrackingCookie"), false).toBool());
     ui->deleteCookiesOnClose->setChecked(settings.value(QSL("deleteCookiesOnClose"), false).toBool());
-    ui->whiteList->addItems(settings.value(QSL("whitelist"), QStringList()).toStringList());
-    ui->blackList->addItems(settings.value(QSL("blacklist"), QStringList()).toStringList());
     settings.endGroup();
 
     ui->search->setPlaceholderText(tr("Search"));
@@ -80,6 +80,8 @@ CookieManager::CookieManager(QWidget *parent)
     ui->cookieTree->sortItems(0, Qt::AscendingOrder);
     ui->cookieTree->header()->setDefaultSectionSize(220);
     ui->cookieTree->setFocus();
+
+    initWhiteAndBlacklist();
 
     ui->whiteList->sortItems(Qt::AscendingOrder);
     ui->blackList->sortItems(Qt::AscendingOrder);
@@ -99,6 +101,32 @@ CookieManager::CookieManager(QWidget *parent)
 
     QzTools::setWmClass(QSL("Cookies"), this);
 }
+
+void CookieManager::initWhiteAndBlacklist()
+{
+    QSqlDatabase db = SqlDatabase::instance()->database();
+    QString sqlColumn = mApp->siteSettingsManager()->optionToSqlColumn(SiteSettingsManager::poAllowCookies);
+    QString sqlTable = mApp->siteSettingsManager()->sqlTable();
+
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.prepare(QSL("SELECT server FROM %1 WHERE %2=?").arg(sqlTable, sqlColumn));
+    query.addBindValue(SiteSettingsManager::Allow);
+    query.exec();
+
+    while (query.next()) {
+        QString server = query.value(0).toString();
+        ui->whiteList->addItem(server);
+    }
+
+    query.addBindValue(SiteSettingsManager::Deny);
+    query.exec();
+
+    while (query.next()) {
+        QString server = query.value(0).toString();
+        ui->blackList->addItem(server);
+    }
+}
+
 
 void CookieManager::removeAll()
 {
@@ -196,11 +224,15 @@ void CookieManager::addWhitelist()
 
     if (ui->whiteList->findItems(server, Qt::MatchFixedString).isEmpty()) {
         ui->whiteList->addItem(server);
+        m_listModifications[server] = SiteSettingsManager::Allow;
     }
 }
 
 void CookieManager::removeWhitelist()
 {
+    QString server = ui->whiteList->currentItem()->text();
+    m_listModifications[server] = SiteSettingsManager::Default;
+
     delete ui->whiteList->currentItem();
 }
 
@@ -223,6 +255,7 @@ void CookieManager::addBlacklist(const QString &server)
 
     if (ui->blackList->findItems(server, Qt::MatchFixedString).isEmpty()) {
         ui->blackList->addItem(server);
+        m_listModifications[server] = SiteSettingsManager::Deny;
     }
 }
 
@@ -248,6 +281,9 @@ QTreeWidgetItem *CookieManager::cookieItem(const QNetworkCookie &cookie) const
 
 void CookieManager::removeBlacklist()
 {
+    QString server = ui->blackList->currentItem()->text();
+    m_listModifications[server] = SiteSettingsManager::Default;
+
     delete ui->blackList->currentItem();
 }
 
@@ -328,15 +364,11 @@ void CookieManager::removeCookie(const QNetworkCookie &cookie)
 
 void CookieManager::closeEvent(QCloseEvent* e)
 {
-    QStringList whitelist;
-    QStringList blacklist;
+    QUrl url;
 
-    for (int i = 0; i < ui->whiteList->count(); ++i) {
-        whitelist.append(ui->whiteList->item(i)->text());
-    }
-
-    for (int i = 0; i < ui->blackList->count(); ++i) {
-        blacklist.append(ui->blackList->item(i)->text());
+    for (QHash<QString, int>::iterator it = m_listModifications.begin(); it != m_listModifications.end(); ++it) {
+        url.setHost(it.key());
+        mApp->siteSettingsManager()->setOption(SiteSettingsManager::poAllowCookies, url, it.value());
     }
 
     Settings settings;
@@ -345,8 +377,6 @@ void CookieManager::closeEvent(QCloseEvent* e)
     settings.setValue(QSL("filterThirdPartyCookies"), ui->filter3rdParty->isChecked());
     settings.setValue(QSL("filterTrackingCookie"), ui->filterTracking->isChecked());
     settings.setValue(QSL("deleteCookiesOnClose"), ui->deleteCookiesOnClose->isChecked());
-    settings.setValue(QSL("whitelist"), whitelist);
-    settings.setValue(QSL("blacklist"), blacklist);
     settings.endGroup();
 
     mApp->cookieJar()->loadSettings();
