@@ -150,6 +150,9 @@ void CookieJar::slotCookieRemoved(const QNetworkCookie &cookie)
 bool CookieJar::cookieFilter(const QWebEngineCookieStore::FilterRequest &request) const
 {
     auto result = mApp->siteSettingsManager()->getPermission(SiteSettingsManager::poAllowCookies, request.origin);
+    if (result == SiteSettingsManager::Default) {
+        result = mApp->siteSettingsManager()->getDefaultPermission(SiteSettingsManager::poAllowCookies);
+    }
 
     if (!m_allowCookies && (result != SiteSettingsManager::Allow)) {
 #ifdef COOKIE_DEBUG
@@ -180,6 +183,9 @@ bool CookieJar::rejectCookie(const QString &domain, const QNetworkCookie &cookie
     Q_UNUSED(domain)
 
     auto result = mApp->siteSettingsManager()->getPermission(SiteSettingsManager::poAllowCookies, cookieDomain);
+    if (result == SiteSettingsManager::Default) {
+        result = mApp->siteSettingsManager()->getDefaultPermission(SiteSettingsManager::poAllowCookies);
+    }
 
     if (!m_allowCookies && (result != SiteSettingsManager::Allow)) {
 #ifdef COOKIE_DEBUG
