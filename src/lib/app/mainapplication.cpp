@@ -990,6 +990,10 @@ void MainApplication::loadSettings()
     webSettings->setAttribute(QWebEngineSettings::PdfViewerEnabled, settings.value(QSL("intPDFViewer"), false).toBool());
     webSettings->setAttribute(QWebEngineSettings::ScreenCaptureEnabled, settings.value(QSL("screenCaptureEnabled"), false).toBool());
 
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    webSettings->setAttribute(QWebEngineSettings::ReadingFromCanvasEnabled, settings.value(QSL("readingFromCanvasEnabled"), false).toBool());
+#endif
+
     webSettings->setDefaultTextEncoding(settings.value(QSL("DefaultEncoding"), webSettings->defaultTextEncoding()).toString());
 
     setWheelScrollLines(settings.value(QSL("wheelScrollLines"), wheelScrollLines()).toInt());

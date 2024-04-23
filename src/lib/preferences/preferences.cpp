@@ -297,6 +297,11 @@ Preferences::Preferences(BrowserWindow* window)
     ui->intPDFViewer->setEnabled(ui->allowPlugins->isChecked());
     ui->screenCaptureEnabled->setChecked(settings.value(QSL("screenCaptureEnabled"), false).toBool());
     ui->hardwareAccel->setChecked(settings.value(QSL("hardwareAccel"), false).toBool());
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    ui->readingFromCanvasEnabled->setChecked(settings.value(QSL("readingFromCanvasEnabled"), false).toBool());
+#else
+    ui->readingFromCanvasEnabled->hide();
+#endif
 
     const auto levels = WebView::zoomLevels();
     for (int level : levels) {
@@ -304,23 +309,6 @@ Preferences::Preferences(BrowserWindow* window)
     }
     ui->defaultZoomLevel->setCurrentIndex(settings.value(QSL("DefaultZoomLevel"), WebView::zoomLevels().indexOf(100)).toInt());
     ui->closeAppWithCtrlQ->setChecked(settings.value(QSL("closeAppWithCtrlQ"), true).toBool());
-
-    const auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
-    for (const auto &attribute : supportedAttribute) {
-        auto* listItem = new QListWidgetItem(ui->siteSettingsList);
-        auto* optionItem = new SiteSettingsAttributesItem(attribute, this);
-
-        ui->siteSettingsList->setItemWidget(listItem, optionItem);
-        listItem->setSizeHint(optionItem->sizeHint());
-    }
-    const auto supportedFeatures = mApp->siteSettingsManager()->getSupportedFeatures();
-    for (const auto &feature : supportedFeatures) {
-        auto* listItem = new QListWidgetItem(ui->siteSettingsHtml5List);
-        auto* optionItem = new SiteSettingsHtml5Item(feature, this);
-
-        ui->siteSettingsHtml5List->setItemWidget(listItem, optionItem);
-        listItem->setSizeHint(optionItem->sizeHint());
-    }
 
     //Cache
     ui->allowCache->setChecked(settings.value(QSL("AllowLocalCache"), true).toBool());
@@ -343,6 +331,25 @@ Preferences::Preferences(BrowserWindow* window)
         ui->deleteHistoryOnClose->setEnabled(false);
     }
     connect(ui->saveHistory, &QAbstractButton::toggled, this, &Preferences::saveHistoryChanged);
+
+    /* SiteSettings - WebAttributes */
+    const auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();
+    for (const auto &attribute : supportedAttribute) {
+        auto* listItem = new QListWidgetItem(ui->siteSettingsList);
+        auto* optionItem = new SiteSettingsAttributesItem(attribute, this);
+
+        ui->siteSettingsList->setItemWidget(listItem, optionItem);
+        listItem->setSizeHint(optionItem->sizeHint());
+    }
+    /* SiteSettings - HTML5 features */
+    const auto supportedFeatures = mApp->siteSettingsManager()->getSupportedFeatures();
+    for (const auto &feature : supportedFeatures) {
+        auto* listItem = new QListWidgetItem(ui->siteSettingsHtml5List);
+        auto* optionItem = new SiteSettingsHtml5Item(feature, this);
+
+        ui->siteSettingsHtml5List->setItemWidget(listItem, optionItem);
+        listItem->setSizeHint(optionItem->sizeHint());
+    }
 
     // Html5Storage
     ui->html5storage->setChecked(settings.value(QSL("HTML5StorageEnabled"), true).toBool());
@@ -998,6 +1005,9 @@ void Preferences::saveSettings()
     settings.setValue(QSL("intPDFViewer"), ui->intPDFViewer->isChecked());
     settings.setValue(QSL("screenCaptureEnabled"), ui->screenCaptureEnabled->isChecked());
     settings.setValue(QSL("hardwareAccel"), ui->hardwareAccel->isChecked());
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+    settings.setValue(QSL("readingFromCanvasEnabled"), ui->readingFromCanvasEnabled->isChecked());
+#endif
 #ifdef Q_OS_WIN
     settings.setValue(QSL("CheckDefaultBrowser"), ui->checkDefaultBrowser->isChecked());
 #endif
