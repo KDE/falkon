@@ -1095,8 +1095,9 @@ void Preferences::saveSettings()
     settings.setValue(QSL("Password"), ui->proxyPassword->text());
     settings.endGroup();
 
-    //SiteSettings TODO
+    //SiteSettings
     settings.beginGroup(QSL("Site-Settings"));
+    /* HTML5 Features */
     for (int i = 0; i < ui->siteSettingsHtml5List->count(); ++i) {
         auto *item = static_cast<SiteSettingsHtml5Item*>(ui->siteSettingsHtml5List->itemWidget(ui->siteSettingsHtml5List->item(i)));
         settings.setValue(mApp->siteSettingsManager()->featureToSqlColumn(item->feature()), item->permission());

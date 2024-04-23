@@ -119,11 +119,11 @@ public:
     SiteSettings getSiteSettings(QUrl &url);
     void setSiteSettings(SiteSettings &siteSettings);
     QString sqlTable();
+    Permission intToPermission(const int permission) const;
 
 private:
     void prepareSqls();
 
-    Permission intToPermission(const int permission) const;
 
     QMap<QWebEnginePage::Feature, Permission> defaultFeatures;
 

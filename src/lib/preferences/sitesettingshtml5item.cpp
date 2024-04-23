@@ -8,6 +8,7 @@
 
 #include "mainapplication.h"
 #include "sitesettingsmanager.h"
+#include "sitesettingsbrowsedialog.h"
 
 SiteSettingsHtml5Item::SiteSettingsHtml5Item(const QWebEnginePage::Feature a_feature, QWidget* parent)
     : QWidget(parent)
@@ -31,10 +32,21 @@ SiteSettingsHtml5Item::SiteSettingsHtml5Item(const QWebEnginePage::Feature a_fea
 
     setPermission();
     m_ui->label->setText(mApp->siteSettingsManager()->getOptionName(m_feature));
+
+    connect(m_ui->browseButton, &QPushButton::clicked, this, &SiteSettingsHtml5Item::showBrowseDialog);
 }
 
 SiteSettingsHtml5Item::~SiteSettingsHtml5Item()
 {
+}
+
+void SiteSettingsHtml5Item::showBrowseDialog()
+{
+    QString sqlColumn = mApp->siteSettingsManager()->featureToSqlColumn(m_feature);
+    QString name = m_ui->label->text();
+
+    auto* dialog = new SiteSettingsBrowseDialog(name, sqlColumn, this);
+    dialog->open();
 }
 
 QWebEnginePage::Feature SiteSettingsHtml5Item::feature() const

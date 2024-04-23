@@ -9,6 +9,7 @@
 
 #include "mainapplication.h"
 #include "sitesettingsmanager.h"
+#include "sitesettingsbrowsedialog.h"
 
 SiteSettingsAttributesItem::SiteSettingsAttributesItem(const QWebEngineSettings::WebAttribute a_attribute, QWidget* parent)
     : QWidget(parent)
@@ -17,10 +18,22 @@ SiteSettingsAttributesItem::SiteSettingsAttributesItem(const QWebEngineSettings:
 {
     m_ui->setupUi(this);
     m_ui->label->setText(mApp->siteSettingsManager()->getOptionName(m_attribute));
+
+    connect(m_ui->browseButton, &QPushButton::clicked, this, &SiteSettingsAttributesItem::showBrowseDialog);
 }
 
 SiteSettingsAttributesItem::~SiteSettingsAttributesItem()
 {
+}
+
+void SiteSettingsAttributesItem::showBrowseDialog()
+{
+    QString sqlColumn = mApp->siteSettingsManager()->webAttributeToSqlColumn(m_attribute);
+    QString name = m_ui->label->text();
+
+    auto* dialog = new SiteSettingsBrowseDialog(name, sqlColumn, this);
+    dialog->hideAskButton();
+    dialog->open();
 }
 
 QWebEngineSettings::WebAttribute SiteSettingsAttributesItem::attribute() const

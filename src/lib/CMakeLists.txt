@@ -211,6 +211,7 @@ set(SRCS ${SRCS}
     preferences/preferences.cpp
     preferences/schememanager.cpp
     preferences/sitesettingsattributesitem.cpp
+    preferences/sitesettingsbrowsedialog.cpp
     preferences/sitesettingshtml5item.cpp
     preferences/thememanager.cpp
     preferences/useragentdialog.cpp
@@ -444,6 +445,7 @@ set(SRCS ${SRCS}
     preferences/preferences.h
     preferences/schememanager.h
     preferences/sitesettingsattributesitem.h
+    preferences/sitesettingsbrowsedialog.h
     preferences/sitesettingshtml5item.h
     preferences/thememanager.h
     preferences/useragentdialog.h
@@ -560,6 +562,7 @@ qt_wrap_ui(SRCS
     preferences/preferences.ui
     preferences/schememanager.ui
     preferences/sitesettingsattributesitem.ui
+    preferences/sitesettingsbrowsedialog.ui
     preferences/sitesettingshtml5item.ui
     preferences/thememanager.ui
     preferences/useragentdialog.ui

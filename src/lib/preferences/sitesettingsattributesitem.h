@@ -27,6 +27,9 @@ public:
 
     QWebEngineSettings::WebAttribute attribute() const;
 
+public Q_SLOTS:
+    void showBrowseDialog();
+
 private:
     QWebEngineSettings::WebAttribute m_attribute;
 

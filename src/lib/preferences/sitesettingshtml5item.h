@@ -30,6 +30,9 @@ public:
     QWebEnginePage::Feature feature() const;
     SiteSettingsManager::Permission permission() const;
 
+public Q_SLOTS:
+    void showBrowseDialog();
+
 private:
     QWebEnginePage::Feature m_feature;
 
