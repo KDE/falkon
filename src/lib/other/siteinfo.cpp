@@ -360,10 +360,6 @@ void SiteInfo::addSiteSettings()
 
 void SiteInfo::saveSiteSettings()
 {
-    if (mApp->isPrivate()) {
-        return;
-    }
-
     SiteSettings siteSettings;
     int index = 0;
     auto supportedAttribute = mApp->siteSettingsManager()->getSupportedAttribute();

@@ -141,7 +141,7 @@ void SiteSettingsManager::setOption(const QString& column, const QUrl& url, cons
 {
     QString host = url.host();
 
-    if (column.isEmpty() || mApp->isPrivate() || host.isEmpty()) {
+    if (column.isEmpty() || host.isEmpty()) {
         return;
     }
 
@@ -179,9 +179,7 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString
     if (column.isEmpty()) {
         return Deny;
     }
-    if (mApp->isPrivate()
-        || host.isEmpty()
-    ) {
+    if (host.isEmpty()) {
         return Default;
     }
 
@@ -472,9 +470,7 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
     SiteSettings siteSettings;
     siteSettings.server = url.host();
 
-    if (mApp->isPrivate()
-        || url.isEmpty()
-    ) {
+    if (url.isEmpty()) {
         return siteSettings;
     }
 
@@ -504,9 +500,7 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
 
 void SiteSettingsManager::setSiteSettings(SiteSettingsManager::SiteSettings& siteSettings)
 {
-    if (mApp->isPrivate()
-        || siteSettings.server.isEmpty()
-    ) {
+    if (siteSettings.server.isEmpty()) {
         return;
     }
 
