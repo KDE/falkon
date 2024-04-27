@@ -21,6 +21,7 @@
 #include "updater.h"
 #include "qztools.h"
 #include "sqldatabase.h"
+#include "../config.h"
 
 #include <QDir>
 #include <QSqlError>
@@ -29,6 +30,7 @@
 #include <QMessageBox>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QVersionNumber>
 
 #include <iostream>
 
@@ -296,6 +298,11 @@ void ProfileManager::connectDatabase()
         return;
     }
 
+    if (!checkSQLiteVersion(db)) {
+        qFatal() << "Minimal required version of SQLite is:" << FALKON_SQLITE_MIN_VERSION;
+        return;
+    }
+
     if (db.tables().isEmpty()) {
         const QStringList statements = QzTools::readAllFileContents(QSL(":/data/browsedata.sql")).split(QL1C(';'));
         for (const QString &statement : statements) {
@@ -384,4 +391,23 @@ void ProfileManager::updateDatabase()
 
         return;
     }
+}
+
+bool ProfileManager::checkSQLiteVersion(const QSqlDatabase& db)
+{
+    QSqlQuery query_version{db};
+    query_version.exec(QSL("select sqlite_version();"));
+
+    if (!query_version.next()) {
+        qCritical() << "Unable to fetch the SQLite version.";
+        return false;
+    }
+
+    QString versionString = query_version.value(QSL("sqlite_version()")).toString();
+    query_version.finish();
+
+    auto currentVersion = QVersionNumber::fromString(versionString);
+    auto minimalVersion = QVersionNumber::fromString(QSL(FALKON_SQLITE_MIN_VERSION));
+
+    return (currentVersion >= minimalVersion);
 }
