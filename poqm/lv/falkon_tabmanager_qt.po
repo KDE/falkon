@@ -2,8 +2,14 @@
 # This file is distributed under the same license as the falkon package.
 # Toms Trasūns <ttomst@gmail.com>, 2017
 #
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2024-04-23 18:12+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,6 +17,7 @@ msgstr ""
 "2);\n"
 "X-Language: lv_LV\n"
 "X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: tabmanagersettings.ui:14
 msgctxt "TabManagerSettings|"
@@ -25,12 +32,12 @@ msgstr "Skats"
 #: tabmanagersettings.ui:26
 msgctxt "TabManagerSettings|"
 msgid "Please select view type:"
-msgstr "Lūdzu, izvēlaties skata veidu:"
+msgstr "Atlasiet skata veidu:"
 
 #: tabmanagersettings.ui:33
 msgctxt "TabManagerSettings|"
 msgid "SideBar"
-msgstr "Sānjosla"
+msgstr "Sānu josla"
 
 #: tabmanagersettings.ui:40
 msgctxt "TabManagerSettings|"
@@ -44,15 +51,15 @@ msgid ""
 "&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
 "p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">Piezīme:</span> "
-"„Loga“ veids tiek ieteikts, lai pārvaldītu daudzus logus/cilnes.</p></body></"
-"html>"
+"<html><head/><body><p><span style=\" font-weight:600;\">Ievērībai:</span> "
+"ieteicams izmantot „Loga“ veidu, lai pārvaldītu daudzus logus/cilnes.</p></"
+"body></html>"
 
 #: tabmanagersettings.ui:60
 msgctxt "TabManagerSettings|"
 msgid "Use TabManager plugin as replacement for main TabBar."
 msgstr ""
-"Lietot Ciļņu pārvaldīšanas spraudni, ar to aizstājot galveno Ciļņu joslu"
+"Lietot ciļņu pārvaldīšanas spraudni, ar to aizstājot galveno ciļņu joslu."
 
 #: tabmanagerwidget.cpp:111
 msgctxt "TabManagerWidget|"
@@ -62,12 +69,12 @@ msgstr "Lokālā datņu sistēma:"
 #: tabmanagerwidget.cpp:114
 msgctxt "TabManagerWidget|"
 msgid "Falkon:"
-msgstr ""
+msgstr "Falkon:"
 
 #: tabmanagerwidget.cpp:117
 msgctxt "TabManagerWidget|"
 msgid " [FTP]"
-msgstr "[FTP]"
+msgstr " [FTP]"
 
 #: tabmanagerwidget.cpp:306
 msgctxt "TabManagerWidget|"
@@ -112,7 +119,7 @@ msgstr "Ai&zvērt atzīmētās cilnes"
 #: tabmanagerwidget.cpp:334
 msgctxt "TabManagerWidget|"
 msgid "&Unload checked tabs"
-msgstr ""
+msgstr "&Izlādēt atzīmētās cilnes"
 
 #: tabmanagerwidget.cpp:587
 msgctxt "TabManagerWidget|"
@@ -143,7 +150,7 @@ msgstr "Ciļņu pārvaldnieks"
 #: tabmanagerwidgetcontroller.cpp:50
 msgctxt "TabManagerButton|"
 msgid "Tab Manager button"
-msgstr ""
+msgstr "Ciļņu pārvaldnieka poga"
 
 #: tabmanagerwidgetcontroller.cpp:67 tabmanagerwidgetcontroller.cpp:72
 #: tabmanagerwidgetcontroller.cpp:98
@@ -154,12 +161,12 @@ msgstr "Ciļņu pārvaldnieks"
 #: tabmanagerwidgetcontroller.cpp:99
 msgctxt "TabManagerWidgetController|"
 msgid "Show Tab Manager"
-msgstr "Rādīt Ciļņu pārvaldnieku"
+msgstr "Rādīt ciļņu pārvaldnieku"
 
 #: tldextractor/tldextractor.cpp:261 tldextractor/tldextractor.cpp:364
 msgctxt "TLDExtractor|"
 msgid "File not found!"
-msgstr ""
+msgstr "Datne nav atrasta!"
 
 #: tldextractor/tldextractor.cpp:262
 #, qt-format
@@ -170,6 +177,9 @@ msgid ""
 "following paths:\n"
 "%2"
 msgstr ""
+"Datne „effective_tld_names.dat“ nav atrasta!\n"
+"Varat to lejupielādēt <a href=\"%1\"><b>te</b></a> uz kādu no šiem ceļiem:\n"
+"%2"
 
 #: tldextractor/tldextractor.cpp:365
 #, qt-format
@@ -180,6 +190,9 @@ msgid ""
 "following paths:\n"
 "%2"
 msgstr ""
+"Datne „test_psl.txt“ nav atrasta!\n"
+"Varat to lejupielādēt <a href=\"%1\"><b>te</b></a> uz kādu no šiem ceļiem:\n"
+"%2"
 
 #~ msgctxt "TabManagerWidget|"
 #~ msgid "QupZilla:"

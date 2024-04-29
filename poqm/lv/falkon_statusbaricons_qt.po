@@ -2,8 +2,14 @@
 # This file is distributed under the same license as the falkon package.
 # Toms Trasūns <ttomst@gmail.com>, 2017
 #
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2024-04-23 18:45+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,6 +17,7 @@ msgstr ""
 "2);\n"
 "X-Language: lv_LV\n"
 "X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: sbi_imagesicon.cpp:34
 msgctxt "SBI_ImagesIcon|"
@@ -26,7 +33,7 @@ msgstr "Pašreizējie lapas iestatījumi"
 #: sbi_imagesicon.cpp:61
 msgctxt "SBI_ImagesIcon|"
 msgid "Disable loading images (temporarily)"
-msgstr "Atspējot attēlu ielādēšanu (īslaicīgi)"
+msgstr "Izslēgt attēlu ielādēšanu (īslaicīgi)"
 
 #: sbi_imagesicon.cpp:64
 msgctxt "SBI_ImagesIcon|"
@@ -46,12 +53,12 @@ msgstr "Automātiski ielādēt attēlus"
 #: sbi_javascripticon.cpp:34
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Modify JavaScript settings per-site and globally"
-msgstr "Pārveidot „JavaScript“ iestatījumus atsevišķām vietnēm un globāli"
+msgstr "Mainīt „JavaScript“ iestatījumus atsevišķām vietnēm un globāli"
 
 #: sbi_javascripticon.cpp:51
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Current Page Settings"
-msgstr "Pašreizējās lapas iestatījumi."
+msgstr "Pašreizējās lapas iestatījumi"
 
 #: sbi_javascripticon.cpp:54
 msgctxt "SBI_JavaScriptIcon|"
@@ -81,7 +88,7 @@ msgstr "Starpniekservera konfigurācija"
 #: sbi_networkicon.cpp:64
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
-msgstr "Izvēlēties starpniekserveri"
+msgstr "Atlasīt starpniekserveri"
 
 #: sbi_networkicon.cpp:78
 msgctxt "SBI_NetworkIcon|"
@@ -116,7 +123,7 @@ msgstr "Sistēmas starpniekserveris"
 #: sbi_networkicon.cpp:107
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
-msgstr "Nav starpniekservera"
+msgstr "Bez starpniekservera"
 
 #: sbi_networkicon.cpp:111
 msgctxt "SBI_NetworkIcon|"
@@ -151,7 +158,7 @@ msgstr "Starpniekservera pārvaldnieks"
 #: sbi_networkicondialog.ui:28
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Select proxy: "
-msgstr "Izvēlēties starpniekserveri:"
+msgstr "Atlasiet starpniekserveri: "
 
 #: sbi_networkicondialog.ui:45
 msgctxt "SBI_NetworkIconDialog|"
@@ -162,13 +169,13 @@ msgstr "Noņemt starpniekserveri"
 msgctxt "SBI_NetworkIconDialog|"
 msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
 msgstr ""
-"Nav starpniekserveru. Tu vari pievienot starpniekserveri, noklikšķinot uz "
+"Nav starpniekserveru. Varat pievienot starpniekserveri, noklikšķinot uz "
 "<b>Pievienot</b> pogas."
 
 #: sbi_networkicondialog.ui:104
 msgctxt "SBI_NetworkIconDialog|"
 msgid "All changes must be saved with <b>Save</b> button."
-msgstr "Visas izmaiņas ir jāsaglabā, izmantojot <b>Saglabāt</b> pogu."
+msgstr "Visas izmaiņas ir jāsaglabā ar <b>Saglabāt</b> pogu."
 
 #: sbi_proxywidget.ui:14
 msgctxt "SBI_ProxyWidget|"
@@ -203,7 +210,7 @@ msgstr "Parole:"
 #: sbi_proxywidget.ui:111
 msgctxt "SBI_ProxyWidget|"
 msgid "S&ystem proxy configuration"
-msgstr "Sistēmas starpniekservera iestatījumi"
+msgstr "S&istēmas starpniekservera konfigurācija"
 
 #: sbi_proxywidget.ui:118
 msgctxt "SBI_ProxyWidget|"
@@ -223,7 +230,7 @@ msgstr "<h3>Statusa joslas ikonas</h3>"
 #: sbi_settingsdialog.ui:70
 msgctxt "SBI_SettingsDialog|"
 msgid "These icons will be displayed in statusbar:"
-msgstr "Šīs ikonas tiks parādītas statusa joslā:"
+msgstr "Šīs ikonas būs redzamas statusa joslā:"
 
 #: sbi_settingsdialog.ui:97
 msgctxt "SBI_SettingsDialog|"
@@ -243,13 +250,13 @@ msgstr "Tīkla ikona"
 #: sbi_settingsdialog.ui:118
 msgctxt "SBI_SettingsDialog|"
 msgid "Zoom widget"
-msgstr "Pietuvināt sīkrīku"
+msgstr "Tālummaiņa logdaļa"
 
 #: sbi_zoomwidget.cpp:48
 #, qt-format
 msgctxt "SBI_ZoomWidget|"
 msgid "Zoom: %1%"
-msgstr "Pietuvināt: %1%"
+msgstr "Tālummaiņa: %1 %"
 
 #~ msgctxt "SBI_NetworkIcon|"
 #~ msgid "Offline"

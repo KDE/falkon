@@ -1,12 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the falkon package.
-# Toms Trasūns <ttomst@gmail.com>, 2017
+# This file is distributed under the same license as the PACKAGE package.
 #
 # SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-04-23 18:13+0300\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-05 12:31+0000\n"
+"PO-Revision-Date: 2024-04-23 15:05+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -15,36 +16,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Language: lv_LV\n"
-"X-Qt-Contexts: true\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: testplugin.cpp:98
-msgctxt "TestPlugin|"
-msgid "Close"
-msgstr "Aizvērt"
-
-#: testplugin.cpp:109
-msgctxt "TestPlugin|"
-msgid "Example Plugin Settings"
-msgstr "Piemēra spraudņa iestatījumi"
-
-#: testplugin.cpp:139
-msgctxt "TestPlugin|"
+#: hellopython.py:69
 msgid "My first plugin action"
 msgstr "Mana pirmā spraudņa darbība"
 
-#: testplugin.cpp:154
-msgctxt "TestPlugin|"
+#: hellopython.py:76
 msgid "Hello"
 msgstr "Sveiki"
 
-#: testplugin.cpp:154
-msgctxt "TestPlugin|"
+#: hellopython.py:76
 msgid "First plugin action works :-)"
 msgstr "Pirmā spraudņa darbība strādā :-)"
 
-#: testplugin_sidebar.cpp:32 testplugin_sidebar.cpp:40
-msgctxt "TestPlugin_Sidebar|"
-msgid "Testing Sidebar"
-msgstr "Testē sānu joslu"
+#: hellopython.py:81
+msgid "Close"
+msgstr "Aizvērt"
+
+#: hellopython.py:91
+msgid "Hello Python Settings"
+msgstr "„Hello Python“ iestatījumi"
+
+#: sidebar.py:24 sidebar.py:27
+msgid "Hello Python Sidebar"
+msgstr "„Hello Python“ sānu josla"
