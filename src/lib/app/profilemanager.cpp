@@ -22,6 +22,8 @@
 #include "qztools.h"
 #include "sqldatabase.h"
 #include "../config.h"
+#include "sitesettingsmanager.h"
+#include "settings.h"
 
 #include <QDir>
 #include <QSqlError>
@@ -31,6 +33,7 @@
 #include <QSettings>
 #include <QStandardPaths>
 #include <QVersionNumber>
+#include <QWebEnginePage>
 
 #include <iostream>
 
@@ -340,9 +343,11 @@ void ProfileManager::updateDatabase()
         return;
     }
 
-    /* Update in 22.12.00 */
+    /* Update in 24.05.00 */
     if (prof < Updater::Version(QStringLiteral("24.04.70"))) {
         std::cout << "Falkon: Updating database to version " << qPrintable(QString::fromLatin1(Qz::VERSION)) << std::endl;
+
+        SqlDatabase::instance()->database().transaction();
 
         QSqlQuery query(SqlDatabase::instance()->database());
         query.prepare(QStringLiteral(
@@ -386,10 +391,82 @@ void ProfileManager::updateDatabase()
         ));
 
         if (!query.exec()) {
-            qCritical() << "Error while creating unique index for table 'site_settings': " << query.lastError().text();
+            qFatal() << "Error while creating unique index for table 'site_settings': " << query.lastError().text();
         }
 
-        return;
+        const QHash<QWebEnginePage::Feature, QString> html5SettingPairs = {
+            {QWebEnginePage::Notifications, QSL("Notifications")},
+            {QWebEnginePage::Geolocation, QSL("Geolocation")},
+            {QWebEnginePage::MediaAudioCapture, QSL("MediaAudioCapture")},
+            {QWebEnginePage::MediaVideoCapture, QSL("MediaVideoCapture")},
+            {QWebEnginePage::MediaAudioVideoCapture, QSL("MediaAudioVideoCapture")},
+            {QWebEnginePage::MouseLock, QSL("MouseLock")},
+            {QWebEnginePage::DesktopVideoCapture, QSL("DesktopVideoCapture")},
+            {QWebEnginePage::DesktopAudioVideoCapture,QSL("DesktopAudioVideoCapture")}
+        };
+        QHash<QString, SiteSettingsManager::SiteSettings> html5Settings;
+
+        Settings settings;
+        settings.beginGroup(QSL("HTML5Notifications"));
+
+        auto loadSettings = [&](QString suflix, SiteSettingsManager::Permission permission) {
+            for (auto [feature, settingName] : html5SettingPairs.asKeyValueRange()) {
+                auto const serverList = settings.value(settingName + suflix, QStringList()).toStringList();
+
+                for (auto server : serverList) {
+                    if (!html5Settings.contains(server)) {
+                        html5Settings[server] = SiteSettingsManager::SiteSettings();
+                        for (auto [f, nameUnused] : html5SettingPairs.asKeyValueRange()) {
+                            html5Settings[server].features[f] = SiteSettingsManager::Default;
+                        }
+                    }
+
+                    html5Settings[server].server = server;
+                    html5Settings[server].features[feature] = permission;
+                }
+            }
+        };
+
+        loadSettings(QSL("Granted"), SiteSettingsManager::Allow);
+        loadSettings(QSL("Denied"), SiteSettingsManager::Deny);
+
+        settings.endGroup();
+
+        /* Insert SQL for SiteSettings */
+        query.prepare(QSL(
+            "INSERT INTO site_settings ("
+                "server,"
+                "f_notifications,"
+                "f_geolocation,"
+                "f_media_audio_capture,"
+                "f_media_video_capture,"
+                "f_media_audio_video_capture,"
+                "f_mouse_lock,"
+                "f_desktop_video_capture,"
+                "f_desktop_audio_video_capture"
+            ")"
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        ));
+
+        for (auto siteSetting : html5Settings) {
+            query.bindValue(0, siteSetting.server);
+            query.bindValue(1, siteSetting.features[QWebEnginePage::Notifications]);
+            query.bindValue(2, siteSetting.features[QWebEnginePage::Geolocation]);
+            query.bindValue(3, siteSetting.features[QWebEnginePage::MediaAudioCapture]);
+            query.bindValue(4, siteSetting.features[QWebEnginePage::MediaVideoCapture]);
+            query.bindValue(5, siteSetting.features[QWebEnginePage::MediaAudioVideoCapture]);
+            query.bindValue(6, siteSetting.features[QWebEnginePage::MouseLock]);
+            query.bindValue(7, siteSetting.features[QWebEnginePage::DesktopVideoCapture]);
+            query.bindValue(8, siteSetting.features[QWebEnginePage::DesktopAudioVideoCapture]);
+
+            query.exec();
+        }
+
+        if (!SqlDatabase::instance()->database().commit()) {
+            SqlDatabase::instance()->database().rollback();
+
+            qFatal() << "Unable to update database.";
+        }
     }
 }
 
