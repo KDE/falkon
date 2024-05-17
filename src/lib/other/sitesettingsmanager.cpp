@@ -127,16 +127,6 @@ QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttribu
     return attributes;
 }
 
-void SiteSettingsManager::setJavascript(const QUrl& url, const int value)
-{
-    setOption(QWebEngineSettings::JavascriptEnabled, url, intToPermission(value));
-}
-
-void SiteSettingsManager::setImages(const QUrl& url, const int value)
-{
-    setOption(QWebEngineSettings::AutoLoadImages, url, intToPermission(value));
-}
-
 void SiteSettingsManager::setOption(const QString& column, const QUrl& url, const int value)
 {
     QString host = url.host();

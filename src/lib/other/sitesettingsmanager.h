@@ -81,9 +81,6 @@ public:
 
     QHash<QWebEngineSettings::WebAttribute, bool> getWebAttributes(const QUrl &url);
 
-    void setJavascript(const QUrl &url, const int value);
-    void setImages(const QUrl &url, const int value);
-
     Permission getPermission(const QString &column, const QString &host);
     Permission getPermission(const PageOptions option, const QString &host);
     Permission getPermission(const QWebEnginePage::Feature feature, const QString &host);
