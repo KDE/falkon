@@ -66,9 +66,6 @@ SiteSettingsManager::~SiteSettingsManager() noexcept
 void SiteSettingsManager::loadSettings()
 {
     Settings settings;
-//    settings.beginGroup(QSL("Web-Browser-Settings"));
-//    m_isSaving = settings.value(QSL("allowPerDomainZoom"), true).toBool();
-//    settings.endGroup();
 
     settings.beginGroup(QSL("Site-Settings"));
     /* HTML5 Feature */
