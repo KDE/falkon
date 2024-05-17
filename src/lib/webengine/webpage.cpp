@@ -456,14 +456,13 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
             if (isWeb) {
                 auto webAttributes = mApp->siteSettingsManager()->getWebAttributes(url);
                 if (!webAttributes.empty()) {
-                    QHash<QWebEngineSettings::WebAttribute, bool>::iterator it;
-                    for (it = webAttributes.begin(); it != webAttributes.end(); ++it) {
+                    for (auto it = webAttributes.begin(); it != webAttributes.end(); ++it) {
                         settings()->setAttribute(it.key(), it.value());
                     }
                 }
                 else {
-                    auto webAttributes = mApp->siteSettingsManager()->getSupportedAttribute();
-                    for (auto &attribute : qAsConst(webAttributes)) {
+                    auto const webAttributes = mApp->siteSettingsManager()->getSupportedAttribute();
+                    for (auto attribute : webAttributes) {
                         settings()->setAttribute(attribute, mApp->webSettings()->testAttribute(attribute));
                     }
                 }
