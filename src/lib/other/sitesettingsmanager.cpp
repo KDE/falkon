@@ -39,6 +39,9 @@ const QList<QWebEngineSettings::WebAttribute> supportedAttribute = {
 #if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
     ,QWebEngineSettings::ReadingFromCanvasEnabled
 #endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    ,QWebEngineSettings::ForceDarkMode
+#endif
 };
 const QList<QWebEnginePage::Feature> supportedFeatures = {
     QWebEnginePage::Notifications
@@ -354,6 +357,10 @@ QString SiteSettingsManager::getOptionName(const QWebEngineSettings::WebAttribut
         case QWebEngineSettings::ReadingFromCanvasEnabled:
             return tr("Allow reading from canvas");
 #endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+        case QWebEngineSettings::ForceDarkMode:
+            return tr("Force dark mode");
+#endif
 
         default:
             qWarning() << "Unknown attribute:" << attribute;
@@ -444,6 +451,10 @@ QString SiteSettingsManager::webAttributeToSqlColumn(const QWebEngineSettings::W
 #if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
         case QWebEngineSettings::ReadingFromCanvasEnabled:
             return QSL("wa_reading_from_canvas");
+#endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+        case QWebEngineSettings::ForceDarkMode:
+            return QSL("wa_force_dark_mode");
 #endif
 
         default:

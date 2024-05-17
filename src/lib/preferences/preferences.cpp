@@ -302,6 +302,11 @@ Preferences::Preferences(BrowserWindow* window)
 #else
     ui->readingFromCanvasEnabled->hide();
 #endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    ui->forceDarkMode->setChecked(settings.value(QSL("forceDarkMode"), false).toBool());
+#else
+    ui->forceDarkMode->hide();
+#endif
 
     const auto levels = WebView::zoomLevels();
     for (int level : levels) {
@@ -1007,6 +1012,9 @@ void Preferences::saveSettings()
     settings.setValue(QSL("hardwareAccel"), ui->hardwareAccel->isChecked());
 #if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
     settings.setValue(QSL("readingFromCanvasEnabled"), ui->readingFromCanvasEnabled->isChecked());
+#endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    settings.setValue(QSL("forceDarkMode"), ui->forceDarkMode->isChecked());
 #endif
 #ifdef Q_OS_WIN
     settings.setValue(QSL("CheckDefaultBrowser"), ui->checkDefaultBrowser->isChecked());

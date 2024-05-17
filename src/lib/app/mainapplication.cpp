@@ -993,6 +993,9 @@ void MainApplication::loadSettings()
 #if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
     webSettings->setAttribute(QWebEngineSettings::ReadingFromCanvasEnabled, settings.value(QSL("readingFromCanvasEnabled"), false).toBool());
 #endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    webSettings->setAttribute(QWebEngineSettings::ForceDarkMode, settings.value(QSL("forceDarkMode"), false).toBool());
+#endif
 
     webSettings->setDefaultTextEncoding(settings.value(QSL("DefaultEncoding"), webSettings->defaultTextEncoding()).toString());
 

@@ -369,6 +369,7 @@ void ProfileManager::updateDatabase()
                 "wa_run_insecure_content INTEGER DEFAULT 0,"
                 "wa_playback_needs_gesture INTEGER DEFAULT 0,"
                 "wa_reading_from_canvas INTEGER DEFAULT 0,"
+                "wa_force_dark_mode INTEGER DEFAULT 0,"
 
                 "f_notifications INTEGER DEFAULT 0,"
                 "f_geolocation INTEGER DEFAULT 0,"
