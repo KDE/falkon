@@ -15,6 +15,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
+
 #ifndef SITESETTINGSVIEW_CONTROLLER_H
 #define SITESETTINGSVIEW_CONTROLLER_H
 

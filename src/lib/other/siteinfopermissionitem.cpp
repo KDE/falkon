@@ -21,7 +21,6 @@
 #include "mainapplication.h"
 #include "sitesettingsmanager.h"
 
-
 SiteInfoPermissionItem::SiteInfoPermissionItem(const SiteSettingsManager::Permission& a_permission, QWidget* parent)
 : QWidget(parent)
 , m_hasOptionAsk(true)
