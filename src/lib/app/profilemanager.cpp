@@ -405,31 +405,54 @@ void ProfileManager::updateDatabase()
             {QWebEnginePage::DesktopVideoCapture, QSL("DesktopVideoCapture")},
             {QWebEnginePage::DesktopAudioVideoCapture,QSL("DesktopAudioVideoCapture")}
         };
-        QHash<QString, SiteSettingsManager::SiteSettings> html5Settings;
+        QHash<QString, SiteSettingsManager::SiteSettings> siteSettings;
 
         Settings settings;
+
+        /* HTML5 permissions */
         settings.beginGroup(QSL("HTML5Notifications"));
 
-        auto loadSettings = [&](QString suflix, SiteSettingsManager::Permission permission) {
+        auto loadHtml5Settings = [&](const QString &suflix, const SiteSettingsManager::Permission permission) {
             for (auto [feature, settingName] : html5SettingPairs.asKeyValueRange()) {
                 auto const serverList = settings.value(settingName + suflix, QStringList()).toStringList();
 
-                for (auto server : serverList) {
-                    if (!html5Settings.contains(server)) {
-                        html5Settings[server] = SiteSettingsManager::SiteSettings();
+                for (const auto &server : serverList) {
+                    if (!siteSettings.contains(server)) {
+                        siteSettings[server] = SiteSettingsManager::SiteSettings();
                         for (auto [f, nameUnused] : html5SettingPairs.asKeyValueRange()) {
-                            html5Settings[server].features[f] = SiteSettingsManager::Default;
+                            siteSettings[server].features[f] = SiteSettingsManager::Default;
                         }
                     }
 
-                    html5Settings[server].server = server;
-                    html5Settings[server].features[feature] = permission;
+                    siteSettings[server].server = server;
+                    siteSettings[server].features[feature] = permission;
                 }
             }
         };
 
-        loadSettings(QSL("Granted"), SiteSettingsManager::Allow);
-        loadSettings(QSL("Denied"), SiteSettingsManager::Deny);
+        loadHtml5Settings(QSL("Granted"), SiteSettingsManager::Allow);
+        loadHtml5Settings(QSL("Denied"), SiteSettingsManager::Deny);
+
+        settings.endGroup();
+
+        /* Cookies white/black lists */
+        settings.beginGroup(QSL("Cookie-Settings"));
+
+        auto loadCookiesSettings = [&](const QString &listName, const SiteSettingsManager::Permission permission) {
+            auto const serverList = settings.value(listName, QStringList()).toStringList();
+
+            for (const auto &server : serverList) {
+                if (!siteSettings.contains(server)) {
+                    siteSettings[server] = SiteSettingsManager::SiteSettings();
+                }
+
+                siteSettings[server].server = server;
+                siteSettings[server].AllowCookies = permission;
+            }
+        };
+
+        loadCookiesSettings(QSL("whitelist"), SiteSettingsManager::Allow);
+        loadCookiesSettings(QSL("blacklist"), SiteSettingsManager::Deny);
 
         settings.endGroup();
 
@@ -437,6 +460,7 @@ void ProfileManager::updateDatabase()
         query.prepare(QSL(
             "INSERT INTO site_settings ("
                 "server,"
+                "allow_cookies,"
                 "f_notifications,"
                 "f_geolocation,"
                 "f_media_audio_capture,"
@@ -446,19 +470,20 @@ void ProfileManager::updateDatabase()
                 "f_desktop_video_capture,"
                 "f_desktop_audio_video_capture"
             ")"
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         ));
 
-        for (auto siteSetting : html5Settings) {
+        for (const auto &siteSetting : std::as_const(siteSettings)) {
             query.bindValue(0, siteSetting.server);
-            query.bindValue(1, siteSetting.features[QWebEnginePage::Notifications]);
-            query.bindValue(2, siteSetting.features[QWebEnginePage::Geolocation]);
-            query.bindValue(3, siteSetting.features[QWebEnginePage::MediaAudioCapture]);
-            query.bindValue(4, siteSetting.features[QWebEnginePage::MediaVideoCapture]);
-            query.bindValue(5, siteSetting.features[QWebEnginePage::MediaAudioVideoCapture]);
-            query.bindValue(6, siteSetting.features[QWebEnginePage::MouseLock]);
-            query.bindValue(7, siteSetting.features[QWebEnginePage::DesktopVideoCapture]);
-            query.bindValue(8, siteSetting.features[QWebEnginePage::DesktopAudioVideoCapture]);
+            query.bindValue(1, siteSetting.AllowCookies);
+            query.bindValue(2, siteSetting.features[QWebEnginePage::Notifications]);
+            query.bindValue(3, siteSetting.features[QWebEnginePage::Geolocation]);
+            query.bindValue(4, siteSetting.features[QWebEnginePage::MediaAudioCapture]);
+            query.bindValue(5, siteSetting.features[QWebEnginePage::MediaVideoCapture]);
+            query.bindValue(6, siteSetting.features[QWebEnginePage::MediaAudioVideoCapture]);
+            query.bindValue(7, siteSetting.features[QWebEnginePage::MouseLock]);
+            query.bindValue(8, siteSetting.features[QWebEnginePage::DesktopVideoCapture]);
+            query.bindValue(9, siteSetting.features[QWebEnginePage::DesktopAudioVideoCapture]);
 
             query.exec();
         }
