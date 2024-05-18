@@ -22,7 +22,6 @@
 #include "webpage.h"
 #include "jsoptions.h"
 #include "mainapplication.h"
-#include "sitesettingsmanager.h"
 
 #include <QGraphicsColorizeEffect>
 #include <QWebEngineSettings>
