@@ -131,6 +131,8 @@ set(GENERATED_SOURCES
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/menu_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/action_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/urlinterceptor_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/sitesettingsmanager_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/sitesettingsmanager_sitesettings_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/extensionschemehandler_wrapper.cpp
 )
 set(GENERATED_SOURCES_DEPENDENCIES

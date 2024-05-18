@@ -25,7 +25,7 @@
 class QUrl;
 
 
-class FALKON_EXPORT SiteSettingsManager : QObject
+class FALKON_EXPORT SiteSettingsManager : public QObject
 {
     Q_OBJECT
 

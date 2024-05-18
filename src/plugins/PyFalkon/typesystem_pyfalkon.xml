@@ -162,6 +162,12 @@
       </modify-function>
     </object-type>
 
+    <object-type name="SiteSettingsManager">
+      <enum-type name="Permission"/>
+      <enum-type name="PageOptions"/>
+      <value-type name="SiteSettings"/>
+    </object-type>
+
     <object-type name="ComboTabBar">
       <enum-type name="SizeType"/>
       <enum-type name="DropIndicatorPosition"/>
