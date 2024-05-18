@@ -87,6 +87,4 @@ void SiteSettingsBrowseDialog::hideAskButton()
     m_ui->askButton->hide();
 }
 
-SiteSettingsBrowseDialog::~SiteSettingsBrowseDialog()
-{
-}
+SiteSettingsBrowseDialog::~SiteSettingsBrowseDialog() = default;

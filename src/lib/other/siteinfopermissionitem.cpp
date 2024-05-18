@@ -31,9 +31,7 @@ SiteInfoPermissionItem::SiteInfoPermissionItem(const SiteSettingsManager::Permis
     setPermission(a_permission);
 }
 
-SiteInfoPermissionItem::~SiteInfoPermissionItem()
-{
-}
+SiteInfoPermissionItem::~SiteInfoPermissionItem() = default;
 
 bool SiteInfoPermissionItem::hasOptionAsk() const
 {

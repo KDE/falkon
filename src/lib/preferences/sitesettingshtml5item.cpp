@@ -36,9 +36,7 @@ SiteSettingsHtml5Item::SiteSettingsHtml5Item(const QWebEnginePage::Feature a_fea
     connect(m_ui->browseButton, &QPushButton::clicked, this, &SiteSettingsHtml5Item::showBrowseDialog);
 }
 
-SiteSettingsHtml5Item::~SiteSettingsHtml5Item()
-{
-}
+SiteSettingsHtml5Item::~SiteSettingsHtml5Item() = default;
 
 void SiteSettingsHtml5Item::showBrowseDialog()
 {

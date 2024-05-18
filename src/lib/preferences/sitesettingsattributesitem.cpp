@@ -22,9 +22,7 @@ SiteSettingsAttributesItem::SiteSettingsAttributesItem(const QWebEngineSettings:
     connect(m_ui->browseButton, &QPushButton::clicked, this, &SiteSettingsAttributesItem::showBrowseDialog);
 }
 
-SiteSettingsAttributesItem::~SiteSettingsAttributesItem()
-{
-}
+SiteSettingsAttributesItem::~SiteSettingsAttributesItem() = default;
 
 void SiteSettingsAttributesItem::showBrowseDialog()
 {

@@ -62,9 +62,7 @@ SiteSettingsManager::SiteSettingsManager ( QObject* parent )
     loadSettings();
 }
 
-SiteSettingsManager::~SiteSettingsManager() noexcept
-{
-}
+SiteSettingsManager::~SiteSettingsManager() = default;
 
 void SiteSettingsManager::loadSettings()
 {
