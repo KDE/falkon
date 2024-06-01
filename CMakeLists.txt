@@ -14,8 +14,6 @@ set(KF_MAJOR_VERSION "6")
 set(QT_MIN_VERSION "6.4.0")
 set(KF_MIN_VERSION "5.240.0")
 
-set(FALKON_SQLITE_MIN_VERSION "3.24.0")
-
 # Find ECM, with nice error handling in case of failure
 include(FeatureSummary)
 find_package(ECM ${KF_MIN_VERSION} CONFIG)

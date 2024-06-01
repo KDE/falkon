@@ -22,8 +22,6 @@
 
 #include "qzcommon.h"
 
-class QSqlDatabase;
-
 class ProfileManager
 {
 public:
@@ -57,7 +55,6 @@ private:
     void updateDatabase();
 
     void connectDatabase();
-    bool checkSQLiteVersion(const QSqlDatabase &db);
 
     QString profileVersion;
 };

@@ -4,9 +4,6 @@
 #cmakedefine FALKON_PLUGIN_PATH "${FALKON_PLUGIN_PATH}"
 #cmakedefine FALKON_GIT_REVISION "${FALKON_GIT_REVISION}"
 
-/* Minimal required version of SQLite */
-#define FALKON_SQLITE_MIN_VERSION "${FALKON_SQLITE_MIN_VERSION}"
-
 /* Enable portable build */
 #cmakedefine PORTABLE_BUILD
 
