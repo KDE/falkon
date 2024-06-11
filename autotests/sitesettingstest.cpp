@@ -68,7 +68,6 @@ bool SiteSettingsTest::checkWebAttributes(WebPage *page, QHash<QWebEngineSetting
 
     return true;
 }
-qDebug() << it.key() << it.value() << page->settings()->testAttribute(it.key());
 
 void SiteSettingsTest::checkInternalPage(WebTab *tab, QUrl url)
 {
