@@ -336,8 +336,8 @@ void ProfileManager::updateDatabase()
         return;
     }
 
-    /* Update in 24.05.00 */
-    if (prof < Updater::Version(QStringLiteral("24.04.70"))) {
+    /* Update in 24.08.00 */
+    if (prof < Updater::Version(QStringLiteral("24.07.70"))) {
         std::cout << "Falkon: Updating database to version " << qPrintable(QString::fromLatin1(Qz::VERSION)) << std::endl;
 
         SqlDatabase::instance()->database().transaction();
