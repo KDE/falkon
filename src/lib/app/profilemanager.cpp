@@ -402,7 +402,7 @@ void ProfileManager::updateDatabase()
 
         /* Copied from mainapplication.cpp */
         Settings::createSettings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"));
-        /* End of copied code **
+        /* End of copied code */
 
         Settings settings;
 
