@@ -400,6 +400,10 @@ void ProfileManager::updateDatabase()
         };
         QHash<QString, SiteSettingsManager::SiteSettings> siteSettings;
 
+        /* Copied from mainapplication.cpp */
+        Settings::createSettings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"));
+        /* End of copied code **
+
         Settings settings;
 
         /* HTML5 permissions */
