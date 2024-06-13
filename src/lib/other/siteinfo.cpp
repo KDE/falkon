@@ -381,5 +381,12 @@ void SiteInfo::saveSiteSettings()
 
     if (!(siteSettings == mApp->siteSettingsManager()->getSiteSettings(m_baseUrl))) {
         mApp->siteSettingsManager()->setSiteSettings(siteSettings);
+
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+        m_view->page()->settings()->setAttribute(
+            QWebEngineSettings::ForceDarkMode,
+            siteSettings.attributes[QWebEngineSettings::ForceDarkMode]
+        );
+#endif
     }
 }
