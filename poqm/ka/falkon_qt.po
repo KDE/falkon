@@ -350,7 +350,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "ზოგიერთ ჩანართი ჯერ კიდევ ღიაა"
 
-#: lib/app/mainapplication.cpp:1093
+#: lib/app/mainapplication.cpp:1110
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -359,32 +359,32 @@ msgstr ""
 "Falkon ამჟამად არ არის თქვენი ნაგულისხმევი ბრაუზერი. გსურთ მისი ნაგულისხმევი "
 "ბრაუზერად დაყენება?"
 
-#: lib/app/mainapplication.cpp:1094
+#: lib/app/mainapplication.cpp:1111
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "ყოველთვის შეამოწმე Falkon-ის გაშვებისას."
 
-#: lib/app/mainapplication.cpp:1096
+#: lib/app/mainapplication.cpp:1113
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "ნაგულისხმები ბრაუზერი"
 
-#: lib/app/mainapplication.cpp:1228
+#: lib/app/mainapplication.cpp:1245
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "ახალი ჩანართის გახსნა"
 
-#: lib/app/mainapplication.cpp:1229
+#: lib/app/mainapplication.cpp:1246
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "ახალ ფანჯრის გახსნა"
 
-#: lib/app/mainapplication.cpp:1230
+#: lib/app/mainapplication.cpp:1247
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "ახალი პირადი ფანჯრის გახსნა"
 
-#: lib/app/mainapplication.cpp:1245
+#: lib/app/mainapplication.cpp:1262
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1316,21 +1316,21 @@ msgctxt "CookieManager|"
 msgid "Search"
 msgstr "ძებნა"
 
-#: lib/cookies/cookiemanager.cpp:105
+#: lib/cookies/cookiemanager.cpp:133
 msgctxt "CookieManager|"
 msgid "Confirmation"
 msgstr "დასტური"
 
-#: lib/cookies/cookiemanager.cpp:106
+#: lib/cookies/cookiemanager.cpp:134
 msgctxt "CookieManager|"
 msgid "Are you sure you want to delete all cookies on your computer?"
 msgstr ""
 "დარწმუნებული ბრძანდებით, რომ გნებავთ თქვენს კომპიუტერში დამახსოვრებული ყველა "
 "ქუქის წაშლა?"
 
-#: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
-#: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
-#: lib/cookies/cookiemanager.cpp:155 lib/cookies/cookiemanager.cpp:156
+#: lib/cookies/cookiemanager.cpp:179 lib/cookies/cookiemanager.cpp:180
+#: lib/cookies/cookiemanager.cpp:181 lib/cookies/cookiemanager.cpp:182
+#: lib/cookies/cookiemanager.cpp:183 lib/cookies/cookiemanager.cpp:184
 #: lib/cookies/cookiemanager.ui:154 lib/cookies/cookiemanager.ui:164
 #: lib/cookies/cookiemanager.ui:174 lib/cookies/cookiemanager.ui:184
 #: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
@@ -1338,72 +1338,72 @@ msgctxt "CookieManager|"
 msgid "<cookie not selected>"
 msgstr "<ქუქი არჩეული არაა>"
 
-#: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
+#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:196
 #: lib/cookies/cookiemanager.ui:245
 msgctxt "CookieManager|"
 msgid "Remove cookies"
 msgstr "ქუქიების წაშლა"
 
-#: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
-#: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
-#: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
+#: lib/cookies/cookiemanager.cpp:189 lib/cookies/cookiemanager.cpp:190
+#: lib/cookies/cookiemanager.cpp:191 lib/cookies/cookiemanager.cpp:192
+#: lib/cookies/cookiemanager.cpp:193 lib/cookies/cookiemanager.cpp:194
 msgctxt "CookieManager|"
 msgid "<multiple cookies selected>"
 msgstr "<არჩეულია ერთზე მეტი ქუქი>"
 
-#: lib/cookies/cookiemanager.cpp:178
+#: lib/cookies/cookiemanager.cpp:206
 msgctxt "CookieManager|"
 msgid "Secure only"
 msgstr "მხოლოდ დაცულები"
 
-#: lib/cookies/cookiemanager.cpp:178
+#: lib/cookies/cookiemanager.cpp:206
 msgctxt "CookieManager|"
 msgid "All connections"
 msgstr "ყველა შეერთება"
 
-#: lib/cookies/cookiemanager.cpp:179
+#: lib/cookies/cookiemanager.cpp:207
 msgctxt "CookieManager|"
 msgid "Session cookie"
 msgstr "სესიის ქუქი"
 
-#: lib/cookies/cookiemanager.cpp:181
+#: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
 msgid "Remove cookie"
 msgstr "ქუქის წაშლა"
 
-#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.cpp:214 lib/cookies/cookiemanager.cpp:241
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
 msgstr "სერვერი:"
 
-#: lib/cookies/cookiemanager.cpp:186
+#: lib/cookies/cookiemanager.cpp:214
 msgctxt "CookieManager|"
 msgid "Add to whitelist"
 msgstr "თეთრ სიაში ჩამატება"
 
-#: lib/cookies/cookiemanager.cpp:193
+#: lib/cookies/cookiemanager.cpp:221
 msgctxt "CookieManager|"
 msgid "Already blacklisted!"
 msgstr "უკვე შავ სიაშია!"
 
-#: lib/cookies/cookiemanager.cpp:193
+#: lib/cookies/cookiemanager.cpp:221
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
 msgstr "სერვერი \"%1\" უკვე შავ სიაშია. ჯერ წაშალეთ."
 
-#: lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.cpp:241
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
 msgstr "შავ სიაში ჩამატება"
 
-#: lib/cookies/cookiemanager.cpp:220
+#: lib/cookies/cookiemanager.cpp:252
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
 msgstr "უკვე თეთრ სიაშია!"
 
-#: lib/cookies/cookiemanager.cpp:220
+#: lib/cookies/cookiemanager.cpp:252
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
@@ -3083,67 +3083,67 @@ msgstr ""
 "დაფიქსირდა პრობლემები. თავიდან დააყენეთ Falkon.\n"
 "შეიძლება ადმინისტრატორის უფლებებით გაშვებამაც უშველოს! ;)"
 
-#: lib/other/siteinfo.cpp:68
+#: lib/other/siteinfo.cpp:70
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
 msgstr "<b>მიერთება დაშიფრულია.</b>"
 
-#: lib/other/siteinfo.cpp:70
+#: lib/other/siteinfo.cpp:72
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
 msgstr "<b>მიერთება დაშიფრული არაა.</b>"
 
-#: lib/other/siteinfo.cpp:175
+#: lib/other/siteinfo.cpp:181
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
 msgstr "ნახატის ბმის კოპირება"
 
-#: lib/other/siteinfo.cpp:176
+#: lib/other/siteinfo.cpp:182
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
 msgstr "გამოსახულების სახელის კოპირება"
 
-#: lib/other/siteinfo.cpp:178
+#: lib/other/siteinfo.cpp:184
 msgctxt "SiteInfo|"
 msgid "Save Image to Disk"
 msgstr "გამოსახულების დისკზე შენახვა"
 
-#: lib/other/siteinfo.cpp:190
+#: lib/other/siteinfo.cpp:196
 msgctxt "SiteInfo|"
 msgid "Copy Values"
 msgstr "მნიშვნელობების კოპირება"
 
-#: lib/other/siteinfo.cpp:191
+#: lib/other/siteinfo.cpp:197
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
 msgstr "ჭდეებისა და მნიშვნელობების კოპირება"
 
-#: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
+#: lib/other/siteinfo.cpp:235 lib/other/siteinfo.cpp:254
 msgctxt "SiteInfo|"
 msgid "Error!"
 msgstr "შეცდომა!"
 
-#: lib/other/siteinfo.cpp:229
+#: lib/other/siteinfo.cpp:235
 msgctxt "SiteInfo|"
 msgid "This preview is not available!"
 msgstr "გადახედვა შეუძლებელია!"
 
-#: lib/other/siteinfo.cpp:240
+#: lib/other/siteinfo.cpp:246
 msgctxt "SiteInfo|"
 msgid "Save image..."
 msgstr "გამოსახულების შენახვა..."
 
-#: lib/other/siteinfo.cpp:248
+#: lib/other/siteinfo.cpp:254
 msgctxt "SiteInfo|"
 msgid "Cannot write to file!"
 msgstr "ფაილში ჩაწერის შეცდომა!"
 
-#: lib/other/siteinfo.cpp:258
+#: lib/other/siteinfo.cpp:264
 msgctxt "SiteInfo|"
 msgid "Loading..."
 msgstr "ჩატვირთვა..."
 
-#: lib/other/siteinfo.cpp:271
+#: lib/other/siteinfo.cpp:277
 msgctxt "SiteInfo|"
 msgid "Preview not available"
 msgstr "გადახედვა შეუძლებელია"
@@ -3163,50 +3163,87 @@ msgctxt "SiteInfo|"
 msgid "Media"
 msgstr "მედია"
 
-#: lib/other/siteinfo.ui:84
+#: lib/other/siteinfo.ui:57
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "HTML5 Permissions"
+msgctxt "SiteInfo|"
+msgid "Permissions"
+msgstr "HTML5 -ის წვდომები"
+
+#: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
 msgid "Site address:"
 msgstr "საიტის მისამართი:"
 
-#: lib/other/siteinfo.ui:113
+#: lib/other/siteinfo.ui:118
 msgctxt "SiteInfo|"
 msgid "Encoding:"
 msgstr "კოდირება:"
 
-#: lib/other/siteinfo.ui:132
+#: lib/other/siteinfo.ui:137
 msgctxt "SiteInfo|"
 msgid "Meta tags of site:"
 msgstr "საიტის მეტა-ჭდეები:"
 
-#: lib/other/siteinfo.ui:149
+#: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
 msgid "Tag"
 msgstr "იარლიყი"
 
-#: lib/other/siteinfo.ui:154
+#: lib/other/siteinfo.ui:159
 msgctxt "SiteInfo|"
 msgid "Value"
 msgstr "მნიშვნელობა"
 
-#: lib/other/siteinfo.ui:168
+#: lib/other/siteinfo.ui:173
 msgctxt "SiteInfo|"
 msgid "<b>Security information</b>"
 msgstr "<b>უსაფრთხოების ინფორმაცია</b>"
 
-#: lib/other/siteinfo.ui:241
+#: lib/other/siteinfo.ui:246
 msgctxt "SiteInfo|"
 msgid "Image"
 msgstr "გამოსახულება"
 
-#: lib/other/siteinfo.ui:246
+#: lib/other/siteinfo.ui:251
 msgctxt "SiteInfo|"
 msgid "Image address"
 msgstr "გამოსახულების მისამართი"
 
-#: lib/other/siteinfo.ui:271
+#: lib/other/siteinfo.ui:276
 msgctxt "SiteInfo|"
 msgid "<b>Preview</b>"
 msgstr "<b>ნიმუში</b>"
+
+#: lib/other/siteinfopermissionitem.ui:32
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Default"
+msgstr "ნაგულისხმები"
+
+#: lib/other/siteinfopermissionitem.ui:62
+msgctxt "SiteInfoPermissionItem|"
+msgid "Ask"
+msgstr ""
+
+#: lib/other/siteinfopermissionitem.ui:69
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Allow"
+msgstr "დაშვება"
+
+#: lib/other/siteinfopermissionitem.ui:76
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Deny"
+msgstr "უარყოფა"
 
 #: lib/other/siteinfowidget.cpp:42
 #, qt-format
@@ -3265,6 +3302,211 @@ msgstr "რესგისტრაცია"
 msgctxt "SiteInfoWidget|"
 msgid "More..."
 msgstr "მეტი..."
+
+#: lib/other/sitesettingsmanager.cpp:286
+#, fuzzy
+#| msgctxt "ZoomLabel|"
+#| msgid "Reset zoom level"
+msgctxt "SiteSettingsManager|"
+msgid "Zoom level"
+msgstr "გადიდების დონის დაბრუნება"
+
+#: lib/other/sitesettingsmanager.cpp:288
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Cookies"
+msgctxt "SiteSettingsManager|"
+msgid "Cookies"
+msgstr "ქუქიები"
+
+#: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
+#: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Unknown size"
+msgctxt "SiteSettingsManager|"
+msgid "Unknown"
+msgstr "უცნობი ზომა"
+
+#: lib/other/sitesettingsmanager.cpp:299
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Notifications"
+msgctxt "SiteSettingsManager|"
+msgid "Notifications"
+msgstr "გაფრთხილებები"
+
+#: lib/other/sitesettingsmanager.cpp:301
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Geolocation"
+msgctxt "SiteSettingsManager|"
+msgid "Geolocation"
+msgstr "გეოლოკაცია"
+
+#: lib/other/sitesettingsmanager.cpp:303
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Microphone"
+msgctxt "SiteSettingsManager|"
+msgid "Microphone"
+msgstr "მიკროფონი"
+
+#: lib/other/sitesettingsmanager.cpp:305
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Camera"
+msgctxt "SiteSettingsManager|"
+msgid "Camera"
+msgstr "კამერა"
+
+#: lib/other/sitesettingsmanager.cpp:307
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Microphone and Camera"
+msgctxt "SiteSettingsManager|"
+msgid "Microphone and Camera"
+msgstr "მიკროფონი და კამერა"
+
+#: lib/other/sitesettingsmanager.cpp:309
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Hide Pointer"
+msgctxt "SiteSettingsManager|"
+msgid "Hide mouse pointer"
+msgstr "კურსორის დამალვა"
+
+#: lib/other/sitesettingsmanager.cpp:311
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Enable screen capture"
+msgctxt "SiteSettingsManager|"
+msgid "Screen capture"
+msgstr "ეკრანის გადაღების დაშვება"
+
+#: lib/other/sitesettingsmanager.cpp:313
+msgctxt "SiteSettingsManager|"
+msgid "Screen capture with audio"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:324
+#, fuzzy
+#| msgctxt "WebPage|"
+#| msgid "Reload page"
+msgctxt "SiteSettingsManager|"
+msgid "Autoload images"
+msgstr "გვერდის გადატვირთვა"
+
+#: lib/other/sitesettingsmanager.cpp:327
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Allow JavaScript"
+msgctxt "SiteSettingsManager|"
+msgid "Enable JavaScript"
+msgstr "JavaScript-ის ჩართვა"
+
+#: lib/other/sitesettingsmanager.cpp:329
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Open popup windows"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Open popup windows"
+msgstr "მხტუნარა ფანჯრებისგახსნა"
+
+#: lib/other/sitesettingsmanager.cpp:331
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Access clipboard"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Access clipboard"
+msgstr "ბუფერთან წვდომა"
+
+#: lib/other/sitesettingsmanager.cpp:333
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Paste from clipboard"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Paste from clipboard"
+msgstr "გაცვლის ბუფერიდან ჩასმა"
+
+#: lib/other/sitesettingsmanager.cpp:335
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Activate windows"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Activate windows"
+msgstr "ფანჯრების აქტივაცია"
+
+#: lib/other/sitesettingsmanager.cpp:338
+#, fuzzy
+#| msgctxt "ClearPrivateData|"
+#| msgid "Local storage"
+msgctxt "SiteSettingsManager|"
+msgid "Local storage"
+msgstr "ლოკალური საცავი"
+
+#: lib/other/sitesettingsmanager.cpp:340
+#, fuzzy
+#| msgctxt "MainMenu|"
+#| msgid "&FullScreen"
+msgctxt "SiteSettingsManager|"
+msgid "FullScreen support"
+msgstr "&მთელ ეკრანზე"
+
+#: lib/other/sitesettingsmanager.cpp:342
+msgctxt "SiteSettingsManager|"
+msgid "Run insecure content"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:344
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Disable automatic playing of videos"
+msgctxt "SiteSettingsManager|"
+msgid "Automatic playing of videos"
+msgstr "ვიდეოების ავტომატური დაკვრის გამორთვა"
+
+#: lib/other/sitesettingsmanager.cpp:347
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Allow storing of cookies"
+msgctxt "SiteSettingsManager|"
+msgid "Allow reading from canvas"
+msgstr "ქუქიების დამახსოვრების ჩართვა"
+
+#: lib/other/sitesettingsmanager.cpp:351
+msgctxt "SiteSettingsManager|"
+msgid "Force dark mode"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:364
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteSettingsManager|"
+msgid "Allow"
+msgstr "დაშვება"
+
+#: lib/other/sitesettingsmanager.cpp:366
+msgctxt "SiteSettingsManager|"
+msgid "Ask"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:368
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteSettingsManager|"
+msgid "Deny"
+msgstr "უარყოფა"
+
+#: lib/other/sitesettingsmanager.cpp:370
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteSettingsManager|"
+msgid "Default"
+msgstr "ნაგულისხმები"
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
@@ -3696,88 +3938,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ წაშალოთ %1?"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:613
+#: lib/preferences/preferences.cpp:154 lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "ნაგულისხმები"
 
-#: lib/preferences/preferences.cpp:156
+#: lib/preferences/preferences.cpp:158
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "ნაგულისხმებად დაყენება"
 
-#: lib/preferences/preferences.cpp:301
+#: lib/preferences/preferences.cpp:313
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:556
+#: lib/preferences/preferences.cpp:586
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "აირჩიეთ გამშვები ფაილის მდებარეობა..."
 
-#: lib/preferences/preferences.cpp:599
+#: lib/preferences/preferences.cpp:629
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD გაფრთხილება"
 
-#: lib/preferences/preferences.cpp:600
+#: lib/preferences/preferences.cpp:630
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "გადაათრიეთ და დააგდეთ ეკრანზე, სადაც გნებავთ."
 
-#: lib/preferences/preferences.cpp:649
+#: lib/preferences/preferences.cpp:679
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "აირჩიეთ გადმოწერის მდებარეობა..."
 
-#: lib/preferences/preferences.cpp:663
+#: lib/preferences/preferences.cpp:693
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "აირჩიეთ სტილის ფურცლების მდებარეობა..."
 
-#: lib/preferences/preferences.cpp:674
+#: lib/preferences/preferences.cpp:704
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "წაშლილია"
 
-#: lib/preferences/preferences.cpp:782
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "აირჩიეთ კეშის ბილიკი..."
 
-#: lib/preferences/preferences.cpp:813
+#: lib/preferences/preferences.cpp:837
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "ახალი პროფილი"
 
-#: lib/preferences/preferences.cpp:813
+#: lib/preferences/preferences.cpp:837
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "შეიყვანეთ ახალი პროფილის სახელი:"
 
-#: lib/preferences/preferences.cpp:823 lib/preferences/preferences.cpp:828
+#: lib/preferences/preferences.cpp:847 lib/preferences/preferences.cpp:852
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "შეცდომა!"
 
-#: lib/preferences/preferences.cpp:823
+#: lib/preferences/preferences.cpp:847
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "ეს პროფილი უკვე არსებობს!"
 
-#: lib/preferences/preferences.cpp:828
+#: lib/preferences/preferences.cpp:852
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "პროფილის საქაღალდის შექმნის შეცდომა!"
 
-#: lib/preferences/preferences.cpp:839
+#: lib/preferences/preferences.cpp:863
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "დასტური"
 
-#: lib/preferences/preferences.cpp:840
+#: lib/preferences/preferences.cpp:864
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3785,12 +4027,12 @@ msgid ""
 "cannot be undone!"
 msgstr "მართლა გნებავთ, წაშალოთ პროფილი \"%1\"? ამ ქმედებას ვერ დააბრუნებთ!"
 
-#: lib/preferences/preferences.cpp:855 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:879 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "შენიშვნა: აქტიურ პროფილს ვერ წაშლით."
 
-#: lib/preferences/preferences.cpp:1114
+#: lib/preferences/preferences.cpp:1154
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "ფერი"
@@ -3800,323 +4042,323 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "გამართვა"
 
-#: lib/preferences/preferences.ui:60
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2046
 msgctxt "Preferences|"
 msgid "General"
 msgstr "მთავარი"
 
-#: lib/preferences/preferences.ui:65
+#: lib/preferences/preferences.ui:72
 msgctxt "Preferences|"
 msgid "Appearance"
 msgstr "გარემოს იერსახე"
 
-#: lib/preferences/preferences.ui:70
+#: lib/preferences/preferences.ui:77
 msgctxt "Preferences|"
 msgid "Tabs"
 msgstr "დაფები"
 
-#: lib/preferences/preferences.ui:75
+#: lib/preferences/preferences.ui:82
 msgctxt "Preferences|"
 msgid "Browsing"
 msgstr "არჩევა"
 
-#: lib/preferences/preferences.ui:80
+#: lib/preferences/preferences.ui:87
 msgctxt "Preferences|"
 msgid "Fonts"
 msgstr "ფონტები"
 
-#: lib/preferences/preferences.ui:85
+#: lib/preferences/preferences.ui:92
 msgctxt "Preferences|"
 msgid "Keyboard Shortcuts"
 msgstr "კლავიატურის ბმულები"
 
-#: lib/preferences/preferences.ui:90
+#: lib/preferences/preferences.ui:97
 msgctxt "Preferences|"
 msgid "Downloads"
 msgstr "გადმოწერები"
 
-#: lib/preferences/preferences.ui:95
+#: lib/preferences/preferences.ui:102
 msgctxt "Preferences|"
 msgid "Password Manager"
 msgstr "პაროლების მმართველი"
 
-#: lib/preferences/preferences.ui:100
+#: lib/preferences/preferences.ui:107
 msgctxt "Preferences|"
 msgid "Privacy"
 msgstr "პირადი ინფორმაცია"
 
-#: lib/preferences/preferences.ui:105
+#: lib/preferences/preferences.ui:112
 msgctxt "Preferences|"
 msgid "Notifications"
 msgstr "გაფრთხილებები"
 
-#: lib/preferences/preferences.ui:110
+#: lib/preferences/preferences.ui:117
 msgctxt "Preferences|"
 msgid "Extensions"
 msgstr "გაფართოებები"
 
-#: lib/preferences/preferences.ui:115
+#: lib/preferences/preferences.ui:122
 msgctxt "Preferences|"
 msgid "Spell Check"
 msgstr "მართლწერის შემოწმება"
 
-#: lib/preferences/preferences.ui:120
+#: lib/preferences/preferences.ui:127
 msgctxt "Preferences|"
 msgid "Other"
 msgstr "სხვა"
 
-#: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
+#: lib/preferences/preferences.ui:210 lib/preferences/preferences.ui:357
 msgctxt "Preferences|"
 msgid "Use current"
 msgstr "მიმდინარის გამოყენება"
 
-#: lib/preferences/preferences.ui:243
+#: lib/preferences/preferences.ui:257
 msgctxt "Preferences|"
 msgid "Create New"
 msgstr "ახლის შექმნა"
 
-#: lib/preferences/preferences.ui:259
+#: lib/preferences/preferences.ui:273
 msgctxt "Preferences|"
 msgid "Delete"
 msgstr "Delete"
 
-#: lib/preferences/preferences.ui:285
+#: lib/preferences/preferences.ui:299
 msgctxt "Preferences|"
 msgid "<b>Launching</b>"
 msgstr "<b>გაშვება</b>"
 
-#: lib/preferences/preferences.ui:295
+#: lib/preferences/preferences.ui:309
 msgctxt "Preferences|"
 msgid "After launch: "
 msgstr "გაშვების შემდეგ: "
 
-#: lib/preferences/preferences.ui:303
+#: lib/preferences/preferences.ui:317
 msgctxt "Preferences|"
 msgid "Open blank page"
 msgstr "სუფთა გვერდის გახსნა"
 
-#: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
+#: lib/preferences/preferences.ui:322 lib/preferences/preferences.ui:379
 msgctxt "Preferences|"
 msgid "Open homepage"
 msgstr "საწყისი გვერდის გახსნა"
 
-#: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
+#: lib/preferences/preferences.ui:327 lib/preferences/preferences.ui:384
 msgctxt "Preferences|"
 msgid "Open speed dial"
 msgstr "სწრაფი პანელის გახსნა"
 
-#: lib/preferences/preferences.ui:318
+#: lib/preferences/preferences.ui:332
 msgctxt "Preferences|"
 msgid "Restore session"
 msgstr "სესიის აღდგენა"
 
-#: lib/preferences/preferences.ui:323
+#: lib/preferences/preferences.ui:337
 msgctxt "Preferences|"
 msgid "Select session"
 msgstr "არჩიეთ სესია"
 
-#: lib/preferences/preferences.ui:331
+#: lib/preferences/preferences.ui:345
 msgctxt "Preferences|"
 msgid "Homepage: "
 msgstr "საწყისი გვერდი: "
 
-#: lib/preferences/preferences.ui:352
+#: lib/preferences/preferences.ui:366
 msgctxt "Preferences|"
 msgid "On new tab: "
 msgstr "ახალ ჩანართზე: "
 
-#: lib/preferences/preferences.ui:360
+#: lib/preferences/preferences.ui:374
 msgctxt "Preferences|"
 msgid "Open blank tab"
 msgstr "ახალი სუფთა ჩანართის გახსნა"
 
-#: lib/preferences/preferences.ui:375
+#: lib/preferences/preferences.ui:389
 msgctxt "Preferences|"
 msgid "Open other page..."
 msgstr "სხვა გვერდს გახსნა..."
 
-#: lib/preferences/preferences.ui:383
+#: lib/preferences/preferences.ui:397
 msgctxt "Preferences|"
 msgid "<b>Profiles</b>"
 msgstr "<b>პროფილები</b>"
 
-#: lib/preferences/preferences.ui:390
+#: lib/preferences/preferences.ui:404
 msgctxt "Preferences|"
 msgid "Startup profile:"
 msgstr "გაშვების პროფილი:"
 
-#: lib/preferences/preferences.ui:397
+#: lib/preferences/preferences.ui:411
 msgctxt "Preferences|"
 msgid "Check for updates on start"
 msgstr "გაშვებისას განახლებების შემოწმება"
 
-#: lib/preferences/preferences.ui:404
+#: lib/preferences/preferences.ui:418
 msgctxt "Preferences|"
 msgid "Active profile:"
 msgstr "აქტიური პროფილი:"
 
-#: lib/preferences/preferences.ui:418
+#: lib/preferences/preferences.ui:432
 msgctxt "Preferences|"
 msgid "Don't load tabs until selected"
 msgstr "ჩანართები არ ჩაიტვირთება, სანამ არ მონიშნავთ"
 
-#: lib/preferences/preferences.ui:440
+#: lib/preferences/preferences.ui:454
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
 msgstr ""
 "გაშვებისას შემოწმება, არის თუ არა Falkon-ი თქვენი ნაგულისხმები ბრაუზერი"
 
-#: lib/preferences/preferences.ui:450
+#: lib/preferences/preferences.ui:464
 msgctxt "Preferences|"
 msgid "Check Now"
 msgstr "ახლა შემოწმება"
 
-#: lib/preferences/preferences.ui:480
+#: lib/preferences/preferences.ui:494
 msgctxt "Preferences|"
 msgid "Themes"
 msgstr "თემები"
 
-#: lib/preferences/preferences.ui:502
+#: lib/preferences/preferences.ui:516
 msgctxt "Preferences|"
 msgid "Advanced options"
 msgstr "დამატებითი პარამეტრები"
 
-#: lib/preferences/preferences.ui:510
+#: lib/preferences/preferences.ui:524
 msgctxt "Preferences|"
 msgid "Show StatusBar on start"
 msgstr "გაშვებისას სტატუსის ზოლის ჩვენება"
 
-#: lib/preferences/preferences.ui:517
+#: lib/preferences/preferences.ui:531
 msgctxt "Preferences|"
 msgid "Show Bookmarks ToolBar on start"
 msgstr "გაშვებისას სანიშნების ზოლის ჩვენება"
 
-#: lib/preferences/preferences.ui:524
+#: lib/preferences/preferences.ui:538
 msgctxt "Preferences|"
 msgid "Show Navigation ToolBar on start"
 msgstr "გაშვებისას ნავიგაციის ზოლის ჩვენება"
 
-#: lib/preferences/preferences.ui:531
+#: lib/preferences/preferences.ui:545
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
 msgstr "სწრაფი სანიშნების ზოის ჩვენება"
 
-#: lib/preferences/preferences.ui:553
+#: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>ბრაუზერის ფანჯარა</b>"
 
-#: lib/preferences/preferences.ui:601
+#: lib/preferences/preferences.ui:615
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "ჩანართების ქცევა"
 
-#: lib/preferences/preferences.ui:607
+#: lib/preferences/preferences.ui:621
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "ჩანართების დამალვა, როცა მხოლოდ ერთი ჩანართი არსებობს"
 
-#: lib/preferences/preferences.ui:614
+#: lib/preferences/preferences.ui:628
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "აქტიური ჩანარტის დახურვისას ბოლო ჩანართის გააქტიურება"
 
-#: lib/preferences/preferences.ui:621
+#: lib/preferences/preferences.ui:635
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "ახალი ჩანართის აქტიური ჩანართის შემდეგ გახსნა"
 
-#: lib/preferences/preferences.ui:628
+#: lib/preferences/preferences.ui:642
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "ახალი ცარიელი ჩანართის აქტიური ჩანართის შემდეგ გახსნა"
 
-#: lib/preferences/preferences.ui:635
+#: lib/preferences/preferences.ui:649
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "მხტუნარა ფანჯრების ჩანართებში გახსნა"
 
-#: lib/preferences/preferences.ui:642
+#: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "ჩანართებს შორის თაგუნას ბორბლით გადართვა"
 
-#: lib/preferences/preferences.ui:649
+#: lib/preferences/preferences.ui:663
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "ავტომატური გადართვა ახლად გახსნილ ჩანართზე"
 
-#: lib/preferences/preferences.ui:656
+#: lib/preferences/preferences.ui:670
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "ბოლო ჩანართის დახურვისას ფანჯარა არ დაიხურება"
 
-#: lib/preferences/preferences.ui:663
+#: lib/preferences/preferences.ui:677
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "კითხვა ბევრი ჩანართის დახურვისას"
 
-#: lib/preferences/preferences.ui:670
+#: lib/preferences/preferences.ui:684
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "ჩანართის დახურვის ღილაკის ჩვენება"
 
-#: lib/preferences/preferences.ui:679
+#: lib/preferences/preferences.ui:693
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "არააქტიურ ჩანართებზე დახურვის ღილაკის ჩვენება:"
 
-#: lib/preferences/preferences.ui:687
+#: lib/preferences/preferences.ui:701
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "ავტომატური"
 
-#: lib/preferences/preferences.ui:692
+#: lib/preferences/preferences.ui:706
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "ყოველთვის"
 
-#: lib/preferences/preferences.ui:697
+#: lib/preferences/preferences.ui:711
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "არასდროს"
 
-#: lib/preferences/preferences.ui:737
+#: lib/preferences/preferences.ui:751
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "მისამართის ზოლის ქცევა"
 
-#: lib/preferences/preferences.ui:745
+#: lib/preferences/preferences.ui:759
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "მინიშნებები მისამართების ზოლში კრეფისას:"
 
-#: lib/preferences/preferences.ui:759
+#: lib/preferences/preferences.ui:773
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "ისტორია და სანიშნები"
 
-#: lib/preferences/preferences.ui:764
+#: lib/preferences/preferences.ui:778
 msgctxt "Preferences|"
 msgid "History"
 msgstr "ისტორია"
 
-#: lib/preferences/preferences.ui:769
+#: lib/preferences/preferences.ui:783
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "სანიშნები"
 
-#: lib/preferences/preferences.ui:774
+#: lib/preferences/preferences.ui:788
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "არაფერი"
 
-#: lib/preferences/preferences.ui:800
+#: lib/preferences/preferences.ui:814
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "ხაზში რჩევების ჩართვა"
 
-#: lib/preferences/preferences.ui:807
+#: lib/preferences/preferences.ui:821
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4124,362 +4366,375 @@ msgstr ""
 "ბმულის ჩანართის გადართვის მაგიერ მიმდინარე ჩანართში ჩასატვირთად \"Shift\"-ს "
 "დააწექით"
 
-#: lib/preferences/preferences.ui:810
+#: lib/preferences/preferences.ui:824
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "ჩანართზე გადართვის შეთავაზება, თუ დასრულებული ბმულები უკვე ჩატვირთულია"
 
-#: lib/preferences/preferences.ui:817
+#: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "გადასვლის ხატულა ყოველთვის იქნება ნაჩვენები"
 
-#: lib/preferences/preferences.ui:824
+#: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "გადიდების დონის ჩვენება"
 
-#: lib/preferences/preferences.ui:831
+#: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr ""
 "მისამართების ზოლზე ორმაგი დაწკაპუნებისას არსებული ტექსტის სრულად მონიშვნა"
 
-#: lib/preferences/preferences.ui:838
+#: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "მისამართების ზოლზე დაწკაპუნებისას არსებული ტექსტის სრულად მონიშვნა"
 
-#: lib/preferences/preferences.ui:845
+#: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "მისამართების ზოლიდან ძებნის მხარდაჭერის ჩართვა"
 
-#: lib/preferences/preferences.ui:852
+#: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "ნაგულისხმებ საძიებო სისტემაში მოძებნა"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:873
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "ძებნის მინიშნებების ჩვენება"
 
-#: lib/preferences/preferences.ui:866
+#: lib/preferences/preferences.ui:880
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr "მინიშნების მხტუნარას ფანჯრის სიგანემდე გაწევა"
 
-#: lib/preferences/preferences.ui:889
+#: lib/preferences/preferences.ui:903
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "ჩატვირთვის მიმდინარეობის ჩვენება მისამართების ზოლზე"
 
-#: lib/preferences/preferences.ui:922
+#: lib/preferences/preferences.ui:936
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "შევსება"
 
-#: lib/preferences/preferences.ui:927
+#: lib/preferences/preferences.ui:941
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "ქვემოთ"
 
-#: lib/preferences/preferences.ui:932
+#: lib/preferences/preferences.ui:946
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "თავში"
 
-#: lib/preferences/preferences.ui:940
+#: lib/preferences/preferences.ui:954
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "ფერის არჩევა:"
 
-#: lib/preferences/preferences.ui:956
+#: lib/preferences/preferences.ui:970
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "ფერის არჩევა"
 
-#: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
-#: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
-#: lib/preferences/preferences.ui:2749
+#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1307
+#: lib/preferences/preferences.ui:1841 lib/preferences/preferences.ui:1938
+#: lib/preferences/preferences.ui:2784
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:966
+#: lib/preferences/preferences.ui:980
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "განულება"
 
-#: lib/preferences/preferences.ui:1017
+#: lib/preferences/preferences.ui:1031
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "ვების მორგება"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "PPAPI-ის ჩართვა"
 
-#: lib/preferences/preferences.ui:1032
+#: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "ჩაშენებული PDF მნახველის გამოყენება (საჭიროებს PPAPI-ს)"
 
-#: lib/preferences/preferences.ui:1039
+#: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "JavaScript-ის ჩართვა"
 
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "ფოკუსის ჯაჭვში ბმულების ჩასმა"
 
 #. try to detect possible XSS attacks when executing javascript
-#: lib/preferences/preferences.ui:1053
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
 msgstr "XSS აუდიტის ჩართვა"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1060
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "ელემენტის ფონის დაბეჭდვა"
 
-#: lib/preferences/preferences.ui:1067
+#: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "ანიმირებული აწევ/დაწევა"
 
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "სივრცითი ნავიგაციის ჩართვა"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "საკუთარი ჩოჩიების გამოყენება"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "ვიდეოების ავტომატური დაკვრის გამორთვა"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "WebRTC-სთვის ლოკალური IP მისამართის გაჟონვის თავიდან აცილება"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "DNS-ის წინასწარი გამოთხოვის ჩართვა"
 
-#: lib/preferences/preferences.ui:1109
+#: lib/preferences/preferences.ui:1123
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "ეკრანის გადაღების დაშვება"
 
-#: lib/preferences/preferences.ui:1116
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "აპარატურული აჩქარების გამოყენება (საჭიროებს გადატვირთვას)"
 
-#: lib/preferences/preferences.ui:1133
+#: lib/preferences/preferences.ui:1137
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Allow storing of cookies"
+msgctxt "Preferences|"
+msgid "Allow reading from canvas"
+msgstr "ქუქიების დამახსოვრების ჩართვა"
+
+#: lib/preferences/preferences.ui:1144
+msgctxt "Preferences|"
+msgid "Force dark mode"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "თაგუნას რგოლის აწევ-ჩამოწევა"
 
-#: lib/preferences/preferences.ui:1153
+#: lib/preferences/preferences.ui:1181
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "ხაზი გვერდზე"
 
-#: lib/preferences/preferences.ui:1164
+#: lib/preferences/preferences.ui:1192
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "გვერდის ნაგულისხმები გადიდება: "
 
-#: lib/preferences/preferences.ui:1203
+#: lib/preferences/preferences.ui:1231
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "ლოკალური საცავი"
 
-#: lib/preferences/preferences.ui:1211
+#: lib/preferences/preferences.ui:1239
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "ქსელური კეშის დისკზე შენახვის დაშვება"
 
-#: lib/preferences/preferences.ui:1234
+#: lib/preferences/preferences.ui:1262
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "დახურვისას კეშის წაშლა"
 
-#: lib/preferences/preferences.ui:1241
+#: lib/preferences/preferences.ui:1269
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "მაქსიმუმი:"
 
-#: lib/preferences/preferences.ui:1248
+#: lib/preferences/preferences.ui:1276
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " მბ"
 
-#: lib/preferences/preferences.ui:1264
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "კეშის საქაღალდე:"
 
-#: lib/preferences/preferences.ui:1292
+#: lib/preferences/preferences.ui:1320
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "ისტორიის შენახვის დაშვება"
 
-#: lib/preferences/preferences.ui:1299
+#: lib/preferences/preferences.ui:1327
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "დახურვისას ისტორიის წაშლა"
 
-#: lib/preferences/preferences.ui:1322
+#: lib/preferences/preferences.ui:1350
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "HTML5 ვებ-შემცველობის ლოკალური საცავის დაშვება"
 
-#: lib/preferences/preferences.ui:1329
+#: lib/preferences/preferences.ui:1357
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "დახურვისას ლოკალურად დამახსოვრებული HTML5 ვებ შემცველობის წაშლა"
 
-#: lib/preferences/preferences.ui:1355
+#: lib/preferences/preferences.ui:1383
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "წაშალე ახლა"
 
-#: lib/preferences/preferences.ui:1394
+#: lib/preferences/preferences.ui:1422
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "პროქსის კონფიგურაცია"
 
-#: lib/preferences/preferences.ui:1413
+#: lib/preferences/preferences.ui:1441
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "სისტემური პროქსის მორგება"
 
-#: lib/preferences/preferences.ui:1436
+#: lib/preferences/preferences.ui:1464
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "ხელით მითითება"
 
-#: lib/preferences/preferences.ui:1446
+#: lib/preferences/preferences.ui:1474
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1451
+#: lib/preferences/preferences.ui:1479
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1462
+#: lib/preferences/preferences.ui:1490
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "პორტი:"
 
-#: lib/preferences/preferences.ui:1483
+#: lib/preferences/preferences.ui:1511
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "მომხმარებელი:"
 
-#: lib/preferences/preferences.ui:1493
+#: lib/preferences/preferences.ui:1521
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "პაროლი:"
 
-#: lib/preferences/preferences.ui:1522
+#: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "პროქსის გარეშე"
 
-#: lib/preferences/preferences.ui:1537
+#: lib/preferences/preferences.ui:1565
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>ფონტს ოჯახები</b>"
 
-#: lib/preferences/preferences.ui:1550
+#: lib/preferences/preferences.ui:1578
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "სტანდარტული"
 
-#: lib/preferences/preferences.ui:1557
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "დამაგრებული"
 
-#: lib/preferences/preferences.ui:1567
+#: lib/preferences/preferences.ui:1595
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1577
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "შესახებ"
 
-#: lib/preferences/preferences.ui:1587
+#: lib/preferences/preferences.ui:1615
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "კურსივი"
 
-#: lib/preferences/preferences.ui:1639
+#: lib/preferences/preferences.ui:1667
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "ფანტაზია"
 
-#: lib/preferences/preferences.ui:1646
+#: lib/preferences/preferences.ui:1674
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>ფონტის ზომები</b>"
 
-#: lib/preferences/preferences.ui:1655
+#: lib/preferences/preferences.ui:1683
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "ფონტის ფიქსირებული ზომა"
 
-#: lib/preferences/preferences.ui:1662
+#: lib/preferences/preferences.ui:1690
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "ფონტის ნაგულისხმები ზომა"
 
-#: lib/preferences/preferences.ui:1689
+#: lib/preferences/preferences.ui:1717
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "ფონტის მინიმალური ზომა"
 
-#: lib/preferences/preferences.ui:1696
+#: lib/preferences/preferences.ui:1724
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "მინიმალური ლოგიკური ფონტის ზომა"
 
-#: lib/preferences/preferences.ui:1729
+#: lib/preferences/preferences.ui:1757
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>მალსახმობები</b>"
 
-#: lib/preferences/preferences.ui:1736
+#: lib/preferences/preferences.ui:1764
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "ჩანართებს შორის Alt+ჩანართისნომრით გადართვა"
 
-#: lib/preferences/preferences.ui:1743
+#: lib/preferences/preferences.ui:1771
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "სწრაფი ჩატვირთვები Ctrl + სწრაფი ჩატვირთვის ნომერ"
 
-#: lib/preferences/preferences.ui:1750
+#: lib/preferences/preferences.ui:1778
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4488,12 +4743,12 @@ msgstr ""
 "არსებული მალსახმობები:<br/><b>1</b> - წინა ჩანართი<br/><b>2</b> - შემდეგი "
 "ჩანართი<br/><b>/</b> - გვერდზე ძებნა"
 
-#: lib/preferences/preferences.ui:1753
+#: lib/preferences/preferences.ui:1781
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "ერთღილაკიანი მალსახმობების გამოყენება"
 
-#: lib/preferences/preferences.ui:1760
+#: lib/preferences/preferences.ui:1788
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4502,162 +4757,160 @@ msgstr ""
 "თუ ჩართული არაა, Ctrl-W მალსახმობით აპლიკაციიდან შემთხვევით გამორთვას ხელს "
 "შეუშლის."
 
-#: lib/preferences/preferences.ui:1763
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "აპლიკაციის დახურვა Ctrl-Q-ით"
 
-#: lib/preferences/preferences.ui:1787
+#: lib/preferences/preferences.ui:1815
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>გადმოწერის მდებარეობა</b>"
 
-#: lib/preferences/preferences.ui:1794
+#: lib/preferences/preferences.ui:1822
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "გადმოწერის ადგილის ყოველ ჯერზე ითხვა"
 
-#: lib/preferences/preferences.ui:1801
+#: lib/preferences/preferences.ui:1829
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "მითითებული მდებარეობის გამოყენება: "
 
-#: lib/preferences/preferences.ui:1851
+#: lib/preferences/preferences.ui:1879
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>გადმოწერის მორგება</b>"
 
-#: lib/preferences/preferences.ui:1858
+#: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "გადმოწერების დასრულების შემდეგ გადმოწერების მმართველის დახურვა"
 
-#: lib/preferences/preferences.ui:1865
+#: lib/preferences/preferences.ui:1893
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>გარე გადმოწერების მმართველი</b>"
 
-#: lib/preferences/preferences.ui:1872
+#: lib/preferences/preferences.ui:1900
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "გარე მმართველით გადმოწერა"
 
-#: lib/preferences/preferences.ui:1884
+#: lib/preferences/preferences.ui:1912
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "გამსვები ფაილი:"
 
-#: lib/preferences/preferences.ui:1891
+#: lib/preferences/preferences.ui:1919
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "არგუმენტები:"
 
-#: lib/preferences/preferences.ui:1898
+#: lib/preferences/preferences.ui:1926
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "დატოვეთ ცარიელი, თუ დარწმუნებული არ ბრძანდებით"
 
-#: lib/preferences/preferences.ui:1919
+#: lib/preferences/preferences.ui:1947
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> გადმოსაწერი ბმულით შეიცვლება"
 
-#: lib/preferences/preferences.ui:1945
+#: lib/preferences/preferences.ui:1973
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>ავტომატური შევსების მორგება</b>"
 
-#: lib/preferences/preferences.ui:1952
+#: lib/preferences/preferences.ui:1980
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "საიტებზე პაროლების შენახვის დაშვება"
 
-#: lib/preferences/preferences.ui:2003
+#: lib/preferences/preferences.ui:2031
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "საიტებზე პაროლების ავტომატური შევსება"
 
-#: lib/preferences/preferences.ui:2014
-msgctxt "Preferences|"
-msgid "<b>Cookies</b>"
-msgstr "<b>ქუქიები</b>"
-
-#: lib/preferences/preferences.ui:2021
-msgctxt "Preferences|"
-msgid "<b>Other</b>"
-msgstr "<b>სხვა</b>"
-
-#: lib/preferences/preferences.ui:2047
-msgctxt "Preferences|"
-msgid "JavaScript options"
-msgstr "JavaScript -ის მორგება"
-
-#: lib/preferences/preferences.ui:2057
-msgctxt "Preferences|"
-msgid "<b>JavaScript</b>"
-msgstr "<b>JavaScript</b>"
-
-#: lib/preferences/preferences.ui:2070
-msgctxt "Preferences|"
-msgid "Cookies Manager"
-msgstr "მქუქიების მართველი"
-
-#: lib/preferences/preferences.ui:2080
-msgctxt "Preferences|"
-msgid "Manage JavaScript privacy options"
-msgstr "JavaScript-ის კონფიდენციალობის პარამეტრების მორგება"
-
-#: lib/preferences/preferences.ui:2103
-msgctxt "Preferences|"
-msgid "Manage HTML5 permissions"
-msgstr "HTML5 -ის წვდომების მართვა"
-
-#: lib/preferences/preferences.ui:2110
+#: lib/preferences/preferences.ui:2052
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "ქუქიების მმართველი"
 
-#: lib/preferences/preferences.ui:2130
+#: lib/preferences/preferences.ui:2065
 msgctxt "Preferences|"
-msgid "<b>HTML5 Permissions</b>"
-msgstr "<b>HTML5 -ის წვდომები</b>"
+msgid "Cookies Manager"
+msgstr "მქუქიების მართველი"
 
-#: lib/preferences/preferences.ui:2143
+#: lib/preferences/preferences.ui:2088
 msgctxt "Preferences|"
-msgid "HTML5 Permissions"
-msgstr "HTML5 -ის წვდომები"
+msgid "<b>JavaScript</b>"
+msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2150
+#: lib/preferences/preferences.ui:2101
+msgctxt "Preferences|"
+msgid "JavaScript options"
+msgstr "JavaScript -ის მორგება"
+
+#: lib/preferences/preferences.ui:2108
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "სერვერებზე Do Not Track თავსართების გაგზავნა"
 
-#: lib/preferences/preferences.ui:2176
+#: lib/preferences/preferences.ui:2115
+msgctxt "Preferences|"
+msgid "<b>Cookies</b>"
+msgstr "<b>ქუქიები</b>"
+
+#: lib/preferences/preferences.ui:2141
+msgctxt "Preferences|"
+msgid "Manage JavaScript privacy options"
+msgstr "JavaScript-ის კონფიდენციალობის პარამეტრების მორგება"
+
+#: lib/preferences/preferences.ui:2148
+msgctxt "Preferences|"
+msgid "<b>Other</b>"
+msgstr "<b>სხვა</b>"
+
+#: lib/preferences/preferences.ui:2169
+msgctxt "Preferences|"
+msgid "HTML5 Permissions"
+msgstr "HTML5 -ის წვდომები"
+
+#: lib/preferences/preferences.ui:2179
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Settings"
+msgctxt "Preferences|"
+msgid "Site Settings"
+msgstr "მორგება"
+
+#: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "მოლოდინის ვადა:"
 
-#: lib/preferences/preferences.ui:2189
+#: lib/preferences/preferences.ui:2224
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " წამი"
 
-#: lib/preferences/preferences.ui:2211
+#: lib/preferences/preferences.ui:2246
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>გაფრთხილებები</b>"
 
-#: lib/preferences/preferences.ui:2234
+#: lib/preferences/preferences.ui:2269
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "საკუთარი სისტემური შეტყობინებების გამოყენება (მხოლოდ Linux-ზე)"
 
-#: lib/preferences/preferences.ui:2241
+#: lib/preferences/preferences.ui:2276
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "გაფრთხილებების გარეშე"
 
-#: lib/preferences/preferences.ui:2264
+#: lib/preferences/preferences.ui:2299
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -4666,17 +4919,17 @@ msgstr ""
 "<b>შენიშვნა: </b> OSD გაფრთხილებს მდებარეობა მისი ეკრანზე გადათრევით "
 "შეგიძლიათ."
 
-#: lib/preferences/preferences.ui:2290
+#: lib/preferences/preferences.ui:2325
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "OSD გაფრთხილებების გამოყენება"
 
-#: lib/preferences/preferences.ui:2297
+#: lib/preferences/preferences.ui:2332
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "გადახედვა"
 
-#: lib/preferences/preferences.ui:2362
+#: lib/preferences/preferences.ui:2397
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4685,92 +4938,92 @@ msgstr ""
 "მართლწერის შემოწმების შესახებ მეტი ინფორმაციისთვის იხილეთ ჩვენი <a href="
 "\"https://userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 
-#: lib/preferences/preferences.ui:2404
+#: lib/preferences/preferences.ui:2439
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>მართლწერის შემოწმების მორგება</b>"
 
-#: lib/preferences/preferences.ui:2411
+#: lib/preferences/preferences.ui:2446
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "მართლწერის შემოწმების ჩართვა"
 
-#: lib/preferences/preferences.ui:2418
+#: lib/preferences/preferences.ui:2453
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>ლექსიკონის საქაღალდეები</b>"
 
-#: lib/preferences/preferences.ui:2469
+#: lib/preferences/preferences.ui:2504
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "ენები ნაპოვნი არაა"
 
-#: lib/preferences/preferences.ui:2498
+#: lib/preferences/preferences.ui:2533
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "პროტოკოლის დამმუშავებლების მმართველი"
 
-#: lib/preferences/preferences.ui:2538
+#: lib/preferences/preferences.ui:2573
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "ძებნის ძრავების მმართველი"
 
-#: lib/preferences/preferences.ui:2560
+#: lib/preferences/preferences.ui:2595
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>მომხმარებლის სტილების ფურცელი</b>"
 
-#: lib/preferences/preferences.ui:2567
+#: lib/preferences/preferences.ui:2602
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>ძებნის ძრავების მართვა</b>"
 
-#: lib/preferences/preferences.ui:2580
+#: lib/preferences/preferences.ui:2615
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "მომხმარებლის სქემების მართვა"
 
-#: lib/preferences/preferences.ui:2605
+#: lib/preferences/preferences.ui:2640
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "ენები"
 
-#: lib/preferences/preferences.ui:2627
+#: lib/preferences/preferences.ui:2662
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>ვებგვერდების სასურველი ენა</b>"
 
-#: lib/preferences/preferences.ui:2652
+#: lib/preferences/preferences.ui:2687
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "სერტიფიკატის გამონაკლისის მმართველი"
 
-#: lib/preferences/preferences.ui:2674
+#: lib/preferences/preferences.ui:2709
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>ბრაუზერის იდენტიფიკაციის შეცვლა</b>"
 
-#: lib/preferences/preferences.ui:2699
+#: lib/preferences/preferences.ui:2734
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "მომხმარებლის აგენტის მართვა"
 
-#: lib/preferences/preferences.ui:2721
+#: lib/preferences/preferences.ui:2756
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "სტილების ფურცლები ავტომატურად იტვირთება ყველა ვებგვერდთან ერთად: "
 
-#: lib/preferences/preferences.ui:2758
+#: lib/preferences/preferences.ui:2793
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>პროტოკოლის დამმუშავებლების მართვა</b>"
 
-#: lib/preferences/preferences.ui:2765
+#: lib/preferences/preferences.ui:2800
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>სერტიფიკატების მმართველი</b>"
 
-#: lib/preferences/preferences.ui:2816
+#: lib/preferences/preferences.ui:2851
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "მომხმარებლის სქემების მმართველი"
@@ -4829,6 +5082,75 @@ msgstr "დაბლოკილი სქემები"
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
 msgstr "ცვლილებები ძალაში Falkon-ის გადატვირთვის შემდეგ შევა."
+
+#: lib/preferences/sitesettingsattributesitem.ui:39
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Browsing"
+msgctxt "SiteSettingsAttributesItem|"
+msgid "Browse"
+msgstr "არჩევა"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:14
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "HTML5 Permissions"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Site Permissions"
+msgstr "HTML5 -ის წვდომები"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:30
+#, fuzzy
+#| msgctxt "ProtocolHandlerDialog|"
+#| msgid "Site"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Site"
+msgstr "საიტი"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:35
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Behaviour"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Behaviour"
+msgstr "ქცევა"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:45
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Ask"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:52
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Allow"
+msgstr "დაშვება"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:59
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Deny"
+msgstr "უარყოფა"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:66
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Default"
+msgstr "ნაგულისხმები"
+
+#: lib/preferences/sitesettingshtml5item.ui:42
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Browsing"
+msgctxt "SiteSettingsHtml5Item|"
+msgid "Browse"
+msgstr "არჩევა"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -5421,81 +5743,6 @@ msgctxt "CertificateInfoWidget|"
 msgid "Expires On:"
 msgstr "ვადის ამოწურვის თარიღი:"
 
-#: lib/tools/html5permissions/html5permissionsdialog.cpp:63
-msgctxt "HTML5PermissionsDialog|"
-msgid "Allow"
-msgstr "დაშვება"
-
-#: lib/tools/html5permissions/html5permissionsdialog.cpp:72
-msgctxt "HTML5PermissionsDialog|"
-msgid "Deny"
-msgstr "უარყოფა"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:14
-msgctxt "HTML5PermissionsDialog|"
-msgid "HTML5 Permissions"
-msgstr "HTML5 -ის წვდომები"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:35
-msgctxt "HTML5PermissionsDialog|"
-msgid "Remove"
-msgstr "წაშლა"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:64
-msgctxt "HTML5PermissionsDialog|"
-msgid "Site"
-msgstr "საიტი"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:69
-msgctxt "HTML5PermissionsDialog|"
-msgid "Behaviour"
-msgstr "ქცევა"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:79
-msgctxt "HTML5PermissionsDialog|"
-msgid "Permission for:"
-msgstr "წვდომები:"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:87
-msgctxt "HTML5PermissionsDialog|"
-msgid "Notifications"
-msgstr "გაფრთხილებები"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:92
-msgctxt "HTML5PermissionsDialog|"
-msgid "Geolocation"
-msgstr "გეოლოკაცია"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:97
-msgctxt "HTML5PermissionsDialog|"
-msgid "Microphone"
-msgstr "მიკროფონი"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:102
-msgctxt "HTML5PermissionsDialog|"
-msgid "Camera"
-msgstr "კამერა"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:107
-msgctxt "HTML5PermissionsDialog|"
-msgid "Microphone and Camera"
-msgstr "მიკროფონი და კამერა"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:112
-msgctxt "HTML5PermissionsDialog|"
-msgid "Hide Pointer"
-msgstr "კურსორის დამალვა"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:117
-msgctxt "HTML5PermissionsDialog|"
-msgid "Display Capture"
-msgstr "ეკრანის ჩაჭერა"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:122
-msgctxt "HTML5PermissionsDialog|"
-msgid "Display and Audio Capture"
-msgstr "ეკრანისა და აუდიოს ჩაჭერა"
-
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
 msgid "this site"
@@ -5613,7 +5860,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "ამ გვერდისთვის დამატებითი ფანჯრების ჩვენების აკრძალვა"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:333
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5623,27 +5870,27 @@ msgstr ""
 "Falkon-მა <b>%1:</b> ბმულები არ იცის, რა არის. მოთხოვნილი ბმულია <ul><li>%2</"
 "li></ul>. გნებავთ, Falkon-მა ამ ბმულის სისტემური აპლიკაციით გახსნა სცადოს?"
 
-#: lib/webengine/webpage.cpp:337
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "არჩევანის &დამახსოვრება ამ პროტოკოლისთვის"
 
-#: lib/webengine/webpage.cpp:338
+#: lib/webengine/webpage.cpp:339
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "გარე პროტოკოლის მოთხოვნა"
 
-#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:419 lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "გვერდის ჩატვირთვის შეცდომა"
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "შეცდომა ამ გვერდის ჩატვირთვისას."
 
-#: lib/webengine/webpage.cpp:421
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -5651,27 +5898,27 @@ msgstr ""
 "სცადეთ, მეხსიერება გვერდების თავიდან ჩატვირთვის ან ზოგიერთი ჩანართის "
 "დახურვით გაათავისუფლოთ."
 
-#: lib/webengine/webpage.cpp:422
+#: lib/webengine/webpage.cpp:423
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "გვერდის გადატვირთვა"
 
-#: lib/webengine/webpage.cpp:483
+#: lib/webengine/webpage.cpp:511
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "აირჩიეთ ფაილი..."
 
-#: lib/webengine/webpage.cpp:487
+#: lib/webengine/webpage.cpp:515
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "აირჩიეთ ფაილები..."
 
-#: lib/webengine/webpage.cpp:623
+#: lib/webengine/webpage.cpp:651
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript -ის განგაში"
 
-#: lib/webengine/webpage.cpp:632
+#: lib/webengine/webpage.cpp:660
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "ამ გვერდისთვის დამატებითი ფანჯრების ჩვენების აკრძალვა"
@@ -5959,6 +6206,42 @@ msgstr "ელემენტის ინსპექტირება"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "Preferences|"
+#~ msgid "Manage HTML5 permissions"
+#~ msgstr "HTML5 -ის წვდომების მართვა"
+
+#~ msgctxt "Preferences|"
+#~ msgid "<b>HTML5 Permissions</b>"
+#~ msgstr "<b>HTML5 -ის წვდომები</b>"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "HTML5 Permissions"
+#~ msgstr "HTML5 -ის წვდომები"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Remove"
+#~ msgstr "წაშლა"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Site"
+#~ msgstr "საიტი"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Permission for:"
+#~ msgstr "წვდომები:"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Notifications"
+#~ msgstr "გაფრთხილებები"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Display Capture"
+#~ msgstr "ეკრანის ჩაჭერა"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Display and Audio Capture"
+#~ msgstr "ეკრანისა და აუდიოს ჩაჭერა"
 
 #~ msgctxt "QObject|"
 #~ msgid "KB"

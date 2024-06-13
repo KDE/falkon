@@ -360,7 +360,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Det finst opne faner"
 
-#: lib/app/mainapplication.cpp:1093
+#: lib/app/mainapplication.cpp:1110
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -369,32 +369,32 @@ msgstr ""
 "Falkon er ikkje standardnettlesar. Ønskjer du å bruka han som "
 "standardnettlesar?"
 
-#: lib/app/mainapplication.cpp:1094
+#: lib/app/mainapplication.cpp:1111
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Kontroller dette kvar gong Falkon startar."
 
-#: lib/app/mainapplication.cpp:1096
+#: lib/app/mainapplication.cpp:1113
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Standardnettlesar"
 
-#: lib/app/mainapplication.cpp:1228
+#: lib/app/mainapplication.cpp:1245
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Opna ny fane"
 
-#: lib/app/mainapplication.cpp:1229
+#: lib/app/mainapplication.cpp:1246
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Opna nytt vindauge"
 
-#: lib/app/mainapplication.cpp:1230
+#: lib/app/mainapplication.cpp:1247
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Opna nytt privat vindauge"
 
-#: lib/app/mainapplication.cpp:1245
+#: lib/app/mainapplication.cpp:1262
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1319,19 +1319,19 @@ msgctxt "CookieManager|"
 msgid "Search"
 msgstr "Søk"
 
-#: lib/cookies/cookiemanager.cpp:105
+#: lib/cookies/cookiemanager.cpp:133
 msgctxt "CookieManager|"
 msgid "Confirmation"
 msgstr "Stadfesting"
 
-#: lib/cookies/cookiemanager.cpp:106
+#: lib/cookies/cookiemanager.cpp:134
 msgctxt "CookieManager|"
 msgid "Are you sure you want to delete all cookies on your computer?"
 msgstr "Er du sikker på at du vil sletta alle lagra infokapslar?"
 
-#: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
-#: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
-#: lib/cookies/cookiemanager.cpp:155 lib/cookies/cookiemanager.cpp:156
+#: lib/cookies/cookiemanager.cpp:179 lib/cookies/cookiemanager.cpp:180
+#: lib/cookies/cookiemanager.cpp:181 lib/cookies/cookiemanager.cpp:182
+#: lib/cookies/cookiemanager.cpp:183 lib/cookies/cookiemanager.cpp:184
 #: lib/cookies/cookiemanager.ui:154 lib/cookies/cookiemanager.ui:164
 #: lib/cookies/cookiemanager.ui:174 lib/cookies/cookiemanager.ui:184
 #: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
@@ -1340,72 +1340,72 @@ msgid "<cookie not selected>"
 msgstr "<infokapsel ikkje vald>"
 
 # Burde vere «Remove selected cookies». Skal rapportere…
-#: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
+#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:196
 #: lib/cookies/cookiemanager.ui:245
 msgctxt "CookieManager|"
 msgid "Remove cookies"
 msgstr "Fjern infokapslar"
 
-#: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
-#: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
-#: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
+#: lib/cookies/cookiemanager.cpp:189 lib/cookies/cookiemanager.cpp:190
+#: lib/cookies/cookiemanager.cpp:191 lib/cookies/cookiemanager.cpp:192
+#: lib/cookies/cookiemanager.cpp:193 lib/cookies/cookiemanager.cpp:194
 msgctxt "CookieManager|"
 msgid "<multiple cookies selected>"
 msgstr "<fleire valde infokapslar>"
 
-#: lib/cookies/cookiemanager.cpp:178
+#: lib/cookies/cookiemanager.cpp:206
 msgctxt "CookieManager|"
 msgid "Secure only"
 msgstr "Berre trygge"
 
-#: lib/cookies/cookiemanager.cpp:178
+#: lib/cookies/cookiemanager.cpp:206
 msgctxt "CookieManager|"
 msgid "All connections"
 msgstr "Alle tilkoplingar"
 
-#: lib/cookies/cookiemanager.cpp:179
+#: lib/cookies/cookiemanager.cpp:207
 msgctxt "CookieManager|"
 msgid "Session cookie"
 msgstr "Infokapsel for økt"
 
-#: lib/cookies/cookiemanager.cpp:181
+#: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
 msgid "Remove cookie"
 msgstr "Fjern infokapsel"
 
-#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.cpp:214 lib/cookies/cookiemanager.cpp:241
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
 msgstr "Tenar:"
 
-#: lib/cookies/cookiemanager.cpp:186
+#: lib/cookies/cookiemanager.cpp:214
 msgctxt "CookieManager|"
 msgid "Add to whitelist"
 msgstr "Legg til på kvitelista"
 
-#: lib/cookies/cookiemanager.cpp:193
+#: lib/cookies/cookiemanager.cpp:221
 msgctxt "CookieManager|"
 msgid "Already blacklisted!"
 msgstr "Allereie svartelista."
 
-#: lib/cookies/cookiemanager.cpp:193
+#: lib/cookies/cookiemanager.cpp:221
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
 msgstr "Tenaren «%1» er alt på svartelista. Du må fjerna han derfrå først."
 
-#: lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.cpp:241
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
 msgstr "Legg til på svartelista"
 
-#: lib/cookies/cookiemanager.cpp:220
+#: lib/cookies/cookiemanager.cpp:252
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
 msgstr "Allereie kvitelista."
 
-#: lib/cookies/cookiemanager.cpp:220
+#: lib/cookies/cookiemanager.cpp:252
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
@@ -3081,67 +3081,67 @@ msgstr ""
 "Det oppstod feil. Prøva å installera Falkon på nytt.\n"
 "Det kan òg vera det hjelper å køyra programmet administratorløyve."
 
-#: lib/other/siteinfo.cpp:68
+#: lib/other/siteinfo.cpp:70
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
 msgstr "<b>Tilkoplinga er kryptert.</b>"
 
-#: lib/other/siteinfo.cpp:70
+#: lib/other/siteinfo.cpp:72
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
 msgstr "<b>Tilkoplinga er ikkje kryptert.</b>"
 
-#: lib/other/siteinfo.cpp:175
+#: lib/other/siteinfo.cpp:181
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
 msgstr "Kopier biletadresse"
 
-#: lib/other/siteinfo.cpp:176
+#: lib/other/siteinfo.cpp:182
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
 msgstr "Kopier biletnamn"
 
-#: lib/other/siteinfo.cpp:178
+#: lib/other/siteinfo.cpp:184
 msgctxt "SiteInfo|"
 msgid "Save Image to Disk"
 msgstr "Lagra bilete til disk"
 
-#: lib/other/siteinfo.cpp:190
+#: lib/other/siteinfo.cpp:196
 msgctxt "SiteInfo|"
 msgid "Copy Values"
 msgstr "Kopier verdiar"
 
-#: lib/other/siteinfo.cpp:191
+#: lib/other/siteinfo.cpp:197
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
 msgstr "Kopier element og verdiar"
 
-#: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
+#: lib/other/siteinfo.cpp:235 lib/other/siteinfo.cpp:254
 msgctxt "SiteInfo|"
 msgid "Error!"
 msgstr "Feil."
 
-#: lib/other/siteinfo.cpp:229
+#: lib/other/siteinfo.cpp:235
 msgctxt "SiteInfo|"
 msgid "This preview is not available!"
 msgstr "Denne førehandsvisinga er ikkje tilgjengeleg."
 
-#: lib/other/siteinfo.cpp:240
+#: lib/other/siteinfo.cpp:246
 msgctxt "SiteInfo|"
 msgid "Save image..."
 msgstr "Lagra bilete …"
 
-#: lib/other/siteinfo.cpp:248
+#: lib/other/siteinfo.cpp:254
 msgctxt "SiteInfo|"
 msgid "Cannot write to file!"
 msgstr "Klarte ikkje skriva til fila."
 
-#: lib/other/siteinfo.cpp:258
+#: lib/other/siteinfo.cpp:264
 msgctxt "SiteInfo|"
 msgid "Loading..."
 msgstr "Lastar …"
 
-#: lib/other/siteinfo.cpp:271
+#: lib/other/siteinfo.cpp:277
 msgctxt "SiteInfo|"
 msgid "Preview not available"
 msgstr "Førehandsvising er ikkje tilgjengeleg"
@@ -3162,52 +3162,89 @@ msgctxt "SiteInfo|"
 msgid "Media"
 msgstr "Medium"
 
+#: lib/other/siteinfo.ui:57
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "HTML5 Permissions"
+msgctxt "SiteInfo|"
+msgid "Permissions"
+msgstr "HTML5-løyve"
+
 # Page address
-#: lib/other/siteinfo.ui:84
+#: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
 msgid "Site address:"
 msgstr "Adresse til nettside:"
 
-#: lib/other/siteinfo.ui:113
+#: lib/other/siteinfo.ui:118
 msgctxt "SiteInfo|"
 msgid "Encoding:"
 msgstr "Teiknkoding:"
 
 # Melda inn; bør vera «webpage».
-#: lib/other/siteinfo.ui:132
+#: lib/other/siteinfo.ui:137
 msgctxt "SiteInfo|"
 msgid "Meta tags of site:"
 msgstr "Metaelement for nettsida:"
 
-#: lib/other/siteinfo.ui:149
+#: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
 msgid "Tag"
 msgstr "Element"
 
-#: lib/other/siteinfo.ui:154
+#: lib/other/siteinfo.ui:159
 msgctxt "SiteInfo|"
 msgid "Value"
 msgstr "Verdi"
 
-#: lib/other/siteinfo.ui:168
+#: lib/other/siteinfo.ui:173
 msgctxt "SiteInfo|"
 msgid "<b>Security information</b>"
 msgstr "<b>Tryggleiksinformasjon</b>"
 
-#: lib/other/siteinfo.ui:241
+#: lib/other/siteinfo.ui:246
 msgctxt "SiteInfo|"
 msgid "Image"
 msgstr "Bilete"
 
-#: lib/other/siteinfo.ui:246
+#: lib/other/siteinfo.ui:251
 msgctxt "SiteInfo|"
 msgid "Image address"
 msgstr "Biletadresse"
 
-#: lib/other/siteinfo.ui:271
+#: lib/other/siteinfo.ui:276
 msgctxt "SiteInfo|"
 msgid "<b>Preview</b>"
 msgstr "<b>Førehandsvising</b>"
+
+#: lib/other/siteinfopermissionitem.ui:32
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Default"
+msgstr "Standard"
+
+#: lib/other/siteinfopermissionitem.ui:62
+msgctxt "SiteInfoPermissionItem|"
+msgid "Ask"
+msgstr ""
+
+#: lib/other/siteinfopermissionitem.ui:69
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Allow"
+msgstr "Tillat"
+
+#: lib/other/siteinfopermissionitem.ui:76
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Deny"
+msgstr "Avvis"
 
 #: lib/other/siteinfowidget.cpp:42
 #, qt-format
@@ -3267,6 +3304,211 @@ msgstr "Registrer"
 msgctxt "SiteInfoWidget|"
 msgid "More..."
 msgstr "Meir …"
+
+#: lib/other/sitesettingsmanager.cpp:286
+#, fuzzy
+#| msgctxt "ZoomLabel|"
+#| msgid "Reset zoom level"
+msgctxt "SiteSettingsManager|"
+msgid "Zoom level"
+msgstr "Nullstill forstørring"
+
+#: lib/other/sitesettingsmanager.cpp:288
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Cookies"
+msgctxt "SiteSettingsManager|"
+msgid "Cookies"
+msgstr "Infokapslar"
+
+#: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
+#: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Unknown size"
+msgctxt "SiteSettingsManager|"
+msgid "Unknown"
+msgstr "Ukjend storleik"
+
+#: lib/other/sitesettingsmanager.cpp:299
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Notifications"
+msgctxt "SiteSettingsManager|"
+msgid "Notifications"
+msgstr "Varslingar"
+
+#: lib/other/sitesettingsmanager.cpp:301
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Geolocation"
+msgctxt "SiteSettingsManager|"
+msgid "Geolocation"
+msgstr "Geografisk plassering"
+
+#: lib/other/sitesettingsmanager.cpp:303
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Microphone"
+msgctxt "SiteSettingsManager|"
+msgid "Microphone"
+msgstr "Mikrofon"
+
+#: lib/other/sitesettingsmanager.cpp:305
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Camera"
+msgctxt "SiteSettingsManager|"
+msgid "Camera"
+msgstr "Kamera"
+
+#: lib/other/sitesettingsmanager.cpp:307
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Microphone and Camera"
+msgctxt "SiteSettingsManager|"
+msgid "Microphone and Camera"
+msgstr "Mikrofon og kamera"
+
+#: lib/other/sitesettingsmanager.cpp:309
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Hide Pointer"
+msgctxt "SiteSettingsManager|"
+msgid "Hide mouse pointer"
+msgstr "Gøym peikar"
+
+#: lib/other/sitesettingsmanager.cpp:311
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Enable screen capture"
+msgctxt "SiteSettingsManager|"
+msgid "Screen capture"
+msgstr "Bilete av skjermen"
+
+#: lib/other/sitesettingsmanager.cpp:313
+msgctxt "SiteSettingsManager|"
+msgid "Screen capture with audio"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:324
+#, fuzzy
+#| msgctxt "WebPage|"
+#| msgid "Reload page"
+msgctxt "SiteSettingsManager|"
+msgid "Autoload images"
+msgstr "Last sida på nytt"
+
+#: lib/other/sitesettingsmanager.cpp:327
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Allow JavaScript"
+msgctxt "SiteSettingsManager|"
+msgid "Enable JavaScript"
+msgstr "Tillat JavaScript"
+
+#: lib/other/sitesettingsmanager.cpp:329
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Open popup windows"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Open popup windows"
+msgstr "Opna sprettoppvindauge"
+
+#: lib/other/sitesettingsmanager.cpp:331
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Access clipboard"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Access clipboard"
+msgstr "Få tilgang til utklippstavla"
+
+#: lib/other/sitesettingsmanager.cpp:333
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Paste from clipboard"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Paste from clipboard"
+msgstr "Lima inn frå utklippstavla"
+
+#: lib/other/sitesettingsmanager.cpp:335
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Activate windows"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Activate windows"
+msgstr "Heva vindauge"
+
+#: lib/other/sitesettingsmanager.cpp:338
+#, fuzzy
+#| msgctxt "ClearPrivateData|"
+#| msgid "Local storage"
+msgctxt "SiteSettingsManager|"
+msgid "Local storage"
+msgstr "Lokal lagring"
+
+#: lib/other/sitesettingsmanager.cpp:340
+#, fuzzy
+#| msgctxt "MainMenu|"
+#| msgid "&FullScreen"
+msgctxt "SiteSettingsManager|"
+msgid "FullScreen support"
+msgstr "&Fullskjerm"
+
+#: lib/other/sitesettingsmanager.cpp:342
+msgctxt "SiteSettingsManager|"
+msgid "Run insecure content"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:344
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Disable automatic playing of videos"
+msgctxt "SiteSettingsManager|"
+msgid "Automatic playing of videos"
+msgstr "Slå av automatisk videoavspeling"
+
+#: lib/other/sitesettingsmanager.cpp:347
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Allow storing of cookies"
+msgctxt "SiteSettingsManager|"
+msgid "Allow reading from canvas"
+msgstr "Tillat lagring av infokapslar"
+
+#: lib/other/sitesettingsmanager.cpp:351
+msgctxt "SiteSettingsManager|"
+msgid "Force dark mode"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:364
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteSettingsManager|"
+msgid "Allow"
+msgstr "Tillat"
+
+#: lib/other/sitesettingsmanager.cpp:366
+msgctxt "SiteSettingsManager|"
+msgid "Ask"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:368
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteSettingsManager|"
+msgid "Deny"
+msgstr "Avvis"
+
+#: lib/other/sitesettingsmanager.cpp:370
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteSettingsManager|"
+msgid "Default"
+msgstr "Standard"
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
@@ -3696,88 +3938,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Er du sikker på at du vil fjerna «%1»?"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:613
+#: lib/preferences/preferences.cpp:154 lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Standard"
 
-#: lib/preferences/preferences.cpp:156
+#: lib/preferences/preferences.cpp:158
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Bruk som standard"
 
-#: lib/preferences/preferences.cpp:301
+#: lib/preferences/preferences.cpp:313
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1 %"
 
-#: lib/preferences/preferences.cpp:556
+#: lib/preferences/preferences.cpp:586
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Vel plassering for programfil …"
 
-#: lib/preferences/preferences.cpp:599
+#: lib/preferences/preferences.cpp:629
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Skjermvarsling"
 
-#: lib/preferences/preferences.cpp:600
+#: lib/preferences/preferences.cpp:630
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Dra varslinga til der du vil ha ho på skjermen."
 
-#: lib/preferences/preferences.cpp:649
+#: lib/preferences/preferences.cpp:679
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Vel nedlastingsmappe …"
 
-#: lib/preferences/preferences.cpp:663
+#: lib/preferences/preferences.cpp:693
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Vel plassering for stilsett …"
 
-#: lib/preferences/preferences.cpp:674
+#: lib/preferences/preferences.cpp:704
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Sletta"
 
-#: lib/preferences/preferences.cpp:782
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Vel mappe for mellomlager …"
 
-#: lib/preferences/preferences.cpp:813
+#: lib/preferences/preferences.cpp:837
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Ny profil"
 
-#: lib/preferences/preferences.cpp:813
+#: lib/preferences/preferences.cpp:837
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Skriv inn namn på den nye profilen:"
 
-#: lib/preferences/preferences.cpp:823 lib/preferences/preferences.cpp:828
+#: lib/preferences/preferences.cpp:847 lib/preferences/preferences.cpp:852
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Feil."
 
-#: lib/preferences/preferences.cpp:823
+#: lib/preferences/preferences.cpp:847
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Profilen finst frå før."
 
-#: lib/preferences/preferences.cpp:828
+#: lib/preferences/preferences.cpp:852
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Klarte ikkje oppretta profilmappa."
 
-#: lib/preferences/preferences.cpp:839
+#: lib/preferences/preferences.cpp:863
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Stadfesting"
 
-#: lib/preferences/preferences.cpp:840
+#: lib/preferences/preferences.cpp:864
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3787,12 +4029,12 @@ msgstr ""
 "Er du sikker på at du vil sletta profilen «%1»? Du kan ikkje angra denne "
 "slettinga."
 
-#: lib/preferences/preferences.cpp:855 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:879 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Merk: Du kan ikkje sletta profilen som du brukar."
 
-#: lib/preferences/preferences.cpp:1114
+#: lib/preferences/preferences.cpp:1154
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Vel farge"
@@ -3802,322 +4044,322 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Innstillingar"
 
-#: lib/preferences/preferences.ui:60
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2046
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Generelt"
 
-#: lib/preferences/preferences.ui:65
+#: lib/preferences/preferences.ui:72
 msgctxt "Preferences|"
 msgid "Appearance"
 msgstr "Utsjånad"
 
-#: lib/preferences/preferences.ui:70
+#: lib/preferences/preferences.ui:77
 msgctxt "Preferences|"
 msgid "Tabs"
 msgstr "Faner"
 
-#: lib/preferences/preferences.ui:75
+#: lib/preferences/preferences.ui:82
 msgctxt "Preferences|"
 msgid "Browsing"
 msgstr "Nettlesing"
 
-#: lib/preferences/preferences.ui:80
+#: lib/preferences/preferences.ui:87
 msgctxt "Preferences|"
 msgid "Fonts"
 msgstr "Skrifter"
 
-#: lib/preferences/preferences.ui:85
+#: lib/preferences/preferences.ui:92
 msgctxt "Preferences|"
 msgid "Keyboard Shortcuts"
 msgstr "Snøggtastar"
 
-#: lib/preferences/preferences.ui:90
+#: lib/preferences/preferences.ui:97
 msgctxt "Preferences|"
 msgid "Downloads"
 msgstr "Nedlastingar"
 
-#: lib/preferences/preferences.ui:95
+#: lib/preferences/preferences.ui:102
 msgctxt "Preferences|"
 msgid "Password Manager"
 msgstr "Passordhandsamar"
 
-#: lib/preferences/preferences.ui:100
+#: lib/preferences/preferences.ui:107
 msgctxt "Preferences|"
 msgid "Privacy"
 msgstr "Personvern"
 
-#: lib/preferences/preferences.ui:105
+#: lib/preferences/preferences.ui:112
 msgctxt "Preferences|"
 msgid "Notifications"
 msgstr "Varslingar"
 
-#: lib/preferences/preferences.ui:110
+#: lib/preferences/preferences.ui:117
 msgctxt "Preferences|"
 msgid "Extensions"
 msgstr "Utvidingar"
 
-#: lib/preferences/preferences.ui:115
+#: lib/preferences/preferences.ui:122
 msgctxt "Preferences|"
 msgid "Spell Check"
 msgstr "Stavekontroll"
 
-#: lib/preferences/preferences.ui:120
+#: lib/preferences/preferences.ui:127
 msgctxt "Preferences|"
 msgid "Other"
 msgstr "Anna"
 
-#: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
+#: lib/preferences/preferences.ui:210 lib/preferences/preferences.ui:357
 msgctxt "Preferences|"
 msgid "Use current"
 msgstr "Bruk gjeldande"
 
-#: lib/preferences/preferences.ui:243
+#: lib/preferences/preferences.ui:257
 msgctxt "Preferences|"
 msgid "Create New"
 msgstr "Lag ny"
 
-#: lib/preferences/preferences.ui:259
+#: lib/preferences/preferences.ui:273
 msgctxt "Preferences|"
 msgid "Delete"
 msgstr "Slett"
 
-#: lib/preferences/preferences.ui:285
+#: lib/preferences/preferences.ui:299
 msgctxt "Preferences|"
 msgid "<b>Launching</b>"
 msgstr "<b>Startar</b>"
 
-#: lib/preferences/preferences.ui:295
+#: lib/preferences/preferences.ui:309
 msgctxt "Preferences|"
 msgid "After launch: "
 msgstr "Ved oppstart:"
 
-#: lib/preferences/preferences.ui:303
+#: lib/preferences/preferences.ui:317
 msgctxt "Preferences|"
 msgid "Open blank page"
 msgstr "Opna tom side"
 
-#: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
+#: lib/preferences/preferences.ui:322 lib/preferences/preferences.ui:379
 msgctxt "Preferences|"
 msgid "Open homepage"
 msgstr "Opna heimeside"
 
-#: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
+#: lib/preferences/preferences.ui:327 lib/preferences/preferences.ui:384
 msgctxt "Preferences|"
 msgid "Open speed dial"
 msgstr "Opna snøggval"
 
-#: lib/preferences/preferences.ui:318
+#: lib/preferences/preferences.ui:332
 msgctxt "Preferences|"
 msgid "Restore session"
 msgstr "Gjenopprett økt"
 
-#: lib/preferences/preferences.ui:323
+#: lib/preferences/preferences.ui:337
 msgctxt "Preferences|"
 msgid "Select session"
 msgstr "Vel økt"
 
-#: lib/preferences/preferences.ui:331
+#: lib/preferences/preferences.ui:345
 msgctxt "Preferences|"
 msgid "Homepage: "
 msgstr "Heimeside: "
 
-#: lib/preferences/preferences.ui:352
+#: lib/preferences/preferences.ui:366
 msgctxt "Preferences|"
 msgid "On new tab: "
 msgstr "Ved ny fane: "
 
-#: lib/preferences/preferences.ui:360
+#: lib/preferences/preferences.ui:374
 msgctxt "Preferences|"
 msgid "Open blank tab"
 msgstr "Opna tom fane"
 
-#: lib/preferences/preferences.ui:375
+#: lib/preferences/preferences.ui:389
 msgctxt "Preferences|"
 msgid "Open other page..."
 msgstr "Opna anna side …"
 
-#: lib/preferences/preferences.ui:383
+#: lib/preferences/preferences.ui:397
 msgctxt "Preferences|"
 msgid "<b>Profiles</b>"
 msgstr "<b>Profilar</b>"
 
-#: lib/preferences/preferences.ui:390
+#: lib/preferences/preferences.ui:404
 msgctxt "Preferences|"
 msgid "Startup profile:"
 msgstr "Oppstartsprofil:"
 
-#: lib/preferences/preferences.ui:397
+#: lib/preferences/preferences.ui:411
 msgctxt "Preferences|"
 msgid "Check for updates on start"
 msgstr "Sjå etter oppdateringar ved oppstart"
 
-#: lib/preferences/preferences.ui:404
+#: lib/preferences/preferences.ui:418
 msgctxt "Preferences|"
 msgid "Active profile:"
 msgstr "Gjeldande profil:"
 
-#: lib/preferences/preferences.ui:418
+#: lib/preferences/preferences.ui:432
 msgctxt "Preferences|"
 msgid "Don't load tabs until selected"
 msgstr "Ikkje last faner før dei er valde"
 
-#: lib/preferences/preferences.ui:440
+#: lib/preferences/preferences.ui:454
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
 msgstr "Kontroller om Falkon er standardnettlesar ved oppstart"
 
-#: lib/preferences/preferences.ui:450
+#: lib/preferences/preferences.ui:464
 msgctxt "Preferences|"
 msgid "Check Now"
 msgstr "Kontroller no"
 
-#: lib/preferences/preferences.ui:480
+#: lib/preferences/preferences.ui:494
 msgctxt "Preferences|"
 msgid "Themes"
 msgstr "Tema"
 
-#: lib/preferences/preferences.ui:502
+#: lib/preferences/preferences.ui:516
 msgctxt "Preferences|"
 msgid "Advanced options"
 msgstr "Avanserte val"
 
-#: lib/preferences/preferences.ui:510
+#: lib/preferences/preferences.ui:524
 msgctxt "Preferences|"
 msgid "Show StatusBar on start"
 msgstr "Vis statuslinja ved oppstart"
 
-#: lib/preferences/preferences.ui:517
+#: lib/preferences/preferences.ui:531
 msgctxt "Preferences|"
 msgid "Show Bookmarks ToolBar on start"
 msgstr "Vis bokmerkelinja ved oppstart"
 
-#: lib/preferences/preferences.ui:524
+#: lib/preferences/preferences.ui:538
 msgctxt "Preferences|"
 msgid "Show Navigation ToolBar on start"
 msgstr "Vis navigasjonslinja ved oppstart"
 
-#: lib/preferences/preferences.ui:531
+#: lib/preferences/preferences.ui:545
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
 msgstr "Slå på straksvising av bokmerkelinja"
 
-#: lib/preferences/preferences.ui:553
+#: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>Nettlesarvindauge</b>"
 
-#: lib/preferences/preferences.ui:601
+#: lib/preferences/preferences.ui:615
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "Faneåtferd"
 
-#: lib/preferences/preferences.ui:607
+#: lib/preferences/preferences.ui:621
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Gøym faner når det berre er éi fane"
 
-#: lib/preferences/preferences.ui:614
+#: lib/preferences/preferences.ui:628
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "Gå til sist brukte fane ved lukking av gjeldande fane"
 
-#: lib/preferences/preferences.ui:621
+#: lib/preferences/preferences.ui:635
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Opna nye faner etter gjeldande fane"
 
-#: lib/preferences/preferences.ui:628
+#: lib/preferences/preferences.ui:642
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Opna nye tomme faner etter gjeldande fane"
 
-#: lib/preferences/preferences.ui:635
+#: lib/preferences/preferences.ui:649
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Opna sprettoppvindauge i faner"
 
-#: lib/preferences/preferences.ui:642
+#: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Byt alltid faner med musehjulet"
 
-#: lib/preferences/preferences.ui:649
+#: lib/preferences/preferences.ui:663
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Byt til nyleg opna fane automatisk"
 
-#: lib/preferences/preferences.ui:656
+#: lib/preferences/preferences.ui:670
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Ikkje lukk vindauget ved lukking av den siste fana"
 
-#: lib/preferences/preferences.ui:663
+#: lib/preferences/preferences.ui:677
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Be om stadfesting ved lukking av fleire faner"
 
-#: lib/preferences/preferences.ui:670
+#: lib/preferences/preferences.ui:684
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Vis knapp med lukka faner"
 
-#: lib/preferences/preferences.ui:679
+#: lib/preferences/preferences.ui:693
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Vis lukkeknapp på uverksame faner:"
 
-#: lib/preferences/preferences.ui:687
+#: lib/preferences/preferences.ui:701
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Automatisk"
 
-#: lib/preferences/preferences.ui:692
+#: lib/preferences/preferences.ui:706
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Alltid"
 
-#: lib/preferences/preferences.ui:697
+#: lib/preferences/preferences.ui:711
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Aldri"
 
-#: lib/preferences/preferences.ui:737
+#: lib/preferences/preferences.ui:751
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Åtferd for adresselinja"
 
-#: lib/preferences/preferences.ui:745
+#: lib/preferences/preferences.ui:759
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Føreslå når det vert skrive i adresselinja:"
 
-#: lib/preferences/preferences.ui:759
+#: lib/preferences/preferences.ui:773
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Logg og bokmerke"
 
-#: lib/preferences/preferences.ui:764
+#: lib/preferences/preferences.ui:778
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Logg"
 
-#: lib/preferences/preferences.ui:769
+#: lib/preferences/preferences.ui:783
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Bokmerke"
 
-#: lib/preferences/preferences.ui:774
+#: lib/preferences/preferences.ui:788
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Ingenting"
 
-#: lib/preferences/preferences.ui:800
+#: lib/preferences/preferences.ui:814
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Vis forslag i linja"
 
-#: lib/preferences/preferences.ui:807
+#: lib/preferences/preferences.ui:821
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4125,364 +4367,377 @@ msgstr ""
 "Hald inne «Shift» for å lasta inn sida i gjeldande fane (i staden for å byta "
 "til fana)"
 
-#: lib/preferences/preferences.ui:810
+#: lib/preferences/preferences.ui:824
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "Føreslå å byta fane viss nettadressa er lasta frå før"
 
-#: lib/preferences/preferences.ui:817
+#: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Vis alltid Gå-ikon"
 
-#: lib/preferences/preferences.ui:824
+#: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr ""
 
-#: lib/preferences/preferences.ui:831
+#: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Merk heile teksten ved å dobbeltklikka i adresselinja"
 
-#: lib/preferences/preferences.ui:838
+#: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Merk heile teksten ved å enkeltklikka i adresselinja"
 
-#: lib/preferences/preferences.ui:845
+#: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Slå på automatisk søk frå adresselinja"
 
-#: lib/preferences/preferences.ui:852
+#: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Søk med standard søkjemotor"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:873
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Vis søkjeforslag"
 
-#: lib/preferences/preferences.ui:866
+#: lib/preferences/preferences.ui:880
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr ""
 
-#: lib/preferences/preferences.ui:889
+#: lib/preferences/preferences.ui:903
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Vis lasteframgang i adresselinja"
 
-#: lib/preferences/preferences.ui:922
+#: lib/preferences/preferences.ui:936
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Fyll"
 
-#: lib/preferences/preferences.ui:927
+#: lib/preferences/preferences.ui:941
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Botn"
 
-#: lib/preferences/preferences.ui:932
+#: lib/preferences/preferences.ui:946
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Topp"
 
-#: lib/preferences/preferences.ui:940
+#: lib/preferences/preferences.ui:954
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Sjølvvald farge:"
 
-#: lib/preferences/preferences.ui:956
+#: lib/preferences/preferences.ui:970
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Vel farge"
 
-#: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
-#: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
-#: lib/preferences/preferences.ui:2749
+#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1307
+#: lib/preferences/preferences.ui:1841 lib/preferences/preferences.ui:1938
+#: lib/preferences/preferences.ui:2784
 msgctxt "Preferences|"
 msgid "..."
 msgstr "…"
 
-#: lib/preferences/preferences.ui:966
+#: lib/preferences/preferences.ui:980
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Tilbakestill"
 
-#: lib/preferences/preferences.ui:1017
+#: lib/preferences/preferences.ui:1031
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Vevoppsett"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "Slå på Pepper-programtillegg-API (PPAPI)"
 
-#: lib/preferences/preferences.ui:1032
+#: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Bruk innebygd PDF-visar (krev PPAPI)"
 
-#: lib/preferences/preferences.ui:1039
+#: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Tillat JavaScript"
 
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Ta med lenkjer i fokuskjede"
 
 #. try to detect possible XSS attacks when executing javascript
-#: lib/preferences/preferences.ui:1053
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
 msgstr "Slå på XSS-vern"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1060
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Skriv ut bakgrunnselement"
 
-#: lib/preferences/preferences.ui:1067
+#: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Animert rulling"
 
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Slå på romleg navigasjon"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Bruk lokale rullefelt"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Slå av automatisk videoavspeling"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Hindra at WebRTC lek lokal IP-adresse"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Slå på DNS-førehandshenting"
 
-#: lib/preferences/preferences.ui:1109
+#: lib/preferences/preferences.ui:1123
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Bilete av skjermen"
 
-#: lib/preferences/preferences.ui:1116
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Bruk maskinvareakselerasjon (krev omstart)"
 
+#: lib/preferences/preferences.ui:1137
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Allow storing of cookies"
+msgctxt "Preferences|"
+msgid "Allow reading from canvas"
+msgstr "Tillat lagring av infokapslar"
+
+#: lib/preferences/preferences.ui:1144
+msgctxt "Preferences|"
+msgid "Force dark mode"
+msgstr ""
+
 # Heng saman med neste tekst «lines on page».
-#: lib/preferences/preferences.ui:1133
+#: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Musehjul rullar med"
 
-#: lib/preferences/preferences.ui:1153
+#: lib/preferences/preferences.ui:1181
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "linjer"
 
-#: lib/preferences/preferences.ui:1164
+#: lib/preferences/preferences.ui:1192
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Standard sideforstørring:"
 
-#: lib/preferences/preferences.ui:1203
+#: lib/preferences/preferences.ui:1231
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Lokal lagring"
 
-#: lib/preferences/preferences.ui:1211
+#: lib/preferences/preferences.ui:1239
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Tillat lagring av nettverksmellomlager til disk"
 
-#: lib/preferences/preferences.ui:1234
+#: lib/preferences/preferences.ui:1262
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Slett mellomlager ved lukking"
 
-#: lib/preferences/preferences.ui:1241
+#: lib/preferences/preferences.ui:1269
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Høgst:"
 
 # Har sjekka at det er snakk om 1000² byte.
-#: lib/preferences/preferences.ui:1248
+#: lib/preferences/preferences.ui:1276
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1264
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Lagra mellomlager i:"
 
-#: lib/preferences/preferences.ui:1292
+#: lib/preferences/preferences.ui:1320
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Tillat lagring av logg"
 
-#: lib/preferences/preferences.ui:1299
+#: lib/preferences/preferences.ui:1327
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Slett logg ved avslutting"
 
-#: lib/preferences/preferences.ui:1322
+#: lib/preferences/preferences.ui:1350
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Tillat lokal lagring av HTML5-innhald"
 
-#: lib/preferences/preferences.ui:1329
+#: lib/preferences/preferences.ui:1357
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Slett lokalt lagra HTML5-innhald ved avslutting"
 
-#: lib/preferences/preferences.ui:1355
+#: lib/preferences/preferences.ui:1383
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Slett no"
 
-#: lib/preferences/preferences.ui:1394
+#: lib/preferences/preferences.ui:1422
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Oppsett av mellomtenar"
 
-#: lib/preferences/preferences.ui:1413
+#: lib/preferences/preferences.ui:1441
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Systemoppsett for mellomtenar"
 
-#: lib/preferences/preferences.ui:1436
+#: lib/preferences/preferences.ui:1464
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Manuelt oppsett"
 
-#: lib/preferences/preferences.ui:1446
+#: lib/preferences/preferences.ui:1474
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1451
+#: lib/preferences/preferences.ui:1479
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1462
+#: lib/preferences/preferences.ui:1490
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Port:"
 
-#: lib/preferences/preferences.ui:1483
+#: lib/preferences/preferences.ui:1511
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Brukarnamn:"
 
-#: lib/preferences/preferences.ui:1493
+#: lib/preferences/preferences.ui:1521
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Passord:"
 
-#: lib/preferences/preferences.ui:1522
+#: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Ingen mellomtenar"
 
-#: lib/preferences/preferences.ui:1537
+#: lib/preferences/preferences.ui:1565
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Skriftfamiliar</b>"
 
-#: lib/preferences/preferences.ui:1550
+#: lib/preferences/preferences.ui:1578
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Standard"
 
-#: lib/preferences/preferences.ui:1557
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Fast breidd"
 
-#: lib/preferences/preferences.ui:1567
+#: lib/preferences/preferences.ui:1595
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Antikva"
 
-#: lib/preferences/preferences.ui:1577
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Grotesk"
 
-#: lib/preferences/preferences.ui:1587
+#: lib/preferences/preferences.ui:1615
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Handskrift"
 
-#: lib/preferences/preferences.ui:1639
+#: lib/preferences/preferences.ui:1667
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasiskrift"
 
-#: lib/preferences/preferences.ui:1646
+#: lib/preferences/preferences.ui:1674
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Skriftstorleikar</b>"
 
-#: lib/preferences/preferences.ui:1655
+#: lib/preferences/preferences.ui:1683
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Fastbreiddskrift"
 
-#: lib/preferences/preferences.ui:1662
+#: lib/preferences/preferences.ui:1690
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Standard skriftstorleik"
 
-#: lib/preferences/preferences.ui:1689
+#: lib/preferences/preferences.ui:1717
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Minste skriftstorleik"
 
 # Forklaring på https://developer.apple.com/documentation/webkit/webpreferences/1536959-minimumlogicalfontsize?language=objc
-#: lib/preferences/preferences.ui:1696
+#: lib/preferences/preferences.ui:1724
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Minste logiske skriftstorleik"
 
-#: lib/preferences/preferences.ui:1729
+#: lib/preferences/preferences.ui:1757
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Snøggtastar</b>"
 
-#: lib/preferences/preferences.ui:1736
+#: lib/preferences/preferences.ui:1764
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Bruk «Alt» + fanenummeret for å byta til ei fane"
 
-#: lib/preferences/preferences.ui:1743
+#: lib/preferences/preferences.ui:1771
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Bruk «Ctrl» + snøggvalnummeret for å lasta eit snøggval"
 
-#: lib/preferences/preferences.ui:1750
+#: lib/preferences/preferences.ui:1778
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4491,12 +4746,12 @@ msgstr ""
 "Gjeldande snøggtastar:<br/><b>1</b> – førre fane<br/><b>2</b> – neste "
 "fane<br/><b>/</b> – søk på sida"
 
-#: lib/preferences/preferences.ui:1753
+#: lib/preferences/preferences.ui:1781
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Bruk enkelttastar som snøggtastar"
 
-#: lib/preferences/preferences.ui:1760
+#: lib/preferences/preferences.ui:1788
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4505,163 +4760,161 @@ msgstr ""
 "Viss det ikkje er kryssa av her, unngår du å brått avslutta programmet viss "
 "du bommar på snøggtasten «Ctrl + W»."
 
-#: lib/preferences/preferences.ui:1763
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Lukk programmet med «Ctrl + Q»"
 
-#: lib/preferences/preferences.ui:1787
+#: lib/preferences/preferences.ui:1815
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Nedlastingsmappe</b>"
 
-#: lib/preferences/preferences.ui:1794
+#: lib/preferences/preferences.ui:1822
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Spør alltid om nedlastingsmappe"
 
-#: lib/preferences/preferences.ui:1801
+#: lib/preferences/preferences.ui:1829
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Bruk vald plassering:"
 
-#: lib/preferences/preferences.ui:1851
+#: lib/preferences/preferences.ui:1879
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Nedlastingsval</b>"
 
-#: lib/preferences/preferences.ui:1858
+#: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Lukk nedlastingshandsamar når nedlasting er ferdig"
 
-#: lib/preferences/preferences.ui:1865
+#: lib/preferences/preferences.ui:1893
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Ekstern nedlastingshandsamar</b>"
 
-#: lib/preferences/preferences.ui:1872
+#: lib/preferences/preferences.ui:1900
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Bruk ekstern nedlastingshandsamar"
 
-#: lib/preferences/preferences.ui:1884
+#: lib/preferences/preferences.ui:1912
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Programfil:"
 
-#: lib/preferences/preferences.ui:1891
+#: lib/preferences/preferences.ui:1919
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Argument:"
 
-#: lib/preferences/preferences.ui:1898
+#: lib/preferences/preferences.ui:1926
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "La vera tom viss du er usikker"
 
-#: lib/preferences/preferences.ui:1919
+#: lib/preferences/preferences.ui:1947
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> vert erstatta med nedlastingsadressa"
 
-#: lib/preferences/preferences.ui:1945
+#: lib/preferences/preferences.ui:1973
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Autofyll-innstillingar</b>"
 
-#: lib/preferences/preferences.ui:1952
+#: lib/preferences/preferences.ui:1980
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Tillat lagring av passord for nettstadar"
 
-#: lib/preferences/preferences.ui:2003
+#: lib/preferences/preferences.ui:2031
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Fyll automatisk ut passord på nettsider"
 
-#: lib/preferences/preferences.ui:2014
-msgctxt "Preferences|"
-msgid "<b>Cookies</b>"
-msgstr "<b>Infokapslar</b>"
-
-#: lib/preferences/preferences.ui:2021
-msgctxt "Preferences|"
-msgid "<b>Other</b>"
-msgstr "<b>Anna</b>"
-
-#: lib/preferences/preferences.ui:2047
-msgctxt "Preferences|"
-msgid "JavaScript options"
-msgstr "JavaScript-innstillingar"
-
-#: lib/preferences/preferences.ui:2057
-msgctxt "Preferences|"
-msgid "<b>JavaScript</b>"
-msgstr "<b>JavaScript</b>"
-
-#: lib/preferences/preferences.ui:2070
-msgctxt "Preferences|"
-msgid "Cookies Manager"
-msgstr "Infokapsel-handsamar"
-
-#: lib/preferences/preferences.ui:2080
-msgctxt "Preferences|"
-msgid "Manage JavaScript privacy options"
-msgstr "Handsam JavaScript-personvern"
-
-#: lib/preferences/preferences.ui:2103
-msgctxt "Preferences|"
-msgid "Manage HTML5 permissions"
-msgstr "Handsam HTML5-løyve"
-
-#: lib/preferences/preferences.ui:2110
+#: lib/preferences/preferences.ui:2052
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Handsam infokapslar"
 
-#: lib/preferences/preferences.ui:2130
+#: lib/preferences/preferences.ui:2065
 msgctxt "Preferences|"
-msgid "<b>HTML5 Permissions</b>"
-msgstr "<b>HTML5-løyve</b>"
+msgid "Cookies Manager"
+msgstr "Infokapsel-handsamar"
 
-#: lib/preferences/preferences.ui:2143
+#: lib/preferences/preferences.ui:2088
 msgctxt "Preferences|"
-msgid "HTML5 Permissions"
-msgstr "HTML5-løyve"
+msgid "<b>JavaScript</b>"
+msgstr "<b>JavaScript</b>"
+
+#: lib/preferences/preferences.ui:2101
+msgctxt "Preferences|"
+msgid "JavaScript options"
+msgstr "JavaScript-innstillingar"
 
 # Undersøke kva ein «header» er.
-#: lib/preferences/preferences.ui:2150
+#: lib/preferences/preferences.ui:2108
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Send «ikkje spor»-melding til tenarar"
 
-#: lib/preferences/preferences.ui:2176
+#: lib/preferences/preferences.ui:2115
+msgctxt "Preferences|"
+msgid "<b>Cookies</b>"
+msgstr "<b>Infokapslar</b>"
+
+#: lib/preferences/preferences.ui:2141
+msgctxt "Preferences|"
+msgid "Manage JavaScript privacy options"
+msgstr "Handsam JavaScript-personvern"
+
+#: lib/preferences/preferences.ui:2148
+msgctxt "Preferences|"
+msgid "<b>Other</b>"
+msgstr "<b>Anna</b>"
+
+#: lib/preferences/preferences.ui:2169
+msgctxt "Preferences|"
+msgid "HTML5 Permissions"
+msgstr "HTML5-løyve"
+
+#: lib/preferences/preferences.ui:2179
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Settings"
+msgctxt "Preferences|"
+msgid "Site Settings"
+msgstr "Innstillingar"
+
+#: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Vis så lenge:"
 
-#: lib/preferences/preferences.ui:2189
+#: lib/preferences/preferences.ui:2224
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " sekund"
 
-#: lib/preferences/preferences.ui:2211
+#: lib/preferences/preferences.ui:2246
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Varslingar</b>"
 
-#: lib/preferences/preferences.ui:2234
+#: lib/preferences/preferences.ui:2269
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Bruk systemvarslingar (berre for Linux)"
 
-#: lib/preferences/preferences.ui:2241
+#: lib/preferences/preferences.ui:2276
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Ikkje bruk varslingar"
 
-#: lib/preferences/preferences.ui:2264
+#: lib/preferences/preferences.ui:2299
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -4670,18 +4923,18 @@ msgstr ""
 "<b>Merk: </b>Du kan endra plasseringa til skjermvarslingar ved å dra dei på "
 "skjermen."
 
-#: lib/preferences/preferences.ui:2290
+#: lib/preferences/preferences.ui:2325
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Bruk skjermvarslingar"
 
-#: lib/preferences/preferences.ui:2297
+#: lib/preferences/preferences.ui:2332
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Førehandsvis"
 
 # Greitt å skriva om til «hjelpesider»?
-#: lib/preferences/preferences.ui:2362
+#: lib/preferences/preferences.ui:2397
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4690,92 +4943,92 @@ msgstr ""
 "Sjå <a href=\"https://userbase.kde.org/Falkon#Spell_Check\">hjelpesidene</a> "
 "for meir informasjon om stavekontrollen."
 
-#: lib/preferences/preferences.ui:2404
+#: lib/preferences/preferences.ui:2439
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Val for stavekontroll</b>"
 
-#: lib/preferences/preferences.ui:2411
+#: lib/preferences/preferences.ui:2446
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Bruk stavekontroll"
 
-#: lib/preferences/preferences.ui:2418
+#: lib/preferences/preferences.ui:2453
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Ordlistemapper</b>"
 
-#: lib/preferences/preferences.ui:2469
+#: lib/preferences/preferences.ui:2504
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Fann ingen språk"
 
-#: lib/preferences/preferences.ui:2498
+#: lib/preferences/preferences.ui:2533
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Protokollhandsaming"
 
-#: lib/preferences/preferences.ui:2538
+#: lib/preferences/preferences.ui:2573
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Søkjemotor-handsamar"
 
-#: lib/preferences/preferences.ui:2560
+#: lib/preferences/preferences.ui:2595
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Brukartilpassa stilsett</b>"
 
-#: lib/preferences/preferences.ui:2567
+#: lib/preferences/preferences.ui:2602
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Handsam søkjemotorar</b>"
 
-#: lib/preferences/preferences.ui:2580
+#: lib/preferences/preferences.ui:2615
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2605
+#: lib/preferences/preferences.ui:2640
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Språk"
 
-#: lib/preferences/preferences.ui:2627
+#: lib/preferences/preferences.ui:2662
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Føretrekt språk for nettstadar</b>"
 
-#: lib/preferences/preferences.ui:2652
+#: lib/preferences/preferences.ui:2687
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2674
+#: lib/preferences/preferences.ui:2709
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Endra nettlesaridentifikasjon</b>"
 
-#: lib/preferences/preferences.ui:2699
+#: lib/preferences/preferences.ui:2734
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Brukaragent-handsamar"
 
-#: lib/preferences/preferences.ui:2721
+#: lib/preferences/preferences.ui:2756
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Stilsett som skal brukast på nettstadar:"
 
-#: lib/preferences/preferences.ui:2758
+#: lib/preferences/preferences.ui:2793
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Handsam protokollhandsaming</b>"
 
-#: lib/preferences/preferences.ui:2765
+#: lib/preferences/preferences.ui:2800
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Sertifikathandsaming</b>"
 
-#: lib/preferences/preferences.ui:2816
+#: lib/preferences/preferences.ui:2851
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr ""
@@ -4834,6 +5087,75 @@ msgstr ""
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
 msgstr ""
+
+#: lib/preferences/sitesettingsattributesitem.ui:39
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Browsing"
+msgctxt "SiteSettingsAttributesItem|"
+msgid "Browse"
+msgstr "Nettlesing"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:14
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "HTML5 Permissions"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Site Permissions"
+msgstr "HTML5-løyve"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:30
+#, fuzzy
+#| msgctxt "ProtocolHandlerDialog|"
+#| msgid "Site"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Site"
+msgstr "Nettstad"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:35
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Behaviour"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Behaviour"
+msgstr "Åtferd"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:45
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Ask"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:52
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Allow"
+msgstr "Tillat"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:59
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Deny"
+msgstr "Avvis"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:66
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Default"
+msgstr "Standard"
+
+#: lib/preferences/sitesettingshtml5item.ui:42
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Browsing"
+msgctxt "SiteSettingsHtml5Item|"
+msgid "Browse"
+msgstr "Nettlesing"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -5426,81 +5748,6 @@ msgctxt "CertificateInfoWidget|"
 msgid "Expires On:"
 msgstr "Utgår:"
 
-#: lib/tools/html5permissions/html5permissionsdialog.cpp:63
-msgctxt "HTML5PermissionsDialog|"
-msgid "Allow"
-msgstr "Tillat"
-
-#: lib/tools/html5permissions/html5permissionsdialog.cpp:72
-msgctxt "HTML5PermissionsDialog|"
-msgid "Deny"
-msgstr "Avvis"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:14
-msgctxt "HTML5PermissionsDialog|"
-msgid "HTML5 Permissions"
-msgstr "HTML5-løyve"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:35
-msgctxt "HTML5PermissionsDialog|"
-msgid "Remove"
-msgstr "Fjern"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:64
-msgctxt "HTML5PermissionsDialog|"
-msgid "Site"
-msgstr "Nettstad"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:69
-msgctxt "HTML5PermissionsDialog|"
-msgid "Behaviour"
-msgstr "Åtferd"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:79
-msgctxt "HTML5PermissionsDialog|"
-msgid "Permission for:"
-msgstr "Løyve for:"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:87
-msgctxt "HTML5PermissionsDialog|"
-msgid "Notifications"
-msgstr "Varslingar"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:92
-msgctxt "HTML5PermissionsDialog|"
-msgid "Geolocation"
-msgstr "Geografisk plassering"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:97
-msgctxt "HTML5PermissionsDialog|"
-msgid "Microphone"
-msgstr "Mikrofon"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:102
-msgctxt "HTML5PermissionsDialog|"
-msgid "Camera"
-msgstr "Kamera"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:107
-msgctxt "HTML5PermissionsDialog|"
-msgid "Microphone and Camera"
-msgstr "Mikrofon og kamera"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:112
-msgctxt "HTML5PermissionsDialog|"
-msgid "Hide Pointer"
-msgstr "Gøym peikar"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:117
-msgctxt "HTML5PermissionsDialog|"
-msgid "Display Capture"
-msgstr "Skjermopptak"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:122
-msgctxt "HTML5PermissionsDialog|"
-msgid "Display and Audio Capture"
-msgstr "Skjerm- og lydopptak"
-
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
 msgid "this site"
@@ -5619,7 +5866,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Hindra sida i å oppretta fleire dialogvindauge"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:333
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5629,53 +5876,53 @@ msgstr ""
 "Falkon støttar ikkje <b>%1:</b>-lenkjer. Den aktuelle lenkja er<ul><li>%2</"
 "li></ul>Ønskjer du å opna ho med eit systemprogram?"
 
-#: lib/webengine/webpage.cpp:337
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Hugs valet for denne protokollen"
 
-#: lib/webengine/webpage.cpp:338
+#: lib/webengine/webpage.cpp:339
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Førespurnad om ekstern protokoll"
 
-#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:419 lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Klarte ikkje lasta side"
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Noko gjekk gale ved lasting av sida."
 
-#: lib/webengine/webpage.cpp:421
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr "Prøv å lukka faner eller lasta inn sida på nytt for å frigjera minne."
 
-#: lib/webengine/webpage.cpp:422
+#: lib/webengine/webpage.cpp:423
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Last sida på nytt"
 
-#: lib/webengine/webpage.cpp:483
+#: lib/webengine/webpage.cpp:511
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Vel fil …"
 
-#: lib/webengine/webpage.cpp:487
+#: lib/webengine/webpage.cpp:515
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Vel filer …"
 
-#: lib/webengine/webpage.cpp:623
+#: lib/webengine/webpage.cpp:651
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript-åtvaring"
 
-#: lib/webengine/webpage.cpp:632
+#: lib/webengine/webpage.cpp:660
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Hindra sida i å oppretta fleire dialogvindauge"
@@ -5965,3 +6212,39 @@ msgstr "Gransk element"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 – Falkon"
+
+#~ msgctxt "Preferences|"
+#~ msgid "Manage HTML5 permissions"
+#~ msgstr "Handsam HTML5-løyve"
+
+#~ msgctxt "Preferences|"
+#~ msgid "<b>HTML5 Permissions</b>"
+#~ msgstr "<b>HTML5-løyve</b>"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "HTML5 Permissions"
+#~ msgstr "HTML5-løyve"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Remove"
+#~ msgstr "Fjern"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Site"
+#~ msgstr "Nettstad"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Permission for:"
+#~ msgstr "Løyve for:"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Notifications"
+#~ msgstr "Varslingar"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Display Capture"
+#~ msgstr "Skjermopptak"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Display and Audio Capture"
+#~ msgstr "Skjerm- og lydopptak"

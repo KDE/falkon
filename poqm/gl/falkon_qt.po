@@ -350,39 +350,39 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Aínda hai separadores abertos"
 
-#: lib/app/mainapplication.cpp:1093
+#: lib/app/mainapplication.cpp:1110
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
 msgstr "Falkon non é o seu navegador predeterminado. Quere que o sexa?"
 
-#: lib/app/mainapplication.cpp:1094
+#: lib/app/mainapplication.cpp:1111
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Comprobalo sempre que se inicie Falkon."
 
-#: lib/app/mainapplication.cpp:1096
+#: lib/app/mainapplication.cpp:1113
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Navegador predeterminado"
 
-#: lib/app/mainapplication.cpp:1228
+#: lib/app/mainapplication.cpp:1245
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Abrir un novo separador"
 
-#: lib/app/mainapplication.cpp:1229
+#: lib/app/mainapplication.cpp:1246
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Abrir unha xanela nova"
 
-#: lib/app/mainapplication.cpp:1230
+#: lib/app/mainapplication.cpp:1247
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Abrir unha nova xanela privada"
 
-#: lib/app/mainapplication.cpp:1245
+#: lib/app/mainapplication.cpp:1262
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1311,19 +1311,19 @@ msgctxt "CookieManager|"
 msgid "Search"
 msgstr "Buscar"
 
-#: lib/cookies/cookiemanager.cpp:105
+#: lib/cookies/cookiemanager.cpp:133
 msgctxt "CookieManager|"
 msgid "Confirmation"
 msgstr "Confirmación"
 
-#: lib/cookies/cookiemanager.cpp:106
+#: lib/cookies/cookiemanager.cpp:134
 msgctxt "CookieManager|"
 msgid "Are you sure you want to delete all cookies on your computer?"
 msgstr "Seguro que quere eliminar todas as cookies do computador?"
 
-#: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
-#: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
-#: lib/cookies/cookiemanager.cpp:155 lib/cookies/cookiemanager.cpp:156
+#: lib/cookies/cookiemanager.cpp:179 lib/cookies/cookiemanager.cpp:180
+#: lib/cookies/cookiemanager.cpp:181 lib/cookies/cookiemanager.cpp:182
+#: lib/cookies/cookiemanager.cpp:183 lib/cookies/cookiemanager.cpp:184
 #: lib/cookies/cookiemanager.ui:154 lib/cookies/cookiemanager.ui:164
 #: lib/cookies/cookiemanager.ui:174 lib/cookies/cookiemanager.ui:184
 #: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
@@ -1331,72 +1331,72 @@ msgctxt "CookieManager|"
 msgid "<cookie not selected>"
 msgstr "<cookie non seleccionada>"
 
-#: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
+#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:196
 #: lib/cookies/cookiemanager.ui:245
 msgctxt "CookieManager|"
 msgid "Remove cookies"
 msgstr "Retirar as cookies"
 
-#: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
-#: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
-#: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
+#: lib/cookies/cookiemanager.cpp:189 lib/cookies/cookiemanager.cpp:190
+#: lib/cookies/cookiemanager.cpp:191 lib/cookies/cookiemanager.cpp:192
+#: lib/cookies/cookiemanager.cpp:193 lib/cookies/cookiemanager.cpp:194
 msgctxt "CookieManager|"
 msgid "<multiple cookies selected>"
 msgstr "<seleccionáronse varias cookies>"
 
-#: lib/cookies/cookiemanager.cpp:178
+#: lib/cookies/cookiemanager.cpp:206
 msgctxt "CookieManager|"
 msgid "Secure only"
 msgstr "Só seguras"
 
-#: lib/cookies/cookiemanager.cpp:178
+#: lib/cookies/cookiemanager.cpp:206
 msgctxt "CookieManager|"
 msgid "All connections"
 msgstr "Todas as conexións"
 
-#: lib/cookies/cookiemanager.cpp:179
+#: lib/cookies/cookiemanager.cpp:207
 msgctxt "CookieManager|"
 msgid "Session cookie"
 msgstr "Cookie de sesión"
 
-#: lib/cookies/cookiemanager.cpp:181
+#: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
 msgid "Remove cookie"
 msgstr "Retirar a cookie"
 
-#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.cpp:214 lib/cookies/cookiemanager.cpp:241
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
 msgstr "Servidor:"
 
-#: lib/cookies/cookiemanager.cpp:186
+#: lib/cookies/cookiemanager.cpp:214
 msgctxt "CookieManager|"
 msgid "Add to whitelist"
 msgstr "Engadir á lista branca"
 
-#: lib/cookies/cookiemanager.cpp:193
+#: lib/cookies/cookiemanager.cpp:221
 msgctxt "CookieManager|"
 msgid "Already blacklisted!"
 msgstr "Xa está na lista negra!"
 
-#: lib/cookies/cookiemanager.cpp:193
+#: lib/cookies/cookiemanager.cpp:221
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
 msgstr "O servidor «%1» xa está na lista negra, retíreo antes."
 
-#: lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.cpp:241
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
 msgstr "Engadir á lista negra"
 
-#: lib/cookies/cookiemanager.cpp:220
+#: lib/cookies/cookiemanager.cpp:252
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
 msgstr "Xa está na lista branca!"
 
-#: lib/cookies/cookiemanager.cpp:220
+#: lib/cookies/cookiemanager.cpp:252
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
@@ -3072,67 +3072,67 @@ msgstr ""
 "Hai algúns problemas. Reinstale Falkon.\n"
 "Pode que inicialo de novo con permisos de administración o solucione! ;)"
 
-#: lib/other/siteinfo.cpp:68
+#: lib/other/siteinfo.cpp:70
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
 msgstr "<b>A conexión está cifrada.</b>"
 
-#: lib/other/siteinfo.cpp:70
+#: lib/other/siteinfo.cpp:72
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
 msgstr "<b>A conexión non está cifrada.</b>"
 
-#: lib/other/siteinfo.cpp:175
+#: lib/other/siteinfo.cpp:181
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
 msgstr "Copiar o lugar onde está a imaxe"
 
-#: lib/other/siteinfo.cpp:176
+#: lib/other/siteinfo.cpp:182
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
 msgstr "Copiar o nome da imaxe"
 
-#: lib/other/siteinfo.cpp:178
+#: lib/other/siteinfo.cpp:184
 msgctxt "SiteInfo|"
 msgid "Save Image to Disk"
 msgstr "Gardar a imaxe no disco"
 
-#: lib/other/siteinfo.cpp:190
+#: lib/other/siteinfo.cpp:196
 msgctxt "SiteInfo|"
 msgid "Copy Values"
 msgstr "Copiar os valores"
 
-#: lib/other/siteinfo.cpp:191
+#: lib/other/siteinfo.cpp:197
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
 msgstr "Copiar as etiquetas e os valores"
 
-#: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
+#: lib/other/siteinfo.cpp:235 lib/other/siteinfo.cpp:254
 msgctxt "SiteInfo|"
 msgid "Error!"
 msgstr "Erro!"
 
-#: lib/other/siteinfo.cpp:229
+#: lib/other/siteinfo.cpp:235
 msgctxt "SiteInfo|"
 msgid "This preview is not available!"
 msgstr "A vista previa non está dispoñíbel!"
 
-#: lib/other/siteinfo.cpp:240
+#: lib/other/siteinfo.cpp:246
 msgctxt "SiteInfo|"
 msgid "Save image..."
 msgstr "Gardar a imaxe…"
 
-#: lib/other/siteinfo.cpp:248
+#: lib/other/siteinfo.cpp:254
 msgctxt "SiteInfo|"
 msgid "Cannot write to file!"
 msgstr "Non é posíbel escribir no ficheiro!"
 
-#: lib/other/siteinfo.cpp:258
+#: lib/other/siteinfo.cpp:264
 msgctxt "SiteInfo|"
 msgid "Loading..."
 msgstr "Cargando…"
 
-#: lib/other/siteinfo.cpp:271
+#: lib/other/siteinfo.cpp:277
 msgctxt "SiteInfo|"
 msgid "Preview not available"
 msgstr "Non hai vista previa dispoñíbel"
@@ -3152,50 +3152,87 @@ msgctxt "SiteInfo|"
 msgid "Media"
 msgstr "Recursos"
 
-#: lib/other/siteinfo.ui:84
+#: lib/other/siteinfo.ui:57
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "HTML5 Permissions"
+msgctxt "SiteInfo|"
+msgid "Permissions"
+msgstr "Permisos de HTML5"
+
+#: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
 msgid "Site address:"
 msgstr "Enderezo do sitio:"
 
-#: lib/other/siteinfo.ui:113
+#: lib/other/siteinfo.ui:118
 msgctxt "SiteInfo|"
 msgid "Encoding:"
 msgstr "Codificación:"
 
-#: lib/other/siteinfo.ui:132
+#: lib/other/siteinfo.ui:137
 msgctxt "SiteInfo|"
 msgid "Meta tags of site:"
 msgstr "Metaetiquetas do sitio:"
 
-#: lib/other/siteinfo.ui:149
+#: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
 msgid "Tag"
 msgstr "Etiqueta"
 
-#: lib/other/siteinfo.ui:154
+#: lib/other/siteinfo.ui:159
 msgctxt "SiteInfo|"
 msgid "Value"
 msgstr "Valor"
 
-#: lib/other/siteinfo.ui:168
+#: lib/other/siteinfo.ui:173
 msgctxt "SiteInfo|"
 msgid "<b>Security information</b>"
 msgstr "<b>Información de seguridade</b>"
 
-#: lib/other/siteinfo.ui:241
+#: lib/other/siteinfo.ui:246
 msgctxt "SiteInfo|"
 msgid "Image"
 msgstr "Imaxe"
 
-#: lib/other/siteinfo.ui:246
+#: lib/other/siteinfo.ui:251
 msgctxt "SiteInfo|"
 msgid "Image address"
 msgstr "Enderezo da imaxe"
 
-#: lib/other/siteinfo.ui:271
+#: lib/other/siteinfo.ui:276
 msgctxt "SiteInfo|"
 msgid "<b>Preview</b>"
 msgstr "<b>Vista previa</b>"
+
+#: lib/other/siteinfopermissionitem.ui:32
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Default"
+msgstr "Predeterminado"
+
+#: lib/other/siteinfopermissionitem.ui:62
+msgctxt "SiteInfoPermissionItem|"
+msgid "Ask"
+msgstr ""
+
+#: lib/other/siteinfopermissionitem.ui:69
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Allow"
+msgstr "Permitir"
+
+#: lib/other/siteinfopermissionitem.ui:76
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Deny"
+msgstr "Denegar"
 
 #: lib/other/siteinfowidget.cpp:42
 #, qt-format
@@ -3254,6 +3291,211 @@ msgstr "Rexistrar"
 msgctxt "SiteInfoWidget|"
 msgid "More..."
 msgstr "Máis…"
+
+#: lib/other/sitesettingsmanager.cpp:286
+#, fuzzy
+#| msgctxt "ZoomLabel|"
+#| msgid "Reset zoom level"
+msgctxt "SiteSettingsManager|"
+msgid "Zoom level"
+msgstr "Restablecer o nivel de ampliación"
+
+#: lib/other/sitesettingsmanager.cpp:288
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Cookies"
+msgctxt "SiteSettingsManager|"
+msgid "Cookies"
+msgstr "Cookies"
+
+#: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
+#: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Unknown size"
+msgctxt "SiteSettingsManager|"
+msgid "Unknown"
+msgstr "Tamaño descoñecido"
+
+#: lib/other/sitesettingsmanager.cpp:299
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Notifications"
+msgctxt "SiteSettingsManager|"
+msgid "Notifications"
+msgstr "Notificacións"
+
+#: lib/other/sitesettingsmanager.cpp:301
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Geolocation"
+msgctxt "SiteSettingsManager|"
+msgid "Geolocation"
+msgstr "Xeolocalización"
+
+#: lib/other/sitesettingsmanager.cpp:303
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Microphone"
+msgctxt "SiteSettingsManager|"
+msgid "Microphone"
+msgstr "Micrófono"
+
+#: lib/other/sitesettingsmanager.cpp:305
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Camera"
+msgctxt "SiteSettingsManager|"
+msgid "Camera"
+msgstr "Cámara"
+
+#: lib/other/sitesettingsmanager.cpp:307
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Microphone and Camera"
+msgctxt "SiteSettingsManager|"
+msgid "Microphone and Camera"
+msgstr "Micrófono e cámara"
+
+#: lib/other/sitesettingsmanager.cpp:309
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Hide Pointer"
+msgctxt "SiteSettingsManager|"
+msgid "Hide mouse pointer"
+msgstr "Agochar o punteiro"
+
+#: lib/other/sitesettingsmanager.cpp:311
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Enable screen capture"
+msgctxt "SiteSettingsManager|"
+msgid "Screen capture"
+msgstr "Activar a captura de pantalla"
+
+#: lib/other/sitesettingsmanager.cpp:313
+msgctxt "SiteSettingsManager|"
+msgid "Screen capture with audio"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:324
+#, fuzzy
+#| msgctxt "WebPage|"
+#| msgid "Reload page"
+msgctxt "SiteSettingsManager|"
+msgid "Autoload images"
+msgstr "Cargar de novo a páxina"
+
+#: lib/other/sitesettingsmanager.cpp:327
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Allow JavaScript"
+msgctxt "SiteSettingsManager|"
+msgid "Enable JavaScript"
+msgstr "Permitir JavaScript"
+
+#: lib/other/sitesettingsmanager.cpp:329
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Open popup windows"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Open popup windows"
+msgstr "Abrir xanelas emerxentes"
+
+#: lib/other/sitesettingsmanager.cpp:331
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Access clipboard"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Access clipboard"
+msgstr "Acceder ao portapapeis"
+
+#: lib/other/sitesettingsmanager.cpp:333
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Paste from clipboard"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Paste from clipboard"
+msgstr "Pegar desde o portapapeis"
+
+#: lib/other/sitesettingsmanager.cpp:335
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Activate windows"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Activate windows"
+msgstr "Activar xanelas"
+
+#: lib/other/sitesettingsmanager.cpp:338
+#, fuzzy
+#| msgctxt "ClearPrivateData|"
+#| msgid "Local storage"
+msgctxt "SiteSettingsManager|"
+msgid "Local storage"
+msgstr "Almacenamento local"
+
+#: lib/other/sitesettingsmanager.cpp:340
+#, fuzzy
+#| msgctxt "MainMenu|"
+#| msgid "&FullScreen"
+msgctxt "SiteSettingsManager|"
+msgid "FullScreen support"
+msgstr "&Pantalla completa"
+
+#: lib/other/sitesettingsmanager.cpp:342
+msgctxt "SiteSettingsManager|"
+msgid "Run insecure content"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:344
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Disable automatic playing of videos"
+msgctxt "SiteSettingsManager|"
+msgid "Automatic playing of videos"
+msgstr "Desactivar a reprodución automática de vídeos"
+
+#: lib/other/sitesettingsmanager.cpp:347
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Allow storing of cookies"
+msgctxt "SiteSettingsManager|"
+msgid "Allow reading from canvas"
+msgstr "Permitir almacenar cookies"
+
+#: lib/other/sitesettingsmanager.cpp:351
+msgctxt "SiteSettingsManager|"
+msgid "Force dark mode"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:364
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteSettingsManager|"
+msgid "Allow"
+msgstr "Permitir"
+
+#: lib/other/sitesettingsmanager.cpp:366
+msgctxt "SiteSettingsManager|"
+msgid "Ask"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:368
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteSettingsManager|"
+msgid "Deny"
+msgstr "Denegar"
+
+#: lib/other/sitesettingsmanager.cpp:370
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteSettingsManager|"
+msgid "Default"
+msgstr "Predeterminado"
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
@@ -3682,88 +3924,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Seguro que quere retirar «%1»?"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:613
+#: lib/preferences/preferences.cpp:154 lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Predeterminado"
 
-#: lib/preferences/preferences.cpp:156
+#: lib/preferences/preferences.cpp:158
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Facer predeterminado"
 
-#: lib/preferences/preferences.cpp:301
+#: lib/preferences/preferences.cpp:313
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:556
+#: lib/preferences/preferences.cpp:586
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Escoller o lugar do executábel…"
 
-#: lib/preferences/preferences.cpp:599
+#: lib/preferences/preferences.cpp:629
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Notificación de OSD"
 
-#: lib/preferences/preferences.cpp:600
+#: lib/preferences/preferences.cpp:630
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Arrástreo pola pantalla para colocalo onde queira."
 
-#: lib/preferences/preferences.cpp:649
+#: lib/preferences/preferences.cpp:679
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Escoller o lugar de descarga…"
 
-#: lib/preferences/preferences.cpp:663
+#: lib/preferences/preferences.cpp:693
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Escoller o lugar da folla de estilos…"
 
-#: lib/preferences/preferences.cpp:674
+#: lib/preferences/preferences.cpp:704
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Eliminada"
 
-#: lib/preferences/preferences.cpp:782
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Escoller a ruta da caché…"
 
-#: lib/preferences/preferences.cpp:813
+#: lib/preferences/preferences.cpp:837
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Novo perfil"
 
-#: lib/preferences/preferences.cpp:813
+#: lib/preferences/preferences.cpp:837
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Escriba o nome do novo perfil:"
 
-#: lib/preferences/preferences.cpp:823 lib/preferences/preferences.cpp:828
+#: lib/preferences/preferences.cpp:847 lib/preferences/preferences.cpp:852
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Erro!"
 
-#: lib/preferences/preferences.cpp:823
+#: lib/preferences/preferences.cpp:847
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Ese perfil xa existe!"
 
-#: lib/preferences/preferences.cpp:828
+#: lib/preferences/preferences.cpp:852
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Non é posíbel crear o cartafol do perfil!"
 
-#: lib/preferences/preferences.cpp:839
+#: lib/preferences/preferences.cpp:863
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Confirmación"
 
-#: lib/preferences/preferences.cpp:840
+#: lib/preferences/preferences.cpp:864
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3773,12 +4015,12 @@ msgstr ""
 "Seguro que quere eliminar permanentemente o perfil «%1»? Esta acción non "
 "pode desfacerse!"
 
-#: lib/preferences/preferences.cpp:855 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:879 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Nota: Non pode eliminar o perfil activo."
 
-#: lib/preferences/preferences.cpp:1114
+#: lib/preferences/preferences.cpp:1154
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Escoller unha cor"
@@ -3788,322 +4030,322 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: lib/preferences/preferences.ui:60
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2046
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Xeral"
 
-#: lib/preferences/preferences.ui:65
+#: lib/preferences/preferences.ui:72
 msgctxt "Preferences|"
 msgid "Appearance"
 msgstr "Aparencia"
 
-#: lib/preferences/preferences.ui:70
+#: lib/preferences/preferences.ui:77
 msgctxt "Preferences|"
 msgid "Tabs"
 msgstr "Separadores"
 
-#: lib/preferences/preferences.ui:75
+#: lib/preferences/preferences.ui:82
 msgctxt "Preferences|"
 msgid "Browsing"
 msgstr "Navegación"
 
-#: lib/preferences/preferences.ui:80
+#: lib/preferences/preferences.ui:87
 msgctxt "Preferences|"
 msgid "Fonts"
 msgstr "Fontes"
 
-#: lib/preferences/preferences.ui:85
+#: lib/preferences/preferences.ui:92
 msgctxt "Preferences|"
 msgid "Keyboard Shortcuts"
 msgstr "Atallos de teclado"
 
-#: lib/preferences/preferences.ui:90
+#: lib/preferences/preferences.ui:97
 msgctxt "Preferences|"
 msgid "Downloads"
 msgstr "Descargas"
 
-#: lib/preferences/preferences.ui:95
+#: lib/preferences/preferences.ui:102
 msgctxt "Preferences|"
 msgid "Password Manager"
 msgstr "Xestor de contrasinais"
 
-#: lib/preferences/preferences.ui:100
+#: lib/preferences/preferences.ui:107
 msgctxt "Preferences|"
 msgid "Privacy"
 msgstr "Privacidade"
 
-#: lib/preferences/preferences.ui:105
+#: lib/preferences/preferences.ui:112
 msgctxt "Preferences|"
 msgid "Notifications"
 msgstr "Notificacións"
 
-#: lib/preferences/preferences.ui:110
+#: lib/preferences/preferences.ui:117
 msgctxt "Preferences|"
 msgid "Extensions"
 msgstr "Extensións"
 
-#: lib/preferences/preferences.ui:115
+#: lib/preferences/preferences.ui:122
 msgctxt "Preferences|"
 msgid "Spell Check"
 msgstr "Comprobación ortográfica"
 
-#: lib/preferences/preferences.ui:120
+#: lib/preferences/preferences.ui:127
 msgctxt "Preferences|"
 msgid "Other"
 msgstr "Outros"
 
-#: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
+#: lib/preferences/preferences.ui:210 lib/preferences/preferences.ui:357
 msgctxt "Preferences|"
 msgid "Use current"
 msgstr "Usar o actual"
 
-#: lib/preferences/preferences.ui:243
+#: lib/preferences/preferences.ui:257
 msgctxt "Preferences|"
 msgid "Create New"
 msgstr "Crear un novo"
 
-#: lib/preferences/preferences.ui:259
+#: lib/preferences/preferences.ui:273
 msgctxt "Preferences|"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: lib/preferences/preferences.ui:285
+#: lib/preferences/preferences.ui:299
 msgctxt "Preferences|"
 msgid "<b>Launching</b>"
 msgstr "<b>Iniciando</b>"
 
-#: lib/preferences/preferences.ui:295
+#: lib/preferences/preferences.ui:309
 msgctxt "Preferences|"
 msgid "After launch: "
 msgstr "Tras iniciar: "
 
-#: lib/preferences/preferences.ui:303
+#: lib/preferences/preferences.ui:317
 msgctxt "Preferences|"
 msgid "Open blank page"
 msgstr "Abrir unha páxina en branco"
 
-#: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
+#: lib/preferences/preferences.ui:322 lib/preferences/preferences.ui:379
 msgctxt "Preferences|"
 msgid "Open homepage"
 msgstr "Abrir a páxina principal"
 
-#: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
+#: lib/preferences/preferences.ui:327 lib/preferences/preferences.ui:384
 msgctxt "Preferences|"
 msgid "Open speed dial"
 msgstr "Abrir a marcación rápida"
 
-#: lib/preferences/preferences.ui:318
+#: lib/preferences/preferences.ui:332
 msgctxt "Preferences|"
 msgid "Restore session"
 msgstr "Restaurar a sesión"
 
-#: lib/preferences/preferences.ui:323
+#: lib/preferences/preferences.ui:337
 msgctxt "Preferences|"
 msgid "Select session"
 msgstr "Seleccione unha sesión"
 
-#: lib/preferences/preferences.ui:331
+#: lib/preferences/preferences.ui:345
 msgctxt "Preferences|"
 msgid "Homepage: "
 msgstr "Páxina web: "
 
-#: lib/preferences/preferences.ui:352
+#: lib/preferences/preferences.ui:366
 msgctxt "Preferences|"
 msgid "On new tab: "
 msgstr "Nun novo separador: "
 
-#: lib/preferences/preferences.ui:360
+#: lib/preferences/preferences.ui:374
 msgctxt "Preferences|"
 msgid "Open blank tab"
 msgstr "Abrir un separador en branco"
 
-#: lib/preferences/preferences.ui:375
+#: lib/preferences/preferences.ui:389
 msgctxt "Preferences|"
 msgid "Open other page..."
 msgstr "Abrir outra páxina…"
 
-#: lib/preferences/preferences.ui:383
+#: lib/preferences/preferences.ui:397
 msgctxt "Preferences|"
 msgid "<b>Profiles</b>"
 msgstr "<b>Perfís</b>"
 
-#: lib/preferences/preferences.ui:390
+#: lib/preferences/preferences.ui:404
 msgctxt "Preferences|"
 msgid "Startup profile:"
 msgstr "Perfil de inicio:"
 
-#: lib/preferences/preferences.ui:397
+#: lib/preferences/preferences.ui:411
 msgctxt "Preferences|"
 msgid "Check for updates on start"
 msgstr "Comprobar se hai actualizacións no inicio"
 
-#: lib/preferences/preferences.ui:404
+#: lib/preferences/preferences.ui:418
 msgctxt "Preferences|"
 msgid "Active profile:"
 msgstr "Perfil activo:"
 
-#: lib/preferences/preferences.ui:418
+#: lib/preferences/preferences.ui:432
 msgctxt "Preferences|"
 msgid "Don't load tabs until selected"
 msgstr "Non cargar os separadores ata seleccionalos"
 
-#: lib/preferences/preferences.ui:440
+#: lib/preferences/preferences.ui:454
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
 msgstr "Marque para ver se Falkon é o navegador predeterminado no inicio"
 
-#: lib/preferences/preferences.ui:450
+#: lib/preferences/preferences.ui:464
 msgctxt "Preferences|"
 msgid "Check Now"
 msgstr "Comprobar agora"
 
-#: lib/preferences/preferences.ui:480
+#: lib/preferences/preferences.ui:494
 msgctxt "Preferences|"
 msgid "Themes"
 msgstr "Temas"
 
-#: lib/preferences/preferences.ui:502
+#: lib/preferences/preferences.ui:516
 msgctxt "Preferences|"
 msgid "Advanced options"
 msgstr "Opcións avanzadas"
 
-#: lib/preferences/preferences.ui:510
+#: lib/preferences/preferences.ui:524
 msgctxt "Preferences|"
 msgid "Show StatusBar on start"
 msgstr "Amosar a barra de estado no inicio"
 
-#: lib/preferences/preferences.ui:517
+#: lib/preferences/preferences.ui:531
 msgctxt "Preferences|"
 msgid "Show Bookmarks ToolBar on start"
 msgstr "Amosar a barra de ferramentas de marcadores no inicio"
 
-#: lib/preferences/preferences.ui:524
+#: lib/preferences/preferences.ui:538
 msgctxt "Preferences|"
 msgid "Show Navigation ToolBar on start"
 msgstr "Amosar a barra de ferramentas de navegación no inicio"
 
-#: lib/preferences/preferences.ui:531
+#: lib/preferences/preferences.ui:545
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
 msgstr "Activar a barra de ferramentas de marcadores instantánea"
 
-#: lib/preferences/preferences.ui:553
+#: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>Xanela do navegador</b>"
 
-#: lib/preferences/preferences.ui:601
+#: lib/preferences/preferences.ui:615
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "Comportamento dos separadores"
 
-#: lib/preferences/preferences.ui:607
+#: lib/preferences/preferences.ui:621
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Agochar os separadores cando só haxa un"
 
-#: lib/preferences/preferences.ui:614
+#: lib/preferences/preferences.ui:628
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "Activar o último separador ao pechar o separador activo"
 
-#: lib/preferences/preferences.ui:621
+#: lib/preferences/preferences.ui:635
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Abrir os novos separadores despois do separador activo"
 
-#: lib/preferences/preferences.ui:628
+#: lib/preferences/preferences.ui:642
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Abrir os novos separadores baleiros despois do separador activo"
 
-#: lib/preferences/preferences.ui:635
+#: lib/preferences/preferences.ui:649
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Abrir as xanelas emerxentes en separadores"
 
-#: lib/preferences/preferences.ui:642
+#: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Sempre cambiar entre os separadores coa roda do rato"
 
-#: lib/preferences/preferences.ui:649
+#: lib/preferences/preferences.ui:663
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Cambiar automaticamente aos novos separadores ao abrilos"
 
-#: lib/preferences/preferences.ui:656
+#: lib/preferences/preferences.ui:670
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Non pechar a xanela tras pechar o último separador"
 
-#: lib/preferences/preferences.ui:663
+#: lib/preferences/preferences.ui:677
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Preguntar antes de pechar varios separadores"
 
-#: lib/preferences/preferences.ui:670
+#: lib/preferences/preferences.ui:684
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Amosar o botón de separadores pechados"
 
-#: lib/preferences/preferences.ui:679
+#: lib/preferences/preferences.ui:693
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Amosar os botóns de pechar nos separadores inactivos:"
 
-#: lib/preferences/preferences.ui:687
+#: lib/preferences/preferences.ui:701
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Automático"
 
-#: lib/preferences/preferences.ui:692
+#: lib/preferences/preferences.ui:706
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Sempre"
 
-#: lib/preferences/preferences.ui:697
+#: lib/preferences/preferences.ui:711
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Nunca"
 
-#: lib/preferences/preferences.ui:737
+#: lib/preferences/preferences.ui:751
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Comportamento da barra de enderezo"
 
-#: lib/preferences/preferences.ui:745
+#: lib/preferences/preferences.ui:759
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Suxerir ao escribir na barra de enderezo:"
 
-#: lib/preferences/preferences.ui:759
+#: lib/preferences/preferences.ui:773
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Historial e marcadores"
 
-#: lib/preferences/preferences.ui:764
+#: lib/preferences/preferences.ui:778
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Historial"
 
-#: lib/preferences/preferences.ui:769
+#: lib/preferences/preferences.ui:783
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: lib/preferences/preferences.ui:774
+#: lib/preferences/preferences.ui:788
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Nada"
 
-#: lib/preferences/preferences.ui:800
+#: lib/preferences/preferences.ui:814
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Activas as suxestións entre liñas"
 
-#: lib/preferences/preferences.ui:807
+#: lib/preferences/preferences.ui:821
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4111,361 +4353,374 @@ msgstr ""
 "Prema «Maiús» para non cambiar de separador senón cargar o URL no separador "
 "actual"
 
-#: lib/preferences/preferences.ui:810
+#: lib/preferences/preferences.ui:824
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "Propoñer cambiar de separador se o URL completado xa está cargado"
 
-#: lib/preferences/preferences.ui:817
+#: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Amosar sempre a icona de ir"
 
-#: lib/preferences/preferences.ui:824
+#: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Amosar a etiqueta de ampliación"
 
-#: lib/preferences/preferences.ui:831
+#: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Seleccionar todo o texto facendo clic duplo na barra de enderezo"
 
-#: lib/preferences/preferences.ui:838
+#: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Seleccionar todo o texto facendo clic na barra de enderezo"
 
-#: lib/preferences/preferences.ui:845
+#: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Activar a busca automática desde a barra de enderezo"
 
-#: lib/preferences/preferences.ui:852
+#: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Buscar co motor predeterminado"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:873
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Amosar suxestións de busca"
 
-#: lib/preferences/preferences.ui:866
+#: lib/preferences/preferences.ui:880
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr "Expandir a suxestión emerxente á anchura da xanela."
 
-#: lib/preferences/preferences.ui:889
+#: lib/preferences/preferences.ui:903
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Amosar o progreso de carga na barra de enderezo"
 
-#: lib/preferences/preferences.ui:922
+#: lib/preferences/preferences.ui:936
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Encher"
 
-#: lib/preferences/preferences.ui:927
+#: lib/preferences/preferences.ui:941
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Abaixo"
 
-#: lib/preferences/preferences.ui:932
+#: lib/preferences/preferences.ui:946
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Arriba"
 
-#: lib/preferences/preferences.ui:940
+#: lib/preferences/preferences.ui:954
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Cor personalizada:"
 
-#: lib/preferences/preferences.ui:956
+#: lib/preferences/preferences.ui:970
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Seleccionar a cor"
 
-#: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
-#: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
-#: lib/preferences/preferences.ui:2749
+#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1307
+#: lib/preferences/preferences.ui:1841 lib/preferences/preferences.ui:1938
+#: lib/preferences/preferences.ui:2784
 msgctxt "Preferences|"
 msgid "..."
 msgstr "…"
 
-#: lib/preferences/preferences.ui:966
+#: lib/preferences/preferences.ui:980
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Restabelecer"
 
-#: lib/preferences/preferences.ui:1017
+#: lib/preferences/preferences.ui:1031
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Configuración web"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "Activar a API do complemento Pepper (PPAPI)"
 
-#: lib/preferences/preferences.ui:1032
+#: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Usar o visor de PDF de serie (require PPAPI)"
 
-#: lib/preferences/preferences.ui:1039
+#: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Permitir JavaScript"
 
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Incluír ligazóns na cadea de foco"
 
 #. try to detect possible XSS attacks when executing javascript
-#: lib/preferences/preferences.ui:1053
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
 msgstr "Activar a revisión de XSS"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1060
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Imprimir o fondo do elemento"
 
-#: lib/preferences/preferences.ui:1067
+#: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Desprazamento animado"
 
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Permitir navegación espacial"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Usar barras de desprazamento nativas"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Desactivar a reprodución automática de vídeos"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Impedir que WebRTC filtre o enderezo IP local"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Activar a obtención previa de DNS"
 
-#: lib/preferences/preferences.ui:1109
+#: lib/preferences/preferences.ui:1123
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Activar a captura de pantalla"
 
-#: lib/preferences/preferences.ui:1116
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Usar aceleración por hardware (require reiniciar)"
 
-#: lib/preferences/preferences.ui:1133
+#: lib/preferences/preferences.ui:1137
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Allow storing of cookies"
+msgctxt "Preferences|"
+msgid "Allow reading from canvas"
+msgstr "Permitir almacenar cookies"
+
+#: lib/preferences/preferences.ui:1144
+msgctxt "Preferences|"
+msgid "Force dark mode"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Desprazamento da roda do rato"
 
-#: lib/preferences/preferences.ui:1153
+#: lib/preferences/preferences.ui:1181
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "liñas na páxina"
 
-#: lib/preferences/preferences.ui:1164
+#: lib/preferences/preferences.ui:1192
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Ampliación predeterminada nas páxinas: "
 
-#: lib/preferences/preferences.ui:1203
+#: lib/preferences/preferences.ui:1231
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Almacenamento local."
 
-#: lib/preferences/preferences.ui:1211
+#: lib/preferences/preferences.ui:1239
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Permitir almacenar a caché da rede no disco"
 
-#: lib/preferences/preferences.ui:1234
+#: lib/preferences/preferences.ui:1262
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Eliminar a caché ao pechar"
 
-#: lib/preferences/preferences.ui:1241
+#: lib/preferences/preferences.ui:1269
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Máximo:"
 
-#: lib/preferences/preferences.ui:1248
+#: lib/preferences/preferences.ui:1276
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1264
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Almacenar a caché en:"
 
-#: lib/preferences/preferences.ui:1292
+#: lib/preferences/preferences.ui:1320
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Permitir gardar o historial"
 
-#: lib/preferences/preferences.ui:1299
+#: lib/preferences/preferences.ui:1327
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Eliminar o historial ao pechar"
 
-#: lib/preferences/preferences.ui:1322
+#: lib/preferences/preferences.ui:1350
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Permitir almacenamento local de contido web de HTML5"
 
-#: lib/preferences/preferences.ui:1329
+#: lib/preferences/preferences.ui:1357
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Eliminar o contido web de HTML5 almacenado localmente ao pechar"
 
-#: lib/preferences/preferences.ui:1355
+#: lib/preferences/preferences.ui:1383
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Eliminar agora"
 
-#: lib/preferences/preferences.ui:1394
+#: lib/preferences/preferences.ui:1422
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Configuración do mandatario"
 
-#: lib/preferences/preferences.ui:1413
+#: lib/preferences/preferences.ui:1441
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Configuración do mandatario do sistema"
 
-#: lib/preferences/preferences.ui:1436
+#: lib/preferences/preferences.ui:1464
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Configuración manual"
 
-#: lib/preferences/preferences.ui:1446
+#: lib/preferences/preferences.ui:1474
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1451
+#: lib/preferences/preferences.ui:1479
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1462
+#: lib/preferences/preferences.ui:1490
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Porto:"
 
-#: lib/preferences/preferences.ui:1483
+#: lib/preferences/preferences.ui:1511
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Nome de usuaria:"
 
-#: lib/preferences/preferences.ui:1493
+#: lib/preferences/preferences.ui:1521
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Contrasinal:"
 
-#: lib/preferences/preferences.ui:1522
+#: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Sen mandatario"
 
-#: lib/preferences/preferences.ui:1537
+#: lib/preferences/preferences.ui:1565
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Familias de tipos de letras</b>"
 
-#: lib/preferences/preferences.ui:1550
+#: lib/preferences/preferences.ui:1578
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Estándar"
 
-#: lib/preferences/preferences.ui:1557
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Fixa"
 
-#: lib/preferences/preferences.ui:1567
+#: lib/preferences/preferences.ui:1595
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1577
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: lib/preferences/preferences.ui:1587
+#: lib/preferences/preferences.ui:1615
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Cursiva"
 
-#: lib/preferences/preferences.ui:1639
+#: lib/preferences/preferences.ui:1667
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantástica"
 
-#: lib/preferences/preferences.ui:1646
+#: lib/preferences/preferences.ui:1674
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Tamaños de tipos de letra</b>"
 
-#: lib/preferences/preferences.ui:1655
+#: lib/preferences/preferences.ui:1683
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Tamaño de letra fixo"
 
-#: lib/preferences/preferences.ui:1662
+#: lib/preferences/preferences.ui:1690
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Tamaño de letra predeterminado"
 
-#: lib/preferences/preferences.ui:1689
+#: lib/preferences/preferences.ui:1717
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Tamaño mínimo de letra"
 
-#: lib/preferences/preferences.ui:1696
+#: lib/preferences/preferences.ui:1724
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Tamaño mínimo lóxico de letra"
 
-#: lib/preferences/preferences.ui:1729
+#: lib/preferences/preferences.ui:1757
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Atallos</b>"
 
-#: lib/preferences/preferences.ui:1736
+#: lib/preferences/preferences.ui:1764
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Cambiar o separador con Alt + número de separador"
 
-#: lib/preferences/preferences.ui:1743
+#: lib/preferences/preferences.ui:1771
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Cargar as marcacións rápidas con Ctrl + número de marcación rápida"
 
-#: lib/preferences/preferences.ui:1750
+#: lib/preferences/preferences.ui:1778
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4474,12 +4729,12 @@ msgstr ""
 "Atallos existentes:<br/><b>1</b>: separador anterior<br/><b>2</b>: seguinte "
 "separador<br/><b>/</b>: buscar na páxina"
 
-#: lib/preferences/preferences.ui:1753
+#: lib/preferences/preferences.ui:1781
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Usar atallos dunha única tecla"
 
-#: lib/preferences/preferences.ui:1760
+#: lib/preferences/preferences.ui:1788
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4488,162 +4743,160 @@ msgstr ""
 "Se non se marca, evita a saída accidental da aplicación se pretendía usarse "
 "o atallo Ctrl+W."
 
-#: lib/preferences/preferences.ui:1763
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Pechar a aplicación con Ctrl+Q"
 
-#: lib/preferences/preferences.ui:1787
+#: lib/preferences/preferences.ui:1815
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Lugar de descarga</b>"
 
-#: lib/preferences/preferences.ui:1794
+#: lib/preferences/preferences.ui:1822
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Preguntar sempre onde descargar"
 
-#: lib/preferences/preferences.ui:1801
+#: lib/preferences/preferences.ui:1829
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Usar o lugar definido: "
 
-#: lib/preferences/preferences.ui:1851
+#: lib/preferences/preferences.ui:1879
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Opcións da descarga</b>"
 
-#: lib/preferences/preferences.ui:1858
+#: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Pechar o xestor de descargas cando a descarga remate"
 
-#: lib/preferences/preferences.ui:1865
+#: lib/preferences/preferences.ui:1893
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Xestor de descargas externo</b>"
 
-#: lib/preferences/preferences.ui:1872
+#: lib/preferences/preferences.ui:1900
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Usar un xestor de descargas externo"
 
-#: lib/preferences/preferences.ui:1884
+#: lib/preferences/preferences.ui:1912
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Executábel:"
 
-#: lib/preferences/preferences.ui:1891
+#: lib/preferences/preferences.ui:1919
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Argumentos:"
 
-#: lib/preferences/preferences.ui:1898
+#: lib/preferences/preferences.ui:1926
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Déixeo baleiro ante a dúbida"
 
-#: lib/preferences/preferences.ui:1919
+#: lib/preferences/preferences.ui:1947
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> substituirase polo URL para descargar"
 
-#: lib/preferences/preferences.ui:1945
+#: lib/preferences/preferences.ui:1973
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Opcións de completar automaticamente</b>"
 
-#: lib/preferences/preferences.ui:1952
+#: lib/preferences/preferences.ui:1980
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Permitir gardar contrasinais de sitios"
 
-#: lib/preferences/preferences.ui:2003
+#: lib/preferences/preferences.ui:2031
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Completar automaticamente os contrasinais nos sitios"
 
-#: lib/preferences/preferences.ui:2014
-msgctxt "Preferences|"
-msgid "<b>Cookies</b>"
-msgstr "<b>Cookies</b>"
-
-#: lib/preferences/preferences.ui:2021
-msgctxt "Preferences|"
-msgid "<b>Other</b>"
-msgstr "<b>Outras</b>"
-
-#: lib/preferences/preferences.ui:2047
-msgctxt "Preferences|"
-msgid "JavaScript options"
-msgstr "Opcións de JavaScript"
-
-#: lib/preferences/preferences.ui:2057
-msgctxt "Preferences|"
-msgid "<b>JavaScript</b>"
-msgstr "<b>JavaScript</b>"
-
-#: lib/preferences/preferences.ui:2070
-msgctxt "Preferences|"
-msgid "Cookies Manager"
-msgstr "Xestor de cookies"
-
-#: lib/preferences/preferences.ui:2080
-msgctxt "Preferences|"
-msgid "Manage JavaScript privacy options"
-msgstr "Xestionar as opcións de protección da privacidade de JavaScript"
-
-#: lib/preferences/preferences.ui:2103
-msgctxt "Preferences|"
-msgid "Manage HTML5 permissions"
-msgstr "Xestionar os permisos de HTML5"
-
-#: lib/preferences/preferences.ui:2110
+#: lib/preferences/preferences.ui:2052
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Xestionar as cookies"
 
-#: lib/preferences/preferences.ui:2130
+#: lib/preferences/preferences.ui:2065
 msgctxt "Preferences|"
-msgid "<b>HTML5 Permissions</b>"
-msgstr "<b>Permisos de HTML5</b>"
+msgid "Cookies Manager"
+msgstr "Xestor de cookies"
 
-#: lib/preferences/preferences.ui:2143
+#: lib/preferences/preferences.ui:2088
 msgctxt "Preferences|"
-msgid "HTML5 Permissions"
-msgstr "Permisos de HTML5"
+msgid "<b>JavaScript</b>"
+msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2150
+#: lib/preferences/preferences.ui:2101
+msgctxt "Preferences|"
+msgid "JavaScript options"
+msgstr "Opcións de JavaScript"
+
+#: lib/preferences/preferences.ui:2108
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Enviar a cabeceira de non seguimento aos servidores"
 
-#: lib/preferences/preferences.ui:2176
+#: lib/preferences/preferences.ui:2115
+msgctxt "Preferences|"
+msgid "<b>Cookies</b>"
+msgstr "<b>Cookies</b>"
+
+#: lib/preferences/preferences.ui:2141
+msgctxt "Preferences|"
+msgid "Manage JavaScript privacy options"
+msgstr "Xestionar as opcións de protección da privacidade de JavaScript"
+
+#: lib/preferences/preferences.ui:2148
+msgctxt "Preferences|"
+msgid "<b>Other</b>"
+msgstr "<b>Outras</b>"
+
+#: lib/preferences/preferences.ui:2169
+msgctxt "Preferences|"
+msgid "HTML5 Permissions"
+msgstr "Permisos de HTML5"
+
+#: lib/preferences/preferences.ui:2179
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Settings"
+msgctxt "Preferences|"
+msgid "Site Settings"
+msgstr "Configuración"
+
+#: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Caducidade:"
 
-#: lib/preferences/preferences.ui:2189
+#: lib/preferences/preferences.ui:2224
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " segundos"
 
-#: lib/preferences/preferences.ui:2211
+#: lib/preferences/preferences.ui:2246
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Notificacións</b>"
 
-#: lib/preferences/preferences.ui:2234
+#: lib/preferences/preferences.ui:2269
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Usar notificacións nativas do sistema (só para Linux)"
 
-#: lib/preferences/preferences.ui:2241
+#: lib/preferences/preferences.ui:2276
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Non usar notificacións"
 
-#: lib/preferences/preferences.ui:2264
+#: lib/preferences/preferences.ui:2299
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -4652,17 +4905,17 @@ msgstr ""
 "<b>Nota:</b> Pode cambiar a posición de notificación OSD arrastrándoa na "
 "pantalla."
 
-#: lib/preferences/preferences.ui:2290
+#: lib/preferences/preferences.ui:2325
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Usar notificacións OSD"
 
-#: lib/preferences/preferences.ui:2297
+#: lib/preferences/preferences.ui:2332
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Vista previa"
 
-#: lib/preferences/preferences.ui:2362
+#: lib/preferences/preferences.ui:2397
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4671,92 +4924,92 @@ msgstr ""
 "Para máis información sobre comprobación ortográfica, consulte o <a href="
 "\"https://userbase.kde.org/Falkon#Spell_Check\">wiki</a> (en inglés)."
 
-#: lib/preferences/preferences.ui:2404
+#: lib/preferences/preferences.ui:2439
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Opcións de comprobación ortográfica</b>"
 
-#: lib/preferences/preferences.ui:2411
+#: lib/preferences/preferences.ui:2446
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Activar a comprobación da ortografía"
 
-#: lib/preferences/preferences.ui:2418
+#: lib/preferences/preferences.ui:2453
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Cartafoles de dicionarios</b>"
 
-#: lib/preferences/preferences.ui:2469
+#: lib/preferences/preferences.ui:2504
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Non se atoparon idiomas"
 
-#: lib/preferences/preferences.ui:2498
+#: lib/preferences/preferences.ui:2533
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Xestor de xestores de protocolo"
 
-#: lib/preferences/preferences.ui:2538
+#: lib/preferences/preferences.ui:2573
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Xestor de motores de busca"
 
-#: lib/preferences/preferences.ui:2560
+#: lib/preferences/preferences.ui:2595
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Folla de estilos da usuaria</b>"
 
-#: lib/preferences/preferences.ui:2567
+#: lib/preferences/preferences.ui:2602
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Xestionar os motores de busca</b>"
 
-#: lib/preferences/preferences.ui:2580
+#: lib/preferences/preferences.ui:2615
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "Xestionar os esquemas personalizados"
 
-#: lib/preferences/preferences.ui:2605
+#: lib/preferences/preferences.ui:2640
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Idiomas"
 
-#: lib/preferences/preferences.ui:2627
+#: lib/preferences/preferences.ui:2662
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Idioma preferido para os sitios web</b>"
 
-#: lib/preferences/preferences.ui:2652
+#: lib/preferences/preferences.ui:2687
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Xestor de excepcións de certificados"
 
-#: lib/preferences/preferences.ui:2674
+#: lib/preferences/preferences.ui:2709
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Cambiar a identificación do navegador</b>"
 
-#: lib/preferences/preferences.ui:2699
+#: lib/preferences/preferences.ui:2734
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Xestor de axentes de usuaria"
 
-#: lib/preferences/preferences.ui:2721
+#: lib/preferences/preferences.ui:2756
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Folla de estilos cargada automaticamente con todos os sitios web: "
 
-#: lib/preferences/preferences.ui:2758
+#: lib/preferences/preferences.ui:2793
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Xestionar os xestores de protocolo</b>"
 
-#: lib/preferences/preferences.ui:2765
+#: lib/preferences/preferences.ui:2800
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Xestor de certificados</b>"
 
-#: lib/preferences/preferences.ui:2816
+#: lib/preferences/preferences.ui:2851
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Xestor de esquemas personalizados"
@@ -4815,6 +5068,75 @@ msgstr "Esquemas bloqueados"
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
 msgstr "Os cambios xurdirán efecto tras reiniciar Falkon."
+
+#: lib/preferences/sitesettingsattributesitem.ui:39
+#, fuzzy
+#| msgctxt "PageScreen|"
+#| msgid "Browse..."
+msgctxt "SiteSettingsAttributesItem|"
+msgid "Browse"
+msgstr "Examinar…"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:14
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "HTML5 Permissions"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Site Permissions"
+msgstr "Permisos de HTML5"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:30
+#, fuzzy
+#| msgctxt "ProtocolHandlerDialog|"
+#| msgid "Site"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Site"
+msgstr "Sitio"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:35
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Behaviour"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Behaviour"
+msgstr "Comportamento"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:45
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Ask"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:52
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Allow"
+msgstr "Permitir"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:59
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Deny"
+msgstr "Denegar"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:66
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Default"
+msgstr "Predeterminado"
+
+#: lib/preferences/sitesettingshtml5item.ui:42
+#, fuzzy
+#| msgctxt "PageScreen|"
+#| msgid "Browse..."
+msgctxt "SiteSettingsHtml5Item|"
+msgid "Browse"
+msgstr "Examinar…"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -5407,81 +5729,6 @@ msgctxt "CertificateInfoWidget|"
 msgid "Expires On:"
 msgstr "Caduca o:"
 
-#: lib/tools/html5permissions/html5permissionsdialog.cpp:63
-msgctxt "HTML5PermissionsDialog|"
-msgid "Allow"
-msgstr "Permitir"
-
-#: lib/tools/html5permissions/html5permissionsdialog.cpp:72
-msgctxt "HTML5PermissionsDialog|"
-msgid "Deny"
-msgstr "Denegar"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:14
-msgctxt "HTML5PermissionsDialog|"
-msgid "HTML5 Permissions"
-msgstr "Permisos de HTML5"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:35
-msgctxt "HTML5PermissionsDialog|"
-msgid "Remove"
-msgstr "Retirar"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:64
-msgctxt "HTML5PermissionsDialog|"
-msgid "Site"
-msgstr "Sitio"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:69
-msgctxt "HTML5PermissionsDialog|"
-msgid "Behaviour"
-msgstr "Comportamento"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:79
-msgctxt "HTML5PermissionsDialog|"
-msgid "Permission for:"
-msgstr "Permisos para:"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:87
-msgctxt "HTML5PermissionsDialog|"
-msgid "Notifications"
-msgstr "Notificacións"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:92
-msgctxt "HTML5PermissionsDialog|"
-msgid "Geolocation"
-msgstr "Xeolocalización"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:97
-msgctxt "HTML5PermissionsDialog|"
-msgid "Microphone"
-msgstr "Micrófono"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:102
-msgctxt "HTML5PermissionsDialog|"
-msgid "Camera"
-msgstr "Cámara"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:107
-msgctxt "HTML5PermissionsDialog|"
-msgid "Microphone and Camera"
-msgstr "Micrófono e cámara"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:112
-msgctxt "HTML5PermissionsDialog|"
-msgid "Hide Pointer"
-msgstr "Agochar o punteiro"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:117
-msgctxt "HTML5PermissionsDialog|"
-msgid "Display Capture"
-msgstr "Captura de pantalla"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:122
-msgctxt "HTML5PermissionsDialog|"
-msgid "Display and Audio Capture"
-msgstr "Captura de pantalla e son"
-
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
 msgid "this site"
@@ -5599,7 +5846,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Impedir a esta páxina crear diálogos adicionais"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:333
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5610,27 +5857,27 @@ msgstr ""
 "<ul><li>%2</li></ul>Quere que Falkon intente abrir a ligazón nunha "
 "aplicación do sistema?"
 
-#: lib/webengine/webpage.cpp:337
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Lembrar a miña escolla para este protocolo"
 
-#: lib/webengine/webpage.cpp:338
+#: lib/webengine/webpage.cpp:339
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Solicitude de protocolo externo"
 
-#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:419 lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "A carga da páxina fallou"
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Algo foi mal ao cargar a páxina."
 
-#: lib/webengine/webpage.cpp:421
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -5638,27 +5885,27 @@ msgstr ""
 "Probe a cargar de novo a páxina ou pechar algúns separadores para aumentar a "
 "memoria dispoñíbel."
 
-#: lib/webengine/webpage.cpp:422
+#: lib/webengine/webpage.cpp:423
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Cargar de novo a páxina"
 
-#: lib/webengine/webpage.cpp:483
+#: lib/webengine/webpage.cpp:511
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Escoller un ficheiro…"
 
-#: lib/webengine/webpage.cpp:487
+#: lib/webengine/webpage.cpp:515
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Escoller ficheiros…"
 
-#: lib/webengine/webpage.cpp:623
+#: lib/webengine/webpage.cpp:651
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Alerta de JavaScript"
 
-#: lib/webengine/webpage.cpp:632
+#: lib/webengine/webpage.cpp:660
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Impedir a esta páxina crear diálogos adicionais"
@@ -5947,6 +6194,42 @@ msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 — Falkon"
 
+#~ msgctxt "Preferences|"
+#~ msgid "Manage HTML5 permissions"
+#~ msgstr "Xestionar os permisos de HTML5"
+
+#~ msgctxt "Preferences|"
+#~ msgid "<b>HTML5 Permissions</b>"
+#~ msgstr "<b>Permisos de HTML5</b>"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "HTML5 Permissions"
+#~ msgstr "Permisos de HTML5"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Remove"
+#~ msgstr "Retirar"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Site"
+#~ msgstr "Sitio"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Permission for:"
+#~ msgstr "Permisos para:"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Notifications"
+#~ msgstr "Notificacións"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Display Capture"
+#~ msgstr "Captura de pantalla"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Display and Audio Capture"
+#~ msgstr "Captura de pantalla e son"
+
 #~ msgctxt "QObject|"
 #~ msgid "KB"
 #~ msgstr "KB"
@@ -5986,7 +6269,3 @@ msgstr "%1 — Falkon"
 #~ msgctxt "PageScreen|"
 #~ msgid "Location:"
 #~ msgstr "Lugar:"
-
-#~ msgctxt "PageScreen|"
-#~ msgid "Browse..."
-#~ msgstr "Examinar…"

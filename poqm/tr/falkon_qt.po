@@ -356,7 +356,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Açık sekmeler var"
 
-#: lib/app/mainapplication.cpp:1093
+#: lib/app/mainapplication.cpp:1110
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -365,32 +365,32 @@ msgstr ""
 "Falkon öntanımlı web tarayıcınız değil. Öntanımlı web tarayıcınız yapmak "
 "ister misiniz?"
 
-#: lib/app/mainapplication.cpp:1094
+#: lib/app/mainapplication.cpp:1111
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Falkon başlarken bu denetimi her zaman gerçekleştir."
 
-#: lib/app/mainapplication.cpp:1096
+#: lib/app/mainapplication.cpp:1113
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Öntanımlı Web Tarayıcısı"
 
-#: lib/app/mainapplication.cpp:1228
+#: lib/app/mainapplication.cpp:1245
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Yeni sekme aç"
 
-#: lib/app/mainapplication.cpp:1229
+#: lib/app/mainapplication.cpp:1246
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Yeni pencere aç"
 
-#: lib/app/mainapplication.cpp:1230
+#: lib/app/mainapplication.cpp:1247
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Yeni bir gizli sekme aç"
 
-#: lib/app/mainapplication.cpp:1245
+#: lib/app/mainapplication.cpp:1262
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1317,19 +1317,19 @@ msgctxt "CookieManager|"
 msgid "Search"
 msgstr "Ara"
 
-#: lib/cookies/cookiemanager.cpp:105
+#: lib/cookies/cookiemanager.cpp:133
 msgctxt "CookieManager|"
 msgid "Confirmation"
 msgstr "Onay"
 
-#: lib/cookies/cookiemanager.cpp:106
+#: lib/cookies/cookiemanager.cpp:134
 msgctxt "CookieManager|"
 msgid "Are you sure you want to delete all cookies on your computer?"
 msgstr "Bilgisayarınızadaki tüm çerezleri silmek istediğinizden emin misiniz?"
 
-#: lib/cookies/cookiemanager.cpp:151 lib/cookies/cookiemanager.cpp:152
-#: lib/cookies/cookiemanager.cpp:153 lib/cookies/cookiemanager.cpp:154
-#: lib/cookies/cookiemanager.cpp:155 lib/cookies/cookiemanager.cpp:156
+#: lib/cookies/cookiemanager.cpp:179 lib/cookies/cookiemanager.cpp:180
+#: lib/cookies/cookiemanager.cpp:181 lib/cookies/cookiemanager.cpp:182
+#: lib/cookies/cookiemanager.cpp:183 lib/cookies/cookiemanager.cpp:184
 #: lib/cookies/cookiemanager.ui:154 lib/cookies/cookiemanager.ui:164
 #: lib/cookies/cookiemanager.ui:174 lib/cookies/cookiemanager.ui:184
 #: lib/cookies/cookiemanager.ui:194 lib/cookies/cookiemanager.ui:204
@@ -1337,72 +1337,72 @@ msgctxt "CookieManager|"
 msgid "<cookie not selected>"
 msgstr "<çerez seçili değil>"
 
-#: lib/cookies/cookiemanager.cpp:158 lib/cookies/cookiemanager.cpp:168
+#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:196
 #: lib/cookies/cookiemanager.ui:245
 msgctxt "CookieManager|"
 msgid "Remove cookies"
 msgstr "Çerezleri Kaldır"
 
-#: lib/cookies/cookiemanager.cpp:161 lib/cookies/cookiemanager.cpp:162
-#: lib/cookies/cookiemanager.cpp:163 lib/cookies/cookiemanager.cpp:164
-#: lib/cookies/cookiemanager.cpp:165 lib/cookies/cookiemanager.cpp:166
+#: lib/cookies/cookiemanager.cpp:189 lib/cookies/cookiemanager.cpp:190
+#: lib/cookies/cookiemanager.cpp:191 lib/cookies/cookiemanager.cpp:192
+#: lib/cookies/cookiemanager.cpp:193 lib/cookies/cookiemanager.cpp:194
 msgctxt "CookieManager|"
 msgid "<multiple cookies selected>"
 msgstr "<birden çok çerez seçili>"
 
-#: lib/cookies/cookiemanager.cpp:178
+#: lib/cookies/cookiemanager.cpp:206
 msgctxt "CookieManager|"
 msgid "Secure only"
 msgstr "Yalnızca güvenli"
 
-#: lib/cookies/cookiemanager.cpp:178
+#: lib/cookies/cookiemanager.cpp:206
 msgctxt "CookieManager|"
 msgid "All connections"
 msgstr "Tüm bağlantılar"
 
-#: lib/cookies/cookiemanager.cpp:179
+#: lib/cookies/cookiemanager.cpp:207
 msgctxt "CookieManager|"
 msgid "Session cookie"
 msgstr "Oturum çerezi"
 
-#: lib/cookies/cookiemanager.cpp:181
+#: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
 msgid "Remove cookie"
 msgstr "Çerezi Kaldır"
 
-#: lib/cookies/cookiemanager.cpp:186 lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.cpp:214 lib/cookies/cookiemanager.cpp:241
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
 msgstr "Sunucu:"
 
-#: lib/cookies/cookiemanager.cpp:186
+#: lib/cookies/cookiemanager.cpp:214
 msgctxt "CookieManager|"
 msgid "Add to whitelist"
 msgstr "Beyaz listeye ekle"
 
-#: lib/cookies/cookiemanager.cpp:193
+#: lib/cookies/cookiemanager.cpp:221
 msgctxt "CookieManager|"
 msgid "Already blacklisted!"
 msgstr "Zaten kara listede!"
 
-#: lib/cookies/cookiemanager.cpp:193
+#: lib/cookies/cookiemanager.cpp:221
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
 msgstr "“%1” sunucusu halihazırda kara listede, lütfen önce onu kaldırın."
 
-#: lib/cookies/cookiemanager.cpp:209
+#: lib/cookies/cookiemanager.cpp:241
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
 msgstr "Kara listeye ekle"
 
-#: lib/cookies/cookiemanager.cpp:220
+#: lib/cookies/cookiemanager.cpp:252
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
 msgstr "Zaten beyaz listede!"
 
-#: lib/cookies/cookiemanager.cpp:220
+#: lib/cookies/cookiemanager.cpp:252
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
@@ -3075,67 +3075,67 @@ msgstr ""
 "Bazı sorunlar oluştu. Lütfen Falkon’u yeniden kurun.\n"
 "Belki Falkon’u yönetici yetkileriyle yeniden başlatırsanız çalışabilir."
 
-#: lib/other/siteinfo.cpp:68
+#: lib/other/siteinfo.cpp:70
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
 msgstr "<b>Bağlantı şifreli.</b>"
 
-#: lib/other/siteinfo.cpp:70
+#: lib/other/siteinfo.cpp:72
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
 msgstr "<b>Bağlantınız şifreli değil.</b>"
 
-#: lib/other/siteinfo.cpp:175
+#: lib/other/siteinfo.cpp:181
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
 msgstr "Görsel Konumunu Kopyala"
 
-#: lib/other/siteinfo.cpp:176
+#: lib/other/siteinfo.cpp:182
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
 msgstr "Görsel Adını Kopyala"
 
-#: lib/other/siteinfo.cpp:178
+#: lib/other/siteinfo.cpp:184
 msgctxt "SiteInfo|"
 msgid "Save Image to Disk"
 msgstr "Görseli Diske Kaydet"
 
-#: lib/other/siteinfo.cpp:190
+#: lib/other/siteinfo.cpp:196
 msgctxt "SiteInfo|"
 msgid "Copy Values"
 msgstr "Değerleri Kopyala"
 
-#: lib/other/siteinfo.cpp:191
+#: lib/other/siteinfo.cpp:197
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
 msgstr "Etiketleri ve Değerleri Kopyala"
 
-#: lib/other/siteinfo.cpp:229 lib/other/siteinfo.cpp:248
+#: lib/other/siteinfo.cpp:235 lib/other/siteinfo.cpp:254
 msgctxt "SiteInfo|"
 msgid "Error!"
 msgstr "Hata!"
 
-#: lib/other/siteinfo.cpp:229
+#: lib/other/siteinfo.cpp:235
 msgctxt "SiteInfo|"
 msgid "This preview is not available!"
 msgstr "Bu önizleme kullanılamaz!"
 
-#: lib/other/siteinfo.cpp:240
+#: lib/other/siteinfo.cpp:246
 msgctxt "SiteInfo|"
 msgid "Save image..."
 msgstr "Görseli Kaydet…"
 
-#: lib/other/siteinfo.cpp:248
+#: lib/other/siteinfo.cpp:254
 msgctxt "SiteInfo|"
 msgid "Cannot write to file!"
 msgstr "Dosyaya yazılamadı!"
 
-#: lib/other/siteinfo.cpp:258
+#: lib/other/siteinfo.cpp:264
 msgctxt "SiteInfo|"
 msgid "Loading..."
 msgstr "Yükleniyor…"
 
-#: lib/other/siteinfo.cpp:271
+#: lib/other/siteinfo.cpp:277
 msgctxt "SiteInfo|"
 msgid "Preview not available"
 msgstr "Önizleme kullanılamıyor"
@@ -3155,50 +3155,87 @@ msgctxt "SiteInfo|"
 msgid "Media"
 msgstr "Ortam"
 
-#: lib/other/siteinfo.ui:84
+#: lib/other/siteinfo.ui:57
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "HTML5 Permissions"
+msgctxt "SiteInfo|"
+msgid "Permissions"
+msgstr "HTML5 İzinleri"
+
+#: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
 msgid "Site address:"
 msgstr "Site adresi:"
 
-#: lib/other/siteinfo.ui:113
+#: lib/other/siteinfo.ui:118
 msgctxt "SiteInfo|"
 msgid "Encoding:"
 msgstr "Şifreleme:"
 
-#: lib/other/siteinfo.ui:132
+#: lib/other/siteinfo.ui:137
 msgctxt "SiteInfo|"
 msgid "Meta tags of site:"
 msgstr "Siteye ait üst veri etiketleri:"
 
-#: lib/other/siteinfo.ui:149
+#: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
 msgid "Tag"
 msgstr "Etiket"
 
-#: lib/other/siteinfo.ui:154
+#: lib/other/siteinfo.ui:159
 msgctxt "SiteInfo|"
 msgid "Value"
 msgstr "Değer"
 
-#: lib/other/siteinfo.ui:168
+#: lib/other/siteinfo.ui:173
 msgctxt "SiteInfo|"
 msgid "<b>Security information</b>"
 msgstr "<b>Güvenlik Bilgisi</b>"
 
-#: lib/other/siteinfo.ui:241
+#: lib/other/siteinfo.ui:246
 msgctxt "SiteInfo|"
 msgid "Image"
 msgstr "Görsel"
 
-#: lib/other/siteinfo.ui:246
+#: lib/other/siteinfo.ui:251
 msgctxt "SiteInfo|"
 msgid "Image address"
 msgstr "Görsel Adresi"
 
-#: lib/other/siteinfo.ui:271
+#: lib/other/siteinfo.ui:276
 msgctxt "SiteInfo|"
 msgid "<b>Preview</b>"
 msgstr "<b>Önizleme</b>"
+
+#: lib/other/siteinfopermissionitem.ui:32
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Default"
+msgstr "Öntanımlı"
+
+#: lib/other/siteinfopermissionitem.ui:62
+msgctxt "SiteInfoPermissionItem|"
+msgid "Ask"
+msgstr ""
+
+#: lib/other/siteinfopermissionitem.ui:69
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Allow"
+msgstr "İzin Ver"
+
+#: lib/other/siteinfopermissionitem.ui:76
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteInfoPermissionItem|"
+msgid "Deny"
+msgstr "Reddet"
 
 #: lib/other/siteinfowidget.cpp:42
 #, qt-format
@@ -3257,6 +3294,211 @@ msgstr "Kaydol"
 msgctxt "SiteInfoWidget|"
 msgid "More..."
 msgstr "Daha Fazla…"
+
+#: lib/other/sitesettingsmanager.cpp:286
+#, fuzzy
+#| msgctxt "ZoomLabel|"
+#| msgid "Reset zoom level"
+msgctxt "SiteSettingsManager|"
+msgid "Zoom level"
+msgstr "Yakınlaştırma düzeyini sıfırla"
+
+#: lib/other/sitesettingsmanager.cpp:288
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Cookies"
+msgctxt "SiteSettingsManager|"
+msgid "Cookies"
+msgstr "Çerezler"
+
+#: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
+#: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Unknown size"
+msgctxt "SiteSettingsManager|"
+msgid "Unknown"
+msgstr "Bilinmeyen boyut"
+
+#: lib/other/sitesettingsmanager.cpp:299
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Notifications"
+msgctxt "SiteSettingsManager|"
+msgid "Notifications"
+msgstr "Bildiriler"
+
+#: lib/other/sitesettingsmanager.cpp:301
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Geolocation"
+msgctxt "SiteSettingsManager|"
+msgid "Geolocation"
+msgstr "Coğrafi Konum"
+
+#: lib/other/sitesettingsmanager.cpp:303
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Microphone"
+msgctxt "SiteSettingsManager|"
+msgid "Microphone"
+msgstr "Mikrofon"
+
+#: lib/other/sitesettingsmanager.cpp:305
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Camera"
+msgctxt "SiteSettingsManager|"
+msgid "Camera"
+msgstr "Kamera"
+
+#: lib/other/sitesettingsmanager.cpp:307
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Microphone and Camera"
+msgctxt "SiteSettingsManager|"
+msgid "Microphone and Camera"
+msgstr "Mikrofon ve Kamera"
+
+#: lib/other/sitesettingsmanager.cpp:309
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Hide Pointer"
+msgctxt "SiteSettingsManager|"
+msgid "Hide mouse pointer"
+msgstr "İmleci Gizle"
+
+#: lib/other/sitesettingsmanager.cpp:311
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Enable screen capture"
+msgctxt "SiteSettingsManager|"
+msgid "Screen capture"
+msgstr "Ekran yakalamayı etkinleştir"
+
+#: lib/other/sitesettingsmanager.cpp:313
+msgctxt "SiteSettingsManager|"
+msgid "Screen capture with audio"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:324
+#, fuzzy
+#| msgctxt "WebPage|"
+#| msgid "Reload page"
+msgctxt "SiteSettingsManager|"
+msgid "Autoload images"
+msgstr "Sayfayı Yeniden Yükle"
+
+#: lib/other/sitesettingsmanager.cpp:327
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Allow JavaScript"
+msgctxt "SiteSettingsManager|"
+msgid "Enable JavaScript"
+msgstr "JavaScript’e İzin Ver"
+
+#: lib/other/sitesettingsmanager.cpp:329
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Open popup windows"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Open popup windows"
+msgstr "Açılır pencere aç"
+
+#: lib/other/sitesettingsmanager.cpp:331
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Access clipboard"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Access clipboard"
+msgstr "Panoya Erişim"
+
+#: lib/other/sitesettingsmanager.cpp:333
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Paste from clipboard"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Paste from clipboard"
+msgstr "Panoya Erişim"
+
+#: lib/other/sitesettingsmanager.cpp:335
+#, fuzzy
+#| msgctxt "JsOptions|"
+#| msgid "Activate windows"
+msgctxt "SiteSettingsManager|"
+msgid "JavaScript: Activate windows"
+msgstr "Yeni Gi&zli Pencere"
+
+#: lib/other/sitesettingsmanager.cpp:338
+#, fuzzy
+#| msgctxt "ClearPrivateData|"
+#| msgid "Local storage"
+msgctxt "SiteSettingsManager|"
+msgid "Local storage"
+msgstr "Yerel depolama"
+
+#: lib/other/sitesettingsmanager.cpp:340
+#, fuzzy
+#| msgctxt "MainMenu|"
+#| msgid "&FullScreen"
+msgctxt "SiteSettingsManager|"
+msgid "FullScreen support"
+msgstr "Ta&m Ekran"
+
+#: lib/other/sitesettingsmanager.cpp:342
+msgctxt "SiteSettingsManager|"
+msgid "Run insecure content"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:344
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Disable automatic playing of videos"
+msgctxt "SiteSettingsManager|"
+msgid "Automatic playing of videos"
+msgstr "Videoların kendiliğinden oynatımını devre dışı bırak"
+
+#: lib/other/sitesettingsmanager.cpp:347
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Allow storing of cookies"
+msgctxt "SiteSettingsManager|"
+msgid "Allow reading from canvas"
+msgstr "Çerezlerin saklanmasına izin ver"
+
+#: lib/other/sitesettingsmanager.cpp:351
+msgctxt "SiteSettingsManager|"
+msgid "Force dark mode"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:364
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteSettingsManager|"
+msgid "Allow"
+msgstr "İzin Ver"
+
+#: lib/other/sitesettingsmanager.cpp:366
+msgctxt "SiteSettingsManager|"
+msgid "Ask"
+msgstr ""
+
+#: lib/other/sitesettingsmanager.cpp:368
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteSettingsManager|"
+msgid "Deny"
+msgstr "Reddet"
+
+#: lib/other/sitesettingsmanager.cpp:370
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteSettingsManager|"
+msgid "Default"
+msgstr "Öntanımlı"
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
@@ -3686,88 +3928,88 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "“%1” ögesini kaldırmak istediğinizden emin misiniz?"
 
-#: lib/preferences/preferences.cpp:152 lib/preferences/preferences.cpp:613
+#: lib/preferences/preferences.cpp:154 lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Öntanımlı"
 
-#: lib/preferences/preferences.cpp:156
+#: lib/preferences/preferences.cpp:158
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Öntanımlı olarak ayarla"
 
-#: lib/preferences/preferences.cpp:301
+#: lib/preferences/preferences.cpp:313
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%​%1"
 
-#: lib/preferences/preferences.cpp:556
+#: lib/preferences/preferences.cpp:586
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Yürütülebilir konumunu seç…"
 
-#: lib/preferences/preferences.cpp:599
+#: lib/preferences/preferences.cpp:629
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD Bildirimi"
 
-#: lib/preferences/preferences.cpp:600
+#: lib/preferences/preferences.cpp:630
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Ekranda istediğiniz yere sürükleyin."
 
-#: lib/preferences/preferences.cpp:649
+#: lib/preferences/preferences.cpp:679
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "İndirme konumunu seç…"
 
-#: lib/preferences/preferences.cpp:663
+#: lib/preferences/preferences.cpp:693
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Biçem sayfası konumunu seç…"
 
-#: lib/preferences/preferences.cpp:674
+#: lib/preferences/preferences.cpp:704
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Silindi"
 
-#: lib/preferences/preferences.cpp:782
+#: lib/preferences/preferences.cpp:806
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Önbellek yolunu seç…"
 
-#: lib/preferences/preferences.cpp:813
+#: lib/preferences/preferences.cpp:837
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Yeni Profil"
 
-#: lib/preferences/preferences.cpp:813
+#: lib/preferences/preferences.cpp:837
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Yeni profil adını gir:"
 
-#: lib/preferences/preferences.cpp:823 lib/preferences/preferences.cpp:828
+#: lib/preferences/preferences.cpp:847 lib/preferences/preferences.cpp:852
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Hata!"
 
-#: lib/preferences/preferences.cpp:823
+#: lib/preferences/preferences.cpp:847
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Bu profil halihazırda var!"
 
-#: lib/preferences/preferences.cpp:828
+#: lib/preferences/preferences.cpp:852
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Profil klasörü oluşturulamadı!"
 
-#: lib/preferences/preferences.cpp:839
+#: lib/preferences/preferences.cpp:863
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Onay"
 
-#: lib/preferences/preferences.cpp:840
+#: lib/preferences/preferences.cpp:864
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -3777,12 +4019,12 @@ msgstr ""
 "%1 adlı profili kalıcı olarak silmek istediğinizden emin misiniz? Bu işlem "
 "geri alınamaz!"
 
-#: lib/preferences/preferences.cpp:855 lib/preferences/preferences.ui:227
+#: lib/preferences/preferences.cpp:879 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Not: Geçerli profili silemezsiniz."
 
-#: lib/preferences/preferences.cpp:1114
+#: lib/preferences/preferences.cpp:1154
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Renk Seç"
@@ -3792,322 +4034,322 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: lib/preferences/preferences.ui:60
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2046
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Genel"
 
-#: lib/preferences/preferences.ui:65
+#: lib/preferences/preferences.ui:72
 msgctxt "Preferences|"
 msgid "Appearance"
 msgstr "Görünüş"
 
-#: lib/preferences/preferences.ui:70
+#: lib/preferences/preferences.ui:77
 msgctxt "Preferences|"
 msgid "Tabs"
 msgstr "Sekmeler"
 
-#: lib/preferences/preferences.ui:75
+#: lib/preferences/preferences.ui:82
 msgctxt "Preferences|"
 msgid "Browsing"
 msgstr "Dolaşım"
 
-#: lib/preferences/preferences.ui:80
+#: lib/preferences/preferences.ui:87
 msgctxt "Preferences|"
 msgid "Fonts"
 msgstr "Yazıtipleri"
 
-#: lib/preferences/preferences.ui:85
+#: lib/preferences/preferences.ui:92
 msgctxt "Preferences|"
 msgid "Keyboard Shortcuts"
 msgstr "Klavye Kısayolları"
 
-#: lib/preferences/preferences.ui:90
+#: lib/preferences/preferences.ui:97
 msgctxt "Preferences|"
 msgid "Downloads"
 msgstr "İndirmeler"
 
-#: lib/preferences/preferences.ui:95
+#: lib/preferences/preferences.ui:102
 msgctxt "Preferences|"
 msgid "Password Manager"
 msgstr "Parola Yöneticisi"
 
-#: lib/preferences/preferences.ui:100
+#: lib/preferences/preferences.ui:107
 msgctxt "Preferences|"
 msgid "Privacy"
 msgstr "Gizlilik"
 
-#: lib/preferences/preferences.ui:105
+#: lib/preferences/preferences.ui:112
 msgctxt "Preferences|"
 msgid "Notifications"
 msgstr "Bildiriler"
 
-#: lib/preferences/preferences.ui:110
+#: lib/preferences/preferences.ui:117
 msgctxt "Preferences|"
 msgid "Extensions"
 msgstr "Genişletme"
 
-#: lib/preferences/preferences.ui:115
+#: lib/preferences/preferences.ui:122
 msgctxt "Preferences|"
 msgid "Spell Check"
 msgstr "Yazım Denetimi"
 
-#: lib/preferences/preferences.ui:120
+#: lib/preferences/preferences.ui:127
 msgctxt "Preferences|"
 msgid "Other"
 msgstr "Diğer"
 
-#: lib/preferences/preferences.ui:196 lib/preferences/preferences.ui:343
+#: lib/preferences/preferences.ui:210 lib/preferences/preferences.ui:357
 msgctxt "Preferences|"
 msgid "Use current"
 msgstr "Geçerliyi Kullan"
 
-#: lib/preferences/preferences.ui:243
+#: lib/preferences/preferences.ui:257
 msgctxt "Preferences|"
 msgid "Create New"
 msgstr "Yeni Oluştur"
 
-#: lib/preferences/preferences.ui:259
+#: lib/preferences/preferences.ui:273
 msgctxt "Preferences|"
 msgid "Delete"
 msgstr "Sil"
 
-#: lib/preferences/preferences.ui:285
+#: lib/preferences/preferences.ui:299
 msgctxt "Preferences|"
 msgid "<b>Launching</b>"
 msgstr "<b>Başlangıç</b>"
 
-#: lib/preferences/preferences.ui:295
+#: lib/preferences/preferences.ui:309
 msgctxt "Preferences|"
 msgid "After launch: "
 msgstr "Başlangıç sonrası: "
 
-#: lib/preferences/preferences.ui:303
+#: lib/preferences/preferences.ui:317
 msgctxt "Preferences|"
 msgid "Open blank page"
 msgstr "Boş sayfa aç"
 
-#: lib/preferences/preferences.ui:308 lib/preferences/preferences.ui:365
+#: lib/preferences/preferences.ui:322 lib/preferences/preferences.ui:379
 msgctxt "Preferences|"
 msgid "Open homepage"
 msgstr "Ana sayfayı aç"
 
-#: lib/preferences/preferences.ui:313 lib/preferences/preferences.ui:370
+#: lib/preferences/preferences.ui:327 lib/preferences/preferences.ui:384
 msgctxt "Preferences|"
 msgid "Open speed dial"
 msgstr "Hızlı erişimi aç"
 
-#: lib/preferences/preferences.ui:318
+#: lib/preferences/preferences.ui:332
 msgctxt "Preferences|"
 msgid "Restore session"
 msgstr "Oturumu kurtar"
 
-#: lib/preferences/preferences.ui:323
+#: lib/preferences/preferences.ui:337
 msgctxt "Preferences|"
 msgid "Select session"
 msgstr "Oturum seç"
 
-#: lib/preferences/preferences.ui:331
+#: lib/preferences/preferences.ui:345
 msgctxt "Preferences|"
 msgid "Homepage: "
 msgstr "Ana sayfa: "
 
-#: lib/preferences/preferences.ui:352
+#: lib/preferences/preferences.ui:366
 msgctxt "Preferences|"
 msgid "On new tab: "
 msgstr "Yeni sekmede: "
 
-#: lib/preferences/preferences.ui:360
+#: lib/preferences/preferences.ui:374
 msgctxt "Preferences|"
 msgid "Open blank tab"
 msgstr "Boş sekme aç"
 
-#: lib/preferences/preferences.ui:375
+#: lib/preferences/preferences.ui:389
 msgctxt "Preferences|"
 msgid "Open other page..."
 msgstr "Diğer sayfada aç…"
 
-#: lib/preferences/preferences.ui:383
+#: lib/preferences/preferences.ui:397
 msgctxt "Preferences|"
 msgid "<b>Profiles</b>"
 msgstr "<b>Profiller</b>"
 
-#: lib/preferences/preferences.ui:390
+#: lib/preferences/preferences.ui:404
 msgctxt "Preferences|"
 msgid "Startup profile:"
 msgstr "Başlangıç profili:"
 
-#: lib/preferences/preferences.ui:397
+#: lib/preferences/preferences.ui:411
 msgctxt "Preferences|"
 msgid "Check for updates on start"
 msgstr "Başlangıçta güncellemeleri denetle"
 
-#: lib/preferences/preferences.ui:404
+#: lib/preferences/preferences.ui:418
 msgctxt "Preferences|"
 msgid "Active profile:"
 msgstr "Etkin profil:"
 
-#: lib/preferences/preferences.ui:418
+#: lib/preferences/preferences.ui:432
 msgctxt "Preferences|"
 msgid "Don't load tabs until selected"
 msgstr "Seçilene kadar sekmeleri yükleme"
 
-#: lib/preferences/preferences.ui:440
+#: lib/preferences/preferences.ui:454
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
 msgstr "Başlangıçta Falkon’un öntanımlı tarayıcı olup olmadığını denetle"
 
-#: lib/preferences/preferences.ui:450
+#: lib/preferences/preferences.ui:464
 msgctxt "Preferences|"
 msgid "Check Now"
 msgstr "Şimdi Denetle"
 
-#: lib/preferences/preferences.ui:480
+#: lib/preferences/preferences.ui:494
 msgctxt "Preferences|"
 msgid "Themes"
 msgstr "Arayüzler"
 
-#: lib/preferences/preferences.ui:502
+#: lib/preferences/preferences.ui:516
 msgctxt "Preferences|"
 msgid "Advanced options"
 msgstr "Gelişmiş Ayarlar"
 
-#: lib/preferences/preferences.ui:510
+#: lib/preferences/preferences.ui:524
 msgctxt "Preferences|"
 msgid "Show StatusBar on start"
 msgstr "Başlangıçta durum çubuğunu göster"
 
-#: lib/preferences/preferences.ui:517
+#: lib/preferences/preferences.ui:531
 msgctxt "Preferences|"
 msgid "Show Bookmarks ToolBar on start"
 msgstr "Başlangıçta yer imleri araç çubuğunu göster"
 
-#: lib/preferences/preferences.ui:524
+#: lib/preferences/preferences.ui:538
 msgctxt "Preferences|"
 msgid "Show Navigation ToolBar on start"
 msgstr "Başlangıçta dolaşım araç çubuğunu göster"
 
-#: lib/preferences/preferences.ui:531
+#: lib/preferences/preferences.ui:545
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
 msgstr "Anında yer imleri araç çubuğunu etkinleştir"
 
-#: lib/preferences/preferences.ui:553
+#: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>Tarayıcı Penceresi</b>"
 
-#: lib/preferences/preferences.ui:601
+#: lib/preferences/preferences.ui:615
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "Sekme Davranışı"
 
-#: lib/preferences/preferences.ui:607
+#: lib/preferences/preferences.ui:621
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Tek bir sekme varsa sekmeleri gizle"
 
-#: lib/preferences/preferences.ui:614
+#: lib/preferences/preferences.ui:628
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "Etkin sekme kapandığında son sekmeyi etkinleştir"
 
-#: lib/preferences/preferences.ui:621
+#: lib/preferences/preferences.ui:635
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Yeni sekmeyi etkin sekmeden sonra aç"
 
-#: lib/preferences/preferences.ui:628
+#: lib/preferences/preferences.ui:642
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Yeni boş sekmeleri etkin sekmeden sonra aç"
 
-#: lib/preferences/preferences.ui:635
+#: lib/preferences/preferences.ui:649
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Açılır pencereleri sekmede aç"
 
-#: lib/preferences/preferences.ui:642
+#: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Sekmeleri her zaman fare tekerleği ile değiştir"
 
-#: lib/preferences/preferences.ui:649
+#: lib/preferences/preferences.ui:663
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "En son açılan sekmeye kendiliğinden git"
 
-#: lib/preferences/preferences.ui:656
+#: lib/preferences/preferences.ui:670
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Son sekme kapatılınca pencereyi kapatma"
 
-#: lib/preferences/preferences.ui:663
+#: lib/preferences/preferences.ui:677
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Çoklu sekmeler kapatılırken sor"
 
-#: lib/preferences/preferences.ui:670
+#: lib/preferences/preferences.ui:684
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Kapalı sekmeler düğmesini göster"
 
-#: lib/preferences/preferences.ui:679
+#: lib/preferences/preferences.ui:693
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Etkin olmayan sekmelerde kapat düğmesini göster:"
 
-#: lib/preferences/preferences.ui:687
+#: lib/preferences/preferences.ui:701
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Kendiliğinden"
 
-#: lib/preferences/preferences.ui:692
+#: lib/preferences/preferences.ui:706
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Her zaman"
 
-#: lib/preferences/preferences.ui:697
+#: lib/preferences/preferences.ui:711
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Asla"
 
-#: lib/preferences/preferences.ui:737
+#: lib/preferences/preferences.ui:751
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Adres Çubuğu Davranışı"
 
-#: lib/preferences/preferences.ui:745
+#: lib/preferences/preferences.ui:759
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Adres çubuğunda yazılanlarla ilgili önerileri göster:"
 
-#: lib/preferences/preferences.ui:759
+#: lib/preferences/preferences.ui:773
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Geçmiş ve Yer İmleri"
 
-#: lib/preferences/preferences.ui:764
+#: lib/preferences/preferences.ui:778
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Geçmiş"
 
-#: lib/preferences/preferences.ui:769
+#: lib/preferences/preferences.ui:783
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Yer İmleri"
 
-#: lib/preferences/preferences.ui:774
+#: lib/preferences/preferences.ui:788
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Hiçbir Şey"
 
-#: lib/preferences/preferences.ui:800
+#: lib/preferences/preferences.ui:814
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Sıralı önerileri etkinleştir"
 
-#: lib/preferences/preferences.ui:807
+#: lib/preferences/preferences.ui:821
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4115,361 +4357,374 @@ msgstr ""
 "Sekmeyi değiştirmemek için ‘Üst Karakter’ düğmesine bas; ancak geçerli "
 "sekmede sayfayı aç"
 
-#: lib/preferences/preferences.ui:810
+#: lib/preferences/preferences.ui:824
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "Tamamlanmış URL halihazırda yüklüyse sekmeyi değiştirmeyi öner"
 
-#: lib/preferences/preferences.ui:817
+#: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Git simgesini her zaman göster"
 
-#: lib/preferences/preferences.ui:824
+#: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Yakınlaştırma etiketini göster"
 
-#: lib/preferences/preferences.ui:831
+#: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Adres çubuğunda çift tıklandığında tüm yazıyı seç"
 
-#: lib/preferences/preferences.ui:838
+#: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Adres çubuğunda tek tıklandığında tüm yazıyı seç"
 
-#: lib/preferences/preferences.ui:845
+#: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Adres çubuğundan kendiliğinden aramayı etkinleştir"
 
-#: lib/preferences/preferences.ui:852
+#: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Öntanımlı arama sayfasında ara"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:873
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Arama önerileri göster"
 
-#: lib/preferences/preferences.ui:866
+#: lib/preferences/preferences.ui:880
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr "Öneri açılır penceresini pencere enine genişlet"
 
-#: lib/preferences/preferences.ui:889
+#: lib/preferences/preferences.ui:903
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Adres çubuğunda ilerleme durumunu göster"
 
-#: lib/preferences/preferences.ui:922
+#: lib/preferences/preferences.ui:936
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Doldur"
 
-#: lib/preferences/preferences.ui:927
+#: lib/preferences/preferences.ui:941
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Alt"
 
-#: lib/preferences/preferences.ui:932
+#: lib/preferences/preferences.ui:946
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Üst"
 
-#: lib/preferences/preferences.ui:940
+#: lib/preferences/preferences.ui:954
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Özel renk:"
 
-#: lib/preferences/preferences.ui:956
+#: lib/preferences/preferences.ui:970
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Renk seç"
 
-#: lib/preferences/preferences.ui:959 lib/preferences/preferences.ui:1279
-#: lib/preferences/preferences.ui:1813 lib/preferences/preferences.ui:1910
-#: lib/preferences/preferences.ui:2749
+#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1307
+#: lib/preferences/preferences.ui:1841 lib/preferences/preferences.ui:1938
+#: lib/preferences/preferences.ui:2784
 msgctxt "Preferences|"
 msgid "..."
 msgstr "…"
 
-#: lib/preferences/preferences.ui:966
+#: lib/preferences/preferences.ui:980
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Sıfırla"
 
-#: lib/preferences/preferences.ui:1017
+#: lib/preferences/preferences.ui:1031
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Web Ayarları"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1039
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "Pepper eklenti API’sini etkinleştir (PPAPI)"
 
-#: lib/preferences/preferences.ui:1032
+#: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Dahili PDF görüntüleyicisini kullan (PPAPI gerektirir)"
 
-#: lib/preferences/preferences.ui:1039
+#: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "JavaScript’e İzin Ver"
 
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Odak zincirindeki bağlantıları içerir"
 
 #. try to detect possible XSS attacks when executing javascript
-#: lib/preferences/preferences.ui:1053
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
 msgstr "XSS Denetlemesini Etkinleştir"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1060
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Baskı ögesi arka planı"
 
-#: lib/preferences/preferences.ui:1067
+#: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Canlandırmalı sarma"
 
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Uzamsal dolaşımı etkinleştir"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Yerel sarma çubuklarını kullan"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Videoların kendiliğinden oynatımını devre dışı bırak"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "WebRTC’nin yerel IP adresini sızdırmasına izin verme"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "XSS ön getirmesini etkinleştir"
 
-#: lib/preferences/preferences.ui:1109
+#: lib/preferences/preferences.ui:1123
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Ekran yakalamayı etkinleştir"
 
-#: lib/preferences/preferences.ui:1116
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Donanım ivmelendirmesi kullan (yeniden başlatma gerektirir)"
 
-#: lib/preferences/preferences.ui:1133
+#: lib/preferences/preferences.ui:1137
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Allow storing of cookies"
+msgctxt "Preferences|"
+msgid "Allow reading from canvas"
+msgstr "Çerezlerin saklanmasına izin ver"
+
+#: lib/preferences/preferences.ui:1144
+msgctxt "Preferences|"
+msgid "Force dark mode"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Fare tekerleği sarımı"
 
-#: lib/preferences/preferences.ui:1153
+#: lib/preferences/preferences.ui:1181
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "sayfada satır"
 
-#: lib/preferences/preferences.ui:1164
+#: lib/preferences/preferences.ui:1192
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Sayfalarda öntanımlı yakınlaştırma ayarı: "
 
-#: lib/preferences/preferences.ui:1203
+#: lib/preferences/preferences.ui:1231
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Yerel Depolama"
 
-#: lib/preferences/preferences.ui:1211
+#: lib/preferences/preferences.ui:1239
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Diskte ağ önbelleğini depolamaya izin ver"
 
-#: lib/preferences/preferences.ui:1234
+#: lib/preferences/preferences.ui:1262
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Kapanışta önbelleği sil"
 
-#: lib/preferences/preferences.ui:1241
+#: lib/preferences/preferences.ui:1269
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "En fazla:"
 
-#: lib/preferences/preferences.ui:1248
+#: lib/preferences/preferences.ui:1276
 msgctxt "Preferences|"
 msgid " MB"
 msgstr "MB"
 
-#: lib/preferences/preferences.ui:1264
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Önbelleği şurada depola:"
 
-#: lib/preferences/preferences.ui:1292
+#: lib/preferences/preferences.ui:1320
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Geçmişi kaydetmeye izin ver"
 
-#: lib/preferences/preferences.ui:1299
+#: lib/preferences/preferences.ui:1327
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Kapanışta geçmişi sil"
 
-#: lib/preferences/preferences.ui:1322
+#: lib/preferences/preferences.ui:1350
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "HTML5 web içeriğinin yerel depolanmasına izin ver"
 
-#: lib/preferences/preferences.ui:1329
+#: lib/preferences/preferences.ui:1357
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "HTML5 web içeriğini yerel kayıtlarını kapanışta sil"
 
-#: lib/preferences/preferences.ui:1355
+#: lib/preferences/preferences.ui:1383
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Şimdi Sil"
 
-#: lib/preferences/preferences.ui:1394
+#: lib/preferences/preferences.ui:1422
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Vekil Sunucu Yapılandırması"
 
-#: lib/preferences/preferences.ui:1413
+#: lib/preferences/preferences.ui:1441
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Sistem vekil sunucu ayarı"
 
-#: lib/preferences/preferences.ui:1436
+#: lib/preferences/preferences.ui:1464
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Elle yapılandırma"
 
-#: lib/preferences/preferences.ui:1446
+#: lib/preferences/preferences.ui:1474
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1451
+#: lib/preferences/preferences.ui:1479
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1462
+#: lib/preferences/preferences.ui:1490
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Kapı:"
 
-#: lib/preferences/preferences.ui:1483
+#: lib/preferences/preferences.ui:1511
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Kullanıcı adı:"
 
-#: lib/preferences/preferences.ui:1493
+#: lib/preferences/preferences.ui:1521
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Parola:"
 
-#: lib/preferences/preferences.ui:1522
+#: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Vekil sunucu yok"
 
-#: lib/preferences/preferences.ui:1537
+#: lib/preferences/preferences.ui:1565
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Yazıtipi Aileleri</b>"
 
-#: lib/preferences/preferences.ui:1550
+#: lib/preferences/preferences.ui:1578
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Standart"
 
-#: lib/preferences/preferences.ui:1557
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Eş aralıklı"
 
-#: lib/preferences/preferences.ui:1567
+#: lib/preferences/preferences.ui:1595
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1577
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: lib/preferences/preferences.ui:1587
+#: lib/preferences/preferences.ui:1615
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "El yazısı"
 
-#: lib/preferences/preferences.ui:1639
+#: lib/preferences/preferences.ui:1667
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantezi"
 
-#: lib/preferences/preferences.ui:1646
+#: lib/preferences/preferences.ui:1674
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Yazıtipi Boyutları</b>"
 
-#: lib/preferences/preferences.ui:1655
+#: lib/preferences/preferences.ui:1683
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Eş aralıklı yazıtipi boyutu"
 
-#: lib/preferences/preferences.ui:1662
+#: lib/preferences/preferences.ui:1690
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Öntanımlı yazıtipi boyutu"
 
-#: lib/preferences/preferences.ui:1689
+#: lib/preferences/preferences.ui:1717
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "En küçük yazıtipi boyutu"
 
-#: lib/preferences/preferences.ui:1696
+#: lib/preferences/preferences.ui:1724
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "En küçük tutarlı yazıtipi boyutu"
 
-#: lib/preferences/preferences.ui:1729
+#: lib/preferences/preferences.ui:1757
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Kısayollar</b>"
 
-#: lib/preferences/preferences.ui:1736
+#: lib/preferences/preferences.ui:1764
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Seçenek+Sekme Numarası ile sekmelere geç"
 
-#: lib/preferences/preferences.ui:1743
+#: lib/preferences/preferences.ui:1771
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Kontrol+Hızlı Erişim Numarası ile hızlı erişimleri yükle"
 
-#: lib/preferences/preferences.ui:1750
+#: lib/preferences/preferences.ui:1778
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4478,12 +4733,12 @@ msgstr ""
 "Var olan kısayollar:<br/><b>1</b> — önceki sekme<br/><b>2</b> — sonraki "
 "sekme<br/><b>/</b> — sayfada ara"
 
-#: lib/preferences/preferences.ui:1753
+#: lib/preferences/preferences.ui:1781
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Kısayollarda tek düğme kullan"
 
-#: lib/preferences/preferences.ui:1760
+#: lib/preferences/preferences.ui:1788
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4492,162 +4747,160 @@ msgstr ""
 "Eğer seçili değilse uygulamadan yanlışlıkla Kontrol–W kısayolu ile çıkmayı "
 "önler."
 
-#: lib/preferences/preferences.ui:1763
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Kontrol–Q ile uygulamayı kapat"
 
-#: lib/preferences/preferences.ui:1787
+#: lib/preferences/preferences.ui:1815
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>İndirme Yeri</b>"
 
-#: lib/preferences/preferences.ui:1794
+#: lib/preferences/preferences.ui:1822
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "İndirme yerini her zaman sor"
 
-#: lib/preferences/preferences.ui:1801
+#: lib/preferences/preferences.ui:1829
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Tanımlı yeri kullan: "
 
-#: lib/preferences/preferences.ui:1851
+#: lib/preferences/preferences.ui:1879
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>İndirme Seçenekleri</b>"
 
-#: lib/preferences/preferences.ui:1858
+#: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "İndirmeler bitince indirme yöneticisini kapat"
 
-#: lib/preferences/preferences.ui:1865
+#: lib/preferences/preferences.ui:1893
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Dış indirme yöneticisi</b>"
 
-#: lib/preferences/preferences.ui:1872
+#: lib/preferences/preferences.ui:1900
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Dış indirme yöneticisi kullan"
 
-#: lib/preferences/preferences.ui:1884
+#: lib/preferences/preferences.ui:1912
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Yürütülebilir:"
 
-#: lib/preferences/preferences.ui:1891
+#: lib/preferences/preferences.ui:1919
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Argümanlar:"
 
-#: lib/preferences/preferences.ui:1898
+#: lib/preferences/preferences.ui:1926
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Emin değilseniz boş bırakın"
 
-#: lib/preferences/preferences.ui:1919
+#: lib/preferences/preferences.ui:1947
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b>, indirilebilir URL ile değiştirilir"
 
-#: lib/preferences/preferences.ui:1945
+#: lib/preferences/preferences.ui:1973
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Kendiliğinden doldurma ayarları</b>"
 
-#: lib/preferences/preferences.ui:1952
+#: lib/preferences/preferences.ui:1980
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Sitelerdeki parolaları kaydetmeye izin ver"
 
-#: lib/preferences/preferences.ui:2003
+#: lib/preferences/preferences.ui:2031
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Sitelerde parolaları kendiliğinden tamamlama"
 
-#: lib/preferences/preferences.ui:2014
-msgctxt "Preferences|"
-msgid "<b>Cookies</b>"
-msgstr "<b>Çerezler</b>"
-
-#: lib/preferences/preferences.ui:2021
-msgctxt "Preferences|"
-msgid "<b>Other</b>"
-msgstr "<b>Diğer</b>"
-
-#: lib/preferences/preferences.ui:2047
-msgctxt "Preferences|"
-msgid "JavaScript options"
-msgstr "JavaScript Seçenekleri"
-
-#: lib/preferences/preferences.ui:2057
-msgctxt "Preferences|"
-msgid "<b>JavaScript</b>"
-msgstr "<b>JavaScript</b>"
-
-#: lib/preferences/preferences.ui:2070
-msgctxt "Preferences|"
-msgid "Cookies Manager"
-msgstr "Çerez Yöneticisi"
-
-#: lib/preferences/preferences.ui:2080
-msgctxt "Preferences|"
-msgid "Manage JavaScript privacy options"
-msgstr "JavaScript gizlilik ayarlarını yönet"
-
-#: lib/preferences/preferences.ui:2103
-msgctxt "Preferences|"
-msgid "Manage HTML5 permissions"
-msgstr "HTML5 izinlerini yönet"
-
-#: lib/preferences/preferences.ui:2110
+#: lib/preferences/preferences.ui:2052
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Çerezleri Yönet"
 
-#: lib/preferences/preferences.ui:2130
+#: lib/preferences/preferences.ui:2065
 msgctxt "Preferences|"
-msgid "<b>HTML5 Permissions</b>"
-msgstr "<b>HTML5 İzinleri</b>"
+msgid "Cookies Manager"
+msgstr "Çerez Yöneticisi"
 
-#: lib/preferences/preferences.ui:2143
+#: lib/preferences/preferences.ui:2088
 msgctxt "Preferences|"
-msgid "HTML5 Permissions"
-msgstr "HTML5 İzinleri"
+msgid "<b>JavaScript</b>"
+msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2150
+#: lib/preferences/preferences.ui:2101
+msgctxt "Preferences|"
+msgid "JavaScript options"
+msgstr "JavaScript Seçenekleri"
+
+#: lib/preferences/preferences.ui:2108
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Sunuculara ‘Beni İzleme’ üstbilgisi gönder"
 
-#: lib/preferences/preferences.ui:2176
+#: lib/preferences/preferences.ui:2115
+msgctxt "Preferences|"
+msgid "<b>Cookies</b>"
+msgstr "<b>Çerezler</b>"
+
+#: lib/preferences/preferences.ui:2141
+msgctxt "Preferences|"
+msgid "Manage JavaScript privacy options"
+msgstr "JavaScript gizlilik ayarlarını yönet"
+
+#: lib/preferences/preferences.ui:2148
+msgctxt "Preferences|"
+msgid "<b>Other</b>"
+msgstr "<b>Diğer</b>"
+
+#: lib/preferences/preferences.ui:2169
+msgctxt "Preferences|"
+msgid "HTML5 Permissions"
+msgstr "HTML5 İzinleri"
+
+#: lib/preferences/preferences.ui:2179
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Settings"
+msgctxt "Preferences|"
+msgid "Site Settings"
+msgstr "Ayarlar"
+
+#: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Son kullanma zaman aşımı:"
 
-#: lib/preferences/preferences.ui:2189
+#: lib/preferences/preferences.ui:2224
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " saniye"
 
-#: lib/preferences/preferences.ui:2211
+#: lib/preferences/preferences.ui:2246
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Bildirimler</b>"
 
-#: lib/preferences/preferences.ui:2234
+#: lib/preferences/preferences.ui:2269
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Yerel sistem bildirimlerini kullan (yalnızca Linux için)"
 
-#: lib/preferences/preferences.ui:2241
+#: lib/preferences/preferences.ui:2276
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Bildirimleri kullanma"
 
-#: lib/preferences/preferences.ui:2264
+#: lib/preferences/preferences.ui:2299
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -4656,17 +4909,17 @@ msgstr ""
 "<b>Not:</b> Ekran üzeri görüntü bildirimini sürükleyerek konumunu "
 "değiştirebilirsiniz."
 
-#: lib/preferences/preferences.ui:2290
+#: lib/preferences/preferences.ui:2325
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Bildirimleri Ekran Üzeri Görüntü olarak göster"
 
-#: lib/preferences/preferences.ui:2297
+#: lib/preferences/preferences.ui:2332
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Önizleme"
 
-#: lib/preferences/preferences.ui:2362
+#: lib/preferences/preferences.ui:2397
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4675,92 +4928,92 @@ msgstr ""
 "Yazım Denetimi hakkında daha fazla bilgi için <a href=\"https://userbase.kde."
 "org/Falkon#Spell_Check\">vikiye</a> bakın."
 
-#: lib/preferences/preferences.ui:2404
+#: lib/preferences/preferences.ui:2439
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Yazım Denetimi Seçenekleri</b>"
 
-#: lib/preferences/preferences.ui:2411
+#: lib/preferences/preferences.ui:2446
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Yazım denetimini etkinleştir"
 
-#: lib/preferences/preferences.ui:2418
+#: lib/preferences/preferences.ui:2453
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Sözlük Dizinleri</b>"
 
-#: lib/preferences/preferences.ui:2469
+#: lib/preferences/preferences.ui:2504
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Hiçbir dil bulunamadı."
 
-#: lib/preferences/preferences.ui:2498
+#: lib/preferences/preferences.ui:2533
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Protokol İşleyicileri Yöneticisi"
 
-#: lib/preferences/preferences.ui:2538
+#: lib/preferences/preferences.ui:2573
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Arama Motorları Yöneticisi"
 
-#: lib/preferences/preferences.ui:2560
+#: lib/preferences/preferences.ui:2595
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Kullanıcı Biçem Sayfası</b>"
 
-#: lib/preferences/preferences.ui:2567
+#: lib/preferences/preferences.ui:2602
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Arama motorlarını yönet</b>"
 
-#: lib/preferences/preferences.ui:2580
+#: lib/preferences/preferences.ui:2615
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "Özel şemaları yönet"
 
-#: lib/preferences/preferences.ui:2605
+#: lib/preferences/preferences.ui:2640
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Diller"
 
-#: lib/preferences/preferences.ui:2627
+#: lib/preferences/preferences.ui:2662
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Web siteleri için tercih edilen diller</b>"
 
-#: lib/preferences/preferences.ui:2652
+#: lib/preferences/preferences.ui:2687
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Sertifika İstisnaları Yöneticisi"
 
-#: lib/preferences/preferences.ui:2674
+#: lib/preferences/preferences.ui:2709
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Tarayıcı kimliğini değiştir</b>"
 
-#: lib/preferences/preferences.ui:2699
+#: lib/preferences/preferences.ui:2734
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Kullanıcı Aracısı Yöneticisi"
 
-#: lib/preferences/preferences.ui:2721
+#: lib/preferences/preferences.ui:2756
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Tüm web siteleriyle kendiliğinden yüklenen biçem sayfası: "
 
-#: lib/preferences/preferences.ui:2758
+#: lib/preferences/preferences.ui:2793
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Protokol işleyicilerini yönet</b>"
 
-#: lib/preferences/preferences.ui:2765
+#: lib/preferences/preferences.ui:2800
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Sertifika yöneticisi</b>"
 
-#: lib/preferences/preferences.ui:2816
+#: lib/preferences/preferences.ui:2851
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Özel Şema Yöneticisi"
@@ -4819,6 +5072,75 @@ msgstr "Engelli şemalar"
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
 msgstr "Değişiklikler, Falkon yeniden başlatıldıktan sonra etkin olacaktır."
+
+#: lib/preferences/sitesettingsattributesitem.ui:39
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Browsing"
+msgctxt "SiteSettingsAttributesItem|"
+msgid "Browse"
+msgstr "Dolaşım"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:14
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "HTML5 Permissions"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Site Permissions"
+msgstr "HTML5 İzinleri"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:30
+#, fuzzy
+#| msgctxt "ProtocolHandlerDialog|"
+#| msgid "Site"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Site"
+msgstr "Site"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:35
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Behaviour"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Behaviour"
+msgstr "Davranış"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:45
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Ask"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:52
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Allow"
+msgstr "İzin Ver"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:59
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Deny"
+msgstr "Reddet"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:66
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Default"
+msgstr "Öntanımlı"
+
+#: lib/preferences/sitesettingshtml5item.ui:42
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Browsing"
+msgctxt "SiteSettingsHtml5Item|"
+msgid "Browse"
+msgstr "Dolaşım"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -5411,81 +5733,6 @@ msgctxt "CertificateInfoWidget|"
 msgid "Expires On:"
 msgstr "Dolma:"
 
-#: lib/tools/html5permissions/html5permissionsdialog.cpp:63
-msgctxt "HTML5PermissionsDialog|"
-msgid "Allow"
-msgstr "İzin Ver"
-
-#: lib/tools/html5permissions/html5permissionsdialog.cpp:72
-msgctxt "HTML5PermissionsDialog|"
-msgid "Deny"
-msgstr "Reddet"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:14
-msgctxt "HTML5PermissionsDialog|"
-msgid "HTML5 Permissions"
-msgstr "HTML5 İzinleri"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:35
-msgctxt "HTML5PermissionsDialog|"
-msgid "Remove"
-msgstr "Kaldır"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:64
-msgctxt "HTML5PermissionsDialog|"
-msgid "Site"
-msgstr "Site"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:69
-msgctxt "HTML5PermissionsDialog|"
-msgid "Behaviour"
-msgstr "Davranış"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:79
-msgctxt "HTML5PermissionsDialog|"
-msgid "Permission for:"
-msgstr "Şunun için izin:"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:87
-msgctxt "HTML5PermissionsDialog|"
-msgid "Notifications"
-msgstr "Duyurular"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:92
-msgctxt "HTML5PermissionsDialog|"
-msgid "Geolocation"
-msgstr "Coğrafi Konum"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:97
-msgctxt "HTML5PermissionsDialog|"
-msgid "Microphone"
-msgstr "Mikrofon"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:102
-msgctxt "HTML5PermissionsDialog|"
-msgid "Camera"
-msgstr "Kamera"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:107
-msgctxt "HTML5PermissionsDialog|"
-msgid "Microphone and Camera"
-msgstr "Mikrofon ve Kamera"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:112
-msgctxt "HTML5PermissionsDialog|"
-msgid "Hide Pointer"
-msgstr "İmleci Gizle"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:117
-msgctxt "HTML5PermissionsDialog|"
-msgid "Display Capture"
-msgstr "Görüntü Yakala"
-
-#: lib/tools/html5permissions/html5permissionsdialog.ui:122
-msgctxt "HTML5PermissionsDialog|"
-msgid "Display and Audio Capture"
-msgstr "Görüntü ve Ses Yakala"
-
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
 msgid "this site"
@@ -5606,7 +5853,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Bu sayfanın ek iletişim kutuları oluşturmasını engelle"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:333
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5616,27 +5863,27 @@ msgstr ""
 "Falkon, <b>%1:</b> bağlantılarını açamaz. İstenilen bağlantı şu: <ul><li>%2</"
 "li></ul>Bu bağlantıyı bir sistem uygulamasıyla açmak ister misiniz?"
 
-#: lib/webengine/webpage.cpp:337
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Bu protokol için seçimimi anımsa"
 
-#: lib/webengine/webpage.cpp:338
+#: lib/webengine/webpage.cpp:339
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Dış Protokol Başvurusu"
 
-#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:419 lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Sayfa yüklenirken hata oluştu"
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Bu sayfayı yükleme sırasında bir şeyler ters gitti."
 
-#: lib/webengine/webpage.cpp:421
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -5644,27 +5891,27 @@ msgstr ""
 "Daha fazla belleği kullanıma açmak için sayfayı yeniden yüklemeyi veya "
 "birkaç sekmeyi kapatmayı deneyin."
 
-#: lib/webengine/webpage.cpp:422
+#: lib/webengine/webpage.cpp:423
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Sayfayı Yeniden Yükle"
 
-#: lib/webengine/webpage.cpp:483
+#: lib/webengine/webpage.cpp:511
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Dosya seç…"
 
-#: lib/webengine/webpage.cpp:487
+#: lib/webengine/webpage.cpp:515
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Dosya seç…"
 
-#: lib/webengine/webpage.cpp:623
+#: lib/webengine/webpage.cpp:651
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript uyarısı"
 
-#: lib/webengine/webpage.cpp:632
+#: lib/webengine/webpage.cpp:660
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Bu sayfanın ek iletişim kutuları oluşturmasını engelle"
@@ -5952,6 +6199,42 @@ msgstr "Ögeyi Denetle"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 — Falkon"
+
+#~ msgctxt "Preferences|"
+#~ msgid "Manage HTML5 permissions"
+#~ msgstr "HTML5 izinlerini yönet"
+
+#~ msgctxt "Preferences|"
+#~ msgid "<b>HTML5 Permissions</b>"
+#~ msgstr "<b>HTML5 İzinleri</b>"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "HTML5 Permissions"
+#~ msgstr "HTML5 İzinleri"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Remove"
+#~ msgstr "Kaldır"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Site"
+#~ msgstr "Site"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Permission for:"
+#~ msgstr "Şunun için izin:"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Notifications"
+#~ msgstr "Duyurular"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Display Capture"
+#~ msgstr "Görüntü Yakala"
+
+#~ msgctxt "HTML5PermissionsDialog|"
+#~ msgid "Display and Audio Capture"
+#~ msgstr "Görüntü ve Ses Yakala"
 
 #~ msgctxt "QObject|"
 #~ msgid "KB"
