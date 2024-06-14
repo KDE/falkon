@@ -3164,8 +3164,6 @@ msgstr "Medium"
 
 #: lib/other/siteinfo.ui:57
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
 msgstr "HTML5-løyve"
@@ -3219,8 +3217,6 @@ msgstr "<b>Førehandsvising</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Standard"
@@ -3232,16 +3228,12 @@ msgstr ""
 
 #: lib/other/siteinfopermissionitem.ui:69
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Tillat"
 
 #: lib/other/siteinfopermissionitem.ui:76
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Avvis"
@@ -3307,16 +3299,12 @@ msgstr "Meir …"
 
 #: lib/other/sitesettingsmanager.cpp:286
 #, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
 msgstr "Nullstill forstørring"
 
 #: lib/other/sitesettingsmanager.cpp:288
 #, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Infokapslar"
@@ -3324,64 +3312,48 @@ msgstr "Infokapslar"
 #: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
 #: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
 #, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
 msgstr "Ukjend storleik"
 
 #: lib/other/sitesettingsmanager.cpp:299
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Varslingar"
 
 #: lib/other/sitesettingsmanager.cpp:301
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Geografisk plassering"
 
 #: lib/other/sitesettingsmanager.cpp:303
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Mikrofon"
 
 #: lib/other/sitesettingsmanager.cpp:305
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Kamera"
 
 #: lib/other/sitesettingsmanager.cpp:307
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Mikrofon og kamera"
 
 #: lib/other/sitesettingsmanager.cpp:309
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
 msgstr "Gøym peikar"
 
 #: lib/other/sitesettingsmanager.cpp:311
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
 msgstr "Bilete av skjermen"
@@ -3393,64 +3365,48 @@ msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:324
 #, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
 msgstr "Last sida på nytt"
 
 #: lib/other/sitesettingsmanager.cpp:327
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
 msgstr "Tillat JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:329
 #, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
 msgstr "Opna sprettoppvindauge"
 
 #: lib/other/sitesettingsmanager.cpp:331
 #, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
 msgstr "Få tilgang til utklippstavla"
 
 #: lib/other/sitesettingsmanager.cpp:333
 #, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
 msgstr "Lima inn frå utklippstavla"
 
 #: lib/other/sitesettingsmanager.cpp:335
 #, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
 msgstr "Heva vindauge"
 
 #: lib/other/sitesettingsmanager.cpp:338
 #, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Lokal lagring"
 
 #: lib/other/sitesettingsmanager.cpp:340
 #, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
 msgstr "&Fullskjerm"
@@ -3462,16 +3418,12 @@ msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:344
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
 msgstr "Slå av automatisk videoavspeling"
 
 #: lib/other/sitesettingsmanager.cpp:347
 #, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
 msgstr "Tillat lagring av infokapslar"
@@ -3483,8 +3435,6 @@ msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:364
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Tillat"
@@ -3496,16 +3446,12 @@ msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:368
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Avvis"
 
 #: lib/other/sitesettingsmanager.cpp:370
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Standard"
@@ -4533,8 +4479,6 @@ msgstr "Bruk maskinvareakselerasjon (krev omstart)"
 
 #: lib/preferences/preferences.ui:1137
 #, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Tillat lagring av infokapslar"
@@ -4883,8 +4827,6 @@ msgstr "HTML5-løyve"
 
 #: lib/preferences/preferences.ui:2179
 #, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Innstillingar"
@@ -5090,32 +5032,24 @@ msgstr ""
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
 msgstr "Nettlesing"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
 msgstr "HTML5-løyve"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
 #, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Nettstad"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Åtferd"
@@ -5127,32 +5061,24 @@ msgstr ""
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Tillat"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Avvis"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Standard"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
 msgstr "Nettlesing"
@@ -6212,39 +6138,3 @@ msgstr "Gransk element"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 – Falkon"
-
-#~ msgctxt "Preferences|"
-#~ msgid "Manage HTML5 permissions"
-#~ msgstr "Handsam HTML5-løyve"
-
-#~ msgctxt "Preferences|"
-#~ msgid "<b>HTML5 Permissions</b>"
-#~ msgstr "<b>HTML5-løyve</b>"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "HTML5 Permissions"
-#~ msgstr "HTML5-løyve"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Remove"
-#~ msgstr "Fjern"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Site"
-#~ msgstr "Nettstad"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Permission for:"
-#~ msgstr "Løyve for:"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Notifications"
-#~ msgstr "Varslingar"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Display Capture"
-#~ msgstr "Skjermopptak"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Display and Audio Capture"
-#~ msgstr "Skjerm- og lydopptak"

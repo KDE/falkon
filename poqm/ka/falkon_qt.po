@@ -367,7 +367,7 @@ msgstr "ყოველთვის შეამოწმე Falkon-ის გ�
 #: lib/app/mainapplication.cpp:1113
 msgctxt "MainApplication|"
 msgid "Default Browser"
-msgstr "ნაგულისხმები ბრაუზერი"
+msgstr "ნაგულისხმევი ბრაუზერი"
 
 #: lib/app/mainapplication.cpp:1245
 msgctxt "MainApplication|"
@@ -729,7 +729,7 @@ msgid ""
 "default backend"
 msgstr ""
 "ამ უკანაბოლოს მთავარი პაროლის დაყენება სჭირდება! Falkon-ი უბრალოდ "
-"გადაერთვება ნაგულისხმებ უკანაბოლოზე"
+"გადაერთვება ნაგულისხმევ უკანაბოლოზე"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
 msgctxt "MasterPasswordDialog|"
@@ -2771,8 +2771,8 @@ msgid ""
 "You can't remove the default search engine.<br>Set a different engine as "
 "default before removing %1."
 msgstr ""
-"ძებნის ნაგულისხმები ძრავის წაშლა შეუძლებელია <br> %1-ის წაშლამდე "
-"ნაგულისხმებად სხვა ძრავის დაყენებაა საჭირო."
+"ძებნის ნაგულისხმევი ძრავის წაშლა შეუძლებელია <br> %1-ის წაშლამდე "
+"ნაგულისხმევად სხვა ძრავის დაყენებაა საჭირო."
 
 #: lib/opensearch/searchenginesdialog.cpp:107
 msgctxt "SearchEnginesDialog|"
@@ -2802,7 +2802,7 @@ msgstr "ჩასწორება"
 #: lib/opensearch/searchenginesdialog.ui:56
 msgctxt "SearchEnginesDialog|"
 msgid "Set as default"
-msgstr "ნაგულისხმებად დაყენება"
+msgstr "ნაგულისხმევად დაყენება"
 
 #: lib/opensearch/searchenginesdialog.ui:63
 msgctxt "SearchEnginesDialog|"
@@ -3164,12 +3164,9 @@ msgid "Media"
 msgstr "მედია"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML5 -ის წვდომები"
+msgstr "უფლებები"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3217,30 +3214,21 @@ msgid "<b>Preview</b>"
 msgstr "<b>ნიმუში</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
-msgstr "ნაგულისხმები"
+msgstr "ნაგულისხმევი"
 
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "კითხვა"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "დაშვება"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "უარყოფა"
@@ -3304,185 +3292,122 @@ msgid "More..."
 msgstr "მეტი..."
 
 #: lib/other/sitesettingsmanager.cpp:286
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "გადიდების დონის დაბრუნება"
+msgstr "გადიდების დონე"
 
 #: lib/other/sitesettingsmanager.cpp:288
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "ქუქიები"
 
 #: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
 #: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "უცნობი ზომა"
+msgstr "უცნობი"
 
 #: lib/other/sitesettingsmanager.cpp:299
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "გაფრთხილებები"
 
 #: lib/other/sitesettingsmanager.cpp:301
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "გეოლოკაცია"
 
 #: lib/other/sitesettingsmanager.cpp:303
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "მიკროფონი"
 
 #: lib/other/sitesettingsmanager.cpp:305
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "კამერა"
 
 #: lib/other/sitesettingsmanager.cpp:307
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "მიკროფონი და კამერა"
 
 #: lib/other/sitesettingsmanager.cpp:309
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "კურსორის დამალვა"
+msgstr "თაგუნას კურსორის დამალვა"
 
 #: lib/other/sitesettingsmanager.cpp:311
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "ეკრანის გადაღების დაშვება"
+msgstr "ეკრანის გადაღება"
 
 #: lib/other/sitesettingsmanager.cpp:313
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "ეკრანის გადაღება ხმით"
 
 #: lib/other/sitesettingsmanager.cpp:324
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "გვერდის გადატვირთვა"
+msgstr "გამოსახულებების ავტოჩატვირთვა"
 
 #: lib/other/sitesettingsmanager.cpp:327
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
 msgstr "JavaScript-ის ჩართვა"
 
 #: lib/other/sitesettingsmanager.cpp:329
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "მხტუნარა ფანჯრებისგახსნა"
+msgstr "JavaScript: მხტუნარა ფანჯრების გახსნა"
 
 #: lib/other/sitesettingsmanager.cpp:331
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "ბუფერთან წვდომა"
+msgstr "JavaScript: ბუფერთან წვდომა"
 
 #: lib/other/sitesettingsmanager.cpp:333
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "გაცვლის ბუფერიდან ჩასმა"
+msgstr "JavaScript: ბუფერიდან ჩასმა"
 
 #: lib/other/sitesettingsmanager.cpp:335
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "ფანჯრების აქტივაცია"
+msgstr "JavaScript: ფანჯრების აქტივაცია"
 
 #: lib/other/sitesettingsmanager.cpp:338
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "ლოკალური საცავი"
 
 #: lib/other/sitesettingsmanager.cpp:340
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&მთელ ეკრანზე"
+msgstr "სრული ეკრანის მხარდაჭერა"
 
 #: lib/other/sitesettingsmanager.cpp:342
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "დაუცველი შემცველობის გაშვება"
 
 #: lib/other/sitesettingsmanager.cpp:344
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "ვიდეოების ავტომატური დაკვრის გამორთვა"
+msgstr "ვიდეოების ავტომატური დაკვრა"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "ქუქიების დამახსოვრების ჩართვა"
+msgstr "ტილოდან წაკითხვის დაშვება"
 
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "ნაძალადევი მუქი რეჟიმი"
 
 #: lib/other/sitesettingsmanager.cpp:364
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "დაშვება"
@@ -3490,23 +3415,17 @@ msgstr "დაშვება"
 #: lib/other/sitesettingsmanager.cpp:366
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "კითხვა"
 
 #: lib/other/sitesettingsmanager.cpp:368
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "უარყოფა"
 
 #: lib/other/sitesettingsmanager.cpp:370
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
-msgstr "ნაგულისხმები"
+msgstr "ნაგულისხმევი"
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
@@ -3941,12 +3860,12 @@ msgstr "დარწმუნებული ბრძანდებით, რ
 #: lib/preferences/preferences.cpp:154 lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "Default"
-msgstr "ნაგულისხმები"
+msgstr "ნაგულისხმევი"
 
 #: lib/preferences/preferences.cpp:158
 msgctxt "Preferences|"
 msgid "Set as default"
-msgstr "ნაგულისხმებად დაყენება"
+msgstr "ნაგულისხმევად დაყენება"
 
 #: lib/preferences/preferences.cpp:313
 #, qt-format
@@ -4206,7 +4125,7 @@ msgstr "ჩანართები არ ჩაიტვირთება, �
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
 msgstr ""
-"გაშვებისას შემოწმება, არის თუ არა Falkon-ი თქვენი ნაგულისხმები ბრაუზერი"
+"გაშვებისას შემოწმება, არის თუ არა Falkon-ი თქვენი ნაგულისხმევი ბრაუზერი"
 
 #: lib/preferences/preferences.ui:464
 msgctxt "Preferences|"
@@ -4400,7 +4319,7 @@ msgstr "მისამართების ზოლიდან ძებნ�
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
-msgstr "ნაგულისხმებ საძიებო სისტემაში მოძებნა"
+msgstr "ნაგულისხმევ საძიებო სისტემაში მოძებნა"
 
 #: lib/preferences/preferences.ui:873
 msgctxt "Preferences|"
@@ -4532,17 +4451,14 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "აპარატურული აჩქარების გამოყენება (საჭიროებს გადატვირთვას)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "ქუქიების დამახსოვრების ჩართვა"
+msgstr "ტილოდან წაკითხვის დაშვება"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "ნაძალადევი მუქი რეჟიმი"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
@@ -4557,7 +4473,7 @@ msgstr "ხაზი გვერდზე"
 #: lib/preferences/preferences.ui:1192
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
-msgstr "გვერდის ნაგულისხმები გადიდება: "
+msgstr "გვერდის ნაგულისხმევი გადიდება: "
 
 #: lib/preferences/preferences.ui:1231
 msgctxt "Preferences|"
@@ -4707,7 +4623,7 @@ msgstr "ფონტის ფიქსირებული ზომა"
 #: lib/preferences/preferences.ui:1690
 msgctxt "Preferences|"
 msgid "Default Font Size"
-msgstr "ფონტის ნაგულისხმები ზომა"
+msgstr "ფონტის ნაგულისხმევი ზომა"
 
 #: lib/preferences/preferences.ui:1717
 msgctxt "Preferences|"
@@ -4875,15 +4791,12 @@ msgstr "<b>სხვა</b>"
 #: lib/preferences/preferences.ui:2169
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
-msgstr "HTML5 -ის წვდომები"
+msgstr "HTML5-ის უფლებები"
 
 #: lib/preferences/preferences.ui:2179
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "მორგება"
+msgstr "საიტის მორგება"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
@@ -5084,33 +4997,21 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "ცვლილებები ძალაში Falkon-ის გადატვირთვის შემდეგ შევა."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "არჩევა"
+msgstr "დათვალიერება"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML5 -ის წვდომები"
+msgstr "საიტის უფლებები"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "საიტი"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "ქცევა"
@@ -5118,39 +5019,27 @@ msgstr "ქცევა"
 #: lib/preferences/sitesettingsbrowsedialog.ui:45
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "კითხვა"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "დაშვება"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "უარყოფა"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
-msgstr "ნაგულისხმები"
+msgstr "ნაგულისხმევი"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "არჩევა"
+msgstr "დათვალიერება"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -5370,7 +5259,7 @@ msgstr "მარქაფი 2"
 #: lib/session/sessionmanager.cpp:291
 msgctxt "SessionManager|"
 msgid "Default Session"
-msgstr "ნაგულისხმები სესია"
+msgstr "ნაგულისხმევი სესია"
 
 #: lib/session/sessionmanager.cpp:394
 msgctxt "SessionManager|"

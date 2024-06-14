@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2024-04-03 11:02+0200\n"
+"PO-Revision-Date: 2024-06-13 16:23+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -136,7 +136,7 @@ msgstr "Configureu AdBlock"
 #: lib/adblock/adblockdialog.ui:20
 msgctxt "AdBlockDialog|"
 msgid "Enable AdBlock"
-msgstr "Habilita AdBlock"
+msgstr "Activa AdBlock"
 
 #: lib/adblock/adblockdialog.ui:32
 msgctxt "AdBlockDialog|"
@@ -166,12 +166,12 @@ msgstr "Icona d'AdBlock"
 #: lib/adblock/adblockicon.cpp:86
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled"
-msgstr "AdBlock està inhabilitat"
+msgstr "AdBlock està desactivat"
 
 #: lib/adblock/adblockicon.cpp:92
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled on this site "
-msgstr "AdBlock està inhabilitat en este lloc web"
+msgstr "AdBlock està desactivat en este lloc web"
 
 #: lib/adblock/adblockicon.cpp:98
 msgctxt "AdBlockIcon|"
@@ -187,12 +187,12 @@ msgstr "Mostra la &configuració d'AdBlock"
 #, qt-format
 msgctxt "AdBlockIcon|"
 msgid "Disable on %1"
-msgstr "Inhabilita a %1"
+msgstr "Desactiva a %1"
 
 #: lib/adblock/adblockicon.cpp:159
 msgctxt "AdBlockIcon|"
 msgid "Disable only on this page"
-msgstr "Inhabilita només en esta pàgina"
+msgstr "Desactiva només en esta pàgina"
 
 #: lib/adblock/adblockmanager.cpp:184
 #, qt-format
@@ -1497,7 +1497,7 @@ msgid ""
 "disabled saving cookies)"
 msgstr ""
 "Les galetes d'estos servidors s'acceptaran SEMPRE (encara que s'haja "
-"inhabilitat l'emmagatzematge de galetes)"
+"desactivat l'emmagatzematge de galetes)"
 
 #: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
 msgctxt "CookieManager|"
@@ -2407,7 +2407,7 @@ msgstr "Carrega el títol des de la pàgina"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:220
 msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
-msgstr "SpeedDial necessita JavaScript habilitat."
+msgstr "SpeedDial necessita JavaScript activat."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:221
 msgctxt "FalkonSchemeReply|"
@@ -2547,7 +2547,7 @@ msgstr "Restaura"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:273
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
-msgstr "Necessita JavaScript habilitat."
+msgstr "Necessita JavaScript activat."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:289
 #: lib/network/schemehandlers/falkonschemehandler.cpp:290
@@ -2667,14 +2667,14 @@ msgstr "Temes"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
-msgstr "<b>Habilitat</b>"
+msgstr "<b>Activat</b>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:340
 #: lib/network/schemehandlers/falkonschemehandler.cpp:347
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
-msgstr "Inhabilitat"
+msgstr "Desactivat"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:354
 msgctxt "FalkonSchemeReply|"
@@ -3170,12 +3170,9 @@ msgid "Media"
 msgstr "Multimèdia"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "Permisos d'HTML5"
+msgstr "Permisos"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3223,9 +3220,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Previsualització</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Predeterminat"
@@ -3233,20 +3227,14 @@ msgstr "Predeterminat"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Pregunta"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Permet"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Denega"
@@ -3310,185 +3298,122 @@ msgid "More..."
 msgstr "Més…"
 
 #: lib/other/sitesettingsmanager.cpp:286
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Reinici del nivell de zoom"
+msgstr "Nivell de zoom"
 
 #: lib/other/sitesettingsmanager.cpp:288
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Galetes"
 
 #: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
 #: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Mida desconeguda"
+msgstr "Desconegut"
 
 #: lib/other/sitesettingsmanager.cpp:299
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Notificacions"
 
 #: lib/other/sitesettingsmanager.cpp:301
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Geolocalització"
 
 #: lib/other/sitesettingsmanager.cpp:303
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Micròfon"
 
 #: lib/other/sitesettingsmanager.cpp:305
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Càmera"
 
 #: lib/other/sitesettingsmanager.cpp:307
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Micròfon i càmera"
 
 #: lib/other/sitesettingsmanager.cpp:309
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Oculta el punter"
+msgstr "Oculta el punter del ratolí"
 
 #: lib/other/sitesettingsmanager.cpp:311
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "Activa la captura de la pantalla"
+msgstr "Captura de pantalla"
 
 #: lib/other/sitesettingsmanager.cpp:313
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Captura de pantalla amb àudio"
 
 #: lib/other/sitesettingsmanager.cpp:324
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Torna a carregar la pàgina"
+msgstr "Carrega automàticament les imatges"
 
 #: lib/other/sitesettingsmanager.cpp:327
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Permet JavaScript"
+msgstr "Activa JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:329
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Obri les finestres emergents"
+msgstr "JavaScript: Obri les finestres emergents"
 
 #: lib/other/sitesettingsmanager.cpp:331
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Accedix al porta-retalls"
+msgstr "JavaScript: Accedix al porta-retalls"
 
 #: lib/other/sitesettingsmanager.cpp:333
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Apega des del porta-retalls"
+msgstr "JavaScript: Apega des del porta-retalls"
 
 #: lib/other/sitesettingsmanager.cpp:335
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Finestres actives"
+msgstr "JavaScript: Activa les finestres"
 
 #: lib/other/sitesettingsmanager.cpp:338
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Emmagatzematge local"
 
 #: lib/other/sitesettingsmanager.cpp:340
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&Pantalla completa"
+msgstr "Suport de pantalla completa"
 
 #: lib/other/sitesettingsmanager.cpp:342
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Executa contingut insegur"
 
 #: lib/other/sitesettingsmanager.cpp:344
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Inhabilita la reproducció automàtica dels vídeos"
+msgstr "Reproducció automàtica dels vídeos"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Permet emmagatzemar les galetes"
+msgstr "Permet llegir des del llenç"
 
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Força el mode fosc"
 
 #: lib/other/sitesettingsmanager.cpp:364
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Permet"
@@ -3496,20 +3421,14 @@ msgstr "Permet"
 #: lib/other/sitesettingsmanager.cpp:366
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Pregunta"
 
 #: lib/other/sitesettingsmanager.cpp:368
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Denega"
 
 #: lib/other/sitesettingsmanager.cpp:370
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Predeterminat"
@@ -4245,7 +4164,7 @@ msgstr "Mostra la barra d'eines de navegació"
 #: lib/preferences/preferences.ui:545
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
-msgstr "Habilita la barra d'eines de les adreces d'interés instantània"
+msgstr "Activa la barra d'eines de les adreces d'interés instantània"
 
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
@@ -4360,7 +4279,7 @@ msgstr "Res"
 #: lib/preferences/preferences.ui:814
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
-msgstr "Habilita els suggeriments"
+msgstr "Activa els suggeriments"
 
 #: lib/preferences/preferences.ui:821
 msgctxt "Preferences|"
@@ -4398,7 +4317,7 @@ msgstr "Selecciona tot el text fent clic en la barra d'adreces"
 #: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
-msgstr "Habilita la busca automàtica des de la barra d'adreces"
+msgstr "Activa la busca automàtica des de la barra d'adreces"
 
 #: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
@@ -4488,7 +4407,7 @@ msgstr "Inclou enllaços en la cadena del focus"
 #: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
-msgstr "Habilita auditories XSS"
+msgstr "Activa auditories XSS"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
 #: lib/preferences/preferences.ui:1074
@@ -4504,7 +4423,7 @@ msgstr "Desplaçament animat"
 #: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
-msgstr "Habilita la navegació espacial"
+msgstr "Activa la navegació espacial"
 
 #: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
@@ -4514,7 +4433,7 @@ msgstr "Utilitza les barres de desplaçament natives"
 #: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
-msgstr "Inhabilita la reproducció automàtica dels vídeos"
+msgstr "Desactiva la reproducció automàtica dels vídeos"
 
 #: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
@@ -4524,7 +4443,7 @@ msgstr "Evita que WebRTC fracasse amb l'adreça IP local"
 #: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
-msgstr "Habilita la precàrrega dels DNS"
+msgstr "Activa la precàrrega dels DNS"
 
 #: lib/preferences/preferences.ui:1123
 msgctxt "Preferences|"
@@ -4537,17 +4456,14 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Utilitza l'acceleració de maquinari (requerix reiniciar)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Permet emmagatzemar les galetes"
+msgstr "Permet llegir des del llenç"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Força el mode fosc"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
@@ -4883,12 +4799,9 @@ msgid "HTML5 Permissions"
 msgstr "Permisos d'HTML5"
 
 #: lib/preferences/preferences.ui:2179
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Configuració"
+msgstr "Configureu el lloc"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
@@ -4951,7 +4864,7 @@ msgstr "<b>Opcions del corrector ortogràfic</b>"
 #: lib/preferences/preferences.ui:2446
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
-msgstr "Habilita el corrector ortogràfic"
+msgstr "Activa el corrector ortogràfic"
 
 #: lib/preferences/preferences.ui:2453
 msgctxt "Preferences|"
@@ -5090,33 +5003,21 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "Els canvis s'efectuaran després de reiniciar Falkon."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
 msgstr "Navegueu"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "Permisos d'HTML5"
+msgstr "Permisos del lloc"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Lloc"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Comportament"
@@ -5124,36 +5025,24 @@ msgstr "Comportament"
 #: lib/preferences/sitesettingsbrowsedialog.ui:45
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Pregunta"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Permet"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Denega"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Predeterminat"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
 msgstr "Navegueu"
@@ -5283,7 +5172,7 @@ msgstr "Canvia de nom la sessió"
 #: lib/session/sessionmanager.cpp:129
 msgctxt "SessionManager|"
 msgid "Please enter a new name:"
-msgstr "Per favor, escriviu un nom nou:"
+msgstr "Escriviu un nom nou:"
 
 #: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:144
 #: lib/session/sessionmanager.cpp:149 lib/session/sessionmanager.cpp:171
@@ -5297,7 +5186,7 @@ msgstr "Error!"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "The session file \"%1\" exists. Please enter another name."
-msgstr "El fitxer de sessió «%1» ja existix. Per favor, escriviu-ne un altre."
+msgstr "El fitxer de sessió «%1» ja existix. Escriviu-ne un altre."
 
 #: lib/session/sessionmanager.cpp:144
 msgctxt "SessionManager|"
@@ -5317,7 +5206,7 @@ msgstr "Guarda la sessió"
 #: lib/session/sessionmanager.cpp:163
 msgctxt "SessionManager|"
 msgid "Please enter a name to save session:"
-msgstr "Per favor, escriviu un nom per a guardar la sessió:"
+msgstr "Escriviu un nom per a guardar la sessió:"
 
 #: lib/session/sessionmanager.cpp:164
 #, qt-format
@@ -5354,7 +5243,7 @@ msgstr "Sessió nova"
 #: lib/session/sessionmanager.cpp:211
 msgctxt "SessionManager|"
 msgid "Please enter a name to create new session:"
-msgstr "Per favor, escriviu un nom per a crear la sessió nova:"
+msgstr "Escriviu un nom per a crear la sessió nova:"
 
 #: lib/session/sessionmanager.cpp:212
 #, qt-format
@@ -6212,39 +6101,3 @@ msgstr "Inspecciona l'element"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "Preferences|"
-#~ msgid "Manage HTML5 permissions"
-#~ msgstr "Gestiona els permisos d'HTML5"
-
-#~ msgctxt "Preferences|"
-#~ msgid "<b>HTML5 Permissions</b>"
-#~ msgstr "<b>Permisos d'HTML5</b>"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "HTML5 Permissions"
-#~ msgstr "Permisos d'HTML5"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Remove"
-#~ msgstr "Elimina"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Site"
-#~ msgstr "Lloc"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Permission for:"
-#~ msgstr "Permisos per a:"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Notifications"
-#~ msgstr "Notificacions"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Display Capture"
-#~ msgstr "Mostra la captura"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Display and Audio Capture"
-#~ msgstr "Mostra la captura i l'àudio"
