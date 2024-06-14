@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2024-04-03 11:02+0200\n"
+"PO-Revision-Date: 2024-06-13 16:23+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -136,7 +136,7 @@ msgstr "Configureu AdBlock"
 #: lib/adblock/adblockdialog.ui:20
 msgctxt "AdBlockDialog|"
 msgid "Enable AdBlock"
-msgstr "Habilita AdBlock"
+msgstr "Activa AdBlock"
 
 #: lib/adblock/adblockdialog.ui:32
 msgctxt "AdBlockDialog|"
@@ -166,12 +166,12 @@ msgstr "Icona d'AdBlock"
 #: lib/adblock/adblockicon.cpp:86
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled"
-msgstr "AdBlock està inhabilitat"
+msgstr "AdBlock està desactivat"
 
 #: lib/adblock/adblockicon.cpp:92
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled on this site "
-msgstr "AdBlock està inhabilitat en este lloc web"
+msgstr "AdBlock està desactivat en este lloc web"
 
 #: lib/adblock/adblockicon.cpp:98
 msgctxt "AdBlockIcon|"
@@ -187,12 +187,12 @@ msgstr "Mostra la &configuració d'AdBlock"
 #, qt-format
 msgctxt "AdBlockIcon|"
 msgid "Disable on %1"
-msgstr "Inhabilita a %1"
+msgstr "Desactiva a %1"
 
 #: lib/adblock/adblockicon.cpp:159
 msgctxt "AdBlockIcon|"
 msgid "Disable only on this page"
-msgstr "Inhabilita només en esta pàgina"
+msgstr "Desactiva només en esta pàgina"
 
 #: lib/adblock/adblockmanager.cpp:184
 #, qt-format
@@ -1497,7 +1497,7 @@ msgid ""
 "disabled saving cookies)"
 msgstr ""
 "Les galetes d'estos servidors s'acceptaran SEMPRE (encara que s'haja "
-"inhabilitat l'emmagatzematge de galetes)"
+"desactivat l'emmagatzematge de galetes)"
 
 #: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
 msgctxt "CookieManager|"
@@ -2407,7 +2407,7 @@ msgstr "Carrega el títol des de la pàgina"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:220
 msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
-msgstr "SpeedDial necessita JavaScript habilitat."
+msgstr "SpeedDial necessita JavaScript activat."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:221
 msgctxt "FalkonSchemeReply|"
@@ -2547,7 +2547,7 @@ msgstr "Restaura"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:273
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
-msgstr "Necessita JavaScript habilitat."
+msgstr "Necessita JavaScript activat."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:289
 #: lib/network/schemehandlers/falkonschemehandler.cpp:290
@@ -2667,14 +2667,14 @@ msgstr "Temes"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
-msgstr "<b>Habilitat</b>"
+msgstr "<b>Activat</b>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:340
 #: lib/network/schemehandlers/falkonschemehandler.cpp:347
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
-msgstr "Inhabilitat"
+msgstr "Desactivat"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:354
 msgctxt "FalkonSchemeReply|"
@@ -4003,7 +4003,7 @@ msgstr "Mostra la barra d'eines de navegació"
 #: lib/preferences/preferences.ui:531
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
-msgstr "Habilita la barra d'eines de les adreces d'interés instantània"
+msgstr "Activa la barra d'eines de les adreces d'interés instantània"
 
 #: lib/preferences/preferences.ui:553
 msgctxt "Preferences|"
@@ -4118,7 +4118,7 @@ msgstr "Res"
 #: lib/preferences/preferences.ui:800
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
-msgstr "Habilita els suggeriments"
+msgstr "Activa els suggeriments"
 
 #: lib/preferences/preferences.ui:807
 msgctxt "Preferences|"
@@ -4156,7 +4156,7 @@ msgstr "Selecciona tot el text fent clic en la barra d'adreces"
 #: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
-msgstr "Habilita la busca automàtica des de la barra d'adreces"
+msgstr "Activa la busca automàtica des de la barra d'adreces"
 
 #: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
@@ -4246,7 +4246,7 @@ msgstr "Inclou enllaços en la cadena del focus"
 #: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
-msgstr "Habilita auditories XSS"
+msgstr "Activa auditories XSS"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
 #: lib/preferences/preferences.ui:1060
@@ -4262,7 +4262,7 @@ msgstr "Desplaçament animat"
 #: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
-msgstr "Habilita la navegació espacial"
+msgstr "Activa la navegació espacial"
 
 #: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
@@ -4272,7 +4272,7 @@ msgstr "Utilitza les barres de desplaçament natives"
 #: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
-msgstr "Inhabilita la reproducció automàtica dels vídeos"
+msgstr "Desactiva la reproducció automàtica dels vídeos"
 
 #: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
@@ -4282,7 +4282,7 @@ msgstr "Evita que WebRTC fracasse amb l'adreça IP local"
 #: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
-msgstr "Habilita la precàrrega dels DNS"
+msgstr "Activa la precàrrega dels DNS"
 
 #: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
@@ -4698,7 +4698,7 @@ msgstr "<b>Opcions del corrector ortogràfic</b>"
 #: lib/preferences/preferences.ui:2411
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
-msgstr "Habilita el corrector ortogràfic"
+msgstr "Activa el corrector ortogràfic"
 
 #: lib/preferences/preferences.ui:2418
 msgctxt "Preferences|"
@@ -4961,7 +4961,7 @@ msgstr "Canvia de nom la sessió"
 #: lib/session/sessionmanager.cpp:129
 msgctxt "SessionManager|"
 msgid "Please enter a new name:"
-msgstr "Per favor, escriviu un nom nou:"
+msgstr "Escriviu un nom nou:"
 
 #: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:144
 #: lib/session/sessionmanager.cpp:149 lib/session/sessionmanager.cpp:171
@@ -4975,7 +4975,7 @@ msgstr "Error!"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "The session file \"%1\" exists. Please enter another name."
-msgstr "El fitxer de sessió «%1» ja existix. Per favor, escriviu-ne un altre."
+msgstr "El fitxer de sessió «%1» ja existix. Escriviu-ne un altre."
 
 #: lib/session/sessionmanager.cpp:144
 msgctxt "SessionManager|"
@@ -4995,7 +4995,7 @@ msgstr "Guarda la sessió"
 #: lib/session/sessionmanager.cpp:163
 msgctxt "SessionManager|"
 msgid "Please enter a name to save session:"
-msgstr "Per favor, escriviu un nom per a guardar la sessió:"
+msgstr "Escriviu un nom per a guardar la sessió:"
 
 #: lib/session/sessionmanager.cpp:164
 #, qt-format
@@ -5032,7 +5032,7 @@ msgstr "Sessió nova"
 #: lib/session/sessionmanager.cpp:211
 msgctxt "SessionManager|"
 msgid "Please enter a name to create new session:"
-msgstr "Per favor, escriviu un nom per a crear la sessió nova:"
+msgstr "Escriviu un nom per a crear la sessió nova:"
 
 #: lib/session/sessionmanager.cpp:212
 #, qt-format

@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2024-04-03 11:02+0200\n"
+"PO-Revision-Date: 2024-06-13 16:23+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -136,7 +136,7 @@ msgstr "Configuració de l'AdBlock"
 #: lib/adblock/adblockdialog.ui:20
 msgctxt "AdBlockDialog|"
 msgid "Enable AdBlock"
-msgstr "Habilita l'AdBlock"
+msgstr "Activa l'AdBlock"
 
 #: lib/adblock/adblockdialog.ui:32
 msgctxt "AdBlockDialog|"
@@ -166,12 +166,12 @@ msgstr "Icona d'AdBlock"
 #: lib/adblock/adblockicon.cpp:86
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled"
-msgstr "AdBlock està inhabilitat"
+msgstr "AdBlock està desactivat"
 
 #: lib/adblock/adblockicon.cpp:92
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled on this site "
-msgstr "AdBlock està inhabilitat en aquest lloc web"
+msgstr "AdBlock està desactivat en aquest lloc web"
 
 #: lib/adblock/adblockicon.cpp:98
 msgctxt "AdBlockIcon|"
@@ -187,12 +187,12 @@ msgstr "Mostra la &configuració de l'AdBlock"
 #, qt-format
 msgctxt "AdBlockIcon|"
 msgid "Disable on %1"
-msgstr "Inhabilita a %1"
+msgstr "Desactiva a %1"
 
 #: lib/adblock/adblockicon.cpp:159
 msgctxt "AdBlockIcon|"
 msgid "Disable only on this page"
-msgstr "Inhabilita només en aquesta pàgina"
+msgstr "Desactiva només en aquesta pàgina"
 
 #: lib/adblock/adblockmanager.cpp:184
 #, qt-format
@@ -1404,9 +1404,7 @@ msgstr "Ja es troba a la llista negra!"
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
-msgstr ""
-"El servidor «%1» ja es troba a la llista negra; si us plau, primer elimineu-"
-"lo."
+msgstr "El servidor «%1» ja es troba a la llista negra; primer elimineu-lo."
 
 #: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
@@ -1422,9 +1420,7 @@ msgstr "Ja es troba a la llista blanca!"
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
-msgstr ""
-"El servidor «%1» ja es troba a la llista blanca; si us plau, primer elimineu-"
-"lo."
+msgstr "El servidor «%1» ja es troba a la llista blanca; primer elimineu-lo."
 
 #: lib/cookies/cookiemanager.ui:14
 msgctxt "CookieManager|"
@@ -1503,7 +1499,7 @@ msgid ""
 "disabled saving cookies)"
 msgstr ""
 "Les galetes d'aquests servidors s'acceptaran SEMPRE (encara que s'hagi "
-"inhabilitat l'emmagatzematge de galetes)"
+"desactivat l'emmagatzematge de galetes)"
 
 #: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
 msgctxt "CookieManager|"
@@ -2414,7 +2410,7 @@ msgstr "Carrega el títol des de la pàgina"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:220
 msgctxt "FalkonSchemeReply|"
 msgid "SpeedDial requires enabled JavaScript."
-msgstr "SpeedDial necessita el JavaScript habilitat."
+msgstr "SpeedDial necessita el JavaScript activat."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:221
 msgctxt "FalkonSchemeReply|"
@@ -2554,7 +2550,7 @@ msgstr "Restaura"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:273
 msgctxt "FalkonSchemeReply|"
 msgid "Requires enabled JavaScript."
-msgstr "Necessita el JavaScript habilitat."
+msgstr "Necessita el JavaScript activat."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:289
 #: lib/network/schemehandlers/falkonschemehandler.cpp:290
@@ -2674,14 +2670,14 @@ msgstr "Temes"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "<b>Enabled</b>"
-msgstr "<b>Habilitat</b>"
+msgstr "<b>Activat</b>"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:340
 #: lib/network/schemehandlers/falkonschemehandler.cpp:347
 #: lib/network/schemehandlers/falkonschemehandler.cpp:351
 msgctxt "FalkonSchemeReply|"
 msgid "Disabled"
-msgstr "Inhabilitat"
+msgstr "Desactivat"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:354
 msgctxt "FalkonSchemeReply|"
@@ -4010,7 +4006,7 @@ msgstr "Mostra la barra d'eines de navegació"
 #: lib/preferences/preferences.ui:531
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
-msgstr "Habilita la barra d'eines de les adreces d'interès instantània"
+msgstr "Activa la barra d'eines de les adreces d'interès instantània"
 
 #: lib/preferences/preferences.ui:553
 msgctxt "Preferences|"
@@ -4125,7 +4121,7 @@ msgstr "Res"
 #: lib/preferences/preferences.ui:800
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
-msgstr "Habilita els suggeriments"
+msgstr "Activa els suggeriments"
 
 #: lib/preferences/preferences.ui:807
 msgctxt "Preferences|"
@@ -4163,7 +4159,7 @@ msgstr "Selecciona tot el text en fer clic a la barra d'adreces"
 #: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
-msgstr "Habilita la cerca automàtica des de la barra d'adreces"
+msgstr "Activa la cerca automàtica des de la barra d'adreces"
 
 #: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
@@ -4253,7 +4249,7 @@ msgstr "Inclou enllaços a la cadena del focus"
 #: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Enable XSS Auditing"
-msgstr "Habilita auditories XSS"
+msgstr "Activa auditories XSS"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
 #: lib/preferences/preferences.ui:1060
@@ -4269,7 +4265,7 @@ msgstr "Desplaçament animat"
 #: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
-msgstr "Habilita la navegació espacial"
+msgstr "Activa la navegació espacial"
 
 #: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
@@ -4279,7 +4275,7 @@ msgstr "Usa les barres de desplaçament natives"
 #: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
-msgstr "Inhabilita la reproducció automàtica dels vídeos"
+msgstr "Desactiva la reproducció automàtica dels vídeos"
 
 #: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
@@ -4289,7 +4285,7 @@ msgstr "Evita que el WebRTC fracassi amb l'adreça IP local"
 #: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
-msgstr "Habilita la precàrrega dels DNS"
+msgstr "Activa la precàrrega dels DNS"
 
 #: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
@@ -4705,7 +4701,7 @@ msgstr "<b>Opcions del corrector ortogràfic</b>"
 #: lib/preferences/preferences.ui:2411
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
-msgstr "Habilita el corrector ortogràfic"
+msgstr "Activa el corrector ortogràfic"
 
 #: lib/preferences/preferences.ui:2418
 msgctxt "Preferences|"
@@ -4968,7 +4964,7 @@ msgstr "Canvia de nom la sessió"
 #: lib/session/sessionmanager.cpp:129
 msgctxt "SessionManager|"
 msgid "Please enter a new name:"
-msgstr "Si us plau, escriviu un nom nou:"
+msgstr "Escriviu un nom nou:"
 
 #: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:144
 #: lib/session/sessionmanager.cpp:149 lib/session/sessionmanager.cpp:171
@@ -4982,8 +4978,7 @@ msgstr "Error!"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "The session file \"%1\" exists. Please enter another name."
-msgstr ""
-"El fitxer de sessió «%1» ja existeix. Si us plau, escriviu-ne un altre."
+msgstr "El fitxer de sessió «%1» ja existeix. Escriviu-ne un altre."
 
 #: lib/session/sessionmanager.cpp:144
 msgctxt "SessionManager|"
@@ -5003,7 +4998,7 @@ msgstr "Desa la sessió"
 #: lib/session/sessionmanager.cpp:163
 msgctxt "SessionManager|"
 msgid "Please enter a name to save session:"
-msgstr "Si us plau, escriviu un nom per a desar la sessió:"
+msgstr "Escriviu un nom per a desar la sessió:"
 
 #: lib/session/sessionmanager.cpp:164
 #, qt-format
@@ -5040,7 +5035,7 @@ msgstr "Sessió nova"
 #: lib/session/sessionmanager.cpp:211
 msgctxt "SessionManager|"
 msgid "Please enter a name to create new session:"
-msgstr "Si us plau, escriviu un nom per a crear la sessió nova:"
+msgstr "Escriviu un nom per a crear la sessió nova:"
 
 #: lib/session/sessionmanager.cpp:212
 #, qt-format
@@ -5066,7 +5061,7 @@ msgstr "Sessió per defecte"
 #: lib/session/sessionmanager.cpp:394
 msgctxt "SessionManager|"
 msgid "Please select the startup session:"
-msgstr "Si us plau, seleccioneu una sessió d'inici:"
+msgstr "Seleccioneu una sessió d'inici:"
 
 #: lib/session/sessionmanager.cpp:413
 #, qt-format
@@ -5382,7 +5377,7 @@ msgid ""
 "Please install latest version of Falkon."
 msgstr ""
 "Les dades han estat encriptades amb la nova versió del Falkon.\n"
-"Si us plau, instal·leu l'última versió del Falkon."
+"Instal·leu l'última versió del Falkon."
 
 #: lib/tools/certificateinfowidget.cpp:300
 msgctxt "QObject|"
