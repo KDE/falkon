@@ -103,15 +103,6 @@ void WebInspector::unregisterView(QWebEngineView *view)
 
 void WebInspector::loadFinished()
 {
-    // Show close button only when docked
-    if (!isWindow()) {
-        page()->runJavaScript(QL1S("var button = Components.dockController._closeButton;"
-                                   "button.setVisible(true);"
-                                   "button.element.onmouseup = function() {"
-                                   "    window.close();"
-                                   "};"));
-    }
-
     // Inspect element
     if (m_inspectElement) {
         m_view->triggerPageAction(QWebEnginePage::InspectElement);
