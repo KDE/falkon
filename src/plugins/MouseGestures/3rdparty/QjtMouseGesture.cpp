@@ -48,7 +48,7 @@ QjtMouseGesture::~QjtMouseGesture()
 
 void QjtMouseGesture::emitGestured()
 {
-    Q_EMIT(gestured());
+    Q_EMIT gestured();
 }
 
 const DirectionList QjtMouseGesture::directions() const
