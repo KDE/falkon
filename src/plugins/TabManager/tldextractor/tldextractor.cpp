@@ -249,7 +249,7 @@ void TLDExtractor::loadData()
     for (const QString &path : std::as_const(m_dataSearchPaths)) {
         dataFileName = QFileInfo(path + QLatin1String("/effective_tld_names.dat")).absoluteFilePath();
 
-        if (QFileInfo(dataFileName).exists()) {
+        if (QFileInfo::exists(dataFileName)) {
             parsedDataFileExist = true;
             break;
         }
@@ -352,7 +352,7 @@ bool TLDExtractor::test()
     for (const QString &path : std::as_const(m_dataSearchPaths)) {
         testDataFileName = QFileInfo(path + QLatin1String("/test_psl.txt")).absoluteFilePath();
 
-        if (QFileInfo(testDataFileName).exists()) {
+        if (QFileInfo::exists(testDataFileName)) {
             testDataFileExist = true;
             break;
         }

@@ -296,7 +296,7 @@ void QzToolsTest::copyRecursivelyTest()
     const QString testDir = createPath("copyRecursivelyTest");
     createTestDirectoryStructure(testDir);
 
-    QVERIFY(!QFileInfo(testDir + QSL("-copy")).exists());
+    QVERIFY(!QFileInfo::exists(testDir + QSL("-copy")));
 
     // Copy to non-existent target
     QCOMPARE(QzTools::copyRecursively(testDir, testDir + QSL("-copy")), true);
@@ -331,7 +331,7 @@ void QzToolsTest::removeRecursivelyTest()
 
     QCOMPARE(QzTools::copyRecursively(testDir, testDir + QSL("-copy")), true);
     QCOMPARE(QzTools::removeRecursively(testDir + QSL("-copy")), true);
-    QCOMPARE(QFileInfo(testDir + QSL("-copy")).exists(), false);
+    QCOMPARE(QFileInfo::exists(testDir + QSL("-copy")), false);
 
     // Remove non-existent path returns success
     QCOMPARE(QzTools::removeRecursively(testDir + QSL("-copy")), true);
