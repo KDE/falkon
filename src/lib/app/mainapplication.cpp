@@ -296,6 +296,12 @@ MainApplication::MainApplication(int &argc, char** argv)
     NetworkManager::registerSchemes();
     registerAllowedSchemes();
 
+    if (isPrivate()) {
+        m_webProfile = new QWebEngineProfile();
+    }
+    else {
+        m_webProfile = new QWebEngineProfile(startProfile.isEmpty() ? QSL("Default") : startProfile);
+    }
     m_webProfile = isPrivate() ? new QWebEngineProfile() : new QWebEngineProfile(QSL("Default"));
     connect(m_webProfile, &QWebEngineProfile::downloadRequested, this, &MainApplication::downloadRequested);
 
