@@ -74,7 +74,7 @@ QList<QObject*> QmlCookies::getAll(const QVariantMap &map)
     const bool secure = map.value(QSL("secure")).toBool();
     const bool session = map.value(QSL("session")).toBool();
     QVector<QNetworkCookie> cookies = mApp->cookieJar()->getAllCookies();
-    for (QNetworkCookie cookie : std::as_const(cookies)) {
+    for (const QNetworkCookie &cookie : std::as_const(cookies)) {
         if ((!map.contains(QSL("name")) || QString::fromUtf8(cookie.name()) == name)
                 && (!map.contains(QSL("url")) || cookie.domain() == url)
                 && (!map.contains(QSL("path")) || cookie.path() == path)

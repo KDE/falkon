@@ -215,7 +215,7 @@ void SearchEnginesManager::engineChangedImage()
         return;
     }
 
-    for (Engine e : std::as_const(m_allEngines)) {
+    for (const Engine &e : std::as_const(m_allEngines)) {
         if (e.name == engine->name() &&
             e.url.contains(engine->searchUrl(QSL("%s")).toString()) &&
             !engine->image().isNull()
