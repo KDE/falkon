@@ -136,19 +136,19 @@ SiteInfo::SiteInfo(WebView *view)
 
     auto *shortcutTagsCopyAll = new QShortcut(QKeySequence(QSL("Ctrl+C")), ui->treeTags);
     shortcutTagsCopyAll->setContext(Qt::WidgetShortcut);
-    connect(shortcutTagsCopyAll, &QShortcut::activated, [=]{copySelectedItems(ui->treeTags, false);});
+    connect(shortcutTagsCopyAll, &QShortcut::activated, this, [=]{copySelectedItems(ui->treeTags, false);});
 
     auto *shortcutTagsCopyValues = new QShortcut(QKeySequence(QSL("Ctrl+Shift+C")), ui->treeTags);
     shortcutTagsCopyValues->setContext(Qt::WidgetShortcut);
-    connect(shortcutTagsCopyValues, &QShortcut::activated, [=]{copySelectedItems(ui->treeTags, true);});
+    connect(shortcutTagsCopyValues, &QShortcut::activated, this, [=]{copySelectedItems(ui->treeTags, true);});
 
     auto *shortcutImagesCopyAll = new QShortcut(QKeySequence(QSL("Ctrl+C")), ui->treeImages);
     shortcutImagesCopyAll->setContext(Qt::WidgetShortcut);
-    connect(shortcutImagesCopyAll, &QShortcut::activated, [=]{copySelectedItems(ui->treeImages, false);});
+    connect(shortcutImagesCopyAll, &QShortcut::activated, this, [=]{copySelectedItems(ui->treeImages, false);});
 
     auto *shortcutImagesCopyValues = new QShortcut(QKeySequence(QSL("Ctrl+Shift+C")), ui->treeImages);
     shortcutImagesCopyValues->setContext(Qt::WidgetShortcut);
-    connect(shortcutImagesCopyValues, &QShortcut::activated, [=]{copySelectedItems(ui->treeImages, true);});
+    connect(shortcutImagesCopyValues, &QShortcut::activated, this, [=]{copySelectedItems(ui->treeImages, true);});
 
     ui->treeImages->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->treeImages->sortByColumn(-1, Qt::AscendingOrder);
