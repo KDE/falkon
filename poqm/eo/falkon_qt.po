@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 13:43+0100\n"
-"PO-Revision-Date: 2024-05-30 07:49+0200\n"
+"PO-Revision-Date: 2024-06-1510:04+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -356,7 +356,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Estas ankoraŭ malfermitaj langetoj"
 
-#: lib/app/mainapplication.cpp:1110
+#: lib/app/mainapplication.cpp:1116
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -365,32 +365,32 @@ msgstr ""
 "Falkon ne estas nuntempe via defaŭlta retumilo. Ĉu vi ŝatus fari ĝin via "
 "defaŭlta retumilo?"
 
-#: lib/app/mainapplication.cpp:1111
+#: lib/app/mainapplication.cpp:1117
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Ĉiam fari ĉi tiun kontrolon dum lanĉado de Falkon."
 
-#: lib/app/mainapplication.cpp:1113
+#: lib/app/mainapplication.cpp:1119
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Defaŭlta retumilo"
 
-#: lib/app/mainapplication.cpp:1245
+#: lib/app/mainapplication.cpp:1251
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Malfermi novan langeton"
 
-#: lib/app/mainapplication.cpp:1246
+#: lib/app/mainapplication.cpp:1252
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Malfermi novan fenestron"
 
-#: lib/app/mainapplication.cpp:1247
+#: lib/app/mainapplication.cpp:1253
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Malfermi novan privatan fenestron"
 
-#: lib/app/mainapplication.cpp:1262
+#: lib/app/mainapplication.cpp:1268
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -3158,12 +3158,9 @@ msgid "Media"
 msgstr "Aŭdvidaĵoj"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML5 Permesoj"
+msgstr "Permesoj"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3211,9 +3208,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Antaŭrigardo</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Defaŭlte"
@@ -3221,20 +3215,14 @@ msgstr "Defaŭlte"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Demandi"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Permesi"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Nei"
@@ -3298,185 +3286,122 @@ msgid "More..."
 msgstr "Pli..."
 
 #: lib/other/sitesettingsmanager.cpp:286
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Restarigi zomnivelon"
+msgstr "Zomnivelo"
 
 #: lib/other/sitesettingsmanager.cpp:288
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Kuketoj"
 
 #: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
 #: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Nekonata grandeco"
+msgstr "Nekonata"
 
 #: lib/other/sitesettingsmanager.cpp:299
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Sciigoj"
 
 #: lib/other/sitesettingsmanager.cpp:301
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Geolokigo"
 
 #: lib/other/sitesettingsmanager.cpp:303
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Mikrofono"
 
 #: lib/other/sitesettingsmanager.cpp:305
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Fotilo"
 
 #: lib/other/sitesettingsmanager.cpp:307
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Mikrofono kaj Fotilo"
 
 #: lib/other/sitesettingsmanager.cpp:309
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Kaŝi Montrilon"
+msgstr "Kaŝi musmontrilon"
 
 #: lib/other/sitesettingsmanager.cpp:311
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "Ebligi ekrankapton"
+msgstr "Ebligi kapton"
 
 #: lib/other/sitesettingsmanager.cpp:313
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Ekrankapto kun aŭdaĵo"
 
 #: lib/other/sitesettingsmanager.cpp:324
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Reŝargi paĝon"
+msgstr "Reŝargi bildojn"
 
 #: lib/other/sitesettingsmanager.cpp:327
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Permesi JavaScript"
+msgstr "Ebligi JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:329
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Malfermi ŝprucfenestrojn"
+msgstr "JavaScript: Malfermi ŝprucfenestrojn"
 
 #: lib/other/sitesettingsmanager.cpp:331
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Aliri tondujon"
+msgstr "JavaScript: Aliri tondujon"
 
 #: lib/other/sitesettingsmanager.cpp:333
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Alglui el tondujo"
+msgstr "JavaScript: Alglui el tondujo"
 
 #: lib/other/sitesettingsmanager.cpp:335
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Aktivigi fenestrojn"
+msgstr "JavaScript: Aktivigi fenestrojn"
 
 #: lib/other/sitesettingsmanager.cpp:338
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Loka konservado"
 
 #: lib/other/sitesettingsmanager.cpp:340
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&Plenekrane"
+msgstr "Subteno de plenEkraneco"
 
 #: lib/other/sitesettingsmanager.cpp:342
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Ruli nesekuran enhavon"
 
 #: lib/other/sitesettingsmanager.cpp:344
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Malebligi aŭtomatan ludadon de videoj"
+msgstr "Aŭtomata ludado de filmetoj"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Permesi konservadon de kuketoj"
+msgstr "Permesi legadon el kanvaso"
 
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Devigi malhelan reĝimon"
 
 #: lib/other/sitesettingsmanager.cpp:364
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Permesi"
@@ -3484,20 +3409,14 @@ msgstr "Permesi"
 #: lib/other/sitesettingsmanager.cpp:366
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Demandi"
 
 #: lib/other/sitesettingsmanager.cpp:368
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Nei"
 
 #: lib/other/sitesettingsmanager.cpp:370
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Defaŭlte"
@@ -4524,17 +4443,14 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Uzi aparatan akcelon (postulas rekomencon)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Permesi konservadon de kuketoj"
+msgstr "Permesi legadon el kanvaso"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Devigi malhelan reĝimon"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
@@ -4870,12 +4786,9 @@ msgid "HTML5 Permissions"
 msgstr "HTML5 Permesoj"
 
 #: lib/preferences/preferences.ui:2179
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Agordoj"
+msgstr "Retej-Agordo"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
@@ -5076,33 +4989,21 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "Ŝanĝoj efektiviĝos post la rekomenco de Falkon."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Foliumado"
+msgstr "Foliumi"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML5 Permesoj"
+msgstr "Retejaj Permesoj"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Retejo"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Konduto"
@@ -5110,39 +5011,27 @@ msgstr "Konduto"
 #: lib/preferences/sitesettingsbrowsedialog.ui:45
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Demandi"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Permesi"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Nei"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Defaŭlte"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Foliumado"
+msgstr "Foliumi"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -6199,39 +6088,3 @@ msgstr "Inspekti Elementon"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "Preferences|"
-#~ msgid "Manage HTML5 permissions"
-#~ msgstr "Administri HTML5-permesojn"
-
-#~ msgctxt "Preferences|"
-#~ msgid "<b>HTML5 Permissions</b>"
-#~ msgstr "<b>HTML5-Permesoj</b>"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "HTML5 Permissions"
-#~ msgstr "HTML5 Permesoj"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Remove"
-#~ msgstr "Forigi"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Site"
-#~ msgstr "Retejo"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Permission for:"
-#~ msgstr "Permeso por:"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Notifications"
-#~ msgstr "Sciigoj"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Display Capture"
-#~ msgstr "Montra Kapto"
-
-#~ msgctxt "HTML5PermissionsDialog|"
-#~ msgid "Display and Audio Capture"
-#~ msgstr "Montriĝo kaj Audio-Kaptado"

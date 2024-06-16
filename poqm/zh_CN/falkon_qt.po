@@ -347,39 +347,39 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "仍有打开的标签页"
 
-#: lib/app/mainapplication.cpp:1110
+#: lib/app/mainapplication.cpp:1116
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
 msgstr "Falkon 目前不是您的默认浏览器。是否要将其设置为默认浏览器？"
 
-#: lib/app/mainapplication.cpp:1111
+#: lib/app/mainapplication.cpp:1117
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "启动 Falkon 时，始终执行此检查。"
 
-#: lib/app/mainapplication.cpp:1113
+#: lib/app/mainapplication.cpp:1119
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "默认浏览器"
 
-#: lib/app/mainapplication.cpp:1245
+#: lib/app/mainapplication.cpp:1251
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "打开新标签页"
 
-#: lib/app/mainapplication.cpp:1246
+#: lib/app/mainapplication.cpp:1252
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "打开新窗口"
 
-#: lib/app/mainapplication.cpp:1247
+#: lib/app/mainapplication.cpp:1253
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "打开新的隐私窗口"
 
-#: lib/app/mainapplication.cpp:1262
+#: lib/app/mainapplication.cpp:1268
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -3118,8 +3118,6 @@ msgstr "媒体"
 
 #: lib/other/siteinfo.ui:57
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
 msgstr "HTML5 权限"
@@ -3171,8 +3169,6 @@ msgstr "<b>预览</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "默认"
@@ -3184,16 +3180,12 @@ msgstr ""
 
 #: lib/other/siteinfopermissionitem.ui:69
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "允许"
 
 #: lib/other/siteinfopermissionitem.ui:76
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "拒绝"
@@ -3258,16 +3250,12 @@ msgstr "更多..."
 
 #: lib/other/sitesettingsmanager.cpp:286
 #, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
 msgstr "重置缩放级别"
 
 #: lib/other/sitesettingsmanager.cpp:288
 #, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Cookie"
@@ -3275,64 +3263,48 @@ msgstr "Cookie"
 #: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
 #: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
 #, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
 msgstr "未知尺寸"
 
 #: lib/other/sitesettingsmanager.cpp:299
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "通知"
 
 #: lib/other/sitesettingsmanager.cpp:301
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "定位"
 
 #: lib/other/sitesettingsmanager.cpp:303
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "麦克风"
 
 #: lib/other/sitesettingsmanager.cpp:305
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "相机"
 
 #: lib/other/sitesettingsmanager.cpp:307
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "麦克风和摄像头"
 
 #: lib/other/sitesettingsmanager.cpp:309
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
 msgstr "隐藏指针"
 
 #: lib/other/sitesettingsmanager.cpp:311
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
 msgstr "启用屏幕捕捉"
@@ -3344,64 +3316,48 @@ msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:324
 #, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
 msgstr "重新加载页面"
 
 #: lib/other/sitesettingsmanager.cpp:327
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
 msgstr "允许 JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:329
 #, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
 msgstr "打开弹出窗口"
 
 #: lib/other/sitesettingsmanager.cpp:331
 #, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
 msgstr "访问剪贴板"
 
 #: lib/other/sitesettingsmanager.cpp:333
 #, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
 msgstr "从剪贴板粘贴"
 
 #: lib/other/sitesettingsmanager.cpp:335
 #, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
 msgstr "激活窗口"
 
 #: lib/other/sitesettingsmanager.cpp:338
 #, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "本地存储"
 
 #: lib/other/sitesettingsmanager.cpp:340
 #, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
 msgstr "全屏(&F)"
@@ -3413,16 +3369,12 @@ msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:344
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
 msgstr "禁用自动播放视频"
 
 #: lib/other/sitesettingsmanager.cpp:347
 #, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
 msgstr "允许储存 Cookie"
@@ -3434,8 +3386,6 @@ msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:364
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "允许"
@@ -3447,16 +3397,12 @@ msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:368
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "拒绝"
 
 #: lib/other/sitesettingsmanager.cpp:370
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "默认"
@@ -4478,8 +4424,6 @@ msgstr "使用硬件加速(需要重启)"
 
 #: lib/preferences/preferences.ui:1137
 #, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "允许储存 Cookie"
@@ -4822,8 +4766,6 @@ msgstr "HTML5 权限"
 
 #: lib/preferences/preferences.ui:2179
 #, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "设置"
@@ -5026,32 +4968,24 @@ msgstr "更改在 Falkon 重启后才会生效。"
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
 msgstr "浏览"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
 msgstr "HTML5 权限"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
 #, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "站点"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "行为"
@@ -5063,32 +4997,24 @@ msgstr ""
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "允许"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
 #, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "拒绝"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "默认"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
 #, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
 msgstr "浏览"

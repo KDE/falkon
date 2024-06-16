@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: falkon bulgarian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-15 09:59+0200\n"
-"PO-Revision-Date: 2024-05-13 22:08+0200\n"
+"PO-Revision-Date: 2024-06-16 00:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
@@ -353,7 +353,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Все още има отворени раздели"
 
-#: lib/app/mainapplication.cpp:1110
+#: lib/app/mainapplication.cpp:1116
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -362,32 +362,32 @@ msgstr ""
 "Falkon понастоящем не е браузър по подразбиране. Искате ли да го направите "
 "вашия браузър по подразбиране ?"
 
-#: lib/app/mainapplication.cpp:1111
+#: lib/app/mainapplication.cpp:1117
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Винаги да се проверява това при стартиране на Falkon."
 
-#: lib/app/mainapplication.cpp:1113
+#: lib/app/mainapplication.cpp:1119
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Браузър по подразбиране"
 
-#: lib/app/mainapplication.cpp:1245
+#: lib/app/mainapplication.cpp:1251
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Отваряне на нов раздел"
 
-#: lib/app/mainapplication.cpp:1246
+#: lib/app/mainapplication.cpp:1252
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Отваряне на нов прозорец"
 
-#: lib/app/mainapplication.cpp:1247
+#: lib/app/mainapplication.cpp:1253
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Отваряне на нов поверителен прозорец"
 
-#: lib/app/mainapplication.cpp:1262
+#: lib/app/mainapplication.cpp:1268
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -3161,12 +3161,9 @@ msgid "Media"
 msgstr "Медиа"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML5 разрешения"
+msgstr "Права"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3214,9 +3211,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Предварителен изглед</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "По подразбиране"
@@ -3224,20 +3218,14 @@ msgstr "По подразбиране"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Потвърждение"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Разрешаване"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Забраняване"
@@ -3301,185 +3289,122 @@ msgid "More..."
 msgstr "Подробно…"
 
 #: lib/other/sitesettingsmanager.cpp:286
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Възстановяване на мащаба"
+msgstr "Ниво на мащабиране"
 
 #: lib/other/sitesettingsmanager.cpp:288
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Бисквитки"
 
 #: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
 #: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Неизвестен размер"
+msgstr "Неизвестно"
 
 #: lib/other/sitesettingsmanager.cpp:299
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Известия"
 
 #: lib/other/sitesettingsmanager.cpp:301
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
-msgstr "Местоположение"
+msgstr "Геолокация"
 
 #: lib/other/sitesettingsmanager.cpp:303
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Микрофон"
 
 #: lib/other/sitesettingsmanager.cpp:305
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Камера"
 
 #: lib/other/sitesettingsmanager.cpp:307
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Микрофон и камера"
 
 #: lib/other/sitesettingsmanager.cpp:309
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
 msgstr "Скриване на показалец"
 
 #: lib/other/sitesettingsmanager.cpp:311
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "Активиране на заснемането на екрана"
+msgstr "Заснемане на екрана"
 
 #: lib/other/sitesettingsmanager.cpp:313
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Заснемане на екрана със звук"
 
 #: lib/other/sitesettingsmanager.cpp:324
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Обновяване на страница"
+msgstr "Автоматично зареждане на изображения"
 
 #: lib/other/sitesettingsmanager.cpp:327
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Използване на JavaScript"
+msgstr "Активиране на Javascript"
 
 #: lib/other/sitesettingsmanager.cpp:329
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Отваряне на изскачащи прозорци"
+msgstr "JavaScript: Отваряне на изскачащи прозорци"
 
 #: lib/other/sitesettingsmanager.cpp:331
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Достъп до системния буфер"
+msgstr "JavaScript: Достъп до системния буфер"
 
 #: lib/other/sitesettingsmanager.cpp:333
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Поставяне от системния буфер"
+msgstr "JavaScript: Поставяне от системния буфер"
 
 #: lib/other/sitesettingsmanager.cpp:335
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Активиране на прозорци"
+msgstr "JavaScript: Активиране на прозорци"
 
 #: lib/other/sitesettingsmanager.cpp:338
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Локално хранилище"
 
 #: lib/other/sitesettingsmanager.cpp:340
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "Пълен &екран"
+msgstr "Поддръжка на цял &екран"
 
 #: lib/other/sitesettingsmanager.cpp:342
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Изпълняване на несигурно съдържание"
 
 #: lib/other/sitesettingsmanager.cpp:344
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Деактивиране на автоматичното възпроизвеждане на видео"
+msgstr "Автоматично възпроизвеждане на видео"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Разрешаване на запазване на бисквитки"
+msgstr "Разрешаване на четенето от canvas"
 
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Тъмен режим"
 
 #: lib/other/sitesettingsmanager.cpp:364
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Разрешаване"
@@ -3487,20 +3412,14 @@ msgstr "Разрешаване"
 #: lib/other/sitesettingsmanager.cpp:366
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Запитване"
 
 #: lib/other/sitesettingsmanager.cpp:368
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Забраняване"
 
 #: lib/other/sitesettingsmanager.cpp:370
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "По подразбиране"
@@ -4529,17 +4448,14 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Използване на хардуерно ускорение (изисква рестартиране)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Разрешаване на запазване на бисквитки"
+msgstr "Разрешаване на четенето от canvas"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Налагане на тъмен режим"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
@@ -4875,12 +4791,9 @@ msgid "HTML5 Permissions"
 msgstr "HTML5 разрешения"
 
 #: lib/preferences/preferences.ui:2179
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Настройки"
+msgstr "Настройки на страницата"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
@@ -5082,33 +4995,21 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "Промените ви ще влязат в сила при следващото стартиране на Falkon."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Сърфиране"
+msgstr "Разглеждане"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML5 разрешения"
+msgstr "Разрешения на страницата"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Сайт"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Поведение"
@@ -5116,39 +5017,27 @@ msgstr "Поведение"
 #: lib/preferences/sitesettingsbrowsedialog.ui:45
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Запитване"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Разрешаване"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Забраняване"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "По подразбиране"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Сърфиране"
+msgstr "Разглеждане"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"

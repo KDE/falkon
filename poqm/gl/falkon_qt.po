@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-04-14 15:17+0200\n"
+"PO-Revision-Date: 2024-06-15 15:09+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.0\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -350,39 +350,39 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Aínda hai separadores abertos"
 
-#: lib/app/mainapplication.cpp:1110
+#: lib/app/mainapplication.cpp:1116
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
 msgstr "Falkon non é o seu navegador predeterminado. Quere que o sexa?"
 
-#: lib/app/mainapplication.cpp:1111
+#: lib/app/mainapplication.cpp:1117
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Comprobalo sempre que se inicie Falkon."
 
-#: lib/app/mainapplication.cpp:1113
+#: lib/app/mainapplication.cpp:1119
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Navegador predeterminado"
 
-#: lib/app/mainapplication.cpp:1245
+#: lib/app/mainapplication.cpp:1251
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Abrir un novo separador"
 
-#: lib/app/mainapplication.cpp:1246
+#: lib/app/mainapplication.cpp:1252
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Abrir unha xanela nova"
 
-#: lib/app/mainapplication.cpp:1247
+#: lib/app/mainapplication.cpp:1253
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Abrir unha nova xanela privada"
 
-#: lib/app/mainapplication.cpp:1262
+#: lib/app/mainapplication.cpp:1268
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -3153,12 +3153,9 @@ msgid "Media"
 msgstr "Recursos"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "Permisos de HTML5"
+msgstr "Permisos"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3206,30 +3203,21 @@ msgid "<b>Preview</b>"
 msgstr "<b>Vista previa</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
-msgstr "Predeterminado"
+msgstr "Predeterminada"
 
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Preguntar"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Permitir"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Denegar"
@@ -3293,185 +3281,122 @@ msgid "More..."
 msgstr "Máis…"
 
 #: lib/other/sitesettingsmanager.cpp:286
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Restablecer o nivel de ampliación"
+msgstr "Nivel de ampliación"
 
 #: lib/other/sitesettingsmanager.cpp:288
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
-msgstr "Cookies"
+msgstr "Rastros"
 
 #: lib/other/sitesettingsmanager.cpp:291 lib/other/sitesettingsmanager.cpp:316
 #: lib/other/sitesettingsmanager.cpp:356 lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Tamaño descoñecido"
+msgstr "Descoñecida"
 
 #: lib/other/sitesettingsmanager.cpp:299
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Notificacións"
 
 #: lib/other/sitesettingsmanager.cpp:301
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Xeolocalización"
 
 #: lib/other/sitesettingsmanager.cpp:303
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Micrófono"
 
 #: lib/other/sitesettingsmanager.cpp:305
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Cámara"
 
 #: lib/other/sitesettingsmanager.cpp:307
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Micrófono e cámara"
 
 #: lib/other/sitesettingsmanager.cpp:309
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Agochar o punteiro"
+msgstr "Agochar o punteiro do rato"
 
 #: lib/other/sitesettingsmanager.cpp:311
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "Activar a captura de pantalla"
+msgstr "Captura da pantalla"
 
 #: lib/other/sitesettingsmanager.cpp:313
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Captura de pantalla con son"
 
 #: lib/other/sitesettingsmanager.cpp:324
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Cargar de novo a páxina"
+msgstr "Cargar automaticamente as imaxes"
 
 #: lib/other/sitesettingsmanager.cpp:327
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Permitir JavaScript"
+msgstr "Activar JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:329
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Abrir xanelas emerxentes"
+msgstr "JavaScript: abrir xanelas emerxentes"
 
 #: lib/other/sitesettingsmanager.cpp:331
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Acceder ao portapapeis"
+msgstr "JavaScript: acceder ao portapapeis"
 
 #: lib/other/sitesettingsmanager.cpp:333
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Pegar desde o portapapeis"
+msgstr "JavaScript: pegar desde o portapapeis"
 
 #: lib/other/sitesettingsmanager.cpp:335
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Activar xanelas"
+msgstr "JavaScript: activar xanelas"
 
 #: lib/other/sitesettingsmanager.cpp:338
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Almacenamento local"
 
 #: lib/other/sitesettingsmanager.cpp:340
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&Pantalla completa"
+msgstr "Compatibilidade con pantalla completa"
 
 #: lib/other/sitesettingsmanager.cpp:342
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Executar contido inseguro"
 
 #: lib/other/sitesettingsmanager.cpp:344
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Desactivar a reprodución automática de vídeos"
+msgstr "Reprodución automática de vídeos"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Permitir almacenar cookies"
+msgstr "Permitir ler do lenzo"
 
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Forzar o modo escuro"
 
 #: lib/other/sitesettingsmanager.cpp:364
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Permitir"
@@ -3479,23 +3404,17 @@ msgstr "Permitir"
 #: lib/other/sitesettingsmanager.cpp:366
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Preguntar"
 
 #: lib/other/sitesettingsmanager.cpp:368
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Denegar"
 
 #: lib/other/sitesettingsmanager.cpp:370
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
-msgstr "Predeterminado"
+msgstr "Predeterminada"
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
@@ -4518,17 +4437,14 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Usar aceleración por hardware (require reiniciar)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Permitir almacenar cookies"
+msgstr "Permitir ler do lenzo"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Forzar o modo escuro"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
@@ -4864,12 +4780,9 @@ msgid "HTML5 Permissions"
 msgstr "Permisos de HTML5"
 
 #: lib/preferences/preferences.ui:2179
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Configuración"
+msgstr "Configuración do sitio"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
@@ -5070,33 +4983,21 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "Os cambios xurdirán efecto tras reiniciar Falkon."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "PageScreen|"
-#| msgid "Browse..."
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Examinar…"
+msgstr "Navegar"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "Permisos de HTML5"
+msgstr "Permisos do sitio"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Sitio"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Comportamento"
@@ -5104,39 +5005,27 @@ msgstr "Comportamento"
 #: lib/preferences/sitesettingsbrowsedialog.ui:45
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Preguntar"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Permitir"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Denegar"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
-msgstr "Predeterminado"
+msgstr "Predeterminada"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "PageScreen|"
-#| msgid "Browse..."
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Examinar…"
+msgstr "Navegar"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
