@@ -1,94 +1,98 @@
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_statusbaricons_qt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-06-16 10:48+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: sbi_imagesicon.cpp:34
 msgctxt "SBI_ImagesIcon|"
 msgid "Modify images loading settings per-site and globally"
 msgstr ""
+"Промяна на настройките за зареждане на изображения за всеки сайт и глобално"
 
 #: sbi_imagesicon.cpp:58
 msgctxt "SBI_ImagesIcon|"
 msgid "Current Page Settings"
-msgstr ""
+msgstr "Настройки на текущата страница"
 
 #: sbi_imagesicon.cpp:61
 msgctxt "SBI_ImagesIcon|"
 msgid "Disable loading images (temporarily)"
-msgstr ""
+msgstr "Деактивиране на зареждането на изображения (временно)"
 
 #: sbi_imagesicon.cpp:64
 msgctxt "SBI_ImagesIcon|"
 msgid "Enable loading images (temporarily)"
-msgstr ""
+msgstr "Активиране на зареждане на изображения (временно)"
 
 #: sbi_imagesicon.cpp:68
 msgctxt "SBI_ImagesIcon|"
 msgid "Global Settings"
-msgstr ""
+msgstr "Глобални настройки"
 
 #: sbi_imagesicon.cpp:70
 msgctxt "SBI_ImagesIcon|"
 msgid "Automatically load images"
-msgstr ""
+msgstr "Автоматично зареждане на изображения"
 
 #: sbi_javascripticon.cpp:35
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Modify JavaScript settings per-site and globally"
-msgstr ""
+msgstr "Промяна на настройките на JavaScript за всеки сайт и глобално"
 
 #: sbi_javascripticon.cpp:52
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Current Page Settings"
-msgstr ""
+msgstr "Текущи настройки на страницата"
 
 #: sbi_javascripticon.cpp:55
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Disable JavaScript (temporarily)"
-msgstr ""
+msgstr "Деактивиране на JavaScript (временно)"
 
 #: sbi_javascripticon.cpp:58
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Enable JavaScript (temporarily)"
-msgstr ""
+msgstr "Активиране на JavaScript (временно)"
 
 #: sbi_javascripticon.cpp:67
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Global Settings"
-msgstr ""
+msgstr "Общи настройки"
 
 #: sbi_javascripticon.cpp:68
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
-msgstr ""
+msgstr "Управление на настройките на JavaScript"
 
 #: sbi_networkicon.cpp:62
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
-msgstr ""
+msgstr "Конфигурация на прокси"
 
 #: sbi_networkicon.cpp:64
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
-msgstr ""
+msgstr "Избор на прокси"
 
 #: sbi_networkicon.cpp:78
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
-msgstr ""
+msgstr "Празно"
 
 #: sbi_networkicon.cpp:82
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
-msgstr ""
+msgstr "Управление на проксита"
 
 #: sbi_networkicon.cpp:95
 #, qt-format
@@ -97,149 +101,153 @@ msgid ""
 "Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
 "><br/><b>Proxy:</b><br/>%2"
 msgstr ""
+"Показва състоянието на мрежата и управлява прокси<br/><br/><b>Мрежа:</b><br/>"
+"%1<br/><br/><b>Прокси:</b><br/ >%2"
 
 #: sbi_networkicon.cpp:99
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected"
-msgstr ""
+msgstr "Свързан"
 
 #: sbi_networkicon.cpp:103
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
-msgstr ""
+msgstr "Системен прокси"
 
 #: sbi_networkicon.cpp:107
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
-msgstr ""
+msgstr "Без прокси"
 
 #: sbi_networkicon.cpp:111
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
-msgstr ""
+msgstr "Потребителски"
 
 #: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Add proxy"
-msgstr ""
+msgstr "Добавяне на прокси"
 
 #: sbi_networkicondialog.cpp:57
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Name of proxy:"
-msgstr ""
+msgstr "Име на прокси:"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove current proxy"
-msgstr ""
+msgstr "Премахване на текущия прокси"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Are you sure you want to remove current proxy?"
-msgstr ""
+msgstr "Сигурни ли сте, че искате да премахнете текущия прокси?"
 
 #: sbi_networkicondialog.ui:14
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Proxy Manager"
-msgstr ""
+msgstr "Прокси мениджър"
 
 #: sbi_networkicondialog.ui:28
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Select proxy: "
-msgstr ""
+msgstr "Избор на прокси:"
 
 #: sbi_networkicondialog.ui:45
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove proxy"
-msgstr ""
+msgstr "Премахване на прокси"
 
 #: sbi_networkicondialog.ui:69
 msgctxt "SBI_NetworkIconDialog|"
 msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
 msgstr ""
+"Няма проксита. Можете да добавите прокси, като щракнете върху бутона "
+"<b>Добавяне</b>."
 
 #: sbi_networkicondialog.ui:104
 msgctxt "SBI_NetworkIconDialog|"
 msgid "All changes must be saved with <b>Save</b> button."
-msgstr ""
+msgstr "Всички промени трябва да бъдат запазени с бутона <b>Запазване</b>."
 
 #: sbi_proxywidget.ui:14
 msgctxt "SBI_ProxyWidget|"
 msgid "Form"
-msgstr ""
+msgstr "Форма"
 
 #: sbi_proxywidget.ui:23
 msgctxt "SBI_ProxyWidget|"
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #: sbi_proxywidget.ui:28
 msgctxt "SBI_ProxyWidget|"
 msgid "SOCKS5"
-msgstr ""
+msgstr "SOCKS5"
 
 #: sbi_proxywidget.ui:39
 msgctxt "SBI_ProxyWidget|"
 msgid "Port:"
-msgstr ""
+msgstr "Порт:"
 
 #: sbi_proxywidget.ui:76
 msgctxt "SBI_ProxyWidget|"
 msgid "Username:"
-msgstr ""
+msgstr "Потребител:"
 
 #: sbi_proxywidget.ui:86
 msgctxt "SBI_ProxyWidget|"
 msgid "Password:"
-msgstr ""
+msgstr "Парола:"
 
 #: sbi_proxywidget.ui:111
 msgctxt "SBI_ProxyWidget|"
 msgid "S&ystem proxy configuration"
-msgstr ""
+msgstr "&Системни настройки на прокси"
 
 #: sbi_proxywidget.ui:118
 msgctxt "SBI_ProxyWidget|"
 msgid "&Manual configuration"
-msgstr ""
+msgstr "&Ръчна конфигурация"
 
 #: sbi_settingsdialog.ui:14
 msgctxt "SBI_SettingsDialog|"
 msgid "StatusBar Icons"
-msgstr ""
+msgstr "Икони на лентата за състоянието"
 
 #: sbi_settingsdialog.ui:48
 msgctxt "SBI_SettingsDialog|"
 msgid "<h3>StatusBar Icons</h3>"
-msgstr ""
+msgstr "<h3>Икони на лентата за състоянието</h3>"
 
 #: sbi_settingsdialog.ui:70
 msgctxt "SBI_SettingsDialog|"
 msgid "These icons will be displayed in statusbar:"
-msgstr ""
+msgstr "Тези икони ще се показват в лентата на състоянието:"
 
 #: sbi_settingsdialog.ui:97
 msgctxt "SBI_SettingsDialog|"
 msgid "Images Icon"
-msgstr ""
+msgstr "Икона за изображения"
 
 #: sbi_settingsdialog.ui:104
 msgctxt "SBI_SettingsDialog|"
 msgid "JavaScript Icon"
-msgstr ""
+msgstr "Икона за JavaScript"
 
 #: sbi_settingsdialog.ui:111
 msgctxt "SBI_SettingsDialog|"
 msgid "Network Icon"
-msgstr ""
+msgstr "Мрежови икони"
 
 #: sbi_settingsdialog.ui:118
 msgctxt "SBI_SettingsDialog|"
 msgid "Zoom widget"
-msgstr ""
+msgstr "Уиджет за мащабиране"
 
 #: sbi_zoomwidget.cpp:48
 #, qt-format
 msgctxt "SBI_ZoomWidget|"
 msgid "Zoom: %1%"
-msgstr ""
+msgstr "Мащабиране: %1%"
