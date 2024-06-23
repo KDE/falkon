@@ -298,7 +298,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->screenCaptureEnabled->setChecked(settings.value(QSL("screenCaptureEnabled"), false).toBool());
     ui->hardwareAccel->setChecked(settings.value(QSL("hardwareAccel"), false).toBool());
 #if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-    ui->readingFromCanvasEnabled->setChecked(settings.value(QSL("readingFromCanvasEnabled"), false).toBool());
+    ui->readingFromCanvasEnabled->setChecked(settings.value(QSL("readingFromCanvasEnabled"), true).toBool());
 #else
     ui->readingFromCanvasEnabled->hide();
 #endif
