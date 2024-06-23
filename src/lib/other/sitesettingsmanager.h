@@ -124,6 +124,7 @@ private:
 
 
     QMap<QWebEnginePage::Feature, Permission> defaultFeatures;
+    SiteSettingsManager::Permission m_defaultCookies;
 
     QString attributesSql;
     QString everythingSql;

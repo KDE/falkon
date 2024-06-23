@@ -58,6 +58,7 @@ const QList<QWebEnginePage::Feature> supportedFeatures = {
 
 SiteSettingsManager::SiteSettingsManager ( QObject* parent )
 : QObject(parent)
+, m_defaultCookies(Deny)
 {
     prepareSqls();
     loadSettings();
@@ -74,6 +75,10 @@ void SiteSettingsManager::loadSettings()
     for (const auto &feature : std::as_const(supportedFeatures)) {
         defaultFeatures[feature] = intToPermission(settings.value(featureToSqlColumn(feature), Ask).toInt());
     }
+    settings.endGroup();
+
+    settings.beginGroup(QSL("Cookie-Settings"));
+    m_defaultCookies = settings.value(QSL("allowCookies"), true).toBool() ? Allow : Deny;
     settings.endGroup();
 }
 
@@ -224,14 +229,8 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEng
 SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const SiteSettingsManager::PageOptions option)
 {
     switch (option) {
-        case poAllowCookies: {
-            Settings settings;
-            settings.beginGroup(QSL("Cookie-Settings"));
-            auto defaultCookies = settings.value(QSL("allowCookies"), true).toBool() ? Allow : Deny;
-            settings.endGroup();
-
-            return defaultCookies;
-        }
+        case poAllowCookies:
+            return m_defaultCookies;
         // so far not implemented
         case poZoomLevel:
         default:
