@@ -379,14 +379,26 @@ void SiteInfo::saveSiteSettings()
 
     siteSettings.server = m_baseUrl.host();
 
-    if (!(siteSettings == mApp->siteSettingsManager()->getSiteSettings(m_baseUrl))) {
+    auto storedSiteSettings = mApp->siteSettingsManager()->getSiteSettings(m_baseUrl);
+
+    if (!(siteSettings == storedSiteSettings)) {
         mApp->siteSettingsManager()->setSiteSettings(siteSettings);
 
 #if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-        m_view->page()->settings()->setAttribute(
-            QWebEngineSettings::ForceDarkMode,
-            siteSettings.attributes[QWebEngineSettings::ForceDarkMode]
-        );
+        if (siteSettings.attributes[QWebEngineSettings::ForceDarkMode] != storedSiteSettings.attributes[QWebEngineSettings::ForceDarkMode]) {
+            bool enableForceDarkMode = false;
+
+            if (siteSettings.attributes[QWebEngineSettings::ForceDarkMode] == SiteSettingsManager::Default) {
+                enableForceDarkMode = mApp->siteSettingsManager()->getDefaultPermission(QWebEngineSettings::ForceDarkMode) == SiteSettingsManager::Allow;
+            }
+            else {
+                enableForceDarkMode = siteSettings.attributes[QWebEngineSettings::ForceDarkMode] == SiteSettingsManager::Allow;
+            }
+            m_view->page()->settings()->setAttribute(
+                QWebEngineSettings::ForceDarkMode,
+                enableForceDarkMode
+            );
+        }
 #endif
     }
 }
