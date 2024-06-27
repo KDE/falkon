@@ -1,94 +1,95 @@
-# SPDX-FileCopyrightText: 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-06-19 16:26+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
-"Language: cs\n"
+"PO-Revision-Date: 2024-06-26 18:41+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Qt-Contexts: true\n"
 
 #: sitesettingsview_controller.cpp:40
 msgctxt "SiteSettingsView_Controller|"
 msgid "Site Settings"
-msgstr "Nastavení stránky"
+msgstr "إعدادات الموقع"
 
 #: sitesettingsview_controller.cpp:48
 msgctxt "SiteSettingsView_Controller|"
 msgid "Site Settings View"
-msgstr ""
+msgstr "عرض إعدادات الموقع"
 
 #: sitesettingsview_widget.cpp:53
 msgctxt "SiteSettingsView_Widget|"
 msgid "Mode:"
-msgstr "Režim:"
+msgstr "الوضع:"
 
 #: sitesettingsview_widget.cpp:55
 msgctxt "SiteSettingsView_Widget|"
 msgid "Private"
-msgstr "Soukromý"
+msgstr "خاص"
 
 #: sitesettingsview_widget.cpp:58
 msgctxt "SiteSettingsView_Widget|"
 msgid "Normal"
-msgstr "Normální"
+msgstr "عادي"
 
 #: sitesettingsview_widget.cpp:60
 msgctxt "SiteSettingsView_Widget|"
 msgid "isWeb:"
-msgstr ""
+msgstr "هل_ويب:"
 
 #: sitesettingsview_widget.cpp:64
 msgctxt "SiteSettingsView_Widget|"
 msgid "Refresh"
-msgstr "Obnovit"
+msgstr "أنعش"
 
 #: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:109
 msgctxt "SiteSettingsView_Widget|"
 msgid "Real"
-msgstr "Skutečný"
+msgstr "الحقيقي"
 
 #: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:92
 #: sitesettingsview_widget.cpp:109
 msgctxt "SiteSettingsView_Widget|"
 msgid "Local"
-msgstr "Místní"
+msgstr "المحليّ"
 
 #: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:92
 #: sitesettingsview_widget.cpp:109 sitesettingsview_widget.cpp:223
 msgctxt "SiteSettingsView_Widget|"
 msgid "Default"
-msgstr "Výchozí"
+msgstr "المبدئيّ"
 
 #: sitesettingsview_widget.cpp:75
 msgctxt "SiteSettingsView_Widget|"
 msgid "Attributes"
-msgstr "Atributy"
+msgstr "الخصائص"
 
 #: sitesettingsview_widget.cpp:92
 msgctxt "SiteSettingsView_Widget|"
 msgid "Feature"
-msgstr "Vlastnost"
+msgstr "المزايا"
 
 #: sitesettingsview_widget.cpp:109
 msgctxt "SiteSettingsView_Widget|"
 msgid "Option"
-msgstr "Volba"
+msgstr "الخيار"
 
 #: sitesettingsview_widget.cpp:155
 msgctxt "SiteSettingsView_Widget|"
 msgid "True"
-msgstr "Pravda"
+msgstr "صحيح"
 
 #: sitesettingsview_widget.cpp:158
 msgctxt "SiteSettingsView_Widget|"
 msgid "False"
-msgstr "Nepravda"
+msgstr "خطأ"
 
 #: sitesettingsview_widget.cpp:219 sitesettingsview_widget.cpp:227
 #: sitesettingsview_widget.cpp:231

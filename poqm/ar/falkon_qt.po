@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-04-04 11:25+0400\n"
+"PO-Revision-Date: 2024-06-26 18:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -3164,12 +3165,9 @@ msgid "Media"
 msgstr "الصور والصوت والفيديو"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "أذونات HTML5"
+msgstr "التّصاريح"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3217,9 +3215,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>معاينة</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "المبدئي"
@@ -3227,20 +3222,14 @@ msgstr "المبدئي"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "اسأل"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "اسمح"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "امنع"
@@ -3304,185 +3293,122 @@ msgid "More..."
 msgstr "المزيد..."
 
 #: lib/other/sitesettingsmanager.cpp:285
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "صفر مستوى التكبير"
+msgstr "مستوى التكبير"
 
 #: lib/other/sitesettingsmanager.cpp:287
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "الكعكات"
 
 #: lib/other/sitesettingsmanager.cpp:290 lib/other/sitesettingsmanager.cpp:315
 #: lib/other/sitesettingsmanager.cpp:355 lib/other/sitesettingsmanager.cpp:372
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "لا يُعرف الحجم"
+msgstr "مجهول"
 
 #: lib/other/sitesettingsmanager.cpp:298
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "التنبيهات"
 
 #: lib/other/sitesettingsmanager.cpp:300
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "الموقع الجغرافي"
 
 #: lib/other/sitesettingsmanager.cpp:302
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "الميكرفون"
 
 #: lib/other/sitesettingsmanager.cpp:304
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "الكمرة"
 
 #: lib/other/sitesettingsmanager.cpp:306
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "الميكرفون والكمر"
 
 #: lib/other/sitesettingsmanager.cpp:308
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "أخف المؤشر"
+msgstr "أخف مؤشر الفأرة"
 
 #: lib/other/sitesettingsmanager.cpp:310
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "مكن التقاط الشّاشة"
+msgstr "التقاط الشّاشة"
 
 #: lib/other/sitesettingsmanager.cpp:312
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "التقاط الشاشة مع الصوت"
 
 #: lib/other/sitesettingsmanager.cpp:323
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "أعد تحميل الصفحة"
+msgstr "التحميل الآلي للصور"
 
 #: lib/other/sitesettingsmanager.cpp:326
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "اسمح بجافاسكربت"
+msgstr "مكن جافاسكربت"
 
 #: lib/other/sitesettingsmanager.cpp:328
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "تفتح نوافذ منبثقة"
+msgstr "جافا سكربت: تفتح نوافذ منبثقة"
 
 #: lib/other/sitesettingsmanager.cpp:330
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "تصل إلى الحافظة"
+msgstr "جافا سكربت: تصل إلى الحافظة"
 
 #: lib/other/sitesettingsmanager.cpp:332
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "الصق من الحافظة"
+msgstr "جافا سكربت: الصق من الحافظة"
 
 #: lib/other/sitesettingsmanager.cpp:334
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "النوافذ النشطة"
+msgstr "جافا سكربت: النوافذ النشطة"
 
 #: lib/other/sitesettingsmanager.cpp:337
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "التخزين المحلي"
 
 #: lib/other/sitesettingsmanager.cpp:339
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "املأ ال&شاشة"
+msgstr "دعم ملئ الشاشة"
 
 #: lib/other/sitesettingsmanager.cpp:341
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "تشغيل محتوى غير آمن"
 
 #: lib/other/sitesettingsmanager.cpp:343
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "عطل التشغيل آلي للفيديوهات"
+msgstr "التشغيل آلي للفيديوهات"
 
 #: lib/other/sitesettingsmanager.cpp:346
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "اسمح بتخزين الكعكات"
+msgstr "السماح بالقراءة من الرقعة"
 
 #: lib/other/sitesettingsmanager.cpp:350
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "افرض الوضع الداكن"
 
 #: lib/other/sitesettingsmanager.cpp:363
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "اسمح"
@@ -3490,20 +3416,14 @@ msgstr "اسمح"
 #: lib/other/sitesettingsmanager.cpp:365
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "اسأل"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "امنع"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "المبدئي"
@@ -4531,17 +4451,14 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "استخدم تسريع العتاد (بحاجة لإعادة تشغيل)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "اسمح بتخزين الكعكات"
+msgstr "السماح بالقراءة من الرقعة"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "افرض الوضع الداكن"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
@@ -4879,12 +4796,9 @@ msgid "HTML5 Permissions"
 msgstr "أذونات HTML5"
 
 #: lib/preferences/preferences.ui:2179
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "الإعدادات"
+msgstr "إعدادات الموقع"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
@@ -5083,33 +4997,21 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "ستأخذ التغييرات مفعولها بعد إعادة تشغيل فالكون."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "BookmarksExportDialog|"
-#| msgid "Choose..."
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "اختر..."
+msgstr "تصفح"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "أذونات HTML5"
+msgstr "أذونات الموقع"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "الموقع"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "السلوك"
@@ -5117,39 +5019,27 @@ msgstr "السلوك"
 #: lib/preferences/sitesettingsbrowsedialog.ui:45
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "اسأل"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "اسمح"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "امنع"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "المبدئي"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "BookmarksExportDialog|"
-#| msgid "Choose..."
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "اختر..."
+msgstr "تصفح"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
