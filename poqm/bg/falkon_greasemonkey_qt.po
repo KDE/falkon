@@ -1,8 +1,8 @@
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-06-20 23:45+0200\n"
+"PO-Revision-Date: 2024-06-27 19:03+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: gm_addscriptdialog.cpp:50
 #, qt-format
@@ -23,23 +23,23 @@ msgstr "<p>изпълнява се на<br/><i>%1</i></p>"
 #, qt-format
 msgctxt "GM_AddScriptDialog|"
 msgid "<p>does not run at<br/><i>%1</i></p>"
-msgstr ""
+msgstr "<p>не се изпълнява на<br/><i>%1</i></p>"
 
 #: gm_addscriptdialog.cpp:84
 msgctxt "GM_AddScriptDialog|"
 msgid "Cannot install script"
-msgstr ""
+msgstr "Не може да се инсталира скрипт"
 
 #: gm_addscriptdialog.cpp:87
 #, qt-format
 msgctxt "GM_AddScriptDialog|"
 msgid "'%1' installed successfully"
-msgstr ""
+msgstr "„%1“ се инсталира успешно"
 
 #: gm_addscriptdialog.ui:14
 msgctxt "GM_AddScriptDialog|"
 msgid "GreaseMonkey Installation"
-msgstr ""
+msgstr "Инсталиране на GreaseMonkey"
 
 #: gm_addscriptdialog.ui:45
 msgctxt "GM_AddScriptDialog|"
@@ -49,64 +49,66 @@ msgstr "<h3>Инсталация на GreaseMonkey</h3>"
 #: gm_addscriptdialog.ui:67
 msgctxt "GM_AddScriptDialog|"
 msgid "You are about to install this userscript into GreaseMonkey:"
-msgstr ""
+msgstr "На път сте да инсталирате този потребителски скрипт в GreaseMonkey:"
 
 #: gm_addscriptdialog.ui:80
 msgctxt "GM_AddScriptDialog|"
 msgid "<b>You should only install scripts from sources you trust!</b>"
 msgstr ""
+"<b>Трябва да инсталирате скриптове само от източници, на които имате доверие!"
+"</b>"
 
 #: gm_addscriptdialog.ui:90
 msgctxt "GM_AddScriptDialog|"
 msgid "Are you sure you want to install it?"
-msgstr ""
+msgstr "Сигурни ли сте, че искате да го инсталирате?"
 
 #: gm_addscriptdialog.ui:108
 msgctxt "GM_AddScriptDialog|"
 msgid "Show source code of script"
-msgstr ""
+msgstr "Показване на изходния код на скрипта"
 
 #: gm_icon.cpp:28
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey"
-msgstr ""
+msgstr "GreaseMonkey"
 
 #: gm_icon.cpp:29
 msgctxt "GM_Icon|"
 msgid "Open GreaseMonkey settings"
-msgstr ""
+msgstr "Отваряне на настройките на GreaseMonkey"
 
 #: gm_icon.cpp:41
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey Icon"
-msgstr ""
+msgstr "Икона на GreaseMonkey"
 
 #: gm_manager.cpp:77
 #, qt-format
 msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
-msgstr ""
+msgstr "„%1“ вече е инсталиран"
 
 #: gm_manager.cpp:234
 msgctxt "GM_Manager|"
 msgid "GreaseMonkey"
-msgstr ""
+msgstr "GreaseMonkey"
 
 #: gm_notification.cpp:51
 msgctxt "GM_Notification|"
 msgid "Cannot install script"
-msgstr ""
+msgstr "Не може да се инсталира скрипт"
 
 #: gm_notification.cpp:59
 #, qt-format
 msgctxt "GM_Notification|"
 msgid "'%1' installed successfully"
-msgstr ""
+msgstr "„%1“ се инсталира успешно"
 
 #: gm_notification.ui:39
 msgctxt "GM_Notification|"
 msgid "This script can be installed with the GreaseMonkey plugin."
-msgstr ""
+msgstr "Този скрипт може да се инсталира с приставката GreaseMonkey."
 
 #: gm_notification.ui:59
 msgctxt "GM_Notification|"
@@ -116,7 +118,7 @@ msgstr "Инсталиране"
 #: settings/gm_settings.cpp:91
 msgctxt "GM_Settings|"
 msgid "Remove script"
-msgstr ""
+msgstr "Премахване на скрипт"
 
 #: settings/gm_settings.cpp:92
 #, qt-format
@@ -127,53 +129,53 @@ msgstr "Наистина ли искате да премахнете  '%1'?"
 #: settings/gm_settings.cpp:122
 msgctxt "GM_Settings|"
 msgid "Add script"
-msgstr ""
+msgstr "Добавяне на скрипт"
 
 #: settings/gm_settings.cpp:122
 msgctxt "GM_Settings|"
 msgid "Choose name for script:"
-msgstr ""
+msgstr "Избор на име за скрипта:"
 
 #: settings/gm_settings.ui:14
 msgctxt "GM_Settings|"
 msgid "GreaseMonkey Scripts"
-msgstr ""
+msgstr "Скриптове на GreaseMonkey"
 
 #: settings/gm_settings.ui:48
 msgctxt "GM_Settings|"
 msgid "<h3>GreaseMonkey Scripts</h3>"
-msgstr ""
+msgstr "<h3>Скриптове на GreaseMonkey</h3>"
 
 #: settings/gm_settings.ui:70
 msgctxt "GM_Settings|"
 msgid "Double clicking script will show additional information"
-msgstr ""
+msgstr "Двойното щракване върху скрипта ще покаже допълнителна информация"
 
 #: settings/gm_settings.ui:150
 msgctxt "GM_Settings|"
 msgid "More scripts can be downloaded from"
-msgstr ""
+msgstr "Още скриптове могат да бъдат изтеглени от"
 
 #: settings/gm_settings.ui:193
 msgctxt "GM_Settings|"
 msgid "Open scripts directory"
-msgstr ""
+msgstr "Отваряне на директорията със скриптове"
 
 #: settings/gm_settings.ui:200
 msgctxt "GM_Settings|"
 msgid "New user script"
-msgstr ""
+msgstr "Нов потребителски скрипт"
 
 #: settings/gm_settingsscriptinfo.cpp:45
 #, qt-format
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Script Details of %1"
-msgstr ""
+msgstr "Подробности за скрипта на %1"
 
 #: settings/gm_settingsscriptinfo.ui:19
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Runs at:"
-msgstr ""
+msgstr "Изпълнява се на:"
 
 #: settings/gm_settingsscriptinfo.ui:45
 msgctxt "GM_SettingsScriptInfo|"
@@ -188,7 +190,7 @@ msgstr "Версия:"
 #: settings/gm_settingsscriptinfo.ui:65
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Start at:"
-msgstr ""
+msgstr "Започване от:"
 
 #: settings/gm_settingsscriptinfo.ui:85
 msgctxt "GM_SettingsScriptInfo|"
@@ -203,7 +205,7 @@ msgstr "URL-адрес:"
 #: settings/gm_settingsscriptinfo.ui:128
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Does not run at:"
-msgstr ""
+msgstr "Не се изпълнява на:"
 
 #: settings/gm_settingsscriptinfo.ui:138
 msgctxt "GM_SettingsScriptInfo|"
@@ -213,4 +215,4 @@ msgstr "Пространство на имената:"
 #: settings/gm_settingsscriptinfo.ui:155
 msgctxt "GM_SettingsScriptInfo|"
 msgid "Edit in text editor"
-msgstr ""
+msgstr "Редактиране в текстов редактор"
