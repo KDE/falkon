@@ -1,0 +1,103 @@
+# translation of falkon_sitesettingsview_qt.pot to Esperanto
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the falkon package.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: falkon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-06-13 02:42+0200\n"
+"PO-Revision-Date: 2024-06-30 09:00+0200\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: sitesettingsview_controller.cpp:40
+msgctxt "SiteSettingsView_Controller|"
+msgid "Site Settings"
+msgstr "Sita Agordo"
+
+#: sitesettingsview_controller.cpp:48
+msgctxt "SiteSettingsView_Controller|"
+msgid "Site Settings View"
+msgstr "Sita Agordvido"
+
+#: sitesettingsview_widget.cpp:53
+msgctxt "SiteSettingsView_Widget|"
+msgid "Mode:"
+msgstr "Reĝimo:"
+
+#: sitesettingsview_widget.cpp:55
+msgctxt "SiteSettingsView_Widget|"
+msgid "Private"
+msgstr "Privata"
+
+#: sitesettingsview_widget.cpp:58
+msgctxt "SiteSettingsView_Widget|"
+msgid "Normal"
+msgstr "Normala"
+
+#: sitesettingsview_widget.cpp:60
+msgctxt "SiteSettingsView_Widget|"
+msgid "isWeb:"
+msgstr "isWeb:"
+
+#: sitesettingsview_widget.cpp:64
+msgctxt "SiteSettingsView_Widget|"
+msgid "Refresh"
+msgstr "Refreŝigi"
+
+#: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:109
+msgctxt "SiteSettingsView_Widget|"
+msgid "Real"
+msgstr "Reala"
+
+#: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:92
+#: sitesettingsview_widget.cpp:109
+msgctxt "SiteSettingsView_Widget|"
+msgid "Local"
+msgstr "Loka"
+
+#: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:92
+#: sitesettingsview_widget.cpp:109 sitesettingsview_widget.cpp:223
+msgctxt "SiteSettingsView_Widget|"
+msgid "Default"
+msgstr "Defaŭlta"
+
+#: sitesettingsview_widget.cpp:75
+msgctxt "SiteSettingsView_Widget|"
+msgid "Attributes"
+msgstr "Atributoj"
+
+#: sitesettingsview_widget.cpp:92
+msgctxt "SiteSettingsView_Widget|"
+msgid "Feature"
+msgstr "Kapablo"
+
+#: sitesettingsview_widget.cpp:109
+msgctxt "SiteSettingsView_Widget|"
+msgid "Option"
+msgstr "Elekteblo"
+
+#: sitesettingsview_widget.cpp:155
+msgctxt "SiteSettingsView_Widget|"
+msgid "True"
+msgstr "Vera"
+
+#: sitesettingsview_widget.cpp:158
+msgctxt "SiteSettingsView_Widget|"
+msgid "False"
+msgstr "Malvera"
+
+#: sitesettingsview_widget.cpp:219 sitesettingsview_widget.cpp:227
+#: sitesettingsview_widget.cpp:231
+#, qt-format
+msgctxt "SiteSettingsView_Widget|"
+msgid "%1 (%2%)"
+msgstr "%1 (%2%)"
