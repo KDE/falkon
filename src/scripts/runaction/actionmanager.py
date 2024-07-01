@@ -58,7 +58,7 @@ class ActionManager(QtCore.QObject):
 
             if action.testAction(cond, url):
                 act = Falkon.Action(action.icon, action.title, self)
-                act.triggered.connect(lambda a=action, w=webView, u=url, t=text: self.execAction(a, w, u, t))
+                act.triggered.connect(lambda checked, a=action, w=webView, u=url, t=text: self.execAction(a, w, u, t))
                 if action.submenu:
                     if action.submenu not in menus:
                         menu = Falkon.Menu(action.menuTitle, webView)
