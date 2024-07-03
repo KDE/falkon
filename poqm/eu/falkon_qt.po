@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
-"PO-Revision-Date: 2024-04-03 14:57+0200\n"
+"PO-Revision-Date: 2024-07-02 21:17+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Language: eu_ES\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -3165,12 +3165,9 @@ msgid "Media"
 msgstr "Multimedia"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML5 Baimenak"
+msgstr "Baimenak"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3218,30 +3215,21 @@ msgid "<b>Preview</b>"
 msgstr "<b>Aurreikuspena</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
-msgstr "Berezkoa"
+msgstr "Lehenetsia"
 
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Galdetu"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
-msgstr "Utzi"
+msgstr "Baimendu"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Ukatu"
@@ -3305,209 +3293,140 @@ msgid "More..."
 msgstr "Gehiago..."
 
 #: lib/other/sitesettingsmanager.cpp:285
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Berrezarri zoom maila"
+msgstr "Zoom maila"
 
 #: lib/other/sitesettingsmanager.cpp:287
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
-msgstr "Cookieak"
+msgstr "«Cookie»ak"
 
 #: lib/other/sitesettingsmanager.cpp:290 lib/other/sitesettingsmanager.cpp:315
 #: lib/other/sitesettingsmanager.cpp:355 lib/other/sitesettingsmanager.cpp:372
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Neurri ezezaguna"
+msgstr "Ezezaguna"
 
 #: lib/other/sitesettingsmanager.cpp:298
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Jakinarazpenak"
 
 #: lib/other/sitesettingsmanager.cpp:300
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Geokokapena"
 
 #: lib/other/sitesettingsmanager.cpp:302
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Mikrofonoa"
 
 #: lib/other/sitesettingsmanager.cpp:304
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Kamera"
 
 #: lib/other/sitesettingsmanager.cpp:306
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Mikrofonoa eta Kamera"
 
 #: lib/other/sitesettingsmanager.cpp:308
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Ezkutatu Punteroa"
+msgstr "Ezkutatu saguaren erakuslea"
 
 #: lib/other/sitesettingsmanager.cpp:310
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "Gaitu pantaila atzematea"
+msgstr "Pantaila atzematea"
 
 #: lib/other/sitesettingsmanager.cpp:312
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Pantaila atzematea audioarekin"
 
 #: lib/other/sitesettingsmanager.cpp:323
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Birgertatu orrialdea"
+msgstr "Irudiak automatikoki zamatu"
 
 #: lib/other/sitesettingsmanager.cpp:326
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Baimendu JavaScript"
+msgstr "Gaitu JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:328
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Ireki ohar-leihoak"
+msgstr "JavaScript: Ireki leiho gainerakorrak"
 
 #: lib/other/sitesettingsmanager.cpp:330
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Sarbide gakoa"
+msgstr "JavaScript: Arbelera sartu"
 
 #: lib/other/sitesettingsmanager.cpp:332
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Itsatsi arbeletik"
+msgstr "JavaScript: Itsatsi arbeletik"
 
 #: lib/other/sitesettingsmanager.cpp:334
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Aktibatu leihoak"
+msgstr "JavaScript: Leihoak aktibatu"
 
 #: lib/other/sitesettingsmanager.cpp:337
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
-msgstr "Tokiko biltegia"
+msgstr "Biltegiratze lokala"
 
 #: lib/other/sitesettingsmanager.cpp:339
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&Ikusleiho-osoa"
+msgstr "Pantaila-betearen euskarria"
 
 #: lib/other/sitesettingsmanager.cpp:341
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Exekutatu eduki ez segurua"
 
 #: lib/other/sitesettingsmanager.cpp:343
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Desgaitu bideo-jotze automatikoa"
+msgstr "Bideo-jotze automatikoa"
 
 #: lib/other/sitesettingsmanager.cpp:346
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Utzi cookieak biltegiratzen"
+msgstr "Baimendu mihisetik irakurtzea"
 
 #: lib/other/sitesettingsmanager.cpp:350
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Behartu modu iluna"
 
 #: lib/other/sitesettingsmanager.cpp:363
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
-msgstr "Utzi"
+msgstr "Baimendu"
 
 #: lib/other/sitesettingsmanager.cpp:365
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Galdetu"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Ukatu"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
-msgstr "Berezkoa"
+msgstr "Lehenetsia"
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
@@ -4531,17 +4450,14 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Erabili hardware bidezko azelerazioa (berrabiarazi beharra dago)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Utzi cookieak biltegiratzen"
+msgstr "Baimendu mihisetik irakurtzea"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Behartu modu iluna"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
@@ -4877,12 +4793,9 @@ msgid "HTML5 Permissions"
 msgstr "HTML5 Baimenak"
 
 #: lib/preferences/preferences.ui:2179
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Ezarpenak"
+msgstr "Gunearen ezarpenak"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
@@ -5083,33 +4996,21 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "Aldaketak Falkon berrabiarazi ondoren indarrean izango dira."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "BookmarksExportDialog|"
-#| msgid "Choose..."
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Hautatu..."
+msgstr "Arakatu"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML5 Baimenak"
+msgstr "Gunearen baimenak"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Gunea"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Jokabidea"
@@ -5117,39 +5018,27 @@ msgstr "Jokabidea"
 #: lib/preferences/sitesettingsbrowsedialog.ui:45
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Galdetu"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
-msgstr "Utzi"
+msgstr "Baimendu"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Ukatu"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
-msgstr "Berezkoa"
+msgstr "Lehenetsia"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "BookmarksExportDialog|"
-#| msgid "Choose..."
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Hautatu..."
+msgstr "Arakatu"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
