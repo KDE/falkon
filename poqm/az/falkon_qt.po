@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-05-30 17:40+0400\n"
-"Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-07-05 17:43+0400\n"
+"Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
@@ -11,12 +11,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
 msgid "&Undo"
-msgstr "&Geri qaytar"
+msgstr "&Geri qaytarmaq"
 
 #: lib/3rdparty/lineedit.cpp:107
 msgctxt "LineEdit|"
@@ -3156,12 +3156,9 @@ msgid "Media"
 msgstr "Daşıyıcısı"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML5 İcazələri"
+msgstr "İcazələr"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3209,9 +3206,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Önbaxış</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Standart"
@@ -3219,20 +3213,14 @@ msgstr "Standart"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Soruşmaq"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
-msgstr "İcazə Vermək"
+msgstr "İcazə vermək"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Qadağan etmək"
@@ -3296,206 +3284,137 @@ msgid "More..."
 msgstr "Daha çox..."
 
 #: lib/other/sitesettingsmanager.cpp:285
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Miqyası sıfırlayın"
+msgstr "Miqyas səviyyəsi"
 
 #: lib/other/sitesettingsmanager.cpp:287
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Kukilər"
 
 #: lib/other/sitesettingsmanager.cpp:290 lib/other/sitesettingsmanager.cpp:315
 #: lib/other/sitesettingsmanager.cpp:355 lib/other/sitesettingsmanager.cpp:372
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Ölçü bilinmir"
+msgstr "Naməlum"
 
 #: lib/other/sitesettingsmanager.cpp:298
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Bildirilşlər"
 
 #: lib/other/sitesettingsmanager.cpp:300
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Coğrafi məkan"
 
 #: lib/other/sitesettingsmanager.cpp:302
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Mikrofon"
 
 #: lib/other/sitesettingsmanager.cpp:304
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Kamera"
 
 #: lib/other/sitesettingsmanager.cpp:306
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
-msgstr "Mikrofon və Kamera"
+msgstr "Mikrofon və kamera"
 
 #: lib/other/sitesettingsmanager.cpp:308
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Kursoru Gizlətmək"
+msgstr "Siçan göstəricisini gizlətmək"
 
 #: lib/other/sitesettingsmanager.cpp:310
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "Ekran şəklinin çəkilməsini aktivləşdirin"
+msgstr "Ekran şəkli"
 
 #: lib/other/sitesettingsmanager.cpp:312
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Səsli ekran şəkli"
 
 #: lib/other/sitesettingsmanager.cpp:323
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Yenidən yükləmək"
+msgstr "Təsvirlərin avtomatik yüklənməsi"
 
 #: lib/other/sitesettingsmanager.cpp:326
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "JavaScript'i Tətbiq Etmək"
+msgstr "JavaScript-i aktiv etmək"
 
 #: lib/other/sitesettingsmanager.cpp:328
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Bildiriş pəncərələrini açmaq"
+msgstr "JavaScript: Dialoq pəncərəsni açmaq"
 
 #: lib/other/sitesettingsmanager.cpp:330
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Mübadilə yaddaşına giriş"
+msgstr "JavaScript: Mübadilə yaddaşına giriş"
 
 #: lib/other/sitesettingsmanager.cpp:332
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Mübadilə yaddaşından yerləşdirmək"
+msgstr "JavaScript: Mübadilə yaddaşından yerləşdirmək"
 
 #: lib/other/sitesettingsmanager.cpp:334
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Pəncərələri aktivləşdirmək"
+msgstr "JavaScript: Activ pəncərələr"
 
 #: lib/other/sitesettingsmanager.cpp:337
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Yerli yaddaş"
 
 #: lib/other/sitesettingsmanager.cpp:339
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&TamEkran"
+msgstr "TamEkran dəstəyi"
 
 #: lib/other/sitesettingsmanager.cpp:341
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Təhlükəli məzmunu açmaq"
 
 #: lib/other/sitesettingsmanager.cpp:343
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Videonun avtomatik göstərilməsini söndürmək"
+msgstr "Videonun avtomatik göstərilməsi"
 
 #: lib/other/sitesettingsmanager.cpp:346
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Kukilərin saxlanılmasına icazə vermək"
+msgstr "Kıtansan ozumağa icazə vermək"
 
 #: lib/other/sitesettingsmanager.cpp:350
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Məcburi qaranlıq rejim"
 
 #: lib/other/sitesettingsmanager.cpp:363
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
-msgstr "İcazə Vermək"
+msgstr "İcazə vermək"
 
 #: lib/other/sitesettingsmanager.cpp:365
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Soruşmaq"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Qadağan etmək"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Standart"
@@ -4523,17 +4442,14 @@ msgstr ""
 "olunur)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Kukilərin saxlanılmasına icazə vermək"
+msgstr "Kıtansan ozumağa icazə vermək"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Məcburi qaranlıq rejim"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
@@ -4869,12 +4785,9 @@ msgid "HTML5 Permissions"
 msgstr "HTML5 İcazələri"
 
 #: lib/preferences/preferences.ui:2179
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Ayarlar"
+msgstr "Sayt ayarları"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
@@ -5075,33 +4988,21 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "Dəyişikliklər Falkon yenidən başladıqdan sonra qüvvəyə minəcək."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
 msgstr "Səyahət"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML5 İcazələri"
+msgstr "Sayt icazələri"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Sayt"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Davranış"
@@ -5109,36 +5010,24 @@ msgstr "Davranış"
 #: lib/preferences/sitesettingsbrowsedialog.ui:45
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Soruşmaq"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
-msgstr "İcazə Vermək"
+msgstr "İcazə vermək"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Qadağan etmək"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Standart"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
 msgstr "Səyahət"
