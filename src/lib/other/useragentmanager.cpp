@@ -29,7 +29,6 @@ UserAgentManager::UserAgentManager(QObject* parent)
     , m_usePerDomainUserAgent(false)
 {
     m_defaultUserAgent = mApp->webProfile()->httpUserAgent();
-    m_defaultUserAgent.replace(QRegularExpression(QSL("(QtWebEngine/[^\\s]+)")), QSL("Falkon/%1 \\1").arg(QString::fromLatin1(Qz::VERSION)));
 }
 
 void UserAgentManager::loadSettings()
