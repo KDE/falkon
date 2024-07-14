@@ -119,6 +119,8 @@ public:
     QString sqlTable();
     Permission intToPermission(const int permission) const;
 
+    static QString adjustUrl(const QUrl url);
+
 private:
     void prepareSqls();
 

@@ -413,7 +413,9 @@ void ProfileManager::updateDatabase()
             for (auto [feature, settingName] : html5SettingPairs.asKeyValueRange()) {
                 auto const serverList = settings.value(settingName + suflix, QStringList()).toStringList();
 
-                for (const auto &server : serverList) {
+                for (const auto &serverUrl : serverList) {
+                    const auto server = SiteSettingsManager::adjustUrl(QUrl(serverUrl));
+
                     if (!siteSettings.contains(server)) {
                         siteSettings[server] = SiteSettingsManager::SiteSettings();
                         for (auto [f, nameUnused] : html5SettingPairs.asKeyValueRange()) {
@@ -438,7 +440,8 @@ void ProfileManager::updateDatabase()
         auto loadCookiesSettings = [&](const QString &listName, const SiteSettingsManager::Permission permission) {
             auto const serverList = settings.value(listName, QStringList()).toStringList();
 
-            for (const auto &server : serverList) {
+            for (const auto &serverUrl : serverList) {
+                const auto server = SiteSettingsManager::adjustUrl(QUrl(serverUrl));
                 if (!siteSettings.contains(server)) {
                     siteSettings[server] = SiteSettingsManager::SiteSettings();
                 }
