@@ -29,7 +29,7 @@
 #include <QWebEngineSettings>
 #include <QDateTime>
 
-//#define COOKIE_DEBUG
+// #define COOKIE_DEBUG
 
 CookieJar::CookieJar(QObject* parent)
     : QObject(parent)
@@ -182,7 +182,20 @@ bool CookieJar::rejectCookie(const QString &domain, const QNetworkCookie &cookie
 {
     Q_UNUSED(domain)
 
-    auto result = mApp->siteSettingsManager()->getPermission(SiteSettingsManager::poAllowCookies, cookieDomain);
+    SiteSettingsManager::Permission result = SiteSettingsManager::Default;
+    auto results = mApp->siteSettingsManager()->getPermissionsLike(SiteSettingsManager::poAllowCookies, cookieDomain);
+    for (auto it = results.begin(); it != results.end(); ++it) {
+        QString host = QUrl(it.key()).host();
+
+        if (matchDomain(cookieDomain, host)) {
+            result = it.value();
+#ifdef COOKIE_DEBUG
+            qDebug() << "Cookie domain" << cookieDomain << "matched to" << it.key();
+#endif
+            break;
+        }
+    }
+
     if (result == SiteSettingsManager::Default) {
         result = mApp->siteSettingsManager()->getDefaultPermission(SiteSettingsManager::poAllowCookies);
     }

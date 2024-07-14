@@ -226,6 +226,45 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEng
     return getPermission(webAttributeToSqlColumn(attribute), adjustUrl(url));
 }
 
+QMap<QString, SiteSettingsManager::Permission> SiteSettingsManager::getPermissionsLike(const QString& column, const QString& host)
+{
+    QMap<QString, SiteSettingsManager::Permission> domainMatch;
+
+    if (column.isEmpty()) {
+        domainMatch.insert(host, Deny);
+        return domainMatch;
+    }
+    if (host.isEmpty()) {
+        domainMatch.insert(host, Default);
+        return domainMatch;
+    }
+
+    auto searchHost = host;
+
+    if (searchHost.startsWith(QLatin1Char('.'))) {
+        searchHost.remove(0, 1);
+    }
+
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.prepare(QSL("SELECT server, %1 FROM %2 WHERE server LIKE ?").arg(column, sqlTable()));
+    query.addBindValue(QSL("%%%1").arg(searchHost));
+    query.exec();
+
+    while (query.next()) {
+        Permission allow_option = intToPermission(query.value(column).toInt());
+        QString server_option = query.value(QSL("server")).toString();
+
+        domainMatch.insert(server_option, allow_option);
+    }
+
+    return domainMatch;
+}
+
+QMap<QString, SiteSettingsManager::Permission> SiteSettingsManager::getPermissionsLike(const SiteSettingsManager::PageOptions option, const QString& host)
+{
+    return getPermissionsLike(optionToSqlColumn(option), host);
+}
+
 SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const SiteSettingsManager::PageOptions option)
 {
     switch (option) {
