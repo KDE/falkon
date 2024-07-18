@@ -14,52 +14,9 @@ apps:
         common-id: org.kde.falkon.desktop
         desktop: usr/share/applications/org.kde.falkon.desktop
         command: usr/bin/falkon
-        command-chain:
-        - snap/command-chain/desktop-launch6
         plugs:
         - pulseaudio
         - browser-support
-plugs:
-    gtk-3-themes:
-        interface: content
-        target: $SNAP/data-dir/themes
-        default-provider: gtk-common-themes
-    kde-gtk3-themes:
-        interface: content
-        target: $SNAP/data-dir/themes
-        default-provider: qt-common-themes
-    gtk-2-themes:
-        interface: content
-        target: $SNAP/data-dir/themes
-        default-provider: gtk-common-themes
-    kde-gtk2-themes:
-        interface: content
-        target: $SNAP/data-dir/themes
-        default-provider: qt-common-themes
-    qt-icon-themes:
-        interface: content
-        target: $SNAP/data-dir/icons
-        default-provider: qt-common-themes
-    gtk-icon-themes:
-        interface: content
-        target: $SNAP/data-dir/icons
-        default-provider: gtk-common-themes
-    qt-sound-themes:
-        interface: content
-        target: $SNAP/data-dir/sounds
-        default-provider: qt-common-themes
-    gtk-sound-themes:
-        interface: content
-        target: $SNAP/data-dir/sounds
-        default-provider: gtk-common-themes
-    qt-6-themes:
-        interface: content
-        target: $SNAP/kf6
-        default-provider: qt-common-themes
-    dot-config-kde-globals:
-        interface: personal-files
-        read:
-            - $HOME/.config/kdeglobals
 slots:
     session-dbus-interface:
         interface: dbus
@@ -81,6 +38,10 @@ parts:
         plugin: cmake
         source: .
         source-type: local
+        build-packages:
+        - libxcb-util-dev
+        stage-packages:
+        - libxcb-util1
         cmake-parameters:
         - -DCMAKE_INSTALL_PREFIX=/usr
         - -DCMAKE_BUILD_TYPE=Release
@@ -103,7 +64,6 @@ parts:
         - -usr/include/*
         - -usr/share/ECM/*
         - -usr/share/man/*
-        - -usr/share/icons/breeze-dark*
         - -usr/bin/X11
         - -usr/lib/gcc/$SNAPCRAFT_ARCH_TRIPLET/6.0.0
         - -usr/lib/aspell/*
