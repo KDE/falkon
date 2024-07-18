@@ -713,7 +713,7 @@ void WebPage::javaScriptConsoleMessage(JavaScriptConsoleMessageLevel level, cons
         break;
     }
 
-    std::cout << qPrintable(sourceID) << ":" << lineNumber << " " << qPrintable(message);
+    std::cout << qPrintable(sourceID) << ":" << lineNumber << " " << qPrintable(message) << '\n';
 }
 
 QWebEnginePage* WebPage::createWindow(QWebEnginePage::WebWindowType type)

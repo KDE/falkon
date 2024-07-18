@@ -95,7 +95,7 @@ void SiteSettingsManager::saveSettings()
 QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttributes(const QUrl& url)
 {
     QHash<QWebEngineSettings::WebAttribute, bool> attributes;
-    QString host = url.host();
+    QString host = adjustUrl(url);
 
     if (host.isEmpty()) {
         for (int i = 0; i < supportedAttribute.size(); ++i) {
@@ -133,7 +133,7 @@ QHash<QWebEngineSettings::WebAttribute, bool> SiteSettingsManager::getWebAttribu
 
 void SiteSettingsManager::setOption(const QString& column, const QUrl& url, const int value)
 {
-    QString host = url.host();
+    QString host = adjustUrl(url);
 
     if (column.isEmpty() || host.isEmpty()) {
         return;
@@ -208,22 +208,61 @@ SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEng
 
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QString &column, const QUrl& url)
 {
-    return getPermission(column, url.host());
+    return getPermission(column, adjustUrl(url));
 }
 
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const SiteSettingsManager::PageOptions option, const QUrl& url)
 {
-    return getPermission(optionToSqlColumn(option), url.host());
+    return getPermission(optionToSqlColumn(option), adjustUrl(url));
 }
 
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEnginePage::Feature feature, const QUrl& url)
 {
-    return getPermission(featureToSqlColumn(feature), url.host());
+    return getPermission(featureToSqlColumn(feature), adjustUrl(url));
 }
 
 SiteSettingsManager::Permission SiteSettingsManager::getPermission(const QWebEngineSettings::WebAttribute attribute, const QUrl& url)
 {
-    return getPermission(webAttributeToSqlColumn(attribute), url.host());
+    return getPermission(webAttributeToSqlColumn(attribute), adjustUrl(url));
+}
+
+QMap<QString, SiteSettingsManager::Permission> SiteSettingsManager::getPermissionsLike(const QString& column, const QString& host)
+{
+    QMap<QString, SiteSettingsManager::Permission> domainMatch;
+
+    if (column.isEmpty()) {
+        domainMatch.insert(host, Deny);
+        return domainMatch;
+    }
+    if (host.isEmpty()) {
+        domainMatch.insert(host, Default);
+        return domainMatch;
+    }
+
+    auto searchHost = host;
+
+    if (searchHost.startsWith(QLatin1Char('.'))) {
+        searchHost.remove(0, 1);
+    }
+
+    QSqlQuery query(SqlDatabase::instance()->database());
+    query.prepare(QSL("SELECT server, %1 FROM %2 WHERE server LIKE ?").arg(column, sqlTable()));
+    query.addBindValue(QSL("%%%1").arg(searchHost));
+    query.exec();
+
+    while (query.next()) {
+        Permission allow_option = intToPermission(query.value(column).toInt());
+        QString server_option = query.value(QSL("server")).toString();
+
+        domainMatch.insert(server_option, allow_option);
+    }
+
+    return domainMatch;
+}
+
+QMap<QString, SiteSettingsManager::Permission> SiteSettingsManager::getPermissionsLike(const SiteSettingsManager::PageOptions option, const QString& host)
+{
+    return getPermissionsLike(optionToSqlColumn(option), host);
 }
 
 SiteSettingsManager::Permission SiteSettingsManager::getDefaultPermission(const SiteSettingsManager::PageOptions option)
@@ -464,9 +503,9 @@ QList<QWebEnginePage::Feature> SiteSettingsManager::getSupportedFeatures() const
 SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url)
 {
     SiteSettings siteSettings;
-    siteSettings.server = url.host();
+    siteSettings.server = adjustUrl(url);
 
-    if (url.isEmpty()) {
+    if (url.isEmpty() || siteSettings.server.isEmpty()) {
         return siteSettings;
     }
 
@@ -474,7 +513,7 @@ SiteSettingsManager::SiteSettings SiteSettingsManager::getSiteSettings(QUrl& url
 
     QSqlQuery query(SqlDatabase::instance()->database());
     query.prepare(everythingSql.arg(sqlTable()));
-    query.addBindValue(url.host());
+    query.addBindValue(siteSettings.server);
     query.exec();
 
     if (query.next()) {
@@ -623,4 +662,17 @@ void SiteSettingsManager::prepareSqls() {
     everythingUpdateSql.append(QSL("=? "));
 
     everythingUpdateSql.append(QSL(" WHERE server=?"));
+}
+
+QString SiteSettingsManager::adjustUrl(const QUrl url)
+{
+    QUrl urlAdjusted = url.adjusted(
+        QUrl::RemoveUserInfo
+        | QUrl::RemovePath
+        | QUrl::RemoveQuery
+        | QUrl::RemoveFragment
+        | QUrl::StripTrailingSlash
+    );
+
+    return urlAdjusted.toString();
 }

@@ -1,11 +1,10 @@
 # Translation of falkon_qt to Norwegian Nynorsk
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018, 2019.
-# Karl Ove Hufthammer <karl@huftis.org>, 2018, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2023-08-24 21:36+0200\n"
+"PO-Revision-Date: 2024-07-14 12:20+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: qtrich\n"
@@ -2127,7 +2126,7 @@ msgstr "Hovudmeny"
 #: lib/navigation/navigationbar.cpp:165
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen"
-msgstr "Avslutt fullskjermmodus"
+msgstr "Avslutt fullskjermsmodus"
 
 #: lib/navigation/navigationbar.cpp:191
 msgctxt "NavigationBar|"
@@ -3297,160 +3296,160 @@ msgctxt "SiteInfoWidget|"
 msgid "More..."
 msgstr "Meir …"
 
-#: lib/other/sitesettingsmanager.cpp:285
+#: lib/other/sitesettingsmanager.cpp:324
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
 msgstr "Nullstill forstørring"
 
-#: lib/other/sitesettingsmanager.cpp:287
+#: lib/other/sitesettingsmanager.cpp:326
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Infokapslar"
 
-#: lib/other/sitesettingsmanager.cpp:290 lib/other/sitesettingsmanager.cpp:315
-#: lib/other/sitesettingsmanager.cpp:355 lib/other/sitesettingsmanager.cpp:372
+#: lib/other/sitesettingsmanager.cpp:329 lib/other/sitesettingsmanager.cpp:354
+#: lib/other/sitesettingsmanager.cpp:394 lib/other/sitesettingsmanager.cpp:411
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
 msgstr "Ukjend storleik"
 
-#: lib/other/sitesettingsmanager.cpp:298
+#: lib/other/sitesettingsmanager.cpp:337
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Varslingar"
 
-#: lib/other/sitesettingsmanager.cpp:300
+#: lib/other/sitesettingsmanager.cpp:339
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Geografisk plassering"
 
-#: lib/other/sitesettingsmanager.cpp:302
+#: lib/other/sitesettingsmanager.cpp:341
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Mikrofon"
 
-#: lib/other/sitesettingsmanager.cpp:304
+#: lib/other/sitesettingsmanager.cpp:343
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Kamera"
 
-#: lib/other/sitesettingsmanager.cpp:306
+#: lib/other/sitesettingsmanager.cpp:345
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Mikrofon og kamera"
 
-#: lib/other/sitesettingsmanager.cpp:308
+#: lib/other/sitesettingsmanager.cpp:347
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
 msgstr "Gøym peikar"
 
-#: lib/other/sitesettingsmanager.cpp:310
+#: lib/other/sitesettingsmanager.cpp:349
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
 msgstr "Bilete av skjermen"
 
-#: lib/other/sitesettingsmanager.cpp:312
+#: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
 msgstr ""
 
-#: lib/other/sitesettingsmanager.cpp:323
+#: lib/other/sitesettingsmanager.cpp:362
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
 msgstr "Last sida på nytt"
 
-#: lib/other/sitesettingsmanager.cpp:326
+#: lib/other/sitesettingsmanager.cpp:365
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
 msgstr "Tillat JavaScript"
 
-#: lib/other/sitesettingsmanager.cpp:328
+#: lib/other/sitesettingsmanager.cpp:367
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
 msgstr "Opna sprettoppvindauge"
 
-#: lib/other/sitesettingsmanager.cpp:330
+#: lib/other/sitesettingsmanager.cpp:369
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
 msgstr "Få tilgang til utklippstavla"
 
-#: lib/other/sitesettingsmanager.cpp:332
+#: lib/other/sitesettingsmanager.cpp:371
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
 msgstr "Lima inn frå utklippstavla"
 
-#: lib/other/sitesettingsmanager.cpp:334
+#: lib/other/sitesettingsmanager.cpp:373
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
 msgstr "Heva vindauge"
 
-#: lib/other/sitesettingsmanager.cpp:337
+#: lib/other/sitesettingsmanager.cpp:376
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Lokal lagring"
 
-#: lib/other/sitesettingsmanager.cpp:339
+#: lib/other/sitesettingsmanager.cpp:378
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
 msgstr "&Fullskjerm"
 
-#: lib/other/sitesettingsmanager.cpp:341
+#: lib/other/sitesettingsmanager.cpp:380
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
 msgstr ""
 
-#: lib/other/sitesettingsmanager.cpp:343
+#: lib/other/sitesettingsmanager.cpp:382
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
 msgstr "Slå av automatisk videoavspeling"
 
-#: lib/other/sitesettingsmanager.cpp:346
+#: lib/other/sitesettingsmanager.cpp:385
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
 msgstr "Tillat lagring av infokapslar"
 
-#: lib/other/sitesettingsmanager.cpp:350
+#: lib/other/sitesettingsmanager.cpp:389
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
 msgstr ""
 
-#: lib/other/sitesettingsmanager.cpp:363
+#: lib/other/sitesettingsmanager.cpp:402
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Tillat"
 
-#: lib/other/sitesettingsmanager.cpp:365
+#: lib/other/sitesettingsmanager.cpp:404
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
 msgstr ""
 
-#: lib/other/sitesettingsmanager.cpp:367
+#: lib/other/sitesettingsmanager.cpp:406
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Avvis"
 
-#: lib/other/sitesettingsmanager.cpp:369
+#: lib/other/sitesettingsmanager.cpp:408
 #, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Default"

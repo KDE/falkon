@@ -377,7 +377,7 @@ void SiteInfo::saveSiteSettings()
     siteSettings.AllowCookies = item->permission();
     siteSettings.ZoomLevel = -1;
 
-    siteSettings.server = m_baseUrl.host();
+    siteSettings.server = mApp->siteSettingsManager()->adjustUrl(m_baseUrl);
 
     auto storedSiteSettings = mApp->siteSettingsManager()->getSiteSettings(m_baseUrl);
 

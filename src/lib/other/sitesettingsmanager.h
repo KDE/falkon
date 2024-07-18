@@ -92,6 +92,9 @@ public:
     Permission getPermission(const QWebEnginePage::Feature feature, const QUrl &url);
     Permission getPermission(const QWebEngineSettings::WebAttribute attribute, const QUrl &url);
 
+    QMap<QString, SiteSettingsManager::Permission> getPermissionsLike(const QString &column, const QString &host);
+    QMap<QString, SiteSettingsManager::Permission> getPermissionsLike(const SiteSettingsManager::PageOptions option, const QString &host);
+
     void setOption(const QString &column, const QUrl &url, const int value);
     void setOption(const PageOptions option, const QUrl &url, const int value);
     void setOption(const QWebEnginePage::Feature &feature, const QUrl &url, const Permission value);
@@ -118,6 +121,8 @@ public:
     void setSiteSettings(SiteSettings &siteSettings);
     QString sqlTable();
     Permission intToPermission(const int permission) const;
+
+    static QString adjustUrl(const QUrl url);
 
 private:
     void prepareSqls();
