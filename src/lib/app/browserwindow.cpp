@@ -36,7 +36,6 @@
 #include "clickablelabel.h"
 #include "docktitlebarwidget.h"
 #include "iconprovider.h"
-#include "progressbar.h"
 #include "closedwindowsmanager.h"
 #include "statusbar.h"
 #include "browsinglibrary.h"
@@ -72,6 +71,7 @@
 #include <QWebEngineHistory>
 #include <QWebEngineSettings>
 #include <QMessageBox>
+#include <QProgressBar>
 #include <QToolTip>
 #include <QScrollArea>
 #include <QCollator>
@@ -387,7 +387,7 @@ void BrowserWindow::setupUi()
     m_statusBar->setObjectName(QSL("mainwindow-statusbar"));
     m_statusBar->setCursor(Qt::ArrowCursor);
     setStatusBar(m_statusBar);
-    m_progressBar = new ProgressBar(m_statusBar);
+    m_progressBar = new QProgressBar(m_statusBar);
     m_ipLabel = new QLabel(this);
     m_ipLabel->setObjectName(QSL("statusbar-ip-label"));
     m_ipLabel->setToolTip(tr("IP Address of current page"));

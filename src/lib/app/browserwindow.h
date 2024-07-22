@@ -27,6 +27,7 @@
 
 class QLabel;
 class QVBoxLayout;
+class QProgressBar;
 class QSplitter;
 class QWebEngineFrame;
 class QTimer;
@@ -45,7 +46,6 @@ class WebView;
 class WebPage;
 class SideBar;
 class SideBarManager;
-class ProgressBar;
 class StatusBar;
 class NavigationBar;
 class NavigationContainer;
@@ -214,7 +214,7 @@ private:
     NavigationBar* m_navigationToolbar;
     BookmarksToolbar* m_bookmarksToolbar;
 
-    ProgressBar* m_progressBar;
+    QProgressBar* m_progressBar;
     QLabel* m_ipLabel;
 
     QMenu* m_superMenu;

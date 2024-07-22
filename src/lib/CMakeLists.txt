@@ -254,7 +254,6 @@ set(SRCS ${SRCS}
     tools/mactoolbutton.cpp
     tools/menubar.cpp
     tools/pagethumbnailer.cpp
-    tools/progressbar.cpp
     tools/qztools.cpp
     tools/removeitemfocusdelegate.cpp
     tools/scripts.cpp
@@ -488,7 +487,6 @@ set(SRCS ${SRCS}
     tools/mactoolbutton.h
     tools/menubar.h
     tools/pagethumbnailer.h
-    tools/progressbar.h
     tools/qztools.h
     tools/removeitemfocusdelegate.h
     tools/scripts.h
