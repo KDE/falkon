@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2024 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -18,28 +19,15 @@
 #ifndef PROGRESSBAR_H
 #define PROGRESSBAR_H
 
-#include <QWidget>
+#include <QProgressBar>
 
 #include "qzcommon.h"
 
-class QStyleOptionProgressBar;
-
-class FALKON_EXPORT ProgressBar : public QWidget
+class FALKON_EXPORT ProgressBar : public QProgressBar
 {
     Q_OBJECT
 public:
     explicit ProgressBar(QWidget* parent = nullptr);
-
-public Q_SLOTS:
-    void setValue(int value);
-
-protected:
-    void paintEvent(QPaintEvent* e) override;
-    void initStyleOption(QStyleOptionProgressBar* option);
-
-private:
-    int m_value;
-    int m_lastPaintedValue;
 };
 
 #endif // PROGRESSBAR_H
