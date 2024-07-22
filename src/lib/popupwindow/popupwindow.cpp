@@ -19,6 +19,7 @@
 #include "popupwebview.h"
 #include "webpage.h"
 #include "popupstatusbarmessage.h"
+#include "progressbar.h"
 #include "searchtoolbar.h"
 #include "qzsettings.h"
 #include "popuplocationbar.h"
@@ -26,11 +27,10 @@
 #include "mainapplication.h"
 #include "browserwindow.h"
 
+#include <QVBoxLayout>
+#include <QStatusBar>
 #include <QCloseEvent>
 #include <QMenuBar>
-#include <QProgressBar>
-#include <QStatusBar>
-#include <QVBoxLayout>
 
 PopupWindow::PopupWindow(PopupWebView* view)
     : QWidget()
@@ -53,7 +53,7 @@ PopupWindow::PopupWindow(PopupWebView* view)
     m_statusBar = new QStatusBar(this);
     m_statusBar->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Maximum);
 
-    m_progressBar = new QProgressBar(m_statusBar);
+    m_progressBar = new ProgressBar(m_statusBar);
     m_statusBar->addPermanentWidget(m_progressBar);
     m_progressBar->hide();
 

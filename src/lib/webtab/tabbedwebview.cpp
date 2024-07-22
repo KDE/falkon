@@ -23,6 +23,7 @@
 #include "tabbar.h"
 #include "webtab.h"
 #include "statusbar.h"
+#include "progressbar.h"
 #include "navigationbar.h"
 #include "iconprovider.h"
 #include "searchenginesmanager.h"

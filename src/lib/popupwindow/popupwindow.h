@@ -23,16 +23,16 @@
 
 #include "qzcommon.h"
 
-class QMenu;
-class QMenuBar;
-class QProgressBar;
-class QStatusBar;
 class QVBoxLayout;
+class QStatusBar;
+class QMenuBar;
+class QMenu;
 
 class WebPage;
 class PopupWebView;
 class PopupStatusBarMessage;
 class PopupLocationBar;
+class ProgressBar;
 class SearchToolBar;
 
 class FALKON_EXPORT PopupWindow : public QWidget
@@ -65,7 +65,7 @@ private:
     PopupWebView* m_view;
     PopupLocationBar* m_locationBar;
     PopupStatusBarMessage* m_statusBarMessage;
-    QProgressBar* m_progressBar;
+    ProgressBar* m_progressBar;
 
     QVBoxLayout* m_layout;
     QStatusBar* m_statusBar;
