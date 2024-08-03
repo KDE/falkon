@@ -79,9 +79,6 @@ void WebInspector::inspectElement()
 
 bool WebInspector::isEnabled()
 {
-    if (!mApp->webSettings()->testAttribute(QWebEngineSettings::JavascriptEnabled)) {
-        return false;
-    }
     return true;
 }
 
