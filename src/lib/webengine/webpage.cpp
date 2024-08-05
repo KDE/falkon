@@ -109,13 +109,6 @@ WebPage::WebPage(QObject* parent)
         disconnect(m_contentsResizedConnection);
     });
 
-    // Workaround for broken load started/finished signals in QtWebEngine 5.10, 5.11
-    connect(this, &QWebEnginePage::loadProgress, this, [this](int progress) {
-        if (progress == 100) {
-            Q_EMIT loadFinished(true);
-        }
-    });
-
     connect(this, &QWebEnginePage::registerProtocolHandlerRequested, this, [this](QWebEngineRegisterProtocolHandlerRequest request) {
         delete m_registerProtocolHandlerRequest;
         m_registerProtocolHandlerRequest = new QWebEngineRegisterProtocolHandlerRequest(request);
