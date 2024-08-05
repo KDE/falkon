@@ -265,6 +265,17 @@ QBrush SiteSettingsView_Widget::permissionColor(SiteSettingsManager::Permission 
 
 void SiteSettingsView_Widget::loadFinished(WebPage* page)
 {
+    static qint64 latestRun = 0;
+    static WebPage* latestPage = nullptr;
+
+    qint64 currentRun = QDateTime::currentMSecsSinceEpoch();
+
+    if ((latestPage == page) && ((currentRun - latestRun) < 200)) {
+        return;
+    }
+    latestRun = currentRun;
+    latestPage = page;
+
     auto *tab = m_window->tabWidget()->webTab();
     if (tab == nullptr) {
         return;
