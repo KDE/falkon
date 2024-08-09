@@ -10,7 +10,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 24.05.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -325,7 +326,7 @@ msgid "Open file..."
 msgstr "פתיחת קובץ…"
 
 #: lib/app/browserwindow.cpp:1497
-#, qt-format
+#, fuzzy, qt-format
 msgctxt "BrowserWindow|"
 msgid ""
 "There are still %n open tabs and your session won't be stored.\n"
@@ -339,6 +340,8 @@ msgstr[0] ""
 msgstr[1] ""
 "יש עדיין שתי לשוניות פתוחות וההפעלה שלך לא תאוחסן.\n"
 "לסגור את החלון כעת?"
+msgstr[2] ""
+msgstr[3] ""
 
 #: lib/app/browserwindow.cpp:1498
 msgctxt "BrowserWindow|"
@@ -1553,28 +1556,34 @@ msgid "few seconds"
 msgstr "מספר שניות"
 
 #: lib/downloads/downloaditem.cpp:200
-#, qt-format
+#, fuzzy, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
 msgstr[0] "שנייה"
 msgstr[1] "שתי שניות"
+msgstr[2] ""
+msgstr[3] ""
 
 #: lib/downloads/downloaditem.cpp:205
-#, qt-format
+#, fuzzy, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
 msgstr[0] "דקה"
 msgstr[1] "שתי דקות"
+msgstr[2] ""
+msgstr[3] ""
 
 #: lib/downloads/downloaditem.cpp:210
-#, qt-format
+#, fuzzy, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
 msgstr[0] "שעה"
 msgstr[1] "שעתיים"
+msgstr[2] ""
+msgstr[3] ""
 
 #: lib/downloads/downloaditem.cpp:217
 msgctxt "DownloadItem|"
