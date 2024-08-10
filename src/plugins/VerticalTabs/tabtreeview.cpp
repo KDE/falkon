@@ -23,10 +23,12 @@
 #include "webtab.h"
 #include "tabcontextmenu.h"
 #include "browserwindow.h"
+#include "qzsettings.h"
 
 #include <QTimer>
 #include <QToolTip>
 #include <QHoverEvent>
+#include <QScrollBar>
 
 TabTreeView::TabTreeView(BrowserWindow *window, QWidget *parent)
     : QTreeView(parent)
@@ -161,6 +163,10 @@ void TabTreeView::dataChanged(const QModelIndex &topLeft, const QModelIndex &bot
 
     if (roles.size() == 1 && roles.at(0) == TabModel::CurrentTabRole && topLeft.data(TabModel::CurrentTabRole).toBool()) {
         setCurrentIndex(topLeft);
+
+        if (qzSettings->alwaysSwitchTabsWithWheel && verticalScrollBar()->isVisible()) {
+            scrollTo(indexAbove(topLeft));
+        }
     }
 }
 
@@ -333,6 +339,13 @@ bool TabTreeView::viewportEvent(QEvent *event)
         addMenuActions(&menu, index);
         menu.exec(ce->globalPos());
         break;
+    }
+
+    case QEvent::Wheel: {
+        if (qzSettings->alwaysSwitchTabsWithWheel) {
+            event->ignore();
+            return false;
+        }
     }
 
     default:

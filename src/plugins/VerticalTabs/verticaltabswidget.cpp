@@ -26,6 +26,7 @@
 #include "toolbutton.h"
 #include "tabtreemodel.h"
 #include "browserwindow.h"
+#include "qzsettings.h"
 
 #include <QListView>
 #include <QScrollBar>
@@ -159,7 +160,7 @@ WebTab *VerticalTabsWidget::previousTab() const
 
 void VerticalTabsWidget::wheelEvent(QWheelEvent *event)
 {
-    if (m_normalView->verticalScrollBar()->isVisible()) {
+    if (!qzSettings->alwaysSwitchTabsWithWheel && m_normalView->verticalScrollBar()->isVisible()) {
         return;
     }
 
