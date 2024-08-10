@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-08-07 23:31+0300\n"
+"PO-Revision-Date: 2024-08-08 14:40+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -326,7 +326,7 @@ msgid "Open file..."
 msgstr "פתיחת קובץ…"
 
 #: lib/app/browserwindow.cpp:1497
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "BrowserWindow|"
 msgid ""
 "There are still %n open tabs and your session won't be stored.\n"
@@ -341,7 +341,11 @@ msgstr[1] ""
 "יש עדיין שתי לשוניות פתוחות וההפעלה שלך לא תאוחסן.\n"
 "לסגור את החלון כעת?"
 msgstr[2] ""
+"יש עדיין %n לשוניות פתוחות וההפעלה שלך לא תאוחסן.\n"
+"לסגור את החלון כעת?"
 msgstr[3] ""
+"יש עדיין %n לשוניות פתוחות וההפעלה שלך לא תאוחסן.\n"
+"לסגור את החלון כעת?"
 
 #: lib/app/browserwindow.cpp:1498
 msgctxt "BrowserWindow|"
@@ -729,56 +733,58 @@ msgid ""
 "This backend needs a master password to be set! Falkon just switches to its "
 "default backend"
 msgstr ""
+"המנגנון הזה זקוק לכך שתהיה סיסמה ראשית מוגדרת! Falkon פשוט עובר למנגנון "
+"ברירת המחדל שלו"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:600
 msgctxt "MasterPasswordDialog|"
 msgid "Are you sure you want to clear master password and decrypt data?"
-msgstr ""
+msgstr "לפנות את הסיסמה הראשית ולהצפין את הנתונים?"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:643
 msgctxt "MasterPasswordDialog|"
 msgid "Some data has not been decrypted. The master password was not cleared!"
-msgstr ""
+msgstr "חלק מהנתונים לא פוענחו. הסיסמה הראשית לא פונתה!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:669
 msgctxt "AutoFill|"
 msgid "Enter Master Password"
-msgstr ""
+msgstr "נא למלא סיסמה ראשית"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:673
 msgctxt "AutoFill|"
 msgid "Permission is required, please enter Master Password:"
-msgstr ""
+msgstr "צריך הרשאה, נא למלא את הסיסמה הראשית:"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:679
 msgctxt "AutoFill|"
 msgid "Entered password is wrong!"
-msgstr ""
+msgstr "הסיסמה שהוקלדה שגויה!"
 
 #: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
 msgctxt "AutoFill|"
 msgid "Database (plaintext)"
-msgstr ""
+msgstr "מסד נתונים (טקסט גלוי)"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:20
 msgctxt "MasterPasswordDialog|"
 msgid "Encrypted DataBase Settings"
-msgstr ""
+msgstr "הגדרות מסד נתונים מוצפן"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:33
 msgctxt "MasterPasswordDialog|"
 msgid "Set/Change Master Password..."
-msgstr ""
+msgstr "הגדרת/שינוי הסיסמה הראשית…"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:36
 msgctxt "MasterPasswordDialog|"
 msgid "This backend does not work without a master password."
-msgstr ""
+msgstr "המנגנון הזה לא עובד בלי סיסמה ראשית."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:43
 msgctxt "MasterPasswordDialog|"
 msgid "Clear Master Password..."
-msgstr ""
+msgstr "פינוי הסיסמה הראשית…"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:46
 msgctxt "MasterPasswordDialog|"
@@ -786,6 +792,8 @@ msgid ""
 "This option clears the master password and moves all encrypted data to the "
 "\"DataBase (Plain Text)\" backend, and switches to it."
 msgstr ""
+"האפשרות הזאת מפנה את הסיסמה הראשית ומעבירה את כל הנתונים המוצפנים למנגנון "
+"„מסד נתונים (טקסט גלוי)” ומחליפה אליו."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:64
 msgctxt "MasterPasswordDialog|"
@@ -793,6 +801,8 @@ msgid ""
 "The Master Password is used to protect site passwords and form data. If you "
 "set a Master Password you will be asked to enter it once per session."
 msgstr ""
+"הסיסמה הראשית משמשת להגנה על סיסמאות האתרים ונתוני הטפסים. אם הגדרת סיסמה "
+"ראשית יהיה עליך למלא אותה פעם בכל הפעלה."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:76
 msgctxt "MasterPasswordDialog|"
@@ -1049,7 +1059,7 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
 msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
-msgstr ""
+msgstr "התיקייה לא קיימת."
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -1377,43 +1387,43 @@ msgstr "כבר ברשימת החסימה!"
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
-msgstr ""
+msgstr "השרת „%1” כבר ברשימת החסימה, נא להסיר אותו תחילה."
 
 #: lib/cookies/cookiemanager.cpp:241
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
-msgstr ""
+msgstr "הוספה לרשימת החסימה"
 
 #: lib/cookies/cookiemanager.cpp:252
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
-msgstr ""
+msgstr "כבר נמצא ברשימת ההיתר!"
 
 #: lib/cookies/cookiemanager.cpp:252
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
-msgstr ""
+msgstr "השרת „%1” כבר נמצא ברשימת ההיתר, נא להסיר אותו קודם."
 
 #: lib/cookies/cookiemanager.ui:14
 msgctxt "CookieManager|"
 msgid "Cookies"
-msgstr ""
+msgstr "עוגיות"
 
 #: lib/cookies/cookiemanager.ui:36
 msgctxt "CookieManager|"
 msgid "Stored Cookies"
-msgstr ""
+msgstr "עוגיות מאוחסנות"
 
 #: lib/cookies/cookiemanager.ui:42
 msgctxt "CookieManager|"
 msgid "Find: "
-msgstr ""
+msgstr "איתור: "
 
 #: lib/cookies/cookiemanager.ui:52
 msgctxt "CookieManager|"
 msgid "These cookies are stored on your computer:"
-msgstr ""
+msgstr "העוגיות האלו מאוחסנות במחשב שלך:"
 
 #: lib/cookies/cookiemanager.ui:66
 msgctxt "CookieManager|"
@@ -1556,34 +1566,34 @@ msgid "few seconds"
 msgstr "מספר שניות"
 
 #: lib/downloads/downloaditem.cpp:200
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
 msgstr[0] "שנייה"
 msgstr[1] "שתי שניות"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[2] "%n שניות"
+msgstr[3] "%n שניות"
 
 #: lib/downloads/downloaditem.cpp:205
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
 msgstr[0] "דקה"
 msgstr[1] "שתי דקות"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[2] "%n דקות"
+msgstr[3] "%n דקות"
 
 #: lib/downloads/downloaditem.cpp:210
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
 msgstr[0] "שעה"
 msgstr[1] "שעתיים"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[2] "%n שעות"
+msgstr[3] "%n שעות"
 
 #: lib/downloads/downloaditem.cpp:217
 msgctxt "DownloadItem|"
