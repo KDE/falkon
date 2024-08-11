@@ -24,6 +24,8 @@ class LoadingAnimator;
 
 class TabListDelegate : public QStyledItemDelegate
 {
+    Q_OBJECT
+
 public:
     explicit TabListDelegate(TabListView *view);
 

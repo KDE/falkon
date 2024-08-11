@@ -49,6 +49,8 @@ void TabListDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     const QWidget *w = option.widget;
     const QStyle *style = w ? w->style() : m_view->style();
 
+    const bool isRestoredTab = index.data(TabModel::RestoredRole).toBool();
+
     QStyleOptionViewItem opt = option;
     initStyleOption(&opt, index);
     m_view->adjustStyleOption(&opt);
@@ -56,7 +58,26 @@ void TabListDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     const int height = opt.rect.height();
     const int center = height / 2 + opt.rect.top();
 
-    painter->setRenderHint(QPainter::Antialiasing);
+    int leftPosition = opt.rect.left() + m_padding;
+    int rightPosition = opt.rect.right() - m_padding * 2;
+
+    const QPalette::ColorRole colorRole = opt.state & QStyle::State_Selected ? QPalette::HighlightedText : QPalette::Text;
+
+    QPalette::ColorGroup cg = opt.state & QStyle::State_Enabled ? QPalette::Normal : QPalette::Disabled;
+    if (!isRestoredTab) {
+        cg = QPalette::Disabled;
+    }
+    if (cg == QPalette::Normal && !(opt.state & QStyle::State_Active)) {
+        cg = QPalette::Inactive;
+    }
+
+#ifdef Q_OS_WIN
+    opt.palette.setColor(QPalette::All, QPalette::HighlightedText, opt.palette.color(QPalette::Active, QPalette::Text));
+    opt.palette.setColor(QPalette::All, QPalette::Highlight, opt.palette.base().color().darker(108));
+#endif
+
+    QPalette textPalette = opt.palette;
+    textPalette.setCurrentColorGroup(cg);
 
     // Draw background
     style->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter, w);
@@ -64,7 +85,7 @@ void TabListDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     // Draw icon
     const int iconSize = 16;
     const int iconYPos = center - (iconSize / 2);
-    QRect iconRect(opt.rect.left() + (opt.rect.width() - iconSize) / 2, iconYPos, iconSize, iconSize);
+    QRect iconRect(leftPosition, iconYPos, iconSize, iconSize);
     QPixmap pixmap;
     if (index.data(TabModel::LoadingRole).toBool()) {
         pixmap = m_loadingAnimator->pixmap(index);
@@ -72,42 +93,24 @@ void TabListDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
         pixmap = index.data(Qt::DecorationRole).value<QIcon>().pixmap(iconSize);
     }
     painter->drawPixmap(iconRect, pixmap);
+    leftPosition += iconRect.width() + m_padding;
 
     // Draw audio icon
     const bool audioMuted = index.data(TabModel::AudioMutedRole).toBool();
     const bool audioPlaying = index.data(TabModel::AudioPlayingRole).toBool();
     if (audioMuted || audioPlaying) {
         QSize audioSize(16, 16);
-        QPoint pos(opt.rect.right() - audioSize.width(), center - audioSize.height() / 2);
+        QPoint pos(rightPosition - audioSize.width(), center - audioSize.height() / 2);
         QRect audioRect(pos, audioSize);
-
-        QColor c = opt.palette.color(QPalette::Window);
-        c.setAlpha(180);
-        painter->setPen(c);
-        painter->setBrush(c);
-        painter->drawEllipse(audioRect);
-
         painter->drawPixmap(audioRect, audioMuted ? TabIcon::data()->audioMutedPixmap : TabIcon::data()->audioPlayingPixmap);
+        rightPosition -= audioSize.width() + m_padding;
     }
 
-    // Draw background activity indicator
-    const bool backgroundActivity = index.data(TabModel::BackgroundActivityRole).toBool();
-    if (backgroundActivity) {
-        QSize activitySize(7, 7);
-        QPoint pos(iconRect.center().x() - activitySize.width() / 2 + 1, iconRect.bottom() - 2);
-        QRect activityRect(pos, activitySize);
-
-        QColor c1 = opt.palette.color(QPalette::Window);
-        c1.setAlpha(180);
-        painter->setPen(Qt::transparent);
-        painter->setBrush(c1);
-        painter->drawEllipse(activityRect);
-
-        const QRect r2 = activityRect.adjusted(1, 1, -1, -1);
-        painter->setPen(Qt::transparent);
-        painter->setBrush(opt.palette.color(QPalette::Text));
-        painter->drawEllipse(r2);
-    }
+    // Draw title
+    QRect titleRect(leftPosition, center - opt.fontMetrics.height() / 2, opt.rect.width(), opt.fontMetrics.height());
+    titleRect.setRight(rightPosition - m_padding);
+    QString title = opt.fontMetrics.elidedText(index.data().toString(), Qt::ElideRight, titleRect.width());
+    style->drawItemText(painter, titleRect, Qt::AlignLeft, textPalette, true, title, colorRole);
 }
 
 QSize TabListDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const

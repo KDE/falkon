@@ -36,12 +36,13 @@ TabListView::TabListView(BrowserWindow *window, QWidget *parent)
     setUniformItemSizes(true);
     setDropIndicatorShown(true);
     setMouseTracking(true);
-    setFlow(QListView::LeftToRight);
+    setFlow(QListView::TopToBottom);
     setFocusPolicy(Qt::NoFocus);
     setFrameShape(QFrame::NoFrame);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
+    setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
 
     m_delegate = new TabListDelegate(this);
     setItemDelegate(m_delegate);
@@ -101,7 +102,7 @@ QModelIndex TabListView::indexAfter(const QModelIndex &index) const
         return {};
     }
     const QRect rect = visualRect(index);
-    return indexAt(QPoint(rect.right() + rect.width() / 2, rect.y()));
+    return indexAt(QPoint(rect.x(), rect.bottom() + rect.height() / 2));
 }
 
 QModelIndex TabListView::indexBefore(const QModelIndex &index) const
@@ -110,7 +111,7 @@ QModelIndex TabListView::indexBefore(const QModelIndex &index) const
         return {};
     }
     const QRect rect = visualRect(index);
-    return indexAt(QPoint(rect.left() - rect.width() / 2, rect.y()));
+    return indexAt(QPoint(rect.x(), rect.top() - rect.height() / 2));
 }
 
 void TabListView::currentChanged(const QModelIndex &current, const QModelIndex &previous)
@@ -236,11 +237,18 @@ TabListView::DelegateButton TabListView::buttonAt(const QPoint &pos, const QMode
 void TabListView::updateVisibility()
 {
     setVisible(!m_hideWhenEmpty || model()->rowCount() > 0);
+    updateHeight();
 }
 
 void TabListView::updateHeight()
 {
     QStyleOptionViewItem option;
     initViewItemOption(&option);
-    setFixedHeight(m_delegate->sizeHint(option, QModelIndex()).height());
+
+    if (isVisible() && model()->rowCount() > 0) {
+        setFixedHeight(m_delegate->sizeHint(option, QModelIndex()).height() * model()->rowCount());
+    }
+    else {
+        setFixedHeight(m_delegate->sizeHint(option, QModelIndex()).height());
+    }
 }
