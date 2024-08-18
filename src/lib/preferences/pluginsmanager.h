@@ -34,6 +34,13 @@ class FALKON_EXPORT PluginsManager : public QWidget
     Q_OBJECT
 
 public:
+    enum PluginRoles {
+        Version = Qt::UserRole,
+        Author = Qt::UserRole + 1,
+        Description = Qt::UserRole + 2,
+        Plugin = Qt::UserRole + 10
+    };
+
     explicit PluginsManager(QWidget* parent = nullptr);
     ~PluginsManager();
 
