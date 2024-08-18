@@ -24,6 +24,7 @@
 #include "tabbedwebview.h"
 #include "sqldatabase.h"
 #include "protocolhandlermanager.h"
+#include "networkmanager.h"
 
 #include <QToolTip>
 
@@ -41,7 +42,28 @@ SiteInfoWidget::SiteInfoWidget(BrowserWindow* window, QWidget* parent)
 
     ui->titleLabel->setText(tr("<b>Site %1<b/>").arg(view->url().host()));
 
+    bool secure = false;
+
     if (view->url().scheme() == QL1S("https")) {
+        auto* nm = mApp->networkManager();
+        QString host = view->url().host();
+
+        if (nm->ignoredSslHosts().contains(host)) {
+            ui->secureDescriptionLabel->setText(tr("Any certificate error is <b>permanently</b> ignored."));
+        }
+        else if (nm->ignoredSslErrors().contains(host)) {
+            ui->secureDescriptionLabel->setText(tr("The certificate error is <b>temporarily</b> ignored."));
+        }
+        else if (nm->rejectedSslErrors().contains(host)) {
+            ui->secureDescriptionLabel->setText(tr("Certificate was rejected."));
+        }
+        else {
+            secure = true;
+            ui->secureDescriptionLabel->hide();
+        }
+    }
+
+    if (secure) {
         ui->secureLabel->setText(tr("Your connection to this site is <b>secured</b>."));
         ui->secureIcon->setPixmap(QPixmap(QSL(":/icons/locationbar/safe.png")));
     }

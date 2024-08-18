@@ -48,6 +48,12 @@ public:
     void loadSettings();
     void shutdown();
 
+    const QHash<QString, QWebEngineCertificateError::Type> ignoredSslErrors() const;
+    const QHash<QString, QWebEngineCertificateError::Type> rejectedSslErrors() const;
+    const QStringList ignoredSslHosts() const;
+
+    QString sslErrorDescription(const QWebEngineCertificateError::Type error) const;
+
     static void registerSchemes();
 
 protected:

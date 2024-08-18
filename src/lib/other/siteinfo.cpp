@@ -66,8 +66,25 @@ SiteInfo::SiteInfo(WebView *view)
     ui->heading->setText(QSL("<b>%1</b>:").arg(m_view->title()));
     ui->siteAddress->setText(m_view->url().toString());
 
-    if (m_view->url().scheme() == QL1S("https"))
-        ui->securityLabel->setText(tr("<b>Connection is Encrypted.</b>"));
+    if (m_view->url().scheme() == QL1S("https")) {
+        auto* nm = mApp->networkManager();
+        QString encryuptionText = tr("<b>Connection is Encrypted.</b>");
+        QString host = m_baseUrl.host();
+
+        if (nm->ignoredSslHosts().contains(host)) {
+            encryuptionText += QSL("<br>") + tr("Any certificate error is <b>permanently</b> ignored.");
+        }
+        else if (nm->ignoredSslErrors().contains(host)) {
+            encryuptionText += QSL("<br>") + tr("The certificate error is <b>temporarily</b> ignored.");
+            encryuptionText += QSL("<br>") + nm->sslErrorDescription(nm->ignoredSslErrors()[host]);
+        }
+        else if (nm->rejectedSslErrors().contains(host)) {
+            encryuptionText += QSL("<br>") + tr("Certificate was rejected.");
+            encryuptionText += QSL("<br>") + nm->sslErrorDescription(nm->rejectedSslErrors()[host]);
+        }
+
+        ui->securityLabel->setText(encryuptionText);
+    }
     else
         ui->securityLabel->setText(tr("<b>Connection Not Encrypted.</b>"));
 

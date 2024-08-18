@@ -319,6 +319,69 @@ void NetworkManager::shutdown()
     saveIgnoredSslHosts();
 }
 
+const QStringList NetworkManager::ignoredSslHosts() const
+{
+    return m_ignoredSslHosts;
+}
+
+const QHash<QString, QWebEngineCertificateError::Type> NetworkManager::ignoredSslErrors() const
+{
+    return m_ignoredSslErrors;
+}
+
+const QHash<QString, QWebEngineCertificateError::Type> NetworkManager::rejectedSslErrors() const
+{
+    return m_rejectedSslErrors;
+}
+
+QString NetworkManager::sslErrorDescription(const QWebEngineCertificateError::Type error) const
+{
+    /* DISCLAIMER
+       The error descriptions are taken from Qt documentation.
+     */
+    switch (error) {
+        case QWebEngineCertificateError::SslPinnedKeyNotInCertificateChain:
+            return tr("The certificate did not match the built-in public keys pinned for the host name.");
+        case QWebEngineCertificateError::CertificateCommonNameInvalid:
+            return tr("The certificate's common name did not match the host name.");
+        case QWebEngineCertificateError::CertificateDateInvalid:
+            return tr("The certificate is not valid at the current date and time.");
+        case QWebEngineCertificateError::CertificateAuthorityInvalid:
+            return tr("The certificate is not signed by a trusted authority.");
+        case QWebEngineCertificateError::CertificateContainsErrors:
+            return tr("The certificate contains errors.");
+        case QWebEngineCertificateError::CertificateNoRevocationMechanism:
+            return tr("The certificate has no mechanism for determining if it has been revoked.");
+        case QWebEngineCertificateError::CertificateUnableToCheckRevocation:
+            return tr("Revocation information for the certificate is not available.");
+        case QWebEngineCertificateError::CertificateRevoked:
+            return tr("The certificate has been revoked.");
+        case QWebEngineCertificateError::CertificateInvalid:
+            return tr("The certificate is invalid.");
+        case QWebEngineCertificateError::CertificateWeakSignatureAlgorithm:
+            return tr("The certificate is signed using a weak signature algorithm.");
+        case QWebEngineCertificateError::CertificateNonUniqueName:
+            return tr("The host name specified in the certificate is not unique.");
+        case QWebEngineCertificateError::CertificateWeakKey:
+            return tr("The certificate contains a weak key.");
+        case QWebEngineCertificateError::CertificateNameConstraintViolation:
+            return tr("The certificate claimed DNS names that are in violation of name constraints.");
+        case QWebEngineCertificateError::CertificateValidityTooLong:
+            return tr("The certificate has a validity period that is too long.");
+        case QWebEngineCertificateError::CertificateTransparencyRequired:
+            return tr("Certificate Transparency was required for this connection, but the server did not provide CT information that complied with the policy.");
+        case QWebEngineCertificateError::CertificateKnownInterceptionBlocked:
+            return tr("The certificate is known to be used for interception by an entity other the device owner.");
+        case QWebEngineCertificateError::SslObsoleteVersion:
+            return tr("The connection uses an obsolete version of SSL/TLS");
+        case QWebEngineCertificateError::CertificateSymantecLegacy:
+            return tr("The certificate is a legacy Symantec one that's no longer valid.");
+
+        default:
+            return tr("Unknown error");
+    }
+}
+
 // static
 void NetworkManager::registerSchemes()
 {

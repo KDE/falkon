@@ -35,6 +35,7 @@
 #include "autofillicon.h"
 #include "completer/locationcompleter.h"
 #include "zoomlabel.h"
+#include "networkmanager.h"
 
 #include <QTimer>
 #include <QMimeData>
@@ -431,7 +432,18 @@ void LocationBar::updateSiteIcon()
     } else {
         QIcon icon = IconProvider::emptyWebIcon();
         if (property("secured").toBool()) {
-            icon = QIcon::fromTheme(QSL("document-encrypted"), icon);
+            auto* nm =  mApp->networkManager();
+            auto host = m_webView->url().host();
+
+            if (nm->ignoredSslHosts().contains(host) || nm->ignoredSslErrors().contains(host)) {
+                icon = QIcon::fromTheme(QSL("security-medium"), icon);
+            }
+            else if (nm->rejectedSslErrors().contains(host)) {
+                icon = QIcon::fromTheme(QSL("security-low"), icon);
+            }
+            else {
+                icon = QIcon::fromTheme(QSL("document-encrypted"), icon);
+            }
         }
         m_siteIcon->setIcon(QIcon(icon.pixmap(16)));
     }
