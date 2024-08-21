@@ -1,99 +1,98 @@
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024 Shinjo Park <kde@peremen.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-08-12 17:52+0300\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: צוות התרגום של KDE ישראל\n"
-"Language: he\n"
+"PO-Revision-Date: 2024-08-20 21:45+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Qt-Contexts: true\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
 
 #: sitesettingsview_controller.cpp:40
 msgctxt "SiteSettingsView_Controller|"
 msgid "Site Settings"
-msgstr "הגדרות אתר"
+msgstr "사이트 설정"
 
 #: sitesettingsview_controller.cpp:48
 msgctxt "SiteSettingsView_Controller|"
 msgid "Site Settings View"
-msgstr "תצוגת הגדרות אתר"
+msgstr "사이트 설정 보기"
 
 #: sitesettingsview_widget.cpp:53
 msgctxt "SiteSettingsView_Widget|"
 msgid "Mode:"
-msgstr "מצב:"
+msgstr "모드:"
 
 #: sitesettingsview_widget.cpp:55
 msgctxt "SiteSettingsView_Widget|"
 msgid "Private"
-msgstr "פרטי"
+msgstr "비공개"
 
 #: sitesettingsview_widget.cpp:58
 msgctxt "SiteSettingsView_Widget|"
 msgid "Normal"
-msgstr "רגיל"
+msgstr "일반"
 
 #: sitesettingsview_widget.cpp:60
 msgctxt "SiteSettingsView_Widget|"
 msgid "isWeb:"
-msgstr "האם אתר:"
+msgstr "isWeb:"
 
 #: sitesettingsview_widget.cpp:64
 msgctxt "SiteSettingsView_Widget|"
 msgid "Refresh"
-msgstr "רענון"
+msgstr "새로 고침"
 
 #: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:109
 msgctxt "SiteSettingsView_Widget|"
 msgid "Real"
-msgstr "מציאותי"
+msgstr "실제"
 
 #: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:92
 #: sitesettingsview_widget.cpp:109
 msgctxt "SiteSettingsView_Widget|"
 msgid "Local"
-msgstr "מקומי"
+msgstr "로컬"
 
 #: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:92
 #: sitesettingsview_widget.cpp:109 sitesettingsview_widget.cpp:223
 msgctxt "SiteSettingsView_Widget|"
 msgid "Default"
-msgstr "ברירת מחדל"
+msgstr "기본값"
 
 #: sitesettingsview_widget.cpp:75
 msgctxt "SiteSettingsView_Widget|"
 msgid "Attributes"
-msgstr "מאפיינים"
+msgstr "속성"
 
 #: sitesettingsview_widget.cpp:92
 msgctxt "SiteSettingsView_Widget|"
 msgid "Feature"
-msgstr "יכולת"
+msgstr "기능"
 
 #: sitesettingsview_widget.cpp:109
 msgctxt "SiteSettingsView_Widget|"
 msgid "Option"
-msgstr "אפשרות"
+msgstr "옵션"
 
 #: sitesettingsview_widget.cpp:155
 msgctxt "SiteSettingsView_Widget|"
 msgid "True"
-msgstr "חיובי"
+msgstr "참"
 
 #: sitesettingsview_widget.cpp:158
 msgctxt "SiteSettingsView_Widget|"
 msgid "False"
-msgstr "שלילי"
+msgstr "거짓"
 
 #: sitesettingsview_widget.cpp:219 sitesettingsview_widget.cpp:227
 #: sitesettingsview_widget.cpp:231
 #, qt-format
 msgctxt "SiteSettingsView_Widget|"
 msgid "%1 (%2%)"
-msgstr "%1 (%2%)"
+msgstr "%1(%2%)"
