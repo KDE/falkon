@@ -306,6 +306,10 @@ void ProfileManager::connectDatabase()
             if (stmt.isEmpty()) {
                 continue;
             }
+            if (stmt.startsWith(QSL("--")) && !stmt.contains(QL1C('\n'))) {
+                qDebug() << stmt;
+                continue;
+            }
             QSqlQuery query;
             if (!query.exec(stmt)) {
                 qCritical() << "Error creating database schema" << query.lastError().text();
