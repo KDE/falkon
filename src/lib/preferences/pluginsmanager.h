@@ -20,6 +20,7 @@
 
 #include <QWidget>
 
+#include "plugins.h"
 #include "qzcommon.h"
 
 namespace Ui
@@ -38,7 +39,7 @@ public:
         Version = Qt::UserRole,
         Author = Qt::UserRole + 1,
         Description = Qt::UserRole + 2,
-        Plugin = Qt::UserRole + 10
+        PluginId = Qt::UserRole + 3
     };
 
     explicit PluginsManager(QWidget* parent = nullptr);
@@ -62,6 +63,7 @@ private:
     Ui::PluginsList* ui;
     bool m_loaded;
     bool m_blockRefresh = false;
+    QHash<QString, Plugins::Plugin> m_pluginList;
 };
 
 #endif // PLUGINSMANAGER_H

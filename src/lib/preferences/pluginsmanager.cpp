@@ -77,7 +77,7 @@ void PluginsManager::save()
         QListWidgetItem* item = ui->list->item(i);
 
         if (item->checkState() == Qt::Checked) {
-            const Plugins::Plugin plugin = item->data(PluginRoles::Plugin).value<Plugins::Plugin>();
+            const Plugins::Plugin plugin = m_pluginList[item->data(PluginRoles::PluginId).value<QString>()];
             allowedPlugins.append(plugin.pluginId);
         }
     }
@@ -96,6 +96,7 @@ void PluginsManager::refresh()
 
     const int oldCurrentRow = ui->list->currentRow();
 
+    m_pluginList.clear();
     ui->list->clear();
     ui->butSettings->setEnabled(false);
     disconnect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
@@ -119,10 +120,12 @@ void PluginsManager::refresh()
         item->setData(PluginRoles::Version, spec.version);
         item->setData(PluginRoles::Author, spec.author);
         item->setData(PluginRoles::Description, spec.description);
+        item->setData(PluginRoles::PluginId, plugin.pluginId);
 
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         item->setCheckState(plugin.isLoaded() ? Qt::Checked : Qt::Unchecked);
-        item->setData(PluginRoles::Plugin, QVariant::fromValue(plugin));
+
+        m_pluginList[plugin.pluginId] = plugin;
 
         ui->list->addItem(item);
     }
@@ -167,7 +170,7 @@ void PluginsManager::currentChanged(QListWidgetItem* item)
         return;
     }
 
-    const Plugins::Plugin plugin = item->data(PluginRoles::Plugin).value<Plugins::Plugin>();
+    const Plugins::Plugin plugin = m_pluginList[item->data(PluginRoles::PluginId).value<QString>()];
     ui->butSettings->setEnabled(plugin.isLoaded() && plugin.pluginSpec.hasSettings);
     ui->butRemove->setEnabled(plugin.isRemovable());
 }
@@ -178,7 +181,7 @@ void PluginsManager::itemChanged(QListWidgetItem* item)
         return;
     }
 
-    Plugins::Plugin plugin = item->data(PluginRoles::Plugin).value<Plugins::Plugin>();
+    Plugins::Plugin plugin = m_pluginList[item->data(PluginRoles::PluginId).value<QString>()];
 
     m_blockRefresh = true;
 
@@ -198,7 +201,7 @@ void PluginsManager::itemChanged(QListWidgetItem* item)
         QMessageBox::critical(this, tr("Error!"), tr("Cannot load extension!"));
     }
 
-    item->setData(PluginRoles::Plugin, QVariant::fromValue(plugin));
+    m_pluginList[plugin.pluginId] = plugin;
 
     connect(ui->list, &QListWidget::itemChanged, this, &PluginsManager::itemChanged);
 
@@ -212,12 +215,12 @@ void PluginsManager::settingsClicked()
         return;
     }
 
-    Plugins::Plugin plugin = item->data(PluginRoles::Plugin).value<Plugins::Plugin>();
+    Plugins::Plugin plugin = m_pluginList[item->data(PluginRoles::PluginId).value<QString>()];
 
     if (!plugin.isLoaded()) {
         mApp->plugins()->loadPlugin(&plugin);
 
-        item->setData(PluginRoles::Plugin, QVariant::fromValue(plugin));
+        m_pluginList[plugin.pluginId] = plugin;
     }
 
     if (plugin.isLoaded() && plugin.pluginSpec.hasSettings) {
@@ -232,7 +235,7 @@ void PluginsManager::removeClicked()
         return;
     }
 
-    Plugins::Plugin plugin = item->data(PluginRoles::Plugin).value<Plugins::Plugin>();
+    Plugins::Plugin plugin = m_pluginList[item->data(PluginRoles::PluginId).value<QString>()];
 
     const auto button = QMessageBox::warning(this, tr("Confirmation"),
                                              tr("Are you sure you want to remove '%1'?").arg(plugin.pluginSpec.name),
@@ -241,6 +244,7 @@ void PluginsManager::removeClicked()
         return;
     }
 
+    m_pluginList.remove(plugin.pluginId);
     mApp->plugins()->removePlugin(&plugin);
 }
 
