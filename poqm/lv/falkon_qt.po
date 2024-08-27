@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-04-23 18:08+0300\n"
+"PO-Revision-Date: 2024-08-22 15:30+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -18,7 +18,7 @@ msgstr ""
 "2);\n"
 "X-Language: lv_LV\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -3165,12 +3165,9 @@ msgid "Media"
 msgstr "Multivide"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML5 atļaujas"
+msgstr "Atļaujas"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3218,9 +3215,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Priekšskatījums</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Noklusējums"
@@ -3228,20 +3222,14 @@ msgstr "Noklusējums"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Jautāt"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Atļaut"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Aizliegt"
@@ -3305,82 +3293,52 @@ msgid "More..."
 msgstr "Vairāk..."
 
 #: lib/other/sitesettingsmanager.cpp:324
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Atiestatīt tālummaiņas līmeni"
+msgstr "Tālummaiņas līmenis"
 
 #: lib/other/sitesettingsmanager.cpp:326
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Sīkdatnes"
 
 #: lib/other/sitesettingsmanager.cpp:329 lib/other/sitesettingsmanager.cpp:354
 #: lib/other/sitesettingsmanager.cpp:394 lib/other/sitesettingsmanager.cpp:411
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Nezināms izmērs"
+msgstr "Nezināms"
 
 #: lib/other/sitesettingsmanager.cpp:337
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Paziņojumi"
 
 #: lib/other/sitesettingsmanager.cpp:339
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Ģeolokācija"
 
 #: lib/other/sitesettingsmanager.cpp:341
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Mikrofons"
 
 #: lib/other/sitesettingsmanager.cpp:343
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Kamera"
 
 #: lib/other/sitesettingsmanager.cpp:345
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Mikrofons un kamera"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
 msgstr "Paslēpt peles rādītāju"
 
 #: lib/other/sitesettingsmanager.cpp:349
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
 msgstr "Ieslēgt ekrāna ierakstīšanu"
@@ -3388,102 +3346,69 @@ msgstr "Ieslēgt ekrāna ierakstīšanu"
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Ekrāna ierakstīšana ar skaņu"
 
 #: lib/other/sitesettingsmanager.cpp:362
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Pārlādēt lapu"
+msgstr "Automātiski ielādēt attēlus"
 
 #: lib/other/sitesettingsmanager.cpp:365
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Atļaut „JavaScript“"
+msgstr "Ieslēgt „JavaScript“"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Atvērt uznirstošos logus"
+msgstr "„JavaScript“: atvērt uznirstošos logus"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Piekļūt starpliktuvei"
+msgstr "„JavaScript“: piekļūt starpliktuvei"
 
 #: lib/other/sitesettingsmanager.cpp:371
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Ielīmēt no starpliktuves"
+msgstr "„JavaScript“: ielīmēt no starpliktuves"
 
 #: lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Aktivēt logus"
+msgstr "„JavaScript“: aktivēt logus"
 
 #: lib/other/sitesettingsmanager.cpp:376
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Lokālā krātuve"
 
 #: lib/other/sitesettingsmanager.cpp:378
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "Piln&ekrāna režīms"
+msgstr "Pilnekrāna atbalsts"
 
 #: lib/other/sitesettingsmanager.cpp:380
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Darbināt nedrošu saturu"
 
 #: lib/other/sitesettingsmanager.cpp:382
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Izslēgt automātisku video atskaņošanu"
+msgstr "Automātiska video atskaņošana"
 
 #: lib/other/sitesettingsmanager.cpp:385
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Ļaut uzglabāt sīkdatnes"
+msgstr "Ļaut nolasīt no „canvas“ elementiem"
 
 #: lib/other/sitesettingsmanager.cpp:389
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Piespiedu tumšais režīms"
 
 #: lib/other/sitesettingsmanager.cpp:402
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Atļaut"
@@ -3491,20 +3416,14 @@ msgstr "Atļaut"
 #: lib/other/sitesettingsmanager.cpp:404
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Jautāt"
 
 #: lib/other/sitesettingsmanager.cpp:406
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Aizliegt"
 
 #: lib/other/sitesettingsmanager.cpp:408
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Noklusējums"
@@ -4531,17 +4450,14 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Izmantot aparatūras paātrinājumu (nepieciešams pārstartēt)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Ļaut uzglabāt sīkdatnes"
+msgstr "Ļaut nolasīt no „canvas“ elementiem"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Piespiedu tumšais režīms"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
@@ -4877,12 +4793,9 @@ msgid "HTML5 Permissions"
 msgstr "HTML5 atļaujas"
 
 #: lib/preferences/preferences.ui:2179
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Iestatījumi"
+msgstr "Vietnes iestatījumi"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
@@ -5084,33 +4997,21 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "Izmaiņas stāsies spēkā pēc „Falkon“ pārstartēšanas."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "BookmarksExportDialog|"
-#| msgid "Choose..."
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Izvēlēties..."
+msgstr "Pārlūkot"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML5 atļaujas"
+msgstr "Vietnes atļaujas"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Vietne"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Uzvedība"
@@ -5118,39 +5019,27 @@ msgstr "Uzvedība"
 #: lib/preferences/sitesettingsbrowsedialog.ui:45
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Jautāt"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Atļaut"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Aizliegt"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Noklusējums"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "BookmarksExportDialog|"
-#| msgid "Choose..."
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Izvēlēties..."
+msgstr "Pārlūkot"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
