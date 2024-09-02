@@ -70,7 +70,6 @@ if (UNIX AND NOT APPLE AND NOT NO_X11)
 endif()
 if (WIN32)
     add_definitions(-DW7API)
-    find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS WinExtras)
 
     # taken from https://stackoverflow.com/a/40217291
     macro(get_WIN32_WINNT version)

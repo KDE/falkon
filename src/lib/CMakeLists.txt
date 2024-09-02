@@ -620,10 +620,6 @@ if (UNIX AND NOT APPLE)
     install(TARGETS FalkonPrivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 endif()
 
-if (WIN32)
-    target_link_libraries(FalkonPrivate Qt::WinExtras)
-endif()
-
 if (APPLE)
     target_link_libraries(FalkonPrivate "-framework CoreServices -framework AppKit")
 endif()
