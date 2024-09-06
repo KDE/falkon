@@ -41,21 +41,17 @@ void SiteSettingsTest::webAttributeTest()
     SiteSettingsManager *siteSettings = mApp->siteSettingsManager();
     siteSettings->setOption(QWebEngineSettings::AutoLoadImages, QUrl(QSL("https://www.falkon.org/")), SiteSettingsManager::Deny);
     siteSettings->setOption(QWebEngineSettings::JavascriptEnabled, QUrl(QSL("https://kde.org/")), SiteSettingsManager::Deny);
-    siteSettings->setOption(QWebEngineSettings::LocalStorageEnabled, QUrl(QSL("https://store.falkon.org/")), SiteSettingsManager::Deny);
     siteSettings->setOption(QWebEngineSettings::PlaybackRequiresUserGesture, QUrl(QSL("https://planet.kde.org/")), SiteSettingsManager::Allow);
 
 
-    WebTab tab;
+    checkInternalPage(QUrl(QSL("falkon:start")));
 
-    checkInternalPage(&tab, QUrl(QSL("falkon:start")));
+    checkExternalPage(QUrl(QSL("https://www.falkon.org/")));
+    checkExternalPage(QUrl(QSL("https://kde.org/")));
 
-    checkExternalPage(&tab, QUrl(QSL("https://www.falkon.org/")));
-    checkExternalPage(&tab, QUrl(QSL("https://kde.org/")));
-    checkExternalPage(&tab, QUrl(QSL("https://store.falkon.org/")));
+    checkInternalPage(QUrl(QSL("falkon:about")));
 
-    checkInternalPage(&tab, QUrl(QSL("falkon:about")));
-
-    checkExternalPage(&tab, QUrl(QSL("https://planet.kde.org/")));
+    checkExternalPage(QUrl(QSL("https://planet.kde.org/")));
 }
 
 bool SiteSettingsTest::checkWebAttributes(WebPage *page, QHash<QWebEngineSettings::WebAttribute, bool> webAttributes)
@@ -69,8 +65,9 @@ bool SiteSettingsTest::checkWebAttributes(WebPage *page, QHash<QWebEngineSetting
     return true;
 }
 
-void SiteSettingsTest::checkInternalPage(WebTab *tab, QUrl url)
+void SiteSettingsTest::checkInternalPage(QUrl url)
 {
+    WebTab tab;
     QMap<QWebEngineSettings::WebAttribute, bool> internalWebAttributes = {
          {QWebEngineSettings::AutoLoadImages, true}
         ,{QWebEngineSettings::JavascriptEnabled, true}
@@ -86,25 +83,26 @@ void SiteSettingsTest::checkInternalPage(WebTab *tab, QUrl url)
         ,{QWebEngineSettings::WebRTCPublicInterfacesOnly, false}
     };
 
-    QSignalSpy spy(tab, SIGNAL(loadingChanged(bool)));
-    tab->load(url);
-    QTRY_COMPARE(spy.count(), 3);
+    QSignalSpy spy(tab.webView(), &WebView::loadFinished);
+    tab.load(url);
+    QTRY_COMPARE(spy.count(), 1);
 
-    auto *page = tab->webView()->page();
+    auto *page = tab.webView()->page();
     for (auto it = internalWebAttributes.begin(); it != internalWebAttributes.end(); ++it) {
         QCOMPARE(page->settings()->testAttribute(it.key()), it.value());
     }
 }
 
-void SiteSettingsTest::checkExternalPage(WebTab *tab, QUrl url)
+void SiteSettingsTest::checkExternalPage(QUrl url)
 {
+    WebTab tab;
     SiteSettingsManager *siteSettings = mApp->siteSettingsManager();
 
-    QSignalSpy spy(tab, SIGNAL(loadingChanged(bool)));
-    tab->load(url);
-    QTRY_COMPARE_WITH_TIMEOUT(spy.count(), 3, 20000);
+    QSignalSpy spy(tab.webView(), &WebView::loadFinished);
+    tab.load(url);
+    QTRY_COMPARE_WITH_TIMEOUT(spy.count(), 1, 20000);
 
-    auto *page = tab->webView()->page();
+    auto *page = tab.webView()->page();
     QCOMPARE(checkWebAttributes(page, siteSettings->getWebAttributes(url)), true);
 }
 

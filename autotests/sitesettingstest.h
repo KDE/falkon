@@ -39,8 +39,8 @@ private Q_SLOTS:
 private:
     bool checkWebAttributes(WebPage *page, QHash<QWebEngineSettings::WebAttribute, bool> webAttributes);
 
-    void checkInternalPage(WebTab *tab, QUrl url);
-    void checkExternalPage(WebTab *tab, QUrl url);
+    void checkInternalPage(QUrl url);
+    void checkExternalPage(QUrl url);
 };
 
 #endif // SITESETTINGSTEST_H
