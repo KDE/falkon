@@ -604,6 +604,7 @@ target_link_libraries(FalkonPrivate
     Qt6::Core5Compat
     KF6::Archive
     KF6::KIOGui
+    KF6::Notifications
     ${OPENSSL_CRYPTO_LIBRARY}
 )
 

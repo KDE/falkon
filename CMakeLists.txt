@@ -110,6 +110,9 @@ endif()
 # Mandatory: KIO
 find_package(KF6KIO ${KF_MIN_VERSION} REQUIRED)
 
+# Mandatory: KNotifications
+find_package(KF6Notifications ${KF_DEP_VERSION} REQUIRED)
+
 # Optional: GnomeKeyring
 find_package(PkgConfig)
 if (PKG_CONFIG_FOUND)

@@ -23,6 +23,8 @@
 #include "browserwindow.h"
 #include "../config.h"
 
+#include <KNotification>
+
 #include <QFile>
 #include <QDir>
 
@@ -85,6 +87,15 @@ void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QS
         m_desktopNotif.data()->show();
         break;
     case DesktopNative:
+        KNotification *notification = new KNotification(QSL("contactOnline"));
+        notification->setTitle(heading);
+        notification->setText(text);
+        notification->setPixmap(icon);
+        // notification->setActions({tr("Open chat")});
+
+        // connect(notification, QOverload<unsigned int>::of(&KNotification::activated), contact, &Contact::slotOpenChat);
+
+        notification->sendEvent();
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
         QFile tmp(DataPaths::path(DataPaths::Temp) + QLatin1String("/falkon_notif.png"));
         tmp.open(QFile::WriteOnly);

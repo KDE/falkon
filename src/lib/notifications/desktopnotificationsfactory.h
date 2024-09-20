@@ -23,6 +23,7 @@
 #include <QObject>
 #include <QPoint>
 #include <QPointer>
+#include <QHash>
 
 class QPixmap;
 class QDBusMessage;
@@ -36,6 +37,18 @@ class FALKON_EXPORT DesktopNotificationsFactory : public QObject
 
 public:
     enum Type { DesktopNative, PopupWidget };
+    enum EventType {
+        General,
+        Web,
+        DownloadFinished,
+        UpdateAvailable,
+        OcsSupport,
+        Plugins,
+        Preview,
+        GreaseMonkeyInstall,
+        GreaseMonkeyScrips,
+        KWalletDisabled
+    };
 
     explicit DesktopNotificationsFactory(QObject* parent = nullptr);
 
@@ -59,6 +72,19 @@ private:
 
     QPointer<DesktopNotification> m_desktopNotif;
     quint32 m_uint;
+
+    QHash<EventType, QString> KNotificationEvents = {
+        {General, QSL("General")},
+        {Web, QSL("Web")},
+        {DownloadFinished, QSL("DownloadFinished")},
+        {UpdateAvailable, QSL("UpdateAvailable")},
+        {OcsSupport, QSL("OcsSupport")},
+        {Plugins, QSL("Plugins")},
+        {Preview, QSL("Preview")},
+        {GreaseMonkeyInstall, QSL("GreaseMonkeyInstall")},
+        {GreaseMonkeyScrips, QSL("GreaseMonkeyScrips")},
+        {KWalletDisabled, QSL("KWalletDisabled")}
+    };
 };
 
 #endif // DESKTOPNOTIFICATIONSFACTORY_H
