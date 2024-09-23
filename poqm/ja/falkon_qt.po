@@ -2122,18 +2122,18 @@ msgctxt "LocationCompleterView|"
 msgid "Search with:"
 msgstr "検索:"
 
-#: lib/navigation/locationbar.cpp:95
+#: lib/navigation/locationbar.cpp:96
 msgctxt "LocationBar|"
 msgid "Paste And &Go"
 msgstr "貼り付けて移動(&G)"
 
-#: lib/navigation/locationbar.cpp:163
+#: lib/navigation/locationbar.cpp:164
 #, qt-format
 msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
 msgstr "アドレスを入力するか %1 で検索します"
 
-#: lib/navigation/locationbar.cpp:165
+#: lib/navigation/locationbar.cpp:166
 msgctxt "LocationBar|"
 msgid "Enter address"
 msgstr "アドレスを入力します"
@@ -2367,6 +2367,112 @@ msgstr "プロキシ認証が必要です"
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
 msgstr "%1プロキシがユーザー名とパスワードを要求しています。"
+
+#: lib/network/networkmanager.cpp:344
+msgctxt "NetworkManager|"
+msgid ""
+"The certificate did not match the built-in public keys pinned for the host "
+"name."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:346
+msgctxt "NetworkManager|"
+msgid "The certificate's common name did not match the host name."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:348
+msgctxt "NetworkManager|"
+msgid "The certificate is not valid at the current date and time."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:350
+msgctxt "NetworkManager|"
+msgid "The certificate is not signed by a trusted authority."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:352
+msgctxt "NetworkManager|"
+msgid "The certificate contains errors."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:354
+msgctxt "NetworkManager|"
+msgid ""
+"The certificate has no mechanism for determining if it has been revoked."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:356
+msgctxt "NetworkManager|"
+msgid "Revocation information for the certificate is not available."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:358
+msgctxt "NetworkManager|"
+msgid "The certificate has been revoked."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:360
+msgctxt "NetworkManager|"
+msgid "The certificate is invalid."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:362
+msgctxt "NetworkManager|"
+msgid "The certificate is signed using a weak signature algorithm."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:364
+msgctxt "NetworkManager|"
+msgid "The host name specified in the certificate is not unique."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:366
+msgctxt "NetworkManager|"
+msgid "The certificate contains a weak key."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:368
+msgctxt "NetworkManager|"
+msgid ""
+"The certificate claimed DNS names that are in violation of name constraints."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:370
+msgctxt "NetworkManager|"
+msgid "The certificate has a validity period that is too long."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:372
+msgctxt "NetworkManager|"
+msgid ""
+"Certificate Transparency was required for this connection, but the server "
+"did not provide CT information that complied with the policy."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:374
+msgctxt "NetworkManager|"
+msgid ""
+"The certificate is known to be used for interception by an entity other the "
+"device owner."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:376
+msgctxt "NetworkManager|"
+msgid "The connection uses an obsolete version of SSL/TLS"
+msgstr ""
+
+#: lib/network/networkmanager.cpp:378
+msgctxt "NetworkManager|"
+msgid "The certificate is a legacy Symantec one that's no longer valid."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:381
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Unknown size"
+msgctxt "NetworkManager|"
+msgid "Unknown error"
+msgstr "ファイルサイズが計測できません"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 #, fuzzy
@@ -3367,32 +3473,47 @@ msgstr ""
 "問題が発生しています。 QupZilla を再インストールしてください。管理者権限で再"
 "インストール後には問題は解決されるはずです(^_^)"
 
-#: lib/other/siteinfo.cpp:70
+#: lib/other/siteinfo.cpp:71
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
 msgstr "<b>接続は暗号化されています。</b>"
 
-#: lib/other/siteinfo.cpp:72
+#: lib/other/siteinfo.cpp:75
+msgctxt "SiteInfo|"
+msgid "Any certificate error is <b>permanently</b> ignored."
+msgstr ""
+
+#: lib/other/siteinfo.cpp:78
+msgctxt "SiteInfo|"
+msgid "The certificate error is <b>temporarily</b> ignored."
+msgstr ""
+
+#: lib/other/siteinfo.cpp:82
+msgctxt "SiteInfo|"
+msgid "Certificate was rejected."
+msgstr ""
+
+#: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
 msgstr "<b>接続は暗号化されていません。</b>"
 
-#: lib/other/siteinfo.cpp:181
+#: lib/other/siteinfo.cpp:198
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
 msgstr "画像の URL をコピー"
 
-#: lib/other/siteinfo.cpp:182
+#: lib/other/siteinfo.cpp:199
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
 msgstr "画像の名前をコピー"
 
-#: lib/other/siteinfo.cpp:184
+#: lib/other/siteinfo.cpp:201
 msgctxt "SiteInfo|"
 msgid "Save Image to Disk"
 msgstr "画像の保存"
 
-#: lib/other/siteinfo.cpp:196
+#: lib/other/siteinfo.cpp:213
 #, fuzzy
 #| msgctxt "HistoryManager|"
 #| msgid "Copy title"
@@ -3400,7 +3521,7 @@ msgctxt "SiteInfo|"
 msgid "Copy Values"
 msgstr "ページ名のコピー"
 
-#: lib/other/siteinfo.cpp:197
+#: lib/other/siteinfo.cpp:214
 #, fuzzy
 #| msgctxt "WebView|"
 #| msgid "Copy image ad&dress"
@@ -3408,32 +3529,32 @@ msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
 msgstr "画像の URL をコピー(&D)"
 
-#: lib/other/siteinfo.cpp:235 lib/other/siteinfo.cpp:254
+#: lib/other/siteinfo.cpp:252 lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
 msgid "Error!"
 msgstr "エラーが発生しました!"
 
-#: lib/other/siteinfo.cpp:235
+#: lib/other/siteinfo.cpp:252
 msgctxt "SiteInfo|"
 msgid "This preview is not available!"
 msgstr "この画像のプレビューに失敗しました!"
 
-#: lib/other/siteinfo.cpp:246
+#: lib/other/siteinfo.cpp:263
 msgctxt "SiteInfo|"
 msgid "Save image..."
 msgstr "画像の保存..."
 
-#: lib/other/siteinfo.cpp:254
+#: lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
 msgid "Cannot write to file!"
 msgstr "ファイルに書き込めません!"
 
-#: lib/other/siteinfo.cpp:264
+#: lib/other/siteinfo.cpp:281
 msgctxt "SiteInfo|"
 msgid "Loading..."
 msgstr "読み込み中"
 
-#: lib/other/siteinfo.cpp:277
+#: lib/other/siteinfo.cpp:294
 msgctxt "SiteInfo|"
 msgid "Preview not available"
 msgstr "この画像のプレビューはできません"
@@ -3535,60 +3656,75 @@ msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "拒否"
 
-#: lib/other/siteinfowidget.cpp:42
+#: lib/other/siteinfowidget.cpp:43
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "<b>Site %1<b/>"
 msgstr ""
 
-#: lib/other/siteinfowidget.cpp:45
+#: lib/other/siteinfowidget.cpp:52
+msgctxt "SiteInfoWidget|"
+msgid "Any certificate error is <b>permanently</b> ignored."
+msgstr ""
+
+#: lib/other/siteinfowidget.cpp:55
+msgctxt "SiteInfoWidget|"
+msgid "The certificate error is <b>temporarily</b> ignored."
+msgstr ""
+
+#: lib/other/siteinfowidget.cpp:58
+msgctxt "SiteInfoWidget|"
+msgid "Certificate was rejected."
+msgstr ""
+
+#: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>secured</b>."
 msgstr "このページへの接続は安全性が保障されています。"
 
-#: lib/other/siteinfowidget.cpp:49
+#: lib/other/siteinfowidget.cpp:71
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>unsecured</b>."
 msgstr "このページへの接続は安全性が保障されていません。"
 
-#: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
+#: lib/other/siteinfowidget.cpp:86 lib/other/siteinfowidget.cpp:105
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "This is your <b>%1</b> visit of this site."
 msgstr "このサイトに訪れるのは<b>%1</b>回目です。"
 
-#: lib/other/siteinfowidget.cpp:68
+#: lib/other/siteinfowidget.cpp:90
 msgctxt "SiteInfoWidget|"
 msgid "You have <b>never</b> visited this site before."
 msgstr "このサイトに訪れたのは初めてです。"
 
-#: lib/other/siteinfowidget.cpp:75
+#: lib/other/siteinfowidget.cpp:97
 msgctxt "SiteInfoWidget|"
 msgid "first"
 msgstr "1"
 
-#: lib/other/siteinfowidget.cpp:78
+#: lib/other/siteinfowidget.cpp:100
 msgctxt "SiteInfoWidget|"
 msgid "second"
 msgstr "2"
 
-#: lib/other/siteinfowidget.cpp:81
+#: lib/other/siteinfowidget.cpp:103
 msgctxt "SiteInfoWidget|"
 msgid "third"
 msgstr "3"
 
-#: lib/other/siteinfowidget.cpp:106
+#: lib/other/siteinfowidget.cpp:128
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "Register as <b>%1</b> links handler"
 msgstr ""
 
-#: lib/other/siteinfowidget.cpp:107
+#: lib/other/siteinfowidget.cpp:129
 msgctxt "SiteInfoWidget|"
 msgid "Register"
 msgstr ""
 
-#: lib/other/siteinfowidget.ui:71
+#: lib/other/siteinfowidget.ui:98
 msgctxt "SiteInfoWidget|"
 msgid "More..."
 msgstr "表示..."

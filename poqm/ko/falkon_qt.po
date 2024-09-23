@@ -2047,18 +2047,18 @@ msgctxt "LocationCompleterView|"
 msgid "Search with:"
 msgstr "다음으로 검색:"
 
-#: lib/navigation/locationbar.cpp:95
+#: lib/navigation/locationbar.cpp:96
 msgctxt "LocationBar|"
 msgid "Paste And &Go"
 msgstr "붙여넣고 이동(&G)"
 
-#: lib/navigation/locationbar.cpp:163
+#: lib/navigation/locationbar.cpp:164
 #, qt-format
 msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
 msgstr "주소를 입력하거나 %1(으)로 검색"
 
-#: lib/navigation/locationbar.cpp:165
+#: lib/navigation/locationbar.cpp:166
 msgctxt "LocationBar|"
 msgid "Enter address"
 msgstr "주소 입력"
@@ -2284,6 +2284,112 @@ msgstr "프록시 인증 필요"
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
 msgstr "%1 프록시에서 사용자 이름과 암호를 요청했습니다."
+
+#: lib/network/networkmanager.cpp:344
+msgctxt "NetworkManager|"
+msgid ""
+"The certificate did not match the built-in public keys pinned for the host "
+"name."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:346
+msgctxt "NetworkManager|"
+msgid "The certificate's common name did not match the host name."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:348
+msgctxt "NetworkManager|"
+msgid "The certificate is not valid at the current date and time."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:350
+msgctxt "NetworkManager|"
+msgid "The certificate is not signed by a trusted authority."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:352
+msgctxt "NetworkManager|"
+msgid "The certificate contains errors."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:354
+msgctxt "NetworkManager|"
+msgid ""
+"The certificate has no mechanism for determining if it has been revoked."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:356
+msgctxt "NetworkManager|"
+msgid "Revocation information for the certificate is not available."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:358
+msgctxt "NetworkManager|"
+msgid "The certificate has been revoked."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:360
+msgctxt "NetworkManager|"
+msgid "The certificate is invalid."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:362
+msgctxt "NetworkManager|"
+msgid "The certificate is signed using a weak signature algorithm."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:364
+msgctxt "NetworkManager|"
+msgid "The host name specified in the certificate is not unique."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:366
+msgctxt "NetworkManager|"
+msgid "The certificate contains a weak key."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:368
+msgctxt "NetworkManager|"
+msgid ""
+"The certificate claimed DNS names that are in violation of name constraints."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:370
+msgctxt "NetworkManager|"
+msgid "The certificate has a validity period that is too long."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:372
+msgctxt "NetworkManager|"
+msgid ""
+"Certificate Transparency was required for this connection, but the server "
+"did not provide CT information that complied with the policy."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:374
+msgctxt "NetworkManager|"
+msgid ""
+"The certificate is known to be used for interception by an entity other the "
+"device owner."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:376
+msgctxt "NetworkManager|"
+msgid "The connection uses an obsolete version of SSL/TLS"
+msgstr ""
+
+#: lib/network/networkmanager.cpp:378
+msgctxt "NetworkManager|"
+msgid "The certificate is a legacy Symantec one that's no longer valid."
+msgstr ""
+
+#: lib/network/networkmanager.cpp:381
+#, fuzzy
+#| msgctxt "DownloadItem|"
+#| msgid "Unknown size"
+msgctxt "NetworkManager|"
+msgid "Unknown error"
+msgstr "알 수 없는 크기"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3054,67 +3160,82 @@ msgstr ""
 "일부 문제가 있습니다. Falkon을 다시 설치하십시오.\n"
 "관리자 권한으로 다시 실행하면 해결될 수 있습니다! ;)"
 
-#: lib/other/siteinfo.cpp:70
+#: lib/other/siteinfo.cpp:71
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
 msgstr "<b>연결이 암호화되었습니다.</b>"
 
-#: lib/other/siteinfo.cpp:72
+#: lib/other/siteinfo.cpp:75
+msgctxt "SiteInfo|"
+msgid "Any certificate error is <b>permanently</b> ignored."
+msgstr ""
+
+#: lib/other/siteinfo.cpp:78
+msgctxt "SiteInfo|"
+msgid "The certificate error is <b>temporarily</b> ignored."
+msgstr ""
+
+#: lib/other/siteinfo.cpp:82
+msgctxt "SiteInfo|"
+msgid "Certificate was rejected."
+msgstr ""
+
+#: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
 msgstr "<b>연결이 암호화되지 않았습니다.</b>"
 
-#: lib/other/siteinfo.cpp:181
+#: lib/other/siteinfo.cpp:198
 msgctxt "SiteInfo|"
 msgid "Copy Image Location"
 msgstr "그림 주소 복사"
 
-#: lib/other/siteinfo.cpp:182
+#: lib/other/siteinfo.cpp:199
 msgctxt "SiteInfo|"
 msgid "Copy Image Name"
 msgstr "그림 이름 복사"
 
-#: lib/other/siteinfo.cpp:184
+#: lib/other/siteinfo.cpp:201
 msgctxt "SiteInfo|"
 msgid "Save Image to Disk"
 msgstr "디스크에 그림 저장"
 
-#: lib/other/siteinfo.cpp:196
+#: lib/other/siteinfo.cpp:213
 msgctxt "SiteInfo|"
 msgid "Copy Values"
 msgstr "값 복사"
 
-#: lib/other/siteinfo.cpp:197
+#: lib/other/siteinfo.cpp:214
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
 msgstr "태그와 값 복사"
 
-#: lib/other/siteinfo.cpp:235 lib/other/siteinfo.cpp:254
+#: lib/other/siteinfo.cpp:252 lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
 msgid "Error!"
 msgstr "오류!"
 
-#: lib/other/siteinfo.cpp:235
+#: lib/other/siteinfo.cpp:252
 msgctxt "SiteInfo|"
 msgid "This preview is not available!"
 msgstr "미리 볼 수 없습니다!"
 
-#: lib/other/siteinfo.cpp:246
+#: lib/other/siteinfo.cpp:263
 msgctxt "SiteInfo|"
 msgid "Save image..."
 msgstr "그림 저장..."
 
-#: lib/other/siteinfo.cpp:254
+#: lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
 msgid "Cannot write to file!"
 msgstr "파일에 쓸 수 없습니다!"
 
-#: lib/other/siteinfo.cpp:264
+#: lib/other/siteinfo.cpp:281
 msgctxt "SiteInfo|"
 msgid "Loading..."
 msgstr "불러오는 중..."
 
-#: lib/other/siteinfo.cpp:277
+#: lib/other/siteinfo.cpp:294
 msgctxt "SiteInfo|"
 msgid "Preview not available"
 msgstr "미리 볼 수 없음"
@@ -3204,61 +3325,76 @@ msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "거부"
 
-#: lib/other/siteinfowidget.cpp:42
+#: lib/other/siteinfowidget.cpp:43
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "<b>Site %1<b/>"
 msgstr "<b>%1 사이트<b/>"
 
-#: lib/other/siteinfowidget.cpp:45
+#: lib/other/siteinfowidget.cpp:52
+msgctxt "SiteInfoWidget|"
+msgid "Any certificate error is <b>permanently</b> ignored."
+msgstr ""
+
+#: lib/other/siteinfowidget.cpp:55
+msgctxt "SiteInfoWidget|"
+msgid "The certificate error is <b>temporarily</b> ignored."
+msgstr ""
+
+#: lib/other/siteinfowidget.cpp:58
+msgctxt "SiteInfoWidget|"
+msgid "Certificate was rejected."
+msgstr ""
+
+#: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>secured</b>."
 msgstr "이 사이트로의 연결이 <b>보호되었습니다</b>."
 
-#: lib/other/siteinfowidget.cpp:49
+#: lib/other/siteinfowidget.cpp:71
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>unsecured</b>."
 msgstr "이 사이트로의 연결이 <b>보호되지 않았습니다</b>."
 
-#: lib/other/siteinfowidget.cpp:64 lib/other/siteinfowidget.cpp:83
+#: lib/other/siteinfowidget.cpp:86 lib/other/siteinfowidget.cpp:105
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "This is your <b>%1</b> visit of this site."
 msgstr "이 사이트에 <b>%1회</b> 방문했습니다."
 
-#: lib/other/siteinfowidget.cpp:68
+#: lib/other/siteinfowidget.cpp:90
 msgctxt "SiteInfoWidget|"
 msgid "You have <b>never</b> visited this site before."
 msgstr "이 사이트를 방문한 적이 <b>없습니다</b>."
 
 # "%1회"의 %1로 대체되는 문자열.
-#: lib/other/siteinfowidget.cpp:75
+#: lib/other/siteinfowidget.cpp:97
 msgctxt "SiteInfoWidget|"
 msgid "first"
 msgstr "1"
 
-#: lib/other/siteinfowidget.cpp:78
+#: lib/other/siteinfowidget.cpp:100
 msgctxt "SiteInfoWidget|"
 msgid "second"
 msgstr "2"
 
-#: lib/other/siteinfowidget.cpp:81
+#: lib/other/siteinfowidget.cpp:103
 msgctxt "SiteInfoWidget|"
 msgid "third"
 msgstr "3"
 
-#: lib/other/siteinfowidget.cpp:106
+#: lib/other/siteinfowidget.cpp:128
 #, qt-format
 msgctxt "SiteInfoWidget|"
 msgid "Register as <b>%1</b> links handler"
 msgstr "<b>%1</b> 링크 핸들러로 등록"
 
-#: lib/other/siteinfowidget.cpp:107
+#: lib/other/siteinfowidget.cpp:129
 msgctxt "SiteInfoWidget|"
 msgid "Register"
 msgstr "등록"
 
-#: lib/other/siteinfowidget.ui:71
+#: lib/other/siteinfowidget.ui:98
 msgctxt "SiteInfoWidget|"
 msgid "More..."
 msgstr "더 보기..."
