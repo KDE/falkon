@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: falkon bulgarian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-15 09:59+0200\n"
-"PO-Revision-Date: 2024-06-16 00:54+0200\n"
+"PO-Revision-Date: 2024-09-23 16:01+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
@@ -2310,73 +2310,77 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Сертификатът не съответства на вградените публични ключове, фиксирани за "
+"името на хоста."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Общото име на сертификата не съвпада с името на хоста."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Сертификатът не е валиден към текущата дата и час."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "Сертификатът не е подписан от доверен орган."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Сертификатът съдържа грешки."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
-msgstr ""
+msgstr "Сертификатът няма механизъм за определяне дали е отменен."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Информацията за анулиране на сертификата не е налична."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "Сертификатът е отменен."
 
 #: lib/network/networkmanager.cpp:360
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "Сертификатът е невалиден."
 
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "Сертификатът е подписан с помощта на слаб алгоритъм за подписване."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "Името на хоста, посочено в сертификата, не е уникално."
 
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Сертификатът съдържа слаб ключ."
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
 msgstr ""
+"Сертификатът претендира за DNS имена, които са в нарушение на ограниченията "
+"за имена."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Сертификатът има твърде дълъг период на валидност."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2384,6 +2388,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"За тази връзка беше необходима прозрачност на сертификата, но сървърът не "
+"предостави CT информация, която да отговаря на правилата."
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
@@ -2391,24 +2397,23 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Известно е, че сертификатът се използва за прихващане от субект, различен от "
+"собственика на устройството."
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Връзката използва остаряла версия на SSL/TLS"
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
-msgstr ""
+msgstr "Сертификатът е наследен от Symantec, който вече не е валиден."
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Неизвестен размер"
+msgstr "Неизвестна грешка."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3194,17 +3199,17 @@ msgstr "<b>Връзката е криптирана</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Всяка грешка в сертификата се <b>постоянно</b> игнорира."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Грешката в сертификата е <b>временно</b> игнорирана."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Сертификатът беше отхвърлен."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3360,17 +3365,17 @@ msgstr "<b>Сайт %1</b>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Всяка грешка в сертификата се <b>постоянно</b> игнорира."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Грешката в сертификата е <b>временно</b> игнорирана."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Сертификатът беше отхвърлен."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"

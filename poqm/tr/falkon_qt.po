@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-05 00:16+0000\n"
-"PO-Revision-Date: 2024-06-22 13:05+0300\n"
+"PO-Revision-Date: 2024-09-23 14:22+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2311,73 +2311,77 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Sertifika, makine adı için sabitlenmiş yerleşik ortak anahtarlarla "
+"eşleşmiyor."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Sertifikanın genel adı makine adıyla eşleşmiyor."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Sertifika şu anki uzay–zamanda geçerli değil."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "Sertifika güvenilir bir otorite tarafından imzalanmamış."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Sertifika hatalar içeriyor."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
 msgstr ""
+"Sertifikada, yürürlükten kaldırılıp kaldırılmadığını algılamak için olan bir "
+"mekanizma bulunmuyor."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Sertifika için olan yürürlükten kaldırma bilgisi kullanılabilir değil."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "Sertifika yürürlükten kaldırıldı."
 
 #: lib/network/networkmanager.cpp:360
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "Sertifika geçersiz."
 
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "Sertifika zayıf bir şifreleme algoritması kullanılarak imzalanmış."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "Sertifikada belirtilen makine adı benzersiz değil."
 
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Sertifika zayıf bir anahtar içeriyor."
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
-msgstr ""
+msgstr "Sertifika, ad kısıtlamalarını ihlal eden DNS adlarında hak iddia etti."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Sertifikanın pek uzun olan bir geçerlilik periyodu var."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2385,6 +2389,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Bu bağlantı için sertifika saydamlığı gerekiyordu; ancak sunucu, bu "
+"politikaya uygun saydamlık bilgisi sağlamadı."
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
@@ -2392,24 +2398,23 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Sertifikanın aygıt sahibi dışındaki bir kuruluş tarafından müdahale amacıyla "
+"kullanıldığı bilinmektedir."
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Bağlantı, artık kullanılmayan bir SSL/TLS sürümü kullanıyor."
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
-msgstr ""
+msgstr "Sertifika, artık geçerli olmayan bir Symantec sertifikası."
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Bilinmeyen boyut"
+msgstr "Bilinmeyen Hata"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3189,17 +3194,17 @@ msgstr "<b>Bağlantı şifreli.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Herhangi bir sertifika hatası <b>kalıcı olarak</b> yok sayılır."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Sertifika hatası <b>geçici olarak</b> yok sayıldı."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Sertifika reddedildi."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3355,17 +3360,17 @@ msgstr "<b>Site %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Herhangi bir sertifika hatası <b>kalıcı olarak</b> yok sayılır."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Sertifika hatası <b>geçici olarak</b> yok sayıldı."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Sertifika reddedildi."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"

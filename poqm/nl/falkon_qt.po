@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-06-14 11:18+0200\n"
+"PO-Revision-Date: 2024-09-23 11:38+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: nl_NL\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2320,73 +2320,78 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Het certificaat kwam niet overeen met de ingebouwde publieke sleutels "
+"vastgezet voor de hostnaam."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "De common-name van het certificaat kwam niet overeen met de hostnaam."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Het certificaat is niet geldig op de huidige datum en tijd."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "Het certificaat is niet ondertekend door een vertrouwde autoriteit."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Het certificaat bevat fouten."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
 msgstr ""
+"Het certificaat heeft geen mechanisme voor bepalen of het is ingetrokken."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Informatie voor intrekken voor het certificaat is niet beschikbaar."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "Het certificaat is ingetrokken."
 
 #: lib/network/networkmanager.cpp:360
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "Het certificaat is ongeldig."
 
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
 msgstr ""
+"Dit certificaat is ondertekend door een zwak algoritme voor ondertekenen."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "De hostnaam gespecificeerd in het certificaat is niet uniek."
 
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Het certificaat bevat een zwakke sleutel."
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
 msgstr ""
+"Het certificaat claimt DNS namen die in strijd zijn met beperkingen in namen."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Het certificaat heeft een geldigheidsperiode die te lang is."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2394,6 +2399,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Certificaattransparantie is vereist voor deze verbinding, maar de server "
+"leverde geen CT-informatie die overeenkomt met het beleid."
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
@@ -2401,24 +2408,25 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Het certificaat staat bekend om gebruikt te worden voor onderscheppen door "
+"een entiteit anders dan de eigenaar van het apparaat."
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "De verbinding gebruikt een verouderde versie van SSL/TLS"
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr ""
+"Het certificaat is er een van het vroegere Symantec die niet langer geldig "
+"is."
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Onbekende grootte"
+msgstr "Onbekende fout"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3205,17 +3213,17 @@ msgstr "<b>De verbinding is beveiligd.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Elke fout in het certificaat wordt <b>permanent</b> genegeerd."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "De fout in het certificaat wordt <b>tijdelijk</b> genegeerd."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Certificaat is geweigerd."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3371,17 +3379,17 @@ msgstr "<b>Site %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Elke fout in het certificaat wordt <b>permanent</b> genegeerd."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "De fout in het certificaat wordt <b>tijdelijk</b> genegeerd."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Certificaat is geweigerd."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"

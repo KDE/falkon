@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-06-16 22:43+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"PO-Revision-Date: 2024-09-23 17:08+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: sv_SE\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2314,73 +2314,76 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Certifikatet motsvarade inte de inbyggda öppna nycklarna anslutna till "
+"värddatornamnet."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Certifikatets vanliga namn motsvarade inte värddatornamnet."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Certifikatet är inte giltigt vid aktuellt datum och tid."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "Certifikatet är inte signerat av en pålitlig utfärdare."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Certifikatet innehåller fel."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
-msgstr ""
+msgstr "Certifikatet har ingen mekanism för att avgöra om det har återkallats."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Information om återkallelse för certifikatet är inte tillgänglig."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "Certifikatet har återkallats."
 
 #: lib/network/networkmanager.cpp:360
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "Certifikatet är ogiltigt."
 
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "Certifikatet är signerat med en svag signaturalgoritm."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "Värddatornamnet som anges i certifikatet är inte unikt."
 
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Certifikatet innehåller en svag nyckel."
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
 msgstr ""
+"Certifikatet gjorde anspråk på domännamn som bryter mot namnbegränsningar."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Certifikatet har en giltighetstid som är för lång."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2388,6 +2391,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Certifikattransparens krävdes för anslutningen, men servern tillhandahöll "
+"inte CT-information som överensstämde med policyn."
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
@@ -2395,24 +2400,24 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Certifikatet är känt för att användas för avlyssning av en annan entitet än "
+"enhetens ägare."
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Anslutningen använder en föråldrad version av SSL/TLS"
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr ""
+"Certifikatet är ett äldre Symantec-certifikat som inte längre är giltigt."
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Okänd storlek"
+msgstr "Okänt fel"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3196,17 +3201,17 @@ msgstr "<b>Anslutningen är krypterad.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Alla certifikatfel ignoreras <b>permanent</b>."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Certifikatfelet ignoreras <b>tillfälligt</b>."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Certifikatet avvisades."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3362,17 +3367,17 @@ msgstr "<b>Plats %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Alla certifikatfel ignoreras <b>permanent</b>."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Certifikatfelet ignoreras <b>tillfälligt</b>."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Certifikatet avvisades."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
