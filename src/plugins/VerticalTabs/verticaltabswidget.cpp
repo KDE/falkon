@@ -164,6 +164,12 @@ void VerticalTabsWidget::wheelEvent(QWheelEvent *event)
         return;
     }
 
+    if (   m_normalView->verticalScrollBar()->isVisible()
+        && m_normalView->verticalScrollBar()->rect().contains(event->position().toPoint())
+    ) {
+        return;
+    }
+
     m_wheelHelper.processEvent(event);
     while (WheelHelper::Direction direction = m_wheelHelper.takeDirection()) {
         switch (direction) {
