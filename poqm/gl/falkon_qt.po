@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-06-15 15:09+0200\n"
+"PO-Revision-Date: 2024-09-25 21:59+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -292,7 +292,7 @@ msgstr "&Barra de marcadores"
 #: lib/app/browserwindow.cpp:1061
 msgctxt "BrowserWindow|"
 msgid "&Tabs on Top"
-msgstr "Separadores en&riba"
+msgstr "Lapelas en&riba"
 
 #: lib/app/browserwindow.cpp:1116
 msgctxt "BrowserWindow|"
@@ -334,10 +334,10 @@ msgid_plural ""
 "There are still %n open tabs and your session won't be stored.\n"
 "Are you sure you want to close this window?"
 msgstr[0] ""
-"Aínda hai %n separador aberto e a sesión non se restaurará.\n"
+"Aínda hai %n lapela aberta e a sesión non se restaurará.\n"
 "Seguro que quere pechar a xanela?"
 msgstr[1] ""
-"Aínda hai %n separadores abertos e a sesión non se restaurará.\n"
+"Aínda hai %n lapelas abertas e a sesión non se restaurará.\n"
 "Seguro que quere pechar a xanela?"
 
 #: lib/app/browserwindow.cpp:1498
@@ -348,7 +348,7 @@ msgstr "Non preguntar de novo."
 #: lib/app/browserwindow.cpp:1499
 msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
-msgstr "Aínda hai separadores abertos"
+msgstr "Aínda hai lapelas abertas"
 
 #: lib/app/mainapplication.cpp:1115
 msgctxt "MainApplication|"
@@ -370,7 +370,7 @@ msgstr "Navegador predeterminado"
 #: lib/app/mainapplication.cpp:1250
 msgctxt "MainApplication|"
 msgid "Open new tab"
-msgstr "Abrir un novo separador"
+msgstr "Abrir unha nova lapela"
 
 #: lib/app/mainapplication.cpp:1251
 msgctxt "MainApplication|"
@@ -421,7 +421,7 @@ msgstr "&Ficheiro"
 #: lib/app/mainmenu.cpp:492
 msgctxt "MainMenu|"
 msgid "New Tab"
-msgstr "Novo separador"
+msgstr "Nova lapela"
 
 #: lib/app/mainmenu.cpp:493
 msgctxt "MainMenu|"
@@ -636,7 +636,7 @@ msgstr "&Informar dun problema"
 #: lib/app/mainmenu.cpp:616
 msgctxt "MainMenu|"
 msgid "Restore &Closed Tab"
-msgstr "Restaurar o separador pe&chado"
+msgstr "Restaurar a lapela pe&chada"
 
 #: lib/autofill/autofillicon.cpp:29
 msgctxt "AutoFillWidget|"
@@ -713,7 +713,7 @@ msgstr "Introduciu un contrasinal incorrecto!"
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:551
 msgctxt "MasterPasswordDialog|"
 msgid "New/Confirm password fields do not match!"
-msgstr "Os contrasinais novo e de confirmación non coinciden!"
+msgstr "Os campos dos contrasinais novo e de confirmación non coinciden!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:578
 msgctxt "AutoFill|"
@@ -1079,7 +1079,7 @@ msgstr ""
 #: lib/bookmarks/bookmarksmanager.cpp:105
 msgctxt "BookmarksManager|"
 msgid "Open in new tab"
-msgstr "Abrir nun novo separador"
+msgstr "Abrir nunha lapela"
 
 #: lib/bookmarks/bookmarksmanager.cpp:106
 msgctxt "BookmarksManager|"
@@ -1151,7 +1151,7 @@ msgstr "Marcar es&ta páxina"
 #: lib/bookmarks/bookmarksmenu.cpp:169
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &All Tabs"
-msgstr "M&arcar os separadores"
+msgstr "M&arcar as lapelas"
 
 #: lib/bookmarks/bookmarksmenu.cpp:170
 msgctxt "BookmarksMenu|"
@@ -1171,7 +1171,7 @@ msgstr "Enderezo"
 #: lib/bookmarks/bookmarkstoolbar.cpp:74
 msgctxt "BookmarksToolbar|"
 msgid "Open in new tab"
-msgstr "Abrir nun novo separador"
+msgstr "Abrir nunha lapela"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:75
 msgctxt "BookmarksToolbar|"
@@ -1237,7 +1237,7 @@ msgstr "Escolla o cartafol para os marcadores:"
 #: lib/bookmarks/bookmarkstools.cpp:198
 msgctxt "Bookmarks|"
 msgid "Bookmark All Tabs"
-msgstr "Marcar os separadores"
+msgstr "Marcar as lapelas"
 
 #: lib/bookmarks/bookmarkstools.cpp:239
 msgctxt "Bookmarks|"
@@ -1274,7 +1274,7 @@ msgstr "Confirmación"
 msgctxt "Bookmarks|"
 msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
 msgstr ""
-"Seguro que quere abrir todos os marcadores do cartafol «%1» en separadores?"
+"Seguro que quere abrir todos os marcadores do cartafol «%1» en lapelas?"
 
 #: lib/bookmarks/bookmarkstools.cpp:440
 msgctxt "Bookmarks|"
@@ -1373,7 +1373,7 @@ msgstr "Servidor:"
 #: lib/cookies/cookiemanager.cpp:214
 msgctxt "CookieManager|"
 msgid "Add to whitelist"
-msgstr "Engadir á lista branca"
+msgstr "Engadir á lista permitida"
 
 #: lib/cookies/cookiemanager.cpp:221
 msgctxt "CookieManager|"
@@ -1384,12 +1384,12 @@ msgstr "Xa está na lista negra!"
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
-msgstr "O servidor «%1» xa está na lista negra, retíreo antes."
+msgstr "O servidor «%1» xa está na lista prohibida, retíreo antes."
 
 #: lib/cookies/cookiemanager.cpp:241
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
-msgstr "Engadir á lista negra"
+msgstr "Engadir á lista prohibida"
 
 #: lib/cookies/cookiemanager.cpp:252
 msgctxt "CookieManager|"
@@ -1400,7 +1400,7 @@ msgstr "Xa está na lista branca!"
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
-msgstr "O servidor «%1» xa está na lista branca, primeiro retíreo."
+msgstr "O servidor «%1» xa está na lista permitida, primeiro retíreo."
 
 #: lib/cookies/cookiemanager.ui:14
 msgctxt "CookieManager|"
@@ -1470,7 +1470,7 @@ msgstr "Filtrado de cookies"
 #: lib/cookies/cookiemanager.ui:275
 msgctxt "CookieManager|"
 msgid "<b>Cookie whitelist</b>"
-msgstr "<b>Lista branca de cookies</b>"
+msgstr "<b>Lista de rastros permitidos</b>"
 
 #: lib/cookies/cookiemanager.ui:282
 msgctxt "CookieManager|"
@@ -1494,7 +1494,7 @@ msgstr "Retirar"
 #: lib/cookies/cookiemanager.ui:326
 msgctxt "CookieManager|"
 msgid "<b>Cookie blacklist</b>"
-msgstr "<b>Lista negra de cookies</b>"
+msgstr "<b>Lista de rastros prohibidos</b>"
 
 #: lib/cookies/cookiemanager.ui:333
 msgctxt "CookieManager|"
@@ -1899,7 +1899,7 @@ msgstr "Seguro que quere eliminar todo o historial? "
 #: lib/history/historymanager.cpp:145
 msgctxt "HistoryManager|"
 msgid "Open in new tab"
-msgstr "Abrir nun novo separador"
+msgstr "Abrir nunha lapela"
 
 #: lib/history/historymanager.cpp:146
 msgctxt "HistoryManager|"
@@ -1945,7 +1945,7 @@ msgstr "Baleiro"
 #: lib/history/historymenu.cpp:161
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Tabs"
-msgstr "Restaurar os separadores pechados"
+msgstr "Restaurar as lapelas pechadas"
 
 #: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
 msgctxt "HistoryMenu|"
@@ -1990,7 +1990,7 @@ msgstr "O máis visitado"
 #: lib/history/historymenu.cpp:258
 msgctxt "HistoryMenu|"
 msgid "Closed Tabs"
-msgstr "Separadores pechados"
+msgstr "Lapelas pechadas"
 
 #: lib/history/historymenu.cpp:261
 msgctxt "HistoryMenu|"
@@ -2046,7 +2046,7 @@ msgstr "Buscar con %1"
 #: lib/navigation/completer/locationcompleterdelegate.cpp:198
 msgctxt "LocationCompleterDelegate|"
 msgid "Switch to tab"
-msgstr "Ir ao separador"
+msgstr "Ir á lapela"
 
 #: lib/navigation/completer/locationcompleterview.cpp:73
 msgctxt "LocationCompleterView|"
@@ -2097,7 +2097,7 @@ msgstr "Inicio"
 #: lib/navigation/navigationbar.cpp:115
 msgctxt "NavigationBar|"
 msgid "New Tab"
-msgstr "Novo separador"
+msgstr "Nova lapela"
 
 #: lib/navigation/navigationbar.cpp:135
 msgctxt "NavigationBar|"
@@ -2132,7 +2132,7 @@ msgstr "Botón de inicio"
 #: lib/navigation/navigationbar.cpp:194
 msgctxt "NavigationBar|"
 msgid "Add tab button"
-msgstr "Botón de engadir un separador"
+msgstr "Botón de engadir unha lapela"
 
 #: lib/navigation/navigationbar.cpp:195
 msgctxt "NavigationBar|"
@@ -2268,7 +2268,7 @@ msgstr "Requírese autorización"
 #: lib/network/networkmanager.cpp:131 lib/network/networkmanager.cpp:217
 msgctxt "NetworkManager|"
 msgid "Username: "
-msgstr "Nome de usuaria: "
+msgstr "Nome de persoa usuaria: "
 
 #: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
 msgctxt "NetworkManager|"
@@ -2298,7 +2298,8 @@ msgstr "Requírese autorización do mandatario"
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
-msgstr "O mandatario %1 está a solicitar un nome de usuaria e un contrasinal."
+msgstr ""
+"O mandatario %1 está a solicitar un nome de persoa usuaria e un contrasinal."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -2503,8 +2504,8 @@ msgstr "Quere restaurar o último estado gardado?"
 msgctxt "FalkonSchemeReply|"
 msgid "Try removing one or more tabs that you think cause troubles"
 msgstr ""
-"Probe a retirar un ou máis separadores que pense que poidan estar causando "
-"os problemas"
+"Probe a retirar unha ou máis lapelas que pense que poidan estar causando os "
+"problemas."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:268
 msgctxt "FalkonSchemeReply|"
@@ -2519,7 +2520,7 @@ msgstr "Xanela"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:270
 msgctxt "FalkonSchemeReply|"
 msgid "Windows and Tabs"
-msgstr "Xanelas e separadores"
+msgstr "Xanelas e lapelas"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:271
 msgctxt "FalkonSchemeReply|"
@@ -2550,7 +2551,7 @@ msgid ""
 "submitting bug reports."
 msgstr ""
 "Esta páxina contén información sobre a configuración actual de Falkon, "
-"relevante para solucionar problemas. Inclúa esta información ao enviar "
+"relevante para solucionar problemas. Inclúa esta información ao entregar "
 "informes de fallo."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:293
@@ -3655,7 +3656,7 @@ msgstr "Exportouse correctamente"
 #: lib/preferences/autofillmanager.cpp:373
 msgctxt "AutoFillManager|"
 msgid "Copy Username"
-msgstr "Copiar o nome de usuaria"
+msgstr "Copiar o nome de persoa usuaria"
 
 #: lib/preferences/autofillmanager.cpp:374
 msgctxt "AutoFillManager|"
@@ -3695,7 +3696,7 @@ msgstr "Servidor"
 #: lib/preferences/autofillmanager.ui:92
 msgctxt "AutoFillManager|"
 msgid "Username"
-msgstr "Nome de usuaria"
+msgstr "Nome de persoa usuaria"
 
 #: lib/preferences/autofillmanager.ui:97
 msgctxt "AutoFillManager|"
@@ -3962,7 +3963,7 @@ msgstr "Aparencia"
 #: lib/preferences/preferences.ui:77
 msgctxt "Preferences|"
 msgid "Tabs"
-msgstr "Separadores"
+msgstr "Lapelas"
 
 #: lib/preferences/preferences.ui:82
 msgctxt "Preferences|"
@@ -4072,12 +4073,12 @@ msgstr "Páxina web: "
 #: lib/preferences/preferences.ui:366
 msgctxt "Preferences|"
 msgid "On new tab: "
-msgstr "Nun novo separador: "
+msgstr "Nunha lapela: "
 
 #: lib/preferences/preferences.ui:374
 msgctxt "Preferences|"
 msgid "Open blank tab"
-msgstr "Abrir un separador en branco"
+msgstr "Abrir unha lapela baleira"
 
 #: lib/preferences/preferences.ui:389
 msgctxt "Preferences|"
@@ -4107,7 +4108,7 @@ msgstr "Perfil activo:"
 #: lib/preferences/preferences.ui:432
 msgctxt "Preferences|"
 msgid "Don't load tabs until selected"
-msgstr "Non cargar os separadores ata seleccionalos"
+msgstr "Non cargar as lapelas ata seleccionalas"
 
 #: lib/preferences/preferences.ui:454
 msgctxt "Preferences|"
@@ -4157,62 +4158,62 @@ msgstr "<b>Xanela do navegador</b>"
 #: lib/preferences/preferences.ui:615
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
-msgstr "Comportamento dos separadores"
+msgstr "Comportamento das lapelas"
 
 #: lib/preferences/preferences.ui:621
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
-msgstr "Agochar os separadores cando só haxa un"
+msgstr "Agochar as lapelas cando só haxa unha"
 
 #: lib/preferences/preferences.ui:628
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
-msgstr "Activar o último separador ao pechar o separador activo"
+msgstr "Activar a última lapela ao pechar a lapela activa"
 
 #: lib/preferences/preferences.ui:635
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
-msgstr "Abrir os novos separadores despois do separador activo"
+msgstr "Abrir as novas lapelas despois da activa"
 
 #: lib/preferences/preferences.ui:642
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
-msgstr "Abrir os novos separadores baleiros despois do separador activo"
+msgstr "Abrir as novas lapelas baleiras despois da activa"
 
 #: lib/preferences/preferences.ui:649
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
-msgstr "Abrir as xanelas emerxentes en separadores"
+msgstr "Abrir as xanelas emerxentes en lapelas"
 
 #: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
-msgstr "Sempre cambiar entre os separadores coa roda do rato"
+msgstr "Sempre cambiar entre as lapelas coa roda do rato"
 
 #: lib/preferences/preferences.ui:663
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
-msgstr "Cambiar automaticamente aos novos separadores ao abrilos"
+msgstr "Cambiar automaticamente ás novas lapelas ao abrilas"
 
 #: lib/preferences/preferences.ui:670
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
-msgstr "Non pechar a xanela tras pechar o último separador"
+msgstr "Non pechar a xanela tras pechar a última lapela"
 
 #: lib/preferences/preferences.ui:677
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
-msgstr "Preguntar antes de pechar varios separadores"
+msgstr "Preguntar antes de pechar varias lapelas"
 
 #: lib/preferences/preferences.ui:684
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
-msgstr "Amosar o botón de separadores pechados"
+msgstr "Amosar o botón de lapelas pechadas"
 
 #: lib/preferences/preferences.ui:693
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
-msgstr "Amosar os botóns de pechar nos separadores inactivos:"
+msgstr "Amosar os botóns de pechar nas lapelas inactivas:"
 
 #: lib/preferences/preferences.ui:701
 msgctxt "Preferences|"
@@ -4262,20 +4263,19 @@ msgstr "Nada"
 #: lib/preferences/preferences.ui:814
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
-msgstr "Activas as suxestións entre liñas"
+msgstr "Activas as suxestións in situ"
 
 #: lib/preferences/preferences.ui:821
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
 msgstr ""
-"Prema «Maiús» para non cambiar de separador senón cargar o URL no separador "
-"actual"
+"Prema «Maiús» para non cambiar de lapela, senón cargar o URL na lapela actual"
 
 #: lib/preferences/preferences.ui:824
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
-msgstr "Propoñer cambiar de separador se o URL completado xa está cargado"
+msgstr "Propoñer cambiar de lapela se o URL completado xa está cargado"
 
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
@@ -4372,7 +4372,7 @@ msgstr "Activar a API do complemento Pepper (PPAPI)"
 #: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
-msgstr "Usar o visor de PDF de serie (require PPAPI)"
+msgstr "Usar o visor de PDF incluído (require PPAPI)"
 
 #: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
@@ -4434,7 +4434,7 @@ msgstr "Activar a captura de pantalla"
 #: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr "Usar aceleración por hardware (require reiniciar)"
+msgstr "Usar aceleración física (require reiniciar)"
 
 #: lib/preferences/preferences.ui:1137
 msgctxt "Preferences|"
@@ -4549,7 +4549,7 @@ msgstr "Porto:"
 #: lib/preferences/preferences.ui:1511
 msgctxt "Preferences|"
 msgid "Username:"
-msgstr "Nome de usuaria:"
+msgstr "Nome de persoa usuaria:"
 
 #: lib/preferences/preferences.ui:1521
 msgctxt "Preferences|"
@@ -4629,7 +4629,7 @@ msgstr "<b>Atallos</b>"
 #: lib/preferences/preferences.ui:1764
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
-msgstr "Cambiar o separador con Alt + número de separador"
+msgstr "Cambiar a lapela con Alt + número de lapela"
 
 #: lib/preferences/preferences.ui:1771
 msgctxt "Preferences|"
@@ -4642,8 +4642,8 @@ msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
 "><b>/</b> - search on page"
 msgstr ""
-"Atallos existentes:<br/><b>1</b>: separador anterior<br/><b>2</b>: seguinte "
-"separador<br/><b>/</b>: buscar na páxina"
+"Atallos existentes:<br/><b>1</b>: lapela anterior<br/><b>2</b>: seguinte "
+"lapela<br/><b>/</b>: buscar na páxina"
 
 #: lib/preferences/preferences.ui:1781
 msgctxt "Preferences|"
@@ -5311,7 +5311,7 @@ msgstr "Cambiar a"
 #: lib/sidebar/bookmarkssidebar.cpp:103
 msgctxt "BookmarksSidebar|"
 msgid "Open in new tab"
-msgstr "Abrir nun novo separador"
+msgstr "Abrir nunha lapela"
 
 #: lib/sidebar/bookmarkssidebar.cpp:104
 msgctxt "BookmarksSidebar|"
@@ -5336,7 +5336,7 @@ msgstr "Buscar…"
 #: lib/sidebar/historysidebar.cpp:85
 msgctxt "HistorySideBar|"
 msgid "Open in new tab"
-msgstr "Abrir nun novo separador"
+msgstr "Abrir nunha lapela"
 
 #: lib/sidebar/historysidebar.cpp:86
 msgctxt "HistorySideBar|"
@@ -5371,7 +5371,7 @@ msgstr "Historial"
 #: lib/tabwidget/tabbar.cpp:111
 msgctxt "BrowserWindow|"
 msgid "Close Tab"
-msgstr "Pechar o separador"
+msgstr "Pechar a lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:63
 msgctxt "TabBar|"
@@ -5382,157 +5382,157 @@ msgstr "Non preguntar de novo."
 #: lib/tabwidget/tabcontextmenu.cpp:102
 msgctxt "TabContextMenu|"
 msgid "Close Tabs"
-msgstr "Pechar os separadores"
+msgstr "Pechar as lapelas"
 
 #: lib/tabwidget/tabcontextmenu.cpp:80
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close other tabs?"
-msgstr "Seguro que quere pechar os outros separadores?"
+msgstr "Seguro que quere pechar as outras lapelas?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:88
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the right?"
-msgstr "Seguro que quere pechar os separadores á dereita?"
+msgstr "Seguro que quere pechar as lapelas á dereita?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:89
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the bottom?"
-msgstr "Seguro que quere pechar os separadores por debaixo?"
+msgstr "Seguro que quere pechar as lapelas por debaixo?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:99
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the left?"
-msgstr "Seguro que quere pechar os separadores á esquerda?"
+msgstr "Seguro que quere pechar as lapelas á esquerda?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:100
 msgctxt "TabContextMenu|"
 msgid "Do you really want to close all tabs to the top?"
-msgstr "Seguro que quere pechar os separadores por arriba?"
+msgstr "Seguro que quere pechar as lapelas por arriba?"
 
 #: lib/tabwidget/tabcontextmenu.cpp:117
 msgctxt "TabContextMenu|"
 msgid "&Stop Tab"
-msgstr "&Deter o separador"
+msgstr "&Deter a lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:120
 msgctxt "TabContextMenu|"
 msgid "&Reload Tab"
-msgstr "&Cargar de novo o separador"
+msgstr "&Cargar de novo a lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:123
 msgctxt "TabContextMenu|"
 msgid "&Duplicate Tab"
-msgstr "&Duplicar o separador"
+msgstr "&Duplicar a lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:126
 msgctxt "TabContextMenu|"
 msgid "D&etach Tab"
-msgstr "D&esprender o separador"
+msgstr "D&esprender a lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:129
 msgctxt "TabContextMenu|"
 msgid "Un&pin Tab"
-msgstr "Soltar o se&parador"
+msgstr "Soltar a la&pela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:129
 msgctxt "TabContextMenu|"
 msgid "&Pin Tab"
-msgstr "Fixar o se&parador"
+msgstr "Fixar a la&pela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:130
 msgctxt "TabContextMenu|"
 msgid "Un&mute Tab"
-msgstr "Activar o &son do separador"
+msgstr "Activar o &son da lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:130
 msgctxt "TabContextMenu|"
 msgid "&Mute Tab"
-msgstr "&Silenciar o separador"
+msgstr "&Silenciar a lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:133
 msgctxt "TabContextMenu|"
 msgid "Load Tab"
-msgstr "Cargar o separador"
+msgstr "Cargar a lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:135
 msgctxt "TabContextMenu|"
 msgid "Unload Tab"
-msgstr "Descargar o separador"
+msgstr "Descargar a lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:139
 msgctxt "TabContextMenu|"
 msgid "Re&load All Tabs"
-msgstr "Cargar de novo os separadores"
+msgstr "Cargar de novo as lapelas"
 
 #: lib/tabwidget/tabcontextmenu.cpp:140 lib/tabwidget/tabcontextmenu.cpp:156
 msgctxt "TabContextMenu|"
 msgid "Bookmark &All Tabs"
-msgstr "M&arcar os separadores"
+msgstr "M&arcar as lapelas"
 
 #: lib/tabwidget/tabcontextmenu.cpp:144
 msgctxt "TabContextMenu|"
 msgid "Close Ot&her Tabs"
-msgstr "Pec&har os outros separadores"
+msgstr "Pec&har as outras lapelas"
 
 #: lib/tabwidget/tabcontextmenu.cpp:145
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Right"
-msgstr "Pechar os separadores á dereita"
+msgstr "Pechar as lapelas á dereita"
 
 #: lib/tabwidget/tabcontextmenu.cpp:145
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Bottom"
-msgstr "Pechar os separadores por debaixo"
+msgstr "Pechar as lapelas por debaixo"
 
 #: lib/tabwidget/tabcontextmenu.cpp:146
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Left"
-msgstr "Pechar os separadores á esquerda"
+msgstr "Pechar as lapelas á esquerda"
 
 #: lib/tabwidget/tabcontextmenu.cpp:146
 msgctxt "TabContextMenu|"
 msgid "Close Tabs To The Top"
-msgstr "Pechar os separadores por arriba"
+msgstr "Pechar as lapelas por arriba"
 
 #: lib/tabwidget/tabcontextmenu.cpp:151
 msgctxt "TabContextMenu|"
 msgid "Cl&ose Tab"
-msgstr "Pechar &o separador"
+msgstr "Pechar &a lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:153
 msgctxt "TabContextMenu|"
 msgid "&New tab"
-msgstr "&Novo separador"
+msgstr "&Nova lapela"
 
 #: lib/tabwidget/tabcontextmenu.cpp:155
 msgctxt "TabContextMenu|"
 msgid "Reloa&d All Tabs"
-msgstr "Cargar de novo os separadores"
+msgstr "Cargar de novo as lapelas"
 
 #: lib/tabwidget/tabicon.cpp:169
 msgctxt "TabIcon|"
 msgid "Unmute Tab"
-msgstr "Activar o son do separador"
+msgstr "Activar o son da lapela"
 
 #: lib/tabwidget/tabicon.cpp:169
 msgctxt "TabIcon|"
 msgid "Mute Tab"
-msgstr "Silenciar o separador"
+msgstr "Silenciar a lapela"
 
 #: lib/tabwidget/tabwidget.cpp:51
 msgctxt "TabWidget|"
 msgid "New Tab"
-msgstr "Novo separador"
+msgstr "Nova lapela"
 
 #: lib/tabwidget/tabwidget.cpp:126
 msgctxt "TabWidget|"
 msgid "Closed tabs"
-msgstr "Separadores pechados"
+msgstr "Lapelas pechadas"
 
 #: lib/tabwidget/tabwidget.cpp:137
 msgctxt "TabWidget|"
 msgid "List of tabs"
-msgstr "Lista de separadores"
+msgstr "Lista de lapelas"
 
 #: lib/tabwidget/tabwidget.cpp:294
 msgctxt "TabWidget|"
@@ -5542,7 +5542,7 @@ msgstr "Baleira"
 #: lib/tabwidget/tabwidget.cpp:298
 msgctxt "TabWidget|"
 msgid "Restore All Closed Tabs"
-msgstr "Restaurar os separadores pechados"
+msgstr "Restaurar as lapelas pechadas"
 
 #: lib/tabwidget/tabwidget.cpp:299
 msgctxt "TabWidget|"
@@ -5552,7 +5552,7 @@ msgstr "Limpar a lista"
 #: lib/tabwidget/tabwidget.h:106
 msgctxt "TabWidget|"
 msgid "New tab"
-msgstr "Novo separador"
+msgstr "Nova lapela"
 
 #: lib/tools/aesinterface.cpp:146
 msgctxt "AesInterface|"
@@ -5576,7 +5576,7 @@ msgstr "<non definido no certificado>"
 #: lib/tools/certificateinfowidget.ui:17
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Issued To</b>"
-msgstr "<b>Concedido a</b>"
+msgstr "<b>Expendeuse a</b>"
 
 #: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
 msgctxt "CertificateInfoWidget|"
@@ -5601,7 +5601,7 @@ msgstr "Número de serie:"
 #: lib/tools/certificateinfowidget.ui:92
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Issued By</b>"
-msgstr "<b>Concedido por</b>"
+msgstr "<b>Expendeuno</b>"
 
 #: lib/tools/certificateinfowidget.ui:150
 msgctxt "CertificateInfoWidget|"
@@ -5611,7 +5611,7 @@ msgstr "<b>Validez</b>"
 #: lib/tools/certificateinfowidget.ui:157
 msgctxt "CertificateInfoWidget|"
 msgid "Issued On:"
-msgstr "Concedido o:"
+msgstr "Expendeuse o:"
 
 #: lib/tools/certificateinfowidget.ui:174
 msgctxt "CertificateInfoWidget|"
@@ -5771,7 +5771,7 @@ msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr ""
-"Probe a cargar de novo a páxina ou pechar algúns separadores para aumentar a "
+"Probe a cargar de novo a páxina ou pechar algunhas lapelas para aumentar a "
 "memoria dispoñíbel."
 
 #: lib/webengine/webpage.cpp:423
@@ -5878,7 +5878,7 @@ msgstr "Amosar información sobre o siti&o"
 #: lib/webengine/webview.cpp:804
 msgctxt "WebView|"
 msgid "Open link in new &tab"
-msgstr "Abrir a ligazón nun novo &separador"
+msgstr "Abrir a ligazón nunha nova &lapela"
 
 #: lib/webengine/webview.cpp:809
 msgctxt "WebView|"
