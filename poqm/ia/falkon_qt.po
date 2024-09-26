@@ -1,8 +1,9 @@
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 giovanni <g.sora@tiscali.it>
+# giovanni <g.sora@tiscali.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-09-24 12:00+0200\n"
+"PO-Revision-Date: 2024-09-25 15:35+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -348,7 +349,7 @@ msgstr "Non demanda de nove"
 #: lib/app/browserwindow.cpp:1499
 msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
-msgstr "Il ha anor schedas aperite"
+msgstr "Il ha ancora schedas aperite"
 
 #: lib/app/mainapplication.cpp:1115
 msgctxt "MainApplication|"
@@ -2314,37 +2315,41 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Le certificato non correspondeva con le clave public interne (buit-in) "
+"afixate per le nomine de hospite."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
 msgstr ""
+"Lw nomine commun del certificato non correspondeva con le nomine de host."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Le certificato non es valide al date e tempore currente."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "Le certificato non es signate per un authoritate digne de fede."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Le certificato contine errores."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
 msgstr ""
+"Le certificato ha nulle mechanismo per determinar si illo ha essite revocate."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Information de revocation per le certificato non es disponibile."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
@@ -2359,28 +2364,30 @@ msgstr "Le certificato es invalide."
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "Le certificato es signate usante un debile algorithmo de signatura."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "Le nomine de hospite specificate in le certificato non es unic."
 
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Le certificato contine un clave debile"
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
 msgstr ""
+"Le certrificato assereva nomines de DNS que es in violation del coercitiones "
+"de nomine."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Le certificato ha un periodo de validitate que es troppo longe."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2388,6 +2395,9 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Transparentia de Certificato  (CT) esseva requirite per iste connexion, ma "
+"le servitor non forniva information de CT que esseva in accordo con le "
+"politica. "
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
@@ -2395,16 +2405,18 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Le certificato es cognoscite per esser usate per un entitate altere que le "
+"proprietario del dispositivo."
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Le connexion usa un version obsolete de SSL/TLS "
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
-msgstr ""
+msgstr "Le certificato es un onselescente de Symantec que non es plus valide."
 
 #: lib/network/networkmanager.cpp:381
 msgctxt "NetworkManager|"
@@ -3192,17 +3204,17 @@ msgstr "<b>Connexion es cryptate.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Ulle error de certificato es <b>permanentemente</b> ignorate."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Le error de certificato es <b>temporaneemente</b> ignorate."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Certificato esseva refusate."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3358,17 +3370,17 @@ msgstr "<b>Sito %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Ulle error de certificato es <b>permanentemente</b> ignorate."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Le error de certificato es <b>temporaneemente</b> ignorate."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Certificato esseva refusate."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
