@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-06-26 18:39+0400\n"
+"PO-Revision-Date: 2024-09-26 13:06+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -2320,74 +2320,74 @@ msgctxt "NetworkManager|"
 msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
-msgstr ""
+msgstr "لم تتطابق الشهادة مع المفاتيح العامة المضمنة المثبتة لاسم المضيف."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "الاسم الشائع للشهادة لا يتطابق مع اسم المضيف."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "الشهادة ليست صالحة في التاريخ والوقت الحاليين."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "الشهادة غير موقعة من قبل جهة موثوقة."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "الشهادة تحتوي على أخطاء."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
-msgstr ""
+msgstr "لا يوجد لدى الشهادة آلية لتحديد ما إذا تم إلغاؤها أم لا."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "معلومات إلغاء الشهادة غير متوفرة."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "الشهادة ألغيت."
 
 #: lib/network/networkmanager.cpp:360
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "الشهادة غير صالحة."
 
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "وقعj الشهادة باستخدام خوارزمية توقيع ضعيفة."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "اسم المضيف المحدد في الشهادة ليس فريدًا."
 
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "تحتوي الشهادة على مفتاح ضعيف."
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
-msgstr ""
+msgstr "ادعت الشهادة أن أسماء DNS تنتهك قيود الأسماء."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "الشهادة لها فترة صلاحية طويلة جدًا."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2395,31 +2395,30 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"كان الحصول على شهادة الشفافية مطلوبًا لهذا الاتصال، ولكن الخادم لم يقدم "
+"معلومات شهادة الشفافية التي تتوافق مع السياسة."
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
-msgstr ""
+msgstr "الشهادة تُستخدم للتنصت من قبل جهة أخرى غير مالك الجهاز."
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "يستخدم الاتصال إصدارًا قديمًا من SSL/TLS"
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
-msgstr ""
+msgstr "الشهادة هي شهادة قديمة من Symantec ولم تعد صالحة."
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "لا يُعرف الحجم"
+msgstr "خطأ مجهول"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3198,17 +3197,17 @@ msgstr "<b>الاتصال مشفر.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "سيُتجاهل أي خطأ في الشهادة <b>بشكل دائم</b>."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "سيُتجاهل خطأ الشهادة <b>بشكل مؤقت</b>."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "رُفضت الشهادة"
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3364,17 +3363,17 @@ msgstr "<b>الموقع %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "سيُتجاهل أي خطأ في الشهادة <b>بشكل دائم</b>."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "سيُتجاهل خطأ الشهادة <b>بشكل مؤقت</b>."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "رُفضت الشهادة"
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
