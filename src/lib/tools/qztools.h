@@ -98,6 +98,8 @@ public:
     }
 
     static void paintDropIndicator(QWidget *widget, const QRect &r);
+
+    static void openFolder(const QList<QUrl> &urls);
 };
 
 #endif // QZTOOLS_H
