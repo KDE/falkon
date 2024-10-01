@@ -39,11 +39,6 @@
 #include <QWebEngineDownloadRequest>
 #include <QtWebEngineWidgetsVersion>
 
-#ifdef Q_OS_WIN
-#include "Shlwapi.h"
-#include "shellapi.h"
-#endif
-
 //#define DOWNMANAGER_DEBUG
 
 DownloadItem::DownloadItem(QListWidgetItem *item, QWebEngineDownloadRequest* downloadItem, const QString &path, const QString &fileName, bool openFile, DownloadManager* manager)
@@ -354,19 +349,12 @@ void DownloadItem::openFile()
 
 void DownloadItem::openFolder()
 {
-#ifdef Q_OS_WIN
-    QString winFileName = QSL("%1/%2").arg(m_path, m_fileName);
-
+    QString fileName = m_fileName;
     if (m_downloading) {
-        winFileName.append(QSL(".download"));
+        fileName.append(QSL(".download"));
     }
-
-    winFileName.replace(QLatin1Char('/'), QSL("\\"));
-    QString shExArg = QSL("/e,/select,\"") + winFileName + QSL("\"");
-    ShellExecute(NULL, NULL, TEXT("explorer.exe"), shExArg.toStdWString().c_str(), NULL, SW_SHOW);
-#else
-    QDesktopServices::openUrl(QUrl::fromLocalFile(m_path));
-#endif
+    QFileInfo info(m_path, fileName);
+    QzTools::openFolder({QUrl::fromLocalFile(info.absoluteFilePath())});
 }
 
 QUrl DownloadItem::url() const
