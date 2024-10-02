@@ -22,11 +22,13 @@
 #include "mainapplication.h"
 #include "browserwindow.h"
 #include "../config.h"
+#include "qztools.h"
 
 #include <KNotification>
 
 #include <QFile>
 #include <QDir>
+#include <QDesktopServices>
 
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
 #include <QDBusInterface>
@@ -68,7 +70,7 @@ void DesktopNotificationsFactory::showNotification(const QString &heading, const
     showNotification(QPixmap(), heading, text);
 }
 
-void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QString &heading, const QString &text)
+void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QString &heading, const QString &text, const DesktopNotificationsFactory::EventType notificationType)
 {
     if (!m_enabled) {
         return;
@@ -86,16 +88,30 @@ void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QS
         m_desktopNotif.data()->move(m_position);
         m_desktopNotif.data()->show();
         break;
-    case DesktopNative:
-        KNotification *notification = new KNotification(QSL("contactOnline"));
+    case DesktopNative: {
+#if 1
+        if (!KNotificationEvents.contains(notificationType)) {
+            qWarning() << "Invalid notification type";
+        }
+
+        QPixmap image = icon.copy(); /* Workaround for corrupted image */
+        KNotification *notification = new KNotification(KNotificationEvents[notificationType]);
+        notification->setPixmap(image);
         notification->setTitle(heading);
         notification->setText(text);
-        notification->setPixmap(icon);
-        // notification->setActions({tr("Open chat")});
+        notification->setComponentName(QSL("falkon"));
 
-        // connect(notification, QOverload<unsigned int>::of(&KNotification::activated), contact, &Contact::slotOpenChat);
+        KNotificationAction *actionOpenFile = notification->addAction(tr("Open File"));
+        connect(actionOpenFile, &KNotificationAction::activated, this, [=]() {
+            QDesktopServices::openUrl(QUrl(QSL("file:///home/juraj")));
+        });
+        KNotificationAction *actionOpenFolder = notification->addAction(tr("Open Folder"));
+        connect(actionOpenFolder, &KNotificationAction::activated, this, [=]() {
+            QzTools::openFolder({QUrl(QSL("/home/juraj"))});
+        });
 
         notification->sendEvent();
+#else
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
         QFile tmp(DataPaths::path(DataPaths::Temp) + QLatin1String("/falkon_notif.png"));
         tmp.open(QFile::WriteOnly);
@@ -117,7 +133,9 @@ void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QS
         args.append(m_timeout);
         dbus.callWithCallback(QSL("Notify"), args, this, SLOT(updateLastId(QDBusMessage)), SLOT(error(QDBusError)));
 #endif
+#endif
         break;
+    }
     }
 }
 

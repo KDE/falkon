@@ -57,7 +57,7 @@ public:
     bool supportsNativeNotifications() const;
 
     void showNotification(const QString &heading, const QString &text);
-    void showNotification(const QPixmap &icon, const QString &heading, const QString &text);
+    void showNotification(const QPixmap &icon, const QString &heading, const QString &text, const DesktopNotificationsFactory::EventType notificationType = General);
     void nativeNotificationPreview();
 
 private Q_SLOTS:
