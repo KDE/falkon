@@ -53,3 +53,5 @@ if (UNIX AND NOT APPLE)
     install(FILES ../../linux/appdata/org.kde.falkon.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 endif()
 
+# Install general files
+install( FILES ${CMAKE_SOURCE_DIR}/common/falkon.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR} )

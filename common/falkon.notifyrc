@@ -4,7 +4,37 @@ Name=Falkon
 Comment=Falkon Web Browser
 DesktopEntry=falkon.desktop
 
-[Event/newmail]
-Name=New E-Mail
-Comment=You have got a new email
+[Event/General]
+Name=General
+Comment=General information
+Action=Popup
+
+[Event/Web]
+Name=Web
+Comment=Notifications from web sites
+Action=Popup
+
+[Event/DownloadFinished]
+Name=Download Finished
+Comment=All downloads are finished
 Action=Sound|Popup
+
+[Event/UpdateAvailable]
+Name=Update Available
+Comment=New Falkon version is available
+Action=Popup
+
+[Event/OcsSupport]
+Name=Plugin installer
+Comment=Information from online plugin installer
+Action=Sound|Popup
+
+[Event/Plugins]
+Name=Plugins
+Comment=General notifications from plugins
+Action=Popup
+
+[Event/Preview]
+Name=Preview
+Comment=Dummy entry for preview functionality
+Action=Popup
