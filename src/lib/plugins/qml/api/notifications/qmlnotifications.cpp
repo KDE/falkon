@@ -34,7 +34,7 @@ void QmlNotifications::create(const QVariantMap &map)
     const QPixmap icon = QPixmap(iconPath);
     const QString heading = map.value(QSL("heading")).toString();
     const QString message = map.value(QSL("message")).toString();
-    mApp->desktopNotifications()->showNotification(icon, heading, message);
+    mApp->desktopNotifications()->showNotification(icon, heading, message, DesktopNotificationsFactory::Plugins);
 }
 
 void QmlNotifications::setPluginPath(const QString &path)

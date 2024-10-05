@@ -14,10 +14,10 @@ Name=Web
 Comment=Notifications from web sites
 Action=Popup
 
-[Event/DownloadFinished]
-Name=Download Finished
-Comment=All downloads are finished
-Action=Sound|Popup
+[Event/AllDownloadsFinished]
+Name=All Downloads Finished
+Comment=All downloads finished downloading
+Action=Popup
 
 [Event/UpdateAvailable]
 Name=Update Available
@@ -27,7 +27,7 @@ Action=Popup
 [Event/OcsSupport]
 Name=Plugin installer
 Comment=Information from online plugin installer
-Action=Sound|Popup
+Action=Popup
 
 [Event/Plugins]
 Name=Plugins

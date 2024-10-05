@@ -40,14 +40,15 @@ public:
     enum EventType {
         General,
         Web,
-        DownloadFinished,
+        AllDownloadsFinished,
         UpdateAvailable,
         OcsSupport,
         Plugins,
         Preview,
-        GreaseMonkeyInstall,
-        GreaseMonkeyScrips,
         KWalletDisabled
+    };
+    enum EventData {
+        FilePath
     };
 
     explicit DesktopNotificationsFactory(QObject* parent = nullptr);
@@ -56,8 +57,12 @@ public:
 
     bool supportsNativeNotifications() const;
 
-    void showNotification(const QString &heading, const QString &text);
-    void showNotification(const QPixmap &icon, const QString &heading, const QString &text, const DesktopNotificationsFactory::EventType notificationType = General);
+    void showNotification(const QString &heading, const QString &text,
+                          const DesktopNotificationsFactory::EventType notificationType = General,
+                          const QHash<DesktopNotificationsFactory::EventData, QVariant> data = {});
+    void showNotification(const QPixmap &icon, const QString &heading, const QString &text,
+                          const DesktopNotificationsFactory::EventType notificationType = General,
+                          const QHash<DesktopNotificationsFactory::EventData, QVariant> data = {});
     void nativeNotificationPreview();
 
 private Q_SLOTS:
@@ -76,14 +81,11 @@ private:
     QHash<EventType, QString> KNotificationEvents = {
         {General, QSL("General")},
         {Web, QSL("Web")},
-        {DownloadFinished, QSL("DownloadFinished")},
+        {AllDownloadsFinished, QSL("AllDownloadsFinished")},
         {UpdateAvailable, QSL("UpdateAvailable")},
         {OcsSupport, QSL("OcsSupport")},
         {Plugins, QSL("Plugins")},
-        {Preview, QSL("Preview")},
-        {GreaseMonkeyInstall, QSL("GreaseMonkeyInstall")},
-        {GreaseMonkeyScrips, QSL("GreaseMonkeyScrips")},
-        {KWalletDisabled, QSL("KWalletDisabled")}
+        {Preview, QSL("Preview")}
     };
 };
 

@@ -307,7 +307,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     m_webProfile->setNotificationPresenter([&] (std::unique_ptr<QWebEngineNotification> notification) {
         auto notifications = desktopNotifications();
         notifications->showNotification(
-            QPixmap::fromImage(notification->icon()), notification->title(), notification->message()
+            QPixmap::fromImage(notification->icon()), notification->title(), notification->message(), DesktopNotificationsFactory::Web
         );
     });
 

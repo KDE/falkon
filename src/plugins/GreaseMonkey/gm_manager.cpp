@@ -231,7 +231,7 @@ void GM_Manager::showNotification(const QString &message, const QString &title)
 {
     QIcon icon(QSL(":gm/data/icon.svg"));
 
-    mApp->desktopNotifications()->showNotification(icon.pixmap(48), title.isEmpty() ? tr("GreaseMonkey") : title, message);
+    mApp->desktopNotifications()->showNotification(icon.pixmap(48), title.isEmpty() ? tr("GreaseMonkey") : title, message, DesktopNotificationsFactory::Plugins);
 }
 
 void GM_Manager::load()

@@ -148,7 +148,12 @@ void Updater::downCompleted()
         Version updated(html);
 
         if (current.isValid && updated.isValid && current < updated) {
-            mApp->desktopNotifications()->showNotification(QIcon(QSL(":icons/falkon.svg")).pixmap(48), tr("Update available"), tr("New version of Falkon is ready to download."));
+            mApp->desktopNotifications()->showNotification(
+                QIcon(QSL(":icons/falkon.svg")).pixmap(48),
+                tr("Update available"),
+                tr("New version of Falkon is ready to download."),
+                DesktopNotificationsFactory::UpdateAvailable
+            );
         }
     }
 

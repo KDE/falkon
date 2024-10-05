@@ -194,7 +194,11 @@ void KWalletPasswordBackend::showErrorNotification()
 
     if (!initialized) {
         initialized = true;
-        mApp->desktopNotifications()->showNotification(KDEFrameworksIntegrationPlugin::tr("KWallet disabled"), KDEFrameworksIntegrationPlugin::tr("Please enable KWallet to save password."));
+        mApp->desktopNotifications()->showNotification(
+            KDEFrameworksIntegrationPlugin::tr("KWallet disabled"),
+            KDEFrameworksIntegrationPlugin::tr("Please enable KWallet to save password."),
+            DesktopNotificationsFactory::Plugins
+        );
     }
 }
 

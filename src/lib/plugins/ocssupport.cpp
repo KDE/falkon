@@ -120,7 +120,7 @@ OcsSupport *OcsSupport::instance()
 void OcsSupport::installTheme(const KArchiveDirectory *directory)
 {
     auto showError = []() {
-        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Failed to install theme"));
+        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Failed to install theme"), DesktopNotificationsFactory::OcsSupport);
     };
 
     if (directory->entries().size() != 1) {
@@ -144,7 +144,7 @@ void OcsSupport::installTheme(const KArchiveDirectory *directory)
 
     if (QFileInfo::exists(targetDir + QL1C('/') + name)) {
         qWarning() << "Theme" << name << "already exists";
-        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Theme is already installed"));
+        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Theme is already installed"), DesktopNotificationsFactory::OcsSupport);
         return;
     }
 
@@ -156,13 +156,13 @@ void OcsSupport::installTheme(const KArchiveDirectory *directory)
 
     qInfo() << "Theme installed to" << targetDir;
 
-    mApp->desktopNotifications()->showNotification(tr("Theme installed"), tr("'%1' was successfully installed").arg(metaData.name()));
+    mApp->desktopNotifications()->showNotification(tr("Theme installed"), tr("'%1' was successfully installed").arg(metaData.name()), DesktopNotificationsFactory::OcsSupport);
 }
 
 void OcsSupport::installExtension(const KArchiveDirectory *directory)
 {
     auto showError = []() {
-        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Failed to install extension"));
+        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Failed to install extension"), DesktopNotificationsFactory::OcsSupport);
     };
 
     if (directory->entries().size() != 1) {
@@ -200,7 +200,7 @@ void OcsSupport::installExtension(const KArchiveDirectory *directory)
 
     if (QFileInfo::exists(targetDir + QL1S("/") + name)) {
         qWarning() << "Extension" << name << "already exists";
-        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Extension is already installed"));
+        mApp->desktopNotifications()->showNotification(tr("Installation failed"), tr("Extension is already installed"), DesktopNotificationsFactory::OcsSupport);
         return;
     }
 
@@ -219,5 +219,5 @@ void OcsSupport::installExtension(const KArchiveDirectory *directory)
         return;
     }
 
-    mApp->desktopNotifications()->showNotification(tr("Extension installed"), tr("'%1' was successfully installed").arg(metaData.name()));
+    mApp->desktopNotifications()->showNotification(tr("Extension installed"), tr("'%1' was successfully installed").arg(metaData.name()), DesktopNotificationsFactory::OcsSupport);
 }

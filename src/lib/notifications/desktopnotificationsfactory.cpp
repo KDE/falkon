@@ -65,12 +65,16 @@ bool DesktopNotificationsFactory::supportsNativeNotifications() const
 #endif
 }
 
-void DesktopNotificationsFactory::showNotification(const QString &heading, const QString &text)
+void DesktopNotificationsFactory::showNotification(const QString &heading, const QString &text,
+                                                   const DesktopNotificationsFactory::EventType notificationType,
+                                                   const QHash<DesktopNotificationsFactory::EventData, QVariant> data)
 {
-    showNotification(QPixmap(), heading, text);
+    showNotification(QPixmap(), heading, text, notificationType, data);
 }
 
-void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QString &heading, const QString &text, const DesktopNotificationsFactory::EventType notificationType)
+void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QString &heading, const QString &text,
+                                                   const DesktopNotificationsFactory::EventType notificationType,
+                                                   const QHash<DesktopNotificationsFactory::EventData, QVariant> data)
 {
     if (!m_enabled) {
         return;
@@ -99,16 +103,19 @@ void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QS
         notification->setPixmap(image);
         notification->setTitle(heading);
         notification->setText(text);
-        notification->setComponentName(QSL("falkon"));
 
-        KNotificationAction *actionOpenFile = notification->addAction(tr("Open File"));
-        connect(actionOpenFile, &KNotificationAction::activated, this, [=]() {
-            QDesktopServices::openUrl(QUrl(QSL("file:///home/juraj")));
-        });
-        KNotificationAction *actionOpenFolder = notification->addAction(tr("Open Folder"));
-        connect(actionOpenFolder, &KNotificationAction::activated, this, [=]() {
-            QzTools::openFolder({QUrl(QSL("/home/juraj"))});
-        });
+        if (data.contains(DesktopNotificationsFactory::FilePath)) {
+            QUrl path = data[DesktopNotificationsFactory::FilePath].toUrl();
+
+            KNotificationAction *actionOpenFile = notification->addAction(tr("Open File"));
+            connect(actionOpenFile, &KNotificationAction::activated, this, [=]() {
+                QDesktopServices::openUrl(path);
+            });
+            KNotificationAction *actionOpenFolder = notification->addAction(tr("Open Folder"));
+            connect(actionOpenFolder, &KNotificationAction::activated, this, [=]() {
+                QzTools::openFolder({path});
+            });
+        }
 
         notification->sendEvent();
 #else
@@ -145,7 +152,7 @@ void DesktopNotificationsFactory::nativeNotificationPreview()
 
     m_notifType = DesktopNative;
     const QPixmap icon = mApp->getWindow()->windowIcon().pixmap(64);
-    showNotification(icon, QObject::tr("Native System Notification"), tr("Preview"));
+    showNotification(icon, QObject::tr("Native System Notification"), tr("Preview"), DesktopNotificationsFactory::Preview);
     m_notifType = type;
 }
 
