@@ -274,7 +274,7 @@ private:
     void mouseReleaseEvent(QMouseEvent* event) override;
 
     int dragOffset(QStyleOptionTab *option, int tabIndex) const;
-    void initStyleOption(QStyleOptionTab* option, int tabIndex) const;
+    void initStyleOption(QStyleOptionTab* option, int tabIndex) const override;
 
     ComboTabBar* m_comboTabBar;
     QScrollArea* m_scrollArea;
