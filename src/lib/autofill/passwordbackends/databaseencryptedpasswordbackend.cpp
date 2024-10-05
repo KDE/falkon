@@ -37,9 +37,10 @@ DatabaseEncryptedPasswordBackend::DatabaseEncryptedPasswordBackend()
 {
     QSqlDatabase db = SqlDatabase::instance()->database();
     if (!db.tables().contains(QLatin1String("autofill_encrypted"))) {
-        db.exec(QSL("CREATE TABLE autofill_encrypted (data_encrypted TEXT, id INTEGER PRIMARY KEY,"
-                "password_encrypted TEXT, server TEXT, username_encrypted TEXT, last_used NUMERIC)"));
-        db.exec(QSL("CREATE INDEX autofillEncryptedServer ON autofill_encrypted(server ASC)"));
+        QSqlQuery query(db);
+        query.exec(QSL("CREATE TABLE autofill_encrypted (data_encrypted TEXT, id INTEGER PRIMARY KEY,"
+                   "password_encrypted TEXT, server TEXT, username_encrypted TEXT, last_used NUMERIC)"));
+        query.exec(QSL("CREATE INDEX autofillEncryptedServer ON autofill_encrypted(server ASC)"));
     }
 }
 

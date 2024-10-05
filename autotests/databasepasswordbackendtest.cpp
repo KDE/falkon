@@ -33,8 +33,9 @@ void DatabasePasswordBackendTest::init()
     db.setDatabaseName(QSL(":memory:"));
     db.open();
 
-    db.exec(QSL("CREATE TABLE autofill (data TEXT, id INTEGER PRIMARY KEY, password TEXT,"
-            "server TEXT, username TEXT, last_used NUMERIC)"));
+    QSqlQuery query(db);
+    query.exec(QSL("CREATE TABLE autofill (data TEXT, id INTEGER PRIMARY KEY, password TEXT,"
+               "server TEXT, username TEXT, last_used NUMERIC)"));
 }
 
 void DatabasePasswordBackendTest::cleanup()
