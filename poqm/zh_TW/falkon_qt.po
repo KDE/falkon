@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-10-20 00:31+0900\n"
+"PO-Revision-Date: 2024-10-24 19:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -2352,12 +2352,12 @@ msgstr "憑證包含較弱的金鑰。"
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
-msgstr ""
+msgstr "憑證主張擁有不符合名稱限制的 DNS 名稱。"
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "憑證的有效期間太長。"
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2365,23 +2365,25 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"此連線需要憑證透明度 (Certificate Transparency, CT)，但伺服器沒有提供符合政策"
+"的 CT 資訊。"
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
-msgstr ""
+msgstr "憑證已知被裝置擁有者以外的人用來進行截取。"
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "連線使用棄用的 SSL/TLS 版本"
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
-msgstr ""
+msgstr "憑證是來自 Symantec 的舊式憑證而已失效。"
 
 #: lib/network/networkmanager.cpp:381
 msgctxt "NetworkManager|"
@@ -3217,12 +3219,12 @@ msgstr "<b>連結是有加密的。</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "任何憑證錯誤都會<b>永久</b>忽略。"
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "該憑證錯誤會<b>暫時</b>忽略。"
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
@@ -3383,12 +3385,12 @@ msgstr "<b>網站 %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "任何憑證錯誤都會<b>永久</b>忽略。"
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "該憑證錯誤會<b>暫時</b>忽略。"
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
