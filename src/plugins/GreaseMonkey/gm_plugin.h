@@ -36,6 +36,8 @@ public:
     bool testPlugin() override;
     void showSettings(QWidget* parent = nullptr) override;
 
+    void populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTestResult &r) override;
+
     bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;
 
 private:

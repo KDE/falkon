@@ -156,6 +156,11 @@ QList<GM_Script*> GM_Manager::allScripts() const
     return m_scripts;
 }
 
+QList<GM_Script*> GM_Manager::contextMenuScripts() const
+{
+    return m_contextMenuScripts;
+}
+
 bool GM_Manager::containsScript(const QString &fullName) const
 {
     for (GM_Script* script : std::as_const(m_scripts)) {
@@ -172,8 +177,13 @@ void GM_Manager::enableScript(GM_Script* script)
     script->setEnabled(true);
     m_disabledScripts.removeOne(script->fullName());
 
-    QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
-    collection->insert(script->webScript());
+    if (script->startAt() == GM_Script::ContextMenu) {
+        m_contextMenuScripts.append(script);
+    }
+    else {
+        QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
+        collection->insert(script->webScript());
+    }
 }
 
 void GM_Manager::disableScript(GM_Script* script)
@@ -181,9 +191,14 @@ void GM_Manager::disableScript(GM_Script* script)
     script->setEnabled(false);
     m_disabledScripts.append(script->fullName());
 
-    QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
-    for (const auto &script : collection->find(script->fullName())) {
-        collection->remove(script);
+    if (script->startAt() == GM_Script::ContextMenu) {
+        m_contextMenuScripts.removeOne(script);
+    }
+    else {
+        QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
+        for (const auto &script : collection->find(script->fullName())) {
+            collection->remove(script);
+        }
     }
 }
 
@@ -196,8 +211,13 @@ bool GM_Manager::addScript(GM_Script* script)
     m_scripts.append(script);
     connect(script, &GM_Script::scriptChanged, this, &GM_Manager::scriptChanged);
 
-    QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
-    collection->insert(script->webScript());
+    if (script->startAt() == GM_Script::ContextMenu) {
+        m_contextMenuScripts.append(script);
+    }
+    else {
+        QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
+        collection->insert(script->webScript());
+    }
 
     Q_EMIT scriptsChanged();
     return true;
@@ -211,9 +231,14 @@ bool GM_Manager::removeScript(GM_Script* script, bool removeFile)
 
     m_scripts.removeOne(script);
 
-    QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
-    for (const auto &script : collection->find(script->fullName())) {
-        collection->remove(script);
+    if (script->startAt() == GM_Script::ContextMenu) {
+        m_contextMenuScripts.removeOne(script);
+    }
+    else {
+        QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
+        for (const auto &script : collection->find(script->fullName())) {
+            collection->remove(script);
+        }
     }
 
     m_disabledScripts.removeOne(script->fullName());
@@ -267,6 +292,9 @@ void GM_Manager::load()
         if (m_disabledScripts.contains(script->fullName())) {
             script->setEnabled(false);
         }
+        else if (script->startAt() == GM_Script::ContextMenu) {
+            m_contextMenuScripts.append(script);
+        }
         else {
             mApp->webProfile()->scripts()->insert(script->webScript());
         }
@@ -286,7 +314,18 @@ void GM_Manager::scriptChanged()
     for (const auto &script : collection->find(script->fullName())) {
         collection->remove(script);
     }
-    collection->insert(script->webScript());
+    for (auto &cmScript : m_contextMenuScripts) {
+        if (cmScript->fullName() == script->fullName()) {
+            m_contextMenuScripts.removeOne(cmScript);
+        }
+    }
+
+    if (script->startAt() == GM_Script::ContextMenu) {
+        m_contextMenuScripts.append(script);
+    }
+    else {
+        collection->insert(script->webScript());
+    }
 }
 
 bool GM_Manager::canRunOnScheme(const QString &scheme)

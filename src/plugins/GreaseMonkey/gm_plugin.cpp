@@ -17,12 +17,14 @@
 * ============================================================ */
 #include "gm_plugin.h"
 #include "gm_manager.h"
+#include "gm_script.h"
 #include "browserwindow.h"
 #include "webpage.h"
 #include "pluginproxy.h"
 #include "mainapplication.h"
 #include "tabwidget.h"
 #include "webtab.h"
+#include "webview.h"
 #include "../config.h"
 
 #include <QtWebEngineWidgetsVersion>
@@ -64,6 +66,25 @@ bool GM_Plugin::testPlugin()
 void GM_Plugin::showSettings(QWidget* parent)
 {
     m_manager->showSettings(parent);
+}
+
+void GM_Plugin::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTestResult& r)
+{
+    if (m_manager->contextMenuScripts().isEmpty()) {
+        return;
+    }
+
+    auto* gmMenu = new QMenu(tr("GreaseMonkey"));
+    gmMenu->setIcon(QIcon(QSL(":gm/data/icon.svg")));
+
+    auto contextMenuScripts = m_manager->contextMenuScripts();
+    for (const auto &script : std::as_const(contextMenuScripts)) {
+        QAction* action = gmMenu->addAction(script->icon(), script->name(), this, [script, view]() {
+            view->page()->execJavaScript(script->webScript().sourceCode(), WebPage::SafeJsWorld);
+        });
+    }
+
+    menu->addMenu(gmMenu);
 }
 
 bool GM_Plugin::acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame)

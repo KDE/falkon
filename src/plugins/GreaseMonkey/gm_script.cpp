@@ -279,6 +279,9 @@ void GM_Script::parseScript()
             else if (value == QLatin1String("document-idle")) {
                 m_startAt = DocumentIdle;
             }
+            else if (value == QLatin1String("context-menu")) {
+                m_startAt = ContextMenu;
+            }
         }
         else if (key == QL1S("@icon")) {
             m_iconUrl = QUrl(value);

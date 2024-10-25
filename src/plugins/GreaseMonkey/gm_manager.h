@@ -51,6 +51,7 @@ public:
     void unloadPlugin();
 
     QList<GM_Script*> allScripts() const;
+    QList<GM_Script*> contextMenuScripts() const;
     bool containsScript(const QString &fullName) const;
 
     void enableScript(GM_Script* script);
@@ -83,6 +84,7 @@ private:
     QStringList m_disabledScripts;
     GM_JSObject *m_jsObject;
     QList<GM_Script*> m_scripts;
+    QList<GM_Script*> m_contextMenuScripts;
 
     QHash<BrowserWindow*, GM_Icon*> m_windows;
 };

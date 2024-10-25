@@ -34,7 +34,7 @@ class GM_Script : public QObject
 public:
     explicit GM_Script(GM_Manager* manager, const QString &filePath);
 
-    enum StartAt { DocumentStart, DocumentEnd, DocumentIdle };
+    enum StartAt { DocumentStart, DocumentEnd, DocumentIdle, ContextMenu };
 
     bool isValid() const;
     QString name() const;
