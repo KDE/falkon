@@ -28,7 +28,7 @@ class FALKON_EXPORT DownloadKJob : public KJob
 
 public:
     DownloadKJob(const QUrl &url, const QString &path, const QString &fileName, QObject *parent = nullptr);
-    void start();
+    void start() override;
     void updateDescription();
 
 public Q_SLOTS:

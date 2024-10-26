@@ -31,9 +31,9 @@ class GnomeKeyringPlugin : public QObject, public PluginInterface
 public:
     explicit GnomeKeyringPlugin();
 
-    void init(InitState state, const QString &settingsPath);
-    void unload();
-    bool testPlugin();
+    void init(InitState state, const QString &settingsPath) override;
+    void unload() override;
+    bool testPlugin() override;
 
 private:
     GnomeKeyringPasswordBackend* m_backend;

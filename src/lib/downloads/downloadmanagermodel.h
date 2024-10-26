@@ -27,8 +27,8 @@ class DownloadManagerModel : public QAbstractListModel
 
 public:
     DownloadManagerModel(QObject *parent = nullptr);
-    int rowCount(const QModelIndex &parent) const;
-    QVariant data(const QModelIndex &index, int role) const;
+    int rowCount(const QModelIndex &parent) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
     void addDownload(DownloadItem *item);
     void removeDownload(DownloadItem *item);
     int count() const;
