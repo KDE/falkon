@@ -107,11 +107,10 @@ bool GM_Plugin::acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEngi
     Q_UNUSED(page)
     Q_UNUSED(isMainFrame)
 
-    bool navigationType = type == QWebEnginePage::NavigationTypeLinkClicked || type == QWebEnginePage::NavigationTypeRedirect;
+    bool navigationType = type == QWebEnginePage::NavigationTypeLinkClicked;
 
-    if (navigationType && url.toString().endsWith(QLatin1String(".user.js"))) {
+    if (navigationType && url.fileName().endsWith(QLatin1String(".user.js"))) {
         m_manager->downloadScript(url);
-        return false;
     }
     return true;
 }

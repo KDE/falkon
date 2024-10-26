@@ -58,6 +58,13 @@ void GM_Downloader::scriptDownloaded()
         return;
     }
 
+    QString contentType = m_reply->header(QNetworkRequest::ContentTypeHeader).toString();
+    if (!(contentType.startsWith(QSL("text/plain")) || contentType.startsWith(QSL("text/javascript")))) {
+        qWarning() << "GreaseMonkey: Unsupported content type" << contentType;
+        Q_EMIT error();
+        return;
+    }
+
     const QByteArray response = QString::fromUtf8(m_reply->readAll()).toUtf8();
 
     if (!response.contains(QByteArray("// ==UserScript=="))) {
