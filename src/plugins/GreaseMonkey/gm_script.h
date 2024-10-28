@@ -68,6 +68,8 @@ public:
     bool isUpdating();
     void updateScript();
 
+    bool match(const QUrl &url) const;
+
 Q_SIGNALS:
     void scriptChanged();
     void updatingChanged(bool updating);

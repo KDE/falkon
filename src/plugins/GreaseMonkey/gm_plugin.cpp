@@ -70,16 +70,31 @@ void GM_Plugin::showSettings(QWidget* parent)
 
 void GM_Plugin::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTestResult& r)
 {
+    Q_UNUSED(r)
+
     if (m_manager->contextMenuScripts().isEmpty()) {
+        return;
+    }
+
+    const QUrl url = view->url();
+    QList<GM_Script*> matchingScripts;
+
+    auto contextMenuScripts = m_manager->contextMenuScripts();
+    for (const auto &script : std::as_const(contextMenuScripts)) {
+        if (script->match(url)) {
+            matchingScripts.append(script);
+        }
+    }
+
+    if (matchingScripts.isEmpty()) {
         return;
     }
 
     auto* gmMenu = new QMenu(tr("GreaseMonkey"));
     gmMenu->setIcon(QIcon(QSL(":gm/data/icon.svg")));
 
-    auto contextMenuScripts = m_manager->contextMenuScripts();
-    for (const auto &script : std::as_const(contextMenuScripts)) {
-        QAction* action = gmMenu->addAction(script->icon(), script->name(), this, [script, view]() {
+    for (const auto &script : std::as_const(matchingScripts)) {
+        gmMenu->addAction(script->icon(), script->name(), this, [script, view]() {
             view->page()->execJavaScript(script->webScript().sourceCode(), WebPage::SafeJsWorld);
         });
     }

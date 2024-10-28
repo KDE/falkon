@@ -31,6 +31,7 @@
 #include <QCryptographicHash>
 #include <QNetworkReply>
 #include <QNetworkRequest>
+#include <QRegularExpression>
 
 GM_Script::GM_Script(GM_Manager* manager, const QString &filePath)
     : QObject(manager)
@@ -173,6 +174,39 @@ void GM_Script::updateScript()
         Q_EMIT updatingChanged(m_updating);
     });
     downloadRequires();
+}
+
+bool GM_Script::match(const QUrl& url) const
+{
+    QString urlString = url.toString();
+
+    for (const auto &exclude : std::as_const(m_exclude)) {
+        QString wildcardExp = QRegularExpression::wildcardToRegularExpression(
+            exclude,
+            QRegularExpression::UnanchoredWildcardConversion
+        );
+        QRegularExpression re(wildcardExp,
+                              QRegularExpression::CaseInsensitiveOption);
+
+        if (re.match(urlString).hasMatch()) {
+            return false;
+        }
+    }
+
+    for (const auto &include : std::as_const(m_include)) {
+        QString wildcardExp = QRegularExpression::wildcardToRegularExpression(
+            include,
+            QRegularExpression::UnanchoredWildcardConversion
+        );
+        QRegularExpression re(wildcardExp,
+                              QRegularExpression::CaseInsensitiveOption);
+
+        if (re.match(urlString).hasMatch()) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 void GM_Script::watchedFileChanged(const QString &file)
