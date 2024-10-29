@@ -116,6 +116,48 @@ void VerticalTabsWidget::switchToPreviousTab()
     }
 }
 
+void VerticalTabsWidget::setCurrentIndex(const int index)
+{
+    QModelIndex targetIndex;
+
+    if ((index <= m_pinnedView->model()->rowCount()) && (m_pinnedView->model()->rowCount() > 0)) {
+        targetIndex = m_pinnedView->model()->index(index, 0);
+    }
+    else if (index < 8) {
+        int tabIndex = index - m_pinnedView->model()->rowCount();
+        int counter = 0;
+        bool done = false;
+
+        for (int i = 0; i < m_normalView->model()->rowCount(); ++i) {
+            m_normalView->visibleTraverse(m_normalView->model()->index(i, 0), [&](const QModelIndex &localIndex) {
+                if (counter == tabIndex) {
+                    targetIndex = localIndex;
+                    done = true;
+                }
+                counter++;
+            });
+            if (done) {
+                break;
+            }
+        }
+    }
+    else {
+        int tabIndex = index - m_pinnedView->model()->rowCount();
+        if (tabIndex >= m_normalView->model()->rowCount()) {
+            tabIndex = m_normalView->model()->rowCount() - 1;
+        }
+
+        m_normalView->visibleTraverse(m_normalView->model()->index(tabIndex, 0), [&](const QModelIndex &localIndex) {
+            targetIndex = localIndex;
+        });
+    }
+
+    WebTab *tab = targetIndex.data(TabModel::WebTabRole).value<WebTab*>();
+    if (tab != nullptr) {
+        tab->makeCurrentTab();
+    }
+}
+
 WebTab *VerticalTabsWidget::nextTab() const
 {
     QModelIndex next;

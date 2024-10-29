@@ -729,6 +729,11 @@ TabMruModel *BrowserWindow::tabMruModel() const
     return m_tabMruModel;
 }
 
+bool BrowserWindow::useTabNumberShortcuts() const
+{
+    return m_useTabNumberShortcuts;
+}
+
 void BrowserWindow::setWindowTitle(const QString &t)
 {
     QString title = t;
