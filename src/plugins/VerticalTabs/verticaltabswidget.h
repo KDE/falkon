@@ -42,12 +42,14 @@ public:
 
     void switchToNextTab();
     void switchToPreviousTab();
+    void switchToLastTab();
 
     void addChildTab();
 
 private:
     WebTab *nextTab() const;
     WebTab *previousTab() const;
+    WebTab *lastTab() const;
 
     void wheelEvent(QWheelEvent *event) override;
     void updateGroupMenu();

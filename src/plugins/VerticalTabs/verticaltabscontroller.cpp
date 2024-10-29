@@ -19,6 +19,7 @@
 #include "verticaltabsplugin.h"
 #include "verticaltabswidget.h"
 
+#include "browserwindow.h"
 #include "tabwidget.h"
 
 #include <QAction>
@@ -95,6 +96,16 @@ bool VerticalTabsController::handleKeyPress(QKeyEvent *event, TabWidget *tabWidg
     case Qt::Key_PageUp:
         if (event->modifiers() == Qt::ControlModifier) {
             if (switchToPreviousTab()) {
+                return true;
+            }
+        }
+        break;
+
+    case Qt::Key_9:
+        if ((event->modifiers() & Qt::AltModifier) && tabWidget->browserWindow()->useTabNumberShortcuts()) {
+            VerticalTabsWidget *widget = m_widgets.value(tabWidget->browserWindow());
+            if (widget) {
+                widget->switchToLastTab();
                 return true;
             }
         }

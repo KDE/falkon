@@ -116,6 +116,14 @@ void VerticalTabsWidget::switchToPreviousTab()
     }
 }
 
+void VerticalTabsWidget::switchToLastTab()
+{
+    WebTab *tab = lastTab();
+    if (tab) {
+        tab->makeCurrentTab();
+    }
+}
+
 WebTab *VerticalTabsWidget::nextTab() const
 {
     QModelIndex next;
@@ -156,6 +164,20 @@ WebTab *VerticalTabsWidget::previousTab() const
         }
     }
     return previous.data(TabModel::WebTabRole).value<WebTab*>();
+}
+
+WebTab * VerticalTabsWidget::lastTab() const
+{
+    QModelIndex last;
+    auto rows = m_normalView->model()->rowCount();
+    if (rows > 0) {
+        last = m_normalView->model()->index(rows - 1, 0);
+    }
+    else {
+        last = m_pinnedView->model()->index(m_pinnedView->model()->rowCount(), 0);
+    }
+
+    return last.data(TabModel::WebTabRole).value<WebTab*>();
 }
 
 void VerticalTabsWidget::wheelEvent(QWheelEvent *event)
