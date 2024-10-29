@@ -48,6 +48,8 @@ public:
     void updateIndex(const QModelIndex &index);
     void adjustStyleOption(QStyleOptionViewItem *option);
 
+    void forwardTraverse(const QModelIndex &root, const std::function<void(const QModelIndex&)> &callback) const;
+
 private:
     void drawBranches(QPainter *painter, const QRect &rect, const QModelIndex &index) const override;
     void currentChanged(const QModelIndex &current, const QModelIndex &previous) override;

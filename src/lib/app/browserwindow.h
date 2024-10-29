@@ -125,6 +125,8 @@ public:
     TabModel *tabModel() const;
     TabMruModel *tabMruModel() const;
 
+    bool useTabNumberShortcuts() const;
+
 Q_SIGNALS:
     void startingCompleted();
     void aboutToClose();

@@ -42,6 +42,7 @@ public:
 
     void switchToNextTab();
     void switchToPreviousTab();
+    void setCurrentIndex(const int targetIndex);
 
     void addChildTab();
 
