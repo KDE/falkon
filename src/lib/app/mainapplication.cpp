@@ -281,7 +281,6 @@ MainApplication::MainApplication(int &argc, char** argv)
     QSettings::setDefaultFormat(QSettings::IniFormat);
     QDesktopServices::setUrlHandler(QSL("http"), this, "addNewTab");
     QDesktopServices::setUrlHandler(QSL("https"), this, "addNewTab");
-    QDesktopServices::setUrlHandler(QSL("ftp"), this, "addNewTab");
 
     ProfileManager profileManager;
     profileManager.initConfigDir();
@@ -394,7 +393,6 @@ MainApplication::~MainApplication()
 
     QDesktopServices::unsetUrlHandler(QSL("http"));
     QDesktopServices::unsetUrlHandler(QSL("https"));
-    QDesktopServices::unsetUrlHandler(QSL("ftp"));
 
     IconProvider::instance()->saveIconsToDatabase();
 
@@ -1272,7 +1270,6 @@ RegisterQAppAssociation* MainApplication::associationManager()
         m_registerQAppAssociation->addCapability(QSL(".htm"), QSL("FalkonHTML"), QSL("Falkon HTML Document"), fileIconPath, RegisterQAppAssociation::FileAssociation);
         m_registerQAppAssociation->addCapability(QSL("http"), QSL("FalkonURL"), QSL("Falkon URL"), appIconPath, RegisterQAppAssociation::UrlAssociation);
         m_registerQAppAssociation->addCapability(QSL("https"), QSL("FalkonURL"), QSL("Falkon URL"), appIconPath, RegisterQAppAssociation::UrlAssociation);
-        m_registerQAppAssociation->addCapability(QSL("ftp"), QSL("FalkonURL"), QSL("Falkon URL"), appIconPath, RegisterQAppAssociation::UrlAssociation);
     }
     return m_registerQAppAssociation;
 }

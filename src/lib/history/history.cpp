@@ -72,7 +72,7 @@ void History::addHistoryEntry(const QUrl &url, QString title)
     }
 
     const QStringList schemes = {
-        QSL("http"), QSL("https"), QSL("ftp"), QSL("file")
+        QSL("http"), QSL("https"), QSL("file")
     };
 
     if (!schemes.contains(url.scheme()) && !qzSettings->allowedSchemes.contains(url.scheme())) {

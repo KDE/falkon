@@ -25,7 +25,7 @@
 !define DESC_SecExtensions "Associate Falkon with .htm(l) files"
 !define DESC_SecThemes "Additional themes for Falkon"
 !define DESC_SecSetASDefault "Set Falkon as default internet browser"
-!define DESC_SecProtocols "Associate Falkon with http(s) and ftp protocols"
+!define DESC_SecProtocols "Associate Falkon with http(s) protocols"
 
 !define DESC_InstallationMode "Select installation mode"
 !define DESC_PortableInstallation "Falkon will be installed as a 'Portable Application' to the selected location."

@@ -212,7 +212,6 @@ QStringList WebPage::internalSchemes()
         QSL("http"),
         QSL("https"),
         QSL("file"),
-        QSL("ftp"),
         QSL("data"),
         QSL("about"),
         QSL("view-source"),
