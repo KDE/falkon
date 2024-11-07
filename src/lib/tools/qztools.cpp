@@ -45,8 +45,6 @@
 #include <QUrlQuery>
 #include <QtGuiVersion>
 
-#include <KIO/OpenFileManagerWindowJob>
-
 #ifdef QZ_WS_X11
 #include <xcb/xcb.h>
 #endif
@@ -1038,32 +1036,4 @@ void QzTools::paintDropIndicator(QWidget *widget, const QRect &r)
         p.drawLine(x - i, r.top(), x - i, r.bottom());
         p.drawLine(x + i, r.top(), x + i, r.bottom());
     }
-}
-
-void QzTools::openFolder(const QList<QUrl> &urls)
-{
-    /* Filter the URL list for existing files, otherwise it will cause crash */
-    QList<QUrl> validUrls;
-    for (const QUrl &url : urls) {
-        if (QFileInfo::exists(url.toLocalFile())) {
-            validUrls.append(url);
-        }
-        else {
-            qWarning() << "OpenFolder Filtered:" << url;
-        }
-    }
-
-    if (validUrls.isEmpty()) {
-        return;
-    }
-
-    auto *job = new KIO::OpenFileManagerWindowJob();
-    job->setHighlightUrls(validUrls);
-    job->start();
-
-    QObject::connect(job, &KJob::result, job, [&](KJob *job) {
-        if (job->error() != 0) {
-            qWarning() << "OpenFileManagerWindowJob:" << job->errorString();
-        }
-    });
 }
