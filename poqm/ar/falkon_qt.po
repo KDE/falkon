@@ -368,39 +368,39 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "ألسنة مفتوحة"
 
-#: lib/app/mainapplication.cpp:1115
+#: lib/app/mainapplication.cpp:1113
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
 msgstr "ليس «فالكون» متصفّحك المبدئيّ. أتريد جعله كذلك؟"
 
-#: lib/app/mainapplication.cpp:1116
+#: lib/app/mainapplication.cpp:1114
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "اعرض هذا السؤال عند بدء «فالكون» في كلّ مرة يتغيّر فيها متصفّحي المبدئيّ."
 
-#: lib/app/mainapplication.cpp:1118
+#: lib/app/mainapplication.cpp:1116
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "المتصفّح المبدئيّ"
 
-#: lib/app/mainapplication.cpp:1250
+#: lib/app/mainapplication.cpp:1248
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "افتح لسانًا جديدًا"
 
-#: lib/app/mainapplication.cpp:1251
+#: lib/app/mainapplication.cpp:1249
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "افتح نافذة جديدة"
 
-#: lib/app/mainapplication.cpp:1252
+#: lib/app/mainapplication.cpp:1250
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "افتح نافذة خفيّة جديدة"
 
-#: lib/app/mainapplication.cpp:1267
+#: lib/app/mainapplication.cpp:1265
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1541,40 +1541,40 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr "احذف الكعكات عند الإغلاق"
 
-#: lib/downloads/downloaditem.cpp:74
+#: lib/downloads/downloaditem.cpp:69
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "لا يُعرف كم بقي"
 
-#: lib/downloads/downloaditem.cpp:130
+#: lib/downloads/downloaditem.cpp:125
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "تمّ - %1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:134
+#: lib/downloads/downloaditem.cpp:129
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "خطأ - %1"
 
-#: lib/downloads/downloaditem.cpp:138 lib/downloads/downloaditem.cpp:281
+#: lib/downloads/downloaditem.cpp:133 lib/downloads/downloaditem.cpp:276
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "أُلغي - %1"
 
-#: lib/downloads/downloaditem.cpp:189 lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "أُلغيَ"
 
-#: lib/downloads/downloaditem.cpp:195
+#: lib/downloads/downloaditem.cpp:190
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "بضع ثوانٍ"
 
-#: lib/downloads/downloaditem.cpp:200
+#: lib/downloads/downloaditem.cpp:195
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1586,7 +1586,7 @@ msgstr[3] "%n ثا"
 msgstr[4] "%n ثا"
 msgstr[5] "%n ثا"
 
-#: lib/downloads/downloaditem.cpp:205
+#: lib/downloads/downloaditem.cpp:200
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1598,7 +1598,7 @@ msgstr[3] "% د"
 msgstr[4] "% د"
 msgstr[5] "% د"
 
-#: lib/downloads/downloaditem.cpp:210
+#: lib/downloads/downloaditem.cpp:205
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1610,98 +1610,98 @@ msgstr[3] "%n سا"
 msgstr[4] "%n سا"
 msgstr[5] "%n سا"
 
-#: lib/downloads/downloaditem.cpp:217
+#: lib/downloads/downloaditem.cpp:212
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "لا تُعرف السرعة"
 
-#: lib/downloads/downloaditem.cpp:223
+#: lib/downloads/downloaditem.cpp:218
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
 msgstr "%1 ك.ب/ثا"
 
-#: lib/downloads/downloaditem.cpp:228
+#: lib/downloads/downloaditem.cpp:223
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
 msgstr "%1 م.ب/ثا"
 
-#: lib/downloads/downloaditem.cpp:232
+#: lib/downloads/downloaditem.cpp:227
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
 msgstr "%1 ج.ب/ثا"
 
-#: lib/downloads/downloaditem.cpp:260
+#: lib/downloads/downloaditem.cpp:255
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "لا يُعرف الحجم"
 
-#: lib/downloads/downloaditem.cpp:261
+#: lib/downloads/downloaditem.cpp:256
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - لا يُعرف الحجم (%3)"
 
-#: lib/downloads/downloaditem.cpp:264
+#: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "تبقى %1 - %2 من %3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:296
+#: lib/downloads/downloaditem.cpp:291
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "مُلبثة - %1"
 
-#: lib/downloads/downloaditem.cpp:309
+#: lib/downloads/downloaditem.cpp:304
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "افتح الملف"
 
-#: lib/downloads/downloaditem.cpp:311
+#: lib/downloads/downloaditem.cpp:306
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "افتح المجلد"
 
-#: lib/downloads/downloaditem.cpp:313
+#: lib/downloads/downloaditem.cpp:308
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "انسخ رابط التنزيل"
 
-#: lib/downloads/downloaditem.cpp:315
+#: lib/downloads/downloaditem.cpp:310
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "ألغِ التنزيل"
 
-#: lib/downloads/downloaditem.cpp:318
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "عاود التنزيل"
 
-#: lib/downloads/downloaditem.cpp:320
+#: lib/downloads/downloaditem.cpp:315
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "ألبث التنزيل"
 
-#: lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "احذف من القائمة"
 
-#: lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "خطأ"
 
-#: lib/downloads/downloaditem.cpp:351
+#: lib/downloads/downloaditem.cpp:346
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "لم يُوجد"
 
-#: lib/downloads/downloaditem.cpp:351
+#: lib/downloads/downloaditem.cpp:346
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -5836,45 +5836,45 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "امنع"
 
-#: lib/tools/qztools.cpp:379
+#: lib/tools/qztools.cpp:381
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "لا يُعرف الحجم"
 
-#: lib/tools/qztools.cpp:386
+#: lib/tools/qztools.cpp:388
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
 msgstr "%1 ك.بايت"
 
-#: lib/tools/qztools.cpp:391
+#: lib/tools/qztools.cpp:393
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
 msgstr "%1 م.ب"
 
-#: lib/tools/qztools.cpp:395
+#: lib/tools/qztools.cpp:397
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
 msgstr "%1 غ.بايت"
 
-#: lib/tools/qztools.cpp:854
+#: lib/tools/qztools.cpp:856
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "البرنامج: "
 
-#: lib/tools/qztools.cpp:855
+#: lib/tools/qztools.cpp:857
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "المُبادلات: "
 
-#: lib/tools/qztools.cpp:857
+#: lib/tools/qztools.cpp:859
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "تعذر بدء البرنامج الخارجي"
 
-#: lib/tools/qztools.cpp:858
+#: lib/tools/qztools.cpp:860
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -5885,7 +5885,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "امنع هذه الصفحة من إنشاء حوارات بعد هذا"
 
-#: lib/webengine/webpage.cpp:326
+#: lib/webengine/webpage.cpp:325
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5896,53 +5896,53 @@ msgstr ""
 "<ul><li>%2</li></ul>فهل تريد من فالكون محاولة فتح هذا الرابط ببرنامج في "
 "النظام؟  "
 
-#: lib/webengine/webpage.cpp:331
+#: lib/webengine/webpage.cpp:330
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "تذكر ما اخترته لهذا البروتوكول"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:331
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "طلب بروتوكول خارجي"
 
-#: lib/webengine/webpage.cpp:412 lib/webengine/webpage.cpp:413
+#: lib/webengine/webpage.cpp:411 lib/webengine/webpage.cpp:412
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "فشلَ تحميل الصفحة"
 
-#: lib/webengine/webpage.cpp:414
+#: lib/webengine/webpage.cpp:413
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "حدث خطب ما أثناء تحميل الصفحة..."
 
-#: lib/webengine/webpage.cpp:415
+#: lib/webengine/webpage.cpp:414
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr "حاول إعادة تحميل الصفحة أو إغلاق بعض الألسنة لإفراغ بعض الذاكرة."
 
-#: lib/webengine/webpage.cpp:416
+#: lib/webengine/webpage.cpp:415
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "أعد تحميل الصفحة"
 
-#: lib/webengine/webpage.cpp:504
+#: lib/webengine/webpage.cpp:503
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "اختر ملفّا..."
 
-#: lib/webengine/webpage.cpp:508
+#: lib/webengine/webpage.cpp:507
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "حدد ملفات..."
 
-#: lib/webengine/webpage.cpp:644
+#: lib/webengine/webpage.cpp:643
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "تنبيه من جافاسكربت"
 
-#: lib/webengine/webpage.cpp:653
+#: lib/webengine/webpage.cpp:652
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "امنع هذه الصفحة من إنشاء حوارات بعد هذا"

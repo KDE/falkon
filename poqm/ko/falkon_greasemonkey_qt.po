@@ -87,7 +87,7 @@ msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
 msgstr "'%1'이(가) 이미 설치됨"
 
-#: gm_manager.cpp:234
+#: gm_manager.cpp:259
 msgctxt "GM_Manager|"
 msgid "GreaseMonkey"
 msgstr "그리스몽키"
@@ -112,6 +112,14 @@ msgstr "그리스몽키 플러그인으로 이 스크립트를 설치할 수 있
 msgctxt "GM_Notification|"
 msgid "Install"
 msgstr "설치"
+
+#: gm_plugin.cpp:93
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Plugin|"
+msgid "GreaseMonkey"
+msgstr "그리스몽키"
 
 #: settings/gm_settings.cpp:91
 msgctxt "GM_Settings|"

@@ -358,7 +358,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "So še vedno odprti zavihki"
 
-#: lib/app/mainapplication.cpp:1115
+#: lib/app/mainapplication.cpp:1113
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -367,32 +367,32 @@ msgstr ""
 "Falkon trenutno ni vaš privzeti brskalnik. Bi ga radi postavili kot svojega "
 "privzetega brskalnika?"
 
-#: lib/app/mainapplication.cpp:1116
+#: lib/app/mainapplication.cpp:1114
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Vedno izvedi to preverjanje, kadar zaženeš Falkon."
 
-#: lib/app/mainapplication.cpp:1118
+#: lib/app/mainapplication.cpp:1116
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Privzeti brskalnik"
 
-#: lib/app/mainapplication.cpp:1250
+#: lib/app/mainapplication.cpp:1248
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Odpri nov zavihek"
 
-#: lib/app/mainapplication.cpp:1251
+#: lib/app/mainapplication.cpp:1249
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Odpri novo okno"
 
-#: lib/app/mainapplication.cpp:1252
+#: lib/app/mainapplication.cpp:1250
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Odpri novo zasebno okno"
 
-#: lib/app/mainapplication.cpp:1267
+#: lib/app/mainapplication.cpp:1265
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1541,40 +1541,40 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr "Zbriši piškotke ob zaprtju"
 
-#: lib/downloads/downloaditem.cpp:74
+#: lib/downloads/downloaditem.cpp:69
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "Preostali čas ni na voljo"
 
-#: lib/downloads/downloaditem.cpp:130
+#: lib/downloads/downloaditem.cpp:125
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "Narejeno -%1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:134
+#: lib/downloads/downloaditem.cpp:129
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "Napaka - %1"
 
-#: lib/downloads/downloaditem.cpp:138 lib/downloads/downloaditem.cpp:281
+#: lib/downloads/downloaditem.cpp:133 lib/downloads/downloaditem.cpp:276
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "Preklicano - %1"
 
-#: lib/downloads/downloaditem.cpp:189 lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "Preklicano"
 
-#: lib/downloads/downloaditem.cpp:195
+#: lib/downloads/downloaditem.cpp:190
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "nekaj sekund"
 
-#: lib/downloads/downloaditem.cpp:200
+#: lib/downloads/downloaditem.cpp:195
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1584,7 +1584,7 @@ msgstr[1] "%n sekundi"
 msgstr[2] "%n sekunde"
 msgstr[3] "%n sekund"
 
-#: lib/downloads/downloaditem.cpp:205
+#: lib/downloads/downloaditem.cpp:200
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1594,7 +1594,7 @@ msgstr[1] "%n minuti"
 msgstr[2] "%n minute"
 msgstr[3] "%n minut"
 
-#: lib/downloads/downloaditem.cpp:210
+#: lib/downloads/downloaditem.cpp:205
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1604,98 +1604,98 @@ msgstr[1] "%n uri"
 msgstr[2] "%n ure"
 msgstr[3] "%n ur"
 
-#: lib/downloads/downloaditem.cpp:217
+#: lib/downloads/downloaditem.cpp:212
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "Neznana hitrost"
 
-#: lib/downloads/downloaditem.cpp:223
+#: lib/downloads/downloaditem.cpp:218
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
 msgstr "%1 kB/s"
 
-#: lib/downloads/downloaditem.cpp:228
+#: lib/downloads/downloaditem.cpp:223
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
 msgstr "%1 MB/s"
 
-#: lib/downloads/downloaditem.cpp:232
+#: lib/downloads/downloaditem.cpp:227
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
 msgstr "%1 GB/s"
 
-#: lib/downloads/downloaditem.cpp:260
+#: lib/downloads/downloaditem.cpp:255
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "Neznana velikost"
 
-#: lib/downloads/downloaditem.cpp:261
+#: lib/downloads/downloaditem.cpp:256
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - neznana velikost (%3)"
 
-#: lib/downloads/downloaditem.cpp:264
+#: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "Preostalo %1 - %2 od %3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:296
+#: lib/downloads/downloaditem.cpp:291
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "Zaustavljeno - %1"
 
-#: lib/downloads/downloaditem.cpp:309
+#: lib/downloads/downloaditem.cpp:304
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "Odpri datoteko"
 
-#: lib/downloads/downloaditem.cpp:311
+#: lib/downloads/downloaditem.cpp:306
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "Odpri mapo"
 
-#: lib/downloads/downloaditem.cpp:313
+#: lib/downloads/downloaditem.cpp:308
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "Kopiraj povezavo prenosa"
 
-#: lib/downloads/downloaditem.cpp:315
+#: lib/downloads/downloaditem.cpp:310
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "Prekliči prenos"
 
-#: lib/downloads/downloaditem.cpp:318
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "Spot vzpostavi prenos"
 
-#: lib/downloads/downloaditem.cpp:320
+#: lib/downloads/downloaditem.cpp:315
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "Začasno zaustavi prenos"
 
-#: lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "Odstrani s seznama"
 
-#: lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "Napaka"
 
-#: lib/downloads/downloaditem.cpp:351
+#: lib/downloads/downloaditem.cpp:346
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "Ni najdeno"
 
-#: lib/downloads/downloaditem.cpp:351
+#: lib/downloads/downloaditem.cpp:346
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -5840,45 +5840,45 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "Zavrni"
 
-#: lib/tools/qztools.cpp:379
+#: lib/tools/qztools.cpp:381
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "Neznana velikost"
 
-#: lib/tools/qztools.cpp:386
+#: lib/tools/qztools.cpp:388
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
 msgstr "%1 kB"
 
-#: lib/tools/qztools.cpp:391
+#: lib/tools/qztools.cpp:393
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
 msgstr "%1 MB"
 
-#: lib/tools/qztools.cpp:395
+#: lib/tools/qztools.cpp:397
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
 msgstr "%1 GB"
 
-#: lib/tools/qztools.cpp:854
+#: lib/tools/qztools.cpp:856
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "Izvajalni program: "
 
-#: lib/tools/qztools.cpp:855
+#: lib/tools/qztools.cpp:857
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "Argumenti: "
 
-#: lib/tools/qztools.cpp:857
+#: lib/tools/qztools.cpp:859
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "Ni mogoče zagnati zunanjega programa"
 
-#: lib/tools/qztools.cpp:858
+#: lib/tools/qztools.cpp:860
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -5889,7 +5889,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Preprečite tej strani ustvarjanje dodatnih pogovornih oken"
 
-#: lib/webengine/webpage.cpp:326
+#: lib/webengine/webpage.cpp:325
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5900,27 +5900,27 @@ msgstr ""
 "%2</li></ul>Ali želite, da Falkon poskusi odpreti to povezavo v sistemski "
 "aplikaciji?"
 
-#: lib/webengine/webpage.cpp:331
+#: lib/webengine/webpage.cpp:330
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Zapomni si mojo izbiro za ta protokol"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:331
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Zahtevek za zunanji protokol"
 
-#: lib/webengine/webpage.cpp:412 lib/webengine/webpage.cpp:413
+#: lib/webengine/webpage.cpp:411 lib/webengine/webpage.cpp:412
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Nalaganje strani ni uspelo"
 
-#: lib/webengine/webpage.cpp:414
+#: lib/webengine/webpage.cpp:413
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Nekaj je šlo narobe pri nalaganju te strani."
 
-#: lib/webengine/webpage.cpp:415
+#: lib/webengine/webpage.cpp:414
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -5928,27 +5928,27 @@ msgstr ""
 "Poskusite znova naložiti stran ali zapreti nekaj zavihkov, da bo na voljo "
 "več pomnilnika."
 
-#: lib/webengine/webpage.cpp:416
+#: lib/webengine/webpage.cpp:415
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Ponovno naloži stran"
 
-#: lib/webengine/webpage.cpp:504
+#: lib/webengine/webpage.cpp:503
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Izberite datoteko..."
 
-#: lib/webengine/webpage.cpp:508
+#: lib/webengine/webpage.cpp:507
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Izberite datoteke..."
 
-#: lib/webengine/webpage.cpp:644
+#: lib/webengine/webpage.cpp:643
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Opozorilo JavaScripta"
 
-#: lib/webengine/webpage.cpp:653
+#: lib/webengine/webpage.cpp:652
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Preprečite tej strani ustvarjanje dodatnih pogovornih oken"

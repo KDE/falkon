@@ -87,7 +87,7 @@ msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
 msgstr "已安裝「%1」"
 
-#: gm_manager.cpp:234
+#: gm_manager.cpp:259
 msgctxt "GM_Manager|"
 msgid "GreaseMonkey"
 msgstr "GreaseMonkey"
@@ -112,6 +112,14 @@ msgstr "這程式碼可透過Greasemonkey外掛程式安裝。"
 msgctxt "GM_Notification|"
 msgid "Install"
 msgstr "安裝"
+
+#: gm_plugin.cpp:93
+#, fuzzy
+#| msgctxt "GM_Manager|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Plugin|"
+msgid "GreaseMonkey"
+msgstr "GreaseMonkey"
 
 #: settings/gm_settings.cpp:91
 msgctxt "GM_Settings|"

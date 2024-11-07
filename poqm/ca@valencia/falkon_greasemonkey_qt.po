@@ -102,7 +102,7 @@ msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
 msgstr "«%1» ja està instal·lat"
 
-#: gm_manager.cpp:234
+#: gm_manager.cpp:259
 msgctxt "GM_Manager|"
 msgid "GreaseMonkey"
 msgstr "GreaseMonkey"
@@ -127,6 +127,14 @@ msgstr "Este script es pot instal·lar amb el connector GreaseMonkey."
 msgctxt "GM_Notification|"
 msgid "Install"
 msgstr "Instal·la"
+
+#: gm_plugin.cpp:93
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Plugin|"
+msgid "GreaseMonkey"
+msgstr "GreaseMonkey"
 
 #: settings/gm_settings.cpp:91
 msgctxt "GM_Settings|"

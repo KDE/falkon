@@ -350,7 +350,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "ზოგიერთ ჩანართი ჯერ კიდევ ღიაა"
 
-#: lib/app/mainapplication.cpp:1115
+#: lib/app/mainapplication.cpp:1113
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -359,32 +359,32 @@ msgstr ""
 "Falkon ამჟამად არ არის თქვენი ნაგულისხმევი ბრაუზერი. გსურთ მისი ნაგულისხმევი "
 "ბრაუზერად დაყენება?"
 
-#: lib/app/mainapplication.cpp:1116
+#: lib/app/mainapplication.cpp:1114
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "ყოველთვის შეამოწმე Falkon-ის გაშვებისას."
 
-#: lib/app/mainapplication.cpp:1118
+#: lib/app/mainapplication.cpp:1116
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "ნაგულისხმევი ბრაუზერი"
 
-#: lib/app/mainapplication.cpp:1250
+#: lib/app/mainapplication.cpp:1248
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "ახალი ჩანართის გახსნა"
 
-#: lib/app/mainapplication.cpp:1251
+#: lib/app/mainapplication.cpp:1249
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "ახალ ფანჯრის გახსნა"
 
-#: lib/app/mainapplication.cpp:1252
+#: lib/app/mainapplication.cpp:1250
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "ახალი პირადი ფანჯრის გახსნა"
 
-#: lib/app/mainapplication.cpp:1267
+#: lib/app/mainapplication.cpp:1265
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1538,40 +1538,40 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr "გასვლისას ქუქიების გასუფთავება"
 
-#: lib/downloads/downloaditem.cpp:74
+#: lib/downloads/downloaditem.cpp:69
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "დარჩენილი დრო მიუწვდომელია"
 
-#: lib/downloads/downloaditem.cpp:130
+#: lib/downloads/downloaditem.cpp:125
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "დასრულდა - %1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:134
+#: lib/downloads/downloaditem.cpp:129
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "შეცდომა - %1"
 
-#: lib/downloads/downloaditem.cpp:138 lib/downloads/downloaditem.cpp:281
+#: lib/downloads/downloaditem.cpp:133 lib/downloads/downloaditem.cpp:276
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "გაუქმდა - %1"
 
-#: lib/downloads/downloaditem.cpp:189 lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "შეწყვეტილია"
 
-#: lib/downloads/downloaditem.cpp:195
+#: lib/downloads/downloaditem.cpp:190
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "რამდენიმე წამი"
 
-#: lib/downloads/downloaditem.cpp:200
+#: lib/downloads/downloaditem.cpp:195
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1579,7 +1579,7 @@ msgid_plural "%n seconds"
 msgstr[0] "%n წამი"
 msgstr[1] "%n წამი"
 
-#: lib/downloads/downloaditem.cpp:205
+#: lib/downloads/downloaditem.cpp:200
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1587,7 +1587,7 @@ msgid_plural "%n minutes"
 msgstr[0] "%n წუთი"
 msgstr[1] "%n წუთი"
 
-#: lib/downloads/downloaditem.cpp:210
+#: lib/downloads/downloaditem.cpp:205
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1595,98 +1595,98 @@ msgid_plural "%n hours"
 msgstr[0] "%n საათი"
 msgstr[1] "%n საათი"
 
-#: lib/downloads/downloaditem.cpp:217
+#: lib/downloads/downloaditem.cpp:212
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "უცნობი სიჩქარე"
 
-#: lib/downloads/downloaditem.cpp:223
+#: lib/downloads/downloaditem.cpp:218
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
 msgstr "%1 კბ/წმ"
 
-#: lib/downloads/downloaditem.cpp:228
+#: lib/downloads/downloaditem.cpp:223
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
 msgstr "%1 მბ/წმ"
 
-#: lib/downloads/downloaditem.cpp:232
+#: lib/downloads/downloaditem.cpp:227
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
 msgstr "%1 გბ/წმ"
 
-#: lib/downloads/downloaditem.cpp:260
+#: lib/downloads/downloaditem.cpp:255
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "უცნობი ზომა"
 
-#: lib/downloads/downloaditem.cpp:261
+#: lib/downloads/downloaditem.cpp:256
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - უცნობი ზომა (%3)"
 
-#: lib/downloads/downloaditem.cpp:264
+#: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "დარჩენილია %1 - %2 %3-დან (%4)"
 
-#: lib/downloads/downloaditem.cpp:296
+#: lib/downloads/downloaditem.cpp:291
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "შეჩერებულია - %1"
 
-#: lib/downloads/downloaditem.cpp:309
+#: lib/downloads/downloaditem.cpp:304
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "ფაილის გახსნა"
 
-#: lib/downloads/downloaditem.cpp:311
+#: lib/downloads/downloaditem.cpp:306
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "საქაღალდის გახსნა"
 
-#: lib/downloads/downloaditem.cpp:313
+#: lib/downloads/downloaditem.cpp:308
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "გადმოწერის ბმულის კოპირება"
 
-#: lib/downloads/downloaditem.cpp:315
+#: lib/downloads/downloaditem.cpp:310
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "გადმოწერის გაუქმება"
 
-#: lib/downloads/downloaditem.cpp:318
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "გადმოწერის გაგრძელება"
 
-#: lib/downloads/downloaditem.cpp:320
+#: lib/downloads/downloaditem.cpp:315
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "გადმოწერის შეჩერება"
 
-#: lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "სიიდან წაშლა"
 
-#: lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "შეცდომა"
 
-#: lib/downloads/downloaditem.cpp:351
+#: lib/downloads/downloaditem.cpp:346
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "ნაპოვნი არაა"
 
-#: lib/downloads/downloaditem.cpp:351
+#: lib/downloads/downloaditem.cpp:346
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -5841,45 +5841,45 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "უარყოფა"
 
-#: lib/tools/qztools.cpp:379
+#: lib/tools/qztools.cpp:381
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "უცნობი ზომა"
 
-#: lib/tools/qztools.cpp:386
+#: lib/tools/qztools.cpp:388
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
 msgstr "%1 კბ"
 
-#: lib/tools/qztools.cpp:391
+#: lib/tools/qztools.cpp:393
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
 msgstr "%1 მბ"
 
-#: lib/tools/qztools.cpp:395
+#: lib/tools/qztools.cpp:397
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
 msgstr "%1 გბ"
 
-#: lib/tools/qztools.cpp:854
+#: lib/tools/qztools.cpp:856
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "გამშვები: "
 
-#: lib/tools/qztools.cpp:855
+#: lib/tools/qztools.cpp:857
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "არგიმენტები: "
 
-#: lib/tools/qztools.cpp:857
+#: lib/tools/qztools.cpp:859
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "გარე პროგრამის გაშვების შეცდომა"
 
-#: lib/tools/qztools.cpp:858
+#: lib/tools/qztools.cpp:860
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -5890,7 +5890,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "ამ გვერდისთვის დამატებითი ფანჯრების ჩვენების აკრძალვა"
 
-#: lib/webengine/webpage.cpp:326
+#: lib/webengine/webpage.cpp:325
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5900,27 +5900,27 @@ msgstr ""
 "Falkon-მა <b>%1:</b> ბმულები არ იცის, რა არის. მოთხოვნილი ბმულია <ul><li>%2</"
 "li></ul>. გნებავთ, Falkon-მა ამ ბმულის სისტემური აპლიკაციით გახსნა სცადოს?"
 
-#: lib/webengine/webpage.cpp:331
+#: lib/webengine/webpage.cpp:330
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "არჩევანის &დამახსოვრება ამ პროტოკოლისთვის"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:331
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "გარე პროტოკოლის მოთხოვნა"
 
-#: lib/webengine/webpage.cpp:412 lib/webengine/webpage.cpp:413
+#: lib/webengine/webpage.cpp:411 lib/webengine/webpage.cpp:412
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "გვერდის ჩატვირთვის შეცდომა"
 
-#: lib/webengine/webpage.cpp:414
+#: lib/webengine/webpage.cpp:413
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "შეცდომა ამ გვერდის ჩატვირთვისას."
 
-#: lib/webengine/webpage.cpp:415
+#: lib/webengine/webpage.cpp:414
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -5928,27 +5928,27 @@ msgstr ""
 "სცადეთ, მეხსიერება გვერდების თავიდან ჩატვირთვის ან ზოგიერთი ჩანართის "
 "დახურვით გაათავისუფლოთ."
 
-#: lib/webengine/webpage.cpp:416
+#: lib/webengine/webpage.cpp:415
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "გვერდის გადატვირთვა"
 
-#: lib/webengine/webpage.cpp:504
+#: lib/webengine/webpage.cpp:503
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "აირჩიეთ ფაილი..."
 
-#: lib/webengine/webpage.cpp:508
+#: lib/webengine/webpage.cpp:507
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "აირჩიეთ ფაილები..."
 
-#: lib/webengine/webpage.cpp:644
+#: lib/webengine/webpage.cpp:643
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript -ის განგაში"
 
-#: lib/webengine/webpage.cpp:653
+#: lib/webengine/webpage.cpp:652
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "ამ გვერდისთვის დამატებითი ფანჯრების ჩვენების აკრძალვა"

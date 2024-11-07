@@ -350,7 +350,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Leidub veel avatud kaarte"
 
-#: lib/app/mainapplication.cpp:1115
+#: lib/app/mainapplication.cpp:1113
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -359,32 +359,32 @@ msgstr ""
 "Falkon ei ole praegu sinu vaikimisi veebilehitseja. Kas soovid muuta selle "
 "oma vaikimisi veebilehitsejaks?"
 
-#: lib/app/mainapplication.cpp:1116
+#: lib/app/mainapplication.cpp:1114
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Seda kontrollitakse Falkoni käivitamisel alati."
 
-#: lib/app/mainapplication.cpp:1118
+#: lib/app/mainapplication.cpp:1116
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Vaikimisi veebilehitseja"
 
-#: lib/app/mainapplication.cpp:1250
+#: lib/app/mainapplication.cpp:1248
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Ava uus kaart"
 
-#: lib/app/mainapplication.cpp:1251
+#: lib/app/mainapplication.cpp:1249
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Ava uus aken"
 
-#: lib/app/mainapplication.cpp:1252
+#: lib/app/mainapplication.cpp:1250
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Ava uus privaatne aken"
 
-#: lib/app/mainapplication.cpp:1267
+#: lib/app/mainapplication.cpp:1265
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1538,40 +1538,40 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr "Küpsiste kustutamine sulgemisel"
 
-#: lib/downloads/downloaditem.cpp:74
+#: lib/downloads/downloaditem.cpp:69
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "Järelejäänud aeg pole teada"
 
-#: lib/downloads/downloaditem.cpp:130
+#: lib/downloads/downloaditem.cpp:125
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "Tehtud - %1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:134
+#: lib/downloads/downloaditem.cpp:129
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "Tõrge - %1"
 
-#: lib/downloads/downloaditem.cpp:138 lib/downloads/downloaditem.cpp:281
+#: lib/downloads/downloaditem.cpp:133 lib/downloads/downloaditem.cpp:276
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "Katkestati - %1"
 
-#: lib/downloads/downloaditem.cpp:189 lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "Katkestatud"
 
-#: lib/downloads/downloaditem.cpp:195
+#: lib/downloads/downloaditem.cpp:190
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "mõni sekund"
 
-#: lib/downloads/downloaditem.cpp:200
+#: lib/downloads/downloaditem.cpp:195
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1579,7 +1579,7 @@ msgid_plural "%n seconds"
 msgstr[0] "%n sekundit"
 msgstr[1] "%n sekundit"
 
-#: lib/downloads/downloaditem.cpp:205
+#: lib/downloads/downloaditem.cpp:200
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1587,7 +1587,7 @@ msgid_plural "%n minutes"
 msgstr[0] "%n minutit"
 msgstr[1] "%n minutit"
 
-#: lib/downloads/downloaditem.cpp:210
+#: lib/downloads/downloaditem.cpp:205
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1595,12 +1595,12 @@ msgid_plural "%n hours"
 msgstr[0] "%n tundi"
 msgstr[1] "%n tundi"
 
-#: lib/downloads/downloaditem.cpp:217
+#: lib/downloads/downloaditem.cpp:212
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "Teadmata kiirus"
 
-#: lib/downloads/downloaditem.cpp:223
+#: lib/downloads/downloaditem.cpp:218
 #, fuzzy, qt-format
 #| msgctxt "DownloadItem|"
 #| msgid "kB/s"
@@ -1608,7 +1608,7 @@ msgctxt "DownloadItem|"
 msgid "%1 kB/s"
 msgstr "kB/s"
 
-#: lib/downloads/downloaditem.cpp:228
+#: lib/downloads/downloaditem.cpp:223
 #, fuzzy, qt-format
 #| msgctxt "DownloadItem|"
 #| msgid "MB/s"
@@ -1616,7 +1616,7 @@ msgctxt "DownloadItem|"
 msgid "%1 MB/s"
 msgstr "MB/s"
 
-#: lib/downloads/downloaditem.cpp:232
+#: lib/downloads/downloaditem.cpp:227
 #, fuzzy, qt-format
 #| msgctxt "DownloadItem|"
 #| msgid "GB/s"
@@ -1624,75 +1624,75 @@ msgctxt "DownloadItem|"
 msgid "%1 GB/s"
 msgstr "GB/s"
 
-#: lib/downloads/downloaditem.cpp:260
+#: lib/downloads/downloaditem.cpp:255
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "Teadmata suurus"
 
-#: lib/downloads/downloaditem.cpp:261
+#: lib/downloads/downloaditem.cpp:256
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 - teadmata suurus (%3)"
 
-#: lib/downloads/downloaditem.cpp:264
+#: lib/downloads/downloaditem.cpp:259
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "Jäänud %1 - %2 / %3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:296
+#: lib/downloads/downloaditem.cpp:291
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "Pausil - %1"
 
-#: lib/downloads/downloaditem.cpp:309
+#: lib/downloads/downloaditem.cpp:304
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "Ava fail"
 
-#: lib/downloads/downloaditem.cpp:311
+#: lib/downloads/downloaditem.cpp:306
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "Ava kataloog"
 
-#: lib/downloads/downloaditem.cpp:313
+#: lib/downloads/downloaditem.cpp:308
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "Kopeeri allalaadimise link"
 
-#: lib/downloads/downloaditem.cpp:315
+#: lib/downloads/downloaditem.cpp:310
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "Katkesta allalaadimine"
 
-#: lib/downloads/downloaditem.cpp:318
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "Taasalusta allalaadimist"
 
-#: lib/downloads/downloaditem.cpp:320
+#: lib/downloads/downloaditem.cpp:315
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "Pane allalaadimine pausile"
 
-#: lib/downloads/downloaditem.cpp:323
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "Eemalda nimekirjast"
 
-#: lib/downloads/downloaditem.cpp:325
+#: lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "Tõrge"
 
-#: lib/downloads/downloaditem.cpp:351
+#: lib/downloads/downloaditem.cpp:346
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "Ei leitud"
 
-#: lib/downloads/downloaditem.cpp:351
+#: lib/downloads/downloaditem.cpp:346
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -5987,45 +5987,45 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "Keeldu"
 
-#: lib/tools/qztools.cpp:379
+#: lib/tools/qztools.cpp:381
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "Teadmata suurus"
 
-#: lib/tools/qztools.cpp:386
+#: lib/tools/qztools.cpp:388
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
 msgstr ""
 
-#: lib/tools/qztools.cpp:391
+#: lib/tools/qztools.cpp:393
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
 msgstr ""
 
-#: lib/tools/qztools.cpp:395
+#: lib/tools/qztools.cpp:397
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
 msgstr ""
 
-#: lib/tools/qztools.cpp:854
+#: lib/tools/qztools.cpp:856
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "Täitmisfail: "
 
-#: lib/tools/qztools.cpp:855
+#: lib/tools/qztools.cpp:857
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "Argumendid:"
 
-#: lib/tools/qztools.cpp:857
+#: lib/tools/qztools.cpp:859
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "Välise programmi käivitamine nurjus"
 
-#: lib/tools/qztools.cpp:858
+#: lib/tools/qztools.cpp:860
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
@@ -6036,7 +6036,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Sel leheküljel takistatakse lisadialoogide loomine"
 
-#: lib/webengine/webpage.cpp:326
+#: lib/webengine/webpage.cpp:325
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -6046,27 +6046,27 @@ msgstr ""
 "Falkon ei ole suuteline käitlema <b>%1:</b> linke. Nõutav link on <ul><li>"
 "%2</li></ul>Kas lasta Falkonil avada see link süsteemses rakenduses?"
 
-#: lib/webengine/webpage.cpp:331
+#: lib/webengine/webpage.cpp:330
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Otsuse meeldejätmine selle protokolli jaoks"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:331
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Välise protokolli soov"
 
-#: lib/webengine/webpage.cpp:412 lib/webengine/webpage.cpp:413
+#: lib/webengine/webpage.cpp:411 lib/webengine/webpage.cpp:412
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Lehekülje laadimine nurjus"
 
-#: lib/webengine/webpage.cpp:414
+#: lib/webengine/webpage.cpp:413
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Lehekülje laadimisel läks midagi valesti."
 
-#: lib/webengine/webpage.cpp:415
+#: lib/webengine/webpage.cpp:414
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -6074,27 +6074,27 @@ msgstr ""
 "Püüa lehekülge uuesti laadida või sulge mõned kaardid kättesaadava mälu "
 "suurendamiseks."
 
-#: lib/webengine/webpage.cpp:416
+#: lib/webengine/webpage.cpp:415
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Laadi leekülg uuesti"
 
-#: lib/webengine/webpage.cpp:504
+#: lib/webengine/webpage.cpp:503
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Faili valimine ..."
 
-#: lib/webengine/webpage.cpp:508
+#: lib/webengine/webpage.cpp:507
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Failide valimine ..."
 
-#: lib/webengine/webpage.cpp:644
+#: lib/webengine/webpage.cpp:643
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScripti häire"
 
-#: lib/webengine/webpage.cpp:653
+#: lib/webengine/webpage.cpp:652
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Sel leheküljel takistatakse lisadialoogide loomine"

@@ -87,7 +87,7 @@ msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
 msgstr "'%1' on juba paigaldatud"
 
-#: gm_manager.cpp:234
+#: gm_manager.cpp:259
 msgctxt "GM_Manager|"
 msgid "GreaseMonkey"
 msgstr "GreaseMonkey"
@@ -112,6 +112,14 @@ msgstr "Seda skripti saab GreaseMonkey pluginaga paigaldada."
 msgctxt "GM_Notification|"
 msgid "Install"
 msgstr "Paigalda"
+
+#: gm_plugin.cpp:93
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Plugin|"
+msgid "GreaseMonkey"
+msgstr "GreaseMonkey"
 
 #: settings/gm_settings.cpp:91
 msgctxt "GM_Settings|"
