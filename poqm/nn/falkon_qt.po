@@ -1541,40 +1541,40 @@ msgctxt "CookieManager|"
 msgid "Delete cookies on close"
 msgstr "Slett infokapslar ved lukking"
 
-#: lib/downloads/downloaditem.cpp:69
+#: lib/downloads/downloaditem.cpp:74
 msgctxt "DownloadItem|"
 msgid "Remaining time unavailable"
 msgstr "Tid att er ikkje tilgjengeleg"
 
-#: lib/downloads/downloaditem.cpp:125
+#: lib/downloads/downloaditem.cpp:130
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Done - %1 (%2)"
 msgstr "Ferdig – %1 (%2)"
 
-#: lib/downloads/downloaditem.cpp:129
+#: lib/downloads/downloaditem.cpp:134
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Error - %1"
 msgstr "Feil – %1"
 
-#: lib/downloads/downloaditem.cpp:133 lib/downloads/downloaditem.cpp:276
+#: lib/downloads/downloaditem.cpp:138 lib/downloads/downloaditem.cpp:281
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Cancelled - %1"
 msgstr "Avbroten – %1"
 
-#: lib/downloads/downloaditem.cpp:184 lib/downloads/downloaditem.cpp:320
+#: lib/downloads/downloaditem.cpp:189 lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Cancelled"
 msgstr "Avbroten"
 
-#: lib/downloads/downloaditem.cpp:190
+#: lib/downloads/downloaditem.cpp:195
 msgctxt "DownloadItem|"
 msgid "few seconds"
 msgstr "nokre sekund"
 
-#: lib/downloads/downloaditem.cpp:195
+#: lib/downloads/downloaditem.cpp:200
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n seconds"
@@ -1582,7 +1582,7 @@ msgid_plural "%n seconds"
 msgstr[0] "%n sekund"
 msgstr[1] "%n sekund"
 
-#: lib/downloads/downloaditem.cpp:200
+#: lib/downloads/downloaditem.cpp:205
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n minutes"
@@ -1591,7 +1591,7 @@ msgstr[0] "%n minutt"
 msgstr[1] "%n minutt"
 
 # Feil i engelsk eintal?
-#: lib/downloads/downloaditem.cpp:205
+#: lib/downloads/downloaditem.cpp:210
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
@@ -1599,101 +1599,101 @@ msgid_plural "%n hours"
 msgstr[0] "%n time"
 msgstr[1] "%n timar"
 
-#: lib/downloads/downloaditem.cpp:212
+#: lib/downloads/downloaditem.cpp:217
 msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "Ukjend fart"
 
 # Har sjekka at det er snakk om byte/1024.
-#: lib/downloads/downloaditem.cpp:218
+#: lib/downloads/downloaditem.cpp:223
 #, fuzzy, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
 msgstr "KiB/s"
 
 # Har sjekka at det er snakk om byte/1024².
-#: lib/downloads/downloaditem.cpp:223
+#: lib/downloads/downloaditem.cpp:228
 #, fuzzy, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
 msgstr "MiB/s"
 
 # Har sjekka at det er snakk om byte/1024³.
-#: lib/downloads/downloaditem.cpp:227
+#: lib/downloads/downloaditem.cpp:232
 #, fuzzy, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
 msgstr "GiB/s"
 
-#: lib/downloads/downloaditem.cpp:255
+#: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
 msgid "Unknown size"
 msgstr "Ukjend storleik"
 
-#: lib/downloads/downloaditem.cpp:256
+#: lib/downloads/downloaditem.cpp:261
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%2 - unknown size (%3)"
 msgstr "%2 – ukjend storleik (%3)"
 
-#: lib/downloads/downloaditem.cpp:259
+#: lib/downloads/downloaditem.cpp:264
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Remaining %1 - %2 of %3 (%4)"
 msgstr "Står att %1 – %2 av %3 (%4)"
 
-#: lib/downloads/downloaditem.cpp:291
+#: lib/downloads/downloaditem.cpp:296
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
 msgstr "Pausa – %1"
 
-#: lib/downloads/downloaditem.cpp:304
+#: lib/downloads/downloaditem.cpp:309
 msgctxt "DownloadItem|"
 msgid "Open File"
 msgstr "Opna fil"
 
-#: lib/downloads/downloaditem.cpp:306
+#: lib/downloads/downloaditem.cpp:311
 msgctxt "DownloadItem|"
 msgid "Open Folder"
 msgstr "Opna mappe"
 
-#: lib/downloads/downloaditem.cpp:308
+#: lib/downloads/downloaditem.cpp:313
 msgctxt "DownloadItem|"
 msgid "Copy Download Link"
 msgstr "Kopier nedlastingslenkje"
 
-#: lib/downloads/downloaditem.cpp:310
+#: lib/downloads/downloaditem.cpp:315
 msgctxt "DownloadItem|"
 msgid "Cancel downloading"
 msgstr "Avbryt nedlasting"
 
-#: lib/downloads/downloaditem.cpp:313
+#: lib/downloads/downloaditem.cpp:318
 msgctxt "DownloadItem|"
 msgid "Resume downloading"
 msgstr "Hald fram nedlasting"
 
-#: lib/downloads/downloaditem.cpp:315
+#: lib/downloads/downloaditem.cpp:320
 msgctxt "DownloadItem|"
 msgid "Pause downloading"
 msgstr "Set nedlasting på pause"
 
-#: lib/downloads/downloaditem.cpp:318
+#: lib/downloads/downloaditem.cpp:323
 msgctxt "DownloadItem|"
 msgid "Remove From List"
 msgstr "Fjern frå liste"
 
-#: lib/downloads/downloaditem.cpp:320
+#: lib/downloads/downloaditem.cpp:325
 msgctxt "DownloadItem|"
 msgid "Error"
 msgstr "Feil"
 
-#: lib/downloads/downloaditem.cpp:346
+#: lib/downloads/downloaditem.cpp:351
 msgctxt "DownloadItem|"
 msgid "Not found"
 msgstr "Ikkje funnen"
 
-#: lib/downloads/downloaditem.cpp:346
+#: lib/downloads/downloaditem.cpp:351
 #, qt-format
 msgctxt "DownloadItem|"
 msgid ""
@@ -5876,45 +5876,45 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "Avvis"
 
-#: lib/tools/qztools.cpp:381
+#: lib/tools/qztools.cpp:379
 msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "Ukjend storleik"
 
-#: lib/tools/qztools.cpp:388
+#: lib/tools/qztools.cpp:386
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
 msgstr ""
 
-#: lib/tools/qztools.cpp:393
+#: lib/tools/qztools.cpp:391
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
 msgstr ""
 
-#: lib/tools/qztools.cpp:397
+#: lib/tools/qztools.cpp:395
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
 msgstr ""
 
-#: lib/tools/qztools.cpp:856
+#: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
 msgid "Executable: "
 msgstr "Programfil:"
 
-#: lib/tools/qztools.cpp:857
+#: lib/tools/qztools.cpp:855
 msgctxt "QObject|"
 msgid "Arguments: "
 msgstr "Argument:"
 
-#: lib/tools/qztools.cpp:859
+#: lib/tools/qztools.cpp:857
 msgctxt "QObject|"
 msgid "Cannot start external program"
 msgstr "Klarte ikkje starta eksternt program"
 
-#: lib/tools/qztools.cpp:860
+#: lib/tools/qztools.cpp:858
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
