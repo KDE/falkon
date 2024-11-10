@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: falkon bulgarian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-15 09:59+0200\n"
-"PO-Revision-Date: 2024-09-23 16:01+0200\n"
+"PO-Revision-Date: 2024-11-09 20:09+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
@@ -1388,7 +1388,7 @@ msgstr "Вече в списък блокирани!"
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
-msgstr "Сървърът е \"%1\" вече в черния списък, моля, първо го премахнете."
+msgstr "Сървърът е „%1“ вече в черния списък, моля, първо го премахнете."
 
 #: lib/cookies/cookiemanager.cpp:241
 msgctxt "CookieManager|"
@@ -1404,7 +1404,7 @@ msgstr "Вече в списък разрешени!"
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
-msgstr "Сървърът \"%1\" вече е в белия списък, моля, първо го премахнете."
+msgstr "Сървърът „%1“ вече е в белия списък, моля, първо го премахнете."
 
 #: lib/cookies/cookiemanager.ui:14
 msgctxt "CookieManager|"
@@ -2291,7 +2291,7 @@ msgstr "Запаметяване име на потребител и парол�
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
-msgstr "%1 изисква име на потребител и парола. Отговор на сайта: \"%2\""
+msgstr "%1 изисква име на потребител и парола. Отговор на сайта: „%2“"
 
 #: lib/network/networkmanager.cpp:210
 msgctxt "NetworkManager|"
@@ -2946,7 +2946,7 @@ msgstr "Търсачката е добавена"
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine \"%1\" has been successfully added."
-msgstr "Успешно добавихте търсачка \"%1\"."
+msgstr "Успешно добавихте търсачка „%1“."
 
 #: lib/opensearch/searchenginesmanager.cpp:407
 msgctxt "SearchEnginesManager|"
@@ -4081,7 +4081,7 @@ msgid ""
 "Are you sure you want to permanently delete \"%1\" profile? This action "
 "cannot be undone!"
 msgstr ""
-"Наистина ли искате да премахнете профил \"%1\"? Това действие е необратимо!"
+"Наистина ли искате да премахнете профил „%1“? Това действие е необратимо!"
 
 #: lib/preferences/preferences.cpp:879 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
@@ -5320,7 +5320,7 @@ msgstr "Грешка!"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "The session file \"%1\" exists. Please enter another name."
-msgstr "Файл на сесия \"%1\" съществува. Въведете друго име."
+msgstr "Файл на сесия „%1“ съществува. Въведете друго име."
 
 #: lib/session/sessionmanager.cpp:144
 msgctxt "SessionManager|"
