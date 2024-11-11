@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: falkon bulgarian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-15 09:59+0200\n"
-"PO-Revision-Date: 2024-09-23 16:01+0200\n"
+"PO-Revision-Date: 2024-11-10 14:24+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.11.70\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
@@ -338,10 +338,10 @@ msgid_plural ""
 "Are you sure you want to close this window?"
 msgstr[0] ""
 "Все още има %n отворени раздели и сесията няма да бъде запазена.\n"
-"Наистила ли искате  да затворите този прозорец?"
+"Наистина ли искате  да затворите този прозорец?"
 msgstr[1] ""
 "Все още има %n отворени раздели и сесията няма да бъде запазена.\n"
-"Наистила ли искате  да затворите този прозорец?"
+"Наистина ли искате  да затворите този прозорец?"
 
 #: lib/app/browserwindow.cpp:1498
 msgctxt "BrowserWindow|"
@@ -800,7 +800,7 @@ msgid ""
 "The Master Password is used to protect site passwords and form data. If you "
 "set a Master Password you will be asked to enter it once per session."
 msgstr ""
-"Главнана парола се използва за защита на паролите на сайтове и формуляри. "
+"Главната парола се използва за защита на паролите на сайтове и формуляри. "
 "Ако зададете главна парола, ще бъдете запитвани за нея един път за всяка "
 "сесия."
 
@@ -875,7 +875,7 @@ msgstr "<b>Изнасяне на отметки</b>"
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:27
 msgctxt "BookmarksExportDialog|"
 msgid "Export options"
-msgstr "Настойки на изнасянето"
+msgstr "Настройки на изнасянето"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
 msgctxt "BookmarksExportDialog|"
@@ -1775,7 +1775,7 @@ msgstr "Отваряне на %1"
 #: lib/downloads/downloadoptionsdialog.cpp:112
 msgctxt "DownloadOptionsDialog|"
 msgid "Download link copied."
-msgstr "Препратката за изтеглне е копирана."
+msgstr "Препратката за изтегляне е копирана."
 
 #: lib/downloads/downloadoptionsdialog.ui:25
 msgctxt "DownloadOptionsDialog|"
@@ -3829,7 +3829,7 @@ msgstr "Смяна на ядро"
 #: lib/preferences/autofillmanager.ui:42
 msgctxt "AutoFillManager|"
 msgid "Backend options"
-msgstr "Настойки на ядрото"
+msgstr "Настройки на ядрото"
 
 #: lib/preferences/autofillmanager.ui:71
 msgctxt "AutoFillManager|"
@@ -5072,7 +5072,7 @@ msgstr "<b>Управление на обработването на прото�
 #: lib/preferences/preferences.ui:2800
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>Упрвление на сертификати</b>"
+msgstr "<b>Управление на сертификати</b>"
 
 #: lib/preferences/preferences.ui:2851
 msgctxt "Preferences|"
