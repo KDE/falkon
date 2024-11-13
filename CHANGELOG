@@ -1,3 +1,13 @@
+Version 24.12.0
+    * Do not advertise ftp support to the system (BUG: 494222)
+    * GreaseMonkey: Add support for context menu (BUG: 469855)
+    * GreaseMonkey: Check content type of url *.user.js (BUG: 467459)
+    * VerticalTabs: Fix tab switching with mouse wheel (BUG: 394066)
+    * VerticalTabs: Arrange pinned tabs vertically (BUG: 452818)
+    * Set security icon according to certificate error. (BUG: 420902)
+    * Preferences: Fix crash when un/loading of plugins (BUG: 492023)
+    * Random fixes
+
 Version 24.08.0
     * Add site permissions
     * Enable WebInspector with disabled JavaScript (BUG: 462887)
