@@ -35,6 +35,10 @@ class WebView;
 class WebHitTestResult;
 class DelayedFileWatcher;
 
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+class QWebEngineDesktopMediaRequest;
+#endif
+
 class FALKON_EXPORT WebPage : public QWebEnginePage
 {
     Q_OBJECT
@@ -95,6 +99,10 @@ private Q_SLOTS:
     void featurePermissionRequested(const QUrl &origin, const QWebEnginePage::Feature &feature);
     void renderProcessTerminated(QWebEnginePage::RenderProcessTerminationStatus terminationStatus, int exitCode);
     void onCertificateError(QWebEngineCertificateError error);
+
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    void handleDesktopMediaRequested(const QWebEngineDesktopMediaRequest &request);
+#endif
 
 private:
     bool acceptNavigationRequest(const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;

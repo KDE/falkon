@@ -145,6 +145,7 @@ set(SRCS ${SRCS}
     other/browsinglibrary.cpp
     other/clearprivatedata.cpp
     other/checkboxdialog.cpp
+    other/comboboxdialog.cpp
     other/iconchooser.cpp
     other/licenseviewer.cpp
     other/qzsettings.cpp
@@ -379,6 +380,7 @@ set(SRCS ${SRCS}
     other/browsinglibrary.h
     other/clearprivatedata.h
     other/checkboxdialog.h
+    other/comboboxdialog.h
     other/iconchooser.h
     other/licenseviewer.h
     other/qzsettings.h
