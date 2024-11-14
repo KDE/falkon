@@ -44,6 +44,7 @@
 #include "passwordmanager.h"
 #include "scripts.h"
 #include "ocssupport.h"
+#include "comboboxdialog.h"
 
 #include <iostream>
 
@@ -60,9 +61,15 @@
 #include <QPushButton>
 #include <QUrlQuery>
 #include <QtWebEngineWidgetsVersion>
+#include <QtWebEngineCoreVersion>
 
 #include <QWebEngineRegisterProtocolHandlerRequest>
 #include <QWebEngineNewWindowRequest>
+
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+#include <QConcatenateTablesProxyModel>
+#include <QWebEngineDesktopMediaRequest>
+#endif
 
 QString WebPage::s_lastUploadLocation = QDir::homePath();
 QUrl WebPage::s_lastUnsupportedUrl;
@@ -120,6 +127,10 @@ WebPage::WebPage(QObject* parent)
         selection.select(selection.certificates().at(0));
     });
     connect(this, &QWebEnginePage::newWindowRequested, this, &WebPage::onNewWindowRequested);
+
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    connect(this, &QWebEnginePage::desktopMediaRequested, this, &WebPage::handleDesktopMediaRequested);
+#endif
 }
 
 WebPage::~WebPage()
@@ -784,3 +795,41 @@ void WebPage::javaScriptConsoleMessage(JavaScriptConsoleMessageLevel level, cons
 
     std::cout << qPrintable(sourceID) << ":" << lineNumber << " " << qPrintable(message) << '\n';
 }
+
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+void WebPage::handleDesktopMediaRequested(const QWebEngineDesktopMediaRequest& request)
+{
+    if (!mApp->webSettings()->testAttribute(QWebEngineSettings::ScreenCaptureEnabled)) {
+        request.cancel();
+        return;
+    }
+
+    QConcatenateTablesProxyModel proxyModel;
+    proxyModel.addSourceModel(request.screensModel());
+    proxyModel.addSourceModel(request.windowsModel());
+
+    ComboBoxDialog dialog(QDialogButtonBox::StandardButton::Ok | QDialogButtonBox::StandardButton::Cancel);
+    dialog.setLabel(tr("Source:"));
+    dialog.setDescription(tr("Select screen or window for <b>%1</b> to capture.").arg(url().host()));
+    dialog.setModel(&proxyModel);
+
+    dialog.exec();
+
+    if (dialog.result() != QDialog::Rejected) {
+        auto index = proxyModel.mapToSource(proxyModel.index(dialog.currentIndex(), 0));
+
+        if (index.model() == request.screensModel()) {
+            request.selectScreen(index);
+        }
+        else if (index.model() == request.windowsModel()) {
+            request.selectWindow(index);
+        }
+        else {
+            request.cancel();
+        }
+    }
+    else {
+        request.cancel();
+    }
+}
+#endif
