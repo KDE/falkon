@@ -295,7 +295,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->dnsPrefetch->setChecked(settings.value(QSL("DNSPrefetch"), true).toBool());
     ui->intPDFViewer->setChecked(settings.value(QSL("intPDFViewer"), false).toBool());
     ui->intPDFViewer->setEnabled(ui->allowPlugins->isChecked());
-    ui->screenCaptureEnabled->setChecked(settings.value(QSL("screenCaptureEnabled"), false).toBool());
+    ui->screenCaptureEnabled->setChecked(settings.value(QSL("screenCaptureEnabled"), true).toBool());
     ui->hardwareAccel->setChecked(settings.value(QSL("hardwareAccel"), false).toBool());
 #if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
     ui->readingFromCanvasEnabled->setChecked(settings.value(QSL("readingFromCanvasEnabled"), true).toBool());
