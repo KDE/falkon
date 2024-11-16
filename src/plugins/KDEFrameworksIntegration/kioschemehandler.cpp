@@ -22,10 +22,8 @@
 #include <QNetworkReply>
 #include <QWebEngineUrlRequestJob>
 
-#include <kio_version.h>
+#include <KIO/StoredTransferJob>
 
-#include <QNetworkAccessManager>
-Q_GLOBAL_STATIC_WITH_ARGS(QNetworkAccessManager, s_knam, (nullptr))
 
 KIOSchemeHandler::KIOSchemeHandler(const QString &protocol, QObject *parent)
     : QWebEngineUrlSchemeHandler(parent)
@@ -47,19 +45,30 @@ void KIOSchemeHandler::requestStarted(QWebEngineUrlRequestJob *job)
     }
 
     QPointer<QWebEngineUrlRequestJob> jobPtr = job;
-    QNetworkReply *reply = s_knam()->get(QNetworkRequest(job->requestUrl()));
-    connect(reply, &QNetworkReply::finished, this, [=]() {
+
+    KIO::StoredTransferJob *kioJob = KIO::storedGet(job->requestUrl(), KIO::NoReload,
+                                                    KIO::HideProgressInfo);
+    kioJob->setRedirectionHandlingEnabled(false);
+    connect(kioJob, &KIO::StoredTransferJob::result, this, [=]() {
+        kioJob->deleteLater();
         if (!jobPtr) {
-            reply->deleteLater();
             return;
         }
-        if (reply->error() != QNetworkReply::NoError) {
-            reply->deleteLater();
-            qWarning() << "Error:" << reply->errorString();
+
+        if (kioJob->error() == KJob::NoError) {
+            if (kioJob->redirectUrl().isValid()) {
+                job->redirect(kioJob->redirectUrl());
+            } else {
+                QBuffer *buffer = new QBuffer;
+                buffer->open(QBuffer::ReadWrite);
+                buffer->write(kioJob->data());
+                buffer->seek(0);
+                connect(buffer, &QIODevice::aboutToClose, buffer, &QObject::deleteLater);
+                job->reply(kioJob->mimetype().toUtf8(), buffer);
+            }
+        }
+        else {
             job->fail(QWebEngineUrlRequestJob::RequestFailed);
-        } else {
-            reply->setParent(job);
-            job->reply(reply->header(QNetworkRequest::ContentTypeHeader).toByteArray(), reply);
         }
     });
 }
