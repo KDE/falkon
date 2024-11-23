@@ -72,7 +72,7 @@ static QString createLanguageItem(const QString &lang)
         return lang;
     }
 
-    const QString country = QLocale::countryToString(locale.country());
+    const QString territory = QLocale::territoryToString(locale.territory());
     const QString language = QLocale::languageToString(locale.language());
 
     if (lang == QLatin1String("es_ES")) {
@@ -93,7 +93,7 @@ static QString createLanguageItem(const QString &lang)
     if (lang == QLatin1String("sr@ijekavianlatin")) {
         return QString::fromUtf8("srpski ijekavski");
     }
-    return QStringLiteral("%1, %2 (%3)").arg(language, country, lang);
+    return QStringLiteral("%1, %2 (%3)").arg(language, territory, lang);
 }
 
 Preferences::Preferences(BrowserWindow* window)

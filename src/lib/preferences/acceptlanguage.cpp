@@ -99,7 +99,7 @@ AcceptLanguage::AcceptLanguage(QWidget* parent)
             label = tr("Personal [%1]").arg(code);
         }
         else {
-            label = QSL("%1/%2 [%3]").arg(loc.languageToString(loc.language()), loc.countryToString(loc.country()), code);
+            label = QSL("%1/%2 [%3]").arg(loc.languageToString(loc.language()), loc.territoryToString(loc.territory()), code);
         }
 
         ui->listWidget->addItem(label);
@@ -114,27 +114,29 @@ AcceptLanguage::AcceptLanguage(QWidget* parent)
 QStringList AcceptLanguage::expand(const QLocale::Language &language)
 {
     QStringList allLanguages;
-    QList<QLocale::Country> countries = QLocale::countriesForLanguage(language);
-    for (int j = 0; j < countries.size(); ++j) {
+    const QList<QLocale> locales = QLocale::matchingLocales(language, QLocale::AnyScript, QLocale::AnyTerritory);
+    for (const QLocale &locale : locales) {
         QString languageString;
-        if (countries.count() == 1) {
+
+        if (locales.count() == 1) {
             languageString = QString(QLatin1String("%1 [%2]")).arg(
-                    QLocale::languageToString(language),
-                    QLocale(language).name().split(QLatin1Char('_')).at(0)
+                    QLocale::languageToString(locale.language()),
+                    locale.name().split(QL1C('_')).at(0)
             );
         }
         else {
             languageString = QString(QLatin1String("%1/%2 [%3]")).arg (
-                    QLocale::languageToString(language),
-                    QLocale::countryToString(countries.at(j)),
-                    QLocale(language, countries.at(j)).name().split(QLatin1Char('_')).join(QLatin1Char('-')).toLower()
+                    QLocale::languageToString(locale.language()),
+                    QLocale::territoryToString(locale.territory()),
+                    locale.name().replace(QL1C('_'), QL1C('-')).toLower()
             );
-
         }
+
         if (!allLanguages.contains(languageString)) {
             allLanguages.append(languageString);
         }
     }
+
     return allLanguages;
 }
 
@@ -218,6 +220,7 @@ void AcceptLanguage::accept()
     Settings settings;
     settings.beginGroup(QSL("Language"));
     settings.setValue(QSL("acceptLanguage"), langs);
+    settings.endGroup();
 
     mApp->networkManager()->loadSettings();
 
