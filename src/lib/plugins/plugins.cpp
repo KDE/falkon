@@ -189,6 +189,7 @@ PluginSpec Plugins::createSpec(const QJsonObject &metaData)
             settings.setValue(it.key(), it.value().toString());
         }
     }
+    settings.endGroup();
     settings.sync();
     return createSpec(DesktopFile(tempMetadata));
 }

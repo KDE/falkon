@@ -119,6 +119,7 @@ QString GM_Manager::requireScripts(const QStringList &urlList) const
             }
         }
     }
+    settings.endGroup();
 
     return script;
 }
@@ -276,6 +277,7 @@ void GM_Manager::load()
     QSettings settings(m_settingsPath + QL1S("/extensions.ini"), QSettings::IniFormat);
     settings.beginGroup(QSL("GreaseMonkey"));
     m_disabledScripts = settings.value(QSL("disabledScripts"), QStringList()).toStringList();
+    settings.endGroup();
 
     const auto fileNames = gmDir.entryList(QStringList(QSL("*.js")), QDir::Files);
     for (const QString &fileName : fileNames) {

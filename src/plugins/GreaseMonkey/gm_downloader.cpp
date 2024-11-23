@@ -150,6 +150,7 @@ void GM_Downloader::requireDownloaded()
     file.close();
 
     settings.setValue(m_reply->request().url().toString(), QFileInfo(m_fileName).fileName());
+    settings.endGroup();
 
     Q_EMIT finished(m_fileName);
 }
