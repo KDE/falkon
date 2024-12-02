@@ -10,6 +10,9 @@
 #include <QDialog>
 #include <QScopedPointer>
 
+class QCompleter;
+class QSqlQueryModel;
+
 namespace Ui
 {
 class SiteSettingsBrowseDialog;
@@ -28,6 +31,7 @@ public:
 
 public Q_SLOTS:
     void storeChanges();
+    void createPermission();
 
 private:
     void loadItems();
@@ -35,6 +39,8 @@ private:
     QScopedPointer<Ui::SiteSettingsBrowseDialog> m_ui;
     QHash<QString, int> m_listModifications;
     QString m_sqlColumn;
+    QCompleter *m_completer;
+    QSqlQueryModel * m_completerModel;
 };
 
 #endif // SITESETTINGSBROWSEDIALOG_H
