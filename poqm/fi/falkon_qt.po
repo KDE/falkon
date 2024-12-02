@@ -1,8 +1,8 @@
-# Tommi Nieminen <translator@legisign.org>, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-01-18 17:54+0200\n"
+"PO-Revision-Date: 2024-11-10 11:16+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -1593,28 +1593,22 @@ msgid "Unknown speed"
 msgstr "Tuntematon nopeus"
 
 #: lib/downloads/downloaditem.cpp:223
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "kB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
-msgstr "kt/s"
+msgstr "%1 kt/s"
 
 #: lib/downloads/downloaditem.cpp:228
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "MB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
-msgstr "Mt/s"
+msgstr "%1 Mt/s"
 
 #: lib/downloads/downloaditem.cpp:232
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "GB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
-msgstr "Gt/s"
+msgstr "%1 Gt/s"
 
 #: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
@@ -2310,73 +2304,75 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Varmenne ei vastaa sisään rakennettuja konenimeen yhdistettyjä julkisia "
+"avaimia."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Varmenteen yleinen nimi ei vastaa konenimeä."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Varmenne ei ole tällä ajanhetkellä kelvollinen."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "Varmennetta ei ole allekirjoittanut luotettu auktoriteetti."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Varmenteessa on virheitä."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
-msgstr ""
+msgstr "Varmenne ei sisällä tapaa määrittää, onko se mitätöity."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Tietoa varmenteen mitätöinnistä ei ole saatavilla."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "Varmenne on mitätöity."
 
 #: lib/network/networkmanager.cpp:360
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "Varmenne on kelvoton."
 
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "Varmenne on allekirjoitettu heikolla allekirjoitusalgoritmilla."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "Varmenteessa määritetty konenimi ei ole ainutkertainen."
 
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Varmenne sisältää heikon avaimen."
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
-msgstr ""
+msgstr "Varmenne ilmoittaa DNS-nimiä, jotka rikkovat nimirajoituksia."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Varmenteen kelpoisuuskausi on liian pitkä."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2384,6 +2380,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Yhteyteen vaadittiin varmenteiden läpinäkyvyyttä, mutta palvelin ei tarjoa "
+"tähän käytänteeseen kuuluvaa CT-tietoa."
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
@@ -2391,24 +2389,23 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Muun kuin laitteen omistajan tiedetään käyttävän tätä varmennetta "
+"verkkoliikenteen sieppaamiseen."
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Yhteys käyttää SSL/TLS:n vanhentunutta versiota"
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
-msgstr ""
+msgstr "Varmenne on Symantecin vanha, eikä enää kelvollinen."
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Tuntematon koko"
+msgstr "Tuntematon virhe"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3191,17 +3188,17 @@ msgstr "<b>Yhteys on salattu.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Varmennevirheet sivuutetaan <b>pysyvästi</b>."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Varmennevirhe sivuutetaan <b>väliaikaisesti</b>."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Varmenne hylättiin."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3279,12 +3276,9 @@ msgid "Media"
 msgstr "Tietoväline"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML 5 -käyttöoikeudet"
+msgstr "Käyttöoikeudet"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3332,9 +3326,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Esikatselu</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Oletus"
@@ -3342,20 +3333,14 @@ msgstr "Oletus"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Kysy"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Salli"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Kiellä"
@@ -3369,17 +3354,17 @@ msgstr "<b>Sivusto %1</b>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Varmennevirheet sivuutetaan <b>pysyvästi</b>."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Varmennevirhe sivuutetaan <b>väliaikaisesti</b>."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Varmenne hylättiin."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
@@ -3435,185 +3420,122 @@ msgid "More..."
 msgstr "Lisää…"
 
 #: lib/other/sitesettingsmanager.cpp:324
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Palauta lähennystaso"
+msgstr "Lähennystaso"
 
 #: lib/other/sitesettingsmanager.cpp:326
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Evästeet"
 
 #: lib/other/sitesettingsmanager.cpp:329 lib/other/sitesettingsmanager.cpp:354
 #: lib/other/sitesettingsmanager.cpp:394 lib/other/sitesettingsmanager.cpp:411
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Tuntematon koko"
+msgstr "Tuntematon"
 
 #: lib/other/sitesettingsmanager.cpp:337
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Ilmoitukset"
 
 #: lib/other/sitesettingsmanager.cpp:339
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Paikkasijainti"
 
 #: lib/other/sitesettingsmanager.cpp:341
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Mikrofoni"
 
 #: lib/other/sitesettingsmanager.cpp:343
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Kamera"
 
 #: lib/other/sitesettingsmanager.cpp:345
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Mikrofoni ja kamera"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Piilota kohdistin"
+msgstr "Piilota hiiriosoitin"
 
 #: lib/other/sitesettingsmanager.cpp:349
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "Käytä ruutukaappausta"
+msgstr "Ruutukaappaus"
 
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Ruutukaappaus äänellä"
 
 #: lib/other/sitesettingsmanager.cpp:362
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Päivitä sivu"
+msgstr "Lataa kuvat automaattisesti"
 
 #: lib/other/sitesettingsmanager.cpp:365
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Käytä JavaScriptiä"
+msgstr "Salli JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "avata ponnahdusikkunoita"
+msgstr "JavaScript: Ponnahdusikkunoiden avaaminen"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "käyttää leikepöytää"
+msgstr "JavaScript: Leikepöydän käyttö"
 
 #: lib/other/sitesettingsmanager.cpp:371
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Liitä leikepöydältä"
+msgstr "JavaScript: Leikepöydältä liittäminen"
 
 #: lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Aktivoi ikkunat"
+msgstr "JavaScript: Ikkunoiden aktivointi"
 
 #: lib/other/sitesettingsmanager.cpp:376
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Paikallinen talletustila"
 
 #: lib/other/sitesettingsmanager.cpp:378
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&Koko näyttö"
+msgstr "Koko näytön tuki"
 
 #: lib/other/sitesettingsmanager.cpp:380
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Suorita turvaton sisältö"
 
 #: lib/other/sitesettingsmanager.cpp:382
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Poista videoiden automaattitoisto käytöstä"
+msgstr "Videoiden automaattitoisto"
 
 #: lib/other/sitesettingsmanager.cpp:385
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Salli evästeiden tallentaminen"
+msgstr "Salli luku kankaalta"
 
 #: lib/other/sitesettingsmanager.cpp:389
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Pakota tumma tila"
 
 #: lib/other/sitesettingsmanager.cpp:402
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Salli"
@@ -3621,20 +3543,14 @@ msgstr "Salli"
 #: lib/other/sitesettingsmanager.cpp:404
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Kysy"
 
 #: lib/other/sitesettingsmanager.cpp:406
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Kiellä"
 
 #: lib/other/sitesettingsmanager.cpp:408
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Oletus"
@@ -4660,17 +4576,14 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Käytä laitteistokiihdytystä (vaatii uudelleenkäynnistyksen)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Salli evästeiden tallentaminen"
+msgstr "Salli luku kankaalta"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Pakota tumma tila"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
@@ -5008,12 +4921,9 @@ msgid "HTML5 Permissions"
 msgstr "HTML 5 -käyttöoikeudet"
 
 #: lib/preferences/preferences.ui:2179
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Asetukset"
+msgstr "Sivustoasetukset"
 
 #: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
@@ -5214,33 +5124,21 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "Muutokset tulevat voimaan Falkonin uudelleenkäynnistyksessä."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "PageScreen|"
-#| msgid "Browse..."
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Selaa…"
+msgstr "Selaa"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML 5 -käyttöoikeudet"
+msgstr "Sivuston käyttöoikeudet"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:30
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Sivusto"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:35
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Toiminta"
@@ -5248,39 +5146,27 @@ msgstr "Toiminta"
 #: lib/preferences/sitesettingsbrowsedialog.ui:45
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Kysy"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Salli"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Kiellä"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Oletus"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "PageScreen|"
-#| msgid "Browse..."
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Selaa…"
+msgstr "Selaa"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -5950,19 +5836,19 @@ msgstr "Tuntematon koko"
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kt"
 
 #: lib/tools/qztools.cpp:391
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 Mt"
 
 #: lib/tools/qztools.cpp:395
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 Gt"
 
 #: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
