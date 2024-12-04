@@ -25,6 +25,7 @@
 #include "loadrequest.h"
 #include "wheelhelper.h"
 
+class QPrinter;
 class WebPage;
 class LoadRequest;
 class WebHitTestResult;
@@ -118,6 +119,7 @@ protected Q_SLOTS:
     void slotIconChanged();
     void slotUrlChanged(const QUrl &url);
     void slotTitleChanged(const QString &title);
+    void slotPrintFinished(bool success);
 
     // Context menu slots
     void openUrlInNewWindow();
@@ -193,6 +195,8 @@ private:
     WheelHelper m_wheelHelper;
 
     static bool s_forceContextMenuOnMouseRelease;
+
+    QPrinter* m_printer;
 };
 
 #endif // WEBVIEW_H
