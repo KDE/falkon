@@ -67,6 +67,7 @@ WebView::WebView(QWidget* parent)
     connect(this, &QWebEngineView::iconChanged, this, &WebView::slotIconChanged);
     connect(this, &QWebEngineView::urlChanged, this, &WebView::slotUrlChanged);
     connect(this, &QWebEngineView::titleChanged, this, &WebView::slotTitleChanged);
+    connect(this, &QWebEngineView::printFinished, this, &WebView::slotPrintFinished);
 
     m_currentZoomLevel = zoomLevels().indexOf(100);
 
@@ -386,11 +387,11 @@ void WebView::printPage()
 {
     Q_ASSERT(m_page);
 
-    auto *printer = new QPrinter();
-    printer->setCreator(tr("Falkon %1 (%2)").arg(QString::fromLatin1(Qz::VERSION), QString::fromLatin1(Qz::WWWADDRESS)));
-    printer->setDocName(QzTools::filterCharsFromFilename(title()));
+    m_printer = new QPrinter();
+    m_printer->setCreator(tr("Falkon %1 (%2)").arg(QString::fromLatin1(Qz::VERSION), QString::fromLatin1(Qz::WWWADDRESS)));
+    m_printer->setDocName(QzTools::filterCharsFromFilename(title()));
 
-    auto *dialog = new QPrintDialog(printer, this);
+    auto *dialog = new QPrintDialog(m_printer, this);
     dialog->setOptions(QAbstractPrintDialog::PrintToFile | QAbstractPrintDialog::PrintShowPageSize);
 #ifndef Q_OS_WIN
     dialog->setOption(QAbstractPrintDialog::PrintPageRange);
@@ -402,12 +403,17 @@ void WebView::printPage()
             m_page->printToPdf(dialog->printer()->outputFileName(), dialog->printer()->pageLayout());
             delete dialog;
         } else {
-            connect(this, &QWebEngineView::printFinished, this, [&dialog](bool success) {
-                Q_UNUSED(success);
-                delete dialog;
-            });
+            print(m_printer);
+            delete dialog;
         }
     }
+}
+
+void WebView::slotPrintFinished(bool success)
+{
+    Q_UNUSED(success);
+    delete m_printer;
+    m_printer = nullptr;
 }
 
 void WebView::slotLoadStarted()
