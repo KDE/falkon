@@ -21,7 +21,10 @@
 
 // PYSIDE-711
 #include <QHstsPolicy>
+
+// Qt6
 #include <QWebEngineContextMenuRequest>
+#include <QCborStreamReader>
 
 // 3rdparty
 #include "lineedit.h"
