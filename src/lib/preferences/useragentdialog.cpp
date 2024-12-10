@@ -97,7 +97,11 @@ void UserAgentDialog::addSite()
     QString userAgent;
 
     if (showEditDialog(tr("Add new site"), &site, &userAgent)) {
-        auto* siteItem = new QTableWidgetItem(site);
+        if (site.isEmpty()) {
+            return;
+        }
+
+        auto* siteItem = new QTableWidgetItem(QUrl(site).host());
         auto* userAgentItem = new QTableWidgetItem(userAgent);
 
         int row = ui->table->rowCount();
@@ -135,7 +139,11 @@ void UserAgentDialog::editSite()
         QString userAgent = userAgentItem->text();
 
         if (showEditDialog(tr("Edit site"), &site, &userAgent)) {
-            siteItem->setText(site);
+            if (site.isEmpty()) {
+                return;
+            }
+
+            siteItem->setText(QUrl(site).host());
             userAgentItem->setText(userAgent);
         }
     }
