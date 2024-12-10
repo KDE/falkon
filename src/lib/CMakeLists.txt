@@ -253,6 +253,7 @@ set(SRCS ${SRCS}
     tools/html5permissions/html5permissionsmanager.cpp
     tools/html5permissions/html5permissionsnotification.cpp
     tools/iconprovider.cpp
+    tools/idleinhibitor.cpp
     tools/listitemdelegate.cpp
     tools/mactoolbutton.cpp
     tools/menubar.cpp
@@ -490,6 +491,7 @@ set(SRCS ${SRCS}
     tools/html5permissions/html5permissionsmanager.h
     tools/html5permissions/html5permissionsnotification.h
     tools/iconprovider.h
+    tools/idleinhibitor.h
     tools/listitemdelegate.h
     tools/mactoolbutton.h
     tools/menubar.h
