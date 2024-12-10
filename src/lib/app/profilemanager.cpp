@@ -220,6 +220,41 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
     if (prof < Updater::Version(QStringLiteral("3.1.99"))) {
         return;
     }
+
+    if (prof < Updater::Version(QStringLiteral("25.07.71"))) {
+        QSettings settings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"), QSettings::IniFormat);
+
+        settings.beginGroup(QSL("User-Agent-Settings"));
+        QStringList domainList = settings.value(QSL("DomainList"), QStringList()).toStringList();
+        QStringList userAgentsList = settings.value(QSL("UserAgentsList"), QStringList()).toStringList();
+        settings.endGroup();
+
+        if (domainList.count() == userAgentsList.count()) {
+            QStringList modifiedDomainList;
+            QStringList modifiedUserAgentsList;
+
+            for (int i = 0; i < domainList.count(); ++i) {
+                QString host = QUrl(domainList.at(i)).host();
+                if (!host.isEmpty()) {
+                    modifiedDomainList.append(host);
+                    modifiedUserAgentsList.append(userAgentsList.at(i));
+                }
+            }
+
+            settings.beginGroup(QSL("User-Agent-Settings"));
+            settings.setValue(QSL("DomainList"), modifiedDomainList);
+            settings.setValue(QSL("UserAgentsList"), modifiedUserAgentsList);
+            settings.endGroup();
+            settings.sync();
+
+            qInfo() << "ProfileManager: Updated UserAgent per domain settings";
+        }
+        else {
+            qInfo() << "ProfileManager: Unable to update UserAgent per domain settings." << Qt::endl
+                    << "Number of domains and UserAgents does not match." << Qt::endl
+                    << "UserAgents were not changed.";
+        }
+    }
 }
 
 void ProfileManager::copyDataToProfile()

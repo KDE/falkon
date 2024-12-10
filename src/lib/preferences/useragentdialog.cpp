@@ -26,6 +26,7 @@
 #include <QFormLayout>
 #include <QLineEdit>
 #include <QLabel>
+#include <QUrl>
 
 UserAgentDialog::UserAgentDialog(QWidget* parent)
     : QDialog(parent)
@@ -97,7 +98,7 @@ void UserAgentDialog::addSite()
     QString userAgent;
 
     if (showEditDialog(tr("Add new site"), &site, &userAgent)) {
-        auto* siteItem = new QTableWidgetItem(site);
+        auto* siteItem = new QTableWidgetItem(QUrl(site).host());
         auto* userAgentItem = new QTableWidgetItem(userAgent);
 
         int row = ui->table->rowCount();
@@ -135,7 +136,7 @@ void UserAgentDialog::editSite()
         QString userAgent = userAgentItem->text();
 
         if (showEditDialog(tr("Edit site"), &site, &userAgent)) {
-            siteItem->setText(site);
+            siteItem->setText(QUrl(site).host());
             userAgentItem->setText(userAgent);
         }
     }
