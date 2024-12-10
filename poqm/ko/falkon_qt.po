@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-11-29 01:14+0100\n"
+"PO-Revision-Date: 2024-12-09 23:29+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -2291,73 +2291,74 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"지정한 호스트 이름에 고정되어 있는 내장 공개 키와 인증서가 일치하지 않습니다."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "인증서의 공통 이름이 호스트 이름과 다릅니다."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "인증서가 현재 날짜와 시간에 유효하지 않습니다."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "인증서가 신뢰된 인증 기관에 의해서 서명되지 않았습니다."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "인증서에 오류가 있습니다."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
-msgstr ""
+msgstr "인증서에 취소 여부를 확인할 수 있는 방법이 없습니다."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "인증서의 취소 정보를 사용할 수 없습니다."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "인증서가 취소되었습니다."
 
 #: lib/network/networkmanager.cpp:360
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "인증서가 잘못되었습니다."
 
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "인증서가 약한 서명 알고리즘으로 서명되었습니다."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "인증서에 지정된 호스트 이름이 유일하지 않습니다."
 
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "인증서에 약한 키가 포함되어 있습니다."
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
-msgstr ""
+msgstr "인증서에 포함된 DNS 이름이 제약 조건을 위반합니다."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "인증서의 유효 기간이 너무 깁니다."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2365,23 +2366,25 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"이 연결에는 인증서 투명성이 필요하지만 서버에서 정책과 일치하는 인증서 투명"
+"성 정보를 제공하지 않았습니다."
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
-msgstr ""
+msgstr "인증서를 장치 소유자 이외의 제3자가 도청하는 데 사용할 수 있습니다."
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "연결에서 오래된 SSL/TLS 버전 사용 중"
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
-msgstr ""
+msgstr "인증서가 레거시 시만텍 인증서이며 더 이상 유효하지 않습니다."
 
 #: lib/network/networkmanager.cpp:381
 msgctxt "NetworkManager|"
