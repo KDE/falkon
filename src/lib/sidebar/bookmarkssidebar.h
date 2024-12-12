@@ -52,6 +52,9 @@ private Q_SLOTS:
     void deleteBookmarks();
     void createContextMenu(const QPoint &pos);
 
+    void onCurrentChanged(const QList<BookmarkItem*> &items);
+    void onEntered(const QModelIndex& index);
+
 private:
     void showEvent(QShowEvent *event) override;
 

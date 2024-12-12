@@ -27,6 +27,7 @@
 #include "qzsettings.h"
 #include "sqldatabase.h"
 #include "closedwindowsmanager.h"
+#include "statusbar.h"
 
 #include <QApplication>
 #include <QWebEngineHistory>
@@ -104,12 +105,18 @@ void HistoryMenu::aboutToShow()
         connect(act, &QAction::triggered, this, &HistoryMenu::historyEntryActivated);
         connect(act, &Action::ctrlTriggered, this, &HistoryMenu::historyEntryCtrlActivated);
         connect(act, &Action::shiftTriggered, this, &HistoryMenu::historyEntryShiftActivated);
+        connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), [=]() {
+            mApp->getWindow()->statusBar()->showMessage(url.toString());
+        });
+
         addAction(act);
     }
 }
 
 void HistoryMenu::aboutToHide()
 {
+    clearStatusbar();
+
     // Enable Back/Forward actions to ensure shortcuts are working
     actions().at(0)->setEnabled(true);
     actions().at(1)->setEnabled(true);
@@ -128,6 +135,10 @@ void HistoryMenu::aboutToShowMostVisited()
         connect(act, &QAction::triggered, this, &HistoryMenu::historyEntryActivated);
         connect(act, &Action::ctrlTriggered, this, &HistoryMenu::historyEntryCtrlActivated);
         connect(act, &Action::shiftTriggered, this, &HistoryMenu::historyEntryShiftActivated);
+        connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), [=]() {
+            mApp->getWindow()->statusBar()->showMessage(entry.url.toString());
+        });
+
         m_menuMostVisited->addAction(act);
     }
 
@@ -231,6 +242,11 @@ void HistoryMenu::openUrlInNewWindow(const QUrl &url)
     mApp->createWindow(Qz::BW_NewWindow, url);
 }
 
+void HistoryMenu::clearStatusbar()
+{
+    mApp->getWindow()->statusBar()->clearMessage();
+}
+
 void HistoryMenu::init()
 {
     setTitle(tr("Hi&story"));
@@ -254,6 +270,7 @@ void HistoryMenu::init()
 
     m_menuMostVisited = new Menu(tr("Most Visited"), this);
     connect(m_menuMostVisited, &QMenu::aboutToShow, this, &HistoryMenu::aboutToShowMostVisited);
+    connect(m_menuMostVisited, &QMenu::aboutToHide, this, &HistoryMenu::clearStatusbar);
 
     m_menuClosedTabs = new Menu(tr("Closed Tabs"));
     connect(m_menuClosedTabs, &QMenu::aboutToShow, this, &HistoryMenu::aboutToShowClosedTabs);
@@ -261,7 +278,12 @@ void HistoryMenu::init()
     m_menuClosedWindows = new Menu(tr("Closed Windows"));
     connect(m_menuClosedWindows, &QMenu::aboutToShow, this, &HistoryMenu::aboutToShowClosedWindows);
 
-    addMenu(m_menuMostVisited);
-    addMenu(m_menuClosedTabs);
-    addMenu(m_menuClosedWindows);
+    act = addMenu(m_menuMostVisited);
+    connect(act, &QAction::hovered, this, &HistoryMenu::clearStatusbar);
+
+    act = addMenu(m_menuClosedTabs);
+    connect(act, &QAction::hovered, this, &HistoryMenu::clearStatusbar);
+
+    act = addMenu(m_menuClosedWindows);
+    connect(act, &QAction::hovered, this, &HistoryMenu::clearStatusbar);
 }

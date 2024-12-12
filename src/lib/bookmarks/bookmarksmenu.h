@@ -43,6 +43,7 @@ private Q_SLOTS:
     void bookmarksChanged();
     void aboutToShow();
     void menuAboutToShow();
+    void menuAboutToHide();
     void menuMiddleClicked(Menu* menu);
 
     void bookmarkActivated();

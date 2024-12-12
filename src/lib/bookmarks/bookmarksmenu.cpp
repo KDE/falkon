@@ -25,6 +25,7 @@
 #include "qzsettings.h"
 #include "tabwidget.h"
 #include "iconprovider.h"
+#include "statusbar.h"
 
 BookmarksMenu::BookmarksMenu(QWidget* parent)
     : Menu(parent)
@@ -91,6 +92,11 @@ void BookmarksMenu::menuAboutToShow()
             action->setIcon(item->icon());
         }
     }
+}
+
+void BookmarksMenu::menuAboutToHide()
+{
+    mApp->getWindow()->statusBar()->clearMessage();
 }
 
 void BookmarksMenu::menuMiddleClicked(Menu* menu)
@@ -173,6 +179,7 @@ void BookmarksMenu::init()
     connect(this, SIGNAL(aboutToShow()), this, SLOT(aboutToShow()));
     connect(this, SIGNAL(aboutToShow()), this, SLOT(menuAboutToShow()));
     connect(this, SIGNAL(menuMiddleClicked(Menu*)), this, SLOT(menuMiddleClicked(Menu*)));
+    connect(this, &QMenu::aboutToHide, this, &BookmarksMenu::menuAboutToHide);
 }
 
 void BookmarksMenu::refresh()

@@ -31,6 +31,7 @@
 #include "abstractbuttoninterface.h"
 #include "navigationbartoolbutton.h"
 #include "navigationbarconfigdialog.h"
+#include "statusbar.h"
 
 #include <QTimer>
 #include <QSplitter>
@@ -382,6 +383,9 @@ void NavigationBar::aboutToShowHistoryBackMenu()
             act->setData(i);
             connect(act, &QAction::triggered, this, &NavigationBar::loadHistoryIndex);
             connect(act, SIGNAL(ctrlTriggered()), this, SLOT(loadHistoryIndexInNewTab()));
+            connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), [=]() {
+                mApp->getWindow()->statusBar()->showMessage(item.url().toString());
+            });
             m_menuBack->addAction(act);
         }
 
@@ -392,7 +396,9 @@ void NavigationBar::aboutToShowHistoryBackMenu()
     }
 
     m_menuBack->addSeparator();
-    m_menuBack->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear history"), this, &NavigationBar::clearHistory);
+    auto *act = m_menuBack->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear history"), this, &NavigationBar::clearHistory);
+    connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), &StatusBar::clearMessage);
+    connect(m_menuBack, &QMenu::aboutToHide, mApp->getWindow()->statusBar(), &StatusBar::clearMessage);
 }
 
 void NavigationBar::aboutToShowHistoryNextMenu()
@@ -416,6 +422,9 @@ void NavigationBar::aboutToShowHistoryNextMenu()
             act->setData(i);
             connect(act, &QAction::triggered, this, &NavigationBar::loadHistoryIndex);
             connect(act, SIGNAL(ctrlTriggered()), this, SLOT(loadHistoryIndexInNewTab()));
+            connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), [=]() {
+                mApp->getWindow()->statusBar()->showMessage(item.url().toString());
+            });
             m_menuForward->addAction(act);
         }
 
@@ -426,7 +435,9 @@ void NavigationBar::aboutToShowHistoryNextMenu()
     }
 
     m_menuForward->addSeparator();
-    m_menuForward->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear history"), this, &NavigationBar::clearHistory);
+    auto *act = m_menuForward->addAction(QIcon::fromTheme(QSL("edit-clear")), tr("Clear history"), this, &NavigationBar::clearHistory);
+    connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), &StatusBar::clearMessage);
+    connect(m_menuForward, &QMenu::aboutToHide, mApp->getWindow()->statusBar(), &StatusBar::clearMessage);
 }
 
 void NavigationBar::aboutToShowToolsMenu()
