@@ -55,6 +55,8 @@ private Q_SLOTS:
     void openUrlInNewTab(const QUrl &url);
     void openUrlInNewWindow(const QUrl &url);
 
+    void clearStatusbar();
+
 private:
     void init();
 

@@ -50,6 +50,9 @@ private Q_SLOTS:
 
     void createContextMenu(const QPoint &pos);
 
+    void onCurrentChanged(const QModelIndex &current, const QModelIndex &previous);
+    void showSidebarHint(const QModelIndex& index);
+
 private:
     void showEvent(QShowEvent *event) override;
 

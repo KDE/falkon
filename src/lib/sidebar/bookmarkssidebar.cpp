@@ -22,6 +22,9 @@
 #include "bookmarks.h"
 #include "mainapplication.h"
 #include "iconprovider.h"
+#include "statusbar.h"
+
+#include "bookmarksmodel.h"
 
 #include <QMenu>
 
@@ -38,6 +41,9 @@ BookmarksSidebar::BookmarksSidebar(BrowserWindow* window, QWidget* parent)
     connect(ui->tree, &BookmarksTreeView::bookmarkCtrlActivated, this, &BookmarksSidebar::bookmarkCtrlActivated);
     connect(ui->tree, &BookmarksTreeView::bookmarkShiftActivated, this, &BookmarksSidebar::bookmarkShiftActivated);
     connect(ui->tree, &BookmarksTreeView::contextMenuRequested, this, &BookmarksSidebar::createContextMenu);
+
+    connect(ui->tree, &BookmarksTreeView::bookmarksSelected, this, &BookmarksSidebar::onCurrentChanged);
+    connect(ui->tree, &QTreeView::entered, this, &BookmarksSidebar::onEntered);
 
     connect(ui->search, &QLineEdit::textChanged, ui->tree, &BookmarksTreeView::search);
 }
@@ -139,4 +145,31 @@ void BookmarksSidebar::showEvent(QShowEvent *event)
 {
     QWidget::showEvent(event);
     ui->search->setFocus();
+}
+
+void BookmarksSidebar::onCurrentChanged(const QList<BookmarkItem*> &items)
+{
+    if (items.count() > 0) {
+        auto item = items.first();
+
+        if (item->isUrl()) {
+            mApp->getWindow()->statusBar()->showMessage(item->url().toString());
+        }
+        else {
+            mApp->getWindow()->statusBar()->clearMessage();
+        }
+    }
+}
+
+void BookmarksSidebar::onEntered(const QModelIndex& index)
+{
+    if (index.isValid()) {
+        if (index.data(BookmarksModel::TypeRole).toInt() == BookmarkItem::Url) {
+            auto url = index.data(BookmarksModel::UrlStringRole).toString();
+            mApp->getWindow()->statusBar()->showMessage(url);
+        }
+        else {
+            mApp->getWindow()->statusBar()->clearMessage();
+        }
+    }
 }

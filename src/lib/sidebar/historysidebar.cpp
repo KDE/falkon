@@ -23,6 +23,10 @@
 #include "mainapplication.h"
 #include "qzsettings.h"
 #include "iconprovider.h"
+#include "historymodel.h"
+#include "statusbar.h"
+
+#include <QItemSelectionModel>
 
 HistorySideBar::HistorySideBar(BrowserWindow* window, QWidget* parent)
     : QWidget(parent)
@@ -36,6 +40,9 @@ HistorySideBar::HistorySideBar(BrowserWindow* window, QWidget* parent)
     connect(ui->historyTree, &HistoryTreeView::urlCtrlActivated, this, &HistorySideBar::urlCtrlActivated);
     connect(ui->historyTree, &HistoryTreeView::urlShiftActivated, this, &HistorySideBar::urlShiftActivated);
     connect(ui->historyTree, &HistoryTreeView::contextMenuRequested, this, &HistorySideBar::createContextMenu);
+
+    connect(ui->historyTree, &QTreeView::entered, this, &HistorySideBar::showSidebarHint);
+    connect(ui->historyTree->selectionModel(), &QItemSelectionModel::currentChanged, this, &HistorySideBar::onCurrentChanged);
 
     connect(ui->search, &QLineEdit::textEdited, ui->historyTree, &HistoryTreeView::search);
 }
@@ -107,6 +114,18 @@ void HistorySideBar::showEvent(QShowEvent *event)
 {
     QWidget::showEvent(event);
     ui->search->setFocus();
+}
+
+void HistorySideBar::onCurrentChanged(const QModelIndex& current, const QModelIndex& previous)
+{
+    Q_UNUSED(previous)
+    showSidebarHint(current);
+}
+
+void HistorySideBar::showSidebarHint(const QModelIndex& index)
+{
+    const QUrl url = index.data(HistoryModel::UrlRole).toUrl();
+    mApp->getWindow()->statusBar()->showMessage(url.toString());
 }
 
 HistorySideBar::~HistorySideBar()
