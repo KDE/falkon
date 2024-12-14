@@ -473,6 +473,12 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
                 settings()->setAttribute(QWebEngineSettings::AllowGeolocationOnInsecureOrigins, false);
                 settings()->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, mApp->webSettings()->testAttribute(QWebEngineSettings::PlaybackRequiresUserGesture));
                 settings()->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, false);
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+                settings()->setAttribute(QWebEngineSettings::ReadingFromCanvasEnabled, mApp->webSettings()->testAttribute(QWebEngineSettings::ReadingFromCanvasEnabled));
+#endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+                settings()->setAttribute(QWebEngineSettings::ForceDarkMode, mApp->webSettings()->testAttribute(QWebEngineSettings::ForceDarkMode));
+#endif
             }
         }
         Q_EMIT navigationRequestAccepted(url, type, isMainFrame);
