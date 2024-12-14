@@ -403,11 +403,7 @@ void ProfileManager::updateDatabase()
         };
         QHash<QString, SiteSettingsManager::SiteSettings> siteSettings;
 
-        /* Copied from mainapplication.cpp */
-        Settings::createSettings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"));
-        /* End of copied code */
-
-        Settings settings;
+        QSettings settings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"), QSettings::IniFormat);
 
         /* HTML5 permissions */
         settings.beginGroup(QSL("HTML5Notifications"));
