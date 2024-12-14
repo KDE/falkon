@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-10-17 18:30+0200\n"
+"PO-Revision-Date: 2024-12-08 17:15+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2315,11 +2315,13 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Il certificato non corrisponde alla chiave pubblica incorporata che è stata "
+"appuntata per il nome host."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Il nome comune del certificato non corrisponde al nome host."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
@@ -2378,6 +2380,7 @@ msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
 msgstr ""
+"Il certificato ha rivendicato dei nomi DNS che violano i vincoli sul nome."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
@@ -2390,6 +2393,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Per questa connessione è richiesta la trasparenza del certificato, ma il "
+"server non fornisce informazioni che rispettano la politica."
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
@@ -3538,12 +3543,9 @@ msgid "Automatic playing of videos"
 msgstr "Riproduzione automatica dei video"
 
 #: lib/other/sitesettingsmanager.cpp:385
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Permetti il salvataggio dei cookie"
+msgstr "Permetti la lettura dai canvas"
 
 #: lib/other/sitesettingsmanager.cpp:389
 msgctxt "SiteSettingsManager|"
@@ -4596,12 +4598,9 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Usa l'accelerazione hardware (richiede il riavvio)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Permetti il salvataggio dei cookie"
+msgstr "Permetti la lettura dai canvas"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
