@@ -5154,40 +5154,62 @@ msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
 msgstr "Навігація"
 
+#: lib/preferences/sitesettingsbrowsedialog.cpp:36
+#: lib/preferences/sitesettingsbrowsedialog.ui:96
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Ask"
+msgstr "Питати"
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:37
+#: lib/preferences/sitesettingsbrowsedialog.ui:103
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Allow"
+msgstr "Дозволяти"
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:38
+#: lib/preferences/sitesettingsbrowsedialog.ui:110
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Deny"
+msgstr "Забороняти"
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:39
+#: lib/preferences/sitesettingsbrowsedialog.ui:117
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Default"
+msgstr "Типовий"
+
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
 msgstr "Права доступу для сайта"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:30
+#: lib/preferences/sitesettingsbrowsedialog.ui:22
+#, fuzzy
+#| msgctxt "EditSearchEngine|"
+#| msgid "Url:"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Url:"
+msgstr "Url-адреса:"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:29
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "https://kde.org"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:48
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Set"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:65
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Сайт"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:35
+#: lib/preferences/sitesettingsbrowsedialog.ui:70
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Поведінка"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:45
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Ask"
-msgstr "Питати"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:52
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Allow"
-msgstr "Дозволяти"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:59
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Deny"
-msgstr "Забороняти"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:66
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Default"
-msgstr "Типовий"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
 msgctxt "SiteSettingsHtml5Item|"
@@ -5946,22 +5968,22 @@ msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Перезавантажити сторінку"
 
-#: lib/webengine/webpage.cpp:504
+#: lib/webengine/webpage.cpp:510
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Оберіть файл…"
 
-#: lib/webengine/webpage.cpp:508
+#: lib/webengine/webpage.cpp:514
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Оберіть файли…"
 
-#: lib/webengine/webpage.cpp:644
+#: lib/webengine/webpage.cpp:650
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Тривога JavaScript"
 
-#: lib/webengine/webpage.cpp:653
+#: lib/webengine/webpage.cpp:659
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Перешкоджати створенню додаткових діалогів на цій сторінці"

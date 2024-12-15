@@ -5286,6 +5286,39 @@ msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
 msgstr "Naršymas"
 
+#: lib/preferences/sitesettingsbrowsedialog.cpp:36
+#: lib/preferences/sitesettingsbrowsedialog.ui:96
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Ask"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:37
+#: lib/preferences/sitesettingsbrowsedialog.ui:103
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Allow"
+msgstr "Leisti"
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:38
+#: lib/preferences/sitesettingsbrowsedialog.ui:110
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Deny"
+msgstr "Atmesti"
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:39
+#: lib/preferences/sitesettingsbrowsedialog.ui:117
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Default"
+msgstr "Numatytasis"
+
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
 #, fuzzy
 #| msgctxt "Preferences|"
@@ -5294,7 +5327,25 @@ msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
 msgstr "HTML5 leidimai"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:30
+#: lib/preferences/sitesettingsbrowsedialog.ui:22
+#, fuzzy
+#| msgctxt "EditSearchEngine|"
+#| msgid "Url:"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Url:"
+msgstr "Url:"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:29
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "https://kde.org"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:48
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Set"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:65
 #, fuzzy
 #| msgctxt "ProtocolHandlerDialog|"
 #| msgid "Site"
@@ -5302,42 +5353,13 @@ msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Svetainė"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:35
+#: lib/preferences/sitesettingsbrowsedialog.ui:70
 #, fuzzy
 #| msgctxt "HTML5PermissionsDialog|"
 #| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Elgsena"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:45
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Ask"
-msgstr ""
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Allow"
-msgstr "Leisti"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Deny"
-msgstr "Atmesti"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Default"
-msgstr "Numatytasis"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
 #, fuzzy
@@ -6104,22 +6126,22 @@ msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Įkelti puslapį iš naujo"
 
-#: lib/webengine/webpage.cpp:504
+#: lib/webengine/webpage.cpp:510
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Pasirinkite failą..."
 
-#: lib/webengine/webpage.cpp:508
+#: lib/webengine/webpage.cpp:514
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Pasirinkti failus..."
 
-#: lib/webengine/webpage.cpp:644
+#: lib/webengine/webpage.cpp:650
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript įspėjimas"
 
-#: lib/webengine/webpage.cpp:653
+#: lib/webengine/webpage.cpp:659
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Neleisti šiam puslapiui kurti papildomų dialogų"

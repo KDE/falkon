@@ -5142,40 +5142,62 @@ msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
 msgstr "დათვალიერება"
 
+#: lib/preferences/sitesettingsbrowsedialog.cpp:36
+#: lib/preferences/sitesettingsbrowsedialog.ui:96
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Ask"
+msgstr "კითხვა"
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:37
+#: lib/preferences/sitesettingsbrowsedialog.ui:103
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Allow"
+msgstr "დაშვება"
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:38
+#: lib/preferences/sitesettingsbrowsedialog.ui:110
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Deny"
+msgstr "უარყოფა"
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:39
+#: lib/preferences/sitesettingsbrowsedialog.ui:117
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Default"
+msgstr "ნაგულისხმევი"
+
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
 msgstr "საიტის უფლებები"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:30
+#: lib/preferences/sitesettingsbrowsedialog.ui:22
+#, fuzzy
+#| msgctxt "EditSearchEngine|"
+#| msgid "Url:"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Url:"
+msgstr "URL:"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:29
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "https://kde.org"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:48
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Set"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:65
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "საიტი"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:35
+#: lib/preferences/sitesettingsbrowsedialog.ui:70
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "ქცევა"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:45
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Ask"
-msgstr "კითხვა"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:52
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Allow"
-msgstr "დაშვება"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:59
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Deny"
-msgstr "უარყოფა"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:66
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Default"
-msgstr "ნაგულისხმევი"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
 msgctxt "SiteSettingsHtml5Item|"
@@ -5933,22 +5955,22 @@ msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "გვერდის გადატვირთვა"
 
-#: lib/webengine/webpage.cpp:504
+#: lib/webengine/webpage.cpp:510
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "აირჩიეთ ფაილი..."
 
-#: lib/webengine/webpage.cpp:508
+#: lib/webengine/webpage.cpp:514
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "აირჩიეთ ფაილები..."
 
-#: lib/webengine/webpage.cpp:644
+#: lib/webengine/webpage.cpp:650
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript -ის განგაში"
 
-#: lib/webengine/webpage.cpp:653
+#: lib/webengine/webpage.cpp:659
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "ამ გვერდისთვის დამატებითი ფანჯრების ჩვენების აკრძალვა"

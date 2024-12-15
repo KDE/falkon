@@ -5218,6 +5218,39 @@ msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
 msgstr "Velja..."
 
+#: lib/preferences/sitesettingsbrowsedialog.cpp:36
+#: lib/preferences/sitesettingsbrowsedialog.ui:96
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Ask"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:37
+#: lib/preferences/sitesettingsbrowsedialog.ui:103
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Allow"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Allow"
+msgstr "Leyfa"
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:38
+#: lib/preferences/sitesettingsbrowsedialog.ui:110
+#, fuzzy
+#| msgctxt "HTML5PermissionsDialog|"
+#| msgid "Deny"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Deny"
+msgstr "Neita"
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:39
+#: lib/preferences/sitesettingsbrowsedialog.ui:117
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Default"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Default"
+msgstr "Sjálfgefið"
+
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
 #, fuzzy
 #| msgctxt "Preferences|"
@@ -5226,7 +5259,25 @@ msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
 msgstr "HTML5 heimildir"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:30
+#: lib/preferences/sitesettingsbrowsedialog.ui:22
+#, fuzzy
+#| msgctxt "EditSearchEngine|"
+#| msgid "Url:"
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Url:"
+msgstr "Slóð:"
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:29
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "https://kde.org"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:48
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Set"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:65
 #, fuzzy
 #| msgctxt "ProtocolHandlerDialog|"
 #| msgid "Site"
@@ -5234,42 +5285,13 @@ msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Vefsvæði"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:35
+#: lib/preferences/sitesettingsbrowsedialog.ui:70
 #, fuzzy
 #| msgctxt "HTML5PermissionsDialog|"
 #| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Hegðun"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:45
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Ask"
-msgstr ""
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:52
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Allow"
-msgstr "Leyfa"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:59
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Deny"
-msgstr "Neita"
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:66
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Default"
-msgstr "Sjálfgefið"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
 #, fuzzy
@@ -6031,22 +6053,22 @@ msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Endurlesa síðu"
 
-#: lib/webengine/webpage.cpp:504
+#: lib/webengine/webpage.cpp:510
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Veldu skrá..."
 
-#: lib/webengine/webpage.cpp:508
+#: lib/webengine/webpage.cpp:514
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Veldu skrár..."
 
-#: lib/webengine/webpage.cpp:644
+#: lib/webengine/webpage.cpp:650
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Aðvörun vegna JavaScript"
 
-#: lib/webengine/webpage.cpp:653
+#: lib/webengine/webpage.cpp:659
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Koma í veg fyrir að þessi síða útbúi auka-samskiptaglugga"

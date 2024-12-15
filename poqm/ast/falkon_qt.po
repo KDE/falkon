@@ -5059,39 +5059,58 @@ msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
 msgstr ""
 
+#: lib/preferences/sitesettingsbrowsedialog.cpp:36
+#: lib/preferences/sitesettingsbrowsedialog.ui:96
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Ask"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:37
+#: lib/preferences/sitesettingsbrowsedialog.ui:103
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Allow"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:38
+#: lib/preferences/sitesettingsbrowsedialog.ui:110
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Deny"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.cpp:39
+#: lib/preferences/sitesettingsbrowsedialog.ui:117
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Default"
+msgstr ""
+
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
 msgstr ""
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:30
+#: lib/preferences/sitesettingsbrowsedialog.ui:22
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Url:"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:29
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "https://kde.org"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:48
+msgctxt "SiteSettingsBrowseDialog|"
+msgid "Set"
+msgstr ""
+
+#: lib/preferences/sitesettingsbrowsedialog.ui:65
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr ""
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:35
+#: lib/preferences/sitesettingsbrowsedialog.ui:70
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
-msgstr ""
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:45
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Ask"
-msgstr ""
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:52
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Allow"
-msgstr ""
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:59
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Deny"
-msgstr ""
-
-#: lib/preferences/sitesettingsbrowsedialog.ui:66
-msgctxt "SiteSettingsBrowseDialog|"
-msgid "Default"
 msgstr ""
 
 #: lib/preferences/sitesettingshtml5item.ui:42
@@ -5843,22 +5862,22 @@ msgctxt "WebPage|"
 msgid "Reload page"
 msgstr ""
 
-#: lib/webengine/webpage.cpp:504
+#: lib/webengine/webpage.cpp:510
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr ""
 
-#: lib/webengine/webpage.cpp:508
+#: lib/webengine/webpage.cpp:514
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr ""
 
-#: lib/webengine/webpage.cpp:644
+#: lib/webengine/webpage.cpp:650
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr ""
 
-#: lib/webengine/webpage.cpp:653
+#: lib/webengine/webpage.cpp:659
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr ""
