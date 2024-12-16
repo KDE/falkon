@@ -1,20 +1,19 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: falkon_statusbaricons_qt\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
-"Language: sa\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
-"Plural-Forms: nplurals=2; plural=(n>1);\n"
 
 #: sbi_imagesicon.cpp:34
 msgctxt "SBI_ImagesIcon|"
 msgid "Modify images loading settings per-site and globally"
-msgstr "प्रति-स्थले वैश्विकरूपेण च चित्र-भार-सेटिंग्स् परिवर्तयन्तु"
+msgstr "प्रति-साइट और वैश्विक स्तर पर छवि लोडिंग सेटिंग संशोधित करें"
 
 #: sbi_imagesicon.cpp:58
 msgctxt "SBI_ImagesIcon|"
@@ -24,27 +23,27 @@ msgstr "वर्तमान पृष्ठ सेटिंग्स"
 #: sbi_imagesicon.cpp:61
 msgctxt "SBI_ImagesIcon|"
 msgid "Disable loading images (temporarily)"
-msgstr "चित्राणि लोडं कर्तुं निष्क्रियं कुर्वन्तु (अस्थायीरूपेण)"
+msgstr "छवियाँ लोड करना अक्षम करें (अस्थायी रूप से)"
 
 #: sbi_imagesicon.cpp:64
 msgctxt "SBI_ImagesIcon|"
 msgid "Enable loading images (temporarily)"
-msgstr "चित्राणि लोड् कर्तुं सक्षमं कुर्वन्तु (अस्थायीरूपेण)"
+msgstr "छवियाँ लोड करना सक्षम करें (अस्थायी रूप से)"
 
 #: sbi_imagesicon.cpp:68
 msgctxt "SBI_ImagesIcon|"
 msgid "Global Settings"
-msgstr "वैश्विक सेटिंग्स्"
+msgstr "वैश्विक सेटिंग्स"
 
 #: sbi_imagesicon.cpp:70
 msgctxt "SBI_ImagesIcon|"
 msgid "Automatically load images"
-msgstr "स्वयमेव चित्राणि लोडयन्तु"
+msgstr "स्वचालित रूप से छवियाँ लोड करें"
 
 #: sbi_javascripticon.cpp:35
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Modify JavaScript settings per-site and globally"
-msgstr "प्रति-साइट् तथा वैश्विकरूपेण जावास्क्रिप्ट् सेटिंग्स् परिवर्तयन्तु"
+msgstr "प्रति-साइट और वैश्विक स्तर पर JavaScript सेटिंग संशोधित करें"
 
 #: sbi_javascripticon.cpp:52
 msgctxt "SBI_JavaScriptIcon|"
@@ -54,42 +53,42 @@ msgstr "वर्तमान पृष्ठ सेटिंग्स"
 #: sbi_javascripticon.cpp:55
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Disable JavaScript (temporarily)"
-msgstr "जावास्क्रिप्ट् निष्क्रियं कुर्वन्तु (अस्थायीरूपेण) ."
+msgstr "जावास्क्रिप्ट अक्षम करें (अस्थायी रूप से)"
 
 #: sbi_javascripticon.cpp:58
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Enable JavaScript (temporarily)"
-msgstr "जावास्क्रिप्ट् सक्षमं कुर्वन्तु (अस्थायीरूपेण)"
+msgstr "जावास्क्रिप्ट सक्षम करें (अस्थायी रूप से)"
 
 #: sbi_javascripticon.cpp:67
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Global Settings"
-msgstr "वैश्विक सेटिंग्स्"
+msgstr "वैश्विक सेटिंग्स"
 
 #: sbi_javascripticon.cpp:68
 msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
-msgstr "जावास्क्रिप्ट् सेटिंग्स् प्रबन्धयन्तु"
+msgstr "जावास्क्रिप्ट सेटिंग प्रबंधित करें"
 
 #: sbi_networkicon.cpp:62
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
-msgstr "प्रॉक्सी विन्यासः"
+msgstr "प्रॉक्सी कॉन्फ़िगरेशन"
 
 #: sbi_networkicon.cpp:64
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
-msgstr "प्रॉक्सी चिनोतु"
+msgstr "प्रॉक्सी चुनें"
 
 #: sbi_networkicon.cpp:78
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
-msgstr "रिक्तम्‌"
+msgstr "खाली"
 
 #: sbi_networkicon.cpp:82
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
-msgstr "प्रॉक्सी प्रबन्धयन्तु"
+msgstr "प्रॉक्सी प्रबंधित करें"
 
 #: sbi_networkicon.cpp:95
 #, qt-format
@@ -98,78 +97,78 @@ msgid ""
 "Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
 "><br/><b>Proxy:</b><br/>%2"
 msgstr ""
-"संजालस्य स्थितिं दर्शयति, प्रॉक्सी च प्रबन्धयति<br/><br/> <b>जाल:</b><br/> %1<br/><br/"
-"> <b>प्रॉक्सी : १.</b><br/> %2"
+"नेटवर्क स्थिति दिखाता है और प्रॉक्सी प्रबंधित करता है<br/><br/> <b>नेटवर्क:</b><br/> "
+"%1<br/><br/> <b>प्रॉक्सी:</b><br/> %2"
 
 #: sbi_networkicon.cpp:99
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected"
-msgstr "संबद्धः"
+msgstr "जुड़े हुए"
 
 #: sbi_networkicon.cpp:103
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
-msgstr "प्रणाली प्रॉक्सी"
+msgstr "सिस्टम प्रॉक्सी"
 
 #: sbi_networkicon.cpp:107
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
-msgstr "न प्रॉक्सी"
+msgstr "कोई प्रॉक्सी नहीं"
 
 #: sbi_networkicon.cpp:111
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
-msgstr "उपयोक्ता परिभाषितम्"
+msgstr "उपयोगकर्ता परिभाषित"
 
 #: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Add proxy"
-msgstr "प्रॉक्सी योजयन्तु"
+msgstr "प्रॉक्सी जोड़ें"
 
 #: sbi_networkicondialog.cpp:57
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Name of proxy:"
-msgstr "प्रॉक्सी इत्यस्य नाम : १."
+msgstr "प्रॉक्सी का नाम:"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove current proxy"
-msgstr "वर्तमान प्रॉक्सी निष्कासयन्तु"
+msgstr "वर्तमान प्रॉक्सी हटाएँ"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Are you sure you want to remove current proxy?"
-msgstr "किं भवान् निश्चितः अस्ति यत् भवान् वर्तमानं प्रॉक्सी हर्तुं इच्छति?"
+msgstr "क्या आप वाकई वर्तमान प्रॉक्सी हटाना चाहते हैं?"
 
 #: sbi_networkicondialog.ui:14
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Proxy Manager"
-msgstr "प्रॉक्सी प्रबन्धक"
+msgstr "प्रॉक्सी प्रबंधक"
 
 #: sbi_networkicondialog.ui:28
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Select proxy: "
-msgstr "प्रॉक्सी चिनोतु : १. "
+msgstr "प्रॉक्सी चुनें:"
 
 #: sbi_networkicondialog.ui:45
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove proxy"
-msgstr "प्रॉक्सी निष्कासित करें"
+msgstr "प्रॉक्सी हटाएँ"
 
 #: sbi_networkicondialog.ui:69
 msgctxt "SBI_NetworkIconDialog|"
 msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
-msgstr "न प्रॉक्सी। <b>Add</b> इति बटन् नुत्वा भवान् प्रॉक्सी योजयितुं शक्नोति ।"
+msgstr "कोई प्रॉक्सी नहीं। आप <b>Add</b> बटन पर क्लिक करके प्रॉक्सी जोड़ सकते हैं।"
 
 #: sbi_networkicondialog.ui:104
 msgctxt "SBI_NetworkIconDialog|"
 msgid "All changes must be saved with <b>Save</b> button."
-msgstr "सर्वाणि परिवर्तनानि <b>Save</b> बटनेन सह रक्षितव्यानि।"
+msgstr "सभी परिवर्तन <b>सेव</b> बटन से सहेजे जाने चाहिए।"
 
 #: sbi_proxywidget.ui:14
 msgctxt "SBI_ProxyWidget|"
 msgid "Form"
-msgstr "आवेदनपत्रं"
+msgstr "रूप"
 
 #: sbi_proxywidget.ui:23
 msgctxt "SBI_ProxyWidget|"
@@ -179,52 +178,52 @@ msgstr "एचटीटीपी"
 #: sbi_proxywidget.ui:28
 msgctxt "SBI_ProxyWidget|"
 msgid "SOCKS5"
-msgstr "SOCKS5"
+msgstr "सॉक्स5"
 
 #: sbi_proxywidget.ui:39
 msgctxt "SBI_ProxyWidget|"
 msgid "Port:"
-msgstr "पोताश्रय:"
+msgstr "पत्तन:"
 
 #: sbi_proxywidget.ui:76
 msgctxt "SBI_ProxyWidget|"
 msgid "Username:"
-msgstr "उपयोक्तृनाम : १."
+msgstr "उपयोगकर्ता नाम:"
 
 #: sbi_proxywidget.ui:86
 msgctxt "SBI_ProxyWidget|"
 msgid "Password:"
-msgstr "समाभाष्:"
+msgstr "पासवर्ड:"
 
 #: sbi_proxywidget.ui:111
 msgctxt "SBI_ProxyWidget|"
 msgid "S&ystem proxy configuration"
-msgstr "S&ystem प्रॉक्सी विन्यास"
+msgstr "सिस्टम प्रॉक्सी कॉन्फ़िगरेशन"
 
 #: sbi_proxywidget.ui:118
 msgctxt "SBI_ProxyWidget|"
 msgid "&Manual configuration"
-msgstr "&पुस्तिका विन्यास"
+msgstr "&मैन्युअल कॉन्फ़िगरेशन"
 
 #: sbi_settingsdialog.ui:14
 msgctxt "SBI_SettingsDialog|"
 msgid "StatusBar Icons"
-msgstr "स्थिति पट्टिका चिह्न"
+msgstr "स्टेटस बार आइकन"
 
 #: sbi_settingsdialog.ui:48
 msgctxt "SBI_SettingsDialog|"
 msgid "<h3>StatusBar Icons</h3>"
-msgstr "<h3>स्थिति पट्टिका चिह्न</h3>"
+msgstr "<h3>स्टेटस बार आइकन</h3>"
 
 #: sbi_settingsdialog.ui:70
 msgctxt "SBI_SettingsDialog|"
 msgid "These icons will be displayed in statusbar:"
-msgstr "एतानि चिह्नानि statusbar मध्ये प्रदर्शितानि भविष्यन्ति:"
+msgstr "ये चिह्न स्टेटसबार में प्रदर्शित होंगे:"
 
 #: sbi_settingsdialog.ui:97
 msgctxt "SBI_SettingsDialog|"
 msgid "Images Icon"
-msgstr "चित्राणि चिह्नम्"
+msgstr "छवियाँ चिह्न"
 
 #: sbi_settingsdialog.ui:104
 msgctxt "SBI_SettingsDialog|"
@@ -234,15 +233,15 @@ msgstr "जावास्क्रिप्ट चिह्न"
 #: sbi_settingsdialog.ui:111
 msgctxt "SBI_SettingsDialog|"
 msgid "Network Icon"
-msgstr "संजाल चिह्न"
+msgstr "नेटवर्क आइकन"
 
 #: sbi_settingsdialog.ui:118
 msgctxt "SBI_SettingsDialog|"
 msgid "Zoom widget"
-msgstr "जूम विजेट्"
+msgstr "ज़ूम विजेट"
 
 #: sbi_zoomwidget.cpp:48
 #, qt-format
 msgctxt "SBI_ZoomWidget|"
 msgid "Zoom: %1%"
-msgstr "जूमः %1% ."
+msgstr "ज़ूम: %1%"

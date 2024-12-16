@@ -1,40 +1,39 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: falkon_tabmanager_qt\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
-"Language: sa\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
-"Plural-Forms: nplurals=2; plural=(n>1);\n"
 
 #: tabmanagersettings.ui:14
 msgctxt "TabManagerSettings|"
 msgid "Tab Manager Settings"
-msgstr "ट्याब् प्रबन्धक सेटिंग्स्"
+msgstr "टैब प्रबंधक सेटिंग्स"
 
 #: tabmanagersettings.ui:20
 msgctxt "TabManagerSettings|"
 msgid "View"
-msgstr "दृश्यं"
+msgstr "देखना"
 
 #: tabmanagersettings.ui:26
 msgctxt "TabManagerSettings|"
 msgid "Please select view type:"
-msgstr "कृपया दृश्यप्रकारं चिनोतु:"
+msgstr "कृपया दृश्य प्रकार चुनें:"
 
 #: tabmanagersettings.ui:33
 msgctxt "TabManagerSettings|"
 msgid "SideBar"
-msgstr "साइडबार"
+msgstr "साइड बार"
 
 #: tabmanagersettings.ui:40
 msgctxt "TabManagerSettings|"
 msgid "Window"
-msgstr "कोष्ठ"
+msgstr "खिड़की"
 
 #: tabmanagersettings.ui:47
 msgctxt "TabManagerSettings|"
@@ -43,121 +42,121 @@ msgid ""
 "&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
 "p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">नोट्:</span> बहुधा "
-"विण्डो/टैब्स् प्रबन्धनार्थं &quot;Window&quot; प्रकारः अनुशंसितः अस्ति ।</p></body></"
-"html>"
+"<html><head/><body><p><span style=\" font-weight:600;\">नोट:</span> बहुत सारी "
+"विंडोज़/टैबों के प्रबंधन के लिए &quot;विंडो&quot; प्रकार की अनुशंसा की जाती है।</p></"
+"body></html>"
 
 #: tabmanagersettings.ui:60
 msgctxt "TabManagerSettings|"
 msgid "Use TabManager plugin as replacement for main TabBar."
-msgstr "मुख्य TabBar इत्यस्य प्रतिस्थापनरूपेण TabManager प्लगिन् इत्यस्य उपयोगं कुर्वन्तु ।"
+msgstr "मुख्य TabBar के प्रतिस्थापन के रूप में TabManager प्लगइन का उपयोग करें।"
 
 #: tabmanagerwidget.cpp:111
 msgctxt "TabManagerWidget|"
 msgid "Local File System:"
-msgstr "स्थानीयसञ्चिकातन्त्रम् : १."
+msgstr "स्थानीय फ़ाइल सिस्टम:"
 
 #: tabmanagerwidget.cpp:114
 msgctxt "TabManagerWidget|"
 msgid "Falkon:"
-msgstr "बाजः : १."
+msgstr "बाज़:"
 
 #: tabmanagerwidget.cpp:117
 msgctxt "TabManagerWidget|"
 msgid " [FTP]"
-msgstr " [FTP] ९."
+msgstr "[एफ़टीपी]"
 
 #: tabmanagerwidget.cpp:306
 msgctxt "TabManagerWidget|"
 msgid "Group by"
-msgstr "समूह द्वारा"
+msgstr "द्वारा समूह बनाएं"
 
 #: tabmanagerwidget.cpp:307
 msgctxt "TabManagerWidget|"
 msgid "&Window"
-msgstr "&कोष्ठ"
+msgstr "&खिड़की"
 
 #: tabmanagerwidget.cpp:312
 msgctxt "TabManagerWidget|"
 msgid "&Domain"
-msgstr "&क्षेत्र"
+msgstr "&कार्यक्षेत्र"
 
 #: tabmanagerwidget.cpp:317
 msgctxt "TabManagerWidget|"
 msgid "&Host"
-msgstr "&निमन्त्रकः"
+msgstr "&मेज़बान"
 
 #: tabmanagerwidget.cpp:325
 msgctxt "TabManagerWidget|"
 msgid "&Show side by side"
-msgstr "&पार्श्वतः पार्श्वतः दर्शयतु"
+msgstr "&साथ-साथ दिखाएँ"
 
 #: tabmanagerwidget.cpp:331
 msgctxt "TabManagerWidget|"
 msgid "&Detach checked tabs"
-msgstr "&चेक् कृतानि ट्याब्स् विच्छेदयन्तु"
+msgstr "&चेक किए गए टैब अलग करें"
 
 #: tabmanagerwidget.cpp:332
 msgctxt "TabManagerWidget|"
 msgid "Book&mark checked tabs"
-msgstr "Book&mark चेक्ड् ट्याब्स्"
+msgstr "चयनित टैब को बुकमार्क करें"
 
 #: tabmanagerwidget.cpp:333
 msgctxt "TabManagerWidget|"
 msgid "&Close checked tabs"
-msgstr "&परीक्षितानि ट्याब्स् बन्दं कुर्वन्तु"
+msgstr "&चेक किए गए टैब बंद करें"
 
 #: tabmanagerwidget.cpp:334
 msgctxt "TabManagerWidget|"
 msgid "&Unload checked tabs"
-msgstr "&परीक्षितानि ट्याब्स् अनलोड् कुर्वन्तु"
+msgstr "&चेक किए गए टैब अनलोड करें"
 
 #: tabmanagerwidget.cpp:587
 msgctxt "TabManagerWidget|"
 msgid "Choose folder for bookmarks:"
-msgstr "पुस्तकचिह्नानां कृते पुटं चिनोतु:"
+msgstr "बुकमार्क के लिए फ़ोल्डर चुनें:"
 
 #: tabmanagerwidget.cpp:588
 msgctxt "TabManagerWidget|"
 msgid "Bookmark Selected Tabs"
-msgstr "चयनित ट्याब्स् बुकमार्कं कुर्वन्तु"
+msgstr "चयनित टैब बुकमार्क करें"
 
 #: tabmanagerwidget.cpp:706
 #, qt-format
 msgctxt "TabManagerWidget|"
 msgid "Window %1"
-msgstr "विण्डो %1"
+msgstr "विंडो %1"
 
 #: tabmanagerwidget.cpp:707
 msgctxt "TabManagerWidget|"
 msgid "Double click to switch"
-msgstr "स्विच् कर्तुं डबल क्लिक् कुर्वन्तु"
+msgstr "स्विच करने के लिए डबल क्लिक करें"
 
 #: tabmanagerwidget.ui:14
 msgctxt "TabManagerWidget|"
 msgid "Tab Manager"
-msgstr "ट्याब् प्रबन्धकः"
+msgstr "टैब प्रबंधक"
 
 #: tabmanagerwidgetcontroller.cpp:50
 msgctxt "TabManagerButton|"
 msgid "Tab Manager button"
-msgstr "ट्याब् प्रबन्धक बटन"
+msgstr "टैब प्रबंधक बटन"
 
 #: tabmanagerwidgetcontroller.cpp:67 tabmanagerwidgetcontroller.cpp:72
 #: tabmanagerwidgetcontroller.cpp:98
 msgctxt "TabManagerWidgetController|"
 msgid "Tab Manager"
-msgstr "ट्याब् प्रबन्धकः"
+msgstr "टैब प्रबंधक"
 
 #: tabmanagerwidgetcontroller.cpp:99
 msgctxt "TabManagerWidgetController|"
 msgid "Show Tab Manager"
-msgstr "ट्याब् प्रबन्धकं दर्शयतु"
+msgstr "टैब प्रबंधक दिखाएँ"
 
 #: tldextractor/tldextractor.cpp:261 tldextractor/tldextractor.cpp:364
 msgctxt "TLDExtractor|"
 msgid "File not found!"
-msgstr "सञ्चिका न प्राप्ता!"
+msgstr "फ़ाइल प्राप्त नहीं हुई!"
 
 #: tldextractor/tldextractor.cpp:262
 #, qt-format
@@ -168,9 +167,8 @@ msgid ""
 "following paths:\n"
 "%2"
 msgstr ""
-"&#39;effective_tld_names.dat&#39; इति सञ्चिका न प्राप्ता! भवान् &#39; <a href="
-"\"%1\"><b>अत्र</b></a> &#39; इत्यस्मात् निम्नलिखितमार्गेषु एकस्मिन् अवतरणं कर्तुं शक्नोति: "
-"%2"
+"फ़ाइल &#39;effective_tld_names.dat&#39; नहीं मिली! आप इसे &#39; <a href="
+"\"%1\"><b>यहाँ</b></a> &#39; से निम्न में से किसी एक पथ पर डाउनलोड कर सकते हैं: %2"
 
 #: tldextractor/tldextractor.cpp:365
 #, qt-format
@@ -181,6 +179,5 @@ msgid ""
 "following paths:\n"
 "%2"
 msgstr ""
-"&#39;test_psl.txt&#39; इति सञ्चिका न प्राप्ता! भवान् &#39; <a href="
-"\"%1\"><b>अत्र</b></a> &#39; इत्यस्मात् निम्नलिखितमार्गेषु एकस्मिन् अवतरणं कर्तुं शक्नोति: "
-"%2"
+"फ़ाइल &#39;test_psl.txt&#39; नहीं मिली! आप इसे &#39; <a href=\"%1\"><b>यहाँ</b></"
+"a> &#39; से निम्न में से किसी एक पथ पर डाउनलोड कर सकते हैं: %2"
