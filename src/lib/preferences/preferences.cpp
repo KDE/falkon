@@ -63,6 +63,7 @@
 #include <QWebEngineSettings>
 #include <QLibraryInfo>
 #include <QtWebEngineWidgetsVersion>
+#include <QtGuiVersion>
 
 static QString createLanguageItem(const QString &lang)
 {
@@ -307,6 +308,19 @@ Preferences::Preferences(BrowserWindow* window)
 #else
     ui->forceDarkMode->hide();
 #endif
+
+    int prefferColorSchemeSetting = settings.value(QSL("prefferColorScheme"), Qz::ColorScheme_Auto).toInt();
+#if QTGUI_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+    ui->prefferColorScheme->addItem(tr("Auto"), Qz::ColorScheme_Auto);
+#endif
+    ui->prefferColorScheme->addItem(tr("Light"), Qz::ColorScheme_Light);
+    ui->prefferColorScheme->addItem(tr("Dark"), Qz::ColorScheme_Dark);
+#if QTGUI_VERSION < QT_VERSION_CHECK(6, 5, 0)
+    if (prefferColorSchemeSetting > 0) {
+        prefferColorSchemeSetting--;
+    }
+#endif
+    ui->prefferColorScheme->setCurrentIndex(prefferColorSchemeSetting);
 
     const auto levels = WebView::zoomLevels();
     for (int level : levels) {
@@ -1016,6 +1030,7 @@ void Preferences::saveSettings()
 #if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
     settings.setValue(QSL("forceDarkMode"), ui->forceDarkMode->isChecked());
 #endif
+    settings.setValue(QSL("prefferColorScheme"), ui->prefferColorScheme->currentData().toInt());
 #ifdef Q_OS_WIN
     settings.setValue(QSL("CheckDefaultBrowser"), ui->checkDefaultBrowser->isChecked());
 #endif

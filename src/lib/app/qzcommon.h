@@ -111,6 +111,12 @@ enum NewTabPositionFlag {
 Q_DECLARE_FLAGS(NewTabPositionFlags, NewTabPositionFlag)
 Q_DECLARE_OPERATORS_FOR_FLAGS(Qz::NewTabPositionFlags)
 
+enum ColorScheme {
+    ColorScheme_Auto = 0,
+    ColorScheme_Light,
+    ColorScheme_Dark
+};
+
 }
 
 #if defined(Q_OS_WIN) || defined(Q_OS_OS2)

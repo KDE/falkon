@@ -67,6 +67,8 @@
 #include <QRegularExpression>
 #include <QtWebEngineWidgetsVersion>
 #include <QtWebEngineCoreVersion>
+#include <QtGuiVersion>
+#include <QStyleHints>
 
 #include <QWebEngineNotification>
 #include <QWebEngineUrlScheme>
@@ -148,10 +150,6 @@ MainApplication::MainApplication(int &argc, char** argv)
             setFont(QFont(families.at(0)));
     }
 #endif
-
-    QByteArray chromium_flags = qgetenv("QTWEBENGINE_CHROMIUM_FLAGS");
-    chromium_flags.append(" --enable-features=WebRTCPipeWireCapturer");
-    qputenv("QTWEBENGINE_CHROMIUM_FLAGS", chromium_flags);
 
     QUrl startUrl;
     QString startProfile;
@@ -287,16 +285,8 @@ MainApplication::MainApplication(int &argc, char** argv)
     profileManager.initCurrentProfile(startProfile);
 
     Settings::createSettings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"));
-    if (Settings::globalSettings()->value("Web-Browser-Settings/hardwareAccel", false).toBool()) {
-        chromium_flags.append(" --enable-oop-rasterization --enable-gpu-rasterization --enable-native-gpu-memory-buffers");
-#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-        chromium_flags.append(" --use-gl=angle");
-#else
-        chromium_flags.append(" --use-gl=desktop");
-#endif
-        qputenv("QTWEBENGINE_CHROMIUM_FLAGS", chromium_flags);
-    }
 
+    setChromiumFlags();
     NetworkManager::registerSchemes();
     registerAllowedSchemes();
 
@@ -415,6 +405,40 @@ MainApplication::~MainApplication()
     m_webProfile = nullptr;
 
     Settings::syncSettings();
+}
+
+void MainApplication::setChromiumFlags()
+{
+    QByteArray chromium_flags = qgetenv("QTWEBENGINE_CHROMIUM_FLAGS");
+    chromium_flags.append(" --enable-features=WebRTCPipeWireCapturer");
+
+    if (Settings::globalSettings()->value("Web-Browser-Settings/hardwareAccel", false).toBool()) {
+        chromium_flags.append(" --enable-oop-rasterization --enable-gpu-rasterization --enable-native-gpu-memory-buffers");
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+        chromium_flags.append(" --use-gl=angle");
+#else
+        chromium_flags.append(" --use-gl=desktop");
+#endif
+        qputenv("QTWEBENGINE_CHROMIUM_FLAGS", chromium_flags);
+    }
+
+    int prefferColorScheme = Settings::globalSettings()->value("Web-Browser-Settings/prefferColorScheme", Qz::ColorScheme_Auto).toInt();
+    if (   (prefferColorScheme == Qz::ColorScheme_Dark)
+#if QTGUI_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+        || ((prefferColorScheme == Qz::ColorScheme_Auto) && (styleHints()->colorScheme() == Qt::ColorScheme::Dark))
+#endif
+    ) {
+        chromium_flags.append(" --blink-settings=preferredColorScheme=0");
+    }
+    else if ((prefferColorScheme == Qz::ColorScheme_Light)
+#if QTGUI_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+        || ((prefferColorScheme == Qz::ColorScheme_Auto) && (styleHints()->colorScheme() == Qt::ColorScheme::Light))
+#endif
+    ) {
+        chromium_flags.append(" --blink-settings=preferredColorScheme=1");
+    }
+
+    qputenv("QTWEBENGINE_CHROMIUM_FLAGS", chromium_flags);
 }
 
 bool MainApplication::isClosing() const

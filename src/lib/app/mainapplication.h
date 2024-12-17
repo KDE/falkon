@@ -71,6 +71,8 @@ public:
     explicit MainApplication(int &argc, char** argv);
     ~MainApplication();
 
+    void setChromiumFlags();
+
     bool isClosing() const;
     bool isPrivate() const;
     bool isPortable() const;
