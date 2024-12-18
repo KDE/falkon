@@ -44,8 +44,9 @@ void UserAgentManager::loadSettings()
     QStringList userAgentsList = settings.value(QSL("UserAgentsList"), QStringList()).toStringList();
     settings.endGroup();
 
-    m_usePerDomainUserAgent = (m_usePerDomainUserAgent && domainList.count() == userAgentsList.count());
+    m_usePerDomainUserAgent = (m_usePerDomainUserAgent && (domainList.count() == userAgentsList.count()));
 
+    m_userAgentsList.clear();
     if (m_usePerDomainUserAgent) {
         for (int i = 0; i < domainList.count(); ++i) {
             m_userAgentsList[domainList.at(i)] = userAgentsList.at(i);

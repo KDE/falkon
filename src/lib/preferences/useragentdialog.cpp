@@ -176,6 +176,7 @@ void UserAgentDialog::accept()
     settings.setValue(QSL("DomainList"), domainList);
     settings.setValue(QSL("UserAgentsList"), userAgentsList);
     settings.endGroup();
+    settings.sync();
 
     m_manager->loadSettings();
     mApp->networkManager()->loadSettings();
