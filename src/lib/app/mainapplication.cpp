@@ -288,8 +288,13 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     Settings::createSettings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"));
     if (Settings::globalSettings()->value("Web-Browser-Settings/hardwareAccel", false).toBool()) {
-	    chromium_flags.append(" --enable-oop-rasterization --enable-gpu-rasterization --enable-native-gpu-memory-buffers --use-gl=desktop");
-	    qputenv("QTWEBENGINE_CHROMIUM_FLAGS", chromium_flags);
+        chromium_flags.append(" --enable-oop-rasterization --enable-gpu-rasterization --enable-native-gpu-memory-buffers");
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+        chromium_flags.append(" --use-gl=angle");
+#else
+        chromium_flags.append(" --use-gl=desktop");
+#endif
+        qputenv("QTWEBENGINE_CHROMIUM_FLAGS", chromium_flags);
     }
 
     NetworkManager::registerSchemes();
