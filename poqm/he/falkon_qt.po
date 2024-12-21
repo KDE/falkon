@@ -358,39 +358,39 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "יש עדיין לשוניות פתוחות"
 
-#: lib/app/mainapplication.cpp:1113
+#: lib/app/mainapplication.cpp:1142
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
 msgstr "Falkon אינו דפדפן ברירת המחדל שלך כרגע. להפוך אותו לברירת המחדל שלך?"
 
-#: lib/app/mainapplication.cpp:1114
+#: lib/app/mainapplication.cpp:1143
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "תמיד לבצע את הבדיקה הזאת בעלייה של Falkon."
 
-#: lib/app/mainapplication.cpp:1116
+#: lib/app/mainapplication.cpp:1145
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "דפדפן ברירת המחדל"
 
-#: lib/app/mainapplication.cpp:1248
+#: lib/app/mainapplication.cpp:1277
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "פתיחת לשונית חדשה"
 
-#: lib/app/mainapplication.cpp:1249
+#: lib/app/mainapplication.cpp:1278
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "פתיחת חלון חדש"
 
-#: lib/app/mainapplication.cpp:1250
+#: lib/app/mainapplication.cpp:1279
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "פתיחת חלון פרטי חדש"
 
-#: lib/app/mainapplication.cpp:1265
+#: lib/app/mainapplication.cpp:1294
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -3979,88 +3979,106 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "להסיר את ‚%1’?"
 
-#: lib/preferences/preferences.cpp:154 lib/preferences/preferences.cpp:643
+#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:657
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "ברירת מחדל"
 
-#: lib/preferences/preferences.cpp:158
+#: lib/preferences/preferences.cpp:159
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "הגדרה כברירת מחדל"
 
-#: lib/preferences/preferences.cpp:313
+#: lib/preferences/preferences.cpp:314
+#, fuzzy
+#| msgctxt "FalkonSchemeReply|"
+#| msgid "Auto"
+msgctxt "Preferences|"
+msgid "Auto"
+msgstr "אוטומטית"
+
+#: lib/preferences/preferences.cpp:316
+msgctxt "Preferences|"
+msgid "Light"
+msgstr ""
+
+#: lib/preferences/preferences.cpp:317
+msgctxt "Preferences|"
+msgid "Dark"
+msgstr ""
+
+#: lib/preferences/preferences.cpp:327
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:586
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "נא לבחור את מקום קובץ ההפעלה…"
 
-#: lib/preferences/preferences.cpp:629
+#: lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "התראה צפה"
 
-#: lib/preferences/preferences.cpp:630
+#: lib/preferences/preferences.cpp:644
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "אפשר לגרור אותו ברחבי המסך למקום הרצוי."
 
-#: lib/preferences/preferences.cpp:679
+#: lib/preferences/preferences.cpp:693
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "נא לבחור מקום להורדה…"
 
-#: lib/preferences/preferences.cpp:693
+#: lib/preferences/preferences.cpp:707
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "בחירת מקום גיליון סגנון…"
 
-#: lib/preferences/preferences.cpp:704
+#: lib/preferences/preferences.cpp:718
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "נמחק"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "בחירת נתיב מטמון…"
 
-#: lib/preferences/preferences.cpp:837
+#: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "פרופיל חדש"
 
-#: lib/preferences/preferences.cpp:837
+#: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "נא למלא את שם הפעופיל החדש:"
 
-#: lib/preferences/preferences.cpp:847 lib/preferences/preferences.cpp:852
+#: lib/preferences/preferences.cpp:861 lib/preferences/preferences.cpp:866
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "שגיאה!"
 
-#: lib/preferences/preferences.cpp:847
+#: lib/preferences/preferences.cpp:861
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "הפרופיל הזה כבר קיים!"
 
-#: lib/preferences/preferences.cpp:852
+#: lib/preferences/preferences.cpp:866
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "לא ניתן ליצור את תיקיית הפרופיל!"
 
-#: lib/preferences/preferences.cpp:863
+#: lib/preferences/preferences.cpp:877
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "אישור"
 
-#: lib/preferences/preferences.cpp:864
+#: lib/preferences/preferences.cpp:878
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4068,12 +4086,12 @@ msgid ""
 "cannot be undone!"
 msgstr "למחוק את הפרופיל „%1” לצמיתות? זאת פעולה בלתי הפיכה!"
 
-#: lib/preferences/preferences.cpp:879 lib/preferences/preferences.ui:241
+#: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "לתשומת ליבך: לא ניתן למחוק את הפרופיל הפעיל."
 
-#: lib/preferences/preferences.cpp:1154
+#: lib/preferences/preferences.cpp:1169
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "בחירת צבע"
@@ -4083,7 +4101,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "העדפות"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2046
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2073
 msgctxt "Preferences|"
 msgid "General"
 msgstr "כללי"
@@ -4480,9 +4498,9 @@ msgctxt "Preferences|"
 msgid "Select color"
 msgstr "בחירת צבע"
 
-#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1307
-#: lib/preferences/preferences.ui:1841 lib/preferences/preferences.ui:1938
-#: lib/preferences/preferences.ui:2784
+#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1334
+#: lib/preferences/preferences.ui:1868 lib/preferences/preferences.ui:1965
+#: lib/preferences/preferences.ui:2811
 msgctxt "Preferences|"
 msgid "..."
 msgstr "…"
@@ -4579,197 +4597,202 @@ msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr "אכיפת מצב כהה"
 
-#: lib/preferences/preferences.ui:1161
+#: lib/preferences/preferences.ui:1153
+msgctxt "Preferences|"
+msgid "Preffer color scheme:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1188
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "גלילות גלגלת עכבר"
 
-#: lib/preferences/preferences.ui:1181
+#: lib/preferences/preferences.ui:1208
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "שורות בעמוד"
 
-#: lib/preferences/preferences.ui:1192
+#: lib/preferences/preferences.ui:1219
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "תקריב ברירת מחדל על עמודים:"
 
-#: lib/preferences/preferences.ui:1231
+#: lib/preferences/preferences.ui:1258
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "אחסון מקומי"
 
-#: lib/preferences/preferences.ui:1239
+#: lib/preferences/preferences.ui:1266
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "לאפשר אחסון מטמון רשת בכונן"
 
-#: lib/preferences/preferences.ui:1262
+#: lib/preferences/preferences.ui:1289
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "מחיקת המטמון עם הסגירה"
 
-#: lib/preferences/preferences.ui:1269
+#: lib/preferences/preferences.ui:1296
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "מרבי:"
 
-#: lib/preferences/preferences.ui:1276
+#: lib/preferences/preferences.ui:1303
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " מ״ב"
 
-#: lib/preferences/preferences.ui:1292
+#: lib/preferences/preferences.ui:1319
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "אחסון מטמון תחת:"
 
-#: lib/preferences/preferences.ui:1320
+#: lib/preferences/preferences.ui:1347
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "לאפשר שמירת היסטוריה"
 
-#: lib/preferences/preferences.ui:1327
+#: lib/preferences/preferences.ui:1354
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "למחוק את ההיסטוריה עם הסגירה"
 
-#: lib/preferences/preferences.ui:1350
+#: lib/preferences/preferences.ui:1377
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "לאפשר אחסון מקומי של תוכן אתרי HTML5"
 
-#: lib/preferences/preferences.ui:1357
+#: lib/preferences/preferences.ui:1384
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "למחוק תוכן אתרי HTML5 שאוחסן מקומית בסגירה"
 
-#: lib/preferences/preferences.ui:1383
+#: lib/preferences/preferences.ui:1410
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "למחוק עכשיו"
 
-#: lib/preferences/preferences.ui:1422
+#: lib/preferences/preferences.ui:1449
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "הגדרות מתווך"
 
-#: lib/preferences/preferences.ui:1441
+#: lib/preferences/preferences.ui:1468
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "הגדרות מתווך מערכת"
 
-#: lib/preferences/preferences.ui:1464
+#: lib/preferences/preferences.ui:1491
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "הגדרות ידניות"
 
-#: lib/preferences/preferences.ui:1474
+#: lib/preferences/preferences.ui:1501
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1479
+#: lib/preferences/preferences.ui:1506
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1490
+#: lib/preferences/preferences.ui:1517
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "פתחה:"
 
-#: lib/preferences/preferences.ui:1511
+#: lib/preferences/preferences.ui:1538
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "שם משתמש:"
 
-#: lib/preferences/preferences.ui:1521
+#: lib/preferences/preferences.ui:1548
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "סיסמה:"
 
-#: lib/preferences/preferences.ui:1550
+#: lib/preferences/preferences.ui:1577
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "ללא מתווך"
 
-#: lib/preferences/preferences.ui:1565
+#: lib/preferences/preferences.ui:1592
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>משפחות גופנים</b>"
 
-#: lib/preferences/preferences.ui:1578
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "רגילה"
 
-#: lib/preferences/preferences.ui:1585
+#: lib/preferences/preferences.ui:1612
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "קבועה"
 
-#: lib/preferences/preferences.ui:1595
+#: lib/preferences/preferences.ui:1622
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "מעוטרת"
 
-#: lib/preferences/preferences.ui:1605
+#: lib/preferences/preferences.ui:1632
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "לא מעוטרת"
 
-#: lib/preferences/preferences.ui:1615
+#: lib/preferences/preferences.ui:1642
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "מחוברת"
 
-#: lib/preferences/preferences.ui:1667
+#: lib/preferences/preferences.ui:1694
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "פנטזיה"
 
-#: lib/preferences/preferences.ui:1674
+#: lib/preferences/preferences.ui:1701
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>גודלי כתב</b>"
 
-#: lib/preferences/preferences.ui:1683
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "גודל כתב קבוע"
 
-#: lib/preferences/preferences.ui:1690
+#: lib/preferences/preferences.ui:1717
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "גודל כתב כברירת מחדל"
 
-#: lib/preferences/preferences.ui:1717
+#: lib/preferences/preferences.ui:1744
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "גודל כתב מזערי"
 
-#: lib/preferences/preferences.ui:1724
+#: lib/preferences/preferences.ui:1751
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "גודל כתב לוגי מזערי"
 
-#: lib/preferences/preferences.ui:1757
+#: lib/preferences/preferences.ui:1784
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>קיצורי דרך</b>"
 
-#: lib/preferences/preferences.ui:1764
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "אפשר לעבור בין לשוניות עם Alt + מספר הלשונית"
 
-#: lib/preferences/preferences.ui:1771
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "אפשר לטעון חיוגים מהירים עם Ctrl + מספר החיוג המהיר"
 
-#: lib/preferences/preferences.ui:1778
+#: lib/preferences/preferences.ui:1805
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4778,12 +4801,12 @@ msgstr ""
 "קיצורי דרך קיימים:<br/><b>1</b> - הלשונית הקודמת<br/><b>2</b> - הלשונית "
 "הבאה<br/><b>/</b> - חיפוש בעמוד"
 
-#: lib/preferences/preferences.ui:1781
+#: lib/preferences/preferences.ui:1808
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "להשתמש בקיצורי דרך במקש אחד"
 
-#: lib/preferences/preferences.ui:1788
+#: lib/preferences/preferences.ui:1815
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4791,157 +4814,157 @@ msgid ""
 msgstr ""
 "אם התיבה לא מסומנת, תימנע יציאה בשוגג מהיישום בלחיצה בלתי רצונית על Ctrl-W."
 
-#: lib/preferences/preferences.ui:1791
+#: lib/preferences/preferences.ui:1818
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "לסגור את היישום עם Ctrl+Q"
 
-#: lib/preferences/preferences.ui:1815
+#: lib/preferences/preferences.ui:1842
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>מקום הורדה</b>"
 
-#: lib/preferences/preferences.ui:1822
+#: lib/preferences/preferences.ui:1849
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "לשאול מה מקום ההורדה כל פעם מחדש"
 
-#: lib/preferences/preferences.ui:1829
+#: lib/preferences/preferences.ui:1856
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "להשתמש במקו םמוגדר: "
 
-#: lib/preferences/preferences.ui:1879
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b></b>אפשרויות הורדה"
 
-#: lib/preferences/preferences.ui:1886
+#: lib/preferences/preferences.ui:1913
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "לסגור את מנהל ההורדות כשההורדה מסתיימת"
 
-#: lib/preferences/preferences.ui:1893
+#: lib/preferences/preferences.ui:1920
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>מנהל הורדות חיצוני</b>"
 
-#: lib/preferences/preferences.ui:1900
+#: lib/preferences/preferences.ui:1927
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "להשתמש במנהל הורדות חיצוני"
 
-#: lib/preferences/preferences.ui:1912
+#: lib/preferences/preferences.ui:1939
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "קובץ הפעלה:"
 
-#: lib/preferences/preferences.ui:1919
+#: lib/preferences/preferences.ui:1946
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "ארגומנטים:"
 
-#: lib/preferences/preferences.ui:1926
+#: lib/preferences/preferences.ui:1953
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "להשאיר ריק במקרה של ספק"
 
-#: lib/preferences/preferences.ui:1947
+#: lib/preferences/preferences.ui:1974
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> יוחלף בכתובת להורדה"
 
-#: lib/preferences/preferences.ui:1973
+#: lib/preferences/preferences.ui:2000
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>אפשרויות מילוי אוטומטי</b>"
 
-#: lib/preferences/preferences.ui:1980
+#: lib/preferences/preferences.ui:2007
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "לאפשר שמירת סיסמאות מאתרים"
 
-#: lib/preferences/preferences.ui:2031
+#: lib/preferences/preferences.ui:2058
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "להשלים אוטומטית סיסמאות באתרים"
 
-#: lib/preferences/preferences.ui:2052
+#: lib/preferences/preferences.ui:2079
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "ניהול עוגיות"
 
-#: lib/preferences/preferences.ui:2065
+#: lib/preferences/preferences.ui:2092
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "מנהל עוגיות"
 
-#: lib/preferences/preferences.ui:2088
+#: lib/preferences/preferences.ui:2115
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2101
+#: lib/preferences/preferences.ui:2128
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "אפשרויות JavaScript"
 
-#: lib/preferences/preferences.ui:2108
+#: lib/preferences/preferences.ui:2135
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "לשלוח כותרת ‚לא לעקוב אחריי’ (DNT - Do Not Track) לשרתים"
 
-#: lib/preferences/preferences.ui:2115
+#: lib/preferences/preferences.ui:2142
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>עוגיות</b>"
 
-#: lib/preferences/preferences.ui:2141
+#: lib/preferences/preferences.ui:2168
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "ניהול אפשרויות פרטיות JavaScript"
 
-#: lib/preferences/preferences.ui:2148
+#: lib/preferences/preferences.ui:2175
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>אחר</b>"
 
-#: lib/preferences/preferences.ui:2169
+#: lib/preferences/preferences.ui:2196
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "הרשאות HTML5"
 
-#: lib/preferences/preferences.ui:2179
+#: lib/preferences/preferences.ui:2206
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "הגדרות אתר"
 
-#: lib/preferences/preferences.ui:2211
+#: lib/preferences/preferences.ui:2238
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "משך זמן התראות:"
 
-#: lib/preferences/preferences.ui:2224
+#: lib/preferences/preferences.ui:2251
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " שניות"
 
-#: lib/preferences/preferences.ui:2246
+#: lib/preferences/preferences.ui:2273
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>התראות</b>"
 
-#: lib/preferences/preferences.ui:2269
+#: lib/preferences/preferences.ui:2296
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "להשתמש בהתראות המערכת הטבעיות (לינוקס בלבד)"
 
-#: lib/preferences/preferences.ui:2276
+#: lib/preferences/preferences.ui:2303
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "לא להשתמש בהתראות"
 
-#: lib/preferences/preferences.ui:2299
+#: lib/preferences/preferences.ui:2326
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -4950,17 +4973,17 @@ msgstr ""
 "<b>לתשומת ליבך: </b>אפשר לשנות את מקום ההתראות הצפות על ידי גרירתן על גבי "
 "המסך."
 
-#: lib/preferences/preferences.ui:2325
+#: lib/preferences/preferences.ui:2352
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "להשתמש בהתראות צפות"
 
-#: lib/preferences/preferences.ui:2332
+#: lib/preferences/preferences.ui:2359
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "תצוגה מקדימה"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2424
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4969,92 +4992,92 @@ msgstr ""
 "למידע נוסף על בדיקות איות, נא לפנות אל ה<a href=\"https://userbase.kde.org/"
 "Falkon#Spell_Check\">וויקי</a>."
 
-#: lib/preferences/preferences.ui:2439
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>אפשרויות בדיקת איות</b>"
 
-#: lib/preferences/preferences.ui:2446
+#: lib/preferences/preferences.ui:2473
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "הפעלת בדיקת איות"
 
-#: lib/preferences/preferences.ui:2453
+#: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>תיקיות מילון</b>"
 
-#: lib/preferences/preferences.ui:2504
+#: lib/preferences/preferences.ui:2531
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "לא נמצאו שפות"
 
-#: lib/preferences/preferences.ui:2533
+#: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "מנהל מטפלי פרוטוקולים"
 
-#: lib/preferences/preferences.ui:2573
+#: lib/preferences/preferences.ui:2600
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "מנהל מנועי חיפוש"
 
-#: lib/preferences/preferences.ui:2595
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>גיליונות סגנון של המשתמש</b>"
 
-#: lib/preferences/preferences.ui:2602
+#: lib/preferences/preferences.ui:2629
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>ניהול מנועי חיפוש</b>"
 
-#: lib/preferences/preferences.ui:2615
+#: lib/preferences/preferences.ui:2642
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "ניהול סכמות מותאמות אישית"
 
-#: lib/preferences/preferences.ui:2640
+#: lib/preferences/preferences.ui:2667
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "שפות"
 
-#: lib/preferences/preferences.ui:2662
+#: lib/preferences/preferences.ui:2689
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>שפת האתרים המועדפת</b>"
 
-#: lib/preferences/preferences.ui:2687
+#: lib/preferences/preferences.ui:2714
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "מנהל חריגות אישורים"
 
-#: lib/preferences/preferences.ui:2709
+#: lib/preferences/preferences.ui:2736
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>החלפת זהות דפדפן</b>"
 
-#: lib/preferences/preferences.ui:2734
+#: lib/preferences/preferences.ui:2761
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "מנהל סוכני משתמש"
 
-#: lib/preferences/preferences.ui:2756
+#: lib/preferences/preferences.ui:2783
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "גיליון סגנון נטען אוטומטית עם כל האתרים:"
 
-#: lib/preferences/preferences.ui:2793
+#: lib/preferences/preferences.ui:2820
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>ניהול מטפלי פרוטוקולים</b>"
 
-#: lib/preferences/preferences.ui:2800
+#: lib/preferences/preferences.ui:2827
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>מנהל אישורים</b>"
 
-#: lib/preferences/preferences.ui:2851
+#: lib/preferences/preferences.ui:2878
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "מנהל סכמות מותאמות אישית"
@@ -5232,12 +5255,12 @@ msgctxt "UserAgentDialog|"
 msgid "Edit site"
 msgstr "עריכת אתר"
 
-#: lib/preferences/useragentdialog.cpp:216
+#: lib/preferences/useragentdialog.cpp:217
 msgctxt "UserAgentDialog|"
 msgid "Site domain: "
 msgstr "שם התחום של האתר:"
 
-#: lib/preferences/useragentdialog.cpp:217
+#: lib/preferences/useragentdialog.cpp:218
 msgctxt "UserAgentDialog|"
 msgid "User Agent: "
 msgstr "סוכן משתמש: "

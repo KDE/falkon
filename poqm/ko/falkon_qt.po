@@ -347,7 +347,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "열린 탭이 남아 있음"
 
-#: lib/app/mainapplication.cpp:1113
+#: lib/app/mainapplication.cpp:1142
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -355,32 +355,32 @@ msgid ""
 msgstr ""
 "Falkon이 기본 웹 브라우저가 아닙니다. 기본 웹 브라우저로 설정하시겠습니까?"
 
-#: lib/app/mainapplication.cpp:1114
+#: lib/app/mainapplication.cpp:1143
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Falkon을 시작할 때 항상 검사를 실행합니다."
 
-#: lib/app/mainapplication.cpp:1116
+#: lib/app/mainapplication.cpp:1145
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "기본 브라우저"
 
-#: lib/app/mainapplication.cpp:1248
+#: lib/app/mainapplication.cpp:1277
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "새 탭 열기"
 
-#: lib/app/mainapplication.cpp:1249
+#: lib/app/mainapplication.cpp:1278
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "새 창 열기"
 
-#: lib/app/mainapplication.cpp:1250
+#: lib/app/mainapplication.cpp:1279
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "새 사생활 보호 창 열기"
 
-#: lib/app/mainapplication.cpp:1265
+#: lib/app/mainapplication.cpp:1294
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -3963,88 +3963,106 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "'%1'을(를) 삭제하시겠습니까?"
 
-#: lib/preferences/preferences.cpp:154 lib/preferences/preferences.cpp:643
+#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:657
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "기본값"
 
-#: lib/preferences/preferences.cpp:158
+#: lib/preferences/preferences.cpp:159
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "기본값으로 설정"
 
-#: lib/preferences/preferences.cpp:313
+#: lib/preferences/preferences.cpp:314
+#, fuzzy
+#| msgctxt "FalkonSchemeReply|"
+#| msgid "Auto"
+msgctxt "Preferences|"
+msgid "Auto"
+msgstr "자동"
+
+#: lib/preferences/preferences.cpp:316
+msgctxt "Preferences|"
+msgid "Light"
+msgstr ""
+
+#: lib/preferences/preferences.cpp:317
+msgctxt "Preferences|"
+msgid "Dark"
+msgstr ""
+
+#: lib/preferences/preferences.cpp:327
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:586
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "실행 파일 위치 선택..."
 
-#: lib/preferences/preferences.cpp:629
+#: lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD 알림"
 
-#: lib/preferences/preferences.cpp:630
+#: lib/preferences/preferences.cpp:644
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "화면에 표시하려는 위치로 끌어다 놓으십시오."
 
-#: lib/preferences/preferences.cpp:679
+#: lib/preferences/preferences.cpp:693
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "다운로드 위치 선택..."
 
-#: lib/preferences/preferences.cpp:693
+#: lib/preferences/preferences.cpp:707
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "스타일시트 위치 선택..."
 
-#: lib/preferences/preferences.cpp:704
+#: lib/preferences/preferences.cpp:718
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "삭제됨"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "캐시 경로 선택..."
 
-#: lib/preferences/preferences.cpp:837
+#: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "새 프로필"
 
-#: lib/preferences/preferences.cpp:837
+#: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "새 프로필 이름 입력:"
 
-#: lib/preferences/preferences.cpp:847 lib/preferences/preferences.cpp:852
+#: lib/preferences/preferences.cpp:861 lib/preferences/preferences.cpp:866
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "오류!"
 
-#: lib/preferences/preferences.cpp:847
+#: lib/preferences/preferences.cpp:861
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "프로필이 이미 있습니다!"
 
-#: lib/preferences/preferences.cpp:852
+#: lib/preferences/preferences.cpp:866
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "프로필 디렉터리를 만들 수 없습니다!"
 
-#: lib/preferences/preferences.cpp:863
+#: lib/preferences/preferences.cpp:877
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "확인"
 
-#: lib/preferences/preferences.cpp:864
+#: lib/preferences/preferences.cpp:878
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4053,12 +4071,12 @@ msgid ""
 msgstr ""
 "\"%1\" 프로필을 완전히 삭제하시겠습니까? 이 작업은 실행 취소할 수 없습니다!"
 
-#: lib/preferences/preferences.cpp:879 lib/preferences/preferences.ui:241
+#: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "메모: 활성 프로필을 삭제할 수 없습니다."
 
-#: lib/preferences/preferences.cpp:1154
+#: lib/preferences/preferences.cpp:1169
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "색 선택"
@@ -4068,7 +4086,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "설정"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2046
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2073
 msgctxt "Preferences|"
 msgid "General"
 msgstr "일반"
@@ -4464,9 +4482,9 @@ msgctxt "Preferences|"
 msgid "Select color"
 msgstr "색 선택"
 
-#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1307
-#: lib/preferences/preferences.ui:1841 lib/preferences/preferences.ui:1938
-#: lib/preferences/preferences.ui:2784
+#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1334
+#: lib/preferences/preferences.ui:1868 lib/preferences/preferences.ui:1965
+#: lib/preferences/preferences.ui:2811
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -4563,198 +4581,203 @@ msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr "어두운 모드 강제 사용"
 
+#: lib/preferences/preferences.ui:1153
+msgctxt "Preferences|"
+msgid "Preffer color scheme:"
+msgstr ""
+
 # 뒷 문자열과 합쳐저서 한 문장을 이룸
-#: lib/preferences/preferences.ui:1161
+#: lib/preferences/preferences.ui:1188
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "마우스 휠이 한 페이지에서"
 
-#: lib/preferences/preferences.ui:1181
+#: lib/preferences/preferences.ui:1208
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "줄 스크롤함"
 
-#: lib/preferences/preferences.ui:1192
+#: lib/preferences/preferences.ui:1219
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "기본 페이지 확대/축소 배율:"
 
-#: lib/preferences/preferences.ui:1231
+#: lib/preferences/preferences.ui:1258
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "로컬 저장소"
 
-#: lib/preferences/preferences.ui:1239
+#: lib/preferences/preferences.ui:1266
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "디스크에 네트워크 캐시 저장 허용"
 
-#: lib/preferences/preferences.ui:1262
+#: lib/preferences/preferences.ui:1289
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "끝낼 때 캐시 삭제"
 
-#: lib/preferences/preferences.ui:1269
+#: lib/preferences/preferences.ui:1296
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "최댓값:"
 
-#: lib/preferences/preferences.ui:1276
+#: lib/preferences/preferences.ui:1303
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1292
+#: lib/preferences/preferences.ui:1319
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "캐시 저장 위치:"
 
-#: lib/preferences/preferences.ui:1320
+#: lib/preferences/preferences.ui:1347
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "과거 기록 저장 허용"
 
-#: lib/preferences/preferences.ui:1327
+#: lib/preferences/preferences.ui:1354
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "끝낼 때 과거 기록 삭제"
 
-#: lib/preferences/preferences.ui:1350
+#: lib/preferences/preferences.ui:1377
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "HTML5 웹 콘텐트 로컬 저장 허용"
 
-#: lib/preferences/preferences.ui:1357
+#: lib/preferences/preferences.ui:1384
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "끝낼 때 저장된 HTML5 웹 콘텐트 삭제"
 
-#: lib/preferences/preferences.ui:1383
+#: lib/preferences/preferences.ui:1410
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "지금 삭제"
 
-#: lib/preferences/preferences.ui:1422
+#: lib/preferences/preferences.ui:1449
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "프록시 설정"
 
-#: lib/preferences/preferences.ui:1441
+#: lib/preferences/preferences.ui:1468
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "시스템 프록시 설정"
 
-#: lib/preferences/preferences.ui:1464
+#: lib/preferences/preferences.ui:1491
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "수동 설정"
 
-#: lib/preferences/preferences.ui:1474
+#: lib/preferences/preferences.ui:1501
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1479
+#: lib/preferences/preferences.ui:1506
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1490
+#: lib/preferences/preferences.ui:1517
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "포트:"
 
-#: lib/preferences/preferences.ui:1511
+#: lib/preferences/preferences.ui:1538
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "사용자 이름:"
 
-#: lib/preferences/preferences.ui:1521
+#: lib/preferences/preferences.ui:1548
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "암호:"
 
-#: lib/preferences/preferences.ui:1550
+#: lib/preferences/preferences.ui:1577
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "프록시 없음"
 
-#: lib/preferences/preferences.ui:1565
+#: lib/preferences/preferences.ui:1592
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>글꼴 종류</b>"
 
-#: lib/preferences/preferences.ui:1578
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "표준"
 
-#: lib/preferences/preferences.ui:1585
+#: lib/preferences/preferences.ui:1612
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "고정폭"
 
-#: lib/preferences/preferences.ui:1595
+#: lib/preferences/preferences.ui:1622
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "세리프"
 
-#: lib/preferences/preferences.ui:1605
+#: lib/preferences/preferences.ui:1632
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "산세리프"
 
-#: lib/preferences/preferences.ui:1615
+#: lib/preferences/preferences.ui:1642
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "필기체"
 
-#: lib/preferences/preferences.ui:1667
+#: lib/preferences/preferences.ui:1694
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "판타지"
 
-#: lib/preferences/preferences.ui:1674
+#: lib/preferences/preferences.ui:1701
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>글꼴 크기</b>"
 
-#: lib/preferences/preferences.ui:1683
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "고정폭 글꼴 크기"
 
-#: lib/preferences/preferences.ui:1690
+#: lib/preferences/preferences.ui:1717
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "기본 글꼴 크기"
 
-#: lib/preferences/preferences.ui:1717
+#: lib/preferences/preferences.ui:1744
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "최소 글꼴 크기"
 
-#: lib/preferences/preferences.ui:1724
+#: lib/preferences/preferences.ui:1751
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "최소 논리적 글꼴 크기"
 
-#: lib/preferences/preferences.ui:1757
+#: lib/preferences/preferences.ui:1784
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>단축키</b>"
 
-#: lib/preferences/preferences.ui:1764
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Alt+탭 번호로 탭 전환"
 
-#: lib/preferences/preferences.ui:1771
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Ctrl+스피드 다이얼 번호로 스피드 다이얼 불러오기"
 
-#: lib/preferences/preferences.ui:1778
+#: lib/preferences/preferences.ui:1805
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4763,12 +4786,12 @@ msgstr ""
 "기존 단축키:<br/><b>1</b> - 이전 탭<br/><b>2</b> - 다음 탭<br/><b>/</b> - 페"
 "이지에서 검색"
 
-#: lib/preferences/preferences.ui:1781
+#: lib/preferences/preferences.ui:1808
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "단일 키 단축키 사용"
 
-#: lib/preferences/preferences.ui:1788
+#: lib/preferences/preferences.ui:1815
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4777,174 +4800,174 @@ msgstr ""
 "이 옵션을 사용하지 않으면 Ctrl+W 단축키를 누르려고 했을 때 앱을 실수로 끝내"
 "는 것을 방지합니다."
 
-#: lib/preferences/preferences.ui:1791
+#: lib/preferences/preferences.ui:1818
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Ctrl+Q로 앱 끝내기"
 
-#: lib/preferences/preferences.ui:1815
+#: lib/preferences/preferences.ui:1842
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>다운로드 위치</b>"
 
-#: lib/preferences/preferences.ui:1822
+#: lib/preferences/preferences.ui:1849
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "다운로드할 때마다 위치 묻기"
 
-#: lib/preferences/preferences.ui:1829
+#: lib/preferences/preferences.ui:1856
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "기본 위치 사용:"
 
-#: lib/preferences/preferences.ui:1879
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>다운로드 옵션</b>"
 
-#: lib/preferences/preferences.ui:1886
+#: lib/preferences/preferences.ui:1913
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "다운로드가 완료되었을 때 다운로드 관리자 닫기"
 
-#: lib/preferences/preferences.ui:1893
+#: lib/preferences/preferences.ui:1920
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>외부 다운로드 관리자</b>"
 
-#: lib/preferences/preferences.ui:1900
+#: lib/preferences/preferences.ui:1927
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "외부 다운로드 관리자 사용"
 
-#: lib/preferences/preferences.ui:1912
+#: lib/preferences/preferences.ui:1939
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "실행 파일:"
 
-#: lib/preferences/preferences.ui:1919
+#: lib/preferences/preferences.ui:1946
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "인자:"
 
-#: lib/preferences/preferences.ui:1926
+#: lib/preferences/preferences.ui:1953
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "확실하지 않으면 비워 두십시오"
 
-#: lib/preferences/preferences.ui:1947
+#: lib/preferences/preferences.ui:1974
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> 자리비움자는 다운로드할 URL로 대체됩니다"
 
-#: lib/preferences/preferences.ui:1973
+#: lib/preferences/preferences.ui:2000
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>자동 채우기 옵션</b>"
 
-#: lib/preferences/preferences.ui:1980
+#: lib/preferences/preferences.ui:2007
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "사이트에서 암호 저장 허용"
 
-#: lib/preferences/preferences.ui:2031
+#: lib/preferences/preferences.ui:2058
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "사이트에 저장된 암호 자동 채우기"
 
-#: lib/preferences/preferences.ui:2052
+#: lib/preferences/preferences.ui:2079
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "쿠키 관리"
 
-#: lib/preferences/preferences.ui:2065
+#: lib/preferences/preferences.ui:2092
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "쿠키 관리자"
 
-#: lib/preferences/preferences.ui:2088
+#: lib/preferences/preferences.ui:2115
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>자바스크립트</b>"
 
-#: lib/preferences/preferences.ui:2101
+#: lib/preferences/preferences.ui:2128
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "자바스크립트 옵션"
 
-#: lib/preferences/preferences.ui:2108
+#: lib/preferences/preferences.ui:2135
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "서버에 Do Not Track 헤더 보내기"
 
-#: lib/preferences/preferences.ui:2115
+#: lib/preferences/preferences.ui:2142
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>쿠키</b>"
 
-#: lib/preferences/preferences.ui:2141
+#: lib/preferences/preferences.ui:2168
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "자바스크립트 프라이버시 옵션 관리"
 
-#: lib/preferences/preferences.ui:2148
+#: lib/preferences/preferences.ui:2175
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>기타</b>"
 
-#: lib/preferences/preferences.ui:2169
+#: lib/preferences/preferences.ui:2196
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "HTML5 권한"
 
-#: lib/preferences/preferences.ui:2179
+#: lib/preferences/preferences.ui:2206
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "사이트 설정"
 
-#: lib/preferences/preferences.ui:2211
+#: lib/preferences/preferences.ui:2238
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "만료 시간:"
 
-#: lib/preferences/preferences.ui:2224
+#: lib/preferences/preferences.ui:2251
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr "초"
 
-#: lib/preferences/preferences.ui:2246
+#: lib/preferences/preferences.ui:2273
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>알림</b>"
 
-#: lib/preferences/preferences.ui:2269
+#: lib/preferences/preferences.ui:2296
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "네이티브 시스템 알림 사용(리눅스만)"
 
-#: lib/preferences/preferences.ui:2276
+#: lib/preferences/preferences.ui:2303
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "알림 사용 안 함"
 
-#: lib/preferences/preferences.ui:2299
+#: lib/preferences/preferences.ui:2326
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
 "the screen."
 msgstr "<b>메모:</b> OSD 알림의 위치를 드래그해서 변경할 수 있습니다."
 
-#: lib/preferences/preferences.ui:2325
+#: lib/preferences/preferences.ui:2352
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "OSD 알림 사용"
 
-#: lib/preferences/preferences.ui:2332
+#: lib/preferences/preferences.ui:2359
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "미리 보기"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2424
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4953,92 +4976,92 @@ msgstr ""
 "맞춤법 검사에 대해서 더 알아 보려면 <a href=\"https://userbase.kde.org/"
 "Falkon#Spell_Check\">위키 페이지</a>를 참조하십시오."
 
-#: lib/preferences/preferences.ui:2439
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>맞춤법 검사 옵션</b>"
 
-#: lib/preferences/preferences.ui:2446
+#: lib/preferences/preferences.ui:2473
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "맞춤법 검사 활성화"
 
-#: lib/preferences/preferences.ui:2453
+#: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>사전 디렉터리</b>"
 
-#: lib/preferences/preferences.ui:2504
+#: lib/preferences/preferences.ui:2531
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "찾은 언어 없음"
 
-#: lib/preferences/preferences.ui:2533
+#: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "프로토콜 핸들러 관리자"
 
-#: lib/preferences/preferences.ui:2573
+#: lib/preferences/preferences.ui:2600
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "검색 엔진 관리자"
 
-#: lib/preferences/preferences.ui:2595
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>사용자 스타일시트</b>"
 
-#: lib/preferences/preferences.ui:2602
+#: lib/preferences/preferences.ui:2629
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>검색 엔진 관리</b>"
 
-#: lib/preferences/preferences.ui:2615
+#: lib/preferences/preferences.ui:2642
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "사용자 정의 스키마 관리"
 
-#: lib/preferences/preferences.ui:2640
+#: lib/preferences/preferences.ui:2667
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "언어"
 
-#: lib/preferences/preferences.ui:2662
+#: lib/preferences/preferences.ui:2689
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>웹사이트를 볼 선호하는 언어</b>"
 
-#: lib/preferences/preferences.ui:2687
+#: lib/preferences/preferences.ui:2714
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "인증서 예외 관리자"
 
-#: lib/preferences/preferences.ui:2709
+#: lib/preferences/preferences.ui:2736
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>브라우저 증명 변경</b>"
 
-#: lib/preferences/preferences.ui:2734
+#: lib/preferences/preferences.ui:2761
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "사용자 에이전트 관리자"
 
-#: lib/preferences/preferences.ui:2756
+#: lib/preferences/preferences.ui:2783
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "모든 웹사이트에 자동으로 불러올 스타일시트:"
 
-#: lib/preferences/preferences.ui:2793
+#: lib/preferences/preferences.ui:2820
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>프로토콜 핸들러 관리</b>"
 
-#: lib/preferences/preferences.ui:2800
+#: lib/preferences/preferences.ui:2827
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>인증서 관리자</b>"
 
-#: lib/preferences/preferences.ui:2851
+#: lib/preferences/preferences.ui:2878
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "사용자 정의 스키마 관리자"
@@ -5218,12 +5241,12 @@ msgctxt "UserAgentDialog|"
 msgid "Edit site"
 msgstr "사이트 편집"
 
-#: lib/preferences/useragentdialog.cpp:216
+#: lib/preferences/useragentdialog.cpp:217
 msgctxt "UserAgentDialog|"
 msgid "Site domain: "
 msgstr "사이트 도메인:"
 
-#: lib/preferences/useragentdialog.cpp:217
+#: lib/preferences/useragentdialog.cpp:218
 msgctxt "UserAgentDialog|"
 msgid "User Agent: "
 msgstr "사용자 에이전트:"

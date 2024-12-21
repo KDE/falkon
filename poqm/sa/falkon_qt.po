@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-12-19 21:41+0530\n"
+"PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -267,7 +267,7 @@ msgstr "वर्तमान पृष्ठस्य IP पता"
 #: lib/app/browserwindow.cpp:733
 msgctxt "BrowserWindow|"
 msgid " (Private Browsing)"
-msgstr " (निजी ब्राउजिंग्) ९."
+msgstr " (निजी ब्राउजिंग्)"
 
 #: lib/app/browserwindow.cpp:980
 #, qt-format
@@ -351,7 +351,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "अद्यापि उद्घाटिताः ट्याब्स् सन्ति"
 
-#: lib/app/mainapplication.cpp:1113
+#: lib/app/mainapplication.cpp:1142
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -360,32 +360,32 @@ msgstr ""
 "Falkon सम्प्रति भवतः पूर्वनिर्धारितं ब्राउजर् नास्ति । किं भवन्तः तत् स्वस्य पूर्वनिर्धारितं "
 "ब्राउजर् कर्तुम् इच्छन्ति?"
 
-#: lib/app/mainapplication.cpp:1114
+#: lib/app/mainapplication.cpp:1143
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Falkon इत्यस्य आरम्भे सर्वदा एतत् जाँचं कुर्वन्तु ।"
 
-#: lib/app/mainapplication.cpp:1116
+#: lib/app/mainapplication.cpp:1145
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "पूर्वनिर्धारित ब्राउज़र"
 
-#: lib/app/mainapplication.cpp:1248
+#: lib/app/mainapplication.cpp:1277
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "नूतनं ट्याब् उद्घाटयन्तु"
 
-#: lib/app/mainapplication.cpp:1249
+#: lib/app/mainapplication.cpp:1278
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "नूतनं विण्डो उद्घाटयन्तु"
 
-#: lib/app/mainapplication.cpp:1250
+#: lib/app/mainapplication.cpp:1279
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "नूतनं निजीविण्डो उद्घाटयन्तु"
 
-#: lib/app/mainapplication.cpp:1265
+#: lib/app/mainapplication.cpp:1294
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -698,7 +698,7 @@ msgstr "यथा प्रवेशं कुर्वन्तु:"
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:258
 msgctxt "AutoFill|"
 msgid "Database (encrypted)"
-msgstr "दत्तांशकोशः (गुप्तः) २."
+msgstr "दत्तांशकोशः (गुप्तः)"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:547
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:552
@@ -762,7 +762,7 @@ msgstr "प्रविष्टः गुप्तशब्दः गलतः 
 #: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
 msgctxt "AutoFill|"
 msgid "Database (plaintext)"
-msgstr "दत्तांशकोशः (सादा पाठः) २."
+msgstr "दत्तांशकोशः (सादा पाठः)"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:20
 msgctxt "MasterPasswordDialog|"
@@ -805,12 +805,12 @@ msgstr ""
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:76
 msgctxt "MasterPasswordDialog|"
 msgid "Current Password:"
-msgstr "वर्तमान गुप्तशब्दः : १."
+msgstr "वर्तमान गुप्तशब्दः :"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:83
 msgctxt "MasterPasswordDialog|"
 msgid "New Password:"
-msgstr "नवीनः गुप्तशब्दः : १."
+msgstr "नवीनः गुप्तशब्दः :"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:90
 msgctxt "MasterPasswordDialog|"
@@ -881,12 +881,12 @@ msgstr "चिनोतु..."
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
 msgctxt "BookmarksExportDialog|"
 msgid "Output File:"
-msgstr "आउटपुट् सञ्चिका : १."
+msgstr "आउटपुट् सञ्चिका :"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:89
 msgctxt "BookmarksExportDialog|"
 msgid "Format:"
-msgstr "प्रारूपः : १."
+msgstr "प्रारूपः :"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:31
 msgctxt "BookmarksExporter|"
@@ -1131,7 +1131,7 @@ msgstr "पत्रसङ्केतः:"
 #: lib/bookmarks/bookmarksmanager.ui:52
 msgctxt "BookmarksManager|"
 msgid "Keyword:"
-msgstr "कीवर्ड : १."
+msgstr "कीवर्ड :"
 
 #: lib/bookmarks/bookmarksmanager.ui:62
 msgctxt "BookmarksManager|"
@@ -1252,7 +1252,7 @@ msgstr "पत्रसङ्केतः:"
 #: lib/bookmarks/bookmarkstools.cpp:244
 msgctxt "Bookmarks|"
 msgid "Keyword:"
-msgstr "कीवर्ड : १."
+msgstr "कीवर्ड :"
 
 #: lib/bookmarks/bookmarkstools.cpp:247
 msgctxt "Bookmarks|"
@@ -1367,7 +1367,7 @@ msgstr "कुकी निष्कासयन्तु"
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
-msgstr "सर्वरः : १."
+msgstr "सर्वरः :"
 
 #: lib/cookies/cookiemanager.cpp:214
 msgctxt "CookieManager|"
@@ -1454,7 +1454,7 @@ msgstr "उरुष्य:"
 #: lib/cookies/cookiemanager.ui:147
 msgctxt "CookieManager|"
 msgid "Expiration:"
-msgstr "अवधिः समाप्तः : १."
+msgstr "अवधिः समाप्तः :"
 
 #: lib/cookies/cookiemanager.ui:238
 msgctxt "CookieManager|"
@@ -1716,7 +1716,7 @@ msgstr "सञ्चिकां रक्षन्तु यथा..."
 #: lib/downloads/downloadmanager.cpp:314
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
-msgstr "MIME HTML संग्रह (*.mhtml) २."
+msgstr "MIME HTML संग्रह (*.mhtml)"
 
 #: lib/downloads/downloadmanager.cpp:315
 msgctxt "DownloadManager|"
@@ -1793,7 +1793,7 @@ msgstr "बाह्यप्रबन्धकेन सह डाउनलो�
 #: lib/downloads/downloadoptionsdialog.ui:165
 msgctxt "DownloadOptionsDialog|"
 msgid "which is:"
-msgstr "यत् अस्ति : १."
+msgstr "यत् अस्ति :"
 
 #: lib/downloads/downloadoptionsdialog.ui:215
 msgctxt "DownloadOptionsDialog|"
@@ -2181,12 +2181,12 @@ msgstr "अन्वेषणपट्टिकां दर्शयतु"
 #: lib/navigation/navigationbarconfigdialog.ui:82
 msgctxt "NavigationBarConfigDialog|"
 msgid "Available items:"
-msgstr "उपलब्धानि वस्तूनि : १."
+msgstr "उपलब्धानि वस्तूनि :"
 
 #: lib/navigation/navigationbarconfigdialog.ui:89
 msgctxt "NavigationBarConfigDialog|"
 msgid "Current items:"
-msgstr "वर्तमान वस्तूनि : १."
+msgstr "वर्तमान वस्तूनि :"
 
 #: lib/navigation/reloadstopbutton.cpp:57
 msgctxt "ReloadStopButton|"
@@ -2238,7 +2238,7 @@ msgstr "जूम स्तरं पुनः सेट् कुर्वन�
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
-msgstr "%1% २."
+msgstr "%1%"
 
 #: lib/network/networkmanager.cpp:91
 msgctxt "NetworkManager|"
@@ -2568,12 +2568,12 @@ msgstr "चित्रं चिन्वन्तु इति क्लिक
 #: lib/network/schemehandlers/falkonschemehandler.cpp:235
 msgctxt "FalkonSchemeReply|"
 msgid "Maximum pages in a row:"
-msgstr "पङ्क्तौ अधिकतमानि पृष्ठानि : १."
+msgstr "पङ्क्तौ अधिकतमानि पृष्ठानि :"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:236
 msgctxt "FalkonSchemeReply|"
 msgid "Change size of pages:"
-msgstr "पृष्ठानां आकारं परिवर्तयन्तु : १."
+msgstr "पृष्ठानां आकारं परिवर्तयन्तु :"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:237
 msgctxt "FalkonSchemeReply|"
@@ -2809,17 +2809,17 @@ msgstr "नामः:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "Url:"
-msgstr "Url: १."
+msgstr "Url:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
 msgid "Shortcut:"
-msgstr "लघुमार्गः : १."
+msgstr "लघुमार्गः :"
 
 #: lib/opensearch/editsearchengine.ui:54
 msgctxt "EditSearchEngine|"
 msgid "Icon:"
-msgstr "चिह्नम् : १."
+msgstr "चिह्नम् :"
 
 #: lib/opensearch/editsearchengine.ui:83
 msgctxt "EditSearchEngine|"
@@ -2834,7 +2834,7 @@ msgstr "<b>नोट्:</b> url अथवा post data मध्ये %s अ�
 #: lib/opensearch/editsearchengine.ui:123
 msgctxt "EditSearchEngine|"
 msgid "Post Data:"
-msgstr "पददत्तांशः : १."
+msgstr "पददत्तांशः :"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -3273,17 +3273,17 @@ msgstr "अनुमतिः"
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
 msgid "Site address:"
-msgstr "साइट्-सङ्केतः : १."
+msgstr "साइट्-सङ्केतः :"
 
 #: lib/other/siteinfo.ui:118
 msgctxt "SiteInfo|"
 msgid "Encoding:"
-msgstr "एन्कोडिंग् : १."
+msgstr "एन्कोडिंग् :"
 
 #: lib/other/siteinfo.ui:137
 msgctxt "SiteInfo|"
 msgid "Meta tags of site:"
-msgstr "साइट् इत्यस्य मेटा टैग्स् : १."
+msgstr "साइट् इत्यस्य मेटा टैग्स् :"
 
 #: lib/other/siteinfo.ui:154
 msgctxt "SiteInfo|"
@@ -3684,7 +3684,7 @@ msgstr "जालस्थलानां कृते प्राधान्�
 #: lib/preferences/addacceptlanguage.ui:32
 msgctxt "AddAcceptLanguage|"
 msgid "Personal definition:"
-msgstr "व्यक्तिगत परिभाषा : १."
+msgstr "व्यक्तिगत परिभाषा :"
 
 #: lib/preferences/autofillmanager.cpp:67
 msgctxt "AutoFillManager|"
@@ -3717,7 +3717,7 @@ msgstr "पृष्ठभागं परिवर्तयन्तु..."
 #: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend:"
-msgstr "पृष्ठभागं परिवर्तयन्तु : १."
+msgstr "पृष्ठभागं परिवर्तयन्तु :"
 
 #: lib/preferences/autofillmanager.cpp:179
 msgctxt "AutoFillManager|"
@@ -3747,7 +3747,7 @@ msgstr "गुप्तशब्द सम्पादयतु"
 #: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Change password:"
-msgstr "गुप्तशब्दं परिवर्तयन्तु : १."
+msgstr "गुप्तशब्दं परिवर्तयन्तु :"
 
 #: lib/preferences/autofillmanager.cpp:302
 #: lib/preferences/autofillmanager.cpp:313
@@ -3972,88 +3972,106 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "किं भवान् निश्चयेन '%1' अपसारयितुम् इच्छति?"
 
-#: lib/preferences/preferences.cpp:154 lib/preferences/preferences.cpp:643
+#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:657
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "मूलभूतम्‌"
 
-#: lib/preferences/preferences.cpp:158
+#: lib/preferences/preferences.cpp:159
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "पूर्वनिर्धारितरूपेण सेट् कुर्वन्तु"
 
-#: lib/preferences/preferences.cpp:313
+#: lib/preferences/preferences.cpp:314
+#, fuzzy
+#| msgctxt "FalkonSchemeReply|"
+#| msgid "Auto"
+msgctxt "Preferences|"
+msgid "Auto"
+msgstr "ऑटो"
+
+#: lib/preferences/preferences.cpp:316
+msgctxt "Preferences|"
+msgid "Light"
+msgstr ""
+
+#: lib/preferences/preferences.cpp:317
+msgctxt "Preferences|"
+msgid "Dark"
+msgstr ""
+
+#: lib/preferences/preferences.cpp:327
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
-msgstr "%1% २."
+msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:586
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "कार्यान्वयनीयस्थानं चिनोतु..."
 
-#: lib/preferences/preferences.cpp:629
+#: lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "ओएसडी अधिसूचना"
 
-#: lib/preferences/preferences.cpp:630
+#: lib/preferences/preferences.cpp:644
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "यत्र इच्छसि तत्र स्थापयितुं पर्दायां कर्षन्तु ।"
 
-#: lib/preferences/preferences.cpp:679
+#: lib/preferences/preferences.cpp:693
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "डाउनलोड् स्थानं चिनोतु..."
 
-#: lib/preferences/preferences.cpp:693
+#: lib/preferences/preferences.cpp:707
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "शैलीपत्रकस्थानं चिनोतु..."
 
-#: lib/preferences/preferences.cpp:704
+#: lib/preferences/preferences.cpp:718
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "विलोपितम्"
 
-#: lib/preferences/preferences.cpp:806
+#: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "कैश मार्गं चिनोतु..."
 
-#: lib/preferences/preferences.cpp:837
+#: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "New Profile"
 
-#: lib/preferences/preferences.cpp:837
+#: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "नूतनस्य प्रोफाइलस्य नाम प्रविशतु:"
 
-#: lib/preferences/preferences.cpp:847 lib/preferences/preferences.cpp:852
+#: lib/preferences/preferences.cpp:861 lib/preferences/preferences.cpp:866
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "त्रुटि!"
 
-#: lib/preferences/preferences.cpp:847
+#: lib/preferences/preferences.cpp:861
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "इदं प्रोफाइल पूर्वमेव विद्यते!"
 
-#: lib/preferences/preferences.cpp:852
+#: lib/preferences/preferences.cpp:866
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "प्रोफाइल निर्देशिका निर्मातुं न शक्यते!"
 
-#: lib/preferences/preferences.cpp:863
+#: lib/preferences/preferences.cpp:877
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "पुष्टिः"
 
-#: lib/preferences/preferences.cpp:864
+#: lib/preferences/preferences.cpp:878
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4063,12 +4081,12 @@ msgstr ""
 "किं भवान् निश्चितरूपेण \"%1\" प्रोफाइलं स्थायिरूपेण विलोपयितुम् इच्छति? एतत् कर्म न "
 "निवर्तयितुं शक्यते!"
 
-#: lib/preferences/preferences.cpp:879 lib/preferences/preferences.ui:241
+#: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "नोटः- सक्रिय-प्रोफाइलं विलोपयितुं न शक्नुथ ।"
 
-#: lib/preferences/preferences.cpp:1154
+#: lib/preferences/preferences.cpp:1169
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Color इति चिनोतु"
@@ -4078,7 +4096,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "प्राधान्यानि"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2046
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2073
 msgctxt "Preferences|"
 msgid "General"
 msgstr "सामान्य"
@@ -4221,7 +4239,7 @@ msgstr "<b>प्रोफाइल</b>"
 #: lib/preferences/preferences.ui:404
 msgctxt "Preferences|"
 msgid "Startup profile:"
-msgstr "स्टार्टअप प्रोफाइल : १."
+msgstr "स्टार्टअप प्रोफाइल :"
 
 #: lib/preferences/preferences.ui:411
 msgctxt "Preferences|"
@@ -4231,7 +4249,7 @@ msgstr "आरम्भे अद्यतनं पश्यन्तु"
 #: lib/preferences/preferences.ui:418
 msgctxt "Preferences|"
 msgid "Active profile:"
-msgstr "सक्रियरूपरेखा : १."
+msgstr "सक्रियरूपरेखा :"
 
 #: lib/preferences/preferences.ui:432
 msgctxt "Preferences|"
@@ -4467,16 +4485,16 @@ msgstr "उपरितन"
 #: lib/preferences/preferences.ui:954
 msgctxt "Preferences|"
 msgid "Custom color:"
-msgstr "कस्टमरङ्गः : १."
+msgstr "कस्टमरङ्गः :"
 
 #: lib/preferences/preferences.ui:970
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "वर्णं चिनोतु"
 
-#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1307
-#: lib/preferences/preferences.ui:1841 lib/preferences/preferences.ui:1938
-#: lib/preferences/preferences.ui:2784
+#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1334
+#: lib/preferences/preferences.ui:1868 lib/preferences/preferences.ui:1965
+#: lib/preferences/preferences.ui:2811
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -4573,197 +4591,202 @@ msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr "बल अन्धकारविधा"
 
-#: lib/preferences/preferences.ui:1161
+#: lib/preferences/preferences.ui:1153
+msgctxt "Preferences|"
+msgid "Preffer color scheme:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:1188
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "मूषकचक्रं स्क्रॉलं करोति"
 
-#: lib/preferences/preferences.ui:1181
+#: lib/preferences/preferences.ui:1208
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "पृष्ठे पङ्क्तयः"
 
-#: lib/preferences/preferences.ui:1192
+#: lib/preferences/preferences.ui:1219
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "पृष्ठेषु पूर्वनिर्धारितं जूमम् : "
 
-#: lib/preferences/preferences.ui:1231
+#: lib/preferences/preferences.ui:1258
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "स्थानीय भण्डारण"
 
-#: lib/preferences/preferences.ui:1239
+#: lib/preferences/preferences.ui:1266
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "डिस्क मध्ये संजालसञ्चयस्य संग्रहणं अनुमन्यताम्"
 
-#: lib/preferences/preferences.ui:1262
+#: lib/preferences/preferences.ui:1289
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "close इत्यत्र cache विलोपयन्तु"
 
-#: lib/preferences/preferences.ui:1269
+#: lib/preferences/preferences.ui:1296
 msgctxt "Preferences|"
 msgid "Maximum:"
-msgstr "अधिकतमम् : १."
+msgstr "अधिकतमम् :"
 
-#: lib/preferences/preferences.ui:1276
+#: lib/preferences/preferences.ui:1303
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1292
+#: lib/preferences/preferences.ui:1319
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "संग्रहणं संग्रहयन्तु अत्र:"
 
-#: lib/preferences/preferences.ui:1320
+#: lib/preferences/preferences.ui:1347
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "इतिहासस्य रक्षणस्य अनुमतिं ददातु"
 
-#: lib/preferences/preferences.ui:1327
+#: lib/preferences/preferences.ui:1354
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "close इत्यत्र इतिहासं विलोपयन्तु"
 
-#: lib/preferences/preferences.ui:1350
+#: lib/preferences/preferences.ui:1377
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "HTML5 जालसामग्रीणां स्थानीयभण्डारणस्य अनुमतिं ददातु"
 
-#: lib/preferences/preferences.ui:1357
+#: lib/preferences/preferences.ui:1384
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "स्थानीयतया संगृहीतं HTML5 जालसामग्रीम् close इत्यत्र विलोपयन्तु"
 
-#: lib/preferences/preferences.ui:1383
+#: lib/preferences/preferences.ui:1410
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "अधुना विलोपयन्तु"
 
-#: lib/preferences/preferences.ui:1422
+#: lib/preferences/preferences.ui:1449
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "प्रॉक्सी विन्यासः"
 
-#: lib/preferences/preferences.ui:1441
+#: lib/preferences/preferences.ui:1468
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "प्रणाली प्रॉक्सी विन्यास"
 
-#: lib/preferences/preferences.ui:1464
+#: lib/preferences/preferences.ui:1491
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "मैनुअल विन्यास"
 
-#: lib/preferences/preferences.ui:1474
+#: lib/preferences/preferences.ui:1501
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "एचटीटीपी"
 
-#: lib/preferences/preferences.ui:1479
+#: lib/preferences/preferences.ui:1506
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1490
+#: lib/preferences/preferences.ui:1517
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "पोताश्रय:"
 
-#: lib/preferences/preferences.ui:1511
+#: lib/preferences/preferences.ui:1538
 msgctxt "Preferences|"
 msgid "Username:"
-msgstr "उपयोक्तृनाम : १."
+msgstr "उपयोक्तृनाम :"
 
-#: lib/preferences/preferences.ui:1521
+#: lib/preferences/preferences.ui:1548
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "समाभाष्:"
 
-#: lib/preferences/preferences.ui:1550
+#: lib/preferences/preferences.ui:1577
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "न प्रॉक्सी"
 
-#: lib/preferences/preferences.ui:1565
+#: lib/preferences/preferences.ui:1592
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>फॉन्ट परिवाराः</b>"
 
-#: lib/preferences/preferences.ui:1578
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "स्तरीय"
 
-#: lib/preferences/preferences.ui:1585
+#: lib/preferences/preferences.ui:1612
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "युक्त"
 
-#: lib/preferences/preferences.ui:1595
+#: lib/preferences/preferences.ui:1622
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "सेरिफ"
 
-#: lib/preferences/preferences.ui:1605
+#: lib/preferences/preferences.ui:1632
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "संस सेरिफ"
 
-#: lib/preferences/preferences.ui:1615
+#: lib/preferences/preferences.ui:1642
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "वक्र"
 
-#: lib/preferences/preferences.ui:1667
+#: lib/preferences/preferences.ui:1694
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "काल्पनिकता"
 
-#: lib/preferences/preferences.ui:1674
+#: lib/preferences/preferences.ui:1701
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>फ़ॉन्ट आकाराः</b>"
 
-#: lib/preferences/preferences.ui:1683
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "नियत फ़ॉन्ट आकार"
 
-#: lib/preferences/preferences.ui:1690
+#: lib/preferences/preferences.ui:1717
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "पूर्वनिर्धारित फ़ॉन्ट आकार"
 
-#: lib/preferences/preferences.ui:1717
+#: lib/preferences/preferences.ui:1744
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "न्यूनतम फॉन्ट आकार"
 
-#: lib/preferences/preferences.ui:1724
+#: lib/preferences/preferences.ui:1751
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "न्यूनतम तार्किक फ़ॉन्ट आकार"
 
-#: lib/preferences/preferences.ui:1757
+#: lib/preferences/preferences.ui:1784
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>शॉर्टकट</b>"
 
-#: lib/preferences/preferences.ui:1764
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Alt + number of tab इत्यनेन सह ट्याब्स् प्रति स्विच् कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:1771
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Ctrl + स्पीडडायलस्य संख्यायाः सह स्पीड् डायल्स् लोड् कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:1778
+#: lib/preferences/preferences.ui:1805
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4772,12 +4795,12 @@ msgstr ""
 "विद्यमानाः शॉर्टकट् : १.<br/> <b>१</b> - पूर्व टब<br/> <b>२</b> - अग्रिमः टबः<br/> "
 "<b>/</b> - पृष्ठे अन्वेषणं कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:1781
+#: lib/preferences/preferences.ui:1808
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "एककुंजी-शॉर्टकट्-प्रयोगं कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:1788
+#: lib/preferences/preferences.ui:1815
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4786,157 +4809,157 @@ msgstr ""
 "यदि अनिरीक्षितं भवति तर्हि अनुप्रयोगात् आकस्मिकनिर्गमनं निवारयति यदि Ctrl-W शॉर्टकट् "
 "अभिप्रेतः आसीत् ।"
 
-#: lib/preferences/preferences.ui:1791
+#: lib/preferences/preferences.ui:1818
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Ctrl-Q इत्यनेन अनुप्रयोगं बन्दं कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:1815
+#: lib/preferences/preferences.ui:1842
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>स्थानं डाउनलोड् कुर्वन्तु</b>"
 
-#: lib/preferences/preferences.ui:1822
+#: lib/preferences/preferences.ui:1849
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "प्रत्येकं समये डाउनलोड् स्थानं पृच्छन्तु"
 
-#: lib/preferences/preferences.ui:1829
+#: lib/preferences/preferences.ui:1856
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "परिभाषितस्थानस्य उपयोगं कुर्वन्तु : "
 
-#: lib/preferences/preferences.ui:1879
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>डाउनलोड् विकल्पाः</b>"
 
-#: lib/preferences/preferences.ui:1886
+#: lib/preferences/preferences.ui:1913
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "डाउनलोड् समाप्तं भवति तदा डाउनलोड् प्रबन्धकं बन्दं कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:1893
+#: lib/preferences/preferences.ui:1920
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>बाह्य डाउनलोड प्रबन्धक</b>"
 
-#: lib/preferences/preferences.ui:1900
+#: lib/preferences/preferences.ui:1927
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "बाह्य-अवलोकन-प्रबन्धकस्य उपयोगं कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:1912
+#: lib/preferences/preferences.ui:1939
 msgctxt "Preferences|"
 msgid "Executable:"
-msgstr "निष्पादनीयः : १."
+msgstr "निष्पादनीयः :"
 
-#: lib/preferences/preferences.ui:1919
+#: lib/preferences/preferences.ui:1946
 msgctxt "Preferences|"
 msgid "Arguments:"
-msgstr "तर्काः : १."
+msgstr "तर्काः :"
 
-#: lib/preferences/preferences.ui:1926
+#: lib/preferences/preferences.ui:1953
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "अनिश्चितः चेत् रिक्तं त्यजन्तु"
 
-#: lib/preferences/preferences.ui:1947
+#: lib/preferences/preferences.ui:1974
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d इत्यस्य</b> स्थाने अवतरणं कर्तव्यं URL भविष्यति"
 
-#: lib/preferences/preferences.ui:1973
+#: lib/preferences/preferences.ui:2000
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>AutoFill विकल्पाः</b>"
 
-#: lib/preferences/preferences.ui:1980
+#: lib/preferences/preferences.ui:2007
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "साइट् तः गुप्तशब्दानां रक्षणं अनुमन्यताम्"
 
-#: lib/preferences/preferences.ui:2031
+#: lib/preferences/preferences.ui:2058
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "साइट्-स्थानेषु गुप्तशब्दान् स्वयमेव सम्पूर्णं कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:2052
+#: lib/preferences/preferences.ui:2079
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "कुकीजं प्रबन्धयन्तु"
 
-#: lib/preferences/preferences.ui:2065
+#: lib/preferences/preferences.ui:2092
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "कुकीज प्रबन्धक"
 
-#: lib/preferences/preferences.ui:2088
+#: lib/preferences/preferences.ui:2115
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>जावास्क्रिप्ट्</b>"
 
-#: lib/preferences/preferences.ui:2101
+#: lib/preferences/preferences.ui:2128
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "जावास्क्रिप्ट् विकल्पाः"
 
-#: lib/preferences/preferences.ui:2108
+#: lib/preferences/preferences.ui:2135
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "सर्वरेभ्यः Do Not Track इति शीर्षकं प्रेषयन्तु"
 
-#: lib/preferences/preferences.ui:2115
+#: lib/preferences/preferences.ui:2142
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>कुकीज</b>"
 
-#: lib/preferences/preferences.ui:2141
+#: lib/preferences/preferences.ui:2168
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "जावास्क्रिप्ट् गोपनीयताविकल्पान् प्रबन्धयन्तु"
 
-#: lib/preferences/preferences.ui:2148
+#: lib/preferences/preferences.ui:2175
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>इतर</b>"
 
-#: lib/preferences/preferences.ui:2169
+#: lib/preferences/preferences.ui:2196
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "HTML5 अनुमतिः"
 
-#: lib/preferences/preferences.ui:2179
+#: lib/preferences/preferences.ui:2206
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "साइट सेटिंग्स्"
 
-#: lib/preferences/preferences.ui:2211
+#: lib/preferences/preferences.ui:2238
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
-msgstr "अवधिसमाप्तिसमयः : १."
+msgstr "अवधिसमाप्तिसमयः :"
 
-#: lib/preferences/preferences.ui:2224
+#: lib/preferences/preferences.ui:2251
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " सेकण्ड्"
 
-#: lib/preferences/preferences.ui:2246
+#: lib/preferences/preferences.ui:2273
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>अधिसूचना</b>"
 
-#: lib/preferences/preferences.ui:2269
+#: lib/preferences/preferences.ui:2296
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "देशी प्रणाली सूचनानां उपयोगं कुर्वन्तु (केवलं लिनक्स)"
 
-#: lib/preferences/preferences.ui:2276
+#: lib/preferences/preferences.ui:2303
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "सूचनानां उपयोगं न कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:2299
+#: lib/preferences/preferences.ui:2326
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -4945,17 +4968,17 @@ msgstr ""
 "<b>नोटः-</b> भवान् OSD Notification इत्यस्य स्थानं स्क्रीन् मध्ये कर्षयित्वा परिवर्तयितुं "
 "शक्नोति ।"
 
-#: lib/preferences/preferences.ui:2325
+#: lib/preferences/preferences.ui:2352
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "OSD सूचनानां उपयोगं कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:2332
+#: lib/preferences/preferences.ui:2359
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "पूर्वावलोकनम्"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2424
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4964,92 +4987,92 @@ msgstr ""
 "वर्तनीपरीक्षायाः विषये अधिकविवरणार्थं <a href=\"https://userbase.kde.org/"
 "Falkon#Spell_Check\">विकिं</a> पश्यन्तु ।"
 
-#: lib/preferences/preferences.ui:2439
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Spell Check विकल्पाः</b>"
 
-#: lib/preferences/preferences.ui:2446
+#: lib/preferences/preferences.ui:2473
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "वर्तनीपरीक्षां सक्षमं कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:2453
+#: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>शब्दकोशनिर्देशिकाः</b>"
 
-#: lib/preferences/preferences.ui:2504
+#: lib/preferences/preferences.ui:2531
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "न भाषाः प्राप्ताः"
 
-#: lib/preferences/preferences.ui:2533
+#: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "प्रोटोकॉल संचालक प्रबन्धक"
 
-#: lib/preferences/preferences.ui:2573
+#: lib/preferences/preferences.ui:2600
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "अन्वेषणयन्त्रप्रबन्धकः"
 
-#: lib/preferences/preferences.ui:2595
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>उपयोक्तृशैलीपत्रम्</b>"
 
-#: lib/preferences/preferences.ui:2602
+#: lib/preferences/preferences.ui:2629
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>अन्वेषणयन्त्राणां प्रबन्धनं कुर्वन्तु</b>"
 
-#: lib/preferences/preferences.ui:2615
+#: lib/preferences/preferences.ui:2642
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "कस्टम योजनानां प्रबन्धनं कुर्वन्तु"
 
-#: lib/preferences/preferences.ui:2640
+#: lib/preferences/preferences.ui:2667
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "भाषाः"
 
-#: lib/preferences/preferences.ui:2662
+#: lib/preferences/preferences.ui:2689
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>जालस्थलानां कृते प्राधान्यभाषा</b>"
 
-#: lib/preferences/preferences.ui:2687
+#: lib/preferences/preferences.ui:2714
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "प्रमाणपत्र अपवाद प्रबन्धक"
 
-#: lib/preferences/preferences.ui:2709
+#: lib/preferences/preferences.ui:2736
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>ब्राउजर्-परिचयं परिवर्तयन्तु</b>"
 
-#: lib/preferences/preferences.ui:2734
+#: lib/preferences/preferences.ui:2761
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "उपयोक्ता एजेण्ट् प्रबन्धकः"
 
-#: lib/preferences/preferences.ui:2756
+#: lib/preferences/preferences.ui:2783
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Style Sheet स्वयमेव सर्वैः जालपुटैः सह लोड् भवति: "
 
-#: lib/preferences/preferences.ui:2793
+#: lib/preferences/preferences.ui:2820
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>प्रोटोकॉल-सञ्चालकानां प्रबन्धनं कुर्वन्तु</b>"
 
-#: lib/preferences/preferences.ui:2800
+#: lib/preferences/preferences.ui:2827
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>प्रमाणपत्र प्रबन्धक</b>"
 
-#: lib/preferences/preferences.ui:2851
+#: lib/preferences/preferences.ui:2878
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "कस्टम योजना प्रबन्धक"
@@ -5062,7 +5085,7 @@ msgstr "अनुमत योजनां योजयन्तु"
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Scheme:"
-msgstr "योजना : १."
+msgstr "योजना :"
 
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
@@ -5227,12 +5250,12 @@ msgctxt "UserAgentDialog|"
 msgid "Edit site"
 msgstr "साइट् सम्पादयतु"
 
-#: lib/preferences/useragentdialog.cpp:216
+#: lib/preferences/useragentdialog.cpp:217
 msgctxt "UserAgentDialog|"
 msgid "Site domain: "
 msgstr "साइट् डोमेन् : "
 
-#: lib/preferences/useragentdialog.cpp:217
+#: lib/preferences/useragentdialog.cpp:218
 msgctxt "UserAgentDialog|"
 msgid "User Agent: "
 msgstr "उपयोक्ता एजेण्ट् : "
@@ -5403,7 +5426,7 @@ msgstr "कृपया आरम्भसत्रं चिनोतु:"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "%1 (last session)"
-msgstr "%1 (अन्तिमसत्रम्) २."
+msgstr "%1 (अन्तिमसत्रम्)"
 
 #: lib/session/sessionmanagerdialog.cpp:140
 msgctxt "SessionManagerDialog|"
@@ -5733,7 +5756,7 @@ msgstr "सामान्य नाम (CN): ."
 #: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
 msgctxt "CertificateInfoWidget|"
 msgid "Organization (O):"
-msgstr "संगठन (ओ): १."
+msgstr "संगठन (ओ):"
 
 #: lib/tools/certificateinfowidget.ui:58 lib/tools/certificateinfowidget.ui:133
 msgctxt "CertificateInfoWidget|"
@@ -5743,7 +5766,7 @@ msgstr "संगठनात्मक इकाई (OU): ."
 #: lib/tools/certificateinfowidget.ui:75
 msgctxt "CertificateInfoWidget|"
 msgid "Serial Number:"
-msgstr "क्रमाङ्कः : १."
+msgstr "क्रमाङ्कः :"
 
 #: lib/tools/certificateinfowidget.ui:92
 msgctxt "CertificateInfoWidget|"
@@ -5952,7 +5975,7 @@ msgstr "रिक्त पृष्ठ"
 #, qt-format
 msgctxt "WebView|"
 msgid "Falkon %1 (%2)"
-msgstr "बाज %1 (%2) २."
+msgstr "बाज %1 (%2)"
 
 #: lib/webengine/webview.cpp:705
 msgctxt "WebView|"
