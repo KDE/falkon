@@ -30,18 +30,26 @@ SBI_NetworkIcon::SBI_NetworkIcon(BrowserWindow* window)
     setObjectName(QSL("sbi_networkicon"));
     setCursor(Qt::PointingHandCursor);
 
-    /* TODO rework connection detection */
-    onlineStateChanged(true);
+    reachabilityChanged(QNetworkInformation::instance()->reachability());
+
+    connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, &SBI_NetworkIcon::reachabilityChanged);
     connect(this, &ClickableLabel::clicked, this, &SBI_NetworkIcon::showMenu);
 }
 
-void SBI_NetworkIcon::onlineStateChanged(bool online)
+void SBI_NetworkIcon::reachabilityChanged(QNetworkInformation::Reachability reachability)
 {
-    if (online) {
+    if ((reachability == QNetworkInformation::Reachability::Online)
+        || (reachability == QNetworkInformation::Reachability::Site)
+    ) {
         setPixmap(QIcon(QSL(":sbi/data/network-online.png")).pixmap(16));
     }
-    else {
+    else if ((reachability == QNetworkInformation::Reachability::Local)
+             || (reachability == QNetworkInformation::Reachability::Disconnected)
+    ) {
         setPixmap(QIcon(QSL(":sbi/data/network-offline.png")).pixmap(16));
+    }
+    else {
+        setPixmap(QIcon(QSL(":sbi/data/network-unknown.png")).pixmap(16));
     }
 
     updateToolTip();
@@ -94,9 +102,24 @@ void SBI_NetworkIcon::updateToolTip()
 {
     QString tooltip = tr("Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/><br/><b>Proxy:</b><br/>%2");
 
-    // TODO QT6 - in Qt6 we're always reporting as online, should we just remove this functionality instead?
-    // Or is there a way to detect network status in Qt6?
-    tooltip = tooltip.arg(tr("Connected"));
+    switch(QNetworkInformation::instance()->reachability()) {
+    case QNetworkInformation::Reachability::Online:
+        tooltip = tooltip.arg(tr("Connected - Online"));
+        break;
+    case QNetworkInformation::Reachability::Site:
+        tooltip = tooltip.arg(tr("Connected - Site"));
+        break;
+    case QNetworkInformation::Reachability::Local:
+        tooltip = tooltip.arg(tr("Connected - Local"));
+        break;
+    case QNetworkInformation::Reachability::Disconnected:
+        tooltip = tooltip.arg(tr("Disconnected"));
+        break;
+    case QNetworkInformation::Reachability::Unknown:
+    default:
+        tooltip = tooltip.arg(tr("Unknown"));
+        break;
+    }
 
     switch (QNetworkProxy::applicationProxy().type()) {
     case QNetworkProxy::DefaultProxy:

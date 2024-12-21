@@ -169,6 +169,7 @@ private:
     void checkOptimizeDatabase();
 
     void registerAllowedSchemes();
+    void initNetworkInformation();
 
     bool m_isPrivate;
     bool m_isPortable;
