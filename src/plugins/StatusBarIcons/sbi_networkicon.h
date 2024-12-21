@@ -19,6 +19,7 @@
 #define SBI_NETWORKICON_H
 
 #include <QNetworkAccessManager>
+#include <QNetworkInformation>
 
 #include "sbi_icon.h"
 
@@ -32,7 +33,7 @@ public:
     explicit SBI_NetworkIcon(BrowserWindow* window);
 
 private Q_SLOTS:
-    void onlineStateChanged(bool online);
+    void reachabilityChanged(QNetworkInformation::Reachability reachability);
     void showDialog();
 
     void showMenu(const QPoint &pos);

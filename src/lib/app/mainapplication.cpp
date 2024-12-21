@@ -69,6 +69,7 @@
 #include <QtWebEngineCoreVersion>
 #include <QtGuiVersion>
 #include <QStyleHints>
+#include <QNetworkInformation>
 
 #include <QWebEngineNotification>
 #include <QWebEngineUrlScheme>
@@ -307,6 +308,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     m_networkManager = new NetworkManager(this);
 
+    initNetworkInformation();
     setupUserScripts();
 
     if (!isPrivate() && !isTestModeEnabled()) {
@@ -1187,6 +1189,15 @@ void MainApplication::registerAllowedSchemes()
         scheme.setFlags(QWebEngineUrlScheme::SecureScheme | QWebEngineUrlScheme::ContentSecurityPolicyIgnored);
         scheme.setSyntax(QWebEngineUrlScheme::Syntax::Path);
         QWebEngineUrlScheme::registerScheme(scheme);
+    }
+}
+
+void MainApplication::initNetworkInformation()
+{
+    bool loaded = QNetworkInformation::loadBackendByFeatures(QNetworkInformation::Feature::Reachability |
+                                                             QNetworkInformation::Feature::CaptivePortal);
+    if (!loaded) {
+        QNetworkInformation::loadDefaultBackend();
     }
 }
 
