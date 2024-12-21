@@ -53,7 +53,7 @@ void NavigationContainer::toggleTabsOnTop(bool enable)
 
     m_layout->removeWidget(m_tabBar);
     m_layout->insertWidget(enable ? 0 : m_layout->count(), m_tabBar);
-    m_layout->setContentsMargins(0, enable ? 2 : 0, 0, enable ? 2 : 0);
+    m_layout->setContentsMargins(0, 0, 0, enable ? 2 : 0);
 
     setUpdatesEnabled(true);
 }
