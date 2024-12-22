@@ -202,20 +202,19 @@ void CommandLineOptions::parseActions()
         m_actions.append(pair);
     }
 
-    if (parser.positionalArguments().isEmpty())
-        return;
+    const QStringList args = parser.positionalArguments();
+    for (QString url : args) {
+        QFileInfo fileInfo(url);
 
-    QString url = parser.positionalArguments().constLast();
-    QFileInfo fileInfo(url);
+        if (fileInfo.exists()) {
+            url = fileInfo.absoluteFilePath();
+        }
 
-    if (fileInfo.exists()) {
-        url = fileInfo.absoluteFilePath();
-    }
-
-    if (!url.isEmpty() && !url.startsWith(QLatin1Char('-'))) {
-        ActionPair pair;
-        pair.action = Qz::CL_OpenUrl;
-        pair.text = url;
-        m_actions.append(pair);
+        if (!url.isEmpty() && !url.startsWith(QLatin1Char('-'))) {
+            ActionPair pair;
+            pair.action = Qz::CL_OpenUrl;
+            pair.text = url;
+            m_actions.append(pair);
+        }
     }
 }

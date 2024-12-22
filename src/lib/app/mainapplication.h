@@ -82,7 +82,8 @@ public:
     QList<BrowserWindow*> windows() const;
 
     BrowserWindow* getWindow() const;
-    BrowserWindow* createWindow(Qz::BrowserWindowType type, const QUrl &startUrl = QUrl());
+    BrowserWindow* createWindow(Qz::BrowserWindowType type, const QUrl &startUrl);
+    BrowserWindow* createWindow(Qz::BrowserWindowType type, const QList<QUrl> &startUrls = {});
 
     AfterLaunch afterLaunch() const;
 

@@ -187,9 +187,9 @@ QDataStream &operator>>(QDataStream &stream, BrowserWindow::SavedWindow &window)
     return stream;
 }
 
-BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QUrl &startUrl)
+BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QList<QUrl> startUrls)
     : QMainWindow(nullptr)
-    , m_startUrl(startUrl)
+    , m_startUrls(startUrls)
     , m_windowType(type)
     , m_startTab(nullptr)
     , m_startPage(nullptr)
@@ -296,8 +296,8 @@ void BrowserWindow::postLaunch()
         break;
     }
 
-    if (!m_startUrl.isEmpty()) {
-        startUrl = m_startUrl;
+    if (!m_startUrls.isEmpty()) {
+        startUrl = m_startUrls.takeFirst();
         addTab = true;
     }
 
@@ -314,6 +314,10 @@ void BrowserWindow::postLaunch()
 
     if (addTab) {
         m_tabWidget->addView(startUrl, Qz::NT_CleanSelectedTabAtTheEnd);
+
+        for(const QUrl &url : std::as_const(m_startUrls)) {
+            m_tabWidget->addView(url, Qz::NT_NotSelectedTabAtTheEnd);
+        }
 
         if (startUrl.isEmpty() || startUrl.toString() == QLatin1String("falkon:speeddial")) {
             locationBar()->setFocus();

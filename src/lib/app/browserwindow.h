@@ -77,7 +77,7 @@ public:
         friend FALKON_EXPORT QDataStream &operator>>(QDataStream &stream, SavedWindow &window);
     };
 
-    explicit BrowserWindow(Qz::BrowserWindowType type, const QUrl &url = QUrl());
+    explicit BrowserWindow(Qz::BrowserWindowType type, const QList<QUrl> urls = {});
     ~BrowserWindow() override;
 
     void setStartTab(WebTab* tab);
@@ -196,7 +196,7 @@ private:
     QHash<QString, QVariant> saveUiState();
     void restoreUiState(const QHash<QString, QVariant> &state);
 
-    QUrl m_startUrl;
+    QList<QUrl> m_startUrls;
     QUrl m_homepage;
     Qz::BrowserWindowType m_windowType;
     WebTab* m_startTab;

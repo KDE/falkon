@@ -151,7 +151,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     }
 #endif
 
-    QUrl startUrl;
+    QList<QUrl> startUrls;
     QString startProfile;
     QStringList messages;
 
@@ -194,15 +194,15 @@ MainApplication::MainApplication(int &argc, char** argv)
                 newInstance = true;
                 break;
             case Qz::CL_OpenUrlInCurrentTab:
-                startUrl = QUrl::fromUserInput(pair.text);
+                startUrls.append(QUrl::fromUserInput(pair.text));
                 messages.append(QSL("ACTION:OpenUrlInCurrentTab") + pair.text);
                 break;
             case Qz::CL_OpenUrlInNewWindow:
-                startUrl = QUrl::fromUserInput(pair.text);
+                startUrls.append(QUrl::fromUserInput(pair.text));
                 messages.append(QSL("ACTION:OpenUrlInNewWindow") + pair.text);
                 break;
             case Qz::CL_OpenUrl:
-                startUrl = QUrl::fromUserInput(pair.text);
+                startUrls.append(QUrl::fromUserInput(pair.text));
                 messages.append(QSL("URL:") + pair.text);
                 break;
             case Qz::CL_ExitAction:
@@ -345,7 +345,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     if (!noAddons)
         m_plugins->loadPlugins();
 
-    BrowserWindow* window = createWindow(Qz::BW_FirstAppWindow, startUrl);
+    BrowserWindow *window = createWindow(Qz::BW_FirstAppWindow, std::move(startUrls));
     connect(window, SIGNAL(startingCompleted()), this, SLOT(restoreOverrideCursor()));
 
     connect(this, &QApplication::focusChanged, this, &MainApplication::onFocusChanged);
@@ -486,11 +486,16 @@ BrowserWindow* MainApplication::getWindow() const
 
 BrowserWindow* MainApplication::createWindow(Qz::BrowserWindowType type, const QUrl &startUrl)
 {
+    return createWindow(type, QList<QUrl>({startUrl}));
+}
+
+BrowserWindow* MainApplication::createWindow(Qz::BrowserWindowType type, const QList<QUrl> &startUrls)
+{
     if (windowCount() == 0 && type != Qz::BW_MacFirstWindow) {
         type = Qz::BW_FirstAppWindow;
     }
 
-    auto* window = new BrowserWindow(type, startUrl);
+    auto *window = new BrowserWindow(type, startUrls);
     connect(window, &QObject::destroyed, this, &MainApplication::windowDestroyed);
 
     m_windows.prepend(window);
