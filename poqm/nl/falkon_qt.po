@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-12-15 14:10+0100\n"
+"PO-Revision-Date: 2024-12-21 11:11+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: nl_NL\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -4020,9 +4020,6 @@ msgid "Set as default"
 msgstr "Instellen als standaard"
 
 #: lib/preferences/preferences.cpp:314
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Automatisch"
@@ -4030,12 +4027,12 @@ msgstr "Automatisch"
 #: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Licht"
 
 #: lib/preferences/preferences.cpp:317
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Donker"
 
 #: lib/preferences/preferences.cpp:327
 #, qt-format
@@ -4636,7 +4633,7 @@ msgstr "Donkere modus afdwingen"
 #: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Kleurenschema met voorkeur:"
 
 #: lib/preferences/preferences.ui:1188
 msgctxt "Preferences|"

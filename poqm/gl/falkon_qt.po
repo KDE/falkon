@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-12-15 23:11+0100\n"
+"PO-Revision-Date: 2024-12-21 13:13+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -3995,9 +3995,6 @@ msgid "Set as default"
 msgstr "Facer predeterminado"
 
 #: lib/preferences/preferences.cpp:314
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Automática"
@@ -4005,12 +4002,12 @@ msgstr "Automática"
 #: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Clara"
 
 #: lib/preferences/preferences.cpp:317
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Escura"
 
 #: lib/preferences/preferences.cpp:327
 #, qt-format
@@ -4607,7 +4604,7 @@ msgstr "Forzar o modo escuro"
 #: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Preferir o esquema de cores:"
 
 #: lib/preferences/preferences.ui:1188
 msgctxt "Preferences|"
