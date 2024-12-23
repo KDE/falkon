@@ -607,7 +607,6 @@ target_link_libraries(FalkonPrivate
     Qt6::PrintSupport
     Qt6::QuickWidgets
     Qt6::WebChannel
-    Qt6::Core5Compat
     KF6::Archive
     ${OPENSSL_CRYPTO_LIBRARY}
 )

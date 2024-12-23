@@ -66,7 +66,6 @@
 #include <QTimer>
 #include <QShortcut>
 #include <QStackedWidget>
-#include <QTextCodec>
 #include <QFileDialog>
 #include <QDesktopServices>
 #include <QWebEngineHistory>
@@ -77,6 +76,7 @@
 #include <QCollator>
 #include <QTemporaryFile>
 #include <QActionGroup>
+#include <QStringConverter>
 
 #ifdef QZ_WS_X11
 #include <xcb/xcb.h>
@@ -1091,24 +1091,22 @@ void BrowserWindow::createEncodingMenu(QMenu* menu)
     QStringList otherCodecs;
     QStringList allCodecs;
 
-    const auto mibs = QTextCodec::availableMibs();
-    for (const int mib : mibs) {
-        const QString codecName = QString::fromUtf8(QTextCodec::codecForMib(mib)->name());
-
+    const auto codecs = QStringConverter::availableCodecs();
+    for (const auto &codecName : codecs) {
         if (!allCodecs.contains(codecName))
             allCodecs.append(codecName);
         else
             continue;
 
-        if (codecName.startsWith(QLatin1String("ISO")))
+        if (codecName.startsWith(QLatin1String("ISO"), Qt::CaseInsensitive))
             isoCodecs.append(codecName);
-        else if (codecName.startsWith(QLatin1String("UTF")))
+        else if (codecName.startsWith(QLatin1String("UTF"), Qt::CaseInsensitive))
             utfCodecs.append(codecName);
-        else if (codecName.startsWith(QLatin1String("windows")))
+        else if (codecName.startsWith(QLatin1String("windows"), Qt::CaseInsensitive))
             windowsCodecs.append(codecName);
-        else if (codecName.startsWith(QLatin1String("Iscii")))
+        else if (codecName.startsWith(QLatin1String("Iscii"), Qt::CaseInsensitive))
             isciiCodecs.append(codecName);
-        else if (codecName.startsWith(QLatin1String("IBM")))
+        else if (codecName.startsWith(QLatin1String("IBM"), Qt::CaseInsensitive))
             ibmCodecs.append(codecName);
         else
             otherCodecs.append(codecName);

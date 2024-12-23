@@ -98,8 +98,6 @@ if (WIN32)
     add_definitions(-D_WIN32_WINNT=${ver})
 endif()
 
-find_package(Qt6Core5Compat)
-
 # Mandatory: OpenSSL
 find_package(OpenSSL REQUIRED)
 

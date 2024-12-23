@@ -40,7 +40,7 @@
 #include <QTimer>
 #include <QLabel>
 #include <QMimeData>
-#include <QRegExp>
+#include <QRegularExpression>
 
 
 TLDExtractor* TabManagerWidget::s_tldExtractor = nullptr;
@@ -122,7 +122,7 @@ QString TabManagerWidget::domainFromUrl(const QUrl &url, bool useHostName)
         return urlString.append(appendString);
     }
 
-    if (useHostName || QRegExp(QSL(R"(^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$)")).indexIn(host) >= 0) {
+    if (useHostName || QRegularExpression(QSL(R"(^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$)")).match(host).hasMatch()) {
         if (host.startsWith(QSL("www."), Qt::CaseInsensitive)) {
             host.remove(0, 4);
         }

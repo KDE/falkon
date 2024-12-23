@@ -43,7 +43,7 @@
 #include <QCoreApplication>
 #include <QDataStream>
 #include <QTime>
-#include <QRegExp>
+#include <QRegularExpression>
 
 #include "../config.h"
 #if defined(Q_OS_LINUX) && !defined(DISABLE_DBUS)
@@ -111,7 +111,7 @@ QtLocalPeer::QtLocalPeer(QObject* parent, const QString &appId)
 #endif
         prefix = id.section(QLatin1Char('/'), -1);
     }
-    prefix = QRegExp(QStringLiteral("[^a-zA-Z]")).removeIn(prefix);
+    prefix.remove(QRegularExpression(QStringLiteral("[^a-zA-Z]")));
     prefix.truncate(6);
 
     QByteArray idc = id.toUtf8();
