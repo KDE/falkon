@@ -230,10 +230,14 @@ void CookieManager::addWhitelist()
 
 void CookieManager::removeWhitelist()
 {
-    QString server = ui->whiteList->currentItem()->text();
-    m_listModifications[server] = SiteSettingsManager::Default;
+    auto selection = ui->whiteList->selectedItems();
+    for (int i = 0; i < selection.count(); i++) {
+        auto *item = selection[i];
+        QString server = item->text();
+        m_listModifications[server] = SiteSettingsManager::Default;
 
-    delete ui->whiteList->currentItem();
+        delete item;
+    }
 }
 
 void CookieManager::addBlacklist()
@@ -281,10 +285,14 @@ QTreeWidgetItem *CookieManager::cookieItem(const QNetworkCookie &cookie) const
 
 void CookieManager::removeBlacklist()
 {
-    QString server = ui->blackList->currentItem()->text();
-    m_listModifications[server] = SiteSettingsManager::Default;
+    auto selection = ui->blackList->selectedItems();
+    for (int i = 0; i < selection.count(); i++) {
+        auto *item = selection[i];
+        QString server = item->text();
+        m_listModifications[server] = SiteSettingsManager::Default;
 
-    delete ui->blackList->currentItem();
+        delete item;
+    }
 }
 
 void CookieManager::deletePressed()
