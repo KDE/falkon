@@ -22,7 +22,7 @@
 #include <QFileInfo>
 #include <QMessageBox>
 #include <QUrl>
-#include <QRegExp>
+#include <QRegularExpression>
 
 TLDExtractor* TLDExtractor::s_instance = nullptr;
 
@@ -375,7 +375,7 @@ bool TLDExtractor::test()
         return false;
     }
 
-    QRegExp testRegExp(QStringLiteral("checkPublicSuffix\\(('([^']+)'|null), ('([^']+)'|null)\\);"));
+    QRegularExpression testRegExp(QStringLiteral("checkPublicSuffix\\(('([^']+)'|null), ('([^']+)'|null)\\);"));
     bool allTestSuccess = true;
 
     while (!file.atEnd()) {
@@ -385,10 +385,10 @@ bool TLDExtractor::test()
             continue;
         }
 
-        testRegExp.indexIn(line);
+        auto testResult = testRegExp.match(line);
 
-        const QString hostName = testRegExp.cap(2);
-        const QString registrableName = testRegExp.cap(4);
+        const QString hostName = testResult.captured(2);
+        const QString registrableName = testResult.captured(4);
 
         if (!checkPublicSuffix(hostName, registrableName)) {
             allTestSuccess = false;

@@ -66,7 +66,6 @@
 #include <QTimer>
 #include <QShortcut>
 #include <QStackedWidget>
-#include <QTextCodec>
 #include <QFileDialog>
 #include <QDesktopServices>
 #include <QWebEngineHistory>
@@ -77,6 +76,7 @@
 #include <QCollator>
 #include <QTemporaryFile>
 #include <QActionGroup>
+#include <QStringConverter>
 
 #ifdef QZ_WS_X11
 #include <xcb/xcb.h>
@@ -1082,10 +1082,8 @@ void BrowserWindow::createEncodingMenu(QMenu* menu)
     QStringList otherCodecs;
     QStringList allCodecs;
 
-    const auto mibs = QTextCodec::availableMibs();
-    for (const int mib : mibs) {
-        const QString codecName = QString::fromUtf8(QTextCodec::codecForMib(mib)->name());
-
+    const auto codecs = QStringConverter::availableCodecs();
+    for (const auto &codecName : codecs) {
         if (!allCodecs.contains(codecName))
             allCodecs.append(codecName);
         else
