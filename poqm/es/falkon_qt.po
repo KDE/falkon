@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: falkon_qt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-29 01:02+0100\n"
-"PO-Revision-Date: 2024-12-16 00:45+0100\n"
+"PO-Revision-Date: 2024-12-21 18:08+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: es_ES\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -4023,22 +4023,19 @@ msgid "Set as default"
 msgstr "Dejar como predeterminado"
 
 #: lib/preferences/preferences.cpp:314
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
-msgstr "Auto"
+msgstr "Automático"
 
 #: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Claro"
 
 #: lib/preferences/preferences.cpp:317
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Orcuro"
 
 #: lib/preferences/preferences.cpp:327
 #, qt-format
@@ -4635,7 +4632,7 @@ msgstr "Forzar modo oscuro"
 #: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Preferencia de esquema de color:"
 
 #: lib/preferences/preferences.ui:1188
 msgctxt "Preferences|"

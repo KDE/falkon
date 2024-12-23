@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-07-24 09:20+0200\n"
+"PO-Revision-Date: 2024-12-21 18:36+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.0\n"
 "X-Language: fr_FR\n"
 "X-Qt-Contexts: true\n"
 
@@ -2331,73 +2331,78 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Le certificat ne correspond pas aux clés publiques intégrées attribuées au "
+"nom d'hôte."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Le nom commun du certificat ne correspond pas au nom d'hôte."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Le certificat est non valable à la date et à l'heure courantes."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "Le certificat n'est pas signé par une autorité de confiance."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Le certificat contient des erreurs."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
-msgstr ""
+msgstr "Le certificat n'a aucun mécanisme pour déterminer s'il a été révoqué."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Les informations de révocation du certificat ne sont pas disponibles."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "Le certificat a été révoqué."
 
 #: lib/network/networkmanager.cpp:360
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "Le certificat est non valable."
 
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
 msgstr ""
+"Le certificat est signé avec un algorithme utilisant une signature faible."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "Le nom d'hôte spécifié dans le certificat n'est pas unique."
 
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Le certificat contient une clé faible."
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
 msgstr ""
+"Le certificat revendiquait des noms « DNS » enfreignant les contraintes de "
+"nom."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Le certificat a une période de validité trop longue."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2405,6 +2410,9 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"La transparence du certificat était requise pour cette connexion. Cependant, "
+"le serveur n'a pas fourni d'informations « CT » conformes à la politique de "
+"sécurité."
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
@@ -2412,24 +2420,24 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Le certificat est connu pour être utilisé pour l'interception par une entité "
+"autre que le propriétaire du périphérique."
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "La connexion utilise une version obsolète du protocole « SSL / TLS »"
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr ""
+"Le certificat est un certificat de Symantec hérité qui n'est plus valable."
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Taille inconnue"
+msgstr "Erreur inconnue"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3221,17 +3229,17 @@ msgstr "<b>Connexion chiffrée.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Toute erreur de certificat est <b>définitivement</b> ignorée."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "L'erreur de certificat est <b>temporairement</b> ignorée."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Le certificat a été rejeté."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3387,17 +3395,17 @@ msgstr "<b>Site %1</b>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Toute erreur de certificat est <b>définitivement</b> ignorée."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "L'erreur de certificat est <b>temporairement</b> ignorée."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Le certificat a été rejeté."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
@@ -3488,20 +3496,14 @@ msgid "Camera"
 msgstr "Caméra"
 
 #: lib/other/sitesettingsmanager.cpp:345
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
-msgstr "Microphone et Caméra"
+msgstr "Microphone et caméra"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Cacher le pointeur"
+msgstr "Masquer le pointeur de souris"
 
 #: lib/other/sitesettingsmanager.cpp:349
 msgctxt "SiteSettingsManager|"
@@ -3511,7 +3513,7 @@ msgstr "Copie d'écran"
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Capture d'écran avec audio"
 
 #: lib/other/sitesettingsmanager.cpp:362
 msgctxt "SiteSettingsManager|"
@@ -3519,86 +3521,59 @@ msgid "Autoload images"
 msgstr "Recharger automatiquement les images"
 
 #: lib/other/sitesettingsmanager.cpp:365
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Autoriser JavaScript"
+msgstr "Activer JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Ouvrir les fenêtres popup"
+msgstr "JavaScript : ouvrir des fenêtres contextuelles"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Accéder au presse-papier"
+msgstr "JavaScript : accéder au presse-papier"
 
 #: lib/other/sitesettingsmanager.cpp:371
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Coller depuis le presse-papier"
+msgstr "JavaScript : coller depuis le presse-papier"
 
 #: lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Activer une fenêtre"
+msgstr "JavaScript : activer des fenêtres"
 
 #: lib/other/sitesettingsmanager.cpp:376
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
-msgstr "Stockage local"
+msgstr "Enregistrement en local"
 
 #: lib/other/sitesettingsmanager.cpp:378
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "Plein &écran"
+msgstr "Prise en charge du plein écran"
 
 #: lib/other/sitesettingsmanager.cpp:380
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Exécuter un contenu non sécurisé"
 
 #: lib/other/sitesettingsmanager.cpp:382
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Désactiver la lecture automatique des vidéos"
+msgstr "Lecture automatique des vidéos"
 
 #: lib/other/sitesettingsmanager.cpp:385
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Autoriser le stockage des cookies"
+msgstr "Autoriser la lecture à partir du canevas"
 
 #: lib/other/sitesettingsmanager.cpp:389
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Forcer le mode sombre"
 
 #: lib/other/sitesettingsmanager.cpp:402
 msgctxt "SiteSettingsManager|"
@@ -4664,17 +4639,14 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Utiliser l'accélération matérielle (Nécessite un re-démarrage)"
 
 #: lib/preferences/preferences.ui:1137
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Autoriser le stockage des cookies"
+msgstr "Autoriser la lecture à partir du canevas"
 
 #: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Forcer le mode sombre"
 
 #: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
@@ -5251,17 +5223,11 @@ msgid "Default"
 msgstr "Par défaut"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML5"
+msgstr "Droits d'accès du site"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:22
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "Url:"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
 msgstr "URL :"
@@ -5269,12 +5235,12 @@ msgstr "URL :"
 #: lib/preferences/sitesettingsbrowsedialog.ui:29
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:48
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Set"
-msgstr ""
+msgstr "Définir"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:65
 msgctxt "SiteSettingsBrowseDialog|"
