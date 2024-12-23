@@ -1062,13 +1062,6 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QCheckBox" name="xssAuditing">
-                   <property name="text">
-                    <string extracomment="try to detect possible XSS attacks when executing javascript">Enable XSS Auditing</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
                   <widget class="QCheckBox" name="printEBackground">
                    <property name="text">
                     <string extracomment="when you are printing page (on printer), it determine whether to also print background (color, image) of html elements">Print element background</string>

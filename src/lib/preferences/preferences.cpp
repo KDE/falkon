@@ -288,7 +288,6 @@ Preferences::Preferences(BrowserWindow* window)
     ui->spatialNavigation->setChecked(settings.value(QSL("SpatialNavigation"), false).toBool());
     ui->animateScrolling->setChecked(settings.value(QSL("AnimateScrolling"), true).toBool());
     ui->wheelScroll->setValue(settings.value(QSL("wheelScrollLines"), qApp->wheelScrollLines()).toInt());
-    ui->xssAuditing->setChecked(settings.value(QSL("XSSAuditing"), false).toBool());
     ui->printEBackground->setChecked(settings.value(QSL("PrintElementBackground"), true).toBool());
     ui->useNativeScrollbars->setChecked(settings.value(QSL("UseNativeScrollbars"), false).toBool());
     ui->disableVideoAutoPlay->setChecked(settings.value(QSL("DisableVideoAutoPlay"), false).toBool());
@@ -1014,7 +1013,6 @@ void Preferences::saveSettings()
     settings.setValue(QSL("CheckUpdates"), ui->checkUpdates->isChecked());
     settings.setValue(QSL("LoadTabsOnActivation"), ui->dontLoadTabsUntilSelected->isChecked());
     settings.setValue(QSL("DefaultZoomLevel"), ui->defaultZoomLevel->currentIndex());
-    settings.setValue(QSL("XSSAuditing"), ui->xssAuditing->isChecked());
     settings.setValue(QSL("PrintElementBackground"), ui->printEBackground->isChecked());
     settings.setValue(QSL("closeAppWithCtrlQ"), ui->closeAppWithCtrlQ->isChecked());
     settings.setValue(QSL("UseNativeScrollbars"), ui->useNativeScrollbars->isChecked());
