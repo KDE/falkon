@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_qt\n"
-"PO-Revision-Date: 2024-11-11 17:50+0100\n"
+"PO-Revision-Date: 2024-12-23 16:27+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.03.70\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -4025,9 +4025,6 @@ msgid "Set as default"
 msgstr "Als Standard verwenden"
 
 #: lib/preferences/preferences.cpp:314
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Automatisch"
@@ -4035,12 +4032,12 @@ msgstr "Automatisch"
 #: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Hell"
 
 #: lib/preferences/preferences.cpp:317
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Dunkel"
 
 #: lib/preferences/preferences.cpp:327
 #, qt-format
@@ -4643,7 +4640,7 @@ msgstr "Dunklen Modus erzwingen"
 #: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Farbschema bevorzugen:"
 
 #: lib/preferences/preferences.ui:1188
 msgctxt "Preferences|"
@@ -5218,22 +5215,19 @@ msgid "Site Permissions"
 msgstr "Seitenberechtigungen"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:22
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "Url:"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
-msgstr "Url:"
+msgstr "Adresse:"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:29
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:48
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Set"
-msgstr ""
+msgstr "Einstellen"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:65
 msgctxt "SiteSettingsBrowseDialog|"
