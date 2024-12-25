@@ -264,78 +264,78 @@ msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
 msgstr "Bloqueado por <i>%1 (%2)</i>"
 
-#: lib/app/browserwindow.cpp:203 lib/app/browserwindow.cpp:978
+#: lib/app/browserwindow.cpp:203 lib/app/browserwindow.cpp:982
 msgctxt "BrowserWindow|"
 msgid "Falkon"
 msgstr "Falkon"
 
-#: lib/app/browserwindow.cpp:393
+#: lib/app/browserwindow.cpp:397
 msgctxt "BrowserWindow|"
 msgid "IP Address of current page"
 msgstr "Dirección IP de la página actual"
 
-#: lib/app/browserwindow.cpp:733
+#: lib/app/browserwindow.cpp:737
 msgctxt "BrowserWindow|"
 msgid " (Private Browsing)"
 msgstr " (Navegación privada)"
 
-#: lib/app/browserwindow.cpp:980
+#: lib/app/browserwindow.cpp:984
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
 
-#: lib/app/browserwindow.cpp:1046
+#: lib/app/browserwindow.cpp:1050
 msgctxt "BrowserWindow|"
 msgid "&Menu Bar"
 msgstr "Barra de m&enú"
 
-#: lib/app/browserwindow.cpp:1051
+#: lib/app/browserwindow.cpp:1055
 msgctxt "BrowserWindow|"
 msgid "&Navigation Toolbar"
 msgstr "Barra de herramientas de &navegación"
 
-#: lib/app/browserwindow.cpp:1055
+#: lib/app/browserwindow.cpp:1059
 msgctxt "BrowserWindow|"
 msgid "&Bookmarks Toolbar"
 msgstr "Barra de herramientas de &marcadores"
 
-#: lib/app/browserwindow.cpp:1061
+#: lib/app/browserwindow.cpp:1065
 msgctxt "BrowserWindow|"
 msgid "&Tabs on Top"
 msgstr "&Pestañas arriba"
 
-#: lib/app/browserwindow.cpp:1116
+#: lib/app/browserwindow.cpp:1120
 msgctxt "BrowserWindow|"
 msgid "Other"
 msgstr "Otros"
 
-#: lib/app/browserwindow.cpp:1158
+#: lib/app/browserwindow.cpp:1162
 msgctxt "BrowserWindow|"
 msgid "HTML files"
 msgstr "Archivos HTML"
 
-#: lib/app/browserwindow.cpp:1158
+#: lib/app/browserwindow.cpp:1162
 msgctxt "BrowserWindow|"
 msgid "Image files"
 msgstr "Archivos de imagen"
 
-#: lib/app/browserwindow.cpp:1158
+#: lib/app/browserwindow.cpp:1162
 msgctxt "BrowserWindow|"
 msgid "Text files"
 msgstr "Archivos de texto"
 
-#: lib/app/browserwindow.cpp:1158
+#: lib/app/browserwindow.cpp:1162
 msgctxt "BrowserWindow|"
 msgid "All files"
 msgstr "Todos los archivos"
 
-#: lib/app/browserwindow.cpp:1160
+#: lib/app/browserwindow.cpp:1164
 msgctxt "BrowserWindow|"
 msgid "Open file..."
 msgstr "Abrir archivo..."
 
-#: lib/app/browserwindow.cpp:1497
+#: lib/app/browserwindow.cpp:1501
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid ""
@@ -351,17 +351,17 @@ msgstr[1] ""
 "Todavía hay %n pestañas abiertas y su sesión no será guardada. \n"
 "¿Está seguro de que quiere cerrar esta ventana?"
 
-#: lib/app/browserwindow.cpp:1498
+#: lib/app/browserwindow.cpp:1502
 msgctxt "BrowserWindow|"
 msgid "Don't ask again"
 msgstr "No volver a preguntar"
 
-#: lib/app/browserwindow.cpp:1499
+#: lib/app/browserwindow.cpp:1503
 msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Aún hay pestañas abiertas"
 
-#: lib/app/mainapplication.cpp:1142
+#: lib/app/mainapplication.cpp:1148
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -370,32 +370,32 @@ msgstr ""
 "Falkon no es su navegador predeterminado ¿Desea hacerlo su navegador por "
 "defecto?"
 
-#: lib/app/mainapplication.cpp:1143
+#: lib/app/mainapplication.cpp:1149
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Realizar siempre esta comprobación al iniciar Falkon."
 
-#: lib/app/mainapplication.cpp:1145
+#: lib/app/mainapplication.cpp:1151
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Navegador predeterminado"
 
-#: lib/app/mainapplication.cpp:1277
+#: lib/app/mainapplication.cpp:1292
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "Abrir nueva pestaña"
 
-#: lib/app/mainapplication.cpp:1278
+#: lib/app/mainapplication.cpp:1293
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "Abrir nueva ventana"
 
-#: lib/app/mainapplication.cpp:1279
+#: lib/app/mainapplication.cpp:1294
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "Abrir nueva ventana privada"
 
-#: lib/app/mainapplication.cpp:1294
+#: lib/app/mainapplication.cpp:1309
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1381,7 +1381,7 @@ msgctxt "CookieManager|"
 msgid "Remove cookie"
 msgstr "Eliminar cookie"
 
-#: lib/cookies/cookiemanager.cpp:214 lib/cookies/cookiemanager.cpp:241
+#: lib/cookies/cookiemanager.cpp:214 lib/cookies/cookiemanager.cpp:245
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
@@ -1404,17 +1404,17 @@ msgid "The server \"%1\" is already in blacklist, please remove it first."
 msgstr ""
 "El servidor \"%1\" ya está en la lista negra, por favor, primero elimínelo."
 
-#: lib/cookies/cookiemanager.cpp:241
+#: lib/cookies/cookiemanager.cpp:245
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
 msgstr "Añadir a la lista negra"
 
-#: lib/cookies/cookiemanager.cpp:252
+#: lib/cookies/cookiemanager.cpp:256
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
 msgstr "¡Ya está en la lista blanca!"
 
-#: lib/cookies/cookiemanager.cpp:252
+#: lib/cookies/cookiemanager.cpp:256
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
@@ -4012,7 +4012,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "¿Está seguro de que quiere eliminar \"%1\"?"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:657
+#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:656
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Predeterminado"
@@ -4022,93 +4022,93 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Dejar como predeterminado"
 
-#: lib/preferences/preferences.cpp:314
+#: lib/preferences/preferences.cpp:313
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Automático"
 
-#: lib/preferences/preferences.cpp:316
+#: lib/preferences/preferences.cpp:315
 msgctxt "Preferences|"
 msgid "Light"
 msgstr "Claro"
 
-#: lib/preferences/preferences.cpp:317
+#: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr "Orcuro"
 
-#: lib/preferences/preferences.cpp:327
+#: lib/preferences/preferences.cpp:326
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:600
+#: lib/preferences/preferences.cpp:599
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Seleccione la ubicación del ejecutable..."
 
-#: lib/preferences/preferences.cpp:643
+#: lib/preferences/preferences.cpp:642
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Notificación OSD"
 
-#: lib/preferences/preferences.cpp:644
+#: lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Arrástrela por la pantalla para situarla donde quiera."
 
-#: lib/preferences/preferences.cpp:693
+#: lib/preferences/preferences.cpp:692
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Seleccione la ubicación de la descarga..."
 
-#: lib/preferences/preferences.cpp:707
+#: lib/preferences/preferences.cpp:706
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Seleccione la ubicación de la hoja de estilos..."
 
-#: lib/preferences/preferences.cpp:718
+#: lib/preferences/preferences.cpp:717
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Eliminado"
 
-#: lib/preferences/preferences.cpp:820
+#: lib/preferences/preferences.cpp:819
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Seleccionar directorio de cache..."
 
-#: lib/preferences/preferences.cpp:851
+#: lib/preferences/preferences.cpp:850
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Nuevo perfil"
 
-#: lib/preferences/preferences.cpp:851
+#: lib/preferences/preferences.cpp:850
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Introduzca el nombre del nuevo perfil:"
 
-#: lib/preferences/preferences.cpp:861 lib/preferences/preferences.cpp:866
+#: lib/preferences/preferences.cpp:860 lib/preferences/preferences.cpp:865
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "¡Error!"
 
-#: lib/preferences/preferences.cpp:861
+#: lib/preferences/preferences.cpp:860
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "¡Este perfil ya existe!"
 
-#: lib/preferences/preferences.cpp:866
+#: lib/preferences/preferences.cpp:865
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "¡No se puede crear el directorio del perfil!"
 
-#: lib/preferences/preferences.cpp:877
+#: lib/preferences/preferences.cpp:876
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Confirmación"
 
-#: lib/preferences/preferences.cpp:878
+#: lib/preferences/preferences.cpp:877
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4118,12 +4118,12 @@ msgstr ""
 "¿Está seguro de que quiere borrar permanentemente el perfil \"%1\"? ¡Esta "
 "acción no se puede deshacer!"
 
-#: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:241
+#: lib/preferences/preferences.cpp:892 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Nota: no puede eliminar el perfil activo."
 
-#: lib/preferences/preferences.cpp:1169
+#: lib/preferences/preferences.cpp:1167
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Seleccionar color"
@@ -4133,7 +4133,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2073
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2066
 msgctxt "Preferences|"
 msgid "General"
 msgstr "General"
@@ -4530,9 +4530,9 @@ msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Seleccionar color"
 
-#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1334
-#: lib/preferences/preferences.ui:1868 lib/preferences/preferences.ui:1965
-#: lib/preferences/preferences.ui:2811
+#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1327
+#: lib/preferences/preferences.ui:1861 lib/preferences/preferences.ui:1958
+#: lib/preferences/preferences.ui:2804
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -4567,264 +4567,258 @@ msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Incluir enlaces en la cadena de foco"
 
-#. try to detect possible XSS attacks when executing javascript
-#: lib/preferences/preferences.ui:1067
-msgctxt "Preferences|"
-msgid "Enable XSS Auditing"
-msgstr "Habilitar Auditoría XSS"
-
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Imprimir fondo del elemento"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Desplazamiento animado"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Habilitar navegación espacial"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Usar barras de desplazamiento nativas"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Desactivar reproducción automática de vídeos"
 
-#: lib/preferences/preferences.ui:1109
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Evitar que WebRTC revele la dirección IP local"
 
-#: lib/preferences/preferences.ui:1116
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Activar precarga de DNS"
 
-#: lib/preferences/preferences.ui:1123
+#: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Activar captura de pantalla"
 
-#: lib/preferences/preferences.ui:1130
+#: lib/preferences/preferences.ui:1123
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Usar aceleración hardware (requiere reinicio)"
 
-#: lib/preferences/preferences.ui:1137
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Permitir lectura desde el lienzo"
 
-#: lib/preferences/preferences.ui:1144
+#: lib/preferences/preferences.ui:1137
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr "Forzar modo oscuro"
 
-#: lib/preferences/preferences.ui:1153
+#: lib/preferences/preferences.ui:1146
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr "Preferencia de esquema de color:"
 
-#: lib/preferences/preferences.ui:1188
+#: lib/preferences/preferences.ui:1181
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "La rueda del ratón desplaza"
 
-#: lib/preferences/preferences.ui:1208
+#: lib/preferences/preferences.ui:1201
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "líneas en la página"
 
-#: lib/preferences/preferences.ui:1219
+#: lib/preferences/preferences.ui:1212
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Ampliación predeterminada en las páginas: "
 
-#: lib/preferences/preferences.ui:1258
+#: lib/preferences/preferences.ui:1251
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Almacenamiento local"
 
-#: lib/preferences/preferences.ui:1266
+#: lib/preferences/preferences.ui:1259
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Almacenar caché de la red en el disco"
 
-#: lib/preferences/preferences.ui:1289
+#: lib/preferences/preferences.ui:1282
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Borrar caché al cerrar"
 
-#: lib/preferences/preferences.ui:1296
+#: lib/preferences/preferences.ui:1289
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Máximo:"
 
-#: lib/preferences/preferences.ui:1303
+#: lib/preferences/preferences.ui:1296
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1319
+#: lib/preferences/preferences.ui:1312
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Guardar cache en:"
 
-#: lib/preferences/preferences.ui:1347
+#: lib/preferences/preferences.ui:1340
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Guardar el historial"
 
-#: lib/preferences/preferences.ui:1354
+#: lib/preferences/preferences.ui:1347
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Eliminar el historial al cerrar"
 
-#: lib/preferences/preferences.ui:1377
+#: lib/preferences/preferences.ui:1370
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Permitir el almacenamiento local de contenido de red HTML5"
 
-#: lib/preferences/preferences.ui:1384
+#: lib/preferences/preferences.ui:1377
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Borrar el contenido de red HTML5 almacenado localmente al cerrar"
 
-#: lib/preferences/preferences.ui:1410
+#: lib/preferences/preferences.ui:1403
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Eliminar ahora"
 
-#: lib/preferences/preferences.ui:1449
+#: lib/preferences/preferences.ui:1442
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Configuración proxy"
 
-#: lib/preferences/preferences.ui:1468
+#: lib/preferences/preferences.ui:1461
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Configuración proxy del sistema"
 
-#: lib/preferences/preferences.ui:1491
+#: lib/preferences/preferences.ui:1484
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Configuración manual"
 
-#: lib/preferences/preferences.ui:1501
+#: lib/preferences/preferences.ui:1494
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1506
+#: lib/preferences/preferences.ui:1499
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1517
+#: lib/preferences/preferences.ui:1510
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Puerto:"
 
-#: lib/preferences/preferences.ui:1538
+#: lib/preferences/preferences.ui:1531
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Nombre de usuario:"
 
-#: lib/preferences/preferences.ui:1548
+#: lib/preferences/preferences.ui:1541
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: lib/preferences/preferences.ui:1577
+#: lib/preferences/preferences.ui:1570
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Sin proxy"
 
-#: lib/preferences/preferences.ui:1592
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Familias de fuentes</b>"
 
-#: lib/preferences/preferences.ui:1605
+#: lib/preferences/preferences.ui:1598
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Standard"
 
-#: lib/preferences/preferences.ui:1612
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Fijo"
 
-#: lib/preferences/preferences.ui:1622
+#: lib/preferences/preferences.ui:1615
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1632
+#: lib/preferences/preferences.ui:1625
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: lib/preferences/preferences.ui:1642
+#: lib/preferences/preferences.ui:1635
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Cursiva"
 
-#: lib/preferences/preferences.ui:1694
+#: lib/preferences/preferences.ui:1687
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasy"
 
-#: lib/preferences/preferences.ui:1701
+#: lib/preferences/preferences.ui:1694
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Tamaño de las fuentes</b>"
 
-#: lib/preferences/preferences.ui:1710
+#: lib/preferences/preferences.ui:1703
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Tamaño de la fuente fija"
 
-#: lib/preferences/preferences.ui:1717
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Tamaño de la fuente predeterminada"
 
-#: lib/preferences/preferences.ui:1744
+#: lib/preferences/preferences.ui:1737
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Tamaño mínimo de la fuente"
 
-#: lib/preferences/preferences.ui:1751
+#: lib/preferences/preferences.ui:1744
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Tamaño mínimo de la fuente lógica"
 
-#: lib/preferences/preferences.ui:1784
+#: lib/preferences/preferences.ui:1777
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Atajos</b>"
 
-#: lib/preferences/preferences.ui:1791
+#: lib/preferences/preferences.ui:1784
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Cambiar entre pestañas con Alt + número de la pestaña"
 
-#: lib/preferences/preferences.ui:1798
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Cargar marcación rápida  con Ctrl + número de la marcación rápida"
 
-#: lib/preferences/preferences.ui:1805
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4833,12 +4827,12 @@ msgstr ""
 "Atajos de teclado existentes:<br/><b>1</b> - pestaña anterior<br/><b>2</b> - "
 "siguiente pestaña<br/><b>/</b> - buscar en la página"
 
-#: lib/preferences/preferences.ui:1808
+#: lib/preferences/preferences.ui:1801
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Usar atajos de teclado de una sóla tecla"
 
-#: lib/preferences/preferences.ui:1815
+#: lib/preferences/preferences.ui:1808
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4847,157 +4841,157 @@ msgstr ""
 "Si no está marcada, evita el cierre accidental de la aplicación si se "
 "trataba de usar el atajo de teclado Ctrl-W."
 
-#: lib/preferences/preferences.ui:1818
+#: lib/preferences/preferences.ui:1811
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Ctrl-Q cierra la aplicación"
 
-#: lib/preferences/preferences.ui:1842
+#: lib/preferences/preferences.ui:1835
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Ubicación de la descarga</b>"
 
-#: lib/preferences/preferences.ui:1849
+#: lib/preferences/preferences.ui:1842
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Preguntar siempre dónde descargar los archivos"
 
-#: lib/preferences/preferences.ui:1856
+#: lib/preferences/preferences.ui:1849
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Ubicación definida por el usuario: "
 
-#: lib/preferences/preferences.ui:1906
+#: lib/preferences/preferences.ui:1899
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Opciones de descarga</b>"
 
-#: lib/preferences/preferences.ui:1913
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Cerrar el gestor de descargas cuando las descargas finalicen"
 
-#: lib/preferences/preferences.ui:1920
+#: lib/preferences/preferences.ui:1913
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Gestor de descargas externo</b>"
 
-#: lib/preferences/preferences.ui:1927
+#: lib/preferences/preferences.ui:1920
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Utilizar un gestor de descargas externo"
 
-#: lib/preferences/preferences.ui:1939
+#: lib/preferences/preferences.ui:1932
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Ejecutable:"
 
-#: lib/preferences/preferences.ui:1946
+#: lib/preferences/preferences.ui:1939
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Argumentos:"
 
-#: lib/preferences/preferences.ui:1953
+#: lib/preferences/preferences.ui:1946
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Dejar en blanco si no esta seguro"
 
-#: lib/preferences/preferences.ui:1974
+#: lib/preferences/preferences.ui:1967
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> será reemplazado con la URL a descargar"
 
-#: lib/preferences/preferences.ui:2000
+#: lib/preferences/preferences.ui:1993
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Opciones de autocompletado</b>"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2000
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Permitir guardar contraseñas de los sitios"
 
-#: lib/preferences/preferences.ui:2058
+#: lib/preferences/preferences.ui:2051
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Completar automáticamente las contraseñas en los sitios"
 
-#: lib/preferences/preferences.ui:2079
+#: lib/preferences/preferences.ui:2072
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Administrar Cookies"
 
-#: lib/preferences/preferences.ui:2092
+#: lib/preferences/preferences.ui:2085
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Gestor de cookies"
 
-#: lib/preferences/preferences.ui:2115
+#: lib/preferences/preferences.ui:2108
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2128
+#: lib/preferences/preferences.ui:2121
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "Opciones de JavaScript"
 
-#: lib/preferences/preferences.ui:2135
+#: lib/preferences/preferences.ui:2128
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Decir a los sitios web que no quiero ser rastreado"
 
-#: lib/preferences/preferences.ui:2142
+#: lib/preferences/preferences.ui:2135
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Cookies</b>"
 
-#: lib/preferences/preferences.ui:2168
+#: lib/preferences/preferences.ui:2161
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "Administrar las opciones de privacidad de JavaScript"
 
-#: lib/preferences/preferences.ui:2175
+#: lib/preferences/preferences.ui:2168
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Otros</b>"
 
-#: lib/preferences/preferences.ui:2196
+#: lib/preferences/preferences.ui:2189
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "Permisos de HTML5"
 
-#: lib/preferences/preferences.ui:2206
+#: lib/preferences/preferences.ui:2199
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Preferencias del sitio"
 
-#: lib/preferences/preferences.ui:2238
+#: lib/preferences/preferences.ui:2231
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Duración:"
 
-#: lib/preferences/preferences.ui:2251
+#: lib/preferences/preferences.ui:2244
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " segundos"
 
-#: lib/preferences/preferences.ui:2273
+#: lib/preferences/preferences.ui:2266
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Notificaciones</b>"
 
-#: lib/preferences/preferences.ui:2296
+#: lib/preferences/preferences.ui:2289
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Utilizar sistema de notificaciones nativo (sólo Linux)"
 
-#: lib/preferences/preferences.ui:2303
+#: lib/preferences/preferences.ui:2296
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "No utilizar notificaciones"
 
-#: lib/preferences/preferences.ui:2326
+#: lib/preferences/preferences.ui:2319
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -5006,17 +5000,17 @@ msgstr ""
 "<b>Nota: </b>Puede cambiar la posición de la notificación OSD arrastrándola "
 "por la pantalla."
 
-#: lib/preferences/preferences.ui:2352
+#: lib/preferences/preferences.ui:2345
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Utilizar notificaciones OSD"
 
-#: lib/preferences/preferences.ui:2359
+#: lib/preferences/preferences.ui:2352
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Previsualizar"
 
-#: lib/preferences/preferences.ui:2424
+#: lib/preferences/preferences.ui:2417
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -5025,92 +5019,92 @@ msgstr ""
 "Para más información acerca de la 'Comprobación de ortografía', por favor "
 "consulte el <a href=\"https://userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2459
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Opciones de 'Comprobación de ortografía'</b>"
 
-#: lib/preferences/preferences.ui:2473
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Habilitar comprobación de ortografía"
 
-#: lib/preferences/preferences.ui:2480
+#: lib/preferences/preferences.ui:2473
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Directorios de diccionario</b>"
 
-#: lib/preferences/preferences.ui:2531
+#: lib/preferences/preferences.ui:2524
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "No se encontraron idiomas"
 
-#: lib/preferences/preferences.ui:2560
+#: lib/preferences/preferences.ui:2553
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Gestor de protocolos"
 
-#: lib/preferences/preferences.ui:2600
+#: lib/preferences/preferences.ui:2593
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Gestor de motores de búsqueda"
 
-#: lib/preferences/preferences.ui:2622
+#: lib/preferences/preferences.ui:2615
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Hoja de estilos del usuario</b>"
 
-#: lib/preferences/preferences.ui:2629
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Gestionar motores de búsqueda</b>"
 
-#: lib/preferences/preferences.ui:2642
+#: lib/preferences/preferences.ui:2635
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "Administrar diseños personalizados"
 
-#: lib/preferences/preferences.ui:2667
+#: lib/preferences/preferences.ui:2660
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Idiomas"
 
-#: lib/preferences/preferences.ui:2689
+#: lib/preferences/preferences.ui:2682
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Idioma preferido para mostrar las páginas web</b>"
 
-#: lib/preferences/preferences.ui:2714
+#: lib/preferences/preferences.ui:2707
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Administrador de excepciones a los certificados"
 
-#: lib/preferences/preferences.ui:2736
+#: lib/preferences/preferences.ui:2729
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Cambiar identificacion del navegador</b>"
 
-#: lib/preferences/preferences.ui:2761
+#: lib/preferences/preferences.ui:2754
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Administrador de agentes de usuario"
 
-#: lib/preferences/preferences.ui:2783
+#: lib/preferences/preferences.ui:2776
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Hoja de estilos cargada automáticamente con todos los sitios web: "
 
-#: lib/preferences/preferences.ui:2820
+#: lib/preferences/preferences.ui:2813
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Gestionar gestores de protocolo</b>"
 
-#: lib/preferences/preferences.ui:2827
+#: lib/preferences/preferences.ui:2820
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Administrador de certificados</b>"
 
-#: lib/preferences/preferences.ui:2878
+#: lib/preferences/preferences.ui:2871
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Gestor de diseños personalizados"
@@ -6291,3 +6285,7 @@ msgstr "Inspeccionar elemento"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "Preferences|"
+#~ msgid "Enable XSS Auditing"
+#~ msgstr "Habilitar Auditoría XSS"

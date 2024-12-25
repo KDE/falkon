@@ -75,27 +75,27 @@ msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
 msgstr "管理 JavaScript 设置"
 
-#: sbi_networkicon.cpp:62
+#: sbi_networkicon.cpp:70
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
 msgstr "代理服务器配置"
 
-#: sbi_networkicon.cpp:64
+#: sbi_networkicon.cpp:72
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
 msgstr "选择代理服务器"
 
-#: sbi_networkicon.cpp:78
+#: sbi_networkicon.cpp:86
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
 msgstr "空"
 
-#: sbi_networkicon.cpp:82
+#: sbi_networkicon.cpp:90
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
 msgstr "管理代理服务器"
 
-#: sbi_networkicon.cpp:95
+#: sbi_networkicon.cpp:103
 #, qt-format
 msgctxt "SBI_NetworkIcon|"
 msgid ""
@@ -105,22 +105,54 @@ msgstr ""
 "显示网络状态并管理代理服务器<br/><br/><b>网络：</b><br/>%1<br/><br/><b>代理服"
 "务器：</b><br/>%2"
 
-#: sbi_networkicon.cpp:99
+#: sbi_networkicon.cpp:107
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
-msgid "Connected"
+msgid "Connected - Online"
 msgstr "已连接"
 
-#: sbi_networkicon.cpp:103
+#: sbi_networkicon.cpp:110
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected - Site"
+msgstr "已连接"
+
+#: sbi_networkicon.cpp:113
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected - Local"
+msgstr "已连接"
+
+#: sbi_networkicon.cpp:116
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Disconnected"
+msgstr "已连接"
+
+#: sbi_networkicon.cpp:120
+msgctxt "SBI_NetworkIcon|"
+msgid "Unknown"
+msgstr ""
+
+#: sbi_networkicon.cpp:126
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
 msgstr "系统代理服务器"
 
-#: sbi_networkicon.cpp:107
+#: sbi_networkicon.cpp:130
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
 msgstr "无代理服务器"
 
-#: sbi_networkicon.cpp:111
+#: sbi_networkicon.cpp:134
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
 msgstr "用户自定义"

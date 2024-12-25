@@ -71,27 +71,27 @@ msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
 msgstr "Sýsla með stillingar JavaScript"
 
-#: sbi_networkicon.cpp:62
+#: sbi_networkicon.cpp:70
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
 msgstr "Uppsetning milliþjóns (proxy)"
 
-#: sbi_networkicon.cpp:64
+#: sbi_networkicon.cpp:72
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
 msgstr "Velja milliþjón"
 
-#: sbi_networkicon.cpp:78
+#: sbi_networkicon.cpp:86
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
 msgstr "Tómt"
 
-#: sbi_networkicon.cpp:82
+#: sbi_networkicon.cpp:90
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
 msgstr "Sýsla með milliþjóna"
 
-#: sbi_networkicon.cpp:95
+#: sbi_networkicon.cpp:103
 #, qt-format
 msgctxt "SBI_NetworkIcon|"
 msgid ""
@@ -101,22 +101,54 @@ msgstr ""
 "Birtir upplýsingar um stöðu netkerfis og stýrir milliþjónum<br/><br/"
 "><b>Netkerfi:</b><br/>%1<br/><br/><b>Milliþjónn:</b><br/>%2"
 
-#: sbi_networkicon.cpp:99
+#: sbi_networkicon.cpp:107
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
-msgid "Connected"
+msgid "Connected - Online"
 msgstr "Nettengt"
 
-#: sbi_networkicon.cpp:103
+#: sbi_networkicon.cpp:110
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected - Site"
+msgstr "Nettengt"
+
+#: sbi_networkicon.cpp:113
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected - Local"
+msgstr "Nettengt"
+
+#: sbi_networkicon.cpp:116
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Disconnected"
+msgstr "Nettengt"
+
+#: sbi_networkicon.cpp:120
+msgctxt "SBI_NetworkIcon|"
+msgid "Unknown"
+msgstr ""
+
+#: sbi_networkicon.cpp:126
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
 msgstr "Milliþjónn kerfis"
 
-#: sbi_networkicon.cpp:107
+#: sbi_networkicon.cpp:130
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
 msgstr "Enginn milliþjónn"
 
-#: sbi_networkicon.cpp:111
+#: sbi_networkicon.cpp:134
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
 msgstr "Skilgreint af notanda"

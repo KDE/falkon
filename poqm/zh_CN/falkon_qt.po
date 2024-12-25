@@ -255,78 +255,78 @@ msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
 msgstr "被 <i>%1 (%2)</i> 屏蔽"
 
-#: lib/app/browserwindow.cpp:203 lib/app/browserwindow.cpp:978
+#: lib/app/browserwindow.cpp:203 lib/app/browserwindow.cpp:982
 msgctxt "BrowserWindow|"
 msgid "Falkon"
 msgstr "Falkon"
 
-#: lib/app/browserwindow.cpp:393
+#: lib/app/browserwindow.cpp:397
 msgctxt "BrowserWindow|"
 msgid "IP Address of current page"
 msgstr "当前页面的 IP 地址"
 
-#: lib/app/browserwindow.cpp:733
+#: lib/app/browserwindow.cpp:737
 msgctxt "BrowserWindow|"
 msgid " (Private Browsing)"
 msgstr " (隐私浏览)"
 
-#: lib/app/browserwindow.cpp:980
+#: lib/app/browserwindow.cpp:984
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
 
-#: lib/app/browserwindow.cpp:1046
+#: lib/app/browserwindow.cpp:1050
 msgctxt "BrowserWindow|"
 msgid "&Menu Bar"
 msgstr "菜单栏(&M)"
 
-#: lib/app/browserwindow.cpp:1051
+#: lib/app/browserwindow.cpp:1055
 msgctxt "BrowserWindow|"
 msgid "&Navigation Toolbar"
 msgstr "导航工具栏(&N)"
 
-#: lib/app/browserwindow.cpp:1055
+#: lib/app/browserwindow.cpp:1059
 msgctxt "BrowserWindow|"
 msgid "&Bookmarks Toolbar"
 msgstr "书签工具栏(&B)"
 
-#: lib/app/browserwindow.cpp:1061
+#: lib/app/browserwindow.cpp:1065
 msgctxt "BrowserWindow|"
 msgid "&Tabs on Top"
 msgstr "标签页显示在顶部(&T)"
 
-#: lib/app/browserwindow.cpp:1116
+#: lib/app/browserwindow.cpp:1120
 msgctxt "BrowserWindow|"
 msgid "Other"
 msgstr "其他"
 
-#: lib/app/browserwindow.cpp:1158
+#: lib/app/browserwindow.cpp:1162
 msgctxt "BrowserWindow|"
 msgid "HTML files"
 msgstr "HTML 文件"
 
-#: lib/app/browserwindow.cpp:1158
+#: lib/app/browserwindow.cpp:1162
 msgctxt "BrowserWindow|"
 msgid "Image files"
 msgstr "图像文件"
 
-#: lib/app/browserwindow.cpp:1158
+#: lib/app/browserwindow.cpp:1162
 msgctxt "BrowserWindow|"
 msgid "Text files"
 msgstr "文本文件"
 
-#: lib/app/browserwindow.cpp:1158
+#: lib/app/browserwindow.cpp:1162
 msgctxt "BrowserWindow|"
 msgid "All files"
 msgstr "所有文件"
 
-#: lib/app/browserwindow.cpp:1160
+#: lib/app/browserwindow.cpp:1164
 msgctxt "BrowserWindow|"
 msgid "Open file..."
 msgstr "打开文件..."
 
-#: lib/app/browserwindow.cpp:1497
+#: lib/app/browserwindow.cpp:1501
 #, qt-format
 msgctxt "BrowserWindow|"
 msgid ""
@@ -337,49 +337,49 @@ msgid_plural ""
 "Are you sure you want to close this window?"
 msgstr[0] "仍有 %n 个打开的标签页且您的会话不会保存。您确定要关闭此窗口吗？"
 
-#: lib/app/browserwindow.cpp:1498
+#: lib/app/browserwindow.cpp:1502
 msgctxt "BrowserWindow|"
 msgid "Don't ask again"
 msgstr "不再询问"
 
-#: lib/app/browserwindow.cpp:1499
+#: lib/app/browserwindow.cpp:1503
 msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "仍有打开的标签页"
 
-#: lib/app/mainapplication.cpp:1142
+#: lib/app/mainapplication.cpp:1148
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
 msgstr "Falkon 目前不是您的默认浏览器。是否要将其设置为默认浏览器？"
 
-#: lib/app/mainapplication.cpp:1143
+#: lib/app/mainapplication.cpp:1149
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "启动 Falkon 时，始终执行此检查。"
 
-#: lib/app/mainapplication.cpp:1145
+#: lib/app/mainapplication.cpp:1151
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "默认浏览器"
 
-#: lib/app/mainapplication.cpp:1277
+#: lib/app/mainapplication.cpp:1292
 msgctxt "MainApplication|"
 msgid "Open new tab"
 msgstr "打开新标签页"
 
-#: lib/app/mainapplication.cpp:1278
+#: lib/app/mainapplication.cpp:1293
 msgctxt "MainApplication|"
 msgid "Open new window"
 msgstr "打开新窗口"
 
-#: lib/app/mainapplication.cpp:1279
+#: lib/app/mainapplication.cpp:1294
 msgctxt "MainApplication|"
 msgid "Open new private window"
 msgstr "打开新的隐私窗口"
 
-#: lib/app/mainapplication.cpp:1294
+#: lib/app/mainapplication.cpp:1309
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1345,7 +1345,7 @@ msgctxt "CookieManager|"
 msgid "Remove cookie"
 msgstr "删除 Cookie"
 
-#: lib/cookies/cookiemanager.cpp:214 lib/cookies/cookiemanager.cpp:241
+#: lib/cookies/cookiemanager.cpp:214 lib/cookies/cookiemanager.cpp:245
 #: lib/cookies/cookiemanager.ui:126
 msgctxt "CookieManager|"
 msgid "Server:"
@@ -1367,17 +1367,17 @@ msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in blacklist, please remove it first."
 msgstr "服务器“%1”已在黑名单中, 请先将其删除。"
 
-#: lib/cookies/cookiemanager.cpp:241
+#: lib/cookies/cookiemanager.cpp:245
 msgctxt "CookieManager|"
 msgid "Add to blacklist"
 msgstr "添加到黑名单"
 
-#: lib/cookies/cookiemanager.cpp:252
+#: lib/cookies/cookiemanager.cpp:256
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
 msgstr "已经被列入白名单！"
 
-#: lib/cookies/cookiemanager.cpp:252
+#: lib/cookies/cookiemanager.cpp:256
 #, qt-format
 msgctxt "CookieManager|"
 msgid "The server \"%1\" is already in whitelist, please remove it first."
@@ -3941,7 +3941,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "您确定要移除“%1”吗？"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:657
+#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:656
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "默认"
@@ -3951,93 +3951,93 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "设为默认"
 
-#: lib/preferences/preferences.cpp:314
+#: lib/preferences/preferences.cpp:313
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "自动"
 
-#: lib/preferences/preferences.cpp:316
+#: lib/preferences/preferences.cpp:315
 msgctxt "Preferences|"
 msgid "Light"
 msgstr "浅色"
 
-#: lib/preferences/preferences.cpp:317
+#: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr "深色"
 
-#: lib/preferences/preferences.cpp:327
+#: lib/preferences/preferences.cpp:326
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:600
+#: lib/preferences/preferences.cpp:599
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "选择可执行程序位置..."
 
-#: lib/preferences/preferences.cpp:643
+#: lib/preferences/preferences.cpp:642
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD 通知"
 
-#: lib/preferences/preferences.cpp:644
+#: lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "在屏幕上拖动它，放置到您喜欢的位置。"
 
-#: lib/preferences/preferences.cpp:693
+#: lib/preferences/preferences.cpp:692
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "选择下载位置..."
 
-#: lib/preferences/preferences.cpp:707
+#: lib/preferences/preferences.cpp:706
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "选择样式表位置..."
 
-#: lib/preferences/preferences.cpp:718
+#: lib/preferences/preferences.cpp:717
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "已删除"
 
-#: lib/preferences/preferences.cpp:820
+#: lib/preferences/preferences.cpp:819
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "选择换从路径..."
 
-#: lib/preferences/preferences.cpp:851
+#: lib/preferences/preferences.cpp:850
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "新建配置方案"
 
-#: lib/preferences/preferences.cpp:851
+#: lib/preferences/preferences.cpp:850
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "输入新配置的名称："
 
-#: lib/preferences/preferences.cpp:861 lib/preferences/preferences.cpp:866
+#: lib/preferences/preferences.cpp:860 lib/preferences/preferences.cpp:865
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "错误！"
 
-#: lib/preferences/preferences.cpp:861
+#: lib/preferences/preferences.cpp:860
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "配置文件已存在！"
 
-#: lib/preferences/preferences.cpp:866
+#: lib/preferences/preferences.cpp:865
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "无法创建配置文件目录！"
 
-#: lib/preferences/preferences.cpp:877
+#: lib/preferences/preferences.cpp:876
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "确认"
 
-#: lib/preferences/preferences.cpp:878
+#: lib/preferences/preferences.cpp:877
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4045,12 +4045,12 @@ msgid ""
 "cannot be undone!"
 msgstr "您确定要彻底删除“%1”配置文件吗？此操作无法撤销！"
 
-#: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:241
+#: lib/preferences/preferences.cpp:892 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "注意：您无法删除活动的配置文件。"
 
-#: lib/preferences/preferences.cpp:1169
+#: lib/preferences/preferences.cpp:1167
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "选择颜色"
@@ -4060,7 +4060,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "首选项"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2073
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2066
 msgctxt "Preferences|"
 msgid "General"
 msgstr "常规"
@@ -4456,9 +4456,9 @@ msgctxt "Preferences|"
 msgid "Select color"
 msgstr "选择颜色"
 
-#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1334
-#: lib/preferences/preferences.ui:1868 lib/preferences/preferences.ui:1965
-#: lib/preferences/preferences.ui:2811
+#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1327
+#: lib/preferences/preferences.ui:1861 lib/preferences/preferences.ui:1958
+#: lib/preferences/preferences.ui:2804
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -4493,264 +4493,258 @@ msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "焦点链包含链接"
 
-#. try to detect possible XSS attacks when executing javascript
-#: lib/preferences/preferences.ui:1067
-msgctxt "Preferences|"
-msgid "Enable XSS Auditing"
-msgstr "启用 XSS 审核"
-
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "打印元素背景"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "动画滚动"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "启用空间导航"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "使用原生滚动条"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "禁用自动播放视频"
 
-#: lib/preferences/preferences.ui:1109
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "阻止 WebRTC 泄露本地 IP 地址"
 
-#: lib/preferences/preferences.ui:1116
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "启用 DNS 预抓取"
 
-#: lib/preferences/preferences.ui:1123
+#: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "启用屏幕捕捉"
 
-#: lib/preferences/preferences.ui:1130
+#: lib/preferences/preferences.ui:1123
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "使用硬件加速(需要重启)"
 
-#: lib/preferences/preferences.ui:1137
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "允许读取画布内容"
 
-#: lib/preferences/preferences.ui:1144
+#: lib/preferences/preferences.ui:1137
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr "强制深色模式"
 
-#: lib/preferences/preferences.ui:1153
+#: lib/preferences/preferences.ui:1146
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr "首选配色方案："
 
-#: lib/preferences/preferences.ui:1188
+#: lib/preferences/preferences.ui:1181
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "鼠标滚轮滚动"
 
-#: lib/preferences/preferences.ui:1208
+#: lib/preferences/preferences.ui:1201
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "行"
 
-#: lib/preferences/preferences.ui:1219
+#: lib/preferences/preferences.ui:1212
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "页面默认缩放："
 
-#: lib/preferences/preferences.ui:1258
+#: lib/preferences/preferences.ui:1251
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "本地存储"
 
-#: lib/preferences/preferences.ui:1266
+#: lib/preferences/preferences.ui:1259
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "允许在磁盘上存储网络缓存"
 
-#: lib/preferences/preferences.ui:1289
+#: lib/preferences/preferences.ui:1282
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "关闭时删除缓存"
 
-#: lib/preferences/preferences.ui:1296
+#: lib/preferences/preferences.ui:1289
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "最大值："
 
-#: lib/preferences/preferences.ui:1303
+#: lib/preferences/preferences.ui:1296
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1319
+#: lib/preferences/preferences.ui:1312
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "缓存存储于："
 
-#: lib/preferences/preferences.ui:1347
+#: lib/preferences/preferences.ui:1340
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "允许保存历史"
 
-#: lib/preferences/preferences.ui:1354
+#: lib/preferences/preferences.ui:1347
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "关闭时删除历史"
 
-#: lib/preferences/preferences.ui:1377
+#: lib/preferences/preferences.ui:1370
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "允许本地存储 HTML 网页内容"
 
-#: lib/preferences/preferences.ui:1384
+#: lib/preferences/preferences.ui:1377
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "关闭时删除所有本地存储的 HTML5 网页内容"
 
-#: lib/preferences/preferences.ui:1410
+#: lib/preferences/preferences.ui:1403
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "立即删除"
 
-#: lib/preferences/preferences.ui:1449
+#: lib/preferences/preferences.ui:1442
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "代理配置"
 
-#: lib/preferences/preferences.ui:1468
+#: lib/preferences/preferences.ui:1461
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "系统代理设置"
 
-#: lib/preferences/preferences.ui:1491
+#: lib/preferences/preferences.ui:1484
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "手动配置"
 
-#: lib/preferences/preferences.ui:1501
+#: lib/preferences/preferences.ui:1494
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1506
+#: lib/preferences/preferences.ui:1499
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1517
+#: lib/preferences/preferences.ui:1510
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "端口："
 
-#: lib/preferences/preferences.ui:1538
+#: lib/preferences/preferences.ui:1531
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "用户名："
 
-#: lib/preferences/preferences.ui:1548
+#: lib/preferences/preferences.ui:1541
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "密码："
 
-#: lib/preferences/preferences.ui:1577
+#: lib/preferences/preferences.ui:1570
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "无代理"
 
-#: lib/preferences/preferences.ui:1592
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>字体系列</b>"
 
-#: lib/preferences/preferences.ui:1605
+#: lib/preferences/preferences.ui:1598
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "标准"
 
-#: lib/preferences/preferences.ui:1612
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "固定"
 
-#: lib/preferences/preferences.ui:1622
+#: lib/preferences/preferences.ui:1615
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "衬线"
 
-#: lib/preferences/preferences.ui:1632
+#: lib/preferences/preferences.ui:1625
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: lib/preferences/preferences.ui:1642
+#: lib/preferences/preferences.ui:1635
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "草书"
 
-#: lib/preferences/preferences.ui:1694
+#: lib/preferences/preferences.ui:1687
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "幻想"
 
-#: lib/preferences/preferences.ui:1701
+#: lib/preferences/preferences.ui:1694
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>字体大小</b>"
 
-#: lib/preferences/preferences.ui:1710
+#: lib/preferences/preferences.ui:1703
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "固定字体大小"
 
-#: lib/preferences/preferences.ui:1717
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "默认字体大小"
 
-#: lib/preferences/preferences.ui:1744
+#: lib/preferences/preferences.ui:1737
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "最小字体大小"
 
-#: lib/preferences/preferences.ui:1751
+#: lib/preferences/preferences.ui:1744
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "最小逻辑字体大小"
 
-#: lib/preferences/preferences.ui:1784
+#: lib/preferences/preferences.ui:1777
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>快捷键</b>"
 
-#: lib/preferences/preferences.ui:1791
+#: lib/preferences/preferences.ui:1784
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "使用 Alt + 数字切换到相应编号的标签页"
 
-#: lib/preferences/preferences.ui:1798
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "使用 Ctrl + 数字加载相应编号的快速访问项目"
 
-#: lib/preferences/preferences.ui:1805
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4759,186 +4753,186 @@ msgstr ""
 "已有快捷键：<br/><b>1</b> - 上一个标签页<br/><b>2</b> - 下一个标签页<br/><b>/"
 "</b> - 在页面中搜索"
 
-#: lib/preferences/preferences.ui:1808
+#: lib/preferences/preferences.ui:1801
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "使用单键快捷键"
 
-#: lib/preferences/preferences.ui:1815
+#: lib/preferences/preferences.ui:1808
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
 "shortcut was intended."
 msgstr "如果取消勾选，按下 Ctrl + W 快捷键时阻止意外退出。"
 
-#: lib/preferences/preferences.ui:1818
+#: lib/preferences/preferences.ui:1811
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Ctrl + Q 关闭应用程序"
 
-#: lib/preferences/preferences.ui:1842
+#: lib/preferences/preferences.ui:1835
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>下载位置</b>"
 
-#: lib/preferences/preferences.ui:1849
+#: lib/preferences/preferences.ui:1842
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "每次都询问下载位置"
 
-#: lib/preferences/preferences.ui:1856
+#: lib/preferences/preferences.ui:1849
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "使用定义的位置："
 
-#: lib/preferences/preferences.ui:1906
+#: lib/preferences/preferences.ui:1899
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>下载选项</b>"
 
-#: lib/preferences/preferences.ui:1913
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "下载完成后关闭下载管理器"
 
-#: lib/preferences/preferences.ui:1920
+#: lib/preferences/preferences.ui:1913
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>外部下载管理器</b>"
 
-#: lib/preferences/preferences.ui:1927
+#: lib/preferences/preferences.ui:1920
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "使用外部下载管理器"
 
-#: lib/preferences/preferences.ui:1939
+#: lib/preferences/preferences.ui:1932
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "可执行程序："
 
-#: lib/preferences/preferences.ui:1946
+#: lib/preferences/preferences.ui:1939
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "参数："
 
-#: lib/preferences/preferences.ui:1953
+#: lib/preferences/preferences.ui:1946
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "如果不确定请留空"
 
-#: lib/preferences/preferences.ui:1974
+#: lib/preferences/preferences.ui:1967
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b>将被替换成将要下载的 URL"
 
-#: lib/preferences/preferences.ui:2000
+#: lib/preferences/preferences.ui:1993
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>自动填充选项</b>"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2000
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "允许保存网站密码"
 
-#: lib/preferences/preferences.ui:2058
+#: lib/preferences/preferences.ui:2051
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "自动完成网站密码"
 
-#: lib/preferences/preferences.ui:2079
+#: lib/preferences/preferences.ui:2072
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "管理 Cookie"
 
-#: lib/preferences/preferences.ui:2092
+#: lib/preferences/preferences.ui:2085
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Cookie 管理器"
 
-#: lib/preferences/preferences.ui:2115
+#: lib/preferences/preferences.ui:2108
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2128
+#: lib/preferences/preferences.ui:2121
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "JavaScript 选项"
 
-#: lib/preferences/preferences.ui:2135
+#: lib/preferences/preferences.ui:2128
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "发送请勿跟踪报头给服务器"
 
-#: lib/preferences/preferences.ui:2142
+#: lib/preferences/preferences.ui:2135
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Cookie</b>"
 
-#: lib/preferences/preferences.ui:2168
+#: lib/preferences/preferences.ui:2161
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "管理 JavaScript 隐私选项"
 
-#: lib/preferences/preferences.ui:2175
+#: lib/preferences/preferences.ui:2168
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>其他</b>"
 
-#: lib/preferences/preferences.ui:2196
+#: lib/preferences/preferences.ui:2189
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "HTML5 权限"
 
-#: lib/preferences/preferences.ui:2206
+#: lib/preferences/preferences.ui:2199
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "网站设置"
 
-#: lib/preferences/preferences.ui:2238
+#: lib/preferences/preferences.ui:2231
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "过期超时："
 
-#: lib/preferences/preferences.ui:2251
+#: lib/preferences/preferences.ui:2244
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr "秒钟"
 
-#: lib/preferences/preferences.ui:2273
+#: lib/preferences/preferences.ui:2266
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>通知</b>"
 
-#: lib/preferences/preferences.ui:2296
+#: lib/preferences/preferences.ui:2289
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "使用原生系统通知 (仅限 Linux)"
 
-#: lib/preferences/preferences.ui:2303
+#: lib/preferences/preferences.ui:2296
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "不使用通知"
 
-#: lib/preferences/preferences.ui:2326
+#: lib/preferences/preferences.ui:2319
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
 "the screen."
 msgstr "<b>注意：</b>您可以在屏幕上拖动更改 OSD 通知的位置。"
 
-#: lib/preferences/preferences.ui:2352
+#: lib/preferences/preferences.ui:2345
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "使用 OSD 通知"
 
-#: lib/preferences/preferences.ui:2359
+#: lib/preferences/preferences.ui:2352
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "预览"
 
-#: lib/preferences/preferences.ui:2424
+#: lib/preferences/preferences.ui:2417
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4947,92 +4941,92 @@ msgstr ""
 "更多关于拼写检查的信息，请参见<a href=\"https://userbase.kde.org/"
 "Falkon#Spell_Check\">维基</a>。"
 
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2459
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>拼写检查选项</b>"
 
-#: lib/preferences/preferences.ui:2473
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "启用拼写检查"
 
-#: lib/preferences/preferences.ui:2480
+#: lib/preferences/preferences.ui:2473
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>字典目录</b>"
 
-#: lib/preferences/preferences.ui:2531
+#: lib/preferences/preferences.ui:2524
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "未找到语言"
 
-#: lib/preferences/preferences.ui:2560
+#: lib/preferences/preferences.ui:2553
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "协议处理程序管理器"
 
-#: lib/preferences/preferences.ui:2600
+#: lib/preferences/preferences.ui:2593
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "搜索引擎管理器"
 
-#: lib/preferences/preferences.ui:2622
+#: lib/preferences/preferences.ui:2615
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>用户样式表</b>"
 
-#: lib/preferences/preferences.ui:2629
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>管理搜索引擎</b>"
 
-#: lib/preferences/preferences.ui:2642
+#: lib/preferences/preferences.ui:2635
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "管理自定义规则"
 
-#: lib/preferences/preferences.ui:2667
+#: lib/preferences/preferences.ui:2660
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "语言"
 
-#: lib/preferences/preferences.ui:2689
+#: lib/preferences/preferences.ui:2682
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>网站的首选语言</b>"
 
-#: lib/preferences/preferences.ui:2714
+#: lib/preferences/preferences.ui:2707
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "证书例外管理器"
 
-#: lib/preferences/preferences.ui:2736
+#: lib/preferences/preferences.ui:2729
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>更改浏览器标识</b>"
 
-#: lib/preferences/preferences.ui:2761
+#: lib/preferences/preferences.ui:2754
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "User Agent 管理器"
 
-#: lib/preferences/preferences.ui:2783
+#: lib/preferences/preferences.ui:2776
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "自动加载到所有网站的样式表："
 
-#: lib/preferences/preferences.ui:2820
+#: lib/preferences/preferences.ui:2813
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>管理协议处理程序</b>"
 
-#: lib/preferences/preferences.ui:2827
+#: lib/preferences/preferences.ui:2820
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>证书管理器</b>"
 
-#: lib/preferences/preferences.ui:2878
+#: lib/preferences/preferences.ui:2871
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "自定义规则管理器"
@@ -6207,3 +6201,7 @@ msgstr "检查元素"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "Preferences|"
+#~ msgid "Enable XSS Auditing"
+#~ msgstr "启用 XSS 审核"

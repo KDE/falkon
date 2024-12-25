@@ -73,27 +73,27 @@ msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
 msgstr "Halda JavaScripti seadistusi"
 
-#: sbi_networkicon.cpp:62
+#: sbi_networkicon.cpp:70
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
 msgstr "Puhverserveri seadistus"
 
-#: sbi_networkicon.cpp:64
+#: sbi_networkicon.cpp:72
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
 msgstr "Vali puhverserver"
 
-#: sbi_networkicon.cpp:78
+#: sbi_networkicon.cpp:86
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
 msgstr "Tühi"
 
-#: sbi_networkicon.cpp:82
+#: sbi_networkicon.cpp:90
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
 msgstr "Halda puhverservereid"
 
-#: sbi_networkicon.cpp:95
+#: sbi_networkicon.cpp:103
 #, qt-format
 msgctxt "SBI_NetworkIcon|"
 msgid ""
@@ -103,22 +103,54 @@ msgstr ""
 "Võrguoleku näitamine ja puhverserveri haldamine<br/><br/><b>Võrk:</b><br/>"
 "%1<br/><br/><b>Puhverserver:</b><br/>%2"
 
-#: sbi_networkicon.cpp:99
+#: sbi_networkicon.cpp:107
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
-msgid "Connected"
+msgid "Connected - Online"
 msgstr "Ühendatud"
 
-#: sbi_networkicon.cpp:103
+#: sbi_networkicon.cpp:110
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected - Site"
+msgstr "Ühendatud"
+
+#: sbi_networkicon.cpp:113
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected - Local"
+msgstr "Ühendatud"
+
+#: sbi_networkicon.cpp:116
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Disconnected"
+msgstr "Ühendatud"
+
+#: sbi_networkicon.cpp:120
+msgctxt "SBI_NetworkIcon|"
+msgid "Unknown"
+msgstr ""
+
+#: sbi_networkicon.cpp:126
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
 msgstr "Süsteemne puhverserver"
 
-#: sbi_networkicon.cpp:107
+#: sbi_networkicon.cpp:130
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
 msgstr "Puhverserver puudub"
 
-#: sbi_networkicon.cpp:111
+#: sbi_networkicon.cpp:134
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
 msgstr "Kasutaja määratud"

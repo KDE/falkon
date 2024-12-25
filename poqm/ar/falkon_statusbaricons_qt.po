@@ -79,27 +79,27 @@ msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
 msgstr "أدِر إعدادات جافاسكربت"
 
-#: sbi_networkicon.cpp:62
+#: sbi_networkicon.cpp:70
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
 msgstr "ضبط الخادوم الوكيل"
 
-#: sbi_networkicon.cpp:64
+#: sbi_networkicon.cpp:72
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
 msgstr "اختر خادومًا وكيلًا"
 
-#: sbi_networkicon.cpp:78
+#: sbi_networkicon.cpp:86
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
 msgstr "فارغ"
 
-#: sbi_networkicon.cpp:82
+#: sbi_networkicon.cpp:90
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
 msgstr "أدِر الخواديم الوكيلة"
 
-#: sbi_networkicon.cpp:95
+#: sbi_networkicon.cpp:103
 #, qt-format
 msgctxt "SBI_NetworkIcon|"
 msgid ""
@@ -109,22 +109,54 @@ msgstr ""
 "يعرض حالة الشبكة ويدير الخادوم الوكيل<br/><br/><b>الشبكة:</b><br/>%1<br/><br/"
 "><b>الخادوم الوكيل:</b><br/>%2"
 
-#: sbi_networkicon.cpp:99
+#: sbi_networkicon.cpp:107
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
-msgid "Connected"
+msgid "Connected - Online"
 msgstr "متّصل"
 
-#: sbi_networkicon.cpp:103
+#: sbi_networkicon.cpp:110
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected - Site"
+msgstr "متّصل"
+
+#: sbi_networkicon.cpp:113
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected - Local"
+msgstr "متّصل"
+
+#: sbi_networkicon.cpp:116
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Disconnected"
+msgstr "متّصل"
+
+#: sbi_networkicon.cpp:120
+msgctxt "SBI_NetworkIcon|"
+msgid "Unknown"
+msgstr ""
+
+#: sbi_networkicon.cpp:126
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
 msgstr "الخادوم الوكيل للنظام"
 
-#: sbi_networkicon.cpp:107
+#: sbi_networkicon.cpp:130
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
 msgstr "بلا خادوم وكيل"
 
-#: sbi_networkicon.cpp:111
+#: sbi_networkicon.cpp:134
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
 msgstr "عرّفه المستخدم"

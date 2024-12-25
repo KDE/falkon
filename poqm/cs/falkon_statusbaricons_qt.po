@@ -78,27 +78,27 @@ msgctxt "SBI_JavaScriptIcon|"
 msgid "Manage JavaScript settings"
 msgstr "Spravovat nastavení JavaScriptu"
 
-#: sbi_networkicon.cpp:62
+#: sbi_networkicon.cpp:70
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
 msgstr "Nastavení proxy"
 
-#: sbi_networkicon.cpp:64
+#: sbi_networkicon.cpp:72
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
 msgstr "Vybrat proxy"
 
-#: sbi_networkicon.cpp:78
+#: sbi_networkicon.cpp:86
 msgctxt "SBI_NetworkIcon|"
 msgid "Empty"
 msgstr "Prázdné"
 
-#: sbi_networkicon.cpp:82
+#: sbi_networkicon.cpp:90
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
 msgstr "Spravovat proxy"
 
-#: sbi_networkicon.cpp:95
+#: sbi_networkicon.cpp:103
 #, qt-format
 msgctxt "SBI_NetworkIcon|"
 msgid ""
@@ -108,22 +108,54 @@ msgstr ""
 "Zobrazuje stav sítě a spravuje proxy<br/><br/><b>Síť:</b><br/>%1<br/><br/"
 "><b>Proxy:</b><br/>%2"
 
-#: sbi_networkicon.cpp:99
+#: sbi_networkicon.cpp:107
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
-msgid "Connected"
+msgid "Connected - Online"
 msgstr "Připojeno"
 
-#: sbi_networkicon.cpp:103
+#: sbi_networkicon.cpp:110
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected - Site"
+msgstr "Připojeno"
+
+#: sbi_networkicon.cpp:113
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Connected - Local"
+msgstr "Připojeno"
+
+#: sbi_networkicon.cpp:116
+#, fuzzy
+#| msgctxt "SBI_NetworkIcon|"
+#| msgid "Connected"
+msgctxt "SBI_NetworkIcon|"
+msgid "Disconnected"
+msgstr "Připojeno"
+
+#: sbi_networkicon.cpp:120
+msgctxt "SBI_NetworkIcon|"
+msgid "Unknown"
+msgstr ""
+
+#: sbi_networkicon.cpp:126
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
 msgstr "Systémová proxy"
 
-#: sbi_networkicon.cpp:107
+#: sbi_networkicon.cpp:130
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
 msgstr "Žádná proxy"
 
-#: sbi_networkicon.cpp:111
+#: sbi_networkicon.cpp:134
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
 msgstr "Stanoveno uživatelem"
