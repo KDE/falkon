@@ -2,14 +2,21 @@
 # This file is distributed under the same license as the falkon package.
 # Xabier Aramendi <azpidatziak@gmail.com>, 2017
 #
+# SPDX-FileCopyrightText: 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2024-12-25 09:05+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Language: eu_ES\n"
 "X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: sbi_imagesicon.cpp:34
 msgctxt "SBI_ImagesIcon|"
@@ -74,12 +81,12 @@ msgstr "Kudeatu JavaScript ezarpenak"
 #: sbi_networkicon.cpp:62
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
-msgstr "Proxy Itxurapena"
+msgstr "Ordezkari konfigurazioa"
 
 #: sbi_networkicon.cpp:64
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
-msgstr "Hautatu proxya"
+msgstr "Hautatu ordezkaria"
 
 #: sbi_networkicon.cpp:78
 msgctxt "SBI_NetworkIcon|"
@@ -89,7 +96,7 @@ msgstr "Hutsik"
 #: sbi_networkicon.cpp:82
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
-msgstr "Kudeatu proxyak"
+msgstr "Kudeatu ordezkariak"
 
 #: sbi_networkicon.cpp:95
 #, qt-format
@@ -98,8 +105,8 @@ msgid ""
 "Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
 "><br/><b>Proxy:</b><br/>%2"
 msgstr ""
-"Sare egoera erakutsi eta proxya kudeatzen du<br/><br/><b>Sarea:</b><br/>"
-"%1<br/><br/><b>Proxya:</b><br/>%2"
+"Sarearen egoera erakutsi eta ordezkaria kudeatzen du<br/><br/><b>Sarea:</"
+"b><br/>%1<br/><br/><b>Ordezkaria:</b><br/>%2"
 
 #: sbi_networkicon.cpp:99
 msgctxt "SBI_NetworkIcon|"
@@ -109,12 +116,12 @@ msgstr "Elkarketaturik"
 #: sbi_networkicon.cpp:103
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
-msgstr "Sistema proxya"
+msgstr "Sistemaren ordezkaria"
 
 #: sbi_networkicon.cpp:107
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
-msgstr "Proxy gabe"
+msgstr "Ordezkaririk gabe"
 
 #: sbi_networkicon.cpp:111
 msgctxt "SBI_NetworkIcon|"
@@ -124,42 +131,44 @@ msgstr "Erabiltzaileak zehaztuta"
 #: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Add proxy"
-msgstr "Gehitu proxya"
+msgstr "Gehitu ordezkaria"
 
 #: sbi_networkicondialog.cpp:57
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Name of proxy:"
-msgstr "Proxyaren izena:"
+msgstr "Ordezkariaren izena:"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove current proxy"
-msgstr "Kendu oraingo proxya"
+msgstr "Kendu oraingo ordezkaria"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Are you sure you want to remove current proxy?"
-msgstr "Zihur zaude oraingo proxya kentzea nahi duzula?"
+msgstr "Ziur zaude oraingo ordezkaria kendu nahi duzula?"
 
 #: sbi_networkicondialog.ui:14
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Proxy Manager"
-msgstr "Proxy Kudeatzailea"
+msgstr "Ordezkari-kudeatzailea"
 
 #: sbi_networkicondialog.ui:28
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Select proxy: "
-msgstr "Hautatu proxya: "
+msgstr "Hautatu ordezkaria: "
 
 #: sbi_networkicondialog.ui:45
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove proxy"
-msgstr "Kendu proxya"
+msgstr "Kendu ordezkaria"
 
 #: sbi_networkicondialog.ui:69
 msgctxt "SBI_NetworkIconDialog|"
 msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
-msgstr "Proxy gabe. Proxya gehitu dezakezu <b>Gehitu</b> botoia sakatuz."
+msgstr ""
+"Ordezkaririk gabe. Ordezkaria gehitu dezakezu <b>Gehitu</b> botoiari klik "
+"eginda."
 
 #: sbi_networkicondialog.ui:104
 msgctxt "SBI_NetworkIconDialog|"
@@ -169,7 +178,7 @@ msgstr "Aldaketa guztiak <b>Gorde</b> botoiarekin gorde behar dira."
 #: sbi_proxywidget.ui:14
 msgctxt "SBI_ProxyWidget|"
 msgid "Form"
-msgstr "Galdekizuna"
+msgstr "Inprimakia"
 
 #: sbi_proxywidget.ui:23
 msgctxt "SBI_ProxyWidget|"
@@ -194,17 +203,17 @@ msgstr "Erabiltzaile-izena:"
 #: sbi_proxywidget.ui:86
 msgctxt "SBI_ProxyWidget|"
 msgid "Password:"
-msgstr "Sarhitza:"
+msgstr "Pasahitza:"
 
 #: sbi_proxywidget.ui:111
 msgctxt "SBI_ProxyWidget|"
 msgid "S&ystem proxy configuration"
-msgstr "&Sistemako proxyaren itxurapena"
+msgstr "&Sistema ordezkariaren konfigurazioa"
 
 #: sbi_proxywidget.ui:118
 msgctxt "SBI_ProxyWidget|"
 msgid "&Manual configuration"
-msgstr "&Eskuzko itxurapena"
+msgstr "Es&kuzko konfigurazioa"
 
 #: sbi_settingsdialog.ui:14
 msgctxt "SBI_SettingsDialog|"
