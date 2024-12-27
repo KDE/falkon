@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 13:43+0100\n"
-"PO-Revision-Date: 2024-06-1510:04+0200\n"
+"PO-Revision-Date: 2024-12-26 21:43+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -2406,12 +2406,9 @@ msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr ""
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Nekonata grandeco"
+msgstr "Nekonata eraro"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3996,22 +3993,19 @@ msgid "Set as default"
 msgstr "Agordi kiel defaŭlto"
 
 #: lib/preferences/preferences.cpp:313
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
-msgstr "Aŭtomate"
+msgstr "Aŭtomata"
 
 #: lib/preferences/preferences.cpp:315
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Hela"
 
 #: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Malhela"
 
 #: lib/preferences/preferences.cpp:326
 #, qt-format
@@ -5176,20 +5170,17 @@ msgid "Site Permissions"
 msgstr "Retejaj Permesoj"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:22
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "Url:"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
-msgstr "Url:"
+msgstr "URL:"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:29
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:48
-msgctxt "SiteSettingsBrowseDialog|"
+msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
 msgstr ""
 

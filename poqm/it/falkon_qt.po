@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-12-15 18:26+0100\n"
+"PO-Revision-Date: 2024-12-26 19:20+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -4011,9 +4011,6 @@ msgid "Set as default"
 msgstr "Imposta come predefinito"
 
 #: lib/preferences/preferences.cpp:313
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Automatico"
@@ -4021,12 +4018,12 @@ msgstr "Automatico"
 #: lib/preferences/preferences.cpp:315
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Chiaro"
 
 #: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Scuro"
 
 #: lib/preferences/preferences.cpp:326
 #, qt-format
@@ -4622,7 +4619,7 @@ msgstr "Forza la modalità scura"
 #: lib/preferences/preferences.ui:1146
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Schema di colori preferito:"
 
 #: lib/preferences/preferences.ui:1181
 msgctxt "Preferences|"
@@ -5207,7 +5204,10 @@ msgid "https://kde.org"
 msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:48
-msgctxt "SiteSettingsBrowseDialog|"
+#, fuzzy
+#| msgctxt "SiteSettingsBrowseDialog|"
+#| msgid "Set"
+msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
 msgstr "Imposta"
 
