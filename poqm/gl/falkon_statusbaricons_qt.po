@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-12-17 23:05+0100\n"
+"PO-Revision-Date: 2024-12-27 19:18+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -105,41 +105,30 @@ msgstr ""
 "%1<br/><br/><b>Mandatario:</b><br/>%2"
 
 #: sbi_networkicon.cpp:107
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Online"
-msgstr "Conectado"
+msgstr "Con conexión a Internet"
 
 #: sbi_networkicon.cpp:110
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Site"
-msgstr "Conectado"
+msgstr "Con conexión ao sitio"
 
 #: sbi_networkicon.cpp:113
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Local"
-msgstr "Conectado"
+msgstr "Con conexión local"
 
+# skip-rule: trasno-attachment2_reverse
 #: sbi_networkicon.cpp:116
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Disconnected"
-msgstr "Conectado"
+msgstr "Sen conexión"
 
 #: sbi_networkicon.cpp:120
 msgctxt "SBI_NetworkIcon|"
 msgid "Unknown"
-msgstr ""
+msgstr "Descoñecida"
 
 #: sbi_networkicon.cpp:126
 msgctxt "SBI_NetworkIcon|"

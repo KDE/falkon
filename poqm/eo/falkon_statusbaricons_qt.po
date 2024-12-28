@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 13:43+0100\n"
-"PO-Revision-Date: 2023-11-15 22:01+0100\n"
+"PO-Revision-Date: 2024-12-27 23:54+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -110,41 +110,29 @@ msgstr ""
 "%1<br/><br/><b>Prokurilo:</b><br/>%2"
 
 #: sbi_networkicon.cpp:107
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Online"
-msgstr "Konektita"
+msgstr "Konektita - Enreta"
 
 #: sbi_networkicon.cpp:110
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Site"
-msgstr "Konektita"
+msgstr "Konektita - Sito"
 
 #: sbi_networkicon.cpp:113
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Local"
-msgstr "Konektita"
+msgstr "Konektita - Loka"
 
 #: sbi_networkicon.cpp:116
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Disconnected"
-msgstr "Konektita"
+msgstr "Malkonektita"
 
 #: sbi_networkicon.cpp:120
 msgctxt "SBI_NetworkIcon|"
 msgid "Unknown"
-msgstr ""
+msgstr "Nekonata"
 
 #: sbi_networkicon.cpp:126
 msgctxt "SBI_NetworkIcon|"
@@ -288,7 +276,3 @@ msgstr "Zomi fenestraĵo"
 msgctxt "SBI_ZoomWidget|"
 msgid "Zoom: %1%"
 msgstr "Zomo: %1%"
-
-#~ msgctxt "SBI_NetworkIcon|"
-#~ msgid "Offline"
-#~ msgstr "Senreta"
