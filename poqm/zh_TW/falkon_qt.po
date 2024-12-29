@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-12-19 17:33+0900\n"
+"PO-Revision-Date: 2024-12-29 02:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -4023,11 +4023,7 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "設定為預設"
 
-#
 #: lib/preferences/preferences.cpp:313
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "自動"
@@ -4035,12 +4031,12 @@ msgstr "自動"
 #: lib/preferences/preferences.cpp:315
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "亮色"
 
 #: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "暗色"
 
 #: lib/preferences/preferences.cpp:326
 #, qt-format
@@ -4629,7 +4625,7 @@ msgstr "強制使用暗色模式"
 #: lib/preferences/preferences.ui:1146
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "使用配色方案："
 
 #: lib/preferences/preferences.ui:1181
 msgctxt "Preferences|"
@@ -5208,9 +5204,6 @@ msgid "https://kde.org"
 msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:48
-#, fuzzy
-#| msgctxt "SiteSettingsBrowseDialog|"
-#| msgid "Set"
 msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
 msgstr "設定"
