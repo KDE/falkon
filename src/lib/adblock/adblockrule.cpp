@@ -358,6 +358,9 @@ bool AdBlockRule::matchType(const QWebEngineUrlRequestInfo &request) const
     case QWebEngineUrlRequestInfo::ResourceTypePluginResource:
         type = ObjectSubrequestOption;
         break;
+    case QWebEngineUrlRequestInfo::ResourceTypeWebSocket:
+        type = WebSocketOption;
+        break;
     case QWebEngineUrlRequestInfo::ResourceTypeSubResource:
     case QWebEngineUrlRequestInfo::ResourceTypeWorker:
     case QWebEngineUrlRequestInfo::ResourceTypeSharedWorker:
@@ -522,6 +525,10 @@ void AdBlockRule::parseFilter()
             else if (option == QL1S("popup")) {
                 // doesn't do anything yet
                 setOption(PopupOption);
+                ++handledOptions;
+            }
+            else if (option == QL1S("websocket")) {
+                setOption(WebSocketOption);
                 ++handledOptions;
             }
             else if (option == QL1S("document") && m_isException) {

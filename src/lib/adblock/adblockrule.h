@@ -135,7 +135,8 @@ private:
         PingOption              = 1 << 9,
         MediaOption             = 1 << 10,
         FontOption              = 1 << 11,
-        OtherOption             = 1 << 12,
+        WebSocketOption         = 1 << 12,
+        OtherOption             = 1 << 13,
         TypeOptions = ObjectOption
                     | SubdocumentOption
                     | XMLHttpRequestOption
@@ -146,9 +147,10 @@ private:
                     | PingOption
                     | MediaOption
                     | FontOption
+                    | WebSocketOption
                     | OtherOption,
 
-        PopupOption             = 1 << 13,
+        PopupOption             = 1 << 14,
 
         // Exception only options
         DocumentOption          = 1 << 20,
