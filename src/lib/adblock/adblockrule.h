@@ -50,10 +50,10 @@
 #include <QStringList>
 #include <QStringMatcher>
 #include <QRegularExpression>
+#include <QUrl>
 
 #include "qzcommon.h"
 
-class QUrl;
 class QWebEngineUrlRequestInfo;
 
 class AdBlockSubscription;
@@ -90,6 +90,9 @@ public:
     bool isComment() const;
     bool isEnabled() const;
     void setEnabled(bool enabled);
+
+    bool isRewrite() const;
+    QUrl rewriteUrl() const;
 
     bool isSlow() const;
     bool isInternalDisabled() const;
@@ -153,6 +156,7 @@ private:
                     | OtherOption,
 
         PopupOption             = 1 << 14,
+        RewriteOption           = 1 << 15,
 
         // Exception only options
         DocumentOption          = 1 << 20,
@@ -170,6 +174,7 @@ private:
     inline void setException(const RuleOption &opt, bool on);
 
     void parseFilter();
+    bool parseRewriteFilter(const QString &filter);
     void parseDomains(const QString &domains, const QChar &separator);
     bool filterIsOnlyDomain(const QString &filter) const;
     bool filterIsOnlyEndsMatch(const QString &filter) const;
@@ -188,6 +193,7 @@ private:
     QString m_matchString;
     // Case sensitivity for string matching
     Qt::CaseSensitivity m_caseSensitivity;
+    QUrl m_rewriteTarget;
 
     bool m_isEnabled;
     bool m_isException;

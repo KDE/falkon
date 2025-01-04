@@ -32,7 +32,8 @@ void AdBlockUrlInterceptor::interceptRequest(QWebEngineUrlRequestInfo &request)
 {
     QString ruleFilter;
     QString ruleSubscription;
-    if (!m_manager->block(request, ruleFilter, ruleSubscription)) {
+    QUrl rewriteUrl;
+    if (!m_manager->block(request, ruleFilter, ruleSubscription, rewriteUrl)) {
         return;
     }
 
@@ -44,6 +45,9 @@ void AdBlockUrlInterceptor::interceptRequest(QWebEngineUrlRequestInfo &request)
         url = QzTools::applyDirectionToPage(url);
 
         request.redirect(QUrl(url));
+    }
+    else if (!rewriteUrl.isEmpty()) {
+        request.redirect(rewriteUrl);
     } else {
         request.block(true);
     }

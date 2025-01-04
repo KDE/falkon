@@ -20,6 +20,7 @@
 #include "adblockmanager.h"
 #include "adblockicon.h"
 #include "adblockscripts.h"
+#include "adblockresourceschemehandler.h"
 
 #include "scripts.h"
 #include "webpage.h"
@@ -29,6 +30,8 @@
 #include "mainapplication.h"
 #include "statusbar.h"
 #include "desktopfile.h"
+
+#include <QWebEngineProfile>
 
 AdBlockPlugin::AdBlockPlugin()
     : QObject()
@@ -45,6 +48,8 @@ void AdBlockPlugin::init(InitState state, const QString &settingsPath)
     connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &AdBlockPlugin::mainWindowCreated);
     connect(mApp->plugins(), &PluginProxy::mainWindowDeleted, this, &AdBlockPlugin::mainWindowDeleted);
 
+    m_resourceschemeHandler = new AdblockResourceSchemeHandler(this);
+    mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("abp-resource"), m_resourceschemeHandler);
     if (state == LateInitState) {
         const auto windows = mApp->windows();
         for (BrowserWindow *window : windows) {
@@ -59,6 +64,10 @@ void AdBlockPlugin::unload()
     for (BrowserWindow *window : windows) {
         mainWindowDeleted(window);
     }
+
+    mApp->webProfile()->removeUrlSchemeHandler(m_resourceschemeHandler);
+    delete m_resourceschemeHandler;
+    m_resourceschemeHandler = nullptr;
 }
 
 bool AdBlockPlugin::testPlugin()
