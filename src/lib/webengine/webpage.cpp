@@ -216,7 +216,8 @@ QStringList WebPage::internalSchemes()
         QSL("data"),
         QSL("about"),
         QSL("view-source"),
-        QSL("chrome")
+        QSL("chrome"),
+        QSL("abp-resource")
     };
 }
 

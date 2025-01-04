@@ -23,6 +23,7 @@ class WebPage;
 class BrowserWindow;
 
 class AdBlockIcon;
+class AdblockResourceSchemeHandler;
 
 class AdBlockPlugin : public QObject, public PluginInterface
 {
@@ -45,4 +46,5 @@ private:
     bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;
 
     QHash<BrowserWindow*, AdBlockIcon*> m_icons;
+    AdblockResourceSchemeHandler *m_resourceschemeHandler = nullptr;
 };

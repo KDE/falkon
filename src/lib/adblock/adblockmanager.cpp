@@ -99,7 +99,7 @@ QList<AdBlockSubscription*> AdBlockManager::subscriptions() const
     return m_subscriptions;
 }
 
-bool AdBlockManager::block(QWebEngineUrlRequestInfo &request, QString &ruleFilter, QString &ruleSubscription)
+bool AdBlockManager::block(QWebEngineUrlRequestInfo &request, QString &ruleFilter, QString &ruleSubscription, QUrl &rewriteUrl)
 {
     QMutexLocker locker(&m_mutex);
 
@@ -124,6 +124,7 @@ bool AdBlockManager::block(QWebEngineUrlRequestInfo &request, QString &ruleFilte
     if (blockedRule) {
         ruleFilter = blockedRule->filter();
         ruleSubscription = blockedRule->subscription()->title();
+        rewriteUrl = blockedRule->rewriteUrl();
 #ifdef ADBLOCK_DEBUG
         qDebug() << "BLOCKED: " << timer.elapsed() << blockedRule->filter() << request.requestUrl();
 #endif

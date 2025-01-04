@@ -219,6 +219,16 @@ void AdBlockRule::setEnabled(bool enabled)
     m_isEnabled = enabled;
 }
 
+bool AdBlockRule::isRewrite() const
+{
+    return m_rewriteTarget.isEmpty();
+}
+
+QUrl AdBlockRule::rewriteUrl() const
+{
+    return m_rewriteTarget;
+}
+
 bool AdBlockRule::isSlow() const
 {
     return m_regExp != nullptr;
@@ -454,6 +464,12 @@ void AdBlockRule::parseFilter()
                 parseDomains(option.mid(7), QL1C('|'));
                 ++handledOptions;
             }
+            else if (option.startsWith(QL1S("rewrite="))) {
+                setOption(RewriteOption);
+                if (parseRewriteFilter(option.mid(8))) {
+                    ++handledOptions;
+                }
+            }
             else if (option == QL1S("match-case")) {
                 m_caseSensitivity = Qt::CaseSensitive;
                 ++handledOptions;
@@ -634,6 +650,34 @@ void AdBlockRule::parseFilter()
     // We haven't found anything that needs use of regexp, yay!
     m_type = StringContainsMatchRule;
     m_matchString = parsedLine;
+}
+
+bool AdBlockRule::parseRewriteFilter(const QString& targetAddress)
+{
+    bool valid = false;
+
+    if (targetAddress.startsWith(QSL("abp-resource:"))) {
+        QStringList validValues = {
+            QSL("blank-js"),
+            QSL("blank-css"),
+            QSL("blank-html"),
+            QSL("blank-text"),
+            QSL("1x1-transparent-gif"),
+            QSL("2x2-transparent-png"),
+            QSL("3x2-transparent-png"),
+            QSL("32x32-transparent-png"),
+            QSL("blank-mp3"),
+            QSL("blank-mp4")
+        };
+        QString rewriteTarget = targetAddress.mid(13);
+
+        if (validValues.contains(rewriteTarget)) {
+            m_rewriteTarget = QUrl(targetAddress);
+            valid = true;
+        }
+    }
+
+    return valid;
 }
 
 void AdBlockRule::parseDomains(const QString &domains, const QChar &separator)

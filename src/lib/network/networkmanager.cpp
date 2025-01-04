@@ -39,7 +39,7 @@
 #include <QNetworkReply>
 #include <QNetworkProxy>
 #include <QWebEngineProfile>
-#include <QtWebEngineWidgetsVersion>
+#include <QtWebEngineCoreVersion>
 
 #include <QWebEngineUrlScheme>
 
@@ -389,10 +389,21 @@ void NetworkManager::registerSchemes()
     falkonScheme.setFlags(QWebEngineUrlScheme::SecureScheme | QWebEngineUrlScheme::ContentSecurityPolicyIgnored);
     falkonScheme.setSyntax(QWebEngineUrlScheme::Syntax::Path);
     QWebEngineUrlScheme::registerScheme(falkonScheme);
+
     QWebEngineUrlScheme extensionScheme("extension");
     extensionScheme.setFlags(QWebEngineUrlScheme::SecureScheme | QWebEngineUrlScheme::ContentSecurityPolicyIgnored);
     extensionScheme.setSyntax(QWebEngineUrlScheme::Syntax::Path);
     QWebEngineUrlScheme::registerScheme(extensionScheme);
+
+    QWebEngineUrlScheme adblockScheme("abp-resource");
+    adblockScheme.setFlags(QWebEngineUrlScheme::SecureScheme
+                         | QWebEngineUrlScheme::ContentSecurityPolicyIgnored
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+                         | QWebEngineUrlScheme::FetchApiAllowed
+#endif
+    );
+    adblockScheme.setSyntax(QWebEngineUrlScheme::Syntax::Path);
+    QWebEngineUrlScheme::registerScheme(adblockScheme);
 }
 
 QNetworkReply *NetworkManager::createRequest(QNetworkAccessManager::Operation op, const QNetworkRequest &request, QIODevice *outgoingData)

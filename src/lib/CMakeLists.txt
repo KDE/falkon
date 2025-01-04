@@ -53,6 +53,7 @@ set(SRCS ${SRCS}
     adblock/adblockicon.cpp
     adblock/adblockmanager.cpp
     adblock/adblockmatcher.cpp
+    adblock/adblockresourceschemehandler.cpp
     adblock/adblockrule.cpp
     adblock/adblocksearchtree.cpp
     adblock/adblocksubscription.cpp
@@ -287,6 +288,7 @@ set(SRCS ${SRCS}
     adblock/adblockicon.h
     adblock/adblockmanager.h
     adblock/adblockmatcher.h
+    adblock/adblockresourceschemehandler.h
     adblock/adblockrule.h
     adblock/adblocksearchtree.h
     adblock/adblocksubscription.h
