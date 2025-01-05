@@ -1,16 +1,23 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the falkon package.
-# Jaime Muñoz Martín <jmmartin_5@outlook.com>, 2017
-# Javier Llorente <javier@opensuse.org>, 2017
 #
+# SPDX-FileCopyrightText: 2017 Jaime Muñoz Martín <jmmartin_5@outlook.com>
+# SPDX-FileCopyrightText: 2017 Javier Llorente <javier@opensuse.org>
+# SPDX-FileCopyrightText: 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
+"Project-Id-Version: falkon_statusbaricons_qt\n"
+"PO-Revision-Date: 2025-01-04 20:01+0100\n"
+"Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: es_ES\n"
 "X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: sbi_imagesicon.cpp:34
 msgctxt "SBI_ImagesIcon|"
@@ -103,41 +110,29 @@ msgstr ""
 "%1<br/><br/><b>Proxy:</b><br/>%2"
 
 #: sbi_networkicon.cpp:107
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Online"
-msgstr "Conectado"
+msgstr "Conectado - En línea"
 
 #: sbi_networkicon.cpp:110
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Site"
-msgstr "Conectado"
+msgstr "Conectado - Sitio"
 
 #: sbi_networkicon.cpp:113
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Local"
-msgstr "Conectado"
+msgstr "Conectado - Local"
 
 #: sbi_networkicon.cpp:116
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Disconnected"
-msgstr "Conectado"
+msgstr "Desconectado"
 
 #: sbi_networkicon.cpp:120
 msgctxt "SBI_NetworkIcon|"
 msgid "Unknown"
-msgstr ""
+msgstr "Desconocido"
 
 #: sbi_networkicon.cpp:126
 msgctxt "SBI_NetworkIcon|"
@@ -280,7 +275,3 @@ msgstr "Ampliar widget"
 msgctxt "SBI_ZoomWidget|"
 msgid "Zoom: %1%"
 msgstr "Zoom: %1%"
-
-#~ msgctxt "SBI_NetworkIcon|"
-#~ msgid "Offline"
-#~ msgstr "Desconectado"

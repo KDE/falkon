@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the falkon package.
-#
 # Przemysław Pierzga <przemyslawpierzga@gmail.com>, 2017.
 # Michał Szymanowski <tylkobuba@gmail.com>, 2017.
 # Mariusz Fik <fisiu@opensuse.org>, 2017.
-# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Ignacy Kajdan <ignacy.kajdan@gmail.com>, 2019.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-10-05 13:00+0200\n"
+"PO-Revision-Date: 2025-01-04 07:48+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.0\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -4017,9 +4017,6 @@ msgid "Set as default"
 msgstr "Ustaw jako domyślne"
 
 #: lib/preferences/preferences.cpp:313
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Auto"
@@ -4027,12 +4024,12 @@ msgstr "Auto"
 #: lib/preferences/preferences.cpp:315
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Jasny"
 
 #: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Ciemny"
 
 #: lib/preferences/preferences.cpp:326
 #, qt-format
@@ -4622,7 +4619,7 @@ msgstr "Wymuś tryb ciemny"
 #: lib/preferences/preferences.ui:1146
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Domyślny zestaw kolorów:"
 
 #: lib/preferences/preferences.ui:1181
 msgctxt "Preferences|"
@@ -5195,22 +5192,19 @@ msgid "Site Permissions"
 msgstr "Uprawnienia strony"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:22
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "Url:"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
-msgstr "Adres:"
+msgstr "Adres URL:"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:29
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:48
 msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
-msgstr ""
+msgstr "Ustaw"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:65
 msgctxt "SiteSettingsBrowseDialog|"

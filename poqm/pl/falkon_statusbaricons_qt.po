@@ -1,15 +1,16 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the falkon package.
-#
 # Przemysław Pierzga <przemyslawpierzga@gmail.com>, 2017.
 # Michał Szymanowski <tylkobuba@gmail.com>, 2017.
 # Mariusz Fik <fisiu@opensuse.org>, 2017.
 # Ignacy Kajdan <ignacy.kajdan@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2019-05-11 06:48+0200\n"
-"Last-Translator: Ignacy Kajdan <ignacy.kajdan@gmail.com>\n"
+"PO-Revision-Date: 2025-01-04 07:52+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 24.12.0\n"
 "X-Qt-Contexts: true\n"
 
 #: sbi_imagesicon.cpp:34
@@ -82,12 +84,12 @@ msgstr "Zarządzaj ustawieniami JavaScript"
 #: sbi_networkicon.cpp:70
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
-msgstr "Ustawienia proxy"
+msgstr "Ustawienia pośrednika"
 
 #: sbi_networkicon.cpp:72
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
-msgstr "Wybierz proxy"
+msgstr "Wybierz pośrednika"
 
 #: sbi_networkicon.cpp:86
 msgctxt "SBI_NetworkIcon|"
@@ -97,7 +99,7 @@ msgstr "Pusto"
 #: sbi_networkicon.cpp:90
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
-msgstr "Zarządzaj proxy"
+msgstr "Zarządzaj pośrednikami"
 
 #: sbi_networkicon.cpp:103
 #, qt-format
@@ -106,100 +108,88 @@ msgid ""
 "Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
 "><br/><b>Proxy:</b><br/>%2"
 msgstr ""
-"Pokazuje status sieci i zarządza serwerami proxy<br/><br/><b>Sieć:</b><br/>"
-"%1<br/><br/><b>Proxy:</b><br/>%2"
+"Pokazuje stan sieci i zarządza serwerami pośredniczącymi<br/><br/><b>Sieć:</"
+"b><br/>%1<br/><br/><b>Pośrednik:</b><br/>%2"
 
 #: sbi_networkicon.cpp:107
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Online"
-msgstr "Podłączony"
+msgstr "Podłączony - W sieci"
 
 #: sbi_networkicon.cpp:110
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Site"
-msgstr "Podłączony"
+msgstr "Podłączony - Strona"
 
 #: sbi_networkicon.cpp:113
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Local"
-msgstr "Podłączony"
+msgstr "Podłączony - Lokalnie"
 
 #: sbi_networkicon.cpp:116
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Disconnected"
-msgstr "Podłączony"
+msgstr "Rozłączony"
 
 #: sbi_networkicon.cpp:120
 msgctxt "SBI_NetworkIcon|"
 msgid "Unknown"
-msgstr ""
+msgstr "Nieznany"
 
 #: sbi_networkicon.cpp:126
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
-msgstr "Proxy systemowe"
+msgstr "Pośrednik systemowy"
 
 #: sbi_networkicon.cpp:130
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
-msgstr "Brak proxy"
+msgstr "Brak pośrednika"
 
 #: sbi_networkicon.cpp:134
 msgctxt "SBI_NetworkIcon|"
 msgid "User defined"
-msgstr "Zdefiniowane przez użytkownika"
+msgstr "Określony przez użytkownika"
 
 #: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Add proxy"
-msgstr "Dodaj proxy"
+msgstr "Dodaj pośrednika"
 
 #: sbi_networkicondialog.cpp:57
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Name of proxy:"
-msgstr "Nazwa proxy:"
+msgstr "Nazwa pośrednika:"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove current proxy"
-msgstr "Usuń aktualne proxy"
+msgstr "Usuń bieżącego pośrednika"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Are you sure you want to remove current proxy?"
-msgstr "Czy na pewno chcesz usunąć aktualne proxy?"
+msgstr "Czy na pewno chcesz usunąć bieżącego pośrednika?"
 
 #: sbi_networkicondialog.ui:14
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Proxy Manager"
-msgstr "Zarządzanie proxy"
+msgstr "Zarządzanie pośrednikami"
 
 #: sbi_networkicondialog.ui:28
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Select proxy: "
-msgstr "Wybierz proxy:"
+msgstr "Wybierz pośrednika: "
 
 #: sbi_networkicondialog.ui:45
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove proxy"
-msgstr "Usuń proxy"
+msgstr "Usuń pośrednika"
 
 #: sbi_networkicondialog.ui:69
 msgctxt "SBI_NetworkIconDialog|"
 msgid "No proxies. You can add proxy by clicking on <b>Add</b> button."
-msgstr "Brak proxy. Możesz dodać proxy klikając przycisk <b>Dodaj</b>."
+msgstr "Brak pośrednika. Aby dodać, naciśnij przycisk <b>Dodaj</b>."
 
 #: sbi_networkicondialog.ui:104
 msgctxt "SBI_NetworkIconDialog|"
@@ -239,12 +229,12 @@ msgstr "Hasło:"
 #: sbi_proxywidget.ui:111
 msgctxt "SBI_ProxyWidget|"
 msgid "S&ystem proxy configuration"
-msgstr "S&ystemowe ustawienia proxy"
+msgstr "S&ystemowe ustawienia pośrednika"
 
 #: sbi_proxywidget.ui:118
 msgctxt "SBI_ProxyWidget|"
 msgid "&Manual configuration"
-msgstr "&Ręczna konfiguracja"
+msgstr "Ręczne u&stawienia "
 
 #: sbi_settingsdialog.ui:14
 msgctxt "SBI_SettingsDialog|"
