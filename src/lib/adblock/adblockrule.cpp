@@ -231,6 +231,10 @@ bool AdBlockRule::isInternalDisabled() const
 
 bool AdBlockRule::urlMatch(const QUrl &url) const
 {
+    if (!isEnabled() || isInternalDisabled()) {
+        return false;
+    }
+
     if (!hasOption(DocumentOption) && !hasOption(ElementHideOption) && !hasOption(GenericHideOption) && !hasOption(GenericBlockOption)) {
         return false;
     }
