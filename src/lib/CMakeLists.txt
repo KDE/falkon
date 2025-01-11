@@ -57,6 +57,7 @@ set(SRCS ${SRCS}
     adblock/adblockscripts.cpp
     adblock/adblocksearchtree.cpp
     adblock/adblocksubscription.cpp
+    adblock/adblocktreemodel.cpp
     adblock/adblocktreewidget.cpp
     adblock/adblockplugin.cpp
     app/autosaver.cpp
@@ -292,6 +293,7 @@ set(SRCS ${SRCS}
     adblock/adblockscripts.h
     adblock/adblocksearchtree.h
     adblock/adblocksubscription.h
+    adblock/adblocktreemodel.h
     adblock/adblocktreewidget.h
     adblock/adblockplugin.h
     app/autosaver.h
@@ -607,6 +609,10 @@ target_link_libraries(FalkonPrivate
     KF6::Archive
     ${OPENSSL_CRYPTO_LIBRARY}
 )
+
+if (BUILD_TESTING)
+    target_link_libraries(FalkonPrivate Qt6::Test)
+endif()
 
 if (HAVE_LIBINTL)
     target_include_directories(FalkonPrivate SYSTEM PUBLIC ${Intl_INCLUDE_DIRS})

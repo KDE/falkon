@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2010-2017 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "adblocktreewidget.h"
+#include "adblocktreemodel.h"
 #include "adblocksubscription.h"
 
 #include <QMenu>
@@ -24,22 +26,20 @@
 #include <QApplication>
 #include <QInputDialog>
 
-AdBlockTreeWidget::AdBlockTreeWidget(AdBlockSubscription* subscription, QWidget* parent)
-    : TreeWidget(parent)
+AdBlockTreeWidget::AdBlockTreeWidget(AdBlockSubscription *subscription, QWidget *parent)
+    : QTreeView(parent)
     , m_subscription(subscription)
-    , m_topItem(nullptr)
-    , m_itemChangingBlock(false)
+    , m_subscriptionModel(new AdBlockTreeModel(subscription, this))
+    , m_filterModel(new AdBlockFilterModel(m_subscriptionModel))
 {
     setContextMenuPolicy(Qt::CustomContextMenu);
-    setDefaultItemShowMode(TreeWidget::ItemsExpanded);
-    setHeaderHidden(true);
     setAlternatingRowColors(true);
     setLayoutDirection(Qt::LeftToRight);
+    setUniformRowHeights(true);
+
+    setModel(m_filterModel);
 
     connect(this, &QWidget::customContextMenuRequested, this, &AdBlockTreeWidget::contextMenuRequested);
-    connect(this, SIGNAL(itemChanged(QTreeWidgetItem*,int)), this, SLOT(itemChanged(QTreeWidgetItem*)));
-    connect(m_subscription, &AdBlockSubscription::subscriptionUpdated, this, &AdBlockTreeWidget::subscriptionUpdated);
-    connect(m_subscription, &AdBlockSubscription::subscriptionError, this, &AdBlockTreeWidget::subscriptionError);
 }
 
 AdBlockSubscription* AdBlockTreeWidget::subscription() const
@@ -49,6 +49,8 @@ AdBlockSubscription* AdBlockTreeWidget::subscription() const
 
 void AdBlockTreeWidget::showRule(const AdBlockRule* rule)
 {
+    Q_UNUSED(rule)
+#if 0
     if (!m_topItem && rule) {
         m_ruleToBeSelected = rule->filter();
     }
@@ -63,6 +65,12 @@ void AdBlockTreeWidget::showRule(const AdBlockRule* rule)
 
         m_ruleToBeSelected.clear();
     }
+#endif
+}
+
+void AdBlockTreeWidget::filterString(const QString& string)
+{
+    m_filterModel->setFilterFixedString(string);
 }
 
 void AdBlockTreeWidget::contextMenuRequested(const QPoint &pos)
@@ -71,65 +79,26 @@ void AdBlockTreeWidget::contextMenuRequested(const QPoint &pos)
         return;
     }
 
-    QTreeWidgetItem* item = itemAt(pos);
-    if (!item) {
+    QModelIndex index = indexAt(pos);
+    if (!index.isValid()) {
         return;
     }
 
     QMenu menu;
     menu.addAction(tr("Add Rule"), this, &AdBlockTreeWidget::addRule);
     menu.addSeparator();
-    QAction* deleteAction = menu.addAction(tr("Remove Rule"), this, &AdBlockTreeWidget::removeRule);
-
-    if (!item->parent()) {
-        deleteAction->setDisabled(true);
-    }
+    menu.addAction(tr("Remove Rule"), this, &AdBlockTreeWidget::removeRule);
 
     menu.exec(viewport()->mapToGlobal(pos));
 }
 
-void AdBlockTreeWidget::itemChanged(QTreeWidgetItem* item)
-{
-    if (!item || m_itemChangingBlock) {
-        return;
-    }
-
-    m_itemChangingBlock = true;
-
-    int offset = item->data(0, Qt::UserRole + 10).toInt();
-    const AdBlockRule* oldRule = m_subscription->rule(offset);
-
-    if (item->checkState(0) == Qt::Unchecked && oldRule->isEnabled()) {
-        // Disable rule
-        const AdBlockRule* rule = m_subscription->disableRule(offset);
-
-        adjustItemFeatures(item, rule);
-    }
-    else if (item->checkState(0) == Qt::Checked && !oldRule->isEnabled()) {
-        // Enable rule
-        const AdBlockRule* rule = m_subscription->enableRule(offset);
-
-        adjustItemFeatures(item, rule);
-    }
-    else if (m_subscription->canEditRules()) {
-        // Custom rule has been changed
-        auto* newRule = new AdBlockRule(item->text(0), m_subscription);
-        const AdBlockRule* rule = m_subscription->replaceRule(newRule, offset);
-
-        adjustItemFeatures(item, rule);
-    }
-
-    m_itemChangingBlock = false;
-}
-
 void AdBlockTreeWidget::copyFilter()
 {
-    QTreeWidgetItem* item = currentItem();
-    if (!item) {
+    QModelIndex index = selectionModel()->currentIndex();
+    if (!index.isValid()) {
         return;
     }
-
-    QApplication::clipboard()->setText(item->text(0));
+    QApplication::clipboard()->setText(m_subscriptionModel->data(index).toString());
 }
 
 void AdBlockTreeWidget::addRule()
@@ -144,83 +113,16 @@ void AdBlockTreeWidget::addRule()
     }
 
     auto* rule = new AdBlockRule(newRule, m_subscription);
-    int offset = m_subscription->addRule(rule);
-
-    auto* item = new QTreeWidgetItem();
-    item->setText(0, newRule);
-    item->setData(0, Qt::UserRole + 10, offset);
-    item->setFlags(item->flags() | Qt::ItemIsEditable);
-
-    m_itemChangingBlock = true;
-    m_topItem->addChild(item);
-    m_itemChangingBlock = false;
-
-    adjustItemFeatures(item, rule);
+    m_subscriptionModel->addRule(rule);
 }
 
 void AdBlockTreeWidget::removeRule()
 {
-    QTreeWidgetItem* item = currentItem();
-    if (!item || !m_subscription->canEditRules() || item == m_topItem) {
+    QModelIndex index = selectionModel()->currentIndex();
+    if (!index.isValid() || !m_subscription->canEditRules()) {
         return;
     }
-
-    int offset = item->data(0, Qt::UserRole + 10).toInt();
-
-    m_subscription->removeRule(offset);
-    deleteItem(item);
-}
-
-void AdBlockTreeWidget::subscriptionUpdated()
-{
-    refresh();
-
-    m_itemChangingBlock = true;
-    m_topItem->setText(0, tr("%1 (recently updated)").arg(m_subscription->title()));
-    m_itemChangingBlock = false;
-}
-
-void AdBlockTreeWidget::subscriptionError(const QString &message)
-{
-    refresh();
-
-    m_itemChangingBlock = true;
-    m_topItem->setText(0, tr("%1 (Error: %2)").arg(m_subscription->title(), message));
-    m_itemChangingBlock = false;
-}
-
-void AdBlockTreeWidget::adjustItemFeatures(QTreeWidgetItem* item, const AdBlockRule* rule)
-{
-    if (!rule->isEnabled()) {
-        item->setForeground(0, QColor(Qt::gray));
-
-        if (!rule->isComment()) {
-            QFont f = font();
-            f.setItalic(true);
-            item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
-            item->setCheckState(0, Qt::Unchecked);
-            item->setFont(0, f);
-        }
-
-        return;
-    }
-
-    item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
-    item->setCheckState(0, Qt::Checked);
-    item->setForeground(0, palette().windowText());
-    item->setFont(0, font());
-
-    if (rule->isUnsupportedRule()) {
-        item->setForeground(0, QColor(Qt::gray));
-        item->setFont(0, QFont());
-    } else if (rule->isException()) {
-        item->setForeground(0, QColor(Qt::darkGreen));
-        item->setFont(0, QFont());
-    }
-    else if (rule->isCssRule()) {
-        item->setForeground(0, QColor(Qt::darkBlue));
-        item->setFont(0, QFont());
-    }
+    m_subscriptionModel->removeRow(index.row());
 }
 
 void AdBlockTreeWidget::keyPressEvent(QKeyEvent* event)
@@ -233,39 +135,5 @@ void AdBlockTreeWidget::keyPressEvent(QKeyEvent* event)
         removeRule();
     }
 
-    TreeWidget::keyPressEvent(event);
-}
-
-void AdBlockTreeWidget::refresh()
-{
-    m_itemChangingBlock = true;
-    clear();
-
-    QFont boldFont;
-    boldFont.setBold(true);
-
-    m_topItem = new QTreeWidgetItem(this);
-    m_topItem->setText(0, m_subscription->title());
-    m_topItem->setFont(0, boldFont);
-    m_topItem->setExpanded(true);
-    addTopLevelItem(m_topItem);
-
-    const QVector<AdBlockRule*> &allRules = m_subscription->allRules();
-
-    int index = 0;
-    for (const AdBlockRule* rule : allRules) {
-        auto* item = new QTreeWidgetItem(m_topItem);
-        item->setText(0, rule->filter());
-        item->setData(0, Qt::UserRole + 10, index);
-
-        if (m_subscription->canEditRules()) {
-            item->setFlags(item->flags() | Qt::ItemIsEditable);
-        }
-
-        adjustItemFeatures(item, rule);
-        ++index;
-    }
-
-    showRule(nullptr);
-    m_itemChangingBlock = false;
+    QTreeView::keyPressEvent(event);
 }

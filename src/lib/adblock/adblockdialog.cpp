@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -107,7 +108,7 @@ void AdBlockDialog::addSubscription()
     QString url = dialog.url();
 
     if (AdBlockSubscription* subscription = m_manager->addSubscription(title, url)) {
-        auto* tree = new AdBlockTreeWidget(subscription, tabWidget);
+        auto *tree = new AdBlockTreeWidget(subscription, tabWidget);
         int index = tabWidget->insertTab(tabWidget->count() - 1, tree, subscription->title());
 
         tabWidget->setCurrentIndex(index);
@@ -161,14 +162,6 @@ void AdBlockDialog::learnAboutRules()
     mApp->addNewTab(QUrl(QSL("http://adblockplus.org/en/filters")));
 }
 
-void AdBlockDialog::loadSubscriptions()
-{
-    for (int i = 0; i < tabWidget->count(); ++i) {
-        auto* treeWidget = qobject_cast<AdBlockTreeWidget*>(tabWidget->widget(i));
-        treeWidget->refresh();
-    }
-}
-
 void AdBlockDialog::load()
 {
     if (m_loaded || !adblockCheckBox->isChecked()) {
@@ -177,11 +170,9 @@ void AdBlockDialog::load()
 
     const auto subscriptions = m_manager->subscriptions();
     for (AdBlockSubscription* subscription : subscriptions) {
-        auto* tree = new AdBlockTreeWidget(subscription, tabWidget);
+        auto *tree = new AdBlockTreeWidget(subscription, tabWidget);
         tabWidget->addTab(tree, subscription->title());
     }
 
     m_loaded = true;
-
-    QTimer::singleShot(50, this, &AdBlockDialog::loadSubscriptions);
 }

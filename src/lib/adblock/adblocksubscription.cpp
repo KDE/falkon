@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -89,6 +90,8 @@ void AdBlockSubscription::setUrl(const QUrl &url)
 
 void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
 {
+    Q_EMIT subscriptionUpdateStarted();
+
     QFile file(m_filePath);
 
     if (!file.exists()) {

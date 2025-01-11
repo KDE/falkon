@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2010-2014  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -19,21 +20,24 @@
 #define ADBLOCKTREEWIDGET_H
 
 #include "qzcommon.h"
-#include "treewidget.h"
+
+#include <QTreeView>
 
 class AdBlockSubscription;
+class AdBlockTreeModel;
+class AdBlockFilterModel;
 class AdBlockRule;
 
-class FALKON_EXPORT AdBlockTreeWidget : public TreeWidget
+class FALKON_EXPORT AdBlockTreeWidget : public QTreeView
 {
     Q_OBJECT
 public:
-    explicit AdBlockTreeWidget(AdBlockSubscription* subscription, QWidget* parent = nullptr);
+    explicit AdBlockTreeWidget(AdBlockSubscription *subscription, QWidget *parent = nullptr);
 
     AdBlockSubscription* subscription() const;
 
-    void showRule(const AdBlockRule* rule);
-    void refresh();
+    void showRule(const AdBlockRule *rule);
+    void filterString(const QString &string);
 
 public Q_SLOTS:
     void addRule();
@@ -41,21 +45,14 @@ public Q_SLOTS:
 
 private Q_SLOTS:
     void contextMenuRequested(const QPoint &pos);
-    void itemChanged(QTreeWidgetItem* item);
     void copyFilter();
 
-    void subscriptionUpdated();
-    void subscriptionError(const QString &message);
-
 private:
-    void adjustItemFeatures(QTreeWidgetItem* item, const AdBlockRule* rule);
     void keyPressEvent(QKeyEvent* event) override;
 
     AdBlockSubscription* m_subscription;
-    QTreeWidgetItem* m_topItem;
-
-    QString m_ruleToBeSelected;
-    bool m_itemChangingBlock;
+    AdBlockTreeModel *m_subscriptionModel;
+    AdBlockFilterModel *m_filterModel;
 };
 
-#endif // ADBLOCKTREEWIDGET_H
+#endif /* ADBLOCKTREEWIDGET_H */
