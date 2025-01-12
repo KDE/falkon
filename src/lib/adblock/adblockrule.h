@@ -74,6 +74,7 @@ public:
     QString filter() const;
     void setFilter(const QString &filter);
 
+    bool isRemoveRule() const;
     bool isCssRule() const;
     QString cssSelector() const;
 
@@ -117,7 +118,8 @@ private:
         MatchAllUrlsRule = 5,
         ExtendedCssRule = 6,
         SnippetRule = 7,
-        Invalid = 8
+        RemoveRule = 8,
+        Invalid = 9
     };
 
     enum RuleOption {

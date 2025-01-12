@@ -19,6 +19,7 @@
 #include "adblockplugin.h"
 #include "adblockmanager.h"
 #include "adblockicon.h"
+#include "adblockscripts.h"
 
 #include "scripts.h"
 #include "webpage.h"
@@ -86,6 +87,12 @@ void AdBlockPlugin::webPageCreated(WebPage *page)
         const QString siteElementHiding = manager->elementHidingRulesForDomain(page->url());
         if (!siteElementHiding.isEmpty()) {
             page->runJavaScript(Scripts::setCss(siteElementHiding), WebPage::SafeJsWorld);
+        }
+
+        /* Apply domain-specific element remove rules */
+        const QString siteElementRemove = manager->elementRemoveRulesForDomain(page->url());
+        if (!siteElementRemove.isEmpty()) {
+            page->runJavaScript(AdBlockScripts::removeRulesScript(siteElementRemove), WebPage::SafeJsWorld);
         }
     });
 }

@@ -132,6 +132,34 @@ QString AdBlockMatcher::elementHidingRulesForDomain(const QString &domain) const
     return rules;
 }
 
+QString AdBlockMatcher::elementRemoveRulesForDomain(const QString& domain) const
+{
+    QString rules;
+    int addedRulesCount = 0;
+    int count = m_elementRemoveRules.count();
+
+    for (int i = 0; i < count; ++i) {
+        const AdBlockRule* rule = m_elementRemoveRules.at(i);
+        if (!rule->matchDomain(domain)) {
+            continue;
+        }
+
+        addedRulesCount++;
+
+        QString ruleString = rule->cssSelector();
+        ruleString.replace(QL1S("'"), QL1S("\\'"));
+        ruleString.replace(QL1S("\n"), QL1S("\\n"));
+
+        rules.append(QL1C('\'') + ruleString + QL1C('\'') + QL1C(','));
+    }
+
+    if (addedRulesCount != 0) {
+        rules = rules.left(rules.size() - 1);
+    }
+
+    return rules;
+}
+
 void AdBlockMatcher::update()
 {
     clear();
@@ -163,6 +191,11 @@ void AdBlockMatcher::update()
             }
             else if (rule->isDocument()) {
                 m_documentRules.append(rule);
+            }
+            else if (rule->isRemoveRule()) {
+                if (rule->isDomainRestricted()) {
+                    m_elementRemoveRules.append(rule);
+                }
             }
             else if (rule->isElemhide()) {
                 m_elemhideRules.append(rule);
@@ -235,6 +268,7 @@ void AdBlockMatcher::clear()
     m_elementHidingRules.clear();
     m_documentRules.clear();
     m_elemhideRules.clear();
+    m_elementRemoveRules.clear();
     m_generichideRules.clear();
     qDeleteAll(m_createdRules);
     m_createdRules.clear();

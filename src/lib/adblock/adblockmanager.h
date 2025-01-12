@@ -66,6 +66,8 @@ public:
     QString elementHidingRules(const QUrl &url) const;
     QString elementHidingRulesForDomain(const QUrl &url) const;
 
+    QString elementRemoveRulesForDomain(const QUrl &url) const;
+
     AdBlockSubscription* subscriptionByName(const QString &name) const;
     QList<AdBlockSubscription*> subscriptions() const;
 

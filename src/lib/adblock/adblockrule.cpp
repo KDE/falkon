@@ -57,6 +57,8 @@
 #include <QtCore/private/qurl_p.h>
 #include <QtNetwork/private/qtldurl_p.h>
 
+QRegularExpression removeRuleCheck = QRegularExpression(QSL("\\s*remove\\s*:\\s*true\\s*;\\s*"));
+
 static QString getTopLevelDomain(const QUrl &url)
 {
     // QUrl::topLevelDomain() was removed in Qt6.
@@ -162,6 +164,11 @@ void AdBlockRule::setFilter(const QString &filter)
 {
     m_filter = filter;
     parseFilter();
+}
+
+bool AdBlockRule::isRemoveRule() const
+{
+    return m_type == RemoveRule;
 }
 
 bool AdBlockRule::isCssRule() const
@@ -427,6 +434,30 @@ void AdBlockRule::parseFilter()
         }
         m_matchString = parsedLine.mid(pos + 3);
         return;
+    }
+
+    /* Remove rule */
+    if (parsedLine.contains(QL1S("##"))) {
+        m_type = RemoveRule;
+
+        qsizetype beginRemoveRule = parsedLine.lastIndexOf(QL1S("{"));
+        qsizetype endRemoveRule = parsedLine.lastIndexOf(QL1S("}"));
+
+        if ((beginRemoveRule > 0) && (endRemoveRule > 0) && (beginRemoveRule < endRemoveRule)) {
+            qsizetype pos = parsedLine.indexOf(QL1C('#'));
+            // Domain restricted rule
+            if (!parsedLine.startsWith(QL1S("#"))) {
+                QString domains = parsedLine.left(pos);
+                parseDomains(domains, QL1C(','));
+            }
+
+            QString removeTest = parsedLine.sliced(beginRemoveRule + 1, (endRemoveRule - beginRemoveRule - 1));
+            auto result = removeRuleCheck.match(removeTest);
+            if (result.hasMatch()) {
+                m_matchString = parsedLine.sliced((pos + 2), (beginRemoveRule - (pos + 2)));
+                return;
+            }
+        }
     }
 
     // CSS Element hiding rule
