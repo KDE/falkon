@@ -53,6 +53,7 @@ public:
     bool processKeyRelease(Qz::ObjectName type, QObject* obj, QKeyEvent* event);
 
     bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame);
+    bool newWindowRequested(WebPage *page, QWebEngineNewWindowRequest &request);
 
     void emitWebPageCreated(WebPage* page);
     void emitWebPageDeleted(WebPage* page);

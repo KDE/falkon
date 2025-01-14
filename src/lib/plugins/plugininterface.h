@@ -63,8 +63,9 @@ public:
     virtual bool keyRelease(Qz::ObjectName type, QObject* obj, QKeyEvent* event) { Q_UNUSED(type) Q_UNUSED(obj) Q_UNUSED(event) return false; }
 
     virtual bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) { Q_UNUSED(page); Q_UNUSED(url); Q_UNUSED(type); Q_UNUSED(isMainFrame); return true; }
+    virtual bool newWindowRequested(WebPage *page, QWebEngineNewWindowRequest& request) { Q_UNUSED(page) Q_UNUSED(request) return true; }
 };
 
-Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.4")
+Q_DECLARE_INTERFACE(PluginInterface, "Falkon.Browser.PluginInterface/2.5")
 
 #endif // PLUGININTERFACE_H

@@ -62,6 +62,7 @@
 #include <QtWebEngineWidgetsVersion>
 
 #include <QWebEngineRegisterProtocolHandlerRequest>
+#include <QWebEngineNewWindowRequest>
 
 QString WebPage::s_lastUploadLocation = QDir::homePath();
 QUrl WebPage::s_lastUnsupportedUrl;
@@ -118,6 +119,7 @@ WebPage::WebPage(QObject* parent)
         // TODO: It should prompt user
         selection.select(selection.certificates().at(0));
     });
+    connect(this, &QWebEnginePage::newWindowRequested, this, &WebPage::onNewWindowRequested);
 }
 
 WebPage::~WebPage()
@@ -496,6 +498,73 @@ void WebPage::onCertificateError(QWebEngineCertificateError error)
         mutableError.rejectCertificate();
 }
 
+void WebPage::onNewWindowRequested(QWebEngineNewWindowRequest &request)
+{
+    if (!mApp->plugins()->newWindowRequested(this, request)) {
+        return;
+    }
+
+    if (!request.isUserInitiated() && qzSettings->blockAutomaticPopups) {
+        return;
+    }
+
+    auto *tView = qobject_cast<TabbedWebView*>(view());
+    BrowserWindow *window = tView ? tView->browserWindow() : mApp->getWindow();
+
+    auto createTab = [=](Qz::NewTabPositionFlags pos) {
+        int index = window->tabWidget()->addView(QUrl(), pos);
+        TabbedWebView* view = window->weView(index);
+        view->setPage(new WebPage);
+        if (tView) {
+            tView->webTab()->addChildTab(view->webTab());
+        }
+        // Workaround focus issue when creating tab
+        if (pos.testFlag(Qz::NT_SelectedTab)) {
+            QPointer<TabbedWebView> pview = view;
+            pview->setFocus();
+            QTimer::singleShot(100, this, [pview]() {
+                if (pview && pview->webTab()->isCurrentTab()) {
+                    pview->setFocus();
+                }
+            });
+        }
+        return view->page();
+    };
+
+    switch (request.destination()) {
+    case QWebEngineNewWindowRequest::InNewWindow: {
+        BrowserWindow *window = mApp->createWindow(Qz::BW_NewWindow);
+        auto *page = new WebPage;
+        window->setStartPage(page);
+        request.openIn(page);
+        break;
+    }
+
+    case QWebEngineNewWindowRequest::InNewDialog:
+        if (!qzSettings->openPopupsInTabs) {
+            auto *view = new PopupWebView;
+            view->setPage(new WebPage);
+            auto *popup = new PopupWindow(view);
+            popup->show();
+            window->addDeleteOnCloseWidget(popup);
+            request.openIn(view->page());
+            break;
+        }
+        // else fallthrough
+
+    case QWebEngineNewWindowRequest::InNewTab:
+        request.openIn(createTab(Qz::NT_CleanNotSelectedTab));
+        break;
+
+    case QWebEngineNewWindowRequest::InNewBackgroundTab:
+        request.openIn(createTab(Qz::NT_CleanNotSelectedTab));
+        break;
+
+    default:
+        break;
+    }
+}
+
 QStringList WebPage::chooseFiles(QWebEnginePage::FileSelectionMode mode, const QStringList &oldFiles, const QStringList &acceptedMimeTypes)
 {
     Q_UNUSED(acceptedMimeTypes);
@@ -713,61 +782,4 @@ void WebPage::javaScriptConsoleMessage(JavaScriptConsoleMessageLevel level, cons
     }
 
     std::cout << qPrintable(sourceID) << ":" << lineNumber << " " << qPrintable(message) << '\n';
-}
-
-QWebEnginePage* WebPage::createWindow(QWebEnginePage::WebWindowType type)
-{
-    auto *tView = qobject_cast<TabbedWebView*>(view());
-    BrowserWindow *window = tView ? tView->browserWindow() : mApp->getWindow();
-
-    auto createTab = [=](Qz::NewTabPositionFlags pos) {
-        int index = window->tabWidget()->addView(QUrl(), pos);
-        TabbedWebView* view = window->weView(index);
-        view->setPage(new WebPage);
-        if (tView) {
-            tView->webTab()->addChildTab(view->webTab());
-        }
-        // Workaround focus issue when creating tab
-        if (pos.testFlag(Qz::NT_SelectedTab)) {
-            QPointer<TabbedWebView> pview = view;
-            pview->setFocus();
-            QTimer::singleShot(100, this, [pview]() {
-                if (pview && pview->webTab()->isCurrentTab()) {
-                    pview->setFocus();
-                }
-            });
-        }
-        return view->page();
-    };
-
-    switch (type) {
-    case QWebEnginePage::WebBrowserWindow: {
-        BrowserWindow *window = mApp->createWindow(Qz::BW_NewWindow);
-        auto *page = new WebPage;
-        window->setStartPage(page);
-        return page;
-    }
-
-    case QWebEnginePage::WebDialog:
-        if (!qzSettings->openPopupsInTabs) {
-            auto* view = new PopupWebView;
-            view->setPage(new WebPage);
-            auto* popup = new PopupWindow(view);
-            popup->show();
-            window->addDeleteOnCloseWidget(popup);
-            return view->page();
-        }
-        // else fallthrough
-
-    case QWebEnginePage::WebBrowserTab:
-        return createTab(Qz::NT_CleanSelectedTab);
-
-    case QWebEnginePage::WebBrowserBackgroundTab:
-        return createTab(Qz::NT_CleanNotSelectedTab);
-
-    default:
-        break;
-    }
-
-    return nullptr;
 }

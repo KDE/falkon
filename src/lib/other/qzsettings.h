@@ -63,6 +63,7 @@ public:
     Qz::NewTabPositionFlags newTabPosition;
     bool tabsOnTop;
     bool openPopupsInTabs;
+    bool blockAutomaticPopups;
     bool alwaysSwitchTabsWithWheel;
 };
 

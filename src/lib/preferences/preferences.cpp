@@ -238,6 +238,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->openNewTabAfterActive->setChecked(settings.value(QSL("newTabAfterActive"), true).toBool());
     ui->openNewEmptyTabAfterActive->setChecked(settings.value(QSL("newEmptyTabAfterActive"), false).toBool());
     ui->openPopupsInTabs->setChecked(settings.value(QSL("OpenPopupsInTabs"), false).toBool());
+    ui->blockAutomaticPopups->setChecked(settings.value(QSL("BlockAutomaticPopups"), false).toBool());
     ui->alwaysSwitchTabsWithWheel->setChecked(settings.value(QSL("AlwaysSwitchTabsWithWheel"), false).toBool());
     ui->switchToNewTabs->setChecked(settings.value(QSL("OpenNewTabsSelected"), false).toBool());
     ui->dontCloseOnLastTab->setChecked(settings.value(QSL("dontCloseWithOneTab"), false).toBool());
@@ -956,6 +957,7 @@ void Preferences::saveSettings()
     settings.setValue(QSL("newTabAfterActive"), ui->openNewTabAfterActive->isChecked());
     settings.setValue(QSL("newEmptyTabAfterActive"), ui->openNewEmptyTabAfterActive->isChecked());
     settings.setValue(QSL("OpenPopupsInTabs"), ui->openPopupsInTabs->isChecked());
+    settings.setValue(QSL("BlockAutomaticPopups"), ui->blockAutomaticPopups->isChecked());
     settings.setValue(QSL("AlwaysSwitchTabsWithWheel"), ui->alwaysSwitchTabsWithWheel->isChecked());
     settings.setValue(QSL("OpenNewTabsSelected"), ui->switchToNewTabs->isChecked());
     settings.setValue(QSL("dontCloseWithOneTab"), ui->dontCloseOnLastTab->isChecked());

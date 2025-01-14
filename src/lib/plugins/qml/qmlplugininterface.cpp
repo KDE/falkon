@@ -36,6 +36,7 @@
 #include <QQuickWidget>
 #include <QDialog>
 #include <QVBoxLayout>
+#include <QWebEngineNewWindowRequest>
 
 QmlPluginInterface::QmlPluginInterface()
     : m_qmlReusableTab(new QmlTab())
@@ -237,6 +238,18 @@ bool QmlPluginInterface::acceptNavigationRequest(WebPage *page, const QUrl &url,
     return m_acceptNavigationRequest.call(args).toBool();
 }
 
+bool QmlPluginInterface::newWindowRequested(WebPage *page, QWebEngineNewWindowRequest &request)
+{
+    if (!m_newWindowRequested.isCallable()) {
+        return true;
+    }
+    m_qmlReusableTab->setWebPage(page);
+    QJSValueList args;
+    args.append(m_engine->newQObject(m_qmlReusableTab));
+    args.append(m_engine->newQObject(&request));
+    return m_newWindowRequested.call(args).toBool();
+}
+
 QJSValue QmlPluginInterface::readInit() const
 {
     return m_init;
@@ -382,6 +395,16 @@ QJSValue QmlPluginInterface::readAcceptNavigationRequest() const
 void QmlPluginInterface::setAcceptNavigationRequest(const QJSValue &acceptNavigationRequest)
 {
     m_acceptNavigationRequest = acceptNavigationRequest;
+}
+
+QJSValue QmlPluginInterface::readNewWindowRequested() const
+{
+    return m_newWindowRequested;
+}
+
+void QmlPluginInterface::setNewWindowRequested(const QJSValue &request)
+{
+    m_newWindowRequested = request;
 }
 
 QQmlListProperty<QObject> QmlPluginInterface::childItems()

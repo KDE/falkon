@@ -95,12 +95,12 @@ private Q_SLOTS:
     void featurePermissionRequested(const QUrl &origin, const QWebEnginePage::Feature &feature);
     void renderProcessTerminated(QWebEnginePage::RenderProcessTerminationStatus terminationStatus, int exitCode);
     void onCertificateError(QWebEngineCertificateError error);
+    void onNewWindowRequested(QWebEngineNewWindowRequest &request);
 
 private:
     bool acceptNavigationRequest(const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;
 
     QStringList chooseFiles(FileSelectionMode mode, const QStringList &oldFiles, const QStringList &acceptedMimeTypes) override;
-    QWebEnginePage* createWindow(QWebEnginePage::WebWindowType type) override;
 
     void handleUnknownProtocol(const QUrl &url);
     void desktopServicesOpen(const QUrl &url);

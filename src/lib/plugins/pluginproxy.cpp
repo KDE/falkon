@@ -216,6 +216,19 @@ bool PluginProxy::acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEn
     return accepted;
 }
 
+bool PluginProxy::newWindowRequested(WebPage *page, QWebEngineNewWindowRequest& request)
+{
+    bool accepted = true;
+
+    for (PluginInterface *iPlugin : std::as_const(m_loadedPlugins)) {
+        if (!iPlugin->newWindowRequested(page, request)) {
+            accepted = false;
+        }
+    }
+
+    return accepted;
+}
+
 void PluginProxy::emitWebPageCreated(WebPage* page)
 {
     Q_EMIT webPageCreated(page);

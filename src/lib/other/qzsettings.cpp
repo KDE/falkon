@@ -59,6 +59,7 @@ void QzSettings::loadSettings()
     newTabPosition = settings.value(QSL("OpenNewTabsSelected"), false).toBool() ? Qz::NT_CleanSelectedTab : Qz::NT_CleanNotSelectedTab;
     tabsOnTop = settings.value(QSL("TabsOnTop"), true).toBool();
     openPopupsInTabs = settings.value(QSL("OpenPopupsInTabs"), false).toBool();
+    blockAutomaticPopups = settings.value(QSL("BlockAutomaticPopups"), false).toBool();
     alwaysSwitchTabsWithWheel = settings.value(QSL("AlwaysSwitchTabsWithWheel"), false).toBool();
     settings.endGroup();
 }
