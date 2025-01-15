@@ -52,6 +52,7 @@
 #include <QString>
 #include <QWebEnginePage>
 #include <QWebEngineUrlRequestInfo>
+#include <QWebEngineNewWindowRequest>
 
 /* TODO Qt6 Replace with PUBLIC API */
 #include <QtCore/private/qurl_p.h>
@@ -289,6 +290,33 @@ bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QS
     return matched;
 }
 
+bool AdBlockRule::networkMatch(const QWebEngineNewWindowRequest &request, const QString &domain, const QString &encodedUrl) const
+{
+    if (m_type == CssRule || !m_isEnabled || m_isInternalDisabled) {
+        return false;
+    }
+
+    bool matched = stringMatch(domain, encodedUrl);
+
+    if (matched) {
+        // Check domain restrictions
+        if (hasOption(DomainRestrictedOption) && !matchDomain(request.requestedUrl().host())) {
+            return false;
+        }
+
+        // Check third-party restriction
+        if (hasOption(ThirdPartyOption)) {
+            return false;
+        }
+
+        // Check type restrictions
+        if (((m_exceptions | m_options) & TypeOptions) && !matchType(request))
+            return false;
+    }
+
+    return matched;
+}
+
 bool AdBlockRule::matchDomain(const QString &domain) const
 {
     if (!m_isEnabled) {
@@ -396,6 +424,16 @@ bool AdBlockRule::matchType(const QWebEngineUrlRequestInfo &request) const
         type = OtherOption;
         break;
     }
+    if (!m_exceptions)
+        return m_options.testFlag(type);
+    return !m_exceptions.testFlag(type);
+}
+
+bool AdBlockRule::matchType(const QWebEngineNewWindowRequest &request) const
+{
+    Q_UNUSED(request)
+
+    RuleOption type = PopupOption;
     if (!m_exceptions)
         return m_options.testFlag(type);
     return !m_exceptions.testFlag(type);
@@ -574,7 +612,6 @@ void AdBlockRule::parseFilter()
                 ++handledOptions;
             }
             else if (option == QL1S("popup")) {
-                // doesn't do anything yet
                 setOption(PopupOption);
                 ++handledOptions;
             }

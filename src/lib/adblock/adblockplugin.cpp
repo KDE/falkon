@@ -32,6 +32,7 @@
 #include "desktopfile.h"
 
 #include <QWebEngineProfile>
+#include <QWebEngineNewWindowRequest>
 
 AdBlockPlugin::AdBlockPlugin()
     : QObject()
@@ -138,5 +139,21 @@ bool AdBlockPlugin::acceptNavigationRequest(WebPage *page, const QUrl &url, QWeb
     if (url.scheme() == QL1S("abp") && AdBlockManager::instance()->addSubscriptionFromUrl(url)) {
         return false;
     }
+    return true;
+}
+
+bool AdBlockPlugin::newWindowRequested(WebPage* page, QWebEngineNewWindowRequest &request)
+{
+    Q_UNUSED(page)
+
+    QString ruleFilter;
+    QString ruleSubscription;
+    QUrl rewriteUrl;
+    AdBlockManager *manager = AdBlockManager::instance();
+
+    if (manager->block(request)) {
+        return false;
+    }
+
     return true;
 }

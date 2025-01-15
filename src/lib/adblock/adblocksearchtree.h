@@ -24,6 +24,7 @@
 #include "qzcommon.h"
 
 class QWebEngineUrlRequestInfo;
+class QWebEngineNewWindowRequest;
 
 class AdBlockRule;
 
@@ -37,6 +38,7 @@ public:
 
     bool add(const AdBlockRule* rule);
     const AdBlockRule* find(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &urlString) const;
+    const AdBlockRule* find(const QWebEngineNewWindowRequest &request, const QString &domain, const QString &urlString) const;
 
 private:
     struct Node {
@@ -48,6 +50,8 @@ private:
     };
 
     const AdBlockRule* prefixSearch(const QWebEngineUrlRequestInfo &request, const QString &domain,
+                                    const QString &urlString, const QChar* string, int len) const;
+    const AdBlockRule* prefixSearch(const QWebEngineNewWindowRequest &request, const QString &domain,
                                     const QString &urlString, const QChar* string, int len) const;
 
     void deleteNode(Node* node);

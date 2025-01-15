@@ -44,6 +44,7 @@ private:
     void mainWindowCreated(BrowserWindow *window);
     void mainWindowDeleted(BrowserWindow *window);
     bool acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;
+    bool newWindowRequested(WebPage *page, QWebEngineNewWindowRequest &request) override;
 
     QHash<BrowserWindow*, AdBlockIcon*> m_icons;
     AdblockResourceSchemeHandler *m_resourceschemeHandler = nullptr;
