@@ -90,32 +90,32 @@ msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Add new subscription to AdBlock:"
 msgstr "Προσθήκη νέας συνδρομής στο AdBlock:"
 
-#: lib/adblock/adblockdialog.cpp:49
+#: lib/adblock/adblockdialog.cpp:50
 msgctxt "AdBlockDialog|"
 msgid "Add Rule"
 msgstr "Προσθήκη κανόνα"
 
-#: lib/adblock/adblockdialog.cpp:50
+#: lib/adblock/adblockdialog.cpp:51
 msgctxt "AdBlockDialog|"
 msgid "Remove Rule"
 msgstr "Αφαίρεση κανόνα"
 
-#: lib/adblock/adblockdialog.cpp:52
+#: lib/adblock/adblockdialog.cpp:53
 msgctxt "AdBlockDialog|"
 msgid "Add Subscription"
 msgstr "Προσθήκη συνδρομής"
 
-#: lib/adblock/adblockdialog.cpp:53
+#: lib/adblock/adblockdialog.cpp:54
 msgctxt "AdBlockDialog|"
 msgid "Remove Subscription"
 msgstr "Αφαίρεση συνδρομής"
 
-#: lib/adblock/adblockdialog.cpp:54
+#: lib/adblock/adblockdialog.cpp:55
 msgctxt "AdBlockDialog|"
 msgid "Update Subscriptions"
 msgstr "Ενημέρωση συνδρομών"
 
-#: lib/adblock/adblockdialog.cpp:56
+#: lib/adblock/adblockdialog.cpp:57
 msgctxt "AdBlockDialog|"
 msgid "Learn about writing rules..."
 msgstr "Μάθετε για την εγγραφή κανόνων..."
@@ -186,75 +186,69 @@ msgctxt "AdBlockIcon|"
 msgid "Disable only on this page"
 msgstr "Απενεργοποίηση σε αυτή τη σελίδα μόνο"
 
-#: lib/adblock/adblockmanager.cpp:184
+#: lib/adblock/adblockmanager.cpp:185
 #, qt-format
 msgctxt "AdBlockManager|"
 msgid "Do you want to add <b>%1</b> subscription?"
 msgstr "Θέλετε να προσθέσετε τη συνδρομή <b>%1</b>;"
 
-#: lib/adblock/adblockmanager.cpp:186
+#: lib/adblock/adblockmanager.cpp:187
 msgctxt "AdBlockManager|"
 msgid "AdBlock Subscription"
 msgstr "Συνδρομή AdBlock"
 
-#: lib/adblock/adblockmanager.cpp:317
+#: lib/adblock/adblockmanager.cpp:318
 msgctxt "AdBlockManager|"
 msgid "EasyList"
 msgstr "EasyList"
 
-#: lib/adblock/adblockmanager.cpp:322
+#: lib/adblock/adblockmanager.cpp:323
 msgctxt "AdBlockManager|"
 msgid "NoCoin List"
 msgstr "Λίστα NoCoin"
 
-#: lib/adblock/adblocksubscription.cpp:173
+#: lib/adblock/adblocksubscription.cpp:176
 msgctxt "AdBlockSubscription|"
 msgid "Cannot load subscription!"
 msgstr "Αδυναμία φόρτωσης συνδρομής!"
 
-#: lib/adblock/adblocksubscription.cpp:286
+#: lib/adblock/adblocksubscription.cpp:289
 msgctxt "AdBlockCustomList|"
 msgid "Custom Rules"
 msgstr "Προσαρμοσμένοι κανόνες"
 
-#: lib/adblock/adblocktreewidget.cpp:80
+#: lib/adblock/adblocktreemodel.cpp:108
+#, qt-format
+msgctxt "AdBlockTreeModel|"
+msgid "%1 - %2"
+msgstr ""
+
+#: lib/adblock/adblocktreewidget.cpp:88
 msgctxt "AdBlockTreeWidget|"
 msgid "Add Rule"
 msgstr "Προσθήκη κανόνα"
 
-#: lib/adblock/adblocktreewidget.cpp:82
+#: lib/adblock/adblocktreewidget.cpp:90
 msgctxt "AdBlockTreeWidget|"
 msgid "Remove Rule"
 msgstr "Αφαίρεση κανόνα"
 
-#: lib/adblock/adblocktreewidget.cpp:141
+#: lib/adblock/adblocktreewidget.cpp:110
 msgctxt "AdBlockTreeWidget|"
 msgid "Add Custom Rule"
 msgstr "Προσθήκη προσαρμοσμένου κανόνα"
 
-#: lib/adblock/adblocktreewidget.cpp:141
+#: lib/adblock/adblocktreewidget.cpp:110
 msgctxt "AdBlockTreeWidget|"
 msgid "Please write your rule here:"
 msgstr "Παρακαλώ γράψτε τον κανόνα σας εδώ:"
 
-#: lib/adblock/adblocktreewidget.cpp:179
-#, qt-format
-msgctxt "AdBlockTreeWidget|"
-msgid "%1 (recently updated)"
-msgstr "%1 (πρόσφατα ενημερωμένο)"
-
-#: lib/adblock/adblocktreewidget.cpp:188
-#, qt-format
-msgctxt "AdBlockTreeWidget|"
-msgid "%1 (Error: %2)"
-msgstr "%1 (Σφάλμα: %2)"
-
-#: lib/adblock/adblockurlinterceptor.cpp:41
+#: lib/adblock/adblockurlinterceptor.cpp:42
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked content"
 msgstr "Φραγμένο περιεχόμενο"
 
-#: lib/adblock/adblockurlinterceptor.cpp:42
+#: lib/adblock/adblockurlinterceptor.cpp:43
 #, qt-format
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
@@ -1150,22 +1144,22 @@ msgctxt "BookmarksManager|"
 msgid "Description"
 msgstr "Περιγραφή"
 
-#: lib/bookmarks/bookmarksmenu.cpp:166
+#: lib/bookmarks/bookmarksmenu.cpp:172
 msgctxt "BookmarksMenu|"
 msgid "&Bookmarks"
 msgstr "&Σελιδοδείκτες"
 
-#: lib/bookmarks/bookmarksmenu.cpp:168
+#: lib/bookmarks/bookmarksmenu.cpp:174
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &This Page"
 msgstr "Προσθήκη &σελίδας στους σελιδοδείκτες"
 
-#: lib/bookmarks/bookmarksmenu.cpp:169
+#: lib/bookmarks/bookmarksmenu.cpp:175
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &All Tabs"
 msgstr "Όλες οι καρ&τέλες σε σελιδοδείκτη"
 
-#: lib/bookmarks/bookmarksmenu.cpp:170
+#: lib/bookmarks/bookmarksmenu.cpp:176
 msgctxt "BookmarksMenu|"
 msgid "Organize &Bookmarks"
 msgstr "&Τακτοποίηση σελιδοδεικτών"
@@ -1225,63 +1219,63 @@ msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
 msgstr "Εισαγάγετε όνομα φακέλου:"
 
-#: lib/bookmarks/bookmarkstools.cpp:76
+#: lib/bookmarks/bookmarkstools.cpp:77
 #, qt-format
 msgctxt "BookmarksFoldersMenu|"
 msgid "Choose %1"
 msgstr "Επιλέξτε %1"
 
-#: lib/bookmarks/bookmarkstools.cpp:153
+#: lib/bookmarks/bookmarkstools.cpp:154
 msgctxt "Bookmarks|"
 msgid "Choose name and location of this bookmark."
 msgstr "Επιλογή ονόματος και τοποθεσίας του σελιδοδείκτη."
 
-#: lib/bookmarks/bookmarkstools.cpp:157
+#: lib/bookmarks/bookmarkstools.cpp:158
 msgctxt "Bookmarks|"
 msgid "Add New Bookmark"
 msgstr "Προσθήκη νέου σελιδοδείκτη"
 
-#: lib/bookmarks/bookmarkstools.cpp:197
+#: lib/bookmarks/bookmarkstools.cpp:198
 msgctxt "Bookmarks|"
 msgid "Choose folder for bookmarks:"
 msgstr "Επιλογή φακέλου για σελιδοδείκτες:"
 
-#: lib/bookmarks/bookmarkstools.cpp:198
+#: lib/bookmarks/bookmarkstools.cpp:199
 msgctxt "Bookmarks|"
 msgid "Bookmark All Tabs"
 msgstr "Όλες οι καρτέλες σε σελιδοδείκτη"
 
-#: lib/bookmarks/bookmarkstools.cpp:239
+#: lib/bookmarks/bookmarkstools.cpp:240
 msgctxt "Bookmarks|"
 msgid "Title:"
 msgstr "Τίτλος:"
 
-#: lib/bookmarks/bookmarkstools.cpp:242
+#: lib/bookmarks/bookmarkstools.cpp:243
 msgctxt "Bookmarks|"
 msgid "Address:"
 msgstr "Διεύθυνση:"
 
-#: lib/bookmarks/bookmarkstools.cpp:244
+#: lib/bookmarks/bookmarkstools.cpp:245
 msgctxt "Bookmarks|"
 msgid "Keyword:"
 msgstr "Λέξη-κλειδί:"
 
-#: lib/bookmarks/bookmarkstools.cpp:247
+#: lib/bookmarks/bookmarkstools.cpp:248
 msgctxt "Bookmarks|"
 msgid "Description:"
 msgstr "Περιγραφή:"
 
-#: lib/bookmarks/bookmarkstools.cpp:252
+#: lib/bookmarks/bookmarkstools.cpp:253
 msgctxt "Bookmarks|"
 msgid "Edit Bookmark"
 msgstr "Επεξεργασία σελιδοδείκτη"
 
-#: lib/bookmarks/bookmarkstools.cpp:344
+#: lib/bookmarks/bookmarkstools.cpp:345
 msgctxt "Bookmarks|"
 msgid "Confirmation"
 msgstr "Επιβεβαίωση"
 
-#: lib/bookmarks/bookmarkstools.cpp:345
+#: lib/bookmarks/bookmarkstools.cpp:346
 #, qt-format
 msgctxt "Bookmarks|"
 msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
@@ -1289,7 +1283,7 @@ msgstr ""
 "Επιθυμείτε σίγουρα το άνοιγμα όλων των σελιδοδεικτών του φακέλου «%1» σε "
 "καρτέλες;"
 
-#: lib/bookmarks/bookmarkstools.cpp:440
+#: lib/bookmarks/bookmarkstools.cpp:450
 msgctxt "Bookmarks|"
 msgid "Empty"
 msgstr "Άδειο"
@@ -1962,63 +1956,63 @@ msgctxt "HistoryManager|"
 msgid "Clear All History"
 msgstr "Εκκαθάριση όλου του ιστορικού"
 
-#: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
-#: lib/history/historymenu.cpp:186
+#: lib/history/historymenu.cpp:146 lib/history/historymenu.cpp:168
+#: lib/history/historymenu.cpp:197
 msgctxt "HistoryMenu|"
 msgid "Empty"
 msgstr "Άδειο"
 
-#: lib/history/historymenu.cpp:161
+#: lib/history/historymenu.cpp:172
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Tabs"
 msgstr "Επαναφορά όλων των κλεισμένων καρτελών"
 
-#: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
+#: lib/history/historymenu.cpp:173 lib/history/historymenu.cpp:201
 msgctxt "HistoryMenu|"
 msgid "Clear list"
 msgstr "Εκκαθάριση λίστας"
 
-#: lib/history/historymenu.cpp:189
+#: lib/history/historymenu.cpp:200
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Windows"
 msgstr "Επαναφορά όλων των κλειστών παραθύρων"
 
-#: lib/history/historymenu.cpp:236
+#: lib/history/historymenu.cpp:252
 msgctxt "HistoryMenu|"
 msgid "Hi&story"
 msgstr "&Ιστορικό"
 
-#: lib/history/historymenu.cpp:238
+#: lib/history/historymenu.cpp:254
 msgctxt "HistoryMenu|"
 msgid "&Back"
 msgstr "&Πίσω"
 
-#: lib/history/historymenu.cpp:241
+#: lib/history/historymenu.cpp:257
 msgctxt "HistoryMenu|"
 msgid "&Forward"
 msgstr "&Μπροστά"
 
-#: lib/history/historymenu.cpp:244
+#: lib/history/historymenu.cpp:260
 msgctxt "HistoryMenu|"
 msgid "&Home"
 msgstr "&Αρχική σελίδα"
 
-#: lib/history/historymenu.cpp:247
+#: lib/history/historymenu.cpp:263
 msgctxt "HistoryMenu|"
 msgid "Show &All History"
 msgstr "Εμφάνιση &ολόκληρου του ιστορικού"
 
-#: lib/history/historymenu.cpp:255
+#: lib/history/historymenu.cpp:271
 msgctxt "HistoryMenu|"
 msgid "Most Visited"
 msgstr "Επισκεφτήκατε περισσότερο"
 
-#: lib/history/historymenu.cpp:258
+#: lib/history/historymenu.cpp:275
 msgctxt "HistoryMenu|"
 msgid "Closed Tabs"
 msgstr "Κλεισμένες καρτέλες"
 
-#: lib/history/historymenu.cpp:261
+#: lib/history/historymenu.cpp:278
 msgctxt "HistoryMenu|"
 msgid "Closed Windows"
 msgstr "Κλειστά παράθυρα"
@@ -2100,97 +2094,97 @@ msgctxt "LocationBar|"
 msgid "Enter address"
 msgstr "Εισαγάγετε τη διεύθυνση"
 
-#: lib/navigation/navigationbar.cpp:49
+#: lib/navigation/navigationbar.cpp:50
 msgctxt "NavigationBar|"
 msgid "Empty Page"
 msgstr "Άδεια σελίδα"
 
-#: lib/navigation/navigationbar.cpp:77
+#: lib/navigation/navigationbar.cpp:78
 msgctxt "NavigationBar|"
 msgid "Back"
 msgstr "Πίσω"
 
-#: lib/navigation/navigationbar.cpp:87
+#: lib/navigation/navigationbar.cpp:88
 msgctxt "NavigationBar|"
 msgid "Forward"
 msgstr "Μπροστά"
 
-#: lib/navigation/navigationbar.cpp:107
+#: lib/navigation/navigationbar.cpp:108
 msgctxt "NavigationBar|"
 msgid "Home"
 msgstr "Αρχική σελίδα"
 
-#: lib/navigation/navigationbar.cpp:115
+#: lib/navigation/navigationbar.cpp:116
 msgctxt "NavigationBar|"
 msgid "New Tab"
 msgstr "Νέα καρτέλα"
 
-#: lib/navigation/navigationbar.cpp:135
+#: lib/navigation/navigationbar.cpp:136
 msgctxt "NavigationBar|"
 msgid "Tools"
 msgstr "Εργαλεία"
 
-#: lib/navigation/navigationbar.cpp:148
+#: lib/navigation/navigationbar.cpp:149
 msgctxt "NavigationBar|"
 msgid "Main Menu"
 msgstr "Αρχικό μενού"
 
-#: lib/navigation/navigationbar.cpp:165
+#: lib/navigation/navigationbar.cpp:166
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen"
 msgstr "Έξοδος πλήρους οθόνης"
 
-#: lib/navigation/navigationbar.cpp:191
+#: lib/navigation/navigationbar.cpp:192
 msgctxt "NavigationBar|"
 msgid "Back and Forward buttons"
 msgstr "Κουμπιά Πίσω και Μπροστά"
 
-#: lib/navigation/navigationbar.cpp:192
+#: lib/navigation/navigationbar.cpp:193
 msgctxt "NavigationBar|"
 msgid "Reload button"
 msgstr "Κουμπί επαναφόρτωσης"
 
-#: lib/navigation/navigationbar.cpp:193
+#: lib/navigation/navigationbar.cpp:194
 msgctxt "NavigationBar|"
 msgid "Home button"
 msgstr "Κουμπί αρχικής σελίδας"
 
-#: lib/navigation/navigationbar.cpp:194
+#: lib/navigation/navigationbar.cpp:195
 msgctxt "NavigationBar|"
 msgid "Add tab button"
 msgstr "Κουμπί προσθήκης καρτέλας"
 
-#: lib/navigation/navigationbar.cpp:195
+#: lib/navigation/navigationbar.cpp:196
 msgctxt "NavigationBar|"
 msgid "Address and Search bar"
 msgstr "Γραμμή διευθύνσεων και αναζήτησης"
 
-#: lib/navigation/navigationbar.cpp:196
+#: lib/navigation/navigationbar.cpp:197
 msgctxt "NavigationBar|"
 msgid "Tools button"
 msgstr "Κουμπί εργαλείων"
 
-#: lib/navigation/navigationbar.cpp:197
+#: lib/navigation/navigationbar.cpp:198
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen button"
 msgstr "Κουμπί εξόδου πλήρους οθόνης"
 
-#: lib/navigation/navigationbar.cpp:395 lib/navigation/navigationbar.cpp:429
+#: lib/navigation/navigationbar.cpp:399 lib/navigation/navigationbar.cpp:438
 msgctxt "NavigationBar|"
 msgid "Clear history"
 msgstr "Εκκαθάριση ιστορικού"
 
-#: lib/navigation/navigationbar.cpp:436
+#: lib/navigation/navigationbar.cpp:447
 msgctxt "NavigationBar|"
 msgid "Toolbars"
 msgstr "Εργαλειοθήκες"
 
-#: lib/navigation/navigationbar.cpp:437
+#: lib/navigation/navigationbar.cpp:448
 msgctxt "NavigationBar|"
 msgid "Sidebar"
 msgstr "Πλευρική στήλη"
 
-#: lib/navigation/navigationbar.cpp:452 lib/navigation/navigationbar.cpp:466
+#: lib/navigation/navigationbar.cpp:463 lib/navigation/navigationbar.cpp:477
 msgctxt "NavigationBar|"
 msgid "Configure Toolbar"
 msgstr "Διαμόρφωση της εργαλειοθήκης"
@@ -4057,7 +4051,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Θέλετε πράγματι να διαγράψετε τη συνεδρία '%1;"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:656
+#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:657
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Προεπιλογή"
@@ -4067,93 +4061,93 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Ορισμός προεπιλογής"
 
-#: lib/preferences/preferences.cpp:313
+#: lib/preferences/preferences.cpp:314
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Αυτόματα"
 
-#: lib/preferences/preferences.cpp:315
+#: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Light"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:316
+#: lib/preferences/preferences.cpp:317
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:326
+#: lib/preferences/preferences.cpp:327
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:599
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Επιλογή τοποθεσίας εκτελέσιμου..."
 
-#: lib/preferences/preferences.cpp:642
+#: lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Ειδοποίηση OSD"
 
-#: lib/preferences/preferences.cpp:643
+#: lib/preferences/preferences.cpp:644
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Μετακινήστε το στην οθόνη για να το τοποθετήσετε όπου θέλετε."
 
-#: lib/preferences/preferences.cpp:692
+#: lib/preferences/preferences.cpp:693
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Επιλογή τοποθεσίας λήψεων..."
 
-#: lib/preferences/preferences.cpp:706
+#: lib/preferences/preferences.cpp:707
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Επιλογή τοποθεσίας stylesheet..."
 
-#: lib/preferences/preferences.cpp:717
+#: lib/preferences/preferences.cpp:718
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Διαγράφηκε"
 
-#: lib/preferences/preferences.cpp:819
+#: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Επιλογή διαδρομής μνήμης cache..."
 
-#: lib/preferences/preferences.cpp:850
+#: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Νέο προφίλ"
 
-#: lib/preferences/preferences.cpp:850
+#: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Εισάγετε την ονομασία του νέου προφίλ:"
 
-#: lib/preferences/preferences.cpp:860 lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:861 lib/preferences/preferences.cpp:866
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Σφάλμα!"
 
-#: lib/preferences/preferences.cpp:860
+#: lib/preferences/preferences.cpp:861
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Αυτό το προφίλ υπάρχει ήδη!"
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:866
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Αδυναμία δημιουργίας καταλόγου προφίλ!"
 
-#: lib/preferences/preferences.cpp:876
+#: lib/preferences/preferences.cpp:877
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Επιβεβαίωση"
 
-#: lib/preferences/preferences.cpp:877
+#: lib/preferences/preferences.cpp:878
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4163,12 +4157,12 @@ msgstr ""
 "Επιθυμείτε σίγουρα την μόνιμη διαγραφή του προφίλ «%1»; Αυτή η ενέργεια "
 "είναι μη αναστρέψιμη!"
 
-#: lib/preferences/preferences.cpp:892 lib/preferences/preferences.ui:241
+#: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Σημείωση: Δεν μπορείτε να διαγράψετε το ενεργό προφίλ."
 
-#: lib/preferences/preferences.cpp:1167
+#: lib/preferences/preferences.cpp:1169
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "Επιλογή χρώματος"
@@ -4178,7 +4172,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2066
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2073
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Γενικά"
@@ -4416,86 +4410,91 @@ msgstr "Άνοιγμα των αναδυόμενων παραθύρων σε κ�
 
 #: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
+msgid "Block automatic popups"
+msgstr ""
+
+#: lib/preferences/preferences.ui:663
+msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Πάντα να γίνετε η εναλλαγή μεταξύ καρτελών με τη ροδέλα του ποντικιού"
 
-#: lib/preferences/preferences.ui:663
+#: lib/preferences/preferences.ui:670
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Αυτόματη μετάβαση στη νέα ανοιγμένη καρτέλα"
 
-#: lib/preferences/preferences.ui:670
+#: lib/preferences/preferences.ui:677
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr ""
 "Να μη γίνεται κλείσιμο παραθύρου κατά το κλείσιμο της τελευταίας καρτέλας"
 
-#: lib/preferences/preferences.ui:677
+#: lib/preferences/preferences.ui:684
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Ερώτηση στο κλείσιμο πολλαπλών καρτελών"
 
-#: lib/preferences/preferences.ui:684
+#: lib/preferences/preferences.ui:691
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Εμφάνιση κουμπιού Κλεισμένων καρτέλων"
 
-#: lib/preferences/preferences.ui:693
+#: lib/preferences/preferences.ui:700
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Εμφάνιση πλήκτρων κλεισίματος σε ανενεργές καρτέλες:"
 
-#: lib/preferences/preferences.ui:701
+#: lib/preferences/preferences.ui:708
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Αυτόματο"
 
-#: lib/preferences/preferences.ui:706
+#: lib/preferences/preferences.ui:713
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Πάντα"
 
-#: lib/preferences/preferences.ui:711
+#: lib/preferences/preferences.ui:718
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Ποτέ"
 
-#: lib/preferences/preferences.ui:751
+#: lib/preferences/preferences.ui:758
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Συμπεριφορά μπάρας διευθύνσεων"
 
-#: lib/preferences/preferences.ui:759
+#: lib/preferences/preferences.ui:766
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Προτάσεις όταν πληκτρολογείτε στην μπάρα διευθύνσεων:"
 
-#: lib/preferences/preferences.ui:773
+#: lib/preferences/preferences.ui:780
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Ιστορικό και Σελιδοδείκτες"
 
-#: lib/preferences/preferences.ui:778
+#: lib/preferences/preferences.ui:785
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Ιστορικό"
 
-#: lib/preferences/preferences.ui:783
+#: lib/preferences/preferences.ui:790
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Σελιδοδείκτες"
 
-#: lib/preferences/preferences.ui:788
+#: lib/preferences/preferences.ui:795
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Τίποτα"
 
-#: lib/preferences/preferences.ui:814
+#: lib/preferences/preferences.ui:821
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Ενεργοποίηση εμβόλιμων προτάσεων"
 
-#: lib/preferences/preferences.ui:821
+#: lib/preferences/preferences.ui:828
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4503,168 +4502,168 @@ msgstr ""
 "Πατήστε \"Shift\" για να μην αλλάξετε την καρτέλα αλλά να φορτώσετε τον "
 "σύνδεσμο στην τρέχουσα καρτέλα"
 
-#: lib/preferences/preferences.ui:824
+#: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr ""
 "Να προτείνεται η αλλαγή καρτέλας αν ο ολοκληρωμένος σύνδεσμος έχει ήδη "
 "φορτωθεί"
 
-#: lib/preferences/preferences.ui:831
+#: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Να γίνεται πάντα εμφάνιση του εικονιδίου μετάβασης"
 
-#: lib/preferences/preferences.ui:838
+#: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Εμφάνιση ετικέτας μεγέθυνσης"
 
-#: lib/preferences/preferences.ui:845
+#: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr ""
 "Επιλογή ολόκληρου του κειμένου κάνοντας διπλό κλικ στην μπάρα διευθύνσεων"
 
-#: lib/preferences/preferences.ui:852
+#: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Επιλογή ολόκληρου του κειμένου κάνοντας κλικ στην μπάρα διευθύνσεων"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Ενεργοποίηση της αυτόματης αναζήτησης από την γραμμή διευθύνσεων"
 
-#: lib/preferences/preferences.ui:866
+#: lib/preferences/preferences.ui:873
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Αναζήτηση με προεπιλεγμένη μηχανή"
 
-#: lib/preferences/preferences.ui:873
+#: lib/preferences/preferences.ui:880
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Εμφάνιση προτάσεων αναζήτησης"
 
-#: lib/preferences/preferences.ui:880
+#: lib/preferences/preferences.ui:887
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr "Επέκταση αναδυόμενου παραθύρου προτάσεων στο πλάτος του παραθύρου"
 
-#: lib/preferences/preferences.ui:903
+#: lib/preferences/preferences.ui:910
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Εμφάνιση προόδου φόρτωσης στην μπάρα διευθύνσεων"
 
-#: lib/preferences/preferences.ui:936
+#: lib/preferences/preferences.ui:943
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Γέμισμα"
 
-#: lib/preferences/preferences.ui:941
+#: lib/preferences/preferences.ui:948
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Βάση"
 
-#: lib/preferences/preferences.ui:946
+#: lib/preferences/preferences.ui:953
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Κορυφή"
 
-#: lib/preferences/preferences.ui:954
+#: lib/preferences/preferences.ui:961
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Προσαρμοσμένο χρώμα:"
 
-#: lib/preferences/preferences.ui:970
+#: lib/preferences/preferences.ui:977
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Επιλογή χρώματος"
 
-#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1327
-#: lib/preferences/preferences.ui:1861 lib/preferences/preferences.ui:1958
-#: lib/preferences/preferences.ui:2804
+#: lib/preferences/preferences.ui:980 lib/preferences/preferences.ui:1334
+#: lib/preferences/preferences.ui:1868 lib/preferences/preferences.ui:1965
+#: lib/preferences/preferences.ui:2810
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:980
+#: lib/preferences/preferences.ui:987
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Επαναφορά"
 
-#: lib/preferences/preferences.ui:1031
+#: lib/preferences/preferences.ui:1038
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Διαμόρφωση Ιστού"
 
-#: lib/preferences/preferences.ui:1039
+#: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "Ενεργοποίηση API του πρόσθετου Pepper (PPAPI)"
 
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Χρήση ενσωματωμένου προγράμματος προβολής PDF (απαιτεί PPAPI)"
 
-#: lib/preferences/preferences.ui:1053
+#: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Να επιτρέπεται η JavaScript"
 
-#: lib/preferences/preferences.ui:1060
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Συμπερίληψη συνδέσμων στην αλυσίδα εστίασης"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1067
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Εκτύπωση του παρασκηνίου του αντικειμένου"
 
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Animated κύλιση"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Ενεργοποίηση χωρικής πλοήγησης"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Χρήση των εγγενών γραμμών κύλισης"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Απενεργοποίηση της αυτόματης αναπαραγωγής των βίντεο"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Να αποτρέπεται η διαρροή τοπικών IP διευθύνσεων από το WebRTC"
 
-#: lib/preferences/preferences.ui:1109
+#: lib/preferences/preferences.ui:1116
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Ενεργοποίηση έγκαιρης προσκόμισης DNS"
 
-#: lib/preferences/preferences.ui:1116
+#: lib/preferences/preferences.ui:1123
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Ενεργοποίηση σύλληψης οθόνης"
 
-#: lib/preferences/preferences.ui:1123
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Χρήση επιτάχυνσης υλικού (απαιτεί επανεκκίνηση)"
 
-#: lib/preferences/preferences.ui:1130
+#: lib/preferences/preferences.ui:1137
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Allow storing of cookies"
@@ -4672,207 +4671,207 @@ msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Να επιτρέπεται η αποθήκευση των cookies"
 
-#: lib/preferences/preferences.ui:1137
+#: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1146
+#: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1181
+#: lib/preferences/preferences.ui:1188
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Κύλιση ροδέλας ποντικιού"
 
-#: lib/preferences/preferences.ui:1201
+#: lib/preferences/preferences.ui:1208
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "γραμμές στη σελίδα"
 
-#: lib/preferences/preferences.ui:1212
+#: lib/preferences/preferences.ui:1219
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Προκαθορισμένο ζουμ στις σελίδες: "
 
-#: lib/preferences/preferences.ui:1251
+#: lib/preferences/preferences.ui:1258
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Τοπική αποθήκευση"
 
-#: lib/preferences/preferences.ui:1259
+#: lib/preferences/preferences.ui:1266
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Να επιτρέπεται η αποθήκευση της μνήμης cache του δικτύου στο δίσκο"
 
-#: lib/preferences/preferences.ui:1282
+#: lib/preferences/preferences.ui:1289
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Διαγραφή της κρυφής μνήμης κατά την έξοδο"
 
-#: lib/preferences/preferences.ui:1289
+#: lib/preferences/preferences.ui:1296
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Μέγιστο:"
 
-#: lib/preferences/preferences.ui:1296
+#: lib/preferences/preferences.ui:1303
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1312
+#: lib/preferences/preferences.ui:1319
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Αποθήκευση μνήμης cache σε:"
 
-#: lib/preferences/preferences.ui:1340
+#: lib/preferences/preferences.ui:1347
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Να επιτρέπεται η αποθήκευση ιστορικού"
 
-#: lib/preferences/preferences.ui:1347
+#: lib/preferences/preferences.ui:1354
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Διαγραφή ιστορικού στο κλείσιμο"
 
-#: lib/preferences/preferences.ui:1370
+#: lib/preferences/preferences.ui:1377
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Να επιτρέπεται η τοπική αποθήκευση περιεχομένου HTML5"
 
-#: lib/preferences/preferences.ui:1377
+#: lib/preferences/preferences.ui:1384
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Διαγραφή τοπικά αποθηκευμένου περιεχομένου HTML5 κατά το κλείσιμο"
 
-#: lib/preferences/preferences.ui:1403
+#: lib/preferences/preferences.ui:1410
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Διαγραφή τώρα"
 
-#: lib/preferences/preferences.ui:1442
+#: lib/preferences/preferences.ui:1449
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Διαμόρφωση proxy"
 
-#: lib/preferences/preferences.ui:1461
+#: lib/preferences/preferences.ui:1468
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Διαμόρφωση proxy συστήματος"
 
-#: lib/preferences/preferences.ui:1484
+#: lib/preferences/preferences.ui:1491
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Χειροκίνητη Διαμόρφωση"
 
-#: lib/preferences/preferences.ui:1494
+#: lib/preferences/preferences.ui:1501
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1499
+#: lib/preferences/preferences.ui:1506
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKSS"
 
-#: lib/preferences/preferences.ui:1510
+#: lib/preferences/preferences.ui:1517
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Θύρα:"
 
-#: lib/preferences/preferences.ui:1531
+#: lib/preferences/preferences.ui:1538
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Όνομα χρήστη:"
 
-#: lib/preferences/preferences.ui:1541
+#: lib/preferences/preferences.ui:1548
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Κωδικός:"
 
-#: lib/preferences/preferences.ui:1570
+#: lib/preferences/preferences.ui:1577
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Χωρίς διαμεσολαβητή"
 
-#: lib/preferences/preferences.ui:1585
+#: lib/preferences/preferences.ui:1592
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Οικογένειες γραμματοσειρών</b>"
 
-#: lib/preferences/preferences.ui:1598
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Standard"
 
-#: lib/preferences/preferences.ui:1605
+#: lib/preferences/preferences.ui:1612
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Σταθερό"
 
-#: lib/preferences/preferences.ui:1615
+#: lib/preferences/preferences.ui:1622
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1625
+#: lib/preferences/preferences.ui:1632
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: lib/preferences/preferences.ui:1635
+#: lib/preferences/preferences.ui:1642
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Cursive"
 
-#: lib/preferences/preferences.ui:1687
+#: lib/preferences/preferences.ui:1694
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasy"
 
-#: lib/preferences/preferences.ui:1694
+#: lib/preferences/preferences.ui:1701
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Μεγέθη γραμματοσειρών</b>"
 
-#: lib/preferences/preferences.ui:1703
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Σταθερό μέγεθος γραμματοσειράς"
 
-#: lib/preferences/preferences.ui:1710
+#: lib/preferences/preferences.ui:1717
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Προεπιλεγμένο μέγεθος γραμματοσειράς"
 
-#: lib/preferences/preferences.ui:1737
+#: lib/preferences/preferences.ui:1744
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Ελάχιστο μέγεθος γραμματοσειράς"
 
-#: lib/preferences/preferences.ui:1744
+#: lib/preferences/preferences.ui:1751
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Ελάχιστο λογικό μέγεθος γραμματοσειράς"
 
-#: lib/preferences/preferences.ui:1777
+#: lib/preferences/preferences.ui:1784
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Συντομεύσεις</b>"
 
-#: lib/preferences/preferences.ui:1784
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Αλλαγή καρτελών με Alt + αριθμό καρτέλας"
 
-#: lib/preferences/preferences.ui:1791
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Φόρτωση γρήγορων κλήσεων με Ctrl + αριθμό γρήγορης κλήσης"
 
-#: lib/preferences/preferences.ui:1798
+#: lib/preferences/preferences.ui:1805
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4881,12 +4880,12 @@ msgstr ""
 "Υπάρχουσες συντομεύσεις πληκτρολογίου:<br/><b>1</b> - προηγούμενη καρτέλα<br/"
 "><b>2</b> - επόμενη καρτέλα<br/><b>/</b> - αναζήτηση στη σελίδα"
 
-#: lib/preferences/preferences.ui:1801
+#: lib/preferences/preferences.ui:1808
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Χρήση συντομεύσεων πληκτρολογίου με ένα πλήκτρο"
 
-#: lib/preferences/preferences.ui:1808
+#: lib/preferences/preferences.ui:1815
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4895,127 +4894,127 @@ msgstr ""
 "Μη επιλεγμένο, αποτρέπει την έξοδο κατά λάθος από την εφαρμογή αν πατηθεί η "
 "συντόμευση πληκτρολογίου Ctrl-W."
 
-#: lib/preferences/preferences.ui:1811
+#: lib/preferences/preferences.ui:1818
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Κλείσιμο της εφαρμογής με Ctrl-Q"
 
-#: lib/preferences/preferences.ui:1835
+#: lib/preferences/preferences.ui:1842
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Τοποθεσία λήψεων</b>"
 
-#: lib/preferences/preferences.ui:1842
+#: lib/preferences/preferences.ui:1849
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Ερώτηση για τοποθεσία λήψεων κάθε φορά"
 
-#: lib/preferences/preferences.ui:1849
+#: lib/preferences/preferences.ui:1856
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Χρήση καθορισμένης τοποθεσίας: "
 
-#: lib/preferences/preferences.ui:1899
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Επιλογές λήψεων</b>"
 
-#: lib/preferences/preferences.ui:1906
+#: lib/preferences/preferences.ui:1913
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Κλείσιμο διαχειριστή λήψεων όταν τελειώσουν οι λήψεις"
 
-#: lib/preferences/preferences.ui:1913
+#: lib/preferences/preferences.ui:1920
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Εξωτερικός διαχειριστής λήψεων</b>"
 
-#: lib/preferences/preferences.ui:1920
+#: lib/preferences/preferences.ui:1927
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Χρήση εξωτερικού διαχειριστή λήψεων"
 
-#: lib/preferences/preferences.ui:1932
+#: lib/preferences/preferences.ui:1939
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Εκτελέσιμο:"
 
-#: lib/preferences/preferences.ui:1939
+#: lib/preferences/preferences.ui:1946
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Παράμετροι:"
 
-#: lib/preferences/preferences.ui:1946
+#: lib/preferences/preferences.ui:1953
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Αφήστε κενό αν δεν είστε σίγουροι"
 
-#: lib/preferences/preferences.ui:1967
+#: lib/preferences/preferences.ui:1974
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "Το <b>%d</b> θα αντικατασταθεί με το URL προς λήψη"
 
-#: lib/preferences/preferences.ui:1993
+#: lib/preferences/preferences.ui:2000
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Επιλογές αυτόματης συμπλήρωσης</b>"
 
-#: lib/preferences/preferences.ui:2000
+#: lib/preferences/preferences.ui:2007
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Να επιτρέπεται η αποθήκευση κωδικών από σελίδες"
 
-#: lib/preferences/preferences.ui:2051
+#: lib/preferences/preferences.ui:2058
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Αυτόματη συμπλήρωση κωδικών πρόσβασης σε ιστοτόπους"
 
-#: lib/preferences/preferences.ui:2072
+#: lib/preferences/preferences.ui:2079
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Διαχείριση Cookies"
 
-#: lib/preferences/preferences.ui:2085
+#: lib/preferences/preferences.ui:2092
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Διαχειριστής Cookies"
 
-#: lib/preferences/preferences.ui:2108
+#: lib/preferences/preferences.ui:2115
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2121
+#: lib/preferences/preferences.ui:2128
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "Επιλογές JavaScript"
 
-#: lib/preferences/preferences.ui:2128
+#: lib/preferences/preferences.ui:2135
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Αποστολή κεφαλίδας Do Not Track (Μην εντοπίζεις) στους διακομιστές"
 
-#: lib/preferences/preferences.ui:2135
+#: lib/preferences/preferences.ui:2142
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Cookies</b>"
 
-#: lib/preferences/preferences.ui:2161
+#: lib/preferences/preferences.ui:2168
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "Διαχείριση επιλογών ιδιωτικότητας JavaScript"
 
-#: lib/preferences/preferences.ui:2168
+#: lib/preferences/preferences.ui:2175
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Άλλο</b>"
 
-#: lib/preferences/preferences.ui:2189
+#: lib/preferences/preferences.ui:2196
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "Δικαιώματα HTML5"
 
-#: lib/preferences/preferences.ui:2199
+#: lib/preferences/preferences.ui:2206
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Settings"
@@ -5023,32 +5022,32 @@ msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Ρυθμίσεις"
 
-#: lib/preferences/preferences.ui:2231
+#: lib/preferences/preferences.ui:2238
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Χρονικό όριο λήξης:"
 
-#: lib/preferences/preferences.ui:2244
+#: lib/preferences/preferences.ui:2251
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " δευτερόλεπτα"
 
-#: lib/preferences/preferences.ui:2266
+#: lib/preferences/preferences.ui:2273
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Ειδοποιήσεις</b>"
 
-#: lib/preferences/preferences.ui:2289
+#: lib/preferences/preferences.ui:2296
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Χρήση εγγενών ειδοποιήσεων συστήματος (μόνο σε Linux)"
 
-#: lib/preferences/preferences.ui:2296
+#: lib/preferences/preferences.ui:2303
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Να μην χρησιμοποιούνται ειδοποιήσεις"
 
-#: lib/preferences/preferences.ui:2319
+#: lib/preferences/preferences.ui:2326
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -5057,17 +5056,17 @@ msgstr ""
 "<b>Σημείωση: </b> Μπορείτε να αλλάξετε τη θέση μιας OSD ειδοποίησης με "
 "έλκυση στην οθόνη."
 
-#: lib/preferences/preferences.ui:2345
+#: lib/preferences/preferences.ui:2352
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Χρήση ειδοποιήσεων OSD"
 
-#: lib/preferences/preferences.ui:2352
+#: lib/preferences/preferences.ui:2359
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Προεπισκόπηση"
 
-#: lib/preferences/preferences.ui:2417
+#: lib/preferences/preferences.ui:2424
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -5076,92 +5075,92 @@ msgstr ""
 "Για περισσότερες πληροφορίες σχετικά με τον ορθογραφικό έλεγχο, ανατρέξτε "
 "στο <a href=\"https://userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 
-#: lib/preferences/preferences.ui:2459
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Επιλογές ορθογραφικού ελέγχου</b>"
 
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2473
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Ενεργοποίηση του ορθογραφικού ελέγχου"
 
-#: lib/preferences/preferences.ui:2473
+#: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Κατάλογοι λεξικών</b>"
 
-#: lib/preferences/preferences.ui:2524
+#: lib/preferences/preferences.ui:2531
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Δεν βρέθηκαν γλώσσες"
 
-#: lib/preferences/preferences.ui:2553
+#: lib/preferences/preferences.ui:2560
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Διαχειριστής χειριστών πρωτοκόλλων"
 
-#: lib/preferences/preferences.ui:2593
+#: lib/preferences/preferences.ui:2600
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Διαχειριστής μηχανών αναζήτησης"
 
-#: lib/preferences/preferences.ui:2615
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Style Sheet χρήστη</b>"
 
-#: lib/preferences/preferences.ui:2622
+#: lib/preferences/preferences.ui:2629
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Διαχείριση μηχανών αναζήτησης</b>"
 
-#: lib/preferences/preferences.ui:2635
+#: lib/preferences/preferences.ui:2641
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "Διαχείριση προσαρμοσμένων θεμάτων"
 
-#: lib/preferences/preferences.ui:2660
+#: lib/preferences/preferences.ui:2666
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Γλώσσες"
 
-#: lib/preferences/preferences.ui:2682
+#: lib/preferences/preferences.ui:2688
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Προτιμώμενη γλώσσα για ιστοσελίδες</b>"
 
-#: lib/preferences/preferences.ui:2707
+#: lib/preferences/preferences.ui:2713
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Διαχειριστής εξαιρέσεων Πιστοποιητικών "
 
-#: lib/preferences/preferences.ui:2729
+#: lib/preferences/preferences.ui:2735
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Αλλαγή αναγνωριστικού περιηγητή</b>"
 
-#: lib/preferences/preferences.ui:2754
+#: lib/preferences/preferences.ui:2760
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Διαχειριστής πράκτορα χρήστη"
 
-#: lib/preferences/preferences.ui:2776
+#: lib/preferences/preferences.ui:2782
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Style Sheet που φορτώνεται αυτόματα με όλες τις σελίδες: "
 
-#: lib/preferences/preferences.ui:2813
+#: lib/preferences/preferences.ui:2819
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Διαχείριση χειριστών πρωτοκόλλων</b>"
 
-#: lib/preferences/preferences.ui:2820
+#: lib/preferences/preferences.ui:2826
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Διαχειριστής Πιστοποιητικών</b>"
 
-#: lib/preferences/preferences.ui:2871
+#: lib/preferences/preferences.ui:2877
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Διαχειριστής Προσαρμοσμένων θεμάτων"
@@ -5578,22 +5577,22 @@ msgctxt "SessionManagerDialog|"
 msgid "Switch to"
 msgstr "Εναλλαγή σε"
 
-#: lib/sidebar/bookmarkssidebar.cpp:103
+#: lib/sidebar/bookmarkssidebar.cpp:109
 msgctxt "BookmarksSidebar|"
 msgid "Open in new tab"
 msgstr "Άνοιγμα σε νέα καρτέλα"
 
-#: lib/sidebar/bookmarkssidebar.cpp:104
+#: lib/sidebar/bookmarkssidebar.cpp:110
 msgctxt "BookmarksSidebar|"
 msgid "Open in new window"
 msgstr "Άνοιγμα σε νέο παράθυρο"
 
-#: lib/sidebar/bookmarkssidebar.cpp:105
+#: lib/sidebar/bookmarkssidebar.cpp:111
 msgctxt "BookmarksSidebar|"
 msgid "Open in new private window"
 msgstr "Άνοιγμα σε νέο παράθυρο ιδιωτικής περιήγησης"
 
-#: lib/sidebar/bookmarkssidebar.cpp:108
+#: lib/sidebar/bookmarkssidebar.cpp:114
 msgctxt "BookmarksSidebar|"
 msgid "Delete"
 msgstr "Διαγραφή"
@@ -5603,22 +5602,22 @@ msgctxt "BookmarksSideBar|"
 msgid "Search..."
 msgstr "Αναζήτηση..."
 
-#: lib/sidebar/historysidebar.cpp:85
+#: lib/sidebar/historysidebar.cpp:92
 msgctxt "HistorySideBar|"
 msgid "Open in new tab"
 msgstr "Άνοιγμα σε νέα καρτέλα"
 
-#: lib/sidebar/historysidebar.cpp:86
+#: lib/sidebar/historysidebar.cpp:93
 msgctxt "HistorySideBar|"
 msgid "Open in new window"
 msgstr "Άνοιγμα σε νέο παράθυρο"
 
-#: lib/sidebar/historysidebar.cpp:87
+#: lib/sidebar/historysidebar.cpp:94
 msgctxt "HistorySideBar|"
 msgid "Open in new private window"
 msgstr "Άνοιγμα σε νέο παράθυρο ιδιωτικής περιήγησης"
 
-#: lib/sidebar/historysidebar.cpp:90
+#: lib/sidebar/historysidebar.cpp:97
 msgctxt "HistorySideBar|"
 msgid "Delete"
 msgstr "Διαγραφή"
@@ -6007,7 +6006,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Να εμποδιστεί αυτή η σελίδα να δημιουργεί επιπλέον διαλόγους"
 
-#: lib/webengine/webpage.cpp:326
+#: lib/webengine/webpage.cpp:329
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -6018,27 +6017,27 @@ msgstr ""
 "σύνδεσμος  είναι <ul><li>%2</li></ul>Θέλετε το Falkon να δοκιμάσει να "
 "ανοίξει το σύνδεσμο αυτόν στην εφαρμογή συστήματος;"
 
-#: lib/webengine/webpage.cpp:331
+#: lib/webengine/webpage.cpp:334
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Απομνημόνευση επιλογής για το πρωτόκολλο αυτό"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:335
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Αίτημα εξωτερικού πρωτοκόλλου"
 
-#: lib/webengine/webpage.cpp:412 lib/webengine/webpage.cpp:413
+#: lib/webengine/webpage.cpp:415 lib/webengine/webpage.cpp:416
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Αποτυχία φόρτωσης σελίδας"
 
-#: lib/webengine/webpage.cpp:414
+#: lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Κάτι πήγε στραβά κατά την φόρτωση της σελίδας."
 
-#: lib/webengine/webpage.cpp:415
+#: lib/webengine/webpage.cpp:418
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -6046,27 +6045,27 @@ msgstr ""
 "Προσπαθήστε να επαναφορτώσετε την σελίδα ή να κλείσετε μερικές καρτέλες για "
 "να απελευθερώσετε περισσότερη μνήμη."
 
-#: lib/webengine/webpage.cpp:416
+#: lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Επαναφόρτωση της σελίδας"
 
-#: lib/webengine/webpage.cpp:510
+#: lib/webengine/webpage.cpp:580
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Επιλογή αρχείου..."
 
-#: lib/webengine/webpage.cpp:514
+#: lib/webengine/webpage.cpp:584
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Επιλογή αρχείων..."
 
-#: lib/webengine/webpage.cpp:650
+#: lib/webengine/webpage.cpp:720
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Ειδοποίηση JavaScript"
 
-#: lib/webengine/webpage.cpp:659
+#: lib/webengine/webpage.cpp:729
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Να εμποδιστεί αυτή η σελίδα να δημιουργεί επιπλέον διαλόγους"
@@ -6354,6 +6353,14 @@ msgstr "Επιθεώρηση στοιχείου"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "AdBlockTreeWidget|"
+#~ msgid "%1 (recently updated)"
+#~ msgstr "%1 (πρόσφατα ενημερωμένο)"
+
+#~ msgctxt "AdBlockTreeWidget|"
+#~ msgid "%1 (Error: %2)"
+#~ msgstr "%1 (Σφάλμα: %2)"
 
 #~ msgctxt "Preferences|"
 #~ msgid "Enable XSS Auditing"

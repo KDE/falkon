@@ -81,32 +81,32 @@ msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Add new subscription to AdBlock:"
 msgstr "افزودن اشتراک تازه به AdBlock:"
 
-#: lib/adblock/adblockdialog.cpp:49
+#: lib/adblock/adblockdialog.cpp:50
 msgctxt "AdBlockDialog|"
 msgid "Add Rule"
 msgstr "افزودن قاعده"
 
-#: lib/adblock/adblockdialog.cpp:50
+#: lib/adblock/adblockdialog.cpp:51
 msgctxt "AdBlockDialog|"
 msgid "Remove Rule"
 msgstr "حذف قاعده"
 
-#: lib/adblock/adblockdialog.cpp:52
+#: lib/adblock/adblockdialog.cpp:53
 msgctxt "AdBlockDialog|"
 msgid "Add Subscription"
 msgstr "افزودن اشتراک"
 
-#: lib/adblock/adblockdialog.cpp:53
+#: lib/adblock/adblockdialog.cpp:54
 msgctxt "AdBlockDialog|"
 msgid "Remove Subscription"
 msgstr "حذف اشتراک"
 
-#: lib/adblock/adblockdialog.cpp:54
+#: lib/adblock/adblockdialog.cpp:55
 msgctxt "AdBlockDialog|"
 msgid "Update Subscriptions"
 msgstr "بروزرسانی اشتراک"
 
-#: lib/adblock/adblockdialog.cpp:56
+#: lib/adblock/adblockdialog.cpp:57
 msgctxt "AdBlockDialog|"
 msgid "Learn about writing rules..."
 msgstr "یادگیری شیوه نوشتن قاعده‌ها..."
@@ -177,75 +177,69 @@ msgctxt "AdBlockIcon|"
 msgid "Disable only on this page"
 msgstr "فقط روی این صفحه غیرفعال شود"
 
-#: lib/adblock/adblockmanager.cpp:184
+#: lib/adblock/adblockmanager.cpp:185
 #, qt-format
 msgctxt "AdBlockManager|"
 msgid "Do you want to add <b>%1</b> subscription?"
 msgstr "آیا می‌خواهید اشتراک <b>%1</b> را اضافه کنید؟"
 
-#: lib/adblock/adblockmanager.cpp:186
+#: lib/adblock/adblockmanager.cpp:187
 msgctxt "AdBlockManager|"
 msgid "AdBlock Subscription"
 msgstr "اشتراک AdBlock"
 
-#: lib/adblock/adblockmanager.cpp:317
+#: lib/adblock/adblockmanager.cpp:318
 msgctxt "AdBlockManager|"
 msgid "EasyList"
 msgstr "فهرست راحت"
 
-#: lib/adblock/adblockmanager.cpp:322
+#: lib/adblock/adblockmanager.cpp:323
 msgctxt "AdBlockManager|"
 msgid "NoCoin List"
 msgstr ""
 
-#: lib/adblock/adblocksubscription.cpp:173
+#: lib/adblock/adblocksubscription.cpp:176
 msgctxt "AdBlockSubscription|"
 msgid "Cannot load subscription!"
 msgstr ""
 
-#: lib/adblock/adblocksubscription.cpp:286
+#: lib/adblock/adblocksubscription.cpp:289
 msgctxt "AdBlockCustomList|"
 msgid "Custom Rules"
 msgstr "قاعده‌های خودساخته"
 
-#: lib/adblock/adblocktreewidget.cpp:80
+#: lib/adblock/adblocktreemodel.cpp:108
+#, qt-format
+msgctxt "AdBlockTreeModel|"
+msgid "%1 - %2"
+msgstr ""
+
+#: lib/adblock/adblocktreewidget.cpp:88
 msgctxt "AdBlockTreeWidget|"
 msgid "Add Rule"
 msgstr "افزودن قاعده"
 
-#: lib/adblock/adblocktreewidget.cpp:82
+#: lib/adblock/adblocktreewidget.cpp:90
 msgctxt "AdBlockTreeWidget|"
 msgid "Remove Rule"
 msgstr "حذف قاعده"
 
-#: lib/adblock/adblocktreewidget.cpp:141
+#: lib/adblock/adblocktreewidget.cpp:110
 msgctxt "AdBlockTreeWidget|"
 msgid "Add Custom Rule"
 msgstr "افزودن قاعده خودساخته"
 
-#: lib/adblock/adblocktreewidget.cpp:141
+#: lib/adblock/adblocktreewidget.cpp:110
 msgctxt "AdBlockTreeWidget|"
 msgid "Please write your rule here:"
 msgstr "لطفا قاعده خودتان را اینجا بنویسید:"
 
-#: lib/adblock/adblocktreewidget.cpp:179
-#, qt-format
-msgctxt "AdBlockTreeWidget|"
-msgid "%1 (recently updated)"
-msgstr "%1 (اخیرا بروز شده)"
-
-#: lib/adblock/adblocktreewidget.cpp:188
-#, qt-format
-msgctxt "AdBlockTreeWidget|"
-msgid "%1 (Error: %2)"
-msgstr ""
-
-#: lib/adblock/adblockurlinterceptor.cpp:41
+#: lib/adblock/adblockurlinterceptor.cpp:42
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked content"
 msgstr ""
 
-#: lib/adblock/adblockurlinterceptor.cpp:42
+#: lib/adblock/adblockurlinterceptor.cpp:43
 #, qt-format
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
@@ -1143,22 +1137,22 @@ msgctxt "BookmarksManager|"
 msgid "Description"
 msgstr ""
 
-#: lib/bookmarks/bookmarksmenu.cpp:166
+#: lib/bookmarks/bookmarksmenu.cpp:172
 msgctxt "BookmarksMenu|"
 msgid "&Bookmarks"
 msgstr ""
 
-#: lib/bookmarks/bookmarksmenu.cpp:168
+#: lib/bookmarks/bookmarksmenu.cpp:174
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &This Page"
 msgstr ""
 
-#: lib/bookmarks/bookmarksmenu.cpp:169
+#: lib/bookmarks/bookmarksmenu.cpp:175
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &All Tabs"
 msgstr ""
 
-#: lib/bookmarks/bookmarksmenu.cpp:170
+#: lib/bookmarks/bookmarksmenu.cpp:176
 msgctxt "BookmarksMenu|"
 msgid "Organize &Bookmarks"
 msgstr ""
@@ -1224,69 +1218,69 @@ msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
 msgstr "نام‌کاربری"
 
-#: lib/bookmarks/bookmarkstools.cpp:76
+#: lib/bookmarks/bookmarkstools.cpp:77
 #, qt-format
 msgctxt "BookmarksFoldersMenu|"
 msgid "Choose %1"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:153
+#: lib/bookmarks/bookmarkstools.cpp:154
 msgctxt "Bookmarks|"
 msgid "Choose name and location of this bookmark."
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:157
+#: lib/bookmarks/bookmarkstools.cpp:158
 msgctxt "Bookmarks|"
 msgid "Add New Bookmark"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:197
+#: lib/bookmarks/bookmarkstools.cpp:198
 msgctxt "Bookmarks|"
 msgid "Choose folder for bookmarks:"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:198
+#: lib/bookmarks/bookmarkstools.cpp:199
 msgctxt "Bookmarks|"
 msgid "Bookmark All Tabs"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:239
+#: lib/bookmarks/bookmarkstools.cpp:240
 msgctxt "Bookmarks|"
 msgid "Title:"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:242
+#: lib/bookmarks/bookmarkstools.cpp:243
 msgctxt "Bookmarks|"
 msgid "Address:"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:244
+#: lib/bookmarks/bookmarkstools.cpp:245
 msgctxt "Bookmarks|"
 msgid "Keyword:"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:247
+#: lib/bookmarks/bookmarkstools.cpp:248
 msgctxt "Bookmarks|"
 msgid "Description:"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:252
+#: lib/bookmarks/bookmarkstools.cpp:253
 msgctxt "Bookmarks|"
 msgid "Edit Bookmark"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:344
+#: lib/bookmarks/bookmarkstools.cpp:345
 msgctxt "Bookmarks|"
 msgid "Confirmation"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:345
+#: lib/bookmarks/bookmarkstools.cpp:346
 #, qt-format
 msgctxt "Bookmarks|"
 msgid "Are you sure you want to open all bookmarks from '%1' folder in tabs?"
 msgstr ""
 
-#: lib/bookmarks/bookmarkstools.cpp:440
+#: lib/bookmarks/bookmarkstools.cpp:450
 msgctxt "Bookmarks|"
 msgid "Empty"
 msgstr ""
@@ -1969,63 +1963,63 @@ msgctxt "HistoryManager|"
 msgid "Clear All History"
 msgstr "حذف همه پیشینه"
 
-#: lib/history/historymenu.cpp:135 lib/history/historymenu.cpp:157
-#: lib/history/historymenu.cpp:186
+#: lib/history/historymenu.cpp:146 lib/history/historymenu.cpp:168
+#: lib/history/historymenu.cpp:197
 msgctxt "HistoryMenu|"
 msgid "Empty"
 msgstr ""
 
-#: lib/history/historymenu.cpp:161
+#: lib/history/historymenu.cpp:172
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Tabs"
 msgstr ""
 
-#: lib/history/historymenu.cpp:162 lib/history/historymenu.cpp:190
+#: lib/history/historymenu.cpp:173 lib/history/historymenu.cpp:201
 msgctxt "HistoryMenu|"
 msgid "Clear list"
 msgstr ""
 
-#: lib/history/historymenu.cpp:189
+#: lib/history/historymenu.cpp:200
 msgctxt "HistoryMenu|"
 msgid "Restore All Closed Windows"
 msgstr ""
 
-#: lib/history/historymenu.cpp:236
+#: lib/history/historymenu.cpp:252
 msgctxt "HistoryMenu|"
 msgid "Hi&story"
 msgstr ""
 
-#: lib/history/historymenu.cpp:238
+#: lib/history/historymenu.cpp:254
 msgctxt "HistoryMenu|"
 msgid "&Back"
 msgstr ""
 
-#: lib/history/historymenu.cpp:241
+#: lib/history/historymenu.cpp:257
 msgctxt "HistoryMenu|"
 msgid "&Forward"
 msgstr ""
 
-#: lib/history/historymenu.cpp:244
+#: lib/history/historymenu.cpp:260
 msgctxt "HistoryMenu|"
 msgid "&Home"
 msgstr ""
 
-#: lib/history/historymenu.cpp:247
+#: lib/history/historymenu.cpp:263
 msgctxt "HistoryMenu|"
 msgid "Show &All History"
 msgstr ""
 
-#: lib/history/historymenu.cpp:255
+#: lib/history/historymenu.cpp:271
 msgctxt "HistoryMenu|"
 msgid "Most Visited"
 msgstr ""
 
-#: lib/history/historymenu.cpp:258
+#: lib/history/historymenu.cpp:275
 msgctxt "HistoryMenu|"
 msgid "Closed Tabs"
 msgstr ""
 
-#: lib/history/historymenu.cpp:261
+#: lib/history/historymenu.cpp:278
 msgctxt "HistoryMenu|"
 msgid "Closed Windows"
 msgstr ""
@@ -2107,97 +2101,97 @@ msgctxt "LocationBar|"
 msgid "Enter address"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:49
+#: lib/navigation/navigationbar.cpp:50
 msgctxt "NavigationBar|"
 msgid "Empty Page"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:77
+#: lib/navigation/navigationbar.cpp:78
 msgctxt "NavigationBar|"
 msgid "Back"
 msgstr "پیشین"
 
-#: lib/navigation/navigationbar.cpp:87
+#: lib/navigation/navigationbar.cpp:88
 msgctxt "NavigationBar|"
 msgid "Forward"
 msgstr "پسین"
 
-#: lib/navigation/navigationbar.cpp:107
+#: lib/navigation/navigationbar.cpp:108
 msgctxt "NavigationBar|"
 msgid "Home"
 msgstr "خانه"
 
-#: lib/navigation/navigationbar.cpp:115
+#: lib/navigation/navigationbar.cpp:116
 msgctxt "NavigationBar|"
 msgid "New Tab"
 msgstr "برگه تازه"
 
-#: lib/navigation/navigationbar.cpp:135
+#: lib/navigation/navigationbar.cpp:136
 msgctxt "NavigationBar|"
 msgid "Tools"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:148
+#: lib/navigation/navigationbar.cpp:149
 msgctxt "NavigationBar|"
 msgid "Main Menu"
 msgstr "منوی اصلی"
 
-#: lib/navigation/navigationbar.cpp:165
+#: lib/navigation/navigationbar.cpp:166
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:191
+#: lib/navigation/navigationbar.cpp:192
 msgctxt "NavigationBar|"
 msgid "Back and Forward buttons"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:192
+#: lib/navigation/navigationbar.cpp:193
 msgctxt "NavigationBar|"
 msgid "Reload button"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:193
+#: lib/navigation/navigationbar.cpp:194
 msgctxt "NavigationBar|"
 msgid "Home button"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:194
+#: lib/navigation/navigationbar.cpp:195
 msgctxt "NavigationBar|"
 msgid "Add tab button"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:195
+#: lib/navigation/navigationbar.cpp:196
 msgctxt "NavigationBar|"
 msgid "Address and Search bar"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:196
+#: lib/navigation/navigationbar.cpp:197
 msgctxt "NavigationBar|"
 msgid "Tools button"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:197
+#: lib/navigation/navigationbar.cpp:198
 msgctxt "NavigationBar|"
 msgid "Exit Fullscreen button"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:395 lib/navigation/navigationbar.cpp:429
+#: lib/navigation/navigationbar.cpp:399 lib/navigation/navigationbar.cpp:438
 msgctxt "NavigationBar|"
 msgid "Clear history"
 msgstr "حذف پیشینه"
 
-#: lib/navigation/navigationbar.cpp:436
+#: lib/navigation/navigationbar.cpp:447
 msgctxt "NavigationBar|"
 msgid "Toolbars"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:437
+#: lib/navigation/navigationbar.cpp:448
 msgctxt "NavigationBar|"
 msgid "Sidebar"
 msgstr ""
 
-#: lib/navigation/navigationbar.cpp:452 lib/navigation/navigationbar.cpp:466
+#: lib/navigation/navigationbar.cpp:463 lib/navigation/navigationbar.cpp:477
 msgctxt "NavigationBar|"
 msgid "Configure Toolbar"
 msgstr ""
@@ -4318,7 +4312,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "آیا از نمایش همه رمز‌ها اطمینان دارید؟"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:656
+#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:657
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "پیش‌فرض"
@@ -4328,7 +4322,7 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "تنظیم به عنوان پیش‌فرض"
 
-#: lib/preferences/preferences.cpp:313
+#: lib/preferences/preferences.cpp:314
 #, fuzzy
 #| msgctxt "QupZillaSchemeReply|"
 #| msgid "Auto"
@@ -4336,88 +4330,88 @@ msgctxt "Preferences|"
 msgid "Auto"
 msgstr "خودکار"
 
-#: lib/preferences/preferences.cpp:315
+#: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Light"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:316
+#: lib/preferences/preferences.cpp:317
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:326
+#: lib/preferences/preferences.cpp:327
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:599
+#: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "انتخاب مکان پرونده‌اجرایی..."
 
-#: lib/preferences/preferences.cpp:642
+#: lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "آگاه‌سازی بر صفحه‌نمایش"
 
-#: lib/preferences/preferences.cpp:643
+#: lib/preferences/preferences.cpp:644
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "با موشواره آن را بکشید به مکانی که می‌خواهید."
 
-#: lib/preferences/preferences.cpp:692
+#: lib/preferences/preferences.cpp:693
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "انتخاب مکان دانلود..."
 
-#: lib/preferences/preferences.cpp:706
+#: lib/preferences/preferences.cpp:707
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "انتخاب مکان شیوه‌نامه..."
 
-#: lib/preferences/preferences.cpp:717
+#: lib/preferences/preferences.cpp:718
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "حذف شد"
 
-#: lib/preferences/preferences.cpp:819
+#: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "انتخاب مسیر نهان‌گاه..."
 
-#: lib/preferences/preferences.cpp:850
+#: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "نمایه تازه"
 
-#: lib/preferences/preferences.cpp:850
+#: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "نام نمایه تازه را وارد کنید:"
 
-#: lib/preferences/preferences.cpp:860 lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:861 lib/preferences/preferences.cpp:866
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "خطا!"
 
-#: lib/preferences/preferences.cpp:860
+#: lib/preferences/preferences.cpp:861
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "این نمایه هم‌اکنون موجود است!"
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:866
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "پوشه نمایه را نمی‌تواند ایجاد کند!"
 
-#: lib/preferences/preferences.cpp:876
+#: lib/preferences/preferences.cpp:877
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "تایید"
 
-#: lib/preferences/preferences.cpp:877
+#: lib/preferences/preferences.cpp:878
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4425,12 +4419,12 @@ msgid ""
 "cannot be undone!"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:892 lib/preferences/preferences.ui:241
+#: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:241
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "توجه: نمایه فعال را نمی‌توانید حذف کنید."
 
-#: lib/preferences/preferences.cpp:1167
+#: lib/preferences/preferences.cpp:1169
 msgctxt "Preferences|"
 msgid "Select Color"
 msgstr "انتخاب رنگ"
@@ -4440,7 +4434,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "ترجیجات"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2066
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2073
 msgctxt "Preferences|"
 msgid "General"
 msgstr "عمومی"
@@ -4680,102 +4674,107 @@ msgstr ""
 
 #: lib/preferences/preferences.ui:656
 msgctxt "Preferences|"
+msgid "Block automatic popups"
+msgstr ""
+
+#: lib/preferences/preferences.ui:663
+msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "همواره برگه‌ها با چرخ موشواره تعویض شوند"
 
-#: lib/preferences/preferences.ui:663
+#: lib/preferences/preferences.ui:670
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "به‌صورت خودکار به برگه تازه بازشده تعویض کن"
 
-#: lib/preferences/preferences.ui:670
+#: lib/preferences/preferences.ui:677
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr ""
 
-#: lib/preferences/preferences.ui:677
+#: lib/preferences/preferences.ui:684
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "هنگام بستن چندین برگه بپرس"
 
-#: lib/preferences/preferences.ui:684
+#: lib/preferences/preferences.ui:691
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr ""
 
-#: lib/preferences/preferences.ui:693
+#: lib/preferences/preferences.ui:700
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr ""
 
-#: lib/preferences/preferences.ui:701
+#: lib/preferences/preferences.ui:708
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr ""
 
-#: lib/preferences/preferences.ui:706
+#: lib/preferences/preferences.ui:713
 msgctxt "Preferences|"
 msgid "Always"
 msgstr ""
 
-#: lib/preferences/preferences.ui:711
+#: lib/preferences/preferences.ui:718
 msgctxt "Preferences|"
 msgid "Never"
 msgstr ""
 
-#: lib/preferences/preferences.ui:751
+#: lib/preferences/preferences.ui:758
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "رفتار نوار آدرس"
 
-#: lib/preferences/preferences.ui:759
+#: lib/preferences/preferences.ui:766
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "هنگام نوشتن در نوارآدرس پیشنهاد کن از:"
 
-#: lib/preferences/preferences.ui:773
+#: lib/preferences/preferences.ui:780
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "پیشینه و نشان‌ها"
 
-#: lib/preferences/preferences.ui:778
+#: lib/preferences/preferences.ui:785
 msgctxt "Preferences|"
 msgid "History"
 msgstr "پیشینه"
 
-#: lib/preferences/preferences.ui:783
+#: lib/preferences/preferences.ui:790
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "نشان‌ها"
 
-#: lib/preferences/preferences.ui:788
+#: lib/preferences/preferences.ui:795
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "هیچی"
 
-#: lib/preferences/preferences.ui:814
+#: lib/preferences/preferences.ui:821
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "فعال‌کردن پیشنهاد برخط"
 
-#: lib/preferences/preferences.ui:821
+#: lib/preferences/preferences.ui:828
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
 msgstr ""
 "برای بارگذاری آدرس در برگه جاری در عوض تعویض برگه کلید «Shift» را بفشارید"
 
-#: lib/preferences/preferences.ui:824
+#: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "اگر آدرس تکمیل‌شده هم‌اکنون بارگذاری شده تعویض برگه را پیشنهاد کن"
 
-#: lib/preferences/preferences.ui:831
+#: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "همیشه آیکون go را نمایش بده"
 
-#: lib/preferences/preferences.ui:838
+#: lib/preferences/preferences.ui:845
 #, fuzzy
 #| msgctxt "WebView|"
 #| msgid "Show i&mage"
@@ -4783,135 +4782,135 @@ msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "نمایش &شکل"
 
-#: lib/preferences/preferences.ui:845
+#: lib/preferences/preferences.ui:852
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "انتخاب همه متن با جفت‌کلیک در نوارآدرس"
 
-#: lib/preferences/preferences.ui:852
+#: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "انتخاب همه متن با کلیک در نوارآدرس"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:866
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr ""
 
-#: lib/preferences/preferences.ui:866
+#: lib/preferences/preferences.ui:873
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "یافتن با موتور یابنده پیش‌فرض"
 
-#: lib/preferences/preferences.ui:873
+#: lib/preferences/preferences.ui:880
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr ""
 
-#: lib/preferences/preferences.ui:880
+#: lib/preferences/preferences.ui:887
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr ""
 
-#: lib/preferences/preferences.ui:903
+#: lib/preferences/preferences.ui:910
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "نمایش نوار پیشرفت بارگذاری در نوار آدرس"
 
-#: lib/preferences/preferences.ui:936
+#: lib/preferences/preferences.ui:943
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "پر کردن"
 
-#: lib/preferences/preferences.ui:941
+#: lib/preferences/preferences.ui:948
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "پایین"
 
-#: lib/preferences/preferences.ui:946
+#: lib/preferences/preferences.ui:953
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "بالا"
 
-#: lib/preferences/preferences.ui:954
+#: lib/preferences/preferences.ui:961
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "رنگ سفارشی:"
 
-#: lib/preferences/preferences.ui:970
+#: lib/preferences/preferences.ui:977
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "انتخاب رنگ"
 
-#: lib/preferences/preferences.ui:973 lib/preferences/preferences.ui:1327
-#: lib/preferences/preferences.ui:1861 lib/preferences/preferences.ui:1958
-#: lib/preferences/preferences.ui:2804
+#: lib/preferences/preferences.ui:980 lib/preferences/preferences.ui:1334
+#: lib/preferences/preferences.ui:1868 lib/preferences/preferences.ui:1965
+#: lib/preferences/preferences.ui:2810
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:980
+#: lib/preferences/preferences.ui:987
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "بازنشاندن"
 
-#: lib/preferences/preferences.ui:1031
+#: lib/preferences/preferences.ui:1038
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "پیکربندی وب"
 
-#: lib/preferences/preferences.ui:1039
+#: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1053
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1053
+#: lib/preferences/preferences.ui:1060
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "پذیرفتن اسکریپت‌های جاوا"
 
-#: lib/preferences/preferences.ui:1060
+#: lib/preferences/preferences.ui:1067
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "قراردادن لینک‌ها در زنجیره فوکوس"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1067
+#: lib/preferences/preferences.ui:1074
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1081
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "پیمایش متحرک شده"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1088
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "فعال‌کردن ناوبری فاصله‌ای"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1095
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1109
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1109
+#: lib/preferences/preferences.ui:1116
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Enable XSS Auditing"
@@ -4919,17 +4918,17 @@ msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "فعال‌کردن ممیزی XSS"
 
-#: lib/preferences/preferences.ui:1116
+#: lib/preferences/preferences.ui:1123
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1123
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1130
+#: lib/preferences/preferences.ui:1137
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Allow storing of cookies"
@@ -4937,346 +4936,346 @@ msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "اجازه برای ذخیره کردن کوکی‌ها"
 
-#: lib/preferences/preferences.ui:1137
+#: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1146
+#: lib/preferences/preferences.ui:1153
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1181
+#: lib/preferences/preferences.ui:1188
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "پیمایش چرخ موشواره"
 
-#: lib/preferences/preferences.ui:1201
+#: lib/preferences/preferences.ui:1208
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "خط بر صفحه"
 
-#: lib/preferences/preferences.ui:1212
+#: lib/preferences/preferences.ui:1219
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "بزرگ‌نمایی پیش‌فرض برروی صفحه‌ها: "
 
-#: lib/preferences/preferences.ui:1251
+#: lib/preferences/preferences.ui:1258
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "انباره محلی"
 
-#: lib/preferences/preferences.ui:1259
+#: lib/preferences/preferences.ui:1266
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "اجازه برای ذخیره نهان‌گاه شبکه روی دیسک"
 
-#: lib/preferences/preferences.ui:1282
+#: lib/preferences/preferences.ui:1289
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1289
+#: lib/preferences/preferences.ui:1296
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1296
+#: lib/preferences/preferences.ui:1303
 msgctxt "Preferences|"
 msgid " MB"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1312
+#: lib/preferences/preferences.ui:1319
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "رونوشت نهان‌گاه در:"
 
-#: lib/preferences/preferences.ui:1340
+#: lib/preferences/preferences.ui:1347
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "اجازه برای رونوشت‌برداری پیشینه"
 
-#: lib/preferences/preferences.ui:1347
+#: lib/preferences/preferences.ui:1354
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "حذف پیشینه هنگام بستن"
 
-#: lib/preferences/preferences.ui:1370
+#: lib/preferences/preferences.ui:1377
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "اجازه برای انباره محلی محتویات وب HTML5"
 
-#: lib/preferences/preferences.ui:1377
+#: lib/preferences/preferences.ui:1384
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "حذف  محتویات وب دخیره‌شده HTML5 هنگام خروج"
 
-#: lib/preferences/preferences.ui:1403
+#: lib/preferences/preferences.ui:1410
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "اکنون حذف شود"
 
-#: lib/preferences/preferences.ui:1442
+#: lib/preferences/preferences.ui:1449
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "پیکربندی پروکسی"
 
-#: lib/preferences/preferences.ui:1461
+#: lib/preferences/preferences.ui:1468
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "پیکربندی پروکسی سیستم"
 
-#: lib/preferences/preferences.ui:1484
+#: lib/preferences/preferences.ui:1491
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "پیکربندی دستی"
 
-#: lib/preferences/preferences.ui:1494
+#: lib/preferences/preferences.ui:1501
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1499
+#: lib/preferences/preferences.ui:1506
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1510
+#: lib/preferences/preferences.ui:1517
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "دروازه:"
 
-#: lib/preferences/preferences.ui:1531
+#: lib/preferences/preferences.ui:1538
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "نام‌کاربری:"
 
-#: lib/preferences/preferences.ui:1541
+#: lib/preferences/preferences.ui:1548
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "رمز:"
 
-#: lib/preferences/preferences.ui:1570
+#: lib/preferences/preferences.ui:1577
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1585
+#: lib/preferences/preferences.ui:1592
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>خانواده قلم</b>"
 
-#: lib/preferences/preferences.ui:1598
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "استاندارد"
 
-#: lib/preferences/preferences.ui:1605
+#: lib/preferences/preferences.ui:1612
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "ثابت"
 
-#: lib/preferences/preferences.ui:1615
+#: lib/preferences/preferences.ui:1622
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "سریف"
 
-#: lib/preferences/preferences.ui:1625
+#: lib/preferences/preferences.ui:1632
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "سان سریف"
 
-#: lib/preferences/preferences.ui:1635
+#: lib/preferences/preferences.ui:1642
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "خط شکسته"
 
-#: lib/preferences/preferences.ui:1687
+#: lib/preferences/preferences.ui:1694
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "فانتزی"
 
-#: lib/preferences/preferences.ui:1694
+#: lib/preferences/preferences.ui:1701
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>اندازه قلم</b>"
 
-#: lib/preferences/preferences.ui:1703
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "اندازه قلم ثابت"
 
-#: lib/preferences/preferences.ui:1710
+#: lib/preferences/preferences.ui:1717
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "اندازه قلم پیش‌فرض"
 
-#: lib/preferences/preferences.ui:1737
+#: lib/preferences/preferences.ui:1744
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "اندازه کمینه قلم"
 
-#: lib/preferences/preferences.ui:1744
+#: lib/preferences/preferences.ui:1751
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "اندازه کمینه منطقی قلم"
 
-#: lib/preferences/preferences.ui:1777
+#: lib/preferences/preferences.ui:1784
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>میان‌برها</b>"
 
-#: lib/preferences/preferences.ui:1784
+#: lib/preferences/preferences.ui:1791
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "تعویض به برگه‌ها با Alt + ردیف برگه"
 
-#: lib/preferences/preferences.ui:1791
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "بارگذاری شمارگیرهای سریع با زدن Ctrl + ردیف شمارگیر سریع"
 
-#: lib/preferences/preferences.ui:1798
+#: lib/preferences/preferences.ui:1805
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
 "><b>/</b> - search on page"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1801
+#: lib/preferences/preferences.ui:1808
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1808
+#: lib/preferences/preferences.ui:1815
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
 "shortcut was intended."
 msgstr ""
 
-#: lib/preferences/preferences.ui:1811
+#: lib/preferences/preferences.ui:1818
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1835
+#: lib/preferences/preferences.ui:1842
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>مکان دریافت</b>"
 
-#: lib/preferences/preferences.ui:1842
+#: lib/preferences/preferences.ui:1849
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "هربار برای مکان دریافت سوال کن"
 
-#: lib/preferences/preferences.ui:1849
+#: lib/preferences/preferences.ui:1856
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "استفاده از مکان تعریف شده: "
 
-#: lib/preferences/preferences.ui:1899
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>گزینه‌های دریافت</b>"
 
-#: lib/preferences/preferences.ui:1906
+#: lib/preferences/preferences.ui:1913
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "مدیر دریافت را هنگام پایان‌یافتن دریافت‌ها ببند"
 
-#: lib/preferences/preferences.ui:1913
+#: lib/preferences/preferences.ui:1920
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>مدیر دریافت بیرونی</b>"
 
-#: lib/preferences/preferences.ui:1920
+#: lib/preferences/preferences.ui:1927
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "مدیر دریافت بیرونی را به‌کار ببر"
 
-#: lib/preferences/preferences.ui:1932
+#: lib/preferences/preferences.ui:1939
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "نرم‌افزار اجرایی:"
 
-#: lib/preferences/preferences.ui:1939
+#: lib/preferences/preferences.ui:1946
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "نشانوندها:"
 
-#: lib/preferences/preferences.ui:1946
+#: lib/preferences/preferences.ui:1953
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "اگر اطمینان ندارید، خالی بگذارید "
 
-#: lib/preferences/preferences.ui:1967
+#: lib/preferences/preferences.ui:1974
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "آدرسی که قرار است دریافت شود به جای <b>%d</b> جانشین خواهد شد"
 
-#: lib/preferences/preferences.ui:1993
+#: lib/preferences/preferences.ui:2000
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>گزینه‌های پرکن‌خودکار</b>"
 
-#: lib/preferences/preferences.ui:2000
+#: lib/preferences/preferences.ui:2007
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "اجازه برای رونوشت‌برداری رمزها از تارنماها"
 
-#: lib/preferences/preferences.ui:2051
+#: lib/preferences/preferences.ui:2058
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2072
+#: lib/preferences/preferences.ui:2079
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "مدیریت کوکی‌ها"
 
-#: lib/preferences/preferences.ui:2085
+#: lib/preferences/preferences.ui:2092
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "مدیر کوکی‌ها"
 
-#: lib/preferences/preferences.ui:2108
+#: lib/preferences/preferences.ui:2115
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>اسکریپت جاوا</b>"
 
-#: lib/preferences/preferences.ui:2121
+#: lib/preferences/preferences.ui:2128
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "گزینه‌های اسکریپت جاوا"
 
-#: lib/preferences/preferences.ui:2128
+#: lib/preferences/preferences.ui:2135
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "پیام پیگیری نکردن سربرگ را به خادم‌ها بفرست"
 
-#: lib/preferences/preferences.ui:2135
+#: lib/preferences/preferences.ui:2142
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>کوکی‌ها</b>"
 
-#: lib/preferences/preferences.ui:2161
+#: lib/preferences/preferences.ui:2168
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "مدیریت گزینه‌های حریم خصوصی اسکریپت‌های جاوا"
 
-#: lib/preferences/preferences.ui:2168
+#: lib/preferences/preferences.ui:2175
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>دیگر</b>"
 
-#: lib/preferences/preferences.ui:2189
+#: lib/preferences/preferences.ui:2196
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "مجوزهای HTML5"
 
-#: lib/preferences/preferences.ui:2199
+#: lib/preferences/preferences.ui:2206
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Settings"
@@ -5284,32 +5283,32 @@ msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "سامانش"
 
-#: lib/preferences/preferences.ui:2231
+#: lib/preferences/preferences.ui:2238
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "سپری‌شدن زمان انقضاء: "
 
-#: lib/preferences/preferences.ui:2244
+#: lib/preferences/preferences.ui:2251
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr "ثانیه"
 
-#: lib/preferences/preferences.ui:2266
+#: lib/preferences/preferences.ui:2273
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>آگاه‌سازی‌ها</b>"
 
-#: lib/preferences/preferences.ui:2289
+#: lib/preferences/preferences.ui:2296
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "آگاه‌سازی‌های سیستمی را به‌کار ببر (فقط لینوکس)"
 
-#: lib/preferences/preferences.ui:2296
+#: lib/preferences/preferences.ui:2303
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "آگاه‌سازی‌ها را به‌کار نبر"
 
-#: lib/preferences/preferences.ui:2319
+#: lib/preferences/preferences.ui:2326
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -5318,44 +5317,44 @@ msgstr ""
 "<b>توجه: </b>می‌توانید محل آگاه‌سازی بر صفحه‌نمایش را با کشیدن با موشواره روی "
 "صفحه نمایش تغییر دهید."
 
-#: lib/preferences/preferences.ui:2345
+#: lib/preferences/preferences.ui:2352
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "آگاه‌سازی‌های بر صفحه‌نمایش را به‌کار ببر"
 
-#: lib/preferences/preferences.ui:2352
+#: lib/preferences/preferences.ui:2359
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2417
+#: lib/preferences/preferences.ui:2424
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
 "userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 msgstr ""
 
-#: lib/preferences/preferences.ui:2459
+#: lib/preferences/preferences.ui:2466
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2473
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2473
+#: lib/preferences/preferences.ui:2480
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2524
+#: lib/preferences/preferences.ui:2531
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2553
+#: lib/preferences/preferences.ui:2560
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Cookies Manager"
@@ -5363,62 +5362,62 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "مدیر کوکی‌ها"
 
-#: lib/preferences/preferences.ui:2593
+#: lib/preferences/preferences.ui:2600
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2615
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2622
+#: lib/preferences/preferences.ui:2629
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2635
+#: lib/preferences/preferences.ui:2641
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2660
+#: lib/preferences/preferences.ui:2666
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "زبان‌ها"
 
-#: lib/preferences/preferences.ui:2682
+#: lib/preferences/preferences.ui:2688
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>زبان ترجیحی برای تارنماها</b>"
 
-#: lib/preferences/preferences.ui:2707
+#: lib/preferences/preferences.ui:2713
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2729
+#: lib/preferences/preferences.ui:2735
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>تغییر هویت مرورگر</b>"
 
-#: lib/preferences/preferences.ui:2754
+#: lib/preferences/preferences.ui:2760
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "مدیر پیشکار کاربر"
 
-#: lib/preferences/preferences.ui:2776
+#: lib/preferences/preferences.ui:2782
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr ""
 
-#: lib/preferences/preferences.ui:2813
+#: lib/preferences/preferences.ui:2819
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2820
+#: lib/preferences/preferences.ui:2826
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "<b>Notifications</b>"
@@ -5426,7 +5425,7 @@ msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>آگاه‌سازی‌ها</b>"
 
-#: lib/preferences/preferences.ui:2871
+#: lib/preferences/preferences.ui:2877
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Cookies Manager"
@@ -5880,22 +5879,22 @@ msgctxt "SessionManagerDialog|"
 msgid "Switch to"
 msgstr ""
 
-#: lib/sidebar/bookmarkssidebar.cpp:103
+#: lib/sidebar/bookmarkssidebar.cpp:109
 msgctxt "BookmarksSidebar|"
 msgid "Open in new tab"
 msgstr ""
 
-#: lib/sidebar/bookmarkssidebar.cpp:104
+#: lib/sidebar/bookmarkssidebar.cpp:110
 msgctxt "BookmarksSidebar|"
 msgid "Open in new window"
 msgstr ""
 
-#: lib/sidebar/bookmarkssidebar.cpp:105
+#: lib/sidebar/bookmarkssidebar.cpp:111
 msgctxt "BookmarksSidebar|"
 msgid "Open in new private window"
 msgstr ""
 
-#: lib/sidebar/bookmarkssidebar.cpp:108
+#: lib/sidebar/bookmarkssidebar.cpp:114
 msgctxt "BookmarksSidebar|"
 msgid "Delete"
 msgstr ""
@@ -5905,22 +5904,22 @@ msgctxt "BookmarksSideBar|"
 msgid "Search..."
 msgstr "یافتن..."
 
-#: lib/sidebar/historysidebar.cpp:85
+#: lib/sidebar/historysidebar.cpp:92
 msgctxt "HistorySideBar|"
 msgid "Open in new tab"
 msgstr ""
 
-#: lib/sidebar/historysidebar.cpp:86
+#: lib/sidebar/historysidebar.cpp:93
 msgctxt "HistorySideBar|"
 msgid "Open in new window"
 msgstr ""
 
-#: lib/sidebar/historysidebar.cpp:87
+#: lib/sidebar/historysidebar.cpp:94
 msgctxt "HistorySideBar|"
 msgid "Open in new private window"
 msgstr ""
 
-#: lib/sidebar/historysidebar.cpp:90
+#: lib/sidebar/historysidebar.cpp:97
 msgctxt "HistorySideBar|"
 msgid "Delete"
 msgstr ""
@@ -6316,7 +6315,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "از ایجاد پنجره پرس‌وجوی تازه توسط صفحه جلوگیری کن"
 
-#: lib/webengine/webpage.cpp:326
+#: lib/webengine/webpage.cpp:329
 #, fuzzy, qt-format
 #| msgctxt "WebPage|"
 #| msgid ""
@@ -6332,53 +6331,53 @@ msgstr ""
 "لینک درخواست شده است، آیا می‌خواهید کوپزیلا سعی کند این لینک را با نرم‌افزار "
 "معرفی شده در سیستم باز کند؟"
 
-#: lib/webengine/webpage.cpp:331
+#: lib/webengine/webpage.cpp:334
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "انتخابم را برای این پروتکل به‌خاطر بسپار"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:335
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "درخواست پروتکل بیرونی"
 
-#: lib/webengine/webpage.cpp:412 lib/webengine/webpage.cpp:413
+#: lib/webengine/webpage.cpp:415 lib/webengine/webpage.cpp:416
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "خطا در بارگذاری صفحه"
 
-#: lib/webengine/webpage.cpp:414
+#: lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr ""
 
-#: lib/webengine/webpage.cpp:415
+#: lib/webengine/webpage.cpp:418
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr ""
 
-#: lib/webengine/webpage.cpp:416
+#: lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr ""
 
-#: lib/webengine/webpage.cpp:510
+#: lib/webengine/webpage.cpp:580
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "انتخاب پرونده..."
 
-#: lib/webengine/webpage.cpp:514
+#: lib/webengine/webpage.cpp:584
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr ""
 
-#: lib/webengine/webpage.cpp:650
+#: lib/webengine/webpage.cpp:720
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "اعلان اسکریپت‌های جاوا"
 
-#: lib/webengine/webpage.cpp:659
+#: lib/webengine/webpage.cpp:729
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "از ایجاد پنجره پرس‌وجوی تازه توسط صفحه جلوگیری کن"
@@ -6669,6 +6668,10 @@ msgstr "بررسی عنصر"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr ""
+
+#~ msgctxt "AdBlockTreeWidget|"
+#~ msgid "%1 (recently updated)"
+#~ msgstr "%1 (اخیرا بروز شده)"
 
 #~ msgctxt "Preferences|"
 #~ msgid "Enable XSS Auditing"
