@@ -54,9 +54,7 @@
 
 #include "qzcommon.h"
 
-class QWebEngineUrlRequestInfo;
-class QWebEngineNewWindowRequest;
-
+class AdBlockNeworkRequest;
 class AdBlockSubscription;
 
 class FALKON_EXPORT AdBlockRule
@@ -99,14 +97,12 @@ public:
     bool isInternalDisabled() const;
 
     bool urlMatch(const QUrl &url) const;
-    bool networkMatch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &encodedUrl) const;
-    bool networkMatch(const QWebEngineNewWindowRequest &request, const QString &domain, const QString &encodedUrl) const;
+    bool networkMatch(const AdBlockNeworkRequest &request, const QString &domain, const QString &encodedUrl) const;
 
     bool matchDomain(const QString &domain) const;
-    bool matchThirdParty(const QWebEngineUrlRequestInfo &request) const;
+    bool matchThirdParty(const AdBlockNeworkRequest &request) const;
 
-    bool matchType(const QWebEngineUrlRequestInfo &request) const;
-    bool matchType(const QWebEngineNewWindowRequest &request) const;
+    bool matchType(const AdBlockNeworkRequest &request) const;
 
 protected:
     bool stringMatch(const QString &domain, const QString &encodedUrl) const;

@@ -17,10 +17,9 @@
 * ============================================================ */
 #include "adblockmatcher.h"
 #include "adblockmanager.h"
+#include "adblocknetworkrequest.h"
 #include "adblockrule.h"
 #include "adblocksubscription.h"
-
-#include <QWebEngineNewWindowRequest>
 
 AdBlockMatcher::AdBlockMatcher(AdBlockManager* manager)
     : QObject(manager)
@@ -33,34 +32,7 @@ AdBlockMatcher::~AdBlockMatcher()
     clear();
 }
 
-const AdBlockRule* AdBlockMatcher::match(const QWebEngineUrlRequestInfo &request, const QString &urlDomain, const QString &urlString) const
-{
-    // Exception rules
-    if (m_networkExceptionTree.find(request, urlDomain, urlString))
-        return nullptr;
-
-    int count = m_networkExceptionRules.count();
-    for (int i = 0; i < count; ++i) {
-        const AdBlockRule* rule = m_networkExceptionRules.at(i);
-        if (rule->networkMatch(request, urlDomain, urlString))
-            return nullptr;
-    }
-
-    // Block rules
-    if (const AdBlockRule* rule = m_networkBlockTree.find(request, urlDomain, urlString))
-        return rule;
-
-    count = m_networkBlockRules.count();
-    for (int i = 0; i < count; ++i) {
-        const AdBlockRule* rule = m_networkBlockRules.at(i);
-        if (rule->networkMatch(request, urlDomain, urlString))
-            return rule;
-    }
-
-    return nullptr;
-}
-
-const AdBlockRule* AdBlockMatcher::match(const QWebEngineNewWindowRequest &request, const QString &urlDomain, const QString &urlString) const
+const AdBlockRule* AdBlockMatcher::match(const AdBlockNeworkRequest &request, const QString &urlDomain, const QString &urlString) const
 {
     // Exception rules
     if (m_networkExceptionTree.find(request, urlDomain, urlString))

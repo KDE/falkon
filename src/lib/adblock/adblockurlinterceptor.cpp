@@ -17,6 +17,7 @@
 * ============================================================ */
 
 #include "adblockurlinterceptor.h"
+#include "adblocknetworkrequest.h"
 #include "adblockrule.h"
 #include "qztools.h"
 
@@ -33,7 +34,8 @@ void AdBlockUrlInterceptor::interceptRequest(QWebEngineUrlRequestInfo &request)
     QString ruleFilter;
     QString ruleSubscription;
     QUrl rewriteUrl;
-    if (!m_manager->block(request, ruleFilter, ruleSubscription, rewriteUrl)) {
+    AdBlockNeworkRequest adblockRequest = AdBlockNeworkRequest(request);
+    if (!m_manager->block(adblockRequest, ruleFilter, ruleSubscription, rewriteUrl)) {
         return;
     }
 
