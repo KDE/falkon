@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-02-02 15:47+0200\n"
+"PO-Revision-Date: 2025-01-16 13:12+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: \n"
 "Language: lt\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.5\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -216,7 +216,7 @@ msgstr "Tinkintos taisyklės"
 #, qt-format
 msgctxt "AdBlockTreeModel|"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 – %2"
 
 #: lib/adblock/adblocktreewidget.cpp:88
 msgctxt "AdBlockTreeWidget|"
@@ -1191,9 +1191,6 @@ msgid "Open in new private window"
 msgstr "Atverti naujame privačiame lange"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:78 lib/bookmarks/bookmarkstoolbar.cpp:186
-#, fuzzy
-#| msgctxt "BookmarksManager|"
-#| msgid "New Folder"
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
 msgstr "Naujas aplankas"
@@ -1219,12 +1216,9 @@ msgid "Show Only Text"
 msgstr "Rodyti tik tekstą"
 
 #: lib/bookmarks/bookmarkstoolbar.cpp:186
-#, fuzzy
-#| msgctxt "LocationBar|"
-#| msgid "Enter address"
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
-msgstr "Įveskite adresą"
+msgstr "Įveskite aplanko pavadinimą:"
 
 #: lib/bookmarks/bookmarkstools.cpp:77
 #, qt-format
@@ -1615,28 +1609,22 @@ msgid "Unknown speed"
 msgstr "Nežinomas greitis"
 
 #: lib/downloads/downloaditem.cpp:223
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "kB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
-msgstr "kB/s"
+msgstr "%1 kB/s"
 
 #: lib/downloads/downloaditem.cpp:228
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "MB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
-msgstr "MB/s"
+msgstr "%1 MB/s"
 
 #: lib/downloads/downloaditem.cpp:232
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "GB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
-msgstr "GB/s"
+msgstr "%1 GB/s"
 
 #: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
@@ -2260,13 +2248,13 @@ msgstr "Ieškoti, kai sistema pasikeitė"
 #: lib/navigation/zoomlabel.cpp:36
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Atstatyti mastelio lygį"
 
 #: lib/navigation/zoomlabel.cpp:61
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/network/networkmanager.cpp:91
 msgctxt "NetworkManager|"
@@ -2422,12 +2410,9 @@ msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr ""
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Nežinomas dydis"
+msgstr "Nežinoma klaida"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -2745,12 +2730,9 @@ msgid "Qt version"
 msgstr "Qt versija"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:326
-#, fuzzy
-#| msgctxt "AboutDialog|"
-#| msgid "<b>QtWebEngine version %1</b></p>"
 msgctxt "FalkonSchemeReply|"
 msgid "QtWebEngine version"
-msgstr "<b>QtWebEngine versija %1</b></p>"
+msgstr "QtWebEngine versija"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:327
 msgctxt "FalkonSchemeReply|"
@@ -3224,7 +3206,7 @@ msgstr ""
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Liudijimas buvo atmestas."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3247,20 +3229,14 @@ msgid "Save Image to Disk"
 msgstr "Įrašyti paveiksliuką į diską"
 
 #: lib/other/siteinfo.cpp:213
-#, fuzzy
-#| msgctxt "HistoryManager|"
-#| msgid "Copy title"
 msgctxt "SiteInfo|"
 msgid "Copy Values"
-msgstr "Kopijuoti pavadinimą"
+msgstr "Kopijuoti reikšmes"
 
 #: lib/other/siteinfo.cpp:214
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Copy image ad&dress"
 msgctxt "SiteInfo|"
 msgid "Copy Tags and Values"
-msgstr "Kopijuoti paveiksliuko a&dresą"
+msgstr "Kopijuoti žymes ir reikšmes"
 
 #: lib/other/siteinfo.cpp:252 lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
@@ -3308,12 +3284,9 @@ msgid "Media"
 msgstr "Medija"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML5 leidimai"
+msgstr "Leidimai"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3361,9 +3334,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Peržiūra</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Numatytasis"
@@ -3371,23 +3341,17 @@ msgstr "Numatytasis"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Klausti"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Leisti"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
-msgstr "Atmesti"
+msgstr "Drausti"
 
 #: lib/other/siteinfowidget.cpp:43
 #, qt-format
@@ -3408,7 +3372,7 @@ msgstr ""
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Liudijimas buvo atmestas."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
@@ -3468,26 +3432,17 @@ msgid "Zoom level"
 msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:326
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Slapukai"
 
 #: lib/other/sitesettingsmanager.cpp:329 lib/other/sitesettingsmanager.cpp:354
 #: lib/other/sitesettingsmanager.cpp:394 lib/other/sitesettingsmanager.cpp:411
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Nežinomas dydis"
+msgstr "Nežinoma"
 
 #: lib/other/sitesettingsmanager.cpp:337
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Pranešimai"
@@ -3501,36 +3456,24 @@ msgid "Geolocation"
 msgstr "Geografinė vieta"
 
 #: lib/other/sitesettingsmanager.cpp:341
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Mikrofonas"
 
 #: lib/other/sitesettingsmanager.cpp:343
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Kamera"
 
 #: lib/other/sitesettingsmanager.cpp:345
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Mikrofonas ir kamera"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Slėpti rodyklę"
+msgstr "Slėpti pelės rodyklę"
 
 #: lib/other/sitesettingsmanager.cpp:349
 msgctxt "SiteSettingsManager|"
@@ -3551,44 +3494,29 @@ msgid "Autoload images"
 msgstr "Įkelti puslapį iš naujo"
 
 #: lib/other/sitesettingsmanager.cpp:365
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Leisti JavaScript"
+msgstr "Įjungti JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Atverti iškylančiuosius langus"
+msgstr "JavaScript: Atverti iškylančiuosius langus"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Prieigą prie iškarpinės"
+msgstr "JavaScript: Prieiga prie iškarpinės"
 
 #: lib/other/sitesettingsmanager.cpp:371
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Įdėti iš iškarpinės"
+msgstr "JavaScript: Įdėti iš iškarpinės"
 
 #: lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Aktyvuoti langus"
+msgstr "JavaScript: Aktyvinti langus"
 
 #: lib/other/sitesettingsmanager.cpp:376
 #, fuzzy
@@ -3599,12 +3527,9 @@ msgid "Local storage"
 msgstr "Vietinis kaupiklis"
 
 #: lib/other/sitesettingsmanager.cpp:378
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&Visas ekranas"
+msgstr "Viso ekrano palaikymas"
 
 #: lib/other/sitesettingsmanager.cpp:380
 msgctxt "SiteSettingsManager|"
@@ -3612,12 +3537,9 @@ msgid "Run insecure content"
 msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:382
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Išjungti automatinį vaizdo įrašų atkūrimą"
+msgstr "Automatinis vaizdo įrašų atkūrimas"
 
 #: lib/other/sitesettingsmanager.cpp:385
 #, fuzzy
@@ -3633,9 +3555,6 @@ msgid "Force dark mode"
 msgstr ""
 
 #: lib/other/sitesettingsmanager.cpp:402
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Leisti"
@@ -3643,20 +3562,14 @@ msgstr "Leisti"
 #: lib/other/sitesettingsmanager.cpp:404
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Klausti"
 
 #: lib/other/sitesettingsmanager.cpp:406
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
-msgstr "Atmesti"
+msgstr "Drausti"
 
 #: lib/other/sitesettingsmanager.cpp:408
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Numatytasis"
@@ -4004,17 +3917,11 @@ msgid "Certificate exception manager"
 msgstr ""
 
 #: lib/preferences/certificatemanager.ui:22
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "CertificateManager|"
 msgid "Add"
 msgstr "Pridėti"
 
 #: lib/preferences/certificatemanager.ui:29
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "CertificateManager|"
 msgid "Remove"
 msgstr "Šalinti"
@@ -5209,12 +5116,9 @@ msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Tvarkyti protokolo dorokles</b>"
 
 #: lib/preferences/preferences.ui:2826
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "<b>Notifications</b>"
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
-msgstr "<b>Pranešimai</b>"
+msgstr "<b>Liudijimų tvarkytuvė</b>"
 
 #: lib/preferences/preferences.ui:2877
 #, fuzzy
@@ -5258,17 +5162,11 @@ msgid "**Note:** Allowed schemes can be added by extensions."
 msgstr ""
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "SchemeManager|"
 msgid "Add"
 msgstr "Pridėti"
 
 #: lib/preferences/schememanager.ui:61 lib/preferences/schememanager.ui:123
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "SchemeManager|"
 msgid "Remove"
 msgstr "Šalinti"
@@ -5295,36 +5193,27 @@ msgid "Changes will take effect after Falkon restart."
 msgstr ""
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Naršymas"
+msgstr "Naršyti"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:36
 #: lib/preferences/sitesettingsbrowsedialog.ui:96
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Klausti"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:37
 #: lib/preferences/sitesettingsbrowsedialog.ui:103
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Leisti"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:38
 #: lib/preferences/sitesettingsbrowsedialog.ui:110
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
-msgstr "Atmesti"
+msgstr "Drausti"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:39
 #: lib/preferences/sitesettingsbrowsedialog.ui:117
@@ -5354,7 +5243,7 @@ msgstr "Url:"
 #: lib/preferences/sitesettingsbrowsedialog.ui:29
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:48
 msgctxt "SiteSettingsBrowseDialog|Add or Modify"
@@ -5378,12 +5267,9 @@ msgid "Behaviour"
 msgstr "Elgsena"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Naršymas"
+msgstr "Naršyti"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -6047,7 +5933,7 @@ msgstr "Leisti"
 #: lib/tools/html5permissions/html5permissionsnotification.ui:57
 msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
-msgstr "Atmesti"
+msgstr "Drausti"
 
 #: lib/tools/qztools.cpp:379
 msgctxt "QObject|"
@@ -6058,19 +5944,19 @@ msgstr "Nežinomas dydis"
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #: lib/tools/qztools.cpp:391
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #: lib/tools/qztools.cpp:395
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
