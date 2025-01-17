@@ -350,10 +350,7 @@ void AdBlockManager::load()
     m_matcher->update();
     m_loaded = true;
 
-    connect(m_interceptor, &AdBlockUrlInterceptor::requestBlocked, this, [this](const AdBlockedRequest &request) {
-        m_blockedRequests[request.firstPartyUrl].append(request);
-        Q_EMIT blockedRequestsChanged(request.firstPartyUrl);
-    });
+    connect(m_interceptor, &AdBlockUrlInterceptor::requestBlocked, this, &AdBlockManager::requestBlocked);
 
     mApp->networkManager()->installUrlInterceptor(m_interceptor);
 }
@@ -377,6 +374,12 @@ void AdBlockManager::updateAllSubscriptions()
     settings.beginGroup(QSL("AdBlock"));
     settings.setValue(QSL("lastUpdate"), QDateTime::currentDateTime());
     settings.endGroup();
+}
+
+void AdBlockManager::requestBlocked(const AdBlockedRequest& request)
+{
+    m_blockedRequests[request.firstPartyUrl].append(request);
+    Q_EMIT blockedRequestsChanged(request.firstPartyUrl);
 }
 
 void AdBlockManager::save()

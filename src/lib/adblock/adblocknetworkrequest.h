@@ -28,8 +28,8 @@ class QWebEngineNewWindowRequest;
 class FALKON_EXPORT AdBlockNeworkRequest
 {
 public:
-    explicit AdBlockNeworkRequest(QWebEngineUrlRequestInfo &request);
-    explicit AdBlockNeworkRequest(QWebEngineNewWindowRequest &request);
+    explicit AdBlockNeworkRequest(const QWebEngineUrlRequestInfo &request);
+    explicit AdBlockNeworkRequest(const QUrl &url, const QWebEngineNewWindowRequest &request);
     ~AdBlockNeworkRequest();
 
     enum RequestType {

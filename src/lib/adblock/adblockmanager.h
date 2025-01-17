@@ -101,6 +101,8 @@ public Q_SLOTS:
     void updateMatcher();
     void updateAllSubscriptions();
 
+    void requestBlocked(const AdBlockedRequest &request);
+
     AdBlockDialog *showDialog(QWidget *parent = nullptr);
 
 private:

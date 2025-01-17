@@ -24,6 +24,7 @@ class BrowserWindow;
 
 class AdBlockIcon;
 class AdblockResourceSchemeHandler;
+class AdBlockedRequest;
 
 class AdBlockPlugin : public QObject, public PluginInterface
 {
@@ -37,6 +38,9 @@ public:
     void unload() override;
     bool testPlugin() override;
     void showSettings(QWidget *parent = nullptr) override;
+
+Q_SIGNALS:
+    void newWindowRequestBlocked(const AdBlockedRequest &request);
 
 private:
     void webPageCreated(WebPage *page);

@@ -20,7 +20,7 @@
 
 #include <QWebEngineNewWindowRequest>
 
-AdBlockNeworkRequest::AdBlockNeworkRequest(QWebEngineUrlRequestInfo& request)
+AdBlockNeworkRequest::AdBlockNeworkRequest(const QWebEngineUrlRequestInfo& request)
 {
     m_firstPartyUrl = request.firstPartyUrl();
     m_requestUrl = request.requestUrl();
@@ -28,10 +28,10 @@ AdBlockNeworkRequest::AdBlockNeworkRequest(QWebEngineUrlRequestInfo& request)
     m_requestType = NetworkRequest;
 }
 
-AdBlockNeworkRequest::AdBlockNeworkRequest(QWebEngineNewWindowRequest& request)
+AdBlockNeworkRequest::AdBlockNeworkRequest(const QUrl& url, const QWebEngineNewWindowRequest& request)
 {
-    m_firstPartyUrl = request.requestedUrl();
-    m_requestUrl = m_firstPartyUrl;
+    m_firstPartyUrl = url;
+    m_requestUrl = request.requestedUrl();
     m_requestType = NewWindowRequest;
 }
 

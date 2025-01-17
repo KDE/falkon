@@ -49,6 +49,7 @@ void AdBlockPlugin::init(InitState state, const QString &settingsPath)
     connect(mApp->plugins(), &PluginProxy::webPageDeleted, this, &AdBlockPlugin::webPageDeleted);
     connect(mApp->plugins(), &PluginProxy::mainWindowCreated, this, &AdBlockPlugin::mainWindowCreated);
     connect(mApp->plugins(), &PluginProxy::mainWindowDeleted, this, &AdBlockPlugin::mainWindowDeleted);
+    connect(this, &AdBlockPlugin::newWindowRequestBlocked, AdBlockManager::instance(), &AdBlockManager::requestBlocked);
 
     m_resourceschemeHandler = new AdblockResourceSchemeHandler(this);
     mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("abp-resource"), m_resourceschemeHandler);
@@ -145,15 +146,22 @@ bool AdBlockPlugin::acceptNavigationRequest(WebPage *page, const QUrl &url, QWeb
 
 bool AdBlockPlugin::newWindowRequested(WebPage* page, QWebEngineNewWindowRequest &request)
 {
-    Q_UNUSED(page)
-
     QString ruleFilter;
     QString ruleSubscription;
     QUrl rewriteUrl;
     AdBlockManager *manager = AdBlockManager::instance();
-    AdBlockNeworkRequest adBlockRequest = AdBlockNeworkRequest(request);
+    AdBlockNeworkRequest adBlockRequest = AdBlockNeworkRequest(page->url(), request);
 
     if (manager->block(adBlockRequest, ruleFilter, ruleSubscription, rewriteUrl)) {
+        AdBlockedRequest r;
+        r.requestUrl = request.requestedUrl();
+        r.firstPartyUrl = page->url();
+        r.requestMethod = QByteArrayLiteral("GET");
+        r.resourceType = QWebEngineUrlRequestInfo::ResourceTypeMainFrame;
+        r.navigationType = QWebEngineUrlRequestInfo::NavigationTypeOther;
+        r.rule = ruleFilter;
+        Q_EMIT newWindowRequestBlocked(r);
+
         return false;
     }
 
