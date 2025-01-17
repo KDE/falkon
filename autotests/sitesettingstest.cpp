@@ -80,7 +80,7 @@ void SiteSettingsTest::checkInternalPage(QUrl url)
         ,{QWebEngineSettings::AllowRunningInsecureContent, false}
         ,{QWebEngineSettings::AllowGeolocationOnInsecureOrigins, false}
         ,{QWebEngineSettings::PlaybackRequiresUserGesture, mApp->webSettings()->testAttribute(QWebEngineSettings::PlaybackRequiresUserGesture)}
-        ,{QWebEngineSettings::WebRTCPublicInterfacesOnly, false}
+        ,{QWebEngineSettings::WebRTCPublicInterfacesOnly, mApp->webSettings()->testAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly)}
     };
 
     QSignalSpy spy(tab.webView(), &WebView::loadFinished);
