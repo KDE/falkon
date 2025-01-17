@@ -33,11 +33,10 @@
 class AdBlockRule;
 class AdBlockDialog;
 class AdBlockMatcher;
+class AdBlockNeworkRequest;
 class AdBlockCustomList;
 class AdBlockSubscription;
 class AdBlockUrlInterceptor;
-
-class QWebEngineNewWindowRequest;
 
 struct AdBlockedRequest
 {
@@ -73,8 +72,7 @@ public:
     AdBlockSubscription* subscriptionByName(const QString &name) const;
     QList<AdBlockSubscription*> subscriptions() const;
 
-    bool block(QWebEngineUrlRequestInfo &request, QString &ruleFilter, QString &ruleSubscription, QUrl &rewriteUrl);
-    bool block(QWebEngineNewWindowRequest &request);
+    bool block(AdBlockNeworkRequest &request, QString &ruleFilter, QString &ruleSubscription, QUrl &rewriteUrl);
 
     QVector<AdBlockedRequest> blockedRequestsForUrl(const QUrl &url) const;
     void clearBlockedRequestsForUrl(const QUrl &url);

@@ -18,6 +18,7 @@
 #include "adblockmanager.h"
 #include "adblockdialog.h"
 #include "adblockmatcher.h"
+#include "adblocknetworkrequest.h"
 #include "adblocksubscription.h"
 #include "adblockurlinterceptor.h"
 #include "datapaths.h"
@@ -37,7 +38,6 @@
 #include <QUrlQuery>
 #include <QMutexLocker>
 #include <QSaveFile>
-#include <QWebEngineNewWindowRequest>
 
 //#define ADBLOCK_DEBUG
 
@@ -100,7 +100,7 @@ QList<AdBlockSubscription*> AdBlockManager::subscriptions() const
     return m_subscriptions;
 }
 
-bool AdBlockManager::block(QWebEngineUrlRequestInfo &request, QString &ruleFilter, QString &ruleSubscription, QUrl &rewriteUrl)
+bool AdBlockManager::block(AdBlockNeworkRequest &request, QString &ruleFilter, QString &ruleSubscription, QUrl &rewriteUrl)
 {
     QMutexLocker locker(&m_mutex);
 
@@ -132,38 +132,6 @@ bool AdBlockManager::block(QWebEngineUrlRequestInfo &request, QString &ruleFilte
     }
 
 #ifdef ADBLOCK_DEBUG
-    qDebug() << timer.elapsed() << request.requestUrl();
-#endif
-
-    return blockedRule;
-}
-
-bool AdBlockManager::block(QWebEngineNewWindowRequest &request)
-{
-    QMutexLocker locker(&m_mutex);
-
-    if (!isEnabled()) {
-        return false;
-    }
-
-#ifdef ADBLOCK_DEBUG
-    QElapsedTimer timer;
-    timer.start();
-#endif
-    const QString urlString = QString::fromUtf8(request.requestedUrl().toEncoded().toLower());
-    const QString urlDomain = request.requestedUrl().host().toLower();
-    const QString urlScheme = request.requestedUrl().scheme().toLower();
-
-    if (!canRunOnScheme(urlScheme)) {
-        return false;
-    }
-
-    const AdBlockRule* blockedRule = m_matcher->match(request, urlDomain, urlString);
-
-#ifdef ADBLOCK_DEBUG
-    if (blockedRule) {
-        qDebug() << "BLOCKED: " << timer.elapsed() << blockedRule->filter() << request.requestUrl();
-    }
     qDebug() << timer.elapsed() << request.requestUrl();
 #endif
 

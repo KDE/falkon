@@ -18,6 +18,7 @@
 
 #include "adblockplugin.h"
 #include "adblockmanager.h"
+#include "adblocknetworkrequest.h"
 #include "adblockicon.h"
 #include "adblockscripts.h"
 #include "adblockresourceschemehandler.h"
@@ -150,8 +151,9 @@ bool AdBlockPlugin::newWindowRequested(WebPage* page, QWebEngineNewWindowRequest
     QString ruleSubscription;
     QUrl rewriteUrl;
     AdBlockManager *manager = AdBlockManager::instance();
+    AdBlockNeworkRequest adBlockRequest = AdBlockNeworkRequest(request);
 
-    if (manager->block(request)) {
+    if (manager->block(adBlockRequest, ruleFilter, ruleSubscription, rewriteUrl)) {
         return false;
     }
 

@@ -45,6 +45,7 @@
  */
 
 #include "adblockrule.h"
+#include "adblocknetworkrequest.h"
 #include "adblocksubscription.h"
 #include "qztools.h"
 
@@ -52,7 +53,6 @@
 #include <QString>
 #include <QWebEnginePage>
 #include <QWebEngineUrlRequestInfo>
-#include <QWebEngineNewWindowRequest>
 
 /* TODO Qt6 Replace with PUBLIC API */
 #include <QtCore/private/qurl_p.h>
@@ -263,7 +263,7 @@ bool AdBlockRule::urlMatch(const QUrl &url) const
     return stringMatch(domain, encodedUrl);
 }
 
-bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &encodedUrl) const
+bool AdBlockRule::networkMatch(const AdBlockNeworkRequest &request, const QString &domain, const QString &encodedUrl) const
 {
     if (m_type == CssRule || !m_isEnabled || m_isInternalDisabled) {
         return false;
@@ -279,33 +279,6 @@ bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QS
 
         // Check third-party restriction
         if (hasOption(ThirdPartyOption) && !matchThirdParty(request)) {
-            return false;
-        }
-
-        // Check type restrictions
-        if (((m_exceptions | m_options) & TypeOptions) && !matchType(request))
-            return false;
-    }
-
-    return matched;
-}
-
-bool AdBlockRule::networkMatch(const QWebEngineNewWindowRequest &request, const QString &domain, const QString &encodedUrl) const
-{
-    if (m_type == CssRule || !m_isEnabled || m_isInternalDisabled) {
-        return false;
-    }
-
-    bool matched = stringMatch(domain, encodedUrl);
-
-    if (matched) {
-        // Check domain restrictions
-        if (hasOption(DomainRestrictedOption) && !matchDomain(request.requestedUrl().host())) {
-            return false;
-        }
-
-        // Check third-party restriction
-        if (hasOption(ThirdPartyOption)) {
             return false;
         }
 
@@ -359,7 +332,7 @@ bool AdBlockRule::matchDomain(const QString &domain) const
     return false;
 }
 
-bool AdBlockRule::matchThirdParty(const QWebEngineUrlRequestInfo &request) const
+bool AdBlockRule::matchThirdParty(const AdBlockNeworkRequest &request) const
 {
     // Third-party matching should be performed on second-level domains
     const QString firstPartyHost = toSecondLevelDomain(request.firstPartyUrl());
@@ -370,72 +343,70 @@ bool AdBlockRule::matchThirdParty(const QWebEngineUrlRequestInfo &request) const
     return hasException(ThirdPartyOption) ? !match : match;
 }
 
-bool AdBlockRule::matchType(const QWebEngineUrlRequestInfo &request) const
+bool AdBlockRule::matchType(const AdBlockNeworkRequest &request) const
 {
     RuleOption type;
-    switch (request.resourceType()) {
-    case QWebEngineUrlRequestInfo::ResourceTypeMainFrame:
-        type = DocumentOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypeSubFrame:
-        type = SubdocumentOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypeStylesheet:
-        type = StyleSheetOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypeScript:
-        type = ScriptOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypeImage:
-        type = ImageOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypeFontResource:
-        type = FontOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypeObject:
-        type = ObjectOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypeMedia:
-        type = MediaOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypeXhr:
-        type = XMLHttpRequestOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypePing:
-        type = PingOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypePluginResource:
-        type = ObjectSubrequestOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypeWebSocket:
-        type = WebSocketOption;
-        break;
-    case QWebEngineUrlRequestInfo::ResourceTypeSubResource:
-    case QWebEngineUrlRequestInfo::ResourceTypeWorker:
-    case QWebEngineUrlRequestInfo::ResourceTypeSharedWorker:
-    case QWebEngineUrlRequestInfo::ResourceTypePrefetch:
-    case QWebEngineUrlRequestInfo::ResourceTypeFavicon:
-    case QWebEngineUrlRequestInfo::ResourceTypeServiceWorker:
-    case QWebEngineUrlRequestInfo::ResourceTypeCspReport:
-    case QWebEngineUrlRequestInfo::ResourceTypeNavigationPreloadMainFrame:
-    case QWebEngineUrlRequestInfo::ResourceTypeNavigationPreloadSubFrame:
-    case QWebEngineUrlRequestInfo::ResourceTypeUnknown:
-    default:
-        type = OtherOption;
-        break;
+
+    if (request.requestType() == AdBlockNeworkRequest::NetworkRequest) {
+        switch (request.resourceType()) {
+        case QWebEngineUrlRequestInfo::ResourceTypeMainFrame:
+            type = DocumentOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypeSubFrame:
+            type = SubdocumentOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypeStylesheet:
+            type = StyleSheetOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypeScript:
+            type = ScriptOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypeImage:
+            type = ImageOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypeFontResource:
+            type = FontOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypeObject:
+            type = ObjectOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypeMedia:
+            type = MediaOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypeXhr:
+            type = XMLHttpRequestOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypePing:
+            type = PingOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypePluginResource:
+            type = ObjectSubrequestOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypeWebSocket:
+            type = WebSocketOption;
+            break;
+        case QWebEngineUrlRequestInfo::ResourceTypeSubResource:
+        case QWebEngineUrlRequestInfo::ResourceTypeWorker:
+        case QWebEngineUrlRequestInfo::ResourceTypeSharedWorker:
+        case QWebEngineUrlRequestInfo::ResourceTypePrefetch:
+        case QWebEngineUrlRequestInfo::ResourceTypeFavicon:
+        case QWebEngineUrlRequestInfo::ResourceTypeServiceWorker:
+        case QWebEngineUrlRequestInfo::ResourceTypeCspReport:
+        case QWebEngineUrlRequestInfo::ResourceTypeNavigationPreloadMainFrame:
+        case QWebEngineUrlRequestInfo::ResourceTypeNavigationPreloadSubFrame:
+        case QWebEngineUrlRequestInfo::ResourceTypeUnknown:
+        default:
+            type = OtherOption;
+            break;
+        }
     }
-    if (!m_exceptions)
-        return m_options.testFlag(type);
-    return !m_exceptions.testFlag(type);
-}
+    else {
+        type = PopupOption;
+    }
 
-bool AdBlockRule::matchType(const QWebEngineNewWindowRequest &request) const
-{
-    Q_UNUSED(request)
-
-    RuleOption type = PopupOption;
-    if (!m_exceptions)
+    if (!m_exceptions) {
         return m_options.testFlag(type);
+    }
     return !m_exceptions.testFlag(type);
 }
 

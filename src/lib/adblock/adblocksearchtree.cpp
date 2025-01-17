@@ -15,11 +15,11 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
+
+#include "adblocknetworkrequest.h"
 #include "adblocksearchtree.h"
 #include "adblockrule.h"
 
-#include <QWebEngineUrlRequestInfo>
-#include <QWebEngineNewWindowRequest>
 
 AdBlockSearchTree::AdBlockSearchTree()
     : m_root(new Node)
@@ -69,7 +69,7 @@ bool AdBlockSearchTree::add(const AdBlockRule* rule)
     return true;
 }
 
-const AdBlockRule* AdBlockSearchTree::find(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &urlString) const
+const AdBlockRule* AdBlockSearchTree::find(const AdBlockNeworkRequest &request, const QString &domain, const QString &urlString) const
 {
     int len = urlString.size();
 
@@ -89,61 +89,7 @@ const AdBlockRule* AdBlockSearchTree::find(const QWebEngineUrlRequestInfo &reque
     return nullptr;
 }
 
-const AdBlockRule* AdBlockSearchTree::find(const QWebEngineNewWindowRequest &request, const QString &domain, const QString &urlString) const
-{
-    int len = urlString.size();
-
-    if (len <= 0) {
-        return nullptr;
-    }
-
-    const QChar* string = urlString.constData();
-
-    for (int i = 0; i < len; ++i) {
-        const AdBlockRule* rule = prefixSearch(request, domain, urlString, string++, len - i);
-        if (rule) {
-            return rule;
-        }
-    }
-
-    return nullptr;
-}
-
-const AdBlockRule* AdBlockSearchTree::prefixSearch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &urlString, const QChar* string, int len) const
-{
-    if (len <= 0) {
-        return nullptr;
-    }
-
-    QChar c = string[0];
-
-    Node* node = m_root->children.value(c);
-    if (!node) {
-        return nullptr;
-    }
-
-    for (int i = 1; i < len; ++i) {
-        const QChar c = (++string)[0];
-
-        if (node->rule && node->rule->networkMatch(request, domain, urlString)) {
-            return node->rule;
-        }
-
-        node = node->children.value(c);
-        if (!node) {
-            return nullptr;
-        }
-    }
-
-    if (node->rule && node->rule->networkMatch(request, domain, urlString)) {
-        return node->rule;
-    }
-
-    return nullptr;
-}
-
-
-const AdBlockRule* AdBlockSearchTree::prefixSearch(const QWebEngineNewWindowRequest &request, const QString &domain, const QString &urlString, const QChar* string, int len) const
+const AdBlockRule* AdBlockSearchTree::prefixSearch(const AdBlockNeworkRequest &request, const QString &domain, const QString &urlString, const QChar* string, int len) const
 {
     if (len <= 0) {
         return nullptr;
