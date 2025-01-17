@@ -16,8 +16,8 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 
-#include "adblocknetworkrequest.h"
 #include "adblocksearchtree.h"
+#include "adblocknetworkrequest.h"
 #include "adblockrule.h"
 
 
