@@ -554,7 +554,7 @@ void WebPage::onNewWindowRequested(QWebEngineNewWindowRequest &request)
         // else fallthrough
 
     case QWebEngineNewWindowRequest::InNewTab:
-        request.openIn(createTab(Qz::NT_CleanNotSelectedTab));
+        request.openIn(createTab(Qz::NT_CleanSelectedTab));
         break;
 
     case QWebEngineNewWindowRequest::InNewBackgroundTab:
