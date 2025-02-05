@@ -112,6 +112,13 @@ LocationBar::LocationBar(QWidget *parent)
     m_goIcon->setVisible(qzSettings->alwaysShowGoIcon);
     m_autofillIcon->hide();
 
+    auto inputMethodFlags = Qt::InputMethodHint::ImhNoAutoUppercase
+                          | Qt::InputMethodHint::ImhUrlCharactersOnly;
+    if (mApp->isPrivate()) {
+        inputMethodFlags |= Qt::InputMethodHint::ImhSensitiveData;
+    }
+    setInputMethodHints(inputMethodFlags);
+
     QTimer::singleShot(0, this, &LocationBar::updatePlaceHolderText);
 }
 

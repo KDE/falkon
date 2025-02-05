@@ -25,6 +25,9 @@
      </item>
      <item>
       <widget class="QLineEdit" name="urlEdit">
+       <property name="inputMethodHints">
+        <set>Qt::InputMethodHint::ImhNoAutoUppercase|Qt::InputMethodHint::ImhUrlCharactersOnly</set>
+       </property>
        <property name="placeholderText">
         <string>https://kde.org</string>
        </property>

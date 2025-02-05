@@ -62,6 +62,10 @@ BrowsingLibrary::BrowsingLibrary(BrowserWindow* window, QWidget* parent)
     m->addAction(tr("Export Bookmarks..."), this, &BrowsingLibrary::exportBookmarks);
     ui->importExport->setMenu(m);
 
+    if (mApp->isPrivate()) {
+        ui->searchLine->setInputMethodHints(Qt::InputMethodHint::ImhSensitiveData);
+    }
+
     connect(ui->tabs, &FancyTabWidget::CurrentChanged, ui->searchLine, &QLineEdit::clear);
     connect(ui->searchLine, &QLineEdit::textChanged, this, &BrowsingLibrary::search);
 

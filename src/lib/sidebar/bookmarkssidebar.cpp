@@ -37,6 +37,10 @@ BookmarksSidebar::BookmarksSidebar(BrowserWindow* window, QWidget* parent)
     ui->setupUi(this);
     ui->tree->setViewType(BookmarksTreeView::BookmarksSidebarViewType);
 
+    if (mApp->isPrivate()) {
+        ui->search->setInputMethodHints(Qt::InputMethodHint::ImhSensitiveData);
+    }
+
     connect(ui->tree, &BookmarksTreeView::bookmarkActivated, this, &BookmarksSidebar::bookmarkActivated);
     connect(ui->tree, &BookmarksTreeView::bookmarkCtrlActivated, this, &BookmarksSidebar::bookmarkCtrlActivated);
     connect(ui->tree, &BookmarksTreeView::bookmarkShiftActivated, this, &BookmarksSidebar::bookmarkShiftActivated);

@@ -98,6 +98,10 @@ WebSearchBar::WebSearchBar(BrowserWindow* window)
     editAction(PasteAndGo)->setIcon(QIcon::fromTheme(QSL("edit-paste")));
     connect(editAction(PasteAndGo), &QAction::triggered, this, &WebSearchBar::pasteAndGo);
 
+    if (mApp->isPrivate()) {
+        setInputMethodHints(Qt::InputMethodHint::ImhSensitiveData);
+    }
+
     QTimer::singleShot(0, this, &WebSearchBar::setupEngines);
 }
 

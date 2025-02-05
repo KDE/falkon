@@ -36,6 +36,10 @@ HistorySideBar::HistorySideBar(BrowserWindow* window, QWidget* parent)
     ui->setupUi(this);
     ui->historyTree->setViewType(HistoryTreeView::HistorySidebarViewType);
 
+    if (mApp->isPrivate()) {
+        ui->search->setInputMethodHints(Qt::InputMethodHint::ImhSensitiveData);
+    }
+
     connect(ui->historyTree, &HistoryTreeView::urlActivated, this, &HistorySideBar::urlActivated);
     connect(ui->historyTree, &HistoryTreeView::urlCtrlActivated, this, &HistorySideBar::urlCtrlActivated);
     connect(ui->historyTree, &HistoryTreeView::urlShiftActivated, this, &HistorySideBar::urlShiftActivated);

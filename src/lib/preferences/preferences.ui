@@ -202,7 +202,11 @@
                <number>0</number>
               </property>
               <item>
-               <widget class="QLineEdit" name="newTabUrl"/>
+               <widget class="QLineEdit" name="newTabUrl">
+                <property name="inputMethodHints">
+                 <set>Qt::InputMethodHint::ImhNoAutoUppercase|Qt::InputMethodHint::ImhUrlCharactersOnly</set>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="MacToolButton" name="newTabUseCurrent">
@@ -349,7 +353,11 @@
            <item row="2" column="2">
             <layout class="QHBoxLayout" name="horizontalLayout_2">
              <item>
-              <widget class="QLineEdit" name="homepage"/>
+              <widget class="QLineEdit" name="homepage">
+               <property name="inputMethodHints">
+                <set>Qt::InputMethodHint::ImhNoAutoUppercase|Qt::InputMethodHint::ImhUrlCharactersOnly</set>
+               </property>
+              </widget>
              </item>
              <item>
               <widget class="MacToolButton" name="useCurrentBut">
@@ -1509,7 +1517,11 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="proxyServer"/>
+                  <widget class="QLineEdit" name="proxyServer">
+                   <property name="inputMethodHints">
+                    <set>Qt::InputMethodHint::ImhNoAutoUppercase|Qt::InputMethodHint::ImhUrlCharactersOnly</set>
+                   </property>
+                  </widget>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_37">
@@ -1949,6 +1961,9 @@
              </item>
              <item row="1" column="1">
               <widget class="QLineEdit" name="externalDownArguments">
+               <property name="inputMethodHints">
+                <set>Qt::InputMethodHint::ImhNoAutoUppercase</set>
+               </property>
                <property name="placeholderText">
                 <string>Leave blank if unsure</string>
                </property>
