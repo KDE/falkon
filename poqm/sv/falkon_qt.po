@@ -2069,13 +2069,13 @@ msgctxt "LocationBar|"
 msgid "Paste And &Go"
 msgstr "Klistra in och &hämta"
 
-#: lib/navigation/locationbar.cpp:164
+#: lib/navigation/locationbar.cpp:171
 #, qt-format
 msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
 msgstr "Ange adress eller sök med %1"
 
-#: lib/navigation/locationbar.cpp:166
+#: lib/navigation/locationbar.cpp:173
 msgctxt "LocationBar|"
 msgid "Enter address"
 msgstr "Ange adress"
@@ -2215,23 +2215,23 @@ msgctxt "WebSearchBar|"
 msgid "Paste And &Search"
 msgstr "Klistra in och &sök"
 
-#: lib/navigation/websearchbar.cpp:123
+#: lib/navigation/websearchbar.cpp:127
 #, qt-format
 msgctxt "WebSearchBar|"
 msgid "Add %1 ..."
 msgstr "Lägg till %1..."
 
-#: lib/navigation/websearchbar.cpp:127
+#: lib/navigation/websearchbar.cpp:131
 msgctxt "WebSearchBar|"
 msgid "Manage Search Engines"
 msgstr "Hantera söktjänster"
 
-#: lib/navigation/websearchbar.cpp:257
+#: lib/navigation/websearchbar.cpp:261
 msgctxt "WebSearchBar|"
 msgid "Show suggestions"
 msgstr "Visa förslag"
 
-#: lib/navigation/websearchbar.cpp:262
+#: lib/navigation/websearchbar.cpp:266
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
 msgstr "Sök när söktjänst ändras"
@@ -4095,7 +4095,7 @@ msgstr ""
 "Är du säker på att du vill ta bort profilen \"%1\" permanent? Åtgärden kan "
 "inte ångras."
 
-#: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:241
+#: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Observera: Du kan inte ta bort aktiv profil."
@@ -4110,7 +4110,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2073
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2088
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Allmänt"
@@ -4175,262 +4175,262 @@ msgctxt "Preferences|"
 msgid "Other"
 msgstr "Annat"
 
-#: lib/preferences/preferences.ui:210 lib/preferences/preferences.ui:357
+#: lib/preferences/preferences.ui:214 lib/preferences/preferences.ui:365
 msgctxt "Preferences|"
 msgid "Use current"
 msgstr "Använd nuvarande"
 
-#: lib/preferences/preferences.ui:257
+#: lib/preferences/preferences.ui:261
 msgctxt "Preferences|"
 msgid "Create New"
 msgstr "Skapa ny"
 
-#: lib/preferences/preferences.ui:273
+#: lib/preferences/preferences.ui:277
 msgctxt "Preferences|"
 msgid "Delete"
 msgstr "Ta bort"
 
-#: lib/preferences/preferences.ui:299
+#: lib/preferences/preferences.ui:303
 msgctxt "Preferences|"
 msgid "<b>Launching</b>"
 msgstr "<b>Uppstart</b>"
 
-#: lib/preferences/preferences.ui:309
+#: lib/preferences/preferences.ui:313
 msgctxt "Preferences|"
 msgid "After launch: "
 msgstr "Vid start:"
 
-#: lib/preferences/preferences.ui:317
+#: lib/preferences/preferences.ui:321
 msgctxt "Preferences|"
 msgid "Open blank page"
 msgstr "Öppna tom sida"
 
-#: lib/preferences/preferences.ui:322 lib/preferences/preferences.ui:379
+#: lib/preferences/preferences.ui:326 lib/preferences/preferences.ui:387
 msgctxt "Preferences|"
 msgid "Open homepage"
 msgstr "Öppna hemsida"
 
-#: lib/preferences/preferences.ui:327 lib/preferences/preferences.ui:384
+#: lib/preferences/preferences.ui:331 lib/preferences/preferences.ui:392
 msgctxt "Preferences|"
 msgid "Open speed dial"
 msgstr "Öppna speed dial"
 
-#: lib/preferences/preferences.ui:332
+#: lib/preferences/preferences.ui:336
 msgctxt "Preferences|"
 msgid "Restore session"
 msgstr "Återställ session"
 
-#: lib/preferences/preferences.ui:337
+#: lib/preferences/preferences.ui:341
 msgctxt "Preferences|"
 msgid "Select session"
 msgstr "Välj session"
 
-#: lib/preferences/preferences.ui:345
+#: lib/preferences/preferences.ui:349
 msgctxt "Preferences|"
 msgid "Homepage: "
 msgstr "Hemsida:"
 
-#: lib/preferences/preferences.ui:366
+#: lib/preferences/preferences.ui:374
 msgctxt "Preferences|"
 msgid "On new tab: "
 msgstr "På ny flik:"
 
-#: lib/preferences/preferences.ui:374
+#: lib/preferences/preferences.ui:382
 msgctxt "Preferences|"
 msgid "Open blank tab"
 msgstr "Öppna tom flik"
 
-#: lib/preferences/preferences.ui:389
+#: lib/preferences/preferences.ui:397
 msgctxt "Preferences|"
 msgid "Open other page..."
 msgstr "Öppna annan sida..."
 
-#: lib/preferences/preferences.ui:397
+#: lib/preferences/preferences.ui:405
 msgctxt "Preferences|"
 msgid "<b>Profiles</b>"
 msgstr "<b>Profiler</b>"
 
-#: lib/preferences/preferences.ui:404
+#: lib/preferences/preferences.ui:412
 msgctxt "Preferences|"
 msgid "Startup profile:"
 msgstr "Uppstartsprofil:"
 
-#: lib/preferences/preferences.ui:411
+#: lib/preferences/preferences.ui:419
 msgctxt "Preferences|"
 msgid "Check for updates on start"
 msgstr "Leta efter uppdateringar vid start"
 
-#: lib/preferences/preferences.ui:418
+#: lib/preferences/preferences.ui:426
 msgctxt "Preferences|"
 msgid "Active profile:"
 msgstr "Aktiv profil:"
 
-#: lib/preferences/preferences.ui:432
+#: lib/preferences/preferences.ui:440
 msgctxt "Preferences|"
 msgid "Don't load tabs until selected"
 msgstr "Hämta inte flikar förrän de väljs"
 
-#: lib/preferences/preferences.ui:454
+#: lib/preferences/preferences.ui:462
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
 msgstr "Kontrollera om Falkon är standardwebbläsare vid start"
 
-#: lib/preferences/preferences.ui:464
+#: lib/preferences/preferences.ui:472
 msgctxt "Preferences|"
 msgid "Check Now"
 msgstr "Kontrollera nu"
 
-#: lib/preferences/preferences.ui:494
+#: lib/preferences/preferences.ui:502
 msgctxt "Preferences|"
 msgid "Themes"
 msgstr "Teman"
 
-#: lib/preferences/preferences.ui:516
+#: lib/preferences/preferences.ui:524
 msgctxt "Preferences|"
 msgid "Advanced options"
 msgstr "Avancerade alternativ"
 
-#: lib/preferences/preferences.ui:524
+#: lib/preferences/preferences.ui:532
 msgctxt "Preferences|"
 msgid "Show StatusBar on start"
 msgstr "Visa statusrad vid start"
 
-#: lib/preferences/preferences.ui:531
+#: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Show Bookmarks ToolBar on start"
 msgstr "Visa bokmärkesverktygsraden vid start"
 
-#: lib/preferences/preferences.ui:538
+#: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
 msgid "Show Navigation ToolBar on start"
 msgstr "Visa navigeringsverktygsraden vid start"
 
-#: lib/preferences/preferences.ui:545
+#: lib/preferences/preferences.ui:553
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
 msgstr "Aktivera snabb bokmärkesverktygsrad"
 
-#: lib/preferences/preferences.ui:567
+#: lib/preferences/preferences.ui:575
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>Webbläsarfönster</b>"
 
-#: lib/preferences/preferences.ui:615
+#: lib/preferences/preferences.ui:623
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "Flikbeteende"
 
-#: lib/preferences/preferences.ui:621
+#: lib/preferences/preferences.ui:629
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Dölj flikar när endast en är öppen"
 
-#: lib/preferences/preferences.ui:628
+#: lib/preferences/preferences.ui:636
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "Visa senaste flik när den aktiva fliken stängs"
 
-#: lib/preferences/preferences.ui:635
+#: lib/preferences/preferences.ui:643
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Öppna nya flikar efter den aktiva fliken"
 
-#: lib/preferences/preferences.ui:642
+#: lib/preferences/preferences.ui:650
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Öppna nya tomma flikar efter aktiv flik"
 
-#: lib/preferences/preferences.ui:649
+#: lib/preferences/preferences.ui:657
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Öppna extrafönster i flikar"
 
-#: lib/preferences/preferences.ui:656
+#: lib/preferences/preferences.ui:664
 msgctxt "Preferences|"
 msgid "Block automatic popups"
 msgstr "Blockera automatiska meddelanderutor"
 
-#: lib/preferences/preferences.ui:663
+#: lib/preferences/preferences.ui:671
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Byt alltid mellan flikar med mushjul"
 
-#: lib/preferences/preferences.ui:670
+#: lib/preferences/preferences.ui:678
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Byt automatiskt till en nyöppnad flik"
 
-#: lib/preferences/preferences.ui:677
+#: lib/preferences/preferences.ui:685
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Stäng inte fönster när sista fliken stängs"
 
-#: lib/preferences/preferences.ui:684
+#: lib/preferences/preferences.ui:692
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Fråga när flera flikar stängs"
 
-#: lib/preferences/preferences.ui:691
+#: lib/preferences/preferences.ui:699
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Visa knapp för stängda flikar"
 
-#: lib/preferences/preferences.ui:700
+#: lib/preferences/preferences.ui:708
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Visa stängningsknappar på inaktiva flikar:"
 
-#: lib/preferences/preferences.ui:708
+#: lib/preferences/preferences.ui:716
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Automatiskt"
 
-#: lib/preferences/preferences.ui:713
+#: lib/preferences/preferences.ui:721
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Alltid"
 
-#: lib/preferences/preferences.ui:718
+#: lib/preferences/preferences.ui:726
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Aldrig"
 
-#: lib/preferences/preferences.ui:758
+#: lib/preferences/preferences.ui:766
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Adressradens beteende"
 
-#: lib/preferences/preferences.ui:766
+#: lib/preferences/preferences.ui:774
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Förslag vid skrivning i adressraden:"
 
-#: lib/preferences/preferences.ui:780
+#: lib/preferences/preferences.ui:788
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Historik och bokmärken"
 
-#: lib/preferences/preferences.ui:785
+#: lib/preferences/preferences.ui:793
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Historik"
 
-#: lib/preferences/preferences.ui:790
+#: lib/preferences/preferences.ui:798
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Bokmärken"
 
-#: lib/preferences/preferences.ui:795
+#: lib/preferences/preferences.ui:803
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Ingenting"
 
-#: lib/preferences/preferences.ui:821
+#: lib/preferences/preferences.ui:829
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Aktivera förslag på plats"
 
-#: lib/preferences/preferences.ui:828
+#: lib/preferences/preferences.ui:836
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4438,371 +4438,371 @@ msgstr ""
 "Tryck på \"Skift\" för att inte byta flik utan läsa in webbadressen under "
 "aktuell flik"
 
-#: lib/preferences/preferences.ui:831
+#: lib/preferences/preferences.ui:839
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "Föreslå byte av flik om fullständig webbadress redan är inläst"
 
-#: lib/preferences/preferences.ui:838
+#: lib/preferences/preferences.ui:846
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Visa alltid gå-ikon"
 
-#: lib/preferences/preferences.ui:845
+#: lib/preferences/preferences.ui:853
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Visa zoombeteckning"
 
-#: lib/preferences/preferences.ui:852
+#: lib/preferences/preferences.ui:860
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Markera all text vid dubbelklick i adressraden"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:867
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Markera all text vid enkelklick i adressraden"
 
-#: lib/preferences/preferences.ui:866
+#: lib/preferences/preferences.ui:874
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Aktivera automatisk sökning från adressraden"
 
-#: lib/preferences/preferences.ui:873
+#: lib/preferences/preferences.ui:881
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Sök med standardsöktjänst"
 
-#: lib/preferences/preferences.ui:880
+#: lib/preferences/preferences.ui:888
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Visa sökförslag"
 
-#: lib/preferences/preferences.ui:887
+#: lib/preferences/preferences.ui:895
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr "Expandera förslagsruta till fönsterbredd"
 
-#: lib/preferences/preferences.ui:910
+#: lib/preferences/preferences.ui:918
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Visa inläsningsförlopp i adressrad"
 
-#: lib/preferences/preferences.ui:943
+#: lib/preferences/preferences.ui:951
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Fyll"
 
-#: lib/preferences/preferences.ui:948
+#: lib/preferences/preferences.ui:956
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Längst ner"
 
-#: lib/preferences/preferences.ui:953
+#: lib/preferences/preferences.ui:961
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Längst upp"
 
-#: lib/preferences/preferences.ui:961
+#: lib/preferences/preferences.ui:969
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Egen färg:"
 
-#: lib/preferences/preferences.ui:977
+#: lib/preferences/preferences.ui:985
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Välj färg"
 
-#: lib/preferences/preferences.ui:980 lib/preferences/preferences.ui:1334
-#: lib/preferences/preferences.ui:1868 lib/preferences/preferences.ui:1965
-#: lib/preferences/preferences.ui:2810
+#: lib/preferences/preferences.ui:988 lib/preferences/preferences.ui:1342
+#: lib/preferences/preferences.ui:1880 lib/preferences/preferences.ui:1980
+#: lib/preferences/preferences.ui:2825
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:987
+#: lib/preferences/preferences.ui:995
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Återställ"
 
-#: lib/preferences/preferences.ui:1038
+#: lib/preferences/preferences.ui:1046
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Webbinställningar"
 
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1054
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr ""
 "Aktivera programmeringsgränssnitt för insticksprogrammet Pepper (PPAPI)"
 
-#: lib/preferences/preferences.ui:1053
+#: lib/preferences/preferences.ui:1061
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Använd inbyggd PDF-visning (kräver PPAPI)"
 
-#: lib/preferences/preferences.ui:1060
+#: lib/preferences/preferences.ui:1068
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Tillåt Javaskript"
 
-#: lib/preferences/preferences.ui:1067
+#: lib/preferences/preferences.ui:1075
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Inkludera länkar i fokuskedjan"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1074
+#: lib/preferences/preferences.ui:1082
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Skriv ut elementbakgrund"
 
-#: lib/preferences/preferences.ui:1081
+#: lib/preferences/preferences.ui:1089
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Animerad rullning"
 
-#: lib/preferences/preferences.ui:1088
+#: lib/preferences/preferences.ui:1096
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Aktivera rymdnavigering"
 
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1103
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Använd egna rullningslister"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1110
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Inaktivera automatisk uppspelning av video"
 
-#: lib/preferences/preferences.ui:1109
+#: lib/preferences/preferences.ui:1117
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Förhindra att WebRTC läcker lokal IP-adress"
 
-#: lib/preferences/preferences.ui:1116
+#: lib/preferences/preferences.ui:1124
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Aktivera DNS-förhämtning"
 
-#: lib/preferences/preferences.ui:1123
+#: lib/preferences/preferences.ui:1131
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Aktivera skärmbild"
 
-#: lib/preferences/preferences.ui:1130
+#: lib/preferences/preferences.ui:1138
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Använd maskinvaruacceleration (kräver omstart)"
 
-#: lib/preferences/preferences.ui:1137
+#: lib/preferences/preferences.ui:1145
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Tillåt läsning från duk"
 
-#: lib/preferences/preferences.ui:1144
+#: lib/preferences/preferences.ui:1152
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr "Tvinga mörkt läge"
 
-#: lib/preferences/preferences.ui:1153
+#: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr "Föredra färgschema:"
 
-#: lib/preferences/preferences.ui:1188
+#: lib/preferences/preferences.ui:1196
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Mushjulet skrollar"
 
-#: lib/preferences/preferences.ui:1208
+#: lib/preferences/preferences.ui:1216
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "rader på sidan"
 
-#: lib/preferences/preferences.ui:1219
+#: lib/preferences/preferences.ui:1227
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Standardzoom på sidor:"
 
-#: lib/preferences/preferences.ui:1258
+#: lib/preferences/preferences.ui:1266
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Lokal lagring"
 
-#: lib/preferences/preferences.ui:1266
+#: lib/preferences/preferences.ui:1274
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Tillåt att nätverkscache lagras på hårddisken"
 
-#: lib/preferences/preferences.ui:1289
+#: lib/preferences/preferences.ui:1297
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Ta bort cache vid avslutning"
 
-#: lib/preferences/preferences.ui:1296
+#: lib/preferences/preferences.ui:1304
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Maximum:"
 
-#: lib/preferences/preferences.ui:1303
+#: lib/preferences/preferences.ui:1311
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1319
+#: lib/preferences/preferences.ui:1327
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Lagra cache i:"
 
-#: lib/preferences/preferences.ui:1347
+#: lib/preferences/preferences.ui:1355
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Tillåt att historik sparas"
 
-#: lib/preferences/preferences.ui:1354
+#: lib/preferences/preferences.ui:1362
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Ta bort historik vid avslutning"
 
-#: lib/preferences/preferences.ui:1377
+#: lib/preferences/preferences.ui:1385
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Tillåt lokal lagring av HTML5 webbinnehåll"
 
-#: lib/preferences/preferences.ui:1384
+#: lib/preferences/preferences.ui:1392
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Ta bort lokalt sparat HTML5 webbinnehåll vid avslutning"
 
-#: lib/preferences/preferences.ui:1410
+#: lib/preferences/preferences.ui:1418
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Ta bort nu"
 
-#: lib/preferences/preferences.ui:1449
+#: lib/preferences/preferences.ui:1457
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Proxyinställningar"
 
-#: lib/preferences/preferences.ui:1468
+#: lib/preferences/preferences.ui:1476
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Global proxyinställning"
 
-#: lib/preferences/preferences.ui:1491
+#: lib/preferences/preferences.ui:1499
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Manuell inställning"
 
-#: lib/preferences/preferences.ui:1501
+#: lib/preferences/preferences.ui:1509
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1506
+#: lib/preferences/preferences.ui:1514
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1517
+#: lib/preferences/preferences.ui:1529
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Port:"
 
-#: lib/preferences/preferences.ui:1538
+#: lib/preferences/preferences.ui:1550
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Användarnamn:"
 
-#: lib/preferences/preferences.ui:1548
+#: lib/preferences/preferences.ui:1560
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Lösenord:"
 
-#: lib/preferences/preferences.ui:1577
+#: lib/preferences/preferences.ui:1589
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Ingen proxy"
 
-#: lib/preferences/preferences.ui:1592
+#: lib/preferences/preferences.ui:1604
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Teckensnittsfamilerj</b>"
 
-#: lib/preferences/preferences.ui:1605
+#: lib/preferences/preferences.ui:1617
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Standard"
 
-#: lib/preferences/preferences.ui:1612
+#: lib/preferences/preferences.ui:1624
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Fast bredd"
 
-#: lib/preferences/preferences.ui:1622
+#: lib/preferences/preferences.ui:1634
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1632
+#: lib/preferences/preferences.ui:1644
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: lib/preferences/preferences.ui:1642
+#: lib/preferences/preferences.ui:1654
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Kursivt"
 
-#: lib/preferences/preferences.ui:1694
+#: lib/preferences/preferences.ui:1706
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasi"
 
-#: lib/preferences/preferences.ui:1701
+#: lib/preferences/preferences.ui:1713
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Teckenstorlek</b>"
 
-#: lib/preferences/preferences.ui:1710
+#: lib/preferences/preferences.ui:1722
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Fast teckenstorlek"
 
-#: lib/preferences/preferences.ui:1717
+#: lib/preferences/preferences.ui:1729
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Standardteckenstorlek"
 
-#: lib/preferences/preferences.ui:1744
+#: lib/preferences/preferences.ui:1756
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Minsta teckenstorlek"
 
-#: lib/preferences/preferences.ui:1751
+#: lib/preferences/preferences.ui:1763
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Minsta logiska teckenstorlek"
 
-#: lib/preferences/preferences.ui:1784
+#: lib/preferences/preferences.ui:1796
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Genvägar</b>"
 
-#: lib/preferences/preferences.ui:1791
+#: lib/preferences/preferences.ui:1803
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Byt till flikar med Alt + fliknummer"
 
-#: lib/preferences/preferences.ui:1798
+#: lib/preferences/preferences.ui:1810
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Läs in snabbnummer med Ctrl + snabbnummer"
 
-#: lib/preferences/preferences.ui:1805
+#: lib/preferences/preferences.ui:1817
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4811,12 +4811,12 @@ msgstr ""
 "Befintliga genvägar:<br/><b>1</b> - föregående flik<br/><b>2</b> - nästa "
 "flik<br/><b>/</b> - sök på sida"
 
-#: lib/preferences/preferences.ui:1808
+#: lib/preferences/preferences.ui:1820
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Använd genvägar med en tangent"
 
-#: lib/preferences/preferences.ui:1815
+#: lib/preferences/preferences.ui:1827
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4825,157 +4825,157 @@ msgstr ""
 "Om avmarkerad, förhindrar oavsiktlig avslutning av programmet om genvägen "
 "Ctrl-W avsågs."
 
-#: lib/preferences/preferences.ui:1818
+#: lib/preferences/preferences.ui:1830
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Stäng program med Ctrl-Q"
 
-#: lib/preferences/preferences.ui:1842
+#: lib/preferences/preferences.ui:1854
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Nerladdningsdestination</b>"
 
-#: lib/preferences/preferences.ui:1849
+#: lib/preferences/preferences.ui:1861
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Fråga efter nerladdningsdestination varje gång"
 
-#: lib/preferences/preferences.ui:1856
+#: lib/preferences/preferences.ui:1868
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Använd förinställd destination: "
 
-#: lib/preferences/preferences.ui:1906
+#: lib/preferences/preferences.ui:1918
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Nerladdningsinställningar</b>"
 
-#: lib/preferences/preferences.ui:1913
+#: lib/preferences/preferences.ui:1925
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Stäng nerladdningshanterare när nerladdning avslutas"
 
-#: lib/preferences/preferences.ui:1920
+#: lib/preferences/preferences.ui:1932
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Extern nerladdningshanterare</b>"
 
-#: lib/preferences/preferences.ui:1927
+#: lib/preferences/preferences.ui:1939
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Använd extern nerladdningshanterare"
 
-#: lib/preferences/preferences.ui:1939
+#: lib/preferences/preferences.ui:1951
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Körbar fil:"
 
-#: lib/preferences/preferences.ui:1946
+#: lib/preferences/preferences.ui:1958
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Argument:"
 
-#: lib/preferences/preferences.ui:1953
+#: lib/preferences/preferences.ui:1968
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Lämna tom om du är osäker"
 
-#: lib/preferences/preferences.ui:1974
+#: lib/preferences/preferences.ui:1989
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> ersätts med webbadress som ska laddas ner"
 
-#: lib/preferences/preferences.ui:2000
+#: lib/preferences/preferences.ui:2015
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Autofyll-alternativ</b>"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2022
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Tillåt att lösenord lagras på sidor"
 
-#: lib/preferences/preferences.ui:2058
+#: lib/preferences/preferences.ui:2073
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Komplettera automatiskt lösenord för platser"
 
-#: lib/preferences/preferences.ui:2079
+#: lib/preferences/preferences.ui:2094
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Hantera kakor"
 
-#: lib/preferences/preferences.ui:2092
+#: lib/preferences/preferences.ui:2107
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Kakhanterare"
 
-#: lib/preferences/preferences.ui:2115
+#: lib/preferences/preferences.ui:2130
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>Javascript</b>"
 
-#: lib/preferences/preferences.ui:2128
+#: lib/preferences/preferences.ui:2143
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "Alternativ för Javascript"
 
-#: lib/preferences/preferences.ui:2135
+#: lib/preferences/preferences.ui:2150
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Skicka Följ-inte instruktioner till servrar"
 
-#: lib/preferences/preferences.ui:2142
+#: lib/preferences/preferences.ui:2157
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Kakor</b>"
 
-#: lib/preferences/preferences.ui:2168
+#: lib/preferences/preferences.ui:2183
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "Hantera integritetsalternativ för Javascript"
 
-#: lib/preferences/preferences.ui:2175
+#: lib/preferences/preferences.ui:2190
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Övrigt</b>"
 
-#: lib/preferences/preferences.ui:2196
+#: lib/preferences/preferences.ui:2211
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "Rättigheter för HTML5"
 
-#: lib/preferences/preferences.ui:2206
+#: lib/preferences/preferences.ui:2221
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Platsinställningar"
 
-#: lib/preferences/preferences.ui:2238
+#: lib/preferences/preferences.ui:2253
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Tiden löper ut:"
 
-#: lib/preferences/preferences.ui:2251
+#: lib/preferences/preferences.ui:2266
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " sekunder"
 
-#: lib/preferences/preferences.ui:2273
+#: lib/preferences/preferences.ui:2288
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Underrättelser</b>"
 
-#: lib/preferences/preferences.ui:2296
+#: lib/preferences/preferences.ui:2311
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Använd systemets egna underrättelser (endast Linux)"
 
-#: lib/preferences/preferences.ui:2303
+#: lib/preferences/preferences.ui:2318
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Använd inte underrättelser"
 
-#: lib/preferences/preferences.ui:2326
+#: lib/preferences/preferences.ui:2341
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -4984,17 +4984,17 @@ msgstr ""
 "<b>Observera: </b>Du kan ändra skärmunderrättelsens placering genom att dra "
 "runt den på skärmen."
 
-#: lib/preferences/preferences.ui:2352
+#: lib/preferences/preferences.ui:2367
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Använd skärmunderrättelser"
 
-#: lib/preferences/preferences.ui:2359
+#: lib/preferences/preferences.ui:2374
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Förhandsgranskning"
 
-#: lib/preferences/preferences.ui:2424
+#: lib/preferences/preferences.ui:2439
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -5003,92 +5003,92 @@ msgstr ""
 "För mer information om stavningskontroll, se <a href=\"https://userbase.kde."
 "org/Falkon#Spell_Check\">Wiki</a>."
 
-#: lib/preferences/preferences.ui:2466
+#: lib/preferences/preferences.ui:2481
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Alternativ för stavningskontroll</b>"
 
-#: lib/preferences/preferences.ui:2473
+#: lib/preferences/preferences.ui:2488
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Aktivera stavningskontroll"
 
-#: lib/preferences/preferences.ui:2480
+#: lib/preferences/preferences.ui:2495
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Språkkataloger</b>"
 
-#: lib/preferences/preferences.ui:2531
+#: lib/preferences/preferences.ui:2546
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Inga språk hittades"
 
-#: lib/preferences/preferences.ui:2560
+#: lib/preferences/preferences.ui:2575
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Hantering av protokollhanterare"
 
-#: lib/preferences/preferences.ui:2600
+#: lib/preferences/preferences.ui:2615
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Hantering av söktjänster"
 
-#: lib/preferences/preferences.ui:2622
+#: lib/preferences/preferences.ui:2637
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Användarens stilmall</b>"
 
-#: lib/preferences/preferences.ui:2629
+#: lib/preferences/preferences.ui:2644
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Hantera söktjänster</b>"
 
-#: lib/preferences/preferences.ui:2641
+#: lib/preferences/preferences.ui:2656
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "Hantera egna scheman"
 
-#: lib/preferences/preferences.ui:2666
+#: lib/preferences/preferences.ui:2681
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Språk"
 
-#: lib/preferences/preferences.ui:2688
+#: lib/preferences/preferences.ui:2703
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Föredraget språk för hemsidor</b>"
 
-#: lib/preferences/preferences.ui:2713
+#: lib/preferences/preferences.ui:2728
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Certifikatundantagshanterare"
 
-#: lib/preferences/preferences.ui:2735
+#: lib/preferences/preferences.ui:2750
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Ändra webbläsaridentifikation</b>"
 
-#: lib/preferences/preferences.ui:2760
+#: lib/preferences/preferences.ui:2775
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Hantering av webbläsaridentifiering"
 
-#: lib/preferences/preferences.ui:2782
+#: lib/preferences/preferences.ui:2797
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Stilmall som automatiskt läses in för alla webbplatser: "
 
-#: lib/preferences/preferences.ui:2819
+#: lib/preferences/preferences.ui:2834
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Hantera protokollhanterare</b>"
 
-#: lib/preferences/preferences.ui:2826
+#: lib/preferences/preferences.ui:2841
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Certifikathanterare</b>"
 
-#: lib/preferences/preferences.ui:2877
+#: lib/preferences/preferences.ui:2892
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Egen schemahanterare"
@@ -5154,25 +5154,25 @@ msgid "Browse"
 msgstr "Bläddra"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:36
-#: lib/preferences/sitesettingsbrowsedialog.ui:96
+#: lib/preferences/sitesettingsbrowsedialog.ui:99
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
 msgstr "Fråga"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:37
-#: lib/preferences/sitesettingsbrowsedialog.ui:103
+#: lib/preferences/sitesettingsbrowsedialog.ui:106
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Tillåt"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:38
-#: lib/preferences/sitesettingsbrowsedialog.ui:110
+#: lib/preferences/sitesettingsbrowsedialog.ui:113
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Neka"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:39
-#: lib/preferences/sitesettingsbrowsedialog.ui:117
+#: lib/preferences/sitesettingsbrowsedialog.ui:120
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Förval"
@@ -5187,22 +5187,22 @@ msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
 msgstr "Webbadress:"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:29
+#: lib/preferences/sitesettingsbrowsedialog.ui:32
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
 msgstr "https://kde.org"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:48
+#: lib/preferences/sitesettingsbrowsedialog.ui:51
 msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
 msgstr "Ställ in"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:65
+#: lib/preferences/sitesettingsbrowsedialog.ui:68
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Plats"
 
-#: lib/preferences/sitesettingsbrowsedialog.ui:70
+#: lib/preferences/sitesettingsbrowsedialog.ui:73
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Beteende"
@@ -5493,22 +5493,22 @@ msgctxt "SessionManagerDialog|"
 msgid "Switch to"
 msgstr "Byt till"
 
-#: lib/sidebar/bookmarkssidebar.cpp:109
+#: lib/sidebar/bookmarkssidebar.cpp:113
 msgctxt "BookmarksSidebar|"
 msgid "Open in new tab"
 msgstr "Öppna i ny flik"
 
-#: lib/sidebar/bookmarkssidebar.cpp:110
+#: lib/sidebar/bookmarkssidebar.cpp:114
 msgctxt "BookmarksSidebar|"
 msgid "Open in new window"
 msgstr "Öppna i nytt fönster"
 
-#: lib/sidebar/bookmarkssidebar.cpp:111
+#: lib/sidebar/bookmarkssidebar.cpp:115
 msgctxt "BookmarksSidebar|"
 msgid "Open in new private window"
 msgstr "Öppna i nytt privat fönster"
 
-#: lib/sidebar/bookmarkssidebar.cpp:114
+#: lib/sidebar/bookmarkssidebar.cpp:118
 msgctxt "BookmarksSidebar|"
 msgid "Delete"
 msgstr "Ta bort"
@@ -5518,22 +5518,22 @@ msgctxt "BookmarksSideBar|"
 msgid "Search..."
 msgstr "Sök..."
 
-#: lib/sidebar/historysidebar.cpp:92
+#: lib/sidebar/historysidebar.cpp:96
 msgctxt "HistorySideBar|"
 msgid "Open in new tab"
 msgstr "Öppna under ny flik"
 
-#: lib/sidebar/historysidebar.cpp:93
+#: lib/sidebar/historysidebar.cpp:97
 msgctxt "HistorySideBar|"
 msgid "Open in new window"
 msgstr "Öppna i nytt fönster"
 
-#: lib/sidebar/historysidebar.cpp:94
+#: lib/sidebar/historysidebar.cpp:98
 msgctxt "HistorySideBar|"
 msgid "Open in new private window"
 msgstr "Öppna i nytt privat fönster"
 
-#: lib/sidebar/historysidebar.cpp:97
+#: lib/sidebar/historysidebar.cpp:101
 msgctxt "HistorySideBar|"
 msgid "Delete"
 msgstr "Ta bort"
