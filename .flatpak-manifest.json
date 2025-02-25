@@ -8,16 +8,16 @@
     "command": "falkon",
     "rename-icon": "falkon",
     "finish-args": [
+        "--device=dri",
+        "--own-name=org.mpris.MediaPlayer2.falkon.*",
         "--share=ipc",
         "--share=network",
         "--socket=fallback-x11",
-        "--socket=wayland",
         "--socket=pulseaudio",
-        "--device=dri",
+        "--socket=wayland",
         "--system-talk-name=org.freedesktop.GeoClue2",
         "--system-talk-name=org.freedesktop.UPower.*",
-        "--talk-name=org.kde.kwalletd5",
-        "--own-name=org.mpris.MediaPlayer2.falkon.*"
+        "--talk-name=org.kde.kwalletd5"
     ],
     "modules": [
         {
