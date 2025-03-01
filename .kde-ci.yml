@@ -11,3 +11,6 @@ Dependencies:
     'frameworks/kcrash': '@latest-kf6'
     'frameworks/kcoreaddons': '@latest-kf6'
     'frameworks/purpose': '@latest-kf6'
+
+Options:
+ require-passing-tests-on: ['@all']
