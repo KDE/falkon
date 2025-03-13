@@ -1,3 +1,27 @@
+Version 25.04.0
+    * Add input method hints to input fields
+    * Adblock: Add support for "rewrite" filter
+    * Adblock: Add support for remove rule with simple CSS selector
+    * AdBlock: Ignore inactive hiding rules
+    * Adblock: Add support for "websocket" option
+    * AdblockDialog: Rewrite the treeview backend
+    * AdblockDialog: Apply filter when tab changes
+    * Show the URL of bookmark and history items in statusbar when hovered over in the menu or sidebar (BUG: 448238)
+    * Add option to block automatic popups
+    * Use global settings for WebRTC on internal pages (BUG: 497842)
+    * VerticalTabs: Override Alt+NUMBER keyboard shortcut
+    * StatusBarIcon-Network: Restore online status detection
+    * Open all URLs in command line arguments (BUG: 413195, Original author: abogical (Abdel-Rahman Abdel-Rahman))
+    * Remove obsolete XSS Auditing option, has no effect
+    * CookieManager: Fix crash when removing while/black list items
+    * Add "Preffer color scheme" option (BUG: 439891, 497331)
+    * Preferences: Fix editing per site user agent
+    * Use angle backend for GPU acceleration on Qt 6.9+ (BUG: 497691)
+    * Add missing default SiteSettings for intenal pages (BUG: 497463)
+    * Add option to add site permissions in preferences (BUG: 495391)
+    * KDEIntegration: Fix KIO scheme handler (BUG: 491247)
+    * Random fixes
+
 Version 24.12.0
     * Do not advertise ftp support to the system (BUG: 494222)
     * GreaseMonkey: Add support for context menu (BUG: 469855)
