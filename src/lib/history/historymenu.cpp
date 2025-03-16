@@ -105,7 +105,7 @@ void HistoryMenu::aboutToShow()
         connect(act, &QAction::triggered, this, &HistoryMenu::historyEntryActivated);
         connect(act, &Action::ctrlTriggered, this, &HistoryMenu::historyEntryCtrlActivated);
         connect(act, &Action::shiftTriggered, this, &HistoryMenu::historyEntryShiftActivated);
-        connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), [=]() {
+        connect(act, &QAction::hovered, [=]() {
             mApp->getWindow()->statusBar()->showMessage(url.toString());
         });
 

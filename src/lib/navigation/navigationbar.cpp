@@ -383,7 +383,7 @@ void NavigationBar::aboutToShowHistoryBackMenu()
             act->setData(i);
             connect(act, &QAction::triggered, this, &NavigationBar::loadHistoryIndex);
             connect(act, SIGNAL(ctrlTriggered()), this, SLOT(loadHistoryIndexInNewTab()));
-            connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), [=]() {
+            connect(act, &QAction::hovered, [=]() {
                 mApp->getWindow()->statusBar()->showMessage(item.url().toString());
             });
             m_menuBack->addAction(act);
@@ -422,7 +422,7 @@ void NavigationBar::aboutToShowHistoryNextMenu()
             act->setData(i);
             connect(act, &QAction::triggered, this, &NavigationBar::loadHistoryIndex);
             connect(act, SIGNAL(ctrlTriggered()), this, SLOT(loadHistoryIndexInNewTab()));
-            connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), [=]() {
+            connect(act, &QAction::hovered, [=]() {
                 mApp->getWindow()->statusBar()->showMessage(item.url().toString());
             });
             m_menuForward->addAction(act);
