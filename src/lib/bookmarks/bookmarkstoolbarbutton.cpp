@@ -22,6 +22,7 @@
 #include "bookmarks.h"
 #include "mainapplication.h"
 #include "enhancedmenu.h"
+#include "statusbar.h"
 
 #include <QStyle>
 #include <QPainter>
@@ -132,6 +133,9 @@ void BookmarksToolbarButton::createMenu()
 
     Menu* m = qobject_cast<Menu*>(menu());
     Q_ASSERT(m);
+    QObject::connect(m, &QMenu::aboutToHide, [=]() {
+        mApp->getWindow()->statusBar()->clearMessage();
+    });
 
     BookmarksTools::addFolderContentsToMenu(this, m, m_bookmark);
 }
@@ -260,12 +264,16 @@ void BookmarksToolbarButton::enterEvent(QEnterEvent* event)
 {
     QPushButton::enterEvent(event);
 
+    mApp->getWindow()->statusBar()->showMessage(m_bookmark->url().toString());
+
     update();
 }
 
 void BookmarksToolbarButton::leaveEvent(QEvent* event)
 {
     QPushButton::leaveEvent(event);
+
+    mApp->getWindow()->statusBar()->clearMessage();
 
     update();
 }

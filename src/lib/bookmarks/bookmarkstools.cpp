@@ -418,7 +418,7 @@ void BookmarksTools::addUrlToMenu(QObject* receiver, Menu* menu, BookmarkItem* b
     QObject::connect(act, SIGNAL(ctrlTriggered()), receiver, SLOT(bookmarkCtrlActivated()));
     QObject::connect(act, SIGNAL(shiftTriggered()), receiver, SLOT(bookmarkShiftActivated()));
 
-    QObject::connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), [=]() {
+    QObject::connect(act, &QAction::hovered, [=]() {
         mApp->getWindow()->statusBar()->showMessage(bookmark->url().toString());
     });
 
