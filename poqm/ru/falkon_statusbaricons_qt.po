@@ -4,12 +4,13 @@
 # Rustam Salakhutdinov <salahutd@gmail.com>, 2017.
 # Oleg Brezhnev <oleg-423@yandex.ru>, 2017.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2020-10-28 20:37+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2025-03-19 15:32+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +19,7 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 20.08.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: sbi_imagesicon.cpp:34
 msgctxt "SBI_ImagesIcon|"
@@ -85,12 +86,12 @@ msgstr "Управление параметрами JavaScript"
 #: sbi_networkicon.cpp:70
 msgctxt "SBI_NetworkIcon|"
 msgid "Proxy Configuration"
-msgstr "Конфигурация прокси"
+msgstr "Настройка прокси-сервера"
 
 #: sbi_networkicon.cpp:72
 msgctxt "SBI_NetworkIcon|"
 msgid "Select proxy"
-msgstr "Выберите прокси"
+msgstr "Выбор прокси-сервера"
 
 #: sbi_networkicon.cpp:86
 msgctxt "SBI_NetworkIcon|"
@@ -100,7 +101,7 @@ msgstr "Пусто"
 #: sbi_networkicon.cpp:90
 msgctxt "SBI_NetworkIcon|"
 msgid "Manage proxies"
-msgstr "Управление прокси"
+msgstr "Управление прокси-серверами"
 
 #: sbi_networkicon.cpp:103
 #, qt-format
@@ -109,55 +110,43 @@ msgid ""
 "Shows network status and manages proxy<br/><br/><b>Network:</b><br/>%1<br/"
 "><br/><b>Proxy:</b><br/>%2"
 msgstr ""
-"Показывать состояние сети и прокси<br/><br/><b>Сеть:</b><br/>%1<br/><br/"
-"><b>Прокси:</b><br/>%2"
+"Показ состояния сети и управление прокси-сервером<br/><br/><b>Сеть:</b><br/>"
+"%1<br/><br/><b>Прокси-сервер:</b><br/>%2"
 
 #: sbi_networkicon.cpp:107
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Online"
-msgstr "Соединение"
+msgstr "Соединение активно (Интернет)"
 
 #: sbi_networkicon.cpp:110
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Site"
-msgstr "Соединение"
+msgstr "Соединение активно (сайт)"
 
 #: sbi_networkicon.cpp:113
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Connected - Local"
-msgstr "Соединение"
+msgstr "Соединение активно (локально)"
 
 #: sbi_networkicon.cpp:116
-#, fuzzy
-#| msgctxt "SBI_NetworkIcon|"
-#| msgid "Connected"
 msgctxt "SBI_NetworkIcon|"
 msgid "Disconnected"
-msgstr "Соединение"
+msgstr "Соединение прервано"
 
 #: sbi_networkicon.cpp:120
 msgctxt "SBI_NetworkIcon|"
 msgid "Unknown"
-msgstr ""
+msgstr "Неизвестно"
 
 #: sbi_networkicon.cpp:126
 msgctxt "SBI_NetworkIcon|"
 msgid "System proxy"
-msgstr "Системный прокси"
+msgstr "Системный прокси-сервер"
 
 #: sbi_networkicon.cpp:130
 msgctxt "SBI_NetworkIcon|"
 msgid "No proxy"
-msgstr "Без прокси"
+msgstr "Без прокси-сервера"
 
 #: sbi_networkicon.cpp:134
 msgctxt "SBI_NetworkIcon|"
@@ -167,37 +156,37 @@ msgstr "Пользовательский"
 #: sbi_networkicondialog.cpp:57 sbi_networkicondialog.ui:38
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Add proxy"
-msgstr "Добавить прокси"
+msgstr "Добавить прокси-сервер"
 
 #: sbi_networkicondialog.cpp:57
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Name of proxy:"
-msgstr "Имя прокси:"
+msgstr "Имя прокси-сервера:"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove current proxy"
-msgstr "Удалить текущий прокси"
+msgstr "Удалить текущий прокси-сервер"
 
 #: sbi_networkicondialog.cpp:70
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Are you sure you want to remove current proxy?"
-msgstr "Действительно удалить текущий прокси?"
+msgstr "Действительно удалить текущий прокси-сервер?"
 
 #: sbi_networkicondialog.ui:14
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Proxy Manager"
-msgstr "Управление прокси"
+msgstr "Диспетчер прокси-серверов"
 
 #: sbi_networkicondialog.ui:28
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Select proxy: "
-msgstr "Выберите прокси: "
+msgstr "Выбор прокси-сервера: "
 
 #: sbi_networkicondialog.ui:45
 msgctxt "SBI_NetworkIconDialog|"
 msgid "Remove proxy"
-msgstr "Удалить прокси"
+msgstr "Удалить прокси-сервер"
 
 #: sbi_networkicondialog.ui:69
 msgctxt "SBI_NetworkIconDialog|"
@@ -245,7 +234,7 @@ msgstr "Пароль:"
 #: sbi_proxywidget.ui:111
 msgctxt "SBI_ProxyWidget|"
 msgid "S&ystem proxy configuration"
-msgstr "&Системные параметры прокси"
+msgstr "&Настройка системного прокси-сервера"
 
 #: sbi_proxywidget.ui:118
 msgctxt "SBI_ProxyWidget|"
