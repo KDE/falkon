@@ -4,11 +4,11 @@
 # Rustam Salakhutdinov <salahutd@gmail.com>, 2017.
 # Oleg Brezhnev <oleg-423@yandex.ru>, 2017.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-10-28 15:36+0300\n"
+"PO-Revision-Date: 2025-03-19 17:12+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -222,7 +222,7 @@ msgstr "Пользовательские правила"
 #, qt-format
 msgctxt "AdBlockTreeModel|"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: lib/adblock/adblocktreewidget.cpp:88
 msgctxt "AdBlockTreeWidget|"
@@ -2312,73 +2312,74 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Сертификат не соответствует встроенным открытым ключам для имени хоста."
 
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Общее имя сертификата не соответствует имени хоста."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Сертификат недействителен на текущие дату и время."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "Сертификат не подписан доверенным центром."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Сертификат содержит ошибки."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
-msgstr ""
+msgstr "У сертификата нет механизма для определения того, был ли он отозван."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Для сертификата недоступна информация об отзыве."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "Сертификат отозван."
 
 #: lib/network/networkmanager.cpp:360
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "Сертификат недействителен."
 
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "Сертификат подписан с использованием слабого алгоритма подписи."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "Указанное в сертификате имя хоста не является уникальным."
 
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Сертификат содержит слабый ключ."
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
-msgstr ""
+msgstr "В сертификате заявлены имена DNS, нарушающие правила для имён."
 
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "У сертификата слишком большой срок действительности."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2386,6 +2387,9 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Для этого соединения требуется прозрачность сертификата, но сервер не "
+"предоставил соответствующую информацию, которая бы удовлетворяла условиям "
+"политики."
 
 #: lib/network/networkmanager.cpp:374
 msgctxt "NetworkManager|"
@@ -2393,22 +2397,25 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Известно, что этот сертификат используется для перехвата данных, "
+"выполняемого не владельцем устройства."
 
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Для соединения используется устаревшая версия SSL/TLS"
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr ""
+"Сертификат представляет собой устаревший сертификат Symantec, который более "
+"не действителен."
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Размер неизвестен"
+msgstr "Неизвестная ошибка"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3194,17 +3201,17 @@ msgstr "<b>Соединение зашифровано</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Любая ошибка сертификата <b>бессрочно</b> игнорируется."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Ошибка сертификата <b>временно</b> игнорируется."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Сертификат был отклонён."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3360,17 +3367,17 @@ msgstr "<b>Сайт %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Любая ошибка сертификата <b>бессрочно</b> игнорируется."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Ошибка сертификата <b>временно</b> игнорируется."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Сертификат был отклонён."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
@@ -3999,9 +4006,6 @@ msgid "Set as default"
 msgstr "Установить по умолчанию"
 
 #: lib/preferences/preferences.cpp:314
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Автоматически"
@@ -4009,12 +4013,12 @@ msgstr "Автоматически"
 #: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Светлая"
 
 #: lib/preferences/preferences.cpp:317
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Тёмная"
 
 #: lib/preferences/preferences.cpp:327
 #, qt-format
@@ -4349,7 +4353,7 @@ msgstr "Открывать всплывающие окна во вкладках
 #: lib/preferences/preferences.ui:664
 msgctxt "Preferences|"
 msgid "Block automatic popups"
-msgstr ""
+msgstr "Блокировать автоматические всплывающие панели"
 
 #: lib/preferences/preferences.ui:671
 msgctxt "Preferences|"
@@ -4608,7 +4612,7 @@ msgstr "Принудительно использовать тёмный реж�
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Предпочитаемая цветовая схема:"
 
 #: lib/preferences/preferences.ui:1196
 msgctxt "Preferences|"
@@ -4684,12 +4688,12 @@ msgstr "Удалить сейчас"
 #: lib/preferences/preferences.ui:1457
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
-msgstr "Прокси"
+msgstr "Настройка прокси-сервера"
 
 #: lib/preferences/preferences.ui:1476
 msgctxt "Preferences|"
 msgid "System proxy configuration"
-msgstr "Системные параметры прокси"
+msgstr "Настройка системного прокси-сервера"
 
 #: lib/preferences/preferences.ui:1499
 msgctxt "Preferences|"
@@ -4724,7 +4728,7 @@ msgstr "Пароль:"
 #: lib/preferences/preferences.ui:1589
 msgctxt "Preferences|"
 msgid "No proxy"
-msgstr "Без прокси"
+msgstr "Без прокси-сервера"
 
 #: lib/preferences/preferences.ui:1604
 msgctxt "Preferences|"
@@ -5186,9 +5190,6 @@ msgid "Site Permissions"
 msgstr "Разрешения сайта"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:22
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "Url:"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
 msgstr "URL-адрес:"
@@ -5196,12 +5197,12 @@ msgstr "URL-адрес:"
 #: lib/preferences/sitesettingsbrowsedialog.ui:32
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:51
 msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
-msgstr ""
+msgstr "Установить"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:68
 msgctxt "SiteSettingsBrowseDialog|"
@@ -5773,7 +5774,7 @@ msgstr "<b>Выдано для</b>"
 #: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
 msgctxt "CertificateInfoWidget|"
 msgid "Common Name (CN):"
-msgstr "Имя (И):"
+msgstr "Общее имя:"
 
 #: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
 msgctxt "CertificateInfoWidget|"
