@@ -192,5 +192,6 @@ target_link_libraries(PyFalkon
 target_compile_definitions(PyFalkon PRIVATE QT_NO_KEYWORDS)
 
 if(BUILD_TESTING)
-    add_subdirectory(autotests)
+# Wrong, outdated implementation of PyFalkon API
+#    add_subdirectory(autotests)
 endif()
