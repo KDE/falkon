@@ -1,11 +1,11 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the falkon package.
 #
-# Sveinn Felli <sv1@fellsnet.is>, 2017, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2017, 2022, 2023, 2024, 2025 Sveinn Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-04-15 11:22+0000\n"
+"PO-Revision-Date: 2025-03-24 11:52+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: is\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -218,7 +218,7 @@ msgstr "Sérsniðnar reglur"
 #, qt-format
 msgctxt "AdBlockTreeModel|"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: lib/adblock/adblocktreewidget.cpp:88
 msgctxt "AdBlockTreeWidget|"
@@ -2306,48 +2306,51 @@ msgstr ""
 #: lib/network/networkmanager.cpp:346
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Samheiti (CN) skilríkisins samsvarar ekki heiti hýsingar."
 
 #: lib/network/networkmanager.cpp:348
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Skilríkið er ekki gilt á þessari dags- og tímasetningu."
 
 #: lib/network/networkmanager.cpp:350
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
 msgstr ""
+"Skilríkið er ekki undirritað af neinni treystanlegri vottunarstöð (trusted "
+"Certificate Authority)."
 
 #: lib/network/networkmanager.cpp:352
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Skilríkið inniheldur villur."
 
 #: lib/network/networkmanager.cpp:354
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
 msgstr ""
+"Skilríkið hefur enga leið til að ákvarða hvort það hafi verið afturkallað."
 
 #: lib/network/networkmanager.cpp:356
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Upplýsingar varðandi afturköllun skilríkisins eru ekki tiltækar."
 
 #: lib/network/networkmanager.cpp:358
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "Skilríkið hefur verið afturkallað."
 
 #: lib/network/networkmanager.cpp:360
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "Skilríkið er ógilt."
 
 #: lib/network/networkmanager.cpp:362
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "Skírteinið er undirritað með veiku undirritunarreikniriti."
 
 #: lib/network/networkmanager.cpp:364
 msgctxt "NetworkManager|"
@@ -2357,7 +2360,7 @@ msgstr ""
 #: lib/network/networkmanager.cpp:366
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Skilríkið inniheldur veikan lykil."
 
 #: lib/network/networkmanager.cpp:368
 msgctxt "NetworkManager|"
@@ -2368,7 +2371,7 @@ msgstr ""
 #: lib/network/networkmanager.cpp:370
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Skilríkið er með gildistíma sem er of langur."
 
 #: lib/network/networkmanager.cpp:372
 msgctxt "NetworkManager|"
@@ -2387,7 +2390,7 @@ msgstr ""
 #: lib/network/networkmanager.cpp:376
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Tengingin notar úrelda útgáfu af SSL/TLS"
 
 #: lib/network/networkmanager.cpp:378
 msgctxt "NetworkManager|"
@@ -2395,12 +2398,9 @@ msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr ""
 
 #: lib/network/networkmanager.cpp:381
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Óþekkt stærð"
+msgstr "Óþekkt villa"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -3194,7 +3194,7 @@ msgstr ""
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Skilríki var hafnað."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3272,12 +3272,9 @@ msgid "Media"
 msgstr "Gagnamiðlar"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML5 heimildir"
+msgstr "Heimildir"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3325,9 +3322,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Forskoðun</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Sjálfgefið"
@@ -3335,20 +3329,14 @@ msgstr "Sjálfgefið"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Spyrja"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Leyfa"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Neita"
@@ -3372,7 +3360,7 @@ msgstr ""
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Skilríki var hafnað."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
@@ -3427,185 +3415,122 @@ msgid "More..."
 msgstr "Meira..."
 
 #: lib/other/sitesettingsmanager.cpp:324
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Endurstilla aðdráttarstig"
+msgstr "Aðdráttarstig"
 
 #: lib/other/sitesettingsmanager.cpp:326
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Vefkökur"
 
 #: lib/other/sitesettingsmanager.cpp:329 lib/other/sitesettingsmanager.cpp:354
 #: lib/other/sitesettingsmanager.cpp:394 lib/other/sitesettingsmanager.cpp:411
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Óþekkt stærð"
+msgstr "Óþekkt"
 
 #: lib/other/sitesettingsmanager.cpp:337
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Tilkynningar"
 
 #: lib/other/sitesettingsmanager.cpp:339
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
-msgstr "Hnattstaðsetningu"
+msgstr "Hnattstaðsetning"
 
 #: lib/other/sitesettingsmanager.cpp:341
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
-msgstr "Hljóðnema"
+msgstr "Hljóðnemi"
 
 #: lib/other/sitesettingsmanager.cpp:343
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Myndavél"
 
 #: lib/other/sitesettingsmanager.cpp:345
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
-msgstr "Hljóðnema og myndavél"
+msgstr "Hljóðnemi og myndavél"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Fela bendil"
+msgstr "Fela músarbendil"
 
 #: lib/other/sitesettingsmanager.cpp:349
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "Virkja skjáupptöku"
+msgstr "Skjámyndataka"
 
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Upptaka af skjá með hljóði"
 
 #: lib/other/sitesettingsmanager.cpp:362
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Endurlesa síðu"
+msgstr "Sjálfvirk hleðsla mynda"
 
 #: lib/other/sitesettingsmanager.cpp:365
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Leyfa JavaScript"
+msgstr "Virkja JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Opna sprettglugga"
+msgstr "JavaScript: Opna sprettglugga"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Fá aðgang að klippispjaldi"
+msgstr "JavaScript: Fá aðgang að klippispjaldi"
 
 #: lib/other/sitesettingsmanager.cpp:371
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Líma af klippispjaldi"
+msgstr "JavaScript: Líma af klippispjaldi"
 
 #: lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Virkja glugga"
+msgstr "JavaScript: Virkja glugga"
 
 #: lib/other/sitesettingsmanager.cpp:376
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
-msgstr "Geymt staðvært"
+msgstr "Staðbundin geymsla"
 
 #: lib/other/sitesettingsmanager.cpp:378
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&Fylla skjáinn"
+msgstr "Stuðningur við að fylla skjáinn"
 
 #: lib/other/sitesettingsmanager.cpp:380
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Keyra óöruggt efni"
 
 #: lib/other/sitesettingsmanager.cpp:382
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Gera óvirka sjálfvirka spilun myndskeiða"
+msgstr "Sjálfvirk spilun myndskeiða"
 
 #: lib/other/sitesettingsmanager.cpp:385
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Leyfa geymslu á vefkökum"
+msgstr "Leyfa lestur af myndfleti"
 
 #: lib/other/sitesettingsmanager.cpp:389
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Þvinga fram dökkan ham"
 
 #: lib/other/sitesettingsmanager.cpp:402
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Leyfa"
@@ -3613,20 +3538,14 @@ msgstr "Leyfa"
 #: lib/other/sitesettingsmanager.cpp:404
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Spyrja"
 
 #: lib/other/sitesettingsmanager.cpp:406
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Neita"
 
 #: lib/other/sitesettingsmanager.cpp:408
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Sjálfgefið"
@@ -4070,9 +3989,6 @@ msgid "Set as default"
 msgstr "Setja sem sjálfgefið"
 
 #: lib/preferences/preferences.cpp:314
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Sjálfvirkt"
@@ -4080,12 +3996,12 @@ msgstr "Sjálfvirkt"
 #: lib/preferences/preferences.cpp:316
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Ljóst"
 
 #: lib/preferences/preferences.cpp:317
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Dökkt"
 
 #: lib/preferences/preferences.cpp:327
 #, qt-format
@@ -4421,7 +4337,7 @@ msgstr "Opna sprettglugga í flipum"
 #: lib/preferences/preferences.ui:664
 msgctxt "Preferences|"
 msgid "Block automatic popups"
-msgstr ""
+msgstr "Loka á sjálfvirka sprettglugga"
 
 #: lib/preferences/preferences.ui:671
 msgctxt "Preferences|"
@@ -4670,22 +4586,19 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Nota vélbúnaðarhröðun (krefst endurræsingar)"
 
 #: lib/preferences/preferences.ui:1145
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Leyfa geymslu á vefkökum"
+msgstr "Leyfa lestur af myndfleti"
 
 #: lib/preferences/preferences.ui:1152
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Þvinga fram dökkan ham"
 
 #: lib/preferences/preferences.ui:1161
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Kjósa litastef:"
 
 #: lib/preferences/preferences.ui:1196
 msgctxt "Preferences|"
@@ -5021,12 +4934,9 @@ msgid "HTML5 Permissions"
 msgstr "HTML5 heimildir"
 
 #: lib/preferences/preferences.ui:2221
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Stillingar"
+msgstr "Stillingar vefsvæðis"
 
 #: lib/preferences/preferences.ui:2253
 msgctxt "Preferences|"
@@ -5227,58 +5137,40 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "Breytingar taka aðeins gildi eftir endurræsingu á Falkon."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "BookmarksExportDialog|"
-#| msgid "Choose..."
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Velja..."
+msgstr "Fletta"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:36
 #: lib/preferences/sitesettingsbrowsedialog.ui:99
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Spyrja"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:37
 #: lib/preferences/sitesettingsbrowsedialog.ui:106
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Leyfa"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:38
 #: lib/preferences/sitesettingsbrowsedialog.ui:113
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Neita"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:39
 #: lib/preferences/sitesettingsbrowsedialog.ui:120
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Sjálfgefið"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML5 heimildir"
+msgstr "Heimildir vefsvæðis"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:22
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "Url:"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
 msgstr "Slóð:"
@@ -5286,36 +5178,27 @@ msgstr "Slóð:"
 #: lib/preferences/sitesettingsbrowsedialog.ui:32
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:51
 msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
-msgstr ""
+msgstr "Setja"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:68
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Vefsvæði"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:73
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Hegðun"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "BookmarksExportDialog|"
-#| msgid "Choose..."
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Velja..."
+msgstr "Fletta"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
