@@ -416,9 +416,7 @@ void MainApplication::setChromiumFlags()
 
     if (Settings::globalSettings()->value("Web-Browser-Settings/hardwareAccel", false).toBool()) {
         chromium_flags.append(" --enable-oop-rasterization --enable-gpu-rasterization --enable-native-gpu-memory-buffers");
-#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 9, 0)
-        chromium_flags.append(" --use-gl=angle");
-#else
+#if QTWEBENGINECORE_VERSION < QT_VERSION_CHECK(6, 9, 0)
         chromium_flags.append(" --use-gl=desktop");
 #endif
         qputenv("QTWEBENGINE_CHROMIUM_FLAGS", chromium_flags);
