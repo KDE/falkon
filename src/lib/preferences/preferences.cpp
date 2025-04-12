@@ -489,7 +489,7 @@ Preferences::Preferences(BrowserWindow* window)
         dictionariesDirs.append(QDir::cleanPath(QCoreApplication::applicationDirPath() + QL1S("/../Frameworks/QtWebEngineCore.framework/Resources/qtwebengine_dictionaries")));
 #else
         dictionariesDirs.append(QDir::cleanPath(QCoreApplication::applicationDirPath() + QL1S("/qtwebengine_dictionaries")));
-        dictionariesDirs.append(QDir::cleanPath(QLibraryInfo::location(QLibraryInfo::DataPath) + QL1S("/qtwebengine_dictionaries")));
+        dictionariesDirs.append(QDir::cleanPath(QLibraryInfo::path(QLibraryInfo::DataPath) + QL1S("/qtwebengine_dictionaries")));
 #endif
     }
     dictionariesDirs.removeDuplicates();
