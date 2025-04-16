@@ -57,6 +57,7 @@
 #include "downloadsbutton.h"
 #include "tabmodel.h"
 #include "tabmrumodel.h"
+#include "idleinhibitor.h"
 
 #include <algorithm>
 
@@ -212,6 +213,13 @@ BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QList<QUrl> start
     connect(m_hideNavigationTimer, &QTimer::timeout, this, &BrowserWindow::hideNavigationSlot);
 
     connect(mApp, &MainApplication::settingsReloaded, this, &BrowserWindow::loadSettings);
+    connect(this, &BrowserWindow::aboutToClose, this, [&](){
+        qDebug() << "Removing tabs due to window closure";
+        const auto tabs = m_tabWidget->allTabs();
+        for (const auto tab : tabs) {
+            mApp->idleInhibitor()->tabRemoved(tab);
+        }
+    });
 
     QTimer::singleShot(0, this, &BrowserWindow::postLaunch);
 

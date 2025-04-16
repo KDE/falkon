@@ -54,6 +54,7 @@ class SessionManager;
 class ClosedWindowsManager;
 class ProtocolHandlerManager;
 class SiteSettingsManager;
+class IdleInhibitor;
 
 class FALKON_EXPORT MainApplication : public QtSingleApplication
 {
@@ -117,6 +118,7 @@ public:
     HTML5PermissionsManager* html5PermissionsManager();
     SiteSettingsManager* siteSettingsManager();
     DesktopNotificationsFactory* desktopNotifications();
+    IdleInhibitor* idleInhibitor();
     QWebEngineProfile* webProfile() const;
     QWebEngineSettings *webSettings() const;
 
@@ -196,6 +198,7 @@ private:
     HTML5PermissionsManager* m_html5PermissionsManager;
     SiteSettingsManager* m_siteSettingsManager;
     DesktopNotificationsFactory* m_desktopNotifications;
+    IdleInhibitor* m_idleInhibitor;
     QWebEngineProfile* m_webProfile;
 
     AutoSaver* m_autoSaver;

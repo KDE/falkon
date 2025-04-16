@@ -18,22 +18,31 @@
 
 #include "idleinhibitor.h"
 
+#include "webtab.h"
+
 #include <QDBusInterface>
 #include <QDBusReply>
 
-IdleInhibitor::IdleInhibitor()
-: m_dbusCookie(0)
+IdleInhibitor::IdleInhibitor(QObject* parent)
+: QObject(parent)
+, m_dbusCookie(0)
 , m_active(false)
 {
 }
 
 void IdleInhibitor::inhibit()
 {
-    if (m_dbusCookie != 0) {
+    qDebug() << "IdleInhibitor: inhibit";
+
+    if (m_active && m_activeTabs.isEmpty()) {
         return;
     }
 
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
+    if (m_dbusCookie != 0) {
+        return;
+    }
+
     QDBusInterface dbus(QSL("org.freedesktop.ScreenSaver"), QSL("/org/freedesktop/ScreenSaver"), QSL("org.freedesktop.ScreenSaver"), QDBusConnection::sessionBus());
     if (!dbus.isValid()) {
         qInfo() << "Dbus ionterface 'org.freedesktop.ScreenSaver' is not available.";
@@ -54,11 +63,17 @@ void IdleInhibitor::inhibit()
 
 void IdleInhibitor::unInhibit()
 {
-    if ((m_dbusCookie == 0) && !m_activeTabs.isEmpty()) {
+    qDebug() << "IdleInhibitor: unInhibit";
+
+    if (!m_active || !m_activeTabs.isEmpty()) {
         return;
     }
 
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
+    if (m_dbusCookie == 0) {
+        return;
+    }
+
     QDBusInterface dbus(QSL("org.freedesktop.ScreenSaver"), QSL("/org/freedesktop/ScreenSaver"), QSL("org.freedesktop.ScreenSaver"), QDBusConnection::sessionBus());
     if (!dbus.isValid()) {
         qInfo() << "IdleInhibitor: Dbus ionterface 'org.freedesktop.ScreenSaver' is not available.";
@@ -89,4 +104,41 @@ void IdleInhibitor::setActive(bool active)
 
     m_active = active;
     Q_EMIT activeChanged(m_active);
+}
+
+void IdleInhibitor::playingChanged(WebTab* tab, bool playing)
+{
+    const bool containsTab = m_activeTabs.contains(tab);
+
+    if (containsTab && !playing) {
+        m_activeTabs.remove(m_activeTabs.indexOf(tab));
+        qDebug() << "IdleInhibitor: Removing tab:" << tab;
+    }
+    else if (!containsTab && playing) {
+        m_activeTabs.append(tab);
+        qDebug() << "IdleInhibitor: Adding tab:" << tab;
+    }
+    else {
+        qDebug() << "IdleInhibitor: Doing nothing with tab:" << tab;
+    }
+
+    checkActive();
+}
+
+void IdleInhibitor::tabRemoved(WebTab* tab)
+{
+    playingChanged(tab, false);
+}
+
+void IdleInhibitor::checkActive()
+{
+    if (m_active && m_activeTabs.isEmpty()) {
+        unInhibit();
+    }
+    else if (!m_active && !m_activeTabs.isEmpty()) {
+        inhibit();
+    }
+    else {
+        /* Nothing to do */
+    }
 }

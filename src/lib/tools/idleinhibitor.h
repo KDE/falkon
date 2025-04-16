@@ -32,18 +32,24 @@ class FALKON_EXPORT IdleInhibitor : public QObject
     Q_PROPERTY(bool active READ active WRITE setActive NOTIFY activeChanged)
 
 public:
-    IdleInhibitor();
+    IdleInhibitor(QObject* parent = nullptr);
 
     bool active() const;
 
+public Q_SLOTS:
+    void playingChanged(WebTab *tab, bool playing);
+    void tabRemoved(WebTab *tab);
+
 Q_SIGNALS:
     void activeChanged(bool active);
+
 
 private:
     void inhibit();
     void unInhibit();
 
     void setActive(bool active);
+    void checkActive();
 
     QList<WebTab*> m_activeTabs;
     quint32 m_dbusCookie;

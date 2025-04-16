@@ -30,6 +30,7 @@
 #include "qztools.h"
 #include "tabicon.h"
 #include "pluginproxy.h"
+#include "idleinhibitor.h"
 
 #include <QFile>
 #include <QTimer>
@@ -367,6 +368,9 @@ int TabWidget::addView(const LoadRequest &req, const QString &title, const Qz::N
         if (url != m_urlOnNewTab)
             m_currentTabFresh = false;
     });
+    connect(webTab, &WebTab::mutedChanged, this, [webTab](bool playing){
+        mApp->idleInhibitor()->playingChanged(webTab, playing);;
+    });
 
     if (url.isValid() && url != req.url()) {
         LoadRequest r(req);
@@ -412,6 +416,9 @@ int TabWidget::insertView(int index, WebTab *tab, const Qz::NewTabPositionFlags 
     connect(tab->webView(), &TabbedWebView::wantsCloseTab, this, &TabWidget::closeTab);
     connect(tab->webView(), &QWebEngineView::urlChanged, this, &TabWidget::changed);
     connect(tab->webView(), &TabbedWebView::ipChanged, m_window->ipLabel(), &QLabel::setText);
+    connect(tab, &WebTab::mutedChanged, this, [tab](bool playing){
+        mApp->idleInhibitor()->playingChanged(tab, playing);;
+    });
 
     // Make sure user notice opening new background tabs
     if (!(openFlags & Qz::NT_SelectedTab)) {
@@ -440,6 +447,9 @@ void TabWidget::closeTab(int index)
         index = currentIndex();
 
     WebTab *webTab = weTab(index);
+
+    mApp->idleInhibitor()->tabRemoved(webTab);
+
     if (!webTab || !validIndex(index))
         return;
 
@@ -699,6 +709,8 @@ void TabWidget::detachTab(WebTab* tab)
 
     tab->detach();
     tab->setPinned(false);
+
+    mApp->idleInhibitor()->tabRemoved(tab);
 
     Q_EMIT tabRemoved(index);
 

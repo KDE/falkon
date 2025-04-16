@@ -48,6 +48,7 @@
 #include "closedwindowsmanager.h"
 #include "protocolhandlermanager.h"
 #include "../config.h"
+#include "idleinhibitor.h"
 
 #include <QWebEngineSettings>
 #include <QDesktopServices>
@@ -111,6 +112,7 @@ MainApplication::MainApplication(int &argc, char** argv)
     , m_html5PermissionsManager(nullptr)
     , m_siteSettingsManager(nullptr)
     , m_desktopNotifications(nullptr)
+    , m_idleInhibitor(nullptr)
     , m_webProfile(nullptr)
     , m_autoSaver(nullptr)
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
@@ -699,6 +701,15 @@ DesktopNotificationsFactory* MainApplication::desktopNotifications()
     }
     return m_desktopNotifications;
 }
+
+IdleInhibitor* MainApplication::idleInhibitor()
+{
+    if (!m_idleInhibitor) {
+        m_idleInhibitor = new IdleInhibitor(this);
+    }
+    return m_idleInhibitor;
+}
+
 
 QWebEngineProfile *MainApplication::webProfile() const
 {
