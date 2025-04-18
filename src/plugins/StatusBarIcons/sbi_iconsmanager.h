@@ -45,6 +45,9 @@ public:
     bool showZoomWidget() const;
     void setShowZoomWidget(bool show);
 
+    bool showIdleInhibitorIcon() const;
+    void setShowIdleInhibitorIcon(bool show);
+
     void reloadIcons();
     void destroyIcons();
 
@@ -58,6 +61,7 @@ private:
     bool m_showJavaScriptIcon;
     bool m_showNetworkIcon;
     bool m_showZoomWidget;
+    bool m_showIdleInhibitorIcon;
 
     QHash<BrowserWindow*, QWidgetList> m_windows;
     SBI_NetworkManager* m_networkManager;

@@ -710,7 +710,6 @@ IdleInhibitor* MainApplication::idleInhibitor()
     return m_idleInhibitor;
 }
 
-
 QWebEngineProfile *MainApplication::webProfile() const
 {
     return m_webProfile;

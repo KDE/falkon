@@ -21,6 +21,7 @@
 #include "sbi_zoomwidget.h"
 #include "sbi_networkicon.h"
 #include "sbi_networkmanager.h"
+#include "sbi_idleinhibitoricon.h"
 #include "browserwindow.h"
 #include "statusbar.h"
 
@@ -33,6 +34,7 @@ SBI_IconsManager::SBI_IconsManager(const QString &settingsPath, QObject* parent)
     , m_showJavaScriptIcon(false)
     , m_showNetworkIcon(false)
     , m_showZoomWidget(false)
+    , m_showIdleInhibitorIcon(false)
     , m_networkManager(nullptr)
 {
     loadSettings();
@@ -46,6 +48,7 @@ void SBI_IconsManager::loadSettings()
     m_showJavaScriptIcon = settings.value("showJavaScriptIcon", true).toBool();
     m_showNetworkIcon = settings.value("showNetworkIcon", true).toBool();
     m_showZoomWidget = settings.value("showZoomWidget", true).toBool();
+    m_showIdleInhibitorIcon = settings.value("showIdleInhibitorIcon", true).toBool();
     settings.endGroup();
 }
 
@@ -101,6 +104,19 @@ void SBI_IconsManager::setShowZoomWidget(bool show)
     m_showZoomWidget = show;
 }
 
+bool SBI_IconsManager::showIdleInhibitorIcon() const
+{
+    return m_showIdleInhibitorIcon;
+}
+
+void SBI_IconsManager::setShowIdleInhibitorIcon(bool show)
+{
+    QSettings settings(m_settingsPath + QL1S("/extensions.ini"), QSettings::IniFormat);
+    settings.setValue("StatusBarIcons/showIdleInhibitorIcon", show);
+
+    m_showIdleInhibitorIcon = show;
+}
+
 void SBI_IconsManager::reloadIcons()
 {
     QHashIterator<BrowserWindow*, QWidgetList> it(m_windows);
@@ -142,6 +158,12 @@ void SBI_IconsManager::mainWindowCreated(BrowserWindow* window)
         }
 
         auto* w = new SBI_NetworkIcon(window);
+        window->statusBar()->addPermanentWidget(w);
+        m_windows[window].append(w);
+    }
+
+    if (m_showIdleInhibitorIcon) {
+        auto *w = new SBI_IdleInhibitorIcon(window, m_settingsPath);
         window->statusBar()->addPermanentWidget(w);
         m_windows[window].append(w);
     }

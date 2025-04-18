@@ -1,6 +1,7 @@
 set( StatusBarIcons_SRCS
 	statusbariconsplugin.cpp
 	sbi_iconsmanager.cpp
+	sbi_idleinhibitoricon.cpp
 	sbi_imagesicon.cpp
 	sbi_javascripticon.cpp
 	sbi_networkicon.cpp
@@ -14,6 +15,7 @@ set( StatusBarIcons_SRCS
 
         statusbariconsplugin.h
         sbi_iconsmanager.h
+        sbi_idleinhibitoricon.h
         sbi_imagesicon.h
         sbi_javascripticon.h
         sbi_networkicon.h

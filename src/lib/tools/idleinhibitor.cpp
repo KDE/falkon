@@ -90,7 +90,7 @@ void IdleInhibitor::stateMachine()
             if (m_userOverride == UserOverride::Inhibit) {
                 m_state = InhibitorState::Inhibit;
             }
-            else if (!m_activeTabs.isEmpty()) {
+            else if (!m_activeTabs.isEmpty() && (m_userOverride != UserOverride::Uninhibit)) {
                 m_state = InhibitorState::Inhibit;
             }
             else {
@@ -107,7 +107,7 @@ void IdleInhibitor::stateMachine()
             if (m_userOverride == UserOverride::Uninhibit) {
                 m_state = InhibitorState::Uninhibit;
             }
-            else if (m_activeTabs.isEmpty()) {
+            else if (m_activeTabs.isEmpty() && (m_userOverride != UserOverride::Inhibit)) {
                 m_state = InhibitorState::Uninhibit;
             }
             else {

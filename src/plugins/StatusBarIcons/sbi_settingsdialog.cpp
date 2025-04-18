@@ -32,6 +32,7 @@ SBI_SettingsDialog::SBI_SettingsDialog(SBI_IconsManager* manager, QWidget* paren
     ui->showJavaScriptIcon->setChecked(m_manager->showJavaScriptIcon());
     ui->showNetworkIcon->setChecked(m_manager->showNetworkIcon());
     ui->showZoomWidget->setChecked(m_manager->showZoomWidget());
+    ui->showIdleInhibitorIcon->setChecked(m_manager->showIdleInhibitorIcon());
 
     connect(ui->buttonBox, &QDialogButtonBox::accepted, this, &SBI_SettingsDialog::saveSettings);
     connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &QWidget::close);
@@ -43,6 +44,7 @@ void SBI_SettingsDialog::saveSettings()
     m_manager->setShowJavaScriptIcon(ui->showJavaScriptIcon->isChecked());
     m_manager->setShowNetworkIcon(ui->showNetworkIcon->isChecked());
     m_manager->setShowZoomWidget(ui->showZoomWidget->isChecked());
+    m_manager->setShowIdleInhibitorIcon(ui->showIdleInhibitorIcon->isChecked());
 
     m_manager->reloadIcons();
     close();
