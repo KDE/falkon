@@ -94,6 +94,7 @@ set(GENERATED_SOURCES
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/history_historyentry_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/historyitem_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/historymodel_wrapper.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/idleinhibitor_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/locationbar_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/locationbar_loadaction_wrapper.cpp
     ${CMAKE_CURRENT_BINARY_DIR}/PyFalkon/navigationbar_wrapper.cpp

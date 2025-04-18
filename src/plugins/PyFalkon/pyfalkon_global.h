@@ -63,6 +63,9 @@
 #include "historyitem.h"
 #include "historymodel.h"
 
+// idle inhibitor
+#include "idleinhibitor.h"
+
 // navigation
 #include "locationbar.h"
 #include "navigationbar.h"

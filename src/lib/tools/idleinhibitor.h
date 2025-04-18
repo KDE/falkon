@@ -1,6 +1,6 @@
 /* ============================================================
  * Falkon - Qt web browser
- * Copyright (C) 2024 Juraj Oravec <jurajoravec@mailo.com>
+ * Copyright (C) 2025 Juraj Oravec <jurajoravec@mailo.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,34 +26,116 @@
 
 class WebTab;
 
+/**
+ * @brief ScreenSaver inhibitor
+ * @details Tracks the audio playback on the tabs and user request to inhibit the ScreenSaver.
+ */
 class FALKON_EXPORT IdleInhibitor : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(bool active READ active WRITE setActive NOTIFY activeChanged)
+    Q_PROPERTY(IdleInhibitor::UserOverride userOverride READ userOverride WRITE setUserOverride NOTIFY userOverrideChanged)
+    Q_PROPERTY(IdleInhibitor::InhibitorState state READ state NOTIFY stateChanged)
 
 public:
-    IdleInhibitor(QObject* parent = nullptr);
+    /**
+     * @brief User override state enum
+     */
+    enum class UserOverride {
+        Idle,       //!< No request from user
+        Inhibit,    //!< User requested to inhibit the screen saver
+        Uninhibit   //!< User requested to NOT inhibit the screen saver
+    };
+    Q_ENUM(UserOverride);
 
-    bool active() const;
+    /**
+     * @brief IdleInhibitor state enum
+     */
+    enum class InhibitorState {
+        Idle,       //!< No request from user nor tab, doing nothing, screen saver is NOT inhibited
+        Inhibit,    //!< Send a request to inhibit the screen saver
+        Inhibited,  //!< Screen saver is already inhibited
+        Uninhibit,  //!< Send a request to Uninhibit screen saver
+    };
+    Q_ENUM(InhibitorState);
+
+    /**
+     * @brief IdleInhibitor constructor
+     * @param QObject* The parent object
+     */
+    explicit IdleInhibitor(QObject* parent = nullptr);
+    /**
+     * @brief IdleInhibitor destructor
+     */
+    ~IdleInhibitor();
+
+    /**
+     * @brief Provides access to user override state
+     * @return IdleInhibitor::UserOverride user override state
+     */
+    IdleInhibitor::UserOverride userOverride() const;
+    /**
+     * @brief Provides access to the IdleInhibitor state
+     * @return IdleInhibitor::InhibitorState IdleInhibitor state
+     */
+    IdleInhibitor::InhibitorState state() const;
 
 public Q_SLOTS:
+    /**
+     * @brief Sets user override state
+     * @param IdleInhibitor::UserOverride User override state
+     */
+    void setUserOverride(IdleInhibitor::UserOverride userState);
+    /**
+     * @brief Handles changes of playing state of a tab
+     * @param WebTab* Tab for which the playing state changed
+     * @param bool Current playing state of a tab
+     */
     void playingChanged(WebTab *tab, bool playing);
+    /**
+     * @brief Handles removal of a tab
+     * @param WebTab* Tab which was removed
+     */
     void tabRemoved(WebTab *tab);
 
 Q_SIGNALS:
-    void activeChanged(bool active);
-
+    /**
+     * @brief Signal emitted when user override state changed
+     * @param IdleInhibitor::UserOverride User override state
+     */
+    void userOverrideChanged(IdleInhibitor::UserOverride userState);
+    /**
+     * @brief Signal emitted when IdleInhibitor state changed
+     * @param IdleInhibitor::InhibitorState IdleInhibitor state
+     */
+    void stateChanged(IdleInhibitor::InhibitorState state);
 
 private:
-    void inhibit();
-    void unInhibit();
+    QList<WebTab*> m_activeTabs;                        //!< @brief List of tabs with active Audio
 
-    void setActive(bool active);
-    void checkActive();
+    InhibitorState m_state {InhibitorState::Idle};      //!< @brief Current IdleInhibitor state
+    InhibitorState m_stateLast {InhibitorState::Idle};  //!< @brief Previous IndleInhibitor state
+    UserOverride m_userOverride {UserOverride::Idle};   //!< @brief User override state
 
-    QList<WebTab*> m_activeTabs;
-    quint32 m_dbusCookie;
-    bool m_active;
+    /**
+     * @brief IdleInhibitor state machine
+     */
+    void stateMachine();
+
+#if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
+    const QString dbusService {QSL("org.freedesktop.ScreenSaver")};     //!< @brief DBus ScreenSaver service name
+    const QString dbusPath {QSL("/org/freedesktop/ScreenSaver")};       //!< @brief DBus ScreenSaver path
+    const QString dbusInterface {QSL("org.freedesktop.ScreenSaver")};   //!< @brief DBus ScreenSaver interface
+    quint32 m_dbusCookie {0U};          //!< @brief DBus request identification cookie
+
+    /**
+     * @brief Send an Inhibit request over DBus
+     */
+    void dbusSendInhibitRequest();
+    /**
+     * @brief Send an Uninhibit request over DBus
+     */
+    void dbusSendUninhibitRequest();
+#endif /* Q_OS_UNIX && !DISABLE_DBUS */
 };
 
 #endif /* IDLEINHIBITOR_H */

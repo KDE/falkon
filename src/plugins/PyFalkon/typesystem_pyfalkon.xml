@@ -119,6 +119,11 @@
       <enum-type name="Roles"/>
     </object-type>
 
+    <object-type name="IdleInhibitor">
+      <enum-type name="UserOverride"/>
+      <enum-type name="InhibitorState"/>
+    </object-type>
+
     <object-type name="LocationBar">
       <value-type name="LoadAction">
         <enum-type name="Type"/>
