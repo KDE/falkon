@@ -60,7 +60,7 @@ public:
 
     /**
      * @brief IdleInhibitor constructor
-     * @param QObject* The parent object
+     * @param parent The parent object
      */
     explicit IdleInhibitor(QObject* parent = nullptr);
     /**
@@ -82,30 +82,30 @@ public:
 public Q_SLOTS:
     /**
      * @brief Sets user override state
-     * @param IdleInhibitor::UserOverride User override state
+     * @param[in] userState User override state
      */
     void setUserOverride(IdleInhibitor::UserOverride userState);
     /**
      * @brief Handles changes of playing state of a tab
-     * @param WebTab* Tab for which the playing state changed
-     * @param bool Current playing state of a tab
+     * @param[in] tab Tab for which the playing state changed
+     * @param[in] playing Current playing state of a tab
      */
     void playingChanged(WebTab *tab, bool playing);
     /**
      * @brief Handles removal of a tab
-     * @param WebTab* Tab which was removed
+     * @param[in] tab Tab which was removed
      */
     void tabRemoved(WebTab *tab);
 
 Q_SIGNALS:
     /**
      * @brief Signal emitted when user override state changed
-     * @param IdleInhibitor::UserOverride User override state
+     * @param[in] userState User override state
      */
     void userOverrideChanged(IdleInhibitor::UserOverride userState);
     /**
      * @brief Signal emitted when IdleInhibitor state changed
-     * @param IdleInhibitor::InhibitorState IdleInhibitor state
+     * @param[in] state IdleInhibitor state
      */
     void stateChanged(IdleInhibitor::InhibitorState state);
 
