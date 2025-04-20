@@ -391,7 +391,9 @@ void BookmarksTools::addFolderToMenu(QObject* receiver, Menu* menu, BookmarkItem
     m->setTitle(title);
     m->setIcon(folder->icon());
 
-    QObject::connect(m, &QMenu::aboutToHide, mApp->getWindow()->statusBar(), &StatusBar::clearMessage);
+    QObject::connect(m, &QMenu::aboutToHide, [=]() {
+        mApp->getWindow()->statusBar()->clearMessage();
+    });
 
     addFolderContentsToMenu(receiver, m, folder);
 
@@ -399,7 +401,9 @@ void BookmarksTools::addFolderToMenu(QObject* receiver, Menu* menu, BookmarkItem
     act->setData(QVariant::fromValue<void*>(static_cast<void*>(folder)));
     act->setIconVisibleInMenu(true);
 
-    QObject::connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), &StatusBar::clearMessage);
+    QObject::connect(act, &QAction::hovered, [=]() {
+        mApp->getWindow()->statusBar()->clearMessage();
+    });
 }
 
 void BookmarksTools::addUrlToMenu(QObject* receiver, Menu* menu, BookmarkItem* bookmark)
@@ -433,7 +437,9 @@ void BookmarksTools::addSeparatorToMenu(Menu* menu, BookmarkItem* separator)
     Q_ASSERT(separator->isSeparator());
 
     auto* act = menu->addSeparator();
-    QObject::connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), &StatusBar::clearMessage);
+    QObject::connect(act, &QAction::hovered, [=]() {
+        mApp->getWindow()->statusBar()->clearMessage();
+    });
 }
 
 void BookmarksTools::addFolderContentsToMenu(QObject *receiver, Menu *menu, BookmarkItem *folder)
