@@ -40,7 +40,7 @@ LocationCompleterView::LocationCompleterView()
     if (qApp->platformName() == QL1S("xcb")) {
         setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::BypassWindowManagerHint);
     } else {
-        setWindowFlags(Qt::Popup);
+        setWindowFlags(Qt::ToolTip | Qt::FramelessWindowHint | Qt::BypassWindowManagerHint);
     }
 
     auto *layout = new QVBoxLayout(this);
@@ -290,10 +290,7 @@ bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
             return true;
         } // switch (keyEvent->key())
 
-        if (focusProxy()) {
-            (static_cast<QObject*>(focusProxy()))->event(keyEvent);
-        }
-        return true;
+        return false;
     }
 
     case QEvent::KeyRelease: {
