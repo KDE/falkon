@@ -84,6 +84,9 @@ WebPage::WebPage(QObject* parent)
     ExternalJsObject::setupWebChannel(channel, this);
     setWebChannel(channel, SafeJsWorld);
 
+    /* Custom background color while page is loading */
+    setBackgroundColor(qzSettings->backgroundColorLoading);
+
     connect(this, &QWebEnginePage::loadProgress, this, &WebPage::progress);
     connect(this, &QWebEnginePage::loadFinished, this, &WebPage::finished);
     connect(this, &QWebEnginePage::urlChanged, this, &WebPage::urlChanged);
@@ -271,6 +274,9 @@ void WebPage::progress(int prog)
 void WebPage::finished()
 {
     progress(100);
+
+    /* Custom background color when page is loaded */
+    setBackgroundColor(qzSettings->backgroundColorLoaded);
 
     // File scheme watcher
     if (url().scheme() == QLatin1String("file")) {

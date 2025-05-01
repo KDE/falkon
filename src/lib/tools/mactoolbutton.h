@@ -28,6 +28,8 @@ class FALKON_EXPORT MacToolButton : public QPushButton
 {
     Q_OBJECT
     Q_PROPERTY(bool autoRaise READ autoRaise WRITE setAutoRaise)
+    Q_PROPERTY(QColor iconColor READ iconColor WRITE setIconColor NOTIFY iconColorChanged)
+    Q_PROPERTY(QColor defaultIconColor READ defaultIconColor WRITE setDefaultIconColor NOTIFY defaultIconColorChanged)
 
 public:
     explicit MacToolButton(QWidget* parent = nullptr);
@@ -37,9 +39,24 @@ public:
     void setAutoRaise(bool enable);
     bool autoRaise() const;
 
+    void setIconColor(QColor color = QColor());
+    QColor iconColor();
+
+    void setDefaultIconColor(QColor color = QColor());
+    const QColor defaultIconColor() const;
+
+Q_SIGNALS:
+    void iconColorChanged(QColor color);
+    void defaultIconColorChanged(QColor color);
+
+public Q_SLOTS:
+    void selectColorDialog();
+
 private:
     bool m_autoRise;
     QSize m_buttonFixedSize;
+    QColor m_iconColor;
+    QColor m_defaultIconColor;
 };
 #else
 #include <QToolButton>
@@ -47,9 +64,29 @@ private:
 class FALKON_EXPORT MacToolButton : public QToolButton
 {
     Q_OBJECT
+    Q_PROPERTY(QColor iconColor READ iconColor WRITE setIconColor NOTIFY iconColorChanged)
+    Q_PROPERTY(QColor defaultIconColor READ defaultIconColor WRITE setDefaultIconColor NOTIFY defaultIconColorChanged)
 
 public:
     explicit MacToolButton(QWidget* parent = nullptr);
+
+    void setIconColor(QColor color = QColor());
+    const QColor iconColor() const;
+
+    void setDefaultIconColor(QColor color = QColor());
+    const QColor defaultIconColor() const;
+
+Q_SIGNALS:
+    void iconColorChanged(QColor color);
+    void defaultIconColorChanged(QColor color);
+
+public Q_SLOTS:
+    void selectColorDialog();
+    void resetIconColor();
+
+private:
+    QColor m_iconColor;
+    QColor m_defaultIconColor;
 };
 #endif
 #endif // MACTOOLBUTTON_H

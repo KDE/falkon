@@ -229,6 +229,18 @@ Preferences::Preferences(BrowserWindow* window)
     connect(ui->showBookmarksToolbar, &QAbstractButton::toggled, ui->instantBookmarksToolbar, &QWidget::setDisabled);
     ui->showNavigationToolbar->setChecked(settings.value(QSL("showNavigationToolbar"), true).toBool());
     int currentSettingsPage = settings.value(QSL("settingsDialogPage"), 0).toInt(nullptr);
+
+    ui->backgroundColorLoading->setDefaultIconColor(QColor(Qt::white));
+    QColor bgColor = settings.value(QSL("BackgroundColorLoading"), ui->backgroundColorLoading->defaultIconColor()).value<QColor>();
+    ui->backgroundColorLoading->setIconColor(bgColor);
+    connect(ui->backgroundColorLoading, &QAbstractButton::clicked, ui->backgroundColorLoading, &MacToolButton::selectColorDialog);
+    connect(ui->backgroundColorLoadingReset, &QAbstractButton::clicked, ui->backgroundColorLoading, &MacToolButton::resetIconColor);
+
+    ui->backgroundColorLoaded->setDefaultIconColor(QColor(Qt::white));
+    bgColor = settings.value(QSL("BackgroundColorLoaded"), ui->backgroundColorLoaded->defaultIconColor()).value<QColor>();
+    ui->backgroundColorLoaded->setIconColor(bgColor);
+    connect(ui->backgroundColorLoaded, &QAbstractButton::clicked, ui->backgroundColorLoaded, &MacToolButton::selectColorDialog);
+    connect(ui->backgroundColorLoadedReset, &QAbstractButton::clicked, ui->backgroundColorLoaded, &MacToolButton::resetIconColor);
     settings.endGroup();
 
     //TABS
@@ -264,10 +276,12 @@ Preferences::Preferences(BrowserWindow* window)
     bool pbInABuseCC = settings.value(QSL("UseCustomProgressColor"), false).toBool();
     ui->checkBoxCustomProgressColor->setChecked(pbInABuseCC);
     ui->progressBarColorSelector->setEnabled(pbInABuseCC);
-    QColor pbColor = settings.value(QSL("CustomProgressColor"), palette().color(QPalette::Highlight)).value<QColor>();
-    setProgressBarColorIcon(pbColor);
-    connect(ui->customColorToolButton, &QAbstractButton::clicked, this, &Preferences::selectCustomProgressBarColor);
-    connect(ui->resetProgressBarcolor, SIGNAL(clicked()), SLOT(setProgressBarColorIcon()));
+
+    ui->customColorToolButton->setDefaultIconColor(palette().color(QPalette::Highlight));
+    QColor pbColor = settings.value(QSL("CustomProgressColor"), ui->customColorToolButton->defaultIconColor()).value<QColor>();
+    ui->customColorToolButton->setIconColor(pbColor);
+    connect(ui->customColorToolButton, &QAbstractButton::clicked, ui->customColorToolButton, &MacToolButton::selectColorDialog);
+    connect(ui->resetProgressBarcolor, &QAbstractButton::clicked, ui->customColorToolButton, &MacToolButton::resetIconColor);
     settings.endGroup();
 
     settings.beginGroup(QSL("SearchEngines"));
@@ -948,6 +962,8 @@ void Preferences::saveSettings()
     settings.setValue(QSL("instantBookmarksToolbar"), ui->instantBookmarksToolbar->isChecked());
     settings.setValue(QSL("showBookmarksToolbar"), ui->showBookmarksToolbar->isChecked());
     settings.setValue(QSL("showNavigationToolbar"), ui->showNavigationToolbar->isChecked());
+    settings.setValue(QSL("BackgroundColorLoading"), ui->backgroundColorLoading->iconColor());
+    settings.setValue(QSL("BackgroundColorLoaded"), ui->backgroundColorLoaded->iconColor());
     settings.endGroup();
 
     //TABS
@@ -1089,7 +1105,7 @@ void Preferences::saveSettings()
     settings.setValue(QSL("ShowLoadingProgress"), ui->showLoadingInAddressBar->isChecked());
     settings.setValue(QSL("ProgressStyle"), ui->progressStyleSelector->currentIndex());
     settings.setValue(QSL("UseCustomProgressColor"), ui->checkBoxCustomProgressColor->isChecked());
-    settings.setValue(QSL("CustomProgressColor"), ui->customColorToolButton->property("ProgressColor").value<QColor>());
+    settings.setValue(QSL("CustomProgressColor"), ui->customColorToolButton->iconColor());
     settings.endGroup();
 
     settings.beginGroup(QSL("SearchEngines"));
@@ -1150,24 +1166,4 @@ Preferences::~Preferences()
     delete m_autoFillManager;
     delete m_pluginsList;
     delete m_notification.data();
-}
-
-void Preferences::setProgressBarColorIcon(QColor color)
-{
-    const int size = style()->pixelMetric(QStyle::PM_ToolBarIconSize);
-    QPixmap pm(QSize(size, size));
-    if (!color.isValid()) {
-        color = palette().color(QPalette::Highlight);
-    }
-    pm.fill(color);
-    ui->customColorToolButton->setIcon(pm);
-    ui->customColorToolButton->setProperty("ProgressColor", color);
-}
-
-void Preferences::selectCustomProgressBarColor()
-{
-    QColor newColor = QColorDialog::getColor(ui->customColorToolButton->property("ProgressColor").value<QColor>(), this, tr("Select Color"));
-    if (newColor.isValid()) {
-        setProgressBarColorIcon(newColor);
-    }
 }
