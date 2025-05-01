@@ -22,6 +22,7 @@
 #include "settings.h"
 
 #include <QStringList>
+#include <QColor>
 
 class FALKON_EXPORT QzSettings
 {
@@ -65,6 +66,10 @@ public:
     bool openPopupsInTabs;
     bool blockAutomaticPopups;
     bool alwaysSwitchTabsWithWheel;
+
+    /* Browser-View-Settings */
+    QColor backgroundColorLoading;
+    QColor backgroundColorLoaded;
 };
 
 #define qzSettings Settings::staticSettings()

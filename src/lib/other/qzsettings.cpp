@@ -62,6 +62,11 @@ void QzSettings::loadSettings()
     blockAutomaticPopups = settings.value(QSL("BlockAutomaticPopups"), false).toBool();
     alwaysSwitchTabsWithWheel = settings.value(QSL("AlwaysSwitchTabsWithWheel"), false).toBool();
     settings.endGroup();
+
+    settings.beginGroup(QSL("Browser-View-Settings"));
+    backgroundColorLoading = settings.value(QSL("BackgroundColorLoading"), QColor(Qt::white)).value<QColor>();
+    backgroundColorLoaded = settings.value(QSL("BackgroundColorLoaded"), QColor(Qt::white)).value<QColor>();
+    settings.endGroup();
 }
 
 void QzSettings::saveSettings()

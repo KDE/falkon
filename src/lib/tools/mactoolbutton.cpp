@@ -18,11 +18,16 @@
 * ============================================================ */
 #include "mactoolbutton.h"
 
+#include <QStyle>
+#include <QColorDialog>
+
 #ifdef Q_OS_MACOS
 MacToolButton::MacToolButton(QWidget* parent)
     : QPushButton(parent)
     , m_autoRise(false)
     , m_buttonFixedSize(18, 18)
+    , m_iconColor()
+    , m_defaultIconColor()
 {
 }
 
@@ -48,6 +53,72 @@ bool MacToolButton::autoRaise() const
 #else
 MacToolButton::MacToolButton(QWidget* parent)
     : QToolButton(parent)
+    , m_iconColor()
+    , m_defaultIconColor()
 {
 }
 #endif
+
+void MacToolButton::setIconColor(QColor color)
+{
+    if (color == m_iconColor) {
+        return;
+    }
+
+    const int size = style()->pixelMetric(QStyle::PM_ToolBarIconSize);
+    QPixmap pm(QSize(size, size));
+    if (!color.isValid()) {
+        color = m_defaultIconColor;
+    }
+    pm.fill(color);
+    setIcon(pm);
+    m_iconColor = color;
+    Q_EMIT iconColorChanged(color);
+}
+
+const QColor MacToolButton::iconColor() const
+{
+    if (m_iconColor.isValid()) {
+        return m_iconColor;
+    }
+    else if (m_defaultIconColor.isValid()) {
+        return m_defaultIconColor;
+    }
+    else {
+        return QColor(Qt::white);
+    }
+}
+
+void MacToolButton::selectColorDialog()
+{
+    QColor newColor = QColorDialog::getColor(m_iconColor, this, tr("Select Color"));
+    if (newColor.isValid()) {
+        setIconColor(newColor);
+    }
+}
+
+void MacToolButton::setDefaultIconColor(QColor color)
+{
+    if (color.isValid() && (m_defaultIconColor != color)) {
+        m_defaultIconColor = color;
+        Q_EMIT defaultIconColorChanged(color);
+    }
+}
+
+const QColor MacToolButton::defaultIconColor() const
+{
+    if (m_defaultIconColor.isValid()) {
+        return m_defaultIconColor;
+    }
+    else if (m_iconColor.isValid()) {
+        return m_iconColor;
+    }
+    else {
+        return QColor(Qt::white);
+    }
+}
+
+void MacToolButton::resetIconColor()
+{
+    setIconColor(defaultIconColor());
+}

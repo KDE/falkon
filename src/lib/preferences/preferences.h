@@ -84,9 +84,6 @@ private Q_SLOTS:
     void deleteProfile();
     void startProfileIndexChanged(int index);
 
-    void setProgressBarColorIcon(QColor col = QColor());
-    void selectCustomProgressBarColor();
-
     void showNotificationPreview();
 
     void makeFalkonDefault();
