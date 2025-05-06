@@ -589,7 +589,7 @@ bool ComboTabBar::event(QEvent *event)
         if (!isDragInProgress() && !isScrollInProgress()) {
             int index = tabAt(mapFromGlobal(QCursor::pos()));
             if (index >= 0)
-                QToolTip::showText(QCursor::pos(), tabToolTip(index));
+                QToolTip::showText(QCursor::pos(), tabToolTip(index), this);
         }
         break;
 
