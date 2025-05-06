@@ -75,9 +75,8 @@ void SiteSettingsBrowseDialog::loadItems()
 
 void SiteSettingsBrowseDialog::storeChanges()
 {
-    QUrl url;
     for (QHash<QString, int>::iterator it = m_listModifications.begin(); it != m_listModifications.end(); ++it) {
-        url.setHost(it.key());
+        QUrl url {QUrl(it.key())};
         mApp->siteSettingsManager()->setOption(m_sqlColumn, url, it.value());
     }
 }
