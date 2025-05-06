@@ -372,10 +372,8 @@ void CookieManager::removeCookie(const QNetworkCookie &cookie)
 
 void CookieManager::closeEvent(QCloseEvent* e)
 {
-    QUrl url;
-
     for (QHash<QString, int>::iterator it = m_listModifications.begin(); it != m_listModifications.end(); ++it) {
-        url.setHost(it.key());
+        QUrl url {QUrl(it.key())};
         mApp->siteSettingsManager()->setOption(SiteSettingsManager::poAllowCookies, url, it.value());
     }
 
