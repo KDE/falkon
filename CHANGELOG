@@ -1,3 +1,9 @@
+Version 25.04.1
+    * Fix crash when creating bookmarks toolbar. (BUG: 501535)
+    * Fix editing SiteSettings and Cookies permissions
+    * Wayland: Fix issue that location bar can't use input methods when locationcompleterview popups (by Signal Kirigami)
+    * Wayland: Fix tooltip in tabbar (by Signal Kirigami)
+
 Version 25.04.0
     * Add input method hints to input fields
     * Adblock: Add support for "rewrite" filter
@@ -11,7 +17,7 @@ Version 25.04.0
     * Use global settings for WebRTC on internal pages (BUG: 497842)
     * VerticalTabs: Override Alt+NUMBER keyboard shortcut
     * StatusBarIcon-Network: Restore online status detection
-    * Open all URLs in command line arguments (BUG: 413195, Original author: abogical (Abdel-Rahman Abdel-Rahman))
+    * Open all URLs in command line arguments (BUG: 413195, Original author: abogical (Abdel-Rahman))
     * Remove obsolete XSS Auditing option, has no effect
     * CookieManager: Fix crash when removing while/black list items
     * Add "Preffer color scheme" option (BUG: 439891, 497331)
