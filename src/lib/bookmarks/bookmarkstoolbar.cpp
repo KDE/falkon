@@ -65,10 +65,9 @@ BookmarksToolbar::BookmarksToolbar(BrowserWindow* window, QWidget* parent)
     refresh();
 }
 
-void BookmarksToolbar::contextMenuRequested(const QPoint &pos)
+void BookmarksToolbar::showContextMenu(const QPoint &pos, BookmarkItem* bookmark, bool fromToolbar)
 {
-    BookmarksToolbarButton* button = buttonAt(pos);
-    m_clickedBookmark = button ? button->bookmark() : nullptr;
+    m_clickedBookmark = bookmark;
 
     QMenu menu;
     QAction* actNewTab = menu.addAction(IconProvider::newTabIcon(), tr("Open in new tab"));
@@ -79,14 +78,18 @@ void BookmarksToolbar::contextMenuRequested(const QPoint &pos)
     QAction* actEdit = menu.addAction(tr("Edit"));
     QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"));
     menu.addSeparator();
-    m_actShowOnlyIcons = menu.addAction(tr("Show Only Icons"));
-    m_actShowOnlyIcons->setCheckable(true);
-    m_actShowOnlyIcons->setChecked(m_bookmarks->showOnlyIconsInToolbar());
-    connect(m_actShowOnlyIcons, &QAction::toggled, m_bookmarks, &Bookmarks::setShowOnlyIconsInToolbar);
-    m_actShowOnlyText = menu.addAction(tr("Show Only Text"));
-    m_actShowOnlyText->setCheckable(true);
-    m_actShowOnlyText->setChecked(m_bookmarks->showOnlyTextInToolbar());
-    connect(m_actShowOnlyText, &QAction::toggled, m_bookmarks, &Bookmarks::setShowOnlyTextInToolbar);
+
+    if (fromToolbar) {
+        m_actShowOnlyIcons = menu.addAction(tr("Show Only Icons"));
+        m_actShowOnlyIcons->setCheckable(true);
+        m_actShowOnlyIcons->setChecked(m_bookmarks->showOnlyIconsInToolbar());
+        connect(m_actShowOnlyIcons, &QAction::toggled, m_bookmarks, &Bookmarks::setShowOnlyIconsInToolbar);
+
+        m_actShowOnlyText = menu.addAction(tr("Show Only Text"));
+        m_actShowOnlyText->setCheckable(true);
+        m_actShowOnlyText->setChecked(m_bookmarks->showOnlyTextInToolbar());
+        connect(m_actShowOnlyText, &QAction::toggled, m_bookmarks, &Bookmarks::setShowOnlyTextInToolbar);
+    }
 
     connect(actNewTab, &QAction::triggered, this, &BookmarksToolbar::openBookmarkInNewTab);
     connect(actNewWindow, &QAction::triggered, this, &BookmarksToolbar::openBookmarkInNewWindow);
@@ -101,16 +104,24 @@ void BookmarksToolbar::contextMenuRequested(const QPoint &pos)
     actNewWindow->setEnabled(m_clickedBookmark && m_clickedBookmark->isUrl());
     actNewPrivateWindow->setEnabled(m_clickedBookmark && m_clickedBookmark->isUrl());
 
-    menu.exec(mapToGlobal(pos));
+    menu.exec(pos);
+
+    m_clickedBookmark = nullptr;
+    m_actShowOnlyIcons = nullptr;
+    m_actShowOnlyText = nullptr;
+}
+
+void BookmarksToolbar::contextMenuRequested(const QPoint &pos)
+{
+    BookmarksToolbarButton* button = buttonAt(pos);
+    auto *bookmark = button ? button->bookmark() : nullptr;
+
+    showContextMenu(mapToGlobal(pos), bookmark, true);
 
     if (button) {
         // Clear mouseover state after closing menu
         button->update();
     }
-
-    m_clickedBookmark = nullptr;
-    m_actShowOnlyIcons = nullptr;
-    m_actShowOnlyText = nullptr;
 }
 
 void BookmarksToolbar::refresh()

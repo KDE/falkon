@@ -19,7 +19,8 @@
 #include "iconprovider.h"
 
 BookmarkItem::BookmarkItem(BookmarkItem::Type type, BookmarkItem* parent)
-    : m_type(type)
+    : QObject(parent)
+    , m_type(type)
     , m_parent(parent)
     , m_visitCount(0)
     , m_expanded(false)

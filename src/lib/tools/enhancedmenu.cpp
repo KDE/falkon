@@ -16,6 +16,9 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "enhancedmenu.h"
+#include "bookmarkitem.h"
+#include "mainapplication.h"
+#include "bookmarkstoolbar.h"
 
 #include <QMouseEvent>
 #include <QApplication>
@@ -38,6 +41,24 @@ bool Menu::closeOnMiddleClick() const
 void Menu::setCloseOnMiddleClick(bool close)
 {
     m_closeOnMiddleClick = close;
+}
+
+void Menu::mousePressEvent(QMouseEvent* e)
+{
+    if (e->button() == Qt::MouseButton::RightButton) {
+        QAction* action = activeAction();
+
+        if (action) {
+            auto *bookmark = action->data().value<BookmarkItem*>();
+            if (bookmark) {
+                mApp->getWindow()->bookmarksToolbar()->showContextMenu(e->globalPosition().toPoint(), bookmark, false);
+                e->accept();
+                return;
+            }
+        }
+    }
+
+    QMenu::mousePressEvent(e);
 }
 
 void Menu::mouseReleaseEvent(QMouseEvent* e)

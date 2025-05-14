@@ -147,7 +147,7 @@ void BookmarksToolbarButton::menuAboutToShow()
 
     const auto menuActions = menu->actions();
     for (QAction *action : menuActions) {
-        BookmarkItem *item = static_cast<BookmarkItem*>(action->data().value<void*>());
+        BookmarkItem *item = action->data().value<BookmarkItem*>();
         if (item && item->type() == BookmarkItem::Url && action->icon().isNull()) {
             action->setIcon(item->icon());
         }
@@ -156,7 +156,7 @@ void BookmarksToolbarButton::menuAboutToShow()
 
 void BookmarksToolbarButton::menuMiddleClicked(Menu* menu)
 {
-    BookmarkItem* item = static_cast<BookmarkItem*>(menu->menuAction()->data().value<void*>());
+    BookmarkItem* item = menu->menuAction()->data().value<BookmarkItem*>();
     Q_ASSERT(item);
     openFolder(item);
 }
@@ -164,7 +164,7 @@ void BookmarksToolbarButton::menuMiddleClicked(Menu* menu)
 void BookmarksToolbarButton::bookmarkActivated(BookmarkItem* item)
 {
     if (auto* action = qobject_cast<QAction*>(sender())) {
-        item = static_cast<BookmarkItem*>(action->data().value<void*>());
+        item = action->data().value<BookmarkItem*>();
     }
 
     Q_ASSERT(item);
@@ -174,7 +174,7 @@ void BookmarksToolbarButton::bookmarkActivated(BookmarkItem* item)
 void BookmarksToolbarButton::bookmarkCtrlActivated(BookmarkItem* item)
 {
     if (auto* action = qobject_cast<QAction*>(sender())) {
-        item = static_cast<BookmarkItem*>(action->data().value<void*>());
+        item = action->data().value<BookmarkItem*>();
     }
 
     Q_ASSERT(item);
@@ -184,7 +184,7 @@ void BookmarksToolbarButton::bookmarkCtrlActivated(BookmarkItem* item)
 void BookmarksToolbarButton::bookmarkShiftActivated(BookmarkItem* item)
 {
     if (auto* action = qobject_cast<QAction*>(sender())) {
-        item = static_cast<BookmarkItem*>(action->data().value<void*>());
+        item = action->data().value<BookmarkItem*>();
     }
 
     Q_ASSERT(item);

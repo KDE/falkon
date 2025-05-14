@@ -82,7 +82,7 @@ void LocationCompleterDelegate::paint(QPainter* painter, const QStyleOptionViewI
     LocationBar::LoadAction loadAction;
     bool isWebSearch = isSearchSuggestion;
 
-    BookmarkItem *bookmark = static_cast<BookmarkItem*>(index.data(LocationCompleterModel::BookmarkItemRole).value<void*>());
+    BookmarkItem *bookmark = index.data(LocationCompleterModel::BookmarkItemRole).value<BookmarkItem*>();
 
     if (isVisitSearchItem) {
         loadAction = LocationBar::loadAction(index.data(LocationCompleterModel::SearchStringRole).toString());
