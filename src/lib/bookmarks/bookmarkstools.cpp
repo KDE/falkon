@@ -54,7 +54,7 @@ BookmarkItem* BookmarksFoldersMenu::selectedFolder() const
 void BookmarksFoldersMenu::folderChoosed()
 {
     if (auto* act = qobject_cast<QAction*>(sender())) {
-        BookmarkItem* folder = static_cast<BookmarkItem*>(act->data().value<void*>());
+        BookmarkItem* folder = act->data().value<BookmarkItem*>();
         Q_EMIT folderSelected(folder);
     }
 }
@@ -75,7 +75,7 @@ void BookmarksFoldersMenu::init()
 void BookmarksFoldersMenu::createMenu(QMenu* menu, BookmarkItem* parent)
 {
     QAction* act = menu->addAction(tr("Choose %1").arg(parent->title()));
-    act->setData(QVariant::fromValue<void*>(static_cast<void*>(parent)));
+    act->setData(QVariant::fromValue<BookmarkItem*>(parent));
     connect(act, &QAction::triggered, this, &BookmarksFoldersMenu::folderChoosed);
 
     menu->addSeparator();
@@ -398,7 +398,7 @@ void BookmarksTools::addFolderToMenu(QObject* receiver, Menu* menu, BookmarkItem
     addFolderContentsToMenu(receiver, m, folder);
 
     QAction* act = menu->addMenu(m);
-    act->setData(QVariant::fromValue<void*>(static_cast<void*>(folder)));
+    act->setData(QVariant::fromValue<BookmarkItem*>(folder));
     act->setIconVisibleInMenu(true);
 
     QObject::connect(act, &QAction::hovered, [=]() {
@@ -415,7 +415,7 @@ void BookmarksTools::addUrlToMenu(QObject* receiver, Menu* menu, BookmarkItem* b
     auto* act = new Action(menu);
     QString title = QFontMetrics(act->font()).elidedText(bookmark->title(), Qt::ElideRight, 250);
     act->setText(title);
-    act->setData(QVariant::fromValue<void*>(static_cast<void*>(bookmark)));
+    act->setData(QVariant::fromValue<BookmarkItem*>(bookmark));
     act->setIconVisibleInMenu(true);
 
     QObject::connect(act, SIGNAL(triggered()), receiver, SLOT(bookmarkActivated()));

@@ -23,11 +23,13 @@
 #include <QIcon>
 #include <QElapsedTimer>
 #include <QUrl>
+#include <QObject>
 
 #include "qzcommon.h"
 
-class FALKON_EXPORT BookmarkItem
+class FALKON_EXPORT BookmarkItem : public QObject
 {
+    Q_OBJECT
 public:
     enum Type {
         Root,

@@ -168,7 +168,7 @@ void LocationCompleterRefreshJob::completeFromHistory()
             item->setData(bookmark->url(), LocationCompleterModel::UrlRole);
             item->setData(bookmark->visitCount(), LocationCompleterModel::CountRole);
             item->setData(true, LocationCompleterModel::BookmarkRole);
-            item->setData(QVariant::fromValue<void*>(static_cast<void*>(bookmark)), LocationCompleterModel::BookmarkItemRole);
+            item->setData(QVariant::fromValue<BookmarkItem*>(bookmark), LocationCompleterModel::BookmarkItemRole);
             item->setData(m_searchString, LocationCompleterModel::SearchStringRole);
 
             urlList.append(bookmark->url());

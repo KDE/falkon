@@ -39,9 +39,8 @@ public:
 Q_SIGNALS:
     void menuMiddleClicked(Menu*);
 
-public Q_SLOTS:
-
 private:
+    void mousePressEvent(QMouseEvent* e) override;
     void mouseReleaseEvent(QMouseEvent* e) override;
     void keyPressEvent(QKeyEvent* e) override;
 
