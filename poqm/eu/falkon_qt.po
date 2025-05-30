@@ -1,7 +1,7 @@
 # Translation for falkon_qt.po to Euskara/Basque (eu).
 # Copyright (C) 2017-2025 This file is copyright:
 # This file is distributed under the same license as the falkon package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Xabier Aramendi <azpidatziak@gmail.com>, 2017.
@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
-"PO-Revision-Date: 2025-01-17 06:03+0100\n"
+"PO-Revision-Date: 2025-05-29 21:53+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Language: eu_ES\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -712,12 +712,12 @@ msgstr "Kontuz!"
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:547
 msgctxt "MasterPasswordDialog|"
 msgid "You entered a wrong password!"
-msgstr "Sarhitz okerra idatzi duzu!"
+msgstr "Pasahitz okerra idatzi duzu!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:552
 msgctxt "MasterPasswordDialog|"
 msgid "New/Confirm password fields do not match!"
-msgstr "Sarhitz Berri/Baieztapen eremuak ez datoz bat!"
+msgstr "Pasahitz Berri/Baieztapen eremuak ez datoz bat!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:579
 msgctxt "AutoFill|"
@@ -737,27 +737,27 @@ msgstr ""
 msgctxt "MasterPasswordDialog|"
 msgid "Are you sure you want to clear master password and decrypt data?"
 msgstr ""
-"Zihur zaude sarhitz nagusia argitu eta datuak dekriptatzea nahi dituzula?"
+"Ziur zaude pasahitz nagusia garbitu eta datuak deszifratu nahi dituzula?"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:644
 msgctxt "MasterPasswordDialog|"
 msgid "Some data has not been decrypted. The master password was not cleared!"
-msgstr "Zenbait datu ez dira dekriptatu. Sarhitz nagusia ez da argitu!"
+msgstr "Zenbait datu ez dira deszifratu. Pasahitz nagusia ez da garbitu!"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:670
 msgctxt "AutoFill|"
 msgid "Enter Master Password"
-msgstr "Sartu Sarhitz Nagusia"
+msgstr "Sartu pasahitz nagusia"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:674
 msgctxt "AutoFill|"
 msgid "Permission is required, please enter Master Password:"
-msgstr "Baimena beharrezkoa da, mesedez sartu Sarhitz Nagusia:"
+msgstr "Baimena beharrezkoa da, mesedez sartu pasahitz Nagusia:"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:680
 msgctxt "AutoFill|"
 msgid "Entered password is wrong!"
-msgstr "Sartutako sarhitza okerra da!"
+msgstr "Sartutako pasahitza okerra da!"
 
 #: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
 msgctxt "AutoFill|"
@@ -772,17 +772,17 @@ msgstr "Enkriptaturiko DatuBase Ezarpenak"
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:33
 msgctxt "MasterPasswordDialog|"
 msgid "Set/Change Master Password..."
-msgstr "Ezarri/Aldatu Sarhitz Nagusia..."
+msgstr "Ezarri/Aldatu pasahitz nagusia..."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:36
 msgctxt "MasterPasswordDialog|"
 msgid "This backend does not work without a master password."
-msgstr "Atzealde hau ez dabil sarhitz nagusi bat gabe."
+msgstr "Bizkarraldeko hau ez dabil pasahitz nagusirik gabe."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:43
 msgctxt "MasterPasswordDialog|"
 msgid "Clear Master Password..."
-msgstr "Garbitu Sarhitz Nagusia..."
+msgstr "Garbitu pasahitz Nagusia..."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:46
 msgctxt "MasterPasswordDialog|"
@@ -790,8 +790,8 @@ msgid ""
 "This option clears the master password and moves all encrypted data to the "
 "\"DataBase (Plain Text)\" backend, and switches to it."
 msgstr ""
-"Aukera honek sarhitz nagusia argitu eta enkriptaturiko datu guztiak "
-"\"DatuBasea\" (Idazki Laua)\" atzealdera mugitu, eta hona aldatzen du."
+"Aukera honek pasahitz nagusia garbitu, zifratutako datu guztiak \"Datu-basea"
+"\" (testu arrunta)\" bizkarraldera mugitu, eta hartara aldatzen du."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:64
 msgctxt "MasterPasswordDialog|"
@@ -799,29 +799,31 @@ msgid ""
 "The Master Password is used to protect site passwords and form data. If you "
 "set a Master Password you will be asked to enter it once per session."
 msgstr ""
-"Sarhitz Nagusia gune sarhitzak eta galdekizun datuak babesteko erabiltzen "
-"da. Sarhitz Nagusi bat ezartzen baduzu saio bakoitzean galdetuko zaizu."
+"Pasahitz nagusia guneetako pasahitzak eta inprimakietako datuak babesteko "
+"erabiltzen da. Pasahitz nagusi bat ezartzen baduzu saio bakoitzean behin "
+"galdetuko zaizu."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:76
 msgctxt "MasterPasswordDialog|"
 msgid "Current Password:"
-msgstr "Oraingo Sarhitza:"
+msgstr "Egungo pasahitza:"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:83
 msgctxt "MasterPasswordDialog|"
 msgid "New Password:"
-msgstr "Sarhitz Berria:"
+msgstr "Pasahitz berria:"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:90
 msgctxt "MasterPasswordDialog|"
 msgid "Confirm Password:"
-msgstr "Baieztatu Sarhitza:"
+msgstr "Baieztatu pasahitza:"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:120
 msgctxt "MasterPasswordDialog|"
 msgid ""
 "<b>Note:</b> The Master Password is not resettable. Do not forget it, please."
-msgstr "<b>Oharra:</b> Sarhitz Nagusia ezin da berrezarri. Ez ahaztu, mesedez."
+msgstr ""
+"<b>Oharra:</b> Pasahitz nagusia ezin da berrezarri. Ez ahaztu, mesedez."
 
 #: lib/bookmarks/bookmarks.cpp:208
 msgctxt "Bookmarks|"
@@ -1320,8 +1322,7 @@ msgstr "Baieztapena"
 #: lib/cookies/cookiemanager.cpp:134
 msgctxt "CookieManager|"
 msgid "Are you sure you want to delete all cookies on your computer?"
-msgstr ""
-"Zihur zaude cookie guztiak ezabatzea nahi dituzula zure ordenagailutik?"
+msgstr "Ziur zaude zure ordenagailuko cookie guztiak ezabatu nahi dituzula?"
 
 #: lib/cookies/cookiemanager.cpp:179 lib/cookies/cookiemanager.cpp:180
 #: lib/cookies/cookiemanager.cpp:181 lib/cookies/cookiemanager.cpp:182
@@ -1759,7 +1760,8 @@ msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
 msgstr ""
-"Zihur zaude uztea nahi duzula? Osatugabeko jeitsiera guztiak ezeztatuko dira!"
+"Ziur zaude irten nahi duzula? Osatu gabeko zama-jaitsiera guztiak bertan "
+"behera geldituko dira!"
 
 #: lib/downloads/downloadmanager.ui:69
 msgctxt "DownloadManager|"
@@ -1900,7 +1902,7 @@ msgstr "Baieztapena"
 #: lib/history/historymanager.cpp:79
 msgctxt "HistoryManager|"
 msgid "Are you sure you want to delete all history?"
-msgstr "Zihur zaude historia guztia ezabatzea nahi duzula?"
+msgstr "Ziur zaude historia guztia ezabatu nahi duzula?"
 
 #: lib/history/historymanager.cpp:145
 msgctxt "HistoryManager|"
@@ -2279,12 +2281,12 @@ msgstr "Erabiltzaile-izena: "
 #: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
 msgctxt "NetworkManager|"
 msgid "Password: "
-msgstr "Sarhitza: "
+msgstr "Pasahitza: "
 
 #: lib/network/networkmanager.cpp:138
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
-msgstr "Gorde erabiltzaile-izena eta sarhitza gune honetan"
+msgstr "Gorde gune honetako erabiltzaile-izena eta pasahitza"
 
 #: lib/network/networkmanager.cpp:146
 #, qt-format
@@ -2292,7 +2294,7 @@ msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
 msgstr ""
-"%1-k erabiltzaile-izena eta sarhitza eskatzen ditu. Guneak hau dio: \"%2\""
+"%1(e)k erabiltzaile-izena eta pasahitza eskatzen ditu. Guneak hau dio: \"%2\""
 
 #: lib/network/networkmanager.cpp:210
 msgctxt "NetworkManager|"
@@ -2303,7 +2305,7 @@ msgstr "Proxy-aren baimen-ematea beharrezkoa da"
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
-msgstr "%1 proxyak erabiltzaile-izena eta sarhitza eskatzen ditu. "
+msgstr "%1 ordezkariak erabiltzaile-izena eta pasahitza eskatzen ditu. "
 
 #: lib/network/networkmanager.cpp:344
 msgctxt "NetworkManager|"
@@ -3709,12 +3711,12 @@ msgstr "Norbere adiera:"
 #: lib/preferences/autofillmanager.cpp:67
 msgctxt "AutoFillManager|"
 msgid "Import Passwords from File..."
-msgstr "Inportatu Sarhitzak Agiritik..."
+msgstr "Inportatu fitxategiko pasahitzak..."
 
 #: lib/preferences/autofillmanager.cpp:68
 msgctxt "AutoFillManager|"
 msgid "Export Passwords to File..."
-msgstr "Esportatu Sarhitzak Agirira..."
+msgstr "Esportatu pasahitzak fitxategira..."
 
 #: lib/preferences/autofillmanager.cpp:70
 msgctxt "AutoFillManager|"
@@ -3727,7 +3729,7 @@ msgstr "Bilatu"
 #: lib/preferences/autofillmanager.ui:140
 msgctxt "AutoFillManager|"
 msgid "Show Passwords"
-msgstr "Erakutsi Sarhitzak"
+msgstr "Erakutsi pasahitzak"
 
 #: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
@@ -3742,12 +3744,12 @@ msgstr "Aldatu atzealdea:"
 #: lib/preferences/autofillmanager.cpp:179
 msgctxt "AutoFillManager|"
 msgid "Are you sure that you want to show all passwords?"
-msgstr "Zihur zaude sarhitz guztiak erakustea nahi dituzula?"
+msgstr "Ziur zaude pasahitz guztiak erakustea nahi duzula?"
 
 #: lib/preferences/autofillmanager.cpp:194
 msgctxt "AutoFillManager|"
 msgid "Hide Passwords"
-msgstr "Ezkutatu Sarhitzak"
+msgstr "Ezkutatu pasahitzak"
 
 #: lib/preferences/autofillmanager.cpp:232
 msgctxt "AutoFillManager|"
@@ -3757,18 +3759,17 @@ msgstr "Baieztapena"
 #: lib/preferences/autofillmanager.cpp:233
 msgctxt "AutoFillManager|"
 msgid "Are you sure you want to delete all passwords on your computer?"
-msgstr ""
-"Zihur zaude sarhitz guztiak zure ordenagailutik ezabatzea nahi dituzula?"
+msgstr "Ziur zaude zure ordenagailuko pasahitz guztiak ezabatu nahi dituzula?"
 
 #: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Edit password"
-msgstr "Editatu sarhitza"
+msgstr "Editatu pasahitza"
 
 #: lib/preferences/autofillmanager.cpp:252
 msgctxt "AutoFillManager|"
 msgid "Change password:"
-msgstr "Aldatu sarhitza:"
+msgstr "Aldatu pasahitza:"
 
 #: lib/preferences/autofillmanager.cpp:302
 #: lib/preferences/autofillmanager.cpp:313
@@ -3809,17 +3810,17 @@ msgstr "Kopiatu Erabiltzaile-izena"
 #: lib/preferences/autofillmanager.cpp:374
 msgctxt "AutoFillManager|"
 msgid "Copy Password"
-msgstr "Kopiatu Sarhitza"
+msgstr "Kopiatu pasahitza"
 
 #: lib/preferences/autofillmanager.cpp:376
 msgctxt "AutoFillManager|"
 msgid "Edit Password"
-msgstr "Editatu Sarhitza"
+msgstr "Editatu pasahitza"
 
 #: lib/preferences/autofillmanager.ui:25
 msgctxt "AutoFillManager|"
 msgid "Passwords are stored in:"
-msgstr "Sarhitzak hemen biltegiratzen dira:"
+msgstr "Pasahitzak hemen gordetzen dira:"
 
 #: lib/preferences/autofillmanager.ui:35
 msgctxt "AutoFillManager|"
@@ -3834,7 +3835,7 @@ msgstr "Atzealde aukerak"
 #: lib/preferences/autofillmanager.ui:71
 msgctxt "AutoFillManager|"
 msgid "Passwords"
-msgstr "Sarhitzak"
+msgstr "Pasahitzak"
 
 #: lib/preferences/autofillmanager.ui:87 lib/preferences/autofillmanager.ui:201
 msgctxt "AutoFillManager|"
@@ -3849,7 +3850,7 @@ msgstr "Erabiltzaile-izena"
 #: lib/preferences/autofillmanager.ui:97
 msgctxt "AutoFillManager|"
 msgid "Password"
-msgstr "Sarhitza"
+msgstr "Pasahitza"
 
 #: lib/preferences/autofillmanager.ui:113
 msgctxt "AutoFillManager|"
@@ -4096,8 +4097,8 @@ msgid ""
 "Are you sure you want to permanently delete \"%1\" profile? This action "
 "cannot be undone!"
 msgstr ""
-"Zihur zaude \"%1\" profila betirako ezabatzea nahi duzula? Ekintza hau ezin "
-"da desegin!"
+"Ziur zaude \"%1\" profila betirako ezabatu nahi duzula? Ekintza hau ezin da "
+"desegin!"
 
 #: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
@@ -4152,7 +4153,7 @@ msgstr "Jeisketak"
 #: lib/preferences/preferences.ui:102
 msgctxt "Preferences|"
 msgid "Password Manager"
-msgstr "Sarhitz Kudeatzailea"
+msgstr "Pasahitz-kudeatzailea"
 
 #: lib/preferences/preferences.ui:107
 msgctxt "Preferences|"
@@ -4722,7 +4723,7 @@ msgstr "Erabiltzaile-izena:"
 #: lib/preferences/preferences.ui:1560
 msgctxt "Preferences|"
 msgid "Password:"
-msgstr "Sarhitza:"
+msgstr "Pasahitza:"
 
 #: lib/preferences/preferences.ui:1589
 msgctxt "Preferences|"
@@ -4880,7 +4881,7 @@ msgstr "Argumentoak:"
 #: lib/preferences/preferences.ui:1968
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
-msgstr "Utzi hutsik ez bazaude zihur"
+msgstr "Utzi hutsik ziur ez bazaude"
 
 #: lib/preferences/preferences.ui:1989
 msgctxt "Preferences|"
@@ -4900,7 +4901,7 @@ msgstr "Utzi guneetako pasahitzak gordetzen"
 #: lib/preferences/preferences.ui:2073
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
-msgstr "Berezgaitasunez osatu sarhitzak guneetan"
+msgstr "Guneetako pasahitzak automatikoki bete"
 
 #: lib/preferences/preferences.ui:2094
 msgctxt "Preferences|"
@@ -5390,7 +5391,7 @@ msgstr "Leheneratu Babeskopia"
 #: lib/session/sessionmanager.cpp:181
 msgctxt "SessionManager|"
 msgid "Are you sure you want to replace current session?"
-msgstr "Zihur zaude oraingo saioa ordeztea nahi duzula?"
+msgstr "Ziur zaude uneko saioa ordezkatu nahi duzula?"
 
 #: lib/session/sessionmanager.cpp:200
 msgctxt "SessionManager|"
@@ -5401,7 +5402,7 @@ msgstr "Ezabatu Saioa"
 #, qt-format
 msgctxt "SessionManager|"
 msgid "Are you sure you want to delete session '%1'?"
-msgstr "Zihur zaude '%1' saioa ezabatzea nahi duzula?"
+msgstr "Ziur zaude '%1' saioa ezabatu nahi duzula?"
 
 #: lib/session/sessionmanager.cpp:210
 msgctxt "SessionManager|"
