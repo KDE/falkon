@@ -20,6 +20,7 @@
 #include "iconprovider.h"
 
 #include <QPushButton>
+#include <QPlainTextEdit>
 
 SslErrorDialog::SslErrorDialog(QWidget* parent)
     : QDialog(parent)
@@ -31,7 +32,12 @@ SslErrorDialog::SslErrorDialog(QWidget* parent)
     ui->buttonBox->addButton(tr("Only for this session"), QDialogButtonBox::ApplyRole);
     ui->buttonBox->button(QDialogButtonBox::No)->setFocus();
 
+    ui->certTabWidget->hide();
+    ui->certDetailsButton->hide();
+    adjustSize();
+
     connect(ui->buttonBox, &QDialogButtonBox::clicked, this, &SslErrorDialog::buttonClicked);
+    connect(ui->certDetailsButton, &QPushButton::clicked, this, &SslErrorDialog::toggleCertificateDetails);
 }
 
 SslErrorDialog::~SslErrorDialog()
@@ -42,6 +48,23 @@ SslErrorDialog::~SslErrorDialog()
 void SslErrorDialog::setText(const QString &text)
 {
     ui->text->setText(text);
+}
+
+void SslErrorDialog::setCertificateChain(const QList<QSslCertificate> &certificateChain)
+{
+    if (certificateChain.isEmpty()) {
+        return;
+    }
+
+    ui->certDetailsButton->show();
+
+    for (auto &certificate : certificateChain) {
+        auto *certDescription = new QPlainTextEdit(ui->certTabWidget);
+        certDescription->setPlainText(certificate.toText());
+        certDescription->setReadOnly(true);
+        ui->certTabWidget->indexOf(certDescription);
+        ui->certTabWidget->addTab(certDescription, certificate.subjectDisplayName());
+    }
 }
 
 SslErrorDialog::Result SslErrorDialog::result()
@@ -71,5 +94,15 @@ void SslErrorDialog::buttonClicked(QAbstractButton* button)
         m_result = No;
         reject();
         break;
+    }
+}
+
+void SslErrorDialog::toggleCertificateDetails()
+{
+    if (ui->certTabWidget->isVisible()) {
+        ui->certTabWidget->hide();
+    }
+    else {
+        ui->certTabWidget->show();
     }
 }
