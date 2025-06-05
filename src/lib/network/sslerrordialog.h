@@ -19,6 +19,7 @@
 #define SSLERRORDIALOG_H
 
 #include <QDialog>
+#include <QSslCertificate>
 
 namespace Ui
 {
@@ -40,10 +41,13 @@ public:
     ~SslErrorDialog();
 
     void setText(const QString &text);
+    void setCertificateChain(const QList<QSslCertificate> &certificateChain);
+
     Result result();
 
 private Q_SLOTS:
     void buttonClicked(QAbstractButton* button);
+    void toggleCertificateDetails();
 
 private:
     Ui::SslErrorDialog* ui;

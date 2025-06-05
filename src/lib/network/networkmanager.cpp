@@ -89,7 +89,7 @@ bool NetworkManager::certificateError(QWebEngineCertificateError &error, QWidget
         error.defer();
 
     QString title = tr("SSL Certificate Error!");
-    QString text1 = tr("The page you are trying to access has the following errors in the SSL certificate:");
+    QString text1 = tr("The page <strong>%1</strong> you are trying to access has the following errors in the SSL certificate:").arg(host);
     QString text2 = tr("Would you like to make an exception for this certificate?");
 
     const auto errorDescription = error.description();
@@ -97,6 +97,7 @@ bool NetworkManager::certificateError(QWebEngineCertificateError &error, QWidget
 
     SslErrorDialog dialog(parent);
     dialog.setText(message);
+    dialog.setCertificateChain(error.certificateChain());
     dialog.exec();
 
     switch (dialog.result()) {
