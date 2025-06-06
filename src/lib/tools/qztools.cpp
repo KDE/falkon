@@ -961,49 +961,7 @@ QString QzTools::operatingSystem()
     return QSL("Haiku");
 #endif
 #ifdef Q_OS_WIN32
-    QString str = QSL("Windows");
-
-    switch (QSysInfo::windowsVersion()) {
-    case QSysInfo::WV_NT:
-        str.append(QSL(" NT"));
-        break;
-
-    case QSysInfo::WV_2000:
-        str.append(QSL(" 2000"));
-        break;
-
-    case QSysInfo::WV_XP:
-        str.append(QSL(" XP"));
-        break;
-    case QSysInfo::WV_2003:
-        str.append(QSL(" XP Pro x64"));
-        break;
-
-    case QSysInfo::WV_VISTA:
-        str.append(QSL(" Vista"));
-        break;
-
-    case QSysInfo::WV_WINDOWS7:
-        str.append(QSL(" 7"));
-        break;
-
-    case QSysInfo::WV_WINDOWS8:
-        str.append(QSL(" 8"));
-        break;
-
-    case QSysInfo::WV_WINDOWS8_1:
-        str.append(QSL(" 8.1"));
-        break;
-
-    case QSysInfo::WV_WINDOWS10:
-        str.append(QSL(" 10"));
-        break;
-
-    default:
-        break;
-    }
-
-    return str;
+    return QSL("Windows") + QSysInfo::productVersion();
 #endif
 }
 

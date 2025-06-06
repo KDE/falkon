@@ -8,13 +8,9 @@ include:
       - /gitlab-templates/linux-qt6-next.yml
       - /gitlab-templates/freebsd-qt6.yml
       - /gitlab-templates/flatpak.yml
+      - /gitlab-templates/windows-qt6.yml
 
       # Blocked - copied from tokodon
       # - /gitlab-templates/reuse-lint.yml
       # - /gitlab-templates/android-qt6.yml
       # - /gitlab-templates/craft-android-qt6-apks.yml
-
-      # Blocked on libass (a MPV dependency) not compatible with MSVC at the moment (tokodon comment)
-      # Blocked - Nobody takes care of it
-      # - /gitlab-templates/windows.yml
-      # - /gitlab-templates/windows-qt6.yml

@@ -131,7 +131,7 @@ find_package(KF6Purpose ${KF_MIN_VERSION} CONFIG)
 set_package_properties(KF6Purpose PROPERTIES DESCRIPTION "KDE Frameworks Integration plugin" TYPE OPTIONAL)
 find_package(KF6JobWidgets ${KF_MIN_VERSION} CONFIG)
 set_package_properties(KF6JobWidgets PROPERTIES DESCRIPTION "KDE Frameworks Integration plugin" TYPE OPTIONAL)
-if (KF6Wallet_FOUND AND KF6KIO_FOUND AND KF6Crash_FOUND AND KF6CoreAddons_FOUND AND KF6Purpose_FOUND AND KF6JobWidgets_FOUND)
+if (KF6Wallet_FOUND AND KF6KIO_FOUND AND KF6Crash_FOUND AND KF6CoreAddons_FOUND AND KF6Purpose_FOUND AND KF6JobWidgets_FOUND AND NOT WIN32)
     set(ENABLE_KDE_FRAMEWORKS_INTEGRATION_PLUGIN TRUE)
 endif()
 

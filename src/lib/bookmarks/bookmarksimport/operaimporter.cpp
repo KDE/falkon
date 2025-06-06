@@ -37,7 +37,7 @@ QString OperaImporter::description() const
 QString OperaImporter::standardPath() const
 {
 #ifdef Q_OS_WIN
-    return QString("%APPDATA%/Opera/");
+    return QStringLiteral("%APPDATA%/Opera/");
 #else
     return QDir::homePath() + QLatin1String("/.opera/");
 #endif

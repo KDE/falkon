@@ -46,7 +46,7 @@ QString FirefoxImporter::description() const
 QString FirefoxImporter::standardPath() const
 {
 #ifdef Q_OS_WIN
-    return QString("%APPDATA%/Mozilla/");
+    return QStringLiteral("%APPDATA%/Mozilla/");
 #else
     return QDir::homePath() + QLatin1String("/.mozilla/firefox/");
 #endif

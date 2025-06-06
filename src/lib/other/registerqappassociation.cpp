@@ -26,6 +26,7 @@
 #include <QStringList>
 #include <QSettings>
 #include <QDir>
+#include <QOperatingSystemVersion>
 
 RegisterQAppAssociation::RegisterQAppAssociation(QObject* parent) :
     QObject(parent)
@@ -144,14 +145,13 @@ bool RegisterQAppAssociation::registerAppCapabilities()
 
 bool RegisterQAppAssociation::isVistaOrNewer()
 {
-    return (QSysInfo::windowsVersion() >= QSysInfo::WV_VISTA &&
-            QSysInfo::windowsVersion() <= QSysInfo::WV_NT_based);
+    // TODO: clean up. Earlier version are no longer supported in Qt, anyway.
+    return true;
 }
 
 bool RegisterQAppAssociation::isWin10OrNewer()
 {
-    return (QSysInfo::windowsVersion() >= QSysInfo::WV_WINDOWS10 &&
-            QSysInfo::windowsVersion() <= QSysInfo::WV_NT_based);
+    return (QOperatingSystemVersion::current() >= QOperatingSystemVersion::Windows10);
 }
 
 void RegisterQAppAssociation::registerAssociation(const QString &assocName, AssociationType type)

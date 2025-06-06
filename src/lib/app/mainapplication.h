@@ -208,7 +208,6 @@ private:
 
     QList<PostLaunchAction> m_postLaunchActions;
 
-    void createJumpList();
     void initPulseSupport();
 
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)

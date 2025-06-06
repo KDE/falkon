@@ -43,13 +43,6 @@
 #include <QWebEngineDownloadRequest>
 #include <QtWebEngineWidgetsVersion>
 
-#ifdef Q_OS_WIN
-#include <QtWin>
-#include <QWindow>
-#include <QWinTaskbarButton>
-#include <QWinTaskbarProgress>
-#endif
-
 DownloadManager::DownloadManager(QWidget* parent)
     : QWidget(parent)
     , ui(new Ui::DownloadManager)
@@ -59,11 +52,6 @@ DownloadManager::DownloadManager(QWidget* parent)
 {
     setWindowFlags(windowFlags() ^ Qt::WindowMaximizeButtonHint);
     ui->setupUi(this);
-#ifdef Q_OS_WIN
-    if (QtWin::isCompositionEnabled()) {
-        QtWin::extendFrameIntoClientArea(this, -1, -1, -1, -1);
-    }
-#endif
     ui->clearButton->setIcon(QIcon::fromTheme(QSL("edit-clear")));
     QzTools::centerWidgetOnScreen(this);
 
@@ -157,20 +145,6 @@ void DownloadManager::closeDownloadTab(QWebEngineDownloadRequest *item) const
     }
 }
 
-QWinTaskbarButton *DownloadManager::taskbarButton()
-{
-#ifdef Q_OS_WIN
-    if (!m_taskbarButton) {
-        BrowserWindow *window = mApp->getWindow();
-        m_taskbarButton = new QWinTaskbarButton(window ? window->windowHandle() : windowHandle());
-        m_taskbarButton->progress()->setRange(0, 100);
-    }
-    return m_taskbarButton;
-#else
-    return nullptr;
-#endif
-}
-
 void DownloadManager::startExternalManager(const QUrl &url)
 {
     QString arguments = m_externalArguments;
@@ -190,9 +164,6 @@ void DownloadManager::timerEvent(QTimerEvent* e)
         if (!ui->list->count()) {
             ui->speedLabel->clear();
             setWindowTitle(tr("Download Manager"));
-#ifdef Q_OS_WIN
-            taskbarButton()->progress()->hide();
-#endif
             return;
         }
         for (int i = 0; i < ui->list->count(); i++) {
@@ -226,16 +197,10 @@ void DownloadManager::timerEvent(QTimerEvent* e)
             speed += spee;
         }
 
-#ifndef Q_OS_WIN
         ui->speedLabel->setText(tr("%1% of %2 files (%3) %4 remaining").arg(QString::number(progress), QString::number(progresses.count()),
                                 DownloadItem::currentSpeedToString(speed),
                                 DownloadItem::remaingTimeToString(remaining)));
-#endif
         setWindowTitle(tr("%1% - Download Manager").arg(progress));
-#ifdef Q_OS_WIN
-        taskbarButton()->progress()->show();
-        taskbarButton()->progress()->setValue(progress);
-#endif
     }
 
     QWidget::timerEvent(e);
@@ -422,9 +387,6 @@ void DownloadManager::downloadFinished(bool success)
         }
         ui->speedLabel->clear();
         setWindowTitle(tr("Download Manager"));
-#ifdef Q_OS_WIN
-        taskbarButton()->progress()->hide();
-#endif
         if (m_closeOnFinish) {
             close();
         }

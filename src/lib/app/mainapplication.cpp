@@ -74,12 +74,6 @@
 #include <QWebEngineNotification>
 #include <QWebEngineUrlScheme>
 
-#ifdef Q_OS_WIN
-#include <QtWin>
-#include <QWinJumpList>
-#include <QWinJumpListCategory>
-#endif
-
 #include <iostream>
 
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
@@ -821,7 +815,6 @@ void MainApplication::postLaunch()
         getWindow()->toggleFullScreen();
     }
 
-    createJumpList();
     initPulseSupport();
 
     QTimer::singleShot(5000, this, &MainApplication::runDeferredPostLaunchActions);
@@ -1248,7 +1241,7 @@ void MainApplication::setUserStyleSheet(const QString &filePath)
     highlightColor = pal.color(QPalette::Highlight).name();
     highlightedTextColor = pal.color(QPalette::HighlightedText).name();
 #endif
-    userCss += QString("::selection {background: %1; color: %2;} ").arg(highlightColor, highlightedTextColor);
+    userCss += QStringLiteral("::selection {background: %1; color: %2;} ").arg(highlightColor, highlightedTextColor);
 #endif
 
     userCss += QzTools::readAllFileContents(filePath).remove(QLatin1Char('\n'));
@@ -1268,29 +1261,6 @@ void MainApplication::setUserStyleSheet(const QString &filePath)
     script.setRunsOnSubFrames(true);
     script.setSourceCode(Scripts::setCss(userCss));
     m_webProfile->scripts()->insert(script);
-}
-
-void MainApplication::createJumpList()
-{
-#ifdef Q_OS_WIN
-    QWinJumpList *jumpList = new QWinJumpList(this);
-    jumpList->clear();
-
-    // Frequent
-    QWinJumpListCategory *frequent = jumpList->frequent();
-    frequent->setVisible(true);
-    const QVector<HistoryEntry> mostList = m_history->mostVisited(7);
-    for (const HistoryEntry &entry : mostList) {
-        frequent->addLink(IconProvider::iconForUrl(entry.url), entry.title, applicationFilePath(), QStringList{(QString::fromUtf8entry.url.toEncoded())});
-    }
-
-    // Tasks
-    QWinJumpListCategory *tasks = jumpList->tasks();
-    tasks->setVisible(true);
-    tasks->addLink(IconProvider::newTabIcon(), tr("Open new tab"), applicationFilePath(), {QSL("--new-tab")});
-    tasks->addLink(IconProvider::newWindowIcon(), tr("Open new window"), applicationFilePath(), {QSL("--new-window")});
-    tasks->addLink(IconProvider::privateBrowsingIcon(), tr("Open new private window"), applicationFilePath(), {QSL("--private-browsing")});
-#endif
 }
 
 void MainApplication::initPulseSupport()

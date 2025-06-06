@@ -33,7 +33,6 @@ class QUrl;
 class QNetworkAccessManager;
 class QListWidgetItem;
 class QWebEngineDownloadRequest;
-class QWinTaskbarButton;
 
 class DownloadItem;
 class DownloadManagerModel;
@@ -99,7 +98,6 @@ private:
     void keyPressEvent(QKeyEvent* e) override;
 
     void closeDownloadTab(QWebEngineDownloadRequest *item) const;
-    QWinTaskbarButton *taskbarButton();
 
     Ui::DownloadManager* ui;
     DownloadManagerModel *m_model;
@@ -117,8 +115,6 @@ private:
     QString m_externalArguments;
 
     DownloadOption m_lastDownloadOption;
-
-    QPointer<QWinTaskbarButton> m_taskbarButton;
 };
 
 #endif // DOWNLOADMANAGER_H
