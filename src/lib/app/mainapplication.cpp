@@ -115,6 +115,10 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     setApplicationName(QStringLiteral("falkon"));
     setOrganizationDomain(QStringLiteral("org.kde"));
+#if defined(Q_OS_WIN)
+    QIcon::setFallbackThemeName(QStringLiteral("breeze"));
+    setStyle(QStringLiteral("breeze"));
+#endif
     setWindowIcon(QIcon::fromTheme(QSL("falkon"), QIcon(QSL(":icons/falkon.svg"))));
     setDesktopFileName(QSL("org.kde.falkon"));
 

@@ -51,5 +51,21 @@ if (UNIX AND NOT APPLE)
 
     install(FILES ../../linux/completion/falkon DESTINATION ${KDE_INSTALL_DATADIR}/bash-completion/completions)
     install(FILES ../../linux/appdata/org.kde.falkon.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
-endif()
+elseif (WIN32)
+    install(TARGETS falkon ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+    install(DIRECTORY ${CMAKE_SOURCE_DIR}/themes DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/falkon)
+    if (KF6I18n_FOUND)
+        ki18n_install(${CMAKE_SOURCE_DIR}/po)
+    endif()
+    ecm_install_po_files_as_qm(${CMAKE_SOURCE_DIR}/poqm)
 
+    ecm_install_icons(ICONS
+        ../../linux/hicolor/16-apps-falkon.png
+        ../../linux/hicolor/32-apps-falkon.png
+        ../../linux/hicolor/48-apps-falkon.png
+        ../../linux/hicolor/64-apps-falkon.png
+        ../../linux/hicolor/128-apps-falkon.png
+        ../../linux/hicolor/256-apps-falkon.png
+        ../../linux/hicolor/sc-apps-falkon.svg
+        DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor)
+endif()
