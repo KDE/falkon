@@ -354,7 +354,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Il y a encore des onglets ouverts"
 
-#: lib/app/mainapplication.cpp:1146
+#: lib/app/mainapplication.cpp:1139
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -362,32 +362,17 @@ msgid ""
 msgstr ""
 "Falkon n'est pas votre navigateur par défaut. Voulez-vous qu'il le devienne ?"
 
-#: lib/app/mainapplication.cpp:1147
+#: lib/app/mainapplication.cpp:1140
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Toujours effectuer cette vérification au démarrage de Falkon."
 
-#: lib/app/mainapplication.cpp:1149
+#: lib/app/mainapplication.cpp:1142
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Navigateur par défaut"
 
-#: lib/app/mainapplication.cpp:1290
-msgctxt "MainApplication|"
-msgid "Open new tab"
-msgstr "Ouvrir un nouvel onglet"
-
-#: lib/app/mainapplication.cpp:1291
-msgctxt "MainApplication|"
-msgid "Open new window"
-msgstr "Ouvrir une nouvelle fenêtre"
-
-#: lib/app/mainapplication.cpp:1292
-msgctxt "MainApplication|"
-msgid "Open new private window"
-msgstr "Ouvrir une nouvelle fenêtre en navigation privée"
-
-#: lib/app/mainapplication.cpp:1307
+#: lib/app/mainapplication.cpp:1277
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1706,65 +1691,65 @@ msgstr ""
 "le fichier\n"
 "%1 !"
 
-#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:424
+#: lib/downloads/downloadmanager.cpp:166 lib/downloads/downloadmanager.cpp:389
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "Gestionnaire de téléchargement"
 
-#: lib/downloads/downloadmanager.cpp:230
+#: lib/downloads/downloadmanager.cpp:200
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%1% de %2 fichiers (%3) %4 restant"
 
-#: lib/downloads/downloadmanager.cpp:234
+#: lib/downloads/downloadmanager.cpp:203
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1% - Gestionnaire de téléchargement"
 
-#: lib/downloads/downloadmanager.cpp:304
+#: lib/downloads/downloadmanager.cpp:269
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "Enregistrer le fichier sous..."
 
-#: lib/downloads/downloadmanager.cpp:314
+#: lib/downloads/downloadmanager.cpp:279
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr "Archive MIME HTML (*.mhtml)"
 
-#: lib/downloads/downloadmanager.cpp:315
+#: lib/downloads/downloadmanager.cpp:280
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr "Page HTML, seule (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:281
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr "Page HTML, complète (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:320
+#: lib/downloads/downloadmanager.cpp:285
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr "Enregistrer la page sous…"
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "Falkon : téléchargement terminé"
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "Tous les fichiers ont été téléchargés avec succès."
 
-#: lib/downloads/downloadmanager.cpp:464
+#: lib/downloads/downloadmanager.cpp:426
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "Attention"
 
-#: lib/downloads/downloadmanager.cpp:465
+#: lib/downloads/downloadmanager.cpp:427
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -3200,12 +3185,12 @@ msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
 msgstr "Supprimer"
 
-#: lib/other/registerqappassociation.cpp:110
+#: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
 msgstr "Attention !"
 
-#: lib/other/registerqappassociation.cpp:111
+#: lib/other/registerqappassociation.cpp:112
 msgctxt "RegisterQAppAssociation|"
 msgid ""
 "There are some problems. Please, reinstall Falkon.\n"
@@ -6304,6 +6289,18 @@ msgstr "Inspecter cet élément"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new tab"
+#~ msgstr "Ouvrir un nouvel onglet"
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new window"
+#~ msgstr "Ouvrir une nouvelle fenêtre"
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new private window"
+#~ msgstr "Ouvrir une nouvelle fenêtre en navigation privée"
 
 #~ msgctxt "AdBlockTreeWidget|"
 #~ msgid "%1 (recently updated)"

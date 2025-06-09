@@ -347,39 +347,24 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Det er fremdeles åpne faner"
 
-#: lib/app/mainapplication.cpp:1146
+#: lib/app/mainapplication.cpp:1139
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1147
+#: lib/app/mainapplication.cpp:1140
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr ""
 
-#: lib/app/mainapplication.cpp:1149
+#: lib/app/mainapplication.cpp:1142
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Forvalgt nettleser"
 
-#: lib/app/mainapplication.cpp:1290
-msgctxt "MainApplication|"
-msgid "Open new tab"
-msgstr "Åpne ny fane"
-
-#: lib/app/mainapplication.cpp:1291
-msgctxt "MainApplication|"
-msgid "Open new window"
-msgstr "Åpne nytt vindu"
-
-#: lib/app/mainapplication.cpp:1292
-msgctxt "MainApplication|"
-msgid "Open new private window"
-msgstr "Åpne nytt privat vindu"
-
-#: lib/app/mainapplication.cpp:1307
+#: lib/app/mainapplication.cpp:1277
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1679,65 +1664,65 @@ msgstr ""
 "%1\n"
 "ble ikke funnet!"
 
-#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:424
+#: lib/downloads/downloadmanager.cpp:166 lib/downloads/downloadmanager.cpp:389
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "Nedlastingsbehandler"
 
-#: lib/downloads/downloadmanager.cpp:230
+#: lib/downloads/downloadmanager.cpp:200
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%1% av %2 filer (%3) %4 gjenstår"
 
-#: lib/downloads/downloadmanager.cpp:234
+#: lib/downloads/downloadmanager.cpp:203
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1% – Nedlastingsbehandler"
 
-#: lib/downloads/downloadmanager.cpp:304
+#: lib/downloads/downloadmanager.cpp:269
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "Lagre fil som …"
 
-#: lib/downloads/downloadmanager.cpp:314
+#: lib/downloads/downloadmanager.cpp:279
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr "MIME HTML-Arkiv (*.mhtml)"
 
-#: lib/downloads/downloadmanager.cpp:315
+#: lib/downloads/downloadmanager.cpp:280
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr "HTML-side, enkeltstående (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:281
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr "HTML-side, komplett (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:320
+#: lib/downloads/downloadmanager.cpp:285
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr "Lagre side som …"
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "Alle filer har blitt lastet ned."
 
-#: lib/downloads/downloadmanager.cpp:464
+#: lib/downloads/downloadmanager.cpp:426
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "Advarsel"
 
-#: lib/downloads/downloadmanager.cpp:465
+#: lib/downloads/downloadmanager.cpp:427
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -3143,12 +3128,12 @@ msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
 msgstr ""
 
-#: lib/other/registerqappassociation.cpp:110
+#: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
 msgstr "Advarsel!"
 
-#: lib/other/registerqappassociation.cpp:111
+#: lib/other/registerqappassociation.cpp:112
 msgctxt "RegisterQAppAssociation|"
 msgid ""
 "There are some problems. Please, reinstall Falkon.\n"
@@ -6259,3 +6244,15 @@ msgstr "Inspiser element"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr ""
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new tab"
+#~ msgstr "Åpne ny fane"
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new window"
+#~ msgstr "Åpne nytt vindu"
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new private window"
+#~ msgstr "Åpne nytt privat vindu"

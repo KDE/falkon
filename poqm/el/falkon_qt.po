@@ -351,7 +351,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Υπάρχουν ανοιχτές καρτέλες"
 
-#: lib/app/mainapplication.cpp:1146
+#: lib/app/mainapplication.cpp:1139
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -360,32 +360,17 @@ msgstr ""
 "Ο Falkon δεν είναι αυτή τη στιγμή ο προεπιλεγμένος περιηγητής ιστού σας. "
 "Θέλετε να τον κάνετε προεπιλεγμένο;"
 
-#: lib/app/mainapplication.cpp:1147
+#: lib/app/mainapplication.cpp:1140
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Να γίνεται πάντα αυτός ο έλεγχος κατά την έναρξη του Falkon."
 
-#: lib/app/mainapplication.cpp:1149
+#: lib/app/mainapplication.cpp:1142
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Προεπιλεγμένος περιηγητής ιστού"
 
-#: lib/app/mainapplication.cpp:1290
-msgctxt "MainApplication|"
-msgid "Open new tab"
-msgstr "Άνοιγμα νέας καρτέλας"
-
-#: lib/app/mainapplication.cpp:1291
-msgctxt "MainApplication|"
-msgid "Open new window"
-msgstr "Άνοιγμα νέου παραθύρου"
-
-#: lib/app/mainapplication.cpp:1292
-msgctxt "MainApplication|"
-msgid "Open new private window"
-msgstr "Άνοιγμα νέου ιδιωτικού παραθύρου"
-
-#: lib/app/mainapplication.cpp:1307
+#: lib/app/mainapplication.cpp:1277
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1709,65 +1694,65 @@ msgstr ""
 "%1 \n"
 "δεν βρέθηκε!"
 
-#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:424
+#: lib/downloads/downloadmanager.cpp:166 lib/downloads/downloadmanager.cpp:389
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "Διαχειριστής λήψεων"
 
-#: lib/downloads/downloadmanager.cpp:230
+#: lib/downloads/downloadmanager.cpp:200
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%1% από %2 αρχεία (%3) %4 απομένει"
 
-#: lib/downloads/downloadmanager.cpp:234
+#: lib/downloads/downloadmanager.cpp:203
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1% - Διαχειριστής λήψεων"
 
-#: lib/downloads/downloadmanager.cpp:304
+#: lib/downloads/downloadmanager.cpp:269
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "Αποθήκευση αρχείου ως..."
 
-#: lib/downloads/downloadmanager.cpp:314
+#: lib/downloads/downloadmanager.cpp:279
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr "Αρχειοθήκη MIME HTML (*.mhtml)"
 
-#: lib/downloads/downloadmanager.cpp:315
+#: lib/downloads/downloadmanager.cpp:280
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr "Σελίδα HTML, απλή (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:281
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr "Σελίδα HTML, πλήρης (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:320
+#: lib/downloads/downloadmanager.cpp:285
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr "Αποθήκευση της σελίδας ως..."
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "Falkon: Η λήψη ολοκληρώθηκε"
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "Όλα τα αρχεία λήφθηκαν επιτυχώς."
 
-#: lib/downloads/downloadmanager.cpp:464
+#: lib/downloads/downloadmanager.cpp:426
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "Προειδοποίηση"
 
-#: lib/downloads/downloadmanager.cpp:465
+#: lib/downloads/downloadmanager.cpp:427
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -3191,12 +3176,12 @@ msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
 msgstr "Αφαίρεση"
 
-#: lib/other/registerqappassociation.cpp:110
+#: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
 msgstr "Προσοχή!"
 
-#: lib/other/registerqappassociation.cpp:111
+#: lib/other/registerqappassociation.cpp:112
 msgctxt "RegisterQAppAssociation|"
 msgid ""
 "There are some problems. Please, reinstall Falkon.\n"
@@ -6353,6 +6338,18 @@ msgstr "Επιθεώρηση στοιχείου"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new tab"
+#~ msgstr "Άνοιγμα νέας καρτέλας"
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new window"
+#~ msgstr "Άνοιγμα νέου παραθύρου"
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new private window"
+#~ msgstr "Άνοιγμα νέου ιδιωτικού παραθύρου"
 
 #~ msgctxt "AdBlockTreeWidget|"
 #~ msgid "%1 (recently updated)"

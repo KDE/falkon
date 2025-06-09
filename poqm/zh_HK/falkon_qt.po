@@ -348,7 +348,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "仍有開啟的分頁"
 
-#: lib/app/mainapplication.cpp:1146
+#: lib/app/mainapplication.cpp:1139
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -360,7 +360,7 @@ msgid ""
 "default browser?"
 msgstr "QupZilla並非你的預設瀏覽器。是否要QupZilla成為預設瀏覽器？"
 
-#: lib/app/mainapplication.cpp:1147
+#: lib/app/mainapplication.cpp:1140
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid "Always perform this check when starting QupZilla."
@@ -368,27 +368,12 @@ msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "每次啟動QupZilla均進行確認"
 
-#: lib/app/mainapplication.cpp:1149
+#: lib/app/mainapplication.cpp:1142
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "預設瀏覽器"
 
-#: lib/app/mainapplication.cpp:1290
-msgctxt "MainApplication|"
-msgid "Open new tab"
-msgstr ""
-
-#: lib/app/mainapplication.cpp:1291
-msgctxt "MainApplication|"
-msgid "Open new window"
-msgstr ""
-
-#: lib/app/mainapplication.cpp:1292
-msgctxt "MainApplication|"
-msgid "Open new private window"
-msgstr ""
-
-#: lib/app/mainapplication.cpp:1307
+#: lib/app/mainapplication.cpp:1277
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -1716,50 +1701,50 @@ msgstr ""
 "%1\n"
 "檔案。"
 
-#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:424
+#: lib/downloads/downloadmanager.cpp:166 lib/downloads/downloadmanager.cpp:389
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "下載管理員"
 
-#: lib/downloads/downloadmanager.cpp:230
+#: lib/downloads/downloadmanager.cpp:200
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%2個檔案的%1%（目前速度%3）剩餘%4"
 
-#: lib/downloads/downloadmanager.cpp:234
+#: lib/downloads/downloadmanager.cpp:203
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1% - 下載管理員"
 
-#: lib/downloads/downloadmanager.cpp:304
+#: lib/downloads/downloadmanager.cpp:269
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "另存新檔…"
 
-#: lib/downloads/downloadmanager.cpp:314
+#: lib/downloads/downloadmanager.cpp:279
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:315
+#: lib/downloads/downloadmanager.cpp:280
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:281
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:320
+#: lib/downloads/downloadmanager.cpp:285
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr ""
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 #, fuzzy
 #| msgctxt "DownloadOptionsDialog|"
 #| msgid "Download link copied."
@@ -1767,17 +1752,17 @@ msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "已複製下載連結。"
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "成功下載全部檔案。"
 
-#: lib/downloads/downloadmanager.cpp:464
+#: lib/downloads/downloadmanager.cpp:426
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "警告"
 
-#: lib/downloads/downloadmanager.cpp:465
+#: lib/downloads/downloadmanager.cpp:427
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -3402,12 +3387,12 @@ msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
 msgstr "移除"
 
-#: lib/other/registerqappassociation.cpp:110
+#: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
 msgstr "警告"
 
-#: lib/other/registerqappassociation.cpp:111
+#: lib/other/registerqappassociation.cpp:112
 #, fuzzy
 #| msgctxt "RegisterQAppAssociation|"
 #| msgid ""

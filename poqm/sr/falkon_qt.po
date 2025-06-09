@@ -360,7 +360,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "И даље имате отворених језичака"
 
-#: lib/app/mainapplication.cpp:1146
+#: lib/app/mainapplication.cpp:1139
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -374,7 +374,7 @@ msgstr ""
 "Капзила тренутно није ваш подразумевани прегледач веба. Да ли желите да "
 "поставите за подразумеваног прегледача?"
 
-#: lib/app/mainapplication.cpp:1147
+#: lib/app/mainapplication.cpp:1140
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid "Always perform this check when starting QupZilla."
@@ -382,27 +382,12 @@ msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Увек изврши ову проверу по покретању Капзиле."
 
-#: lib/app/mainapplication.cpp:1149
+#: lib/app/mainapplication.cpp:1142
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Подразумевани прегледач"
 
-#: lib/app/mainapplication.cpp:1290
-msgctxt "MainApplication|"
-msgid "Open new tab"
-msgstr ""
-
-#: lib/app/mainapplication.cpp:1291
-msgctxt "MainApplication|"
-msgid "Open new window"
-msgstr ""
-
-#: lib/app/mainapplication.cpp:1292
-msgctxt "MainApplication|"
-msgid "Open new private window"
-msgstr ""
-
-#: lib/app/mainapplication.cpp:1307
+#: lib/app/mainapplication.cpp:1277
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -1744,50 +1729,50 @@ msgstr ""
 " %1 \n"
 " није нађен!"
 
-#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:424
+#: lib/downloads/downloadmanager.cpp:166 lib/downloads/downloadmanager.cpp:389
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "Менаџер преузимања"
 
-#: lib/downloads/downloadmanager.cpp:230
+#: lib/downloads/downloadmanager.cpp:200
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%1% од %2 фајлова (%3) %4 до завршетка"
 
-#: lib/downloads/downloadmanager.cpp:234
+#: lib/downloads/downloadmanager.cpp:203
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1% - менаџер преузимања"
 
-#: lib/downloads/downloadmanager.cpp:304
+#: lib/downloads/downloadmanager.cpp:269
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "Сачувај фајл као..."
 
-#: lib/downloads/downloadmanager.cpp:314
+#: lib/downloads/downloadmanager.cpp:279
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr "МИМЕ ХТМЛ архива (*.mhtml)"
 
-#: lib/downloads/downloadmanager.cpp:315
+#: lib/downloads/downloadmanager.cpp:280
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr "ХТМЛ страница, сама (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:281
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr "ХТМЛ страница, комплетна (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:320
+#: lib/downloads/downloadmanager.cpp:285
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr "Сачувај страницу као..."
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 #, fuzzy
 #| msgctxt "DownloadOptionsDialog|"
 #| msgid "Download link copied."
@@ -1795,17 +1780,17 @@ msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "Веза је копирана."
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "Сви фајлови су успешно преузети."
 
-#: lib/downloads/downloadmanager.cpp:464
+#: lib/downloads/downloadmanager.cpp:426
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "Упозорење"
 
-#: lib/downloads/downloadmanager.cpp:465
+#: lib/downloads/downloadmanager.cpp:427
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -3438,12 +3423,12 @@ msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
 msgstr "Уклони"
 
-#: lib/other/registerqappassociation.cpp:110
+#: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
 msgstr "Упозорење!"
 
-#: lib/other/registerqappassociation.cpp:111
+#: lib/other/registerqappassociation.cpp:112
 #, fuzzy
 #| msgctxt "RegisterQAppAssociation|"
 #| msgid ""

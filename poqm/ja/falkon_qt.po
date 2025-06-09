@@ -353,7 +353,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "まだ開いているタブがあります"
 
-#: lib/app/mainapplication.cpp:1146
+#: lib/app/mainapplication.cpp:1139
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -367,7 +367,7 @@ msgstr ""
 "QupZilla は現在既定のブラウザに設定されていません。既定のブラウザに設定します"
 "か？"
 
-#: lib/app/mainapplication.cpp:1147
+#: lib/app/mainapplication.cpp:1140
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid "Always perform this check when starting QupZilla."
@@ -375,27 +375,12 @@ msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "QupZilla の起動時に毎回既定のブラウザか確認する。"
 
-#: lib/app/mainapplication.cpp:1149
+#: lib/app/mainapplication.cpp:1142
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "既定のブラウザ"
 
-#: lib/app/mainapplication.cpp:1290
-msgctxt "MainApplication|"
-msgid "Open new tab"
-msgstr "新しいタブ"
-
-#: lib/app/mainapplication.cpp:1291
-msgctxt "MainApplication|"
-msgid "Open new window"
-msgstr "新しいウィンドウ"
-
-#: lib/app/mainapplication.cpp:1292
-msgctxt "MainApplication|"
-msgid "Open new private window"
-msgstr "新しいプライベートウィンドウ"
-
-#: lib/app/mainapplication.cpp:1307
+#: lib/app/mainapplication.cpp:1277
 #, fuzzy
 #| msgctxt "MainApplication|"
 #| msgid ""
@@ -1743,50 +1728,50 @@ msgstr ""
 " %1\n"
 "は見つかりませんでした!"
 
-#: lib/downloads/downloadmanager.cpp:192 lib/downloads/downloadmanager.cpp:424
+#: lib/downloads/downloadmanager.cpp:166 lib/downloads/downloadmanager.cpp:389
 #: lib/downloads/downloadmanager.ui:20
 msgctxt "DownloadManager|"
 msgid "Download Manager"
 msgstr "ダウンロードマネージャ"
 
-#: lib/downloads/downloadmanager.cpp:230
+#: lib/downloads/downloadmanager.cpp:200
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% of %2 files (%3) %4 remaining"
 msgstr "%1% %2ファイル (%3) 残り%4"
 
-#: lib/downloads/downloadmanager.cpp:234
+#: lib/downloads/downloadmanager.cpp:203
 #, qt-format
 msgctxt "DownloadManager|"
 msgid "%1% - Download Manager"
 msgstr "%1% - ダウンロードマネージャ"
 
-#: lib/downloads/downloadmanager.cpp:304
+#: lib/downloads/downloadmanager.cpp:269
 msgctxt "DownloadManager|"
 msgid "Save file as..."
 msgstr "名前を付けて保存"
 
-#: lib/downloads/downloadmanager.cpp:314
+#: lib/downloads/downloadmanager.cpp:279
 msgctxt "DownloadManager|"
 msgid "MIME HTML Archive (*.mhtml)"
 msgstr "MIME HTML アーカイブ (*.mhtml)"
 
-#: lib/downloads/downloadmanager.cpp:315
+#: lib/downloads/downloadmanager.cpp:280
 msgctxt "DownloadManager|"
 msgid "HTML Page, single (*.html)"
 msgstr "HTML ページ, 単一ファイル (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:316
+#: lib/downloads/downloadmanager.cpp:281
 msgctxt "DownloadManager|"
 msgid "HTML Page, complete (*.html)"
 msgstr "HTML ページ, 完全 (*.html)"
 
-#: lib/downloads/downloadmanager.cpp:320
+#: lib/downloads/downloadmanager.cpp:285
 msgctxt "DownloadManager|"
 msgid "Save page as..."
 msgstr "名前を付けてページを保存..."
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 #, fuzzy
 #| msgctxt "DownloadManager|"
 #| msgid "QupZilla: Download Finished"
@@ -1794,17 +1779,17 @@ msgctxt "DownloadManager|"
 msgid "Falkon: Download Finished"
 msgstr "QupZilla: ダウンロード完了"
 
-#: lib/downloads/downloadmanager.cpp:417
+#: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
 msgstr "全てのファイルのダウンロードに成功しました。"
 
-#: lib/downloads/downloadmanager.cpp:464
+#: lib/downloads/downloadmanager.cpp:426
 msgctxt "DownloadManager|"
 msgid "Warning"
 msgstr "警告"
 
-#: lib/downloads/downloadmanager.cpp:465
+#: lib/downloads/downloadmanager.cpp:427
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
@@ -3448,12 +3433,12 @@ msgctxt "ProtocolHandlerDialog|"
 msgid "Remove"
 msgstr "削除"
 
-#: lib/other/registerqappassociation.cpp:110
+#: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
 msgstr "警告！"
 
-#: lib/other/registerqappassociation.cpp:111
+#: lib/other/registerqappassociation.cpp:112
 #, fuzzy
 #| msgctxt "RegisterQAppAssociation|"
 #| msgid ""
@@ -6766,6 +6751,18 @@ msgstr "要素の調査"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr ""
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new tab"
+#~ msgstr "新しいタブ"
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new window"
+#~ msgstr "新しいウィンドウ"
+
+#~ msgctxt "MainApplication|"
+#~ msgid "Open new private window"
+#~ msgstr "新しいプライベートウィンドウ"
 
 #~ msgctxt "AdBlockTreeWidget|"
 #~ msgid "%1 (recently updated)"
