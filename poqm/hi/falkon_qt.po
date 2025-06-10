@@ -344,7 +344,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "अभी भी खुले टैब हैं"
 
-#: lib/app/mainapplication.cpp:1139
+#: lib/app/mainapplication.cpp:1143
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -353,17 +353,17 @@ msgstr ""
 "फ़ॉकन वर्तमान में आपका डिफ़ॉल्ट ब्राउज़र नहीं है। क्या आप इसे अपना डिफ़ॉल्ट ब्राउज़र बनाना "
 "चाहेंगे?"
 
-#: lib/app/mainapplication.cpp:1140
+#: lib/app/mainapplication.cpp:1144
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "फ़ॉकन शुरू करते समय हमेशा यह जाँच करें।"
 
-#: lib/app/mainapplication.cpp:1142
+#: lib/app/mainapplication.cpp:1146
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "डिफ़ॉल्ट ब्राउज़र"
 
-#: lib/app/mainapplication.cpp:1277
+#: lib/app/mainapplication.cpp:1281
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -2223,10 +2223,15 @@ msgid "SSL Certificate Error!"
 msgstr "SSL प्रमाणपत्र त्रुटि!"
 
 #: lib/network/networkmanager.cpp:92
+#, fuzzy, qt-format
+#| msgctxt "NetworkManager|"
+#| msgid ""
+#| "The page you are trying to access has the following errors in the SSL "
+#| "certificate:"
 msgctxt "NetworkManager|"
 msgid ""
-"The page you are trying to access has the following errors in the SSL "
-"certificate:"
+"The page <strong>%1</strong> you are trying to access has the following "
+"errors in the SSL certificate:"
 msgstr ""
 "जिस पृष्ठ पर आप पहुँचने का प्रयास कर रहे हैं, उसके SSL प्रमाणपत्र में निम्नलिखित त्रुटियाँ हैं:"
 
@@ -2235,27 +2240,27 @@ msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
 msgstr "क्या आप इस प्रमाणपत्र के लिए अपवाद बनाना चाहेंगे?"
 
-#: lib/network/networkmanager.cpp:124
+#: lib/network/networkmanager.cpp:125
 msgctxt "NetworkManager|"
 msgid "Authorization required"
 msgstr "अनुमति की आवश्यकता है"
 
-#: lib/network/networkmanager.cpp:131 lib/network/networkmanager.cpp:217
+#: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
 msgctxt "NetworkManager|"
 msgid "Username: "
 msgstr "उपयोगकर्ता नाम:"
 
-#: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
+#: lib/network/networkmanager.cpp:133 lib/network/networkmanager.cpp:219
 msgctxt "NetworkManager|"
 msgid "Password: "
 msgstr "पासवर्ड: "
 
-#: lib/network/networkmanager.cpp:138
+#: lib/network/networkmanager.cpp:139
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
 msgstr "इस साइट के लिए उपयोगकर्ता नाम और पासवर्ड सहेजें"
 
-#: lib/network/networkmanager.cpp:146
+#: lib/network/networkmanager.cpp:147
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
@@ -2263,18 +2268,18 @@ msgid ""
 msgstr ""
 "%1 द्वारा उपयोगकर्ता नाम और पासवर्ड का अनुरोध किया जा रहा है। साइट कहती है: \"%2\""
 
-#: lib/network/networkmanager.cpp:210
+#: lib/network/networkmanager.cpp:211
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
 msgstr "प्रॉक्सी प्राधिकरण आवश्यक है"
 
-#: lib/network/networkmanager.cpp:230
+#: lib/network/networkmanager.cpp:231
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
 msgstr "प्रॉक्सी %1 द्वारा उपयोगकर्ता नाम और पासवर्ड का अनुरोध किया जा रहा है।"
 
-#: lib/network/networkmanager.cpp:344
+#: lib/network/networkmanager.cpp:345
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
@@ -2282,76 +2287,76 @@ msgid ""
 msgstr ""
 "प्रमाणपत्र होस्ट नाम के लिए पिन की गई अंतर्निहित सार्वजनिक कुंजियों से मेल नहीं खाता था।"
 
-#: lib/network/networkmanager.cpp:346
+#: lib/network/networkmanager.cpp:347
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
 msgstr "प्रमाणपत्र का सामान्य नाम होस्ट नाम से मेल नहीं खाता."
 
-#: lib/network/networkmanager.cpp:348
+#: lib/network/networkmanager.cpp:349
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
 msgstr "वर्तमान दिनांक और समय पर प्रमाणपत्र वैध नहीं है।"
 
-#: lib/network/networkmanager.cpp:350
+#: lib/network/networkmanager.cpp:351
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
 msgstr "प्रमाणपत्र किसी विश्वसनीय प्राधिकारी द्वारा हस्ताक्षरित नहीं है।"
 
-#: lib/network/networkmanager.cpp:352
+#: lib/network/networkmanager.cpp:353
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
 msgstr "प्रमाणपत्र में त्रुटियाँ हैं."
 
-#: lib/network/networkmanager.cpp:354
+#: lib/network/networkmanager.cpp:355
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
 msgstr ""
 "प्रमाणपत्र में यह निर्धारित करने की कोई व्यवस्था नहीं है कि उसे रद्द किया गया है या नहीं।"
 
-#: lib/network/networkmanager.cpp:356
+#: lib/network/networkmanager.cpp:357
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
 msgstr "प्रमाणपत्र के लिए निरस्तीकरण जानकारी उपलब्ध नहीं है।"
 
-#: lib/network/networkmanager.cpp:358
+#: lib/network/networkmanager.cpp:359
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
 msgstr "प्रमाणपत्र रद्द कर दिया गया है."
 
-#: lib/network/networkmanager.cpp:360
+#: lib/network/networkmanager.cpp:361
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
 msgstr "प्रमाणपत्र अवैध है."
 
-#: lib/network/networkmanager.cpp:362
+#: lib/network/networkmanager.cpp:363
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
 msgstr "प्रमाणपत्र पर हस्ताक्षर कमजोर हस्ताक्षर एल्गोरिथ्म का उपयोग करके किया जाता है।"
 
-#: lib/network/networkmanager.cpp:364
+#: lib/network/networkmanager.cpp:365
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
 msgstr "प्रमाणपत्र में निर्दिष्ट होस्ट नाम अद्वितीय नहीं है।"
 
-#: lib/network/networkmanager.cpp:366
+#: lib/network/networkmanager.cpp:367
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
 msgstr "प्रमाणपत्र में एक कमज़ोर कुंजी है."
 
-#: lib/network/networkmanager.cpp:368
+#: lib/network/networkmanager.cpp:369
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
 msgstr ""
 "प्रमाणपत्र में ऐसे DNS नामों का दावा किया गया है जो नाम प्रतिबंधों का उल्लंघन करते हैं।"
 
-#: lib/network/networkmanager.cpp:370
+#: lib/network/networkmanager.cpp:371
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
 msgstr "प्रमाणपत्र की वैधता अवधि बहुत लंबी है।"
 
-#: lib/network/networkmanager.cpp:372
+#: lib/network/networkmanager.cpp:373
 msgctxt "NetworkManager|"
 msgid ""
 "Certificate Transparency was required for this connection, but the server "
@@ -2360,7 +2365,7 @@ msgstr ""
 "इस कनेक्शन के लिए प्रमाणपत्र पारदर्शिता आवश्यक थी, लेकिन सर्वर ने नीति के अनुरूप सीटी "
 "जानकारी उपलब्ध नहीं कराई।"
 
-#: lib/network/networkmanager.cpp:374
+#: lib/network/networkmanager.cpp:375
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate is known to be used for interception by an entity other the "
@@ -2369,17 +2374,17 @@ msgstr ""
 "यह ज्ञात है कि प्रमाणपत्र का उपयोग डिवाइस स्वामी के अलावा किसी अन्य संस्था द्वारा "
 "अवरोधन के लिए किया जाता है।"
 
-#: lib/network/networkmanager.cpp:376
+#: lib/network/networkmanager.cpp:377
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
 msgstr "कनेक्शन SSL/TLS के पुराने संस्करण का उपयोग करता है"
 
-#: lib/network/networkmanager.cpp:378
+#: lib/network/networkmanager.cpp:379
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr "यह प्रमाणपत्र सिमेंटेक का पुराना प्रमाणपत्र है जो अब वैध नहीं है।"
 
-#: lib/network/networkmanager.cpp:381
+#: lib/network/networkmanager.cpp:382
 msgctxt "NetworkManager|"
 msgid "Unknown error"
 msgstr "अज्ञात त्रुटि"
@@ -2765,7 +2770,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "कोई एक्सटेंशन उपलब्ध नहीं है."
 
-#: lib/network/sslerrordialog.cpp:31
+#: lib/network/sslerrordialog.cpp:32
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
 msgstr "केवल इसी सत्र के लिए"
@@ -2774,6 +2779,14 @@ msgstr "केवल इसी सत्र के लिए"
 msgctxt "SslErrorDialog|"
 msgid "SSL Certificate Error!"
 msgstr "SSL प्रमाणपत्र त्रुटि!"
+
+#: lib/network/sslerrordialog.ui:90
+#, fuzzy
+#| msgctxt "NetworkManager|"
+#| msgid "The certificate contains errors."
+msgctxt "SslErrorDialog|"
+msgid "Toggle Certificate Details"
+msgstr "प्रमाणपत्र में त्रुटियाँ हैं."
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"

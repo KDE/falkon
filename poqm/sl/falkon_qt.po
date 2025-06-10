@@ -352,7 +352,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "So še vedno odprti zavihki"
 
-#: lib/app/mainapplication.cpp:1139
+#: lib/app/mainapplication.cpp:1143
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -361,17 +361,17 @@ msgstr ""
 "Falkon trenutno ni vaš privzeti brskalnik. Bi ga radi postavili kot svojega "
 "privzetega brskalnika?"
 
-#: lib/app/mainapplication.cpp:1140
+#: lib/app/mainapplication.cpp:1144
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Vedno izvedi to preverjanje, kadar zaženeš Falkon."
 
-#: lib/app/mainapplication.cpp:1142
+#: lib/app/mainapplication.cpp:1146
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Privzeti brskalnik"
 
-#: lib/app/mainapplication.cpp:1277
+#: lib/app/mainapplication.cpp:1281
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -2243,10 +2243,15 @@ msgid "SSL Certificate Error!"
 msgstr "Napaka potrdila SSL!"
 
 #: lib/network/networkmanager.cpp:92
+#, fuzzy, qt-format
+#| msgctxt "NetworkManager|"
+#| msgid ""
+#| "The page you are trying to access has the following errors in the SSL "
+#| "certificate:"
 msgctxt "NetworkManager|"
 msgid ""
-"The page you are trying to access has the following errors in the SSL "
-"certificate:"
+"The page <strong>%1</strong> you are trying to access has the following "
+"errors in the SSL certificate:"
 msgstr ""
 "Stran do katere poskušate dostopati ima naslednje napake v potrdilu SSL:"
 
@@ -2255,45 +2260,45 @@ msgctxt "NetworkManager|"
 msgid "Would you like to make an exception for this certificate?"
 msgstr "Bi radi naredili izjemo za to potrdilo?"
 
-#: lib/network/networkmanager.cpp:124
+#: lib/network/networkmanager.cpp:125
 msgctxt "NetworkManager|"
 msgid "Authorization required"
 msgstr "Zahtevano dovoljenje"
 
-#: lib/network/networkmanager.cpp:131 lib/network/networkmanager.cpp:217
+#: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
 msgctxt "NetworkManager|"
 msgid "Username: "
 msgstr "Uporabniško ime: "
 
-#: lib/network/networkmanager.cpp:132 lib/network/networkmanager.cpp:218
+#: lib/network/networkmanager.cpp:133 lib/network/networkmanager.cpp:219
 msgctxt "NetworkManager|"
 msgid "Password: "
 msgstr "Geslo: "
 
-#: lib/network/networkmanager.cpp:138
+#: lib/network/networkmanager.cpp:139
 msgctxt "NetworkManager|"
 msgid "Save username and password for this site"
 msgstr "Shranite uporabniško ime in geslo za to spletno mesto"
 
-#: lib/network/networkmanager.cpp:146
+#: lib/network/networkmanager.cpp:147
 #, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "A username and password are being requested by %1. The site says: \"%2\""
 msgstr "%1 zahteva uporabniško ime in geslo. Spletno mesto pravi: \"%2\""
 
-#: lib/network/networkmanager.cpp:210
+#: lib/network/networkmanager.cpp:211
 msgctxt "NetworkManager|"
 msgid "Proxy authorization required"
 msgstr "Zahtevano pooblastilo posrednika"
 
-#: lib/network/networkmanager.cpp:230
+#: lib/network/networkmanager.cpp:231
 #, qt-format
 msgctxt "NetworkManager|"
 msgid "A username and password are being requested by proxy %1. "
 msgstr "Posrednik %1 zahteva uporabniško ime in geslo. "
 
-#: lib/network/networkmanager.cpp:344
+#: lib/network/networkmanager.cpp:345
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
@@ -2302,74 +2307,74 @@ msgstr ""
 "Potrdilo se ni ujemalo z vgrajenimi javnimi ključi pripetimi za ime "
 "gostitelja."
 
-#: lib/network/networkmanager.cpp:346
+#: lib/network/networkmanager.cpp:347
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
 msgstr "Splošno ime potrdila se ne ujema z imenom gostitelja."
 
-#: lib/network/networkmanager.cpp:348
+#: lib/network/networkmanager.cpp:349
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
 msgstr "Potrdilo ni veljavno ob trenutnem datumu in času."
 
-#: lib/network/networkmanager.cpp:350
+#: lib/network/networkmanager.cpp:351
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
 msgstr "Potrdila ni podpisala zaupanja vredna avtoriteta."
 
-#: lib/network/networkmanager.cpp:352
+#: lib/network/networkmanager.cpp:353
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
 msgstr "To potrdilo vsebuje napake."
 
-#: lib/network/networkmanager.cpp:354
+#: lib/network/networkmanager.cpp:355
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
 msgstr "Potrdilo nima mehanizma za ugotavljanje, ali je bil preklican."
 
-#: lib/network/networkmanager.cpp:356
+#: lib/network/networkmanager.cpp:357
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
 msgstr "Informacije o preklicu potrdila niso na voljo."
 
-#: lib/network/networkmanager.cpp:358
+#: lib/network/networkmanager.cpp:359
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
 msgstr "Potrdilo je bilo preklicano."
 
-#: lib/network/networkmanager.cpp:360
+#: lib/network/networkmanager.cpp:361
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
 msgstr "Potrdilo je neveljavno."
 
-#: lib/network/networkmanager.cpp:362
+#: lib/network/networkmanager.cpp:363
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
 msgstr "Potrdilo je podpisano s šibkim algoritmom za podpisovanje."
 
-#: lib/network/networkmanager.cpp:364
+#: lib/network/networkmanager.cpp:365
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
 msgstr "Ime gostitelja, navedeno v potrdilu, ni edinstveno."
 
-#: lib/network/networkmanager.cpp:366
+#: lib/network/networkmanager.cpp:367
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
 msgstr "Potrdilo vsebuje šibek ključ."
 
-#: lib/network/networkmanager.cpp:368
+#: lib/network/networkmanager.cpp:369
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
 msgstr "Potrdilo je zahtevalo imena DNS, ki kršijo omejitve imen."
 
-#: lib/network/networkmanager.cpp:370
+#: lib/network/networkmanager.cpp:371
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
 msgstr "Potrdilo ima predolgo veljavnost."
 
-#: lib/network/networkmanager.cpp:372
+#: lib/network/networkmanager.cpp:373
 msgctxt "NetworkManager|"
 msgid ""
 "Certificate Transparency was required for this connection, but the server "
@@ -2378,7 +2383,7 @@ msgstr ""
 "Za to povezavo je bila zahtevana preglednost potrdila, vendar strežnik ni "
 "zagotovil informacij CT, ki bi bile v skladu s pravilnikom."
 
-#: lib/network/networkmanager.cpp:374
+#: lib/network/networkmanager.cpp:375
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate is known to be used for interception by an entity other the "
@@ -2387,17 +2392,17 @@ msgstr ""
 "Znano je, da se potrdilo uporablja za prestrezanje s strani subjekta, ki ni "
 "lastnik naprave."
 
-#: lib/network/networkmanager.cpp:376
+#: lib/network/networkmanager.cpp:377
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
 msgstr "Povezava uporablja zastarelo različico SSL/TLS"
 
-#: lib/network/networkmanager.cpp:378
+#: lib/network/networkmanager.cpp:379
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr "Potrdilo je dediščina Symanteca, ki ni več veljavno."
 
-#: lib/network/networkmanager.cpp:381
+#: lib/network/networkmanager.cpp:382
 msgctxt "NetworkManager|"
 msgid "Unknown error"
 msgstr "Neznana napaka"
@@ -2784,7 +2789,7 @@ msgctxt "FalkonSchemeReply|"
 msgid "No available extensions."
 msgstr "Razširitev ni na voljo."
 
-#: lib/network/sslerrordialog.cpp:31
+#: lib/network/sslerrordialog.cpp:32
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
 msgstr "Samo za to sejo"
@@ -2793,6 +2798,14 @@ msgstr "Samo za to sejo"
 msgctxt "SslErrorDialog|"
 msgid "SSL Certificate Error!"
 msgstr "Napaka potrdila SSL!"
+
+#: lib/network/sslerrordialog.ui:90
+#, fuzzy
+#| msgctxt "NetworkManager|"
+#| msgid "The certificate contains errors."
+msgctxt "SslErrorDialog|"
+msgid "Toggle Certificate Details"
+msgstr "To potrdilo vsebuje napake."
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
