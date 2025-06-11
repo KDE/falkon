@@ -3968,7 +3968,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Biztosan el szeretné távolítani ezt: „%1”?"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:657
+#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:671
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Alapértelmezés"
@@ -3978,7 +3978,7 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Beállítás alapértelmezettként"
 
-#: lib/preferences/preferences.cpp:314
+#: lib/preferences/preferences.cpp:328
 #, fuzzy
 #| msgctxt "FalkonSchemeReply|"
 #| msgid "Auto"
@@ -3986,88 +3986,88 @@ msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Automatikus"
 
-#: lib/preferences/preferences.cpp:316
+#: lib/preferences/preferences.cpp:330
 msgctxt "Preferences|"
 msgid "Light"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:317
+#: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:327
+#: lib/preferences/preferences.cpp:341
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:600
+#: lib/preferences/preferences.cpp:614
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Végrehajtható fájl helyének megadása…"
 
-#: lib/preferences/preferences.cpp:643
+#: lib/preferences/preferences.cpp:657
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD értesítés"
 
-#: lib/preferences/preferences.cpp:644
+#: lib/preferences/preferences.cpp:658
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Húzza a képernyőn a kívánt helyre."
 
-#: lib/preferences/preferences.cpp:693
+#: lib/preferences/preferences.cpp:707
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Letöltés helyének megadása…"
 
-#: lib/preferences/preferences.cpp:707
+#: lib/preferences/preferences.cpp:721
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Stíluslap helyének megadása…"
 
-#: lib/preferences/preferences.cpp:718
+#: lib/preferences/preferences.cpp:732
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Törölve"
 
-#: lib/preferences/preferences.cpp:820
+#: lib/preferences/preferences.cpp:834
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Gyorsítótár elérési útjának megadása…"
 
-#: lib/preferences/preferences.cpp:851
+#: lib/preferences/preferences.cpp:865
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Új profil"
 
-#: lib/preferences/preferences.cpp:851
+#: lib/preferences/preferences.cpp:865
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Adja meg az új profil nevét:"
 
-#: lib/preferences/preferences.cpp:861 lib/preferences/preferences.cpp:866
+#: lib/preferences/preferences.cpp:875 lib/preferences/preferences.cpp:880
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Hiba!"
 
-#: lib/preferences/preferences.cpp:861
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Ez a profil már létezik."
 
-#: lib/preferences/preferences.cpp:866
+#: lib/preferences/preferences.cpp:880
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Nem lehet létrehozni profilkönyvtárat."
 
-#: lib/preferences/preferences.cpp:877
+#: lib/preferences/preferences.cpp:891
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Megerősítés"
 
-#: lib/preferences/preferences.cpp:878
+#: lib/preferences/preferences.cpp:892
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4077,22 +4077,17 @@ msgstr ""
 "Biztosan véglegesen törölni szeretné a(z) „%1” profilt? A művelet nem "
 "vonható vissza."
 
-#: lib/preferences/preferences.cpp:893 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:907 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Megjegyzés: Aktív profil nem törölhető."
-
-#: lib/preferences/preferences.cpp:1169
-msgctxt "Preferences|"
-msgid "Select Color"
-msgstr "Színválasztás"
 
 #: lib/preferences/preferences.ui:14
 msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2088
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2144
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Általános"
@@ -4292,127 +4287,158 @@ msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
 msgstr "Azonnali könyvjelzők eszköztár engedélyezése"
 
-#: lib/preferences/preferences.ui:575
+#: lib/preferences/preferences.ui:562
+msgctxt "Preferences|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
+"Colors</span></p></body></html>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:584
+msgctxt "Preferences|"
+msgid "Background color while loading:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
+#: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
+#: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
+#: lib/preferences/preferences.ui:2881
+msgctxt "Preferences|"
+msgid "..."
+msgstr "…"
+
+#: lib/preferences/preferences.ui:598
+msgctxt "Preferences|"
+msgid "Background color when loaded:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
+#: lib/preferences/preferences.ui:1051
+msgctxt "Preferences|"
+msgid "Reset"
+msgstr "Visszaállítás"
+
+#: lib/preferences/preferences.ui:631
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>Böngészőablak</b>"
 
-#: lib/preferences/preferences.ui:623
+#: lib/preferences/preferences.ui:679
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "Lapok működése"
 
-#: lib/preferences/preferences.ui:629
+#: lib/preferences/preferences.ui:685
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Fülek elrejtése, ha csak egy lap van"
 
-#: lib/preferences/preferences.ui:636
+#: lib/preferences/preferences.ui:692
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "Utolsó lap aktiválása az aktív lap bezárásakor"
 
-#: lib/preferences/preferences.ui:643
+#: lib/preferences/preferences.ui:699
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Új lapok megnyitása az aktív lap után"
 
-#: lib/preferences/preferences.ui:650
+#: lib/preferences/preferences.ui:706
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Új üres lapok megnyitása az aktív lap után"
 
-#: lib/preferences/preferences.ui:657
+#: lib/preferences/preferences.ui:713
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Felugró ablakok megnyitása lapokon"
 
-#: lib/preferences/preferences.ui:664
+#: lib/preferences/preferences.ui:720
 msgctxt "Preferences|"
 msgid "Block automatic popups"
 msgstr ""
 
-#: lib/preferences/preferences.ui:671
+#: lib/preferences/preferences.ui:727
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Mindig váltson a lapok között a görgővel"
 
-#: lib/preferences/preferences.ui:678
+#: lib/preferences/preferences.ui:734
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Automatikisan váltson az újonnan megnyitott lapra"
 
-#: lib/preferences/preferences.ui:685
+#: lib/preferences/preferences.ui:741
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Ne zárja be az ablakot az utolsó lap bezárásakor"
 
-#: lib/preferences/preferences.ui:692
+#: lib/preferences/preferences.ui:748
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Megerősítés kérése több lap bezárásakor"
 
-#: lib/preferences/preferences.ui:699
+#: lib/preferences/preferences.ui:755
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Bezárt lapok gomb megjelenítése"
 
-#: lib/preferences/preferences.ui:708
+#: lib/preferences/preferences.ui:764
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Bezárás gomb megjelenítése az inaktív lapokon:"
 
-#: lib/preferences/preferences.ui:716
+#: lib/preferences/preferences.ui:772
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Automatikus"
 
-#: lib/preferences/preferences.ui:721
+#: lib/preferences/preferences.ui:777
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Mindig"
 
-#: lib/preferences/preferences.ui:726
+#: lib/preferences/preferences.ui:782
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Soha"
 
-#: lib/preferences/preferences.ui:766
+#: lib/preferences/preferences.ui:822
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Címsáv működése"
 
-#: lib/preferences/preferences.ui:774
+#: lib/preferences/preferences.ui:830
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Javaslatok a címsávba gépeléskor:"
 
-#: lib/preferences/preferences.ui:788
+#: lib/preferences/preferences.ui:844
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Előzmények és Könyvjelzők"
 
-#: lib/preferences/preferences.ui:793
+#: lib/preferences/preferences.ui:849
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Előzmények"
 
-#: lib/preferences/preferences.ui:798
+#: lib/preferences/preferences.ui:854
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
 
-#: lib/preferences/preferences.ui:803
+#: lib/preferences/preferences.ui:859
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Semmi"
 
-#: lib/preferences/preferences.ui:829
+#: lib/preferences/preferences.ui:885
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Beágyazott javaslatok bekapcsolása"
 
-#: lib/preferences/preferences.ui:836
+#: lib/preferences/preferences.ui:892
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4420,370 +4446,358 @@ msgstr ""
 "Nyomja meg a Shiftet, hogy ne váltson lapot, hanem töltse be az URL-t a "
 "jelenlegi lapon"
 
-#: lib/preferences/preferences.ui:839
+#: lib/preferences/preferences.ui:895
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "Javaslat a lapváltásra, ha az URL már betöltődött"
 
-#: lib/preferences/preferences.ui:846
+#: lib/preferences/preferences.ui:902
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Az Ugrás ikon mindig jelenjen meg"
 
-#: lib/preferences/preferences.ui:853
+#: lib/preferences/preferences.ui:909
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Nagyítócímke megjelenítése"
 
-#: lib/preferences/preferences.ui:860
+#: lib/preferences/preferences.ui:916
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Összes szöveg kijelölése a címsorban dupla kattintással"
 
-#: lib/preferences/preferences.ui:867
+#: lib/preferences/preferences.ui:923
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Összes szöveg kijelölése a címsorban kattintással"
 
-#: lib/preferences/preferences.ui:874
+#: lib/preferences/preferences.ui:930
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Automatikus keresés bekapcsolása a címsávban"
 
-#: lib/preferences/preferences.ui:881
+#: lib/preferences/preferences.ui:937
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Keresés az alapértelmezett motorral"
 
-#: lib/preferences/preferences.ui:888
+#: lib/preferences/preferences.ui:944
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Keresési javaslatok megjelenítése"
 
-#: lib/preferences/preferences.ui:895
+#: lib/preferences/preferences.ui:951
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr "Javasalt felugrójának kiterjesztése az ablak szélességére"
 
-#: lib/preferences/preferences.ui:918
+#: lib/preferences/preferences.ui:974
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Folyamatjelző megjelenítése a címsávban"
 
-#: lib/preferences/preferences.ui:951
+#: lib/preferences/preferences.ui:1007
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Kitöltés"
 
-#: lib/preferences/preferences.ui:956
+#: lib/preferences/preferences.ui:1012
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Lent"
 
-#: lib/preferences/preferences.ui:961
+#: lib/preferences/preferences.ui:1017
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Fent"
 
-#: lib/preferences/preferences.ui:969
+#: lib/preferences/preferences.ui:1025
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Egyéni szín:"
 
-#: lib/preferences/preferences.ui:985
+#: lib/preferences/preferences.ui:1041
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Színválasztás"
 
-#: lib/preferences/preferences.ui:988 lib/preferences/preferences.ui:1342
-#: lib/preferences/preferences.ui:1880 lib/preferences/preferences.ui:1980
-#: lib/preferences/preferences.ui:2825
-msgctxt "Preferences|"
-msgid "..."
-msgstr "…"
-
-#: lib/preferences/preferences.ui:995
-msgctxt "Preferences|"
-msgid "Reset"
-msgstr "Visszaállítás"
-
-#: lib/preferences/preferences.ui:1046
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Webes beállítások"
 
-#: lib/preferences/preferences.ui:1054
+#: lib/preferences/preferences.ui:1110
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "Pepper bővítmény API engedélyezése (PPAPI)"
 
-#: lib/preferences/preferences.ui:1061
+#: lib/preferences/preferences.ui:1117
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Beépített PDF-megjelenítő használata (PPAPI-t igényel)"
 
-#: lib/preferences/preferences.ui:1068
+#: lib/preferences/preferences.ui:1124
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "JavaScript engedélyezése"
 
-#: lib/preferences/preferences.ui:1075
+#: lib/preferences/preferences.ui:1131
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Hivatkozások belefoglalása a fókuszláncba"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1082
+#: lib/preferences/preferences.ui:1138
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Elemháttér nyomtatása"
 
-#: lib/preferences/preferences.ui:1089
+#: lib/preferences/preferences.ui:1145
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Animált görgetés"
 
-#: lib/preferences/preferences.ui:1096
+#: lib/preferences/preferences.ui:1152
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Térbeli navibáció bekapcsolása"
 
-#: lib/preferences/preferences.ui:1103
+#: lib/preferences/preferences.ui:1159
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Natív görgetősávok használata"
 
-#: lib/preferences/preferences.ui:1110
+#: lib/preferences/preferences.ui:1166
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Automatikus videólejátszás kikapcsolása"
 
-#: lib/preferences/preferences.ui:1117
+#: lib/preferences/preferences.ui:1173
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "A WebRTC helyi IP-cím kiszivárgásának megakadályozása"
 
-#: lib/preferences/preferences.ui:1124
+#: lib/preferences/preferences.ui:1180
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "DNS előtöltésének bekapcsolása"
 
-#: lib/preferences/preferences.ui:1131
+#: lib/preferences/preferences.ui:1187
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Képernyőrögzítés engedélyezése"
 
-#: lib/preferences/preferences.ui:1138
+#: lib/preferences/preferences.ui:1194
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Hardveres gyorsítás használata (újraindítás szükséges)"
 
-#: lib/preferences/preferences.ui:1145
+#: lib/preferences/preferences.ui:1201
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Olvasás engedélyezése a vászonról"
 
-#: lib/preferences/preferences.ui:1152
+#: lib/preferences/preferences.ui:1208
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr "Sötét mód kényszerítése"
 
-#: lib/preferences/preferences.ui:1161
+#: lib/preferences/preferences.ui:1217
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1196
+#: lib/preferences/preferences.ui:1252
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Egérgörgő"
 
-#: lib/preferences/preferences.ui:1216
+#: lib/preferences/preferences.ui:1272
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "sor egy oldalon"
 
-#: lib/preferences/preferences.ui:1227
+#: lib/preferences/preferences.ui:1283
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Alapértelmezett nagyítás: "
 
-#: lib/preferences/preferences.ui:1266
+#: lib/preferences/preferences.ui:1322
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Helyi tároló"
 
-#: lib/preferences/preferences.ui:1274
+#: lib/preferences/preferences.ui:1330
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Hálózati gyorsítótár tárolásának engedélyezése a lemezen"
 
-#: lib/preferences/preferences.ui:1297
+#: lib/preferences/preferences.ui:1353
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Gyorsítótár törlése bezáráskor"
 
-#: lib/preferences/preferences.ui:1304
+#: lib/preferences/preferences.ui:1360
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Maximum:"
 
-#: lib/preferences/preferences.ui:1311
+#: lib/preferences/preferences.ui:1367
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1327
+#: lib/preferences/preferences.ui:1383
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Gyorsítótár tárolása itt:"
 
-#: lib/preferences/preferences.ui:1355
+#: lib/preferences/preferences.ui:1411
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Előzmények mentésének engedélyezése"
 
-#: lib/preferences/preferences.ui:1362
+#: lib/preferences/preferences.ui:1418
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Előzmények törlése bezáráskor"
 
-#: lib/preferences/preferences.ui:1385
+#: lib/preferences/preferences.ui:1441
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "HTML5 webes tartalom helyi tárolásának engedélyezése"
 
-#: lib/preferences/preferences.ui:1392
+#: lib/preferences/preferences.ui:1448
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Helyben tárolt HTML5 webes tartalom törlése bezáráskor"
 
-#: lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1474
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Törlés most"
 
-#: lib/preferences/preferences.ui:1457
+#: lib/preferences/preferences.ui:1513
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Proxybeállítás"
 
-#: lib/preferences/preferences.ui:1476
+#: lib/preferences/preferences.ui:1532
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Rendszer proxybeállításainak használata"
 
-#: lib/preferences/preferences.ui:1499
+#: lib/preferences/preferences.ui:1555
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Kézi beállítás"
 
-#: lib/preferences/preferences.ui:1509
+#: lib/preferences/preferences.ui:1565
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1514
+#: lib/preferences/preferences.ui:1570
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1529
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Port:"
 
-#: lib/preferences/preferences.ui:1550
+#: lib/preferences/preferences.ui:1606
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Felhasználónév:"
 
-#: lib/preferences/preferences.ui:1560
+#: lib/preferences/preferences.ui:1616
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Jelszó:"
 
-#: lib/preferences/preferences.ui:1589
+#: lib/preferences/preferences.ui:1645
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Nincs proxy"
 
-#: lib/preferences/preferences.ui:1604
+#: lib/preferences/preferences.ui:1660
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Betűkészletek</b>"
 
-#: lib/preferences/preferences.ui:1617
+#: lib/preferences/preferences.ui:1673
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Normál"
 
-#: lib/preferences/preferences.ui:1624
+#: lib/preferences/preferences.ui:1680
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Fix szélességű"
 
-#: lib/preferences/preferences.ui:1634
+#: lib/preferences/preferences.ui:1690
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Talpas"
 
-#: lib/preferences/preferences.ui:1644
+#: lib/preferences/preferences.ui:1700
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Talpatlan"
 
-#: lib/preferences/preferences.ui:1654
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Dőlt"
 
-#: lib/preferences/preferences.ui:1706
+#: lib/preferences/preferences.ui:1762
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasy"
 
-#: lib/preferences/preferences.ui:1713
+#: lib/preferences/preferences.ui:1769
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Betűméretek</b>"
 
-#: lib/preferences/preferences.ui:1722
+#: lib/preferences/preferences.ui:1778
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Fix betűméret"
 
-#: lib/preferences/preferences.ui:1729
+#: lib/preferences/preferences.ui:1785
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Alapértelmezett betűméret"
 
-#: lib/preferences/preferences.ui:1756
+#: lib/preferences/preferences.ui:1812
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Minimális betűméret"
 
-#: lib/preferences/preferences.ui:1763
+#: lib/preferences/preferences.ui:1819
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Minimális logikai betűméret"
 
-#: lib/preferences/preferences.ui:1796
+#: lib/preferences/preferences.ui:1852
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Gyorsbillentyűk</b>"
 
-#: lib/preferences/preferences.ui:1803
+#: lib/preferences/preferences.ui:1859
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Váltás lapokra az Alt+lap száma kombinációval"
 
-#: lib/preferences/preferences.ui:1810
+#: lib/preferences/preferences.ui:1866
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Gyorsindítók betöltése a Ctrl+gyorsindító száma kombinációval"
 
-#: lib/preferences/preferences.ui:1817
+#: lib/preferences/preferences.ui:1873
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4792,12 +4806,12 @@ msgstr ""
 "Meglévő gyorsbillentyűk:<br/><b>1</b> - előző lap<br/><b>2</b> - következő "
 "lap<br/><b>/</b> - keresés az oldalon"
 
-#: lib/preferences/preferences.ui:1820
+#: lib/preferences/preferences.ui:1876
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Egy billentyűs billentyűparancsok használata"
 
-#: lib/preferences/preferences.ui:1827
+#: lib/preferences/preferences.ui:1883
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4806,157 +4820,157 @@ msgstr ""
 "Ha nincs bejelölve, megakadályozza az alkalmazásból való véletlen kilépést, "
 "ha a Ctrl-W gyorsbillentyű használata volt a cél."
 
-#: lib/preferences/preferences.ui:1830
+#: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Alkalmazás bezárása a Ctrl+Q-val"
 
-#: lib/preferences/preferences.ui:1854
+#: lib/preferences/preferences.ui:1910
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Letöltések helye</b>"
 
-#: lib/preferences/preferences.ui:1861
+#: lib/preferences/preferences.ui:1917
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Mindig kérdezzen rá"
 
-#: lib/preferences/preferences.ui:1868
+#: lib/preferences/preferences.ui:1924
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Felhasználó által megadott hely: "
 
-#: lib/preferences/preferences.ui:1918
+#: lib/preferences/preferences.ui:1974
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Letöltési beállítások</b>"
 
-#: lib/preferences/preferences.ui:1925
+#: lib/preferences/preferences.ui:1981
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Letöltéskezelő bezárása a letöltés befejeződésekor"
 
-#: lib/preferences/preferences.ui:1932
+#: lib/preferences/preferences.ui:1988
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Külső letöltéskezelő</b>"
 
-#: lib/preferences/preferences.ui:1939
+#: lib/preferences/preferences.ui:1995
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Külső letöltéskezelő használata"
 
-#: lib/preferences/preferences.ui:1951
+#: lib/preferences/preferences.ui:2007
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Programfájl:"
 
-#: lib/preferences/preferences.ui:1958
+#: lib/preferences/preferences.ui:2014
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Argumentumok:"
 
-#: lib/preferences/preferences.ui:1968
+#: lib/preferences/preferences.ui:2024
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Hagyja üresen, ha bizonytalan"
 
-#: lib/preferences/preferences.ui:1989
+#: lib/preferences/preferences.ui:2045
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "A(z) <b>%d</b> helyettesítve lesz a letöltendő URL-címmel"
 
-#: lib/preferences/preferences.ui:2015
+#: lib/preferences/preferences.ui:2071
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Automatikus kitöltés beállításai</b>"
 
-#: lib/preferences/preferences.ui:2022
+#: lib/preferences/preferences.ui:2078
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Weboldalak jelszavai mentésének engedélyezése"
 
-#: lib/preferences/preferences.ui:2073
+#: lib/preferences/preferences.ui:2129
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Jelszavak automatikus kitöltése a weboldalakon"
 
-#: lib/preferences/preferences.ui:2094
+#: lib/preferences/preferences.ui:2150
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Sütik kezelése"
 
-#: lib/preferences/preferences.ui:2107
+#: lib/preferences/preferences.ui:2163
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Sütikezelő"
 
-#: lib/preferences/preferences.ui:2130
+#: lib/preferences/preferences.ui:2186
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2143
+#: lib/preferences/preferences.ui:2199
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "JavaScript beállítások"
 
-#: lib/preferences/preferences.ui:2150
+#: lib/preferences/preferences.ui:2206
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "„Ne kövessenek” kérés küldése a webhelyeknek"
 
-#: lib/preferences/preferences.ui:2157
+#: lib/preferences/preferences.ui:2213
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Sütik</b>"
 
-#: lib/preferences/preferences.ui:2183
+#: lib/preferences/preferences.ui:2239
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "JavaScript adatvédelmi beállítások kezelése"
 
-#: lib/preferences/preferences.ui:2190
+#: lib/preferences/preferences.ui:2246
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Egyéb</b>"
 
-#: lib/preferences/preferences.ui:2211
+#: lib/preferences/preferences.ui:2267
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "HTML5 jogosultságok"
 
-#: lib/preferences/preferences.ui:2221
+#: lib/preferences/preferences.ui:2277
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Oldalbeállítások"
 
-#: lib/preferences/preferences.ui:2253
+#: lib/preferences/preferences.ui:2309
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Lejárat időkorlátja:"
 
-#: lib/preferences/preferences.ui:2266
+#: lib/preferences/preferences.ui:2322
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " másodperc"
 
-#: lib/preferences/preferences.ui:2288
+#: lib/preferences/preferences.ui:2344
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Értesítések</b>"
 
-#: lib/preferences/preferences.ui:2311
+#: lib/preferences/preferences.ui:2367
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Natív rendszerértesítések használata (csak Linuxon)"
 
-#: lib/preferences/preferences.ui:2318
+#: lib/preferences/preferences.ui:2374
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Ne használjon értesítéseket"
 
-#: lib/preferences/preferences.ui:2341
+#: lib/preferences/preferences.ui:2397
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -4965,17 +4979,17 @@ msgstr ""
 "<b>Megjegyzés: </b>A képernyőn megjelenő értesítések pozícióját azok "
 "húzásával módosíthatja."
 
-#: lib/preferences/preferences.ui:2367
+#: lib/preferences/preferences.ui:2423
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Képernyőkijelzések használata értesítésként"
 
-#: lib/preferences/preferences.ui:2374
+#: lib/preferences/preferences.ui:2430
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Előnézet"
 
-#: lib/preferences/preferences.ui:2439
+#: lib/preferences/preferences.ui:2495
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -4984,92 +4998,92 @@ msgstr ""
 "További információért a helyesírás-ellenőrzésről keresse fel a <a href="
 "\"https://userbase.kde.org/Falkon#Spell_Check\">wikit</a>."
 
-#: lib/preferences/preferences.ui:2481
+#: lib/preferences/preferences.ui:2537
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Helyesírás-ellenőrzés beállításai</b>"
 
-#: lib/preferences/preferences.ui:2488
+#: lib/preferences/preferences.ui:2544
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Helyesírás-ellenőrzés bekapcsolása"
 
-#: lib/preferences/preferences.ui:2495
+#: lib/preferences/preferences.ui:2551
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Szótárkönyvtárak</b>"
 
-#: lib/preferences/preferences.ui:2546
+#: lib/preferences/preferences.ui:2602
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Nem találhatók nyelvek"
 
-#: lib/preferences/preferences.ui:2575
+#: lib/preferences/preferences.ui:2631
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Protokollkezelő-kezelő"
 
-#: lib/preferences/preferences.ui:2615
+#: lib/preferences/preferences.ui:2671
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Keresőmotor-kezelő"
 
-#: lib/preferences/preferences.ui:2637
+#: lib/preferences/preferences.ui:2693
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Felhasználói stíluslapok</b>"
 
-#: lib/preferences/preferences.ui:2644
+#: lib/preferences/preferences.ui:2700
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Keresőmotorok kezelése</b>"
 
-#: lib/preferences/preferences.ui:2656
+#: lib/preferences/preferences.ui:2712
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "Egyéni sémák kezelése"
 
-#: lib/preferences/preferences.ui:2681
+#: lib/preferences/preferences.ui:2737
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Nyelvek"
 
-#: lib/preferences/preferences.ui:2703
+#: lib/preferences/preferences.ui:2759
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Weboldalak alapértelmezett nyelve</b>"
 
-#: lib/preferences/preferences.ui:2728
+#: lib/preferences/preferences.ui:2784
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Tanúsítványkivétel-kezelő"
 
-#: lib/preferences/preferences.ui:2750
+#: lib/preferences/preferences.ui:2806
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Böngészőazonosítás módosítása</b>"
 
-#: lib/preferences/preferences.ui:2775
+#: lib/preferences/preferences.ui:2831
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Böngészőazonosító-kezelő"
 
-#: lib/preferences/preferences.ui:2797
+#: lib/preferences/preferences.ui:2853
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Stíluslap automatikus betöltése az összes weboldalon: "
 
-#: lib/preferences/preferences.ui:2834
+#: lib/preferences/preferences.ui:2890
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Protokollkezelők kezelése</b>"
 
-#: lib/preferences/preferences.ui:2841
+#: lib/preferences/preferences.ui:2897
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Tanúsítványkezelő</b>"
 
-#: lib/preferences/preferences.ui:2892
+#: lib/preferences/preferences.ui:2948
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Egyéni séma kezelő"
@@ -5855,6 +5869,14 @@ msgctxt "HTML5PermissionsNotification|"
 msgid "Deny"
 msgstr "Tiltás"
 
+#: lib/tools/mactoolbutton.cpp:94
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid "Select Color"
+msgctxt "MacToolButton|"
+msgid "Select Color"
+msgstr "Színválasztás"
+
 #: lib/tools/qztools.cpp:379
 msgctxt "QObject|"
 msgid "Unknown size"
@@ -5904,7 +5926,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "További párbeszédablakok létrehozásának megakadályozása az oldalon"
 
-#: lib/webengine/webpage.cpp:329
+#: lib/webengine/webpage.cpp:335
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5915,27 +5937,27 @@ msgstr ""
 "<ul><li>%2</li></ul>Szeretné, hogy a Falkon megkísérelje megnyitni ezt a "
 "hivatkozást egy rendszeralkalmazással?"
 
-#: lib/webengine/webpage.cpp:334
+#: lib/webengine/webpage.cpp:340
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Választás megjegyzése ehhez a protokollhoz"
 
-#: lib/webengine/webpage.cpp:335
+#: lib/webengine/webpage.cpp:341
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Külső protokoll kérés"
 
-#: lib/webengine/webpage.cpp:415 lib/webengine/webpage.cpp:416
+#: lib/webengine/webpage.cpp:421 lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Sikertelen oldalbetöltés"
 
-#: lib/webengine/webpage.cpp:417
+#: lib/webengine/webpage.cpp:423
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Hiba történt az oldal betöltésekor."
 
-#: lib/webengine/webpage.cpp:418
+#: lib/webengine/webpage.cpp:424
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -5943,27 +5965,27 @@ msgstr ""
 "Próbálja meg újra betölteni az oldalt, vagy zárjon be néhány lapot memória "
 "felszabadításához."
 
-#: lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:425
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Oldal újratöltése"
 
-#: lib/webengine/webpage.cpp:580
+#: lib/webengine/webpage.cpp:586
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Fájl kiválasztása…"
 
-#: lib/webengine/webpage.cpp:584
+#: lib/webengine/webpage.cpp:590
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Fájlok kiválasztása…"
 
-#: lib/webengine/webpage.cpp:720
+#: lib/webengine/webpage.cpp:726
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript figyelmeztetés"
 
-#: lib/webengine/webpage.cpp:729
+#: lib/webengine/webpage.cpp:735
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Ne jelenjenek meg további párbeszédablakok ezen az oldalon"
