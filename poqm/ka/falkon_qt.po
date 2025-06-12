@@ -4304,11 +4304,13 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">ვებგვერდის ფონის "
+"ფერები</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:584
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "ფონის ფერი ჩატვირთვისას:"
 
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
@@ -4321,7 +4323,7 @@ msgstr "..."
 #: lib/preferences/preferences.ui:598
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "ფონის ფერი, როცა ჩატვირთულია:"
 
 #: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
 #: lib/preferences/preferences.ui:1051
@@ -4526,7 +4528,7 @@ msgstr "თავში"
 #: lib/preferences/preferences.ui:1025
 msgctxt "Preferences|"
 msgid "Custom color:"
-msgstr "ფერის არჩევა:"
+msgstr "მორგებული ფერი:"
 
 #: lib/preferences/preferences.ui:1041
 msgctxt "Preferences|"
@@ -5879,12 +5881,9 @@ msgid "Deny"
 msgstr "უარყოფა"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
-msgstr "ფერი"
+msgstr "ფერის არჩევა"
 
 #: lib/tools/qztools.cpp:379
 msgctxt "QObject|"
