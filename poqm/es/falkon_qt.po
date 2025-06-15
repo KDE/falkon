@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: falkon_qt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-29 01:02+0100\n"
-"PO-Revision-Date: 2025-06-09 01:52+0100\n"
+"PO-Revision-Date: 2025-06-15 00:46+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: es_ES\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2247,18 +2247,14 @@ msgid "SSL Certificate Error!"
 msgstr "¡Error del certificado SSL!"
 
 #: lib/network/networkmanager.cpp:92
-#, fuzzy, qt-format
-#| msgctxt "NetworkManager|"
-#| msgid ""
-#| "The page you are trying to access has the following errors in the SSL "
-#| "certificate:"
+#, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
 msgstr ""
-"La página a la que está intentando acceder tiene los siguientes errores en "
-"el certificado SSL:"
+"La página <strong>%1</strong> a la que está intentando acceder tiene los "
+"siguientes errores en el certificado SSL:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -2812,12 +2808,9 @@ msgid "SSL Certificate Error!"
 msgstr "¡Error del certificado SSL!"
 
 #: lib/network/sslerrordialog.ui:90
-#, fuzzy
-#| msgctxt "NetworkManager|"
-#| msgid "The certificate contains errors."
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr "El certificado contiene errores."
+msgstr "Detalles del cambio de certificado"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -4326,11 +4319,13 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Colores de fondo de "
+"la página web</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:584
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "Colores de fondo mientras carga:"
 
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
@@ -4343,7 +4338,7 @@ msgstr "…"
 #: lib/preferences/preferences.ui:598
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "Colores de fondo cuando ha cargado:"
 
 #: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
 #: lib/preferences/preferences.ui:1051
@@ -5901,9 +5896,6 @@ msgid "Deny"
 msgstr "Denegar"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
 msgstr "Seleccionar color"
@@ -6304,15 +6296,3 @@ msgstr "Inspeccionar elemento"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "MainApplication|"
-#~ msgid "Open new tab"
-#~ msgstr "Abrir nueva pestaña"
-
-#~ msgctxt "MainApplication|"
-#~ msgid "Open new window"
-#~ msgstr "Abrir nueva ventana"
-
-#~ msgctxt "MainApplication|"
-#~ msgid "Open new private window"
-#~ msgstr "Abrir nueva ventana privada"

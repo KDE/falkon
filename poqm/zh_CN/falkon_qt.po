@@ -2204,7 +2204,7 @@ msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
-msgstr ""
+msgstr "您试图访问的页面 <strong>%1</strong> 的 SSL 证书中有以下错误："
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -2747,7 +2747,7 @@ msgstr "SSL 证书错误！"
 #: lib/network/sslerrordialog.ui:90
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr ""
+msgstr "显示/隐藏证书详情"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -5813,9 +5813,6 @@ msgid "Deny"
 msgstr "拒绝"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
 msgstr "选择颜色"

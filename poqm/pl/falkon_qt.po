@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-01-18 11:43+0100\n"
+"PO-Revision-Date: 2025-06-14 13:49+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 24.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -2247,18 +2248,14 @@ msgid "SSL Certificate Error!"
 msgstr "Błąd certyfikatu SSL!"
 
 #: lib/network/networkmanager.cpp:92
-#, fuzzy, qt-format
-#| msgctxt "NetworkManager|"
-#| msgid ""
-#| "The page you are trying to access has the following errors in the SSL "
-#| "certificate:"
+#, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
 msgstr ""
-"Strona, którą próbujesz obejrzeć posiada następujące błędy w certyfikacie "
-"SSL:"
+"Strona <strong>%1</strong>, którą próbujesz obejrzeć posiada następujące "
+"błędy w certyfikacie SSL:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -2809,12 +2806,9 @@ msgid "SSL Certificate Error!"
 msgstr "Błąd certyfikatu SSL!"
 
 #: lib/network/sslerrordialog.ui:90
-#, fuzzy
-#| msgctxt "NetworkManager|"
-#| msgid "The certificate contains errors."
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr "Certyfikat zawiera błędy."
+msgstr "Pokaż szczegóły certyfikatu"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -4317,11 +4311,13 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Kolory tła stron "
+"sieciowych</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:584
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "Kolor tła, w trakcie wczytywania:"
 
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
@@ -4334,7 +4330,7 @@ msgstr "..."
 #: lib/preferences/preferences.ui:598
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "Kolor tła, gdy wczytana:"
 
 #: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
 #: lib/preferences/preferences.ui:1051
@@ -5892,9 +5888,6 @@ msgid "Deny"
 msgstr "Zabroń"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
 msgstr "Wybierz kolor"
