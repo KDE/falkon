@@ -1,5 +1,5 @@
-# Translation of falkon_qt to Spanish
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# Spanish translations for falkon_qt.po package.
+# Copyright (C) 2017-2025 This file is copyright:
 # This file is distributed under the same license as the falkon package.
 #
 # SPDX-FileCopyrightText: 2017 Jaime Muñoz Martín <jmmartin_5@outlook.com>
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: falkon_qt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-29 01:02+0100\n"
-"PO-Revision-Date: 2025-01-18 19:28+0100\n"
+"PO-Revision-Date: 2025-06-18 01:37+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -72,7 +72,7 @@ msgstr "Copiar"
 #: lib/adblock/adblockaddsubscriptiondialog.cpp:40
 msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Other..."
-msgstr "Otros..."
+msgstr "Otros…"
 
 #: lib/adblock/adblockaddsubscriptiondialog.ui:14
 msgctxt "AdBlockAddSubscriptionDialog|"
@@ -122,7 +122,7 @@ msgstr "Actualizar suscripciones"
 #: lib/adblock/adblockdialog.cpp:57
 msgctxt "AdBlockDialog|"
 msgid "Learn about writing rules..."
-msgstr "Aprenda a escribir reglas..."
+msgstr "Aprenda a escribir reglas…"
 
 #: lib/adblock/adblockdialog.ui:14
 msgctxt "AdBlockDialog|"
@@ -137,7 +137,7 @@ msgstr "Habilitar AdBlock"
 #: lib/adblock/adblockdialog.ui:32
 msgctxt "AdBlockDialog|"
 msgid "Search..."
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: lib/adblock/adblockdialog.ui:77
 msgctxt "AdBlockDialog|"
@@ -327,7 +327,7 @@ msgstr "Todos los archivos"
 #: lib/app/browserwindow.cpp:1169
 msgctxt "BrowserWindow|"
 msgid "Open file..."
-msgstr "Abrir archivo..."
+msgstr "Abrir archivo…"
 
 #: lib/app/browserwindow.cpp:1506
 #, qt-format
@@ -448,7 +448,7 @@ msgstr "Introducir dirección URL"
 #: lib/app/mainmenu.cpp:496
 msgctxt "MainMenu|"
 msgid "Open &File..."
-msgstr "Abrir &Archivo..."
+msgstr "Abrir &Archivo…"
 
 #: lib/app/mainmenu.cpp:497
 msgctxt "MainMenu|"
@@ -463,17 +463,17 @@ msgstr "Gestor de sesiones"
 #: lib/app/mainmenu.cpp:511
 msgctxt "MainMenu|"
 msgid "&Save Page As..."
-msgstr "&Guardar página como..."
+msgstr "&Guardar página como…"
 
 #: lib/app/mainmenu.cpp:512
 msgctxt "MainMenu|"
 msgid "Send Link..."
-msgstr "Enviar enlace..."
+msgstr "Enviar enlace…"
 
 #: lib/app/mainmenu.cpp:513
 msgctxt "MainMenu|"
 msgid "&Print..."
-msgstr "Im&primir..."
+msgstr "Im&primir…"
 
 #: lib/app/mainmenu.cpp:518
 msgctxt "MainMenu|"
@@ -776,7 +776,7 @@ msgstr "Opciones de la base de datos encriptada"
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:33
 msgctxt "MasterPasswordDialog|"
 msgid "Set/Change Master Password..."
-msgstr "Establecer o cambiar contraseña maestra..."
+msgstr "Establecer o cambiar contraseña maestra…"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:36
 msgctxt "MasterPasswordDialog|"
@@ -786,7 +786,7 @@ msgstr "Este motor no funciona sin contraseña maestra."
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:43
 msgctxt "MasterPasswordDialog|"
 msgid "Clear Master Password..."
-msgstr "Borrar contraseña maestra..."
+msgstr "Borrar contraseña maestra…"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:46
 msgctxt "MasterPasswordDialog|"
@@ -883,7 +883,7 @@ msgstr "Opciones de exportación"
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
 msgctxt "BookmarksExportDialog|"
 msgid "Choose..."
-msgstr "Elegir..."
+msgstr "Elegir…"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
 msgctxt "BookmarksExportDialog|"
@@ -908,7 +908,7 @@ msgstr "Marcadores en formato HTML"
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:38
 msgctxt "BookmarksExporter|"
 msgid "Choose file..."
-msgstr "Elegir archivo..."
+msgstr "Elegir archivo…"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:47
 msgctxt "BookmarksExporter|"
@@ -981,7 +981,7 @@ msgstr "Elegir desde cual quiere importar marcadores:"
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:125
 msgctxt "BookmarksImportDialog|"
 msgid "Choose..."
-msgstr "Elegir..."
+msgstr "Elegir…"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:257
 msgctxt "BookmarksImportDialog|"
@@ -1004,7 +1004,7 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
 msgctxt "BookmarksImporter|"
 msgid "Choose file..."
-msgstr "Elegir archivo..."
+msgstr "Elegir archivo…"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:59
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
@@ -1725,7 +1725,7 @@ msgstr "%1% - Gestor de descargas"
 #: lib/downloads/downloadmanager.cpp:304
 msgctxt "DownloadManager|"
 msgid "Save file as..."
-msgstr "Guardar archivo como..."
+msgstr "Guardar archivo como…"
 
 #: lib/downloads/downloadmanager.cpp:314
 msgctxt "DownloadManager|"
@@ -1745,7 +1745,7 @@ msgstr "Página HTML, completa (*.html)"
 #: lib/downloads/downloadmanager.cpp:320
 msgctxt "DownloadManager|"
 msgid "Save page as..."
-msgstr "Guardar página como..."
+msgstr "Guardar página como…"
 
 #: lib/downloads/downloadmanager.cpp:417
 msgctxt "DownloadManager|"
@@ -1794,7 +1794,7 @@ msgstr "¿Qué quiere usted que haga Falkon con este archivo?"
 #: lib/downloads/downloadoptionsdialog.ui:47
 msgctxt "DownloadOptionsDialog|"
 msgid "Open..."
-msgstr "Abrir..."
+msgstr "Abrir…"
 
 #: lib/downloads/downloadoptionsdialog.ui:54
 msgctxt "DownloadOptionsDialog|"
@@ -2228,7 +2228,7 @@ msgstr "Pegar y &buscar"
 #, qt-format
 msgctxt "WebSearchBar|"
 msgid "Add %1 ..."
-msgstr "Añadir %1 ..."
+msgstr "Añadir %1 …"
 
 #: lib/navigation/websearchbar.cpp:131
 msgctxt "WebSearchBar|"
@@ -2854,7 +2854,7 @@ msgstr "Icono:"
 #: lib/opensearch/editsearchengine.ui:83
 msgctxt "EditSearchEngine|"
 msgid "Change..."
-msgstr "Cambiar..."
+msgstr "Cambiar…"
 
 #: lib/opensearch/editsearchengine.ui:106
 msgctxt "EditSearchEngine|"
@@ -2907,7 +2907,7 @@ msgstr "Administrar motores de búsqueda"
 #: lib/opensearch/searchenginesdialog.ui:22
 msgctxt "SearchEnginesDialog|"
 msgid "Add..."
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: lib/opensearch/searchenginesdialog.ui:29
 msgctxt "SearchEnginesDialog|"
@@ -3006,12 +3006,12 @@ msgstr "Marcadores"
 #: lib/other/browsinglibrary.cpp:61
 msgctxt "BrowsingLibrary|"
 msgid "Import Bookmarks..."
-msgstr "Importar marcadores..."
+msgstr "Importar marcadores…"
 
 #: lib/other/browsinglibrary.cpp:62
 msgctxt "BrowsingLibrary|"
 msgid "Export Bookmarks..."
-msgstr "Exportar marcadores..."
+msgstr "Exportar marcadores…"
 
 #: lib/other/browsinglibrary.ui:14
 msgctxt "BrowsingLibrary|"
@@ -3026,7 +3026,7 @@ msgstr "Importar y exportar"
 #: lib/other/browsinglibrary.ui:84
 msgctxt "BrowsingLibrary|"
 msgid "Search..."
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: lib/other/clearprivatedata.cpp:155
 msgctxt "ClearPrivateData|"
@@ -3137,7 +3137,7 @@ msgstr "Archivos de imagen"
 #: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
 msgctxt "IconChooser|"
 msgid "Choose icon..."
-msgstr "Elegir icono..."
+msgstr "Elegir icono…"
 
 #: lib/other/iconchooser.ui:20
 msgctxt "IconChooser|"
@@ -3152,7 +3152,7 @@ msgstr "Imagen (.png, .jpg, .jpeg, .gif)"
 #: lib/other/iconchooser.ui:42
 msgctxt "IconChooser|"
 msgid "Choose file..."
-msgstr "Elegir archivo..."
+msgstr "Elegir archivo…"
 
 #: lib/other/iconchooser.ui:52
 msgctxt "IconChooser|"
@@ -3267,7 +3267,7 @@ msgstr "¡La vista previa no está disponible!"
 #: lib/other/siteinfo.cpp:263
 msgctxt "SiteInfo|"
 msgid "Save image..."
-msgstr "Guardar imagen..."
+msgstr "Guardar imagen…"
 
 #: lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
@@ -3277,7 +3277,7 @@ msgstr "¡No se puede escribir el archivo!"
 #: lib/other/siteinfo.cpp:281
 msgctxt "SiteInfo|"
 msgid "Loading..."
-msgstr "Cargando..."
+msgstr "Cargando…"
 
 #: lib/other/siteinfo.cpp:294
 msgctxt "SiteInfo|"
@@ -3440,7 +3440,7 @@ msgstr "Registrar"
 #: lib/other/siteinfowidget.ui:98
 msgctxt "SiteInfoWidget|"
 msgid "More..."
-msgstr "Más..."
+msgstr "Más…"
 
 #: lib/other/sitesettingsmanager.cpp:324
 msgctxt "SiteSettingsManager|"
@@ -3611,12 +3611,12 @@ msgstr "Archivo"
 #: lib/popupwindow/popupwindow.cpp:84
 msgctxt "PopupWindow|"
 msgid "Send Link..."
-msgstr "Enviar enlace..."
+msgstr "Enviar enlace…"
 
 #: lib/popupwindow/popupwindow.cpp:85
 msgctxt "PopupWindow|"
 msgid "&Print..."
-msgstr "&Imprimir..."
+msgstr "&Imprimir…"
 
 #: lib/popupwindow/popupwindow.cpp:87
 msgctxt "PopupWindow|"
@@ -3688,7 +3688,7 @@ msgstr "Idiomas preferidos"
 #: lib/preferences/acceptlanguage.ui:25
 msgctxt "AcceptLanguage|"
 msgid "Add..."
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: lib/preferences/acceptlanguage.ui:32
 msgctxt "AcceptLanguage|"
@@ -3723,12 +3723,12 @@ msgstr "Definición personal:"
 #: lib/preferences/autofillmanager.cpp:67
 msgctxt "AutoFillManager|"
 msgid "Import Passwords from File..."
-msgstr "Importar contraseñas de un archivo..."
+msgstr "Importar contraseñas de un archivo…"
 
 #: lib/preferences/autofillmanager.cpp:68
 msgctxt "AutoFillManager|"
 msgid "Export Passwords to File..."
-msgstr "Exportar contraseñas a un archivo..."
+msgstr "Exportar contraseñas a un archivo…"
 
 #: lib/preferences/autofillmanager.cpp:70
 msgctxt "AutoFillManager|"
@@ -3746,7 +3746,7 @@ msgstr "Mostras contraseñas"
 #: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend..."
-msgstr "Cambiar motor..."
+msgstr "Cambiar motor…"
 
 #: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
@@ -3787,7 +3787,7 @@ msgstr "Cambiar contraseña:"
 #: lib/preferences/autofillmanager.cpp:313
 msgctxt "AutoFillManager|"
 msgid "Choose file..."
-msgstr "Elegir archivo..."
+msgstr "Elegir archivo…"
 
 #: lib/preferences/autofillmanager.cpp:327
 msgctxt "AutoFillManager|"
@@ -3982,8 +3982,8 @@ msgctxt "PluginsList|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
 msgstr ""
-"<a href=\"https://store.kde.org/browse/cat/571/\">Obtener más extensiones..."
-"</a>"
+"<a href=\"https://store.kde.org/browse/cat/571/\">Obtener más extensiones…</"
+"a>"
 
 #: lib/preferences/pluginsmanager.cpp:201
 msgctxt "PluginsManager|"
@@ -4040,7 +4040,7 @@ msgstr "%1%"
 #: lib/preferences/preferences.cpp:600
 msgctxt "Preferences|"
 msgid "Choose executable location..."
-msgstr "Seleccione la ubicación del ejecutable..."
+msgstr "Seleccione la ubicación del ejecutable…"
 
 #: lib/preferences/preferences.cpp:643
 msgctxt "Preferences|"
@@ -4055,12 +4055,12 @@ msgstr "Arrástrela por la pantalla para situarla donde quiera."
 #: lib/preferences/preferences.cpp:693
 msgctxt "Preferences|"
 msgid "Choose download location..."
-msgstr "Seleccione la ubicación de la descarga..."
+msgstr "Seleccione la ubicación de la descarga…"
 
 #: lib/preferences/preferences.cpp:707
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
-msgstr "Seleccione la ubicación de la hoja de estilos..."
+msgstr "Seleccione la ubicación de la hoja de estilos…"
 
 #: lib/preferences/preferences.cpp:718
 msgctxt "Preferences|"
@@ -4070,7 +4070,7 @@ msgstr "Eliminado"
 #: lib/preferences/preferences.cpp:820
 msgctxt "Preferences|"
 msgid "Choose cache path..."
-msgstr "Seleccionar directorio de cache..."
+msgstr "Seleccionar directorio de cache…"
 
 #: lib/preferences/preferences.cpp:851
 msgctxt "Preferences|"
@@ -4260,7 +4260,7 @@ msgstr "Abrir una página en blanco"
 #: lib/preferences/preferences.ui:397
 msgctxt "Preferences|"
 msgid "Open other page..."
-msgstr "Abrir otra página..."
+msgstr "Abrir otra página…"
 
 #: lib/preferences/preferences.ui:405
 msgctxt "Preferences|"
@@ -4534,7 +4534,7 @@ msgstr "Seleccionar color"
 #: lib/preferences/preferences.ui:2825
 msgctxt "Preferences|"
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: lib/preferences/preferences.ui:995
 msgctxt "Preferences|"
@@ -5269,7 +5269,7 @@ msgctxt "ThemeManager|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
 msgstr ""
-"<a href=\"https://store.kde.org/browse/cat/572/\">Obtener más temas...</a>"
+"<a href=\"https://store.kde.org/browse/cat/572/\">Obtener más temas…</a>"
 
 #: lib/preferences/useragentdialog.cpp:99
 msgctxt "UserAgentDialog|"
@@ -5533,7 +5533,7 @@ msgstr "Eliminar"
 #: lib/sidebar/bookmarkssidebar.ui:41
 msgctxt "BookmarksSideBar|"
 msgid "Search..."
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: lib/sidebar/historysidebar.cpp:96
 msgctxt "HistorySideBar|"
@@ -5558,7 +5558,7 @@ msgstr "Borrar"
 #: lib/sidebar/historysidebar.ui:32
 msgctxt "HistorySideBar|"
 msgid "Search..."
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: lib/sidebar/sidebar.cpp:66 lib/sidebar/sidebar.cpp:108
 msgctxt "SideBar|"
@@ -5984,12 +5984,12 @@ msgstr "Recargar página"
 #: lib/webengine/webpage.cpp:580
 msgctxt "WebPage|"
 msgid "Choose file..."
-msgstr "Elegir archivo..."
+msgstr "Elegir archivo…"
 
 #: lib/webengine/webpage.cpp:584
 msgctxt "WebPage|"
 msgid "Choose files..."
-msgstr "Escoger archivos..."
+msgstr "Escoger archivos…"
 
 #: lib/webengine/webpage.cpp:720
 msgctxt "WebPage|"
@@ -6050,7 +6050,7 @@ msgstr "Añadir esta página a &marcadores"
 #: lib/webengine/webview.cpp:790
 msgctxt "WebView|"
 msgid "&Save page as..."
-msgstr "&Guardar página como..."
+msgstr "&Guardar página como…"
 
 #: lib/webengine/webview.cpp:791
 msgctxt "WebView|"
@@ -6060,7 +6060,7 @@ msgstr "Cop&iar el enlace de la página"
 #: lib/webengine/webview.cpp:792
 msgctxt "WebView|"
 msgid "Send page link..."
-msgstr "Enviar enlace de la página..."
+msgstr "Enviar enlace de la página…"
 
 #: lib/webengine/webview.cpp:794
 msgctxt "WebView|"
@@ -6100,12 +6100,12 @@ msgstr "Añadir enlace a &marcadores"
 #: lib/webengine/webview.cpp:823
 msgctxt "WebView|"
 msgid "&Save link as..."
-msgstr "&Guardar enlace como..."
+msgstr "&Guardar enlace como…"
 
 #: lib/webengine/webview.cpp:824
 msgctxt "WebView|"
 msgid "Send link..."
-msgstr "Enviar enlace..."
+msgstr "Enviar enlace…"
 
 #: lib/webengine/webview.cpp:825
 msgctxt "WebView|"
@@ -6130,17 +6130,17 @@ msgstr "C&opiar la ruta de la imagen"
 #: lib/webengine/webview.cpp:847
 msgctxt "WebView|"
 msgid "&Save image as..."
-msgstr "&Guardar imagen como..."
+msgstr "&Guardar imagen como…"
 
 #: lib/webengine/webview.cpp:848
 msgctxt "WebView|"
 msgid "Send image..."
-msgstr "Enviar imagen..."
+msgstr "Enviar imagen…"
 
 #: lib/webengine/webview.cpp:867
 msgctxt "WebView|"
 msgid "Send text..."
-msgstr "Enviar texto..."
+msgstr "Enviar texto…"
 
 #: lib/webengine/webview.cpp:879
 msgctxt "WebView|"
@@ -6156,7 +6156,7 @@ msgstr "Buscar \"%1 ..\" con %2"
 #: lib/webengine/webview.cpp:899
 msgctxt "WebView|"
 msgid "Search with..."
-msgstr "Buscar con..."
+msgstr "Buscar con…"
 
 #: lib/webengine/webview.cpp:921
 msgctxt "WebView|"
@@ -6247,7 +6247,7 @@ msgstr "%1 de %2"
 #: lib/webtab/searchtoolbar.ui:48
 msgctxt "SearchToolbar|"
 msgid "Find..."
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: lib/webtab/searchtoolbar.ui:58
 msgctxt "SearchToolbar|"
