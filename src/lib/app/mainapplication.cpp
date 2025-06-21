@@ -63,6 +63,7 @@
 #include <QDir>
 #include <QStandardPaths>
 #include <QWebEngineProfile>
+#include <QWebEngineProfileBuilder>
 #include <QWebEngineScriptCollection>
 #include <QRegularExpression>
 #include <QtWebEngineWidgetsVersion>
@@ -289,11 +290,29 @@ MainApplication::MainApplication(int &argc, char** argv)
     NetworkManager::registerSchemes();
     registerAllowedSchemes();
 
+    QWebEngineProfileBuilder profileBuilder;
+    profileBuilder.setPersistentCookiesPolicy(QWebEngineProfile::AllowPersistentCookies);
+    profileBuilder.setPersistentStoragePath(DataPaths::currentProfilePath());
+
+    QString defaultPath = DataPaths::path(DataPaths::Cache);
+    if (!defaultPath.startsWith(DataPaths::currentProfilePath())) {
+        defaultPath.append(QLatin1Char('/') + ProfileManager::currentProfile());
+    }
+    const QString &cachePath = Settings::globalSettings()->value(QSL("Web-Browser-Settings/CachePath"), defaultPath).toString();
+    profileBuilder.setCachePath(cachePath);
+
+    const bool allowCache = Settings::globalSettings()->value(QSL("Web-Browser-Settings/AllowLocalCache"), true).toBool();
+    profileBuilder.setHttpCacheType(allowCache ? QWebEngineProfile::DiskHttpCache : QWebEngineProfile::MemoryHttpCache);
+
+    const int cacheSize = Settings::globalSettings()->value(QSL("Web-Browser-Settings/LocalCacheSize"), 50).toInt() * 1000 * 1000;
+    profileBuilder.setHttpCacheMaximumSize(cacheSize);
+
     if (isPrivate()) {
-        m_webProfile = new QWebEngineProfile();
+        profileBuilder.setPersistentStoragePath(DataPaths::path(DataPaths::Temp) + QLatin1String("/private-storage"));
+        m_webProfile = profileBuilder.createOffTheRecordProfile();
     }
     else {
-        m_webProfile = new QWebEngineProfile(startProfile.isEmpty() ? QSL("Default") : startProfile);
+        m_webProfile = profileBuilder.createProfile(startProfile.isEmpty() ? QSL("Default") : startProfile);
     }
     connect(m_webProfile, &QWebEngineProfile::downloadRequested, this, &MainApplication::downloadRequested);
 
@@ -1052,29 +1071,12 @@ void MainApplication::loadSettings()
     webSettings->setFontSize(QWebEngineSettings::MinimumLogicalFontSize, settings.value(QSL("MinimumLogicalFontSize"), 5).toInt());
     settings.endGroup();
 
-    QWebEngineProfile* profile = m_webProfile;
-    profile->setPersistentCookiesPolicy(QWebEngineProfile::AllowPersistentCookies);
-    profile->setPersistentStoragePath(DataPaths::currentProfilePath());
-
-    QString defaultPath = DataPaths::path(DataPaths::Cache);
-    if (!defaultPath.startsWith(DataPaths::currentProfilePath()))
-        defaultPath.append(QLatin1Char('/') + ProfileManager::currentProfile());
-    const QString &cachePath = settings.value(QSL("Web-Browser-Settings/CachePath"), defaultPath).toString();
-    profile->setCachePath(cachePath);
-
-    const bool allowCache = settings.value(QSL("Web-Browser-Settings/AllowLocalCache"), true).toBool();
-    profile->setHttpCacheType(allowCache ? QWebEngineProfile::DiskHttpCache : QWebEngineProfile::MemoryHttpCache);
-
-    const int cacheSize = settings.value(QSL("Web-Browser-Settings/LocalCacheSize"), 50).toInt() * 1000 * 1000;
-    profile->setHttpCacheMaximumSize(cacheSize);
-
     settings.beginGroup(QSL("SpellCheck"));
-    profile->setSpellCheckEnabled(settings.value(QSL("Enabled"), false).toBool());
-    profile->setSpellCheckLanguages(settings.value(QSL("Languages")).toStringList());
+    m_webProfile->setSpellCheckEnabled(settings.value(QSL("Enabled"), false).toBool());
+    m_webProfile->setSpellCheckLanguages(settings.value(QSL("Languages")).toStringList());
     settings.endGroup();
 
     if (isPrivate()) {
-        profile->setPersistentStoragePath(DataPaths::path(DataPaths::Temp) + QLatin1String("/private-storage"));
         history()->setSaving(false);
     }
 
