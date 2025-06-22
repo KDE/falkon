@@ -238,6 +238,12 @@ MainApplication::MainApplication(int &argc, char** argv)
             appId.append(QSL(".TestMode"));
         }
 
+        /* Mark the appId with the current profile to allow subsequent commands to open tabs
+         * in a correct instance / window */
+        if (!startProfile.isEmpty() && (startProfile != QLatin1String("default"))) {
+            appId.append(QL1C('.') + startProfile);
+        }
+
         if (newInstance) {
             if (startProfile.isEmpty() || startProfile == QLatin1String("default")) {
                 std::cout << "New instance cannot be started with default profile!" << std::endl;
@@ -246,7 +252,7 @@ MainApplication::MainApplication(int &argc, char** argv)
                 // Generate unique appId so it is possible to start more separate instances
                 // of the same profile. It is dangerous to run more instances of the same profile,
                 // but if the user wants it, we should allow it.
-                appId.append(QLatin1Char('.') + startProfile + QString::number(QDateTime::currentMSecsSinceEpoch()));
+                appId.append(QString::number(QDateTime::currentMSecsSinceEpoch()));
             }
         }
 
