@@ -1,16 +1,17 @@
 # SPDX-FileCopyrightText: 2018, 2019, 2020, 2023, 2024, 2025 Adrian Chaves <adrian@chaves.io>
+# SPDX-FileCopyrightText: 2025 Adrián Chaves (Gallaecio)
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-01-17 07:25+0100\n"
-"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"PO-Revision-Date: 2025-06-19 10:13+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.2\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -2226,18 +2227,14 @@ msgid "SSL Certificate Error!"
 msgstr "Erro do certificado de SSL!"
 
 #: lib/network/networkmanager.cpp:92
-#, fuzzy, qt-format
-#| msgctxt "NetworkManager|"
-#| msgid ""
-#| "The page you are trying to access has the following errors in the SSL "
-#| "certificate:"
+#, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
 msgstr ""
-"A páxina á que intenta acceder ten os seguintes erros no seu certificado de "
-"SSL:"
+"A páxina <strong>%1</strong> á que intenta acceder ten os seguintes erros no "
+"seu certificado de SSL:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -2789,12 +2786,9 @@ msgid "SSL Certificate Error!"
 msgstr "Erro do certificado de SSL!"
 
 #: lib/network/sslerrordialog.ui:90
-#, fuzzy
-#| msgctxt "NetworkManager|"
-#| msgid "The certificate contains errors."
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr "O certificado contén erros."
+msgstr "Conmutar os detalles do certificado"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -4298,11 +4292,13 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Cores de fondo de "
+"páxinas web</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:584
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "Cor de fondo durante a carga:"
 
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
@@ -4315,7 +4311,7 @@ msgstr "…"
 #: lib/preferences/preferences.ui:598
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "Cor de fondo tras cargar:"
 
 #: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
 #: lib/preferences/preferences.ui:1051
@@ -5254,22 +5250,22 @@ msgid ""
 msgstr ""
 "<a href=\"https://store.kde.org/browse/cat/572/\">Obter máis temas…</a>"
 
-#: lib/preferences/useragentdialog.cpp:100
+#: lib/preferences/useragentdialog.cpp:99
 msgctxt "UserAgentDialog|"
 msgid "Add new site"
 msgstr "Engadir un novo sitio"
 
-#: lib/preferences/useragentdialog.cpp:138
+#: lib/preferences/useragentdialog.cpp:137
 msgctxt "UserAgentDialog|"
 msgid "Edit site"
 msgstr "Editar o sitio"
 
-#: lib/preferences/useragentdialog.cpp:218
+#: lib/preferences/useragentdialog.cpp:217
 msgctxt "UserAgentDialog|"
 msgid "Site domain: "
 msgstr "Dominio do sitio: "
 
-#: lib/preferences/useragentdialog.cpp:219
+#: lib/preferences/useragentdialog.cpp:218
 msgctxt "UserAgentDialog|"
 msgid "User Agent: "
 msgstr "Axente de usuaria: "
@@ -5871,9 +5867,6 @@ msgid "Deny"
 msgstr "Denegar"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
 msgstr "Escoller unha cor"
