@@ -35,7 +35,7 @@
 #include <KAboutData>
 #include <KProtocolInfo>
 #include <Purpose/AlternativesModel>
-#include <KUiServerJobTracker>
+#include <KUiServerV2JobTracker>
 
 #include <QWebEngineProfile>
 #include <QWebEngineUrlScheme>
@@ -60,7 +60,7 @@ void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settin
         mApp->autoFill()->passwordManager()->switchBackend(QSL("KWallet"));
     }
     
-    m_jobTracker = new KUiServerJobTracker(this);
+    m_jobTracker = new KUiServerV2JobTracker(this);
     
     auto manager = mApp->downloadManager();
     connect(manager, &DownloadManager::downloadAdded, this, [=](DownloadItem *item) {
