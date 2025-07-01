@@ -334,10 +334,10 @@ void DownloadManager::download(QWebEngineDownloadRequest *downloadItem)
     auto* listItem = new QListWidgetItem(ui->list);
     auto* downItem = new DownloadItem(listItem, downloadItem, QFileInfo(downloadPath).absolutePath(), QFileInfo(downloadPath).fileName(), openFile, this);
     downItem->setDownTimer(downloadTimer);
-    downItem->startDownloading();
     connect(downItem, &DownloadItem::deleteItem, m_model, &DownloadManagerModel::removeDownload);
     connect(downItem, &DownloadItem::downloadFinished, this, QOverload<bool>::of(&DownloadManager::downloadFinished));
     connect(downItem, &DownloadItem::downloadFinished, this, QOverload<>::of(&DownloadManager::downloadFinished));
+    downItem->startDownloading();
     m_model->addDownload(downItem);
     ui->list->setItemWidget(listItem, downItem);
     listItem->setSizeHint(downItem->sizeHint());
