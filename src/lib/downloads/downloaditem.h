@@ -34,6 +34,8 @@ namespace Ui
 class DownloadItem;
 }
 
+class QDBusError;
+class QDBusMessage;
 class QListWidgetItem;
 class QWebEngineDownloadRequest;
 
@@ -76,6 +78,9 @@ private Q_SLOTS:
     void openFolder();
     void customContextMenuRequested(const QPoint &pos);
     void clear();
+
+    void dbusError(const QDBusError &error);
+    void dbusMessage(const QDBusMessage &message);
 
     void copyDownloadLink();
 

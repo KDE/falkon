@@ -42,6 +42,8 @@
 #ifdef Q_OS_WIN
 #include "Shlwapi.h"
 #include "shellapi.h"
+#elif defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
+#include <QDBusInterface>
 #endif
 
 //#define DOWNMANAGER_DEBUG
@@ -364,9 +366,44 @@ void DownloadItem::openFolder()
     winFileName.replace(QLatin1Char('/'), QSL("\\"));
     QString shExArg = QSL("/e,/select,\"") + winFileName + QSL("\"");
     ShellExecute(NULL, NULL, TEXT("explorer.exe"), shExArg.toStdWString().c_str(), NULL, SW_SHOW);
+#elif defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
+    QString fileName {m_fileName};
+
+    if (m_downloading) {
+        fileName.append(QSL(".download"));
+    }
+
+    QFileInfo info(m_path, fileName);
+    QString filePath = info.absoluteFilePath();
+
+    QDBusInterface dbus(QSL("org.freedesktop.FileManager1"), QSL("/org/freedesktop/FileManager1"), QSL("org.freedesktop.FileManager1"), QDBusConnection::sessionBus());
+    QStringList filePaths {filePath};
+
+    bool result = dbus.callWithCallback(QSL("ShowItems"), QList<QVariant>{filePaths, QSL("")}, this, SLOT(dbusMessage(QDBusMessage)), SLOT(dbusError(QDBusError)));
+
+    if (!result) {
+        qWarning() << "QDBusError: Unable to queue the 'ShowItems' request";
+
+        QDesktopServices::openUrl(QUrl::fromLocalFile(m_path));
+    }
 #else
     QDesktopServices::openUrl(QUrl::fromLocalFile(m_path));
 #endif
+}
+
+void DownloadItem::dbusError(const QDBusError &error)
+{
+    Q_UNUSED(error)
+#if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
+    qWarning() << "QDBusError:" << error.message();
+
+    QDesktopServices::openUrl(QUrl::fromLocalFile(m_path));
+#endif
+}
+
+void DownloadItem::dbusMessage(const QDBusMessage &message)
+{
+    Q_UNUSED(message)
 }
 
 QUrl DownloadItem::url() const
