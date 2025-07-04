@@ -1,3 +1,14 @@
+Version 25.08.0
+    * Fix build issues with Qt6 and add CI build for MS Windows (By Thomas Friedrichsmeier)
+    * DownloadManager: Fix small quick download keeping a download running forever
+    * Mark appId with current profile name (BUG: 439190)
+    * Remove top margin from tabbar (BUG: 445419)
+    * Update UserAgents (BUG: 505287)
+    * UserAgentDialog: Use QUrl::host on user URL input (BUG: 497223)
+    * Add webpage background color customization
+    * Add certificate information into SSL error dialog (BUG: 505141)
+    * Port away from Qt6Core5Compat
+
 Version 25.04.1
     * Fix crash when creating bookmarks toolbar. (BUG: 501535)
     * Fix editing SiteSettings and Cookies permissions
