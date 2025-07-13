@@ -1,8 +1,8 @@
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-10-10 21:38+0200\n"
+"PO-Revision-Date: 2025-07-12 22:25+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -214,7 +214,7 @@ msgstr "Egyéni szabályok"
 #, qt-format
 msgctxt "AdBlockTreeModel|"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: lib/adblock/adblocktreewidget.cpp:88
 msgctxt "AdBlockTreeWidget|"
@@ -2228,17 +2228,14 @@ msgid "SSL Certificate Error!"
 msgstr "SSL-tanúsítvány hiba."
 
 #: lib/network/networkmanager.cpp:92
-#, fuzzy, qt-format
-#| msgctxt "NetworkManager|"
-#| msgid ""
-#| "The page you are trying to access has the following errors in the SSL "
-#| "certificate:"
+#, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
 msgstr ""
-"A megnyitni kívánt oldal SSL-tanúsítványa a következő hibákat tartalmazza:"
+"A megnyitni kívánt <strong>%1</strong> oldal SSL-tanúsítványa a következő "
+"hibákat tartalmazza:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -3979,9 +3976,6 @@ msgid "Set as default"
 msgstr "Beállítás alapértelmezettként"
 
 #: lib/preferences/preferences.cpp:328
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Automatikus"
@@ -5178,9 +5172,6 @@ msgid "Site Permissions"
 msgstr "Oldaljogosultságok"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:22
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "Url:"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
 msgstr "URL:"
@@ -5870,9 +5861,6 @@ msgid "Deny"
 msgstr "Tiltás"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
 msgstr "Színválasztás"
