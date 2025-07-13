@@ -44,6 +44,7 @@
 #include "passwordmanager.h"
 #include "scripts.h"
 #include "ocssupport.h"
+#include "protocolhandlermanager.h"
 
 #include <iostream>
 
@@ -59,6 +60,7 @@
 #include <QAuthenticator>
 #include <QPushButton>
 #include <QUrlQuery>
+#include <QWebEngineProfile>
 #include <QtWebEngineWidgetsVersion>
 
 #include <QWebEngineRegisterProtocolHandlerRequest>
@@ -313,11 +315,6 @@ void WebPage::handleUnknownProtocol(const QUrl &url)
 {
     const QString protocol = url.scheme();
 
-    if (protocol == QLatin1String("mailto")) {
-        desktopServicesOpen(url);
-        return;
-    }
-
     if (qzSettings->blockedProtocols.contains(protocol)) {
         qDebug() << "WebPage::handleUnknownProtocol Protocol" << protocol << "is blocked!";
         return;
@@ -348,8 +345,7 @@ void WebPage::handleUnknownProtocol(const QUrl &url)
             qzSettings->saveSettings();
         }
 
-
-        QDesktopServices::openUrl(url);
+        desktopServicesOpen(url);
         break;
 
     case QMessageBox::No:
@@ -357,7 +353,6 @@ void WebPage::handleUnknownProtocol(const QUrl &url)
             qzSettings->blockedProtocols.append(protocol);
             qzSettings->saveSettings();
         }
-
         break;
 
     default:
@@ -447,6 +442,20 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
 
     if (url.scheme() == QL1S("ocs") && OcsSupport::instance()->handleUrl(url)) {
         return false;
+    }
+
+    if (!internalSchemes().contains(url.scheme()) && !url.scheme().isEmpty()) {
+        const auto *handler = profile()->urlSchemeHandler(url.scheme().toUtf8());
+
+        if (handler == nullptr) {
+            auto handlers = mApp->protocolHandlerManager()->protocolHandlers();
+
+            if (!handlers.contains(url.scheme())) {
+                handleUnknownProtocol(url);
+
+                return false;
+            }
+        }
     }
 
     const bool result = QWebEnginePage::acceptNavigationRequest(url, type, isMainFrame);

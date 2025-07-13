@@ -52,6 +52,7 @@
 #include "sitesettingsmanager.h"
 #include "sitesettingsattributesitem.h"
 #include "sitesettingshtml5item.h"
+#include "autoopenprotocolsdialog.h"
 
 #include <QSettings>
 #include <QInputDialog>
@@ -581,6 +582,7 @@ Preferences::Preferences(BrowserWindow* window)
     connect(ui->certificateManager, &QAbstractButton::clicked, this, &Preferences::openCertificateManager);
     connect(ui->protocolHandlers, &QAbstractButton::clicked, this, &Preferences::openProtocolHandlersManager);
     connect(ui->customSchemes, &QAbstractButton::clicked, this, &Preferences::openSchemesManager);
+    connect(ui->AutoOpenProtocolsButton, &QAbstractButton::clicked, this, &Preferences::openAutoOpenProtocolsDialog);
 
     connect(ui->listWidget, &QListWidget::currentItemChanged, this, &Preferences::showStackedPage);
     ui->listWidget->itemAt(5, 5)->setSelected(true);
@@ -810,6 +812,12 @@ void Preferences::openProtocolHandlersManager()
 void Preferences::openSchemesManager()
 {
     auto *dialog = new SchemeManager(this);
+    dialog->open();
+}
+
+void Preferences::openAutoOpenProtocolsDialog()
+{
+    auto *dialog = new AutoOpenProtocolsDialog(this);
     dialog->open();
 }
 
