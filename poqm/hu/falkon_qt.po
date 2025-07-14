@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-07-12 22:25+0200\n"
+"PO-Revision-Date: 2025-07-13 20:36+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -2286,73 +2286,78 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"A tanúsítvány nem egyezik a gép nevéhez rögzített beépített nyilvános "
+"kulcsokkal."
 
 #: lib/network/networkmanager.cpp:347
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "A tanúsítvány közönséges neve nem egyezik a gép nevével."
 
 #: lib/network/networkmanager.cpp:349
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "A tanúsítvány nem érvényes a jelenlegi időpontban."
 
 #: lib/network/networkmanager.cpp:351
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "A tanúsítványt nem megbízható szolgáltató írta alá."
 
 #: lib/network/networkmanager.cpp:353
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "A tanúsítvány hibás."
 
 #: lib/network/networkmanager.cpp:355
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
 msgstr ""
+"A tanúsítvány nem rendelkezik olyan mechanizmussal, amely alapján "
+"megállapítható, hogy visszavonták-e."
 
 #: lib/network/networkmanager.cpp:357
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "A tanúsítvány visszavonási információi nem érhetők el."
 
 #: lib/network/networkmanager.cpp:359
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "A tanúsítványt visszavonták."
 
 #: lib/network/networkmanager.cpp:361
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "A tanúsítvány érvénytelen."
 
 #: lib/network/networkmanager.cpp:363
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "A tanúsítványt gyenge aláírási algoritmussal írták alá."
 
 #: lib/network/networkmanager.cpp:365
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "A tanúsítványban megadott gépnév nem egyedi."
 
 #: lib/network/networkmanager.cpp:367
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "A tanúsítvány gyenge kulcsot tartalmaz."
 
 #: lib/network/networkmanager.cpp:369
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
 msgstr ""
+"A tanúsítvány olyan DNS-neveket igényelt, amelyek sértik a névkorlátozásokat."
 
 #: lib/network/networkmanager.cpp:371
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "A tanúsítvány érvényességi ideje túl hosszú."
 
 #: lib/network/networkmanager.cpp:373
 msgctxt "NetworkManager|"
@@ -2360,6 +2365,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Ehhez a kapcsolathoz tanúsítványátláthatóságra volt szükség, de a kiszolgáló "
+"nem adott a házirendnek megfelelő CT információkat."
 
 #: lib/network/networkmanager.cpp:375
 msgctxt "NetworkManager|"
@@ -2367,16 +2374,19 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"A tanúsítványról ismert, hogy a eszköz tulajdonosától eltérő jogalany "
+"használja lehallgatásra."
 
 #: lib/network/networkmanager.cpp:377
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "A kapcsolat az SSL/TLS egy elavult verzióját használja."
 
 #: lib/network/networkmanager.cpp:379
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr ""
+"A tanúsítvány egy régebbi Symantec tanúsítvány, amely már nem érvényes."
 
 #: lib/network/networkmanager.cpp:382
 msgctxt "NetworkManager|"
@@ -2780,7 +2790,7 @@ msgstr "SSL-tanúsítvány hiba."
 #: lib/network/sslerrordialog.ui:90
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr ""
+msgstr "Tanúsítvány részletei be/ki"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -3171,17 +3181,17 @@ msgstr "<b>A kapcsolat titkosított.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Minden tanúsítványhiba <b>folyamatosan</b> mellőzésre kerül."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "A tanúsítványhiba <b>átmenetileg</b> mellőzésre kerül."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "A tanúsítványt elutasították."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3337,17 +3347,17 @@ msgstr "<b>%1 oldal<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Minden tanúsítványhiba <b>folyamatosan</b> mellőzésre kerül."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "A tanúsítványhiba <b>átmenetileg</b> mellőzésre kerül."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "A tanúsítványt elutasították."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
@@ -3983,12 +3993,12 @@ msgstr "Automatikus"
 #: lib/preferences/preferences.cpp:330
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Világos"
 
 #: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Sötét"
 
 #: lib/preferences/preferences.cpp:341
 #, qt-format
@@ -4287,11 +4297,13 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Weboldalak "
+"háttérszínei</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:584
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "Háttérszín betöltés közben:"
 
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
@@ -4304,7 +4316,7 @@ msgstr "…"
 #: lib/preferences/preferences.ui:598
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "Háttérszín betöltés után:"
 
 #: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
 #: lib/preferences/preferences.ui:1051
@@ -4350,7 +4362,7 @@ msgstr "Felugró ablakok megnyitása lapokon"
 #: lib/preferences/preferences.ui:720
 msgctxt "Preferences|"
 msgid "Block automatic popups"
-msgstr ""
+msgstr "Automatikus felugrók letiltása"
 
 #: lib/preferences/preferences.ui:727
 msgctxt "Preferences|"
@@ -4599,7 +4611,7 @@ msgstr "Sötét mód kényszerítése"
 #: lib/preferences/preferences.ui:1217
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Preferált színséma:"
 
 #: lib/preferences/preferences.ui:1252
 msgctxt "Preferences|"
@@ -5179,12 +5191,12 @@ msgstr "URL:"
 #: lib/preferences/sitesettingsbrowsedialog.ui:32
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:51
 msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
-msgstr ""
+msgstr "Megadás"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:68
 msgctxt "SiteSettingsBrowseDialog|"
