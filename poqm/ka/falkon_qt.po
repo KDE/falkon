@@ -3868,6 +3868,82 @@ msgctxt "AutoFillManager|"
 msgid "Exceptions"
 msgstr "გამონაკლისები"
 
+#: lib/preferences/autoopenprotocolsdialog.cpp:78
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Add allowed scheme"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add allowed scheme"
+msgstr "დაშვებული სქემის დამატება"
+
+#: lib/preferences/autoopenprotocolsdialog.cpp:78
+#: lib/preferences/autoopenprotocolsdialog.cpp:101
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Scheme:"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Scheme:"
+msgstr "სქემა:"
+
+#: lib/preferences/autoopenprotocolsdialog.cpp:101
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Add blocked scheme"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add blocked scheme"
+msgstr "დაბლოკილი სქემის დამატება"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:14
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Auto-Open Protocols"
+msgstr ""
+
+#: lib/preferences/autoopenprotocolsdialog.ui:20
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid ""
+#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
+#| "Background Colors</span></p></body></html>"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
+"p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">ვებგვერდის ფონის "
+"ფერები</span></p></body></html>"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:34
+#: lib/preferences/autoopenprotocolsdialog.ui:79
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add"
+msgstr "დამატება"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:41
+#: lib/preferences/autoopenprotocolsdialog.ui:86
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Remove"
+msgstr "წაშლა"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:65
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid ""
+#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
+#| "Background Colors</span></p></body></html>"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
+"body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">ვებგვერდის ფონის "
+"ფერები</span></p></body></html>"
+
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
@@ -3983,103 +4059,103 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ წაშალოთ %1?"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:671
+#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:673
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "ნაგულისხმევი"
 
-#: lib/preferences/preferences.cpp:159
+#: lib/preferences/preferences.cpp:160
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "ნაგულისხმევად დაყენება"
 
-#: lib/preferences/preferences.cpp:328
+#: lib/preferences/preferences.cpp:329
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "ავტო"
 
-#: lib/preferences/preferences.cpp:330
+#: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Light"
 msgstr "ღია"
 
-#: lib/preferences/preferences.cpp:331
+#: lib/preferences/preferences.cpp:332
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr "ბნელი"
 
-#: lib/preferences/preferences.cpp:341
+#: lib/preferences/preferences.cpp:342
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:614
+#: lib/preferences/preferences.cpp:616
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "აირჩიეთ გამშვები ფაილის მდებარეობა..."
 
-#: lib/preferences/preferences.cpp:657
+#: lib/preferences/preferences.cpp:659
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD გაფრთხილება"
 
-#: lib/preferences/preferences.cpp:658
+#: lib/preferences/preferences.cpp:660
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "გადაათრიეთ და დააგდეთ ეკრანზე, სადაც გნებავთ."
 
-#: lib/preferences/preferences.cpp:707
+#: lib/preferences/preferences.cpp:709
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "აირჩიეთ გადმოწერის მდებარეობა..."
 
-#: lib/preferences/preferences.cpp:721
+#: lib/preferences/preferences.cpp:723
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "აირჩიეთ სტილის ფურცლების მდებარეობა..."
 
-#: lib/preferences/preferences.cpp:732
+#: lib/preferences/preferences.cpp:734
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "წაშლილია"
 
-#: lib/preferences/preferences.cpp:834
+#: lib/preferences/preferences.cpp:842
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "აირჩიეთ კეშის ბილიკი..."
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:873
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "ახალი პროფილი"
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:873
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "შეიყვანეთ ახალი პროფილის სახელი:"
 
-#: lib/preferences/preferences.cpp:875 lib/preferences/preferences.cpp:880
+#: lib/preferences/preferences.cpp:883 lib/preferences/preferences.cpp:888
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "შეცდომა!"
 
-#: lib/preferences/preferences.cpp:875
+#: lib/preferences/preferences.cpp:883
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "ეს პროფილი უკვე არსებობს!"
 
-#: lib/preferences/preferences.cpp:880
+#: lib/preferences/preferences.cpp:888
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "პროფილის საქაღალდის შექმნის შეცდომა!"
 
-#: lib/preferences/preferences.cpp:891
+#: lib/preferences/preferences.cpp:899
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "დასტური"
 
-#: lib/preferences/preferences.cpp:892
+#: lib/preferences/preferences.cpp:900
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4087,7 +4163,7 @@ msgid ""
 "cannot be undone!"
 msgstr "მართლა გნებავთ, წაშალოთ პროფილი \"%1\"? ამ ქმედებას ვერ დააბრუნებთ!"
 
-#: lib/preferences/preferences.cpp:907 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:915 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "შენიშვნა: აქტიურ პროფილს ვერ წაშლით."
@@ -4315,7 +4391,7 @@ msgstr "ფონის ფერი ჩატვირთვისას:"
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
 #: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
-#: lib/preferences/preferences.ui:2881
+#: lib/preferences/preferences.ui:2728
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -5037,10 +5113,39 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "პროტოკოლის დამმუშავებლების მმართველი"
 
-#: lib/preferences/preferences.ui:2671
+#: lib/preferences/preferences.ui:2653
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid ""
+#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
+#| "Background Colors</span></p></body></html>"
 msgctxt "Preferences|"
-msgid "Search Engines Manager"
-msgstr "ძებნის ძრავების მმართველი"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
+"protocols</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">ვებგვერდის ფონის "
+"ფერები</span></p></body></html>"
+
+#: lib/preferences/preferences.ui:2665
+msgctxt "Preferences|"
+msgid "Manage custom schemes"
+msgstr "მომხმარებლის სქემების მართვა"
+
+#: lib/preferences/preferences.ui:2672
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>ბრაუზერის იდენტიფიკაციის შეცვლა</b>"
+
+#: lib/preferences/preferences.ui:2679
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>ძებნის ძრავების მართვა</b>"
+
+#: lib/preferences/preferences.ui:2686
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>ვებგვერდების სასურველი ენა</b>"
 
 #: lib/preferences/preferences.ui:2693
 msgctxt "Preferences|"
@@ -5049,58 +5154,48 @@ msgstr "<b>მომხმარებლის სტილების ფუ�
 
 #: lib/preferences/preferences.ui:2700
 msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "<b>ძებნის ძრავების მართვა</b>"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>პროტოკოლის დამმუშავებლების მართვა</b>"
 
-#: lib/preferences/preferences.ui:2712
-msgctxt "Preferences|"
-msgid "Manage custom schemes"
-msgstr "მომხმარებლის სქემების მართვა"
-
-#: lib/preferences/preferences.ui:2737
-msgctxt "Preferences|"
-msgid "Languages"
-msgstr "ენები"
-
-#: lib/preferences/preferences.ui:2759
-msgctxt "Preferences|"
-msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>ვებგვერდების სასურველი ენა</b>"
-
-#: lib/preferences/preferences.ui:2784
+#: lib/preferences/preferences.ui:2755
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "სერტიფიკატის გამონაკლისის მმართველი"
 
-#: lib/preferences/preferences.ui:2806
-msgctxt "Preferences|"
-msgid "<b>Change browser identification</b>"
-msgstr "<b>ბრაუზერის იდენტიფიკაციის შეცვლა</b>"
-
-#: lib/preferences/preferences.ui:2831
+#: lib/preferences/preferences.ui:2795
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "მომხმარებლის აგენტის მართვა"
 
-#: lib/preferences/preferences.ui:2853
+#: lib/preferences/preferences.ui:2830
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "სტილების ფურცლები ავტომატურად იტვირთება ყველა ვებგვერდთან ერთად: "
 
-#: lib/preferences/preferences.ui:2890
+#: lib/preferences/preferences.ui:2855
 msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>პროტოკოლის დამმუშავებლების მართვა</b>"
+msgid "Custom Scheme Manager"
+msgstr "მომხმარებლის სქემების მმართველი"
 
-#: lib/preferences/preferences.ui:2897
+#: lib/preferences/preferences.ui:2895
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "ძებნის ძრავების მმართველი"
+
+#: lib/preferences/preferences.ui:2935
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "ენები"
+
+#: lib/preferences/preferences.ui:2970
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>სერტიფიკატების მმართველი</b>"
 
-#: lib/preferences/preferences.ui:2948
+#: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
-msgid "Custom Scheme Manager"
-msgstr "მომხმარებლის სქემების მმართველი"
+msgid "Auto Open protocols"
+msgstr ""
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
@@ -5934,7 +6029,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "ამ გვერდისთვის დამატებითი ფანჯრების ჩვენების აკრძალვა"
 
-#: lib/webengine/webpage.cpp:335
+#: lib/webengine/webpage.cpp:332
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5944,27 +6039,27 @@ msgstr ""
 "Falkon-მა <b>%1:</b> ბმულები არ იცის, რა არის. მოთხოვნილი ბმულია <ul><li>%2</"
 "li></ul>. გნებავთ, Falkon-მა ამ ბმულის სისტემური აპლიკაციით გახსნა სცადოს?"
 
-#: lib/webengine/webpage.cpp:340
+#: lib/webengine/webpage.cpp:337
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "არჩევანის &დამახსოვრება ამ პროტოკოლისთვის"
 
-#: lib/webengine/webpage.cpp:341
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "გარე პროტოკოლის მოთხოვნა"
 
-#: lib/webengine/webpage.cpp:421 lib/webengine/webpage.cpp:422
+#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "გვერდის ჩატვირთვის შეცდომა"
 
-#: lib/webengine/webpage.cpp:423
+#: lib/webengine/webpage.cpp:418
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "შეცდომა ამ გვერდის ჩატვირთვისას."
 
-#: lib/webengine/webpage.cpp:424
+#: lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -5972,27 +6067,27 @@ msgstr ""
 "სცადეთ, მეხსიერება გვერდების თავიდან ჩატვირთვის ან ზოგიერთი ჩანართის "
 "დახურვით გაათავისუფლოთ."
 
-#: lib/webengine/webpage.cpp:425
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "გვერდის გადატვირთვა"
 
-#: lib/webengine/webpage.cpp:586
+#: lib/webengine/webpage.cpp:595
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "აირჩიეთ ფაილი..."
 
-#: lib/webengine/webpage.cpp:590
+#: lib/webengine/webpage.cpp:599
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "აირჩიეთ ფაილები..."
 
-#: lib/webengine/webpage.cpp:726
+#: lib/webengine/webpage.cpp:735
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript -ის განგაში"
 
-#: lib/webengine/webpage.cpp:735
+#: lib/webengine/webpage.cpp:744
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "ამ გვერდისთვის დამატებითი ფანჯრების ჩვენების აკრძალვა"

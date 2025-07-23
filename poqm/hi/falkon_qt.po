@@ -3854,6 +3854,68 @@ msgctxt "AutoFillManager|"
 msgid "Exceptions"
 msgstr "अपवाद"
 
+#: lib/preferences/autoopenprotocolsdialog.cpp:78
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Add allowed scheme"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add allowed scheme"
+msgstr "अनुमत योजना जोड़ें"
+
+#: lib/preferences/autoopenprotocolsdialog.cpp:78
+#: lib/preferences/autoopenprotocolsdialog.cpp:101
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Scheme:"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Scheme:"
+msgstr "योजना:"
+
+#: lib/preferences/autoopenprotocolsdialog.cpp:101
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Add blocked scheme"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add blocked scheme"
+msgstr "अवरुद्ध योजना जोड़ें"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:14
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Auto-Open Protocols"
+msgstr ""
+
+#: lib/preferences/autoopenprotocolsdialog.ui:20
+msgctxt "AutoOpenProtocolsDialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
+"p></body></html>"
+msgstr ""
+
+#: lib/preferences/autoopenprotocolsdialog.ui:34
+#: lib/preferences/autoopenprotocolsdialog.ui:79
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add"
+msgstr "जोड़ना"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:41
+#: lib/preferences/autoopenprotocolsdialog.ui:86
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Remove"
+msgstr "निकालना"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:65
+msgctxt "AutoOpenProtocolsDialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
+"body></html>"
+msgstr ""
+
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
@@ -3968,17 +4030,17 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "क्या आप वाकई '%1' को हटाना चाहते हैं?"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:671
+#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:673
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "गलती करना"
 
-#: lib/preferences/preferences.cpp:159
+#: lib/preferences/preferences.cpp:160
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "डिफाल्ट के रूप में सेट"
 
-#: lib/preferences/preferences.cpp:328
+#: lib/preferences/preferences.cpp:329
 #, fuzzy
 #| msgctxt "FalkonSchemeReply|"
 #| msgid "Auto"
@@ -3986,88 +4048,88 @@ msgctxt "Preferences|"
 msgid "Auto"
 msgstr "ऑटो"
 
-#: lib/preferences/preferences.cpp:330
+#: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Light"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:331
+#: lib/preferences/preferences.cpp:332
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:341
+#: lib/preferences/preferences.cpp:342
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:614
+#: lib/preferences/preferences.cpp:616
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "निष्पादन योग्य स्थान चुनें..."
 
-#: lib/preferences/preferences.cpp:657
+#: lib/preferences/preferences.cpp:659
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "ओएसडी अधिसूचना"
 
-#: lib/preferences/preferences.cpp:658
+#: lib/preferences/preferences.cpp:660
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "इसे स्क्रीन पर खींचकर जहां चाहें वहां रखें।"
 
-#: lib/preferences/preferences.cpp:707
+#: lib/preferences/preferences.cpp:709
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "डाउनलोड स्थान चुनें..."
 
-#: lib/preferences/preferences.cpp:721
+#: lib/preferences/preferences.cpp:723
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "स्टाइलशीट स्थान चुनें..."
 
-#: lib/preferences/preferences.cpp:732
+#: lib/preferences/preferences.cpp:734
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "हटाए गए"
 
-#: lib/preferences/preferences.cpp:834
+#: lib/preferences/preferences.cpp:842
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "कैश पथ चुनें..."
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:873
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "नया प्रोफ़ाइल"
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:873
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "नये प्रोफ़ाइल का नाम दर्ज करें:"
 
-#: lib/preferences/preferences.cpp:875 lib/preferences/preferences.cpp:880
+#: lib/preferences/preferences.cpp:883 lib/preferences/preferences.cpp:888
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "गलती!"
 
-#: lib/preferences/preferences.cpp:875
+#: lib/preferences/preferences.cpp:883
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "यह प्रोफ़ाइल पहले से मौजूद है!"
 
-#: lib/preferences/preferences.cpp:880
+#: lib/preferences/preferences.cpp:888
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "प्रोफ़ाइल निर्देशिका नहीं बनाई जा सकती!"
 
-#: lib/preferences/preferences.cpp:891
+#: lib/preferences/preferences.cpp:899
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "पुष्टीकरण"
 
-#: lib/preferences/preferences.cpp:892
+#: lib/preferences/preferences.cpp:900
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4077,7 +4139,7 @@ msgstr ""
 "क्या आप वाकई \"%1\" प्रोफ़ाइल को स्थायी रूप से हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की "
 "जा सकती!"
 
-#: lib/preferences/preferences.cpp:907 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:915 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "नोट: आप सक्रिय प्रोफ़ाइल को हटा नहीं सकते."
@@ -4302,7 +4364,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
 #: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
-#: lib/preferences/preferences.ui:2881
+#: lib/preferences/preferences.ui:2728
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -5019,10 +5081,32 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "प्रोटोकॉल हैंडलर्स प्रबंधक"
 
-#: lib/preferences/preferences.ui:2671
+#: lib/preferences/preferences.ui:2653
 msgctxt "Preferences|"
-msgid "Search Engines Manager"
-msgstr "खोज इंजन प्रबंधक"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
+"protocols</span></p></body></html>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2665
+msgctxt "Preferences|"
+msgid "Manage custom schemes"
+msgstr "कस्टम योजनाएँ प्रबंधित करें"
+
+#: lib/preferences/preferences.ui:2672
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>ब्राउज़र पहचान बदलें</b>"
+
+#: lib/preferences/preferences.ui:2679
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>खोज इंजन प्रबंधित करें</b>"
+
+#: lib/preferences/preferences.ui:2686
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>वेब साइटों के लिए पसंदीदा भाषा</b>"
 
 #: lib/preferences/preferences.ui:2693
 msgctxt "Preferences|"
@@ -5031,58 +5115,48 @@ msgstr "<b>उपयोगकर्ता स्टाइल शीट</b>"
 
 #: lib/preferences/preferences.ui:2700
 msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "<b>खोज इंजन प्रबंधित करें</b>"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>प्रोटोकॉल हैंडलर्स प्रबंधित करें</b>"
 
-#: lib/preferences/preferences.ui:2712
-msgctxt "Preferences|"
-msgid "Manage custom schemes"
-msgstr "कस्टम योजनाएँ प्रबंधित करें"
-
-#: lib/preferences/preferences.ui:2737
-msgctxt "Preferences|"
-msgid "Languages"
-msgstr "बोली"
-
-#: lib/preferences/preferences.ui:2759
-msgctxt "Preferences|"
-msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>वेब साइटों के लिए पसंदीदा भाषा</b>"
-
-#: lib/preferences/preferences.ui:2784
+#: lib/preferences/preferences.ui:2755
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "प्रमाणपत्र अपवाद प्रबंधक"
 
-#: lib/preferences/preferences.ui:2806
-msgctxt "Preferences|"
-msgid "<b>Change browser identification</b>"
-msgstr "<b>ब्राउज़र पहचान बदलें</b>"
-
-#: lib/preferences/preferences.ui:2831
+#: lib/preferences/preferences.ui:2795
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "उपयोगकर्ता एजेंट प्रबंधक"
 
-#: lib/preferences/preferences.ui:2853
+#: lib/preferences/preferences.ui:2830
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "स्टाइल शीट स्वचालित रूप से सभी वेबसाइटों के साथ लोड हो जाती है:"
 
-#: lib/preferences/preferences.ui:2890
+#: lib/preferences/preferences.ui:2855
 msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>प्रोटोकॉल हैंडलर्स प्रबंधित करें</b>"
+msgid "Custom Scheme Manager"
+msgstr "कस्टम योजना प्रबंधक"
 
-#: lib/preferences/preferences.ui:2897
+#: lib/preferences/preferences.ui:2895
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "खोज इंजन प्रबंधक"
+
+#: lib/preferences/preferences.ui:2935
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "बोली"
+
+#: lib/preferences/preferences.ui:2970
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>प्रमाणपत्र प्रबंधक</b>"
 
-#: lib/preferences/preferences.ui:2948
+#: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
-msgid "Custom Scheme Manager"
-msgstr "कस्टम योजना प्रबंधक"
+msgid "Auto Open protocols"
+msgstr ""
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
@@ -5922,7 +5996,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "अतिरिक्त संवाद बनाने से इस पेज़ को रोकें"
 
-#: lib/webengine/webpage.cpp:335
+#: lib/webengine/webpage.cpp:332
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5932,54 +6006,54 @@ msgstr ""
 "फ़ॉकन <b>%1:</b> लिंक को संभाल नहीं सकता। अनुरोधित लिंक है<ul><li> %2</li></ul> क्या "
 "आप चाहते हैं कि फॉकन इस लिंक को सिस्टम अनुप्रयोग में खोलने का प्रयास करे?"
 
-#: lib/webengine/webpage.cpp:340
+#: lib/webengine/webpage.cpp:337
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "इस प्रोटोकॉल के लिए मेरी पसंद याद रखें"
 
-#: lib/webengine/webpage.cpp:341
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "बाह्य प्रोटोकॉल अनुरोध"
 
-#: lib/webengine/webpage.cpp:421 lib/webengine/webpage.cpp:422
+#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "पेज लोड करने में विफल"
 
-#: lib/webengine/webpage.cpp:423
+#: lib/webengine/webpage.cpp:418
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "इस पृष्ठ को लोड करते समय कुछ गड़बड़ी हुई."
 
-#: lib/webengine/webpage.cpp:424
+#: lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr ""
 "अधिक मेमोरी उपलब्ध कराने के लिए पृष्ठ को पुनः लोड करने या कुछ टैब बंद करने का प्रयास करें।"
 
-#: lib/webengine/webpage.cpp:425
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "पृष्ठ पुनः लोड करें"
 
-#: lib/webengine/webpage.cpp:586
+#: lib/webengine/webpage.cpp:595
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "फाइलें चुनें..."
 
-#: lib/webengine/webpage.cpp:590
+#: lib/webengine/webpage.cpp:599
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "फ़ाइलें चुनें..."
 
-#: lib/webengine/webpage.cpp:726
+#: lib/webengine/webpage.cpp:735
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "जावास्क्रिप्ट चेतावनी"
 
-#: lib/webengine/webpage.cpp:735
+#: lib/webengine/webpage.cpp:744
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "अतिरिक्त संवाद बनाने से इस पेज़ को रोकें"

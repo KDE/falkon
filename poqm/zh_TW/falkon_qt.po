@@ -3884,6 +3884,82 @@ msgctxt "AutoFillManager|"
 msgid "Exceptions"
 msgstr "例外"
 
+#: lib/preferences/autoopenprotocolsdialog.cpp:78
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Add allowed scheme"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add allowed scheme"
+msgstr "新增允許的方案"
+
+#: lib/preferences/autoopenprotocolsdialog.cpp:78
+#: lib/preferences/autoopenprotocolsdialog.cpp:101
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Scheme:"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Scheme:"
+msgstr "方案："
+
+#: lib/preferences/autoopenprotocolsdialog.cpp:101
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Add blocked scheme"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add blocked scheme"
+msgstr "新增阻擋的方案"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:14
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Auto-Open Protocols"
+msgstr ""
+
+#: lib/preferences/autoopenprotocolsdialog.ui:20
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid ""
+#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
+#| "Background Colors</span></p></body></html>"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
+"p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">網頁背景色</span></"
+"p></body></html>"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:34
+#: lib/preferences/autoopenprotocolsdialog.ui:79
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add"
+msgstr "新增"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:41
+#: lib/preferences/autoopenprotocolsdialog.ui:86
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Remove"
+msgstr "移除"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:65
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid ""
+#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
+#| "Background Colors</span></p></body></html>"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
+"body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">網頁背景色</span></"
+"p></body></html>"
+
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
@@ -3998,103 +4074,103 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "確定移除「%1」？"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:671
+#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:673
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "預設"
 
-#: lib/preferences/preferences.cpp:159
+#: lib/preferences/preferences.cpp:160
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "設定為預設"
 
-#: lib/preferences/preferences.cpp:328
+#: lib/preferences/preferences.cpp:329
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "自動"
 
-#: lib/preferences/preferences.cpp:330
+#: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Light"
 msgstr "亮色"
 
-#: lib/preferences/preferences.cpp:331
+#: lib/preferences/preferences.cpp:332
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr "暗色"
 
-#: lib/preferences/preferences.cpp:341
+#: lib/preferences/preferences.cpp:342
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:614
+#: lib/preferences/preferences.cpp:616
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "選擇可執行檔位置…"
 
-#: lib/preferences/preferences.cpp:657
+#: lib/preferences/preferences.cpp:659
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD 通知"
 
-#: lib/preferences/preferences.cpp:658
+#: lib/preferences/preferences.cpp:660
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "在螢幕上拖曳它到您想要的位置。"
 
-#: lib/preferences/preferences.cpp:707
+#: lib/preferences/preferences.cpp:709
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "選擇下載位置…"
 
-#: lib/preferences/preferences.cpp:721
+#: lib/preferences/preferences.cpp:723
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "選擇樣式表位置…"
 
-#: lib/preferences/preferences.cpp:732
+#: lib/preferences/preferences.cpp:734
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "已刪除"
 
-#: lib/preferences/preferences.cpp:834
+#: lib/preferences/preferences.cpp:842
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "選擇快取路徑…"
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:873
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "新增個人設定"
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:873
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "輸入新的個人設定名稱："
 
-#: lib/preferences/preferences.cpp:875 lib/preferences/preferences.cpp:880
+#: lib/preferences/preferences.cpp:883 lib/preferences/preferences.cpp:888
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "錯誤！"
 
-#: lib/preferences/preferences.cpp:875
+#: lib/preferences/preferences.cpp:883
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "此個人設定已存在！"
 
-#: lib/preferences/preferences.cpp:880
+#: lib/preferences/preferences.cpp:888
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "無法建立個人設定目錄！"
 
-#: lib/preferences/preferences.cpp:891
+#: lib/preferences/preferences.cpp:899
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "確認"
 
-#: lib/preferences/preferences.cpp:892
+#: lib/preferences/preferences.cpp:900
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4102,7 +4178,7 @@ msgid ""
 "cannot be undone!"
 msgstr "您確定要永久刪除「%1」設定檔嗎？這個動作無法還原！"
 
-#: lib/preferences/preferences.cpp:907 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:915 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "注意：您不能刪除正在運行的個人設定。"
@@ -4330,7 +4406,7 @@ msgstr "載入中的背景色："
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
 #: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
-#: lib/preferences/preferences.ui:2881
+#: lib/preferences/preferences.ui:2728
 msgctxt "Preferences|"
 msgid "..."
 msgstr "…"
@@ -5045,10 +5121,39 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "通訊協定處理程序管理員"
 
-#: lib/preferences/preferences.ui:2671
+#: lib/preferences/preferences.ui:2653
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid ""
+#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
+#| "Background Colors</span></p></body></html>"
 msgctxt "Preferences|"
-msgid "Search Engines Manager"
-msgstr "搜尋引擎管理員"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
+"protocols</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">網頁背景色</span></"
+"p></body></html>"
+
+#: lib/preferences/preferences.ui:2665
+msgctxt "Preferences|"
+msgid "Manage custom schemes"
+msgstr "管理自訂方案"
+
+#: lib/preferences/preferences.ui:2672
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>更換瀏覽器識別名稱</b>"
+
+#: lib/preferences/preferences.ui:2679
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>管理搜尋引擎</b>"
+
+#: lib/preferences/preferences.ui:2686
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>進入網站時偏好的語言</b>"
 
 #: lib/preferences/preferences.ui:2693
 msgctxt "Preferences|"
@@ -5057,58 +5162,48 @@ msgstr "<b>使用者樣式表</b>"
 
 #: lib/preferences/preferences.ui:2700
 msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "<b>管理搜尋引擎</b>"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>管理通訊協定處理程序</b>"
 
-#: lib/preferences/preferences.ui:2712
-msgctxt "Preferences|"
-msgid "Manage custom schemes"
-msgstr "管理自訂方案"
-
-#: lib/preferences/preferences.ui:2737
-msgctxt "Preferences|"
-msgid "Languages"
-msgstr "語言"
-
-#: lib/preferences/preferences.ui:2759
-msgctxt "Preferences|"
-msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>進入網站時偏好的語言</b>"
-
-#: lib/preferences/preferences.ui:2784
+#: lib/preferences/preferences.ui:2755
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "憑證例外管理員"
 
-#: lib/preferences/preferences.ui:2806
-msgctxt "Preferences|"
-msgid "<b>Change browser identification</b>"
-msgstr "<b>更換瀏覽器識別名稱</b>"
-
-#: lib/preferences/preferences.ui:2831
+#: lib/preferences/preferences.ui:2795
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "使用者代理管理員"
 
-#: lib/preferences/preferences.ui:2853
+#: lib/preferences/preferences.ui:2830
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "樣式表會自動在所有網頁中載入："
 
-#: lib/preferences/preferences.ui:2890
+#: lib/preferences/preferences.ui:2855
 msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>管理通訊協定處理程序</b>"
+msgid "Custom Scheme Manager"
+msgstr "自訂方案管理員"
 
-#: lib/preferences/preferences.ui:2897
+#: lib/preferences/preferences.ui:2895
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "搜尋引擎管理員"
+
+#: lib/preferences/preferences.ui:2935
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "語言"
+
+#: lib/preferences/preferences.ui:2970
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>憑證管理員</b>"
 
-#: lib/preferences/preferences.ui:2948
+#: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
-msgid "Custom Scheme Manager"
-msgstr "自訂方案管理員"
+msgid "Auto Open protocols"
+msgstr ""
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
@@ -5942,7 +6037,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "防止此頁建立額外對話窗"
 
-#: lib/webengine/webpage.cpp:335
+#: lib/webengine/webpage.cpp:332
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5952,53 +6047,53 @@ msgstr ""
 "Falkon 無法處理 <b>%1:</b> 連結。請求的連結為 <ul><li>%2</li></ul>您想要讓 "
 "Falkon 以系統應用程式試著開啟此連結嗎？"
 
-#: lib/webengine/webpage.cpp:340
+#: lib/webengine/webpage.cpp:337
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "記住我對此協定的選擇"
 
-#: lib/webengine/webpage.cpp:341
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "外部協定請求"
 
-#: lib/webengine/webpage.cpp:421 lib/webengine/webpage.cpp:422
+#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "載入頁面失敗"
 
-#: lib/webengine/webpage.cpp:423
+#: lib/webengine/webpage.cpp:418
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "載入此頁面時發生了錯誤"
 
-#: lib/webengine/webpage.cpp:424
+#: lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr "嘗試重新整理頁面或關閉部份分頁以讓可用的記憶體更多。"
 
-#: lib/webengine/webpage.cpp:425
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "重新整理頁面"
 
-#: lib/webengine/webpage.cpp:586
+#: lib/webengine/webpage.cpp:595
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "選擇檔案…"
 
-#: lib/webengine/webpage.cpp:590
+#: lib/webengine/webpage.cpp:599
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "選擇檔案…"
 
-#: lib/webengine/webpage.cpp:726
+#: lib/webengine/webpage.cpp:735
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript 警告"
 
-#: lib/webengine/webpage.cpp:735
+#: lib/webengine/webpage.cpp:744
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "防止此頁建立額外的對話窗"

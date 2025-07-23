@@ -3863,6 +3863,82 @@ msgctxt "AutoFillManager|"
 msgid "Exceptions"
 msgstr "Изключения"
 
+#: lib/preferences/autoopenprotocolsdialog.cpp:78
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Add allowed scheme"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add allowed scheme"
+msgstr "Добавяне на разрешена схема"
+
+#: lib/preferences/autoopenprotocolsdialog.cpp:78
+#: lib/preferences/autoopenprotocolsdialog.cpp:101
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Scheme:"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Scheme:"
+msgstr "Схема:"
+
+#: lib/preferences/autoopenprotocolsdialog.cpp:101
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Add blocked scheme"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add blocked scheme"
+msgstr "Добавяне на забранена схема"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:14
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Auto-Open Protocols"
+msgstr ""
+
+#: lib/preferences/autoopenprotocolsdialog.ui:20
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid ""
+#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
+#| "Background Colors</span></p></body></html>"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
+"p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Цвят на фона на уеб "
+"страницата</span></p></body></html>"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:34
+#: lib/preferences/autoopenprotocolsdialog.ui:79
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add"
+msgstr "Добавяне"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:41
+#: lib/preferences/autoopenprotocolsdialog.ui:86
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Remove"
+msgstr "Премахване"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:65
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid ""
+#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
+#| "Background Colors</span></p></body></html>"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
+"body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Цвят на фона на уеб "
+"страницата</span></p></body></html>"
+
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
@@ -3978,103 +4054,103 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Наистина ли искате да премахнете  „%1“?"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:671
+#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:673
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "По подразбиране"
 
-#: lib/preferences/preferences.cpp:159
+#: lib/preferences/preferences.cpp:160
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Задаване по подразбиране"
 
-#: lib/preferences/preferences.cpp:328
+#: lib/preferences/preferences.cpp:329
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Автоматично"
 
-#: lib/preferences/preferences.cpp:330
+#: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Light"
 msgstr "Светъл"
 
-#: lib/preferences/preferences.cpp:331
+#: lib/preferences/preferences.cpp:332
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr "Тъмен"
 
-#: lib/preferences/preferences.cpp:341
+#: lib/preferences/preferences.cpp:342
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:614
+#: lib/preferences/preferences.cpp:616
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Избиране на път до изпълним файл…"
 
-#: lib/preferences/preferences.cpp:657
+#: lib/preferences/preferences.cpp:659
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Екранни известия"
 
-#: lib/preferences/preferences.cpp:658
+#: lib/preferences/preferences.cpp:660
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Завлечете известието до мястото, където искате да го поставите."
 
-#: lib/preferences/preferences.cpp:707
+#: lib/preferences/preferences.cpp:709
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Избиране на папка за изтегляния…"
 
-#: lib/preferences/preferences.cpp:721
+#: lib/preferences/preferences.cpp:723
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Избиране на местоположение на таблица със стилове…"
 
-#: lib/preferences/preferences.cpp:732
+#: lib/preferences/preferences.cpp:734
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Премахнато"
 
-#: lib/preferences/preferences.cpp:834
+#: lib/preferences/preferences.cpp:842
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Избиране на път за кеша…"
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:873
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Нов профил"
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:873
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Въведете име на новия профил:"
 
-#: lib/preferences/preferences.cpp:875 lib/preferences/preferences.cpp:880
+#: lib/preferences/preferences.cpp:883 lib/preferences/preferences.cpp:888
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Грешка!"
 
-#: lib/preferences/preferences.cpp:875
+#: lib/preferences/preferences.cpp:883
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Такъв профил вече съществува!"
 
-#: lib/preferences/preferences.cpp:880
+#: lib/preferences/preferences.cpp:888
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Невъзможно създаване папка за профил!"
 
-#: lib/preferences/preferences.cpp:891
+#: lib/preferences/preferences.cpp:899
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Потвърждение"
 
-#: lib/preferences/preferences.cpp:892
+#: lib/preferences/preferences.cpp:900
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4083,7 +4159,7 @@ msgid ""
 msgstr ""
 "Наистина ли искате да премахнете профил „%1“? Това действие е необратимо!"
 
-#: lib/preferences/preferences.cpp:907 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:915 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Забележка: Не може да премахнете активен профил."
@@ -4312,7 +4388,7 @@ msgstr "Цвят на фона по време на зареждане:"
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
 #: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
-#: lib/preferences/preferences.ui:2881
+#: lib/preferences/preferences.ui:2728
 msgctxt "Preferences|"
 msgid "..."
 msgstr "…"
@@ -5033,10 +5109,39 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Управление на манипулатори на протокол"
 
-#: lib/preferences/preferences.ui:2671
+#: lib/preferences/preferences.ui:2653
+#, fuzzy
+#| msgctxt "Preferences|"
+#| msgid ""
+#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
+#| "Background Colors</span></p></body></html>"
 msgctxt "Preferences|"
-msgid "Search Engines Manager"
-msgstr "Управление на търсачките"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
+"protocols</span></p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Цвят на фона на уеб "
+"страницата</span></p></body></html>"
+
+#: lib/preferences/preferences.ui:2665
+msgctxt "Preferences|"
+msgid "Manage custom schemes"
+msgstr "Управление на персонализирани схеми"
+
+#: lib/preferences/preferences.ui:2672
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>Настройки на идентификация на браузера</b>"
+
+#: lib/preferences/preferences.ui:2679
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>Управление на търсачките</b>"
+
+#: lib/preferences/preferences.ui:2686
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>Предпочитан език за сайтовете</b>"
 
 #: lib/preferences/preferences.ui:2693
 msgctxt "Preferences|"
@@ -5045,58 +5150,48 @@ msgstr "<b>Потребителски таблици на стилове</b>"
 
 #: lib/preferences/preferences.ui:2700
 msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "<b>Управление на търсачките</b>"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>Управление на обработването на протоколи</b>"
 
-#: lib/preferences/preferences.ui:2712
-msgctxt "Preferences|"
-msgid "Manage custom schemes"
-msgstr "Управление на персонализирани схеми"
-
-#: lib/preferences/preferences.ui:2737
-msgctxt "Preferences|"
-msgid "Languages"
-msgstr "Езици"
-
-#: lib/preferences/preferences.ui:2759
-msgctxt "Preferences|"
-msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>Предпочитан език за сайтовете</b>"
-
-#: lib/preferences/preferences.ui:2784
+#: lib/preferences/preferences.ui:2755
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Управление на изключенията за сертификати"
 
-#: lib/preferences/preferences.ui:2806
-msgctxt "Preferences|"
-msgid "<b>Change browser identification</b>"
-msgstr "<b>Настройки на идентификация на браузера</b>"
-
-#: lib/preferences/preferences.ui:2831
+#: lib/preferences/preferences.ui:2795
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Управление на потребител"
 
-#: lib/preferences/preferences.ui:2853
+#: lib/preferences/preferences.ui:2830
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Таблица със стилове автоматично се зарежда с всички сайтове: "
 
-#: lib/preferences/preferences.ui:2890
+#: lib/preferences/preferences.ui:2855
 msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>Управление на обработването на протоколи</b>"
+msgid "Custom Scheme Manager"
+msgstr "Управление на персонални схеми"
 
-#: lib/preferences/preferences.ui:2897
+#: lib/preferences/preferences.ui:2895
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "Управление на търсачките"
+
+#: lib/preferences/preferences.ui:2935
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "Езици"
+
+#: lib/preferences/preferences.ui:2970
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Управление на сертификати</b>"
 
-#: lib/preferences/preferences.ui:2948
+#: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
-msgid "Custom Scheme Manager"
-msgstr "Управление на персонални схеми"
+msgid "Auto Open protocols"
+msgstr ""
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
@@ -5931,7 +6026,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Забраняване на страницата да създава допълнителни диалози"
 
-#: lib/webengine/webpage.cpp:335
+#: lib/webengine/webpage.cpp:332
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5942,27 +6037,27 @@ msgstr ""
 "%2</li></ul>Искате ли  Falkon да опита да отвори връзката с друго приложение "
 "в системата?"
 
-#: lib/webengine/webpage.cpp:340
+#: lib/webengine/webpage.cpp:337
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Запаметяване на избора на протокол"
 
-#: lib/webengine/webpage.cpp:341
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Запитване външен протокол"
 
-#: lib/webengine/webpage.cpp:421 lib/webengine/webpage.cpp:422
+#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Страницата е невъзможно да се зареди"
 
-#: lib/webengine/webpage.cpp:423
+#: lib/webengine/webpage.cpp:418
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Нещо се обърка при зареждането на тази страница."
 
-#: lib/webengine/webpage.cpp:424
+#: lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -5970,27 +6065,27 @@ msgstr ""
 "Пробвайте да презаредите страницата или да затворите няколко раздела, за да "
 "освободите повече памет."
 
-#: lib/webengine/webpage.cpp:425
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Обновяване на страница"
 
-#: lib/webengine/webpage.cpp:586
+#: lib/webengine/webpage.cpp:595
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Избиране на файл…"
 
-#: lib/webengine/webpage.cpp:590
+#: lib/webengine/webpage.cpp:599
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Избиране файлове…"
 
-#: lib/webengine/webpage.cpp:726
+#: lib/webengine/webpage.cpp:735
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Предупреждение от JavaScript"
 
-#: lib/webengine/webpage.cpp:735
+#: lib/webengine/webpage.cpp:744
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Забраняване на страницата да създава допълнителни диалози"

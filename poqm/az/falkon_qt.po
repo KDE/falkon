@@ -3857,6 +3857,68 @@ msgctxt "AutoFillManager|"
 msgid "Exceptions"
 msgstr "İstisnalar"
 
+#: lib/preferences/autoopenprotocolsdialog.cpp:78
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Add allowed scheme"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add allowed scheme"
+msgstr "İcazə verilən sxem əlavə edin"
+
+#: lib/preferences/autoopenprotocolsdialog.cpp:78
+#: lib/preferences/autoopenprotocolsdialog.cpp:101
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Scheme:"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Scheme:"
+msgstr "Sxem:"
+
+#: lib/preferences/autoopenprotocolsdialog.cpp:101
+#, fuzzy
+#| msgctxt "SchemeManager|"
+#| msgid "Add blocked scheme"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add blocked scheme"
+msgstr "Əngəllənmiş sxem əlavə edin"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:14
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Auto-Open Protocols"
+msgstr ""
+
+#: lib/preferences/autoopenprotocolsdialog.ui:20
+msgctxt "AutoOpenProtocolsDialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
+"p></body></html>"
+msgstr ""
+
+#: lib/preferences/autoopenprotocolsdialog.ui:34
+#: lib/preferences/autoopenprotocolsdialog.ui:79
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Add"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Add"
+msgstr "Əlavə etmək"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:41
+#: lib/preferences/autoopenprotocolsdialog.ui:86
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "AutoOpenProtocolsDialog|"
+msgid "Remove"
+msgstr "Silmək"
+
+#: lib/preferences/autoopenprotocolsdialog.ui:65
+msgctxt "AutoOpenProtocolsDialog|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
+"body></html>"
+msgstr ""
+
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
@@ -3971,17 +4033,17 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "\"%1\" silmək istədiyinizə əminsiniz?"
 
-#: lib/preferences/preferences.cpp:155 lib/preferences/preferences.cpp:671
+#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:673
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Standart"
 
-#: lib/preferences/preferences.cpp:159
+#: lib/preferences/preferences.cpp:160
 msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Standart olaraq təyin etmək"
 
-#: lib/preferences/preferences.cpp:328
+#: lib/preferences/preferences.cpp:329
 #, fuzzy
 #| msgctxt "FalkonSchemeReply|"
 #| msgid "Auto"
@@ -3989,88 +4051,88 @@ msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Avtomatik"
 
-#: lib/preferences/preferences.cpp:330
+#: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Light"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:331
+#: lib/preferences/preferences.cpp:332
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:341
+#: lib/preferences/preferences.cpp:342
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:614
+#: lib/preferences/preferences.cpp:616
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "İcra faylı üçün yer seçin..."
 
-#: lib/preferences/preferences.cpp:657
+#: lib/preferences/preferences.cpp:659
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD Bildirişləri"
 
-#: lib/preferences/preferences.cpp:658
+#: lib/preferences/preferences.cpp:660
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "İstədiyiniz yerə qoymaq üçün tutaraq ekranda sürüşdürün."
 
-#: lib/preferences/preferences.cpp:707
+#: lib/preferences/preferences.cpp:709
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Yükləmə yerini seçin..."
 
-#: lib/preferences/preferences.cpp:721
+#: lib/preferences/preferences.cpp:723
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "TərzlərCədvəl yerini seçin..."
 
-#: lib/preferences/preferences.cpp:732
+#: lib/preferences/preferences.cpp:734
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Silindi"
 
-#: lib/preferences/preferences.cpp:834
+#: lib/preferences/preferences.cpp:842
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Keş yolunu seçin..."
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:873
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Yeni profil"
 
-#: lib/preferences/preferences.cpp:865
+#: lib/preferences/preferences.cpp:873
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Yeni profil adı daxil edin:"
 
-#: lib/preferences/preferences.cpp:875 lib/preferences/preferences.cpp:880
+#: lib/preferences/preferences.cpp:883 lib/preferences/preferences.cpp:888
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Xəta!"
 
-#: lib/preferences/preferences.cpp:875
+#: lib/preferences/preferences.cpp:883
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Bu profil artıq mövcuddur!"
 
-#: lib/preferences/preferences.cpp:880
+#: lib/preferences/preferences.cpp:888
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Profil qovluğu yaradıla bilmir!"
 
-#: lib/preferences/preferences.cpp:891
+#: lib/preferences/preferences.cpp:899
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Təsdiqləmə"
 
-#: lib/preferences/preferences.cpp:892
+#: lib/preferences/preferences.cpp:900
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4080,7 +4142,7 @@ msgstr ""
 "\"%1\" profilini birdəfəlik silmək istədiyinizə əminsiniz? Bu əməliyyat ləğv "
 "edilə bilməz!"
 
-#: lib/preferences/preferences.cpp:907 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:915 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Qeyd: Aktiv profili silə bilməzsiniz."
@@ -4305,7 +4367,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
 #: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
-#: lib/preferences/preferences.ui:2881
+#: lib/preferences/preferences.ui:2728
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
@@ -5028,10 +5090,32 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Protokolların İşlənməsi Meneceri"
 
-#: lib/preferences/preferences.ui:2671
+#: lib/preferences/preferences.ui:2653
 msgctxt "Preferences|"
-msgid "Search Engines Manager"
-msgstr "Axtarış Vasitələri Meneceri"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
+"protocols</span></p></body></html>"
+msgstr ""
+
+#: lib/preferences/preferences.ui:2665
+msgctxt "Preferences|"
+msgid "Manage custom schemes"
+msgstr "Xüsusi sxemlərin idarə edilməsi"
+
+#: lib/preferences/preferences.ui:2672
+msgctxt "Preferences|"
+msgid "<b>Change browser identification</b>"
+msgstr "<b>Veb-Bələdçi İdentifikasiyası Seçimlər</b>"
+
+#: lib/preferences/preferences.ui:2679
+msgctxt "Preferences|"
+msgid "<b>Manage search engines</b>"
+msgstr "<b>Axtarış Vasitələrinin İdarə Edilməsi</b>"
+
+#: lib/preferences/preferences.ui:2686
+msgctxt "Preferences|"
+msgid "<b>Preferred language for web sites</b>"
+msgstr "<b>Veb sayt üçün üstünlük verilən dil</b>"
 
 #: lib/preferences/preferences.ui:2693
 msgctxt "Preferences|"
@@ -5040,58 +5124,48 @@ msgstr "<b>İstifadəçi Tərzi</b>"
 
 #: lib/preferences/preferences.ui:2700
 msgctxt "Preferences|"
-msgid "<b>Manage search engines</b>"
-msgstr "<b>Axtarış Vasitələrinin İdarə Edilməsi</b>"
+msgid "<b>Manage protocol handlers</b>"
+msgstr "<b>Protokol işləyicilərini idarə etmək</b>"
 
-#: lib/preferences/preferences.ui:2712
-msgctxt "Preferences|"
-msgid "Manage custom schemes"
-msgstr "Xüsusi sxemlərin idarə edilməsi"
-
-#: lib/preferences/preferences.ui:2737
-msgctxt "Preferences|"
-msgid "Languages"
-msgstr "Dillər"
-
-#: lib/preferences/preferences.ui:2759
-msgctxt "Preferences|"
-msgid "<b>Preferred language for web sites</b>"
-msgstr "<b>Veb sayt üçün üstünlük verilən dil</b>"
-
-#: lib/preferences/preferences.ui:2784
+#: lib/preferences/preferences.ui:2755
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Sertifikat istisnası meneceri"
 
-#: lib/preferences/preferences.ui:2806
-msgctxt "Preferences|"
-msgid "<b>Change browser identification</b>"
-msgstr "<b>Veb-Bələdçi İdentifikasiyası Seçimlər</b>"
-
-#: lib/preferences/preferences.ui:2831
+#: lib/preferences/preferences.ui:2795
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "İstifadəçi Agenti Meneceri"
 
-#: lib/preferences/preferences.ui:2853
+#: lib/preferences/preferences.ui:2830
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Bütün saytlar üçün avtomatik yüklənəcək Tərzlər Cədvəli:"
 
-#: lib/preferences/preferences.ui:2890
+#: lib/preferences/preferences.ui:2855
 msgctxt "Preferences|"
-msgid "<b>Manage protocol handlers</b>"
-msgstr "<b>Protokol işləyicilərini idarə etmək</b>"
+msgid "Custom Scheme Manager"
+msgstr "Xüsusi sxemlərin idarəedicisi"
 
-#: lib/preferences/preferences.ui:2897
+#: lib/preferences/preferences.ui:2895
+msgctxt "Preferences|"
+msgid "Search Engines Manager"
+msgstr "Axtarış Vasitələri Meneceri"
+
+#: lib/preferences/preferences.ui:2935
+msgctxt "Preferences|"
+msgid "Languages"
+msgstr "Dillər"
+
+#: lib/preferences/preferences.ui:2970
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Sertifikat meneceri</b>"
 
-#: lib/preferences/preferences.ui:2948
+#: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
-msgid "Custom Scheme Manager"
-msgstr "Xüsusi sxemlərin idarəedicisi"
+msgid "Auto Open protocols"
+msgstr ""
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
@@ -5931,7 +6005,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Bu saytın əlavə informasiya qutuları yaratmasını əngəlləmək"
 
-#: lib/webengine/webpage.cpp:335
+#: lib/webengine/webpage.cpp:332
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -5941,27 +6015,27 @@ msgstr ""
 "Falkon <b>%1:</b> keçidlərini təhlil edə bilmir. Tələb olunan keçid <ul><li>"
 "%2</li></ul>Falkonun bu keçidi sistem proqram ilə açmasını istəyirsiniz?"
 
-#: lib/webengine/webpage.cpp:340
+#: lib/webengine/webpage.cpp:337
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Bu protokol üçün seçimimi yadda saxlamaq"
 
-#: lib/webengine/webpage.cpp:341
+#: lib/webengine/webpage.cpp:338
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Xarici Protokol Tələbi"
 
-#: lib/webengine/webpage.cpp:421 lib/webengine/webpage.cpp:422
+#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Səhifənin yüklənməsi alınmadı"
 
-#: lib/webengine/webpage.cpp:423
+#: lib/webengine/webpage.cpp:418
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Bu səhifə yüklənən zaman hansısa xəta baş verdi."
 
-#: lib/webengine/webpage.cpp:424
+#: lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -5969,27 +6043,27 @@ msgstr ""
 "Səhifəni yeniləməyə cəhd edin və ya daha çox yaddaş əldə etmək üçün bəzi "
 "vərəqləri bağlayın."
 
-#: lib/webengine/webpage.cpp:425
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Yenidən yükləmək"
 
-#: lib/webengine/webpage.cpp:586
+#: lib/webengine/webpage.cpp:595
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Fayl seçmək..."
 
-#: lib/webengine/webpage.cpp:590
+#: lib/webengine/webpage.cpp:599
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Fayllar seçmək..."
 
-#: lib/webengine/webpage.cpp:726
+#: lib/webengine/webpage.cpp:735
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript xəbərdarlığı"
 
-#: lib/webengine/webpage.cpp:735
+#: lib/webengine/webpage.cpp:744
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Bu saytın əlavə informasiya qutuları yaratmasını əngəlləmək"
