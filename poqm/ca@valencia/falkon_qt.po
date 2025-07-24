@@ -9,13 +9,13 @@
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016, 2017.
 # David Medina <rbndavid@gmail.com>, 2017.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019, 2020, 2021, 2023.
-# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2025-06-11 08:01+0200\n"
+"PO-Revision-Date: 2025-07-23 11:12+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 "X-Language: ca-valencia\n"
 "X-Qt-Contexts: true\n"
 
@@ -3875,26 +3875,17 @@ msgid "Exceptions"
 msgstr "Excepcions"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add allowed scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add allowed scheme"
 msgstr "Afig un esquema de permesos"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Scheme:"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Scheme:"
 msgstr "Esquema:"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add blocked scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add blocked scheme"
 msgstr "Afig un esquema de bloquejos"
@@ -3902,53 +3893,37 @@ msgstr "Afig un esquema de bloquejos"
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr ""
+msgstr "Protocols d'obertura automàtica"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Colors de fons de la "
-"pàgina web</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Obri automàticament</"
+"span></p></body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "Afig"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
 msgstr "Elimina"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:65
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Colors de fons de la "
-"pàgina web</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Bloquejat</span></"
+"p></body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -5121,18 +5096,13 @@ msgid "Protocol Handlers Manager"
 msgstr "Gestor dels controladors de protocol"
 
 #: lib/preferences/preferences.ui:2653
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Colors de fons de la "
-"pàgina web</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Gestiona els "
+"protocols d'obertura automàtica</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2665
 msgctxt "Preferences|"
@@ -5202,7 +5172,7 @@ msgstr "<b>Gestor de certificats</b>"
 #: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr ""
+msgstr "Protocols d'obertura automàtica"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
