@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-05 00:16+0000\n"
-"PO-Revision-Date: 2025-06-29 09:04+0300\n"
+"PO-Revision-Date: 2025-07-24 20:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -3861,26 +3861,17 @@ msgid "Exceptions"
 msgstr "Dışarıda Tutulanlar"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add allowed scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add allowed scheme"
 msgstr "İzin verilen şema ekle"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Scheme:"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Scheme:"
 msgstr "Şema:"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add blocked scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add blocked scheme"
 msgstr "Engellenen şema ekle"
@@ -3888,53 +3879,37 @@ msgstr "Engellenen şema ekle"
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr ""
+msgstr "Protokolleri Kendiliğinden Aç"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Web Sayfası Arka "
-"Plan Renkleri</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Kendiliğinden Aç</"
+"span></p></body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "Ekle"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
 msgstr "Kaldır"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:65
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Web Sayfası Arka "
-"Plan Renkleri</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Engelli</span></p></"
+"body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -5106,18 +5081,13 @@ msgid "Protocol Handlers Manager"
 msgstr "Protokol İşleyicileri Yöneticisi"
 
 #: lib/preferences/preferences.ui:2653
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Web Sayfası Arka "
-"Plan Renkleri</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Kendiliğinden Açılan "
+"Protokolleri Yönet</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2665
 msgctxt "Preferences|"
@@ -5187,7 +5157,7 @@ msgstr "<b>Sertifika yöneticisi</b>"
 #: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr ""
+msgstr "Protokolleri kendiliğinden aç"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
