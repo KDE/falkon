@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-07-13 20:36+0200\n"
+"PO-Revision-Date: 2025-07-31 22:30+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -3861,26 +3861,17 @@ msgid "Exceptions"
 msgstr "Kivételek"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add allowed scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add allowed scheme"
 msgstr "Engedélyezett séma hozzáadása"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Scheme:"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Scheme:"
 msgstr "Séma:"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add blocked scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add blocked scheme"
 msgstr "Tiltott séma hozzáadása"
@@ -3888,53 +3879,37 @@ msgstr "Tiltott séma hozzáadása"
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr ""
+msgstr "Automatikus megnyitási protokollok"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Weboldalak "
-"háttérszínei</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Automatikus "
+"megnyitás</span></p></body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "Hozzáadás"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
 msgstr "Eltávolítás"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:65
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Weboldalak "
-"háttérszínei</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Tiltva</span></p></"
+"body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -5106,18 +5081,13 @@ msgid "Protocol Handlers Manager"
 msgstr "Protokollkezelő-kezelő"
 
 #: lib/preferences/preferences.ui:2653
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Weboldalak "
-"háttérszínei</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Automatikus "
+"megnyitási protokollok kezelése</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2665
 msgctxt "Preferences|"
@@ -5187,7 +5157,7 @@ msgstr "<b>Tanúsítványkezelő</b>"
 #: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr ""
+msgstr "Automatikus megnyitási protokollok"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
