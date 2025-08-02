@@ -1,4 +1,5 @@
 Version 25.08.0
+    * Add permission management for unknown protocols (BUG: 425785)
     * Fix build issues with Qt6 and add CI build for MS Windows (By Thomas Friedrichsmeier)
     * DownloadManager: Fix small quick download keeping a download running forever
     * Mark appId with current profile name (BUG: 439190)
