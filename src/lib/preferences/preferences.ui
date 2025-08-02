@@ -160,7 +160,7 @@
         <x>0</x>
         <y>0</y>
         <width>783</width>
-        <height>727</height>
+        <height>763</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -1206,6 +1206,13 @@
                   <widget class="QCheckBox" name="forceDarkMode">
                    <property name="text">
                     <string>Force dark mode</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="touchEventsApiEnabled">
+                   <property name="text">
+                    <string>Touch Events Api Enabled</string>
                    </property>
                   </widget>
                  </item>
@@ -2568,7 +2575,7 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>76</width>
+                <width>98</width>
                 <height>31</height>
                </rect>
               </property>

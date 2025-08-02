@@ -323,6 +323,11 @@ Preferences::Preferences(BrowserWindow* window)
 #else
     ui->forceDarkMode->hide();
 #endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+    ui->touchEventsApiEnabled->setChecked(settings.value(QSL("TouchEventsApiEnabled"), false).toBool());
+#else
+    ui->touchEventsApiEnabled->hide();
+#endif
 
     int prefferColorSchemeSetting = settings.value(QSL("prefferColorScheme"), Qz::ColorScheme_Auto).toInt();
 #if QTGUI_VERSION >= QT_VERSION_CHECK(6, 5, 0)
@@ -1053,6 +1058,9 @@ void Preferences::saveSettings()
 #endif
 #if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
     settings.setValue(QSL("forceDarkMode"), ui->forceDarkMode->isChecked());
+#endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+    settings.setValue(QSL("TouchEventsApiEnabled"), ui->touchEventsApiEnabled->isChecked());
 #endif
     settings.setValue(QSL("prefferColorScheme"), ui->prefferColorScheme->currentData().toInt());
 #ifdef Q_OS_WIN
