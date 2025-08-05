@@ -8,12 +8,13 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2019, 2020.
 # Geraldo Simiao <geraldosimiao@fedoraproject.org>, 2023.
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
+# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"PO-Revision-Date: 2025-02-27 20:27-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"PO-Revision-Date: 2025-08-04 09:40-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: pt_BR\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -225,7 +226,7 @@ msgstr "Filtros personalizados"
 #, qt-format
 msgctxt "AdBlockTreeModel|"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: lib/adblock/adblocktreewidget.cpp:88
 msgctxt "AdBlockTreeWidget|"
@@ -1587,28 +1588,22 @@ msgid "Unknown speed"
 msgstr "Velocidade desconhecida"
 
 #: lib/downloads/downloaditem.cpp:223
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "kB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
-msgstr "kB/s"
+msgstr "%1 kB/s"
 
 #: lib/downloads/downloaditem.cpp:228
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "MB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
-msgstr "MB/s"
+msgstr "%1 MB/s"
 
 #: lib/downloads/downloaditem.cpp:232
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "GB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
-msgstr "GB/s"
+msgstr "%1 GB/s"
 
 #: lib/downloads/downloaditem.cpp:260
 msgctxt "DownloadItem|"
@@ -2248,18 +2243,14 @@ msgid "SSL Certificate Error!"
 msgstr "Erro de certificado SSL!"
 
 #: lib/network/networkmanager.cpp:92
-#, fuzzy, qt-format
-#| msgctxt "NetworkManager|"
-#| msgid ""
-#| "The page you are trying to access has the following errors in the SSL "
-#| "certificate:"
+#, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
 msgstr ""
-"A página que está a tentar acessar apresenta os seguintes erros no "
-"certificado SSL:"
+"A página <strong>%1</strong> que você está tentando acessar apresenta os "
+"seguintes erros no certificado SSL:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -2310,73 +2301,76 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"O certificado não corresponde às chaves públicas internas fixadas para o "
+"nome do host."
 
 #: lib/network/networkmanager.cpp:347
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "O nome comum do certificado não corresponde ao nome do host."
 
 #: lib/network/networkmanager.cpp:349
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "O certificado não é válido na data e hora atuais."
 
 #: lib/network/networkmanager.cpp:351
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "O certificado não é assinado por uma autoridade confiável."
 
 #: lib/network/networkmanager.cpp:353
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "O certificado contém erros."
 
 #: lib/network/networkmanager.cpp:355
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
 msgstr ""
+"O certificado não tem nenhum mecanismo para determinar se foi revogado."
 
 #: lib/network/networkmanager.cpp:357
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "As informações de revogação do certificado não estão disponíveis."
 
 #: lib/network/networkmanager.cpp:359
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "O certificado foi revogado."
 
 #: lib/network/networkmanager.cpp:361
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "O certificado é inválido."
 
 #: lib/network/networkmanager.cpp:363
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "O certificado foi assinado usando um algoritmo de assinatura fraco."
 
 #: lib/network/networkmanager.cpp:365
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "O nome do host especificado no certificado não é exclusivo."
 
 #: lib/network/networkmanager.cpp:367
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "O certificado contém uma chave fraca."
 
 #: lib/network/networkmanager.cpp:369
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
-msgstr ""
+msgstr "O certificado reivindicou nomes DNS que violam restrições de nome."
 
 #: lib/network/networkmanager.cpp:371
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "O certificado tem um período de validade muito longo."
 
 #: lib/network/networkmanager.cpp:373
 msgctxt "NetworkManager|"
@@ -2384,6 +2378,9 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"A Transparência do Certificado era necessária para esta conexão, mas o "
+"servidor não forneceu informações de CT que estivessem em conformidade com a "
+"política."
 
 #: lib/network/networkmanager.cpp:375
 msgctxt "NetworkManager|"
@@ -2391,24 +2388,24 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Sabe-se que o certificado é usado para interceptação por uma entidade "
+"diferente do proprietário do dispositivo."
 
 #: lib/network/networkmanager.cpp:377
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "A conexão usa uma versão obsoleta de SSL/TLS"
 
 #: lib/network/networkmanager.cpp:379
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr ""
+"O certificado é um certificado antigo da Symantec que não é mais válido."
 
 #: lib/network/networkmanager.cpp:382
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Tamanho desconhecido"
+msgstr "Erro desconhecido"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:157
 msgctxt "FalkonSchemeReply|"
@@ -2592,7 +2589,7 @@ msgstr "Centralizar acesso rápido"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:238
 msgctxt "FalkonSchemeReply|"
 msgid "Lock the position of SpeedDial entries."
-msgstr ""
+msgstr "Bloqueie a posição das entradas de Discagem Rápida."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:264
 msgctxt "FalkonSchemeReply|"
@@ -2806,7 +2803,7 @@ msgstr "Erro de certificado SSL!"
 #: lib/network/sslerrordialog.ui:90
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr ""
+msgstr "Alternar detalhes do certificado"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -3199,17 +3196,17 @@ msgstr "<b>Conexão criptografada.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Qualquer erro de certificado é <b>permanentemente</b> ignorado."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "O erro do certificado é <b>temporariamente</b> ignorado."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "O certificado foi rejeitado."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3287,12 +3284,9 @@ msgid "Media"
 msgstr "Média"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "Permissões do HTML5"
+msgstr "Permissões"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3340,9 +3334,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Visualização</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Padrão"
@@ -3350,20 +3341,14 @@ msgstr "Padrão"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Perguntar"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Permitir"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Proibir"
@@ -3377,17 +3362,17 @@ msgstr "<b>Site %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Qualquer erro de certificado é <b>permanentemente</b> ignorado."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "O erro do certificado é <b>temporariamente</b> ignorado."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "O certificado foi rejeitado."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
@@ -3442,185 +3427,122 @@ msgid "More..."
 msgstr "Mais..."
 
 #: lib/other/sitesettingsmanager.cpp:324
-#, fuzzy
-#| msgctxt "ZoomLabel|"
-#| msgid "Reset zoom level"
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Redefinir nível de zoom"
+msgstr "Nível de zoom"
 
 #: lib/other/sitesettingsmanager.cpp:326
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Cookies"
 
 #: lib/other/sitesettingsmanager.cpp:329 lib/other/sitesettingsmanager.cpp:354
 #: lib/other/sitesettingsmanager.cpp:394 lib/other/sitesettingsmanager.cpp:411
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Tamanho desconhecido"
+msgstr "Desconhecido"
 
 #: lib/other/sitesettingsmanager.cpp:337
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Notificações"
 
 #: lib/other/sitesettingsmanager.cpp:339
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Geolocalização"
 
 #: lib/other/sitesettingsmanager.cpp:341
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Microfone"
 
 #: lib/other/sitesettingsmanager.cpp:343
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Câmera"
 
 #: lib/other/sitesettingsmanager.cpp:345
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Microfone e câmera"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Esconder cursor"
+msgstr "Ocultar ponteiro do mouse"
 
 #: lib/other/sitesettingsmanager.cpp:349
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "Habilitar captura de tela"
+msgstr "Captura de tela"
 
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Captura de tela com áudio"
 
 #: lib/other/sitesettingsmanager.cpp:362
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Recarregar página"
+msgstr "Carregar imagens automaticamente"
 
 #: lib/other/sitesettingsmanager.cpp:365
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Permitir JavaScript"
+msgstr "Ativar JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Abra janelas pop-up"
+msgstr "JavaScript: Abrir janelas pop-up"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "acesse a área de transferência"
+msgstr "JavaScript:  Acessar a área de transferência"
 
 #: lib/other/sitesettingsmanager.cpp:371
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Colar da área de transferência"
+msgstr "JavaScript: Colar da área de transferência"
 
 #: lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Ativar janelas"
+msgstr "JavaScript: Ativar janelas"
 
 #: lib/other/sitesettingsmanager.cpp:376
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Armazenamento local"
 
 #: lib/other/sitesettingsmanager.cpp:378
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "Tela &cheia"
+msgstr "Suporte à tela cheia"
 
 #: lib/other/sitesettingsmanager.cpp:380
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Executar conteúdo inseguro"
 
 #: lib/other/sitesettingsmanager.cpp:382
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Desabilitar a reprodução automática de vídeos"
+msgstr "Reproduzir vídeos automaticamente"
 
 #: lib/other/sitesettingsmanager.cpp:385
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Permitir o armazenamento de cookies"
+msgstr "Permitir leitura da tela"
 
 #: lib/other/sitesettingsmanager.cpp:389
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Forçar modo escuro"
 
 #: lib/other/sitesettingsmanager.cpp:402
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Permitir"
@@ -3628,20 +3550,14 @@ msgstr "Permitir"
 #: lib/other/sitesettingsmanager.cpp:404
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Perguntar"
 
 #: lib/other/sitesettingsmanager.cpp:406
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Proibir"
 
 #: lib/other/sitesettingsmanager.cpp:408
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Padrão"
@@ -3961,26 +3877,17 @@ msgid "Exceptions"
 msgstr "Exceções"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add allowed scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add allowed scheme"
 msgstr "Adicionar esquema permitido"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Scheme:"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Scheme:"
 msgstr "Esquema:"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add blocked scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add blocked scheme"
 msgstr "Adicionar esquema bloqueado"
@@ -3988,7 +3895,7 @@ msgstr "Adicionar esquema bloqueado"
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr ""
+msgstr "Protocolos de abertura automática"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
 msgctxt "AutoOpenProtocolsDialog|"
@@ -3996,21 +3903,17 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Abrir "
+"Automaticamente</span></p></body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "Adicionar"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
 msgstr "Remover"
@@ -4021,6 +3924,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Bloqueado</span></"
+"p></body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -4148,9 +4053,6 @@ msgid "Set as default"
 msgstr "Definir como padrão"
 
 #: lib/preferences/preferences.cpp:329
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Automático"
@@ -4158,12 +4060,12 @@ msgstr "Automático"
 #: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Claro"
 
 #: lib/preferences/preferences.cpp:332
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Escuro"
 
 #: lib/preferences/preferences.cpp:342
 #, qt-format
@@ -4462,11 +4364,13 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Cores de fundo da "
+"página Web</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:584
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "Cor de fundo durante o carregamento:"
 
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
@@ -4479,7 +4383,7 @@ msgstr "..."
 #: lib/preferences/preferences.ui:598
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "Cor de fundo depois de carregado:"
 
 #: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
 #: lib/preferences/preferences.ui:1051
@@ -4525,7 +4429,7 @@ msgstr "Abrir pop-ups em abas"
 #: lib/preferences/preferences.ui:720
 msgctxt "Preferences|"
 msgid "Block automatic popups"
-msgstr ""
+msgstr "Bloquear automaticamente popups"
 
 #: lib/preferences/preferences.ui:727
 msgctxt "Preferences|"
@@ -4760,22 +4664,19 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Usar aceleração de hardware (requer reinicialização)"
 
 #: lib/preferences/preferences.ui:1201
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Permitir o armazenamento de cookies"
+msgstr "Permitir leitura da tela"
 
 #: lib/preferences/preferences.ui:1208
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Forçar modo escuro"
 
 #: lib/preferences/preferences.ui:1217
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Preferir esquema de cor:"
 
 #: lib/preferences/preferences.ui:1252
 msgctxt "Preferences|"
@@ -5113,12 +5014,9 @@ msgid "HTML5 Permissions"
 msgstr "Permissões do HTML5"
 
 #: lib/preferences/preferences.ui:2277
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Configurações"
+msgstr "Configurações do site"
 
 #: lib/preferences/preferences.ui:2309
 msgctxt "Preferences|"
@@ -5204,6 +5102,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Gerenciar protocolos "
+"de abertura automática</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2665
 msgctxt "Preferences|"
@@ -5273,7 +5173,7 @@ msgstr "<b>Gerenciador de certificados</b>"
 #: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr ""
+msgstr "Protocolos de abertura automática"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
@@ -5331,58 +5231,40 @@ msgid "Changes will take effect after Falkon restart."
 msgstr "As alterações terão efeito após reiniciar o Falkon."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Navegação"
+msgstr "Navegar"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:36
 #: lib/preferences/sitesettingsbrowsedialog.ui:99
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Perguntar"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:37
 #: lib/preferences/sitesettingsbrowsedialog.ui:106
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Permitir"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:38
 #: lib/preferences/sitesettingsbrowsedialog.ui:113
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Proibir"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:39
 #: lib/preferences/sitesettingsbrowsedialog.ui:120
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Padrão"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "Permissões do HTML5"
+msgstr "Permissões do site"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:22
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "Url:"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
 msgstr "URL:"
@@ -5390,36 +5272,27 @@ msgstr "URL:"
 #: lib/preferences/sitesettingsbrowsedialog.ui:32
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:51
 msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
-msgstr ""
+msgstr "Definir"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:68
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Site"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:73
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Comportamento"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Browsing"
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Navegação"
+msgstr "Navegar"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -6083,12 +5956,9 @@ msgid "Deny"
 msgstr "Proibir"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
-msgstr "Escolher cor"
+msgstr "Selecionar cor"
 
 #: lib/tools/qztools.cpp:379
 msgctxt "QObject|"
@@ -6099,19 +5969,19 @@ msgstr "Tamanho desconhecido"
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #: lib/tools/qztools.cpp:391
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #: lib/tools/qztools.cpp:395
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
