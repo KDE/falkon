@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-08-03 16:02+0400\n"
+"PO-Revision-Date: 2025-08-04 14:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -127,7 +127,7 @@ msgstr "ضبط آدبلوك"
 #: lib/adblock/adblockdialog.ui:20
 msgctxt "AdBlockDialog|"
 msgid "Enable AdBlock"
-msgstr "فعّل آدبلوك"
+msgstr "مكّن آدبلوك"
 
 #: lib/adblock/adblockdialog.ui:32
 msgctxt "AdBlockDialog|"
@@ -598,7 +598,7 @@ msgstr "&فاحص الوبّ"
 #: lib/app/mainmenu.cpp:582
 msgctxt "MainMenu|"
 msgid "Clear Recent &History"
-msgstr "ام&سح التأريخ الحديث"
+msgstr "ام&حُ التأريخ الحديث"
 
 #: lib/app/mainmenu.cpp:587
 msgctxt "MainMenu|"
@@ -2231,7 +2231,7 @@ msgstr "ابحث عندما أُغير المحرك"
 #: lib/navigation/zoomlabel.cpp:36
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr "صفر مستوى التكبير"
+msgstr "صفّر مستوى التكبير"
 
 #: lib/navigation/zoomlabel.cpp:61
 #, qt-format
@@ -2328,7 +2328,7 @@ msgstr "الشهادة تحتوي على أخطاء."
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
-msgstr "لا يوجد لدى الشهادة آلية لتحديد ما إذا تم إلغاؤها أم لا."
+msgstr "لا يوجد لدى الشهادة آليّة لتحديد ما إذا تم إلغاؤها أم لا."
 
 #: lib/network/networkmanager.cpp:357
 msgctxt "NetworkManager|"
@@ -2805,7 +2805,7 @@ msgstr "معاينة"
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "QObject|"
 msgid "Native System Notification"
-msgstr "تنبيه النظام الأصلي"
+msgstr "إشعارات النظام الأصلية"
 
 #: lib/opensearch/editsearchengine.ui:20
 msgctxt "EditSearchEngine|"
@@ -3433,7 +3433,7 @@ msgstr "مجهول"
 #: lib/other/sitesettingsmanager.cpp:337
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
-msgstr "التنبيهات"
+msgstr "الإشعارات"
 
 #: lib/other/sitesettingsmanager.cpp:339
 msgctxt "SiteSettingsManager|"
@@ -3473,7 +3473,7 @@ msgstr "التقاط الشاشة مع الصوت"
 #: lib/other/sitesettingsmanager.cpp:362
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "التحميل الآلي للصور"
+msgstr "التحميل الآليّ للصور"
 
 #: lib/other/sitesettingsmanager.cpp:365
 msgctxt "SiteSettingsManager|"
@@ -3518,7 +3518,7 @@ msgstr "تشغيل محتوى غير آمن"
 #: lib/other/sitesettingsmanager.cpp:382
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "التشغيل آلي للفيديوهات"
+msgstr "التشغيل آليّ للفيديوهات"
 
 #: lib/other/sitesettingsmanager.cpp:385
 msgctxt "SiteSettingsManager|"
@@ -3633,7 +3633,7 @@ msgstr "ب&عد"
 #: lib/popupwindow/popupwindow.cpp:110
 msgctxt "PopupWindow|"
 msgid "Reset"
-msgstr "صفر"
+msgstr "صفّر"
 
 #: lib/popupwindow/popupwindow.cpp:112
 msgctxt "PopupWindow|"
@@ -3882,7 +3882,7 @@ msgstr "أضف مخطط منع"
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr "موافيق الفتح الآلي"
+msgstr "موافيق الفتح الآليّ"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
 msgctxt "AutoOpenProtocolsDialog|"
@@ -3890,7 +3890,7 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">فتح آلي</span></p></"
+"<html><head/><body><p><span style=\" font-weight:700;\">فتح آليّ</span></p></"
 "body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
@@ -4067,7 +4067,7 @@ msgstr "اختر موقع البرنامج..."
 #: lib/preferences/preferences.cpp:659
 msgctxt "Preferences|"
 msgid "OSD Notification"
-msgstr "تنبيه OSD"
+msgstr "إشعار OSD"
 
 #: lib/preferences/preferences.cpp:660
 msgctxt "Preferences|"
@@ -4191,7 +4191,7 @@ msgstr "الخصوصية"
 #: lib/preferences/preferences.ui:112
 msgctxt "Preferences|"
 msgid "Notifications"
-msgstr "التنبيهات"
+msgstr "الإشعارات"
 
 #: lib/preferences/preferences.ui:117
 msgctxt "Preferences|"
@@ -4341,7 +4341,7 @@ msgstr "أظهر شريط التصفح عند البدء"
 #: lib/preferences/preferences.ui:553
 msgctxt "Preferences|"
 msgid "Enable instant Bookmarks ToolBar"
-msgstr "فعّل شريط أدوات العلامات الآني"
+msgstr "مكّن شريط أدوات العلامات الآني"
 
 #: lib/preferences/preferences.ui:562
 msgctxt "Preferences|"
@@ -4374,7 +4374,7 @@ msgstr "لون الخلفية عند التحميل:"
 #: lib/preferences/preferences.ui:1051
 msgctxt "Preferences|"
 msgid "Reset"
-msgstr "صفر"
+msgstr "صفّر"
 
 #: lib/preferences/preferences.ui:631
 msgctxt "Preferences|"
@@ -4414,7 +4414,7 @@ msgstr "افتح النوافذ المنبثقة في ألسنة"
 #: lib/preferences/preferences.ui:720
 msgctxt "Preferences|"
 msgid "Block automatic popups"
-msgstr "امنع المنبثقات الآلية"
+msgstr "امنع المنبثقات الآليّة"
 
 #: lib/preferences/preferences.ui:727
 msgctxt "Preferences|"
@@ -4534,7 +4534,7 @@ msgstr "اختر كل النص بالنقر المُفرد ضمن شريط ال�
 #: lib/preferences/preferences.ui:930
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
-msgstr "فعل البحث الآلي من شريط العنوان"
+msgstr "فعل البحث الآليّ من شريط العنوان"
 
 #: lib/preferences/preferences.ui:937
 msgctxt "Preferences|"
@@ -4631,7 +4631,7 @@ msgstr "استخدم أشرطة التمرير الأصيلة"
 #: lib/preferences/preferences.ui:1166
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
-msgstr "عطل التشغيل آلي للفيديوهات"
+msgstr "عطل التشغيل آليّ للفيديوهات"
 
 #: lib/preferences/preferences.ui:1173
 msgctxt "Preferences|"
@@ -4945,7 +4945,7 @@ msgstr "سيحل رابط التنزيل محل <b>%d</b>"
 #: lib/preferences/preferences.ui:2071
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
-msgstr "<b>خيارات الملء التلقائي</b>"
+msgstr "<b>خيارات الملء الآليّ</b>"
 
 #: lib/preferences/preferences.ui:2078
 msgctxt "Preferences|"
@@ -4955,7 +4955,7 @@ msgstr "اسمح بحفظ كلمات السر من المواقع"
 #: lib/preferences/preferences.ui:2129
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
-msgstr "يكمل كلمات السر في المواقع آليا"
+msgstr "يكمل كلمات السر في المواقع آليّا"
 
 #: lib/preferences/preferences.ui:2150
 msgctxt "Preferences|"
@@ -5021,29 +5021,29 @@ msgstr " ثا"
 #: lib/preferences/preferences.ui:2344
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
-msgstr "<b>التنبيهات</b>"
+msgstr "<b>الإشعارات</b>"
 
 #: lib/preferences/preferences.ui:2367
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
-msgstr "استخدم تنبيهات النظام الأصلية (في لينكس فقط)"
+msgstr "استخدم إشعارات النظام الأصلية (في لينكس فقط)"
 
 #: lib/preferences/preferences.ui:2374
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
-msgstr "لا تعرض التنبيهات"
+msgstr "لا تعرض الإشعارات"
 
 #: lib/preferences/preferences.ui:2397
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
 "the screen."
-msgstr "<b>ملاحظة: </b>بإمكانك تغيير موقع تنبيه OSD بتحريكه ضمن الشاشة."
+msgstr "<b>ملاحظة: </b>بإمكانك تغيير موقع إشعار OSD بتحريكه ضمن الشاشة."
 
 #: lib/preferences/preferences.ui:2423
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
-msgstr "استخدم تنبيهات OSD"
+msgstr "استخدم إشعارات OSD"
 
 #: lib/preferences/preferences.ui:2430
 msgctxt "Preferences|"
@@ -5067,7 +5067,7 @@ msgstr "<b>خيارات التدقيق الإملائي</b>"
 #: lib/preferences/preferences.ui:2544
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
-msgstr "فعّل التدقيق الإملائي"
+msgstr "مكّن التدقيق الإملائي"
 
 #: lib/preferences/preferences.ui:2551
 msgctxt "Preferences|"
@@ -5091,7 +5091,7 @@ msgid ""
 "protocols</span></p></body></html>"
 msgstr ""
 "<html><head/><body><p><span style=\" font-weight:700;\">أدر موافيق الفتح "
-"الآلي</span></p></body></html>"
+"الآليّ</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2665
 msgctxt "Preferences|"
@@ -5136,7 +5136,7 @@ msgstr "مُدير وكيل المستخدم"
 #: lib/preferences/preferences.ui:2830
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
-msgstr "ورقة أنماط تُحمل تلقائيّا لكل المواقع:"
+msgstr "ورقة أنماط تُحمل آليّا لكل المواقع:"
 
 #: lib/preferences/preferences.ui:2855
 msgctxt "Preferences|"
@@ -5161,7 +5161,7 @@ msgstr "<b>مدير الشّهادات</b>"
 #: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr "موافيق الفتح الآلي"
+msgstr "موافيق الفتح الآليّ"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
@@ -5883,7 +5883,7 @@ msgstr "هذا الموقع"
 #, qt-format
 msgctxt "HTML5PermissionsNotification|"
 msgid "Allow %1 to show desktop notifications?"
-msgstr "أتسمح لـ%1 أن يعرض التنبيهات على سطح المكتب؟"
+msgstr "أتسمح لـ%1 أن يعرض الإشعارات على سطح المكتب؟"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:50
 #, qt-format
@@ -6051,7 +6051,7 @@ msgstr "حدد ملفات..."
 #: lib/webengine/webpage.cpp:735
 msgctxt "WebPage|"
 msgid "JavaScript alert"
-msgstr "تنبيه من جافاسكربت"
+msgstr "تحذير جافاسكربت"
 
 #: lib/webengine/webpage.cpp:744
 msgctxt "WebPage|"
