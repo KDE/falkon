@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-08-04 14:40+0400\n"
+"PO-Revision-Date: 2025-08-05 20:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -387,7 +387,7 @@ msgid ""
 "and Qt Framework."
 msgstr ""
 "فالكون متصفح للوب جديد سريع وآمن ومفتوح المصدر. يُرخّص استخدامه وفق الإصدار "
-"الثالث من رخصة جنو العمومية (GPL) أو أي إصدار أحدث من ذلك. يُبنى فالكون على "
+"الثالث من رخصة غنو العمومية (GPL) أو أي إصدار أحدث من ذلك. يُبنى فالكون على "
 "محرك العرض QtWebEngine وإطار العمل Qt."
 
 #: lib/app/mainmenu.cpp:84 lib/app/mainmenu.cpp:501
@@ -1468,7 +1468,7 @@ msgctxt "CookieManager|"
 msgid ""
 "Cookies from these servers will ALWAYS be accepted (even if you have "
 "disabled saving cookies)"
-msgstr "ستٌقبل الكعكات من هذه الخواديم *دوماً* (حتى إن اخترت عدم تخزين الكعكات) "
+msgstr "ستٌقبل الكعكات من هذه الخوادم *دوماً* (حتى إن اخترت عدم تخزين الكعكات) "
 
 #: lib/cookies/cookiemanager.ui:307 lib/cookies/cookiemanager.ui:361
 msgctxt "CookieManager|"
@@ -1488,7 +1488,7 @@ msgstr "<b>قائمة الكعكات السوداء</b>"
 #: lib/cookies/cookiemanager.ui:333
 msgctxt "CookieManager|"
 msgid "Cookies from these servers will NEVER be accepted"
-msgstr "لن تقبل الكعكات من هذه الخواديم مهما يكن"
+msgstr "لن تقبل الكعكات من هذه الخوادم مهما يكن"
 
 #: lib/cookies/cookiemanager.ui:385
 msgctxt "CookieManager|"
@@ -1558,8 +1558,8 @@ msgstr "بضع ثوانٍ"
 msgctxt "DownloadItem|"
 msgid "%n seconds"
 msgid_plural "%n seconds"
-msgstr[0] "%n ثا%n ثا"
-msgstr[1] "%n ثا%n ثا"
+msgstr[0] "%n ثا"
+msgstr[1] "%n ثا"
 msgstr[2] "%n ثا"
 msgstr[3] "%n ثا"
 msgstr[4] "%n ثا"
@@ -1570,20 +1570,20 @@ msgstr[5] "%n ثا"
 msgctxt "DownloadItem|"
 msgid "%n minutes"
 msgid_plural "%n minutes"
-msgstr[0] "% د% د"
-msgstr[1] "% د% د"
-msgstr[2] "% د"
-msgstr[3] "% د"
-msgstr[4] "% د"
-msgstr[5] "% د"
+msgstr[0] "%n د"
+msgstr[1] "%n د"
+msgstr[2] "%n د"
+msgstr[3] "%n د"
+msgstr[4] "%n د"
+msgstr[5] "%n د"
 
 #: lib/downloads/downloaditem.cpp:210
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "%n hours"
 msgid_plural "%n hours"
-msgstr[0] "%n سا%n سا"
-msgstr[1] "%n سا%n سا"
+msgstr[0] "%n سا"
+msgstr[1] "%n سا"
 msgstr[2] "%n سا"
 msgstr[3] "%n سا"
 msgstr[4] "%n سا"
@@ -1740,7 +1740,7 @@ msgstr "فالكون: التنزيل انتهى"
 #: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
 msgid "All files have been successfully downloaded."
-msgstr "تم تنزيل كل الملفات."
+msgstr "نُزلت كل الملفات بنجاح."
 
 #: lib/downloads/downloadmanager.cpp:426
 msgctxt "DownloadManager|"
@@ -2328,7 +2328,7 @@ msgstr "الشهادة تحتوي على أخطاء."
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
-msgstr "لا يوجد لدى الشهادة آليّة لتحديد ما إذا تم إلغاؤها أم لا."
+msgstr "لا يوجد لدى الشهادة آليّة لتحديد هل ألغيت أم لا."
 
 #: lib/network/networkmanager.cpp:357
 msgctxt "NetworkManager|"
@@ -2348,7 +2348,7 @@ msgstr "الشهادة غير صالحة."
 #: lib/network/networkmanager.cpp:363
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr "وقعj الشهادة باستخدام خوارزمية توقيع ضعيفة."
+msgstr "وُقعت الشهادة باستخدام خوارزمية توقيع ضعيفة."
 
 #: lib/network/networkmanager.cpp:365
 msgctxt "NetworkManager|"
@@ -3019,8 +3019,8 @@ msgid ""
 "Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/"
 "><b>Database Size After: </b>%2"
 msgstr ""
-"تم تحسين قاعدة البيانات.<br/><br/><b>حجمها قبل التحسين:</b>%1<br/><b>حجمها "
-"بعد التحسين:</b>%2"
+"حُسنت قاعدة البيانات.<br/><br/><b>حجمها قبل التحسين:</b>%1<br/><b>حجمها بعد "
+"التحسين:</b>%2"
 
 #: lib/other/clearprivatedata.ui:14
 msgctxt "ClearPrivateData|"
@@ -4885,7 +4885,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
-msgstr "أغلق الطبيق باستخدام Ctrl-Q"
+msgstr "أغلق التطبيق باستخدام Ctrl-Q"
 
 #: lib/preferences/preferences.ui:1910
 msgctxt "Preferences|"
@@ -4981,7 +4981,7 @@ msgstr "خيارات جافاسكربت"
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr ""
-"أرسل ترويسة \"Do Not Track\" للخواديم لإبلاغها أني لا أريدها أن تُتابعني  "
+"أرسل ترويسة \"Do Not Track\" للخوادم لإبلاغها أني لا أريدها أن تُتابعني  "
 
 #: lib/preferences/preferences.ui:2213
 msgctxt "Preferences|"
