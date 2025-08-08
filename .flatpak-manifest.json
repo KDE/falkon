@@ -21,6 +21,16 @@
         "--talk-name=org.kde.kwalletd5",
         "--talk-name=org.kde.kwalletd6"
     ],
+    "cleanup": [
+        "/cleanup-BaseApp.sh",
+        "/include",
+        "/lib/*/cmake",
+        "/lib/*/pkgconfig",
+        "/lib/cmake",
+        "/lib/pkgconfig",
+        "/mkspecs",
+        "/share/app-info"
+    ],
     "modules": [
         {
             "buildsystem": "cmake-ninja",
