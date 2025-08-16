@@ -1,0 +1,194 @@
+# SPDX-FileCopyrightText: 2025 Kizito Birabwa <kbirabwa@yahoo.co.uk>
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2025-07-20 13:52+0100\n"
+"Last-Translator: Kizito Birabwa <kbirabwa@yahoo.co.uk>\n"
+"Language-Team: Luganda\n"
+"Language: lg_UG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
+"X-Language: lg_UG\n"
+"X-Source-Language: en_GB\n"
+
+#: tabmanagersettings.ui:14
+msgctxt "TabManagerSettings|"
+msgid "Tab Manager Settings"
+msgstr "Enteekateeka za butimbe"
+
+#: tabmanagersettings.ui:20
+msgctxt "TabManagerSettings|"
+msgid "View"
+msgstr "Ndabika"
+
+#: tabmanagersettings.ui:26
+msgctxt "TabManagerSettings|"
+msgid "Please select view type:"
+msgstr "Londa endabika:"
+
+#: tabmanagersettings.ui:33
+msgctxt "TabManagerSettings|"
+msgid "SideBar"
+msgstr "Kabaawo ak'oku mabbali"
+
+#: tabmanagersettings.ui:40
+msgctxt "TabManagerSettings|"
+msgid "Window"
+msgstr "Ddirisa"
+
+#: tabmanagersettings.ui:47
+msgctxt "TabManagerSettings|"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> The "
+"&quot;Window&quot; type is recommended for managing lots of windows/tabs.</"
+"p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Kutangaaza:</span> "
+"Endabika ey'ekika kya &quot;Ddirisa&quot; y'esinga bw'oba nga ogenda "
+"okubeera  n'amdirisa n'obutimbe bingi.</p></body></html>"
+
+#: tabmanagersettings.ui:60
+msgctxt "TabManagerSettings|"
+msgid "Use TabManager plugin as replacement for main TabBar."
+msgstr ""
+"Ekyongerwako ekya TabManager kisobola okukola mu kifo ky'olubaawo "
+"lw'obutimbe."
+
+#: tabmanagerwidget.cpp:111
+msgctxt "TabManagerWidget|"
+msgid "Local File System:"
+msgstr "Sisitemu eya Fayiro ey'oku Kompyuta Eno:"
+
+#: tabmanagerwidget.cpp:114
+msgctxt "TabManagerWidget|"
+msgid "Falkon:"
+msgstr "Falkon:"
+
+#: tabmanagerwidget.cpp:117
+msgctxt "TabManagerWidget|"
+msgid " [FTP]"
+msgstr " [FTP]"
+
+#: tabmanagerwidget.cpp:306
+msgctxt "TabManagerWidget|"
+msgid "Group by"
+msgstr "Lengera ku"
+
+#: tabmanagerwidget.cpp:307
+msgctxt "TabManagerWidget|"
+msgid "&Window"
+msgstr "&Ddirisa"
+
+#: tabmanagerwidget.cpp:312
+msgctxt "TabManagerWidget|"
+msgid "&Domain"
+msgstr "D&omeyini"
+
+#: tabmanagerwidget.cpp:317
+msgctxt "TabManagerWidget|"
+msgid "&Host"
+msgstr "&Kompyuta"
+
+#: tabmanagerwidget.cpp:325
+msgctxt "TabManagerWidget|"
+msgid "&Show side by side"
+msgstr "&Biriraanaganye"
+
+#: tabmanagerwidget.cpp:331
+msgctxt "TabManagerWidget|"
+msgid "&Detach checked tabs"
+msgstr "&Obutimbe obutonyezedwa bwetengerere"
+
+#: tabmanagerwidget.cpp:332
+msgctxt "TabManagerWidget|"
+msgid "Book&mark checked tabs"
+msgstr "Ob&utimbe obutonyezedwa bukolere obukwatakifo"
+
+#: tabmanagerwidget.cpp:333
+msgctxt "TabManagerWidget|"
+msgid "&Close checked tabs"
+msgstr "Obutimbe obutonyezedwa bu&gyewo"
+
+#: tabmanagerwidget.cpp:334
+msgctxt "TabManagerWidget|"
+msgid "&Unload checked tabs"
+msgstr "Obutimbe obutonyezedwa bu&wangule"
+
+#: tabmanagerwidget.cpp:587
+msgctxt "TabManagerWidget|"
+msgid "Choose folder for bookmarks:"
+msgstr "Londa etterekero omunaaterekebwanga obukwatakifo:"
+
+#: tabmanagerwidget.cpp:588
+msgctxt "TabManagerWidget|"
+msgid "Bookmark Selected Tabs"
+msgstr "Obutimbe obulondedwa bukolere obukwatakifo"
+
+#: tabmanagerwidget.cpp:706
+#, qt-format
+msgctxt "TabManagerWidget|"
+msgid "Window %1"
+msgstr "Ddirisa %1"
+
+#: tabmanagerwidget.cpp:707
+msgctxt "TabManagerWidget|"
+msgid "Double click to switch"
+msgstr "Okukyusa nyiganyiga ebiri"
+
+#: tabmanagerwidget.ui:14
+msgctxt "TabManagerWidget|"
+msgid "Tab Manager"
+msgstr "Kiteekateeka Butimbe"
+
+#: tabmanagerwidgetcontroller.cpp:50
+msgctxt "TabManagerButton|"
+msgid "Tab Manager button"
+msgstr "Ppeesa ery'Okuteekateeka Butimbe"
+
+#: tabmanagerwidgetcontroller.cpp:67 tabmanagerwidgetcontroller.cpp:72
+#: tabmanagerwidgetcontroller.cpp:98
+msgctxt "TabManagerWidgetController|"
+msgid "Tab Manager"
+msgstr "Kiteekateeka Butimbe"
+
+#: tabmanagerwidgetcontroller.cpp:99
+msgctxt "TabManagerWidgetController|"
+msgid "Show Tab Manager"
+msgstr "Leeta Ekiteekateeka Butimbe"
+
+#: tldextractor/tldextractor.cpp:261 tldextractor/tldextractor.cpp:364
+msgctxt "TLDExtractor|"
+msgid "File not found!"
+msgstr "Fayiro ebuze!"
+
+#: tldextractor/tldextractor.cpp:262
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'effective_tld_names.dat' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+"Fayiro 'effective_tld_names.dat' ebuze!\n"
+"Osobola okuwanulayo koppi okuva '<a href=\"%1\"><b>wano</b></a>' n'ogiteeka "
+"mu kimu ku bifo bino:\n"
+"%2"
+
+#: tldextractor/tldextractor.cpp:365
+#, qt-format
+msgctxt "TLDExtractor|"
+msgid ""
+"File 'test_psl.txt' was not found!\n"
+"You can download it from '<a href=\"%1\"><b>here</b></a>' to one of the "
+"following paths:\n"
+"%2"
+msgstr ""
+"Fayiro 'test_psl.txt' ebuze!\n"
+"Osobola okuwanulayo koppi okuva '<a href=\"%1\"><b>wano</b></a>' n'ogiteeka "
+"mu kimu ku bifo bino:\n"
+"%2"
