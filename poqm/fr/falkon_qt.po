@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-06-13 13:07+0200\n"
+"PO-Revision-Date: 2025-07-24 08:24+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.07.80\n"
 "X-Language: fr_FR\n"
 "X-Qt-Contexts: true\n"
 
@@ -3896,26 +3896,17 @@ msgid "Exceptions"
 msgstr "Exceptions"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add allowed scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add allowed scheme"
 msgstr "Ajouter un thème autorisé"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Scheme:"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Scheme:"
 msgstr "Thème :"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add blocked scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add blocked scheme"
 msgstr "Ajouter un thème bloqué"
@@ -3923,53 +3914,37 @@ msgstr "Ajouter un thème bloqué"
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr ""
+msgstr "Protocoles d'ouverture automatique"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Couleurs d'arrière "
-"plan de pages Internet</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Ouverture "
+"automatique</span></p></body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "Ajouter"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
-msgstr "Retirer"
+msgstr "Supprimer"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:65
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Couleurs d'arrière "
-"plan de pages Internet</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Bloqué</span></p></"
+"body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -5144,18 +5119,13 @@ msgid "Protocol Handlers Manager"
 msgstr "Gestionnaire de pilotes de protocole"
 
 #: lib/preferences/preferences.ui:2653
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">Couleurs d'arrière "
-"plan de pages Internet</span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">Gérer les protocoles "
+"d’ouverture automatique</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2665
 msgctxt "Preferences|"
@@ -5225,7 +5195,7 @@ msgstr "<b>Gestionnaire de certificats</b>"
 #: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr ""
+msgstr "Protocoles d'ouverture automatique"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
