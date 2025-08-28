@@ -2234,17 +2234,12 @@ msgid "SSL Certificate Error!"
 msgstr "Chyba zabezpečení."
 
 #: lib/network/networkmanager.cpp:92
-#, fuzzy, qt-format
-#| msgctxt "NetworkManager|"
-#| msgid ""
-#| "The page you are trying to access has the following errors in the SSL "
-#| "certificate:"
+#, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
 msgstr ""
-"Stránka kterou se snažíte navštívit zaslala SSL Certifikát s těmito chybami:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -2785,12 +2780,9 @@ msgid "SSL Certificate Error!"
 msgstr "Chyba certifikátu SSL."
 
 #: lib/network/sslerrordialog.ui:90
-#, fuzzy
-#| msgctxt "NetworkManager|"
-#| msgid "The certificate contains errors."
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr "Certifikát obsahuje chyby."
+msgstr ""
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -3861,29 +3853,20 @@ msgid "Exceptions"
 msgstr "Výjimky"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add allowed scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add allowed scheme"
-msgstr "Přidat povolené schéma"
+msgstr ""
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Scheme:"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Scheme:"
-msgstr "Schéma:"
+msgstr ""
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add blocked scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add blocked scheme"
-msgstr "Přidat blokované schéma"
+msgstr ""
 
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
@@ -3899,21 +3882,15 @@ msgstr ""
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
-msgstr "Přidat"
+msgstr ""
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
-msgstr "Odstranit"
+msgstr ""
 
 #: lib/preferences/autoopenprotocolsdialog.ui:65
 msgctxt "AutoOpenProtocolsDialog|"
@@ -5944,12 +5921,9 @@ msgid "Deny"
 msgstr "Zakázat"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
-msgstr "Zvolte barvu"
+msgstr ""
 
 #: lib/tools/qztools.cpp:379
 msgctxt "QObject|"
@@ -6346,15 +6320,3 @@ msgstr "Zkontrolovat objekt"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "MainApplication|"
-#~ msgid "Open new tab"
-#~ msgstr "Otevřít novou kartu"
-
-#~ msgctxt "MainApplication|"
-#~ msgid "Open new window"
-#~ msgstr "Otevřít nové okno"
-
-#~ msgctxt "MainApplication|"
-#~ msgid "Open new private window"
-#~ msgstr "Otevřít nové soukromé okno"
