@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-01-17 12:11+0100\n"
+"PO-Revision-Date: 2025-09-02 18:10+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -2235,18 +2235,14 @@ msgid "SSL Certificate Error!"
 msgstr "Error de certificato SSL!"
 
 #: lib/network/networkmanager.cpp:92
-#, fuzzy, qt-format
-#| msgctxt "NetworkManager|"
-#| msgid ""
-#| "The page you are trying to access has the following errors in the SSL "
-#| "certificate:"
+#, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
 msgstr ""
-"Le pagina que tu es essayante a acceder ha le sequente error in le "
-"certificato SSL:"
+"Le pagina <strong>%1</strong> que tu es essayante a acceder ha le sequente "
+"error in le certificato SSL:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -2800,12 +2796,9 @@ msgid "SSL Certificate Error!"
 msgstr "Error de certificato SSL!"
 
 #: lib/network/sslerrordialog.ui:90
-#, fuzzy
-#| msgctxt "NetworkManager|"
-#| msgid "The certificate contains errors."
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr "Le certificato contine errores."
+msgstr "Commuta Detalios de certificato"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -3876,26 +3869,17 @@ msgid "Exceptions"
 msgstr "Exceptiones"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add allowed scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add allowed scheme"
 msgstr "Adde schema permittite"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Scheme:"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Scheme:"
 msgstr "Schema:"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add blocked scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add blocked scheme"
 msgstr "Adde schema blocate"
@@ -3903,7 +3887,7 @@ msgstr "Adde schema blocate"
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr ""
+msgstr "Protocollos de Auto-Aperi"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
 msgctxt "AutoOpenProtocolsDialog|"
@@ -3911,21 +3895,17 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Auto Aperi</span></"
+"p></body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "Adde"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
 msgstr "Remove"
@@ -3936,6 +3916,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Blocate</span></p></"
+"body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -4374,11 +4356,13 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Colores de Fundo de "
+"Pagina Web </span></p></body></html>"
 
 #: lib/preferences/preferences.ui:584
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "Color de fundo durante que il incarga:"
 
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
@@ -4391,7 +4375,7 @@ msgstr "..."
 #: lib/preferences/preferences.ui:598
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "Color de fundo quando cargate:"
 
 #: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
 #: lib/preferences/preferences.ui:1051
@@ -5111,6 +5095,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Gere Protocollos de "
+"Auto Aperi</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2665
 msgctxt "Preferences|"
@@ -5181,7 +5167,7 @@ msgstr "<b>Gerente de certificato</b>"
 #: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr ""
+msgstr "Protocollos de Auto Aperi"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
@@ -5963,9 +5949,6 @@ msgid "Deny"
 msgstr "Nega"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
 msgstr "Selectiona Color"
