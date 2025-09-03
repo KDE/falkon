@@ -82,7 +82,7 @@ void PopupWebView::inspectElement()
         return;
     }
 
-    m_inspector = new WebInspector;
+    m_inspector = new WebInspector(mApp->webProfile());
     m_inspector->setView(this);
     m_inspector->inspectElement();
     m_inspector->show();

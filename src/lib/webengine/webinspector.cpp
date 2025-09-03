@@ -32,7 +32,12 @@
 QList<QWebEngineView*> WebInspector::s_views;
 
 WebInspector::WebInspector(QWidget *parent)
-    : QWebEngineView(parent)
+    : WebInspector(mApp->webProfile(), parent)
+{
+}
+
+WebInspector::WebInspector(QWebEngineProfile *profile, QWidget *parent)
+    : QWebEngineView(profile, parent)
     , m_view(nullptr)
 {
     setAttribute(Qt::WA_DeleteOnClose);
@@ -43,6 +48,9 @@ WebInspector::WebInspector(QWidget *parent)
     m_windowSize = Settings().value(QSL("Web-Inspector/windowSize"), QSize(640, 480)).toSize();
 
     registerView(this);
+
+    /* Page settings needed for WebInspector to work correctly */
+    settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
 
     connect(page(), &QWebEnginePage::windowCloseRequested, this, &WebInspector::deleteLater);
     connect(page(), &QWebEnginePage::loadFinished, this, &WebInspector::loadFinished);

@@ -122,6 +122,7 @@
 // webengine
 #include "loadrequest.h"
 #include "webhittestresult.h"
+#include <QWebEngineProfile> /* for WebInspector */
 #include "webinspector.h"
 #include "webpage.h"
 #include "webview.h"

@@ -21,6 +21,7 @@
 
 #include "qzcommon.h"
 
+class QWebEngineProfile;
 class WebView;
 
 class FALKON_EXPORT WebInspector : public QWebEngineView
@@ -29,6 +30,7 @@ class FALKON_EXPORT WebInspector : public QWebEngineView
 
 public:
     explicit WebInspector(QWidget *parent = nullptr);
+    explicit WebInspector(QWebEngineProfile *profile, QWidget *parent = nullptr);
     ~WebInspector() override;
 
     void setView(WebView *view);

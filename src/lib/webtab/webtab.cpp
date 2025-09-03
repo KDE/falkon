@@ -221,7 +221,7 @@ void WebTab::showWebInspector(bool inspectElement)
     if (!WebInspector::isEnabled() || haveInspector())
         return;
 
-    auto *inspector = new WebInspector(this);
+    auto *inspector = new WebInspector(mApp->webProfile(), this);
     inspector->setView(m_webView);
     if (inspectElement)
         inspector->inspectElement();
