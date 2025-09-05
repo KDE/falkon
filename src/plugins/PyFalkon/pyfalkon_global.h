@@ -129,6 +129,7 @@
 #include "javascript/externaljsobject.h"
 
 // webtab
+#include <QWebEngineLoadingInfo>
 #include "searchtoolbar.h"
 #include "tabbedwebview.h"
 #include "webtab.h"
