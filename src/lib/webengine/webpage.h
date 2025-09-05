@@ -24,6 +24,7 @@
 #include <QPrinter>
 #include <QVector>
 #include <QElapsedTimer>
+#include <QWebEngineLoadingInfo>
 
 #include "qzcommon.h"
 
@@ -121,6 +122,9 @@ private:
     bool m_secureStatus;
 
     QMetaObject::Connection m_contentsResizedConnection;
+
+    QWebEngineLoadingInfo m_lastLoadingInfo;
+    bool m_lastLoadingInfoValid;
 
     friend class WebView;
 };
