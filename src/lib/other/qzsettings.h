@@ -70,6 +70,7 @@ public:
     /* Browser-View-Settings */
     QColor backgroundColorLoading;
     QColor backgroundColorLoaded;
+    int loadedSwitchDelay;
 };
 
 #define qzSettings Settings::staticSettings()

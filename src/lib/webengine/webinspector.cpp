@@ -27,6 +27,7 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QNetworkReply>
+#include <QTimer>
 #include <QWebEngineSettings>
 #include <QtWebEngineWidgetsVersion>
 
@@ -113,7 +114,9 @@ void WebInspector::unregisterView(QWebEngineView *view)
 void WebInspector::loadFinished()
 {
     /* Custom background color when page is loaded */
-    page()->setBackgroundColor(qzSettings->backgroundColorLoaded);
+    QTimer::singleShot(qzSettings->loadedSwitchDelay, this, [this](){
+        page()->setBackgroundColor(qzSettings->backgroundColorLoaded);
+    });
 
     // Inspect element
     if (m_inspectElement) {

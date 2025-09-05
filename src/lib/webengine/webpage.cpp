@@ -278,7 +278,9 @@ void WebPage::finished()
     progress(100);
 
     /* Custom background color when page is loaded */
-    setBackgroundColor(qzSettings->backgroundColorLoaded);
+    QTimer::singleShot(qzSettings->loadedSwitchDelay, this, [this](){
+        setBackgroundColor(qzSettings->backgroundColorLoaded);
+    });
 
     // File scheme watcher
     if (url().scheme() == QLatin1String("file")) {
