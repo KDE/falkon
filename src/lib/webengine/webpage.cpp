@@ -273,15 +273,21 @@ void WebPage::handleLoadingChanged(const QWebEngineLoadingInfo &loadingInfo)
     switch (loadingInfo.status())
     {
     case QWebEngineLoadingInfo::LoadFailedStatus:
+        m_lastLoadingInfoValid = false;
         qDebug() << "Loading Failed:" << loadingInfo.url() << url();
         break;
     case QWebEngineLoadingInfo::LoadStoppedStatus:
+        m_lastLoadingInfoValid = false;
         qDebug() << "Loading Stopped:" << loadingInfo.url() << url();
         break;
     case QWebEngineLoadingInfo::LoadSucceededStatus:
+        m_lastLoadingInfoValid = false;
         qDebug() << "Loading Succeeded:" << loadingInfo.url() << url();
         break;
     case QWebEngineLoadingInfo::LoadStartedStatus: {
+        m_lastLoadingInfo = loadingInfo;
+        m_lastLoadingInfoValid = true;
+
         qDebug() << "Loading Started:" << loadingInfo.url() << url();
         const auto urlScheme = loadingInfo.url().scheme();
         const bool isWeb = urlScheme == QL1S("http") || urlScheme == QL1S("https") || urlScheme == QL1S("file");
@@ -323,6 +329,7 @@ void WebPage::handleLoadingChanged(const QWebEngineLoadingInfo &loadingInfo)
         break;
     }
     default:
+        m_lastLoadingInfoValid = false;
         break;
     }
 }
