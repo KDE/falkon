@@ -18,6 +18,7 @@
 #include "webinspector.h"
 #include "mainapplication.h"
 #include "networkmanager.h"
+#include "qzsettings.h"
 #include "settings.h"
 #include "webview.h"
 #include "webpage.h"
@@ -43,6 +44,9 @@ WebInspector::WebInspector(QWebEngineProfile *profile, QWidget *parent)
     setAttribute(Qt::WA_DeleteOnClose);
     setObjectName(QSL("web-inspector"));
     setMinimumHeight(80);
+
+    /* Custom background color while the page is loading */
+    page()->setBackgroundColor(qzSettings->backgroundColorLoading);
 
     m_height = Settings().value(QSL("Web-Inspector/height"), 80).toInt();
     m_windowSize = Settings().value(QSL("Web-Inspector/windowSize"), QSize(640, 480)).toSize();
@@ -108,6 +112,9 @@ void WebInspector::unregisterView(QWebEngineView *view)
 
 void WebInspector::loadFinished()
 {
+    /* Custom background color when page is loaded */
+    page()->setBackgroundColor(qzSettings->backgroundColorLoaded);
+
     // Inspect element
     if (m_inspectElement) {
         m_view->triggerPageAction(QWebEnginePage::InspectElement);
