@@ -84,6 +84,7 @@ Q_SIGNALS:
     void navigationRequestAccepted(const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame);
 
 protected Q_SLOTS:
+    void handleLoadingChanged(const QWebEngineLoadingInfo &loadingInfo);
     void progress(int prog);
     void finished();
 
