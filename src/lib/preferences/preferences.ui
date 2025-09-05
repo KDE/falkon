@@ -578,27 +578,6 @@
                </item>
                <item row="5" column="2">
                 <layout class="QGridLayout" name="gridLayout_25">
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="label_21">
-                   <property name="text">
-                    <string>Background color while loading:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="MacToolButton" name="backgroundColorLoaded">
-                   <property name="text">
-                    <string>...</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="QLabel" name="label_49">
-                   <property name="text">
-                    <string>Background color when loaded:</string>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="0" column="1">
                   <widget class="MacToolButton" name="backgroundColorLoading">
                    <property name="styleSheet">
@@ -616,10 +595,51 @@
                    </property>
                   </widget>
                  </item>
+                 <item row="1" column="1">
+                  <widget class="MacToolButton" name="backgroundColorLoaded">
+                   <property name="text">
+                    <string>...</string>
+                   </property>
+                  </widget>
+                 </item>
                  <item row="1" column="2">
                   <widget class="QToolButton" name="backgroundColorLoadedReset">
                    <property name="text">
                     <string>Reset</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_49">
+                   <property name="text">
+                    <string>Background color when loaded:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_21">
+                   <property name="text">
+                    <string>Background color while loading:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1" colspan="2">
+                  <widget class="QSpinBox" name="loadedSwitchDelay">
+                   <property name="suffix">
+                    <string comment="miliseconds">ms</string>
+                   </property>
+                   <property name="maximum">
+                    <number>5000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>10</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_55">
+                   <property name="text">
+                    <string comment="Time in milisencods which describes how long to wait after the page was initially loaded before switching the backgroung color to the loaded variant.">Loaded state switch delay:</string>
                    </property>
                   </widget>
                  </item>
@@ -2568,7 +2588,7 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>76</width>
+                <width>98</width>
                 <height>31</height>
                </rect>
               </property>
@@ -3000,6 +3020,12 @@
               <spacer name="horizontalSpacer_42">
                <property name="orientation">
                 <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
                </property>
               </spacer>
              </item>

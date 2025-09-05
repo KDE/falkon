@@ -70,6 +70,7 @@ void QzSettings::loadSettings()
     settings.beginGroup(QSL("Browser-View-Settings"));
     backgroundColorLoading = settings.value(QSL("BackgroundColorLoading"), QColor(Qt::white)).value<QColor>();
     backgroundColorLoaded = settings.value(QSL("BackgroundColorLoaded"), QColor(Qt::white)).value<QColor>();
+    loadedSwitchDelay = settings.value(QSL("LoadedSwitchDelay"), 250).toInt();
     settings.endGroup();
 }
 

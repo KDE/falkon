@@ -242,6 +242,8 @@ Preferences::Preferences(BrowserWindow* window)
     ui->backgroundColorLoaded->setIconColor(bgColor);
     connect(ui->backgroundColorLoaded, &QAbstractButton::clicked, ui->backgroundColorLoaded, &MacToolButton::selectColorDialog);
     connect(ui->backgroundColorLoadedReset, &QAbstractButton::clicked, ui->backgroundColorLoaded, &MacToolButton::resetIconColor);
+
+    ui->loadedSwitchDelay->setValue(settings.value(QSL("LoadedSwitchDelay"), 250).toInt());
     settings.endGroup();
 
     //TABS
@@ -972,6 +974,7 @@ void Preferences::saveSettings()
     settings.setValue(QSL("showNavigationToolbar"), ui->showNavigationToolbar->isChecked());
     settings.setValue(QSL("BackgroundColorLoading"), ui->backgroundColorLoading->iconColor());
     settings.setValue(QSL("BackgroundColorLoaded"), ui->backgroundColorLoaded->iconColor());
+    settings.setValue(QSL("LoadedSwitchDelay"), ui->loadedSwitchDelay->value());
     settings.endGroup();
 
     //TABS
