@@ -272,6 +272,12 @@ void WebPage::handleLoadingChanged(const QWebEngineLoadingInfo &loadingInfo)
     //          since we got a response headers to watch for any redirect header.
     switch (loadingInfo.status())
     {
+    case QWebEngineLoadingInfo::LoadFailedStatus:
+        qDebug() << "Loading Failed:" << loadingInfo.url() << url();
+        break;
+    case QWebEngineLoadingInfo::LoadStoppedStatus:
+        qDebug() << "Loading Stopped:" << loadingInfo.url() << url();
+        break;
     case QWebEngineLoadingInfo::LoadSucceededStatus:
         qDebug() << "Loading Succeeded:" << loadingInfo.url() << url();
         break;
@@ -523,7 +529,7 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
     const bool result = QWebEnginePage::acceptNavigationRequest(url, type, isMainFrame);
 
     if (result) {
-        qDebug() << "Request:" << url;
+        qDebug() << "Navigation Request:" << url;
         Q_EMIT navigationRequestAccepted(url, type, isMainFrame);
     }
 
