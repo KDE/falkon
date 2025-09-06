@@ -270,21 +270,17 @@ void WebPage::handleLoadingChanged(const QWebEngineLoadingInfo &loadingInfo)
     {
     case QWebEngineLoadingInfo::LoadFailedStatus:
         m_lastLoadingInfoValid = false;
-        qDebug() << "Loading Failed:" << loadingInfo.url();
         break;
     case QWebEngineLoadingInfo::LoadStoppedStatus:
         m_lastLoadingInfoValid = false;
-        qDebug() << "Loading Stopped:" << loadingInfo.url();
         break;
     case QWebEngineLoadingInfo::LoadSucceededStatus:
         m_lastLoadingInfoValid = false;
-        qDebug() << "Loading Succeeded:" << loadingInfo.url();
         break;
     case QWebEngineLoadingInfo::LoadStartedStatus:
         m_lastLoadingInfo = loadingInfo;
         m_lastLoadingInfoValid = true;
 
-        qDebug() << "Loading Started:" << loadingInfo.url();
         processSiteSettings();
         break;
     default:
@@ -303,8 +299,6 @@ void WebPage::processSiteSettings()
         return;
     }
 #endif
-
-    qDebug() << "Processing SiteSettings:" << m_lastLoadingInfo.url() << url();
 
     if (   !mApp->siteSettingsManager()->isInternalScheme(m_lastLoadingInfo.url())
         && !m_lastLoadingInfo.isErrorPage()
@@ -546,7 +540,6 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
     const bool result = QWebEnginePage::acceptNavigationRequest(url, type, isMainFrame);
 
     if (result) {
-        qDebug() << "Navigation Request:" << url;
         processSiteSettings();
 
         Q_EMIT navigationRequestAccepted(url, type, isMainFrame);
