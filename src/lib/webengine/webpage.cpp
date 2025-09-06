@@ -82,6 +82,7 @@ WebPage::WebPage(QObject* parent)
     , m_loadProgress(100)
     , m_blockAlerts(false)
     , m_secureStatus(false)
+    , m_lastLoadingInfoValid(false)
 {
     /* Custom background color while the page is loading */
     setBackgroundColor(qzSettings->backgroundColorLoading);
@@ -265,72 +266,81 @@ void WebPage::urlChanged(const QUrl &url)
 
 void WebPage::handleLoadingChanged(const QWebEngineLoadingInfo &loadingInfo)
 {
-    // TODO Store the loading information and check also the urlChanged(url) signal
-    //      Which is first or faster, does it change after the redirect?
-    //      Is there a better way to detect a redirect?
-    //          There is a netwrok stack which can probably detect this,
-    //          since we got a response headers to watch for any redirect header.
     switch (loadingInfo.status())
     {
     case QWebEngineLoadingInfo::LoadFailedStatus:
         m_lastLoadingInfoValid = false;
-        qDebug() << "Loading Failed:" << loadingInfo.url() << url();
+        qDebug() << "Loading Failed:" << loadingInfo.url();
         break;
     case QWebEngineLoadingInfo::LoadStoppedStatus:
         m_lastLoadingInfoValid = false;
-        qDebug() << "Loading Stopped:" << loadingInfo.url() << url();
+        qDebug() << "Loading Stopped:" << loadingInfo.url();
         break;
     case QWebEngineLoadingInfo::LoadSucceededStatus:
         m_lastLoadingInfoValid = false;
-        qDebug() << "Loading Succeeded:" << loadingInfo.url() << url();
+        qDebug() << "Loading Succeeded:" << loadingInfo.url();
         break;
-    case QWebEngineLoadingInfo::LoadStartedStatus: {
+    case QWebEngineLoadingInfo::LoadStartedStatus:
         m_lastLoadingInfo = loadingInfo;
         m_lastLoadingInfoValid = true;
 
-        qDebug() << "Loading Started:" << loadingInfo.url() << url();
-        const auto urlScheme = loadingInfo.url().scheme();
-        const bool isWeb = urlScheme == QL1S("http") || urlScheme == QL1S("https") || urlScheme == QL1S("file");
-
-        if (isWeb) {
-            auto webAttributes = mApp->siteSettingsManager()->getWebAttributes(loadingInfo.url());
-            if (!webAttributes.empty()) {
-                for (auto it = webAttributes.begin(); it != webAttributes.end(); ++it) {
-                        settings()->setAttribute(it.key(), it.value());
-                }
-            }
-            else {
-                auto const webAttributes = mApp->siteSettingsManager()->getSupportedAttribute();
-                for (auto attribute : webAttributes) {
-                    settings()->setAttribute(attribute, mApp->webSettings()->testAttribute(attribute));
-                }
-            }
-        }
-        else {
-            settings()->setAttribute(QWebEngineSettings::AutoLoadImages, true);
-            settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
-            settings()->setAttribute(QWebEngineSettings::JavascriptCanOpenWindows, false);
-            settings()->setAttribute(QWebEngineSettings::JavascriptCanAccessClipboard, true);
-            settings()->setAttribute(QWebEngineSettings::JavascriptCanPaste, false);
-            settings()->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, false);
-            settings()->setAttribute(QWebEngineSettings::LocalStorageEnabled, true);
-            settings()->setAttribute(QWebEngineSettings::FullScreenSupportEnabled, mApp->webSettings()->testAttribute(QWebEngineSettings::FullScreenSupportEnabled));
-            settings()->setAttribute(QWebEngineSettings::AllowRunningInsecureContent, false);
-            settings()->setAttribute(QWebEngineSettings::AllowGeolocationOnInsecureOrigins, false);
-            settings()->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, mApp->webSettings()->testAttribute(QWebEngineSettings::PlaybackRequiresUserGesture));
-            settings()->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, mApp->webSettings()->testAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly));
-#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-            settings()->setAttribute(QWebEngineSettings::ReadingFromCanvasEnabled, mApp->webSettings()->testAttribute(QWebEngineSettings::ReadingFromCanvasEnabled));
-#endif
-#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
-            settings()->setAttribute(QWebEngineSettings::ForceDarkMode, mApp->webSettings()->testAttribute(QWebEngineSettings::ForceDarkMode));
-#endif
-        }
+        qDebug() << "Loading Started:" << loadingInfo.url();
+        processSiteSettings();
         break;
-    }
     default:
         m_lastLoadingInfoValid = false;
         break;
+    }
+}
+
+void WebPage::processSiteSettings()
+{
+    if (!m_lastLoadingInfoValid) {
+        return;
+    }
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+    else if (m_lastLoadingInfo.isDownload()) {
+        return;
+    }
+#endif
+
+    qDebug() << "Processing SiteSettings:" << m_lastLoadingInfo.url() << url();
+
+    if (   !mApp->siteSettingsManager()->isInternalScheme(m_lastLoadingInfo.url())
+        && !m_lastLoadingInfo.isErrorPage()
+    ) {
+        auto webAttributes = mApp->siteSettingsManager()->getWebAttributes(m_lastLoadingInfo.url());
+        if (!webAttributes.empty()) {
+            for (auto it = webAttributes.begin(); it != webAttributes.end(); ++it) {
+                settings()->setAttribute(it.key(), it.value());
+            }
+        }
+        else {
+            auto const webAttributes = mApp->siteSettingsManager()->getSupportedAttribute();
+            for (auto attribute : webAttributes) {
+                settings()->setAttribute(attribute, mApp->webSettings()->testAttribute(attribute));
+            }
+        }
+    }
+    else {
+        settings()->setAttribute(QWebEngineSettings::AutoLoadImages, true);
+        settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
+        settings()->setAttribute(QWebEngineSettings::JavascriptCanOpenWindows, false);
+        settings()->setAttribute(QWebEngineSettings::JavascriptCanAccessClipboard, true);
+        settings()->setAttribute(QWebEngineSettings::JavascriptCanPaste, false);
+        settings()->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, false);
+        settings()->setAttribute(QWebEngineSettings::LocalStorageEnabled, true);
+        settings()->setAttribute(QWebEngineSettings::FullScreenSupportEnabled, mApp->webSettings()->testAttribute(QWebEngineSettings::FullScreenSupportEnabled));
+        settings()->setAttribute(QWebEngineSettings::AllowRunningInsecureContent, false);
+        settings()->setAttribute(QWebEngineSettings::AllowGeolocationOnInsecureOrigins, false);
+        settings()->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, mApp->webSettings()->testAttribute(QWebEngineSettings::PlaybackRequiresUserGesture));
+        settings()->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, mApp->webSettings()->testAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly));
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 6, 0)
+        settings()->setAttribute(QWebEngineSettings::ReadingFromCanvasEnabled, mApp->webSettings()->testAttribute(QWebEngineSettings::ReadingFromCanvasEnabled));
+#endif
+#if QTWEBENGINECORE_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+        settings()->setAttribute(QWebEngineSettings::ForceDarkMode, mApp->webSettings()->testAttribute(QWebEngineSettings::ForceDarkMode));
+#endif
     }
 }
 
@@ -537,6 +547,8 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
 
     if (result) {
         qDebug() << "Navigation Request:" << url;
+        processSiteSettings();
+
         Q_EMIT navigationRequestAccepted(url, type, isMainFrame);
     }
 

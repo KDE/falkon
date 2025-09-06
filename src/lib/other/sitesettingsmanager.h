@@ -123,6 +123,7 @@ public:
     Permission intToPermission(const int permission) const;
 
     static QString adjustUrl(const QUrl url);
+    static bool isInternalScheme(const QUrl &url);
 
 private:
     void prepareSqls();
