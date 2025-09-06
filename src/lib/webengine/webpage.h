@@ -101,6 +101,7 @@ private Q_SLOTS:
 
 private:
     bool acceptNavigationRequest(const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame) override;
+    void processSiteSettings();
 
     QStringList chooseFiles(FileSelectionMode mode, const QStringList &oldFiles, const QStringList &acceptedMimeTypes) override;
 

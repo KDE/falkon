@@ -55,6 +55,14 @@ const QList<QWebEnginePage::Feature> supportedFeatures = {
     ,QWebEnginePage::DesktopAudioVideoCapture
 };
 
+const QStringList internalSchemes = {
+    QSL("about"),
+    QSL("view-source"),
+    QSL("chrome"),
+    QSL("abp-resource"),
+    QSL("falkon")
+};
+
 
 SiteSettingsManager::SiteSettingsManager ( QObject* parent )
 : QObject(parent)
@@ -675,4 +683,9 @@ QString SiteSettingsManager::adjustUrl(const QUrl url)
     );
 
     return urlAdjusted.toString();
+}
+
+bool SiteSettingsManager::isInternalScheme(const QUrl& url)
+{
+    return internalSchemes.contains(url.scheme());
 }
