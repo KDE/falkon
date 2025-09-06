@@ -281,7 +281,7 @@ void WebPage::handleLoadingChanged(const QWebEngineLoadingInfo &loadingInfo)
         m_lastLoadingInfo = loadingInfo;
         m_lastLoadingInfoValid = true;
 
-        processSiteSettings();
+        processSiteSettings(loadingInfo.url());
         break;
     default:
         m_lastLoadingInfoValid = false;
@@ -289,7 +289,7 @@ void WebPage::handleLoadingChanged(const QWebEngineLoadingInfo &loadingInfo)
     }
 }
 
-void WebPage::processSiteSettings()
+void WebPage::processSiteSettings(const QUrl &currentUrl)
 {
     if (!m_lastLoadingInfoValid) {
         return;
@@ -300,10 +300,10 @@ void WebPage::processSiteSettings()
     }
 #endif
 
-    if (   !mApp->siteSettingsManager()->isInternalScheme(m_lastLoadingInfo.url())
+    if (   !mApp->siteSettingsManager()->isInternalScheme(currentUrl)
         && !m_lastLoadingInfo.isErrorPage()
     ) {
-        auto webAttributes = mApp->siteSettingsManager()->getWebAttributes(m_lastLoadingInfo.url());
+        auto webAttributes = mApp->siteSettingsManager()->getWebAttributes(currentUrl);
         if (!webAttributes.empty()) {
             for (auto it = webAttributes.begin(); it != webAttributes.end(); ++it) {
                 settings()->setAttribute(it.key(), it.value());
@@ -540,7 +540,7 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
     const bool result = QWebEnginePage::acceptNavigationRequest(url, type, isMainFrame);
 
     if (result) {
-        processSiteSettings();
+        processSiteSettings(url);
 
         Q_EMIT navigationRequestAccepted(url, type, isMainFrame);
     }
