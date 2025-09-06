@@ -672,6 +672,7 @@ void SiteSettingsManager::prepareSqls() {
     everythingUpdateSql.append(QSL(" WHERE server=?"));
 }
 
+/* static */
 QString SiteSettingsManager::adjustUrl(const QUrl url)
 {
     QUrl urlAdjusted = url.adjusted(
@@ -685,6 +686,7 @@ QString SiteSettingsManager::adjustUrl(const QUrl url)
     return urlAdjusted.toString();
 }
 
+/* static */
 bool SiteSettingsManager::isInternalScheme(const QUrl& url)
 {
     return internalSchemes.contains(url.scheme());
