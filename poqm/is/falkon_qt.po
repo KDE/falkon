@@ -4116,7 +4116,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Ertu viss um að þú viljir fjarlægja '%1'?"
 
-#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:673
+#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:675
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Sjálfgefið"
@@ -4126,7 +4126,7 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Setja sem sjálfgefið"
 
-#: lib/preferences/preferences.cpp:329
+#: lib/preferences/preferences.cpp:331
 #, fuzzy
 #| msgctxt "FalkonSchemeReply|"
 #| msgid "Auto"
@@ -4134,88 +4134,88 @@ msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Sjálfvirkt"
 
-#: lib/preferences/preferences.cpp:331
+#: lib/preferences/preferences.cpp:333
 msgctxt "Preferences|"
 msgid "Light"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:332
+#: lib/preferences/preferences.cpp:334
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:342
+#: lib/preferences/preferences.cpp:344
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:616
+#: lib/preferences/preferences.cpp:618
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Veldu staðsetningu keyranlegrar skrár..."
 
-#: lib/preferences/preferences.cpp:659
+#: lib/preferences/preferences.cpp:661
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Skjátilkynning (OSD)"
 
-#: lib/preferences/preferences.cpp:660
+#: lib/preferences/preferences.cpp:662
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Dragðu hana þangað sem þú vilt hafa hana."
 
-#: lib/preferences/preferences.cpp:709
+#: lib/preferences/preferences.cpp:711
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Veldu staðsetningu niðurhals..."
 
-#: lib/preferences/preferences.cpp:723
+#: lib/preferences/preferences.cpp:725
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Veldu staðsetningu stílblaðs..."
 
-#: lib/preferences/preferences.cpp:734
+#: lib/preferences/preferences.cpp:736
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Eytt"
 
-#: lib/preferences/preferences.cpp:842
+#: lib/preferences/preferences.cpp:844
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Veldu slóð fyrir skyndiminni..."
 
-#: lib/preferences/preferences.cpp:873
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Ný forstilling"
 
-#: lib/preferences/preferences.cpp:873
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Settu inn nýtt heiti á forstillinguna:"
 
-#: lib/preferences/preferences.cpp:883 lib/preferences/preferences.cpp:888
+#: lib/preferences/preferences.cpp:885 lib/preferences/preferences.cpp:890
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Villa!"
 
-#: lib/preferences/preferences.cpp:883
+#: lib/preferences/preferences.cpp:885
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Þessi forstilling er þegar til staðar!"
 
-#: lib/preferences/preferences.cpp:888
+#: lib/preferences/preferences.cpp:890
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Get ekki búið til möppu undir forstillingar!"
 
-#: lib/preferences/preferences.cpp:899
+#: lib/preferences/preferences.cpp:901
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Staðfesting"
 
-#: lib/preferences/preferences.cpp:900
+#: lib/preferences/preferences.cpp:902
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4225,7 +4225,7 @@ msgstr ""
 "Viltu eyða endanlega \"%1\"  forstillingunni? Þessi aðgerð er ekki "
 "afturkallanleg!"
 
-#: lib/preferences/preferences.cpp:915 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:917 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Athugaðu: þú getur ekki eytt virkri forstillingu."
@@ -4235,7 +4235,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Kjörstillingar"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2144
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2164
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Almennt"
@@ -4442,151 +4442,164 @@ msgid ""
 "Colors</span></p></body></html>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:584
-msgctxt "Preferences|"
-msgid "Background color while loading:"
-msgstr ""
-
-#: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
-#: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
-#: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
-#: lib/preferences/preferences.ui:2728
+#: lib/preferences/preferences.ui:587 lib/preferences/preferences.ui:601
+#: lib/preferences/preferences.ui:1064 lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1956 lib/preferences/preferences.ui:2056
+#: lib/preferences/preferences.ui:2748
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:598
-msgctxt "Preferences|"
-msgid "Background color when loaded:"
-msgstr ""
-
-#: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
-#: lib/preferences/preferences.ui:1051
+#: lib/preferences/preferences.ui:594 lib/preferences/preferences.ui:608
+#: lib/preferences/preferences.ui:1071
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Frumstilla"
 
-#: lib/preferences/preferences.ui:631
+#: lib/preferences/preferences.ui:615
+msgctxt "Preferences|"
+msgid "Background color when loaded:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:622
+msgctxt "Preferences|"
+msgid "Background color while loading:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:629
+msgctxt "Preferences|miliseconds"
+msgid "ms"
+msgstr ""
+
+#: lib/preferences/preferences.ui:642
+msgctxt ""
+"Preferences|Time in milisencods which describes how long to wait after the "
+"page was initially loaded before switching the backgroung color to the "
+"loaded variant."
+msgid "Loaded state switch delay:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:651
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>Vafragluggi</b>"
 
-#: lib/preferences/preferences.ui:679
+#: lib/preferences/preferences.ui:699
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "Hegðun flipa"
 
-#: lib/preferences/preferences.ui:685
+#: lib/preferences/preferences.ui:705
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Fela fliparönd þegar aðeins einn flipi er opinn"
 
-#: lib/preferences/preferences.ui:692
+#: lib/preferences/preferences.ui:712
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "Virkja fyrri flipa þegar virkum flipa er lokað"
 
-#: lib/preferences/preferences.ui:699
+#: lib/preferences/preferences.ui:719
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Opna nýja flipa næst á eftir virkum flipa"
 
-#: lib/preferences/preferences.ui:706
+#: lib/preferences/preferences.ui:726
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Opna nýja tóma flipa næst á eftir virkum flipa"
 
-#: lib/preferences/preferences.ui:713
+#: lib/preferences/preferences.ui:733
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Opna sprettglugga í flipum"
 
-#: lib/preferences/preferences.ui:720
+#: lib/preferences/preferences.ui:740
 msgctxt "Preferences|"
 msgid "Block automatic popups"
 msgstr ""
 
-#: lib/preferences/preferences.ui:727
+#: lib/preferences/preferences.ui:747
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Alltaf skipta milli flipa með músarhjóli"
 
-#: lib/preferences/preferences.ui:734
+#: lib/preferences/preferences.ui:754
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Skipta sjálfkrafa yfir á nýopnaða flipa"
 
-#: lib/preferences/preferences.ui:741
+#: lib/preferences/preferences.ui:761
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Ekki loka glugga þegar síðasta flipa er lokað"
 
-#: lib/preferences/preferences.ui:748
+#: lib/preferences/preferences.ui:768
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Spyrja þegar mörgum flipum er lokað"
 
-#: lib/preferences/preferences.ui:755
+#: lib/preferences/preferences.ui:775
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Birta hnapp fyrir lokaða flipa"
 
-#: lib/preferences/preferences.ui:764
+#: lib/preferences/preferences.ui:784
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Birta lokunarhnappa á óvirkum flipum:"
 
-#: lib/preferences/preferences.ui:772
+#: lib/preferences/preferences.ui:792
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Sjálfvirkt"
 
-#: lib/preferences/preferences.ui:777
+#: lib/preferences/preferences.ui:797
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Alltaf"
 
-#: lib/preferences/preferences.ui:782
+#: lib/preferences/preferences.ui:802
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Aldrei"
 
-#: lib/preferences/preferences.ui:822
+#: lib/preferences/preferences.ui:842
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Hegðun vistfangastiku"
 
-#: lib/preferences/preferences.ui:830
+#: lib/preferences/preferences.ui:850
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Stinga upp á þegar ritað er í vistfangastiku:"
 
-#: lib/preferences/preferences.ui:844
+#: lib/preferences/preferences.ui:864
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Ferill og bókamerki"
 
-#: lib/preferences/preferences.ui:849
+#: lib/preferences/preferences.ui:869
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Ferill"
 
-#: lib/preferences/preferences.ui:854
+#: lib/preferences/preferences.ui:874
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Bókamerki"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:879
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Ekkert"
 
-#: lib/preferences/preferences.ui:885
+#: lib/preferences/preferences.ui:905
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Virkja uppástungur innan línu"
 
-#: lib/preferences/preferences.ui:892
+#: lib/preferences/preferences.ui:912
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4594,153 +4607,153 @@ msgstr ""
 "Ýttu á \"Shift\" til að ekki skipta um flipa heldur hlaða inn slóðinni í "
 "núverandi flipa"
 
-#: lib/preferences/preferences.ui:895
+#: lib/preferences/preferences.ui:915
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "Bjóðast til að skipta um flipa ef full vefslóð er þegar hlaðin"
 
-#: lib/preferences/preferences.ui:902
+#: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Alltaf birta Fara-táknmynd"
 
-#: lib/preferences/preferences.ui:909
+#: lib/preferences/preferences.ui:929
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Birta aðdráttarmerki"
 
-#: lib/preferences/preferences.ui:916
+#: lib/preferences/preferences.ui:936
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Velja allan textann þegar tvísmellt er í vistfangastiku"
 
-#: lib/preferences/preferences.ui:923
+#: lib/preferences/preferences.ui:943
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Velja allan textann þegar smellt er í vistfangastiku"
 
-#: lib/preferences/preferences.ui:930
+#: lib/preferences/preferences.ui:950
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Virkja sjálfvirka leit úr vistfangastikunni"
 
-#: lib/preferences/preferences.ui:937
+#: lib/preferences/preferences.ui:957
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Leita með sjálfgefinni leitarvél"
 
-#: lib/preferences/preferences.ui:944
+#: lib/preferences/preferences.ui:964
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Birta uppástungur í leit"
 
-#: lib/preferences/preferences.ui:951
+#: lib/preferences/preferences.ui:971
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr "Víkka tillöguramma að breidd glugga"
 
-#: lib/preferences/preferences.ui:974
+#: lib/preferences/preferences.ui:994
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Birta framvindu í vistfangastiku"
 
-#: lib/preferences/preferences.ui:1007
+#: lib/preferences/preferences.ui:1027
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Fylla"
 
-#: lib/preferences/preferences.ui:1012
+#: lib/preferences/preferences.ui:1032
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Neðst"
 
-#: lib/preferences/preferences.ui:1017
+#: lib/preferences/preferences.ui:1037
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Efst"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1045
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Sérsniðinn litur:"
 
-#: lib/preferences/preferences.ui:1041
+#: lib/preferences/preferences.ui:1061
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Velja lit"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1122
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Stillingar fyrir vef"
 
-#: lib/preferences/preferences.ui:1110
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "Virkja API-kerfisviðmót Pepper-viðbótar (PPAPI)"
 
-#: lib/preferences/preferences.ui:1117
+#: lib/preferences/preferences.ui:1137
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Nota innbyggðan PDF-skoðara (krefst PPAPI)"
 
-#: lib/preferences/preferences.ui:1124
+#: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Leyfa JavaScript"
 
-#: lib/preferences/preferences.ui:1131
+#: lib/preferences/preferences.ui:1151
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Hafa með tengla í virkniröð"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1138
+#: lib/preferences/preferences.ui:1158
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Prenta bakgrunn atriðis"
 
-#: lib/preferences/preferences.ui:1145
+#: lib/preferences/preferences.ui:1165
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Skrun með hreyfingum"
 
-#: lib/preferences/preferences.ui:1152
+#: lib/preferences/preferences.ui:1172
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Virkja rýmisflakk (spatial navigation)"
 
-#: lib/preferences/preferences.ui:1159
+#: lib/preferences/preferences.ui:1179
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Nota innbyggðar skrunstikur"
 
-#: lib/preferences/preferences.ui:1166
+#: lib/preferences/preferences.ui:1186
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Gera óvirka sjálfvirka spilun myndskeiða"
 
-#: lib/preferences/preferences.ui:1173
+#: lib/preferences/preferences.ui:1193
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Koma í veg fyrir að WebRTC leki IP-vistfangi þessarar tölvu"
 
-#: lib/preferences/preferences.ui:1180
+#: lib/preferences/preferences.ui:1200
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Virkja foruppflettingar á DNS"
 
-#: lib/preferences/preferences.ui:1187
+#: lib/preferences/preferences.ui:1207
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Virkja skjáupptöku"
 
-#: lib/preferences/preferences.ui:1194
+#: lib/preferences/preferences.ui:1214
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Nota vélbúnaðarhröðun (krefst endurræsingar)"
 
-#: lib/preferences/preferences.ui:1201
+#: lib/preferences/preferences.ui:1221
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Allow storing of cookies"
@@ -4748,207 +4761,207 @@ msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Leyfa geymslu á vefkökum"
 
-#: lib/preferences/preferences.ui:1208
+#: lib/preferences/preferences.ui:1228
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1217
+#: lib/preferences/preferences.ui:1237
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1252
+#: lib/preferences/preferences.ui:1272
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Rennihjól músar skrunar"
 
-#: lib/preferences/preferences.ui:1272
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "línur á síðu"
 
-#: lib/preferences/preferences.ui:1283
+#: lib/preferences/preferences.ui:1303
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Sjálfgefin aðdráttur á síður: "
 
-#: lib/preferences/preferences.ui:1322
+#: lib/preferences/preferences.ui:1342
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Geymt staðvært"
 
-#: lib/preferences/preferences.ui:1330
+#: lib/preferences/preferences.ui:1350
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Leyfa að geyma netskyndiminni á diski"
 
-#: lib/preferences/preferences.ui:1353
+#: lib/preferences/preferences.ui:1373
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Eyða skyndiminni þegar hætt er í forritinu"
 
-#: lib/preferences/preferences.ui:1360
+#: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Hámark :"
 
-#: lib/preferences/preferences.ui:1367
+#: lib/preferences/preferences.ui:1387
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1383
+#: lib/preferences/preferences.ui:1403
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Geyma skyndiminni í:"
 
-#: lib/preferences/preferences.ui:1411
+#: lib/preferences/preferences.ui:1431
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Leyfa vistun ferils"
 
-#: lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1438
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Eyða ferli þegar hætt er í forritinu"
 
-#: lib/preferences/preferences.ui:1441
+#: lib/preferences/preferences.ui:1461
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Leyfa geymslu á HTML5 vefefni"
 
-#: lib/preferences/preferences.ui:1448
+#: lib/preferences/preferences.ui:1468
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Eyða geymdu HTML5 vefefni þegar hætt er í forritinu"
 
-#: lib/preferences/preferences.ui:1474
+#: lib/preferences/preferences.ui:1494
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Eyða núna"
 
-#: lib/preferences/preferences.ui:1513
+#: lib/preferences/preferences.ui:1533
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Uppsetning milliþjóns (proxy)"
 
-#: lib/preferences/preferences.ui:1532
+#: lib/preferences/preferences.ui:1552
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Stillingar kerfis fyrir milliþjón"
 
-#: lib/preferences/preferences.ui:1555
+#: lib/preferences/preferences.ui:1575
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Handvirk uppsetning"
 
-#: lib/preferences/preferences.ui:1565
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1570
+#: lib/preferences/preferences.ui:1590
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1585
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Gátt:"
 
-#: lib/preferences/preferences.ui:1606
+#: lib/preferences/preferences.ui:1626
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Notandanafn:"
 
-#: lib/preferences/preferences.ui:1616
+#: lib/preferences/preferences.ui:1636
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Lykilorð:"
 
-#: lib/preferences/preferences.ui:1645
+#: lib/preferences/preferences.ui:1665
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Enginn milliþjónn"
 
-#: lib/preferences/preferences.ui:1660
+#: lib/preferences/preferences.ui:1680
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Leturgerðir</b>"
 
-#: lib/preferences/preferences.ui:1673
+#: lib/preferences/preferences.ui:1693
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Staðlað"
 
-#: lib/preferences/preferences.ui:1680
+#: lib/preferences/preferences.ui:1700
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Jafnbreitt"
 
-#: lib/preferences/preferences.ui:1690
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Broddletur (serif)"
 
-#: lib/preferences/preferences.ui:1700
+#: lib/preferences/preferences.ui:1720
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Steinskrift (sans)"
 
-#: lib/preferences/preferences.ui:1710
+#: lib/preferences/preferences.ui:1730
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Skriftletur"
 
-#: lib/preferences/preferences.ui:1762
+#: lib/preferences/preferences.ui:1782
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasíu"
 
-#: lib/preferences/preferences.ui:1769
+#: lib/preferences/preferences.ui:1789
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Leturstærðir</b>"
 
-#: lib/preferences/preferences.ui:1778
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Stærð á jafnbreiðu letri"
 
-#: lib/preferences/preferences.ui:1785
+#: lib/preferences/preferences.ui:1805
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Sjálfgefin stærð leturs"
 
-#: lib/preferences/preferences.ui:1812
+#: lib/preferences/preferences.ui:1832
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Lágmarks leturstærð"
 
-#: lib/preferences/preferences.ui:1819
+#: lib/preferences/preferences.ui:1839
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Lágmarks raunleturstærð"
 
-#: lib/preferences/preferences.ui:1852
+#: lib/preferences/preferences.ui:1872
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Flýtilyklar</b>"
 
-#: lib/preferences/preferences.ui:1859
+#: lib/preferences/preferences.ui:1879
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Skipta um flipa með Alt + númer flipa"
 
-#: lib/preferences/preferences.ui:1866
+#: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Hlaða inn hraðvali með með Ctrl + númer hraðvals"
 
-#: lib/preferences/preferences.ui:1873
+#: lib/preferences/preferences.ui:1893
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4957,12 +4970,12 @@ msgstr ""
 "Skilgreindir flýtilyklar:<br/><b>1</b> - fyrri flipi<br/><b>2</b> - næsti "
 "flipi<br/><b>/</b> - leita á síðu"
 
-#: lib/preferences/preferences.ui:1876
+#: lib/preferences/preferences.ui:1896
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Nota eins-lykils flýtilykla"
 
-#: lib/preferences/preferences.ui:1883
+#: lib/preferences/preferences.ui:1903
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4971,127 +4984,127 @@ msgstr ""
 "Ef ekki er hakað við þetta, er komið í veg fyrir að hætt sé í forritinu "
 "fyrir slysni ef ætlunin var að nota Ctrl-W flýtilykilinn."
 
-#: lib/preferences/preferences.ui:1886
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Loka forriti með Ctrl-Q"
 
-#: lib/preferences/preferences.ui:1910
+#: lib/preferences/preferences.ui:1930
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Staðsetning niðurhals</b>"
 
-#: lib/preferences/preferences.ui:1917
+#: lib/preferences/preferences.ui:1937
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Spyrja í hvert skipti um staðsetningu niðurhals"
 
-#: lib/preferences/preferences.ui:1924
+#: lib/preferences/preferences.ui:1944
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Staðsetning skilgreind af notanda: "
 
-#: lib/preferences/preferences.ui:1974
+#: lib/preferences/preferences.ui:1994
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Val við niðurhal</b>"
 
-#: lib/preferences/preferences.ui:1981
+#: lib/preferences/preferences.ui:2001
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Loka niðurhalsstjóra þegar niðurhali lýkur"
 
-#: lib/preferences/preferences.ui:1988
+#: lib/preferences/preferences.ui:2008
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Utanaðkomandi niðurhalsstjóri</b>"
 
-#: lib/preferences/preferences.ui:1995
+#: lib/preferences/preferences.ui:2015
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Nota utanaðkomandi niðurhalsstjóra"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2027
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Keyrsluskrá:"
 
-#: lib/preferences/preferences.ui:2014
+#: lib/preferences/preferences.ui:2034
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Breytur:"
 
-#: lib/preferences/preferences.ui:2024
+#: lib/preferences/preferences.ui:2044
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Skildu eftir autt ef þú ert ekki viss"
 
-#: lib/preferences/preferences.ui:2045
+#: lib/preferences/preferences.ui:2065
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> verður skipt út með slóðinni sem á að sækja"
 
-#: lib/preferences/preferences.ui:2071
+#: lib/preferences/preferences.ui:2091
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Valkostir sjálfvirkrar útfyllingar</b>"
 
-#: lib/preferences/preferences.ui:2078
+#: lib/preferences/preferences.ui:2098
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Leyfa vistun lykilorða á vefsvæðum"
 
-#: lib/preferences/preferences.ui:2129
+#: lib/preferences/preferences.ui:2149
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Ljúka sjálfvirkt við lykilorð á vefsvæðum"
 
-#: lib/preferences/preferences.ui:2150
+#: lib/preferences/preferences.ui:2170
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Sýsla með vefkökur"
 
-#: lib/preferences/preferences.ui:2163
+#: lib/preferences/preferences.ui:2183
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Vefkökustýring"
 
-#: lib/preferences/preferences.ui:2186
+#: lib/preferences/preferences.ui:2206
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2199
+#: lib/preferences/preferences.ui:2219
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "Valkostir JavaScript"
 
-#: lib/preferences/preferences.ui:2206
+#: lib/preferences/preferences.ui:2226
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Senda \"ekki fylgjast með mér\" (Do Not Track) haus til vefþjóna"
 
-#: lib/preferences/preferences.ui:2213
+#: lib/preferences/preferences.ui:2233
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Vefkökur</b>"
 
-#: lib/preferences/preferences.ui:2239
+#: lib/preferences/preferences.ui:2259
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "Sýsla með einkalífsvalkosti JavaScript"
 
-#: lib/preferences/preferences.ui:2246
+#: lib/preferences/preferences.ui:2266
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Annað</b>"
 
-#: lib/preferences/preferences.ui:2267
+#: lib/preferences/preferences.ui:2287
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "HTML5 heimildir"
 
-#: lib/preferences/preferences.ui:2277
+#: lib/preferences/preferences.ui:2297
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Settings"
@@ -5099,32 +5112,32 @@ msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Stillingar"
 
-#: lib/preferences/preferences.ui:2309
+#: lib/preferences/preferences.ui:2329
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Rennur út:"
 
-#: lib/preferences/preferences.ui:2322
+#: lib/preferences/preferences.ui:2342
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " sekúndur"
 
-#: lib/preferences/preferences.ui:2344
+#: lib/preferences/preferences.ui:2364
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Tilkynningar</b>"
 
-#: lib/preferences/preferences.ui:2367
+#: lib/preferences/preferences.ui:2387
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Nota innbyggðar kerfistilkynningar (einungis Linux)"
 
-#: lib/preferences/preferences.ui:2374
+#: lib/preferences/preferences.ui:2394
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Ekki nota tilkynningar"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2417
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -5133,17 +5146,17 @@ msgstr ""
 "<b>Athugaðu: </b>Þú getur breytt staðsetningu OSD skjátilkynninga með því að "
 "draga þær til á skjánum."
 
-#: lib/preferences/preferences.ui:2423
+#: lib/preferences/preferences.ui:2443
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Birta skjátilkynningar (OSD)"
 
-#: lib/preferences/preferences.ui:2430
+#: lib/preferences/preferences.ui:2450
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Forskoðun"
 
-#: lib/preferences/preferences.ui:2495
+#: lib/preferences/preferences.ui:2515
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -5152,104 +5165,104 @@ msgstr ""
 "Ítarlegri upplýsingar um stafsetningaryfirferð má sjá <a href=\"https://"
 "userbase.kde.org/Falkon#Spell_Check\">hér</a>."
 
-#: lib/preferences/preferences.ui:2537
+#: lib/preferences/preferences.ui:2557
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Valkostir stafsetningaryfirferðar</b>"
 
-#: lib/preferences/preferences.ui:2544
+#: lib/preferences/preferences.ui:2564
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Virkja stafsetningaryfirferð"
 
-#: lib/preferences/preferences.ui:2551
+#: lib/preferences/preferences.ui:2571
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Möppur með orðasöfnum</b>"
 
-#: lib/preferences/preferences.ui:2602
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Engin tungumál fundust"
 
-#: lib/preferences/preferences.ui:2631
+#: lib/preferences/preferences.ui:2651
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Stýring samskiptareglukerfa"
 
-#: lib/preferences/preferences.ui:2653
+#: lib/preferences/preferences.ui:2673
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2665
+#: lib/preferences/preferences.ui:2685
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "Sýsla með sérsniðin skemu"
 
-#: lib/preferences/preferences.ui:2672
+#: lib/preferences/preferences.ui:2692
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Breyta auðkenni vafra</b>"
 
-#: lib/preferences/preferences.ui:2679
+#: lib/preferences/preferences.ui:2699
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Sýsla með leitarvélar</b>"
 
-#: lib/preferences/preferences.ui:2686
+#: lib/preferences/preferences.ui:2706
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Forgangstungumál fyrir vefsíður</b>"
 
-#: lib/preferences/preferences.ui:2693
+#: lib/preferences/preferences.ui:2713
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Stílasíða notanda</b>"
 
-#: lib/preferences/preferences.ui:2700
+#: lib/preferences/preferences.ui:2720
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Sýsla með samskiptareglukerfi</b>"
 
-#: lib/preferences/preferences.ui:2755
+#: lib/preferences/preferences.ui:2775
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Sýsl með undantekningar skilríkja"
 
-#: lib/preferences/preferences.ui:2795
+#: lib/preferences/preferences.ui:2815
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Stýring kennistrengja"
 
-#: lib/preferences/preferences.ui:2830
+#: lib/preferences/preferences.ui:2850
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Stílasafni hlaðið sjálfkrafa með öllum vefsvæðum: "
 
-#: lib/preferences/preferences.ui:2855
+#: lib/preferences/preferences.ui:2875
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Sýsl með sérsniðin skemu"
 
-#: lib/preferences/preferences.ui:2895
+#: lib/preferences/preferences.ui:2915
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Stýring leitarvéla"
 
-#: lib/preferences/preferences.ui:2935
+#: lib/preferences/preferences.ui:2955
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Tungumál"
 
-#: lib/preferences/preferences.ui:2970
+#: lib/preferences/preferences.ui:2990
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Skilríkjastjórnun</b>"
 
-#: lib/preferences/preferences.ui:2995
+#: lib/preferences/preferences.ui:3015
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
 msgstr ""
@@ -6116,7 +6129,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Koma í veg fyrir að þessi síða útbúi auka-samskiptaglugga"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:334
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -6127,27 +6140,27 @@ msgstr ""
 "%2</li></ul>Viltu að Falkon reyni að opna þennan tengil með forriti á "
 "kerfinu?"
 
-#: lib/webengine/webpage.cpp:337
+#: lib/webengine/webpage.cpp:339
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Muna val mitt fyrir þennan samskiptamáta"
 
-#: lib/webengine/webpage.cpp:338
+#: lib/webengine/webpage.cpp:340
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Utanaðkomandi fyrirspurn um samskiptamáta"
 
-#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Mistókst að hlaða inn síðu"
 
-#: lib/webengine/webpage.cpp:418
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Eitthvað mistókst þegar síðunni var hlaðið inn."
 
-#: lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -6155,27 +6168,27 @@ msgstr ""
 "Prófaðu að endurlesa síðuna eða að loka nokkrum flipum til að losa um "
 "eitthvað af tiltæku minni."
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Endurlesa síðu"
 
-#: lib/webengine/webpage.cpp:595
+#: lib/webengine/webpage.cpp:597
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Veldu skrá..."
 
-#: lib/webengine/webpage.cpp:599
+#: lib/webengine/webpage.cpp:601
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Veldu skrár..."
 
-#: lib/webengine/webpage.cpp:735
+#: lib/webengine/webpage.cpp:737
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Aðvörun vegna JavaScript"
 
-#: lib/webengine/webpage.cpp:744
+#: lib/webengine/webpage.cpp:746
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Koma í veg fyrir að þessi síða útbúi auka-samskiptaglugga"

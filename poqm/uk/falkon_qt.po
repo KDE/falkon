@@ -4044,7 +4044,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Ви впевнені, що хочете вилучити «%1»?"
 
-#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:673
+#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:675
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Типовий"
@@ -4054,94 +4054,94 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Зробити типовим"
 
-#: lib/preferences/preferences.cpp:329
+#: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Авто"
 
-#: lib/preferences/preferences.cpp:331
+#: lib/preferences/preferences.cpp:333
 msgctxt "Preferences|"
 msgid "Light"
 msgstr "Світла"
 
-#: lib/preferences/preferences.cpp:332
+#: lib/preferences/preferences.cpp:334
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr "Темна"
 
-#: lib/preferences/preferences.cpp:342
+#: lib/preferences/preferences.cpp:344
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:616
+#: lib/preferences/preferences.cpp:618
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Виберіть розташування виконуваного файла…"
 
-#: lib/preferences/preferences.cpp:659
+#: lib/preferences/preferences.cpp:661
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD сповіщення"
 
-#: lib/preferences/preferences.cpp:660
+#: lib/preferences/preferences.cpp:662
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr ""
 "Перетягніть по екрану в місце, де Ви хочете щоб розміщувалося сповіщення."
 
-#: lib/preferences/preferences.cpp:709
+#: lib/preferences/preferences.cpp:711
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Виберіть розташування завантаження…"
 
-#: lib/preferences/preferences.cpp:723
+#: lib/preferences/preferences.cpp:725
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Виберіть розташування таблиці стилів…"
 
-#: lib/preferences/preferences.cpp:734
+#: lib/preferences/preferences.cpp:736
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Вилучено"
 
-#: lib/preferences/preferences.cpp:842
+#: lib/preferences/preferences.cpp:844
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Виберіть шлях для кешу…"
 
-#: lib/preferences/preferences.cpp:873
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Новий профіль"
 
-#: lib/preferences/preferences.cpp:873
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Введіть ім'я нового профілю:"
 
-#: lib/preferences/preferences.cpp:883 lib/preferences/preferences.cpp:888
+#: lib/preferences/preferences.cpp:885 lib/preferences/preferences.cpp:890
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Помилка!"
 
-#: lib/preferences/preferences.cpp:883
+#: lib/preferences/preferences.cpp:885
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Такий профіль вже існує!"
 
-#: lib/preferences/preferences.cpp:888
+#: lib/preferences/preferences.cpp:890
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Неможливо створити теку профілю!"
 
-#: lib/preferences/preferences.cpp:899
+#: lib/preferences/preferences.cpp:901
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Підтвердження"
 
-#: lib/preferences/preferences.cpp:900
+#: lib/preferences/preferences.cpp:902
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4150,7 +4150,7 @@ msgid ""
 msgstr ""
 "Ви дійсно хочете остаточно вилучити профіль «%1»? Цю дію не можна скасувати!"
 
-#: lib/preferences/preferences.cpp:915 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:917 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Примітка: Ви не можете вилучити активний профіль."
@@ -4160,7 +4160,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Налаштування"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2144
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2164
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Загальне"
@@ -4370,151 +4370,164 @@ msgstr ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Кольори тла "
 "вебсторінки</span></p></body></html>"
 
-#: lib/preferences/preferences.ui:584
-msgctxt "Preferences|"
-msgid "Background color while loading:"
-msgstr "Колір тла при завантаженні:"
-
-#: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
-#: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
-#: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
-#: lib/preferences/preferences.ui:2728
+#: lib/preferences/preferences.ui:587 lib/preferences/preferences.ui:601
+#: lib/preferences/preferences.ui:1064 lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1956 lib/preferences/preferences.ui:2056
+#: lib/preferences/preferences.ui:2748
 msgctxt "Preferences|"
 msgid "..."
 msgstr "…"
 
-#: lib/preferences/preferences.ui:598
-msgctxt "Preferences|"
-msgid "Background color when loaded:"
-msgstr "Колір тла після завантаження:"
-
-#: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
-#: lib/preferences/preferences.ui:1051
+#: lib/preferences/preferences.ui:594 lib/preferences/preferences.ui:608
+#: lib/preferences/preferences.ui:1071
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Відновити"
 
-#: lib/preferences/preferences.ui:631
+#: lib/preferences/preferences.ui:615
+msgctxt "Preferences|"
+msgid "Background color when loaded:"
+msgstr "Колір тла після завантаження:"
+
+#: lib/preferences/preferences.ui:622
+msgctxt "Preferences|"
+msgid "Background color while loading:"
+msgstr "Колір тла при завантаженні:"
+
+#: lib/preferences/preferences.ui:629
+msgctxt "Preferences|miliseconds"
+msgid "ms"
+msgstr ""
+
+#: lib/preferences/preferences.ui:642
+msgctxt ""
+"Preferences|Time in milisencods which describes how long to wait after the "
+"page was initially loaded before switching the backgroung color to the "
+"loaded variant."
+msgid "Loaded state switch delay:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:651
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>Вікно переглядача</b>"
 
-#: lib/preferences/preferences.ui:679
+#: lib/preferences/preferences.ui:699
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "Поведінка вкладок"
 
-#: lib/preferences/preferences.ui:685
+#: lib/preferences/preferences.ui:705
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Ховати панель вкладок, коли відкрита лише одна вкладка"
 
-#: lib/preferences/preferences.ui:692
+#: lib/preferences/preferences.ui:712
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "Активувати останню вкладку, коли закривається активна вкладка"
 
-#: lib/preferences/preferences.ui:699
+#: lib/preferences/preferences.ui:719
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Відкривати нові вкладки після поточної вкладки"
 
-#: lib/preferences/preferences.ui:706
+#: lib/preferences/preferences.ui:726
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Відкривати нову порожню вкладку після активної вкладки"
 
-#: lib/preferences/preferences.ui:713
+#: lib/preferences/preferences.ui:733
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Відкривати контекстні вікна у вкладках"
 
-#: lib/preferences/preferences.ui:720
+#: lib/preferences/preferences.ui:740
 msgctxt "Preferences|"
 msgid "Block automatic popups"
 msgstr "Блокувати автоматичні контекстні панелі"
 
-#: lib/preferences/preferences.ui:727
+#: lib/preferences/preferences.ui:747
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Завжди перемикатися між вкладками за допомогою колеса миші"
 
-#: lib/preferences/preferences.ui:734
+#: lib/preferences/preferences.ui:754
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Автоматично перемикатись на нову вкладку"
 
-#: lib/preferences/preferences.ui:741
+#: lib/preferences/preferences.ui:761
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Не закривати вікно після закриття останньої вкладки"
 
-#: lib/preferences/preferences.ui:748
+#: lib/preferences/preferences.ui:768
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Питати, коли закриваються багато вкладок"
 
-#: lib/preferences/preferences.ui:755
+#: lib/preferences/preferences.ui:775
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Показувати кнопку закриття вкладок"
 
-#: lib/preferences/preferences.ui:764
+#: lib/preferences/preferences.ui:784
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Показувати кнопку закриття на неактивних вкладках:"
 
-#: lib/preferences/preferences.ui:772
+#: lib/preferences/preferences.ui:792
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Автоматично"
 
-#: lib/preferences/preferences.ui:777
+#: lib/preferences/preferences.ui:797
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Завжди"
 
-#: lib/preferences/preferences.ui:782
+#: lib/preferences/preferences.ui:802
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Ніколи"
 
-#: lib/preferences/preferences.ui:822
+#: lib/preferences/preferences.ui:842
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Поведінка рядку адреси"
 
-#: lib/preferences/preferences.ui:830
+#: lib/preferences/preferences.ui:850
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Робити підказки під час набирання адреси:"
 
-#: lib/preferences/preferences.ui:844
+#: lib/preferences/preferences.ui:864
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Історія і Закладки"
 
-#: lib/preferences/preferences.ui:849
+#: lib/preferences/preferences.ui:869
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Історія"
 
-#: lib/preferences/preferences.ui:854
+#: lib/preferences/preferences.ui:874
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Закладки"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:879
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Нічого"
 
-#: lib/preferences/preferences.ui:885
+#: lib/preferences/preferences.ui:905
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Увімкнути вбудовані пропозиції"
 
-#: lib/preferences/preferences.ui:892
+#: lib/preferences/preferences.ui:912
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4522,360 +4535,360 @@ msgstr ""
 "Натискати \"Shift\" щоб не перемикатись на іншу вкладку, а завантажити url-"
 "адресу в поточній вкладці"
 
-#: lib/preferences/preferences.ui:895
+#: lib/preferences/preferences.ui:915
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "Пропонувати перемкнути вкладку, якщо повна url-адреса вже завантажена"
 
-#: lib/preferences/preferences.ui:902
+#: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Завжди показувати піктограму переходу"
 
-#: lib/preferences/preferences.ui:909
+#: lib/preferences/preferences.ui:929
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Показувати мітку масштабу"
 
-#: lib/preferences/preferences.ui:916
+#: lib/preferences/preferences.ui:936
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Позначати весь текст подвійним клацанням в адресному рядку"
 
-#: lib/preferences/preferences.ui:923
+#: lib/preferences/preferences.ui:943
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Позначати весь текст одинарним клацанням в адресному рядку"
 
-#: lib/preferences/preferences.ui:930
+#: lib/preferences/preferences.ui:950
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Увімкнути автоматичний пошук з рядка адреси"
 
-#: lib/preferences/preferences.ui:937
+#: lib/preferences/preferences.ui:957
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Шукати за допомогою типового пошукового рушія"
 
-#: lib/preferences/preferences.ui:944
+#: lib/preferences/preferences.ui:964
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Показувати підказки пошуку"
 
-#: lib/preferences/preferences.ui:951
+#: lib/preferences/preferences.ui:971
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr "Розгорнути контекстну панель пропозицій до ширини екрана"
 
-#: lib/preferences/preferences.ui:974
+#: lib/preferences/preferences.ui:994
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Показувати поступ завантаження в адресному рядку"
 
-#: lib/preferences/preferences.ui:1007
+#: lib/preferences/preferences.ui:1027
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Заповнювати"
 
-#: lib/preferences/preferences.ui:1012
+#: lib/preferences/preferences.ui:1032
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Низ"
 
-#: lib/preferences/preferences.ui:1017
+#: lib/preferences/preferences.ui:1037
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Верх"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1045
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Колір користувача:"
 
-#: lib/preferences/preferences.ui:1041
+#: lib/preferences/preferences.ui:1061
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Оберіть колір"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1122
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Налаштування мережі"
 
-#: lib/preferences/preferences.ui:1110
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "Увімкнути програмний інтерфейс додатків Pepper (PPAPI)"
 
-#: lib/preferences/preferences.ui:1117
+#: lib/preferences/preferences.ui:1137
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Використовувати вбудований засіб перегляду PDF (потребує PPAPI)"
 
-#: lib/preferences/preferences.ui:1124
+#: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Дозволити JavaScript"
 
-#: lib/preferences/preferences.ui:1131
+#: lib/preferences/preferences.ui:1151
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Включати посилання до послідовності перемикання фокусу"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1138
+#: lib/preferences/preferences.ui:1158
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Друкувати фон елементу"
 
-#: lib/preferences/preferences.ui:1145
+#: lib/preferences/preferences.ui:1165
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Анімоване прокручування"
 
-#: lib/preferences/preferences.ui:1152
+#: lib/preferences/preferences.ui:1172
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Дозволити просторову навігацію"
 
-#: lib/preferences/preferences.ui:1159
+#: lib/preferences/preferences.ui:1179
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Використовувати системні смужки прокрутки"
 
-#: lib/preferences/preferences.ui:1166
+#: lib/preferences/preferences.ui:1186
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Вимкнути автоматичне відтворення відео"
 
-#: lib/preferences/preferences.ui:1173
+#: lib/preferences/preferences.ui:1193
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Запобігати у WebRTC наданню локальних IP-адрес"
 
-#: lib/preferences/preferences.ui:1180
+#: lib/preferences/preferences.ui:1200
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Дозволити попереднє отримання DNS"
 
-#: lib/preferences/preferences.ui:1187
+#: lib/preferences/preferences.ui:1207
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Увімкнути захоплення екрана"
 
-#: lib/preferences/preferences.ui:1194
+#: lib/preferences/preferences.ui:1214
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Використовувати апаратне прискорення (потребує перезапуску)"
 
-#: lib/preferences/preferences.ui:1201
+#: lib/preferences/preferences.ui:1221
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Дозволити читання з полотна"
 
-#: lib/preferences/preferences.ui:1208
+#: lib/preferences/preferences.ui:1228
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr "Примусовий темний режим"
 
-#: lib/preferences/preferences.ui:1217
+#: lib/preferences/preferences.ui:1237
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr "Бажана схема кольорів:"
 
-#: lib/preferences/preferences.ui:1252
+#: lib/preferences/preferences.ui:1272
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Колесо миші прокручує"
 
-#: lib/preferences/preferences.ui:1272
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "рядків на сторінку"
 
-#: lib/preferences/preferences.ui:1283
+#: lib/preferences/preferences.ui:1303
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Типове масштабування сторінок:"
 
-#: lib/preferences/preferences.ui:1322
+#: lib/preferences/preferences.ui:1342
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Локальне сховище"
 
-#: lib/preferences/preferences.ui:1330
+#: lib/preferences/preferences.ui:1350
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Дозволити зберігання кешу мережі на диску"
 
-#: lib/preferences/preferences.ui:1353
+#: lib/preferences/preferences.ui:1373
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Вилучати кеш під час закриття"
 
-#: lib/preferences/preferences.ui:1360
+#: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Максимум:"
 
-#: lib/preferences/preferences.ui:1367
+#: lib/preferences/preferences.ui:1387
 msgctxt "Preferences|"
 msgid " MB"
 msgstr "МБ"
 
-#: lib/preferences/preferences.ui:1383
+#: lib/preferences/preferences.ui:1403
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Зберігати кеш в:"
 
-#: lib/preferences/preferences.ui:1411
+#: lib/preferences/preferences.ui:1431
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Дозволити зберігання історії"
 
-#: lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1438
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Вилучати журнал під час закриття"
 
-#: lib/preferences/preferences.ui:1441
+#: lib/preferences/preferences.ui:1461
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Дозволити локальне зберігання даних HTML5"
 
-#: lib/preferences/preferences.ui:1448
+#: lib/preferences/preferences.ui:1468
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Вилучати локально збережені дані HTML5 під час закриття"
 
-#: lib/preferences/preferences.ui:1474
+#: lib/preferences/preferences.ui:1494
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Вилучити зараз"
 
-#: lib/preferences/preferences.ui:1513
+#: lib/preferences/preferences.ui:1533
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Конфігурація проксі"
 
-#: lib/preferences/preferences.ui:1532
+#: lib/preferences/preferences.ui:1552
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Системні налаштування проксі"
 
-#: lib/preferences/preferences.ui:1555
+#: lib/preferences/preferences.ui:1575
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Ручні налаштування"
 
-#: lib/preferences/preferences.ui:1565
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1570
+#: lib/preferences/preferences.ui:1590
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1585
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Порт:"
 
-#: lib/preferences/preferences.ui:1606
+#: lib/preferences/preferences.ui:1626
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Ім'я користувача:"
 
-#: lib/preferences/preferences.ui:1616
+#: lib/preferences/preferences.ui:1636
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Пароль:"
 
-#: lib/preferences/preferences.ui:1645
+#: lib/preferences/preferences.ui:1665
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Без проксі"
 
-#: lib/preferences/preferences.ui:1660
+#: lib/preferences/preferences.ui:1680
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Сімейства шрифтів</b>"
 
-#: lib/preferences/preferences.ui:1673
+#: lib/preferences/preferences.ui:1693
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Стандарт"
 
-#: lib/preferences/preferences.ui:1680
+#: lib/preferences/preferences.ui:1700
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Фіксований"
 
-#: lib/preferences/preferences.ui:1690
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1700
+#: lib/preferences/preferences.ui:1720
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: lib/preferences/preferences.ui:1710
+#: lib/preferences/preferences.ui:1730
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Cursive"
 
-#: lib/preferences/preferences.ui:1762
+#: lib/preferences/preferences.ui:1782
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasy"
 
-#: lib/preferences/preferences.ui:1769
+#: lib/preferences/preferences.ui:1789
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Розміри шрифту</b>"
 
-#: lib/preferences/preferences.ui:1778
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Фіксований розмір шрифту"
 
-#: lib/preferences/preferences.ui:1785
+#: lib/preferences/preferences.ui:1805
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Типовий розмір шрифту"
 
-#: lib/preferences/preferences.ui:1812
+#: lib/preferences/preferences.ui:1832
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Мінімальний розмір шрифту"
 
-#: lib/preferences/preferences.ui:1819
+#: lib/preferences/preferences.ui:1839
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Мінімальний логічний розмір шрифту"
 
-#: lib/preferences/preferences.ui:1852
+#: lib/preferences/preferences.ui:1872
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Гарячі клавіші</b>"
 
-#: lib/preferences/preferences.ui:1859
+#: lib/preferences/preferences.ui:1879
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Перемикатись між вкладками за допомогою \"Alt\" і цифрових клавіш"
 
-#: lib/preferences/preferences.ui:1866
+#: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr ""
 "Завантажувати сторінки зі «Швидкого набору» за допомогою «Ctrl» і цифрових "
 "клавіш"
 
-#: lib/preferences/preferences.ui:1873
+#: lib/preferences/preferences.ui:1893
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4884,12 +4897,12 @@ msgstr ""
 "Існуюче скорочення:<br/><b>1</b> — попередня вкладка<br/><b>2</b> — наступна "
 "вкладка<br/><b>/</b> — пошук на сторінці"
 
-#: lib/preferences/preferences.ui:1876
+#: lib/preferences/preferences.ui:1896
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Використовувати єдині скорочення клавіш"
 
-#: lib/preferences/preferences.ui:1883
+#: lib/preferences/preferences.ui:1903
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4898,157 +4911,157 @@ msgstr ""
 "Якщо не позначено, запобігає випадковому виходу із програми при навмисному "
 "натисненні скорочення Ctrl-W."
 
-#: lib/preferences/preferences.ui:1886
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Закрити програму через Ctrl-Q"
 
-#: lib/preferences/preferences.ui:1910
+#: lib/preferences/preferences.ui:1930
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Розташування завантажень</b>"
 
-#: lib/preferences/preferences.ui:1917
+#: lib/preferences/preferences.ui:1937
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Щоразу питати про розташування завантаження"
 
-#: lib/preferences/preferences.ui:1924
+#: lib/preferences/preferences.ui:1944
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Використовувати визначене місце: "
 
-#: lib/preferences/preferences.ui:1974
+#: lib/preferences/preferences.ui:1994
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Параметри завантаження</b>"
 
-#: lib/preferences/preferences.ui:1981
+#: lib/preferences/preferences.ui:2001
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Закрити менеджер завантаження коли завантаження закінчиться"
 
-#: lib/preferences/preferences.ui:1988
+#: lib/preferences/preferences.ui:2008
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Зовнішній менеджер завантаження</b>"
 
-#: lib/preferences/preferences.ui:1995
+#: lib/preferences/preferences.ui:2015
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Використовувати зовнішній менеджер завантаження"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2027
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Виконуваний файл:"
 
-#: lib/preferences/preferences.ui:2014
+#: lib/preferences/preferences.ui:2034
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Параметри запуску:"
 
-#: lib/preferences/preferences.ui:2024
+#: lib/preferences/preferences.ui:2044
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Лишити порожнім якщо немає впевненості"
 
-#: lib/preferences/preferences.ui:2045
+#: lib/preferences/preferences.ui:2065
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> буде замінено URL-адресою завантаження"
 
-#: lib/preferences/preferences.ui:2071
+#: lib/preferences/preferences.ui:2091
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Параметри автозаповнення</b>"
 
-#: lib/preferences/preferences.ui:2078
+#: lib/preferences/preferences.ui:2098
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Дозволити зберігання паролів з сайтів"
 
-#: lib/preferences/preferences.ui:2129
+#: lib/preferences/preferences.ui:2149
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Автоматично завершувати паролі на сайтах"
 
-#: lib/preferences/preferences.ui:2150
+#: lib/preferences/preferences.ui:2170
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Керування куками"
 
-#: lib/preferences/preferences.ui:2163
+#: lib/preferences/preferences.ui:2183
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Менеджер кук"
 
-#: lib/preferences/preferences.ui:2186
+#: lib/preferences/preferences.ui:2206
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2199
+#: lib/preferences/preferences.ui:2219
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "Налаштування JavaScript"
 
-#: lib/preferences/preferences.ui:2206
+#: lib/preferences/preferences.ui:2226
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Відсилати серверам заголовок \"Не відстежувати\""
 
-#: lib/preferences/preferences.ui:2213
+#: lib/preferences/preferences.ui:2233
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Куки</b>"
 
-#: lib/preferences/preferences.ui:2239
+#: lib/preferences/preferences.ui:2259
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "Керувати налаштуваннями приватності JavaScript"
 
-#: lib/preferences/preferences.ui:2246
+#: lib/preferences/preferences.ui:2266
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Інше</b>"
 
-#: lib/preferences/preferences.ui:2267
+#: lib/preferences/preferences.ui:2287
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "Дозволи HTML5"
 
-#: lib/preferences/preferences.ui:2277
+#: lib/preferences/preferences.ui:2297
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Параметри сайта"
 
-#: lib/preferences/preferences.ui:2309
+#: lib/preferences/preferences.ui:2329
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Час відображення:"
 
-#: lib/preferences/preferences.ui:2322
+#: lib/preferences/preferences.ui:2342
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " секунд"
 
-#: lib/preferences/preferences.ui:2344
+#: lib/preferences/preferences.ui:2364
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Сповіщення</b>"
 
-#: lib/preferences/preferences.ui:2367
+#: lib/preferences/preferences.ui:2387
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Використовувати рідні системні сповіщення (тільки для Linux)"
 
-#: lib/preferences/preferences.ui:2374
+#: lib/preferences/preferences.ui:2394
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Не використовувати сповіщення"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2417
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -5057,17 +5070,17 @@ msgstr ""
 "<b>Примітка: </b>Ви можете змінити розташування екранних сповіщень, "
 "перетягуючи їх екраном."
 
-#: lib/preferences/preferences.ui:2423
+#: lib/preferences/preferences.ui:2443
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Використовувати OSD-сповіщення"
 
-#: lib/preferences/preferences.ui:2430
+#: lib/preferences/preferences.ui:2450
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Перегляд"
 
-#: lib/preferences/preferences.ui:2495
+#: lib/preferences/preferences.ui:2515
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -5076,32 +5089,32 @@ msgstr ""
 "Щоб отримати більше інформації про перевірку правопису, дивіться <a href="
 "\"https://userbase.kde.org/Falkon#Spell_Check\">вікі</a>."
 
-#: lib/preferences/preferences.ui:2537
+#: lib/preferences/preferences.ui:2557
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Налаштування перевірки правопису</b>"
 
-#: lib/preferences/preferences.ui:2544
+#: lib/preferences/preferences.ui:2564
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Увімкнути перевірку правопису"
 
-#: lib/preferences/preferences.ui:2551
+#: lib/preferences/preferences.ui:2571
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Теки словників</b>"
 
-#: lib/preferences/preferences.ui:2602
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Не знайдено мов"
 
-#: lib/preferences/preferences.ui:2631
+#: lib/preferences/preferences.ui:2651
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Керування обробниками протоколів"
 
-#: lib/preferences/preferences.ui:2653
+#: lib/preferences/preferences.ui:2673
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
@@ -5110,72 +5123,72 @@ msgstr ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Керування "
 "протоколами автоматичного відкриття</span></p></body></html>"
 
-#: lib/preferences/preferences.ui:2665
+#: lib/preferences/preferences.ui:2685
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "Керування нетиповими схемами"
 
-#: lib/preferences/preferences.ui:2672
+#: lib/preferences/preferences.ui:2692
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Змінити ідентифікацію переглядача</b>"
 
-#: lib/preferences/preferences.ui:2679
+#: lib/preferences/preferences.ui:2699
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Управління пошуковими системами</b>"
 
-#: lib/preferences/preferences.ui:2686
+#: lib/preferences/preferences.ui:2706
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Пріоритетна мова для вебсайтів</b>"
 
-#: lib/preferences/preferences.ui:2693
+#: lib/preferences/preferences.ui:2713
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Використовувати стилі користувачів</b>"
 
-#: lib/preferences/preferences.ui:2700
+#: lib/preferences/preferences.ui:2720
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Керування обробниками протоколів</b>"
 
-#: lib/preferences/preferences.ui:2755
+#: lib/preferences/preferences.ui:2775
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Керування виключеннями для сертифікатів"
 
-#: lib/preferences/preferences.ui:2795
+#: lib/preferences/preferences.ui:2815
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Менеджер User-Agent’ів"
 
-#: lib/preferences/preferences.ui:2830
+#: lib/preferences/preferences.ui:2850
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Автоматично завантажувати стилі разом з усіма вебсайтами: "
 
-#: lib/preferences/preferences.ui:2855
+#: lib/preferences/preferences.ui:2875
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Керування нетиповими схемами"
 
-#: lib/preferences/preferences.ui:2895
+#: lib/preferences/preferences.ui:2915
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Менеджер пошукових систем"
 
-#: lib/preferences/preferences.ui:2935
+#: lib/preferences/preferences.ui:2955
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Мови"
 
-#: lib/preferences/preferences.ui:2970
+#: lib/preferences/preferences.ui:2990
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Керування сертифікатами</b>"
 
-#: lib/preferences/preferences.ui:2995
+#: lib/preferences/preferences.ui:3015
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
 msgstr "Протоколи автоматичного відкриття"
@@ -6012,7 +6025,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Перешкоджати створенню додаткових діалогів на цій сторінці"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:334
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -6023,27 +6036,27 @@ msgstr ""
 "<ul><li>%2</li></ul>. Чи хочете ви, аби Falkon спробував відкрити це "
 "посилання за допомогою системної програми?"
 
-#: lib/webengine/webpage.cpp:337
+#: lib/webengine/webpage.cpp:339
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Запам'ятати мій вибір для цього протоколу"
 
-#: lib/webengine/webpage.cpp:338
+#: lib/webengine/webpage.cpp:340
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Запит зовнішнього протоколу"
 
-#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Не вдалося завантажити сторінку"
 
-#: lib/webengine/webpage.cpp:418
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Під час завантаження цієї сторінки щось пішло не так."
 
-#: lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -6051,27 +6064,27 @@ msgstr ""
 "Спробуйте перезавантажити сторінку або закрити деякі вкладки, щоб звільнити "
 "пам'ять."
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Перезавантажити сторінку"
 
-#: lib/webengine/webpage.cpp:595
+#: lib/webengine/webpage.cpp:597
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Оберіть файл…"
 
-#: lib/webengine/webpage.cpp:599
+#: lib/webengine/webpage.cpp:601
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Оберіть файли…"
 
-#: lib/webengine/webpage.cpp:735
+#: lib/webengine/webpage.cpp:737
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Тривога JavaScript"
 
-#: lib/webengine/webpage.cpp:744
+#: lib/webengine/webpage.cpp:746
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Перешкоджати створенню додаткових діалогів на цій сторінці"

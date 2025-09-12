@@ -4032,7 +4032,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Okukakasa '%1' oyagala okugigyako?"
 
-#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:673
+#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:675
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Ebya bulijjo"
@@ -4042,93 +4042,93 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Fuulawo awa bulijjo"
 
-#: lib/preferences/preferences.cpp:329
+#: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Yesalirewo"
 
-#: lib/preferences/preferences.cpp:331
+#: lib/preferences/preferences.cpp:333
 msgctxt "Preferences|"
 msgid "Light"
 msgstr "Langi ntangaalirivu"
 
-#: lib/preferences/preferences.cpp:332
+#: lib/preferences/preferences.cpp:334
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr "Langi nzirugalirivu"
 
-#: lib/preferences/preferences.cpp:342
+#: lib/preferences/preferences.cpp:344
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1%"
 
-#: lib/preferences/preferences.cpp:616
+#: lib/preferences/preferences.cpp:618
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Tegeka obusangiro bwa puloguramu..."
 
-#: lib/preferences/preferences.cpp:659
+#: lib/preferences/preferences.cpp:661
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Kadirisa ka OSD"
 
-#: lib/preferences/preferences.cpp:660
+#: lib/preferences/preferences.cpp:662
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Kasike okateeke w'oyagala kabeere."
 
-#: lib/preferences/preferences.cpp:709
+#: lib/preferences/preferences.cpp:711
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Londa ekifo ebiwanudwa mwe binaagendanga..."
 
-#: lib/preferences/preferences.cpp:723
+#: lib/preferences/preferences.cpp:725
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Tegeka obusangiro bw'olukalala olufuga endabika..."
 
-#: lib/preferences/preferences.cpp:734
+#: lib/preferences/preferences.cpp:736
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Bigyidwawo"
 
-#: lib/preferences/preferences.cpp:842
+#: lib/preferences/preferences.cpp:844
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Tegeka obusangiro bw'eggwanika ly'ebyanguyisa..."
 
-#: lib/preferences/preferences.cpp:873
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Mateeka Mapya"
 
-#: lib/preferences/preferences.cpp:873
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Wandika linnya lya mateeka mapya:"
 
-#: lib/preferences/preferences.cpp:883 lib/preferences/preferences.cpp:888
+#: lib/preferences/preferences.cpp:885 lib/preferences/preferences.cpp:890
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Kiremya!"
 
-#: lib/preferences/preferences.cpp:883
+#: lib/preferences/preferences.cpp:885
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Eriyo mateeka agamaze kutumwa linnya lino!"
 
-#: lib/preferences/preferences.cpp:888
+#: lib/preferences/preferences.cpp:890
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Nnemedwa kukolawo tterekero lya mateeka!"
 
-#: lib/preferences/preferences.cpp:899
+#: lib/preferences/preferences.cpp:901
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Kukakasa"
 
-#: lib/preferences/preferences.cpp:900
+#: lib/preferences/preferences.cpp:902
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4138,7 +4138,7 @@ msgstr ""
 "Okakasa oyagala okugyawo mateeka ga \"%1\"? Tojjakusobola kujjulula kikolwa "
 "kino!"
 
-#: lib/preferences/preferences.cpp:915 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:917 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Genderera: Tosobola kugyawo mateeka agagobererwa kakano."
@@ -4148,7 +4148,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Nteekateeka"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2144
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2164
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Bitalibimu"
@@ -4359,155 +4359,168 @@ msgstr ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Langi ez'oku "
 "Bwaliriro bw'Olupapula</span></p></body></html>"
 
-#: lib/preferences/preferences.ui:584
-msgctxt "Preferences|"
-msgid "Background color while loading:"
-msgstr "Langi ey'okubwaliriro nga lukyali mu kuwangibwa:"
-
-#: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
-#: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
-#: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
-#: lib/preferences/preferences.ui:2728
+#: lib/preferences/preferences.ui:587 lib/preferences/preferences.ui:601
+#: lib/preferences/preferences.ui:1064 lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1956 lib/preferences/preferences.ui:2056
+#: lib/preferences/preferences.ui:2748
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:598
-msgctxt "Preferences|"
-msgid "Background color when loaded:"
-msgstr "Langi ey'okubwaliriro nga luwangidwa:"
-
-#: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
-#: lib/preferences/preferences.ui:1051
+#: lib/preferences/preferences.ui:594 lib/preferences/preferences.ui:608
+#: lib/preferences/preferences.ui:1071
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Zzawo langi eya bulijjo"
 
-#: lib/preferences/preferences.ui:631
+#: lib/preferences/preferences.ui:615
+msgctxt "Preferences|"
+msgid "Background color when loaded:"
+msgstr "Langi ey'okubwaliriro nga luwangidwa:"
+
+#: lib/preferences/preferences.ui:622
+msgctxt "Preferences|"
+msgid "Background color while loading:"
+msgstr "Langi ey'okubwaliriro nga lukyali mu kuwangibwa:"
+
+#: lib/preferences/preferences.ui:629
+msgctxt "Preferences|miliseconds"
+msgid "ms"
+msgstr ""
+
+#: lib/preferences/preferences.ui:642
+msgctxt ""
+"Preferences|Time in milisencods which describes how long to wait after the "
+"page was initially loaded before switching the backgroung color to the "
+"loaded variant."
+msgid "Loaded state switch delay:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:651
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>Mu Ddirisa</b>"
 
-#: lib/preferences/preferences.ui:679
+#: lib/preferences/preferences.ui:699
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "Nneyisa ya butimbe"
 
-#: lib/preferences/preferences.ui:685
+#: lib/preferences/preferences.ui:705
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Katimbe bwe kabawo kamu kokka waleme kubawo kapande k'erinnnya lya ko"
 
-#: lib/preferences/preferences.ui:692
+#: lib/preferences/preferences.ui:712
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "Bw'ogyawo akatimbe akalabika waddewo ke wasembye okukebera"
 
-#: lib/preferences/preferences.ui:699
+#: lib/preferences/preferences.ui:719
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Bw'oleeta akatimbe akapya, kaliraane akalabika kakano"
 
-#: lib/preferences/preferences.ui:706
+#: lib/preferences/preferences.ui:726
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Bw'oleeta akatimbe akapya akeereere, kaliraane akalabika kakano"
 
-#: lib/preferences/preferences.ui:713
+#: lib/preferences/preferences.ui:733
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Obudirisa obututunuka bufuukenga butimbe mu kifo ky'okwetengerera"
 
-#: lib/preferences/preferences.ui:720
+#: lib/preferences/preferences.ui:740
 msgctxt "Preferences|"
 msgid "Block automatic popups"
 msgstr "Gaananga obututunuka obwereeta bwokka"
 
-#: lib/preferences/preferences.ui:727
+#: lib/preferences/preferences.ui:747
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Okunyoola namuziga ey'okukasongesebwa kukyusenga akatimbe k'olaba"
 
-#: lib/preferences/preferences.ui:734
+#: lib/preferences/preferences.ui:754
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Katimbe kapya kaddenga kungulu"
 
-#: lib/preferences/preferences.ui:741
+#: lib/preferences/preferences.ui:761
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Falkon esigalewo ng'ogyewo butimbe bwonna"
 
-#: lib/preferences/preferences.ui:748
+#: lib/preferences/preferences.ui:768
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr ""
 "Bwe wabawo butimbe obusukka mu kamu Falkon esookenga kukubuuza okukakasa nga "
 "ogiggalawo"
 
-#: lib/preferences/preferences.ui:755
+#: lib/preferences/preferences.ui:775
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Wabewo ppeesa erireeta olukalala lw'obutimbe obugyidwawo"
 
-#: lib/preferences/preferences.ui:764
+#: lib/preferences/preferences.ui:784
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Obutimbe obubikkidwa bubeerengako mapeesa ag'okubugyawo:"
 
-#: lib/preferences/preferences.ui:772
+#: lib/preferences/preferences.ui:792
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Kisinzire ku mbeera eriwo"
 
-#: lib/preferences/preferences.ui:777
+#: lib/preferences/preferences.ui:797
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Bulijjo"
 
-#: lib/preferences/preferences.ui:782
+#: lib/preferences/preferences.ui:802
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Nedda"
 
-#: lib/preferences/preferences.ui:822
+#: lib/preferences/preferences.ui:842
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Nneyisa ya lubaawo okulabika ndagiriro"
 
-#: lib/preferences/preferences.ui:830
+#: lib/preferences/preferences.ui:850
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr ""
 "Bw'obanga owandika awalabikira ndagiriro Falkon ekulagenga ebifaanana "
 "by'owandika ebiri mu:"
 
-#: lib/preferences/preferences.ui:844
+#: lib/preferences/preferences.ui:864
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Ebirabidwa ne mu Bukwatakifo"
 
-#: lib/preferences/preferences.ui:849
+#: lib/preferences/preferences.ui:869
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Ebirabidwa"
 
-#: lib/preferences/preferences.ui:854
+#: lib/preferences/preferences.ui:874
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Bukwatakifo"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:879
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Ereme kubaako by'ekulaga"
 
-#: lib/preferences/preferences.ui:885
+#: lib/preferences/preferences.ui:905
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Wa magezi"
 
-#: lib/preferences/preferences.ui:892
+#: lib/preferences/preferences.ui:912
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4515,108 +4528,108 @@ msgstr ""
 "Nyiga eppeesa erya \"Shift\" ebiri ku ndagiriro eya url birabikire mu "
 "katimbe akaliwo mu kifo eky'okugenda mu kapya"
 
-#: lib/preferences/preferences.ui:895
+#: lib/preferences/preferences.ui:915
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr ""
 "Bw'owandika ndagiriro y'ekifo ekirabikira mu katimbe akasiikirizidwa, Falkon "
 "ekuteerewo ekisobola okukaleeta kungulu"
 
-#: lib/preferences/preferences.ui:902
+#: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Akafaananyi akasimbula kalabikenga lubeerera"
 
-#: lib/preferences/preferences.ui:909
+#: lib/preferences/preferences.ui:929
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Wabeewo akapande ak'obuzimbulukufu"
 
-#: lib/preferences/preferences.ui:916
+#: lib/preferences/preferences.ui:936
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr ""
 "Okunyiganyiga mirundi ebiri awali ndagiriro kitangaaze ebigambo ebiri awo "
 "byonna"
 
-#: lib/preferences/preferences.ui:923
+#: lib/preferences/preferences.ui:943
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Bw'onyiga awalabikira ndagiriro, ebiwandikidw'awo byonna birondebwa"
 
-#: lib/preferences/preferences.ui:930
+#: lib/preferences/preferences.ui:950
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Puloguramu esobole okunoonyezesa by'owandise mu kabaawo ak'endagiriro"
 
-#: lib/preferences/preferences.ui:937
+#: lib/preferences/preferences.ui:957
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Kozesa ekifo ekinoonyesebwa  ekya bulijjo"
 
-#: lib/preferences/preferences.ui:944
+#: lib/preferences/preferences.ui:964
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Wa magezi ku by'okunoonya"
 
-#: lib/preferences/preferences.ui:951
+#: lib/preferences/preferences.ui:971
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr ""
 "Obugazi bw'akadirisa akatutunuka akulaga amagezi agawebwa bw'enkane "
 "obw'eddirisa"
 
-#: lib/preferences/preferences.ui:974
+#: lib/preferences/preferences.ui:994
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Awalabika ndagiriro wabewo ekiraga ogw'okubikkula ekifo we gutuuse"
 
-#: lib/preferences/preferences.ui:1007
+#: lib/preferences/preferences.ui:1027
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Kibunewo"
 
-#: lib/preferences/preferences.ui:1012
+#: lib/preferences/preferences.ui:1032
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Kibeere wansi w'ebigambo"
 
-#: lib/preferences/preferences.ui:1017
+#: lib/preferences/preferences.ui:1037
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Kibeere waggulu w'ebigambo"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1045
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Weyiyize langi:"
 
-#: lib/preferences/preferences.ui:1041
+#: lib/preferences/preferences.ui:1061
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Londa langi"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1122
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Ebisangibwa ku Mutimbagano"
 
-#: lib/preferences/preferences.ui:1110
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "Pepper plugin API (PPAPI) Ekole"
 
-#: lib/preferences/preferences.ui:1117
+#: lib/preferences/preferences.ui:1137
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Falkon fayiro eza PDF ezeebikkulirenga (kyetaagisa PPAPI ekole)"
 
-#: lib/preferences/preferences.ui:1124
+#: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Ebya JavaScript bikkirize bikole"
 
-#: lib/preferences/preferences.ui:1131
+#: lib/preferences/preferences.ui:1151
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr ""
@@ -4624,269 +4637,269 @@ msgstr ""
 "ku lupapula lw'okebera"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1138
+#: lib/preferences/preferences.ui:1158
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Pulinta ekube n'ebiri ku bwaliriro bwa buli kitundu ky'olupapula"
 
-#: lib/preferences/preferences.ui:1145
+#: lib/preferences/preferences.ui:1165
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Bw'oseesa by'okebera birabike nga ebitambuzibwa"
 
-#: lib/preferences/preferences.ui:1152
+#: lib/preferences/preferences.ui:1172
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr ""
 "Amapeesa ag'obusaale gasobole okukutwala ku bitundu by'olupapula eby'enjawulo"
 
-#: lib/preferences/preferences.ui:1159
+#: lib/preferences/preferences.ui:1179
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Ebigeranseesa ebya sisitemu bye biba bikola"
 
-#: lib/preferences/preferences.ui:1166
+#: lib/preferences/preferences.ui:1186
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Vidiyo zireme okutandikirawo"
 
-#: lib/preferences/preferences.ui:1173
+#: lib/preferences/preferences.ui:1193
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr ""
 "Ebikozesa WebRTC bireme okusaasaanya endagiriro ey'oku mutimbagano eya "
 "kompyuta eno"
 
-#: lib/preferences/preferences.ui:1180
+#: lib/preferences/preferences.ui:1200
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr ""
 "Falkon ezuulirewo endagiriro entuufu enyunzi eziri ku lupapula lw'ebikkudde "
 "kwe zigguka"
 
-#: lib/preferences/preferences.ui:1187
+#: lib/preferences/preferences.ui:1207
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Falkon esobole okukwata bifaananyi bya lutimbe"
 
-#: lib/preferences/preferences.ui:1194
+#: lib/preferences/preferences.ui:1214
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr ""
 "Ebyuma bya kompyuta biyambe Falkon okwanguwa by'ekola (kyetaagisa kuddamu "
 "okukoleeza kompyuta)"
 
-#: lib/preferences/preferences.ui:1201
+#: lib/preferences/preferences.ui:1221
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Kisoboke okusoma ebiri awakolerwako bifaananyi"
 
-#: lib/preferences/preferences.ui:1208
+#: lib/preferences/preferences.ui:1228
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr "Waliriza ebifo okulabikira mu langi enzirugaririvu"
 
-#: lib/preferences/preferences.ui:1217
+#: lib/preferences/preferences.ui:1237
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr "Falkon yekubirire okukozesa olulyo lwa lwangi luno:"
 
-#: lib/preferences/preferences.ui:1252
+#: lib/preferences/preferences.ui:1272
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr ""
 "Okunyoola namuziga ey'okukasongesebwa kuleetere by'olaba okweseesa ennyiriri"
 
-#: lib/preferences/preferences.ui:1272
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "ku lupapula"
 
-#: lib/preferences/preferences.ui:1283
+#: lib/preferences/preferences.ui:1303
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Obuzimburukufu bwa by'olaba obwa bulijjo: "
 
-#: lib/preferences/preferences.ui:1322
+#: lib/preferences/preferences.ui:1342
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Kutereka Ku Kompyuta Eno"
 
-#: lib/preferences/preferences.ui:1330
+#: lib/preferences/preferences.ui:1350
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Wabeewo ggwanika zzibizi ery'ebikeberwa ku mutimbagano"
 
-#: lib/preferences/preferences.ui:1353
+#: lib/preferences/preferences.ui:1373
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Falkon bw'ogiggala egyewo ebisigadde mu ggwanika ly'ebyanguyisa"
 
-#: lib/preferences/preferences.ui:1360
+#: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Kkomo ly'obungi bw'ebiterekedwa mu gwanika:"
 
-#: lib/preferences/preferences.ui:1367
+#: lib/preferences/preferences.ui:1387
 msgctxt "Preferences|"
 msgid " MB"
 msgstr "MB "
 
-#: lib/preferences/preferences.ui:1383
+#: lib/preferences/preferences.ui:1403
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Gwanika eryo libeere wano:"
 
-#: lib/preferences/preferences.ui:1411
+#: lib/preferences/preferences.ui:1431
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Kompyuta ekole lukalala lwa by'olabye"
 
-#: lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1438
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Olukalala lwa by'olabye lugyibwengawo buli lw'omala Falkon"
 
-#: lib/preferences/preferences.ui:1441
+#: lib/preferences/preferences.ui:1461
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Ebya HTML5 bisobole okusigala ku kompyuta eno"
 
-#: lib/preferences/preferences.ui:1448
+#: lib/preferences/preferences.ui:1468
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Oluva mu Falkon nga n'ebya HTML5 ebisigadde ko bigyibwa wo"
 
-#: lib/preferences/preferences.ui:1474
+#: lib/preferences/preferences.ui:1494
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Bigyewo"
 
-#: lib/preferences/preferences.ui:1513
+#: lib/preferences/preferences.ui:1533
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Teekateeka Kalaani"
 
-#: lib/preferences/preferences.ui:1532
+#: lib/preferences/preferences.ui:1552
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Nteekateeka za kalaani etuuka ku mutimbagano"
 
-#: lib/preferences/preferences.ui:1555
+#: lib/preferences/preferences.ui:1575
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Wewandikire nteekateeka"
 
-#: lib/preferences/preferences.ui:1565
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1570
+#: lib/preferences/preferences.ui:1590
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1585
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Pooti:"
 
-#: lib/preferences/preferences.ui:1606
+#: lib/preferences/preferences.ui:1626
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Linnya lya akawunti:"
 
-#: lib/preferences/preferences.ui:1616
+#: lib/preferences/preferences.ui:1636
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Kyama:"
 
-#: lib/preferences/preferences.ui:1645
+#: lib/preferences/preferences.ui:1665
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Tewali kalaani"
 
-#: lib/preferences/preferences.ui:1660
+#: lib/preferences/preferences.ui:1680
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Ndyo Za Nkula Za Nnukuta</b>"
 
-#: lib/preferences/preferences.ui:1673
+#: lib/preferences/preferences.ui:1693
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Standard"
 
-#: lib/preferences/preferences.ui:1680
+#: lib/preferences/preferences.ui:1700
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Zonna zenkanankana"
 
-#: lib/preferences/preferences.ui:1690
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serifu"
 
-#: lib/preferences/preferences.ui:1700
+#: lib/preferences/preferences.ui:1720
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Embulaserifu"
 
-#: lib/preferences/preferences.ui:1710
+#: lib/preferences/preferences.ui:1730
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Kurusivu"
 
-#: lib/preferences/preferences.ui:1762
+#: lib/preferences/preferences.ui:1782
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasiya"
 
-#: lib/preferences/preferences.ui:1769
+#: lib/preferences/preferences.ui:1789
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Bunene Bwa Nnukuta</b>"
 
-#: lib/preferences/preferences.ui:1778
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Ebigero By'ennukuta Ez'enkanankana Zonna"
 
-#: lib/preferences/preferences.ui:1785
+#: lib/preferences/preferences.ui:1805
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Ekigero Ky'ennukuta Ekya Bulijjo"
 
-#: lib/preferences/preferences.ui:1812
+#: lib/preferences/preferences.ui:1832
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Ekigero Ky'ennukuta Ekisembayo Obutono"
 
-#: lib/preferences/preferences.ui:1819
+#: lib/preferences/preferences.ui:1839
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Ekigero Ky'ennukuta Ekirabwa Ekisembayo Obutono"
 
-#: lib/preferences/preferences.ui:1852
+#: lib/preferences/preferences.ui:1872
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Ebyanguya</b>"
 
-#: lib/preferences/preferences.ui:1859
+#: lib/preferences/preferences.ui:1879
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr ""
 "Okukyusa katimbe k'olaba nyiga ppeesa lya ALT okumu n'eririko namba "
 "efaanagana n'ekifo ky'akatimbe ke wetaaga"
 
-#: lib/preferences/preferences.ui:1866
+#: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr ""
 "Mu Tuukirawo okugenda ku emu ku nfo ez'olesedwa nyiga ppeesa lya Ctrl okum "
 "n'eririko namba efaanagana n'ekifo ky'enfo eyo mu z'olesedwa"
 
-#: lib/preferences/preferences.ui:1873
+#: lib/preferences/preferences.ui:1893
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4895,12 +4908,12 @@ msgstr ""
 "Ebyanguya ebiriwo:<br/><b>1</b> - katimbe akalembera<br/><b>2</b> - katimbe "
 "akaddako<br/><b>/</b> - noonyeza ku lupapula luno"
 
-#: lib/preferences/preferences.ui:1876
+#: lib/preferences/preferences.ui:1896
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Kozesa ebyanguya ebyeyambisa ppeesa limu"
 
-#: lib/preferences/preferences.ui:1883
+#: lib/preferences/preferences.ui:1903
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4909,160 +4922,160 @@ msgstr ""
 "Wano bwe waba nga ssi watonyeze, okunyiga amapeesa aga Ctrl+W mu butanwa "
 "tekikomya puloguramu eno."
 
-#: lib/preferences/preferences.ui:1886
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Okunyiga amapeesa ga Ctrl+Q kukomye puloguramu eno"
 
-#: lib/preferences/preferences.ui:1910
+#: lib/preferences/preferences.ui:1930
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Ebiwanudwa Gye Bigenda</b>"
 
-#: lib/preferences/preferences.ui:1917
+#: lib/preferences/preferences.ui:1937
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Mbuuzanga buli lwe mbaako kye ŋenda okuwanula"
 
-#: lib/preferences/preferences.ui:1924
+#: lib/preferences/preferences.ui:1944
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Bigendenga wano: "
 
-#: lib/preferences/preferences.ui:1974
+#: lib/preferences/preferences.ui:1994
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Ebinaabangawo Mu Kuwanula</b>"
 
-#: lib/preferences/preferences.ui:1981
+#: lib/preferences/preferences.ui:2001
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Ekifuga kuwanula kivewo okuwanula nga kuwedde"
 
-#: lib/preferences/preferences.ui:1988
+#: lib/preferences/preferences.ui:2008
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Ebifuga Kuwanula</b>"
 
-#: lib/preferences/preferences.ui:1995
+#: lib/preferences/preferences.ui:2015
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Kozesa puloguramu etali ya Falkon"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2027
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Puloguramu:"
 
-#: lib/preferences/preferences.ui:2014
+#: lib/preferences/preferences.ui:2034
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Agumenti:"
 
-#: lib/preferences/preferences.ui:2024
+#: lib/preferences/preferences.ui:2044
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Kino bw'oba nga tokyekakasa leka wano nga wereere"
 
-#: lib/preferences/preferences.ui:2045
+#: lib/preferences/preferences.ui:2065
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "W'owandikira <b>%d</b> wajja okuddawo endagiriro ey'ebinaawanulibwa"
 
-#: lib/preferences/preferences.ui:2071
+#: lib/preferences/preferences.ui:2091
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Ebikkirizibwa Kujjukirwa</b>"
 
-#: lib/preferences/preferences.ui:2078
+#: lib/preferences/preferences.ui:2098
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Kkiriza ebifo kujjukira byama"
 
-#: lib/preferences/preferences.ui:2129
+#: lib/preferences/preferences.ui:2149
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr ""
 "Puloguramu ekumalirengayo ekyama nga okijjuzamu ku kifo kya ku mutimbagano"
 
-#: lib/preferences/preferences.ui:2150
+#: lib/preferences/preferences.ui:2170
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Teekateeka bya Bujjukiza"
 
-#: lib/preferences/preferences.ui:2163
+#: lib/preferences/preferences.ui:2183
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Ekiteekateeka bya Bujjukiza"
 
-#: lib/preferences/preferences.ui:2186
+#: lib/preferences/preferences.ui:2206
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2199
+#: lib/preferences/preferences.ui:2219
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "Nteekateeka ya JavaScript"
 
-#: lib/preferences/preferences.ui:2206
+#: lib/preferences/preferences.ui:2226
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Falkon eragire kompyuta ez'oku mutimbagano zireme okulondoola by'olaba"
 
-#: lib/preferences/preferences.ui:2213
+#: lib/preferences/preferences.ui:2233
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Obujjukiza</b>"
 
-#: lib/preferences/preferences.ui:2239
+#: lib/preferences/preferences.ui:2259
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "Teekateeka ngeri ebya JavaScript gye bikuuma bibyo"
 
-#: lib/preferences/preferences.ui:2246
+#: lib/preferences/preferences.ui:2266
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Birala</b>"
 
-#: lib/preferences/preferences.ui:2267
+#: lib/preferences/preferences.ui:2287
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "HTML5 By'ekkirizibwa"
 
-#: lib/preferences/preferences.ui:2277
+#: lib/preferences/preferences.ui:2297
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Enteekateeka ez'oku Kifo"
 
-#: lib/preferences/preferences.ui:2309
+#: lib/preferences/preferences.ui:2329
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Obubaka buvawo luvanyuma lwa:"
 
-#: lib/preferences/preferences.ui:2322
+#: lib/preferences/preferences.ui:2342
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " sikonda"
 
-#: lib/preferences/preferences.ui:2344
+#: lib/preferences/preferences.ui:2364
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Bubaka</b>"
 
-#: lib/preferences/preferences.ui:2367
+#: lib/preferences/preferences.ui:2387
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr ""
 "Obubaka bukolerenga ku nteeekateeka ey'oku sisitemu eno (kikolera ku Linux "
 "yekka)"
 
-#: lib/preferences/preferences.ui:2374
+#: lib/preferences/preferences.ui:2394
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Walemenga kubawo bubaka"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2417
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -5071,17 +5084,17 @@ msgstr ""
 "<b>Genderera:</b>Okukyusa kadirisa ka OSD gye kalabikira kasike okutuuka "
 "w'oyagala kabeere."
 
-#: lib/preferences/preferences.ui:2423
+#: lib/preferences/preferences.ui:2443
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Obubaka bujjirenga mu budirisa bwa OSD"
 
-#: lib/preferences/preferences.ui:2430
+#: lib/preferences/preferences.ui:2450
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Laba Bwe Binaafaanana"
 
-#: lib/preferences/preferences.ui:2495
+#: lib/preferences/preferences.ui:2515
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -5090,106 +5103,106 @@ msgstr ""
 "Okumanya ebisingawo ku Spell Check, kebera <a href=\"https://userbase.kde."
 "org/Falkon#Spell_Check\">wiki</a>."
 
-#: lib/preferences/preferences.ui:2537
+#: lib/preferences/preferences.ui:2557
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Ebisoboka ku Spell Check</b>"
 
-#: lib/preferences/preferences.ui:2544
+#: lib/preferences/preferences.ui:2564
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Spell Check Ekole"
 
-#: lib/preferences/preferences.ui:2551
+#: lib/preferences/preferences.ui:2571
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Amaterekero omuli nkuluze</b>"
 
-#: lib/preferences/preferences.ui:2602
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Tewali nnimi"
 
-#: lib/preferences/preferences.ui:2631
+#: lib/preferences/preferences.ui:2651
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Ekiteekateeka ebikola ku bika bya mpulizagana"
 
-#: lib/preferences/preferences.ui:2653
+#: lib/preferences/preferences.ui:2673
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2665
+#: lib/preferences/preferences.ui:2685
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "Teekateeka endyo z'endabika ze weyiyizza"
 
-#: lib/preferences/preferences.ui:2672
+#: lib/preferences/preferences.ui:2692
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Kyusa nneyanjula ya bulawuza</b>"
 
-#: lib/preferences/preferences.ui:2679
+#: lib/preferences/preferences.ui:2699
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Teekateeka Ebifo Ebinoonyesebwa</b>"
 
-#: lib/preferences/preferences.ui:2686
+#: lib/preferences/preferences.ui:2706
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Nnimi mw'osinga kwagala kusomera eby'oku mutimbagano</b>"
 
-#: lib/preferences/preferences.ui:2693
+#: lib/preferences/preferences.ui:2713
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Olukalala Olufuga Endabika mu Akawunti</b>"
 
-#: lib/preferences/preferences.ui:2700
+#: lib/preferences/preferences.ui:2720
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Teekateeka ebikola ku bika bya mpulizagana</b>"
 
-#: lib/preferences/preferences.ui:2755
+#: lib/preferences/preferences.ui:2775
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Ekiteekateeka Eby'okubuusa Emmatizo Amaaso"
 
-#: lib/preferences/preferences.ui:2795
+#: lib/preferences/preferences.ui:2815
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Teekateeka Nneyanjula ya Falkon"
 
-#: lib/preferences/preferences.ui:2830
+#: lib/preferences/preferences.ui:2850
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr ""
 "Olukalala Olufuga Endabika oluba lukolera ku buli kifo kya ku mutimbagano "
 "ky'okebera: "
 
-#: lib/preferences/preferences.ui:2855
+#: lib/preferences/preferences.ui:2875
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Ekiteekateeka Endyo z'Endabika ze Weyiiyizza"
 
-#: lib/preferences/preferences.ui:2895
+#: lib/preferences/preferences.ui:2915
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Ekiteekateeka Ebifo Ebinoonyesebwa"
 
-#: lib/preferences/preferences.ui:2935
+#: lib/preferences/preferences.ui:2955
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Nnimi"
 
-#: lib/preferences/preferences.ui:2970
+#: lib/preferences/preferences.ui:2990
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Ekiteekateeka mmatizo</b>"
 
-#: lib/preferences/preferences.ui:2995
+#: lib/preferences/preferences.ui:3015
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
 msgstr ""
@@ -6030,7 +6043,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Olupapula luno luleme okwongerawo obuboozi"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:334
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -6041,27 +6054,27 @@ msgstr ""
 "%2</li></ul>Oyagala Falkon egeze okubikkuzayo puloguramu endala eya ku "
 "sisitemu yo?"
 
-#: lib/webengine/webpage.cpp:337
+#: lib/webengine/webpage.cpp:339
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Jjukira kye nnonze okukola ku mpulizagana ez'ekika kino"
 
-#: lib/webengine/webpage.cpp:338
+#: lib/webengine/webpage.cpp:340
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Puloguramu Endala Ekole"
 
-#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Okutimba olupapula kugaanye"
 
-#: lib/webengine/webpage.cpp:418
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Okutimba olupapula luno kuzzeemu kiremya."
 
-#: lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -6069,27 +6082,27 @@ msgstr ""
 "Geza okuddamu olupapula okulubikkula, oba gyawo ku butimbe obulala okwongera "
 "ekifo mu ggwanika lukikozese."
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Olupapula ddamu okulubikkula"
 
-#: lib/webengine/webpage.cpp:595
+#: lib/webengine/webpage.cpp:597
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Londa fayiro..."
 
-#: lib/webengine/webpage.cpp:599
+#: lib/webengine/webpage.cpp:601
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Londa fayiro..."
 
-#: lib/webengine/webpage.cpp:735
+#: lib/webengine/webpage.cpp:737
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Kutemyako kwa Javascript"
 
-#: lib/webengine/webpage.cpp:744
+#: lib/webengine/webpage.cpp:746
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Olupapula luno luleme okwongerawo obuboozi"

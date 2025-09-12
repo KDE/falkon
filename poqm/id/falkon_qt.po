@@ -4166,7 +4166,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Anda yakin untuk menghapus sesi '%1'?"
 
-#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:673
+#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:675
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Baku"
@@ -4176,7 +4176,7 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Tetapkan sebagai utama"
 
-#: lib/preferences/preferences.cpp:329
+#: lib/preferences/preferences.cpp:331
 #, fuzzy
 #| msgctxt "FalkonSchemeReply|"
 #| msgid "Auto"
@@ -4184,88 +4184,88 @@ msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Auto"
 
-#: lib/preferences/preferences.cpp:331
+#: lib/preferences/preferences.cpp:333
 msgctxt "Preferences|"
 msgid "Light"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:332
+#: lib/preferences/preferences.cpp:334
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:342
+#: lib/preferences/preferences.cpp:344
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:616
+#: lib/preferences/preferences.cpp:618
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Pilih lokasi eksekutor..."
 
-#: lib/preferences/preferences.cpp:659
+#: lib/preferences/preferences.cpp:661
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD Notifikasi"
 
-#: lib/preferences/preferences.cpp:660
+#: lib/preferences/preferences.cpp:662
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Geret OSD di layar untuk memposisikannya."
 
-#: lib/preferences/preferences.cpp:709
+#: lib/preferences/preferences.cpp:711
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Pilih lokasi unduhan..."
 
-#: lib/preferences/preferences.cpp:723
+#: lib/preferences/preferences.cpp:725
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Pilih lokasi stylesheet..."
 
-#: lib/preferences/preferences.cpp:734
+#: lib/preferences/preferences.cpp:736
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Terhapus"
 
-#: lib/preferences/preferences.cpp:842
+#: lib/preferences/preferences.cpp:844
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Pilih lokasi cache..."
 
-#: lib/preferences/preferences.cpp:873
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Profil Baru"
 
-#: lib/preferences/preferences.cpp:873
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Masukkan nama profil baru:"
 
-#: lib/preferences/preferences.cpp:883 lib/preferences/preferences.cpp:888
+#: lib/preferences/preferences.cpp:885 lib/preferences/preferences.cpp:890
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Error!"
 
-#: lib/preferences/preferences.cpp:883
+#: lib/preferences/preferences.cpp:885
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Profil tersebut sudah ada!"
 
-#: lib/preferences/preferences.cpp:888
+#: lib/preferences/preferences.cpp:890
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Tidak dapat membuat direktori profil!"
 
-#: lib/preferences/preferences.cpp:899
+#: lib/preferences/preferences.cpp:901
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Konfirmasi"
 
-#: lib/preferences/preferences.cpp:900
+#: lib/preferences/preferences.cpp:902
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4275,7 +4275,7 @@ msgstr ""
 "Anda yakin untuk menghapus secara permanen profil \"%1\"? Profil yang "
 "terhapus tidak dapat dikembalikan!"
 
-#: lib/preferences/preferences.cpp:915 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:917 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Catatan: Anda tidak dapat menghapus profil aktif."
@@ -4285,7 +4285,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Preferensi"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2144
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2164
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Umum"
@@ -4492,167 +4492,180 @@ msgid ""
 "Colors</span></p></body></html>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:584
-msgctxt "Preferences|"
-msgid "Background color while loading:"
-msgstr ""
-
-#: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
-#: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
-#: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
-#: lib/preferences/preferences.ui:2728
+#: lib/preferences/preferences.ui:587 lib/preferences/preferences.ui:601
+#: lib/preferences/preferences.ui:1064 lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1956 lib/preferences/preferences.ui:2056
+#: lib/preferences/preferences.ui:2748
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:598
-msgctxt "Preferences|"
-msgid "Background color when loaded:"
-msgstr ""
-
-#: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
-#: lib/preferences/preferences.ui:1051
+#: lib/preferences/preferences.ui:594 lib/preferences/preferences.ui:608
+#: lib/preferences/preferences.ui:1071
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Set ulang"
 
-#: lib/preferences/preferences.ui:631
+#: lib/preferences/preferences.ui:615
+msgctxt "Preferences|"
+msgid "Background color when loaded:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:622
+msgctxt "Preferences|"
+msgid "Background color while loading:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:629
+msgctxt "Preferences|miliseconds"
+msgid "ms"
+msgstr ""
+
+#: lib/preferences/preferences.ui:642
+msgctxt ""
+"Preferences|Time in milisencods which describes how long to wait after the "
+"page was initially loaded before switching the backgroung color to the "
+"loaded variant."
+msgid "Loaded state switch delay:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:651
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>Jendela Penjelajah</b>"
 
-#: lib/preferences/preferences.ui:679
+#: lib/preferences/preferences.ui:699
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "Perilaku tab"
 
-#: lib/preferences/preferences.ui:685
+#: lib/preferences/preferences.ui:705
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Sembunyikan tab jika hanya ada satu tab"
 
-#: lib/preferences/preferences.ui:692
+#: lib/preferences/preferences.ui:712
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "Pindah ke tab terakhir saat menutup tab aktif"
 
-#: lib/preferences/preferences.ui:699
+#: lib/preferences/preferences.ui:719
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Buka tab baru setelah tab aktif"
 
-#: lib/preferences/preferences.ui:706
+#: lib/preferences/preferences.ui:726
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Buka tab kosong baru setelah tab aktif"
 
-#: lib/preferences/preferences.ui:713
+#: lib/preferences/preferences.ui:733
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Buka jendela popup di tab"
 
-#: lib/preferences/preferences.ui:720
+#: lib/preferences/preferences.ui:740
 msgctxt "Preferences|"
 msgid "Block automatic popups"
 msgstr ""
 
-#: lib/preferences/preferences.ui:727
+#: lib/preferences/preferences.ui:747
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Selalu pindah antartab dengan roda tetikus"
 
-#: lib/preferences/preferences.ui:734
+#: lib/preferences/preferences.ui:754
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Otomatis pindah ke tab baru"
 
-#: lib/preferences/preferences.ui:741
+#: lib/preferences/preferences.ui:761
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Jangan tutup jendela saat menutup tab terakhir"
 
-#: lib/preferences/preferences.ui:748
+#: lib/preferences/preferences.ui:768
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Konfirmasi saat menutup beberapa tab"
 
-#: lib/preferences/preferences.ui:755
+#: lib/preferences/preferences.ui:775
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Tampilkan tombol tutup tab"
 
-#: lib/preferences/preferences.ui:764
+#: lib/preferences/preferences.ui:784
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Tampilkan tombol tutup di tab nonaktif"
 
-#: lib/preferences/preferences.ui:772
+#: lib/preferences/preferences.ui:792
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Otomatis"
 
-#: lib/preferences/preferences.ui:777
+#: lib/preferences/preferences.ui:797
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Selalu"
 
-#: lib/preferences/preferences.ui:782
+#: lib/preferences/preferences.ui:802
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Tidak pernah"
 
-#: lib/preferences/preferences.ui:822
+#: lib/preferences/preferences.ui:842
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Perilaku Bilah Alamat"
 
-#: lib/preferences/preferences.ui:830
+#: lib/preferences/preferences.ui:850
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Sarankan saat mengetik di panel alamat:"
 
-#: lib/preferences/preferences.ui:844
+#: lib/preferences/preferences.ui:864
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Histori dan Markah"
 
-#: lib/preferences/preferences.ui:849
+#: lib/preferences/preferences.ui:869
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Histori"
 
-#: lib/preferences/preferences.ui:854
+#: lib/preferences/preferences.ui:874
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Markah"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:879
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Tidak ada"
 
-#: lib/preferences/preferences.ui:885
+#: lib/preferences/preferences.ui:905
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Fungsikan saran dalam baris"
 
-#: lib/preferences/preferences.ui:892
+#: lib/preferences/preferences.ui:912
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
 msgstr "Tekan \"Shift\" untuk tidak pindah tab tetapi muat url di tab ini"
 
-#: lib/preferences/preferences.ui:895
+#: lib/preferences/preferences.ui:915
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "Sarankan untuk pindah tab jika url yang dituju sudah terbuka"
 
-#: lib/preferences/preferences.ui:902
+#: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Selalu tampilkan ikon menuju"
 
-#: lib/preferences/preferences.ui:909
+#: lib/preferences/preferences.ui:929
 #, fuzzy
 #| msgctxt "WebView|"
 #| msgid "Show i&mage"
@@ -4660,138 +4673,138 @@ msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Tampilkan &gambar"
 
-#: lib/preferences/preferences.ui:916
+#: lib/preferences/preferences.ui:936
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Pilih seluruh teks dengan mengklik dua kali pada bilah alamat"
 
-#: lib/preferences/preferences.ui:923
+#: lib/preferences/preferences.ui:943
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Pilih seluruh teks dengan mengklik pada bilah alamat"
 
-#: lib/preferences/preferences.ui:930
+#: lib/preferences/preferences.ui:950
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Fungsikan pencarian otomatis di bilah alamat"
 
-#: lib/preferences/preferences.ui:937
+#: lib/preferences/preferences.ui:957
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Cari menggunakan Mesin Pencari Utama"
 
-#: lib/preferences/preferences.ui:944
+#: lib/preferences/preferences.ui:964
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Tampilkan saran pencarian"
 
-#: lib/preferences/preferences.ui:951
+#: lib/preferences/preferences.ui:971
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr ""
 
-#: lib/preferences/preferences.ui:974
+#: lib/preferences/preferences.ui:994
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Tampilkan perkembangan pemuatan di bilah alamat"
 
-#: lib/preferences/preferences.ui:1007
+#: lib/preferences/preferences.ui:1027
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Isi"
 
-#: lib/preferences/preferences.ui:1012
+#: lib/preferences/preferences.ui:1032
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Bawah"
 
-#: lib/preferences/preferences.ui:1017
+#: lib/preferences/preferences.ui:1037
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Atas"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1045
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Warna kustom:"
 
-#: lib/preferences/preferences.ui:1041
+#: lib/preferences/preferences.ui:1061
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Pilih warna"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1122
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Konfigurasi Web"
 
-#: lib/preferences/preferences.ui:1110
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1117
+#: lib/preferences/preferences.ui:1137
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1124
+#: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Izinkan JavaScript"
 
-#: lib/preferences/preferences.ui:1131
+#: lib/preferences/preferences.ui:1151
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Ikutsertakan tautan dalam rantai fokus"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1138
+#: lib/preferences/preferences.ui:1158
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Cetak elemen latar"
 
-#: lib/preferences/preferences.ui:1145
+#: lib/preferences/preferences.ui:1165
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Animasikan pergeseran"
 
-#: lib/preferences/preferences.ui:1152
+#: lib/preferences/preferences.ui:1172
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Fungsikan navigasi spasial"
 
-#: lib/preferences/preferences.ui:1159
+#: lib/preferences/preferences.ui:1179
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Gunakan bilahgulir bawaan"
 
-#: lib/preferences/preferences.ui:1166
+#: lib/preferences/preferences.ui:1186
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Nonfungsikan pemainan otomatis video"
 
-#: lib/preferences/preferences.ui:1173
+#: lib/preferences/preferences.ui:1193
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Mencegah WebRTC dari bocoran alamat IP lokal"
 
-#: lib/preferences/preferences.ui:1180
+#: lib/preferences/preferences.ui:1200
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Fungsikan prefetching DNS"
 
-#: lib/preferences/preferences.ui:1187
+#: lib/preferences/preferences.ui:1207
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1194
+#: lib/preferences/preferences.ui:1214
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1201
+#: lib/preferences/preferences.ui:1221
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Allow storing of cookies"
@@ -4799,207 +4812,207 @@ msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Izinkan untuk menyimpan cookie"
 
-#: lib/preferences/preferences.ui:1208
+#: lib/preferences/preferences.ui:1228
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1217
+#: lib/preferences/preferences.ui:1237
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1252
+#: lib/preferences/preferences.ui:1272
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Guliran roda mouse"
 
-#: lib/preferences/preferences.ui:1272
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "baris pada halaman"
 
-#: lib/preferences/preferences.ui:1283
+#: lib/preferences/preferences.ui:1303
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Perbesaran standar pada halaman: "
 
-#: lib/preferences/preferences.ui:1322
+#: lib/preferences/preferences.ui:1342
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Penyimpan Lokal"
 
-#: lib/preferences/preferences.ui:1330
+#: lib/preferences/preferences.ui:1350
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Izinkan menyimpan cache jaringan ke dalam disk"
 
-#: lib/preferences/preferences.ui:1353
+#: lib/preferences/preferences.ui:1373
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Hapus cookie saat berhenti"
 
-#: lib/preferences/preferences.ui:1360
+#: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Maksimum "
 
-#: lib/preferences/preferences.ui:1367
+#: lib/preferences/preferences.ui:1387
 msgctxt "Preferences|"
 msgid " MB"
 msgstr "MB"
 
-#: lib/preferences/preferences.ui:1383
+#: lib/preferences/preferences.ui:1403
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Simpan cache di:"
 
-#: lib/preferences/preferences.ui:1411
+#: lib/preferences/preferences.ui:1431
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Izinkan menyimpan histori"
 
-#: lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1438
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Hapus histori saat berhenti"
 
-#: lib/preferences/preferences.ui:1441
+#: lib/preferences/preferences.ui:1461
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Izinkan untuk menyimpan secara lokal konten web HTML5"
 
-#: lib/preferences/preferences.ui:1448
+#: lib/preferences/preferences.ui:1468
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Hapus konten web HTML5 yang disimpan secara lokal saat berhenti"
 
-#: lib/preferences/preferences.ui:1474
+#: lib/preferences/preferences.ui:1494
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Hapus sekarang"
 
-#: lib/preferences/preferences.ui:1513
+#: lib/preferences/preferences.ui:1533
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Konfigurasi Proxy"
 
-#: lib/preferences/preferences.ui:1532
+#: lib/preferences/preferences.ui:1552
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Konfigurasi proxy sistem"
 
-#: lib/preferences/preferences.ui:1555
+#: lib/preferences/preferences.ui:1575
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Konfigurasi Manual"
 
-#: lib/preferences/preferences.ui:1565
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1570
+#: lib/preferences/preferences.ui:1590
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1585
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Porta:"
 
-#: lib/preferences/preferences.ui:1606
+#: lib/preferences/preferences.ui:1626
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Nama User:"
 
-#: lib/preferences/preferences.ui:1616
+#: lib/preferences/preferences.ui:1636
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Sandi:"
 
-#: lib/preferences/preferences.ui:1645
+#: lib/preferences/preferences.ui:1665
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Tanpa proxy"
 
-#: lib/preferences/preferences.ui:1660
+#: lib/preferences/preferences.ui:1680
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Famili Huruf</b>"
 
-#: lib/preferences/preferences.ui:1673
+#: lib/preferences/preferences.ui:1693
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Standar"
 
-#: lib/preferences/preferences.ui:1680
+#: lib/preferences/preferences.ui:1700
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Fixed"
 
-#: lib/preferences/preferences.ui:1690
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1700
+#: lib/preferences/preferences.ui:1720
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans-Serif"
 
-#: lib/preferences/preferences.ui:1710
+#: lib/preferences/preferences.ui:1730
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Cursive"
 
-#: lib/preferences/preferences.ui:1762
+#: lib/preferences/preferences.ui:1782
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasi"
 
-#: lib/preferences/preferences.ui:1769
+#: lib/preferences/preferences.ui:1789
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Ukuran Huruf</b>"
 
-#: lib/preferences/preferences.ui:1778
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Ukuran Huruf Fixed"
 
-#: lib/preferences/preferences.ui:1785
+#: lib/preferences/preferences.ui:1805
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Ukuran Huruf Baku"
 
-#: lib/preferences/preferences.ui:1812
+#: lib/preferences/preferences.ui:1832
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Ukuran Huruf Minimum"
 
-#: lib/preferences/preferences.ui:1819
+#: lib/preferences/preferences.ui:1839
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Ukuran Logis Minimal Huruf"
 
-#: lib/preferences/preferences.ui:1852
+#: lib/preferences/preferences.ui:1872
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Pintasan</b>"
 
-#: lib/preferences/preferences.ui:1859
+#: lib/preferences/preferences.ui:1879
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Pindah ke tab dengan Alt + nomor tab"
 
-#: lib/preferences/preferences.ui:1866
+#: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Muat panggilan cepat dengan Ctrl + nomor panggilan cepat"
 
-#: lib/preferences/preferences.ui:1873
+#: lib/preferences/preferences.ui:1893
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -5008,12 +5021,12 @@ msgstr ""
 "Pintasan yang ada:<br/><b>1</b> - tab sebelumnya<br/><b>2</b> - tab "
 "selanjutnya<br/><b>/</b> - cari di halamn"
 
-#: lib/preferences/preferences.ui:1876
+#: lib/preferences/preferences.ui:1896
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Gunakan tombol pintasan tunggal"
 
-#: lib/preferences/preferences.ui:1883
+#: lib/preferences/preferences.ui:1903
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -5022,127 +5035,127 @@ msgstr ""
 "Jika nonaktif, mencegah keluar dari aplikasi jika pintasan Ctrl-W tak "
 "sengaja digunakan."
 
-#: lib/preferences/preferences.ui:1886
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Tutup aplikasi dengan Ctrl-Q"
 
-#: lib/preferences/preferences.ui:1910
+#: lib/preferences/preferences.ui:1930
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Lokasi Unduhan</b>"
 
-#: lib/preferences/preferences.ui:1917
+#: lib/preferences/preferences.ui:1937
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Konfirmasi lokasi tiap kali mengunduh"
 
-#: lib/preferences/preferences.ui:1924
+#: lib/preferences/preferences.ui:1944
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Gunakan lokasi tetap: "
 
-#: lib/preferences/preferences.ui:1974
+#: lib/preferences/preferences.ui:1994
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Opsi Pengunduhan</b>"
 
-#: lib/preferences/preferences.ui:1981
+#: lib/preferences/preferences.ui:2001
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Tutup manajer pengunduhan setelah pengunduhan selesai"
 
-#: lib/preferences/preferences.ui:1988
+#: lib/preferences/preferences.ui:2008
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Pengelola pengunduhan eksternal</b>"
 
-#: lib/preferences/preferences.ui:1995
+#: lib/preferences/preferences.ui:2015
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Gunakan manajer pengunduhan eksternal"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2027
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Dapat Dieksekusi:"
 
-#: lib/preferences/preferences.ui:2014
+#: lib/preferences/preferences.ui:2034
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Argumen:"
 
-#: lib/preferences/preferences.ui:2024
+#: lib/preferences/preferences.ui:2044
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Biarkan kosong jika ragu"
 
-#: lib/preferences/preferences.ui:2045
+#: lib/preferences/preferences.ui:2065
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> akan diganti dengan URL yang akan diunduh"
 
-#: lib/preferences/preferences.ui:2071
+#: lib/preferences/preferences.ui:2091
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Opsi pengisian otomatis</b>"
 
-#: lib/preferences/preferences.ui:2078
+#: lib/preferences/preferences.ui:2098
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Izinkan menyimpan sandi dari situs"
 
-#: lib/preferences/preferences.ui:2129
+#: lib/preferences/preferences.ui:2149
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Secara otomatis melengkapi sandi pada situs"
 
-#: lib/preferences/preferences.ui:2150
+#: lib/preferences/preferences.ui:2170
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Kelola Cookie"
 
-#: lib/preferences/preferences.ui:2163
+#: lib/preferences/preferences.ui:2183
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Pengelola Cookie"
 
-#: lib/preferences/preferences.ui:2186
+#: lib/preferences/preferences.ui:2206
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2199
+#: lib/preferences/preferences.ui:2219
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "Opsi JavaScript"
 
-#: lib/preferences/preferences.ui:2206
+#: lib/preferences/preferences.ui:2226
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Kirimkan header JANGAN LACAK ke server"
 
-#: lib/preferences/preferences.ui:2213
+#: lib/preferences/preferences.ui:2233
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Cookie</b>"
 
-#: lib/preferences/preferences.ui:2239
+#: lib/preferences/preferences.ui:2259
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "Kelola opsi privasi JavaScript"
 
-#: lib/preferences/preferences.ui:2246
+#: lib/preferences/preferences.ui:2266
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Lainnya</b>"
 
-#: lib/preferences/preferences.ui:2267
+#: lib/preferences/preferences.ui:2287
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "Perizinan HTML5"
 
-#: lib/preferences/preferences.ui:2277
+#: lib/preferences/preferences.ui:2297
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Settings"
@@ -5150,32 +5163,32 @@ msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Pengaturan"
 
-#: lib/preferences/preferences.ui:2309
+#: lib/preferences/preferences.ui:2329
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Batas waktu notifikasi:"
 
-#: lib/preferences/preferences.ui:2322
+#: lib/preferences/preferences.ui:2342
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " detik"
 
-#: lib/preferences/preferences.ui:2344
+#: lib/preferences/preferences.ui:2364
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Notifikasi</b>"
 
-#: lib/preferences/preferences.ui:2367
+#: lib/preferences/preferences.ui:2387
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Gunakan Notifikasi Bawaan Sistem (hanya Linux)"
 
-#: lib/preferences/preferences.ui:2374
+#: lib/preferences/preferences.ui:2394
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Jangan gunakan Notifikasi"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2417
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -5184,17 +5197,17 @@ msgstr ""
 "<b>Catatan: </b>Anda dapat mengubah posisi OSD Notifikasi dengan "
 "menggeretnya di layar."
 
-#: lib/preferences/preferences.ui:2423
+#: lib/preferences/preferences.ui:2443
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Gunakan Notifikasi OSD"
 
-#: lib/preferences/preferences.ui:2430
+#: lib/preferences/preferences.ui:2450
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Pratinjau"
 
-#: lib/preferences/preferences.ui:2495
+#: lib/preferences/preferences.ui:2515
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -5203,27 +5216,27 @@ msgstr ""
 "Untuk informasi selebihnya tentang Spell Check, silakan lihat <a href="
 "\"https://userbase.kde.org/Falkon#Spell_Check\">wiki</a>."
 
-#: lib/preferences/preferences.ui:2537
+#: lib/preferences/preferences.ui:2557
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Opsi Cek Ejaan</b>"
 
-#: lib/preferences/preferences.ui:2544
+#: lib/preferences/preferences.ui:2564
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Fungsikan Cek Ejaan"
 
-#: lib/preferences/preferences.ui:2551
+#: lib/preferences/preferences.ui:2571
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Direktori Kamus</b>"
 
-#: lib/preferences/preferences.ui:2602
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Bahasa tidak ditemukan"
 
-#: lib/preferences/preferences.ui:2631
+#: lib/preferences/preferences.ui:2651
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Cookies Manager"
@@ -5231,39 +5244,39 @@ msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Pengelola Cookie"
 
-#: lib/preferences/preferences.ui:2653
+#: lib/preferences/preferences.ui:2673
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2665
+#: lib/preferences/preferences.ui:2685
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2672
+#: lib/preferences/preferences.ui:2692
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Ganti identitas penelusur</b>"
 
-#: lib/preferences/preferences.ui:2679
+#: lib/preferences/preferences.ui:2699
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Kelola mesin pencari</b>"
 
-#: lib/preferences/preferences.ui:2686
+#: lib/preferences/preferences.ui:2706
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Bahasa utama untuk situs web</b>"
 
-#: lib/preferences/preferences.ui:2693
+#: lib/preferences/preferences.ui:2713
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Lembar Gaya Pengguna</b>"
 
-#: lib/preferences/preferences.ui:2700
+#: lib/preferences/preferences.ui:2720
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "<b>Manage search engines</b>"
@@ -5271,22 +5284,22 @@ msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Kelola mesin pencari</b>"
 
-#: lib/preferences/preferences.ui:2755
+#: lib/preferences/preferences.ui:2775
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2795
+#: lib/preferences/preferences.ui:2815
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Pengelola Agen Pengguna"
 
-#: lib/preferences/preferences.ui:2830
+#: lib/preferences/preferences.ui:2850
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Lembar Gaya otomatis dimuat untuk semua websites:"
 
-#: lib/preferences/preferences.ui:2855
+#: lib/preferences/preferences.ui:2875
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Cookies Manager"
@@ -5294,17 +5307,17 @@ msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Pengelola Cookie"
 
-#: lib/preferences/preferences.ui:2895
+#: lib/preferences/preferences.ui:2915
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Pengelola Mesin Pencari"
 
-#: lib/preferences/preferences.ui:2935
+#: lib/preferences/preferences.ui:2955
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Bahasa"
 
-#: lib/preferences/preferences.ui:2970
+#: lib/preferences/preferences.ui:2990
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "<b>Notifications</b>"
@@ -5312,7 +5325,7 @@ msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Notifikasi</b>"
 
-#: lib/preferences/preferences.ui:2995
+#: lib/preferences/preferences.ui:3015
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
 msgstr ""
@@ -6207,7 +6220,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Cegah halaman ini untuk membuat dialog tambahan"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:334
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -6218,54 +6231,54 @@ msgstr ""
 "<ul><li>%2</li></ul>Apakah anda ingin Falkon membuka tautan ini menggunakan "
 "aplikasi sistem?"
 
-#: lib/webengine/webpage.cpp:337
+#: lib/webengine/webpage.cpp:339
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Ingat pilihan saya untuk protokol ini"
 
-#: lib/webengine/webpage.cpp:338
+#: lib/webengine/webpage.cpp:340
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Permintaan Protokol Eksternal"
 
-#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Halaman gagal dimuat"
 
-#: lib/webengine/webpage.cpp:418
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Terjadi kesalahan saat memuat laman ini."
 
-#: lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
 msgstr ""
 "Coba muat ulang laman atau tutup tab lain agar memori menjadi lebih lega"
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Muat ulang laman"
 
-#: lib/webengine/webpage.cpp:595
+#: lib/webengine/webpage.cpp:597
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Pilih file..."
 
-#: lib/webengine/webpage.cpp:599
+#: lib/webengine/webpage.cpp:601
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Pilih file..."
 
-#: lib/webengine/webpage.cpp:735
+#: lib/webengine/webpage.cpp:737
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "Peringatan JavaScript"
 
-#: lib/webengine/webpage.cpp:744
+#: lib/webengine/webpage.cpp:746
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Halangi halaman ini untuk membuat dialog tambahan"

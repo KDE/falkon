@@ -4035,7 +4035,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Vai tiešām vēlaties noņemt „%1“?"
 
-#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:673
+#: lib/preferences/preferences.cpp:156 lib/preferences/preferences.cpp:675
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Noklusējums"
@@ -4045,93 +4045,93 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Padarīt par noklusējumu"
 
-#: lib/preferences/preferences.cpp:329
+#: lib/preferences/preferences.cpp:331
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Automātiski"
 
-#: lib/preferences/preferences.cpp:331
+#: lib/preferences/preferences.cpp:333
 msgctxt "Preferences|"
 msgid "Light"
 msgstr "Gaišais"
 
-#: lib/preferences/preferences.cpp:332
+#: lib/preferences/preferences.cpp:334
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr "Tumšais"
 
-#: lib/preferences/preferences.cpp:342
+#: lib/preferences/preferences.cpp:344
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr "%1 %"
 
-#: lib/preferences/preferences.cpp:616
+#: lib/preferences/preferences.cpp:618
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Izvēlieties izpilddatnes vietu..."
 
-#: lib/preferences/preferences.cpp:659
+#: lib/preferences/preferences.cpp:661
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "OSD paziņojumi"
 
-#: lib/preferences/preferences.cpp:660
+#: lib/preferences/preferences.cpp:662
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Velciet to pa ekrānu un novietojiet, kur vēlaties."
 
-#: lib/preferences/preferences.cpp:709
+#: lib/preferences/preferences.cpp:711
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Izvēlieties lejupielāžu vietu..."
 
-#: lib/preferences/preferences.cpp:723
+#: lib/preferences/preferences.cpp:725
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Izvēlieties stila lapas atrašanās vietu..."
 
-#: lib/preferences/preferences.cpp:734
+#: lib/preferences/preferences.cpp:736
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Izdzēsts"
 
-#: lib/preferences/preferences.cpp:842
+#: lib/preferences/preferences.cpp:844
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Izvēlēties kešatmiņas ceļu..."
 
-#: lib/preferences/preferences.cpp:873
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Jauns profils"
 
-#: lib/preferences/preferences.cpp:873
+#: lib/preferences/preferences.cpp:875
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Ierakstiet jaunā profila nosaukumu:"
 
-#: lib/preferences/preferences.cpp:883 lib/preferences/preferences.cpp:888
+#: lib/preferences/preferences.cpp:885 lib/preferences/preferences.cpp:890
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Kļūda!"
 
-#: lib/preferences/preferences.cpp:883
+#: lib/preferences/preferences.cpp:885
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Šis profils jau eksistē!"
 
-#: lib/preferences/preferences.cpp:888
+#: lib/preferences/preferences.cpp:890
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Neizdodas izveidot mapi profilam!"
 
-#: lib/preferences/preferences.cpp:899
+#: lib/preferences/preferences.cpp:901
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Apstiprinājums"
 
-#: lib/preferences/preferences.cpp:900
+#: lib/preferences/preferences.cpp:902
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4141,7 +4141,7 @@ msgstr ""
 "Vai tiešām vēlaties neatgriezeniski dzēst profilu „%1“? Šo darbību atsaukt "
 "nevarēs!"
 
-#: lib/preferences/preferences.cpp:915 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:917 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Ievērībai: nevar izdzēst aktīvu profilu."
@@ -4151,7 +4151,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Iestatījumi"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2144
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2164
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Pamata"
@@ -4360,151 +4360,164 @@ msgstr ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Tīmekļa lapas fona "
 "krāsas</span></p></body></html>"
 
-#: lib/preferences/preferences.ui:584
-msgctxt "Preferences|"
-msgid "Background color while loading:"
-msgstr "Fona krāsas ielādes laikā:"
-
-#: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
-#: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
-#: lib/preferences/preferences.ui:1936 lib/preferences/preferences.ui:2036
-#: lib/preferences/preferences.ui:2728
+#: lib/preferences/preferences.ui:587 lib/preferences/preferences.ui:601
+#: lib/preferences/preferences.ui:1064 lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1956 lib/preferences/preferences.ui:2056
+#: lib/preferences/preferences.ui:2748
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
-#: lib/preferences/preferences.ui:598
-msgctxt "Preferences|"
-msgid "Background color when loaded:"
-msgstr "Fona krāsa ielādētai lapai:"
-
-#: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
-#: lib/preferences/preferences.ui:1051
+#: lib/preferences/preferences.ui:594 lib/preferences/preferences.ui:608
+#: lib/preferences/preferences.ui:1071
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Atiestatīt"
 
-#: lib/preferences/preferences.ui:631
+#: lib/preferences/preferences.ui:615
+msgctxt "Preferences|"
+msgid "Background color when loaded:"
+msgstr "Fona krāsa ielādētai lapai:"
+
+#: lib/preferences/preferences.ui:622
+msgctxt "Preferences|"
+msgid "Background color while loading:"
+msgstr "Fona krāsas ielādes laikā:"
+
+#: lib/preferences/preferences.ui:629
+msgctxt "Preferences|miliseconds"
+msgid "ms"
+msgstr ""
+
+#: lib/preferences/preferences.ui:642
+msgctxt ""
+"Preferences|Time in milisencods which describes how long to wait after the "
+"page was initially loaded before switching the backgroung color to the "
+"loaded variant."
+msgid "Loaded state switch delay:"
+msgstr ""
+
+#: lib/preferences/preferences.ui:651
 msgctxt "Preferences|"
 msgid "<b>Browser Window</b>"
 msgstr "<b>Pārlūka logs</b>"
 
-#: lib/preferences/preferences.ui:679
+#: lib/preferences/preferences.ui:699
 msgctxt "Preferences|"
 msgid "Tabs behaviour"
 msgstr "Ciļņu uzvedība"
 
-#: lib/preferences/preferences.ui:685
+#: lib/preferences/preferences.ui:705
 msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Paslēpt cilnes, kad ir atvērta tikai viena cilne"
 
-#: lib/preferences/preferences.ui:692
+#: lib/preferences/preferences.ui:712
 msgctxt "Preferences|"
 msgid "Activate last tab when closing active tab"
 msgstr "Pāriet uz pēdējo cilni, kad tiek aizvērta aktīva cilne"
 
-#: lib/preferences/preferences.ui:699
+#: lib/preferences/preferences.ui:719
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Jaunas cilnes atvērt pēc aktīvās cilnes"
 
-#: lib/preferences/preferences.ui:706
+#: lib/preferences/preferences.ui:726
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Jaunas tukšas cilnes atvērt pēc aktīvās cilnes"
 
-#: lib/preferences/preferences.ui:713
+#: lib/preferences/preferences.ui:733
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Uznirstošos logus atvērt cilnēs"
 
-#: lib/preferences/preferences.ui:720
+#: lib/preferences/preferences.ui:740
 msgctxt "Preferences|"
 msgid "Block automatic popups"
 msgstr "Bloķēt automātiskos uznirstošos logus"
 
-#: lib/preferences/preferences.ui:727
+#: lib/preferences/preferences.ui:747
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Izmantojot peles ritentiņu, vienmēr pārslēgties starp cilnēm"
 
-#: lib/preferences/preferences.ui:734
+#: lib/preferences/preferences.ui:754
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Automātiski pārslēgties uz tikko atvērtu cilni"
 
-#: lib/preferences/preferences.ui:741
+#: lib/preferences/preferences.ui:761
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Neiziet no programmas, aizverot pēdējo cilni"
 
-#: lib/preferences/preferences.ui:748
+#: lib/preferences/preferences.ui:768
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Lūgt apstiprinājumu, aizverot vairākas cilnes"
 
-#: lib/preferences/preferences.ui:755
+#: lib/preferences/preferences.ui:775
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Rādīt aizvērto ciļņu pogu"
 
-#: lib/preferences/preferences.ui:764
+#: lib/preferences/preferences.ui:784
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Rādīt aizvēršanas pogu uz neaktīvajām cilnēm:"
 
-#: lib/preferences/preferences.ui:772
+#: lib/preferences/preferences.ui:792
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Automātiski"
 
-#: lib/preferences/preferences.ui:777
+#: lib/preferences/preferences.ui:797
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Vienmēr"
 
-#: lib/preferences/preferences.ui:782
+#: lib/preferences/preferences.ui:802
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Nekad"
 
-#: lib/preferences/preferences.ui:822
+#: lib/preferences/preferences.ui:842
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Adrešu joslas uzvedība"
 
-#: lib/preferences/preferences.ui:830
+#: lib/preferences/preferences.ui:850
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Dot ieteikumus, rakstot adrešu joslā:"
 
-#: lib/preferences/preferences.ui:844
+#: lib/preferences/preferences.ui:864
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Vēsture un grāmatzīmes"
 
-#: lib/preferences/preferences.ui:849
+#: lib/preferences/preferences.ui:869
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Vēsture"
 
-#: lib/preferences/preferences.ui:854
+#: lib/preferences/preferences.ui:874
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Grāmatzīmes"
 
-#: lib/preferences/preferences.ui:859
+#: lib/preferences/preferences.ui:879
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Nekas"
 
-#: lib/preferences/preferences.ui:885
+#: lib/preferences/preferences.ui:905
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Ieslēgt rindā iekļautus ieteikumus"
 
-#: lib/preferences/preferences.ui:892
+#: lib/preferences/preferences.ui:912
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4512,358 +4525,358 @@ msgstr ""
 "Nospiest „Shift“ taustiņu, lai nepārslēgtos starp cilnēm un lapu ielādētu "
 "atvērtajā cilnē"
 
-#: lib/preferences/preferences.ui:895
+#: lib/preferences/preferences.ui:915
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "Ierosināt pārslēgt cilni, ja ievadītā adrese ir jau atvērta"
 
-#: lib/preferences/preferences.ui:902
+#: lib/preferences/preferences.ui:922
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Vienmēr rādīt „iet“ ikonu"
 
-#: lib/preferences/preferences.ui:909
+#: lib/preferences/preferences.ui:929
 msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Rādīt tālummaiņās etiķeti"
 
-#: lib/preferences/preferences.ui:916
+#: lib/preferences/preferences.ui:936
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Atlasīt visu tekstu ar dubultklikšķi adreses joslā"
 
-#: lib/preferences/preferences.ui:923
+#: lib/preferences/preferences.ui:943
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Atlasītu visu tekstu, noklikšķinot adreses joslā"
 
-#: lib/preferences/preferences.ui:930
+#: lib/preferences/preferences.ui:950
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Ieslēgt automātisko meklēšanu adreses joslā"
 
-#: lib/preferences/preferences.ui:937
+#: lib/preferences/preferences.ui:957
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Meklēt ar noklusēto meklētāju"
 
-#: lib/preferences/preferences.ui:944
+#: lib/preferences/preferences.ui:964
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Rādīt meklēšanas ieteikumus"
 
-#: lib/preferences/preferences.ui:951
+#: lib/preferences/preferences.ui:971
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr "Izvērst ieteikumu uzlecošo logu līdz loga platumam"
 
-#: lib/preferences/preferences.ui:974
+#: lib/preferences/preferences.ui:994
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Adrešu joslā rādīt ielādes progresu"
 
-#: lib/preferences/preferences.ui:1007
+#: lib/preferences/preferences.ui:1027
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Aizpildīt"
 
-#: lib/preferences/preferences.ui:1012
+#: lib/preferences/preferences.ui:1032
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Apakšā"
 
-#: lib/preferences/preferences.ui:1017
+#: lib/preferences/preferences.ui:1037
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Augšā"
 
-#: lib/preferences/preferences.ui:1025
+#: lib/preferences/preferences.ui:1045
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Pielāgota krāsa:"
 
-#: lib/preferences/preferences.ui:1041
+#: lib/preferences/preferences.ui:1061
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Atlasiet krāsu"
 
-#: lib/preferences/preferences.ui:1102
+#: lib/preferences/preferences.ui:1122
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Tīkla konfigurācija"
 
-#: lib/preferences/preferences.ui:1110
+#: lib/preferences/preferences.ui:1130
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr "Ieslēgt „Pepper“ spraudņa API (PPAPI)"
 
-#: lib/preferences/preferences.ui:1117
+#: lib/preferences/preferences.ui:1137
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr "Izmantot iebūvēto PDF skatītāju (nepieciešamas PPAPI)"
 
-#: lib/preferences/preferences.ui:1124
+#: lib/preferences/preferences.ui:1144
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Atļaut „JavaScript“"
 
-#: lib/preferences/preferences.ui:1131
+#: lib/preferences/preferences.ui:1151
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Fokusa ķēdē iekļaut saites"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1138
+#: lib/preferences/preferences.ui:1158
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Drukāt elementa fonu"
 
-#: lib/preferences/preferences.ui:1145
+#: lib/preferences/preferences.ui:1165
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Ritināšana ar animāciju"
 
-#: lib/preferences/preferences.ui:1152
+#: lib/preferences/preferences.ui:1172
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Ieslēgt telpisko navigāciju"
 
-#: lib/preferences/preferences.ui:1159
+#: lib/preferences/preferences.ui:1179
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Izmantot sistēmas ritjoslas"
 
-#: lib/preferences/preferences.ui:1166
+#: lib/preferences/preferences.ui:1186
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Izslēgt automātisku video atskaņošanu"
 
-#: lib/preferences/preferences.ui:1173
+#: lib/preferences/preferences.ui:1193
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Liegt „WebRTC“ izpaust lokālo IP adresi"
 
-#: lib/preferences/preferences.ui:1180
+#: lib/preferences/preferences.ui:1200
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Atļaut DNS priekšienesi"
 
-#: lib/preferences/preferences.ui:1187
+#: lib/preferences/preferences.ui:1207
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr "Ieslēgt ekrāna ierakstīšanu"
 
-#: lib/preferences/preferences.ui:1194
+#: lib/preferences/preferences.ui:1214
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr "Izmantot aparatūras paātrinājumu (nepieciešams pārstartēt)"
 
-#: lib/preferences/preferences.ui:1201
+#: lib/preferences/preferences.ui:1221
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Ļaut nolasīt no „canvas“ elementiem"
 
-#: lib/preferences/preferences.ui:1208
+#: lib/preferences/preferences.ui:1228
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr "Piespiedu tumšais režīms"
 
-#: lib/preferences/preferences.ui:1217
+#: lib/preferences/preferences.ui:1237
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr "Galvenā krāsu shēma:"
 
-#: lib/preferences/preferences.ui:1252
+#: lib/preferences/preferences.ui:1272
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Ritināt ar peles ritentiņu"
 
-#: lib/preferences/preferences.ui:1272
+#: lib/preferences/preferences.ui:1292
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "rindas lapā"
 
-#: lib/preferences/preferences.ui:1283
+#: lib/preferences/preferences.ui:1303
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Noklusētā lapas tālummaiņa:"
 
-#: lib/preferences/preferences.ui:1322
+#: lib/preferences/preferences.ui:1342
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Lokālā krātuve"
 
-#: lib/preferences/preferences.ui:1330
+#: lib/preferences/preferences.ui:1350
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Ļaut diskā saglabāt tīkla kešatmiņu"
 
-#: lib/preferences/preferences.ui:1353
+#: lib/preferences/preferences.ui:1373
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Aizverot dzēst kešatmiņu"
 
-#: lib/preferences/preferences.ui:1360
+#: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Maksimālā:"
 
-#: lib/preferences/preferences.ui:1367
+#: lib/preferences/preferences.ui:1387
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1383
+#: lib/preferences/preferences.ui:1403
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Kešatmiņu saglabāt:"
 
-#: lib/preferences/preferences.ui:1411
+#: lib/preferences/preferences.ui:1431
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Ļaut saglabāt vēsturi"
 
-#: lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1438
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Aizverot programmu, iztīrīt vēsturi"
 
-#: lib/preferences/preferences.ui:1441
+#: lib/preferences/preferences.ui:1461
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Ļaut lokālajā krātuvē saglabāt HTML5 tīkla saturu"
 
-#: lib/preferences/preferences.ui:1448
+#: lib/preferences/preferences.ui:1468
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Aizverot programmu, dzēst lokāli saglabāto HTML5 saturu"
 
-#: lib/preferences/preferences.ui:1474
+#: lib/preferences/preferences.ui:1494
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Dzēst tagad"
 
-#: lib/preferences/preferences.ui:1513
+#: lib/preferences/preferences.ui:1533
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Starpniekservera konfigurācija"
 
-#: lib/preferences/preferences.ui:1532
+#: lib/preferences/preferences.ui:1552
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Sistēmas starpniekservera konfigurācija"
 
-#: lib/preferences/preferences.ui:1555
+#: lib/preferences/preferences.ui:1575
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Manuāla konfigurācija"
 
-#: lib/preferences/preferences.ui:1565
+#: lib/preferences/preferences.ui:1585
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1570
+#: lib/preferences/preferences.ui:1590
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1585
+#: lib/preferences/preferences.ui:1605
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Ports:"
 
-#: lib/preferences/preferences.ui:1606
+#: lib/preferences/preferences.ui:1626
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Lietotājvārds:"
 
-#: lib/preferences/preferences.ui:1616
+#: lib/preferences/preferences.ui:1636
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Parole:"
 
-#: lib/preferences/preferences.ui:1645
+#: lib/preferences/preferences.ui:1665
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Bez starpniekservera"
 
-#: lib/preferences/preferences.ui:1660
+#: lib/preferences/preferences.ui:1680
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Fontu saimes</b>"
 
-#: lib/preferences/preferences.ui:1673
+#: lib/preferences/preferences.ui:1693
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Standarta"
 
-#: lib/preferences/preferences.ui:1680
+#: lib/preferences/preferences.ui:1700
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Fiksētais"
 
-#: lib/preferences/preferences.ui:1690
+#: lib/preferences/preferences.ui:1710
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1700
+#: lib/preferences/preferences.ui:1720
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: lib/preferences/preferences.ui:1710
+#: lib/preferences/preferences.ui:1730
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Kursīvs"
 
-#: lib/preferences/preferences.ui:1762
+#: lib/preferences/preferences.ui:1782
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "„Fantasy“"
 
-#: lib/preferences/preferences.ui:1769
+#: lib/preferences/preferences.ui:1789
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Fontu izmēri</b>"
 
-#: lib/preferences/preferences.ui:1778
+#: lib/preferences/preferences.ui:1798
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Fiksētais izmērs"
 
-#: lib/preferences/preferences.ui:1785
+#: lib/preferences/preferences.ui:1805
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Noklusētais izmērs"
 
-#: lib/preferences/preferences.ui:1812
+#: lib/preferences/preferences.ui:1832
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Minimālais izmērs"
 
-#: lib/preferences/preferences.ui:1819
+#: lib/preferences/preferences.ui:1839
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Minimālais loģiskais izmērs"
 
-#: lib/preferences/preferences.ui:1852
+#: lib/preferences/preferences.ui:1872
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Saīsnes</b>"
 
-#: lib/preferences/preferences.ui:1859
+#: lib/preferences/preferences.ui:1879
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Pārslēgties starp cilnēm ar „ALT + cilnes numurs“"
 
-#: lib/preferences/preferences.ui:1866
+#: lib/preferences/preferences.ui:1886
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Ielādēt ātros zvanus ar „Ctrl + ātrā zvana numurs“"
 
-#: lib/preferences/preferences.ui:1873
+#: lib/preferences/preferences.ui:1893
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -4872,12 +4885,12 @@ msgstr ""
 "Pašreizējās saīsnes:<br/><b>1</b> — iepriekšējā cilne<br/><b>2</b> — jauna "
 "cilne<br/><b>/</b> — meklēt lapā"
 
-#: lib/preferences/preferences.ui:1876
+#: lib/preferences/preferences.ui:1896
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Izmantot viena taustiņa saīsnes"
 
-#: lib/preferences/preferences.ui:1883
+#: lib/preferences/preferences.ui:1903
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -4886,157 +4899,157 @@ msgstr ""
 "Ja nav atzīmēts, novērš nejaušu iziešanu no programmas, vēloties nospiest "
 "„Ctrl+W“."
 
-#: lib/preferences/preferences.ui:1886
+#: lib/preferences/preferences.ui:1906
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Aizvērt programmu ar „Ctrl-Q“"
 
-#: lib/preferences/preferences.ui:1910
+#: lib/preferences/preferences.ui:1930
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Lejupielāžu atrašanās vieta</b>"
 
-#: lib/preferences/preferences.ui:1917
+#: lib/preferences/preferences.ui:1937
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Katru reizi jautāt lejupielādes vietu"
 
-#: lib/preferences/preferences.ui:1924
+#: lib/preferences/preferences.ui:1944
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Izmantot noteiktu vietu: "
 
-#: lib/preferences/preferences.ui:1974
+#: lib/preferences/preferences.ui:1994
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Lejupielādes opcijas</b>"
 
-#: lib/preferences/preferences.ui:1981
+#: lib/preferences/preferences.ui:2001
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Aizvērt lejupielāžu pārvaldnieku, kad ir lejupielādētas visas datnes"
 
-#: lib/preferences/preferences.ui:1988
+#: lib/preferences/preferences.ui:2008
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Ārējs lejupielāžu pārvaldnieks</b>"
 
-#: lib/preferences/preferences.ui:1995
+#: lib/preferences/preferences.ui:2015
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Izmantot ārēju lejupielāžu pārvaldnieku"
 
-#: lib/preferences/preferences.ui:2007
+#: lib/preferences/preferences.ui:2027
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Izpildāmā datne:"
 
-#: lib/preferences/preferences.ui:2014
+#: lib/preferences/preferences.ui:2034
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Parametri:"
 
-#: lib/preferences/preferences.ui:2024
+#: lib/preferences/preferences.ui:2044
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Atstājiet tukšu, ja nezināt"
 
-#: lib/preferences/preferences.ui:2045
+#: lib/preferences/preferences.ui:2065
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> tiks aizstāts ar lejupielādējamo adresi"
 
-#: lib/preferences/preferences.ui:2071
+#: lib/preferences/preferences.ui:2091
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Automātiskā aizpildītāja iestatījumi</b>"
 
-#: lib/preferences/preferences.ui:2078
+#: lib/preferences/preferences.ui:2098
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Atļaut saglabāt vietņu paroles"
 
-#: lib/preferences/preferences.ui:2129
+#: lib/preferences/preferences.ui:2149
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Vietnēs automātiski pabeigt paroles"
 
-#: lib/preferences/preferences.ui:2150
+#: lib/preferences/preferences.ui:2170
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Pārvaldīt sīkdatnes"
 
-#: lib/preferences/preferences.ui:2163
+#: lib/preferences/preferences.ui:2183
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Sīkdatņu pārvaldnieks"
 
-#: lib/preferences/preferences.ui:2186
+#: lib/preferences/preferences.ui:2206
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>„JavaScript“</b>"
 
-#: lib/preferences/preferences.ui:2199
+#: lib/preferences/preferences.ui:2219
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "„JavaScript“ opcijas"
 
-#: lib/preferences/preferences.ui:2206
+#: lib/preferences/preferences.ui:2226
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Lūgt serveriem, lai neuzskaita un neizseko"
 
-#: lib/preferences/preferences.ui:2213
+#: lib/preferences/preferences.ui:2233
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Sīkdatnes</b>"
 
-#: lib/preferences/preferences.ui:2239
+#: lib/preferences/preferences.ui:2259
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "Pārvaldīt „JavaScript“ privātuma iestatījumus"
 
-#: lib/preferences/preferences.ui:2246
+#: lib/preferences/preferences.ui:2266
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Citi</b>"
 
-#: lib/preferences/preferences.ui:2267
+#: lib/preferences/preferences.ui:2287
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "HTML5 atļaujas"
 
-#: lib/preferences/preferences.ui:2277
+#: lib/preferences/preferences.ui:2297
 msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Vietnes iestatījumi"
 
-#: lib/preferences/preferences.ui:2309
+#: lib/preferences/preferences.ui:2329
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Pazušanas laiks:"
 
-#: lib/preferences/preferences.ui:2322
+#: lib/preferences/preferences.ui:2342
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " sekundes"
 
-#: lib/preferences/preferences.ui:2344
+#: lib/preferences/preferences.ui:2364
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Paziņojumi</b>"
 
-#: lib/preferences/preferences.ui:2367
+#: lib/preferences/preferences.ui:2387
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Izmantot sistēmā iebūvētos paziņojumus (tikai „Linux“)"
 
-#: lib/preferences/preferences.ui:2374
+#: lib/preferences/preferences.ui:2394
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Neizmantot paziņojumus"
 
-#: lib/preferences/preferences.ui:2397
+#: lib/preferences/preferences.ui:2417
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -5045,17 +5058,17 @@ msgstr ""
 "<b>Ievērībai: </b>varat mainīt OSD paziņojumu atrašanās vietu, to "
 "pārvietojot ekrānā."
 
-#: lib/preferences/preferences.ui:2423
+#: lib/preferences/preferences.ui:2443
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Izmantot OSD paziņojumus"
 
-#: lib/preferences/preferences.ui:2430
+#: lib/preferences/preferences.ui:2450
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Priekšskatījums"
 
-#: lib/preferences/preferences.ui:2495
+#: lib/preferences/preferences.ui:2515
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -5064,32 +5077,32 @@ msgstr ""
 "Lai uzzinātu vairāk par pareizrakstības pārbaudītāju, apmeklējiet <a href="
 "\"https://userbase.kde.org/Falkon#Spell_Check\">vikivietni</a>."
 
-#: lib/preferences/preferences.ui:2537
+#: lib/preferences/preferences.ui:2557
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Pareizrakstības pārbaudes opcijas</b>"
 
-#: lib/preferences/preferences.ui:2544
+#: lib/preferences/preferences.ui:2564
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Ieslēgt pareizrakstības pārbaudi"
 
-#: lib/preferences/preferences.ui:2551
+#: lib/preferences/preferences.ui:2571
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Vārdnīcas mapes</b>"
 
-#: lib/preferences/preferences.ui:2602
+#: lib/preferences/preferences.ui:2622
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Valodas nav atrastas"
 
-#: lib/preferences/preferences.ui:2631
+#: lib/preferences/preferences.ui:2651
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Protokolu apstrādes pārvaldnieks"
 
-#: lib/preferences/preferences.ui:2653
+#: lib/preferences/preferences.ui:2673
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
@@ -5098,72 +5111,72 @@ msgstr ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Pārvaldīt "
 "automātiski atveramos protokolus</span></p></body></html>"
 
-#: lib/preferences/preferences.ui:2665
+#: lib/preferences/preferences.ui:2685
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr "Pārvaldīt pielāgotas shēmas"
 
-#: lib/preferences/preferences.ui:2672
+#: lib/preferences/preferences.ui:2692
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Mainīt pārlūkprogrammas identifikāciju</b>"
 
-#: lib/preferences/preferences.ui:2679
+#: lib/preferences/preferences.ui:2699
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Pārvaldīt meklētājprogrammas</b>"
 
-#: lib/preferences/preferences.ui:2686
+#: lib/preferences/preferences.ui:2706
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Vēlamā tīmekļa vietņu valoda</b>"
 
-#: lib/preferences/preferences.ui:2693
+#: lib/preferences/preferences.ui:2713
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Izmantot stila lapu</b>"
 
-#: lib/preferences/preferences.ui:2700
+#: lib/preferences/preferences.ui:2720
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Pārvaldīt protokolu apstrādātājus</b>"
 
-#: lib/preferences/preferences.ui:2755
+#: lib/preferences/preferences.ui:2775
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr "Sertifikātu izņēmumu pārvaldnieks"
 
-#: lib/preferences/preferences.ui:2795
+#: lib/preferences/preferences.ui:2815
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Lietotāja aģenta pārvaldnieks"
 
-#: lib/preferences/preferences.ui:2830
+#: lib/preferences/preferences.ui:2850
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Stila lapa, ko automātiski ielādēt visām tīmekļa lapām: "
 
-#: lib/preferences/preferences.ui:2855
+#: lib/preferences/preferences.ui:2875
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Pielāgotu shēmu pārvaldnieks"
 
-#: lib/preferences/preferences.ui:2895
+#: lib/preferences/preferences.ui:2915
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Meklētājprogrammu pārvaldnieks"
 
-#: lib/preferences/preferences.ui:2935
+#: lib/preferences/preferences.ui:2955
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Valodas"
 
-#: lib/preferences/preferences.ui:2970
+#: lib/preferences/preferences.ui:2990
 msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Sertifikātu pārvaldnieks</b>"
 
-#: lib/preferences/preferences.ui:2995
+#: lib/preferences/preferences.ui:3015
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
 msgstr "Automātiski atveramie protokoli"
@@ -6001,7 +6014,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Neļaut šai lapai veidot papildu lodziņus"
 
-#: lib/webengine/webpage.cpp:332
+#: lib/webengine/webpage.cpp:334
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -6011,27 +6024,27 @@ msgstr ""
 "„Falkon“ neprot atvērt <b>%1:</b> veida saites. Pieprasītā saite ir <ul><li>"
 "%2</li></ul> Vai vēlaties, lai „Falkon“ mēģina to atvērt sistēmas programmā?"
 
-#: lib/webengine/webpage.cpp:337
+#: lib/webengine/webpage.cpp:339
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Atcerēties manu izvēli šim protokolam"
 
-#: lib/webengine/webpage.cpp:338
+#: lib/webengine/webpage.cpp:340
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Ārējs protokola pieprasījums"
 
-#: lib/webengine/webpage.cpp:416 lib/webengine/webpage.cpp:417
+#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Kļūme lapas ielādē"
 
-#: lib/webengine/webpage.cpp:418
+#: lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Notika kļūme, ielādējot šo lapu."
 
-#: lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -6039,27 +6052,27 @@ msgstr ""
 "Mēģiniet lapu ielādēt atkārtoti vai aizveriet dažas cilnes, atbrīvojot vietu "
 "atmiņā."
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Pārlādēt lapu"
 
-#: lib/webengine/webpage.cpp:595
+#: lib/webengine/webpage.cpp:597
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Izvēlēties datni..."
 
-#: lib/webengine/webpage.cpp:599
+#: lib/webengine/webpage.cpp:601
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Izvēlēties datnes..."
 
-#: lib/webengine/webpage.cpp:735
+#: lib/webengine/webpage.cpp:737
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "„JavaScript“ trauksme"
 
-#: lib/webengine/webpage.cpp:744
+#: lib/webengine/webpage.cpp:746
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Neļaut šai lapai veidot papildu lodziņus"
