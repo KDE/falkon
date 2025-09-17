@@ -25,6 +25,7 @@
 #include "networkmanager.h"
 #include "qztools.h"
 #include "datapaths.h"
+#include "../config.h"
 
 #include <QMenu>
 #include <QClipboard>
