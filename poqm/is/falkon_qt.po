@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-09-12 10:45+0000\n"
+"PO-Revision-Date: 2025-09-16 14:56+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -2288,21 +2288,25 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Skilríkið samsvarar ekki innbyggðum dulritunarlyklum sem fráteknir eru fyrir "
+"vélarheiti netþjónsins."
 
 #: lib/network/networkmanager.cpp:347
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Samheiti (CN) skilríkis samsvarar ekki vélarheiti netþjónsins."
 
 #: lib/network/networkmanager.cpp:349
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Skilríkið er ekki gilt á fyrirliggjandi dags- og tímasetningu."
 
 #: lib/network/networkmanager.cpp:351
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
 msgstr ""
+"Skilríkið er ekki undirritað af treystanlegri vottunarstöð (trusted "
+"Certificate Authority)."
 
 #: lib/network/networkmanager.cpp:353
 msgctxt "NetworkManager|"
@@ -2314,11 +2318,13 @@ msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
 msgstr ""
+"Skilríkið er ekki með neitt kerfi til að ákvarða hvort það hafi verið "
+"afturkallað."
 
 #: lib/network/networkmanager.cpp:357
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Afturköllunarupplýsingar um skilríkið eru ekki tiltækar."
 
 #: lib/network/networkmanager.cpp:359
 msgctxt "NetworkManager|"
@@ -2338,23 +2344,23 @@ msgstr "Skilríkið er undirritað af með veiku reikniriti undirritunar."
 #: lib/network/networkmanager.cpp:365
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "Vélarheitið sem tiltekið er í skilríkinu er ekki einstakt."
 
 #: lib/network/networkmanager.cpp:367
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Skilríkið inniheldur veikan lykil."
 
 #: lib/network/networkmanager.cpp:369
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
-msgstr ""
+msgstr "Uppgefin DNS-nöfn skilríkis fylgja ekki nafnahömlum."
 
 #: lib/network/networkmanager.cpp:371
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Skilríkið er með of langan gildistíma."
 
 #: lib/network/networkmanager.cpp:373
 msgctxt "NetworkManager|"
@@ -2362,6 +2368,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Beðið var um gagnsæi skilríkis (Certificate Transparency - CT) fyrir þessa "
+"tengingu, en netþjónninn gaf ekki upp CT-upplýsingar sem uppfylltu þá stefnu."
 
 #: lib/network/networkmanager.cpp:375
 msgctxt "NetworkManager|"
@@ -2369,16 +2377,18 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Skilríkið er þekkt fyrir að vera notað til inngripa af öðrum aðilum en "
+"eiganda tækisins."
 
 #: lib/network/networkmanager.cpp:377
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Tengingin notar úrelda útgáfu af SSL/TLS"
 
 #: lib/network/networkmanager.cpp:379
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
-msgstr ""
+msgstr "Skilríkið er af eldri gerð frá Symantec sem er ekki lengur gild."
 
 #: lib/network/networkmanager.cpp:382
 msgctxt "NetworkManager|"
@@ -2782,7 +2792,7 @@ msgstr "Villa í SSL-skilríki!"
 #: lib/network/sslerrordialog.ui:90
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr ""
+msgstr "Víxla af/á upplýsingum um skilríki"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -3172,12 +3182,12 @@ msgstr "<b>Tenging er dulkóðuð.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Allar villur í skilríki eru <b>varanlega</b> hunsaðar."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Villan í skilríkinu er <b>tímabundið</b> hunsuð."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
@@ -3338,17 +3348,17 @@ msgstr "<b>Vefsvæði %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Allar villur í skilríki eru <b>varanlega</b> hunsaðar."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Villan í skilríkinu er <b>tímabundið</b> hunsuð."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Skilríki var hafnað."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
@@ -3501,7 +3511,7 @@ msgstr "Stuðningur við skjáfylli"
 #: lib/other/sitesettingsmanager.cpp:380
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Keyra ótryggt efni"
 
 #: lib/other/sitesettingsmanager.cpp:382
 msgctxt "SiteSettingsManager|"
@@ -3870,7 +3880,7 @@ msgstr "Bæta við útilokuðu skema"
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr ""
+msgstr "Samskiptareglur sjálfvirkrar opnunar"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
 msgctxt "AutoOpenProtocolsDialog|"
@@ -3878,6 +3888,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Sjálfvirk opnun</"
+"span></p></body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
@@ -3897,6 +3909,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Lokað á</span></p></"
+"body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -4335,11 +4349,13 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Bakgrunnslitir "
+"vefsíðu</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:584
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "Bakgrunnslitur á meðan hlaðið er inn:"
 
 #: lib/preferences/preferences.ui:591 lib/preferences/preferences.ui:608
 #: lib/preferences/preferences.ui:1044 lib/preferences/preferences.ui:1398
@@ -4352,7 +4368,7 @@ msgstr "..."
 #: lib/preferences/preferences.ui:598
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "Bakgrunnslitur þegar búið er að hlaða inn:"
 
 #: lib/preferences/preferences.ui:615 lib/preferences/preferences.ui:622
 #: lib/preferences/preferences.ui:1051
@@ -4398,7 +4414,7 @@ msgstr "Opna sprettglugga í flipum"
 #: lib/preferences/preferences.ui:720
 msgctxt "Preferences|"
 msgid "Block automatic popups"
-msgstr ""
+msgstr "Loka á sjálfvirka sprettglugga"
 
 #: lib/preferences/preferences.ui:727
 msgctxt "Preferences|"
@@ -4647,7 +4663,7 @@ msgstr "Þvinga fram dökkan ham"
 #: lib/preferences/preferences.ui:1217
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Ákjósanlegt litastef:"
 
 #: lib/preferences/preferences.ui:1252
 msgctxt "Preferences|"
@@ -5071,6 +5087,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Sýsla með "
+"samskiptareglur sjálfvirkrar opnunar</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2665
 msgctxt "Preferences|"
@@ -5140,7 +5158,7 @@ msgstr "<b>Skilríkjastjórnun</b>"
 #: lib/preferences/preferences.ui:2995
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr ""
+msgstr "Samskiptareglur sjálfvirkrar opnunar"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
