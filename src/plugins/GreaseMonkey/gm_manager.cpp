@@ -134,6 +134,17 @@ QString GM_Manager::valuesScript() const
     return m_valuesScript;
 }
 
+void GM_Manager::unloadScripts()
+{
+    QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
+
+    for (const auto &gmScript : std::as_const(m_scripts)) {
+        for (const auto &script : collection->find(gmScript->fullName())) {
+            collection->remove(script);
+        }
+    }
+}
+
 void GM_Manager::unloadPlugin()
 {
     // Save settings
@@ -150,6 +161,14 @@ void GM_Manager::unloadPlugin()
         it.next();
         mainWindowDeleted(it.key());
     }
+
+    unloadScripts();
+
+    for (GM_Script *gmScript : std::as_const(m_scripts)) {
+        delete gmScript;
+    }
+    m_scripts.clear();
+    m_contextMenuScripts.clear();
 }
 
 QList<GM_Script*> GM_Manager::allScripts() const
