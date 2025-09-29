@@ -64,6 +64,8 @@ AdBlockDialog::AdBlockDialog(QWidget* parent)
     connect(tabWidget, &QTabWidget::currentChanged, this, &AdBlockDialog::currentChanged);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QWidget::close);
 
+    connect(m_manager, &AdBlockManager::enabledChanged, adblockCheckBox, &QAbstractButton::setChecked);
+
     load();
 
     buttonBox->setFocus();

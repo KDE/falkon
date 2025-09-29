@@ -142,6 +142,12 @@ void AdBlockIcon::clicked(ClickController *controller)
 
     auto *menu = new QMenu();
     menu->setAttribute(Qt::WA_DeleteOnClose);
+
+    QAction* act = menu->addAction(tr("&Enable AdBlock"));
+    act->setCheckable(true);
+    act->setChecked(manager->isEnabled());
+    connect(act, &QAction::triggered, manager, &AdBlockManager::setEnabled);
+
     menu->addAction(tr("Show AdBlock &Settings"), manager, SLOT(showDialog()));
     menu->addSeparator();
 
@@ -150,7 +156,7 @@ void AdBlockIcon::clicked(ClickController *controller)
         const QString hostFilter = QSL("@@||%1^$document").arg(host);
         const QString pageFilter = QSL("@@|%1|$document").arg(pageUrl.toString());
 
-        QAction* act = menu->addAction(tr("Disable on %1").arg(host));
+        act = menu->addAction(tr("Disable on %1").arg(host));
         act->setCheckable(true);
         act->setChecked(customList->containsFilter(hostFilter));
         act->setData(hostFilter);
