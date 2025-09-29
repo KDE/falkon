@@ -49,6 +49,7 @@ public:
     QString valuesScript() const;
 
     void unloadPlugin();
+    void unloadScripts();
 
     QList<GM_Script*> allScripts() const;
     QList<GM_Script*> contextMenuScripts() const;
