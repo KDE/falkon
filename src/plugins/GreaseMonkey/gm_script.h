@@ -54,7 +54,7 @@ public:
     bool noFrames() const;
 
     bool isEnabled() const;
-    void setEnabled(bool enable);
+    void setEnabled(const bool enable);
 
     QStringList include() const;
     QStringList exclude() const;

@@ -72,6 +72,10 @@ void GM_Plugin::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTest
 {
     Q_UNUSED(r)
 
+    if (!m_manager->isEnabled()) {
+        return;
+    }
+
     if (m_manager->contextMenuScripts().isEmpty()) {
         return;
     }
