@@ -34,6 +34,8 @@ public:
 
 private Q_SLOTS:
     void openSettings();
+    void handleClicked(AbstractButtonInterface::ClickController *controller);
+    void updateState(const bool enabled);
 
 private:
     GM_Manager *m_manager;

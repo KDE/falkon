@@ -41,6 +41,7 @@
 
 GM_Manager::GM_Manager(const QString &sPath, QObject* parent)
     : QObject(parent)
+    , m_enabled(true)
     , m_settingsPath(sPath)
     , m_jsObject(new GM_JSObject(this))
 {
@@ -134,12 +135,28 @@ QString GM_Manager::valuesScript() const
     return m_valuesScript;
 }
 
+void GM_Manager::loadScripts()
+{
+    QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
+
+    for (const auto &gmScript : std::as_const(m_scripts)) {
+        if (!gmScript->isEnabled()) {
+            return;
+        }
+
+        if (gmScript->startAt() != GM_Script::ContextMenu) {
+            collection->insert(gmScript->webScript());
+        }
+    }
+}
+
 void GM_Manager::unloadScripts()
 {
     QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
 
     for (const auto &gmScript : std::as_const(m_scripts)) {
-        for (const auto &script : collection->find(gmScript->fullName())) {
+        const auto scripts = collection->find(gmScript->fullName());
+        for (const auto &script : scripts) {
             collection->remove(script);
         }
     }
@@ -150,6 +167,7 @@ void GM_Manager::unloadPlugin()
     // Save settings
     QSettings settings(m_settingsPath + QSL("/extensions.ini"), QSettings::IniFormat);
     settings.beginGroup(QSL("GreaseMonkey"));
+    settings.setValue(QSL("enabled"), m_enabled);
     settings.setValue(QSL("disabledScripts"), m_disabledScripts);
     settings.endGroup();
 
@@ -169,6 +187,11 @@ void GM_Manager::unloadPlugin()
     }
     m_scripts.clear();
     m_contextMenuScripts.clear();
+}
+
+bool GM_Manager::isEnabled() const
+{
+    return m_enabled;
 }
 
 QList<GM_Script*> GM_Manager::allScripts() const
@@ -200,7 +223,7 @@ void GM_Manager::enableScript(GM_Script* script)
     if (script->startAt() == GM_Script::ContextMenu) {
         m_contextMenuScripts.append(script);
     }
-    else {
+    else if (isEnabled()) {
         QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
         collection->insert(script->webScript());
     }
@@ -216,7 +239,8 @@ void GM_Manager::disableScript(GM_Script* script)
     }
     else {
         QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
-        for (const auto &script : collection->find(script->fullName())) {
+        const auto scripts = collection->find(script->fullName());
+        for (const auto &script : scripts) {
             collection->remove(script);
         }
     }
@@ -234,7 +258,7 @@ bool GM_Manager::addScript(GM_Script* script)
     if (script->startAt() == GM_Script::ContextMenu) {
         m_contextMenuScripts.append(script);
     }
-    else {
+    else if (isEnabled()) {
         QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
         collection->insert(script->webScript());
     }
@@ -243,7 +267,7 @@ bool GM_Manager::addScript(GM_Script* script)
     return true;
 }
 
-bool GM_Manager::removeScript(GM_Script* script, bool removeFile)
+bool GM_Manager::removeScript(GM_Script* script, const bool removeFile)
 {
     if (!script) {
         return false;
@@ -256,7 +280,8 @@ bool GM_Manager::removeScript(GM_Script* script, bool removeFile)
     }
     else {
         QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
-        for (const auto &script : collection->find(script->fullName())) {
+        const auto scripts = collection->find(script->fullName());
+        for (const auto &script : scripts) {
             collection->remove(script);
         }
     }
@@ -295,6 +320,7 @@ void GM_Manager::load()
 
     QSettings settings(m_settingsPath + QL1S("/extensions.ini"), QSettings::IniFormat);
     settings.beginGroup(QSL("GreaseMonkey"));
+    m_enabled = settings.value(QSL("enabled"), m_enabled).toBool();
     m_disabledScripts = settings.value(QSL("disabledScripts"), QStringList()).toStringList();
     settings.endGroup();
 
@@ -316,7 +342,7 @@ void GM_Manager::load()
         else if (script->startAt() == GM_Script::ContextMenu) {
             m_contextMenuScripts.append(script);
         }
-        else {
+        else if (isEnabled()) {
             mApp->webProfile()->scripts()->insert(script->webScript());
         }
     }
@@ -328,14 +354,16 @@ void GM_Manager::load()
 void GM_Manager::scriptChanged()
 {
     auto *script = qobject_cast<GM_Script*>(sender());
-    if (!script)
+    if (!script) {
         return;
+    }
 
     QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
-    for (const auto &script : collection->find(script->fullName())) {
+    const auto scripts = collection->find(script->fullName());
+    for (const auto &script : scripts) {
         collection->remove(script);
     }
-    for (auto &cmScript : m_contextMenuScripts) {
+    for (const auto &cmScript : std::as_const(m_contextMenuScripts)) {
         if (cmScript->fullName() == script->fullName()) {
             m_contextMenuScripts.removeOne(cmScript);
         }
@@ -344,7 +372,7 @@ void GM_Manager::scriptChanged()
     if (script->startAt() == GM_Script::ContextMenu) {
         m_contextMenuScripts.append(script);
     }
-    else {
+    else if (isEnabled()) {
         collection->insert(script->webScript());
     }
 }
@@ -353,6 +381,28 @@ bool GM_Manager::canRunOnScheme(const QString &scheme)
 {
     return (scheme == QLatin1String("http") || scheme == QLatin1String("https")
             || scheme == QLatin1String("data") || scheme == QLatin1String("ftp"));
+}
+
+
+void GM_Manager::setEnabled(const bool enabled)
+{
+    if (m_enabled == enabled) {
+        return;
+    }
+
+    m_enabled = enabled;
+    Q_EMIT enabledChanged(enabled);
+
+    QSettings settings(m_settingsPath + QL1S("/extensions.ini"), QSettings::IniFormat);
+    settings.beginGroup(QSL("GreaseMonkey"));
+    settings.setValue(QSL("enabled"), m_enabled);
+    settings.endGroup();
+
+    if (m_enabled) {
+        loadScripts();
+    } else {
+        unloadScripts();
+    }
 }
 
 void GM_Manager::mainWindowCreated(BrowserWindow* window)

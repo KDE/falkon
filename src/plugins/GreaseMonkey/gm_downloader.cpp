@@ -28,7 +28,7 @@
 #include <QSettings>
 #include <QNetworkReply>
 
-GM_Downloader::GM_Downloader(const QUrl &url, GM_Manager *manager, Mode mode)
+GM_Downloader::GM_Downloader(const QUrl &url, GM_Manager *manager, const Mode mode)
     : QObject()
     , m_manager(manager)
 {

@@ -50,6 +50,9 @@ public:
 
     void unloadPlugin();
     void unloadScripts();
+    void loadScripts();
+
+    bool isEnabled() const;
 
     QList<GM_Script*> allScripts() const;
     QList<GM_Script*> contextMenuScripts() const;
@@ -59,16 +62,19 @@ public:
     void disableScript(GM_Script* script);
 
     bool addScript(GM_Script* script);
-    bool removeScript(GM_Script* script, bool removeFile = true);
+    bool removeScript(GM_Script* script, const bool removeFile = true);
 
     void showNotification(const QString &message, const QString &title = QString());
 
     static bool canRunOnScheme(const QString &scheme);
 
 Q_SIGNALS:
+    void enabledChanged(bool enabled);
     void scriptsChanged();
 
 public Q_SLOTS:
+    void setEnabled(const bool enabled);
+
     void mainWindowCreated(BrowserWindow* window);
     void mainWindowDeleted(BrowserWindow* window);
 
@@ -77,6 +83,8 @@ private Q_SLOTS:
     void scriptChanged();
 
 private:
+    bool m_enabled;
+
     QString m_settingsPath;
     QString m_bootstrapScript;
     QString m_valuesScript;

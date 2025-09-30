@@ -36,6 +36,7 @@ GM_Settings::GM_Settings(GM_Manager* manager, QWidget* parent)
     setAttribute(Qt::WA_DeleteOnClose);
     ui->setupUi(this);
     ui->iconLabel->setPixmap(QIcon(QSL(":gm/data/icon.svg")).pixmap(32));
+    ui->enable_gm->setChecked(m_manager->isEnabled());
 
     connect(ui->listWidget, &QListWidget::itemDoubleClicked,
             this, &GM_Settings::showItemInfo);
@@ -51,6 +52,8 @@ GM_Settings::GM_Settings(GM_Manager* manager, QWidget* parent)
             this, &GM_Settings::openUserJs);
     connect(manager, &GM_Manager::scriptsChanged,
             this, &GM_Settings::loadScripts);
+    connect(ui->enable_gm, &QAbstractButton::toggled, manager, &GM_Manager::setEnabled);
+    connect(manager, &GM_Manager::enabledChanged, ui->enable_gm, &QAbstractButton::setChecked);
 
     loadScripts();
 }

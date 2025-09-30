@@ -20,15 +20,19 @@
 
 #include "webview.h"
 
+#include <QMenu>
+
 GM_Icon::GM_Icon(GM_Manager *manager)
     : AbstractButtonInterface(manager)
     , m_manager(manager)
 {
     setIcon(QIcon(QSL(":gm/data/icon.svg")));
     setTitle(tr("GreaseMonkey"));
-    setToolTip(tr("Open GreaseMonkey settings"));
 
-    connect(this, &AbstractButtonInterface::clicked, this, &GM_Icon::openSettings);
+    updateState(m_manager->isEnabled());
+
+    connect(this, &AbstractButtonInterface::clicked, this, &GM_Icon::handleClicked);
+    connect(m_manager, &GM_Manager::enabledChanged, this, &GM_Icon::updateState);
 }
 
 QString GM_Icon::id() const
@@ -44,4 +48,36 @@ QString GM_Icon::name() const
 void GM_Icon::openSettings()
 {
     m_manager->showSettings(webView());
+}
+
+void GM_Icon::handleClicked(AbstractButtonInterface::ClickController *controller)
+{
+    auto *menu = new QMenu();
+    menu->setAttribute(Qt::WA_DeleteOnClose);
+
+    QAction *act = menu->addAction(tr("&Enable GreaseMonkey"));
+    act->setCheckable(true);
+    act->setChecked(m_manager->isEnabled());
+    connect(act, &QAction::triggered, m_manager, &GM_Manager::setEnabled);
+
+    menu->addAction(tr("Show GreaseMonkey &Settings"), this, &GM_Icon::openSettings);
+    menu->addSeparator();
+
+    connect(menu, &QMenu::aboutToHide, this, [=]() {
+        controller->popupClosed();
+    });
+
+    menu->popup(controller->popupPosition(menu->sizeHint()));
+}
+
+void GM_Icon::updateState(const bool enabled)
+{
+    setActive(enabled);
+
+    if (enabled) {
+        setToolTip(tr("GreaseMonkey is active"));
+    }
+    else {
+        setToolTip(tr("GreaseMonkey is disabled"));
+    }
 }

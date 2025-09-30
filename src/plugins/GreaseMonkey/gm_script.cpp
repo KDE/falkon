@@ -115,7 +115,7 @@ bool GM_Script::isEnabled() const
     return m_valid && m_enabled;
 }
 
-void GM_Script::setEnabled(bool enable)
+void GM_Script::setEnabled(const bool enable)
 {
     m_enabled = enable;
 }

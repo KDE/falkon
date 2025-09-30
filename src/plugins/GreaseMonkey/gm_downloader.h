@@ -35,7 +35,7 @@ public:
         DownloadRequireScript
     };
 
-    explicit GM_Downloader(const QUrl &url, GM_Manager *manager, Mode mode = DownloadMainScript);
+    explicit GM_Downloader(const QUrl &url, GM_Manager *manager, const Mode mode = DownloadMainScript);
 
     void updateScript(const QString& fileName);
 
