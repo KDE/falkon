@@ -164,18 +164,26 @@ msgctxt "AdBlockIcon|"
 msgid "AdBlock is active"
 msgstr "AdBlock सक्रियः अस्ति"
 
-#: lib/adblock/adblockicon.cpp:145
+#: lib/adblock/adblockicon.cpp:146
+#, fuzzy
+#| msgctxt "AdBlockDialog|"
+#| msgid "Enable AdBlock"
+msgctxt "AdBlockIcon|"
+msgid "&Enable AdBlock"
+msgstr "AdBlock सक्षमं कुर्वन्तु"
+
+#: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
 msgid "Show AdBlock &Settings"
 msgstr "AdBlock &Settings दर्शयतु"
 
-#: lib/adblock/adblockicon.cpp:153
+#: lib/adblock/adblockicon.cpp:159
 #, qt-format
 msgctxt "AdBlockIcon|"
 msgid "Disable on %1"
 msgstr "%1 इत्यत्र निष्क्रियं कुर्वन्तु"
 
-#: lib/adblock/adblockicon.cpp:159
+#: lib/adblock/adblockicon.cpp:165
 msgctxt "AdBlockIcon|"
 msgid "Disable only on this page"
 msgstr "केवलम् अस्मिन् पृष्ठे अक्षमम्"

@@ -178,18 +178,26 @@ msgctxt "AdBlockIcon|"
 msgid "AdBlock is active"
 msgstr "AdBlock està actiu"
 
-#: lib/adblock/adblockicon.cpp:145
+#: lib/adblock/adblockicon.cpp:146
+#, fuzzy
+#| msgctxt "AdBlockDialog|"
+#| msgid "Enable AdBlock"
+msgctxt "AdBlockIcon|"
+msgid "&Enable AdBlock"
+msgstr "Activa l'AdBlock"
+
+#: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
 msgid "Show AdBlock &Settings"
 msgstr "Mostra la &configuració de l'AdBlock"
 
-#: lib/adblock/adblockicon.cpp:153
+#: lib/adblock/adblockicon.cpp:159
 #, qt-format
 msgctxt "AdBlockIcon|"
 msgid "Disable on %1"
 msgstr "Desactiva a %1"
 
-#: lib/adblock/adblockicon.cpp:159
+#: lib/adblock/adblockicon.cpp:165
 msgctxt "AdBlockIcon|"
 msgid "Disable only on this page"
 msgstr "Desactiva només en aquesta pàgina"

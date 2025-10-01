@@ -165,18 +165,26 @@ msgctxt "AdBlockIcon|"
 msgid "AdBlock is active"
 msgstr "广告屏蔽正在活动"
 
-#: lib/adblock/adblockicon.cpp:145
+#: lib/adblock/adblockicon.cpp:146
+#, fuzzy
+#| msgctxt "AdBlockDialog|"
+#| msgid "Enable AdBlock"
+msgctxt "AdBlockIcon|"
+msgid "&Enable AdBlock"
+msgstr "启用广告屏蔽"
+
+#: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
 msgid "Show AdBlock &Settings"
 msgstr "显示广告屏蔽设置(&S)"
 
-#: lib/adblock/adblockicon.cpp:153
+#: lib/adblock/adblockicon.cpp:159
 #, qt-format
 msgctxt "AdBlockIcon|"
 msgid "Disable on %1"
 msgstr "在 %1 上禁用"
 
-#: lib/adblock/adblockicon.cpp:159
+#: lib/adblock/adblockicon.cpp:165
 msgctxt "AdBlockIcon|"
 msgid "Disable only on this page"
 msgstr "只在此页面禁用"
