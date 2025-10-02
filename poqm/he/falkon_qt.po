@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-17 11:42+0300\n"
+"PO-Revision-Date: 2025-10-01 08:12+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -166,12 +166,9 @@ msgid "AdBlock is active"
 msgstr "AdBlock פעיל"
 
 #: lib/adblock/adblockicon.cpp:146
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "Enable AdBlock"
 msgctxt "AdBlockIcon|"
 msgid "&Enable AdBlock"
-msgstr "הפעלת AdBlock"
+msgstr "הפעלת &חסימת פרסומות"
 
 #: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
