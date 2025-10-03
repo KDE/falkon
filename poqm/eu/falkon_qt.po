@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
-"PO-Revision-Date: 2025-08-14 12:04+0200\n"
+"PO-Revision-Date: 2025-10-02 19:48+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Language: eu_ES\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -89,7 +89,7 @@ msgstr "Helbidea:"
 #: lib/adblock/adblockaddsubscriptiondialog.ui:53
 msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Add new subscription to AdBlock:"
-msgstr "Gehitu harpidetza berri AdBlockera:"
+msgstr "Gehitu harpidetza berria AdBlock-era:"
 
 #: lib/adblock/adblockdialog.cpp:50
 msgctxt "AdBlockDialog|"
@@ -124,7 +124,7 @@ msgstr "Ikasi arauak idazteari buruz..."
 #: lib/adblock/adblockdialog.ui:14
 msgctxt "AdBlockDialog|"
 msgid "AdBlock Configuration"
-msgstr "AdBlock Itxurapena"
+msgstr "AdBlock konfigurazioa"
 
 #: lib/adblock/adblockdialog.ui:20
 msgctxt "AdBlockDialog|"
@@ -154,7 +154,7 @@ msgstr "AdBlock"
 #: lib/adblock/adblockicon.cpp:52
 msgctxt "AdBlockIcon|"
 msgid "AdBlock Icon"
-msgstr "AdBlock Ikurra"
+msgstr "AdBlock ikonoa"
 
 #: lib/adblock/adblockicon.cpp:86
 msgctxt "AdBlockIcon|"
@@ -164,23 +164,23 @@ msgstr "AdBlock ezgaituta dago"
 #: lib/adblock/adblockicon.cpp:92
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled on this site "
-msgstr "AdBlock ezgaituta dago gune honetan"
+msgstr "AdBlock gune honetan ezgaituta dago "
 
 #: lib/adblock/adblockicon.cpp:98
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is active"
-msgstr "AdBlock gaituta dago"
+msgstr "AdBlock aktibo dago"
 
 #: lib/adblock/adblockicon.cpp:145
 msgctxt "AdBlockIcon|"
 msgid "Show AdBlock &Settings"
-msgstr "&Erakutsi AdBlock Ezarpenak"
+msgstr "Erakutsi AdBlock E&zarpenak"
 
 #: lib/adblock/adblockicon.cpp:153
 #, qt-format
 msgctxt "AdBlockIcon|"
 msgid "Disable on %1"
-msgstr "Ezgaituta hemen %1"
+msgstr "Ezgaituta %1(e)(a)n"
 
 #: lib/adblock/adblockicon.cpp:159
 msgctxt "AdBlockIcon|"
@@ -191,7 +191,7 @@ msgstr "Ezgaitu orrialde honetan bakarrik"
 #, qt-format
 msgctxt "AdBlockManager|"
 msgid "Do you want to add <b>%1</b> subscription?"
-msgstr "Nahi duzu <b>%1</b> harpidetza gehitzea?"
+msgstr "<b>%1</b> harpidetza gehitu nahi duzu?"
 
 #: lib/adblock/adblockmanager.cpp:187
 msgctxt "AdBlockManager|"
@@ -201,7 +201,7 @@ msgstr "AdBlock Harpidetza"
 #: lib/adblock/adblockmanager.cpp:318
 msgctxt "AdBlockManager|"
 msgid "EasyList"
-msgstr "Zerrenda-Erraza"
+msgstr "Zerrenda-erraza"
 
 #: lib/adblock/adblockmanager.cpp:323
 msgctxt "AdBlockManager|"
@@ -211,12 +211,12 @@ msgstr "NoCoin zerrenda"
 #: lib/adblock/adblocksubscription.cpp:176
 msgctxt "AdBlockSubscription|"
 msgid "Cannot load subscription!"
-msgstr "Ezinezkoa harpidetza gertatzea!"
+msgstr "Ez du harpidetza zamatu!"
 
 #: lib/adblock/adblocksubscription.cpp:289
 msgctxt "AdBlockCustomList|"
 msgid "Custom Rules"
-msgstr "Neurrira eginiko arauak"
+msgstr "Neurrira ipinitako arauak"
 
 #: lib/adblock/adblocktreemodel.cpp:108
 #, qt-format
@@ -237,23 +237,23 @@ msgstr "Kendu Araua"
 #: lib/adblock/adblocktreewidget.cpp:110
 msgctxt "AdBlockTreeWidget|"
 msgid "Add Custom Rule"
-msgstr "Gehitu neurrira eginiko araua"
+msgstr "Gehitu neurrira ipinitako araua"
 
 #: lib/adblock/adblocktreewidget.cpp:110
 msgctxt "AdBlockTreeWidget|"
 msgid "Please write your rule here:"
-msgstr "Mesedez idazu zure araua hemen:"
+msgstr "Mesedez idatzi zure araua hemen:"
 
 #: lib/adblock/adblockurlinterceptor.cpp:42
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked content"
-msgstr "Blockeatutako edukia"
+msgstr "Oztopatutako edukia"
 
 #: lib/adblock/adblockurlinterceptor.cpp:43
 #, qt-format
 msgctxt "AdBlockUrlInterceptor|"
 msgid "Blocked by <i>%1 (%2)</i>"
-msgstr "Blokeatzailea: <i>%1 (%2)</i>"
+msgstr "<i>%1(e)k (%2)</i> oztopatua"
 
 #: lib/app/browserwindow.cpp:203 lib/app/browserwindow.cpp:987
 msgctxt "BrowserWindow|"
