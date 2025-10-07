@@ -71,28 +71,55 @@ msgctxt "GM_AddScriptDialog|"
 msgid "Show source code of script"
 msgstr "Zobrazit zdrojový kód skriptu"
 
-#: gm_icon.cpp:28
+#: gm_icon.cpp:30
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey"
 msgstr "GreaseMonkey"
 
-#: gm_icon.cpp:29
-msgctxt "GM_Icon|"
-msgid "Open GreaseMonkey settings"
-msgstr "Otevřít nastavení GreaseMonkey"
-
-#: gm_icon.cpp:41
+#: gm_icon.cpp:45
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey Icon"
 msgstr "Ikona GreaseMonkey"
 
-#: gm_manager.cpp:77
+#: gm_icon.cpp:58
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Icon|"
+msgid "&Enable GreaseMonkey"
+msgstr "GreaseMonkey"
+
+#: gm_icon.cpp:63
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "Open GreaseMonkey settings"
+msgctxt "GM_Icon|"
+msgid "Show GreaseMonkey &Settings"
+msgstr "Otevřít nastavení GreaseMonkey"
+
+#: gm_icon.cpp:78
+#, fuzzy
+#| msgctxt "GM_AddScriptDialog|"
+#| msgid "GreaseMonkey Installation"
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey is active"
+msgstr "Instalace GreaseMonkey"
+
+#: gm_icon.cpp:81
+#, fuzzy
+#| msgctxt "GM_Settings|"
+#| msgid "GreaseMonkey Scripts"
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey is disabled"
+msgstr "GreaseMonkey Skripty"
+
+#: gm_manager.cpp:78
 #, qt-format
 msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
 msgstr "'%1' již je nainstalován"
 
-#: gm_manager.cpp:260
+#: gm_manager.cpp:304
 msgctxt "GM_Manager|"
 msgid "GreaseMonkey"
 msgstr "GreaseMonkey"
@@ -118,28 +145,28 @@ msgctxt "GM_Notification|"
 msgid "Install"
 msgstr "Instalovat"
 
-#: gm_plugin.cpp:93
+#: gm_plugin.cpp:97
 msgctxt "GM_Plugin|"
 msgid "GreaseMonkey"
 msgstr ""
 
-#: settings/gm_settings.cpp:91
+#: settings/gm_settings.cpp:94
 msgctxt "GM_Settings|"
 msgid "Remove script"
 msgstr "Odstranit skript"
 
-#: settings/gm_settings.cpp:92
+#: settings/gm_settings.cpp:95
 #, qt-format
 msgctxt "GM_Settings|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Opravdu chcete odstranit '%1'?"
 
-#: settings/gm_settings.cpp:122
+#: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Add script"
 msgstr "Přidat skript"
 
-#: settings/gm_settings.cpp:122
+#: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Choose name for script:"
 msgstr "Zvolte jméno pro skript:"
@@ -155,21 +182,29 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>GreaseMonkey Skripty</h3>"
 
 #: settings/gm_settings.ui:70
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Settings|"
+msgid "Enable GreaseMonkey"
+msgstr "GreaseMonkey"
+
+#: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"
 msgid "Double clicking script will show additional information"
 msgstr "Dvojitý klik na skript zobrazí podrobnosti"
 
-#: settings/gm_settings.ui:150
+#: settings/gm_settings.ui:157
 msgctxt "GM_Settings|"
 msgid "More scripts can be downloaded from"
 msgstr "Více skriptů lze stáhnout z"
 
-#: settings/gm_settings.ui:193
+#: settings/gm_settings.ui:200
 msgctxt "GM_Settings|"
 msgid "Open scripts directory"
 msgstr "Otevřít složku se skripty"
 
-#: settings/gm_settings.ui:200
+#: settings/gm_settings.ui:207
 msgctxt "GM_Settings|"
 msgid "New user script"
 msgstr "Nový skript"

@@ -66,28 +66,55 @@ msgctxt "GM_AddScriptDialog|"
 msgid "Show source code of script"
 msgstr "스크립트 소스 코드 보기"
 
-#: gm_icon.cpp:28
+#: gm_icon.cpp:30
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey"
 msgstr "그리스몽키"
 
-#: gm_icon.cpp:29
-msgctxt "GM_Icon|"
-msgid "Open GreaseMonkey settings"
-msgstr "그리스몽키 설정 열기"
-
-#: gm_icon.cpp:41
+#: gm_icon.cpp:45
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey Icon"
 msgstr "그리스몽키 아이콘"
 
-#: gm_manager.cpp:77
+#: gm_icon.cpp:58
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Icon|"
+msgid "&Enable GreaseMonkey"
+msgstr "그리스몽키"
+
+#: gm_icon.cpp:63
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "Open GreaseMonkey settings"
+msgctxt "GM_Icon|"
+msgid "Show GreaseMonkey &Settings"
+msgstr "그리스몽키 설정 열기"
+
+#: gm_icon.cpp:78
+#, fuzzy
+#| msgctxt "GM_AddScriptDialog|"
+#| msgid "GreaseMonkey Installation"
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey is active"
+msgstr "그리스몽키 설치"
+
+#: gm_icon.cpp:81
+#, fuzzy
+#| msgctxt "GM_Settings|"
+#| msgid "GreaseMonkey Scripts"
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey is disabled"
+msgstr "그리스몽키 스크립트"
+
+#: gm_manager.cpp:78
 #, qt-format
 msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
 msgstr "'%1'이(가) 이미 설치됨"
 
-#: gm_manager.cpp:260
+#: gm_manager.cpp:304
 msgctxt "GM_Manager|"
 msgid "GreaseMonkey"
 msgstr "그리스몽키"
@@ -113,28 +140,28 @@ msgctxt "GM_Notification|"
 msgid "Install"
 msgstr "설치"
 
-#: gm_plugin.cpp:93
+#: gm_plugin.cpp:97
 msgctxt "GM_Plugin|"
 msgid "GreaseMonkey"
 msgstr "그리스몽키"
 
-#: settings/gm_settings.cpp:91
+#: settings/gm_settings.cpp:94
 msgctxt "GM_Settings|"
 msgid "Remove script"
 msgstr "스크립트 삭제"
 
-#: settings/gm_settings.cpp:92
+#: settings/gm_settings.cpp:95
 #, qt-format
 msgctxt "GM_Settings|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "'%1'을(를) 삭제하시겠습니까?"
 
-#: settings/gm_settings.cpp:122
+#: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Add script"
 msgstr "스크립트 추가"
 
-#: settings/gm_settings.cpp:122
+#: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Choose name for script:"
 msgstr "스크립트 이름 입력:"
@@ -150,21 +177,29 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>그리스몽키 스크립트</h3>"
 
 #: settings/gm_settings.ui:70
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Settings|"
+msgid "Enable GreaseMonkey"
+msgstr "그리스몽키"
+
+#: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"
 msgid "Double clicking script will show additional information"
 msgstr "스크립트를 두 번 클릭하면 추가 정보를 볼 수 있습니다"
 
-#: settings/gm_settings.ui:150
+#: settings/gm_settings.ui:157
 msgctxt "GM_Settings|"
 msgid "More scripts can be downloaded from"
 msgstr "추가 스크립트 다운로드:"
 
-#: settings/gm_settings.ui:193
+#: settings/gm_settings.ui:200
 msgctxt "GM_Settings|"
 msgid "Open scripts directory"
 msgstr "스크립트 디렉터리 열기"
 
-#: settings/gm_settings.ui:200
+#: settings/gm_settings.ui:207
 msgctxt "GM_Settings|"
 msgid "New user script"
 msgstr "새 사용자 스크립트"

@@ -72,29 +72,56 @@ msgctxt "GM_AddScriptDialog|"
 msgid "Show source code of script"
 msgstr "اعرض محتوى هذا النصّ البرمجيّ"
 
-#: gm_icon.cpp:28
+#: gm_icon.cpp:30
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey"
 msgstr "جريزمَنكي"
 
-#: gm_icon.cpp:29
-msgctxt "GM_Icon|"
-msgid "Open GreaseMonkey settings"
-msgstr "افتح إعدادات جريزمَنكي"
-
-#: gm_icon.cpp:41
+#: gm_icon.cpp:45
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey Icon"
 msgstr "أيقونة جريزمَنكي"
 
+#: gm_icon.cpp:58
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Icon|"
+msgid "&Enable GreaseMonkey"
+msgstr "جريزمَنكي"
+
+#: gm_icon.cpp:63
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "Open GreaseMonkey settings"
+msgctxt "GM_Icon|"
+msgid "Show GreaseMonkey &Settings"
+msgstr "افتح إعدادات جريزمَنكي"
+
+#: gm_icon.cpp:78
+#, fuzzy
+#| msgctxt "GM_AddScriptDialog|"
+#| msgid "GreaseMonkey Installation"
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey is active"
+msgstr "تثبيت جريزمَنكي"
+
+#: gm_icon.cpp:81
+#, fuzzy
+#| msgctxt "GM_Settings|"
+#| msgid "GreaseMonkey Scripts"
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey is disabled"
+msgstr "نصوص جريزمَنكي البرمجيّة"
+
 # هناك RLM
-#: gm_manager.cpp:77
+#: gm_manager.cpp:78
 #, qt-format
 msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
 msgstr "‏”%1“ مثبّت فعلًا"
 
-#: gm_manager.cpp:260
+#: gm_manager.cpp:304
 msgctxt "GM_Manager|"
 msgid "GreaseMonkey"
 msgstr "جريزمَنكي"
@@ -120,28 +147,28 @@ msgctxt "GM_Notification|"
 msgid "Install"
 msgstr "ثبّت"
 
-#: gm_plugin.cpp:93
+#: gm_plugin.cpp:97
 msgctxt "GM_Plugin|"
 msgid "GreaseMonkey"
 msgstr "جريزمَنكي"
 
-#: settings/gm_settings.cpp:91
+#: settings/gm_settings.cpp:94
 msgctxt "GM_Settings|"
 msgid "Remove script"
 msgstr "احذف النصّ البرمجيّ"
 
-#: settings/gm_settings.cpp:92
+#: settings/gm_settings.cpp:95
 #, qt-format
 msgctxt "GM_Settings|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "أمتأكّد من إزالة ”%1“؟"
 
-#: settings/gm_settings.cpp:122
+#: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Add script"
 msgstr "أضِف نصًّا برمجيًّا"
 
-#: settings/gm_settings.cpp:122
+#: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Choose name for script:"
 msgstr "اختر اسمًا للنصّ البرمجيّ:"
@@ -157,21 +184,29 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>نصوص جريزمَنكي البرمجيّة</h3>"
 
 #: settings/gm_settings.ui:70
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Settings|"
+msgid "Enable GreaseMonkey"
+msgstr "جريزمَنكي"
+
+#: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"
 msgid "Double clicking script will show additional information"
 msgstr "النقر المزدوج على النصّ البرمجيّ سيعرض معلومات أكثر عنه"
 
-#: settings/gm_settings.ui:150
+#: settings/gm_settings.ui:157
 msgctxt "GM_Settings|"
 msgid "More scripts can be downloaded from"
 msgstr "يمكنك تثبيت المزيد من النصوص البرمجيّة من"
 
-#: settings/gm_settings.ui:193
+#: settings/gm_settings.ui:200
 msgctxt "GM_Settings|"
 msgid "Open scripts directory"
 msgstr "افتح دليل النصوص البرمجيّة"
 
-#: settings/gm_settings.ui:200
+#: settings/gm_settings.ui:207
 msgctxt "GM_Settings|"
 msgid "New user script"
 msgstr "نصّ مستخدم برمجيّ جديد"

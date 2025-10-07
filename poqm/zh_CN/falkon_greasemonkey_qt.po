@@ -68,28 +68,55 @@ msgctxt "GM_AddScriptDialog|"
 msgid "Show source code of script"
 msgstr "显示脚本源代码"
 
-#: gm_icon.cpp:28
+#: gm_icon.cpp:30
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey"
 msgstr "油猴"
 
-#: gm_icon.cpp:29
-msgctxt "GM_Icon|"
-msgid "Open GreaseMonkey settings"
-msgstr "打开油猴设置"
-
-#: gm_icon.cpp:41
+#: gm_icon.cpp:45
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey Icon"
 msgstr "油猴图标"
 
-#: gm_manager.cpp:77
+#: gm_icon.cpp:58
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Icon|"
+msgid "&Enable GreaseMonkey"
+msgstr "油猴"
+
+#: gm_icon.cpp:63
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "Open GreaseMonkey settings"
+msgctxt "GM_Icon|"
+msgid "Show GreaseMonkey &Settings"
+msgstr "打开油猴设置"
+
+#: gm_icon.cpp:78
+#, fuzzy
+#| msgctxt "GM_AddScriptDialog|"
+#| msgid "GreaseMonkey Installation"
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey is active"
+msgstr "油猴安装"
+
+#: gm_icon.cpp:81
+#, fuzzy
+#| msgctxt "GM_Settings|"
+#| msgid "GreaseMonkey Scripts"
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey is disabled"
+msgstr "油猴脚本"
+
+#: gm_manager.cpp:78
 #, qt-format
 msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
 msgstr "“%1”已安装"
 
-#: gm_manager.cpp:260
+#: gm_manager.cpp:304
 msgctxt "GM_Manager|"
 msgid "GreaseMonkey"
 msgstr "油猴"
@@ -115,28 +142,28 @@ msgctxt "GM_Notification|"
 msgid "Install"
 msgstr "安装"
 
-#: gm_plugin.cpp:93
+#: gm_plugin.cpp:97
 msgctxt "GM_Plugin|"
 msgid "GreaseMonkey"
 msgstr "油猴"
 
-#: settings/gm_settings.cpp:91
+#: settings/gm_settings.cpp:94
 msgctxt "GM_Settings|"
 msgid "Remove script"
 msgstr "移除脚本"
 
-#: settings/gm_settings.cpp:92
+#: settings/gm_settings.cpp:95
 #, qt-format
 msgctxt "GM_Settings|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "您确定要删除“%1”吗？"
 
-#: settings/gm_settings.cpp:122
+#: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Add script"
 msgstr "添加脚本"
 
-#: settings/gm_settings.cpp:122
+#: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Choose name for script:"
 msgstr "为脚本选择名称："
@@ -152,21 +179,29 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>油猴脚本</h3>"
 
 #: settings/gm_settings.ui:70
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Settings|"
+msgid "Enable GreaseMonkey"
+msgstr "油猴"
+
+#: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"
 msgid "Double clicking script will show additional information"
 msgstr "双击脚本将显示其他信息"
 
-#: settings/gm_settings.ui:150
+#: settings/gm_settings.ui:157
 msgctxt "GM_Settings|"
 msgid "More scripts can be downloaded from"
 msgstr "更多脚本可从此处下载"
 
-#: settings/gm_settings.ui:193
+#: settings/gm_settings.ui:200
 msgctxt "GM_Settings|"
 msgid "Open scripts directory"
 msgstr "打开脚本目录"
 
-#: settings/gm_settings.ui:200
+#: settings/gm_settings.ui:207
 msgctxt "GM_Settings|"
 msgid "New user script"
 msgstr "新建用户脚本"

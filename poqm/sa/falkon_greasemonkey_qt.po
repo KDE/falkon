@@ -66,28 +66,55 @@ msgctxt "GM_AddScriptDialog|"
 msgid "Show source code of script"
 msgstr "स्क्रिप्ट् इत्यस्य स्रोतसङ्केतः दर्शयतु"
 
-#: gm_icon.cpp:28
+#: gm_icon.cpp:30
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey"
 msgstr "ग्रीसवानर"
 
-#: gm_icon.cpp:29
-msgctxt "GM_Icon|"
-msgid "Open GreaseMonkey settings"
-msgstr "GreaseMonkey सेटिंग्स् उद्घाटयन्तु"
-
-#: gm_icon.cpp:41
+#: gm_icon.cpp:45
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey Icon"
 msgstr "GreaseMonkey चिह्न"
 
-#: gm_manager.cpp:77
+#: gm_icon.cpp:58
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Icon|"
+msgid "&Enable GreaseMonkey"
+msgstr "ग्रीसवानर"
+
+#: gm_icon.cpp:63
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "Open GreaseMonkey settings"
+msgctxt "GM_Icon|"
+msgid "Show GreaseMonkey &Settings"
+msgstr "GreaseMonkey सेटिंग्स् उद्घाटयन्तु"
+
+#: gm_icon.cpp:78
+#, fuzzy
+#| msgctxt "GM_AddScriptDialog|"
+#| msgid "GreaseMonkey Installation"
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey is active"
+msgstr "GreaseMonkey स्थापना"
+
+#: gm_icon.cpp:81
+#, fuzzy
+#| msgctxt "GM_Settings|"
+#| msgid "GreaseMonkey Scripts"
+msgctxt "GM_Icon|"
+msgid "GreaseMonkey is disabled"
+msgstr "GreaseMonkey लिपि"
+
+#: gm_manager.cpp:78
 #, qt-format
 msgctxt "GM_Manager|"
 msgid "'%1' is already installed"
 msgstr "'%1' पूर्वमेव संस्थापितम् अस्ति"
 
-#: gm_manager.cpp:260
+#: gm_manager.cpp:304
 msgctxt "GM_Manager|"
 msgid "GreaseMonkey"
 msgstr "ग्रीसवानरः"
@@ -113,28 +140,28 @@ msgctxt "GM_Notification|"
 msgid "Install"
 msgstr "प्रतिस्था"
 
-#: gm_plugin.cpp:93
+#: gm_plugin.cpp:97
 msgctxt "GM_Plugin|"
 msgid "GreaseMonkey"
 msgstr "ग्रीसवानर"
 
-#: settings/gm_settings.cpp:91
+#: settings/gm_settings.cpp:94
 msgctxt "GM_Settings|"
 msgid "Remove script"
 msgstr "स्क्रिप्ट् निष्कासयतु"
 
-#: settings/gm_settings.cpp:92
+#: settings/gm_settings.cpp:95
 #, qt-format
 msgctxt "GM_Settings|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "किं भवान् निश्चयेन '%1' अपसारयितुम् इच्छति?"
 
-#: settings/gm_settings.cpp:122
+#: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Add script"
 msgstr "लिपि योजयतु"
 
-#: settings/gm_settings.cpp:122
+#: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Choose name for script:"
 msgstr "स्क्रिप्ट् कृते नाम चिनोतु :"
@@ -150,21 +177,29 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>GreaseMonkey लिपि</h3>"
 
 #: settings/gm_settings.ui:70
+#, fuzzy
+#| msgctxt "GM_Icon|"
+#| msgid "GreaseMonkey"
+msgctxt "GM_Settings|"
+msgid "Enable GreaseMonkey"
+msgstr "ग्रीसवानर"
+
+#: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"
 msgid "Double clicking script will show additional information"
 msgstr "स्क्रिप्ट् द्विवारं क्लिक् करणेन अतिरिक्तसूचना दृश्यते"
 
-#: settings/gm_settings.ui:150
+#: settings/gm_settings.ui:157
 msgctxt "GM_Settings|"
 msgid "More scripts can be downloaded from"
 msgstr "अधिकानि लिप्याः डाउनलोड् कर्तुं शक्यन्ते"
 
-#: settings/gm_settings.ui:193
+#: settings/gm_settings.ui:200
 msgctxt "GM_Settings|"
 msgid "Open scripts directory"
 msgstr "स्क्रिप्ट् निर्देशिकां उद्घाटयन्तु"
 
-#: settings/gm_settings.ui:200
+#: settings/gm_settings.ui:207
 msgctxt "GM_Settings|"
 msgid "New user script"
 msgstr "नवीन उपयोक्तृलिपिः"
