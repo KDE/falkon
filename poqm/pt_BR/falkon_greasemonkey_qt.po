@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_greasemonkey_qt\n"
-"PO-Revision-Date: 2025-08-04 08:52-0300\n"
+"PO-Revision-Date: 2025-10-07 07:24-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: pt_BR\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: gm_addscriptdialog.cpp:50
 #, qt-format
@@ -86,36 +86,24 @@ msgid "GreaseMonkey Icon"
 msgstr "Ícone do GreaseMonkey"
 
 #: gm_icon.cpp:58
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Icon|"
 msgid "&Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "&Habilitar GreaseMonkey"
 
 #: gm_icon.cpp:63
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "Open GreaseMonkey settings"
 msgctxt "GM_Icon|"
 msgid "Show GreaseMonkey &Settings"
-msgstr "Abrir configurações do GreaseMonkey"
+msgstr "Mostrar &configurações do GreaseMonkey"
 
 #: gm_icon.cpp:78
-#, fuzzy
-#| msgctxt "GM_AddScriptDialog|"
-#| msgid "GreaseMonkey Installation"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is active"
-msgstr "Instalação do GreaseMonkey"
+msgstr "O GreaseMonkey está habilitado"
 
 #: gm_icon.cpp:81
-#, fuzzy
-#| msgctxt "GM_Settings|"
-#| msgid "GreaseMonkey Scripts"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is disabled"
-msgstr "Scripts do GreaseMonkey"
+msgstr "O GreaseMonkey está desabilitado"
 
 #: gm_manager.cpp:78
 #, qt-format
@@ -186,12 +174,9 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>Scripts do GreaseMonkey</h3>"
 
 #: settings/gm_settings.ui:70
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Settings|"
 msgid "Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "Habilitar GreaseMonkey"
 
 #: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"

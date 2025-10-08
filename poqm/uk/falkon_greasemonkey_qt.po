@@ -3,11 +3,11 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2018, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2018, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_greasemonkey_qt\n"
-"PO-Revision-Date: 2024-11-07 14:52+0200\n"
+"PO-Revision-Date: 2025-10-07 16:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -85,36 +85,24 @@ msgid "GreaseMonkey Icon"
 msgstr "Піктограма GreaseMonkey"
 
 #: gm_icon.cpp:58
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Icon|"
 msgid "&Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "&Увімкнути GreaseMonkey"
 
 #: gm_icon.cpp:63
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "Open GreaseMonkey settings"
 msgctxt "GM_Icon|"
 msgid "Show GreaseMonkey &Settings"
-msgstr "Відкрити налаштування GreaseMonkey"
+msgstr "Показати н&алаштування GreaseMonkey"
 
 #: gm_icon.cpp:78
-#, fuzzy
-#| msgctxt "GM_AddScriptDialog|"
-#| msgid "GreaseMonkey Installation"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is active"
-msgstr "Встановлення GreaseMonkey"
+msgstr "GreaseMonkey задіяно"
 
 #: gm_icon.cpp:81
-#, fuzzy
-#| msgctxt "GM_Settings|"
-#| msgid "GreaseMonkey Scripts"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is disabled"
-msgstr "Скрипти GreaseMonkey"
+msgstr "GreaseMonkey вимкнено"
 
 #: gm_manager.cpp:78
 #, qt-format
@@ -185,12 +173,9 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>Скрипти GreaseMonkey</h3>"
 
 #: settings/gm_settings.ui:70
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Settings|"
 msgid "Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "Увімкнути GreaseMonkey"
 
 #: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"

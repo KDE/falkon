@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the falkon package.
 #
 # Heimen Stoffels <vistausss@gmail.com>, 2017.
-# SPDX-FileCopyrightText: 2020, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2020, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-11-07 12:27+0100\n"
+"PO-Revision-Date: 2025-10-07 23:35+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: nl_NL\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: gm_addscriptdialog.cpp:50
 #, qt-format
@@ -83,36 +83,24 @@ msgid "GreaseMonkey Icon"
 msgstr "GreaseMonkey-pictogram"
 
 #: gm_icon.cpp:58
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Icon|"
 msgid "&Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "GreaseMonkey &inschakelen"
 
 #: gm_icon.cpp:63
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "Open GreaseMonkey settings"
 msgctxt "GM_Icon|"
 msgid "Show GreaseMonkey &Settings"
-msgstr "GreaseMonkey-instellingen openen"
+msgstr "GreaseMonkey-instellingen tonen"
 
 #: gm_icon.cpp:78
-#, fuzzy
-#| msgctxt "GM_AddScriptDialog|"
-#| msgid "GreaseMonkey Installation"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is active"
-msgstr "GreaseMonkey-installatie"
+msgstr "GreaseMonkey is actief"
 
 #: gm_icon.cpp:81
-#, fuzzy
-#| msgctxt "GM_Settings|"
-#| msgid "GreaseMonkey Scripts"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is disabled"
-msgstr "GreaseMonkey-scripts"
+msgstr "GreaseMonkey is uitgeschakeld"
 
 #: gm_manager.cpp:78
 #, qt-format
@@ -183,12 +171,9 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>GreaseMonkey-scripts</h3>"
 
 #: settings/gm_settings.ui:70
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Settings|"
 msgid "Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "GreaseMonkey inschakelen"
 
 #: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"
