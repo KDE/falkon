@@ -16,6 +16,8 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "protocolhandlermanager.h"
+
+#include "mainapplication.h"
 #include "settings.h"
 
 #include <QWebEnginePage>
@@ -79,7 +81,7 @@ void ProtocolHandlerManager::registerHandler(const QString &scheme, const QUrl &
     QString urlString = url.toString();
     urlString.replace(QL1S("%25s"), QL1S("%s"));
 
-    auto *page = new QWebEnginePage(this);
+    auto *page = new QWebEnginePage(mApp->webProfile(), this);
     connect(page, &QWebEnginePage::loadFinished, page, &QObject::deleteLater);
     connect(page, &QWebEnginePage::registerProtocolHandlerRequested, this, [](QWebEngineRegisterProtocolHandlerRequest request) {
         request.accept();
