@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2010-2016 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2020-2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -115,7 +116,16 @@ void CommandLineOptions::parseActions()
     }
 
     if (parser.isSet(authorsOption)) {
-        std::cout << "David Rosca <nowrep@gmail.com>" << std::endl;
+        for (const auto &author : Qz::AUTHORS) {
+            QString authorString = QStringLiteral("Copyright (C) %1-%2 %3 <%4>").arg(
+                QString::number(author.copyrightBegin),
+                QString::number(author.copyrightEnd),
+                author.name,
+                author.email
+            );
+
+            std::cout << authorString.toUtf8().data() << std::endl;
+        }
 
         ActionPair pair;
         pair.action = Qz::CL_ExitAction;

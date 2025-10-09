@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2020-2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -56,7 +57,17 @@ void AboutDialog::showAbout()
 #endif
                    );
     aboutHtml += tr("<b>QtWebEngine version %1</b></p>").arg(QStringLiteral(QTWEBENGINECORE_VERSION_STR));
-    aboutHtml += QStringLiteral("<p>&copy; %1 %2<br/>").arg(QString::fromLatin1(Qz::COPYRIGHT), QString::fromLatin1(Qz::AUTHOR));
+
+    aboutHtml += QSL("<p>");
+
+    for (const auto &author : Qz::AUTHORS) {
+        aboutHtml += QStringLiteral("&copy; %1-%2 %3<br/>").arg(
+            QString::number(author.copyrightBegin),
+            QString::number(author.copyrightEnd),
+            author.name
+        );
+    }
+
     aboutHtml += QStringLiteral("<a href=%1>%1</a></p>").arg(QString::fromLatin1(Qz::WWWADDRESS));
     aboutHtml += QStringLiteral("<p>") + mApp->userAgentManager()->defaultUserAgent() + QStringLiteral("</p>");
     aboutHtml += QStringLiteral("</div>");

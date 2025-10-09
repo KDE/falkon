@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2020-2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -20,6 +21,7 @@
 
 #include <QDebug>
 #include <QFlags>
+#include <QList>
 #include <QtWebEngineCore/QtWebEngineCoreVersion>
 
 #ifdef FALKON_SHAREDLIBRARY
@@ -60,6 +62,16 @@ FALKON_EXPORT extern const char *COPYRIGHT;
 FALKON_EXPORT extern const char *WWWADDRESS;
 FALKON_EXPORT extern const char *BUGSADDRESS;
 FALKON_EXPORT extern const char *WIKIADDRESS;
+;
+struct AuthorInfo
+{
+    QString name;
+    QString email;
+    int copyrightBegin;
+    int copyrightEnd;
+};
+
+extern const QList<AuthorInfo> AUTHORS;
 
 enum BrowserWindowType {
     BW_FirstAppWindow,

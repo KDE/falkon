@@ -1,6 +1,7 @@
 /* ============================================================
 * Falkon - Qt web browser
 * Copyright (C) 2010-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2020-2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -37,9 +38,14 @@
 #include <QtWebEngineCoreVersion>
 #include <QMetaType>
 
-static QString authorString(const char* name, const QString &mail)
+static QString authorString(const Qz::AuthorInfo &author)
 {
-    return QSL("%1 &lt;<a href=\"mailto:%2\">%2</a>&gt;").arg(QString::fromUtf8(name), mail);
+    return QSL("&copy; %1-%2 %3 &lt;<a href=\"mailto:%2\">%4</a>&gt;<br>").arg(
+        QString::number(author.copyrightBegin),
+        QString::number(author.copyrightEnd),
+        author.name,
+        author.email
+    );
 }
 
 FalkonSchemeHandler::FalkonSchemeHandler(QObject *parent)
@@ -189,7 +195,13 @@ QString FalkonSchemeReply::aboutPage()
 #endif
 
         aPage.replace(QLatin1String("%MAIN-DEVELOPER%"), tr("Main developer"));
-        aPage.replace(QLatin1String("%MAIN-DEVELOPER-TEXT%"), authorString(Qz::AUTHOR, QSL("nowrep@gmail.com")));
+
+        QString developers = QSL("");
+        for (const auto &author : Qz::AUTHORS) {
+            developers += authorString(author);
+        }
+
+        aPage.replace(QLatin1String("%MAIN-DEVELOPER-TEXT%"), developers);
         aPage = QzTools::applyDirectionToPage(aPage);
     }
 
