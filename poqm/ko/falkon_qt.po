@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-07-21 00:35+0200\n"
+"PO-Revision-Date: 2025-10-09 00:17+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -164,12 +164,9 @@ msgid "AdBlock is active"
 msgstr "AdBlock이 활성화됨"
 
 #: lib/adblock/adblockicon.cpp:146
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "Enable AdBlock"
 msgctxt "AdBlockIcon|"
 msgid "&Enable AdBlock"
-msgstr "AdBlock 활성화"
+msgstr "AdBlock 활성화(&E)"
 
 #: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
@@ -1149,47 +1146,47 @@ msgctxt "BookmarksModel|"
 msgid "Address"
 msgstr "주소"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:74
+#: lib/bookmarks/bookmarkstoolbar.cpp:73
 msgctxt "BookmarksToolbar|"
 msgid "Open in new tab"
 msgstr "새 탭으로 열기"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:75
+#: lib/bookmarks/bookmarkstoolbar.cpp:74
 msgctxt "BookmarksToolbar|"
 msgid "Open in new window"
 msgstr "새 창으로 열기"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:76
+#: lib/bookmarks/bookmarkstoolbar.cpp:75
 msgctxt "BookmarksToolbar|"
 msgid "Open in new private window"
 msgstr "새 사생활 보호 창으로 열기"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:78 lib/bookmarks/bookmarkstoolbar.cpp:186
+#: lib/bookmarks/bookmarkstoolbar.cpp:77 lib/bookmarks/bookmarkstoolbar.cpp:197
 msgctxt "BookmarksToolbar|"
 msgid "New Folder"
 msgstr "새 폴더"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:79
+#: lib/bookmarks/bookmarkstoolbar.cpp:78
 msgctxt "BookmarksToolbar|"
 msgid "Edit"
 msgstr "편집"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:80
+#: lib/bookmarks/bookmarkstoolbar.cpp:79
 msgctxt "BookmarksToolbar|"
 msgid "Delete"
 msgstr "삭제"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:82
+#: lib/bookmarks/bookmarkstoolbar.cpp:83
 msgctxt "BookmarksToolbar|"
 msgid "Show Only Icons"
 msgstr "아이콘만 표시"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:86
+#: lib/bookmarks/bookmarkstoolbar.cpp:88
 msgctxt "BookmarksToolbar|"
 msgid "Show Only Text"
 msgstr "텍스트만 표시"
 
-#: lib/bookmarks/bookmarkstoolbar.cpp:186
+#: lib/bookmarks/bookmarkstoolbar.cpp:197
 msgctxt "BookmarksToolbar|"
 msgid "Enter Folder Name:"
 msgstr "폴더 이름 입력:"
@@ -3843,26 +3840,17 @@ msgid "Exceptions"
 msgstr "예외"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add allowed scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add allowed scheme"
 msgstr "허용된 스키마 추가"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Scheme:"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Scheme:"
 msgstr "스키마:"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add blocked scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add blocked scheme"
 msgstr "차단된 스키마 추가"
@@ -3870,53 +3858,37 @@ msgstr "차단된 스키마 추가"
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr ""
+msgstr "자동으로 프로토콜 열기"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">웹 페이지 배경색</"
+"<html><head/><body><p><span style=\" font-weight:700;\">자동으로 열기</"
 "span></p></body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "추가"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
 msgstr "삭제"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:65
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">웹 페이지 배경색</"
-"span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">차단됨</span></p></"
+"body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -4384,7 +4356,7 @@ msgstr "불러오는 중에 사용할 배경색:"
 #: lib/preferences/preferences.ui:629
 msgctxt "Preferences|miliseconds"
 msgid "ms"
-msgstr ""
+msgstr "밀리초"
 
 #: lib/preferences/preferences.ui:642
 msgctxt ""
@@ -4392,7 +4364,7 @@ msgctxt ""
 "page was initially loaded before switching the backgroung color to the "
 "loaded variant."
 msgid "Loaded state switch delay:"
-msgstr ""
+msgstr "불러온 상태 전환 지연 시간:"
 
 #: lib/preferences/preferences.ui:651
 msgctxt "Preferences|"
@@ -4679,7 +4651,7 @@ msgstr "어두운 모드 강제 사용"
 #: lib/preferences/preferences.ui:1235
 msgctxt "Preferences|"
 msgid "Allow image animation"
-msgstr ""
+msgstr "그림 애니메이션 허용"
 
 #: lib/preferences/preferences.ui:1244
 msgctxt "Preferences|"
@@ -5102,18 +5074,13 @@ msgid "Protocol Handlers Manager"
 msgstr "프로토콜 핸들러 관리자"
 
 #: lib/preferences/preferences.ui:2680
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid ""
-#| "<html><head/><body><p><span style=\" font-weight:700;\">Web Page "
-#| "Background Colors</span></p></body></html>"
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
-"<html><head/><body><p><span style=\" font-weight:700;\">웹 페이지 배경색</"
-"span></p></body></html>"
+"<html><head/><body><p><span style=\" font-weight:700;\">자동으로 열 프로토콜 "
+"관리</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2692
 msgctxt "Preferences|"
@@ -5183,7 +5150,7 @@ msgstr "<b>인증서 관리자</b>"
 #: lib/preferences/preferences.ui:3022
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr ""
+msgstr "자동으로 프로토콜 열기"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"

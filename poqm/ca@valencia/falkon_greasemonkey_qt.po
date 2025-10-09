@@ -1,5 +1,5 @@
 # Translation of falkon_greasemonkey_qt.po to Catalan (Valencian)
-# Copyright (C) 2018-2024 This_file_is_part_of_KDE
+# Copyright (C) 2018-2025 This_file_is_part_of_KDE
 # Copyright (C) 2012-2017 Free Software Foundation, Inc.
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
@@ -9,13 +9,13 @@
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016, 2017.
 # David Medina <rbndavid@gmail.com>, 2017.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2020, 2024.
+# SPDX-FileCopyrightText: 2019, 2020, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2024-11-07 09:24+0100\n"
+"PO-Revision-Date: 2025-10-07 09:35+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: ca-valencia\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: gm_addscriptdialog.cpp:50
 #, qt-format
@@ -92,36 +92,24 @@ msgid "GreaseMonkey Icon"
 msgstr "Icona de GreaseMonkey"
 
 #: gm_icon.cpp:58
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Icon|"
 msgid "&Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "&Activa GreaseMonkey"
 
 #: gm_icon.cpp:63
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "Open GreaseMonkey settings"
 msgctxt "GM_Icon|"
 msgid "Show GreaseMonkey &Settings"
-msgstr "Obri la configuració de GreaseMonkey"
+msgstr "Mo&stra la configuració de GreaseMonkey"
 
 #: gm_icon.cpp:78
-#, fuzzy
-#| msgctxt "GM_AddScriptDialog|"
-#| msgid "GreaseMonkey Installation"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is active"
-msgstr "Instal·lació de GreaseMonkey"
+msgstr "GreaseMonkey està actiu"
 
 #: gm_icon.cpp:81
-#, fuzzy
-#| msgctxt "GM_Settings|"
-#| msgid "GreaseMonkey Scripts"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is disabled"
-msgstr "Scripts de GreaseMonkey"
+msgstr "GreaseMonkey està desactivat"
 
 #: gm_manager.cpp:78
 #, qt-format
@@ -179,7 +167,7 @@ msgstr "Afig un script"
 #: settings/gm_settings.cpp:125
 msgctxt "GM_Settings|"
 msgid "Choose name for script:"
-msgstr "Seleccioneu el nom per a l'script:"
+msgstr "Trieu el nom per a l'script:"
 
 #: settings/gm_settings.ui:14
 msgctxt "GM_Settings|"
@@ -192,12 +180,9 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>Scripts de GreaseMonkey</h3>"
 
 #: settings/gm_settings.ui:70
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Settings|"
 msgid "Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "Activa GreaseMonkey"
 
 #: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"
