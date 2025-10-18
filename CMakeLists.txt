@@ -203,6 +203,7 @@ include_directories(
 # Finally, go into the subdirs
 add_subdirectory(src)
 
+option(BUILD_TESTING_ONLINE "Run tests requiring online connection" OFF)
 if (BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(tests/benchmarks)

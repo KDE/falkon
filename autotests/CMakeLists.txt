@@ -23,8 +23,13 @@ falkon_tests(
     webviewtest
     webtabtest
     sqldatabasetest
-    sitesettingstest
 )
+
+if (BUILD_TESTING_ONLINE)
+    falkon_tests(
+        sitesettingstest
+    )
+endif()
 
 set(falkon_autotests_SRCS ${CMAKE_SOURCE_DIR}/tests/modeltest/modeltest.cpp)
 include_directories(${CMAKE_SOURCE_DIR}/tests/modeltest)
