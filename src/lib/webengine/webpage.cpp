@@ -540,6 +540,8 @@ bool WebPage::acceptNavigationRequest(const QUrl &url, QWebEnginePage::Navigatio
     const bool result = QWebEnginePage::acceptNavigationRequest(url, type, isMainFrame);
 
     if (result) {
+        /* Redirects are not handled well in loadingChanged event.
+         * The redirected URL is only provided when loading finished. */
         processSiteSettings(url);
 
         Q_EMIT navigationRequestAccepted(url, type, isMainFrame);
