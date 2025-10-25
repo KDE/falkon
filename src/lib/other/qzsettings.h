@@ -71,6 +71,8 @@ public:
     QColor backgroundColorLoading;
     QColor backgroundColorLoaded;
     int loadedSwitchDelay;
+
+    int defaultSideBarWidth;
 };
 
 #define qzSettings Settings::staticSettings()

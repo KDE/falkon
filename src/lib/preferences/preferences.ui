@@ -526,17 +526,24 @@
               <layout class="QGridLayout" name="gridLayout_16">
                <item row="1" column="2">
                 <layout class="QGridLayout" name="gridLayout_7">
-                 <item row="0" column="0">
-                  <widget class="QCheckBox" name="showStatusbar">
-                   <property name="text">
-                    <string>Show StatusBar on start</string>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="1" column="0">
                   <widget class="QCheckBox" name="showBookmarksToolbar">
                    <property name="text">
                     <string>Show Bookmarks ToolBar on start</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="label_56">
+                   <property name="text">
+                    <string>Default minimal sideBar width:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QCheckBox" name="showStatusbar">
+                   <property name="text">
+                    <string>Show StatusBar on start</string>
                    </property>
                   </widget>
                  </item>
@@ -551,6 +558,16 @@
                   <widget class="QCheckBox" name="instantBookmarksToolbar">
                    <property name="text">
                     <string>Enable instant Bookmarks ToolBar</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QSpinBox" name="defaultSideBarWidth">
+                   <property name="suffix">
+                    <string>px</string>
+                   </property>
+                   <property name="maximum">
+                    <number>9999</number>
                    </property>
                   </widget>
                  </item>

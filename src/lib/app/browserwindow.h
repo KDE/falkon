@@ -239,6 +239,8 @@ private:
     QPointer<TabbedWebView> m_htmlFullScreenView;
     QTimer* m_hideNavigationTimer;
 
+    bool m_windowLaunched;
+
     QList<QPointer<QWidget> > m_deleteOnCloseWidgets;
 
 #ifdef QZ_WS_X11

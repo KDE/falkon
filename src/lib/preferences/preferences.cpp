@@ -53,6 +53,7 @@
 #include "sitesettingsattributesitem.h"
 #include "sitesettingshtml5item.h"
 #include "autoopenprotocolsdialog.h"
+#include "qzsettings.h"
 
 #include <QSettings>
 #include <QInputDialog>
@@ -244,6 +245,8 @@ Preferences::Preferences(BrowserWindow* window)
     connect(ui->backgroundColorLoadedReset, &QAbstractButton::clicked, ui->backgroundColorLoaded, &MacToolButton::resetIconColor);
 
     ui->loadedSwitchDelay->setValue(settings.value(QSL("LoadedSwitchDelay"), 250).toInt());
+    ui->defaultSideBarWidth->setValue(settings.value(QSL("DefaultSideBarWidth"), qzSettings->defaultSideBarWidth).toInt());
+
     settings.endGroup();
 
     //TABS
@@ -980,6 +983,7 @@ void Preferences::saveSettings()
     settings.setValue(QSL("BackgroundColorLoading"), ui->backgroundColorLoading->iconColor());
     settings.setValue(QSL("BackgroundColorLoaded"), ui->backgroundColorLoaded->iconColor());
     settings.setValue(QSL("LoadedSwitchDelay"), ui->loadedSwitchDelay->value());
+    settings.setValue(QSL("DefaultSideBarWidth"), ui->defaultSideBarWidth->value());
     settings.endGroup();
 
     //TABS

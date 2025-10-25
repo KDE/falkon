@@ -71,6 +71,7 @@ void QzSettings::loadSettings()
     backgroundColorLoading = settings.value(QSL("BackgroundColorLoading"), QColor(Qt::white)).value<QColor>();
     backgroundColorLoaded = settings.value(QSL("BackgroundColorLoaded"), QColor(Qt::white)).value<QColor>();
     loadedSwitchDelay = settings.value(QSL("LoadedSwitchDelay"), 250).toInt();
+    defaultSideBarWidth = settings.value(QSL("DefaultSideBarWidth"), 200).toInt();
     settings.endGroup();
 }
 

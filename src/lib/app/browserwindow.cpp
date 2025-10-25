@@ -195,6 +195,7 @@ BrowserWindow::BrowserWindow(Qz::BrowserWindowType type, const QList<QUrl> start
     , m_startPage(nullptr)
     , m_sideBarManager(new SideBarManager(this))
     , m_hideNavigationTimer(nullptr)
+    , m_windowLaunched(false)
 {
     setAttribute(Qt::WA_DeleteOnClose);
     setAttribute(Qt::WA_DontCreateNativeAncestors);
@@ -329,6 +330,7 @@ void BrowserWindow::postLaunch()
         m_tabWidget->addView(m_homepage, Qz::NT_SelectedTabAtTheEnd);
     }
 
+    m_windowLaunched = true;
     mApp->plugins()->emitMainWindowCreated(this);
     Q_EMIT startingCompleted();
 
@@ -841,6 +843,16 @@ SideBar* BrowserWindow::addSideBar()
     }
 
     m_sideBar = new SideBar(m_sideBarManager, this);
+
+    int defaultSideBarWidth = qzSettings->defaultSideBarWidth;
+    if (defaultSideBarWidth > width()) {
+        defaultSideBarWidth = width() * 0.75;
+    }
+
+    if (m_windowLaunched && m_sideBarWidth < defaultSideBarWidth) {
+        m_webViewWidth = m_webViewWidth - (defaultSideBarWidth - m_sideBarWidth);
+        m_sideBarWidth = defaultSideBarWidth;
+    }
 
     m_mainSplitter->insertWidget(0, m_sideBar.data());
     m_mainSplitter->setCollapsible(0, false);
