@@ -62,7 +62,7 @@ public:
 
     QString activeSideBar() const;
 
-    void createMenu(QMenu* menu);
+    void createMenu(QMenu* menu, bool mainMenu = true);
 
     void showSideBar(const QString &id, bool toggle = true);
     void sideBarRemoved(const QString &id);

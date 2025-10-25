@@ -16,22 +16,46 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "docktitlebarwidget.h"
+
+#include <QActionGroup>
+#include <QMenu>
+
 #include "iconprovider.h"
+#include "mainapplication.h"
+#include "sidebar.h"
 
 DockTitleBarWidget::DockTitleBarWidget(const QString &title, QWidget* parent)
     : QWidget(parent)
 {
     setupUi(this);
     closeButton->setIcon(QIcon(IconProvider::standardIcon(QStyle::SP_DialogCloseButton).pixmap(16)));
-    label->setText(title);
+
+    m_menuTitle = new QMenu(this);
+
+    titleButton->setText(title);
+    titleButton->setMenu(m_menuTitle);
+    titleButton->setShowMenuInside(true);
+
     connect(closeButton, &QAbstractButton::clicked, parent, &QWidget::close);
+    connect(titleButton, &ToolButton::aboutToShowMenu, this, &DockTitleBarWidget::aboutToShowTitleMenu);
 
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
 }
 
 void DockTitleBarWidget::setTitle(const QString &title)
 {
-    label->setText(title);
+    titleButton->setText(title);
+}
+
+void DockTitleBarWidget::aboutToShowTitleMenu()
+{
+    m_menuTitle->clear();
+
+    mApp->getWindow()->sideBarManager()->createMenu(m_menuTitle, false);
+
+    m_menuTitle->addSeparator();
+
+    m_menuTitle->addAction(tr("&Close SideBar"), parentWidget(), &QWidget::close);
 }
 
 DockTitleBarWidget::~DockTitleBarWidget()

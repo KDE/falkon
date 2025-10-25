@@ -23,6 +23,8 @@
 #include "qzcommon.h"
 #include "ui_docktitlebarwidget.h"
 
+class QMenu;
+
 class FALKON_EXPORT DockTitleBarWidget : public QWidget, public Ui_DockTitleBarWidget
 {
 public:
@@ -31,7 +33,11 @@ public:
 
     void setTitle(const QString &title);
 
+private Q_SLOT:
+    void aboutToShowTitleMenu();
+
 private:
+    QMenu *m_menuTitle;
 };
 
 #endif // DOCKTITLEBARWIDGET_H

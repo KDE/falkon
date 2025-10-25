@@ -98,10 +98,12 @@ QString SideBarManager::activeSideBar() const
     return m_activeBar;
 }
 
-void SideBarManager::createMenu(QMenu* menu)
+void SideBarManager::createMenu(QMenu* menu, bool mainMenu)
 {
-    m_window->removeActions(menu->actions());
-    menu->clear();
+    if (mainMenu) {
+        m_window->removeActions(menu->actions());
+        menu->clear();
+    }
 
     auto *group = new QActionGroup(menu);
 
@@ -130,7 +132,9 @@ void SideBarManager::createMenu(QMenu* menu)
         }
     }
 
-    m_window->addActions(menu->actions());
+    if (mainMenu) {
+        m_window->addActions(menu->actions());
+    }
 }
 
 void SideBarManager::addSidebar(const QString &id, SideBarInterface* interface)
