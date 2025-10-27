@@ -224,7 +224,8 @@ QStringList WebPage::internalSchemes()
         QSL("about"),
         QSL("view-source"),
         QSL("chrome"),
-        QSL("abp-resource")
+        QSL("abp-resource"),
+        QSL("blob"),
     };
 }
 
