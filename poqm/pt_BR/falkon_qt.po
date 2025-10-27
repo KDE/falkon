@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"PO-Revision-Date: 2025-10-01 08:46-0300\n"
+"PO-Revision-Date: 2025-10-26 06:57-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: pt_BR\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -4351,7 +4351,7 @@ msgstr "Mostrar barra de favoritos ao iniciar"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Largura mínima padrão da barra lateral:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4371,7 +4371,7 @@ msgstr "Habilita a barra de ferramentas de favoritos instantâneos"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: lib/preferences/preferences.ui:579
 msgctxt "Preferences|"
@@ -5921,12 +5921,9 @@ msgid "Expires On:"
 msgstr "Expira em:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Fechar janela"
+msgstr "&Fechar barra lateral"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"

@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2018-02-25 02:34+0000\n"
-"PO-Revision-Date: 2025-10-01 13:18+0200\n"
+"PO-Revision-Date: 2025-10-26 08:45+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Language: ca-valencia\n"
 "X-Qt-Contexts: true\n"
 
@@ -4348,7 +4348,7 @@ msgstr "Mostra la barra d'eines d'adreces d'interés"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Amplària mínima predeterminada de la barra lateral:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4368,7 +4368,7 @@ msgstr "Activa la barra d'eines de les adreces d'interés instantània"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: lib/preferences/preferences.ui:579
 msgctxt "Preferences|"
@@ -5918,12 +5918,9 @@ msgid "Expires On:"
 msgstr "Expira el:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Tanca la finestra"
+msgstr "Tan&ca la barra lateral"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"

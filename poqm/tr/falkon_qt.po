@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-05 00:16+0000\n"
-"PO-Revision-Date: 2025-10-01 14:38+0300\n"
+"PO-Revision-Date: 2025-10-26 19:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -4335,7 +4335,7 @@ msgstr "Başlangıçta yer imleri araç çubuğunu göster"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Öntanımlı en düşük kenar çubuğu genişliği:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4355,7 +4355,7 @@ msgstr "Anında yer imleri araç çubuğunu etkinleştir"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr " pks"
 
 #: lib/preferences/preferences.ui:579
 msgctxt "Preferences|"
@@ -5903,12 +5903,9 @@ msgid "Expires On:"
 msgstr "Dolma:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Pencereyi Kapat"
+msgstr "Kenar Çubuğunu &Kapat"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"

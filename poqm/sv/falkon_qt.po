@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-10-05 08:34+0200\n"
+"PO-Revision-Date: 2025-10-26 20:47+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: sv_SE\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -4341,7 +4341,7 @@ msgstr "Visa bokmärkesverktygsraden vid start"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Förvald minimal sidoradsbredd:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4361,7 +4361,7 @@ msgstr "Aktivera snabb bokmärkesverktygsrad"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr "bildpunkter"
 
 #: lib/preferences/preferences.ui:579
 msgctxt "Preferences|"
@@ -5910,12 +5910,9 @@ msgid "Expires On:"
 msgstr "Utgångsdatum:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Stäng fönster"
+msgstr "Stän&g sidorad"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"

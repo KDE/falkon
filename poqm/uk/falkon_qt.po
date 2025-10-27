@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_qt\n"
-"PO-Revision-Date: 2025-10-01 18:30+0300\n"
+"PO-Revision-Date: 2025-10-26 11:55+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -4354,7 +4354,7 @@ msgstr "Показувати панель закладок під час зап�
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Типова мінімальна ширина бічної панелі:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4374,7 +4374,7 @@ msgstr "Увімкнути миттєву панель закладок"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr "пк"
 
 #: lib/preferences/preferences.ui:579
 msgctxt "Preferences|"
@@ -5924,12 +5924,9 @@ msgid "Expires On:"
 msgstr "Спливає:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Закрити вікно"
+msgstr "З&акрити бічну панель"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
