@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-10-01 23:12+0200\n"
+"PO-Revision-Date: 2025-10-27 10:32+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Language: nl_NL\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -4354,7 +4354,7 @@ msgstr "Bladwijzerwerkbalk weergeven bij opstarten"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Standaard minimale breedte van zijbalk:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4374,7 +4374,7 @@ msgstr "Directe bladwijzerbalk inschakelen"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: lib/preferences/preferences.ui:579
 msgctxt "Preferences|"
@@ -5928,12 +5928,9 @@ msgid "Expires On:"
 msgstr "Vervalt op:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Venster sluiten"
+msgstr "Zijbalk &sluiten"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
@@ -6057,7 +6054,7 @@ msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Voorkomen dat deze pagina extra dialoogvensters aanmaakt"
 
-#: lib/webengine/webpage.cpp:334
+#: lib/webengine/webpage.cpp:335
 #, qt-format
 msgctxt "WebPage|"
 msgid ""
@@ -6067,27 +6064,27 @@ msgstr ""
 "Falkon kan niet overweg met <b>%1:</b>-links. De link is <ul><li>%2</li></"
 "ul>Wilt u dat Falkon probeert deze link te openen in een systeemapplicatie?"
 
-#: lib/webengine/webpage.cpp:339
+#: lib/webengine/webpage.cpp:340
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
 msgstr "Mijn keuze voor dit protocol onthouden"
 
-#: lib/webengine/webpage.cpp:340
+#: lib/webengine/webpage.cpp:341
 msgctxt "WebPage|"
 msgid "External Protocol Request"
 msgstr "Extern protocolverzoek"
 
-#: lib/webengine/webpage.cpp:418 lib/webengine/webpage.cpp:419
+#: lib/webengine/webpage.cpp:419 lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
 msgid "Failed loading page"
 msgstr "Het laden van de pagina is mislukt"
 
-#: lib/webengine/webpage.cpp:420
+#: lib/webengine/webpage.cpp:421
 msgctxt "WebPage|"
 msgid "Something went wrong while loading this page."
 msgstr "Er is een fout opgetreden tijdens het laden van deze pagina."
 
-#: lib/webengine/webpage.cpp:421
+#: lib/webengine/webpage.cpp:422
 msgctxt "WebPage|"
 msgid ""
 "Try reloading the page or closing some tabs to make more memory available."
@@ -6095,27 +6092,27 @@ msgstr ""
 "U kunt proberen om de pagina te herladen of om enkele tabbladen te sluiten "
 "en zo meer geheugen vrij te maken."
 
-#: lib/webengine/webpage.cpp:422
+#: lib/webengine/webpage.cpp:423
 msgctxt "WebPage|"
 msgid "Reload page"
 msgstr "Pagina herladen"
 
-#: lib/webengine/webpage.cpp:597
+#: lib/webengine/webpage.cpp:598
 msgctxt "WebPage|"
 msgid "Choose file..."
 msgstr "Bestand kiezen..."
 
-#: lib/webengine/webpage.cpp:601
+#: lib/webengine/webpage.cpp:602
 msgctxt "WebPage|"
 msgid "Choose files..."
 msgstr "Bestanden kiezen..."
 
-#: lib/webengine/webpage.cpp:737
+#: lib/webengine/webpage.cpp:738
 msgctxt "WebPage|"
 msgid "JavaScript alert"
 msgstr "JavaScript-waarschuwing"
 
-#: lib/webengine/webpage.cpp:746
+#: lib/webengine/webpage.cpp:747
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
 msgstr "Voorkomen dat deze pagina extra dialoogvensters aanmaakt"
