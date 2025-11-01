@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: falkon_qt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-29 01:02+0100\n"
-"PO-Revision-Date: 2025-10-04 20:21+0100\n"
+"PO-Revision-Date: 2025-10-30 12:10+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -4357,7 +4357,7 @@ msgstr "Mostrar barra de herramientas de marcadores al inicio"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Anchura mínima predeterminada de la barra lateral:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4377,7 +4377,7 @@ msgstr "Habilitar Barra de Herramientas de Marcadores instantánea"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: lib/preferences/preferences.ui:579
 msgctxt "Preferences|"
@@ -5926,12 +5926,9 @@ msgid "Expires On:"
 msgstr "Expira el:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Cerrar ventana"
+msgstr "&Cerrar ventana"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
