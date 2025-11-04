@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the falkon package.
 # Jérôme Giry <baikalink@hotmail.fr>, 2017.
 # Nicolas Ourceau <lamessen@hotmail.fr>, 2017.
-# SPDX-FileCopyrightText: 2020, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_greasemonkey_qt\n"
-"PO-Revision-Date: 2024-11-16 16:08+0100\n"
+"PO-Revision-Date: 2025-10-08 09:29+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: fr_FR\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: gm_addscriptdialog.cpp:50
 #, qt-format
@@ -83,36 +83,24 @@ msgid "GreaseMonkey Icon"
 msgstr "Icône GreaseMonkey"
 
 #: gm_icon.cpp:58
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Icon|"
 msgid "&Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "Activ&er GreaseMonkey"
 
 #: gm_icon.cpp:63
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "Open GreaseMonkey settings"
 msgctxt "GM_Icon|"
 msgid "Show GreaseMonkey &Settings"
-msgstr "Ouvrir le panneau de configuration de GreaseMonkey"
+msgstr "Ouvrir la configuration de Grea&seMonkey"
 
 #: gm_icon.cpp:78
-#, fuzzy
-#| msgctxt "GM_AddScriptDialog|"
-#| msgid "GreaseMonkey Installation"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is active"
-msgstr "Installation de GreaseMonkey"
+msgstr "GreaseMonkey est activé"
 
 #: gm_icon.cpp:81
-#, fuzzy
-#| msgctxt "GM_Settings|"
-#| msgid "GreaseMonkey Scripts"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is disabled"
-msgstr "Scripts de GreaseMonkey"
+msgstr "GreaseMonkey est désactivé"
 
 #: gm_manager.cpp:78
 #, qt-format
@@ -183,12 +171,9 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>Scripts de GreaseMonkey</h3>"
 
 #: settings/gm_settings.ui:70
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Settings|"
 msgid "Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "Activer GreaseMonkey"
 
 #: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"

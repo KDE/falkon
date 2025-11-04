@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-09-15 08:36+0200\n"
+"PO-Revision-Date: 2025-10-27 07:58+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Language: fr_FR\n"
 "X-Qt-Contexts: true\n"
 
@@ -172,12 +172,9 @@ msgid "AdBlock is active"
 msgstr "AdBlock est actif"
 
 #: lib/adblock/adblockicon.cpp:146
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "Enable AdBlock"
 msgctxt "AdBlockIcon|"
 msgid "&Enable AdBlock"
-msgstr "Activer AdBlock"
+msgstr "Activ&er AdBlock"
 
 #: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
@@ -2867,7 +2864,7 @@ msgstr "Modifier…"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgstr ""
-"<b>Remarque : </b>%s dans l'URL ou les données POST représente la chaîne de "
+"<b>Remarque : </b>%s dans l'URL ou les données POST représente la chaine de "
 "caractères recherchée"
 
 #: lib/opensearch/editsearchengine.ui:123
@@ -4373,7 +4370,7 @@ msgstr "Afficher la barre de signets au démarrage"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Largeur minimale par défaut de la barre latérale :"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4393,7 +4390,7 @@ msgstr "Activer la barre de signets instantanés"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: lib/preferences/preferences.ui:579
 msgctxt "Preferences|"
@@ -5947,12 +5944,9 @@ msgid "Expires On:"
 msgstr "Expire le :"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Fermer la fenêtre"
+msgstr "Fermer la barre latérale"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
@@ -6074,7 +6068,7 @@ msgstr "Impossible de lancer le programme externe ! %1"
 #: lib/webengine/jsalert.ui:125
 msgctxt "jsAlert|"
 msgid "Prevent this page from creating additional dialogs"
-msgstr "Empêcher cette page de créer des boîtes de dialogue supplémentaires"
+msgstr "Empêcher cette page de créer des boites de dialogue supplémentaires"
 
 #: lib/webengine/webpage.cpp:335
 #, qt-format
@@ -6138,7 +6132,7 @@ msgstr "Alerte JavaScript"
 #: lib/webengine/webpage.cpp:747
 msgctxt "WebPage|"
 msgid "Prevent this page from creating additional dialogs"
-msgstr "Empêcher cette page de créer des boîtes de dialogue supplémentaires"
+msgstr "Empêcher cette page de créer des boites de dialogue supplémentaires"
 
 #: lib/webengine/webview.cpp:127
 msgctxt "WebView|"
