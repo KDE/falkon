@@ -1,11 +1,11 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the falkon package.
 #
-# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-11-11 16:20+0900\n"
+"PO-Revision-Date: 2025-11-20 20:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: zh_TW\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: gm_addscriptdialog.cpp:50
 #, qt-format
@@ -81,36 +81,24 @@ msgid "GreaseMonkey Icon"
 msgstr "GreaseMonkey 圖示"
 
 #: gm_icon.cpp:58
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Icon|"
 msgid "&Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "啟用 GreaseMonkey(&E)"
 
 #: gm_icon.cpp:63
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "Open GreaseMonkey settings"
 msgctxt "GM_Icon|"
 msgid "Show GreaseMonkey &Settings"
-msgstr "開啟 GreaseMonkey 設定"
+msgstr "顯示 GreaseMonkey 設定(&S)"
 
 #: gm_icon.cpp:78
-#, fuzzy
-#| msgctxt "GM_AddScriptDialog|"
-#| msgid "GreaseMonkey Installation"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is active"
-msgstr "GreaseMonkey 安裝程式"
+msgstr "GreaseMonkey 作用中"
 
 #: gm_icon.cpp:81
-#, fuzzy
-#| msgctxt "GM_Settings|"
-#| msgid "GreaseMonkey Scripts"
 msgctxt "GM_Icon|"
 msgid "GreaseMonkey is disabled"
-msgstr "GreaseMonkey 指令稿"
+msgstr "GreaseMonkey 已停用"
 
 #: gm_manager.cpp:78
 #, qt-format
@@ -181,12 +169,9 @@ msgid "<h3>GreaseMonkey Scripts</h3>"
 msgstr "<h3>GreaseMonkey 指令稿</h3>"
 
 #: settings/gm_settings.ui:70
-#, fuzzy
-#| msgctxt "GM_Icon|"
-#| msgid "GreaseMonkey"
 msgctxt "GM_Settings|"
 msgid "Enable GreaseMonkey"
-msgstr "GreaseMonkey"
+msgstr "啟用 GreaseMonkey"
 
 #: settings/gm_settings.ui:77
 msgctxt "GM_Settings|"
