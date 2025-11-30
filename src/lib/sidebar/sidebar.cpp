@@ -132,6 +132,12 @@ void SideBarManager::createMenu(QMenu* menu, bool mainMenu)
         }
     }
 
+    if (!mainMenu && s_sidebars.contains(m_activeBar)) {
+        menu->addSeparator();
+
+        s_sidebars[m_activeBar].data()->populateSideBarMenu(menu);
+    }
+
     if (mainMenu) {
         m_window->addActions(menu->actions());
     }

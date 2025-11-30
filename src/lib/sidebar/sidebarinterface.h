@@ -23,6 +23,7 @@
 #include "qzcommon.h"
 
 class QAction;
+class QMenu;
 
 class BrowserWindow;
 
@@ -35,6 +36,8 @@ public:
 
     virtual QAction* createMenuAction() = 0;
     virtual QWidget* createSideBarWidget(BrowserWindow* mainWindow) = 0;
+
+    virtual void populateSideBarMenu(QMenu *menu) { Q_UNUSED(menu) };
 };
 
 #endif // SIDEBARINTERFACE_H
