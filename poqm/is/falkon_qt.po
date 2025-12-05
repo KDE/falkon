@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-10-26 11:42+0000\n"
+"PO-Revision-Date: 2025-12-04 10:47+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -2293,73 +2293,79 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Skilríkið samsvarar ekki innbyggðum dulritunarlyklum sem fráteknir eru fyrir "
+"vélarheiti netþjónsins."
 
 #: lib/network/networkmanager.cpp:347
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Samheiti (CN) skilríkis samsvarar ekki vélarheiti netþjónsins."
 
 #: lib/network/networkmanager.cpp:349
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Skilríkið er ekki gilt á fyrirliggjandi dags- og tímasetningu."
 
 #: lib/network/networkmanager.cpp:351
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
 msgstr ""
+"Skilríkið er ekki undirritað af treystanlegri vottunarstöð (trusted "
+"Certificate Authority)."
 
 #: lib/network/networkmanager.cpp:353
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Skilríkið er með villum."
 
 #: lib/network/networkmanager.cpp:355
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
 msgstr ""
+"Skilríkið er ekki með neitt kerfi til að ákvarða hvort það hafi verið "
+"afturkallað."
 
 #: lib/network/networkmanager.cpp:357
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Afturköllunarupplýsingar um skilríkið eru ekki tiltækar."
 
 #: lib/network/networkmanager.cpp:359
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "Skilríkið hefur verið afturkallað."
 
 #: lib/network/networkmanager.cpp:361
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "Skilríkið er ekki gilt."
 
 #: lib/network/networkmanager.cpp:363
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "Skilríkið er undirritað af með veiku reikniriti undirritunar."
 
 #: lib/network/networkmanager.cpp:365
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "Vélarheitið sem tiltekið er í skilríkinu er ekki einstakt."
 
 #: lib/network/networkmanager.cpp:367
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Skilríkið inniheldur veikan lykil."
 
 #: lib/network/networkmanager.cpp:369
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
-msgstr ""
+msgstr "Uppgefin DNS-nöfn skilríkis fylgja ekki nafnahömlum."
 
 #: lib/network/networkmanager.cpp:371
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Skilríkið er með of langan gildistíma."
 
 #: lib/network/networkmanager.cpp:373
 msgctxt "NetworkManager|"
@@ -2367,6 +2373,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Beðið var um gagnsæi skilríkis (Certificate Transparency - CT) fyrir þessa "
+"tengingu, en netþjónninn gaf ekki upp CT-upplýsingar sem uppfylltu þá stefnu."
 
 #: lib/network/networkmanager.cpp:375
 msgctxt "NetworkManager|"
@@ -2374,16 +2382,18 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Skilríkið er þekkt fyrir að vera notað til inngripa af öðrum aðilum en "
+"eiganda tækisins."
 
 #: lib/network/networkmanager.cpp:377
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Tengingin notar úrelda útgáfu af SSL/TLS"
 
 #: lib/network/networkmanager.cpp:379
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
-msgstr ""
+msgstr "Skilríkið er af eldri gerð frá Symantec sem er ekki lengur gild."
 
 #: lib/network/networkmanager.cpp:382
 msgctxt "NetworkManager|"
@@ -2787,7 +2797,7 @@ msgstr "Villa í SSL-skilríki!"
 #: lib/network/sslerrordialog.ui:90
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr ""
+msgstr "Víxla af/á nánari upplýsingum skírteina"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -3177,12 +3187,12 @@ msgstr "<b>Tenging er dulkóðuð.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Allar villur í skilríki eru <b>varanlega</b> hunsaðar."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Villa skilríkisins er <b>tímabundið</b> hunsuð."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
@@ -3343,7 +3353,7 @@ msgstr "<b>Vefsvæði %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Allar villur í skilríki eru <b>varanlega</b> hunsaðar."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
