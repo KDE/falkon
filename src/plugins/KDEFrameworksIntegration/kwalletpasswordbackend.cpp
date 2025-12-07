@@ -1,6 +1,7 @@
 /* ============================================================
 * KDEFrameworksIntegration - KDE support plugin for Falkon
 * Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2021-2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -20,6 +21,7 @@
 #include "mainapplication.h"
 #include "browserwindow.h"
 #include "desktopnotificationsfactory.h"
+#include "updater.h"
 
 #include <QDateTime>
 
@@ -46,10 +48,13 @@ static QMap<QString, QString> encodeEntry(const PasswordEntry &entry)
     return data;
 }
 
-KWalletPasswordBackend::KWalletPasswordBackend()
+KWalletPasswordBackend::KWalletPasswordBackend(KDEFrameworksIntegrationPlugin *plugin)
     : PasswordBackend()
     , m_wallet(nullptr)
+    , m_plugin(plugin)
+    , m_entriesLoaded(false)
 {
+    initialize();
 }
 
 QString KWalletPasswordBackend::name() const
@@ -57,9 +62,27 @@ QString KWalletPasswordBackend::name() const
     return KDEFrameworksIntegrationPlugin::tr("KWallet");
 }
 
+QStringList KWalletPasswordBackend::getUsernames(const QUrl& url)
+{
+    if (!m_wallet) {
+        showErrorNotification();
+        return {KDEFrameworksIntegrationPlugin::tr("Unable to open KWallet")};
+    }
+
+    if (m_entriesLoaded) {
+        return PasswordBackend::getUsernames(url);
+    }
+
+    if (!m_wallet->keyDoesNotExist(m_wallet->walletName(), QSL("FalkonPasswords"), PasswordManager::createHost(url))) {
+        return {KDEFrameworksIntegrationPlugin::tr("Encrypted UserName")};
+    }
+
+    return {};
+}
+
 QVector<PasswordEntry> KWalletPasswordBackend::getEntries(const QUrl &url)
 {
-    initialize();
+    loadEntries();
 
     const QString host = PasswordManager::createHost(url);
 
@@ -79,7 +102,7 @@ QVector<PasswordEntry> KWalletPasswordBackend::getEntries(const QUrl &url)
 
 QVector<PasswordEntry> KWalletPasswordBackend::getAllEntries()
 {
-    initialize();
+    loadEntries();
 
     return m_allEntries;
 }
@@ -97,7 +120,7 @@ static uint Q_DATETIME_TOTIME_T(const QDateTime &dateTime)
 
 void KWalletPasswordBackend::addEntry(const PasswordEntry &entry)
 {
-    initialize();
+    loadEntries();
 
     if (!m_wallet) {
         showErrorNotification();
@@ -110,11 +133,12 @@ void KWalletPasswordBackend::addEntry(const PasswordEntry &entry)
 
     m_wallet->writeMap(stored.id.toString(), encodeEntry(stored));
     m_allEntries.append(stored);
+    addExistFlag(stored.host);
 }
 
 bool KWalletPasswordBackend::updateEntry(const PasswordEntry &entry)
 {
-    initialize();
+    loadEntries();
 
     if (!m_wallet) {
         showErrorNotification();
@@ -135,11 +159,11 @@ bool KWalletPasswordBackend::updateEntry(const PasswordEntry &entry)
 
 void KWalletPasswordBackend::updateLastUsed(PasswordEntry &entry)
 {
-    initialize();
+    loadEntries();
 
     if (!m_wallet) {
         showErrorNotification();
-        return;        
+        return;
     }
 
     m_wallet->removeEntry(entry.id.toString());
@@ -157,7 +181,7 @@ void KWalletPasswordBackend::updateLastUsed(PasswordEntry &entry)
 
 void KWalletPasswordBackend::removeEntry(const PasswordEntry &entry)
 {
-    initialize();
+    loadEntries();
 
     if (!m_wallet) {
         showErrorNotification();
@@ -171,12 +195,12 @@ void KWalletPasswordBackend::removeEntry(const PasswordEntry &entry)
     if (index > -1) {
         m_allEntries.remove(index);
     }
+
+    removeExistFlag(entry.host);
 }
 
 void KWalletPasswordBackend::removeAll()
 {
-    initialize();
-
     if (!m_wallet) {
         showErrorNotification();
         return; 
@@ -213,6 +237,20 @@ void KWalletPasswordBackend::initialize()
 
     if (!m_wallet) {
         qWarning() << "KWalletPasswordBackend::initialize Cannot open wallet!";
+        return;
+    }
+
+    folderMigration();
+    updateVersion();
+}
+
+void KWalletPasswordBackend::folderMigration()
+{
+    if (!m_wallet->folderDoesNotExist(m_wallet->walletName(), QSL("FalkonPasswords"))) {
+        if (!m_wallet->setFolder(QSL("FalkonPasswords"))) {
+            qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"FalkonPasswords\"!";
+            return;
+        }
         return;
     }
 
@@ -273,25 +311,77 @@ void KWalletPasswordBackend::initialize()
             m_wallet->writeMap(entry.id.toString(), encodeEntry(entry));
         }
     }
-    else {
-        QMap<QString, QMap<QString, QString>> entriesMap;
-        bool ok = false;
-        entriesMap = m_wallet->mapList(&ok);
-        QMap<QString, QMap<QString, QString>>::const_iterator j = entriesMap.constBegin();
-        while (j != entriesMap.constEnd()) {
-            PasswordEntry entry;
-            entry.id = j.key();
-            entry.host = j.value()[QSL("host")];
-            entry.username = j.value()[QSL("username")];
-            entry.password = j.value()[QSL("password")];
-            entry.updated = j.value()[QSL("updated")].toInt();
-            entry.data = j.value()[QSL("data")].toUtf8();
-            if (entry.isValid()) {
-                m_allEntries.append(entry);
-            }
-            ++j;
+}
+
+void KWalletPasswordBackend::updateVersion()
+{
+    Updater::Version lastVersion(m_plugin->lastFalkonVersion());
+    Updater::Version currentVersion(QString::fromLatin1(Qz::VERSION));
+
+    if (lastVersion == currentVersion) {
+        return;
+    }
+
+    if (lastVersion < Updater::Version(QStringLiteral("26.03.71"))) {
+        loadEntries();
+
+        QSet<QString> hosts;
+        for (const auto &entry : std::as_const(m_allEntries)) {
+            hosts.insert(entry.host);
+        }
+
+        for (const auto &host : std::as_const(hosts)) {
+            addExistFlag(host);
         }
     }
+}
+
+void KWalletPasswordBackend::loadEntries()
+{
+    if (m_entriesLoaded) {
+        return;
+    }
+
+    QMap<QString, QMap<QString, QString>> entriesMap;
+    bool ok = false;
+    entriesMap = m_wallet->mapList(&ok);
+    QMap<QString, QMap<QString, QString>>::const_iterator j = entriesMap.constBegin();
+    while (j != entriesMap.constEnd()) {
+        PasswordEntry entry;
+        entry.id = j.key();
+        entry.host = j.value()[QSL("host")];
+        entry.username = j.value()[QSL("username")];
+        entry.password = j.value()[QSL("password")];
+        entry.updated = j.value()[QSL("updated")].toInt();
+        entry.data = j.value()[QSL("data")].toUtf8();
+        if (entry.isValid()) {
+            m_allEntries.append(entry);
+        }
+        ++j;
+    }
+    m_entriesLoaded = true;
+}
+
+void KWalletPasswordBackend::addExistFlag(const QString &host)
+{
+    if (m_wallet->keyDoesNotExist(m_wallet->walletName(), QSL("FalkonPasswords"), host)) {
+        m_wallet->writeMap(host, {{QSL("exists"), QSL("true")}});
+    }
+}
+
+void KWalletPasswordBackend::removeExistFlag(const QString &host)
+{
+    if (m_wallet->keyDoesNotExist(m_wallet->walletName(), QSL("FalkonPasswords"), host)) {
+        return;
+    }
+
+    for (const auto &entry : std::as_const(m_allEntries)) {
+        if (entry.host == host) {
+            return;
+        }
+    }
+
+    m_wallet->removeEntry(host);
 }
 
 KWalletPasswordBackend::~KWalletPasswordBackend()

@@ -1,6 +1,7 @@
 /* ============================================================
 * KDEFrameworksIntegration - KDE support plugin for Falkon
 * Copyright (C) 2013-2014  David Rosca <nowrep@gmail.com>
+* Copyright (C) 2021-2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -23,6 +24,8 @@
 #include "passwordbackends/passwordbackend.h"
 #include "passwordmanager.h"
 
+class KDEFrameworksIntegrationPlugin;
+
 namespace KWallet {
 class Wallet;
 }
@@ -30,11 +33,12 @@ class Wallet;
 class FALKON_EXPORT KWalletPasswordBackend : public PasswordBackend
 {
 public:
-    explicit KWalletPasswordBackend();
+    explicit KWalletPasswordBackend(KDEFrameworksIntegrationPlugin *plugin);
     ~KWalletPasswordBackend() override;
 
     QString name() const override;
 
+    QStringList getUsernames(const QUrl &url) override;
     QVector<PasswordEntry> getEntries(const QUrl &url) override;
     QVector<PasswordEntry> getAllEntries() override;
 
@@ -49,8 +53,17 @@ private:
     void initialize();
     void showErrorNotification();
 
+    void folderMigration();
+    void updateVersion();
+    void loadEntries();
+
+    void addExistFlag(const QString &host);
+    void removeExistFlag(const QString &host);
+
     KWallet::Wallet* m_wallet;
     QVector<PasswordEntry> m_allEntries;
+    KDEFrameworksIntegrationPlugin *m_plugin;
+    bool m_entriesLoaded;
 };
 
 #endif // KWALLETPASSWORDBACKEND_H
