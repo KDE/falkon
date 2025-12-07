@@ -1,6 +1,7 @@
 /* ============================================================
 * KDEFrameworksIntegration - KDE support plugin for Falkon
 * Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2021-2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -39,9 +40,14 @@ public:
     bool testPlugin() override;
     void populateWebViewMenu(QMenu *menu, WebView *view, const WebHitTestResult &r) override;
 
+    QString lastFalkonVersion() const;
+
 private:
     KWalletPasswordBackend *m_backend = nullptr;
     QVector<KIOSchemeHandler*> m_kioSchemeHandlers;
     Purpose::Menu *m_sharePageMenu = nullptr;
     KUiServerV2JobTracker *m_jobTracker = nullptr;
+
+    QString m_settingsPath;
+    QString m_lastFalkonVersion;
 };

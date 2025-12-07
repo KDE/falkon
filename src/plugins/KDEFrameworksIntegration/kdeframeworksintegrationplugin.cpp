@@ -1,6 +1,7 @@
 /* ============================================================
 * KDEFrameworksIntegration - KDE support plugin for Falkon
 * Copyright (C) 2013-2018 David Rosca <nowrep@gmail.com>
+* Copyright (C) 2021-2025 Juraj Oravec <jurajoravec@mailo.com>
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -41,6 +42,7 @@
 #include <QWebEngineUrlScheme>
 #include <QMenu>
 #include <QJsonArray>
+#include <QSettings>
 
 KDEFrameworksIntegrationPlugin::KDEFrameworksIntegrationPlugin()
     : QObject()
@@ -50,18 +52,22 @@ KDEFrameworksIntegrationPlugin::KDEFrameworksIntegrationPlugin()
 void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settingsPath)
 {
     Q_UNUSED(state);
-    Q_UNUSED(settingsPath);
 
-    m_backend = new KWalletPasswordBackend;
+    m_settingsPath = settingsPath + QL1S("/KDEFrameworksIntegration.ini");
+
+    QSettings settings(m_settingsPath, QSettings::IniFormat);
+    m_lastFalkonVersion = settings.value(QSL("General/LastFalkonVersion"), QString::fromLatin1(Qz::VERSION)).toString();
+
+    m_backend = new KWalletPasswordBackend(this);
     mApp->autoFill()->passwordManager()->registerBackend(QSL("KWallet"), m_backend);
 
     // Enable KWallet password backend inside KDE session
     if (qgetenv("KDE_FULL_SESSION") == QByteArray("true")) {
         mApp->autoFill()->passwordManager()->switchBackend(QSL("KWallet"));
     }
-    
+
     m_jobTracker = new KUiServerV2JobTracker(this);
-    
+
     auto manager = mApp->downloadManager();
     connect(manager, &DownloadManager::downloadAdded, this, [=](DownloadItem *item) {
         auto job = new DownloadKJob(item->url(), item->path(), item->fileName(), this);
@@ -120,6 +126,8 @@ void KDEFrameworksIntegrationPlugin::init(InitState state, const QString &settin
 
     KCrash::initialize();
     KCrash::setFlags(KCrash::KeepFDs);
+
+    settings.setValue(QSL("General/LastFalkonVersion"), QString::fromLatin1(Qz::VERSION));
 }
 
 void KDEFrameworksIntegrationPlugin::unload()
@@ -153,4 +161,9 @@ bool KDEFrameworksIntegrationPlugin::testPlugin()
 {
     // Require the version that the plugin was built with
     return (QString::fromLatin1(Qz::VERSION) == QLatin1String(FALKON_VERSION));
+}
+
+QString KDEFrameworksIntegrationPlugin::lastFalkonVersion() const
+{
+    return m_lastFalkonVersion;
 }
