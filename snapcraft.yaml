@@ -43,68 +43,7 @@ package-repositories:
     url: http://origin.archive.neon.kde.org/user
     key-server: keyserver.ubuntu.com
 parts:
-  # python-deps:
-  #   source: .
-  #   plugin: python
-  #   python-packages:
-  #     - shiboken6
-  #     - PySide6
-  #   prime:
-  #     - -usr/bin/activate
-  #     - -usr/bin/activate.csh
-  #     - -usr/bin/activate.fish
-  #     - -usr/bin/Activate.ps1
-  #     - -usr/bin/python
-  #     - -usr/bin/python3
-  #     - -usr/bin/python3.12
-  #     - -usr/bin/pip
-  #     - -usr/bin/pip3
-  #     - -usr/bin/pip3.12
-  #     - -usr/bin/wheel
-  #     - -usr/lib/python3.12/dist-packages/pip*
-  #     - -usr/lib/python3.12/dist-packages/pkg_resources
-  #     - -usr/lib/python3.12/dist-packages/setuptools*
-  #     - -pyvenv.cfg
-  #   organize:
-  #     bin: usr/bin
-  #     lib/python3.12/site-packages: usr/lib/python3/dist-packages
-  # pyside-setup-qt:
-  #   after:
-  #     - python-deps
-  #   source: https://github.com/qtproject/pyside-pyside-setup.git
-  #   source-branch: 6.8.1
-  #   plugin: cmake
-  #   build-packages:
-  #     - python3-dev
-  #     - libpython3-dev
-  #   cmake-parameters:
-  #     - -DCMAKE_INSTALL_PREFIX=/usr
-  #     - -DCMAKE_BUILD_TYPE=Release
-  #     - -DQT_MAJOR_VERSION=6
-  #     - -DBUILD_WITH_QT6=ON
-  #     - -DBUILD_TESTING=OFF
-  #     - -DCMAKE_INSTALL_SYSCONFDIR=/etc
-  #     - -DCMAKE_INSTALL_LOCALSTATEDIR=/var
-  #     - -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON
-  #     - -DCMAKE_FIND_USE_PACKAGE_REGISTRY=OFF
-  #     - -DCMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY=ON
-  #     - -DCMAKE_INSTALL_RUNSTATEDIR=/run
-  #     - -DCMAKE_SKIP_INSTALL_ALL_DEPENDENCY=ON
-  #     - -DCMAKE_VERBOSE_MAKEFILE=ON
-  #     - -DCMAKE_INSTALL_LIBDIR=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
-  #     - --log-level=STATUS
-  #     - -DCMAKE_LIBRARY_PATH=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
-  #   build-environment: &buildenvironment
-  #     - PATH: /snap/kde-qt6-core24-sdk/current/usr/bin${PATH:+:$PATH}
-  #     - PKG_CONFIG_PATH: /snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}
-  #     - XDG_DATA_DIRS: $CRAFT_STAGE/usr/share:/snap/kde-qt6-core24-sdk/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
-  #     - XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kde-qt6-core24-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
-  #     - LD_LIBRARY_PATH: "/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libproxy:/snap/kde-qt6-core24-sdk/current/usr/lib:/snap/kf6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kf6-core24-sdk/current/usr/lib:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/lib/:$CRAFT_STAGE/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-  #     - PYTHONPATH: ${CRAFT_STAGE}/lib/python3.12/site-packages:${CRAFT_STAGE}/usr/lib/python3/dist-packages
   falkon:
-    # after:
-    #   - python-deps
-    #   - pyside-setup-qt
     parse-info:
       - usr/share/metainfo/org.kde.falkon.appdata.xml
     plugin: cmake
@@ -113,20 +52,17 @@ parts:
     build-snaps:
       - hunspell-dictionaries
     build-packages:
-      - libxcb-util-dev
-      - libssl-dev
       - gnome-keyring
+      - libssl-dev
+      - libxcb-util-dev
       - libxkbcommon-dev
       - libcups2-dev
-      # - libpyside6-dev
-      # - libshiboken6-dev
-      # - pyside6-tools
     stage-packages:
-      - libxcb-util1
-      - gnome-keyring
-      - libxkbcommon0
-      - libcups2t64
       - cups-client
+      - gnome-keyring
+      - libcups2t64
+      - libxcb-util1
+      - libxkbcommon0
     stage-snaps:
       - kget
     cmake-parameters:
@@ -146,16 +82,15 @@ parts:
       - -DCMAKE_INSTALL_LIBDIR=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
       - --log-level=STATUS
       - -DCMAKE_LIBRARY_PATH=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
-      # - -DShiboken6Tools_DIR=${CRAFT_STAGE}/usr/lib/python3/dist-packages/shiboken6
-      # - -DPySide6_DIR=${CRAFT_STAGE}/sr/lib/python3/dist-packages/PySide6
-    # build-environment: *buildenvironment
+      - -DShiboken6Tools_DIR=/snap/kde-pyside6-core24-sdk/current/usr/lib/python3/dist-packages/shiboken6
+      - -DPySide6_DIR=/snap/kde-pyside6-core24-sdk/current/usr/lib/python3/dist-packages/PySide6
     build-environment: &buildenvironment
       - PATH: /snap/kde-qt6-core24-sdk/current/usr/bin${PATH:+:$PATH}
       - PKG_CONFIG_PATH: /snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}
       - XDG_DATA_DIRS: $CRAFT_STAGE/usr/share:/snap/kde-qt6-core24-sdk/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
       - XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kde-qt6-core24-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
-      - LD_LIBRARY_PATH: "/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libproxy:/snap/kde-qt6-core24-sdk/current/usr/lib:/snap/kf6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kf6-core24-sdk/current/usr/lib:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/lib/:$CRAFT_STAGE/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-      - PYTHONPATH: ${CRAFT_STAGE}/lib/python3.12/site-packages:${CRAFT_STAGE}/usr/lib/python3/dist-packages
+      - LD_LIBRARY_PATH: "/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libproxy:/snap/kde-qt6-core24-sdk/current/usr/lib:/snap/kde-pyside6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-pyside6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libproxy:/snap/kde-pyside6-core24-sdk/current/usr/lib:/snap/kf6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kf6-core24-sdk/current/usr/lib:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/lib/:$CRAFT_STAGE/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+      - PYTHONPATH: /snap/kde-qt6-core24-sdk/current/usr/lib/python3.12:/snap/kde-qt6-core24-sdk/current/usr/lib/python3/dist-packages:${CRAFT_STAGE}/lib/python3.12/site-packages:${CRAFT_STAGE}/usr/lib/python3/dist-packages${PYTHONPATH:+:$PYTHONPATH}
       - DICPATH: "$SNAP/usr/share/hunspell"
     prime:
       - -usr/lib/*/cmake/*
@@ -181,7 +116,10 @@ parts:
     plugin: nil
     build-snaps:
       - core24
-      - kf6-core24
+      - kde-pyside6-core24-sdk/latest/beta/
+      - kde-qt6-core24-sdk/latest/beta
+      - kf6-core24-sdk/latest/beta
+      - kf6-core24/latest/beta
     override-prime: |
       set -eux
       for snap in "core24" "kf6-core24"; do
