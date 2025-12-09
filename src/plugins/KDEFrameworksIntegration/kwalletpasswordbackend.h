@@ -66,6 +66,7 @@ private:
     QVector<PasswordEntry> m_allEntries;
     KDEFrameworksIntegrationPlugin *m_plugin;
     bool m_entriesLoaded;
+    bool m_openingFailed;
 };
 
 #endif // KWALLETPASSWORDBACKEND_H
