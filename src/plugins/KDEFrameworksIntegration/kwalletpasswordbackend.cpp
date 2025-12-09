@@ -53,6 +53,7 @@ KWalletPasswordBackend::KWalletPasswordBackend(KDEFrameworksIntegrationPlugin *p
     , m_wallet(nullptr)
     , m_plugin(plugin)
     , m_entriesLoaded(false)
+    , m_openingFailed(false)
 {
     initialize();
 }
@@ -237,6 +238,10 @@ void KWalletPasswordBackend::folderMigration()
 
     openWallet();
 
+    if (!m_wallet) {
+        return;
+    }
+
     bool migrationFalkon = !m_wallet->hasFolder(QSL("FalkonPasswords")) && m_wallet->hasFolder(QSL("Falkon"));
     bool migrateQupzilla = !m_wallet->hasFolder(QSL("FalkonPasswords")) && !m_wallet->hasFolder(QSL("Falkon")) && m_wallet->hasFolder(QSL("QupZilla"));
     bool migration = false;
@@ -331,6 +336,10 @@ void KWalletPasswordBackend::loadEntries()
 
     openWallet();
 
+    if (!m_wallet) {
+        return;
+    }
+
     if (!m_wallet->setFolder(QSL("FalkonPasswords"))) {
         qWarning() << "KWalletPasswordBackend::initialize Cannot set folder \"FalkonPasswords\"!";
         return;
@@ -360,6 +369,10 @@ void KWalletPasswordBackend::addExistFlag(const QString &host)
 {
     openWallet();
 
+    if (!m_wallet) {
+        return;
+    }
+
     if (KWallet::Wallet::keyDoesNotExist(KWallet::Wallet::NetworkWallet(), QSL("FalkonPasswords"), host)) {
         m_wallet->writeMap(host, {{QSL("exists"), QSL("true")}});
     }
@@ -368,6 +381,10 @@ void KWalletPasswordBackend::addExistFlag(const QString &host)
 void KWalletPasswordBackend::removeExistFlag(const QString &host)
 {
     openWallet();
+
+    if (!m_wallet) {
+        return;
+    }
 
     if (KWallet::Wallet::keyDoesNotExist(KWallet::Wallet::NetworkWallet(), QSL("FalkonPasswords"), host)) {
         return;
@@ -384,7 +401,7 @@ void KWalletPasswordBackend::removeExistFlag(const QString &host)
 
 void KWalletPasswordBackend::openWallet()
 {
-    if (m_wallet) {
+    if (m_wallet || m_openingFailed) {
         return;
     }
 
@@ -396,6 +413,7 @@ void KWalletPasswordBackend::openWallet()
     m_wallet = KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), wid);
 
     if (!m_wallet) {
+        m_openingFailed = true;
         qWarning() << "KWalletPasswordBackend::initialize Cannot open wallet!";
         return;
     }
@@ -403,5 +421,7 @@ void KWalletPasswordBackend::openWallet()
 
 KWalletPasswordBackend::~KWalletPasswordBackend()
 {
-    delete m_wallet;
+    if (m_wallet) {
+        delete m_wallet;
+    }
 }
