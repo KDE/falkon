@@ -85,11 +85,14 @@ parts:
       - -DCMAKE_LIBRARY_PATH=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
       - -DShiboken6Tools_DIR=/snap/kde-pyside6-core24-sdk/current/usr/lib/python3/dist-packages/shiboken6
       - -DPySide6_DIR=/snap/kde-pyside6-core24-sdk/current/usr/lib/python3/dist-packages/PySide6
+      - "-DCMAKE_FIND_ROOT_PATH=$CRAFT_STAGE\\;/snap/kde-qt6-core24-sdk/current\\;/snap/kde-pyside6-core24-sdk/current\\;/usr"
+      - "-DCMAKE_PREFIX_PATH=$CRAFT_STAGE\\;/snap/kde-qt6-core24-sdk/current\\;/snap/kde-pyside6-core24-sdk/current\\;/usr"
     build-environment: &buildenvironment
-      - PATH: /snap/kde-qt6-core24-sdk/current/usr/bin${PATH:+:$PATH}
-      - PKG_CONFIG_PATH: /snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}
-      - XDG_DATA_DIRS: $CRAFT_STAGE/usr/share:/snap/kde-qt6-core24-sdk/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
-      - XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kde-qt6-core24-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
+      - PATH: /snap/kde-qt6-core24-sdk/current/usr/bin:/snap/kde-pyside6-core24-sdk/current/usr/bin${PATH:+:$PATH}
+      - CMAKE_PREFIX_PATH: /snap/kde-qt6-core24-sdk/current/usr:/snap/kde-pyside6-core24-sdk/current/usr${CMAKE_PREFIX_PATH:+:$CMAKE_PREFIX_PATH}
+      - PKG_CONFIG_PATH: /snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/pkgconfig:/snap/kde-pyside6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/pkgconfig:/snap/kde-pyside6-core24-sdk/current/usr/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}
+      - XDG_DATA_DIRS: $CRAFT_STAGE/usr/share:/snap/kde-qt6-core24-sdk/current/usr/share:/snap/kde-pyside6-core24-sdk/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
+      - XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kde-qt6-core24-sdk/current/etc/xdg:/snap/kde-pyside6-core24-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
       - LD_LIBRARY_PATH: "/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libproxy:/snap/kde-qt6-core24-sdk/current/usr/lib:/snap/kde-pyside6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-pyside6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libproxy:/snap/kde-pyside6-core24-sdk/current/usr/lib:/snap/kf6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kf6-core24-sdk/current/usr/lib:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/lib/:$CRAFT_STAGE/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
       - PYTHONPATH: /snap/kde-qt6-core24-sdk/current/usr/lib/python3.12:/snap/kde-qt6-core24-sdk/current/usr/lib/python3/dist-packages:${CRAFT_STAGE}/lib/python3.12/site-packages:${CRAFT_STAGE}/usr/lib/python3/dist-packages${PYTHONPATH:+:$PYTHONPATH}
       - DICPATH: "$SNAP/usr/share/hunspell"
