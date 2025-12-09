@@ -69,6 +69,10 @@ QStringList KWalletPasswordBackend::getUsernames(const QUrl& url)
         return PasswordBackend::getUsernames(url);
     }
 
+    if (m_openingFailed) {
+        return {};
+    }
+
     if (!KWallet::Wallet::keyDoesNotExist(KWallet::Wallet::NetworkWallet(), QSL("FalkonPasswords"), PasswordManager::createHost(url))) {
         return {KDEFrameworksIntegrationPlugin::tr("Encrypted UserName")};
     }
