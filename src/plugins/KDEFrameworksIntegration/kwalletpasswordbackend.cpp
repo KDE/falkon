@@ -414,6 +414,7 @@ void KWalletPasswordBackend::openWallet()
 
     if (!m_wallet) {
         m_openingFailed = true;
+        showErrorNotification();
         qWarning() << "KWalletPasswordBackend::initialize Cannot open wallet!";
         return;
     }
