@@ -52,6 +52,7 @@ parts:
     build-snaps:
       - hunspell-dictionaries
     build-packages:
+      - duktape-dev
       - gnome-keyring
       - libssl-dev
       - libxcb-util-dev
