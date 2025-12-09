@@ -20,6 +20,7 @@
 #define KWALLETPASSWORDBACKEND_H
 
 #include <QVector>
+#include <QWindow>
 
 #include "passwordbackends/passwordbackend.h"
 #include "passwordmanager.h"
@@ -56,6 +57,7 @@ private:
     void folderMigration();
     void updateVersion();
     void loadEntries();
+    void openWallet();
 
     void addExistFlag(const QString &host);
     void removeExistFlag(const QString &host);
