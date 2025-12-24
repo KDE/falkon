@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-05 00:16+0000\n"
-"PO-Revision-Date: 2025-10-26 19:54+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2025-12-23 11:49+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -687,7 +687,7 @@ msgstr "Şöyle oturum aç:"
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:258
 msgctxt "AutoFill|"
 msgid "Database (encrypted)"
-msgstr "Veritabanı (şifreli)"
+msgstr "Veri tabanı (şifreli)"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:547
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:552
@@ -750,12 +750,12 @@ msgstr "Girilen parola yanlış!"
 #: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
 msgctxt "AutoFill|"
 msgid "Database (plaintext)"
-msgstr "Veritabanı (düz metin)"
+msgstr "Veri tabanı (düz metin)"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:20
 msgctxt "MasterPasswordDialog|"
 msgid "Encrypted DataBase Settings"
-msgstr "Şifreli Veritabanı Ayarları"
+msgstr "Şifreli Veri Tabanı Ayarları"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:33
 msgctxt "MasterPasswordDialog|"
@@ -778,8 +778,8 @@ msgid ""
 "This option clears the master password and moves all encrypted data to the "
 "\"DataBase (Plain Text)\" backend, and switches to it."
 msgstr ""
-"Bu seçenek ana parolayı kaldırır ve tüm şifreli veriyi Düz Metin "
-"Veritabanına taşır."
+"Bu seçenek ana parolayı kaldırır ve tüm şifreli veriyi düz metin veri "
+"tabanına taşır."
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:64
 msgctxt "MasterPasswordDialog|"
@@ -1005,7 +1005,7 @@ msgid ""
 "Mozilla Firefox stores its bookmarks in <b>places.sqlite</b> SQLite "
 "database. This file is usually located in"
 msgstr ""
-"Mozilla Firefox yer imlerini plates.sqlite veritabanı dosyasında saklar. Bu "
+"Mozilla Firefox yer imlerini plates.sqlite veri tabanı dosyasında saklar. Bu "
 "dosya genelde şurada bulunur"
 
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:70
@@ -1016,7 +1016,7 @@ msgstr "Dosya yok."
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:77
 msgctxt "BookmarksImportDialog|"
 msgid "Unable to open database. Is Firefox running?"
-msgstr "Veritabanı açılamadı. Firefox çalışıyor mu?"
+msgstr "Veri tabanı açılamadı. Firefox çalışıyor mu?"
 
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:32
 msgctxt "BookmarksImporter|"
@@ -3012,7 +3012,7 @@ msgstr "Tamam"
 #: lib/other/clearprivatedata.cpp:173
 msgctxt "ClearPrivateData|"
 msgid "Database Optimized"
-msgstr "Veritabanı Optimize Edildi"
+msgstr "Veri Tabanı Eniyilendi"
 
 #: lib/other/clearprivatedata.cpp:173
 #, qt-format
@@ -3021,8 +3021,8 @@ msgid ""
 "Database successfully optimized.<br/><br/><b>Database Size Before: </b>%1<br/"
 "><b>Database Size After: </b>%2"
 msgstr ""
-"Veritabanı başarıyla eniyilendi.<br/><br/><b>Veritabanı önceki boyut:</b>"
-"%1<br/><b>Veritabanı sonraki boyut: </b>%2"
+"Veri tabanı başarıyla eniyilendi.<br/><br/><b>Veri tabanının önceki boyutu: "
+"</b>%1<br/><b>Veri tabanının sonraki boyutu: </b>%2"
 
 #: lib/other/clearprivatedata.ui:14
 msgctxt "ClearPrivateData|"
@@ -3082,7 +3082,7 @@ msgstr "Temizle"
 #: lib/other/clearprivatedata.ui:114
 msgctxt "ClearPrivateData|"
 msgid "Web databases"
-msgstr "Web veritabanları"
+msgstr "Web veri tabanları"
 
 #: lib/other/clearprivatedata.ui:124
 msgctxt "ClearPrivateData|"
@@ -3092,7 +3092,7 @@ msgstr "Önbellek"
 #: lib/other/clearprivatedata.ui:134
 msgctxt "ClearPrivateData|"
 msgid "Optimize database"
-msgstr "Veritabanını Eniyile"
+msgstr "Veri Tabanını Eniyile"
 
 #: lib/other/clearprivatedata.ui:141
 msgctxt "ClearPrivateData|"
@@ -3102,7 +3102,7 @@ msgstr "Çerezler"
 #: lib/other/clearprivatedata.ui:158
 msgctxt "ClearPrivateData|"
 msgid "Database"
-msgstr "Veritabanı"
+msgstr "Veri Tabanı"
 
 #: lib/other/iconchooser.cpp:41
 msgctxt "IconChooser|"
@@ -3132,7 +3132,7 @@ msgstr "Dosya seç…"
 #: lib/other/iconchooser.ui:52
 msgctxt "IconChooser|"
 msgid "From database"
-msgstr "Veritabanından"
+msgstr "Veri tabanından"
 
 #: lib/other/iconchooser.ui:61
 msgctxt "IconChooser|"
