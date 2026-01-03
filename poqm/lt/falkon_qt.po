@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-01-16 13:12+0200\n"
+"PO-Revision-Date: 2026-01-02 18:42+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: \n"
 "Language: lt\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -166,12 +166,9 @@ msgid "AdBlock is active"
 msgstr "Reklamos blokavimas yra aktyvus"
 
 #: lib/adblock/adblockicon.cpp:146
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "Enable AdBlock"
 msgctxt "AdBlockIcon|"
 msgid "&Enable AdBlock"
-msgstr "Įjungti reklamos blokavimą"
+msgstr "Į&jungti reklamos blokavimą"
 
 #: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
@@ -2334,7 +2331,7 @@ msgstr ""
 #: lib/network/networkmanager.cpp:353
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Liudijime yra klaidų."
 
 #: lib/network/networkmanager.cpp:355
 msgctxt "NetworkManager|"
@@ -2400,7 +2397,7 @@ msgstr ""
 #: lib/network/networkmanager.cpp:377
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Ryšys naudoja pasenusią SSL/TLS versiją"
 
 #: lib/network/networkmanager.cpp:379
 msgctxt "NetworkManager|"
@@ -2799,7 +2796,7 @@ msgstr "Nėra prieinamų plėtinių."
 #: lib/network/sslerrordialog.cpp:32
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Tik šiam seansui"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -3929,18 +3926,12 @@ msgstr ""
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "Pridėti"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
 msgstr "Šalinti"
@@ -4105,7 +4096,7 @@ msgstr ""
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/preferences/preferences.cpp:626
 msgctxt "Preferences|"
@@ -4438,7 +4429,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:646
 msgctxt "Preferences|miliseconds"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: lib/preferences/preferences.ui:659
 msgctxt ""
@@ -4723,7 +4714,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:1231
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr ""
+msgstr "Naudoti aparatinė įrangos spartinimą (reikalauja paleidimo iš naujo)"
 
 #: lib/preferences/preferences.ui:1238
 #, fuzzy
@@ -5309,7 +5300,7 @@ msgstr "Užblokuotas turinys"
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Pakeitimai įsigalios po to, kai Falkon bus paleista iš naujo."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
 msgctxt "SiteSettingsAttributesItem|"
