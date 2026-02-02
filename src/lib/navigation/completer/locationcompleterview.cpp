@@ -243,7 +243,7 @@ bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
 
         case Qt::Key_Up:
         case Qt::Key_PageUp: {
-            if (keyEvent->modifiers() != Qt::NoModifier) {
+            if (modifiers != Qt::NoModifier && modifiers != Qt::KeypadModifier && modifiers != (Qt::KeypadModifier | Qt::ShiftModifier)) {
                 return false;
             }
             const int step = keyEvent->key() == Qt::Key_PageUp ? 5 : 1;
@@ -261,7 +261,7 @@ bool LocationCompleterView::eventFilter(QObject* object, QEvent* event)
 
         case Qt::Key_Down:
         case Qt::Key_PageDown: {
-            if (keyEvent->modifiers() != Qt::NoModifier) {
+            if (modifiers != Qt::NoModifier && modifiers != Qt::KeypadModifier && modifiers != (Qt::KeypadModifier | Qt::ShiftModifier)) {
                 return false;
             }
             const int step = keyEvent->key() == Qt::Key_PageDown ? 5 : 1;
