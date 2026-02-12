@@ -253,14 +253,18 @@ bool BookmarksModel::dropMimeData(const QMimeData* data, Qt::DropAction action, 
     row = qMax(row, 0);
 
     for (BookmarkItem* itm : std::as_const(items)) {
-        // If we are moving an item through the folder and item is above the row to insert,
-        // we must decrease row by one (by the dropped folder)
-        if (itm->parent() == parentItm && itm->parent()->children().indexOf(itm) < row) {
-            row--;
-        }
+        if (action == Qt::CopyAction) {
+            m_bookmarks->insertBookmark(parentItm, row++, itm->clone());
+        } else {
+            // If we are moving an item through the folder and item is above the row to insert,
+            // we must decrease row by one (by the dropped folder)
+            if (itm->parent() == parentItm && itm->parent()->children().indexOf(itm) < row) {
+                row--;
+            }
 
-        m_bookmarks->removeBookmark(itm);
-        m_bookmarks->insertBookmark(parentItm, row++, itm);
+            m_bookmarks->removeBookmark(itm);
+            m_bookmarks->insertBookmark(parentItm, row++, itm);
+        }
     }
 
     return true;

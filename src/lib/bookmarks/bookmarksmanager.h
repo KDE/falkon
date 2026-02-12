@@ -86,7 +86,12 @@ private:
     BookmarkItem* m_selectedBookmark;
     bool m_blockDescriptionChangedSignal;
     bool m_adjustHeaderSizesOnShow;
-
+    enum class ClipboardAction{
+        None = -1,
+        Copy = 0,
+        Cut = 1
+    };
+    ClipboardAction m_clipboardAction = ClipboardAction::None;
 };
 
 #endif // BOOKMARKSMANAGER_H

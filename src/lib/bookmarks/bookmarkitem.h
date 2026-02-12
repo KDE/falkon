@@ -89,6 +89,8 @@ public:
     static Type typeFromString(const QString &string);
     static QString typeToString(Type type);
 
+    BookmarkItem* clone() const;
+
 private:
     Type m_type;
     BookmarkItem* m_parent;

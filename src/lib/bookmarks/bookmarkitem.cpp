@@ -230,3 +230,21 @@ QString BookmarkItem::typeToString(BookmarkItem::Type type)
         return QSL("invalid");
     }
 }
+
+BookmarkItem* BookmarkItem::clone() const
+{
+    auto* newItem = new BookmarkItem(type());
+    newItem->setTitle(title());
+    newItem->setDescription(description());
+
+    if (isUrl()) {
+        newItem->setUrl(url());
+        newItem->setKeyword(keyword());
+    }
+
+    for (BookmarkItem* child : children()) {
+        newItem->addChild(child->clone());
+    }
+
+    return newItem;
+}

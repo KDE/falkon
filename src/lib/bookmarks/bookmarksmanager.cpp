@@ -26,6 +26,7 @@
 #include "iconprovider.h"
 #include "qztools.h"
 
+#include <QClipboard>
 #include <QMenu>
 #include <QTimer>
 
@@ -111,12 +112,66 @@ void BookmarksManager::createContextMenu(const QPoint &pos)
     QAction *actNewFolder = menu.addAction(tr("New Folder"), this, &BookmarksManager::addFolder);
     QAction *actNewSeparator = menu.addAction(tr("New Separator"), this, &BookmarksManager::addSeparator);
     menu.addSeparator();
-    QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("Delete"));
 
+    // Context menu entries for Cut, Copy & Paste
+    QAction* actCut = menu.addAction(tr("Cu&t"));
+    QAction* actCopy = menu.addAction(tr("&Copy"));
+    QAction* actPaste = menu.addAction(tr("&Paste"));
+
+    QAction* actDelete = menu.addAction(QIcon::fromTheme(QSL("edit-delete")), tr("&Remove"));
     connect(actNewTab, SIGNAL(triggered()), this, SLOT(openBookmarkInNewTab()));
     connect(actNewWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewWindow()));
     connect(actNewPrivateWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewPrivateWindow()));
     connect(actDelete, &QAction::triggered, this, &BookmarksManager::deleteBookmarks);
+
+    // Set Clipboard
+    auto setClipboard = [this](ClipboardAction actionType) {
+        const QList<BookmarkItem*> items = ui->tree->selectedBookmarks();
+        if (items.isEmpty()) return;
+        QModelIndexList indexes;
+        for (BookmarkItem* item : items) {
+            indexes.append(m_bookmarks->model()->index(item));
+        }
+        QMimeData* data = m_bookmarks->model()->mimeData(indexes);
+        QApplication::clipboard()->setMimeData(data);
+        m_clipboardAction = actionType;
+    };
+
+    // Set clipboard with copy
+    connect(actCopy, &QAction::triggered, this, [setClipboard]() {setClipboard(ClipboardAction::Copy);});
+
+    // Set clipboard with cut
+    connect(actCut, &QAction::triggered, this, [setClipboard]() {setClipboard(ClipboardAction::Cut);});
+
+    // Paste logic
+    connect(actPaste, &QAction::triggered, this, [this]() {
+        const QMimeData* mime = QApplication::clipboard()->mimeData();
+        if (!mime || m_clipboardAction == ClipboardAction::None) return;
+
+        BookmarkItem* parent = m_bookmarks->unsortedFolder();
+        int row = parent->children().count();
+
+        QList<BookmarkItem*> selected = ui->tree->selectedBookmarks();
+        if (!selected.isEmpty()) {
+            BookmarkItem* target = selected.first();
+            if (target->isFolder()) {
+                parent = target;
+                row = 0;
+            } else {
+                parent = target->parent();
+                row = m_bookmarks->model()->index(target).row() + 1;
+            }
+        }
+
+        if (m_clipboardAction == ClipboardAction::Copy) {
+            m_bookmarks->model()->dropMimeData(mime, Qt::CopyAction, row, 0, m_bookmarks->model()->index(parent));
+        }
+        else if (m_clipboardAction == ClipboardAction::Cut) {
+            m_bookmarks->model()->dropMimeData(mime, Qt::MoveAction, row, 0, m_bookmarks->model()->index(parent));
+        }
+        QApplication::clipboard()->clear();
+        m_clipboardAction = ClipboardAction::None;
+    });
 
     bool canBeDeleted = false;
     const QList<BookmarkItem*> items = ui->tree->selectedBookmarks();
@@ -130,6 +185,20 @@ void BookmarksManager::createContextMenu(const QPoint &pos)
 
     if (!canBeDeleted) {
         actDelete->setDisabled(true);
+        actCut->setDisabled(true);
+    }
+
+    // Disable Cut/Copy when empty
+    if (items.isEmpty()) {
+        actCopy->setDisabled(true);
+        actCut->setDisabled(true);
+    }
+
+    // Disable paste if clipboard is empty
+    const QMimeData* clipboardData = QApplication::clipboard()->mimeData();
+    bool canPaste = clipboardData && clipboardData->hasFormat(QSL("application/falkon.bookmarks"));
+    if (!canPaste) {
+        actPaste->setDisabled(true);
     }
 
     if (!m_selectedBookmark || !m_selectedBookmark->isUrl()) {
