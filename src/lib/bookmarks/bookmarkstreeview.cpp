@@ -38,6 +38,7 @@ BookmarksTreeView::BookmarksTreeView(QWidget* parent)
     setAcceptDrops(true);
     setUniformRowHeights(true);
     setDropIndicatorShown(true);
+    setDefaultDropAction(Qt::DropAction::MoveAction);
     setAllColumnsShowFocus(true);
     setItemDelegate(new BookmarksItemDelegate(this));
     header()->resizeSections(QHeaderView::ResizeToContents);
