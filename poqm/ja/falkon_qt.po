@@ -1100,41 +1100,68 @@ msgstr ""
 "UTF-8でエンコードされていない Opera のブックマークファイルはサポートしていま"
 "せん！"
 
-#: lib/bookmarks/bookmarksmanager.cpp:105
+#: lib/bookmarks/bookmarksmanager.cpp:106
 msgctxt "BookmarksManager|"
 msgid "Open in new tab"
 msgstr "新しいタブで開く"
 
-#: lib/bookmarks/bookmarksmanager.cpp:106
+#: lib/bookmarks/bookmarksmanager.cpp:107
 msgctxt "BookmarksManager|"
 msgid "Open in new window"
 msgstr "新しいウィンドウで開く"
 
-#: lib/bookmarks/bookmarksmanager.cpp:107
+#: lib/bookmarks/bookmarksmanager.cpp:108
 msgctxt "BookmarksManager|"
 msgid "Open in new private window"
 msgstr "新しいプライベートウィンドウで開く"
 
-#: lib/bookmarks/bookmarksmanager.cpp:110
-#: lib/bookmarks/bookmarksmanager.cpp:177
+#: lib/bookmarks/bookmarksmanager.cpp:111
+#: lib/bookmarks/bookmarksmanager.cpp:246
 msgctxt "BookmarksManager|"
 msgid "New Bookmark"
 msgstr "新しいブックマーク"
 
-#: lib/bookmarks/bookmarksmanager.cpp:111
-#: lib/bookmarks/bookmarksmanager.cpp:185
+#: lib/bookmarks/bookmarksmanager.cpp:112
+#: lib/bookmarks/bookmarksmanager.cpp:254
 msgctxt "BookmarksManager|"
 msgid "New Folder"
 msgstr "新しいフォルダ"
 
-#: lib/bookmarks/bookmarksmanager.cpp:112
+#: lib/bookmarks/bookmarksmanager.cpp:113
 msgctxt "BookmarksManager|"
 msgid "New Separator"
 msgstr "新しいセパレータ"
 
-#: lib/bookmarks/bookmarksmanager.cpp:114
+#: lib/bookmarks/bookmarksmanager.cpp:117
+#, fuzzy
+#| msgctxt "LineEdit|"
+#| msgid "Cu&t"
 msgctxt "BookmarksManager|"
-msgid "Delete"
+msgid "Cu&t"
+msgstr "切り取り(&T)"
+
+#: lib/bookmarks/bookmarksmanager.cpp:118
+#, fuzzy
+#| msgctxt "LineEdit|"
+#| msgid "&Copy"
+msgctxt "BookmarksManager|"
+msgid "&Copy"
+msgstr "コピー(&C)"
+
+#: lib/bookmarks/bookmarksmanager.cpp:119
+#, fuzzy
+#| msgctxt "LineEdit|"
+#| msgid "&Paste"
+msgctxt "BookmarksManager|"
+msgid "&Paste"
+msgstr "貼り付け(&P)"
+
+#: lib/bookmarks/bookmarksmanager.cpp:121
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "BookmarksManager|"
+msgid "&Remove"
 msgstr "削除"
 
 #: lib/bookmarks/bookmarksmanager.ui:14
@@ -6901,6 +6928,10 @@ msgstr "要素の調査"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr ""
+
+#~ msgctxt "BookmarksManager|"
+#~ msgid "Delete"
+#~ msgstr "削除"
 
 #~ msgctxt "MainApplication|"
 #~ msgid "Open new tab"

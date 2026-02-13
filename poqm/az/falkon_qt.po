@@ -1064,41 +1064,68 @@ msgctxt "BookmarksImporter|"
 msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
 msgstr "Yalnız UTF-8 şifrəli Opera əlfəcinlər faylı dəstəklənir!"
 
-#: lib/bookmarks/bookmarksmanager.cpp:105
+#: lib/bookmarks/bookmarksmanager.cpp:106
 msgctxt "BookmarksManager|"
 msgid "Open in new tab"
 msgstr "Yeni vərəqdə açmaq"
 
-#: lib/bookmarks/bookmarksmanager.cpp:106
+#: lib/bookmarks/bookmarksmanager.cpp:107
 msgctxt "BookmarksManager|"
 msgid "Open in new window"
 msgstr "Yeni pəncərədə açmaq"
 
-#: lib/bookmarks/bookmarksmanager.cpp:107
+#: lib/bookmarks/bookmarksmanager.cpp:108
 msgctxt "BookmarksManager|"
 msgid "Open in new private window"
 msgstr "Yeni məxfi pəncərədə açmaq"
 
-#: lib/bookmarks/bookmarksmanager.cpp:110
-#: lib/bookmarks/bookmarksmanager.cpp:177
+#: lib/bookmarks/bookmarksmanager.cpp:111
+#: lib/bookmarks/bookmarksmanager.cpp:246
 msgctxt "BookmarksManager|"
 msgid "New Bookmark"
 msgstr "Yeni Əlfəcin"
 
-#: lib/bookmarks/bookmarksmanager.cpp:111
-#: lib/bookmarks/bookmarksmanager.cpp:185
+#: lib/bookmarks/bookmarksmanager.cpp:112
+#: lib/bookmarks/bookmarksmanager.cpp:254
 msgctxt "BookmarksManager|"
 msgid "New Folder"
 msgstr "Yeni Qovluq"
 
-#: lib/bookmarks/bookmarksmanager.cpp:112
+#: lib/bookmarks/bookmarksmanager.cpp:113
 msgctxt "BookmarksManager|"
 msgid "New Separator"
 msgstr "Yeni Ayırıcı"
 
-#: lib/bookmarks/bookmarksmanager.cpp:114
+#: lib/bookmarks/bookmarksmanager.cpp:117
+#, fuzzy
+#| msgctxt "LineEdit|"
+#| msgid "Cu&t"
 msgctxt "BookmarksManager|"
-msgid "Delete"
+msgid "Cu&t"
+msgstr "Kə&s"
+
+#: lib/bookmarks/bookmarksmanager.cpp:118
+#, fuzzy
+#| msgctxt "LineEdit|"
+#| msgid "&Copy"
+msgctxt "BookmarksManager|"
+msgid "&Copy"
+msgstr "&Kopyalamaq"
+
+#: lib/bookmarks/bookmarksmanager.cpp:119
+#, fuzzy
+#| msgctxt "LineEdit|"
+#| msgid "&Paste"
+msgctxt "BookmarksManager|"
+msgid "&Paste"
+msgstr "&Yerləşdirmək"
+
+#: lib/bookmarks/bookmarksmanager.cpp:121
+#, fuzzy
+#| msgctxt "CookieManager|"
+#| msgid "Remove"
+msgctxt "BookmarksManager|"
+msgid "&Remove"
 msgstr "Silmək"
 
 #: lib/bookmarks/bookmarksmanager.ui:14
@@ -6395,6 +6422,10 @@ msgstr "Elementi Yoxlayın"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "BookmarksManager|"
+#~ msgid "Delete"
+#~ msgstr "Silmək"
 
 #~ msgctxt "MainApplication|"
 #~ msgid "Open new tab"
