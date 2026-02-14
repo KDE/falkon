@@ -8,12 +8,12 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2019, 2020.
 # Geraldo Simiao <geraldosimiao@fedoraproject.org>, 2023.
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"PO-Revision-Date: 2025-10-26 06:57-0300\n"
+"PO-Revision-Date: 2026-02-13 09:11-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: pt_BR\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -1105,36 +1105,24 @@ msgid "New Separator"
 msgstr "Novo separador"
 
 #: lib/bookmarks/bookmarksmanager.cpp:117
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "Cu&t"
 msgctxt "BookmarksManager|"
 msgid "Cu&t"
-msgstr "Recortar"
+msgstr "Recor&tar"
 
 #: lib/bookmarks/bookmarksmanager.cpp:118
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "&Copy"
 msgctxt "BookmarksManager|"
 msgid "&Copy"
 msgstr "&Copiar"
 
 #: lib/bookmarks/bookmarksmanager.cpp:119
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "&Paste"
 msgctxt "BookmarksManager|"
 msgid "&Paste"
-msgstr "&Colar"
+msgstr "Co&lar"
 
 #: lib/bookmarks/bookmarksmanager.cpp:121
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "BookmarksManager|"
 msgid "&Remove"
-msgstr "Remover"
+msgstr "&Remover"
 
 #: lib/bookmarks/bookmarksmanager.ui:14
 msgctxt "BookmarksManager|"
