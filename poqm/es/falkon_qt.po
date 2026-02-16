@@ -1,18 +1,18 @@
 # Spanish translations for falkon_qt.po package.
-# Copyright (C) 2017-2025 This file is copyright:
+# Copyright (C) 2017-2026 This file is copyright:
 # This file is distributed under the same license as the falkon package.
 #
 # SPDX-FileCopyrightText: 2017 Jaime Muñoz Martín <jmmartin_5@outlook.com>
 # SPDX-FileCopyrightText: 2017 Javier Llorente <javier@opensuse.org>
 # SPDX-FileCopyrightText: 2018, 2019 Javier Vinal <fjvinal@gmail.com>
 # SPDX-FileCopyrightText: 2020, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_qt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-29 01:02+0100\n"
-"PO-Revision-Date: 2025-10-30 12:10+0100\n"
+"PO-Revision-Date: 2026-02-15 11:21+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1109,36 +1109,24 @@ msgid "New Separator"
 msgstr "Nuevo separador"
 
 #: lib/bookmarks/bookmarksmanager.cpp:117
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "Cu&t"
 msgctxt "BookmarksManager|"
 msgid "Cu&t"
 msgstr "Cor&tar"
 
 #: lib/bookmarks/bookmarksmanager.cpp:118
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "&Copy"
 msgctxt "BookmarksManager|"
 msgid "&Copy"
 msgstr "&Copiar"
 
 #: lib/bookmarks/bookmarksmanager.cpp:119
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "&Paste"
 msgctxt "BookmarksManager|"
 msgid "&Paste"
 msgstr "&Pegar"
 
 #: lib/bookmarks/bookmarksmanager.cpp:121
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "BookmarksManager|"
 msgid "&Remove"
-msgstr "Eliminar"
+msgstr "Elimina&r"
 
 #: lib/bookmarks/bookmarksmanager.ui:14
 msgctxt "BookmarksManager|"
@@ -6426,7 +6414,3 @@ msgstr "Inspeccionar elemento"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "BookmarksManager|"
-#~ msgid "Delete"
-#~ msgstr "Eliminar"
