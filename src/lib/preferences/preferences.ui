@@ -1013,7 +1013,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QWidget" name="adressProgressSettings" native="true">
+                <widget class="QWidget" name="addressProgressSettings" native="true">
                  <layout class="QHBoxLayout" name="horizontalLayout_18">
                   <property name="topMargin">
                    <number>0</number>
@@ -3128,7 +3128,7 @@
   <connection>
    <sender>showLoadingInAddressBar</sender>
    <signal>toggled(bool)</signal>
-   <receiver>adressProgressSettings</receiver>
+   <receiver>addressProgressSettings</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">

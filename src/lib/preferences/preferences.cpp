@@ -277,7 +277,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->completionPopupExpandToWindow->setChecked(settings.value(QSL("CompletionPopupExpandToWindow"), false).toBool());
     bool showPBinAB = settings.value(QSL("ShowLoadingProgress"), false).toBool();
     ui->showLoadingInAddressBar->setChecked(showPBinAB);
-    ui->adressProgressSettings->setEnabled(showPBinAB);
+    ui->addressProgressSettings->setEnabled(showPBinAB);
     ui->progressStyleSelector->setCurrentIndex(settings.value(QSL("ProgressStyle"), 0).toInt());
     bool pbInABuseCC = settings.value(QSL("UseCustomProgressColor"), false).toBool();
     ui->checkBoxCustomProgressColor->setChecked(pbInABuseCC);
