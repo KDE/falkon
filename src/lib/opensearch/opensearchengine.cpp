@@ -672,7 +672,7 @@ void OpenSearchEngine::setNetworkAccessManager(QNetworkAccessManager* networkAcc
     \property delegate
     \brief the delegate that is used to perform specific tasks.
 
-    It can be currently supplied to provide a custom behaviour ofthe requetSearchResults() method.
+    It can be currently supplied to provide a custom behaviour ofthe requestSearchResults() method.
     The default implementation does nothing.
 */
 OpenSearchEngineDelegate* OpenSearchEngine::delegate() const

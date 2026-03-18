@@ -70,7 +70,7 @@ private Q_SLOTS:
 private:
     LoadRequest createLoadRequest(const QModelIndex &index);
     void switchToTab(BrowserWindow* window, int tab);
-    void loadRequest(const LoadRequest &reqeust);
+    void loadRequest(const LoadRequest &request);
     void openSearchEnginesDialog();
 
     void showPopup();
