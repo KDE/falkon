@@ -423,7 +423,6 @@ void MainApplication::setChromiumFlags()
 #if QTWEBENGINECORE_VERSION < QT_VERSION_CHECK(6, 9, 0)
         chromium_flags.append(" --use-gl=desktop");
 #endif
-        qputenv("QTWEBENGINE_CHROMIUM_FLAGS", chromium_flags);
     }
 
     int prefferColorScheme = Settings::globalSettings()->value("Web-Browser-Settings/prefferColorScheme", Qz::ColorScheme_Auto).toInt();
