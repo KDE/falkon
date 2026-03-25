@@ -5,18 +5,19 @@
 # SPDX-FileCopyrightText: 2018, 2020, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2018, 2019, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2025, 2026 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_qt\n"
-"PO-Revision-Date: 2024-12-28 22:52+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2026-03-22 14:31+0100\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
@@ -170,12 +171,9 @@ msgid "AdBlock is active"
 msgstr "AdBlock ist aktiv"
 
 #: lib/adblock/adblockicon.cpp:146
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "Enable AdBlock"
 msgctxt "AdBlockIcon|"
 msgid "&Enable AdBlock"
-msgstr "AdBlock aktivieren"
+msgstr "&AdBlock aktivieren"
 
 #: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
@@ -228,7 +226,7 @@ msgstr "Benutzerdefinierte Regeln"
 #, qt-format
 msgctxt "AdBlockTreeModel|"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: lib/adblock/adblocktreewidget.cpp:88
 msgctxt "AdBlockTreeWidget|"
@@ -358,7 +356,7 @@ msgctxt "BrowserWindow|"
 msgid "There are still open tabs"
 msgstr "Es sind noch Unterfenster geöffnet"
 
-#: lib/app/mainapplication.cpp:1158
+#: lib/app/mainapplication.cpp:1157
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
@@ -367,17 +365,17 @@ msgstr ""
 "Falkon ist aktuell nicht als Standard-Browser festgelegt. Möchten Sie Falkon "
 "als Standard-Browser einstellen?"
 
-#: lib/app/mainapplication.cpp:1159
+#: lib/app/mainapplication.cpp:1158
 msgctxt "MainApplication|"
 msgid "Always perform this check when starting Falkon."
 msgstr "Diese Überprüfung immer beim Start von Falkon durchführen."
 
-#: lib/app/mainapplication.cpp:1161
+#: lib/app/mainapplication.cpp:1160
 msgctxt "MainApplication|"
 msgid "Default Browser"
 msgstr "Standard-Browser"
 
-#: lib/app/mainapplication.cpp:1296
+#: lib/app/mainapplication.cpp:1295
 msgctxt "MainApplication|"
 msgid ""
 "Falkon is a new and very fast Qt web browser. Falkon is licensed under GPL "
@@ -1108,36 +1106,24 @@ msgid "New Separator"
 msgstr "Neues Trennzeichen"
 
 #: lib/bookmarks/bookmarksmanager.cpp:117
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "Cu&t"
 msgctxt "BookmarksManager|"
 msgid "Cu&t"
 msgstr "&Ausschneiden"
 
 #: lib/bookmarks/bookmarksmanager.cpp:118
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "&Copy"
 msgctxt "BookmarksManager|"
 msgid "&Copy"
 msgstr "&Kopieren"
 
 #: lib/bookmarks/bookmarksmanager.cpp:119
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "&Paste"
 msgctxt "BookmarksManager|"
 msgid "&Paste"
 msgstr "E&infügen"
 
 #: lib/bookmarks/bookmarksmanager.cpp:121
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "BookmarksManager|"
 msgid "&Remove"
-msgstr "Entfernen"
+msgstr "Ent&fernen"
 
 #: lib/bookmarks/bookmarksmanager.ui:14
 msgctxt "BookmarksManager|"
@@ -2280,17 +2266,14 @@ msgid "SSL Certificate Error!"
 msgstr "SSL-Zertifikatsfehler"
 
 #: lib/network/networkmanager.cpp:92
-#, fuzzy, qt-format
-#| msgctxt "NetworkManager|"
-#| msgid ""
-#| "The page you are trying to access has the following errors in the SSL "
-#| "certificate:"
+#, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
 msgstr ""
-"Beim Laden dieser Seite sind folgende SSL-Zertifikatsfehler aufgetreten:"
+"Beim Laden der Seite <strong>%1</strong> sind folgende SSL-Zertifikatsfehler "
+"aufgetreten:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -2844,12 +2827,9 @@ msgid "SSL Certificate Error!"
 msgstr "SSL-Zertifikatsfehler"
 
 #: lib/network/sslerrordialog.ui:90
-#, fuzzy
-#| msgctxt "NetworkManager|"
-#| msgid "The certificate contains errors."
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr "Das Zertifikat ist fehlerhaft."
+msgstr "Zertifikatsdetails ein-/ausblenden"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -3543,7 +3523,7 @@ msgstr "JavaScript aktivieren"
 #: lib/other/sitesettingsmanager.cpp:367
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "JavaScript: PopUp-Fenster öffnen"
+msgstr "JavaScript: Pop-up-Fenster öffnen"
 
 #: lib/other/sitesettingsmanager.cpp:369
 msgctxt "SiteSettingsManager|"
@@ -3925,26 +3905,17 @@ msgid "Exceptions"
 msgstr "Ausnahmen"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add allowed scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add allowed scheme"
 msgstr "Erlaubtes Schema hinzufügen"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Scheme:"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Scheme:"
 msgstr "Schema:"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Add blocked scheme"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add blocked scheme"
 msgstr "Blockiertes Schema hinzufügen"
@@ -3952,7 +3923,7 @@ msgstr "Blockiertes Schema hinzufügen"
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr ""
+msgstr "Automatisch geöffnete Protokolle"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
 msgctxt "AutoOpenProtocolsDialog|"
@@ -3960,21 +3931,17 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Automatisch öffnen</"
+"span></p></body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "Hinzufügen"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
 msgstr "Entfernen"
@@ -3985,6 +3952,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Blockiert</span></"
+"p></body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -4041,7 +4010,7 @@ msgstr "JavaScript diese Modifikationen erlauben:"
 #: lib/preferences/jsoptions.ui:29
 msgctxt "JsOptions|"
 msgid "Open popup windows"
-msgstr "PopUp-Fenster öffnen"
+msgstr "Pop-up-Fenster öffnen"
 
 #: lib/preferences/jsoptions.ui:36
 msgctxt "JsOptions|"
@@ -4406,7 +4375,7 @@ msgstr "Lesezeichenleiste nach Programmstart anzeigen"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Standardmäßige minimale Seitenleistenbreite:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4426,7 +4395,7 @@ msgstr "Sofort-Lesezeichen-Werkzeugleiste einblenden"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: lib/preferences/preferences.ui:579
 msgctxt "Preferences|"
@@ -4434,6 +4403,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Webseiten-"
+"Hintergrundfarben</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:604 lib/preferences/preferences.ui:618
 #: lib/preferences/preferences.ui:1081 lib/preferences/preferences.ui:1442
@@ -4452,17 +4423,17 @@ msgstr "Zurücksetzen"
 #: lib/preferences/preferences.ui:632
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "Hintergrundfarbe wenn geladen:"
 
 #: lib/preferences/preferences.ui:639
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "Hintergrundfarbe während des Ladens:"
 
 #: lib/preferences/preferences.ui:646
 msgctxt "Preferences|miliseconds"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: lib/preferences/preferences.ui:659
 msgctxt ""
@@ -4470,7 +4441,7 @@ msgctxt ""
 "page was initially loaded before switching the backgroung color to the "
 "loaded variant."
 msgid "Loaded state switch delay:"
-msgstr ""
+msgstr "Verzögerung zum Umschalten nach dem Laden:"
 
 #: lib/preferences/preferences.ui:668
 msgctxt "Preferences|"
@@ -4508,12 +4479,12 @@ msgstr "Neue leere Unterfenster nach dem aktiven Unterfenster öffnen"
 #: lib/preferences/preferences.ui:750
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
-msgstr "PopUp-Fenster in Unterfenster öffnen"
+msgstr "Pop-up-Fenster in Unterfenstern öffnen"
 
 #: lib/preferences/preferences.ui:757
 msgctxt "Preferences|"
 msgid "Block automatic popups"
-msgstr ""
+msgstr "Automatische Pop-ups blockieren"
 
 #: lib/preferences/preferences.ui:764
 msgctxt "Preferences|"
@@ -4648,7 +4619,7 @@ msgstr "Suchvorschläge anzeigen"
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr ""
-"Breite des PopUp-Fensters für Suchvorschläge auf Fensterbreite erweitern"
+"Breite des Pop-up-Fensters für Suchvorschläge auf Fensterbreite erweitern"
 
 #: lib/preferences/preferences.ui:1011
 msgctxt "Preferences|"
@@ -4764,7 +4735,7 @@ msgstr "Dunklen Modus erzwingen"
 #: lib/preferences/preferences.ui:1252
 msgctxt "Preferences|"
 msgid "Allow image animation"
-msgstr ""
+msgstr "Animierte Bilder erlauben"
 
 #: lib/preferences/preferences.ui:1261
 msgctxt "Preferences|"
@@ -5193,6 +5164,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Automatisch "
+"geöffnete Protokolle verwalten</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2709
 msgctxt "Preferences|"
@@ -5262,7 +5235,7 @@ msgstr "<b>Zertifikatsverwaltung</b>"
 #: lib/preferences/preferences.ui:3039
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr ""
+msgstr "Automatisch geöffnete Protokolle"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
@@ -5980,12 +5953,9 @@ msgid "Expires On:"
 msgstr "Verfällt am:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Fenster schließen"
+msgstr "Seitenleiste &schließen"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
@@ -6056,9 +6026,6 @@ msgid "Deny"
 msgstr "Abweisen"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
 msgstr "Farbe auswählen"
