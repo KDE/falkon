@@ -170,9 +170,17 @@ public:
         : name(name)
     {
         QFile file(name);
-        file.open(QFile::WriteOnly);
-        file.write(QByteArrayLiteral("falkon-test"));
-        file.close();
+
+        if (file.open(QFile::WriteOnly)) {
+            if (file.write(QByteArrayLiteral("falkon-test")) == -1) {
+                qWarning() << "Unable to write to a file '" << file.fileName() << "'.";
+            }
+            file.close();
+        }
+        else {
+            qWarning() << "Unable to create a file '" << file.fileName() << "'.";
+        }
+
     }
 
     ~TempFile()
@@ -286,9 +294,15 @@ static void createTestDirectoryStructure(const QString &path)
     dir.cd(QSL("dir3"));
     dir.mkdir(QSL("dir3_1"));
     QFile file(path + QSL("/dir1/dir1_2/file1.txt"));
-    file.open(QFile::WriteOnly);
-    file.write("test");
-    file.close();
+    if (file.open(QFile::WriteOnly)) {
+        if (file.write("test") == -1) {
+            qWarning() << "Unable to write to a file '" << file.fileName() << "'.";
+        }
+        file.close();
+    }
+    else {
+        qWarning() << "Unable to create a file '" << file.fileName() << "'.";
+    }
 }
 
 void QzToolsTest::copyRecursivelyTest()
@@ -312,9 +326,13 @@ void QzToolsTest::copyRecursivelyTest()
     QCOMPARE(QFileInfo(testDir + QSL("-copy/dir1/dir1_2/file1.txt")).isFile(), true);
 
     QFile file(testDir + QSL("-copy/dir1/dir1_2/file1.txt"));
-    file.open(QFile::ReadOnly);
-    QCOMPARE(file.readAll(), QByteArray("test"));
-    file.close();
+    if (file.open(QFile::ReadOnly)) {
+        QCOMPARE(file.readAll(), QByteArray("test"));
+        file.close();
+    }
+    else {
+        QFAIL(QSL("Unable to open file '%0'").arg(file.fileName()).toStdString().data());
+    }
 
     // Copy to target that already exists
     QCOMPARE(QzTools::copyRecursively(testDir, testDir + QSL("-copy")), false);

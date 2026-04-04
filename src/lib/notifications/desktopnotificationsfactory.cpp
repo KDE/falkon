@@ -86,9 +86,14 @@ void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QS
         break;
     case DesktopNative:
 #if defined(Q_OS_UNIX) && !defined(DISABLE_DBUS)
+        QString iconFileName = QSL();
         QFile tmp(DataPaths::path(DataPaths::Temp) + QLatin1String("/falkon_notif.png"));
-        tmp.open(QFile::WriteOnly);
-        icon.save(tmp.fileName());
+        if (tmp.open(QFile::WriteOnly)) {
+            if (icon.save(tmp.fileName())) {
+                iconFileName = tmp.fileName();
+            }
+            tmp.close();
+        }
 
         const QVariantMap hints {
             {QStringLiteral("desktop-entry"), QGuiApplication::desktopFileName()}
@@ -98,7 +103,7 @@ void DesktopNotificationsFactory::showNotification(const QPixmap &icon, const QS
         QVariantList args;
         args.append(QLatin1String("Falkon"));
         args.append(m_uint);
-        args.append(tmp.fileName());
+        args.append(iconFileName);
         args.append(heading);
         args.append(text);
         args.append(QStringList());

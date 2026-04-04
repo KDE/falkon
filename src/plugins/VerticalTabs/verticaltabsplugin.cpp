@@ -208,9 +208,14 @@ void VerticalTabsPlugin::loadStyleSheet(const QString &theme)
     if (!file.open(QFile::ReadOnly)) {
         qWarning() << "Failed to open stylesheet file" << theme;
         file.setFileName(QSL(":verticaltabs/data/themes/default.css"));
-        file.open(QFile::ReadOnly);
+        if (!file.open(QFile::ReadOnly)) {
+            qWarning() << "Failed to open stylesheet file '" << file.fileName() << "'";
+            return;
+        }
     }
 
     m_styleSheet = QString::fromUtf8(file.readAll());
+    file.close();
+
     Q_EMIT styleSheetChanged(m_styleSheet);
 }
