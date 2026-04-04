@@ -137,15 +137,24 @@ void GM_Settings::newScript()
     const QString fileName = QSL("%1/%2.user.js").arg(m_manager->scriptsDirectory(), QzTools::filterCharsFromFilename(name));
 
     QFile file(QzTools::ensureUniqueFilename(fileName));
-    file.open(QFile::WriteOnly);
-    file.write(script.arg(name).toUtf8());
-    file.close();
+    if (file.open(QFile::WriteOnly)) {
+        if (file.write(script.arg(name).toUtf8()) != -1) {
+            file.close();
 
-    auto *gmScript = new GM_Script(m_manager, file.fileName());
-    m_manager->addScript(gmScript);
+            auto *gmScript = new GM_Script(m_manager, file.fileName());
+            m_manager->addScript(gmScript);
 
-    auto* dialog = new GM_SettingsScriptInfo(gmScript, this);
-    dialog->open();
+            auto* dialog = new GM_SettingsScriptInfo(gmScript, this);
+            dialog->open();
+        }
+        else {
+            qWarning() << "GreaseMonkey: Unable to write to a newly created UserScript file '" << file.fileName() << "'.";
+        }
+        file.close();
+    }
+    else {
+        qWarning() << "GreaseMonkey: Unable to create a UserScript file '" << file.fileName() << "'.";
+    }
 }
 
 void GM_Settings::loadScripts()

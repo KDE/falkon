@@ -19,6 +19,7 @@
 #define PROFILEMANAGER_H
 
 #include <QString>
+#include <QDir>
 
 #include "qzcommon.h"
 
@@ -53,6 +54,7 @@ private:
     void copyDataToProfile();
     void migrateFromQupZilla();
     void updateDatabase();
+    static void writeVersion(const QDir directory);
 
     void connectDatabase();
 

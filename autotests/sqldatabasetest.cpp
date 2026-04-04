@@ -40,7 +40,9 @@ static bool waitForFinished(SqlQueryJob *job)
 void SqlDatabaseTest::sqlQueryJobTest()
 {
     QTemporaryFile file;
-    file.open();
+    if (!file.open()) {
+        QFAIL("Unable to create a temporary file.");
+    }
 
     QSqlDatabase db = QSqlDatabase::addDatabase(QSL("QSQLITE"));
     db.setDatabaseName(file.fileName());

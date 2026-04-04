@@ -502,7 +502,10 @@ QIcon QzTools::iconFromFileName(const QString &fileName)
 
     QFileIconProvider iconProvider;
     QTemporaryFile tempFile(DataPaths::path(DataPaths::Temp) + QSL("/XXXXXX.") + tempInfo.suffix());
-    tempFile.open();
+    if (!tempFile.open()) {
+        qWarning() << "QzTools::iconFromFileName: Unable to create a temporary file '" << tempFile.fileName() << "'.";
+        return QIcon();
+    }
     tempInfo.setFile(tempFile.fileName());
 
     QIcon icon(iconProvider.icon(tempInfo));
