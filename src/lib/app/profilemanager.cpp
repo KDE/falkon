@@ -24,7 +24,6 @@
 #include "sitesettingsmanager.h"
 #include "settings.h"
 
-#include <QDir>
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlDatabase>
@@ -71,10 +70,7 @@ void ProfileManager::initConfigDir()
     QFile(QStringLiteral(":data/bookmarks.json")).copy(dir.filePath(QStringLiteral("bookmarks.json")));
     QFile(dir.filePath(QStringLiteral("bookmarks.json"))).setPermissions(QFile::ReadUser | QFile::WriteUser);
 
-    QFile versionFile(dir.filePath(QStringLiteral("version")));
-    versionFile.open(QFile::WriteOnly);
-    versionFile.write(Qz::VERSION);
-    versionFile.close();
+    writeVersion(dir);
 }
 
 void ProfileManager::initCurrentProfile(const QString &profileName)
@@ -108,10 +104,7 @@ int ProfileManager::createProfile(const QString &profileName)
 
     dir.cd(profileName);
 
-    QFile versionFile(dir.filePath(QStringLiteral("version")));
-    versionFile.open(QFile::WriteOnly);
-    versionFile.write(Qz::VERSION);
-    versionFile.close();
+    writeVersion(dir);
 
     return 0;
 }
@@ -156,6 +149,20 @@ QStringList ProfileManager::availableProfiles()
     return dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
 }
 
+void ProfileManager::writeVersion(const QDir directory)
+{
+    QFile versionFile(directory.filePath(QStringLiteral("version")));
+    if (versionFile.open(QFile::WriteOnly)) {
+        if (versionFile.write(Qz::VERSION) == -1) {
+            qWarning() << "ProfileManager: Unable to write version to a version file.";
+        }
+        versionFile.close();
+    }
+    else {
+        qWarning() << "ProfileManager: Unable to create a version file.";
+    }
+}
+
 void ProfileManager::updateCurrentProfile()
 {
     QDir profileDir(DataPaths::currentProfilePath());
@@ -169,9 +176,13 @@ void ProfileManager::updateCurrentProfile()
 
     // If file exists, just update the profile to current version
     if (versionFile.exists()) {
-        versionFile.open(QFile::ReadOnly);
-        profileVersion = QString::fromUtf8(versionFile.readAll()).trimmed();
-        versionFile.close();
+        if (versionFile.open(QFile::ReadOnly)) {
+            profileVersion = QString::fromUtf8(versionFile.readAll()).trimmed();
+            versionFile.close();
+        }
+        else {
+            profileVersion = QL1S();
+        }
 
         updateProfile(QString::fromLatin1(Qz::VERSION), profileVersion);
     }
@@ -179,9 +190,7 @@ void ProfileManager::updateCurrentProfile()
         copyDataToProfile();
     }
 
-    versionFile.open(QFile::WriteOnly);
-    versionFile.write(Qz::VERSION);
-    versionFile.close();
+    writeVersion(profileDir);
 }
 
 void ProfileManager::updateProfile(const QString &current, const QString &profile)
@@ -198,6 +207,12 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
         if (prof.revisionNumber != 99) {
             copyDataToProfile();
         }
+        return;
+    }
+
+    /* Unable to read the profile version file */
+    if (prof == Updater::Version(QL1S())) {
+        qCritical() << "ProfileManager: Invalid version '" << qPrintable(profile) << "' in profile version file.";
         return;
     }
 
@@ -365,6 +380,12 @@ void ProfileManager::updateDatabase()
     /* Profile is from newer version than running application */
     if (prof > Updater::Version(QString::fromLatin1(Qz::VERSION))) {
         // Ignore
+        return;
+    }
+
+    /* Unable to read the profile version file */
+    if (prof == Updater::Version(QL1S())) {
+        qCritical() << "ProfileManager: Invalid version '" << qPrintable(profileVersion) << "' in profile version file.";
         return;
     }
 
