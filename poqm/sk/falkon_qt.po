@@ -17,9 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.08.3\n"
 "X-Language: sk_SK\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.08.3\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -172,12 +172,9 @@ msgid "AdBlock is active"
 msgstr "AdBlock je aktívny"
 
 #: lib/adblock/adblockicon.cpp:146
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "Enable AdBlock"
 msgctxt "AdBlockIcon|"
 msgid "&Enable AdBlock"
-msgstr "Povoliť AdBlock"
+msgstr "&Povoliť AdBlock"
 
 #: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
@@ -230,7 +227,7 @@ msgstr "Vlastné pravidlá"
 #, qt-format
 msgctxt "AdBlockTreeModel|"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: lib/adblock/adblocktreewidget.cpp:88
 msgctxt "AdBlockTreeWidget|"
@@ -1107,36 +1104,24 @@ msgid "New Separator"
 msgstr "Nový oddeľovač"
 
 #: lib/bookmarks/bookmarksmanager.cpp:117
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "Cu&t"
 msgctxt "BookmarksManager|"
 msgid "Cu&t"
 msgstr "Vys&trihnúť"
 
 #: lib/bookmarks/bookmarksmanager.cpp:118
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "&Copy"
 msgctxt "BookmarksManager|"
 msgid "&Copy"
 msgstr "&Kopírovať"
 
 #: lib/bookmarks/bookmarksmanager.cpp:119
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "&Paste"
 msgctxt "BookmarksManager|"
 msgid "&Paste"
 msgstr "&Prilepiť"
 
 #: lib/bookmarks/bookmarksmanager.cpp:121
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "BookmarksManager|"
 msgid "&Remove"
-msgstr "Odstrániť"
+msgstr "&Odstrániť"
 
 #: lib/bookmarks/bookmarksmanager.ui:14
 msgctxt "BookmarksManager|"
@@ -1622,28 +1607,22 @@ msgid "Unknown speed"
 msgstr "Rýchslosť neznáma"
 
 #: lib/downloads/downloaditem.cpp:226
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "kB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
-msgstr "kB/s"
+msgstr "%1 kB/s"
 
 #: lib/downloads/downloaditem.cpp:231
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "MB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
-msgstr "MB/s"
+msgstr "%1 MB/s"
 
 #: lib/downloads/downloaditem.cpp:235
-#, fuzzy, qt-format
-#| msgctxt "DownloadItem|"
-#| msgid "GB/s"
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
-msgstr "GB/s"
+msgstr "%1 GB/s"
 
 #: lib/downloads/downloaditem.cpp:263
 msgctxt "DownloadItem|"
@@ -2269,13 +2248,13 @@ msgstr "Vyhľadávať pri zmene vyhľadávača"
 #: lib/navigation/zoomlabel.cpp:36
 msgctxt "ZoomLabel|"
 msgid "Reset zoom level"
-msgstr ""
+msgstr "Obnoviť úroveň priblíženia"
 
 #: lib/navigation/zoomlabel.cpp:61
 #, qt-format
 msgctxt "ZoomLabel|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/network/networkmanager.cpp:91
 msgctxt "NetworkManager|"
@@ -2283,18 +2262,14 @@ msgid "SSL Certificate Error!"
 msgstr "Chyba SSL certifikátu!"
 
 #: lib/network/networkmanager.cpp:92
-#, fuzzy, qt-format
-#| msgctxt "NetworkManager|"
-#| msgid ""
-#| "The page you are trying to access has the following errors in the SSL "
-#| "certificate:"
+#, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
 msgstr ""
-"Stránka, ktorú sa snažíte zobraziť obsahuje nasledujúce chyby v SSL "
-"certifikáte:"
+"Stránka <strong>%1</strong>, ktorú sa pokúšate zobraziť, obsahuje "
+"nasledujúce chyby v SSL certifikáte:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -2345,73 +2320,75 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Certifikát sa nezhodoval so vstavanými verejnými kľúčmi pripnutými pre názov "
+"hostiteľa."
 
 #: lib/network/networkmanager.cpp:347
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Bežný názov certifikátu sa nezhodoval s názvom hostiteľa."
 
 #: lib/network/networkmanager.cpp:349
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Certifikát nie je platný v aktuálnom dátume a čase."
 
 #: lib/network/networkmanager.cpp:351
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "Certifikát nie je podpísaný dôveryhodnou autoritou."
 
 #: lib/network/networkmanager.cpp:353
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Certifikát obsahuje chyby."
 
 #: lib/network/networkmanager.cpp:355
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate has no mechanism for determining if it has been revoked."
-msgstr ""
+msgstr "Certifikát nemá mechanizmus na určenie, či bol zrušený."
 
 #: lib/network/networkmanager.cpp:357
 msgctxt "NetworkManager|"
 msgid "Revocation information for the certificate is not available."
-msgstr ""
+msgstr "Informácie o zrušení certifikátu nie sú dostupné."
 
 #: lib/network/networkmanager.cpp:359
 msgctxt "NetworkManager|"
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "Certifikát bol zrušený."
 
 #: lib/network/networkmanager.cpp:361
 msgctxt "NetworkManager|"
 msgid "The certificate is invalid."
-msgstr ""
+msgstr "Certifikát je neplatný."
 
 #: lib/network/networkmanager.cpp:363
 msgctxt "NetworkManager|"
 msgid "The certificate is signed using a weak signature algorithm."
-msgstr ""
+msgstr "Certifikát je podpísaný pomocou slabého podpisového algoritmu."
 
 #: lib/network/networkmanager.cpp:365
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr ""
+msgstr "Názov hostiteľa uvedený v certifikáte nie je jedinečný."
 
 #: lib/network/networkmanager.cpp:367
 msgctxt "NetworkManager|"
 msgid "The certificate contains a weak key."
-msgstr ""
+msgstr "Certifikát obsahuje slabý kľúč."
 
 #: lib/network/networkmanager.cpp:369
 msgctxt "NetworkManager|"
 msgid ""
 "The certificate claimed DNS names that are in violation of name constraints."
-msgstr ""
+msgstr "Certifikát obsahuje DNS názvy, ktoré porušujú obmedzenia názvov."
 
 #: lib/network/networkmanager.cpp:371
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr ""
+msgstr "Certifikát má príliš dlhú dobu platnosti."
 
 #: lib/network/networkmanager.cpp:373
 msgctxt "NetworkManager|"
@@ -2419,6 +2396,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
+"Pre toto pripojenie bola vyžadovaná transparentnosť certifikátov, ale server "
+"neposkytol informácie CT, ktoré by spĺňali pravidlá."
 
 #: lib/network/networkmanager.cpp:375
 msgctxt "NetworkManager|"
@@ -2426,24 +2405,23 @@ msgid ""
 "The certificate is known to be used for interception by an entity other the "
 "device owner."
 msgstr ""
+"Je známe, že certifikát sa používa na odpočúvanie inou entitou ako "
+"vlastníkom zariadenia."
 
 #: lib/network/networkmanager.cpp:377
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr ""
+msgstr "Pripojenie používa zastaranú verziu SSL/TLS"
 
 #: lib/network/networkmanager.cpp:379
 msgctxt "NetworkManager|"
 msgid "The certificate is a legacy Symantec one that's no longer valid."
-msgstr ""
+msgstr "Certifikát je starší certifikát Symantec, ktorý už nie je platný."
 
 #: lib/network/networkmanager.cpp:382
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Veľkosť neznáma"
+msgstr "Neznáma chyba"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:163
 msgctxt "FalkonSchemeReply|"
@@ -2627,7 +2605,7 @@ msgstr "Vycentrovať rýchle vytáčanie"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:250
 msgctxt "FalkonSchemeReply|"
 msgid "Lock the position of SpeedDial entries."
-msgstr ""
+msgstr "Zamknúť pozíciu položiek rýchlej voľby."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:276
 msgctxt "FalkonSchemeReply|"
@@ -2831,7 +2809,7 @@ msgstr "Žiadne dostupné doplnky."
 #: lib/network/sslerrordialog.cpp:32
 msgctxt "SslErrorDialog|"
 msgid "Only for this session"
-msgstr ""
+msgstr "Len pre túto reláciu"
 
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
@@ -2841,7 +2819,7 @@ msgstr "Chyba certifikátu SSL!"
 #: lib/network/sslerrordialog.ui:90
 msgctxt "SslErrorDialog|"
 msgid "Toggle Certificate Details"
-msgstr ""
+msgstr "Prepnúť podrobnosti certifikátu"
 
 #: lib/notifications/desktopnotificationsfactory.cpp:119
 msgctxt "DesktopNotificationsFactory|"
@@ -3233,17 +3211,17 @@ msgstr "<b>Pripojenie je zabezpečené.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Akákoľvek chyba certifikátu je <b>natrvalo</b> ignorovaná."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Chyba certifikátu je <b>dočasne</b> ignorovaná."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Certifikát bol odmietnutý."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3321,12 +3299,9 @@ msgid "Media"
 msgstr "Médiá"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML5 oprávnenia"
+msgstr "Oprávnenia"
 
 #: lib/other/siteinfo.ui:89
 msgctxt "SiteInfo|"
@@ -3374,9 +3349,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Náhľad</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Predvolené"
@@ -3384,20 +3356,14 @@ msgstr "Predvolené"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Opýtať sa"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Povoliť"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Zakázať"
@@ -3411,17 +3377,17 @@ msgstr "<b>Stránka %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Akákoľvek chyba certifikátu je <b>trvalo</b> ignorovaná."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Chyba certifikátu je <b>dočasne</b> ignorovaná."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Certifikát bol odmietnutý."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
@@ -3478,180 +3444,120 @@ msgstr "Viac..."
 #: lib/other/sitesettingsmanager.cpp:324
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr ""
+msgstr "Úroveň priblíženia"
 
 #: lib/other/sitesettingsmanager.cpp:326
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Cookies"
 
 #: lib/other/sitesettingsmanager.cpp:329 lib/other/sitesettingsmanager.cpp:354
 #: lib/other/sitesettingsmanager.cpp:394 lib/other/sitesettingsmanager.cpp:411
-#, fuzzy
-#| msgctxt "DownloadItem|"
-#| msgid "Unknown size"
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Veľkosť neznáma"
+msgstr "Neznáme"
 
 #: lib/other/sitesettingsmanager.cpp:337
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Notifications"
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Oznámenia"
 
 #: lib/other/sitesettingsmanager.cpp:339
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Geolocation"
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
-msgstr "Geolocation"
+msgstr "Geolokácia"
 
 #: lib/other/sitesettingsmanager.cpp:341
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Mikrofón"
 
 #: lib/other/sitesettingsmanager.cpp:343
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Kamera"
 
 #: lib/other/sitesettingsmanager.cpp:345
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Microphone and Camera"
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Mikrofón a kamera"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Hide Pointer"
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Skryť kurzor"
+msgstr "Skryť kurzor myši"
 
 #: lib/other/sitesettingsmanager.cpp:349
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Enable screen capture"
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
-msgstr "Povoliť zachytávanie obrazovky"
+msgstr "Zachytávanie obrazovky"
 
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Snímanie obrazovky so zvukom"
 
 #: lib/other/sitesettingsmanager.cpp:362
-#, fuzzy
-#| msgctxt "WebPage|"
-#| msgid "Reload page"
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Obnoviť stránku"
+msgstr "Automaticky načítať obrázky"
 
 #: lib/other/sitesettingsmanager.cpp:365
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Allow JavaScript"
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
 msgstr "Povoliť JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Open popup windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Otvárať vyskakovacie okná"
+msgstr "JavaScript: Otvárať vyskakovacie okná"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Access clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Pristupovať do schránky"
+msgstr "JavaScript: Pristupovať do schránky"
 
 #: lib/other/sitesettingsmanager.cpp:371
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Paste from clipboard"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Vložiť zo schránky"
+msgstr "JavaScript: Vložiť zo schránky"
 
 #: lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
-#| msgctxt "JsOptions|"
-#| msgid "Activate windows"
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Aktivovať okná"
+msgstr "JavaScript: Aktivovať okná"
 
 #: lib/other/sitesettingsmanager.cpp:376
-#, fuzzy
-#| msgctxt "ClearPrivateData|"
-#| msgid "Local storage"
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Lokálne úložisko"
 
 #: lib/other/sitesettingsmanager.cpp:378
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "&FullScreen"
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&Celá obrazovka"
+msgstr "Podpora celej obrazovky"
 
 #: lib/other/sitesettingsmanager.cpp:380
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Spustiť nezabezpečený obsah"
 
 #: lib/other/sitesettingsmanager.cpp:382
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Disable automatic playing of videos"
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Zakázať automatické prehrávanie videí"
+msgstr "Automatické prehrávanie videí"
 
 #: lib/other/sitesettingsmanager.cpp:385
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Povoliť ukladanie cookies"
+msgstr "Povoliť čítanie z plátna"
 
 #: lib/other/sitesettingsmanager.cpp:389
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Vynútiť tmavý režim"
 
 #: lib/other/sitesettingsmanager.cpp:402
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Povoliť"
@@ -3659,20 +3565,14 @@ msgstr "Povoliť"
 #: lib/other/sitesettingsmanager.cpp:404
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Opýtať sa"
 
 #: lib/other/sitesettingsmanager.cpp:406
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Zakázať"
 
 #: lib/other/sitesettingsmanager.cpp:408
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Predvolené"
@@ -3993,34 +3893,25 @@ msgid "Exceptions"
 msgstr "Výnimky"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add allowed scheme"
-msgstr "Zablokovaný obsah"
+msgstr "Pridať povolenú schému"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:78
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "SchemeManager|"
-#| msgid "Scheme:"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Scheme:"
 msgstr "Schéma:"
 
 #: lib/preferences/autoopenprotocolsdialog.cpp:101
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add blocked scheme"
-msgstr "Zablokovaný obsah"
+msgstr "Pridať blokovanú schému"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:14
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Auto-Open Protocols"
-msgstr ""
+msgstr "Automaticky otvárané protokoly"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:20
 msgctxt "AutoOpenProtocolsDialog|"
@@ -4028,21 +3919,17 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Auto Open</span></"
 "p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Automaticky "
+"otvárané</span></p></body></html>"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Add"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "Pridať"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
 msgstr "Odstrániť"
@@ -4053,6 +3940,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Blokované</span></"
+"p></body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -4062,13 +3951,13 @@ msgstr "Hostiteľ: "
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
 msgid "Add certificate exception"
-msgstr ""
+msgstr "Pridať výnimku certifikátu"
 
 #: lib/preferences/certificatemanager.cpp:74
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "Hostiteľ %1 je už v zozname"
 
 #: lib/preferences/certificatemanager.cpp:83
 msgctxt "CertificateManager|"
@@ -4078,7 +3967,7 @@ msgstr "Prázdny hostiteľ"
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Správca výnimiek certifikátov"
 
 #: lib/preferences/certificatemanager.ui:22
 msgctxt "CertificateManager|"
@@ -4093,7 +3982,7 @@ msgstr "Odstrániť"
 #: lib/preferences/certificatemanager.ui:69
 msgctxt "CertificateManager|"
 msgid "Removing an entry requires a restart"
-msgstr ""
+msgstr "Odstránenie záznamu vyžaduje reštart"
 
 #: lib/preferences/jsoptions.ui:14
 msgctxt "JsOptions|"
@@ -4180,9 +4069,6 @@ msgid "Set as default"
 msgstr "Nastaviť ako predvolené"
 
 #: lib/preferences/preferences.cpp:339
-#, fuzzy
-#| msgctxt "FalkonSchemeReply|"
-#| msgid "Auto"
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Auto"
@@ -4190,18 +4076,18 @@ msgstr "Auto"
 #: lib/preferences/preferences.cpp:341
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Svetlý"
 
 #: lib/preferences/preferences.cpp:342
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Tmavý"
 
 #: lib/preferences/preferences.cpp:352
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: lib/preferences/preferences.cpp:626
 msgctxt "Preferences|"
@@ -4476,7 +4362,7 @@ msgstr "Zobraziť panel záložiek pri spustení"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Predvolená minimálna šírka bočného panela:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4496,7 +4382,7 @@ msgstr "Povoliť panel nástrojov pre okamžité záložky"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: lib/preferences/preferences.ui:579
 msgctxt "Preferences|"
@@ -4504,6 +4390,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Farby pozadia "
+"webovej stránky</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:604 lib/preferences/preferences.ui:618
 #: lib/preferences/preferences.ui:1081 lib/preferences/preferences.ui:1442
@@ -4522,17 +4410,17 @@ msgstr "Pôvodný"
 #: lib/preferences/preferences.ui:632
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "Farba pozadia po načítaní:"
 
 #: lib/preferences/preferences.ui:639
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "Farba pozadia počas načítavania:"
 
 #: lib/preferences/preferences.ui:646
 msgctxt "Preferences|miliseconds"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: lib/preferences/preferences.ui:659
 msgctxt ""
@@ -4540,7 +4428,7 @@ msgctxt ""
 "page was initially loaded before switching the backgroung color to the "
 "loaded variant."
 msgid "Loaded state switch delay:"
-msgstr ""
+msgstr "Oneskorenie prepnutia po načítaní:"
 
 #: lib/preferences/preferences.ui:668
 msgctxt "Preferences|"
@@ -4580,7 +4468,7 @@ msgstr "Otvárať vyskakovacie okná na kartách"
 #: lib/preferences/preferences.ui:757
 msgctxt "Preferences|"
 msgid "Block automatic popups"
-msgstr ""
+msgstr "Blokovať automatické vyskakovacie okná"
 
 #: lib/preferences/preferences.ui:764
 msgctxt "Preferences|"
@@ -4681,12 +4569,9 @@ msgid "Always show go icon"
 msgstr "Vždy zobraziť ikonu Prejsť"
 
 #: lib/preferences/preferences.ui:946
-#, fuzzy
-#| msgctxt "WebView|"
-#| msgid "Show i&mage"
 msgctxt "Preferences|"
 msgid "Show zoom label"
-msgstr "Zobraziť o&brázok"
+msgstr "Zobraziť označenie priblíženia"
 
 #: lib/preferences/preferences.ui:953
 msgctxt "Preferences|"
@@ -4716,7 +4601,7 @@ msgstr "Zobraziť návrhy vyhľadávania"
 #: lib/preferences/preferences.ui:988
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr ""
+msgstr "Rozšíriť vyskakovacie okno návrhov na šírku okna"
 
 #: lib/preferences/preferences.ui:1011
 msgctxt "Preferences|"
@@ -4817,30 +4702,27 @@ msgstr "Povoliť zachytávanie obrazovky"
 #: lib/preferences/preferences.ui:1231
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
-msgstr ""
+msgstr "Použiť hardvérovú akceleráciu (vyžaduje reštart)"
 
 #: lib/preferences/preferences.ui:1238
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Allow storing of cookies"
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Povoliť ukladanie cookies"
+msgstr "Povoliť čítanie z plátna"
 
 #: lib/preferences/preferences.ui:1245
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Vynútiť tmavý režim"
 
 #: lib/preferences/preferences.ui:1252
 msgctxt "Preferences|"
 msgid "Allow image animation"
-msgstr ""
+msgstr "Povoliť animáciu obrázkov"
 
 #: lib/preferences/preferences.ui:1261
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Preferovaná farebná schéma:"
 
 #: lib/preferences/preferences.ui:1296
 msgctxt "Preferences|"
@@ -5176,12 +5058,9 @@ msgid "HTML5 Permissions"
 msgstr "HTML5 oprávnenia"
 
 #: lib/preferences/preferences.ui:2321
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Settings"
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Nastavenia"
+msgstr "Nastavenia stránok"
 
 #: lib/preferences/preferences.ui:2353
 msgctxt "Preferences|"
@@ -5267,11 +5146,13 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Spravovať protokoly "
+"automatického otvárania</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:2709
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
-msgstr ""
+msgstr "Spravovať vlastné schémy"
 
 #: lib/preferences/preferences.ui:2716
 msgctxt "Preferences|"
@@ -5301,7 +5182,7 @@ msgstr "<b>Spravovať spracovače protokolov</b>"
 #: lib/preferences/preferences.ui:2799
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Správca výnimiek certifikátov"
 
 #: lib/preferences/preferences.ui:2839
 msgctxt "Preferences|"
@@ -5314,12 +5195,9 @@ msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Štýl automaticky načítať so všetkými stránkami: "
 
 #: lib/preferences/preferences.ui:2899
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Cookies Manager"
 msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
-msgstr "Správca cookies"
+msgstr "Správca vlastných schém"
 
 #: lib/preferences/preferences.ui:2939
 msgctxt "Preferences|"
@@ -5339,12 +5217,12 @@ msgstr "<b>Správca certifikátov</b>"
 #: lib/preferences/preferences.ui:3039
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
-msgstr ""
+msgstr "Protokoly automatického otvárania"
 
 #: lib/preferences/schememanager.cpp:84
 msgctxt "SchemeManager|"
 msgid "Add allowed scheme"
-msgstr ""
+msgstr "Pridať povolenú schému"
 
 #: lib/preferences/schememanager.cpp:84 lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
@@ -5354,22 +5232,22 @@ msgstr "Schéma:"
 #: lib/preferences/schememanager.cpp:119
 msgctxt "SchemeManager|"
 msgid "Add blocked scheme"
-msgstr ""
+msgstr "Pridať blokovanú schému"
 
 #: lib/preferences/schememanager.ui:14
 msgctxt "SchemeManager|"
 msgid "Custom scheme manager"
-msgstr ""
+msgstr "Správca vlastných schém"
 
 #: lib/preferences/schememanager.ui:26
 msgctxt "SchemeManager|"
 msgid "Allowed schemes"
-msgstr ""
+msgstr "Povolené schémy"
 
 #: lib/preferences/schememanager.ui:33
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
-msgstr ""
+msgstr "**Poznámka:** Povolené schémy môžu byť pridané rozšíreniami."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
 msgctxt "SchemeManager|"
@@ -5387,71 +5265,50 @@ msgid "Block"
 msgstr "Blok"
 
 #: lib/preferences/schememanager.ui:98
-#, fuzzy
-#| msgctxt "AdBlockUrlInterceptor|"
-#| msgid "Blocked content"
 msgctxt "SchemeManager|"
 msgid "Blocked schemes"
-msgstr "Zablokovaný obsah"
+msgstr "Blokované schémy"
 
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Zmeny sa prejavia po reštarte Falkon."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
-#| msgctxt "PageScreen|"
-#| msgid "Browse..."
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Prehliadať..."
+msgstr "Prehliadať"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:36
 #: lib/preferences/sitesettingsbrowsedialog.ui:99
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Opýtať sa"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:37
 #: lib/preferences/sitesettingsbrowsedialog.ui:106
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Allow"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Povoliť"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:38
 #: lib/preferences/sitesettingsbrowsedialog.ui:113
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Deny"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Zakázať"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:39
 #: lib/preferences/sitesettingsbrowsedialog.ui:120
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Default"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Predvolené"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "HTML5 Permissions"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML5 oprávnenia"
+msgstr "Oprávnenia stránky"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:22
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "Url:"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
 msgstr "Url:"
@@ -5459,36 +5316,27 @@ msgstr "Url:"
 #: lib/preferences/sitesettingsbrowsedialog.ui:32
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:51
 msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
-msgstr ""
+msgstr "Nastaviť"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:68
-#, fuzzy
-#| msgctxt "ProtocolHandlerDialog|"
-#| msgid "Site"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Stránka"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:73
-#, fuzzy
-#| msgctxt "HTML5PermissionsDialog|"
-#| msgid "Behaviour"
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Správanie"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
-#| msgctxt "PageScreen|"
-#| msgid "Browse..."
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Prehliadať..."
+msgstr "Prehliadať"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -6082,12 +5930,9 @@ msgid "Expires On:"
 msgstr "Platný do:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Zatvoriť okno"
+msgstr "&Zavrieť bočný panel"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
@@ -6158,9 +6003,6 @@ msgid "Deny"
 msgstr "Zakázať"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Select Color"
 msgctxt "MacToolButton|"
 msgid "Select Color"
 msgstr "Vyberte farbu"
@@ -6174,19 +6016,19 @@ msgstr "Neznáma veľkosť"
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kB"
 
 #: lib/tools/qztools.cpp:391
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MB"
 
 #: lib/tools/qztools.cpp:395
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GB"
 
 #: lib/tools/qztools.cpp:854
 msgctxt "QObject|"
@@ -6653,8 +6495,6 @@ msgstr "%1 - Falkon"
 #~ msgstr "Hľadať..."
 
 #, fuzzy
-#~| msgctxt "MainMenu|"
-#~| msgid "&Page Source"
 #~ msgctxt "PageScreen|"
 #~ msgid "Page Screen"
 #~ msgstr "Zdrojový &kód stránky"
@@ -6688,8 +6528,6 @@ msgstr "%1 - Falkon"
 #~ msgstr "Slovník"
 
 #, fuzzy
-#~| msgctxt "QupZillaSchemeReply|"
-#~| msgid "Translations"
 #~ msgctxt "FalkonSchemeReply|"
 #~ msgid "Translations"
 #~ msgstr "Preklady"
