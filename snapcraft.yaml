@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2024, 2025 Scarlett Moore <sgmoore@kde.org>
+# SPDX-FileCopyrightText: 2024-2026 Scarlett Moore <sgmoore@kde.org>
 #
 # SPDX-License-Identifier: CC0-1.0
 ---
@@ -33,15 +33,6 @@ slots:
     interface: dbus
     name: org.kde.falkon
     bus: session
-package-repositories:
--   type: apt
-    components:
-    - main
-    suites:
-    - noble
-    key-id: 444DABCF3667D0283F894EDDE6D4736255751E5D
-    url: http://origin.archive.neon.kde.org/user
-    key-server: keyserver.ubuntu.com
 parts:
   falkon:
     parse-info:
@@ -50,9 +41,9 @@ parts:
     source: .
     source-type: local
     build-snaps:
-      - kde-qt6-core24-sdk/latest/beta
-      - kde-pyside6-core24-sdk/latest/beta
-      - kf6-core24-sdk/latest/beta
+      - kde-qt6-core24-sdk/latest/stable
+      - kde-pyside6-core24-sdk/latest/stable
+      - kf6-core24-sdk/latest/stable
       - hunspell-dictionaries
     build-packages:
       - libxcb-util-dev
@@ -60,6 +51,7 @@ parts:
       - gnome-keyring
       - libxkbcommon-dev
       - libcups2-dev
+      - python3-dev
     stage-packages:
       - libxcb-util1
       - gnome-keyring
@@ -75,25 +67,7 @@ parts:
       - -DBUILD_WITH_QT6=ON
       - "-DCMAKE_FIND_ROOT_PATH=$CRAFT_STAGE\\;/snap/kde-qt6-core24-sdk/current\\/snap/kde-pyside6-core24-sdk/current\\;/usr"
       - "-DCMAKE_PREFIX_PATH=$CRAFT_STAGE\\:/snap/kde-qt6-core24-sdk/current\\/snap/kde-pyside6-core24-sdk/current\\:/usr"
-    build-environment: &buildenvironment
-      - CC: /usr/bin/gcc
-      - CXX: /usr/bin/g++
-      - CLANG_INSTALL_DIR: /snap/kde-qt6-core24-sdk/current/usr/lib/llvm-18
-      - CMAKE_PREFIX_PATH: /snap/kde-qt6-core24-sdk/current/usr:/snap/ffmpeg-2404-sdk/current/usr:/snap/kde-pyside6-core24-sdk/current/usr${CMAKE_PREFIX_PATH:+:$CMAKE_PREFIX_PATH}
-      - CPATH: /snap/kde-qt6-core24-sdk/current/usr/include:/snap/kde-pyside6-core24-sdk/current/usr/include:$CRAFT_STAGE/usr/include/python3.12${CPATH:+:$CPATH}
-      - C_INCLUDE_PATH: /snap/kde-qt6-core24-sdk/current/usr/include/python3.12:/snap/kde-pyside6-core24-sdk/current/usr/include/python3.12:$CRAFT_STAGE/usr/include/python3.12${C_INCLUDE_PATH:+:$C_INCLUDE_PATH}
-      - CPLUS_INCLUDE_PATH: /snap/kde-qt6-core24-sdk/current/usr/include:/snap/kde-pyside6-core24-sdk/current/usr/include:/snap/kde-pyside6-core24-sdk/current/usr/include/PySide6:/snap/kde-pyside6-core24-sdk/current/usr/include/python3.12:/snap/kde-pyside6-core24-sdk/current/usr/include/shiboken6:$CRAFT_STAGE/usr/include${CPLUS_INCLUDE_PATH:+:$CPLUS_INCLUDE_PATH}
-      - DICPATH: "$CRAFT_STAGE/usr/share/hunspell"
-      - LD_LIBRARY_PATH: "/snap/kde-qt6-core24-sdk/current/usr/lib:/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-qt6-core24-sdk/current/usr/lib:/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}:/snap/kde-pyside6-core24-sdk/current/usr/lib:/snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libproxy:/snap/ffmpeg-2404-sdk/current/usr/lib/x86_64-linux-gnu/:$CRAFT_STAGE/lib:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-      - LIBCLANG_LIBDIR: /snap/kde-qt6-core24-sdk/current/usr/lib/llvm-18/lib
-      - LIBCLANG_PATH: /snap/kde-qt6-core24-sdk/current/usr/lib/llvm-18/bin
-      - LLVM_INSTALL_DIR: /snap/kde-qt6-core24-sdk/current/usr/lib/llvm-18
-      - PATH: /snap/kde-qt6-core24-sdk/current/usr/bin:/snap/kde-qt6-core24-sdk/current/usr/lib/llvm-18/bin:/snap/kde-pyside6-core24-sdk/current/usr/bin${PATH:+:$PATH}
-      - PKG_CONFIG_PATH: /snap/kde-qt6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/pkgconfig:/snap/kde-pyside6-core24-sdk/current/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/pkgconfig:/snap/ffmpeg-2404-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}
-      - PYSIDE_DESIGNER_PLUGINS: /snap/kde-pyside6-core24-sdk/current/usr/lib/x86_64-linux-gnu/qt6/plugins/designer
-      - PYTHONPATH: /snap/kde-qt6-core24-sdk/current/usr/lib/python3.12:/snap/kde-qt6-core24-sdk/current/usr/lib/python3/dist-packages:/snap/kde-pyside6-core24-sdk/current/usr/lib/python3.12:/snap/kde-pyside6-core24-sdk/current/usr/lib/python3/dist-packages${PYTHONPATH:+:$PYTHONPATH}
-      - XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kde-qt6-core24-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
-      - XDG_DATA_DIRS: $CRAFT_STAGE/usr/share:/snap/kde-qt6-core24-sdk/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
+    build-environment:
       - DICPATH: "$SNAP/usr/share/hunspell"
     prime:
       - -usr/lib/*/cmake/*
