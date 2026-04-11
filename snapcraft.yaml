@@ -22,6 +22,8 @@ apps:
       QTWEBENGINE_DISABLE_SANDBOX: 1
       ALSA_CONFIG_PATH: "$SNAP/kf6/etc/asound.conf"
       DICPATH: "$SNAP/usr/share/hunspell"
+      PYSIDE_DESIGNER_PLUGINS: /snap/kde-pyside6-core24-sdk/current/usr/lib/x86_64-linux-gnu/qt6/plugins/designer
+      PYTHONPATH: /snap/kde-qt6-core24-sdk/current/usr/lib/python3.12:/snap/kde-qt6-core24-sdk/current/usr/lib/python3/dist-packages:/snap/kde-pyside6-core24-sdk/current/usr/lib/python3.12:/snap/kde-pyside6-core24-sdk/current/usr/lib/python3/dist-packages${PYTHONPATH:+:$PYTHONPATH}
 plugs:
   hunspell-dictionaries:
     content: hunspell-dictionaries
@@ -69,6 +71,8 @@ parts:
       - "-DCMAKE_PREFIX_PATH=$CRAFT_STAGE\\:/snap/kde-qt6-core24-sdk/current\\/snap/kde-pyside6-core24-sdk/current\\:/usr"
     build-environment:
       - DICPATH: "$SNAP/usr/share/hunspell"
+      - PYSIDE_DESIGNER_PLUGINS: /snap/kde-pyside6-core24-sdk/current/usr/lib/x86_64-linux-gnu/qt6/plugins/designer
+      - PYTHONPATH: /snap/kde-qt6-core24-sdk/current/usr/lib/python3.12:/snap/kde-qt6-core24-sdk/current/usr/lib/python3/dist-packages:/snap/kde-pyside6-core24-sdk/current/usr/lib/python3.12:/snap/kde-pyside6-core24-sdk/current/usr/lib/python3/dist-packages${PYTHONPATH:+:$PYTHONPATH}
     prime:
       - -usr/lib/*/cmake/*
       - -usr/include/*
