@@ -52,6 +52,7 @@ endif()
 
 # Defines that are always set
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING -DQT_USE_QSTRINGBUILDER -DQT_NO_CAST_TO_ASCII)
+add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 
 # Mandatory: Qt6
 find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Widgets Network Sql QuickWidgets PrintSupport WebChannel)
