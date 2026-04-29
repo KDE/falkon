@@ -133,7 +133,7 @@ void BookmarksToolbarButton::createMenu()
 
     Menu* m = qobject_cast<Menu*>(menu());
     Q_ASSERT(m);
-    QObject::connect(m, &QMenu::aboutToHide, [=]() {
+    QObject::connect(m, &QMenu::aboutToHide, mApp, []() {
         mApp->getWindow()->statusBar()->clearMessage();
     });
 

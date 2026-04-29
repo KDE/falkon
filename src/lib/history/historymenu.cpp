@@ -105,7 +105,7 @@ void HistoryMenu::aboutToShow()
         connect(act, &QAction::triggered, this, &HistoryMenu::historyEntryActivated);
         connect(act, &Action::ctrlTriggered, this, &HistoryMenu::historyEntryCtrlActivated);
         connect(act, &Action::shiftTriggered, this, &HistoryMenu::historyEntryShiftActivated);
-        connect(act, &QAction::hovered, [=]() {
+        connect(act, &QAction::hovered, this, [url]() {
             mApp->getWindow()->statusBar()->showMessage(url.toString());
         });
 
@@ -135,7 +135,7 @@ void HistoryMenu::aboutToShowMostVisited()
         connect(act, &QAction::triggered, this, &HistoryMenu::historyEntryActivated);
         connect(act, &Action::ctrlTriggered, this, &HistoryMenu::historyEntryCtrlActivated);
         connect(act, &Action::shiftTriggered, this, &HistoryMenu::historyEntryShiftActivated);
-        connect(act, &QAction::hovered, mApp->getWindow()->statusBar(), [=]() {
+        connect(act, &QAction::hovered, this, [entry]() {
             mApp->getWindow()->statusBar()->showMessage(entry.url.toString());
         });
 

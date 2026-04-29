@@ -391,7 +391,7 @@ void BookmarksTools::addFolderToMenu(QObject* receiver, Menu* menu, BookmarkItem
     m->setTitle(title);
     m->setIcon(folder->icon());
 
-    QObject::connect(m, &QMenu::aboutToHide, [=]() {
+    QObject::connect(m, &QMenu::aboutToHide, mApp, []() {
         mApp->getWindow()->statusBar()->clearMessage();
     });
 
@@ -401,7 +401,7 @@ void BookmarksTools::addFolderToMenu(QObject* receiver, Menu* menu, BookmarkItem
     act->setData(QVariant::fromValue<BookmarkItem*>(folder));
     act->setIconVisibleInMenu(true);
 
-    QObject::connect(act, &QAction::hovered, [=]() {
+    QObject::connect(act, &QAction::hovered, mApp, []() {
         mApp->getWindow()->statusBar()->clearMessage();
     });
 }
@@ -422,7 +422,7 @@ void BookmarksTools::addUrlToMenu(QObject* receiver, Menu* menu, BookmarkItem* b
     QObject::connect(act, SIGNAL(ctrlTriggered()), receiver, SLOT(bookmarkCtrlActivated()));
     QObject::connect(act, SIGNAL(shiftTriggered()), receiver, SLOT(bookmarkShiftActivated()));
 
-    QObject::connect(act, &QAction::hovered, [=]() {
+    QObject::connect(act, &QAction::hovered, menu, [bookmark]() {
         mApp->getWindow()->statusBar()->showMessage(bookmark->url().toString());
     });
 
@@ -437,7 +437,7 @@ void BookmarksTools::addSeparatorToMenu(Menu* menu, BookmarkItem* separator)
     Q_ASSERT(separator->isSeparator());
 
     auto* act = menu->addSeparator();
-    QObject::connect(act, &QAction::hovered, [=]() {
+    QObject::connect(act, &QAction::hovered, mApp, []() {
         mApp->getWindow()->statusBar()->clearMessage();
     });
 }
