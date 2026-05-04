@@ -138,7 +138,7 @@ QAction *QmlSideBarHelper::createMenuAction()
         return action;
     }
     auto qmlEngine = qobject_cast<QmlEngine*>(m_item->creationContext()->engine());
-    if (qmlEngine) {
+    if (!qmlEngine) {
         return action;
     }
     const QString pluginPath = qmlEngine->extensionPath();
