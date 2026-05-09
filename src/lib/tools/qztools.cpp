@@ -874,12 +874,14 @@ static xcb_connection_t *getXcbConnection()
 void QzTools::setWmClass(const QString &name, const QWidget* widget)
 {
 #ifdef QZ_WS_X11
-    if (QGuiApplication::platformName() != QL1S("xcb"))
+    if (QGuiApplication::platformName() != QL1S("xcb")) {
         return;
+    }
 
     xcb_connection_t *connection = getXcbConnection();
-    if (connection == nullptr)
+    if (connection == nullptr) {
         return;
+    }
 
     const QByteArray nameData = name.toUtf8();
     const QByteArray classData = mApp->wmClass().isEmpty() ? QByteArrayLiteral("Falkon") : mApp->wmClass();
@@ -887,7 +889,12 @@ void QzTools::setWmClass(const QString &name, const QWidget* widget)
     uint32_t class_len = nameData.length() + 1 + classData.length() + 1;
     char *class_hint = (char*) malloc(class_len);
 
-    qstrcpy(class_hint, nameData.constData());
+    if (class_hint == NULL) {
+        qWarning () << "Unable to allocate memory to set X window class.";
+        return;
+    }
+
+    strcpy(class_hint, nameData.constData());
     qstrcpy(class_hint + nameData.length() + 1, classData.constData());
 
     xcb_change_property(connection, XCB_PROP_MODE_REPLACE, widget->winId(),

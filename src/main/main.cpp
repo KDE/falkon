@@ -56,12 +56,17 @@ int main(int argc, char* argv[])
     const QByteArray style = qgetenv("QT_STYLE_OVERRIDE");
     if (!style.isEmpty()) {
         char** args = (char**) malloc(sizeof(char*) * (argc + 1));
-        for (int i = 0; i < argc; ++i)
-            args[i] = argv[i];
+        if (args != NULL) {
+            for (int i = 0; i < argc; ++i)
+                args[i] = argv[i];
 
-        QString stylecmd = QL1S("-style=") + QString::fromUtf8(style);
-        args[argc++] = qstrdup(stylecmd.toUtf8().constData());
-        argv = args;
+            QString stylecmd = QL1S("-style=") + QString::fromUtf8(style);
+            args[argc++] = qstrdup(stylecmd.toUtf8().constData());
+            argv = args;
+        }
+        else {
+            qWarning() << "main: Unable to allocate memory to apply a hack around QT_STYLE_OVERRIDE.";
+        }
     }
 
     MainApplication app(argc, argv);

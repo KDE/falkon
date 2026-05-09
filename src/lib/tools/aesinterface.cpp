@@ -81,6 +81,10 @@ bool AesInterface::init(int evpMode, const QByteArray &password, const QByteArra
     int result = 0;
     if (evpMode == EVP_PKEY_MO_ENCRYPT) {
         m_iVector = createRandomData(EVP_MAX_IV_LENGTH);
+        if (m_iVector.isEmpty()) {
+            qCritical() << "AesInterface::init: Unable to generate random data.";
+            return false;
+        }
         result = EVP_EncryptInit_ex(m_encodeCTX, EVP_aes_256_cbc(), NULL, key, (uchar*)m_iVector.constData());
     }
     else if (evpMode == EVP_PKEY_MO_DECRYPT) {
@@ -107,6 +111,12 @@ QByteArray AesInterface::encrypt(const QByteArray &plainData, const QByteArray &
     int cipherlength = dataLength + AES_BLOCK_SIZE;
     int finalLength = 0;
     auto* ciphertext = (uchar*)malloc(cipherlength);
+
+    if (ciphertext == NULL) {
+        qCritical() << "AesInterface::encrypt: Unable to allocate memory.";
+        m_ok = false;
+        return plainData;
+    }
 
     // allows reusing of 'm_encodeCTX' for multiple encryption cycles
     EVP_EncryptInit_ex(m_encodeCTX, NULL, NULL, NULL, NULL);
@@ -166,6 +176,11 @@ QByteArray AesInterface::decrypt(const QByteArray &cipherData, const QByteArray 
     // because we have padding ON, we must allocate an extra cipher block size of memory
     auto* plainText = (uchar*)malloc(plainTextLength + AES_BLOCK_SIZE);
 
+    if (plainText == NULL) {
+        qCritical() << "AesInterface::decrypt: Unable to allocate memory.";
+        return {};
+    }
+
     EVP_DecryptInit_ex(m_decodeCTX, NULL, NULL, NULL, NULL);
     EVP_DecryptUpdate(m_decodeCTX, plainText, &plainTextLength, cipherText, cipherLength);
     int success = EVP_DecryptFinal_ex(m_decodeCTX, plainText + plainTextLength, &finalLength);
@@ -199,6 +214,11 @@ QByteArray AesInterface::passwordToHash(const QString &masterPassword)
 QByteArray AesInterface::createRandomData(int length)
 {
     auto* randomData = (uchar*)malloc(length);
+
+    if (randomData == NULL) {
+        qCritical() << "AesInterface::createRandomData: Unable to allocate memory.";
+        return {};
+    }
 
     RAND_bytes(randomData, length);
     QByteArray data((char*)randomData, length);
