@@ -118,10 +118,6 @@ void TabManagerDelegate::paint(QPainter* painter, const QStyleOptionViewItem &op
         } else {
             painter->setPen(opt.palette.color(cg, QPalette::Text));
         }
-        if (opt.state & QStyle::State_Editing) {
-            painter->setPen(opt.palette.color(cg, QPalette::Text));
-            painter->drawRect(textRect.adjusted(0, 0, -1, -1));
-        }
 
         if (isSavedTab)
             opt.font.setItalic(true);
