@@ -26,7 +26,6 @@
         QzTools::removeRecursively(QDir::tempPath() + QSL("/Falkon-test")); \
         MainApplication::setTestModeEnabled(true); \
         MainApplication app(argc, argv); \
-        QTEST_DISABLE_KEYPAD_NAVIGATION; \
         Test test; \
         return QTest::qExec(&test, argc, argv); \
     }
