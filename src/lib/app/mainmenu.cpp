@@ -87,6 +87,7 @@ void MainMenu::initSuperMenu(QMenu* superMenu) const
         superMenu->addAction(m_actions[QSL("File/SessionManager")]);
     }
     superMenu->addSeparator();
+    superMenu->addAction(m_actions[QSL("File/SavePageAs")]);
     superMenu->addAction(m_actions[QSL("File/SendLink")]);
     superMenu->addAction(m_actions[QSL("File/Print")]);
     superMenu->addSeparator();
