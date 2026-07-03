@@ -24,7 +24,7 @@ class BrowserWindow;
 
 class AdBlockIcon;
 class AdblockResourceSchemeHandler;
-class AdBlockedRequest;
+struct AdBlockedRequest;
 
 class AdBlockPlugin : public QObject, public PluginInterface
 {
