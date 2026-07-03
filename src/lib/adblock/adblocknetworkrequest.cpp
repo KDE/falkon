@@ -25,14 +25,14 @@ AdBlockNeworkRequest::AdBlockNeworkRequest(const QWebEngineUrlRequestInfo& reque
     m_firstPartyUrl = request.firstPartyUrl();
     m_requestUrl = request.requestUrl();
     m_resourceType = request.resourceType();
-    m_requestType = NetworkRequest;
+    m_requestType = RequestType::NetworkRequest;
 }
 
 AdBlockNeworkRequest::AdBlockNeworkRequest(const QUrl& url, const QWebEngineNewWindowRequest& request)
 {
     m_firstPartyUrl = url;
     m_requestUrl = request.requestedUrl();
-    m_requestType = NewWindowRequest;
+    m_requestType = RequestType::NewWindowRequest;
 }
 
 AdBlockNeworkRequest::~AdBlockNeworkRequest() = default;

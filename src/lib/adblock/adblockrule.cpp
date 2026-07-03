@@ -347,7 +347,7 @@ bool AdBlockRule::matchType(const AdBlockNeworkRequest &request) const
 {
     RuleOption type;
 
-    if (request.requestType() == AdBlockNeworkRequest::NetworkRequest) {
+    if (request.requestType() == AdBlockNeworkRequest::RequestType::NetworkRequest) {
         switch (request.resourceType()) {
         case QWebEngineUrlRequestInfo::ResourceTypeMainFrame:
             type = DocumentOption;

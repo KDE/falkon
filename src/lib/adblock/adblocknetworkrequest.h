@@ -32,7 +32,7 @@ public:
     explicit AdBlockNeworkRequest(const QUrl &url, const QWebEngineNewWindowRequest &request);
     ~AdBlockNeworkRequest();
 
-    enum RequestType {
+    enum class RequestType {
         NetworkRequest = 0,
         NewWindowRequest = 1,
     };
