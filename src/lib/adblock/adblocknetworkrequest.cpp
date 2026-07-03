@@ -32,6 +32,7 @@ AdBlockNeworkRequest::AdBlockNeworkRequest(const QUrl& url, const QWebEngineNewW
 {
     m_firstPartyUrl = url;
     m_requestUrl = request.requestedUrl();
+    m_resourceType = QWebEngineUrlRequestInfo::ResourceType::ResourceTypeMainFrame;
     m_requestType = RequestType::NewWindowRequest;
 }
 
