@@ -98,12 +98,21 @@ void GM_Plugin::populateWebViewMenu(QMenu* menu, WebView* view, const WebHitTest
     gmMenu->setIcon(QIcon(QSL(":gm/data/icon.svg")));
 
     for (const auto &script : std::as_const(matchingScripts)) {
+        if (!m_manager->canRunScript(script)) {
+            continue;
+        }
+
         gmMenu->addAction(script->icon(), script->name(), this, [script, view]() {
             view->page()->execJavaScript(script->webScript().sourceCode(), WebPage::SafeJsWorld);
         });
     }
 
-    menu->addMenu(gmMenu);
+    if (gmMenu->isEmpty()) {
+        delete gmMenu;
+    }
+    else {
+        menu->addMenu(gmMenu);
+    }
 }
 
 bool GM_Plugin::acceptNavigationRequest(WebPage *page, const QUrl &url, QWebEnginePage::NavigationType type, bool isMainFrame)

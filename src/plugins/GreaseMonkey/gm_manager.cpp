@@ -144,9 +144,15 @@ void GM_Manager::loadScripts()
             return;
         }
 
-        if (gmScript->startAt() != GM_Script::ContextMenu) {
-            collection->insert(gmScript->webScript());
+        if (gmScript->startAt() == GM_Script::ContextMenu) {
+            continue;
         }
+
+        if (!canRunScript(gmScript)) {
+            continue;
+        }
+
+        collection->insert(gmScript->webScript());
     }
 }
 
@@ -215,6 +221,21 @@ bool GM_Manager::containsScript(const QString &fullName) const
     return false;
 }
 
+bool GM_Manager::canRunScript(GM_Script *script) const
+{
+    if (script == nullptr) {
+        return false;
+    }
+
+    if (   (script->runIn() == GM_Script::RunIn::NormalTabs && mApp->isPrivate())
+        || (script->runIn() == GM_Script::RunIn::IncognitoTabs && !mApp->isPrivate())
+    ) {
+        return false;
+    }
+
+    return true;
+}
+
 void GM_Manager::enableScript(GM_Script* script)
 {
     script->setEnabled(true);
@@ -223,7 +244,7 @@ void GM_Manager::enableScript(GM_Script* script)
     if (script->startAt() == GM_Script::ContextMenu) {
         m_contextMenuScripts.append(script);
     }
-    else if (isEnabled()) {
+    else if (isEnabled() && canRunScript(script)) {
         QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
         collection->insert(script->webScript());
     }
@@ -258,7 +279,7 @@ bool GM_Manager::addScript(GM_Script* script)
     if (script->startAt() == GM_Script::ContextMenu) {
         m_contextMenuScripts.append(script);
     }
-    else if (isEnabled()) {
+    else if (isEnabled() && canRunScript(script)) {
         QWebEngineScriptCollection *collection = mApp->webProfile()->scripts();
         collection->insert(script->webScript());
     }
@@ -342,7 +363,7 @@ void GM_Manager::load()
         else if (script->startAt() == GM_Script::ContextMenu) {
             m_contextMenuScripts.append(script);
         }
-        else if (isEnabled()) {
+        else if (isEnabled() && canRunScript(script)) {
             mApp->webProfile()->scripts()->insert(script->webScript());
         }
     }
@@ -372,7 +393,7 @@ void GM_Manager::scriptChanged()
     if (script->startAt() == GM_Script::ContextMenu) {
         m_contextMenuScripts.append(script);
     }
-    else if (isEnabled()) {
+    else if (isEnabled() && canRunScript(script)) {
         collection->insert(script->webScript());
     }
 }

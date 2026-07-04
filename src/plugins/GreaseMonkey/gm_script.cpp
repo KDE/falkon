@@ -39,6 +39,7 @@ GM_Script::GM_Script(GM_Manager* manager, const QString &filePath)
     , m_fileWatcher(new DelayedFileWatcher(this))
     , m_namespace(QSL("GreaseMonkeyNS"))
     , m_startAt(DocumentEnd)
+    , m_runIn(RunIn::AllTabs)
     , m_noframes(false)
     , m_fileName(filePath)
     , m_enabled(true)
@@ -103,6 +104,11 @@ QUrl GM_Script::updateUrl() const
 GM_Script::StartAt GM_Script::startAt() const
 {
     return m_startAt;
+}
+
+GM_Script::RunIn GM_Script::runIn() const
+{
+    return m_runIn;
 }
 
 bool GM_Script::noFrames() const
@@ -230,6 +236,7 @@ void GM_Script::parseScript()
     m_downloadUrl.clear();
     m_updateUrl.clear();
     m_startAt = DocumentEnd;
+    m_runIn = RunIn::AllTabs;
     m_noframes = false;
     m_script.clear();
     m_enabled = true;
@@ -315,6 +322,14 @@ void GM_Script::parseScript()
             }
             else if (value == QLatin1String("context-menu")) {
                 m_startAt = ContextMenu;
+            }
+        }
+        else if (key == QL1S("@run-in")) {
+            if (value == QL1S("normal-tabs")) {
+                m_runIn = RunIn::NormalTabs;
+            }
+            else if (value == QL1S("incognito-tabs")) {
+                m_runIn = RunIn::IncognitoTabs;
             }
         }
         else if (key == QL1S("@icon")) {

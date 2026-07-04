@@ -58,6 +58,8 @@ public:
     QList<GM_Script*> contextMenuScripts() const;
     bool containsScript(const QString &fullName) const;
 
+    bool canRunScript(GM_Script *script) const;
+
     void enableScript(GM_Script* script);
     void disableScript(GM_Script* script);
 

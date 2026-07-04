@@ -35,6 +35,7 @@ public:
     explicit GM_Script(GM_Manager* manager, const QString &filePath);
 
     enum StartAt { DocumentStart, DocumentEnd, DocumentIdle, ContextMenu };
+    enum class RunIn { AllTabs, NormalTabs, IncognitoTabs };
 
     bool isValid() const;
     QString name() const;
@@ -51,6 +52,7 @@ public:
     QUrl updateUrl() const;
 
     StartAt startAt() const;
+    GM_Script::RunIn runIn() const;
     bool noFrames() const;
 
     bool isEnabled() const;
@@ -100,6 +102,7 @@ private:
     QUrl m_downloadUrl;
     QUrl m_updateUrl;
     StartAt m_startAt;
+    RunIn m_runIn;
     bool m_noframes;
 
     QString m_script;
