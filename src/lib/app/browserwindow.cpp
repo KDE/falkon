@@ -57,6 +57,7 @@
 #include "downloadsbutton.h"
 #include "tabmodel.h"
 #include "tabmrumodel.h"
+#include "profilemanager.h"
 
 #include <algorithm>
 
@@ -588,7 +589,7 @@ void BrowserWindow::loadSettings()
     bool showBookmarksToolbar = settings.value(QSL("showBookmarksToolbar"), false).toBool();
     bool showNavigationToolbar = settings.value(QSL("showNavigationToolbar"), true).toBool();
     bool showMenuBar = settings.value(QSL("showMenubar"), false).toBool();
-
+    bool showProfileName = settings.value(QSL("showProfileName"), true).toBool();
     // Make sure both menubar and navigationbar are not hidden
     // Fixes #781
     if (!showNavigationToolbar) {
@@ -624,6 +625,11 @@ void BrowserWindow::loadSettings()
 #endif
 
     m_navigationToolbar->setSuperMenuVisible(isFullScreen() || !showMenuBar);
+    
+    if (m_profileNameVisible != showProfileName) {
+        m_profileNameVisible = showProfileName;
+        currentTabChanged();
+    }
 }
 
 void BrowserWindow::goForward()
@@ -740,10 +746,19 @@ void BrowserWindow::setWindowTitle(const QString &t)
 {
     QString title = t;
 
+    if (m_profileNameVisible) {
+        QString profileName;
+        if (mApp->wmClass().isEmpty()) {
+            profileName = ProfileManager::currentProfile();
+        } else {
+            profileName = QString::fromStdString(mApp->wmClass().toStdString());
+        }
+        
+        title.append(tr(" [") + profileName + QStringLiteral("] "));
+    }
     if (mApp->isPrivate()) {
         title.append(tr(" (Private Browsing)"));
     }
-
     QMainWindow::setWindowTitle(title);
 }
 

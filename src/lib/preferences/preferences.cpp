@@ -230,6 +230,7 @@ Preferences::Preferences(BrowserWindow* window)
     connect(ui->instantBookmarksToolbar, &QAbstractButton::toggled, ui->showBookmarksToolbar, &QWidget::setDisabled);
     connect(ui->showBookmarksToolbar, &QAbstractButton::toggled, ui->instantBookmarksToolbar, &QWidget::setDisabled);
     ui->showNavigationToolbar->setChecked(settings.value(QSL("showNavigationToolbar"), true).toBool());
+    ui->showProfileName->setChecked(settings.value(QSL("showProfileName"), true).toBool());
     int currentSettingsPage = settings.value(QSL("settingsDialogPage"), 0).toInt(nullptr);
 
     ui->backgroundColorLoading->setDefaultIconColor(QColor(Qt::white));
@@ -980,6 +981,7 @@ void Preferences::saveSettings()
     settings.setValue(QSL("instantBookmarksToolbar"), ui->instantBookmarksToolbar->isChecked());
     settings.setValue(QSL("showBookmarksToolbar"), ui->showBookmarksToolbar->isChecked());
     settings.setValue(QSL("showNavigationToolbar"), ui->showNavigationToolbar->isChecked());
+    settings.setValue(QSL("showProfileName"), ui->showProfileName->isChecked());
     settings.setValue(QSL("BackgroundColorLoading"), ui->backgroundColorLoading->iconColor());
     settings.setValue(QSL("BackgroundColorLoaded"), ui->backgroundColorLoaded->iconColor());
     settings.setValue(QSL("LoadedSwitchDelay"), ui->loadedSwitchDelay->value());
