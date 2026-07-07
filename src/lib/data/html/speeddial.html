@@ -3,8 +3,17 @@
 <title>%SITE-TITLE%</title>
 
 <style type="text/css" media="screen">
+@media (prefers-color-scheme: light) {
+    html {
+        background: url("%IMG_BACKGROUND%") no-repeat center center, url("qrc:html/sd_light_bg.svg");
+    }
+}
+@media (prefers-color-scheme: dark) {
+    html {
+        background: url("%IMG_BACKGROUND%") no-repeat center center, url("qrc:html/sd_dark_bg.svg");
+    }
+}
 html {
-    background: url("%IMG_BACKGROUND%") no-repeat center center, url("qrc:html/sd_bg.svg");
     background-size: %B_SIZE%;
     background-attachment: fixed;
 }
