@@ -299,7 +299,7 @@ MainApplication::MainApplication(int &argc, char** argv)
         m_webProfile = new QWebEngineProfile();
     }
     else {
-        m_webProfile = new QWebEngineProfile(startProfile.isEmpty() ? QSL("Default") : startProfile);
+        m_webProfile = new QWebEngineProfile(startProfile.isEmpty() ? QSL("default") : startProfile);
     }
     connect(m_webProfile, &QWebEngineProfile::downloadRequested, this, &MainApplication::downloadRequested);
 
