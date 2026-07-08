@@ -25,7 +25,6 @@
 
 #include <QDateTime>
 
-#include <kwallet_version.h>
 #include <KWallet>
 
 static PasswordEntry decodeEntry(const QByteArray &data)
