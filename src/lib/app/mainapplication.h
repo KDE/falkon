@@ -71,6 +71,8 @@ public:
     explicit MainApplication(int &argc, char** argv);
     ~MainApplication();
 
+    bool event(QEvent* e) override;
+
     void setChromiumFlags();
 
     bool isClosing() const;
@@ -140,6 +142,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void settingsReloaded();
     void activeWindowChanged(BrowserWindow* window);
+    void systemThemeChanged();
 
 private Q_SLOTS:
     void postLaunch();
@@ -216,11 +219,6 @@ public:
 
 private:
     RegisterQAppAssociation* m_registerQAppAssociation;
-#endif
-
-#ifdef Q_OS_MACOS
-public:
-    bool event(QEvent* e);
 #endif
 };
 

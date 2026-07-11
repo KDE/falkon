@@ -84,6 +84,10 @@
 #include "registerqappassociation.h"
 #endif
 
+#ifdef Q_OS_MACOS
+#include <QFileOpenEvent>
+#endif
+
 static bool s_testMode = false;
 
 MainApplication::MainApplication(int &argc, char** argv)
@@ -1346,12 +1350,22 @@ RegisterQAppAssociation* MainApplication::associationManager()
 }
 #endif
 
-#ifdef Q_OS_MACOS
-#include <QFileOpenEvent>
 
 bool MainApplication::event(QEvent* e)
 {
     switch (e->type()) {
+    case QEvent::ApplicationPaletteChange: {
+        Settings settings;
+        QString activeTheme = settings.value(QSL("Themes/activeTheme"), DEFAULT_THEME_NAME).toString();
+
+        loadTheme(activeTheme);
+
+        Q_EMIT systemThemeChanged();
+
+        return true;
+    }
+
+#ifdef Q_OS_MACOS
     case QEvent::FileOpen: {
         QFileOpenEvent *ev = static_cast<QFileOpenEvent*>(e);
         if (!ev->url().isEmpty()) {
@@ -1368,6 +1382,7 @@ bool MainApplication::event(QEvent* e)
         if (!activeWindow() && m_windows.isEmpty())
             createWindow(Qz::BW_NewWindow);
         break;
+#endif
 
     default:
         break;
@@ -1375,4 +1390,3 @@ bool MainApplication::event(QEvent* e)
 
     return QtSingleApplication::event(e);
 }
-#endif
