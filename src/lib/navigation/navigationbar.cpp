@@ -568,11 +568,10 @@ void NavigationBar::reloadLayout()
         if (!item) {
             continue;
         }
-        QWidget *widget = item->widget();
-        if (!widget) {
-            continue;
+        if (QWidget *widget = item->widget()) {
+            widget->setParent(nullptr);
         }
-        widget->setParent(nullptr);
+        delete item;
     }
 
     // Hide all widgets
