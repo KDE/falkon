@@ -33,7 +33,7 @@ class AdBlockPlugin : public QObject, public PluginInterface
     Q_PLUGIN_METADATA(IID "Falkon.Browser.plugin.AdBlock")
 
 public:
-    explicit AdBlockPlugin();
+    explicit AdBlockPlugin(QObject* parent = nullptr);
     void init(InitState state, const QString &settingsPath) override;
     void unload() override;
     bool testPlugin() override;

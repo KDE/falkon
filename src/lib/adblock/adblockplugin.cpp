@@ -35,8 +35,8 @@
 #include <QWebEngineProfile>
 #include <QWebEngineNewWindowRequest>
 
-AdBlockPlugin::AdBlockPlugin()
-    : QObject()
+AdBlockPlugin::AdBlockPlugin(QObject *parent)
+    : QObject(parent)
 {
 }
 

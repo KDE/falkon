@@ -383,7 +383,7 @@ Plugins::Plugin Plugins::loadInternalPlugin(const QString &name)
         Plugin plugin;
         plugin.type = Plugin::InternalPlugin;
         plugin.pluginId = QSL("internal:adblock");
-        plugin.internalInstance = new AdBlockPlugin();
+        plugin.internalInstance = new AdBlockPlugin(this);
         plugin.pluginSpec = createSpec(DesktopFile(QSL(":adblock/metadata.desktop")));
         return plugin;
     } else {
