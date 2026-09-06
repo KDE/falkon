@@ -408,7 +408,7 @@ Plugins::Plugin Plugins::loadSharedLibraryPlugin(const QString &name)
     plugin.type = Plugin::SharedLibraryPlugin;
     plugin.pluginId = QSL("lib:%1").arg(QFileInfo(fullPath).fileName());
     plugin.pluginPath = fullPath;
-    plugin.pluginLoader = new QPluginLoader(fullPath);
+    plugin.pluginLoader = new QPluginLoader(fullPath, this);
     plugin.pluginSpec = createSpec(plugin.pluginLoader->metaData().value(QSL("MetaData")).toObject());
     return plugin;
 }
