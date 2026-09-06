@@ -81,7 +81,7 @@ void MainMenu::initSuperMenu(QMenu* superMenu) const
     superMenu->addAction(m_actions[QSL("File/OpenFile")]);
     if (mApp->sessionManager()) {
         superMenu->addSeparator();
-        auto* sessionsSubmenu = new QMenu(tr("Sessions"));
+        auto* sessionsSubmenu = new QMenu(tr("Sessions"), superMenu);
         connect(sessionsSubmenu, SIGNAL(aboutToShow()), mApp->sessionManager(), SLOT(aboutToShowSessionsMenu()));
         superMenu->addMenu(sessionsSubmenu);
         superMenu->addAction(m_actions[QSL("File/SessionManager")]);
@@ -487,7 +487,7 @@ void MainMenu::init()
     m_actions[QSL("Standard/Quit")] = action;
 
     // File menu
-    m_menuFile = new QMenu(tr("&File"));
+    m_menuFile = new QMenu(tr("&File"), this);
     connect(m_menuFile, &QMenu::aboutToShow, this, &MainMenu::aboutToShowFileMenu);
 
     ADD_ACTION("File/NewTab", m_menuFile, IconProvider::newTabIcon(), tr("New Tab"), SLOT(newTab()), "Ctrl+T");
@@ -499,7 +499,7 @@ void MainMenu::init()
     m_menuFile->addSeparator();
 
     if (mApp->sessionManager()) {
-        auto* sessionsSubmenu = new QMenu(tr("Sessions"));
+        auto* sessionsSubmenu = new QMenu(tr("Sessions"), m_menuFile);
         connect(sessionsSubmenu, SIGNAL(aboutToShow()), mApp->sessionManager(), SLOT(aboutToShowSessionsMenu()));
         m_menuFile->addMenu(sessionsSubmenu);
         action = new QAction(tr("Session Manager"), this);
@@ -516,7 +516,7 @@ void MainMenu::init()
     m_menuFile->addAction(m_actions[QSL("Standard/Quit")]);
 
     // Edit menu
-    m_menuEdit = new QMenu(tr("&Edit"));
+    m_menuEdit = new QMenu(tr("&Edit"), this);
     connect(m_menuEdit, &QMenu::aboutToShow, this, &MainMenu::aboutToShowEditMenu);
 
     ADD_ACTION("Edit/Undo", m_menuEdit, QIcon::fromTheme(QSL("edit-undo")), tr("&Undo"), SLOT(editUndo()), "Ctrl+Z");
@@ -538,14 +538,14 @@ void MainMenu::init()
     m_menuEdit->addSeparator();
 
     // View menu
-    m_menuView = new QMenu(tr("&View"));
+    m_menuView = new QMenu(tr("&View"), this);
     connect(m_menuView, &QMenu::aboutToShow, this, &MainMenu::aboutToShowViewMenu);
 
-    auto* toolbarsMenu = new QMenu(tr("Toolbars"));
+    auto* toolbarsMenu = new QMenu(tr("Toolbars"), m_menuView);
     connect(toolbarsMenu, &QMenu::aboutToShow, this, &MainMenu::aboutToShowToolbarsMenu);
-    auto* sidebarMenu = new QMenu(tr("Sidebar"));
+    auto* sidebarMenu = new QMenu(tr("Sidebar"), m_menuView);
     connect(sidebarMenu, &QMenu::aboutToShow, this, &MainMenu::aboutToShowSidebarsMenu);
-    auto* encodingMenu = new QMenu(tr("Character &Encoding"));
+    auto* encodingMenu = new QMenu(tr("Character &Encoding"), m_menuView);
     connect(encodingMenu, &QMenu::aboutToShow, this, &MainMenu::aboutToShowEncodingMenu);
 
     // Create menus to make shortcuts available even before first showing the menu
@@ -570,7 +570,7 @@ void MainMenu::init()
     ADD_CHECKABLE_ACTION("View/FullScreen", m_menuView, QIcon::fromTheme(QSL("view-fullscreen")), tr("&FullScreen"), SLOT(showFullScreen()), "F11");
 
     // Tools menu
-    m_menuTools = new QMenu(tr("&Tools"));
+    m_menuTools = new QMenu(tr("&Tools"), this);
     connect(m_menuTools, &QMenu::aboutToShow, this, &MainMenu::aboutToShowToolsMenu);
 
     ADD_ACTION("Tools/WebSearch", m_menuTools, QIcon::fromTheme(QSL("edit-find")), tr("&Web Search"), SLOT(webSearch()), "Ctrl+K");
@@ -585,13 +585,13 @@ void MainMenu::init()
     if (!WebInspector::isEnabled())
         m_actions.value(QSL("Tools/WebInspector"))->setVisible(false);
 
-    m_submenuExtensions = new QMenu(tr("&Extensions"));
+    m_submenuExtensions = new QMenu(tr("&Extensions"), m_menuTools);
     m_submenuExtensions->menuAction()->setVisible(false);
     m_menuTools->addMenu(m_submenuExtensions);
     m_menuTools->addSeparator();
 
     // Help menu
-    m_menuHelp = new QMenu(tr("&Help"));
+    m_menuHelp = new QMenu(tr("&Help"), this);
 
 #ifndef Q_OS_MACOS
     ADD_ACTION("Help/AboutQt", m_menuHelp, QIcon(), tr("About &Qt"), SLOT(aboutQt()), "");
@@ -606,11 +606,11 @@ void MainMenu::init()
     m_actions[QSL("Help/InfoAboutApp")]->setShortcut(QKeySequence(QKeySequence::HelpContents));
 
     // History menu
-    m_menuHistory = new HistoryMenu();
+    m_menuHistory = new HistoryMenu(this);
     m_menuHistory->setMainWindow(m_window);
 
     // Bookmarks menu
-    m_menuBookmarks = new BookmarksMenu();
+    m_menuBookmarks = new BookmarksMenu(this);
     m_menuBookmarks->setMainWindow(m_window);
 
     // Other actions

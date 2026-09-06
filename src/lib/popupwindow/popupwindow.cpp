@@ -80,14 +80,14 @@ PopupWindow::PopupWindow(PopupWebView* view)
 
     m_menuBar = new QMenuBar(this);
 
-    auto* menuFile = new QMenu(tr("File"));
+    auto* menuFile = new QMenu(tr("File"), this);
     menuFile->addAction(QIcon::fromTheme(QSL("mail-message-new")), tr("Send Link..."), m_view, &WebView::sendPageByMail);
     menuFile->addAction(QIcon::fromTheme(QSL("document-print")), tr("&Print..."), m_view, &WebView::printPage)->setShortcut(QKeySequence(QSL("Ctrl+P")));
     menuFile->addSeparator();
     menuFile->addAction(QIcon::fromTheme(QSL("window-close")), tr("Close"), this, &QWidget::close)->setShortcut(QKeySequence(QSL("Ctrl+W")));
     m_menuBar->addMenu(menuFile);
 
-    m_menuEdit = new QMenu(tr("Edit"));
+    m_menuEdit = new QMenu(tr("Edit"), this);
     m_menuEdit->addAction(m_view->pageAction(QWebEnginePage::Undo));
     m_menuEdit->addAction(m_view->pageAction(QWebEnginePage::Redo));
     m_menuEdit->addSeparator();
@@ -99,7 +99,7 @@ PopupWindow::PopupWindow(PopupWebView* view)
     m_menuEdit->addAction(QIcon::fromTheme(QSL("edit-find")), tr("Find"), this, &PopupWindow::searchOnPage)->setShortcut(QKeySequence(QSL("Ctrl+F")));
     m_menuBar->addMenu(m_menuEdit);
 
-    m_menuView = new QMenu(tr("View"));
+    m_menuView = new QMenu(tr("View"), this);
     m_actionStop = m_menuView->addAction(QIcon::fromTheme(QSL("process-stop")), tr("&Stop"), m_view, &QWebEngineView::stop);
     m_actionStop->setShortcut(QKeySequence(QSL("Esc")));
     m_actionReload = m_menuView->addAction(QIcon::fromTheme(QSL("view-refresh")), tr("&Reload"), m_view, &QWebEngineView::reload);

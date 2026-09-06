@@ -272,10 +272,10 @@ void HistoryMenu::init()
     connect(m_menuMostVisited, &QMenu::aboutToShow, this, &HistoryMenu::aboutToShowMostVisited);
     connect(m_menuMostVisited, &QMenu::aboutToHide, this, &HistoryMenu::clearStatusbar);
 
-    m_menuClosedTabs = new Menu(tr("Closed Tabs"));
+    m_menuClosedTabs = new Menu(tr("Closed Tabs"), this);
     connect(m_menuClosedTabs, &QMenu::aboutToShow, this, &HistoryMenu::aboutToShowClosedTabs);
 
-    m_menuClosedWindows = new Menu(tr("Closed Windows"));
+    m_menuClosedWindows = new Menu(tr("Closed Windows"), this);
     connect(m_menuClosedWindows, &QMenu::aboutToShow, this, &HistoryMenu::aboutToShowClosedWindows);
 
     act = addMenu(m_menuMostVisited);

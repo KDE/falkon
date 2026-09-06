@@ -52,7 +52,7 @@ QmlMenu *QmlMenu::addMenu(const QVariantMap &map)
         return nullptr;
     }
 
-    auto *newMenu = new QMenu();
+    auto *newMenu = new QMenu(m_menu);
     for (auto it = map.cbegin(); it != map.cend(); it++) {
         const QString key = it.key();
         if (key == QSL("icon")) {
