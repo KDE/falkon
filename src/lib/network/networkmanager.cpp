@@ -47,9 +47,9 @@ NetworkManager::NetworkManager(QObject *parent)
     : QNetworkAccessManager(parent)
 {
     // Create scheme handlers
-    m_extensionScheme = new ExtensionSchemeManager();
+    m_extensionScheme = new ExtensionSchemeManager(this);
 
-    mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("falkon"), new FalkonSchemeHandler());
+    mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("falkon"), new FalkonSchemeHandler(this));
     mApp->webProfile()->installUrlSchemeHandler(QByteArrayLiteral("extension"), m_extensionScheme);
     WebPage::addSupportedScheme(QSL("falkon"));
     WebPage::addSupportedScheme(QSL("extension"));
