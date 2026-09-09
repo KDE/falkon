@@ -731,11 +731,50 @@
                 </widget>
                </item>
                <item>
-                <widget class="QCheckBox" name="activateLastTab">
-                 <property name="text">
-                  <string>Activate last tab when closing active tab</string>
-                 </property>
-                </widget>
+                <layout class="QHBoxLayout" name="horizontalLayout_selectTabOnClose">
+                 <item>
+                  <widget class="QLabel" name="label_selectTabOnClose">
+                   <property name="text">
+                    <string>When closing the active tab, activate:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="selectTabOnClose">
+                   <item>
+                    <property name="text">
+                     <string>Previous tab</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Next tab</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Previously active tab</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_selectTabOnClose">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Policy::Expanding</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
                </item>
                <item>
                 <widget class="QCheckBox" name="openNewTabAfterActive">

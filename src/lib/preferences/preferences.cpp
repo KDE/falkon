@@ -253,7 +253,7 @@ Preferences::Preferences(BrowserWindow* window)
     //TABS
     settings.beginGroup(QSL("Browser-Tabs-Settings"));
     ui->hideTabsOnTab->setChecked(settings.value(QSL("hideTabsWithOneTab"), false).toBool());
-    ui->activateLastTab->setChecked(settings.value(QSL("ActivateLastTabWhenClosingActual"), false).toBool());
+    ui->selectTabOnClose->setCurrentIndex(settings.value(QSL("selectTabOnClose"), 0).toInt());
     ui->openNewTabAfterActive->setChecked(settings.value(QSL("newTabAfterActive"), true).toBool());
     ui->openNewEmptyTabAfterActive->setChecked(settings.value(QSL("newEmptyTabAfterActive"), false).toBool());
     ui->openPopupsInTabs->setChecked(settings.value(QSL("OpenPopupsInTabs"), false).toBool());
@@ -991,7 +991,7 @@ void Preferences::saveSettings()
     //TABS
     settings.beginGroup(QSL("Browser-Tabs-Settings"));
     settings.setValue(QSL("hideTabsWithOneTab"), ui->hideTabsOnTab->isChecked());
-    settings.setValue(QSL("ActivateLastTabWhenClosingActual"), ui->activateLastTab->isChecked());
+    settings.setValue(QSL("selectTabOnClose"), ui->selectTabOnClose->currentIndex());
     settings.setValue(QSL("newTabAfterActive"), ui->openNewTabAfterActive->isChecked());
     settings.setValue(QSL("newEmptyTabAfterActive"), ui->openNewEmptyTabAfterActive->isChecked());
     settings.setValue(QSL("OpenPopupsInTabs"), ui->openPopupsInTabs->isChecked());

@@ -128,11 +128,24 @@ void TabBar::loadSettings()
     Settings settings;
     settings.beginGroup(QSL("Browser-Tabs-Settings"));
     m_hideTabBarWithOneTab = settings.value(QSL("hideTabsWithOneTab"), false).toBool();
-    bool activateLastTab = settings.value(QSL("ActivateLastTabWhenClosingActual"), false).toBool();
+    int selectTabOnClose = settings.value(QSL("selectTabOnClose"), 0).toInt();
     m_showCloseOnInactive = settings.value(QSL("showCloseOnInactiveTabs"), 0).toInt(nullptr);
     settings.endGroup();
 
-    setSelectionBehaviorOnRemove(activateLastTab ? QTabBar::SelectPreviousTab : QTabBar::SelectRightTab);
+    QTabBar::SelectionBehavior selectionBehavior;
+    switch (selectTabOnClose) {
+    case 0:
+        selectionBehavior = QTabBar::SelectLeftTab;
+        break;
+    case 1:
+        selectionBehavior = QTabBar::SelectRightTab;
+        break;
+    case 2:
+        selectionBehavior = QTabBar::SelectPreviousTab;
+        break;
+    }
+    setSelectionBehaviorOnRemove(selectionBehavior);
+
     setVisible(!(count() <= 1 && m_hideTabBarWithOneTab));
 
     setUpLayout();

@@ -270,6 +270,21 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
                     << "UserAgents were not changed.";
         }
     }
+
+    if (prof < Updater::Version(QStringLiteral("26.11.71"))) {
+        QSettings settings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"), QSettings::IniFormat);
+
+        settings.beginGroup(QSL("Browser-Tabs-Settings"));
+
+        const bool activateLastTab = settings.value(QSL("ActivateLastTabWhenClosingActual"), false).toBool();
+        settings.setValue(QSL("selectTabOnClose"), activateLastTab ? 2 : 1);
+        settings.remove(QSL("ActivateLastTabWhenClosingActual"));
+
+        settings.endGroup();
+        settings.sync();
+
+        qInfo() << "ProfileManager: Updated selectTabOnClose setting";
+    }
 }
 
 void ProfileManager::copyDataToProfile()
