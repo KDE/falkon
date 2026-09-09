@@ -1016,6 +1016,7 @@ void MainApplication::loadSettings()
     webSettings->setAttribute(QWebEngineSettings::HyperlinkAuditingEnabled, false);
     webSettings->setAttribute(QWebEngineSettings::FullScreenSupportEnabled, true);
     webSettings->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, true);
+    webSettings->setAttribute(QWebEngineSettings::LocalContentCanAccessFileUrls, true);
     webSettings->setAttribute(QWebEngineSettings::FocusOnNavigationEnabled, false);
 
     webSettings->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, settings.value(QSL("allowJavaScriptActivateWindow"), false).toBool());
