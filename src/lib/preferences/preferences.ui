@@ -791,6 +791,13 @@
                 </widget>
                </item>
                <item>
+                <widget class="QCheckBox" name="reverseNewTabsOrder">
+                 <property name="text">
+                  <string>Reverse new tabs order</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <widget class="QCheckBox" name="openPopupsInTabs">
                  <property name="text">
                   <string>Open popup windows in tabs</string>

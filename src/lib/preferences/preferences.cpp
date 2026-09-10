@@ -256,6 +256,7 @@ Preferences::Preferences(BrowserWindow* window)
     ui->selectTabOnClose->setCurrentIndex(settings.value(QSL("selectTabOnClose"), 0).toInt());
     ui->openNewTabAfterActive->setChecked(settings.value(QSL("newTabAfterActive"), true).toBool());
     ui->openNewEmptyTabAfterActive->setChecked(settings.value(QSL("newEmptyTabAfterActive"), false).toBool());
+    ui->reverseNewTabsOrder->setChecked(settings.value(QSL("reverseNewTabsOrder"), false).toBool());
     ui->openPopupsInTabs->setChecked(settings.value(QSL("OpenPopupsInTabs"), false).toBool());
     ui->blockAutomaticPopups->setChecked(settings.value(QSL("BlockAutomaticPopups"), false).toBool());
     ui->alwaysSwitchTabsWithWheel->setChecked(settings.value(QSL("AlwaysSwitchTabsWithWheel"), false).toBool());
@@ -994,6 +995,7 @@ void Preferences::saveSettings()
     settings.setValue(QSL("selectTabOnClose"), ui->selectTabOnClose->currentIndex());
     settings.setValue(QSL("newTabAfterActive"), ui->openNewTabAfterActive->isChecked());
     settings.setValue(QSL("newEmptyTabAfterActive"), ui->openNewEmptyTabAfterActive->isChecked());
+    settings.setValue(QSL("reverseNewTabsOrder"), ui->reverseNewTabsOrder->isChecked());
     settings.setValue(QSL("OpenPopupsInTabs"), ui->openPopupsInTabs->isChecked());
     settings.setValue(QSL("BlockAutomaticPopups"), ui->blockAutomaticPopups->isChecked());
     settings.setValue(QSL("AlwaysSwitchTabsWithWheel"), ui->alwaysSwitchTabsWithWheel->isChecked());

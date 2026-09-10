@@ -162,6 +162,7 @@ void TabWidget::loadSettings()
     m_showClosedTabsButton = settings.value(QSL("showClosedTabsButton"), false).toBool();
     m_newTabAfterActive = settings.value(QSL("newTabAfterActive"), true).toBool();
     m_newEmptyTabAfterActive = settings.value(QSL("newEmptyTabAfterActive"), false).toBool();
+    m_reverseNewTabsOrder = settings.value(QSL("reverseNewTabsOrder"), false).toBool();
     settings.endGroup();
 
     settings.beginGroup(QSL("Web-URL-Settings"));
@@ -335,7 +336,12 @@ int TabWidget::addView(const LoadRequest &req, const QString &title, const Qz::N
         // If we are opening newBgTab from pinned tab, make sure it won't be
         // opened between other pinned tabs
         if (openFlags & Qz::NT_NotSelectedTab && m_lastBackgroundTab) {
-            position = m_lastBackgroundTab->tabIndex() + 1;
+            if (m_reverseNewTabsOrder) {
+                position = m_lastBackgroundTab->tabIndex();
+            }
+            else {
+                position = m_lastBackgroundTab->tabIndex() + 1;
+            }
         }
         else {
             position = qMax(currentIndex() + 1, m_tabBar->pinnedTabsCount());

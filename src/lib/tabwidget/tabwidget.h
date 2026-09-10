@@ -176,6 +176,7 @@ private:
     bool m_showClosedTabsButton;
     bool m_newTabAfterActive;
     bool m_newEmptyTabAfterActive;
+    bool m_reverseNewTabsOrder;
     QUrl m_urlOnNewTab;
 
     bool m_currentTabFresh;
