@@ -273,17 +273,26 @@ void ProfileManager::updateProfile(const QString &current, const QString &profil
 
     if (prof < Updater::Version(QStringLiteral("26.11.71"))) {
         QSettings settings(DataPaths::currentProfilePath() + QLatin1String("/settings.ini"), QSettings::IniFormat);
+        QSettings extensionsSettings(DataPaths::currentProfilePath() + QLatin1String("/extensions/extensions.ini"), QSettings::IniFormat);
 
         settings.beginGroup(QSL("Browser-Tabs-Settings"));
+        extensionsSettings.beginGroup(QSL("VerticalTabs"));
 
         const bool activateLastTab = settings.value(QSL("ActivateLastTabWhenClosingActual"), false).toBool();
         settings.setValue(QSL("selectTabOnClose"), activateLastTab ? 2 : 1);
         settings.remove(QSL("ActivateLastTabWhenClosingActual"));
 
+        const bool appendChild = extensionsSettings.value(QSL("AddChildBehavior"), 0).toInt() == 0;
+        settings.setValue(QSL("reverseNewTabsOrder"), !appendChild);
+        extensionsSettings.remove(QSL("AddChildBehavior"));
+
         settings.endGroup();
         settings.sync();
+        extensionsSettings.endGroup();
+        extensionsSettings.sync();
 
         qInfo() << "ProfileManager: Updated selectTabOnClose setting";
+        qInfo() << "ProfileManager: Updated reverseNewTabsOrder setting";
     }
 }
 

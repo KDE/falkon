@@ -169,6 +169,8 @@ void TabWidget::loadSettings()
     m_urlOnNewTab = settings.value(QSL("newTabUrl"), QSL("falkon:speeddial")).toUrl();
     settings.endGroup();
 
+    WebTab::setAddChildBehavior(m_reverseNewTabsOrder ? WebTab::PrependChild : WebTab::AppendChild);
+
     m_tabBar->loadSettings();
 
     updateClosedTabsButton();
