@@ -261,6 +261,7 @@ void SearchEnginesDialog::accept()
     }
 
     QVector<SearchEngine> allEngines;
+    SearchEngine defaultEngine;
 
     for (int i = 0; i < ui->treeWidget->topLevelItemCount(); i++) {
         QTreeWidgetItem* item = ui->treeWidget->topLevelItem(i);
@@ -272,11 +273,12 @@ void SearchEnginesDialog::accept()
         allEngines.append(engine);
 
         if (isDefaultEngine(item)) {
-            m_manager->setDefaultEngine(engine);
+            defaultEngine = engine;
         }
     }
 
     m_manager->setAllEngines(allEngines);
+    m_manager->setDefaultEngine(defaultEngine);
 
     QDialog::accept();
 }
