@@ -36,12 +36,14 @@ public:
     void setName(const QString &name);
     void setUrl(const QString &url);
     void setPostData(const QString &postData);
+    void setSuggestionsUrl(const QString &suggestionsUrl);
     void setShortcut(const QString &shortcut);
     void setIcon(const QIcon &icon);
 
     QString name();
     QString url();
     QString postData();
+    QString suggestionsUrl();
     QString shortcut();
     QIcon icon();
 

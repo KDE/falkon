@@ -15,7 +15,7 @@
     <enum>QFormLayout::ExpandingFieldsGrow</enum>
    </property>
    <item row="0" column="0">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="nameLabel">
      <property name="text">
       <string>Name:</string>
      </property>
@@ -25,9 +25,9 @@
     <widget class="QLineEdit" name="name"/>
    </item>
    <item row="1" column="0">
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="urlLabel">
      <property name="text">
-      <string>Url:</string>
+      <string>URL:</string>
      </property>
     </widget>
    </item>
@@ -38,24 +38,44 @@
      </property>
     </widget>
    </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="postDataLabel">
+     <property name="text">
+      <string>Post Data:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="postData"/>
+   </item>
    <item row="3" column="0">
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="suggestionsUrlLabel">
+     <property name="text">
+      <string>Suggestions URL:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="suggestionsUrl"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="shortcutLabel">
      <property name="text">
       <string>Shortcut:</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
+   <item row="4" column="1">
     <widget class="QLineEdit" name="shortcut"/>
    </item>
-   <item row="4" column="0">
+   <item row="5" column="0">
     <widget class="QLabel" name="iconLabel">
      <property name="text">
       <string>Icon:</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
+   <item row="5" column="1">
     <widget class="QFrame" name="editIconFrame">
      <layout class="QHBoxLayout" name="editIconLayout">
       <property name="margin">
@@ -100,14 +120,14 @@
      </layout>
     </widget>
    </item>
-   <item row="5" column="0" colspan="2">
-    <widget class="QLabel" name="label_4">
+   <item row="6" column="0" colspan="2">
+    <widget class="QLabel" name="hintLabel">
      <property name="text">
-      <string>&lt;b&gt;Note: &lt;/b&gt;%s in url or post data represent searched string</string>
+      <string>&lt;b&gt;Note: &lt;/b&gt;%s in URLs and post data represent searched string</string>
      </property>
     </widget>
    </item>
-   <item row="6" column="1">
+   <item row="7" column="1">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -116,16 +136,6 @@
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
     </widget>
-   </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="label_5">
-     <property name="text">
-      <string>Post Data:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="1">
-    <widget class="QLineEdit" name="postData"/>
    </item>
   </layout>
  </widget>
@@ -165,3 +175,4 @@
   </connection>
  </connections>
 </ui>
+

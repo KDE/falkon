@@ -60,6 +60,7 @@ void SearchEnginesDialog::addEngine()
     engine.name = dialog.name();
     engine.url = dialog.url();
     engine.postData = dialog.postData().toUtf8();
+    engine.suggestionsUrl = dialog.suggestionsUrl();
     engine.shortcut = dialog.shortcut();
     engine.icon = SearchEnginesManager::iconForSearchEngine(QUrl::fromEncoded(dialog.url().toUtf8()));
 
@@ -109,6 +110,7 @@ void SearchEnginesDialog::editEngine()
     dialog.setName(engine.name);
     dialog.setUrl(engine.url);
     dialog.setPostData(QString::fromUtf8(engine.postData));
+    dialog.setSuggestionsUrl(engine.suggestionsUrl);
     dialog.setShortcut(engine.shortcut);
     dialog.setIcon(engine.icon);
 
@@ -119,6 +121,7 @@ void SearchEnginesDialog::editEngine()
     engine.name = dialog.name();
     engine.url = dialog.url();
     engine.postData = dialog.postData().toUtf8();
+    engine.suggestionsUrl = dialog.suggestionsUrl();
     engine.shortcut = dialog.shortcut();
     engine.icon = dialog.icon();
 

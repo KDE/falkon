@@ -68,6 +68,17 @@ void EditSearchEngine::setPostData(const QString &postData)
     ui->postData->setCursorPosition(0);
 }
 
+QString EditSearchEngine::suggestionsUrl()
+{
+    return ui->suggestionsUrl->text().trimmed();
+}
+
+void EditSearchEngine::setSuggestionsUrl(const QString &suggestionsUrl)
+{
+    ui->suggestionsUrl->setText(suggestionsUrl);
+    ui->suggestionsUrl->setCursorPosition(0);
+}
+
 QString EditSearchEngine::shortcut()
 {
     return ui->shortcut->text().trimmed();

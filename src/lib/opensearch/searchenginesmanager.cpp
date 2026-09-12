@@ -325,6 +325,7 @@ void SearchEnginesManager::addEngineFromForm(const QVariantMap &formData, WebVie
     engine.icon = dialog.icon();
     engine.url = dialog.url();
     engine.shortcut = dialog.shortcut();
+    engine.suggestionsUrl = dialog.suggestionsUrl();
     engine.postData = dialog.postData().toUtf8();
 
     if (engine.name.isEmpty() || engine.url.isEmpty()) {
