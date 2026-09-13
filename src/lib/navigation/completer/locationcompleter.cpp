@@ -91,9 +91,11 @@ void LocationCompleter::complete(const QString &string)
             m_openSearchEngine->setNetworkAccessManager(mApp->networkManager());
             connect(m_openSearchEngine, &OpenSearchEngine::suggestions, this, &LocationCompleter::addSuggestions);
         }
-        m_openSearchEngine->setSuggestionsUrl(LocationBar::searchEngine().suggestionsUrl);
-        m_openSearchEngine->setSuggestionsParameters(LocationBar::searchEngine().suggestionsParameters);
-        m_suggestionsTerm = trimmedStr;
+        const auto searchEngineSuggestion = LocationBar::suggestSearchEngine(trimmedStr);
+        m_suggestionsEngine = searchEngineSuggestion.searchEngine;
+        m_openSearchEngine->setSuggestionsUrl(m_suggestionsEngine.suggestionsUrl);
+        m_openSearchEngine->setSuggestionsParameters(m_suggestionsEngine.suggestionsParameters);
+        m_suggestionsTerm = searchEngineSuggestion.searchString;
         m_openSearchEngine->requestSuggestions(m_suggestionsTerm);
     } else {
         m_oldSuggestions.clear();
@@ -196,6 +198,7 @@ void LocationCompleter::addSuggestions(const QStringList &suggestions)
         item->setData(suggestion, LocationCompleterModel::UrlRole);
         item->setData(m_suggestionsTerm, LocationCompleterModel::SearchStringRole);
         item->setData(true, LocationCompleterModel::SearchSuggestionRole);
+        item->setData(m_suggestionsEngine.name, LocationCompleterModel::SearchEngineNameRole);
         items.append(item);
     }
 
@@ -320,7 +323,7 @@ LoadRequest LocationCompleter::createLoadRequest(const QModelIndex &index)
         bookmark = index.data(LocationCompleterModel::BookmarkItemRole).value<BookmarkItem*>();
     } else if (index.data(LocationCompleterModel::SearchSuggestionRole).toBool()) {
         const QString text = index.data(LocationCompleterModel::TitleRole).toString();
-        request = mApp->searchEnginesManager()->searchResult(LocationBar::searchEngine(), text);
+        request = mApp->searchEnginesManager()->searchResult(m_suggestionsEngine, text);
     } else if (index.data(LocationCompleterModel::VisitSearchItemRole).toBool()) {
         const auto action = LocationBar::loadAction(index.data(LocationCompleterModel::SearchStringRole).toString());
         switch (action.type) {

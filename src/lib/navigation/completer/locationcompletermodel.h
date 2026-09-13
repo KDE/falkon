@@ -41,7 +41,8 @@ public:
         TabPositionTabRole,
         ImageRole,
         VisitSearchItemRole,
-        SearchSuggestionRole
+        SearchSuggestionRole,
+        SearchEngineNameRole
     };
 
     explicit LocationCompleterModel(QObject* parent = nullptr);

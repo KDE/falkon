@@ -21,6 +21,7 @@
 #include <QObject>
 
 #include "qzcommon.h"
+#include "searchenginesmanager.h"
 
 class QUrl;
 class QModelIndex;
@@ -84,6 +85,7 @@ private:
     OpenSearchEngine* m_openSearchEngine = nullptr;
     QStringList m_oldSuggestions;
     QString m_suggestionsTerm;
+    SearchEngine m_suggestionsEngine;
 
     static LocationCompleterView* s_view;
     static LocationCompleterModel* s_model;

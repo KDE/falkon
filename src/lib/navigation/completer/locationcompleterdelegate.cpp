@@ -157,7 +157,12 @@ void LocationCompleterDelegate::paint(QPainter* painter, const QStyleOptionViewI
         } else if (isVisitSearchItem && (!isWebSearch || m_forceVisitItem)) {
             link = tr("Visit");
         } else {
-            QString searchEngineName = loadAction.searchEngine.name;
+            QString searchEngineName;
+            if (isSearchSuggestion) {
+                searchEngineName = index.data(LocationCompleterModel::SearchEngineNameRole).toString();
+            } else {
+                searchEngineName = loadAction.searchEngine.name;
+            }
             if (searchEngineName.isEmpty()) {
                 searchEngineName = LocationBar::searchEngine().name;
             }

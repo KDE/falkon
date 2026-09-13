@@ -227,4 +227,46 @@ void LocationBarTest::loadAction_kdebug392445()
     QCOMPARE(action.loadRequest.url(), QUrl(QSL("http://www.example.com/my%20beautiful%20page")));
 }
 
+void LocationBarTest::suggestSearchEngineTest()
+{
+    qzSettings->searchFromAddressBar = true;
+
+    SearchEngine default_engine;
+    default_engine.name = QSL("Default Engine");
+    default_engine.url = QSL("http://default/%s");
+    default_engine.shortcut = QSL("d");
+    mApp->searchEnginesManager()->addEngine(default_engine);
+    mApp->searchEnginesManager()->setDefaultEngine(default_engine);
+
+    SearchEngine another_engine;
+    another_engine.name = QSL("Another Engine");
+    another_engine.url = QSL("http://another/%s");
+    another_engine.shortcut = QSL("a");
+    mApp->searchEnginesManager()->addEngine(another_engine);
+
+    auto s = LocationBar::suggestSearchEngine(QSL("test"));
+    QCOMPARE(s.searchEngine.name, QSL("Default Engine"));
+    QCOMPARE(s.searchString, QSL("test"));
+
+    s = LocationBar::suggestSearchEngine(QSL("d test"));
+    QCOMPARE(s.searchEngine.name, QSL("Default Engine"));
+    QCOMPARE(s.searchString, QSL("test"));
+
+    s = LocationBar::suggestSearchEngine(QSL("a test"));
+    QCOMPARE(s.searchEngine.name, QSL("Another Engine"));
+    QCOMPARE(s.searchString, QSL("test"));
+
+    s = LocationBar::suggestSearchEngine(QSL("a "));
+    QCOMPARE(s.searchEngine.name, QSL("Default Engine"));
+    QCOMPARE(s.searchString, QSL("a"));
+
+    s = LocationBar::suggestSearchEngine(QSL("  a  test  "));
+    QCOMPARE(s.searchEngine.name, QSL("Another Engine"));
+    QCOMPARE(s.searchString, QSL("test"));
+
+    s = LocationBar::suggestSearchEngine(QSL("x test"));
+    QCOMPARE(s.searchEngine.name, QSL("Default Engine"));
+    QCOMPARE(s.searchString, QSL("x test"));
+}
+
 FALKONTEST_MAIN(LocationBarTest)

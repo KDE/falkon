@@ -63,8 +63,14 @@ public:
     TabbedWebView* webView() const;
     void setWebView(TabbedWebView* view);
 
+    struct SearchEngineSuggestion {
+        SearchEngine searchEngine;
+        QString searchString;
+    };
+
     static QString convertUrlToText(const QUrl &url);
     static SearchEngine searchEngine();
+    static SearchEngineSuggestion suggestSearchEngine(const QString &text);
     static LoadAction loadAction(const QString &text);
 
 public Q_SLOTS:

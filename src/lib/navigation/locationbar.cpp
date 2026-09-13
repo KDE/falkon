@@ -231,6 +231,24 @@ SearchEnginesManager::Engine LocationBar::searchEngine()
     }
 }
 
+LocationBar::SearchEngineSuggestion LocationBar::suggestSearchEngine(const QString &text) {
+    const QString &t = text.trimmed();
+
+    const int firstSpacePos = t.indexOf(QLatin1Char(' '));
+    if (qzSettings->searchFromAddressBar && firstSpacePos != -1) {
+        const QString shortcut = t.left(firstSpacePos);
+        const QString searchString = t.mid(firstSpacePos).trimmed();
+
+        SearchEngine searchEngine =
+            mApp->searchEnginesManager()->engineForShortcut(shortcut);
+        if (searchEngine.isValid()) {
+            return {searchEngine, searchString};
+        }
+    }
+
+    return {searchEngine(), t};
+}
+
 LocationBar::LoadAction LocationBar::loadAction(const QString &text)
 {
     LoadAction action;
