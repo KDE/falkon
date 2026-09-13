@@ -20,6 +20,7 @@ falkon_tests(
     adblocktest
     updatertest
     locationbartest
+    opensearchenginetest
     webviewtest
     webtabtest
     sqldatabasetest

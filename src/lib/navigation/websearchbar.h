@@ -62,7 +62,7 @@ private Q_SLOTS:
     void openSearchEnginesDialog();
 
     void enableSearchSuggestions(bool enable);
-    void addSuggestions(const QStringList &list);
+    void addSuggestions(const OpenSearchEngine::Suggestions &suggestions);
 
     void addEngineFromAction();
     void pasteAndGo();

@@ -179,7 +179,7 @@ void LocationCompleter::slotPopupClosed()
     Q_EMIT popupClosed();
 }
 
-void LocationCompleter::addSuggestions(const QStringList &suggestions)
+void LocationCompleter::addSuggestions(const OpenSearchEngine::Suggestions &suggestions)
 {
     const auto suggestionItems = s_model->suggestionItems();
 
@@ -191,11 +191,19 @@ void LocationCompleter::addSuggestions(const QStringList &suggestions)
 
     // Add new suggestions
     QList<QStandardItem*> items;
-    for (const QString &suggestion : suggestions) {
+    for (int i = 0; i < suggestions.size(); ++i) {
+        const QString &completion = suggestions.completions.at(i);
+        QUrl url;
+        if (suggestions.urls.size() > 0) {
+            url = suggestions.urls.at(i);
+        } else {
+            url = QUrl();
+        }
+
         auto* item = new QStandardItem();
-        item->setText(suggestion);
-        item->setData(suggestion, LocationCompleterModel::TitleRole);
-        item->setData(suggestion, LocationCompleterModel::UrlRole);
+        item->setText(completion);
+        item->setData(completion, LocationCompleterModel::TitleRole);
+        item->setData(url, LocationCompleterModel::UrlRole);
         item->setData(m_suggestionsTerm, LocationCompleterModel::SearchStringRole);
         item->setData(true, LocationCompleterModel::SearchSuggestionRole);
         item->setData(m_suggestionsEngine.name, LocationCompleterModel::SearchEngineNameRole);
@@ -322,8 +330,13 @@ LoadRequest LocationCompleter::createLoadRequest(const QModelIndex &index)
     } else if (index.data(LocationCompleterModel::BookmarkRole).toBool()) {
         bookmark = index.data(LocationCompleterModel::BookmarkItemRole).value<BookmarkItem*>();
     } else if (index.data(LocationCompleterModel::SearchSuggestionRole).toBool()) {
-        const QString text = index.data(LocationCompleterModel::TitleRole).toString();
-        request = mApp->searchEnginesManager()->searchResult(m_suggestionsEngine, text);
+        const QUrl url = index.data(LocationCompleterModel::UrlRole).toUrl();
+        if (url.isValid()) {
+            request = url;
+        } else {
+            const QString text = index.data(LocationCompleterModel::TitleRole).toString();
+            request = mApp->searchEnginesManager()->searchResult(m_suggestionsEngine, text);
+        }
     } else if (index.data(LocationCompleterModel::VisitSearchItemRole).toBool()) {
         const auto action = LocationBar::loadAction(index.data(LocationCompleterModel::SearchStringRole).toString());
         switch (action.type) {

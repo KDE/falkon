@@ -132,10 +132,10 @@ void WebSearchBar::aboutToShowMenu()
     });
 }
 
-void WebSearchBar::addSuggestions(const QStringList &list)
+void WebSearchBar::addSuggestions(const OpenSearchEngine::Suggestions &suggestions)
 {
     if (qzSettings->showWSBSearchSuggestions) {
-        QStringList list_ = list.mid(0, 6);
+        QStringList list_ = suggestions.completions.mid(0, 6);
         m_completerModel->setStringList(list_);
         m_completer->complete();
     }

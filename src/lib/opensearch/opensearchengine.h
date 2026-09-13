@@ -53,11 +53,15 @@ class FALKON_EXPORT OpenSearchEngine : public QObject
 {
     Q_OBJECT
 
-Q_SIGNALS:
-    void imageChanged();
-    void suggestions(const QStringList &suggestions);
-
 public:
+    struct Suggestions {
+        QStringList completions;
+        QList<QUrl> urls;
+
+        qsizetype size() const;
+        void clear();
+    };
+
     using Parameter = QPair<QString, QString>;
     using Parameters = QList<Parameter>;
 
@@ -128,6 +132,12 @@ public:
 
     bool operator==(const OpenSearchEngine &other) const;
     bool operator<(const OpenSearchEngine &other) const;
+
+    static Suggestions parseSuggestions(const QByteArray &response);
+
+Q_SIGNALS:
+    void imageChanged();
+    void suggestions(const Suggestions &suggestions);
 
 public Q_SLOTS:
     void requestSuggestions(const QString &searchTerm);

@@ -621,6 +621,69 @@ void OpenSearchEngine::requestSearchResults(const QString &searchTerm)
     m_delegate->performSearchRequest(request, operation, data);
 }
 
+qsizetype OpenSearchEngine::Suggestions::size() const {
+    return this->completions.size();
+}
+
+void OpenSearchEngine::Suggestions::clear() {
+    this->completions.clear();
+    this->urls.clear();
+}
+
+OpenSearchEngine::Suggestions OpenSearchEngine::parseSuggestions(const QByteArray &response)
+{
+    // See https://github.com/dewitt/opensearch/blob/master/mediawiki/Specifications/OpenSearch/Extensions/Suggestions/1.1/Draft%201.wiki
+    //
+    // An example of two suggestions:
+    //
+    // ```json
+    // [
+    //     "Example",
+    //     ["Example 1", "Example 2"],
+    //     ["Description 1", "Description 2"],
+    //     ["https://example.org/1", "https://example.org/2"]
+    // ]
+    // ```
+
+    OpenSearchEngine::Suggestions suggestions;
+
+    QJsonParseError err;
+    QJsonDocument json = QJsonDocument::fromJson(response, &err);
+    const QVariant res = json.toVariant();
+
+    if (err.error != QJsonParseError::NoError || res.typeId() != QMetaType::QVariantList)
+        return suggestions;
+
+    const QVariantList list = res.toList();
+
+    if (list.size() < 2)
+        return suggestions;
+
+    const QVariantList completionsVariants = list.at(1).toList();
+    for (int i = 0; i < completionsVariants.size(); i++) {
+        const QString completion = completionsVariants.at(i).toString();
+        suggestions.completions.append(completion);
+    }
+
+    if (list.size() < 4)
+        return suggestions;
+
+    const QVariantList urlVariants = list.at(3).toList();
+
+    if (completionsVariants.size() != urlVariants.size())
+        return suggestions;
+
+    for (int i = 0; i < urlVariants.size(); i++) {
+        QUrl url = urlVariants.at(i).toUrl();
+        if (!url.isValid() || url.scheme().isEmpty()) {
+            url = QUrl();
+        }
+        suggestions.urls.append(url);
+    }
+
+    return suggestions;
+}
+
 void OpenSearchEngine::suggestionsObtained()
 {
     const QByteArray response = m_suggestionsReply->readAll();
@@ -629,26 +692,7 @@ void OpenSearchEngine::suggestionsObtained()
     m_suggestionsReply->deleteLater();
     m_suggestionsReply = nullptr;
 
-    QJsonParseError err;
-    QJsonDocument json = QJsonDocument::fromJson(response, &err);
-    const QVariant res = json.toVariant();
-
-    if (err.error != QJsonParseError::NoError || res.typeId() != QMetaType::QVariantList)
-        return;
-
-    const QVariantList list = res.toList();
-
-    if (list.size() < 2)
-        return;
-
-    QStringList out;
-
-    const auto items = list.at(1).toList();
-    for (const QVariant &v : items) {
-        out.append(v.toString());
-    }
-
-    Q_EMIT suggestions(out);
+    Q_EMIT suggestions(parseSuggestions(response));
 }
 
 /*!

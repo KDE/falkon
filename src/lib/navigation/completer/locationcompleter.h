@@ -60,7 +60,7 @@ Q_SIGNALS:
 private Q_SLOTS:
     void refreshJobFinished();
     void slotPopupClosed();
-    void addSuggestions(const QStringList &suggestions);
+    void addSuggestions(const OpenSearchEngine::Suggestions &suggestions);
 
     void currentChanged(const QModelIndex &index);
     void indexActivated(const QModelIndex &index);
@@ -83,7 +83,7 @@ private:
     bool m_popupClosed;
     bool m_ignoreCurrentChanged = false;
     OpenSearchEngine* m_openSearchEngine = nullptr;
-    QStringList m_oldSuggestions;
+    OpenSearchEngine::Suggestions m_oldSuggestions;
     QString m_suggestionsTerm;
     SearchEngine m_suggestionsEngine;
 
