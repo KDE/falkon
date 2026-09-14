@@ -315,10 +315,10 @@ void BrowserWindow::postLaunch()
     }
 
     if (addTab) {
-        m_tabWidget->addView(startUrl, Qz::NT_CleanSelectedTabAtTheEnd);
+        m_tabWidget->addView(startUrl, Qz::NT_CleanSelectedTab);
 
         for(const QUrl &url : std::as_const(m_startUrls)) {
-            m_tabWidget->addView(url, Qz::NT_NotSelectedTabAtTheEnd);
+            m_tabWidget->addView(url, Qz::NT_NotSelectedTab);
         }
 
         if (startUrl.isEmpty() || startUrl.toString() == QLatin1String("falkon:speeddial")) {

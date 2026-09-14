@@ -777,7 +777,7 @@ void MainApplication::addNewTab(const QUrl &url)
     BrowserWindow* window = getWindow();
 
     if (window) {
-        window->tabWidget()->addView(url, url.isEmpty() ? Qz::NT_SelectedNewEmptyTab : Qz::NT_SelectedTabAtTheEnd);
+        window->tabWidget()->addView(url, url.isEmpty() ? Qz::NT_SelectedNewEmptyTab : Qz::NT_SelectedTab);
     }
 }
 
