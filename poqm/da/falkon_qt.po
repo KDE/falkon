@@ -4204,7 +4204,7 @@ msgctxt "PluginsManager|"
 msgid "Are you sure you want to remove '%1'?"
 msgstr "Er du sikker på, at du vil slette sessionen '%1'?"
 
-#: lib/preferences/preferences.cpp:157 lib/preferences/preferences.cpp:684
+#: lib/preferences/preferences.cpp:157 lib/preferences/preferences.cpp:685
 msgctxt "Preferences|"
 msgid "Default"
 msgstr "Standard"
@@ -4214,7 +4214,7 @@ msgctxt "Preferences|"
 msgid "Set as default"
 msgstr "Sæt som standard"
 
-#: lib/preferences/preferences.cpp:340
+#: lib/preferences/preferences.cpp:341
 #, fuzzy
 #| msgctxt "FalkonSchemeReply|"
 #| msgid "Auto"
@@ -4222,88 +4222,88 @@ msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Auto"
 
-#: lib/preferences/preferences.cpp:342
+#: lib/preferences/preferences.cpp:343
 msgctxt "Preferences|"
 msgid "Light"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:343
+#: lib/preferences/preferences.cpp:344
 msgctxt "Preferences|"
 msgid "Dark"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:353
+#: lib/preferences/preferences.cpp:354
 #, qt-format
 msgctxt "Preferences|"
 msgid "%1%"
 msgstr ""
 
-#: lib/preferences/preferences.cpp:627
+#: lib/preferences/preferences.cpp:628
 msgctxt "Preferences|"
 msgid "Choose executable location..."
 msgstr "Vælg placering for eksekverbar..."
 
-#: lib/preferences/preferences.cpp:670
+#: lib/preferences/preferences.cpp:671
 msgctxt "Preferences|"
 msgid "OSD Notification"
 msgstr "Skærmpåmindelser"
 
-#: lib/preferences/preferences.cpp:671
+#: lib/preferences/preferences.cpp:672
 msgctxt "Preferences|"
 msgid "Drag it on the screen to place it where you want."
 msgstr "Træk den rundt på skærmen for at placere den hvor du ønsker."
 
-#: lib/preferences/preferences.cpp:720
+#: lib/preferences/preferences.cpp:721
 msgctxt "Preferences|"
 msgid "Choose download location..."
 msgstr "Vælg placering for download..."
 
-#: lib/preferences/preferences.cpp:734
+#: lib/preferences/preferences.cpp:735
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
 msgstr "Vælg placering for typografiark..."
 
-#: lib/preferences/preferences.cpp:745
+#: lib/preferences/preferences.cpp:746
 msgctxt "Preferences|"
 msgid "Deleted"
 msgstr "Slettet"
 
-#: lib/preferences/preferences.cpp:853
+#: lib/preferences/preferences.cpp:854
 msgctxt "Preferences|"
 msgid "Choose cache path..."
 msgstr "Vælg mellemlagringssti..."
 
-#: lib/preferences/preferences.cpp:884
+#: lib/preferences/preferences.cpp:885
 msgctxt "Preferences|"
 msgid "New Profile"
 msgstr "Ny profil"
 
-#: lib/preferences/preferences.cpp:884
+#: lib/preferences/preferences.cpp:885
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
 msgstr "Indtast et navn på den nye profil:"
 
-#: lib/preferences/preferences.cpp:894 lib/preferences/preferences.cpp:899
+#: lib/preferences/preferences.cpp:895 lib/preferences/preferences.cpp:900
 msgctxt "Preferences|"
 msgid "Error!"
 msgstr "Fejl!"
 
-#: lib/preferences/preferences.cpp:894
+#: lib/preferences/preferences.cpp:895
 msgctxt "Preferences|"
 msgid "This profile already exists!"
 msgstr "Denne profil eksisterer allerede!"
 
-#: lib/preferences/preferences.cpp:899
+#: lib/preferences/preferences.cpp:900
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
 msgstr "Kan ikke oprette profil bibliotek!"
 
-#: lib/preferences/preferences.cpp:910
+#: lib/preferences/preferences.cpp:911
 msgctxt "Preferences|"
 msgid "Confirmation"
 msgstr "Bekræftelse"
 
-#: lib/preferences/preferences.cpp:911
+#: lib/preferences/preferences.cpp:912
 #, qt-format
 msgctxt "Preferences|"
 msgid ""
@@ -4313,7 +4313,7 @@ msgstr ""
 "Er du sikker på, at du vil slette profilen \"%1\"? Denne handling kan ikke "
 "fortrydes!"
 
-#: lib/preferences/preferences.cpp:926 lib/preferences/preferences.ui:245
+#: lib/preferences/preferences.cpp:927 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
 msgstr "Bemærk: Du kan ikke slette den aktive profil."
@@ -4323,7 +4323,7 @@ msgctxt "Preferences|"
 msgid "Preferences"
 msgstr "Præferencer"
 
-#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2195
+#: lib/preferences/preferences.ui:67 lib/preferences/preferences.ui:2241
 msgctxt "Preferences|"
 msgid "General"
 msgstr "Generelt"
@@ -4546,15 +4546,15 @@ msgid ""
 msgstr ""
 
 #: lib/preferences/preferences.ui:611 lib/preferences/preferences.ui:625
-#: lib/preferences/preferences.ui:1088 lib/preferences/preferences.ui:1449
-#: lib/preferences/preferences.ui:1987 lib/preferences/preferences.ui:2087
-#: lib/preferences/preferences.ui:2766
+#: lib/preferences/preferences.ui:1134 lib/preferences/preferences.ui:1495
+#: lib/preferences/preferences.ui:2033 lib/preferences/preferences.ui:2133
+#: lib/preferences/preferences.ui:2812
 msgctxt "Preferences|"
 msgid "..."
 msgstr "..."
 
 #: lib/preferences/preferences.ui:618 lib/preferences/preferences.ui:632
-#: lib/preferences/preferences.ui:1095
+#: lib/preferences/preferences.ui:1141
 msgctxt "Preferences|"
 msgid "Reset"
 msgstr "Nulstil"
@@ -4597,112 +4597,138 @@ msgctxt "Preferences|"
 msgid "Hide tabs when there is only one tab"
 msgstr "Skjul faneblade når der kun er et faneblad"
 
-#: lib/preferences/preferences.ui:736
+#: lib/preferences/preferences.ui:738
 msgctxt "Preferences|"
-msgid "Activate last tab when closing active tab"
-msgstr "Aktivér forrige faneblad, når det aktive faneblad lukkes"
+msgid "When closing the active tab, activate:"
+msgstr ""
 
-#: lib/preferences/preferences.ui:743
+#: lib/preferences/preferences.ui:746
+#, fuzzy
+#| msgctxt "SearchToolbar|"
+#| msgid "&Previous"
+msgctxt "Preferences|"
+msgid "Previous tab"
+msgstr "&Forrige"
+
+#: lib/preferences/preferences.ui:751
+#, fuzzy
+#| msgctxt "TabWidget|"
+#| msgid "New tab"
+msgctxt "Preferences|"
+msgid "Next tab"
+msgstr "Nyt faneblad"
+
+#: lib/preferences/preferences.ui:756
+msgctxt "Preferences|"
+msgid "Previously active tab"
+msgstr ""
+
+#: lib/preferences/preferences.ui:782
 msgctxt "Preferences|"
 msgid "Open new tabs after active tab"
 msgstr "Opret nye faneblade efter det aktive"
 
-#: lib/preferences/preferences.ui:750
+#: lib/preferences/preferences.ui:789
 msgctxt "Preferences|"
 msgid "Open new empty tabs after active tab"
 msgstr "Åbn nye tomme faneblade efter aktive faneblade"
 
-#: lib/preferences/preferences.ui:757
+#: lib/preferences/preferences.ui:796
+msgctxt "Preferences|"
+msgid "Reverse new tabs order"
+msgstr ""
+
+#: lib/preferences/preferences.ui:803
 msgctxt "Preferences|"
 msgid "Open popup windows in tabs"
 msgstr "Åbn pop op-vinduer i faneblade"
 
-#: lib/preferences/preferences.ui:764
+#: lib/preferences/preferences.ui:810
 msgctxt "Preferences|"
 msgid "Block automatic popups"
 msgstr ""
 
-#: lib/preferences/preferences.ui:771
+#: lib/preferences/preferences.ui:817
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
 msgstr "Skift altid mellem faneblade med musehjulet"
 
-#: lib/preferences/preferences.ui:778
+#: lib/preferences/preferences.ui:824
 msgctxt "Preferences|"
 msgid "Automatically switch to newly opened tab"
 msgstr "Skift automatisk til nyt faneblad"
 
-#: lib/preferences/preferences.ui:785
+#: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
 msgstr "Luk ikke vinduet, når det sidste faneblad lukkes"
 
-#: lib/preferences/preferences.ui:792
+#: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
 msgid "Ask when closing multiple tabs"
 msgstr "Spørg når flere faneblade lukkes"
 
-#: lib/preferences/preferences.ui:799
+#: lib/preferences/preferences.ui:845
 msgctxt "Preferences|"
 msgid "Show closed tabs button"
 msgstr "Vis lukkede fanebladsknap"
 
-#: lib/preferences/preferences.ui:808
+#: lib/preferences/preferences.ui:854
 msgctxt "Preferences|"
 msgid "Show close buttons on inactive tabs:"
 msgstr "Vis lukkeknapper på inaktive faneblade:"
 
-#: lib/preferences/preferences.ui:816
+#: lib/preferences/preferences.ui:862
 msgctxt "Preferences|"
 msgid "Automatic"
 msgstr "Automatisk"
 
-#: lib/preferences/preferences.ui:821
+#: lib/preferences/preferences.ui:867
 msgctxt "Preferences|"
 msgid "Always"
 msgstr "Altid"
 
-#: lib/preferences/preferences.ui:826
+#: lib/preferences/preferences.ui:872
 msgctxt "Preferences|"
 msgid "Never"
 msgstr "Aldrig"
 
-#: lib/preferences/preferences.ui:866
+#: lib/preferences/preferences.ui:912
 msgctxt "Preferences|"
 msgid "Address Bar behaviour"
 msgstr "Opførsel for adresselinje"
 
-#: lib/preferences/preferences.ui:874
+#: lib/preferences/preferences.ui:920
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
 msgstr "Foreslå når der skrives i adresselinjen:"
 
-#: lib/preferences/preferences.ui:888
+#: lib/preferences/preferences.ui:934
 msgctxt "Preferences|"
 msgid "History and Bookmarks"
 msgstr "Historik og bogmærker"
 
-#: lib/preferences/preferences.ui:893
+#: lib/preferences/preferences.ui:939
 msgctxt "Preferences|"
 msgid "History"
 msgstr "Historik"
 
-#: lib/preferences/preferences.ui:898
+#: lib/preferences/preferences.ui:944
 msgctxt "Preferences|"
 msgid "Bookmarks"
 msgstr "Bogmærker"
 
-#: lib/preferences/preferences.ui:903
+#: lib/preferences/preferences.ui:949
 msgctxt "Preferences|"
 msgid "Nothing"
 msgstr "Ingenting"
 
-#: lib/preferences/preferences.ui:929
+#: lib/preferences/preferences.ui:975
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
 msgstr "Aktivér forslag mens der skrives"
 
-#: lib/preferences/preferences.ui:936
+#: lib/preferences/preferences.ui:982
 msgctxt "Preferences|"
 msgid ""
 "Press \"Shift\" to not switch the tab but load the url in the current tab"
@@ -4710,17 +4736,17 @@ msgstr ""
 "Tryk på \"Skift\" for ikke at skifte fanebladet men indlæse url'en i det "
 "aktuelle faneblad"
 
-#: lib/preferences/preferences.ui:939
+#: lib/preferences/preferences.ui:985
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
 msgstr "Forslå at skifte faneblad hvis fuldførte url allerede er indlæst"
 
-#: lib/preferences/preferences.ui:946
+#: lib/preferences/preferences.ui:992
 msgctxt "Preferences|"
 msgid "Always show go icon"
 msgstr "Vis altid gå-ikon"
 
-#: lib/preferences/preferences.ui:953
+#: lib/preferences/preferences.ui:999
 #, fuzzy
 #| msgctxt "WebView|"
 #| msgid "Show i&mage"
@@ -4728,138 +4754,138 @@ msgctxt "Preferences|"
 msgid "Show zoom label"
 msgstr "Vis bi&llede"
 
-#: lib/preferences/preferences.ui:960
+#: lib/preferences/preferences.ui:1006
 msgctxt "Preferences|"
 msgid "Select all text by double clicking in address bar"
 msgstr "Vælg al tekst ved at dobbeltklikke i adresselinjen"
 
-#: lib/preferences/preferences.ui:967
+#: lib/preferences/preferences.ui:1013
 msgctxt "Preferences|"
 msgid "Select all text by clicking in address bar"
 msgstr "Vælg al tekst ved at klikke i adresselinjen"
 
-#: lib/preferences/preferences.ui:974
+#: lib/preferences/preferences.ui:1020
 msgctxt "Preferences|"
 msgid "Enable automatic searching from the address bar"
 msgstr "Aktivér automatisk søgning fra adresselinje"
 
-#: lib/preferences/preferences.ui:981
+#: lib/preferences/preferences.ui:1027
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
 msgstr "Søg med standardsøgetjeneste"
 
-#: lib/preferences/preferences.ui:988
+#: lib/preferences/preferences.ui:1034
 msgctxt "Preferences|"
 msgid "Show search suggestions"
 msgstr "Vis søgeforslag"
 
-#: lib/preferences/preferences.ui:995
+#: lib/preferences/preferences.ui:1041
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1018
+#: lib/preferences/preferences.ui:1064
 msgctxt "Preferences|"
 msgid "Show loading progress in address bar"
 msgstr "Vis indlæsningsstatus i adresselinje"
 
-#: lib/preferences/preferences.ui:1051
+#: lib/preferences/preferences.ui:1097
 msgctxt "Preferences|"
 msgid "Fill"
 msgstr "Fyld"
 
-#: lib/preferences/preferences.ui:1056
+#: lib/preferences/preferences.ui:1102
 msgctxt "Preferences|"
 msgid "Bottom"
 msgstr "Bunden"
 
-#: lib/preferences/preferences.ui:1061
+#: lib/preferences/preferences.ui:1107
 msgctxt "Preferences|"
 msgid "Top"
 msgstr "Top"
 
-#: lib/preferences/preferences.ui:1069
+#: lib/preferences/preferences.ui:1115
 msgctxt "Preferences|"
 msgid "Custom color:"
 msgstr "Brugerdefineret farve:"
 
-#: lib/preferences/preferences.ui:1085
+#: lib/preferences/preferences.ui:1131
 msgctxt "Preferences|"
 msgid "Select color"
 msgstr "Vælg farve"
 
-#: lib/preferences/preferences.ui:1146
+#: lib/preferences/preferences.ui:1192
 msgctxt "Preferences|"
 msgid "Web Configuration"
 msgstr "Webkonfiguration"
 
-#: lib/preferences/preferences.ui:1154
+#: lib/preferences/preferences.ui:1200
 msgctxt "Preferences|"
 msgid "Enable Pepper plugin API (PPAPI)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1161
+#: lib/preferences/preferences.ui:1207
 msgctxt "Preferences|"
 msgid "Use built-in PDF viewer (requires PPAPI)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1168
+#: lib/preferences/preferences.ui:1214
 msgctxt "Preferences|"
 msgid "Allow JavaScript"
 msgstr "Tillad JavaScript"
 
-#: lib/preferences/preferences.ui:1175
+#: lib/preferences/preferences.ui:1221
 msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Inkluder links i fokuskæde"
 
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
-#: lib/preferences/preferences.ui:1182
+#: lib/preferences/preferences.ui:1228
 msgctxt "Preferences|"
 msgid "Print element background"
 msgstr "Udskriv element-baggrund"
 
-#: lib/preferences/preferences.ui:1189
+#: lib/preferences/preferences.ui:1235
 msgctxt "Preferences|"
 msgid "Animated scrolling"
 msgstr "Animeret rulning"
 
-#: lib/preferences/preferences.ui:1196
+#: lib/preferences/preferences.ui:1242
 msgctxt "Preferences|"
 msgid "Enable spatial navigation"
 msgstr "Aktivér rumlig navigation"
 
-#: lib/preferences/preferences.ui:1203
+#: lib/preferences/preferences.ui:1249
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
 msgstr "Brug indbyggede rullebjælker"
 
-#: lib/preferences/preferences.ui:1210
+#: lib/preferences/preferences.ui:1256
 msgctxt "Preferences|"
 msgid "Disable automatic playing of videos"
 msgstr "Aktivér automatisk søgning fra adresselinje"
 
-#: lib/preferences/preferences.ui:1217
+#: lib/preferences/preferences.ui:1263
 msgctxt "Preferences|"
 msgid "Prevent WebRTC from leaking local IP address"
 msgstr "Forhindr WebRTC i at lække lokal IP-adresse"
 
-#: lib/preferences/preferences.ui:1224
+#: lib/preferences/preferences.ui:1270
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
 msgstr "Aktivér DNS-forhentning"
 
-#: lib/preferences/preferences.ui:1231
+#: lib/preferences/preferences.ui:1277
 msgctxt "Preferences|"
 msgid "Enable screen capture"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1238
+#: lib/preferences/preferences.ui:1284
 msgctxt "Preferences|"
 msgid "Use hardware acceleration (requires restart)"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1245
+#: lib/preferences/preferences.ui:1291
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Allow storing of cookies"
@@ -4867,212 +4893,212 @@ msgctxt "Preferences|"
 msgid "Allow reading from canvas"
 msgstr "Tillad lagring af cookies"
 
-#: lib/preferences/preferences.ui:1252
+#: lib/preferences/preferences.ui:1298
 msgctxt "Preferences|"
 msgid "Force dark mode"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1259
+#: lib/preferences/preferences.ui:1305
 msgctxt "Preferences|"
 msgid "Allow image animation"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1268
+#: lib/preferences/preferences.ui:1314
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
 msgstr ""
 
-#: lib/preferences/preferences.ui:1303
+#: lib/preferences/preferences.ui:1349
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
 msgstr "Musehjul ruller"
 
-#: lib/preferences/preferences.ui:1323
+#: lib/preferences/preferences.ui:1369
 msgctxt "Preferences|"
 msgid "lines on page"
 msgstr "linjer på side"
 
-#: lib/preferences/preferences.ui:1334
+#: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
 msgstr "Standardzoom på siderne: "
 
-#: lib/preferences/preferences.ui:1373
+#: lib/preferences/preferences.ui:1419
 msgctxt "Preferences|"
 msgid "Local Storage"
 msgstr "Lokalt lager"
 
-#: lib/preferences/preferences.ui:1381
+#: lib/preferences/preferences.ui:1427
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
 msgstr "Tillad lagring af netværksmellemlager på disk"
 
-#: lib/preferences/preferences.ui:1404
+#: lib/preferences/preferences.ui:1450
 msgctxt "Preferences|"
 msgid "Delete cache on close"
 msgstr "Slet mellemlager ved lukning"
 
-#: lib/preferences/preferences.ui:1411
+#: lib/preferences/preferences.ui:1457
 msgctxt "Preferences|"
 msgid "Maximum:"
 msgstr "Maksimum:"
 
-#: lib/preferences/preferences.ui:1418
+#: lib/preferences/preferences.ui:1464
 msgctxt "Preferences|"
 msgid " MB"
 msgstr " MB"
 
-#: lib/preferences/preferences.ui:1434
+#: lib/preferences/preferences.ui:1480
 msgctxt "Preferences|"
 msgid "Store cache in:"
 msgstr "Gem mellemlager i:"
 
-#: lib/preferences/preferences.ui:1462
+#: lib/preferences/preferences.ui:1508
 msgctxt "Preferences|"
 msgid "Allow saving history"
 msgstr "Tillad at historik gemmes"
 
-#: lib/preferences/preferences.ui:1469
+#: lib/preferences/preferences.ui:1515
 msgctxt "Preferences|"
 msgid "Delete history on close"
 msgstr "Slet historik ved afslutning"
 
-#: lib/preferences/preferences.ui:1492
+#: lib/preferences/preferences.ui:1538
 msgctxt "Preferences|"
 msgid "Allow local storage of HTML5 web content"
 msgstr "Tillad lokal lagring af HTML5-webindhold"
 
-#: lib/preferences/preferences.ui:1499
+#: lib/preferences/preferences.ui:1545
 msgctxt "Preferences|"
 msgid "Delete locally stored HTML5 web content on close"
 msgstr "Slet lokalt lagret HTML5-webindhold ved lukning"
 
-#: lib/preferences/preferences.ui:1525
+#: lib/preferences/preferences.ui:1571
 msgctxt "Preferences|"
 msgid "Delete now"
 msgstr "Slet nu"
 
-#: lib/preferences/preferences.ui:1564
+#: lib/preferences/preferences.ui:1610
 msgctxt "Preferences|"
 msgid "Proxy Configuration"
 msgstr "Proxykonfiguration"
 
-#: lib/preferences/preferences.ui:1583
+#: lib/preferences/preferences.ui:1629
 msgctxt "Preferences|"
 msgid "System proxy configuration"
 msgstr "Systemets proxykonfiguration"
 
-#: lib/preferences/preferences.ui:1606
+#: lib/preferences/preferences.ui:1652
 msgctxt "Preferences|"
 msgid "Manual configuration"
 msgstr "Manuel konfiguration"
 
-#: lib/preferences/preferences.ui:1616
+#: lib/preferences/preferences.ui:1662
 msgctxt "Preferences|"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: lib/preferences/preferences.ui:1621
+#: lib/preferences/preferences.ui:1667
 msgctxt "Preferences|"
 msgid "SOCKS5"
 msgstr "SOCKS5"
 
-#: lib/preferences/preferences.ui:1636
+#: lib/preferences/preferences.ui:1682
 msgctxt "Preferences|"
 msgid "Port:"
 msgstr "Port:"
 
-#: lib/preferences/preferences.ui:1657
+#: lib/preferences/preferences.ui:1703
 msgctxt "Preferences|"
 msgid "Username:"
 msgstr "Brugernavn:"
 
-#: lib/preferences/preferences.ui:1667
+#: lib/preferences/preferences.ui:1713
 msgctxt "Preferences|"
 msgid "Password:"
 msgstr "Adgangskode:"
 
-#: lib/preferences/preferences.ui:1696
+#: lib/preferences/preferences.ui:1742
 msgctxt "Preferences|"
 msgid "No proxy"
 msgstr "Ingen proxy"
 
-#: lib/preferences/preferences.ui:1711
+#: lib/preferences/preferences.ui:1757
 msgctxt "Preferences|"
 msgid "<b>Font Families</b>"
 msgstr "<b>Skrifttypefamilier</b>"
 
-#: lib/preferences/preferences.ui:1724
+#: lib/preferences/preferences.ui:1770
 msgctxt "Preferences|"
 msgid "Standard"
 msgstr "Standard"
 
-#: lib/preferences/preferences.ui:1731
+#: lib/preferences/preferences.ui:1777
 msgctxt "Preferences|"
 msgid "Fixed"
 msgstr "Fast"
 
-#: lib/preferences/preferences.ui:1741
+#: lib/preferences/preferences.ui:1787
 msgctxt "Preferences|"
 msgid "Serif"
 msgstr "Serif"
 
-#: lib/preferences/preferences.ui:1751
+#: lib/preferences/preferences.ui:1797
 msgctxt "Preferences|"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
-#: lib/preferences/preferences.ui:1761
+#: lib/preferences/preferences.ui:1807
 msgctxt "Preferences|"
 msgid "Cursive"
 msgstr "Kursiv"
 
-#: lib/preferences/preferences.ui:1813
+#: lib/preferences/preferences.ui:1859
 msgctxt "Preferences|"
 msgid "Fantasy"
 msgstr "Fantasi"
 
-#: lib/preferences/preferences.ui:1820
+#: lib/preferences/preferences.ui:1866
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
 msgstr "<b>Skriftstørrelser</b>"
 
-#: lib/preferences/preferences.ui:1829
+#: lib/preferences/preferences.ui:1875
 msgctxt "Preferences|"
 msgid "Fixed Font Size"
 msgstr "Fast skriftstørrelse"
 
-#: lib/preferences/preferences.ui:1836
+#: lib/preferences/preferences.ui:1882
 msgctxt "Preferences|"
 msgid "Default Font Size"
 msgstr "Standardskriftstørrelse"
 
-#: lib/preferences/preferences.ui:1863
+#: lib/preferences/preferences.ui:1909
 msgctxt "Preferences|"
 msgid "Minimum Font Size"
 msgstr "Minimum skriftstørrelse"
 
-#: lib/preferences/preferences.ui:1870
+#: lib/preferences/preferences.ui:1916
 msgctxt "Preferences|"
 msgid "Minimum Logical Font Size"
 msgstr "Minimum logiske skriftstørrelse"
 
-#: lib/preferences/preferences.ui:1903
+#: lib/preferences/preferences.ui:1949
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
 msgstr "<b>Genveje</b>"
 
-#: lib/preferences/preferences.ui:1910
+#: lib/preferences/preferences.ui:1956
 msgctxt "Preferences|"
 msgid "Switch to tabs with Alt + number of tab"
 msgstr "Skift til faneblade med Alt + fanebladsnummer"
 
-#: lib/preferences/preferences.ui:1917
+#: lib/preferences/preferences.ui:1963
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
 msgstr "Indlæs kvikknapper med Ctrl + nummer på kvikknap"
 
-#: lib/preferences/preferences.ui:1924
+#: lib/preferences/preferences.ui:1970
 msgctxt "Preferences|"
 msgid ""
 "Existing shortcuts:<br/><b>1</b> - previous tab<br/><b>2</b> - next tab<br/"
@@ -5081,12 +5107,12 @@ msgstr ""
 "Eksisterende genveje:<br/><b>1</b> - forrige faneblad<br/><b>2</b> - næste "
 "faneblad<br/><b>/</b> - søg på side"
 
-#: lib/preferences/preferences.ui:1927
+#: lib/preferences/preferences.ui:1973
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
 msgstr "Brug genveje med en tast"
 
-#: lib/preferences/preferences.ui:1934
+#: lib/preferences/preferences.ui:1980
 msgctxt "Preferences|"
 msgid ""
 "If unchecked, prevents accidental exit from the application if the Ctrl-W "
@@ -5095,127 +5121,127 @@ msgstr ""
 "Hvis den er fravalgt, så forhindres utilsigtet programafslutning hvis Ctrl-W-"
 "genvejen var tiltænkt."
 
-#: lib/preferences/preferences.ui:1937
+#: lib/preferences/preferences.ui:1983
 msgctxt "Preferences|"
 msgid "Close application with Ctrl-Q"
 msgstr "Luk programmet med Ctrl-Q"
 
-#: lib/preferences/preferences.ui:1961
+#: lib/preferences/preferences.ui:2007
 msgctxt "Preferences|"
 msgid "<b>Download Location</b>"
 msgstr "<b>Downloadplacering</b>"
 
-#: lib/preferences/preferences.ui:1968
+#: lib/preferences/preferences.ui:2014
 msgctxt "Preferences|"
 msgid "Ask everytime for download location"
 msgstr "Spørg om downloadplacering hver gang"
 
-#: lib/preferences/preferences.ui:1975
+#: lib/preferences/preferences.ui:2021
 msgctxt "Preferences|"
 msgid "Use defined location: "
 msgstr "Brug defineret placering: "
 
-#: lib/preferences/preferences.ui:2025
+#: lib/preferences/preferences.ui:2071
 msgctxt "Preferences|"
 msgid "<b>Download Options</b>"
 msgstr "<b>Valgmulighed for download</b>"
 
-#: lib/preferences/preferences.ui:2032
+#: lib/preferences/preferences.ui:2078
 msgctxt "Preferences|"
 msgid "Close download manager when downloading finishes"
 msgstr "Luk downloadhåndtering, når download afslutter"
 
-#: lib/preferences/preferences.ui:2039
+#: lib/preferences/preferences.ui:2085
 msgctxt "Preferences|"
 msgid "<b>External download manager</b>"
 msgstr "<b>Ekstern downloadhåndtering</b>"
 
-#: lib/preferences/preferences.ui:2046
+#: lib/preferences/preferences.ui:2092
 msgctxt "Preferences|"
 msgid "Use external download manager"
 msgstr "Brug ekstern downloadhåndtering"
 
-#: lib/preferences/preferences.ui:2058
+#: lib/preferences/preferences.ui:2104
 msgctxt "Preferences|"
 msgid "Executable:"
 msgstr "Eksekverbar:"
 
-#: lib/preferences/preferences.ui:2065
+#: lib/preferences/preferences.ui:2111
 msgctxt "Preferences|"
 msgid "Arguments:"
 msgstr "Argumenter:"
 
-#: lib/preferences/preferences.ui:2075
+#: lib/preferences/preferences.ui:2121
 msgctxt "Preferences|"
 msgid "Leave blank if unsure"
 msgstr "Lad den være tom hvis du er i tvivl"
 
-#: lib/preferences/preferences.ui:2096
+#: lib/preferences/preferences.ui:2142
 msgctxt "Preferences|"
 msgid "<b>%d</b> will be replaced with URL to be downloaded"
 msgstr "<b>%d</b> vil blive erstattet med URL'en til det som skal downloades"
 
-#: lib/preferences/preferences.ui:2122
+#: lib/preferences/preferences.ui:2168
 msgctxt "Preferences|"
 msgid "<b>AutoFill options</b>"
 msgstr "<b>Valgmuligheder for automatisk udfyldning</b>"
 
-#: lib/preferences/preferences.ui:2129
+#: lib/preferences/preferences.ui:2175
 msgctxt "Preferences|"
 msgid "Allow saving passwords from sites"
 msgstr "Tillad lagring af adgangskoder fra steder"
 
-#: lib/preferences/preferences.ui:2180
+#: lib/preferences/preferences.ui:2226
 msgctxt "Preferences|"
 msgid "Automatically complete passwords on sites"
 msgstr "Automatisk fuldførelse af adgangskoder på steder"
 
-#: lib/preferences/preferences.ui:2201
+#: lib/preferences/preferences.ui:2247
 msgctxt "Preferences|"
 msgid "Manage Cookies"
 msgstr "Håndter cookies"
 
-#: lib/preferences/preferences.ui:2214
+#: lib/preferences/preferences.ui:2260
 msgctxt "Preferences|"
 msgid "Cookies Manager"
 msgstr "Cookiehåndtering"
 
-#: lib/preferences/preferences.ui:2237
+#: lib/preferences/preferences.ui:2283
 msgctxt "Preferences|"
 msgid "<b>JavaScript</b>"
 msgstr "<b>JavaScript</b>"
 
-#: lib/preferences/preferences.ui:2250
+#: lib/preferences/preferences.ui:2296
 msgctxt "Preferences|"
 msgid "JavaScript options"
 msgstr "Valgmuligheder for JavaScript"
 
-#: lib/preferences/preferences.ui:2257
+#: lib/preferences/preferences.ui:2303
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
 msgstr "Send spor mig ikke-anmodning til servere"
 
-#: lib/preferences/preferences.ui:2264
+#: lib/preferences/preferences.ui:2310
 msgctxt "Preferences|"
 msgid "<b>Cookies</b>"
 msgstr "<b>Cookies</b>"
 
-#: lib/preferences/preferences.ui:2290
+#: lib/preferences/preferences.ui:2336
 msgctxt "Preferences|"
 msgid "Manage JavaScript privacy options"
 msgstr "Valgmuligheder for håndtering af JavaScript"
 
-#: lib/preferences/preferences.ui:2297
+#: lib/preferences/preferences.ui:2343
 msgctxt "Preferences|"
 msgid "<b>Other</b>"
 msgstr "<b>Anden</b>"
 
-#: lib/preferences/preferences.ui:2318
+#: lib/preferences/preferences.ui:2364
 msgctxt "Preferences|"
 msgid "HTML5 Permissions"
 msgstr "HTML5-tilladelser"
 
-#: lib/preferences/preferences.ui:2328
+#: lib/preferences/preferences.ui:2374
 #, fuzzy
 #| msgctxt "CookieManager|"
 #| msgid "Settings"
@@ -5223,32 +5249,32 @@ msgctxt "Preferences|"
 msgid "Site Settings"
 msgstr "Indstillinger"
 
-#: lib/preferences/preferences.ui:2360
+#: lib/preferences/preferences.ui:2406
 msgctxt "Preferences|"
 msgid "Expiration timeout:"
 msgstr "Udløbstimeout:"
 
-#: lib/preferences/preferences.ui:2373
+#: lib/preferences/preferences.ui:2419
 msgctxt "Preferences|"
 msgid " seconds"
 msgstr " sekunder"
 
-#: lib/preferences/preferences.ui:2395
+#: lib/preferences/preferences.ui:2441
 msgctxt "Preferences|"
 msgid "<b>Notifications</b>"
 msgstr "<b>Påmindelser</b>"
 
-#: lib/preferences/preferences.ui:2418
+#: lib/preferences/preferences.ui:2464
 msgctxt "Preferences|"
 msgid "Use Native System Notifications (Linux only)"
 msgstr "Brug systemets påmindelser (kun Linux)"
 
-#: lib/preferences/preferences.ui:2425
+#: lib/preferences/preferences.ui:2471
 msgctxt "Preferences|"
 msgid "Do not use Notifications"
 msgstr "Brug ikke påmindelser"
 
-#: lib/preferences/preferences.ui:2448
+#: lib/preferences/preferences.ui:2494
 msgctxt "Preferences|"
 msgid ""
 "<b>Note: </b>You can change position of OSD Notification by dragging it on "
@@ -5257,17 +5283,17 @@ msgstr ""
 "<b>Bemærk: </b>Du kan ændre placeringen af skærmnotifikation ved at trække i "
 "den på skærmen."
 
-#: lib/preferences/preferences.ui:2474
+#: lib/preferences/preferences.ui:2520
 msgctxt "Preferences|"
 msgid "Use OSD Notifications"
 msgstr "Brug skærmpåmindelser"
 
-#: lib/preferences/preferences.ui:2481
+#: lib/preferences/preferences.ui:2527
 msgctxt "Preferences|"
 msgid "Preview"
 msgstr "Forhåndsvis"
 
-#: lib/preferences/preferences.ui:2578
+#: lib/preferences/preferences.ui:2624
 msgctxt "Preferences|"
 msgid ""
 "For more information about Spell Check, please see <a href=\"https://"
@@ -5276,84 +5302,84 @@ msgstr ""
 "Se venligst <a href=\"https://github.com/QupZilla/qupzilla/wiki/Spell-Check"
 "\">wiki</a> for mere information om stavekontrol."
 
-#: lib/preferences/preferences.ui:2619
+#: lib/preferences/preferences.ui:2665
 msgctxt "Preferences|"
 msgid "<b>Dictionary directories</b>"
 msgstr "<b>Ordbogsmapper</b>"
 
-#: lib/preferences/preferences.ui:2626
+#: lib/preferences/preferences.ui:2672
 msgctxt "Preferences|"
 msgid "No languages found"
 msgstr "Ingen sprog fundet"
 
-#: lib/preferences/preferences.ui:2633
+#: lib/preferences/preferences.ui:2679
 msgctxt "Preferences|"
 msgid "<b>Spell Check options</b>"
 msgstr "<b>Valgmuligheder for stavekontrol</b>"
 
-#: lib/preferences/preferences.ui:2640
+#: lib/preferences/preferences.ui:2686
 msgctxt "Preferences|"
 msgid "Enable Spell Check"
 msgstr "Aktivér stavekontrol"
 
-#: lib/preferences/preferences.ui:2669
+#: lib/preferences/preferences.ui:2715
 msgctxt "Preferences|"
 msgid "Protocol Handlers Manager"
 msgstr "Håndtering af protokol-handlers"
 
-#: lib/preferences/preferences.ui:2691
+#: lib/preferences/preferences.ui:2737
 msgctxt "Preferences|"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Manage Auto Open "
 "protocols</span></p></body></html>"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2703
+#: lib/preferences/preferences.ui:2749
 msgctxt "Preferences|"
 msgid "Manage custom schemes"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2710
+#: lib/preferences/preferences.ui:2756
 msgctxt "Preferences|"
 msgid "<b>Change browser identification</b>"
 msgstr "<b>Skift browseridentifikation</b>"
 
-#: lib/preferences/preferences.ui:2717
+#: lib/preferences/preferences.ui:2763
 msgctxt "Preferences|"
 msgid "<b>Manage search engines</b>"
 msgstr "<b>Håndter søgetjenester</b>"
 
-#: lib/preferences/preferences.ui:2724
+#: lib/preferences/preferences.ui:2770
 msgctxt "Preferences|"
 msgid "<b>Preferred language for web sites</b>"
 msgstr "<b>Foretrukket sprog for websteder</b>"
 
-#: lib/preferences/preferences.ui:2731
+#: lib/preferences/preferences.ui:2777
 msgctxt "Preferences|"
 msgid "<b>User Style Sheet</b>"
 msgstr "<b>Brugertypografiark</b>"
 
-#: lib/preferences/preferences.ui:2738
+#: lib/preferences/preferences.ui:2784
 msgctxt "Preferences|"
 msgid "<b>Manage protocol handlers</b>"
 msgstr "<b>Håndtering af protokol-handlers</b>"
 
-#: lib/preferences/preferences.ui:2793
+#: lib/preferences/preferences.ui:2839
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
 msgstr ""
 
-#: lib/preferences/preferences.ui:2833
+#: lib/preferences/preferences.ui:2879
 msgctxt "Preferences|"
 msgid "User Agent Manager"
 msgstr "Håndtering af user agent"
 
-#: lib/preferences/preferences.ui:2868
+#: lib/preferences/preferences.ui:2914
 msgctxt "Preferences|"
 msgid "Style Sheet automatically loaded with all websites: "
 msgstr "Typografiark indlæses automatisk med alle websteder: "
 
-#: lib/preferences/preferences.ui:2893
+#: lib/preferences/preferences.ui:2939
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "Cookies Manager"
@@ -5361,17 +5387,17 @@ msgctxt "Preferences|"
 msgid "Custom Scheme Manager"
 msgstr "Cookiehåndtering"
 
-#: lib/preferences/preferences.ui:2933
+#: lib/preferences/preferences.ui:2979
 msgctxt "Preferences|"
 msgid "Search Engines Manager"
 msgstr "Søgetjenestehåndtering"
 
-#: lib/preferences/preferences.ui:2973
+#: lib/preferences/preferences.ui:3019
 msgctxt "Preferences|"
 msgid "Languages"
 msgstr "Sprog"
 
-#: lib/preferences/preferences.ui:3008
+#: lib/preferences/preferences.ui:3054
 #, fuzzy
 #| msgctxt "Preferences|"
 #| msgid "<b>Notifications</b>"
@@ -5379,7 +5405,7 @@ msgctxt "Preferences|"
 msgid "<b>Certificate manager</b>"
 msgstr "<b>Påmindelser</b>"
 
-#: lib/preferences/preferences.ui:3033
+#: lib/preferences/preferences.ui:3079
 msgctxt "Preferences|"
 msgid "Auto Open protocols"
 msgstr ""
@@ -6059,17 +6085,17 @@ msgctxt "TabWidget|"
 msgid "List of tabs"
 msgstr "Liste over faneblade"
 
-#: lib/tabwidget/tabwidget.cpp:294
+#: lib/tabwidget/tabwidget.cpp:297
 msgctxt "TabWidget|"
 msgid "Empty"
 msgstr "Tom"
 
-#: lib/tabwidget/tabwidget.cpp:298
+#: lib/tabwidget/tabwidget.cpp:301
 msgctxt "TabWidget|"
 msgid "Restore All Closed Tabs"
 msgstr "Gendan alle lukkede faneblade"
 
-#: lib/tabwidget/tabwidget.cpp:299
+#: lib/tabwidget/tabwidget.cpp:302
 msgctxt "TabWidget|"
 msgid "Clear list"
 msgstr "Ryd liste"
@@ -6626,6 +6652,10 @@ msgstr "Inspicer element"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "Preferences|"
+#~ msgid "Activate last tab when closing active tab"
+#~ msgstr "Aktivér forrige faneblad, når det aktive faneblad lukkes"
 
 #~ msgctxt "BookmarksManager|"
 #~ msgid "Delete"
