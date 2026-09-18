@@ -5,11 +5,11 @@
 #
 # Микола Крачковський (Mykola Krachkovsky) <w01dnick@gmail.com>, 2017.
 # Stanislav Kuznietsov <stanislav_kuznetsov@ukr.net>, 2017.
-# Yuri Chornoivan <yurchor@ukr.net>, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Yuri Chornoivan <yurchor@ukr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_qt\n"
-"PO-Revision-Date: 2026-07-06 09:03+0300\n"
+"PO-Revision-Date: 2026-09-17 12:17+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -21,7 +21,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Language: uk_UA\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -4465,28 +4465,22 @@ msgstr "Ховати панель вкладок, коли відкрита ли
 #: lib/preferences/preferences.ui:738
 msgctxt "Preferences|"
 msgid "When closing the active tab, activate:"
-msgstr ""
+msgstr "При закритті активної вкладки, активувати:"
 
 #: lib/preferences/preferences.ui:746
-#, fuzzy
-#| msgctxt "SearchToolbar|"
-#| msgid "&Previous"
 msgctxt "Preferences|"
 msgid "Previous tab"
-msgstr "&Назад"
+msgstr "Попередня вкладка"
 
 #: lib/preferences/preferences.ui:751
-#, fuzzy
-#| msgctxt "TabWidget|"
-#| msgid "New tab"
 msgctxt "Preferences|"
 msgid "Next tab"
-msgstr "Нова вкладка"
+msgstr "Наступна вкладка"
 
 #: lib/preferences/preferences.ui:756
 msgctxt "Preferences|"
 msgid "Previously active tab"
-msgstr ""
+msgstr "Попередня активна вкладка"
 
 #: lib/preferences/preferences.ui:782
 msgctxt "Preferences|"
@@ -4501,7 +4495,7 @@ msgstr "Відкривати нову порожню вкладку після �
 #: lib/preferences/preferences.ui:796
 msgctxt "Preferences|"
 msgid "Reverse new tabs order"
-msgstr ""
+msgstr "Зворотний порядок нових вкладок"
 
 #: lib/preferences/preferences.ui:803
 msgctxt "Preferences|"
