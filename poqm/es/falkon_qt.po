@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: falkon_qt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-29 01:02+0100\n"
-"PO-Revision-Date: 2026-07-13 00:11+0100\n"
+"PO-Revision-Date: 2026-09-19 18:06+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -4468,28 +4468,22 @@ msgstr "Ocultar pestañas cuando solo haya una pestaña"
 #: lib/preferences/preferences.ui:738
 msgctxt "Preferences|"
 msgid "When closing the active tab, activate:"
-msgstr ""
+msgstr "Al cerrar la pestaña activa, activar:"
 
 #: lib/preferences/preferences.ui:746
-#, fuzzy
-#| msgctxt "SearchToolbar|"
-#| msgid "&Previous"
 msgctxt "Preferences|"
 msgid "Previous tab"
-msgstr "&Previo"
+msgstr "Pestaña previa"
 
 #: lib/preferences/preferences.ui:751
-#, fuzzy
-#| msgctxt "TabWidget|"
-#| msgid "New tab"
 msgctxt "Preferences|"
 msgid "Next tab"
-msgstr "Nueva pestaña"
+msgstr "Pestaña siguiente"
 
 #: lib/preferences/preferences.ui:756
 msgctxt "Preferences|"
 msgid "Previously active tab"
-msgstr ""
+msgstr "Previa pestaña activa"
 
 #: lib/preferences/preferences.ui:782
 msgctxt "Preferences|"
@@ -4504,7 +4498,7 @@ msgstr "Abrir nuevas pestañas vacías después de la pestaña activa"
 #: lib/preferences/preferences.ui:796
 msgctxt "Preferences|"
 msgid "Reverse new tabs order"
-msgstr ""
+msgstr "Revertir el orden de pestañas nuevas"
 
 #: lib/preferences/preferences.ui:803
 msgctxt "Preferences|"
@@ -6450,7 +6444,3 @@ msgstr "Inspeccionar elemento"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "Preferences|"
-#~ msgid "Activate last tab when closing active tab"
-#~ msgstr "Activar la última pestaña al cerrar la pestaña activa"
