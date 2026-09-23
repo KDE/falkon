@@ -5,16 +5,16 @@ msgstr ""
 "Project-Id-Version: falkon bulgarian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-15 09:59+0200\n"
-"PO-Revision-Date: 2026-07-20 20:05+0200\n"
+"PO-Revision-Date: 2026-09-22 23:32+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.2\n"
-"X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.1\n"
+"X-Qt-Contexts: true\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -4450,28 +4450,22 @@ msgstr "Скриване на лентата с раздели, когато е 
 #: lib/preferences/preferences.ui:738
 msgctxt "Preferences|"
 msgid "When closing the active tab, activate:"
-msgstr ""
+msgstr "При затваряне на активния раздел, активиране на:"
 
 #: lib/preferences/preferences.ui:746
-#, fuzzy
-#| msgctxt "SearchToolbar|"
-#| msgid "&Previous"
 msgctxt "Preferences|"
 msgid "Previous tab"
-msgstr "&Предишен"
+msgstr "Предишен раздел"
 
 #: lib/preferences/preferences.ui:751
-#, fuzzy
-#| msgctxt "TabWidget|"
-#| msgid "New tab"
 msgctxt "Preferences|"
 msgid "Next tab"
-msgstr "Нов раздел"
+msgstr "Следващ раздел"
 
 #: lib/preferences/preferences.ui:756
 msgctxt "Preferences|"
 msgid "Previously active tab"
-msgstr ""
+msgstr "Предишен активен раздел"
 
 #: lib/preferences/preferences.ui:782
 msgctxt "Preferences|"
@@ -4486,7 +4480,7 @@ msgstr "Отваряне на нов празен раздел след теку
 #: lib/preferences/preferences.ui:796
 msgctxt "Preferences|"
 msgid "Reverse new tabs order"
-msgstr ""
+msgstr "Обръщане на реда на новите раздели"
 
 #: lib/preferences/preferences.ui:803
 msgctxt "Preferences|"
@@ -4685,7 +4679,8 @@ msgctxt "Preferences|"
 msgid "Include links in focus chain"
 msgstr "Включване на връзки в последователност на фокуса"
 
-# when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
+# when you are printing page (on printer), it determine whether to also print
+# background (color, image) of html elements
 #. when you are printing page (on printer), it determine whether to also print background (color, image) of html elements
 #: lib/preferences/preferences.ui:1228
 msgctxt "Preferences|"
@@ -6432,8 +6427,3 @@ msgstr "Изследване на елемент"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "Preferences|"
-#~ msgid "Activate last tab when closing active tab"
-#~ msgstr ""
-#~ "След затваряне на текущия раздел се активира последният отворен раздел"
