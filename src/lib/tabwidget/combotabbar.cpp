@@ -222,10 +222,6 @@ QPixmap ComboTabBar::tabPixmap(int index) const
 
 int ComboTabBar::tabAt(const QPoint &pos) const
 {
-    QWidget* w = QApplication::widgetAt(mapToGlobal(pos));
-    if (!qobject_cast<TabBarHelper*>(w) && !qobject_cast<TabIcon*>(w) && !qobject_cast<CloseButton*>(w))
-        return -1;
-
     if (m_pinnedTabBarWidget->geometry().contains(pos)) {
         return m_pinnedTabBarWidget->tabAt(m_pinnedTabBarWidget->mapFromParent(pos));
     } else if (m_mainTabBarWidget->geometry().contains(pos)) {
