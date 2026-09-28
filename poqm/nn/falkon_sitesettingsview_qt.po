@@ -1,0 +1,103 @@
+# Translation of falkon_sitesettingsview_qt to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2026-09-27 14:01+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: qtrich\n"
+"X-Qt-Contexts: true\n"
+
+#: sitesettingsview_controller.cpp:40
+msgctxt "SiteSettingsView_Controller|"
+msgid "Site Settings"
+msgstr "Nettstad-innstillingar"
+
+#: sitesettingsview_controller.cpp:48
+msgctxt "SiteSettingsView_Controller|"
+msgid "Site Settings View"
+msgstr ""
+
+#: sitesettingsview_widget.cpp:53
+msgctxt "SiteSettingsView_Widget|"
+msgid "Mode:"
+msgstr "Modus:"
+
+#: sitesettingsview_widget.cpp:55
+msgctxt "SiteSettingsView_Widget|"
+msgid "Private"
+msgstr "Privat"
+
+#: sitesettingsview_widget.cpp:58
+msgctxt "SiteSettingsView_Widget|"
+msgid "Normal"
+msgstr "Normal"
+
+#: sitesettingsview_widget.cpp:60
+msgctxt "SiteSettingsView_Widget|"
+msgid "isWeb:"
+msgstr "isWeb:"
+
+#: sitesettingsview_widget.cpp:64
+msgctxt "SiteSettingsView_Widget|"
+msgid "Refresh"
+msgstr "Oppdater"
+
+#: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:109
+msgctxt "SiteSettingsView_Widget|"
+msgid "Real"
+msgstr "Reell"
+
+#: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:92
+#: sitesettingsview_widget.cpp:109
+msgctxt "SiteSettingsView_Widget|"
+msgid "Local"
+msgstr "Lokal"
+
+#: sitesettingsview_widget.cpp:75 sitesettingsview_widget.cpp:92
+#: sitesettingsview_widget.cpp:109 sitesettingsview_widget.cpp:223
+msgctxt "SiteSettingsView_Widget|"
+msgid "Default"
+msgstr "Standard"
+
+#: sitesettingsview_widget.cpp:75
+msgctxt "SiteSettingsView_Widget|"
+msgid "Attributes"
+msgstr "Attributt"
+
+#: sitesettingsview_widget.cpp:92
+msgctxt "SiteSettingsView_Widget|"
+msgid "Feature"
+msgstr "Funksjon"
+
+#: sitesettingsview_widget.cpp:109
+msgctxt "SiteSettingsView_Widget|"
+msgid "Option"
+msgstr "Val"
+
+#: sitesettingsview_widget.cpp:155
+msgctxt "SiteSettingsView_Widget|"
+msgid "True"
+msgstr "Sann"
+
+#: sitesettingsview_widget.cpp:158
+msgctxt "SiteSettingsView_Widget|"
+msgid "False"
+msgstr "Usann"
+
+#: sitesettingsview_widget.cpp:219 sitesettingsview_widget.cpp:227
+#: sitesettingsview_widget.cpp:231
+#, qt-format
+msgctxt "SiteSettingsView_Widget|"
+msgid "%1 (%2%)"
+msgstr "%1 (%2 %)"

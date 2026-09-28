@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2026-08-05 19:30+0200\n"
+"PO-Revision-Date: 2026-09-27 14:29+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -172,10 +172,9 @@ msgid "AdBlock is active"
 msgstr "Reklamefilteret er i bruk"
 
 #: lib/adblock/adblockicon.cpp:146
-#, fuzzy
 msgctxt "AdBlockIcon|"
 msgid "&Enable AdBlock"
-msgstr "Slå på reklamefilter"
+msgstr "&Slå på reklamefilter"
 
 #: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
@@ -229,7 +228,7 @@ msgstr "Tilpassa reglar"
 #, qt-format
 msgctxt "AdBlockTreeModel|"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 – %2"
 
 #: lib/adblock/adblocktreewidget.cpp:88
 msgctxt "AdBlockTreeWidget|"
@@ -275,7 +274,7 @@ msgstr "IP-adressa til denne sida"
 #: lib/app/browserwindow.cpp:757
 msgctxt "BrowserWindow|"
 msgid " ["
-msgstr ""
+msgstr " ["
 
 #: lib/app/browserwindow.cpp:760
 msgctxt "BrowserWindow|"
@@ -1609,26 +1608,26 @@ msgctxt "DownloadItem|"
 msgid "Unknown speed"
 msgstr "Ukjend fart"
 
-# Har sjekka at det er snakk om byte/1024.
+# Har sjekka i kjeldekoden at ein deler på 1024.
 #: lib/downloads/downloaditem.cpp:226
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 kB/s"
-msgstr "KiB/s"
+msgstr "%1 KiB/s"
 
-# Har sjekka at det er snakk om byte/1024².
+# Har sjekka i kjeldekoden at ein deler på 1024.
 #: lib/downloads/downloaditem.cpp:231
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 MB/s"
-msgstr "MiB/s"
+msgstr "%1 MiB/s"
 
-# Har sjekka at det er snakk om byte/1024³.
+# Har sjekka i kjeldekoden at ein deler på 1024.
 #: lib/downloads/downloaditem.cpp:235
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "DownloadItem|"
 msgid "%1 GB/s"
-msgstr "GiB/s"
+msgstr "%1 GiB/s"
 
 #: lib/downloads/downloaditem.cpp:263
 msgctxt "DownloadItem|"
@@ -2266,12 +2265,14 @@ msgid "SSL Certificate Error!"
 msgstr "Feil i SSL-sertifikat."
 
 #: lib/network/networkmanager.cpp:92
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "NetworkManager|"
 msgid ""
 "The page <strong>%1</strong> you are trying to access has the following "
 "errors in the SSL certificate:"
-msgstr "Nettsida du prøver å lasta har feil i SSL-sertifikatet:"
+msgstr ""
+"Nettsida <strong>%1</strong>, som du prøver å lasta, har feil i SSL-"
+"sertifikatet:"
 
 #: lib/network/networkmanager.cpp:93
 msgctxt "NetworkManager|"
@@ -2322,26 +2323,28 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
+"Sertifikatet var ikkje i samsvar med dei innebygde offentleg­nøklane til "
+"vertsnamnet."
 
 #: lib/network/networkmanager.cpp:347
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr ""
+msgstr "Namnet («Common Name») til sertifikatet var ikkje lik vertsnamnet."
 
 #: lib/network/networkmanager.cpp:349
 msgctxt "NetworkManager|"
 msgid "The certificate is not valid at the current date and time."
-msgstr ""
+msgstr "Sertifikatet er ikkje gyldig for noverande dato og klokkeslett."
 
 #: lib/network/networkmanager.cpp:351
 msgctxt "NetworkManager|"
 msgid "The certificate is not signed by a trusted authority."
-msgstr ""
+msgstr "Sertifikatet er ikkje signert av ein tiltrudd autoritet."
 
 #: lib/network/networkmanager.cpp:353
 msgctxt "NetworkManager|"
 msgid "The certificate contains errors."
-msgstr ""
+msgstr "Sertifikatet inneheld feil."
 
 #: lib/network/networkmanager.cpp:355
 msgctxt "NetworkManager|"
@@ -2415,10 +2418,9 @@ msgid "The certificate is a legacy Symantec one that's no longer valid."
 msgstr ""
 
 #: lib/network/networkmanager.cpp:382
-#, fuzzy
 msgctxt "NetworkManager|"
 msgid "Unknown error"
-msgstr "Ukjend storleik"
+msgstr "Ukjend feil"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:163
 msgctxt "FalkonSchemeReply|"
@@ -2602,7 +2604,7 @@ msgstr "Midtstill snøggval"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:250
 msgctxt "FalkonSchemeReply|"
 msgid "Lock the position of SpeedDial entries."
-msgstr ""
+msgstr "Lås plasseringa til snøggval-oppføringane."
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:276
 msgctxt "FalkonSchemeReply|"
@@ -3203,17 +3205,17 @@ msgstr "<b>Tilkoplinga er kryptert.</b>"
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Eventuelle sertifikatfeil vert ignorert <b>for alltid</b>."
 
 #: lib/other/siteinfo.cpp:78
 msgctxt "SiteInfo|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Sertifikatfeilen vert ignorert <b>mellombels</b>."
 
 #: lib/other/siteinfo.cpp:82
 msgctxt "SiteInfo|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Sertifikatet vart avvist."
 
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
@@ -3292,10 +3294,9 @@ msgid "Media"
 msgstr "Medium"
 
 #: lib/other/siteinfo.ui:57
-#, fuzzy
 msgctxt "SiteInfo|"
 msgid "Permissions"
-msgstr "HTML5-løyve"
+msgstr "Løyve"
 
 # Page address
 #: lib/other/siteinfo.ui:89
@@ -3345,7 +3346,6 @@ msgid "<b>Preview</b>"
 msgstr "<b>Førehandsvising</b>"
 
 #: lib/other/siteinfopermissionitem.ui:32
-#, fuzzy
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
 msgstr "Standard"
@@ -3353,16 +3353,14 @@ msgstr "Standard"
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
 msgid "Ask"
-msgstr ""
+msgstr "Spør"
 
 #: lib/other/siteinfopermissionitem.ui:69
-#, fuzzy
 msgctxt "SiteInfoPermissionItem|"
 msgid "Allow"
 msgstr "Tillat"
 
 #: lib/other/siteinfopermissionitem.ui:76
-#, fuzzy
 msgctxt "SiteInfoPermissionItem|"
 msgid "Deny"
 msgstr "Avvis"
@@ -3376,17 +3374,17 @@ msgstr "<b>Side %1<b/>"
 #: lib/other/siteinfowidget.cpp:52
 msgctxt "SiteInfoWidget|"
 msgid "Any certificate error is <b>permanently</b> ignored."
-msgstr ""
+msgstr "Eventuelle sertifikatfeil vert ignorert <b>for alltid</b>."
 
 #: lib/other/siteinfowidget.cpp:55
 msgctxt "SiteInfoWidget|"
 msgid "The certificate error is <b>temporarily</b> ignored."
-msgstr ""
+msgstr "Sertifikatfeilen vert ignorert <b>mellombels</b>."
 
 #: lib/other/siteinfowidget.cpp:58
 msgctxt "SiteInfoWidget|"
 msgid "Certificate was rejected."
-msgstr ""
+msgstr "Sertifikatet vart avvist."
 
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
@@ -3442,62 +3440,52 @@ msgid "More..."
 msgstr "Meir …"
 
 #: lib/other/sitesettingsmanager.cpp:324
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Zoom level"
-msgstr "Nullstill forstørring"
+msgstr "Forstørring"
 
 #: lib/other/sitesettingsmanager.cpp:326
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Cookies"
 msgstr "Infokapslar"
 
 #: lib/other/sitesettingsmanager.cpp:329 lib/other/sitesettingsmanager.cpp:354
 #: lib/other/sitesettingsmanager.cpp:394 lib/other/sitesettingsmanager.cpp:411
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Unknown"
-msgstr "Ukjend storleik"
+msgstr "Ukjend"
 
 #: lib/other/sitesettingsmanager.cpp:337
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Notifications"
 msgstr "Varslingar"
 
 #: lib/other/sitesettingsmanager.cpp:339
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Geolocation"
 msgstr "Geografisk plassering"
 
 #: lib/other/sitesettingsmanager.cpp:341
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Microphone"
 msgstr "Mikrofon"
 
 #: lib/other/sitesettingsmanager.cpp:343
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Camera"
 msgstr "Kamera"
 
 #: lib/other/sitesettingsmanager.cpp:345
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Microphone and Camera"
 msgstr "Mikrofon og kamera"
 
 #: lib/other/sitesettingsmanager.cpp:347
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Hide mouse pointer"
-msgstr "Gøym peikar"
+msgstr "Gøym musepeikaren"
 
 #: lib/other/sitesettingsmanager.cpp:349
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture"
 msgstr "Bilete av skjermen"
@@ -3505,80 +3493,69 @@ msgstr "Bilete av skjermen"
 #: lib/other/sitesettingsmanager.cpp:351
 msgctxt "SiteSettingsManager|"
 msgid "Screen capture with audio"
-msgstr ""
+msgstr "Bilete av skjermen og lyd"
 
 #: lib/other/sitesettingsmanager.cpp:362
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Autoload images"
-msgstr "Last sida på nytt"
+msgstr "Lasta automatisk inn bilete"
 
 #: lib/other/sitesettingsmanager.cpp:365
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Enable JavaScript"
-msgstr "Tillat JavaScript"
+msgstr "Slå på JavaScript"
 
 #: lib/other/sitesettingsmanager.cpp:367
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Open popup windows"
-msgstr "Opna sprettoppvindauge"
+msgstr "JavaScript: Opna sprettoppvindauge"
 
 #: lib/other/sitesettingsmanager.cpp:369
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Access clipboard"
-msgstr "Få tilgang til utklippstavla"
+msgstr "JavaScript: Få tilgang til utklippstavla"
 
 #: lib/other/sitesettingsmanager.cpp:371
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Paste from clipboard"
-msgstr "Lima inn frå utklippstavla"
+msgstr "JavaScript: Lima inn frå utklippstavla"
 
 #: lib/other/sitesettingsmanager.cpp:373
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "JavaScript: Activate windows"
-msgstr "Heva vindauge"
+msgstr "JavaScript: Heva vindauge"
 
 #: lib/other/sitesettingsmanager.cpp:376
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Local storage"
 msgstr "Lokal lagring"
 
 #: lib/other/sitesettingsmanager.cpp:378
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "FullScreen support"
-msgstr "&Fullskjerm"
+msgstr "Fullskjermsstøtte"
 
 #: lib/other/sitesettingsmanager.cpp:380
 msgctxt "SiteSettingsManager|"
 msgid "Run insecure content"
-msgstr ""
+msgstr "Køyr utrykt innhald"
 
 #: lib/other/sitesettingsmanager.cpp:382
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Automatic playing of videos"
-msgstr "Slå av automatisk videoavspeling"
+msgstr "Automatisk videoavspeling"
 
 #: lib/other/sitesettingsmanager.cpp:385
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Allow reading from canvas"
-msgstr "Tillat lagring av infokapslar"
+msgstr "Tillat lesing frå canvas"
 
 #: lib/other/sitesettingsmanager.cpp:389
 msgctxt "SiteSettingsManager|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Tving mørkt tema"
 
 #: lib/other/sitesettingsmanager.cpp:402
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Allow"
 msgstr "Tillat"
@@ -3586,16 +3563,14 @@ msgstr "Tillat"
 #: lib/other/sitesettingsmanager.cpp:404
 msgctxt "SiteSettingsManager|"
 msgid "Ask"
-msgstr ""
+msgstr "Spør"
 
 #: lib/other/sitesettingsmanager.cpp:406
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Deny"
 msgstr "Avvis"
 
 #: lib/other/sitesettingsmanager.cpp:408
-#, fuzzy
 msgctxt "SiteSettingsManager|"
 msgid "Default"
 msgstr "Standard"
@@ -3944,14 +3919,12 @@ msgstr ""
 
 #: lib/preferences/autoopenprotocolsdialog.ui:34
 #: lib/preferences/autoopenprotocolsdialog.ui:79
-#, fuzzy
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Add"
 msgstr "Legg til"
 
 #: lib/preferences/autoopenprotocolsdialog.ui:41
 #: lib/preferences/autoopenprotocolsdialog.ui:86
-#, fuzzy
 msgctxt "AutoOpenProtocolsDialog|"
 msgid "Remove"
 msgstr "Fjern"
@@ -3962,6 +3935,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Blocked</span></p></"
 "body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Blokkert</span></p></"
+"body></html>"
 
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
@@ -3977,7 +3952,7 @@ msgstr "Legg til sertifikatunntak"
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr ""
+msgstr "Verten %1 er alt med i lista"
 
 #: lib/preferences/certificatemanager.cpp:83
 msgctxt "CertificateManager|"
@@ -3987,7 +3962,7 @@ msgstr "Tomt vertsnamn"
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
 msgid "Certificate exception manager"
-msgstr ""
+msgstr "Sertifikatunntak-handsaming"
 
 #: lib/preferences/certificatemanager.ui:22
 msgctxt "CertificateManager|"
@@ -4089,7 +4064,6 @@ msgid "Set as default"
 msgstr "Bruk som standard"
 
 #: lib/preferences/preferences.cpp:340
-#, fuzzy
 msgctxt "Preferences|"
 msgid "Auto"
 msgstr "Automatisk"
@@ -4097,12 +4071,12 @@ msgstr "Automatisk"
 #: lib/preferences/preferences.cpp:342
 msgctxt "Preferences|"
 msgid "Light"
-msgstr ""
+msgstr "Lyst"
 
 #: lib/preferences/preferences.cpp:343
 msgctxt "Preferences|"
 msgid "Dark"
-msgstr ""
+msgstr "Mørkt"
 
 #: lib/preferences/preferences.cpp:353
 #, qt-format
@@ -4383,7 +4357,7 @@ msgstr "Vis bokmerkelinja ved oppstart"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Standard minste breidd for sidestolpe:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4403,12 +4377,12 @@ msgstr "Slå på straksvising av bokmerkelinja"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr " pikslar"
 
 #: lib/preferences/preferences.ui:577
 msgctxt "Preferences|"
 msgid "Show Profile Name in Window Title"
-msgstr ""
+msgstr "Vis profilnamnet i tittellinja"
 
 #: lib/preferences/preferences.ui:586
 msgctxt "Preferences|"
@@ -4416,6 +4390,8 @@ msgid ""
 "<html><head/><body><p><span style=\" font-weight:700;\">Web Page Background "
 "Colors</span></p></body></html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:700;\">Bakgrunnsfargar for "
+"nettside</span></p></body></html>"
 
 #: lib/preferences/preferences.ui:611 lib/preferences/preferences.ui:625
 #: lib/preferences/preferences.ui:1088 lib/preferences/preferences.ui:1449
@@ -4434,12 +4410,12 @@ msgstr "Tilbakestill"
 #: lib/preferences/preferences.ui:639
 msgctxt "Preferences|"
 msgid "Background color when loaded:"
-msgstr ""
+msgstr "Bakgrunnsfarge når innlasta:"
 
 #: lib/preferences/preferences.ui:646
 msgctxt "Preferences|"
 msgid "Background color while loading:"
-msgstr ""
+msgstr "Bakgrunnsfarge ved innlasting:"
 
 #: lib/preferences/preferences.ui:653
 msgctxt "Preferences|miliseconds"
@@ -4492,7 +4468,7 @@ msgstr "Opna sprettoppvindauge i faner"
 #: lib/preferences/preferences.ui:764
 msgctxt "Preferences|"
 msgid "Block automatic popups"
-msgstr ""
+msgstr "Blokker automatisk sprettoppvindauge"
 
 #: lib/preferences/preferences.ui:771
 msgctxt "Preferences|"
@@ -4730,25 +4706,24 @@ msgid "Use hardware acceleration (requires restart)"
 msgstr "Bruk maskinvareakselerasjon (krev omstart)"
 
 #: lib/preferences/preferences.ui:1245
-#, fuzzy
 msgctxt "Preferences|"
 msgid "Allow reading from canvas"
-msgstr "Tillat lagring av infokapslar"
+msgstr "Tillat lesing frå canvas"
 
 #: lib/preferences/preferences.ui:1252
 msgctxt "Preferences|"
 msgid "Force dark mode"
-msgstr ""
+msgstr "Tving mørkt tema"
 
 #: lib/preferences/preferences.ui:1259
 msgctxt "Preferences|"
 msgid "Allow image animation"
-msgstr ""
+msgstr "Tillat biletanimasjonar"
 
 #: lib/preferences/preferences.ui:1268
 msgctxt "Preferences|"
 msgid "Preffer color scheme:"
-msgstr ""
+msgstr "Føretrekk fargetema:"
 
 # Heng saman med neste tekst «lines on page».
 #: lib/preferences/preferences.ui:1303
@@ -5088,10 +5063,9 @@ msgid "HTML5 Permissions"
 msgstr "HTML5-løyve"
 
 #: lib/preferences/preferences.ui:2328
-#, fuzzy
 msgctxt "Preferences|"
 msgid "Site Settings"
-msgstr "Innstillingar"
+msgstr "Nettstad-innstillingar"
 
 #: lib/preferences/preferences.ui:2360
 msgctxt "Preferences|"
@@ -5212,7 +5186,7 @@ msgstr "<b>Handsam protokollhandsaming</b>"
 #: lib/preferences/preferences.ui:2793
 msgctxt "Preferences|"
 msgid "Certificate Exception Manager"
-msgstr ""
+msgstr "Sertifikatunntak-handsaming"
 
 #: lib/preferences/preferences.ui:2833
 msgctxt "Preferences|"
@@ -5292,7 +5266,7 @@ msgstr "Fjern"
 #: lib/preferences/schememanager.ui:68
 msgctxt "SchemeManager|"
 msgid "Block"
-msgstr ""
+msgstr "Blokker"
 
 #: lib/preferences/schememanager.ui:98
 msgctxt "SchemeManager|"
@@ -5302,80 +5276,71 @@ msgstr ""
 #: lib/preferences/schememanager.ui:147
 msgctxt "SchemeManager|"
 msgid "Changes will take effect after Falkon restart."
-msgstr ""
+msgstr "Endringane trer først i kraft etter omstart av Falkon."
 
 #: lib/preferences/sitesettingsattributesitem.ui:39
-#, fuzzy
 msgctxt "SiteSettingsAttributesItem|"
 msgid "Browse"
-msgstr "Nettlesing"
+msgstr "Bla gjennom"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:36
 #: lib/preferences/sitesettingsbrowsedialog.ui:99
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Ask"
-msgstr ""
+msgstr "Spør"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:37
 #: lib/preferences/sitesettingsbrowsedialog.ui:106
-#, fuzzy
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Allow"
 msgstr "Tillat"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:38
 #: lib/preferences/sitesettingsbrowsedialog.ui:113
-#, fuzzy
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Deny"
 msgstr "Avvis"
 
 #: lib/preferences/sitesettingsbrowsedialog.cpp:39
 #: lib/preferences/sitesettingsbrowsedialog.ui:120
-#, fuzzy
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
 msgstr "Standard"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
-#, fuzzy
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site Permissions"
-msgstr "HTML5-løyve"
+msgstr "Nettstad-løyve"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:22
-#, fuzzy
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Url:"
-msgstr "Nettadresse:"
+msgstr "Adresse:"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:32
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "https://kde.org"
-msgstr ""
+msgstr "https://kde.org/"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:51
 msgctxt "SiteSettingsBrowseDialog|Add or Modify"
 msgid "Set"
-msgstr ""
+msgstr "Bruk"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:68
-#, fuzzy
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Site"
 msgstr "Nettstad"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:73
-#, fuzzy
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Behaviour"
 msgstr "Åtferd"
 
 #: lib/preferences/sitesettingshtml5item.ui:42
-#, fuzzy
 msgctxt "SiteSettingsHtml5Item|"
 msgid "Browse"
-msgstr "Nettlesing"
+msgstr "Bla gjennom"
 
 #: lib/preferences/thememanager.cpp:100
 msgctxt "ThemeManager|"
@@ -5969,10 +5934,9 @@ msgid "Expires On:"
 msgstr "Går ut:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Lukk vindauget"
+msgstr "&Lukk sidestolpen"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
@@ -6044,7 +6008,6 @@ msgid "Deny"
 msgstr "Avvis"
 
 #: lib/tools/mactoolbutton.cpp:94
-#, fuzzy
 msgctxt "MacToolButton|"
 msgid "Select Color"
 msgstr "Vel farge"
@@ -6054,23 +6017,26 @@ msgctxt "QObject|"
 msgid "Unknown size"
 msgstr "Ukjend storleik"
 
+# Har sjekka i kjeldekoden at ein deler på 1024.
 #: lib/tools/qztools.cpp:386
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 KiB"
 
+# Har sjekka i kjeldekoden at ein deler på 1024.
 #: lib/tools/qztools.cpp:391
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 MB"
-msgstr ""
+msgstr "%1 MiB"
 
+# Har sjekka i kjeldekoden at ein deler på 1024.
 #: lib/tools/qztools.cpp:395
 #, qt-format
 msgctxt "QObject|"
 msgid "%1 GB"
-msgstr ""
+msgstr "%1 GiB"
 
 #: lib/tools/qztools.cpp:857
 msgctxt "QObject|"
