@@ -2836,34 +2836,45 @@ msgstr "Heiti:"
 
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
-msgid "Url:"
-msgstr "Slóð:"
+msgid "URL:"
+msgstr ""
 
 #: lib/opensearch/editsearchengine.ui:44
+msgctxt "EditSearchEngine|"
+msgid "Post Data:"
+msgstr "Post-gögn:"
+
+#: lib/opensearch/editsearchengine.ui:54
+#, fuzzy
+#| msgctxt "WebSearchBar|"
+#| msgid "Show suggestions"
+msgctxt "EditSearchEngine|"
+msgid "Suggestions URL:"
+msgstr "Sýna uppástungur"
+
+#: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
 msgid "Shortcut:"
 msgstr "Flýtilykill:"
 
-#: lib/opensearch/editsearchengine.ui:54
+#: lib/opensearch/editsearchengine.ui:74
 msgctxt "EditSearchEngine|"
 msgid "Icon:"
 msgstr "Táknmynd:"
 
-#: lib/opensearch/editsearchengine.ui:83
+#: lib/opensearch/editsearchengine.ui:103
 msgctxt "EditSearchEngine|"
 msgid "Change..."
 msgstr "Breyta..."
 
-#: lib/opensearch/editsearchengine.ui:106
+#: lib/opensearch/editsearchengine.ui:126
+#, fuzzy
+#| msgctxt "EditSearchEngine|"
+#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
-msgid "<b>Note: </b>%s in url or post data represent searched string"
+msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
 "<b>Athugaðu: </b>%s í slóð eða POST-gögnum stendur fyrir leitarstrenginn"
-
-#: lib/opensearch/editsearchengine.ui:123
-msgctxt "EditSearchEngine|"
-msgid "Post Data:"
-msgstr "Post-gögn:"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -2876,12 +2887,12 @@ msgctxt "SearchEnginesDialog|"
 msgid "Add Search Engine"
 msgstr "Bæta við leitarvél"
 
-#: lib/opensearch/searchenginesdialog.cpp:89
+#: lib/opensearch/searchenginesdialog.cpp:90
 msgctxt "SearchEnginesDialog|"
 msgid "Remove Engine"
 msgstr "Fjarlægja leitarvél"
 
-#: lib/opensearch/searchenginesdialog.cpp:90
+#: lib/opensearch/searchenginesdialog.cpp:91
 #, qt-format
 msgctxt "SearchEnginesDialog|"
 msgid ""
@@ -2891,7 +2902,7 @@ msgstr ""
 "Þú getur ekki fjarlægt sjálfgefinu leitarvélina.<br>Settu aðra leitarvél sem "
 "sjálfgefna áður en þú fjarlægir %1."
 
-#: lib/opensearch/searchenginesdialog.cpp:107
+#: lib/opensearch/searchenginesdialog.cpp:108
 msgctxt "SearchEnginesDialog|"
 msgid "Edit Search Engine"
 msgstr "Breyta leitarvél"
@@ -2946,28 +2957,28 @@ msgctxt "SearchEnginesDialog|"
 msgid "Defaults"
 msgstr "Sjálfgefið"
 
-#: lib/opensearch/searchenginesmanager.cpp:400
+#: lib/opensearch/searchenginesmanager.cpp:401
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine Added"
 msgstr "Bætti við leitarvél"
 
-#: lib/opensearch/searchenginesmanager.cpp:400
+#: lib/opensearch/searchenginesmanager.cpp:401
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine \"%1\" has been successfully added."
 msgstr "Bætti við \"%1\" leitarvélinni."
 
-#: lib/opensearch/searchenginesmanager.cpp:407
+#: lib/opensearch/searchenginesmanager.cpp:408
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine is not valid!"
 msgstr "Leitarvélin er ekki gild!"
 
-#: lib/opensearch/searchenginesmanager.cpp:408
+#: lib/opensearch/searchenginesmanager.cpp:409
 msgctxt "SearchEnginesManager|"
 msgid "Error"
 msgstr "Villa"
 
-#: lib/opensearch/searchenginesmanager.cpp:408
+#: lib/opensearch/searchenginesmanager.cpp:409
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
@@ -6431,6 +6442,10 @@ msgstr "Skoða einindi"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "EditSearchEngine|"
+#~ msgid "Url:"
+#~ msgstr "Slóð:"
 
 #~ msgctxt "Preferences|"
 #~ msgid "Activate last tab when closing active tab"

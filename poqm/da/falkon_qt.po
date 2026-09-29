@@ -2879,33 +2879,44 @@ msgstr "Navn:"
 
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
-msgid "Url:"
-msgstr "Url:"
+msgid "URL:"
+msgstr ""
 
 #: lib/opensearch/editsearchengine.ui:44
+msgctxt "EditSearchEngine|"
+msgid "Post Data:"
+msgstr "Postdata:"
+
+#: lib/opensearch/editsearchengine.ui:54
+#, fuzzy
+#| msgctxt "WebSearchBar|"
+#| msgid "Show suggestions"
+msgctxt "EditSearchEngine|"
+msgid "Suggestions URL:"
+msgstr "Vis forslag"
+
+#: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
 msgid "Shortcut:"
 msgstr "Genvej:"
 
-#: lib/opensearch/editsearchengine.ui:54
+#: lib/opensearch/editsearchengine.ui:74
 msgctxt "EditSearchEngine|"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: lib/opensearch/editsearchengine.ui:83
+#: lib/opensearch/editsearchengine.ui:103
 msgctxt "EditSearchEngine|"
 msgid "Change..."
 msgstr "Skift..."
 
-#: lib/opensearch/editsearchengine.ui:106
+#: lib/opensearch/editsearchengine.ui:126
+#, fuzzy
+#| msgctxt "EditSearchEngine|"
+#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
-msgid "<b>Note: </b>%s in url or post data represent searched string"
+msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr "<b>Bemærk: </b>%s i url eller postdata udgør søgte streng"
-
-#: lib/opensearch/editsearchengine.ui:123
-msgctxt "EditSearchEngine|"
-msgid "Post Data:"
-msgstr "Postdata:"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -2918,12 +2929,12 @@ msgctxt "SearchEnginesDialog|"
 msgid "Add Search Engine"
 msgstr "Tilføj søgetjeneste"
 
-#: lib/opensearch/searchenginesdialog.cpp:89
+#: lib/opensearch/searchenginesdialog.cpp:90
 msgctxt "SearchEnginesDialog|"
 msgid "Remove Engine"
 msgstr "Fjern tjeneste"
 
-#: lib/opensearch/searchenginesdialog.cpp:90
+#: lib/opensearch/searchenginesdialog.cpp:91
 #, qt-format
 msgctxt "SearchEnginesDialog|"
 msgid ""
@@ -2933,7 +2944,7 @@ msgstr ""
 "Du kan ikke fjerne standardsøgetjenesten.<br>Sæt en anden tjeneste som "
 "standard inden du fjerner %1."
 
-#: lib/opensearch/searchenginesdialog.cpp:107
+#: lib/opensearch/searchenginesdialog.cpp:108
 msgctxt "SearchEnginesDialog|"
 msgid "Edit Search Engine"
 msgstr "Rediger søgetjeneste"
@@ -2988,28 +2999,28 @@ msgctxt "SearchEnginesDialog|"
 msgid "Defaults"
 msgstr "Standarder"
 
-#: lib/opensearch/searchenginesmanager.cpp:400
+#: lib/opensearch/searchenginesmanager.cpp:401
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine Added"
 msgstr "Søgetjeneste tilføjet"
 
-#: lib/opensearch/searchenginesmanager.cpp:400
+#: lib/opensearch/searchenginesmanager.cpp:401
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine \"%1\" has been successfully added."
 msgstr "Søgetjenesten \"%1\" er blevet tilføjet."
 
-#: lib/opensearch/searchenginesmanager.cpp:407
+#: lib/opensearch/searchenginesmanager.cpp:408
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine is not valid!"
 msgstr "Søgetjeneste er ugyldig!"
 
-#: lib/opensearch/searchenginesmanager.cpp:408
+#: lib/opensearch/searchenginesmanager.cpp:409
 msgctxt "SearchEnginesManager|"
 msgid "Error"
 msgstr "Fejl"
 
-#: lib/opensearch/searchenginesmanager.cpp:408
+#: lib/opensearch/searchenginesmanager.cpp:409
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
@@ -6652,6 +6663,10 @@ msgstr "Inspicer element"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
+
+#~ msgctxt "EditSearchEngine|"
+#~ msgid "Url:"
+#~ msgstr "Url:"
 
 #~ msgctxt "Preferences|"
 #~ msgid "Activate last tab when closing active tab"

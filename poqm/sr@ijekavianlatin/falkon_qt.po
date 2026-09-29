@@ -3118,34 +3118,45 @@ msgstr "Ime:"
 
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
-msgid "Url:"
-msgstr "Url:"
+msgid "URL:"
+msgstr ""
 
 #: lib/opensearch/editsearchengine.ui:44
+msgctxt "EditSearchEngine|"
+msgid "Post Data:"
+msgstr "POST podaci:"
+
+#: lib/opensearch/editsearchengine.ui:54
+#, fuzzy
+#| msgctxt "WebSearchBar|"
+#| msgid "Show suggestions"
+msgctxt "EditSearchEngine|"
+msgid "Suggestions URL:"
+msgstr "Prikazuj prijedloge"
+
+#: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
 msgid "Shortcut:"
 msgstr "Prečica:"
 
-#: lib/opensearch/editsearchengine.ui:54
+#: lib/opensearch/editsearchengine.ui:74
 msgctxt "EditSearchEngine|"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: lib/opensearch/editsearchengine.ui:83
+#: lib/opensearch/editsearchengine.ui:103
 msgctxt "EditSearchEngine|"
 msgid "Change..."
 msgstr "Promijeni..."
 
-#: lib/opensearch/editsearchengine.ui:106
+#: lib/opensearch/editsearchengine.ui:126
+#, fuzzy
+#| msgctxt "EditSearchEngine|"
+#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
-msgid "<b>Note: </b>%s in url or post data represent searched string"
+msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
 "<b>Napomena:</b> %s u URL-u ili POST podacima predstavlja traženi izraz"
-
-#: lib/opensearch/editsearchengine.ui:123
-msgctxt "EditSearchEngine|"
-msgid "Post Data:"
-msgstr "POST podaci:"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -3158,12 +3169,12 @@ msgctxt "SearchEnginesDialog|"
 msgid "Add Search Engine"
 msgstr "Dodaj motor pretrage"
 
-#: lib/opensearch/searchenginesdialog.cpp:89
+#: lib/opensearch/searchenginesdialog.cpp:90
 msgctxt "SearchEnginesDialog|"
 msgid "Remove Engine"
 msgstr "Ukloni"
 
-#: lib/opensearch/searchenginesdialog.cpp:90
+#: lib/opensearch/searchenginesdialog.cpp:91
 #, qt-format
 msgctxt "SearchEnginesDialog|"
 msgid ""
@@ -3173,7 +3184,7 @@ msgstr ""
 "Ne možete da uklonite podrazumijevani motor pretrage.<br>Postavite drugi "
 "motor kao podrazumijevan prije uklanjanja %1."
 
-#: lib/opensearch/searchenginesdialog.cpp:107
+#: lib/opensearch/searchenginesdialog.cpp:108
 msgctxt "SearchEnginesDialog|"
 msgid "Edit Search Engine"
 msgstr "Uredi motor pretrage"
@@ -3228,28 +3239,28 @@ msgctxt "SearchEnginesDialog|"
 msgid "Defaults"
 msgstr "Podrazumijevano"
 
-#: lib/opensearch/searchenginesmanager.cpp:400
+#: lib/opensearch/searchenginesmanager.cpp:401
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine Added"
 msgstr "Motor pretrage je dodat"
 
-#: lib/opensearch/searchenginesmanager.cpp:400
+#: lib/opensearch/searchenginesmanager.cpp:401
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine \"%1\" has been successfully added."
 msgstr "Motor pretrage „%1“ je uspješno dodat."
 
-#: lib/opensearch/searchenginesmanager.cpp:407
+#: lib/opensearch/searchenginesmanager.cpp:408
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine is not valid!"
 msgstr "Motor pretrage nije ispravan!"
 
-#: lib/opensearch/searchenginesmanager.cpp:408
+#: lib/opensearch/searchenginesmanager.cpp:409
 msgctxt "SearchEnginesManager|"
 msgid "Error"
 msgstr "Greška"
 
-#: lib/opensearch/searchenginesmanager.cpp:408
+#: lib/opensearch/searchenginesmanager.cpp:409
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
@@ -6941,6 +6952,10 @@ msgstr "Provjeri element"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr ""
+
+#~ msgctxt "EditSearchEngine|"
+#~ msgid "Url:"
+#~ msgstr "Url:"
 
 #~ msgctxt "Preferences|"
 #~ msgid "Activate last tab when closing active tab"

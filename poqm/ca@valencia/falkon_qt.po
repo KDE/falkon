@@ -2845,34 +2845,45 @@ msgstr "Nom:"
 
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
-msgid "Url:"
-msgstr "URL:"
+msgid "URL:"
+msgstr ""
 
 #: lib/opensearch/editsearchengine.ui:44
+msgctxt "EditSearchEngine|"
+msgid "Post Data:"
+msgstr "Dades POST:"
+
+#: lib/opensearch/editsearchengine.ui:54
+#, fuzzy
+#| msgctxt "WebSearchBar|"
+#| msgid "Show suggestions"
+msgctxt "EditSearchEngine|"
+msgid "Suggestions URL:"
+msgstr "Mostra els suggeriments"
+
+#: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
 msgid "Shortcut:"
 msgstr "Drecera:"
 
-#: lib/opensearch/editsearchengine.ui:54
+#: lib/opensearch/editsearchengine.ui:74
 msgctxt "EditSearchEngine|"
 msgid "Icon:"
 msgstr "Icona:"
 
-#: lib/opensearch/editsearchengine.ui:83
+#: lib/opensearch/editsearchengine.ui:103
 msgctxt "EditSearchEngine|"
 msgid "Change..."
 msgstr "Canvia…"
 
-#: lib/opensearch/editsearchengine.ui:106
+#: lib/opensearch/editsearchengine.ui:126
+#, fuzzy
+#| msgctxt "EditSearchEngine|"
+#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
-msgid "<b>Note: </b>%s in url or post data represent searched string"
+msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
 "<b>Nota: </b>%s en l'adreça o en dades POST representen una cadena de busca"
-
-#: lib/opensearch/editsearchengine.ui:123
-msgctxt "EditSearchEngine|"
-msgid "Post Data:"
-msgstr "Dades POST:"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -2885,12 +2896,12 @@ msgctxt "SearchEnginesDialog|"
 msgid "Add Search Engine"
 msgstr "Afig un motor de busca"
 
-#: lib/opensearch/searchenginesdialog.cpp:89
+#: lib/opensearch/searchenginesdialog.cpp:90
 msgctxt "SearchEnginesDialog|"
 msgid "Remove Engine"
 msgstr "Elimina el motor de busca"
 
-#: lib/opensearch/searchenginesdialog.cpp:90
+#: lib/opensearch/searchenginesdialog.cpp:91
 #, qt-format
 msgctxt "SearchEnginesDialog|"
 msgid ""
@@ -2900,7 +2911,7 @@ msgstr ""
 "No es pot eliminar el motor predeterminat de busca.<br>Establiu-ne un altre "
 "com a predeterminat abans d'eliminar %1."
 
-#: lib/opensearch/searchenginesdialog.cpp:107
+#: lib/opensearch/searchenginesdialog.cpp:108
 msgctxt "SearchEnginesDialog|"
 msgid "Edit Search Engine"
 msgstr "Edita el motor de busca"
@@ -2955,28 +2966,28 @@ msgctxt "SearchEnginesDialog|"
 msgid "Defaults"
 msgstr "Predeterminat"
 
-#: lib/opensearch/searchenginesmanager.cpp:400
+#: lib/opensearch/searchenginesmanager.cpp:401
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine Added"
 msgstr "S'ha afegit el motor de busca"
 
-#: lib/opensearch/searchenginesmanager.cpp:400
+#: lib/opensearch/searchenginesmanager.cpp:401
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine \"%1\" has been successfully added."
 msgstr "El motor de busca «%1» s'ha afegit correctament."
 
-#: lib/opensearch/searchenginesmanager.cpp:407
+#: lib/opensearch/searchenginesmanager.cpp:408
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine is not valid!"
 msgstr "El motor de busca no és vàlid!"
 
-#: lib/opensearch/searchenginesmanager.cpp:408
+#: lib/opensearch/searchenginesmanager.cpp:409
 msgctxt "SearchEnginesManager|"
 msgid "Error"
 msgstr "S'ha produït un error"
 
-#: lib/opensearch/searchenginesmanager.cpp:408
+#: lib/opensearch/searchenginesmanager.cpp:409
 #, qt-format
 msgctxt "SearchEnginesManager|"
 msgid "Error while adding Search Engine <br><b>Error Message: </b> %1"
@@ -6439,3 +6450,7 @@ msgstr "Inspecciona l'element"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 – Falkon"
+
+#~ msgctxt "EditSearchEngine|"
+#~ msgid "Url:"
+#~ msgstr "URL:"
