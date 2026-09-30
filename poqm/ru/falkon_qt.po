@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2026-09-28 18:33+0200\n"
+"PO-Revision-Date: 2026-09-29 08:37+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -2843,7 +2843,7 @@ msgstr "Имя:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "URL-адрес:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2851,12 +2851,9 @@ msgid "Post Data:"
 msgstr "Отправленные данные:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Показывать подсказки"
+msgstr "URL-адрес предложений поиска:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2874,14 +2871,11 @@ msgid "Change..."
 msgstr "Изменить..."
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>Примечание: </b>%s в URL-адресе или отправленные данные представляют "
-"строку поиска"
+"<b>Примечание: </b>%s в URL-адресах и отправленных данных обозначает строку "
+"поиска"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"

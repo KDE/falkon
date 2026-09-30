@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-09-28 07:30+0200\n"
+"PO-Revision-Date: 2026-09-29 07:10+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -2844,7 +2844,7 @@ msgstr "Ime:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "URL:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2852,12 +2852,9 @@ msgid "Post Data:"
 msgstr "Podatki o objavi:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Prikaži sugestije"
+msgstr "Sugestije URL:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2875,13 +2872,9 @@ msgid "Change..."
 msgstr "Sprememba..."
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
-msgstr ""
-"<b>Opomba:</b>%s v naslovu ali vnesenih podatkih predstavlja iskani niz"
+msgstr "<b>Opomba:</b>%s v URL-ju ali vnesenih podatkih predstavlja iskani niz"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"

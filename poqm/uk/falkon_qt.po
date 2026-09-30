@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: falkon_qt\n"
-"PO-Revision-Date: 2026-09-28 09:21+0300\n"
+"PO-Revision-Date: 2026-09-29 08:58+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -2853,7 +2853,7 @@ msgstr "Назва:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "Адреса:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2861,12 +2861,9 @@ msgid "Post Data:"
 msgstr "Розміщення даних:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Показувати підказки"
+msgstr "Адрес пропозицій:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2884,12 +2881,9 @@ msgid "Change..."
 msgstr "Змінити…"
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
-msgstr "<b>Примітка: </b>%s в url-адресі або post-даних означає шуканий рядок"
+msgstr "<b>Примітка: </b>%s в адресах і post-даних означає шуканий рядок"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"

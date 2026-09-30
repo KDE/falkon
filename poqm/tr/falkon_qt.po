@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-05 00:16+0000\n"
-"PO-Revision-Date: 2026-09-28 19:23+0300\n"
+"PO-Revision-Date: 2026-09-29 19:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -2837,7 +2837,7 @@ msgstr "Ad:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "URL:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2845,12 +2845,9 @@ msgid "Post Data:"
 msgstr "Post verisi:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Önerileri Göster"
+msgstr "Öneriler URL’si:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2868,12 +2865,10 @@ msgid "Change..."
 msgstr "Değiştir…"
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
-msgstr "<b>Not: </b>URL ve postdata içinde %s, aranan diziyi simgeler"
+msgstr ""
+"<b>Not: </b>URL’ler ve gönderi verisi içindeki %s, aranan diziyi simgeler."
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2026-09-17 21:31+0200\n"
+"PO-Revision-Date: 2026-09-29 19:42+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -2840,7 +2840,7 @@ msgstr "Namn:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "Webbadress:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2848,12 +2848,9 @@ msgid "Post Data:"
 msgstr "POST-data:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Visa förslag"
+msgstr "Föreslagen webbadress:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2871,13 +2868,10 @@ msgid "Change..."
 msgstr "Ändra..."
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>Observera: </b>%s i webbadress eller POST-data representerar eftersökt "
+"<b>Observera: </b>%s i webbadresser eller POST-data representerar eftersökt "
 "sträng"
 
 #: lib/opensearch/opensearchreader.cpp:105
@@ -4756,12 +4750,9 @@ msgid "Allow image animation"
 msgstr "Tillåt bildanimering"
 
 #: lib/preferences/preferences.ui:1314
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preffer color scheme:"
 msgctxt "Preferences|"
 msgid "Preferred color scheme:"
-msgstr "Föredra färgschema:"
+msgstr "Föredraget färgschema:"
 
 #: lib/preferences/preferences.ui:1349
 msgctxt "Preferences|"
