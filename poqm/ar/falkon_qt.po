@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2026-09-23 17:35+0400\n"
+"PO-Revision-Date: 2026-09-30 18:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -2840,7 +2840,7 @@ msgstr "الاسم:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "المسار:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2848,12 +2848,9 @@ msgid "Post Data:"
 msgstr "بيانات POST:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "أظهر الاقتراحات"
+msgstr "رابط الاقتراحات:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2871,13 +2868,11 @@ msgid "Change..."
 msgstr "غير..."
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>ملاحظة: </b>تمثل %s في الرابط أو في بيانات POST العبارة التي يُبحث عنها"
+"<b>ملاحظة: </b>تمثل %s في عناوين مواقع الويب وبيانات الإرسال السلسلة التي "
+"يُبحث عنها"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -4753,9 +4748,6 @@ msgid "Allow image animation"
 msgstr "اسمح بالصور المتحركة"
 
 #: lib/preferences/preferences.ui:1314
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preffer color scheme:"
 msgctxt "Preferences|"
 msgid "Preferred color scheme:"
 msgstr "مخطط الألوان المفضل:"
