@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2026-09-18 08:59+0200\n"
+"PO-Revision-Date: 2026-10-01 13:29+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Language: fr_FR\n"
 "X-Qt-Contexts: true\n"
 
@@ -2863,7 +2863,7 @@ msgstr "Nom :"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "URL :"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2871,12 +2871,9 @@ msgid "Post Data:"
 msgstr "Données POST :"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Afficher les suggestions"
+msgstr "URL de suggestions :"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2894,14 +2891,11 @@ msgid "Change..."
 msgstr "Modifier…"
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>Remarque : </b>%s dans l'URL ou les données POST représente la chaine de "
-"caractères recherchée"
+"<b>Remarque : </b>%s dans des URL ou des données « POST » représente la "
+"chaine de caractères recherchée"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -4786,12 +4780,9 @@ msgid "Allow image animation"
 msgstr "Autoriser l'animation d'image"
 
 #: lib/preferences/preferences.ui:1314
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preffer color scheme:"
 msgctxt "Preferences|"
 msgid "Preferred color scheme:"
-msgstr "Jeu de couleurs « Preffer » :"
+msgstr "Thème préféré de couleurs :"
 
 #: lib/preferences/preferences.ui:1349
 msgctxt "Preferences|"
