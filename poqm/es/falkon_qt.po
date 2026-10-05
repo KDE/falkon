@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: falkon_qt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-29 01:02+0100\n"
-"PO-Revision-Date: 2026-09-19 18:06+0100\n"
+"PO-Revision-Date: 2026-10-05 00:10+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -2855,7 +2855,7 @@ msgstr "Nombre:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "URL:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2863,12 +2863,9 @@ msgid "Post Data:"
 msgstr "Datos del post:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Mostrar sugerencias"
+msgstr "URL de sugerencias:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2886,14 +2883,11 @@ msgid "Change..."
 msgstr "Cambiar…"
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>Nota: </b>%s en una dirección o en datos del método post representan una "
-"cadena de búsqueda"
+"<b>Nota: </b>%s en una URL o en datos del método post representan una cadena "
+"de búsqueda"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -4770,12 +4764,9 @@ msgid "Allow image animation"
 msgstr "Permitir animación de la imagen"
 
 #: lib/preferences/preferences.ui:1314
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preffer color scheme:"
 msgctxt "Preferences|"
 msgid "Preferred color scheme:"
-msgstr "Preferencia de esquema de color:"
+msgstr "Esquema de color preferido:"
 
 #: lib/preferences/preferences.ui:1349
 msgctxt "Preferences|"
@@ -6119,7 +6110,7 @@ msgid ""
 "li></ul>Do you want Falkon to try open this link in system application?"
 msgstr ""
 "Falkon no puede manejar enlaces <b>%1:</b>. El enlace requerido es <ul><li>"
-"%2</li></ul>. ¿Quiere usted que Falkon intente abrir este enlace en otra "
+"%2</li></ul>¿Quiere usted que Falkon intente abrir este enlace en otra "
 "aplicación del sistema?"
 
 #: lib/webengine/webpage.cpp:340
@@ -6458,7 +6449,3 @@ msgstr "Inspeccionar elemento"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "EditSearchEngine|"
-#~ msgid "Url:"
-#~ msgstr "Url:"
