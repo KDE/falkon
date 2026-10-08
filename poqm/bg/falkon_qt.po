@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: falkon bulgarian translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-15 09:59+0200\n"
-"PO-Revision-Date: 2026-09-28 17:28+0200\n"
+"PO-Revision-Date: 2026-10-07 23:45+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -2839,7 +2839,7 @@ msgstr "Име:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "URL:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2847,12 +2847,9 @@ msgid "Post Data:"
 msgstr "Изпращане на данни:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Показване подсказки"
+msgstr "Предложения за URL:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2870,13 +2867,11 @@ msgid "Change..."
 msgstr "Редактиране…"
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>Забележка: </b>%s в url или изпратените данни представляват търсен низ"
+"<b>Забележка: </b>%s в URL адресите и данните за изпращане представляват "
+"търсения низ"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -6439,7 +6434,3 @@ msgstr "Изследване на елемент"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "EditSearchEngine|"
-#~ msgid "Url:"
-#~ msgstr "Адрес:"
