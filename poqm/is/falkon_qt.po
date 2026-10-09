@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2026-03-25 11:22+0000\n"
+"PO-Revision-Date: 2026-10-08 18:13+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -269,7 +269,7 @@ msgstr "IP-vistfang núverandi síðu"
 #: lib/app/browserwindow.cpp:757
 msgctxt "BrowserWindow|"
 msgid " ["
-msgstr ""
+msgstr " ["
 
 #: lib/app/browserwindow.cpp:760
 msgctxt "BrowserWindow|"
@@ -2838,7 +2838,7 @@ msgstr "Heiti:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "Slóð:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2846,12 +2846,9 @@ msgid "Post Data:"
 msgstr "Post-gögn:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Sýna uppástungur"
+msgstr "Slóð á tillögur:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2869,13 +2866,10 @@ msgid "Change..."
 msgstr "Breyta..."
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>Athugaðu: </b>%s í slóð eða POST-gögnum stendur fyrir leitarstrenginn"
+"<b>Athugaðu: </b>%s í slóð og POST-gögnum stendur fyrir leitarstrenginn"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -4133,12 +4127,12 @@ msgstr "Veldu slóð fyrir skyndiminni..."
 #: lib/preferences/preferences.cpp:885
 msgctxt "Preferences|"
 msgid "New Profile"
-msgstr "Ný forstilling"
+msgstr "Nýtt notkunarsnið"
 
 #: lib/preferences/preferences.cpp:885
 msgctxt "Preferences|"
 msgid "Enter the new profile's name:"
-msgstr "Settu inn nýtt heiti á forstillinguna:"
+msgstr "Settu inn nýtt heiti á notkunarsniðið:"
 
 #: lib/preferences/preferences.cpp:895 lib/preferences/preferences.cpp:900
 msgctxt "Preferences|"
@@ -4148,12 +4142,12 @@ msgstr "Villa!"
 #: lib/preferences/preferences.cpp:895
 msgctxt "Preferences|"
 msgid "This profile already exists!"
-msgstr "Þessi forstilling er þegar til staðar!"
+msgstr "Þetta notkunarsnið er þegar til staðar!"
 
 #: lib/preferences/preferences.cpp:900
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
-msgstr "Get ekki búið til möppu undir forstillingar!"
+msgstr "Get ekki búið til möppu undir notkunarsnið!"
 
 #: lib/preferences/preferences.cpp:911
 msgctxt "Preferences|"
@@ -4167,13 +4161,13 @@ msgid ""
 "Are you sure you want to permanently delete \"%1\" profile? This action "
 "cannot be undone!"
 msgstr ""
-"Viltu eyða endanlega \"%1\"  forstillingunni? Þessi aðgerð er ekki "
+"Viltu eyða endanlega \"%1\" notkunarsniðinu? Þessi aðgerð er ekki "
 "afturkallanleg!"
 
 #: lib/preferences/preferences.cpp:927 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
 msgid "Note: You cannot delete active profile."
-msgstr "Athugaðu: þú getur ekki eytt virkri forstillingu."
+msgstr "Athugaðu: þú getur ekki eytt virkru notkunarsniði."
 
 #: lib/preferences/preferences.ui:14
 msgctxt "Preferences|"
@@ -4318,12 +4312,12 @@ msgstr "Opna aðra vefsíðu..."
 #: lib/preferences/preferences.ui:405
 msgctxt "Preferences|"
 msgid "<b>Profiles</b>"
-msgstr "<b>Forstillingar</b>"
+msgstr "<b>Notkunarsnið</b>"
 
 #: lib/preferences/preferences.ui:412
 msgctxt "Preferences|"
 msgid "Startup profile:"
-msgstr "Forstilling í ræsingu:"
+msgstr "Notkunarsnið í ræsingu:"
 
 #: lib/preferences/preferences.ui:419
 msgctxt "Preferences|"
@@ -4333,7 +4327,7 @@ msgstr "Athuga með uppfærslur í ræsingu"
 #: lib/preferences/preferences.ui:426
 msgctxt "Preferences|"
 msgid "Active profile:"
-msgstr "Virk forstilling:"
+msgstr "Virkt notkunarsnið:"
 
 #: lib/preferences/preferences.ui:440
 msgctxt "Preferences|"
@@ -4393,7 +4387,7 @@ msgstr "px"
 #: lib/preferences/preferences.ui:577
 msgctxt "Preferences|"
 msgid "Show Profile Name in Window Title"
-msgstr ""
+msgstr "Birta heiti notkunarsniðs í gluggatitli"
 
 #: lib/preferences/preferences.ui:586
 msgctxt "Preferences|"
@@ -4459,28 +4453,22 @@ msgstr "Fela fliparönd þegar aðeins einn flipi er opinn"
 #: lib/preferences/preferences.ui:738
 msgctxt "Preferences|"
 msgid "When closing the active tab, activate:"
-msgstr ""
+msgstr "Þegar virka flipanum er lokað skal virkja:"
 
 #: lib/preferences/preferences.ui:746
-#, fuzzy
-#| msgctxt "SearchToolbar|"
-#| msgid "&Previous"
 msgctxt "Preferences|"
 msgid "Previous tab"
-msgstr "&Fyrra"
+msgstr "Fyrri flipi"
 
 #: lib/preferences/preferences.ui:751
-#, fuzzy
-#| msgctxt "TabWidget|"
-#| msgid "New tab"
 msgctxt "Preferences|"
 msgid "Next tab"
-msgstr "Nýr flipi"
+msgstr "Næsti flipi"
 
 #: lib/preferences/preferences.ui:756
 msgctxt "Preferences|"
 msgid "Previously active tab"
-msgstr ""
+msgstr "Fyrri virkan flipa"
 
 #: lib/preferences/preferences.ui:782
 msgctxt "Preferences|"
@@ -4495,7 +4483,7 @@ msgstr "Opna nýja tóma flipa næst á eftir virkum flipa"
 #: lib/preferences/preferences.ui:796
 msgctxt "Preferences|"
 msgid "Reverse new tabs order"
-msgstr ""
+msgstr "Snúa við röð nýrra flipa"
 
 #: lib/preferences/preferences.ui:803
 msgctxt "Preferences|"
@@ -4757,12 +4745,9 @@ msgid "Allow image animation"
 msgstr "Leyfa myndhreyfingar"
 
 #: lib/preferences/preferences.ui:1314
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preffer color scheme:"
 msgctxt "Preferences|"
 msgid "Preferred color scheme:"
-msgstr "Velja helst litastef:"
+msgstr "Æskilegt litastef:"
 
 #: lib/preferences/preferences.ui:1349
 msgctxt "Preferences|"
