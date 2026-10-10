@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2026-09-29 17:37+0200\n"
+"PO-Revision-Date: 2026-10-09 15:37+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -2849,12 +2849,9 @@ msgid "Post Data:"
 msgstr "Dati inviati:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Mostra i suggerimenti"
+msgstr "URL dei suggerimenti:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2872,14 +2869,10 @@ msgid "Change..."
 msgstr "Modifica..."
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>Nota: </b>%s nell'indirizzo o nei dati inviati rappresenta una stringa di "
-"ricerca"
+"<b>Nota: </b>%s negli URL o nei dati inviati rappresenta una stringa cercata"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"

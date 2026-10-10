@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2026-09-29 08:37+0200\n"
+"PO-Revision-Date: 2026-10-09 21:48+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -69,7 +69,7 @@ msgstr "Копировать"
 #: lib/adblock/adblockaddsubscriptiondialog.cpp:40
 msgctxt "AdBlockAddSubscriptionDialog|"
 msgid "Other..."
-msgstr "Другие..."
+msgstr "Другая…"
 
 #: lib/adblock/adblockaddsubscriptiondialog.ui:14
 msgctxt "AdBlockAddSubscriptionDialog|"
@@ -119,7 +119,7 @@ msgstr "Обновить подписки"
 #: lib/adblock/adblockdialog.cpp:57
 msgctxt "AdBlockDialog|"
 msgid "Learn about writing rules..."
-msgstr "Информация о написании правил..."
+msgstr "Информация о написании правил…"
 
 #: lib/adblock/adblockdialog.ui:14
 msgctxt "AdBlockDialog|"
@@ -134,7 +134,7 @@ msgstr "Включить AdBlock"
 #: lib/adblock/adblockdialog.ui:32
 msgctxt "AdBlockDialog|"
 msgid "Search..."
-msgstr "Поиск..."
+msgstr "Поиск…"
 
 #: lib/adblock/adblockdialog.ui:77
 msgctxt "AdBlockDialog|"
@@ -164,7 +164,7 @@ msgstr "AdBlock отключён"
 #: lib/adblock/adblockicon.cpp:92
 msgctxt "AdBlockIcon|"
 msgid "AdBlock is disabled on this site "
-msgstr "AdBlock отключён на этом сайте"
+msgstr "AdBlock отключён на этом сайте "
 
 #: lib/adblock/adblockicon.cpp:98
 msgctxt "AdBlockIcon|"
@@ -216,7 +216,7 @@ msgstr "Фильтр NoCoin"
 #: lib/adblock/adblocksubscription.cpp:176
 msgctxt "AdBlockSubscription|"
 msgid "Cannot load subscription!"
-msgstr "Не удалось загрузить подписку!"
+msgstr "Не удалось загрузить подписку."
 
 #: lib/adblock/adblocksubscription.cpp:289
 msgctxt "AdBlockCustomList|"
@@ -334,7 +334,7 @@ msgstr "Все файлы"
 #: lib/app/browserwindow.cpp:1194
 msgctxt "BrowserWindow|"
 msgid "Open file..."
-msgstr "Открыть файл..."
+msgstr "Открыть файл…"
 
 #: lib/app/browserwindow.cpp:1531
 #, qt-format
@@ -443,7 +443,7 @@ msgstr "Открыть расположение"
 #: lib/app/mainmenu.cpp:497
 msgctxt "MainMenu|"
 msgid "Open &File..."
-msgstr "Открыть &файл..."
+msgstr "Открыть &файл…"
 
 #: lib/app/mainmenu.cpp:498
 msgctxt "MainMenu|"
@@ -458,17 +458,17 @@ msgstr "Диспетчер сеансов"
 #: lib/app/mainmenu.cpp:512
 msgctxt "MainMenu|"
 msgid "&Save Page As..."
-msgstr "&Сохранить страницу как...."
+msgstr "&Сохранить страницу как…"
 
 #: lib/app/mainmenu.cpp:513
 msgctxt "MainMenu|"
 msgid "Send Link..."
-msgstr "Отправить ссылку..."
+msgstr "Отправить ссылку…"
 
 #: lib/app/mainmenu.cpp:514
 msgctxt "MainMenu|"
 msgid "&Print..."
-msgstr "&Печать..."
+msgstr "&Печать…"
 
 #: lib/app/mainmenu.cpp:519
 msgctxt "MainMenu|"
@@ -705,22 +705,22 @@ msgstr "База данных (с шифрованием)"
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:644
 msgctxt "MasterPasswordDialog|"
 msgid "Warning!"
-msgstr "Внимание!"
+msgstr "Предупреждение"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:547
 msgctxt "MasterPasswordDialog|"
 msgid "You entered a wrong password!"
-msgstr "Введён неверный пароль!"
+msgstr "Введён неверный пароль."
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:552
 msgctxt "MasterPasswordDialog|"
 msgid "New/Confirm password fields do not match!"
-msgstr "Пароли не совпадают!"
+msgstr "Пароли не совпадают."
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:579
 msgctxt "AutoFill|"
 msgid "Warning!"
-msgstr "Внимание!"
+msgstr "Предупреждение"
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:580
 msgctxt "AutoFill|"
@@ -728,7 +728,7 @@ msgid ""
 "This backend needs a master password to be set! Falkon just switches to its "
 "default backend"
 msgstr ""
-"Для работы этой внутренней службы необходимо задать основной пароль! Falkon "
+"Для работы этой внутренней службы необходимо задать основной пароль. Falkon "
 "будет использовать вместо неё внутреннюю службу по умолчанию."
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:601
@@ -739,7 +739,7 @@ msgstr "Действительно удалить основной пароль 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:644
 msgctxt "MasterPasswordDialog|"
 msgid "Some data has not been decrypted. The master password was not cleared!"
-msgstr "Некоторые данные не были расшифрованы. Основной пароль не удалён!"
+msgstr "Некоторые данные не были расшифрованы. Основной пароль не удалён."
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:670
 msgctxt "AutoFill|"
@@ -754,7 +754,7 @@ msgstr "Требуется разрешение, введите основной
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:680
 msgctxt "AutoFill|"
 msgid "Entered password is wrong!"
-msgstr "Неверный пароль!"
+msgstr "Неверный пароль."
 
 #: lib/autofill/passwordbackends/databasepasswordbackend.cpp:32
 msgctxt "AutoFill|"
@@ -769,7 +769,7 @@ msgstr "Параметры зашифрованной БД"
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:33
 msgctxt "MasterPasswordDialog|"
 msgid "Set/Change Master Password..."
-msgstr "Указать/изменить основной пароль..."
+msgstr "Указать/изменить основной пароль…"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:36
 msgctxt "MasterPasswordDialog|"
@@ -779,7 +779,7 @@ msgstr "Для работы этой внутренней службы необ�
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:43
 msgctxt "MasterPasswordDialog|"
 msgid "Clear Master Password..."
-msgstr "Удалить основной пароль..."
+msgstr "Удалить основной пароль…"
 
 #: lib/autofill/passwordbackends/masterpassworddialog.ui:46
 msgctxt "MasterPasswordDialog|"
@@ -856,7 +856,7 @@ msgstr "Все остальные закладки"
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.cpp:64
 msgctxt "BookmarksExportDialog|"
 msgid "Error!"
-msgstr "Ошибка!"
+msgstr "Ошибка"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:14
 msgctxt "BookmarksExportDialog|"
@@ -876,7 +876,7 @@ msgstr "Параметры экспорта"
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:42
 msgctxt "BookmarksExportDialog|"
 msgid "Choose..."
-msgstr "Выберите..."
+msgstr "Выбрать…"
 
 #: lib/bookmarks/bookmarksexport/bookmarksexportdialog.ui:73
 msgctxt "BookmarksExportDialog|"
@@ -901,12 +901,12 @@ msgstr "HTML-закладки"
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:38
 msgctxt "BookmarksExporter|"
 msgid "Choose file..."
-msgstr "Выберите файл..."
+msgstr "Выбрать файл…"
 
 #: lib/bookmarks/bookmarksexport/htmlexporter.cpp:47
 msgctxt "BookmarksExporter|"
 msgid "Cannot open file for writing!"
-msgstr "Невозможно открыть файл для записи!"
+msgstr "Не удалось открыть файл для записи."
 
 #: lib/bookmarks/bookmarksicon.cpp:37 lib/bookmarks/bookmarksicon.cpp:108
 msgctxt "BookmarksIcon|"
@@ -922,7 +922,7 @@ msgstr "Редактировать закладку"
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
 msgctxt "BookmarksImportDialog|"
 msgid "Error!"
-msgstr "Ошибка!"
+msgstr "Ошибка"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.cpp:118
 msgctxt "BookmarksImportDialog|"
@@ -974,7 +974,7 @@ msgstr "Выберите браузер, из которого следует и
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:125
 msgctxt "BookmarksImportDialog|"
 msgid "Choose..."
-msgstr "Выберите..."
+msgstr "Выбрать…"
 
 #: lib/bookmarks/bookmarksimport/bookmarksimportdialog.ui:257
 msgctxt "BookmarksImportDialog|"
@@ -997,7 +997,7 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:48
 msgctxt "BookmarksImporter|"
 msgid "Choose file..."
-msgstr "Выберите файл..."
+msgstr "Выбрать файл…"
 
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:59
 #: lib/bookmarks/bookmarksimport/htmlimporter.cpp:53
@@ -1009,7 +1009,7 @@ msgstr "Не удалось открыть файл."
 #: lib/bookmarks/bookmarksimport/chromeimporter.cpp:76
 msgctxt "BookmarksImporter|"
 msgid "Cannot parse JSON file!"
-msgstr "Не удалось разобрать файл JSON!"
+msgstr "Не удалось разобрать файл JSON."
 
 #: lib/bookmarks/bookmarksimport/firefoximporter.cpp:42
 msgctxt "BookmarksImporter|"
@@ -1056,7 +1056,7 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/ieimporter.cpp:52
 msgctxt "BookmarksImporter|"
 msgid "Directory does not exist."
-msgstr "Каталог не существует."
+msgstr "Папка не существует."
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:33
 msgctxt "BookmarksImporter|"
@@ -1070,12 +1070,12 @@ msgstr ""
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:64
 msgctxt "BookmarksImporter|"
 msgid "File is not valid Opera bookmarks file!"
-msgstr "Недопустимый файл закладок Opera!"
+msgstr "Недопустимый файл закладок Opera."
 
 #: lib/bookmarks/bookmarksimport/operaimporter.cpp:69
 msgctxt "BookmarksImporter|"
 msgid "Only UTF-8 encoded Opera bookmarks file is supported!"
-msgstr "Поддерживается только кодировка UTF-8 закладок Opera!"
+msgstr "Поддерживаются только файлы закладок Opera в кодировке UTF-8."
 
 #: lib/bookmarks/bookmarksmanager.cpp:106
 msgctxt "BookmarksManager|"
@@ -1147,7 +1147,7 @@ msgstr "Адрес:"
 #: lib/bookmarks/bookmarksmanager.ui:52
 msgctxt "BookmarksManager|"
 msgid "Keyword:"
-msgstr "Метки:"
+msgstr "Ключевое слово:"
 
 #: lib/bookmarks/bookmarksmanager.ui:62
 msgctxt "BookmarksManager|"
@@ -1167,7 +1167,7 @@ msgstr "&Добавить в закладки"
 #: lib/bookmarks/bookmarksmenu.cpp:175
 msgctxt "BookmarksMenu|"
 msgid "Bookmark &All Tabs"
-msgstr "Закладки для &всех вкладок"
+msgstr "Добавить &все вкладки в закладки"
 
 #: lib/bookmarks/bookmarksmenu.cpp:176
 msgctxt "BookmarksMenu|"
@@ -1253,7 +1253,7 @@ msgstr "Выберите папку для закладок:"
 #: lib/bookmarks/bookmarkstools.cpp:199
 msgctxt "Bookmarks|"
 msgid "Bookmark All Tabs"
-msgstr "Закладки для всех вкладок"
+msgstr "Добавить все вкладки в закладки"
 
 #: lib/bookmarks/bookmarkstools.cpp:240
 msgctxt "Bookmarks|"
@@ -1268,7 +1268,7 @@ msgstr "Адрес:"
 #: lib/bookmarks/bookmarkstools.cpp:245
 msgctxt "Bookmarks|"
 msgid "Keyword:"
-msgstr "Ключевые слова:"
+msgstr "Ключевое слово:"
 
 #: lib/bookmarks/bookmarkstools.cpp:248
 msgctxt "Bookmarks|"
@@ -1357,22 +1357,22 @@ msgstr "Удалить файлы cookie"
 #: lib/cookies/cookiemanager.cpp:193 lib/cookies/cookiemanager.cpp:194
 msgctxt "CookieManager|"
 msgid "<multiple cookies selected>"
-msgstr "<выбрано множество cookie>"
+msgstr "<выбрано несколько файлов cookie>"
 
 #: lib/cookies/cookiemanager.cpp:206
 msgctxt "CookieManager|"
 msgid "Secure only"
-msgstr "Только безопасные соединения"
+msgstr "Только безопасные подключения"
 
 #: lib/cookies/cookiemanager.cpp:206
 msgctxt "CookieManager|"
 msgid "All connections"
-msgstr "Все соединения"
+msgstr "Все подключения"
 
 #: lib/cookies/cookiemanager.cpp:207
 msgctxt "CookieManager|"
 msgid "Session cookie"
-msgstr "Cookie за сеанс"
+msgstr "Сеансовый файл cookie"
 
 #: lib/cookies/cookiemanager.cpp:209
 msgctxt "CookieManager|"
@@ -1393,7 +1393,7 @@ msgstr "Добавить в список разрешённых"
 #: lib/cookies/cookiemanager.cpp:221
 msgctxt "CookieManager|"
 msgid "Already blacklisted!"
-msgstr "Уже в списке запрещённых!"
+msgstr "Уже в списке запрещённых"
 
 #: lib/cookies/cookiemanager.cpp:221
 #, qt-format
@@ -1409,7 +1409,7 @@ msgstr "Добавить в список запрещённых"
 #: lib/cookies/cookiemanager.cpp:256
 msgctxt "CookieManager|"
 msgid "Already whitelisted!"
-msgstr "Уже в списке разрешённых!"
+msgstr "Уже в списке разрешённых"
 
 #: lib/cookies/cookiemanager.cpp:256
 #, qt-format
@@ -1539,7 +1539,7 @@ msgstr "Сохранять файлы cookie"
 #: lib/cookies/cookiemanager.ui:428
 msgctxt "CookieManager|"
 msgid "Filter tracking cookies"
-msgstr "Фильтровать шпионские файлы cookie"
+msgstr "Фильтровать отслеживающие файлы cookie"
 
 #: lib/cookies/cookiemanager.ui:435
 msgctxt "CookieManager|"
@@ -1650,7 +1650,7 @@ msgstr "Осталось %1 — %2 из %3 (%4)"
 #, qt-format
 msgctxt "DownloadItem|"
 msgid "Paused - %1"
-msgstr "Приостановлено - %1"
+msgstr "Приостановлено — %1"
 
 #: lib/downloads/downloaditem.cpp:312
 msgctxt "DownloadItem|"
@@ -1705,9 +1705,9 @@ msgid ""
 " %1 \n"
 " was not found!"
 msgstr ""
-"Файл\n"
-" %1\n"
-" не найден!"
+"Файл \n"
+" %1 \n"
+" не найден."
 
 #: lib/downloads/downloadmanager.cpp:166 lib/downloads/downloadmanager.cpp:389
 #: lib/downloads/downloadmanager.ui:20
@@ -1730,7 +1730,7 @@ msgstr "%1% — диспетчер загрузок"
 #: lib/downloads/downloadmanager.cpp:269
 msgctxt "DownloadManager|"
 msgid "Save file as..."
-msgstr "Сохранить как..."
+msgstr "Сохранить как…"
 
 #: lib/downloads/downloadmanager.cpp:279
 msgctxt "DownloadManager|"
@@ -1750,7 +1750,7 @@ msgstr "HTML-страница, полностью (*.html)"
 #: lib/downloads/downloadmanager.cpp:285
 msgctxt "DownloadManager|"
 msgid "Save page as..."
-msgstr "Сохранить страницу как..."
+msgstr "Сохранить страницу как…"
 
 #: lib/downloads/downloadmanager.cpp:382
 msgctxt "DownloadManager|"
@@ -1771,7 +1771,7 @@ msgstr "Внимание"
 msgctxt "DownloadManager|"
 msgid ""
 "Are you sure you want to quit? All uncompleted downloads will be cancelled!"
-msgstr "Действительно выйти? Все незавершённые загрузки будут прерваны!"
+msgstr "Действительно выйти? Все незавершённые загрузки будут прерваны."
 
 #: lib/downloads/downloadmanager.ui:69
 msgctxt "DownloadManager|"
@@ -1797,7 +1797,7 @@ msgstr "Что Falkon следует сделать с этим файлом?"
 #: lib/downloads/downloadoptionsdialog.ui:47
 msgctxt "DownloadOptionsDialog|"
 msgid "Open..."
-msgstr "Открыть..."
+msgstr "Открыть…"
 
 #: lib/downloads/downloadoptionsdialog.ui:54
 msgctxt "DownloadOptionsDialog|"
@@ -2053,7 +2053,7 @@ msgstr "В этом месяце"
 #: lib/navigation/completer/locationcompleterdelegate.cpp:158
 msgctxt "LocationCompleterDelegate|"
 msgid "Visit"
-msgstr "Посещение"
+msgstr "Перейти"
 
 #: lib/navigation/completer/locationcompleterdelegate.cpp:165
 #: lib/navigation/completer/locationcompleterdelegate.cpp:172
@@ -2086,7 +2086,7 @@ msgstr "Вставить и &перейти"
 #, qt-format
 msgctxt "LocationBar|"
 msgid "Enter address or search with %1"
-msgstr "Введите адрес или выполните поиск c помощью %1"
+msgstr "Введите адрес или выполните поиск с помощью %1"
 
 #: lib/navigation/locationbar.cpp:173
 msgctxt "LocationBar|"
@@ -2121,7 +2121,7 @@ msgstr "Новая вкладка"
 #: lib/navigation/navigationbar.cpp:136
 msgctxt "NavigationBar|"
 msgid "Tools"
-msgstr "Сервис"
+msgstr "Инструменты"
 
 #: lib/navigation/navigationbar.cpp:149
 msgctxt "NavigationBar|"
@@ -2161,7 +2161,7 @@ msgstr "Строка адреса и поиска"
 #: lib/navigation/navigationbar.cpp:197
 msgctxt "NavigationBar|"
 msgid "Tools button"
-msgstr "Кнопка «Сервис»"
+msgstr "Кнопка «Инструменты»"
 
 #: lib/navigation/navigationbar.cpp:198
 msgctxt "NavigationBar|"
@@ -2232,7 +2232,7 @@ msgstr "Вставить и н&айти"
 #, qt-format
 msgctxt "WebSearchBar|"
 msgid "Add %1 ..."
-msgstr "Добавить %1..."
+msgstr "Добавить %1…"
 
 #: lib/navigation/websearchbar.cpp:131
 msgctxt "WebSearchBar|"
@@ -2247,7 +2247,7 @@ msgstr "Показывать подсказки"
 #: lib/navigation/websearchbar.cpp:266
 msgctxt "WebSearchBar|"
 msgid "Search when engine changed"
-msgstr "Начать поиск, когда поисковая система изменена"
+msgstr "Начинать поиск при смене поисковой системы"
 
 #: lib/navigation/zoomlabel.cpp:36
 msgctxt "ZoomLabel|"
@@ -2263,7 +2263,7 @@ msgstr "%1%"
 #: lib/network/networkmanager.cpp:91
 msgctxt "NetworkManager|"
 msgid "SSL Certificate Error!"
-msgstr "Ошибка сертификата SSL!"
+msgstr "Ошибка сертификата SSL"
 
 #: lib/network/networkmanager.cpp:92
 #, qt-format
@@ -2324,12 +2324,13 @@ msgid ""
 "The certificate did not match the built-in public keys pinned for the host "
 "name."
 msgstr ""
-"Сертификат не соответствует встроенным открытым ключам для имени хоста."
+"Сертификат не соответствует встроенным открытым ключам, закреплённым для "
+"имени узла."
 
 #: lib/network/networkmanager.cpp:347
 msgctxt "NetworkManager|"
 msgid "The certificate's common name did not match the host name."
-msgstr "Общее имя сертификата не соответствует имени хоста."
+msgstr "Общее имя сертификата не соответствует имени узла."
 
 #: lib/network/networkmanager.cpp:349
 msgctxt "NetworkManager|"
@@ -2375,7 +2376,7 @@ msgstr "Сертификат подписан с использованием с
 #: lib/network/networkmanager.cpp:365
 msgctxt "NetworkManager|"
 msgid "The host name specified in the certificate is not unique."
-msgstr "Указанное в сертификате имя хоста не является уникальным."
+msgstr "Указанное в сертификате имя узла не является уникальным."
 
 #: lib/network/networkmanager.cpp:367
 msgctxt "NetworkManager|"
@@ -2391,7 +2392,7 @@ msgstr "В сертификате заявлены имена DNS, наруша�
 #: lib/network/networkmanager.cpp:371
 msgctxt "NetworkManager|"
 msgid "The certificate has a validity period that is too long."
-msgstr "У сертификата слишком большой срок действительности."
+msgstr "У сертификата слишком большой срок действия."
 
 #: lib/network/networkmanager.cpp:373
 msgctxt "NetworkManager|"
@@ -2399,9 +2400,8 @@ msgid ""
 "Certificate Transparency was required for this connection, but the server "
 "did not provide CT information that complied with the policy."
 msgstr ""
-"Для этого соединения требуется прозрачность сертификата, но сервер не "
-"предоставил соответствующую информацию, которая бы удовлетворяла условиям "
-"политики."
+"Для этого подключения требуется прозрачность сертификатов, но сервер не "
+"предоставил сведения CT, удовлетворяющие условиям политики."
 
 #: lib/network/networkmanager.cpp:375
 msgctxt "NetworkManager|"
@@ -2415,7 +2415,7 @@ msgstr ""
 #: lib/network/networkmanager.cpp:377
 msgctxt "NetworkManager|"
 msgid "The connection uses an obsolete version of SSL/TLS"
-msgstr "Для соединения используется устаревшая версия SSL/TLS"
+msgstr "Для подключения используется устаревшая версия SSL/TLS"
 
 #: lib/network/networkmanager.cpp:379
 msgctxt "NetworkManager|"
@@ -2596,7 +2596,7 @@ msgstr "Щёлкните для выбора изображения"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:247
 msgctxt "FalkonSchemeReply|"
 msgid "Maximum pages in a row:"
-msgstr "Макс. количество страниц в строке:"
+msgstr "Максимальное число страниц в строке:"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:248
 msgctxt "FalkonSchemeReply|"
@@ -2606,12 +2606,12 @@ msgstr "Изменить размер страниц:"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:249
 msgctxt "FalkonSchemeReply|"
 msgid "Center speed dials"
-msgstr "Выравнивать закладки быстрого доступа"
+msgstr "Выравнивать закладки быстрого доступа по центру"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:250
 msgctxt "FalkonSchemeReply|"
 msgid "Lock the position of SpeedDial entries."
-msgstr "Зафиксировать положение записей быстрого доступа"
+msgstr "Фиксировать положение записей быстрого доступа"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:276
 msgctxt "FalkonSchemeReply|"
@@ -2704,7 +2704,7 @@ msgstr "Параметры"
 #: lib/network/schemehandlers/falkonschemehandler.cpp:309
 msgctxt "FalkonSchemeReply|"
 msgid "Option"
-msgstr "Опция"
+msgstr "Параметр"
 
 #: lib/network/schemehandlers/falkonschemehandler.cpp:310
 msgctxt "FalkonSchemeReply|"
@@ -2819,7 +2819,7 @@ msgstr "Только в этом сеансе"
 #: lib/network/sslerrordialog.ui:14
 msgctxt "SslErrorDialog|"
 msgid "SSL Certificate Error!"
-msgstr "Ошибка сертификата SSL!"
+msgstr "Ошибка сертификата SSL"
 
 #: lib/network/sslerrordialog.ui:90
 msgctxt "SslErrorDialog|"
@@ -2869,7 +2869,7 @@ msgstr "Значок:"
 #: lib/opensearch/editsearchengine.ui:103
 msgctxt "EditSearchEngine|"
 msgid "Change..."
-msgstr "Изменить..."
+msgstr "Изменить…"
 
 #: lib/opensearch/editsearchengine.ui:126
 msgctxt "EditSearchEngine|"
@@ -2918,7 +2918,7 @@ msgstr "Управление поисковыми системами"
 #: lib/opensearch/searchenginesdialog.ui:22
 msgctxt "SearchEnginesDialog|"
 msgid "Add..."
-msgstr "Добавить..."
+msgstr "Добавить…"
 
 #: lib/opensearch/searchenginesdialog.ui:29
 msgctxt "SearchEnginesDialog|"
@@ -2974,7 +2974,7 @@ msgstr "Поисковая система «%1» успешно добавлен
 #: lib/opensearch/searchenginesmanager.cpp:408
 msgctxt "SearchEnginesManager|"
 msgid "Search Engine is not valid!"
-msgstr "Поисковая система не является допустимой!"
+msgstr "Недопустимая поисковая система."
 
 #: lib/opensearch/searchenginesmanager.cpp:409
 msgctxt "SearchEnginesManager|"
@@ -3018,12 +3018,12 @@ msgstr "Закладки"
 #: lib/other/browsinglibrary.cpp:61
 msgctxt "BrowsingLibrary|"
 msgid "Import Bookmarks..."
-msgstr "Импорт закладок..."
+msgstr "Импорт закладок…"
 
 #: lib/other/browsinglibrary.cpp:62
 msgctxt "BrowsingLibrary|"
 msgid "Export Bookmarks..."
-msgstr "Экспорт закладок..."
+msgstr "Экспорт закладок…"
 
 #: lib/other/browsinglibrary.ui:14
 msgctxt "BrowsingLibrary|"
@@ -3038,7 +3038,7 @@ msgstr "Импорт и экспорт"
 #: lib/other/browsinglibrary.ui:84
 msgctxt "BrowsingLibrary|"
 msgid "Search..."
-msgstr "Поиск..."
+msgstr "Поиск…"
 
 #: lib/other/clearprivatedata.cpp:155
 msgctxt "ClearPrivateData|"
@@ -3148,7 +3148,7 @@ msgstr "Файлы изображений"
 #: lib/other/iconchooser.cpp:42 lib/other/iconchooser.ui:14
 msgctxt "IconChooser|"
 msgid "Choose icon..."
-msgstr "Выбрать значок..."
+msgstr "Выбрать значок…"
 
 #: lib/other/iconchooser.ui:20
 msgctxt "IconChooser|"
@@ -3163,7 +3163,7 @@ msgstr "Изображение (.png, .jpg, .jpeg, .gif)"
 #: lib/other/iconchooser.ui:42
 msgctxt "IconChooser|"
 msgid "Choose file..."
-msgstr "Выберите файл..."
+msgstr "Выбрать файл…"
 
 #: lib/other/iconchooser.ui:52
 msgctxt "IconChooser|"
@@ -3203,7 +3203,7 @@ msgstr "Удалить"
 #: lib/other/registerqappassociation.cpp:111
 msgctxt "RegisterQAppAssociation|"
 msgid "Warning!"
-msgstr "Внимание!"
+msgstr "Предупреждение"
 
 #: lib/other/registerqappassociation.cpp:112
 msgctxt "RegisterQAppAssociation|"
@@ -3218,7 +3218,7 @@ msgstr ""
 #: lib/other/siteinfo.cpp:71
 msgctxt "SiteInfo|"
 msgid "<b>Connection is Encrypted.</b>"
-msgstr "<b>Соединение зашифровано</b>"
+msgstr "<b>Подключение зашифровано</b>"
 
 #: lib/other/siteinfo.cpp:75
 msgctxt "SiteInfo|"
@@ -3238,7 +3238,7 @@ msgstr "Сертификат был отклонён."
 #: lib/other/siteinfo.cpp:89
 msgctxt "SiteInfo|"
 msgid "<b>Connection Not Encrypted.</b>"
-msgstr "<b>Соединение не зашифровано</b>"
+msgstr "<b>Подключение не зашифровано</b>"
 
 #: lib/other/siteinfo.cpp:198
 msgctxt "SiteInfo|"
@@ -3268,32 +3268,32 @@ msgstr "Копировать метки и значения"
 #: lib/other/siteinfo.cpp:252 lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
 msgid "Error!"
-msgstr "Ошибка!"
+msgstr "Ошибка"
 
 #: lib/other/siteinfo.cpp:252
 msgctxt "SiteInfo|"
 msgid "This preview is not available!"
-msgstr "Предпросмотр не доступен!"
+msgstr "Предварительный просмотр недоступен"
 
 #: lib/other/siteinfo.cpp:263
 msgctxt "SiteInfo|"
 msgid "Save image..."
-msgstr "Сохранить изображение..."
+msgstr "Сохранить изображение…"
 
 #: lib/other/siteinfo.cpp:271
 msgctxt "SiteInfo|"
 msgid "Cannot write to file!"
-msgstr "Невозможно выполнить запись в файл!"
+msgstr "Невозможно выполнить запись в файл"
 
 #: lib/other/siteinfo.cpp:281
 msgctxt "SiteInfo|"
 msgid "Loading..."
-msgstr "Загрузка..."
+msgstr "Загрузка…"
 
 #: lib/other/siteinfo.cpp:294
 msgctxt "SiteInfo|"
 msgid "Preview not available"
-msgstr "Предпросмотр не доступен"
+msgstr "Предварительный просмотр недоступен"
 
 #: lib/other/siteinfo.ui:14
 msgctxt "SiteInfo|"
@@ -3404,12 +3404,12 @@ msgstr "Сертификат был отклонён."
 #: lib/other/siteinfowidget.cpp:67
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>secured</b>."
-msgstr "Соединение с этим сайтом <b>безопасно</b>."
+msgstr "Подключение к этому сайту <b>защищено</b>."
 
 #: lib/other/siteinfowidget.cpp:71
 msgctxt "SiteInfoWidget|"
 msgid "Your connection to this site is <b>unsecured</b>."
-msgstr "Соединение с этим сайтом <b>небезопасно</b>."
+msgstr "Подключение к этому сайту <b>не защищено</b>."
 
 #: lib/other/siteinfowidget.cpp:86 lib/other/siteinfowidget.cpp:105
 #, qt-format
@@ -3451,7 +3451,7 @@ msgstr "Зарегистрировать"
 #: lib/other/siteinfowidget.ui:98
 msgctxt "SiteInfoWidget|"
 msgid "More..."
-msgstr "Подробнее..."
+msgstr "Подробнее…"
 
 #: lib/other/sitesettingsmanager.cpp:324
 msgctxt "SiteSettingsManager|"
@@ -3622,12 +3622,12 @@ msgstr "Файл"
 #: lib/popupwindow/popupwindow.cpp:84
 msgctxt "PopupWindow|"
 msgid "Send Link..."
-msgstr "Отправить ссылку..."
+msgstr "Отправить ссылку…"
 
 #: lib/popupwindow/popupwindow.cpp:85
 msgctxt "PopupWindow|"
 msgid "&Print..."
-msgstr "&Печать..."
+msgstr "&Печать…"
 
 #: lib/popupwindow/popupwindow.cpp:87
 msgctxt "PopupWindow|"
@@ -3699,7 +3699,7 @@ msgstr "Предпочитаемые языки"
 #: lib/preferences/acceptlanguage.ui:25
 msgctxt "AcceptLanguage|"
 msgid "Add..."
-msgstr "Добавить..."
+msgstr "Добавить…"
 
 #: lib/preferences/acceptlanguage.ui:32
 msgctxt "AcceptLanguage|"
@@ -3724,7 +3724,7 @@ msgstr "Добавить язык"
 #: lib/preferences/addacceptlanguage.ui:20
 msgctxt "AddAcceptLanguage|"
 msgid "Choose preferred language for web sites"
-msgstr "Выберите предпочитаемый язык"
+msgstr "Выберите предпочитаемый язык для веб-сайтов"
 
 #: lib/preferences/addacceptlanguage.ui:32
 msgctxt "AddAcceptLanguage|"
@@ -3734,12 +3734,12 @@ msgstr "Своё определение:"
 #: lib/preferences/autofillmanager.cpp:67
 msgctxt "AutoFillManager|"
 msgid "Import Passwords from File..."
-msgstr "Импорт паролей из файла..."
+msgstr "Импорт паролей из файла…"
 
 #: lib/preferences/autofillmanager.cpp:68
 msgctxt "AutoFillManager|"
 msgid "Export Passwords to File..."
-msgstr "Экспорт паролей в файл..."
+msgstr "Экспорт паролей в файл…"
 
 #: lib/preferences/autofillmanager.cpp:70
 msgctxt "AutoFillManager|"
@@ -3757,12 +3757,12 @@ msgstr "Показать пароли"
 #: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend..."
-msgstr "Изменить сервер..."
+msgstr "Изменить хранилище…"
 
 #: lib/preferences/autofillmanager.cpp:130
 msgctxt "AutoFillManager|"
 msgid "Change backend:"
-msgstr "Изменить сервер:"
+msgstr "Изменить хранилище:"
 
 #: lib/preferences/autofillmanager.cpp:179
 msgctxt "AutoFillManager|"
@@ -3798,32 +3798,32 @@ msgstr "Изменить пароль:"
 #: lib/preferences/autofillmanager.cpp:313
 msgctxt "AutoFillManager|"
 msgid "Choose file..."
-msgstr "Выберите файл..."
+msgstr "Выберите файл…"
 
 #: lib/preferences/autofillmanager.cpp:327
 msgctxt "AutoFillManager|"
 msgid "Cannot read file!"
-msgstr "Невозможно прочитать файл!"
+msgstr "Невозможно прочитать файл"
 
 #: lib/preferences/autofillmanager.cpp:336
 msgctxt "AutoFillManager|"
 msgid "Successfully imported"
-msgstr "Импорт успешно завершён!"
+msgstr "Импорт успешно завершён"
 
 #: lib/preferences/autofillmanager.cpp:336
 msgctxt "AutoFillManager|"
 msgid "Error while importing!"
-msgstr "Ошибка при импорте!"
+msgstr "Ошибка при импорте"
 
 #: lib/preferences/autofillmanager.cpp:347
 msgctxt "AutoFillManager|"
 msgid "Cannot write to file!"
-msgstr "Невозможно выполнить запись в файл!"
+msgstr "Невозможно выполнить запись в файл"
 
 #: lib/preferences/autofillmanager.cpp:356
 msgctxt "AutoFillManager|"
 msgid "Successfully exported"
-msgstr "Экспорт успешно завершён!"
+msgstr "Экспорт успешно завершён"
 
 #: lib/preferences/autofillmanager.cpp:373
 msgctxt "AutoFillManager|"
@@ -3848,12 +3848,12 @@ msgstr "Пароли хранятся в:"
 #: lib/preferences/autofillmanager.ui:35
 msgctxt "AutoFillManager|"
 msgid "Change backend"
-msgstr "Изменить сервер"
+msgstr "Изменить хранилище"
 
 #: lib/preferences/autofillmanager.ui:42
 msgctxt "AutoFillManager|"
 msgid "Backend options"
-msgstr "Параметры баз данных"
+msgstr "Параметры хранилища"
 
 #: lib/preferences/autofillmanager.ui:71
 msgctxt "AutoFillManager|"
@@ -3878,7 +3878,7 @@ msgstr "Пароль"
 #: lib/preferences/autofillmanager.ui:113
 msgctxt "AutoFillManager|"
 msgid "Import and Export"
-msgstr "Импорт/Экспорт"
+msgstr "Импорт и экспорт"
 
 #: lib/preferences/autofillmanager.ui:154
 msgctxt "AutoFillManager|"
@@ -3956,7 +3956,7 @@ msgstr ""
 #: lib/preferences/certificatemanager.cpp:61
 msgctxt "CertificateManager|"
 msgid "Host: "
-msgstr "Хост: "
+msgstr "Узел: "
 
 #: lib/preferences/certificatemanager.cpp:65
 msgctxt "CertificateManager|"
@@ -3967,12 +3967,12 @@ msgstr "Добавить исключение сертификата"
 #, qt-format
 msgctxt "CertificateManager|"
 msgid "Host %1 already in the list"
-msgstr "Хост %1 уже в списке"
+msgstr "Узел %1 уже есть в списке"
 
 #: lib/preferences/certificatemanager.cpp:83
 msgctxt "CertificateManager|"
 msgid "Empty host"
-msgstr "Пустой хост"
+msgstr "Пустое имя узла"
 
 #: lib/preferences/certificatemanager.ui:14
 msgctxt "CertificateManager|"
@@ -4044,18 +4044,18 @@ msgctxt "PluginsList|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/571/\">Get more extensions...</a>"
 msgstr ""
-"<a href=\"https://store.kde.org/browse/cat/571/\">Загрузить дополнительные "
-"расширения...</a>"
+"<a href=\"https://store.kde.org/browse/cat/571/\">Загрузить другие "
+"расширения…</a>"
 
 #: lib/preferences/pluginsmanager.cpp:201
 msgctxt "PluginsManager|"
 msgid "Error!"
-msgstr "Ошибка!"
+msgstr "Ошибка"
 
 #: lib/preferences/pluginsmanager.cpp:201
 msgctxt "PluginsManager|"
 msgid "Cannot load extension!"
-msgstr "Не удалось загрузить расширение!"
+msgstr "Не удалось загрузить расширение"
 
 #: lib/preferences/pluginsmanager.cpp:240
 msgctxt "PluginsManager|"
@@ -4102,7 +4102,7 @@ msgstr "%1%"
 #: lib/preferences/preferences.cpp:628
 msgctxt "Preferences|"
 msgid "Choose executable location..."
-msgstr "Укажите путь к исполняемому файлу..."
+msgstr "Укажите путь к исполняемому файлу…"
 
 #: lib/preferences/preferences.cpp:671
 msgctxt "Preferences|"
@@ -4118,12 +4118,12 @@ msgstr ""
 #: lib/preferences/preferences.cpp:721
 msgctxt "Preferences|"
 msgid "Choose download location..."
-msgstr "Выберите папку для загрузок..."
+msgstr "Выберите папку для загрузок…"
 
 #: lib/preferences/preferences.cpp:735
 msgctxt "Preferences|"
 msgid "Choose stylesheet location..."
-msgstr "Укажите расположение таблицы стилей..."
+msgstr "Укажите расположение таблицы стилей…"
 
 #: lib/preferences/preferences.cpp:746
 msgctxt "Preferences|"
@@ -4133,7 +4133,7 @@ msgstr "Удалено"
 #: lib/preferences/preferences.cpp:854
 msgctxt "Preferences|"
 msgid "Choose cache path..."
-msgstr "Выберите папку кэша..."
+msgstr "Выберите папку кэша…"
 
 #: lib/preferences/preferences.cpp:885
 msgctxt "Preferences|"
@@ -4148,17 +4148,17 @@ msgstr "Введите имя профиля:"
 #: lib/preferences/preferences.cpp:895 lib/preferences/preferences.cpp:900
 msgctxt "Preferences|"
 msgid "Error!"
-msgstr "Ошибка!"
+msgstr "Ошибка"
 
 #: lib/preferences/preferences.cpp:895
 msgctxt "Preferences|"
 msgid "This profile already exists!"
-msgstr "Такой профиль уже существует!"
+msgstr "Такой профиль уже существует"
 
 #: lib/preferences/preferences.cpp:900
 msgctxt "Preferences|"
 msgid "Cannot create profile directory!"
-msgstr "Невозможно создать папку для профиля!"
+msgstr "Невозможно создать папку для профиля"
 
 #: lib/preferences/preferences.cpp:911
 msgctxt "Preferences|"
@@ -4171,7 +4171,9 @@ msgctxt "Preferences|"
 msgid ""
 "Are you sure you want to permanently delete \"%1\" profile? This action "
 "cannot be undone!"
-msgstr "Действительно удалить профиль «%1»? Это действие необратимо!"
+msgstr ""
+"Действительно удалить профиль «%1» без возможности восстановления? Это "
+"действие необратимо."
 
 #: lib/preferences/preferences.cpp:927 lib/preferences/preferences.ui:245
 msgctxt "Preferences|"
@@ -4316,7 +4318,7 @@ msgstr "Открыть пустую вкладку"
 #: lib/preferences/preferences.ui:397
 msgctxt "Preferences|"
 msgid "Open other page..."
-msgstr "Открыть другую страницу..."
+msgstr "Открыть другую страницу…"
 
 #: lib/preferences/preferences.ui:405
 msgctxt "Preferences|"
@@ -4413,7 +4415,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:2812
 msgctxt "Preferences|"
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: lib/preferences/preferences.ui:618 lib/preferences/preferences.ui:632
 #: lib/preferences/preferences.ui:1141
@@ -4502,12 +4504,12 @@ msgstr "Открывать всплывающие окна во вкладках
 #: lib/preferences/preferences.ui:810
 msgctxt "Preferences|"
 msgid "Block automatic popups"
-msgstr "Блокировать автоматические всплывающие панели"
+msgstr "Блокировать автоматические всплывающие окна"
 
 #: lib/preferences/preferences.ui:817
 msgctxt "Preferences|"
 msgid "Always switch between tabs with mouse wheel"
-msgstr "Переключаться между вкладками колесом мыши"
+msgstr "Всегда переключаться между вкладками колесом мыши"
 
 #: lib/preferences/preferences.ui:824
 msgctxt "Preferences|"
@@ -4517,7 +4519,7 @@ msgstr "Переходить на открываемую вкладку"
 #: lib/preferences/preferences.ui:831
 msgctxt "Preferences|"
 msgid "Don't close window upon closing last tab"
-msgstr "Не закрывать браузер при закрытии последней вкладки"
+msgstr "Не закрывать окно при закрытии последней вкладки"
 
 #: lib/preferences/preferences.ui:838
 msgctxt "Preferences|"
@@ -4557,7 +4559,7 @@ msgstr "Настройка адресной строки"
 #: lib/preferences/preferences.ui:920
 msgctxt "Preferences|"
 msgid "Suggest when typing into address bar:"
-msgstr "Автодополнять из:"
+msgstr "Предлагать при вводе в адресной строке:"
 
 #: lib/preferences/preferences.ui:934
 msgctxt "Preferences|"
@@ -4582,7 +4584,7 @@ msgstr "Ничего"
 #: lib/preferences/preferences.ui:975
 msgctxt "Preferences|"
 msgid "Enable inline suggestions"
-msgstr "Включить встроенные предложения"
+msgstr "Включить автодополнение в строке"
 
 #: lib/preferences/preferences.ui:982
 msgctxt "Preferences|"
@@ -4593,7 +4595,7 @@ msgstr "Нажмите клавишу Shift, чтобы открыть ссыл�
 #: lib/preferences/preferences.ui:985
 msgctxt "Preferences|"
 msgid "Propose to switch tab if completed url is already loaded"
-msgstr "Переходить на вкладку, если ссылка полностью загружена"
+msgstr "Предлагать переход на вкладку, если дополненный адрес уже открыт"
 
 #: lib/preferences/preferences.ui:992
 msgctxt "Preferences|"
@@ -4633,7 +4635,7 @@ msgstr "Показывать предложения поиска"
 #: lib/preferences/preferences.ui:1041
 msgctxt "Preferences|"
 msgid "Expand suggestion popup to window width"
-msgstr "Разворачивать всплывающую подсказку по ширине окна"
+msgstr "Растягивать список предложений по ширине окна"
 
 #: lib/preferences/preferences.ui:1064
 msgctxt "Preferences|"
@@ -4658,7 +4660,7 @@ msgstr "Вверху"
 #: lib/preferences/preferences.ui:1115
 msgctxt "Preferences|"
 msgid "Custom color:"
-msgstr "Пользовательские цвета:"
+msgstr "Пользовательский цвет:"
 
 #: lib/preferences/preferences.ui:1131
 msgctxt "Preferences|"
@@ -4709,7 +4711,7 @@ msgstr "Включить пространственную навигацию"
 #: lib/preferences/preferences.ui:1249
 msgctxt "Preferences|"
 msgid "Use native scrollbars"
-msgstr "Использовать собственные полосы прокрутки"
+msgstr "Использовать системные полосы прокрутки"
 
 #: lib/preferences/preferences.ui:1256
 msgctxt "Preferences|"
@@ -4724,7 +4726,7 @@ msgstr "Скрывать локальный IP-адрес при использ�
 #: lib/preferences/preferences.ui:1270
 msgctxt "Preferences|"
 msgid "Enable DNS prefetching"
-msgstr "Включить упреждающее преобразование доменных имен"
+msgstr "Включить упреждающее преобразование доменных имён"
 
 #: lib/preferences/preferences.ui:1277
 msgctxt "Preferences|"
@@ -4759,13 +4761,13 @@ msgstr "Предпочитаемая цветовая схема:"
 #: lib/preferences/preferences.ui:1349
 msgctxt "Preferences|"
 msgid "Mouse wheel scrolls"
-msgstr "Количество строк для прокрутки с помощью колеса мыши:"
+msgstr "Колесо мыши прокручивает"
 
 # Сегмент должен оставаться пустым, т.к. перевод в строке выше --ayavorsky 20201029
 #: lib/preferences/preferences.ui:1369
 msgctxt "Preferences|"
 msgid "lines on page"
-msgstr " "
+msgstr "строк"
 
 #: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
@@ -4780,7 +4782,7 @@ msgstr "Локальное хранилище"
 #: lib/preferences/preferences.ui:1427
 msgctxt "Preferences|"
 msgid "Allow storing network cache on disk"
-msgstr "Сохранять кэш"
+msgstr "Сохранять сетевой кэш на диске"
 
 #: lib/preferences/preferences.ui:1450
 msgctxt "Preferences|"
@@ -4900,17 +4902,17 @@ msgstr "Без засечек"
 #: lib/preferences/preferences.ui:1807
 msgctxt "Preferences|"
 msgid "Cursive"
-msgstr "Курсив"
+msgstr "Рукописный"
 
 #: lib/preferences/preferences.ui:1859
 msgctxt "Preferences|"
 msgid "Fantasy"
-msgstr "Моноширинный"
+msgstr "Декоративный"
 
 #: lib/preferences/preferences.ui:1866
 msgctxt "Preferences|"
 msgid "<b>Font Sizes</b>"
-msgstr "<b>Размер шрифта</b>"
+msgstr "<b>Размеры шрифтов</b>"
 
 #: lib/preferences/preferences.ui:1875
 msgctxt "Preferences|"
@@ -4935,7 +4937,7 @@ msgstr "Минимальный логический размер шрифта"
 #: lib/preferences/preferences.ui:1949
 msgctxt "Preferences|"
 msgid "<b>Shortcuts</b>"
-msgstr "<b>Комбинации</b>"
+msgstr "<b>Комбинации клавиш</b>"
 
 #: lib/preferences/preferences.ui:1956
 msgctxt "Preferences|"
@@ -4945,7 +4947,7 @@ msgstr "Переходить на вкладку по нажатию Alt + но�
 #: lib/preferences/preferences.ui:1963
 msgctxt "Preferences|"
 msgid "Load speed dials with Ctrl + number of speed dial"
-msgstr "Загружать закладки быстрого доступа по нажатию Ctrl + номер вкладки"
+msgstr "Загружать закладки быстрого доступа по нажатию Ctrl + номер закладки"
 
 #: lib/preferences/preferences.ui:1970
 msgctxt "Preferences|"
@@ -4959,7 +4961,7 @@ msgstr ""
 #: lib/preferences/preferences.ui:1973
 msgctxt "Preferences|"
 msgid "Use single key shortcuts"
-msgstr "Использовать одинарные комбинации клавиш"
+msgstr "Использовать комбинации из одной клавиши"
 
 #: lib/preferences/preferences.ui:1980
 msgctxt "Preferences|"
@@ -5068,9 +5070,7 @@ msgstr "Параметры JavaScript"
 #: lib/preferences/preferences.ui:2303
 msgctxt "Preferences|"
 msgid "Send Do Not Track header to servers"
-msgstr ""
-"Отправлять запросы Do Not Track, чтобы уведомлять веб-сайты, что "
-"пользователя нельзя отслеживать"
+msgstr "Отправлять серверам заголовок Do Not Track"
 
 #: lib/preferences/preferences.ui:2310
 msgctxt "Preferences|"
@@ -5284,7 +5284,7 @@ msgstr "Разрешённые схемы"
 msgctxt "SchemeManager|"
 msgid "**Note:** Allowed schemes can be added by extensions."
 msgstr ""
-"**Примечение:** разрешённые схемы можно добавлять с помощью расширений."
+"**Примечание:** разрешённые схемы можно добавлять с помощью расширений."
 
 #: lib/preferences/schememanager.ui:54 lib/preferences/schememanager.ui:116
 msgctxt "SchemeManager|"
@@ -5416,8 +5416,7 @@ msgctxt "ThemeManager|"
 msgid ""
 "<a href=\"https://store.kde.org/browse/cat/572/\">Get more themes...</a>"
 msgstr ""
-"<a href=\"https://store.kde.org/browse/cat/572/\">Загрузить новые "
-"оформления...</a>"
+"<a href=\"https://store.kde.org/browse/cat/572/\">Загрузить другие темы…</a>"
 
 #: lib/preferences/useragentdialog.cpp:99
 msgctxt "UserAgentDialog|"
@@ -5427,7 +5426,7 @@ msgstr "Добавить сайт"
 #: lib/preferences/useragentdialog.cpp:141
 msgctxt "UserAgentDialog|"
 msgid "Edit site"
-msgstr "Редактировать"
+msgstr "Редактировать сайт"
 
 #: lib/preferences/useragentdialog.cpp:227
 msgctxt "UserAgentDialog|"
@@ -5447,7 +5446,7 @@ msgstr "Диспетчер агентов пользователя"
 #: lib/preferences/useragentdialog.ui:20
 msgctxt "UserAgentDialog|"
 msgid "Change global User Agent"
-msgstr "Изменить агент пользователя"
+msgstr "Изменить глобальный агент пользователя"
 
 #: lib/preferences/useragentdialog.ui:48
 msgctxt "UserAgentDialog|"
@@ -5509,14 +5508,14 @@ msgstr "Введите новое название:"
 #: lib/session/sessionmanager.cpp:219
 msgctxt "SessionManager|"
 msgid "Error!"
-msgstr "Ошибка!"
+msgstr "Ошибка"
 
 #: lib/session/sessionmanager.cpp:137 lib/session/sessionmanager.cpp:171
 #: lib/session/sessionmanager.cpp:219
 #, qt-format
 msgctxt "SessionManager|"
 msgid "The session file \"%1\" exists. Please enter another name."
-msgstr "Файл сеанса «%1» уже существует. Пожалуйста, введите другое название."
+msgstr "Файл сеанса «%1» уже существует. Введите другое название."
 
 #: lib/session/sessionmanager.cpp:144
 msgctxt "SessionManager|"
@@ -5680,7 +5679,7 @@ msgstr "Удалить"
 #: lib/sidebar/bookmarkssidebar.ui:41
 msgctxt "BookmarksSideBar|"
 msgid "Search..."
-msgstr "Поиск..."
+msgstr "Поиск…"
 
 #: lib/sidebar/historysidebar.cpp:96
 msgctxt "HistorySideBar|"
@@ -5705,7 +5704,7 @@ msgstr "Удалить"
 #: lib/sidebar/historysidebar.ui:32
 msgctxt "HistorySideBar|"
 msgid "Search..."
-msgstr "Поиск..."
+msgstr "Поиск…"
 
 #: lib/sidebar/sidebar.cpp:66 lib/sidebar/sidebar.cpp:110
 msgctxt "SideBar|"
@@ -5906,7 +5905,7 @@ msgstr "Новая вкладка"
 #: lib/tools/aesinterface.cpp:156
 msgctxt "AesInterface|"
 msgid "Warning!"
-msgstr "Внимание!"
+msgstr "Внимание"
 
 #: lib/tools/aesinterface.cpp:156
 msgctxt "AesInterface|"
@@ -5914,7 +5913,7 @@ msgid ""
 "Data has been encrypted with a newer version of Falkon.\n"
 "Please install latest version of Falkon."
 msgstr ""
-"Данные зашифрованы с помощью новой версии Falkon.\n"
+"Данные зашифрованы с помощью более новой версии Falkon.\n"
 "Установите последнюю версию Falkon."
 
 #: lib/tools/certificateinfowidget.cpp:300
@@ -5925,22 +5924,22 @@ msgstr "<не установлен в сертификате>"
 #: lib/tools/certificateinfowidget.ui:17
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Issued To</b>"
-msgstr "<b>Выдано для</b>"
+msgstr "<b>Кому выдан</b>"
 
 #: lib/tools/certificateinfowidget.ui:24 lib/tools/certificateinfowidget.ui:99
 msgctxt "CertificateInfoWidget|"
 msgid "Common Name (CN):"
-msgstr "Общее имя:"
+msgstr "Общее имя (CN):"
 
 #: lib/tools/certificateinfowidget.ui:41 lib/tools/certificateinfowidget.ui:116
 msgctxt "CertificateInfoWidget|"
 msgid "Organization (O):"
-msgstr "Организация (О):"
+msgstr "Организация (O):"
 
 #: lib/tools/certificateinfowidget.ui:58 lib/tools/certificateinfowidget.ui:133
 msgctxt "CertificateInfoWidget|"
 msgid "Organizational Unit (OU):"
-msgstr "Подразделение (П):"
+msgstr "Подразделение (OU):"
 
 #: lib/tools/certificateinfowidget.ui:75
 msgctxt "CertificateInfoWidget|"
@@ -5950,7 +5949,7 @@ msgstr "Серийный номер:"
 #: lib/tools/certificateinfowidget.ui:92
 msgctxt "CertificateInfoWidget|"
 msgid "<b>Issued By</b>"
-msgstr "<b>Выдано </b>"
+msgstr "<b>Кем выдан</b>"
 
 #: lib/tools/certificateinfowidget.ui:150
 msgctxt "CertificateInfoWidget|"
@@ -5960,7 +5959,7 @@ msgstr "<b>Срок действия</b>"
 #: lib/tools/certificateinfowidget.ui:157
 msgctxt "CertificateInfoWidget|"
 msgid "Issued On:"
-msgstr "Выдано для:"
+msgstr "Дата выдачи:"
 
 #: lib/tools/certificateinfowidget.ui:174
 msgctxt "CertificateInfoWidget|"
@@ -6087,7 +6086,7 @@ msgstr "Не удалось запустить внешнюю программу
 #, qt-format
 msgctxt "QObject|"
 msgid "Cannot start external program! %1"
-msgstr "Не удалось запустить внешнюю программу! %1"
+msgstr "Не удалось запустить внешнюю программу. %1"
 
 #: lib/webengine/jsalert.ui:125
 msgctxt "jsAlert|"
@@ -6101,19 +6100,18 @@ msgid ""
 "Falkon cannot handle <b>%1:</b> links. The requested link is <ul><li>%2</"
 "li></ul>Do you want Falkon to try open this link in system application?"
 msgstr ""
-"Falkon не удалось обработать <b>%1:</b> ссылки. Запрашиваемая ссылка <ul><li>"
-"%2</li></ul>Следует ли Falkon открыть эту ссылку с помощью системной "
-"программы?"
+"Falkon не может обработать ссылки <b>%1:</b>. Запрошенная ссылка: <ul><li>"
+"%2</li></ul>Попробовать открыть эту ссылку с помощью системного приложения?"
 
 #: lib/webengine/webpage.cpp:340
 msgctxt "WebPage|"
 msgid "Remember my choice for this protocol"
-msgstr "Запомнить пользовательский выбор протокола"
+msgstr "Запомнить выбор для этого протокола"
 
 #: lib/webengine/webpage.cpp:341
 msgctxt "WebPage|"
 msgid "External Protocol Request"
-msgstr "Внешний запрос протокола"
+msgstr "Запрос внешнего протокола"
 
 #: lib/webengine/webpage.cpp:419 lib/webengine/webpage.cpp:420
 msgctxt "WebPage|"
@@ -6141,12 +6139,12 @@ msgstr "Обновить страницу"
 #: lib/webengine/webpage.cpp:598
 msgctxt "WebPage|"
 msgid "Choose file..."
-msgstr "Выберите файл..."
+msgstr "Выберите файл…"
 
 #: lib/webengine/webpage.cpp:602
 msgctxt "WebPage|"
 msgid "Choose files..."
-msgstr "Выберите файлы..."
+msgstr "Выберите файлы…"
 
 #: lib/webengine/webpage.cpp:738
 msgctxt "WebPage|"
@@ -6207,7 +6205,7 @@ msgstr "Добавить в &закладки"
 #: lib/webengine/webview.cpp:790
 msgctxt "WebView|"
 msgid "&Save page as..."
-msgstr "Сохранить страницу как...."
+msgstr "Со&хранить страницу как…"
 
 #: lib/webengine/webview.cpp:791
 msgctxt "WebView|"
@@ -6217,7 +6215,7 @@ msgstr "Копировать &ссылку страницы"
 #: lib/webengine/webview.cpp:792
 msgctxt "WebView|"
 msgid "Send page link..."
-msgstr "Отправить адрес страницы..."
+msgstr "Отправить адрес страницы…"
 
 #: lib/webengine/webview.cpp:794
 msgctxt "WebView|"
@@ -6257,12 +6255,12 @@ msgstr "Добавить ссылку в &закладки"
 #: lib/webengine/webview.cpp:823
 msgctxt "WebView|"
 msgid "&Save link as..."
-msgstr "С&охранить ссылку как..."
+msgstr "С&охранить ссылку как…"
 
 #: lib/webengine/webview.cpp:824
 msgctxt "WebView|"
 msgid "Send link..."
-msgstr "Отправить ссылку..."
+msgstr "Отправить ссылку…"
 
 #: lib/webengine/webview.cpp:825
 msgctxt "WebView|"
@@ -6287,17 +6285,17 @@ msgstr "Ко&пировать ссылку на изображение"
 #: lib/webengine/webview.cpp:847
 msgctxt "WebView|"
 msgid "&Save image as..."
-msgstr "С&охранить изображение как..."
+msgstr "С&охранить изображение как…"
 
 #: lib/webengine/webview.cpp:848
 msgctxt "WebView|"
 msgid "Send image..."
-msgstr "Отправить изображение..."
+msgstr "Отправить изображение…"
 
 #: lib/webengine/webview.cpp:867
 msgctxt "WebView|"
 msgid "Send text..."
-msgstr "Отправить текст..."
+msgstr "Отправить текст…"
 
 #: lib/webengine/webview.cpp:879
 msgctxt "WebView|"
@@ -6308,17 +6306,17 @@ msgstr "Перейти по &ссылке"
 #, qt-format
 msgctxt "WebView|"
 msgid "Search \"%1 ..\" with %2"
-msgstr "Искать «%1» в %2"
+msgstr "Искать «%1…» с помощью %2"
 
 #: lib/webengine/webview.cpp:899
 msgctxt "WebView|"
 msgid "Search with..."
-msgstr "Искать с помощью..."
+msgstr "Искать с помощью…"
 
 #: lib/webengine/webview.cpp:921
 msgctxt "WebView|"
 msgid "&Play"
-msgstr "Воспрои&зведение"
+msgstr "Воспрои&звести"
 
 #: lib/webengine/webview.cpp:921
 msgctxt "WebView|"
@@ -6404,7 +6402,7 @@ msgstr "%1 из %2"
 #: lib/webtab/searchtoolbar.ui:48
 msgctxt "SearchToolbar|"
 msgid "Find..."
-msgstr "Найти..."
+msgstr "Найти…"
 
 #: lib/webtab/searchtoolbar.ui:58
 msgctxt "SearchToolbar|"

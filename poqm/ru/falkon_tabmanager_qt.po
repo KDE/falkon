@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2020-10-28 20:38+0300\n"
+"PO-Revision-Date: 2026-10-09 21:48+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -53,8 +53,8 @@ msgid ""
 "p></body></html>"
 msgstr ""
 "<html><head/><body><p><span style=\" font-weight:600;\">Примечание:</span> "
-"тип &quot;Окно&quot; рекомендуется для управления большим количеством окон "
-"или вкладок.</p></body></html>"
+"тип «Окно» рекомендуется для управления большим количеством окон или вкладок."
+"</p></body></html>"
 
 #: tabmanagersettings.ui:60
 msgctxt "TabManagerSettings|"
@@ -79,7 +79,7 @@ msgstr " [FTP]"
 #: tabmanagerwidget.cpp:306
 msgctxt "TabManagerWidget|"
 msgid "Group by"
-msgstr "Группа"
+msgstr "Группировка"
 
 #: tabmanagerwidget.cpp:307
 msgctxt "TabManagerWidget|"
@@ -94,7 +94,7 @@ msgstr "&Домен"
 #: tabmanagerwidget.cpp:317
 msgctxt "TabManagerWidget|"
 msgid "&Host"
-msgstr "&Хост"
+msgstr "&Узел"
 
 #: tabmanagerwidget.cpp:325
 msgctxt "TabManagerWidget|"
@@ -104,22 +104,22 @@ msgstr "&Показать рядом"
 #: tabmanagerwidget.cpp:331
 msgctxt "TabManagerWidget|"
 msgid "&Detach checked tabs"
-msgstr "&Отделить проверенные вкладки"
+msgstr "&Отделить отмеченные вкладки"
 
 #: tabmanagerwidget.cpp:332
 msgctxt "TabManagerWidget|"
 msgid "Book&mark checked tabs"
-msgstr "&Добавить проверенные вкладки в закладки"
+msgstr "&Добавить отмеченные вкладки в закладки"
 
 #: tabmanagerwidget.cpp:333
 msgctxt "TabManagerWidget|"
 msgid "&Close checked tabs"
-msgstr "&Закрыть проверенные вкладки"
+msgstr "&Закрыть отмеченные вкладки"
 
 #: tabmanagerwidget.cpp:334
 msgctxt "TabManagerWidget|"
 msgid "&Unload checked tabs"
-msgstr "&Выгрузить проверенные вкладки"
+msgstr "&Выгрузить отмеченные вкладки"
 
 #: tabmanagerwidget.cpp:587
 msgctxt "TabManagerWidget|"
@@ -166,7 +166,7 @@ msgstr "Показать диспетчер вкладок"
 #: tldextractor/tldextractor.cpp:261 tldextractor/tldextractor.cpp:364
 msgctxt "TLDExtractor|"
 msgid "File not found!"
-msgstr "Файл не найден!"
+msgstr "Файл не найден"
 
 #: tldextractor/tldextractor.cpp:262
 #, qt-format
@@ -177,9 +177,9 @@ msgid ""
 "following paths:\n"
 "%2"
 msgstr ""
-"Файл «effective_tld_names.dat» не найден!\n"
-"Этот файл доступен для загрузки <a href=\"%1\"><b>на этом сайте</b></a> по "
-"одному из следующих путей:\n"
+"Файл «effective_tld_names.dat» не найден.\n"
+"Загрузите его <a href=\"%1\"><b>отсюда</b></a> и поместите по одному из "
+"следующих путей:\n"
 "%2"
 
 #: tldextractor/tldextractor.cpp:365
@@ -191,9 +191,9 @@ msgid ""
 "following paths:\n"
 "%2"
 msgstr ""
-"Файл «test_psl.txt» не найден!\n"
-"Этот файл доступен для загрузки <a href=\"%1\"><b>на этом сайте</b></a> по "
-"одному из следующих путей:\n"
+"Файл «test_psl.txt» не найден.\n"
+"Загрузите его <a href=\"%1\"><b>отсюда</b></a> и поместите по одному из "
+"следующих путей:\n"
 "%2"
 
 #~ msgctxt "TabManagerWidget|"
