@@ -1328,7 +1328,7 @@ void TabBarHelper::paintEvent(QPaintEvent *)
     }
 
     const QPoint cursorPos = QCursor::pos();
-    int indexUnderMouse = isDisplayedOnViewPort(cursorPos.x(), cursorPos.x()) ? tabAt(mapFromGlobal(cursorPos)) : -1;
+    int indexUnderMouse = underMouse() ? tabAt(mapFromGlobal(cursorPos)) : -1;
 
     for (int i = 0; i < count(); ++i) {
         if (i == selected) {
@@ -1962,7 +1962,7 @@ void CloseButton::paintEvent(QPaintEvent*)
     opt.state |= QStyle::State_AutoRaise;
 
     // update raised state on scrolling
-    bool isUnderMouse = rect().contains(mapFromGlobal(QCursor::pos()));
+    bool isUnderMouse = underMouse();
 
     if (isEnabled() && isUnderMouse && !isChecked() && !isDown()) {
         opt.state |= QStyle::State_Raised;
