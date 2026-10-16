@@ -26,15 +26,33 @@ TabFilterModel::TabFilterModel(QObject *parent)
 
 void TabFilterModel::resetFilter()
 {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+    beginFilterChange();
+#endif
+
     m_mode = NoFilter;
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+    endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
     invalidateFilter();
+#endif
 }
 
 void TabFilterModel::setFilterPinnedTabs(bool filter)
 {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+    beginFilterChange();
+#endif
+
     m_mode = FilterPinnedTabs;
     m_filterPinnedTabs = filter;
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+    endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
     invalidateFilter();
+#endif
 }
 
 void TabFilterModel::setRejectDropOnLastIndex(bool reject)
