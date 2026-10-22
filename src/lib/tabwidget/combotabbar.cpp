@@ -220,6 +220,15 @@ QPixmap ComboTabBar::tabPixmap(int index) const
     return localTabBar(index)->tabPixmap(toLocalIndex(index));
 }
 
+void ComboTabBar::scrollOnEdge(const QPoint &pos) const
+{
+    if (m_pinnedTabBarWidget->geometry().contains(pos)) {
+        m_pinnedTabBarWidget->scrollOnEdge(pos);
+    } else if (m_mainTabBarWidget->geometry().contains(pos)) {
+        m_mainTabBarWidget->scrollOnEdge(pos);
+    }
+}
+
 int ComboTabBar::tabAt(const QPoint &pos) const
 {
     if (m_pinnedTabBarWidget->geometry().contains(pos)) {
@@ -1398,13 +1407,20 @@ void TabBarHelper::mousePressEvent(QMouseEvent* event)
 
 void TabBarHelper::mouseMoveEvent(QMouseEvent *event)
 {
+    const QPoint pos = event->position().toPoint();
+
     if (!m_dragInProgress && m_pressedIndex != -1) {
-        if ((event->position().toPoint() - m_dragStartPosition).manhattanLength() > QApplication::startDragDistance()) {
+        if ((pos - m_dragStartPosition).manhattanLength() > QApplication::startDragDistance()) {
             m_dragInProgress = true;
         }
     }
 
     QTabBar::mouseMoveEvent(event);
+
+    if (m_dragInProgress) {
+        const auto globalPos = mapToGlobal(pos);
+        m_comboTabBar->scrollOnEdge(globalPos);
+    }
 
     // Hack to find QMovableTabWidget
     if (m_dragInProgress && !m_movingTab) {
@@ -1642,6 +1658,42 @@ void TabBarScrollWidget::scrollToLeftEdge()
 void TabBarScrollWidget::scrollToRightEdge()
 {
     m_scrollBar->animateToValue(m_scrollBar->maximum());
+}
+
+void TabBarScrollWidget::scrollOnEdge(const QPoint &globalPos)
+{
+    constexpr int maxDelta = 200;
+    constexpr int maxDepth = 50;
+
+    const QPoint pos = m_scrollArea->viewport()->mapFromGlobal(globalPos);
+    const int width = m_scrollArea->viewport()->width();
+
+    int depth = 0;
+    bool scrollLeft = false;
+    if (pos.x() < maxDepth) {
+        depth = maxDepth - pos.x();
+        scrollLeft = true;
+    }
+    else if (pos.x() > width - maxDepth) {
+        depth = pos.x() - (width - maxDepth);
+    }
+
+    if (depth == 0) {
+        return;
+    }
+
+    // Scrolling speed grows quadratically the closer the cursor is to an edge
+    depth = qMin(depth, maxDepth);
+    int delta = qMax(1, depth * depth * maxDelta / (maxDepth * maxDepth));
+
+    // Delta must be negative to scroll to the left in the left-to-right layout;
+    // delta must be negative to scroll to the right in the right-to-left layout
+    if (scrollLeft != isRightToLeft()) {
+        delta = -delta;
+    }
+
+    const int to = m_scrollBar->value() + delta;
+    m_scrollBar->animateToValue(to);
 }
 
 void TabBarScrollWidget::setUpLayout()

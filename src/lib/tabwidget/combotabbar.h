@@ -78,6 +78,8 @@ public:
     QRect draggedTabRect() const;
     QPixmap tabPixmap(int index) const;
 
+    void scrollOnEdge(const QPoint &pos) const;
+
     // Returns tab index at pos, or -1
     int tabAt(const QPoint &pos) const;
 
@@ -326,6 +328,8 @@ public:
 
     bool isOverflowed() const;
     int tabAt(const QPoint &pos) const;
+
+    void scrollOnEdge(const QPoint &globalPos);
 
 public Q_SLOTS:
     void ensureVisible(int index = -1, int xmargin = 132);

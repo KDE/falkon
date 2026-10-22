@@ -654,7 +654,8 @@ void TabBar::dragEnterEvent(QDragEnterEvent* event)
 
 void TabBar::dragMoveEvent(QDragMoveEvent *event)
 {
-    const int index = tabAt(event->position().toPoint());
+    const QPoint pos = event->position().toPoint();
+    const int index = tabAt(pos);
     const QMimeData* mime = event->mimeData();
 
     if (index == -1) {
@@ -662,7 +663,9 @@ void TabBar::dragMoveEvent(QDragMoveEvent *event)
         return;
     }
 
-    switch (tabDropAction(event->position().toPoint(), tabRect(index), !mime->hasFormat(MIMETYPE))) {
+    scrollOnEdge(pos);
+
+    switch (tabDropAction(pos, tabRect(index), !mime->hasFormat(MIMETYPE))) {
     case PrependTab:
         showDropIndicator(index, BeforeTab);
         break;
