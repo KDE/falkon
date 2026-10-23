@@ -2845,7 +2845,7 @@ msgstr "Názov:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "URL:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2853,12 +2853,9 @@ msgid "Post Data:"
 msgstr "Dáta na odoslanie:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Zobraziť našepkávač"
+msgstr "URL návrhov:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2876,14 +2873,10 @@ msgid "Change..."
 msgstr "Zmeniť..."
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>Poznámka: </b> %s v url adrese alebo v odosielaných dátach sa nachádza "
-"hľadaný reťazec"
+"<b>Poznámka: </b>%s v URL a v odosielaných dátach predstavuje hľadaný reťazec"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -4470,28 +4463,22 @@ msgstr "Skryť zoznam kariet, keď je otvorená len jedna karta"
 #: lib/preferences/preferences.ui:738
 msgctxt "Preferences|"
 msgid "When closing the active tab, activate:"
-msgstr ""
+msgstr "Pri zatvorení aktívnej karty aktivovať:"
 
 #: lib/preferences/preferences.ui:746
-#, fuzzy
-#| msgctxt "SearchToolbar|"
-#| msgid "&Previous"
 msgctxt "Preferences|"
 msgid "Previous tab"
-msgstr "&Predchádzajúci"
+msgstr "Predchádzajúcu kartu"
 
 #: lib/preferences/preferences.ui:751
-#, fuzzy
-#| msgctxt "TabWidget|"
-#| msgid "New tab"
 msgctxt "Preferences|"
 msgid "Next tab"
-msgstr "Nová karta"
+msgstr "Nasledujúcu kartu"
 
 #: lib/preferences/preferences.ui:756
 msgctxt "Preferences|"
 msgid "Previously active tab"
-msgstr ""
+msgstr "Naposledy aktívnu kartu"
 
 #: lib/preferences/preferences.ui:782
 msgctxt "Preferences|"
@@ -4506,7 +4493,7 @@ msgstr "Otvoriť nové prázdne karty za aktívnou kartou"
 #: lib/preferences/preferences.ui:796
 msgctxt "Preferences|"
 msgid "Reverse new tabs order"
-msgstr ""
+msgstr "Obrátiť poradie nových kariet"
 
 #: lib/preferences/preferences.ui:803
 msgctxt "Preferences|"
@@ -4768,9 +4755,6 @@ msgid "Allow image animation"
 msgstr "Povoliť animáciu obrázkov"
 
 #: lib/preferences/preferences.ui:1314
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preffer color scheme:"
 msgctxt "Preferences|"
 msgid "Preferred color scheme:"
 msgstr "Preferovaná farebná schéma:"
