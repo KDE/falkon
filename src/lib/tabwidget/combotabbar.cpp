@@ -222,10 +222,10 @@ QPixmap ComboTabBar::tabPixmap(int index) const
 
 void ComboTabBar::scrollOnEdge(const QPoint &pos) const
 {
-    if (m_pinnedTabBarWidget->geometry().contains(pos)) {
-        m_pinnedTabBarWidget->scrollOnEdge(pos);
+    if (m_pinnedTabBarWidget->isVisible() && m_pinnedTabBarWidget->geometry().contains(pos)) {
+        m_pinnedTabBarWidget->scrollOnEdge(m_pinnedTabBarWidget->mapFrom(this, pos));
     } else if (m_mainTabBarWidget->geometry().contains(pos)) {
-        m_mainTabBarWidget->scrollOnEdge(pos);
+        m_mainTabBarWidget->scrollOnEdge(m_mainTabBarWidget->mapFrom(this, pos));
     }
 }
 
@@ -727,6 +727,38 @@ void ComboTabBar::paintEvent(QPaintEvent* ev)
         style()->drawPrimitive(QStyle::PE_FrameTabBarBase, &opt, &p);
     }
 #endif
+}
+
+void ComboTabBar::dragLeaveEvent(QDragLeaveEvent *event)
+{
+    m_pinnedTabBarWidget->doNotScrollOnEdge();
+    m_mainTabBarWidget->doNotScrollOnEdge();
+
+    QWidget::dragLeaveEvent(event);
+}
+
+void ComboTabBar::dropEvent(QDropEvent *event)
+{
+    m_pinnedTabBarWidget->doNotScrollOnEdge();
+    m_mainTabBarWidget->doNotScrollOnEdge();
+
+    QWidget::dropEvent(event);
+}
+
+void ComboTabBar::leaveEvent(QEvent *event)
+{
+    m_pinnedTabBarWidget->doNotScrollOnEdge();
+    m_mainTabBarWidget->doNotScrollOnEdge();
+
+    QWidget::leaveEvent(event);
+}
+
+void ComboTabBar::mouseReleaseEvent(QMouseEvent *event)
+{
+    m_pinnedTabBarWidget->doNotScrollOnEdge();
+    m_mainTabBarWidget->doNotScrollOnEdge();
+
+    QWidget::mouseReleaseEvent(event);
 }
 
 int ComboTabBar::comboTabBarPixelMetric(ComboTabBar::SizeType sizeType) const
@@ -1418,8 +1450,7 @@ void TabBarHelper::mouseMoveEvent(QMouseEvent *event)
     QTabBar::mouseMoveEvent(event);
 
     if (m_dragInProgress) {
-        const auto globalPos = mapToGlobal(pos);
-        m_comboTabBar->scrollOnEdge(globalPos);
+        m_comboTabBar->scrollOnEdge(mapTo(m_comboTabBar, pos));
     }
 
     // Hack to find QMovableTabWidget
@@ -1596,6 +1627,9 @@ TabBarScrollWidget::TabBarScrollWidget(QTabBar* tabBar, QWidget* parent)
 
     updateScrollButtonsState();
     overFlowChanged(false);
+
+    m_scrollOnEdgeTimer = new QTimer(this);
+    connect(m_scrollOnEdgeTimer, &QTimer::timeout, this, &TabBarScrollWidget::doScrollOnEdge);
 }
 
 QTabBar* TabBarScrollWidget::tabBar()
@@ -1660,25 +1694,39 @@ void TabBarScrollWidget::scrollToRightEdge()
     m_scrollBar->animateToValue(m_scrollBar->maximum());
 }
 
-void TabBarScrollWidget::scrollOnEdge(const QPoint &globalPos)
+void TabBarScrollWidget::doScrollOnEdge()
+{
+    const int to = m_scrollBar->value() + m_scrollOnEdgeDelta;
+    m_scrollBar->animateToValue(to);
+}
+
+void TabBarScrollWidget::doNotScrollOnEdge() {
+    m_scrollOnEdgeDelta = 0;
+    if (m_scrollOnEdgeTimer && m_scrollOnEdgeTimer->isActive()) {
+        m_scrollOnEdgeTimer->stop();
+    }
+}
+
+void TabBarScrollWidget::scrollOnEdge(const QPoint &pos)
 {
     constexpr int maxDelta = 200;
     constexpr int maxDepth = 50;
 
-    const QPoint pos = m_scrollArea->viewport()->mapFromGlobal(globalPos);
+    const QPoint localPos = m_scrollArea->viewport()->mapFrom(this, pos);
     const int width = m_scrollArea->viewport()->width();
 
     int depth = 0;
     bool scrollLeft = false;
-    if (pos.x() < maxDepth) {
-        depth = maxDepth - pos.x();
+    if (localPos.x() < maxDepth) {
+        depth = maxDepth - localPos.x();
         scrollLeft = true;
     }
-    else if (pos.x() > width - maxDepth) {
-        depth = pos.x() - (width - maxDepth);
+    else if (localPos.x() > width - maxDepth) {
+        depth = localPos.x() - (width - maxDepth);
     }
 
     if (depth == 0) {
+        doNotScrollOnEdge();
         return;
     }
 
@@ -1692,8 +1740,10 @@ void TabBarScrollWidget::scrollOnEdge(const QPoint &globalPos)
         delta = -delta;
     }
 
-    const int to = m_scrollBar->value() + delta;
-    m_scrollBar->animateToValue(to);
+    m_scrollOnEdgeDelta = delta;
+    if (m_scrollOnEdgeTimer && !m_scrollOnEdgeTimer->isActive()) {
+        m_scrollOnEdgeTimer->start(100);
+    }
 }
 
 void TabBarScrollWidget::setUpLayout()

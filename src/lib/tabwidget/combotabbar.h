@@ -188,6 +188,10 @@ protected:
     void wheelEvent(QWheelEvent* event) override;
     bool eventFilter(QObject* obj, QEvent* ev) override;
     void paintEvent(QPaintEvent* ev) override;
+    void dragLeaveEvent(QDragLeaveEvent *event) override;
+    void dropEvent(QDropEvent *event) override;
+    void leaveEvent(QEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent *event) override;
 
     virtual int comboTabBarPixelMetric(SizeType sizeType) const;
     virtual QSize tabSizeHint(int index, bool fast = false) const;
@@ -329,7 +333,9 @@ public:
     bool isOverflowed() const;
     int tabAt(const QPoint &pos) const;
 
-    void scrollOnEdge(const QPoint &globalPos);
+    void doScrollOnEdge();
+    void doNotScrollOnEdge();
+    void scrollOnEdge(const QPoint &pos);
 
 public Q_SLOTS:
     void ensureVisible(int index = -1, int xmargin = 132);
@@ -355,6 +361,9 @@ private:
     ToolButton* m_leftScrollButton;
     bool m_usesScrollButtons;
     int m_totalVerticalDeltas;
+
+    QTimer* m_scrollOnEdgeTimer;
+    int m_scrollOnEdgeDelta = 0;
 };
 
 // Class for close button on tabs

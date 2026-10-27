@@ -748,6 +748,8 @@ void TabBar::dropEvent(QDropEvent* event)
             }
         }
     }
+
+    ComboTabBar::dropEvent(event);
 }
 
 void TabBar::setIsRestoring(bool restoring)
