@@ -8,6 +8,7 @@
     "command": "falkon",
     "rename-icon": "falkon",
     "finish-args": [
+        "--filesystem=home",
         "--device=dri",
         "--own-name=org.mpris.MediaPlayer2.falkon.*",
         "--share=ipc",
