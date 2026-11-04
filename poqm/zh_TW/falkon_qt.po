@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2026-09-21 23:12+0900\n"
+"PO-Revision-Date: 2026-11-03 21:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -2863,7 +2863,7 @@ msgstr "名稱："
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "網址："
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2871,12 +2871,9 @@ msgid "Post Data:"
 msgstr "資料輸入："
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "顯示建議"
+msgstr "建議網址："
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2894,12 +2891,9 @@ msgid "Change..."
 msgstr "變更…"
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
-msgstr "<b>注意：</b>在 URL 或輸入資料中的 %s 代表搜尋的字串"
+msgstr "<b>注意：</b>在 URL 和輸入資料中的 %s 代表搜尋的字串"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -4770,12 +4764,9 @@ msgid "Allow image animation"
 msgstr "允許影像動畫"
 
 #: lib/preferences/preferences.ui:1314
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preffer color scheme:"
 msgctxt "Preferences|"
 msgid "Preferred color scheme:"
-msgstr "使用配色方案："
+msgstr "偏好的配色方案："
 
 #: lib/preferences/preferences.ui:1349
 msgctxt "Preferences|"
