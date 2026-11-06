@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2026-08-26 11:41+0300\n"
+"PO-Revision-Date: 2026-10-06 13:11+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -2829,7 +2829,7 @@ msgstr "Nimi:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "Verkko-osoite:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2837,12 +2837,9 @@ msgid "Post Data:"
 msgstr "Lähetetyt tiedot:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Näytä ehdotukset"
+msgstr "Ehdotusverkko-osoite:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2860,13 +2857,10 @@ msgid "Change..."
 msgstr "Muuta…"
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>Huomaa:</b> %s verkko-osoitteessa tai lähetetyissä tiedoissa tarkoittaa "
+"<b>Huom!</b> %s verkko-osoitteessa tai lähetetyissä tiedoissa tarkoittaa "
 "etsittävää merkkijonoa"
 
 #: lib/opensearch/opensearchreader.cpp:105
@@ -4450,28 +4444,22 @@ msgstr "Piilota välilehtirivi, kun välilehtiä on vain yksi"
 #: lib/preferences/preferences.ui:738
 msgctxt "Preferences|"
 msgid "When closing the active tab, activate:"
-msgstr ""
+msgstr "Aktiivista välilehteä suljettaessa aktivoi:"
 
 #: lib/preferences/preferences.ui:746
-#, fuzzy
-#| msgctxt "SearchToolbar|"
-#| msgid "&Previous"
 msgctxt "Preferences|"
 msgid "Previous tab"
-msgstr "&Edellinen"
+msgstr "Edellinen välilehti"
 
 #: lib/preferences/preferences.ui:751
-#, fuzzy
-#| msgctxt "TabWidget|"
-#| msgid "New tab"
 msgctxt "Preferences|"
 msgid "Next tab"
-msgstr "Uusi välilehti"
+msgstr "Seuraava välilehti"
 
 #: lib/preferences/preferences.ui:756
 msgctxt "Preferences|"
 msgid "Previously active tab"
-msgstr ""
+msgstr "aiemmin aktiivinen välilehti"
 
 #: lib/preferences/preferences.ui:782
 msgctxt "Preferences|"
@@ -4486,7 +4474,7 @@ msgstr "Avaa uudet tyhjät välilehdet aktiivisen perään"
 #: lib/preferences/preferences.ui:796
 msgctxt "Preferences|"
 msgid "Reverse new tabs order"
-msgstr ""
+msgstr "Käännä uusien välilehtien järjestys"
 
 #: lib/preferences/preferences.ui:803
 msgctxt "Preferences|"
@@ -4749,9 +4737,6 @@ msgid "Allow image animation"
 msgstr "Salli kuvan animointi"
 
 #: lib/preferences/preferences.ui:1314
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preffer color scheme:"
 msgctxt "Preferences|"
 msgid "Preferred color scheme:"
 msgstr "Ensisijainen väriteema:"
