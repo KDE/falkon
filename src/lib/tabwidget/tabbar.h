@@ -75,6 +75,8 @@ private:
     void dragLeaveEvent(QDragLeaveEvent *event) override;
     void dropEvent(QDropEvent* event) override;
 
+    TabDropAction tabDropAction(const QPoint &pos, const QRect &tabRect, bool allowSelect);
+
     QSize tabSizeHint(int index, bool fast) const override;
     int comboTabBarPixelMetric(ComboTabBar::SizeType sizeType) const override;
     WebTab* webTab(int index = -1) const;

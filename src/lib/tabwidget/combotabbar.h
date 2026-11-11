@@ -52,6 +52,13 @@ public:
         ExtraReservedWidth
     };
 
+    enum TabDropAction {
+        NoAction,
+        SelectTab,
+        PrependTab,
+        AppendTab
+    };
+
     enum DropIndicatorPosition {
         BeforeTab,
         AfterTab
@@ -82,6 +89,8 @@ public:
 
     // Returns tab index at pos, or -1
     int tabAt(const QPoint &pos) const;
+
+    ComboTabBar::TabDropAction tabDropAction(const QPoint &pos);
 
     // Returns true if there is an empty area at pos
     // (returns false if there are buttons or other widgets on the pos)
@@ -332,6 +341,8 @@ public:
 
     bool isOverflowed() const;
     int tabAt(const QPoint &pos) const;
+
+    ComboTabBar::TabDropAction tabDropAction(const QPoint &pos);
 
     void doScrollOnEdge();
     void doNotScrollOnEdge();

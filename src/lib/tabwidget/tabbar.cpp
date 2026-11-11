@@ -614,17 +614,10 @@ void TabBar::wheelEvent(QWheelEvent* event)
     ComboTabBar::wheelEvent(event);
 }
 
-enum TabDropAction {
-    NoAction,
-    SelectTab,
-    PrependTab,
-    AppendTab
-};
-
-static TabDropAction tabDropAction(const QPoint &pos, const QRect &tabRect, bool allowSelect)
+ComboTabBar::TabDropAction TabBar::tabDropAction(const QPoint &pos, const QRect &tabRect, bool allowSelect)
 {
     if (!tabRect.contains(pos)) {
-        return NoAction;
+        return ComboTabBar::tabDropAction(pos);
     }
 
     const QPoint c = tabRect.center();

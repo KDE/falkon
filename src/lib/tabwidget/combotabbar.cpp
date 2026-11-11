@@ -231,7 +231,7 @@ void ComboTabBar::scrollOnEdge(const QPoint &pos) const
 
 int ComboTabBar::tabAt(const QPoint &pos) const
 {
-    if (m_pinnedTabBarWidget->geometry().contains(pos)) {
+    if (m_pinnedTabBarWidget->isVisible() && m_pinnedTabBarWidget->geometry().contains(pos)) {
         return m_pinnedTabBarWidget->tabAt(m_pinnedTabBarWidget->mapFromParent(pos));
     } else if (m_mainTabBarWidget->geometry().contains(pos)) {
         int index = m_mainTabBarWidget->tabAt(m_mainTabBarWidget->mapFromParent(pos));
@@ -241,6 +241,17 @@ int ComboTabBar::tabAt(const QPoint &pos) const
     }
 
     return -1;
+}
+
+ComboTabBar::TabDropAction ComboTabBar::tabDropAction(const QPoint &pos)
+{
+    if (m_pinnedTabBarWidget->isVisible() && m_pinnedTabBarWidget->geometry().contains(pos)) {
+        return m_pinnedTabBarWidget->tabDropAction(m_pinnedTabBarWidget->mapFromParent(pos));
+    } else if (m_mainTabBarWidget->geometry().contains(pos)) {
+        return m_mainTabBarWidget->tabDropAction(m_mainTabBarWidget->mapFromParent(pos));
+    }
+
+    return NoAction;
 }
 
 bool ComboTabBar::emptyArea(const QPoint &pos) const
@@ -1871,12 +1882,28 @@ bool TabBarScrollWidget::isOverflowed() const
 
 int TabBarScrollWidget::tabAt(const QPoint &pos) const
 {
-    if (m_leftScrollButton->isVisible() && (m_leftScrollButton->rect().contains(pos) ||
-                                            m_rightScrollButton->rect().contains(pos))) {
-        return -1;
+    if (m_leftScrollButton->isVisible() && m_leftScrollButton->geometry().contains(pos)) {
+        return 0;
+    }
+
+    if (m_rightScrollButton->isVisible() && m_rightScrollButton->geometry().contains(pos)) {
+        return m_tabBar->count() - 1;
     }
 
     return m_tabBar->tabAt(m_tabBar->mapFromGlobal(mapToGlobal(pos)));
+}
+
+ComboTabBar::TabDropAction TabBarScrollWidget::tabDropAction(const QPoint &pos)
+{
+    if (m_leftScrollButton->isVisible() && m_leftScrollButton->geometry().contains(pos)) {
+        return ComboTabBar::PrependTab;
+    }
+
+    if (m_rightScrollButton->isVisible() && m_rightScrollButton->geometry().contains(pos)) {
+        return ComboTabBar::AppendTab;
+    }
+
+    return ComboTabBar::NoAction;
 }
 
 void TabBarScrollWidget::mouseMoveEvent(QMouseEvent* event)
