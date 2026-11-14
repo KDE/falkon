@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the falkon package.
 #
-# SPDX-FileCopyrightText: 2017, 2025 Toms Trasūns <ttomst@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2025-2026 Toms Trasūns <ttomst@gmail.com>
 # Māris Nartišs <maris.kde@gmail.com>, 2024.
 # SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2025-08-30 16:43+0300\n"
+"PO-Revision-Date: 2026-11-12 14:22+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -18,7 +18,7 @@ msgstr ""
 "2);\n"
 "X-Language: lv_LV\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -171,12 +171,9 @@ msgid "AdBlock is active"
 msgstr "„AdBlock“ ir ieslēgts"
 
 #: lib/adblock/adblockicon.cpp:146
-#, fuzzy
-#| msgctxt "AdBlockDialog|"
-#| msgid "Enable AdBlock"
 msgctxt "AdBlockIcon|"
 msgid "&Enable AdBlock"
-msgstr "Ieslēgt „AdBlock“"
+msgstr "&Ieslēgt „AdBlock“"
 
 #: lib/adblock/adblockicon.cpp:151
 msgctxt "AdBlockIcon|"
@@ -275,7 +272,7 @@ msgstr "Atvērtās lapas IP adrese"
 #: lib/app/browserwindow.cpp:757
 msgctxt "BrowserWindow|"
 msgid " ["
-msgstr ""
+msgstr " ["
 
 #: lib/app/browserwindow.cpp:760
 msgctxt "BrowserWindow|"
@@ -525,7 +522,7 @@ msgstr "Rīkjoslas"
 #: lib/app/mainmenu.cpp:546
 msgctxt "MainMenu|"
 msgid "Sidebar"
-msgstr "Sānu josla"
+msgstr "Sānjosla"
 
 #: lib/app/mainmenu.cpp:548
 msgctxt "MainMenu|"
@@ -1110,36 +1107,24 @@ msgid "New Separator"
 msgstr "Jauns atdalītājs"
 
 #: lib/bookmarks/bookmarksmanager.cpp:117
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "Cu&t"
 msgctxt "BookmarksManager|"
 msgid "Cu&t"
 msgstr "Izgrie&zt"
 
 #: lib/bookmarks/bookmarksmanager.cpp:118
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "&Copy"
 msgctxt "BookmarksManager|"
 msgid "&Copy"
 msgstr "&Kopēt"
 
 #: lib/bookmarks/bookmarksmanager.cpp:119
-#, fuzzy
-#| msgctxt "LineEdit|"
-#| msgid "&Paste"
 msgctxt "BookmarksManager|"
 msgid "&Paste"
 msgstr "Ie&līmēt"
 
 #: lib/bookmarks/bookmarksmanager.cpp:121
-#, fuzzy
-#| msgctxt "CookieManager|"
-#| msgid "Remove"
 msgctxt "BookmarksManager|"
 msgid "&Remove"
-msgstr "Noņemt"
+msgstr "&Noņemt"
 
 #: lib/bookmarks/bookmarksmanager.ui:14
 msgctxt "BookmarksManager|"
@@ -2194,7 +2179,7 @@ msgstr "Rīkjoslas"
 #: lib/navigation/navigationbar.cpp:448
 msgctxt "NavigationBar|"
 msgid "Sidebar"
-msgstr "Sānu josla"
+msgstr "Sānjosla"
 
 #: lib/navigation/navigationbar.cpp:463 lib/navigation/navigationbar.cpp:477
 msgctxt "NavigationBar|"
@@ -2860,7 +2845,7 @@ msgstr "Nosaukums:"
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "URL:"
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2868,12 +2853,9 @@ msgid "Post Data:"
 msgstr "POST dati:"
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "Parādīt ieteikumus"
+msgstr "Ieteiktie URL:"
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2891,13 +2873,10 @@ msgid "Change..."
 msgstr "Mainīt..."
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
 msgstr ""
-"<b>Ievērībai: </b> „%s“ adresē vai POST datos norāda uz meklēto simbolu "
+"<b>Ievērībai: </b> „%s“ URL adresē vai POST datos norāda uz meklēto simbolu "
 "virkni"
 
 #: lib/opensearch/opensearchreader.cpp:105
@@ -4391,7 +4370,7 @@ msgstr "Ieslēdzoties rādīt grāmatzīmju joslu"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr ""
+msgstr "Noklusējuma minimālais sānjoslas platums:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4411,12 +4390,12 @@ msgstr "Ieslēgt ātro grāmatzīmju joslu"
 #: lib/preferences/preferences.ui:567
 msgctxt "Preferences|"
 msgid "px"
-msgstr ""
+msgstr "piks."
 
 #: lib/preferences/preferences.ui:577
 msgctxt "Preferences|"
 msgid "Show Profile Name in Window Title"
-msgstr ""
+msgstr "Loga virsrakstā rādīt profila nosaukumu"
 
 #: lib/preferences/preferences.ui:586
 msgctxt "Preferences|"
@@ -4454,7 +4433,7 @@ msgstr "Fona krāsas ielādes laikā:"
 #: lib/preferences/preferences.ui:653
 msgctxt "Preferences|miliseconds"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: lib/preferences/preferences.ui:666
 msgctxt ""
@@ -4462,7 +4441,7 @@ msgctxt ""
 "page was initially loaded before switching the backgroung color to the "
 "loaded variant."
 msgid "Loaded state switch delay:"
-msgstr ""
+msgstr "Ielādētā stāvokļa pārslēgšanas aizture:"
 
 #: lib/preferences/preferences.ui:675
 msgctxt "Preferences|"
@@ -4482,28 +4461,22 @@ msgstr "Paslēpt cilnes, kad ir atvērta tikai viena cilne"
 #: lib/preferences/preferences.ui:738
 msgctxt "Preferences|"
 msgid "When closing the active tab, activate:"
-msgstr ""
+msgstr "Aizverot aktīvo cilni, atvērt:"
 
 #: lib/preferences/preferences.ui:746
-#, fuzzy
-#| msgctxt "SearchToolbar|"
-#| msgid "&Previous"
 msgctxt "Preferences|"
 msgid "Previous tab"
-msgstr "Ie&priekšējā"
+msgstr "Iepriekšējo cilni"
 
 #: lib/preferences/preferences.ui:751
-#, fuzzy
-#| msgctxt "TabWidget|"
-#| msgid "New tab"
 msgctxt "Preferences|"
 msgid "Next tab"
-msgstr "Jauna cilne"
+msgstr "Nākamo cilni"
 
 #: lib/preferences/preferences.ui:756
 msgctxt "Preferences|"
 msgid "Previously active tab"
-msgstr ""
+msgstr "Iepriekšējo aktīvo cilni"
 
 #: lib/preferences/preferences.ui:782
 msgctxt "Preferences|"
@@ -4518,7 +4491,7 @@ msgstr "Jaunas tukšas cilnes atvērt pēc aktīvās cilnes"
 #: lib/preferences/preferences.ui:796
 msgctxt "Preferences|"
 msgid "Reverse new tabs order"
-msgstr ""
+msgstr "Apgriezt jauno ciļņu secību"
 
 #: lib/preferences/preferences.ui:803
 msgctxt "Preferences|"
@@ -4777,15 +4750,12 @@ msgstr "Piespiedu tumšais režīms"
 #: lib/preferences/preferences.ui:1305
 msgctxt "Preferences|"
 msgid "Allow image animation"
-msgstr ""
+msgstr "Atļaut attēlu animācijas"
 
 #: lib/preferences/preferences.ui:1314
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preffer color scheme:"
 msgctxt "Preferences|"
 msgid "Preferred color scheme:"
-msgstr "Galvenā krāsu shēma:"
+msgstr "Primārā krāsu shēma:"
 
 #: lib/preferences/preferences.ui:1349
 msgctxt "Preferences|"
@@ -5994,12 +5964,9 @@ msgid "Expires On:"
 msgstr "Derīgs līdz:"
 
 #: lib/tools/docktitlebarwidget.cpp:58
-#, fuzzy
-#| msgctxt "MainMenu|"
-#| msgid "Close Window"
 msgctxt "DockTitleBarWidget|"
 msgid "&Close SideBar"
-msgstr "Aizvērt logu"
+msgstr "&Aizvērt sānjoslu"
 
 #: lib/tools/html5permissions/html5permissionsnotification.cpp:42
 msgctxt "HTML5PermissionsNotification|"
