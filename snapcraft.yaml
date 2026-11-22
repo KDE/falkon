@@ -19,6 +19,8 @@ apps:
       - audio-record
       - browser-support
       - cups
+      - home
+      - removable-media
     environment:
       QTWEBENGINE_DISABLE_SANDBOX: 1
       ALSA_CONFIG_PATH: "$SNAP/kf6/etc/asound.conf"
