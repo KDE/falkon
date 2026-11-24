@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-09-05 00:16+0000\n"
-"PO-Revision-Date: 2026-11-19 19:25+0300\n"
+"PO-Revision-Date: 2026-11-23 18:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -366,7 +366,7 @@ msgid ""
 "Falkon is not currently your default browser. Would you like to make it your "
 "default browser?"
 msgstr ""
-"Falkon öntanımlı web tarayıcınız değil. Öntanımlı web tarayıcınız yapmak "
+"Falkon varsayılan web tarayıcınız değil. Varsayılan web tarayıcınız yapmak "
 "ister misiniz?"
 
 #: lib/app/mainapplication.cpp:1204
@@ -377,7 +377,7 @@ msgstr "Falkon başlarken bu denetimi her zaman gerçekleştir."
 #: lib/app/mainapplication.cpp:1206
 msgctxt "MainApplication|"
 msgid "Default Browser"
-msgstr "Öntanımlı Web Tarayıcısı"
+msgstr "Varsayılan Web Tarayıcısı"
 
 #: lib/app/mainapplication.cpp:1341
 msgctxt "MainApplication|"
@@ -724,7 +724,7 @@ msgid ""
 "default backend"
 msgstr ""
 "Bu arka ucun ayarlanabilmesi için bir ana parola gerektiriyor! Falkon "
-"şimdilik kendi öntanımlı arka ucuna geçiş yapacak."
+"şimdilik kendi varsayılan arka ucuna geçiş yapacak."
 
 #: lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp:601
 msgctxt "MasterPasswordDialog|"
@@ -2894,8 +2894,8 @@ msgid ""
 "You can't remove the default search engine.<br>Set a different engine as "
 "default before removing %1."
 msgstr ""
-"Öntanımlı arama motorunu kaldıramazsınız.<br>%1 motorunu maldırmadan önce "
-"farklı bir arama motorunu öntanımlı yapın."
+"Varsayılan arama motorunu kaldıramazsınız.<br>%1 motorunu maldırmadan önce "
+"farklı bir arama motorunu varsayılan yapın."
 
 #: lib/opensearch/searchenginesdialog.cpp:108
 msgctxt "SearchEnginesDialog|"
@@ -2925,7 +2925,7 @@ msgstr "Düzenle"
 #: lib/opensearch/searchenginesdialog.ui:56
 msgctxt "SearchEnginesDialog|"
 msgid "Set as default"
-msgstr "Öntanımlı Olarak Ayarla"
+msgstr "Varsayılan Olarak Ayarla"
 
 #: lib/opensearch/searchenginesdialog.ui:63
 msgctxt "SearchEnginesDialog|"
@@ -2950,7 +2950,7 @@ msgstr "Kısayol"
 #: lib/opensearch/searchenginesdialog.ui:104
 msgctxt "SearchEnginesDialog|"
 msgid "Defaults"
-msgstr "Öntanımlılar"
+msgstr "Varsayılanlar"
 
 #: lib/opensearch/searchenginesmanager.cpp:401
 msgctxt "SearchEnginesManager|"
@@ -3353,7 +3353,7 @@ msgstr "<b>Ön İzleme</b>"
 #: lib/other/siteinfopermissionitem.ui:32
 msgctxt "SiteInfoPermissionItem|"
 msgid "Default"
-msgstr "Öntanımlı"
+msgstr "Varsayılan"
 
 #: lib/other/siteinfopermissionitem.ui:62
 msgctxt "SiteInfoPermissionItem|"
@@ -3577,7 +3577,7 @@ msgstr "Reddet"
 #: lib/other/sitesettingsmanager.cpp:408
 msgctxt "SiteSettingsManager|"
 msgid "Default"
-msgstr "Öntanımlı"
+msgstr "Varsayılan"
 
 #: lib/other/statusbar.cpp:248
 msgctxt "StatusBar|"
@@ -4061,12 +4061,12 @@ msgstr "“%1” ögesini kaldırmak istediğinizden emin misiniz?"
 #: lib/preferences/preferences.cpp:157 lib/preferences/preferences.cpp:685
 msgctxt "Preferences|"
 msgid "Default"
-msgstr "Öntanımlı"
+msgstr "Varsayılan"
 
 #: lib/preferences/preferences.cpp:161
 msgctxt "Preferences|"
 msgid "Set as default"
-msgstr "Öntanımlı Olarak Ayarla"
+msgstr "Varsayılan Olarak Ayarla"
 
 #: lib/preferences/preferences.cpp:341
 msgctxt "Preferences|"
@@ -4337,7 +4337,7 @@ msgstr "Seçilene kadar sekmeleri yükleme"
 #: lib/preferences/preferences.ui:462
 msgctxt "Preferences|"
 msgid "Check to see if Falkon is the default browser on startup"
-msgstr "Başlangıçta Falkon’un öntanımlı tarayıcı olup olmadığını denetle"
+msgstr "Başlangıçta Falkon’un varsayılan tarayıcı olup olmadığını denetle"
 
 #: lib/preferences/preferences.ui:472
 msgctxt "Preferences|"
@@ -4362,7 +4362,7 @@ msgstr "Başlangıçta yer imleri araç çubuğunu göster"
 #: lib/preferences/preferences.ui:539
 msgctxt "Preferences|"
 msgid "Default minimal sideBar width:"
-msgstr "Öntanımlı en düşük kenar çubuğu genişliği:"
+msgstr "Varsayılan en düşük kenar çubuğu genişliği:"
 
 #: lib/preferences/preferences.ui:546
 msgctxt "Preferences|"
@@ -4616,7 +4616,7 @@ msgstr "Adres çubuğundan kendiliğinden aramayı etkinleştir"
 #: lib/preferences/preferences.ui:1027
 msgctxt "Preferences|"
 msgid "Search with Default Engine"
-msgstr "Öntanımlı arama sayfasında ara"
+msgstr "Varsayılan arama sayfasında ara"
 
 #: lib/preferences/preferences.ui:1034
 msgctxt "Preferences|"
@@ -4762,7 +4762,7 @@ msgstr "sayfada satır"
 #: lib/preferences/preferences.ui:1380
 msgctxt "Preferences|"
 msgid "Default zoom on pages: "
-msgstr "Sayfalarda öntanımlı yakınlaştırma ayarı: "
+msgstr "Sayfalarda varsayılan yakınlaştırma ayarı: "
 
 #: lib/preferences/preferences.ui:1419
 msgctxt "Preferences|"
@@ -4912,7 +4912,7 @@ msgstr "Eş aralıklı yazı tipi puntosu"
 #: lib/preferences/preferences.ui:1882
 msgctxt "Preferences|"
 msgid "Default Font Size"
-msgstr "Öntanımlı yazı tipi puntosu"
+msgstr "Varsayılan yazı tipi puntosu"
 
 #: lib/preferences/preferences.ui:1909
 msgctxt "Preferences|"
@@ -5326,7 +5326,7 @@ msgstr "Reddet"
 #: lib/preferences/sitesettingsbrowsedialog.ui:120
 msgctxt "SiteSettingsBrowseDialog|"
 msgid "Default"
-msgstr "Öntanımlı"
+msgstr "Varsayılan"
 
 #: lib/preferences/sitesettingsbrowsedialog.ui:14
 msgctxt "SiteSettingsBrowseDialog|"
@@ -5581,7 +5581,7 @@ msgstr "Yedek 2"
 #: lib/session/sessionmanager.cpp:291
 msgctxt "SessionManager|"
 msgid "Default Session"
-msgstr "Öntanımlı Oturum"
+msgstr "Varsayılan Oturum"
 
 #: lib/session/sessionmanager.cpp:394
 msgctxt "SessionManager|"
