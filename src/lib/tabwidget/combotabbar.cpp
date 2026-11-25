@@ -555,8 +555,6 @@ void ComboTabBar::setUpLayout()
     setFixedHeight(height);
     m_leftContainer->setFixedHeight(height);
     m_rightContainer->setFixedHeight(height);
-    m_mainTabBarWidget->setUpLayout();
-    m_pinnedTabBarWidget->setUpLayout();
 
     setMinimumWidths();
 
@@ -565,6 +563,8 @@ void ComboTabBar::setUpLayout()
         m_mainTabBar->setFixedHeight(height);
         m_pinnedTabBar->setFixedHeight(height);
     }
+    m_mainTabBarWidget->setUpLayout();
+    m_pinnedTabBarWidget->setUpLayout();
 }
 
 void ComboTabBar::insertCloseButton(int index)
