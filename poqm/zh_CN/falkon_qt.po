@@ -12,8 +12,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/falkon/falkon_qt.pot\n"
-"X-Crowdin-File-ID: 48514\n"
+"X-Crowdin-File: /kf6-stable/messages/falkon/falkon_qt.pot\n"
+"X-Crowdin-File-ID: 53140\n"
 
 #: lib/3rdparty/lineedit.cpp:102
 msgctxt "LineEdit|"
@@ -2793,7 +2793,7 @@ msgstr "名称："
 #: lib/opensearch/editsearchengine.ui:30
 msgctxt "EditSearchEngine|"
 msgid "URL:"
-msgstr ""
+msgstr "URL："
 
 #: lib/opensearch/editsearchengine.ui:44
 msgctxt "EditSearchEngine|"
@@ -2801,12 +2801,9 @@ msgid "Post Data:"
 msgstr "发送数据："
 
 #: lib/opensearch/editsearchengine.ui:54
-#, fuzzy
-#| msgctxt "WebSearchBar|"
-#| msgid "Show suggestions"
 msgctxt "EditSearchEngine|"
 msgid "Suggestions URL:"
-msgstr "显示建议"
+msgstr "建议 URL："
 
 #: lib/opensearch/editsearchengine.ui:64
 msgctxt "EditSearchEngine|"
@@ -2824,12 +2821,9 @@ msgid "Change..."
 msgstr "更改..."
 
 #: lib/opensearch/editsearchengine.ui:126
-#, fuzzy
-#| msgctxt "EditSearchEngine|"
-#| msgid "<b>Note: </b>%s in url or post data represent searched string"
 msgctxt "EditSearchEngine|"
 msgid "<b>Note: </b>%s in URLs and post data represent searched string"
-msgstr "<b>注意：</b>链接或发送数据中的 %s 表示搜索字符串"
+msgstr "<b>注意：</b>URL 和表单数据中的 %s 代表搜索字符串"
 
 #: lib/opensearch/opensearchreader.cpp:105
 msgctxt "QObject|"
@@ -4407,28 +4401,22 @@ msgstr "仅有一个标签页时隐藏标签"
 #: lib/preferences/preferences.ui:738
 msgctxt "Preferences|"
 msgid "When closing the active tab, activate:"
-msgstr ""
+msgstr "关闭活动标签页时，切换到："
 
 #: lib/preferences/preferences.ui:746
-#, fuzzy
-#| msgctxt "SearchToolbar|"
-#| msgid "&Previous"
 msgctxt "Preferences|"
 msgid "Previous tab"
-msgstr "上一个(&P)"
+msgstr "上一个标签页"
 
 #: lib/preferences/preferences.ui:751
-#, fuzzy
-#| msgctxt "TabWidget|"
-#| msgid "New tab"
 msgctxt "Preferences|"
 msgid "Next tab"
-msgstr "新建标签页"
+msgstr "下一个标签页"
 
 #: lib/preferences/preferences.ui:756
 msgctxt "Preferences|"
 msgid "Previously active tab"
-msgstr ""
+msgstr "上一个活动标签页"
 
 #: lib/preferences/preferences.ui:782
 msgctxt "Preferences|"
@@ -4443,7 +4431,7 @@ msgstr "在活动标签页之后打开新空白标签页"
 #: lib/preferences/preferences.ui:796
 msgctxt "Preferences|"
 msgid "Reverse new tabs order"
-msgstr ""
+msgstr "反转新标签页顺序"
 
 #: lib/preferences/preferences.ui:803
 msgctxt "Preferences|"
@@ -4703,9 +4691,6 @@ msgid "Allow image animation"
 msgstr "允许图像动画"
 
 #: lib/preferences/preferences.ui:1314
-#, fuzzy
-#| msgctxt "Preferences|"
-#| msgid "Preffer color scheme:"
 msgctxt "Preferences|"
 msgid "Preferred color scheme:"
 msgstr "首选配色方案："
@@ -6381,11 +6366,3 @@ msgstr "检查元素"
 msgctxt "WebTab|"
 msgid "%1 - Falkon"
 msgstr "%1 - Falkon"
-
-#~ msgctxt "EditSearchEngine|"
-#~ msgid "Url:"
-#~ msgstr "Url："
-
-#~ msgctxt "Preferences|"
-#~ msgid "Activate last tab when closing active tab"
-#~ msgstr "关闭活动标签页时，激活上一个标签页"
